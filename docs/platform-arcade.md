@@ -1,3 +1,7 @@
+# Arcade
+
+Prefer MAME 2003 Plus or Fast Burn Neo for Arcade, then MAME if neither of those work
+
 ### FBNeo
 
 Source: https://***REMOVED***

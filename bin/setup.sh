@@ -6,6 +6,12 @@
 killall emulationstation
 
 ##############
+# Wifi
+##############
+
+sudo raspi-config
+
+##############
 # Upgrades
 ##############
 
@@ -40,6 +46,25 @@ crudini --set /boot/config.txt '' 'hdmi_force_hotplug' '1'
 crudini --set /boot/config.txt '' 'hdmi_group' '1'
 crudini --set /boot/config.txt '' 'hdmi_mode' '16'
 crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
+
+# Set up power button
+# python <<eof
+# import smbus
+# import RPi.GPIO as GPIO
+
+# # I2C
+# address = 0x1a    # I2C Address
+# command = 0xaa    # I2C Command
+# powerdata = '3085e010'
+
+# rev = GPIO.RPI_REVISION
+# if rev == 2 or rev == 3:
+#   bus = smbus.SMBus(1)
+# else:
+#   bus = smbus.SMBus(0)
+
+# bus.write_i2c_block_data(address, command, powerdata)
+# eof
 
 ##############
 # IR
@@ -148,12 +173,26 @@ sudo systemctl start ssh
 sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme pixel-metadata ehettervik
 sed -r -i 's/(<string name="ThemeSet" value=")([^"]*)/\1pixel-metadata/' es_settings.cfg
 
+# Overscan
+crudini --set /boot/config.txt '' 'disable_overscan' '1'
+
 ##############
 # Audio
 ##############
 
 # Turn off menu sounds
 sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' es_settings.cfg
+
+##############
+# Locale
+##############
+
+sudo sh -c 'echo "America/New_York" > /etc/timezone'
+sudo dpkg-reconfigure -f noninteractive tzdata
+sudo sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
+sudo sh -c "echo 'LANG=\"en_US.UTF-8\"' > /etc/default/locale"
+sudo dpkg-reconfigure --frontend=noninteractive locales
+sudo update-locale LANG=en_US.UTF-8
 
 ##############
 # Boot
@@ -198,3 +237,50 @@ sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
 ##############
 
 sudo ~/RetroPie-Setup/retropie_packages.sh eduke32 _binary_
+
+##############
+# Inputs
+##############
+
+cat > ~/.emulationstation/es_input.cfg <<eof
+<?xml version="1.0"?>
+<inputList>
+  <inputAction type="onfinish">
+    <command>/opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh</command>
+  </inputAction>
+  <inputConfig type="keyboard" deviceName="Keyboard" deviceGUID="-1">
+    <input name="pageup" type="key" id="113" value="1"/>
+    <input name="up" type="key" id="1073741906" value="1"/>
+    <input name="left" type="key" id="1073741904" value="1"/>
+    <input name="select" type="key" id="1073742053" value="1"/>
+    <input name="right" type="key" id="1073741903" value="1"/>
+    <input name="pagedown" type="key" id="119" value="1"/>
+    <input name="y" type="key" id="97" value="1"/>
+    <input name="x" type="key" id="115" value="1"/>
+    <input name="down" type="key" id="1073741905" value="1"/>
+    <input name="start" type="key" id="13" value="1"/>
+    <input name="b" type="key" id="122" value="1"/>
+    <input name="a" type="key" id="120" value="1"/>
+  </inputConfig>
+  <inputConfig type="joystick" deviceName="Microsoft X-Box 360 pad" deviceGUID="030000005e0400008e02000014010000">
+    <input name="pageup" type="button" id="4" value="1"/>
+    <input name="up" type="hat" id="0" value="1"/>
+    <input name="left" type="hat" id="0" value="8"/>
+    <input name="select" type="button" id="8" value="1"/>
+    <input name="right" type="hat" id="0" value="2"/>
+    <input name="pagedown" type="button" id="5" value="1"/>
+    <input name="y" type="button" id="3" value="1"/>
+    <input name="x" type="button" id="2" value="1"/>
+    <input name="down" type="hat" id="0" value="4"/>
+    <input name="start" type="button" id="9" value="1"/>
+    <input name="b" type="button" id="1" value="1"/>
+    <input name="a" type="button" id="0" value="1"/>
+  </inputConfig>
+</inputList>
+eof
+
+##############
+# Manual
+##############
+
+# Configure Inputs (Controllers)

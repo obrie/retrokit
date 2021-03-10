@@ -32,7 +32,7 @@ Second generation machine:
 
 * Intel NUC + Debian
 
-Sources:
+References:
 
 * https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards
 * https://www.androidcentral.com/best-sd-cards-raspberry-pi-4
@@ -48,43 +48,10 @@ Retropie vs. Lakka vs. Recalbox vs. Batocera
 
 Retropie is the preferred frontend.
 
-## Controllers
-
-Keyboard:
-
-* A: A
-* B: B
-* X: X
-* Y: Y
-* Start: Enter
-* Select: Space
-* LS: Left Ctl
-* RS: Right Ctl
-* LT: Left Alt
-* RT: Right Alt
-* Hotkey: H
-
-8bitdo joystick:
-
-Hotkeys: https://retropie.org.uk/docs/Controller-Configuration/
-
-### Reset
-
-1. Retropie Setup
-2. -> Manage Packages
-3. -> core
-4. -> emulationstation
-5. -> Configurations / Options
-6. -> Clear/Reset Emulation Station input configuration
-7. -> Yes
-8. Reboot
-
 ### Files
 
 Files:
 
-* ~/.emulationstation/es_input.cfg.cfg
-* ~/.emulationstation/es_settings.cfg
 * /opt/retropie/configs/all/retroarch.cfg
 * /opt/retropie/configs/all/retroarch-core-options.cfg
 * /opt/retropie/configs/all/runcommand.cfg
@@ -102,40 +69,17 @@ Files:
 * Compatiblity is not an issue
 * Data will be backed up and stored elsewhere 
 
-## Configuration
+## ROMs
 
-### Wifi
-
-Configure wifi
-
-### Inputs
-
-Configure controller
-
-### Underscan
-
-Disable underscan
-
-### Locale / Timezone
-
-* De-select en_GB
-* Select en_US UTF-8 UTF-8 and set as default
-
-, Timezone to ...
-
-## ROMS
-
-Prefer MAME 2003 Plus or Fast Burn Neo for Arcade, then MAME if neither of those work
-
-### Non-merged sets
-
-ROMs:
+Indexes:
 
 * https://***REMOVED***
 * https://***REMOVED***
 * https://***REMOVED***
 * https://***REMOVED***
 * https://***REMOVED***
+
+### Non-merged Sets
 
 Reference: https://retropie.org.uk/docs/Validating%2C-Rebuilding%2C-and-Filtering-ROM-Collections/
 
@@ -160,30 +104,6 @@ TorrentZip ROMs:
 ```
 wget https://www.romvault.com/trrntzip/download/TrrntZip.NET106.zip
 ls *.zip | parallel -j 5 wine ~/Downloads/TrrntZip.NET.exe  {}
-```
-
-
-
-## Backup
-
-Possibly set up power:
-
-```
-import smbus
-import RPi.GPIO as GPIO
-
-# I2C
-address = 0x1a    # I2C Address
-command = 0xaa    # I2C Command
-powerdata = '3085e010'
-
-rev = GPIO.RPI_REVISION
-if rev == 2 or rev == 3:
-  bus = smbus.SMBus(1)
-else:
-  bus = smbus.SMBus(0)
-
-bus.write_i2c_block_data(address, command, powerdata)
 ```
 
 ## TODO
