@@ -217,28 +217,6 @@ crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'u
 crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"'
 
 ##############
-# Emulator: DOS
-# 
-# Configs:
-# * ~/.dosbox/dosbox-SVN.conf
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh dosbox _binary_
-sudo ~/RetroPie-Setup/retropie_packages.sh lr-dosbox-pure _binary_
-
-##############
-# Emulator: Commodore 64
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
-
-##############
-# Ports
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh eduke32 _binary_
-
-##############
 # Inputs
 ##############
 
@@ -278,6 +256,38 @@ cat > ~/.emulationstation/es_input.cfg <<eof
   </inputConfig>
 </inputList>
 eof
+
+##############
+# Ports
+##############
+
+sudo ~/RetroPie-Setup/retropie_packages.sh eduke32 _binary_
+
+##############
+# Emulator: DOS
+# 
+# Configs:
+# * ~/.dosbox/dosbox-SVN.conf
+##############
+
+sudo ~/RetroPie-Setup/retropie_packages.sh dosbox _binary_
+sudo ~/RetroPie-Setup/retropie_packages.sh lr-dosbox-pure _binary_
+
+##############
+# Emulator: Commodore 64
+##############
+
+sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
+
+# Enable fast startup
+crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
+
+##############
+# Fix inputs
+##############
+
+sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/config.ini
+sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
 
 ##############
 # Manual

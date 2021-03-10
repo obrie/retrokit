@@ -6,12 +6,6 @@ Preferred:
 
 * lr-vice
 
-## Configuration
-
-Retroarch Options:
-
-* Media -> Automatic Load Warp: On
-
 ## ROMs
 
 Primary Sources:
@@ -23,17 +17,6 @@ Secondary Sources:
 
 * https://***REMOVED***
 * https://***REMOVED***
-
-## Instructions
-
-```
-scp -r platforms/commodore64/roms/* pi@***REMOVED***:/home/pi/RetroPie/roms/c64/
-```
-
-Filenames:
-
-* Visual name based on filename
-* You can control port by putting `_j1` or `_j2` at end of filename
 
 ## Installed Games
 
@@ -68,8 +51,6 @@ Virtual Keyboard:
 
 ### 180
 
-Port: 2
-
 Keys:
 
 * 1 - One player
@@ -78,15 +59,11 @@ Keys:
 
 ### Frogger
 
-Port: 2
-
 Keys:
 
 * Shift+F1 - Start
 
 ### Karateka
-
-Port: 2
 
 Keys:
 
@@ -94,33 +71,7 @@ Keys:
 
 ### Pitfall
 
-Port: 1
-
 Keys:
 
 * F1 - Start
 * LT / 1 - Pause
-
-### Pitstop
-
-Port: 1
-
-Keys:
-
-* N/A
-
-### Popeye
-
-Port: 1
-
-### Rampge
-
-Port: 2
-
-### Summer Games
-
-Port: 2
-
-### Winter Games
-
-Port: 2
