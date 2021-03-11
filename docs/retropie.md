@@ -34,33 +34,45 @@ Second generation machine:
 
 References:
 
-* https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards
-* https://www.androidcentral.com/best-sd-cards-raspberry-pi-4
+* [Tom's Hardware: Raspberry Pi MicroSD Cards](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards)
+* [Android Central: Raspbery Pi MicroSD Cards](https://www.androidcentral.com/best-sd-cards-raspberry-pi-4)
+
+## Controllers
+
+Connection types:
+
+* Wired > 2.4ghz > Bluetooth
+
+Preferred hardware:
+
+* 8bitdo wireless controllers
+
+Keys to reducing input lag:
+
+* TV Game Mode
+* Wired controllers
+* Use NTCS version of games
+* Enable runahead
+
+References:
+
+* [Input latency](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
+* [Input lag](https://retropie.org.uk/docs/Input-Lag/)
 
 ## Frontends
 
 Retropie vs. Lakka vs. Recalbox vs. Batocera
 
-* Retropie better overall experience
-* Recalbox -- too simple, not enough compatible
-* Lakka -- too advanced
-* Batocera -- too simple
+* Retropie: Better overall experience
+* Recalbox: too simple, not enough compatible
+* Lakka: Too advanced
+* Batocera: Too simple
 
 Retropie is the preferred frontend.
 
-### Files
-
-Files:
-
-* /opt/retropie/configs/all/retroarch.cfg
-* /opt/retropie/configs/all/retroarch-core-options.cfg
-* /opt/retropie/configs/all/runcommand.cfg
-* /opt/retropie/configs/all/retroarch-joypads/Microsoft\ X-Box\ 360\ pad.cfg
-* /opt/retropie/configs/all/retroarch/autoconfig/Microsoft\ X-Box\ 360\ pad.cfg
-
 ## Storage
 
-[USB Drive vs. MicroSD](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/):
+USB Drive vs. MicroSD:
 
 * The various pros don't really apply for this setup
 * Everything is scripted, so transferring ROMs is easy
@@ -68,6 +80,28 @@ Files:
 * Cost is somewhat similar
 * Compatiblity is not an issue
 * Data will be backed up and stored elsewhere 
+
+References:
+
+* [Running ROMs form a USB drive](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/)
+
+### Configurations
+
+Files:
+
+* /opt/retropie/configs/all/retroarch-joypads/Microsoft\ X-Box\ 360\ pad.cfg
+* /opt/retropie/configs/all/retroarch/autoconfig/Microsoft\ X-Box\ 360\ pad.cfg
+
+[Retroarch](/opt/retropie/configs/all/retroarch.cfg)
+
+* https://retropie.org.uk/docs/RetroArch-Configuration/
+
+[Retroarch Cores](/opt/retropie/configs/all/retroarch-core-options.cfg):
+
+* [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
+* [FBNeo](https://github.com/libretro/docs/blob/master/docs/library/fbneo.md)
+* [SNES](https://github.com/libretro/docs/blob/master/docs/library/snes9x_2010.md)
+* [VICE](https://github.com/libretro/docs/blob/master/docs/library/vice.md)
 
 ## ROMs
 
@@ -111,7 +145,7 @@ ls *.zip | parallel -j 5 wine ~/Downloads/TrrntZip.NET.exe  {}
 * [x] Determine if we should upgrade MicroSD card
 * [] Set up Arcade games
 * [] Vice vs. lr-vice (set up controls properly)
-* [] Get SNES controllers
-* [] Update documentation
+* [x] Get SNES controllers
+* [x] Update documentation
 * [] Test lr-dosbox-pure with Carmageddon
 * [] Scriptable process

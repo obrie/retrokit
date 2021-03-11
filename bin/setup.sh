@@ -9,6 +9,7 @@ killall emulationstation
 # Wifi
 ##############
 
+# NOTE: Connect over 2.4ghz, not 5ghz
 sudo raspi-config
 
 ##############
@@ -281,6 +282,17 @@ sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
 
 # Enable fast startup
 crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
+
+##############
+# Input Performance
+##############
+
+# Enable run-ahead
+for system in arcade c64 nes snes; do
+  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_enabled' '"true"'
+  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_frames' '"1"'
+  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
+done
 
 ##############
 # Fix inputs
