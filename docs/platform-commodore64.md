@@ -11,26 +11,8 @@ Preferred:
 Primary Sources:
 
 * https://***REMOVED***
+* http://***REMOVED***
 * https://***REMOVED***
-
-Secondary Sources:
-
-* https://***REMOVED***
-* https://***REMOVED***
-
-## Installed Games
-
-* [180](http://***REMOVED***games/418)
-* [California Games](http://***REMOVED***games/94)
-* [Frogger](http://***REMOVED***games/383)
-* [Karateka](http://***REMOVED***games/354)
-* [Paperboy](http://***REMOVED***games/157)
-* [Pitfall](http://***REMOVED***games/269)
-* [Pitstop](http://***REMOVED***games/271)
-* [Popeye](http://***REMOVED***games/467)
-* [Rampage](http://***REMOVED***games/160)
-* [Summer Games](http://***REMOVED***games/295)
-* [Winter Games](http://***REMOVED***games/310)
 
 ## Controls
 
