@@ -14,11 +14,17 @@
 # Commodore 64
 ##############
 
-rsync -r -L platforms/c64/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/c64/
-rsync -r -L platforms/c64/remaps/ pi@***REMOVED***:/opt/retropie/configs/all/retroarch/config/remaps/lr-vice/
+c64_source="https://***REMOVED***Commodore%2064"
+c64_target="/home/pi/RetroPie/roms/c64/"
+wget -nc $c64_source/180%20%2813%29.zip -O $c64_target/180.zip
+wget -nc $c64_source/California%20Games%20%281227%29.zip -O $c64_target/california\ games.zip
+wget -nc $c64_source/California%20Games%20%281227%29.zip -O $c64_target/california\ games.zip
+wget -nc $c64_source/California%20Games%20%281227%29.zip -O $c64_target/california\ games.zip
+wget -nc $c64_source/California%20Games%20%281227%29.zip -O $c64_target/california\ games.zip
 
-wget -nc https://***REMOVED***California%20Games%20%281227%29.zip -O /home/pi/RetroPie/roms/c64/california\ games.zip
+rsync -r platforms/c64/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/c64/
+rsync -r platforms/c64/remaps/ pi@***REMOVED***:/opt/retropie/configs/all/retroarch/config/remaps/lr-vice/
 
-rsync -r -L platforms/nes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/nes/
-rsync -r -L platforms/snes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/snes/
-rsync -r -L platforms/nes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/nes/
+rsync -r platforms/nes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/nes/
+rsync -r platforms/snes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/snes/
+rsync -r platforms/nes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/nes/
