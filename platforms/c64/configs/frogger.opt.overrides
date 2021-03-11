@@ -1,0 +1,11 @@
+vice_joyport = "2"
+vice_mapper_a = "RETROK_s"
+vice_mapper_b = "RETROK_f"
+vice_mapper_x = "RETROK_n"
+vice_mapper_y = "RETROK_y"
+# Directionals
+vice_mapper_l = "RETROK_q"
+vice_mapper_l2 = "RETROK_w"
+vice_mapper_r = "RETROK_e"
+vice_mapper_r2 = "RETROK_r"
+vice_mapper_start = "RETROK_F1"
