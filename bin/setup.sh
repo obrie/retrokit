@@ -283,12 +283,15 @@ sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
 # Enable fast startup
 crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
 
+# Set up configurations
+mkdir -p /opt/retropie/configs/all/retroarch/config/VICE\ x64/
+
 ##############
 # Input Performance
 ##############
 
 # Enable run-ahead
-for system in arcade c64 nes snes; do
+for system in arcade nes snes; do
   crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_enabled' '"true"'
   crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_frames' '"1"'
   crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'

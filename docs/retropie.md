@@ -85,23 +85,38 @@ References:
 
 * [Running ROMs form a USB drive](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/)
 
-### Configurations
+## Configurations
 
-Files:
+### Retroarch
+
+[Retroarch](/opt/retropie/configs/all/retroarch.cfg)
 
 * /opt/retropie/configs/all/retroarch-joypads/Microsoft\ X-Box\ 360\ pad.cfg
 * /opt/retropie/configs/all/retroarch/autoconfig/Microsoft\ X-Box\ 360\ pad.cfg
 
-[Retroarch](/opt/retropie/configs/all/retroarch.cfg)
-
 * https://retropie.org.uk/docs/RetroArch-Configuration/
+* https://docs.libretro.com/guides/overrides/
 
-[Retroarch Cores](/opt/retropie/configs/all/retroarch-core-options.cfg):
+### Retroarch Core Options
 
-* [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
+All Cores: [Retroarch Cores](/opt/retropie/configs/all/retroarch-core-options.cfg):
+
 * [FBNeo](https://github.com/libretro/docs/blob/master/docs/library/fbneo.md)
 * [SNES](https://github.com/libretro/docs/blob/master/docs/library/snes9x_2010.md)
-* [VICE](https://github.com/libretro/docs/blob/master/docs/library/vice.md)
+* [VICE](https://docs.libretro.com/library/vice/#core-options)
+
+ROM-specific: /opt/retropie/configs/all/retroarch/config/{core}/{rom[.zip]}.opt
+
+References:
+
+* https://retropie.org.uk/forum/topic/22816/guide-retroarch-system-emulator-core-and-rom-config-files
+* https://retropie.org.uk/docs/RetroArch-Core-Options/
+
+### DOSBox
+
+TODO
+
+* [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
 
 ## ROMs
 
