@@ -1,5 +1,9 @@
+#!/bin/bash
+
 ##############
-# Environment
+# Set up a fresh install of RetroPie
+# 
+# Based on v4.7.1
 ##############
 
 # Make sure emulation station isn't running
@@ -257,37 +261,6 @@ cat > ~/.emulationstation/es_input.cfg <<eof
   </inputConfig>
 </inputList>
 eof
-
-##############
-# Ports
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh eduke32 _binary_
-
-##############
-# Emulator: DOS
-# 
-# Configs:
-# * ~/.dosbox/dosbox-SVN.conf
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh dosbox _binary_
-sudo ~/RetroPie-Setup/retropie_packages.sh lr-dosbox-pure _binary_
-
-##############
-# Emulator: Commodore 64
-##############
-
-sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
-
-# Enable fast startup
-crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
-
-# Default Start command
-crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_mapper_start' '"RETROK_F1"'
-
-# Set up configurations
-mkdir -p /opt/retropie/configs/all/retroarch/config/VICE\ x64/
 
 ##############
 # Input Performance

@@ -1,3 +1,9 @@
+#!/bin/bash
+
+##############
+# Scrape ROMs
+##############
+
 # Kill emulation station
 killall emulationstation
 
