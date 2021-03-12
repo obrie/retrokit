@@ -1,5 +1,10 @@
 #!/bin/bash
 
+set -e
+
+app_root=$(cd "$( dirname "$0" )/.." && pwd)
+settings_file=$app_root/config/settings.json
+
 ##############
 # Set up a fresh install of RetroPie
 # 
@@ -31,9 +36,12 @@ sudo apt full-upgrade
 sudo apt install crudini
 
 # Env editor
-mkdir tools
-wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O tools/dotenv
+mkdir -p ~/tools
+wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/dotenv
 . dotenv
+
+# JSON reader
+sudo apt install jq
 
 # Benchmarking
 sudo apt-get install sysbench
@@ -44,7 +52,6 @@ sudo apt-get install sysbench
 
 # Configure Argon case
 curl https://download.argon40.com/argon1.sh | bash
-argonone-config
 
 # Fix HDMI w/ Argon case (https://forum.libreelec.tv/thread/22079-rpi4-no-hdmi-sound-using-argon-one-case/):
 crudini --set /boot/config.txt '' 'hdmi_force_hotplug' '1'
@@ -76,68 +83,13 @@ crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
 ##############
 
 # Add IR support
-crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-tivo'
-
-cat > /etc/rc_keymaps/tivo.toml <<EOF
-[[protocols]]
-name = "tivo"
-protocol = "nec"
-variant = "nec32"
-[protocols.scancodes]
-0x30859060 = "KEY_A" # A
-0x30859061 = "KEY_B" # B
-0x30859062 = "KEY_X" # C
-0x30859063 = "KEY_Y" # D
-0x3085f009 = "KEY_MEDIA"
-# 0x3085e010 = "KEY_POWER2" # TV Power
-0x3085e011 = "KEY_TV" # Live TV
-0x3085c034 = "KEY_VIDEO_NEXT" # Input
-0x3085e013 = "KEY_SPACE" # Info
-0x3085a05f = "KEY_CYCLEWINDOWS"
-0x0085305f = "KEY_CYCLEWINDOWS"
-0x3085c036 = "KEY_EPG" # Guide
-0x3085e014 = "KEY_UP" # Up
-0x3085e016 = "KEY_DOWN" # Down
-0x3085e017 = "KEY_LEFT" # Left
-0x3085e015 = "KEY_RIGHT" # Right
-0x3085e018 = "KEY_SCROLLDOWN" # Thumbs down
-0x3085e019 = "KEY_SELECT" # Select
-0x3085e01a = "KEY_SCROLLUP" # Thumbs up
-0x3085e01c = "KEY_VOLUMEUP" # Volume Up
-0x3085e01d = "KEY_VOLUMEDOWN" # Volume Down
-0x3085e01b = "KEY_MUTE"#  Mute
-0x3085d020 = "KEY_RECORD" # Record
-0x3085e01e = "KEY_CHANNELUP" # Channel up
-0x0085301f = "KEY_CHANNELDOWN" # Channel down
-0x3085e01f = "KEY_CHANNELDOWN" # Channel down
-0x3085d021 = "KEY_PLAY" # Play
-0x3085d023 = "KEY_PAUSE" # Pause
-0x3085d025 = "KEY_SLOW" # Slow
-0x3085d022 = "KEY_REWIND" # Rewind
-0x3085d024 = "KEY_FASTFORWARD" # Fast Forward
-0x3085d026 = "KEY_PREVIOUS" # Previous / Back
-0x3085d027 = "KEY_NEXT" # Next
-0x3085b044 = "KEY_ZOOM" # Zoom
-0x3085b048 = "KEY_STOP"
-0x3085b04a = "KEY_DVD"
-0x3085d028 = "KEY_NUMERIC_1" # 1
-0x3085d029 = "KEY_NUMERIC_2" # 2
-0x3085d02a = "KEY_NUMERIC_3" # 3
-0x3085d02b = "KEY_NUMERIC_4" # 4
-0x3085d02c = "KEY_NUMERIC_5" # 5
-0x3085d02d = "KEY_NUMERIC_6" # 6
-0x3085d02e = "KEY_NUMERIC_7" # 7
-0x3085d02f = "KEY_NUMERIC_8" # 8
-0x0085302f = "KEY_NUMERIC_8" # 8
-0x3085c030 = "KEY_NUMERIC_9" # 9
-0x3085c031 = "KEY_NUMERIC_0" # 0
-0x3085c033 = "KEY_ENTER" # Enter
-0x3085c032 = "KEY_ESC" # Clear
-0x3085f00c = "KEY_HOME" # Tivo
-EOF
+sed '/retropie/d' -i /etc/rc_maps.cfg
+cat '* rc-retropie retropie.toml' > /etc/rc_maps.cfg
+cp $app_root/config/remote.toml /etc/rc_keymaps/retropie.toml
+crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
 
 # Load
-sudo ir-keytable -t -w /etc/rc_keymaps/tivo.toml
+sudo ir-keytable -t -w /etc/rc_keymaps/retropie.toml
 
 # Test
 sudo ir-keytable -c -p all -t
@@ -149,12 +101,6 @@ sudo ir-keytable -c -p all -t
 # Overclock
 crudini --set /boot/config.txt 'pi4' 'over_voltage' '2'
 crudini --set /boot/config.txt 'pi4' 'arm_freq' '1750'
-
-# Disable Bluetooth (https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=215317#p1335189)
-crudini --set /boot/config.txt 'all' 'overlay' 'disable-bt'
-sudo systemctl disable hciuart.service
-sudo systemctl disable bluealsa.service
-sudo systemctl disable bluetooth.service
 
 # Graphics
 sudo apt install mesa-utils
@@ -175,8 +121,10 @@ sudo systemctl start ssh
 .env -f /etc/default/console-setup set FONTSIZE='"16x32"'
 
 # Theme
-sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme pixel-metadata ehettervik
-sed -r -i 's/(<string name="ThemeSet" value=")([^"]*)/\1pixel-metadata/' es_settings.cfg
+theme_name=$(jq -r '.theme.name' $settings_file)
+theme_repo=$(jq -r '.theme.repo' $settings_file)
+sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme_name $theme_repo
+sed -r -i 's/(<string name="ThemeSet" value=")([^"]*)/\1$theme_name/' es_settings.cfg
 
 # Overscan
 crudini --set /boot/config.txt '' 'disable_overscan' '1'
@@ -192,19 +140,22 @@ sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' es_settings.
 # Locale
 ##############
 
-sudo sh -c 'echo "America/New_York" > /etc/timezone'
+timezone=$(jq -r '.locale.timezone' $settings_file)
+language=$(jq -r '.locale.language' $settings_file)
+sudo sh -c "echo '$timezone' > /etc/timezone"
 sudo dpkg-reconfigure -f noninteractive tzdata
-sudo sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
-sudo sh -c "echo 'LANG=\"en_US.UTF-8\"' > /etc/default/locale"
+sudo sed -i -e "s/# $language.UTF-8 UTF-8/$language.UTF-8 UTF-8/" /etc/locale.gen
+sudo sh -c "echo 'LANG=\"$language.UTF-8\"' > /etc/default/locale"
 sudo dpkg-reconfigure --frontend=noninteractive locales
-sudo update-locale LANG=en_US.UTF-8
+sudo update-locale LANG=$language.UTF-8
 
 ##############
 # Boot
 ##############
 
 # Splash Screen
-.env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION='"36"'
+duration=$(jq -r '.splashscreen.duration' $settings_file)
+.env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION="\"$duration\""
 
 ##############
 # Scraper

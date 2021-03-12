@@ -1,13 +1,18 @@
 #!/bin/bash
 
 ##############
-# Create a new image
+# Image a new SD card
 ##############
 
 set -e
 
-# Install Raspberry Pie Imager (https://retropie.org.uk/docs/First-Installation/)
+retropie_version=4.7.1
+raspbian_version=buster
+rpi_version=rpi4_400
+device=$1
 
-wget https://downloads.raspberrypi.org/imager/imager_1.5_amd64.deb
-dpkg -i imager_1.5_amd64.deb
-rpi-imager
+# Download Retropie
+wget https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz -O /tmp/retropie.img.gz
+
+# Copy the image
+gunzip --stdout /tmp/retropie.img.gz | sudo dd bs=4M of=$device

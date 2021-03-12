@@ -1,6 +1,10 @@
+#!/bin/bash
+
 ##############
 # Emulator: Commodore 64
 ##############
+
+set -e
 
 sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
 
