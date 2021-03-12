@@ -18,7 +18,7 @@ Primary Sources:
 
 Instructions:
 
-* https://docs.libretro.com/guides/input-and-controls/#keyboard-controls
+* https://docs.libretro.com/library/vice/
 * https://retropie.org.uk/docs/Commodore-64-VIC-20-PET/#controls_1
 
 Virtual Keyboard:
