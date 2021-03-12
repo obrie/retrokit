@@ -281,6 +281,14 @@ sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/conf
 sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
 
 ##############
+# Emulators
+##############
+
+for platform in platforms/*; do
+  $platform/setup.sh
+done
+
+##############
 # Manual
 ##############
 
