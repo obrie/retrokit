@@ -20,6 +20,8 @@ Set up [Gravis Ultrasound](https://retropie.org.uk/docs/PC/#install-gravis-ultra
 
 ```
 
+* [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
+
 ## Controls
 
 Keys:

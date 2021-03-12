@@ -112,12 +112,6 @@ References:
 * https://retropie.org.uk/forum/topic/22816/guide-retroarch-system-emulator-core-and-rom-config-files
 * https://retropie.org.uk/docs/RetroArch-Core-Options/
 
-### DOSBox
-
-TODO
-
-* [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
-
 ## ROMs
 
 Indexes:
