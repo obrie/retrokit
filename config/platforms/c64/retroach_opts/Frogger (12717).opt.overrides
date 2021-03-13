@@ -1,0 +1,8 @@
+# https://www.c64-wiki.com/wiki/Frogger_(Sierra_Online,_Inc.)
+vice_joyport = "2"
+vice_mapper_x = "RETROK_n"
+vice_mapper_y = "RETROK_y"
+vice_mapper_l = "RETROK_s"
+vice_mapper_r = "RETROK_f"
+# Directionals
+vice_mapper_start = "RETROK_F1"

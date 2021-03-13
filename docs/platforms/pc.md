@@ -4,22 +4,6 @@
 
 Preferred:
 
-* DosBox
-
-## Installation
-
-Install dependencies:
-
-```
-sudo apt install fluid-soundfont-gm
-```
-
-Set up [Gravis Ultrasound](https://retropie.org.uk/docs/PC/#install-gravis-ultrasound-gus):
-
-```
-
-```
-
 * [DOSBox](https://github.com/libretro/docs/blob/master/docs/library/dosbox.md)
 
 ## Controls

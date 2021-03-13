@@ -1,6 +1,10 @@
+#!/bin/bash
+
 ##############
 # Emulator: SNES
 ##############
+
+set -e
 
 # Input Lag
 crudini --set /opt/retropie/configs/snes/retroarch.cfg '' 'run_ahead_enabled' '"true"'

@@ -1,26 +1,3 @@
-# SNES
-
-## Emulators
-
-Preferred:
-
-1. lr-snes9x2010
-2. lr-snes9x
-
-## ROMs
-
-Primary Sources:
-
-* [https://***REMOVED***](https://***REMOVED***)
-* https://***REMOVED***
-
-Secondary Sources:
-
-* https://***REMOVED***SNES/
-* https://***REMOVED***
-
-### Installation
-
 * [Aladdin](./platforms/nes/roms/no-intro/Aladdin (USA).zip)
 * [Arkanoid](./platforms/nes/roms/no-intro/Arkanoid (Europe).zip)
 * [Contra III - The Alien Wars](./platforms/nes/roms/no-intro/Contra III - The Alien Wars (USA).zip)
@@ -72,41 +49,3 @@ Secondary Sources:
 * [Ultimate Mortal Kombat 3](./platforms/nes/roms/no-intro/Ultimate Mortal Kombat 3 (USA).zip)
 * [Worms](./platforms/nes/roms/no-intro/Worms (Europe).zip)
 * [X-Men - Mutant Apocalypse](./platforms/nes/roms/no-intro/X-Men - Mutant Apocalypse (USA).zip)
-
-Command:
-
-```
-pushd platforms/snes/roms/
-ln -s "../no-intro/Aladdin (USA).zip" "installed/Aladdin (USA).zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-ln -s "../no-intro/.zip" "installed/.zip"
-popd
-rsync -r -L platforms/snes/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/snes/
-```

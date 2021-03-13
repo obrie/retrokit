@@ -168,50 +168,18 @@ duration=$(jq -r '.splashscreen.duration' $settings_file)
 
 ~/RetroPie-Setup/retropie_packages.sh skyscraper _binary_
 
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini '' 'regionPrios' '"us,eu,ss,uk,wor,jp"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'userCreds' '"***REMOVED***:***REMOVED***"'
+regions=$(jq -r '.skyscraper.regions' $settings_file)
+username=$(jq -r '.skyscraper.username' $settings_file)
+password=$(jq -r '.skyscraper.password' $settings_file)
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini '' 'regionPrios' "\"$regions\""
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'userCreds' "\"$username:$password\""
 crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"'
 
 ##############
 # Inputs
 ##############
 
-cat > ~/.emulationstation/es_input.cfg <<eof
-<?xml version="1.0"?>
-<inputList>
-  <inputAction type="onfinish">
-    <command>/opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh</command>
-  </inputAction>
-  <inputConfig type="keyboard" deviceName="Keyboard" deviceGUID="-1">
-    <input name="pageup" type="key" id="113" value="1"/>
-    <input name="up" type="key" id="1073741906" value="1"/>
-    <input name="left" type="key" id="1073741904" value="1"/>
-    <input name="select" type="key" id="1073742053" value="1"/>
-    <input name="right" type="key" id="1073741903" value="1"/>
-    <input name="pagedown" type="key" id="119" value="1"/>
-    <input name="y" type="key" id="97" value="1"/>
-    <input name="x" type="key" id="115" value="1"/>
-    <input name="down" type="key" id="1073741905" value="1"/>
-    <input name="start" type="key" id="13" value="1"/>
-    <input name="b" type="key" id="122" value="1"/>
-    <input name="a" type="key" id="120" value="1"/>
-  </inputConfig>
-  <inputConfig type="joystick" deviceName="Microsoft X-Box 360 pad" deviceGUID="030000005e0400008e02000014010000">
-    <input name="pageup" type="button" id="4" value="1"/>
-    <input name="up" type="hat" id="0" value="1"/>
-    <input name="left" type="hat" id="0" value="8"/>
-    <input name="select" type="button" id="8" value="1"/>
-    <input name="right" type="hat" id="0" value="2"/>
-    <input name="pagedown" type="button" id="5" value="1"/>
-    <input name="y" type="button" id="3" value="1"/>
-    <input name="x" type="button" id="2" value="1"/>
-    <input name="down" type="hat" id="0" value="4"/>
-    <input name="start" type="button" id="9" value="1"/>
-    <input name="b" type="button" id="1" value="1"/>
-    <input name="a" type="button" id="0" value="1"/>
-  </inputConfig>
-</inputList>
-eof
+cp $app_root/config/inputs.cfg ~/.emulationstation/es_input.cfg
 
 ##############
 # Input Performance
