@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Emulator: Arcade
+# Platform: Arcade
 ##############
 
 set -e

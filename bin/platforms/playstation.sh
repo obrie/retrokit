@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Emulator: Playstation
+# Platform: Playstation
 ##############
 
 set -e

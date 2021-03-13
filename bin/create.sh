@@ -6,6 +6,15 @@
 
 set -e
 
+usage() {
+  echo "usage: $0 [DEVICE]"
+  exit 1
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+fi
+
 retropie_version=4.7.1
 raspbian_version=buster
 rpi_version=rpi4_400

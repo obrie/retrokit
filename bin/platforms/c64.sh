@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Emulator: Commodore 64
+# Platform: Commodore 64
 ##############
 
 set -e

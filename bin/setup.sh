@@ -204,7 +204,7 @@ sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
 ##############
 
 for platform in platforms/*; do
-  $platform/setup.sh
+  $platform
 done
 
 ##############

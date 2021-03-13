@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Emulator: NES
+# Platform: NES
 ##############
 
 set -e

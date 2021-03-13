@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Emulator: PC
+# Platform: PC
 # 
 # Configs:
 # * ~/.dosbox/dosbox-SVN.conf
