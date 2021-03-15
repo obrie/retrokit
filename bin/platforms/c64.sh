@@ -1,7 +1,7 @@
 #!/bin/bash
 
 APP_DIR=$(cd "$( dirname "$0" )/../.." && pwd)
-CONFIG_DIR="$APP_DIR/config/c64"
+CONFIG_DIR="$APP_DIR/platforms/config/c64"
 
 ##############
 # Platform: Commodore 64
