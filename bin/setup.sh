@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 app_root=$(cd "$( dirname "$0" )/.." && pwd)
 settings_file=$app_root/config/settings.json

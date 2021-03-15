@@ -4,6 +4,8 @@
 # ROM manager
 ##############
 
+set -ex
+
 scrape() {
   platform=$1
 

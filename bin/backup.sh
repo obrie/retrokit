@@ -4,7 +4,7 @@
 # Backup SD card
 ##############
 
-set -e
+set -ex
 
 usage() {
   echo "usage: $0 [DEVICE]"

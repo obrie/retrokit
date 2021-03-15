@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 DIR=$(pwd)
 SEED_TIME=5
-ROMS_DIR=~/RetroPie/roms/c64
+ROMS_DIR=/home/pi/RetroPie/roms/c64
 ALL_DIR=$ROMS_DIR/-\ All\ -
 
 # Create directories
@@ -32,5 +32,3 @@ find $ROMS_DIR/ -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
 
 # Add defaults
 jq -r ".default[]" $DIR/roms.json | xargs -I{} ln -fs "$ALL_DIR/{}" "$ROMS_DIR/{}"
-
-# Link bezels!

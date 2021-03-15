@@ -7,7 +7,10 @@
 # * ~/.dosbox/dosbox-SVN.conf
 ##############
 
-set -e
+set -ex
+
+APP_DIR=$(cd "$( dirname "$0" )/../.." && pwd)
+CONFIG_DIR="$APP_DIR/platforms/config/c64"
 
 # Install emulators
 sudo ~/RetroPie-Setup/retropie_packages.sh dosbox _binary_

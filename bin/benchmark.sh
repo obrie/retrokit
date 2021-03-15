@@ -4,7 +4,7 @@
 # Benchmark Overclocking
 ##############
 
-set -e
+set -ex
 
 # Run before overclock change
 sysbench --test=cpu --num-threads=4 run > pre-benchmark.txt
