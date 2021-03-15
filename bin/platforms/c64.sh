@@ -7,7 +7,7 @@
 set -ex
 
 APP_DIR=$(cd "$( dirname "$0" )/../.." && pwd)
-CONFIG_DIR="$APP_DIR/platforms/config/c64"
+CONFIG_DIR="$APP_DIR/config/platforms/c64"
 
 if [ ! -d "/opt/retropie/libretrocores/lr-vice/" ]; then
   sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
