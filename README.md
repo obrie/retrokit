@@ -151,6 +151,8 @@ ls *.zip | parallel -j 5 wine ~/Downloads/TrrntZip.NET.exe  {}
 
 ## TODO
 
+http://***REMOVED*** ???
+
 * [x] Determine if we should upgrade MicroSD card
 * [] Set up Arcade games
 * [] Vice vs. lr-vice (set up controls properly)

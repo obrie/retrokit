@@ -2,49 +2,35 @@
 
 set -e
 
-##############
-# Variables
-##############
+DIR=$(pwd)
+SEED_TIME=5
+ROMS_DIR=~/RetroPie/roms/c64
+ALL_DIR=$ROMS_DIR/-\ All\ -
 
-retropie_configs_dir="/opt/retropie/configs/all"
-retroarch_config_dir="$retropie_configs_dir/retroarch/config"
+# Create directories
+mkdir -p $ALL_DIR
 
-##############
-# Commodore 64
-##############
+# No-Intro Torrent
+NO_INTRO_TORRENT=/tmp/no-intro.torrent
+NO_INTRO_DIR=/tmp/***REMOVED***
+wget -nc https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent -O $NO_INTRO_TORRENT
 
-# # Retrieve all:
-# wget -m -np -c -U "eye02" -w 2 -R "index.html*" "https://***REMOVED***"
+# No-Intro Tapes
+if [ ! -f "$NO_INTRO_DIR/Commodore\ -\ 64\ \(Tapes\).zip" ]; then
+  aria2c $NO_INTRO_TORRENT -d /tmp/ --select-file 23 --seed-time=$SEED_TIME
+  unzip -o $NO_INTRO_DIR/Commodore\ -\ 64\ \(Tapes\).zip -d $ALL_DIR/
+fi
 
-c64_system="VICE x64"
-c64_retroarch_dir="$retroarch_config_dir/$c64_system"
+# No-Intro Cartridges
+if [ ! -f "$NO_INTRO_DIR/Commodore\ -\ 64.zip" ]; then
+  aria2c $NO_INTRO_TORRENT -d /tmp/ --select-file 25 --seed-time=$SEED_TIME
+  unzip -o $NO_INTRO_DIR/Commodore\ -\ 64.zip -d $ALL_DIR/
+fi
 
-scp ./platforms/c64/configs/* pi@***REMOVED***:"$c64_retroarch_dir/"
+# Blacklist keywords
+find $ROMS_DIR/ -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
 
-c64_source="https://***REMOVED***Commodore%2064"
-c64_target="/home/pi/RetroPie/roms/c64/"
+# Add defaults
+jq -r ".default[]" $DIR/roms.json | xargs -I{} ln -s "$ALL_DIR/{}" "$ROMS_DIR/{}"
 
-# Core Options (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-find "$c64_retroarch_dir" -iname "*overrides" | while read override_file; do
-  opt_name=$(basename -s .overrides "$override_file")
-  opt_file="$c64_retroarch_dir/$opt_name"
-  cp $retropie_configs_dir/retroarch-core-options.cfg "$opt_file"
-  crudini --merge "$opt_file" < "$override_file"
-done
-
-rsync -r platforms/c64/roms/installed/ pi@***REMOVED***:/home/pi/RetroPie/roms/c64/
-rsync -r platforms/c64/remaps/ pi@***REMOVED***:/opt/retropie/configs/all/retroarch/config/remaps/lr-vice/
-
-180%20%2813%29.zip,180.zip
-
-wget -nc $c64_source/180%20%2813%29.zip -O $c64_target/180.zip
-wget -nc $c64_source/California%20Games%20%281227%29.zip -O $c64_target/california\ games.zip
-wget -nc $c64_source/Frogger%20%2812717%29.zip -O $c64_target/frogger.zip
-wget -nc $c64_source/Karateka%20%284049%29.zip -O $c64_target/karateka.zip
-wget -nc $c64_source/Paperboy%20%285549%29.zip -O $c64_target/paperboy.zip
-wget -nc $c64_source/Pitfall%20-%20Pitfall%20Harry%27s%20Jungle%20Adventure%20%285731%29.zip -O $c64_target/pitfall.zip
-wget -nc $c64_source/Pitstop%20%285734%29.zip -O $c64_target/pitstop.zip
-wget -nc $c64_source/Popeye%20%285829%29.zip -O $c64_target/popeye.zip
-wget -nc $c64_source/Rampage%20%286200%29.zip -O $c64_target/rampage.zip
-wget -nc $c64_source/Summer%20Games%20%287545%29.zip -O $c64_target/summer\ games.zip
-wget -nc $c64_source/Winter%20Games%20%288620%29.zip -O $c64_target/winter\ games.zip
+# Link bezels!

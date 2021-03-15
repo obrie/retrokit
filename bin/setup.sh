@@ -43,6 +43,9 @@ wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/do
 # JSON reader
 sudo apt install jq
 
+# BitTorrent client
+sudo apt install aria2
+
 # Benchmarking
 sudo apt-get install sysbench
 
@@ -200,12 +203,29 @@ sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/conf
 sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
 
 ##############
+# Overlays (Bezels)
+##############
+
+wget -nc https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -O /home/pi/RetroPie/retropiemenu/bezelproject.sh
+chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
+/home/pi/RetroPie/retropiemenu/bezelproject.sh
+
+# 1. Install system pack
+# 2. Install theme pack
+
+##############
 # Emulators
 ##############
 
 for platform in platforms/*; do
   $platform
 done
+
+##############
+# Reload
+##############
+
+emulationstation
 
 ##############
 # Manual
