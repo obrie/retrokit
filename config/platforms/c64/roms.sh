@@ -31,6 +31,6 @@ fi
 find $ROMS_DIR/ -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
 
 # Add defaults
-jq -r ".default[]" $DIR/roms.json | xargs -I{} ln -s "$ALL_DIR/{}" "$ROMS_DIR/{}"
+jq -r ".default[]" $DIR/roms.json | xargs -I{} ln -fs "$ALL_DIR/{}" "$ROMS_DIR/{}"
 
 # Link bezels!

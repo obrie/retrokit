@@ -1,5 +1,8 @@
 #!/bin/bash
 
+APP_DIR=$(cd "$( dirname "$0" )/../.." && pwd)
+CONFIG_DIR="$APP_DIR/config/c64"
+
 ##############
 # Platform: Commodore 64
 ##############
@@ -17,16 +20,10 @@ crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_mapp
 # Set up configurations
 mkdir -p /opt/retropie/configs/all/retroarch/config/VICE\ x64/
 
-# retropie_configs_dir="/opt/retropie/configs/all"
-# retroarch_config_dir="$retropie_configs_dir/retroarch/config"
-
-# c64_system="VICE x64"
-# c64_retroarch_dir="$retroarch_config_dir/$c64_system"
-
-# # Core Options (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-# find "$c64_retroarch_dir" -iname "*overrides" | while read override_file; do
-#   opt_name=$(basename -s .overrides "$override_file")
-#   opt_file="$c64_retroarch_dir/$opt_name"
-#   cp $retropie_configs_dir/retroarch-core-options.cfg "$opt_file"
-#   crudini --merge "$opt_file" < "$override_file"
-# done
+# Core Options (https://retropie.org.uk/docs/RetroArch-Core-Options/)
+retropie_configs_dir="/opt/retropie/configs/all"
+find "$CONFIG_DIR/retroarch_opts" -iname "*.opt" | while read override_file; do
+  opt_name=$(basename "$override_file")
+  opt_file="$retropie_configs_dir/retroarch/config/VICE x64/$opt_name"
+  crudini --merge "$retropie_configs_dir/retroarch-core-options.cfg" --output $opt_file < "$override_file"
+done
