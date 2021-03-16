@@ -67,5 +67,5 @@ if [[ $# -gt 1 ]]; then
   usage
 fi
 
-command=${1:-all}
+command=${1:-install}
 "$command"
