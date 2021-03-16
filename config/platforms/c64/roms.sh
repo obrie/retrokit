@@ -3,13 +3,19 @@
 set -ex
 
 DIR=$(dirname "$0")
-SEED_TIME=0
-ROMS_DIR=/home/pi/RetroPie/roms/c64
-ALL_DIR=$ROMS_DIR/-\ All\ -
+APP_DIR=$(cd "$DIR/../../.." && pwd)
+DOWNLOAD_DIR="$APP_DIR/tmp/c64"
+mkdir -p "$DOWNLOAD_DIR"
 
-# No-Intro Torrent
-NO_INTRO_TORRENT=/tmp/no-intro.torrent
-NO_INTRO_DIR=/tmp/***REMOVED***
+# Install config
+ROMS_DIR="/home/pi/RetroPie/roms/c64"
+ALL_DIR="$ROMS_DIR/- All -"
+
+# Torrent config
+SEED_TIME=0
+TORRENT_FILE="$DOWNLOAD_DIR/no-intro.torrent"
+TORRENT_FILTER="$TORRENT_FILE.filter"
+TORRENT_DIR="$DOWNLOAD_DIR/***REMOVED***"
 
 usage() {
   echo "usage: $0 [command]"
@@ -17,9 +23,29 @@ usage() {
 }
 
 download_torrent() {
-  if [ ! -f "$NO_INTRO_TORRENT" ]; then
-    wget -nc https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent -O "$NO_INTRO_TORRENT"
+  if [ ! -f "$TORRENT_FILE" ]; then
+    wget "https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent" -O "$TORRENT_FILE"
   fi
+}
+
+install_torrent() {
+  download_torrent
+
+  # Create directories
+  mkdir -p "$ALL_DIR"
+
+  # Filter Torrent
+  cat > $TORRENT_FILTER <<EOF
+Commodore - 64 (Tapes).zip
+Commodore - 64.zip
+EOF
+  select_files=$(aria2c -S "$TORRENT_FILE" | grep -F -f "$TORRENT_FILTER" | cut -d"|" -f 1 | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
+
+  # Download files
+  aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file "$select_files" --seed-time=$SEED_TIME
+
+  # Extract files
+  cat $TORRENT_FILTER | xargs -I{} unzip -o "$TORRENT_DIR/{}" -d "$ALL_DIR/"
 }
 
 # Blacklist keywords
@@ -27,40 +53,13 @@ blacklist_games() {
   find $ROMS_DIR/ -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
 }
 
-install_no_intro_file() {
-  file=$1
-
-  download_torrent
-
-  # Create directories
-  mkdir -p $ALL_DIR
-
-  if [ ! -f "$NO_INTRO_DIR/$file" ]; then
-    torrent_index=$(aria2c -S $NO_INTRO_TORRENT | grep "$file" | cut -d"|" -f 1 | tr -d " ")
-    aria2c $NO_INTRO_TORRENT -d /tmp/ --select-file $torrent_index --seed-time=$SEED_TIME
-    unzip -o "$NO_INTRO_DIR/$file" -d "$ALL_DIR/"
-  fi
-
-  blacklist_games
-}
-
-# No-Intro Tapes
-install_tapes() {
-  install_no_intro_file "Commodore - 64 (Tapes).zip"
-}
-
-# No-Intro Cartridges
-install_cartridges() {
-  install_no_intro_file "Commodore - 64.zip"
-}
-
 add_defaults() {
-  jq -r ".default[]" $DIR/roms.json | xargs -I{} ln -fs "$ALL_DIR/{}" "$ROMS_DIR/{}"
+  jq -r ".default[]" "$DIR/roms.json" | xargs -I{} ln -fs "$ALL_DIR/{}" "$ROMS_DIR/{}"
 }
 
-setup() {
-  install_tapes
-  install_cartridges
+install() {
+  install_torrent
+  blacklist_games
   add_defaults
 }
 
