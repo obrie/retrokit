@@ -53,9 +53,21 @@ install_torrent() {
 }
 
 fix_filenames() {
+  # ----- Uppercase filenames
+  rename 'y/a-z/A-Z/' *
 
+  # ----- Uppercase filenames inside CUE files
+  sed -i -e 's/\(.*\)/\U\1/' *.CUE 2> /dev/null || true
 }
 
+delete_unused_files {
+  # ----- Remove extra files if they exist
+  rm *.BA1 2> /dev/null || true
+  rm DOSBOX.CONF* 2> /dev/null || true
+  rm *.BAK 2> /dev/null || true
+}
+
+# https://github.com/sduensin/retropie-tools
 create_configs() {
     BASE=$(basename `pwd`)
     echo Reading and sorting `pwd`...
@@ -75,66 +87,6 @@ create_configs() {
         
         # ----- Find game INI
         INI=$(ls -1 MEAGRE/INIFILE/*.INI | head -n1)
-        
-        # ----- Find title
-        TITLE=$(cat "${INI}" | grep -i ^Name= | head -n1 | tr -d '\r\n')
-        trim TITLE ${TITLE}
-        escapeXml TITLE ${TITLE:5}
-        
-        # ----- Find description
-        DESCRIPTION=$(cat "${INI}" | grep -i ^About= | head -n1 | tr -d '\r\n')
-        trim DESCRIPTION ${DESCRIPTION:6}
-        escapeXml DESCRIPTION $(cat MEAGRE/ABOUT/${DESCRIPTION^^})
-        
-        # ----- Find image (Box, title, then screen shot)
-        IMAGE=$(cat "${INI}" | grep -i ^Front01= | head -n1 | tr -d '\r\n')
-        trim IMAGE ${IMAGE:8}
-        WHERE="FRONT"
-        if [[ "x${IMAGE}" == "x" ]]; then
-          IMAGE=$(cat "${INI}" | grep -i ^Title01= | head -n1 | tr -d '\r\n')
-          trim IMAGE ${IMAGE:8}
-          WHERE="TITLE"
-          if [[ "x${IMAGE}" == "x" ]]; then
-            IMAGE=$(cat "${INI}" | grep -i ^Screen01= | head -n1 | tr -d '\r\n')
-            trim IMAGE ${IMAGE:9}
-            WHERE="SCREEN"
-          fi
-        fi
-        if [[ "x${IMAGE}" != "x" ]]; then
-          escapeXml IMAGE "${DOSGAMES}/!DOS/${GAME^^}/MEAGRE/${WHERE}/${IMAGE^^}"
-        fi
-        
-        # ----- Find release date (only year)
-        RELEASE=$(cat "${INI}" | grep -i ^Year= | head -n1 | tr -d '\r\n')
-        trim RELEASE ${RELEASE:5}
-        escapeXml RELEASE ${RELEASE}0101T000000
-        
-        # ----- Find Developer
-        DEVELOPER=$(cat "${INI}" | grep -i ^Developer= | head -n1 | tr -d '\r\n')
-        trim DEVELOPER ${DEVELOPER:10}
-        escapeXml DEVELOPER ${DEVELOPER}
-        
-        # ----- Find Publisher
-        PUBLISHER=$(cat "${INI}" | grep -i ^Publisher= | head -n1 | tr -d '\r\n')
-        trim PUBLISHER ${PUBLISHER:10}
-        escapeXml PUBLISHER ${PUBLISHER}
-        
-        # ----- Find Genre
-        GENRE=$(cat "${INI}" | grep -i ^Genre= | head -n1 | tr -d '\r\n')
-        trim GENRE ${GENRE:6}
-        escapeXml GENRE ${GENRE}
-        
-        # ----- Add to gamelist.xml
-        echo -e "\t<game>" >> "${GAMELIST}"
-        echo -e "\t\t<path>./${GAME,,}.sh</path>" >> "${GAMELIST}"
-        echo -e "\t\t<name>${TITLE}</name>" >> "${GAMELIST}"
-        echo -e "\t\t<desc>${DESCRIPTION}</desc>" >> "${GAMELIST}"
-        echo -e "\t\t<releasedate>${RELEASE}</releasedate>" >> "${GAMELIST}"
-        echo -e "\t\t<developer>${DEVELOPER}</developer>" >> "${GAMELIST}"
-        echo -e "\t\t<publisher>${PUBLISHER}</publisher>" >> "${GAMELIST}"
-        echo -e "\t\t<genre>${GENRE}</genre>" >> "${GAMELIST}"
-        echo -e "\t\t<image>${IMAGE}</image>" >> "${GAMELIST}"
-        echo -e "\t</game>" >> "${GAMELIST}"
         
         # ----- Create script for RetroPie
         SCRIPT="~/RetroPie/roms/pc/${GAME,,}.sh"
