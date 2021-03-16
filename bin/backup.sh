@@ -7,15 +7,21 @@
 set -ex
 
 usage() {
-  echo "usage: $0 [DEVICE]"
+  echo "usage: $0 <core|boot> <device>"
   exit 1
 }
 
-if [[ $# -ne 1 ]]; then
+backup() {
+  partition=$1
+  device=$2
+
+  sudo dd bs=4M if=$device | gzip | dd bs=4M of=../backups/sd-retropie-$partition.iso
+}
+
+if [[ $# -ne 2 ]]; then
   usage
 fi
 
-device=$1
-
-sudo dd bs=4M if=$device | gzip | dd bs=4M of=../backups/sd-retropie.iso
-sudo dd bs=4M if=$device | gzip | dd bs=4M of=../backups/sd-retropie-boot.iso
+partition=$1
+device=$2
+backup $partition $device

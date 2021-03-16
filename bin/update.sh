@@ -1,10 +1,15 @@
 #!/bin/bash
 
-set -ex
-
 ##############
 # Update the system
 ##############
+
+set -ex
+
+usage() {
+  echo "usage: $0 [command]"
+  exit 1
+}
 
 # Update RetroPie-Setup
 update_retropie_setup() {
@@ -27,6 +32,15 @@ update_packages() {
   sudo ~/RetroPie-Setup/retropie_packages.sh setup update_packages
 }
 
-update_retropie_setup
-update_system
-update_packages
+update_all() {
+  update_retropie_setup
+  update_system
+  update_packages
+}
+
+if [[ $# -gt 1 ]]; then
+  usage
+fi
+
+target=${1:-all}
+"update_$target"

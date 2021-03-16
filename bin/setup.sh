@@ -47,7 +47,10 @@ sudo apt install jq
 sudo apt install aria2
 
 # Benchmarking
-sudo apt-get install sysbench
+sudo apt install sysbench
+
+# Screen
+sudo apt install screen
 
 ##############
 # Argon Case

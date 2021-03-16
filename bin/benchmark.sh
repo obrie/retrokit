@@ -6,9 +6,22 @@
 
 set -ex
 
-# Run before overclock change
-sysbench --test=cpu --num-threads=4 run > pre-benchmark.txt
-vcgencmd measure_temp
+usage() {
+  echo "usage: $0 <pre|post>"
+  exit 1
+}
 
-# Run after overclock change
-sysbench --test=cpu --num-threads=4 run > post-benchmark.txt
+run() {
+  mode=$1
+
+  sysbench --test=cpu --num-threads=4 run > /tmp/$mode-benchmark.txt
+  cat /tmp/$mode-benchmark.txt
+  vcgencmd measure_temp
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+fi
+
+mode=$1
+run $mode
