@@ -36,7 +36,7 @@ start() {
 wait_until_done() {
   while ! transmission-remote -t $id --info | grep "Percent Done: 100%" > /dev/null; do
     transmission-remote -t $id --info | grep -A 10 TRANSFER
-    sleep 1
+    sleep 10
   done
 }
 
@@ -52,7 +52,7 @@ main() {
   add "$torrent_file"
   lookup_id
   filter "$torrent_filter"
-  download
+  start
   wait_until_done
   cleanup
 }

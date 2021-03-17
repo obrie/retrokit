@@ -15,14 +15,17 @@
     "username": "***REMOVED***",
     "password": "***REMOVED***"
   },
-  "torrents": {
-    "no-intro": {
-      "source": "https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent",
-      "dir": "***REMOVED***"
+  "sources": {
+    "nointro": {
+      "url": "https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent",
+      "root_dir": "***REMOVED***"
     },
     "exodos": {
-      "source": "https://***REMOVED***",
-      "dir": "eXoDOS/eXo/eXoDOS"
+      "url": "https://***REMOVED***",
+      "root_dir": "eXoDOS/eXo/eXoDOS"
     }
+  },
+  "roms": {
+    "keyword_blacklist": ["Strip", "Sex", "BIOS"]
   }
 }
