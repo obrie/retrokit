@@ -2,8 +2,10 @@
 
 set -ex
 
-app_root=$(cd "$( dirname "$0" )/.." && pwd)
-settings_file=$app_root/config/settings.json
+DIR=$(dirname "$0")
+APP_DIR=$(cd "$DIR/.." && pwd)
+CONFIG_DIR="$CONFIG_DIR"
+SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
 ##############
 # Set up a fresh install of RetroPie
@@ -44,7 +46,19 @@ wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/do
 sudo apt install jq
 
 # BitTorrent client
-sudo apt install aria2
+sudo apt install transmission-daemon
+sudo systemctl stop transmission-daemon
+if [ ! -f "/etc/transmission-daemon/settings.json.original" ]; then
+  sudo cp /etc/transmission-daemon/settings.json /etc/transmission-daemon/settings.json.original
+fi
+sudo sh -c "\
+  jq '\
+    .\"rpc-whitelist-enabled\" = false |\
+    .\"rpc-authentication-required\" = false |\
+    .\"start-added-torrents\" = false\
+  ' /etc/transmission-daemon/settings.json.original > /etc/transmission-daemon/settings.json\
+"
+sudo systemctl start transmission-daemon
 
 # Benchmarking
 sudo apt install sysbench
@@ -91,7 +105,7 @@ crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
 # Add IR support
 sed '/retropie/d' -i /etc/rc_maps.cfg
 cat '* rc-retropie retropie.toml' > /etc/rc_maps.cfg
-cp $app_root/config/remote.toml /etc/rc_keymaps/retropie.toml
+cp "$CONFIG_DIR/remote.toml" /etc/rc_keymaps/retropie.toml
 crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
 
 # Load
@@ -127,8 +141,8 @@ sudo systemctl start ssh
 .env -f /etc/default/console-setup set FONTSIZE='"16x32"'
 
 # Theme
-theme_name=$(jq -r '.theme.name' $settings_file)
-theme_repo=$(jq -r '.theme.repo' $settings_file)
+theme_name=$(jq -r '.theme.name' "$SETTINGS_FILE")
+theme_repo=$(jq -r '.theme.repo' "$SETTINGS_FILE")
 sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme_name $theme_repo
 sed -r -i 's/(<string name="ThemeSet" value=")([^"]*)/\1$theme_name/' es_settings.cfg
 
@@ -146,8 +160,8 @@ sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' es_settings.
 # Locale
 ##############
 
-timezone=$(jq -r '.locale.timezone' $settings_file)
-language=$(jq -r '.locale.language' $settings_file)
+timezone=$(jq -r '.locale.timezone' "$SETTINGS_FILE")
+language=$(jq -r '.locale.language' "$SETTINGS_FILE")
 sudo sh -c "echo '$timezone' > /etc/timezone"
 sudo dpkg-reconfigure -f noninteractive tzdata
 sudo sed -i -e "s/# $language.UTF-8 UTF-8/$language.UTF-8 UTF-8/" /etc/locale.gen
@@ -160,7 +174,7 @@ sudo update-locale LANG=$language.UTF-8
 ##############
 
 # Splash Screen
-duration=$(jq -r '.splashscreen.duration' $settings_file)
+duration=$(jq -r '.splashscreen.duration' "$SETTINGS_FILE")
 .env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION="\"$duration\""
 
 ##############
@@ -174,9 +188,9 @@ duration=$(jq -r '.splashscreen.duration' $settings_file)
 
 ~/RetroPie-Setup/retropie_packages.sh skyscraper _binary_
 
-regions=$(jq -r '.skyscraper.regions' $settings_file)
-username=$(jq -r '.skyscraper.username' $settings_file)
-password=$(jq -r '.skyscraper.password' $settings_file)
+regions=$(jq -r '.skyscraper.regions' "$SETTINGS_FILE")
+username=$(jq -r '.skyscraper.username' "$SETTINGS_FILE")
+password=$(jq -r '.skyscraper.password' "$SETTINGS_FILE")
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini '' 'regionPrios' "\"$regions\""
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'userCreds' "\"$username:$password\""
 crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"'
@@ -185,7 +199,7 @@ crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"
 # Inputs
 ##############
 
-cp $app_root/config/inputs.cfg ~/.emulationstation/es_input.cfg
+cp $CONFIG_DIR/inputs.cfg ~/.emulationstation/es_input.cfg
 
 ##############
 # Input Performance
@@ -220,7 +234,7 @@ chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
 # Emulators
 ##############
 
-for platform in platforms/*; do
+for platform in $DIR/platforms/*; do
   $platform
 done
 

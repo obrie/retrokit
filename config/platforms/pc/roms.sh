@@ -41,11 +41,13 @@ install_torrent() {
   select_files=$(aria2c -S "$TORRENT_FILE" | grep -F -f "$TORRENT_FILTER" | cut -d"|" -f 1 | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
 
   # Download files
-  aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file "$select_files" --seed-time=$SEED_TIME
+  aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file="$select_files" --seed-time=$SEED_TIME
+  ls "$TORRENT_DIR" > "$TORRENT_FILE.extras"
+  comm -13 "$TORRENT_FILTER" "$TORRENT_FILE.extras" | xargs -I{} rm "$TORRENT_DIR/{}"
 
   # Extract files
   while read file; do
-    name=$(basename -s .zip)
+    name=$(basename $file -s .zip)
     if [ ! -f "$FILES_DIR/$name" ]; then
       unzip -o "$TORRENT_DIR/$file" -d "$FILES_DIR/"
     fi

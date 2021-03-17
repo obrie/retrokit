@@ -10,12 +10,14 @@ mkdir -p "$DOWNLOAD_DIR"
 # Install config
 ROMS_DIR="/home/pi/RetroPie/roms/c64"
 ALL_DIR="$ROMS_DIR/- All -"
+DUPLICATES_DIR="$ROMS_DIR/.duplicates"
+mkdir -p "$DUPLICATES_DIR"
 
 # Torrent config
 SEED_TIME=0
 TORRENT_FILE="$DOWNLOAD_DIR/no-intro.torrent"
 TORRENT_FILTER="$TORRENT_FILE.filter"
-TORRENT_DIR="$DOWNLOAD_DIR/***REMOVED***"
+TORRENT_DIR="/var/lib/transmission-daemon/downloads/***REMOVED***"
 
 usage() {
   echo "usage: $0 [command]"
@@ -34,23 +36,45 @@ install_torrent() {
   # Create directories
   mkdir -p "$ALL_DIR"
 
-  # Filter Torrent
-  cat > $TORRENT_FILTER <<EOF
-Commodore - 64 (Tapes).zip
-Commodore - 64.zip
-EOF
-  select_files=$(aria2c -S "$TORRENT_FILE" | grep -F -f "$TORRENT_FILTER" | cut -d"|" -f 1 | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
+  # Add Torrent
+  transmission-remote -t all --remove
+  transmission-remote --start-paused -a "$TORRENT_FILE"
+  id=$(transmission-remote --list | grep -oE "^ +[0-9]" | tr -d ' ')
 
-  # Download files
-  aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file "$select_files" --seed-time=$SEED_TIME
+  # Filter Torrent
+  cat > "$TORRENT_FILTER" <<EOF
+Commodore - 64.zip
+Commodore - 64 (PP).zip
+EOF
+  select_files=$(transmission-remote -t $id --files | grep -F -f "$TORRENT_FILTER" | grep -oE "^ +[0-9]+" | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
+  transmission-remote -t $id --no-get all
+  transmission-remote -t $id --get $select_files
+
+  # Download Torrent
+  transmission-remote -t $id --start
+  while ! transmission-remote -t $id --info | grep "Percent Done: 100%" > /dev/null; do
+    transmission-remote -t $id --info | grep -A 10 TRANSFER
+    echo "Downloading..."
+  done
+  transmission-remote -t all --remove
 
   # Extract files
-  cat $TORRENT_FILTER | xargs -I{} unzip -o "$TORRENT_DIR/{}" -d "$ALL_DIR/"
+  while read file; do
+    unzip -o "$TORRENT_DIR/$file" -d "$ALL_DIR/"
+    sudo rm "$TORRENT_DIR/$file"
+  done < $TORRENT_FILTER
 }
 
 # Blacklist keywords
 blacklist_games() {
-  find $ROMS_DIR/ -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
+  find "$ALL_DIR/" -regextype posix-extended -regex '.*(Strip|BIOS).*' -delete
+}
+
+# Prefer USA games over Europe games
+remove_duplicates() {
+  find "$ALL_DIR"  -printf "%f\n" | grep -oE "^[^(]+" | uniq | while read -r game; do
+    find "$ALL_DIR" -type f -name "$game \(*" | sort -r | tail -n +2 | xargs -d '\n' -I{} mv "{}" "$DUPLICATES_DIR/"
+  done
 }
 
 add_defaults() {
@@ -60,6 +84,7 @@ add_defaults() {
 install() {
   install_torrent
   blacklist_games
+  remove_duplicates
   add_defaults
 }
 
