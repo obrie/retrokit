@@ -1,69 +1,69 @@
 #!/bin/bash
 
-set -ex
+# set -ex
 
-DIR=$(dirname "$0")
-APP_DIR=$(cd "$DIR/../../.." && pwd)
-DOWNLOAD_DIR="$APP_DIR/tmp/pc"
-mkdir -p "$DOWNLOAD_DIR"
+# DIR=$(dirname "$0")
+# APP_DIR=$(cd "$DIR/../../.." && pwd)
+# DOWNLOAD_DIR="$APP_DIR/tmp/pc"
+# mkdir -p "$DOWNLOAD_DIR"
 
-# Install config
-ROMS_DIR="/home/pi/RetroPie/roms/pc"
-FILES_DIR="$ROMS_DIR/.files"
+# # Install config
+# ROMS_DIR="/home/pi/RetroPie/roms/pc"
+# FILES_DIR="$ROMS_DIR/.files"
 
-# Torrent config
-SEED_TIME=0
-TORRENT_FILE="$DOWNLOAD_DIR/exodos.torrent"
-TORRENT_FILTER="$TORRENT_FILE.filter"
-TORRENT_DIR="$DOWNLOAD_DIR/eXoDOS/eXo/eXoDOS"
+# # Torrent config
+# SEED_TIME=0
+# TORRENT_FILE="$DOWNLOAD_DIR/exodos.torrent"
+# TORRENT_FILTER="$TORRENT_FILE.filter"
+# TORRENT_DIR="$DOWNLOAD_DIR/eXoDOS/eXo/eXoDOS"
 
-usage() {
-  echo "usage: $0 [command]"
-  exit 1
-}
+# usage() {
+#   echo "usage: $0 [command]"
+#   exit 1
+# }
 
-download_torrent() {
-  if [ ! -f "$TORRENT_FILE" ]; then
-    wget -nc "https://***REMOVED***" -O "$TORRENT_FILE"
-  fi
-}
+# download_torrent() {
+#   if [ ! -f "$TORRENT_FILE" ]; then
+#     wget -nc "https://***REMOVED***" -O "$TORRENT_FILE"
+#   fi
+# }
 
-install_torrent() {
-  download_torrent
+# install_torrent() {
+#   download_torrent
 
-  # Create directories
-  mkdir -p "$FILES_DIR"
+#   # Create directories
+#   mkdir -p "$FILES_DIR"
 
-  # Create torrent filters
-  jq -r '.default[]' "$DIR/roms.json" > "$TORRENT_FILTER"
+#   # Create torrent filters
+#   jq -r '.default[]' "$DIR/roms.json" > "$TORRENT_FILTER"
 
-  # Filter Torrent
-  select_files=$(aria2c -S "$TORRENT_FILE" | grep -F -f "$TORRENT_FILTER" | cut -d"|" -f 1 | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
+#   # Filter Torrent
+#   select_files=$(aria2c -S "$TORRENT_FILE" | grep -F -f "$TORRENT_FILTER" | cut -d"|" -f 1 | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
 
-  # Download files
-  aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file="$select_files" --seed-time=$SEED_TIME
-  ls "$TORRENT_DIR" > "$TORRENT_FILE.extras"
-  comm -13 "$TORRENT_FILTER" "$TORRENT_FILE.extras" | xargs -I{} rm "$TORRENT_DIR/{}"
+#   # Download files
+#   aria2c "$TORRENT_FILE" -d "$DOWNLOAD_DIR" --select-file="$select_files" --seed-time=$SEED_TIME
+#   ls "$TORRENT_DIR" > "$TORRENT_FILE.extras"
+#   comm -13 "$TORRENT_FILTER" "$TORRENT_FILE.extras" | xargs -I{} rm "$TORRENT_DIR/{}"
 
-  # Extract files
-  while read file; do
-    name=$(basename $file -s .zip)
-    if [ ! -f "$FILES_DIR/$name" ]; then
-      unzip -o "$TORRENT_DIR/$file" -d "$FILES_DIR/"
-    fi
-  done < $TORRENT_FILTER
-}
+#   # Extract files
+#   while read file; do
+#     name=$(basename $file -s .zip)
+#     if [ ! -f "$FILES_DIR/$name" ]; then
+#       unzip -o "$TORRENT_DIR/$file" -d "$FILES_DIR/"
+#     fi
+#   done < $TORRENT_FILTER
+# }
 
-install() {
-  install_torrent
-}
+# install() {
+#   install_torrent
+# }
 
-if [[ $# -gt 1 ]]; then
-  usage
-fi
+# if [[ $# -gt 1 ]]; then
+#   usage
+# fi
 
-command=${1:-install}
-"$command"
+# command=${1:-install}
+# "$command"
 
 # fix_filenames() {
 #   # ----- Uppercase filenames

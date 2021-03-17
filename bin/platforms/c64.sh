@@ -9,8 +9,8 @@ set -ex
 APP_DIR=$(cd "$( dirname "$0" )/../.." && pwd)
 APP_SETTINGS_FILE="$APP_DIR/config/settings.json"
 TMP_DIR="$APP_DIR/tmp"
-CONFIG_DIR="$APP_DIR/config/platforms/c64"
-SETTINGS_FILE="$CONFIG_DIR/settings.json"
+PLATFORM_CONFIG_DIR="$APP_DIR/config/platforms/c64"
+PLATFORM_SETTINGS_FILE="$PLATFORM_CONFIG_DIR/settings.json"
 
 setup() {
   # Install packages
@@ -29,7 +29,7 @@ setup() {
 
   # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
   retropie_configs_dir="/opt/retropie/configs/all"
-  find "$CONFIG_DIR/retroarch_opts" -iname "*.opt" | while read override_file; do
+  find "$PLATFORM_CONFIG_DIR/retroarch_opts" -iname "*.opt" | while read override_file; do
     opt_name=$(basename "$override_file")
     opt_file="$retropie_configs_dir/retroarch/config/VICE x64/$opt_name"
     touch "$opt_file"
@@ -67,7 +67,7 @@ download() {
   find "$roms_all_dir/" -regextype posix-extended -regex ".*($keywords).*" -exec mv "{}" "$roms_blocked_dir/" \;
 
   # Add defaults
-  jq -r ".roms.default[]" "$SETTINGS_FILE" | xargs -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
+  jq -r ".roms.default[]" "$PLATFORM_SETTINGS_FILE" | xargs -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
 }
 
 if [[ $# -lt 1 ]]; then

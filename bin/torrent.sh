@@ -24,7 +24,7 @@ lookup_id() {
 filter() {
   torrent_filter="$1"
 
-  select_files=$(transmission-remote -t $id --files | grep -F -f "$torrent_filter" | grep -oE "^ +[0-9]+" | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
+  select_files=$(transmission-remote -t $id --files | grep -F -f "$torrent_filter" | grep -oE "^ *[0-9]+" | tr -d " " | tr '\n' ',' | sed 's/,*$//g')
   transmission-remote -t $id --no-get all
   transmission-remote -t $id --get $select_files
 }
