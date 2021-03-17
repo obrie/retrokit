@@ -14,5 +14,15 @@
     "regions": "us,eu,ss,uk,wor,jp",
     "username": "***REMOVED***",
     "password": "***REMOVED***"
+  },
+  "torrents": {
+    "no-intro": {
+      "source": "https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent",
+      "dir": "***REMOVED***"
+    },
+    "exodos": {
+      "source": "https://***REMOVED***",
+      "dir": "eXoDOS/eXo/eXoDOS"
+    }
   }
 }
