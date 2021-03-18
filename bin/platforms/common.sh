@@ -31,16 +31,17 @@ setup_platform() {
   platform_config_dir="$APP_DIR/config/platforms/$platform"
   platform_settings_file="$platform_config_dir/settings.json"
 
-  if [ $(jq -r 'has("emulators")') = "true" ]; then
+  if [ $(jq -r 'has("emulators")' "$platform_settings_file") = "true" ]; then
     jq -r '.emulators[]' "$platform_settings_file" | while read emulator; do
       # Retroarch
-      mkdir -p "/opt/retropie/configs/all/retroarch/config/$emulator/"
+      retropie_configs_dir="/opt/retropie/configs/all"
+      emulator_config_dir="$retropie_configs_dir/retroarch/config/$emulator"
+      mkdir -p "$emulator_config_dir"
 
       # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-      retropie_configs_dir="/opt/retropie/configs/all"
       find "$platform_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
         opt_name=$(basename "$override_file")
-        opt_file="$retropie_configs_dir/retroarch/config/$emulator/$opt_name"
+        opt_file="$emulator_config_dir/$opt_name"
         touch "$opt_file"
         crudini --merge --output="$opt_file" "$retropie_configs_dir/retroarch-core-options.cfg" < "$override_file"
       done
@@ -124,6 +125,7 @@ organize_platform() {
     find "$roms_all_dir/" -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
-  # Add defaults
+  # Replace defaults
+  find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
   jq -r ".roms.default[]" "$platform_settings_file" | xargs -t -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
 }
