@@ -62,7 +62,23 @@
       "Worms (Europe).zip",
       "X-Men - Mutant Apocalypse (USA).zip"
     ],
-    "allowlist": ["USA", "Europe"],
-    "blocklist": ["(Rev", "(Beta", "(Virtual Console"]
+    "allowlist": [
+      "(USA",
+      "(Japan, USA)",
+      "(World)"
+    ],
+    "blocklist": [
+      "(Aftermarket",
+      "(Alt",
+      "(Beta",
+      "(Proto",
+      "(Rev",
+      "(Sample",
+      "(Test",
+      "(Virtual Console",
+      "Anniversary",
+      "Cartridge",
+      "Collector"
+    ]
   }
 }

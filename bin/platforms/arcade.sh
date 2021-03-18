@@ -34,12 +34,22 @@ download() {
   roms_all_dir="$roms_dir/-ALL-"
   mkdir -p "$roms_all_dir"
 
-  if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
-    # Download according to settings file
-    download_platform "$PLATFORM"
-  else
-    echo "$roms_all_dir is not empty: skipping download"
-  fi
+  echo "You must install manually."
+  # if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
+  #   # Download according to settings file
+  #   download_platform "$PLATFORM"
+  # else
+  #   echo "$roms_all_dir is not empty: skipping download"
+  # fi
+
+  sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" ./fbneo.dat | xmlstarlet sel -T -t -v '''/datafile/game[
+    not(@cloneof) and
+    driver/@status = "good" and
+    not(contains(description/text(), "japan")) and
+    not(contains(description/text(), "bootleg")) and
+    not(contains(description/text(), "prototype")) and
+    not(contains(description/text(), "korea"))
+  ]/description/text()'''
 
   organize_platform "$PLATFORM"
 }
