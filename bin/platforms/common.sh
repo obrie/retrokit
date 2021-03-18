@@ -81,6 +81,15 @@ download_platform() {
     # Download torrent
     wget -nc "$torrent_url" -O "$torrent_file" || true
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
+  else if [ "$source_type" = "http" ]; then
+    # HTTP Info
+    base_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
+
+    # Download info
+    rom_source_dir="$TMP_DIR"
+
+    # Download URLs
+    cat "$source_filter" | xargs -t -d'\n' -I{} wget -nc "$base_url/{}"
   else
     echo "Invalid source type: $source_type"
     exit 1
@@ -116,5 +125,5 @@ organize_platform() {
   fi
 
   # Add defaults
-  jq -r ".roms.default[]" "$platform_settings_file" | xargs -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
+  jq -r ".roms.default[]" "$platform_settings_file" | xargs -t -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
 }
