@@ -31,19 +31,21 @@ setup_platform() {
   platform_config_dir="$APP_DIR/config/platforms/$platform"
   platform_settings_file="$platform_config_dir/settings.json"
 
-  jq -r '.emulators[]' "$platform_settings_file" | while read emulator; do
-    # Retroarch
-    mkdir -p "/opt/retropie/configs/all/retroarch/config/$emulator/"
+  if [ $(jq -r 'has("emulators")') = "true" ]; then
+    jq -r '.emulators[]' "$platform_settings_file" | while read emulator; do
+      # Retroarch
+      mkdir -p "/opt/retropie/configs/all/retroarch/config/$emulator/"
 
-    # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-    retropie_configs_dir="/opt/retropie/configs/all"
-    find "$platform_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
-      opt_name=$(basename "$override_file")
-      opt_file="$retropie_configs_dir/retroarch/config/$emulator/$opt_name"
-      touch "$opt_file"
-      crudini --merge --output="$opt_file" "$retropie_configs_dir/retroarch-core-options.cfg" < "$override_file"
+      # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
+      retropie_configs_dir="/opt/retropie/configs/all"
+      find "$platform_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
+        opt_name=$(basename "$override_file")
+        opt_file="$retropie_configs_dir/retroarch/config/$emulator/$opt_name"
+        touch "$opt_file"
+        crudini --merge --output="$opt_file" "$retropie_configs_dir/retroarch-core-options.cfg" < "$override_file"
+      done
     done
-  done
+  fi
 }
 
 download_platform() {
@@ -108,8 +110,10 @@ organize_platform() {
   mkdir -p "$roms_all_dir" "$roms_blocked_dir"
 
   # Block games
-  blocklist=$(jq -r '.roms.blocklist' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/,$/\n/')
-  find "$roms_all_dir/" -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+  if [ $(jq -r '.roms | has("blocklist")') = "true" ]; then
+    blocklist=$(jq -r '.roms.blocklist' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/,$/\n/')
+    find "$roms_all_dir/" -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+  fi
 
   # Add defaults
   jq -r ".roms.default[]" "$platform_settings_file" | xargs -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"

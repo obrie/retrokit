@@ -19,6 +19,9 @@ usage() {
 }
 
 setup() {
+  # Emulators
+  crudini --set /opt/retropie/configs/nes/emulators.cfg '' 'default' '"lr-fceumm"'
+
   # Input Lag
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_enabled' '"true"'
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_frames' '"1"'

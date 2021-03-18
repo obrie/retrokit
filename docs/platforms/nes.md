@@ -4,14 +4,13 @@
 
 Preferred:
 
-1. lr-fbneo
-2. lr-fceumm
+1. lr-fceumm
+2. lr-fbneo
 
 ## ROMs
 
 Primary Sources:
 
-* https://***REMOVED***
 * https://***REMOVED***
 
 Secondary Sources:
@@ -19,10 +18,4 @@ Secondary Sources:
 * https://***REMOVED***
 * https://***REMOVED***
 * https://***REMOVED***
-
-### FBNeo
-
-
-```
-^ +<(game|year|manufacturer|rom|drive|/game).+$\n| +<description>|</description>
-```
+* https://***REMOVED***

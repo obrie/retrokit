@@ -24,6 +24,9 @@ setup() {
     sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
   fi
 
+  # Emulators
+  crudini --set /opt/retropie/configs/nes/emulators.cfg '' 'default' '"lr-vice"'
+
   # Enable fast startup
   crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
 
