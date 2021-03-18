@@ -49,6 +49,23 @@ setup_platform() {
   fi
 }
 
+download_file() {
+  # Arguments
+  url="$1"
+  output="$2"
+
+  if [ ! -f "$output" ]; then
+    if [[ "$url" == *"https://archive.org/download/"* ]]; then
+      # Need to make sure we use the `ia` command-line
+      item=$(echo "$url" | grep -oP "download/\K[^/]+")
+      file=$(echo "$url" | grep -oP "$item/\K.+$")
+      ia download "$item" "$file" -s > "$output"
+    else
+      wget "$url" -O "$output"
+    fi
+  fi
+}
+
 download_platform() {
   # Arguments
   platform="$1"
@@ -58,8 +75,8 @@ download_platform() {
   platform_settings_file="$platform_config_dir/settings.json"
 
   # Source
-  source_name=$(jq -r '.source.name' "$platform_settings_file")
-  source_unzip=$(jq -r '.source.unzip' "$platform_settings_file")
+  source_name=$(jq -r '.roms.source.name' "$platform_settings_file")
+  source_unzip=$(jq -r '.roms.source.unzip' "$platform_settings_file")
   source_type=$(jq -r ".sources.$source_name.type" "$APP_SETTINGS_FILE")
   source_root_dir=$(jq -r ".sources.$source_name.root_dir" "$APP_SETTINGS_FILE")
 
@@ -74,13 +91,13 @@ download_platform() {
   if [ "$source_type" = "torrent" ]; then
     # Torrent Info
     torrent_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
-    torrent_file="$TMP_DIR/$platform.torrent"
+    torrent_file="$TMP_DIR/$source_name.torrent"
 
     # Download info
     rom_source_dir="/var/lib/transmission-daemon/downloads/$source_root_dir"
 
     # Download torrent
-    wget -nc "$torrent_url" -O "$torrent_file" || true
+    download_file "$torrent_url" "$torrent_file"
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
     # HTTP Info
@@ -90,7 +107,7 @@ download_platform() {
     rom_source_dir="$TMP_DIR"
 
     # Download URLs
-    cat "$source_filter" | xargs -t -d'\n' -I{} wget -nc "$base_url/{}"
+    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "$base_url/{}" "$rom_source_dir/{}"
   else
     echo "Invalid source type: $source_type"
     exit 1

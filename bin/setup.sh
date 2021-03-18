@@ -60,6 +60,11 @@ sudo sh -c "\
 "
 sudo systemctl start transmission-daemon
 
+# Internet Archive CLI
+sudo wget https://archive.org/download/ia-pex/ia -O /usr/local/bin/ia
+sudo chmod +x /usr/local/bin/ia
+ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
+
 # Benchmarking
 sudo apt install sysbench
 
