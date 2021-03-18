@@ -57,7 +57,7 @@ create() {
 
 main() {
   action="$1"
-  popd
+  shift
 
   "$action" "$@"
 }

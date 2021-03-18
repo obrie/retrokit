@@ -61,5 +61,5 @@ if [[ $# -lt 1 ]]; then
 fi
 
 command="$1"
-popd
+shift
 "$command" "$@"
