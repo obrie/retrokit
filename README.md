@@ -112,6 +112,15 @@ References:
 * https://retropie.org.uk/forum/topic/22816/guide-retroarch-system-emulator-core-and-rom-config-files
 * https://retropie.org.uk/docs/RetroArch-Core-Options/
 
+## Emulators
+
+* https://emulation.gametechwiki.com/
+
+### DATs
+
+* Generator: https://datomatic.no-intro.org/index.php?page=download&op=dat&s=64
+* Changes: https://datomatic.no-intro.org/?page=news
+
 ## ROMs
 
 Indexes:
