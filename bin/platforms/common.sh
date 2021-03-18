@@ -136,7 +136,13 @@ organize_platform() {
   roms_blocked_dir="$roms_dir/.blocked"
   mkdir -p "$roms_all_dir" "$roms_blocked_dir"
 
-  # Block games
+  # Allowlist
+  if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
+    allowlist=$(jq -r '.roms.allowlist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/|$//')
+    find "$roms_all_dir/" -regextype posix-extended ! -regex ".*($allowlist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+  fi
+
+  # Blocklist
   if [ $(jq -r '.roms | has("blocklist")' "$platform_settings_file") = "true" ]; then
     blocklist=$(jq -r '.roms.blocklist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/|$//')
     find "$roms_all_dir/" -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
