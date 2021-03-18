@@ -32,10 +32,13 @@ download() {
   # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"
+  mkdir -p "$roms_all_dir"
 
-  if [ ! "$(ls -A $roms_all_dir)" ]; then
+  if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
     # Download according to settings file
     download_platform "$PLATFORM"
+  else
+    echo "$roms_all_dir is not empty: skipping download"
   fi
 
   organize_platform "$PLATFORM"
