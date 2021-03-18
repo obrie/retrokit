@@ -1,5 +1,9 @@
 {
   "roms": {
+    "source": {
+      "name": "exodos",
+      "unzip": true
+    },
     "default": [
       "Arkanoid (1988).zip",
       "Arkanoid II - Revenge of Doh (1989).zip",

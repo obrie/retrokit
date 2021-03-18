@@ -17,15 +17,14 @@
   },
   "sources": {
     "nointro": {
-      "url": "https://archive.org/download/***REMOVED***/***REMOVED***_archive.torrent",
-      "root_dir": "***REMOVED***"
+      "type": "torrent",
+      "url": "https://***REMOVED***",
+      "root_dir": "no-intro romsets"
     },
     "exodos": {
+      "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "eXoDOS/eXo/eXoDOS"
     }
-  },
-  "roms": {
-    "keyword_blacklist": ["Strip", "Sex", "BIOS"]
   }
 }

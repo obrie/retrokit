@@ -1,5 +1,14 @@
 {
+  "emulators": ["VICE x64"],
   "roms": {
+    "source": {
+      "name": "nointro",
+      "files": [
+        "Commodore - 64 (20210216-232616).zip",
+        "Commodore - 64 (Tapes) (20210216-231940).zip"
+      ],
+      "unzip": true
+    },
     "default": [
       "180 (Europe) (Budget).zip",
       "Arkanoid (Europe).zip",
@@ -18,6 +27,7 @@
       "Summer Games II (Europe).zip",
       "Winter Games (Europe).zip",
       "World Games (Europe).zip"
-    ]
+    ],
+    "blocklist": ["Strip", "Sex", "BIOS"]
   }
 }

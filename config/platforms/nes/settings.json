@@ -1,0 +1,52 @@
+{
+  "emulators": ["lr-fceumm"],
+  "roms": {
+    "source": {
+      "name": "nointro",
+      "files": [
+        "Nintendo - Nintendo Entertainment System (20210317-123123) [headered] (MIA 1).zip"
+      ],
+      "unzip": true
+    },
+    "default": [
+      "Arkanoid (USA).zip",
+      "Bubble Bobble (USA).zip",
+      "Bubble Bobble Part 2 (USA).zip",
+      "California Games (USA).zip",
+      "Contra (USA).zip",
+      "Contra Force (USA).zip",
+      "Double Dragon (USA).zip",
+      "Double Dragon II - The Revenge (USA).zip",
+      "Double Dragon III - The Sacred Stones (USA).zip",
+      "Duck Hunt (World).zip",
+      "Karateka (Japan).zip",
+      "Little Mermaid, The (USA).zip",
+      "Mike Tyson's Punch-Out!! (Japan, USA).zip",
+      "Ms. Pac-Man (USA) (Namco).zip",
+      "Pac-Man (USA) (Namco).zip",
+      "Popeye (World) (Rev 1).zip",
+      "Punch-Out!! (USA).zip",
+      "Rampage (USA).zip",
+      "Paperboy (USA).zip",
+      "R.C. Pro-Am (USA).zip",
+      "R.C. Pro-Am II (USA).zip",
+      "Simpsons, The - Bartman Meets Radioactive Man (USA).zip",
+      "Simpsons, The - Bart vs. the Space Mutants (USA).zip",
+      "Simpsons, The - Bart vs. the World (USA).zip",
+      "Skate or Die (USA).zip",
+      "Skate or Die 2 - The Search for Double Trouble (USA).zip",
+      "Super Mario Bros. (World).zip",
+      "Super Mario Bros. 2 (USA).zip",
+      "Super Mario Bros. 3 (USA).zip",
+      "Teenage Mutant Ninja Turtles (USA).zip",
+      "Teenage Mutant Ninja Turtles II - The Arcade Game (USA).zip",
+      "Teenage Mutant Ninja Turtles III - The Manhattan Project (USA).zip",
+      "Tetris (USA).zip",
+      "Track & Field (USA).zip",
+      "Track & Field II (USA).zip",
+      "Winter Games (USA).zip"
+    ],
+    "allowlist": ["USA", "Europe"],
+    "blocklist": ["Strip", "Sex", "(Rev 1)", "(Rev A)", "(Beta)"]
+  }
+}

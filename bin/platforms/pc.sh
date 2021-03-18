@@ -24,6 +24,8 @@ setup() {
   sudo apt install fluid-soundfont-gm
 
   # Set up [Gravis Ultrasound](https://retropie.org.uk/docs/PC/#install-gravis-ultrasound-gus):
+
+  https://github.com/Voljega/ExoDOSConverter
 }
 
 download() {
