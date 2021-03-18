@@ -116,9 +116,9 @@ download_platform() {
   if [ "$source_unzip" = "true" ]; then
     # Extract files
     unzip -o "$rom_source_dir/*.zip" -d "$roms_all_dir/"
-    sudo rm "$rom_source_dir/*.zip"
+    sudo find "$rom_source_dir" -mindepth 1 -exec rm "{}" \;
   else
-    sudo mv "$rom_source_dir/*" "$roms_all_dir/"
+    sudo find "$rom_source_dir" -mindepth 1 -exec mv "{}" "$roms_all_dir/" \;
   fi
 }
 
