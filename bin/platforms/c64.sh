@@ -29,9 +29,6 @@ setup() {
 }
 
 download() {
-  # Arguments
-  refresh="$1"
-
   # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"

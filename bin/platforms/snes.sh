@@ -22,7 +22,8 @@ setup() {
 
 download() {
   # Target
-  roms_all_dir="/home/pi/RetroPie/roms/snes/-ALL-"
+  roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
+  roms_all_dir="$roms_dir/-ALL-"
 
   if [ ! "$(ls -A $roms_all_dir)" ]; then
     # Download according to settings file
