@@ -28,6 +28,10 @@ First generation machine:
 * CanaKit 3.5A USB-C Raspberry Pi 4 Power Supply (US Plug) with Noise Filter (https://www.amazon.com/gp/product/B07TYQRXTK, https://www.amazon.com/dp/B07FCMKK5X, $10)
   Provides a large amount of power to Raspberry Pi
 
+Would have done differently:
+
+* Argon ONE M.2 + SSD
+
 Second generation machine:
 
 * Intel NUC + Debian
