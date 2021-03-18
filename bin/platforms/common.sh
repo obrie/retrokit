@@ -1,10 +1,8 @@
 #!/bin/bash
 
 ##############
-# ROM manager
+# Common functions used across platform installs
 ##############
-
-set -ex
 
 export DIR=$(dirname "$0")
 export APP_DIR=$(cd "$DIR/../.." && pwd)
@@ -13,16 +11,39 @@ export TMP_DIR="$APP_DIR/tmp"
 
 scrape_platform() {
   # Arguments
-  platform=$1
+  platform="$1"
 
   # Kill emulation station
   killall emulationstation
 
   # Scrape
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p $platform -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" -s screenscraper --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$platform" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" -s screenscraper --flags "unattend,skipped,videos"
 
   # Generate game list
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p $platform -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$platform" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" --flags "unattend,skipped,videos"
+}
+
+setup_platform() {
+  # Arguments
+  platform="$1"
+
+  # Configuration
+  platform_config_dir="$APP_DIR/config/platforms/$platform"
+  platform_settings_file="$platform_config_dir/settings.json"
+
+  jq -r '.emulators[]' "$platform_settings_file" | while read emulator; do
+    # Retroarch
+    mkdir -p "/opt/retropie/configs/all/retroarch/config/$emulator/"
+
+    # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
+    retropie_configs_dir="/opt/retropie/configs/all"
+    find "$platform_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
+      opt_name=$(basename "$override_file")
+      opt_file="$retropie_configs_dir/retroarch/config/$emulator/$opt_name"
+      touch "$opt_file"
+      crudini --merge --output="$opt_file" "$retropie_configs_dir/retroarch-core-options.cfg" < "$override_file"
+    done
+  done
 }
 
 download_platform() {
