@@ -9,7 +9,7 @@ set -ex
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-PLATFORM="snes"
+PLATFORM="psx"
 CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
@@ -21,11 +21,6 @@ usage() {
 setup() {
   # Emulators
   crudini --set /opt/retropie/configs/psx/emulators.cfg '' 'default' '"lr-pcsx-rearmed"'
-
-  # Input Lag
-  crudini --set /opt/retropie/configs/playstation/retroarch.cfg '' 'run_ahead_enabled' '"true"'
-  crudini --set /opt/retropie/configs/playstation/retroarch.cfg '' 'run_ahead_frames' '"1"'
-  crudini --set /opt/retropie/configs/playstation/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
 }
 
 
