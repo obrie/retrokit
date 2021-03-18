@@ -81,7 +81,7 @@ download_platform() {
     # Download torrent
     wget -nc "$torrent_url" -O "$torrent_file" || true
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
-  else if [ "$source_type" = "http" ]; then
+  elif [ "$source_type" = "http" ]; then
     # HTTP Info
     base_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
 
