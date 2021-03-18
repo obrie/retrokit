@@ -20,8 +20,11 @@ killall emulationstation
 # Wifi
 ##############
 
-# NOTE: Connect over 2.4ghz, not 5ghz
-sudo raspi-config
+# Disable wifi (assuming wired)
+crudini --set /boot/config.txt '' 'dtoverlay' 'disable-wifi'
+
+# ...or enable wifi (NOTE: Connect over 2.4ghz, not 5ghz):
+# sudo raspi-config
 
 ##############
 # Upgrades
