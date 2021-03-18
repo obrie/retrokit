@@ -137,7 +137,7 @@ organize_platform() {
   mkdir -p "$roms_all_dir" "$roms_blocked_dir"
 
   # Move everything from blocked back into ALL so we can start from scratch
-  mv "$roms_dir/.blocked/*" "$roms_all_dir/"
+  mv "$roms_dir/.blocked/*" "$roms_all_dir/" || true
 
   # Allowlist
   if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
