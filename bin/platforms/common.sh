@@ -139,13 +139,13 @@ organize_platform() {
   # Allowlist
   if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
     allowlist=$(jq -r '.roms.allowlist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/|$//')
-    find "$roms_all_dir/" -regextype posix-extended ! -regex ".*($allowlist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+    find "$roms_all_dir/" -mindepth 1 -regextype posix-extended ! -regex ".*($allowlist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
   # Blocklist
   if [ $(jq -r '.roms | has("blocklist")' "$platform_settings_file") = "true" ]; then
     blocklist=$(jq -r '.roms.blocklist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/|$//')
-    find "$roms_all_dir/" -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+    find "$roms_all_dir/" -mindepth 1 -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
   # Replace defaults
