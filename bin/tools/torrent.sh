@@ -18,7 +18,7 @@ add() {
 }
 
 lookup_id() {
-  id=$(transmission-remote --list | grep -oE "^ +[0-9]" | tr -d ' ')
+  id=$(transmission-remote --list | grep -oE "^ +[0-9]+" | tr -d ' ')
 }
 
 filter() {
