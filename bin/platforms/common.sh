@@ -136,6 +136,9 @@ organize_platform() {
   roms_blocked_dir="$roms_dir/.blocked"
   mkdir -p "$roms_all_dir" "$roms_blocked_dir"
 
+  # Move everything from blocked back into ALL so we can start from scratch
+  mv "$roms_dir/.blocked/*" "$roms_all_dir/"
+
   # Allowlist
   if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
     allowlist=$(jq -r '.roms.allowlist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/|$//')
@@ -148,7 +151,18 @@ organize_platform() {
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
-  # Replace defaults
+  jq -r ".roms.default[]" "$platform_settings_file" | xargs -t -d'\n' -I{} find "$roms_blocked_dir" -name "{}" -exec mv "{}" "$roms_all_dir/" \;
+
+  # Remove existing defaults
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
-  jq -r ".roms.default[]" "$platform_settings_file" | xargs -t -d'\n' -I{} ln -fs "$roms_all_dir/{}" "$roms_dir/{}"
+
+  # Add new defaults
+  jq -r ".roms.default[]" "$platform_settings_file" | while read rom; do
+    # Undo any accidental blocked rom
+    if [ -f "$roms_blocked_dir/$rom" ]; then
+      mv "$roms_blocked_dir/$rom" "$roms_all_dir/"
+    fi
+
+    ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
+  done
 }
