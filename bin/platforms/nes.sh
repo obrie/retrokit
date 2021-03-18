@@ -13,6 +13,11 @@ PLATFORM="nes"
 CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
+usage() {
+  echo "usage: $0 <setup|download>"
+  exit 1
+}
+
 setup() {
   # Input Lag
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_enabled' '"true"'
@@ -32,3 +37,11 @@ download() {
 
   organize_platform "$PLATFORM"
 }
+
+if [[ $# -lt 1 ]]; then
+  usage
+fi
+
+command="$1"
+popd
+"$command" "$@"

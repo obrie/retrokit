@@ -13,6 +13,11 @@ PLATFORM="c64"
 CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
+usage() {
+  echo "usage: $0 <setup|download>"
+  exit 1
+}
+
 setup() {
   # Install packages
   if [ ! -d "/opt/retropie/libretrocores/lr-vice/" ]; then
