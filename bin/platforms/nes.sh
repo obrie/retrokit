@@ -21,6 +21,13 @@ setup() {
 }
 
 download() {
-  # Download according to settings file
-  download_platform "$PLATFORM"
+  # Target
+  roms_all_dir="/home/pi/RetroPie/roms/nes/-ALL-"
+
+  if [ ! "$(ls -A $roms_all_dir)" ]; then
+    # Download according to settings file
+    download_platform "$PLATFORM"
+  fi
+
+  organize_platform "$PLATFORM"
 }

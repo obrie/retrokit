@@ -29,14 +29,21 @@ setup() {
 }
 
 download() {
-  # Download according to settings file
-  download_platform "$PLATFORM"
+  # Arguments
+  refresh="$1"
 
-  # Additional platform-specific logic
+  # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"
   roms_duplicates_dir="$roms_dir/.duplicates"
   mkdir -p "$roms_duplicates_dir"
+
+  if [ ! "$(ls -A $roms_all_dir)" ]; then
+    # Download according to settings file
+    download_platform "$PLATFORM"
+  fi
+
+  organize_platform "$PLATFORM"
 
   # Clean up duplicates
   ls $roms_all_dir | grep -oE "^[^(]+" | uniq | while read -r game; do

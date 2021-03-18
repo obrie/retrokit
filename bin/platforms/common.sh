@@ -65,10 +65,8 @@ download_platform() {
   jq -r 'if .roms.source | has("files") then .roms.source.files[] else .roms.default[] end' "$platform_settings_file" > "$source_filter"
 
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$platform"
-  roms_all_dir="$roms_dir/-ALL-"
-  roms_blocked_dir="$roms_dir/.blocked"
-  mkdir -p "$roms_all_dir" "$roms_blocked_dir"
+  roms_all_dir="/home/pi/RetroPie/roms/$platform/-ALL-"
+  mkdir -p "$roms_all_dir"
 
   if [ "$source_type" = "torrent" ]; then
     # Torrent Info
@@ -93,6 +91,21 @@ download_platform() {
   else
     sudo mv "$rom_source_dir/*" "$roms_all_dir/"
   fi
+}
+
+organize_platform() {
+  # Arguments
+  platform="$1"
+
+  # Configuration
+  platform_config_dir="$APP_DIR/config/platforms/$platform"
+  platform_settings_file="$platform_config_dir/settings.json"
+
+  # Target
+  roms_dir="/home/pi/RetroPie/roms/$platform"
+  roms_all_dir="$roms_dir/-ALL-"
+  roms_blocked_dir="$roms_dir/.blocked"
+  mkdir -p "$roms_all_dir" "$roms_blocked_dir"
 
   # Block games
   blocklist=$(jq -r '.roms.blocklist' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | tr '\n' '|' | sed 's/,$/\n/')
