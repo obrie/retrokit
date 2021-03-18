@@ -6,8 +6,11 @@
 
 set -ex
 
+DIR=$(dirname "$0")
+APP_DIR=$(cd "$DIR/.." && pwd)
+
 usage() {
-  echo "usage: $0 <action> <boot_device> <core_device>"
+  echo "usage: $0 <create|backup|restore> <boot_device> <core_device>"
   exit 1
 }
 
@@ -15,7 +18,7 @@ restore_file() {
   partition=$1
   device=$2
 
-  gunzip --stdout ../backups/current/sd-retropie-$partition.iso.gz | sudo dd bs=4M of=$device
+  gunzip --stdout "$APP_DIR/backups/stable/sd-retropie-$partition.iso.gz" | sudo dd bs=4M of=$device
 }
 
 restore() {
@@ -30,15 +33,15 @@ backup_file() {
   partition=$1
   device=$2
 
-  sudo dd bs=4M if=$device | gzip | dd bs=4M of=../backups/sd-retropie-$partition.iso
+  sudo dd bs=4M if=$device | gzip | dd bs=4M of="$APP_DIR/backups/sd-retropie-$partition.iso.gz"
 }
 
 backup() {
   boot_device=$1
   core_device=$2
 
-  restore_file boot "$boot_device"
-  restore_file core "$core_device"
+  backup_file boot "$boot_device"
+  backup_file core "$core_device"
 }
 
 create() {
