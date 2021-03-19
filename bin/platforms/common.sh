@@ -86,7 +86,7 @@ download_source() {
 
   # Source Filter
   source_filter="$platform_tmp_dir/files.filter"
-  if [ $(jq -r ".roms.sources.$source_name | has(\"files\")") = "true" ]; then
+  if [ "$(jq -r ".roms.sources.$source_name | has(\"files\")" "$platform_settings_file")" = "true" ]; then
     jq -r "if .roms.sources.$source_name | has(\"files\") then .roms.sources.$source_name.files[] else [] end" "$platform_settings_file" > "$source_filter"
     roms_all_dir="/home/pi/RetroPie/roms/$platform/-ALL-"
   else
@@ -108,7 +108,9 @@ download_source() {
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
     # Download URLs
-    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "${source_url}{}" "$platform_tmp_dir/{}"
+    cat "$source_filter" | while read file; do
+      download_file "$source_url$file" "$platform_tmp_dir/$file"
+    done
   else
     echo "Invalid source type: $source_type"
     exit 1
@@ -177,7 +179,7 @@ organize_platform() {
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Add to root
-  jq -r ".roms.root[]" "$platform_settings_file" | while read rom; do
+  jq -r ".roms.root[] // []" "$platform_settings_file" | while read rom; do
     # Undo any accidental blocked rom
     if [ -f "$roms_blocked_dir/$rom" ]; then
       mv "$roms_blocked_dir/$rom" "$roms_all_dir/"
