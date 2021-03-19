@@ -136,12 +136,12 @@ download() {
         if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_system/samples.csv")" ]; then
           wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
         fi
-
-        # Write emulator configuration
-        crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
       else
         echo "Already downloaded: $rom_file"
       fi
+
+      # Write emulator configuration
+      crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
     done
   done
 
