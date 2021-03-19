@@ -103,17 +103,17 @@ download() {
   # Current assumes HTTP downloads
   jq -r '.roms.sources | keys[]' "$SETTINGS_FILE" | while read source_name; do
     # Source
-    source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
-    source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
-    source_system=$(jq -r ".sources.$source_name.system" "$APP_SETTINGS_FILE")
+    source_url=$(jq -r ".sources.\"$source_name\".url" "$APP_SETTINGS_FILE")
+    source_emulator=$(jq -r ".sources.\"$source_name\".emulator" "$APP_SETTINGS_FILE")
+    source_system=$(jq -r ".sources.\"$source_name\".system" "$APP_SETTINGS_FILE")
 
     # Source: ROMs
-    roms_source_url="$source_url$(jq -r ".sources.$source_name.roms" "$APP_SETTINGS_FILE")"
+    roms_source_url="$source_url$(jq -r ".sources.\"$source_name\".roms" "$APP_SETTINGS_FILE")"
     roms_source_dir="$roms_dir/.$source_system"
     mkdir -p "$roms_source_dir"
 
     # Source: Samples
-    samples_source_url="$source_url$(jq -r ".sources.$source_name.samples" "$APP_SETTINGS_FILE")"
+    samples_source_url="$source_url$(jq -r ".sources.\"$source_name\".samples" "$APP_SETTINGS_FILE")"
     samples_target_dir="/home/pi/RetroPie/BIOS/$source_system/samples"
 
     # Build list of ROMs to install
