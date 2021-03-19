@@ -239,6 +239,12 @@ chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
 # 2. Install theme pack
 
 ##############
+# Loading Screen
+##############
+
+crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
+
+##############
 # Emulators
 ##############
 
