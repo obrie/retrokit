@@ -51,17 +51,17 @@ clean_emulator_config_key() {
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" | grep -oE "=.*" | sort | uniq -c
 build_rom_list() {
   # Arguments
-  emulator="$1"
+  system="$1"
 
   # Configurations
-  names_file="$TMP_DIR/arcade/$emulator.csv"
-  names_all_file="$TMP_DIR/arcade/$emulator.all.csv"
-  names_blocklist_file="$TMP_DIR/arcade/$emulator.blocklist.csv"
-  names_allowlist_file="$TMP_DIR/arcade/$emulator.allowlist.csv"
-  names_filtered_file="$TMP_DIR/arcade/$emulator.filtered.csv"
+  names_file="$TMP_DIR/arcade/$system.csv"
+  names_all_file="$TMP_DIR/arcade/$system.all.csv"
+  names_blocklist_file="$TMP_DIR/arcade/$system.blocklist.csv"
+  names_allowlist_file="$TMP_DIR/arcade/$system.allowlist.csv"
+  names_filtered_file="$TMP_DIR/arcade/$system.filtered.csv"
 
   # Create full name set
-  xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$emulator/roms.dat" | sort > "$names_all_file"
+  xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$system/roms.dat" | sort > "$names_all_file"
 
   # Build blocklist
   # - Categories
@@ -70,7 +70,7 @@ build_rom_list() {
 
   # - Keywords
   keyword_conditions=$(jq -r '.roms.blocklists.keywords[]' "$SETTINGS_FILE" | sed -e 's/.*/contains(description\/text(), "\0")/g' | sed ':a; N; $!ba; s/\n/ or /g')
-  sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$emulator/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
+  sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
     (@romof and not(@romof = \"playch10\")) or
     not(driver/@status = \"good\") or
@@ -101,13 +101,14 @@ download() {
     # Config
     source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
     source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
+    source_system=$(jq -r ".sources.$source_name.system" "$APP_SETTINGS_FILE")
     roms_source_url="$source_url$(jq -r ".sources.$source_name.roms" "$APP_SETTINGS_FILE")"
     samples_source_url="$source_url$(jq -r ".sources.$source_name.samples" "$APP_SETTINGS_FILE")"
-    samples_target_dir="/home/pi/RetroPie/BIOS/$source_emulator/samples"
+    samples_target_dir="/home/pi/RetroPie/BIOS/$source_system/samples"
 
     # Build list of ROMs to install
-    build_rom_list "$source_emulator"
-    rom_list_file="$TMP_DIR/arcade/$source_emulator.csv"
+    build_rom_list "$source_system"
+    rom_list_file="$TMP_DIR/arcade/$source_system.csv"
 
     # Install ROMs
     cat "$rom_list_file" | while read rom_name; do
@@ -126,13 +127,13 @@ download() {
         wget "$roms_source_url$rom_name.zip" -O "$rom_file"
 
         # Install disk (if applicable)
-        xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_emulator/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
+        xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_system/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
           mkdir -p "$roms_all_dir/$rom_name"
           wget "$roms_source_url$rom_name/$disk_name.zip" -O "$roms_all_dir/$rom_name/$disk_name.zip"
         done
 
         # Install sample (if applicable)
-        if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_emulator/samples.csv")" ]; then
+        if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_system/samples.csv")" ]; then
           wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
         fi
 

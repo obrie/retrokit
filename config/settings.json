@@ -66,14 +66,16 @@
       "url": "https://***REMOVED***/",
       "samples": "FBNeo/support.zip/support%2Fsamples%2F",
       "roms": "FBNeo/ArcadeNonMerged.zip/",
-      "emulator": "lr-fbneo"
+      "emulator": "lr-fbneo",
+      "system": "fbneo"
     },
     "arcade_mame2003plus_http": {
       "type": "http",
       "url": "https://***REMOVED***/",
       "roms": "roms/",
       "samples": "samples/",
-      "emulator": "lr-mame2003-plus"
+      "emulator": "lr-mame2003-plus",
+      "system": "mame2003-plus"
     }
   }
 }
