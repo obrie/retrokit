@@ -117,18 +117,20 @@ download() {
         wget "$roms_source_url$rom_name.zip" -O "$rom_file"
 
         # Install disk (if applicable)
-        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(disk) > 0]" "$DATA_DIR/$source_name/roms.dat") ]; then
+        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(disk) > 0]" "$DATA_DIR/$source_emulator/roms.dat") ]; then
           wget "$samples_source_url$rom_name/$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
         fi
 
         # Install sample (if applicable)
-        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(sample) > 0]" "$DATA_DIR/$source_name/roms.dat") ]; then
+        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(sample) > 0]" "$DATA_DIR/$source_emulator/roms.dat") ]; then
           mkdir -p "$roms_all_dir/$rom_name"
           wget "$samples_base_url$rom_name.zip" -O "$roms_all_dir/$rom_name/$rom_name.zip"
         fi
 
         # Write emulator configuration
         crudini --set "/opt/retropie/configs/all/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "$source_emulator"
+      else
+        echo "Already downloaded: $rom_file"
       fi
     done
   done
