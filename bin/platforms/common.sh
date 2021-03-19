@@ -183,6 +183,11 @@ organize_platform() {
       mv "$roms_blocked_dir/$rom" "$roms_all_dir/"
     fi
 
+    # Undo any accidental de-duplicated rom
+    if [ -f "$roms_duplicates_dir/$rom" ]; then
+      mv "$roms_duplicates_dir/$rom" "$roms_all_dir/"
+    fi
+
     ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
   done
 }
