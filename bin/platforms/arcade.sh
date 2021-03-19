@@ -72,6 +72,7 @@ build_rom_list() {
   keyword_conditions=$(jq -r '.roms.blocklists.keywords[]' "$SETTINGS_FILE" | sed -e 's/.*/contains(description\/text(), "\0")/g' | sed ':a; N; $!ba; s/\n/ or /g')
   sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
+    @runnable = \"no\" or
     (@romof and not(@romof = \"playch10\")) or
     not(driver/@status = \"good\") or
     driver/@isbios = \"yes\" or
