@@ -20,25 +20,25 @@
     "password": "sGI6Vn1XkUz8"
   },
   "sources": {
-    "nointro": {
+    "nointro-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "no-intro_romsets/no-intro romsets",
       "unzip": true
     },
-    "the_eye_exodos": {
+    "dos-the_eye-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "eXoDOS/eXo/eXoDOS",
       "unzip": true
     },
-    "fbneo": {
+    "fbneo-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
       "unzip": false
     },
-    "arcade_fbneo": {
+    "arcade-fbneo-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
@@ -46,7 +46,7 @@
       "samples": "support.zip/support/samples/",
       "roms": "roms.zip/roms/arcade/"
     },
-    "arcade_mame2003plus": {
+    "arcade-mame2003plus-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
@@ -56,12 +56,12 @@
     },
 
 
-    "the_eye_psx": {
+    "psx-the_eye-http": {
       "type": "http",
       "url": "https://***REMOVED***Playstation/Games/NTSC/",
       "unzip": true
     },
-    "arcade_fbneo_http": {
+    "arcade-fbneo-http": {
       "type": "http",
       "url": "https://***REMOVED***/",
       "samples": "FBNeo/support.zip/support%2Fsamples%2F",
@@ -69,7 +69,7 @@
       "emulator": "lr-fbneo",
       "system": "fbneo"
     },
-    "arcade_mame2003plus_http": {
+    "arcade-mame2003plus-http": {
       "type": "http",
       "url": "https://***REMOVED***/",
       "roms": "roms/",

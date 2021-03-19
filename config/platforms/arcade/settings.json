@@ -2,8 +2,8 @@
   "emulators": ["VICE x64"],
   "roms": {
     "sources": {
-      "arcade_fbneo_http": {},
-      "arcade_mame2003plus_http": {
+      "arcade-fbneo-http": {},
+      "arcade-mame2003plus-http": {
         "overrides": []
       }
     },
