@@ -120,6 +120,7 @@ download_source() {
     exit 1
   fi
 
+  # todo: delete as we unzip
   if [ "$source_unzip" = "true" ]; then
     # Extract files
     unzip -o "$rom_source_dir/*.zip" -d "$roms_all_dir/"
