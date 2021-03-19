@@ -130,7 +130,7 @@ download() {
         # Install disk (if applicable)
         xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_system/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
           mkdir -p "$roms_all_dir/$rom_name"
-          wget "$roms_source_url$rom_name/$disk_name.zip" -O "$roms_all_dir/$rom_name/$disk_name.zip"
+          wget "$roms_source_url$rom_name/$disk_name" -O "$roms_all_dir/$rom_name/$disk_name"
         done
 
         # Install sample (if applicable)

@@ -67,6 +67,7 @@ download_file() {
   fi
 }
 
+# TODO: Smarter file lists
 download_source() {
   # Arguments
   platform="$1"
@@ -107,9 +108,12 @@ download_source() {
     download_file "$source_url" "$torrent_file"
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
+    rom_source_dir="$platform_tmp_dir/downloads"
+    mkdir -p "$rom_source_dir"
+
     # Download URLs
     cat "$source_filter" | while read file; do
-      download_file "$source_url$file" "$platform_tmp_dir/$file"
+      download_file "$source_url$file" "$rom_source_dir/$file"
     done
   else
     echo "Invalid source type: $source_type"
