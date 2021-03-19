@@ -163,7 +163,7 @@ download() {
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Add to root
-  jq -r ".roms.root[]" "$platform_settings_file" | while read rom; do
+  jq -r ".roms.root[]" "$SETTINGS_FILE" | while read rom; do
     ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
 
     # Create link for drive as well (if applicable)
