@@ -152,7 +152,7 @@ organize_platform() {
   mkdir -p "$roms_all_dir" "$roms_blocked_dir" "$roms_duplicates_dir"
 
   # Move everything back into ALL so we can start from scratch
-  find "$roms_duplicates_dir" "$roms_blocked_dir" -mindepth 1 -maxdepth 1 -not -path '*/\.*' -not -path '*-ALL-*' -not -name 'TEMP' -exec mv "{}" "$roms_all_dir" \;
+  find "$roms_duplicates_dir" "$roms_blocked_dir" -mindepth 1 -maxdepth 1 -exec mv "{}" "$roms_all_dir" \;
 
   # Allowlist
   if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
@@ -167,7 +167,7 @@ organize_platform() {
   fi
 
   # Remove duplicates
-  ls $roms_all_dir | grep -oE "^[^(]+" | sort | uniq -c | grep -oP "^ +[^1] +\K.+$" | while read -r game; do
+  ls $roms_all_dir | grep -oE "^[^(]+" | sort | uniq -c | grep -oP "^ +[^1 ] +\K.+$" | while read -r game; do
     find "$roms_all_dir" -type f -name "$game \(*" | sort -r | tail -n +2 | xargs -d'\n' -I{} mv "{}" "$roms_duplicates_dir/"
   done
 
