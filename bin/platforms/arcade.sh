@@ -32,7 +32,10 @@ setup() {
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
 }
 
-function clean_name() {
+# Clean the configuration key used for defining ROM-specific emulator options
+# 
+# Implementation pulled from retropie
+clean_emulator_config_key() {
   local name="$1"
   name="${name//\//_}"
   name="${name//[^a-zA-Z0-9_\-]/}"
@@ -46,11 +49,12 @@ function clean_name() {
 # Identify ROMs allowed:
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep -A 1 "name=\"{}\"" "$DATA_DIR/$source_name/roms.dat" | grep description
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" | grep -oE "=.*" | sort | uniq -c
-filter_source() {
+build_rom_list() {
   # Arguments
   source_name="$1"
 
   # Configurations
+  names_file="$TMP_DIR/arcade/$source_name.csv"
   names_all_file="$TMP_DIR/arcade/$source_name.all.csv"
   names_blocklist_file="$TMP_DIR/arcade/$source_name.blocklist.csv"
   names_allowlist_file="$TMP_DIR/arcade/$source_name.allowlist.csv"
@@ -79,55 +83,69 @@ filter_source() {
 
   # Filter from blocklist
   sort -o "$names_blocklist_file" "$names_blocklist_file"
-  comm -23 "$names_all_file" "$names_blocklist_file"
+  comm -23 "$names_all_file" "$names_blocklist_file" > "$names_files"
 }
 
+# This is strongly customized due to the nature of Arcade ROMs
+# 
+# MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
   # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"
   mkdir -p "$roms_all_dir"
 
-  if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
-    # Download according to settings file
-    download_platform "$PLATFORM"
-  else
-    echo "$roms_all_dir is not empty: skipping download"
-  fi
+  # Current assumes HTTP downloads
+  jq -r '.roms.sources | keys' "$platform_settings_file" | while read source_name; do
+    # Config
+    source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
+    source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
+    roms_source_url="$source_url$(jq -r ".sources.$source_name.roms" "$APP_SETTINGS_FILE")"
+    samples_source_url="$source_url$(jq -r ".sources.$source_name.samples" "$APP_SETTINGS_FILE")"
+    samples_target_dir="/home/pi/RetroPie/BIOS/$source_emulator/samples/"
 
-  # Handle FBNeo
-  unzip 
-  # Move samples / cheaps for FBNeo
-  cp samples/* /home/pi/RetroPie/BIOS/fbneo/samples/
+    # Build list of ROMs to install
+    build_rom_list "$source_name"
+    rom_list_file="$TMP_DIR/arcade/$source_name.csv"
 
-  # Move samples / cheats for MAME
-  scp samples/* pi@***REMOVED***:/home/pi/RetroPie/BIOS/mame2003-plus/samples/
+    # Install ROMs
+    cat "$rom_list_file" | while read rom_name; do
+      rom_file="$roms_all_dir/$rom_name.zip"
 
-  # Move roms to hidden folders
-  mkdir .fbneo .mame
-  mv fbneo/roms/* .fbneo
-  mv mame/roms/* .mame
+      if [ ! -f "$rom_file" ]; then
+        # Install ROM
+        wget "$roms_source_url$rom_name.zip" -O "$rom_file"
 
-  # Create symlinks in -ALL-
-  ln -s .fbneo/* -ALL-/*
-  ln -s .mame/* -ALL-/*
+        # Install disk (if applicable)
+        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(disk) > 0]" "$DATA_DIR/$source_name/roms.dat") ]; then
+          wget "$samples_source_url$rom_name/$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
+        fi
 
-  # Filter symlinks
-  mkdir -p "$TMP_DIR/arcade/"
+        # Install sample (if applicable)
+        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(sample) > 0]" "$DATA_DIR/$source_name/roms.dat") ]; then
+          mkdir -p "$roms_all_dir/$rom_name"
+          wget "$samples_base_url$rom_name.zip" -O "$roms_all_dir/$rom_name/$rom_name.zip"
+        fi
 
-  filter_source "fbneo" > "$PLATFORM_TMP_DIR/$source_name.csv"
-  filter_source "mame2003plus" > "$PLATFORM_TMP_DIR/$source_name.csv"
+        # Write emulator configuration
+        crudini --set "/opt/retropie/configs/$PLATFORM/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "$source_emulator"
+      fi
+    done
+  done
 
-  # First deal with FBNeo
-  comm -2 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv" | tr -d '\t'
+  # Remove existing *links* from root
+  find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
-  # For each file create roms/arcade/<rom name>.cfg with:
-  # clean_name "lr-mame2003plus_$rom_name"
+  # Add to root
+  jq -r ".roms.root[]" "$platform_settings_file" | while read rom; do
+    ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
 
-  # Then deal with Mame2003 PLUS
-  comm -13 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv"
-
-  organize_platform "$PLATFORM"
+    # Create link for drive as well (if applicable)
+    rom_name=$(basename -s .zip "$rom")
+    if [ -d "$roms_all_dir/$rom_name" ]; then
+      ln -fs "$roms_all_dir/$rom_name" "$roms_dir/$rom_name"
+    fi
+  done
 }
 
 if [[ $# -lt 1 ]]; then

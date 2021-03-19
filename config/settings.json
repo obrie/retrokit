@@ -55,7 +55,7 @@
       "roms": "roms.zip/roms/"
     },
 
-    
+
     "the_eye__psx": {
       "type": "http",
       "url": "https://***REMOVED***Playstation/Games/NTSC/",
@@ -63,19 +63,17 @@
     },
     "arcade_fbneo_http": {
       "type": "http",
-      "url": "https://***REMOVED***",
-      "unzip": false,
-      "cli": false,
+      "url": "https://***REMOVED***/",
       "samples": "FBNeo/support.zip/support%2Fsamples%2F",
       "roms": "FBNeo/ArcadeNonMerged.zip/",
+      "emulator": "fbneo"
     },
     "arcade_mame2003plus_http": {
       "type": "http",
-      "url": "https://***REMOVED***",
-      "unzip": false,
-      "cli": false,
+      "url": "https://***REMOVED***/",
       "roms": "roms/",
-      "samples": "samples/"
+      "samples": "samples/",
+      "emulator": "mame2003-plus"
     }
   }
 }

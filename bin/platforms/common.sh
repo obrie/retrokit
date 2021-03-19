@@ -131,7 +131,7 @@ download_platform() {
   platform_config_dir="$APP_DIR/config/platforms/$platform"
   platform_settings_file="$platform_config_dir/settings.json"
 
-  jq -r '.roms.sources[]' "$platform_settings_file" | while read source_name; do
+  jq -r '.roms.sources | keys' "$platform_settings_file" | while read source_name; do
     download_source "$platform" "$source_name"
   done
 }
@@ -151,8 +151,8 @@ organize_platform() {
   roms_duplicates_dir="$roms_dir/.duplicates"
   mkdir -p "$roms_all_dir" "$roms_blocked_dir" "$roms_duplicates_dir"
 
-  # Move everything from blocked back into ALL so we can start from scratch
-  mv "$roms_dir/.blocked/*" "$roms_all_dir/" || true
+  # Move everything back into ALL so we can start from scratch
+  find "$roms_duplicates_dir" "$roms_blocked_dir" -mindepth 1 -maxdepth 1 -not -path '*/\.*' -not -path '*-ALL-*' -not -name 'TEMP' -exec mv "{}" "$roms_all_dir" \;
 
   # Allowlist
   if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
@@ -167,11 +167,11 @@ organize_platform() {
   fi
 
   # Remove duplicates
-  ls $roms_all_dir | grep -oE "^[^(]+" | uniq | while read -r game; do
+  ls $roms_all_dir | grep -oE "^[^(]+" | sort | uniq -c | grep -oP "^ +[^1] +\K.+$" | while read -r game; do
     find "$roms_all_dir" -type f -name "$game \(*" | sort -r | tail -n +2 | xargs -d'\n' -I{} mv "{}" "$roms_duplicates_dir/"
   done
 
-  # Remove existing from root
+  # Remove existing *links* from root
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Add to root
