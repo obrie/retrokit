@@ -4,7 +4,7 @@
     "sources": {
       "arcade_fbneo_http": {},
       "arcade_mame2003plus_http": {
-        "prioritize": []
+        "overrides": []
       }
     },
     "root": [

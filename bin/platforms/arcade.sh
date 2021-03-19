@@ -118,9 +118,9 @@ download() {
       rom_file="$roms_all_dir/$rom_name.zip"
       rom_emulator_key=$(clean_emulator_config_key "arcade_${rom_name}")
 
-      # Check if we should prioritize this ROM from this source
+      # Check if we should override this ROM from this source
       if [ "$(crudini --get "$emulators_config" "" "$rom_emulator_key")" != "\"$source_emulator\"" ]; then
-        if [ "$(jq -r ".roms.sources.$source_name.prioritize | index(\"$rom_name.zip\")" "$SETTINGS_FILE")" != "null" ]; then
+        if [ "$(jq -r ".roms.sources.$source_name.overrides | index(\"$rom_name.zip\")" "$SETTINGS_FILE")" != "null" ]; then
           rm "$rom_file"
           unset installed_roms["$rom_name"]
         fi
