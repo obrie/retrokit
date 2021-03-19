@@ -131,7 +131,7 @@ download_platform() {
   platform_config_dir="$APP_DIR/config/platforms/$platform"
   platform_settings_file="$platform_config_dir/settings.json"
 
-  jq -r '.roms.sources | keys' "$platform_settings_file" | while read source_name; do
+  jq -r '.roms.sources | keys[]' "$platform_settings_file" | while read source_name; do
     download_source "$platform" "$source_name"
   done
 }

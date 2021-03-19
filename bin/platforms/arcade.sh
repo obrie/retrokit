@@ -96,7 +96,7 @@ download() {
   mkdir -p "$roms_all_dir"
 
   # Current assumes HTTP downloads
-  jq -r '.roms.sources | keys' "$platform_settings_file" | while read source_name; do
+  jq -r '.roms.sources | keys[]' "$SETTINGS_FILE" | while read source_name; do
     # Config
     source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
     source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
@@ -128,7 +128,7 @@ download() {
         fi
 
         # Write emulator configuration
-        crudini --set "/opt/retropie/configs/$PLATFORM/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "$source_emulator"
+        crudini --set "/opt/retropie/configs/all/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "$source_emulator"
       fi
     done
   done
