@@ -102,7 +102,7 @@ download() {
     source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
     roms_source_url="$source_url$(jq -r ".sources.$source_name.roms" "$APP_SETTINGS_FILE")"
     samples_source_url="$source_url$(jq -r ".sources.$source_name.samples" "$APP_SETTINGS_FILE")"
-    samples_target_dir="/home/pi/RetroPie/BIOS/$source_emulator/samples/"
+    samples_target_dir="/home/pi/RetroPie/BIOS/$source_emulator/samples"
 
     # Build list of ROMs to install
     build_rom_list "$source_emulator"
@@ -117,18 +117,18 @@ download() {
         wget "$roms_source_url$rom_name.zip" -O "$rom_file"
 
         # Install disk (if applicable)
-        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(disk) > 0]" "$DATA_DIR/$source_emulator/roms.dat") ]; then
-          wget "$samples_source_url$rom_name/$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
-        fi
+        xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_emulator/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
+          mkdir -p "$roms_all_dir/$rom_name"
+          wget "$roms_source_url$rom_name/$disk_name.zip" -O "$roms_all_dir/$rom_name/$disk_name.zip"
+        done
 
         # Install sample (if applicable)
-        if [ $(xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\" and count(sample) > 0]" "$DATA_DIR/$source_emulator/roms.dat") ]; then
-          mkdir -p "$roms_all_dir/$rom_name"
-          wget "$samples_base_url$rom_name.zip" -O "$roms_all_dir/$rom_name/$rom_name.zip"
+        if [ $(grep "$rom_name.zip" "$DATA_DIR/$source_emulator/samples.csv") ]; then
+          wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
         fi
 
         # Write emulator configuration
-        crudini --set "/opt/retropie/configs/all/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "$source_emulator"
+        crudini --set "/opt/retropie/configs/all/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "\"$source_emulator\""
       else
         echo "Already downloaded: $rom_file"
       fi
