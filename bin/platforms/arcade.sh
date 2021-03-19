@@ -97,15 +97,22 @@ download() {
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
 
-  declare -A installed_roms
+  # Remove existing *links* from -ALL-
+  find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Current assumes HTTP downloads
   jq -r '.roms.sources | keys[]' "$SETTINGS_FILE" | while read source_name; do
-    # Config
+    # Source
     source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
     source_emulator=$(jq -r ".sources.$source_name.emulator" "$APP_SETTINGS_FILE")
     source_system=$(jq -r ".sources.$source_name.system" "$APP_SETTINGS_FILE")
+
+    # Source: ROMs
     roms_source_url="$source_url$(jq -r ".sources.$source_name.roms" "$APP_SETTINGS_FILE")"
+    roms_source_dir="$roms_dir/.$source_system"
+    mkdir -p "$roms_source_dir"
+
+    # Source: Samples
     samples_source_url="$source_url$(jq -r ".sources.$source_name.samples" "$APP_SETTINGS_FILE")"
     samples_target_dir="/home/pi/RetroPie/BIOS/$source_system/samples"
 
@@ -115,39 +122,39 @@ download() {
 
     # Install ROMs
     cat "$rom_list_file" | while read rom_name; do
-      rom_file="$roms_all_dir/$rom_name.zip"
-      rom_emulator_key=$(clean_emulator_config_key "arcade_${rom_name}")
+      rom_source_file="$roms_source_dir/$rom_name.zip"
+      rom_target_file="$roms_all_dir/$rom_name.zip"
 
-      # Check if we should override this ROM from this source
-      if [ "$(crudini --get "$emulators_config" "" "$rom_emulator_key")" != "\"$source_emulator\"" ]; then
-        if [ "$(jq -r ".roms.sources.$source_name.overrides | index(\"$rom_name.zip\")" "$SETTINGS_FILE")" != "null" ]; then
-          rm "$rom_file"
-          unset installed_roms["$rom_name"]
+      if [ ! -f "$rom_target_file" ]; then
+        rom_emulator_key=$(clean_emulator_config_key "arcade_${rom_name}")
+
+        # Download ROM assets
+        if [ ! -f "$rom_source_file" ]; then
+          # Install ROM
+          wget "$roms_source_url$rom_name.zip" -O "$rom_source_file"
+
+          # Install disk (if applicable)
+          xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_system/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
+            mkdir -p "$roms_source_dir/$rom_name"
+            wget "$roms_source_url$rom_name/$disk_name" -O "$roms_source_dir/$rom_name/$disk_name"
+          done
+
+          # Install sample (if applicable)
+          if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_system/samples.csv")" ]; then
+            wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
+          fi
+        else
+          echo "Already downloaded: $rom_source_file"
         fi
-      fi
 
-      if [ ! -f "$rom_file" ]; then
-        # Install ROM
-        wget "$roms_source_url$rom_name.zip" -O "$rom_file"
-
-        # Install disk (if applicable)
-        xmlstarlet sel -T -t -v "/*/game[@name = \"$rom_name\"]/disk/@name" "$DATA_DIR/$source_system/roms.dat" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
-          mkdir -p "$roms_all_dir/$rom_name"
-          wget "$roms_source_url$rom_name/$disk_name" -O "$roms_all_dir/$rom_name/$disk_name"
-        done
-
-        # Install sample (if applicable)
-        if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_system/samples.csv")" ]; then
-          wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
+        # Link to -ALL- (including drive)
+        ln -fs "$rom_source_file" "$rom_target_file"
+        if [ -d "$roms_source_dir/$rom_name" ]; then
+          ln -fs "$roms_source_dir/$rom_name" "$roms_all_dir/$rom_name"
         fi
-      else
-        echo "Already downloaded: $rom_file"
-      fi
 
-      if [ ! ${installed_roms["$rom_name"]+_} ]; then
         # Write emulator configuration
         crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
-        installed_roms["$rom_name"]="true"
       fi
     done
   done
