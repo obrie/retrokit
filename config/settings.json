@@ -23,16 +23,31 @@
     "nointro": {
       "type": "torrent",
       "url": "https://***REMOVED***",
-      "root_dir": "no-intro_romsets/no-intro romsets"
+      "root_dir": "no-intro_romsets/no-intro romsets",
+      "unzip": true
     },
     "the_eye_exodos": {
       "type": "torrent",
       "url": "https://***REMOVED***",
-      "root_dir": "eXoDOS/eXo/eXoDOS"
+      "root_dir": "eXoDOS/eXo/eXoDOS",
+      "unzip": true
     },
     "the_eye__psx": {
       "type": "http",
-      "url": "https://***REMOVED***Playstation/Games/NTSC"
+      "url": "https://***REMOVED***Playstation/Games/NTSC",
+      "unzip": true
+    },
+    "fbneo": {
+      "type": "torrent",
+      "url": "https://***REMOVED***",
+      "root_dir": "",
+      "unzip": false
+    },
+    "mame2003plus": {
+      "type": "torrent",
+      "url": "https://***REMOVED***",
+      "root_dir": "",
+      "unzip": false
     }
   }
 }

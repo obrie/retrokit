@@ -51,13 +51,15 @@ main() {
   cleanup
   add "$torrent_file"
   lookup_id
-  filter "$torrent_filter"
+  if [ -f "$torrent_filter" ]; then
+    filter "$torrent_filter"
+  fi
   start
   wait_until_done
   cleanup
 }
 
-if [[ $# -ne 2 ]]; then
+if [[ $# -lt 1 ]]; then
   usage
 fi
 

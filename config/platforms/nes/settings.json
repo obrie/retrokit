@@ -1,14 +1,14 @@
 {
   "emulators": [],
   "roms": {
-    "source": {
-      "name": "nointro",
-      "files": [
-        "Nintendo - Nintendo Entertainment System (20210122-114559) [headered].zip"
-      ],
-      "unzip": true
+    "sources": {
+      "nointro": {
+        "files": [
+          "Nintendo - Nintendo Entertainment System (20210122-114559) [headered].zip"
+        ]
+      }
     },
-    "default": [
+    "root": [
       "Arkanoid (USA).zip",
       "Bubble Bobble (USA).zip",
       "Bubble Bobble Part 2 (USA).zip",
@@ -46,23 +46,27 @@
       "Track & Field II (USA).zip",
       "Winter Games (USA).zip"
     ],
-    "allowlist": [
-      "(USA",
-      "(Japan, USA)",
-      "(World)"
-    ],
-    "blocklist": [
-      "(Aftermarket",
-      "(Alt",
-      "(Beta",
-      "(Proto",
-      "(Rev",
-      "(Sample",
-      "(Test",
-      "(Virtual Console",
-      "Anniversary",
-      "Cartridge",
-      "Collector"
-    ]
+    "allowlists": {
+      "keywords": [
+        "(USA",
+        "(Japan, USA)",
+        "(World)"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Aftermarket",
+        "(Alt",
+        "(Beta",
+        "(Proto",
+        "(Rev",
+        "(Sample",
+        "(Test",
+        "(Virtual Console",
+        "Anniversary",
+        "Cartridge",
+        "Collector"
+      ]
+    }
   }
 }

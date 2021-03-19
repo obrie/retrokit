@@ -1,15 +1,15 @@
 {
   "emulators": ["VICE x64"],
   "roms": {
-    "source": {
-      "name": "nointro",
-      "files": [
-        "Commodore - 64 (20210216-232616).zip",
-        "Commodore - 64 (Tapes) (20210216-231940).zip"
-      ],
-      "unzip": true
+    "sources": {
+      "nointro": {
+        "files": [
+          "Commodore - 64 (20210216-232616).zip",
+          "Commodore - 64 (Tapes) (20210216-231940).zip"
+        ]
+      }
     },
-    "default": [
+    "root": [
       "180 (Europe) (Budget).zip",
       "Arkanoid (Europe).zip",
       "Arkanoid - Revenge of Doh (Europe).zip",
@@ -28,7 +28,17 @@
       "Winter Games (Europe).zip",
       "World Games (Europe).zip"
     ],
-    "allowlist": ["USA", "Europe"],
-    "blocklist": ["Strip Poker", "BIOS"]
+    "allowlists": {
+      "keywords": [
+        "USA",
+        "Europe"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "Strip Poker",
+        "BIOS"
+      ]
+    }
   }
 }

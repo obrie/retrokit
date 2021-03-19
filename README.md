@@ -135,36 +135,7 @@ Indexes:
 * https://***REMOVED***
 * https://***REMOVED***
 
-### Non-merged Sets
-
-Reference: https://retropie.org.uk/docs/Validating%2C-Rebuilding%2C-and-Filtering-ROM-Collections/
-
-Setup:
-
-1. Download ClrMamePro: http://mamedev.emulab.it/clrmamepro/#downloads
-2. Install Wine
-3. Install wine mono from https://dl.winehq.org/wine/wine-mono/6.0.0/
-4. Configure wine (winecfg)
-5. Install app (wine cmp4041_64.exe)
-6. Follow instructions here: https://www.youtube.com/watch?v=_lssz2pAba8
-
-Run clrmamepro:
-
-```
-cd ~/.wine/drive_c/Program\ Files/clrmamepro
-wine cmpro64.exe
-```
-
-TorrentZip ROMs:
-
-```
-wget https://www.romvault.com/trrntzip/download/TrrntZip.NET106.zip
-ls *.zip | parallel -j 5 wine ~/Downloads/TrrntZip.NET.exe  {}
-```
-
 ## TODO
-
-http://***REMOVED*** ???
 
 * [x] Determine if we should upgrade MicroSD card
 * [] Set up Arcade games

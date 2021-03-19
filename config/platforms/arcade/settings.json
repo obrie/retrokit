@@ -1,0 +1,112 @@
+{
+  "emulators": ["VICE x64"],
+  "roms": {
+    "sources": {
+      "fbneo": {
+        "files": [
+          "ArcadeNonMerged.zip",
+          "support.zip"
+        ]
+      },
+      "mame2003plus": {
+        "files": [
+          "roms/",
+          "samples/"
+        ]
+      }
+    },
+    "root": [
+      "area51.zip",
+      "area51mx.zip",
+      "arkanoid.zip",
+      "avsp.zip",
+      "blitz.zip",
+      "bublbobl.zip",
+      "contra.zip",
+      "crusnusa.zip",
+      "dkong.zip",
+      "duckhunt.zip",
+      "mario.zip",
+      "mk.zip",
+      "mk2.zip",
+      "mk3.zip",
+      "mspacman.zip",
+      "nbajam.zip",
+      "puckman.zip",
+      "paperboy.zip",
+      "pc_miket.zip",
+      "punchout.zip",
+      "rampage.zip",
+      "sf1.zip",
+      "sf2.zip",
+      "sf2ce.zip",
+      "simpsons.zip",
+      "suprmrio.zip",
+      "tekken.zip",
+      "tmnt.zip",
+      "tmnt2.zip",
+      "topspeed.zip",
+      "tron.zip",
+      "wgp.zip",
+      "xmcota.zip",
+      "xmen.zip",
+      "xmvsf.zip"
+    ],
+    "allowlists": {
+      "languages": [
+        "English"
+      ]
+    },
+    "blocklists": {
+      "categories": [
+        "Board Game",
+        "Casino",
+        "Golf",
+        "Mature",
+        "Medal Game",
+        "Multiplay",
+        "Puzzle / Match",
+        "Quiz",
+        "Slot Machine",
+        "Sports / Baseball",
+        "Sports / Bowling",
+        "Sports / Handball",
+        "Sports / Hang Gliding",
+        "Sports / Hockey",
+        "Sports / Horse Racing",
+        "Sports / Misc.",
+        "Sports / Pool",
+        "Sports / Shuffleboard",
+        "Sports / Soccer",
+        "Sports / Swimming",
+        "Sports / Tennis",
+        "Sports / Volleyball",
+        "Tabletop"
+      ],
+      "keywords": [
+        "(hack",
+        "[demo",
+        "[hack",
+        "anniversary",
+        "bootleg",
+        "broken",
+        "cassette",
+        "colors",
+        "colours",
+        "development",
+        "encrypted",
+        "floppy",
+        "homebrew",
+        "imperfect",
+        "incomplete",
+        "no sound",
+        "protected",
+        "prototype",
+        "terrible",
+        "undumped",
+        "unemulated",
+        "pcb"
+      ]
+    }
+  }
+}

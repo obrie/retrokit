@@ -40,8 +40,6 @@ download() {
   # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"
-  roms_duplicates_dir="$roms_dir/.duplicates"
-  mkdir -p "$roms_all_dir" "$roms_duplicates_dir"
 
   if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
     # Download according to settings file
@@ -51,11 +49,6 @@ download() {
   fi
 
   organize_platform "$PLATFORM"
-
-  # Clean up duplicates
-  ls $roms_all_dir | grep -oE "^[^(]+" | uniq | while read -r game; do
-    find "$roms_all_dir" -type f -name "$game \(*" | sort -r | tail -n +2 | xargs -d'\n' -I{} mv "{}" "$roms_duplicates_dir/"
-  done
 }
 
 if [[ $# -lt 1 ]]; then

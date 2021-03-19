@@ -1,39 +1,62 @@
 # Arcade
 
-Prefer MAME 2003 Plus or Fast Burn Neo for Arcade, then MAME if neither of those work
+## Emulators
+
+Preferred:
+
+* lr-fbneo
+* lr-mame2003plus
+
+## ROMs
+
+## Filters
+
+* [Category Filters](https://www.progettosnaps.net/catver/)
+* [Languages](https://www.progettosnaps.net/languages/)
 
 ### FBNeo
 
-Source: https://***REMOVED***
+Files:
 
-DAT files (https://github.com/libretro/FBNeo/tree/master/dats):
-
-```
-wget "https://github.com/libretro/FBNeo/raw/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat"
-```
-
-cp samples/* /home/pi/RetroPie/BIOS/fbneo/samples/
-cp roms/* /home/pi/RetroPie/roms/arcade/
-cp cheats/* /home/pi/RetroPie/fbneo/cheats/
-
-scp * pi@***REMOVED***:/home/pi/RetroPie/BIOS/fbneo/samples/
-
-Filtering:
-* https://www.progettosnaps.net/catver/
-
+* [Nightly ROM Set](https://***REMOVED***)
+* [Stable ROM Set](https://***REMOVED***)
+* [DAT](https://github.com/libretro/FBNeo/raw/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat)
 
 ### MAME
 
-Mame 2003 DAT: https://raw.githubusercontent.com/libretro/mame2003-libretro
-Mame 2003 Plus DAT: https://www.progettosnaps.net/dats/MAME/
+Files:
 
-Install lr-mame2003-plus in optional packages.
+* [2003 Plus ROM Set](https://***REMOVED***)
+* [2003 ROM Set](https://***REMOVED***)
+* [DAT](https://github.com/libretro/mame2003-plus-libretro/raw/master/metadata/mame2003-plus.xml)
 
-Source: https://***REMOVED***
+References:
 
-mkdir -p /home/pi/RetroPie/BIOS/mame2003-plus/samples/
+* Mame 2003 Plus DAT: https://www.progettosnaps.net/dats/MAME/
+
+### Non-merged Sets
+
+Reference: https://retropie.org.uk/docs/Validating%2C-Rebuilding%2C-and-Filtering-ROM-Collections/
+
+Setup:
+
+1. Download ClrMamePro: http://mamedev.emulab.it/clrmamepro/#downloads
+2. Install Wine
+3. Install wine mono from https://dl.winehq.org/wine/wine-mono/6.0.0/
+4. Configure wine (winecfg)
+5. Install app (wine cmp4041_64.exe)
+6. Follow instructions here: https://www.youtube.com/watch?v=_lssz2pAba8
+
+Run clrmamepro:
 
 ```
-scp samples/* pi@***REMOVED***:/home/pi/RetroPie/BIOS/mame2003-plus/samples/
-scp roms/* pi@***REMOVED***:/home/pi/RetroPie/roms/arcade/
+cd ~/.wine/drive_c/Program\ Files/clrmamepro
+wine cmpro64.exe
+```
+
+TorrentZip ROMs:
+
+```
+wget https://www.romvault.com/trrntzip/download/TrrntZip.NET106.zip
+ls *.zip | parallel -j 5 wine ~/Downloads/TrrntZip.NET.exe  {}
 ```
