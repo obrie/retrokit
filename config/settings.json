@@ -43,10 +43,20 @@
       "root_dir": "",
       "unzip": false
     },
+    "fbneo_http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "unzip": false
+    },
     "mame2003plus": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
+      "unzip": false
+    },
+    "mame2003plus_http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
       "unzip": false
     }
   }

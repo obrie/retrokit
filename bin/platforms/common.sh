@@ -75,6 +75,8 @@ download_source() {
   # Configuration
   platform_config_dir="$APP_DIR/config/platforms/$platform"
   platform_settings_file="$platform_config_dir/settings.json"
+  platform_tmp_dir="$TMP_DIR/$platform"
+  mkdir -p "$platform_tmp_dir"
 
   # Source
   source_type=$(jq -r ".sources.$source_name.type" "$APP_SETTINGS_FILE")
@@ -83,8 +85,7 @@ download_source() {
   source_unzip=$(jq -r ".sources.$source_name.unzip" "$APP_SETTINGS_FILE")
 
   # Source Filter
-  source_filter="$TMP_DIR/$platform.filter"
-  rm "$source_filter"
+  source_filter="$platform_tmp_dir/files.filter"
   if [ $(jq -r ".roms.sources.$source_name | has(\"files\")") = "true" ]; then
     jq -r "if .roms.sources.$source_name | has(\"files\") then .roms.sources.$source_name.files[] else [] end" "$platform_settings_file" > "$source_filter"
     roms_all_dir="/home/pi/RetroPie/roms/$platform/-ALL-"
@@ -106,11 +107,8 @@ download_source() {
     download_file "$source_url" "$torrent_file"
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
-    # Download target
-    rom_source_dir="$TMP_DIR"
-
     # Download URLs
-    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "$source_url/{}" "$rom_source_dir/{}"
+    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "$source_url/{}" "$platform_tmp_dir/{}"
   else
     echo "Invalid source type: $source_type"
     exit 1

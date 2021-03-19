@@ -13,6 +13,9 @@ PLATFORM="arcade"
 DATA_DIR="$APP_DIR/data/arcade"
 CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
+PLATFORM_TMP_DIR="$TMP_DIR/arcade"
+
+mkdir -p "$PLATFORM_TMP_DIR"
 
 usage() {
   echo "usage: $0"
@@ -107,8 +110,14 @@ download() {
   # Filter symlinks
   mkdir -p "$TMP_DIR/arcade/"
 
-  filter_source "fbneo" > "$TMP_DIR/arcade/$source_name.csv"
-  filter_source "mame2003plus" > "$TMP_DIR/arcade/$source_name.csv"
+  filter_source "fbneo" > "$PLATFORM_TMP_DIR/$source_name.csv"
+  filter_source "mame2003plus" > "$PLATFORM_TMP_DIR/$source_name.csv"
+
+  # First deal with FBNeo
+  comm -2 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv" | tr -d '\t'
+
+  # Then deal with Mame2003 PLUS
+  comm -13 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv"
 
   organize_platform "$PLATFORM"
 }
