@@ -58,7 +58,7 @@ build_rom_list() {
   names_all_file="$TMP_DIR/arcade/$system.all.csv"
   names_blocklist_file="$TMP_DIR/arcade/$system.blocklist.csv"
   names_allowlist_file="$TMP_DIR/arcade/$system.allowlist.csv"
-  names_filtered_file="$TMP_DIR/arcade/$system.filtered.csv"
+  names_mergelist_file="$TMP_DIR/arcade/$system.mergelist.csv"
 
   # Create full name set
   xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$system/roms.dat" | sort > "$names_all_file"
@@ -82,9 +82,15 @@ build_rom_list() {
   # - Languages
   crudini --del --output=- "$DATA_DIR/languages/languages.ini" "English" >> "$names_blocklist_file"
 
-  # Filter from blocklist
+  # Remove explicit ROMs from blocklist
+  jq -r ".roms.root[]" "$SETTINGS_FILE" | sed -e 's/\.zip//g' | sort > "$names_allowlist_file"
+
+  # Remove allowlist from blocklist
   sort -o "$names_blocklist_file" "$names_blocklist_file"
-  comm -23 "$names_all_file" "$names_blocklist_file" > "$names_file"
+  comm -23 "$names_blocklist_file" "$names_allowlist_file" > "$names_mergelist_file"
+
+  # Filter from blocklist
+  comm -23 "$names_all_file" "$names_mergelist_file" > "$names_file"
 }
 
 # This is strongly customized due to the nature of Arcade ROMs

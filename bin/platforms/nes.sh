@@ -26,6 +26,13 @@ setup() {
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_enabled' '"true"'
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_frames' '"1"'
   crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
+
+  # Sprite performance
+  crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'fceumm_show_adv_system_options' '"enabled"'
+  crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'fceumm_nospritelimit' '"enabled"'
+
+  # Audio quality
+  crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'fceumm_sndquality' '"High"'
 }
 
 download() {

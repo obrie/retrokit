@@ -19,3 +19,9 @@ Secondary Sources:
 * https://***REMOVED***
 * https://***REMOVED***
 * https://***REMOVED***
+
+## Configurations
+
+References:
+
+* https://docs.libretro.com/library/fceumm/
