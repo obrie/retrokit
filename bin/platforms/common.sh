@@ -155,14 +155,16 @@ organize_platform() {
   find "$roms_duplicates_dir" "$roms_blocked_dir" -mindepth 1 -maxdepth 1 -exec mv "{}" "$roms_all_dir" \;
 
   # Allowlist
-  if [ $(jq -r '.roms | has("allowlist")' "$platform_settings_file") = "true" ]; then
-    allowlist=$(jq -r '.roms.allowlist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    find "$roms_all_dir/" -mindepth 1 -regextype posix-extended ! -regex ".*($allowlist).*" -exec mv "{}" "$roms_blocked_dir/" \;
+  # - Keywords
+  if [ $(jq -r '.roms.allowlists | has("keywords")' "$platform_settings_file") = "true" ]; then
+    keywords=$(jq -r '.roms.allowlists.keywords[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    find "$roms_all_dir/" -mindepth 1 -regextype posix-extended ! -regex ".*($keywords).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
   # Blocklist
-  if [ $(jq -r '.roms | has("blocklist")' "$platform_settings_file") = "true" ]; then
-    blocklist=$(jq -r '.roms.blocklist[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  # - Keywords
+  if [ $(jq -r '.roms.blocklists | has("keywords")' "$platform_settings_file") = "true" ]; then
+    blocklist=$(jq -r '.roms.blocklists.keywords[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
