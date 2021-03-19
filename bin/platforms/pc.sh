@@ -33,6 +33,10 @@ download() {
   # https://github.com/Voljega/ExoDOSConverter
 }
 
+scrape() {
+  scrape_platform "$PLATFORM"
+}
+
 if [[ $# -lt 1 ]]; then
   usage
 fi

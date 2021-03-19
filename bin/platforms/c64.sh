@@ -51,6 +51,10 @@ download() {
   organize_platform "$PLATFORM"
 }
 
+scrape() {
+  scrape_platform "$PLATFORM"
+}
+
 if [[ $# -lt 1 ]]; then
   usage
 fi

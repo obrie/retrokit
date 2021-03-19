@@ -244,6 +244,8 @@ chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
 
 for platform in $DIR/platforms/*; do
   $platform setup
+  $platform download
+  $platform scrape
 done
 
 ##############
