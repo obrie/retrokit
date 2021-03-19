@@ -14,7 +14,7 @@ SETTINGS_FILE="$CONFIG_DIR/settings.json"
 ##############
 
 # Make sure emulation station isn't running
-killall emulationstation
+killall /opt/retropie/supplementary/emulationstation/emulationstation
 
 ##############
 # Wifi

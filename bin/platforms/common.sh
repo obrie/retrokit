@@ -15,7 +15,7 @@ scrape_platform() {
   platform="$1"
 
   # Kill emulation station
-  killall emulationstation
+  killall /opt/retropie/supplementary/emulationstation/emulationstation
 
   # Scrape
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$platform" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" -s screenscraper --flags "unattend,skipped,videos"
