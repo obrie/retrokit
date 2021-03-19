@@ -38,7 +38,7 @@ sudo apt full-upgrade
 ##############
 
 # Ini editor
-sudo apt install crudini
+sudo pip3 install crudini
 
 # Env editor
 mkdir -p ~/tools

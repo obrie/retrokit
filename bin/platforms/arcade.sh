@@ -51,17 +51,17 @@ clean_emulator_config_key() {
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" | grep -oE "=.*" | sort | uniq -c
 build_rom_list() {
   # Arguments
-  source_name="$1"
+  emulator="$1"
 
   # Configurations
-  names_file="$TMP_DIR/arcade/$source_name.csv"
-  names_all_file="$TMP_DIR/arcade/$source_name.all.csv"
-  names_blocklist_file="$TMP_DIR/arcade/$source_name.blocklist.csv"
-  names_allowlist_file="$TMP_DIR/arcade/$source_name.allowlist.csv"
-  names_filtered_file="$TMP_DIR/arcade/$source_name.filtered.csv"
+  names_file="$TMP_DIR/arcade/$emulator.csv"
+  names_all_file="$TMP_DIR/arcade/$emulator.all.csv"
+  names_blocklist_file="$TMP_DIR/arcade/$emulator.blocklist.csv"
+  names_allowlist_file="$TMP_DIR/arcade/$emulator.allowlist.csv"
+  names_filtered_file="$TMP_DIR/arcade/$emulator.filtered.csv"
 
   # Create full name set
-  xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$source_name/roms.dat" | sort > "$names_all_file"
+  xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$emulator/roms.dat" | sort > "$names_all_file"
 
   # Build blocklist
   # - Categories
@@ -70,7 +70,7 @@ build_rom_list() {
 
   # - Keywords
   keyword_conditions=$(jq -r '.roms.blocklists.keywords[]' "$SETTINGS_FILE" | sed -e 's/.*/contains(description\/text(), "\0")/g' | sed ':a; N; $!ba; s/\n/ or /g')
-  sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$source_name/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
+  sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$emulator/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
     (@romof and not(@romof = \"playch10\")) or
     not(driver/@status = \"good\") or
@@ -83,7 +83,7 @@ build_rom_list() {
 
   # Filter from blocklist
   sort -o "$names_blocklist_file" "$names_blocklist_file"
-  comm -23 "$names_all_file" "$names_blocklist_file" > "$names_files"
+  comm -23 "$names_all_file" "$names_blocklist_file" > "$names_file"
 }
 
 # This is strongly customized due to the nature of Arcade ROMs
@@ -105,8 +105,8 @@ download() {
     samples_target_dir="/home/pi/RetroPie/BIOS/$source_emulator/samples/"
 
     # Build list of ROMs to install
-    build_rom_list "$source_name"
-    rom_list_file="$TMP_DIR/arcade/$source_name.csv"
+    build_rom_list "$source_emulator"
+    rom_list_file="$TMP_DIR/arcade/$source_emulator.csv"
 
     # Install ROMs
     cat "$rom_list_file" | while read rom_name; do
