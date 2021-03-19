@@ -108,7 +108,7 @@ download_source() {
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
     # Download URLs
-    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "$source_url/{}" "$platform_tmp_dir/{}"
+    cat "$source_filter" | xargs -t -d'\n' -I{} download_file "${source_url}{}" "$platform_tmp_dir/{}"
   else
     echo "Invalid source type: $source_type"
     exit 1

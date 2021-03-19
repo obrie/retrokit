@@ -32,6 +32,13 @@ setup() {
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
 }
 
+function clean_name() {
+  local name="$1"
+  name="${name//\//_}"
+  name="${name//[^a-zA-Z0-9_\-]/}"
+  echo "$name"
+}
+
 # Filters a source's file list down to something more manageable
 # 
 # TODO: Support both allowlists and blocklists
@@ -92,11 +99,9 @@ download() {
   unzip 
   # Move samples / cheaps for FBNeo
   cp samples/* /home/pi/RetroPie/BIOS/fbneo/samples/
-  cp cheats/* /home/pi/RetroPie/fbneo/cheats/
 
   # Move samples / cheats for MAME
   scp samples/* pi@***REMOVED***:/home/pi/RetroPie/BIOS/mame2003-plus/samples/
-  scp cheats/* pi@***REMOVED***:/home/pi/RetroPie/BIOS/mame2003-plus/cheats/
 
   # Move roms to hidden folders
   mkdir .fbneo .mame
@@ -115,6 +120,9 @@ download() {
 
   # First deal with FBNeo
   comm -2 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv" | tr -d '\t'
+
+  # For each file create roms/arcade/<rom name>.cfg with:
+  # clean_name "lr-mame2003plus_$rom_name"
 
   # Then deal with Mame2003 PLUS
   comm -13 "$PLATFORM_TMP_DIR/fbneo.csv" "$PLATFORM_TMP_DIR/mame2003plus.csv"

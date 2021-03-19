@@ -32,32 +32,50 @@
       "root_dir": "eXoDOS/eXo/eXoDOS",
       "unzip": true
     },
-    "the_eye__psx": {
-      "type": "http",
-      "url": "https://***REMOVED***Playstation/Games/NTSC",
-      "unzip": true
-    },
     "fbneo": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
       "unzip": false
     },
-    "fbneo_http": {
-      "type": "http",
-      "url": "https://***REMOVED***",
-      "unzip": false
-    },
-    "mame2003plus": {
+    "arcade_fbneo": {
       "type": "torrent",
       "url": "https://***REMOVED***",
       "root_dir": "",
-      "unzip": false
+      "unzip": false,
+      "samples": "support.zip/support/samples/",
+      "roms": "roms.zip/roms/arcade/"
     },
-    "mame2003plus_http": {
+    "arcade_mame2003plus": {
+      "type": "torrent",
+      "url": "https://***REMOVED***",
+      "root_dir": "",
+      "unzip": false,
+      "samples": "support.zip/support/samples/",
+      "roms": "roms.zip/roms/"
+    },
+
+    
+    "the_eye__psx": {
+      "type": "http",
+      "url": "https://***REMOVED***Playstation/Games/NTSC/",
+      "unzip": true
+    },
+    "arcade_fbneo_http": {
       "type": "http",
       "url": "https://***REMOVED***",
-      "unzip": false
+      "unzip": false,
+      "cli": false,
+      "samples": "FBNeo/support.zip/support%2Fsamples%2F",
+      "roms": "FBNeo/ArcadeNonMerged.zip/",
+    },
+    "arcade_mame2003plus_http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "unzip": false,
+      "cli": false,
+      "roms": "roms/",
+      "samples": "samples/"
     }
   }
 }

@@ -2,18 +2,8 @@
   "emulators": ["VICE x64"],
   "roms": {
     "sources": {
-      "fbneo": {
-        "files": [
-          "ArcadeNonMerged.zip",
-          "support.zip"
-        ]
-      },
-      "mame2003plus": {
-        "files": [
-          "roms/",
-          "samples/"
-        ]
-      }
+      "arcade_fbneo_http": {},
+      "arcade_mame2003plus_http": {}
     },
     "root": [
       "area51.zip",
