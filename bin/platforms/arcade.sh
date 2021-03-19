@@ -93,6 +93,7 @@ download() {
   # Target
   roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
   roms_all_dir="$roms_dir/-ALL-"
+  emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
 
   # Current assumes HTTP downloads
@@ -111,6 +112,14 @@ download() {
     # Install ROMs
     cat "$rom_list_file" | while read rom_name; do
       rom_file="$roms_all_dir/$rom_name.zip"
+      rom_emulator_key=$(clean_emulator_config_key "arcade_${rom_name}")
+
+      # Check if we should prioritize this ROM from this source
+      if [ "$(crudini --get "$emulators_config" "" "$rom_emulator_key")" != "\"$source_emulator\"" ]; then
+        if [ "$(jq -r ".roms.sources.$source_name.prioritize | index(\"$rom_name.zip\")" "$SETTINGS_FILE")" != "null" ]; then
+          rm "$rom_file"
+        fi
+      fi
 
       if [ ! -f "$rom_file" ]; then
         # Install ROM
@@ -123,12 +132,12 @@ download() {
         done
 
         # Install sample (if applicable)
-        if [ $(grep "$rom_name.zip" "$DATA_DIR/$source_emulator/samples.csv") ]; then
+        if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_emulator/samples.csv")" ]; then
           wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
         fi
 
         # Write emulator configuration
-        crudini --set "/opt/retropie/configs/all/emulators.cfg" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "\"$source_emulator\""
+        crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
       else
         echo "Already downloaded: $rom_file"
       fi

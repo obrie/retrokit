@@ -3,7 +3,9 @@
   "roms": {
     "sources": {
       "arcade_fbneo_http": {},
-      "arcade_mame2003plus_http": {}
+      "arcade_mame2003plus_http": {
+        "prioritize": []
+      }
     },
     "root": [
       "area51.zip",
