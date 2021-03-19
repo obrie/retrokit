@@ -97,6 +97,8 @@ download() {
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
 
+  declare -A installed_roms
+
   # Current assumes HTTP downloads
   jq -r '.roms.sources | keys[]' "$SETTINGS_FILE" | while read source_name; do
     # Config
@@ -120,6 +122,7 @@ download() {
       if [ "$(crudini --get "$emulators_config" "" "$rom_emulator_key")" != "\"$source_emulator\"" ]; then
         if [ "$(jq -r ".roms.sources.$source_name.prioritize | index(\"$rom_name.zip\")" "$SETTINGS_FILE")" != "null" ]; then
           rm "$rom_file"
+          unset installed_roms["$rom_name"]
         fi
       fi
 
@@ -141,8 +144,11 @@ download() {
         echo "Already downloaded: $rom_file"
       fi
 
-      # Write emulator configuration
-      crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
+      if [ ! ${installed_roms["$rom_name"]+_} ]; then
+        # Write emulator configuration
+        crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$source_emulator\""
+        installed_roms["$rom_name"]="true"
+      fi
     done
   done
 
