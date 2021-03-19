@@ -29,15 +29,24 @@ setup() {
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
 }
 
+# Filters a source's file list down to something more manageable
+# 
+# TODO: Support both allowlists and blocklists
+# 
+# Identify ROMs allowed:
+#   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep -A 1 "name=\"{}\"" "$DATA_DIR/$source_name/roms.dat" | grep description
+#   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" | grep -oE "=.*" | sort | uniq -c
 filter_source() {
+  # Arguments
   source_name="$1"
 
+  # Configurations
   names_all_file="$TMP_DIR/arcade/$source_name.all.csv"
   names_blocklist_file="$TMP_DIR/arcade/$source_name.blocklist.csv"
   names_allowlist_file="$TMP_DIR/arcade/$source_name.allowlist.csv"
   names_filtered_file="$TMP_DIR/arcade/$source_name.filtered.csv"
-  names_file="$TMP_DIR/arcade/$source_name.csv"
 
+  # Create full name set
   xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$source_name/roms.dat" | sort > "$names_all_file"
 
   # Build blocklist
@@ -60,19 +69,7 @@ filter_source() {
 
   # Filter from blocklist
   sort -o "$names_blocklist_file" "$names_blocklist_file"
-  comm -23 "$names_all_file" "$names_blocklist_file" > "$names_file"
-
-  # # Build allowlist
-  # # - Languages
-  # truncate -s0 "$names_allowlist_file"
-  # jq -r '.roms.allowlists.languages[]' "$SETTINGS_FILE" | xargs -d'\n' -I{} crudini --get "$DATA_DIR/languages/languages.ini" "{}" >> "$names_allowlist_file"
-  # sort -o "$names_allowlist_file" "$names_allowlist_file"
-
-  # # Filter from allowlist
-  # comm -12 "$names_filtered_file" "$names_allowlist_file" > "$names_file"
-
-  # cat "$names_file" | xargs -d '\n' -I{} grep -A 1 "name=\"{}\"" "$DATA_DIR/$source_name/roms.dat" | grep description
-  # cat "$names_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" # | grep -oE "=.*" | sort | uniq -c | sort
+  comm -23 "$names_all_file" "$names_blocklist_file"
 }
 
 download() {
@@ -88,6 +85,8 @@ download() {
     echo "$roms_all_dir is not empty: skipping download"
   fi
 
+  # Handle FBNeo
+  unzip 
   # Move samples / cheaps for FBNeo
   cp samples/* /home/pi/RetroPie/BIOS/fbneo/samples/
   cp cheats/* /home/pi/RetroPie/fbneo/cheats/
@@ -108,29 +107,8 @@ download() {
   # Filter symlinks
   mkdir -p "$TMP_DIR/arcade/"
 
-  # # FBNeo filters
-  # filter_source "fbneo"
-  # filter_source "mame2003plus"
-  # names_all_file="$TMP_DIR/arcade/names.all.csv"
-  # names_ignored_file="$TMP_DIR/arcade/names.ignored.csv"
-  # names_filtered_file="$TMP_DIR/arcade/names.filtered.csv"
-
-  # xmlstarlet sel -T -t -v "/datafile/game/@name" "$DATA_DIR/fbneo/roms.dat" > "$names_all_file"
-
-  # categories=$(jq -r '.roms.blocklists.categories[]' "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  # grep -oP "^.+(?==.*($categories))" "$DATA_DIR/catver/catver.ini" > "$names_ignored_file"
-
-  # keyword_conditions=$(jq -r '.roms.blocklists.keywords[]' "$SETTINGS_FILE" | sed -e 's/.*/contains(description\/text(), "\0")/g' | sed ':a; N; $!ba; s/\n/ or /g')
-  # sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/fbneo/roms.dat" | xmlstarlet sel -T -t -v """/datafile/game[
-  #   @cloneof or
-  #   not(driver/@status = \"good\") or
-  #   $keyword_conditions
-  # ]/@name""" >> "$names_ignored_file"
-
-  # grep -Fxv -f "$names_ignored_file" "$names_all_file" > "$names_filtered_file"
-
-  cat "$names_filtered_file" | xargs -I{} grep "name=\"{}\"" ../../data/fbneo/roms.dat
-  cat "$names_filtered_file" | xargs -I{} grep -oP "^({})=\K.*/.*" data/catver/catver.ini | sort | uniq -c
+  filter_source "fbneo" > "$TMP_DIR/arcade/$source_name.csv"
+  filter_source "mame2003plus" > "$TMP_DIR/arcade/$source_name.csv"
 
   organize_platform "$PLATFORM"
 }
