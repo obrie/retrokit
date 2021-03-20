@@ -9,6 +9,18 @@
         ]
       }
     },
+    "allowlists": {
+      "keywords": [
+        "USA",
+        "Europe"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "Strip Poker",
+        "BIOS"
+      ]
+    },
     "root": [
       "180 (Europe) (Budget).zip",
       "Arkanoid (Europe).zip",
@@ -27,18 +39,6 @@
       "Summer Games II (Europe).zip",
       "Winter Games (Europe).zip",
       "World Games (Europe).zip"
-    ],
-    "allowlists": {
-      "keywords": [
-        "USA",
-        "Europe"
-      ]
-    },
-    "blocklists": {
-      "keywords": [
-        "Strip Poker",
-        "BIOS"
-      ]
-    }
+    ]
   }
 }

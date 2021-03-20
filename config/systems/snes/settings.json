@@ -8,6 +8,29 @@
         ]
       }
     },
+    "allowlists": {
+      "keywords": [
+        "(USA",
+        "(Japan, USA)",
+        "(World)"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Aftermarket",
+        "(Alt",
+        "(Beta",
+        "(Proto",
+        "(Rev",
+        "(Sample",
+        "(Test",
+        "(Virtual Console",
+        "Anniversary",
+        "Cartridge",
+        "Collector",
+        "GameCube"
+      ]
+    },
     "root": [
       "Aladdin (Europe).zip",
       "Arkanoid (Europe).zip",
@@ -61,29 +84,6 @@
       "Ultimate Mortal Kombat 3 (USA).zip",
       "Worms (Europe).zip",
       "X-Men - Mutant Apocalypse (USA).zip"
-    ],
-    "allowlists": {
-      "keywords": [
-        "(USA",
-        "(Japan, USA)",
-        "(World)"
-      ]
-    },
-    "blocklists": {
-      "keywords": [
-        "(Aftermarket",
-        "(Alt",
-        "(Beta",
-        "(Proto",
-        "(Rev",
-        "(Sample",
-        "(Test",
-        "(Virtual Console",
-        "Anniversary",
-        "Cartridge",
-        "Collector",
-        "GameCube"
-      ]
-    }
+    ]
   }
 }

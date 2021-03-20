@@ -7,43 +7,6 @@
         "overrides": []
       }
     },
-    "root": [
-      "area51.zip",
-      "area51mx.zip",
-      "arkanoid.zip",
-      "avsp.zip",
-      "blitz.zip",
-      "bublbobl.zip",
-      "contra.zip",
-      "crusnusa.zip",
-      "dkong.zip",
-      "duckhunt.zip",
-      "mario.zip",
-      "mk.zip",
-      "mk2.zip",
-      "mk3.zip",
-      "mspacman.zip",
-      "nbajam.zip",
-      "puckman.zip",
-      "paperboy.zip",
-      "pc_miket.zip",
-      "punchout.zip",
-      "rampage.zip",
-      "sf1.zip",
-      "sf2.zip",
-      "sf2ce.zip",
-      "simpsons.zip",
-      "suprmrio.zip",
-      "tekken.zip",
-      "tmnt.zip",
-      "tmnt2.zip",
-      "topspeed.zip",
-      "tron.zip",
-      "wgp.zip",
-      "xmcota.zip",
-      "xmen.zip",
-      "xmvsf.zip"
-    ],
     "allowlists": {
       "languages": [
         "English"
@@ -99,6 +62,43 @@
         "unemulated",
         "pcb"
       ]
-    }
+    },
+    "root": [
+      "area51.zip",
+      "area51mx.zip",
+      "arkanoid.zip",
+      "avsp.zip",
+      "blitz.zip",
+      "bublbobl.zip",
+      "contra.zip",
+      "crusnusa.zip",
+      "dkong.zip",
+      "duckhunt.zip",
+      "mario.zip",
+      "mk.zip",
+      "mk2.zip",
+      "mk3.zip",
+      "mspacman.zip",
+      "nbajam.zip",
+      "puckman.zip",
+      "paperboy.zip",
+      "pc_miket.zip",
+      "punchout.zip",
+      "rampage.zip",
+      "sf1.zip",
+      "sf2.zip",
+      "sf2ce.zip",
+      "simpsons.zip",
+      "suprmrio.zip",
+      "tekken.zip",
+      "tmnt.zip",
+      "tmnt2.zip",
+      "topspeed.zip",
+      "tron.zip",
+      "wgp.zip",
+      "xmcota.zip",
+      "xmen.zip",
+      "xmvsf.zip"
+    ]
   }
 }

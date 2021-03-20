@@ -8,6 +8,30 @@
         ]
       }
     },
+    "allowlists": {
+      "keywords": [
+        "(USA",
+        "(Japan, USA)",
+        "(World)"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Aftermarket",
+        "(Alt",
+        "(Beta",
+        "(Proto",
+        "(Rev",
+        "(Sample",
+        "(Test",
+        "(Virtual Console",
+        "Anniversary",
+        "Cartridge",
+        "Collector",
+        "GameCube",
+        "Game Genie"
+      ]
+    },
     "root": [
       "Arkanoid (USA).zip",
       "Bubble Bobble (USA).zip",
@@ -45,30 +69,6 @@
       "Track & Field (USA).zip",
       "Track & Field II (USA).zip",
       "Winter Games (USA).zip"
-    ],
-    "allowlists": {
-      "keywords": [
-        "(USA",
-        "(Japan, USA)",
-        "(World)"
-      ]
-    },
-    "blocklists": {
-      "keywords": [
-        "(Aftermarket",
-        "(Alt",
-        "(Beta",
-        "(Proto",
-        "(Rev",
-        "(Sample",
-        "(Test",
-        "(Virtual Console",
-        "Anniversary",
-        "Cartridge",
-        "Collector",
-        "GameCube",
-        "Game Genie"
-      ]
-    }
+    ]
   }
 }
