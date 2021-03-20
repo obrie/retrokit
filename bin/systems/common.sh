@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Common functions used across platform installs
+# Common functions used across system installs
 ##############
 
 export DIR=$(dirname "$0")
@@ -10,37 +10,37 @@ export APP_SETTINGS_FILE="$APP_DIR/config/settings.json"
 export DATA_DIR="$APP_DIR/data"
 export TMP_DIR="$APP_DIR/tmp"
 
-scrape_platform() {
+scrape_system() {
   # Arguments
-  platform="$1"
+  system="$1"
 
   # Kill emulation station
   killall /opt/retropie/supplementary/emulationstation/emulationstation
 
   # Scrape
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$platform" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" -s screenscraper --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" -s screenscraper --flags "unattend,skipped,videos"
 
   # Generate game list
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$platform" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$platform" --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" --flags "unattend,skipped,videos"
 }
 
-setup_platform() {
+setup_system() {
   # Arguments
-  platform="$1"
+  system="$1"
 
   # Configuration
-  platform_config_dir="$APP_DIR/config/platforms/$platform"
-  platform_settings_file="$platform_config_dir/settings.json"
+  system_config_dir="$APP_DIR/config/systems/$system"
+  system_settings_file="$system_config_dir/settings.json"
 
-  if [ $(jq -r 'has("emulators")' "$platform_settings_file") = "true" ]; then
-    jq -r '.emulators[]' "$platform_settings_file" | while read emulator; do
+  if [ $(jq -r 'has("emulators")' "$system_settings_file") = "true" ]; then
+    jq -r '.emulators[]' "$system_settings_file" | while read emulator; do
       # Retroarch
       retropie_configs_dir="/opt/retropie/configs/all"
       emulator_config_dir="$retropie_configs_dir/retroarch/config/$emulator"
       mkdir -p "$emulator_config_dir"
 
       # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-      find "$platform_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
+      find "$system_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
         opt_name=$(basename "$override_file")
         opt_file="$emulator_config_dir/$opt_name"
         touch "$opt_file"
@@ -70,14 +70,14 @@ download_file() {
 # TODO: Smarter file lists
 download_source() {
   # Arguments
-  platform="$1"
+  system="$1"
   source_name="$2"
 
   # Configuration
-  platform_config_dir="$APP_DIR/config/platforms/$platform"
-  platform_settings_file="$platform_config_dir/settings.json"
-  platform_tmp_dir="$TMP_DIR/$platform"
-  mkdir -p "$platform_tmp_dir"
+  system_config_dir="$APP_DIR/config/systems/$system"
+  system_settings_file="$system_config_dir/settings.json"
+  system_tmp_dir="$TMP_DIR/$system"
+  mkdir -p "$system_tmp_dir"
 
   # Source
   source_type=$(jq -r ".sources.$source_name.type" "$APP_SETTINGS_FILE")
@@ -86,12 +86,12 @@ download_source() {
   source_unzip=$(jq -r ".sources.$source_name.unzip" "$APP_SETTINGS_FILE")
 
   # Source Filter
-  source_filter="$platform_tmp_dir/files.filter"
-  if [ "$(jq -r ".roms.sources.$source_name | has(\"files\")" "$platform_settings_file")" = "true" ]; then
-    jq -r "if .roms.sources.$source_name | has(\"files\") then .roms.sources.$source_name.files[] else [] end" "$platform_settings_file" > "$source_filter"
-    roms_all_dir="/home/pi/RetroPie/roms/$platform/-ALL-"
+  source_filter="$system_tmp_dir/files.filter"
+  if [ "$(jq -r ".roms.sources.$source_name | has(\"files\")" "$system_settings_file")" = "true" ]; then
+    jq -r "if .roms.sources.$source_name | has(\"files\") then .roms.sources.$source_name.files[] else [] end" "$system_settings_file" > "$source_filter"
+    roms_all_dir="/home/pi/RetroPie/roms/$system/-ALL-"
   else
-    roms_all_dir="/home/pi/RetroPie/roms/$platform"
+    roms_all_dir="/home/pi/RetroPie/roms/$system"
   fi
 
   # Target
@@ -108,7 +108,7 @@ download_source() {
     download_file "$source_url" "$torrent_file"
     "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
-    rom_source_dir="$platform_tmp_dir/downloads"
+    rom_source_dir="$system_tmp_dir/downloads"
     mkdir -p "$rom_source_dir"
 
     # Download URLs
@@ -130,29 +130,29 @@ download_source() {
   fi
 }
 
-download_platform() {
+download_system() {
   # Arguments
-  platform="$1"
+  system="$1"
 
   # Configuration
-  platform_config_dir="$APP_DIR/config/platforms/$platform"
-  platform_settings_file="$platform_config_dir/settings.json"
+  system_config_dir="$APP_DIR/config/systems/$system"
+  system_settings_file="$system_config_dir/settings.json"
 
-  jq -r '.roms.sources | keys[]' "$platform_settings_file" | while read source_name; do
-    download_source "$platform" "$source_name"
+  jq -r '.roms.sources | keys[]' "$system_settings_file" | while read source_name; do
+    download_source "$system" "$source_name"
   done
 }
 
-organize_platform() {
+organize_system() {
   # Arguments
-  platform="$1"
+  system="$1"
 
   # Configuration
-  platform_config_dir="$APP_DIR/config/platforms/$platform"
-  platform_settings_file="$platform_config_dir/settings.json"
+  system_config_dir="$APP_DIR/config/systems/$system"
+  system_settings_file="$system_config_dir/settings.json"
 
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$platform"
+  roms_dir="/home/pi/RetroPie/roms/$system"
   roms_all_dir="$roms_dir/-ALL-"
   roms_blocked_dir="$roms_dir/.blocked"
   roms_duplicates_dir="$roms_dir/.duplicates"
@@ -163,15 +163,15 @@ organize_platform() {
 
   # Allowlist
   # - Keywords
-  if [ $(jq -r '.roms.allowlists | has("keywords")' "$platform_settings_file") = "true" ]; then
-    keywords=$(jq -r '.roms.allowlists.keywords[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  if [ $(jq -r '.roms.allowlists | has("keywords")' "$system_settings_file") = "true" ]; then
+    keywords=$(jq -r '.roms.allowlists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended ! -regex ".*($keywords).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
   # Blocklist
   # - Keywords
-  if [ $(jq -r '.roms.blocklists | has("keywords")' "$platform_settings_file") = "true" ]; then
-    blocklist=$(jq -r '.roms.blocklists.keywords[]' "$platform_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  if [ $(jq -r '.roms.blocklists | has("keywords")' "$system_settings_file") = "true" ]; then
+    blocklist=$(jq -r '.roms.blocklists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
@@ -184,7 +184,7 @@ organize_platform() {
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Add to root
-  jq -r ".roms.root[] // []" "$platform_settings_file" | while read rom; do
+  jq -r ".roms.root[] // []" "$system_settings_file" | while read rom; do
     # Undo any accidental blocked rom
     if [ -f "$roms_blocked_dir/$rom" ]; then
       mv "$roms_blocked_dir/$rom" "$roms_all_dir/"

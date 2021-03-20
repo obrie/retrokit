@@ -242,10 +242,10 @@ crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
 # Systems
 ##############
 
-for platform in $DIR/platforms/*; do
-  $platform setup
-  $platform download
-  $platform scrape
+for system in $DIR/systems/*; do
+  $system setup
+  $system download
+  $system scrape
 done
 
 ##############
@@ -263,8 +263,8 @@ sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/"
 
 # Install launch images
 launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$active_theme_name\") | .launch_images_base_url")
-for platform in $DIR/platforms/*; do
-  name=$(basename "$platform")
+for system in $DIR/system/*; do
+  name=$(basename "$system")
   wget -nc "$(printf "$launch_images_base_url" "$name")" -P "/opt/retropie/configs/$name/" || true
 done
 

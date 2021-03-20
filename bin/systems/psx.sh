@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Platform: Playstation
+# System: Playstation
 ##############
 
 set -ex
@@ -9,8 +9,8 @@ set -ex
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-PLATFORM="psx"
-CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
+SYSTEM="psx"
+CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
 usage() {
@@ -26,19 +26,19 @@ setup() {
 
 download() {
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
+  roms_dir="/home/pi/RetroPie/roms/$SYSTEM"
   roms_all_dir="$roms_dir/-ALL-"
 
   if [ ! "$(ls -A $roms_all_dir)" ]; then
     # Download according to settings file
-    download_platform "$PLATFORM"
+    download_system "$SYSTEM"
   fi
 
-  organize_platform "$PLATFORM"
+  organize_system "$SYSTEM"
 }
 
 scrape() {
-  scrape_platform "$PLATFORM"
+  scrape_system "$SYSTEM"
 }
 
 if [[ $# -lt 1 ]]; then

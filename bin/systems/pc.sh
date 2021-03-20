@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Platform: PC
+# System: PC
 # 
 # Configs:
 # * ~/.dosbox/dosbox-SVN.conf
@@ -10,8 +10,8 @@
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-PLATFORM="nes"
-CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
+SYSTEM="nes"
+CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
 setup() {
@@ -27,9 +27,9 @@ setup() {
 
 download() {
   # Download according to settings file
-  download_platform "$PLATFORM"
+  download_system "$SYSTEM"
 
-  # Additional platform-specific logic
+  # Additional system-specific logic
   # https://github.com/Voljega/ExoDOSConverter
 }
 
@@ -154,7 +154,7 @@ download() {
 
 
 scrape() {
-  scrape_platform "$PLATFORM"
+  scrape_system "$SYSTEM"
 }
 
 if [[ $# -lt 1 ]]; then

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Platform: Arcade
+# System: Arcade
 ##############
 
 set -ex
@@ -9,13 +9,13 @@ set -ex
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-PLATFORM="arcade"
+SYSTEM="arcade"
 DATA_DIR="$APP_DIR/data/arcade"
-CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
+CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
-PLATFORM_TMP_DIR="$TMP_DIR/arcade"
+SYSTEM_TMP_DIR="$TMP_DIR/arcade"
 
-mkdir -p "$PLATFORM_TMP_DIR"
+mkdir -p "$SYSTEM_TMP_DIR"
 
 usage() {
   echo "usage: $0"
@@ -98,7 +98,7 @@ build_rom_list() {
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
+  roms_dir="/home/pi/RetroPie/roms/$SYSTEM"
   roms_all_dir="$roms_dir/-ALL-"
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
@@ -181,7 +181,7 @@ download() {
 }
 
 scrape() {
-  scrape_platform "$PLATFORM"
+  scrape_system "$SYSTEM"
 }
 
 if [[ $# -lt 1 ]]; then

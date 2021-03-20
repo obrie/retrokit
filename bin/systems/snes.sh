@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##############
-# Platform: SNES
+# System: SNES
 ##############
 
 set -ex
@@ -9,8 +9,8 @@ set -ex
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-PLATFORM="snes"
-CONFIG_DIR="$APP_DIR/config/platforms/$PLATFORM"
+SYSTEM="snes"
+CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
 usage() {
@@ -30,22 +30,22 @@ setup() {
 
 download() {
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$PLATFORM"
+  roms_dir="/home/pi/RetroPie/roms/$SYSTEM"
   roms_all_dir="$roms_dir/-ALL-"
   mkdir -p "$roms_all_dir"
 
   if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
     # Download according to settings file
-    download_platform "$PLATFORM"
+    download_system "$SYSTEM"
   else
     echo "$roms_all_dir is not empty: skipping download"
   fi
 
-  organize_platform "$PLATFORM"
+  organize_system "$SYSTEM"
 }
 
 scrape() {
-  scrape_platform "$PLATFORM"
+  scrape_system "$SYSTEM"
 }
 
 if [[ $# -lt 1 ]]; then

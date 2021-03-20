@@ -38,7 +38,7 @@ Reference instructions:
 Copy (unzipped):
 
 ```
-scp -r platforms/dos/roms/* pi@***REMOVED***:/home/pi/RetroPie/roms/pc/.games/
+scp -r systems/dos/roms/* pi@***REMOVED***:/home/pi/RetroPie/roms/pc/.games/
 ```
 
 Create conf file per game, e.g.:
