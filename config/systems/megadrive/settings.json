@@ -1,0 +1,37 @@
+{
+  "roms": {
+    "sources": {
+      "nointro-torrent": {
+        "files": [
+          "Sega - Mega Drive - Genesis (20210316-003553).zip"
+        ]
+      }
+    },
+    "allowlists": {
+      "keywords": [
+        "USA"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Alt",
+        "(Beta",
+        "(Genesis Mini",
+        "(Mega Drive Mini",
+        "(Program",
+        "(Rental Version",
+        "(Rev",
+        "(Sega Channel",
+        "(Test Drive Version",
+        "(Unl",
+        "(Virtual Console",
+        "(Visitor",
+        "BIOS",
+      ]
+    },
+    "root": [
+      "Sonic The Hedgehog (Japan, USA).zip",
+      "Sonic The Hedgehog 2 (World).zip"
+    ]
+  }
+}
