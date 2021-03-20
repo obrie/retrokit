@@ -178,10 +178,9 @@ download() {
       ln -fs "$roms_all_dir/$rom_name" "$roms_dir/$rom_name"
     fi
   done
-}
 
-scrape() {
-  scrape_system "$SYSTEM"
+  scrape_system "$SYSTEM" "screenscraper"
+  scrape_system "$SYSTEM" "arcadedb"
 }
 
 if [[ $# -lt 1 ]]; then

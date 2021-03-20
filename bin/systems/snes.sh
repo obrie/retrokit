@@ -42,10 +42,8 @@ download() {
   fi
 
   organize_system "$SYSTEM"
-}
-
-scrape() {
-  scrape_system "$SYSTEM"
+  scrape_system "$SYSTEM" "screenscraper"
+  scrape_system "$SYSTEM" "thegamesdb"
 }
 
 if [[ $# -lt 1 ]]; then

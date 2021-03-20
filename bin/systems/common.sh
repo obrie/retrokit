@@ -13,15 +13,16 @@ export TMP_DIR="$APP_DIR/tmp"
 scrape_system() {
   # Arguments
   system="$1"
+  source="$2"
 
   # Kill emulation station
   killall /opt/retropie/supplementary/emulationstation/emulationstation
 
   # Scrape
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" -s screenscraper --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" -s "$source" --verbosity 3 --flags "unattend,skipped"
 
   # Generate game list
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" --flags "unattend,skipped,videos"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" --verbosity 3 --flags "unattend,skipped"
 }
 
 setup_system() {
