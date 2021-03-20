@@ -20,12 +20,12 @@ usage() {
 
 setup() {
   # Emulators
-  crudini --set /opt/retropie/configs/nes/emulators.cfg '' 'default' '"lr-snes9x"'
+  crudini --set "/opt/retropie/configs/$SYSTEM/emulators.cfg" '' 'default' '"lr-snes9x"'
 
   # Input Lag
-  crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_enabled' '"true"'
-  crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_frames' '"1"'
-  crudini --set /opt/retropie/configs/nes/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
+  crudini --set "/opt/retropie/configs/$SYSTEM/retroarch.cfg" '' 'run_ahead_enabled' '"true"'
+  crudini --set "/opt/retropie/configs/$SYSTEM/retroarch.cfg" '' 'run_ahead_frames' '"1"'
+  crudini --set "/opt/retropie/configs/$SYSTEM/retroarch.cfg" '' 'run_ahead_secondary_instance' '"true"'
 }
 
 download() {
@@ -43,7 +43,6 @@ download() {
 
   organize_system "$SYSTEM"
   scrape_system "$SYSTEM" "screenscraper"
-  scrape_system "$SYSTEM" "thegamesdb"
 }
 
 if [[ $# -lt 1 ]]; then

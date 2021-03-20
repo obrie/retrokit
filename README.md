@@ -124,6 +124,11 @@ References:
 
 * Generator: https://datomatic.no-intro.org/index.php?page=download&op=dat&s=64
 * Changes: https://datomatic.no-intro.org/?page=news
+* Genres: https://github.com/libretro/libretro-database/tree/master/metadat/genre
+* Redump: https://github.com/libretro/libretro-database/tree/master/metadat/redump
+* No-Intro: https://github.com/libretro/libretro-database/tree/master/metadat/no-intro
+* MAME: https://github.com/libretro/mame2003-libretro/tree/master/metadata
+* FBNeo: https://github.com/libretro/FBNeo/tree/master/dats
 
 ## ROMs
 
