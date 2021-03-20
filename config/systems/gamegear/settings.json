@@ -1,0 +1,29 @@
+{
+  "roms": {
+    "sources": {
+      "nointro-torrent": {
+        "files": [
+          "Sega - Game Gear (20201227-043658).zip"
+        ]
+      }
+    },
+    "allowlists": {
+      "keywords": [
+        "USA"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Alt",
+        "(Beta",
+        "(Program",
+        "(Rev",
+        "BIOS"
+      ]
+    },
+    "root": [
+      "Sonic The Hedgehog (Japan, USA).zip",
+      "Sonic The Hedgehog 2 (World).zip"
+    ]
+  }
+}
