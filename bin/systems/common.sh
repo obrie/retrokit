@@ -81,15 +81,15 @@ download_source() {
   mkdir -p "$system_tmp_dir"
 
   # Source
-  source_type=$(jq -r ".sources.$source_name.type" "$APP_SETTINGS_FILE")
-  source_url=$(jq -r ".sources.$source_name.url" "$APP_SETTINGS_FILE")
-  source_root_dir=$(jq -r ".sources.$source_name.root_dir" "$APP_SETTINGS_FILE")
-  source_unzip=$(jq -r ".sources.$source_name.unzip" "$APP_SETTINGS_FILE")
+  source_type=$(jq -r ".sources.\"$source_name\".type" "$APP_SETTINGS_FILE")
+  source_url=$(jq -r ".sources.\"$source_name\".url" "$APP_SETTINGS_FILE")
+  source_root_dir=$(jq -r ".sources.\"$source_name\".root_dir" "$APP_SETTINGS_FILE")
+  source_unzip=$(jq -r ".sources.\"$source_name\".unzip" "$APP_SETTINGS_FILE")
 
   # Source Filter
   source_filter="$system_tmp_dir/files.filter"
-  if [ "$(jq -r ".roms.sources.$source_name | has(\"files\")" "$system_settings_file")" = "true" ]; then
-    jq -r "if .roms.sources.$source_name | has(\"files\") then .roms.sources.$source_name.files[] else [] end" "$system_settings_file" > "$source_filter"
+  if [ "$(jq -r ".roms.sources.\"$source_name\" | has(\"files\")" "$system_settings_file")" = "true" ]; then
+    jq -r "if .roms.sources.\"$source_name\" | has(\"files\") then .roms.sources.\"$source_name\".files[] else [] end" "$system_settings_file" > "$source_filter"
     roms_all_dir="/home/pi/RetroPie/roms/$system/-ALL-"
   else
     roms_all_dir="/home/pi/RetroPie/roms/$system"
