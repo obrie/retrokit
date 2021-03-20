@@ -1,0 +1,40 @@
+{
+  "roms": {
+    "sources": {
+      "nointro-torrent": {
+        "files": [
+          "Atari - 2600 (20200514-091155).zip"
+        ]
+      }
+    },
+    "allowlists": {
+      "keywords": [
+        "USA"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "(Beta",
+        "(Pirate",
+        "(Proto"
+      ]
+    },
+    "root": [
+      "Asteroids (Japan, USA).zip",
+      "Breakout ~ Breakaway IV (Japan, USA).zip",
+      "Centipede (Japan, USA).zip",
+      "Donkey Kong (USA).zip",
+      "Frogger (USA).zip",
+      "Jungle Hunt (USA).zip",
+      "Mario Bros. (USA).zip",
+      "Missile Command (USA).zip",
+      "Ms. Pac-Man (USA).zip",
+      "Pac-Man (USA).zip",
+      "Pitfall II - Lost Caverns (USA).zip",
+      "Pitfall! - Pitfall Harry's Jungle Adventure (USA).zip",
+      "Pole Position (USA).zip",
+      "Space Invaders (USA).zip",
+      "Super Breakout (USA).zip"
+    ]
+  }
+}
