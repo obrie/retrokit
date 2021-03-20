@@ -1,4 +1,4 @@
-# Atari 2600
+# Sega Game Gear
 
 ## Emulators
 
