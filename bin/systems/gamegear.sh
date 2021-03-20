@@ -9,7 +9,7 @@ set -ex
 DIR=$( dirname "$0" )
 . $DIR/common.sh
 
-SYSTEM="atari2600"
+SYSTEM="gamegear"
 CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
