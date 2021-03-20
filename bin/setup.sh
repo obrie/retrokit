@@ -148,11 +148,12 @@ sudo systemctl start ssh
 # Font Size
 .env -f /etc/default/console-setup set FONTSIZE='"16x32"'
 
-# Theme
-theme_name=$(jq -r '.theme.name' "$SETTINGS_FILE")
-theme_repo=$(jq -r '.theme.repo' "$SETTINGS_FILE")
-sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme_name $theme_repo
-sed -r -i 's/(<string name="ThemeSet" value=")([^"]*)/\1$theme_name/' es_settings.cfg
+# Themes
+$(jq -r '.themes.library' "$SETTINGS_FILE") | while read theme; do
+  sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme
+done
+active_theme_name=$(jq -r '.themes.active' "$SETTINGS_FILE")
+sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" /home/pi/.emulationstation/es_settings.cfg
 
 # Overscan
 crudini --set /boot/config.txt '' 'disable_overscan' '1'
