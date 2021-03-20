@@ -148,13 +148,6 @@ sudo systemctl start ssh
 # Font Size
 .env -f /etc/default/console-setup set FONTSIZE='"16x32"'
 
-# Themes
-$(jq -r '.themes.library' "$SETTINGS_FILE") | while read theme; do
-  sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme
-done
-active_theme_name=$(jq -r '.themes.active' "$SETTINGS_FILE")
-sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" /home/pi/.emulationstation/es_settings.cfg
-
 # Overscan
 crudini --set /boot/config.txt '' 'disable_overscan' '1'
 
@@ -246,13 +239,33 @@ chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
 crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
 
 ##############
-# Emulators
+# Systems
 ##############
 
 for platform in $DIR/platforms/*; do
   $platform setup
   $platform download
   $platform scrape
+done
+
+##############
+# Themes
+##############
+
+# Install themes
+$(jq -r '.themes.library[] | (.name + " " + .repo)' "$SETTINGS_FILE") | while read theme; do
+  sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme
+done
+
+# Set active theme
+active_theme_name=$(jq -r '.themes.active' "$SETTINGS_FILE")
+sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" /home/pi/.emulationstation/es_settings.cfg
+
+# Install launch images
+launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$active_theme_name\") | .launch_images_base_url")
+for platform in $DIR/platforms/*; do
+  name=$(basename "$platform")
+  wget -nc "$(printf "$launch_images_base_url" "$name")" -P "/opt/retropie/configs/$name/" || true
 done
 
 ##############
