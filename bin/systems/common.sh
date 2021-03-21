@@ -19,10 +19,10 @@ scrape_system() {
   killall /opt/retropie/supplementary/emulationstation/emulationstation
 
   # Scrape
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" -s "$source" --verbosity 3 --flags "unattend,skipped"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source"
 
   # Generate game list
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -g "/home/pi/.emulationstation/gamelists/$system" -o "/home/pi/.emulationstation/downloaded_media/$system" --verbosity 3 --flags "unattend,skipped"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
 }
 
 setup_system() {

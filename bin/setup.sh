@@ -193,9 +193,14 @@ duration=$(jq -r '.splashscreen.duration' "$SETTINGS_FILE")
 regions=$(jq -r '.skyscraper.regions' "$SETTINGS_FILE")
 username=$(jq -r '.skyscraper.username' "$SETTINGS_FILE")
 password=$(jq -r '.skyscraper.password' "$SETTINGS_FILE")
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'regionPrios' "\"$regions\""
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets' '"false"'
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'gameListFolder' '"/home/pi/.emulationstation/gamelists"'
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'mediaFolder' '"/home/pi/.emulationstation/downloaded_media"'
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'regionPrios' "\"$regions\""
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'skipped' '"true"'
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'symlink' '"true"'
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'unattend' '"true"'
+crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'verbosity' '"3"'
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'videos' '"true"'
 crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'userCreds' "\"$username:$password\""
 crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"'
