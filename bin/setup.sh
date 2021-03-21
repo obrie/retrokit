@@ -286,8 +286,14 @@ sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/"
 launch_theme=$(jq -r '.themes.launch_theme' "$SETTINGS_FILE")
 launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
 for system in $DIR/systems/*; do
-  name=$(basename -s .sh "$system")
-  wget -nc "$(printf "$launch_images_base_url" "$name")" -P "/opt/retropie/configs/$name/" || true
+  system_name=$(basename -s .sh "$system")
+  if [ "$system_name" = "megadrive" ]; then
+    system_image_name="genesis"
+  else
+    system_image_name="$system_name"
+  fi
+  
+  wget -nc "$(printf "$launch_images_base_url" "$system_image_name")" -P "/opt/retropie/configs/$system_name/" || true
 done
 
 ##############
