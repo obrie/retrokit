@@ -43,6 +43,7 @@ download() {
 
   organize_system "$SYSTEM"
   scrape_system "$SYSTEM" "screenscraper"
+  theme_system "SNES"
 }
 
 if [[ $# -lt 1 ]]; then

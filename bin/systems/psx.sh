@@ -37,6 +37,7 @@ download() {
   organize_system "$SYSTEM"
   scrape_system "$SYSTEM" "screenscraper"
   scrape_system "$SYSTEM" "thegamesdb"
+  theme_system "PSX"
 }
 
 if [[ $# -lt 1 ]]; then

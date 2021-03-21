@@ -199,3 +199,11 @@ organize_system() {
     ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
   done
 }
+
+theme_system() {
+  theme="$1"
+  bezelproject_bin=/home/pi/RetroPie/retropiemenu/bezelproject.sh
+  
+  "$bezelproject_bin" install_bezel_packsa "$theme" "thebezelproject"
+  "$bezelproject_bin" install_bezel_pack "$theme" "thebezelproject"
+}

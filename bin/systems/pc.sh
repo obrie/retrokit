@@ -29,6 +29,8 @@ download() {
   # Download according to settings file
   download_system "$SYSTEM"
 
+  theme_system "PC"
+
   # Additional system-specific logic
   # https://github.com/Voljega/ExoDOSConverter
 }

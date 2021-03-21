@@ -50,6 +50,7 @@ download() {
 
   organize_system "$SYSTEM"
   scrape_system "$SYSTEM" "screenscraper"
+  theme_system "C64"
 }
 
 if [[ $# -lt 1 ]]; then

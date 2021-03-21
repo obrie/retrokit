@@ -22,6 +22,9 @@ setup() {
   # Emulators
   crudini --set "/opt/retropie/configs/$SYSTEM/emulators.cfg" '' 'default' '"lr-genesis-plus-gx"'
 
+  # Naming
+  xmlstarlet ed -L -u "systemList/system[name=\"$SYSTEM\"]/theme" -v "genesis" "/home/pi/.emulationstation/es_systems.cfg"
+
   setup_system "$SYSTEM"
 }
 
@@ -39,6 +42,7 @@ download() {
 
   organize_system "$SYSTEM"
   scrape_system "$SYSTEM" "screenscraper"
+  theme_system "MegaDrive"
 }
 
 if [[ $# -lt 1 ]]; then

@@ -233,12 +233,13 @@ sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
 # Overlays (Bezels)
 ##############
 
-wget -nc https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -O /home/pi/RetroPie/retropiemenu/bezelproject.sh
-chmod +x /home/pi/RetroPie/retropiemenu/bezelproject.sh
-/home/pi/RetroPie/retropiemenu/bezelproject.sh
+bezelproject_bin=/home/pi/RetroPie/retropiemenu/bezelproject.sh
+wget -nc https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -O "$bezelproject_bin"
+chmod +x "$bezelproject_bin"
 
-# 1. Install system pack
-# 2. Install theme pack
+# Patch to allow non-interactive mode
+sed -i -r -z 's/# Welcome.*\|\| exit/if [ -z "$1" ]; then\n\0\nfi/g' "$bezelproject_bin"
+sed -i -z 's/# Main\n\nmain_menu/# Main\n\n"${1:-main_menu}" "${@:2}"/g' "$bezelproject_bin"
 
 ##############
 # Loading Screen
@@ -252,7 +253,7 @@ crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
 
 # Build system order
 system_default_config=/etc/emulationstation/es_systems.cfg
-system_override_config=~/.emulationstation/es_systems.cfg
+system_override_config=/home/pi/.emulationstation/es_systems.cfg
 printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
 
 jq -r '.systems[]' "$SETTINGS_FILE" | while read system; do

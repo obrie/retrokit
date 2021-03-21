@@ -73,7 +73,6 @@ build_rom_list() {
   sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
     @runnable = \"no\" or
-    (@romof and not(@romof = \"playch10\")) or
     not(driver/@status = \"good\") or
     driver/@isbios = \"yes\" or
     $keyword_conditions
@@ -181,6 +180,7 @@ download() {
 
   scrape_system "$SYSTEM" "screenscraper"
   scrape_system "$SYSTEM" "arcadedb"
+  theme_system "MAME"
 }
 
 if [[ $# -lt 1 ]]; then
