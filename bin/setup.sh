@@ -250,10 +250,22 @@ crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
 # Systems
 ##############
 
+# Build system order
+system_default_config=/etc/emulationstation/es_systems.cfg
+system_override_config=~/.emulationstation/es_systems.cfg
+printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
+
+jq -r '.systems[]' "$SETTINGS_FILE" | while read system; do
+  xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
+  printf '\n' >> "$system_override_config"
+done
+system_conditions=$(jq -r '.systems[]' "$SETTINGS_FILE" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
+xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
+printf '</systemList>\n' >> "$system_override_config"
+
+# Set up systems
 for system in $DIR/systems/*; do
   $system setup
-  $system download
-  $system scrape
 done
 
 ##############

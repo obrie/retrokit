@@ -35,6 +35,18 @@
     "username": "aaron.pfeifer@gmail.com",
     "password": "sGI6Vn1XkUz8"
   },
+  "systems": [
+    "retropie",
+    "arcade",
+    "atari2600",
+    "c64",
+    "nes",
+    "snes",
+    "gamegear",
+    "megadrive",
+    "psx",
+    "pc"
+  ],
   "sources": {
     "nointro-torrent": {
       "type": "torrent",
