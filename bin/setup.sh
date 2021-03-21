@@ -283,9 +283,10 @@ active_theme_name=$(jq -r '.themes.active' "$SETTINGS_FILE")
 sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" /home/pi/.emulationstation/es_settings.cfg
 
 # Install launch images
-launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$active_theme_name\") | .launch_images_base_url")
-for system in $DIR/system/*; do
-  name=$(basename "$system")
+launch_theme=$(jq -r '.themes.launch_theme' "$SETTINGS_FILE")
+launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
+for system in $DIR/systems/*; do
+  name=$(basename -s .sh "$system")
   wget -nc "$(printf "$launch_images_base_url" "$name")" -P "/opt/retropie/configs/$name/" || true
 done
 

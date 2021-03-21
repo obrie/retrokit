@@ -21,7 +21,8 @@
         "launch_images_base_url": "https://raw.githubusercontent.com/lipebello/retrorama-launching-images/master/16x9-packs/FRAME/%s/launching.jpg"
       }
     ],
-    "active": "pixel-metadata"
+    "active": "pixel-metadata",
+    "launch_theme": "ComicBook"
   },
   "splashscreen": {
     "duration": 38,
