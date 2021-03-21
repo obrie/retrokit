@@ -179,6 +179,12 @@ sudo update-locale LANG=$language.UTF-8
 duration=$(jq -r '.splashscreen.duration' "$SETTINGS_FILE")
 .env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION="\"$duration\""
 
+# Media
+if [ $(jq -r '.splashscreen | has("url")' "$SETTINGS_FILE") = "true" ]; then
+  wget -nc "$(jq -r '.splashscreen.url' "$SETTINGS_FILE")" -O /home/pi/RetroPie/splashscreens/splash.mp4
+  echo "/home/pi/RetroPie/splashscreens/splash.mp4" > /etc/splashscreen.list
+fi
+
 ##############
 # Scraper
 # 
@@ -240,12 +246,6 @@ chmod +x "$bezelproject_bin"
 # Patch to allow non-interactive mode
 sed -i -r -z 's/# Welcome.*\|\| exit/if [ -z "$1" ]; then\n\0\nfi/g' "$bezelproject_bin"
 sed -i -z 's/# Main\n\nmain_menu/# Main\n\n"${1:-main_menu}" "${@:2}"/g' "$bezelproject_bin"
-
-##############
-# Loading Screen
-##############
-
-crudini --set /opt/retropie/configs/all/runcommand.cfg '' 'use_art' '"1"'
 
 ##############
 # Systems
