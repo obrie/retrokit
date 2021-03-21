@@ -73,7 +73,9 @@ build_rom_list() {
   sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
     @runnable = \"no\" or
-    not(driver/@status = \"good\") or
+    @romof
+    not(driver/@status = \"good\" or driver/@status = \"protection\") or
+    not(driver/@sound = \"good\") or
     driver/@isbios = \"yes\" or
     $keyword_conditions
   ]/@name""" >> "$names_blocklist_file"
