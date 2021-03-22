@@ -38,7 +38,6 @@
     "password": "sGI6Vn1XkUz8"
   },
   "systems": [
-    "retropie",
     "arcade",
     "atari2600",
     "c64",
@@ -47,7 +46,8 @@
     "gamegear",
     "megadrive",
     "psx",
-    "pc"
+    "pc",
+    "retropie"
   ],
   "sources": {
     "nointro-torrent": {
