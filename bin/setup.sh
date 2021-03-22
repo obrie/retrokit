@@ -69,12 +69,15 @@ sudo chmod +x /usr/local/bin/ia
 ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
 
 # TorrentZip
-git clone https://github.com/hydrogen18/trrntzip.git
-cd trrntzip
+mkdir /tmp/trrntzip
+git clone https://github.com/hydrogen18/trrntzip.git mkdir /tmp/trrntzip
+pushd /tmp/trrntzip
 ./autogen.sh
 ./configure
 make
 sudo make install
+popd
+rm -rf mkdir /tmp/trrntzip
 
 # Benchmarking
 sudo apt install sysbench
