@@ -1,11 +1,21 @@
 {
-  "emulators": ["VICE x64"],
+  "emulators": [
+    "lr-mame2003",
+    "lr-mame2003-plus",
+    "lr-mame2015",
+    "lr-mame2016",
+    "lr-mame",
+    "advmame"
+  ],
+  "mame_version": "0.222",
   "roms": {
     "sources": {
       "arcade-fbneo-http": {},
-      "arcade-mame2003plus-http": {
-        "overrides": []
-      }
+      "arcade-mame2003-http": {},
+      "arcade-mame2003plus-http": {},
+      "arcade-mame2015-http": {},
+      "arcade-mame2016-http": {},
+      "arcade-mame0222-http": {},
     },
     "allowlists": {
       "languages": [
@@ -38,10 +48,16 @@
         "Sports / Volleyball",
         "Tabletop"
       ],
+      "controls": [
+        "dial",
+        "rotary",
+        "trackball"
+      ],
+      "flags": [
+        "hack",
+        "demo"
+      ],
       "keywords": [
-        "(hack",
-        "[demo",
-        "[hack",
         "anniversary",
         "bootleg",
         "broken",
@@ -60,10 +76,12 @@
         "terrible",
         "undumped",
         "unemulated",
-        "pcb",
-        "Bombjack Twin",
-        "Canvas Croquis",
-        "Deluxe 5"
+        "pcb"
+      ],
+      "filenames": [
+        "bjtwin.zip",
+        "canvas.zip",
+        "deluxe5.zip"
       ]
     },
     "root": [

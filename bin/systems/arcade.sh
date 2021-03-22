@@ -102,6 +102,16 @@ build_rom_list() {
   comm -23 "$names_all_file" "$names_mergelist_file" > "$names_file"
 }
 
+merge_rom() {
+  for rom in roms:
+    if merge
+      game=parent
+    
+    unzip -j "$game.zip" "$rom_file" -d "$tmp_dir"
+  zip -r test.zip tmp/*
+  trrntzip test.zip
+}
+
 # This is strongly customized due to the nature of Arcade ROMs
 # 
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
@@ -111,6 +121,12 @@ download() {
   roms_all_dir="$roms_dir/-ALL-"
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
+
+  # Download DAT
+  # - Filter DAT
+  # - Filter against compatibility
+  # - Download individual files...
+  wget https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_229.7z
 
   # Remove existing *links* from -ALL-
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;

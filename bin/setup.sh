@@ -68,6 +68,14 @@ sudo wget https://archive.org/download/ia-pex/ia -O /usr/local/bin/ia
 sudo chmod +x /usr/local/bin/ia
 ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
 
+# TorrentZip
+git clone https://github.com/hydrogen18/trrntzip.git
+cd trrntzip
+./autogen.sh
+./configure
+make
+sudo make install
+
 # Benchmarking
 sudo apt install sysbench
 

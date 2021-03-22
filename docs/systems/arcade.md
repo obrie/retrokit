@@ -13,6 +13,14 @@ references:
 
 ## ROMs
 
+* Split sets are okay if you're only using parents
+* Split sets are also okay so long as you're including all the parents
+* Non-merged sets waste space but are all standalone
+* Merged sets include all clones in one file (unnecessary)
+* https://***REMOVED*** is based on latest emulator
+* I think each time we update the fbneo emulator, we need to use the ***REMOVED***?
+* How do we use lr-mame 0.222?
+
 ## Filters
 
 * [Category Filters](https://www.progettosnaps.net/catver/)
