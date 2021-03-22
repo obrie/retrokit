@@ -7,6 +7,10 @@ Preferred:
 * lr-fbneo
 * lr-mame2003plus
 
+references:
+
+* [Compatibility List](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=0)
+
 ## ROMs
 
 ## Filters

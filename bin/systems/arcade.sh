@@ -30,6 +30,13 @@ setup() {
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_enabled' '"true"'
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_frames' '"1"'
   crudini --set /opt/retropie/configs/arcade/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
+
+  # Multiple emulators
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2003-plus _binary_
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2010 _binary_
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2015 _binary_
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2016 _binary_
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame _binary_
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -73,9 +80,10 @@ build_rom_list() {
   sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
     @runnable = \"no\" or
-    @romof
-    not(driver/@status = \"good\" or driver/@status = \"protection\") or
-    not(driver/@sound = \"good\") or
+    @romof or
+    @sampleof or
+    (driver/@status and not(driver/@status = \"good\" or driver/@status = \"protection\")) or
+    (driver/@sound and not(driver/@sound = \"good\")) or
     driver/@isbios = \"yes\" or
     $keyword_conditions
   ]/@name""" >> "$names_blocklist_file"
@@ -147,6 +155,7 @@ download() {
           done
 
           # Install sample (if applicable)
+          # TODO: Just check for the sample config?
           if [ "$(grep "$rom_name.zip" "$DATA_DIR/$source_system/samples.csv")" ]; then
             wget "$samples_source_url$rom_name.zip" -O "$samples_target_dir/$rom_name.zip"
           fi

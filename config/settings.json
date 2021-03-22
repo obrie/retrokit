@@ -94,10 +94,18 @@
     "arcade-fbneo-http": {
       "type": "http",
       "url": "https://***REMOVED***/",
-      "samples": "FBNeo/support.zip/support%2Fsamples%2F",
       "roms": "FBNeo/ArcadeNonMerged.zip/",
+      "samples": "FBNeo/support.zip/support%2Fsamples%2F",
       "emulator": "lr-fbneo",
       "system": "fbneo"
+    },
+    "arcade-mame2003-http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "roms": "roms/",
+      "samples": "samples/",
+      "emulator": "lr-mame2003",
+      "system": "mame2003"
     },
     "arcade-mame2003plus-http": {
       "type": "http",
@@ -106,6 +114,30 @@
       "samples": "samples/",
       "emulator": "lr-mame2003-plus",
       "system": "mame2003-plus"
+    },
+    "arcade-mame2010-http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "roms": "roms.zip/roms%2F",
+      "samples": "samples/",
+      "emulator": "lr-mame2010",
+      "system": "mame2010"
+    },
+    "arcade-mame2015-http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "roms": "roms.zip/roms%2F",
+      "samples": "samples/",
+      "emulator": "lr-mame2015",
+      "system": "mame2015"
+    },
+    "arcade-mame2016-http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "roms": "roms.zip/roms%2F",
+      "samples": "samples/",
+      "emulator": "lr-mame2016",
+      "system": "mame2016"
     }
   }
 }
