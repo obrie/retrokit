@@ -151,12 +151,22 @@ sudo systemctl start ssh
 # Overscan
 crudini --set /boot/config.txt '' 'disable_overscan' '1'
 
+sed -r -i 's/(<string name="VideoOmxPlayer" value=")([^"]*)/\1true/' /home/pi/.emulationstation/es_settings.cfg
+
 ##############
 # Audio
 ##############
 
 # Turn off menu sounds
-sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' es_settings.cfg
+sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' /home/pi/.emulationstation/es_settings.cfg
+
+##############
+# Screensaver
+##############
+
+# Disable
+sed -r -i 's/(<string name="ScreenSaverTime" value=")([^"]*)/\10/' /home/pi/.emulationstation/es_settings.cfg
+sed -r -i 's/(<string name="SystemSleepTime" value=")([^"]*)/\10/' /home/pi/.emulationstation/es_settings.cfg
 
 ##############
 # Locale
