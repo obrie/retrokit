@@ -12,6 +12,7 @@
       "branch": "lrmame0222"
     }
   },
+  "runahead": true,
   "support_files": {
     "dat": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
     "dat_file": "XML/mame222.xml",
@@ -92,10 +93,10 @@
         "unemulated",
         "pcb"
       ],
-      "filenames": [
-        "bjtwin.zip",
-        "canvas.zip",
-        "deluxe5.zip"
+      "names": [
+        "bjtwin",
+        "canvas",
+        "deluxe5"
       ]
     },
     "emulator_overrides": {
@@ -111,38 +112,38 @@
       "maxforce": "advmame",
       "overdrive": "advmame"
     },
-    "root": [
-      "area51.zip",
-      "area51mx.zip",
-      "arkanoid.zip",
-      "avsp.zip",
-      "blitz.zip",
-      "bublbobl.zip",
-      "contra.zip",
-      "dkong.zip",
-      "duckhunt.zip",
-      "mario.zip",
-      "mk.zip",
-      "mk2.zip",
-      "mk3.zip",
-      "mspacman.zip",
-      "nbajam.zip",
-      "pacman.zip",
-      "paperboy.zip",
-      "punchout.zip",
-      "outrun.zip",
-      "rampage.zip",
-      "sf1.zip",
-      "sf2.zip",
-      "sf2ce.zip",
-      "simpsons.zip",
-      "suprmrio.zip",
-      "tmnt.zip",
-      "tmnt2.zip",
-      "tron.zip",
-      "xmcota.zip",
-      "xmen.zip",
-      "xmvsf.zip"
+    "favorites": [
+      "area51",
+      "area51mx",
+      "arkanoid",
+      "avsp",
+      "blitz",
+      "bublbobl",
+      "contra",
+      "dkong",
+      "duckhunt",
+      "mario",
+      "mk",
+      "mk2",
+      "mk3",
+      "mspacman",
+      "nbajam",
+      "pacman",
+      "paperboy",
+      "punchout",
+      "outrun",
+      "rampage",
+      "sf1",
+      "sf2",
+      "sf2ce",
+      "simpsons",
+      "suprmrio",
+      "tmnt",
+      "tmnt2",
+      "tron",
+      "xmcota",
+      "xmen",
+      "xmvsf"
     ]
   }
 }
