@@ -132,10 +132,10 @@ download() {
   roms_all_dir="$roms_dir/-ALL-"
   dat_dir="$SYSTEM_TMP_DIR/dat"
   rom_xml_file="$SYSTEM_TMP_DIR/rom.xml"
-  compatibility_file="$DATA_DIR/emulators/compatibility.tsv"
-  categories_file="$DATA_DIR/catver/catver.ini"
+  compatibility_file="$SYSTEM_TMP_DIR/compatibility.tsv"
+  categories_file="$SYSTEM_TMP_DIR/catver.ini"
   languages_file="$SYSTEM_TMP_DIR/languages.ini"
-  names_file="$TMP_DIR/arcade/filtered.csv"
+  names_file="$SYSTEM_TMP_DIR/filtered.csv"
 
   # Download dat file
   if [ ! -f "$dat_dir.all" ]; then
@@ -144,7 +144,7 @@ download() {
   fi
 
   # Split dat file
-  if [ "$(ls -A "$dat_dir" | wc -l)" -eq 0 ]; then
+  if [ "$(ls -U "$dat_dir" | wc -l)" -eq 0 ]; then
     csplit -n 6 --prefix "$dat_dir/" "$dat_dir.all" '/<machine/' '{*}'
     find "$dat_dir/" -type f | while read rom_dat_file; do
       rom_dat_filename=$(basename "$rom_dat_file")
