@@ -10,6 +10,7 @@ Preferred:
 references:
 
 * [Compatibility List](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=0)
+* [MAME Benchmarks](http://www.mameui.info/Bench.htm)
 
 ## ROMs
 
@@ -20,6 +21,9 @@ references:
 * https://***REMOVED*** is based on latest emulator
 * I think each time we update the fbneo emulator, we need to use the ***REMOVED***?
 * How do we use lr-mame 0.222?
+* http://***REMOVED***
+
+MAME Data generation: http://***REMOVED***
 
 ## Filters
 

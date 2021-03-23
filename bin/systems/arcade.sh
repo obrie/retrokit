@@ -36,7 +36,11 @@ setup() {
   sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2010 _binary_
   sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2015 _binary_
   sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame2016 _binary_
-  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame _binary_
+
+  # Compile lr-mame for a specific rev (or use mame2016)
+  lr_mame_branch=$(jq -r ".emulators.\"lr-mame\".branch" "$SETTINGS_FILE")
+  sed -i "s/mame.git master/mame.git $lr_mame_branch/g" ~/RetroPie-Setup/scriptmodules/libretrocores/lr-mame.sh
+  sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame _source_
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -57,59 +61,104 @@ clean_emulator_config_key() {
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep -A 1 "name=\"{}\"" "$DATA_DIR/$source_name/roms.dat" | grep description
 #   comm -23 "$names_all_file" "$names_blocklist_file" | xargs -d '\n' -I{} grep "^{}=.*/" "$DATA_DIR/catver/catver.ini" | grep -oE "=.*" | sort | uniq -c
 build_rom_list() {
-  # Arguments
-  system="$1"
-
   # Configurations
-  names_file="$TMP_DIR/arcade/$system.csv"
-  names_all_file="$TMP_DIR/arcade/$system.all.csv"
-  names_blocklist_file="$TMP_DIR/arcade/$system.blocklist.csv"
-  names_allowlist_file="$TMP_DIR/arcade/$system.allowlist.csv"
-  names_mergelist_file="$TMP_DIR/arcade/$system.mergelist.csv"
+  dat_file="$SYSTEM_TMP_DIR/roms.dat"
+  dat_dir="$SYSTEM_TMP_DIR/dat"
+  rom_xml_file="$SYSTEM_TMP_DIR/rom.xml"
+  compatibility_file="$DATA_DIR/emulators/compatibility.tsv"
+  categories_file="$DATA_DIR/catver/catver.ini"
+  languages_file="$SYSTEM_TMP_DIR/languages.ini"
+  names_file="$TMP_DIR/arcade/filtered.csv"
 
-  # Create full name set
-  xmlstarlet sel -T -t -v "/*/game/@name" "$DATA_DIR/$system/roms.dat" | sort > "$names_all_file"
+  # Download dat file
+  wget -nc "$(jq -r ".support_files.dat" "$SETTINGS_FILE")" -O "$dat_file.7z"
+  7z e -so "$dat_file.7z" "$(jq -r ".support_files.dat_file" "$SETTINGS_FILE")" > "$dat_file"
 
-  # Build blocklist
-  # - Categories
-  categories=$(jq -r '.roms.blocklists.categories[]' "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  grep -oP "^.+(?==.*($categories))" "$DATA_DIR/catver/catver.ini" > "$names_blocklist_file"
+  # Split dat file
+  if [ "$(ls -A "$dat_dir" | wc -l)" -eq 0 ]; then
+    csplit -n 6 --prefix "$dat_dir/" "$dat_file" '/<machine/' '{*}'
+    find "$dat_dir/" -type f | while read rom_dat_file; do
+      rom_dat_filename=$(basename "$rom_dat_file")
+      rom_name=$(grep -oP "machine name=\"\K[^\"]+" "$rom_dat_file")
+      if [ -n "$rom_name" ]; then
+        mv "$dat_dir/$rom_dat_filename" "$dat_dir/$rom_name"
+      fi
+    done
+  fi
 
-  # - Keywords
+  # Download languages file
+  wget -nc "$(jq -r ".support_files.languages" "$SETTINGS_FILE")" -O "$languages_file.zip"
+  unzip -p "$languages_file.zip" "$(jq -r ".support_files.languages_file" "$SETTINGS_FILE")" > "$languages_file"
+  crudini --get --format=lines "$languages_file" > "$languages_file.split"
+
+  # Download categories file
+  wget -nc "$(jq -r ".support_files.categories" "$SETTINGS_FILE")" -O "$categories_file.zip"
+  unzip -p "$categories_file.zip" "$(jq -r ".support_files.categories_file" "$SETTINGS_FILE")" > "$categories_file"
+
+  # Download compatibility file
+  wget -nc "$(jq -r ".support_files.compatibility" "$SETTINGS_FILE")" -O "$compatibility_file"
+
+  # Compatible / Runnable roms
+  # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
+  grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
+    # Filter: Emulator
+    emulator=$(grep "^$rom_name" "$compatibility_file" | cut -d $'\t' -f 3)
+    if [ emulator = "lr-mame" ]; then
+      emulator="lr-mame2016"
+    fi
+
+    # Filter: Category
+    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1)
+
+    # Filter: Language
+    language=$(grep -oP "^\[\K.*(?= \] $rom_name)$" "$languages_file.split")
+
+    LC_ALL=C grep -A 1000 -E "^ +<machine name=\"$rom_name\"" "$dat_file" | grep -oPz "(?s)<machine name=\"$rom_name\".*?machine" > "$rom_xml_file"
+    # Filter: Clone
+    "$rom_xml_file"
   keyword_conditions=$(jq -r '.roms.blocklists.keywords[]' "$SETTINGS_FILE" | sed -e 's/.*/contains(description\/text(), "\0")/g' | sed ':a; N; $!ba; s/\n/ or /g')
   sed -e "s/<description>\(.*\)<\/description>/<description>\L\1<\/description>/" "$DATA_DIR/$system/roms.dat" | xmlstarlet sel -T -t -v """/*/game[
     @cloneof or
-    @runnable = \"no\" or
     @romof or
     @sampleof or
-    (driver/@status and not(driver/@status = \"good\" or driver/@status = \"protection\")) or
-    (driver/@sound and not(driver/@sound = \"good\")) or
-    driver/@isbios = \"yes\" or
     $keyword_conditions
   ]/@name""" >> "$names_blocklist_file"
+  
+    # Filter: Sample
+    "$rom_xml_file"
 
-  # - Languages
-  crudini --del --output=- "$DATA_DIR/languages/languages.ini" "English" >> "$names_blocklist_file"
+    # Filter: Control
+    "$rom_xml_file"
 
-  # Remove explicit ROMs from blocklist
-  jq -r ".roms.root[]" "$SETTINGS_FILE" | sed -e 's/\.zip//g' | sort > "$names_allowlist_file"
+    # Filter: Flag
+    "$rom_xml_file"
 
-  # Remove allowlist from blocklist
-  sort -o "$names_blocklist_file" "$names_blocklist_file"
-  comm -23 "$names_blocklist_file" "$names_allowlist_file" > "$names_mergelist_file"
+    # Filter: Name
+    "$rom_xml_file"
 
-  # Filter from blocklist
-  comm -23 "$names_all_file" "$names_mergelist_file" > "$names_file"
-}
+    # Download
+  done
 
-merge_rom() {
-  for rom in roms:
-    if merge
-      game=parent
-    
-    unzip -j "$game.zip" "$rom_file" -d "$tmp_dir"
-  zip -r test.zip tmp/*
-  trrntzip test.zip
+  # # Build blocklist
+  # # - Categories
+  # categories=$(jq -r '.roms.blocklists.categories[]' "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  # grep -oP "^.+(?==.*($categories))" "$DATA_DIR/catver/catver.ini" > "$names_blocklist_file"
+
+  # # - Keywords
+
+
+  # # - Languages
+  # crudini --del --output=- "$DATA_DIR/languages/languages.ini" "English" >> "$names_blocklist_file"
+
+  # # Remove explicit ROMs from blocklist
+  # jq -r ".roms.root[]" "$SETTINGS_FILE" | sed -e 's/\.zip//g' | sort > "$names_allowlist_file"
+
+  # # Remove allowlist from blocklist
+  # sort -o "$names_blocklist_file" "$names_blocklist_file"
+  # comm -23 "$names_blocklist_file" "$names_allowlist_file" > "$names_mergelist_file"
+
+  # # Filter from blocklist
+  # comm -23 "$names_all_file" "$names_mergelist_file" > "$names_file"
 }
 
 # This is strongly customized due to the nature of Arcade ROMs
@@ -122,11 +171,7 @@ download() {
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
 
-  # Download DAT
-  # - Filter DAT
-  # - Filter against compatibility
-  # - Download individual files...
-  wget https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_229.7z
+  build_rom_list
 
   # Remove existing *links* from -ALL-
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;

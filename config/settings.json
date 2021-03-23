@@ -53,22 +53,25 @@
     "nointro-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
-      "root_dir": "no-intro_romsets/no-intro romsets",
+      "roms": "no-intro_romsets/no-intro romsets",
       "unzip": true
     },
     "dos-the_eye-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
-      "root_dir": "eXoDOS/eXo/eXoDOS",
+      "roms": "eXoDOS/eXo/eXoDOS",
       "unzip": true
     },
-    "fbneo-torrent": {
+    "arcade-fbneo-torrent": {
       "type": "torrent",
       "url": "https://***REMOVED***",
-      "root_dir": "",
+      "roms": "",
       "unzip": false
     },
 
+    "nointro-http": {
+
+    },
     "dos-the_eye-http": {
       "type": "http",
       "url": "https://***REMOVED***",
@@ -99,70 +102,56 @@
     "arcade-mame2003-http": {
       "type": "http",
       "url": "https://***REMOVED***",
-      "set": "non-merged",
       "roms": "roms/",
       "samples": "samples/",
       "emulator": "lr-mame2003",
       "core": "mame2003",
-      "mame_version": "0.78"
+      "dat": "mame2003.xml"
     },
     "arcade-mame2003plus-http": {
       "type": "http",
       "url": "https://***REMOVED***/",
-      "set": "non-merged",
       "roms": "roms/",
       "samples": "samples/",
       "emulator": "lr-mame2003-plus",
       "core": "mame2003-plus",
-      "mame_version": "0.188"
+      "mame_version": "0.188",
+      "dat": "MAME 2003-Plus - 2018-12-31.xml"
     },
     "arcade-mame2010-http": {
       "type": "http",
       "url": "https://***REMOVED***",
-      "set": "non-merged",
       "roms": "roms.zip/roms%2F",
       "samples": "samples/",
+      "dat": "MAME 2010 DAT - 2019-01-05.xml",
       "emulator": "lr-mame2010",
       "core": "mame2010",
-      "mame_version": "0.139"
+      "mame_version": "0.139",
     },
     "arcade-mame2015-http": {
       "type": "http",
       "url": "https://***REMOVED***",
-      "set": "non-merged",
       "roms": "roms.zip/roms%2F",
       "samples": "samples/",
+      "dat": "mame2015.xml",
       "emulator": "lr-mame2015",
-      "core": "mame2015",
-      "mame_version": "0.160"
+      "core": "mame2015"
     },
     "arcade-mame2016-http": {
       "type": "http",
-      "url": "https://***REMOVED***",
-      "set": "non-merged",
-      "roms": "roms.zip/roms%2F",
-      "samples": "samples/",
+      "roms": "https://***REMOVED***roms.zip/roms%2F",
+      "samples": "https://***REMOVED***roms.zip/samples/",
+      "dat": "https://***REMOVED***MAME 2016 XML (Arcade Only).xml",
       "emulator": "lr-mame2016",
-      "core": "mame2016",
-      "mame_version": "0.174"
+      "core": "mame2016"
     },
-    "arcade-mame0209-http": {
+    "arcade-mame0222-http": {
       "type": "http",
-      "url": "https://***REMOVED***",
-      "set": "merged",
-      "roms": "MAME_0.209_ROMs_merged.zip/",
+      "roms": "https://***REMOVED***",
+      "samples": "https://***REMOVED***roms.zip/samples/",
+      "dat": "",
       "emulator": "lr-mame",
-      "core": "mame",
-      "mame_version": "0.209"
-    },
-    "arcade-mame0229-http": {
-      "type": "http",
-      "url": "https://***REMOVED***",
-      "set": "split",
-      "roms": "MAME%200.229%20ROMs%20%28split%29.7z/0.229%20ROMs%20%28split%29%2F3",
-      "emulator": "lr-mame",
-      "core": "mame",
-      "mame_version": "0.229"
-    },
+      "core": "mame"
+    }
   }
 }

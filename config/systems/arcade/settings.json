@@ -1,21 +1,33 @@
 {
-  "emulators": [
-    "lr-mame2003",
-    "lr-mame2003-plus",
-    "lr-mame2015",
-    "lr-mame2016",
-    "lr-mame",
-    "advmame"
-  ],
-  "mame_version": "0.222",
+  "emulators": {
+    "installed": [
+      "lr-fbneo",
+      "lr-mame2003",
+      "lr-mame2003-plus",
+      "lr-mame2015",
+      "lr-mame2016",
+      "advmame"
+    ],
+    "lr-mame": {
+      "branch": "lrmame0222"
+    }
+  },
+  "support_files": {
+    "dat": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
+    "dat_file": "XML/mame222.xml",
+    "languages": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
+    "languages_file": "folders/languages.ini",
+    "categories": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
+    "categories_file": "catver.ini",
+    "compatibility": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
+  },
   "roms": {
     "sources": {
       "arcade-fbneo-http": {},
       "arcade-mame2003-http": {},
       "arcade-mame2003plus-http": {},
       "arcade-mame2015-http": {},
-      "arcade-mame2016-http": {},
-      "arcade-mame0222-http": {},
+      "arcade-mame2016-http": {}
     },
     "allowlists": {
       "languages": [
@@ -23,6 +35,8 @@
       ]
     },
     "blocklists": {
+      "clones": true,
+      "samples": true,
       "categories": [
         "Board Game",
         "Casino",
@@ -83,6 +97,19 @@
         "canvas.zip",
         "deluxe5.zip"
       ]
+    },
+    "emulator_overrides": {
+      "area51mx": "advmame",
+      "blitz": "advmame",
+      "blitz2k": "advmame",
+      "blitz99": "advmame",
+      "carnevil": "advmame",
+      "crusnusa": "advmame",
+      "cryptklr": "advmame",
+      "kinst": "advmame",
+      "kinst2": "advmame",
+      "maxforce": "advmame",
+      "overdrive": "advmame"
     },
     "root": [
       "area51.zip",

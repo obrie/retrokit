@@ -7,131 +7,117 @@ APP_DIR=$(cd "$DIR/.." && pwd)
 CONFIG_DIR="$CONFIG_DIR"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 
-##############
-# Set up a fresh install of RetroPie
-# 
-# Based on v4.7.1
-##############
+prepare() {
+  # Make sure emulation station isn't running
+  killall /opt/retropie/supplementary/emulationstation/emulationstation
+}
 
-# Make sure emulation station isn't running
-killall /opt/retropie/supplementary/emulationstation/emulationstation
+setup_wifi() {
+  # Disable wifi (assuming wired)
+  crudini --set /boot/config.txt '' 'dtoverlay' 'disable-wifi'
 
-##############
-# Wifi
-##############
+  # ...or enable wifi (NOTE: Connect over 2.4ghz, not 5ghz):
+  # sudo raspi-config
+}
 
-# Disable wifi (assuming wired)
-crudini --set /boot/config.txt '' 'dtoverlay' 'disable-wifi'
+upgrade() {
+  sudo apt update
+  sudo apt full-upgrade
+}
 
-# ...or enable wifi (NOTE: Connect over 2.4ghz, not 5ghz):
-# sudo raspi-config
+install_config_tools() {
+  # Ini editor
+  sudo pip3 install crudini
 
-##############
-# Upgrades
-##############
+  # Env editor
+  mkdir -p ~/tools
+  wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/dotenv
+  . dotenv
 
-sudo apt update
-sudo apt full-upgrade
+  # JSON reader
+  sudo apt install jq
+}
 
-##############
-# Tools
-##############
+install_torrent_tools() {
+  transmission_settings_file=/etc/transmission-daemon/settings.json
 
-# Ini editor
-sudo pip3 install crudini
+  # BitTorrent client
+  sudo apt install transmission-daemon
+  sudo systemctl stop transmission-daemon
 
-# Env editor
-mkdir -p ~/tools
-wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/dotenv
-. dotenv
+  # Keep original config
+  if [ ! -f "$transmission_settings_file.original" ]; then
+    sudo cp "$transmission_settings_file" "$transmission_settings_file.original"
+  fi
 
-# JSON reader
-sudo apt install jq
+  # Allow access without authentication
+  sudo sh -c "\
+    jq '\
+      .\"rpc-whitelist-enabled\" = false |\
+      .\"rpc-authentication-required\" = false |\
+      .\"start-added-torrents\" = false\
+    ' "$$transmission_settings_file" > "$transmission_settings_file"\
+  "
+  sudo systemctl start transmission-daemon
+}
 
-# BitTorrent client
-sudo apt install transmission-daemon
-sudo systemctl stop transmission-daemon
-if [ ! -f "/etc/transmission-daemon/settings.json.original" ]; then
-  sudo cp /etc/transmission-daemon/settings.json /etc/transmission-daemon/settings.json.original
-fi
-sudo sh -c "\
-  jq '\
-    .\"rpc-whitelist-enabled\" = false |\
-    .\"rpc-authentication-required\" = false |\
-    .\"start-added-torrents\" = false\
-  ' /etc/transmission-daemon/settings.json.original > /etc/transmission-daemon/settings.json\
-"
-sudo systemctl start transmission-daemon
+install_http_tools() {
+  # Internet Archive CLI
+  sudo wget https://archive.org/download/ia-pex/ia -O /usr/local/bin/ia
+  sudo chmod +x /usr/local/bin/ia
+  ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
+}
 
-# Internet Archive CLI
-sudo wget https://archive.org/download/ia-pex/ia -O /usr/local/bin/ia
-sudo chmod +x /usr/local/bin/ia
-ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
+install_developer_tools() {
+  # Benchmarking
+  sudo apt install sysbench
 
-# TorrentZip
-mkdir /tmp/trrntzip
-git clone https://github.com/hydrogen18/trrntzip.git mkdir /tmp/trrntzip
-pushd /tmp/trrntzip
-./autogen.sh
-./configure
-make
-sudo make install
-popd
-rm -rf mkdir /tmp/trrntzip
+  # Screen
+  sudo apt install screen
 
-# Benchmarking
-sudo apt install sysbench
+  $APP_DIR/bin/tools/clrmamepro.sh install
+}
 
-# Screen
-sudo apt install screen
+setup_case() {
+  # Configure Argon case
+  curl https://download.argon40.com/argon1.sh | bash
 
-##############
-# Argon Case
-##############
+  # Fix HDMI w/ Argon case (https://forum.libreelec.tv/thread/22079-rpi4-no-hdmi-sound-using-argon-one-case/):
+  crudini --set /boot/config.txt '' 'hdmi_force_hotplug' '1'
+  crudini --set /boot/config.txt '' 'hdmi_group' '1'
+  crudini --set /boot/config.txt '' 'hdmi_mode' '16'
+  crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
 
-# Configure Argon case
-curl https://download.argon40.com/argon1.sh | bash
+  # Set up power button
+  # python <<eof
+  # import smbus
+  # import RPi.GPIO as GPIO
 
-# Fix HDMI w/ Argon case (https://forum.libreelec.tv/thread/22079-rpi4-no-hdmi-sound-using-argon-one-case/):
-crudini --set /boot/config.txt '' 'hdmi_force_hotplug' '1'
-crudini --set /boot/config.txt '' 'hdmi_group' '1'
-crudini --set /boot/config.txt '' 'hdmi_mode' '16'
-crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
+  # # I2C
+  # address = 0x1a    # I2C Address
+  # command = 0xaa    # I2C Command
+  # powerdata = '3085e010'
 
-# Set up power button
-# python <<eof
-# import smbus
-# import RPi.GPIO as GPIO
+  # rev = GPIO.RPI_REVISION
+  # if rev == 2 or rev == 3:
+  #   bus = smbus.SMBus(1)
+  # else:
+  #   bus = smbus.SMBus(0)
 
-# # I2C
-# address = 0x1a    # I2C Address
-# command = 0xaa    # I2C Command
-# powerdata = '3085e010'
+  # bus.write_i2c_block_data(address, command, powerdata)
+  # eof
+}
 
-# rev = GPIO.RPI_REVISION
-# if rev == 2 or rev == 3:
-#   bus = smbus.SMBus(1)
-# else:
-#   bus = smbus.SMBus(0)
+setup_remote() {
+  # Add IR support
+  sed '/retropie/d' -i /etc/rc_maps.cfg
+  cat '* rc-retropie retropie.toml' > /etc/rc_maps.cfg
+  cp "$CONFIG_DIR/remote.toml" /etc/rc_keymaps/retropie.toml
+  crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
 
-# bus.write_i2c_block_data(address, command, powerdata)
-# eof
-
-##############
-# IR
-##############
-
-# Add IR support
-sed '/retropie/d' -i /etc/rc_maps.cfg
-cat '* rc-retropie retropie.toml' > /etc/rc_maps.cfg
-cp "$CONFIG_DIR/remote.toml" /etc/rc_keymaps/retropie.toml
-crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
-
-# Load
-sudo ir-keytable -t -w /etc/rc_keymaps/retropie.toml
-
-# Test
-sudo ir-keytable -c -p all -t
+  # Load
+  sudo ir-keytable -t -w /etc/rc_keymaps/retropie.toml
+}
 
 ##############
 # Performance

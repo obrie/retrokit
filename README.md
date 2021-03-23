@@ -140,6 +140,21 @@ Indexes:
 * https://***REMOVED***
 * https://***REMOVED***
 
+Sources:
+
+* http://www.archive.org
+* ***REMOVED***
+* Torrent
+
+Sets:
+
+* http://***REMOVED***
+* http://***REMOVED***
+
+Torrents:
+
+* http://***REMOVED***
+
 ## TODO
 
 * [x] Determine if we should upgrade MicroSD card
