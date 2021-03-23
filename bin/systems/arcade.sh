@@ -175,7 +175,7 @@ download() {
 
   # Reset everything
   truncate -s0 "$names_file"
-  find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+  find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
@@ -257,6 +257,7 @@ download() {
   done
 
   # Add to root
+  find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
   jq -r ".roms.favorites[]" "$SETTINGS_FILE" | while read rom; do
     ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
 
