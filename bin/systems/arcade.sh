@@ -27,7 +27,7 @@ setup() {
   crudini --set /opt/retropie/configs/$SYSTEM/emulators.cfg '' 'default' "\"$(jq -r ".emulators[0]" "$SETTINGS_FILE")\""
 
   # Input Lag
-  if [ $(jq -r ".emulators[0]" "$SETTINGS_FILE") = "true" ]; then
+  if [ $(jq -r ".emulators[0]" "$SETTINGS_FILE") == "true" ]; then
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_enabled' '"true"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_frames' '"1"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
@@ -181,35 +181,38 @@ download() {
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
   grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
     # Always allow favorites regardless of filter
-    if [ $(jq -r ".roms.favorites | has(\"$rom_name\")" "$SETTINGS_FILE") ]; then
+    if [ $(jq -r ".roms.favorites | index(\"$rom_name\")" "$SETTINGS_FILE") != 'null' ]; then
       echo "$rom_name" >> "$names_file"
     fi
 
     # Attributes
     rom_dat_file="$dat_dir/$rom_name"
+    if [ ! -f "$rom_dat_file" ]; then
+      continue
+    fi
+
     emulator=$(grep "^$rom_name" "$compatibility_file" | cut -d $'\t' -f 3)
-    if [ emulator = "lr-mame" ]; then
+    if [ "$emulator" == "lr-mame" ]; then
       emulator="lr-mame2016"
     fi
-    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1)
-    language=$(grep -oP "^\[\K.*(?= \] $rom_name$)" "$languages_file.split")
-    is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file")
+    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1 || true)
+    language=$(grep -oP "^\[\K.*(?= \] $rom_name$)" "$languages_file.split" || true)
+    is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
     description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file")
-    control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq)
-    all_flags=$(echo "$description" | grep -oP "\(\K[^\)]+")
-    country=$(echo "$all_flags" | head -n 1)
+    control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
+    all_flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
     flags=$(echo "$all_flags" | tail -n +2)
 
     # Category
-    if [ $(jq -r ".roms.blocklists.categories | has(\"$category\")" "$SETTINGS_FILE") = "true" ]; then
+    if [ $(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
-    if [ ! $(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\"))" "$SETTINGS_FILE") ]; then
+    if [ $(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\"))" "$SETTINGS_FILE") == 'null' ]; then
       continue
     fi
 
     # Language
-    if [ $(jq -r ".roms.blocklists.languages | has(\"$language\")" "$SETTINGS_FILE") = "true" ]; then
+    if [ $(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
     if [ ! $(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\"))" "$SETTINGS_FILE") ]; then
@@ -217,10 +220,10 @@ download() {
     fi
 
     # Clone
-    if [ $(jq -r ".roms.blocklists.clones)" "$SETTINGS_FILE") = "true" ] && [ -n "$is_clone" ]; then
+    if [ $(jq -r ".roms.blocklists.clones)" "$SETTINGS_FILE") == "true" ] && [ -n "$is_clone" ]; then
       continue
     fi
-    if [ $(jq -r ".roms.allowlists.clones)" "$SETTINGS_FILE") = "false" ] && [ -n "$is_clone" ]; then
+    if [ $(jq -r ".roms.allowlists.clones)" "$SETTINGS_FILE") == "false" ] && [ -n "$is_clone" ]; then
       continue
     fi
 
@@ -245,10 +248,10 @@ download() {
     fi
 
     # Name
-    if [ $(jq -r ".roms.blocklists.names | has(\"$name\")" "$SETTINGS_FILE") = "true" ]; then
+    if [ $(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
-    if [ ! $(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\"))" "$SETTINGS_FILE") ]; then
+    if [ $(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\"))" "$SETTINGS_FILE") == 'null' ]; then
       continue
     fi
 
