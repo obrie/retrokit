@@ -63,7 +63,7 @@ install_rom() {
   # Arguments
   rom_name="$1"
   emulator="$2"
-  source_name=$(jq -r ".sources | to_entries | map(select(.value.emulator == \"$emulator\"))[] | .key" "$APP_SETTINGS_FILE")
+  source_name=$(jq -r ".sources | to_entries | map(select(.value.emulator == \"$emulator\"))[] | .key" "$APP_SETTINGS_FILE" | head -n 1)
 
   # Configuration
   dat_dir="$SYSTEM_TMP_DIR/dat"
@@ -74,16 +74,17 @@ install_rom() {
 
   # Source
   source_url=$(jq -r ".sources.\"$source_name\".url" "$APP_SETTINGS_FILE")
-  source_system=$(jq -r ".sources.\"$source_name\".system" "$APP_SETTINGS_FILE")
+  source_core=$(jq -r ".sources.\"$source_name\".core" "$APP_SETTINGS_FILE")
 
   # Source: ROMs
   roms_source_url="$source_url$(jq -r ".sources.\"$source_name\".roms" "$APP_SETTINGS_FILE")"
-  roms_source_dir="$roms_dir/.$source_system"
+  roms_source_dir="$roms_dir/.$source_core"
   mkdir -p "$roms_source_dir"
 
   # Source: Samples
   samples_source_url="$source_url$(jq -r ".sources.\"$source_name\".samples" "$APP_SETTINGS_FILE")"
-  samples_target_dir="/home/pi/RetroPie/BIOS/$source_system/samples"
+  samples_target_dir="/home/pi/RetroPie/BIOS/$source_core/samples"
+  mkdir -p "$samples_target_dir"
 
   rom_source_file="$roms_source_dir/$rom_name.zip"
   rom_target_file="$roms_all_dir/$rom_name.zip"
@@ -93,22 +94,31 @@ install_rom() {
 
     # Download ROM assets
     if [ ! -f "$rom_source_file" ]; then
-      # Install ROM
       wget "$roms_source_url$rom_name.zip" -O "$rom_source_file"
-
-      # Install disk (if applicable)
-      xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_dir/$rom_name" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
-        mkdir -p "$roms_source_dir/$rom_name"
-        wget -nc "$roms_source_url$rom_name/$disk_name" -O "$roms_source_dir/$rom_name/$disk_name"
-      done
-
-      # Install sample (if applicable)
-      sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_dir/$rom_name")
-      if [ -n "$sample_name" ]; then
-        wget -nc "$samples_source_url$sample_name.zip" -O "$samples_target_dir/$sample_name.zip"
-      fi
     else
       echo "Already downloaded: $rom_source_file"
+    fi
+
+    # Install disk (if applicable)
+    xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_dir/$rom_name" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
+      mkdir -p "$roms_source_dir/$rom_name"
+      disk_file="$roms_source_dir/$rom_name/$disk_name"
+      if [ ! -f "$disk_file" ]; then
+        wget "$roms_source_url$rom_name/$disk_name" -O "$disk_file"
+      else
+        echo "Already downloaded: $disk_file"
+      fi
+    done
+
+    # Install sample (if applicable)
+    sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_dir/$rom_name" || true)
+    if [ -n "$sample_name" ]; then
+      sample_file="$samples_target_dir/$sample_name.zip"
+      if [ ! -f "$sample_file" ]; then
+        wget "$samples_source_url$sample_name.zip" -O "$sample_file"
+      else
+        echo "Already downloaded: $sample_file"
+      fi
     fi
 
     # Link to -ALL- (including drive)
@@ -138,7 +148,7 @@ download() {
 
   # Download dat file
   if [ ! -f "$dat_dir.all" ]; then
-    wget -nc "$(jq -r ".support_files.dat" "$SETTINGS_FILE")" -O "$dat_dir.7z"
+    wget -nc "$(jq -r ".support_files.dat" "$SETTINGS_FILE")" -O "$dat_dir.7z" || true
     7z e -so "$dat_dir.7z" "$(jq -r ".support_files.dat_file" "$SETTINGS_FILE")" > "$dat_dir.all"
   fi
 
@@ -156,14 +166,14 @@ download() {
 
   # Download languages file
   if [ ! -f "$languages_file.split" ]; then
-    wget -nc "$(jq -r ".support_files.languages" "$SETTINGS_FILE")" -O "$languages_file.zip"
+    wget -nc "$(jq -r ".support_files.languages" "$SETTINGS_FILE")" -O "$languages_file.zip" || true
     unzip -p "$languages_file.zip" "$(jq -r ".support_files.languages_file" "$SETTINGS_FILE")" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_file.split"
   fi
 
   # Download categories file
   if [ ! -f "$categories_file" ]; then
-    wget -nc "$(jq -r ".support_files.categories" "$SETTINGS_FILE")" -O "$categories_file.zip"
+    wget -nc "$(jq -r ".support_files.categories" "$SETTINGS_FILE")" -O "$categories_file.zip" || true
     unzip -p "$categories_file.zip" "$(jq -r ".support_files.categories_file" "$SETTINGS_FILE")" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_file.split"
   fi
@@ -180,7 +190,7 @@ download() {
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
   grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
-    emulator=$(grep "^$rom_name" "$compatibility_file" | cut -d $'\t' -f 3)
+    emulator=$(grep "^$rom_name"$'\t' "$compatibility_file" | cut -d $'\t' -f 3)
     if [ "$emulator" == "lr-mame" ]; then
       emulator="lr-mame2016"
     fi
