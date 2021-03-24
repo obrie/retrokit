@@ -146,6 +146,15 @@
       "emulator": "lr-mame2016",
       "core": "mame2016"
     },
+    "arcade-advmame-http": {
+      "type": "http",
+      "url": "https://***REMOVED***",
+      "roms": "MAME0.106Non-Merged.zip/MAME%200.106%20Non-Merged%2Froms%2F",
+      "samples": "https://***REMOVED***roms.zip/samples/",
+      "dat": "",
+      "emulator": "advmame",
+      "core": "advmame"
+    },
     "arcade-mame0222-http": {
       "type": "http",
       "url": "https://***REMOVED***",
