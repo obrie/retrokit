@@ -8,19 +8,19 @@
       }
     },
     "allowlists": {
-      "keywords": [
+      "regions": [
         "USA"
       ]
     },
     "blocklists": {
-      "keywords": [
-        "(Beta",
-        "(Pirate",
-        "(Proto",
-        "(Unl"
+      "flags": [
+        "Beta",
+        "Pirate",
+        "Proto",
+        "Unl"
       ]
     },
-    "root": [
+    "favorites": [
       "Asteroids (Japan, USA).zip",
       "Breakout ~ Breakaway IV (Japan, USA).zip",
       "Centipede (Japan, USA).zip",
