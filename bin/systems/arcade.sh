@@ -17,6 +17,10 @@ SYSTEM_TMP_DIR="$TMP_DIR/arcade"
 
 mkdir -p "$SYSTEM_TMP_DIR"
 
+# Global vars
+declare -A SOURCES
+declare -A EMULATORS
+
 usage() {
   echo "usage: $0"
   exit 1
@@ -34,11 +38,11 @@ setup() {
   fi
 
   # Install binary emulators
-  jq -r ".emulators[]" "$SETTINGS_FILE" | while read emulator; do
+  while read emulator; do
     if [ "$emulator" != "lr-mame" ]; then
       sudo ~/RetroPie-Setup/retropie_packages.sh $emulator _binary_
     fi
-  done
+  done < <(jq -r ".emulators[]" "$SETTINGS_FILE")
 
   # Compile lr-mame for a specific rev (or use mame2016)
   if [ $(jq -r '.emulators | index("lr-fbneo")' "$SETTINGS_FILE") != 'null' ]; then
@@ -58,16 +62,27 @@ clean_emulator_config_key() {
   echo "$name"
 }
 
+load_sources() {
+  # Read configured sources
+  while read -r source_name; do
+    # Load the source
+    while IFS="=" read -r key value; do
+      SOURCES["$source_name/$key"]="$value"
+    done < <(jq -r ".sources.\"$source_name\" | to_entries | map(\"(.key)=(.value)\") | .[]" "$APP_SETTINGS_FILE")
+
+    # Load emulator info
+    EMULATORS["${SOURCES["$source_name/emulator"]}/source_name"]="$source_name"
+  done < <(jq -r '.roms.sources | keys[]' "$SETTINGS_FILE")
+}
+
 # Installs a rom for a specific emulator
 install_rom() {
   # Arguments
   rom_name="$1"
   emulator="$2"
 
-  jq -r ".emulators.installed[]" "$SETTINGS_FILE" | xargs -I{} jq -r ".sources.\"{}\" | select(.emulator == \"$emulator\") | "
-
-  all_source_names=$()
-  source_name=$(jq -r ".sources | to_entries | map(select(.value.emulator == ))[] | .key" "$APP_SETTINGS_FILE" | head -n 1)
+  # Determine which source to use based on the configured emulator
+  source_name=${EMULATORS["$emulator/source_name"]}
 
   # Configuration
   dat_dir="$SYSTEM_TMP_DIR/dat"
@@ -77,16 +92,16 @@ install_rom() {
   mkdir -p "$roms_all_dir"
 
   # Source
-  source_url=$(jq -r ".sources.\"$source_name\".url" "$APP_SETTINGS_FILE")
-  source_core=$(jq -r ".sources.\"$source_name\".core" "$APP_SETTINGS_FILE")
+  source_url=${SOURCES["$source_name/url"]}
+  source_core=${SOURCES["$source_name/core"]}
 
   # Source: ROMs
-  roms_source_url="$source_url$(jq -r ".sources.\"$source_name\".roms" "$APP_SETTINGS_FILE")"
+  roms_source_url="$source_url${SOURCES["$source_name/roms"]}"
   roms_source_dir="$roms_dir/.$source_core"
   mkdir -p "$roms_source_dir"
 
   # Source: Samples
-  samples_source_path=$(jq -r ".sources.\"$source_name\".samples" "$APP_SETTINGS_FILE")
+  samples_source_path=${SOURCES["$source_name/samples"]}
   if [ $(grep -E "^http" "$samples_source_path") ]; then
     samples_source_url="$samples_source_path"
   else
@@ -109,7 +124,7 @@ install_rom() {
     fi
 
     # Install disk (if applicable)
-    xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_dir/$rom_name" | xargs -d '\n' -I{} echo '{}' | while read disk_name; do
+    while read disk_name; do
       mkdir -p "$roms_source_dir/$rom_name"
       disk_file="$roms_source_dir/$rom_name/$disk_name"
       if [ ! -f "$disk_file" ]; then
@@ -117,7 +132,7 @@ install_rom() {
       else
         echo "Already downloaded: $disk_file"
       fi
-    done
+    done < <(xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_dir/$rom_name")
 
     # Install sample (if applicable)
     sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_dir/$rom_name" || true)
@@ -164,13 +179,13 @@ download() {
   # Split dat file
   if [ "$(ls -U "$dat_dir" | wc -l)" -eq 0 ]; then
     csplit -n 6 --prefix "$dat_dir/" "$dat_dir.all" '/<machine/' '{*}'
-    find "$dat_dir/" -type f | while read rom_dat_file; do
+    while read rom_dat_file; do
       rom_dat_filename=$(basename "$rom_dat_file")
       rom_name=$(grep -oP "machine name=\"\K[^\"]+" "$rom_dat_file")
       if [ -n "$rom_name" ]; then
         mv "$dat_dir/$rom_dat_filename" "$dat_dir/$rom_name"
       fi
-    done
+    done < <(find "$dat_dir/" -type f )
   fi
 
   # Download languages file
@@ -221,7 +236,7 @@ download() {
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
-  grep -v "$sep[x!]$sep" "$compatibility_file" | cut -d "$sep" -f 1 | while read rom_name; do
+  while read rom_name; do
     emulator=$(grep "^$rom_name$sep" "$compatibility_file" | cut -d "$sep" -f 3)
     if [ "$emulator" == "lr-mame" ]; then
       emulator="lr-mame2016"
@@ -303,11 +318,11 @@ download() {
 
     # Install
     install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
-  done
+  done < <(grep -v "$sep[x!]$sep" "$compatibility_file" | cut -d "$sep" -f 1)
 
-  # Add to root
+  # Add favorites to root
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
-  jq -r ".roms.favorites[]" "$SETTINGS_FILE" | while read rom; do
+  while read rom; do
     ln -fs "$roms_all_dir/$rom" "$roms_dir/$rom"
 
     # Create link for drive as well (if applicable)
@@ -315,7 +330,7 @@ download() {
     if [ -d "$roms_all_dir/$rom_name" ]; then
       ln -fs "$roms_all_dir/$rom_name" "$roms_dir/$rom_name"
     fi
-  done
+  done < <(jq -r ".roms.favorites[]" "$SETTINGS_FILE")
 
   scrape_system "$SYSTEM" "screenscraper"
   scrape_system "$SYSTEM" "arcadedb"
