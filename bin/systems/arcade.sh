@@ -133,7 +133,7 @@ download() {
   dat_dir="$SYSTEM_TMP_DIR/dat"
   rom_xml_file="$SYSTEM_TMP_DIR/rom.xml"
   compatibility_file="$SYSTEM_TMP_DIR/compatibility.tsv"
-  categories_file="$SYSTEM_TMP_DIR/catver.ini"
+  categories_file="$SYSTEM_TMP_DIR/catlist.ini"
   languages_file="$SYSTEM_TMP_DIR/languages.ini"
   names_file="$SYSTEM_TMP_DIR/filtered.csv"
 
@@ -166,6 +166,7 @@ download() {
   if [ ! -f "$categories_file" ]; then
     wget -nc "$(jq -r ".support_files.categories" "$SETTINGS_FILE")" -O "$categories_file.zip"
     unzip -p "$categories_file.zip" "$(jq -r ".support_files.categories_file" "$SETTINGS_FILE")" > "$categories_file"
+    crudini --get --format=lines "$categories_file" > "$categories_file.split"
   fi
 
   # Download compatibility file
@@ -216,7 +217,7 @@ download() {
     fi
 
     # Category
-    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1 || true)
+    category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_file.split" || true)
     if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
