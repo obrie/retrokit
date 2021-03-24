@@ -196,7 +196,7 @@ download() {
       emulator="lr-mame2016"
     fi
     category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1 || true)
-    language=$(grep -oP "^\[\K.*(?= \] $rom_name$)" "$languages_file.split" || true)
+    language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_file.split" || true)
     is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
     description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file")
     control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
@@ -207,7 +207,7 @@ download() {
     if [ $(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
-    if [ $(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\"))" "$SETTINGS_FILE") == 'null' ]; then
+    if [ $(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\"))" "$SETTINGS_FILE") == 'false' ]; then
       continue
     fi
 
@@ -215,7 +215,7 @@ download() {
     if [ $(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
-    if [ ! $(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\"))" "$SETTINGS_FILE") ]; then
+    if [ $(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\"))" "$SETTINGS_FILE") == 'false' ]; then
       continue
     fi
 
@@ -251,7 +251,7 @@ download() {
     if [ $(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE") != 'null' ]; then
       continue
     fi
-    if [ $(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\"))" "$SETTINGS_FILE") == 'null' ]; then
+    if [ $(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\"))" "$SETTINGS_FILE") == 'false' ]; then
       continue
     fi
 
