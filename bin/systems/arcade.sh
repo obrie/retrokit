@@ -239,16 +239,24 @@ download() {
     all_flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
     flags=$(echo "$all_flags" | tail -n +2)
     flag_conditions=$(jq -r ".roms.blocklists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$flag_conditions" ] && [ $(echo "$flags" | grep -oE "$flag_conditions") ]; then
+    if [ -n "$flag_conditions" ] && [ $(echo "$flags" | grep -E "$flag_conditions") ]; then
       continue
     fi
     flag_conditions=$(jq -r ".roms.allowlists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -oE "$flag_conditions") ]; then
+    if [ -n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -E "$flag_conditions") ]; then
       continue
     fi
 
     # Controls
-    control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
+    controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
+    control_conditions=$(jq -r ".roms.blocklists.controls[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    if [ -n "$control_conditions" ] && [ ! $(echo "$controls" | grep -vE "$control_conditions") ]; then
+      continue
+    fi
+    control_conditions=$(jq -r ".roms.allowlists.controls[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    if [ -n "$control_conditions" ] && [ ! $(echo "$controls" | grep -E "$control_conditions") ]; then
+      continue
+    fi
 
     # Name
     if [ "$(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE")" != 'null' ]; then

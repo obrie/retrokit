@@ -62,11 +62,6 @@
         "Sports / Volleyball",
         "Tabletop"
       ],
-      "controls": [
-        "dial",
-        "rotary",
-        "trackball"
-      ],
       "flags": [
         "hack",
         "demo"
@@ -91,6 +86,12 @@
         "undumped",
         "unemulated",
         "pcb"
+      ],
+      "controls": [
+        "gambling",
+        "hanafuda",
+        "mahjong",
+        "trackball"
       ],
       "names": [
         "bjtwin",
