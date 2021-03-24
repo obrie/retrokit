@@ -14,13 +14,13 @@
   },
   "runahead": true,
   "support_files": {
-    "dat": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
+    "dat_url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
     "dat_file": "XML/mame222.xml",
-    "languages": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
+    "languages_url": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
     "languages_file": "folders/languages.ini",
-    "categories": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
+    "categories_url": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
     "categories_file": "catver.ini",
-    "compatibility": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
+    "compatibility_url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
   },
   "roms": {
     "sources": {

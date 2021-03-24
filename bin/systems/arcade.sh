@@ -27,29 +27,32 @@ usage() {
 }
 
 setup() {
-  # Emulators
-  crudini --set /opt/retropie/configs/$SYSTEM/emulators.cfg '' 'default' "\"$(jq -r ".emulators[0]" "$SETTINGS_FILE")\""
-
   # Input Lag
-  if [ $(jq -r ".emulators[0]" "$SETTINGS_FILE") == "true" ]; then
+  if [ $(jq -r ".runahead" "$SETTINGS_FILE") == "true" ]; then
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_enabled' '"true"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_frames' '"1"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
   fi
 
+  # Emulators
+  emulators=($(jq -r ".emulators.installed[]" "$SETTINGS_FILE"))
+
   # Install binary emulators
-  while read emulator; do
+  for emulator in "${emulators[@]}"
     if [ "$emulator" != "lr-mame" ]; then
       sudo ~/RetroPie-Setup/retropie_packages.sh $emulator _binary_
     fi
-  done < <(jq -r ".emulators[]" "$SETTINGS_FILE")
+  done
 
   # Compile lr-mame for a specific rev (or use mame2016)
-  if [ $(jq -r '.emulators | index("lr-fbneo")' "$SETTINGS_FILE") != 'null' ]; then
+  if [ " ${emulators[@]} " == *" $emulator "* ]; then
     lr_mame_branch=$(jq -r ".emulators.\"lr-mame\".branch" "$SETTINGS_FILE")
     sed -i "s/mame.git master/mame.git $lr_mame_branch/g" ~/RetroPie-Setup/scriptmodules/libretrocores/lr-mame.sh
     sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame _source_
   fi
+
+  # Set default
+  crudini --set /opt/retropie/configs/$SYSTEM/emulators.cfg '' 'default' "\"${emulators[0]}\""
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -170,10 +173,15 @@ download() {
   languages_file="$SYSTEM_TMP_DIR/languages.ini"
   names_file="$SYSTEM_TMP_DIR/filtered.csv"
 
+  declare -A support_files
+  while IFS="=" read -r key value; do
+    support_files["$key"]="$value"
+  done < <(jq -r ".support_files | to_entries | map(\"(.key)=(.value)\") | .[]" "$APP_SETTINGS_FILE")
+
   # Download dat file
   if [ ! -f "$dat_dir.all" ]; then
-    wget -nc "$(jq -r ".support_files.dat" "$SETTINGS_FILE")" -O "$dat_dir.7z" || true
-    7z e -so "$dat_dir.7z" "$(jq -r ".support_files.dat_file" "$SETTINGS_FILE")" > "$dat_dir.all"
+    wget -nc "${support_files['dat_url']}" -O "$dat_dir.7z" || true
+    7z e -so "$dat_dir.7z" "${support_files['dat_file']}" > "$dat_dir.all"
   fi
 
   # Split dat file
@@ -190,21 +198,21 @@ download() {
 
   # Download languages file
   if [ ! -f "$languages_file.split" ]; then
-    wget -nc "$(jq -r ".support_files.languages" "$SETTINGS_FILE")" -O "$languages_file.zip" || true
-    unzip -p "$languages_file.zip" "$(jq -r ".support_files.languages_file" "$SETTINGS_FILE")" > "$languages_file"
+    wget -nc "${support_files['languages_url']}" -O "$languages_file.zip" || true
+    unzip -p "$languages_file.zip" "${support_files['languages_file']}" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_file.split"
   fi
 
   # Download categories file
   if [ ! -f "$categories_file" ]; then
-    wget -nc "$(jq -r ".support_files.categories" "$SETTINGS_FILE")" -O "$categories_file.zip" || true
-    unzip -p "$categories_file.zip" "$(jq -r ".support_files.categories_file" "$SETTINGS_FILE")" > "$categories_file"
+    wget -nc "${support_files['categories_url']}" -O "$categories_file.zip" || true
+    unzip -p "$categories_file.zip" "${support_files['categories_file']}" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_file.split"
   fi
 
   # Download compatibility file
   if [ ! -f "$compatibility_file" ]; then
-    wget -nc "$(jq -r ".support_files.compatibility" "$SETTINGS_FILE")" -O "$compatibility_file"
+    wget -nc "${support_files['compatibility_url']}" -O "$compatibility_file"
   fi
 
   # Reset everything
@@ -214,25 +222,26 @@ download() {
   sep=$'\t'
 
   # Overrides
-  favorites=$(jq -r ".roms.favorites" "$SETTINGS_FILE" | tr "\n" "$sep")
+  favorites=$(jq -r ".roms.favorites[]" "$SETTINGS_FILE" | tr "\n" "$sep")
 
   # Blocklists
+  declare -A blocklists
   blocklists_clones=$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
-  blocklists_languages=$(jq -r ".roms.blocklists.languages" "$SETTINGS_FILE" | tr "\n" "$sep")
-  blocklists_categories=$(jq -r ".roms.blocklists.categories" "$SETTINGS_FILE" | tr "\n" "$sep")
-  blocklists_keywords=$(jq -r ".roms.blocklists.keywords" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_flags=$(jq -r ".roms.blocklists.flags" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_controls=$(jq -r ".roms.blocklists.controls" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_names=$(jq -r ".roms.blocklists.names" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_languages=$(jq -r ".roms.blocklists.languages[]" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_categories=$(jq -r ".roms.blocklists.categories[]" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_keywords=$(jq -r ".roms.blocklists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_flags=$(jq -r ".roms.blocklists.flags[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_controls=$(jq -r ".roms.blocklists.controls[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_names=$(jq -r ".roms.blocklists.names[]" "$SETTINGS_FILE" | tr "\n" "$sep")
 
   # Allowlists
   allowlists_clones=$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
-  allowlists_languages=$(jq -r ".roms.allowlists.languages" "$SETTINGS_FILE" | tr "\n" "$sep")
-  allowlists_categories=$(jq -r ".roms.allowlists.categories" "$SETTINGS_FILE" | tr "\n" "$sep")
-  allowlists_keywords=$(jq -r ".roms.allowlists.keywords" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_flags=$(jq -r ".roms.allowlists.flags" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_controls=$(jq -r ".roms.allowlists.controls" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_names=$(jq -r ".roms.allowlists.names" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_languages=$(jq -r ".roms.allowlists.languages[]" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_keywords=$(jq -r ".roms.allowlists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_flags=$(jq -r ".roms.allowlists.flags[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_controls=$(jq -r ".roms.allowlists.controls[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_names=$(jq -r ".roms.allowlists.names[]" "$SETTINGS_FILE" | tr "\n" "$sep")
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
