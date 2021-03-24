@@ -180,6 +180,11 @@ download() {
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
   grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
+    emulator=$(grep "^$rom_name" "$compatibility_file" | cut -d $'\t' -f 3)
+    if [ "$emulator" == "lr-mame" ]; then
+      emulator="lr-mame2016"
+    fi
+
     # Always allow favorites regardless of filter
     if [ $(jq -r ".roms.favorites | index(\"$rom_name\")" "$SETTINGS_FILE") != 'null' ]; then
       install_rom "$rom_name" "$emulator"
@@ -192,27 +197,17 @@ download() {
       continue
     fi
 
-    emulator=$(grep "^$rom_name" "$compatibility_file" | cut -d $'\t' -f 3)
-    if [ "$emulator" == "lr-mame" ]; then
-      emulator="lr-mame2016"
-    fi
-    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1 || true)
-    language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_file.split" || true)
+    # Clone
     is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-    description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file")
-    control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-    all_flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-    flags=$(echo "$all_flags" | tail -n +2)
-
-    # Category
-    if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
+    if [ "$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE")" == "true" ] && [ -n "$is_clone" ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE")" == "false" ] && [ -n "$is_clone" ]; then
       continue
     fi
 
     # Language
+    language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_file.split" || true)
     if [ "$(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
@@ -220,15 +215,17 @@ download() {
       continue
     fi
 
-    # Clone
-    if [ "$(jq -r ".roms.blocklists.clones)" "$SETTINGS_FILE") == "true" ] && [ -n "$is_clone" ]; then
+    # Category
+    category=$(grep -oP "^$rom_name=\K(.*)$" "$categories_file" | head -n 1 || true)
+    if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r ".roms.allowlists.clones)" "$SETTINGS_FILE") == "false" ] && [ -n "$is_clone" ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
     # Keywords
+    description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file")
     keyword_conditions=$(jq -r ".roms.blocklists.keywords[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     if [ -n "$keyword_conditions" ] && [ $(echo "$description" | grep -oE "$keyword_conditions") ]; then
       continue
@@ -239,6 +236,8 @@ download() {
     fi
 
     # Flags
+    all_flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
+    flags=$(echo "$all_flags" | tail -n +2)
     flag_conditions=$(jq -r ".roms.blocklists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     if [ -n "$flag_conditions" ] && [ $(echo "$flags" | grep -oE "$flag_conditions") ]; then
       continue
@@ -247,6 +246,9 @@ download() {
     if [ -n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -oE "$flag_conditions") ]; then
       continue
     fi
+
+    # Controls
+    control_types=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
 
     # Name
     if [ "$(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE")" != 'null' ]; then
