@@ -103,7 +103,6 @@ install_rom() {
       done
 
       # Install sample (if applicable)
-      # TODO: Just check for the sample config?
       sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_dir/$rom_name")
       if [ -n "$sample_name" ]; then
         wget -nc "$samples_source_url$sample_name.zip" -O "$samples_target_dir/$sample_name.zip"
