@@ -276,106 +276,86 @@ download() {
   reset_roms
 
   # Overrides
-  favorites=$(jq -r ".roms.favorites[]" "$settings_file" | tr "\n" "$tab")
+  local favorites=$(jq -r ".roms.favorites[]" "$settings_file" | tr "\n" "$tab")
 
   # Blocklists
   declare -A blocklists
-  blocklists_clones=$(jq -r ".roms.blocklists.clones" "$settings_file")
-  blocklists_languages=$(jq -r ".roms.blocklists.languages[]" "$settings_file" | tr "\n" "$tab")
-  blocklists_categories=$(jq -r ".roms.blocklists.categories[]" "$settings_file" | tr "\n" "$tab")
-  blocklists_keywords=$(jq -r ".roms.blocklists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_flags=$(jq -r ".roms.blocklists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_controls=$(jq -r ".roms.blocklists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  blocklists_names=$(jq -r ".roms.blocklists.names[]" "$settings_file" | tr "\n" "$tab")
+  local blocklists_clones=$(jq -r ".roms.blocklists.clones" "$settings_file")
+  local blocklists_languages=$(jq -r ".roms.blocklists.languages[]" "$settings_file" | tr "\n" "$tab")
+  local blocklists_categories=$(jq -r ".roms.blocklists.categories[]" "$settings_file" | tr "\n" "$tab")
+  local blocklists_keywords=$(jq -r ".roms.blocklists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local blocklists_flags=$(jq -r ".roms.blocklists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local blocklists_controls=$(jq -r ".roms.blocklists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local blocklists_names=$(jq -r ".roms.blocklists.names[]" "$settings_file" | tr "\n" "$tab")
 
   # Allowlists
-  allowlists_clones=$(jq -r ".roms.allowlists.clones" "$settings_file")
-  allowlists_languages=$(jq -r ".roms.allowlists.languages[]" "$settings_file" | tr "\n" "$tab")
-  allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_keywords=$(jq -r ".roms.allowlists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_flags=$(jq -r ".roms.allowlists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_controls=$(jq -r ".roms.allowlists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  allowlists_names=$(jq -r ".roms.allowlists.names[]" "$settings_file" | tr "\n" "$tab")
+  local allowlists_clones=$(jq -r ".roms.allowlists.clones" "$settings_file")
+  local allowlists_languages=$(jq -r ".roms.allowlists.languages[]" "$settings_file" | tr "\n" "$tab")
+  local allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local allowlists_keywords=$(jq -r ".roms.allowlists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local allowlists_flags=$(jq -r ".roms.allowlists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local allowlists_controls=$(jq -r ".roms.allowlists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  local allowlists_names=$(jq -r ".roms.allowlists.names[]" "$settings_file" | tr "\n" "$tab")
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
   while read rom_name; do
-    emulator=$(grep "^$rom_name$tab" "$compatibility_file" | cut -d "$tab" -f 3)
+    local emulator=$(grep "^$rom_name$tab" "$compatibility_file" | cut -d "$tab" -f 3)
     if [ "$emulator" == "lr-mame" ]; then
+      # TODO: Remove this once we have lr-mame integration done
       emulator="lr-mame2016"
     fi
 
     # [Exact match] Always allow favorites regardless of filter
     if [ "$tab$favorites$tab" == *"$tab$rom_name$tab"* ]; then
-      install_rom "$rom_name" "$emulator"
+      install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
       continue
     fi
 
     # Attributes
-    rom_dat_file="$dat_dir/$rom_name"
+    local rom_dat_file="$dat_dir/$rom_name"
     if [ ! -f "$rom_dat_file" ]; then
       continue
     fi
 
     # [Exact match] Clone
-    is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-    if [ "$blocklists_clones" == "true" ] && [ "$is_clone" == "true" ]; then
-      continue
-    fi
-    if [ "$allowlists_clones" == "false" ] && [ "$is_clone" == "false" ]; then
+    local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
+    if [ $(filter_equals "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then
       continue
     fi
 
     # [Exact match] Language
-    language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
-    if [ "$tab$blocklists_languages$tab" == *"$tab$language$tab"* ]; then
-      continue
-    fi
-    if [ "$tab$allowlists_languages$tab" != *"$tab$language$tab"* ]; then
+    local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
+    if [ $(filter_exact_in_list "$blocklists_languages" "$allowlists_languages" "$language") ]; then
       continue
     fi
 
     # [Partial match] Category
     category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
-    if [ -n "$blocklists_categories" ] && [[ "$category" =~ ($blocklists_categories) ]]; then
-      continue
-    fi
-    if [ -n "$allowlists_categories" ] && ! [[ "$category" =~ ($allowlists_categories) ]]; then
+    if [ $(filter_substring_in_list "$blocklists_categories" "$allowlists_categories" "$category") ]; then
       continue
     fi
 
     # [Partial match] Keywords
     description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
-    if [ -n "$blocklists_keywords" ] && [[ "$description" =~ ($blocklists_keywords) ]]; then
-      continue
-    fi
-    if [ -n "$allowlists_keywords" ] && ! [[ "$description" =~ ($allowlists_keywords) ]]; then
+    if [ $(filter_substring_in_list "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then
       continue
     fi
 
-    # [Partial intersection] Flags
+    # [Partial match] Flags
     flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-    if [ -n "$blocklists_flags" ] && [[ "$flags" =~ ($blocklists_flags) ]]; then
-      continue
-    fi
-    if [ -n "$allowlists_flags" ] && ! [[ "$flags" =~ ($allowlists_flags) ]]; then
+    if [ $(filter_substring_in_list "$blocklists_flags" "$allowlists_flags" "$flags") ]; then
       continue
     fi
 
     # [Partial intersection] Controls
     controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-    if [ -n "$blocklists_control" ] && [[ "$controls" =~ ($blocklists_control) ]]; then
-      continue
-    fi
-    if [ -n "$allowlists_controls" ] && ! [[ "$controls" =~ ($allowlists_controls) ]]; then
+    if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then
       continue
     fi
 
     # [Exact match] Name
-    if [ "$tab$blocklists_names$tab" == *"$tab$rom_name$tab"* ]; then
-      continue
-    fi
-    if [ "$tab$allowlists_names$tab" != *"$tab$rom_name$tab"* ]; then
+    if [ $(filter_exact_in_list "$blocklists_names" "$allowlists_names" "$rom_name") ]; then
       continue
     fi
 
