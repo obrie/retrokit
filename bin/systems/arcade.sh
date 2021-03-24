@@ -82,7 +82,12 @@ install_rom() {
   mkdir -p "$roms_source_dir"
 
   # Source: Samples
-  samples_source_url="$source_url$(jq -r ".sources.\"$source_name\".samples" "$APP_SETTINGS_FILE")"
+  samples_source_path=$(jq -r ".sources.\"$source_name\".samples" "$APP_SETTINGS_FILE")
+  if [ $(grep -E "^http" "$samples_source_path") ]; then
+    samples_source_url="$samples_source_path"
+  else
+    samples_source_url="$source_url$samples_source_path"
+  fi
   samples_target_dir="/home/pi/RetroPie/BIOS/$source_core/samples"
   mkdir -p "$samples_target_dir"
 
