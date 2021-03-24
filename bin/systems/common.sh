@@ -12,7 +12,7 @@ export tmp_dir="$app_dir/tmp"
 
 # Settings
 export app_settings_file="$app_dir/config/settings.json"
-export sep=$'\t'
+export tab=$'\t'
 
 # Configurations
 export retroarch_cores_config="/opt/retropie/configs/all/retroarch-core-options.cfg"
