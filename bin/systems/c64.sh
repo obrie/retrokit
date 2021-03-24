@@ -6,12 +6,14 @@
 
 set -ex
 
-DIR=$( dirname "$0" )
-. $DIR/common.sh
+dir=$( dirname "$0" )
+. $dir/common.sh
 
-SYSTEM="c64"
-CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
-SETTINGS_FILE="$CONFIG_DIR/settings.json"
+# System settings
+system="c64"
+
+# Configurations
+retroarch_config="/opt/retropie/configs/$system/emulators.cfg"
 
 usage() {
   echo "usage: $0 <setup|download>"
@@ -21,35 +23,25 @@ usage() {
 setup() {
   # Install packages
   if [ ! -d "/opt/retropie/libretrocores/lr-vice/" ]; then
-    sudo ~/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
+    sudo $HOME/RetroPie-Setup/retropie_packages.sh lr-vice _binary_
   fi
 
   # Emulators
-  crudini --set "/opt/retropie/configs/$SYSTEM/emulators.cfg" '' 'default' '"lr-vice"'
+  crudini --set "$retroarch_config" '' 'default' '"lr-vice"'
 
   # Enable fast startup
-  crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_autoloadwarp' '"enabled"'
+  crudini --set "$retroarch_cores_config" '' 'vice_autoloadwarp' '"enabled"'
 
-  # Default Start command
-  crudini --set /opt/retropie/configs/all/retroarch-core-options.cfg '' 'vice_mapper_start' '"RETROK_F1"'
+  # Default start command
+  crudini --set "$retroarch_cores_config" '' 'vice_mapper_start' '"RETROK_F1"'
 
-  setup_system "$SYSTEM"
+  setup_system "$system"
 }
 
 download() {
-  # Target
-  roms_dir="/home/pi/RetroPie/roms/$SYSTEM"
-  roms_all_dir="$roms_dir/-ALL-"
-
-  if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
-    # Download according to settings file
-    download_system "$SYSTEM"
-  else
-    echo "$roms_all_dir is not empty: skipping download"
-  fi
-
-  organize_system "$SYSTEM"
-  scrape_system "$SYSTEM" "screenscraper"
+  download_system "$system"
+  organize_system "$system"
+  scrape_system "$system" "screenscraper"
   theme_system "C64"
 }
 

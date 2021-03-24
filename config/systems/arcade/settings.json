@@ -8,9 +8,6 @@
     "advmame": {},
     "lr-mame": {"build": "source", "branch": "lrmame0222"}
   },
-  "options": {
-    "runahead": true
-  },
   "support_files": {
     "dat_url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
     "dat_file": "XML/mame222.xml",

@@ -4,16 +4,25 @@
 # Common functions used across system installs
 ##############
 
-export DIR=$(dirname "$0")
-export APP_DIR=$(cd "$DIR/../.." && pwd)
-export APP_SETTINGS_FILE="$APP_DIR/config/settings.json"
-export DATA_DIR="$APP_DIR/data"
-export TMP_DIR="$APP_DIR/tmp"
+# Directories
+export dir=$(dirname "$0")
+export app_dir=$(cd "$dir/../.." && pwd)
+export data_dir="$app_dir/data"
+export tmp_dir="$app_dir/tmp"
+
+# Settings
+export app_settings_file="$app_dir/config/settings.json"
+export sep=$'\t'
+
+# Configurations
+export retroarch_cores_config="/opt/retropie/configs/all/retroarch-core-options.cfg"
+export es_settings_config="$HOME/.emulationstation/es_systems.cfg"
+export es_systems_config="$HOME/.emulationstation/es_systems.cfg"
 
 scrape_system() {
   # Arguments
-  system="$1"
-  source="$2"
+  local system="$1"
+  local source="$2"
 
   # Kill emulation station
   killall /opt/retropie/supplementary/emulationstation/emulationstation
@@ -27,23 +36,24 @@ scrape_system() {
 
 setup_system() {
   # Arguments
-  system="$1"
+  local system="$1"
 
   # Configuration
-  system_config_dir="$APP_DIR/config/systems/$system"
-  system_settings_file="$system_config_dir/settings.json"
+  local system_config_dir="$app_dir/config/systems/$system"
+  local system_settings_file="$system_config_dir/settings.json"
 
   if [ $(jq -r 'has("emulators")' "$system_settings_file") = "true" ]; then
     jq -r '.emulators[]' "$system_settings_file" | while read emulator; do
       # Retroarch
-      retropie_configs_dir="/opt/retropie/configs/all"
-      emulator_config_dir="$retropie_configs_dir/retroarch/config/$emulator"
+      local retropie_configs_dir="/opt/retropie/configs/all"
+      local emulator_config_dir="$retropie_configs_dir/retroarch/config/$emulator"
       mkdir -p "$emulator_config_dir"
 
       # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
       find "$system_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
-        opt_name=$(basename "$override_file")
-        opt_file="$emulator_config_dir/$opt_name"
+        local opt_name=$(basename "$override_file")
+        local opt_file="$emulator_config_dir/$opt_name"
+        
         touch "$opt_file"
         crudini --merge --output="$opt_file" "$retropie_configs_dir/retroarch-core-options.cfg" < "$override_file"
       done
@@ -53,14 +63,14 @@ setup_system() {
 
 download_file() {
   # Arguments
-  url="$1"
-  output="$2"
+  local url="$1"
+  local output="$2"
 
   if [ ! -f "$output" ]; then
     if [[ "$url" == *"https://archive.org/download/"* ]]; then
       # Need to make sure we use the `ia` command-line
-      item=$(echo "$url" | grep -oP "download/\K[^/]+")
-      file=$(echo "$url" | grep -oP "$item/\K.+$")
+      local item=$(echo "$url" | grep -oP "download/\K[^/]+")
+      local file=$(echo "$url" | grep -oP "$item/\K.+$")
       ia download "$item" "$file" -s > "$output"
     else
       wget "$url" -O "$output"
@@ -71,28 +81,29 @@ download_file() {
 # TODO: Smarter file lists
 download_source() {
   # Arguments
-  system="$1"
-  source_name="$2"
+  local system="$1"
+  local source_name="$2"
 
   # Configuration
-  system_config_dir="$APP_DIR/config/systems/$system"
-  system_settings_file="$system_config_dir/settings.json"
-  system_tmp_dir="$TMP_DIR/$system"
+  local system_config_dir="$app_dir/config/systems/$system"
+  local system_settings_file="$system_config_dir/settings.json"
+  local system_tmp_dir="$tmp_dir/$system"
   mkdir -p "$system_tmp_dir"
 
   # Source
-  source_type=$(jq -r ".sources.\"$source_name\".type" "$APP_SETTINGS_FILE")
-  source_url=$(jq -r ".sources.\"$source_name\".url" "$APP_SETTINGS_FILE")
-  source_root_dir=$(jq -r ".sources.\"$source_name\".root_dir" "$APP_SETTINGS_FILE")
-  source_unzip=$(jq -r ".sources.\"$source_name\".unzip" "$APP_SETTINGS_FILE")
+  local source_type=$(jq -r ".sources.\"$source_name\".type" "$app_settings_file")
+  local source_url=$(jq -r ".sources.\"$source_name\".url" "$app_settings_file")
+  local source_root_dir=$(jq -r ".sources.\"$source_name\".root_dir" "$app_settings_file")
+  local source_unzip=$(jq -r ".sources.\"$source_name\".unzip" "$app_settings_file")
 
   # Source Filter
-  source_filter="$system_tmp_dir/files.filter"
+  local source_filter="$system_tmp_dir/files.filter"
+  local roms_all_dir
   if [ "$(jq -r ".roms.sources.\"$source_name\" | has(\"files\")" "$system_settings_file")" = "true" ]; then
     jq -r "if .roms.sources.\"$source_name\" | has(\"files\") then .roms.sources.\"$source_name\".files[] else [] end" "$system_settings_file" > "$source_filter"
-    roms_all_dir="/home/pi/RetroPie/roms/$system/-ALL-"
+    roms_all_dir="$HOME/RetroPie/roms/$system/-ALL-"
   else
-    roms_all_dir="/home/pi/RetroPie/roms/$system"
+    roms_all_dir="$HOME/RetroPie/roms/$system"
   fi
 
   # Target
@@ -100,16 +111,16 @@ download_source() {
 
   if [ "$source_type" = "torrent" ]; then
     # Torrent Info
-    torrent_file="$TMP_DIR/$source_name.torrent"
+    local torrent_file="$tmp_dir/$source_name.torrent"
 
     # Download target
-    rom_source_dir="/var/lib/transmission-daemon/downloads/$source_root_dir"
+    local rom_source_dir="/var/lib/transmission-daemon/downloads/$source_root_dir"
 
     # Download torrent
     download_file "$source_url" "$torrent_file"
-    "$APP_DIR/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
+    "$app_dir/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
   elif [ "$source_type" = "http" ]; then
-    rom_source_dir="$system_tmp_dir/downloads"
+    local rom_source_dir="$system_tmp_dir/downloads"
     mkdir -p "$rom_source_dir"
 
     # Download URLs
@@ -133,11 +144,11 @@ download_source() {
 
 download_system() {
   # Arguments
-  system="$1"
+  local system="$1"
 
   # Configuration
-  system_config_dir="$APP_DIR/config/systems/$system"
-  system_settings_file="$system_config_dir/settings.json"
+  local system_config_dir="$app_dir/config/systems/$system"
+  local system_settings_file="$system_config_dir/settings.json"
 
   jq -r '.roms.sources | keys[]' "$system_settings_file" | while read source_name; do
     download_source "$system" "$source_name"
@@ -146,17 +157,17 @@ download_system() {
 
 organize_system() {
   # Arguments
-  system="$1"
+  local system="$1"
 
   # Configuration
-  system_config_dir="$APP_DIR/config/systems/$system"
-  system_settings_file="$system_config_dir/settings.json"
+  local system_config_dir="$app_dir/config/systems/$system"
+  local system_settings_file="$system_config_dir/settings.json"
 
   # Target
-  roms_dir="/home/pi/RetroPie/roms/$system"
-  roms_all_dir="$roms_dir/-ALL-"
-  roms_blocked_dir="$roms_dir/.blocked"
-  roms_duplicates_dir="$roms_dir/.duplicates"
+  local roms_dir="$HOME/RetroPie/roms/$system"
+  local roms_all_dir="$roms_dir/-ALL-"
+  local roms_blocked_dir="$roms_dir/.blocked"
+  local roms_duplicates_dir="$roms_dir/.duplicates"
   mkdir -p "$roms_all_dir" "$roms_blocked_dir" "$roms_duplicates_dir"
 
   # Move everything back into ALL so we can start from scratch
@@ -165,14 +176,14 @@ organize_system() {
   # Allowlist
   # - Keywords
   if [ $(jq -r '.roms.allowlists | has("keywords")' "$system_settings_file") = "true" ]; then
-    keywords=$(jq -r '.roms.allowlists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    local keywords=$(jq -r '.roms.allowlists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended ! -regex ".*($keywords).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
   # Blocklist
   # - Keywords
   if [ $(jq -r '.roms.blocklists | has("keywords")' "$system_settings_file") = "true" ]; then
-    blocklist=$(jq -r '.roms.blocklists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    local blocklist=$(jq -r '.roms.blocklists.keywords[]' "$system_settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     find "$roms_all_dir/" -mindepth 1 -regextype posix-extended -regex ".*($blocklist).*" -exec mv "{}" "$roms_blocked_dir/" \;
   fi
 
@@ -201,8 +212,8 @@ organize_system() {
 }
 
 theme_system() {
-  theme="$1"
-  bezelproject_bin=/home/pi/RetroPie/retropiemenu/bezelproject.sh
+  local theme="$1"
+  local bezelproject_bin=$HOME/RetroPie/retropiemenu/bezelproject.sh
   
   "$bezelproject_bin" install_bezel_packsa "$theme" "thebezelproject"
   "$bezelproject_bin" install_bezel_pack "$theme" "thebezelproject"

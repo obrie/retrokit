@@ -2,19 +2,44 @@
 
 set -ex
 
-DIR=$(dirname "$0")
-APP_DIR=$(cd "$DIR/.." && pwd)
-CONFIG_DIR="$CONFIG_DIR"
-SETTINGS_FILE="$CONFIG_DIR/settings.json"
+# Directories
+dir=$(dirname "$0")
+app_dir=$(cd "$dir/.." && pwd)
+config_dir="$app_dir/config"
+tmp_dir="$app_dir/tmp"
+
+# App settings files
+settings_file="$config_dir/settings.json"
+
+# System files
+boot_config="/boot/config.txt"
+es_settings_config="$HOME/.emulationstation/es_settings.cfg"
+
+usage() {
+  echo "usage: $0 [command]"
+  exit 1
+}
+
+backup() {
+  for file in "$@"; do
+    if [ ! -f "$file" ]; then
+      sudo cp "$file" "$file.orig"
+    fi
+  done
+}
 
 prepare() {
   # Make sure emulation station isn't running
   killall /opt/retropie/supplementary/emulationstation/emulationstation
 }
 
+backup_common_configs() {
+  backup "$boot_config" "$es_settings_config"
+}
+
 setup_wifi() {
   # Disable wifi (assuming wired)
-  crudini --set /boot/config.txt '' 'dtoverlay' 'disable-wifi'
+  crudini --set "$boot_config" '' 'dtoverlay' 'disable-wifi'
 
   # ...or enable wifi (NOTE: Connect over 2.4ghz, not 5ghz):
   # sudo raspi-config
@@ -30,25 +55,22 @@ install_config_tools() {
   sudo pip3 install crudini
 
   # Env editor
-  mkdir -p ~/tools
-  wget https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O ~/tools/dotenv
-  . dotenv
+  wget -nc https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -O "$tmp_dir/dotenv" || true
+  . "$tmp_dir/dotenv"
 
   # JSON reader
   sudo apt install jq
 }
 
 install_torrent_tools() {
-  transmission_settings_file=/etc/transmission-daemon/settings.json
+  local transmission_settings_file=/etc/transmission-daemon/settings.json
 
   # BitTorrent client
   sudo apt install transmission-daemon
   sudo systemctl stop transmission-daemon
 
   # Keep original config
-  if [ ! -f "$transmission_settings_file.original" ]; then
-    sudo cp "$transmission_settings_file" "$transmission_settings_file.original"
-  fi
+  backup "$transmission_settings_file"
 
   # Allow access without authentication
   sudo sh -c "\
@@ -56,7 +78,7 @@ install_torrent_tools() {
       .\"rpc-whitelist-enabled\" = false |\
       .\"rpc-authentication-required\" = false |\
       .\"start-added-torrents\" = false\
-    ' "$$transmission_settings_file" > "$transmission_settings_file"\
+    ' "$transmission_settings_file" > "$transmission_settings_file"\
   "
   sudo systemctl start transmission-daemon
 }
@@ -65,7 +87,7 @@ install_http_tools() {
   # Internet Archive CLI
   sudo wget https://archive.org/download/ia-pex/ia -O /usr/local/bin/ia
   sudo chmod +x /usr/local/bin/ia
-  ia configure -u "jq -r '.internetarchive.username' "$SETTINGS_FILE"" -p ".internetarchive.password"
+  ia configure -u "$(jq -r '.internetarchive.username' \"$settings_file\")" -p "$(jq -r '.internetarchive.password' \"$settings_file\")"
 }
 
 install_developer_tools() {
@@ -75,7 +97,8 @@ install_developer_tools() {
   # Screen
   sudo apt install screen
 
-  $APP_DIR/bin/tools/clrmamepro.sh install
+  # Rom Set tools
+  $app_dir/bin/tools/romset.sh install
 }
 
 setup_case() {
@@ -83,10 +106,10 @@ setup_case() {
   curl https://download.argon40.com/argon1.sh | bash
 
   # Fix HDMI w/ Argon case (https://forum.libreelec.tv/thread/22079-rpi4-no-hdmi-sound-using-argon-one-case/):
-  crudini --set /boot/config.txt '' 'hdmi_force_hotplug' '1'
-  crudini --set /boot/config.txt '' 'hdmi_group' '1'
-  crudini --set /boot/config.txt '' 'hdmi_mode' '16'
-  crudini --set /boot/config.txt '' 'hdmi_ignore_edid' '0xa5000080'
+  crudini --set "$boot_config" '' 'hdmi_force_hotplug' '1'
+  crudini --set "$boot_config" '' 'hdmi_group' '1'
+  crudini --set "$boot_config" '' 'hdmi_mode' '16'
+  crudini --set "$boot_config" '' 'hdmi_ignore_edid' '0xa5000080'
 
   # Set up power button
   # python <<eof
@@ -109,208 +132,223 @@ setup_case() {
 }
 
 setup_remote() {
+  local rc_maps_config="/etc/rc_maps.cfg"
+  local rc_keymaps_config="/etc/rc_keymaps/retropie.toml"
+
+  backup "$rc_maps_config"
+
   # Add IR support
-  sed '/retropie/d' -i /etc/rc_maps.cfg
-  cat '* rc-retropie retropie.toml' > /etc/rc_maps.cfg
-  cp "$CONFIG_DIR/remote.toml" /etc/rc_keymaps/retropie.toml
-  crudini --set /boot/config.txt '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
+  sed -i '/retropie/d' "$rc_maps_config"
+  cat '* rc-retropie retropie.toml' > "$rc_maps_config"
+  cp "$config_dir/remote.toml" "$rc_keymaps_config"
+  crudini --set "$boot_config" '' 'dtoverlay' 'gpio-ir,gpio_pin=23,rc-map-name=rc-retropie'
 
   # Load
-  sudo ir-keytable -t -w /etc/rc_keymaps/retropie.toml
+  sudo ir-keytable -t -w "$rc_keymaps_config"
 }
 
-##############
-# Performance
-##############
+setup_performance_optimizations() {
+  # Overclock
+  crudini --set "$boot_config" 'pi4' 'over_voltage' '2'
+  crudini --set "$boot_config" 'pi4' 'arm_freq' '1750'
 
-# Overclock
-crudini --set /boot/config.txt 'pi4' 'over_voltage' '2'
-crudini --set /boot/config.txt 'pi4' 'arm_freq' '1750'
+  # Graphics
+  sudo apt install mesa-utils
+}
 
-# Graphics
-sudo apt install mesa-utils
+setup_remote_access() {
+  # SSH
+  sudo systemctl enable ssh
+  sudo systemctl start ssh
+}
 
-##############
-# Networking
-##############
+setup_display() {
+  # Font Size
+  .env -f /etc/default/console-setup set FONTSIZE='"16x32"'
 
-# SSH
-sudo systemctl enable ssh
-sudo systemctl start ssh
+  # Overscan
+  crudini --set "$boot_config" '' 'disable_overscan' '1'
 
-##############
-# User Interface
-##############
+  # Video player
+  sed -r -i 's/(<string name="VideoOmxPlayer" value=")([^"]*)/\1true/' "$es_settings_config"
+}
 
-# Font Size
-.env -f /etc/default/console-setup set FONTSIZE='"16x32"'
+setup_audio() {
+  # Turn off menu sounds
+  sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' "$es_settings_config"
+}
 
-# Overscan
-crudini --set /boot/config.txt '' 'disable_overscan' '1'
+setup_screensaver() {
+  # Disable
+  sed -r -i 's/(<string name="ScreenSaverTime" value=")([^"]*)/\10/' "$es_settings_config"
+  sed -r -i 's/(<string name="SystemSleepTime" value=")([^"]*)/\10/' "$es_settings_config"
+}
 
-sed -r -i 's/(<string name="VideoOmxPlayer" value=")([^"]*)/\1true/' /home/pi/.emulationstation/es_settings.cfg
+setup_locale() {
+  local timezone=$(jq -r '.locale.timezone' "$settings_file")
+  local language=$(jq -r '.locale.language' "$settings_file")
+  
+  backup /etc/timezone /etc/locale.gen /etc/default/locale
 
-##############
-# Audio
-##############
+  sudo sh -c "echo '$timezone' > /etc/timezone"
+  sudo dpkg-reconfigure -f noninteractive tzdata
+  sudo sed -i -e "s/# $language.UTF-8 UTF-8/$language.UTF-8 UTF-8/" /etc/locale.gen
+  sudo sh -c "echo 'LANG=\"$language.UTF-8\"' > /etc/default/locale"
+  sudo dpkg-reconfigure --frontend=noninteractive locales
+  sudo update-locale LANG=$language.UTF-8
+}
 
-# Turn off menu sounds
-sed -r -i 's/(<string name="EnableSounds" value=")([^"]*)/\1false/' /home/pi/.emulationstation/es_settings.cfg
+setup_splashscreen() {
+  backup /opt/retropie/configs/all/splashscreen.cfg /etc/splashscreen.list
 
-##############
-# Screensaver
-##############
+  # Splash Screen
+  local duration=$(jq -r '.splashscreen.duration' "$settings_file")
+  .env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION="\"$duration\""
 
-# Disable
-sed -r -i 's/(<string name="ScreenSaverTime" value=")([^"]*)/\10/' /home/pi/.emulationstation/es_settings.cfg
-sed -r -i 's/(<string name="SystemSleepTime" value=")([^"]*)/\10/' /home/pi/.emulationstation/es_settings.cfg
+  # Media
+  if [ "$(jq -r '.splashscreen | has("url")' "$settings_file")" == "true" ]; then
+    wget -nc "$(jq -r '.splashscreen.url' "$settings_file")" -O $HOME/RetroPie/splashscreens/splash.mp4
+    echo "$HOME/RetroPie/splashscreens/splash.mp4" > /etc/splashscreen.list
+  fi
+}
 
-##############
-# Locale
-##############
 
-timezone=$(jq -r '.locale.timezone' "$SETTINGS_FILE")
-language=$(jq -r '.locale.language' "$SETTINGS_FILE")
-sudo sh -c "echo '$timezone' > /etc/timezone"
-sudo dpkg-reconfigure -f noninteractive tzdata
-sudo sed -i -e "s/# $language.UTF-8 UTF-8/$language.UTF-8 UTF-8/" /etc/locale.gen
-sudo sh -c "echo 'LANG=\"$language.UTF-8\"' > /etc/default/locale"
-sudo dpkg-reconfigure --frontend=noninteractive locales
-sudo update-locale LANG=$language.UTF-8
-
-##############
-# Boot
-##############
-
-# Splash Screen
-duration=$(jq -r '.splashscreen.duration' "$SETTINGS_FILE")
-.env -f /opt/retropie/configs/all/splashscreen.cfg set DURATION="\"$duration\""
-
-# Media
-if [ $(jq -r '.splashscreen | has("url")' "$SETTINGS_FILE") = "true" ]; then
-  wget -nc "$(jq -r '.splashscreen.url' "$SETTINGS_FILE")" -O /home/pi/RetroPie/splashscreens/splash.mp4
-  echo "/home/pi/RetroPie/splashscreens/splash.mp4" > /etc/splashscreen.list
-fi
-
-##############
 # Scraper
 # 
 # Instructions: https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper
 # Configs:
 # * /opt/retropie/configs/all/skyscraper.cfg
 # * /opt/retropie/configs/all/skyscraper/config.ini
-##############
+setup_scraper() {
+  $HOME/RetroPie-Setup/retropie_packages.sh skyscraper _binary_
 
-~/RetroPie-Setup/retropie_packages.sh skyscraper _binary_
+  local skyscraper_config=/opt/retropie/configs/all/skyscraper/config.ini
+  local skyscraper_retropie_config=/opt/retropie/configs/all/skyscraper.cfg
+  backup "$skyscraper_config" "$skyscraper_retropie_config"
 
-regions=$(jq -r '.skyscraper.regions' "$SETTINGS_FILE")
-username=$(jq -r '.skyscraper.username' "$SETTINGS_FILE")
-password=$(jq -r '.skyscraper.password' "$SETTINGS_FILE")
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets' '"false"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'gameListFolder' '"/home/pi/.emulationstation/gamelists"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'mediaFolder' '"/home/pi/.emulationstation/downloaded_media"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'regionPrios' "\"$regions\""
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'skipped' '"true"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'symlink' '"true"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'unattend' '"true"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'verbosity' '"3"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'main' 'videos' '"true"'
-crudini --set /opt/retropie/configs/all/skyscraper/config.ini 'screenscraper' 'userCreds' "\"$username:$password\""
-crudini --set /opt/retropie/configs/all/skyscraper.cfg '' 'download_videos' '"1"'
-
-##############
-# Inputs
-##############
-
-cp $CONFIG_DIR/inputs.cfg ~/.emulationstation/es_input.cfg
-
-##############
-# Input Performance
-##############
-
-# Enable run-ahead
-for system in arcade nes snes; do
-  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_enabled' '"true"'
-  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_frames' '"1"'
-  crudini --set /opt/retropie/configs/$system/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
-done
-
-##############
-# Fix inputs
-##############
-
-sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/config.ini
-sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /boot/config.txt
-
-##############
-# Overlays (Bezels)
-##############
-
-bezelproject_bin=/home/pi/RetroPie/retropiemenu/bezelproject.sh
-wget -nc https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -O "$bezelproject_bin"
-chmod +x "$bezelproject_bin"
-
-# Patch to allow non-interactive mode
-sed -i -r -z 's/# Welcome.*\|\| exit/if [ -z "$1" ]; then\n\0\nfi/g' "$bezelproject_bin"
-sed -i -z 's/# Main\n\nmain_menu/# Main\n\n"${1:-main_menu}" "${@:2}"/g' "$bezelproject_bin"
-
-##############
-# Systems
-##############
-
-# Build system order
-system_default_config=/etc/emulationstation/es_systems.cfg
-system_override_config=/home/pi/.emulationstation/es_systems.cfg
-printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
-
-jq -r '.systems[]' "$SETTINGS_FILE" | while read system; do
-  xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
-  printf '\n' >> "$system_override_config"
-done
-system_conditions=$(jq -r '.systems[]' "$SETTINGS_FILE" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
-xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
-printf '</systemList>\n' >> "$system_override_config"
-
-# Set up systems
-for system in $DIR/systems/*; do
-  $system setup
-done
-
-##############
-# Themes
-##############
-
-# Install themes
-$(jq -r '.themes.library[] | (.name + " " + .repo)' "$SETTINGS_FILE") | while read theme; do
-  sudo ~/RetroPie-Setup/retropie_packages.sh esthemes install_theme $theme
-done
-
-# Set active theme
-active_theme_name=$(jq -r '.themes.active' "$SETTINGS_FILE")
-sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" /home/pi/.emulationstation/es_settings.cfg
-
-# Install launch images
-launch_theme=$(jq -r '.themes.launch_theme' "$SETTINGS_FILE")
-launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
-for system in $DIR/systems/*; do
-  system_name=$(basename -s .sh "$system")
-  if [ "$system_name" = "megadrive" ]; then
-    system_image_name="genesis"
-  else
-    system_image_name="$system_name"
-  fi
+  local regions=$(jq -r '.skyscraper.regions' "$settings_file")
+  local username=$(jq -r '.skyscraper.username' "$settings_file")
+  local password=$(jq -r '.skyscraper.password' "$settings_file")
   
-  wget -nc "$(printf "$launch_images_base_url" "$system_image_name")" -P "/opt/retropie/configs/$system_name/" || true
-done
+  crudini --set "$skyscraper_config" 'main' 'brackets' '"false"'
+  crudini --set "$skyscraper_config" 'main' 'gameListFolder' "\"$HOME/.emulationstation/gamelists\""
+  crudini --set "$skyscraper_config" 'main' 'mediaFolder' "\"$HOME/.emulationstation/downloaded_media\""
+  crudini --set "$skyscraper_config" 'main' 'regionPrios' "\"$regions\""
+  crudini --set "$skyscraper_config" 'main' 'skipped' '"true"'
+  crudini --set "$skyscraper_config" 'main' 'symlink' '"true"'
+  crudini --set "$skyscraper_config" 'main' 'unattend' '"true"'
+  crudini --set "$skyscraper_config" 'main' 'verbosity' '"3"'
+  crudini --set "$skyscraper_config" 'main' 'videos' '"true"'
+  crudini --set "$skyscraper_config" 'screenscraper' 'userCreds' "\"$username:$password\""
+  crudini --set "$skyscraper_retropie_config" '' 'download_videos' '"1"'
+}
 
-##############
-# Reload
-##############
+setup_inputs() {
+  local input_config="$HOME/.emulationstation/es_input.cfg"
+  backup "$input_config"
 
-emulationstation
+  cp "$config_dir/inputs.cfg" "$input_config"
+}
 
-##############
-# Manual
-##############
+# Fixes ini files to follow retropie format
+fix_configurations() {
+  sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/config.ini
+  sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" "$boot_config"
+}
 
-# Configure Inputs (Controllers)
+setup_overlays() {
+  local bezelproject_bin="$HOME/RetroPie/retropiemenu/bezelproject.sh"
+  wget -nc https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -O "$bezelproject_bin"
+  chmod +x "$bezelproject_bin"
+
+  # Patch to allow non-interactive mode
+  sed -i -r -z 's/# Welcome.*\|\| exit/if [ -z "$1" ]; then\n\0\nfi/g' "$bezelproject_bin"
+  sed -i -z 's/# Main\n\nmain_menu/# Main\n\n"${1:-main_menu}" "${@:2}"/g' "$bezelproject_bin"
+}
+
+setup_menus() {
+  # Build system order
+  local system_default_config=/etc/emulationstation/es_systems.cfg
+  local system_override_config=$HOME/.emulationstation/es_systems.cfg
+  printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
+
+  # Add primary systems used by retrokit
+  while read system; do
+    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
+    printf '\n' >> "$system_override_config"
+  done < <(jq -r '.systems[]' "$settings_file")
+
+  # Add remaining systems
+  system_conditions=$(jq -r '.systems[]' "$settings_file" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
+  xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
+  printf '</systemList>\n' >> "$system_override_config"
+}
+
+setup_systems() {
+  for system in $dir/systems/*; do
+    $system setup
+  done
+}
+
+setup_themes() {
+  # Install themes
+  $(jq -r '.themes.library[] | (.name + " " + .repo)' "$settings_file") | xargs -I{} sudo $HOME/RetroPie-Setup/retropie_packages.sh esthemes install_theme {}
+
+  # Set active theme
+  active_theme_name=$(jq -r '.themes.active' "$settings_file")
+  sed -r -i "s/(<string name=\"ThemeSet\" value=\")([^\"]*)/\1$active_theme_name/" "$es_settings_config"
+
+  # Install launch images
+  launch_theme=$(jq -r '.themes.launch_theme' "$settings_file")
+  launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
+  for system in $dir/systems/*; do
+    system_name=$(basename -s .sh "$system")
+    if [ "$system_name" == "megadrive" ]; then
+      system_image_name="genesis"
+    else
+      system_image_name="$system_name"
+    fi
+    
+    wget -nc "$(printf "$launch_images_base_url" "$system_image_name")" -P "/opt/retropie/configs/$system_name/" || true
+  done
+} 
+
+function reload() {
+  emulationstation
+}
+
+function main() {
+  prepare
+  backup_common_configs
+  setup_wifi
+  upgrade
+  install_config_tools
+  install_torrent_tools
+  install_http_tools
+  install_developer_tools
+  setup_case
+  setup_remote
+  setup_performance_optimizations
+  setup_remote_access
+  setup_display
+  setup_audio
+  setup_screensaver
+  setup_locale
+  setup_splashscreen
+  setup_scraper
+  setup_inputs
+
+  fix_configurations
+
+  setup_overlays
+  setup_menus
+  setup_systems
+  setup_themes
+  reload
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+fi
+
+main "$@"

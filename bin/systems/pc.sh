@@ -7,17 +7,16 @@
 # * ~/.dosbox/dosbox-SVN.conf
 ##############
 
-DIR=$( dirname "$0" )
-. $DIR/common.sh
+dir=$( dirname "$0" )
+. $dir/common.sh
 
-SYSTEM="nes"
-CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
-SETTINGS_FILE="$CONFIG_DIR/settings.json"
+# System settings
+system="nes"
 
 setup() {
   # Install emulators
-  sudo ~/RetroPie-Setup/retropie_packages.sh dosbox _binary_
-  sudo ~/RetroPie-Setup/retropie_packages.sh lr-dosbox-pure _binary_
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh dosbox _binary_
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh lr-dosbox-pure _binary_
 
   # Sound driver
   sudo apt install fluid-soundfont-gm
@@ -26,9 +25,7 @@ setup() {
 }
 
 download() {
-  # Download according to settings file
-  download_system "$SYSTEM"
-
+  download_system "$system"
   theme_system "PC"
 
   # Additional system-specific logic
@@ -156,7 +153,7 @@ download() {
 
 
 scrape() {
-  scrape_system "$SYSTEM"
+  scrape_system "$system"
 }
 
 if [[ $# -lt 1 ]]; then

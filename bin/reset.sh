@@ -13,7 +13,7 @@ usage() {
 
 # Reset inputs
 reset_inputs() {
-  sudo ~/RetroPie-Setup/retropie_packages.sh emulationstation init_input
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh emulationstation init_input
 }
 
 if [[ $# -ne 0 ]]; then

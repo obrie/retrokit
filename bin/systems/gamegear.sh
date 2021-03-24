@@ -6,12 +6,14 @@
 
 set -ex
 
-DIR=$( dirname "$0" )
-. $DIR/common.sh
+dir=$( dirname "$0" )
+. $dir/common.sh
 
-SYSTEM="gamegear"
-CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
-SETTINGS_FILE="$CONFIG_DIR/settings.json"
+# System settings
+system="gamegear"
+
+# Configurations
+retroarch_config="/opt/retropie/configs/$system/emulators.cfg"
 
 usage() {
   echo "usage: $0 <setup|download>"
@@ -20,25 +22,15 @@ usage() {
 
 setup() {
   # Emulators
-  crudini --set "/opt/retropie/configs/$SYSTEM/emulators.cfg" '' 'default' '"lr-genesis-plus-gx"'
+  crudini --set "$retroarch_config" '' 'default' '"lr-genesis-plus-gx"'
 
-  setup_system "$SYSTEM"
+  setup_system "$system"
 }
 
 download() {
-  # Target
-  roms_dir="/home/pi/RetroPie/roms/$SYSTEM"
-  roms_all_dir="$roms_dir/-ALL-"
-
-  if [ "$(ls -A $roms_all_dir | wc -l)" -eq 0 ]; then
-    # Download according to settings file
-    download_system "$SYSTEM"
-  else
-    echo "$roms_all_dir is not empty: skipping download"
-  fi
-
-  organize_system "$SYSTEM"
-  scrape_system "$SYSTEM" "screenscraper"
+  download_system "$system"
+  organize_system "$system"
+  scrape_system "$system" "screenscraper"
   theme_system "GameGear"
 }
 

@@ -13,10 +13,10 @@ usage() {
 
 # Update RetroPie-Setup
 update_retropie_setup() {
-  pushd ~/RetroPie-Setup
+  pushd $HOME/RetroPie-Setup
   git pull --ff-only
   popd
-  sudo ~/RetroPie-Setup/retropie_packages.sh setup post_update
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh setup post_update
   clear
 }
 
@@ -29,7 +29,7 @@ update_system() {
 
 update_packages() {
   # Update packages
-  sudo ~/RetroPie-Setup/retropie_packages.sh setup update_packages
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
 }
 
 update_all() {

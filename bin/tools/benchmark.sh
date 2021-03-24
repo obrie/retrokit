@@ -12,7 +12,7 @@ usage() {
 }
 
 run() {
-  mode=$1
+  local mode=$1
 
   sysbench --test=cpu --num-threads=4 run > /tmp/$mode-benchmark.txt
   cat /tmp/$mode-benchmark.txt
