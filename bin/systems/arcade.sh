@@ -207,7 +207,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") != null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
@@ -215,7 +215,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\")  != null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
@@ -228,22 +228,22 @@ download() {
     fi
 
     # Keywords
-    keyword_conditions=$(jq -r ".roms.blocklists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    keyword_conditions=$(jq -r ".roms.blocklists.keywords[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     if [ -n "$keyword_conditions" ] && [ $(echo "$description" | grep -oE "$keyword_conditions") ]; then
       continue
     fi
-    keyword_conditions=$(jq -r ".roms.allowlists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [-n "$keyword_conditions" ] && [ ! $(echo "$description" | grep -oE "$keyword_conditions") ]; then
+    keyword_conditions=$(jq -r ".roms.allowlists.keywords[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    if [ -n "$keyword_conditions" ] && [ ! $(echo "$description" | grep -oE "$keyword_conditions") ]; then
       continue
     fi
 
     # Flags
-    flag_conditions=$(jq -r ".roms.blocklists.flags[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    flag_conditions=$(jq -r ".roms.blocklists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
     if [ -n "$flag_conditions" ] && [ $(echo "$flags" | grep -oE "$flag_conditions") ]; then
       continue
     fi
-    flag_conditions=$(jq -r ".roms.allowlists.flags[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [-n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -oE "$flag_conditions") ]; then
+    flag_conditions=$(jq -r ".roms.allowlists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+    if [ -n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -oE "$flag_conditions") ]; then
       continue
     fi
 
@@ -251,7 +251,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\") != null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
