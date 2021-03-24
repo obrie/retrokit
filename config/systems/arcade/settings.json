@@ -1,18 +1,16 @@
 {
   "emulators": {
-    "installed": [
-      "lr-fbneo",
-      "lr-mame2003",
-      "lr-mame2003-plus",
-      "lr-mame2015",
-      "lr-mame2016",
-      "advmame"
-    ],
-    "lr-mame": {
-      "branch": "lrmame0222"
-    }
+    "lr-fbneo": {"default": true},
+    "lr-mame2003": {},
+    "lr-mame2003-plus": {},
+    "lr-mame2015": {},
+    "lr-mame2016": {},
+    "advmame": {},
+    "lr-mame": {"build": "source", "branch": "lrmame0222"}
   },
-  "runahead": true,
+  "options": {
+    "runahead": true
+  },
   "support_files": {
     "dat_url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
     "dat_file": "XML/mame222.xml",

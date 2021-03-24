@@ -14,6 +14,7 @@ DATA_DIR="$APP_DIR/data/arcade"
 CONFIG_DIR="$APP_DIR/config/systems/$SYSTEM"
 SETTINGS_FILE="$CONFIG_DIR/settings.json"
 SYSTEM_TMP_DIR="$TMP_DIR/arcade"
+SEP=$'\t'
 
 mkdir -p "$SYSTEM_TMP_DIR"
 
@@ -28,31 +29,37 @@ usage() {
 
 setup() {
   # Input Lag
-  if [ $(jq -r ".runahead" "$SETTINGS_FILE") == "true" ]; then
+  if [ $(jq -r ".options.runahead" "$SETTINGS_FILE") == "true" ]; then
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_enabled' '"true"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_frames' '"1"'
     crudini --set /opt/retropie/configs/$SYSTEM/retroarch.cfg '' 'run_ahead_secondary_instance' '"true"'
   fi
 
-  # Emulators
-  emulators=($(jq -r ".emulators.installed[]" "$SETTINGS_FILE"))
+  # Install emulators
+  while IFS="," read -r emulator build branch is_default; do
+    if [ "${build:-binary}" == "binary" ]; then
+      # Binary install
+      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
+    else
+      # Source install
+      if [ -n "$branch" ]; then
+        # Set to correct branch
+        setup_file="/home/pi/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
+        if [ ! -f "$setup_file.orig" ]; then
+          cp "$setup_file" "$setup_file.orig"
+        fi
 
-  # Install binary emulators
-  for emulator in "${emulators[@]}"
-    if [ "$emulator" != "lr-mame" ]; then
-      sudo ~/RetroPie-Setup/retropie_packages.sh $emulator _binary_
+        sed -i "s/.git master/.git $branch/g" "$setup_file"
+      fi
+
+      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _source_
     fi
-  done
 
-  # Compile lr-mame for a specific rev (or use mame2016)
-  if [ " ${emulators[@]} " == *" $emulator "* ]; then
-    lr_mame_branch=$(jq -r ".emulators.\"lr-mame\".branch" "$SETTINGS_FILE")
-    sed -i "s/mame.git master/mame.git $lr_mame_branch/g" ~/RetroPie-Setup/scriptmodules/libretrocores/lr-mame.sh
-    sudo ~/RetroPie-Setup/retropie_packages.sh lr-mame _source_
-  fi
-
-  # Set default
-  crudini --set /opt/retropie/configs/$SYSTEM/emulators.cfg '' 'default' "\"${emulators[0]}\""
+    # Set default
+    if [ "$is_default" == "true" ]; then
+      crudini --set "/opt/retropie/configs/$SYSTEM/emulators.cfg" '' 'default' "\"$emulator\""
+    fi
+  done < <(jq -r ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv" "$APP_SETTINGS_FILE")
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -69,13 +76,26 @@ load_sources() {
   # Read configured sources
   while read -r source_name; do
     # Load the source
-    while IFS="=" read -r key value; do
+    while IFS="$SEP" read -r key value; do
       SOURCES["$source_name/$key"]="$value"
-    done < <(jq -r ".sources.\"$source_name\" | to_entries | map(\"(.key)=(.value)\") | .[]" "$APP_SETTINGS_FILE")
+    done < <(jq -r ".sources.\"$source_name\" | to_entries[] | [.key, .value] | @tsv" "$APP_SETTINGS_FILE")
 
     # Load emulator info
     EMULATORS["${SOURCES["$source_name/emulator"]}/source_name"]="$source_name"
   done < <(jq -r '.roms.sources | keys[]' "$SETTINGS_FILE")
+}
+
+source_asset_url() {
+  source_name="$1"
+  asset_name="$2"
+  source_url=${SOURCES["$source_name/url"]}
+
+  asset_path=${SOURCES["$source_name/$asset_name"]}
+  if [ $(grep -E "^http" "$asset_path") ]; then
+    echo "$asset_path"
+  else
+    echo "$source_url$asset_path"
+  fi
 }
 
 # Installs a rom for a specific emulator
@@ -89,55 +109,55 @@ install_rom() {
 
   # Configuration
   dat_dir="$SYSTEM_TMP_DIR/dat"
+  dat_file="$dat_dir/$rom_name"
 
   # Target
   emulators_config="/opt/retropie/configs/all/emulators.cfg"
   mkdir -p "$roms_all_dir"
 
   # Source
-  source_url=${SOURCES["$source_name/url"]}
   source_core=${SOURCES["$source_name/core"]}
 
   # Source: ROMs
-  roms_source_url="$source_url${SOURCES["$source_name/roms"]}"
+  roms_source_url=$(source_asset_url "$source_name" "roms")
   roms_source_dir="$roms_dir/.$source_core"
+  rom_source_file="$roms_source_dir/$rom_name.zip"
+  rom_target_file="$roms_all_dir/$rom_name.zip"
   mkdir -p "$roms_source_dir"
 
   # Source: Samples
-  samples_source_path=${SOURCES["$source_name/samples"]}
-  if [ $(grep -E "^http" "$samples_source_path") ]; then
-    samples_source_url="$samples_source_path"
-  else
-    samples_source_url="$source_url$samples_source_path"
-  fi
+  samples_source_url=$(source_asset_url "$source_name" "samples")
   samples_target_dir="/home/pi/RetroPie/BIOS/$source_core/samples"
   mkdir -p "$samples_target_dir"
 
-  rom_source_file="$roms_source_dir/$rom_name.zip"
-  rom_target_file="$roms_all_dir/$rom_name.zip"
+  # Source: Disks
+  disks_source_url=$(source_asset_url "$source_name" "disks")
+  disk_source_dir="$roms_source_dir/$rom_name"
+  disk_target_dir="$roms_all_dir/$rom_name"
 
+  # Only write if we haven't already written a ROM to the target destination
   if [ ! -f "$rom_target_file" ]; then
     rom_emulator_key=$(clean_emulator_config_key "arcade_${rom_name}")
 
-    # Download ROM assets
+    # Install ROM asset
     if [ ! -f "$rom_source_file" ]; then
       wget "$roms_source_url$rom_name.zip" -O "$rom_source_file" || return 1
     else
       echo "Already downloaded: $rom_source_file"
     fi
 
-    # Install disk (if applicable)
+    # Install disk assets (if applicable)
     while read disk_name; do
-      mkdir -p "$roms_source_dir/$rom_name"
-      disk_file="$roms_source_dir/$rom_name/$disk_name"
+      mkdir -p "$disk_source_dir"
+      disk_file="$disk_source_dir/$disk_name"
       if [ ! -f "$disk_file" ]; then
-        wget "$roms_source_url$rom_name/$disk_name" -O "$disk_file" || return 1
+        wget "$disks_source_url$rom_name/$disk_name" -O "$disk_file" || return 1
       else
         echo "Already downloaded: $disk_file"
       fi
-    done < <(xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_dir/$rom_name")
+    done < <(xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_file")
 
-    # Install sample (if applicable)
+    # Install sample asset (if applicable)
     sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_dir/$rom_name" || true)
     if [ -n "$sample_name" ]; then
       sample_file="$samples_target_dir/$sample_name.zip"
@@ -148,7 +168,7 @@ install_rom() {
       fi
     fi
 
-    # Link to -ALL- (including drive)
+    # Link to -ALL- (including disk)
     ln -fs "$rom_source_file" "$rom_target_file"
     if [ -d "$roms_source_dir/$rom_name" ]; then
       ln -fs "$roms_source_dir/$rom_name" "$roms_all_dir/$rom_name"
@@ -157,6 +177,10 @@ install_rom() {
     # Write emulator configuration
     crudini --set "$emulators_config" "" "$rom_emulator_key" "\"$emulator\""
   fi
+}
+
+is_filtered() {
+
 }
 
 # This is strongly customized due to the nature of Arcade ROMs
@@ -226,7 +250,7 @@ download() {
 
   # Blocklists
   declare -A blocklists
-  blocklists_clones=$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_clones=$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE")
   blocklists_languages=$(jq -r ".roms.blocklists.languages[]" "$SETTINGS_FILE" | tr "\n" "$sep")
   blocklists_categories=$(jq -r ".roms.blocklists.categories[]" "$SETTINGS_FILE" | tr "\n" "$sep")
   blocklists_keywords=$(jq -r ".roms.blocklists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
@@ -235,9 +259,9 @@ download() {
   blocklists_names=$(jq -r ".roms.blocklists.names[]" "$SETTINGS_FILE" | tr "\n" "$sep")
 
   # Allowlists
-  allowlists_clones=$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_clones=$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE")
   allowlists_languages=$(jq -r ".roms.allowlists.languages[]" "$SETTINGS_FILE" | tr "\n" "$sep")
-  allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
   allowlists_keywords=$(jq -r ".roms.allowlists.keywords[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
   allowlists_flags=$(jq -r ".roms.allowlists.flags[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
   allowlists_controls=$(jq -r ".roms.allowlists.controls[]" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
@@ -251,7 +275,7 @@ download() {
       emulator="lr-mame2016"
     fi
 
-    # Always allow favorites regardless of filter
+    # [Exact match] Always allow favorites regardless of filter
     if [ "$sep$favorites$sep" == *"$sep$rom_name$sep"* ]; then
       install_rom "$rom_name" "$emulator"
       continue
@@ -263,16 +287,16 @@ download() {
       continue
     fi
 
-    # Clone
+    # [Exact match] Clone
     is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-    if [ "$blocklists_clones" == "true" ] && [ -n "$is_clone" ]; then
+    if [ "$blocklists_clones" == "true" ] && [ "$is_clone" == "true" ]; then
       continue
     fi
-    if [ "$blocklists_clones" == "false" ] && [ -n "$is_clone" ]; then
+    if [ "$allowlists_clones" == "false" ] && [ "$is_clone" == "false" ]; then
       continue
     fi
 
-    # Language
+    # [Exact match] Language
     language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_file.split" || true)
     if [ "$sep$blocklists_languages$sep" == *"$sep$language$sep"* ]; then
       continue
@@ -281,16 +305,16 @@ download() {
       continue
     fi
 
-    # Category
+    # [Partial match] Category
     category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_file.split" || true)
-    if [ "$sep$blocklists_categories$sep" == *"$sep$category$sep"* ]; then
+    if [ -n "$blocklists_categories" ] && [[ "$category" =~ ($blocklists_categories) ]]; then
       continue
     fi
-    if [ "$sep$allowlists_categories$sep" != *"$sep$category$sep"* ]; then
+    if [ -n "$allowlists_categories" ] && ! [[ "$category" =~ ($allowlists_categories) ]]; then
       continue
     fi
 
-    # Keywords
+    # [Partial match] Keywords
     description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
     if [ -n "$blocklists_keywords" ] && [[ "$description" =~ ($blocklists_keywords) ]]; then
       continue
@@ -299,7 +323,7 @@ download() {
       continue
     fi
 
-    # Flags
+    # [Partial intersection] Flags
     flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
     if [ -n "$blocklists_flags" ] && [[ "$flags" =~ ($blocklists_flags) ]]; then
       continue
@@ -308,7 +332,7 @@ download() {
       continue
     fi
 
-    # Controls
+    # [Partial intersection] Controls
     controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
     if [ -n "$blocklists_control" ] && [[ "$controls" =~ ($blocklists_control) ]]; then
       continue
@@ -317,7 +341,7 @@ download() {
       continue
     fi
 
-    # Name
+    # [Exact match] Name
     if [ "$sep$blocklists_names$sep" == *"$sep$rom_name$sep"* ]; then
       continue
     fi
