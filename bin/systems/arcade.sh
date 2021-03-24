@@ -221,8 +221,8 @@ download() {
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
-  grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
-    emulator=$(grep "^$rom_name"$'\t' "$compatibility_file" | cut -d $'\t' -f 3)
+  grep -v "$sep[x!]$sep" "$compatibility_file" | cut -d "$sep" -f 1 | while read rom_name; do
+    emulator=$(grep "^$rom_name$sep" "$compatibility_file" | cut -d "$sep" -f 3)
     if [ "$emulator" == "lr-mame" ]; then
       emulator="lr-mame2016"
     fi
