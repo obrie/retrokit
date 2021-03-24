@@ -63,7 +63,11 @@ install_rom() {
   # Arguments
   rom_name="$1"
   emulator="$2"
-  source_name=$(jq -r ".sources | to_entries | map(select(.value.emulator == \"$emulator\"))[] | .key" "$APP_SETTINGS_FILE" | head -n 1)
+
+  jq -r ".emulators.installed[]" "$SETTINGS_FILE" | xargs -I{} jq -r ".sources.\"{}\" | select(.emulator == \"$emulator\") | "
+
+  all_source_names=$()
+  source_name=$(jq -r ".sources | to_entries | map(select(.value.emulator == ))[] | .key" "$APP_SETTINGS_FILE" | head -n 1)
 
   # Configuration
   dat_dir="$SYSTEM_TMP_DIR/dat"
@@ -99,7 +103,7 @@ install_rom() {
 
     # Download ROM assets
     if [ ! -f "$rom_source_file" ]; then
-      wget "$roms_source_url$rom_name.zip" -O "$rom_source_file"
+      wget "$roms_source_url$rom_name.zip" -O "$rom_source_file" || return 1
     else
       echo "Already downloaded: $rom_source_file"
     fi
@@ -109,7 +113,7 @@ install_rom() {
       mkdir -p "$roms_source_dir/$rom_name"
       disk_file="$roms_source_dir/$rom_name/$disk_name"
       if [ ! -f "$disk_file" ]; then
-        wget "$roms_source_url$rom_name/$disk_name" -O "$disk_file"
+        wget "$roms_source_url$rom_name/$disk_name" -O "$disk_file" || return 1
       else
         echo "Already downloaded: $disk_file"
       fi
@@ -120,7 +124,7 @@ install_rom() {
     if [ -n "$sample_name" ]; then
       sample_file="$samples_target_dir/$sample_name.zip"
       if [ ! -f "$sample_file" ]; then
-        wget "$samples_source_url$sample_name.zip" -O "$sample_file"
+        wget "$samples_source_url$sample_name.zip" -O "$sample_file" || return 1
       else
         echo "Already downloaded: $sample_file"
       fi
@@ -192,6 +196,29 @@ download() {
   truncate -s0 "$names_file"
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
+  sep=$'\t'
+
+  # Overrides
+  favorites=$(jq -r ".roms.favorites" "$SETTINGS_FILE" | tr "\n" "$sep")
+
+  # Blocklists
+  blocklists_clones=$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_languages=$(jq -r ".roms.blocklists.languages" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_categories=$(jq -r ".roms.blocklists.categories" "$SETTINGS_FILE" | tr "\n" "$sep")
+  blocklists_keywords=$(jq -r ".roms.blocklists.keywords" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_flags=$(jq -r ".roms.blocklists.flags" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_controls=$(jq -r ".roms.blocklists.controls" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  blocklists_names=$(jq -r ".roms.blocklists.names" "$SETTINGS_FILE" | tr "\n" "$sep")
+
+  # Allowlists
+  allowlists_clones=$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_languages=$(jq -r ".roms.allowlists.languages" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_categories=$(jq -r ".roms.allowlists.categories" "$SETTINGS_FILE" | tr "\n" "$sep")
+  allowlists_keywords=$(jq -r ".roms.allowlists.keywords" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_flags=$(jq -r ".roms.allowlists.flags" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_controls=$(jq -r ".roms.allowlists.controls" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
+  allowlists_names=$(jq -r ".roms.allowlists.names" "$SETTINGS_FILE" | tr "\n" "$sep")
+
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
   grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
@@ -201,7 +228,7 @@ download() {
     fi
 
     # Always allow favorites regardless of filter
-    if [ $(jq -r ".roms.favorites | index(\"$rom_name\")" "$SETTINGS_FILE") != 'null' ]; then
+    if [ "$sep$favorites$sep" == *"$sep$rom_name$sep"* ]; then
       install_rom "$rom_name" "$emulator"
       continue
     fi
@@ -214,75 +241,68 @@ download() {
 
     # Clone
     is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-    if [ "$(jq -r ".roms.blocklists.clones" "$SETTINGS_FILE")" == "true" ] && [ -n "$is_clone" ]; then
+    if [ "$blocklists_clones" == "true" ] && [ -n "$is_clone" ]; then
       continue
     fi
-    if [ "$(jq -r ".roms.allowlists.clones" "$SETTINGS_FILE")" == "false" ] && [ -n "$is_clone" ]; then
+    if [ "$blocklists_clones" == "false" ] && [ -n "$is_clone" ]; then
       continue
     fi
 
     # Language
     language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_file.split" || true)
-    if [ "$(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE")" != 'null' ]; then
+    if [ "$sep$blocklists_languages$sep" == *"$sep$language$sep"* ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$sep$allowlists_languages$sep" != *"$sep$language$sep"* ]; then
       continue
     fi
 
     # Category
     category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_file.split" || true)
-    if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
+    if [ "$sep$blocklists_categories$sep" == *"$sep$category$sep"* ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$sep$allowlists_categories$sep" != *"$sep$category$sep"* ]; then
       continue
     fi
 
     # Keywords
-    description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file")
-    keyword_conditions=$(jq -r ".roms.blocklists.keywords[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$keyword_conditions" ] && [ $(echo "$description" | grep -oE "$keyword_conditions") ]; then
+    description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
+    if [ -n "$blocklists_keywords" ] && [[ "$description" =~ ($blocklists_keywords) ]]; then
       continue
     fi
-    keyword_conditions=$(jq -r ".roms.allowlists.keywords[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$keyword_conditions" ] && [ ! $(echo "$description" | grep -oE "$keyword_conditions") ]; then
+    if [ -n "$allowlists_keywords" ] && ! [[ "$description" =~ ($allowlists_keywords) ]]; then
       continue
     fi
 
     # Flags
-    all_flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-    flags=$(echo "$all_flags" | tail -n +2)
-    flag_conditions=$(jq -r ".roms.blocklists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$flag_conditions" ] && [ $(echo "$flags" | grep -E "$flag_conditions") ]; then
+    flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
+    if [ -n "$blocklists_flags" ] && [[ "$flags" =~ ($blocklists_flags) ]]; then
       continue
     fi
-    flag_conditions=$(jq -r ".roms.allowlists.flags[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$flag_conditions" ] && [ ! $(echo "$flags" | grep -E "$flag_conditions") ]; then
+    if [ -n "$allowlists_flags" ] && ! [[ "$flags" =~ ($allowlists_flags) ]]; then
       continue
     fi
 
     # Controls
     controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-    control_conditions=$(jq -r ".roms.blocklists.controls[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$control_conditions" ] && [ ! $(echo "$controls" | grep -vE "$control_conditions") ]; then
+    if [ -n "$blocklists_control" ] && [[ "$controls" =~ ($blocklists_control) ]]; then
       continue
     fi
-    control_conditions=$(jq -r ".roms.allowlists.controls[]?" "$SETTINGS_FILE" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-    if [ -n "$control_conditions" ] && [ ! $(echo "$controls" | grep -E "$control_conditions") ]; then
+    if [ -n "$allowlists_controls" ] && ! [[ "$controls" =~ ($allowlists_controls) ]]; then
       continue
     fi
 
     # Name
-    if [ "$(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE")" != 'null' ]; then
+    if [ "$sep$blocklists_names$sep" == *"$sep$rom_name$sep"* ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\") == null)" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$sep$allowlists_names$sep" != *"$sep$rom_name$sep"* ]; then
       continue
     fi
 
     # Install
-    install_rom "$rom_name" "$emulator"
+    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
   done
 
   # Add to root
