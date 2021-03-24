@@ -182,7 +182,8 @@ download() {
   grep -v $'\t[x!]\t' "$compatibility_file" | cut -d $'\t' -f 1 | while read rom_name; do
     # Always allow favorites regardless of filter
     if [ $(jq -r ".roms.favorites | index(\"$rom_name\")" "$SETTINGS_FILE") != 'null' ]; then
-      echo "$rom_name" >> "$names_file"
+      install_rom "$rom_name" "$emulator"
+      continue
     fi
 
     # Attributes
