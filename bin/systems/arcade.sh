@@ -207,7 +207,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.categories | index(\"$category\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and not(.roms.allowlists.categories | index(\"$category\"))" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"categories\")) and (.roms.allowlists.categories | index(\"$category\") != null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
@@ -215,7 +215,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.languages | index(\"$language\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"languages\")) and not(.roms.allowlists.languages | index(\"$language\"))" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"languages\")) and (.roms.allowlists.languages | index(\"$language\")  != null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
@@ -251,7 +251,7 @@ download() {
     if [ "$(jq -r ".roms.blocklists.names | index(\"$name\")" "$SETTINGS_FILE")" != 'null' ]; then
       continue
     fi
-    if [ "$(jq -r "(.roms.allowlists | has(\"names\")) and not(.roms.allowlists.names | index(\"$name\"))" "$SETTINGS_FILE")" == 'true' ]; then
+    if [ "$(jq -r "(.roms.allowlists | has(\"names\")) and (.roms.allowlists.names | index(\"$name\") != null)" "$SETTINGS_FILE")" == 'true' ]; then
       continue
     fi
 
