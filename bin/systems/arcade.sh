@@ -115,6 +115,57 @@ source_asset_url() {
   fi
 }
 
+# Download external support files needed for filtering purposes
+download_support_files() {
+  declare -A support_files
+  while IFS="$tab" read -r key value; do
+    support_files["$key"]="$value"
+  done < <(jq -r ".support_files | to_entries[] | [.key, .value] | @tsv" "$app_settings_file")
+
+  # Download dat file
+  if [ ! -f "$dat_file" ]; then
+    wget -nc "${support_files['dat_url']}" -O "$dat_dir.7z" || true
+    7z e -so "$dat_dir.7z" "${support_files['dat_file']}" > "$dat_file"
+  fi
+
+  # Split dat file for better performance on lookup
+  if [ "$(ls -U "$dat_dir" | wc -l)" -eq 0 ]; then
+    csplit -n 6 --prefix "$dat_dir/" "$dat_file" '/<machine/' '{*}'
+    while read rom_dat_file; do
+      local rom_dat_filename=$(basename "$rom_dat_file")
+      local rom_name=$(grep -oP "machine name=\"\K[^\"]+" "$rom_dat_file")
+
+      if [ -n "$rom_name" ]; then
+        mv "$dat_dir/$rom_dat_filename" "$dat_dir/$rom_name"
+      fi
+    done < <(find "$dat_dir/" -type f )
+  fi
+
+  # Download languages file
+  if [ ! -f "$languages_flat_file" ]; then
+    wget -nc "${support_files['languages_url']}" -O "$languages_file.zip" || true
+    unzip -p "$languages_file.zip" "${support_files['languages_file']}" > "$languages_file"
+    crudini --get --format=lines "$languages_file" > "$languages_flat_file"
+  fi
+
+  # Download categories file
+  if [ ! -f "$categories_flat_file" ]; then
+    wget -nc "${support_files['categories_url']}" -O "$categories_file.zip" || true
+    unzip -p "$categories_file.zip" "${support_files['categories_file']}" > "$categories_file"
+    crudini --get --format=lines "$categories_file" > "$categories_flat_file"
+  fi
+
+  # Download compatibility file
+  if [ ! -f "$compatibility_file" ]; then
+    wget -nc "${support_files['compatibility_url']}" -O "$compatibility_file"
+  fi
+}
+
+# Reset the list of ROMs that are visible
+reset_filtered_roms() {
+  find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+}
+
 # Installs a rom for a specific emulator
 install_rom() {
   # Arguments
@@ -195,6 +246,76 @@ install_rom() {
   fi
 }
 
+install_roms() {
+  # Overrides
+  local favorites=$(jq -r ".roms.favorites | @tsv" "$settings_file")
+
+  # Blocklists
+  local blocklists_clones=$(load_filter "$system" "blocklist" "clones")
+  local blocklists_languages=$(load_regex_filter "$system" "blocklist" "languages")
+  local blocklists_categories=$(load_regex_filter "$system" "blocklist" "categories")
+  local blocklists_keywords=$(load_regex_filter "$system" "blocklist" "keywords")
+  local blocklists_flags=$(load_regex_filter "$system" "blocklist" "flags")
+  local blocklists_controls=$(load_regex_filter "$system" "blocklist" "controls")
+  local blocklists_names=$(load_regex_filter "$system" "blocklist" "names")
+
+  # Allowlists
+  local allowlists_clones=$(load_filter "$system" "allowlist" "clones")
+  local allowlists_languages=$(load_regex_filter "$system" "allowlist" "languages")
+  local allowlists_categories=$(load_regex_filter "$system" "allowlist" "categories")
+  local allowlists_keywords=$(load_regex_filter "$system" "allowlist" "keywords")
+  local allowlists_flags=$(load_regex_filter "$system" "allowlist" "flags")
+  local allowlists_controls=$(load_regex_filter "$system" "allowlist" "controls")
+  local allowlists_names=$(load_regex_filter "$system" "allowlist" "names")
+
+  # Compatible / Runnable roms
+  # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
+  while read rom_name; do
+    local emulator=$(grep "^$rom_name$tab" "$compatibility_file" | cut -d "$tab" -f 3)
+    if [ "$emulator" == "lr-mame" ]; then
+      # TODO: Remove this once we have lr-mame integration done
+      emulator="lr-mame2016"
+    fi
+
+    # [Exact match] Always allow favorites regardless of filter
+    if [ "$tab$favorites$tab" != *"$tab$rom_name$tab"* ]; then
+      # Attributes
+      local rom_dat_file="$dat_dir/$rom_name"
+      if [ ! -f "$rom_dat_file" ]; then continue; fi
+
+      # Is Clone
+      local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
+      if [ $(filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then continue; fi
+
+      # Language
+      local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
+      if [ $(filter_regex "$blocklists_languages" "$allowlists_languages" "$language") ]; then continue; fi
+
+      # Category
+      category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
+      if [ $(filter_regex "$blocklists_categories" "$allowlists_categories" "$category") ]; then continue; fi
+
+      # Keywords
+      description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
+      if [ $(filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then continue; fi
+
+      # Flags
+      flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
+      if [ $(filter_regex "$blocklists_flags" "$allowlists_flags" "$flags") ]; then continue; fi
+
+      # Controls
+      controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
+      if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then continue; fi
+
+      # Name
+      if [ $(filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name") ]; then continue; fi
+    fi
+
+    # Install
+    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
+  done < <(grep -v "$tab[x!]$tab" "$compatibility_file" | cut -d "$tab" -f 1)
+}
+
 # Organize ROMs based on favorites
 organize_system() {
   # Clear existing ROMs
@@ -216,153 +337,14 @@ organize_system() {
   done < <(jq -r ".roms.favorites[]" "$settings_file")
 }
 
-# Download external support files needed for filtering purposes
-download_support_files() {
-  declare -A support_files
-  while IFS="$tab" read -r key value; do
-    support_files["$key"]="$value"
-  done < <(jq -r ".support_files | to_entries[] | [.key, .value] | @tsv" "$app_settings_file")
-
-  # Download dat file
-  if [ ! -f "$dat_file" ]; then
-    wget -nc "${support_files['dat_url']}" -O "$dat_dir.7z" || true
-    7z e -so "$dat_dir.7z" "${support_files['dat_file']}" > "$dat_file"
-  fi
-
-  # Split dat file for better performance on lookup
-  if [ "$(ls -U "$dat_dir" | wc -l)" -eq 0 ]; then
-    csplit -n 6 --prefix "$dat_dir/" "$dat_file" '/<machine/' '{*}'
-    while read rom_dat_file; do
-      local rom_dat_filename=$(basename "$rom_dat_file")
-      local rom_name=$(grep -oP "machine name=\"\K[^\"]+" "$rom_dat_file")
-      
-      if [ -n "$rom_name" ]; then
-        mv "$dat_dir/$rom_dat_filename" "$dat_dir/$rom_name"
-      fi
-    done < <(find "$dat_dir/" -type f )
-  fi
-
-  # Download languages file
-  if [ ! -f "$languages_flat_file" ]; then
-    wget -nc "${support_files['languages_url']}" -O "$languages_file.zip" || true
-    unzip -p "$languages_file.zip" "${support_files['languages_file']}" > "$languages_file"
-    crudini --get --format=lines "$languages_file" > "$languages_flat_file"
-  fi
-
-  # Download categories file
-  if [ ! -f "$categories_flat_file" ]; then
-    wget -nc "${support_files['categories_url']}" -O "$categories_file.zip" || true
-    unzip -p "$categories_file.zip" "${support_files['categories_file']}" > "$categories_file"
-    crudini --get --format=lines "$categories_file" > "$categories_flat_file"
-  fi
-
-  # Download compatibility file
-  if [ ! -f "$compatibility_file" ]; then
-    wget -nc "${support_files['compatibility_url']}" -O "$compatibility_file"
-  fi
-}
-
-# Reset the list of ROMs that are visible
-reset_roms() {
-  find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
-}
-
 # This is strongly customized due to the nature of Arcade ROMs
 # 
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
   load_sources
   download_support_files
-  reset_roms
-
-  # Overrides
-  local favorites=$(jq -r ".roms.favorites[]" "$settings_file" | tr "\n" "$tab")
-
-  # Blocklists
-  declare -A blocklists
-  local blocklists_clones=$(jq -r ".roms.blocklists.clones" "$settings_file")
-  local blocklists_languages=$(jq -r ".roms.blocklists.languages[]" "$settings_file" | tr "\n" "$tab")
-  local blocklists_categories=$(jq -r ".roms.blocklists.categories[]" "$settings_file" | tr "\n" "$tab")
-  local blocklists_keywords=$(jq -r ".roms.blocklists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local blocklists_flags=$(jq -r ".roms.blocklists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local blocklists_controls=$(jq -r ".roms.blocklists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local blocklists_names=$(jq -r ".roms.blocklists.names[]" "$settings_file" | tr "\n" "$tab")
-
-  # Allowlists
-  local allowlists_clones=$(jq -r ".roms.allowlists.clones" "$settings_file")
-  local allowlists_languages=$(jq -r ".roms.allowlists.languages[]" "$settings_file" | tr "\n" "$tab")
-  local allowlists_categories=$(jq -r ".roms.allowlists.categories[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local allowlists_keywords=$(jq -r ".roms.allowlists.keywords[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local allowlists_flags=$(jq -r ".roms.allowlists.flags[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local allowlists_controls=$(jq -r ".roms.allowlists.controls[]" "$settings_file" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|')
-  local allowlists_names=$(jq -r ".roms.allowlists.names[]" "$settings_file" | tr "\n" "$tab")
-
-  # Compatible / Runnable roms
-  # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
-  while read rom_name; do
-    local emulator=$(grep "^$rom_name$tab" "$compatibility_file" | cut -d "$tab" -f 3)
-    if [ "$emulator" == "lr-mame" ]; then
-      # TODO: Remove this once we have lr-mame integration done
-      emulator="lr-mame2016"
-    fi
-
-    # [Exact match] Always allow favorites regardless of filter
-    if [ "$tab$favorites$tab" == *"$tab$rom_name$tab"* ]; then
-      install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
-      continue
-    fi
-
-    # Attributes
-    local rom_dat_file="$dat_dir/$rom_name"
-    if [ ! -f "$rom_dat_file" ]; then
-      continue
-    fi
-
-    # [Exact match] Clone
-    local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-    if [ $(filter_equals "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then
-      continue
-    fi
-
-    # [Exact match] Language
-    local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
-    if [ $(filter_exact_in_list "$blocklists_languages" "$allowlists_languages" "$language") ]; then
-      continue
-    fi
-
-    # [Partial match] Category
-    category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
-    if [ $(filter_substring_in_list "$blocklists_categories" "$allowlists_categories" "$category") ]; then
-      continue
-    fi
-
-    # [Partial match] Keywords
-    description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
-    if [ $(filter_substring_in_list "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then
-      continue
-    fi
-
-    # [Partial match] Flags
-    flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-    if [ $(filter_substring_in_list "$blocklists_flags" "$allowlists_flags" "$flags") ]; then
-      continue
-    fi
-
-    # [Partial intersection] Controls
-    controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-    if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then
-      continue
-    fi
-
-    # [Exact match] Name
-    if [ $(filter_exact_in_list "$blocklists_names" "$allowlists_names" "$rom_name") ]; then
-      continue
-    fi
-
-    # Install
-    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(grep -v "$tab[x!]$tab" "$compatibility_file" | cut -d "$tab" -f 1)
-
+  reset_filtered_roms
+  install_roms
   organize_system "$system"
   scrape_system "$system" "screenscraper"
   scrape_system "$system" "arcadedb"

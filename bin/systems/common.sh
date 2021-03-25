@@ -61,30 +61,26 @@ setup_system() {
   fi
 }
 
-filter_equals() {
-  local blocklist_value="$1"
-  local allowlist_value="$2"
-  local value="$3"
-
-  if [ -n "$blocklist_value" ] && [ "$blocklist_value" == "$value" ]; then
-    return 0
-  fi
-  if [ -n "$allowlist_value" ] && [ "$allowlist_value" != "$value" ]; then
-    return 0
-  fi
-
-  return 1
+load_filter() {
+  system="$1"
+  type="$2"
+  name="$3"
+  jq -r ".roms.${type}s.$name" "$file"
 }
 
-filter_exact_in_list() {
-  local blocklist_values="$1"
-  local allowlist_values="$2"
+load_regex_filter() {
+  load_filter "${@}" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|'
+}
+
+filter_regex() {
+  local blocklist_regex="$1"
+  local allowlist_regex="$2"
   local value="$3"
 
-  if [ "$tab$blocklist_values$tab" == *"$tab$value$tab"* ]; then
+  if [ -n "$blocklist_regex" ] && [[ "$value" =~ ($blocklist_regex) ]]; then
     return 0
   fi
-  if [ "$tab$allowlist_values$tab" != *"$tab$value$tab"* ]; then
+  if [ -n "$allowlist_regex" ] && ! [[ "$value" =~ ($allowlist_regex) ]]; then
     return 0
   fi
 
@@ -114,23 +110,6 @@ filter_all_in_list() {
   unset IFS
   return 0
 }
-
-filter_substring_in_list() {
-  local blocklist_regex="$1"
-  local allowlist_regex="$2"
-  local value="$3"
-
-  if [ -n "$blocklist_regex" ] && [[ "$value" =~ ($blocklist_regex) ]]; then
-    return 0
-  fi
-  if [ -n "$allowlist_regex" ] && ! [[ "$value" =~ ($allowlist_regex) ]]; then
-    return 0
-  fi
-
-  return 1
-}
-
-filter_
 
 download_file() {
   # Arguments
