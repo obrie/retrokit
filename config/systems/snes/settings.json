@@ -3,6 +3,10 @@
   "roms": {
     "sources": {
       "nointro-torrent": {
+        "type": "http",
+        "url": "https://***REMOVED***/",
+        "login": true,
+        "unzip": true,
         "files": [
           "Nintendo - Super Nintendo Entertainment System (Combined) (20201230-192658).zip"
         ]

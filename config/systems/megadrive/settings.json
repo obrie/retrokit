@@ -1,7 +1,11 @@
 {
   "roms": {
     "sources": {
-      "nointro-torrent": {
+      "nointro-http": {
+        "type": "http",
+        "url": "https://***REMOVED***/",
+        "login": true,
+        "unzip": true,
         "files": [
           "Sega - Mega Drive - Genesis (20210122-212735).zip"
         ]

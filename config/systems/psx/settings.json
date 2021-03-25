@@ -3,6 +3,9 @@
   "roms": {
     "sources": {
       "psx-the_eye-http": {
+        "type": "http",
+        "url": "https://***REMOVED***Playstation/Games/NTSC/",
+        "unzip": true,
         "files": [
           "Disney's The Little Mermaid II (USA).zip",
           "Extreme Pinball (USA).zip",

@@ -19,6 +19,19 @@ export retroarch_cores_config="/opt/retropie/configs/all/retroarch-core-options.
 export es_settings_config="$HOME/.emulationstation/es_systems.cfg"
 export es_systems_config="$HOME/.emulationstation/es_systems.cfg"
 
+init() {
+  system="$1"
+  system_settings_file="$app_dir/config/$system/settings.json"
+}
+
+setting() {
+  jq -r "$1" "$system_settings_file"
+}
+
+app_setting() {
+  jq -r "$1" "$app_settings_file"
+}
+
 scrape_system() {
   # Arguments
   local system="$1"

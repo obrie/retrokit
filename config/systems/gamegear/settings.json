@@ -1,7 +1,11 @@
 {
   "roms": {
     "sources": {
-      "nointro-torrent": {
+      "nointro-http": {
+        "type": "http",
+        "url": "https://***REMOVED***/",
+        "login": true,
+        "unzip": true,
         "files": [
           "Sega - Game Gear (20201227-043658).zip"
         ]

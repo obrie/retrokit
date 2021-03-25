@@ -12,6 +12,7 @@ dir=$( dirname "$0" )
 
 # System settings
 system="nes"
+init "$system"
 
 setup() {
   # Install emulators

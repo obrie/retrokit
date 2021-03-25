@@ -11,6 +11,7 @@ dir=$( dirname "$0" )
 
 # System info
 system="arcade"
+init "$system"
 
 # Directories
 config_dir="$app_dir/config/systems/$system"
@@ -76,7 +77,7 @@ setup() {
     if [ "$is_default" == "true" ]; then
       crudini --set "$emulators_config" '' 'default' "\"$emulator\""
     fi
-  done < <(jq -r ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv" "$app_settings_file")
+  done < <(setting ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv")
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -96,11 +97,11 @@ load_sources() {
     # Load the source
     while IFS="$tab" read -r key value; do
       sources["$source_name/$key"]="$value"
-    done < <(jq -r ".sources.\"$source_name\" | to_entries[] | [.key, .value] | @tsv" "$app_settings_file")
+    done < <(setting ".roms.sources.\"$source_name\" | to_entries[] | [.key, .value] | @tsv")
 
     # Load emulator info
     emulators["${sources["$source_name/emulator"]}/source_name"]="$source_name"
-  done < <(jq -r '.roms.sources | keys[]' "$settings_file")
+  done < <(setting '.roms.sources | keys[]')
 }
 
 # Build the base url for the given source / asset
@@ -119,15 +120,17 @@ source_asset_url() {
 
 # Download external support files needed for filtering purposes
 download_support_files() {
+  # Load support file settings
   declare -A support_files
-  while IFS="$tab" read -r key value; do
-    support_files["$key"]="$value"
-  done < <(jq -r ".support_files | to_entries[] | [.key, .value] | @tsv" "$app_settings_file")
+  while IFS="$tab" read -r name url file; do
+    support_files["$name/url"]="$url"
+    support_files["$name/file"]="$file"
+  done < <(setting ".support_files | to_entries[] | [.key, .value.url, .value.file] | @tsv")
 
   # Download dat file
   if [ ! -f "$dat_file" ]; then
-    wget -nc "${support_files['dat_url']}" -O "$dat_dir.7z" || true
-    7z e -so "$dat_dir.7z" "${support_files['dat_file']}" > "$dat_file"
+    wget -nc "${support_files['dat/url']}" -O "$dat_dir.7z" || true
+    7z e -so "$dat_dir.7z" "${support_files['dat/file']}" > "$dat_file"
   fi
 
   # Split dat file for better performance on lookup
@@ -145,27 +148,27 @@ download_support_files() {
 
   # Download languages file
   if [ ! -f "$languages_flat_file" ]; then
-    wget -nc "${support_files['languages_url']}" -O "$languages_file.zip" || true
-    unzip -p "$languages_file.zip" "${support_files['languages_file']}" > "$languages_file"
+    wget -nc "${support_files['languages/url']}" -O "$languages_file.zip" || true
+    unzip -p "$languages_file.zip" "${support_files['languages/file']}" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_flat_file"
   fi
 
   # Download categories file
   if [ ! -f "$categories_flat_file" ]; then
-    wget -nc "${support_files['categories_url']}" -O "$categories_file.zip" || true
-    unzip -p "$categories_file.zip" "${support_files['categories_file']}" > "$categories_file"
+    wget -nc "${support_files['categories/url']}" -O "$categories_file.zip" || true
+    unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_flat_file"
   fi
 
   # Download compatibility file
   if [ ! -f "$compatibility_file" ]; then
-    wget -nc "${support_files['compatibility_url']}" -O "$compatibility_file"
+    wget -nc "${support_files['compatibility/url']}" -O "$compatibility_file"
   fi
 
-  # Downloda ratings file
+  # Download ratings file
   if [ ! -f "$ratings_file" ]; then
-    wget -nc "${support_files['ratings_url']}" -O "$ratings.zip" || true
-    unzip -p "$ratings_file.zip" "${support_files['ratings_file']}" > "$ratings_file"
+    wget -nc "${support_files['ratings/url']}" -O "$ratings.zip" || true
+    unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
   fi
 }
@@ -257,7 +260,7 @@ install_rom() {
 
 install_roms() {
   # Overrides
-  local favorites=$(jq -r ".roms.favorites | @tsv" "$settings_file")
+  local favorites=$(setting ".roms.favorites | @tsv")
 
   # Blocklists
   local blocklists_clones=$(load_filter "$system" "blocklist" "clones")
@@ -349,7 +352,7 @@ organize_system() {
     if [ -d "$source_disk_dir" ]; then
       ln -fs "$source_disk_dir" "$target_disk_dir"
     fi
-  done < <(jq -r ".roms.favorites[]" "$settings_file")
+  done < <(setting ".roms.favorites[]")
 }
 
 # This is strongly customized due to the nature of Arcade ROMs

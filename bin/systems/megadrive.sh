@@ -11,6 +11,7 @@ dir=$( dirname "$0" )
 
 # System settings
 system="megadrive"
+init "$system"
 
 # Configurations
 retroarch_config="/opt/retropie/configs/$system/emulators.cfg"

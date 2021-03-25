@@ -48,42 +48,5 @@
     "psx",
     "pc",
     "retropie"
-  ],
-  "sources": {
-    "nointro-torrent": {
-      "type": "torrent",
-      "url": "https://***REMOVED***",
-      "roms": "no-intro_romsets/no-intro romsets",
-      "unzip": true
-    },
-    "dos-the_eye-torrent": {
-      "type": "torrent",
-      "url": "https://***REMOVED***",
-      "roms": "eXoDOS/eXo/eXoDOS",
-      "unzip": true
-    },
-    "arcade-fbneo-torrent": {
-      "type": "torrent",
-      "url": "https://***REMOVED***",
-      "roms": "",
-      "unzip": false
-    },
-
-    "nointro-http": {
-      "type": "http",
-      "url": "https://***REMOVED***",
-      "roms": "",
-      "login": true
-    },
-    "dos-the_eye-http": {
-      "type": "http",
-      "url": "https://***REMOVED***",
-      "unzip": true
-    },
-    "psx-the_eye-http": {
-      "type": "http",
-      "url": "https://***REMOVED***Playstation/Games/NTSC/",
-      "unzip": true
-    }
-  }
+  ]
 }

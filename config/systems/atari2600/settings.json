@@ -1,7 +1,11 @@
 {
   "roms": {
     "sources": {
-      "nointro-torrent": {
+      "nointro-http": {
+        "type": "http",
+        "url": "https://***REMOVED***/",
+        "login": true,
+        "unzip": true,
         "files": [
           "Atari - 2600 (20200514-091155).zip"
         ]

@@ -9,15 +9,25 @@
     "lr-mame": {"build": "source", "branch": "lrmame0222"}
   },
   "support_files": {
-    "dat_url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
-    "dat_file": "XML/mame222.xml",
-    "languages_url": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
-    "languages_file": "folders/languages.ini",
-    "categories_url": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
-    "categories_file": "UI_files/catlist.ini",
-    "ratings_url": "https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_229.zip",
-    "ratings_file": "folders/bestgames.ini",
-    "compatibility_url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
+    "dat": {
+      "url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
+      "file": "XML/mame222.xml"
+    },
+    "languages": {
+      "url": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
+      "file": "folders/languages.ini"
+    },
+    "categories": {
+      "url": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
+      "file": "UI_files/catlist.ini"
+    },
+    "ratings": {
+      "url": "https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_229.zip",
+      "file": "folders/bestgames.ini"
+    },
+    "compatibility": {
+      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
+    }
   },
   "roms": {
     "sources": {
@@ -27,15 +37,6 @@
         "format": "non-merged",
         "roms": "FBNeo/ArcadeNonMerged.zip/",
         "samples": "FBNeo/support.zip/support%2Fsamples%2F",
-        "emulator": "lr-fbneo",
-        "core": "fbneo"
-      },
-      "arcade-fbneo_nightly-http": {
-        "type": "http",
-        "url": "https://***REMOVED***",
-        "format": "split",
-        "roms": "roms/arcade.zip/arcade%2F3",
-        "samples": "support/samples.zip/samples%2F",
         "emulator": "lr-fbneo",
         "core": "fbneo"
       },
@@ -49,7 +50,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2003",
         "core": "mame2003",
-        "mame_version": "0.78",
+        "mame_version": "0.78"
       },
       "arcade-mame2003plus-http": {
         "type": "http",
@@ -61,7 +62,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2003-plus",
         "core": "mame2003-plus",
-        "mame_version": "0.188",
+        "mame_version": "0.188"
       },
       "arcade-mame2010-http": {
         "type": "http",
@@ -114,11 +115,11 @@
       "arcade-mame0222-http": {
         "type": "http",
         "url": "https://***REMOVED***",
+        "dat": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
         "format": "merged",
         "roms": "",
-        "samples": "https://***REMOVED***samples/",
         "disks": "https://***REMOVED***roms.zip/roms%2F",
-        "dat": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
+        "samples": "https://***REMOVED***samples/",
         "emulator": "lr-mame",
         "core": "mame",
         "mame_version": "0.222"

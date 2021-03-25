@@ -2,7 +2,11 @@
   "emulators": [],
   "roms": {
     "sources": {
-      "nointro-torrent": {
+      "nointro-http": {
+        "type": "http",
+        "url": "https://***REMOVED***/",
+        "login": true,
+        "unzip": true,
         "files": [
           "Nintendo - Nintendo Entertainment System (20210122-114559) [headered].zip"
         ]
