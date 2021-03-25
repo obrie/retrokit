@@ -292,9 +292,23 @@ install_roms() {
   local allowlists_controls=$(setting_regex ".roms.allowlists.controls")
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
+  # Filter optimization to speed things up
+  local optimization_filter
+  if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
+    optimization_filter=" | grep -Ev \"runnable|cloneof\""
+  fi
+
   while read rom_dat; do
-    local rom_name=$(echo "$rom_dat" | grep -oP "machine name=\"\K([^\"]+)")
+    # Read rom attributes
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
+    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
+    local rom_name=$(rom_info[0])
+    local is_clone=${rom_info[1]}
+    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
     local emulator=${roms_compatibility["$rom_name"]}
+    local category=${roms_categories["$rom_name"]}
+    local language=${roms_languages["$rom_name"]}
+    local rating=${roms_ratings["$rom_name"]}
 
     # Compatible / Runnable roms
     if [ -z "$emulator" ]; then
@@ -304,15 +318,6 @@ install_roms() {
       # TODO: Remove this once we have lr-mame integration done
       emulator="lr-mame2016"
     fi
-
-    # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
-    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
-    local is_clone=${rom_info[1]}
-    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
-    local category=${roms_categories["$rom_name"]}
-    local language=${roms_languages["$rom_name"]}
-    local rating=${roms_ratings["$rom_name"]}
 
     # Always allow favorites regardless of filter
     if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
@@ -370,7 +375,7 @@ install_roms() {
     # Install
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file")
+  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" $optimization_filter)
 }
 
 # Organize ROMs based on favorites
