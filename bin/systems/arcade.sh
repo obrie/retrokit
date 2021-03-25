@@ -295,6 +295,7 @@ install_roms() {
   while read rom_dat; do
     local rom_name=$(echo "$rom_dat" | grep -oP "machine name=\"\K([^\"]+)")
     local emulator=${roms_compatibility["$rom_name"]}
+
     # Compatible / Runnable roms
     if [ -z "$emulator" ]; then
       echo "[Skip] $rom_name (poor compatibility)"
@@ -307,13 +308,11 @@ install_roms() {
     # Read rom attributes
     local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
-    # local rom_name=${rom_info[0]}
     local is_clone=${rom_info[1]}
     local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
     local category=${roms_categories["$rom_name"]}
     local language=${roms_languages["$rom_name"]}
     local rating=${roms_ratings["$rom_name"]}
-
 
     # Always allow favorites regardless of filter
     if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
@@ -348,7 +347,7 @@ install_roms() {
       fi
 
       # Flags
-      local flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
+      local flags=$(echo "$description" | grep -oP "\(\K[^\)]+" || true)
       if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
         echo "[Skip] $rom_name (flags)"
         continue
