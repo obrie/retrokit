@@ -292,62 +292,65 @@ install_roms() {
     fi
 
     # [Exact match] Always allow favorites regardless of filter
-    if [ "$tab$favorites$tab" != *"$tab$rom_name$tab"* ]; then
+    if filter_regex "" "^($favorites)$" "$rom_name"; then
       # Attributes
       local rom_dat_file="$dat_dir/$rom_name"
-      if [ ! -f "$rom_dat_file" ]; then continue; fi
+      if [ ! -f "$rom_dat_file" ]; then
+        echo "[Skip] $rom_name (missing dat file)"
+        continue
+      fi
 
       # Is Clone
       local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-      if [ $(filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then
+      if filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone"; then
         echo "[Skip] $rom_name (clone)"
         continue
       fi
 
       # Language
       local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
-      if [ $(filter_regex "$blocklists_languages" "$allowlists_languages" "$language") ]; then
+      if filter_regex "$blocklists_languages" "$allowlists_languages" "$language"; then
         echo "[Skip] $rom_name (language)"
         continue
       fi
 
       # Category
       category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
-      if [ $(filter_regex "$blocklists_categories" "$allowlists_categories" "$category") ]; then
+      if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
         echo "[Skip] $rom_name (category)"
         continue
       fi
 
       # Rating
       rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
-      if [ $(filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating") ]; then
+      if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
         echo "[Skip] $rom_name (rating)"
         continue
       fi
 
       # Keywords
       description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
-      if [ $(filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then
+      if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
         echo "[Skip] $rom_name (description)"
         continue
       fi
 
       # Flags
       flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-      if [ $(filter_regex "$blocklists_flags" "$allowlists_flags" "$flags") ]; then
+      if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
         echo "[Skip] $rom_name (flags)"
         continue
       fi
 
       # Controls
       controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-      if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then
+      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
         echo "[Skip] $rom_name (controls)"
         continue
       fi
 
       # Name
-      if [ $(filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name") ]; then
+      if filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name"; then
         echo "[Skip] $rom_name (name)"
         continue
       fi

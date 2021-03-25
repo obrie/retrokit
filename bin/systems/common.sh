@@ -76,12 +76,14 @@ setup_system() {
 
 load_filter() {
   type="$1"
-  name="$1"
+  name="$2"
   setting ".roms.${type}s.$name"
 }
 
 load_regex_filter() {
-  load_filter "${@}" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|'
+  type="$1"
+  name="$2"
+  setting ".roms.${type}s.$name[]" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|'
 }
 
 filter_regex() {
