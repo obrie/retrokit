@@ -34,6 +34,8 @@ categories_file="$system_tmp_dir/catlist.ini"
 categories_flat_file="$categories_file.flat"
 languages_file="$system_tmp_dir/languages.ini"
 languages_flat_file="$languages_file.flat"
+ratings_file="$system_tmp_dir/ratings.ini"
+ratings_flat_file="$ratings_file.flat"
 
 # Source data
 declare -A sources
@@ -159,6 +161,13 @@ download_support_files() {
   if [ ! -f "$compatibility_file" ]; then
     wget -nc "${support_files['compatibility_url']}" -O "$compatibility_file"
   fi
+
+  # Downloda ratings file
+  if [ ! -f "$ratings_file" ]; then
+    wget -nc "${support_files['ratings_url']}" -O "$ratings.zip" || true
+    unzip -p "$ratings_file.zip" "${support_files['ratings_file']}" > "$ratings_file"
+    crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
+  fi
 }
 
 # Reset the list of ROMs that are visible
@@ -254,6 +263,7 @@ install_roms() {
   local blocklists_clones=$(load_filter "$system" "blocklist" "clones")
   local blocklists_languages=$(load_regex_filter "$system" "blocklist" "languages")
   local blocklists_categories=$(load_regex_filter "$system" "blocklist" "categories")
+  local blocklists_ratings=$(load_regex_filter "$system" "blocklist" "ratings")
   local blocklists_keywords=$(load_regex_filter "$system" "blocklist" "keywords")
   local blocklists_flags=$(load_regex_filter "$system" "blocklist" "flags")
   local blocklists_controls=$(load_regex_filter "$system" "blocklist" "controls")
@@ -263,6 +273,7 @@ install_roms() {
   local allowlists_clones=$(load_filter "$system" "allowlist" "clones")
   local allowlists_languages=$(load_regex_filter "$system" "allowlist" "languages")
   local allowlists_categories=$(load_regex_filter "$system" "allowlist" "categories")
+  local allowlists_ratings=$(load_regex_filter "$system" "allowlist" "ratings")
   local allowlists_keywords=$(load_regex_filter "$system" "allowlist" "keywords")
   local allowlists_flags=$(load_regex_filter "$system" "allowlist" "flags")
   local allowlists_controls=$(load_regex_filter "$system" "allowlist" "controls")
@@ -294,6 +305,10 @@ install_roms() {
       # Category
       category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
       if [ $(filter_regex "$blocklists_categories" "$allowlists_categories" "$category") ]; then continue; fi
+
+      # Rating
+      rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
+      if [ $(filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating") ]; then continue; fi
 
       # Keywords
       description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
