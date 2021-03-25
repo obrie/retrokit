@@ -41,7 +41,6 @@ declare -A roms_compatibility
 declare -A roms_categories
 declare -A roms_languages
 declare -A roms_ratings
-compatibility_regex=
 
 # Source data
 declare -A sources
@@ -166,23 +165,18 @@ download_support_files() {
 }
 
 load_support_files() {
-  echo "Loading emulator compatiblity..."
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
-    compatibility_regex="$compatibility_regex|$rom_name"
   done < <(cat "$compatibility_file" | awk -F"$tab" "{print \$1, \"$tab\", \$3}")
 
-  echo "Loading categories..."
   while IFS="$tab" read -r rom_name category; do
     roms_categories["$rom_name"]="$category"
   done < <(cat "$categories_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
-  echo "Loading languages..."
   while IFS="$tab" read -r rom_name language; do
     roms_languages["$rom_name"]="$language"
   done < <(cat "$languages_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
-  echo "Loading ratings..."
   while IFS="$tab" read -r rom_name rating; do
     roms_ratings["$rom_name"]="$rating"
   done < <(cat "$ratings_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
@@ -295,12 +289,6 @@ install_roms() {
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
   while read rom_dat; do
-    # First, quick check to see if we might have a match
-    if [[ ! "$rom_dat" =~ ($compatibility_regex) ]]; then
-      echo "[Skip] $rom_name (poor compatibility)"
-      continue
-    fi
-
     # Read rom attributes
     local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
