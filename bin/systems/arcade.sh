@@ -295,14 +295,16 @@ install_roms() {
   # Filter optimization to speed things up
   local optimization_filter
   if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
-    optimization_filter=" | grep -Ev \"runnable|cloneof\""
+    optimization_filter="runnable|cloneof"
+  else
+    optimization_filter="runnable"
   fi
 
   while read rom_dat; do
     # Read rom attributes
     local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
-    local rom_name=$(rom_info[0])
+    local rom_name=${rom_info[0]}
     local is_clone=${rom_info[1]}
     local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
     local emulator=${roms_compatibility["$rom_name"]}
@@ -375,7 +377,7 @@ install_roms() {
     # Install
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" $optimization_filter)
+  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | grep -Ev "$optimization_filter")
 }
 
 # Organize ROMs based on favorites
