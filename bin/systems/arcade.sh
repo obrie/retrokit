@@ -27,9 +27,7 @@ emulators_retropie_config="/opt/retropie/configs/all/emulators.cfg"
 # Support files
 roms_dir="$HOME/RetroPie/roms/$system"
 roms_all_dir="$roms_dir/-ALL-"
-dat_dir="$system_tmp_dir/dat"
-dat_file="$dat_dir.all"
-rom_xml_file="$system_tmp_dir/rom.xml"
+dat_file="$system_tmp_dir/roms.dat"
 compatibility_file="$system_tmp_dir/compatibility.tsv"
 categories_file="$system_tmp_dir/catlist.ini"
 categories_flat_file="$categories_file.flat"
@@ -129,21 +127,8 @@ download_support_files() {
 
   # Download dat file
   if [ ! -f "$dat_file" ]; then
-    wget -nc "${support_files['dat/url']}" -O "$dat_dir.7z" || true
-    7z e -so "$dat_dir.7z" "${support_files['dat/file']}" > "$dat_file"
-  fi
-
-  # Split dat file for better performance on lookup
-  if [ "$(ls -U "$dat_dir" | wc -l)" -eq 0 ]; then
-    csplit -n 6 --prefix "$dat_dir/" "$dat_file" '/<machine/' '{*}'
-    while read rom_dat_file; do
-      local rom_dat_filename=$(basename "$rom_dat_file")
-      local rom_name=$(grep -oP "machine name=\"\K[^\"]+" "$rom_dat_file")
-
-      if [ -n "$rom_name" ]; then
-        mv "$dat_dir/$rom_dat_filename" "$dat_dir/$rom_name"
-      fi
-    done < <(find "$dat_dir/" -type f )
+    wget -nc "${support_files['dat/url']}" -O "$dat_file.7z" || true
+    7z e -so "$dat_file.7z" "${support_files['dat/file']}" > "$dat_file"
   fi
 
   # Download languages file
@@ -162,11 +147,11 @@ download_support_files() {
 
   # Download compatibility file
   if [ ! -f "$compatibility_file" ]; then
-    wget -nc "${support_files['compatibility/url']}" -O "$compatibility_file"
+    wget "${support_files['compatibility/url']}" -O "$compatibility_file"
   fi
 
   # Download ratings file
-  if [ ! -f "$ratings_file" ]; then
+  if [ ! -f "$ratings_flat_file" ]; then
     wget -nc "${support_files['ratings/url']}" -O "$ratings_file.zip" || true
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
@@ -183,12 +168,9 @@ install_rom() {
   # Arguments
   local rom_name="$1"
   local emulator="$2"
+  local rom_dat="$3"
 
   # Determine which source to use based on the configured emulator
-
-  # Configuration
-  local dat_dir="$system_tmp_dir/dat"
-  local dat_file="$dat_dir/$rom_name"
 
   # Target
   mkdir -p "$roms_all_dir"
@@ -233,10 +215,10 @@ install_rom() {
       else
         echo "Already downloaded: $disk_emulator_file"
       fi
-    done < <(xmlstarlet sel -T -t -v "/*/disk/@name" "$dat_file")
+    done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/disk/@name")
 
     # Install sample asset (if applicable)
-    local sample_name=$(xmlstarlet sel -T -t -v "/*/@sampleof" "$dat_file" || true)
+    local sample_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@sampleof" || true)
     if [ -n "$sample_name" ]; then
       local sample_file="$samples_target_dir/$sample_name.zip"
       
@@ -282,26 +264,27 @@ install_roms() {
   local allowlists_controls=$(setting_regex ".roms.allowlists.controls")
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
-  # Compatible / Runnable roms
-  # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
-  while read rom_name; do
-    local emulator=$(grep "^$rom_name$tab" "$compatibility_file" | cut -d "$tab" -f 3)
-    if [ "$emulator" == "lr-mame" ]; then
+  while read rom_dat; do
+    # Read rom attributes
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "@cloneof" -o "$tab" -v "description/text()")
+    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
+    local rom_name=${rom_info[0]}
+    local is_clone=${rom_info[1]}
+    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
+
+    # Compatible / Runnable roms
+    local emulator=$(grep -v "$tab[x!]$tab" "$compatibility_file" | grep -E "^$rom_name$tab" | cut -d "$tab" -f 3)
+    if [ -z "$emulator" ]; then
+      echo "[Skip] $rom_name (poor compatibility)"
+      continue
+    elif [ "$emulator" == "lr-mame" ]; then
       # TODO: Remove this once we have lr-mame integration done
       emulator="lr-mame2016"
     fi
 
-    # [Exact match] Always allow favorites regardless of filter
+    # Always allow favorites regardless of filter
     if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
-      # Attributes
-      local rom_dat_file="$dat_dir/$rom_name"
-      if [ ! -f "$rom_dat_file" ]; then
-        echo "[Skip] $rom_name (missing dat file)"
-        continue
-      fi
-
       # Is Clone
-      local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
       if filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone"; then
         echo "[Skip] $rom_name (clone)"
         continue
@@ -315,35 +298,34 @@ install_roms() {
       fi
 
       # Category
-      category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
+      local category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
       if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
         echo "[Skip] $rom_name (category)"
         continue
       fi
 
       # Rating
-      rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
+      local rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
       if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
         echo "[Skip] $rom_name (rating)"
         continue
       fi
 
       # Keywords
-      description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
       if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
         echo "[Skip] $rom_name (description)"
         continue
       fi
 
       # Flags
-      flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
+      local flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
       if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
         echo "[Skip] $rom_name (flags)"
         continue
       fi
 
       # Controls
-      controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
+      local controls=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "*/input/control/@type" | sort | uniq || true)
       if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
         echo "[Skip] $rom_name (controls)"
         continue
@@ -358,8 +340,8 @@ install_roms() {
 
     # Install
     echo "[Install] $rom_name"
-    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(grep -v "$tab[x!]$tab" "$compatibility_file" | cut -d "$tab" -f 1)
+    install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
+  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}')
 }
 
 # Organize ROMs based on favorites
