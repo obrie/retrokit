@@ -21,7 +21,7 @@ export es_systems_config="$HOME/.emulationstation/es_systems.cfg"
 
 init() {
   system="$1"
-  system_settings_file="$app_dir/config/$system/settings.json"
+  system_settings_file="$app_dir/config/systems/$system/settings.json"
 }
 
 setting() {
@@ -75,10 +75,9 @@ setup_system() {
 }
 
 load_filter() {
-  system="$1"
-  type="$2"
-  name="$3"
-  jq -r ".roms.${type}s.$name" "$file"
+  type="$1"
+  name="$1"
+  setting ".roms.${type}s.$name"
 }
 
 load_regex_filter() {

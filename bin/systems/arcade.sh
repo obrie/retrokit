@@ -167,7 +167,7 @@ download_support_files() {
 
   # Download ratings file
   if [ ! -f "$ratings_file" ]; then
-    wget -nc "${support_files['ratings/url']}" -O "$ratings.zip" || true
+    wget -nc "${support_files['ratings/url']}" -O "$ratings_file.zip" || true
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
   fi
@@ -263,24 +263,24 @@ install_roms() {
   local favorites=$(setting ".roms.favorites | @tsv")
 
   # Blocklists
-  local blocklists_clones=$(load_filter "$system" "blocklist" "clones")
-  local blocklists_languages=$(load_regex_filter "$system" "blocklist" "languages")
-  local blocklists_categories=$(load_regex_filter "$system" "blocklist" "categories")
-  local blocklists_ratings=$(load_regex_filter "$system" "blocklist" "ratings")
-  local blocklists_keywords=$(load_regex_filter "$system" "blocklist" "keywords")
-  local blocklists_flags=$(load_regex_filter "$system" "blocklist" "flags")
-  local blocklists_controls=$(load_regex_filter "$system" "blocklist" "controls")
-  local blocklists_names=$(load_regex_filter "$system" "blocklist" "names")
+  local blocklists_clones=$(load_filter "blocklist" "clones")
+  local blocklists_languages=$(load_regex_filter "blocklist" "languages")
+  local blocklists_categories=$(load_regex_filter "blocklist" "categories")
+  local blocklists_ratings=$(load_regex_filter "blocklist" "ratings")
+  local blocklists_keywords=$(load_regex_filter "blocklist" "keywords")
+  local blocklists_flags=$(load_regex_filter "blocklist" "flags")
+  local blocklists_controls=$(load_regex_filter "blocklist" "controls")
+  local blocklists_names=$(load_regex_filter "blocklist" "names")
 
   # Allowlists
-  local allowlists_clones=$(load_filter "$system" "allowlist" "clones")
-  local allowlists_languages=$(load_regex_filter "$system" "allowlist" "languages")
-  local allowlists_categories=$(load_regex_filter "$system" "allowlist" "categories")
-  local allowlists_ratings=$(load_regex_filter "$system" "allowlist" "ratings")
-  local allowlists_keywords=$(load_regex_filter "$system" "allowlist" "keywords")
-  local allowlists_flags=$(load_regex_filter "$system" "allowlist" "flags")
-  local allowlists_controls=$(load_regex_filter "$system" "allowlist" "controls")
-  local allowlists_names=$(load_regex_filter "$system" "allowlist" "names")
+  local allowlists_clones=$(load_filter "allowlist" "clones")
+  local allowlists_languages=$(load_regex_filter "allowlist" "languages")
+  local allowlists_categories=$(load_regex_filter "allowlist" "categories")
+  local allowlists_ratings=$(load_regex_filter "allowlist" "ratings")
+  local allowlists_keywords=$(load_regex_filter "allowlist" "keywords")
+  local allowlists_flags=$(load_regex_filter "allowlist" "flags")
+  local allowlists_controls=$(load_regex_filter "allowlist" "controls")
+  local allowlists_names=$(load_regex_filter "allowlist" "names")
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
@@ -299,37 +299,62 @@ install_roms() {
 
       # Is Clone
       local is_clone=$(xmlstarlet sel -T -t -v "*/@cloneof" "$rom_dat_file" || true)
-      if [ $(filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone") ]; then
+        echo "[Skip] $rom_name (clone)"
+        continue
+      fi
 
       # Language
       local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
-      if [ $(filter_regex "$blocklists_languages" "$allowlists_languages" "$language") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_languages" "$allowlists_languages" "$language") ]; then
+        echo "[Skip] $rom_name (language)"
+        continue
+      fi
 
       # Category
       category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
-      if [ $(filter_regex "$blocklists_categories" "$allowlists_categories" "$category") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_categories" "$allowlists_categories" "$category") ]; then
+        echo "[Skip] $rom_name (category)"
+        continue
+      fi
 
       # Rating
       rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
-      if [ $(filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating") ]; then
+        echo "[Skip] $rom_name (rating)"
+        continue
+      fi
 
       # Keywords
       description=$(xmlstarlet sel -T -t -v "*/description/text()" "$rom_dat_file" | tr '[:upper:]' '[:lower:]')
-      if [ $(filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description") ]; then
+        echo "[Skip] $rom_name (description)"
+        continue
+      fi
 
       # Flags
       flags=$(echo "$description" | grep -oP "\( \K[^\)]+" || true)
-      if [ $(filter_regex "$blocklists_flags" "$allowlists_flags" "$flags") ]; then continue; fi
+      if [ $(filter_regex "$blocklists_flags" "$allowlists_flags" "$flags") ]; then
+        echo "[Skip] $rom_name (flags)"
+        continue
+      fi
 
       # Controls
       controls=$(xmlstarlet sel -T -t -v "*/input/control/@type" "$rom_dat_file" | sort | uniq || true)
-      if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then continue; fi
+      if [ $(filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls") ]; then
+        echo "[Skip] $rom_name (controls)"
+        continue
+      fi
 
       # Name
-      if [ $(filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name") ]; then continue; fi
+      if [ $(filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name") ]; then
+        echo "[Skip] $rom_name (name)"
+        continue
+      fi
     fi
 
     # Install
+    echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
   done < <(grep -v "$tab[x!]$tab" "$compatibility_file" | cut -d "$tab" -f 1)
 }
