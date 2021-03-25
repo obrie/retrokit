@@ -36,6 +36,12 @@ languages_flat_file="$languages_file.flat"
 ratings_file="$system_tmp_dir/ratings.ini"
 ratings_flat_file="$ratings_file.flat"
 
+# In-memory mappings
+declare -A roms_compatibility
+declare -A roms_categories
+declare -A roms_languages
+declare -A roms_ratings
+
 # Source data
 declare -A sources
 declare -A emulators
@@ -158,6 +164,24 @@ download_support_files() {
   fi
 }
 
+load_support_files() {
+  while IFS="$tab" read -r rom_name emulator; do
+    roms_compatibility["$rom_name"]="$emulator"
+  done < <(cat "$compatibility_file" | awk -F"$tab" "{print \$1, \"$tab\", \$3}")
+
+  while IFS="$tab" read -r rom_name category; do
+    roms_categories["$rom_name"]="$category"
+  done < <(cat "$categories_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
+
+  while IFS="$tab" read -r rom_name language; do
+    roms_languages["$rom_name"]="$language"
+  done < <(cat "$languages_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
+
+  while IFS="$tab" read -r rom_name rating; do
+    roms_ratings["$rom_name"]="$rating"
+  done < <(cat "$ratings_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
+}
+
 # Reset the list of ROMs that are visible
 reset_filtered_roms() {
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
@@ -266,14 +290,17 @@ install_roms() {
 
   while read rom_dat; do
     # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "@cloneof" -o "$tab" -v "description/text()")
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
     local rom_name=${rom_info[0]}
     local is_clone=${rom_info[1]}
     local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
+    local emulator=${roms_compatibility["$rom_name"]}
+    local category=${roms_categories["$rom_name"]}
+    local language=${roms_languages["$rom_name"]}
+    local rating=${roms_ratings["$rom_name"]}
 
     # Compatible / Runnable roms
-    local emulator=$(grep -v "$tab[x!]$tab" "$compatibility_file" | grep -E "^$rom_name$tab" | cut -d "$tab" -f 3)
     if [ -z "$emulator" ]; then
       echo "[Skip] $rom_name (poor compatibility)"
       continue
@@ -291,21 +318,18 @@ install_roms() {
       fi
 
       # Language
-      local language=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$languages_flat_file" || true)
       if filter_regex "$blocklists_languages" "$allowlists_languages" "$language"; then
         echo "[Skip] $rom_name (language)"
         continue
       fi
 
       # Category
-      local category=$(grep -oP "^\[ Arcade: \K.*(?= \] $rom_name$)" "$categories_flat_file" || true)
       if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
         echo "[Skip] $rom_name (category)"
         continue
       fi
 
       # Rating
-      local rating=$(grep -oP "^\[ \K.*(?= \] $rom_name$)" "$ratings_flat_file" || true)
       if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
         echo "[Skip] $rom_name (rating)"
         continue
@@ -341,7 +365,7 @@ install_roms() {
     # Install
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}')
+  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file")
 }
 
 # Organize ROMs based on favorites
@@ -371,6 +395,7 @@ organize_system() {
 download() {
   load_sources
   download_support_files
+  load_support_files
   reset_filtered_roms
   install_roms
   organize_system "$system"
