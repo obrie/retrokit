@@ -25,11 +25,11 @@ init() {
 }
 
 setting() {
-  jq -r "$1" "$system_settings_file"
+  jq -r "$1 | values" "$system_settings_file"
 }
 
 app_setting() {
-  jq -r "$1" "$app_settings_file"
+  jq -r "$1 | values" "$app_settings_file"
 }
 
 scrape_system() {
@@ -74,16 +74,8 @@ setup_system() {
   fi
 }
 
-load_filter() {
-  type="$1"
-  name="$2"
-  setting ".roms.${type}s.$name"
-}
-
-load_regex_filter() {
-  type="$1"
-  name="$2"
-  setting ".roms.${type}s.$name[]" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|'
+setting_regex() {
+  setting "$1[]?" | sed 's/[][()\.^$?*+]/\\&/g' | paste -sd '|'
 }
 
 filter_regex() {
@@ -91,37 +83,50 @@ filter_regex() {
   local allowlist_regex="$2"
   local value="$3"
 
-  if [ -n "$blocklist_regex" ] && [[ "$value" =~ ($blocklist_regex) ]]; then
-    return 0
+  # Optional args
+  local exact_match="false"
+  if [ $# -gt 3 ]; then local "${@:4}"; fi
+
+  if [ -n "$blocklist_regex" ]; then
+    if [ "$exact_match" == "true" ]; then
+      blocklist_regex="^($blocklist_regex)\$"
+    fi
+
+    if [[ "$value" =~ ($blocklist_regex) ]]; then
+      return 0
+    fi
   fi
-  if [ -n "$allowlist_regex" ] && ! [[ "$value" =~ ($allowlist_regex) ]]; then
-    return 0
+
+  if [ -n "$allowlist_regex" ]; then
+    if [ "$exact_match" == "true" ]; then
+      allowlist_regex="^($allowlist_regex)\$"
+    fi
+
+    if ! [[ "$value" =~ ($allowlist_regex) ]]; then
+      return 0
+    fi
   fi
 
   return 1
 }
 
 filter_all_in_list() {
-  local blocklist_values="$1"
-  local allowlist_values="$2"
+  local blocklist_regex="$1"
+  local allowlist_regex="$2"
   local values="$3"
 
-  IFS="$tab"
   for value in "${values[@]}"; do
-    if [ "$tab$blocklist_values$tab" != *"$tab$value$tab" ]; then
-      unset IFS
+    if ! [[ "$value" =~ ($blocklist_regex) ]]; then
       return 1
     fi
   done
 
   for value in "${values[@]}"; do
-    if [ "$tab$whitelist_values$tab" == *"$tab$value$tab" ]; then
-      unset IFS
+    if ! [[ "$value" =~ ($allowlist_regex) ]]; then
       return 1
     fi
   done
 
-  unset IFS
   return 0
 }
 

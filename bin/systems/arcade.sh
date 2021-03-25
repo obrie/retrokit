@@ -260,27 +260,27 @@ install_rom() {
 
 install_roms() {
   # Overrides
-  local favorites=$(setting ".roms.favorites | @tsv")
+  local favorites=$(setting_regex ".roms.favorites")
 
   # Blocklists
-  local blocklists_clones=$(load_filter "blocklist" "clones")
-  local blocklists_languages=$(load_regex_filter "blocklist" "languages")
-  local blocklists_categories=$(load_regex_filter "blocklist" "categories")
-  local blocklists_ratings=$(load_regex_filter "blocklist" "ratings")
-  local blocklists_keywords=$(load_regex_filter "blocklist" "keywords")
-  local blocklists_flags=$(load_regex_filter "blocklist" "flags")
-  local blocklists_controls=$(load_regex_filter "blocklist" "controls")
-  local blocklists_names=$(load_regex_filter "blocklist" "names")
+  local blocklists_clones=$(setting ".roms.blocklists.clones")
+  local blocklists_languages=$(setting_regex ".roms.blocklists.languages")
+  local blocklists_categories=$(setting_regex ".roms.blocklists.categories")
+  local blocklists_ratings=$(setting_regex ".roms.blocklists.ratings")
+  local blocklists_keywords=$(setting_regex ".roms.blocklists.keywords")
+  local blocklists_flags=$(setting_regex ".roms.blocklists.flags")
+  local blocklists_controls=$(setting_regex ".roms.blocklists.controls")
+  local blocklists_names=$(setting_regex ".roms.blocklists.names")
 
   # Allowlists
-  local allowlists_clones=$(load_filter "allowlist" "clones")
-  local allowlists_languages=$(load_regex_filter "allowlist" "languages")
-  local allowlists_categories=$(load_regex_filter "allowlist" "categories")
-  local allowlists_ratings=$(load_regex_filter "allowlist" "ratings")
-  local allowlists_keywords=$(load_regex_filter "allowlist" "keywords")
-  local allowlists_flags=$(load_regex_filter "allowlist" "flags")
-  local allowlists_controls=$(load_regex_filter "allowlist" "controls")
-  local allowlists_names=$(load_regex_filter "allowlist" "names")
+  local allowlists_clones=$(setting ".roms.allowlists.clones")
+  local allowlists_languages=$(setting_regex ".roms.allowlists.languages")
+  local allowlists_categories=$(setting_regex ".roms.allowlists.categories")
+  local allowlists_ratings=$(setting_regex ".roms.allowlists.ratings")
+  local allowlists_keywords=$(setting_regex ".roms.allowlists.keywords")
+  local allowlists_flags=$(setting_regex ".roms.allowlists.flags")
+  local allowlists_controls=$(setting_regex ".roms.allowlists.controls")
+  local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
   # Compatible / Runnable roms
   # See https://www.waste.org/~winkles/ROMLister/ for list of possible fitler ideas
@@ -292,7 +292,7 @@ install_roms() {
     fi
 
     # [Exact match] Always allow favorites regardless of filter
-    if filter_regex "" "^($favorites)$" "$rom_name"; then
+    if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
       # Attributes
       local rom_dat_file="$dat_dir/$rom_name"
       if [ ! -f "$rom_dat_file" ]; then
@@ -350,7 +350,7 @@ install_roms() {
       fi
 
       # Name
-      if filter_regex "^($blocklists_names)\$" "^($allowlists_names)\$" "$rom_name"; then
+      if filter_regex "$blocklists_names" "$allowlists_names" "$rom_name" exact_match=true; then
         echo "[Skip] $rom_name (name)"
         continue
       fi
