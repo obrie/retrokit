@@ -165,18 +165,22 @@ download_support_files() {
 }
 
 load_support_files() {
+  echo "Loading emulator compatiblity..."
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
-  done < <(cat "$compatibility_file" | awk -F"$tab" "{print \$1, \"$tab\", \$3}")
+  done < <(cat "$compatibility_file" | awk -F"$tab" "{print \$1\"$tab\"\$3}")
 
+  echo "Loading categories..."
   while IFS="$tab" read -r rom_name category; do
     roms_categories["$rom_name"]="$category"
-  done < <(cat "$categories_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
+  done < <(cat "$categories_flat_file" | grep Arcade | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
+  echo "Loading languages..."
   while IFS="$tab" read -r rom_name language; do
     roms_languages["$rom_name"]="$language"
   done < <(cat "$languages_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
+  echo "Loading ratings..."
   while IFS="$tab" read -r rom_name rating; do
     roms_ratings["$rom_name"]="$rating"
   done < <(cat "$ratings_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
@@ -289,17 +293,8 @@ install_roms() {
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
   while read rom_dat; do
-    # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
-    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
-    local rom_name=${rom_info[0]}
-    local is_clone=${rom_info[1]}
-    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
+    local rom_name=$(echo "$rom_dat" | grep -oP "machine name=\"\K([^\"]+)")
     local emulator=${roms_compatibility["$rom_name"]}
-    local category=${roms_categories["$rom_name"]}
-    local language=${roms_languages["$rom_name"]}
-    local rating=${roms_ratings["$rom_name"]}
-
     # Compatible / Runnable roms
     if [ -z "$emulator" ]; then
       echo "[Skip] $rom_name (poor compatibility)"
@@ -308,6 +303,17 @@ install_roms() {
       # TODO: Remove this once we have lr-mame integration done
       emulator="lr-mame2016"
     fi
+
+    # Read rom attributes
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
+    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
+    # local rom_name=${rom_info[0]}
+    local is_clone=${rom_info[1]}
+    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
+    local category=${roms_categories["$rom_name"]}
+    local language=${roms_languages["$rom_name"]}
+    local rating=${roms_ratings["$rom_name"]}
+
 
     # Always allow favorites regardless of filter
     if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
