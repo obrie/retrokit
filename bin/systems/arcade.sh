@@ -315,9 +315,6 @@ install_rom() {
     if [ -d "$disk_emulator_dir" ]; then
       ln -fs "$disk_emulator_dir" "$roms_all_dir/$rom_name"
     fi
-
-    # Write emulator configuration
-    crudini --set "$emulators_retropie_config" "" "$(clean_emulator_config_key "arcade_${rom_name}")" "\"$emulator\""
   fi
 }
 
@@ -433,6 +430,15 @@ install_roms() {
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
   done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | awk "/machine name=\"($favorites)\"/ || "'!'"/$dat_skip_filter/")
+
+  # Merge emulator configurations
+  # 
+  # This is done at the end in one batch because it's a bit slow otherwise
+  crudini --merge "$retropie_configs_dir/retroarch-core-options.cfg" < <(
+    for rom_name in "${!emulators[@]}"; do
+      echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${emulators["$rom_name"]}\""
+    done
+  )
 }
 
 # Organize ROMs based on favorites
