@@ -134,9 +134,12 @@ download_file() {
   # Arguments
   local url="$1"
   local output="$2"
+  local requires_login="$3"
 
   if [ ! -f "$output" ]; then
-    if [[ "$url" == *"https://archive.org/download/"* ]]; then
+    echo "Downloading $url"
+
+    if [ "$requires_login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
       # Need to make sure we use the `ia` command-line
       local item=$(echo "$url" | grep -oP "download/\K[^/]+")
       local file=$(echo "$url" | grep -oP "$item/\K.+$")
@@ -144,6 +147,8 @@ download_file() {
     else
       curl -fL# "$url" -o "$output"
     fi
+  else
+    echo "Already downloaded $roms_source_url$parent_rom_name.zip"
   fi
 }
 

@@ -134,7 +134,7 @@ download_support_files() {
   # Download dat file
   if [ ! -f "$dat_file" ]; then
     if [ ! -f "$dat_file.7z" ]; then
-      curl -fL# "${support_files['dat/url']}" -o "$dat_file.7z"
+      download_file "${support_files['dat/url']}" "$dat_file.7z"
     fi
     7z e -so "$dat_file.7z" "${support_files['dat/file']}" > "$dat_file"
   fi
@@ -142,7 +142,7 @@ download_support_files() {
   # Download languages file
   if [ ! -f "$languages_flat_file" ]; then
     if [ ! -f "$languages_file.zip" ]; then
-      curl -fL# "${support_files['languages/url']}" -o "$languages_file.zip"
+      download_file "${support_files['languages/url']}" "$languages_file.zip"
     fi
     unzip -p "$languages_file.zip" "${support_files['languages/file']}" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_flat_file"
@@ -151,7 +151,7 @@ download_support_files() {
   # Download categories file
   if [ ! -f "$categories_flat_file" ]; then
     if [ ! -f "$languages_file.zip" ]; then
-      curl -fL# "${support_files['categories/url']}" -o "$categories_file.zip"
+      download_file "${support_files['categories/url']}" "$categories_file.zip"
     fi
     unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_flat_file"
@@ -159,13 +159,13 @@ download_support_files() {
 
   # Download compatibility file
   if [ ! -f "$compatibility_file" ]; then
-    curl -fL# "${support_files['compatibility/url']}" -o "$compatibility_file"
+    download_file "${support_files['compatibility/url']}" "$compatibility_file"
   fi
 
   # Download ratings file
   if [ ! -f "$ratings_flat_file" ]; then
     if [ ! -f "$ratings_file.zip" ]; then
-      curl -fL# "${support_files['ratings/url']}" -o "$ratings_file.zip"
+      download_file "${support_files['ratings/url']}" "$ratings_file.zip"
     fi
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
@@ -218,9 +218,12 @@ install_rom() {
   local rom_target_file="$roms_all_dir/$rom_name.zip"
   mkdir -p "$roms_all_dir" "$roms_emulator_dir"
 
+  # Source: BIOS
+  local bios_emulator_dir="$HOME/RetroPie/BIOS/$source_core"
+
   # Source: Samples
   local samples_source_url=$(source_asset_url "$source_name" "samples")
-  local samples_target_dir="$HOME/RetroPie/BIOS/$source_core/samples"
+  local samples_target_dir="$bios_emulator_dir/samples"
   mkdir -p "$samples_target_dir"
 
   # Source: Disks
@@ -230,31 +233,49 @@ install_rom() {
 
   # Only write if we haven't already written a ROM to the target destination
   if [ ! -f "$rom_target_file" ]; then
-    if [ "$source_format" =~ ^(merged|split)$ ]; then
-    #   # Merged / split set; we need to be a little smarter with the download
-    #   local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || true)
-    #   local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name"]/@romof || true)
+    # Install ROM asset
+    if [ ! -f "$rom_emulator_file" ]; then
+      if [ "$source_format" =~ ^(merged|split)$ ]; then
+        # Merged / split set; we need to be a little smarter with the download
+        local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || echo "$rom_name")
+        local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.orig.zip"
 
-    #   # Install Parent ROM asset (if necessary)
-    #   if [ ]
+        # Download parent
+        if [ ! -f "$parent_rom_emulator_file" ]; then
+          download_file "$roms_source_url$parent_rom_name.zip" "$parent_rom_emulator_file"
+        fi
 
-    # # Install BIOS (if necessary)
-    # if [ "$source_format" =~ ^(merged|split) ]; then
+        # Create non-merged rom in target
+        local rom_nonmerged_dir="$roms_emulator_dir/$rom_name.nonmerged"
+        rm -rf "$rom_nonmerged_dir"
+        unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
+        if [ "$parent_rom_name" != "$rom_name" ]; then
+          # Move clone to top-level and remove the remaining
+          mv "$rom_nonmerged_dir/$rom_name/*" "$rom_nonmerged_dir/"
+        fi
 
-    #   # Remove clones from zip
-    #   zipinfo -1 "$rom_emulator_file" | grep -oE "^.+/" | sort | uniq | xargs -I{} zip -d "$rom_emulator_file" "{}*"
-    # fi
+        # Remove remaining unused files in non-merged directory
+        rm -rf "$rom_nonmerged_dir/*/"
 
-    #   # Remove clones from zip
-    #   zipinfo -1 "$rom_emulator_file" | grep -oE "^.+/" | sort | uniq | xargs -I{} zip -d "$rom_emulator_file" "{}*"
-    else
-      # Install ROM asset
-      if [ ! -f "$rom_emulator_file" ]; then
-        echo "Downloading $roms_source_url$rom_name.zip"
-        curl -fL# "$roms_source_url$rom_name.zip" -o "$rom_emulator_file" || return 1
+        # Download BIOS
+        local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name"]/@romof || true)
+        local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
+        if [ -n "$bios_rom_name" ] && [ ! -f "$bios_emulator_file" ]
+          download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
+        fi
+
+        # Move BIOS to non-merged directory
+        unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/"
+
+        # Create ZIP at target
+        zip -j "$rom_emulator_file" "$rom_nonmerged_dir/*"
+        trrntzip "$rom_emulator_file"
+        rm -rf "$rom_nonmerged_dir"
       else
-        echo "Already downloaded: $rom_emulator_file"
+        download_file "$roms_source_url$rom_name.zip" "$rom_emulator_file"
       fi
+    else
+      echo "Already downloaded: $rom_emulator_file"
     fi
 
     # Install disk assets (if applicable)
@@ -264,7 +285,7 @@ install_rom() {
       
       if [ ! -f "$disk_emulator_file" ]; then
         echo "Downloading $disks_source_url$rom_name/$disk_name"
-        curl -fL# "$disks_source_url$rom_name/$disk_name" -o "$disk_emulator_file" || return 1
+        download_file "$disks_source_url$rom_name/$disk_name" "$disk_emulator_file" || return 1
       else
         echo "Already downloaded: $disk_emulator_file"
       fi
@@ -277,7 +298,7 @@ install_rom() {
       
       if [ ! -f "$sample_file" ]; then
         echo "Downloading $samples_source_url$sample_name.zip"
-        curl -fL# "$samples_source_url$sample_name.zip" -o "$sample_file" || return 1
+        download_file "$samples_source_url$sample_name.zip" "$sample_file" || return 1
       else
         echo "Already downloaded: $sample_file"
       fi
