@@ -228,7 +228,7 @@ install_rom() {
 
   # Source: Disks
   local disks_source_url=$(source_asset_url "$source_name" "disks")
-  local disk_emulator_dir="$roms_emulator_dir/$rom_name"
+  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
   local disk_target_dir="$roms_all_dir/$rom_name"
 
   # Only write if we haven't already written a ROM to the target destination
