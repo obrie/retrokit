@@ -210,6 +210,8 @@ install_rom() {
   local emulator="$2"
   local rom_dat="$3"
 
+  # TODO: Single xmlstarlet call here
+
   # Source
   local source_name=${emulators["$emulator/source_name"]}
   local source_core=${sources["$source_name/core"]}
@@ -413,6 +415,7 @@ install_roms() {
       fi
 
       # Controls
+      # TODO: Move this to the above xmlstarlet call
       local controls=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "*/input/control/@type" | sort | uniq || true)
       if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
         echo "[Skip] $rom_name (controls)"
@@ -434,7 +437,7 @@ install_roms() {
   # Merge emulator configurations
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
-  crudini --merge "$retropie_configs_dir/retroarch-core-options.cfg" < <(
+  crudini --merge "$emulators_retropie_config" < <(
     for rom_name in "${!emulators[@]}"; do
       echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${emulators["$rom_name"]}\""
     done
