@@ -10,7 +10,7 @@
   },
   "support_files": {
     "dat": {
-      "url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_229.7z",
+      "url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
       "file": "XML/mame222.xml"
     },
     "languages": {
@@ -107,7 +107,7 @@
         "format": "merged",
         "roms": "",
         "disks": "https://***REMOVED***roms.zip/roms%2F",
-        "samples": "https://***REMOVED***samples/",
+        "samples": "https://***REMOVED***",
         "emulator": "lr-mame",
         "core": "mame",
         "mame_version": "0.222"
