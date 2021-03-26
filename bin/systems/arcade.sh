@@ -262,7 +262,7 @@ install_rom() {
         # Download BIOS
         local bios_rom_name
         if [ "$parent_rom_name" == "$rom_name" ]; then
-          bios_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" || true)
+          bios_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@romof" || true)
         else
           bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" "$dat_file" || true)
         fi
