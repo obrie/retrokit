@@ -31,6 +31,7 @@ download() {
   organize_system "$system"
   scrape_system "$system" "screenscraper"
   scrape_system "$system" "thegamesdb"
+  build_gamelist "$system"
   theme_system "PSX"
 }
 

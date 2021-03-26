@@ -504,6 +504,7 @@ download() {
   organize_system "$system"
   scrape_system "$system" "screenscraper"
   scrape_system "$system" "arcadedb"
+  build_gamelist "$system"
   theme_system "MAME"
 }
 

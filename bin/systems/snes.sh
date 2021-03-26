@@ -35,6 +35,7 @@ download() {
   download_system "$system"
   organize_system "$system"
   scrape_system "$system" "screenscraper"
+  build_gamelist "$system"
   theme_system "SNES"
 }
 

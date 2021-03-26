@@ -42,8 +42,12 @@ scrape_system() {
 
   # Scrape
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source"
+}
 
-  # Generate game list
+build_gamelist() {
+  # Arguments
+  local system="$1"
+
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
 }
 

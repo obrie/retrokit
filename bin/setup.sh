@@ -262,6 +262,7 @@ setup_scraper() {
   crudini --set "$skyscraper_config" 'main' 'skipped' '"true"'
   crudini --set "$skyscraper_config" 'main' 'symlink' '"true"'
   crudini --set "$skyscraper_config" 'main' 'unattend' '"true"'
+  crudini --set "$skyscraper_config" 'main' 'unattendskip' '"true"'
   crudini --set "$skyscraper_config" 'main' 'verbosity' '"3"'
   crudini --set "$skyscraper_config" 'main' 'videos' '"true"'
   crudini --set "$skyscraper_config" 'screenscraper' 'userCreds' "\"$username:$password\""
