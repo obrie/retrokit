@@ -428,7 +428,7 @@ install_roms() {
     # Install
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | grep -Ev "$dat_skip_filter")
+  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | awk "/machine name=\"($favorites)\"/ || "'!'"/$dat_skip_filter/")
 }
 
 # Organize ROMs based on favorites
