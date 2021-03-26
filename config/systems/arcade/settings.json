@@ -100,18 +100,6 @@
         "core": "mame2016",
         "mame_version": "0.174"
       },
-      "arcade-advmame-http": {
-        "type": "http",
-        "url": "https://***REMOVED***",
-        "dat": "mame2003.xml",
-        "format": "non-merged",
-        "roms": "roms/",
-        "disks": "roms/",
-        "samples": "samples/",
-        "emulator": "advmame",
-        "core": "advmame",
-        "mame_version": "0.78"
-      },
       "arcade-mame0222-http": {
         "type": "http",
         "url": "https://***REMOVED***",

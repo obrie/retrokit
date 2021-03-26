@@ -325,9 +325,12 @@ install_roms() {
     if [ -z "$emulator" ]; then
       echo "[Skip] $rom_name (poor compatibility)"
       continue
-    elif [ "$emulator" == "lr-mame" ]; then
-      # TODO: Remove this once we have lr-mame integration done
-      emulator="lr-mame2016"
+    fi
+
+    # ROMs with sources
+    if [ -z "${emulators["$emulator/source_name"]}" ]; then
+      echo "[Skip] $rom_name (no source for emulator)"
+      continue
     fi
 
     # Always allow favorites regardless of filter
