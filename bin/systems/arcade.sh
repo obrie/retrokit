@@ -293,7 +293,7 @@ install_roms() {
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
   # Filter optimization to speed things up
-  local dat_skip_filter="runnable|ismechanical|players=\"0\""
+  local dat_skip_filter="runnable|ismechanical|players=\"0\"|softwarelist"
   if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
     dat_skip_filter="$dat_skip_filter|cloneof"
   fi
