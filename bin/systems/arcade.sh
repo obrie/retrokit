@@ -306,6 +306,9 @@ install_rom() {
         zip -j "$rom_emulator_file" $rom_build_dir/*
         trrntzip "$rom_emulator_file"
         rm -rf "$rom_nonmerged_dir"
+
+        # Remove TorrentZip logs
+        rm -f "$(pwd)/*log"
       else
         download_file "$roms_source_url$rom_name.zip" "$rom_emulator_file"
       fi
