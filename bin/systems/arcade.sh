@@ -283,11 +283,11 @@ install_rom() {
     # Install disk assets (if applicable)
     while read disk_name; do
       mkdir -p "$disk_emulator_dir"
-      local disk_emulator_file="$disk_emulator_dir/$disk_name"
+      local disk_emulator_file="$disk_emulator_dir/$disk_name.chd"
 
       if [ ! -f "$disk_emulator_file" ]; then
-        echo "Downloading $disks_source_url$rom_name/$disk_name"
-        download_file "$disks_source_url$rom_name/$disk_name" "$disk_emulator_file" || return 1
+        echo "Downloading $disks_source_url$rom_name/$disk_name.chd"
+        download_file "$disks_source_url$rom_name/$disk_name.chd" "$disk_emulator_file" || return 1
       else
         echo "Already downloaded: $disk_emulator_file"
       fi
