@@ -253,15 +253,9 @@ install_rom() {
 
         # Create non-merged rom in target
         local rom_nonmerged_dir="$roms_emulator_dir/$rom_name.nonmerged"
+        local rom_build_dir="$rom_nonmerged_dir/build"
         rm -rf "$rom_nonmerged_dir"
         unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
-        if [ "$parent_rom_name" != "$rom_name" ]; then
-          # Move clone to top-level and remove the remaining
-          mv "$rom_nonmerged_dir/$rom_name/*" "$rom_nonmerged_dir/"
-        fi
-
-        # Remove remaining unused files in non-merged directory
-        rm -rf $rom_nonmerged_dir/*/
 
         # Download BIOS
         local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" "$dat_file" || true)
@@ -271,12 +265,35 @@ install_rom() {
             download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
           fi
 
-          # Move BIOS to non-merged directory
-          unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/"
+          unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/bios/"
         fi
 
+        # Copy over the required roms (Try: child -> parent -> bios)
+        while read dest_name src_name; do
+          # Determine if we're merging from a parent/bios
+          declare -a src_files
+          if [ -n "$src_name" ]; then
+            src_files=("$rom_nonmerged_dir/$src_name" "$rom_nonmerged_dir/bios/$src_name")
+          else
+            src_files=("$rom_nonmerged_dir/$rom_name/$dest_name")
+          fi
+
+          # Find the first file that exists
+          for src_file in "${src_files[@]}"; do
+            if [ -f "$src_file" ]; then
+              cp "$src_file" "$rom_build_dir/$dest_name"
+              break
+            fi
+          done
+
+          if [ ! -f "$rom_build_dir/$dest_name" ]; then
+            echo "Missing rom: $merge_name"
+            exit 1
+          fi
+        done < <(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*/rom" -v "@name" -o "$tab" -v "@merge" -n)
+
         # Create ZIP at target
-        zip -j "$rom_emulator_file" $rom_nonmerged_dir/*
+        zip -j "$rom_emulator_file" $rom_build_dir/*
         trrntzip "$rom_emulator_file"
         rm -rf "$rom_nonmerged_dir"
       else
