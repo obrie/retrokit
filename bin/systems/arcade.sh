@@ -133,32 +133,40 @@ download_support_files() {
 
   # Download dat file
   if [ ! -f "$dat_file" ]; then
-    wget -nc "${support_files['dat/url']}" -O "$dat_file.7z" || true
+    if [ ! -f "$dat_file.7z" ]; then
+      curl -f "${support_files['dat/url']}" -o "$dat_file.7z"
+    fi
     7z e -so "$dat_file.7z" "${support_files['dat/file']}" > "$dat_file"
   fi
 
   # Download languages file
   if [ ! -f "$languages_flat_file" ]; then
-    wget -nc "${support_files['languages/url']}" -O "$languages_file.zip" || true
+    if [ ! -f "$languages_file.zip" ]; then
+      curl -f "${support_files['languages/url']}" -o "$languages_file.zip"
+    fi
     unzip -p "$languages_file.zip" "${support_files['languages/file']}" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_flat_file"
   fi
 
   # Download categories file
   if [ ! -f "$categories_flat_file" ]; then
-    wget -nc "${support_files['categories/url']}" -O "$categories_file.zip" || true
+    if [ ! -f "$languages_file.zip" ]; then
+      curl -f "${support_files['categories/url']}" -o "$categories_file.zip"
+    fi
     unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_flat_file"
   fi
 
   # Download compatibility file
   if [ ! -f "$compatibility_file" ]; then
-    wget "${support_files['compatibility/url']}" -O "$compatibility_file"
+    curl -f "${support_files['compatibility/url']}" -o "$compatibility_file"
   fi
 
   # Download ratings file
   if [ ! -f "$ratings_flat_file" ]; then
-    wget -nc "${support_files['ratings/url']}" -O "$ratings_file.zip" || true
+    if [ ! -f "$ratings_file.zip" ]; then
+      curl -f "${support_files['ratings/url']}" -o "$ratings_file.zip"
+    fi
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
   fi
@@ -228,7 +236,7 @@ install_rom() {
   if [ ! -f "$rom_target_file" ]; then
     # Install ROM asset
     if [ ! -f "$rom_emulator_file" ]; then
-      wget "$roms_source_url$rom_name.zip" -O "$rom_emulator_file" || return 1
+      curl -f "$roms_source_url$rom_name.zip" -o "$rom_emulator_file" || return 1
     else
       echo "Already downloaded: $rom_emulator_file"
     fi
@@ -239,7 +247,7 @@ install_rom() {
       local disk_emulator_file="$disk_emulator_dir/$disk_name"
       
       if [ ! -f "$disk_emulator_file" ]; then
-        wget "$disks_source_url$rom_name/$disk_name" -O "$disk_emulator_file" || return 1
+        curl -f "$disks_source_url$rom_name/$disk_name" -o "$disk_emulator_file" || return 1
       else
         echo "Already downloaded: $disk_emulator_file"
       fi
@@ -251,7 +259,7 @@ install_rom() {
       local sample_file="$samples_target_dir/$sample_name.zip"
       
       if [ ! -f "$sample_file" ]; then
-        wget "$samples_source_url$sample_name.zip" -O "$sample_file" || return 1
+        curl -f "$samples_source_url$sample_name.zip" -o "$sample_file" || return 1
       else
         echo "Already downloaded: $sample_file"
       fi
