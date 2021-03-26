@@ -206,21 +206,17 @@ install_rom() {
   local emulator="$2"
   local rom_dat="$3"
 
-  # Determine which source to use based on the configured emulator
-
-  # Target
-  mkdir -p "$roms_all_dir"
-
   # Source
   local source_name=${emulators["$emulator/source_name"]}
   local source_core=${sources["$source_name/core"]}
+  local source_format=${sources["$source_name/format"]}
 
   # Source: ROMs
   local roms_source_url=$(source_asset_url "$source_name" "roms")
   local roms_emulator_dir="$roms_dir/.$source_core"
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
   local rom_target_file="$roms_all_dir/$rom_name.zip"
-  mkdir -p "$roms_source_url"
+  mkdir -p "$roms_all_dir" "$roms_emulator_dir"
 
   # Source: Samples
   local samples_source_url=$(source_asset_url "$source_name" "samples")
@@ -234,12 +230,31 @@ install_rom() {
 
   # Only write if we haven't already written a ROM to the target destination
   if [ ! -f "$rom_target_file" ]; then
-    # Install ROM asset
-    if [ ! -f "$rom_emulator_file" ]; then
-      echo "Downloading $roms_source_url$rom_name.zip"
-      curl -fL# "$roms_source_url$rom_name.zip" -o "$rom_emulator_file" || return 1
+    if [ "$source_format" =~ ^(merged|split)$ ]; then
+    #   # Merged / split set; we need to be a little smarter with the download
+    #   local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || true)
+    #   local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name"]/@romof || true)
+
+    #   # Install Parent ROM asset (if necessary)
+    #   if [ ]
+
+    # # Install BIOS (if necessary)
+    # if [ "$source_format" =~ ^(merged|split) ]; then
+
+    #   # Remove clones from zip
+    #   zipinfo -1 "$rom_emulator_file" | grep -oE "^.+/" | sort | uniq | xargs -I{} zip -d "$rom_emulator_file" "{}*"
+    # fi
+
+    #   # Remove clones from zip
+    #   zipinfo -1 "$rom_emulator_file" | grep -oE "^.+/" | sort | uniq | xargs -I{} zip -d "$rom_emulator_file" "{}*"
     else
-      echo "Already downloaded: $rom_emulator_file"
+      # Install ROM asset
+      if [ ! -f "$rom_emulator_file" ]; then
+        echo "Downloading $roms_source_url$rom_name.zip"
+        curl -fL# "$roms_source_url$rom_name.zip" -o "$rom_emulator_file" || return 1
+      else
+        echo "Already downloaded: $rom_emulator_file"
+      fi
     fi
 
     # Install disk assets (if applicable)
@@ -311,15 +326,17 @@ install_roms() {
 
   while read rom_dat; do
     # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()" -o "$tab" -v "boolean(biosset)")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
     local rom_name=${rom_info[0]}
     local is_clone=${rom_info[1]}
     local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
+    local has_bios=${rom_info[3]}
     local emulator=${roms_compatibility["$rom_name"]}
     local category=${roms_categories["$rom_name"]}
     local language=${roms_languages["$rom_name"]}
     local rating=${roms_ratings["$rom_name"]}
+    local source_name=${emulators["$emulator/source_name"]}
 
     # Compatible / Runnable roms
     if [ -z "$emulator" ]; then
@@ -328,8 +345,14 @@ install_roms() {
     fi
 
     # ROMs with sources
-    if [ -z "${emulators["$emulator/source_name"]}" ]; then
+    if [ -z "$source_name" ]; then
       echo "[Skip] $rom_name (no source for emulator)"
+      continue
+    fi
+
+    # Handle merged / split sets
+    if [ "${sources["$source_name/format"]}" =~ ^(merged|split)$ ] && [ "$has_bios" == "true" ]; then
+      echo "[Skip] $rom_name (no bios in file / clones are split)"
       continue
     fi
 
