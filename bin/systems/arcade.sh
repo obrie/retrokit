@@ -236,6 +236,7 @@ install_rom() {
   if [ ! -f "$rom_target_file" ]; then
     # Install ROM asset
     if [ ! -f "$rom_emulator_file" ]; then
+      echo "Downloading $roms_source_url$rom_name.zip"
       curl -fL# "$roms_source_url$rom_name.zip" -o "$rom_emulator_file" || return 1
     else
       echo "Already downloaded: $rom_emulator_file"
@@ -247,6 +248,7 @@ install_rom() {
       local disk_emulator_file="$disk_emulator_dir/$disk_name"
       
       if [ ! -f "$disk_emulator_file" ]; then
+        echo "Downloading $disks_source_url$rom_name/$disk_name"
         curl -fL# "$disks_source_url$rom_name/$disk_name" -o "$disk_emulator_file" || return 1
       else
         echo "Already downloaded: $disk_emulator_file"
@@ -259,6 +261,7 @@ install_rom() {
       local sample_file="$samples_target_dir/$sample_name.zip"
       
       if [ ! -f "$sample_file" ]; then
+        echo "Downloading $samples_source_url$sample_name.zip"
         curl -fL# "$samples_source_url$sample_name.zip" -o "$sample_file" || return 1
       else
         echo "Already downloaded: $sample_file"

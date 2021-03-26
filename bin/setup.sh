@@ -103,6 +103,9 @@ install_developer_tools() {
 
   # Rom Set tools
   $app_dir/bin/tools/romset.sh install
+
+  # Archival
+  sudo apt install zip
 }
 
 setup_case() {
