@@ -264,7 +264,7 @@ install_rom() {
         rm -rf $rom_nonmerged_dir/*/
 
         # Download BIOS
-        local bios_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name\"]/@romof" || true)
+        local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" "$dat_file" || true)
         local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
         if [ -n "$bios_rom_name" ]; then
           if [ ! -f "$bios_emulator_file" ]; then
