@@ -254,6 +254,7 @@ install_rom() {
         # Create non-merged rom in target
         local rom_nonmerged_dir="$roms_emulator_dir/$rom_name.nonmerged"
         local rom_build_dir="$rom_nonmerged_dir/build"
+        mkdir -p "$rom_build_dir"
         rm -rf "$rom_nonmerged_dir"
         unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
 
@@ -275,7 +276,7 @@ install_rom() {
           if [ -n "$src_name" ]; then
             src_files=("$rom_nonmerged_dir/$src_name" "$rom_nonmerged_dir/bios/$src_name")
           else
-            src_files=("$rom_nonmerged_dir/$rom_name/$dest_name")
+            src_files=("$rom_nonmerged_dir/$rom_name/$dest_name" "$rom_nonmerged_dir/$dest_name")
           fi
 
           # Find the first file that exists
