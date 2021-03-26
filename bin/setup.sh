@@ -106,6 +106,19 @@ install_developer_tools() {
 
   # Archival
   sudo apt install zip
+
+  # TorrentZip
+  if [ ! `command -v trrntzip` ]; then
+    mkdir /tmp/trrntzip
+    git clone https://github.com/hydrogen18/trrntzip.git /tmp/trrntzip
+    pushd /tmp/trrntzip
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install
+    popd
+    rm -rf /tmp/trrntzip
+  fi
 }
 
 setup_case() {
