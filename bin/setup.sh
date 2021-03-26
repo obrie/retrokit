@@ -30,7 +30,7 @@ backup() {
 
 prepare() {
   # Make sure emulation station isn't running
-  killall /opt/retropie/supplementary/emulationstation/emulationstation
+  killall /opt/retropie/supplementary/emulationstation/emulationstation || true
 }
 
 backup_common_configs() {

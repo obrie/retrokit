@@ -38,7 +38,7 @@ scrape_system() {
   local source="$2"
 
   # Kill emulation station
-  killall /opt/retropie/supplementary/emulationstation/emulationstation
+  killall /opt/retropie/supplementary/emulationstation/emulationstation || true
 
   # Scrape
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source"
