@@ -254,8 +254,8 @@ install_rom() {
         # Create non-merged rom in target
         local rom_nonmerged_dir="$roms_emulator_dir/$rom_name.nonmerged"
         local rom_build_dir="$rom_nonmerged_dir/build"
-        mkdir -p "$rom_build_dir"
         rm -rf "$rom_nonmerged_dir"
+        mkdir -p "$rom_build_dir"
         unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
 
         # Download BIOS
