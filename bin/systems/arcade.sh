@@ -115,7 +115,7 @@ source_asset_url() {
   local source_url=${sources["$source_name/url"]}
   local asset_path=${sources["$source_name/$asset_name"]}
 
-  if [ $(grep -E "^http" "$asset_path") ]; then
+  if [[ "$asset_path" =~ ^http ]]; then
     echo "$asset_path"
   else
     echo "$source_url$asset_path"
@@ -235,7 +235,7 @@ install_rom() {
   if [ ! -f "$rom_target_file" ]; then
     # Install ROM asset
     if [ ! -f "$rom_emulator_file" ]; then
-      if [ "$source_format" =~ ^(merged|split)$ ]; then
+      if [[ "$source_format" =~ ^(merged|split)$ ]]; then
         # Merged / split set; we need to be a little smarter with the download
         local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || echo "$rom_name")
         local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.orig.zip"
@@ -255,20 +255,22 @@ install_rom() {
         fi
 
         # Remove remaining unused files in non-merged directory
-        rm -rf "$rom_nonmerged_dir/*/"
+        rm -rf $rom_nonmerged_dir/*/
 
         # Download BIOS
-        local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name"]/@romof || true)
+        local bios_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/*[name=\"$parent_rom_name\"]/@romof" || true)
         local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
-        if [ -n "$bios_rom_name" ] && [ ! -f "$bios_emulator_file" ]
-          download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
+        if [ -n "$bios_rom_name" ]; then
+          if [ ! -f "$bios_emulator_file" ]; then
+            download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
+          fi
+
+          # Move BIOS to non-merged directory
+          unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/"
         fi
 
-        # Move BIOS to non-merged directory
-        unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/"
-
         # Create ZIP at target
-        zip -j "$rom_emulator_file" "$rom_nonmerged_dir/*"
+        zip -j "$rom_emulator_file" $rom_nonmerged_dir/*
         trrntzip "$rom_emulator_file"
         rm -rf "$rom_nonmerged_dir"
       else
@@ -282,7 +284,7 @@ install_rom() {
     while read disk_name; do
       mkdir -p "$disk_emulator_dir"
       local disk_emulator_file="$disk_emulator_dir/$disk_name"
-      
+
       if [ ! -f "$disk_emulator_file" ]; then
         echo "Downloading $disks_source_url$rom_name/$disk_name"
         download_file "$disks_source_url$rom_name/$disk_name" "$disk_emulator_file" || return 1
@@ -295,7 +297,7 @@ install_rom() {
     local sample_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@sampleof" || true)
     if [ -n "$sample_name" ]; then
       local sample_file="$samples_target_dir/$sample_name.zip"
-      
+
       if [ ! -f "$sample_file" ]; then
         echo "Downloading $samples_source_url$sample_name.zip"
         download_file "$samples_source_url$sample_name.zip" "$sample_file" || return 1
@@ -347,12 +349,11 @@ install_roms() {
 
   while read rom_dat; do
     # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()" -o "$tab" -v "boolean(biosset)")
+    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
     IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
     local rom_name=${rom_info[0]}
     local is_clone=${rom_info[1]}
     local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
-    local has_bios=${rom_info[3]}
     local emulator=${roms_compatibility["$rom_name"]}
     local category=${roms_categories["$rom_name"]}
     local language=${roms_languages["$rom_name"]}
@@ -368,12 +369,6 @@ install_roms() {
     # ROMs with sources
     if [ -z "$source_name" ]; then
       echo "[Skip] $rom_name (no source for emulator)"
-      continue
-    fi
-
-    # Handle merged / split sets
-    if [ "${sources["$source_name/format"]}" =~ ^(merged|split)$ ] && [ "$has_bios" == "true" ]; then
-      echo "[Skip] $rom_name (no bios in file / clones are split)"
       continue
     fi
 
