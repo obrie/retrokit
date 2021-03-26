@@ -142,7 +142,7 @@ download_file() {
       local file=$(echo "$url" | grep -oP "$item/\K.+$")
       ia download "$item" "$file" -s > "$output"
     else
-      curl -f "$url" -o "$output"
+      curl -fL# "$url" -o "$output"
     fi
   fi
 }

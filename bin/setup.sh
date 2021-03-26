@@ -56,7 +56,7 @@ install_config_tools() {
 
   # Env editor
   if [ ! -f "$tmp_dir/dotenv" ]; then
-    curl -f https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -o "$tmp_dir/dotenv"
+    curl -fL# https://raw.githubusercontent.com/bashup/dotenv/master/dotenv -o "$tmp_dir/dotenv"
   fi
   . "$tmp_dir/dotenv"
 
@@ -88,7 +88,7 @@ install_torrent_tools() {
 install_http_tools() {
   # Internet Archive CLI
   if [ ! -f "/usr/local/bin/ia" ]; then
-    sudo curl -f https://archive.org/download/ia-pex/ia -o /usr/local/bin/ia
+    sudo curl -fL# https://archive.org/download/ia-pex/ia -o /usr/local/bin/ia
   fi
   sudo chmod +x /usr/local/bin/ia
   ia configure -u "$(jq -r '.internetarchive.username' \"$settings_file\")" -p "$(jq -r '.internetarchive.password' \"$settings_file\")"
@@ -214,7 +214,7 @@ setup_splashscreen() {
     local media_file="$HOME/RetroPie/splashscreens/splash.mp4"
 
     if [ ! -f "$media_file" ]; then
-      curl -f "$(jq -r '.splashscreen.url' "$settings_file")" -o "$media_file"
+      curl -fL# "$(jq -r '.splashscreen.url' "$settings_file")" -o "$media_file"
     fi
 
     echo "$media_file" > /etc/splashscreen.list
@@ -268,7 +268,7 @@ fix_configurations() {
 setup_overlays() {
   local bezelproject_bin="$HOME/RetroPie/retropiemenu/bezelproject.sh"
   if [ ! -f "$bezelproject_bin" ]; then
-    curl -f https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -o "$bezelproject_bin"
+    curl -fL# https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh -o "$bezelproject_bin"
   fi
   chmod +x "$bezelproject_bin"
 

@@ -32,7 +32,7 @@ create() {
   local image_file=/tmp/retropie.img.gz
 
   # Download Retropie
-  curl -f "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" -o "$image_file"
+  curl -fL# "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" -o "$image_file"
 
   # Copy the image
   gunzip --stdout "$image_file" | sudo dd bs=4M of="$device"
