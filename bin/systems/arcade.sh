@@ -241,12 +241,13 @@ install_rom() {
   if [ ! -f "$rom_target_file" ]; then
     # Install ROM asset
     if [ ! -f "$rom_emulator_file" ]; then
-      if [[ "$source_format" =~ ^(merged|split)$ ]]; then
-        # Merged / split set; we need to be a little smarter with the download
+      # TODO: Support split sets
+      if [[ "$source_format" =~ ^(merged)$ ]]; then
+        # Merged set; we need to be a little smarter with the download
         local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || echo "$rom_name")
         local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.orig.zip"
 
-        # Download parent
+        # Download parent merged rom (contains children)
         if [ ! -f "$parent_rom_emulator_file" ]; then
           download_file "$roms_source_url$parent_rom_name.zip" "$parent_rom_emulator_file"
         fi
@@ -259,9 +260,15 @@ install_rom() {
         unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
 
         # Download BIOS
-        local bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" "$dat_file" || true)
-        local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
+        local bios_rom_name
+        if [ "$parent_rom_name" == "$rom_name" ]; then
+          bios_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" || true)
+        else
+          bios_rom_name=$(xmlstarlet sel -T -t -v "/*/*[@name=\"$parent_rom_name\"]/@romof" "$dat_file" || true)
+        fi
         if [ -n "$bios_rom_name" ]; then
+          local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
+
           if [ ! -f "$bios_emulator_file" ]; then
             download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
           fi
@@ -269,13 +276,15 @@ install_rom() {
           unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/bios/"
         fi
 
-        # Copy over the required roms (Try: child -> parent -> bios)
+        # Copy over the required roms
         while read dest_name src_name; do
           # Determine if we're merging from a parent/bios
           declare -a src_files
           if [ -n "$src_name" ]; then
+            # Copy from parent / BIOS
             src_files=("$rom_nonmerged_dir/$src_name" "$rom_nonmerged_dir/bios/$src_name")
           else
+            # Copy from child / parent
             src_files=("$rom_nonmerged_dir/$rom_name/$dest_name" "$rom_nonmerged_dir/$dest_name")
           fi
 
