@@ -14,6 +14,7 @@ settings_file="$config_dir/settings.json"
 # System files
 boot_config="/boot/config.txt"
 es_settings_config="$HOME/.emulationstation/es_settings.cfg"
+retroarch_config="/opt/retropie/configs/all/retroarch.cfg"
 
 usage() {
   echo "usage: $0 [command]"
@@ -34,7 +35,7 @@ prepare() {
 }
 
 backup_common_configs() {
-  backup "$boot_config" "$es_settings_config"
+  backup "$boot_config" "$es_settings_config" "$retroarch_config"
 }
 
 setup_wifi() {
@@ -191,6 +192,9 @@ setup_display() {
 
   # Video player
   sed -r -i 's/(<string name="VideoOmxPlayer" value=")([^"]*)/\1true/' "$es_settings_config"
+
+  # Popups
+  crudini --set "$retroarch_config" '' 'menu_enable_widgets' '"false"'
 }
 
 setup_audio() {
