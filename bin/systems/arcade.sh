@@ -106,6 +106,25 @@ load_sources() {
     # Load emulator info
     emulators["${sources["$source_name/emulator"]}/source_name"]="$source_name"
   done < <(setting '.roms.sources | keys[]')
+
+  echo "Downloading source dats..."
+
+  while read -r source_name; do
+    local source_core=${sources["$source_name/core"]}
+    local source_dat_url=$(source_asset_url "$source_name" "dat")
+    local roms_core_dir="$roms_dir/.$source_core"
+    local target_dat_file="$roms_core_dir/.dat"
+    mkdir -p "$roms_core_dir"
+
+    if [ ! -f "$target_dat_file" ]; then
+      download_file "$source_dat_url" "$target_dat_file"
+    fi
+
+    # Find the list of roms that are downloadable
+    while read -r rom_name bios_name; do
+      sources["$source_name/bios/$rom_name"]="$bios_name"
+    done < <(xmlstarlet sel -T -t -m "/*/*[rom]" -v "@name" -o "$tab" -v "@romof" -n "$target_dat_file")
+  done < <(setting '.roms.sources | keys[]')
 }
 
 # Build the base url for the given source / asset
@@ -166,28 +185,9 @@ download_support_files() {
   fi
 }
 
-download_source_dats() {
-  echo "Downloading source dats..."
-
-  while read -r source_name; do
-    local source_core=${sources["$source_name/core"]}
-    local source_dat_url=$(source_asset_url "$source_name" "dat")
-    local roms_core_dir="$roms_dir/.$source_core"
-    local target_dat_file="$roms_core_dir/.dat"
-    mkdir -p "$roms_core_dir"
-
-    if [ ! -f "$target_dat_file" ]; then
-      download_file "$source_dat_url" "$target_dat_file"
-    fi
-
-    # Find the list of roms that are downloadable
-    while read -r rom_name bios_name; do
-      sources["$source_name/bios/$rom_name"]="$bios_name"
-    done < <(xmlstarlet sel -T -t -m "/*/*[rom]" -v "@name" -o "$tab" -v "@romof" -n "$target_dat_file")
-  done < <(setting '.roms.sources | keys[]')
-}
-
 load_support_files() {
+  download_support_files
+
   echo "Loading emulator compatiblity..."
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
@@ -320,6 +320,7 @@ install_rom_devices() {
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
 
   # Add devices to rom file
+  local needs_rezip=false
   while read device_name; do
     local device_emulator_file="$roms_emulator_dir/$device_name.zip"
     if [ ${sources["$source_name/bios/$device_name"]+exists} ]; then
@@ -328,9 +329,13 @@ install_rom_devices() {
       fi
 
       zipmerge "$rom_emulator_file" "$device_emulator_file"
-      trrntzip "$rom_emulator_file"
+      needs_rezip=true
     fi
   done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/device_ref/@name")
+
+  if [ "$needs_rezip" == "true" ]; then
+    trrntzip "$rom_emulator_file"
+  fi
 }
 
 install_rom_disks() {
@@ -521,7 +526,9 @@ install_roms() {
     echo "[Install] $rom_name"
     install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
   done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | awk "/machine name=\"($favorites)\"/ || "'!'"/$dat_skip_filter/")
+}
 
+set_default_emulators() {
   # Merge emulator configurations
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
@@ -558,14 +565,13 @@ organize_system() {
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
   load_sources
-  download_support_files
   load_support_files
-  download_source_dats
   reset_filtered_roms
   install_roms
+  set_default_emulators
   organize_system "$system"
   scrape_system "$system" "screenscraper"
-  scrape_system "$system" "arcadedb"
+  # scrape_system "$system" "arcadedb"
   build_gamelist "$system"
   theme_system "MAME"
 }
