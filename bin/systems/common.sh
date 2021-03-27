@@ -140,7 +140,7 @@ download_file() {
   local output="$2"
   local requires_login="$3"
 
-  if [ ! -f "$output" ]; then
+  if [ ! -s "$output" ]; then
     echo "Downloading $url"
 
     if [ "$requires_login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then

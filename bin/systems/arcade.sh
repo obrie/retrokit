@@ -36,42 +36,43 @@ ratings_file="$system_tmp_dir/ratings.ini"
 ratings_flat_file="$ratings_file.flat"
 
 # XSLT for grabbing data from DAT files
-roms_dat_xslt='''
-<?xml version="1.0"?>
+roms_dat_xslt='''<?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
+  <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz'" />
+  <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
   <xsl:output omit-xml-declaration="yes" indent="no"/>
   <xsl:template match="/">
-    <xsl:for-each select="/mame/machine[rom and not(ismechanical)]">
+    <xsl:for-each select="/*/*[rom and not(@ismechanical)]">
       <xsl:value-of select="@name"/>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="@romof"/>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="@cloneof"/>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="@sampleof"/>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[@merge]">
         <xsl:value-of select="@merge"/><xsl:text>,</xsl:text>
       </xsl:for-each>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[@merge]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
       </xsl:for-each>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[not(@merge)]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
       </xsl:for-each>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="device_ref">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
       </xsl:for-each>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="disk">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
       </xsl:for-each>
-      <xsl:text>&#x9;</xsl:text>
+      <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="input/control">
         <xsl:value-of select="@type"/><xsl:text>,</xsl:text>
       </xsl:for-each>
@@ -114,7 +115,7 @@ setup() {
       if [ -n "$branch" ]; then
         # Set to correct branch
         local setup_file="$HOME/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
-        if [ ! -f "$setup_file.orig" ]; then
+        if [ ! -s "$setup_file.orig" ]; then
           cp "$setup_file" "$setup_file.orig"
         fi
 
@@ -161,21 +162,21 @@ index_set_dats() {
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
     local set_dat_url=$(set_asset_url "$set_name" "dat")
-    local set_is_reference=$(sets["$set_name/reference"])
+    local set_is_reference=${sets["$set_name/reference"]}
     local roms_core_dir="$roms_dir/.$set_core"
     local target_dat_file="$roms_core_dir/.dat"
     mkdir -p "$roms_core_dir"
 
-    if [ ! -f "$target_dat_file" ]; then
+    if [ ! -s "$target_dat_file" ]; then
       download_file "$set_dat_url" "$target_dat_file"
     fi
 
-    if [ ! -f "$target_dat_file.index" ]; then
+    if [ ! -s "$target_dat_file.index" ]; then
       xmlstarlet tr <(echo "$roms_dat_xslt") "$target_dat_file" > "$target_dat_file.index"
     fi
 
     # Find the list of roms that are downloadable
-    while IFS="$tab" while read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks inputs; do
+    while IFS="»" read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks inputs; do
       if [ -n "$set_is_reference" ]; then
         rom_names+=("$name")
       fi
@@ -222,8 +223,8 @@ download_support_files() {
   done < <(setting ".support_files | to_entries[] | [.key, .value.url, .value.file] | @tsv")
 
   # Download languages file
-  if [ ! -f "$languages_flat_file" ]; then
-    if [ ! -f "$languages_file.zip" ]; then
+  if [ ! -s "$languages_flat_file" ]; then
+    if [ ! -s "$languages_file.zip" ]; then
       download_file "${support_files['languages/url']}" "$languages_file.zip"
     fi
     unzip -p "$languages_file.zip" "${support_files['languages/file']}" > "$languages_file"
@@ -231,8 +232,8 @@ download_support_files() {
   fi
 
   # Download categories file
-  if [ ! -f "$categories_flat_file" ]; then
-    if [ ! -f "$languages_file.zip" ]; then
+  if [ ! -s "$categories_flat_file" ]; then
+    if [ ! -s "$languages_file.zip" ]; then
       download_file "${support_files['categories/url']}" "$categories_file.zip"
     fi
     unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
@@ -240,13 +241,13 @@ download_support_files() {
   fi
 
   # Download compatibility file
-  if [ ! -f "$compatibility_file" ]; then
+  if [ ! -s "$compatibility_file" ]; then
     download_file "${support_files['compatibility/url']}" "$compatibility_file"
   fi
 
   # Download ratings file
-  if [ ! -f "$ratings_flat_file" ]; then
-    if [ ! -f "$ratings_file.zip" ]; then
+  if [ ! -s "$ratings_flat_file" ]; then
+    if [ ! -s "$ratings_file.zip" ]; then
       download_file "${support_files['ratings/url']}" "$ratings_file.zip"
     fi
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
@@ -391,14 +392,14 @@ install_rom_nonmerged_file() {
   mkdir -p "$roms_emulator_dir"
 
   # Install ROM asset
-  if [ ! -f "$rom_emulator_file" ]; then
+  if [ ! -s "$rom_emulator_file" ]; then
     local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
 
     if [[ "$set_format" == "merged" ]]; then
       # Download parent merged rom (contains children)
       local merged_rom_name="${parent_rom_name:-$rom_name}"
       local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
-      if [ ! -f "$merged_rom_emulator_file" ]; then
+      if [ ! -s "$merged_rom_emulator_file" ]; then
         download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file"
       fi
 
@@ -420,7 +421,7 @@ install_rom_nonmerged_file() {
         # Download the parent and merge it
         local parent_rom_emulator_file="$roms_set_url$parent_rom_name.zip"
 
-        if [ ! -f "$parent_rom_emulator_file" ]; then
+        if [ ! -s "$parent_rom_emulator_file" ]; then
           download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_name"
         fi
 
@@ -433,7 +434,7 @@ install_rom_nonmerged_file() {
     if [ -n "$bios_rom_name" ] && [ needs_merge "$set_name" "$bios_rom_name" "$rom_name" ]; then
       local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
 
-      if [ ! -f "$bios_emulator_file" ]; then
+      if [ ! -s "$bios_emulator_file" ]; then
         download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
       fi
 
@@ -445,7 +446,7 @@ install_rom_nonmerged_file() {
     for device_name in ${device_names//,/ }; do
       if [ ${sets["$set_name/$device_name/files"]+exists} ] && [ needs_merge "$set_name" "$device_name" "$rom_name" ]; then
         local device_emulator_file="$roms_emulator_dir/$device_name.zip"
-        if [ ! -f "$device_emulator_file" ]; then
+        if [ ! -s "$device_emulator_file" ]; then
           download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
         fi
 
