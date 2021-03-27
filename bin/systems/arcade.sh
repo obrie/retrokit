@@ -218,14 +218,11 @@ reset_filtered_roms() {
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 }
 
-# Installs a rom for a specific emulator
-install_rom() {
+install_rom_file() {
   # Arguments
   local rom_name="$1"
   local emulator="$2"
   local rom_dat="$3"
-
-  # TODO: Single xmlstarlet call here
 
   # Source
   local source_name=${emulators["$emulator/source_name"]}
@@ -236,32 +233,8 @@ install_rom() {
   local roms_source_url=$(source_asset_url "$source_name" "roms")
   local roms_emulator_dir="$roms_dir/.$source_core"
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
-  local rom_t  # Install sample asset (if applicable)
-  local sample_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@sampleof" || true)
-  if [ -n "$sample_name" ]; then
-    local sample_file="$samples_target_dir/$sample_name.zip"
-
-    if [ ! -f "$sample_file" ]; then
-      echo "Downloading $samples_source_url$sample_name.zip"
-      download_file "$samples_source_url$sample_name.zip" "$sample_file" || return 1
-    else
-      echo "Already downloaded: $sample_file"
-    fi
-  fiarget_file="$roms_all_dir/$rom_name.zip"
+  local rom_target_file="$roms_all_dir/$rom_name.zip"
   mkdir -p "$roms_all_dir" "$roms_emulator_dir"
-
-  # Source: BIOS
-  local bios_emulator_dir="$HOME/RetroPie/BIOS/$source_core"
-
-  # Source: Samples
-  local samples_source_url=$(source_asset_url "$source_name" "samples")
-  local samples_target_dir="$bios_emulator_dir/samples"
-  mkdir -p "$samples_target_dir"
-
-  # Source: Disks
-  local disks_source_url=$(source_asset_url "$source_name" "disks")
-  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
-  local disk_target_dir="$roms_all_dir/$rom_name"
 
   # Install ROM asset
   if [ ! -f "$rom_emulator_file" ]; then
@@ -325,25 +298,56 @@ install_rom() {
       zip -j "$rom_emulator_file" $rom_build_dir/*
       trrntzip "$rom_emulator_file"
       rm -rf "$rom_nonmerged_dir"
-
-      # Remove TorrentZip logs
-      rm -f "$(pwd)/*log"
     else
       download_file "$roms_source_url$rom_name.zip" "$rom_emulator_file"
     fi
   else
     echo "Already downloaded: $rom_emulator_file"
   fi
+}
 
-  # Install devices (if applicable, not all non-merged sets include them)
+install_rom_devices() {
+  # Arguments
+  local rom_name="$1"
+  local emulator="$2"
+  local rom_dat="$3"
+
+  # Source
+  local source_name=${emulators["$emulator/source_name"]}
+  local source_core=${sources["$source_name/core"]}
+  local roms_source_url=$(source_asset_url "$source_name" "roms")
+  local roms_emulator_dir="$roms_dir/.$source_core"
+  local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
+
+  # Add devices to rom file
   while read device_name; do
-    local device_emulator_file="$bios_emulator_dir/$device_name.zip"
+    local device_emulator_file="$roms_emulator_dir/$device_name.zip"
     if [ ${sources["$source_name/bios/$device_name"]+exists} ]; then
-      download_file "$roms_source_url$device_name.zip" "$device_emulator_file"
+      if [ ! -f "$device_emulator_file" ]; then
+        download_file "$roms_source_url$device_name.zip" "$device_emulator_file"
+      fi
+
+      zipmerge "$rom_emulator_file" "$device_emulator_file"
+      trrntzip "$rom_emulator_file"
     fi
   done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/device_ref/@name")
+}
 
-  # Install disk assets (if applicable)
+install_rom_disks() {
+  # Arguments
+  local rom_name="$1"
+  local emulator="$2"
+  local rom_dat="$3"
+
+  # Source
+  local source_name=${emulators["$emulator/source_name"]}
+  local source_core=${sources["$source_name/core"]}
+
+  # Disks
+  local disks_source_url=$(source_asset_url "$source_name" "disks")
+  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
+
+  # Install disk assets
   while read disk_name; do
     mkdir -p "$disk_emulator_dir"
     local disk_emulator_file="$disk_emulator_dir/$disk_name.chd"
@@ -355,8 +359,25 @@ install_rom() {
       echo "Already downloaded: $disk_emulator_file"
     fi
   done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/disk/@name")
+}
 
-  # Install sample asset (if applicable)
+install_rom_samples() {
+  # Arguments
+  local rom_name="$1"
+  local emulator="$2"
+  local rom_dat="$3"
+
+  # Source
+  local source_name=${emulators["$emulator/source_name"]}
+  local source_core=${sources["$source_name/core"]}
+  local bios_emulator_dir="$HOME/RetroPie/BIOS/$source_core"
+
+  # Samples
+  local samples_source_url=$(source_asset_url "$source_name" "samples")
+  local samples_target_dir="$bios_emulator_dir/samples"
+  mkdir -p "$samples_target_dir"
+
+  # Install sample asset
   local sample_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@sampleof" || true)
   if [ -n "$sample_name" ]; then
     local sample_file="$samples_target_dir/$sample_name.zip"
@@ -368,6 +389,17 @@ install_rom() {
       echo "Already downloaded: $sample_file"
     fi
   fi
+}
+
+# Installs a rom for a specific emulator
+install_rom() {
+  install_rom_file "${@}"
+  install_rom_devices "${@}"
+  install_rom_disks "${@}"
+  install_rom_samples "${@}"
+
+  # Remove TorrentZip logs
+  rm -f "$(pwd)/*log"
 
   # Link to -ALL- (including disk)
   ln -fs "$rom_emulator_file" "$rom_target_file"

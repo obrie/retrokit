@@ -105,7 +105,7 @@ install_developer_tools() {
   $app_dir/bin/tools/romset.sh install
 
   # Archival
-  sudo apt install zip
+  sudo apt install zip zipmerge
 
   # TorrentZip
   if [ ! `command -v trrntzip` ]; then
