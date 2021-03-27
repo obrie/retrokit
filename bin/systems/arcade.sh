@@ -27,7 +27,6 @@ emulators_retropie_config="/opt/retropie/configs/all/emulators.cfg"
 # Support files
 roms_dir="$HOME/RetroPie/roms/$system"
 roms_all_dir="$roms_dir/-ALL-"
-dat_file="$roms_dir/.mame/.dat"
 compatibility_file="$system_tmp_dir/compatibility.tsv"
 categories_file="$system_tmp_dir/catlist.ini"
 categories_flat_file="$categories_file.flat"
@@ -36,15 +35,63 @@ languages_flat_file="$languages_file.flat"
 ratings_file="$system_tmp_dir/ratings.ini"
 ratings_flat_file="$ratings_file.flat"
 
+# XSLT for grabbing data from DAT files
+roms_dat_xslt='''
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
+  <xsl:output omit-xml-declaration="yes" indent="no"/>
+  <xsl:template match="/">
+    <xsl:for-each select="/mame/machine[rom and not(ismechanical)]">
+      <xsl:value-of select="@name"/>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:value-of select="@romof"/>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:value-of select="@cloneof"/>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:value-of select="@sampleof"/>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="rom[@merge]">
+        <xsl:value-of select="@merge"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="rom[@merge]">
+        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="rom[not(@merge)]">
+        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="device_ref">
+        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="disk">
+        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#x9;</xsl:text>
+      <xsl:for-each select="input/control">
+        <xsl:value-of select="@type"/><xsl:text>,</xsl:text>
+      </xsl:for-each>
+      <xsl:text>&#xa;</xsl:text>
+    </xsl:for-each>
+  </xsl:template>
+</xsl:stylesheet>
+'''
+
 # In-memory mappings
 declare -A roms_compatibility
 declare -A roms_categories
 declare -A roms_languages
 declare -A roms_ratings
 
-# Source data
-declare -A sources
+# Set data
+declare -A sets
 declare -A emulators
+declare -A roms
+declare -a rom_names
 
 usage() {
   echo "usage: $0"
@@ -94,50 +141,72 @@ clean_emulator_config_key() {
   echo "$name"
 }
 
-# Load information about the sources from which we'll pull down ROMs
-load_sources() {
-  # Read configured sources
-  while read -r source_name; do
-    # Load the source
+# Load information about the sets from which we'll pull down ROMs
+load_sets() {
+  # Read configured sets
+  while read -r set_name; do
+    # Load the set
     while IFS="$tab" read -r key value; do
-      sources["$source_name/$key"]="$value"
-    done < <(setting ".roms.sources.\"$source_name\" | to_entries[] | [.key, .value] | @tsv")
+      sets["$set_name/$key"]="$value"
+    done < <(setting ".roms.sets.\"$set_name\" | to_entries[] | [.key, .value] | @tsv")
 
     # Load emulator info
-    emulators["${sources["$source_name/emulator"]}/source_name"]="$source_name"
-  done < <(setting '.roms.sources | keys[]')
+    emulators["${sets["$set_name/emulator"]}/set_name"]="$set_name"
+  done < <(setting '.roms.sets | keys[]')
+}
 
-  echo "Downloading source dats..."
+index_set_dats() {
+  echo "Indexing set dats..."
 
-  while read -r source_name; do
-    local source_core=${sources["$source_name/core"]}
-    local source_dat_url=$(source_asset_url "$source_name" "dat")
-    local roms_core_dir="$roms_dir/.$source_core"
+  while read -r set_name; do
+    local set_core=${sets["$set_name/core"]}
+    local set_dat_url=$(set_asset_url "$set_name" "dat")
+    local set_is_reference=$(sets["$set_name/reference"])
+    local roms_core_dir="$roms_dir/.$set_core"
     local target_dat_file="$roms_core_dir/.dat"
     mkdir -p "$roms_core_dir"
 
     if [ ! -f "$target_dat_file" ]; then
-      download_file "$source_dat_url" "$target_dat_file"
+      download_file "$set_dat_url" "$target_dat_file"
+    fi
+
+    if [ ! -f "$target_dat_file.index" ]; then
+      xmlstarlet tr <(echo "$roms_dat_xslt") "$target_dat_file" > "$target_dat_file.index"
     fi
 
     # Find the list of roms that are downloadable
-    while read -r rom_name bios_name; do
-      sources["$source_name/bios/$rom_name"]="$bios_name"
-    done < <(xmlstarlet sel -T -t -m "/*/*[rom]" -v "@name" -o "$tab" -v "@romof" -n "$target_dat_file")
-  done < <(setting '.roms.sources | keys[]')
+    while IFS="$tab" while read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks inputs; do
+      if [ -n "$set_is_reference" ]; then
+        rom_names+=("$name")
+      fi
+
+      roms["$set_name/$name/description"]="$description"
+      if [ -z "$cloneof" ]; then
+        roms["$set_name/$name/bios"]="$romof"
+      fi
+      roms["$set_name/$name/parent"]="$cloneof"
+      roms["$set_name/$name/sampleof"]="$sampleof"
+      roms["$set_name/$name/parent_source_files"]="${parent_source_files%,*}"
+      roms["$set_name/$name/parent_target_files"]="${parent_target_files%,*}"
+      roms["$set_name/$name/files"]="${files%,*}"
+      roms["$set_name/$name/device_refs"]="${device_refs%,*}"
+      roms["$set_name/$name/disks"]="${disks%,*}"
+      roms["$set_name/$name/inputs"]="${inputs%,*}"
+    done < "$target_dat_file.index"
+  done < <(setting '.roms.sets | keys[]')
 }
 
-# Build the base url for the given source / asset
-source_asset_url() {
-  local source_name="$1"
+# Build the base url for the given set / asset
+set_asset_url() {
+  local set_name="$1"
   local asset_name="$2"
-  local source_url=${sources["$source_name/url"]}
-  local asset_path=${sources["$source_name/$asset_name"]}
+  local set_url=${sets["$set_name/url"]}
+  local asset_path=${sets["$set_name/$asset_name"]}
 
   if [[ "$asset_path" =~ ^http ]]; then
     echo "$asset_path"
   else
-    echo "$source_url$asset_path"
+    echo "$set_url$asset_path"
   fi
 }
 
@@ -218,124 +287,176 @@ reset_filtered_roms() {
   find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 }
 
-install_rom_file() {
+# Checks whether the target rom/machine already contains all of the files for the
+# source rom/machine
+needs_merge() {
   # Arguments
-  local rom_name="$1"
-  local emulator="$2"
-  local rom_dat="$3"
+  local set_name="$1"
+  local source="$2"
+  local target="$3"
 
-  # Source
-  local source_name=${emulators["$emulator/source_name"]}
-  local source_core=${sources["$source_name/core"]}
-  local source_format=${sources["$source_name/format"]}
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
+  local roms_emulator_dir="$roms_dir/.$set_core"
 
-  # Source: ROMs
-  local roms_source_url=$(source_asset_url "$source_name" "roms")
-  local roms_emulator_dir="$roms_dir/.$source_core"
-  local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
-  mkdir -p "$roms_all_dir" "$roms_emulator_dir"
+  # Files to compare
+  local source_files="${roms["$set_name/$source/files"]}"
+  local target_existing_files="${zipinfo -1 "$roms_emulator_dir/$target.zip" | paste -sd ' '}"
 
-  # Install ROM asset
-  if [ ! -f "$rom_emulator_file" ]; then
-    # TODO: Support split sets
-    if [[ "$source_format" =~ ^(merged)$ ]]; then
-      # Merged set; we need to be a little smarter with the download
-      local parent_rom_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@cloneof" || echo "$rom_name")
-      local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.orig.zip"
-
-      # Download parent merged rom (contains children)
-      if [ ! -f "$parent_rom_emulator_file" ]; then
-        download_file "$roms_source_url$parent_rom_name.zip" "$parent_rom_emulator_file"
-      fi
-
-      # Create non-merged rom in target
-      local rom_nonmerged_dir="$roms_emulator_dir/$rom_name.nonmerged"
-      local rom_build_dir="$rom_nonmerged_dir/build"
-      rm -rf "$rom_nonmerged_dir"
-      mkdir -p "$rom_build_dir"
-      unzip "$parent_rom_emulator_file" -d "$rom_nonmerged_dir/"
-
-      # Download BIOS
-      local bios_rom_name=${sources["$source_name/bios/$parent_rom_name"]}
-      if [ -n "$bios_rom_name" ]; then
-        local bios_emulator_file="$bios_emulator_dir/$bios_rom_name.zip"
-
-        if [ ! -f "$bios_emulator_file" ]; then
-          download_file "$roms_source_url$bios_rom_name.zip" "$bios_emulator_file"
-        fi
-
-        unzip "$bios_emulator_file" -d "$rom_nonmerged_dir/bios/"
-      fi
-
-      # Copy over the required roms
-      while read dest_name src_name; do
-        # Determine if we're merging from a parent/bios
-        declare -a src_files
-        if [ -n "$src_name" ]; then
-          # Copy from parent / BIOS
-          src_files=("$rom_nonmerged_dir/$src_name" "$rom_nonmerged_dir/bios/$src_name")
-        else
-          # Copy from child / parent
-          src_files=("$rom_nonmerged_dir/$rom_name/$dest_name" "$rom_nonmerged_dir/$dest_name")
-        fi
-
-        # Find the first file that exists
-        for src_file in "${src_files[@]}"; do
-          if [ -f "$src_file" ]; then
-            cp "$src_file" "$rom_build_dir/$dest_name"
-            break
-          fi
-        done
-
-        if [ ! -f "$rom_build_dir/$dest_name" ]; then
-          echo "Missing rom: $merge_name"
-          exit 1
-        fi
-      done < <(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*/rom" -v "@name" -o "$tab" -v "@merge" -n)
-
-      # Create ZIP at target
-      zip -j "$rom_emulator_file" $rom_build_dir/*
-      trrntzip "$rom_emulator_file"
-      rm -rf "$rom_nonmerged_dir"
-    else
-      download_file "$roms_source_url$rom_name.zip" "$rom_emulator_file"
+  for file in ${source_files//,/ }; do
+    if [[ " $target_existing_files " != *" $file " ]]; then
+      return 0
     fi
+  done
+
+  return 1
+}
+
+merge_file() {
+  # Arguments
+  local set_name="$1"
+  local source="$2"
+  local target="$3"
+
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
+  local roms_emulator_dir="$roms_dir/.$set_core"
+  local roms_tmp_dir="$roms_emulator_dir/tmp"
+  mkdir -p "$roms_tmp_dir"
+
+  # Target rom file
+  local target_file="$roms_emulator_dir/$target.zip"
+  local target_existing_files=$(zipinfo -1 "$target_file" | paste -sd ' ')
+
+  # Source rom file
+  local source_file="$roms_emulator_dir/$source.zip"
+  local source_dir=""
+  if [ $# -gt 3 ]; then local "${@:4}"; fi
+
+  local target_parent="${roms["$set_name/$target/parent"]}"
+  if [ "$source" == "$target_parent" ]; then
+    # Merge names (source => target)
+    local parent_source_files=(${roms["$set_name/$target/parent_source_files"]//,/ })
+    local parent_target_files=(${roms["$set_name/$target/parent_target_files"]//,/ })
+
+    # Merge files from the parent using the name in the target
+    for i in ${!parent_source_files[@]}; do
+      local parent_source_file="${parent_source_files[$i]}"
+      local parent_target_file="${parent_target_files[$i]}"
+
+      if [[ " $target_existing_files " != *" $file " ]]; then
+        # File doesn't exist: add it
+        local tmp_file="$roms_tmp_dir/$parent_target_file"
+        unzip -p "$source_file" "$parent_source_file" > "$tmp_file"
+        zip -j "$target_file" "$tmp_file"
+        rm "$tmp_file"
+      fi
+    done
   else
-    echo "Already downloaded: $rom_emulator_file"
+    # Copy based on the names in the zip file
+    if [ -n "$source_dir" ]; then
+      # Merge just the subfolder (we are copying files for a clone in a merged romset)
+      while read file; do
+        if [[ " $target_existing_files " != *" $file " ]]; then
+          # File doesn't exist: add it
+          local tmp_file="$roms_tmp_dir/$file"
+          unzip -p "$source_file" "$source_dir/$file" > "$tmp_file"
+          zip -j "$target_file" "$tmp_file"
+          rm "$tmp_file"
+        fi
+      done < <(zipinfo -1 "$source_file" | grep -oP "^$source_dir\K(.+)$" )
+    else
+      # Merge everything (we are copying files from a bios/device)
+      zipmerge -S "$source_file" "$target_file"
+    fi
   fi
 }
 
-install_rom_devices() {
+install_rom_nonmerged_file() {
   # Arguments
   local rom_name="$1"
   local emulator="$2"
-  local rom_dat="$3"
 
-  # Source
-  local source_name=${emulators["$emulator/source_name"]}
-  local source_core=${sources["$source_name/core"]}
-  local roms_source_url=$(source_asset_url "$source_name" "roms")
-  local roms_emulator_dir="$roms_dir/.$source_core"
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
+  local set_format=${sets["$set_name/format"]}
+
+  # Set: ROMs
+  local roms_set_url=$(set_asset_url "$set_name" "roms")
+  local roms_emulator_dir="$roms_dir/.$set_core"
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
-  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file")
+  mkdir -p "$roms_emulator_dir"
 
-  # Add devices to rom file
-  local needs_rezip=false
-  while read device_name; do
-    local device_emulator_file="$roms_emulator_dir/$device_name.zip"
-    if [ ${sources["$source_name/bios/$device_name"]+exists} ]; then
-      if [ ! -f "$device_emulator_file" ]; then
-        download_file "$roms_source_url$device_name.zip" "$device_emulator_file"
+  # Install ROM asset
+  if [ ! -f "$rom_emulator_file" ]; then
+    local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
+
+    if [[ "$set_format" == "merged" ]]; then
+      # Download parent merged rom (contains children)
+      local merged_rom_name="${parent_rom_name:-$rom_name}"
+      local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
+      if [ ! -f "$merged_rom_emulator_file" ]; then
+        download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file"
       fi
 
-      zipmerge -S "$rom_emulator_file" "$device_emulator_file"
+      # Create empty rom
+      echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$rom_emulator_file"
+
+      if [ -n "$parent_rom_name" ]; then
+        # Merge files from parent
+        merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
+      fi
+
+      # Merge files for the rom
+      merge_rom "$set_name" "$rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
+    else
+      # Download non-merged / split rom
+      download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file"
+
+      if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ]; then
+        # Download the parent and merge it
+        local parent_rom_emulator_file="$roms_set_url$parent_rom_name.zip"
+
+        if [ ! -f "$parent_rom_emulator_file" ]; then
+          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_name"
+        fi
+
+        merge_rom "$set_name" "$parent_rom_name" "$rom_name"
+      fi
     fi
-  done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/device_ref/@name")
 
-  local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
+    # Merge BIOS (if necessary)
+    local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
+    if [ -n "$bios_rom_name" ] && [ needs_merge "$set_name" "$bios_rom_name" "$rom_name" ]; then
+      local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
 
-  if [ "$mtime_before" != "$mtime_after" ]; then
+      if [ ! -f "$bios_emulator_file" ]; then
+        download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
+      fi
+
+      merge_rom "$set_name" "$bios_rom_name" "$rom_name"
+    fi
+
+    # Merge devices (if necessary)
+    device_names=${roms["$set_name/$rom_name/device_names"]}
+    for device_name in ${device_names//,/ }; do
+      if [ ${sets["$set_name/$device_name/files"]+exists} ] && [ needs_merge "$set_name" "$device_name" "$rom_name" ]; then
+        local device_emulator_file="$roms_emulator_dir/$device_name.zip"
+        if [ ! -f "$device_emulator_file" ]; then
+          download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
+        fi
+
+        merge_rom "$set_name" "$device_name" "$rom_name"
+      fi
+    done
+
+    # Create ZIP at target
     trrntzip "$rom_emulator_file"
+  else
+    echo "Already downloaded: $rom_emulator_file"
   fi
 }
 
@@ -343,57 +464,45 @@ install_rom_disks() {
   # Arguments
   local rom_name="$1"
   local emulator="$2"
-  local rom_dat="$3"
 
-  # Source
-  local source_name=${emulators["$emulator/source_name"]}
-  local source_core=${sources["$source_name/core"]}
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
 
   # Disks
-  local disks_source_url=$(source_asset_url "$source_name" "disks")
+  local disks_set_url=$(set_asset_url "$set_name" "disks")
   local disk_emulator_dir="$roms_dir/.chd/$rom_name"
 
-  # Install disk assets
-  while read disk_name; do
+  # Install
+  local disks=${roms["$set_name/$rom_name/disks"]}
+  for disk_name in ${disks//,/ }; do
     mkdir -p "$disk_emulator_dir"
     local disk_emulator_file="$disk_emulator_dir/$disk_name.chd"
 
-    if [ ! -f "$disk_emulator_file" ]; then
-      echo "Downloading $disks_source_url$rom_name/$disk_name.chd"
-      download_file "$disks_source_url$rom_name/$disk_name.chd" "$disk_emulator_file" || return 1
-    else
-      echo "Already downloaded: $disk_emulator_file"
-    fi
-  done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/disk/@name")
+    download_file "$disks_set_url$rom_name/$disk_name.chd" "$disk_emulator_file" || return 1
+  done
 }
 
 install_rom_samples() {
   # Arguments
   local rom_name="$1"
   local emulator="$2"
-  local rom_dat="$3"
 
-  # Source
-  local source_name=${emulators["$emulator/source_name"]}
-  local source_core=${sources["$source_name/core"]}
-  local bios_emulator_dir="$HOME/RetroPie/BIOS/$source_core"
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
 
   # Samples
-  local samples_source_url=$(source_asset_url "$source_name" "samples")
-  local samples_target_dir="$bios_emulator_dir/samples"
+  local samples_set_url=$(set_asset_url "$set_name" "samples")
+  local samples_target_dir="$HOME/RetroPie/BIOS/$set_core/samples"
   mkdir -p "$samples_target_dir"
 
-  # Install sample asset
-  local sample_name=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/@sampleof" || true)
+  # Install
+  local sample_name=${roms["$set_name/$rom_name/sample"]}
   if [ -n "$sample_name" ]; then
     local sample_file="$samples_target_dir/$sample_name.zip"
 
-    if [ ! -f "$sample_file" ]; then
-      echo "Downloading $samples_source_url$sample_name.zip"
-      download_file "$samples_source_url$sample_name.zip" "$sample_file" || return 1
-    else
-      echo "Already downloaded: $sample_file"
-    fi
+    download_file "$samples_set_url$sample_name.zip" "$sample_file" || return 1
   fi
 }
 
@@ -402,10 +511,10 @@ activate_rom() {
   local rom_name="$1"
   local emulator="$2"
 
-  # Source
-  local source_name=${emulators["$emulator/source_name"]}
-  local source_core=${sources["$source_name/core"]}
-  local rom_emulator_file="$roms_dir/.$source_core/$rom_name.zip"
+  # Set info
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_core=${sets["$set_name/core"]}
+  local rom_emulator_file="$roms_dir/.$set_core/$rom_name.zip"
   local disk_emulator_dir="$roms_dir/.chd/$rom_name"
 
   # Target
@@ -421,8 +530,7 @@ activate_rom() {
 
 # Installs a rom for a specific emulator
 install_rom() {
-  install_rom_file "${@}"
-  install_rom_devices "${@}"
+  install_rom_nonmerged_file "${@}"
   install_rom_disks "${@}"
   install_rom_samples "${@}"
   activate_rom "${@}"
@@ -455,24 +563,16 @@ install_roms() {
   local allowlists_controls=$(setting_regex ".roms.allowlists.controls")
   local allowlists_names=$(setting_regex ".roms.allowlists.names")
 
-  # Filter optimization to speed things up
-  local dat_skip_filter="runnable|ismechanical|players=\"0\"|softwarelist"
-  if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
-    dat_skip_filter="$dat_skip_filter|cloneof"
-  fi
-
-  while read rom_dat; do
+  for rom_name in "${rom_names[@]}"; do
     # Read rom attributes
-    local rom_info_tsv=$(echo "$rom_dat" | xmlstarlet sel -T -t -m "/*" -v "@name" -o "$tab" -v "boolean(@cloneof)" -o "$tab" -v "description/text()")
-    IFS="$tab" read -ra rom_info <<< "$rom_info_tsv"
-    local rom_name=${rom_info[0]}
-    local is_clone=${rom_info[1]}
-    local description=$(echo "${rom_info[2]}" | tr '[:upper:]' '[:lower:]')
     local emulator=${roms_compatibility["$rom_name"]}
+    local set_name=${emulators["$emulator/set_name"]}
+    local is_clone=${roms["$set_name/$rom_name/cloneof"]}
+    local description=${roms["$set_name/$rom_name/description"]}
+    local controls=${roms["$set_name/$rom_name/controls"]}
     local category=${roms_categories["$rom_name"]}
     local language=${roms_languages["$rom_name"]}
     local rating=${roms_ratings["$rom_name"]}
-    local source_name=${emulators["$emulator/source_name"]}
 
     # Compatible / Runnable roms
     if [ -z "$emulator" ]; then
@@ -480,9 +580,9 @@ install_roms() {
       continue
     fi
 
-    # ROMs with sources
-    if [ -z "$source_name" ]; then
-      echo "[Skip] $rom_name (no source for emulator)"
+    # ROMs with sets
+    if [ -z "$set_name" ]; then
+      echo "[Skip] $rom_name (no set for emulator)"
       continue
     fi
 
@@ -526,9 +626,7 @@ install_roms() {
       fi
 
       # Controls
-      # TODO: Move this to the above xmlstarlet call
-      local controls=$(echo "$rom_dat" | xmlstarlet sel -T -t -v "*/input/control/@type" | sort | uniq || true)
-      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
+      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "${roms["$set_name/$rom_name/controls"]}"; then
         echo "[Skip] $rom_name (controls)"
         continue
       fi
@@ -542,8 +640,8 @@ install_roms() {
 
     # Install
     echo "[Install] $rom_name"
-    install_rom "$rom_name" "$emulator" "$rom_dat" || echo "Failed to download: $rom_name ($emulator)"
-  done < <(awk '{sub(/\r/,"")}/<machine/{i=1}/<\/machine/{i=0;print;next}i{printf"%s",$0}{next}' "$dat_file" | awk "/machine name=\"($favorites)\"/ || "'!'"/$dat_skip_filter/")
+    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
+  done
 }
 
 set_default_emulators() {
@@ -564,12 +662,12 @@ organize_system() {
 
   # Add based on favorites
   while read rom; do
-    local source_rom_file="$roms_all_dir/$rom.zip"
+    local source_file="$roms_all_dir/$rom.zip"
     local source_disk_dir="$roms_all_dir/$rom"
-    local target_rom_file="$roms_dir/$rom.zip"
+    local target_file="$roms_dir/$rom.zip"
     local target_disk_dir="$roms_dir/$rom"
 
-    ln -fs "$source_rom_file" "$target_rom_file"
+    ln -fs "$source_file" "$target_file"
 
     # Create link for drive as well (if applicable)
     if [ -d "$source_disk_dir" ]; then
@@ -582,7 +680,8 @@ organize_system() {
 # 
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
-  load_sources
+  load_sets
+  index_set_dats
   load_support_files
   reset_filtered_roms
   install_roms

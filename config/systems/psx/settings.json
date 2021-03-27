@@ -1,9 +1,9 @@
 {
   "emulators": [],
   "roms": {
-    "sources": {
+    "sets": {
       "psx-the_eye-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***Playstation/Games/NTSC/",
         "unzip": true,
         "files": [

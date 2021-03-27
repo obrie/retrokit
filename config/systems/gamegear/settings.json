@@ -1,8 +1,8 @@
 {
   "roms": {
-    "sources": {
+    "sets": {
       "nointro-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***/",
         "login": true,
         "unzip": true,

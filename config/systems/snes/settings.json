@@ -1,9 +1,9 @@
 {
   "emulators": [],
   "roms": {
-    "sources": {
+    "sets": {
       "nointro-torrent": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***/",
         "login": true,
         "unzip": true,

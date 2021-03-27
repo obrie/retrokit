@@ -1,9 +1,9 @@
 {
   "emulators": [],
   "roms": {
-    "sources": {
+    "sets": {
       "dos-the_eye-torrent": {
-        "type": "torrent",
+        "protocol": "torrent",
         "url": "https://***REMOVED***",
         "roms": "eXoDOS/eXo/eXoDOS",
         "unzip": true,

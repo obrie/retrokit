@@ -119,13 +119,13 @@ filter_all_in_list() {
   local allowlist_regex="$2"
   local values="$3"
 
-  for value in "${values[@]}"; do
+  for value in ${values//,/ }; do
     if ! [[ "$value" =~ ($blocklist_regex) ]]; then
       return 1
     fi
   done
 
-  for value in "${values[@]}"; do
+  for value in ${values//,/ }; do
     if ! [[ "$value" =~ ($allowlist_regex) ]]; then
       return 1
     fi
@@ -152,15 +152,15 @@ download_file() {
       curl -fL# "$url" -o "$output"
     fi
   else
-    echo "Already downloaded $roms_source_url$parent_rom_name.zip"
+    echo "Already downloaded $url"
   fi
 }
 
 # TODO: Smarter file lists
-download_source() {
+download_set() {
   # Arguments
   local system="$1"
-  local source_name="$2"
+  local set_name="$2"
 
   # Configuration
   local system_config_dir="$app_dir/config/systems/$system"
@@ -168,17 +168,17 @@ download_source() {
   local system_tmp_dir="$tmp_dir/$system"
   mkdir -p "$system_tmp_dir"
 
-  # Source
-  local source_type=$(jq -r ".sources.\"$source_name\".type" "$app_settings_file")
-  local source_url=$(jq -r ".sources.\"$source_name\".url" "$app_settings_file")
-  local source_root_dir=$(jq -r ".sources.\"$source_name\".root_dir" "$app_settings_file")
-  local source_unzip=$(jq -r ".sources.\"$source_name\".unzip" "$app_settings_file")
+  # Set
+  local set_protocol=$(jq -r ".sets.\"$set_name\".protocol" "$app_settings_file")
+  local set_url=$(jq -r ".sets.\"$set_name\".url" "$app_settings_file")
+  local set_root_dir=$(jq -r ".sets.\"$set_name\".root_dir" "$app_settings_file")
+  local set_unzip=$(jq -r ".sets.\"$set_name\".unzip" "$app_settings_file")
 
-  # Source Filter
-  local source_filter="$system_tmp_dir/files.filter"
+  # Set Filter
+  local set_filter="$system_tmp_dir/files.filter"
   local roms_all_dir
-  if [ "$(jq -r ".roms.sources.\"$source_name\" | has(\"files\")" "$system_settings_file")" = "true" ]; then
-    jq -r "if .roms.sources.\"$source_name\" | has(\"files\") then .roms.sources.\"$source_name\".files[] else [] end" "$system_settings_file" > "$source_filter"
+  if [ "$(jq -r ".roms.sets.\"$set_name\" | has(\"files\")" "$system_settings_file")" = "true" ]; then
+    jq -r "if .roms.sets.\"$set_name\" | has(\"files\") then .roms.sets.\"$set_name\".files[] else [] end" "$system_settings_file" > "$set_filter"
     roms_all_dir="$HOME/RetroPie/roms/$system/-ALL-"
   else
     roms_all_dir="$HOME/RetroPie/roms/$system"
@@ -187,36 +187,36 @@ download_source() {
   # Target
   mkdir -p "$roms_all_dir"
 
-  if [ "$source_type" = "torrent" ]; then
+  if [ "$set_protocol" = "torrent" ]; then
     # Torrent Info
-    local torrent_file="$tmp_dir/$source_name.torrent"
+    local torrent_file="$tmp_dir/$set_name.torrent"
 
     # Download target
-    local rom_source_dir="/var/lib/transmission-daemon/downloads/$source_root_dir"
+    local rom_set_dir="/var/lib/transmission-daemon/downloads/$set_root_dir"
 
     # Download torrent
-    download_file "$source_url" "$torrent_file"
-    "$app_dir/bin/tools/torrent.sh" "$torrent_file" "$source_filter"
-  elif [ "$source_type" = "http" ]; then
-    local rom_source_dir="$system_tmp_dir/downloads"
-    mkdir -p "$rom_source_dir"
+    download_file "$set_url" "$torrent_file"
+    "$app_dir/bin/tools/torrent.sh" "$torrent_file" "$set_filter"
+  elif [ "$set_protocol" = "http" ]; then
+    local rom_set_dir="$system_tmp_dir/downloads"
+    mkdir -p "$rom_set_dir"
 
     # Download URLs
-    cat "$source_filter" | while read file; do
-      download_file "$source_url$file" "$rom_source_dir/$file"
+    cat "$set_filter" | while read file; do
+      download_file "$set_url$file" "$rom_set_dir/$file"
     done
   else
-    echo "Invalid source type: $source_type"
+    echo "Invalid set protocol: $set_protocol"
     exit 1
   fi
 
   # todo: delete as we unzip
-  if [ "$source_unzip" = "true" ]; then
+  if [ "$set_unzip" = "true" ]; then
     # Extract files
-    unzip -o "$rom_source_dir/*.zip" -d "$roms_all_dir/"
-    sudo find "$rom_source_dir" -mindepth 1 -exec rm "{}" \;
+    unzip -o "$rom_set_dir/*.zip" -d "$roms_all_dir/"
+    sudo find "$rom_set_dir" -mindepth 1 -exec rm "{}" \;
   else
-    sudo find "$rom_source_dir" -mindepth 1 -exec mv "{}" "$roms_all_dir/" \;
+    sudo find "$rom_set_dir" -mindepth 1 -exec mv "{}" "$roms_all_dir/" \;
   fi
 }
 
@@ -228,8 +228,8 @@ download_system() {
   local system_config_dir="$app_dir/config/systems/$system"
   local system_settings_file="$system_config_dir/settings.json"
 
-  jq -r '.roms.sources | keys[]' "$system_settings_file" | while read source_name; do
-    download_source "$system" "$source_name"
+  jq -r '.roms.sets | keys[]' "$system_settings_file" | while read set_name; do
+    download_set "$system" "$set_name"
   done
 }
 
@@ -293,6 +293,7 @@ theme_system() {
   local theme="$1"
   local bezelproject_bin=$HOME/RetroPie/retropiemenu/bezelproject.sh
   
+  # TODO: Check if installed already before we do this
   "$bezelproject_bin" install_bezel_packsa "$theme" "thebezelproject"
   "$bezelproject_bin" install_bezel_pack "$theme" "thebezelproject"
 }

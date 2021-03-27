@@ -9,10 +9,6 @@
     "lr-mame": {"build": "source", "branch": "lrmame0222"}
   },
   "support_files": {
-    "dat": {
-      "url": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_222.7z",
-      "file": "XML/mame222.xml"
-    },
     "languages": {
       "url": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
       "file": "folders/languages.ini"
@@ -30,9 +26,9 @@
     }
   },
   "roms": {
-    "sources": {
+    "sets": {
       "arcade-fbneo-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***/",
         "format": "non-merged",
         "dat": "https://raw.githubusercontent.com/libretro/FBNeo/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
@@ -43,7 +39,7 @@
         "version": "v0.2.97.44"
       },
       "arcade-mame2003-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***",
         "format": "non-merged",
         "dat": "mame2003.xml",
@@ -55,7 +51,7 @@
         "version": "0.78"
       },
       "arcade-mame2003plus-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***/",
         "format": "non-merged",
         "dat": "MAME 2003-Plus - 2018-12-31.xml",
@@ -67,7 +63,7 @@
         "version": "0.188"
       },
       "arcade-mame2010-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***",
         "format": "non-merged",
         "dat": "MAME 2010 DAT - 2019-01-05.xml",
@@ -79,7 +75,7 @@
         "version": "0.139"
       },
       "arcade-mame2015-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***",
         "format": "non-merged",
         "dat": "mame2015.xml",
@@ -91,7 +87,7 @@
         "version": "0.160"
       },
       "arcade-mame2016-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***",
         "format": "non-merged",
         "dat": "MAME 2016 XML (Arcade Only).xml",
@@ -103,7 +99,7 @@
         "version": "0.174"
       },
       "arcade-mame0222-http": {
-        "type": "http",
+        "protocol": "http",
         "url": "https://***REMOVED***",
         "dat": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
         "format": "merged",
@@ -112,7 +108,8 @@
         "samples": "https://***REMOVED***",
         "emulator": "lr-mame",
         "core": "mame",
-        "version": "0.222"
+        "version": "0.222",
+        "reference": true
       }
     },
     "allowlists": {
