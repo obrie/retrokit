@@ -35,10 +35,12 @@
         "type": "http",
         "url": "https://***REMOVED***/",
         "format": "non-merged",
+        "dat": "https://raw.githubusercontent.com/libretro/FBNeo/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
         "roms": "FBNeo/ArcadeNonMerged.zip/",
         "samples": "FBNeo/support.zip/support%2Fsamples%2F",
         "emulator": "lr-fbneo",
-        "core": "fbneo"
+        "core": "fbneo",
+        "version": "v0.2.97.44"
       },
       "arcade-mame2003-http": {
         "type": "http",
@@ -50,7 +52,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2003",
         "core": "mame2003",
-        "mame_version": "0.78"
+        "version": "0.78"
       },
       "arcade-mame2003plus-http": {
         "type": "http",
@@ -62,7 +64,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2003-plus",
         "core": "mame2003-plus",
-        "mame_version": "0.188"
+        "version": "0.188"
       },
       "arcade-mame2010-http": {
         "type": "http",
@@ -74,7 +76,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2010",
         "core": "mame2010",
-        "mame_version": "0.139"
+        "version": "0.139"
       },
       "arcade-mame2015-http": {
         "type": "http",
@@ -86,7 +88,7 @@
         "samples": "samples/",
         "emulator": "lr-mame2015",
         "core": "mame2015",
-        "mame_version": "0.160"
+        "version": "0.160"
       },
       "arcade-mame2016-http": {
         "type": "http",
@@ -98,7 +100,7 @@
         "samples": "roms.zip/samples/",
         "emulator": "lr-mame2016",
         "core": "mame2016",
-        "mame_version": "0.174"
+        "version": "0.174"
       },
       "arcade-mame0222-http": {
         "type": "http",
@@ -110,7 +112,7 @@
         "samples": "https://***REMOVED***",
         "emulator": "lr-mame",
         "core": "mame",
-        "mame_version": "0.222"
+        "version": "0.222"
       }
     },
     "allowlists": {
