@@ -233,7 +233,6 @@ install_rom_file() {
   local roms_source_url=$(source_asset_url "$source_name" "roms")
   local roms_emulator_dir="$roms_dir/.$source_core"
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
-  local rom_target_file="$roms_all_dir/$rom_name.zip"
   mkdir -p "$roms_all_dir" "$roms_emulator_dir"
 
   # Install ROM asset
@@ -396,21 +395,38 @@ install_rom_samples() {
   fi
 }
 
+activate_rom() {
+  # Arguments
+  local rom_name="$1"
+  local emulator="$2"
+
+  # Source
+  local source_name=${emulators["$emulator/source_name"]}
+  local source_core=${sources["$source_name/core"]}
+  local rom_emulator_file="$roms_dir/.$source_core/$rom_name.zip"
+  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
+
+  # Target
+  local rom_target_file="$roms_all_dir/$rom_name.zip"
+  local disk_target_dir="$roms_all_dir/$rom_name"
+
+  # Link to -ALL- (including disk)
+  ln -fs "$rom_emulator_file" "$rom_target_file"
+  if [ -d "$disk_emulator_dir" ]; then
+    ln -fs "$disk_emulator_dir" "$disk_target_dir"
+  fi
+}
+
 # Installs a rom for a specific emulator
 install_rom() {
   install_rom_file "${@}"
   install_rom_devices "${@}"
   install_rom_disks "${@}"
   install_rom_samples "${@}"
+  activate_rom "${@}"
 
   # Remove TorrentZip logs
   rm -f "$(pwd)/*log"
-
-  # Link to -ALL- (including disk)
-  ln -fs "$rom_emulator_file" "$rom_target_file"
-  if [ -d "$disk_emulator_dir" ]; then
-    ln -fs "$disk_emulator_dir" "$roms_all_dir/$rom_name"
-  fi
 }
 
 install_roms() {
