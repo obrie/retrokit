@@ -317,6 +317,7 @@ install_rom_devices() {
   local roms_source_url=$(source_asset_url "$source_name" "roms")
   local roms_emulator_dir="$roms_dir/.$source_core"
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
+  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file")
 
   # Add devices to rom file
   local needs_rezip=false
@@ -327,12 +328,13 @@ install_rom_devices() {
         download_file "$roms_source_url$device_name.zip" "$device_emulator_file"
       fi
 
-      zipmerge "$rom_emulator_file" "$device_emulator_file"
-      needs_rezip=true
+      zipmerge -S "$rom_emulator_file" "$device_emulator_file"
     fi
   done < <(echo "$rom_dat" | xmlstarlet sel -T -t -v "/*/device_ref/@name")
 
-  if [ "$needs_rezip" == "true" ]; then
+  local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
+
+  if [ "$mtime_before" != "$mtime_after" ]; then
     trrntzip "$rom_emulator_file"
   fi
 }
