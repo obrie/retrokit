@@ -339,12 +339,20 @@ needs_merge() {
   local set_core=${sets["$set_name/core"]}
   local roms_emulator_dir="$roms_dir/.$set_core"
 
-  # Files to compare
+  # Target info
+  local target_file="$roms_emulator_dir/$target.zip"
+  if [ ! -s "$target_file" ]; then
+    # Target doesn't exist at all: needs merge
+    return 0
+  fi
+  local target_existing_files="$(zipinfo -1 "$target_file" | paste -sd ' ')"
+
+  # Source info
   local source_files="${roms["$set_name/$source/files"]}"
-  local target_existing_files="$(zipinfo -1 "$roms_emulator_dir/$target.zip" | paste -sd ' ')"
 
   for file in ${source_files//,/ }; do
     if [[ " $target_existing_files " != *" $file "* ]]; then
+      # Missing a file: needs merge
       return 0
     fi
   done
@@ -371,7 +379,7 @@ merge_rom() {
 
   # Source rom file
   local source_file="$roms_emulator_dir/$source.zip"
-  local source_dir=""
+  local include_all="false"
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
   local target_parent="${roms["$set_name/$target/parent"]}"
@@ -386,7 +394,7 @@ merge_rom() {
       local parent_target_file="${parent_target_files[$i]}"
 
       if [[ " $target_existing_files " != *" $file " ]]; then
-        # File doesn't exist: add it
+        # File doesn't exist: add it (using crc would be more accurate)
         local tmp_file="$roms_tmp_dir/$parent_target_file"
         unzip -p "$source_file" "$parent_source_file" > "$tmp_file"
         zip -j "$target_file" "$tmp_file"
@@ -395,19 +403,25 @@ merge_rom() {
     done
   else
     # Copy based on the names in the zip file
-    if [ -n "$source_dir" ]; then
-      # Merge just the subfolder (we are copying files for a clone in a merged romset)
-      while read file; do
+    if [ "$include_all" == "false" ]; then
+      local files=(${roms["$set_name/$target/files"]//,/ })
+
+      for file in "${files[@]}"; do
         if [[ " $target_existing_files " != *" $file " ]]; then
-          # File doesn't exist: add it
+          # File doesn't exist
+
+          # Find the file based on its filename (crc would be more accurate)
+          local file_to_extract=$(zipinfo -1 "$source_file" | grep -E "(^|/)$file\$")
+
+          # Add the file
           local tmp_file="$roms_tmp_dir/$file"
-          unzip -p "$source_file" "$source_dir/$file" > "$tmp_file"
+          unzip -p "$source_file" "$file_to_extract" > "$tmp_file"
           zip -j "$target_file" "$tmp_file"
           rm "$tmp_file"
         fi
-      done < <(zipinfo -1 "$source_file" | grep -oP "^$source_dir\K(.+)$" )
+      done
     else
-      # Merge everything (we are copying files from a bios/device)
+      # Merge everything (we are copying files from a split rom/bios/device)
       zipmerge -S "$target_file" "$source_file"
     fi
   fi
@@ -426,28 +440,31 @@ install_rom_nonmerged_file() {
   # Set: ROMs
   local roms_set_url=$(set_asset_url "$set_name" "roms")
   local roms_emulator_dir="$roms_dir/.$set_core"
-  local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
   mkdir -p "$roms_emulator_dir"
 
+  # ROM info
+  local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
+  local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
   local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" || true)
 
   # Install ROM asset
-  if [ ! -s "$rom_emulator_file" ]; then
-    local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
-
+  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" || needs_merge "$set_name" "$rom_name" "$rom_name"; then
     if [[ "$set_format" == "merged" ]]; then
-      # Download parent merged rom (contains children)
       local merged_rom_name="${parent_rom_name:-$rom_name}"
       local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
+
+      # Download parent merged rom (contains children)
       if [ ! -s "$merged_rom_emulator_file" ]; then
         download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file"
       fi
 
       # Create empty rom
-      echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$rom_emulator_file"
+      if [ ! -s "$rom_emulator_file" ]; then
+        echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$rom_emulator_file"
+      fi
 
+      # Merge files from parent
       if [ -n "$parent_rom_name" ]; then
-        # Merge files from parent
         merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
       fi
 
@@ -455,7 +472,9 @@ install_rom_nonmerged_file() {
       merge_rom "$set_name" "$rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
     else
       # Download non-merged / split rom
-      download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file"
+      if [ ! -s "$rom_emulator_file"]; then
+        download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file"
+      fi
 
       if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ]; then
         # Download the parent and merge it
@@ -465,7 +484,7 @@ install_rom_nonmerged_file() {
           download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_name"
         fi
 
-        merge_rom "$set_name" "$parent_rom_name" "$rom_name"
+        merge_rom "$set_name" "$parent_rom_name" "$rom_name" include_all=true
       fi
     fi
   fi
@@ -479,7 +498,7 @@ install_rom_nonmerged_file() {
       download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
     fi
 
-    merge_rom "$set_name" "$bios_rom_name" "$rom_name"
+    merge_rom "$set_name" "$bios_rom_name" "$rom_name" include_all=true
   fi
 
   # Merge devices (if necessary)
@@ -491,7 +510,7 @@ install_rom_nonmerged_file() {
         download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
       fi
 
-      merge_rom "$set_name" "$device_name" "$rom_name"
+      merge_rom "$set_name" "$device_name" "$rom_name" include_all=true
     fi
   done
 
@@ -669,7 +688,7 @@ set_default_emulators() {
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
   crudini --merge "$emulators_retropie_config" < <(
-    for rom_name in "${!emulators[@]}"; do
+    for rom_name in "${emulators[@]}"; do
       echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${emulators["$rom_name"]}\""
     done
   )
