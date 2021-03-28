@@ -92,7 +92,7 @@ install_http_tools() {
     sudo curl -fL# https://archive.org/download/ia-pex/ia -o /usr/local/bin/ia
   fi
   sudo chmod +x /usr/local/bin/ia
-  ia configure -u "$(jq -r '.internetarchive.username' \"$settings_file\")" -p "$(jq -r '.internetarchive.password' \"$settings_file\")"
+  ia configure -u "$(jq -r '.internetarchive.username' "$settings_file")" -p "$(jq -r '.internetarchive.password' "$settings_file")"
 }
 
 install_developer_tools() {
