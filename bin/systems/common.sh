@@ -41,7 +41,7 @@ scrape_system() {
   killall /opt/retropie/supplementary/emulationstation/emulationstation || true
 
   # Scrape
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing
 }
 
 build_gamelist() {

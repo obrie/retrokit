@@ -266,7 +266,6 @@ setup_scraper() {
   crudini --set "$skyscraper_config" 'main' 'skipped' '"true"'
   crudini --set "$skyscraper_config" 'main' 'symlink' '"true"'
   crudini --set "$skyscraper_config" 'main' 'unattend' '"true"'
-  crudini --set "$skyscraper_config" 'main' 'unattendskip' '"true"'
   crudini --set "$skyscraper_config" 'main' 'verbosity' '"3"'
   crudini --set "$skyscraper_config" 'main' 'videos' '"true"'
   crudini --set "$skyscraper_config" 'screenscraper' 'userCreds' "\"$username:$password\""
@@ -314,6 +313,11 @@ setup_menus() {
   system_conditions=$(jq -r '.systems[]' "$settings_file" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
   xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
   printf '</systemList>\n' >> "$system_override_config"
+}
+
+setup_gamelists() {
+  # Disable generation of the game list
+  sed -r -i "s/(<string name=\"ParseGamelistOnly\" value=\")([^\"]*)/\1true/" "$es_settings_config"
 }
 
 setup_systems() {
@@ -375,6 +379,7 @@ function main() {
   setup_overlays
   setup_menus
   setup_systems
+  setup_gamelists
   setup_themes
   reload
 }
