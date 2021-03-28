@@ -437,6 +437,7 @@ install_rom_nonmerged_file() {
   local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
   local set_format=${sets["$set_name/format"]}
+  local set_login=${sets["$set_name/login"]:-false}
 
   # Set: ROMs
   local roms_set_url=$(set_asset_url "$set_name" "roms")
@@ -457,7 +458,7 @@ install_rom_nonmerged_file() {
 
       # Download parent merged rom (contains children)
       if [ ! -s "$merged_rom_emulator_file" ]; then
-        download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file"
+        download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file" login=$set_login
       fi
 
       # Create empty rom
@@ -475,7 +476,7 @@ install_rom_nonmerged_file() {
     else
       # Download non-merged / split rom
       if [ ! -s "$rom_emulator_file" ]; then
-        download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file"
+        download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file" login=$set_login
       fi
 
       if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ]; then
@@ -483,7 +484,7 @@ install_rom_nonmerged_file() {
         local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.zip"
 
         if [ ! -s "$parent_rom_emulator_file" ]; then
-          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_emulator_file"
+          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_emulator_file" login=$set_login
         fi
 
         merge_rom "$set_name" "$parent_rom_name" "$rom_name" include_all=true
@@ -497,7 +498,7 @@ install_rom_nonmerged_file() {
     local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
 
     if [ ! -s "$bios_emulator_file" ]; then
-      download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
+      download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file" login=$set_login
     fi
 
     merge_rom "$set_name" "$bios_rom_name" "$rom_name" include_all=true
@@ -509,7 +510,7 @@ install_rom_nonmerged_file() {
     if [ -n "${roms["$set_name/$device_name/files"]}" ] && needs_merge "$set_name" "$device_name" "$rom_name"; then
       local device_emulator_file="$roms_emulator_dir/$device_name.zip"
       if [ ! -s "$device_emulator_file" ]; then
-        download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
+        download_file "$roms_set_url$device_name.zip" "$device_emulator_file" login=$set_login
       fi
 
       merge_rom "$set_name" "$device_name" "$rom_name" include_all=true

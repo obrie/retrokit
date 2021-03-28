@@ -138,13 +138,15 @@ download_file() {
   # Arguments
   local url="$1"
   local output="$2"
-  local requires_login="$3"
+
+  local login="false"
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -s "$output" ]; then
     echo "Downloading $url"
 
     # TODO: Need to set requires_login somewhere
-    if [ "$requires_login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
+    if [ "$login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
       # Need to make sure we use the `ia` command-line
       local item=$(echo "$url" | grep -oP "download/\K[^/]+")
       local file=$(echo "$url" | grep -oP "$item/\K.+$")
