@@ -474,16 +474,16 @@ install_rom_nonmerged_file() {
       merge_rom "$set_name" "$rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
     else
       # Download non-merged / split rom
-      if [ ! -s "$rom_emulator_file"]; then
+      if [ ! -s "$rom_emulator_file" ]; then
         download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file"
       fi
 
       if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ]; then
         # Download the parent and merge it
-        local parent_rom_emulator_file="$roms_set_url$parent_rom_name.zip"
+        local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.zip"
 
         if [ ! -s "$parent_rom_emulator_file" ]; then
-          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_name"
+          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_emulator_file"
         fi
 
         merge_rom "$set_name" "$parent_rom_name" "$rom_name" include_all=true
