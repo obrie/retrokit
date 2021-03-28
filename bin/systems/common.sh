@@ -145,7 +145,6 @@ download_file() {
   if [ ! -s "$output" ]; then
     echo "Downloading $url"
 
-    # TODO: Need to set requires_login somewhere
     if [ "$login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
       # Need to make sure we use the `ia` command-line
       local item=$(echo "$url" | grep -oP "download/\K[^/]+")
