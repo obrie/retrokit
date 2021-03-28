@@ -341,7 +341,7 @@ needs_merge() {
 
   # Files to compare
   local source_files="${roms["$set_name/$source/files"]}"
-  local target_existing_files="${zipinfo -1 "$roms_emulator_dir/$target.zip" | paste -sd ' '}"
+  local target_existing_files="$(zipinfo -1 "$roms_emulator_dir/$target.zip" | paste -sd ' ')"
 
   for file in ${source_files//,/ }; do
     if [[ " $target_existing_files " != *" $file " ]]; then
@@ -352,7 +352,7 @@ needs_merge() {
   return 1
 }
 
-merge_file() {
+merge_rom() {
   # Arguments
   local set_name="$1"
   local source="$2"
@@ -408,7 +408,7 @@ merge_file() {
       done < <(zipinfo -1 "$source_file" | grep -oP "^$source_dir\K(.+)$" )
     else
       # Merge everything (we are copying files from a bios/device)
-      zipmerge -S "$source_file" "$target_file"
+      zipmerge -S "$target_file" "$source_file"
     fi
   fi
 }
@@ -472,7 +472,7 @@ install_rom_nonmerged_file() {
 
   # Merge BIOS (if necessary)
   local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
-  if [ -n "$bios_rom_name" ] && [ needs_merge "$set_name" "$bios_rom_name" "$rom_name" ]; then
+  if [ -n "$bios_rom_name" ] && needs_merge "$set_name" "$bios_rom_name" "$rom_name"; then
     local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
 
     if [ ! -s "$bios_emulator_file" ]; then
@@ -485,9 +485,7 @@ install_rom_nonmerged_file() {
   # Merge devices (if necessary)
   devices=${roms["$set_name/$rom_name/devices"]}
   for device_name in ${devices//,/ }; do
-    echo "$device_name"
-    echo "${sets["$set_name/$device_name/files"]+exists}"
-    if [ ${sets["$set_name/$device_name/files"]+exists} ] && [ needs_merge "$set_name" "$device_name" "$rom_name" ]; then
+    if [ -n "${roms["$set_name/$device_name/files"]}" ] && needs_merge "$set_name" "$device_name" "$rom_name"; then
       local device_emulator_file="$roms_emulator_dir/$device_name.zip"
       if [ ! -s "$device_emulator_file" ]; then
         download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
