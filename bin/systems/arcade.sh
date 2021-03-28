@@ -121,6 +121,7 @@ declare -A roms_languages
 declare -A roms_ratings
 
 # Set data
+declare reference_set_name
 declare -A sets
 declare -A emulators
 declare -A roms
@@ -210,8 +211,9 @@ index_set_dats() {
     fi
 
     # Find the list of roms that are downloadable
-    while IFS="»" read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks inputs; do
+    while IFS="»" read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks controls; do
       if [ -n "$set_is_reference" ]; then
+        reference_set_name="$set_name"
         rom_names+=("$name")
       fi
 
@@ -224,9 +226,9 @@ index_set_dats() {
       roms["$set_name/$name/parent_source_files"]="${parent_source_files%,*}"
       roms["$set_name/$name/parent_target_files"]="${parent_target_files%,*}"
       roms["$set_name/$name/files"]="${files%,*}"
-      roms["$set_name/$name/device_refs"]="${device_refs%,*}"
+      roms["$set_name/$name/devices"]="${device_refs%,*}"
       roms["$set_name/$name/disks"]="${disks%,*}"
-      roms["$set_name/$name/inputs"]="${inputs%,*}"
+      roms["$set_name/$name/controls"]="${controls%,*}"
     done < "$target_dat_file.index"
   done < <(setting '.roms.sets | keys[]')
 }
@@ -319,7 +321,9 @@ load_support_files() {
 
 # Reset the list of ROMs that are visible
 reset_filtered_roms() {
-  find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+  if [ -d "$roms_all_dir" ]; then
+    find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+  fi
 }
 
 # Checks whether the target rom/machine already contains all of the files for the
@@ -425,6 +429,8 @@ install_rom_nonmerged_file() {
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
   mkdir -p "$roms_emulator_dir"
 
+  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" || true)
+
   # Install ROM asset
   if [ ! -s "$rom_emulator_file" ]; then
     local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
@@ -462,36 +468,39 @@ install_rom_nonmerged_file() {
         merge_rom "$set_name" "$parent_rom_name" "$rom_name"
       fi
     fi
+  fi
 
-    # Merge BIOS (if necessary)
-    local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
-    if [ -n "$bios_rom_name" ] && [ needs_merge "$set_name" "$bios_rom_name" "$rom_name" ]; then
-      local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
+  # Merge BIOS (if necessary)
+  local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
+  if [ -n "$bios_rom_name" ] && [ needs_merge "$set_name" "$bios_rom_name" "$rom_name" ]; then
+    local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
 
-      if [ ! -s "$bios_emulator_file" ]; then
-        download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
-      fi
-
-      merge_rom "$set_name" "$bios_rom_name" "$rom_name"
+    if [ ! -s "$bios_emulator_file" ]; then
+      download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file"
     fi
 
-    # Merge devices (if necessary)
-    device_names=${roms["$set_name/$rom_name/device_names"]}
-    for device_name in ${device_names//,/ }; do
-      if [ ${sets["$set_name/$device_name/files"]+exists} ] && [ needs_merge "$set_name" "$device_name" "$rom_name" ]; then
-        local device_emulator_file="$roms_emulator_dir/$device_name.zip"
-        if [ ! -s "$device_emulator_file" ]; then
-          download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
-        fi
+    merge_rom "$set_name" "$bios_rom_name" "$rom_name"
+  fi
 
-        merge_rom "$set_name" "$device_name" "$rom_name"
+  # Merge devices (if necessary)
+  devices=${roms["$set_name/$rom_name/devices"]}
+  for device_name in ${devices//,/ }; do
+    echo "$device_name"
+    echo "${sets["$set_name/$device_name/files"]+exists}"
+    if [ ${sets["$set_name/$device_name/files"]+exists} ] && [ needs_merge "$set_name" "$device_name" "$rom_name" ]; then
+      local device_emulator_file="$roms_emulator_dir/$device_name.zip"
+      if [ ! -s "$device_emulator_file" ]; then
+        download_file "$roms_set_url$device_name.zip" "$device_emulator_file"
       fi
-    done
 
-    # Create ZIP at target
+      merge_rom "$set_name" "$device_name" "$rom_name"
+    fi
+  done
+
+  # Create ZIP at target if it's changed
+  local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
+  if [ "$mtime_before" != "$mtime_after" ]; then
     trrntzip "$rom_emulator_file"
-  else
-    echo "Already downloaded: $rom_emulator_file"
   fi
 }
 
@@ -555,6 +564,7 @@ activate_rom() {
   # Target
   local rom_target_file="$roms_all_dir/$rom_name.zip"
   local disk_target_dir="$roms_all_dir/$rom_name"
+  mkdir -p "$roms_all_dir"
 
   # Link to -ALL- (including disk)
   ln -fs "$rom_emulator_file" "$rom_target_file"
@@ -579,9 +589,9 @@ install_roms() {
     # Read rom attributes
     local emulator=${roms_compatibility["$rom_name"]}
     local set_name=${emulators["$emulator/set_name"]}
-    local is_clone=${roms["$set_name/$rom_name/cloneof"]}
-    local description=${roms["$set_name/$rom_name/description"]}
-    local controls=${roms["$set_name/$rom_name/controls"]}
+    local is_clone=${roms["$reference_set_name/$rom_name/cloneof"]}
+    local description=${roms["$reference_set_name/$rom_name/description"]}
+    local controls=${roms["$reference_set_name/$rom_name/controls"]}
     local category=${roms_categories["$rom_name"]}
     local language=${roms_languages["$rom_name"]}
     local rating=${roms_ratings["$rom_name"]}
@@ -638,7 +648,7 @@ install_roms() {
       fi
 
       # Controls
-      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "${roms["$set_name/$rom_name/controls"]}"; then
+      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
         echo "[Skip] $rom_name (controls)"
         continue
       fi
