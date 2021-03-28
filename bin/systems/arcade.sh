@@ -334,6 +334,10 @@ needs_merge() {
   local source="$2"
   local target="$3"
 
+  # Source info
+  local files="${roms["$set_name/$source/files"]}"
+  if [ $# -gt 3 ]; then local "${@:4}"; fi
+
   # Set info
   local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
@@ -347,10 +351,7 @@ needs_merge() {
   fi
   local target_existing_files="$(zipinfo -1 "$target_file" | paste -sd ' ')"
 
-  # Source info
-  local source_files="${roms["$set_name/$source/files"]}"
-
-  for file in ${source_files//,/ }; do
+  for file in ${files//,/ }; do
     if [[ " $target_existing_files " != *" $file "* ]]; then
       # Missing a file: needs merge
       return 0
@@ -445,10 +446,11 @@ install_rom_nonmerged_file() {
   # ROM info
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
   local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
+  local parent_target_files=${roms["$set_name/$rom_name/parent_target_files"]}
   local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" || true)
 
   # Install ROM asset
-  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" || needs_merge "$set_name" "$rom_name" "$rom_name"; then
+  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" files=$parent_target_files || needs_merge "$set_name" "$rom_name" "$rom_name"; then
     if [[ "$set_format" == "merged" ]]; then
       local merged_rom_name="${parent_rom_name:-$rom_name}"
       local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
