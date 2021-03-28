@@ -344,7 +344,7 @@ needs_merge() {
   local target_existing_files="$(zipinfo -1 "$roms_emulator_dir/$target.zip" | paste -sd ' ')"
 
   for file in ${source_files//,/ }; do
-    if [[ " $target_existing_files " != *" $file " ]]; then
+    if [[ " $target_existing_files " != *" $file "* ]]; then
       return 0
     fi
   done
