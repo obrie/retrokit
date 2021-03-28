@@ -35,6 +35,38 @@ languages_flat_file="$languages_file.flat"
 ratings_file="$system_tmp_dir/ratings.ini"
 ratings_flat_file="$ratings_file.flat"
 
+# Filters: Overrides
+favorites=$(setting_regex ".roms.favorites")
+
+# Filters: Blocklists
+blocklists_clones=$(setting ".roms.blocklists.clones")
+blocklists_languages=$(setting_regex ".roms.blocklists.languages")
+blocklists_categories=$(setting_regex ".roms.blocklists.categories")
+blocklists_ratings=$(setting_regex ".roms.blocklists.ratings")
+blocklists_keywords=$(setting_regex ".roms.blocklists.keywords")
+blocklists_flags=$(setting_regex ".roms.blocklists.flags")
+blocklists_controls=$(setting_regex ".roms.blocklists.controls")
+blocklists_names=$(setting_regex ".roms.blocklists.names")
+
+# Filters: Allowlists
+allowlists_clones=$(setting ".roms.allowlists.clones")
+allowlists_languages=$(setting_regex ".roms.allowlists.languages")
+allowlists_categories=$(setting_regex ".roms.allowlists.categories")
+allowlists_ratings=$(setting_regex ".roms.allowlists.ratings")
+allowlists_keywords=$(setting_regex ".roms.allowlists.keywords")
+allowlists_flags=$(setting_regex ".roms.allowlists.flags")
+allowlists_controls=$(setting_regex ".roms.allowlists.controls")
+allowlists_names=$(setting_regex ".roms.allowlists.names")
+
+# XSLT conditions for optimizing what we index
+xslt_opt_conditions=''
+if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
+  if [ -n "$favorites" ] ; then
+    xslt_opt_conditions=" or (@name='$(setting ".roms.favorites[]" | sed ':a; N; $!ba; s/\n/'"'"' or @name=\'"'"'/g')')"
+  fi
+  xslt_opt_conditions=" and (not(@cloneof)$xslt_opt_conditions)"
+fi
+
 # XSLT for grabbing data from DAT files
 roms_dat_xslt='''<?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
@@ -42,7 +74,7 @@ roms_dat_xslt='''<?xml version="1.0"?>
   <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
   <xsl:output omit-xml-declaration="yes" indent="no"/>
   <xsl:template match="/">
-    <xsl:for-each select="/*/*[rom and not(@ismechanical)]">
+    <xsl:for-each select="/*/*[rom and not(@ismechanical = 'yes')'''"$xslt_opt_conditions"''']">
       <xsl:value-of select="@name"/>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
@@ -144,6 +176,8 @@ clean_emulator_config_key() {
 
 # Load information about the sets from which we'll pull down ROMs
 load_sets() {
+  echo "Loading sets..."
+
   # Read configured sets
   while read -r set_name; do
     # Load the set
@@ -157,7 +191,7 @@ load_sets() {
 }
 
 index_set_dats() {
-  echo "Indexing set dats..."
+  echo "Indexing set dats... (this takes a while)"
 
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
@@ -233,7 +267,7 @@ download_support_files() {
 
   # Download categories file
   if [ ! -s "$categories_flat_file" ]; then
-    if [ ! -s "$languages_file.zip" ]; then
+    if [ ! -s "$categories_file.zip" ]; then
       download_file "${support_files['categories/url']}" "$categories_file.zip"
     fi
     unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
@@ -541,29 +575,6 @@ install_rom() {
 }
 
 install_roms() {
-  # Overrides
-  local favorites=$(setting_regex ".roms.favorites")
-
-  # Blocklists
-  local blocklists_clones=$(setting ".roms.blocklists.clones")
-  local blocklists_languages=$(setting_regex ".roms.blocklists.languages")
-  local blocklists_categories=$(setting_regex ".roms.blocklists.categories")
-  local blocklists_ratings=$(setting_regex ".roms.blocklists.ratings")
-  local blocklists_keywords=$(setting_regex ".roms.blocklists.keywords")
-  local blocklists_flags=$(setting_regex ".roms.blocklists.flags")
-  local blocklists_controls=$(setting_regex ".roms.blocklists.controls")
-  local blocklists_names=$(setting_regex ".roms.blocklists.names")
-
-  # Allowlists
-  local allowlists_clones=$(setting ".roms.allowlists.clones")
-  local allowlists_languages=$(setting_regex ".roms.allowlists.languages")
-  local allowlists_categories=$(setting_regex ".roms.allowlists.categories")
-  local allowlists_ratings=$(setting_regex ".roms.allowlists.ratings")
-  local allowlists_keywords=$(setting_regex ".roms.allowlists.keywords")
-  local allowlists_flags=$(setting_regex ".roms.allowlists.flags")
-  local allowlists_controls=$(setting_regex ".roms.allowlists.controls")
-  local allowlists_names=$(setting_regex ".roms.allowlists.names")
-
   for rom_name in "${rom_names[@]}"; do
     # Read rom attributes
     local emulator=${roms_compatibility["$rom_name"]}
