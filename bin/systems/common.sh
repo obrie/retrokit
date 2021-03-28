@@ -295,7 +295,8 @@ theme_system() {
   local theme="$1"
   local bezelproject_bin=$HOME/RetroPie/retropiemenu/bezelproject.sh
   
-  # TODO: Check if installed already before we do this
-  "$bezelproject_bin" install_bezel_packsa "$theme" "thebezelproject"
-  "$bezelproject_bin" install_bezel_pack "$theme" "thebezelproject"
+  if [ ! -d "/opt/retropie/configs/all/retroarch/overlay/GameBezels/$theme" ]; then
+    "$bezelproject_bin" install_bezel_packsa "$theme" "thebezelproject"
+    "$bezelproject_bin" install_bezel_pack "$theme" "thebezelproject"
+  fi
 }

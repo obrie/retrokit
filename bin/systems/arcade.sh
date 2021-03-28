@@ -518,10 +518,19 @@ install_rom_nonmerged_file() {
     fi
   done
 
+  # Ensure TorrentZip logs are clear in case there was an error log (which will
+  # cause the command to be interactive)
+  rm -f $app_dir/log/*log
+
   # Create ZIP at target if it's changed
   local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
   if [ "$mtime_before" != "$mtime_after" ]; then
+    pushd "$app_dir/log"
     trrntzip "$rom_emulator_file"
+    popd
+
+    # Remove generated logs
+    rm -f $app_dir/log/*log
   fi
 }
 
@@ -600,9 +609,6 @@ install_rom() {
   install_rom_disks "${@}"
   install_rom_samples "${@}"
   activate_rom "${@}"
-
-  # Remove TorrentZip logs
-  rm -f "$(pwd)/*log"
 }
 
 install_roms() {
