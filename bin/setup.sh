@@ -62,14 +62,14 @@ install_config_tools() {
   . "$tmp_dir/dotenv"
 
   # JSON reader
-  sudo apt install jq
+  sudo apt install -y jq
 }
 
 install_torrent_tools() {
   local transmission_settings_file=/etc/transmission-daemon/settings.json
 
   # BitTorrent client
-  sudo apt install transmission-daemon
+  sudo apt install -y transmission-daemon
   sudo systemctl stop transmission-daemon
 
   # Keep original config
@@ -97,16 +97,16 @@ install_http_tools() {
 
 install_developer_tools() {
   # Benchmarking
-  sudo apt install sysbench
+  sudo apt install -y sysbench
 
   # Screen
-  sudo apt install screen
+  sudo apt install -y screen
 
   # Rom Set tools
   $app_dir/bin/tools/romset.sh install
 
   # Archival
-  sudo apt install zip zipmerge
+  sudo apt install -y zip zipmerge
 
   # TorrentZip
   if [ ! `command -v trrntzip` ]; then
@@ -174,7 +174,7 @@ setup_performance_optimizations() {
   crudini --set "$boot_config" 'pi4' 'arm_freq' '1750'
 
   # Graphics
-  sudo apt install mesa-utils
+  sudo apt install -y mesa-utils
 }
 
 setup_remote_access() {
@@ -220,6 +220,10 @@ setup_locale() {
   sudo sh -c "echo 'LANG=\"$language.UTF-8\"' > /etc/default/locale"
   sudo dpkg-reconfigure --frontend=noninteractive locales
   sudo update-locale LANG=$language.UTF-8
+}
+
+setup_keyboard() {
+  sudo bash -c ". /home/pi/retrokit/tmp/dotenv && .env -f /etc/default/keyboard set XKBLAYOUT='\"us\"'"
 }
 
 setup_splashscreen() {
@@ -279,6 +283,13 @@ setup_inputs() {
   cp "$config_dir/inputs.cfg" "$input_config"
 }
 
+setup_vnc() {
+  curl https://www.linux-projects.org/listing/uv4l_repo/lpkey.asc | sudo apt-key add -
+  echo "deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main" | sudo tee /etc/apt/sources.list.d/uv4l.list
+  sudo apt install -y uv4luv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
+  uv4l --auto-video_nr --driver raspidisp --server-option '--enable-webrtc=yes'
+}
+
 # Fixes ini files to follow retropie format
 fix_configurations() {
   sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" /opt/retropie/configs/all/skyscraper/config.ini
@@ -326,6 +337,11 @@ setup_systems() {
   done
 }
 
+setup_runcommand() {
+  ln -fs "/opt/retropie/configs/all/runcommand-onstart.sh" "$app_dir/bin/runcommand/onstart.sh"
+  ln -fs "/opt/retropie/configs/all/runcommand-onend.sh" "$app_dir/bin/runcommand/onend.sh"
+}
+
 setup_themes() {
   # Install themes
   $(jq -r '.themes.library[] | (.name + " " + .repo)' "$settings_file") | xargs -I{} sudo $HOME/RetroPie-Setup/retropie_packages.sh esthemes install_theme {}
@@ -336,7 +352,7 @@ setup_themes() {
 
   # Install launch images
   launch_theme=$(jq -r '.themes.launch_theme' "$settings_file")
-  launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
+  launch_images_base_url=$(jq -r ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url" "$settings_file")
   for system in $dir/systems/*; do
     system_name=$(basename -s .sh "$system")
     if [ "$system_name" == "megadrive" ]; then
@@ -345,9 +361,9 @@ setup_themes() {
       system_image_name="$system_name"
     fi
     
-    wget -nc "$(printf "$launch_images_base_url" "$system_image_name")" -P "/opt/retropie/configs/$system_name/" || true
+    wget -nc "$(printf "$launch_images_base_url" "$system_image_name")" -O "/opt/retropie/configs/$system_name/launching-extended.png" || true
   done
-} 
+}
 
 function reload() {
   emulationstation
@@ -373,6 +389,7 @@ function main() {
   setup_splashscreen
   setup_scraper
   setup_inputs
+  setup_vnc
 
   fix_configurations
 
@@ -380,6 +397,7 @@ function main() {
   setup_menus
   setup_systems
   setup_gamelists
+  setup_runcommand
   setup_themes
   reload
 }
