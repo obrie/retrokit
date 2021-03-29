@@ -153,6 +153,11 @@ download_file() {
     else
       curl -fL# "$url" -o "$output"
     fi
+
+    if [ ! -s "$output" ]; then
+      rm -f "$output"
+      return 1
+    fi
   else
     echo "Already downloaded $url"
   fi
