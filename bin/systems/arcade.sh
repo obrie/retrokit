@@ -574,7 +574,7 @@ list_expected_rom_files() {
   # Build list of files we expect to see
   local expected_files=($(get_file_names "${roms["$set_name/$rom_name/files"]} ${roms["$set_name/$rom_name/merge_files"]} ${roms["$set_name/$bios_name/files"]}"))
   for device in ${roms["$set_name/$rom_name/devices"]}; do
-    expected_files+=($(get_file_names "${roms["$set_name/$device_ref/files"]}"))
+    expected_files+=($(get_file_names "${roms["$set_name/$device/files"]}"))
   done
 
   echo "${expected_files[@]}"
