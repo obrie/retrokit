@@ -64,11 +64,11 @@ allowlists_names=$(setting_regex ".roms.allowlists.names")
 # XSLT for grabbing data from DAT files
 roms_dat_xslt='''<?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
-  <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz'" />
-  <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
+  <xsl:variable name="lowercase" select="'"'"'abcdefghijklmnopqrstuvwxyz'"'"'" />
+  <xsl:variable name="uppercase" select="'"'"'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"'"'" />
   <xsl:output omit-xml-declaration="yes" indent="no"/>
   <xsl:template match="/">
-    <xsl:for-each select="/*/*[rom and not(@ismechanical = 'yes')]">
+    <xsl:for-each select="/*/*[rom and not(@ismechanical = '"'"'yes'"'"')]">
       <xsl:value-of select="@name"/>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
@@ -79,13 +79,13 @@ roms_dat_xslt='''<?xml version="1.0"?>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="@sampleof"/>
       <xsl:text>&#xBB;</xsl:text>
-      <xsl:for-each select="rom[@merge]">
+      <xsl:for-each select="rom[@merge and not(@status = '"'"'nodump'"'"')]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
         <xsl:value-of select="@crc"/><xsl:text>,</xsl:text>
         <xsl:value-of select="@merge"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
-      <xsl:for-each select="rom[not(@merge)]">
+      <xsl:for-each select="rom[not(@merge) and not(@status = '"'"'nodump'"'"')]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
         <xsl:value-of select="@crc"/><xsl:text> </xsl:text>
       </xsl:for-each>
@@ -389,7 +389,7 @@ validate_rom_has_files() {
     # Target doesn't exist at all: not valid
     return 1
   fi
-  local existing_files="$(unzip -vl "$rom_file")"
+  local existing_files="$(unzip -vl "$rom_file" 2>/dev/null)"
 
   for file in $files; do
     local file_info=(${file//,/ })
@@ -423,7 +423,7 @@ download_rom() {
   if [ -f "$rom_file" ]; then
     # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
     local redownload=false
-    local existing_files="$(unzip -vl "$rom_file")"
+    local existing_files="$(unzip -vl "$rom_file" 2>/dev/null)"
 
     for expected_file in ${roms["$set_name/$rom_name/files"]}; do
       local file_info=(${expected_file//,/ })
@@ -458,8 +458,13 @@ merge_rom() {
   local files="${roms["$set_name/$merge_from/files"]}"
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
+  if [ -z "$files" ]; then
+    # Ignore and don't log anything -- this rom has no files
+    return 0
+  fi
+
   # Check if merging is needed (either there are no files to merge or we have all the files)
-  if [ -z "$files" ] || validate_rom_has_files "$set_name" "$merge_to" "$files"; then
+  if validate_rom_has_files "$set_name" "$merge_to" "$files"; then
     log "[$merge_to] Skip merge $merge_from (no files or already merged)"
     return 0
   fi
@@ -484,9 +489,9 @@ merge_rom() {
   if [ "$include_all" == "true" ]; then
     # Merge everything
     log "[$merge_to] Merging all files from $merge_from"
-    zipmerge -S "$merge_to_archive" "$source_from_archive"
+    zipmerge -S "$merge_to_archive" "$source_from_archive" >/dev/null
   else
-    local existing_files="$(unzip -vl "$merge_to_archive")"
+    local existing_files="$(unzip -vl "$merge_to_archive" 2>/dev/null)"
 
     # Merge files
     for file in $files; do
@@ -503,7 +508,7 @@ merge_rom() {
         local file_to_extract=$(zipinfo -1 "$source_from_archive" | grep -E "(^|/)$file_source\$")
 
         unzip -p "$source_from_archive" "$file_to_extract" > "$tmp_file"
-        zip -j "$merge_to_archive" "$tmp_file"
+        zip -j "$merge_to_archive" "$tmp_file" >/dev/null
         rm "$tmp_file"
       fi
     done
@@ -524,16 +529,13 @@ install_rom_nonmerged_file() {
   local merge_files="${roms["$set_name/$rom_name/merge_files"]}"
 
   if [ "$set_format" == "merged" ]; then
-    # Merge files from parent
-    merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_suffix=".merged" files="$merge_files"
+    args="source_from=${parent_rom_name:-$rom_name} source_suffix=.merged"
 
-    # Merge files for the rom
-    merge_rom "$set_name" "$rom_name" "$rom_name" source_from="$parent_rom_name" source_suffix=".merged"
+    merge_rom "$set_name" "$parent_rom_name" "$rom_name" $args files="$merge_files"
+    merge_rom "$set_name" "$rom_name" "$rom_name" $args
   else
-    # Download rom
-    download_rom "$set_name" "$rom_name" "$rom_name"
+    download_rom "$set_name" "$rom_name"
 
-    # Merge files from parent in a split set
     if [ "$set_format" == "split" ]; then
       merge_rom "$set_name" "$parent_rom_name" "$rom_name" files="$merge_files"
     fi
@@ -610,16 +612,16 @@ torrentzip_rom() {
   local set_core="${sets["$set_name/core"]}"
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
-  log "[$rom_file] Torrentzip'ing"
+  log "[$rom_name] Torrentzip'ing"
 
   # Ensure TorrentZip logs are clear in case there was an error log (which will
   # cause the command to be interactive)
   rm -f $app_dir/log/*log
 
   # Create ZIP at target
-  pushd "$app_dir/log"
-  trrntzip "$rom_file"
-  popd
+  pushd "$app_dir/log" &>/dev/null
+  trrntzip "$rom_file" >/dev/null
+  popd &>/dev/null
 
   # Remove generated logs
   rm -f $app_dir/log/*log
@@ -685,7 +687,7 @@ enable_rom() {
   local enabled_disk_dir="$roms_all_dir/$rom_name"
   mkdir -p "$roms_all_dir"
 
-  log "[$rom_file] Enabling in -ALL-"
+  log "[$rom_name] Enabling"
 
   # Link to -ALL- (including disk)
   ln -fs "$rom_file" "$enabled_rom_file"
