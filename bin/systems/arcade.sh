@@ -523,7 +523,7 @@ install_rom_nonmerged_file() {
   rm -f $app_dir/log/*log
 
   # Make sure file isn't empty
-  if [[ "$(zipinfo -1 "$rom_emulator_file")" == *"Empty zipfile"* ]]; then
+  if [ ! unzip -t "$rom_emulator_file" &>/dev/null ] || [[ "$(zipinfo -1 "$rom_emulator_file")" == *"Empty zipfile"* ]]; then
     exit 1
   fi
 
