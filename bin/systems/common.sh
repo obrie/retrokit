@@ -156,20 +156,28 @@ download_file() {
 
   local login="false"
   local force="false"
+  local refresh="false"
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  if [ ! -s "$output" ] || [ "$force" == "true" ]; then
+  if [ ! -s "$output" ] || [ "$force" == "true" ] || [ "$refresh" == "true" ]; then
     echo "Downloading $url"
 
     if [ "$login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
-      # Need to make sure we use the `ia` command-line
+      # Need to make sure we use the `ia` command-line so we can download while logged in
       local item=$(echo "$url" | grep -oP "download/\K[^/]+")
       local file=$(echo "$url" | grep -oP "$item/\K.+$")
       ia download "$item" "$file" -s > "$output"
     else
-      curl -fL# "$url" -o "$output"
+      if [ "$refresh" == "true" ]; then
+        # Attempt to refresh based on modification date
+        curl -fL# -o "$output" -z "$output" "$url"
+      else
+        # Download via curl
+        curl -fL# -o "$output" "$url"
+      fi
     fi
 
+    # If the output is empty, clean up and let the caller know
     if [ ! -s "$output" ]; then
       rm -f "$output"
       return 1

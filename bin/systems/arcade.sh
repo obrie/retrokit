@@ -176,7 +176,7 @@ clean_emulator_config_key() {
 
 # Load information about the sets from which we'll pull down ROMs
 load_sets() {
-  log "Loading sets..."
+  log "--- Loading sets ---"
 
   # Read configured sets
   while read -r set_name; do
@@ -196,12 +196,11 @@ index_sets() {
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
     local set_dat_url=$(get_set_url "$set_name" "dat")
+    local set_dat_refresh=${sets["$set_name/dat_refresh"]}
     local set_is_reference=${sets["$set_name/reference"]}
     local target_dat_file="$system_tmp_dir/$set_core.dat"
 
-    if [ ! -s "$target_dat_file" ]; then
-      download_file "$set_dat_url" "$target_dat_file"
-    fi
+    download_file "$set_dat_url" "$target_dat_file" refresh=$set_dat_refresh
 
     if [ ! -s "$target_dat_file.index" ]; then
       log "Generating index for $set_name"
@@ -271,7 +270,7 @@ get_set_url() {
   local set_url=${sets["$set_name/url"]}
   local asset_path=${sets["$set_name/$asset_name"]}
 
-  if [[ "$asset_path" =~ ^http ]]; then
+  if [[ "$asset_path" =~ ^(http|file):// ]]; then
     echo "$asset_path"
   else
     echo "$set_url$asset_path"
@@ -295,32 +294,24 @@ download_support_files() {
 
   # Download languages file
   if [ ! -s "$languages_flat_file" ]; then
-    if [ ! -s "$languages_file.zip" ]; then
-      download_file "${support_files['languages/url']}" "$languages_file.zip"
-    fi
+    download_file "${support_files['languages/url']}" "$languages_file.zip"
     unzip -p "$languages_file.zip" "${support_files['languages/file']}" > "$languages_file"
     crudini --get --format=lines "$languages_file" > "$languages_flat_file"
   fi
 
   # Download categories file
   if [ ! -s "$categories_flat_file" ]; then
-    if [ ! -s "$categories_file.zip" ]; then
-      download_file "${support_files['categories/url']}" "$categories_file.zip"
-    fi
+    download_file "${support_files['categories/url']}" "$categories_file.zip"
     unzip -p "$categories_file.zip" "${support_files['categories/file']}" > "$categories_file"
     crudini --get --format=lines "$categories_file" > "$categories_flat_file"
   fi
 
   # Download compatibility file
-  if [ ! -s "$compatibility_file" ]; then
-    download_file "${support_files['compatibility/url']}" "$compatibility_file"
-  fi
+  download_file "${support_files['compatibility/url']}" "$compatibility_file"
 
   # Download ratings file
   if [ ! -s "$ratings_flat_file" ]; then
-    if [ ! -s "$ratings_file.zip" ]; then
-      download_file "${support_files['ratings/url']}" "$ratings_file.zip"
-    fi
+    download_file "${support_files['ratings/url']}" "$ratings_file.zip"
     unzip -p "$ratings_file.zip" "${support_files['ratings/file']}" > "$ratings_file"
     crudini --get --format=lines "$ratings_file" > "$ratings_flat_file"
   fi
@@ -469,7 +460,7 @@ merge_rom() {
 
   # Check if merging is needed (either there are no files to merge or we have all the files)
   if [ -z "$files" ] || validate_rom_has_files "$set_name" "$merge_to" "$files"; then
-    log "[$merge_to] Merge from $merge_from not required"
+    log "[$merge_to] Skip merge $merge_from (no files or already merged)"
     return 0
   fi
 
@@ -589,15 +580,13 @@ list_expected_rom_files() {
 
 clean_rom() {
   # Arguments
-  set_name="$1"
-  rom_name="$2"
+  local set_name="$1"
+  local rom_name="$2"
+  local expected_files="$3"
 
   # ROM info
   local set_core="${sets["$set_name/core"]}"
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
-
-  # Rom expected files
-  local expected_files="$(list_expected_rom_files "$set_name" "$rom_name")"
 
   # Rom actual files on the filsystem
   local existing_files="$(zipinfo -1 "$rom_file" | paste -sd ' ')"
@@ -610,12 +599,6 @@ clean_rom() {
       zip -d "$rom_file" "$file"
     fi
   done
-}
-
-validate_rom_is_nonempty() {
-  # Arguments
-  file="$1"
-  unzip -t "$file" &>/dev/null && [[ "$(zipinfo -h "$file")" != *"entries: 0"* ]]
 }
 
 torrentzip_rom() {
@@ -729,10 +712,14 @@ install_rom() {
   install_rom_disks "${@}"
   install_rom_samples "${@}"
 
-  if validate_rom_is_nonempty "$rom_file"; then
-    clean_rom "${@}"
+  # Make sure generated rom is valid
+  local expected_files="$(list_expected_rom_files "$set_name" "$rom_name")"
+  if validate_rom_has_files "${@}" "$expected_files"; then
+    clean_rom "${@}" "$expected_files"
     torrentzip_rom "${@}"
     enable_rom "${@}"
+  else
+    log "[$rom_file] Skip (missing files!)"
   fi
 }
 
