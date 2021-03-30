@@ -38,6 +38,38 @@ Files:
 * [Stable ROM Set](https://***REMOVED***)
 * [DAT](https://github.com/libretro/FBNeo/raw/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat)
 
+Nightly:
+
+```
+"arcade-fbneo-http": {
+  "protocol": "http",
+  "url": "https://***REMOVED***",
+  "format": "split",
+  "dat": "https://raw.githubusercontent.com/libretro/FBNeo/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
+  "roms": "roms/arcade.zip/arcade%2F",
+  "samples": "support/samples.zip/samples%2F",
+  "emulator": "lr-fbneo",
+  "core": "fbneo",
+  "version": "v0.2.97.44"
+},
+```
+
+Stable:
+
+```
+"arcade-fbneo-http": {
+  "protocol": "http",
+  "url": "https://***REMOVED***/",
+  "format": "non-merged",
+  "dat": "https://raw.githubusercontent.com/libretro/FBNeo/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
+  "roms": "FBNeo/ArcadeNonMerged.zip/",
+  "samples": "FBNeo/support.zip/support%2Fsamples%2F",
+  "emulator": "lr-fbneo",
+  "core": "fbneo",
+  "version": "v0.2.97.44"
+},
+```
+
 ### MAME
 
 Files:

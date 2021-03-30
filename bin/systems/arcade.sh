@@ -15,18 +15,18 @@ init "$system"
 
 # Directories
 config_dir="$app_dir/config/systems/$system"
-settings_file="$config_dir/settings.json"
 system_tmp_dir="$tmp_dir/arcade"
-mkdir -p "$system_tmp_dir"
+roms_dir="$HOME/RetroPie/roms/$system"
+roms_all_dir="$roms_dir/-ALL-"
+mkdir -p "$system_tmp_dir" "$roms_all_dir"
 
 # Configurations
+settings_file="$config_dir/settings.json"
 retroarch_config="/opt/retropie/configs/$system/retroarch.cfg"
 emulators_config="/opt/retropie/configs/$system/emulators.cfg"
 emulators_retropie_config="/opt/retropie/configs/all/emulators.cfg"
 
 # Support files
-roms_dir="$HOME/RetroPie/roms/$system"
-roms_all_dir="$roms_dir/-ALL-"
 compatibility_file="$system_tmp_dir/compatibility.tsv"
 categories_file="$system_tmp_dir/catlist.ini"
 categories_flat_file="$categories_file.flat"
@@ -77,9 +77,9 @@ roms_dat_xslt='''<?xml version="1.0"?>
       <xsl:value-of select="@sampleof"/>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[@merge]">
-        <xsl:value-of select="@merge"/><xsl:text>,</xsl:text>
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="@crc"/><xsl:text> </xsl:text>
+        <xsl:value-of select="@crc"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@merge"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[not(@merge)]">
@@ -104,13 +104,13 @@ roms_dat_xslt='''<?xml version="1.0"?>
 </xsl:stylesheet>
 '''
 
-# In-memory mappings
+# In-memory mappings: Filters
 declare -A roms_compatibility
 declare -A roms_categories
 declare -A roms_languages
 declare -A roms_ratings
 
-# Set data
+# In-memory mappings: Sets / roms
 declare reference_set_name
 declare -A sets
 declare -A emulators
@@ -121,6 +121,10 @@ usage() {
   echo "usage: $0"
   exit 1
 }
+
+##############
+# Setup
+##############
 
 setup() {
   # Input Lag
@@ -138,9 +142,7 @@ setup() {
       if [ -n "$branch" ]; then
         # Set to correct branch
         local setup_file="$HOME/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
-        if [ ! -s "$setup_file.orig" ]; then
-          cp "$setup_file" "$setup_file.orig"
-        fi
+        backup "$setup_file"
 
         sed -i "s/.git master/.git $branch/g" "$setup_file"
       fi
@@ -165,6 +167,10 @@ clean_emulator_config_key() {
   echo "$name"
 }
 
+##############
+# Sets
+##############
+
 # Load information about the sets from which we'll pull down ROMs
 load_sets() {
   echo "Loading sets..."
@@ -181,12 +187,12 @@ load_sets() {
   done < <(setting '.roms.sets | keys[]')
 }
 
-index_set_dats() {
-  echo "Indexing set dats... (this takes a while)"
+index_sets() {
+  echo "Indexing set... (this takes a while)"
 
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
-    local set_dat_url=$(set_asset_url "$set_name" "dat")
+    local set_dat_url=$(get_set_url "$set_name" "dat")
     local set_is_reference=${sets["$set_name/reference"]}
     local target_dat_file="$system_tmp_dir/$set_core.dat"
 
@@ -254,7 +260,7 @@ index_set_dats() {
 }
 
 # Build the base url for the given set / asset
-set_asset_url() {
+get_set_url() {
   local set_name="$1"
   local asset_name="$2"
   local set_url=${sets["$set_name/url"]}
@@ -266,6 +272,10 @@ set_asset_url() {
     echo "$set_url$asset_path"
   fi
 }
+
+##############
+# Support Files
+##############
 
 # Download external support files needed for filtering purposes
 download_support_files() {
@@ -339,387 +349,488 @@ load_support_files() {
   done < <(cat "$ratings_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 }
 
-# Reset the list of ROMs that are visible
-reset_filtered_roms() {
-  if [ -d "$roms_all_dir" ]; then
-    find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
-  fi
+##############
+# ROM Installation
+##############
+
+# Creates an empty zip file
+create_empty_rom() {
+  echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$1"
+}
+
+# Gets the file names from fileinfo objects
+get_file_names() {
+  local names=()
+
+  for file in $1; do
+    local file_info=(${file//,/ })
+    names+=(${file_info[0]})
+  done
+
+  echo "${names[@]}"
 }
 
 # Checks whether the target rom/machine already contains all of the files for the
 # source rom/machine
-needs_merge() {
+validate_rom_has_files() {
   # Arguments
   local set_name="$1"
-  local source="$2"
-  local target="$3"
-
-  # Source info
-  local files="${roms["$set_name/$source/files"]}"
-  if [ $# -gt 3 ]; then local "${@:4}"; fi
+  local rom_name="$2"
+  local files="$3"
 
   # Set info
-  local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
-  local roms_emulator_dir="$roms_dir/.$set_core"
+  local set_roms_dir="$roms_dir/.$set_core"
 
   # Target info
-  local target_file="$roms_emulator_dir/$target.zip"
-  if [ ! -s "$target_file" ]; then
-    # Target doesn't exist at all: needs merge
-    return 0
+  local rom_file="$set_roms_dir/$rom_name.zip"
+  if [ ! -s "$rom_file" ]; then
+    # Target doesn't exist at all: not valid
+    return 1
   fi
-  local target_existing_files="$(zipinfo -1 "$target_file" | grep -v 'Empty zipfile' | paste -sd ' ')"
+  declare -A existing_files
+  for file in $(zipinfo -1 "$rom_file" | grep -v 'Empty zipfile' | paste -sd ' '); do
+    existing_files["$file"]="1"
+  done
 
   for file in $files; do
     local file_info=(${file//,/ })
     local file_name="${file_info[0]}"
-    local checksum="${file_info[1]}"
+    local file_checksum="${file_info[1]}"
 
-    if [[ " $target_existing_files " != *" $file_name "* ]]; then
-      # Missing a file: needs merge
-      return 0
+    if [ "${existing_files["$file_name"]}" != "1" ]; then
+      # Missing a file: not valid
+      return 1
     fi
   done
 
-  return 1
+  return 0
+}
+
+download_rom() {
+  # Arguments
+  local set_name="$1"
+  local rom_name="$2"
+
+  # Set info
+  local set_core=${sets["$set_name/core"]}
+  local set_login=${sets["$set_name/login"]:-false}
+  local set_roms_url=$(get_set_url "$set_name" "roms")
+
+  # Rom info
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  if [ -f "$rom_file" ]; then
+    # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
+    local redownload=false
+    declare -A existing_files
+    for file in $(zipinfo -1 "$rom_file" | grep -v 'Empty zipfile' | paste -sd ' '); do
+      existing_files["$file"]="1"
+    done
+
+    for expected_file in ${roms["$set_name/$rom_name/files"]}; do
+      local file_info=(${expected_file//,/ })
+      local file_name="${file_info[0]}"
+      local file_checksum="${file_info[1]}"
+
+      if [ "${existing_files["$file_name"]}" != "1" ]; then
+        redownload=true
+        break
+      fi
+    done
+
+    if [ "$redownload" == "false" ]; then
+      return 0
+    fi
+  fi
+
+  download_file "$set_roms_url$rom_name.zip" "$rom_file" login=$set_login force=true
 }
 
 merge_rom() {
   # Arguments
   local set_name="$1"
-  local source="$2"
-  local target="$3"
+  local merge_from="$2"
+  local merge_to="$3"
 
-  # Set info
-  local set_name=${emulators["$emulator/set_name"]}
-  local set_core=${sets["$set_name/core"]}
-  local roms_emulator_dir="$roms_dir/.$set_core"
-  local roms_tmp_dir="$roms_emulator_dir/tmp"
-  mkdir -p "$roms_tmp_dir"
-
-  # Target rom file
-  local target_file="$roms_emulator_dir/$target.zip"
-  local target_existing_files=$(zipinfo -1 "$target_file" | grep -v 'Empty zipfile' | paste -sd ' ')
-
-  # Source rom file
-  local source_file="$roms_emulator_dir/$source.zip"
+  # Optional arguments
+  local source_suffix=""
+  local source_from="$merge_from"
   local include_all="false"
+  local files="${roms["$set_name/$merge_from/files"]}"
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
-  local target_parent="${roms["$set_name/$target/parent"]}"
-  if [ "$source" == "$target_parent" ]; then
-    # Merge files from the parent using the name in the target
-    for merge_file in ${roms["$set_name/$target/merge_files"]}; do
-      local merge_info=(${merge_file//,/ })
-      local merge_source_name="${merge_info[0]}"
-      local merge_target_name="${merge_info[1]}"
-      local checksum="${merge_info[2]}"
+  # Check if merging is needed (either there are no files to merge or we have all the files)
+  if [ -z "$files" ] || validate_rom_has_files "$set_name" "$merge_to" "$files"; then
+    return 0
+  fi
 
-      if [[ " $target_existing_files " != *" $merge_target_name " ]]; then
+  # Set info
+  local set_roms_dir="$roms_dir/.${sets["$set_name/core"]}"
+  local set_tmp_dir="$set_roms_dir/tmp"
+  mkdir -p "$set_tmp_dir"
+
+  # Source file
+  local source_from_archive="$set_roms_dir/$source_from$source_suffix.zip"
+
+  # Target file
+  local merge_to_archive="$set_roms_dir/$merge_to.zip"
+  if [ ! -s "$merge_to_archive" ]; then
+    create_empty_rom "$merge_to_archive"
+  fi
+
+  # Download the rom we're sourcing from
+  download_rom "$set_name" "$source_from" rom_file="$source_from_archive"
+
+  if [ "$include_all" == "true" ]; then
+    # Merge everything
+    zipmerge -S "$merge_to_archive" "$source_from_archive"
+  else
+    declare -A existing_files
+    for existing_file in $(zipinfo -1 "$merge_to_archive" | grep -v 'Empty zipfile' | paste -sd ' '); do
+      existing_files["$existing_file"]="1"
+    done
+
+    # Merge files
+    for file in $files; do
+      local file_info=(${file//,/ })
+      local file_target="${file_info[0]}"
+      local file_checksum="${file_info[1]}"
+      local file_source="${file_info[2]:-$file_target}"
+
+      if [ "${existing_files["$file_target"]}" != "1" ]; then
         # File doesn't exist: add it (using crc would be more accurate)
-        local tmp_file="$roms_tmp_dir/$merge_target_name"
-        unzip -p "$source_file" "$merge_source_name" > "$tmp_file"
-        zip -j "$target_file" "$tmp_file"
+        local tmp_file="$set_tmp_dir/$file_target"
+        local file_to_extract=$(zipinfo -1 "$source_from_archive" | grep -E "(^|/)$file_source\$")
+
+        unzip -p "$source_from_archive" "$file_to_extract" > "$tmp_file"
+        zip -j "$merge_to_archive" "$tmp_file"
         rm "$tmp_file"
       fi
     done
-  else
-    # Copy based on the names in the zip file
-    if [ "$include_all" == "false" ]; then
-      for file in ${roms["$set_name/$target/files"]}; do
-        local file_info=(${file//,/ })
-        local file_name="${file_info[0]}"
-        local checksum="${file_info[1]}"
-
-        if [[ " $target_existing_files " != *" $file_name " ]]; then
-          # File doesn't exist
-
-          # Find the file based on its filename (crc would be more accurate)
-          local file_to_extract=$(zipinfo -1 "$source_file" | grep -E "(^|/)$file_name\$")
-
-          # Add the file
-          local tmp_file="$roms_tmp_dir/$file_name"
-          unzip -p "$source_file" "$file_to_extract" > "$tmp_file"
-          zip -j "$target_file" "$tmp_file"
-          rm "$tmp_file"
-        fi
-      done
-    else
-      # Merge everything (we are copying files from a split rom/bios/device)
-      zipmerge -S "$target_file" "$source_file"
-    fi
   fi
 }
 
 install_rom_nonmerged_file() {
   # Arguments
-  local rom_name="$1"
-  local emulator="$2"
+  local set_name="$1"
+  local rom_name="$2"
 
   # Set info
-  local set_name=${emulators["$emulator/set_name"]}
-  local set_core=${sets["$set_name/core"]}
-  local set_format=${sets["$set_name/format"]}
-  local set_login=${sets["$set_name/login"]:-false}
+  local set_name="${emulators["$emulator/set_name"]}"
+  local set_format="${sets["$set_name/format"]}"
 
-  # Set: ROMs
-  local roms_set_url=$(set_asset_url "$set_name" "roms")
-  local roms_emulator_dir="$roms_dir/.$set_core"
-  mkdir -p "$roms_emulator_dir"
+  # Rom info
+  local parent_rom_name="${roms["$set_name/$rom_name/parent"]}"
+  local merge_files="${roms["$set_name/$rom_name/merge_files"]}"
 
-  # ROM info
-  local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
-  local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
-  local merge_files=${roms["$set_name/$rom_name/merge_files"]}
-  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" 2>/dev/null || true)
+  if [ "$set_format" == "merged" ]; then
+    # Merge files from parent
+    merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_suffix=".merged" files="$merge_files"
 
-  # Install ROM asset
-  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" files="$merge_files" || needs_merge "$set_name" "$rom_name" "$rom_name"; then
-    if [[ "$set_format" == "merged" ]]; then
-      local merged_rom_name="${parent_rom_name:-$rom_name}"
-      local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
+    # Merge files for the rom
+    merge_rom "$set_name" "$rom_name" "$rom_name" source_from="$parent_rom_name" source_suffix=".merged"
+  else
+    # Download rom
+    download_rom "$set_name" "$rom_name" "$rom_name"
 
-      # Download parent merged rom (contains children)
-      if [ ! -s "$merged_rom_emulator_file" ]; then
-        download_file "$roms_set_url$merged_rom_name.zip" "$merged_rom_emulator_file" login=$set_login
-      fi
-
-      # Create empty rom
-      if [ ! -s "$rom_emulator_file" ]; then
-        echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$rom_emulator_file"
-      fi
-
-      # Merge files from parent
-      if [ -n "$parent_rom_name" ] && [ -n "$merge_files" ]; then
-        merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
-      fi
-
-      # Merge files for the rom
-      merge_rom "$set_name" "$rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
-    else
-      # Download non-merged / split rom
-      if [ ! -s "$rom_emulator_file" ]; then
-        download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file" login=$set_login
-      fi
-
-      # Merge files from parent
-      if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ] && [ -n "$merge_files" ]; then
-        # Download the parent and merge it
-        local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.zip"
-
-        if [ ! -s "$parent_rom_emulator_file" ]; then
-          download_file "$roms_set_url$parent_rom_name.zip" "$parent_rom_emulator_file" login=$set_login
-        fi
-
-        merge_rom "$set_name" "$parent_rom_name" "$rom_name"
-      fi
+    # Merge files from parent in a split set
+    if [ "$set_format" == "split" ]; then
+      merge_rom "$set_name" "$parent_rom_name" "$rom_name" files="$merge_files"
     fi
   fi
+}
 
-  # Merge BIOS (if necessary)
-  local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
-  if [ -n "$bios_rom_name" ] && needs_merge "$set_name" "$bios_rom_name" "$rom_name"; then
-    local bios_emulator_file="$roms_emulator_dir/$bios_rom_name.zip"
+install_rom_bios() {
+  local set_name="$1"
+  local rom_name="$2"
+  local bios_rom_name="${roms["$set_name/$rom_name/bios"]}"
 
-    if [ ! -s "$bios_emulator_file" ]; then
-      download_file "$roms_set_url$bios_rom_name.zip" "$bios_emulator_file" login=$set_login
-    fi
+  merge_rom "$set_name" "$bios_rom_name" "$rom_name" include_all=true
+}
 
-    merge_rom "$set_name" "$bios_rom_name" "$rom_name" include_all=true
-  fi
+install_rom_devices() {
+  local set_name="$1"
+  local rom_name="$2"
 
   # Merge devices (if necessary)
   for device_name in ${roms["$set_name/$rom_name/devices"]}; do
-    if [ -n "${roms["$set_name/$device_name/files"]}" ] && needs_merge "$set_name" "$device_name" "$rom_name"; then
-      local device_emulator_file="$roms_emulator_dir/$device_name.zip"
-      if [ ! -s "$device_emulator_file" ]; then
-        download_file "$roms_set_url$device_name.zip" "$device_emulator_file" login=$set_login
-      fi
+    merge_rom "$set_name" "$device_name" "$rom_name" include_all=true
+  done
+}
 
-      merge_rom "$set_name" "$device_name" "$rom_name" include_all=true
+# Lists the files that should be in the given rom
+list_expected_rom_files() {
+  # Arguments
+  set_name="$1"
+  rom_name="$2"
+
+  # ROM info
+  local set_core="${sets["$set_name/core"]}"
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+  local bios_name="${roms["$set_name/$rom_name/bios"]}"
+
+  # Build list of files we expect to see
+  local expected_files=()
+  expected_files+=($(get_file_names "${roms["$set_name/$rom_name/files"]}"))
+  expected_files+=($(get_file_names "${roms["$set_name/$rom_name/merge_files"]}"))
+  expected_files+=($(get_file_names "${roms["$set_name/$bios_name/files"]}"))
+  for device in ${roms["$set_name/$rom_name/devices"]}; do
+    expected_files+=($(get_file_names "${roms["$set_name/$device_ref/files"]}"))
+  done
+
+  echo "${expected_files[@]}"
+}
+
+clean_rom() {
+  # Arguments
+  set_name="$1"
+  rom_name="$2"
+
+  # ROM info
+  local set_core="${sets["$set_name/core"]}"
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+
+  # Rom expected files
+  declare -A expected_files
+  for file in $(list_expected_rom_files "$set_name" "$rom_name"); do
+    expected_files["$file"]="1"
+  done
+
+  # Rom actual files on the filsystem
+  local actual_files=($(zipinfo -1 "$rom_file" | paste -sd ' '))
+
+  # Remove the differences
+  for file in $actual_files; do
+    if [ "${expected_files["$file"]}" != "1" ]; then
+      # File should not be there: delete it
+      zip -d "$rom_file" "$file"
     fi
   done
+}
+
+validate_rom_is_nonempty() {
+  # Arguments
+  file="$1"
+  unzip -t "$file" &>/dev/null && [[ "$(zipinfo -h "$file")" != *"entries: 0"* ]]
+}
+
+torrentzip_rom() {
+  # Arguments
+  local set_name="$1"
+  local rom_name="$2"
+
+  # ROM info
+  local set_core="${sets["$set_name/core"]}"
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
   # Ensure TorrentZip logs are clear in case there was an error log (which will
   # cause the command to be interactive)
   rm -f $app_dir/log/*log
 
-  # Make sure file isn't empty
-  if [ ! unzip -t "$rom_emulator_file" &>/dev/null ] || [[ "$(zipinfo -1 "$rom_emulator_file")" == *"Empty zipfile"* ]]; then
-    return 1
-  fi
+  # Create ZIP at target
+  pushd "$app_dir/log"
+  trrntzip "$rom_file"
+  popd
 
-  # Create ZIP at target if it's changed
-  local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
-  if [ "$mtime_before" != "$mtime_after" ]; then
-    pushd "$app_dir/log"
-    trrntzip "$rom_emulator_file"
-    popd
-
-    # Remove generated logs
-    rm -f $app_dir/log/*log
-  fi
+  # Remove generated logs
+  rm -f $app_dir/log/*log
 }
 
 install_rom_disks() {
   # Arguments
-  local rom_name="$1"
-  local emulator="$2"
+  local set_name="$1"
+  local rom_name="$2"
 
   # Set info
-  local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
 
   # Disks
-  local disks_set_url=$(set_asset_url "$set_name" "disks")
-  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
+  local disks_url=$(get_set_url "$set_name" "disks")
+  local disk_dir="$roms_dir/.chd/$rom_name"
 
   # Install
   for disk_name in ${roms["$set_name/$rom_name/disks"]}; do
-    mkdir -p "$disk_emulator_dir"
-    local disk_emulator_file="$disk_emulator_dir/$disk_name.chd"
+    mkdir -p "$disk_dir"
+    local disk_file="$disk_dir/$disk_name.chd"
 
-    download_file "$disks_set_url$rom_name/$disk_name.chd" "$disk_emulator_file" || return 1
+    download_file "$disks_url$rom_name/$disk_name.chd" "$disk_file" || return 1
   done
 }
 
 install_rom_samples() {
   # Arguments
-  local rom_name="$1"
-  local emulator="$2"
+  local set_name="$1"
+  local rom_name="$2"
 
   # Set info
-  local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
 
   # Samples
-  local samples_set_url=$(set_asset_url "$set_name" "samples")
-  local samples_target_dir="$HOME/RetroPie/BIOS/$set_core/samples"
-  mkdir -p "$samples_target_dir"
+  local samples_url=$(get_set_url "$set_name" "samples")
+  local samples_dir="$HOME/RetroPie/BIOS/$set_core/samples"
+  mkdir -p "$samples_dir"
 
   # Install
   local sample_name=${roms["$set_name/$rom_name/sample"]}
   if [ -n "$sample_name" ]; then
-    local sample_file="$samples_target_dir/$sample_name.zip"
+    local sample_file="$samples_dir/$sample_name.zip"
 
-    download_file "$samples_set_url$sample_name.zip" "$sample_file" || return 1
+    download_file "$samples_url$sample_name.zip" "$sample_file" || return 1
   fi
 }
 
-activate_rom() {
+enable_rom() {
   # Arguments
-  local rom_name="$1"
-  local emulator="$2"
+  local set_name="$1"
+  local rom_name="$2"
 
   # Set info
-  local set_name=${emulators["$emulator/set_name"]}
   local set_core=${sets["$set_name/core"]}
-  local rom_emulator_file="$roms_dir/.$set_core/$rom_name.zip"
-  local disk_emulator_dir="$roms_dir/.chd/$rom_name"
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+  local disk_dir="$roms_dir/.chd/$rom_name"
 
   # Target
-  local rom_target_file="$roms_all_dir/$rom_name.zip"
-  local disk_target_dir="$roms_all_dir/$rom_name"
+  local enabled_rom_file="$roms_all_dir/$rom_name.zip"
+  local enabled_disk_dir="$roms_all_dir/$rom_name"
   mkdir -p "$roms_all_dir"
 
   # Link to -ALL- (including disk)
-  ln -fs "$rom_emulator_file" "$rom_target_file"
-  if [ -d "$disk_emulator_dir" ]; then
-    ln -fs "$disk_emulator_dir" "$disk_target_dir"
+  ln -fs "$rom_file" "$enabled_rom_file"
+  if [ -d "$disk_dir" ]; then
+    ln -fs "$disk_dir" "$enabled_disk_dir"
   fi
 }
 
 # Installs a rom for a specific emulator
 install_rom() {
+  # Arguments
+  local set_name="$1"
+  local rom_name="$2"
+
+  # Set info
+  local set_core=${sets["$set_name/core"]}
+  local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+
   install_rom_nonmerged_file "${@}"
+  install_rom_bios "${@}"
+  install_rom_devices "${@}"
   install_rom_disks "${@}"
   install_rom_samples "${@}"
-  activate_rom "${@}"
+
+  if validate_rom_is_nonempty "$rom_file"; then
+    clean_rom "${@}"
+    torrentzip_rom "${@}"
+    enable_rom "${@}"
+  fi
+}
+
+should_install_rom() {
+  # Arguments
+  local rom_name="$1"
+
+  # Filters
+  local emulator=${roms_compatibility["$rom_name"]}
+  local set_name=${emulators["$emulator/set_name"]}
+  local is_clone=${roms["$reference_set_name/$rom_name/cloneof"]}
+  local description=${roms["$reference_set_name/$rom_name/description"]}
+  local controls=${roms["$reference_set_name/$rom_name/controls"]}
+  local category=${roms_categories["$rom_name"]}
+  local language=${roms_languages["$rom_name"]}
+  local rating=${roms_ratings["$rom_name"]}
+
+  # Compatible / Runnable roms
+  if [ -z "$emulator" ]; then
+    echo "[Skip] $rom_name (poor compatibility)"
+    return 1
+  fi
+
+  # ROMs with sets
+  if [ -z "$set_name" ]; then
+    echo "[Skip] $rom_name (no set for emulator)"
+    return 1
+  fi
+
+  # Always allow favorites regardless of filter
+  if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
+    # Is Clone
+    if filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone"; then
+      echo "[Skip] $rom_name (clone)"
+      return 1
+    fi
+
+    # Language
+    if filter_regex "$blocklists_languages" "$allowlists_languages" "$language"; then
+      echo "[Skip] $rom_name (language)"
+      return 1
+    fi
+
+    # Category
+    if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
+      echo "[Skip] $rom_name (category)"
+      return 1
+    fi
+
+    # Rating
+    if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
+      echo "[Skip] $rom_name (rating)"
+      return 1
+    fi
+
+    # Keywords
+    if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
+      echo "[Skip] $rom_name (description)"
+      return 1
+    fi
+
+    # Flags
+    local flags=$(echo "$description" | grep -oP "\(\K[^\)]+" || true)
+    if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
+      echo "[Skip] $rom_name (flags)"
+      return 1
+    fi
+
+    # Controls
+    if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
+      echo "[Skip] $rom_name (controls)"
+      return 1
+    fi
+
+    # Name
+    if filter_regex "$blocklists_names" "$allowlists_names" "$rom_name" exact_match=true; then
+      echo "[Skip] $rom_name (name)"
+      return 1
+    fi
+  fi
+
+  return 0
 }
 
 install_roms() {
   for rom_name in "${rom_names[@]}"; do
-    # rom_name="99lstwarb"
-    # Read rom attributes
-    local emulator=${roms_compatibility["$rom_name"]}
-    local set_name=${emulators["$emulator/set_name"]}
-    local is_clone=${roms["$reference_set_name/$rom_name/cloneof"]}
-    local description=${roms["$reference_set_name/$rom_name/description"]}
-    local controls=${roms["$reference_set_name/$rom_name/controls"]}
-    local category=${roms_categories["$rom_name"]}
-    local language=${roms_languages["$rom_name"]}
-    local rating=${roms_ratings["$rom_name"]}
+    if should_install_rom "$rom_name"; then
+      # Read rom attributes
+      local emulator=${roms_compatibility["$rom_name"]}
+      local set_name=${emulators["$emulator/set_name"]}
 
-    # Compatible / Runnable roms
-    if [ -z "$emulator" ]; then
-      echo "[Skip] $rom_name (poor compatibility)"
-      continue
+      # Install
+      echo "[Install] $rom_name"
+      install_rom "$set_name" "$rom_name" || echo "Failed to download: $rom_name (set: $set_name)"
     fi
-
-    # ROMs with sets
-    if [ -z "$set_name" ]; then
-      echo "[Skip] $rom_name (no set for emulator)"
-      continue
-    fi
-
-    # Always allow favorites regardless of filter
-    if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
-      # Is Clone
-      if filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone"; then
-        echo "[Skip] $rom_name (clone)"
-        continue
-      fi
-
-      # Language
-      if filter_regex "$blocklists_languages" "$allowlists_languages" "$language"; then
-        echo "[Skip] $rom_name (language)"
-        continue
-      fi
-
-      # Category
-      if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
-        echo "[Skip] $rom_name (category)"
-        continue
-      fi
-
-      # Rating
-      if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
-        echo "[Skip] $rom_name (rating)"
-        continue
-      fi
-
-      # Keywords
-      if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
-        echo "[Skip] $rom_name (description)"
-        continue
-      fi
-
-      # Flags
-      local flags=$(echo "$description" | grep -oP "\(\K[^\)]+" || true)
-      if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
-        echo "[Skip] $rom_name (flags)"
-        continue
-      fi
-
-      # Controls
-      if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
-        echo "[Skip] $rom_name (controls)"
-        continue
-      fi
-
-      # Name
-      if filter_regex "$blocklists_names" "$allowlists_names" "$rom_name" exact_match=true; then
-        echo "[Skip] $rom_name (name)"
-        continue
-      fi
-    fi
-
-    # Install
-    echo "[Install] $rom_name"
-    install_rom "$rom_name" "$emulator" || echo "Failed to download: $rom_name ($emulator)"
   done
 }
+
+# Reset the list of ROMs that are visible
+reset_roms() {
+  if [ -d "$roms_all_dir" ]; then
+    find "$roms_all_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+  fi
+}
+
+##############
+# ROM Organization
+##############
 
 set_default_emulators() {
   # Merge emulator configurations
@@ -758,16 +869,16 @@ organize_system() {
 # MAYBE it could be generalized, but I'm not convinced it's worth the effort.
 download() {
   load_sets
-  index_set_dats
+  index_sets
   load_support_files
-  reset_filtered_roms
+  reset_roms
   install_roms
-  set_default_emulators
-  organize_system "$system"
-  scrape_system "$system" "screenscraper"
-  scrape_system "$system" "arcadedb"
-  build_gamelist "$system"
-  theme_system "MAME"
+  # set_default_emulators
+  # organize_system "$system"
+  # scrape_system "$system" "screenscraper"
+  # scrape_system "$system" "arcadedb"
+  # build_gamelist "$system"
+  # theme_system "MAME"
 }
 
 if [[ $# -lt 1 ]]; then

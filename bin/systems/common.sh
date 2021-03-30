@@ -24,6 +24,14 @@ init() {
   system_settings_file="$app_dir/config/systems/$system/settings.json"
 }
 
+backup() {
+  for file in "$@"; do
+    if [ ! -s "$file" ]; then
+      sudo cp "$file" "$file.orig"
+    fi
+  done
+}
+
 setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
@@ -140,9 +148,10 @@ download_file() {
   local output="$2"
 
   local login="false"
+  local force="false"
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  if [ ! -s "$output" ]; then
+  if [ ! -s "$output" ] || [ "$force" == "true" ]; then
     echo "Downloading $url"
 
     if [ "$login" == "true" ] && [[ "$url" == *"https://archive.org/download/"* ]]; then
