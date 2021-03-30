@@ -270,7 +270,7 @@ get_set_url() {
   local set_url=${sets["$set_name/url"]}
   local asset_path=${sets["$set_name/$asset_name"]}
 
-  if [[ "$asset_path" =~ ^(http|file):// ]]; then
+  if [[ "$asset_path" =~ ^(http|https|file):// ]]; then
     echo "$asset_path"
   else
     echo "$set_url$asset_path"
@@ -597,7 +597,7 @@ clean_rom() {
   for file in $existing_files; do
     if [[ " $expected_files " != *" $file "* ]]; then
       # File should not be there: delete it
-      log "[$rom_file] Deleting unused file: $file"
+      log "[$rom_name] Deleting unused file: $file"
       zip -d "$rom_file" "$file"
     fi
   done
@@ -644,7 +644,7 @@ install_rom_disks() {
     mkdir -p "$disk_dir"
     local disk_file="$disk_dir/$disk_name.chd"
 
-    log "[$rom_file] Installing disk: $disk_name"
+    log "[$rom_name] Installing disk: $disk_name"
     download_file "$disks_url$rom_name/$disk_name.chd" "$disk_file" || return 1
   done
 }
@@ -667,7 +667,7 @@ install_rom_samples() {
   if [ -n "$sample_name" ]; then
     local sample_file="$samples_dir/$sample_name.zip"
 
-    log "[$rom_file] Installing sample: $sample_name"
+    log "[$rom_name] Installing sample: $sample_name"
     download_file "$samples_url$sample_name.zip" "$sample_file" || return 1
   fi
 }
@@ -706,7 +706,7 @@ install_rom() {
   local set_core=${sets["$set_name/core"]}
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
-  log "[$rom_file] Installing..."
+  log "[$rom_name] Installing..."
 
   install_rom_nonmerged_file "${@}"
   install_rom_bios "${@}"
@@ -721,7 +721,7 @@ install_rom() {
     torrentzip_rom "${@}"
     enable_rom "${@}"
   else
-    log "[$rom_file] Skip (missing files!)"
+    log "[$rom_name] Skip (missing files!)"
   fi
 }
 
