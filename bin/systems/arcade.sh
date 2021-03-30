@@ -465,7 +465,7 @@ merge_rom() {
 
   # Check if merging is needed (either there are no files to merge or we have all the files)
   if validate_rom_has_files "$set_name" "$merge_to" "$files"; then
-    log "[$merge_to] Skip merge $merge_from (no files or already merged)"
+    log "[$merge_to] Not merging $merge_from (no files or already merged)"
     return 0
   fi
 
@@ -721,7 +721,7 @@ install_rom() {
     torrentzip_rom "${@}"
     enable_rom "${@}"
   else
-    log "[$rom_name] Skip (missing files!)"
+    log "[$rom_name] Skip (missing files)"
   fi
 }
 
