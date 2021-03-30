@@ -524,7 +524,7 @@ install_rom_nonmerged_file() {
 
   # Make sure file isn't empty
   if [ ! unzip -t "$rom_emulator_file" &>/dev/null ] || [[ "$(zipinfo -1 "$rom_emulator_file")" == *"Empty zipfile"* ]]; then
-    exit 1
+    return 1
   fi
 
   # Create ZIP at target if it's changed
