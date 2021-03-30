@@ -58,15 +58,6 @@ allowlists_flags=$(setting_regex ".roms.allowlists.flags")
 allowlists_controls=$(setting_regex ".roms.allowlists.controls")
 allowlists_names=$(setting_regex ".roms.allowlists.names")
 
-# XSLT conditions for optimizing what we index
-xslt_opt_conditions=''
-if [ "$blocklists_clones" == "true" ] || [ "$allowlists_clones" == "false" ]; then
-  if [ -n "$favorites" ] ; then
-    xslt_opt_conditions=" or (@name='$(setting ".roms.favorites[]" | sed ':a; N; $!ba; s/\n/'"'"' or @name=\'"'"'/g')')"
-  fi
-  xslt_opt_conditions=" and (not(@cloneof)$xslt_opt_conditions)"
-fi
-
 # XSLT for grabbing data from DAT files
 roms_dat_xslt='''<?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
@@ -74,7 +65,7 @@ roms_dat_xslt='''<?xml version="1.0"?>
   <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
   <xsl:output omit-xml-declaration="yes" indent="no"/>
   <xsl:template match="/">
-    <xsl:for-each select="/*/*[rom and not(@ismechanical = 'yes')'''"$xslt_opt_conditions"''']">
+    <xsl:for-each select="/*/*[rom and not(@ismechanical = 'yes')]">
       <xsl:value-of select="@name"/>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
@@ -87,26 +78,25 @@ roms_dat_xslt='''<?xml version="1.0"?>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[@merge]">
         <xsl:value-of select="@merge"/><xsl:text>,</xsl:text>
-      </xsl:for-each>
-      <xsl:text>&#xBB;</xsl:text>
-      <xsl:for-each select="rom[@merge]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@crc"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[not(@merge)]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@crc"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="device_ref">
-        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@name"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="disk">
-        <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@name"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="input/control">
-        <xsl:value-of select="@type"/><xsl:text>,</xsl:text>
+        <xsl:value-of select="@type"/><xsl:text> </xsl:text>
       </xsl:for-each>
       <xsl:text>&#xa;</xsl:text>
     </xsl:for-each>
@@ -198,9 +188,7 @@ index_set_dats() {
     local set_core=${sets["$set_name/core"]}
     local set_dat_url=$(set_asset_url "$set_name" "dat")
     local set_is_reference=${sets["$set_name/reference"]}
-    local roms_core_dir="$roms_dir/.$set_core"
-    local target_dat_file="$roms_core_dir/.dat"
-    mkdir -p "$roms_core_dir"
+    local target_dat_file="$system_tmp_dir/$set_core.dat"
 
     if [ ! -s "$target_dat_file" ]; then
       download_file "$set_dat_url" "$target_dat_file"
@@ -210,25 +198,57 @@ index_set_dats() {
       xmlstarlet tr <(echo "$roms_dat_xslt") "$target_dat_file" > "$target_dat_file.index"
     fi
 
+    if [ -n "$set_is_reference" ]; then
+      reference_set_name="$set_name"
+    fi
+
     # Find the list of roms that are downloadable
-    while IFS="»" read -r name description romof cloneof sampleof parent_source_files parent_target_files files device_refs disks controls; do
+    while IFS="»" read -r name description romof cloneof sampleof merge_files files device_refs disks controls; do
       if [ -n "$set_is_reference" ]; then
-        reference_set_name="$set_name"
         rom_names+=("$name")
       fi
 
+      # Desription
       roms["$set_name/$name/description"]="$description"
-      if [ -z "$cloneof" ]; then
-        roms["$set_name/$name/bios"]="$romof"
+
+      # Parent
+      if [ -n "$cloneof" ]; then
+        roms["$set_name/$name/parent"]="$cloneof"
+
+        if [ -n "$merge_files" ]; then
+          roms["$set_name/$name/merge_files"]="$merge_files"
+        fi
+      else
+        # BIOS
+        if [ -n "$romof" ]; then
+          roms["$set_name/$name/bios"]="$romof"
+        fi
       fi
-      roms["$set_name/$name/parent"]="$cloneof"
-      roms["$set_name/$name/sampleof"]="$sampleof"
-      roms["$set_name/$name/parent_source_files"]="${parent_source_files%,*}"
-      roms["$set_name/$name/parent_target_files"]="${parent_target_files%,*}"
-      roms["$set_name/$name/files"]="${files%,*}"
-      roms["$set_name/$name/devices"]="${device_refs%,*}"
-      roms["$set_name/$name/disks"]="${disks%,*}"
-      roms["$set_name/$name/controls"]="${controls%,*}"
+
+      # Sample
+      if [ -n "$sampleof" ]; then
+        roms["$set_name/$name/sampleof"]="$sampleof"
+      fi
+
+      # Files
+      if [ -n "$files" ]; then
+        roms["$set_name/$name/files"]="$files"
+      fi
+
+      # Devices
+      if [ -n "$device_refs" ]; then
+        roms["$set_name/$name/devices"]="$device_refs"
+      fi
+
+      # Disks
+      if [ -n "$disks" ]; then
+        roms["$set_name/$name/disks"]="$disks"
+      fi
+
+      # Controls
+      if [ -n "$controls" ]; then
+        roms["$set_name/$name/controls"]="$controls"
+      fi
     done < "$target_dat_file.index"
   done < <(setting '.roms.sets | keys[]')
 }
@@ -349,10 +369,14 @@ needs_merge() {
     # Target doesn't exist at all: needs merge
     return 0
   fi
-  local target_existing_files="$(zipinfo -1 "$target_file" | paste -sd ' ')"
+  local target_existing_files="$(zipinfo -1 "$target_file" | grep -v 'Empty zipfile' | paste -sd ' ')"
 
-  for file in ${files//,/ }; do
-    if [[ " $target_existing_files " != *" $file "* ]]; then
+  for file in $files; do
+    local file_info=(${file//,/ })
+    local file_name="${file_info[0]}"
+    local checksum="${file_info[1]}"
+
+    if [[ " $target_existing_files " != *" $file_name "* ]]; then
       # Missing a file: needs merge
       return 0
     fi
@@ -376,7 +400,7 @@ merge_rom() {
 
   # Target rom file
   local target_file="$roms_emulator_dir/$target.zip"
-  local target_existing_files=$(zipinfo -1 "$target_file" | paste -sd ' ')
+  local target_existing_files=$(zipinfo -1 "$target_file" | grep -v 'Empty zipfile' | paste -sd ' ')
 
   # Source rom file
   local source_file="$roms_emulator_dir/$source.zip"
@@ -385,19 +409,17 @@ merge_rom() {
 
   local target_parent="${roms["$set_name/$target/parent"]}"
   if [ "$source" == "$target_parent" ]; then
-    # Merge names (source => target)
-    local parent_source_files=(${roms["$set_name/$target/parent_source_files"]//,/ })
-    local parent_target_files=(${roms["$set_name/$target/parent_target_files"]//,/ })
-
     # Merge files from the parent using the name in the target
-    for i in ${!parent_source_files[@]}; do
-      local parent_source_file="${parent_source_files[$i]}"
-      local parent_target_file="${parent_target_files[$i]}"
+    for merge_file in ${roms["$set_name/$target/merge_files"]}; do
+      local merge_info=(${merge_file//,/ })
+      local merge_source_name="${merge_info[0]}"
+      local merge_target_name="${merge_info[1]}"
+      local checksum="${merge_info[2]}"
 
-      if [[ " $target_existing_files " != *" $file " ]]; then
+      if [[ " $target_existing_files " != *" $merge_target_name " ]]; then
         # File doesn't exist: add it (using crc would be more accurate)
-        local tmp_file="$roms_tmp_dir/$parent_target_file"
-        unzip -p "$source_file" "$parent_source_file" > "$tmp_file"
+        local tmp_file="$roms_tmp_dir/$merge_target_name"
+        unzip -p "$source_file" "$merge_source_name" > "$tmp_file"
         zip -j "$target_file" "$tmp_file"
         rm "$tmp_file"
       fi
@@ -405,17 +427,19 @@ merge_rom() {
   else
     # Copy based on the names in the zip file
     if [ "$include_all" == "false" ]; then
-      local files=(${roms["$set_name/$target/files"]//,/ })
+      for file in ${roms["$set_name/$target/files"]}; do
+        local file_info=(${file//,/ })
+        local file_name="${file_info[0]}"
+        local checksum="${file_info[1]}"
 
-      for file in "${files[@]}"; do
-        if [[ " $target_existing_files " != *" $file " ]]; then
+        if [[ " $target_existing_files " != *" $file_name " ]]; then
           # File doesn't exist
 
           # Find the file based on its filename (crc would be more accurate)
-          local file_to_extract=$(zipinfo -1 "$source_file" | grep -E "(^|/)$file\$")
+          local file_to_extract=$(zipinfo -1 "$source_file" | grep -E "(^|/)$file_name\$")
 
           # Add the file
-          local tmp_file="$roms_tmp_dir/$file"
+          local tmp_file="$roms_tmp_dir/$file_name"
           unzip -p "$source_file" "$file_to_extract" > "$tmp_file"
           zip -j "$target_file" "$tmp_file"
           rm "$tmp_file"
@@ -447,11 +471,11 @@ install_rom_nonmerged_file() {
   # ROM info
   local rom_emulator_file="$roms_emulator_dir/$rom_name.zip"
   local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
-  local parent_target_files=${roms["$set_name/$rom_name/parent_target_files"]}
-  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" || true)
+  local merge_files=${roms["$set_name/$rom_name/merge_files"]}
+  local mtime_before=$(stat --format='%.Y' "$rom_emulator_file" 2>/dev/null || true)
 
   # Install ROM asset
-  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" files=$parent_target_files || needs_merge "$set_name" "$rom_name" "$rom_name"; then
+  if needs_merge "$set_name" "$parent_rom_name" "$rom_name" files="$merge_files" || needs_merge "$set_name" "$rom_name" "$rom_name"; then
     if [[ "$set_format" == "merged" ]]; then
       local merged_rom_name="${parent_rom_name:-$rom_name}"
       local merged_rom_emulator_file="$roms_emulator_dir/$merged_rom_name.merged.zip"
@@ -467,7 +491,7 @@ install_rom_nonmerged_file() {
       fi
 
       # Merge files from parent
-      if [ -n "$parent_rom_name" ]; then
+      if [ -n "$parent_rom_name" ] && [ -n "$merge_files" ]; then
         merge_rom "$set_name" "$parent_rom_name" "$rom_name" source_file="$merged_rom_emulator_file"
       fi
 
@@ -479,8 +503,8 @@ install_rom_nonmerged_file() {
         download_file "$roms_set_url$rom_name.zip" "$rom_emulator_file" login=$set_login
       fi
 
-      local parent_source_files=${roms["$set_name/$target/parent_source_files"]}
-      if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ] && [ -n "$parent_source_files" ]; then
+      # Merge files from parent
+      if [ "$set_format" == "split" ] && [ -n "$parent_rom_name" ] && [ -n "$merge_files" ]; then
         # Download the parent and merge it
         local parent_rom_emulator_file="$roms_emulator_dir/$parent_rom_name.zip"
 
@@ -506,8 +530,7 @@ install_rom_nonmerged_file() {
   fi
 
   # Merge devices (if necessary)
-  devices=${roms["$set_name/$rom_name/devices"]}
-  for device_name in ${devices//,/ }; do
+  for device_name in ${roms["$set_name/$rom_name/devices"]}; do
     if [ -n "${roms["$set_name/$device_name/files"]}" ] && needs_merge "$set_name" "$device_name" "$rom_name"; then
       local device_emulator_file="$roms_emulator_dir/$device_name.zip"
       if [ ! -s "$device_emulator_file" ]; then
@@ -553,8 +576,7 @@ install_rom_disks() {
   local disk_emulator_dir="$roms_dir/.chd/$rom_name"
 
   # Install
-  local disks=${roms["$set_name/$rom_name/disks"]}
-  for disk_name in ${disks//,/ }; do
+  for disk_name in ${roms["$set_name/$rom_name/disks"]}; do
     mkdir -p "$disk_emulator_dir"
     local disk_emulator_file="$disk_emulator_dir/$disk_name.chd"
 
@@ -618,6 +640,7 @@ install_rom() {
 
 install_roms() {
   for rom_name in "${rom_names[@]}"; do
+    # rom_name="99lstwarb"
     # Read rom attributes
     local emulator=${roms_compatibility["$rom_name"]}
     local set_name=${emulators["$emulator/set_name"]}
@@ -742,7 +765,7 @@ download() {
   set_default_emulators
   organize_system "$system"
   scrape_system "$system" "screenscraper"
-  # scrape_system "$system" "arcadedb"
+  scrape_system "$system" "arcadedb"
   build_gamelist "$system"
   theme_system "MAME"
 }
