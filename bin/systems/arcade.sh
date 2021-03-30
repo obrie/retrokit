@@ -297,7 +297,7 @@ load_support_files() {
   echo "Loading emulator compatiblity..."
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
-  done < <(cat "$compatibility_file" | awk -F"$tab" "{print \$1\"$tab\"tolower(\$3)}")
+  done < <(cat "$compatibility_file" | grep -v "$tab[x!]$tab" | awk -F"$tab" "{print \$1\"$tab\"tolower(\$3)}")
 
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
