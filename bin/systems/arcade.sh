@@ -741,7 +741,7 @@ should_install_rom() {
 
   # Compatible / Runnable roms
   if [ -z "$emulator" ]; then
-    log "[$rom_name] Skip (poor compatibility)"
+    log "[$rom_name] Skip (no compatibility)"
     return 1
   fi
 
