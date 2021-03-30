@@ -4,7 +4,10 @@
 # System: Arcade
 ##############
 
-set -ex
+set -e
+if [ -n "$VERBOSE" ]; then
+  set -x
+fi
 
 dir=$( dirname "$0" )
 . $dir/common.sh
@@ -173,7 +176,7 @@ clean_emulator_config_key() {
 
 # Load information about the sets from which we'll pull down ROMs
 load_sets() {
-  echo "Loading sets..."
+  log "Loading sets..."
 
   # Read configured sets
   while read -r set_name; do
@@ -188,7 +191,7 @@ load_sets() {
 }
 
 index_sets() {
-  echo "Indexing set... (this takes a while)"
+  log "--- Indexing sets ---"
 
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
@@ -201,6 +204,7 @@ index_sets() {
     fi
 
     if [ ! -s "$target_dat_file.index" ]; then
+      log "Generating index for $set_name"
       xmlstarlet tr <(echo "$roms_dat_xslt") "$target_dat_file" > "$target_dat_file.index"
     fi
 
@@ -209,6 +213,7 @@ index_sets() {
     fi
 
     # Find the list of roms that are downloadable
+    log "Loading index for $set_name"
     while IFS="»" read -r name description romof cloneof sampleof merge_files files device_refs disks controls; do
       if [ -n "$set_is_reference" ]; then
         rom_names+=("$name")
@@ -279,7 +284,7 @@ get_set_url() {
 
 # Download external support files needed for filtering purposes
 download_support_files() {
-  echo "Downloading support files..."
+  log "--- Downloading support files ---"
 
   # Load support file settings
   declare -A support_files
@@ -324,7 +329,9 @@ download_support_files() {
 load_support_files() {
   download_support_files
 
-  echo "Loading emulator compatiblity..."
+  log "--- Loading support files ---"
+
+  log "Loading emulator compatiblity"
   while IFS="$tab" read -r rom_name emulator; do
     roms_compatibility["$rom_name"]="$emulator"
   done < <(cat "$compatibility_file" | grep -v "$tab[x!]$tab" | awk -F"$tab" "{print \$1\"$tab\"tolower(\$3)}")
@@ -333,17 +340,17 @@ load_support_files() {
     roms_compatibility["$rom_name"]="$emulator"
   done < <(setting ".roms.emulator_overrides | to_entries[] | [.key, .value] | @tsv")
 
-  echo "Loading categories..."
+  log "Loading categories"
   while IFS="$tab" read -r rom_name category; do
     roms_categories["$rom_name"]="$category"
   done < <(cat "$categories_flat_file" | grep Arcade | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
-  echo "Loading languages..."
+  log "Loading languages"
   while IFS="$tab" read -r rom_name language; do
     roms_languages["$rom_name"]="$language"
   done < <(cat "$languages_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
 
-  echo "Loading ratings..."
+  log "Loading ratings"
   while IFS="$tab" read -r rom_name rating; do
     roms_ratings["$rom_name"]="$rating"
   done < <(cat "$ratings_flat_file" | sed "s/^\[ \(.*\) \] \(.*\)$/\2$tab\1/g")
@@ -391,15 +398,16 @@ validate_rom_has_files() {
     # Target doesn't exist at all: not valid
     return 1
   fi
-  local existing_files="$(zipinfo -1 "$rom_file" | grep -v 'Empty zipfile' | paste -sd ' ')"
+  local existing_files="$(unzip -vl "$rom_file")"
 
   for file in $files; do
     local file_info=(${file//,/ })
     local file_name="${file_info[0]}"
     local file_checksum="${file_info[1]}"
 
-    if [[ " $existing_files " != *" $file_name "* ]]; then
+    if [[ " $existing_files " != *" $file_checksum "*" $file_name"* ]]; then
       # Missing a file: not valid
+      log "[$rom_name] Missing file: $file_name (crc: $file_checksum)"
       return 1
     fi
   done
@@ -424,15 +432,16 @@ download_rom() {
   if [ -f "$rom_file" ]; then
     # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
     local redownload=false
-    local existing_files="$(zipinfo -1 "$rom_file" | grep -v 'Empty zipfile' | paste -sd ' ')"
+    local existing_files="$(unzip -vl "$rom_file")"
 
     for expected_file in ${roms["$set_name/$rom_name/files"]}; do
       local file_info=(${expected_file//,/ })
       local file_name="${file_info[0]}"
       local file_checksum="${file_info[1]}"
 
-      if [[ " $existing_files " != *" $file_name "* ]]; then
+      if [[ " $existing_files " != *" $file_checksum "*" $file_name"* ]]; then
         redownload=true
+        log "[$rom_name] Existing ROM missing file: $file_name (crc: $file_checksum); re-downloading"
         break
       fi
     done
@@ -460,6 +469,7 @@ merge_rom() {
 
   # Check if merging is needed (either there are no files to merge or we have all the files)
   if [ -z "$files" ] || validate_rom_has_files "$set_name" "$merge_to" "$files"; then
+    log "[$merge_to] Merge from $merge_from not required"
     return 0
   fi
 
@@ -482,9 +492,10 @@ merge_rom() {
 
   if [ "$include_all" == "true" ]; then
     # Merge everything
+    log "[$merge_to] Merging all files from $merge_from"
     zipmerge -S "$merge_to_archive" "$source_from_archive"
   else
-    local existing_files="$(zipinfo -1 "$merge_to_archive" | grep -v 'Empty zipfile' | paste -sd ' ')"
+    local existing_files="$(unzip -vl "$merge_to_archive")"
 
     # Merge files
     for file in $files; do
@@ -493,7 +504,9 @@ merge_rom() {
       local file_checksum="${file_info[1]}"
       local file_source="${file_info[2]:-$file_target}"
 
-      if [[ " $existing_files " != *" $file_target "* ]]; then
+      if [[ " $existing_files " != *" $file_checksum "*" $file_target"* ]]; then
+        log "[$merge_to] Merging $file_target (crc: $file_checksum) from $merge_from"
+
         # File doesn't exist: add it (using crc would be more accurate)
         local tmp_file="$set_tmp_dir/$file_target"
         local file_to_extract=$(zipinfo -1 "$source_from_archive" | grep -E "(^|/)$file_source\$")
@@ -593,6 +606,7 @@ clean_rom() {
   for file in $existing_files; do
     if [[ " $expected_files " != *" $file "* ]]; then
       # File should not be there: delete it
+      log "[$rom_file] Deleting unused file: $file"
       zip -d "$rom_file" "$file"
     fi
   done
@@ -612,6 +626,8 @@ torrentzip_rom() {
   # ROM info
   local set_core="${sets["$set_name/core"]}"
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+
+  log "[$rom_file] Torrentzip'ing"
 
   # Ensure TorrentZip logs are clear in case there was an error log (which will
   # cause the command to be interactive)
@@ -643,6 +659,7 @@ install_rom_disks() {
     mkdir -p "$disk_dir"
     local disk_file="$disk_dir/$disk_name.chd"
 
+    log "[$rom_file] Installing disk: $disk_name"
     download_file "$disks_url$rom_name/$disk_name.chd" "$disk_file" || return 1
   done
 }
@@ -665,6 +682,7 @@ install_rom_samples() {
   if [ -n "$sample_name" ]; then
     local sample_file="$samples_dir/$sample_name.zip"
 
+    log "[$rom_file] Installing sample: $sample_name"
     download_file "$samples_url$sample_name.zip" "$sample_file" || return 1
   fi
 }
@@ -684,6 +702,8 @@ enable_rom() {
   local enabled_disk_dir="$roms_all_dir/$rom_name"
   mkdir -p "$roms_all_dir"
 
+  log "[$rom_file] Enabling in -ALL-"
+
   # Link to -ALL- (including disk)
   ln -fs "$rom_file" "$enabled_rom_file"
   if [ -d "$disk_dir" ]; then
@@ -700,6 +720,8 @@ install_rom() {
   # Set info
   local set_core=${sets["$set_name/core"]}
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
+
+  log "[$rom_file] Installing..."
 
   install_rom_nonmerged_file "${@}"
   install_rom_bios "${@}"
@@ -730,13 +752,13 @@ should_install_rom() {
 
   # Compatible / Runnable roms
   if [ -z "$emulator" ]; then
-    echo "[Skip] $rom_name (poor compatibility)"
+    log "[$rom_name] Skip (poor compatibility)"
     return 1
   fi
 
   # ROMs with sets
   if [ -z "$set_name" ]; then
-    echo "[Skip] $rom_name (no set for emulator)"
+    log "[$rom_name] Skip (no set for emulator)"
     return 1
   fi
 
@@ -744,50 +766,50 @@ should_install_rom() {
   if filter_regex "" "$favorites" "$rom_name" exact_match=true; then
     # Is Clone
     if filter_regex "$blocklists_clones" "$allowlists_clones" "$is_clone"; then
-      echo "[Skip] $rom_name (clone)"
+      log "[$rom_name] Skip (clone)"
       return 1
     fi
 
     # Language
     if filter_regex "$blocklists_languages" "$allowlists_languages" "$language"; then
-      echo "[Skip] $rom_name (language)"
+      log "[$rom_name] Skip (language)"
       return 1
     fi
 
     # Category
     if filter_regex "$blocklists_categories" "$allowlists_categories" "$category"; then
-      echo "[Skip] $rom_name (category)"
+      log "[$rom_name] Skip (category)"
       return 1
     fi
 
     # Rating
     if filter_regex "$blocklists_ratings" "$allowlists_ratings" "$rating"; then
-      echo "[Skip] $rom_name (rating)"
+      log "[$rom_name] Skip (rating)"
       return 1
     fi
 
     # Keywords
     if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
-      echo "[Skip] $rom_name (description)"
+      log "[$rom_name] Skip (description)"
       return 1
     fi
 
     # Flags
     local flags=$(echo "$description" | grep -oP "\(\K[^\)]+" || true)
     if filter_regex "$blocklists_flags" "$allowlists_flags" "$flags"; then
-      echo "[Skip] $rom_name (flags)"
+      log "[$rom_name] Skip (flags)"
       return 1
     fi
 
     # Controls
     if filter_all_in_list "$blocklists_controls" "$allowlists_controls" "$controls"; then
-      echo "[Skip] $rom_name (controls)"
+      log "[$rom_name] Skip (controls)"
       return 1
     fi
 
     # Name
     if filter_regex "$blocklists_names" "$allowlists_names" "$rom_name" exact_match=true; then
-      echo "[Skip] $rom_name (name)"
+      log "[$rom_name] Skip (name)"
       return 1
     fi
   fi
@@ -796,6 +818,7 @@ should_install_rom() {
 }
 
 install_roms() {
+  log "--- Installing roms ---"
   for rom_name in "${rom_names[@]}"; do
     if should_install_rom "$rom_name"; then
       # Read rom attributes
@@ -803,8 +826,7 @@ install_roms() {
       local set_name=${emulators["$emulator/set_name"]}
 
       # Install
-      echo "[Install] $rom_name"
-      install_rom "$set_name" "$rom_name" || echo "Failed to download: $rom_name (set: $set_name)"
+      install_rom "$set_name" "$rom_name" || log "[$rom_name] Failed to download (set: $set_name)"
     fi
   done
 }
@@ -821,6 +843,8 @@ reset_roms() {
 ##############
 
 set_default_emulators() {
+  log "--- Setting default emulators ---"
+
   # Merge emulator configurations
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
@@ -833,6 +857,8 @@ set_default_emulators() {
 
 # Organize ROMs based on favorites
 organize_system() {
+  log "--- Organizing rom directories ---"
+
   # Clear existing ROMs
   find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
 
@@ -842,6 +868,8 @@ organize_system() {
     local source_disk_dir="$roms_all_dir/$rom"
     local target_file="$roms_dir/$rom.zip"
     local target_disk_dir="$roms_dir/$rom"
+
+    log "[$rom] Adding to favorites"
 
     ln -fs "$source_file" "$target_file"
 
@@ -861,12 +889,12 @@ download() {
   load_support_files
   reset_roms
   install_roms
-  # set_default_emulators
-  # organize_system "$system"
-  # scrape_system "$system" "screenscraper"
-  # scrape_system "$system" "arcadedb"
-  # build_gamelist "$system"
-  # theme_system "MAME"
+  set_default_emulators
+  organize_system "$system"
+  scrape_system "$system" "screenscraper"
+  scrape_system "$system" "arcadedb"
+  build_gamelist "$system"
+  theme_system "MAME"
 }
 
 if [[ $# -lt 1 ]]; then

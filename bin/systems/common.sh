@@ -24,9 +24,14 @@ init() {
   system_settings_file="$app_dir/config/systems/$system/settings.json"
 }
 
+log() {
+  echo "${@}"
+}
+
 backup() {
   for file in "$@"; do
     if [ ! -s "$file" ]; then
+      log "Backing up: $file to $file.org"
       sudo cp "$file" "$file.orig"
     fi
   done
@@ -49,6 +54,7 @@ scrape_system() {
   killall /opt/retropie/supplementary/emulationstation/emulationstation || true
 
   # Scrape
+  log "Scaping $system from $source"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing
 }
 
@@ -56,6 +62,7 @@ build_gamelist() {
   # Arguments
   local system="$1"
 
+  log "Building gamelist for $system"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
 }
 

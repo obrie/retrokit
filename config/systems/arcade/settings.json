@@ -1,6 +1,6 @@
 {
   "emulators": {
-    "lr-fbneo": {"default": true},
+    "lr-fbneo": {"default": true, "build": "source"},
     "lr-mame2003": {},
     "lr-mame2003-plus": {},
     "lr-mame2015": {},
@@ -29,14 +29,14 @@
     "sets": {
       "arcade-fbneo-http": {
         "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "format": "non-merged",
-        "dat": "https://raw.githubusercontent.com/libretro/FBNeo/v1.0.0.0/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
-        "roms": "FBNeo/ArcadeNonMerged.zip/",
-        "samples": "FBNeo/support.zip/support%2Fsamples%2F",
+        "url": "https://***REMOVED***",
+        "format": "split",
+        "dat": "https://raw.githubusercontent.com/libretro/FBNeo/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
+        "roms": "roms/arcade.zip/arcade%2F",
+        "samples": "support/samples.zip/samples%2F",
         "emulator": "lr-fbneo",
         "core": "fbneo",
-        "version": "v0.2.97.44"
+        "version": "1.0.10060_2021-03-02"
       },
       "arcade-mame2003-http": {
         "protocol": "http",
