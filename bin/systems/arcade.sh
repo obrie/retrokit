@@ -522,6 +522,11 @@ install_rom_nonmerged_file() {
   # cause the command to be interactive)
   rm -f $app_dir/log/*log
 
+  # Make sure file isn't empty
+  if [[ "$(zipinfo -1 "$rom_emulator_file")" == *"Empty zipfile"* ]]; then
+    exit 1
+  fi
+
   # Create ZIP at target if it's changed
   local mtime_after=$(stat --format='%.Y' "$rom_emulator_file")
   if [ "$mtime_before" != "$mtime_after" ]; then
