@@ -355,8 +355,8 @@ create_empty_rom() {
 }
 
 # Looks up the checksums for all of the files in a zip file
-get_zip_file_checksums() {
-  unzip -vl "$1" 2>/dev/null | sed -E 's/ +/,/g' | cut -d ',' -f 8 | grep -oE "^[0-9a-f]{8}$"
+get_zip_files() {
+  unzip -vl "$1" 2>/dev/null | awk -F' ' '{print $8,$7}' OFS=, | grep -E '[0-9a-f]{8}$'
 }
 
 # Checks whether the target rom/machine already contains all of the files for the
@@ -377,9 +377,10 @@ validate_rom_has_files() {
     # Target doesn't exist at all: not valid
     return 1
   fi
-  local existing_file_checksums=$(get_zip_file_checksums "$rom_file" | paste -sd ' ')
+  local existing_file_checksums=$(get_zip_files "$rom_file" | cut -d ',' -f 2 | paste -sd ' ')
 
   local IFS="$tab"
+  local file
   for file in $files; do
     local file_info=(${file//,/$tab})
     local file_name=${file_info[0]}
@@ -412,9 +413,10 @@ download_rom() {
   if [ -f "$rom_file" ]; then
     # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
     local redownload=false
-    local existing_file_checksums=$(get_zip_file_checksums "$rom_file" | paste -sd ' ')
+    local existing_file_checksums=$(get_zip_files "$rom_file" | cut -d ',' -f 2 | paste -sd ' ')
 
     local IFS="$tab"
+    local file
     for file in ${roms["$set_name/$rom_name/files"]}; do
       local file_info=(${file//,/$tab})
       local file_name=${file_info[0]}
@@ -481,10 +483,11 @@ merge_rom() {
     log "[$merge_to] Merging all files from $merge_from"
     zipmerge -S "$merge_to_archive" "$source_from_archive" >/dev/null
   else
-    local existing_file_checksums=$(get_zip_file_checksums "$merge_to_archive" | paste -sd ' ')
+    local existing_file_checksums=$(get_zip_files "$merge_to_archive" | cut -d ',' -f 2 | paste -sd ' ')
 
     # Merge files
     local IFS="$tab"
+    local file
     for file in $files; do
       local file_info=(${file//,/$tab})
       local file_target=${file_info[0]}
@@ -547,6 +550,7 @@ install_rom_devices() {
 
   # Merge devices (if necessary)
   local IFS="$tab"
+  local device_name
   for device_name in ${roms["$set_name/$rom_name/devices"]}; do
     merge_rom "$set_name" "$device_name" "$rom_name" include_all=true
   done
@@ -566,6 +570,7 @@ list_expected_rom_files() {
   # Build list of files we expect to see (using the same format as in the index)
   local IFS="$tab"
   local expected_files="${roms["$set_name/$rom_name/files"]}$tab${roms["$set_name/$rom_name/merge_files"]}$tab${roms["$set_name/$bios_name/files"]}"
+  local device
   for device in ${roms["$set_name/$rom_name/devices"]}; do
     local device_files=${roms["$set_name/$device/files"]}
 
@@ -588,14 +593,19 @@ clean_rom() {
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
   # Rom actual files on the filsystem
-  local existing_file_checksums=$(get_zip_file_checksums "$rom_file")
+  local existing_files=$(get_zip_files "$rom_file")
 
   # Remove the differences
-  for file_checksum in $existing_file_checksums; do
+  local file
+  for file in $existing_files; do
+    local file_info=(${file//,/$tab})
+    local file_name=${file_info[0]}
+    local file_checksum=${file_info[1]}
+
     if [[ "$expected_files" != *"$file_checksum"* ]]; then
       # File should not be there: delete it
-      log "[$rom_name] Deleting unused file: $file"
-      zip -d "$rom_file" "$file"
+      log "[$rom_name] Deleting unused file: $file_name (crc: $file_checksum)"
+      zip -d "$rom_file" "$file_name"
     fi
   done
 }
@@ -638,6 +648,7 @@ install_rom_disks() {
 
   # Install
   local IFS="$tab"
+  local disk_name
   for disk_name in ${roms["$set_name/$rom_name/disks"]}; do
     mkdir -p "$disk_dir"
     local disk_file="$disk_dir/$disk_name.chd"
@@ -806,6 +817,8 @@ should_install_rom() {
 
 install_roms() {
   log "--- Installing roms ---"
+
+  local rom_name
   for rom_name in "${rom_names[@]}"; do
     if should_install_rom "$rom_name"; then
       # Read rom attributes
@@ -836,6 +849,7 @@ set_default_emulators() {
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
   crudini --merge "$emulators_retropie_config" < <(
+    local rom_name
     for rom_name in "${!roms_compatibility[@]}"; do
       echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${roms_compatibility["$rom_name"]}\""
     done
