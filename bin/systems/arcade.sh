@@ -64,14 +64,12 @@ allowlists_names=$(setting_regex ".roms.allowlists.names")
 # XSLT for grabbing data from DAT files
 roms_dat_xslt='''<?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exslt="http://exslt.org/common" version="1.0" extension-element-prefixes="exslt">
-  <xsl:variable name="lowercase" select="'"'"'abcdefghijklmnopqrstuvwxyz'"'"'" />
-  <xsl:variable name="uppercase" select="'"'"'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"'"'" />
   <xsl:output omit-xml-declaration="yes" indent="no"/>
   <xsl:template match="/">
     <xsl:for-each select="/*/*[rom and not(@ismechanical = '"'"'yes'"'"')]">
       <xsl:value-of select="@name"/>
       <xsl:text>&#xBB;</xsl:text>
-      <xsl:value-of select="translate(description/text(), $uppercase, $lowercase)"/>
+      <xsl:value-of select="description/text()"/>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:value-of select="@romof"/>
       <xsl:text>&#xBB;</xsl:text>
@@ -87,19 +85,19 @@ roms_dat_xslt='''<?xml version="1.0"?>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="rom[not(@merge) and not(@status = '"'"'nodump'"'"')]">
         <xsl:value-of select="@name"/><xsl:text>,</xsl:text>
-        <xsl:value-of select="@crc"/><xsl:text> </xsl:text>
+        <xsl:value-of select="@crc"/><xsl:text>&#x9;</xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="device_ref">
-        <xsl:value-of select="@name"/><xsl:text> </xsl:text>
+        <xsl:value-of select="@name"/><xsl:text>&#x9;</xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="disk">
-        <xsl:value-of select="@name"/><xsl:text> </xsl:text>
+        <xsl:value-of select="@name"/><xsl:text>&#x9;</xsl:text>
       </xsl:for-each>
       <xsl:text>&#xBB;</xsl:text>
       <xsl:for-each select="input/control">
-        <xsl:value-of select="@type"/><xsl:text> </xsl:text>
+        <xsl:value-of select="@type"/><xsl:text>&#x9;</xsl:text>
       </xsl:for-each>
       <xsl:text>&#xa;</xsl:text>
     </xsl:for-each>
@@ -200,7 +198,7 @@ index_sets() {
     local set_is_reference=${sets["$set_name/reference"]}
     local target_dat_file="$system_tmp_dir/$set_core.dat"
 
-    download_file "$set_dat_url" "$target_dat_file" refresh=$set_dat_refresh
+    download_file "$set_dat_url" "$target_dat_file" refresh="$set_dat_refresh"
 
     if [ ! -s "$target_dat_file.index" ]; then
       log "Generating index for $set_name"
@@ -358,16 +356,16 @@ create_empty_rom() {
 
 # Looks up the checksums for all of the files in a zip file
 get_zip_file_checksums() {
-  unzip -vl "$1" 2>/dev/null | sed -E 's/ +/,/g' | cut -d ',' -f 8 | grep -oE "^[0-9a-f]{8}$" | paste -sd ' '
+  unzip -vl "$1" 2>/dev/null | sed -E 's/ +/,/g' | cut -d ',' -f 8 | grep -oE "^[0-9a-f]{8}$"
 }
 
 # Checks whether the target rom/machine already contains all of the files for the
 # source rom/machine
 validate_rom_has_files() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
-  local files="$3"
+  local set_name=$1
+  local rom_name=$2
+  local files=$3
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -379,12 +377,13 @@ validate_rom_has_files() {
     # Target doesn't exist at all: not valid
     return 1
   fi
-  local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
+  local existing_file_checksums=$(get_zip_file_checksums "$rom_file" | paste -sd ' ')
 
+  local IFS="$tab"
   for file in $files; do
-    local file_info=(${file//,/ })
-    local file_name="${file_info[0]}"
-    local file_checksum="${file_info[1]}"
+    local file_info=(${file//,/$tab})
+    local file_name=${file_info[0]}
+    local file_checksum=${file_info[1]}
 
     if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
       # Missing a file: not valid
@@ -398,8 +397,8 @@ validate_rom_has_files() {
 
 download_rom() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -413,12 +412,13 @@ download_rom() {
   if [ -f "$rom_file" ]; then
     # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
     local redownload=false
-    local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
+    local existing_file_checksums=$(get_zip_file_checksums "$rom_file" | paste -sd ' ')
 
-    for expected_file in ${roms["$set_name/$rom_name/files"]}; do
-      local file_info=(${expected_file//,/ })
-      local file_name="${file_info[0]}"
-      local file_checksum="${file_info[1]}"
+    local IFS="$tab"
+    for file in ${roms["$set_name/$rom_name/files"]}; do
+      local file_info=(${file//,/$tab})
+      local file_name=${file_info[0]}
+      local file_checksum=${file_info[1]}
 
       if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
         redownload=true
@@ -437,15 +437,15 @@ download_rom() {
 
 merge_rom() {
   # Arguments
-  local set_name="$1"
-  local merge_from="$2"
-  local merge_to="$3"
+  local set_name=$1
+  local merge_from=$2
+  local merge_to=$3
 
   # Optional arguments
   local source_suffix=""
-  local source_from="$merge_from"
+  local source_from=$merge_from
   local include_all="false"
-  local files="${roms["$set_name/$merge_from/files"]}"
+  local files=${roms["$set_name/$merge_from/files"]}
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
   if [ -z "$files" ]; then
@@ -455,7 +455,7 @@ merge_rom() {
 
   # Check if merging is needed (either there are no files to merge or we have all the files)
   if validate_rom_has_files "$set_name" "$merge_to" "$files"; then
-    log "[$merge_to] Not merging $merge_from (no files or already merged)"
+    log "[$merge_to] Merging already done from $merge_from"
     return 0
   fi
 
@@ -481,14 +481,15 @@ merge_rom() {
     log "[$merge_to] Merging all files from $merge_from"
     zipmerge -S "$merge_to_archive" "$source_from_archive" >/dev/null
   else
-    local existing_file_checksums="$(get_zip_file_checksums "$merge_to_archive")"
+    local existing_file_checksums=$(get_zip_file_checksums "$merge_to_archive" | paste -sd ' ')
 
     # Merge files
+    local IFS="$tab"
     for file in $files; do
-      local file_info=(${file//,/ })
-      local file_target="${file_info[0]}"
-      local file_checksum="${file_info[1]}"
-      local file_source="${file_info[2]:-$file_target}"
+      local file_info=(${file//,/$tab})
+      local file_target=${file_info[0]}
+      local file_checksum=${file_info[1]}
+      local file_source=${file_info[2]:-$file_target}
 
       if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
         log "[$merge_to] Merging $file_target (crc: $file_checksum) from $merge_from"
@@ -507,16 +508,16 @@ merge_rom() {
 
 install_rom_nonmerged_file() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
-  local set_name="${emulators["$emulator/set_name"]}"
-  local set_format="${sets["$set_name/format"]}"
+  local set_name=${emulators["$emulator/set_name"]}
+  local set_format=${sets["$set_name/format"]}
 
   # Rom info
-  local parent_rom_name="${roms["$set_name/$rom_name/parent"]}"
-  local merge_files="${roms["$set_name/$rom_name/merge_files"]}"
+  local parent_rom_name=${roms["$set_name/$rom_name/parent"]}
+  local merge_files=${roms["$set_name/$rom_name/merge_files"]}
 
   if [ "$set_format" == "merged" ]; then
     args="source_from=${parent_rom_name:-$rom_name} source_suffix=.merged"
@@ -533,18 +534,19 @@ install_rom_nonmerged_file() {
 }
 
 install_rom_bios() {
-  local set_name="$1"
-  local rom_name="$2"
-  local bios_rom_name="${roms["$set_name/$rom_name/bios"]}"
+  local set_name=$1
+  local rom_name=$2
+  local bios_rom_name=${roms["$set_name/$rom_name/bios"]}
 
   merge_rom "$set_name" "$bios_rom_name" "$rom_name" include_all=true
 }
 
 install_rom_devices() {
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Merge devices (if necessary)
+  local IFS="$tab"
   for device_name in ${roms["$set_name/$rom_name/devices"]}; do
     merge_rom "$set_name" "$device_name" "$rom_name" include_all=true
   done
@@ -553,35 +555,40 @@ install_rom_devices() {
 # Lists the files that should be in the given rom
 list_expected_rom_files() {
   # Arguments
-  set_name="$1"
-  rom_name="$2"
+  set_name=$1
+  rom_name=$2
 
   # ROM info
-  local set_core="${sets["$set_name/core"]}"
+  local set_core=${sets["$set_name/core"]}
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
-  local bios_name="${roms["$set_name/$rom_name/bios"]}"
+  local bios_name=${roms["$set_name/$rom_name/bios"]}
 
-  # Build list of files we expect to see
-  local expected_files=(${roms["$set_name/$rom_name/files"]} ${roms["$set_name/$rom_name/merge_files"]} ${roms["$set_name/$bios_name/files"]})
+  # Build list of files we expect to see (using the same format as in the index)
+  local IFS="$tab"
+  local expected_files="${roms["$set_name/$rom_name/files"]}$tab${roms["$set_name/$rom_name/merge_files"]}$tab${roms["$set_name/$bios_name/files"]}"
   for device in ${roms["$set_name/$rom_name/devices"]}; do
-    expected_files+=(${roms["$set_name/$device/files"]})
+    local device_files=${roms["$set_name/$device/files"]}
+
+    if [ -n "$device_files" ]; then
+      expected_files="$expected_files$tab$device_files"
+    fi
   done
 
-  echo "${expected_files[@]}"
+  echo "$expected_files"
 }
 
 clean_rom() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
-  local expected_files="$3"
+  local set_name=$1
+  local rom_name=$2
+  local expected_files=$3
 
   # ROM info
-  local set_core="${sets["$set_name/core"]}"
+  local set_core=${sets["$set_name/core"]}
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
   # Rom actual files on the filsystem
-  local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
+  local existing_file_checksums=$(get_zip_file_checksums "$rom_file")
 
   # Remove the differences
   for file_checksum in $existing_file_checksums; do
@@ -595,11 +602,11 @@ clean_rom() {
 
 torrentzip_rom() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # ROM info
-  local set_core="${sets["$set_name/core"]}"
+  local set_core=${sets["$set_name/core"]}
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
   log "[$rom_name] Torrentzip'ing"
@@ -619,8 +626,8 @@ torrentzip_rom() {
 
 install_rom_disks() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -630,6 +637,7 @@ install_rom_disks() {
   local disk_dir="$roms_dir/.chd/$rom_name"
 
   # Install
+  local IFS="$tab"
   for disk_name in ${roms["$set_name/$rom_name/disks"]}; do
     mkdir -p "$disk_dir"
     local disk_file="$disk_dir/$disk_name.chd"
@@ -641,8 +649,8 @@ install_rom_disks() {
 
 install_rom_samples() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -664,8 +672,8 @@ install_rom_samples() {
 
 enable_rom() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -689,8 +697,8 @@ enable_rom() {
 # Installs a rom for a specific emulator
 install_rom() {
   # Arguments
-  local set_name="$1"
-  local rom_name="$2"
+  local set_name=$1
+  local rom_name=$2
 
   # Set info
   local set_core=${sets["$set_name/core"]}
@@ -705,7 +713,7 @@ install_rom() {
   install_rom_samples "${@}"
 
   # Make sure generated rom is valid
-  local expected_files="$(list_expected_rom_files "$set_name" "$rom_name")"
+  local expected_files=$(list_expected_rom_files "$set_name" "$rom_name")
   if validate_rom_has_files "${@}" "$expected_files"; then
     clean_rom "${@}" "$expected_files"
     torrentzip_rom "${@}"
@@ -717,7 +725,7 @@ install_rom() {
 
 should_install_rom() {
   # Arguments
-  local rom_name="$1"
+  local rom_name=$1
 
   # Filters
   local emulator=${roms_compatibility["$rom_name"]}
@@ -767,8 +775,8 @@ should_install_rom() {
       return 1
     fi
 
-    # Keywords
-    if filter_regex "$blocklists_keywords" "$allowlists_keywords" "$description"; then
+    # Keywords (lowercase)
+    if filter_regex "$blocklists_keywords" "$allowlists_keywords" "${description,,}"; then
       log "[$rom_name] Skip (description)"
       return 1
     fi
@@ -828,8 +836,8 @@ set_default_emulators() {
   # 
   # This is done at the end in one batch because it's a bit slow otherwise
   crudini --merge "$emulators_retropie_config" < <(
-    for rom_name in "${emulators[@]}"; do
-      echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${emulators["$rom_name"]}\""
+    for rom_name in "${!roms_compatibility[@]}"; do
+      echo "$(clean_emulator_config_key "arcade_$rom_name") = \"${roms_compatibility["$rom_name"]}\""
     done
   )
 }
@@ -839,16 +847,16 @@ organize_system() {
   log "--- Organizing rom directories ---"
 
   # Clear existing ROMs
-  find "$roms_dir/" -maxdepth 1 -type l -exec rm "{}" \;
+  find "$roms_dir/" -maxdepth 1 -type l -exec rm '{}' \;
 
   # Add based on favorites
-  while read rom; do
-    local source_file="$roms_all_dir/$rom.zip"
-    local source_disk_dir="$roms_all_dir/$rom"
-    local target_file="$roms_dir/$rom.zip"
-    local target_disk_dir="$roms_dir/$rom"
+  while read rom_name; do
+    local source_file="$roms_all_dir/$rom_name.zip"
+    local source_disk_dir="$roms_all_dir/$rom_name"
+    local target_file="$roms_dir/$rom_name.zip"
+    local target_disk_dir="$roms_dir/$rom_name"
 
-    log "[$rom] Adding to favorites"
+    log "[$rom_name] Adding to favorites"
 
     ln -fs "$source_file" "$target_file"
 
@@ -856,7 +864,7 @@ organize_system() {
     if [ -d "$source_disk_dir" ]; then
       ln -fs "$source_disk_dir" "$target_disk_dir"
     fi
-  done < <(setting ".roms.favorites[]")
+  done < <(setting '.roms.favorites[]')
 }
 
 # This is strongly customized due to the nature of Arcade ROMs
@@ -880,6 +888,6 @@ if [[ $# -lt 1 ]]; then
   usage
 fi
 
-command="$1"
+command=$1
 shift
 "$command" "$@"
