@@ -356,19 +356,9 @@ create_empty_rom() {
   echo -ne '\x50\x4b\x05\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' > "$1"
 }
 
-# Gets the file names from fileinfo objects
-get_file_names() {
-  if [ -z "$1" ]; then
-    return 0
-  fi
-
-  local names=()
-  for file in $1; do
-    local file_info=(${file//,/ })
-    names+=(${file_info[0]})
-  done
-
-  echo "${names[@]}"
+# Looks up the checksums for all of the files in a zip file
+get_zip_file_checksums() {
+  unzip -vl "$1" 2>/dev/null | sed -E 's/ +/,/g' | cut -d ',' -f 8 | grep -oE "^[0-9a-f]{8}$" | paste -sd ' '
 }
 
 # Checks whether the target rom/machine already contains all of the files for the
@@ -389,14 +379,14 @@ validate_rom_has_files() {
     # Target doesn't exist at all: not valid
     return 1
   fi
-  local existing_files="$(unzip -vl "$rom_file" 2>/dev/null)"
+  local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
 
   for file in $files; do
     local file_info=(${file//,/ })
     local file_name="${file_info[0]}"
     local file_checksum="${file_info[1]}"
 
-    if [[ " $existing_files " != *" $file_checksum "*" $file_name"* ]]; then
+    if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
       # Missing a file: not valid
       log "[$rom_name] Missing file: $file_name (crc: $file_checksum)"
       return 1
@@ -423,14 +413,14 @@ download_rom() {
   if [ -f "$rom_file" ]; then
     # Make sure the rom has everything we expect it to have, otherwise we need to re-download it
     local redownload=false
-    local existing_files="$(unzip -vl "$rom_file" 2>/dev/null)"
+    local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
 
     for expected_file in ${roms["$set_name/$rom_name/files"]}; do
       local file_info=(${expected_file//,/ })
       local file_name="${file_info[0]}"
       local file_checksum="${file_info[1]}"
 
-      if [[ " $existing_files " != *" $file_checksum "*" $file_name"* ]]; then
+      if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
         redownload=true
         log "[$rom_name] Existing ROM missing file: $file_name (crc: $file_checksum); re-downloading"
         break
@@ -491,7 +481,7 @@ merge_rom() {
     log "[$merge_to] Merging all files from $merge_from"
     zipmerge -S "$merge_to_archive" "$source_from_archive" >/dev/null
   else
-    local existing_files="$(unzip -vl "$merge_to_archive" 2>/dev/null)"
+    local existing_file_checksums="$(get_zip_file_checksums "$merge_to_archive")"
 
     # Merge files
     for file in $files; do
@@ -500,7 +490,7 @@ merge_rom() {
       local file_checksum="${file_info[1]}"
       local file_source="${file_info[2]:-$file_target}"
 
-      if [[ " $existing_files " != *" $file_checksum "*" $file_target"* ]]; then
+      if [[ " $existing_file_checksums " != *" $file_checksum "* ]]; then
         log "[$merge_to] Merging $file_target (crc: $file_checksum) from $merge_from"
 
         # File doesn't exist: add it (using crc would be more accurate)
@@ -572,9 +562,9 @@ list_expected_rom_files() {
   local bios_name="${roms["$set_name/$rom_name/bios"]}"
 
   # Build list of files we expect to see
-  local expected_files=($(get_file_names "${roms["$set_name/$rom_name/files"]} ${roms["$set_name/$rom_name/merge_files"]} ${roms["$set_name/$bios_name/files"]}"))
+  local expected_files=(${roms["$set_name/$rom_name/files"]} ${roms["$set_name/$rom_name/merge_files"]} ${roms["$set_name/$bios_name/files"]})
   for device in ${roms["$set_name/$rom_name/devices"]}; do
-    expected_files+=($(get_file_names "${roms["$set_name/$device/files"]}"))
+    expected_files+=(${roms["$set_name/$device/files"]})
   done
 
   echo "${expected_files[@]}"
@@ -591,11 +581,11 @@ clean_rom() {
   local rom_file="$roms_dir/.$set_core/$rom_name.zip"
 
   # Rom actual files on the filsystem
-  local existing_files="$(zipinfo -1 "$rom_file" | paste -sd ' ')"
+  local existing_file_checksums="$(get_zip_file_checksums "$rom_file")"
 
   # Remove the differences
-  for file in $existing_files; do
-    if [[ " $expected_files " != *" $file "* ]]; then
+  for file_checksum in $existing_file_checksums; do
+    if [[ "$expected_files" != *"$file_checksum"* ]]; then
       # File should not be there: delete it
       log "[$rom_name] Deleting unused file: $file"
       zip -d "$rom_file" "$file"
