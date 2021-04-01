@@ -231,9 +231,13 @@ index_sets() {
   while read -r set_name; do
     local set_core=${sets["$set_name/core"]}
     local set_dat_url=$(get_set_url "$set_name" "dat")
-    local set_dat_refresh=${sets["$set_name/dat_refresh"]}
     local set_is_reference=${sets["$set_name/reference"]}
     local target_dat_file="$system_tmp_dir/$set_core.dat"
+
+    local set_dat_refresh=false
+    if [[ "$set_dat_url" == "file"* ]]; then
+      set_dat_refresh=true
+    fi
 
     download_file "$set_dat_url" "$target_dat_file" refresh="$set_dat_refresh"
 
