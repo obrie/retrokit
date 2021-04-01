@@ -29,6 +29,13 @@ setup() {
   crudini --set "$retroarch_config" '' 'run_ahead_enabled' '"true"'
   crudini --set "$retroarch_config" '' 'run_ahead_frames' '"1"'
   crudini --set "$retroarch_config" '' 'run_ahead_secondary_instance' '"true"'
+
+  # Cheats
+  local cheats_dir="/opt/retropie/configs/all/retroarch/cheats/$system"
+  mkdir -p "$cheats_dir"
+  rm -f "$cheats_dir/Snes9x"
+  ln -fs "/opt/retropie/configs/all/retroarch/cheats/Nintendo - Super Nintendo Entertainment System" "$cheats_dir/Snes9x"
+  crudini --set "/opt/retropie/configs/$system/retroarch.cfg" '' 'cheat_database_path' "$cheats_dir"
 }
 
 download() {

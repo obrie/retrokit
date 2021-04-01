@@ -331,16 +331,16 @@ setup_gamelists() {
   sed -r -i "s/(<string name=\"ParseGamelistOnly\" value=\")([^\"]*)/\1true/" "$es_settings_config"
 }
 
-setup_systems() {
-  for system in $dir/systems/*; do
-    $system setup
-  done
-}
-
 setup_cheats() {
   # Retroarch cheats
   curl -fL# -o "$tmp_dir/cheats.zip" "http://buildbot.libretro.com/assets/frontend/cheats.zip"
   unzip -o "$tmp_dir/cheats.zip" -d "/opt/retropie/configs/all/retroarch/cheats/"
+}
+
+setup_systems() {
+  for system in $dir/systems/*; do
+    $system setup
+  done
 }
 
 setup_runcommand() {

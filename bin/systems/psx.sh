@@ -24,6 +24,13 @@ usage() {
 setup() {
   # Emulators
   crudini --set "$retroarch_config" '' 'default' '"lr-pcsx-rearmed"'
+
+  # Cheats
+  local cheats_dir="/opt/retropie/configs/all/retroarch/cheats/$system"
+  mkdir -p "$cheats_dir"
+  rm -f "$cheats_dir/PCSX-ReARMed"
+  ln -fs "/opt/retropie/configs/all/retroarch/cheats/Sony - PlayStation" "$cheats_dir/PCSX-ReARMed"
+  crudini --set "/opt/retropie/configs/$system/retroarch.cfg" '' 'cheat_database_path' "$cheats_dir"
 }
 
 download() {

@@ -29,6 +29,13 @@ setup() {
   xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "genesis" "$es_systems_config"
 
   setup_system "$system"
+
+  # Cheats
+  local cheats_dir="/opt/retropie/configs/all/retroarch/cheats/$system"
+  mkdir -p "$cheats_dir"
+  rm -f "$cheats_dir/Genesis Plus GX"
+  ln -fs "/opt/retropie/configs/all/retroarch/cheats/Sega - Mega Drive - Genesis" "$cheats_dir/Genesis Plus GX"
+  crudini --set "/opt/retropie/configs/$system/retroarch.cfg" '' 'cheat_database_path' "$cheats_dir"
 }
 
 download() {

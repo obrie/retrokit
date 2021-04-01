@@ -26,6 +26,13 @@ setup() {
   crudini --set "$retroarch_config" '' 'default' '"lr-genesis-plus-gx"'
 
   setup_system "$system"
+
+  # Cheats
+  local cheats_dir="/opt/retropie/configs/all/retroarch/cheats/$system"
+  mkdir -p "$cheats_dir"
+  rm -f "$cheats_dir/Genesis Plus GX"
+  ln -fs "/opt/retropie/configs/all/retroarch/cheats/Sega - Game Gear" "$cheats_dir/Genesis Plus GX"
+  crudini --set "/opt/retropie/configs/$system/retroarch.cfg" '' 'cheat_database_path' "$cheats_dir"
 }
 
 download() {

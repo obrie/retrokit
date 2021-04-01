@@ -36,6 +36,13 @@ setup() {
 
   # Audio quality
   crudini --set "$retroarch_cores_config" '' 'fceumm_sndquality' '"High"'
+
+  # Cheats
+  local cheats_dir="/opt/retropie/configs/all/retroarch/cheats/$system"
+  mkdir -p "$cheats_dir"
+  rm -f "$cheats_dir/FCEUmm"
+  ln -fs "/opt/retropie/configs/all/retroarch/cheats/Nintendo - Nintendo Entertainment System" "$cheats_dir/FCEUmm"
+  crudini --set "/opt/retropie/configs/$system/retroarch.cfg" '' 'cheat_database_path' "$cheats_dir"
 }
 
 download() {
