@@ -337,6 +337,12 @@ setup_systems() {
   done
 }
 
+setup_cheats() {
+  # Retroarch cheats
+  curl -fL# -o "$tmp_dir/cheats.zip" "http://buildbot.libretro.com/assets/frontend/cheats.zip"
+  unzip -o "$tmp_dir/cheats.zip" -d "/opt/retropie/configs/all/retroarch/cheats/"
+}
+
 setup_runcommand() {
   ln -fs "/opt/retropie/configs/all/runcommand-onstart.sh" "$app_dir/bin/runcommand/onstart.sh"
   ln -fs "/opt/retropie/configs/all/runcommand-onend.sh" "$app_dir/bin/runcommand/onend.sh"
@@ -396,6 +402,7 @@ function main() {
   setup_overlays
   setup_menus
   setup_systems
+  setup_cheats
   setup_gamelists
   setup_runcommand
   setup_themes
