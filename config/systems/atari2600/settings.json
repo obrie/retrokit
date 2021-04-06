@@ -19,7 +19,7 @@
         "rom": "{base}/no-intro%20romsets/Atari%20-%202600%20%2820200514-091155%29.zip/{filename}.zip"
       },
       "files": {
-        "rom": "/home/pi/RetroPie/roms/atari2600/.stella/{filename}.zip"
+        "rom": "/home/pi/RetroPie/roms/atari2600/.nointro/{filename}.zip"
       },
       "auth": "internetarchive",
       "build": "non-merged",

@@ -340,6 +340,10 @@ setup_cheats() {
   unzip -o "$tmp_dir/cheats.zip" -d "/opt/retropie/configs/all/retroarch/cheats/"
 }
 
+setup_romkit() {
+  sudo apt install -y python3-lxml
+}
+
 setup_systems() {
   for system in $dir/systems/*; do
     $system setup
@@ -404,6 +408,7 @@ function main() {
 
   setup_overlays
   setup_menus
+  setup_romkit
   setup_systems
   setup_cheats
   setup_gamelists
