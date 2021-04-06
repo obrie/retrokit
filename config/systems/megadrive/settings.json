@@ -1,40 +1,75 @@
 {
+  "system": "megadrive",
+  "themes": {
+    "bezel": "MegaDrive",
+    "system": "genesis"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-genesis-plus-gx": {"proper_name": "Genesis Plus GX", "default": true}
+  },
+  "cheats": "Sega - Mega Drive - Genesis",
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis (20210316-003553).dat",
+        "rom": "{base}/no-intro%20romsets/Sega%20-%20Mega%20Drive%20-%20Genesis%20%2820210331-072311%29.zip/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/megadrive/.nointro/{filename}.zip"
+      },
+      "auth": "internetarchive",
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-genesis-plus-gx"
+    }
+  ],
   "roms": {
-    "sets": {
-      "nointro-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "login": true,
-        "unzip": true,
-        "files": [
-          "Sega - Mega Drive - Genesis (20210122-212735).zip"
-        ]
-      }
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/megadrive/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/megadrive"
     },
+    "files": {
+      "rom": "{dir}/{filename}.zip"
+    },
+    "priority": [
+      "usa",
+      "world"
+    ],
     "allowlists": {
-      "keywords": [
-        "USA"
+      "flags": [
+        "europe",
+        "usa",
+        "world"
       ]
     },
     "blocklists": {
+      "flags": [
+        "alt",
+        "beta",
+        "genesis mini",
+        "mega drive mini",
+        "program",
+        "proto",
+        "rental version",
+        "rev",
+        "sega channel",
+        "test drive version",
+        "unl",
+        "virtual console",
+        "visitor"
+      ],
       "keywords": [
-        "(Alt",
-        "(Beta",
-        "(Genesis Mini",
-        "(Mega Drive Mini",
-        "(Program",
-        "(Rental Version",
-        "(Rev",
-        "(Sega Channel",
-        "(Test Drive Version",
-        "(Unl",
-        "(Virtual Console",
-        "(Visitor",
-        "BIOS"
+        "bios",
+        "teenage mutant hero"
       ]
     },
     "favorites": [
-     ]
-  },
-  "cheats": "Sega - Mega Drive - Gensis"
+    ]
+  }
 }

@@ -1,27 +1,55 @@
 {
+  "system": "atari2600",
+  "themes": {
+    "bezel": "Atari2600"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-stella": {"proper_name": "Stella 2014", "default": true}
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/nointro/Atari - 2600 (20200514-091155).dat",
+        "rom": "{base}/no-intro%20romsets/Atari%20-%202600%20%2820200514-091155%29.zip/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/atari2600/.stella/{filename}.zip"
+      },
+      "auth": "internetarchive",
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-stella"
+    }
+  ],
   "roms": {
-    "sets": {
-      "nointro-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "login": true,
-        "unzip": true,
-        "files": [
-          "Atari - 2600 (20200514-091155).zip"
-        ]
-      }
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/atari2600/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/atari2600"
     },
+    "files": {
+      "rom": "{dir}/{filename}.zip"
+    },
+    "priority": [
+      "usa"
+    ],
     "allowlists": {
-      "regions": [
-        "USA"
+      "flags": [
+        "usa",
+        "europe"
       ]
     },
     "blocklists": {
       "flags": [
-        "Beta",
-        "Pirate",
-        "Proto",
-        "Unl"
+        "beta",
+        "pirate",
+        "proto",
+        "unl"
       ]
     },
     "favorites": [

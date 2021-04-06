@@ -1,29 +1,72 @@
 {
-  "emulators": [],
-  "roms": {
-    "sets": {
-      "psx-the_eye-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***Playstation/Games/NTSC/",
-        "unzip": true,
-        "files": [
-          "Disney's The Little Mermaid II (USA).zip",
-          "Extreme Pinball (USA).zip",
-          "NFL Blitz (USA).zip",
-          "NHL 99 (USA).zip",
-          "Tekken (USA).zip",
-          "Tomb Raider (USA) (v1.0).zip",
-          "Tony Hawk's Pro Skater (USA).zip ",
-          "Tony Hawk's Pro Skater 2 (USA).zip ",
-          "Tony Hawk's Pro Skater 3 (USA).zip",
-          "Tony Hawk's Pro Skater 4 (USA).zip",
-          "Worms (USA).zip",
-          "Worms Armageddon (USA).zip",
-          "You Don't Know Jack (USA) (Disc 1).zip",
-          "You Don't Know Jack (USA) (Disc 2).zip"
-        ]
-      }
-    }
+  "system": "psx",
+  "themes": {
+    "bezel": "PSX"
   },
-  "cheats": "Sony - Playstation"
+  "scraper": {
+    "sources": ["screenscraper", "thegamesdb"]
+  },
+  "emulators": {
+    "lr-pcsx-rearmed": {"proper_name": "PCSX-ReARMed", "default": true}
+  },
+  "cheats": "Sony - PlayStation",
+  "romsets": [
+    {
+      "name": "the_eye",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***Playstation/Games/NTSC",
+        "dat": "file:///home/pi/retrokit/cache/redump/Sony - PlayStation.dat",
+        "rom": "{base}/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/psx/.redump/{filename}.chd"
+      },
+      "build": "non-merged",
+      "format": "zip2chd",
+      "emulator": "lr-pcsx-rearmed"
+    },
+    {
+      "name": "redump",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/redump/Sony - PlayStation.dat",
+        "rom": "{base}/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/psx/.redump/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip2chd",
+      "emulator": "lr-pcsx-rearmed"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/psx/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/psx"
+    },
+    "files": {
+      "rom": "{dir}/{filename}.chd"
+    },
+    "allowlists": {
+      "names": [
+        "Disney's The Little Mermaid II (USA)",
+        "Extreme Pinball (USA)",
+        "NFL Blitz (USA)",
+        "NHL 99 (USA)",
+        "Tekken (USA)",
+        "Tomb Raider (USA) (Rev 1)",
+        "Tony Hawk's Pro Skater (USA)",
+        "Tony Hawk's Pro Skater 2 (USA)",
+        "Tony Hawk's Pro Skater 3 (USA)",
+        "Tony Hawk's Pro Skater 4 (USA)",
+        "Worms (USA)",
+        "Worms Armageddon (USA)",
+        "You Don't Know Jack (USA) (Disc 1)",
+        "You Don't Know Jack (USA) (Disc 2)"
+      ]
+    }
+  }
 }

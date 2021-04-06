@@ -1,4 +1,11 @@
 {
+  "system": "arcade",
+  "themes": {
+    "bezel": "MAME"
+  },
+  "scraper": {
+    "sources": ["screenscraper", "arcadedb"]
+  },
   "emulators": {
     "lr-fbneo": {"default": true, "build": "source"},
     "lr-mame2003": {},
@@ -8,117 +15,158 @@
     "advmame": {},
     "lr-mame": {"build": "source", "branch": "lrmame0222"}
   },
-  "support_files": {
-    "languages": {
-      "url": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_229.zip",
-      "file": "folders/languages.ini"
-    },
-    "categories": {
-      "url": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_229.zip",
-      "file": "UI_files/catlist.ini"
-    },
-    "ratings": {
-      "url": "https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_229.zip",
-      "file": "folders/bestgames.ini"
-    },
-    "compatibility": {
-      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv"
-    }
-  },
-  "roms": {
-    "sets": {
-      "arcade-fbneo-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "format": "split",
+  "romsets": [
+    {
+      "name": "fbneo",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
         "dat": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
-        "roms": "roms/arcade.zip/arcade%2F",
-        "samples": "support/samples.zip/samples%2F",
-        "emulator": "lr-fbneo",
-        "core": "fbneo",
-        "version": "1.0.10060_2021-03-02"
+        "rom": "{base}/roms/arcade.zip/arcade%2F{filename}.zip",
+        "sample": "{base}/support/samples.zip/samples%2F{filename}.zip"
       },
-      "arcade-mame2003-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "format": "non-merged",
-        "dat": "mame2003.xml",
-        "roms": "roms/",
-        "disks": "roms/",
-        "samples": "samples/",
-        "emulator": "lr-mame2003",
-        "core": "mame2003",
-        "version": "0.78"
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.fbneo/{filename}.zip",
+        "sample": "/home/pi/RetroPie/BIOS/fbneo/samples/{filename}.zip"
       },
-      "arcade-mame2003plus-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "format": "non-merged",
-        "dat": "MAME 2003-Plus - 2018-12-31.xml",
-        "roms": "roms/",
-        "disks": "roms/",
-        "samples": "samples/",
-        "emulator": "lr-mame2003-plus",
-        "core": "mame2003-plus",
-        "version": "0.188"
-      },
-      "arcade-mame2010-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "format": "non-merged",
-        "dat": "MAME 2010 DAT - 2019-01-05.xml",
-        "roms": "roms.zip/roms%2F",
-        "disks": "https://***REMOVED***",
-        "samples": "samples/",
-        "emulator": "lr-mame2010",
-        "core": "mame2010",
-        "version": "0.139"
-      },
-      "arcade-mame2015-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "format": "non-merged",
-        "dat": "mame2015.xml",
-        "roms": "roms.zip/roms%2F",
-        "disks": "https://***REMOVED***",
-        "samples": "samples/",
-        "emulator": "lr-mame2015",
-        "core": "mame2015",
-        "version": "0.160"
-      },
-      "arcade-mame2016-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "format": "non-merged",
-        "dat": "MAME 2016 XML (Arcade Only).xml",
-        "roms": "roms.zip/roms%2F",
-        "disks": "https://***REMOVED***",
-        "samples": "roms.zip/samples/",
-        "emulator": "lr-mame2016",
-        "core": "mame2016",
-        "version": "0.174"
-      },
-      "arcade-mame0222-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "dat": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
-        "format": "merged",
-        "roms": "",
-        "disks": "https://***REMOVED***roms.zip/roms%2F",
-        "samples": "https://***REMOVED***",
-        "emulator": "lr-mame",
-        "core": "mame",
-        "version": "0.222",
-        "reference": true
-      }
+      "build": "split",
+      "format": "zip",
+      "emulator": "lr-fbneo"
     },
+    {
+      "name": "mame2003",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "{base}/mame2003.xml",
+        "rom": "{base}/roms/{filename}.zip",
+        "disk": "{base}/roms/{rom}/{filename}.chd",
+        "sample": "{base}/samples/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2003/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame2003/samples/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-mame2003"
+    },
+    {
+      "name": "mame2003plus",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "{base}/MAME 2003-Plus - 2018-12-31.xml",
+        "rom": "{base}/roms/{filename}.zip",
+        "disk": "{base}/roms/{rom}/{filename}.chd",
+        "sample": "{base}/samples/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2003plus/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame2003plus/samples/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-mame2003-plus"
+    },
+    {
+      "name": "mame2010",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "{base}/MAME 2010 DAT - 2019-01-05.xml",
+        "rom": "{base}/roms.zip/roms%2F{filename}.zip",
+        "disk": "https://***REMOVED***{rom}/{filename}.chd",
+        "sample": "{base}/samples/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2010/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame2010/samples/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-mame2010"
+    },
+    {
+      "name": "mame2015",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "{base}/mame2015.xml",
+        "rom": "{base}/roms.zip/roms%2F{filename}.zip",
+        "disk": "https://***REMOVED***{rom}/{filename}.chd",
+        "sample": "{base}/samples/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2015/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame2015/samples/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-mame2015"
+    },
+    {
+      "name": "mame2016",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "{base}/MAME 2016 XML (Arcade Only).xml",
+        "rom": "{base}/roms.zip/roms%2F{filename}.zip",
+        "disk": "https://***REMOVED***{rom}/{filename}.chd",
+        "sample": "{base}/roms.zip/samples/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2016/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame2016/samples/{filename}.zip"
+      },
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-mame2016"
+    },
+    {
+      "name": "mame0222",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
+        "rom": "{base}/{filename}.zip",
+        "disk": "https://***REMOVED***{rom}/{filename}.chd",
+        "sample": "https://***REMOVED***.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame/{filename}.zip",
+        "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
+        "sample": "/home/pi/RetroPie/BIOS/mame/samples/{filename}.zip"
+      },
+      "build": "merged",
+      "format": "zip",
+      "emulator": "lr-mame"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/arcade/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/arcade"
+    },
+    "files": {
+      "rom": "{dir}/{filename}.zip",
+      "disk": "{dir}/{rom}/{filename}.chd"
+    },
+    "priority": [
+      "usa"
+    ],
     "allowlists": {
       "languages": [
         "English"
       ]
     },
     "blocklists": {
-      "clones": true,
+      "clones": [true],
       "categories": [
         "Board Game",
         "Casino",

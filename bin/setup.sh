@@ -120,6 +120,9 @@ install_developer_tools() {
     popd
     rm -rf /tmp/trrntzip
   fi
+
+  # CHDMan
+  sudo apt install -y mame-tools
 }
 
 setup_case() {

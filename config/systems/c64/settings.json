@@ -1,32 +1,76 @@
 {
-  "emulators": ["VICE x64"],
-  "roms": {
-    "sets": {
-      "nointro-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "login": true,
-        "unzip": true,
-        "files": [
-          "Commodore - 64 (20210216-232616).zip",
-          "Commodore - 64 (Tapes) (20210216-231940).zip"
-        ]
-      }
+  "system": "c64",
+  "themes": {
+    "bezel": "C64"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-vice": {"proper_name": "VICE x64", "default": true}
+  },
+  "romsets": [
+    {
+      "name": "nointro-tapes",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes) (20210216-231940).dat",
+        "rom": "{base}/no-intro%20romsets/Commodore%20-%2064%20%28Tapes%29%20%2820210216-231940%29.zip/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/c64/.nointro/{filename}.zip"
+      },
+      "auth": "internetarchive",
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-vice"
     },
+    {
+      "name": "nointro-cartridges",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (20210216-232616).dat",
+        "rom": "{base}/no-intro%20romsets/Commodore%20-%2064%20%2820210216-232616%29.zip/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/c64/.nointro/{filename}.zip"
+      },
+      "auth": "internetarchive",
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-vice"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/c64/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/c64"
+    },
+    "files": {
+      "rom": "{dir}/{filename}.zip"
+    },
+    "priority": [
+      "usa"
+    ],
     "allowlists": {
-      "keywords": [
-        "USA",
-        "Europe"
+      "flags": [
+        "usa",
+        "europe"
       ]
     },
     "blocklists": {
+      "flags": [
+        "program",
+        "unl"
+      ],
       "keywords": [
-        "(Program",
-        "(Unl",
-        "BIOS",
-        "Strip Poker"
+        "bios",
+        "strip poker"
       ]
     },
+    "deduplicate": true,
     "favorites": [
       "180 (Europe) (Budget)",
       "Arkanoid (Europe)",

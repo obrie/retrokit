@@ -1,40 +1,76 @@
 {
-  "emulators": [],
+  "system": "nes",
+  "themes": {
+    "bezel": "NES"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-fceumm": {"proper_name": "FCEUmm", "default": true}
+  },
+  "cheats": "Nintendo - Nintendo Entertainment System",
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "urls": {
+        "base": "https://***REMOVED***",
+        "dat": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System (20210323-123406).dat",
+        "rom": "{base}/no-intro%20romsets/Nintendo%20-%20Nintendo%20Entertainment%20System%20%2820210330-144820%29%20%5Bheadered%5D.zip/{filename}.zip"
+      },
+      "files": {
+        "rom": "/home/pi/RetroPie/roms/nes/.nointro/{filename}.zip"
+      },
+      "auth": "internetarchive",
+      "build": "non-merged",
+      "format": "zip",
+      "emulator": "lr-fceumm"
+    }
+  ],
   "roms": {
-    "sets": {
-      "nointro-http": {
-        "protocol": "http",
-        "url": "https://***REMOVED***/",
-        "login": true,
-        "unzip": true,
-        "files": [
-          "Nintendo - Nintendo Entertainment System (20210122-114559) [headered].zip"
-        ]
-      }
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/nes/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/nes"
     },
+    "files": {
+      "rom": "{dir}/{filename}.zip"
+    },
+    "priority": [
+      "usa",
+      "world"
+    ],
     "allowlists": {
-      "keywords": [
-        "(USA",
-        "(Japan, USA)",
-        "(World)"
+      "flags": [
+        "europe",
+        "usa",
+        "world"
       ]
     },
     "blocklists": {
+      "flags": [
+        "aftermarket",
+        "alt",
+        "beta",
+        "collection",
+        "demo",
+        "kiosk",
+        "proto",
+        "rev",
+        "sample",
+        "test",
+        "unl",
+        "virtual console"
+      ],
       "keywords": [
-        "(Aftermarket",
-        "(Alt",
-        "(Beta",
-        "(Proto",
-        "(Rev",
-        "(Sample",
-        "(Test",
-        "(Unl",
-        "(Virtual Console",
-        "Anniversary",
-        "Cartridge",
-        "Collector",
-        "GameCube",
-        "Game Genie"
+        "anniversary",
+        "cartridge",
+        "collector",
+        "gamecube",
+        "game genie",
+        "namco museum",
+        "super mario bros. +",
+        "teenage mutant hero"
       ]
     },
     "favorites": [

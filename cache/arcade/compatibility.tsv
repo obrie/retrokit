@@ -263,6 +263,7 @@ bjtwinp	Bomberman Twin (Bootleg: Adult)	lr-fbneo	o	o	o	o	o	Images of women appea
 bking	Birdie King	lr-mame	o	o	o	o	tb	Trackball needed
 bking2	Birdie King 2	lr-mame	o	o	o	o	tb	Trackball needed
 bking3	Birdie King 3	lr-mame	o	o	o	o	tb	Trackball needed
+bkrtmaq	[Quiz] Bakuretsu Quiz Ma-Q Dai Bouken	lr-mame2015		x	o	-	o	namcona1.c driver
 blackt96	Black Touch '96	lr-fbneo	o	o	o	o	o	
 bladestl	Blades of Steel	lr-fbneo	o	o	o	o	o	
 blandia	Blandia	lr-fbneo	o	o	o	o	o	
@@ -431,7 +432,7 @@ cexplore	Explorer	lr-fbneo	o	o	o	o	o	DECO Cassette
 cfboy0a1	Flash Boy	lr-fbneo	o	o	o	o	o	
 cfghtice	Fighting Ice Hockey	lr-fbneo	o	o	-	o	o	DECO Cassette; Loading screen will corrupt around 40-second mark. Possible this is correct behavior. Game otherwise looks/runs fine.
 cflyball	Flying Ball	lr-fbneo	o	o	o	o	o	DECO cassette game
-cgangpzl	Cosmo Gang The Puzzle	lr-mame2015	o	o	x	x	o	Doesn't work with 2016 or lr-mame
+cgangpzl	Cosmo Gang The Puzzle	lr-fbneo	o	o	o	o	o	Doesn't work with 2016 or lr-mame; Avoid merged rom set, as the sub-dir filenames are the same and may confuse emulators
 cgraplop	Graplop (Cluster Buster)	lr-fbneo	o	o	o	o	o	Deco cassette (US Variant)
 cgraplop2	Graplop	lr-fbneo	o	o	o	o	o	Deco cassette
 chainrec	Chain Reaction	lr-fbneo	o	o	o	o	o	Clone: Magical Drop (magdrop)
@@ -604,7 +605,7 @@ daioh	Daioh	lr-fbneo	o	o	o	o	o	Good shooter
 daiskiss	Daisu-Kiss	lr-mame2016	o	o	-	o	o	At least one visual issue on the IO (articfact on character hair)
 daitorid	Daitoride	lr-fbneo	o	o	o	o	o	Minor graphic issues
 dambustr	Dambusters	lr-fbneo	o	o	o	o	o	
-danceyes	[Adult] Dancing Eyes	lr-mame2003-Plus	o	o	o	o	o	Best perforrmance with 2003 MAMEs
+danceyes	[Adult] Dancing Eyes	lr-mame2003-plus	o	o	o	o	o	Best perforrmance with 2003 MAMEs
 dangar	UFO Robo Dangar	lr-fbneo	o	o	o	o	o	
 dangerz	Danger Zone	lr-mame	o	o	o	o	tb	Best w/Mouse or Trackball for analog movement
 dangseed	Dangerous Seed	lr-fbneo	o	o	o	o	o	Okay space shooter with organic enemies
@@ -794,7 +795,7 @@ dspirit	Dragon Spirit	lr-fbneo	o	o	o	o	o
 dstlk	Darkstalkers: The Night Warriors	lr-fbneo	o	o	o	o	o	
 dtfamily	Diet Family	lr-fbneo	o	o	o	o	o	
 duckhunt	Vs. Duck Hunt	lr-mame2016	o	o	o	o	lg	
-dunkmnia	Dunk Mania	lr-mame2003-Plus	!	o	o	!	o	Missing sound in 2003-Plus, but too slow for newer emulators.
+dunkmnia	Dunk Mania	lr-mame2003-plus	!	o	o	!	o	Missing sound in 2003-plus, but too slow for newer emulators.
 dunkshot	Dunk Shot	lr-fbneo	o	o	o	o	o	
 dw2001	Dragon World 2001	lr-fbneo	o	o	o	o	o	PGM
 dwpc	[Adult] Dragon World Pretty Chance	lr-fbneo	o	o	o	o	o	PGM
@@ -825,6 +826,7 @@ ehrgeiz	Ehrgeiz	lr-mame2016	!	!	o	o	o
 eightfrc	Eight Forces	lr-fbneo	o	o	o	o	o	
 eightman	Eightman 	lr-fbneo	o	o	o	o	o	NEO-GEO
 einning	Extra Inning	lr-mame2016	o	o	o	o	-	Note: Tune "P2 Hit" for P1 to swing the bat.  :O
+ejanhs	E-Jong High School	lr-fbneo		o	o	o	o	Maiden launch: Non-skippable 999 second countdown. When countdown ends, restart the game for normal behavior.
 ejihon	Ejihon Tantei Jimusyo	advmame	!	o	o	o	o	SEGA Titan Game. Only works with advmame.
 elecyoyo	Electric Yo-Yo, The	lr-fbneo	o	o	o	o	o	
 elevator	Elevator Action	lr-fbneo	o	o	o	o	o	
@@ -832,7 +834,7 @@ elim2	Eliminator (2 Players)	lr-mame	o	o	o	o	o
 elim4	Eliminator (4 Players)	lr-mame	o	o	o	o	o	
 elvactr	Elevator Action Returns	lr-fbneo	o	o	o	o	o	
 embargo	Embargo	lr-mame2016	o	o	o	x	o	It's Surround with boats. No audio for any emulator
-emeralda	Emeraldia	lr-mame2003-Plus	o	o	o	-	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). Tinny audio
+emeralda	Emeraldia	lr-fbneo	o	o	o	o	o	namcona1.c driver
 empcity	Empire City: 1931	lr-fbneo	o	o	o	o	o	Clone: (stfight)
 enduror	Enduro Racer	lr-fbneo	o	o	o	o	o	
 enforce	Enforce	lr-fbneo	o	o	o	o	o	
@@ -863,11 +865,11 @@ exprraid	Express Raider	lr-fbneo	o	o	o	o	o	Clone: (wexpress)
 extdwnhl	Extreme Downhill	lr-fbneo	o	o	o	o	o	
 exterm	Exterminator	lr-fbneo	o	o	o	o	o	
 extrmatn	Extermination	lr-fbneo	o	o	o	o	o	
-exvania	Exvania	lr-mame2003-Plus	o	o	o	-	o	Bomberman clone. namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). Tinny audio
+exvania	Exvania	lr-fbneo	o	o	o	o	o	Bomberman clone. namcona1.c driver
 exzisus	Exzisus	lr-fbneo	o	o	o	o	o	
 eyes	Eyes	lr-fbneo	o	o	o	o	o	Clone: (eyeszacb)
 f1dream	F-1 Dream	lr-mame2016	o	o	o	o	-	Odd controls. Separate button to HOLD for high gear/accelerate.
-f1en	F1 Exhaust Note	lr-mame2003-Plus	o	o	-	o	o	Minor articfacts. Trade Offs: 2003: bad audio great control. Plus: good audio, crappy control. 2016 good audio/control - bad framerate. Everything else is worse. Suggest 2003 (most fun).
+f1en	F1 Exhaust Note	lr-mame2003-plus	o	o	-	o	o	Minor articfacts. Trade Offs: 2003: bad audio great control. Plus: good audio, crappy control. 2016 good audio/control - bad framerate. Everything else is worse. Suggest 2003 (most fun).
 f1gp	F-1 Grand Prix	lr-fbneo	o	o	o	o	o	
 f1gp2	F-1 Grand Prix Part II	lr-fbneo	o	o	o	o	o	
 f1gpstar	Grand Prix Star	lr-mame2016	o	o	o	o	o	Game capped at 29.9 FPS
@@ -894,7 +896,7 @@ fcombat	Field Combat	lr-mame2016	o	o	o	o	o
 feversos	Fever SOS	lr-fbneo	o	o	o	o	o	Clone: (dfeveron)
 ffight	Final Fight	lr-fbneo	o	o	o	o	o	Clone: (fcrash)
 ffightae	Final Fight 30th Anniversary Edition	lr-fbneo	o	o	o	o	o	
-fghtatck	Fighter & Attacker	lr-mame2003-Plus	o	o	o	-	o	Clone: (fa); namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). Tinny audio
+fghtatck	Fighter & Attacker	lr-fbneo	o	o	o	o	o	Clone: (fa); namcona1.c driver
 fghtbskt	Fighting Basketball	lr-fbneo	o	o	o	o	o	
 fghthist	Fighters History	lr-fbneo	o	o	o	o	o	
 fghthistu	Figher's History (US)	lr-fbneo	o	o	o	o	o	
@@ -912,7 +914,7 @@ finalgdr	Final Godori (Korea)	lr-fbneo	o	o	o	o	o	Hanafuda
 finalizr	Finalizer	lr-fbneo	o	o	o	o	o	Maybe the most off-key start game fanfare in history
 finallap	Final Lap	lr-mame	x	o	x	x	-	Emulation for Final Lap games are lacking in all areas.
 finalttr	FInal Tetris	lr-fbneo	o	o	o	o	o	With stolen samples from SF2
-findlove	[Adult] Find Love	lr-mame2003-Plus	o	o	o	o	o	Best perforrmance with MAME 2003 series
+findlove	[Adult] Find Love	lr-mame2003-plus	o	o	o	o	o	Best perforrmance with MAME 2003 series
 finehour	Finest Hour	lr-fbneo	o	o	o	o	o	
 firebatl	Fire Battle	lr-fbneo	o	o	o	o	o	
 firebeas	[Proto] Firebeast	lr-fbneo	o	o	o	o	tb	Trackball or mouse control is best
@@ -1091,7 +1093,7 @@ groundfx	Ground Effects	lr-fbneo	o	o	o	o	o
 growl	Growl	lr-fbneo	o	o	o	o	o	Clone: (runark)
 grudge	Grudge Match	lr-mame2016	o	o	o	o	o	
 gseeker	Grid Seeker	lr-fbneo	o	o	o	o	o	
-gslgr94u	Great Sluggers '94	lr-mame2010	x	o	o	o	o	namconb1.c driver not compatible with lr-mame or lr-mame2016
+gslgr94u	Great Sluggers '94	lr-fbneo	x	o	o	o	o	namconb1.c driver
 gstream	G-Stream G 2020	lr-fbneo	o	o	o	o	o	
 gstrik2	Grand Striker 2	lr-fbneo	o	o	o	o	o	
 gstriker	Grand Striker	lr-mame	o	o	!	o	o	Bad graphics in many areas of gameplay field. No emulator supports
@@ -1150,7 +1152,7 @@ hachamfb	Hacha Mecha Fighter	lr-fbneo	o	o	o	o	o
 hachoo	Hachoo!	lr-fbneo	o	o	o	o	o	
 hal21	Hal 21	lr-fbneo	o	o	o	o	o	
 halfway	Progear (Hack: Halfway to Hell)	lr-fbneo	o	o	o	o	o	
-halleys	Halley's Comet	lr-mame2003-Plus	o	o	o	o	o	lr-mame ROM name: (halleysc). lr-mame pops audio on Pi4B. 2016 black screen. 2015 too slow. Recommend 2003-Plus.
+halleys	Halley's Comet	lr-mame2003-plus	o	o	o	o	o	lr-mame ROM name: (halleysc). lr-mame pops audio on Pi4B. 2016 black screen. 2015 too slow. Recommend 2003-plus.
 hamaway	Hammer Away	lr-fbneo	o	o	o	o	o	
 hammer	Hammer	lr-mame2016	o	o	o	o	lg	
 hanaawas	Hana Awase	lr-mame2016	o	o	o	o	kb	
@@ -1414,7 +1416,7 @@ kittenk	Kitten Kaboodle	lr-fbneo	o	o	o	o	o	Clone: (nyanpani)
 kizuna	Kizuna Encounter	lr-fbneo	o	o	o	o	o	NEO-GEO
 klax	Klax	lr-fbneo	o	o	o	o	o	
 klondkp	Klondike+	lr-fbneo	o	o	o	o	o	
-knckhead	Knuckle Heads	advmame	o	o	o	o	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). Tinny audio. Use Magnification 3X
+knckhead	Knuckle Heads	lr-fbneo	o	o	o	o	o	namcona1.c driver
 kncljoe	Knuckle Joe	lr-fbneo	o	o	o	o	o	
 kngtmare	[Proto] Knightmare	lr-mame2016	o	o	o	-	o	No sound, probably due to prototype
 knightb	Knight Boy	lr-fbneo	o	o	o	o	o	
@@ -1477,7 +1479,7 @@ landbrk	[Adult] Land Breaker	lr-fbneo	o	o	o	o	o
 landmakr	Land Maker	lr-fbneo	o	o	o	o	o	Had to initialize with "Test Switch"
 laserbat	Laser Battle	lr-mame	o	o	o	o	o	
 lasso	Lasso	lr-fbneo	o	o	o	o	o	
-lastapos	Last Apostle Puppetshow, The	lr-mame	!	o	o	x	o	Clone: (reikaids). Audio pops. Play "Chinese Exorcist" (reikaids), which works with lr-mame2003-Plus
+lastapos	Last Apostle Puppetshow, The	lr-mame	!	o	o	x	o	Clone: (reikaids). Audio pops. Play "Chinese Exorcist" (reikaids), which works with lr-mame2003-plus
 lastblad	Last Blade, The	lr-fbneo	o	o	o	o	o	NEO-GEO Clone: (lastsold)
 lastbld2	Last Blade 2, The	lr-fbneo	o	o	o	o	o	NEO-GEO
 lastday	Last Day, The	lr-fbneo	o	o	o	o	o	
@@ -1560,7 +1562,7 @@ m4	M-4	lr-mame2016	o	o	o	o	o	Download/install samples
 m660	Mission 660	lr-fbneo	o	o	o	o	o	AKA "Alphax Z"
 m79amb	M-79 Ambush	lr-mame2016	o	o	o	o	o	
 mach9	Mach-9	lr-fbneo	o	o	o	o	o	
-machbrkr	Mach Breakers	lr-mame2010	o	-	o	o	o	Visual issues with 2003/2003-Plus, but very fast. For 4B, 2010 looks better, but is a little sluggish
+machbrkr	Mach Breakers	lr-fbneo	o	o	o	o	o	namco driver
 machomou	Macho Mouse	lr-fbneo	o	o	o	o	o	
 macross	Super Spacefortress Macross	lr-fbneo	o	o	o	o	o	
 macross2	Super Spacefortress Macross II	lr-fbneo	o	o	o	o	o	
@@ -1824,7 +1826,7 @@ ncombat	Ninja Combat	lr-fbneo	o	o	o	o	o	NEO-GEO
 ncommand	Ninja Commando	lr-fbneo	o	o	o	o	o	NEO-GEO
 ncv1	Namco Classic Collection Vol.1	lr-mame2016	o	o	o	o	o	
 ncv2	Namco Classic Collection Vol.2	lr-mame2016	o	o	o	o	o	
-nebulray	Nebulas Ray	lr-mame2010	x	o	o	o	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). 2015 too slow.
+nebulray	Nebulas Ray	lr-fbneo	x	o	o	o	o	namcona1.c driver
 neckneck	[Ticket] Neck-N-Neck	lr-mame	o	o	o	o	o	
 nemo	Nemo	lr-fbneo	o	o	o	o	o	
 neobattl	SD Gundam Neo Battling	lr-fbneo	o	o	o	o	o	
@@ -1878,7 +1880,7 @@ nslasher	Night Slashers (Korea)	lr-fbneo	o	o	o	o	o
 nspirit	Ninja Spirit	lr-fbneo	o	o	o	o	o	
 nstocker	Night Stocker	lr-mame2016	o	o	o	o	lg	
 nsub	N-Sub	lr-mame	o	o	o	o	o	Download/install samples
-numanath	Numan Athetics	lr-mame2010	o	o	o	o	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). 2015 too slow.
+numanath	Numan Athetics	lr-fbneo	o	o	o	o	o	namcona1.c driver; Avoid merged rom set, as the sub-dir filenames are the same and may confuse emulators
 nvs_machrider	Vs. Mach Rider	lr-mame	o	o	-	o	o	Old ROM name: (machridr); Some issues with road edges not seen on PCB footage
 nvs_mightybj	Vs. Mighty Bomb Jack	lr-mame	o	o	o	o	o	Old ROM name: (mightybj)
 nvs_platoon	Vs. Platoon	lr-mame	o	o	o	o	o	Old ROM name: (platoon)
@@ -1886,7 +1888,7 @@ nwarr	Night Warriors: Darkstalker's Revenge	lr-fbneo	o	o	o	o	o
 nycaptor	N.Y. Captor	lr-mame2016	o	o	x	x	lg	
 nyny	New York! New York!	lr-mame2016	o	o	o	o	o	
 nzeroteam	New Zero Team	lr-fbneo	o	o	o	o	o	
-offroad	Ironman Ivan Stewart's Super Off-Road	lr-fbneo	o	o	o	o	o	Triggers or button for nitro
+offroad	Ironman Ivan Stewart's Super Off-Road	lr-mame2016	o	o	o	o	o	Triggers or button for nitro
 offroadc	Off Road Challenge	lr-mame2016	x	-	o	o	o	Lower CPU to the 30% range for improved performance.
 offroadt	Ironman Ivan Stewart's Super Off-Road Track-Pak	lr-mame2016	o	o	o	o	o	Triggers or button for nitro. Clone could be added to lr-fbneo
 offtwall	Off the Wall (Atari)	lr-mame2016	o	o	o	o	tb	Might need to adjust sensitivity and speed via MAME Analog Controls
@@ -1924,7 +1926,7 @@ othldrby	Othello Derby	lr-mame2016	o	o	o	o	o
 othunder	Operation Thunderbolt	lr-fbneo	o	o	o	o	lg	
 ottopz	Ms. Pac-Man (Hack: Crazy Otto)	lr-fbneo	o	o	o	o	o	
 otwalls	Off the Wall (Sente)	lr-mame2016	o	o	o	o	-	Need to manually re-map independant movement from racquet swing
-outfxies	Outfoxies, The	lr-mame2010	x	o	o	o	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen). 2015 is too slow
+outfxies	Outfoxies, The	lr-fbneo	x	o	o	o	o	namcona1.c driver
 outrun	Out Run	lr-fbneo	o	o	o	o	o	Added shift up/down on L/R bumpers. Why not?...
 outrundx	Out Run (Deluxe Sitdown)	lr-fbneo	o	o	o	o	o	Different track ordering after the first branch.
 outzone	Out Zone	lr-fbneo	o	o	o	o	o	
@@ -1975,7 +1977,7 @@ patapata	Pata Pata Panic	lr-fbneo	o	o	o	o	o
 pbaction	Pinball Action	lr-fbneo	o	o	o	o	o	
 pballoon	Pioneer Balloon	lr-fbneo	o	o	o	o	o	
 pbancho	Gyakuten!! Puzzle Bancho	lr-fbneo	o	o	o	o	o	
-pbillian	Prebillian	lr-mame2016	o	o	o	o	-	MAME 2003-Plus (same ROM) also shows a strength meter for feedback. 2015 does not, but audio is correct
+pbillian	Prebillian	lr-mame2016	o	o	o	o	-	MAME 2003-plus (same ROM) also shows a strength meter for feedback. 2015 does not, but audio is correct
 pbillrd	Perfect Billiards	lr-fbneo	o	o	o	o	o	Game calls itself "Perfect Billiard"... But everything else reads as "Billiards".
 pbobbl2n	Puzzle Bobble 2 (Neo-Geo)	lr-fbneo	o	o	o	o	o	NEO-GEO Parent of (pbobble2x)
 pbobble	Puzzle Bobble	lr-fbneo	o	o	o	o	o	
@@ -2107,7 +2109,7 @@ progear	Progear	lr-fbneo	o	o	o	o	o	GREAT game. Awesome intro ahead of its time
 progolf	18 Holes Pro Golf	lr-fbneo	o	o	o	o	o	
 progress	Progress	lr-fbneo	o	o	o	o	o	
 promutrv	Progressive Music Trivia	lr-fbneo	o	o	o	o	o	
-propcycl	Prop Cycle	lr-mame2003-Plus	x	x	o	x	o	Only lr-mame2003* has playable framerate (~43-50 FPS). Newer emulators will have audio, but are too slow to play.
+propcycl	Prop Cycle	lr-mame2003-plus	x	x	o	x	o	Only lr-mame2003* has playable framerate (~43-50 FPS). Newer emulators will have audio, but are too slow to play.
 prosoccr	Pro Soccer	lr-mame2016	o	o	o	o	o	
 prosport	Pro Sports	lr-mame2016	o	o	o	x	o	Non-cassette version of Pro Bowling, Tennis & Golf; Occasionally see a bowling pin stuck on the screen
 prtytime	[Adult] Party Time	lr-fbneo	o	o	o	o	o	Clone: (gangonta)
@@ -2120,7 +2122,7 @@ psurge	Power Surge	lr-fbneo	o	o	o	o	o
 psychic5	Psychic 5	lr-fbneo	o	o	o	o	o	
 psychos	Psycho Soldier	lr-fbneo	o	o	o	o	o	
 psyforce	Psychic Force	lr-mame2016	!	o	o	o	o	Maiden launch will require a restart of the emulator.
-ptblank	Point Blank	lr-mame2010	x	o	o	o	o	2003 ROM is full speed, but no audio. 2010 ROM has audio, but slow on 3B+
+ptblank	Point Blank	lr-fbneo	x	o	o	o	o	namco rom. parent of gun bullet.
 ptblank2	Point Blank 2	lr-mame2010	!	o	o	o	o	
 ptrmj	PT Reach Mahjong	lr-mame		o	o	o	o	Download/install samples
 pturn	Parallel Turn	lr-fbneo	o	o	o	o	o	
@@ -2193,6 +2195,7 @@ quizkof	[Quiz] Quiz King of Fighters	lr-fbneo	o	o	o	o	o	NEO-GEO
 quizkofk	[Quiz] Quiz King of Fighters (Korean)	lr-fbneo	o	o	o	o	o	
 quizmeku	[Quiz] Quiz Mekurumeku Story	lr-fbneo	o	o	o	o	o	
 quizo	[Quiz] Quiz Olympic	lr-fbneo	o	o	o	o	o	
+quiztou	[Quiz] Nettou! Gekitou! Quiztou!!	lr-mame2015		x	o	-	o	namco.c driver. lr-fbneo yields: Key Custom ERROR displays. Can't seem to get out of this.
 qwak	[Proto] Qwak	lr-mame2016	o	o	o	o	o	
 qzchikyu	[Quiz] Quiz Chikyu Bouei Gun	lr-fbneo	o	o	o	o	o	
 qzkklgy2	[Quiz] Quiz Kokology 2	lr-fbneo	o	o	o	o	o	
@@ -2216,7 +2219,7 @@ radrad	Radical Radial	lr-fbneo	o	o	o	o	o
 raflesia	Rafflesia	lr-fbneo	o	o	o	o	o	
 ragnagrd	Ragnagard	lr-fbneo	o	o	o	o	o	NEO-GEO
 ragtime	Great Ragtime Show, The	lr-fbneo	o	o	o	o	o	Clone (boogwing)
-raiden	Raiden	lr-mame	o	o	o	o	o	lr-fbneo has a single frame issue with ground objects (eg. craters, collectables)
+raiden	Raiden	lr-mame	o	o	o	o	o	lr-fbneo rendering of ground objects (eg. craters, collectables) is off 1-frame, every frame
 raiden2	Raiden II	lr-fbneo	?	o	o	o	o	
 raidendx	Raiden DX	lr-fbneo	o	o	o	o	o	
 raiders	Raiders	lr-mame2016	o	o	o	o	o	
@@ -2241,8 +2244,8 @@ rbislande	Rainbow Islands (Extra)	lr-fbneo	o	o	o	o	o	Original ROM name: (rainbow
 rbtapper	Tapper (Root Beer)	lr-fbneo	o	o	o	o	o	
 rchase	Rail Chase	lr-fbneo	o	o	o	o	lg	
 rdaction	Rad Action	lr-fbneo	o	o	o	o	o	
-rdft	Raiden Fighters	lr-mame2016	o	o	o	o	o	One-time only initial LONG LONG upgrade countdown! After flipping DIP switch and restarting, game runs flawlessly
-rdft2	Raiden Fighters 2	lr-mame2016	?	o	o	o	o	One-time only initial LONG LONG upgrade countdown! After flipping DIP switch and restarting, game runs flawlessly
+rdft	Raiden Fighters	lr-fbneo	o	o	o	o	o	(no initial timer, like RF2. a good thing)
+rdft2	Raiden Fighters 2	lr-fbneo	?	o	o	o	o	Maiden launch: Non-skippable 999 second countdown. When countdown ends, restart the game for normal behavior.
 reactor	Reactor	lr-mame2016	o	o	o	o	tb	Requires bios: (votrax) for newer MAME emus
 reaktor	Reaktor	lr-fbneo	o	o	o	o	o	
 realbrk	[Adult] Billiard Academy Real Break	lr-mame	o	o	o	o	o	
@@ -2257,7 +2260,7 @@ redrobin	Red Robin	lr-fbneo	o	o	o	o	o
 redufo	Defend the Terra Attack on the Red UFO	lr-fbneo	o	o	o	o	o	Clone: (exodus) One of the worst names ever
 reelfun	Reel-Fun	lr-mame2016	o	o	o	o	kb	Use keyboard, or remap keys
 regulus	Regulus	lr-fbneo	o	o	o	o	o	
-reikaids	Chinese Exorcist	lr-mame2003-Plus	o	o	o	o	o	Parent (lastapos); Runs best with lr-mame2003 series
+reikaids	Chinese Exorcist	lr-mame2003-plus	o	o	o	o	o	Parent (lastapos); Runs best with lr-mame2003 series
 relief	Relief Pitcher	lr-fbneo	o	o	o	o	o	
 renegade	Renegade	lr-fbneo	o	o	o	o	o	Clone: (kuniokun)
 renju	Renju Kizoku	lr-mame2016	o	o	o	o	o	5 in a row...
@@ -2268,7 +2271,7 @@ retofinv	Return of the Invaders	lr-fbneo	o	o	o	o	o
 revngr84	Revenger 84	lr-fbneo	o	o	o	o	o	Clone: (revenger)
 revx	Revolution X	lr-fbneo	o	o	o	o	lg	Aerosmith. Maiden launch, you MUST have 3 controllers available for Gun Calibration, or cannot advance.
 rezon	Rezon	lr-fbneo	o	o	o	o	o	
-rfjetu	Raiden Fighters Jet	lr-mame2016	?	o	o	o	o	One-time only initial LONG LONG upgrade countdown! After flipping DIP switch and restarting, game runs flawlessly
+rfjetu	Raiden Fighters Jet	lr-fbneo	?	o	o	o	o	Maiden launch: Non-skippable 999 second countdown. When countdown ends, restart the game for normal behavior.
 ribbit	Ribbit!	lr-mame2016	o	o	o	o	o	
 ridhero	Riding Hero	lr-fbneo	o	o	o	o	o	NEO-GEO
 ridingf	Riding Fight	lr-fbneo	o	o	o	o	o	
@@ -2424,7 +2427,7 @@ sengoku2	Sengoku 2	lr-fbneo	o	o	o	o	o	NEO-GEO
 sengoku3	Sengoku 3	lr-fbneo	o	o	o	o	o	NEO-GEO
 senjyo	Senjyo	lr-fbneo	o	o	o	o	o	
 senknow	Sen-Know	lr-fbneo	o	o	o	o	o	
-senkyu	Senkyu	advmame	o	o	o	-	o	Extremely long countdown.No version of MAME is fast enough and with accuracy
+senkyu	Senkyu	lr-fbneo	o	o	o	o	o	Parent of Battle Balls. Maiden launch: Non-skippable 999 second countdown. When countdown ends, restart the game for normal behavior.
 sextriv	[Adult] Sex Triv	lr-mame	o	o	o	o	o	
 sextriv1	[Adult] Sexual Trivia	lr-mame	o	o	o	o	o	Ignore terrifying "ERROR" that appears on first run. It'll pass.
 sexyboom	[Adult] Sexy Boom	lr-mame	o	o	o	o	o	
@@ -2562,7 +2565,7 @@ soldam	Soldam	lr-fbneo	o	o	o	o	o	Clone (soldamj) Tetris meets Othello?
 soldivid	Sol Divide	lr-fbneo	o	o	o	o	o	Awesome! Battles feel like a real-time Final Fantasy fights
 solfigtr	Solitary Fighter	lr-fbneo	o	o	o	o	o	
 solomon	Solomon's Key	lr-fbneo	o	o	o	o	o	
-solvalou	Solvalou	lr-mame2003-Plus	x	o	x	o	o	Missing sky & water with 2003/2003-Plus, but renders full speed. Other emulators can't handle FPS
+solvalou	Solvalou	lr-mame2003-plus	x	o	x	o	o	Missing sky & water with 2003/2003-plus, but renders full speed. Other emulators can't handle FPS
 sonic	Segasonic the Hedgehog	lr-mame2016	x	o	o	o	tb	
 sonicbom	Sonic Boom	lr-fbneo	o	o	o	o	o	
 sonicwi2	Aero Fighters 2	lr-fbneo	o	o	o	o	o	NEO-GEO
@@ -2572,7 +2575,7 @@ sos	SOS	lr-fbneo	o	o	o	-	o	Annoying buzz/plane sound. No explosion sounds. By de
 sosterm	S.O.S.	lr-mame2016	o	o	o	o	o	
 sothello	Super Othello	lr-mame2016	o	o	o	o	o	
 sotsugyo	Sotsugyo Shousho	lr-fbneo	o	o	o	o	o	
-souledge	Soul Edge Ver. II	lr-mame2003-Plus	x	o	o	x	o	No audio. Only plays well with lr-mame2003 series. Ensure correct ROMset is used.
+souledge	Soul Edge Ver. II	lr-mame2003-plus	x	o	o	x	o	No audio. Only plays well with lr-mame2003 series. Ensure correct ROMset is used.
 spacbeam	Space Beam	lr-mame2016	o	o	o	x	o	No audio with any emulator
 spacduel	Space Duel	lr-mame	o	o	o	o	o	
 spacecho	Space Echo	lr-fbneo	o	o	o	o	o	
@@ -2691,7 +2694,7 @@ stadhr96	Stadium Hero '96	lr-fbneo	o	o	o	o	o
 stagger1	Stagger I	lr-fbneo	o	o	o	o	o	Clone: (redhawk)
 stakwin	Stakes Winner	lr-fbneo	o	o	o	o	o	NEO-GEO
 stakwin2	Stakes Winner 2	lr-fbneo	o	o	o	o	o	NEO-GEO
-starblad	Starblade	lr-mame2016	!	x	o	o	o	11fps... US version on 2003-Plus. This one on 2016 and with a different gen of ROM for a complete visual. Can't hold framerate on a Pi 3B+. 35 FPS on Pi 4B
+starblad	Starblade	lr-mame2016	!	x	o	o	o	11fps... US version on 2003-plus. This one on 2016 and with a different gen of ROM for a complete visual. Can't hold framerate on a Pi 3B+. 35 FPS on Pi 4B
 starcas	Star Castle	lr-mame	o	o	o	o	o	Download/install samples
 starcrus	Star Cruiser	lr-mame2016	o	o	o	o	o	Download/install samples
 starfigh	Star Fighter	lr-fbneo	o	o	o	o	o	
@@ -2789,14 +2792,14 @@ svolley	Super Volleyball	lr-fbneo	o	o	o	o	o
 swarm	Galaxian (Hack: Swarm)	lr-fbneo	o	o	o	o	o	Clone: Astrians (astrians).
 swat	SWAT	lr-fbneo	o	o	o	o	o	
 swatpolc	SWAT Police	lr-fbneo	o	o	o	o	o	
-swcourt	Super World Court	lr-mame2010	o	o	o	o	o	namcona1.c driver does not work with lr-mame or lr-mame2016 (black screen)
+swcourt	Super World Court	lr-fbneo	o	o	o	o	o	namcona1.c driver
 swimmer	Swimmer	lr-fbneo	o	o	o	o	o	
 sws	Super World Stadium	lr-fbneo	o	o	o	o	o	
 sws92	Super World Stadium '92	lr-fbneo	o	o	o	o	o	
 sws93	Super World Stadium '93	lr-fbneo	o	o	o	o	o	
-sws95	Super World Stadium '95	lr-mame2010	o	o	o	o	o	
-sws96	Super World Stadium '96	lr-mame2010	o	o	o	o	o	
-sws97	Super World Stadium '97	lr-mame2010	o	o	o	x	o	
+sws95	Super World Stadium '95	lr-fbneo	o	o	o	o	o	namco rom
+sws96	Super World Stadium '96	lr-fbneo	o	o	o	o	o	namco rom
+sws97	Super World Stadium '97	lr-fbneo	o	o	o	o	o	namco rom
 sws98	Super World Stadium '98	lr-mame2016	!	!	o	o	o	Newer engine for this game requires newer MAMEs, which are slow
 sws99	Super World Stadium '99	lr-mame2016	!	!	o	o	o	Newer engine for this game requires newer MAMEs, which are slow
 sxevious	Super Xevious	lr-fbneo	o	o	o	o	o	
@@ -2845,7 +2848,7 @@ tehkanwc	Tehkan World Cup	lr-mame2016	o	o	o	o	o
 tekipaki	Teki-Paki	lr-fbneo	o	o	o	o	o	
 tekken	Tekken	lr-mame2010	x	o	o	o	o	
 tekken2	Tekken 2	lr-mame2010	x	o	o	o	o	
-tekken3	Tekken 3	lr-mame2003-Plus	!	o	o	x	o	No audio w/2003, but great framerate. 2010 has audio, but poor fps
+tekken3	Tekken 3	lr-mame2003-plus	!	o	o	x	o	No audio w/2003, but great framerate. 2010 has audio, but poor fps
 tektagt	Tekken Tag Tournament	lr-mame2010	!	x	o	x	o	About 48 FPS with 2010. Best on the Pi4
 teljan	[Adult] Tel Jan	lr-fbneo	o	o	o	o	kb	
 tempest	Tempest	lr-mame	o	o	o	o	sp	3B+: Use advmame for speed and beauty 4B: Use lr-mame 0.209 for best results with Buster
@@ -2896,10 +2899,10 @@ timescan	Time Scanner	lr-fbneo	o	o	o	o	o
 timesold	Time Soldiers	lr-fbneo	o	o	o	o	o	Clone: (btlfield)
 timesupd	[Demo] Time's Up	lr-fbneo	o	o	o	o	o	"Loose" :)
 timetunl	Time Tunnel	lr-fbneo	o	o	o	o	o	
-tinklpit	Tinkle Pit	lr-mame2003-Plus	o	o	o	o	o	namcona1.c driver does not work with 2016 & lr-mame. 2015 is too slow.
+tinklpit	Tinkle Pit	lr-fbneo	o	o	o	o	o	namcona1.c driver
 tinstar	Tin Star, The	lr-fbneo	o	o	o	o	o	2 sticks + 2 fire buttons
 titanpac	Pac-Man (Bootleg: Titan)	lr-fbneo	o	o	o	o	o	
-titlef	Title Fight	lr-mame2016	x	o	o	o	-	MAME 2003-Plus is the only emulator that renders the crowd, but has major control issues and lots of visual problems. Cannot use R-Stick w/lr-mame or lr-mame2016 due to r-analog issues -- but since 2016 is the most solid for gameplay:  Ideal controller setup:  May L-Stick to DPad controls and Map R-Stick controls to Buttons!  Works well this way and bypasses the 2016 controller bug. 2016 is fast enough to support dual monitors, so turn on with MAME Video Options if desired.
+titlef	Title Fight	lr-mame2016	x	o	x	o	-	MAME 2003-plus is the only emulator that renders the crowd, but has major control issues and lots of visual problems. Cannot use R-Stick w/lr-mame or lr-mame2016 due to r-analog issues -- but since 2016 is the most solid for gameplay:  Ideal controller setup:  Map L-Stick to DPad controls and Map R-Stick controls to Buttons!  Works well this way and bypasses the 2016 controller bug. 2016 is fast enough to support dual monitors, so turn on with MAME Video Options if desired.
 tjumpman	Tobikose! Jumpman	lr-mame2016	x	o	o	o	o	Gambling, but interesting. Hit F2 on maiden run. Reset after.
 tkdensho	Touki Denshou Angel Eyes	lr-fbneo	o	o	o	o	o	
 tkmmpzdm	Tokimeki Memorial Taisen Puzzle-Dama	lr-mame2016	o	o	o	o	o	
@@ -3086,7 +3089,7 @@ vbowl	Virtua Bowling	lr-mame2016	o	o	o	o	o	Set for joystick by default. Use DIP 
 vcircle	[Proto] Vicious Circle	lr-mame2010	!	o	o	o	o	Works best with 2010. Requires CHD
 vendetta	Vendetta	lr-fbneo	o	o	o	o	o	4 player game!
 venture	Venture	lr-mame2016	o	o	o	o	o	
-vf	Works well with Plus. Thank you 	lr-mame2003-Plus	!	o	o	o	o	Works well with a modern version of Plus. Thank you Christoffer Cortes Sjöwall for the tip!
+vf	Works well with Plus. Thank you 	lr-mame2003-plus	!	o	o	o	o	Works well with a modern version of Plus. Thank you Christoffer Cortes Sjöwall for the tip!
 vgoalsoc	V Goal Soccer	lr-mame	x	o	o	o	o	Extremely broken parallax scrolling of the field
 vhunt2	Vampire Hunter 2: Darkstalkers' Revenge	lr-fbneo	o	o	o	o	o	
 victnine	Victorious Nine	lr-mame2016	o	o	o	o	o	
@@ -3103,7 +3106,7 @@ vindictr	Vindicators	lr-fbneo	o	o	o	o	o
 viofight	Violence Fight	lr-fbneo	o	o	o	o	o	
 viostorm	Violent Storm	lr-fbneo	o	o	o	o	o	
 viper	Viper	lr-mame2016	o	o	o	o	o	
-viprp1	Viper Phase 1	lr-mame2016	x	o	o	o	o	Maiden launch: Non-skippable 999 second countdown. When done, hit TAB and Machine Information. Change JP1. Then hit F3 to restart.
+viprp1	Viper Phase 1	lr-fbneo	x	o	o	o	o	Maiden launch: Non-skippable 999 second countdown. When countdown ends, restart the game for normal behavior.
 vivdolls	[Adult] Vivid Dolls	lr-mame	!	!	o	o	o	Unplayably slow
 vliner	V-Liner	lr-fbneo	o	o	o	o	o	
 vmetal	Varia Metal	lr-fbneo	o	o	o	o	o	
@@ -3116,7 +3119,7 @@ vsfdf	Vs. Freedom Force	lr-mame2016	o	o	o	o	lg
 vsgongf	Vs. Gong Fight	lr-fbneo	o	o	x	o	o	Clone: (ringfgt). Innaccurate colors in all emulators
 vsgradus	Vs. Gradius	lr-mame2016	o	o	o	o	o	
 vsgshoe	Vs. Gumshoe	lr-mame2016	o	o	o	o	lg	
-vshoot	V-Shoot	lr-mame2010	x	o	o	o	o	namconb1.cpp driver not supported w/ lr-mame or 2016. 2015 is too slow. Need 2010
+vshoot	V-Shoot	lr-fbneo	x	o	o	o	o	namconb1.cpp driver
 vsmahjng	Vs. Mahjong	lr-mame2016	o	o	o	o	o	Dual screen
 vsnetscr	Versus Net Soccer	lr-mame2016	!	-	o	o	o	FPS about 55. Feels right.
 vspinbal	Vs. Pinball	lr-mame2016	o	o	o	o	o	
@@ -3212,7 +3215,7 @@ wwfwfest	WWF WrestleFest	lr-fbneo	o	o	o	o	o
 wwjgtin	Gate In! Wai Wai Jockey	lr-fbneo	o	o	o	o	o	Clone (photof)
 wyvernwg	Wyvern Wings	lr-fbneo	o	o	o	o	o	
 xenophob	Xenophobe	lr-mame2016	o	o	o	o	o	
-xevi3dg	Xevious 3D/G	lr-mame2003-Plus	x	o	o	x	o	No sound. Can't add credits w/2016 and lr-mame 0.220
+xevi3dg	Xevious 3D/G	lr-mame2003-plus	x	o	o	x	o	No sound. Can't add credits w/2016 and lr-mame 0.220
 xevious	Xevious	lr-fbneo	o	o	o	o	o	
 xexex	Xexex	lr-fbneo	o	o	o	o	o	Clone (orius) Pretty impressive Konami shooter!
 xfiles	[Adult] X-Files, The	lr-mame2016	o	o	o	o	o	Crashes with lr-mame

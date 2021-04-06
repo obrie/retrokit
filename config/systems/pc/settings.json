@@ -1,12 +1,19 @@
 {
-  "emulators": [],
+  "system": "pc",
+  "themes": {},
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-dosbox": {"proper_name": "Dosbox", "default": true},
+    "lr-dosbox-pure": {"proper_name": "DosboxPure", "default": true}
+  },
   "roms": {
     "sets": {
       "dos-the_eye-torrent": {
-        "protocol": "torrent",
+        "protocol": "http",
         "url": "https://***REMOVED***",
-        "roms": "eXoDOS/eXo/eXoDOS",
-        "unzip": true,
+        "roms": "eXoDOS/eXo/eXoDOS/",
         "files": [
           "Arkanoid (1988).zip",
           "Arkanoid II - Revenge of Doh (1989).zip",
@@ -45,14 +52,8 @@
           "Tomb Raider Gold (1998).zip",
           "Where in the World is Carmen Sandiego (1985).zip",
           "Wolfenstein 3D (1992).zip"
-        ]
-      },
-      "dos-the_eye-http": {
-        "type": "http",
-        "url": "https://***REMOVED***",
-        "roms": "",
-        "unzip": true,
-        "files": []
+        ],
+        "unzip": true
       }
     }
   }
