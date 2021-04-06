@@ -9,6 +9,7 @@ import lxml.etree
 import os
 import tempfile
 from pathlib import Path
+from urllib.parse import quote
 
 # Represents a reference ROM collection
 class ROMSet:
@@ -43,9 +44,13 @@ class ROMSet:
 
     # Builds a URL for an asset in this romset
     def build_url(self, asset_name, **args):
+        encoded_args = {}
+        for key, value in args.items():
+            encoded_args[key] = quote(value)
+
         return self.url_templates[asset_name].format(
             base=self.url_templates['base'],
-            **args,
+            **encoded_args,
         )
 
     # Builds the local filepath for an asset in this romset
