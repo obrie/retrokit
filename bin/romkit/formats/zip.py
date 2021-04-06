@@ -19,15 +19,26 @@ class ZipFormat(BaseFormat):
     # Merges ROMs from the source machine to the given target machine
     def merge(self, source, target, roms):
         source_roms = self._find_roms_in_filepath(source, source.source_filepath)
+        source_roms_by_crc = {rom.crc: rom for rom in source_roms}
         source_zip = zipfile.ZipFile(source.source_filepath, 'r')
 
-        target_roms_by_crc = {rom.crc: rom for rom in roms}
+        existing_roms = self._find_roms_in_filepath(target, target.filepath)
+        existing_roms_by_name = {rom.name: rom for rom in target_roms}
 
-        with zipfile.ZipFile(target.filepath, 'a') as target_zip:
-            for source_rom in source_roms:
-                if source_rom in roms:
-                    target_name = target_roms_by_crc[source_rom.crc].name
-                    target_zip.writestr(target_name, source_zip.open(source_rom.name).read())
+        for rom in roms:
+            existing_rom = existing_roms_by_name.get(rom.name)
+            if existing_rom:
+                if rom.crc == existing_rom.crc:
+                    # ROM already exists with same CRC; skip
+                    continue
+                else:
+                    # ROM exists with a different CRC; remove it
+                    self.remove(target, existing_rom)
+
+            # Write ROM from source
+            source_rom = source_roms_by_crc[rom.crc]
+            with zipfile.ZipFile(target.filepath, 'a') as target_zip:
+                target_zip.writestr(rom.name, source_zip.open(source_rom.name).read())
 
     # Removes a ROM from a machine
     def remove(self, machine, rom):
