@@ -23,7 +23,7 @@ class ZipFormat(BaseFormat):
         source_zip = zipfile.ZipFile(source.source_filepath, 'r')
 
         existing_roms = self._find_roms_in_filepath(target, target.filepath)
-        existing_roms_by_name = {rom.name: rom for rom in target_roms}
+        existing_roms_by_name = {rom.name: rom for rom in existing_roms}
 
         for rom in roms:
             existing_rom = existing_roms_by_name.get(rom.name)
