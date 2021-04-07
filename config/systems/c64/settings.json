@@ -13,10 +13,17 @@
     {
       "name": "nointro-tapes",
       "protocol": "http",
-      "urls": {
+      "discovery": {
+        "type": "nointro",
         "base": "https://***REMOVED***",
+        "metadata": "no-intro_romsets_files.xml",
+        "paths": {
+          "rom": "no-intro romsets/Commodore - 64 \\(Tapes\\)"
+        }
+      },
+      "urls": {
         "dat": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes) (20210216-231940).dat",
-        "rom": "{base}/no-intro%20romsets/Commodore%20-%2064%20%28Tapes%29%20%2820210216-231940%29.zip/{filename}.zip"
+        "rom": "{discovery_rom}/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/c64/.nointro/{filename}.zip"
@@ -29,10 +36,17 @@
     {
       "name": "nointro-cartridges",
       "protocol": "http",
-      "urls": {
+      "discovery": {
+        "type": "nointro",
         "base": "https://***REMOVED***",
+        "metadata": "no-intro_romsets_files.xml",
+        "paths": {
+          "rom": "no-intro romsets/Commodore - 64 \\([0-9-]+\\)"
+        }
+      },
+      "urls": {
         "dat": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (20210216-232616).dat",
-        "rom": "{base}/no-intro%20romsets/Commodore%20-%2064%20%2820210216-232616%29.zip/{filename}.zip"
+        "rom": "{discovery_rom}/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/c64/.nointro/{filename}.zip"

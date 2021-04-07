@@ -4,6 +4,7 @@ import logging
 import os
 import requests
 import shutil
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -44,12 +45,21 @@ class Downloader:
 
             # Re-download the file
             logging.info(f'Downloading {source} to {destination}')
-            with requests.get(source, headers=headers, cookies=cookies, stream=True) as response:
-                response.raise_for_status()
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                # Initially download to a temporary directory so we don't overwrite until
+                # the download is completed successfully
+                download_path = Path(os.path.join(tmp_dir, Path(destination_path).stem))
 
-                with open(f'{destination_path}.tmp', 'wb') as destination_file:
-                    for chunk in response.iter_content(chunk_size=(10 * 1024 * 1024)):
-                        destination_file.write(chunk)
+                with requests.get(source, headers=headers, cookies=cookies, stream=True) as response:
+                    response.raise_for_status()
 
-            # Rename file to final destination
-            os.rename(f'{destination_path}.tmp', destination_path)
+                    # Stream the writes to avoid too much memory consumption
+                    with open(download_path, 'wb') as download_file:
+                        for chunk in response.iter_content(chunk_size=(10 * 1024 * 1024)):
+                            download_file.write(chunk)
+
+                if download_path.stat().st_size > 0:
+                    # Rename file to final destination
+                    os.rename(download_path, destination_path)
+                else:
+                    raise requests.exceptions.RequestException(response=response)

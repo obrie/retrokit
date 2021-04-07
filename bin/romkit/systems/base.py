@@ -3,6 +3,7 @@ from romkit.models import Machine, ROMSet
 
 import logging
 import os
+import traceback
 from pathlib import Path
 
 class BaseSystem:
@@ -118,7 +119,11 @@ class BaseSystem:
 
         # Install
         for machine in machines:
-            machine.install()
+            try:
+                machine.install()
+            except Exception as e:
+                logger.error(f'[{machine.name}] Install failed')
+                traceback.print_exc()
 
         # Find valid machines
         valid_machines = filter(Machine.is_valid_nonmerged, machines)

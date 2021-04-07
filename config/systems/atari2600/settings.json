@@ -13,10 +13,17 @@
     {
       "name": "nointro",
       "protocol": "http",
-      "urls": {
+      "discovery": {
+        "type": "nointro",
         "base": "https://***REMOVED***",
+        "metadata": "no-intro_romsets_files.xml",
+        "paths": {
+          "rom": "no-intro romsets/Atari - 2600"
+        }
+      },
+      "urls": {
         "dat": "file:///home/pi/retrokit/cache/nointro/Atari - 2600 (20200514-091155).dat",
-        "rom": "{base}/no-intro%20romsets/Atari%20-%202600%20%2820200514-091155%29.zip/{filename}.zip"
+        "rom": "{discovery_rom}/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/atari2600/.nointro/{filename}.zip"

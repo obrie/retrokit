@@ -1,5 +1,6 @@
 from romkit.auth import BaseAuth
 from romkit.build import BaseBuild
+from romkit.discovery import BaseDiscovery
 from romkit.formats import BaseFormat
 from romkit.models import Machine
 from romkit.util import Downloader
@@ -13,10 +14,11 @@ from urllib.parse import quote
 
 # Represents a reference ROM collection
 class ROMSet:
-    def __init__(self, system, name, protocol, url_templates, file_templates, build, format, emulator, auth):
+    def __init__(self, system, name, protocol, discovery, url_templates, file_templates, build, format, emulator, auth):
         self.system = system
         self.name = name
         self.protocol = protocol
+        self.discovery = discovery and BaseDiscovery.from_json(self, discovery)
         self.url_templates = url_templates
         self.file_templates = file_templates
         self.build = BaseBuild.from_name(build)()
@@ -34,6 +36,7 @@ class ROMSet:
             system,
             json['name'],
             json['protocol'],
+            json.get('discovery'),
             json['urls'],
             json['files'],
             json['build'],
@@ -48,8 +51,12 @@ class ROMSet:
         for key, value in args.items():
             encoded_args[key] = quote(value)
 
+        if self.discovery:
+            for key, url in self.discovery.mappings().items():
+                encoded_args[f'discovery_{key}'] = url
+
         return self.url_templates[asset_name].format(
-            base=self.url_templates['base'],
+            base=self.url_templates.get('base'),
             **encoded_args,
         )
 

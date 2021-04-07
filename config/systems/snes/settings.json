@@ -14,10 +14,17 @@
     {
       "name": "nointro",
       "protocol": "http",
-      "urls": {
+      "discovery": {
+        "type": "nointro",
         "base": "https://***REMOVED***",
+        "metadata": "no-intro_romsets_files.xml",
+        "paths": {
+          "rom": "no-intro romsets/Nintendo - Super Nintendo Entertainment System \\(Combined\\)"
+        }
+      },
+      "urls": {
         "dat": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined) (20210323-204549).dat",
-        "rom": "{base}/no-intro%20romsets/Nintendo%20-%20Super%20Nintendo%20Entertainment%20System%20%28Combined%29%20%2820210322-081126%29.zip/{filename}.zip"
+        "rom": "{discovery_rom}/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/snes/.nointro/{filename}.zip"

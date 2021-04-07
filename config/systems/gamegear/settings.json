@@ -14,10 +14,17 @@
     {
       "name": "nointro",
       "protocol": "http",
-      "urls": {
+      "discovery": {
+        "type": "nointro",
         "base": "https://***REMOVED***",
+        "metadata": "no-intro_romsets_files.xml",
+        "paths": {
+          "rom": "no-intro romsets/Sega - Game Gear"
+        }
+      },
+      "urls": {
         "dat": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear (20201227-043658).dat",
-        "rom": "{base}/no-intro%20romsets/Sega%20-%20Game%20Gear%20%2820210331-203027%29.zip/{filename}.zip"
+        "rom": "{discovery_rom}/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/gamegear/.nointro/{filename}.zip"
