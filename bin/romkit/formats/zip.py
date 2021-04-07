@@ -19,7 +19,7 @@ class ZipFormat(BaseFormat):
     # Merges ROMs from the source machine to the given target machine
     def merge(self, source, target, roms):
         source_roms = self._find_roms_in_filepath(source, source.source_filepath)
-        source_roms_by_crc = {rom.crc: rom for rom in source_roms}
+        source_roms_by_id = {rom.id: rom for rom in source_roms}
         source_zip = zipfile.ZipFile(source.source_filepath, 'r')
 
         existing_roms = self._find_roms_in_filepath(target, target.filepath)
@@ -28,7 +28,7 @@ class ZipFormat(BaseFormat):
         for rom in roms:
             existing_rom = existing_roms_by_name.get(rom.name)
             if existing_rom:
-                if rom.crc == existing_rom.crc:
+                if rom.id == existing_rom.id:
                     # ROM already exists with same CRC; skip
                     continue
                 else:
@@ -36,14 +36,14 @@ class ZipFormat(BaseFormat):
                     self.remove(target, existing_rom)
 
             # Write ROM from source
-            source_rom = source_roms_by_crc[rom.crc]
+            source_rom = source_roms_by_id[rom.id]
             with zipfile.ZipFile(target.filepath, 'a') as target_zip:
                 target_zip.writestr(rom.name, source_zip.open(source_rom.name).read())
 
     # Removes a ROM from a machine
     def remove(self, machine, rom):
         # Until https://github.com/python/cpython/pull/19358 is merged...
-        subprocess.check_call(['zip', '-d', machine.filename, rom.name])
+        subprocess.check_call(['zip', '-d', machine.filepath, rom.name])
 
     # Re-archives the file using TorrentZip for consistency with other services
     def finalize(self, machine):

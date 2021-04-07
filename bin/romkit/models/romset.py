@@ -14,13 +14,14 @@ from urllib.parse import quote
 
 # Represents a reference ROM collection
 class ROMSet:
-    def __init__(self, system, name, protocol, discovery, url_templates, file_templates, build, format, emulator, auth):
+    def __init__(self, system, name, protocol, discovery, url_templates, file_templates, rom_identifier, build, format, emulator, auth):
         self.system = system
         self.name = name
         self.protocol = protocol
         self.discovery = discovery and BaseDiscovery.from_json(self, discovery)
         self.url_templates = url_templates
         self.file_templates = file_templates
+        self.rom_identifier = rom_identifier or 'crc'
         self.build = BaseBuild.from_name(build)()
         self.format = BaseFormat.from_name(format)()
         self.emulator = emulator
@@ -39,6 +40,7 @@ class ROMSet:
             json.get('discovery'),
             json['urls'],
             json['files'],
+            json['rom_identifier'],
             json['build'],
             json['format'],
             json['emulator'],

@@ -5,12 +5,17 @@ class ROM:
     # Status when a ROM isn't actually included in the Machine
     STATUS_NO_DUMP = 'nodump'
 
-    __slots__ = ['machine', 'name', 'crc', 'external', 'source_name']
+    __slots__ = ['machine', 'id', 'name', 'crc', 'external', 'source_name']
 
     def __init__(self, machine, name, crc, source_name = None):
         self.machine = machine
         self.name = name
         self.crc = crc.lower()
+        
+        if machine.romset.rom_identifier == 'name':
+            self.id = self.name
+        else:
+            self.id = self.crc
 
         if source_name:
             self.external = True
@@ -36,14 +41,14 @@ class ROM:
 
     # Removes this ROM from the current machine
     def remove(self):
-        self.machine.format.remove(self.machine, self)
+        self.machine.romset.format.remove(self.machine, self)
 
-    # Equality based on CRC
+    # Equality based on Unique ID
     def __eq__(self, other):
         if isinstance(other, ROM):
-            return self.crc == other.crc
+            return self.id == other.id
         return False
 
-    # Hash based on CRC
+    # Hash based on Unique ID
     def __hash__(self):
-        return hash(self.crc)
+        return hash(self.id)

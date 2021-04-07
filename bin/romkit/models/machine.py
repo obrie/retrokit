@@ -10,7 +10,7 @@ class Machine:
     BASE_NAME_REGEX = re.compile(r'^[^\(]+')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
-    def __init__(self, romset, name, description, parent_name, bios_name, sample_name, device_names, controls, disk_names, roms):
+    def __init__(self, romset, name, description, parent_name, bios_name, sample_name, device_names, controls):
         self.romset = romset
         self.name = name
         self.description = description.lower()
@@ -19,8 +19,6 @@ class Machine:
         self.sample_name = sample_name
         self.device_names = device_names
         self.controls = controls
-        self.disk_names = disk_names
-        self.roms = roms
         self._local_roms = None
 
     # Whether this machine is installable
@@ -36,20 +34,12 @@ class Machine:
         # Controls
         controls = {control.get('name') for control in xml.findall('control')}
 
-        # Disks
-        dumped_disks = filter(Disk.is_installable, xml.findall('disk'))
-        disk_names = {disk.get('name') for disk in dumped_disks}
-
-        # ROMs
-        dumped_roms = filter(ROM.is_installable, xml.findall('rom'))
-        roms = {ROM.from_xml(romset, rom_xml) for rom_xml in dumped_roms}
-
         parent_name = xml.get('cloneof')
         bios_name = xml.get('romof')
         if bios_name == parent_name:
             bios_name = None
 
-        return Machine(
+        machine = Machine(
             romset,
             xml.get('name'),
             xml.find('description').text,
@@ -58,9 +48,17 @@ class Machine:
             xml.get('sampleof'),
             device_names,
             controls,
-            disk_names,
-            roms,
         )
+
+        # Disks
+        dumped_disks = filter(Disk.is_installable, xml.findall('disk'))
+        machine.disks = {Disk(self, disk.get('name')) for disk in dumped_disks}
+
+        # ROMs
+        dumped_roms = filter(ROM.is_installable, xml.findall('rom'))
+        machine.roms = {ROM.from_xml(machine, rom_xml) for rom_xml in dumped_roms}
+
+        return machine
 
     # Tracks this machine so that it can be referenced later from the romset
     def track(self):
@@ -103,10 +101,6 @@ class Machine:
     @property
     def filepath(self):
         return self.build_filepath('rom', filename=self.name)
-
-    @property
-    def disks(self):
-        return {Disk(self, name) for name in self.disk_names}
 
     # Parent machine, if applicable
     @property
