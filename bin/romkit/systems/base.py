@@ -147,4 +147,5 @@ class BaseSystem:
 
     # Whether this machine is allowed for install
     def allow(self, machine):
-        return self.favorites_filter.allow(machine) or all(filter.allow(machine) for filter in self.filters)
+        is_favorite = self.favorites_filter.allow(machine)
+        return all((is_favorite and not filter.apply_to_favorites) or filter.allow(machine) for filter in self.filters)

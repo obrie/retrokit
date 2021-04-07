@@ -109,6 +109,8 @@ class RatingFilter(ExactFilter):
 
 # Filter on the emulator known to be compatible with the machine
 class EmulatorFilter(ExactFilter):
+    apply_to_favorites = True
+    
     # Roslof compatibility list
     URL = 'https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv'
 

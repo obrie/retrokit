@@ -5,6 +5,7 @@ import tempfile
 # Provies a base class for reducing the set of machines to install
 class BaseFilter:
     name = None
+    apply_to_favorites = False
 
     def __init__(self, config, filter_values=set(), invert=False, log=True):
         self.config = config

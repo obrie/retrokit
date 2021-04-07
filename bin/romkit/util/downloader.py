@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 
 class Downloader:
     _instance = None
-    
+
     def __init__(self, auth=None):
         if auth:
             self.auth = BaseAuth.from_name(auth)()
@@ -21,6 +21,7 @@ class Downloader:
     def instance(cls):
         if cls._instance is None:
             cls._instance = cls.__new__(cls)
+            cls._instance.__init__()
         return cls._instance
 
     # Attempts to download from the given source unless either:
@@ -64,4 +65,4 @@ class Downloader:
                     # Rename file to final destination
                     os.rename(download_path, destination_path)
                 else:
-                    raise requests.exceptions.RequestException(response=response)
+                    raise requests.exceptions.HTTPError(response=response)

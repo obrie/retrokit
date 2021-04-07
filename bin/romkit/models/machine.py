@@ -52,7 +52,7 @@ class Machine:
 
         # Disks
         dumped_disks = filter(Disk.is_installable, xml.findall('disk'))
-        machine.disks = {Disk(self, disk.get('name')) for disk in dumped_disks}
+        machine.disks = {Disk(machine, disk.get('name')) for disk in dumped_disks}
 
         # ROMs
         dumped_roms = filter(ROM.is_installable, xml.findall('rom'))
