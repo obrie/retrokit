@@ -9,6 +9,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 class Downloader:
+    _instance = None
+    
     def __init__(self, auth=None):
         if auth:
             self.auth = BaseAuth.from_name(auth)()
