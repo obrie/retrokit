@@ -40,7 +40,7 @@ class ROMSet:
             json.get('discovery'),
             json['urls'],
             json['files'],
-            json['rom_identifier'],
+            json.get('rom_identifier'),
             json['build'],
             json['format'],
             json['emulator'],
