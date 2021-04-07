@@ -63,9 +63,9 @@
         "sample": "{base}/samples/{filename}.zip"
       },
       "files": {
-        "rom": "/home/pi/RetroPie/roms/arcade/.mame2003plus/{filename}.zip",
+        "rom": "/home/pi/RetroPie/roms/arcade/.mame2003-plus/{filename}.zip",
         "disk": "/home/pi/RetroPie/roms/arcade/.chd/{rom}/{filename}.chd",
-        "sample": "/home/pi/RetroPie/BIOS/mame2003plus/samples/{filename}.zip"
+        "sample": "/home/pi/RetroPie/BIOS/mame2003-plus/samples/{filename}.zip"
       },
       "build": "non-merged",
       "format": "zip",
