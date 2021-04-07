@@ -117,7 +117,7 @@
         "dat": "{base}/MAME 2016 XML (Arcade Only).xml",
         "rom": "{base}/roms.zip/roms%2F{filename}.zip",
         "disk": "https://***REMOVED***{rom}/{filename}.chd",
-        "sample": "{base}/roms.zip/samples/{filename}.zip"
+        "sample": "{base}/samples/{filename}.zip"
       },
       "files": {
         "rom": "/home/pi/RetroPie/roms/arcade/.mame2016/{filename}.zip",
