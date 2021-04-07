@@ -6,17 +6,34 @@ import csv
 import io
 import logging
 import os
+import re
 import zipfile
 import tempfile
 from pathlib import Path
 
+def scrape(url, pattern):
+    result = None
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        filepath = os.path.join(tmpdir, 'output.html')
+        Downloader.instance().get(url, filepath)
+
+        file = open(filepath, 'r')
+        for line in file:
+            match = re.search(pattern, line)
+            if match:
+                result = match.group(1)
+                break
+    
+    return result             
+
+
 def download_and_extract(url, download_file, archive_file, target_file):
-    if not Path(target_file).exists():
-        Downloader.instance().get(url, download_file)
-        with zipfile.ZipFile(download_file, 'r') as zip_ref:
-            zip_info = zip_ref.getinfo(archive_file)
-            zip_info.filename = os.path.basename(target_file)
-            zip_ref.extract(zip_info, os.path.dirname(target_file))
+    Downloader.instance().get(url, download_file)
+    with zipfile.ZipFile(download_file, 'r') as zip_ref:
+        zip_info = zip_ref.getinfo(archive_file)
+        zip_info.filename = os.path.basename(target_file)
+        zip_ref.extract(zip_info, os.path.dirname(target_file))
 
 
 def read_config(filepath):
@@ -30,16 +47,23 @@ def read_config(filepath):
 class LanguageFilter(ExactFilter):
     name = 'languages'
 
-    URL = 'https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_230.zip'
+    URL = 'https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_{version}.zip'
+    SCRAPE_URL = 'https://www.progettosnaps.net/languages/'
+    VERSION_PATTERN = r'pS_Languages_([0-9]+).zip'
     ARCHIVE_FILE = 'folders/languages.ini'
 
     def download(self):
-        download_and_extract(
-            LanguageFilter.URL,
-            f'{tempfile.gettempdir()}/languages.zip',
-            LanguageFilter.ARCHIVE_FILE,
-            f'{tempfile.gettempdir()}/languages.ini',
-        )
+        target_file = f'{tempfile.gettempdir()}/languages.ini'
+
+        if not Path(target_file).exists():
+            version = scrape(LanguageFilter.SCRAPE_URL, LanguageFilter.VERSION_PATTERN)
+
+            download_and_extract(
+                LanguageFilter.URL.format(version=version),
+                f'{tempfile.gettempdir()}/languages.zip',
+                LanguageFilter.ARCHIVE_FILE,
+                target_file,
+            )
 
     def load(self):
         self.languages = {}
@@ -57,16 +81,23 @@ class LanguageFilter(ExactFilter):
 class CategoryFilter(SubstringFilter):
     name = 'categories'
 
-    URL = 'https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_230.zip'
+    URL = 'https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_{version}.zip'
+    SCRAPE_URL = 'https://www.progettosnaps.net/catver/'
+    VERSION_PATTERN = r'pS_CatVer_([0-9]+).zip'
     ARCHIVE_FILE = 'UI_files/catlist.ini'
 
     def download(self):
-        download_and_extract(
-            CategoryFilter.URL,
-            f'{tempfile.gettempdir()}/categories.zip',
-            CategoryFilter.ARCHIVE_FILE,
-            f'{tempfile.gettempdir()}/categories.ini',
-        )
+        target_file = f'{tempfile.gettempdir()}/categories.ini'
+
+        if not Path(target_file).exists():
+            version = scrape(CategoryFilter.SCRAPE_URL, CategoryFilter.VERSION_PATTERN)
+
+            download_and_extract(
+                CategoryFilter.URL.format(version=version),
+                f'{tempfile.gettempdir()}/categories.zip',
+                CategoryFilter.ARCHIVE_FILE,
+                target_file,
+            )
 
     def load(self):
         self.categories = {}
@@ -84,16 +115,23 @@ class CategoryFilter(SubstringFilter):
 class RatingFilter(ExactFilter):
     name = 'ratings'
 
-    URL = 'https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_229.zip'
+    URL = 'https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_{version}.zip'
+    SCRAPE_URL = 'https://www.progettosnaps.net/bestgames/'
+    VERSION_PATTERN = r'pS_BestGames_([0-9]+).zip'
     ARCHIVE_FILE = 'folders/bestgames.ini'
 
     def download(self):
-        download_and_extract(
-            RatingFilter.URL,
-            f'{tempfile.gettempdir()}/ratings.zip',
-            RatingFilter.ARCHIVE_FILE,
-            f'{tempfile.gettempdir()}/ratings.ini',
-        )
+        target_file = f'{tempfile.gettempdir()}/ratings.ini'
+
+        if not Path(target_file).exists():
+            version = scrape(RatingFilter.SCRAPE_URL, RatingFilter.VERSION_PATTERN)
+
+            download_and_extract(
+                RatingFilter.URL.format(version=version),
+                f'{tempfile.gettempdir()}/ratings.zip',
+                RatingFilter.ARCHIVE_FILE,
+                target_file,
+            )
 
     def load(self):
         self.ratings = {}
