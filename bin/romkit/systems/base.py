@@ -122,7 +122,7 @@ class BaseSystem:
             try:
                 machine.install()
             except Exception as e:
-                logger.error(f'[{machine.name}] Install failed')
+                logging.error(f'[{machine.name}] Install failed')
                 traceback.print_exc()
 
         # Find valid machines
