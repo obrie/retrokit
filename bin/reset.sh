@@ -6,6 +6,9 @@
 
 set -ex
 
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. $dir/common.sh
+
 usage() {
   echo "usage: $0"
   exit 1

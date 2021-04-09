@@ -1,0 +1,19 @@
+# Fix HDMI w/ Argon case (https://forum.libreelec.tv/thread/22079-rpi4-no-hdmi-sound-using-argon-one-case/):
+hdmi_force_hotplug=1
+hdmi_group=1
+hdmi_mode=16
+hdmi_ignore_edid=0xa5000080
+
+# Disable overscan (causes black bars around screen otherwise)
+disable_overscan=1
+
+# Enable IR configuration
+dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-retropie
+
+# Disable wifi
+dtoverlay=disable-wifi
+
+[pi4]
+# Overclocking
+over_voltage=2
+arm_freq=1750

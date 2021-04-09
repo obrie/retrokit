@@ -1,11 +1,17 @@
 #!/bin/bash
 
-system="$1"
-dir=$(dirname "$0")
-. "$dir/common.sh"
+set -ex
 
-# Configurations
-system_emulators_config="/opt/retropie/configs/$system/emulators.cfg"
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. "$dir/../common.sh"
+
+system="$1"
+
+# Platform configurations
+retropie_system_config_dir"/opt/retropie/configs/$system"
+retroarch_config_dir="/opt/retropie/configs/all/retroarch"
+
+# Retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
 system_settings_file="$system_config_dir/settings.json"
 
@@ -17,7 +23,7 @@ mkdir -p "$system_tmp_dir"
 # Settings
 ##############
 
-setting() {
+system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
 
@@ -45,9 +51,9 @@ setup_emulators() {
 
     # Set default
     if [ "$is_default" == "true" ]; then
-      crudini --set "$system_emulators_config" '' 'default' "\"$emulator\""
+      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$emulator\""
     fi
-  done < <(setting ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv")
+  done < <(system_setting ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv")
 }
 
 ##############
@@ -57,7 +63,7 @@ setup_emulators() {
 # RetroArch configuration overrides
 setup_retroarch_config() {
   if [ -f "$system_config_dir/retroarch.cfg" ]; then
-    crudini --merge "$retropie_dir/config/retroarch.cfg" < "$system_config_dir/retroarch.cfg"
+    ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
   fi
 }
 
@@ -66,7 +72,7 @@ setup_retroarch_core_options() {
   # Merge game-specific overrides
   while read emulator; do
     # Retroarch
-    local retroarch_emulator_config_dir="$retroarch_dir/config/$emulator"
+    local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
     mkdir -p "$retroarch_emulator_config_dir"
 
     # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
@@ -75,17 +81,21 @@ setup_retroarch_core_options() {
       local opt_file="$retroarch_emulator_config_dir/$opt_name"
       
       touch "$opt_file"
-      crudini --merge --output="$opt_file" "$retroarch_core_options_config" < "$override_file"
+      crudini --merge --output="$opt_file" '/opt/retropie/configs/all/retroarch-core-options.cfg' < "$override_file"
     done
-  done < <(setting '.emulators[]?')
+  done < <(system_setting '.emulators[]?')
 }
 
 ##############
 # ROMKit
 ##############
 
+romkit_cli() {
+  TMPDIR="$system_tmp_dir" python3 bin/romkit/cli.py ${@} --config "$system_settings_file"
+}
+
 install_roms() {
-  TMPDIR=$system_tmp_dir python3 bin/romkit/cli.py install --config $system_settings_file
+  $(romkit_cli) install
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
@@ -104,10 +114,10 @@ set_default_emulators() {
   # Merge emulator configurations
   # 
   # This is done in one batch because it's a bit slow otherwise
-  crudini --merge "$emulators_retropie_config" < <(
+  crudini --merge '/opt/retropie/configs/all/emulators.cfg' < <(
     while read -r rom_name emulator; do
       echo "$(clean_emulator_config_key "arcade_$rom_name") = \"$emulator\""
-    done < <(TMPDIR=$system_tmp_dir python3 bin/romkit/cli.py list --config $system_settings_file --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
+    done < <($(romkit_cli) list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
   )
 }
 
@@ -117,13 +127,13 @@ set_default_emulators() {
 
 setup_cheats() {
   local cheats_dir="$retroarch_config_dir/cheats"
-  local cheats_name=$(setting '.cheats')
+  local cheats_name=$(system_setting '.cheats')
 
   # Create system-specific cheats database directory (to avoid conflicts with
   # multiple systems that have the same games and use the same emulator)
   local system_cheats_dir="$cheats_dir/$system"
   mkdir -p "$system_cheats_dir"
-  crudini --set "$retropie_configs_dir/$system/retroarch.cfg" '' 'cheat_database_path' "$system_cheats_dir"
+  crudini --set "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' "$system_cheats_dir"
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   while IFS="$tab" read emulator emulator_proper_name; do
@@ -131,7 +141,7 @@ setup_cheats() {
 
     rm -f "$emulator_cheats_dir"
     ln -fs "$cheats_dir/$cheats_name" "$emulator_cheats_dir"
-  done < <(setting '.emulators | try to_entries[] | [.key, .value.proper_name] | @tsv')
+  done < <(system_setting '.emulators | try to_entries[] | [.key, .value.proper_name] | @tsv')
 }
 
 setup_hiscores() {
@@ -139,17 +149,14 @@ setup_hiscores() {
 }
 
 ##############
-# Themes
+# Scraping
 ##############
 
 scrape() {
-  # Arguments
   local source="$1"
 
-  # Kill emulation station
-  killall /opt/retropie/supplementary/emulationstation/emulationstation || true
+  stop_emulationstation
 
-  # Scrape
   log "Scaping $system from $source"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing
 }
@@ -157,7 +164,7 @@ scrape() {
 scrape_sources() {
   while read -r source; do
     scrape "$source"
-  done < <(setting '.scraper.sources')
+  done < <(system_setting '.scraper.sources')
 }
 
 setup_gamelist() {
@@ -165,21 +172,37 @@ setup_gamelist() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
 }
 
+##############
+# Themes
+##############
+
+setup_launch_image() {
+  launch_theme=$(setting '.themes.launch_theme')
+  launch_images_base_url=$(setting ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
+
+  local system_image_name=$system
+  if [ "$system_image_name" == "megadrive" ]; then
+    system_image_name="genesis"
+  fi
+  
+  download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
+}
+
 setup_bezels() {
-  local name=$(setting '.themes.bezel')
+  local name=$(system_setting '.themes.bezel')
   local bezelproject_bin="$HOME/RetroPie/retropiemenu/bezelproject.sh"
   
-  if [ ! -d "/opt/retropie/configs/all/retroarch/overlay/GameBezels/$name" ]; then
+  if [ ! -d "$retroarch_config_dir/overlay/GameBezels/$name" ]; then
     "$bezelproject_bin" install_bezel_packsa "$name" "thebezelproject"
     "$bezelproject_bin" install_bezel_pack "$name" "thebezelproject"
   fi
 }
 
 setup_system_theme() {
-  local system_theme=$(setting '.themes.system')
+  local system_theme=$(system_setting '.themes.system')
 
   if [ -n "$system_theme" ]; then
-    xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$system_theme" "$es_systems_config"
+    xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$system_theme" "$HOME/.emulationstation/es_systems.cfg"
   fi
 }
 
@@ -195,26 +218,29 @@ usage() {
 setup() {
   # Emulator configurations
   setup_emulators
+  setup_retroarch_config
   setup_retroarch_options
 
   # Gameplay
   setup_cheats
   setup_hiscores
 
+  # Themes
+  setup_bezels
+  setup_system_theme
+  setup_launch_image
+
   # ROMs
   install_roms
   set_default_emulators
 
-  # Themes
+  # Scraping
   scrape_sources
-  setup_bezels
-  setup_system_theme
-
-  # Game data
   setup_gamelist
 }
 
 main() {
+  # Add system-specific overrides
   if [ -f "$dir/$system.sh" ]; then
     source "$dir/$system.sh"
   fi
@@ -223,3 +249,4 @@ main() {
 }
 
 main "$@"
+

@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -ex
+
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. "$dir/../common.sh"
+
+setup() {
+  local splashscreen_config='/opt/retropie/configs/all/splashscreen.cfg'
+  local splashscreen_list='/etc/splashscreen.list'
+
+  backup_and_restore "$splashscreen_config"
+  backup_and_restore "$splashscreen_list" as_sudo=true
+
+  if [ "$(setting 'has("splashscreen")')" == 'true' ]; then
+    local splashscreens_dir="$HOME/RetroPie/splashscreens"
+    local media_file="$splashscreens_dir/splash.mp4"
+    mkdir -p "$splashscreens_dir"
+
+    # Media
+    download "$(setting '.splashscreen')" "$media_file"
+    sudo sh -c "echo \"$media_file\" > \"$splashscreen_list\""
+
+    # Duration
+    local duration=$(ffprobe -i "$media_file" -show_entries format=duration -v quiet -of csv="p=0" | grep -oE "^[0-9]+")
+    .env -f "$splashscreen_config" set DURATION="\"$duration\""
+  fi
+}
+
+setup

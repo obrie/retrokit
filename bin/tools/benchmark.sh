@@ -6,6 +6,9 @@
 
 set -ex
 
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. "$dir/../common.sh"
+
 usage() {
   echo "usage: $0 <pre|post>"
   exit 1
@@ -14,8 +17,8 @@ usage() {
 run() {
   local mode=$1
 
-  sysbench --test=cpu --num-threads=4 run > /tmp/$mode-benchmark.txt
-  cat /tmp/$mode-benchmark.txt
+  sysbench --test=cpu --num-threads=4 run > $tmp_dir/$mode-benchmark.txt
+  cat $tmp_dir/$mode-benchmark.txt
   vcgencmd measure_temp
 }
 

@@ -6,8 +6,8 @@
 
 set -ex
 
-dir=$(dirname "$0")
-app_dir=$(cd "$dir/.." && pwd)
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. $dir/common.sh
 
 usage() {
   echo "usage: $0 <create|backup|restore> <device>"
@@ -29,10 +29,10 @@ create() {
   local retropie_version=4.7.1
   local raspbian_version=buster
   local rpi_version=rpi4_400
-  local image_file=/tmp/retropie.img.gz
+  local image_file="/tmp/retropie-$retropie_version-$raspbian_version-$rpi_version.img.gz"
 
   # Download Retropie
-  curl -fL# "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" -o "$image_file"
+  download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" "$image_file"
 
   # Copy the image
   gunzip --stdout "$image_file" | sudo dd bs=4M of="$device"
