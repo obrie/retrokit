@@ -12,9 +12,11 @@ download_argon() {
 }
 
 install() {
-  download_argon
-  bash "$argon_bin"
-  rm "$argon_bin"
+  if [ ! `command -v argonone-config` ]; then
+    download_argon
+    bash "$argon_bin"
+    rm "$argon_bin"
+  fi
 }
 
 uninstall() {
