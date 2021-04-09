@@ -9,10 +9,12 @@ install() {
   # Remove existing networks
 
   # Add new networks
+  echo 'No install for wifi'
 }
 
 uninstall() {
   # no-op
+  echo 'No uninstall for wifi'
 }
 
 "${@}"

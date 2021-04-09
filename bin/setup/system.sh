@@ -241,6 +241,7 @@ install() {
 
 uninstall() {
   # currently no-op
+  echo 'No uninstall for systems'
 }
 
 # Add system-specific overrides
