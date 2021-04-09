@@ -43,6 +43,9 @@ setupmodules=(
   overlays
   cheats
 
+  # Controllers
+  bluetooth
+
   # RetroPie
   runcommand
 

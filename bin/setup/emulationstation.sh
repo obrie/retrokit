@@ -28,10 +28,6 @@ install_settings() {
   done < <(sed -e '$a</settings>' -e '1s/^/<settings>/' "$overrides_config" | xmlstarlet select -t -m '/*/*' -c '.' -n)
 }
 
-install_inputs() {
-  conf_cp "$config_dir/emulationstation/es_input.cfg" "$HOME/.emulationstation/es_input.cfg"
-}
-
 install_systems() {
   # Build system order
   local system_default_config=/etc/emulationstation/es_systems.cfg
@@ -54,7 +50,6 @@ install_systems() {
 
 install() {
   install_settings
-  install_inputs
   install_systems
 }
 
