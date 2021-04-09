@@ -10,10 +10,15 @@ disable_overscan=1
 # Enable IR configuration
 dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-retropie
 
-# Disable wifi
-dtoverlay=disable-wifi
+# Switch TV to Game Mode when possible
+edid_content_type=4
 
 [pi4]
 # Overclocking
 over_voltage=2
 arm_freq=1750
+
+[all]
+
+# Disable wifi (here to avoid conflicts with the other dtoverlay)
+dtoverlay=disable-wifi

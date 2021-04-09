@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
+install() {
   # XML processing
   sudo apt install -y python3-lxml
 
@@ -26,4 +26,9 @@ setup() {
   sudo apt install -y mame-tools
 }
 
-setup
+uninstall() {
+  sudo apt remove -y mame-tools python3-xml
+  sudo rm /usr/local/bin/trrntzip
+}
+
+"${@}"

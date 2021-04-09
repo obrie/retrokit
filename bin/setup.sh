@@ -71,8 +71,10 @@ before_setup() {
 }
 
 setup_all() {
+  local action="$1"
+
   for setupmodule in "${setupmodules[@]}"; do
-    setup "$setupmodule"
+    setup "$setupmodule" "$actions"
   done
 
   # Add systems
@@ -83,7 +85,8 @@ setup_all() {
 
 setup() {
   local setupmodule="$1"
-  "$dir/setup/$setupmodule.sh"
+  local action="$2"
+  "$dir/setup/$setupmodule.sh" "$2"
 }
 
 after_setup() {
@@ -97,13 +100,14 @@ setup() {
 
 main() {
   local setupmodule="$1"
+  local action="$2"
 
   before_setup
 
   if [ -n "$setupmodule" ]; then
-    setup "$setupmodule"
+    setup "$setupmodule" "$action"
   else
-    setup_all
+    setup_all "$action"
   fi
 
   after_setup

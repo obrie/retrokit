@@ -5,10 +5,10 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
-  local splashscreen_config='/opt/retropie/configs/all/splashscreen.cfg'
-  local splashscreen_list='/etc/splashscreen.list'
+splashscreen_config='/opt/retropie/configs/all/splashscreen.cfg'
+splashscreen_list='/etc/splashscreen.list'
 
+install() {
   backup_and_restore "$splashscreen_config"
   backup_and_restore "$splashscreen_list" as_sudo=true
 
@@ -27,4 +27,9 @@ setup() {
   fi
 }
 
-setup
+uninstall() {
+  restore "$splashscreen_config"
+  restore "$splashscreen_list" as_sudo=true
+}
+
+"${@}"

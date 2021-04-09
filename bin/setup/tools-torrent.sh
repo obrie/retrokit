@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
+install() {
   sudo apt install -y transmission-daemon
   sudo systemctl stop transmission-daemon
 
@@ -14,4 +14,8 @@ setup() {
   sudo systemctl start transmission-daemon
 }
 
-setup
+uninstall() {
+  sudo apt remove -y transmission-daemon
+}
+
+"${@}"

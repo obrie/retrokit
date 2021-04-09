@@ -31,7 +31,7 @@ system_setting() {
 # Emulators
 ##############
 
-setup_emulators() {
+install_emulators() {
   while IFS="$tab" read -r emulator build branch is_default; do
     if [ "${build:-binary}" == "binary" ]; then
       # Binary install
@@ -61,14 +61,14 @@ setup_emulators() {
 ##############
 
 # RetroArch configuration overrides
-setup_retroarch_config() {
+install_retroarch_config() {
   if [ -f "$system_config_dir/retroarch.cfg" ]; then
     ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
   fi
 }
 
 # RetroArch Core options overrides
-setup_retroarch_core_options() {
+install_retroarch_core_options() {
   # Merge game-specific overrides
   while read emulator; do
     # Retroarch
@@ -125,7 +125,7 @@ set_default_emulators() {
 # Cheats / High Scores
 ##############
 
-setup_cheats() {
+install_cheats() {
   local cheats_dir="$retroarch_config_dir/cheats"
   local cheats_name=$(system_setting '.cheats')
 
@@ -144,7 +144,7 @@ setup_cheats() {
   done < <(system_setting '.emulators | try to_entries[] | [.key, .value.proper_name] | @tsv')
 }
 
-setup_hiscores() {
+install_hiscores() {
   # Nothing by default
 }
 
@@ -167,7 +167,7 @@ scrape_sources() {
   done < <(system_setting '.scraper.sources')
 }
 
-setup_gamelist() {
+build_gamelist() {
   log "Building gamelist for $system"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
 }
@@ -176,7 +176,7 @@ setup_gamelist() {
 # Themes
 ##############
 
-setup_launch_image() {
+install_launch_image() {
   launch_theme=$(setting '.themes.launch_theme')
   launch_images_base_url=$(setting ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
 
@@ -188,7 +188,7 @@ setup_launch_image() {
   download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
 }
 
-setup_bezels() {
+install_bezels() {
   local name=$(system_setting '.themes.bezel')
   local bezelproject_bin="$HOME/RetroPie/retropiemenu/bezelproject.sh"
   
@@ -215,20 +215,20 @@ usage() {
   exit 1
 }
 
-setup() {
+install() {
   # Emulator configurations
-  setup_emulators
-  setup_retroarch_config
-  setup_retroarch_options
+  install_emulators
+  install_retroarch_config
+  install_retroarch_options
 
   # Gameplay
-  setup_cheats
-  setup_hiscores
+  install_cheats
+  install_hiscores
 
   # Themes
-  setup_bezels
+  install_bezels
+  install_launch_image
   setup_system_theme
-  setup_launch_image
 
   # ROMs
   install_roms
@@ -236,17 +236,16 @@ setup() {
 
   # Scraping
   scrape_sources
-  setup_gamelist
+  build_gamelist
 }
 
-main() {
-  # Add system-specific overrides
-  if [ -f "$dir/$system.sh" ]; then
-    source "$dir/$system.sh"
-  fi
-
-  "$2" "$@{2:}"
+uninstall() {
+  # currently no-op
 }
 
-main "$@"
+# Add system-specific overrides
+if [ -f "$dir/$system.sh" ]; then
+  source "$dir/$system.sh"
+fi
 
+"$@"

@@ -16,4 +16,10 @@ setup() {
   sudo apt install -y jq
 }
 
-setup
+uninstall() {
+  sudo pip3 uninstall crudini
+  rm -f "$tmp_dir/dotenv"
+  sudo apt remove -y jq
+}
+
+"${@}"

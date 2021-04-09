@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_settings() {
+install_settings() {
   local es_settings_config="$HOME/.emulationstation/es_settings.cfg"
   local overrides_config="$config_dir/emulationstation/es_settings.cfg"
 
@@ -28,15 +28,17 @@ setup_settings() {
   done < <(sed -e '$a</settings>' -e '1s/^/<settings>/' "$overrides_config" | xmlstarlet select -t -m '/*/*' -c '.' -n)
 }
 
-setup_inputs() {
+install_inputs() {
   conf_cp "$config_dir/emulationstation/es_input.cfg" "$HOME/.emulationstation/es_input.cfg"
 }
 
-setup_systems() {
+install_systems() {
   # Build system order
   local system_default_config=/etc/emulationstation/es_systems.cfg
-  local system_override_config=$HOME/.emulationstation/es_systems.cfg
+  local system_override_config="$HOME/.emulationstation/es_systems.cfg"
   printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
+
+  backup_and_restore "$system_override_config"
 
   # Add primary systems used by retrokit
   while read system; do
@@ -50,10 +52,16 @@ setup_systems() {
   printf '</systemList>\n' >> "$system_override_config"
 }
 
-setup() {
-  setup_settings
-  setup_inputs
-  setup_systems
+install() {
+  install_settings
+  install_inputs
+  install_systems
 }
 
-setup
+uninstall() {
+  restore "$HOME/.emulationstation/es_settings.cfg"
+  restore "$HOME/.emulationstation/es_input.cfg"
+  restore "$HOME/.emulationstation/es_systems.cfg"
+}
+
+"${@}"

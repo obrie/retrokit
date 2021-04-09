@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
+install() {
   local cheats_zip="$tmp_dir/cheats.zip"
 
   download 'http://buildbot.libretro.com/assets/frontend/cheats.zip' "$cheats_zip"
@@ -13,4 +13,8 @@ setup() {
   rm "$cheats_zip"
 }
 
-setup
+uninstall() {
+  
+}
+
+"${@}"

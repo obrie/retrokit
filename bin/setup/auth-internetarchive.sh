@@ -5,9 +5,9 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
-  local ia_bin="/usr/local/bin/ia"
+ia_bin="/usr/local/bin/ia"
 
+install() {
   # Install CLI
   if [ ! -s "$ia_bin" ]; then
     download "https://archive.org/download/ia-pex/ia" "$tmp_dir/ia"
@@ -19,4 +19,8 @@ setup() {
   ia configure -u "$IA_USERNAME" -p "$IA_PASSWORD"
 }
 
-setup
+uninstall() {
+  sudo rm -f "$ia_bin" "$HOME/.ia"
+}
+
+"${@}"

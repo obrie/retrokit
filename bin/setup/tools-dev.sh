@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup() {
+install() {
   # Benchmarking
   sudo apt install -y sysbench
 
@@ -16,4 +16,8 @@ setup() {
   sudo apt install -y mesa-utils
 }
 
-setup
+uninstall() {
+  sudo apt remove -y mesa-utils screen sysbench
+}
+
+"${@}"

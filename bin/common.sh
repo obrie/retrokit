@@ -77,6 +77,9 @@ restore() {
   if [ -f "$backup_file" ]; then
     log "Restoring: $backup_file to $file"
     $cmd cp "$backup_file" "$file"
+  else
+    log "Restoring: $file to non-existent"
+    rm "$file"
   fi
 }
 
