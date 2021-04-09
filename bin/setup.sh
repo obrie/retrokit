@@ -89,10 +89,6 @@ setup() {
   "$dir/setup/$setupmodule.sh" "$action"
 }
 
-after_setup() {
-  emulationstation || log 'Unable to start emulationstation'
-}
-
 main() {
   local action="$1"
   local setupmodule="$2"
@@ -104,8 +100,6 @@ main() {
   else
     setup_all "$action"
   fi
-
-  after_setup
 }
 
 if [[ $# -gt 2 ]]; then
