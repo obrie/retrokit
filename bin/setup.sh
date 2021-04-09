@@ -84,28 +84,23 @@ setup_all() {
 }
 
 setup() {
-  local setupmodule="$1"
-  local action="$2"
-  "$dir/setup/$setupmodule.sh" "$2"
+  local action="$1"
+  local setupmodule="$2"
+  "$dir/setup/$setupmodule.sh" "$action"
 }
 
 after_setup() {
-  emulationstation
-}
-
-setup() {
-  # Reset inputs
-  sudo $HOME/RetroPie-Setup/retropie_packages.sh emulationstation init_input
+  emulationstation || log 'Unable to start emulationstation'
 }
 
 main() {
-  local setupmodule="$1"
-  local action="$2"
+  local action="$1"
+  local setupmodule="$2"
 
   before_setup
 
   if [ -n "$setupmodule" ]; then
-    setup "$setupmodule" "$action"
+    setup "$action" "$setupmodule"
   else
     setup_all "$action"
   fi
@@ -113,7 +108,7 @@ main() {
   after_setup
 }
 
-if [[ $# -gt 1 ]]; then
+if [[ $# -gt 2 ]]; then
   usage
 fi
 
