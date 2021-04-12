@@ -231,6 +231,7 @@ usage() {
 install() {
   # Emulator configurations
   install_emulators
+  install_bios
   install_retroarch_config
   install_retroarch_options
 
