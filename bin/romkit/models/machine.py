@@ -1,7 +1,6 @@
-from romkit.models import Disk, ROM, Sample
+from romkit.models import Disk, File, Sample
 
 import logging
-import os
 import re
 from pathlib import Path
 
@@ -10,7 +9,16 @@ class Machine:
     BASE_NAME_REGEX = re.compile(r'^[^\(]+')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
-    def __init__(self, romset, name, description, parent_name, bios_name, sample_name, device_names, controls):
+    def __init__(self,
+        romset,
+        name,
+        description='',
+        parent_name=None,
+        bios_name=None,
+        sample_name=None,
+        device_names=set(),
+        controls=set(),
+    ):
         self.romset = romset
         self.name = name
         self.description = description.lower()
@@ -19,7 +27,8 @@ class Machine:
         self.sample_name = sample_name
         self.device_names = device_names
         self.controls = controls
-        self._local_roms = None
+        self.disks = set()
+        self.roms = set()
 
     # Whether this machine is installable
     @staticmethod
@@ -55,8 +64,11 @@ class Machine:
         machine.disks = {Disk(machine, disk.get('name')) for disk in dumped_disks}
 
         # ROMs
-        dumped_roms = filter(ROM.is_installable, xml.findall('rom'))
-        machine.roms = {ROM.from_xml(machine, rom_xml) for rom_xml in dumped_roms}
+        dumped_roms = filter(File.is_installable, xml.findall('rom'))
+        machine.roms = {
+            File.from_xml(rom_xml, file_identifier=machine.resource.file_identifier)
+            for rom_xml in dumped_roms
+        }
 
         return machine
 
@@ -87,20 +99,10 @@ class Machine:
         else:
             return ''
 
-    # The URL from which the data for this machine will be sourced
+    # Target destination for installing this sample
     @property
-    def source_url(self):
-        return self.romset.build.source_url_for(self)
-
-    # The file on the filesystem from which data for this machine will be sourced
-    @property
-    def source_filepath(self):
-        return self.romset.build.source_filepath_for(self)
-
-    # Gets the file path for this machine
-    @property
-    def filepath(self):
-        return self.build_filepath('rom', filename=self.name)
+    def resource(self):
+        return self.romset.resource('machine', machine=self.name, parent=(self.parent_name or self.name))
 
     # Parent machine, if applicable
     @property
@@ -129,6 +131,8 @@ class Machine:
     def dependent_machine_names(self):
         names = {self.name}
         names.update(self.device_names)
+        if self.parent_name:
+            names.add(self.parent_name)
         if self.bios_name:
             names.add(self.bios_name)
 
@@ -146,7 +150,10 @@ class Machine:
     # ROMs installed from the parent
     @property
     def roms_from_parent(self):
-        return set(filter(lambda rom: rom.external, self.roms))
+        if self.parent_machine:
+            return self.parent_machine.roms & self.roms
+        else:
+            return set()
 
     # ROMs installed directly from this machine
     @property
@@ -162,17 +169,6 @@ class Machine:
 
         return all_roms
 
-    # ROMs currently installed locally on the filesystem for this machine
-    # 
-    # NOTE this is cached, so if you want to pull a fresh list from the filesystem,
-    # you need to reset _local_roms.
-    @property
-    def local_roms(self):
-        if not self._local_roms:
-            self._local_roms = self.romset.format.find_local_roms(self)
-
-        return self._local_roms
-
     # Audio sample
     @property
     def sample(self):
@@ -183,44 +179,36 @@ class Machine:
     def dump(self):
         return {'name': self.name, 'romset': self.romset.name, 'emulator': self.romset.emulator}
 
-    # Generates a romset-level URL for an asset for this machine
-    def build_url(self, asset_name, **args):
-        return self.romset.build_url(asset_name, rom=self.name, **args)
-
-    # Generates a romset-level filepath for an asset for this machine
-    def build_filepath(self, asset_name, **args):
-        return self.romset.build_filepath(asset_name, rom=self.name, **args)
-
     # Generates a system-level filepath for an asset for this machine
-    def build_system_filepath(self, dir_name, asset_name, **args):
-        return self.romset.system.build_filepath(dir_name, asset_name, rom=self.name, **args)
+    def build_system_filepath(self, dir_name, resource_name, **args):
+        return self.romset.system.build_filepath(dir_name, resource_name, machine=self.name, **args)
 
     # Determines whether the locally installed set of ROMs is a superset of the ROMs installed
     # just for this machine
-    def is_valid(self):
-        return not any(self.roms_from_self - self.local_roms)
+    # def is_valid(self):
+    #     return self.resource.contains(self.roms_from_self)
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
     def is_valid_nonmerged(self):
-        return not any(self.non_merged_roms - self.local_roms)
+        return self.resource.contains(self.non_merged_roms)
 
     # Installs this machine onto the local filesystem
     def install(self):
         # Self
-        self.merge(self, self.roms_from_self)
+        self.install_from(self, self.roms_from_self)
 
         # Parent
         if self.parent_machine:
-            self.merge(self.parent_machine, self.roms_from_parent)
+            self.install_from(self.parent_machine, self.roms_from_parent)
 
         # BIOS
         if self.bios_machine:
-            self.merge(self.bios_machine, self.bios_machine.roms)
+            self.install_from(self.bios_machine, self.bios_machine.roms)
 
         # Devices
         for device_machine in self.device_machines:
-            self.merge(device_machine, device_machine.roms)
+            self.install_from(device_machine, device_machine.roms)
 
         # Disks
         for disk in self.disks:
@@ -230,51 +218,30 @@ class Machine:
         if self.sample:
             self.sample.install()
 
-        self.clean()
-        self.romset.format.finalize(self)
-
-    # Whether this machine needs to be merged with the given machine
-    def needs_merge(self, roms):
-        return any(roms - self.local_roms)
-
-    def merge(self, source_machine, roms):
+    def install_from(self, source_machine, roms):
         if not source_machine:
             return
 
-        if self.needs_merge(roms):
-            # Download the source
-            source_machine.download()
+        if self.resource.contains(roms):
+            logging.info(f'[{self.name}] Already installed {source_machine.name}')
+        else:
+            # Re-download the source machine if it's missing files
+            if not source_machine.resource.download_path.contains(self.roms_from_self):
+                source_machine.resource.download(force=True)
 
-        # Need to check once more in case the source is the same as the target
-        if self.needs_merge(roms):
-            logging.info(f'[{self.name}] Merging from {source_machine.name}')
-            self.romset.format.merge(source_machine, self, roms)
-            self._local_roms = None
-
-    # Downloads the machine (if necessary)
-    def download(self):
-        if not self.is_valid():
-            self.romset.download(self.source_url, self.source_filepath, force=True)
+            logging.info(f'[{self.name}] Installing from {source_machine.name}')
+            self.resource.install(source_resource=source_machine.resource, files=roms, force=True)
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self):
-        extra_roms = self.local_roms - self.non_merged_roms
-        for rom in extra_roms:
-            logging.info(f'[{self.name}] Deleting unused file {rom.name}')
-            rom.remove()
-
-        # Reset rom list
-        self._local_roms = None
+        # Clean the resource
+        self.resource.clean(self.non_merged_roms)
 
     # Enables this machine to be visible to the emulator
     def enable(self, dirname):
         logging.info(f'[{self.name}] Enabling in: {dirname}')
         
-        # Ensure target directory exists
-        target_filepath = self.build_system_filepath(dirname, 'rom', filename=self.name)
-        Path(os.path.dirname(target_filepath)).mkdir(parents=True, exist_ok=True)
-
-        os.symlink(self.filepath, target_filepath)
+        self.resource.symlink(self.build_system_filepath(dirname, 'machine'))
 
         for disk in self.disks:
             disk.enable(dirname)

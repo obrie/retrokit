@@ -6,55 +6,69 @@
   },
   "emulators": {
     "lr-dosbox": {"proper_name": "Dosbox", "default": true},
-    "lr-dosbox-pure": {"proper_name": "DosboxPure", "default": true}
+    "lr-dosbox-pure": {"proper_name": "DosboxPure"}
   },
+  "romsets": [
+    {
+      "name": "the_eye",
+      "protocol": "http",
+      "url": "https://the-eye.eu/public/Games/eXo/eXoDOS_v5/eXo/eXoDOS",
+      "resources": {
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "/home/pi/RetroPie/roms/pc/.exodos/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/pc/.exodos/{machine}",
+          "install": {"action": "zip_extract", "include_parent": false}
+        }
+      },
+      "datlist": [
+        "Arkanoid (1988)",
+        "Arkanoid II - Revenge of Doh (1989)",
+        "American Gladiators (1992)",
+        "Bubble Bobble (1988)",
+        "California Games (1988)",
+        "California Games II (1990)",
+        "Carmageddon Max Pack (1998)",
+        "Death Rally (1996)",
+        "Descent (1995)",
+        "Descent II (1996)",
+        "DOOM (1993)",
+        "Disney's Aladdin (1994)",
+        "Disney's Beauty and the Beast - Be Our Guest (1992)",
+        "Duke Nukem 3D (1996)",
+        "Duke Nukem 3D - Atomic Edition (1996)",
+        "Earthworm Jim (1995)",
+        "Earthworm Jim 2 (1996)",
+        "Epic Pinball - The Complete Collection (1995)",
+        "Family Feud (1987)",
+        "Number Munchers (1990)",
+        "Oregon Trail Deluxe, The (1992)",
+        "Oregon Trail, The (1990)",
+        "Pitfall II - Lost Caverns (1984)",
+        "Quake (1996)",
+        "Prince of Persia (1990)",
+        "Rise of the Triad - Dark War (1994)",
+        "Sid Meier's Civilization (1991)",
+        "SimCity (1989)",
+        "SimCity 2000 - CD Collection (1994)",
+        "Skate or Die (1988)",
+        "Star Wars - Rebel Assault (1993)",
+        "Star Wars - Rebel Assault II - The Hidden Empire (1995)",
+        "Star Wars X-Wing (Collector's CD-ROM) (1994)",
+        "Theme Park (1994)",
+        "Tomb Raider Gold (1998)",
+        "Where in the World is Carmen Sandiego (1985)",
+        "Wolfenstein 3D (1992)"
+      ],
+      "emulator": "lr-dosbox"
+    }
+  ],
   "roms": {
-    "sets": {
-      "dos-the_eye-torrent": {
-        "protocol": "http",
-        "url": "https://***REMOVED***",
-        "roms": "eXoDOS/eXo/eXoDOS/",
-        "files": [
-          "Arkanoid (1988).zip",
-          "Arkanoid II - Revenge of Doh (1989).zip",
-          "American Gladiators (1992).zip",
-          "Bubble Bobble (1988).zip",
-          "California Games (1988).zip",
-          "California Games II (1990).zip",
-          "Carmageddon Max Pack (1998).zip",
-          "Death Rally (1996).zip",
-          "Descent (1995).zip",
-          "Descent II (1996).zip",
-          "DOOM (1993).zip",
-          "Disney's Aladdin (1994).zip",
-          "Disney's Beauty and the Beast - Be Our Guest (1992).zip",
-          "Duke Nukem 3D (1996).zip",
-          "Duke Nukem 3D - Atomic Edition (1996).zip",
-          "Earthworm Jim (1995).zip",
-          "Earthworm Jim 2 (1996).zip",
-          "Epic Pinball - The Complete Collection (1995).zip",
-          "Family Feud (1987).zip",
-          "Number Munchers (1990).zip",
-          "Oregon Trail Deluxe, The (1992).zip",
-          "Oregon Trail, The (1990).zip",
-          "Pitfall II - Lost Caverns (1984).zip",
-          "Quake (1996).zip",
-          "Prince of Persia (1990).zip",
-          "Rise of the Triad - Dark War (1994).zip",
-          "Sid Meier's Civilization (1991).zip",
-          "SimCity (1989).zip",
-          "SimCity 2000 - CD Collection (1994).zip",
-          "Skate or Die (1988).zip",
-          "Star Wars - Rebel Assault (1993).zip",
-          "Star Wars - Rebel Assault II - The Hidden Empire (1995).zip",
-          "Star Wars X-Wing (Collector's CD-ROM) (1994).zip",
-          "Theme Park (1994).zip",
-          "Tomb Raider Gold (1998).zip",
-          "Where in the World is Carmen Sandiego (1985).zip",
-          "Wolfenstein 3D (1992).zip"
-        ],
-        "unzip": true
-      }
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/pc"
+    },
+    "files": {
+      "machine": "{dir}/{machine}"
     }
   }
 }

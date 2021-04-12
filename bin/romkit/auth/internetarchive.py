@@ -1,7 +1,6 @@
 from romkit.auth import BaseAuth
 
 import configparser
-import os
 from pathlib import Path
 from urllib.parse import unquote
 

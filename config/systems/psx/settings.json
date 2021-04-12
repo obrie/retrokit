@@ -10,35 +10,56 @@
     "lr-pcsx-rearmed": {"proper_name": "PCSX-ReARMed", "default": true}
   },
   "cheats": "Sony - PlayStation",
+  "bios": {
+    "url": "https://github.com/Abdess/retroarch_system/blob/Other/Sony%20-%20PlayStation",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "psxonpsp660.bin": "{url}/PSXONPSP660.BIN?raw=true",
+      "scph101.bin": "{url}/scph101.bin?raw=true",
+      "scph7001.bin": "{url}/scph7001.bin?raw=true",
+      "scph5501.bin": "{url}/scph5501.bin?raw=true",
+      "scph1001.bin": "{url}/scph1001.bin?raw=true"
+    }
+  },
   "romsets": [
     {
-      "name": "the_eye",
+      "name": "redump",
       "protocol": "http",
-      "urls": {
-        "base": "https://***REMOVED***Playstation/Games/NTSC",
-        "dat": "file:///home/pi/retrokit/cache/redump/Sony - PlayStation.dat",
-        "rom": "{base}/{filename}.zip"
+      "url": "https://***REMOVED***Playstation/Games/NTSC",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/psx/",
+          "download": "/home/pi/RetroPie/roms/psx/.redump/roms.zip",
+          "target": "/home/pi/RetroPie/roms/psx/.redump/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
       },
-      "files": {
-        "rom": "/home/pi/RetroPie/roms/psx/.redump/{filename}.chd"
-      },
-      "build": "non-merged",
-      "format": "zip2chd",
       "emulator": "lr-pcsx-rearmed"
     },
     {
       "name": "redump",
       "protocol": "http",
-      "urls": {
-        "base": "https://***REMOVED***",
-        "dat": "file:///home/pi/retrokit/cache/redump/Sony - PlayStation.dat",
-        "rom": "{base}/{filename}.zip"
+      "url": "https://***REMOVED***",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/psx/",
+          "download": "/home/pi/RetroPie/roms/psx/.redump/roms.zip",
+          "target": "/home/pi/RetroPie/roms/psx/.redump/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
       },
-      "files": {
-        "rom": "/home/pi/RetroPie/roms/psx/.redump/{filename}.zip"
-      },
-      "build": "non-merged",
-      "format": "zip2chd",
       "emulator": "lr-pcsx-rearmed"
     }
   ],
@@ -48,25 +69,23 @@
       "favorites": "/home/pi/RetroPie/roms/psx"
     },
     "files": {
-      "rom": "{dir}/{filename}.chd"
+      "machine": "{dir}/{machine}.chd"
     },
-    "allowlists": {
-      "names": [
-        "Disney's The Little Mermaid II (USA)",
-        "Extreme Pinball (USA)",
-        "NFL Blitz (USA)",
-        "NHL 99 (USA)",
-        "Tekken (USA)",
-        "Tomb Raider (USA) (Rev 1)",
-        "Tony Hawk's Pro Skater (USA)",
-        "Tony Hawk's Pro Skater 2 (USA)",
-        "Tony Hawk's Pro Skater 3 (USA)",
-        "Tony Hawk's Pro Skater 4 (USA)",
-        "Worms (USA)",
-        "Worms Armageddon (USA)",
-        "You Don't Know Jack (USA) (Disc 1)",
-        "You Don't Know Jack (USA) (Disc 2)"
-      ]
-    }
+    "favorites": [
+      "Disney's The Little Mermaid II (USA)",
+      "Extreme Pinball (USA)",
+      "NFL Blitz (USA)",
+      "NHL 99 (USA)",
+      "Tekken (USA)",
+      "Tomb Raider (USA) (Rev 1)",
+      "Tony Hawk's Pro Skater (USA)",
+      "Tony Hawk's Pro Skater 2 (USA)",
+      "Tony Hawk's Pro Skater 3 (USA)",
+      "Tony Hawk's Pro Skater 4 (USA)",
+      "Worms (USA)",
+      "Worms Armageddon (USA)",
+      "You Don't Know Jack (USA) (Disc 1)",
+      "You Don't Know Jack (USA) (Disc 2)"
+    ]
   }
 }

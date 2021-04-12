@@ -1,11 +1,10 @@
 from romkit.auth import BaseAuth
 
 import logging
-import os
 import requests
 import shutil
 import tempfile
-from pathlib import Path
+from pathlib import Path, PurePath
 from urllib.parse import urlparse
 
 class Downloader:
@@ -38,31 +37,31 @@ class Downloader:
         source_uri = urlparse(source)
         destination_path = Path(destination)
 
+        # Ensure directory exists
+        Path(destination).parent.mkdir(parents=True, exist_ok=True)
+
         if source_uri.scheme == 'file':
             # Copy directly from the filesystem
             logging.info(f'Copying {source} to {destination}')
             shutil.copyfile(source_uri.path, destination)
         elif not destination_path.exists() or destination_path.stat().st_size == 0 or force:
-            # Ensure directory exists
-            Path(os.path.dirname(destination_path)).mkdir(parents=True, exist_ok=True)
-
             # Re-download the file
             logging.info(f'Downloading {source} to {destination}')
             with tempfile.TemporaryDirectory() as tmp_dir:
                 # Initially download to a temporary directory so we don't overwrite until
                 # the download is completed successfully
-                download_path = Path(os.path.join(tmp_dir, Path(destination_path).stem))
+                download_path = Path(tmp_dir).joinpath(Path(destination_path).stem)
 
                 with requests.get(source, headers=headers, cookies=cookies, stream=True) as response:
                     response.raise_for_status()
 
                     # Stream the writes to avoid too much memory consumption
-                    with open(download_path, 'wb') as download_file:
+                    with download_path.open('wb') as download_file:
                         for chunk in response.iter_content(chunk_size=(10 * 1024 * 1024)):
                             download_file.write(chunk)
 
                 if download_path.stat().st_size > 0:
                     # Rename file to final destination
-                    os.rename(download_path, destination_path)
+                    download_path.rename(destination_path)
                 else:
                     raise requests.exceptions.HTTPError(response=response)

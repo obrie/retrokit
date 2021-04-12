@@ -11,6 +11,13 @@
     "lr-genesis-plus-gx": {"proper_name": "Genesis Plus GX", "default": true}
   },
   "cheats": "Sega - Mega Drive - Genesis",
+  "bios": {
+    "url": "https://github.com/Abdess/retroarch_system/blob/BIOSes/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "bios_MD.bin": "{url}/bios_MD.bin?raw=true"
+    }
+  },
   "romsets": [
     {
       "name": "nointro",
@@ -20,19 +27,20 @@
         "base": "https://***REMOVED***",
         "metadata": "no-intro_romsets_files.xml",
         "paths": {
-          "rom": "no-intro romsets/Sega - Mega Drive - Genesis"
+          "url": "no-intro romsets/Sega - Mega Drive - Genesis"
         }
       },
-      "urls": {
-        "dat": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis (20210316-003553).dat",
-        "rom": "{discovery_rom}/{filename}.zip"
-      },
-      "files": {
-        "rom": "/home/pi/RetroPie/roms/megadrive/.nointro/{filename}.zip"
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis (20210316-003553).dat",
+          "target": "/home/pi/RetroPie/roms/megadrive/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/megadrive/.nointro/{machine}.zip"
+        }
       },
       "auth": "internetarchive",
-      "build": "non-merged",
-      "format": "zip",
       "emulator": "lr-genesis-plus-gx"
     }
   ],
@@ -42,7 +50,7 @@
       "favorites": "/home/pi/RetroPie/roms/megadrive"
     },
     "files": {
-      "rom": "{dir}/{filename}.zip"
+      "rom": "{dir}/{machine}.zip"
     },
     "priority": [
       "usa",

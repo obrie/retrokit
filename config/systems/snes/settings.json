@@ -19,19 +19,20 @@
         "base": "https://***REMOVED***",
         "metadata": "no-intro_romsets_files.xml",
         "paths": {
-          "rom": "no-intro romsets/Nintendo - Super Nintendo Entertainment System \\(Combined\\)"
+          "url": "no-intro romsets/Nintendo - Super Nintendo Entertainment System \\(Combined\\)"
         }
       },
-      "urls": {
-        "dat": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined) (20210323-204549).dat",
-        "rom": "{discovery_rom}/{filename}.zip"
-      },
-      "files": {
-        "rom": "/home/pi/RetroPie/roms/snes/.nointro/{filename}.zip"
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined) (20210323-204549).dat",
+          "target": "/home/pi/RetroPie/roms/snes/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/snes/.nointro/{machine}.zip"
+        }
       },
       "auth": "internetarchive",
-      "build": "non-merged",
-      "format": "zip",
       "emulator": "lr-snes9x"
     }
   ],
@@ -41,7 +42,7 @@
       "favorites": "/home/pi/RetroPie/roms/snes"
     },
     "files": {
-      "rom": "{dir}/{filename}.zip"
+      "rom": "{dir}/{machine}.zip"
     },
     "priority": [
       "usa",

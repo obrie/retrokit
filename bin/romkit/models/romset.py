@@ -1,33 +1,34 @@
 from romkit.auth import BaseAuth
-from romkit.build import BaseBuild
 from romkit.discovery import BaseDiscovery
-from romkit.formats import BaseFormat
 from romkit.models import Machine
+from romkit.resources import ResourceTemplate
 from romkit.util import Downloader
 
 import logging
 import lxml.etree
-import os
 import tempfile
-from pathlib import Path
-from urllib.parse import quote
 
 # Represents a reference ROM collection
 class ROMSet:
-    def __init__(self, system, name, protocol, discovery, url_templates, file_templates, rom_identifier, build, format, emulator, auth):
+    def __init__(self, system, name, protocol, url, discovery, resources, emulator, auth, datlist=None):
         self.system = system
         self.name = name
         self.protocol = protocol
-        self.discovery = discovery and BaseDiscovery.from_json(self, discovery)
-        self.url_templates = url_templates
-        self.file_templates = file_templates
-        self.rom_identifier = rom_identifier or 'crc'
-        self.build = BaseBuild.from_name(build)()
-        self.format = BaseFormat.from_name(format)()
+        self.url = url
         self.emulator = emulator
         self.downloader = Downloader(auth=auth)
-        self.machines = {}
 
+        # Configure resources
+        discovery = discovery and BaseDiscovery.from_json(self, discovery)
+        self.resource_templates = {
+            name: ResourceTemplate.from_json(config, discovery, self.downloader, {'url': url})
+            for name, config in resources.items()
+        }
+
+        # Internal dat list for systems that don't have dat files
+        self.datlist = datlist
+
+        self.machines = {}
         self.load()
 
     # Builds a ROMSet from the given JSON data
@@ -37,49 +38,33 @@ class ROMSet:
             system,
             json['name'],
             json['protocol'],
+            json.get('url'),
             json.get('discovery'),
-            json['urls'],
-            json['files'],
-            json.get('rom_identifier'),
-            json['build'],
-            json['format'],
+            json['resources'],
             json['emulator'],
             json.get('auth'),
-        )
-
-    # Builds a URL for an asset in this romset
-    def build_url(self, asset_name, **args):
-        encoded_args = {}
-        for key, value in args.items():
-            encoded_args[key] = quote(value)
-
-        if self.discovery:
-            for key, url in self.discovery.mappings().items():
-                encoded_args[f'discovery_{key}'] = url
-
-        return self.url_templates[asset_name].format(
-            base=self.url_templates.get('base'),
-            **encoded_args,
-        )
-
-    # Builds the local filepath for an asset in this romset
-    def build_filepath(self, asset_name, **args):
-        return self.file_templates[asset_name].format(
-            home=str(Path.home()),
-            **args,
+            json.get('datlist'),
         )
 
     # Looks up the machine with the given name
     def machine(self, name):
         return self.machines.get(name)
 
-    # Downloads files needed for this romset
-    def download(self, *args, **kwargs):
-        self.downloader.get(*args, **kwargs)
+    # Looks up the resource with the given name
+    def resource(self, name, **args):
+        resource_template = self.resource_templates.get(name)
+        if resource_template:
+            return resource_template.get(**args)
+
+    # Gets the DAT file for this romset
+    @property
+    def dat(self):
+        return self.resource('dat')
 
     # Loads downloaded data into this romset
     def load(self):
-        self.download(self.build_url('dat'), f"{tempfile.gettempdir()}/{self.system.name}-{self.name}.dat")
+        if self.dat:
+            self.dat.install()
 
     # Tracks the machine so that it can be referenced at a later point
     def track(self, machine):
@@ -92,15 +77,21 @@ class ROMSet:
 
     # Looks up the machines in the dat file
     def iter_machines(self):
-        doc = lxml.etree.iterparse(f"{tempfile.gettempdir()}/{self.system.name}-{self.name}.dat", tag=('game', 'machine'))
-        _, root = next(doc)
+        if self.datlist:
+            # Read from an internal dat list
+            for name in self.datlist:
+                yield Machine(self, name)
+        else:
+            # Read from an external dat file
+            doc = lxml.etree.iterparse(self.dat.target_path.path, tag=('game', 'machine'))
+            _, root = next(doc)
 
-        for event, element in doc:
-            if Machine.is_installable(element):
-                yield Machine.from_xml(self, element)
-            else:
-                logging.info(f"[{element.get('name')}] Ignored (not installable)")
-            
-            element.clear()
+            for event, element in doc:
+                if Machine.is_installable(element):
+                    yield Machine.from_xml(self, element)
+                else:
+                    logging.info(f"[{element.get('name')}] Ignored (not installable)")
+                
+                element.clear()
 
-        root.clear()
+            root.clear()

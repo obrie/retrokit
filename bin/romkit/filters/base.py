@@ -1,5 +1,4 @@
 import logging
-import os
 import tempfile
 
 # Provies a base class for reducing the set of machines to install

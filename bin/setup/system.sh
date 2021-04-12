@@ -56,6 +56,19 @@ install_emulators() {
   done < <(system_setting ".emulators | to_entries[] | [.key, .value.build, .value.branch, .value.default] | @tsv")
 }
 
+# Install BIOS files required by emulators
+install_bios() {
+  download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
+
+  local bios_dir=$(system_setting '.bios.dir')
+  local base_url=$(system_setting '.bios.url')
+
+  while IFS="$tab" read -r bios_name bios_url_template; do
+    local bios_url="${bios_url_template/\{url\}/$base_url}"
+    download "$bios_url" "$bios_dir/$bios_name"
+  done < <(system_setting '.bios.files | to_entries[] | [.key, .value] | @tsv')
+}
+
 ##############
 # Configurations
 ##############

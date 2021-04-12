@@ -2,7 +2,6 @@ from romkit.filters.base import FlagFilter, KeywordFilter, NameFilter, CloneFilt
 from romkit.models import Machine, ROMSet
 
 import logging
-import os
 import traceback
 from pathlib import Path
 
@@ -25,9 +24,9 @@ class BaseSystem:
         self.machine_priority = config['roms'].get('priority', set())
         self.load()
 
-    def build_filepath(self, dir_name, asset_name, **args):
+    def build_filepath(self, dir_name, resource_name, **args):
         dirpath = self.config['roms']['dirs'][dir_name]
-        return self.file_templates[asset_name].format(dir=dirpath, **args)
+        return self.file_templates[resource_name].format(dir=dirpath, **args)
 
     # Looks up the system from the given name
     def from_name(name):
@@ -41,7 +40,6 @@ class BaseSystem:
         # Load romsets
         for romset_config in self.config['romsets']:
             yield ROMSet.from_json(self, romset_config)
-
 
     def load(self):
         # Load filters
@@ -129,23 +127,30 @@ class BaseSystem:
         valid_machines = filter(Machine.is_valid_nonmerged, machines)
 
         # Reset
-        for dirname, dirpath in self.config['roms']['dirs'].items():
-            if Path(dirpath).is_dir():
-                for filename in os.listdir(dirpath):
-                    filepath = os.path.join(dirpath, filename)
-                    if os.path.islink(filepath):
-                        os.unlink(filepath)
+        for dir_name, dir_location in self.config['roms']['dirs'].items():
+            dirpath = Path(dir_location)
 
-        # Enable
+            if dirpath.is_dir():
+                for filename in dirpath.iterdir():
+                    filepath = dirpath.joinpath(filename)
+                    if filepath.is_symlink():
+                        filepath.unlink()
+
+        # Clean & enable
         for machine in valid_machines:
             # Machine is valid: Enable
-            machine.enable('all')
+            machine.clean()
+            self.enable(machine, 'all')
 
             # Add to favorites
             if self.favorites_filter.allow(machine):
-                machine.enable('favorites')
+                self.enable(machine, 'favorites')
 
     # Whether this machine is allowed for install
     def allow(self, machine):
         is_favorite = self.favorites_filter.allow(machine)
         return all((is_favorite and not filter.apply_to_favorites) or filter.allow(machine) for filter in self.filters)
+
+    # Enables this machine so it's visible
+    def enable(self, machine, dirname):
+        machine.enable(dirname)

@@ -1,5 +1,4 @@
 import logging
-import os
 import re
 import tempfile
 
@@ -14,7 +13,7 @@ class BaseDiscovery:
         self.paths = paths
         self._mappings = None
 
-    # Builds a ROMSet from the given JSON data
+    # Builds a Discovery generator from the given JSON data
     @staticmethod
     def from_json(romset, json):
         return BaseDiscovery.from_name(json['type'])(
@@ -44,7 +43,7 @@ class BaseDiscovery:
         return self._mappings
 
     def download(self, *args, **kwargs):
-        return self.romset.download(*args, **kwargs)
+        return self.romset.downloader.get(*args, force=True, **kwargs)
 
     def load(self):
         pass

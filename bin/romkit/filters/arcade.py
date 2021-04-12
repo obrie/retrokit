@@ -5,7 +5,6 @@ import configparser
 import csv
 import io
 import logging
-import os
 import re
 import zipfile
 import tempfile
@@ -15,7 +14,7 @@ def scrape(url, pattern):
     result = None
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        filepath = os.path.join(tmpdir, 'output.html')
+        filepath = Path(tmpdir).joinpath('output.html')
         Downloader.instance().get(url, filepath)
 
         file = open(filepath, 'r')
@@ -32,8 +31,8 @@ def download_and_extract(url, download_file, archive_file, target_file):
     Downloader.instance().get(url, download_file)
     with zipfile.ZipFile(download_file, 'r') as zip_ref:
         zip_info = zip_ref.getinfo(archive_file)
-        zip_info.filename = os.path.basename(target_file)
-        zip_ref.extract(zip_info, os.path.dirname(target_file))
+        zip_info.filename = Path(target_file).stem
+        zip_ref.extract(zip_info, Path(target_file).parent)
 
 
 def read_config(filepath):

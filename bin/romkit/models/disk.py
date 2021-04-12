@@ -1,5 +1,4 @@
 import logging
-import os
 from pathlib import Path
 
 # Represents an external disk used by a machine
@@ -22,25 +21,22 @@ class Disk:
     def romset(self):
         return self.machine.romset
 
-    # Source url to get the disk
+    # Target destination for installing this sample
     @property
-    def url(self):
-        return self.machine.build_url('disk', filename=self.name)
-
-    # Target destination for installing this disk
-    @property
-    def filepath(self):
-        return self.machine.build_filepath('disk', filename=self.name)
+    def resource(self):
+        return self.romset.resource('disk', disk=self.name)
 
     # Downloads and installs the disk
     def install(self):
         logging.info(f'[{self.machine.name}] Installing disk {self.name}')
-        self.romset.download(self.url, self.filepath)
+        self.resource.install()
 
     # Enables the disk to be accessible to the emulator
     def enable(self, dirname):
-        target_filepath = self.machine.build_system_filepath(dirname, 'disk', filename=self.name)
-        target_dirname = os.path.dirname(target_filepath)
-        Path(os.path.dirname(target_dirname)).mkdir(parents=True, exist_ok=True)
+        target_filepath = self.machine.build_system_filepath(dirname, 'disk', disk=self.name)
+        target_dirname = Path(target_filepath).parent
 
-        os.symlink(os.path.dirname(self.filepath), target_dirname, target_is_directory=True)
+        source_dirname = Path(self.filepath).parent
+        
+        Path(target_dirname).parent.mkdir(parents=True, exist_ok=True)
+        Path(target_dirname).symlink_to(source_dirname, target_is_directory=True)

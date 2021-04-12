@@ -19,20 +19,21 @@
         "base": "https://***REMOVED***",
         "metadata": "no-intro_romsets_files.xml",
         "paths": {
-          "rom": "no-intro romsets/Nintendo - Nintendo Entertainment System.*\\[headered\\]"
+          "url": "no-intro romsets/Nintendo - Nintendo Entertainment System.*\\[headered\\]"
         }
       },
-      "urls": {
-        "dat": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System (20210323-123406).dat",
-        "rom": "{discovery_rom}/{filename}.zip"
-      },
-      "files": {
-        "rom": "/home/pi/RetroPie/roms/nes/.nointro/{filename}.zip"
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System (20210323-123406).dat",
+          "target": "/home/pi/RetroPie/roms/arcade/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/nes/.nointro/{machine}.zip",
+          "file_identifier": "name"
+        }
       },
       "auth": "internetarchive",
-      "build": "non-merged",
-      "format": "zip",
-      "rom_identifier": "name",
       "emulator": "lr-fceumm"
     }
   ],
@@ -42,7 +43,7 @@
       "favorites": "/home/pi/RetroPie/roms/nes"
     },
     "files": {
-      "rom": "{dir}/{filename}.zip"
+      "rom": "{dir}/{machine}.zip"
     },
     "priority": [
       "usa",
