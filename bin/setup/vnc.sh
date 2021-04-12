@@ -13,10 +13,10 @@ install() {
   # Install sever
   sudo apt install -y uv4l uv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
 
-  backup_and_restore '/etc/uv4l/uv4l-raspidisp.conf'
+  backup_and_restore '/etc/uv4l/uv4l-raspidisp.conf' as_sudo=true
 
   # Configure server (can't use ini_merge because of duplicate keys in config)
-  sed -i -e 's/# server-option = --enable-webrtc=yes/server-option = --enable-webrtc=yes/' '/etc/uv4l/uv4l-raspidisp.conf'
+  sudo sed -i -e 's/# server-option = --enable-webrtc=yes/server-option = --enable-webrtc=yes/' '/etc/uv4l/uv4l-raspidisp.conf'
   sudo systemctl restart uv4l_raspidisp
 }
 
