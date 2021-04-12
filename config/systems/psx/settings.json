@@ -11,14 +11,14 @@
   },
   "cheats": "Sony - PlayStation",
   "bios": {
-    "url": "https://github.com/Abdess/retroarch_system/blob/Other/Sony%20-%20PlayStation",
+    "url": "https://github.com/Abdess/retroarch_system/blob",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "psxonpsp660.bin": "{url}/PSXONPSP660.BIN?raw=true",
-      "scph101.bin": "{url}/scph101.bin?raw=true",
-      "scph7001.bin": "{url}/scph7001.bin?raw=true",
-      "scph5501.bin": "{url}/scph5501.bin?raw=true",
-      "scph1001.bin": "{url}/scph1001.bin?raw=true"
+      "psxonpsp660.bin": "{url}/Other/Sony%20-%20PlayStation/PSXONPSP660.BIN?raw=true",
+      "scph101.bin": "{url}/BIOSes/Sony%20-%20PlayStation/scph101.bin?raw=true",
+      "scph7001.bin": "{url}/BIOSes/Sony%20-%20PlayStation/scph7001.bin?raw=true",
+      "scph5501.bin": "{url}/BIOSes/Sony%20-%20PlayStation/scph5501.bin?raw=true",
+      "scph1001.bin": "{url}/BIOSes/Sony%20-%20PlayStation/scph1001.bin?raw=true"
     }
   },
   "romsets": [
