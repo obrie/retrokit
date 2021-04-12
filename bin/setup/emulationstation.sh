@@ -55,7 +55,6 @@ install() {
 
 uninstall() {
   restore "$HOME/.emulationstation/es_settings.cfg"
-  restore "$HOME/.emulationstation/es_input.cfg"
   restore "$HOME/.emulationstation/es_systems.cfg"
 }
 
