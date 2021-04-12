@@ -34,8 +34,10 @@ system_setting() {
 install_emulators() {
   while IFS="$tab" read -r emulator build branch is_default; do
     if [ "$build" == "binary" ]; then
-      # Binary install
-      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
+      # Binary install(only if it's not already installed)
+      if [ ! -d "/opt/retropie/libretrocores/$emulator" ]; then
+        sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
+      fi
     else
       # Source install
       if [ -n "$branch" ]; then
