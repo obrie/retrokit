@@ -10,7 +10,7 @@ install() {
 }
 
 uninstall() {
-  restore '/etc/default/console-setup'
+  restore '/etc/default/console-setup' as_sudo=true
 }
 
 "${@}"
