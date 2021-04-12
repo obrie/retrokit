@@ -112,7 +112,7 @@ ini_merge() {
   local source="$1"
   local target="$2"
 
-  local space_around_delimiters="false"
+  local space_around_delimiters="true"
   local as_sudo="false"
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
