@@ -12,7 +12,7 @@ install() {
   conf_cp "$config_dir/ir/retropie.toml" "$keymap_filepath" as_sudo=true
 
   # Load
-  sudo ir-keytable -t -w "$keymap_filepath"
+  sudo ir-keytable -w "$keymap_filepath"
 }
 
 uninstall() {
