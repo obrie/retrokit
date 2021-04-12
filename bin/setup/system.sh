@@ -88,7 +88,7 @@ install_retroarch_config() {
 install_retroarch_core_options() {
   # System overrides
   if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
-    ini_merge "$system_config_dir/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg'
+    ini_merge "$system_config_dir/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg' restore=false
   fi
 
   # Game-specific overrides
@@ -157,6 +157,8 @@ install_cheats() {
   # multiple systems that have the same games and use the same emulator)
   local system_cheats_dir="$cheats_dir/$system"
   mkdir -p "$system_cheats_dir"
+
+  backup "$retropie_system_config_dir/retroarch.cfg"
   crudini --set "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' "$system_cheats_dir"
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
@@ -266,8 +268,7 @@ install() {
 }
 
 uninstall() {
-  # currently no-op
-  echo 'No uninstall for systems'
+  restore '/opt/retropie/configs/all/retroarch-core-options.cfg'
 }
 
 # Add system-specific overrides
