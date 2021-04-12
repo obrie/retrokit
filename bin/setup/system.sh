@@ -86,7 +86,12 @@ install_retroarch_config() {
 
 # RetroArch Core options overrides
 install_retroarch_core_options() {
-  # Merge game-specific overrides
+  # System overrides
+  if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
+    ini_merge "$system_config_dir/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg'
+  fi
+
+  # Game-specific overrides
   while read emulator; do
     # Retroarch
     local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
