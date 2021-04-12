@@ -70,7 +70,7 @@ install_bios() {
   while IFS="$tab" read -r bios_name bios_url_template; do
     local bios_url="${bios_url_template/\{url\}/$base_url}"
     download "$bios_url" "$bios_dir/$bios_name"
-  done < <(system_setting '.bios.files | to_entries[] | [.key, .value] | @tsv')
+  done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
 ##############
