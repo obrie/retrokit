@@ -92,20 +92,22 @@ install_retroarch_core_options() {
   fi
 
   # Game-specific overrides
-  while read emulator; do
-    # Retroarch
-    local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
-    mkdir -p "$retroarch_emulator_config_dir"
+  if [ -d "$system_config_dir/retroarch_opts" ]; then
+    while read emulator; do
+      # Retroarch
+      local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
+      mkdir -p "$retroarch_emulator_config_dir"
 
-    # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-    find "$system_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
-      local opt_name=$(basename "$override_file")
-      local opt_file="$retroarch_emulator_config_dir/$opt_name"
-      
-      touch "$opt_file"
-      crudini --merge --output="$opt_file" '/opt/retropie/configs/all/retroarch-core-options.cfg' < "$override_file"
-    done
-  done < <(system_setting '.emulators | to_entries[] | [.key] | @tsv')
+      # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
+      find "$system_config_dir/retroarch_opts" -iname "*.opt" | while read override_file; do
+        local opt_name=$(basename "$override_file")
+        local opt_file="$retroarch_emulator_config_dir/$opt_name"
+        
+        touch "$opt_file"
+        crudini --merge --output="$opt_file" '/opt/retropie/configs/all/retroarch-core-options.cfg' < "$override_file"
+      done
+    done < <(system_setting '.emulators | to_entries[] | [.key] | @tsv')
+  fi
 }
 
 ##############
