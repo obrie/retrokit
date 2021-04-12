@@ -4,7 +4,7 @@ protocol = "nec"
 variant = "nec32"
 [protocols.scancodes]
 0x30859060 = "KEY_X" # A
-0x30859061 = "KEY_Y" # B
+0x30859061 = "KEY_Z" # B
 0x30859062 = "KEY_S" # C
 0x30859063 = "KEY_A" # D
 0x3085f009 = "KEY_MEDIA"
