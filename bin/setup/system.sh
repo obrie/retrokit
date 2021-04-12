@@ -100,7 +100,7 @@ install_retroarch_core_options() {
       touch "$opt_file"
       crudini --merge --output="$opt_file" '/opt/retropie/configs/all/retroarch-core-options.cfg' < "$override_file"
     done
-  done < <(system_setting '.emulators[]?')
+  done < <(system_setting '.emulators | to_entries[] | [.key] | @tsv')
 }
 
 ##############
