@@ -7,9 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 keymap_filepath='/etc/rc_keymaps/retropie.toml'
 
-setup() {
-  local 
-
+install() {
   conf_cp "$config_dir/ir/rc_maps.cfg" '/etc/rc_maps.cfg' as_sudo=true
   conf_cp "$config_dir/ir/retropie.toml" "$keymap_filepath" as_sudo=true
 
