@@ -11,7 +11,7 @@ install() {
 }
 
 uninstall() {
-  # no-op
+  echo 'No uninstall for upgrades'
 }
 
 "${@}"
