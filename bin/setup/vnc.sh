@@ -13,8 +13,9 @@ install() {
   # Install sever
   sudo apt install -y uv4l uv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
 
-  # Enable WebRTC access
-  uv4l --auto-video_nr --driver raspidisp --server-option '--enable-webrtc=yes'
+  # Configure server
+  ini_merge "$config_dir/vnc/uv4l-raspidisp.conf" '/etc/uv4l/uv4l-raspidisp.conf' as_sudo=true
+  sudo systemctl restart uv4l_raspidisp
 }
 
 uninstall() {
