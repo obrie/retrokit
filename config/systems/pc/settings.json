@@ -5,8 +5,9 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-dosbox": {"proper_name": "Dosbox", "default": true},
-    "lr-dosbox-pure": {"proper_name": "DosboxPure"}
+    "dosbox": {"proper_name": "Dosbox", "default": true},
+    "lr-dosbox": {"proper_name": "Dosbox"},
+    "lr-dosbox-pure": {"proper_name": "Dosbox"}
   },
   "romsets": [
     {
