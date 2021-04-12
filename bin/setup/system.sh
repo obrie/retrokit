@@ -8,7 +8,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 system="$1"
 
 # Platform configurations
-retropie_system_config_dir"/opt/retropie/configs/$system"
+retropie_system_config_dir="/opt/retropie/configs/$system"
 retroarch_config_dir="/opt/retropie/configs/all/retroarch"
 
 # Retrokit configurations
