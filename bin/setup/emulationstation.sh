@@ -32,9 +32,10 @@ install_systems() {
   # Build system order
   local system_default_config=/etc/emulationstation/es_systems.cfg
   local system_override_config="$HOME/.emulationstation/es_systems.cfg"
-  printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
 
   backup_and_restore "$system_override_config"
+
+  printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
 
   # Add primary systems used by retrokit
   while read system; do
