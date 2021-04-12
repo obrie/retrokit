@@ -41,7 +41,7 @@ install_emulators() {
       if [ -n "$branch" ]; then
         # Set to correct branch
         local setup_file="$HOME/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
-        backup "$setup_file"
+        backup_and_restore "$setup_file"
 
         sed -i "s/.git master/.git $branch/g" "$setup_file"
       fi
@@ -58,8 +58,6 @@ install_emulators() {
 
 # Install BIOS files required by emulators
 install_bios() {
-  download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
-
   local bios_dir=$(system_setting '.bios.dir')
   local base_url=$(system_setting '.bios.url')
 
@@ -159,6 +157,7 @@ install_cheats() {
 
 install_hiscores() {
   # Nothing by default
+  echo 'No hiscore files to install'
 }
 
 ##############
