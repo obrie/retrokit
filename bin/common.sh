@@ -60,7 +60,7 @@ backup() {
 
   if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
     # Use a different file to indicate that we're backing up a non-existent file
-    if [ ! -f "$file" ]; then
+    if [ -f "$file" ]; then
       log "Backing up: $file to $backup_file"
       $cmd cp "$file" "$backup_file"
     else
