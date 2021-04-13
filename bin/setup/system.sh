@@ -36,9 +36,14 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   while IFS="$tab" read -r emulator build branch is_default; do
+    local mode
+    if [ ! -d "/opt/retropie/libretrocores/$emulator" ]; then
+      mode='_update_'
+    fi
+
     if [ "$build" == "binary" ]; then
       # Always re-install binaries
-      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
+      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" ${mode:-_binary_}
     else
       # Source install
       if [ -n "$branch" ]; then
@@ -49,11 +54,7 @@ install_emulators() {
         sed -i "s/.git master/.git $branch/g" "$setup_file"
       fi
 
-      # Only rebuild from source if either it's a new install or we're building
-      # from master
-      if [ ! -d "/opt/retropie/libretrocores/$emulator" ] || [ "$branch" == "master" ]; then
-        sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _source_
-      fi
+      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" ${mode:-_source_}
     fi
 
     # Set default
