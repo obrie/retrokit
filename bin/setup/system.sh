@@ -37,7 +37,7 @@ install_emulators() {
 
   while IFS="$tab" read -r emulator build branch is_default; do
     local mode
-    if [ ! -d "/opt/retropie/libretrocores/$emulator" ]; then
+    if [ -d "/opt/retropie/libretrocores/$emulator" ]; then
       mode='_update_'
     fi
 
