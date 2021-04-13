@@ -11,8 +11,8 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/all/runcommand-onstart.sh' allow_missing=true
-  restore '/opt/retropie/configs/all/runcommand-onend.sh' allow_missing=true
+  restore '/opt/retropie/configs/all/runcommand-onstart.sh'
+  restore '/opt/retropie/configs/all/runcommand-onend.sh'
 }
 
 "${@}"

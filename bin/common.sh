@@ -58,7 +58,12 @@ backup() {
     local cmd='sudo'
   fi
 
-  if [ -f "$file" ] && [ ! -f "$backup_file" ]; then
+  if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
+    # Use a different file to indicate that we're backing up a non-existent file
+    if [ ! -f "$file" ]; then
+      backup_file="$backup_file.missing"
+    fi
+
     log "Backing up: $file to $backup_file"
     $cmd cp "$file" "$backup_file"
   fi
@@ -68,7 +73,6 @@ restore() {
   local file="$1"
   local backup_file="$file.orig"
   local as_sudo="false"
-  local allow_missing="false"
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -78,7 +82,7 @@ restore() {
   if [ -f "$backup_file" ]; then
     log "Restoring: $backup_file to $file"
     $cmd cp "$backup_file" "$file"
-  elif [ "$allow_missing" == "true" ]; then
+  elif [ -f "$backup_file.missing" ]; then
     log "Restoring: $file to non-existent"
     rm "$file"
   else

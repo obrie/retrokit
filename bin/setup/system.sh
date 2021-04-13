@@ -34,10 +34,8 @@ system_setting() {
 install_emulators() {
   while IFS="$tab" read -r emulator build branch is_default; do
     if [ "$build" == "binary" ]; then
-      # Binary install(only if it's not already installed)
-      if [ ! -d "/opt/retropie/libretrocores/$emulator" ]; then
-        sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
-      fi
+      # Always re-install
+      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
     else
       # Source install
       if [ -n "$branch" ]; then
@@ -158,6 +156,7 @@ install_cheats() {
   local system_cheats_dir="$cheats_dir/$system"
   mkdir -p "$system_cheats_dir"
 
+  # TODO: Move to the other files to avoid modifications from multiple places
   backup "$retropie_system_config_dir/retroarch.cfg"
   crudini --set "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' "$system_cheats_dir"
 
