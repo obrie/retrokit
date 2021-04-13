@@ -54,7 +54,7 @@ install_emulators() {
         sed -i "s/.git master/.git $branch/g" "$setup_file"
       fi
 
-      sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" ${mode:-_source_}
+      sudo __ignore_module_date=1 ~/RetroPie-Setup/retropie_packages.sh "$emulator" ${mode:-_source_}
     fi
 
     # Set default
