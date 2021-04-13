@@ -4,8 +4,8 @@
 # Directories / Files
 ##############
 
-dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-export app_dir=$(cd "$dir/.." && pwd)
+setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+export app_dir=$(cd "$setup_dir/.." && pwd)
 export config_dir="$app_dir/config"
 export data_dir="$app_dir/data"
 export tmp_dir="$app_dir/tmp"
