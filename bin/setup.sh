@@ -33,6 +33,9 @@ setupmodules=(
   localization
   splashscreen
 
+  # RetroPie
+  scriptmodules
+
   # EmulationStation
   emulationstation
   scraper
