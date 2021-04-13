@@ -282,8 +282,8 @@ restore_globals() {
 }
 
 # Add system-specific overrides
-if [ -f "$dir/system/$system.sh" ]; then
-  source "$dir/system/$system.sh"
+if [ -f "$dir/systems/$system.sh" ]; then
+  source "$dir/systems/$system.sh"
 fi
 
 "${@:2}"
