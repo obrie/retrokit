@@ -198,6 +198,7 @@ conf_prepare() {
 
   local target="$(mktemp -p "$tmp_ephemeral_dir")"
   $cmd envsubst < "$source" > "$target"
+  $cmd chmod --reference="$source" "$target"
   echo "$target"
 }
 
