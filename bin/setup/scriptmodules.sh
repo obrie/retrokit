@@ -6,10 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  find "$config_dir/scriptmodules" -iname "*.sh" | while read scriptmodule; do
-    local script_name=$(basename "$scriptmodule")
-    conf_cp "$scriptmodule" "$HOME/RetroPie-Setup/scriptmodules/$script_name"
-  done
+  cp -R "$config_dir/scriptmodules/*" "$HOME/RetroPie-Setup/scriptmodules/"
 }
 
 uninstall() {

@@ -36,8 +36,22 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   while IFS="$tab" read -r emulator build branch is_default; do
+    # Directories are different based on whether it's an LR core or standalone
+    # emulator
+    local install_dir
+    local scriptmodule
+    if [[ "$emulator" == lr-* ]]; then
+      install_dir="/opt/retropie/libretrocores/$emulator"
+      scriptmodule="$HOME/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
+    else
+      install_dir="/opt/retropie/emulators/$emulator"
+      scriptmodule="$HOME/RetroPie-Setup/scriptmodules/emulators/$emulator.sh"
+    fi
+
+    # Determine whether we're updating an existing emulator or installing
+    # a new one
     local mode
-    if [ -d "/opt/retropie/libretrocores/$emulator" ]; then
+    if [ -d "$install_dir" ]; then
       mode='_update_'
     fi
 
@@ -48,10 +62,8 @@ install_emulators() {
       # Source install
       if [ -n "$branch" ]; then
         # Set to correct branch
-        local setup_file="$HOME/RetroPie-Setup/scriptmodules/libretrocores/$emulator.sh"
-        backup_and_restore "$setup_file"
-
-        sed -i "s/.git master/.git $branch/g" "$setup_file"
+        backup_and_restore "$scriptmodule"
+        sed -i "s/.git master/.git $branch/g" "$scriptmodule"
       fi
 
       sudo __ignore_module_date=1 ~/RetroPie-Setup/retropie_packages.sh "$emulator" ${mode:-_source_}

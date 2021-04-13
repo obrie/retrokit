@@ -6,8 +6,8 @@
   },
   "emulators": {
     "dosbox": {"proper_name": "Dosbox", "default": true},
-    "lr-dosbox-pure": {"proper_name": "Dosbox"},
-    "lr-dosbox-staging": {"proper_name": "Dosbox", "build": "source"}
+    "dosbox-staging": {"proper_name": "Dosbox", "build": "source"},
+    "lr-dosbox-pure": {"proper_name": "Dosbox"}
   },
   "romsets": [
     {
