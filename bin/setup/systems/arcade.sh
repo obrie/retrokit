@@ -7,7 +7,7 @@
 install_cheats() {
   # Cheats: FBNeo
   mkdir -p "$HOME/RetroPie/BIOS/fbneo/cheats"
-  if [ ! -f "$system_tmp_dir/fbneo-cheats.zip" ]
+  if [ ! -f "$system_tmp_dir/fbneo-cheats.zip" ]; then
     download 'https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip' "$system_tmp_dir/fbneo-cheats.zip"
     unzip -j "$system_tmp_dir/fbneo-cheats.zip" 'FBNeo-cheats-master/cheats/*' -d "$HOME/RetroPie/BIOS/fbneo/cheats/"
   fi
