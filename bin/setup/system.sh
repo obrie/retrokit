@@ -53,6 +53,8 @@ install_emulators() {
     local mode
     if [ -d "$install_dir" ]; then
       mode='_update_'
+    else
+      mode=''
     fi
 
     if [ "$build" == "binary" ]; then
