@@ -7,7 +7,7 @@
 # * ~/.dosbox/dosbox-SVN.conf
 ##############
 
-alias install_emulators_super=install_emulators
+save_function install_emulators_super install_emulators
 install_emulators() {
   install_emulators_super
 

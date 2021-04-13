@@ -244,3 +244,9 @@ download() {
 stop_emulationstation() {
   killall /opt/retropie/supplementary/emulationstation/emulationstation || true
 }
+
+save_function() {
+  local orig_func=$(declare -f $1)
+  local newname_func="$2${orig_func#$1}"
+  eval "$newname_func"
+}
