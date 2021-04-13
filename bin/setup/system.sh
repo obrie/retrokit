@@ -31,10 +31,13 @@ system_setting() {
 # Emulators
 ##############
 
+# Install configured emulators
 install_emulators() {
+  backup_and_restore "$retropie_system_config_dir/emulators.cfg"
+
   while IFS="$tab" read -r emulator build branch is_default; do
     if [ "$build" == "binary" ]; then
-      # Always re-install
+      # Always re-install binaries
       sudo ~/RetroPie-Setup/retropie_packages.sh "$emulator" _binary_
     else
       # Source install
@@ -75,7 +78,7 @@ install_bios() {
 # Configurations
 ##############
 
-# RetroArch configuration overrides
+# RetroArch system-specific configuration overrides
 install_retroarch_config() {
   if [ -f "$system_config_dir/retroarch.cfg" ]; then
     ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
@@ -84,7 +87,7 @@ install_retroarch_config() {
 
 # RetroArch Core options overrides
 install_retroarch_core_options() {
-  # System overrides
+  # System overrides (don't restore since it'll be written to by multiple systems)
   if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
     ini_merge "$system_config_dir/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg' restore=false
   fi
@@ -92,7 +95,7 @@ install_retroarch_core_options() {
   # Game-specific overrides
   if [ -d "$system_config_dir/retroarch_opts" ]; then
     while read emulator; do
-      # Retroarch
+      # Retroarch emulator-specific config
       local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
       mkdir -p "$retroarch_emulator_config_dir"
 
@@ -149,16 +152,16 @@ set_default_emulators() {
 
 install_cheats() {
   local cheats_dir="$retroarch_config_dir/cheats"
-  local cheats_name=$(system_setting '.cheats')
 
-  # Create system-specific cheats database directory (to avoid conflicts with
-  # multiple systems that have the same games and use the same emulator)
-  local system_cheats_dir="$cheats_dir/$system"
+  # Get cheat database path for this system
+  local system_cheats_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' 2>/dev/null || true)
+  if [ -z "$system_cheats_dir" ]; then
+    system_cheats_dir="$cheats_dir"
+  fi
   mkdir -p "$system_cheats_dir"
 
-  # TODO: Move to the other files to avoid modifications from multiple places
-  backup "$retropie_system_config_dir/retroarch.cfg"
-  crudini --set "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' "$system_cheats_dir"
+  # Name of the cheats for this system
+  local cheats_name=$(system_setting '.cheats')
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   while IFS="$tab" read emulator emulator_proper_name; do
@@ -267,6 +270,12 @@ install() {
 }
 
 uninstall() {
+  restore_globals
+  restore "$retropie_system_config_dir/retroarch.cfg"
+  restore "$retropie_system_config_dir/emulators.cfg"
+}
+
+restore_globals() {
   restore '/opt/retropie/configs/all/retroarch-core-options.cfg'
 }
 

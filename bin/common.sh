@@ -84,7 +84,7 @@ restore() {
     $cmd cp "$backup_file" "$file"
   elif [ -f "$backup_file.missing" ]; then
     log "Restoring: $file to non-existent"
-    rm "$file"
+    rm -f "$file"
   else
     log "Restoring: $file (leaving as-is)"
   fi

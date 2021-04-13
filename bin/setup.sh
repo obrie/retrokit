@@ -58,17 +58,6 @@ usage() {
   exit 1
 }
 
-install_dependencies() {
-  # Ini editor
-  sudo pip3 install crudini
-
-  # Env editor
-  download 'https://raw.githubusercontent.com/bashup/dotenv/master/dotenv' "$tmp_dir/dotenv"
-
-  # JSON reader
-  sudo apt install -y jq
-}
-
 before_setup() {
   stop_emulationstation
 }
@@ -81,8 +70,9 @@ setup_all() {
   done
 
   # Add systems
+  "$dir/setup/system.sh" "all" restore_globals
   while read system; do
-    "$dir/setup/system.sh" "$system" setup
+    "$dir/setup/system.sh" "$system" "$action"
   done < <(setting '.systems[]')
 }
 
