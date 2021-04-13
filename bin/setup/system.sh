@@ -156,6 +156,7 @@ install_cheats() {
 
   # Get cheat database path for this system
   local system_cheats_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' 2>/dev/null || true)
+  system_cheats_dir="${system_cheats_dir//\"}"
   if [ -z "$system_cheats_dir" ]; then
     system_cheats_dir="$cheats_dir"
   fi
@@ -168,7 +169,7 @@ install_cheats() {
   while IFS="$tab" read emulator emulator_proper_name; do
     local emulator_cheats_dir="$system_cheats_dir/$emulator_proper_name"
 
-    rm -f "$emulator_cheats_dir"
+    rm -rf "$emulator_cheats_dir"
     ln -fs "$cheats_dir/$cheats_name" "$emulator_cheats_dir"
   done < <(system_setting '.emulators | try to_entries[] | [.key, .value.proper_name] | @tsv')
 }
