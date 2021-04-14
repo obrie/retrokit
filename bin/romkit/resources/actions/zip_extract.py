@@ -8,7 +8,7 @@ from pathlib import Path
 class ZipExtract(BaseAction):
     name = 'zip_extract'
 
-    def run(self, source, target, **kwargs):
+    def install(self, source, target, **kwargs):
         with zipfile.ZipFile(source.path, 'r') as source_zip:
             if self.config.get('file'):
                 # Find the file in the zip based on the given pattern

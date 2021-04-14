@@ -179,15 +179,6 @@ class Machine:
     def dump(self):
         return {'name': self.name, 'romset': self.romset.name, 'emulator': self.romset.emulator}
 
-    # Generates a system-level filepath for an asset for this machine
-    def build_system_filepath(self, dir_name, resource_name, **args):
-        return self.romset.system.build_filepath(dir_name, resource_name, machine=self.name, **args)
-
-    # Determines whether the locally installed set of ROMs is a superset of the ROMs installed
-    # just for this machine
-    # def is_valid(self):
-    #     return self.resource.contains(self.roms_from_self)
-
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
     def is_valid_nonmerged(self):
@@ -238,10 +229,10 @@ class Machine:
         self.resource.clean(self.non_merged_roms)
 
     # Enables this machine to be visible to the emulator
-    def enable(self, dirname):
-        logging.info(f'[{self.name}] Enabling in: {dirname}')
+    def enable(self, system_dir):
+        logging.info(f'[{self.name}] Enabling in: {system_dir.path}')
         
-        self.resource.symlink(self.build_system_filepath(dirname, 'machine'))
+        system_dir.symlink('machine', self.resource.target_path.path, machine=self.name)
 
         for disk in self.disks:
-            disk.enable(dirname)
+            disk.enable(system_dir)

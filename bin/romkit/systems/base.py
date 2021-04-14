@@ -1,5 +1,6 @@
 from romkit.filters.base import FlagFilter, KeywordFilter, NameFilter, CloneFilter, ControlFilter
 from romkit.models import Machine, ROMSet
+from romkit.systems.system_dir import SystemDir
 
 import logging
 import traceback
@@ -18,15 +19,11 @@ class BaseSystem:
 
     def __init__(self, config):
         self.config = config
-        self.file_templates = config['roms']['files']
+        self.dirs = {name: SystemDir(path, config['roms']['files']) for name, path in config['roms']['dirs'].items()}
         self.filters = []
         self.favorites_filter = NameFilter(config, set(config['roms']['favorites']), log=False)
         self.machine_priority = config['roms'].get('priority', set())
         self.load()
-
-    def build_filepath(self, dir_name, resource_name, **args):
-        dirpath = self.config['roms']['dirs'][dir_name]
-        return self.file_templates[resource_name].format(dir=dirpath, **args)
 
     # Looks up the system from the given name
     def from_name(name):
@@ -127,24 +124,18 @@ class BaseSystem:
         valid_machines = filter(Machine.is_valid_nonmerged, machines)
 
         # Reset
-        for dir_name, dir_location in self.config['roms']['dirs'].items():
-            dirpath = Path(dir_location)
-
-            if dirpath.is_dir():
-                for filename in dirpath.iterdir():
-                    filepath = dirpath.joinpath(filename)
-                    if filepath.is_symlink():
-                        filepath.unlink()
+        for system_dir in self.dirs.values():
+            system_dir.reset()
 
         # Clean & enable
         for machine in valid_machines:
             # Machine is valid: Enable
             machine.clean()
-            self.enable(machine, 'all')
+            self.enable(machine, self.dirs['all'])
 
             # Add to favorites
             if self.favorites_filter.allow(machine):
-                self.enable(machine, 'favorites')
+                self.enable(machine, self.dirs['favorites'])
 
     # Whether this machine is allowed for install
     def allow(self, machine):
@@ -153,4 +144,5 @@ class BaseSystem:
 
     # Enables this machine so it's visible
     def enable(self, machine, dirname):
+
         machine.enable(dirname)

@@ -38,7 +38,7 @@ class Resource:
             Path(self.target_path.path).parent.mkdir(parents=True, exist_ok=True)
 
             # Install to target
-            self.install_action.run(source_resource.download_path, self.target_path, **kwargs)
+            self.install_action.install(source_resource.download_path, self.target_path, **kwargs)
 
     # Lists the files that are contained within the resource
     def contains(self, files):
@@ -50,12 +50,6 @@ class Resource:
             self.download_path.delete()
 
         self.target_path.clean(expected_files)
-
-    # Creates a symbolic link for this resource to the given target
-    def symlink(self, target):
-        Path(target).parent.mkdir(parents=True, exist_ok=True)
-
-        self.target_path.symlink(target)
 
     # Creates a file that's expected to be seen in this resource
     def build_file(self, name, crc):

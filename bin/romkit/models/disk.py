@@ -24,7 +24,7 @@ class Disk:
     # Target destination for installing this sample
     @property
     def resource(self):
-        return self.romset.resource('disk', disk=self.name)
+        return self.romset.resource('disk', **self._context)
 
     # Downloads and installs the disk
     def install(self):
@@ -32,11 +32,10 @@ class Disk:
         self.resource.install()
 
     # Enables the disk to be accessible to the emulator
-    def enable(self, dirname):
-        target_filepath = self.machine.build_system_filepath(dirname, 'disk', disk=self.name)
-        target_dirname = Path(target_filepath).parent
+    def enable(self, system_dir):
+        system_dir.symlink('disk', self.resource.target_path.path, **self._context)
 
-        source_dirname = Path(self.filepath).parent
-        
-        Path(target_dirname).parent.mkdir(parents=True, exist_ok=True)
-        Path(target_dirname).symlink_to(source_dirname, target_is_directory=True)
+    # Builds context for formatting dirs/urls
+    @property
+    def _context(self):
+        return {'machine': self.machine.name, 'disk': self.name}

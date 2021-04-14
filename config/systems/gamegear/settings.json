@@ -49,7 +49,7 @@
       "favorites": "/home/pi/RetroPie/roms/gamegear"
     },
     "files": {
-      "rom": "{dir}/{machine}.zip"
+      "machine": {"target": "{dir}/{machine}.zip"}
     },
     "allowlists": {
       "flags": [

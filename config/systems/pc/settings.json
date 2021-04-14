@@ -69,7 +69,7 @@
       "all": "/home/pi/RetroPie/roms/pc"
     },
     "files": {
-      "machine": "{dir}/{machine}"
+      "machine": {"target": "{dir}/{machine}"}
     }
   }
 }

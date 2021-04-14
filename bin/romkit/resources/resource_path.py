@@ -35,10 +35,6 @@ class ResourcePath:
     def exists(self):
         return Path(self.path).exists()
 
-    # Symlinks this path to the given target
-    def symlink(self, target):
-        Path(target).symlink_to(self.path)
-
     def delete(self):
         if self.exists():
             Path(self.path).unlink()

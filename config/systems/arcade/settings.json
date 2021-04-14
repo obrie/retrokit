@@ -152,7 +152,7 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "https://***REMOVED***{machine}/{name}.chd",
+          "source": "https://***REMOVED***{machine}/{disk}.chd",
           "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
         },
         "sample": {
@@ -195,8 +195,8 @@
       "favorites": "/home/pi/RetroPie/roms/arcade"
     },
     "files": {
-      "machine": "{dir}/{machine}.zip",
-      "disk": "{dir}/{machine}/{disk}.chd"
+      "machine": {"target": "{dir}/{machine}.zip"},
+      "disk": {"source": "..", "target": "{dir}/{machine}"}
     },
     "priority": [
       "usa"

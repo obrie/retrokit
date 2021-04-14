@@ -8,7 +8,7 @@ import zipfile
 class ZipMerge(BaseAction):
     name = 'zip_merge'
 
-    def run(self, source, target, files):
+    def install(self, source, target, files):
         source_files = source.list_files()
         source_files_by_id = {file.id: file for file in source_files}
         existing_files = target.list_files()

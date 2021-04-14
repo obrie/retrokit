@@ -20,5 +20,5 @@ class BaseAction:
 
         raise Exception(f'Invalid action: {name}')
 
-    def run(self, source, target, **kwargs):
+    def install(self, source, target, **kwargs):
         raise NotImplementedError()

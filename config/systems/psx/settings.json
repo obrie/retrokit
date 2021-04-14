@@ -36,8 +36,8 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
-          "install": {"action": "zip_to_chd"}
+          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}",
+          "install": {"action": "zip_extract"}
         }
       },
       "emulator": "lr-pcsx-rearmed"
@@ -56,8 +56,8 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
-          "install": {"action": "zip_to_chd"}
+          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}",
+          "install": {"action": "zip_extract"}
         }
       },
       "emulator": "lr-pcsx-rearmed"
@@ -69,7 +69,10 @@
       "favorites": "/home/pi/RetroPie/roms/psx"
     },
     "files": {
-      "machine": "{dir}/{machine}.chd"
+      "machine": {"source": "*", "target": "{dir}"}
+    },
+    "allowlists": {
+      "names": ["none"]
     },
     "favorites": [
       "Disney's The Little Mermaid II (USA)",

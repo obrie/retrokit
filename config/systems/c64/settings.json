@@ -65,7 +65,7 @@
       "favorites": "/home/pi/RetroPie/roms/c64"
     },
     "files": {
-      "rom": "{dir}/{machine}.zip"
+      "machine": {"target": "{dir}/{machine}.zip"}
     },
     "priority": [
       "usa"
