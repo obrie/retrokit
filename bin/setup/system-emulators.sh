@@ -71,4 +71,4 @@ uninstall() {
   restore "$retropie_system_config_dir/emulators.cfg"
 }
 
-"${@:2}"
+"$1" "${@:3}"

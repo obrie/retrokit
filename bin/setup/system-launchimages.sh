@@ -21,4 +21,4 @@ uninstall() {
   echo 'No uninstall for launch images'
 }
 
-"${@:2}"
+"$1" "${@:3}"

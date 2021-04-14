@@ -94,7 +94,7 @@ setup_all() {
   "$dir/setup/system-all.sh" restore_globals
   while read system; do
     for systemmodule in "${systemmodules[@]}"; do
-      "$dir/setup/system-$systemmodule.sh" "$system" "$action"
+      "$dir/setup/system-$systemmodule.sh" "$action" "$system"
     done
 
     # System-specific actions
@@ -107,7 +107,7 @@ setup_all() {
 setup() {
   local action="$1"
   local setupmodule="$2"
-  "$dir/setup/$setupmodule.sh" "$action"
+  "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
 }
 
 main() {
@@ -117,7 +117,7 @@ main() {
   before_setup
 
   if [ -n "$setupmodule" ]; then
-    setup "$action" "$setupmodule"
+    setup "$action" "$setupmodule" "${@:3}"
   else
     setup_all "$action"
   fi

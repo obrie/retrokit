@@ -3,7 +3,7 @@ set -ex
 setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$setup_dir/../common.sh"
 
-system="${system:-$1}"
+system="${system:-$2}"
 
 # Platform configurations
 retropie_system_config_dir="/opt/retropie/configs/$system"

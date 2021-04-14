@@ -38,4 +38,4 @@ uninstall() {
   echo 'No uninstall for roms'
 }
 
-"${@:2}"
+"$1" "${@:3}"

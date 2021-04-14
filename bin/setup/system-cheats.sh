@@ -34,4 +34,4 @@ uninstall() {
   echo 'No uninstall for cheats'
 }
 
-"${@:2}"
+"$1" "${@:3}"

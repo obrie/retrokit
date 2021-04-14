@@ -34,4 +34,4 @@ uninstall() {
   echo 'No uninstall for scraping'
 }
 
-"${@:2}"
+"$1" "${@:3}"
