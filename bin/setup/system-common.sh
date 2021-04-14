@@ -20,3 +20,5 @@ system_settings_file="$system_config_dir/settings.json"
 system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
+
+# TODO: Check that system is valid

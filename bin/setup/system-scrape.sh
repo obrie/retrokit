@@ -17,7 +17,7 @@ scrape() {
 scrape_sources() {
   while read -r source; do
     scrape "$source"
-  done < <(system_setting '.scraper.sources')
+  done < <(system_setting '.scraper.sources[]')
 }
 
 build_gamelist() {
