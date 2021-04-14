@@ -75,7 +75,7 @@ systemmodules=(
 )
 
 usage() {
-  echo "usage: $0 [command]"
+  echo "usage: $0 <install|uninstall> <setupmodule> [args]"
   exit 1
 }
 
@@ -123,7 +123,7 @@ main() {
   fi
 }
 
-if [[ $# -gt 2 ]]; then
+if [[ $# -lt 1 ]]; then
   usage
 fi
 

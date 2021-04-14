@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-stella": {"proper_name": "Stella 2014", "default": true}
+    "lr-stella2014": {"proper_name": "Stella 2014", "default": true}
   },
   "romsets": [
     {
