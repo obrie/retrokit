@@ -1,8 +1,10 @@
 #!/bin/bash
 
-##############
-# System: Arcade
-##############
+set -ex
+
+system='arcade'
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. "$dir/../system-common.sh"
 
 install_cheats() {
   # Cheats: FBNeo
@@ -35,3 +37,10 @@ install_hiscores() {
   download 'https://github.com/libretro/mame2015-libretro/raw/master/metadata/hiscore.dat' "$HOME/RetroPie/BIOS/mame2015/"
   download 'https://github.com/libretro/mame2016-libretro/raw/master/metadata/hiscore.dat' "$HOME/RetroPie/BIOS/mame2016/"
 }
+
+install() {
+  install_cheats
+  install_hiscores
+}
+
+"${@}"

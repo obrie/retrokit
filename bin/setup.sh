@@ -56,6 +56,24 @@ setupmodules=(
   romkit
 )
 
+systemmodules=(
+  # Emulator configurations
+  emulators
+  retroarch
+
+  # Gameplay
+  cheats
+
+  # Themes
+  bezels
+  launchimages
+  themes
+
+  # ROMs
+  roms
+  scrape
+)
+
 usage() {
   echo "usage: $0 [command]"
   exit 1
@@ -73,9 +91,16 @@ setup_all() {
   done
 
   # Add systems
-  "$dir/setup/system.sh" "all" restore_globals
+  "$dir/setup/system-all.sh" restore_globals
   while read system; do
-    "$dir/setup/system.sh" "$system" "$action"
+    for systemmodule in "${systemmodules[@]}"; do
+      "$dir/setup/system-$systemmodule.sh" "$system" "$action"
+    done
+
+    # System-specific actions
+    if [ -f "$dir/setup/systems/$system.sh" ]; then
+      "$dir/setup/systems/$system.sh" "$action"
+    fi
   done < <(setting '.systems[]')
 }
 

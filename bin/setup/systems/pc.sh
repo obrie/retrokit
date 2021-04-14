@@ -1,16 +1,18 @@
 #!/bin/bash
 
-##############
-# System: PC
-# 
-# Configs:
-# * ~/.dosbox/dosbox-SVN.conf
-##############
+set -ex
 
-save_function install_emulators install_emulators_super
-install_emulators() {
-  install_emulators_super
+system='pc'
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+. "$dir/../system-common.sh"
 
+install() {
   # Sound driver
-  sudo apt install fluid-soundfont-gm
+  sudo apt install -y fluid-soundfont-gm
 }
+
+uninstall() {
+  sudo apt remove -y fluid-soundfont-gm
+}
+
+"${@}"
