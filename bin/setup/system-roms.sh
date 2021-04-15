@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
 romkit_cli() {
-  TMPDIR="$system_tmp_dir" python3 bin/romkit/cli.py ${@} --config "$system_settings_file"
+  TMPDIR="$tmp_dir" python3 bin/romkit/cli.py ${@} --config "$system_settings_file"
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options

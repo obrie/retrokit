@@ -4,6 +4,7 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$setup_dir/../common.sh"
 
 system="${system:-$2}"
+system_tmp_dir="$tmp_dir/$system"
 
 # Platform configurations
 retropie_system_config_dir="/opt/retropie/configs/$system"
