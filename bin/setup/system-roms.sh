@@ -20,7 +20,7 @@ clean_emulator_config_key() {
 }
 
 install() {
-  $(romkit_cli) install
+  romkit_cli install
 
   log "--- Setting default emulators ---"
 
@@ -30,7 +30,7 @@ install() {
   crudini --merge '/opt/retropie/configs/all/emulators.cfg' < <(
     while read -r rom_name emulator; do
       echo "$(clean_emulator_config_key "arcade_$rom_name") = \"$emulator\""
-    done < <($(romkit_cli) list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
+    done < <(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
   )
 }
 
