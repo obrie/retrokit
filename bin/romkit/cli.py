@@ -48,8 +48,8 @@ class ROMKit:
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument('--action', dest='action', help='Action to perform', choices=['list', 'install', 'clean'])
-    parser.add_argument('--config', dest='config', help='JSON file containing the configuration')
+    parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'clean'])
+    parser.add_argument(dest='config', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     args = parser.parse_args()
     ROMKit(args.action, args.config, args.log_level).run()
