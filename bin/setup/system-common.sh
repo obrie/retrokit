@@ -21,4 +21,7 @@ system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
 
-# TODO: Check that system is valid
+if ! setting ".systems | index(\"$system\")"; then
+  echo "$system is not a valid system"
+  exit 1
+fi
