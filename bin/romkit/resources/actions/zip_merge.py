@@ -6,6 +6,7 @@ import shutil
 import subprocess
 import tempfile
 import zipfile
+from pathlib import Path
 from typing import Set
 
 class ZipMerge(BaseAction):

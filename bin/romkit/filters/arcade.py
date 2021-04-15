@@ -10,6 +10,10 @@ import zipfile
 import tempfile
 from pathlib import Path
 
+# Arcade-specific temp dir
+TMP_DIR = Path(f'{tempfile.gettempdir()}/arcade')
+TMP_DIR.mkdir(parents=True, exist_ok=True)
+
 # Looks for the pattern in the content of the given url
 def scrape(url: str, pattern: str) -> str:
     result = None
@@ -56,14 +60,14 @@ class LanguageFilter(ExactFilter):
     ARCHIVE_FILE = 'folders/languages.ini'
 
     def download(self) -> None:
-        self.config_path = Path(f'{tempfile.gettempdir()}/languages.ini')
+        self.config_path = Path(f'{TMP_DIR}/languages.ini')
 
         if not self.config_path.exists():
             version = scrape(LanguageFilter.SCRAPE_URL, LanguageFilter.VERSION_PATTERN)
 
             download_and_extract(
                 LanguageFilter.URL.format(version=version),
-                Path(f'{tempfile.gettempdir()}/languages.zip'),
+                Path(f'{TMP_DIR}/languages.zip'),
                 LanguageFilter.ARCHIVE_FILE,
                 self.config_path,
             )
@@ -90,14 +94,14 @@ class CategoryFilter(SubstringFilter):
     ARCHIVE_FILE = 'UI_files/catlist.ini'
 
     def download(self) -> None:
-        self.config_path = Path(f'{tempfile.gettempdir()}/categories.ini')
+        self.config_path = Path(f'{TMP_DIR}/categories.ini')
 
         if not self.config_path.exists():
             version = scrape(CategoryFilter.SCRAPE_URL, CategoryFilter.VERSION_PATTERN)
 
             download_and_extract(
                 CategoryFilter.URL.format(version=version),
-                Path(f'{tempfile.gettempdir()}/categories.zip'),
+                Path(f'{TMP_DIR}/categories.zip'),
                 CategoryFilter.ARCHIVE_FILE,
                 self.config_path,
             )
@@ -124,14 +128,14 @@ class RatingFilter(ExactFilter):
     ARCHIVE_FILE = 'folders/bestgames.ini'
 
     def download(self) -> None:
-        self.config_path = Path(f'{tempfile.gettempdir()}/ratings.ini')
+        self.config_path = Path(f'{TMP_DIR}/ratings.ini')
 
         if not self.config_path.exists():
             version = scrape(RatingFilter.SCRAPE_URL, RatingFilter.VERSION_PATTERN)
 
             download_and_extract(
                 RatingFilter.URL.format(version=version),
-                Path(f'{tempfile.gettempdir()}/ratings.zip'),
+                Path(f'{TMP_DIR}/ratings.zip'),
                 RatingFilter.ARCHIVE_FILE,
                 self.config_path,
             )
@@ -165,7 +169,7 @@ class EmulatorFilter(ExactFilter):
     QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
 
     def download(self) -> None:
-        self.config_path = Path(f'{tempfile.gettempdir()}/emulators.tsv')
+        self.config_path = Path(f'{TMP_DIR}/emulators.tsv')
         if not self.config_path.exists():
             Downloader.instance().get(EmulatorFilter.URL, self.config_path)
 

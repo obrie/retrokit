@@ -232,7 +232,7 @@ class Machine:
                 machine.resource.download(force=True)
 
             logging.info(f'[{self.name}] Installing from {machine.name}')
-            self.resource.install(source_resource=machine.resource, files=roms, force=True)
+            self.resource.install(machine.resource, files=roms, force=True)
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self) -> None:
