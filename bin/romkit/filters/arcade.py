@@ -10,33 +10,37 @@ import zipfile
 import tempfile
 from pathlib import Path
 
-def scrape(url, pattern):
+# Looks for the pattern in the content of the given url
+def scrape(url: str, pattern: str) -> str:
     result = None
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        filepath = Path(tmpdir).joinpath('output.html')
-        Downloader.instance().get(url, filepath)
+        download_path = Path(tmpdir).joinpath('output.html')
+        Downloader.instance().get(url, download_path)
 
-        file = open(filepath, 'r')
-        for line in file:
-            match = re.search(pattern, line)
-            if match:
-                result = match.group(1)
-                break
+        with download_path.open('r') as file:
+            for line in file:
+                match = re.search(pattern, line)
+                if match:
+                    result = match.group(1)
+                    break
     
     return result             
 
 
-def download_and_extract(url, download_file, archive_file, target_file):
-    Downloader.instance().get(url, download_file)
-    with zipfile.ZipFile(download_file, 'r') as zip_ref:
-        zip_info = zip_ref.getinfo(archive_file)
-        zip_info.filename = Path(target_file).stem
-        zip_ref.extract(zip_info, Path(target_file).parent)
+# Downloads from the given url and extracts a specific archive to the target
+def download_and_extract(url: str, download_path: Path, archive_name: str, target_path: Path) -> None:
+    Downloader.instance().get(url, download_path)
+
+    with zipfile.ZipFile(download_path, 'r') as zip_ref:
+        zip_info = zip_ref.getinfo(archive_name)
+        zip_info.filename = target_path.name
+        zip_ref.extract(zip_info, target_path.parent)
 
 
-def read_config(filepath):
-    with open(filepath, 'r') as file:
+# Reads the INI configuration at the given path
+def read_config(path: Path) -> configparser.ConfigParser:
+    with path.open('r') as file:
         config = configparser.ConfigParser(allow_no_value=True)
         contents = file.read()
         config.read_string(contents.encode('ascii', 'ignore').decode())
@@ -51,23 +55,23 @@ class LanguageFilter(ExactFilter):
     VERSION_PATTERN = r'pS_Languages_([0-9]+).zip'
     ARCHIVE_FILE = 'folders/languages.ini'
 
-    def download(self):
-        target_file = f'{tempfile.gettempdir()}/languages.ini'
+    def download(self) -> None:
+        self.config_path = Path(f'{tempfile.gettempdir()}/languages.ini')
 
-        if not Path(target_file).exists():
+        if not self.config_path.exists():
             version = scrape(LanguageFilter.SCRAPE_URL, LanguageFilter.VERSION_PATTERN)
 
             download_and_extract(
                 LanguageFilter.URL.format(version=version),
-                f'{tempfile.gettempdir()}/languages.zip',
+                Path(f'{tempfile.gettempdir()}/languages.zip'),
                 LanguageFilter.ARCHIVE_FILE,
-                target_file,
+                self.config_path,
             )
 
-    def load(self):
+    def load(self) -> None:
         self.languages = {}
 
-        config = read_config(f'{tempfile.gettempdir()}/languages.ini')
+        config = read_config(self.config_path)
         for section in config.sections():
             for name, value in config.items(section, raw=True):
                 self.languages[name] = section
@@ -85,23 +89,23 @@ class CategoryFilter(SubstringFilter):
     VERSION_PATTERN = r'pS_CatVer_([0-9]+).zip'
     ARCHIVE_FILE = 'UI_files/catlist.ini'
 
-    def download(self):
-        target_file = f'{tempfile.gettempdir()}/categories.ini'
+    def download(self) -> None:
+        self.config_path = Path(f'{tempfile.gettempdir()}/categories.ini')
 
-        if not Path(target_file).exists():
+        if not self.config_path.exists():
             version = scrape(CategoryFilter.SCRAPE_URL, CategoryFilter.VERSION_PATTERN)
 
             download_and_extract(
                 CategoryFilter.URL.format(version=version),
-                f'{tempfile.gettempdir()}/categories.zip',
+                Path(f'{tempfile.gettempdir()}/categories.zip'),
                 CategoryFilter.ARCHIVE_FILE,
-                target_file,
+                self.config_path,
             )
 
     def load(self):
         self.categories = {}
 
-        config = read_config(f'{tempfile.gettempdir()}/categories.ini')
+        config = read_config(self.config_path)
         for section in config.sections():
             for name, value in config.items(section, raw=True):
                 self.categories[name] = section
@@ -119,23 +123,23 @@ class RatingFilter(ExactFilter):
     VERSION_PATTERN = r'pS_BestGames_([0-9]+).zip'
     ARCHIVE_FILE = 'folders/bestgames.ini'
 
-    def download(self):
-        target_file = f'{tempfile.gettempdir()}/ratings.ini'
+    def download(self) -> None:
+        self.config_path = Path(f'{tempfile.gettempdir()}/ratings.ini')
 
-        if not Path(target_file).exists():
+        if not self.config_path.exists():
             version = scrape(RatingFilter.SCRAPE_URL, RatingFilter.VERSION_PATTERN)
 
             download_and_extract(
                 RatingFilter.URL.format(version=version),
-                f'{tempfile.gettempdir()}/ratings.zip',
+                Path(f'{tempfile.gettempdir()}/ratings.zip'),
                 RatingFilter.ARCHIVE_FILE,
-                target_file,
+                self.config_path,
             )
 
     def load(self):
         self.ratings = {}
 
-        config = read_config(f'{tempfile.gettempdir()}/ratings.ini')
+        config = read_config(self.config_path)
         for section in config.sections():
             for name, value in config.items(section, raw=True):
                 self.ratings[name] = section
@@ -160,16 +164,15 @@ class EmulatorFilter(ExactFilter):
     COLUMN_CONTROLS = 'Controls'
     QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
 
-    def download(self):
-        filepath = f'{tempfile.gettempdir()}/emulators.tsv'
-        if not Path(filepath).exists():
-            Downloader.instance().get(EmulatorFilter.URL, filepath)
+    def download(self) -> None:
+        self.config_path = Path(f'{tempfile.gettempdir()}/emulators.tsv')
+        if not self.config_path.exists():
+            Downloader.instance().get(EmulatorFilter.URL, self.config_path)
 
     def load(self):
         self.emulators = {}
 
-        filepath = f'{tempfile.gettempdir()}/emulators.tsv'
-        with open(filepath) as file:
+        with open(self.config_path) as file:
             rows = csv.DictReader(file, delimiter='\t')
             for row in rows:
                 if not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):

@@ -11,7 +11,7 @@ from argparse import ArgumentParser
 import json
 
 class ROMKit:
-    def __init__(self, action, config_file, log_level):
+    def __init__(self, action: str, config_file: str, log_level: str) -> None:
         self.action = action
 
         # Load configuration
@@ -31,22 +31,22 @@ class ROMKit:
         root.addHandler(handler)
 
         # Build system
-        self.system = BaseSystem.from_name(self.config['system'])(self.config)
+        self.system = BaseSystem.from_json(self.config)
 
-    def run(self):
+    def run(self) -> None:
         getattr(ROMKit, self.action)(self)
 
     # Lists machines filtered for this system
-    def list(self):
+    def list(self) -> None:
         for machine in self.system.list():
             print(json.dumps(machine.dump()))
 
     # Installs the list of filtered machines onto the local filesystem
-    def install(self):
+    def install(self) -> None:
         self.system.install()
 
 
-def main():
+def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'clean'])
     parser.add_argument(dest='config', help='JSON file containing the configuration')

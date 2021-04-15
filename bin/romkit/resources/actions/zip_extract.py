@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from romkit.resources.actions.base import BaseAction
 
 import re
@@ -8,7 +10,8 @@ from pathlib import Path
 class ZipExtract(BaseAction):
     name = 'zip_extract'
 
-    def install(self, source, target, **kwargs):
+    # Extracts files from the source to the target directory
+    def install(self, source: ResourcePath, target: ResourcePath, **kwargs) -> None:
         with zipfile.ZipFile(source.path, 'r') as source_zip:
             if self.config.get('file'):
                 # Find the file in the zip based on the given pattern

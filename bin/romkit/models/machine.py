@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 from romkit.models import Disk, File, Sample
 
 import logging
 import re
 from pathlib import Path
+from typing import Dict, List, Optional, Set
 
 # Represents a Game/Device/BIOS
 class Machine:
@@ -10,15 +13,15 @@ class Machine:
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
     def __init__(self,
-        romset,
-        name,
-        description='',
-        parent_name=None,
-        bios_name=None,
-        sample_name=None,
-        device_names=set(),
-        controls=set(),
-    ):
+        romset: ROMSet,
+        name: str,
+        description: str = '',
+        parent_name: Optional[str] = None,
+        bios_name: Optional[str] = None,
+        sample_name: Optional[str] = None,
+        device_names: Set[str] = set(),
+        controls: Set[str] = set(),
+    ) -> None:
         self.romset = romset
         self.name = name
         self.description = description.lower()
@@ -32,11 +35,11 @@ class Machine:
 
     # Whether this machine is installable
     @staticmethod
-    def is_installable(xml):
+    def is_installable(xml: lxml.etree.ElementBase) -> bool:
         return xml.get('ismechanical') != 'yes' and xml.find('rom') is not None
 
-    @staticmethod
-    def from_xml(romset, xml):
+    @classmethod
+    def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
         
@@ -48,7 +51,7 @@ class Machine:
         if bios_name == parent_name:
             bios_name = None
 
-        machine = Machine(
+        machine = cls(
             romset,
             xml.get('name'),
             xml.find('description').text,
@@ -73,26 +76,26 @@ class Machine:
         return machine
 
     # Tracks this machine so that it can be referenced later from the romset
-    def track(self):
+    def track(self) -> None:
         self.romset.track(self)
 
     @property
-    def is_clone(self):
+    def is_clone(self) -> bool:
         return self.parent_name is not None
 
     # Machine name (no extension, no flags)
     @property
-    def base_name(self):
+    def base_name(self) -> str:
         return self.BASE_NAME_REGEX.search(self.name).group().strip()
 
     # Flags from description
     @property
-    def flags(self):
+    def flags(self) -> Set[str]:
         return set(self.FLAG_REGEX.findall(self.description))
 
     # Flags, isolated
     @property
-    def flags_str(self):
+    def flags_str(self) -> str:
         flag_start = self.description.find('(')
         if flag_start >= 0:
             return self.description[flag_start:]
@@ -101,24 +104,24 @@ class Machine:
 
     # Target destination for installing this sample
     @property
-    def resource(self):
+    def resource(self) -> Resource:
         return self.romset.resource('machine', machine=self.name, parent=(self.parent_name or self.name))
 
     # Parent machine, if applicable
     @property
-    def parent_machine(self):
+    def parent_machine(self) -> Optional[Machine]:
         if self.parent_name:
             return self.romset.machine(self.parent_name)
 
     # BIOS machine, if applicable
     @property
-    def bios_machine(self):
+    def bios_machine(self) -> Optional[Machine]:
         if self.bios_name:
             return self.romset.machine(self.bios_name)
 
     # Devices that are required to run this machine
     @property
-    def device_machines(self):
+    def device_machines(self) -> List[Machine]:
         machines = []
         for device_name in self.device_names:
             machine = self.romset.machine(device_name)
@@ -127,8 +130,10 @@ class Machine:
 
         return machines
 
+    # The names of machines, including this one, that are required for
+    # this to run (includes devices, parent, and bios)
     @property
-    def dependent_machine_names(self):
+    def dependent_machine_names(self) -> Set[str]:
         names = {self.name}
         names.update(self.device_names)
         if self.parent_name:
@@ -138,18 +143,15 @@ class Machine:
 
         return names
 
-    @property
-    def dependent_machines(self):
-        machines = [self]
-        machines.extend(self.device_machines)
-        if self.bios_machine:
-            machines.append(self.bios_machine)
-
-        return machines
-
     # ROMs installed from the parent
+    # 
+    # Note that this assumes ROMs have either the same CRC or the
+    # same name.  If using "name" as the file_identifier but the
+    # parent ROM has a different name, this will be broken.  We could
+    # utilize the @merge property on ROMs to fix this, but at the
+    # moment there's no need.
     @property
-    def roms_from_parent(self):
+    def roms_from_parent(self) -> Set[File]:
         if self.parent_machine:
             return self.parent_machine.roms & self.roms
         else:
@@ -157,35 +159,43 @@ class Machine:
 
     # ROMs installed directly from this machine
     @property
-    def roms_from_self(self):
+    def roms_from_self(self) -> Set[File]:
         return self.roms - self.roms_from_parent
 
     # All ROMs expected to be in the non-merged build (includes parent, bios, and devices)
     @property
-    def non_merged_roms(self):
+    def non_merged_roms(self) -> Set[File]:
+        # Define the machines containing the lists of roms required
+        # for a non-merged archive
+        machines = [self]
+        machines.extend(self.device_machines)
+        if self.bios_machine:
+            machines.append(self.bios_machine)
+
+        # Build up the full set of RMOs required
         all_roms = set()
-        for machine in self.dependent_machines:
+        for machine in machines:
             all_roms.update(machine.roms)
 
         return all_roms
 
     # Audio sample
     @property
-    def sample(self):
+    def sample(self) -> Optional[Sample]:
         if self.sample_name:
             return Sample(self, self.sample_name)
 
     # Generates data for use in output actions
-    def dump(self):
+    def dump(self) -> Dict[str, str]:
         return {'name': self.name, 'romset': self.romset.name, 'emulator': self.romset.emulator}
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
-    def is_valid_nonmerged(self):
+    def is_valid_nonmerged(self) -> bool:
         return self.resource.contains(self.non_merged_roms)
 
     # Installs this machine onto the local filesystem
-    def install(self):
+    def install(self) -> None:
         # Self
         self.install_from(self, self.roms_from_self)
 
@@ -209,30 +219,31 @@ class Machine:
         if self.sample:
             self.sample.install()
 
-    def install_from(self, source_machine, roms):
-        if not source_machine:
+    # Installs the roms from the given source machine
+    def install_from(self, machine: Machine, roms: Set[File]) -> None:
+        if not machine:
             return
 
         if self.resource.contains(roms):
-            logging.info(f'[{self.name}] Already installed {source_machine.name}')
+            logging.info(f'[{self.name}] Already installed {machine.name}')
         else:
             # Re-download the source machine if it's missing files
-            if not source_machine.resource.download_path.contains(self.roms_from_self):
-                source_machine.resource.download(force=True)
+            if not machine.resource.download_path.contains(roms):
+                machine.resource.download(force=True)
 
-            logging.info(f'[{self.name}] Installing from {source_machine.name}')
-            self.resource.install(source_resource=source_machine.resource, files=roms, force=True)
+            logging.info(f'[{self.name}] Installing from {machine.name}')
+            self.resource.install(source_resource=machine.resource, files=roms, force=True)
 
     # Removes unnecessary files from the archive, if applicable
-    def clean(self):
+    def clean(self) -> None:
         # Clean the resource
         self.resource.clean(self.non_merged_roms)
 
     # Enables this machine to be visible to the emulator
-    def enable(self, system_dir):
-        logging.info(f'[{self.name}] Enabling in: {system_dir.path}')
+    def enable(self, target_dir: SystemDir):
+        logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
         
-        system_dir.symlink('machine', self.resource.target_path.path, machine=self.name)
+        target_dir.symlink('machine', self.resource, machine=self.name)
 
         for disk in self.disks:
-            disk.enable(system_dir)
+            disk.enable(target_dir)

@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+from typing import Optional
+
 # Represents a file resource
 class File:
     # Status when a ROM isn't actually included in the Machine
@@ -5,7 +9,7 @@ class File:
 
     __slots__ = ['name', 'crc', 'id']
 
-    def __init__(self, name, crc, file_identifier=None):
+    def __init__(self, name: str, crc: str, file_identifier: Optional[str] = None) -> None:
         self.name = name
         self.crc = crc.lower()
         
@@ -16,24 +20,24 @@ class File:
 
     # Whether this file is installable
     @staticmethod
-    def is_installable(xml):
+    def is_installable(xml: lxml.etree.ElementBase) -> bool:
         return xml.get('status') != File.STATUS_NO_DUMP
 
     # Builds a file from an XML element
-    @staticmethod
-    def from_xml(xml, file_identifier=None):
-        return File(
+    @classmethod
+    def from_xml(cls, xml: lxml.etree.ElementBase, **kwargs) -> File:
+        return cls(
             xml.get('name'),
             xml.get('crc'),
-            file_identifier=file_identifier,
+            **kwargs,
         )
 
     # Equality based on Unique ID
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         if isinstance(other, File):
             return self.id == other.id
         return False
 
     # Hash based on Unique ID
-    def __hash__(self):
+    def __hash__(self) -> str:
         return hash(self.id)

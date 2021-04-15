@@ -1,14 +1,17 @@
+from __future__ import annotations
+
 from romkit.resources.actions.base import BaseAction
 
 import shutil
 import subprocess
 import tempfile
 import zipfile
+from typing import Set
 
 class ZipMerge(BaseAction):
     name = 'zip_merge'
 
-    def install(self, source, target, files):
+    def install(self, source: ResourcePath, target: ResourcePath, files: Set[File]) -> None:
         source_files = source.list_files()
         source_files_by_id = {file.id: file for file in source_files}
         existing_files = target.list_files()

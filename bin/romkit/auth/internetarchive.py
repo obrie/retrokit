@@ -10,16 +10,16 @@ class InternetArchiveAuth(BaseAuth):
 
     name = 'internetarchive'
 
-    def __init__(self):
+    def __init__(self) -> None:
         config = configparser.ConfigParser()
         config.read(self.CONFIG_FILE)
 
         self.user = config.get('cookies', 'logged-in-user', raw=True).split(';')[0]
         self.signature = config.get('cookies', 'logged-in-sig', raw=True).split(';')[0]
 
-    def match(self, url):
+    def match(self, url: str) -> bool:
         return self.ARCHIVE_ORG_DOMAIN in url
 
     @property
-    def cookies(self):
+    def cookies(self) -> dict:
         return {'logged-in-user': self.user, 'logged-in-sig': self.signature}

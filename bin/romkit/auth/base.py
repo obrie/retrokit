@@ -1,24 +1,26 @@
+from __future__ import annotations
+
 # Authentication strategy
 class BaseAuth:
     # Looks up the format from the given name
-    @staticmethod
-    def from_name(name):
-        for cls in BaseAuth.__subclasses__():
-            if cls.name == name:
-                return cls
+    @classmethod
+    def from_name(cls, name: str) -> BaseAuth:
+        for subcls in cls.__subclasses__():
+            if subcls.name == name:
+                return subcls()
 
-        return self
+        return cls()
 
     # Does this authentication strategy match the given url?
-    def match(self, url):
+    def match(self, url: str) -> bool:
         return False
 
     # Headers to include in http requests
     @property
-    def headers(self):
+    def headers(self) -> dict:
         return {}
 
     # Cookies to include in http requests
     @property
-    def cookies(self):
+    def cookies(self) -> dict:
         return {}

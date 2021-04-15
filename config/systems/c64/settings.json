@@ -16,7 +16,7 @@
       "discovery": {
         "type": "nointro",
         "base": "https://***REMOVED***",
-        "metadata": "no-intro_romsets_files.xml",
+        "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Commodore - 64 \\(Tapes\\)"
         }
@@ -40,7 +40,7 @@
       "discovery": {
         "type": "nointro",
         "base": "https://***REMOVED***",
-        "metadata": "no-intro_romsets_files.xml",
+        "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Commodore - 64 \\([0-9-]+\\)"
         }

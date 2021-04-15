@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from romkit.auth import BaseAuth
 
 import logging
@@ -10,14 +12,11 @@ from urllib.parse import urlparse
 class Downloader:
     _instance = None
 
-    def __init__(self, auth=None):
-        if auth:
-            self.auth = BaseAuth.from_name(auth)()
-        else:
-            self.auth = None
+    def __init__(self, auth: str = None) -> None:
+        self.auth = auth and BaseAuth.from_name(auth)
 
     @classmethod
-    def instance(cls):
+    def instance(cls) -> Downloader:
         if cls._instance is None:
             cls._instance = cls.__new__(cls)
             cls._instance.__init__()
@@ -26,7 +25,7 @@ class Downloader:
     # Attempts to download from the given source unless either:
     # * It already exists in the destination
     # * The file is being force-refreshed
-    def get(self, source, destination, force=False):
+    def get(self, source: str, destination: Path, force: bool =False):
         if self.auth and self.auth.match(source):
             headers = self.auth.headers
             cookies = self.auth.cookies
@@ -35,22 +34,21 @@ class Downloader:
             cookies = {}
 
         source_uri = urlparse(source)
-        destination_path = Path(destination)
 
         # Ensure directory exists
-        Path(destination).parent.mkdir(parents=True, exist_ok=True)
+        destination.parent.mkdir(parents=True, exist_ok=True)
 
         if source_uri.scheme == 'file':
             # Copy directly from the filesystem
             logging.info(f'Copying {source} to {destination}')
             shutil.copyfile(source_uri.path, destination)
-        elif not destination_path.exists() or destination_path.stat().st_size == 0 or force:
+        elif not destination.exists() or destination.stat().st_size == 0 or force:
             # Re-download the file
             logging.info(f'Downloading {source} to {destination}')
             with tempfile.TemporaryDirectory() as tmp_dir:
                 # Initially download to a temporary directory so we don't overwrite until
                 # the download is completed successfully
-                download_path = Path(tmp_dir).joinpath(Path(destination_path).stem)
+                download_path = Path(tmp_dir).joinpath(destination.name)
 
                 with requests.get(source, headers=headers, cookies=cookies, stream=True) as response:
                     response.raise_for_status()
@@ -62,6 +60,6 @@ class Downloader:
 
                 if download_path.stat().st_size > 0:
                     # Rename file to final destination
-                    download_path.rename(destination_path)
+                    download_path.rename(destination)
                 else:
                     raise requests.exceptions.HTTPError(response=response)

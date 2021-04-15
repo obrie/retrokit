@@ -1,110 +1,118 @@
+from __future__ import annotations
+
 from romkit.models import File
-from romkit.resources.actions import BaseAction
+from romkit.resources.actions import BaseAction, Copy
 from romkit.resources.resource_path import ResourcePath
 from romkit.util import Downloader
 
 from pathlib import Path
+from typing import Optional, Set
 from urllib.parse import quote
 
 class Resource:
     def __init__(self,
-        source_url,
-        download_path,
-        target_path,
-        install_action,
-        file_identifier,
-        downloader,
-    ):
+        source_url: str,
+        download_path: Path,
+        target_path: Path,
+        install_action: BaseAction,
+        file_identifier: str,
+        downloader: Downloader,
+    ) -> None:
         self.source_url = source_url
         self.download_path = ResourcePath.from_path(self, download_path)
         self.target_path = ResourcePath.from_path(self, target_path)
-        self.install_action = BaseAction.from_json(install_action)
+        self.install_action = install_action
         self.file_identifier = file_identifier
         self.downloader = downloader
  
     # Downloads files needed for this romset
-    def download(self, force=False):
+    def download(self, force: bool = False) -> None:
         self.downloader.get(self.source_url, self.download_path.path, force=force)
 
-    def install(self, source_resource=None, force=False, **kwargs):
-        if not source_resource:
-            source_resource = self
+    # Installs from the given source
+    def install(self, source: Optional[Resource] = None, force: bool = False, **kwargs) -> None:
+        if not source:
+            source = self
 
         # Download source
         if not self.target_path.exists() or force:
-            source_resource.download()
+            source.download()
 
             # Ensure target directory exists
-            Path(self.target_path.path).parent.mkdir(parents=True, exist_ok=True)
+            self.target_path.path.parent.mkdir(parents=True, exist_ok=True)
 
             # Install to target
-            self.install_action.install(source_resource.download_path, self.target_path, **kwargs)
+            self.install_action.install(source.download_path, self.target_path, **kwargs)
 
-    # Lists the files that are contained within the resource
-    def contains(self, files):
+    # Determines whether the given files are contained within the target resource path
+    def contains(self, files: Set[File]) -> bool:
         return self.target_path.contains(files)
 
     # Runs any post-processing on the target file
-    def clean(self, expected_files = None):
+    def clean(self, expected_files: Optional[Set[File]] = None) -> None:
         if self.download_path != self.target_path:
             self.download_path.delete()
 
         self.target_path.clean(expected_files)
 
     # Creates a file that's expected to be seen in this resource
-    def build_file(self, name, crc):
+    def build_file(self, name: str, crc: str) -> File:
         return File(name, crc, self.file_identifier)
 
 class ResourceTemplate:
     def __init__(self,
-        source_url,
-        target_path,
-        download_path=None,
-        downloader=Downloader.instance(),
-        install_action=None,
-        discovery=None,
-        file_identifier=None,
-        default_args={},
+        source_url_template: str,
+        target_path_template: str,
+        download_path_template: Optional[str] = None,
+        downloader: Downloader = Downloader.instance(),
+        install_action: BaseAction = Copy(),
+        discovery: Optional[BaseDiscovery] = None,
+        file_identifier: str = 'crc',
+        default_context: dict = {},
     ):
-        self.source_url = source_url
-        self.target_path = target_path
-        self.download_path = download_path or target_path
+        self.source_url_template = source_url_template
+        self.target_path_template = target_path_template
+        self.download_path_template = download_path_template or target_path_template
         self.downloader = downloader
-        self.install_action = install_action or {'action': 'copy'}
+        self.install_action = install_action
         self.discovery = discovery
-        self.file_identifier = file_identifier or 'crc'
-        self.default_args = default_args
+        self.file_identifier = file_identifier
+        self.default_context = default_context
 
-    @staticmethod
-    def from_json(json, discovery, downloader, default_args={}):
-        return ResourceTemplate(
+    @classmethod
+    def from_json(cls, json: dict, **kwargs) -> ResourceTemplate:
+        install_action = BaseAction.from_json(json.get('install', {'action': 'copy'}))
+
+        return cls(
             json['source'],
             json['target'],
-            download_path=json.get('download'),
-            downloader=downloader,
-            install_action=json.get('install'),
-            discovery=discovery,
-            file_identifier=json.get('file_identifier'),
-            default_args=default_args,
+            download_path_template=json.get('download'),
+            install_action=install_action,
+            file_identifier=json.get('file_identifier', 'crc'),
+            **kwargs
         )
 
     # Builds a URL for an asset in this romset
-    def get(self, **args):
-        # Add args already assumed to be encoded
-        url_args = self.default_args.copy()
+    def render(self, **context) -> Resource:
+        # Add context already assumed to be encoded
+        url_context = self.default_context.copy()
         if self.discovery:
             for key, url in self.discovery.mappings().items():
-                url_args[f'discovery_{key}'] = url
+                url_context[f'discovery_{key}'] = url
 
-        # Encode remaining args
-        for key, value in args.items():
-            url_args[key] = quote(value)
+        # Encode remaining context
+        for key, value in context.items():
+            url_context[key] = quote(value)
 
         return Resource(
-            source_url=self.source_url.format(**url_args),
-            download_path=self.download_path.format(home=str(Path.home()), **args),
-            target_path=self.target_path.format(home=str(Path.home()), **args),
+            source_url=self.source_url_template.format(**url_context),
+            download_path=self._render_path(self.download_path_template, context),
+            target_path=self._render_path(self.target_path_template, context),
             install_action=self.install_action,
             file_identifier=self.file_identifier,
             downloader=self.downloader,
         )
+
+    # Renders a Path based on the given template
+    def _render_path(self, path_template: str, context: dict) -> Path:
+        return Path(path_template.format(home=str(Path.home()), **context))

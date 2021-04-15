@@ -1,9 +1,10 @@
+from __future__ import annotations
+
 from romkit.systems import BaseSystem
-from romkit.filters.arcade import LanguageFilter, CategoryFilter, RatingFilter, EmulatorFilter
 
 class PCSystem(BaseSystem):
     name = 'pc'
 
-    def enable(self, machine, dirname):
+    def enable(self, machine: Machine, system_dir: SystemDir) -> None:
         # TODO: Create configuration file
         pass

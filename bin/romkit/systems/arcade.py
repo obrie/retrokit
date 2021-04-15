@@ -3,11 +3,11 @@ from romkit.filters.arcade import LanguageFilter, CategoryFilter, RatingFilter, 
 
 class ArcadeSystem(BaseSystem):
     name = 'arcade'
-    user_filters = BaseSystem.user_filters + [
+    dynamic_filters = BaseSystem.dynamic_filters + [
         LanguageFilter,
         CategoryFilter,
         RatingFilter,
     ]
-    auto_filters = BaseSystem.auto_filters + [
+    static_filters = BaseSystem.static_filters + [
       EmulatorFilter,
     ]

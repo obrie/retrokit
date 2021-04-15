@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 from pathlib import Path
+from typing import Set
 
 # Represents a local path for a resource on the filesystem
 class ResourcePath:
@@ -6,42 +9,51 @@ class ResourcePath:
     can_list_files = False
     
     # Looks up the format from the given path
-    @staticmethod
-    def from_path(resource, path):
+    @classmethod
+    def from_path(cls, resource: Resource, path: Path) -> ResourcePath:
         extension = Path(path).suffix[1:]
+        return cls.for_extension(extension)(resource, path)
 
-        for cls in ResourcePath.__subclasses__():
-            if extension in cls.extensions:
-                return cls(resource, path)
+    # Looks up the discovery from the given name
+    @classmethod
+    def for_extension(cls, extension: str) -> Type[ResourcePath]:
+        for subcls in cls.__subclasses__():
+            if extension in subcls.extensions:
+                return subcls
 
-        return ResourcePath(resource, path)
+        return cls
 
-    def __init__(self, resource, path):
+    def __init__(self, resource: Resource, path: Path) -> None:
         self.resource = resource
         self.path = path
 
     # Builds a file reference
-    def build_file(self, name, crc):
+    def build_file(self, name: str, crc: str) -> File:
         return self.resource.build_file(name, crc)
 
     # Lists files installed in this path
-    def contains(self, files):
+    def contains(self, files: Set[File]) -> bool:
         if self.can_list_files:
             return self.exists() and not any(files - self.list_files())
         else:
             return self.exists()
 
     # Whether this path exists
-    def exists(self):
-        return Path(self.path).exists()
+    def exists(self) -> bool:
+        return self.path.exists()
 
-    def delete(self):
+    # Deletes this path if it exists
+    def delete(self) -> None:
         if self.exists():
-            Path(self.path).unlink()
+            self.path.unlink()
 
     # Any necessary cleanup
-    def clean(self, expected_files):
+    def clean(self, expected_files: Set[File]) -> None:
         pass
+
+    # Lists files contained in this resource path
+    def list_files(self) -> Set[File]:
+        raise NotImplementedError
 
     ##############
     # Equality
@@ -55,4 +67,4 @@ class ResourcePath:
 
     # Hash based on Path
     def __hash__(self):
-        return hash(self.path)
+        return self.path.__hash__()

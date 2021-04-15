@@ -3,17 +3,20 @@ from romkit.util import Downloader
 
 import lxml.etree
 import tempfile
-from urllib.parse import quote, urljoin
+from pathlib import Path
+from urllib.parse import quote, urljoin, urlparse
 
 class NoIntroDiscovery(BaseDiscovery):
     name = 'nointro'
 
-    def load(self):
-        self.metadata_filepath = f'{tempfile.gettempdir()}/{self.romset.name}-files.xml'
-        self.download(urljoin(f'{self.base_url}/', self.metadata_url_path), self.metadata_filepath)
+    def load(self) -> None:
+        filename = Path(urlparse(self.metadata_url).path).name
+        self.metadata_filepath = self.download_dir.joinpath(filename)
+        
+        self.download(self.metadata_url, self.metadata_filepath)
 
-    def discover(self, pattern):
-        doc = lxml.etree.iterparse(self.metadata_filepath, tag=('file'))
+    def discover(self, pattern: str) -> str:
+        doc = lxml.etree.iterparse(str(self.metadata_filepath), tag=('file'))
 
         for event, element in doc:
             filepath = element.get('name')

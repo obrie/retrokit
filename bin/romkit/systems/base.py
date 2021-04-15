@@ -5,56 +5,67 @@ from romkit.systems.system_dir import SystemDir
 import logging
 import traceback
 from pathlib import Path
+from typing import Generator, List, Tuple
 
 class BaseSystem:
     name = 'base'
-    user_filters = [
+
+    # Filters that run based on an allowlist/blocklist provided at runtime
+    dynamic_filters = [
         CloneFilter,
         KeywordFilter,
         FlagFilter,
         ControlFilter,
         NameFilter,
     ]
-    auto_filters = []
 
-    def __init__(self, config):
+    # Filters that run without configuration
+    static_filters = []
+
+    def __init__(self, config: dict) -> None:
         self.config = config
-        self.dirs = {name: SystemDir(path, config['roms']['files']) for name, path in config['roms']['dirs'].items()}
+        self.dirs = {
+            name: SystemDir(path, config['roms']['files'])
+            for name, path in config['roms']['dirs'].items()
+        }
         self.filters = []
-        self.favorites_filter = NameFilter(config, set(config['roms']['favorites']), log=False)
+        self.favorites_filter = NameFilter(set(config['roms']['favorites']), log=False)
         self.machine_priority = config['roms'].get('priority', set())
         self.load()
 
     # Looks up the system from the given name
-    def from_name(name):
-        for cls in BaseSystem.__subclasses__():
-            if cls.name == name:
-                return cls
+    @classmethod
+    def from_json(cls, json: dict) -> None:
+        name = json['system']
 
-        return BaseSystem
+        for subcls in cls.__subclasses__():
+            if subcls.name == name:
+                return subcls(json)
 
-    def iter_romsets(self):
-        # Load romsets
-        for romset_config in self.config['romsets']:
-            yield ROMSet.from_json(self, romset_config)
+        return cls(json)
 
-    def load(self):
+    def load(self) -> None:
         # Load filters
-        logging.info('--- Loading filters ---')
-        for filter_cls in self.auto_filters:
-            self.filters.append(filter_cls(self.config))
+        logging.info('Loading filters...')
+        for filter_cls in self.static_filters:
+            self.filters.append(filter_cls(config=self.config))
 
-        for filter_cls in self.user_filters:
+        for filter_cls in self.dynamic_filters:
             allowlist = self.config['roms']['allowlists'].get(filter_cls.name)
             blocklist = self.config['roms']['blocklists'].get(filter_cls.name)
 
             if allowlist:
-                self.filters.append(filter_cls(self.config, set(allowlist)))
+                self.filters.append(filter_cls(set(allowlist), config=self.config))
 
             if blocklist:
-                self.filters.append(filter_cls(self.config, set(blocklist), True))
+                self.filters.append(filter_cls(set(blocklist), invert=True, config=self.config))
 
-    def list(self):
+    def iter_romsets(self) -> Generator[None, ROMSet, None]:
+        # Load romsets
+        for romset_config in self.config['romsets']:
+            yield ROMSet.from_json(romset_config, system=self)
+
+    def list(self) -> List[Machine]:
         # Filter and group by the base name (so, for example, multiple
         # games with different revisions will be grouped together)
         groups = {}
@@ -65,17 +76,18 @@ class BaseSystem:
 
             for machine in romset.iter_machines():
                 if self.allow(machine):
+                    # Track this machine and all machines it depends on
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Group the machine
+                    # Group the machine based on its name without flags
                     base_name = machine.base_name
                     if base_name not in groups:
                         groups[base_name] = []
                     groups[base_name].append(machine)
                 elif not machine.is_clone:
                     # We track all parent/bios machines in case they're needed as a dependency
-                    # in future machines
+                    # in future machines.  We'll confirm later on with `machines_to_track`.
                     machine.track()
 
             # Free memory by removing machines we didn't need to keep
@@ -86,9 +98,11 @@ class BaseSystem:
         # Prioritize the machines within each group
         machines = []
         for base_name, grouped_machines in groups.items():
+            # Find the highest-priority machine
             prioritized_machines = sorted(grouped_machines, key=self._sort_machines)
             machines.append(prioritized_machines[0])
 
+            # Log all of the machines that were de-prioritized
             for machine in prioritized_machines[1:]:
                 logging.info(f'[{machine.name}] Skip (PriorityFilter)')
 
@@ -98,17 +112,20 @@ class BaseSystem:
     # 
     # If two machines have the same priority, the machine with the shortest name
     # is chosen.
-    def _sort_machines(self, machine):
+    def _sort_machines(self, machine: Machine) -> Tuple[int, int]:
+        # Default priority is lowest
         priority_index = len(self.machine_priority)
+
         for index, search_string in enumerate(self.machine_priority):
             if search_string in machine.flags_str:
+                # Found a matching priority string: track the index
                 priority_index = index
                 break
 
         return (priority_index, len(machine.name))
 
     # Installs all of the filtered machines
-    def install(self):
+    def install(self) -> None:
         # Filter
         machines = self.list()
 
@@ -138,11 +155,10 @@ class BaseSystem:
                 self.enable(machine, self.dirs['favorites'])
 
     # Whether this machine is allowed for install
-    def allow(self, machine):
+    def allow(self, machine: Machine) -> bool:
         is_favorite = self.favorites_filter.allow(machine)
         return all((is_favorite and not filter.apply_to_favorites) or filter.allow(machine) for filter in self.filters)
 
     # Enables this machine so it's visible
-    def enable(self, machine, dirname):
-
-        machine.enable(dirname)
+    def enable(self, machine: Machine, target_dir: SystemDir) -> None:
+        machine.enable(target_dir)
