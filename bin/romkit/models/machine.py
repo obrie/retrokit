@@ -46,10 +46,19 @@ class Machine:
         # Controls
         controls = {control.get('name') for control in xml.findall('control')}
 
+        # Parent / BIOS
         parent_name = xml.get('cloneof')
         bios_name = xml.get('romof')
         if bios_name == parent_name:
             bios_name = None
+
+        # Sample
+        sample_name = xml.get('sampleof')
+        if not sample_name and xml.findall('sample'):
+            # In older dat files, sampleof wasn't included in the parent.
+            # We fall back to checking if there are any <sample /> children
+            # and assume the sample archive is the same name as this machine.
+            sample_name = xml.get('name')
 
         machine = cls(
             romset,
@@ -57,7 +66,7 @@ class Machine:
             xml.find('description').text,
             parent_name,
             bios_name,
-            xml.get('sampleof'),
+            sample_name,
             device_names,
             controls,
         )
