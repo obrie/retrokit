@@ -15,7 +15,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Atari - 2600"
@@ -23,7 +23,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 2600 (20200514-091155).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 2600.dat",
           "target": "/home/pi/RetroPie/roms/atari2600/.nointro/roms.dat"
         },
         "machine": {

@@ -11,7 +11,7 @@
   },
   "cheats": "Sega - Game Gear",
   "bios": {
-    "url": "https://github.com/Abdess/retroarch_system/blob/BIOSes/Sega%20-%20Game%20Gear",
+    "url": "BIOS_URL/BIOSes/Sega%20-%20Game%20Gear",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "bios.gg": "{url}/bios.gg?raw=true"
@@ -23,7 +23,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Sega - Game Gear"
@@ -31,7 +31,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear (20201227-043658).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear.dat",
           "target": "/home/pi/RetroPie/roms/gamegear/.nointro/roms.dat"
         },
         "machine": {

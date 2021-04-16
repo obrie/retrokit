@@ -19,7 +19,7 @@
     {
       "name": "fbneo",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_FBNEO_URL",
       "resources": {
         "dat": {
           "source": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
@@ -40,7 +40,7 @@
     {
       "name": "mame2003",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_2003_URL",
       "resources": {
         "dat": {
           "source": "{url}/mame2003.xml",
@@ -65,7 +65,7 @@
     {
       "name": "mame2003-plus",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_2003_PLUS_URL",
       "resources": {
         "dat": {
           "source": "{url}/MAME 2003-Plus - 2018-12-31.xml",
@@ -90,7 +90,7 @@
     {
       "name": "mame2010",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
           "source": "{url}/MAME 2010 DAT - 2019-01-05.xml",
@@ -102,7 +102,7 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "https://***REMOVED***{machine}/{disk}.chd",
+          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
           "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
         },
         "sample": {
@@ -115,7 +115,7 @@
     {
       "name": "mame2015",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_2015_URL",
       "resources": {
         "dat": {
           "source": "{url}/mame2015.xml",
@@ -127,7 +127,7 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "https://***REMOVED***{machine}/{disk}.chd",
+          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
           "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
         },
         "sample": {
@@ -140,7 +140,7 @@
     {
       "name": "mame2016",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_2016_URL",
       "resources": {
         "dat": {
           "source": "{url}/MAME 2016 XML (Arcade Only).xml",
@@ -152,7 +152,7 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "https://***REMOVED***{machine}/{disk}.chd",
+          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
           "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
         },
         "sample": {
@@ -165,7 +165,7 @@
     {
       "name": "mame-0222",
       "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_MAME_0222_URL",
       "resources": {
         "dat": {
           "source": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
@@ -178,11 +178,11 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "https://***REMOVED***{machine}/{disk}.chd",
+          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
           "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
         },
         "sample": {
-          "source": "https://***REMOVED***{sample}.zip",
+          "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME%200.196%20EXTRAs%2Fsamples%2F{sample}.zip",
           "target": "/home/pi/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },

@@ -12,7 +12,7 @@
   },
   "cheats": "Sega - Mega Drive - Genesis",
   "bios": {
-    "url": "https://github.com/Abdess/retroarch_system/blob/BIOSes/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "url": "BIOS_URL/BIOSes/Sega%20-%20Mega%20Drive%20-%20Genesis",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "bios_MD.bin": "{url}/bios_MD.bin?raw=true"
@@ -24,7 +24,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Sega - Mega Drive - Genesis"
@@ -32,7 +32,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis (20210316-003553).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis.dat",
           "target": "/home/pi/RetroPie/roms/megadrive/.nointro/roms.dat"
         },
         "machine": {

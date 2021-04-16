@@ -16,7 +16,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Nintendo - Nintendo Entertainment System.*\\[headered\\]"
@@ -24,7 +24,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System (20210323-123406).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System.dat",
           "target": "/home/pi/RetroPie/roms/arcade/.nointro/roms.dat"
         },
         "machine": {

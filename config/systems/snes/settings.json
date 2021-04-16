@@ -16,7 +16,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Nintendo - Super Nintendo Entertainment System \\(Combined\\)"
@@ -24,7 +24,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined) (20210323-204549).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined).dat",
           "target": "/home/pi/RetroPie/roms/snes/.nointro/roms.dat"
         },
         "machine": {

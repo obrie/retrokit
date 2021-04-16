@@ -13,7 +13,7 @@
     {
       "name": "the_eye",
       "protocol": "http",
-      "url": "https://the-eye.eu/public/Games/eXo/eXoDOS_v5/eXo/eXoDOS",
+      "url": "$ROMSET_PC_EXODOS_URL",
       "resources": {
         "machine": {
           "source": "{url}/{machine}.zip",

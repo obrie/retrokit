@@ -11,7 +11,7 @@
   },
   "cheats": "Sony - PlayStation",
   "bios": {
-    "url": "https://github.com/Abdess/retroarch_system/blob",
+    "url": "BIOS_URL",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "psxonpsp660.bin": "{url}/Other/Sony%20-%20PlayStation/PSXONPSP660.BIN?raw=true",
@@ -25,27 +25,7 @@
     {
       "name": "redump",
       "protocol": "http",
-      "url": "https://***REMOVED***Playstation/Games/NTSC",
-      "resources": {
-        "dat": {
-          "source": "http://redump.org/datfile/psx/",
-          "download": "/home/pi/RetroPie/roms/psx/.redump/roms.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/roms.dat",
-          "install": {"action": "zip_extract", "file": ".*\\.dat"}
-        },
-        "machine": {
-          "source": "{url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}",
-          "install": {"action": "zip_extract"}
-        }
-      },
-      "emulator": "lr-pcsx-rearmed"
-    },
-    {
-      "name": "redump",
-      "protocol": "http",
-      "url": "https://***REMOVED***",
+      "url": "$ROMSET_PSX_REDUMP_URL",
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/psx/",

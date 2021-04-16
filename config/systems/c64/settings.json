@@ -15,7 +15,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Commodore - 64 \\(Tapes\\)"
@@ -23,7 +23,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes) (20210216-231940).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes).dat",
           "target": "/home/pi/RetroPie/roms/c64/.nointro/roms-tapes.dat"
         },
         "machine": {
@@ -39,7 +39,7 @@
       "protocol": "http",
       "discovery": {
         "type": "nointro",
-        "base": "https://***REMOVED***",
+        "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
           "url": "no-intro romsets/Commodore - 64 \\([0-9-]+\\)"
@@ -47,7 +47,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (20210216-232616).dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64.dat",
           "target": "/home/pi/RetroPie/roms/c64/.nointro/roms-cartridges.dat"
         },
         "machine": {

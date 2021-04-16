@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import logging
+import os
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -14,9 +15,11 @@ class ROMKit:
     def __init__(self, action: str, config_file: str, log_level: str) -> None:
         self.action = action
 
-        # Load configuration
+        # Load configuration (and expand env vars)
         with open(config_file) as f:
-            self.config = json.load(f)
+            self.config = json.loads(os.path.expandvars(f.read()))
+
+        # Set defaults
         self.config['roms'].setdefault('allowlists', {})
         self.config['roms'].setdefault('blocklists', {})
         self.config['roms'].setdefault('favorites', [])
