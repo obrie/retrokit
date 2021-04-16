@@ -28,7 +28,7 @@ class Resource:
  
     # Whether this resource is located locally on the system
     @property
-    def source_is_local(self) -> bool:
+    def is_locally_sourced(self) -> bool:
         return urlparse(self.source_url).scheme == 'file'
 
     # Downloads files needed for this romset
@@ -41,7 +41,7 @@ class Resource:
             source = self
 
         # Download source
-        if not self.target_path.exists() or target_path.source_is_local or force:
+        if not self.target_path.exists() or self.is_locally_sourced or force:
             source.download()
 
             # Ensure target directory exists
