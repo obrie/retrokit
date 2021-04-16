@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Set
 
 # Represents a Game/Device/BIOS
 class Machine:
-    BASE_NAME_REGEX = re.compile(r'^[^\(]+')
+    TITLE_REGEX = re.compile(r'^[^\(]+')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
     def __init__(self,
@@ -92,10 +92,10 @@ class Machine:
     def is_clone(self) -> bool:
         return self.parent_name is not None
 
-    # Machine name (no extension, no flags)
+    # Machine title (no extension, no flags)
     @property
-    def base_name(self) -> str:
-        return self.BASE_NAME_REGEX.search(self.name).group().strip()
+    def title(self) -> str:
+        return self.TITLE_REGEX.search(self.name).group().strip()
 
     # Flags from description
     @property

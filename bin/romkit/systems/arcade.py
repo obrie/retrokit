@@ -9,5 +9,5 @@ class ArcadeSystem(BaseSystem):
         RatingFilter,
     ]
     static_filters = BaseSystem.static_filters + [
-      EmulatorFilter,
+        EmulatorFilter,
     ]

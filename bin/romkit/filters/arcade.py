@@ -63,12 +63,12 @@ class LanguageFilter(ExactFilter):
         self.config_path = Path(f'{TMP_DIR}/languages.ini')
 
         if not self.config_path.exists():
-            version = scrape(LanguageFilter.SCRAPE_URL, LanguageFilter.VERSION_PATTERN)
+            version = scrape(self.SCRAPE_URL, self.VERSION_PATTERN)
 
             download_and_extract(
-                LanguageFilter.URL.format(version=version),
+                self.URL.format(version=version),
                 Path(f'{TMP_DIR}/languages.zip'),
-                LanguageFilter.ARCHIVE_FILE,
+                self.ARCHIVE_FILE,
                 self.config_path,
             )
 
@@ -97,12 +97,12 @@ class CategoryFilter(SubstringFilter):
         self.config_path = Path(f'{TMP_DIR}/categories.ini')
 
         if not self.config_path.exists():
-            version = scrape(CategoryFilter.SCRAPE_URL, CategoryFilter.VERSION_PATTERN)
+            version = scrape(self.SCRAPE_URL, self.VERSION_PATTERN)
 
             download_and_extract(
-                CategoryFilter.URL.format(version=version),
+                self.URL.format(version=version),
                 Path(f'{TMP_DIR}/categories.zip'),
-                CategoryFilter.ARCHIVE_FILE,
+                self.ARCHIVE_FILE,
                 self.config_path,
             )
 
@@ -131,12 +131,12 @@ class RatingFilter(ExactFilter):
         self.config_path = Path(f'{TMP_DIR}/ratings.ini')
 
         if not self.config_path.exists():
-            version = scrape(RatingFilter.SCRAPE_URL, RatingFilter.VERSION_PATTERN)
+            version = scrape(self.SCRAPE_URL, self.VERSION_PATTERN)
 
             download_and_extract(
-                RatingFilter.URL.format(version=version),
+                self.URL.format(version=version),
                 Path(f'{TMP_DIR}/ratings.zip'),
-                RatingFilter.ARCHIVE_FILE,
+                self.ARCHIVE_FILE,
                 self.config_path,
             )
 
@@ -171,7 +171,7 @@ class EmulatorFilter(ExactFilter):
     def download(self) -> None:
         self.config_path = Path(f'{TMP_DIR}/emulators.tsv')
         if not self.config_path.exists():
-            Downloader.instance().get(EmulatorFilter.URL, self.config_path)
+            Downloader.instance().get(self.URL, self.config_path)
 
     def load(self):
         self.emulators = {}

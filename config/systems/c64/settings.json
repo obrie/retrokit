@@ -74,7 +74,8 @@
       "flags": [
         "usa",
         "europe"
-      ]
+      ],
+      "c64_dreams": [true]
     },
     "blocklists": {
       "flags": [
@@ -86,7 +87,6 @@
         "strip poker"
       ]
     },
-    "deduplicate": true,
     "favorites": [
       "180 (Europe) (Budget)",
       "Arkanoid (Europe)",

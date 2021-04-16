@@ -158,10 +158,6 @@ Torrents:
 
 ## TODO
 
-* [x] Determine if we should upgrade MicroSD card
-* [] Set up Arcade games
-* [x] Vice vs. lr-vice (set up controls properly)
-* [x] Get SNES controllers
-* [x] Update documentation
-* [] Test lr-dosbox-pure with Carmageddon
-* [x] Scriptable process
+* Update README
+* Replace urls with env vars
+* Test install of remaining systems

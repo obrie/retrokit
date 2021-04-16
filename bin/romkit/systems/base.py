@@ -80,11 +80,11 @@ class BaseSystem:
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Group the machine based on its name without flags
-                    base_name = machine.base_name
-                    if base_name not in groups:
-                        groups[base_name] = []
-                    groups[base_name].append(machine)
+                    # Group the machine based on its title (no flags)
+                    title = machine.title
+                    if title not in groups:
+                        groups[title] = []
+                    groups[title].append(machine)
                 elif not machine.is_clone:
                     # We track all parent/bios machines in case they're needed as a dependency
                     # in future machines.  We'll confirm later on with `machines_to_track`.
@@ -97,7 +97,7 @@ class BaseSystem:
 
         # Prioritize the machines within each group
         machines = []
-        for base_name, grouped_machines in groups.items():
+        for title, grouped_machines in groups.items():
             # Find the highest-priority machine
             prioritized_machines = sorted(grouped_machines, key=self._sort_machines)
             machines.append(prioritized_machines[0])

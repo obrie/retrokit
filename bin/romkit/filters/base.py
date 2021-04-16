@@ -94,6 +94,14 @@ class NameFilter(ExactFilter):
         return {machine.name}
 
 
+# Filter on the machine title
+class TitleFilter(ExactFilter):
+    name = 'titles'
+
+    def values(self, machine: Machine) -> set:
+        return {machine.title}
+
+
 # Filter on whether the machine is a clone of another
 class CloneFilter(ExactFilter):
     name = 'clones'
