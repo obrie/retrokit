@@ -8,6 +8,7 @@ from romkit.util import Downloader
 from pathlib import Path
 from typing import Optional, Set
 from urllib.parse import quote
+from urllib.parse import urlparse
 
 class Resource:
     def __init__(self,
@@ -25,6 +26,11 @@ class Resource:
         self.file_identifier = file_identifier
         self.downloader = downloader
  
+    # Whether this resource is located locally on the system
+    @property
+    def source_is_local(self) -> bool:
+        return urlparse(self.source_url).scheme == 'file'
+
     # Downloads files needed for this romset
     def download(self, force: bool = False) -> None:
         self.downloader.get(self.source_url, self.download_path.path, force=force)
@@ -35,7 +41,7 @@ class Resource:
             source = self
 
         # Download source
-        if not self.target_path.exists() or force:
+        if not self.target_path.exists() or target_path.source_is_local or force:
             source.download()
 
             # Ensure target directory exists
