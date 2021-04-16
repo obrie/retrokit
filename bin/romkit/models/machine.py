@@ -169,7 +169,11 @@ class Machine:
     # ROMs installed directly from this machine
     @property
     def roms_from_self(self) -> Set[File]:
-        return self.roms - self.roms_from_parent
+        self_roms = self.roms - self.roms_from_parent
+        if self.bios_machine:
+            self_roms -= self.bios_machine.roms
+
+        return self_roms
 
     # All ROMs expected to be in the non-merged build (includes parent, bios, and devices)
     @property
