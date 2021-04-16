@@ -32,7 +32,7 @@ class ResourceZipFile(ResourcePath):
 
     # Re-archives the file using TorrentZip for consistency with other services
     def clean(self, expected_files: Optional[Set[File]] = None) -> None:
-        logging.info(f"Torrentzip'ing {self.path}")
+        logging.debug(f"Torrentzip'ing {self.path}")
 
         # Run trrntzip in its own directory due to the log files it creates (with no control)
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -42,6 +42,7 @@ class ResourceZipFile(ResourcePath):
         # Remove files we don't need
         if expected_files:
             for file in (self.list_files() - expected_files):
+                logging.info(f'Removing unexpected file {file.name} from {self.path}')
                 subprocess.check_call(['zip', '-d', self.path, file.name])
 
     @contextlib.contextmanager
