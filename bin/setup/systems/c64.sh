@@ -34,7 +34,7 @@ install_joystick_selections() {
   done < <(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
 
   # Set joyport based on the above
-  while IFS='»' read -r color unknown title type multidisk joyport other; do
+  while IFS='^' read -r color unknown title type multidisk joyport other; do
     local normalized_name=$(normalize_name "$title")
     local rom_name=${installed_roms["$normalized_name/name"]}
     local emulator=${installed_roms["$normalized_name/emulator"]}
@@ -59,7 +59,7 @@ install_joystick_selections() {
         crudini --set "$opt_file" '' 'vice_joyport' "\"$joyport_selection\""
       fi
     fi
-  done < <(cat "$system_tmp_dir/c64_dreams.tsv" | tr "$tab" "»")
+  done < <(cat "$system_tmp_dir/c64_dreams.tsv" | tr "$tab" "^")
 }
 
 install() {
