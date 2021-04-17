@@ -26,3 +26,11 @@ if [ -z $(setting ".systems | index(\"$system\")") ]; then
   echo "$system is not a valid system"
   exit 1
 fi
+
+##############
+# ROMKit
+##############
+
+romkit_cli() {
+  TMPDIR="$tmp_dir" python3 bin/romkit/cli.py $1 "$system_settings_file" ${@:2}
+}

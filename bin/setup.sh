@@ -13,7 +13,6 @@ setupmodules=(
   boot
 
   # Tools
-  tools-torrent
   tools-dev
   tools-chdman
 

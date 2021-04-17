@@ -5,9 +5,8 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "dosbox": {"proper_name": "Dosbox", "default": true},
-    "dosbox-staging": {"proper_name": "Dosbox", "build": "source"},
-    "lr-dosbox-pure": {"proper_name": "Dosbox"}
+    "dosbox": {"proper_name": "Dosbox", "coreopt": "dosbox", "default": true},
+    "dosbox-staging": {"proper_name": "DosboxStaging", "build": "source", "coreopt": "dosbox"}
   },
   "romsets": [
     {
@@ -19,7 +18,7 @@
           "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/pc/.exodos/{machine}.zip",
           "target": "/home/pi/RetroPie/roms/pc/.exodos/{machine}",
-          "install": {"action": "zip_extract", "include_parent": false}
+          "install": {"action": "zip_extract"}
         }
       },
       "datlist": [
@@ -61,7 +60,7 @@
         "Where in the World is Carmen Sandiego (1985)",
         "Wolfenstein 3D (1992)"
       ],
-      "emulator": "lr-dosbox"
+      "emulator": "dosbox"
     }
   ],
   "roms": {

@@ -23,7 +23,7 @@ install_global_core_options() {
 # Game-specific core options
 install_game_core_options() {
   if [ -d "$system_config_dir/retroarch_opts" ]; then
-    while read emulator; do
+    while read emulator coreopt; do
       # Retroarch emulator-specific config
       local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
       mkdir -p "$retroarch_emulator_config_dir"
@@ -34,9 +34,9 @@ install_game_core_options() {
         local opt_file="$retroarch_emulator_config_dir/$opt_name"
         
         touch "$opt_file"
-        crudini --merge --output="$opt_file" '/opt/retropie/configs/all/retroarch-core-options.cfg' < "$override_file"
+        crudini --merge "$opt_file" < "$override_file"
       done
-    done < <(system_setting '.emulators | to_entries[] | [.key] | @tsv')
+    done < <(system_setting '.emulators | to_entries[] | [.key, .value.coreopt] | @tsv')
   fi
 }
 
