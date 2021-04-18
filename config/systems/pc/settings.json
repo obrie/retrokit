@@ -12,7 +12,7 @@
     {
       "name": "the_eye",
       "protocol": "http",
-      "url": "$ROMSET_PC_EXODOS_URL",
+      "url": "$ROMSET_PC_EXODOS_URL/eXoDOS",
       "resources": {
         "machine": {
           "source": "{url}/{machine}.zip",
@@ -36,11 +36,48 @@
       "all": "/home/pi/RetroPie/roms/pc"
     },
     "files": {
-      "machine": {"target": "{dir}/{machine}"}
+      "machine": {"target": "{dir}/eXoDOS/{machine_sourcefile}"},
+      "conf": {"target": "{dir}/{machine}.conf"}
     },
     "allowlists": {
       "names": [
-        "Arkanoid (1988)"
+        "Arkanoid (1988)",
+        "Arkanoid II - Revenge of Doh (1989)",
+        "American Gladiators (1992)",
+        "Bubble Bobble (1988)",
+        "California Games (1988)",
+        "California Games II (1990)",
+        "Carmageddon Max Pack (1998)",
+        "Death Rally (1996)",
+        "Descent (1995)",
+        "Descent II (1996)",
+        "DOOM (1993)",
+        "Disney's Aladdin (1994)",
+        "Disney's Beauty and the Beast - Be Our Guest (1992)",
+        "Duke Nukem 3D (1996)",
+        "Duke Nukem 3D - Atomic Edition (1996)",
+        "Earthworm Jim (1995)",
+        "Earthworm Jim 2 (1996)",
+        "Epic Pinball - The Complete Collection (1995)",
+        "Family Feud (1987)",
+        "Number Munchers (1990)",
+        "Oregon Trail Deluxe, The (1992)",
+        "Oregon Trail, The (1990)",
+        "Pitfall II - Lost Caverns (1984)",
+        "Quake (1996)",
+        "Prince of Persia (1990)",
+        "Rise of the Triad - Dark War (1994)",
+        "Sid Meier's Civilization (1991)",
+        "SimCity (1989)",
+        "SimCity 2000 - CD Collection (1994)",
+        "Skate or Die (1988)",
+        "Star Wars - Rebel Assault (1993)",
+        "Star Wars - Rebel Assault II - The Hidden Empire (1995)",
+        "Star Wars X-Wing (Collector's CD-ROM) (1994)",
+        "Theme Park (1994)",
+        "Tomb Raider Gold (1998)",
+        "Where in the World is Carmen Sandiego (1985)",
+        "Wolfenstein 3D (1992)"
       ]
     }
   }

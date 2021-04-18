@@ -126,39 +126,44 @@ class BaseSystem:
 
     # Installs all of the filtered machines
     def install(self) -> None:
-        # Filter
-        machines = self.list()
+        # Install and filter out invalid machines
+        valid_machines = filter(self.install_machine, self.list())
 
-        # Install
-        for machine in machines:
-            try:
-                machine.install()
-            except Exception as e:
-                logging.error(f'[{machine.name}] Install failed')
-                traceback.print_exc()
+        self.reset()
+        self.enable(valid_machines)
 
-        # Find valid machines
-        valid_machines = filter(Machine.is_valid_nonmerged, machines)
+    # Installs the given machine and returns true/false depending on whether the
+    # install was successful
+    def install_machine(self, machine: Machine) -> bool:
+        try:
+            machine.install()
+        except Exception as e:
+            logging.error(f'[{machine.name}] Install failed')
+            traceback.print_exc()
 
-        # Reset
-        for system_dir in self.dirs.values():
-            system_dir.reset()
-
-        # Clean & enable
-        for machine in valid_machines:
-            # Machine is valid: Enable
-            machine.clean()
-            self.enable(machine, self.dirs['all'])
-
-            # Add to favorites
-            if self.favorites_filter.allow(machine):
-                self.enable(machine, self.dirs['favorites'])
+        return machine.is_valid_nonmerged
 
     # Whether this machine is allowed for install
     def allow(self, machine: Machine) -> bool:
         is_favorite = self.favorites_filter.allow(machine)
         return all((is_favorite and not filter.apply_to_favorites) or filter.allow(machine) for filter in self.filters)
 
-    # Enables this machine so it's visible
-    def enable(self, machine: Machine, target_dir: SystemDir) -> None:
-        machine.enable(target_dir)
+    # Reset the visible set of machines
+    def reset(self) -> None:
+        for system_dir in self.dirs.values():
+            system_dir.reset()
+
+    # Enables the given list of machines so they're visible
+    def enable(self, machines: List[Machine]) -> None:
+        for machine in machines:
+            # Machine is valid: Enable
+            machine.clean()
+            self.enable_machine(machine, self.dirs['all'])
+
+            # Add to favorites
+            if self.favorites_filter.allow(machine):
+                self.enable_machine(machine, self.dirs['favorites'])
+
+    # Enables the given machine in the given directory
+    def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:
+         machine.enable(system_dir)

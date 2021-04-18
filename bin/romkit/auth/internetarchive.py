@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 class InternetArchiveAuth(BaseAuth):
-    CONFIG_FILE = f"{str(Path.home())}/.ia"
+    CONFIG_FILE = f'{str(Path.home())}/.ia'
     ARCHIVE_ORG_DOMAIN = 'archive.org'
 
     name = 'internetarchive'

@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 class SystemDir:
-    def __init__(self, path: str, file_templates: dict) -> None:
+    def __init__(self, path: str, file_templates: dict = {}) -> None:
         self.path = Path(path)
         self.file_templates = file_templates
 
@@ -18,10 +18,9 @@ class SystemDir:
                     filepath.unlink()
 
     # Symlinks a resource with the given source path to this directory
-    def symlink(self, resource_name: str, resource: Resource, **context) -> None:
+    def symlink(self, resource_name: str, source: Path, **context) -> None:
         file_template = self.file_templates[resource_name]
 
-        source = resource.target_path.path
         source_match = file_template.get('source')
         target = Path(file_template['target'].format(dir=self.path, **context))
 

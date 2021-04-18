@@ -21,6 +21,9 @@ class Machine:
         sample_name: Optional[str] = None,
         device_names: Set[str] = set(),
         controls: Set[str] = set(),
+        roms: Set[File] = set(),
+        disks: Set[Disk] = set(),
+        sourcefile: Optional[str] = None,
     ) -> None:
         self.romset = romset
         self.name = name
@@ -30,8 +33,9 @@ class Machine:
         self.sample_name = sample_name
         self.device_names = device_names
         self.controls = controls
-        self.disks = set()
-        self.roms = set()
+        self.disks = roms
+        self.roms = disks
+        self.sourcefile = sourcefile
 
     # Whether this machine is installable
     @staticmethod
@@ -63,12 +67,13 @@ class Machine:
         machine = cls(
             romset,
             xml.get('name'),
-            xml.find('description').text,
-            parent_name,
-            bios_name,
-            sample_name,
-            device_names,
-            controls,
+            description=xml.find('description').text,
+            parent_name=parent_name,
+            bios_name=bios_name,
+            sample_name=sample_name,
+            device_names=device_names,
+            controls=controls,
+            sourcefile=xml.get('sourcefile'),
         )
 
         # Disks
@@ -256,7 +261,7 @@ class Machine:
     def enable(self, target_dir: SystemDir):
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
         
-        target_dir.symlink('machine', self.resource, machine=self.name)
+        target_dir.symlink('machine', self.resource.target_path.path, machine=self.name)
 
         for disk in self.disks:
             disk.enable(target_dir)

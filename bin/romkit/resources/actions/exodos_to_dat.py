@@ -22,10 +22,12 @@ class ExodosToDat(BaseAction):
                     # Get actual name as it'll be downloaded from the source
                     application_path = game.find('ApplicationPath').text
                     if application_path:
-                        name = PureWindowsPath(application_path).stem
+                        path = PureWindowsPath(application_path)
+                        name = path.stem
+                        sourcefile = path.parent.stem
 
                         # Build element in target file
-                        element = lxml.etree.Element('game', name=name)
+                        element = lxml.etree.Element('game', name=name, sourcefile=sourcefile)
                         
                         # Add description
                         description = lxml.etree.Element('description')
@@ -34,7 +36,7 @@ class ExodosToDat(BaseAction):
 
                         # Add ROM
                         element.append(lxml.etree.Element('rom', name=f'{name}.zip'))
-                        
+
                         file.write(element, pretty_print=True)
                         element = None
 

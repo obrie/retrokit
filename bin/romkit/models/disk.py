@@ -35,7 +35,7 @@ class Disk:
 
     # Enables the disk to be accessible to the emulator
     def enable(self, system_dir: SystemDir) -> None:
-        system_dir.symlink('disk', self.resource, **self._context)
+        system_dir.symlink('disk', self.resource.target_path.path, **self._context)
 
     # Builds context for formatting dirs/urls
     @property
