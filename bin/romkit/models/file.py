@@ -9,9 +9,10 @@ class File:
 
     __slots__ = ['name', 'crc', 'id']
 
-    def __init__(self, name: str, crc: str, file_identifier: Optional[str] = None) -> None:
+    def __init__(self, name: str, crc: Optional[str], file_identifier: Optional[str] = None) -> None:
         self.name = name
-        self.crc = crc.lower()
+        if crc:
+            self.crc = crc.lower()
         
         if file_identifier == 'name':
             self.id = self.name
