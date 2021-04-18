@@ -3,7 +3,7 @@
   "themes": {},
   "scraper": {
     "sources": ["screenscraper"],
-    "args": "--excludefiles \"*DOSBox*\""
+    "args": "--excludefiles *DOSBox*"
   },
   "emulators": {
     "dosbox": {"proper_name": "Dosbox", "coreopt": "dosbox", "default": true},
