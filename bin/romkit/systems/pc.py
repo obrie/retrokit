@@ -62,8 +62,5 @@ class PCSystem(BaseSystem):
 
     # Symlinks the configuration file so that it's visible in the frontend
     def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:
-        exodos_name = machine.sourcefile
-        exodos_dir = machine.resource.target_path.path.joinpath(exodos_name)
-        config_file = exodos_dir.joinpath('dosbox.conf')
-
+        config_file = machine.resource.target_path.path.joinpath('dosbox.conf')
         system_dir.symlink('conf', config_file, machine=machine.name)
