@@ -2,7 +2,8 @@
   "system": "pc",
   "themes": {},
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper"],
+    "args": "--excludefiles *DOSBox*"
   },
   "emulators": {
     "dosbox": {"proper_name": "Dosbox", "coreopt": "dosbox", "default": true},
@@ -17,8 +18,8 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/pc/.exodos/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/pc/.exodos/{machine}",
-          "install": {"action": "zip_extract"},
+          "target": "/home/pi/RetroPie/roms/pc/.exodos/{machine_sourcefile}",
+          "install": {"action": "zip_extract", "include_parent": false},
           "file_identifier": "name"
         },
         "dat": {
@@ -36,8 +37,7 @@
       "all": "/home/pi/RetroPie/roms/pc"
     },
     "files": {
-      "machine": {"target": "{dir}/eXoDOS/{machine_sourcefile}"},
-      "conf": {"target": "{dir}/{machine}.conf"}
+      "conf": {"target": "{dir}/{machine}.conf", "overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf"}
     },
     "allowlists": {
       "names": [

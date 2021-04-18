@@ -37,13 +37,13 @@ class ResourceZipFile(ResourcePath):
         # Run trrntzip in its own directory due to the log files it creates (with no control)
         with tempfile.TemporaryDirectory() as tmpdir:
             with self._pushd(tmpdir):
-                subprocess.check_call(['trrntzip', self.path], stdout=subprocess.DEVNULL)
+                subprocess.run(['trrntzip', self.path], stdout=subprocess.DEVNULL, check=True)
 
         # Remove files we don't need
         if expected_files:
             for file in (self.list_files() - expected_files):
                 logging.info(f'Removing unexpected file {file.name} from {self.path}')
-                subprocess.check_call(['zip', '-d', self.path, file.name])
+                subprocess.run(['zip', '-d', self.path, file.name], check=True)
 
     @contextlib.contextmanager
     def _pushd(self, new_dir: str) -> None:

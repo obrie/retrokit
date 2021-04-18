@@ -9,6 +9,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   # Sound driver
   sudo apt install -y fluid-soundfont-gm
+
+  # Create symlink at root
+  ln -s "$HOME/RetroPie/pc/.exodos" "$HOME/eXoDOS"
 }
 
 uninstall() {

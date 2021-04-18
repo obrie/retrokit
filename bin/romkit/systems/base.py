@@ -137,11 +137,11 @@ class BaseSystem:
     def install_machine(self, machine: Machine) -> bool:
         try:
             machine.install()
+            return machine.is_valid_nonmerged
         except Exception as e:
             logging.error(f'[{machine.name}] Install failed')
             traceback.print_exc()
-
-        return machine.is_valid_nonmerged
+            return False
 
     # Whether this machine is allowed for install
     def allow(self, machine: Machine) -> bool:

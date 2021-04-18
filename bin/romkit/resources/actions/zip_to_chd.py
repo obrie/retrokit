@@ -16,6 +16,6 @@ class ZipToChd(BaseAction):
             cue_file = glob.glob(f'{extract_dir}/*.cue')[0]
 
             # Run chdman
-            subprocess.check_call(['chdman', 'createcd', '-f', '-i', cue_file, '-o', target.path])
+            subprocess.run(['chdman', 'createcd', '-f', '-i', cue_file, '-o', target.path], check=True)
 
         source.delete()

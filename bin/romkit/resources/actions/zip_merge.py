@@ -28,7 +28,7 @@ class ZipMerge(BaseAction):
                         continue
                     else:
                         # File exists with a different CRC; remove it
-                        subprocess.check_call(['zip', '-d', target.path, existing_file.name])
+                        subprocess.run(['zip', '-d', target.path, existing_file.name], check=True)
 
                 # Write ROM from source
                 source_file = source_files_by_id[file.id]

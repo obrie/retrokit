@@ -14,7 +14,10 @@ install() {
     system_image_name="genesis"
   fi
   
-  download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
+  if [ "$system" != 'pc' ]; then
+    # Currently no support for PC launch images due to keyboard issues
+    download "$(printf "$launch_images_base_url" "$system_image_name")" "$retropie_system_config_dir/launching-extended.png"
+  fi
 }
 
 uninstall() {

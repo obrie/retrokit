@@ -119,7 +119,7 @@ class Machine:
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('machine', machine=self.name, parent=(self.parent_name or self.name))
+        return self.romset.resource('machine', **self._context)
 
     # Parent machine, if applicable
     @property
@@ -261,7 +261,16 @@ class Machine:
     def enable(self, target_dir: SystemDir):
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
         
-        target_dir.symlink('machine', self.resource.target_path.path, machine=self.name)
+        target_dir.symlink('machine', self.resource.target_path.path, **self._context)
 
         for disk in self.disks:
             disk.enable(target_dir)
+
+    # Builds context for formatting dirs/urls
+    @property
+    def _context(self) -> dict:
+        return {
+            'machine': self.name,
+            'machine_sourcefile': self.sourcefile,
+            'parent': (self.parent_name or self.name),
+        }

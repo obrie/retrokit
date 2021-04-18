@@ -40,13 +40,16 @@ watch_screen() {
 
 show_launching_screen() {
   local system="$1"
+  local launch_image="/opt/retropie/configs/$system/launching-extended.png"
 
-  # Show launching screen
-  fbi -t 0 -1 -noverbose -a /opt/retropie/configs/$system/launching-extended.png </dev/tty &
-  local launching_screen_pid=$!
+  if [ -f "$launch_image" ]; then
+    # Show launching screen
+    fbi -t 0 -1 -noverbose -a /opt/retropie/configs/$system/launching-extended.png </dev/tty &
+    local launching_screen_pid=$!
 
-  # Monitor launching screen
-  watch_screen $launching_screen_pid &
+    # Monitor launching screen
+    watch_screen $launching_screen_pid &
+  fi
 }
 
 show_launching_screen "${@}" </dev/null &>/dev/null
