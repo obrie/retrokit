@@ -22,8 +22,10 @@ scrape_sources() {
 }
 
 build_gamelist() {
+  local extra_args=$(system_setting '.scraper.args?')
+
   log "Building gamelist for $system"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" $extra_args
 }
 
 install() {
