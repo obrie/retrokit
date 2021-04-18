@@ -1,6 +1,42 @@
-# Arcade Machine
+# RetroKit
 
-## Hardware
+retrokit provides hands-off management of arcade systems using currently known best
+practices for:
+
+* Argon cases
+* Display
+* IR
+* Retroarch configuration
+* Scraping
+* Bezels
+* Themes
+* Cheats
+* Launch images
+* VNC
+
+Additionally, it provides hands-off management of rom sets via ROMKit for:
+
+* Arcade
+* Atari2600
+* C64
+* GameGear
+* MegaDrive
+* NES
+* PC
+* PSX
+* SNES
+
+This includes complete control over filtering of Games *and* integration
+with external providers to download games that you legally own.
+
+This means you can set up your arcade machine from scratch to feature-complete
+with less than a few minutes worth of work.  The automated scripts could take
+24-48 hours to complete.
+
+This is built for RetroPie / Raspberry Pi 4.  You may customize it to your
+own needs.
+
+## Hardware reference
 
 First generation machine:
 
@@ -94,11 +130,6 @@ References:
 
 ### Retroarch
 
-[Retroarch](/opt/retropie/configs/all/retroarch.cfg)
-
-* /opt/retropie/configs/all/retroarch-joypads/Microsoft\ X-Box\ 360\ pad.cfg
-* /opt/retropie/configs/all/retroarch/autoconfig/Microsoft\ X-Box\ 360\ pad.cfg
-
 * https://retropie.org.uk/docs/RetroArch-Configuration/
 * https://docs.libretro.com/guides/overrides/
 
@@ -120,44 +151,3 @@ References:
 ## Emulators
 
 * https://emulation.gametechwiki.com/
-
-### DATs
-
-* Generator: https://datomatic.no-intro.org/index.php?page=download&op=dat&s=64
-* Changes: https://datomatic.no-intro.org/?page=news
-* Genres: https://github.com/libretro/libretro-database/tree/master/metadat/genre
-* Redump: https://github.com/libretro/libretro-database/tree/master/metadat/redump
-* No-Intro: https://github.com/libretro/libretro-database/tree/master/metadat/no-intro
-* MAME: https://github.com/libretro/mame2003-libretro/tree/master/metadata
-* FBNeo: https://github.com/libretro/FBNeo/tree/master/dats
-
-## ROMs
-
-Indexes:
-
-* https://***REMOVED***
-* https://***REMOVED***
-* https://***REMOVED***
-* https://***REMOVED***
-* https://***REMOVED***
-
-Sources:
-
-* http://www.archive.org
-* ***REMOVED***
-* Torrent
-
-Sets:
-
-* http://***REMOVED***
-* http://***REMOVED***
-
-Torrents:
-
-* http://***REMOVED***
-
-## TODO
-
-* Update README
-* Replace urls with env vars
-* Test install of remaining systems
