@@ -271,6 +271,6 @@ class Machine:
     def _context(self) -> dict:
         return {
             'machine': self.name,
-            'machine_sourcefile': self.sourcefile,
+            'machine_sourcefile': self.sourcefile or self.name,
             'parent': (self.parent_name or self.name),
         }
