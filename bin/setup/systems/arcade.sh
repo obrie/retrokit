@@ -38,9 +38,23 @@ install_hiscores() {
   download 'https://github.com/libretro/mame2016-libretro/raw/master/metadata/hiscore.dat' "$HOME/RetroPie/BIOS/mame2016/"
 }
 
+fix_runahead() {
+  local config_dir='/opt/retropie/configs/all/retroarch/config/MAME 2015'
+  mkdir -p "$config_dir"
+
+  # MAME 2015 crashes with runahead -- disable it for games running it
+  while read -r mod hard_links owner group size month day time filename; do
+    local name=$(basename "$filename" .zip)
+    local config_path="$config_dir/$name.cfg"
+
+    crudini --set "$config_path" '' run_ahead_enabled false
+  done < <(ls -l "$HOME/RetroPie/roms/arcade/-ALL-" | grep 2015)
+}
+
 install() {
   install_cheats
   install_hiscores
+  fix_runahead
 }
 
 "${@}"
