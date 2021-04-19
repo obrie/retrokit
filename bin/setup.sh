@@ -92,9 +92,11 @@ setup_all() {
   # Add systems
   "$dir/setup/system-all.sh" restore_globals
   while read system; do
-    for systemmodule in "${systemmodules[@]}"; do
-      "$dir/setup/system-$systemmodule.sh" "$action" "$system"
-    done
+    if [ "$system" != 'ports' ]; then
+      for systemmodule in "${systemmodules[@]}"; do
+        "$dir/setup/system-$systemmodule.sh" "$action" "$system"
+      done
+    fi
 
     # System-specific actions
     if [ -f "$dir/setup/systems/$system.sh" ]; then
