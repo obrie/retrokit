@@ -10,6 +10,7 @@ from romkit.systems import BaseSystem
 
 from argparse import ArgumentParser
 import json
+from signal import signal, SIGPIPE, SIG_DFL
 
 class ROMKit:
     def __init__(self, action: str, config_file: str, log_level: str) -> None:
@@ -59,4 +60,5 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    signal(SIGPIPE, SIG_DFL)
     main()

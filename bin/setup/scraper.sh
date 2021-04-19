@@ -11,7 +11,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # Configs:
 # * /opt/retropie/configs/all/skyscraper/config.ini
 install() {
-  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" skyscraper _binary_
+  install_retropie_package 'supplementary' 'skyscraper'
   ini_merge "$config_dir/skyscraper/config.ini" '/opt/retropie/configs/all/skyscraper/config.ini' space_around_delimiters=false
 }
 

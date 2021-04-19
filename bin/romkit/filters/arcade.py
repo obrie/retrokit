@@ -160,12 +160,12 @@ class EmulatorFilter(ExactFilter):
     URL = 'https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv'
 
     # TSV Columns
-    COLUMN_ROM = 'Rom'
-    COLUMN_EMULATOR = 'Recommended Emulator'
-    COLUMN_FPS = 'FPS'
-    COLUMN_VISUALS = 'Visuals'
-    COLUMN_AUDIO = 'Audio'
-    COLUMN_CONTROLS = 'Controls'
+    COLUMN_ROM = 0
+    COLUMN_EMULATOR = 2
+    COLUMN_FPS = 5
+    COLUMN_VISUALS = 6
+    COLUMN_AUDIO = 7
+    COLUMN_CONTROLS = 8
     QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
 
     def download(self) -> None:
@@ -177,7 +177,7 @@ class EmulatorFilter(ExactFilter):
         self.emulators = {}
 
         with open(self.config_path) as file:
-            rows = csv.DictReader(file, delimiter='\t')
+            rows = csv.read(file, delimiter='\t')
             for row in rows:
                 if not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
                     self.emulators[row[self.COLUMN_ROM]] = row[self.COLUMN_EMULATOR]
@@ -190,7 +190,7 @@ class EmulatorFilter(ExactFilter):
 
     def allow(self, machine):
         emulator = self.emulators.get(machine.name)
-        allowed = emulator == machine.romset.emulator
+        allowed = emulator == machine.emulator
 
         if not allowed and self.log:
             logging.info(f'[{machine.name}] Skip ({type(self).__name__})')

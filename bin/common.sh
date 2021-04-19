@@ -238,6 +238,44 @@ download() {
 }
 
 ##############
+# Package install
+##############
+
+install_retropie_package() {
+  local package_type="$1"
+  local name="$2"
+
+  if [[ "$name" == lr-* ]]; then
+    package_type='libretrocores'
+  fi
+
+  local install_dir="/opt/retropie/$package_type/$name"
+  local scriptmodule="$HOME/RetroPie-Setup/scriptmodules/$package_type/$name.sh"
+
+  # Determine whether we're updating an existing package or installing
+  # a new one
+  local mode
+  if [ -d "$install_dir" ]; then
+    mode='_update_'
+  else
+    mode=''
+  fi
+
+  if [ "$build" == "binary" ]; then
+    sudo ~/RetroPie-Setup/retropie_packages.sh "$name" ${mode:-_binary_}
+  else
+    # Source install
+    if [ -n "$branch" ]; then
+      # Set to correct branch
+      backup_and_restore "$scriptmodule"
+      sed -i "s/.git master/.git $branch/g" "$scriptmodule"
+    fi
+
+    sudo __ignore_module_date=1 ~/RetroPie-Setup/retropie_packages.sh "$name" ${mode:-_source_}
+  fi
+}
+
+##############
 # Utilities
 ##############
 

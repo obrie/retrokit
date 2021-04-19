@@ -57,4 +57,8 @@ install() {
   fix_runahead
 }
 
+uninstall() {
+  echo 'No uninstall for arcade'
+}
+
 "${@}"

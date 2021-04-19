@@ -1,0 +1,81 @@
+{
+  "system": "n64",
+  "themes": {
+    "bezel": "N64"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus"},
+    "lr-mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "default": true}
+  },
+  "cheats": "Nintendo - Nintendo 64",
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Nintendo - Nintendo 64 \\(BigEndian\\)"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo 64 (BigEndian).dat",
+          "target": "/home/pi/RetroPie/roms/n64/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/n64/-ALL-",
+      "favorites": "/home/pi/RetroPie/roms/n64"
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    },
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "allowlists": {
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ]
+    },
+    "blocklists": {
+      "flags": [
+        "beta",
+        "collection",
+        "demo",
+        "pirate",
+        "proto",
+        "unl",
+        "virtual console"
+      ]
+    },
+    "favorites": [
+      "Mario Kart 64 (USA)",
+      "Mario Party (USA)",
+      "Mario Party 2 (USA)",
+      "Mario Party 3 (USA)",
+      "Mortal Kombat 4 (USA)",
+      "NBA Jam 2000 (USA)",
+      "Quake (USA)",
+      "Tony Hawk's Pro Skater (USA)",
+      "Tony Hawk's Pro Skater 2 (USA)"
+    ]
+  }
+}

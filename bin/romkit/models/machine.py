@@ -36,6 +36,7 @@ class Machine:
         self.disks = roms
         self.roms = disks
         self.sourcefile = sourcefile
+        self.emulator = romset.emulator
 
     # Whether this machine is installable
     @staticmethod
@@ -205,7 +206,7 @@ class Machine:
 
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
-        return {'name': self.name, 'romset': self.romset.name, 'emulator': self.romset.emulator}
+        return {'name': self.name, 'romset': self.romset.name, 'emulator': self.emulator}
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
