@@ -1,6 +1,7 @@
 {
   "system": "ports",
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper"],
+    "args": "--excludefiles *Freedom*"
   }
 }
