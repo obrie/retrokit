@@ -177,7 +177,7 @@ class EmulatorFilter(ExactFilter):
         self.emulators = {}
 
         with open(self.config_path) as file:
-            rows = csv.read(file, delimiter='\t')
+            rows = csv.reader(file, delimiter='\t')
             for row in rows:
                 if not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
                     self.emulators[row[self.COLUMN_ROM]] = row[self.COLUMN_EMULATOR]
