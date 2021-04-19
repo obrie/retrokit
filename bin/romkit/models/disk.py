@@ -37,12 +37,6 @@ class Disk:
     def enable(self, system_dir: SystemDir) -> None:
         system_dir.symlink('disk', self.resource.target_path.path, **self._context)
 
-    # Removes this disk from the filesystem
-    def purge(self) -> None:
-        if self.resource.target_path.exists():
-            print(f'rm "{self.resource.target_path.path}"')
-            # self.resource.target_path.delete()
-
     # Builds context for formatting dirs/urls
     @property
     def _context(self) -> dict:

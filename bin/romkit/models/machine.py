@@ -273,9 +273,6 @@ class Machine:
             print(f'rm "{self.resource.target_path.path}"')
             # self.resource.target_path.delete()
 
-        for disk in self.disks:
-            disk.purge()
-
     # Builds context for formatting dirs/urls
     @property
     def _context(self) -> dict:
