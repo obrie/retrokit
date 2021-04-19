@@ -25,8 +25,6 @@ class EmulatorFilter(ExactFilter):
     COLUMN_ROM = 0
     COLUMN_EMULATOR = 1
 
-    EMULATOR_REGEX = re.compile(r'^(lr-mupen64plus|mupen64plus)')
-
     def download(self) -> None:
         self.config_path = Path(f'{TMP_DIR}/emulators.tsv')
         if not self.config_path.exists():
@@ -38,12 +36,7 @@ class EmulatorFilter(ExactFilter):
         with open(self.config_path) as file:
             rows = csv.reader(file, delimiter='\t')
             for row in rows:
-                match = self.EMULATOR_REGEX.search(row[self.COLUMN_EMULATOR])
-                if match:
-                    emulator = match.group().strip()
-                    print(emulator)
-                    print(row[self.COLUMN_ROM])
-                    self.emulators[row[self.COLUMN_ROM]] = emulator
+                self.emulators[row[self.COLUMN_ROM]] = row[self.COLUMN_EMULATOR]
 
         # Use overrides when necessary
         overrides = self.config['roms'].get('emulator_overrides')
