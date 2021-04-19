@@ -167,3 +167,17 @@ class BaseSystem:
     # Enables the given machine in the given directory
     def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:
          machine.enable(system_dir)
+
+    # Purges machines that were not installed
+    def vacuum(self) -> None:
+        installable_machines = self.list()
+        installable_machines_by_romset_name = {
+            f'{machine.romset.name}/{machine.name}': machine
+            for machine in installable_machines
+        }
+
+        for romset in self.iter_romsets():
+            for machine in romset.iter_machines():
+                key = f'{machine.romset.name}/{machine.name}'
+                if key not in installable_machines_by_romset_name:
+                    machine.purge()

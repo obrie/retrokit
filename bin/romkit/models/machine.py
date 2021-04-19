@@ -267,6 +267,15 @@ class Machine:
         for disk in self.disks:
             disk.enable(target_dir)
 
+    # Removes this machine from the filesystem
+    def purge(self):
+        if self.resource.target_path.exists():
+            print(f'rm {self.resource.target_path.path}')
+            # self.resource.target_path.delete()
+
+        for disk in self.disks:
+            disk.purge()
+
     # Builds context for formatting dirs/urls
     @property
     def _context(self) -> dict:

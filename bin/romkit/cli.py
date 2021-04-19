@@ -49,10 +49,14 @@ class ROMKit:
     def install(self) -> None:
         self.system.install()
 
+    # Removes machines that are not currently installed
+    def vacuum(self) -> None:
+        self.system.vacuum()
+
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'clean'])
+    parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'vacuum'])
     parser.add_argument(dest='config', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     args = parser.parse_args()
