@@ -10,6 +10,11 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   while IFS="$tab" read -r emulator build branch is_default; do
+    local package_type='emulators'
+    if [[ "$name" == lr-* ]]; then
+      package_type='libretrocores'
+    fi
+
     install_retropie_package 'emulators' "$emulator" "$build" "$branch"
 
     # Set default

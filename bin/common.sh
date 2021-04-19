@@ -247,10 +247,6 @@ install_retropie_package() {
   local build="${3:-binary}"
   local branch=$4
 
-  if [[ "$name" == lr-* ]]; then
-    package_type='libretrocores'
-  fi
-
   local install_dir="/opt/retropie/$package_type/$name"
   local scriptmodule="$HOME/RetroPie-Setup/scriptmodules/$package_type/$name.sh"
 
