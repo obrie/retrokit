@@ -40,7 +40,7 @@ class Disk:
     # Removes this disk from the filesystem
     def purge(self) -> None:
         if self.resource.target_path.exists():
-            print(f'rm {self.resource.target_path.path}')
+            print(f'rm "{self.resource.target_path.path}"')
             # self.resource.target_path.delete()
 
     # Builds context for formatting dirs/urls
