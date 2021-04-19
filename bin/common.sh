@@ -242,8 +242,10 @@ download() {
 ##############
 
 install_retropie_package() {
-  local package_type="$1"
-  local name="$2"
+  local package_type=$1
+  local name=$2
+  local build="${3:-binary}"
+  local branch=$4
 
   if [[ "$name" == lr-* ]]; then
     package_type='libretrocores'

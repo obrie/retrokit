@@ -10,7 +10,7 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   while IFS="$tab" read -r emulator build branch is_default; do
-    install_retropie_package 'emulators' "$emulator"
+    install_retropie_package 'emulators' "$emulator" "$build" "$branch"
 
     # Set default
     if [ "$is_default" == "true" ]; then
