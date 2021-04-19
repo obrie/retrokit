@@ -2,6 +2,6 @@
   "system": "ports",
   "scraper": {
     "sources": ["screenscraper"],
-    "args": "--excludefiles *Freedom*"
+    "args": "--excludefiles *freedoom*"
   }
 }
