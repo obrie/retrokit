@@ -92,11 +92,12 @@ setup_all() {
   # Add systems
   "$dir/setup/system-all.sh" restore_globals
   while read system; do
-    if [ "$system" != 'ports' ]; then
-      for systemmodule in "${systemmodules[@]}"; do
+    for systemmodule in "${systemmodules[@]}"; do
+      # Ports only get the scrape module
+      if [ "$systemmodule" == 'scrape' ] || [ "$system" != 'ports' ]; then
         "$dir/setup/system-$systemmodule.sh" "$action" "$system"
-      done
-    fi
+      fi
+    done
 
     # System-specific actions
     if [ -f "$dir/setup/systems/$system.sh" ]; then
