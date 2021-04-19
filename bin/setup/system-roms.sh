@@ -16,7 +16,7 @@ clean_emulator_config_key() {
 }
 
 install() {
-  romkit_cli install
+  romkit_cli install --log-level DEBUG
 
   log "--- Setting default emulators ---"
 

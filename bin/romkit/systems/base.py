@@ -104,7 +104,7 @@ class BaseSystem:
 
             # Log all of the machines that were de-prioritized
             for machine in prioritized_machines[1:]:
-                logging.info(f'[{machine.name}] Skip (PriorityFilter)')
+                logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
 
         return machines
 
