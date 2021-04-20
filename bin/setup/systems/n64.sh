@@ -2,7 +2,7 @@
 
 set -ex
 
-system='pc'
+system='n64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../system-common.sh"
 
