@@ -33,8 +33,7 @@ install_game_core_options() {
         local opt_name=$(basename "$override_file")
         local opt_file="$retroarch_emulator_config_dir/$opt_name"
         
-        # TODO: Confirm whether we need to copy from the global config
-        touch "$opt_file"
+        grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$opt_file"
         crudini --merge "$opt_file" < "$override_file"
       done
     done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name] | @tsv')
