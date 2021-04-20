@@ -8,7 +8,9 @@
   },
   "emulators": {
     "mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "build": "source"},
-    "lr-mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "default": true}
+    "lr-mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "default": true},
+    "lr-mupen64plus-next": {"proper_name": "Mupen64PlusNext", "coreopt": "mupen64plus-next"},
+    "lr-parallel-n64": {"proper_name": "ParallelN64", "coreopt": "parallel-n64"}
   },
   "cheats": "Nintendo - Nintendo 64",
   "romsets": [
