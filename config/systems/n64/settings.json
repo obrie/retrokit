@@ -30,7 +30,9 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.zip"
+          "download": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.z64",
+          "install": {"action": "zip_extract", "file": ".*\\.z64"}
         }
       },
       "auth": "internetarchive"
