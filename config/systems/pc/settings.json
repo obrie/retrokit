@@ -7,7 +7,7 @@
   },
   "emulators": {
     "dosbox": {"build": "source", "default": true},
-    "dosbox-sdl2": {},
+    "dosbox-sdl2": {"build": "source"},
     "dosbox-staging": {"build": "source"}
   },
   "romsets": [
