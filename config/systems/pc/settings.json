@@ -38,7 +38,11 @@
       "all": "/home/pi/RetroPie/roms/pc"
     },
     "files": {
-      "conf": {"target": "{dir}/{machine}.conf", "overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf"}
+      "conf": {
+        "target": "{dir}/{machine}.conf",
+        "global_overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf",
+        "overrides": "/home/pi/retrokit/config/systems/pc/conf/{machine}.conf"
+      }
     },
     "allowlists": {
       "names": [

@@ -18,13 +18,6 @@ class PCSystem(BaseSystem):
         if success:
             self.install_config(machine)
             self.fix_windows_paths(machine)
-            # TODO:
-            # * Integrate user overrides
-            # * Replace output=opengl* with output=surface or output=texture
-            # * Don't override fullscreen
-            # * Disable: voodoo=opengl
-            # * Disable: voodoomem=max
-            # * Disable: usescancodes=false
 
         return success
 
@@ -46,18 +39,29 @@ class PCSystem(BaseSystem):
                 conf_zip.extract(zip_info, mapper_file)
 
             self.update_config_defaults(machine)
+            # TODO:
+            # * Replace output=opengl* with output=surface or output=texture
 
-    # Updates the dosbox configuration with overrides provided
+    # Updates the dosbox configuration with overall and game-specific overrides provided
     def update_config_defaults(self, machine: Machine) -> None:
         machine_dir = machine.resource.target_path.path
         conf_file = machine_dir.joinpath('dosbox.conf')
 
-        overrides_path = self.config['roms']['files']['conf'].get('overrides')
+        global_overrides_path = self.config['roms']['files']['conf'].get('global_overrides')
 
         # Override with RPi-specific configurations
-        if overrides_path:
-            with open(overrides_path) as f:
+        if global_overrides_path:
+            with open(global_overrides_path) as f:
                 subprocess.run(['crudini', '--merge', conf_file], stdin=f, check=True)
+
+        # Override with Machine-specific configurations
+        overrides_template = self.config['roms']['files']['conf'].get('overrides')
+        if overrides_template:
+            overrides_path = Path(overrides_template.format(machine=machine.name))
+            if overrides_path.exists():
+                with overrides_path.open() as f:
+                    subprocess.run(['crudini', '--merge', conf_file], stdin=f, check=True)
+
 
     # Find paths that contain windows-style slashes and replace them with linux-style
     def fix_windows_paths(self, machine: Machine) -> None:
