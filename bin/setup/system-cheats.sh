@@ -21,12 +21,12 @@ install() {
     mkdir -p "$system_cheats_dir"
 
     # Link the named Retroarch cheats to the emulator in the system cheats namespace
-    while IFS="$tab" read emulator emulator_proper_name; do
-      local emulator_cheats_dir="$system_cheats_dir/$emulator_proper_name"
+    while IFS="$tab" read emulator core_title; do
+      local emulator_cheats_dir="$system_cheats_dir/$core_title"
 
       rm -rf "$emulator_cheats_dir"
       ln -fs "$cheats_dir/$cheats_name" "$emulator_cheats_dir"
-    done < <(system_setting '.emulators | try to_entries[] | [.key, .value.proper_name] | @tsv')
+    done < <(system_setting '.emulators | try to_entries[] | select(.value.core_title) | [.key, .value.core_title] | @tsv')
   fi
 }
 

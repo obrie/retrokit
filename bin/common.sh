@@ -268,7 +268,7 @@ install_retropie_package() {
   fi
 
   if [ "$build" == "binary" ]; then
-    sudo ~/RetroPie-Setup/retropie_packages.sh "$name" ${mode:-_binary_}
+    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
   else
     # Source install
     if [ -n "$branch" ]; then
@@ -277,7 +277,16 @@ install_retropie_package() {
       sed -i "s/.git master/.git $branch/g" "$scriptmodule"
     fi
 
-    sudo __ignore_module_date=1 ~/RetroPie-Setup/retropie_packages.sh "$name" ${mode:-_source_}
+    sudo __ignore_module_date=1 "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
+  fi
+
+  # Always ensure we run the configuration in case files were restored prior
+  # to the install.  Note that we only do this when updating since we know that
+  # an install will always run an update.
+  # 
+  # This could end up running `configure` twice if an update actually occurred.
+  if [ "$mode" == 'update' ]; then
+    sudo ~/RetroPie-Setup/retropie_packages.sh "$name" configure
   fi
 }
 

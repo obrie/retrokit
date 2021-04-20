@@ -7,7 +7,7 @@
     "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
-    "lr-pcsx-rearmed": {"proper_name": "PCSX-ReARMed", "coreopt": "pcsx_rearmed", "default": true}
+    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "core_title": "PCSX-ReARMed", "default": true}
   },
   "cheats": "Sony - PlayStation",
   "bios": {

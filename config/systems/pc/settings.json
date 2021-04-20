@@ -6,8 +6,8 @@
     "args": "--excludefiles *DOSBox*"
   },
   "emulators": {
-    "dosbox": {"proper_name": "Dosbox", "coreopt": "dosbox", "default": true},
-    "dosbox-staging": {"proper_name": "DosboxStaging", "build": "source", "coreopt": "dosbox"}
+    "dosbox": {"default": true},
+    "dosbox-staging": {"build": "source"}
   },
   "romsets": [
     {

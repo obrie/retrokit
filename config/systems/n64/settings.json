@@ -7,10 +7,10 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "build": "source"},
-    "lr-mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "default": true},
-    "lr-mupen64plus-next": {"proper_name": "Mupen64PlusNext", "coreopt": "mupen64plus-next"},
-    "lr-parallel-n64": {"proper_name": "ParallelN64", "coreopt": "parallel-n64"}
+    "mupen64plus": {"build": "source"},
+    "lr-mupen64plus": {"core_name": "mupen64plus", "core_title": "Mupen64Plus GLES3", "default": true},
+    "lr-mupen64plus-next": {"core_name": "mupen64plus-next", "core_title": "Mupen64Plus-Next"},
+    "lr-parallel-n64": {"core_name": "parallel-n64", "core_title": "ParaLLEl N64"}
   },
   "cheats": "Nintendo - Nintendo 64",
   "romsets": [

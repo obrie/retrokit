@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-fceumm": {"proper_name": "FCEUmm", "default": true, "coreopt": "fceumm"}
+    "lr-fceumm": {"core_name": "fceumm", "core_title": "FCEUmm", "default": true}
   },
   "cheats": "Nintendo - Nintendo Entertainment System",
   "romsets": [

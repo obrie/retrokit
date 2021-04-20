@@ -7,13 +7,13 @@
     "sources": ["screenscraper", "arcadedb"]
   },
   "emulators": {
-    "lr-fbneo": {"default": true, "build": "source", "coreopt": "fbneo"},
-    "lr-mame2003": {"coreopt": "mame2003"},
-    "lr-mame2003-plus": {"coreopt": "mame2003-plus"},
-    "lr-mame2015": {"coreopt": "mame2015"},
-    "lr-mame2016": {"coreopt": "mame2016"},
-    "advmame": {"coreopt": "advmame"},
-    "lr-mame": {"build": "source", "branch": "lrmame0222", "coreopt": "mame_"}
+    "lr-fbneo": {"default": true, "build": "source", "core_name": "fbneo"},
+    "lr-mame2003": {"core_name": "mame2003"},
+    "lr-mame2003-plus": {"core_name": "mame2003-plus"},
+    "lr-mame2015": {"core_name": "mame2015"},
+    "lr-mame2016": {"core_name": "mame2016"},
+    "advmame": {},
+    "lr-mame": {"build": "source", "branch": "lrmame0222", "core_name": "mame_"}
   },
   "romsets": [
     {

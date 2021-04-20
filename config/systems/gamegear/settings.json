@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-genesis-plus-gx": {"default": true, "proper_name": "Genesis Plus GX", "coreopt": "genesis_plus_gx"}
+    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "core_title": "Genesis Plus GX", "default": true}
   },
   "cheats": "Sega - Game Gear",
   "bios": {
