@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus"},
+    "mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "build": "source"},
     "lr-mupen64plus": {"proper_name": "Mupen64Plus", "coreopt": "mupen64plus", "default": true}
   },
   "cheats": "Nintendo - Nintendo 64",
