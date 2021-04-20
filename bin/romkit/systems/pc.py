@@ -21,7 +21,6 @@ class PCSystem(BaseSystem):
 
         return success
 
-
     # Installs the dosbox configuration file required to run the machine.
     # Note that this will install the default configuration provided by eXoDOS.
     def install_config(self, machine: Machine) -> None:
@@ -39,8 +38,7 @@ class PCSystem(BaseSystem):
                 conf_zip.extract(zip_info, mapper_file)
 
             self.update_config_defaults(machine)
-            # TODO:
-            # * Replace output=opengl* with output=surface or output=texture
+            self.replace_opengl_renderer(machine)
 
     # Updates the dosbox configuration with overall and game-specific overrides provided
     def update_config_defaults(self, machine: Machine) -> None:
@@ -62,6 +60,13 @@ class PCSystem(BaseSystem):
                 with overrides_path.open() as f:
                     subprocess.run(['crudini', '--merge', conf_file], stdin=f, check=True)
 
+    # OpenGL is unreasonably slow on Raspberry Pi 4 + latest kernel/Raspbian.
+    # This replaces any opengl output configurations with surface, which is
+    # known to perform much better.
+    def replace_opengl_renderer(self, machine: Machine) -> None:
+        renderer = subprocess.run(['crudini', '--get', conf_file, 'sdl', 'output'], check=True, capture_output=True).stdout
+        if renderer and renderer.lower().startswith('opengl')
+            renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, capture_output=True).stdout
 
     # Find paths that contain windows-style slashes and replace them with linux-style
     def fix_windows_paths(self, machine: Machine) -> None:
