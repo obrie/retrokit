@@ -15,7 +15,7 @@ install_emulators() {
       package_type='libretrocores'
     fi
 
-    install_retropie_package 'emulators' "$emulator" "$build" "$branch"
+    install_retropie_package "$package_type" "$emulator" "$build" "$branch"
 
     # Set default
     if [ "$is_default" == "true" ]; then
