@@ -11,7 +11,7 @@ install_emulators() {
 
   while IFS="$tab" read -r emulator build branch is_default; do
     local package_type='emulators'
-    if [[ "$name" == lr-* ]]; then
+    if [[ "$emulator" == lr-* ]]; then
       package_type='libretrocores'
     fi
 
