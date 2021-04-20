@@ -18,10 +18,13 @@ class PCSystem(BaseSystem):
         if success:
             self.install_config(machine)
             self.fix_windows_paths(machine)
-            # Integrate user overrides
-            # Replace output=opengl* with output=surface or output=texture
-            # Should we replace core=auto with core=dynamic?
-            # Should we avoid setting fullscreen?
+            # TODO:
+            # * Integrate user overrides
+            # * Replace output=opengl* with output=surface or output=texture
+            # * Don't override fullscreen
+            # * Disable: voodoo=opengl
+            # * Disable: voodoomem=max
+            # * Disable: usescancodes=false
 
         return success
 
