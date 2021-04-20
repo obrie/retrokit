@@ -6,7 +6,8 @@
     "args": "--excludefiles *DOSBox*"
   },
   "emulators": {
-    "dosbox": {"default": true},
+    "dosbox": {"build": "source", "default": true},
+    "dosbox-sdl2": {},
     "dosbox-staging": {"build": "source"}
   },
   "romsets": [
