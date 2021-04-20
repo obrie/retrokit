@@ -65,7 +65,7 @@ class PCSystem(BaseSystem):
     # known to perform much better.
     def replace_opengl_renderer(self, machine: Machine) -> None:
         renderer = subprocess.run(['crudini', '--get', conf_file, 'sdl', 'output'], check=True, capture_output=True).stdout
-        if renderer and renderer.lower().startswith('opengl')
+        if renderer and renderer.lower().startswith('opengl'):
             renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, capture_output=True).stdout
 
     # Find paths that contain windows-style slashes and replace them with linux-style
