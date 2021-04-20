@@ -68,7 +68,7 @@ class PCSystem(BaseSystem):
         conf_file = machine_dir.joinpath('dosbox.conf')
 
         renderer = subprocess.run(['crudini', '--get', conf_file, 'sdl', 'output'], check=True, capture_output=True).stdout
-        if renderer and renderer.lower().startswith('opengl'):
+        if renderer and str(renderer.lower()).startswith('opengl'):
             renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, capture_output=True).stdout
 
     # Find paths that contain windows-style slashes and replace them with linux-style
