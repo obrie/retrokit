@@ -7,8 +7,7 @@
     "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
-    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "core_title": "PCSX-ReARMed", "default": true},
-    "lr-duckstation-psx": {"core_name": "duckstation-psx", "core_title": "Duckstation-PSX", "build": "source"}
+    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "core_title": "PCSX-ReARMed", "default": true}
   },
   "cheats": "Sony - PlayStation",
   "bios": {
