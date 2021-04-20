@@ -74,20 +74,23 @@ restore() {
   local file="$1"
   local backup_file="$file.orig"
   local as_sudo="false"
+  local restore="true"
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
-  if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
-  fi
+  if [ "$restore" != 'false' ]; then
+    if [ "$as_sudo" == 'true' ]; then
+      local cmd='sudo'
+    fi
 
-  if [ -f "$backup_file" ]; then
-    log "Restoring: $backup_file to $file"
-    $cmd cp "$backup_file" "$file"
-  elif [ -f "$backup_file.missing" ]; then
-    log "Restoring: $file to non-existent"
-    rm -f "$file"
-  else
-    log "Restoring: $file (leaving as-is)"
+    if [ -f "$backup_file" ]; then
+      log "Restoring: $backup_file to $file"
+      $cmd cp "$backup_file" "$file"
+    elif [ -f "$backup_file.missing" ]; then
+      log "Restoring: $file to non-existent"
+      rm -f "$file"
+    else
+      log "Restoring: $file (leaving as-is)"
+    fi
   fi
 }
 
