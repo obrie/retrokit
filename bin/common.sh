@@ -49,9 +49,9 @@ setting() {
 ##############
 
 backup() {
-  local file="$1"
+  local file=$1
   local backup_file="$file.orig"
-  local as_sudo="false"
+  local as_sudo='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -71,10 +71,10 @@ backup() {
 }
 
 restore() {
-  local file="$1"
+  local file=$1
   local backup_file="$file.orig"
-  local as_sudo="false"
-  local restore="true"
+  local as_sudo='false'
+  local restore='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [ "$restore" != 'false' ]; then
@@ -100,10 +100,10 @@ backup_and_restore() {
 }
 
 env_merge() {
-  local source="$1"
-  local target="$2"
-  local as_sudo="false"
-  local restore="true"
+  local source=$1
+  local target=$2
+  local as_sudo='false'
+  local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
@@ -118,12 +118,12 @@ env_merge() {
 }
 
 ini_merge() {
-  local source="$1"
-  local target="$2"
+  local source=$1
+  local target=$2
 
-  local space_around_delimiters="true"
-  local as_sudo="false"
-  local restore="true"
+  local space_around_delimiters'true'
+  local as_sudo='false'
+  local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
@@ -140,11 +140,11 @@ ini_merge() {
 }
 
 json_merge() {
-  local source="$1"
-  local target="$2"
+  local source=$1
+  local target=$2
 
-  local as_sudo="false"
-  local restore="true"
+  local as_sudo='false'
+  local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
@@ -158,11 +158,12 @@ json_merge() {
   $cmd cp "$tmp_target" "$target"
 }
 
-conf_cp() {
-  local source="$1"
-  local target="$2"
-  local as_sudo="false"
-  local restore="true"
+file_cp() {
+  local source=$1
+  local target=$2
+  local as_sudo='false'
+  local restore='true'
+  local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
@@ -171,14 +172,18 @@ conf_cp() {
     local cmd='sudo'
   fi
 
-  $cmd cp "$(conf_prepare "$source")" "$target"
+  if [ "$envsubst" == 'true' ]; then
+    $cmd cp "$(conf_prepare "$source")" "$target"
+  else
+    $cmd cp "$source" "$target"
+  fi
 }
 
-conf_ln() {
-  local source="$1"
-  local target="$2"
-  local as_sudo="false"
-  local restore="true"
+file_ln() {
+  local source=$1
+  local target=$2
+  local as_sudo='false'
+  local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
@@ -191,8 +196,8 @@ conf_ln() {
 }
 
 conf_prepare() {
-  local source="$1"
-  local as_sudo="false"
+  local source=$1
+  local as_sudo='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -211,11 +216,11 @@ conf_prepare() {
 
 download() {
   # Arguments
-  local url="$1"
-  local target="$2"
+  local url=$1
+  local target=$2
 
-  local force="false"
-  local as_sudo="false"
+  local force='false'
+  local as_sudo='false'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ "$as_sudo" == 'true' ]; then

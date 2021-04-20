@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 install() {
   if [ -n "$WIFI_SSID" ]; then
-    conf_cp "$config_dir/wifi/wpa_supplicant.conf" '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
+    file_cp "$config_dir/wifi/wpa_supplicant.conf" '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
   else
     log 'Missing wifi auth (skipping)'
   fi

@@ -13,9 +13,9 @@ reconfigure() {
 }
 
 install() {
-  conf_cp "$config_dir/localization/locale" '/etc/default/locale' as_sudo=true
-  conf_cp "$config_dir/localization/locale.gen" '/etc/locale.gen' as_sudo=true
-  conf_cp "$config_dir/localization/timezone" '/etc/timezone' as_sudo=true
+  file_cp "$config_dir/localization/locale" '/etc/default/locale' as_sudo=true
+  file_cp "$config_dir/localization/locale.gen" '/etc/locale.gen' as_sudo=true
+  file_cp "$config_dir/localization/timezone" '/etc/timezone' as_sudo=true
   env_merge "$config_dir/localization/keyboard" '/etc/default/keyboard' as_sudo=true
 
   reconfigure
