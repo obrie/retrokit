@@ -18,6 +18,7 @@ clean_emulator_config_key() {
 install() {
   romkit_cli install --log-level DEBUG
 
+  backup '/opt/retropie/configs/all/emulators.cfg'
   log "--- Setting default emulators ---"
 
   # Merge emulator configurations
