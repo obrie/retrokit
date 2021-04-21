@@ -8,7 +8,7 @@ hdmi_ignore_edid=0xa5000080
 disable_overscan=1
 
 # Enable IR configuration
-dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-retropie
+dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-tivo
 
 # Switch TV to Game Mode when possible
 edid_content_type=4
