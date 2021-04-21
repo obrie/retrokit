@@ -166,7 +166,7 @@ file_cp() {
   local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  backup "$target" as_sudo="$as_sudo"
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
@@ -186,7 +186,7 @@ file_ln() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  backup "$target" as_sudo="$as_sudo"
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
@@ -263,7 +263,7 @@ install_retropie_package() {
   local mode
   local pkg_origin
   if [ -d "$install_dir" ]; then
-    pkg_origin=$(crudini --get "/opt/retropie/emulators/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
+    pkg_origin=$(crudini --get "/opt/retropie/$package_type/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
 
     # We only update if the package is installed and the build source has remained the same
     if [ "$pkg_origin" == "$build" ]; then
