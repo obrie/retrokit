@@ -263,7 +263,7 @@ install_retropie_package() {
   local mode
   local pkg_origin
   if [ -d "$install_dir" ]; then
-    pkg_origin=$(crudini --get /opt/retropie/emulators/dosbox/retropie.pkg '' 'pkg_origin' | tr -d '"')
+    pkg_origin=$(crudini --get "/opt/retropie/emulators/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
 
     # We only update if the package is installed and the build source has remained the same
     if [ "$pkg_origin" == "$build" ]; then

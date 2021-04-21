@@ -14,7 +14,7 @@ install() {
     while read -r target_name source_path; do
       local target_path="$HOME/RetroPie/roms/ports/$port_name/$target_name"
       file_ln "$source_path" "$target_path"
-    done < <(system_setting '.ports.$port_name.files | try to_entries[] | [.key, .value] | @tsv')
+    done < <(system_setting ".ports.$port_name.files | try to_entries[] | [.key, .value] | @tsv")
   done < <(system_setting '.ports | to_entries[] | [.key, .value.package, .value.package_type] | @tsv')
 }
 
