@@ -270,7 +270,7 @@ class Machine:
     # Removes this machine from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
-            print(f'rm "{self.resource.target_path.path}"')
+            print(f'rm -rf "{self.resource.target_path.path}"')
             # self.resource.target_path.delete()
 
     # Builds context for formatting dirs/urls
