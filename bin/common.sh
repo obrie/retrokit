@@ -50,7 +50,7 @@ setting() {
 
 backup() {
   local file=$1
-  local backup_file="$file.orig"
+  local backup_file="$file.rk-src"
   local as_sudo='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
@@ -72,7 +72,7 @@ backup() {
 
 restore() {
   local file=$1
-  local backup_file="$file.orig"
+  local backup_file="$file.rk-src"
   local as_sudo='false'
   local restore='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi

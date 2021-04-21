@@ -11,7 +11,7 @@ install() {
     local target_path="$HOME/RetroPie-Setup/scriptmodules/$filepath"
 
     # Remove any backup files for the scriptmodule
-    rm -f "$target_path.orig"
+    rm -f "$target_path.rk-src"
 
     # Copy over the scriptmodule
     cp "$source_path" "$target_path"
