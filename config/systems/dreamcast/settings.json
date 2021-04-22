@@ -34,7 +34,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}",
+          "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.zip",
           "target": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
