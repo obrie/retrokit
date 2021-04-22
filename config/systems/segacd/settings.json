@@ -43,7 +43,7 @@
   ],
   "roms": {
     "dirs": {
-      "all": "/home/pi/RetroPie/roms/segacd",
+      "all": "/home/pi/RetroPie/roms/segacd"
     },
     "files": {
       "machine": {"target": "{dir}/{machine}.chd"}
@@ -55,8 +55,8 @@
         "Cliffhanger (USA)",
         "Earthworm Jim - Special Edition (USA) (RE)",
         "Final Fight CD (USA)",
-        "Mad Dog McCree (USA)",
         "Mad Dog II - The Lost Gold (USA)",
+        "Mad Dog McCree (USA)",
         "Mortal Kombat (USA)",
         "NBA Jam (USA)",
         "Prince of Persia (USA)",
