@@ -11,7 +11,7 @@
   },
   "cheats": "Sony - PlayStation",
   "bios": {
-    "url": "BIOS_URL",
+    "url": "$BIOS_URL",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "psxonpsp660.bin": "{url}/Other/Sony%20-%20PlayStation/PSXONPSP660.BIN?raw=true",
@@ -36,8 +36,8 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}",
-          "install": {"action": "zip_extract"}
+          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
         }
       },
       "emulator": "lr-pcsx-rearmed"
@@ -45,30 +45,28 @@
   ],
   "roms": {
     "dirs": {
-      "all": "/home/pi/RetroPie/roms/psx/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/psx"
+      "all": "/home/pi/RetroPie/roms/psx"
     },
     "files": {
-      "machine": {"source": "*", "target": "{dir}"}
+      "machine": {"target": "{dir}/{machine}.chd"}
     },
     "allowlists": {
-      "names": ["none"]
-    },
-    "favorites": [
-      "Disney's The Little Mermaid II (USA)",
-      "Extreme Pinball (USA)",
-      "NFL Blitz (USA)",
-      "NHL 99 (USA)",
-      "Tekken (USA)",
-      "Tomb Raider (USA) (Rev 1)",
-      "Tony Hawk's Pro Skater (USA)",
-      "Tony Hawk's Pro Skater 2 (USA)",
-      "Tony Hawk's Pro Skater 3 (USA)",
-      "Tony Hawk's Pro Skater 4 (USA)",
-      "Worms (USA)",
-      "Worms Armageddon (USA)",
-      "You Don't Know Jack (USA) (Disc 1)",
-      "You Don't Know Jack (USA) (Disc 2)"
-    ]
+      "names": [
+        "Disney's The Little Mermaid II (USA)",
+        "Extreme Pinball (USA)",
+        "NFL Blitz (USA)",
+        "NHL 99 (USA)",
+        "Tekken (USA)",
+        "Tomb Raider (USA) (Rev 1)",
+        "Tony Hawk's Pro Skater (USA)",
+        "Tony Hawk's Pro Skater 2 (USA)",
+        "Tony Hawk's Pro Skater 3 (USA)",
+        "Tony Hawk's Pro Skater 4 (USA)",
+        "Worms (USA)",
+        "Worms Armageddon (USA)",
+        "You Don't Know Jack (USA) (Disc 1)",
+        "You Don't Know Jack (USA) (Disc 2)"
+      ]
+    }
   }
 }

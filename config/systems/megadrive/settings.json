@@ -12,7 +12,7 @@
   },
   "cheats": "Sega - Mega Drive - Genesis",
   "bios": {
-    "url": "BIOS_URL/BIOSes/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "url": "$BIOS_URL/BIOSes/Sega%20-%20Mega%20Drive%20-%20Genesis",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "bios_MD.bin": "{url}/bios_MD.bin?raw=true"

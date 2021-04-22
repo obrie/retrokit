@@ -1,0 +1,71 @@
+{
+  "system": "segacd",
+  "themes": {
+    "bezel": "SegaCD"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "core_title": "Genesis Plus GX", "default": true}
+  },
+  "cheats": "Sega - Mega-CD - Sega CD",
+  "bios": {
+    "url": "$BIOS_URL/BIOSes/Sega%20-%20Mega%20CD%20-%20Sega%20CD",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "bios_CD_E.bin": "{url}/bios_CD_E.bin?raw=true",
+      "bios_CD_J.bin": "{url}/bios_CD_J.bin?raw=true",
+      "bios_CD_U.bin": "{url}/bios_CD_U.bin?raw=true"
+    }
+  },
+  "romsets": [
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_SEGACD_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/mcd/",
+          "download": "/home/pi/RetroPie/roms/segacd/.redump/roms.zip",
+          "target": "/home/pi/RetroPie/roms/segacd/.redump/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "/home/pi/RetroPie/roms/segacd/.redump/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/segacd/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
+      },
+      "emulator": "lr-genesis-plus-gx"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/segacd",
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.chd"}
+    },
+    "allowlists": {
+      "names": [
+        "Adventures of Batman and Robin, The (USA)",
+        "Batman Returns (USA)",
+        "Cliffhanger (USA)",
+        "Earthworm Jim - Special Edition (USA) (RE)",
+        "Final Fight CD (USA)",
+        "Mad Dog McCree (USA)",
+        "Mad Dog II - The Lost Gold (USA)",
+        "Mortal Kombat (USA)",
+        "NBA Jam (USA)",
+        "Prince of Persia (USA)",
+        "Road Avenger (USA)",
+        "Sonic CD (USA)",
+        "Star Wars - Rebel Assault (USA)",
+        "Terminator, The (USA)",
+        "WWF - Rage in the Cage (USA)"
+      ]
+    }
+  }
+}
