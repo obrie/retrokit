@@ -34,7 +34,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
+          "source": "{url}{page_number}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
           "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}

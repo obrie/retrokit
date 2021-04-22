@@ -12,10 +12,15 @@ class Sample:
     def romset(self) -> ROMSet:
         return self.machine.romset
 
+    # Builds context for formatting dirs/urls
+    @property
+    def context(self) -> dict:
+        return {'sample': self.name, **self.machine.context}
+
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('sample', sample=self.name)
+        return self.romset.resource('sample', **self.context)
 
     # Downloads and installs the sample
     def install(self) -> None:

@@ -23,6 +23,7 @@ class ROMSet:
         auth: Optional[str] = None,
         discovery: Optional[dict] = None,
         datlist: Optional[List[str]] = None,
+        context: dict = {},
     ):
         self.system = system
         self.name = name
@@ -98,7 +99,9 @@ class ROMSet:
         if self.datlist:
             # Read from an internal dat list
             for name in self.datlist:
-                yield Machine(self, name)
+                machine = Machine(self, name)
+                machine.custom_context = self.system.context_for(machine)
+                yield machine
         else:
             # Read from an external dat file
             doc = lxml.etree.iterparse(str(self.dat.target_path.path), tag=('game', 'machine'))
@@ -106,7 +109,9 @@ class ROMSet:
 
             for event, element in doc:
                 if Machine.is_installable(element):
-                    yield Machine.from_xml(self, element)
+                    machine = Machine.from_xml(self, element)
+                    machine.custom_context = self.system.context_for(machine)
+                    yield machine
                 else:
                     logging.info(f"[{element.get('name')}] Ignored (not installable)")
                 

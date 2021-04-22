@@ -19,6 +19,11 @@ class Disk:
     def is_installable(xml: lxml.etree.ElementBase) -> bool:
         return xml.get('status') != Disk.STATUS_NO_DUMP
 
+    # Builds context for formatting dirs/urls
+    @property
+    def context(self) -> dict:
+        return {'disk': self.name, **self.machine.context}
+
     @property
     def romset(self) -> ROMSet:
         return self.machine.romset
@@ -26,7 +31,7 @@ class Disk:
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('disk', **self._context)
+        return self.romset.resource('disk', **self.context)
 
     # Downloads and installs the disk
     def install(self) -> None:
@@ -35,9 +40,4 @@ class Disk:
 
     # Enables the disk to be accessible to the emulator
     def enable(self, system_dir: SystemDir) -> None:
-        system_dir.symlink('disk', self.resource.target_path.path, **self._context)
-
-    # Builds context for formatting dirs/urls
-    @property
-    def _context(self) -> dict:
-        return {'machine': self.machine.name, 'disk': self.name}
+        system_dir.symlink('disk', self.resource.target_path.path, **self.context)

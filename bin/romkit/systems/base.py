@@ -44,6 +44,10 @@ class BaseSystem:
 
         return cls(json)
 
+    # Additional context for rendering Machine URLs
+    def context_for(self, machine: Machine) -> dict:
+        return {}
+
     def load(self) -> None:
         # Load filters
         logging.info('Loading filters...')

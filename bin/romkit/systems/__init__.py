@@ -4,3 +4,4 @@ from romkit.systems.arcade import ArcadeSystem
 from romkit.systems.c64 import C64System
 from romkit.systems.n64 import N64System
 from romkit.systems.pc import PCSystem
+from romkit.systems.psx import PSXSystem

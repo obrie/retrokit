@@ -24,6 +24,7 @@ class Machine:
         roms: Set[File] = set(),
         disks: Set[Disk] = set(),
         sourcefile: Optional[str] = None,
+        custom_context: dict = {},
     ) -> None:
         self.romset = romset
         self.name = name
@@ -37,6 +38,7 @@ class Machine:
         self.roms = disks
         self.sourcefile = sourcefile
         self.emulator = romset.emulator
+        self.custom_context = {}
 
     # Whether this machine is installable
     @staticmethod
@@ -84,7 +86,7 @@ class Machine:
         # ROMs
         dumped_roms = filter(File.is_installable, xml.findall('rom'))
         machine.roms = {
-            File.from_xml(rom_xml, file_identifier=machine.resource.file_identifier)
+            File.from_xml(rom_xml, file_identifier=romset.resource_templates['machine'].file_identifier)
             for rom_xml in dumped_roms
         }
 
@@ -93,6 +95,16 @@ class Machine:
     # Tracks this machine so that it can be referenced later from the romset
     def track(self) -> None:
         self.romset.track(self)
+
+    # Builds context for formatting dirs/urls
+    @property
+    def context(self) -> dict:
+        return {
+            'machine': self.name,
+            'machine_sourcefile': self.sourcefile or self.name,
+            'parent': (self.parent_name or self.name),
+            **self.custom_context,
+        }
 
     @property
     def is_clone(self) -> bool:
@@ -120,7 +132,7 @@ class Machine:
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('machine', **self._context)
+        return self.romset.resource('machine', **self.context)
 
     # Parent machine, if applicable
     @property
@@ -262,7 +274,7 @@ class Machine:
     def enable(self, target_dir: SystemDir):
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
         
-        target_dir.symlink('machine', self.resource.target_path.path, **self._context)
+        target_dir.symlink('machine', self.resource.target_path.path, **self.context)
 
         for disk in self.disks:
             disk.enable(target_dir)
@@ -272,12 +284,3 @@ class Machine:
         if self.resource.target_path.exists():
             print(f'rm -rf "{self.resource.target_path.path}"')
             # self.resource.target_path.delete()
-
-    # Builds context for formatting dirs/urls
-    @property
-    def _context(self) -> dict:
-        return {
-            'machine': self.name,
-            'machine_sourcefile': self.sourcefile or self.name,
-            'parent': (self.parent_name or self.name),
-        }
