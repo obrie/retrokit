@@ -30,7 +30,7 @@ class BaseFilter:
             allowed = self.match(machine)
 
         if not allowed and self.log:
-            logging.info(f'[{machine.name}] Skip ({type(self).__name__})')
+            logging.debug(f'[{machine.name}] Skip ({type(self).__name__})')
 
         return allowed
 

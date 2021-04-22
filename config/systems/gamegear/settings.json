@@ -14,7 +14,7 @@
     "url": "$BIOS_URL/BIOSes/Sega%20-%20Game%20Gear",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "bios.gg": "{url}/bios.gg?raw=true"
+      "bios.gg": "{url}/bios.gg"
     }
   },
   "romsets": [

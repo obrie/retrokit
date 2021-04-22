@@ -1,0 +1,109 @@
+{
+  "system": "dreamcast",
+  "themes": {
+    "bezel": "Dreamcast"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "redream": {"default": true},
+    "reicast": {},
+    "lr-flycast": {"core_name": "flycast", "core_title": "Flycast"}
+  },
+  "cheats": "Sega - Dreamcast",
+  "bios": {
+    "url": "$BIOS_URL/BIOSes/Sega%20-%20Dreamcast",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "dc_boot.bin": "{url}/dc_boot.bin",
+      "dc_flash.bin": "{url}/dc_flash.bin",
+      "naomi_boot.bin": "{url}/naomi_boot.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_DREAMCAST_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/dc/",
+          "download": "/home/pi/RetroPie/roms/dreamcast/.redump/roms.zip",
+          "target": "/home/pi/RetroPie/roms/dreamcast/.redump/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}",
+          "download": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
+      }
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/dreamcast"
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.chd"}
+    },
+    "emulators": {
+      "compatibility": "file:///home/pi/retrokit/config/systems/dreamcast/compatibility.csv"
+      Also: https://redream.io/compatibility
+    },
+    "allowlists": {
+      "flags": [
+        "usa",
+        "europe",
+        "world"
+      ],
+      "names": [
+        "18 Wheeler - American Pro Trucker (USA)",
+        "Chicken Run (USA)",
+        "Crazy Taxi (USA)",
+        "Crazy Taxi 2 (USA)",
+        "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA)",
+        "Grand Theft Auto 2 (USA)",
+        "House of the Dead 2, The (USA)",
+        "Jet Set Radio (Europe) (En,Fr,De,Es)",
+        "MagForce Racing (USA) (En,Fr,De,Es,It)",
+        "Monaco Grand Prix (USA)",
+        "Mortal Kombat Gold (USA)",
+        "Pro Pinball Trilogy (Europe)",
+        "Quake III - Arena (USA)",
+        "Rayman 2 - The Great Escape (USA) (En,Fr,De,Es,It)",
+        "Re-Volt (USA)",
+        "Rippin' Riders (USA)",
+        "Sega Rally 2 (USA)",
+        "Sonic Adventure (USA)",
+        "Sonic Adventure 2 (USA) (En,Ja,Fr,De,Es)",
+        "South Park Rally (USA)",
+        "Star Wars - Episode I - Jedi Power Battles (USA)",
+        "Star Wars - Episode I - Racer (USA)",
+        "Super Magnetic Neo (USA)",
+        "Test Drive 6 (USA)",
+        "Test Drive V-Rally (USA) (En,Fr,De)",
+        "Tomb Raider - The Last Revelation (USA)",
+        "Tomb Raider Chronicles (USA)",
+        "Typing of the Dead, The (USA)",
+        "Unreal Tournament (USA) (En,Fr,De,Es,It)",
+        "Worms Armageddon (USA) (En,Fr,De,Nl,Sv,No,Da)"
+      ]
+    },
+    "blocklists": {
+      "flags": [
+        "beta",
+        "disc",
+        "unl"
+      ],
+      "keywords": [
+        "dreamkey",
+        "dreamon",
+        "euro edition",
+        "magazine"
+      ]
+    }
+  }
+}

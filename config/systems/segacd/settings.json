@@ -14,9 +14,9 @@
     "url": "$BIOS_URL/BIOSes/Sega%20-%20Mega%20CD%20-%20Sega%20CD",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "bios_CD_E.bin": "{url}/bios_CD_E.bin?raw=true",
-      "bios_CD_J.bin": "{url}/bios_CD_J.bin?raw=true",
-      "bios_CD_U.bin": "{url}/bios_CD_U.bin?raw=true"
+      "bios_CD_E.bin": "{url}/bios_CD_E.bin",
+      "bios_CD_J.bin": "{url}/bios_CD_J.bin",
+      "bios_CD_U.bin": "{url}/bios_CD_U.bin"
     }
   },
   "romsets": [

@@ -26,7 +26,9 @@ install() {
   # This is done in one batch because it's a bit slow otherwise
   crudini --merge '/opt/retropie/configs/all/emulators.cfg' < <(
     while IFS="$tab" read -r rom_name emulator; do
-      echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
+      if [ -n "$emulator" ]; then
+        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
+      fi
     done < <(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
   )
 }

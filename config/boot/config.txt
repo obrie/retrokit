@@ -22,3 +22,6 @@ arm_freq=1750
 
 # Disable wifi (here to avoid conflicts with the other dtoverlay)
 dtoverlay=disable-wifi
+
+# Enable quirks mode for 8bitdo controllers
+#usbhid.quirks=0x045e:0x02e0:0x40

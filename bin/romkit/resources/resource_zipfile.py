@@ -42,7 +42,7 @@ class ResourceZipFile(ResourcePath):
         # Remove files we don't need
         if expected_files:
             for file in (self.list_files() - expected_files):
-                logging.info(f'Removing unexpected file {file.name} from {self.path}')
+                logging.warn(f'Removing unexpected file {file.name} from {self.path}')
                 subprocess.run(['zip', '-d', self.path, file.name], check=True)
 
     @contextlib.contextmanager
