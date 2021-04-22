@@ -48,6 +48,11 @@
     "files": {
       "machine": {"target": "{dir}/{machine}.zip"}
     },
+    "emulators": {
+      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=1983504515&format=tsv",
+      "key": "title",
+      "filter": true
+    },
     "priority": [
       "usa",
       "world"

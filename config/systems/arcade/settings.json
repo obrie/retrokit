@@ -277,18 +277,22 @@
         "deluxe5"
       ]
     },
-    "emulator_overrides": {
-      "area51": "lr-mame2016",
-      "area51mx": "lr-mame2016",
-      "blitz": "lr-mame2016",
-      "blitz2k": "lr-mame2016",
-      "blitz99": "lr-mame2016",
-      "carnevil": "lr-mame2016",
-      "cryptklr": "lr-mame2016",
-      "kinst": "lr-mame2016",
-      "kinst2": "lr-mame2016",
-      "maxforce": "lr-mame2016",
-      "offroad": "lr-mame2016"
+    "emulators": {
+      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
+      "overrides": {
+        "area51": "lr-mame2016",
+        "area51mx": "lr-mame2016",
+        "blitz": "lr-mame2016",
+        "blitz2k": "lr-mame2016",
+        "blitz99": "lr-mame2016",
+        "carnevil": "lr-mame2016",
+        "cryptklr": "lr-mame2016",
+        "kinst": "lr-mame2016",
+        "kinst2": "lr-mame2016",
+        "maxforce": "lr-mame2016",
+        "offroad": "lr-mame2016"
+      },
+      "filter": true
     },
     "favorites": [
       "area51",

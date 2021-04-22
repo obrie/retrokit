@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-import tempfile
 
 # Provides a base class for reducing the set of machines to install
 class BaseFilter:
@@ -68,51 +67,3 @@ class SubstringFilter(BaseFilter):
                 return True
 
         return False
-
-
-# Filter on keywords in the description
-class KeywordFilter(SubstringFilter):
-    name = 'keywords'
-
-    def values(self, machine: Machine) -> set:
-        return {machine.description}
-
-
-# Filter on flags (text between parens) from the description
-class FlagFilter(SubstringFilter):
-    name = 'flags'
-
-    def values(self, machine: Machine) -> set:
-        return machine.flags
-
-
-# Filter on the machine name
-class NameFilter(ExactFilter):
-    name = 'names'
-
-    def values(self, machine: Machine) -> set:
-        return {machine.name}
-
-
-# Filter on the machine title
-class TitleFilter(ExactFilter):
-    name = 'titles'
-
-    def values(self, machine: Machine) -> set:
-        return {machine.title}
-
-
-# Filter on whether the machine is a clone of another
-class CloneFilter(ExactFilter):
-    name = 'clones'
-
-    def values(self, machine: Machine) -> set:
-        return {machine.parent_name is not None}
-
-
-# Filter on the inpout controls
-class ControlFilter(ExactFilter):
-    name = 'controls'
-
-    def values(self, machine: Machine) -> set:
-        return machine.controls

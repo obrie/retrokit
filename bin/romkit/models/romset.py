@@ -113,7 +113,7 @@ class ROMSet:
                     machine.custom_context = self.system.context_for(machine)
                     yield machine
                 else:
-                    logging.warn(f"[{element.get('name')}] Ignored (not installable)")
+                    logging.debug(f"[{element.get('name')}] Ignored (not installable)")
                 
                 element.clear()
 

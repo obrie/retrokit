@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.systems import BaseSystem
+from romkit.systems.base import BaseSystem
 
 class PSXSystem(BaseSystem):
     name = 'psx'

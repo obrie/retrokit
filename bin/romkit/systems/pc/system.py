@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.systems import BaseSystem
+from romkit.systems.base import BaseSystem
 
 import subprocess
 import zipfile

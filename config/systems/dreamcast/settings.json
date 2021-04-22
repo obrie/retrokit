@@ -50,8 +50,8 @@
       "machine": {"target": "{dir}/{machine}.chd"}
     },
     "emulators": {
-      "compatibility": "file:///home/pi/retrokit/config/systems/dreamcast/compatibility.csv"
-      Also: https://redream.io/compatibility
+      "url": "file:///home/pi/retrokit/config/systems/dreamcast/emulators.csv",
+      "filter": true
     },
     "allowlists": {
       "flags": [

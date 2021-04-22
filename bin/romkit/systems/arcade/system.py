@@ -1,5 +1,6 @@
 from romkit.systems import BaseSystem
-from romkit.filters.arcade import LanguageFilter, CategoryFilter, RatingFilter, EmulatorFilter
+from romkit.systems.arcade.emulator_set import ArcadeEmulatorSet
+from romkit.systems.arcade.filters import LanguageFilter, CategoryFilter, RatingFilter
 
 class ArcadeSystem(BaseSystem):
     name = 'arcade'
@@ -8,6 +9,4 @@ class ArcadeSystem(BaseSystem):
         CategoryFilter,
         RatingFilter,
     ]
-    static_filters = BaseSystem.static_filters + [
-        EmulatorFilter,
-    ]
+    emulator_set_class = ArcadeEmulatorSet

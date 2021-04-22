@@ -1,5 +1,5 @@
-from romkit.filters.base import FlagFilter, KeywordFilter, NameFilter, CloneFilter, ControlFilter
-from romkit.models import Machine, ROMSet
+from romkit.filters import EmulatorFilter, FlagFilter, KeywordFilter, NameFilter, CloneFilter, ControlFilter
+from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
 import logging
@@ -22,6 +22,9 @@ class BaseSystem:
     # Filters that run without configuration
     static_filters = []
 
+    # Class to use for building emulator sets
+    emulator_set_class = EmulatorSet
+
     def __init__(self, config: dict) -> None:
         self.config = config
         self.dirs = {
@@ -31,6 +34,11 @@ class BaseSystem:
         self.filters = []
         self.favorites_filter = NameFilter(set(config['roms']['favorites']), log=False)
         self.machine_priority = config['roms'].get('priority', set())
+        if 'emulators' in config['roms']:
+            self.emulator_set = self.emulator_set_class.from_json(self, config['roms']['emulators'])
+        else:
+            self.emulator_set = self.emulator_set_class(self)
+
         self.load()
 
     # Looks up the system from the given name
@@ -64,6 +72,10 @@ class BaseSystem:
             if blocklist:
                 self.filters.append(filter_cls(set(blocklist), invert=True, config=self.config))
 
+        # Load emulators filter
+        if self.emulator_set.filter:
+            self.filters.append(EmulatorFilter(config=self.config))
+
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         # Load romsets
         for romset_config in self.config['romsets']:
@@ -79,6 +91,11 @@ class BaseSystem:
             machines_to_track = set()
 
             for machine in romset.iter_machines():
+                # Set the emulator on the machine if we have it based on the
+                # system-wide defaults
+                if not machine.emulator:
+                    machine.emulator = self.emulator_set.get(machine)
+
                 if self.allow(machine):
                     # Track this machine and all machines it depends on
                     machines_to_track.update(machine.dependent_machine_names)

@@ -32,8 +32,7 @@
           "target": "/home/pi/RetroPie/roms/snes/.nointro/{machine}.zip"
         }
       },
-      "auth": "internetarchive",
-      "emulator": "lr-snes9x"
+      "auth": "internetarchive"
     }
   ],
   "roms": {

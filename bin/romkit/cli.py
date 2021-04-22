@@ -8,8 +8,8 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from romkit.systems import BaseSystem
 
-from argparse import ArgumentParser
 import json
+from argparse import ArgumentParser
 from signal import signal, SIGPIPE, SIG_DFL
 
 class ROMKit:
@@ -25,7 +25,7 @@ class ROMKit:
         self.config['roms'].setdefault('blocklists', {})
         self.config['roms'].setdefault('favorites', [])
 
-        # Setup logger
+        # Set up logger
         root = logging.getLogger()
         root.setLevel(getattr(logging, log_level))
         handler = logging.StreamHandler(sys.stdout)

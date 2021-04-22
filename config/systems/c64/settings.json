@@ -31,8 +31,7 @@
           "target": "/home/pi/RetroPie/roms/c64/.nointro/{machine}.zip"
         }
       },
-      "auth": "internetarchive",
-      "emulator": "lr-vice"
+      "auth": "internetarchive"
     },
     {
       "name": "nointro-cartridges",
@@ -55,8 +54,7 @@
           "target": "/home/pi/RetroPie/roms/c64/.nointro/{machine}.zip"
         }
       },
-      "auth": "internetarchive",
-      "emulator": "lr-vice"
+      "auth": "internetarchive"
     }
   ],
   "roms": {

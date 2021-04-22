@@ -1,7 +1,6 @@
 from romkit.systems.system_dir import SystemDir
 from romkit.systems.base import BaseSystem
-from romkit.systems.arcade import ArcadeSystem
-from romkit.systems.c64 import C64System
-from romkit.systems.n64 import N64System
-from romkit.systems.pc import PCSystem
-from romkit.systems.psx import PSXSystem
+import romkit.systems.arcade
+import romkit.systems.c64
+import romkit.systems.pc
+import romkit.systems.psx
