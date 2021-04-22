@@ -19,7 +19,7 @@ system_settings_file="$system_config_dir/settings.json"
 ##############
 
 system_setting() {
-  jq -r "$1 | values" "$system_settings_file"
+  jq -r "$1 | values" "$(conf_prepare "$system_settings_file")"
 }
 
 if [ -z $(setting ".systems | index(\"$system\")") ]; then
