@@ -48,10 +48,13 @@ class EmulatorSet():
         with self.path.open() as file:
             rows = csv.reader(file, delimiter=self.delimiter)
             for row in rows:
+                if len(row) <= self.column_rom or len(row) <= self.column_emulator:
+                    continue
+
                 rom = row[self.column_rom]
                 emulator = row[self.column_emulator]
 
-                if rom not in self.emulators:
+                if rom not in self.emulators and emulator and emulator != '':
                     self.emulators[rom] = emulator
 
     def get(self, machine: Machine) -> Optional[str]:

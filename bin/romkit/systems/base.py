@@ -27,6 +27,7 @@ class BaseSystem:
 
     def __init__(self, config: dict) -> None:
         self.config = config
+        self.name = config['system']
         self.dirs = {
             name: SystemDir(path, config['roms']['files'])
             for name, path in config['roms']['dirs'].items()
