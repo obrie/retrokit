@@ -18,19 +18,29 @@ clean_emulator_config_key() {
 install() {
   romkit_cli install --log-level DEBUG
 
-  backup '/opt/retropie/configs/all/emulators.cfg'
   log "--- Setting default emulators ---"
+  local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
+  backup "$emulators_config_file"
 
-  # Merge emulator configurations
+  local rom_emulators=$(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
+
+  # Add emulator selections for roms with an explicit one
   # 
   # This is done in one batch because it's a bit slow otherwise
-  crudini --merge '/opt/retropie/configs/all/emulators.cfg' < <(
+  crudini --merge "$emulators_config_file" < <(
     while IFS="$tab" read -r rom_name emulator; do
       if [ -n "$emulator" ]; then
         echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
       fi
-    done < <(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
+    done < <(echo "$rom_emulators")
   )
+
+  # Remove emulator selections for roms without one
+  while IFS="$tab" read -r rom_name emulator; do
+    if [ -z "$emulator" ]; then
+      crudini --del "$emulators_config_file" '' $(clean_emulator_config_key "${system}_${rom_name}")
+    fi
+  done < <(echo "$rom_emulators")
 }
 
 uninstall() {
