@@ -10,7 +10,7 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   # Install packages
-  while IFS="$tab" read -r emulator build branch is_default; do
+  while IFS="$tab" read -r emulator name build branch is_default; do
     local package_type='emulators'
     if [[ "$emulator" == lr-* ]]; then
       package_type='libretrocores'
@@ -20,9 +20,9 @@ install_emulators() {
 
     # Set defaults
     if [ "$is_default" == "true" ]; then
-      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$emulator\""
+      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$name\""
     fi
-  done < <(system_setting '.emulators | to_entries[] | [.key, .value.build // "binary", .value.branch // "master", .value.default // false] | @tsv')
+  done < <(system_setting '.emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.branch // "master", .value.default // false] | @tsv')
 }
 
 # Install BIOS files required by emulators

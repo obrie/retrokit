@@ -8,7 +8,7 @@
   },
   "emulators": {
     "redream": {"default": true},
-    "reicast": {},
+    "reicast": {"name": "reicast-audio-alsa"},
     "lr-flycast": {"core_name": "flycast", "core_title": "Flycast"}
   },
   "cheats": "Sega - Dreamcast",

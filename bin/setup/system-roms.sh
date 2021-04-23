@@ -18,6 +18,12 @@ clean_emulator_config_key() {
 install() {
   romkit_cli install --log-level DEBUG
 
+  # Define a mapping of rom package to rom name
+  declare -A emulator_names
+  while IFS="$tab" read -r emulator name; do
+    emulator_names["$emulator"]="$name"
+  done < <(system_setting '.emulators | to_entries[] | [.key, .value.name // .key] | @tsv')
+
   log "--- Setting default emulators ---"
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
   backup "$emulators_config_file"
@@ -30,7 +36,8 @@ install() {
   crudini --merge "$emulators_config_file" < <(
     while IFS="$tab" read -r rom_name emulator; do
       if [ -n "$emulator" ]; then
-        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
+        local emulator_name=${emulator_names["$emulator"]}
+        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator_name\""
       fi
     done < <(echo "$rom_emulators")
   )
