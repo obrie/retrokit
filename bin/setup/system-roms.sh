@@ -38,7 +38,13 @@ install() {
   # Remove emulator selections for roms without one
   while IFS="$tab" read -r rom_name emulator; do
     if [ -z "$emulator" ]; then
-      crudini --del "$emulators_config_file" '' $(clean_emulator_config_key "${system}_${rom_name}")
+      local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
+
+      # Grep for the file before running crudini since crudini is generally much
+      # slower and we don't want to invoke it if we don't need to
+      if grep "$config_key" "$emulators_config_file"; then
+        crudini --del "$emulators_config_file" '' $(clean_emulator_config_key "${system}_${rom_name}")
+      fi
     fi
   done < <(echo "$rom_emulators")
 }
