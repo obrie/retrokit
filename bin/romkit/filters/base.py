@@ -63,7 +63,7 @@ class SubstringFilter(BaseFilter):
         machine_values = self.values(machine)
 
         for machine_value in machine_values:
-            if any(filter_value in machine_value for filter_value in self.filter_values):
+            if machine_value and any(filter_value in machine_value for filter_value in self.filter_values):
                 return True
 
         return False

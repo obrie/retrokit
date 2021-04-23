@@ -1,9 +1,15 @@
 from __future__ import annotations
 
 from romkit.systems.base import BaseSystem
+from romkit.systems.psx.filters import LanguageFilter, CategoryFilter
 
 class PSXSystem(BaseSystem):
     name = 'psx'
+
+    dynamic_filters = BaseSystem.dynamic_filters + [
+        LanguageFilter,
+        CategoryFilter,
+    ]
 
     # The end of the name range in each page
     PAGE_1_END = 'F'
