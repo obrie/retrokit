@@ -20,11 +20,6 @@ class ROMKit:
         with open(config_file) as f:
             self.config = json.loads(os.path.expandvars(f.read()))
 
-        # Set defaults
-        self.config['roms'].setdefault('allowlists', {})
-        self.config['roms'].setdefault('blocklists', {})
-        self.config['roms'].setdefault('favorites', [])
-
         # Set up logger
         root = logging.getLogger()
         root.setLevel(getattr(logging, log_level))

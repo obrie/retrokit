@@ -54,7 +54,7 @@
       "key": "title"
     },
     "allowlists": {
-      "flags": [
+      "~flags": [
         "usa",
         "europe",
         "world"
@@ -93,12 +93,12 @@
       ]
     },
     "blocklists": {
-      "flags": [
+      "~flags": [
         "beta",
         "disc",
         "unl"
       ],
-      "keywords": [
+      "~keywords": [
         "dreamkey",
         "dreamon",
         "euro edition",

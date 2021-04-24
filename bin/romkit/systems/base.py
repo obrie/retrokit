@@ -33,7 +33,8 @@ class BaseSystem:
             for name, path in config['roms']['dirs'].items()
         }
         self.filters = []
-        self.favorites_filter = NameFilter(set(config['roms']['favorites']), log=False)
+        self.favorites_filter = NameFilter(set(config['roms'].get('favorites', [])), log=False)
+        self.force_filters = [self.favorites_filter]
         self.machine_priority = config['roms'].get('priority', set())
         if 'emulators' in config['roms']:
             self.emulator_set = self.emulator_set_class.from_json(self, config['roms']['emulators'])
@@ -64,14 +65,18 @@ class BaseSystem:
             self.filters.append(filter_cls(config=self.config))
 
         for filter_cls in self.dynamic_filters:
-            allowlist = self.config['roms']['allowlists'].get(filter_cls.name)
-            blocklist = self.config['roms']['blocklists'].get(filter_cls.name)
+            allowlist = self.config['roms'].get('allowlists', {}).get(filter_cls.name)
+            blocklist = self.config['roms'].get('blocklists', {}).get(filter_cls.name)
+            forcelist = self.config['roms'].get('forcelists', {}).get(filter_cls.name)
 
             if allowlist:
                 self.filters.append(filter_cls(set(allowlist), config=self.config))
 
             if blocklist:
                 self.filters.append(filter_cls(set(blocklist), invert=True, config=self.config))
+
+            if forcelist:
+                self.force_filters.append(filter_cls(set(forcelist), config=self.config))
 
         # Load emulators filter
         if self.emulator_set.filter:
@@ -118,17 +123,23 @@ class BaseSystem:
                     romset.remove(name)
 
         # Prioritize the machines within each group
-        machines = []
+        machines_by_name = {}
         for title, grouped_machines in groups.items():
             # Find the highest-priority machine
             prioritized_machines = sorted(grouped_machines, key=self._sort_machines)
-            machines.append(prioritized_machines[0])
+            prioritized_machine = prioritized_machines[0]
+            machines_by_name[prioritized_machine.name] = prioritized_machine
 
             # Log all of the machines that were de-prioritized
             for machine in prioritized_machines[1:]:
                 logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
 
-        return machines
+        # Warn about any missing favorites
+        for name in self.favorites_filter.filter_values:
+            if not machines_by_name.get(name):
+                logging.warn(f'[{name}] Missing favorite')
+
+        return machines_by_name.values()
 
     # Sorts machines based on a predefined priority ordering.
     # 
@@ -167,8 +178,8 @@ class BaseSystem:
 
     # Whether this machine is allowed for install
     def allow(self, machine: Machine) -> bool:
-        is_favorite = self.favorites_filter.allow(machine)
-        return all((is_favorite and not filter.apply_to_favorites) or filter.allow(machine) for filter in self.filters)
+        force_allowed = any(filter.allow(machine) for filter in self.force_filters)
+        return all((force_allowed and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
 
     # Reset the visible set of machines
     def reset(self) -> None:

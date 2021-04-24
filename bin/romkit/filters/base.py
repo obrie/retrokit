@@ -5,7 +5,7 @@ import logging
 # Provides a base class for reducing the set of machines to install
 class BaseFilter:
     name = None
-    apply_to_favorites = False
+    apply_to_overrides = False
 
     def __init__(self,
         filter_values: set = set(),

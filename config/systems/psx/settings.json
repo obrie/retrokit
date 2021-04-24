@@ -54,12 +54,12 @@
       "world"
     ],
     "allowlists": {
-      "flags": [
+      "~flags": [
         "europe",
         "usa",
         "world"
       ],
-      "languages": [
+      "~languages": [
         "English"
       ],
       "names": [
@@ -120,17 +120,17 @@
       ]
     },
     "blocklists": {
-      "flags": [
+      "~flags": [
         "unl"
       ],
-      "keywords": [
+      "~keywords": [
         "collector",
         "demo",
         "namco",
         "playstation",
         "sampler"
       ],
-      "categories": [
+      "~categories": [
         "Board",
         "Browser",
         "Cards",
