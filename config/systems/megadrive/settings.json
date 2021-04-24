@@ -64,8 +64,10 @@
     },
     "blocklists": {
       "flags": [
+        "aftermarket",
         "alt",
         "beta",
+        "compilation",
         "genesis mini",
         "mega drive mini",
         "program",
