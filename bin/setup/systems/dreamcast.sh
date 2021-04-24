@@ -13,10 +13,12 @@ install() {
       file_cp "$mapping_file" "/opt/retropie/configs/dreamcast/mappings/$mapping_name"
     done < <(find "$system_config_dir/mappings" -type f)
   fi
+
+  ini_merge "$system_config_dir/redream.cfg" '/opt/retropie/emulators/redream/redream.cfg'
 }
 
 uninstall() {
-  echo 'No restore for dreamcast'
+  restore '/opt/retropie/emulators/redream/redream.cfg'
 }
 
 "${@}"
