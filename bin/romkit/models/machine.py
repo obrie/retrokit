@@ -10,6 +10,7 @@ from typing import Dict, List, Optional, Set
 # Represents a Game/Device/BIOS
 class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
+    DISC_REGEX = re.compile(r'\(Disc [0-9]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
     def __init__(self,
@@ -110,10 +111,21 @@ class Machine:
     def is_clone(self) -> bool:
         return self.parent_name is not None
 
-    # Machine title (no extension, no flags)
+    # Machine title (no extension, no flags except for disc name)
     @property
     def title(self) -> str:
-        return self.TITLE_REGEX.search(self.name).group().strip()
+        full_title = self.TITLE_REGEX.search(self.name).group().strip()
+        if self.disc_name:
+            full_title = f'{full_title} {self.disc_name}'
+
+        return full_title
+
+    # Name of the Disc for this machine
+    @property
+    def disc_name(self) -> Optional[str]:
+        match = self.DISC_REGEX.search(self.name)
+        if match:
+            return match.group()
 
     # Flags from description
     @property
