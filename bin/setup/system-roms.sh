@@ -36,7 +36,7 @@ install() {
   crudini --merge "$emulators_config_file" < <(
     while IFS="$tab" read -r rom_name emulator; do
       if [ -n "$emulator" ]; then
-        local emulator_name=${emulator_names["$emulator"]}
+        local emulator_name=${emulator_names["$emulator"]:-$emulator}
         echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator_name\""
       fi
     done < <(echo "$rom_emulators")
