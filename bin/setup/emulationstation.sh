@@ -50,6 +50,7 @@ install_systems() {
 }
 
 install() {
+  stop_emulationstation
   install_settings
   install_systems
 }

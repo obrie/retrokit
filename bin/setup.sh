@@ -78,10 +78,6 @@ usage() {
   exit 1
 }
 
-before_setup() {
-  stop_emulationstation
-}
-
 setup_all() {
   local action="$1"
 
