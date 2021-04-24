@@ -9,7 +9,7 @@ from pathlib import Path
 class PCSystem(BaseSystem):
     name = 'pc'
 
-    APP_ROOT = Path(__file__).parent.resolve().joinpath('../../..').resolve()
+    APP_ROOT = Path(__file__).parent.resolve().joinpath('../../../..').resolve()
     CONFIG_ARCHIVE = f'{APP_ROOT}/cache/exodos/dosbox-cfg.zip'
 
     def install_machine(self, machine: Machine) -> bool:
