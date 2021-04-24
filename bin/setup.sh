@@ -112,8 +112,6 @@ main() {
   local action="$1"
   local setupmodule="$2"
 
-  before_setup
-
   if [ -n "$setupmodule" ]; then
     setup "$action" "$setupmodule" "${@:3}"
   else
