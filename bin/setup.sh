@@ -66,7 +66,6 @@ systemmodules=(
   # Themes
   bezels
   launchimages
-  themes
 
   # ROMs
   roms

@@ -47,6 +47,21 @@ install_systems() {
   system_conditions=$(jq -r '.systems[]' "$settings_file" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
   xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
   printf '</systemList>\n' >> "$system_override_config"
+
+  # Override platforms / themes
+  while read system; do
+    local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_platform" 2>/dev/null || echo '')
+    if [ -n "$platform" ]; then
+      platform=${platform//\"/}
+      xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/platform" -v "$platform" "$system_override_config"
+    fi
+
+    local theme=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo '')
+    if [ -n "$theme" ]; then
+      theme=${theme//\"/}
+      xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$theme" "$system_override_config"
+    fi
+  done < <(setting '.systems[]')
 }
 
 install() {

@@ -1,8 +1,7 @@
 {
   "system": "pcengine",
   "themes": {
-    "bezel": "PCEngine",
-    "system": "tg16"
+    "bezel": "PCEngine"
   },
   "scraper": {
     "sources": ["screenscraper"]

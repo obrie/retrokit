@@ -10,9 +10,10 @@ install() {
   if [ "$use_launch_image" == 'true' ]; then
     local launch_theme=$(setting '.themes.launch_theme')
     local launch_images_base_url=$(setting ".themes.library[] | select(.name == \"$launch_theme\") | .launch_images_base_url")
-    local system_theme=$(system_setting '.themes.system // .system')
+    local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo "$system")
+    platform=${platform//\"/}
     
-    download "$(printf "$launch_images_base_url" "$system_theme")" "$retropie_system_config_dir/launching-extended.png"
+    download "$(printf "$launch_images_base_url" "$platform")" "$retropie_system_config_dir/launching-extended.png"
   fi
 }
 
