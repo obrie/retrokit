@@ -14,8 +14,8 @@
     "url": "$BIOS_URL/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "syscard2u.pce.bin": "{url}/syscard2u.pce.bin",
-      "syscard3u.pce.bin": "{url}/syscard3u.pce.bin"
+      "syscard2u.pce": "{url}/syscard2u.pce",
+      "syscard3u.pce": "{url}/syscard3u.pce"
     }
   },
   "romsets": [
