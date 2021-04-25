@@ -1,0 +1,65 @@
+{
+  "system": "pcengine",
+  "themes": {
+    "bezel": "PCEngine"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-beetle-pce-fast": {"core_name": "beetle-pce-fast", "core_title": "Beetle PCE FAST", "default": true}
+  },
+  "cheats": "NEC - PC Engine - TurboGrafx 16",
+  "bios": {
+    "url": "$BIOS_URL/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "syscard2u.pce.bin": "{url}/syscard2u.pce.bin",
+      "syscard3u.pce.bin": "{url}/syscard3u.pce.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/NEC - PC Engine - TurboGrafx 16"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/NEC - PC Engine - TurboGrafx 16.dat",
+          "target": "/home/pi/RetroPie/roms/arcade/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/nes/.nointro/{machine}.zip",
+          "file_identifier": "name"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "dirs": {
+      "all": "/home/pi/RetroPie/roms/pcengine"
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    },
+    "allowlists": {
+      "flags": [
+        "usa"
+      ]
+    },
+    "blocklists": {
+      "keywords": [
+        "bios"
+      ]
+    }
+  }
+}
