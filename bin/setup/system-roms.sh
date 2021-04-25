@@ -15,9 +15,11 @@ clean_emulator_config_key() {
   echo "$name"
 }
 
-install() {
+install_roms() {
   romkit_cli install --log-level DEBUG
+}
 
+set_default_emulators() {
   # Define a mapping of rom package to rom name
   declare -A emulator_names
   while IFS="$tab" read -r emulator name; do
@@ -54,6 +56,11 @@ install() {
       fi
     fi
   done < <(echo "$rom_emulators")
+}
+
+install() {
+  install_roms
+  set_default_emulators
 }
 
 uninstall() {
