@@ -15,6 +15,8 @@ install() {
   fi
 
   ini_merge "$system_config_dir/redream.cfg" '/opt/retropie/emulators/redream/redream.cfg'
+
+  # Keyboard binds: https://redream.io/help#keyboard
 }
 
 uninstall() {
