@@ -38,7 +38,7 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/nes/.nointro/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/pcengine/.nointro/{machine}.zip",
           "file_identifier": "name"
         }
       },

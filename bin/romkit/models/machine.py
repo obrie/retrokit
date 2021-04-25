@@ -189,6 +189,8 @@ class Machine:
     # parent ROM has a different name, this will be broken.  We could
     # utilize the @merge property on ROMs to fix this, but at the
     # moment there's no need.
+    # 
+    # TODO: This is wrong -- we need to listen to the @merge property
     @property
     def roms_from_parent(self) -> Set[File]:
         if self.parent_machine:
