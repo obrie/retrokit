@@ -1,6 +1,8 @@
 {
   "system": "pc",
-  "themes": {},
+  "themes": {
+    "launch_image": false
+  },
   "scraper": {
     "sources": ["screenscraper"],
     "args": "--excludefiles *DOSBox*"
