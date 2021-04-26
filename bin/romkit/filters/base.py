@@ -56,7 +56,7 @@ class BaseFilter:
 class ExactFilter(BaseFilter):
     def match(self, machine: Machine) -> bool:
         machine_values = self.values(machine)
-        return any(self.filter_values & machine_values)
+        return len(self.filter_values & machine_values) > 0
 
 
 # Filter values can be just a substring of values from the machine
