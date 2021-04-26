@@ -6,7 +6,7 @@ from romkit.systems.psx.filters import LanguageFilter, CategoryFilter
 class PSXSystem(BaseSystem):
     name = 'psx'
 
-    dynamic_filters = BaseSystem.dynamic_filters + [
+    supported_filters = BaseSystem.supported_filters + [
         LanguageFilter,
         CategoryFilter,
     ]

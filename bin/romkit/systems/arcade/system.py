@@ -4,7 +4,7 @@ from romkit.systems.arcade.filters import LanguageFilter, CategoryFilter, Rating
 
 class ArcadeSystem(BaseSystem):
     name = 'arcade'
-    dynamic_filters = BaseSystem.dynamic_filters + [
+    supported_filters = BaseSystem.supported_filters + [
         LanguageFilter,
         CategoryFilter,
         RatingFilter,

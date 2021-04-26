@@ -36,26 +36,17 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/snes/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/snes"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
     "priority": [
       "usa",
       "world"
     ],
-    "allowlists": {
+    "filters": {
       "flags": [
         "europe",
         "usa",
         "world"
-      ]
-    },
-    "blocklists": {
-      "flags": [
+      ],
+      "!flags": [
         "aftermarket",
         "alt",
         "beta",
@@ -69,70 +60,81 @@
         "unl",
         "virtual console"
       ],
-      "keywords": [
+      "!keywords": [
         "anniversary",
         "cartridge",
         "collector",
         "gamecube",
         "teenage mutant hero"
       ],
-      "names": [
+      "!names": [
         "Wolfenstein 3D (Europe)"
       ]
     },
-    "favorites": [
-      "Aladdin (USA)",
-      "Arkanoid (Europe)",
-      "Arkanoid - Doh It Again (USA)",
-      "Contra III - The Alien Wars (USA)",
-      "Donkey Kong Country (USA)",
-      "Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr)",
-      "Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr)",
-      "Double Dragon V - The Shadow Falls (USA)",
-      "Family Feud (USA)",
-      "Final Fight (USA)",
-      "Final Fight 2 (USA)",
-      "Final Fight 3 (USA)",
-      "Frogger (USA)",
-      "George Foreman's KO Boxing (USA)",
-      "Ken Griffey Jr. Presents Major League Baseball (USA)",
-      "Lion King, The (USA)",
-      "Madden NFL '94 (USA)",
-      "Madden NFL 97 (USA)",
-      "Marvel Super Heroes in War of the Gems (USA)",
-      "Mortal Kombat (USA)",
-      "Mortal Kombat 3 (USA)",
-      "Mortal Kombat II (USA)",
-      "Ms. Pac-Man (USA)",
-      "NBA Jam (USA)",
-      "NBA Jam - Tournament Edition (USA)",
-      "NHL '94 (USA)",
-      "NHL 97 (USA)",
-      "Olympic Summer Games (USA)",
-      "Simpsons, The - Bart's Nightmare (USA)",
-      "Space Invaders (USA)",
-      "Spider-Man (USA)",
-      "Spider-Man - Venom - Maximum Carnage (USA)",
-      "Street Fighter II (USA)",
-      "Street Fighter II Turbo (USA)",
-      "Super Double Dragon (USA)",
-      "Super Mario All-Stars (USA)",
-      "Super Mario Kart (USA)",
-      "Super Mario World (USA)",
-      "Super Mario World 2 - Yoshi's Island (USA)",
-      "Super Punch-Out!! (USA)",
-      "Super Star Wars (USA)",
-      "Super Star Wars - Return of the Jedi (USA)",
-      "Super Star Wars - The Empire Strikes Back (USA)",
-      "Super Tennis (USA)",
-      "Teenage Mutant Ninja Turtles - Tournament Fighters (USA)",
-      "Teenage Mutant Ninja Turtles IV - Turtles in Time (USA)",
-      "Teenage Mutant Ninja Turtles IV - Turtles in Time (USA)",
-      "Top Gear (USA)",
-      "Top Gear 2 (USA)",
-      "Ultimate Mortal Kombat 3 (USA)",
-      "Worms (Europe)",
-      "X-Men - Mutant Apocalypse (USA)"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/snes/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/snes",
+        "filters": {
+          "names": [
+            "Aladdin (USA)",
+            "Arkanoid (Europe)",
+            "Arkanoid - Doh It Again (USA)",
+            "Contra III - The Alien Wars (USA)",
+            "Donkey Kong Country (USA)",
+            "Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr)",
+            "Donkey Kong Country 3 - Dixie Kong's Double Trouble! (USA) (En,Fr)",
+            "Double Dragon V - The Shadow Falls (USA)",
+            "Family Feud (USA)",
+            "Final Fight (USA)",
+            "Final Fight 2 (USA)",
+            "Final Fight 3 (USA)",
+            "Frogger (USA)",
+            "George Foreman's KO Boxing (USA)",
+            "Ken Griffey Jr. Presents Major League Baseball (USA)",
+            "Lion King, The (USA)",
+            "Madden NFL '94 (USA)",
+            "Madden NFL 97 (USA)",
+            "Marvel Super Heroes in War of the Gems (USA)",
+            "Mortal Kombat (USA)",
+            "Mortal Kombat 3 (USA)",
+            "Mortal Kombat II (USA)",
+            "Ms. Pac-Man (USA)",
+            "NBA Jam (USA)",
+            "NBA Jam - Tournament Edition (USA)",
+            "NHL '94 (USA)",
+            "NHL 97 (USA)",
+            "Olympic Summer Games (USA)",
+            "Simpsons, The - Bart's Nightmare (USA)",
+            "Space Invaders (USA)",
+            "Spider-Man (USA)",
+            "Spider-Man - Venom - Maximum Carnage (USA)",
+            "Street Fighter II (USA)",
+            "Street Fighter II Turbo (USA)",
+            "Super Double Dragon (USA)",
+            "Super Mario All-Stars (USA)",
+            "Super Mario Kart (USA)",
+            "Super Mario World (USA)",
+            "Super Mario World 2 - Yoshi's Island (USA)",
+            "Super Punch-Out!! (USA)",
+            "Super Star Wars (USA)",
+            "Super Star Wars - Return of the Jedi (USA)",
+            "Super Star Wars - The Empire Strikes Back (USA)",
+            "Super Tennis (USA)",
+            "Teenage Mutant Ninja Turtles - Tournament Fighters (USA)",
+            "Teenage Mutant Ninja Turtles IV - Turtles in Time (USA)",
+            "Teenage Mutant Ninja Turtles IV - Turtles in Time (USA)",
+            "Top Gear (USA)",
+            "Top Gear 2 (USA)",
+            "Ultimate Mortal Kombat 3 (USA)",
+            "Worms (Europe)",
+            "X-Men - Mutant Apocalypse (USA)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
   }
 }

@@ -41,13 +41,6 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/n64/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/n64"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
     "emulators": {
       "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=1983504515&format=tsv",
       "key": "title",
@@ -57,15 +50,13 @@
       "usa",
       "world"
     ],
-    "allowlists": {
+    "filters": {
       "flags": [
         "europe",
         "usa",
         "world"
-      ]
-    },
-    "blocklists": {
-      "flags": [
+      ],
+      "!flags": [
         "beta",
         "collection",
         "demo",
@@ -75,16 +66,52 @@
         "virtual console"
       ]
     },
-    "favorites": [
-      "Mario Kart 64 (USA)",
-      "Mario Party (USA)",
-      "Mario Party 2 (USA)",
-      "Mario Party 3 (USA)",
-      "Mortal Kombat 4 (USA)",
-      "NBA Jam 2000 (USA)",
-      "Quake (USA)",
-      "Tony Hawk's Pro Skater (USA)",
-      "Tony Hawk's Pro Skater 2 (USA)"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/n64/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/n64",
+        "filters": {
+          "names": [
+            "Carmageddon 64 (USA)",
+            "Cruis'n USA (USA)",
+            "Donkey Kong 64 (USA)",
+            "Duke Nukem 64 (USA)",
+            "Earthworm Jim 3D (USA)",
+            "Excitebike 64 (USA)",
+            "Indiana Jones and the Infernal Machine (USA)",
+            "Mario Kart 64 (USA)",
+            "Mario Party (USA)",
+            "Mario Party 2 (USA)",
+            "Mario Party 3 (USA)",
+            "Mega Man 64 (USA)",
+            "Mortal Kombat 4 (USA)",
+            "Mortal Kombat Trilogy (USA)",
+            "NBA Jam 2000 (USA)",
+            "NFL Blitz (USA)",
+            "NFL Blitz 2000 (USA)",
+            "Paper Mario (USA)",
+            "Quake (USA)",
+            "Re-Volt (USA)",
+            "Snowboard Kids (USA)",
+            "Snowboard Kids 2 (USA)",
+            "South Park Rally (USA)",
+            "South Park (USA)",
+            "Stunt Racer 64 (USA)",
+            "Super Mario 64 (USA)",
+            "Super Smash Bros. (USA)",
+            "Tony Hawk's Pro Skater (USA)",
+            "Tony Hawk's Pro Skater 2 (USA)",
+            "Top Gear Hyper-Bike (USA)",
+            "Top Gear Overdrive (USA)",
+            "Top Gear Rally 2 (USA)",
+            "Top Gear Rally (USA)",
+            "Worms Armageddon (USA) (En,Fr,Es)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
   }
 }

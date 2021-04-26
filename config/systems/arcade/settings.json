@@ -190,25 +190,15 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/arcade/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/arcade"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"},
-      "disk": {"source": "..", "target": "{dir}/{machine}"}
-    },
     "priority": [
       "usa"
     ],
-    "allowlists": {
+    "filters": {
       "languages": [
         "English"
-      ]
-    },
-    "blocklists": {
-      "clones": [true],
-      "categories": [
+      ],
+      "clones": [false],
+      "!categories": [
         "Board Game",
         "Casino",
         "Golf",
@@ -234,17 +224,17 @@
         "Sports / Volleyball",
         "Tabletop"
       ],
-      "ratings": [
+      "!ratings": [
         "0 to 10 (Worst)",
         "10 to 20 (Horrible)",
         "20 to 30 (Bad)",
         "30 to 40 (Amendable)"
       ],
-      "flags": [
+      "!flags": [
         "hack",
         "demo"
       ],
-      "keywords": [
+      "!keywords": [
         "anniversary",
         "bootleg",
         "broken",
@@ -265,13 +255,13 @@
         "unemulated",
         "pcb"
       ],
-      "controls": [
+      "!controls": [
         "gambling",
         "hanafuda",
         "mahjong",
         "trackball"
       ],
-      "names": [
+      "!names": [
         "bjtwin",
         "canvas",
         "deluxe5"
@@ -288,37 +278,49 @@
       },
       "filter": true
     },
-    "favorites": [
-      "area51",
-      "area51mx",
-      "arkanoid",
-      "avsp",
-      "bublbobl",
-      "contra",
-      "dkong",
-      "duckhunt",
-      "mario",
-      "mk",
-      "mk2",
-      "mk3",
-      "mspacman",
-      "nbajam",
-      "pacman",
-      "paperboy",
-      "punchout",
-      "outrun",
-      "rampage",
-      "sf",
-      "sf2",
-      "sf2ce",
-      "simpsons",
-      "suprmrio",
-      "tmnt",
-      "tmnt2",
-      "tron",
-      "xmcota",
-      "xmen",
-      "xmvsf"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/arcade/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/arcade",
+        "filters": {
+          "names": [
+            "area51",
+            "area51mx",
+            "arkanoid",
+            "avsp",
+            "bublbobl",
+            "contra",
+            "dkong",
+            "duckhunt",
+            "mario",
+            "mk",
+            "mk2",
+            "mk3",
+            "mspacman",
+            "nbajam",
+            "pacman",
+            "paperboy",
+            "punchout",
+            "outrun",
+            "rampage",
+            "sf",
+            "sf2",
+            "sf2ce",
+            "simpsons",
+            "suprmrio",
+            "tmnt",
+            "tmnt2",
+            "tron",
+            "xmcota",
+            "xmen",
+            "xmvsf"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"},
+      "disk": {"source": "..", "target": "{dir}/{machine}"}
+    }
   }
 }

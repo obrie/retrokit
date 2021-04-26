@@ -37,26 +37,17 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/nes/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/nes"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
     "priority": [
       "usa",
       "world"
     ],
-    "allowlists": {
+    "filters": {
       "flags": [
         "europe",
         "usa",
         "world"
-      ]
-    },
-    "blocklists": {
-      "flags": [
+      ],
+      "!flags": [
         "aftermarket",
         "alt",
         "beta",
@@ -69,7 +60,7 @@
         "unl",
         "virtual console"
       ],
-      "keywords": [
+      "!keywords": [
         "anniversary",
         "cartridge",
         "collector",
@@ -80,43 +71,61 @@
         "teenage mutant hero"
       ]
     },
-    "favorites": [
-      "Arkanoid (USA)",
-      "Bubble Bobble (USA)",
-      "Bubble Bobble Part 2 (USA)",
-      "California Games (USA)",
-      "Contra (USA)",
-      "Contra Force (USA)",
-      "Double Dragon (USA)",
-      "Double Dragon II - The Revenge (USA)",
-      "Double Dragon III - The Sacred Stones (USA)",
-      "Duck Hunt (World)",
-      "Karateka (Japan)",
-      "Little Mermaid, The (USA)",
-      "Mike Tyson's Punch-Out!! (Japan, USA)",
-      "Ms. Pac-Man (USA) (Namco)",
-      "Pac-Man (USA) (Namco)",
-      "Popeye (World) (Rev 1)",
-      "Punch-Out!! (USA)",
-      "Rampage (USA)",
-      "Paperboy (USA)",
-      "R.C. Pro-Am (USA)",
-      "R.C. Pro-Am II (USA)",
-      "Simpsons, The - Bartman Meets Radioactive Man (USA)",
-      "Simpsons, The - Bart vs. the Space Mutants (USA)",
-      "Simpsons, The - Bart vs. the World (USA)",
-      "Skate or Die (USA)",
-      "Skate or Die 2 - The Search for Double Trouble (USA)",
-      "Super Mario Bros. (World)",
-      "Super Mario Bros. 2 (USA)",
-      "Super Mario Bros. 3 (USA)",
-      "Teenage Mutant Ninja Turtles (USA)",
-      "Teenage Mutant Ninja Turtles II - The Arcade Game (USA)",
-      "Teenage Mutant Ninja Turtles III - The Manhattan Project (USA)",
-      "Tetris (USA)",
-      "Track & Field (USA)",
-      "Track & Field II (USA)",
-      "Winter Games (USA)"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/nes/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/nes",
+        "filters": {
+          "names": [
+            "Arkanoid (USA)",
+            "Bubble Bobble (USA)",
+            "Bubble Bobble Part 2 (USA)",
+            "California Games (USA)",
+            "Contra (USA)",
+            "Contra Force (USA)",
+            "Double Dragon (USA)",
+            "Double Dragon II - The Revenge (USA)",
+            "Double Dragon III - The Sacred Stones (USA)",
+            "Excitebike (Japan, USA)",
+            "Duck Hunt (World)",
+            "Indiana Jones and the Last Crusade (USA) (Taito)",
+            "Indiana Jones and the Temple of Doom (USA)",
+            "Karateka (Japan)",
+            "Little Mermaid, The (USA)",
+            "Marble Madness (USA)",
+            "Mike Tyson's Punch-Out!! (Japan, USA)",
+            "Monster Truck Rally (USA)",
+            "Ms. Pac-Man (USA) (Namco)",
+            "Pac-Man (USA) (Namco)",
+            "Popeye (World) (Rev 1)",
+            "Punch-Out!! (USA)",
+            "Rampage (USA)",
+            "Paperboy (USA)",
+            "R.C. Pro-Am (USA)",
+            "R.C. Pro-Am II (USA)",
+            "Simpsons, The - Bartman Meets Radioactive Man (USA)",
+            "Simpsons, The - Bart vs. the Space Mutants (USA)",
+            "Simpsons, The - Bart vs. the World (USA)",
+            "Skate or Die (USA)",
+            "Skate or Die 2 - The Search for Double Trouble (USA)",
+            "Super Mario Bros. (World)",
+            "Super Mario Bros. 2 (USA)",
+            "Super Mario Bros. 3 (USA)",
+            "Teenage Mutant Ninja Turtles (USA)",
+            "Teenage Mutant Ninja Turtles II - The Arcade Game (USA)",
+            "Teenage Mutant Ninja Turtles III - The Manhattan Project (USA)",
+            "Tetris (USA)",
+            "Tetris 2 (USA)",
+            "Track & Field (USA)",
+            "Track & Field II (USA)",
+            "Winter Games (USA)",
+            "World Games (USA)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
   }
 }

@@ -35,17 +35,7 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/pc"
-    },
-    "files": {
-      "conf": {
-        "target": "{dir}/{machine}.conf",
-        "global_overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf",
-        "overrides": "/home/pi/retrokit/config/systems/pc/conf/{machine}.conf"
-      }
-    },
-    "allowlists": {
+    "filters": {
       "names": [
         "Arkanoid (1988)",
         "Arkanoid II - Revenge of Doh (1989)",
@@ -80,14 +70,22 @@
         "Tomb Raider Gold (1998)",
         "Where in the World is Carmen Sandiego (1985)",
         "Wolfenstein 3D (1992)"
-      ]
-    },
-    "blocklists": {
-      "names": [
+      ],
+      "!names": [
         "Carmageddon Max Pack (1998)",
         "Descent (1995)",
         "Descent II (1996)"
       ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/pc"}
+    ],
+    "files": {
+      "conf": {
+        "target": "{dir}/{machine}.conf",
+        "global_overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf",
+        "overrides": "/home/pi/retrokit/config/systems/pc/conf/{machine}.conf"
+      }
     }
   }
 }

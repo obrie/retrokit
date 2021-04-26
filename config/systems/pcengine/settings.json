@@ -45,21 +45,19 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/pcengine"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
-    "allowlists": {
+    "filters": {
       "flags": [
         "usa"
-      ]
-    },
-    "blocklists": {
-      "keywords": [
+      ],
+      "!keywords": [
         "bios"
       ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/pcengine"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
     }
   }
 }

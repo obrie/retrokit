@@ -1,11 +1,18 @@
 from __future__ import annotations
 
+from romkit.filters import FilterSet
+
 from pathlib import Path
 
 class SystemDir:
-    def __init__(self, path: str, file_templates: dict = {}) -> None:
+    def __init__(self, path: str, filter_set: FilterSet, file_templates: dict = {}) -> None:
         self.path = Path(path)
+        self.filter_set = filter_set
         self.file_templates = file_templates
+
+    # Whether the given machine should be enabled in this dir
+    def allow(self, machine: Machine) -> bool:
+        return self.filter_set.allow(machine)
 
     # Clears all existing symlinks in the directory
     def reset(self) -> None:

@@ -1,9 +1,10 @@
-from romkit.filters import EmulatorFilter, FlagFilter, KeywordFilter, NameFilter, CloneFilter, ControlFilter
+from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, FilterSet, FlagFilter, KeywordFilter, NameFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
 import logging
 import traceback
+from copy import copy
 from pathlib import Path
 from typing import Generator, List, Tuple
 
@@ -11,16 +12,14 @@ class BaseSystem:
     name = 'base'
 
     # Filters that run based on an allowlist/blocklist provided at runtime
-    dynamic_filters = [
+    supported_filters = [
         CloneFilter,
         KeywordFilter,
         FlagFilter,
         ControlFilter,
         NameFilter,
+        TitleFilter,
     ]
-
-    # Filters that run without configuration
-    static_filters = []
 
     # Class to use for building emulator sets
     emulator_set_class = EmulatorSet
@@ -28,20 +27,41 @@ class BaseSystem:
     def __init__(self, config: dict) -> None:
         self.config = config
         self.name = config['system']
-        self.dirs = {
-            name: SystemDir(path, config['roms']['files'])
-            for name, path in config['roms']['dirs'].items()
-        }
-        self.filters = []
-        self.favorites_filter = NameFilter(set(config['roms'].get('favorites', [])), log=False)
-        self.force_filters = [self.favorites_filter]
+
+        # Install directories
+        file_templates = config['roms']['files']
+        self.dirs = [
+            SystemDir(
+                dir_config['path'],
+                FilterSet.from_json(dir_config.get('filters', {}), config, self.supported_filters),
+                file_templates,
+            )
+            for dir_config in config['roms']['dirs']
+        ]
+
+        # Priority order for choosing a machine (e.g. 1G1R)
         self.machine_priority = config['roms'].get('priority', set())
+
+        # Emulator compatibility
         if 'emulators' in config['roms']:
             self.emulator_set = self.emulator_set_class.from_json(self, config['roms']['emulators'])
         else:
             self.emulator_set = self.emulator_set_class(self)
 
-        self.load()
+        # Filters
+        self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
+
+        # Filters: emulators
+        if self.emulator_set.filter:
+            self.filter_set.append(EmulatorFilter(config=self.config))
+
+        # Filters: forced name filters
+        for system_dir in self.dirs:
+            for filter in system_dir.filter_set.filters:
+                if filter.name == 'names':
+                    new_filter = copy(filter)
+                    new_filter.override = True
+                    self.filter_set.append(new_filter)
 
     # Looks up the system from the given name
     @classmethod
@@ -57,30 +77,6 @@ class BaseSystem:
     # Additional context for rendering Machine URLs
     def context_for(self, machine: Machine) -> dict:
         return {}
-
-    def load(self) -> None:
-        # Load filters
-        logging.info('Loading filters...')
-        for filter_cls in self.static_filters:
-            self.filters.append(filter_cls(config=self.config))
-
-        for filter_cls in self.dynamic_filters:
-            allowlist = self.config['roms'].get('allowlists', {}).get(filter_cls.name)
-            blocklist = self.config['roms'].get('blocklists', {}).get(filter_cls.name)
-            forcelist = self.config['roms'].get('forcelists', {}).get(filter_cls.name)
-
-            if allowlist:
-                self.filters.append(filter_cls(set(allowlist), config=self.config))
-
-            if blocklist:
-                self.filters.append(filter_cls(set(blocklist), invert=True, config=self.config))
-
-            if forcelist:
-                self.force_filters.append(filter_cls(set(forcelist), config=self.config))
-
-        # Load emulators filter
-        if self.emulator_set.filter:
-            self.filters.append(EmulatorFilter(config=self.config))
 
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         # Load romsets
@@ -102,7 +98,7 @@ class BaseSystem:
                 if not machine.emulator:
                     machine.emulator = self.emulator_set.get(machine)
 
-                if self.allow(machine):
+                if self.filter_set.allow(machine):
                     # Track this machine and all machines it depends on
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
@@ -133,11 +129,6 @@ class BaseSystem:
             # Log all of the machines that were de-prioritized
             for machine in prioritized_machines[1:]:
                 logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
-
-        # Warn about any missing favorites
-        for name in self.favorites_filter.filter_values:
-            if not machines_by_name.get(name):
-                logging.warn(f'[{name}] Missing favorite')
 
         return machines_by_name.values()
 
@@ -176,14 +167,9 @@ class BaseSystem:
             traceback.print_exc()
             return False
 
-    # Whether this machine is allowed for install
-    def allow(self, machine: Machine) -> bool:
-        force_allowed = any(filter.allow(machine) for filter in self.force_filters)
-        return all((force_allowed and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
-
     # Reset the visible set of machines
     def reset(self) -> None:
-        for system_dir in self.dirs.values():
+        for system_dir in self.dirs:
             system_dir.reset()
 
     # Enables the given list of machines so they're visible
@@ -191,11 +177,11 @@ class BaseSystem:
         for machine in machines:
             # Machine is valid: Enable
             machine.clean()
-            self.enable_machine(machine, self.dirs['all'])
 
-            # Add to favorites
-            if self.favorites_filter.allow(machine):
-                self.enable_machine(machine, self.dirs['favorites'])
+            for system_dir in self.dirs:
+                # Enable machine in directories that are filtering for it
+                if system_dir.allow(machine):
+                    self.enable_machine(machine, system_dir)
 
     # Enables the given machine in the given directory
     def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:

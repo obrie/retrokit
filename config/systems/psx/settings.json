@@ -43,25 +43,11 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/psx"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.chd"}
-    },
     "priority": [
       "usa",
       "world"
     ],
-    "allowlists": {
-      "~flags": [
-        "europe",
-        "usa",
-        "world"
-      ],
-      "~languages": [
-        "English"
-      ],
+    "filters": {
       "names": [
         "Area 51 (USA)",
         "Batman Beyond - Return of the Joker (USA)",
@@ -123,20 +109,26 @@
         "Worms World Party (USA) (En,Fr,De,Es,It,Nl,Sv,Da)",
         "You Don't Know Jack (USA) (Disc 1)",
         "You Don't Know Jack (USA) (Disc 2)"
-      ]
-    },
-    "blocklists": {
-      "~flags": [
+      ],
+      "#languages": [
+        "English"
+      ],
+      "#flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "#!flags": [
         "unl"
       ],
-      "~keywords": [
+      "#!keywords": [
         "collector",
         "demo",
         "namco",
         "playstation",
         "sampler"
       ],
-      "~categories": [
+      "#!categories": [
         "Board",
         "Browser",
         "Cards",
@@ -159,6 +151,12 @@
         "Visual",
         "Windsurfing"
       ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/psx"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.chd"}
     }
   }
 }

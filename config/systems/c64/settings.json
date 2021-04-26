@@ -58,51 +58,54 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/c64/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/c64"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
     "priority": [
       "usa"
     ],
-    "allowlists": {
+    "filters": {
+      "c64_dreams": [true],
       "flags": [
         "usa",
         "europe"
       ],
-      "c64_dreams": [true]
-    },
-    "blocklists": {
-      "flags": [
+      "!flags": [
+        "arcade classic pak",
         "program",
         "unl"
       ],
-      "keywords": [
+      "!keywords": [
         "bios",
         "strip poker"
       ]
     },
-    "favorites": [
-      "180 (Europe) (Budget)",
-      "Arkanoid (Europe)",
-      "Arkanoid - Revenge of Doh (Europe)",
-      "California Games (Europe)",
-      "Frogger (USA, Europe)",
-      "Karateka (Europe)",
-      "Leaderboard (Europe)",
-      "Paperboy (Europe)",
-      "Pitfall! (USA, Europe)",
-      "Pitstop (USA, Europe)",
-      "Pitstop II (Europe)",
-      "Popeye (USA, Europe)",
-      "Rampage (Europe) (Ocean)",
-      "Summer Games (Europe)",
-      "Summer Games II (Europe)",
-      "Winter Games (Europe)",
-      "World Games (Europe)"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/c64/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/c64",
+        "filters": {
+          "names": [
+            "180 (Europe) (Budget)",
+            "Arkanoid (Europe)",
+            "Arkanoid - Revenge of Doh (Europe)",
+            "California Games (Europe)",
+            "Frogger (USA, Europe)",
+            "Karateka (Europe)",
+            "Leaderboard (Europe)",
+            "Paperboy (Europe)",
+            "Pitfall! (USA, Europe)",
+            "Pitstop (USA, Europe)",
+            "Pitstop II (Europe)",
+            "Popeye (USA, Europe)",
+            "Rampage (Europe) (Ocean)",
+            "Summer Games (Europe)",
+            "Summer Games II (Europe)",
+            "Winter Games (Europe)",
+            "World Games (Europe)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
   }
 }

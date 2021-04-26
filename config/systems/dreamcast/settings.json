@@ -42,22 +42,11 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/dreamcast"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.chd"}
-    },
     "emulators": {
       "url": "file:///home/pi/retrokit/config/systems/dreamcast/emulators.tsv",
       "key": "title"
     },
-    "allowlists": {
-      "~flags": [
-        "usa",
-        "europe",
-        "world"
-      ],
+    "filters": {
       "names": [
         "18 Wheeler - American Pro Trucker (USA)",
         "Chicken Run (USA)",
@@ -93,21 +82,30 @@
         "Typing of the Dead, The (USA)",
         "Unreal Tournament (USA) (En,Fr,De,Es,It)",
         "Worms Armageddon (USA) (En,Fr,De,Nl,Sv,No,Da)"
-      ]
-    },
-    "blocklists": {
-      "~flags": [
+      ],
+      "#flags": [
+        "usa",
+        "europe",
+        "world"
+      ],
+      "#!flags": [
         "beta",
         "disc",
         "unl"
       ],
-      "~keywords": [
+      "#!keywords": [
         "dreamkey",
         "dreamon",
         "euro edition",
         "magazine",
         "browser"
       ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/dreamcast"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.chd"}
     }
   }
 }

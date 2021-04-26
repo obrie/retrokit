@@ -104,7 +104,15 @@ setup_all() {
 setup() {
   local action="$1"
   local setupmodule="$2"
-  "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
+  if [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
+    # Run setup module for all systems
+    while read system; do
+      "$dir/setup/$setupmodule.sh" "$action" "$system"
+    done < <(setting '.systems[]')
+  else
+    # Run individual script
+    "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
+  fi
 }
 
 main() {

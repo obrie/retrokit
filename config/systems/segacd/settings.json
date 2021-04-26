@@ -41,13 +41,7 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/segacd"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.chd"}
-    },
-    "allowlists": {
+    "filters": {
       "names": [
         "Adventures of Batman and Robin, The (USA)",
         "Batman Returns (USA)",
@@ -65,6 +59,12 @@
         "Terminator, The (USA)",
         "WWF - Rage in the Cage (USA)"
       ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/segacd"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.chd"}
     }
   }
 }

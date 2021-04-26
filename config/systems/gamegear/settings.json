@@ -43,33 +43,56 @@
     }
   ],
   "roms": {
-    "dirs": {
-      "all": "/home/pi/RetroPie/roms/gamegear/-ALL-",
-      "favorites": "/home/pi/RetroPie/roms/gamegear"
-    },
-    "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
-    },
-    "allowlists": {
+    "filters": {
       "flags": [
         "usa"
-      ]
-    },
-    "blocklists": {
-      "flags": [
+      ],
+      "!flags": [
         "alt",
         "beta",
         "program",
         "proto",
         "unl"
       ],
-      "keywords": [
+      "!keywords": [
         "bios"
       ]
     },
-    "favorites": [
-      "Sonic The Hedgehog (Japan, USA)",
-      "Sonic The Hedgehog 2 (World)"
-    ]
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/gamegear/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/gamegear",
+        "filters": {
+          "names": [
+            "Aladdin (USA, Europe, Brazil)",
+            "Ariel the Little Mermaid (USA, Europe, Brazil)",
+            "Bubble Bobble (USA)",
+            "Captain America and the Avengers (USA)",
+            "Double Dragon (USA, Europe)",
+            "Earthworm Jim (USA)",
+            "Indiana Jones and the Last Crusade (USA, Europe, Brazil)",
+            "Judge Dredd (USA, Europe)",
+            "Jurassic Park (USA, Europe, Brazil)",
+            "Lion King, The (USA)",
+            "Marble Madness (USA, Europe)",
+            "Mega Man (USA)",
+            "Micro Machines (USA, Europe)",
+            "Ms. Pac-Man (USA)",
+            "NBA Jam (USA, Europe)",
+            "Pac-Man (USA)",
+            "Pinball Dreams (USA)",
+            "R.C. Grand Prix (USA)",
+            "Simpsons, The - Bartman Meets Radioactive Man (USA)",
+            "Simpsons, The - Bart vs. the Space Mutants (USA, Europe)",
+            "Sonic The Hedgehog (Japan, USA)",
+            "Sonic The Hedgehog 2 (World)",
+            "Terminator, The (USA, Europe)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
   }
 }

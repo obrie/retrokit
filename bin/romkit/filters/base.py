@@ -10,11 +10,13 @@ class BaseFilter:
     def __init__(self,
         filter_values: set = set(),
         invert: bool = False,
+        override: bool = False,
         log: bool = True,
         config: dict = {},
     ) -> None:
         self.filter_values = filter_values
         self.invert = invert
+        self.override = override
         self.log = log
         self.config = config
 
