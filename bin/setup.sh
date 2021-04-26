@@ -108,7 +108,7 @@ setup() {
     # Run setup module for all systems
     while read system; do
       "$dir/setup/$setupmodule.sh" "$action" "$system"
-    done < <(setting '.systems[]')
+    done < <(setting '.systems[] | select(. != "retropie")')
   else
     # Run individual script
     "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
