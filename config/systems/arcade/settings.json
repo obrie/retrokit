@@ -53,7 +53,7 @@
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -78,7 +78,7 @@
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -103,7 +103,7 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -128,7 +128,7 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -153,7 +153,7 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -179,7 +179,7 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd/{machine}/{disk}.chd"
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME%200.196%20EXTRAs%2Fsamples%2F{sample}.zip",
