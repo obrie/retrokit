@@ -297,4 +297,3 @@ class Machine:
     def purge(self):
         if self.resource.target_path.exists():
             print(f'rm -rf "{self.resource.target_path.path}"')
-            # self.resource.target_path.delete()

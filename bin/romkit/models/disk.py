@@ -41,3 +41,8 @@ class Disk:
     # Enables the disk to be accessible to the emulator
     def enable(self, system_dir: SystemDir) -> None:
         system_dir.symlink('disk', self.resource.target_path.path, **self.context)
+
+    # Removes this disk from the filesystem
+    def purge(self):
+        if self.resource.target_path.exists():
+            print(f'rm -rf "{self.resource.target_path.path}"')

@@ -26,3 +26,8 @@ class Sample:
     def install(self) -> None:
         logging.info(f'[{self.machine.name}] Installing sample {self.name}')
         self.resource.install()
+
+    # Removes this sample from the filesystem
+    def purge(self):
+        if self.resource.target_path.exists():
+            print(f'rm -rf "{self.resource.target_path.path}"')

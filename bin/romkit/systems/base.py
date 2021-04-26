@@ -204,13 +204,32 @@ class BaseSystem:
     # Purges machines that were not installed
     def vacuum(self) -> None:
         installable_machines = self.list()
-        installable_machines_by_romset_name = {
-            f'{machine.romset.name}/{machine.name}': machine
-            for machine in installable_machines
-        }
+        installable_romset_machine_names = set()
+        installable_disk_names = set()
+        installable_sample_names = set()
+
+        for machine in installable_machines:
+            installable_romset_machine_names.add(f'{machine.romset.name}/{machine.name}')
+
+            # Track disks
+            for disk in machine.disks:
+                installable_disk_names.add(disk.name)
+
+            # Track samples
+            if machine.sample:
+                installable_sample_names.add(machine.sample.name)
 
         for romset in self.iter_romsets():
             for machine in romset.iter_machines():
                 key = f'{machine.romset.name}/{machine.name}'
-                if key not in installable_machines_by_romset_name:
+                if key not in installable_romset_machine_names:
                     machine.purge()
+
+                    # Check disks
+                    for disk in machine.disks:
+                        if disk.name not in installable_disk_names:
+                            disk.purge()
+
+                    # Check samples
+                    if machine.sample and machine.sample.name not in installable_sample_names:
+                        sample.purge()
