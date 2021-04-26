@@ -98,7 +98,7 @@ setup_all() {
     if [ -f "$dir/setup/systems/$system.sh" ]; then
       "$dir/setup/systems/$system.sh" "$action"
     fi
-  done < <(setting '.systems[]')
+  done < <(setting '.systems[] | select(. != "retropie")')
 }
 
 setup() {
