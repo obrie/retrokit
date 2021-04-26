@@ -232,4 +232,4 @@ class BaseSystem:
 
                     # Check samples
                     if machine.sample and machine.sample.name not in installable_sample_names:
-                        sample.purge()
+                        machine.sample.purge()

@@ -35,8 +35,8 @@ class Machine:
         self.sample_name = sample_name
         self.device_names = device_names
         self.controls = controls
-        self.disks = roms
-        self.roms = disks
+        self.disks = disks
+        self.roms = roms
         self.sourcefile = sourcefile
         self.emulator = romset.emulator
         self.custom_context = {}
