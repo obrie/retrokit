@@ -9,6 +9,9 @@ install() {
   while IFS="$tab" read -r name repo; do
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes install_theme "$name" "$repo"
   done < <(setting '.themes.library[] | [.name, .repo] | @tsv')
+
+  # Add theme overrides
+  sudo cp -R "$config_dir/themes" /etc/emulationstation
 }
 
 uninstall() {
