@@ -38,6 +38,24 @@ install_hiscores() {
   download 'https://github.com/libretro/mame2016-libretro/raw/master/metadata/hiscore.dat' "$HOME/RetroPie/BIOS/mame2016/"
 }
 
+install_advmame_config() {
+  local config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
+  backup_and_restore "$config_path"
+
+  while read -r name value; do
+    if [ -z "$name" ]; then
+      continue
+    fi
+
+    local escaped_name=$(printf '%s\n' "$name" | sed 's/[.[\*^$]/\\&/g')
+
+    sed -i "/$escaped_name /d" "$config_path"
+    echo "$name $value" >> "$config_path"
+  done < "$system_config_dir/advmame.rc"
+
+  sort -o "$config_path" "$config_path"
+}
+
 fix_runahead() {
   local config_dir='/opt/retropie/configs/all/retroarch/config/MAME 2015'
   mkdir -p "$config_dir"
@@ -54,6 +72,7 @@ fix_runahead() {
 install() {
   install_cheats
   install_hiscores
+  install_advmame_config
   fix_runahead
 }
 
