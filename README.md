@@ -16,14 +16,18 @@ practices for:
 
 Additionally, it provides hands-off management of rom sets via ROMKit for:
 
+* 3DO
 * Arcade
 * Atari2600
 * C64
 * GameGear
 * MegaDrive
+* N64
 * NES
 * PC
+* PCEngine
 * PSX
+* SegaCD
 * SNES
 
 This includes complete control over filtering of Games *and* integration
@@ -31,7 +35,7 @@ with external providers to download games that you legally own.
 
 This means you can set up your arcade machine from scratch to feature-complete
 with less than a few minutes worth of work.  The automated scripts could take
-24-48 hours to complete.
+days to complete depending on the size of your game collection.
 
 This is built for RetroPie / Raspberry Pi 4.  You may customize it to your
 own needs.
@@ -124,29 +128,7 @@ USB Drive vs. MicroSD:
 
 References:
 
-* [Running ROMs form a USB drive](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/)
-
-## Configurations
-
-### Retroarch
-
-* https://retropie.org.uk/docs/RetroArch-Configuration/
-* https://docs.libretro.com/guides/overrides/
-
-### Retroarch Core Options
-
-All Cores: [Retroarch Cores](/opt/retropie/configs/all/retroarch-core-options.cfg):
-
-* [FBNeo](https://github.com/libretro/docs/blob/master/docs/library/fbneo.md)
-* [SNES](https://github.com/libretro/docs/blob/master/docs/library/snes9x_2010.md)
-* [VICE](https://docs.libretro.com/library/vice/#core-options)
-
-ROM-specific: /opt/retropie/configs/all/retroarch/config/{core}/{rom[.zip]}.opt
-
-References:
-
-* https://retropie.org.uk/forum/topic/22816/guide-retroarch-system-emulator-core-and-rom-config-files
-* https://retropie.org.uk/docs/RetroArch-Core-Options/
+* [Running ROMs from a USB drive](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/)
 
 ## Emulators
 
