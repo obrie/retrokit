@@ -1,0 +1,69 @@
+{
+  "system": "3do",
+  "themes": {
+    "bezel": "3DO"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-opera": {"core_name": "opera", "core_title": "Opera", "default": true}
+  },
+  "bios": {
+    "url": "$BIOS_URL",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "panafz10.bin": "{url}/Other/3DO%20Company%2C%20The%20-%203DO/panafz10.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_3DO_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/3do/",
+          "download": "/home/pi/RetroPie/roms/3do/.redump/roms.zip",
+          "target": "/home/pi/RetroPie/roms/3do/.redump/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}{page_number}/{machine}.zip",
+          "download": "/home/pi/RetroPie/roms/3do/.redump/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/3do/.redump/{machine}",
+          "install": {"action": "zip_extract"}
+        }
+      }
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "filters": {
+      "names": [
+      ],
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "demo"
+      ],
+      "!keywords": [
+        "almanac",
+        "game guru",
+        "sampler"
+      ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/3do"}
+    ],
+    "files": {
+      "machine": {"source": "*", "target": "{dir}"}
+    }
+  }
+}
