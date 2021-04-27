@@ -52,6 +52,7 @@ build_collections() {
           # If path is found, add it
           if [ "$name_without_flags" = "$machine_name" ]; then
             echo "$machine_path" >> "$target_collection_path"
+            break
           fi
         done < <(xmlstarlet sel -t -m "*/game[contains(path, \"$machine_name\")]" -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml")
       fi
