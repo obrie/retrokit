@@ -47,7 +47,7 @@ build_collections() {
     while IFS="$tab" read -r collection_system machine_name; do
       if [ "$collection_system" == "$system" ]; then
         while read -r machine_path; do
-          local name_without_flags=$(basename "$machine_path" | grep -oE "^[^\)]+" | sed -e 's/[[:space:]]*$//')
+          local name_without_flags=$(basename "$machine_path" | grep -oE "^[^\(]+" | sed -e 's/[[:space:]]*$//')
 
           # If path is found, add it
           if [ "$name_without_flags" = "$machine_name" ]; then
