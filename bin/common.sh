@@ -290,7 +290,7 @@ install_retropie_package() {
   # an install will always run an update.
   # 
   # This could end up running `configure` twice if an update actually occurred.
-  if [ "$mode" == 'update' ]; then
+  if [ "$mode" == '_update_' ]; then
     sudo ~/RetroPie-Setup/retropie_packages.sh "$name" configure
   fi
 }
