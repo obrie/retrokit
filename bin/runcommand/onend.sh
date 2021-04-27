@@ -7,6 +7,9 @@ hide_launching_screen() {
 
     # Return to the console frame buffer
     killall -s SIGTERM fbi
+
+    # Make sure the terminal is restored properly just in case fbi isn't shut down properly
+    sudo termfix /dev/tty1
   fi
 }
 
