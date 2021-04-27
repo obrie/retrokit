@@ -44,6 +44,13 @@
     ],
     "filters": {
       "names": [
+        "Blade Force (USA)",
+        "Captain Quazar (USA)",
+        "Corpse Killer (USA)",
+        "Demolition Man (USA)",
+        "Gex (USA, Europe)",
+        "Return Fire (USA)",
+        "Road Rash (USA)"
       ],
       "flags": [
         "europe",
@@ -51,7 +58,8 @@
         "world"
       ],
       "!flags": [
-        "demo"
+        "demo",
+        "unl"
       ],
       "!keywords": [
         "almanac",
