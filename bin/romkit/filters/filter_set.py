@@ -8,21 +8,21 @@ class FilterSet:
 
     # Builds a FilterSet from the given json data
     @classmethod
-    def from_json(cls, json: dict, config: dict, supported_filters: list) -> FilterSet:
+    def from_json(cls, json: dict, config: dict, supported_filters: list, log: bool = True) -> FilterSet:
         filter_set = cls()
 
         for filter_cls in supported_filters:
             allowlist = json.get(filter_cls.name)
             if allowlist:
-                filter_set.append(filter_cls(set(allowlist), config=config))
+                filter_set.append(filter_cls(set(allowlist), config=config, log=log))
 
             blocklist = json.get(f'!{filter_cls.name}')
             if blocklist:
-                filter_set.append(filter_cls(set(blocklist), invert=True, config=config))
+                filter_set.append(filter_cls(set(blocklist), invert=True, config=config, log=log))
 
             overridelist = json.get(f'+{filter_cls.name}')
             if overridelist:
-                filter_set.append(filter_cls(set(overridelist), override=True, config=config))
+                filter_set.append(filter_cls(set(overridelist), override=True, config=config, log=log))
 
         return filter_set
 

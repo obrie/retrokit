@@ -33,7 +33,7 @@ class BaseSystem:
         self.dirs = [
             SystemDir(
                 dir_config['path'],
-                FilterSet.from_json(dir_config.get('filters', {}), config, self.supported_filters),
+                FilterSet.from_json(dir_config.get('filters', {}), config, self.supported_filters, log=False),
                 file_templates,
             )
             for dir_config in config['roms']['dirs']
