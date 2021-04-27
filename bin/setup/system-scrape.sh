@@ -41,7 +41,7 @@ build_collections() {
 
     # Remove any existing entries for this system from the collection
     if [ -f "$target_collection_path" ]; then
-      sed -i "/^$system,/d" "$target_collection_path"
+      sed -i "/\/$system\//d" "$target_collection_path"
     fi
 
     while IFS="$tab" read -r collection_system machine_name; do
