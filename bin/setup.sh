@@ -87,30 +87,40 @@ setup_all() {
   # Add systems
   "$dir/setup/system-all.sh" restore_globals
   while read system; do
-    for systemmodule in "${systemmodules[@]}"; do
-      # Ports only get the scrape module
-      if [ "$systemmodule" == 'scrape' ] || [ "$system" != 'ports' ]; then
-        "$dir/setup/system-$systemmodule.sh" "$action" "$system"
-      fi
-    done
-
-    # System-specific actions
-    if [ -f "$dir/setup/systems/$system.sh" ]; then
-      "$dir/setup/systems/$system.sh" "$action"
-    fi
+    setup_system "$system"
   done < <(setting '.systems[] | select(. != "retropie")')
+}
+
+setup_system() {
+  local system="$1"
+
+  for systemmodule in "${systemmodules[@]}"; do
+    # Ports only get the scrape module
+    if [ "$systemmodule" == 'scrape' ] || [ "$system" != 'ports' ]; then
+      "$dir/setup/system-$systemmodule.sh" "$action" "$system"
+    fi
+  done
+
+  # System-specific actions
+  if [ -f "$dir/setup/systems/$system.sh" ]; then
+    "$dir/setup/systems/$system.sh" "$action"
+  fi
 }
 
 setup() {
   local action="$1"
   local setupmodule="$2"
-  if [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
-    # Run setup module for all systems
+
+  if [ "$setupmodule" == "system" ]; then
+    # Setting up an individual system
+    setup_system "$3"
+  elif [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
+    # Setting up an individual system module for all systems
     while read system; do
       "$dir/setup/$setupmodule.sh" "$action" "$system"
     done < <(setting '.systems[] | select(. != "retropie")')
   else
-    # Run individual script
+    # Setting up an individual module
     "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
   fi
 }
