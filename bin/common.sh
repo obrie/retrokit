@@ -65,6 +65,7 @@ backup() {
       $cmd cp "$file" "$backup_file"
     else
       log "Backing up: $file to $backup_file.missing"
+      $cmd mkdir -p "$(dirname "$backup_file")"
       $cmd touch "$backup_file.missing"
     fi
   fi
