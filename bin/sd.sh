@@ -10,18 +10,20 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
 usage() {
-  echo "usage: $0 <create|backup|restore> <device>"
+  echo "usage: $0 <create|backup|restore> <device> <path for backup/restore>"
   exit 1
 }
 
 restore() {
   local device=$1
-  gunzip --stdout "$app_dir/backups/stable/sd-retropie.iso.gz" | sudo dd bs=4M of=$device
+  local restore_from_path=$2
+  gunzip --stdout "$restore_from_path/sd-retropie.img.gz" | sudo dd bs=4M of=$device
 }
 
 backup() {
   local device=$1
-  sudo dd bs=4M if=$device | gzip | dd bs=4M of="$app_dir/backups/sd-retropie.iso.gz"
+  local backup_to_path=$2
+  sudo dd bs=4M if=$device | gzip > "$backup_to_path/sd-retropie.img.gz"
 }
 
 create() {
