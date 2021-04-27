@@ -187,6 +187,33 @@
         }
       },
       "emulator": "lr-mame"
+    },
+    {
+      "name": "advmame",
+      "protocol": "http",
+      "url": "$ROMSET_MAME_2010_URL",
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/mame/mame0106-dat.zip",
+          "download": "/home/pi/RetroPie/roms/arcade/.advmame/roms.zip",
+          "target": "/home/pi/RetroPie/roms/arcade/.advmame/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/roms.zip/roms%2F{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/arcade/.advmame/{machine}.zip",
+          "install": {"action": "zip_merge"}
+        },
+        "disk": {
+          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
+          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+        },
+        "sample": {
+          "source": "{url}/samples/{sample}.zip",
+          "target": "/home/pi/RetroPie/BIOS/mame-advmame/samples/{sample}.zip"
+        }
+      },
+      "emulator": "advmame"
     }
   ],
   "roms": {
