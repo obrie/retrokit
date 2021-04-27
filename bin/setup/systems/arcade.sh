@@ -42,7 +42,7 @@ install_advmame_config() {
   local config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
   backup_and_restore "$config_path"
 
-  while read -r name value; do
+  while IFS="$tab" read -r name value; do
     if [ -z "$name" ]; then
       continue
     fi
