@@ -1,4 +1,4 @@
-misc_safequit no
+misc_safequit	no
 dir_rom	/home/pi/RetroPie/roms/mame-advmame:/home/pi/RetroPie/roms/arcade:/home/pi/RetroPie/roms/arcade/-ALL-
 input_map[p1_up]	keyboard[0,up] or joystick_digital[2dc8_6101,1,1,1]
 input_map[p1_down]	keyboard[0,down] or joystick_digital[2dc8_6101,1,1,0]
