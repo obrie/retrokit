@@ -37,5 +37,42 @@
     "pc",
     "ports",
     "retropie"
-  ]
+  ],
+  "modules": {
+    "setup": [
+      "deps",
+      "wifi",
+      "upgrade",
+      "boot",
+      "tools-dev",
+      "tools-chdman",
+      "case-argon",
+      "ir",
+      "auth-internetarchive",
+      "ssh",
+      "vnc",
+      "display",
+      "localization",
+      "splashscreen",
+      "scriptmodules",
+      "emulationstation",
+      "scraper",
+      "themes",
+      "retroarch",
+      "overlays",
+      "cheats",
+      "bluetooth",
+      "runcommand",
+      "romkit"
+    ],
+    "system": [
+      "emulators",
+      "retroarch",
+      "cheats",
+      "bezels",
+      "launchimages",
+      "roms",
+      "scrape"
+    ]
+  }
 }

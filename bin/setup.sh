@@ -5,87 +5,22 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
-setupmodules=(
-  # Initial setup
-  deps
-  wifi
-  upgrade
-  boot
-
-  # Tools
-  tools-dev
-  tools-chdman
-
-  # Cases
-  case-argon
-  ir
-
-  # Authentication
-  auth-internetarchive
-
-  # Remote access
-  ssh
-  vnc
-
-  # Display
-  display
-  localization
-  splashscreen
-
-  # RetroPie
-  scriptmodules
-
-  # EmulationStation
-  emulationstation
-  scraper
-  themes
-
-  # Retroarch
-  retroarch
-  overlays
-  cheats
-
-  # Controllers
-  bluetooth
-
-  # RetroPie
-  runcommand
-
-  # ROM Management
-  romkit
-)
-
-systemmodules=(
-  # Emulator configurations
-  emulators
-  retroarch
-
-  # Gameplay
-  cheats
-
-  # Themes
-  bezels
-  launchimages
-
-  # ROMs
-  roms
-  scrape
-)
-
 usage() {
-  echo "usage: $0 <install|uninstall> <setupmodule> [args]"
+  echo "usage: $0 <action> <module> [module_args]"
   exit 1
 }
 
 setup_all() {
   local action="$1"
 
-  for setupmodule in "${setupmodules[@]}"; do
+  while read -r setupmodule; do
     setup "$setupmodule" "$actions"
-  done
+  done < <(setting '.modules.setup[]')
 
-  # Add systems
+  # Restore globals for files used across multiple modules
   "$dir/setup/system-all.sh" restore_globals
+
+  # Set up systems
   while read system; do
     setup_system "$system"
   done < <(setting '.systems[] | select(. != "retropie")')
@@ -94,12 +29,12 @@ setup_all() {
 setup_system() {
   local system="$1"
 
-  for systemmodule in "${systemmodules[@]}"; do
+  while read -r systemmodule; do
     # Ports only get the scrape module
     if [ "$systemmodule" == 'scrape' ] || [ "$system" != 'ports' ]; then
       "$dir/setup/system-$systemmodule.sh" "$action" "$system"
     fi
-  done
+  done < <(setting '.modules.system[]')
 
   # System-specific actions
   if [ -f "$dir/setup/systems/$system.sh" ]; then
@@ -112,7 +47,7 @@ setup() {
   local setupmodule="$2"
 
   if [ "$setupmodule" == "system" ]; then
-    # Setting up an individual system
+    # Setting up all modules on an individual system
     setup_system "$3"
   elif [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
     # Setting up an individual system module for all systems
