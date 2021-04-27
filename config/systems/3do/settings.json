@@ -29,7 +29,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}{page_number}/{machine}.zip",
+          "source": "{url}/{machine}.zip",
           "download": "/home/pi/RetroPie/roms/3do/.redump/{machine}.zip",
           "target": "/home/pi/RetroPie/roms/3do/.redump/{machine}",
           "install": {"action": "zip_extract"}
