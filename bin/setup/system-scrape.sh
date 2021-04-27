@@ -46,12 +46,14 @@ build_collections() {
 
     while IFS="$tab" read -r collection_system machine_name; do
       if [ "$collection_system" == "$system" ]; then
-        local machine_path=$(find "$HOME/RetroPie/roms/$system" -type l -name "$machine_name*" | head -n 1)
+        while read -r machine_path; do
+          local name_without_flags=$(basename "$machine_path" | grep -oE "^[^\)]+" | sed -e 's/[[:space:]]*$//')
 
-        # If path is found, add it
-        if [ -n "$machine_path" ]; then
-          echo "$machine_path" >> "$target_collection_path"
-        fi
+          # If path is found, add it
+          if [ "$name_without_flags" = "$machine_name" ]; then
+            echo "$machine_path" >> "$target_collection_path"
+          fi
+        done < <(xmlstarlet sel -t -m "*/game[contains(path, \"$machine_name\")]" -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml")
       fi
     done < "$source_collection_path"
   done < <(ls "$source_collections_dir")
