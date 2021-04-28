@@ -56,6 +56,27 @@ install_advmame_config() {
   sort -o "$config_path" "$config_path"
 }
 
+install_advmame_bezels() {
+  local artwork_path="$HOME/RetroPie/roms/mame-advmame/artwork"
+
+  while read -n overlay_image_path; do
+    local rom_name=$(basename "$overlay_image_path" .png)
+
+    # Create art file
+    cat > "$artwork_path/$rom_name.art" <<EOF
+overlay:
+  file      = $rom_name.png
+  layer     = overlay
+  priority  = 0
+  visible   = 1
+  position  = -0.19,0.0,1.19,1.0
+EOF
+  
+    # Create zip containing art file and image
+    zip -j "$artwork_path/$rom_name.zip" "$artwork_path/$rom_name.art" "$overlay_image_path"
+  done < <(find /opt/retropie/configs/all/retroarch/overlay/ArcadeBezels -name '*.png')
+}
+
 fix_runahead() {
   local config_dir='/opt/retropie/configs/all/retroarch/config/MAME 2015'
   mkdir -p "$config_dir"
