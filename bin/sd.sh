@@ -10,7 +10,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
 usage() {
-  echo "usage: $0 <create|backup|restore> <device> <path for backup/restore>"
+  echo "usage:"
+  echo " $0 create <device> (run from laptop)"
+  echo " $0 backup <device> <backup_dir> (run from laptop)"
+  echo " $0 restore <device> <backup_dir> (run from laptop)"
+  echo " $0 sync <path> (run from retropie)"
   exit 1
 }
 
@@ -59,7 +63,7 @@ main() {
   "$action" "$@"
 }
 
-if [[ $# -ne 2 ]]; then
+if [[ $# -lt 1 ]]; then
   usage
 fi
 
