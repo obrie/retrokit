@@ -26,6 +26,18 @@ backup() {
   sudo dd bs=4M if=$device | gzip > "$backup_to_path/sd-retropie.img.gz"
 }
 
+sync() {
+  local sync_to_path=$1
+
+  # This should be the full list of paths that might be modified by the using
+  # the arcade or using retrokit
+  local paths=(/opt/retropie /etc /home/pi)
+
+  for path in "${paths[@]}"; do
+    sudo rsync -av "$path" "$sync_to_path/$path" --delete
+  done
+}
+
 create() {
   local device=$1
   local retropie_version=4.7.1
