@@ -59,7 +59,7 @@ install_advmame_config() {
 install_advmame_bezels() {
   local artwork_path="$HOME/RetroPie/roms/mame-advmame/artwork"
 
-  while read -n overlay_image_path; do
+  while read -r overlay_image_path; do
     local rom_name=$(basename "$overlay_image_path" .png)
 
     # Create art file
