@@ -51,7 +51,7 @@ install_advmame_config() {
 
     sed -i "/$escaped_name /d" "$config_path"
     echo "$name $value" >> "$config_path"
-  done < "$system_config_dir/advmame.rc"
+  done < <(cat "$system_config_dir/advmame.rc" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
 
   sort -o "$config_path" "$config_path"
 }
