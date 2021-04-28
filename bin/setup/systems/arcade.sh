@@ -64,9 +64,9 @@ install_advmame_bezels() {
 
     # Create art file
     cat > "$artwork_path/$rom_name.art" <<EOF
-overlay:
+bezel:
   file      = $rom_name.png
-  layer     = overlay
+  layer     = bezel
   priority  = 0
   visible   = 1
   position  = -0.19,0.0,1.19,1.0

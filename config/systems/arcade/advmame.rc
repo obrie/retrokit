@@ -1,9 +1,9 @@
 dir_rom /home/pi/RetroPie/roms/mame-advmame:/home/pi/RetroPie/roms/arcade:/home/pi/RetroPie/roms/arcade/-ALL-
 display_artwork_backdrop no
-display_artwork_bezel no
+display_artwork_bezel yes
 display_artwork_crop no
 display_artwork_magnify 1
-display_artwork_overlay yes
+display_artwork_overlay no
 display_expand 1.0
 input_map[coin1] keyboard[0,rshift] or joystick_button[2dc8_6101,select] or joystick_button[045e_028e,mode]
 input_map[coin2] joystick_button[2dc8_6101_2,select] or joystick_button[045e_028e_2,mode]
