@@ -63,6 +63,7 @@ install_advmame_bezels() {
     local rom_name=$(basename "$overlay_image_path" .png)
 
     # Create art file
+    # TODO: How do you figure out the right positioning?
     cat > "$artwork_path/$rom_name.art" <<EOF
 bezel:
   file      = $rom_name.png
