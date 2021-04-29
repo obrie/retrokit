@@ -33,11 +33,11 @@
       "resources": {
         "dat": {
           "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy.dat",
-          "target": "/home/pi/RetroPie/roms/gamegear/.nointro/roms.dat"
+          "target": "/home/pi/RetroPie/roms/gb/.nointro/roms.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/gamegear/.nointro/{machine}.zip"
+          "target": "/home/pi/RetroPie/roms/gb/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
