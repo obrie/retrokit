@@ -5,20 +5,11 @@
       {
         "name": "pixel-metadata",
         "repo": "ehettervik",
-        "launch_images_base_url": "https://raw.githubusercontent.com/ehettervik/es-runcommand-splash/master/%s/launching.png"
-      },
-      {
-        "name": "ComicBook",
-        "repo": "TMNTturtleguy",
-        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/%s/launching.png"
-      },
-      {
-        "name": "retrorama",
-        "repo": "lipebello",
-        "launch_images_base_url": "https://raw.githubusercontent.com/lipebello/retrorama-launching-images/master/16x9-packs/FRAME/%s/launching.jpg"
+        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/%s/launching.png",
+        "#launch_images_base_url": "https://raw.githubusercontent.com/ehettervik/es-runcommand-splash/master/%s/launching.png"
       }
     ],
-    "launch_theme": "ComicBook"
+    "launch_theme": "pixel-metadata"
   },
   "systems": [
     "arcade",
