@@ -1,20 +1,21 @@
 {
-  "system": "gamegear",
+  "system": "gb",
   "themes": {
-    "bezel": "GameGear"
+    "bezel": "GB"
   },
   "scraper": {
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "core_title": "Genesis Plus GX", "default": true}
+    "lr-mgba": {"core_name": "mgba", "core_title": "mGBA", "default": true}
   },
-  "cheats": "Sega - Game Gear",
+  "cheats": "Nintendo - Game Boy",
   "bios": {
-    "url": "$BIOS_URL/Sega%20-%20Game%20Gear",
+    "url": "$BIOS_URL/Nintendo%20-%20Gameboy",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "bios.gg": "{url}/bios.gg"
+      "dmg_boot.bin": "{url}/dmg_boot.bin",
+      "gb_boot.bin": "{url}/gb_boot.bin"
     }
   },
   "romsets": [
@@ -26,12 +27,12 @@
         "base": "$ROMSET_NOINTRO_URL",
         "metadata": "{base}/no-intro_romsets_files.xml",
         "paths": {
-          "url": "no-intro romsets/Sega - Game Gear"
+          "url": "no-intro romsets/Nintendo - Game Boy"
         }
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear.dat",
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy.dat",
           "target": "/home/pi/RetroPie/roms/gamegear/.nointro/roms.dat"
         },
         "machine": {
@@ -43,50 +44,40 @@
     }
   ],
   "roms": {
+    "priority": [
+      "usa"
+    ],
     "filters": {
       "flags": [
-        "usa"
+        "europe",
+        "usa",
+        "world"
       ],
       "!flags": [
         "alt",
         "beta",
+        "demo",
+        "ja",
         "program",
         "proto",
         "unl"
       ],
       "!keywords": [
-        "bios"
+        "4-in-1",
+        "arcade classic",
+        "bios",
+        "camera",
+        "gallery",
+        "infogenius",
+        "teenage mutant hero turtles"
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/gamegear/-ALL-"},
+      {"path": "/home/pi/RetroPie/roms/gb/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/gamegear",
+        "path": "/home/pi/RetroPie/roms/gb",
         "filters": {
           "names": [
-            "Aladdin (USA, Europe, Brazil)",
-            "Ariel the Little Mermaid (USA, Europe, Brazil)",
-            "Bubble Bobble (USA)",
-            "Captain America and the Avengers (USA)",
-            "Double Dragon (USA, Europe)",
-            "Earthworm Jim (USA)",
-            "Indiana Jones and the Last Crusade (USA, Europe, Brazil)",
-            "Judge Dredd (USA, Europe)",
-            "Jurassic Park (USA, Europe, Brazil)",
-            "Lion King, The (USA)",
-            "Marble Madness (USA, Europe)",
-            "Mega Man (USA)",
-            "Micro Machines (USA, Europe)",
-            "Ms. Pac-Man (USA)",
-            "NBA Jam (USA, Europe)",
-            "Pac-Man (USA)",
-            "Pinball Dreams (USA)",
-            "R.C. Grand Prix (USA)",
-            "Simpsons, The - Bartman Meets Radioactive Man (USA)",
-            "Simpsons, The - Bart vs. the Space Mutants (USA, Europe)",
-            "Sonic The Hedgehog (Japan, USA)",
-            "Sonic The Hedgehog 2 (World)",
-            "Terminator, The (USA, Europe)"
           ]
         }
       }

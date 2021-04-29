@@ -43,6 +43,9 @@
     }
   ],
   "roms": {
+    "priority": [
+      "usa"
+    ],
     "filters": {
       "flags": [
         "europe",
