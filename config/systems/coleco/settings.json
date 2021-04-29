@@ -1,0 +1,93 @@
+{
+  "system": "coleco",
+  "themes": {
+    "bezel": "ColecoVision"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-blueMSX": {"core_name": "blueMSX", "core_title": "Blue MSX", "default": true}
+  },
+  "cheats": "Coleco - ColecoVision",
+  "bios": {
+    "url": "$BIOS_URL/Coleco%20-%20ColecoVision",
+    "dir": "/home/pi/RetroPie/BIOS/Machines/COL - ColecoVision",
+    "files": {
+      "coleco.rom": "{url}/coleco.rom"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Coleco - ColecoVision"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Coleco - ColecoVision.dat",
+          "target": "/home/pi/RetroPie/roms/coleco/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/coleco/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "filters": {
+      "flags": [
+        "europe",
+        "usa"
+      ],
+      "!flags": [
+        "alt",
+        "beta",
+        "demo",
+        "program",
+        "proto",
+        "unl"
+      ],
+      "!keywords": [
+        "bios"
+      ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/coleco/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/coleco",
+        "filters": {
+          "names": [
+            "Antarctic Adventure (USA, Europe)",
+            "BurgerTime (USA, Europe)",
+            "Choplifter! (USA)",
+            "Donkey Kong (USA)",
+            "Donkey Kong Junior (USA, Europe)",
+            "Frenzy (USA, Europe)",
+            "Frogger (USA)",
+            "Galaxian (USA)",
+            "Pac-Man (USA) (Proto)",
+            "Pitfall! (USA)",
+            "Pitstop (USA)",
+            "Popeye (USA)",
+            "River Raid (USA)",
+            "Smurf - Rescue in Gargamel's Castle (USA, Europe)",
+            "Star Wars - The Arcade Game (USA)",
+            "Zaxxon (USA, Europe)"
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
+  }
+}
