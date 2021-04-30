@@ -58,8 +58,8 @@ set_default_emulators() {
   done < <(echo "$rom_emulators")
 }
 
-purge() {
-  romkit_cli purge
+vacuum() {
+  romkit_cli vacuum
 }
 
 install() {
