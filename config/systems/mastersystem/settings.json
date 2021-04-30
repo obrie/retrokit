@@ -1,0 +1,82 @@
+{
+  "system": "mastersystem",
+  "themes": {
+    "bezel": "MasterSystem"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
+  },
+  "cheats": "Sega - Master System - Mark III",
+  "bios": {
+    "url": "$BIOS_URL/Sega%20-%20Master%20System%20-%20Mark%20III",
+    "dir": "/home/pi/RetroPie/BIOS",
+    "files": {
+      "bios_E.sms": "{url}/bios_E.sms",
+      "bios_J.sms": "{url}/bios_J.sms",
+      "bios_U.sms": "{url}/bios_U.sms"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Sega - Master System - Mark III"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Master System - Mark III.dat",
+          "target": "/home/pi/RetroPie/roms/mastersystem/.nointro/roms.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/mastersystem/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "filters": {
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "beta",
+        "demo",
+        "proto"
+      ],
+      "!keywords": [
+        "arcade smash hits",
+        "bios"
+      ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/mastersystem/-ALL-"},
+      {
+        "path": "/home/pi/RetroPie/roms/mastersystem",
+        "filters": {
+          "names": [
+          ]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
+  }
+}
