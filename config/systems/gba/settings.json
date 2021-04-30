@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-mgba": {"core_name": "mgba", "core_title": "mGBA", "default": true}
+    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
   },
   "cheats": "Nintendo - Game Boy Advance",
   "bios": {

@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-beetle-pce-fast": {"core_name": "beetle-pce-fast", "core_title": "Beetle PCE Fast", "default": true}
+    "lr-beetle-pce-fast": {"core_name": "beetle-pce-fast", "library_name": "Beetle PCE Fast", "default": true}
   },
   "cheats": "NEC - PC Engine - TurboGrafx 16",
   "bios": {

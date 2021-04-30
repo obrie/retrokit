@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-opera": {"core_name": "opera", "core_title": "Opera", "default": true}
+    "lr-opera": {"core_name": "opera", "library_name": "Opera", "default": true}
   },
   "bios": {
     "url": "$BIOS_URL",

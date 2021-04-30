@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-snes9x": {"core_name": "snes9x", "core_title": "Snes9x", "default": true}
+    "lr-snes9x": {"core_name": "snes9x", "library_name": "Snes9x", "default": true}
   },
   "cheats": "Nintendo - Super Nintendo Entertainment System",
   "romsets": [

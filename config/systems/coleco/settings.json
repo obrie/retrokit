@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-bluemsx": {"core_name": "bluemsx", "core_title": "blueMSX", "default": true}
+    "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}
   },
   "cheats": "Coleco - ColecoVision",
   "bios": {

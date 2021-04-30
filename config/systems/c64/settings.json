@@ -7,7 +7,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-vice": {"core_name": "vice", "core_title": "VICE x64", "default": true}
+    "lr-vice": {"core_name": "vice", "library_name": "VICE x64", "default": true}
   },
   "romsets": [
     {
