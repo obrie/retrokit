@@ -58,6 +58,10 @@ set_default_emulators() {
   done < <(echo "$rom_emulators")
 }
 
+list() {
+  romkit_cli list
+}
+
 vacuum() {
   romkit_cli vacuum
 }
