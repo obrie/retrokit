@@ -35,10 +35,10 @@ sync() {
 
   # This should be the full list of paths that might be modified by the using
   # the arcade or using retrokit
-  local paths=(/opt/retropie /etc /home/pi)
+  local paths=(/opt/retropie/ /etc/ /home/pi/)
 
   for path in "${paths[@]}"; do
-    sudo rsync -av "$path" "$sync_to_path/$path" --delete
+    sudo rsync -av "$path" "$sync_to_path$path" --delete
   done
 }
 
