@@ -11,7 +11,7 @@
   },
   "romsets": [
     {
-      "name": "nointro-tapes",
+      "name": "nointro",
       "protocol": "http",
       "discovery": {
         "type": "nointro",
@@ -34,7 +34,7 @@
       "auth": "internetarchive"
     },
     {
-      "name": "nointro-cartridges",
+      "name": "nointro",
       "protocol": "http",
       "discovery": {
         "type": "nointro",
