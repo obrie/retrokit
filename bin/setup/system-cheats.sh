@@ -41,11 +41,16 @@ install() {
         # * Inclusive title match
         rom_name="${rom_filename%.*}"
         rom_title="${rom_filename%% \(*}"
-        rom_cheat_path=$(find "$source_cheats_dir" -name "$rom_name.cht" -o -name "$rom_name*.cht" -o -name "$rom_title.cht" -o -name "$rom_title (*.cht" | head -n 1)
 
-        if [ -n "$rom_cheat_path" ]; then
-          ln -fs "$rom_cheat_path" "$target_cheats_dir/$rom_name.cht"
-        fi
+        for file_pattern in "$rom_name.cht" "$rom_name*.cht" "$rom_title.cht" "$rom_title (*.cht"; do
+          rom_cheat_path=$(find "$source_cheats_dir" -name "$file_pattern" | sort | head -n 1)
+
+          if [ -n "$rom_cheat_path" ]; then
+            # Found the path -- link and stop looking
+            ln -fs "$rom_cheat_path" "$target_cheats_dir/$rom_name.cht"
+            break
+          fi
+        done
       done < <(find "$HOME/RetroPie/roms/$system" -type l -printf '"%p"\n' | xargs -I{} basename "{}" | sort | uniq)
     done < <(system_setting '.emulators | try to_entries[] | select(.value.library_name) | [.key, .value.library_name] | @tsv')
   fi
