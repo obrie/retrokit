@@ -10,13 +10,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # * Lowercase
 # * Exclude flags
 # * Exclude unimportant characters (dashes, spaces, etc.)
-# clean_cheat_name() {
-#   local name="$1"
-#   name="${name,,}"
-#   name="${name%% \(*}"
-#   name="${name//[^a-zA-Z0-9]/}"
-#   echo "$name"
-# }
+clean_cheat_name() {
+  local name="$1"
+  name="${name,,}"
+  name="${name%% \(*}"
+  name="${name//[^a-zA-Z0-9]/}"
+  echo "$name"
+}
 
 install() {
   # Name of the cheats for this system
