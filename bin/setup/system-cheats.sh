@@ -39,6 +39,11 @@ install() {
     # declare -A cheat_mappings
     # while IFS= read -r cheat_name; do
     #   cheat_mappings["$(clean_cheat_name "$cheat_name")"]="$cheat_name"
+
+    #   # In some cases, multiple ROMs are combined into a single cheat file
+    #   while read -r sub_cheat_name; do
+    #     cheat_mappings["$(clean_cheat_name "$sub_cheat_name")"]="$cheat_name"
+    #   done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
     # done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
 
     # Link the named Retroarch cheats to the emulator in the system cheats namespace
@@ -61,8 +66,9 @@ install() {
         rom_name="${rom_filename%.*}"
         rom_title="${rom_filename%% \(*}"
         rom_title_alt_2="${rom_title// - /-}"
+        rom_title_alt_3="${rom_title//-/}"
 
-        for file_pattern in "$rom_name.cht" "*$rom_name*.cht" "$rom_title.cht" "$rom_title_alt_2.cht" "*$rom_title*.cht" "*$rom_title_alt_2*.cht"; do
+        for file_pattern in "$rom_name.cht" "*$rom_name*.cht" "$rom_title.cht" "$rom_title_alt_2.cht" "$rom_title_alt_3.cht" "*$rom_title*.cht" "*$rom_title_alt_2*.cht" "*$rom_title_alt_3*.cht"; do
           rom_cheat_path=$(find "$source_cheats_dir" -iname "$file_pattern" | sort | head -n 1)
 
           if [ -n "$rom_cheat_path" ]; then
