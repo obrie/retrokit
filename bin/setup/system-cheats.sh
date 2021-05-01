@@ -60,7 +60,7 @@ install() {
         # * Inclusive title match
         rom_name="${rom_filename%.*}"
         rom_title="${rom_filename%% \(*}"
-        rom_title_alt_2="${rom_filename// - /-}"
+        rom_title_alt_2="${rom_title// - /-}"
 
         for file_pattern in "$rom_name.cht" "*$rom_name*.cht" "$rom_title.cht" "$rom_title_alt_2.cht" "*$rom_title*.cht" "*$rom_title_alt_2*.cht"; do
           rom_cheat_path=$(find "$source_cheats_dir" -iname "$file_pattern" | sort | head -n 1)
