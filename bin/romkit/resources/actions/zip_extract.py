@@ -34,12 +34,4 @@ class ZipExtract(BaseAction):
 
         # Remove the source as it's no longer needed
         if self.config.get('delete_source') != False:
-            Path(source.path).unlink()
-
-    def _extract_name(zip_name):
-        if self.config.get('include_parent') == False:
-            zip_path = Path(*Path(zip_name).parts[1:])
-            if zip_path.name:
-                return str(zip_path)
-        else:
-            return zip_name
+            source.path.unlink()
