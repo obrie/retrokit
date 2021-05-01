@@ -35,16 +35,27 @@ install() {
     fi
     mkdir -p "$system_cheat_database_path"
 
-    # Define mappings to make looking easier
+    # Define mappings to make lookups easier and more reliable
     declare -A cheat_mappings
     while IFS= read -r cheat_filename; do
       local cheat_name="${cheat_filename%.*}"
-      cheat_mappings["$(clean_cheat_name "$cheat_name")"]="$cheat_name"
+      local key="$(clean_cheat_name "$cheat_name")"
+      local existing_mapping=${cheat_mappings["$key"]}
 
-      # In some cases, multiple ROMs are combined into a single cheat file
-      while read -r sub_cheat_name; do
-        cheat_mappings["$(clean_cheat_name "$sub_cheat_name")"]="$cheat_name"
-      done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
+      # Only re-map if we need to.  This prioritizes exact matches.
+      if [ -z "$existing_mapping" ]; then
+        cheat_mappings["$key"]="$cheat_name"
+
+        # In some cases, multiple ROMs are combined into a single cheat file
+        while read -r sub_cheat_name; do
+          key="$(clean_cheat_name "$sub_cheat_name")"
+          existing_mapping=${cheat_mappings["$key"]}
+
+          if [ -z "$existing_mapping" ]; then
+            cheat_mappings["$key"]="$cheat_name"
+          fi
+        done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
+      fi
     done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
 
     # Link the named Retroarch cheats to the emulator in the system cheats namespace
@@ -59,26 +70,12 @@ install() {
       # don't always match the ROM names.  As a result, we need to try to do some
       # smart matching to find the corresponding cheat file.
       while IFS= read -r rom_filename; do
-        # Find a matching cheat by:
-        # * Exact name match
-        # * Inclusive name match
-        # * Exact title match
-        # * Inclusive title match
         local rom_name="${rom_filename%.*}"
         local cheat_name=${cheat_mappings["$(clean_cheat_name "$rom_name")"]}
-        # rom_title="${rom_filename%% \(*}"
-        # rom_title_alt_2="${rom_title// - /-}"
-        # rom_title_alt_3="${rom_title//-/}"
 
-        # for file_pattern in "$rom_name.cht" "*$rom_name*.cht" "$rom_title.cht" "$rom_title_alt_2.cht" "$rom_title_alt_3.cht" "*$rom_title*.cht" "*$rom_title_alt_2*.cht" "*$rom_title_alt_3*.cht"; do
-        #   rom_cheat_path=$(find "$source_cheats_dir" -iname "$file_pattern" | sort | head -n 1)
-
-          if [ -n "$cheat_name" ]; then
-            # Found the path -- link and stop looking
-            ln -fs "$source_cheats_dir/$cheat_name" "$target_cheats_dir/$rom_name.cht"
-            # break
-          fi
-        # done
+        if [ -n "$cheat_name" ]; then
+          ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
+        fi
       done < <(find "$HOME/RetroPie/roms/$system" -type l -printf '"%p"\n' | xargs -I{} basename "{}" | sort | uniq)
     done < <(system_setting '.emulators | try to_entries[] | select(.value.library_name) | [.key, .value.library_name] | @tsv')
   fi
