@@ -13,6 +13,9 @@ dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-tivo
 # Switch TV to Game Mode when possible
 edid_content_type=4
 
+# Fix lag on cheap mice
+usbhid.mousepoll=0
+
 [pi4]
 # Overclocking
 over_voltage=2
