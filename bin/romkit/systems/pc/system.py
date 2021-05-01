@@ -69,7 +69,7 @@ class PCSystem(BaseSystem):
 
         renderer = subprocess.run(['crudini', '--get', conf_file, 'sdl', 'output'], check=True, capture_output=True).stdout
         if renderer and str(renderer.lower()).startswith('opengl'):
-            renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, capture_output=True).stdout
+            renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, stdout=subprocess.DEVNULL).stdout
 
     # Find paths that contain windows-style slashes and replace them with linux-style
     def fix_windows_paths(self, machine: Machine) -> None:
