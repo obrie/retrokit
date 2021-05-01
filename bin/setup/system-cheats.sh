@@ -5,6 +5,19 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+# Generates a distinct name for a cheat file so that we can consistently
+# look it up based on a ROM name.
+# * Lowercase
+# * Exclude flags
+# * Exclude unimportant characters (dashes, spaces, etc.)
+# clean_cheat_name() {
+#   local name="$1"
+#   name="${name,,}"
+#   name="${name%% \(*}"
+#   name="${name//[^a-zA-Z0-9]/}"
+#   echo "$name"
+# }
+
 install() {
   # Name of the cheats for this system
   local cheats_name=$(system_setting '.cheats')
@@ -21,6 +34,12 @@ install() {
       system_cheat_database_path="$cheat_database_path"
     fi
     mkdir -p "$system_cheat_database_path"
+
+    # Define mappings to make looking easier
+    # declare -A cheat_mappings
+    # while IFS= read -r cheat_name; do
+    #   cheat_mappings["$(clean_cheat_name "$cheat_name")"]="$cheat_name"
+    # done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
 
     # Link the named Retroarch cheats to the emulator in the system cheats namespace
     while IFS="$tab" read emulator library_name; do
@@ -41,9 +60,10 @@ install() {
         # * Inclusive title match
         rom_name="${rom_filename%.*}"
         rom_title="${rom_filename%% \(*}"
+        rom_title_alt_2="${rom_filename// - /-}"
 
-        for file_pattern in "$rom_name.cht" "$rom_name*.cht" "$rom_title.cht" "$rom_title (*.cht"; do
-          rom_cheat_path=$(find "$source_cheats_dir" -name "$file_pattern" | sort | head -n 1)
+        for file_pattern in "$rom_name.cht" "*$rom_name*.cht" "$rom_title.cht" "$rom_title_alt_2.cht" "*$rom_title*.cht" "*$rom_title_alt_2*.cht"; do
+          rom_cheat_path=$(find "$source_cheats_dir" -iname "$file_pattern" | sort | head -n 1)
 
           if [ -n "$rom_cheat_path" ]; then
             # Found the path -- link and stop looking
