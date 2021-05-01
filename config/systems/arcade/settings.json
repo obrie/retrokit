@@ -22,8 +22,7 @@
       "url": "$ROMSET_MAME_FBNEO_URL",
       "resources": {
         "dat": {
-          "source": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
-          "target": "/home/pi/RetroPie/roms/arcade/.fbneo/roms.dat"
+          "source": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
         },
         "machine": {
           "source": "{url}/roms/arcade.zip/arcade%2F{machine}.zip",
@@ -195,9 +194,8 @@
       "resources": {
         "dat": {
           "source": "file:///home/pi/retrokit/cache/mame/mame0106-dat.zip",
-          "download": "/home/pi/RetroPie/roms/arcade/.advmame/roms.zip",
           "target": "/home/pi/RetroPie/roms/arcade/.advmame/roms.dat",
-          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+          "install": {"action": "zip_extract", "file": ".*\\.dat", "delete_source": false}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",

@@ -23,8 +23,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes).dat",
-          "target": "/home/pi/RetroPie/roms/c64/.nointro/roms-tapes.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -46,8 +45,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64.dat",
-          "target": "/home/pi/RetroPie/roms/c64/.nointro/roms-cartridges.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

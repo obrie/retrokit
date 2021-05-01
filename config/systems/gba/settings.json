@@ -31,8 +31,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy Advance.dat",
-          "target": "/home/pi/RetroPie/roms/gba/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy Advance.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

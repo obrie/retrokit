@@ -27,7 +27,6 @@
         },
         "dat": {
           "source": "file:///home/pi/retrokit/cache/exodos/MS-DOS.xml",
-          "download": "/home/pi/RetroPie/roms/pc/.exodos/roms.xml",
           "target": "/home/pi/RetroPie/roms/pc/.exodos/roms.dat",
           "install": {"action": "exodos_to_dat"}
         }

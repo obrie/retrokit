@@ -33,7 +33,8 @@ class ZipExtract(BaseAction):
                     source_zip.extractall(path=target.path)
 
         # Remove the source as it's no longer needed
-        Path(source.path).unlink()
+        if self.config.get('delete_source') != False:
+            Path(source.path).unlink()
 
     def _extract_name(zip_name):
         if self.config.get('include_parent') == False:

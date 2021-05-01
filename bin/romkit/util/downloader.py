@@ -40,11 +40,12 @@ class Downloader:
 
         if source_uri.scheme == 'file':
             # Copy directly from the filesystem
-            logging.info(f'Copying {source} to {destination}')
-            shutil.copyfile(source_uri.path, destination)
+            if source_uri.path != str(destination):
+                logging.debug(f'Copying {source} to {destination}')
+                shutil.copyfile(source_uri.path, destination)
         elif not destination.exists() or destination.stat().st_size == 0 or force:
             # Re-download the file
-            logging.info(f'Downloading {source} to {destination}')
+            logging.debug(f'Downloading {source} to {destination}')
             with tempfile.TemporaryDirectory() as tmp_dir:
                 # Initially download to a temporary directory so we don't overwrite until
                 # the download is completed successfully

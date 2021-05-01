@@ -31,8 +31,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 7800.dat",
-          "target": "/home/pi/RetroPie/roms/atari7800/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 7800.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

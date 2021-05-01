@@ -32,8 +32,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/NEC - PC Engine - TurboGrafx 16.dat",
-          "target": "/home/pi/RetroPie/roms/arcade/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/NEC - PC Engine - TurboGrafx 16.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

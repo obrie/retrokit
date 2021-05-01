@@ -33,8 +33,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Master System - Mark III.dat",
-          "target": "/home/pi/RetroPie/roms/mastersystem/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Master System - Mark III.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

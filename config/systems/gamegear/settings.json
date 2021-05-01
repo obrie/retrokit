@@ -31,8 +31,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear.dat",
-          "target": "/home/pi/RetroPie/roms/gamegear/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

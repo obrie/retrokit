@@ -23,8 +23,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 2600.dat",
-          "target": "/home/pi/RetroPie/roms/atari2600/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 2600.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

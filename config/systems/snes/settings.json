@@ -24,8 +24,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined).dat",
-          "target": "/home/pi/RetroPie/roms/snes/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

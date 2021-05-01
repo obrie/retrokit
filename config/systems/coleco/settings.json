@@ -31,8 +31,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Coleco - ColecoVision.dat",
-          "target": "/home/pi/RetroPie/roms/coleco/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Coleco - ColecoVision.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

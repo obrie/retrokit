@@ -13,18 +13,42 @@ from urllib.parse import urlparse
 class Resource:
     def __init__(self,
         source_url: str,
-        download_path: Path,
-        target_path: Path,
+        target_path: Optional[Path],
+        download_path: Optional[Path],
         install_action: BaseAction,
         file_identifier: str,
         downloader: Downloader,
     ) -> None:
         self.source_url = source_url
-        self.download_path = ResourcePath.from_path(self, download_path)
+
+        # If locally sourced and we're not defining an explicit target, use the source
+        # as the target path.  Note a target must be defined if not locally sourced.
+        if not target_path:
+            if self.is_locally_sourced:
+                # Source is rom local filesystem: target path should be the same
+                target_path = self.source_url_path
+            else:
+                # Source is remote: user must explicitly provide a target
+                raise Exception(f'Target path must be provided for {source_url}')
         self.target_path = ResourcePath.from_path(self, target_path)
+
+        if not download_path:
+            if self.is_locally_sourced:
+                # Source is from local filesystem: download path should be the same
+                download_path = self.source_url_path
+            else:
+                # Source is remote: download path is same as target
+                download_path = target_path
+        self.download_path = ResourcePath.from_path(self, download_path)
+
         self.install_action = install_action
         self.file_identifier = file_identifier
         self.downloader = downloader
+
+    # The path of the source url, intended to only be used with a file protocol
+    @property
+    def source_url_path(self) -> Path:
+        return Path(urlparse(self.source_url).path)
  
     # Whether this resource is located locally on the system
     @property
@@ -40,8 +64,11 @@ class Resource:
         if not source:
             source = self
 
-        # Download source
-        if not self.target_path.exists() or self.is_locally_sourced or force:
+        # Download source if:
+        # * Target doesn't exist
+        # * Source is from the local filesystem and the target isn't the same (always reinstall)
+        # * Explicitly forcing a download
+        if not self.target_path.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path) or force:
             source.download()
 
             # Ensure target directory exists
@@ -68,7 +95,7 @@ class Resource:
 class ResourceTemplate:
     def __init__(self,
         source_url_template: str,
-        target_path_template: str,
+        target_path_template: Optional[str],
         download_path_template: Optional[str] = None,
         downloader: Downloader = Downloader.instance(),
         install_action: BaseAction = Copy(),
@@ -78,7 +105,7 @@ class ResourceTemplate:
     ):
         self.source_url_template = source_url_template
         self.target_path_template = target_path_template
-        self.download_path_template = download_path_template or target_path_template
+        self.download_path_template = download_path_template
         self.downloader = downloader
         self.install_action = install_action
         self.discovery = discovery
@@ -91,7 +118,7 @@ class ResourceTemplate:
 
         return cls(
             json['source'],
-            json['target'],
+            target_path_template=json.get('target'),
             download_path_template=json.get('download'),
             install_action=install_action,
             file_identifier=json.get('file_identifier', 'crc'),
@@ -112,13 +139,14 @@ class ResourceTemplate:
 
         return Resource(
             source_url=self.source_url_template.format(**url_context),
-            download_path=self._render_path(self.download_path_template, context),
             target_path=self._render_path(self.target_path_template, context),
+            download_path=self._render_path(self.download_path_template, context),
             install_action=self.install_action,
             file_identifier=self.file_identifier,
             downloader=self.downloader,
         )
 
     # Renders a Path based on the given template
-    def _render_path(self, path_template: str, context: dict) -> Path:
-        return Path(path_template.format(home=str(Path.home()), **context))
+    def _render_path(self, path_template: Optional[str], context: dict) -> Optional[Path]:
+        if path_template:
+            return Path(path_template.format(home=str(Path.home()), **context))
