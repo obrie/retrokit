@@ -193,9 +193,10 @@
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/mame/mame0106-dat.zip",
+          "source": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_106.7z",
+          "download": "/home/pi/RetroPie/roms/arcade/.advmame/roms.7z",
           "target": "/home/pi/RetroPie/roms/arcade/.advmame/roms.dat",
-          "install": {"action": "zip_extract", "file": ".*\\.dat", "delete_source": false}
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
