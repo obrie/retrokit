@@ -63,7 +63,7 @@ install() {
       local target_cheats_dir="$system_cheat_database_path/$library_name"
 
       # Reset the directory
-      rm -rf "$target_cheats_dir"
+      rm -rf "$target_cheats_dir/*"
       mkdir -p "$target_cheats_dir"
 
       # We can't just symlink to the source directory because the cheat filenames
