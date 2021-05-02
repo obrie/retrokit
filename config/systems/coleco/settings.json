@@ -4,7 +4,7 @@
     "bezel": "ColecoVision"
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
     "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}
@@ -60,6 +60,11 @@
       ],
       "!keywords": [
         "bios"
+      ],
+      "!titles": [
+        "ColecoVision Monitor Test",
+        "Final Test Cartridge",
+        "Super Controller Tester"
       ]
     },
     "dirs": [
