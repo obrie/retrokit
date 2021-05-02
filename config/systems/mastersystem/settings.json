@@ -4,7 +4,7 @@
     "bezel": "MasterSystem"
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}

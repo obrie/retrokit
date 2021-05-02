@@ -14,6 +14,9 @@ install() {
   
   # Graphics
   sudo apt install -y mesa-utils
+
+  # Screenshots
+  curl -sL https://raw.githubusercontent.com/AndrewFromMelbourne/raspi2png/master/installer.sh | bash -
 }
 
 uninstall() {
