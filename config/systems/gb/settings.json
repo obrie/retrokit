@@ -4,7 +4,7 @@
     "bezel": "GB"
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
