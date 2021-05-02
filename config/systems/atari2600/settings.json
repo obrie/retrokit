@@ -4,7 +4,7 @@
     "bezel": "Atari2600"
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper", "mobygames"]
   },
   "emulators": {
     "lr-stella2014": {"core_name": "stella2014", "library_name": "Stella 2014", "default": true}
