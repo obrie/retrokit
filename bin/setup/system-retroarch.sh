@@ -23,9 +23,9 @@ install_global_core_options() {
 # Game-specific core options
 install_game_core_options() {
   if [ -d "$system_config_dir/retroarch_opts" ]; then
-    while read emulator core_name; do
+    while read library_name core_name; do
       # Retroarch emulator-specific config
-      local retroarch_emulator_config_dir="$retroarch_config_dir/config/$emulator"
+      local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
       mkdir -p "$retroarch_emulator_config_dir"
 
       # Core Options overides (https://retropie.org.uk/docs/RetroArch-Core-Options/)
@@ -36,7 +36,7 @@ install_game_core_options() {
         grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$opt_file"
         crudini --merge "$opt_file" < "$override_file"
       done
-    done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name] | @tsv')
+    done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.value.library_name, .value.core_name] | @tsv')
   fi
 }
 
