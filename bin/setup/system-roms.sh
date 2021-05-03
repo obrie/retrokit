@@ -22,6 +22,7 @@ install_roms() {
 install_playlists() {
   while read -r rom_path; do
     # Generate the playlist path
+    local rom_name=$(basename "$rom_path")
     local base_path="${rom_path// (Disc [0-9]*)/}"
     local playlist_path="$(dirname "$base_path")/$(basename "$base_path").m3u"
 
@@ -31,7 +32,7 @@ install_playlists() {
     fi
 
     # Add to the playlist
-    echo "$rom_path" >> "$playlist_path"
+    echo "$rom_name" >> "$playlist_path"
   done < <(find "$HOME/RetroPie/roms/$system" . -not -path '*/\.*' -type l -name "*(Disc *" | sort)
 }
 
