@@ -20,7 +20,19 @@ install_roms() {
 }
 
 install_playlists() {
-  # TODO
+  while read -r rom_path; do
+    # Generate the playlist path
+    local base_path="${rom_path// (Disc [0-9]*)/}"
+    local playlist_path="$(dirname "$base_path")/$(basename "$base_path").m3u"
+
+    # Reset if we're on the first disc
+    if [[ "$rom_path"  == *(Disc 1)* ]]; then
+      truncate -s0 "$playlist_path"
+    fi
+
+    # Add to the playlist
+    echo "$rom_path" >> "$playlist_path"
+  done < <(find "$HOME/RetroPie/roms/$system" . -not -path '*/\.*' -type l -name "*(Disc *" | sort)
 }
 
 set_default_emulators() {
