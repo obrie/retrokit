@@ -7,7 +7,7 @@
     "sources": ["screenscraper", "thegamesdb"],
     "args": [
       "--excludefiles",
-      "Disc 2*,*Disc 3*,*Disc 4*,*Disc 5*"
+      "*Disc 2*,*Disc 3*,*Disc 4*,*Disc 5*"
     ]
   },
   "emulators": {
