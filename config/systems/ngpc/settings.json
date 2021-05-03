@@ -4,7 +4,7 @@
     "bezel": "NGPC"
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
     "lr-beetle-ngp": {"core_name": "ngp", "library_name": "Beetle NeoPop", "default": true}
