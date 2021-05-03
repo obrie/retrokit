@@ -40,10 +40,16 @@ install_game_core_options() {
   fi
 }
 
+# Games-specific controller remappings
+install_game_remappings() {
+
+}
+
 install() {
   install_config
   install_global_core_options
   install_game_core_options
+  install_game_remappings
 }
 
 uninstall() {
