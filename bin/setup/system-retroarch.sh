@@ -42,8 +42,24 @@ install_game_core_options() {
 
 # Games-specific controller remappings
 install_game_remappings() {
-  # TODO
-  # /opt/retropie/configs/arcade/FinalBurn\ Neo/arkanoid.rmp
+  if [ -d "$system_config_dir/remaps" ]; then
+    local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
+    if [ -z "$remapping_dir" ]; then
+      echo 'Not implemented'
+      exit
+    fi
+
+    while read library_name; do
+      # Emulator-specific remapping directory
+      local emulator_remapping_dir="$remapping_dir/$library_name"
+      mkdir -p "$emulator_remapping_dir"
+
+      while read -r remap_path; do
+        local remap_filename=$(basename "$remap_path")
+        cp "$remap_path" "$emulator_remapping_dir/$remap_filename"
+      done < <(find "$system_config_dir/remaps" -iname "*.rmp")
+    done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.value.library_name]')
+  fi
 }
 
 install() {
