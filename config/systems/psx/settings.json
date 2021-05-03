@@ -5,7 +5,7 @@
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"],
-    "args": "--excludefiles 'Disc 2*,*Disc 3*,*Disc 4*,*Disc 5*'"
+    "args": "--excludefiles \"Disc 2*,*Disc 3*,*Disc 4*,*Disc 5*\""
   },
   "emulators": {
     "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "library_name": "PCSX-ReARMed", "default": true}
