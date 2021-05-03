@@ -16,7 +16,13 @@ install() {
   sudo apt install -y mesa-utils
 
   # Screenshots
-  curl -sL https://raw.githubusercontent.com/AndrewFromMelbourne/raspi2png/master/installer.sh | bash -
+  mkdir $tmp_dir/raspi2png
+  git clone https://github.com/AndrewFromMelbourne/raspi2png.git $tmp_dir/raspi2png
+  pushd $tmp_dir/raspi2png
+  make
+  sudo make install
+  popd
+  rm -rf $tmp_dir/raspi2png
 }
 
 uninstall() {
