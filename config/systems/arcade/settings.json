@@ -7,13 +7,14 @@
     "sources": ["screenscraper", "arcadedb"]
   },
   "emulators": {
-    "lr-fbneo": {"default": true, "build": "source", "core_name": "fbneo"},
-    "lr-mame2003": {"core_name": "mame2003"},
-    "lr-mame2003-plus": {"core_name": "mame2003-plus"},
-    "lr-mame2015": {"core_name": "mame2015"},
-    "lr-mame2016": {"core_name": "mame2016"},
+    "lr-fbneo": {"default": true, "build": "source", "core_name": "fbneo", "library_name": "FinalBurn Neo"},
+    "lr-mame2003": {"core_name": "mame2003", "library_name": "MAME 2003 (0.78)"},
+    "lr-mame2003-plus": {"core_name": "mame2003-plus", "library_name": "MAME 2003-Plus"},
+    "lr-mame2010": {"core_name": "mame2010", "library_name": "MAME 2010"},
+    "lr-mame2015": {"core_name": "mame2015", "library_name": "MAME 2015"},
+    "lr-mame2016": {"core_name": "mame2016", "library_name": "MAME 2016"},
     "advmame": {},
-    "lr-mame": {"build": "source", "branch": "lrmame0222", "core_name": "mame_"}
+    "lr-mame": {"build": "source", "branch": "lrmame0222", "core_name": "mame_", "library_name": "MAME"}
   },
   "romsets": [
     {
