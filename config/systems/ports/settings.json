@@ -2,7 +2,7 @@
   "system": "ports",
   "scraper": {
     "sources": ["screenscraper"],
-    "args": "--excludefiles *Freedoom*"
+    "args": ["--excludefiles", "*Freedoom*"]
   },
   "ports": {
     "duke3d": {

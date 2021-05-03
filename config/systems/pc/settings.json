@@ -5,7 +5,7 @@
   },
   "scraper": {
     "sources": ["screenscraper"],
-    "args": "--excludefiles *DOSBox*"
+    "args": ["--excludefiles", "*DOSBox*"]
   },
   "emulators": {
     "dosbox": {"build": "source", "default": true},

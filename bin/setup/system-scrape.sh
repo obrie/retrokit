@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 scrape() {
   local source="$1"
-  local extra_args=($(system_setting '.scraper.args?'))
+  local extra_args=($(IFS=$'\n' system_setting '.scraper.args[]?'))
 
   stop_emulationstation
 
