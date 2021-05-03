@@ -26,7 +26,7 @@ install_playlists() {
     local playlist_path="$(dirname "$base_path")/$(basename "$base_path").m3u"
 
     # Reset if we're on the first disc
-    if [[ "$rom_path"  == *(Disc 1)* ]]; then
+    if [[ "$rom_path"  == *'(Disc 1)'* ]]; then
       truncate -s0 "$playlist_path"
     fi
 
