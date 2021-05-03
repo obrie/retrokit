@@ -13,7 +13,7 @@ scrape() {
   stop_emulationstation
 
   log "Scaping $system from $source"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing ${extra_args[@]}
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}"
 }
 
 scrape_sources() {
