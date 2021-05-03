@@ -42,7 +42,8 @@ install_game_core_options() {
 
 # Games-specific controller remappings
 install_game_remappings() {
-
+  # TODO
+  # /opt/retropie/configs/arcade/FinalBurn\ Neo/arkanoid.rmp
 }
 
 install() {

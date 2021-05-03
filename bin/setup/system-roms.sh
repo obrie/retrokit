@@ -19,6 +19,10 @@ install_roms() {
   romkit_cli install --log-level DEBUG
 }
 
+install_playlists() {
+  # TODO
+}
+
 set_default_emulators() {
   # Define a mapping of rom package to rom name
   declare -A emulator_names
@@ -68,6 +72,7 @@ vacuum() {
 
 install() {
   install_roms
+  install_playlists
   set_default_emulators
 }
 
