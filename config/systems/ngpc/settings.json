@@ -1,0 +1,60 @@
+{
+  "system": "ngpc",
+  "themes": {
+    "bezel": "NGPC"
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-beetle-ngp": {"core_name": "ngp", "library_name": "Beetle NeoPop", "default": true}
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/SNK - Neo Geo Pocket Color"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file:///home/pi/retrokit/cache/nointro/SNK - Neo Geo Pocket Color.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "/home/pi/RetroPie/roms/ngpc/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa"
+    ],
+    "filters": {
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "proto"
+      ],
+      "!keywords": [
+        "pocket casino"
+      ]
+    },
+    "dirs": [
+      {"path": "/home/pi/RetroPie/roms/ngpc"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    }
+  }
+}
