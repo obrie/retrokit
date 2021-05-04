@@ -8,6 +8,7 @@ import tempfile
 import unicodedata
 from pathlib import Path
 from typing import Dict, Optional
+from urllib.parse import urlparse
 
 # Compatibility layer for ensuring the appropriate emulator is used
 class EmulatorSet():
@@ -45,12 +46,17 @@ class EmulatorSet():
         return self(system, **json)
 
     def download(self) -> None:
-        tmp_dir = Path(f'{tempfile.gettempdir()}/{self.system.name}')
-        tmp_dir.mkdir(parents=True, exist_ok=True)
+        if urlparse(self.url).scheme == 'file':
+            # Use locally sourced path
+            self.path = Path(urlparse(self.url).path)
+        else:
+            # Download remote path
+            tmp_dir = Path(f'{tempfile.gettempdir()}/{self.system.name}')
+            tmp_dir.mkdir(parents=True, exist_ok=True)
 
-        self.path = tmp_dir.joinpath('emulators.tsv')
-        if not self.path.exists():
-            Downloader.instance().get(self.url, self.path)
+            self.path = tmp_dir.joinpath('emulators.tsv')
+            if not self.path.exists():
+                Downloader.instance().get(self.url, self.path)
 
     def load(self) -> None:
         with self.path.open() as file:

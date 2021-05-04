@@ -116,6 +116,11 @@ class Machine:
     def group_title(self)-> str:
         return self.parent_title or self.title
 
+    # The parent or machine name
+    @property
+    def group_name(self)-> str:
+        return self.parent_name or self.name
+
     # Machine title (no extension, no flags except for disc name)
     @property
     def title(self) -> str:

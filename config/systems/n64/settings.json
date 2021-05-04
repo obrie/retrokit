@@ -42,7 +42,7 @@
   "roms": {
     "emulators": {
       "url": "file:///home/pi/retrokit/config/systems/n64/emulators.tsv",
-      "key": "group_title"
+      "key": "group_name"
     },
     "priority": [
       "usa",
