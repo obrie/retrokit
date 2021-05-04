@@ -111,21 +111,31 @@ class Machine:
     def is_clone(self) -> bool:
         return self.parent_name is not None
 
+    # The name to use for grouping machines within a Parent/Clone relationship
+    @property
+    def group_title(self)-> str:
+        return self.parent_title or self.title
+
     # Machine title (no extension, no flags except for disc name)
     @property
     def title(self) -> str:
-        full_title = self.TITLE_REGEX.search(self.name).group().strip()
-        if self.disc_name:
-            full_title = f'{full_title} {self.disc_name}'
+        return self.title_from(self.name)
+
+    # Parent machine title (no extension, no flags except for disc name)
+    @property
+    def parent_title(self) -> Optional[str]:
+        if self.parent_name:
+            return self.title_from(self.parent_name)
+
+    # Builds a title from the given name
+    def title_from(self, name: str) -> str:
+        full_title = self.TITLE_REGEX.search(name).group().strip()
+
+        disc_match = self.DISC_REGEX.search(name)
+        if disc_match:
+            full_title = f'{full_title} {match.group()}'
 
         return full_title
-
-    # Name of the Disc for this machine
-    @property
-    def disc_name(self) -> Optional[str]:
-        match = self.DISC_REGEX.search(self.name)
-        if match:
-            return match.group()
 
     # Flags from description
     @property

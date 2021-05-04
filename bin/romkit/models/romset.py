@@ -105,8 +105,6 @@ class ROMSet:
         else:
             # Read from an external dat file
             doc = lxml.etree.iterparse(str(self.dat.target_path.path), tag=('game', 'machine'))
-            _, root = next(doc)
-
             for event, element in doc:
                 if Machine.is_installable(element):
                     machine = Machine.from_xml(self, element)
@@ -116,5 +114,3 @@ class ROMSet:
                     logging.debug(f"[{element.get('name')}] Ignored (not installable)")
                 
                 element.clear()
-
-            root.clear()

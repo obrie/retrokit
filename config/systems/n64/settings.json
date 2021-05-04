@@ -27,8 +27,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo 64 (BigEndian).dat",
-          "target": "/home/pi/RetroPie/roms/n64/.nointro/roms.dat"
+          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo 64 (BigEndian).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -42,11 +41,8 @@
   ],
   "roms": {
     "emulators": {
-      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=1983504515&format=tsv",
-      "key": "title",
-      "ascii_only": true,
-      "substring": true,
-      "filter": true
+      "url": "file:///home/pi/retrokit/config/systems/n64/emulators.tsv",
+      "key": "group_title"
     },
     "priority": [
       "usa",
@@ -72,6 +68,7 @@
         "Glover",
         "Hey You, Pikachu!",
         "Knife Edge - Nose Gunner",
+        "Midway's Greatest Arcade Hits - Volume 1",
         "NBA Hangtime",
         "NBA Showtime - NBA on NBC",
         "Quake II",
