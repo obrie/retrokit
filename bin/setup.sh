@@ -52,7 +52,10 @@ setup() {
   elif [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
     # Setting up an individual system module for all systems
     while read system; do
-      "$dir/setup/$setupmodule.sh" "$action" "$system"
+      # Ports only get the scrape module
+      if [ "$setupmodule" == 'system-scrape' ] || [ "$system" != 'ports' ]; then
+        "$dir/setup/$setupmodule.sh" "$action" "$system"
+      fi
     done < <(setting '.systems[] | select(. != "retropie")')
   else
     # Setting up an individual module
