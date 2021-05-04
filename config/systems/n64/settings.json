@@ -44,6 +44,8 @@
     "emulators": {
       "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=1983504515&format=tsv",
       "key": "title",
+      "ascii_only": true,
+      "substring": true,
       "filter": true
     },
     "priority": [
@@ -66,7 +68,7 @@
         "virtual console"
       ],
       "!titles": [
-        "# The titles below are marked as not working"
+        "# The titles below are marked as not working",
         "Glover",
         "Hey You, Pikachu!",
         "Knife Edge - Nose Gunner",
