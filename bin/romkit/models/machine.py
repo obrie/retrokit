@@ -138,7 +138,7 @@ class Machine:
 
         disc_match = self.DISC_REGEX.search(name)
         if disc_match:
-            full_title = f'{full_title} {match.group()}'
+            full_title = f'{full_title} {disc_match.group()}'
 
         return full_title
 
