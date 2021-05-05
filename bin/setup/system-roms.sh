@@ -56,7 +56,7 @@ find_overrides() {
   if [ -d "$system_config_dir/retroarch" ]; then
     while IFS="$tab" read rom_name parent_name; do
       # Find a file for either the rom or its parent
-      local override_file
+      local override_file=""
       if [ -f "$system_config_dir/retroarch/$rom_name.$extension" ]; then
         override_file="$system_config_dir/retroarch/$rom_name.$extension"
       elif [ -f "$system_config_dir/retroarch/$parent_name.$extension" ]; then
