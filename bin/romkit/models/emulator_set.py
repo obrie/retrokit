@@ -20,8 +20,6 @@ class EmulatorSet():
         column_rom: int = 0,
         column_emulator: int = 1,
         key: str = 'name',
-        ascii_only: bool = False,
-        substring: bool = False,
         overrides: Dict[str, str] = {},
         delimiter: str = '\t',
         filter = False,
@@ -31,8 +29,6 @@ class EmulatorSet():
         self.column_rom = column_rom
         self.column_emulator = column_emulator
         self.key = key
-        self.ascii_only = ascii_only
-        self.substring = substring
         self.delimiter = delimiter
         self.emulators = overrides
         self.filter = filter
@@ -65,25 +61,14 @@ class EmulatorSet():
                 if len(row) <= self.column_rom or len(row) <= self.column_emulator:
                     continue
 
-                rom_key = self._normalize_key(row[self.column_rom])
+                rom_key = row[self.column_rom]
                 emulator = row[self.column_emulator]
 
                 if rom_key not in self.emulators and emulator and emulator != '':
                     self.emulators[rom_key] = emulator
 
     def get(self, machine: Machine) -> Optional[str]:
-        machine_key = self._normalize_key(getattr(machine, self.key))
-        
-        if self.substring:
-            for key in self.emulators.keys():
-                if machine_key.startswith(key):
-                    return self.emulators[key]
-        else:
-            return self.emulators.get(machine_key)
+        machine_key = getattr(machine, self.key)
+        parent_key = getattr(machine, f'parent_{self.key}')
 
-    # Generates the key to look up in the emulators hash
-    def _normalize_key(self, value: str) -> str:
-        if self.ascii_only:
-            value = self.ASCII_REGEX.sub('', str(unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').lower()))
-
-        return value
+        return self.emulators.get(machine_key) or self.emulators.get(parent_key)
