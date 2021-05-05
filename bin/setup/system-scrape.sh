@@ -62,8 +62,25 @@ build_collections() {
   done < <(ls "$source_collections_dir")
 }
 
-vacuum() {
+vacuum_cache() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache vacuum
+}
+
+vacuum_media() {
+  # Remove videos / images from emulationstation
+  while read -r media_path; do
+    local filename=$(basename "$media_path")
+    local rom_name=${filename%%.*}
+
+    if ! find "$HOME/RetroPie/roms/$system" -name "$rom_name.*" | grep .; then
+      echo "rm -f \"$media_path\""
+    fi
+  done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name "*.png" -o -name "*.mp4")
+}
+
+vacuum() {
+  vacuum_cache
+  vacuum_media
 }
 
 install() {
