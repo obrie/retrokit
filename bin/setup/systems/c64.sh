@@ -34,6 +34,10 @@ install_joystick_selections() {
   # Set joyport based on the above
   while IFS='^' read -r color unknown title type multidisk joyport other; do
     local normalized_name=$(normalize_name "$title")
+    if [ -z "$normalized_name" ]; then
+      continue
+    fi
+    
     local rom_name=${installed_roms["$normalized_name"]}
 
     # Make sure the row is valid and the ROM was installed
