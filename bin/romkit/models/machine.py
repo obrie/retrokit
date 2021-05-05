@@ -247,7 +247,12 @@ class Machine:
 
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
-        return {'name': self.name, 'romset': self.romset.name, 'emulator': self.emulator}
+        return {
+            'romset': self.romset.name,
+            'name': self.name,
+            'parent': self.parent_name,
+            'emulator': self.emulator,
+        }
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
