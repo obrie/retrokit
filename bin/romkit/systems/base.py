@@ -1,4 +1,4 @@
-from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, FilterSet, FlagFilter, KeywordFilter, NameFilter, TitleFilter
+from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
@@ -84,9 +84,11 @@ class BaseSystem:
             yield ROMSet.from_json(romset_config, system=self)
 
     def list(self) -> List[Machine]:
-        # Filter and group by the base name (so, for example, multiple
-        # games with different revisions will be grouped together)
-        groups = {}
+        # Machines guaranteed to be installed
+        machines_to_install = set()
+
+        # Machines that are candidates until we've gone through all of them
+        machine_candidates = {}
 
         for romset in self.iter_romsets():
             # Machines that are installable or required by installable machines
@@ -94,43 +96,50 @@ class BaseSystem:
 
             for machine in romset.iter_machines():
                 # Set the emulator on the machine if we have it based on the
-                # system-wide defaults
+                # emulator set (assuming the emulator isn't defined for the
+                # entire romset)
                 if not machine.emulator:
                     machine.emulator = self.emulator_set.get(machine)
 
-                if self.filter_set.allow(machine):
+                allow_reason = self.filter_set.allow(machine)
+                if allow_reason:
                     # Track this machine and all machines it depends on
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Group the machine based on its title (no flags)
+                    # Force the machine to be installed if it was allowed by an override
+                    if allow_reason == FilterReason.OVERRIDE:
+                        machines_to_install.add(machine)
+
+                    # Group the machine based on its parent/self title (no flags).
+                    # We can't rely on the name because not all DATs for rom sets
+                    # have Parent/Child relationships defined.
                     group = machine.group_title
-                    if group not in groups:
-                        groups[group] = []
-                    groups[group].append(machine)
+                    if group not in machine_candidates:
+                        # First time we've seen this group: make the machine the default
+                        machine_candidates[group] = machine
+                    else:
+                        # We've seen this group before: decide which machine to install based
+                        # on the predefined priority order
+                        existing = machine_candidates[group]
+                        prioritized_machines = sorted([existing, machine], key=self._sort_machines)
+                        machine_candidates[group] = prioritized_machines[0]
+                        logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
                 elif not machine.is_clone:
                     # We track all parent/bios machines in case they're needed as a dependency
                     # in future machines.  We'll confirm later on with `machines_to_track`.
                     machine.track()
 
             # Free memory by removing machines we didn't need to keep
-            for name in list(romset.machines):
+            for name in romset.machine_names:
                 if name not in machines_to_track:
                     romset.remove(name)
 
-        # Prioritize the machines within each group
-        machines_by_name = {}
-        for group, grouped_machines in groups.items():
-            # Find the highest-priority machine
-            prioritized_machines = sorted(grouped_machines, key=self._sort_machines)
-            prioritized_machine = prioritized_machines[0]
-            machines_by_name[prioritized_machine.name] = prioritized_machine
+        # Add all the candidates now that we've gone through all the machines
+        machines_to_install.update(machine_candidates.values())
 
-            # Log all of the machines that were de-prioritized
-            for machine in prioritized_machines[1:]:
-                logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
-
-        return machines_by_name.values()
+        # Sort by name
+        return sorted(machines_to_install, key=lambda machine: machine.name)
 
     # Sorts machines based on a predefined priority ordering.
     # 

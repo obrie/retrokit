@@ -1,5 +1,12 @@
 from __future__ import annotations
 
+from enum import Enum
+from typing import Optional
+
+class FilterReason(Enum):
+    ALLOW = 1
+    OVERRIDE = 2
+
 # Represents a collection of machine filters
 class FilterSet:
     def __init__(self) -> None:
@@ -34,6 +41,12 @@ class FilterSet:
             self.filters.append(filter)
 
     # Whether the given machine is allowed by the filter set
-    def allow(self, machine: Machine) -> bool:
+    def allow(self, machine: Machine) -> Optional[FilterReason]:
         allowed_by_override = any(filter.override and filter.allow(machine) for filter in self.overrides)
-        return all((allowed_by_override and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
+        allowed = all((allowed_by_override and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
+
+        if allowed:
+            if allowed_by_override:
+                return FilterReason.OVERRIDE
+            else:
+                return FilterReason.ALLOW

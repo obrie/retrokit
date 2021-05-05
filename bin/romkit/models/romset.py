@@ -65,6 +65,11 @@ class ROMSet:
             **kwargs,
         )
 
+    # Names of machines in this rom set
+    @property
+    def machine_names(self) -> List(str):
+        return list(self.machines)
+
     # Looks up the machine with the given name
     def machine(self, name: str) -> Optional[Machine]:
         return self.machines.get(name)
