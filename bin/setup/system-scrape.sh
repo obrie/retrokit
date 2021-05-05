@@ -62,7 +62,7 @@ build_collections() {
   done < <(ls "$source_collections_dir")
 }
 
-vaccum() {
+vacuum() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache vacuum
 }
 
