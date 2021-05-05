@@ -72,7 +72,7 @@ vacuum_media() {
     local filename=$(basename "$media_path")
     local rom_name=${filename%%.*}
 
-    if ! find "$HOME/RetroPie/roms/$system" -name "$rom_name.*" | grep .; then
+    if ! find "$HOME/RetroPie/roms/$system" -name "$rom_name.*" | grep . >/dev/null; then
       echo "rm -f \"$media_path\""
     fi
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name "*.png" -o -name "*.mp4")
