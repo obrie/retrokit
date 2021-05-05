@@ -125,7 +125,7 @@ install_retroarch_remappings() {
   if [ -n "$remapping_dir" ]; then
     while IFS="$tab" read override_file core_name library_name; do
       # Emulator-specific remapping directory
-      local emulator_remapping_dir="$remapping_dir/$library_name"
+      local emulator_remapping_dir="$remapping_dir$library_name"
       mkdir -p "$emulator_remapping_dir"
 
       local override_filename=$(basename "$override_file")

@@ -24,20 +24,17 @@ normalize_name() {
 install_joystick_selections() {
   download 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=tsv' "$system_tmp_dir/c64_dreams.tsv"
 
-  declare -A installed_roms
-
   # Map normalized name to rom name
-  while IFS="$tab" read -r rom_name emulator; do
+  declare -A installed_roms
+  while IFS="$tab" read -r rom_name; do
     local normalized_name=$(normalize_name "$rom_name")
-    installed_roms["$normalized_name/name"]="$rom_name"
-    installed_roms["$normalized_name/emulator"]="$emulator"
-  done < <(romkit_cli list --log-level ERROR | jq -r '[.name, .emulator] | @tsv')
+    installed_roms["$normalized_name"]="$rom_name"
+  done < <(romkit_cli list --log-level ERROR | jq -r '[.name] | @tsv')
 
   # Set joyport based on the above
   while IFS='^' read -r color unknown title type multidisk joyport other; do
     local normalized_name=$(normalize_name "$title")
-    local rom_name=${installed_roms["$normalized_name/name"]}
-    local emulator=${installed_roms["$normalized_name/emulator"]}
+    local rom_name=${installed_roms["$normalized_name"]}
 
     # Make sure the row is valid and the ROM was installed
     if [ -n "$rom_name" ]; then
@@ -52,7 +49,7 @@ install_joystick_selections() {
 
       if [ -n "$joyport_selection" ]; then
         # Ensure file exists
-        local opt_file="$retroarch_config_dir/config/$emulator/$rom_name.opt"
+        local opt_file="$retroarch_config_dir/config/VICE x64/$rom_name.opt"
         touch "$opt_file"
 
         # Overwrite joyport selection
