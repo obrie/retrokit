@@ -62,6 +62,10 @@ build_collections() {
   done < <(ls "$source_collections_dir")
 }
 
+vaccum() {
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache vacuum
+}
+
 install() {
   scrape_sources
   build_gamelist
