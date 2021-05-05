@@ -86,9 +86,12 @@ find_overrides() {
         local core_name=${emulators["$emulator/core_name"]}
         local library_name=${emulators["$emulator/library_name"]}
 
-        echo "$override_file\t$core_name\t$library_name"
+        # Make sure this is a libretro core
+        if [ -n "$core_name" ] && [ -n "$library_name" ]; then
+          echo "$override_file$tab$core_name$tab$library_name"
+        fi
       fi
-    done < <(cached_list | jq -r '[.name, .parent] | @tsv' | tr "$tab" "^")
+    done < <(cached_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
   fi
 }
 
