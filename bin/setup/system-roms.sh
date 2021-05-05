@@ -106,6 +106,9 @@ install_retroarch_core_options() {
     local override_filename=$(basename "$override_file")
     local target_path="$retroarch_emulator_config_dir/$override_filename"
     
+    # Back up the existing file
+    backup_and_restore "$target_path"
+
     # Copy over existing core overrides so we don't just get the
     # core defaults
     grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$target_path"
