@@ -54,7 +54,7 @@ find_overrides() {
   local extension=$1
 
   if [ -d "$system_config_dir/retroarch" ]; then
-    while read rom_name parent_name; do
+    while IFS="$tab" read rom_name parent_name; do
       # Find a file for either the rom or its parent
       local override_file
       if [ -f "$system_config_dir/retroarch/$rom_name.$extension" ]; then
@@ -76,7 +76,7 @@ install_core_options() {
   local emulators=$(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.value.library_name, .value.core_name] | @tsv')
 
   while read override_file; do
-    while read library_name core_name; do
+    while IFS="$tab" read library_name core_name; do
       # Retroarch emulator-specific config
       local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
       mkdir -p "$retroarch_emulator_config_dir"
@@ -100,7 +100,7 @@ install_remappings() {
 
   if [ -n "$remapping_dir" ]; then
     local emulators=$(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.value.library_name] | @tsv')
-    
+
     while read override_file; do
       while read library_name; do
         # Emulator-specific remapping directory
