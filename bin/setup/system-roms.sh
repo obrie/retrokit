@@ -67,6 +67,7 @@ find_overrides() {
         echo "$override_file"
       fi
     done < <(cached_list | jq -r '[.name, .parent] | @tsv')
+  fi
 }
 
 # Game-specific libretro core overrides
@@ -95,10 +96,11 @@ install_core_options() {
 
 # Games-specific controller mapping overrides
 install_remappings() {
-  local emulators=$(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.value.library_name] | @tsv')
   local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
 
   if [ -n "$remapping_dir" ]; then
+    local emulators=$(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.value.library_name] | @tsv')
+    
     while read override_file; do
       while read library_name; do
         # Emulator-specific remapping directory
