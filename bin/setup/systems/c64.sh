@@ -26,10 +26,10 @@ install_joystick_selections() {
 
   # Map normalized name to rom name
   declare -A installed_roms
-  while IFS="$tab" read -r rom_name; do
+  while read -r rom_name; do
     local normalized_name=$(normalize_name "$rom_name")
     installed_roms["$normalized_name"]="$rom_name"
-  done < <(romkit_cli list --log-level ERROR | jq -r '[.name] | @tsv')
+  done < <(romkit_cli list --log-level ERROR | jq -r '.name')
 
   # Set joyport based on the above
   while IFS='^' read -r color unknown title type multidisk joyport other; do
