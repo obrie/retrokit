@@ -63,7 +63,7 @@ find_overrides() {
     if [ "$is_default" == "true" ]; then
       default_emulator=$emulator
     fi
-  done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name, .value.library_name, .default // false] | @tsv')
+  done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name, .value.library_name, .value.default // false] | @tsv')
 
   if [ -d "$system_config_dir/retroarch" ]; then
     while IFS="^" read rom_name parent_name emulator; do
