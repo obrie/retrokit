@@ -88,7 +88,7 @@ find_overrides() {
 
         # Make sure this is a libretro core
         if [ -n "$core_name" ] && [ -n "$library_name" ]; then
-          echo "$override_file$tab$core_name$tab$library_name"
+          echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
         fi
       fi
     done < <(cached_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
@@ -98,20 +98,19 @@ find_overrides() {
 # Game-specific libretro core overrides
 # (https://retropie.org.uk/docs/RetroArch-Core-Options/)
 install_retroarch_core_options() {
-  while IFS="$tab" read override_file core_name library_name; do
+  while IFS="$tab" read rom_name override_file core_name library_name; do
     # Retroarch emulator-specific config
     local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
     mkdir -p "$retroarch_emulator_config_dir"
 
-    local override_filename=$(basename "$override_file")
-    local target_path="$retroarch_emulator_config_dir/$override_filename"
-    
     # Back up the existing file
+    local target_path="$retroarch_emulator_config_dir/$rom_name.opt"
     backup_and_restore "$target_path"
 
     # Copy over existing core overrides so we don't just get the
     # core defaults
-    grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$target_path"
+    touch "$target_path"
+    grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$target_path" || true
 
     # Merge in game-specific overrides
     crudini --merge "$target_path" < "$override_file"
@@ -123,21 +122,20 @@ install_retroarch_remappings() {
   local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
 
   if [ -n "$remapping_dir" ]; then
-    while IFS="$tab" read override_file core_name library_name; do
+    while IFS="$tab" read rom_name override_file core_name library_name; do
       # Emulator-specific remapping directory
       local emulator_remapping_dir="$remapping_dir$library_name"
       mkdir -p "$emulator_remapping_dir"
 
-      local override_filename=$(basename "$override_file")
-      ini_merge "$override_file" "$emulator_remapping_dir/$override_filename"
+      ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
     done < <(find_overrides 'rmp')
   fi
 }
 
 # Game-specific retroarch configuration overrides
 install_retroarch_configs() {
-  while IFS="$tab" read override_file core_name library_name; do
-    ini_merge "$override_file" "$HOME/RetroPie/roms/$system/$(basename "$override_file")"
+  while IFS="$tab" read rom_name override_file core_name library_name; do
+    ini_merge "$override_file" "$HOME/RetroPie/roms/$system/$rom_name.cfg"
   done < <(find_overrides 'cfg')
 }
 
