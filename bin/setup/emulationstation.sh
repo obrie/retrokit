@@ -37,15 +37,12 @@ install_systems() {
 
   printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
 
-  # Add primary systems used by retrokit
+  # Add configured systems
   while read system; do
     xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
     printf '\n' >> "$system_override_config"
   done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
 
-  # Add remaining systems
-  system_conditions=$(jq -r '.systems[]' "$settings_file" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')
-  xmlstarlet sel -t -m "/systemList/system[not($system_conditions)]" -c "." -n "$system_default_config" >> "$system_override_config"
   printf '</systemList>\n' >> "$system_override_config"
 
   # Override platforms / themes
