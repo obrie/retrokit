@@ -4,8 +4,7 @@
     "bezel": "MAME"
   },
   "scraper": {
-    "sources": ["screenscraper", "arcadedb"],
-    "args": ["--excludefiles", "*advmame*"]
+    "sources": ["screenscraper", "arcadedb"]
   },
   "emulators": {
     "lr-fbneo": {"default": true, "build": "source", "core_name": "fbneo", "library_name": "FinalBurn Neo"},

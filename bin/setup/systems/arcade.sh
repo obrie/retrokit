@@ -54,6 +54,13 @@ install_advmame_config() {
   done < <(cat "$system_config_dir/advmame.rc" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
 
   sort -o "$config_path" "$config_path"
+
+  # Move advmame config directory in arcade system in order to avoid artwork zip
+  # files from being scraped since there's no way to tell Skyscraper to ignore certain
+  # directories
+  if [ -d "$HOME/RetroPie/roms/arcade/advmame" ]; then
+    mv "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
+  fi
 }
 
 install_advmame_bezels() {
