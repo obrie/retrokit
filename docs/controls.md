@@ -10,7 +10,7 @@ Connection types:
 
 Preferred hardware:
 
-* 8bitdo wireless controllers
+* 8bitdo wireless controllers (D-input mode)
 
 Keys to reducing input lag:
 
@@ -26,6 +26,7 @@ References:
 * [SDL Keycodes](https://wiki.libsdl.org/SDLKeycodeLookup)
 
 Configurations:
+
 * config/controllers
 * config/systems/arcade/advmame.rc
 * config/systems/dreamcast/redream.cfg
