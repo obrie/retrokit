@@ -41,7 +41,7 @@ install_systems() {
   while read system; do
     xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
     printf '\n' >> "$system_override_config"
-  done < <(setting '.systems[]')
+  done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
 
   # Add remaining systems
   system_conditions=$(jq -r '.systems[]' "$settings_file" | sed -e 's/.*/name="\0"/g' | sed ':a; N; $!ba; s/\n/ or /g')

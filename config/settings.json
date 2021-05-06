@@ -11,6 +11,9 @@
     ],
     "launch_theme": "pixel-metadata"
   },
+  "retropie": {
+    "show_menu": false
+  },
   "systems": [
     "arcade",
     "atari2600",
@@ -33,8 +36,7 @@
     "pcengine",
     "coleco",
     "pc",
-    "ports",
-    "retropie"
+    "ports"
   ],
   "modules": {
     "setup": [
