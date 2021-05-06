@@ -104,6 +104,12 @@ References:
 * [Input lag](https://retropie.org.uk/docs/Input-Lag/)
 * [SDL Keycodes](https://wiki.libsdl.org/SDLKeycodeLookup)
 
+Configurations:
+* config/controllers
+* config/systems/arcade/advmame.rc
+* config/systems/dreamcast/redream.cfg
+* config/systems/n64/InputAutoCfg.ini (to support d-pad)
+
 ## Frontends
 
 Retropie vs. Lakka vs. Recalbox vs. Batocera
