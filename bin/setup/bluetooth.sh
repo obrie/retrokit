@@ -23,7 +23,7 @@ fix_ghost_inputs() {
 
 install() {
   install_pairings
-  fix_ghost_inputs
+  # fix_ghost_inputs
 }
 
 uninstall() {
