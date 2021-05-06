@@ -17,8 +17,8 @@ install_pairings() {
 # Fix ghost inputs on initial connection
 # See: https://retropie.org.uk/docs/Bluetooth-Controller/
 fix_ghost_inputs() {
-  backup_and_restore /usr/bin/btuart
-  sed -i 's/bcm43xx 921600/bcm43xx 115200/g'
+  backup_and_restore /usr/bin/btuart as_sudo=true
+  sudo sed -i 's/bcm43xx 921600/bcm43xx 115200/g'
 }
 
 install() {
