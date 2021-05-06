@@ -20,6 +20,7 @@ Specifically, it can set up:
 * Wifi configuration
 * Bluetooth
 * Controllers
+* Overclocking
 * Emulation Station settings / systems
 * Various fixes / workarounds for many common issues
 
