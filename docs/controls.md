@@ -2,6 +2,35 @@
 
 [Reference Diagrams](https://retropie.org.uk/docs/Controller-Configuration/#controller-configuration)
 
+## Controllers
+
+Connection types:
+
+* Wired > 2.4ghz > Bluetooth
+
+Preferred hardware:
+
+* 8bitdo wireless controllers
+
+Keys to reducing input lag:
+
+* TV Game Mode
+* Wired controllers
+* Use NTCS version of games
+* Enable runahead
+
+References:
+
+* [Input latency](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
+* [Input lag](https://retropie.org.uk/docs/Input-Lag/)
+* [SDL Keycodes](https://wiki.libsdl.org/SDLKeycodeLookup)
+
+Configurations:
+* config/controllers
+* config/systems/arcade/advmame.rc
+* config/systems/dreamcast/redream.cfg
+* config/systems/n64/InputAutoCfg.ini (to support d-pad)
+
 ## Keyboard
 
 | RetroPad Button | Key         |

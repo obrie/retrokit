@@ -1,6 +1,5 @@
 backups/*
-config/bluetooth/*
-log/*
+config/bluetooth/*/
 tmp/*
 __pycache__
 .env
