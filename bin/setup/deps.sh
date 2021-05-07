@@ -17,6 +17,9 @@ install() {
 
   # JSON reader
   sudo apt install -y jq
+
+  # Video editor
+  sudo apt install -y ffmpeg
 }
 
 uninstall() {
