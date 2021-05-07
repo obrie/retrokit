@@ -6,8 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  sudo apt update
-  sudo apt -y full-upgrade
+  $dir/../update.sh
 }
 
 uninstall() {

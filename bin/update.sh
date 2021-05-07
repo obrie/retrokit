@@ -27,7 +27,6 @@ update_retropie_setup() {
 update_system() {
   sudo apt update
   sudo apt-get -y dist-upgrade
-  # sudo apt full-upgrade
 }
 
 update_packages() {
