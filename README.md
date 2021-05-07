@@ -105,10 +105,14 @@ in the config/ folder, particularly config/settings.json.
 ## Instructions
 
 1. Flash new image with `bin/sd.sh`
-2. Start up Pi
-3. Connect your first controller (keyboard, for example)
-4. Quit EmulationStation
-5. Copy retrokit to your sd card (/home/pi/retrokit)
+1. Start up Pi
+1. Connect your first controller (keyboard, for example)
+1. Quit EmulationStation
+1. Copy retrokit to your sd card (/home/pi/retrokit)
+1. Run `bin/update.sh system` to update Raspbian
+1. Reboot
+1. Run `bin/update.sh retropie` to update RetroPie-Setup and its packages
+1. Run `bin/setup.sh` to run all setup modules
 
 ## Thanks
 
@@ -120,6 +124,9 @@ retrokit what it is.  That includes:
 * [C64 Dreams](https://www.zombs-lair.com/c64-dreams) for Commodore 64 game configuration settings
 * [eXo](https://***REMOVED***) for Dosbox game configuration settings
 * [Abdessamad Derraz](https://github.com/Abdess)
+* [The Bezel Project](https://github.com/thebezelproject)
+* [ehettervik](https://github.com/ehettervik) for the pixel theme
+* [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
 * RetroPie forums
 * Reddit forums
 * ...and everyone who has put so much work in over the years to help make all of this even possible

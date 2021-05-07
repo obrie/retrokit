@@ -29,20 +29,19 @@ update_system() {
   sudo apt-get -y dist-upgrade
 }
 
+# Update packages
 update_packages() {
-  # Update packages
   sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
 }
 
-update_all() {
+# Update RetroPie-Setup and packages
+update_retropie() {
   update_retropie_setup
-  update_system
   update_packages
 }
 
-if [[ $# -gt 1 ]]; then
+if [[ $# -ne 1 ]]; then
   usage
 fi
 
-target=${1:-all}
-"update_$target"
+"update_$1"

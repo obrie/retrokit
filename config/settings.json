@@ -41,7 +41,6 @@
   "modules": {
     "setup": [
       "wifi",
-      "upgrade",
       "deps",
       "boot",
       "tools-dev",
