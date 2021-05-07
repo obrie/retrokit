@@ -12,7 +12,7 @@
   },
   "cheats": "Sega - Dreamcast",
   "bios": {
-    "url": "$BIOS_URL/Sega%20-%20Dreamcast",
+    "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
     "dir": "/home/pi/RetroPie/BIOS/dc",
     "files": {
       "dc_boot.bin": "{url}/dc_boot.bin",

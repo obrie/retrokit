@@ -19,10 +19,10 @@
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
       "psxonpsp660.bin": "{url}/Other/Sony%20-%20PlayStation/PSXONPSP660.BIN",
-      "scph101.bin": "{url}/Sony%20-%20PlayStation/scph101.bin",
-      "scph7001.bin": "{url}/Sony%20-%20PlayStation/scph7001.bin",
-      "scph5501.bin": "{url}/Sony%20-%20PlayStation/scph5501.bin",
-      "scph1001.bin": "{url}/Sony%20-%20PlayStation/scph1001.bin"
+      "scph101.bin": "{url}/libretro/Sony%20-%20PlayStation/scph101.bin",
+      "scph7001.bin": "{url}/libretro/Sony%20-%20PlayStation/scph7001.bin",
+      "scph5501.bin": "{url}/libretro/Sony%20-%20PlayStation/scph5501.bin",
+      "scph1001.bin": "{url}/libretro/Sony%20-%20PlayStation/scph1001.bin"
     }
   },
   "romsets": [

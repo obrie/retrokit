@@ -11,7 +11,7 @@
   },
   "cheats": "Coleco - ColecoVision",
   "bios": {
-    "url": "$BIOS_URL/Coleco%20-%20ColecoVision",
+    "url": "$BIOS_URL/libretro/Coleco%20-%20ColecoVision",
     "dir": "/home/pi/RetroPie/BIOS/Machines/COL - ColecoVision",
     "files": {
       "coleco.rom": "{url}/coleco.rom"

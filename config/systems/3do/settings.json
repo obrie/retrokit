@@ -10,10 +10,10 @@
     "lr-opera": {"core_name": "opera", "library_name": "Opera", "default": true}
   },
   "bios": {
-    "url": "$BIOS_URL",
+    "url": "$BIOS_URL/libretro/3DO%20Company%2C%20The%20-%203DO",
     "dir": "/home/pi/RetroPie/BIOS",
     "files": {
-      "panafz10.bin": "{url}/3DO%20Company%2C%20The%20-%203DO/panafz10.bin"
+      "panafz10.bin": "{url}/panafz10.bin"
     }
   },
   "romsets": [
