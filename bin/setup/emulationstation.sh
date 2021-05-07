@@ -39,17 +39,17 @@ install_systems() {
 
   backup_and_restore "$system_override_config"
 
-  printf '<?xml version="1.0"?>\n<systemList>\n' > "$tmp_dir/$system_override_config"
+  printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config.tmp"
 
   # Add configured systems
   while read system; do
-    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$tmp_dir/$system_override_config" || true
-    printf '\n' >> "$tmp_dir/$system_override_config"
+    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config.tmp" || true
+    printf '\n' >> "$system_override_config.tmp"
   done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
 
-  printf '</systemList>\n' >> "$tmp_dir/$system_override_config"
+  printf '</systemList>\n' >> "$system_override_config.tmp"
 
-  mv "$tmp_dir/$system_override_config" "$system_override_config"
+  mv "$system_override_config.tmp" "$system_override_config"
 
   # Override platforms / themes
   while read system; do
