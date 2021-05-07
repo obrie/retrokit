@@ -13,33 +13,25 @@ usage() {
 setup_all() {
   local action="$1"
 
-  while read -r setupmodule; do
-    setup "$setupmodule" "$actions"
-  done < <(setting '.modules.setup[]')
-
   # Restore globals for files used across multiple modules
   "$dir/setup/system-all.sh" restore_globals
 
-  # Set up systems
-  while read system; do
-    setup_system "$system"
-  done < <(setting '.systems[] | select(. != "retropie")')
+  while read -r setupmodule; do
+    setup "$action" "$setupmodule"
+  done < <(setting '.modules[]')
 }
 
 setup_system() {
   local system="$1"
 
-  while read -r systemmodule; do
-    # Ports only get the scrape module
-    if [ "$systemmodule" == 'scrape' ] || [ "$system" != 'ports' ]; then
-      "$dir/setup/system-$systemmodule.sh" "$action" "$system"
+  while read -r setupmodule; do
+    if [[ "$setupmodule" == system-* ]]; then
+      # Ports only get the scrape module
+      if [ "$systemmodule" == 'system-scrape' ] || [ "$system" != 'ports' ]; then
+        "$dir/setup/$setupmodule.sh" "$action" "$system"
+      fi
     fi
-  done < <(setting '.modules.system[]')
-
-  # System-specific actions
-  if [ -f "$dir/setup/systems/$system.sh" ]; then
-    "$dir/setup/systems/$system.sh" "$action"
-  fi
+  done < <(setting '.modules[]')
 }
 
 setup() {
