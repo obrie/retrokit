@@ -6,6 +6,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
+  # PIP
+  sudo apt install -y python3-pip
+
   # Ini editor
   sudo pip3 install crudini
 

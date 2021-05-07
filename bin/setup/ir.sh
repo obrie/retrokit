@@ -8,6 +8,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 keymap_filepath='/etc/rc_keymaps/tivo.toml'
 
 install() {
+  sudo apt install -y ir-keytable
+
   file_cp "$config_dir/ir/rc_maps.cfg" '/etc/rc_maps.cfg' as_sudo=true
   file_cp "$config_dir/ir/retropie.toml" "$keymap_filepath" as_sudo=true
   sudo chmod 644 "$keymap_filepath"
