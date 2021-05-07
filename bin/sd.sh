@@ -47,7 +47,7 @@ create() {
   local retropie_version=4.7.1
   local raspbian_version=buster
   local rpi_version=rpi4_400
-  local image_file="/tmp/retropie-$retropie_version-$raspbian_version-$rpi_version.img.gz"
+  local image_file="$tmp_dir/retropie-$retropie_version-$raspbian_version-$rpi_version.img.gz"
 
   # Download Retropie
   download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" "$image_file"
