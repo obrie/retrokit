@@ -43,7 +43,7 @@ install_systems() {
 
   # Add configured systems
   while read system; do
-    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$tmp_dir/$system_override_config"
+    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$tmp_dir/$system_override_config" || true
     printf '\n' >> "$tmp_dir/$system_override_config"
   done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
 
