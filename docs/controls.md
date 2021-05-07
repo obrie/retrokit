@@ -10,7 +10,11 @@ Connection types:
 
 Preferred hardware:
 
-* 8bitdo wireless controllers (D-input mode)
+* 8Bitdo Sn30 Pro Bluetooth Gamepad (Sn Edition)
+  D-Input mode
+
+* 8Bitdo Arcade Stick
+  2.4ghz, X-Input mode, D-Pad
 
 Keys to reducing input lag:
 
