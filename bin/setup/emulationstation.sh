@@ -39,34 +39,32 @@ install_systems() {
 
   backup_and_restore "$system_override_config"
 
-  if [ -f "$es_settings_config" ]; then
-    printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config"
+  printf '<?xml version="1.0"?>\n<systemList>\n' > "$tmp_dir/$system_override_config"
 
-    # Add configured systems
-    while read system; do
-      xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$system_override_config"
-      printf '\n' >> "$system_override_config"
-    done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
+  # Add configured systems
+  while read system; do
+    xmlstarlet sel -t -c "/systemList/system[name='$system']" "$system_default_config" >> "$tmp_dir/$system_override_config"
+    printf '\n' >> "$tmp_dir/$system_override_config"
+  done < <(setting '.systems + [select(.retropie.show_menu) | "retropie"] | .[]')
 
-    printf '</systemList>\n' >> "$system_override_config"
+  printf '</systemList>\n' >> "$tmp_dir/$system_override_config"
 
-    # Override platforms / themes
-    while read system; do
-      local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_platform" 2>/dev/null || echo '')
-      if [ -n "$platform" ]; then
-        platform=${platform//\"/}
-        xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/platform" -v "$platform" "$system_override_config"
-      fi
+  mv "$tmp_dir/$system_override_config" "$system_override_config"
 
-      local theme=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo '')
-      if [ -n "$theme" ]; then
-        theme=${theme//\"/}
-        xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$theme" "$system_override_config"
-      fi
-    done < <(setting '.systems[]')
-  else
-    cp "$overrides_config" "$es_settings_config"
-  fi
+  # Override platforms / themes
+  while read system; do
+    local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_platform" 2>/dev/null || echo '')
+    if [ -n "$platform" ]; then
+      platform=${platform//\"/}
+      xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/platform" -v "$platform" "$system_override_config"
+    fi
+
+    local theme=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo '')
+    if [ -n "$theme" ]; then
+      theme=${theme//\"/}
+      xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$theme" "$system_override_config"
+    fi
+  done < <(setting '.systems[]')
 }
 
 install() {
