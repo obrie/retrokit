@@ -40,9 +40,9 @@
   ],
   "modules": {
     "setup": [
-      "deps",
       "wifi",
       "upgrade",
+      "deps",
       "boot",
       "tools-dev",
       "tools-chdman",

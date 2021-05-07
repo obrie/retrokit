@@ -16,6 +16,9 @@ edid_content_type=4
 # Fix lag on cheap mice
 usbhid.mousepoll=0
 
+# Boot using custom kernel
+#kernel=kernel-retrokit.img
+
 [pi4]
 # Overclocking
 over_voltage=2

@@ -102,6 +102,14 @@ The hardware setup assumes:
 You can have complete control over what parts of retrokit get used via everything
 in the config/ folder, particularly config/settings.json.
 
+## Instructions
+
+1. Flash new image with `bin/sd.sh`
+2. Start up Pi
+3. Connect your first controller (keyboard, for example)
+4. Quit EmulationStation
+5. Copy retrokit to your sd card (/home/pi/retrokit)
+
 ## Thanks
 
 There are so many people / resources that I've pulled over time to make
