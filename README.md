@@ -107,12 +107,17 @@ in the config/ folder, particularly config/settings.json.
 1. Flash new image with `bin/sd.sh`
 1. Start up Pi
 1. Connect your first controller (keyboard, for example)
+1. Open the Menu, change the Theme, and save the changes to generate es_settings.cfg (Needed???)
 1. Quit EmulationStation
 1. Copy retrokit to your sd card (/home/pi/retrokit)
 1. Run `bin/update.sh system` to update Raspbian
 1. Reboot
 1. Run `bin/update.sh retropie` to update RetroPie-Setup and its packages
 1. Run `bin/setup.sh` to run all setup modules
+
+To access via VNC:
+
+* Open in browser: `http://<ip address of rpi>:9080/stream/webrtc`
 
 ## Thanks
 
