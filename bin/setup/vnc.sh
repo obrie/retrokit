@@ -9,6 +9,7 @@ install() {
   # Install apt key
   curl https://www.linux-projects.org/listing/uv4l_repo/lpkey.asc | sudo apt-key add -
   echo 'deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main' | sudo tee /etc/apt/sources.list.d/uv4l.list
+  sudo apt update
 
   # Install sever
   sudo apt install -y uv4l uv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
