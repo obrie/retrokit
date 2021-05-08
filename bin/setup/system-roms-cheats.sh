@@ -82,7 +82,7 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for cheats'
+  echo 'No uninstall for rom cheats'
 }
 
 "$1" "${@:3}"

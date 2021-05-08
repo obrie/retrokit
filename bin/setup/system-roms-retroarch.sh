@@ -5,51 +5,6 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Clean the configuration key used for defining ROM-specific emulator options
-# 
-# Implementation pulled from retropie
-clean_emulator_config_key() {
-  local name="$1"
-  name="${name//\//_}"
-  name="${name//[^a-zA-Z0-9_\-]/}"
-  echo "$name"
-}
-
-# Loads the list of roms marked for install.  This can be called multiple
-# times, but it will only run once.
-cached_list() {
-  if [ -z "$rom_install_list" ]; then
-    rom_install_list=$(list)
-  fi
-
-  echo "$rom_install_list"
-}
-
-# Install roms from the remote source
-install_roms() {
-  romkit_cli install --log-level DEBUG
-}
-
-# Install playlists for multi-disc roms
-install_playlists() {
-  while read -r rom_path; do
-    local rom_filename=$(basename "$rom_path")
-
-    # Generate the playlist path
-    local base_path="${rom_path// (Disc [0-9]*)/}"
-    local base_filename=$(basename "$base_path")
-    local playlist_path="$(dirname "$base_path")/${base_filename%%.*}.m3u"
-
-    # Reset if we're on the first disc
-    if [[ "$rom_filename"  == *'(Disc 1)'* ]]; then
-      truncate -s0 "$playlist_path"
-    fi
-
-    # Add to the playlist
-    echo "$rom_filename" >> "$playlist_path"
-  done < <(find "$HOME/RetroPie/roms/$system" . -not -path '*/\.*' -type l -name "*(Disc *" | sort)
-}
-
 find_overrides() {
   local extension=$1
 
@@ -91,7 +46,7 @@ find_overrides() {
           echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
         fi
       fi
-    done < <(cached_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
+    done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
   fi
 }
 
@@ -139,55 +94,14 @@ install_retroarch_configs() {
   done < <(find_overrides 'cfg')
 }
 
-# Define emulators for games that don't use the default
-set_default_emulators() {
-  local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
-  backup "$emulators_config_file"
-
-  # Add emulator selections for roms with an explicit one
-  # 
-  # This is done in one batch because it's a bit slow otherwise
-  crudini --merge "$emulators_config_file" < <(
-    while IFS="$tab" read -r rom_name emulator; do
-      if [ -n "$emulator" ]; then
-        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
-      fi
-    done < <(cached_list | jq -r '[.name, .emulator] | @tsv')
-  )
-
-  # Remove emulator selections for roms without one
-  while IFS="$tab" read -r rom_name emulator; do
-    if [ -z "$emulator" ]; then
-      local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
-
-      # Grep for the file before running crudini since crudini is generally much
-      # slower and we don't want to invoke it if we don't need to
-      if grep "$config_key" "$emulators_config_file"; then
-        crudini --del "$emulators_config_file" '' "$config_key"
-      fi
-    fi
-  done < <(cached_list | jq -r '[.name, .emulator] | @tsv')
-}
-
-list() {
-  romkit_cli list --log-level ERROR
-}
-
-vacuum() {
-  romkit_cli vacuum --log-level ERROR
-}
-
 install() {
-  install_roms
-  install_playlists
   install_retroarch_configs
   install_retroarch_remappings
   install_retroarch_core_options
-  set_default_emulators
 }
 
 uninstall() {
-  echo 'No uninstall for roms'
+  echo 'No uninstall for rom retroarch configurations'
 }
 
 "$1" "${@:3}"

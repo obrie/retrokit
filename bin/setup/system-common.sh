@@ -34,3 +34,13 @@ fi
 romkit_cli() {
   TMPDIR="$tmp_dir" python3 bin/romkit/cli.py $1 "$system_settings_file" ${@:2}
 }
+
+# Loads the list of roms marked for install.  This can be called multiple
+# times, but it will only run once.
+romkit_cache_list() {
+  if [ -z "$rom_install_list" ]; then
+    rom_install_list=$(romkit_cli list --log-level ERROR)
+  fi
+
+  echo "$rom_install_list"
+}
