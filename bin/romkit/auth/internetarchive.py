@@ -6,7 +6,6 @@ from pathlib import Path
 from urllib.parse import unquote
 
 class InternetArchiveAuth(BaseAuth):
-    # TODO: Switch to use `ia configure -c`
     ARCHIVE_ORG_DOMAIN = 'archive.org'
 
     name = 'internetarchive'
