@@ -10,8 +10,9 @@ install() {
   local bezelproject_bin="$HOME/RetroPie/retropiemenu/bezelproject.sh"
   
   if [ ! -d "$retroarch_config_dir/overlay/GameBezels/$name" ]; then
-    "$bezelproject_bin" install_bezel_packsa "$name" "thebezelproject"
-    "$bezelproject_bin" install_bezel_pack "$name" "thebezelproject"
+    # Some systems (specifically arcade) can result in non-zero exit codes
+    "$bezelproject_bin" install_bezel_packsa "$name" "thebezelproject" || true
+    "$bezelproject_bin" install_bezel_pack "$name" "thebezelproject" || true
   fi
 }
 
