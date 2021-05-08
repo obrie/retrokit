@@ -109,7 +109,7 @@ in the config/ folder, particularly config/settings.json.
 1. Connect your first controller (keyboard, for example)
 1. Open the Menu, change the Theme, and save the changes to generate es_settings.cfg (Needed???)
 1. Quit EmulationStation
-1. Copy retrokit to your sd card (/home/pi/retrokit)
+1. Copy retrokit to your sd card to /home/pi/retrokit, including .env and config/blutooth/
 1. Run `bin/update.sh system` to update Raspbian
 1. Reboot
 1. Run `bin/update.sh retropie` to update RetroPie-Setup and its packages
@@ -144,3 +144,12 @@ receive it.
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
 own setup.
+
+## TODO
+
+Differences discovered with my actual machine and what retrokit does on a fresh install.
+
+boot/config.txt:
+
+* Uncomment overscan_scale=1 (and see what impact it has)
+* Comment enable_uart=1
