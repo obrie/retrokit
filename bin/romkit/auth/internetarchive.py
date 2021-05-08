@@ -1,22 +1,24 @@
 from romkit.auth import BaseAuth
 
-import configparser
+import subprocess
+from http import cookies
 from pathlib import Path
 from urllib.parse import unquote
 
 class InternetArchiveAuth(BaseAuth):
     # TODO: Switch to use `ia configure -c`
-    CONFIG_FILE = f'{str(Path.home())}/.config/ia.ini'
     ARCHIVE_ORG_DOMAIN = 'archive.org'
 
     name = 'internetarchive'
 
     def __init__(self) -> None:
-        config = configparser.ConfigParser()
-        config.read(self.CONFIG_FILE)
+        cookie_data = subprocess.run(['ia', 'configure', '-c'], check=True, capture_output=True).stdout.decode()
 
-        self.user = config.get('cookies', 'logged-in-user', raw=True).split(';')[0]
-        self.signature = config.get('cookies', 'logged-in-sig', raw=True).split(';')[0]
+        cookie = cookies.SimpleCookie()
+        cookie.load(cookie_data)
+
+        self.user = cookie['logged-in-user'].value
+        self.signature = cookie['logged-in-sig'].value
 
     def match(self, url: str) -> bool:
         return self.ARCHIVE_ORG_DOMAIN in url
