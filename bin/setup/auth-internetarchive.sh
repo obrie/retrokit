@@ -9,18 +9,14 @@ ia_bin="/usr/local/bin/ia"
 
 install() {
   # Install CLI
-  if [ ! -s "$ia_bin" ]; then
-    download "https://archive.org/download/ia-pex/ia" "$tmp_dir/ia"
-    sudo mv "$tmp_dir/ia" "$ia_bin"
-  fi
-  sudo chmod +x "$ia_bin"
+  sudo pip3 install internetarchive==2.0.3
 
   # Login
   ia configure -u "$IA_USERNAME" -p "$IA_PASSWORD"
 }
 
 uninstall() {
-  sudo rm -f "$ia_bin" "$HOME/.ia"
+  sudo pip3 uninstall internetarchive
 }
 
 "${@}"
