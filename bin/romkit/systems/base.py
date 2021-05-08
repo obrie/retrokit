@@ -6,7 +6,7 @@ import logging
 import traceback
 from copy import copy
 from pathlib import Path
-from typing import Generator, List, Tuple
+from typing import Generator, List, Optional, Tuple
 
 class BaseSystem:
     name = 'base'
@@ -160,21 +160,30 @@ class BaseSystem:
     # Installs all of the filtered machines
     def install(self) -> None:
         # Install and filter out invalid machines
-        valid_machines = filter(self.install_machine, self.list())
+        machines = self.list()
+        for machine in machines:
+            self.install_machine(machine)
 
-        self.reset()
-        self.enable(valid_machines)
+        self.organize(machines)
 
     # Installs the given machine and returns true/false depending on whether the
     # install was successful
     def install_machine(self, machine: Machine) -> bool:
         try:
             machine.install()
-            return machine.is_valid_nonmerged
         except Exception as e:
             logging.error(f'[{machine.name}] Install failed')
             traceback.print_exc()
-            return False
+
+    # Organizes the directory structure based on the current list of valid
+    # installed machines
+    def organize(self, machines: Optional[List[Machine]] = None) -> None:
+        if not machines:
+            machines = self.list()
+        
+        valid_machines = filter(lambda machine: machine.is_valid_nonmerged, machines)
+        self.reset()
+        self.enable(valid_machines)
 
     # Reset the visible set of machines
     def reset(self) -> None:
