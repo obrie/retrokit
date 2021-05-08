@@ -5,6 +5,16 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+# Clean the configuration key used for defining ROM-specific emulator options
+# 
+# Implementation pulled from retropie
+clean_emulator_config_key() {
+  local name="$1"
+  name="${name//\//_}"
+  name="${name//[^a-zA-Z0-9_\-]/}"
+  echo "$name"
+}
+
 # Define emulators for games that don't use the default
 install() {
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
