@@ -35,7 +35,7 @@ install() {
     download "$bezelproject_url/overlay/$input_overlay_name.png" "$retroarch_config_dir/overlay/$input_overlay_name.png"
 
     # Download overlays for the associated emulator
-    while IFS="^" read rom_name emulator; do
+    while IFS="$tab" read rom_name emulator; do
       # Use the default emulator if one isn't specified
       if [ -z "$emulator" ]; then
         emulator=$default_emulator
