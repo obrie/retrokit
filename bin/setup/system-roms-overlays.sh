@@ -43,15 +43,15 @@ install() {
 
     # Get the list of roms available in Theme-style repo
     declare -A themeRoms
-    while read config_file; do
-      local rom_name=$(basename "$config_file" '.cfg')
+    while read config_filename; do
+      local rom_name=${config_filename%%.*}
       themeRoms["$rom_name"]=1
     done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelproject.list" | sort | uniq)
 
     # Get the list of roms available in System-style repo
     declare -A systemRoms
-    while read config_file; do
-      local rom_name=$(basename "$config_file" '.cfg')
+    while read config_filename; do
+      local rom_name=${config_filename%%.*}
       systemRoms["$rom_name"]=1
     done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelprojectsa.list" | sort | uniq)
 
