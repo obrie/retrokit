@@ -11,6 +11,7 @@ install() {
   # Base URL for downloading overlays
   local bezelproject_name=$(system_setting '.themes.bezel')
   local bezelproject_base_url="https://github.com/thebezelproject/bezelproject-$bezelproject_name/raw/master/retroarch"
+  local bezelprojectsa_base_url="https://github.com/thebezelproject/bezelprojectsa-$bezelproject_name/raw/master/retroarch"
   local bezelproject_overlay_path="overlay/GameBezels/$bezelproject_name"
   if [ "$system" == 'arcade' ]; then
     # Arcade override for unknown reasons
@@ -50,8 +51,18 @@ install() {
       if [ -n "$library_name" ]; then
         # Install overlay (if available)
         local encoded_rom_name=$(python -c 'import urllib, sys; print urllib.quote(sys.argv[1])' "$rom_name")
+
+        # There's a lot of inconsistency between the System-Style and Theme-style repos.  If Theme-Style isn't
+        # available, we fall back to System-Style.
+        local bezelproject_overlay_url=""
         if download "$bezelproject_base_url/$bezelproject_overlay_path/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"; then
-          download "$bezelproject_base_url/$bezelproject_overlay_path/$encoded_rom_name.png" "$overlays_dir/$rom_name.png"
+          bezelproject_overlay_url="$bezelproject_base_url/$bezelproject_overlay_path"
+        elif download "$bezelprojectsa_base_url/$bezelproject_overlay_path/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"; then
+          bezelproject_overlay_url="$bezelprojectsa_base_url/$bezelproject_overlay_path"
+        fi
+
+        if [ -n "$bezelproject_overlay_url" ]; then
+          download "$bezelproject_overlay_url/$encoded_rom_name.png" "$overlays_dir/$rom_name.png"
 
           # Link emulator configuration to overlay
           echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library_name/$rom_name.cfg"
