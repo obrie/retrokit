@@ -7,6 +7,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # This install individual overlays from The Bezel Project.  We use this instead of
 # The Bezel Project's installer in order to reduce the amount of disk space required.
+# 
+# Yes, this takes longer.  However, we save approx. ~10x in space.  We also don't
+# clone so that we don't have to pull down the entire repo any time there's a new
+# ROM added.
 install() {
   # Base URL for downloading overlays
   local bezelproject_name=$(system_setting '.themes.bezel')
@@ -22,7 +26,7 @@ install() {
   local overlays_dir="$retroarch_config_dir/overlay/GameBezels/$bezelproject_name"
 
   # Map emulator to library name
-  local default_emulator=""
+  local default_emulator=''
   declare -A emulators
   while IFS="$tab" read emulator library_name is_default; do
     emulators["$emulator/library_name"]=$library_name
@@ -33,6 +37,24 @@ install() {
   done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.key, .value.library_name, .value.default // false] | @tsv')
 
   if [ -n "$bezelproject_name" ]; then
+    # Get the list of files available in each repo
+    download "https://api.github.com/repos/thebezelproject/bezelproject-$bezelproject_name/git/trees/master?recursive=true" "$system_tmp_dir/bezelproject.list"
+    download "https://api.github.com/repos/thebezelproject/bezelprojectsa-$bezelproject_name/git/trees/master?recursive=true" "$system_tmp_dir/bezelprojectsa.list"
+
+    # Get the list of roms available in Theme-style repo
+    declare -A themeRoms
+    while read config_file; do
+      local rom_name=$(basename "$config_file" '.cfg')
+      themeRoms["$rom_name"]=1
+    done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelproject.list" | sort | uniq)
+
+    # Get the list of roms available in System-style repo
+    declare -A systemRoms
+    while read config_file; do
+      local rom_name=$(basename "$config_file" '.cfg')
+      systemRoms["$rom_name"]=1
+    done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelprojectsa.list" | sort | uniq)
+
     # Copy over the default overlay
     local input_overlay=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
     local input_overlay_name=$(basename "$input_overlay" .cfg)
@@ -55,13 +77,14 @@ install() {
         # There's a lot of inconsistency between the System-Style and Theme-style repos.  If Theme-Style isn't
         # available, we fall back to System-Style.
         local bezelproject_overlay_url=""
-        if download "$bezelproject_base_url/$bezelproject_overlay_path/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"; then
+        if [ "${themeRoms["$rom_name"]}" == '1' ]; then
           bezelproject_overlay_url="$bezelproject_base_url/$bezelproject_overlay_path"
-        elif download "$bezelprojectsa_base_url/$bezelproject_overlay_path/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"; then
+        elif [ "${systemRoms["$rom_name"]}" == '1' ]; then
           bezelproject_overlay_url="$bezelprojectsa_base_url/$bezelproject_overlay_path"
         fi
 
         if [ -n "$bezelproject_overlay_url" ]; then
+          download "$bezelproject_overlay_url/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"
           download "$bezelproject_overlay_url/$encoded_rom_name.png" "$overlays_dir/$rom_name.png"
 
           # Link emulator configuration to overlay
