@@ -49,7 +49,7 @@ install() {
       # Make sure this is a libretro core
       if [ -n "$library_name" ]; then
         # Install overlay (if available)
-        if download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.cfg" "$overlays_dir/$rom_name.cfg"
+        if download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.cfg" "$overlays_dir/$rom_name.cfg"; then
           download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.png" "$overlays_dir/$rom_name.png"
 
           # Link emulator configuration to overlay
