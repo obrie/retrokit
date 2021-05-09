@@ -17,13 +17,13 @@ install() {
   # Map emulator to library name
   local default_emulator=""
   declare -A emulators
-  while IFS="$tab" read emulator core_name library_name is_default; do
+  while IFS="$tab" read emulator library_name is_default; do
     emulators["$emulator/library_name"]=$library_name
 
     if [ "$is_default" == "true" ]; then
       default_emulator=$emulator
     fi
-  done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.library_name, .value.default // false] | @tsv')
+  done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.key, .value.library_name, .value.default // false] | @tsv')
 
   local name=$(system_setting '.themes.bezel')
 
