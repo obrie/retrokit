@@ -53,7 +53,7 @@ install() {
           download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.png" "$overlays_dir/$rom_name.png"
 
           # Link emulator configuration to overlay
-          echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library/$rom_name.cfg"
+          echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library_name/$rom_name.cfg"
         else
           echo "[$rom_name] No overlay available"
         fi
