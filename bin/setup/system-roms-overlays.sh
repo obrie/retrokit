@@ -48,12 +48,15 @@ install() {
 
       # Make sure this is a libretro core
       if [ -n "$library_name" ]; then
-        # Install overlay
-        download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.cfg" "$overlays_dir/$rom_name.cfg"
-        download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.png" "$overlays_dir/$rom_name.png"
+        # Install overlay (if available)
+        if download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.cfg" "$overlays_dir/$rom_name.cfg"
+          download "$bezelproject_base_url/$bezelproject_overlay_path/$rom_name.png" "$overlays_dir/$rom_name.png"
 
-        # Link emulator configuration to overlay
-        echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library/$rom_name.cfg"
+          # Link emulator configuration to overlay
+          echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library/$rom_name.cfg"
+        else
+          echo "[$rom_name] No overlay available"
+        fi
       fi
     done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
   fi
