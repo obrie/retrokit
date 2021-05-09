@@ -231,6 +231,9 @@ download() {
   if [ ! -s "$target" ] || [ "$force" == "true" ]; then
     echo "Downloading $url"
 
+    # Ensure target directory exists
+    mkdir -p "$(dirname "$target")"
+
     # Download via curl
     $cmd curl -fL# -o "$target.tmp" "$url"
 
