@@ -29,7 +29,7 @@ install() {
 
   if [ -n "$name" ]; then
     # Copy over the default overlay
-    local input_overlay=$(crudini --get "/opt/retropie/config/$system/retroarch.cfg" '' 'input_overlay')
+    local input_overlay=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
     local input_overlay_name=$(basename "$input_overlay" .cfg)
     download "$bezelproject_url/overlay/$input_overlay_name.cfg" "$retroarch_config_dir/overlay/$input_overlay_name.cfg"
     download "$bezelproject_url/overlay/$input_overlay_name.png" "$retroarch_config_dir/overlay/$input_overlay_name.png"
