@@ -67,12 +67,26 @@ install() {
   download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/raw/master/retroarch/overlay/$system_image_filename" "$system_config_dir/$system_image_filename"
   create_overlay_config "$system_config_path" "$system_image_filename"
 
+  # Arcade: Special handling for Vertical config
+  if [ "$system" == 'arcade' ]; then
+    download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/raw/master/retroarch/overlay/MAME-Vertical.png" "$system_config_dir/MAME-Vertical.png"
+    create_overlay_config "$system_config_dir/MAME-Vertical.cfg" "MAME-Vertical.png"
+  fi
+
   # Get the list of overlay images available
   echo "Loading list of available overlays..."
   declare -A overlay_urls
   for repo in "${bezelproject_repos[@]}"; do
     local github_tree_path="$system_tmp_dir/$repo.list"
-    download "https://api.github.com/repos/thebezelproject/$repo/git/trees/master?recursive=true" "$github_tree_path"
+    if [ ! -f "$github_tree_path" ]; then
+      # Get the Tree SHA for the directory storing the images
+      local parent_tree_path=$(dirname "$bezelproject_overlay_path")
+      local sub_tree_name=$(basename "$bezelproject_overlay_path")
+      local tree_sha=$(curl -s "https://api.github.com/repos/thebezelproject/$repo/contents/retroarch/$parent_tree_path" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
+
+      # Get the list of files at that sub-tree
+      download "https://api.github.com/repos/thebezelproject/$repo/git/trees/$tree_sha" "$github_tree_path"
+    fi
 
     while IFS="$tab" read rom_name encoded_rom_name ; do
       # Generate a unique identifier for this rom
@@ -81,12 +95,12 @@ install() {
       if [ -z "${overlay_urls["$rom_id"]}" ]; then
         overlay_urls["$rom_id"]="https://github.com/thebezelproject/$repo/raw/master/retroarch/$bezelproject_overlay_path/$encoded_rom_name.png"
       fi
-    done < <(jq -r '.tree[].path | select(. | contains(".cfg")) | split("/")[-1] | sub("\\.cfg$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
+    done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
   done
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS='^' read rom_name parent_name emulator; do
+  while IFS='^' read rom_name parent_name emulator orientation; do
     local group_name=${parent_name:-$rom_name}
 
     # Use the default emulator if one isn't specified
@@ -100,10 +114,23 @@ install() {
       continue
     fi
 
+    # Create directory storing the emulator configuration
+    local emulator_config_dir="$retroarch_config_dir/config/$library_name"
+    mkdir -p "$emulator_config_dir"
+
     # Look up either by the current rom or the parent rom
     local url=${overlay_urls[$(clean_rom_name "$rom_name")]:-${overlay_urls[$(clean_rom_name "$group_name")]}}
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
+
+      # Arcade: Handle Vertical configurations
+      if [ "$system" == 'arcade' ] && [ "$orientation" == 'vertical' ]; then
+        # Link emulator/rom retroarch config to system vertical overlay config
+        cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
+input_overlay = "/opt/retropie/configs/all/retroarch/overlay/MAME-Vertical.cfg"
+EOF
+      fi
+
       continue
     fi
 
@@ -111,17 +138,15 @@ install() {
     local image_filename="$group_name.png"
     download "$url" "$overlays_dir/$image_filename"
 
-    # Link overlay configuration to image
+    # Create overlay config
     local overlay_config_path="$overlays_dir/$rom_name.cfg"
     create_overlay_config "$overlay_config_path" "$image_filename"
 
-    # Link emulator configuration to overlay config
-    local emulator_config_dir="$retroarch_config_dir/config/$library_name"
-    mkdir -p "$emulator_config_dir"
+    # Link emulator/rom retroarch config to overlay config
     cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$overlay_config_path"
 EOF
-  done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
+  done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator, .orientation] | @tsv' | tr "$tab" "^")
 }
 
 uninstall() {
