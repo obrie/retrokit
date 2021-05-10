@@ -24,7 +24,7 @@ install() {
       download "$base_url/$default_image_path" "$overlays_dir/$system-vertical.png"
       create_overlay_config "$overlays_dir/$system-vertical.cfg" "$system-vertical.png"
     fi
-  done < <(system_setting '.overlays.repos | [.repo, .branch, .default, .vertical] | join("^")')
+  done < <(system_setting '.overlays.repos[]? | [.repo, .branch, .default, .vertical] | join("^")')
 }
 
 uninstall() {

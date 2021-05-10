@@ -16,6 +16,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # clone so that we don't have to pull down the entire repo any time there's a new
 # ROM added.
 install() {
+  # Check if we're actually installing overlays
+  if ! system_setting '.overlays.repos'; then
+    return
+  fi
+
   # The directory to which we'll install the configurations and images
   local overlays_dir="$retroarch_config_dir/overlay/$system"
   mkdir -p "$overlays_dir"
@@ -61,7 +66,7 @@ install() {
         overlay_urls["$rom_id"]="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
       fi
     done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
-  done < <(system_setting '.overlays.repos | [.repo, .branch, .path, .vertical] | join("^")')
+  done < <(system_setting '.overlays.repos[] | [.repo, .branch, .path, .vertical] | join("^")')
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
