@@ -17,6 +17,7 @@ class Machine:
         romset: ROMSet,
         name: str,
         description: str = '',
+        orientation: str = 'horizontal',
         parent_name: Optional[str] = None,
         bios_name: Optional[str] = None,
         sample_name: Optional[str] = None,
@@ -30,6 +31,7 @@ class Machine:
         self.romset = romset
         self.name = name
         self.description = description.lower()
+        self.orientation = orientation
         self.parent_name = parent_name
         self.bios_name = bios_name
         self.sample_name = sample_name
@@ -54,6 +56,12 @@ class Machine:
         # Controls
         controls = {control.get('name') for control in xml.findall('control')}
 
+        # Orientation
+        if xml.findall('video'):
+            orientation = xml.findall('video')[0].get('orientation')
+        else:
+            orientation = 'horizontal'
+
         # Parent / BIOS
         parent_name = xml.get('cloneof')
         bios_name = xml.get('romof')
@@ -72,6 +80,7 @@ class Machine:
             romset,
             xml.get('name'),
             description=xml.find('description').text,
+            orientation=orientation,
             parent_name=parent_name,
             bios_name=bios_name,
             sample_name=sample_name,
@@ -252,6 +261,7 @@ class Machine:
             'name': self.name,
             'parent': self.parent_name,
             'emulator': self.emulator,
+            'orientation': self.orientation,
         }
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
