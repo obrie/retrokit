@@ -10,6 +10,9 @@ install() {
   local cheats_name=$(system_setting '.cheats')
 
   if [ -n "$cheats_name" ]; then
+    # Load emulator data for finding the library_name
+    load_emulator_data
+
     # Location of the cheats on the filesystem
     local cheat_database_path="$retroarch_config_dir/cheats"
     local source_cheats_dir="$cheat_database_path/$cheats_name"
@@ -46,25 +49,23 @@ install() {
     done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
 
     # Link the named Retroarch cheats to the emulator in the system cheats namespace
-    while IFS="$tab" read emulator library_name; do
+    while IFS="^" read rom_name emulator; do
+      emulator=${emulator:-default}
+      local library_name=${emulators["$emulator/library_name"]}
       local target_cheats_dir="$system_cheat_database_path/$library_name"
 
-      # Reset the directory
-      rm -rf "$target_cheats_dir"
+      # Ensure the target exists
       mkdir -p "$target_cheats_dir"
 
       # We can't just symlink to the source directory because the cheat filenames
       # don't always match the ROM names.  As a result, we need to try to do some
       # smart matching to find the corresponding cheat file.
-      while IFS= read -r rom_filename; do
-        local rom_name="${rom_filename%.*}"
-        local cheat_name=${cheat_mappings["$(clean_rom_name "$rom_name")"]}
+      local cheat_name=${cheat_mappings["$(clean_rom_name "$rom_name")"]}
 
-        if [ -n "$cheat_name" ]; then
-          ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
-        fi
-      done < <(find "$HOME/RetroPie/roms/$system" -type l -printf '"%p"\n' | xargs -I{} basename "{}" | sort | uniq)
-    done < <(system_setting '.emulators | try to_entries[] | select(.value.library_name) | [.key, .value.library_name] | @tsv')
+      if [ -n "$cheat_name" ]; then
+        ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
+      fi
+    done < <(romkit_cache_list | jq -r '[.name, .emulator] | join("^")')
   fi
 }
 
