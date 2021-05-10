@@ -68,7 +68,7 @@ install() {
 
   # Get the list of overlay images available
   declare -A overlay_urls
-  for repo in $bezelproject_repos; do
+  for repo in "${bezelproject_repos[@]}"; do
     local github_tree_path="$system_tmp_dir/$repo.list"
     download "https://api.github.com/repos/thebezelproject/$repo/git/trees/master?recursive=true" "$github_tree_path"
 
