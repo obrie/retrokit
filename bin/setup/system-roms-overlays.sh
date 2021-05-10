@@ -43,6 +43,7 @@ install() {
   echo "Loading list of available overlays..."
   declare -A overlay_urls
   while IFS='^' read repo branch rom_images_path vertical_image_path ; do
+    branch=${branch:-master}
     if [ -n "$vertical_image_path" ]; then
       supports_vertical_overlays=true
     fi

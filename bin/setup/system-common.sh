@@ -75,7 +75,7 @@ create_overlay_config() {
   cat > "$path" <<EOF
 overlays = 1
 
-overlay0_overlay = $overlay_filename
+overlay0_overlay = "$overlay_filename"
 
 overlay0_full_screen = true
 
