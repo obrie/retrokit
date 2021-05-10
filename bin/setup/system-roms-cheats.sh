@@ -29,7 +29,7 @@ install() {
     declare -A cheat_mappings
     while IFS= read -r cheat_filename; do
       local cheat_name="${cheat_filename%.*}"
-      local key="$(clean_rom_name "$cheat_name")"
+      local key="$(normalize_rom_name "$cheat_name")"
       local existing_mapping=${cheat_mappings["$key"]}
 
       # Only re-map if we need to.  This prioritizes exact matches.
@@ -38,7 +38,7 @@ install() {
 
         # In some cases, multiple ROMs are combined into a single cheat file
         while read -r sub_cheat_name; do
-          key="$(clean_rom_name "$sub_cheat_name")"
+          key="$(normalize_rom_name "$sub_cheat_name")"
           existing_mapping=${cheat_mappings["$key"]}
 
           if [ -z "$existing_mapping" ]; then
@@ -60,7 +60,7 @@ install() {
       # We can't just symlink to the source directory because the cheat filenames
       # don't always match the ROM names.  As a result, we need to try to do some
       # smart matching to find the corresponding cheat file.
-      local cheat_name=${cheat_mappings["$(clean_rom_name "$rom_name")"]}
+      local cheat_name=${cheat_mappings["$(normalize_rom_name "$rom_name")"]}
 
       if [ -n "$cheat_name" ]; then
         ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"

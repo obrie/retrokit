@@ -36,11 +36,18 @@ fi
 # * Lowercase
 # * Exclude flags
 # * Exclude unimportant characters (dashes, spaces, etc.)
-clean_rom_name() {
+normalize_rom_name() {
   local name="$1"
+
+  # Lowercase
   name="${name,,}"
+
+  # Remove flag modifiers
   name="${name%% \(*}"
-  name="${name//[^a-zA-Z0-9]/}"
+
+  # Remove non-alphanumeric characters
+  name="${name//[^a-z0-9]/}"
+
   echo "$name"
 }
 

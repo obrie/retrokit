@@ -6,34 +6,19 @@ system='c64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../system-common.sh"
 
-normalize_name() {
-  local name="$1"
-
-  # Remove flag modifiers
-  name="${name//\(*/}"
-
-  # Lowercase
-  name="${name,,}"
-
-  # Remove non-alphanumeric characters
-  name="${name//[^a-z0-9]/}"
-
-  echo "$name"
-}
-
 install_joystick_selections() {
   download 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=tsv' "$system_tmp_dir/c64_dreams.tsv"
 
   # Map normalized name to rom name
   declare -A installed_roms
   while read -r rom_name; do
-    local normalized_name=$(normalize_name "$rom_name")
+    local normalized_name=$(normalize_rom_name "$rom_name")
     installed_roms["$normalized_name"]="$rom_name"
   done < <(romkit_cli list --log-level ERROR | jq -r '.name')
 
   # Set joyport based on the above
   while IFS='^' read -r color unknown title type multidisk joyport other; do
-    local normalized_name=$(normalize_name "$title")
+    local normalized_name=$(normalize_rom_name "$title")
     if [ -z "$normalized_name" ]; then
       continue
     fi

@@ -53,7 +53,7 @@ install() {
 
     while IFS="$tab" read rom_name encoded_rom_name ; do
       # Generate a unique identifier for this rom
-      local rom_id=$(clean_rom_name "$rom_name")
+      local rom_id=$(normalize_rom_name "$rom_name")
 
       if [ -z "${overlay_urls["$rom_id"]}" ]; then
         overlay_urls["$rom_id"]="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
@@ -80,7 +80,7 @@ install() {
     mkdir -p "$emulator_config_dir"
 
     # Look up either by the current rom or the parent rom
-    local url=${overlay_urls[$(clean_rom_name "$rom_name")]:-${overlay_urls[$(clean_rom_name "$group_name")]}}
+    local url=${overlay_urls[$(normalize_rom_name "$rom_name")]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
 
