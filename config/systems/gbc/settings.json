@@ -1,7 +1,17 @@
 {
   "system": "gbc",
-  "themes": {
-    "bezel": "GBC"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-GBC",
+        "path": "retroarch/overlay/GameBezels/GBC",
+        "default": "retroarch/overlay/Nintendo-Game-Boy-Color.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-GBC",
+        "path": "retroarch/overlay/GameBezels/GBC"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

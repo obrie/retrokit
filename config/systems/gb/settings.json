@@ -1,7 +1,17 @@
 {
   "system": "gb",
-  "themes": {
-    "bezel": "GB"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-GB",
+        "path": "retroarch/overlay/GameBezels/GB",
+        "default": "retroarch/overlay/Nintendo-Game-Boy.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-GB",
+        "path": "retroarch/overlay/GameBezels/GB"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

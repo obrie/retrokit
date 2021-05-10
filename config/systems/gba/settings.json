@@ -1,7 +1,17 @@
 {
   "system": "gba",
-  "themes": {
-    "bezel": "GBA"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-GBA",
+        "path": "retroarch/overlay/GameBezels/GBA",
+        "default": "retroarch/overlay/Nintendo-Game-Boy-Advance.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-GBA",
+        "path": "retroarch/overlay/GameBezels/GBA"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

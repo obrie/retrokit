@@ -1,7 +1,18 @@
 {
   "system": "arcade",
-  "themes": {
-    "bezel": "MAME"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-MAME",
+        "path": "retroarch/overlay/GameBezels/MAME",
+        "default": "retroarch/overlay/MAME-horizontal.png",
+        "vertical": "retroarch/overlay/MAME-vertical.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-MAME",
+        "path": "retroarch/overlay/GameBezels/MAME"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "arcadedb"]

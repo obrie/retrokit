@@ -1,7 +1,17 @@
 {
   "system": "pcengine",
-  "themes": {
-    "bezel": "PCEngine"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-PCEngine",
+        "path": "retroarch/overlay/GameBezels/PCEngine",
+        "default": "retroarch/overlay/NEC-PC-Engine.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-PCEngine",
+        "path": "retroarch/overlay/GameBezels/PCEngine"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

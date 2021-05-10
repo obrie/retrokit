@@ -46,7 +46,7 @@ find_overrides() {
           echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
         fi
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
+    done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | join("^")')
   fi
 }
 

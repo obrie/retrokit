@@ -1,7 +1,17 @@
 {
   "system": "c64",
-  "themes": {
-    "bezel": "C64"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-C64",
+        "path": "retroarch/overlay/GameBezels/C64",
+        "default": "retroarch/overlay/Commodore-64.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-C64",
+        "path": "retroarch/overlay/GameBezels/C64"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

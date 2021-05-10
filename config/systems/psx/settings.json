@@ -1,7 +1,17 @@
 {
   "system": "psx",
-  "themes": {
-    "bezel": "PSX"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-PSX",
+        "path": "retroarch/overlay/GameBezels/PSX",
+        "default": "retroarch/overlay/Sony-Playstation.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-PSX",
+        "path": "retroarch/overlay/GameBezels/PSX"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"],

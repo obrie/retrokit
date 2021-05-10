@@ -1,7 +1,17 @@
 {
   "system": "n64",
-  "themes": {
-    "bezel": "N64"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-N64",
+        "path": "retroarch/overlay/GameBezels/N64",
+        "default": "retroarch/overlay/Nintendo-64.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-N64",
+        "path": "retroarch/overlay/GameBezels/N64"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

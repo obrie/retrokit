@@ -1,7 +1,17 @@
 {
   "system": "mastersystem",
-  "themes": {
-    "bezel": "MasterSystem"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-MasterSystem",
+        "path": "retroarch/overlay/GameBezels/MasterSystem",
+        "default": "retroarch/overlay/Sega-Master-System.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-MasterSystem",
+        "path": "retroarch/overlay/GameBezels/MasterSystem"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

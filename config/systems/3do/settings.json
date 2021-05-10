@@ -1,7 +1,17 @@
 {
   "system": "3do",
-  "themes": {
-    "bezel": "3DO"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-3DO",
+        "path": "retroarch/overlay/GameBezels/3DO",
+        "default": "retroarch/overlay/Panasonic-3DO.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-3DO",
+        "path": "retroarch/overlay/GameBezels/3DO"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

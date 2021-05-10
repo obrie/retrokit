@@ -1,7 +1,17 @@
 {
   "system": "snes",
-  "themes": {
-    "bezel": "SNES"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-SNES",
+        "path": "retroarch/overlay/GameBezels/SNES",
+        "default": "retroarch/overlay/Super-Nintendo-Entertainment-System.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-SNES",
+        "path": "retroarch/overlay/GameBezels/SNES"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

@@ -1,7 +1,17 @@
 {
   "system": "atari2600",
-  "themes": {
-    "bezel": "Atari2600"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Atari2600",
+        "path": "retroarch/overlay/GameBezels/Atari2600",
+        "default": "retroarch/overlay/Atari-2600.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Atari2600",
+        "path": "retroarch/overlay/GameBezels/Atari2600"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "mobygames"]

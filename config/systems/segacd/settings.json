@@ -1,7 +1,17 @@
 {
   "system": "segacd",
-  "themes": {
-    "bezel": "SegaCD"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-SegaCD",
+        "path": "retroarch/overlay/GameBezels/SegaCD",
+        "default": "retroarch/overlay/Sega-CD.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-SegaCD",
+        "path": "retroarch/overlay/GameBezels/SegaCD"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

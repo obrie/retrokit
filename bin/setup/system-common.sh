@@ -63,3 +63,22 @@ romkit_cache_list() {
 
   echo "$rom_install_list"
 }
+
+##############
+# Overlays
+##############
+
+create_overlay_config() {
+  local path=$1
+  local overlay_filename=$2
+
+  cat > "$path" <<EOF
+overlays = 1
+
+overlay0_overlay = $overlay_filename
+
+overlay0_full_screen = true
+
+overlay0_descs = 0
+EOF
+}

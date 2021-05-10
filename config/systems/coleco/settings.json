@@ -1,7 +1,17 @@
 {
   "system": "coleco",
-  "themes": {
-    "bezel": "ColecoVision"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-ColecoVision",
+        "path": "retroarch/overlay/GameBezels/ColecoVision",
+        "default": "retroarch/overlay/Colecovision.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-ColecoVision",
+        "path": "retroarch/overlay/GameBezels/ColecoVision"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

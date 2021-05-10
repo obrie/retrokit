@@ -1,7 +1,17 @@
 {
   "system": "gamegear",
-  "themes": {
-    "bezel": "GameGear"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-GameGear",
+        "path": "retroarch/overlay/GameBezels/GameGear",
+        "default": "retroarch/overlay/Sega-Game-Gear.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-GameGear",
+        "path": "retroarch/overlay/GameBezels/GameGear"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

@@ -1,7 +1,17 @@
 {
   "system": "megadrive",
-  "themes": {
-    "bezel": "MegaDrive"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-MegaDrive",
+        "path": "retroarch/overlay/GameBezels/Megadrive",
+        "default": "retroarch/overlay/Sega-Mega-Drive.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-MegaDrive",
+        "path": "retroarch/overlay/GameBezels/Megadrive"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]

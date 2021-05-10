@@ -1,7 +1,17 @@
 {
   "system": "atari7800",
-  "themes": {
-    "bezel": "Atari7800"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Atari7800",
+        "path": "retroarch/overlay/GameBezels/Atari7800",
+        "default": "retroarch/overlay/Atari-7800.png"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Atari7800",
+        "path": "retroarch/overlay/GameBezels/Atari7800"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper"]
