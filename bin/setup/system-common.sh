@@ -82,3 +82,23 @@ overlay0_full_screen = true
 overlay0_descs = 0
 EOF
 }
+
+##############
+# Emulators
+##############
+
+# Load emulator info into the global variable $emulators
+load_emulators() {
+  declare -A emulators
+
+  while IFS="$tab" read emulator core_name library_name is_default; do
+    emulators["$emulator/core_name"]=$core_name
+    emulators["$emulator/library_name"]=$library_name
+
+    if [ "$is_default" == "true" ]; then
+      emulators['default']=$emulator
+      emulators['default/core_name']=$core_name
+      emulators['default/library_name']=$library_name
+    fi
+  done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name, .value.library_name, .value.default // false] | @tsv')
+}

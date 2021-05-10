@@ -21,20 +21,12 @@ install() {
     return
   fi
 
+  # Load emulator data
+  load_emulators
+
   # The directory to which we'll install the configurations and images
   local overlays_dir="$retroarch_config_dir/overlay/$system"
   mkdir -p "$overlays_dir"
-
-  # Map emulator to library name
-  local default_emulator=''
-  declare -A emulators
-  while IFS="$tab" read emulator library_name is_default; do
-    emulators["$emulator/library_name"]=$library_name
-
-    if [ "$is_default" == "true" ]; then
-      default_emulator=$emulator
-    fi
-  done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.key, .value.library_name, .value.default // false] | @tsv')
 
   # Track whether this system supports vertical overlays
   local supports_vertical_overlays=false
@@ -75,10 +67,7 @@ install() {
     local group_name=${parent_name:-$rom_name}
 
     # Use the default emulator if one isn't specified
-    if [ -z "$emulator" ]; then
-      emulator=$default_emulator
-    fi
-    local library_name=${emulators["$emulator/library_name"]}
+    local library_name=${emulators["${emulator:-default}/library_name"]}
 
     # Make sure this is a libretro core
     if [ -z "$library_name" ]; then
