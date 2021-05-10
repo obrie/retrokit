@@ -46,7 +46,7 @@ install() {
   fi
 
   # The directory to which we'll install the configurations and images
-  local overlays_dir="$retroarch_config_dir/overlay/GameBezels/$bezelproject_theme"
+  local overlays_dir="$retroarch_config_dir/$bezelproject_overlay_path"
   mkdir -p "$overlays_dir"
 
   # Map emulator to library name
