@@ -47,6 +47,7 @@ install() {
 
   # The directory to which we'll install the configurations and images
   local overlays_dir="$retroarch_config_dir/overlay/GameBezels/$bezelproject_theme"
+  mkdir -p "$overlays_dir"
 
   # Map emulator to library name
   local default_emulator=''
@@ -67,6 +68,7 @@ install() {
   create_overlay_config "$system_config_path" "$system_image_filename"
 
   # Get the list of overlay images available
+  echo "Loading list of available overlays..."
   declare -A overlay_urls
   for repo in "${bezelproject_repos[@]}"; do
     local github_tree_path="$system_tmp_dir/$repo.list"
@@ -114,7 +116,9 @@ install() {
     create_overlay_config "$overlay_config_path" "$image_filename"
 
     # Link emulator configuration to overlay config
-    cat > "$retroarch_config_dir/config/$library_name/$rom_name.cfg" <<EOF
+    local emulator_config_dir="$retroarch_config_dir/config/$library_name"
+    mkdir -p "$emulator_config_dir"
+    cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$overlay_config_path"
 EOF
   done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
