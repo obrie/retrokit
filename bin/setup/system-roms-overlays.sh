@@ -79,12 +79,14 @@ install() {
       if [ -z "${overlay_urls["$rom_id"]}" ]; then
         overlay_urls["$rom_id"]="https://github.com/thebezelproject/$repo/raw/master/retroarch/$bezelproject_overlay_path/$encoded_rom_name.png"
       fi
-    done < <(jq -r '.tree[].path | select(. | contains(".cfg")) | split("/")[-1] | split(".")[0] | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
+    done < <(jq -r '.tree[].path | select(. | contains(".cfg")) | split("/")[-1] | sub("\\.cfg$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
   done
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
   while IFS='^' read rom_name parent_name emulator; do
+    local group_name=${parent_name:-$rom_name}
+
     # Use the default emulator if one isn't specified
     if [ -z "$emulator" ]; then
       emulator=$default_emulator
@@ -97,14 +99,14 @@ install() {
     fi
 
     # Look up either by the current rom or the parent rom
-    local url=${overlay_urls[$(clean_rom_name "$rom_name")]:-${overlay_urls[$(clean_rom_name "$parent_name")]}}
+    local url=${overlay_urls[$(clean_rom_name "$rom_name")]:-${overlay_urls[$(clean_rom_name "$group_name")]}}
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
       continue
     fi
 
     # We have an image: download it
-    local image_filename="${parent_name:-$rom_name}.png"
+    local image_filename="$group_name.png"
     download "$url" "$overlays_dir/$image_filename"
 
     # Link overlay configuration to image
