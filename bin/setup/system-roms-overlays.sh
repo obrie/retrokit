@@ -65,9 +65,10 @@ install() {
   # to romkit
   while IFS='^' read rom_name parent_name emulator orientation; do
     local group_name=${parent_name:-$rom_name}
+    emulator=${emulator:-default}
 
     # Use the default emulator if one isn't specified
-    local library_name=${emulators["${emulator:-default}/library_name"]}
+    local library_name=${emulators["$emulator/library_name"]}
 
     # Make sure this is a libretro core
     if [ -z "$library_name" ]; then
