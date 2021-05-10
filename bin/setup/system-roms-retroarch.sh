@@ -8,20 +8,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 find_overrides() {
   local extension=$1
 
-  # Map emulator to library name
-  local default_emulator=""
-  declare -A emulators
-  while IFS="$tab" read emulator core_name library_name is_default; do
-    emulators["$emulator/core_name"]=$core_name
-    emulators["$emulator/library_name"]=$library_name
-
-    if [ "$is_default" == "true" ]; then
-      default_emulator=$emulator
-    fi
-  done < <(system_setting '.emulators | to_entries[] | select(.value.core_name) | [.key, .value.core_name, .value.library_name, .value.default // false] | @tsv')
+  # Load core/library info for the emulators
+  load_emulator_data
 
   if [ -d "$system_config_dir/retroarch" ]; then
     while IFS="^" read rom_name parent_name emulator; do
+      emulator=${emulator:-default}
+
       # Find a file for either the rom or its parent
       local override_file=""
       if [ -f "$system_config_dir/retroarch/$rom_name.$extension" ]; then
@@ -31,11 +24,6 @@ find_overrides() {
       fi
 
       if [ -n "$override_file" ]; then
-        # Use the default emulator if one isn't specified
-        if [ -z "$emulator" ]; then
-          emulator=$default_emulator
-        fi
-
         # Look up emulator attributes as those are the important ones
         # for configuration purposes
         local core_name=${emulators["$emulator/core_name"]}

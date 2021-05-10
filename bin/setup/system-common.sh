@@ -88,7 +88,7 @@ EOF
 ##############
 
 # Load emulator info into the global variable $emulators
-load_emulators() {
+load_emulator_data() {
   declare -A -g emulators
 
   while IFS="$tab" read emulator core_name library_name is_default; do

@@ -22,7 +22,7 @@ install() {
   fi
 
   # Load emulator data
-  load_emulators
+  load_emulator_data
 
   # The directory to which we'll install the configurations and images
   local overlays_dir="$retroarch_config_dir/overlay/$system"
