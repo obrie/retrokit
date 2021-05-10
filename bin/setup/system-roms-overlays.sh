@@ -39,14 +39,14 @@ install() {
   local bezelproject_repos=("bezelproject-$bezelproject_theme" "bezelprojectsa-$bezelproject_theme")
   
   # Path to rom-specific overlays
-  local bezelproject_overlay_path="overlay/GameBezels/$bezelproject_name"
+  local bezelproject_overlay_path="overlay/GameBezels/$bezelproject_theme"
   if [ "$system" == 'arcade' ]; then
     # Arcade override for unknown reasons
     bezelproject_overlay_path='overlay/ArcadeBezels'
   fi
 
   # The directory to which we'll install the configurations and images
-  local overlays_dir="$retroarch_config_dir/overlay/GameBezels/$bezelproject_name"
+  local overlays_dir="$retroarch_config_dir/overlay/GameBezels/$bezelproject_theme"
 
   # Map emulator to library name
   local default_emulator=''
@@ -63,25 +63,23 @@ install() {
   local system_config_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
   local system_config_dir=$(dirname "$system_config_path")
   local system_image_filename="$(basename "$system_config_path" .cfg).png"
-  download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/overlay/$system_image_filename" "$system_config_dir/$system_image_filename"
+  download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/raw/master/retroarch/overlay/$system_image_filename" "$system_config_dir/$system_image_filename"
   create_overlay_config "$system_config_path" "$system_image_filename"
 
   # Get the list of overlay images available
-  declare -A rom_images
+  declare -A overlay_urls
   for repo in $bezelproject_repos; do
     local github_tree_path="$system_tmp_dir/$repo.list"
     download "https://api.github.com/repos/thebezelproject/$repo/git/trees/master?recursive=true" "$github_tree_path"
 
-    while read config_filename; do
+    while IFS="$tab" read rom_name encoded_rom_name ; do
       # Generate a unique identifier for this rom
-      local rom_name=${config_filename%%.*}
       local rom_id=$(clean_rom_name "$rom_name")
-      local encoded_rom_name=$(python -c 'import urllib, sys; print urllib.quote(sys.argv[1])' "$rom_name")
 
-      if [ -z "${rom_urls["$rom_id"]}" ]; then
-        rom_images["$rom_id"]="https://github.com/thebezelproject/$repo/raw/master/retroarch/$bezelproject_overlay_path/$encoded_rom_name.png"
+      if [ -z "${overlay_urls["$rom_id"]}" ]; then
+        overlay_urls["$rom_id"]="https://github.com/thebezelproject/$repo/raw/master/retroarch/$bezelproject_overlay_path/$encoded_rom_name.png"
       fi
-    done < <(grep -oE "[^/]+.cfg" "$github_tree_path" | sort | uniq)
+    done < <(jq -r '.tree[].path | select(. | contains(".cfg")) | split("/")[-1] | split(".")[0] | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
   done
 
   # Download overlays for installed roms and their associated emulator according
@@ -99,7 +97,7 @@ install() {
     fi
 
     # Look up either by the current rom or the parent rom
-    local url=${rom_urls[$(clean_rom_name "$rom_name")]:-${rom_urls[$(clean_rom_name "$parent_name")]}}
+    local url=${overlay_urls[$(clean_rom_name "$rom_name")]:-${overlay_urls[$(clean_rom_name "$parent_name")]}}
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
       continue
