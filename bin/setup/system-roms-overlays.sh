@@ -61,8 +61,9 @@ install() {
 
   # Copy over the default system overlay
   local system_config_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
-  local system_image_filename="${system_config_path%%.*}.png"
-  download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/overlay/$system_image_filename" "$retroarch_config_dir/overlay/$system_image_filename"
+  local system_config_dir=$(dirname "$system_config_path")
+  local system_image_filename="$(basename "$system_config_path" .cfg).png"
+  download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/overlay/$system_image_filename" "$system_config_dir/$system_image_filename"
   create_overlay_config "$system_config_path" "$system_image_filename"
 
   # Get the list of overlay images available
