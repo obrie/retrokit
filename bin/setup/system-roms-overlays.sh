@@ -5,17 +5,40 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# This install individual overlays from The Bezel Project.  We use this instead of
-# The Bezel Project's installer in order to reduce the amount of disk space required.
+create_overlay_config() {
+  local path=$1
+  local overlay_filename=$2
+
+  cat > "$path" <<EOF
+overlays = 1
+
+overlay0_overlay = $overlay_filename
+
+overlay0_full_screen = true
+
+overlay0_descs = 0
+EOF
+}
+
+# This installs individual overlays from The Bezel Project.  We use this instead of
+# The Bezel Project's installer for two primary reasons:
 # 
-# Yes, this takes longer.  However, we save approx. ~10x in space.  We also don't
+# * It reduces the amount of disk space required by an order of magnitude
+# * The rom names don't always exactly match because either different regions are
+#   installed or the No-Intro DATs have changed over time
+# 
+# Yes, this takes longer.  However, the pros far outweigh the cons.  We also don't
 # clone so that we don't have to pull down the entire repo any time there's a new
 # ROM added.
 install() {
-  # Base URL for downloading overlays
-  local bezelproject_name=$(system_setting '.themes.bezel')
-  local bezelproject_base_url="https://github.com/thebezelproject/bezelproject-$bezelproject_name/raw/master/retroarch"
-  local bezelprojectsa_base_url="https://github.com/thebezelproject/bezelprojectsa-$bezelproject_name/raw/master/retroarch"
+  # BezelProject github repos
+  local bezelproject_theme=$(system_setting '.themes.bezel')
+  if [ -z "$bezelproject_theme" ]; then
+    return
+  fi
+  local bezelproject_repos=("bezelproject-$bezelproject_theme" "bezelprojectsa-$bezelproject_theme")
+  
+  # Path to rom-specific overlays
   local bezelproject_overlay_path="overlay/GameBezels/$bezelproject_name"
   if [ "$system" == 'arcade' ]; then
     # Arcade override for unknown reasons
@@ -36,65 +59,64 @@ install() {
     fi
   done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | [.key, .value.library_name, .value.default // false] | @tsv')
 
-  if [ -n "$bezelproject_name" ]; then
-    # Get the list of files available in each repo
-    download "https://api.github.com/repos/thebezelproject/bezelproject-$bezelproject_name/git/trees/master?recursive=true" "$system_tmp_dir/bezelproject.list"
-    download "https://api.github.com/repos/thebezelproject/bezelprojectsa-$bezelproject_name/git/trees/master?recursive=true" "$system_tmp_dir/bezelprojectsa.list"
+  # Copy over the default system overlay
+  local system_config_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
+  local system_image_filename="${system_config_path%%.*}.png"
+  download "https://github.com/thebezelproject/bezelproject-$bezelproject_theme/overlay/$system_image_filename" "$retroarch_config_dir/overlay/$system_image_filename"
+  create_overlay_config "$system_config_path" "$system_image_filename"
 
-    # Get the list of roms available in Theme-style repo
-    declare -A themeRoms
+  # Get the list of overlay images available
+  declare -A rom_images
+  for repo in $bezelproject_repos; do
+    local github_tree_path="$system_tmp_dir/$repo.list"
+    download "https://api.github.com/repos/thebezelproject/$repo/git/trees/master?recursive=true" "$github_tree_path"
+
     while read config_filename; do
+      # Generate a unique identifier for this rom
       local rom_name=${config_filename%%.*}
-      themeRoms["$rom_name"]=1
-    done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelproject.list" | sort | uniq)
+      local rom_id=$(clean_rom_name "$rom_name")
+      local encoded_rom_name=$(python -c 'import urllib, sys; print urllib.quote(sys.argv[1])' "$rom_name")
 
-    # Get the list of roms available in System-style repo
-    declare -A systemRoms
-    while read config_filename; do
-      local rom_name=${config_filename%%.*}
-      systemRoms["$rom_name"]=1
-    done < <(grep -oE "[^/]+.cfg" "$system_tmp_dir/bezelprojectsa.list" | sort | uniq)
-
-    # Copy over the default overlay
-    local input_overlay=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_overlay')
-    local input_overlay_name=$(basename "$input_overlay" .cfg)
-    download "$bezelproject_base_url/overlay/$input_overlay_name.cfg" "$retroarch_config_dir/overlay/$input_overlay_name.cfg"
-    download "$bezelproject_base_url/overlay/$input_overlay_name.png" "$retroarch_config_dir/overlay/$input_overlay_name.png"
-
-    # Download overlays for the associated emulator
-    while IFS="$tab" read rom_name emulator; do
-      # Use the default emulator if one isn't specified
-      if [ -z "$emulator" ]; then
-        emulator=$default_emulator
+      if [ -z "${rom_urls["$rom_id"]}" ]; then
+        rom_images["$rom_id"]="https://github.com/thebezelproject/$repo/raw/master/retroarch/$bezelproject_overlay_path/$encoded_rom_name.png"
       fi
-      local library_name=${emulators["$emulator/library_name"]}
+    done < <(grep -oE "[^/]+.cfg" "$github_tree_path" | sort | uniq)
+  done
 
-      # Make sure this is a libretro core
-      if [ -n "$library_name" ]; then
-        # Install overlay (if available)
-        local encoded_rom_name=$(python -c 'import urllib, sys; print urllib.quote(sys.argv[1])' "$rom_name")
+  # Download overlays for installed roms and their associated emulator according
+  # to romkit
+  while IFS='^' read rom_name parent_name emulator; do
+    # Use the default emulator if one isn't specified
+    if [ -z "$emulator" ]; then
+      emulator=$default_emulator
+    fi
+    local library_name=${emulators["$emulator/library_name"]}
 
-        # There's a lot of inconsistency between the System-Style and Theme-style repos.  If Theme-Style isn't
-        # available, we fall back to System-Style.
-        local bezelproject_overlay_url=""
-        if [ "${themeRoms["$rom_name"]}" == '1' ]; then
-          bezelproject_overlay_url="$bezelproject_base_url/$bezelproject_overlay_path"
-        elif [ "${systemRoms["$rom_name"]}" == '1' ]; then
-          bezelproject_overlay_url="$bezelprojectsa_base_url/$bezelproject_overlay_path"
-        fi
+    # Make sure this is a libretro core
+    if [ -z "$library_name" ]; then
+      continue
+    fi
 
-        if [ -n "$bezelproject_overlay_url" ]; then
-          download "$bezelproject_overlay_url/$encoded_rom_name.cfg" "$overlays_dir/$rom_name.cfg"
-          download "$bezelproject_overlay_url/$encoded_rom_name.png" "$overlays_dir/$rom_name.png"
+    # Look up either by the current rom or the parent rom
+    local url=${rom_urls[$(clean_rom_name "$rom_name")]:-${rom_urls[$(clean_rom_name "$parent_name")]}}
+    if [ -z "$url" ]; then
+      echo "[$rom_name] No overlay available"
+      continue
+    fi
 
-          # Link emulator configuration to overlay
-          echo "input_overlay = \"$overlays_dir/$rom_name.cfg\"" > "$retroarch_config_dir/config/$library_name/$rom_name.cfg"
-        else
-          echo "[$rom_name] No overlay available"
-        fi
-      fi
-    done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
-  fi
+    # We have an image: download it
+    local image_filename="${parent_name:-$rom_name}.png"
+    download "$url" "$overlays_dir/$image_filename"
+
+    # Link overlay configuration to image
+    local overlay_config_path="$overlays_dir/$rom_name.cfg"
+    create_overlay_config "$overlay_config_path" "$image_filename"
+
+    # Link emulator configuration to overlay config
+    cat > "$retroarch_config_dir/config/$library_name/$rom_name.cfg" <<EOF
+input_overlay = "$overlay_config_path"
+EOF
+  done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator] | @tsv' | tr "$tab" "^")
 }
 
 uninstall() {

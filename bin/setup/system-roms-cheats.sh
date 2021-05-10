@@ -5,19 +5,6 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Generates a distinct name for a cheat file so that we can consistently
-# look it up based on a ROM name.
-# * Lowercase
-# * Exclude flags
-# * Exclude unimportant characters (dashes, spaces, etc.)
-clean_cheat_name() {
-  local name="$1"
-  name="${name,,}"
-  name="${name%% \(*}"
-  name="${name//[^a-zA-Z0-9]/}"
-  echo "$name"
-}
-
 install() {
   # Name of the cheats for this system
   local cheats_name=$(system_setting '.cheats')
@@ -39,7 +26,7 @@ install() {
     declare -A cheat_mappings
     while IFS= read -r cheat_filename; do
       local cheat_name="${cheat_filename%.*}"
-      local key="$(clean_cheat_name "$cheat_name")"
+      local key="$(clean_rom_name "$cheat_name")"
       local existing_mapping=${cheat_mappings["$key"]}
 
       # Only re-map if we need to.  This prioritizes exact matches.
@@ -48,7 +35,7 @@ install() {
 
         # In some cases, multiple ROMs are combined into a single cheat file
         while read -r sub_cheat_name; do
-          key="$(clean_cheat_name "$sub_cheat_name")"
+          key="$(clean_rom_name "$sub_cheat_name")"
           existing_mapping=${cheat_mappings["$key"]}
 
           if [ -z "$existing_mapping" ]; then
@@ -71,7 +58,7 @@ install() {
       # smart matching to find the corresponding cheat file.
       while IFS= read -r rom_filename; do
         local rom_name="${rom_filename%.*}"
-        local cheat_name=${cheat_mappings["$(clean_cheat_name "$rom_name")"]}
+        local cheat_name=${cheat_mappings["$(clean_rom_name "$rom_name")"]}
 
         if [ -n "$cheat_name" ]; then
           ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"

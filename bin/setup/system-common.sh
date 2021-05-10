@@ -28,6 +28,23 @@ if [ -z $(setting ".systems | index(\"$system\")") ]; then
 fi
 
 ##############
+# ROM Matching
+##############
+
+# Generates a distinct name for a cheat file so that we can consistently
+# look it up based on a ROM name.
+# * Lowercase
+# * Exclude flags
+# * Exclude unimportant characters (dashes, spaces, etc.)
+clean_rom_name() {
+  local name="$1"
+  name="${name,,}"
+  name="${name%% \(*}"
+  name="${name//[^a-zA-Z0-9]/}"
+  echo "$name"
+}
+
+##############
 # ROMKit
 ##############
 
