@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-ColecoVision",
-        "path": "retroarch/overlay/GameBezels/ColecoVision",
-        "default": "retroarch/overlay/Colecovision.png"
+        "path": "retroarch/overlay/GameBezels/ColecoVision"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-ColecoVision",
-        "path": "retroarch/overlay/GameBezels/ColecoVision"
+        "path": "retroarch/overlay/GameBezels/ColecoVision",
+        "default": "retroarch/overlay/Colecovision.png"
       }
     ]
   },

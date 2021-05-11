@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-C64",
-        "path": "retroarch/overlay/GameBezels/C64",
-        "default": "retroarch/overlay/Commodore-64.png"
+        "path": "retroarch/overlay/GameBezels/C64"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-C64",
-        "path": "retroarch/overlay/GameBezels/C64"
+        "path": "retroarch/overlay/GameBezels/C64",
+        "default": "retroarch/overlay/Commodore-64.png"
       }
     ]
   },

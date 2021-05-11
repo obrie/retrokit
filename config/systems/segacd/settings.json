@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SegaCD",
-        "path": "retroarch/overlay/GameBezels/SegaCD",
-        "default": "retroarch/overlay/Sega-CD.png"
+        "path": "retroarch/overlay/GameBezels/SegaCD"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-SegaCD",
-        "path": "retroarch/overlay/GameBezels/SegaCD"
+        "path": "retroarch/overlay/GameBezels/SegaCD",
+        "default": "retroarch/overlay/Sega-CD.png"
       }
     ]
   },

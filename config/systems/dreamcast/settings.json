@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Dreamcast",
-        "path": "retroarch/overlay/GameBezels/Dreamcast",
-        "default": "retroarch/overlay/Dreamcast.png"
+        "path": "retroarch/overlay/GameBezels/Dreamcast"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Dreamcast",
-        "path": "retroarch/overlay/GameBezels/Dreamcast"
+        "path": "retroarch/overlay/GameBezels/Dreamcast",
+        "default": "retroarch/overlay/Dreamcast.png"
       }
     ]
   },

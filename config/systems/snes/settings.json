@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SNES",
-        "path": "retroarch/overlay/GameBezels/SNES",
-        "default": "retroarch/overlay/Super-Nintendo-Entertainment-System.png"
+        "path": "retroarch/overlay/GameBezels/SNES"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-SNES",
-        "path": "retroarch/overlay/GameBezels/SNES"
+        "path": "retroarch/overlay/GameBezels/SNES",
+        "default": "retroarch/overlay/Super-Nintendo-Entertainment-System.png"
       }
     ]
   },

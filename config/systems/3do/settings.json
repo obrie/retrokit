@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-3DO",
-        "path": "retroarch/overlay/GameBezels/3DO",
-        "default": "retroarch/overlay/Panasonic-3DO.png"
+        "path": "retroarch/overlay/GameBezels/3DO"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-3DO",
-        "path": "retroarch/overlay/GameBezels/3DO"
+        "path": "retroarch/overlay/GameBezels/3DO",
+        "default": "retroarch/overlay/Panasonic-3DO.png"
       }
     ]
   },

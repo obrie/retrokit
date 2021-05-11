@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GameGear",
-        "path": "retroarch/overlay/GameBezels/GameGear",
-        "default": "retroarch/overlay/Sega-Game-Gear.png"
+        "path": "retroarch/overlay/GameBezels/GameGear"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-GameGear",
-        "path": "retroarch/overlay/GameBezels/GameGear"
+        "path": "retroarch/overlay/GameBezels/GameGear",
+        "default": "retroarch/overlay/Sega-Game-Gear.png"
       }
     ]
   },

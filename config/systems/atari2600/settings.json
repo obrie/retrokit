@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Atari2600",
-        "path": "retroarch/overlay/GameBezels/Atari2600",
-        "default": "retroarch/overlay/Atari-2600.png"
+        "path": "retroarch/overlay/GameBezels/Atari2600"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Atari2600",
-        "path": "retroarch/overlay/GameBezels/Atari2600"
+        "path": "retroarch/overlay/GameBezels/Atari2600",
+        "default": "retroarch/overlay/Atari-2600.png"
       }
     ]
   },

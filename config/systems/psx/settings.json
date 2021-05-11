@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PSX",
-        "path": "retroarch/overlay/GameBezels/PSX",
-        "default": "retroarch/overlay/Sony-PlayStation.png"
+        "path": "retroarch/overlay/GameBezels/PSX"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-PSX",
-        "path": "retroarch/overlay/GameBezels/PSX"
+        "path": "retroarch/overlay/GameBezels/PSX",
+        "default": "retroarch/overlay/Sony-PlayStation.png"
       }
     ]
   },

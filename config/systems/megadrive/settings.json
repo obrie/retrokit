@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MegaDrive",
-        "path": "retroarch/overlay/GameBezels/Megadrive",
-        "default": "retroarch/overlay/Sega-Mega-Drive.png"
+        "path": "retroarch/overlay/GameBezels/Megadrive"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-MegaDrive",
-        "path": "retroarch/overlay/GameBezels/Megadrive"
+        "path": "retroarch/overlay/GameBezels/Megadrive",
+        "default": "retroarch/overlay/Sega-Mega-Drive.png"
       }
     ]
   },

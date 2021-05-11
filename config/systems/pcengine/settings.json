@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PCEngine",
-        "path": "retroarch/overlay/GameBezels/PCEngine",
-        "default": "retroarch/overlay/NEC-PC-Engine.png"
+        "path": "retroarch/overlay/GameBezels/PCEngine"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-PCEngine",
-        "path": "retroarch/overlay/GameBezels/PCEngine"
+        "path": "retroarch/overlay/GameBezels/PCEngine",
+        "default": "retroarch/overlay/NEC-PC-Engine.png"
       }
     ]
   },

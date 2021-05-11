@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GB",
-        "path": "retroarch/overlay/GameBezels/GB",
-        "default": "retroarch/overlay/Nintendo-Game-Boy.png"
+        "path": "retroarch/overlay/GameBezels/GB"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-GB",
-        "path": "retroarch/overlay/GameBezels/GB"
+        "path": "retroarch/overlay/GameBezels/GB",
+        "default": "retroarch/overlay/Nintendo-Game-Boy.png"
       }
     ]
   },

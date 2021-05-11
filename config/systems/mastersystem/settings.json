@@ -4,12 +4,12 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MasterSystem",
-        "path": "retroarch/overlay/GameBezels/MasterSystem",
-        "default": "retroarch/overlay/Sega-Master-System.png"
+        "path": "retroarch/overlay/GameBezels/MasterSystem"
       },
       {
         "repo": "thebezelproject/bezelprojectsa-MasterSystem",
-        "path": "retroarch/overlay/GameBezels/MasterSystem"
+        "path": "retroarch/overlay/GameBezels/MasterSystem",
+        "default": "retroarch/overlay/Sega-Master-System.png"
       }
     ]
   },
