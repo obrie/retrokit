@@ -7,6 +7,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 while read -r setupmodule; do
   if [[ "$setupmodule" == system-roms-* ]] || [[ "$setupmodule" == systems/$system/roms-* ]]; then
-    "$dir/setup/$setupmodule.sh" "${@}"
+    "$dir/$setupmodule.sh" "${@}"
   fi
 done < <(setting '.modules[]')
