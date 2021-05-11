@@ -17,7 +17,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # ROM added.
 install() {
   # Check if we're actually installing overlays
-  if ! system_setting '.overlays.repos' >/dev/null; then
+  if [ -z "$(system_setting '.overlays.repos')" ]; then
     return
   fi
 

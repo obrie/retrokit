@@ -5,6 +5,7 @@ setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 system="${system:-$2}"
 system_tmp_dir="$tmp_dir/$system"
+mkdir -p "$system_tmp_dir"
 
 # Platform configurations
 retropie_system_config_dir="/opt/retropie/configs/$system"
@@ -56,7 +57,9 @@ normalize_rom_name() {
 ##############
 
 romkit_cli() {
-  TMPDIR="$tmp_dir" python3 bin/romkit/cli.py $1 "$system_settings_file" ${@:2}
+  if [ -n "$(system_setting '.roms')" ]; then
+    TMPDIR="$tmp_dir" python3 bin/romkit/cli.py $1 "$system_settings_file" ${@:2}
+  fi
 }
 
 # Loads the list of roms marked for install.  This can be called multiple
