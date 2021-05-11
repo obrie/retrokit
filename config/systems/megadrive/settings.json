@@ -41,8 +41,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Sega - Mega Drive - Genesis.dat",
-          "target": "$HOME/RetroPie/roms/megadrive/.nointro/roms.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Sega - Mega Drive - Genesis.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

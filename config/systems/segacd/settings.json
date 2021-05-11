@@ -37,8 +37,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/mcd/",
-          "download": "$HOME/RetroPie/roms/segacd/.redump/roms.zip",
-          "target": "$HOME/RetroPie/roms/segacd/.redump/roms.dat",
+          "download": "$HOME/retrokit/tmp/segacd/roms.zip",
+          "target": "$HOME/retrokit/tmp/segacd/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

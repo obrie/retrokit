@@ -38,8 +38,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/dc/",
-          "download": "$HOME/RetroPie/roms/dreamcast/.redump/roms.zip",
-          "target": "$HOME/RetroPie/roms/dreamcast/.redump/roms.dat",
+          "download": "$HOME/retrokit/tmp/dreamcast/roms.zip",
+          "target": "$HOME/retrokit/tmp/dreamcast/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

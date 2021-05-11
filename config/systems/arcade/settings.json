@@ -55,7 +55,7 @@
       "resources": {
         "dat": {
           "source": "{url}/mame2003.xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame2003/roms.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame2003.dat"
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
@@ -80,7 +80,7 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2003-Plus - 2018-12-31.xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame2003-plus/roms.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame2003-plus.dat"
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
@@ -105,7 +105,7 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2010 DAT - 2019-01-05.xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame2010/roms.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame2010.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -130,7 +130,7 @@
       "resources": {
         "dat": {
           "source": "{url}/mame2015.xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame2015/roms.dat"
+          "target": "$HOME/retrokit/tmp/mame2015.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -155,7 +155,7 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2016 XML (Arcade Only).xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame2016/roms.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame2016.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -180,7 +180,7 @@
       "resources": {
         "dat": {
           "source": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
-          "target": "$HOME/RetroPie/roms/arcade/.mame/roms.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame.dat"
         },
         "machine": {
           "source": "{url}/{parent}.zip",
@@ -206,8 +206,8 @@
       "resources": {
         "dat": {
           "source": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_106.7z",
-          "download": "$HOME/RetroPie/roms/arcade/.advmame/roms.7z",
-          "target": "$HOME/RetroPie/roms/arcade/.advmame/roms.dat",
+          "download": "$HOME/retrokit/tmp/arcade/advmame.7z",
+          "target": "$HOME/retrokit/tmp/arcade/advmame.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {

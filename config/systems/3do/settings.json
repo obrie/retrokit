@@ -34,8 +34,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/3do/",
-          "download": "$HOME/RetroPie/roms/3do/.redump/roms.zip",
-          "target": "$HOME/RetroPie/roms/3do/.redump/roms.dat",
+          "download": "$HOME/retrokit/tmp/3do/roms.zip",
+          "target": "$HOME/retrokit/tmp/3do/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
