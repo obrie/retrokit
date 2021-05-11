@@ -7,21 +7,33 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Global configuration overrides
 install_config() {
-  if [ -f "$system_config_dir/retroarch.cfg" ]; then
-    ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
+  local config_path="$system_config_dir/retroarch.cfg"
+  if [ -f "$config_path" ]; then
+    ini_merge "$config_path" "$retropie_system_config_dir/retroarch.cfg"
   fi
+}
+
+install_emulator_config() {
+  while IFS="$tab" read library_name; do
+    local config_path="$system_config_dir/retroarch/$library_name/$library_name.cfg"
+    if [ -f "$config_path" ]; then
+      ini_merge "$config_path" "$retroarch_config_dir/$library_name/$library_name.cfg"
+    fi
+  done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | .value.library_name')
 }
 
 # Global core options
 install_core_options() {
-  if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
+  local config_path="$system_config_dir/retroarch-core-options.cfg"
+  if [ -f "$config_path" ]; then
     # Don't restore since it'll be written to by multiple systems
-    ini_merge "$system_config_dir/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg' restore=false
+    ini_merge "$config_path" '/opt/retropie/configs/all/retroarch-core-options.cfg' restore=false
   fi
 }
 
 install() {
   install_config
+  install_emulator_config
   install_core_options
 }
 
