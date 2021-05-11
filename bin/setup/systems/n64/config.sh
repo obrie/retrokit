@@ -4,7 +4,7 @@ set -ex
 
 system='n64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../system-common.sh"
+. "$dir/../../system-common.sh"
 
 install() {
   ini_merge "$system_config_dir/GLideN64.custom.ini" '/opt/retropie/configs/n64/GLideN64.custom.ini'
