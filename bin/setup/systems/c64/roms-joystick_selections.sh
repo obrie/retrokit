@@ -4,9 +4,9 @@ set -ex
 
 system='c64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../system-common.sh"
+. "$dir/../../system-common.sh"
 
-install_joystick_selections() {
+install() {
   download 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=tsv' "$system_tmp_dir/c64_dreams.tsv"
 
   # Map normalized name to rom name
@@ -39,6 +39,7 @@ install_joystick_selections() {
       if [ -n "$joyport_selection" ]; then
         # Ensure file exists
         local opt_file="$retroarch_config_dir/config/VICE x64/$rom_name.opt"
+        mkdir -p "$(dirname "$opt_file")"
         touch "$opt_file"
 
         # Overwrite joyport selection
@@ -46,10 +47,6 @@ install_joystick_selections() {
       fi
     fi
   done < <(cat "$system_tmp_dir/c64_dreams.tsv" | tr "$tab" "^")
-}
-
-install() {
-  install_joystick_selections
 }
 
 uninstall() {

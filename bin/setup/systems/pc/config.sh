@@ -4,7 +4,7 @@ set -ex
 
 system='pc'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../system-common.sh"
+. "$dir/../../system-common.sh"
 
 install() {
   # Sound driver

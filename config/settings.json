@@ -62,6 +62,7 @@
     "runcommand",
     "romkit",
     "system-emulators",
+    "systems/ports/packages",
     "emulationstation",
     "system-retroarch",
     "system-launchimages",
@@ -73,6 +74,13 @@
     "system-roms-overlays",
     "system-roms-cheats",
     "system-roms-scrape",
-    "system-overrides"
+
+    "systems/arcade/advmame",
+    "systems/arcade/cheats",
+    "systems/arcade/hiscores",
+    "systems/c64/roms-joystick_selections",
+    "systems/dreamcast/config",
+    "systems/n64/config",
+    "systems/pc/config",
   ]
 }
