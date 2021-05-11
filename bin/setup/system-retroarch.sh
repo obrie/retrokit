@@ -17,7 +17,7 @@ install_emulator_config() {
   while IFS="$tab" read library_name; do
     local config_path="$system_config_dir/retroarch/$library_name/$library_name.cfg"
     if [ -f "$config_path" ]; then
-      ini_merge "$config_path" "$retroarch_config_dir/$library_name/$library_name.cfg"
+      ini_merge "$config_path" "$retroarch_config_dir/config/$library_name/$library_name.cfg"
     fi
   done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | .value.library_name')
 }
