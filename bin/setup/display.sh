@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 install() {
   env_merge "$config_dir/display/console-setup" '/etc/default/console-setup' as_sudo=true
-  sudo /etc/init.d/console-setup restart
+  sudo /etc/init.d/console-setup.sh restart
 }
 
 uninstall() {
