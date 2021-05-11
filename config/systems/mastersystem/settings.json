@@ -22,7 +22,7 @@
   "cheats": "Sega - Master System - Mark III",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Master%20System%20-%20Mark%20III",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "bios_E.sms": "{url}/bios_E.sms",
       "bios_J.sms": "{url}/bios_J.sms",
@@ -43,11 +43,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Master System - Mark III.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Sega - Master System - Mark III.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/mastersystem/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/mastersystem/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -75,9 +75,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/mastersystem/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/mastersystem/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/mastersystem",
+        "path": "$HOME/RetroPie/roms/mastersystem",
         "filters": {
           "names": [
             "Aladdin (Europe, Brazil)",

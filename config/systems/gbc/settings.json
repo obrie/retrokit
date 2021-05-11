@@ -22,7 +22,7 @@
   "cheats": "Nintendo - Game Boy Color",
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Gameboy%20Color",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "cgb_boot.bin": "{url}/cgb_boot.bin",
       "gbc_bios.bin": "{url}/gbc_bios.bin"
@@ -42,11 +42,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy Color.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Game Boy Color.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/gbc/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/gbc/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -88,9 +88,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/gbc/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/gbc/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/gbc",
+        "path": "$HOME/RetroPie/roms/gbc",
         "filters": {
           "names": [
             "Aladdin (USA)",

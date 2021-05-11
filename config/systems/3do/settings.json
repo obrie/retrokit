@@ -21,7 +21,7 @@
   },
   "bios": {
     "url": "$BIOS_URL/libretro/3DO%20Company%2C%20The%20-%203DO",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "panafz10.bin": "{url}/panafz10.bin"
     }
@@ -34,14 +34,14 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/3do/",
-          "download": "/home/pi/RetroPie/roms/3do/.redump/roms.zip",
-          "target": "/home/pi/RetroPie/roms/3do/.redump/roms.dat",
+          "download": "$HOME/RetroPie/roms/3do/.redump/roms.zip",
+          "target": "$HOME/RetroPie/roms/3do/.redump/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/3do/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/3do/.redump/{machine}",
+          "download": "$HOME/RetroPie/roms/3do/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/3do/.redump/{machine}",
           "install": {"action": "zip_extract"}
         }
       }
@@ -78,7 +78,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/3do"}
+      {"path": "$HOME/RetroPie/roms/3do"}
     ],
     "files": {
       "machine": {"source": "*", "target": "{dir}"}

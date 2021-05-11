@@ -33,11 +33,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64 (Tapes).dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64 (Tapes).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/c64/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -55,11 +55,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Commodore - 64.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/c64/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -86,9 +86,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/c64/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/c64/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/c64",
+        "path": "$HOME/RetroPie/roms/c64",
         "filters": {
           "names": [
             "180 (Europe) (Budget)",

@@ -22,7 +22,7 @@
   "cheats": "Sega - Game Gear",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Game%20Gear",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "bios.gg": "{url}/bios.gg"
     }
@@ -41,11 +41,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Game Gear.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Sega - Game Gear.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/gamegear/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/gamegear/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -72,9 +72,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/gamegear/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/gamegear/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/gamegear",
+        "path": "$HOME/RetroPie/roms/gamegear",
         "filters": {
           "names": [
             "Aladdin (USA, Europe, Brazil)",

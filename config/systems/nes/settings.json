@@ -34,11 +34,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo Entertainment System.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/nes/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/nes/.nointro/{machine}.zip",
           "file_identifier": "name"
         }
       },
@@ -87,9 +87,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/nes/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/nes/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/nes",
+        "path": "$HOME/RetroPie/roms/nes",
         "filters": {
           "names": [
             "Arkanoid (USA)",

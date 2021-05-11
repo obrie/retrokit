@@ -20,14 +20,14 @@
       "resources": {
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/pc/.exodos/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/pc/.exodos/{machine_sourcefile}",
+          "download": "$HOME/RetroPie/roms/pc/.exodos/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/pc/.exodos/{machine_sourcefile}",
           "install": {"action": "zip_extract", "include_parent": false},
           "file_identifier": "name"
         },
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/exodos/MS-DOS.xml",
-          "target": "/home/pi/RetroPie/roms/pc/.exodos/roms.dat",
+          "source": "file://$HOME/retrokit/cache/exodos/MS-DOS.xml",
+          "target": "$HOME/RetroPie/roms/pc/.exodos/roms.dat",
           "install": {"action": "exodos_to_dat"}
         }
       }
@@ -77,13 +77,13 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/pc"}
+      {"path": "$HOME/RetroPie/roms/pc"}
     ],
     "files": {
       "conf": {
         "target": "{dir}/{machine}.conf",
-        "global_overrides": "/home/pi/retrokit/config/systems/pc/dosbox.conf",
-        "overrides": "/home/pi/retrokit/config/systems/pc/conf/{machine}.conf"
+        "global_overrides": "$HOME/retrokit/config/systems/pc/dosbox.conf",
+        "overrides": "$HOME/retrokit/config/systems/pc/conf/{machine}.conf"
       }
     }
   }

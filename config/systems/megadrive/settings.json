@@ -22,7 +22,7 @@
   "cheats": "Sega - Mega Drive - Genesis",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20Drive%20-%20Genesis",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "bios_MD.bin": "{url}/bios_MD.bin"
     }
@@ -41,12 +41,12 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Sega - Mega Drive - Genesis.dat",
-          "target": "/home/pi/RetroPie/roms/megadrive/.nointro/roms.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Sega - Mega Drive - Genesis.dat",
+          "target": "$HOME/RetroPie/roms/megadrive/.nointro/roms.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/megadrive/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/megadrive/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -91,9 +91,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/megadrive/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/megadrive/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/megadrive",
+        "path": "$HOME/RetroPie/roms/megadrive",
         "filters": {
           "names": [
             "Adventures of Batman & Robin, The (USA)",

@@ -33,11 +33,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Atari - 2600.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Atari - 2600.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/atari2600/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/atari2600/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -72,9 +72,9 @@
       "machine": {"target": "{dir}/{machine}.zip"}
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/atari2600/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/atari2600/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/atari2600",
+        "path": "$HOME/RetroPie/roms/atari2600",
         "filters": {
           "names": [
             "Asteroids (Japan, USA)",

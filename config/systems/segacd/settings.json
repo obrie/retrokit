@@ -22,7 +22,7 @@
   "cheats": "Sega - Mega-CD - Sega CD",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20CD%20-%20Sega%20CD",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "bios_CD_E.bin": "{url}/bios_CD_E.bin",
       "bios_CD_J.bin": "{url}/bios_CD_J.bin",
@@ -37,14 +37,14 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/mcd/",
-          "download": "/home/pi/RetroPie/roms/segacd/.redump/roms.zip",
-          "target": "/home/pi/RetroPie/roms/segacd/.redump/roms.dat",
+          "download": "$HOME/RetroPie/roms/segacd/.redump/roms.zip",
+          "target": "$HOME/RetroPie/roms/segacd/.redump/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/segacd/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/segacd/.redump/{machine}.chd",
+          "download": "$HOME/RetroPie/roms/segacd/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/segacd/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }
@@ -71,7 +71,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/segacd"}
+      {"path": "$HOME/RetroPie/roms/segacd"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine}.chd"}

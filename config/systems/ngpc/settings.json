@@ -23,11 +23,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/SNK - Neo Geo Pocket Color.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/SNK - Neo Geo Pocket Color.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/ngpc/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/ngpc/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -55,7 +55,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/ngpc"}
+      {"path": "$HOME/RetroPie/roms/ngpc"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine}.zip"}

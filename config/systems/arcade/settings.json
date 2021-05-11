@@ -38,12 +38,12 @@
         },
         "machine": {
           "source": "{url}/roms/arcade.zip/arcade%2F{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.fbneo/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.fbneo/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "sample": {
           "source": "{url}/support/samples.zip/samples%2F{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/fbneo/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/fbneo/samples/{sample}.zip"
         }
       },
       "emulator": "lr-fbneo"
@@ -55,20 +55,20 @@
       "resources": {
         "dat": {
           "source": "{url}/mame2003.xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2003/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003/roms.dat"
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2003/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame2003/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame2003/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame2003"
@@ -80,20 +80,20 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2003-Plus - 2018-12-31.xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2003-plus/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003-plus/roms.dat"
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2003-plus/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003-plus/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame2003-plus/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame2003-plus/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame2003-plus"
@@ -105,20 +105,20 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2010 DAT - 2019-01-05.xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2010/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2010/roms.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2010/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame2010/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame2010/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame2010/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame2010"
@@ -130,20 +130,20 @@
       "resources": {
         "dat": {
           "source": "{url}/mame2015.xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2015/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2015/roms.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2015/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame2015/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame2015/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame2015/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame2015"
@@ -155,20 +155,20 @@
       "resources": {
         "dat": {
           "source": "{url}/MAME 2016 XML (Arcade Only).xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2016/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2016/roms.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame2016/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame2016/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame2016/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame2016/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame2016"
@@ -180,21 +180,21 @@
       "resources": {
         "dat": {
           "source": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame/roms.dat"
+          "target": "$HOME/RetroPie/roms/arcade/.mame/roms.dat"
         },
         "machine": {
           "source": "{url}/{parent}.zip",
-          "download": "/home/pi/RetroPie/roms/arcade/.mame/{parent}.merged.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.mame/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/arcade/.mame/{parent}.merged.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME%200.196%20EXTRAs%2Fsamples%2F{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame"
@@ -206,22 +206,22 @@
       "resources": {
         "dat": {
           "source": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_106.7z",
-          "download": "/home/pi/RetroPie/roms/arcade/.advmame/roms.7z",
-          "target": "/home/pi/RetroPie/roms/arcade/.advmame/roms.dat",
+          "download": "$HOME/RetroPie/roms/arcade/.advmame/roms.7z",
+          "target": "$HOME/RetroPie/roms/arcade/.advmame/roms.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/arcade/.advmame/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.advmame/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "/home/pi/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
-          "target": "/home/pi/RetroPie/BIOS/mame-advmame/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame-advmame/samples/{sample}.zip"
         }
       },
       "emulator": "advmame"
@@ -317,9 +317,9 @@
       "filter": true
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/arcade/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/arcade/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/arcade",
+        "path": "$HOME/RetroPie/roms/arcade",
         "filters": {
           "names": [
             "area51",

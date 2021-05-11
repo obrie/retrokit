@@ -37,12 +37,12 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Nintendo 64 (BigEndian).dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo 64 (BigEndian).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/n64/.nointro/{machine}.z64",
+          "download": "$HOME/RetroPie/roms/n64/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/n64/.nointro/{machine}.z64",
           "install": {"action": "zip_extract", "file": ".*\\.z64"}
         }
       },
@@ -51,7 +51,7 @@
   ],
   "roms": {
     "emulators": {
-      "url": "file:///home/pi/retrokit/config/systems/n64/emulators.tsv",
+      "url": "file://$HOME/retrokit/config/systems/n64/emulators.tsv",
       "filter": true
     },
     "priority": [
@@ -90,9 +90,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/n64/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/n64/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/n64",
+        "path": "$HOME/RetroPie/roms/n64",
         "filters": {
           "names": [
             "Carmageddon 64 (USA)",

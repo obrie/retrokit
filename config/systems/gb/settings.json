@@ -22,7 +22,7 @@
   "cheats": "Nintendo - Game Boy",
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Gameboy",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "dmg_boot.bin": "{url}/dmg_boot.bin",
       "gb_boot.bin": "{url}/gb_boot.bin"
@@ -42,11 +42,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Game Boy.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/gb/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/gb/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -82,9 +82,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/gb/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/gb/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/gb",
+        "path": "$HOME/RetroPie/roms/gb",
         "filters": {
           "names": [
             "Aladdin (USA) (SGB Enhanced)",

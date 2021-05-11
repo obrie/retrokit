@@ -22,7 +22,7 @@
   "cheats": "Coleco - ColecoVision",
   "bios": {
     "url": "$BIOS_URL/libretro/Coleco%20-%20ColecoVision",
-    "dir": "/home/pi/RetroPie/BIOS/Machines/COL - ColecoVision",
+    "dir": "$HOME/RetroPie/BIOS/Machines/COL - ColecoVision",
     "files": {
       "coleco.rom": "{url}/coleco.rom"
     }
@@ -41,11 +41,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Coleco - ColecoVision.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Coleco - ColecoVision.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/coleco/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/coleco/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -78,9 +78,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/coleco/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/coleco/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/coleco",
+        "path": "$HOME/RetroPie/roms/coleco",
         "filters": {
           "names": [
             "Antarctic Adventure (USA, Europe)",

@@ -23,7 +23,7 @@
   "cheats": "Sega - Dreamcast",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
-    "dir": "/home/pi/RetroPie/BIOS/dc",
+    "dir": "$HOME/RetroPie/BIOS/dc",
     "files": {
       "dc_boot.bin": "{url}/dc_boot.bin",
       "dc_flash.bin": "{url}/dc_flash.bin",
@@ -38,14 +38,14 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/dc/",
-          "download": "/home/pi/RetroPie/roms/dreamcast/.redump/roms.zip",
-          "target": "/home/pi/RetroPie/roms/dreamcast/.redump/roms.dat",
+          "download": "$HOME/RetroPie/roms/dreamcast/.redump/roms.zip",
+          "target": "$HOME/RetroPie/roms/dreamcast/.redump/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/dreamcast/.redump/{machine}.chd",
+          "download": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }
@@ -108,7 +108,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/dreamcast"}
+      {"path": "$HOME/RetroPie/roms/dreamcast"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine}.chd"}

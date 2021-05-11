@@ -34,11 +34,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined).dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Combined).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/snes/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/snes/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -88,9 +88,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/snes/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/snes/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/snes",
+        "path": "$HOME/RetroPie/roms/snes",
         "filters": {
           "names": [
             "Aladdin (USA)",

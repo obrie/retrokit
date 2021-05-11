@@ -26,7 +26,7 @@
   "cheats": "Sony - PlayStation",
   "bios": {
     "url": "$BIOS_URL",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "psxonpsp660.bin": "{url}/Other/Sony%20-%20PlayStation/PSXONPSP660.BIN",
       "scph101.bin": "{url}/libretro/Sony%20-%20PlayStation/scph101.bin",
@@ -43,14 +43,14 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/psx/",
-          "download": "/home/pi/RetroPie/roms/psx/.redump/roms.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/roms.dat",
+          "download": "$HOME/RetroPie/roms/psx/.redump/roms.zip",
+          "target": "$HOME/RetroPie/roms/psx/.redump/roms.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
           "source": "{url}{page_number}/{machine}.zip",
-          "download": "/home/pi/RetroPie/roms/psx/.redump/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/psx/.redump/{machine}.chd",
+          "download": "$HOME/RetroPie/roms/psx/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }
@@ -167,7 +167,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/psx"}
+      {"path": "$HOME/RetroPie/roms/psx"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine}.chd"}

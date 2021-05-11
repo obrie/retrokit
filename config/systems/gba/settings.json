@@ -22,7 +22,7 @@
   "cheats": "Nintendo - Game Boy Advance",
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Game%20Boy%20Advance",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "gba_bios.bin": "{url}/gba_bios.bin"
     }
@@ -41,11 +41,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/Nintendo - Game Boy Advance.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Game Boy Advance.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/gba/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/gba/.nointro/{machine}.zip"
         }
       },
       "auth": "internetarchive"
@@ -111,9 +111,9 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/gba/-ALL-"},
+      {"path": "$HOME/RetroPie/roms/gba/-ALL-"},
       {
-        "path": "/home/pi/RetroPie/roms/gba",
+        "path": "$HOME/RetroPie/roms/gba",
         "filters": {
           "names": [
             "Aladdin (USA) (En,Fr,De,Es)",

@@ -22,7 +22,7 @@
   "cheats": "NEC - PC Engine - TurboGrafx 16",
   "bios": {
     "url": "$BIOS_URL/libretro/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx",
-    "dir": "/home/pi/RetroPie/BIOS",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "syscard2u.pce": "{url}/syscard2u.pce",
       "syscard3u.pce": "{url}/syscard3u.pce"
@@ -42,11 +42,11 @@
       },
       "resources": {
         "dat": {
-          "source": "file:///home/pi/retrokit/cache/nointro/NEC - PC Engine - TurboGrafx 16.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/NEC - PC Engine - TurboGrafx 16.dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "/home/pi/RetroPie/roms/pcengine/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/pcengine/.nointro/{machine}.zip",
           "file_identifier": "name"
         }
       },
@@ -63,7 +63,7 @@
       ]
     },
     "dirs": [
-      {"path": "/home/pi/RetroPie/roms/pcengine"}
+      {"path": "$HOME/RetroPie/roms/pcengine"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine}.zip"}
