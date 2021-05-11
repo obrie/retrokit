@@ -19,7 +19,7 @@ install_emulator_config() {
     if [ -f "$config_path" ]; then
       ini_merge "$config_path" "$retroarch_config_dir/config/$library_name/$library_name.cfg"
     fi
-  done < <(system_setting '.emulators | to_entries[] | select(.value.library_name) | .value.library_name')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.library_name) | .value.library_name')
 }
 
 # Global core options

@@ -8,10 +8,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 find_overrides() {
   local extension=$1
 
-  # Load core/library info for the emulators
-  load_emulator_data
-
   if [ -d "$system_config_dir/retroarch" ]; then
+    # Load core/library info for the emulators
+    load_emulator_data
+
     while IFS="^" read rom_name parent_name emulator; do
       emulator=${emulator:-default}
 

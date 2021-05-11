@@ -22,7 +22,7 @@ install_emulators() {
     if [ "$is_default" == "true" ]; then
       crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$name\""
     fi
-  done < <(system_setting '.emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.branch // "master", .value.default // false] | @tsv')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.branch // "master", .value.default // false] | @tsv')
 }
 
 # Install BIOS files required by emulators
