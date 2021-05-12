@@ -61,3 +61,18 @@ input_map[ui_right] keyboard[0,right] or joystick_digital[2dc8_6101,1,0,0] or jo
 input_map[ui_select] keyboard[0,enter] or joystick_button[2dc8_6101,a] or joystick_button[045e_028e,b]
 input_map[ui_up] keyboard[0,up] or joystick_digital[2dc8_6101,1,1,1] or joystick_digital[045e_028e,1,1,1]
 misc_safequit no
+
+cotton2/display_magnify 3
+cottonbm/display_magnify 3
+grdforce/display_magnify 3
+groovef/display_magnify 2
+hanagumi/display_magnify 3
+hdrivair/display_magnify 2
+maruchan/display_magnify 3
+mausuke/display_magnify 2
+puyosun/display_magnify 3
+rsgun/display_magnify 3
+shienryu/display_magnify 2
+strtdriv/display_magnify 2
+sokyugrt/display_magnify 3
+thunt/display_magnify 3
