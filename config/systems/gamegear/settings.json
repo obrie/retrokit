@@ -52,9 +52,15 @@
     }
   ],
   "roms": {
+    "priority": [
+      "usa",
+      "world"
+    ],
     "filters": {
       "flags": [
-        "usa"
+        "europe",
+        "usa",
+        "world"
       ],
       "!flags": [
         "alt",
