@@ -108,24 +108,36 @@ class BaseSystem:
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Force the machine to be installed if it was allowed by an override
-                    if allow_reason == FilterReason.OVERRIDE:
-                        machines_to_install.add(machine)
-
                     # Group the machine based on its parent/self title (no flags).
                     # We can't rely on the name because not all DATs for rom sets
                     # have Parent/Child relationships defined.
                     group = machine.group_title
-                    if group not in machine_candidates:
-                        # First time we've seen this group: make the machine the default
-                        machine_candidates[group] = machine
+
+                    # Force the machine to be installed if it was allowed by an override
+                    if allow_reason == FilterReason.OVERRIDE:
+                        machines_to_install.add(machine)
+
+                        # Avoid installing anything else in the group that was a candidate
+                        machine_candidates.pop(group, None)
+
+                    # If a priority is defined, the user is asking for a 1G1R setup.
+                    # In that case, we either choose a machine that was explicitly overridden
+                    # for install or we choose the highest priority machine in the group.
+                    if self.machine_priority:
+                        existing = machine_candidates.get(group)
+
+                        if not existing:
+                            # First time we've seen this group: make the machine the default
+                            machine_candidates[group] = machine
+                        elif existing not in machines_to_install:
+                            # Decide which of the two machines to install based on the
+                            # predefined priority order
+                            prioritized_machines = sorted([existing, machine], key=self._sort_machines)
+                            machine_candidates[group] = prioritized_machines[0]
+                            logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
                     else:
-                        # We've seen this group before: decide which machine to install based
-                        # on the predefined priority order
-                        existing = machine_candidates[group]
-                        prioritized_machines = sorted([existing, machine], key=self._sort_machines)
-                        machine_candidates[group] = prioritized_machines[0]
-                        logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
+                        # No priority defined: Add all machines
+                        machines_to_install.add(machine)
                 elif not machine.is_clone:
                     # We track all parent/bios machines in case they're needed as a dependency
                     # in future machines.  We'll confirm later on with `machines_to_track`.

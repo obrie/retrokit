@@ -54,6 +54,9 @@
     }
   ],
   "roms": {
+    "priority": [
+      "usa"
+    ],
     "filters": {
       "flags": [
         "usa"
