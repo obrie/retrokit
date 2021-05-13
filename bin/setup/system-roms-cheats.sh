@@ -52,9 +52,13 @@ install() {
     while IFS="^" read rom_name emulator; do
       emulator=${emulator:-default}
       local library_name=${emulators["$emulator/library_name"]}
-      local target_cheats_dir="$system_cheat_database_path/$library_name"
+      if [ -z "$library_name" ]; then
+        # No a libretro emulator
+        continue
+      fi
 
       # Ensure the target exists
+      local target_cheats_dir="$system_cheat_database_path/$library_name"
       mkdir -p "$target_cheats_dir"
 
       # We can't just symlink to the source directory because the cheat filenames
