@@ -15,7 +15,7 @@ install() {
       continue
     fi
 
-    local escaped_name=$(printf '%s\n' "$name" | sed 's/[.[\*^$]/\\&/g')
+    local escaped_name=$(printf '%s\n' "$name" | sed -e 's/[]\/$*.^[]/\\&/g')
 
     sed -i "/$escaped_name /d" "$config_path"
     echo "$name $value" >> "$config_path"
