@@ -65,6 +65,8 @@ install_retroarch_remappings() {
   local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
 
   if [ -n "$remapping_dir" ]; then
+    remapping_dir=${remapping_dir//\"/}
+    
     while IFS="$tab" read rom_name override_file core_name library_name; do
       # Emulator-specific remapping directory
       local emulator_remapping_dir="$remapping_dir$library_name"
