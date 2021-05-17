@@ -17,7 +17,12 @@
   "hardware": {
     "case": {
       "model": "argon1"
-    }
+    },
+    "controllers": [
+      "Keyboard",
+      "8Bitdo SN30 Pro",
+      "Microsoft X-Box 360 pad"
+    ]
   },
   "systems": [
     "arcade",
@@ -50,13 +55,13 @@
     "tools-dev",
     "tools-mame",
     "hardware/case",
+    "hardware/controllers",
     "hardware/ir",
     "auth-internetarchive",
     "ssh",
     "vnc",
     "display",
     "localization",
-    "controllers",
     "splashscreen",
     "scriptmodules",
     "scraper",

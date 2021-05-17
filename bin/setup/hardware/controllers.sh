@@ -3,7 +3,7 @@
 set -ex
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../common.sh"
+. "$dir/../../common.sh"
 
 install() {
   # Run RetroPie autoconfig for each controller input
