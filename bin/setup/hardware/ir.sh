@@ -3,7 +3,7 @@
 set -ex
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../common.sh"
+. "$dir/../../common.sh"
 
 keymap_filepath='/etc/rc_keymaps/tivo.toml'
 

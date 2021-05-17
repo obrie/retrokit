@@ -3,7 +3,7 @@
 set -ex
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../common.sh"
+. "$dir/../../../common.sh"
 
 argon_bin="$tmp_dir/argon1.sh"
 

@@ -14,6 +14,11 @@
   "retropie": {
     "show_menu": false
   },
+  "hardware": {
+    "case": {
+      "model": "argon1"
+    }
+  },
   "systems": [
     "arcade",
     "atari2600",
@@ -44,8 +49,8 @@
     "boot",
     "tools-dev",
     "tools-mame",
-    "case-argon",
-    "ir",
+    "hardware/case",
+    "hardware/ir",
     "auth-internetarchive",
     "ssh",
     "vnc",
