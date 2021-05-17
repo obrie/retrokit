@@ -1,0 +1,18 @@
+[Unit]
+Description=VNC Server
+After=network-online.target mediacenter.service
+Requires=mediacenter.service
+
+[Service]
+Restart=on-failure
+RestartSec=30
+Nice=15
+User=root
+Group=root
+Type=simple
+ExecStartPre=/sbin/modprobe evdev
+ExecStart=/usr/bin/dispmanx_vncserver
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

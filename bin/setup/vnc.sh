@@ -6,23 +6,35 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  # Install apt key
-  curl https://www.linux-projects.org/listing/uv4l_repo/lpkey.asc | sudo apt-key add -
-  echo 'deb http://www.linux-projects.org/listing/uv4l_repo/raspbian/stretch stretch main' | sudo tee /etc/apt/sources.list.d/uv4l.list
-  sudo apt update
+  # Install dependencies
+  sudo apt install -y libvncserver-dev libconfig++-dev
 
-  # Install sever
-  sudo apt install -y uv4l uv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
+  # Compile
+  git clone https://github.com/patrikolausson/dispmanx_vnc
+  pushd $tmp_dir/dispmanx_vnc
+  make
 
-  backup_and_restore '/etc/uv4l/uv4l-raspidisp.conf' as_sudo=true
+  # Copy to system
+  sudo cp dispmanx_vncserver /usr/bin
+  sudo chmod +x /usr/bin/dispmanx_vncserver
+  file_cp "$config_dir/vnc/dispmanx_vncserver.conf" /etc/dispmanx_vncserver.conf as_sudo=true
 
-  # Configure server (can't use ini_merge because of duplicate keys in config)
-  sudo sed -i -e 's/# server-option = --enable-webrtc=yes/server-option = --enable-webrtc=yes/' '/etc/uv4l/uv4l-raspidisp.conf'
-  sudo systemctl restart uv4l_raspidisp
+  # Install service
+  file_cp "$config_dir/vnc/dispmanx_vncserver.service" /etc/systemd/system/dispmanx_vncserver.service as_sudo=true
+  sudo systemctl start dispmanx_vncserver.service
+  sudo systemctl enable dispmanx_vncserver.service
+  sudo systemctl daemon-reload
+
+  # Clean up
+  popd
+  rm -rf $tmp_dir/dispmanx_vnc
 }
 
 uninstall() {
-  sudo apt remove -y uv4l uv4l-server uv4l-webrtc uv4l-raspidisp uv4l-raspidisp-extras
+  sudo systemctl stop dispmanx_vncserver.service || true
+  sudo rm /etc/systemd/system/dispmanx_vncserver.service
+  sudo rm /usr/bin/dispmanx_vncserver
+  sudo rm /etc/dispmanx_vncserver.conf
 }
 
 "${@}"
