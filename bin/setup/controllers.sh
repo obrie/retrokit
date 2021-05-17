@@ -14,7 +14,7 @@ install() {
 }
 
 uninstall() {
-  restore "$HOME/.emulationstation/es_input.cfg"
+  sudo $HOME/RetroPie-Setup/retropie_packages.sh emulationstation init_input
 }
 
 "${@}"
