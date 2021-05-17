@@ -10,7 +10,7 @@ install() {
   sudo apt install -y libvncserver-dev libconfig++-dev
 
   # Compile
-  git clone https://github.com/patrikolausson/dispmanx_vnc
+  git clone https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
   pushd $tmp_dir/dispmanx_vnc
   make
 

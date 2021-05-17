@@ -1,7 +1,6 @@
 [Unit]
 Description=VNC Server
-After=network-online.target mediacenter.service
-Requires=mediacenter.service
+After=network-online.target
 
 [Service]
 Restart=on-failure
