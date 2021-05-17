@@ -1,0 +1,102 @@
+{
+  "system": "atarilynx",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-AtariLynx",
+        "path": "retroarch/overlay/GameBezels/AtariLynx"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-AtariLynx",
+        "path": "retroarch/overlay/GameBezels/AtariLynx",
+        "default": "retroarch/overlay/Atari-Lynx-Horizontal.png",
+        "vertical": "retroarch/overlay/Atari-Lynx-Vertical.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-handy": {"core_name": "handy", "library_name": "Handy", "default": true}
+  },
+  "cheats": "Atari - Lynx",
+  "bios": {
+    "url": "$BIOS_URL/libretro/Atari%20-%20Lynx",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "lynxboot.img": "{url}/lynxboot.img"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Atari - Lynx"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Atari - Lynx.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/atarilynx/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa"
+    ],
+    "filters": {
+      "flags": [
+        "usa",
+        "europe"
+      ],
+      "!flags": [
+        "beta",
+        "proto",
+        "unl"
+      ],
+      "!keywords": [
+        "bios"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atarilynx/-ALL-"},
+      {
+        "path": "$HOME/RetroPie/roms/atarilynx",
+        "filters": {
+          "names": [
+            "Batman Returns (USA, Europe)",
+            "Battle Wheels (USA, Europe)",
+            "Blue Lightning (USA, Europe)",
+            "California Games (USA, Europe)",
+            "Checkered Flag (USA, Europe)",
+            "Lemmings (USA, Europe)",
+            "Ms. Pac-Man (USA, Europe)",
+            "Ninja Gaiden (USA, Europe)",
+            "Pac-Land (USA, Europe)",
+            "Paperboy (USA, Europe)",
+            "Rampage (USA, Europe)",
+            "Scrapyard Dog (USA, Europe)",
+            "S.T.U.N. Runner (USA, Europe)",
+            "Super Asteroids, Missile Command (USA, Europe)",
+            "Xenophobe (USA, Europe)"
+          ]
+        }
+      }
+    ]
+  }
+}
