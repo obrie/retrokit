@@ -11,7 +11,7 @@ install() {
 
   # Check out
   rm -rf "$tmp_dir/dispmanx_vnc"
-  git clone https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
+  git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
   pushd "$tmp_dir/dispmanx_vnc"
 
   # Apply patches

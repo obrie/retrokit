@@ -17,7 +17,7 @@ install() {
 
   # Screenshots
   mkdir $tmp_dir/raspi2png
-  git clone https://github.com/AndrewFromMelbourne/raspi2png.git $tmp_dir/raspi2png
+  git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git $tmp_dir/raspi2png
   pushd $tmp_dir/raspi2png
   make
   sudo make install

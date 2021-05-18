@@ -12,7 +12,7 @@ install() {
   # TorrentZip
   if [ ! `command -v trrntzip` ]; then
     mkdir $tmp_dir/trrntzip
-    git clone https://github.com/hydrogen18/trrntzip.git $tmp_dir/trrntzip
+    git clone --depth 1 https://github.com/hydrogen18/trrntzip.git $tmp_dir/trrntzip
     pushd $tmp_dir/trrntzip
     ./autogen.sh
     ./configure
