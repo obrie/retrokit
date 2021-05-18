@@ -51,6 +51,25 @@
         }
       },
       "auth": "internetarchive"
+    },
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_PCENGINE_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/pce/",
+          "download": "$HOME/retrokit/tmp/pcengine/roms.zip",
+          "target": "$HOME/retrokit/tmp/pcengine/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
+      }
     }
   ],
   "roms": {
@@ -61,8 +80,40 @@
       "flags": [
         "usa"
       ],
+      "!flags": [
+        "unl"
+      ],
       "!keywords": [
         "bios"
+      ],
+      "!titles": [
+        "Beyond Shadowgate",
+        "Cosmic Fantasy 2",
+        "Dragon Slayer - The Legend of Heroes",
+        "Dungeon Explorer II",
+        "Dungeon Master - Theron's Quest",
+        "Dynastic Hero, The",
+        "Fantastic Night Dreams - Cotton",
+        "Gate of Thunder + Bonk's Adventure + Bonk's Revenge",
+        "It Came from the Desert",
+        "J. B. Harold Murder Club",
+        "Jack Nicklaus Turbo Golf",
+        "John Madden Duo CD Football",
+        "Loom",
+        "Lords of the Rising Sun",
+        "Magical Dinosaur Tour",
+        "Might and Magic III - Isles of Terra",
+        "Monster Lair",
+        "Sherlock Holmes - Consulting Detective",
+        "Sherlock Holmes - Consulting Detective - Volume 2",
+        "Shape Shifter",
+        "SimEarth - The Living Planet",
+        "Splash Lake",
+        "Valis II",
+        "Valis III",
+        "Vasteel",
+        "Ys Book I & II",
+        "Ys III - Wanderers from Ys"
       ]
     },
     "dirs": [
