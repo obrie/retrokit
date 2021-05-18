@@ -1,0 +1,73 @@
+{
+  "system": "vectrex",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-GCEVectrex",
+        "path": "retroarch/overlay/GameBezels/GCEVectrex"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-GCEVectrex",
+        "path": "retroarch/overlay/GameBezels/GCEVectrex",
+        "default": "retroarch/overlay/GCE-Vectrex.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-vecx": {"core_name": "vecx", "library_name": "VecX", "default": true}
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/GCE - Vectrex"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/GCE - Vectrex.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/vectrex/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa"
+    ],
+    "filters": {
+      "flags": [
+        "usa",
+        "europe"
+      ],
+      "!flags": [
+        "beta",
+        "proto",
+        "sample",
+        "unl"
+      ],
+      "!keywords": [
+        "bios",
+        "stress tester"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/vectrex"}
+    ]
+  }
+}
