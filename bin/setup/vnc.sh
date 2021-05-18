@@ -10,6 +10,7 @@ install() {
   sudo apt install -y libvncserver-dev libconfig++-dev
 
   # Compile
+  rm -rf $tmp_dir/dispmanx_vnc
   git clone https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
   pushd $tmp_dir/dispmanx_vnc
   make
@@ -32,9 +33,10 @@ install() {
 
 uninstall() {
   sudo systemctl stop dispmanx_vncserver.service || true
-  sudo rm /etc/systemd/system/dispmanx_vncserver.service
-  sudo rm /usr/bin/dispmanx_vncserver
-  sudo rm /etc/dispmanx_vncserver.conf
+  sudo systemctl disable dispmanx_vncserver.service || true
+  sudo rm -f /etc/systemd/system/dispmanx_vncserver.service
+  sudo rm -f /etc/dispmanx_vncserver.conf
+  sudo rm -f /usr/bin/dispmanx_vncserver
 }
 
 "${@}"
