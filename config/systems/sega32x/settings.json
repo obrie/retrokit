@@ -1,0 +1,74 @@
+{
+  "system": "sega32x",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Sega32X",
+        "path": "retroarch/overlay/GameBezels/Sega32X"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Sega32X",
+        "path": "retroarch/overlay/GameBezels/Sega32X",
+        "default": "retroarch/overlay/Sega-32X.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-picodrive": {"core_name": "picodrive", "library_name": "PicoDrive", "default": true}
+  },
+  "cheats": "Sega - 32X",
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Sega - 32X"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Sega - 32X.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/sega32x/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "filters": {
+      "flags": [
+        "usa",
+        "europe",
+        "world"
+      ],
+      "!flags": [
+        "beta",
+        "proto",
+        "sdk build"
+      ],
+      "!keywords": [
+        "bios"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine}.zip"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/sega32x"}
+    ]
+  }
+}
