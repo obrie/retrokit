@@ -3,7 +3,7 @@
 set -ex
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../common.sh"
+. "$dir/system-common.sh"
 
 while read -r setupmodule; do
   if [[ "$setupmodule" == system-roms-* ]] || [[ "$setupmodule" == systems/$system/roms-* ]]; then
