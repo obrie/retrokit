@@ -45,12 +45,14 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "usa",
+      "world"
     ],
     "filters": {
       "flags": [
+        "europe",
         "usa",
-        "europe"
+        "world"
       ],
       "!flags": [
         "beta",
