@@ -6,3 +6,4 @@ from romkit.filters.emulator import EmulatorFilter
 from romkit.filters.name import NameFilter, TitleFilter
 from romkit.filters.orientation import OrientationFilter
 from romkit.filters.parent import CloneFilter
+from romkit.filters.romset import ROMSetFilter

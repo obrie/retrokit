@@ -77,6 +77,9 @@
       "usa"
     ],
     "filters": {
+      "romsets": [
+        "nointro"
+      ],
       "flags": [
         "usa"
       ],
@@ -86,34 +89,18 @@
       "!keywords": [
         "bios"
       ],
-      "!titles": [
-        "Beyond Shadowgate",
-        "Cosmic Fantasy 2",
-        "Dragon Slayer - The Legend of Heroes",
-        "Dungeon Explorer II",
-        "Dungeon Master - Theron's Quest",
-        "Dynastic Hero, The",
-        "Fantastic Night Dreams - Cotton",
-        "Gate of Thunder + Bonk's Adventure + Bonk's Revenge",
-        "It Came from the Desert",
-        "J. B. Harold Murder Club",
-        "Jack Nicklaus Turbo Golf",
-        "John Madden Duo CD Football",
-        "Loom",
-        "Lords of the Rising Sun",
-        "Magical Dinosaur Tour",
-        "Might and Magic III - Isles of Terra",
-        "Monster Lair",
-        "Sherlock Holmes - Consulting Detective",
-        "Sherlock Holmes - Consulting Detective - Volume 2",
-        "Shape Shifter",
-        "SimEarth - The Living Planet",
-        "Splash Lake",
-        "Valis II",
-        "Valis III",
-        "Vasteel",
-        "Ys Book I & II",
-        "Ys III - Wanderers from Ys"
+      "+titles": [
+        "Addams Family, The",
+        "Bonk III - Bonk's Big Adventure",
+        "Camp California",
+        "Fighting Street",
+        "Final Zone II",
+        "Forgotten Worlds",
+        "Last Alert",
+        "Lords of Thunder",
+        "Prince of Persia",
+        "Riot Zone",
+        "Super Air Zonk - Rockabilly-Paradise"
       ]
     },
     "dirs": [
