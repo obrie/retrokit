@@ -16,15 +16,16 @@ install() {
   make
 
   # Copy to system
+  sudo systemctl stop dispmanx_vncserver.service || true
   sudo cp dispmanx_vncserver /usr/bin
   sudo chmod +x /usr/bin/dispmanx_vncserver
   file_cp "$config_dir/vnc/dispmanx_vncserver.conf" /etc/dispmanx_vncserver.conf as_sudo=true
 
   # Install service
   file_cp "$config_dir/vnc/dispmanx_vncserver.service" /etc/systemd/system/dispmanx_vncserver.service as_sudo=true
-  sudo systemctl start dispmanx_vncserver.service
-  sudo systemctl enable dispmanx_vncserver.service
   sudo systemctl daemon-reload
+  sudo systemctl enable dispmanx_vncserver.service
+  sudo systemctl start dispmanx_vncserver.service
 
   # Clean up
   popd
