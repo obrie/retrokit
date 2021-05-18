@@ -9,10 +9,15 @@ install() {
   # Install dependencies
   sudo apt install -y libvncserver-dev libconfig++-dev
 
-  # Compile
-  rm -rf $tmp_dir/dispmanx_vnc
+  # Check out
+  rm -rf "$tmp_dir/dispmanx_vnc"
   git clone https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
-  pushd $tmp_dir/dispmanx_vnc
+  pushd "$tmp_dir/dispmanx_vnc"
+
+  # Apply patches
+  patch -p1 < "$config_dir/vnc/0001-fix-keyboard.patch"
+
+  # Compile
   make
 
   # Copy to system
