@@ -195,7 +195,13 @@ class BaseSystem:
         if not machines:
             machines = self.list()
         
-        valid_machines = filter(Machine.is_valid_nonmerged, machines)
+        valid_machines = []
+        for machine in machines:
+            if machine.is_valid_nonmerged():
+                valid_machines.append(machine)
+            else:
+                logging.warn(f'[{machine.name}] is not a valid non-merged ROM')
+
         self.reset()
         self.enable(valid_machines)
 
