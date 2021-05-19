@@ -20,4 +20,8 @@ vacuum() {
   romkit_cli vacuum --log-level ERROR
 }
 
+organize() {
+  romkit_cli organize --log-level ERROR
+}
+
 "$2" "${@:3}"
