@@ -17,15 +17,13 @@ install() {
 
   # JSON reader
   sudo apt install -y jq
-
-  # Video editor
-  sudo apt install -y ffmpeg
 }
 
 uninstall() {
-  sudo pip3 uninstall crudini
-  rm -f "$tmp_dir/dotenv"
   sudo apt remove -y jq
+  rm -f "$tmp_dir/dotenv"
+  sudo pip3 uninstall crudini
+  sudo apt remove -y python3-pip
 }
 
 "${@}"

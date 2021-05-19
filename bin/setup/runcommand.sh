@@ -25,8 +25,8 @@ install_configurations() {
 }
 
 install() {
-  install_configurations
   install_termfix
+  install_configurations
 }
 
 uninstall() {
