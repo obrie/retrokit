@@ -29,16 +29,24 @@ install() {
       sudo cp -R /var/lib/bluetooth/ /var/lib/bluetooth.rk-src
     fi
 
+    echo 'Starting Bluetooth device scan.'
+    bluetoothctl scan off || true
+    bluetoothctl scan on &
+    local scan_pid=$!
+
     # Pair devices
-    echo 'Please prepare to pair your Bluetooth devices.'
     while IFS=$'\n' read -r name; do
       retval=0
 
       # So longer as the user has more devices to pair, keep asking
       while [ $retval == 0 ]; do
-        pair_device "$name" || retval=$?
+        pair_device "$name" </dev/tty || retval=$?
       done
-    done < <(setting '.hardware.bluetooth.devices')
+    done < <(setting '.hardware.bluetooth.devices[]')
+
+    echo 'Stopping Bluetooth device scan.'
+    kill $scan_pid
+    bluetoothctl scan off || true
   fi
 }
 
