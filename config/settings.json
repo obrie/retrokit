@@ -18,6 +18,11 @@
     "case": {
       "model": "argon1"
     },
+    "bluetooth": {
+      "devices": [
+        "8Bitdo SN30 Pro"
+      ]
+    },
     "controllers": [
       "Keyboard",
       "8Bitdo SN30 Pro",
@@ -57,11 +62,10 @@
     "deps",
     "boot",
     "tools-dev",
-    "tools-mame",
-    "tools-psp",
     "hardware/case",
-    "hardware/controllers",
+    "hardware/bluetooth-pair",
     "hardware/ir",
+    "hardware/controllers",
     "auth-internetarchive",
     "ssh",
     "vnc",
@@ -73,10 +77,11 @@
     "themes",
     "retroarch",
     "cheats",
-    "bluetooth",
     "runcommand",
     "emulationstation-settings",
     "romkit",
+    "tools-mame",
+    "tools-psp",
     "system-emulators",
     "systems/ports/packages",
     "emulationstation-systems",
