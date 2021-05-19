@@ -65,7 +65,7 @@
       {"path": "$HOME/RetroPie/roms/psp"}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}.cso"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }

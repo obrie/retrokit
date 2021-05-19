@@ -109,12 +109,14 @@ class Machine:
     # Builds context for formatting dirs/urls
     @property
     def context(self) -> dict:
-        return {
+        context = {
             'machine': self.name,
             'machine_sourcefile': self.sourcefile or self.name,
             'parent': (self.parent_name or self.name),
             **self.custom_context,
         }
+        context['machine_filename'] = self.romset.resource('machine', **context).target_path.path.name
+        return context
 
     @property
     def is_clone(self) -> bool:

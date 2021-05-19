@@ -15,7 +15,12 @@ class Sample:
     # Builds context for formatting dirs/urls
     @property
     def context(self) -> dict:
-        return {'sample': self.name, **self.machine.context}
+        context = {
+            'sample': self.name,
+            **self.machine.context,
+        }
+        context['sample_filename'] = self.romset.resource('sample', **context).target_path.path.name
+        return context
 
     # Target destination for installing this sample
     @property

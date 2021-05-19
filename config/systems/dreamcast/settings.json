@@ -111,7 +111,7 @@
       {"path": "$HOME/RetroPie/roms/dreamcast"}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}.chd"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }

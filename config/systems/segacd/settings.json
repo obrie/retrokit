@@ -74,7 +74,7 @@
       {"path": "$HOME/RetroPie/roms/segacd"}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}.chd"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }

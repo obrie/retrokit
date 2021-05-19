@@ -192,7 +192,7 @@
       }
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }

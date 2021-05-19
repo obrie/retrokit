@@ -69,7 +69,7 @@
       ]
     },
     "files": {
-      "machine": {"target": "{dir}/{machine}.zip"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/atari2600/-ALL-"},

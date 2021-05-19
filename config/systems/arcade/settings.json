@@ -357,7 +357,7 @@
       }
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}.zip"},
+      "machine": {"target": "{dir}/{machine_filename}"},
       "disk": {"source": "..", "target": "{dir}/{machine}"}
     }
   }
