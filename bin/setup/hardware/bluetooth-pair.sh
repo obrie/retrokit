@@ -12,7 +12,8 @@ pair_device() {
   if [[ $confirm == [yY] ]]; then
     while read -r mac_address hci_name; do
       echo "Found device at $mac_address.  Scanning with bluetoothctl..."
-      bluetoothctl scan on > "$tmp_dir/bluetooth.out" 2>&1 &
+      rm "$tmp_dir/bluetooth.out"
+      bluetoothctl scan on >> "$tmp_dir/bluetooth.out" &
       local scan_pid=$!
 
       while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
