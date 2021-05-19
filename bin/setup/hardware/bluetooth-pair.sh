@@ -16,7 +16,7 @@ pair_device() {
       while read -r mac_address hci_name; do
         echo "Found device at $mac_address.  Scanning with bluetoothctl..."
         rm -f "$tmp_dir/bluetooth.out"
-        bluetoothctl --timeout 30 scan on </dev/null > "/home/pi/retrokit/tmp/bluetooth.out" &
+        stdbuf -i0 -o0 -e0 bluetoothctl --timeout 30 scan on </dev/null >> "/home/pi/retrokit/tmp/bluetooth.out" &
         local scan_pid=$!
 
         while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
@@ -27,9 +27,9 @@ pair_device() {
         kill $scan_pid
 
         echo "Pairing with $mac_address"
-        bluetoothctl trust "$mac_address"
-        bluetoothctl pair "$mac_address"
-        bluetoothctl connect "$mac_address"
+        bluetoothctl trust "$mac_address" </dev/null
+        bluetoothctl pair "$mac_address" </dev/null
+        bluetoothctl connect "$mac_address" </dev/null
       done < <(echo "$matching_devices")
     else
       echo 'No devices found.  Please try again.'
