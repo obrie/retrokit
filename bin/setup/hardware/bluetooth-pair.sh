@@ -11,6 +11,18 @@ pair_device() {
   read -p "Do you have device \"$name\" ready for pairing? (y/n): " confirm
   if [[ $confirm == [yY] ]]; then
     while read -r mac_address hci_name; do
+      echo "Found device at $mac_address.  Scanning with bluetoothctl..."
+      bluetoothctl scan on > "$tmp_dir/bluetooth.out" 2>&1 &
+      local scan_pid=$!
+
+      while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
+        echo "Waiting for $mac_address..."
+        sleep 1
+      done
+
+      kill $scan_pid
+
+      echo "Pairing with $mac_address"
       bluetoothctl trust "$mac_address"
       bluetoothctl pair "$mac_address"
       bluetoothctl connect "$mac_address"
@@ -29,11 +41,6 @@ install() {
       sudo cp -R /var/lib/bluetooth/ /var/lib/bluetooth.rk-src
     fi
 
-    echo 'Starting Bluetooth device scan.'
-    bluetoothctl scan off || true
-    bluetoothctl scan on &
-    local scan_pid=$!
-
     # Pair devices
     while IFS=$'\n' read -r name; do
       retval=0
@@ -43,10 +50,6 @@ install() {
         pair_device "$name" </dev/tty || retval=$?
       done
     done < <(setting '.hardware.bluetooth.devices[]')
-
-    echo 'Stopping Bluetooth device scan.'
-    kill $scan_pid
-    bluetoothctl scan off || true
   fi
 }
 
