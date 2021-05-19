@@ -195,7 +195,7 @@ class BaseSystem:
         if not machines:
             machines = self.list()
         
-        valid_machines = filter(lambda machine: machine.is_valid_nonmerged, machines)
+        valid_machines = filter(Machine.is_valid_nonmerged, machines)
         self.reset()
         self.enable(valid_machines)
 
