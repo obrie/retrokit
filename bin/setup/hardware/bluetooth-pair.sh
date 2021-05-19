@@ -15,17 +15,25 @@ pair_device() {
     if [ -n "$matching_devices" ]; then
       while read -r mac_address hci_name; do
         echo "Found device at $mac_address.  Scanning with bluetoothctl..."
+
+        # Turn on agent
+        bluetoothctl agent on </dev/null
+
+        # Scan for device
         rm -f "$tmp_dir/bluetooth.out"
         stdbuf -i0 -o0 -e0 bluetoothctl --timeout 30 scan on </dev/null >> "/home/pi/retrokit/tmp/bluetooth.out" &
         local scan_pid=$!
 
+        # Wait for device to appear
         while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
           echo "Waiting for $mac_address..."
           sleep 1
         done
 
+        # Shut down scanner
         kill $scan_pid
 
+        # Pair device
         echo "Pairing with $mac_address"
         bluetoothctl trust "$mac_address" </dev/null
         bluetoothctl pair "$mac_address" </dev/null
