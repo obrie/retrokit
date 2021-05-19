@@ -92,7 +92,7 @@ little effort.  However, understand that this is opinionated software.  It uses
 the default settings that I prefer and is configured by default for my hardware
 setup.
 
-The hardware setup assumes:
+The default hardware setup assumes:
 
 * Raspberry Pi 4
 * Argon case
@@ -104,15 +104,33 @@ in the config/ folder, particularly config/settings.json.
 
 ## Instructions
 
-1. Flash new image with `bin/sd.sh`
+1. Flash new image
+   ```
+   bin/sd.sh
+   ```
 1. Start up Pi
-1. Connect your first controller (keyboard, for example)
 1. Quit EmulationStation
-1. Copy retrokit to your sd card to /home/pi/retrokit, including .env and config/blutooth/
-1. Run `bin/update.sh system` to update Raspbian
+1. Copy retrokit to your sd card, including .env
+   ```
+   cd /home/pi
+   git clone https://github.com/obrie/retrokit.git
+   ```
+1. Update Raspbian
+   ```
+   bin/update.sh system
+   ```
 1. Reboot
-1. Run `bin/update.sh retropie` to update RetroPie-Setup and its packages
-1. Run `bin/setup.sh` to run all setup modules
+   ```
+   shutdown -r 0
+   ```
+1. Update RetroPie-Setup and its packages
+   ```
+   bin/update.sh retropie
+   ```
+1. Run retrokit
+   ```
+   bin/setup.sh
+   ```
 
 To access via VNC:
 
