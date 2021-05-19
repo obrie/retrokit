@@ -10,24 +10,30 @@ pair_device() {
 
   read -p "Do you have device \"$name\" ready for pairing? (y/n): " confirm
   if [[ $confirm == [yY] ]]; then
-    while read -r mac_address hci_name; do
-      echo "Found device at $mac_address.  Scanning with bluetoothctl..."
-      rm "$tmp_dir/bluetooth.out"
-      stdbuf -i0 -o0 -e0 bluetoothctl scan on >> "/home/pi/retrokit/tmp/bluetooth.out" &
-      local scan_pid=$!
+    local matching_devices=$(hcitool scan | grep "$name")
 
-      while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
-        echo "Waiting for $mac_address..."
-        sleep 1
-      done
+    if [ -n "$matching_devices" ]; then
+      while read -r mac_address hci_name; do
+        echo "Found device at $mac_address.  Scanning with bluetoothctl..."
+        rm "$tmp_dir/bluetooth.out"
+        stdbuf -i0 -o0 -e0 bluetoothctl scan on > "/home/pi/retrokit/tmp/bluetooth.out" &
+        local scan_pid=$!
 
-      kill $scan_pid
+        while ! grep "$mac_address" "$tmp_dir/bluetooth.out"; do
+          echo "Waiting for $mac_address..."
+          sleep 1
+        done
 
-      echo "Pairing with $mac_address"
-      bluetoothctl trust "$mac_address"
-      bluetoothctl pair "$mac_address"
-      bluetoothctl connect "$mac_address"
-    done < <(hcitool scan | grep "$name")
+        kill $scan_pid
+
+        echo "Pairing with $mac_address"
+        bluetoothctl trust "$mac_address"
+        bluetoothctl pair "$mac_address"
+        bluetoothctl connect "$mac_address"
+      done < <(echo "$matching_devices")
+    else
+      echo 'No devices found.  Please try again.'
+    fi
 
     return 0
   else
