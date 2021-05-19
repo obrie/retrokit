@@ -17,6 +17,6 @@ class ZipToCso(BaseAction):
             iso_file = next(Path(extract_dir).rglob('*.iso'))
 
             # Run maxcso
-            subprocess.run(['maxcso', '--block=16384', '--format=cso2', iso_file, '-o', target.path], check=True)
+            subprocess.run(['maxcso', '--block=16384', iso_file, '-o', target.path], check=True)
 
         source.delete()
