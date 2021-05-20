@@ -5,7 +5,14 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
+configscripts_dir="$HOME/RetroPie-Setup/scriptmodules/supplementary/emulationstation/configscripts"
+
 install() {
+  # Add autoconfig scripts
+  while read configscript_path; do
+    cp "$configscript_path" "$configscripts_dir/"
+  done < <(find "$config_dir/controllers/configscripts" -name '*.sh')
+
   # Run RetroPie autoconfig for each controller input
   while read input_path; do
     cp "$input_path" "$HOME/.emulationstation/es_temporaryinput.cfg"
@@ -14,7 +21,14 @@ install() {
 }
 
 uninstall() {
-  sudo $HOME/RetroPie-Setup/retropie_packages.sh emulationstation init_input
+  # Reset inputs
+  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation init_input
+
+  # Remove autoconfig scripts
+  while read configscript_path; do
+    local configscript_name=$(basename "$configscript_path")
+    rm -f "$configscripts_dir/$configscript_name"
+  done < <(find "$config_dir/controllers/configscripts" -name '*.sh')
 }
 
 "${@}"
