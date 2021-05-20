@@ -20,7 +20,7 @@ function _get_config_key() {
             key='dpad_right'
             ;;
         a|b|x|y|start)
-            key='$input_name'
+            key="$input_name"
             ;;
         leftbottom|leftshoulder)
             key='turbo'
@@ -66,10 +66,11 @@ function _onstart_redream() {
     # Look for an existing profile for this controller
     profile_key=$(grep "name:$name" "$redream_config_path" | head -n 1 | grep -oE '^[^=]+')
     if [ -z "$profile_key" ]; then
-        # No existing profile: calculate the next profile id to use
-        local last_profile_key=$(grep -oE '^profile[0-9]+' "$redream_config_path" | sort | tail -n 1)
-        local last_profile_id=$(echo "$last_profile_key" | grep -oE '[0-9]+')
-        local next_profile_id=$((${last_profile_id:--1} + 1))
+        # No existing profile: determine the next profile id to use
+        local next_profile_id=0
+        while iniGet "profile$next_profile_id" && [ -n "$ini_value" ]; then
+            next_profile_id=$(($next_profile_id + 1))
+        done
 
         profile_key="profile$next_profile_id"
     fi
@@ -79,11 +80,11 @@ function _onstart_redream() {
 }
 
 function onstart_redream_joystick() {
-    _onstart_redream 'keyboard0'
+    _onstart_redream "$DEVICE_GUID"
 }
 
 function onstart_redream_keyboard() {
-    _onstart_redream "$DEVICE_GUID"
+    _onstart_redream 'keyboard0'
 
     declare -Ag keymap
 
@@ -201,10 +202,15 @@ function map_redream_joystick() {
     local input_value=$4
 
     local key=$(_get_config_key "$input_name")
+    if [ -z "$key" ]; then
+        return
+    fi
+
     local value
     case "$input_type" in
         hat)
-            value="hat$((input_id / 2 - 1))"
+            declare -A sdl_hat_ids=([1]="0" [2]="3" [4]="1" [8]="2")
+            value="hat${sdl_hat_ids[$input_value]}"
             ;;
         axis)
             if [[ "$input_value" == '1' ]]; then
@@ -218,7 +224,7 @@ function map_redream_joystick() {
             ;;
     esac
 
-    profile_value+="$key:$value"
+    profile_value+=",$key:$value"
 }
 
 function map_redream_keyboard() {
@@ -228,15 +234,18 @@ function map_redream_keyboard() {
     local input_value=$4
 
     local key=$(_get_config_key "$input_name")
-    local value=${keymap[$input_id]}
+    if [ -z "$key" ]; then
+        return
+    fi
 
+    local value=${keymap[$input_id]}
     if [ -n "$value" ]; then
-        profile_value+="$key:$value"
+        profile_value+=",$key:$value"
     fi
 }
 
 function _onend_redream() {
-    iniSet "$profile_id" "$profile_value"
+    iniSet "$profile_key" "$profile_value"
 }
 
 function onend_redream_joystick() {
