@@ -36,9 +36,17 @@ install_bios() {
   done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
+install_config() {
+  local config_path="$system_config_dir/emulators.cfg"
+  if [ -n "$config_path" ]; then
+    ini_merge "$config_path" "$retropie_system_config_dir/emulators.cfg"
+  fi
+}
+
 install() {
   install_emulators
   install_bios
+  install_config
 }
 
 uninstall() {
