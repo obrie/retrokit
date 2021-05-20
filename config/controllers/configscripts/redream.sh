@@ -68,7 +68,7 @@ function _onstart_redream() {
     if [ -z "$profile_key" ]; then
         # No existing profile: determine the next profile id to use
         local next_profile_id=0
-        while iniGet "profile$next_profile_id" && [ -n "$ini_value" ]; then
+        while iniGet "profile$next_profile_id" && [ -n "$ini_value" ]; do
             next_profile_id=$(($next_profile_id + 1))
         done
 
@@ -85,6 +85,8 @@ function onstart_redream_joystick() {
 
 function onstart_redream_keyboard() {
     _onstart_redream 'keyboard0'
+
+    profile_value+=',exit:escape'
 
     declare -Ag keymap
 
@@ -233,9 +235,14 @@ function map_redream_keyboard() {
     local input_id=$3
     local input_value=$4
 
-    local key=$(_get_config_key "$input_name")
-    if [ -z "$key" ]; then
-        return
+    local key
+    if [ "$input_name" == 'select' ]; then
+        key='menu'
+    else
+        key=$(_get_config_key "$input_name")
+        if [ -z "$key" ]; then
+            return
+        fi
     fi
 
     local value=${keymap[$input_id]}
