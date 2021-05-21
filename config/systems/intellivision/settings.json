@@ -1,0 +1,114 @@
+{
+  "system": "intellivision",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Intellivision",
+        "path": "retroarch/overlay/GameBezels/Intellivision"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Intellivision",
+        "path": "retroarch/overlay/GameBezels/Intellivision",
+        "default": "retroarch/overlay/Mattel-Intellivision.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-freeintv": {"core_name": "freeintv", "library_name": "FreeIntv", "default": true}
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/Mattel%20-%20Intellivision",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "exec.bin": "{url}/exec.bin",
+      "grom.bin": "{url}/grom.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Mattel - Intellivision"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Mattel - Intellivision.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/intellivision/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "filters": {
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "beta",
+        "proto"
+      ],
+      "!keywords": [
+        "bios",
+        "demonstration cartridge",
+        "electric company, the",
+        "test cartridge"
+      ],
+      "!titles": [
+        "ABPA Backgammon ~ Backgammon",
+        "Checkers ~ Draughts",
+        "Factor Fun",
+        "Las Vegas Poker & Blackjack",
+        "Las Vegas Roulette",
+        "Math Master",
+        "Triple Challenge - Chess, Checkers, Backgammon",
+        "USCF Chess ~ Chess",
+        "Word Hunt"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/intellivision/-ALL-"},
+      {
+        "path": "$HOME/RetroPie/roms/intellivision",
+        "filters": {
+          "names": [
+            "Astrosmash (USA, Europe)",
+            "Bump 'n' Jump (USA)",
+            "BurgerTime (USA, Europe)",
+            "Donkey Kong (USA, Europe)",
+            "Donkey Kong Junior (USA, Europe)",
+            "Frogger (USA, Europe)",
+            "Pac-Man (USA) (Atarisoft)",
+            "Pinball (USA)",
+            "Pitfall! (USA, Europe)",
+            "Pole Position (USA)",
+            "Popeye (USA, Europe)",
+            "Star Wars - The Empire Strikes Back (USA, Europe)",
+            "Zaxxon (USA, Europe)"
+          ]
+        }
+      }
+    ]
+  }
+}
