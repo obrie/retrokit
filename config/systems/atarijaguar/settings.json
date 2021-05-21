@@ -39,7 +39,7 @@
           "source": "{discovery_url}/{machine}.zip",
           "download": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine}.zip",
           "target": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine}.j64",
-          "action": {"action": "zip_extract", "file": ".*\\.j64"}
+          "install": {"action": "zip_extract", "file": ".*\\.j64"}
         }
       },
       "auth": "internetarchive",
