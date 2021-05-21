@@ -1,4 +1,4 @@
-from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
+from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
@@ -21,6 +21,7 @@ class BaseSystem:
         OrientationFilter,
         TitleFilter,
         ROMSetFilter,
+        EmulatorFilter,
     ]
 
     # Class to use for building emulator sets
@@ -55,7 +56,7 @@ class BaseSystem:
 
         # Filters: emulators
         if self.emulator_set.filter:
-            self.filter_set.append(EmulatorFilter(config=self.config))
+            self.filter_set.append(EmulatorCompatibilityFilter(config=self.config))
 
         # Filters: forced name filters
         for system_dir in self.dirs:

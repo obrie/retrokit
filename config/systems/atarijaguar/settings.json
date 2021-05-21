@@ -1,0 +1,79 @@
+{
+  "system": "atarijaguar",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-AtariJaguar",
+        "path": "retroarch/overlay/GameBezels/AtariJaguar"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-AtariJaguar",
+        "path": "retroarch/overlay/GameBezels/AtariJaguar",
+        "default": "retroarch/overlay/Atari-Jaguar.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-virtualjaguar": {"core_name": "virtualjaguar", "library_name": "Virtual Jaguar", "default": true}
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Atari - Jaguar \\(J64\\)"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Atari - Jaguar (J64).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine}.j64",
+          "action": {"action": "zip_extract", "file": ".*\\.j64"}
+        }
+      },
+      "auth": "internetarchive",
+      "emulator": "lr-virtualjaguar"
+    }
+  ],
+  "roms": {
+    "emulators": {
+      "url": "file://$HOME/retrokit/config/systems/atarijaguar/emulators.tsv",
+      "filter": true
+    },
+    "priority": [
+      "usa",
+      "world"
+    ],
+    "filters": {
+      "flags": [
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "beta",
+        "proto"
+      ],
+      "!keywords": [
+        "bios"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atarijaguar"}
+    ]
+  }
+}
