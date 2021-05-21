@@ -39,7 +39,7 @@ install_bios() {
 install_config() {
   local config_path="$system_config_dir/emulators.cfg"
   if [ -n "$config_path" ]; then
-    ini_merge "$config_path" "$retropie_system_config_dir/emulators.cfg"
+    ini_merge "$config_path" "$retropie_system_config_dir/emulators.cfg" restore=false
   fi
 }
 
