@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+# Path to the redream configuration where controllers are defined
 redream_config_path="$configdir/dreamcast/redream/redream.cfg"
 
+# Generates the configuration key for a given ES input name
 function _get_config_key() {
     local input_name=$1
     local key=''
@@ -35,6 +37,8 @@ function _get_config_key() {
             key='rtrig'
             ;;
         select)
+            # Select is configured to exit since there's no ability to use
+            # a hotkey
             key='exit'
             ;;
         leftanalogleft)
@@ -86,6 +90,8 @@ function onstart_redream_joystick() {
 function onstart_redream_keyboard() {
     _onstart_redream 'keyboard0'
 
+    # For keyboard, exit is hard-coded to the ESC key to match other
+    # similarly configured standalone emulators
     profile_value+=',exit:escape'
 
     declare -Ag keymap
@@ -209,6 +215,7 @@ function map_redream_joystick() {
     local value
     case "$input_type" in
         hat)
+            # up, right, down, left
             declare -A sdl_hat_ids=([1]="0" [2]="3" [4]="1" [8]="2")
             value="hat${sdl_hat_ids[$input_value]}"
             ;;
@@ -235,6 +242,8 @@ function map_redream_keyboard() {
 
     local key
     if [ "$input_name" == 'select' ]; then
+        # For keyboards, we use select to go directly to the redream
+        # UI.  This is only enabled for keyboards.
         key='menu'
     else
         key=$(_get_config_key "$input_name")
