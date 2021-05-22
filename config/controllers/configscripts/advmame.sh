@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
+# Path to the advmame configuration where controls are defined
 advmame_config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
+
+# Maximum number of players to configure for each controller
 max_players=4
 
+# Generates the input_map configuration key to use for a given player
+# number.
 function _get_player_key() {
     local input_name=$1
     local player=$2
@@ -10,7 +15,7 @@ function _get_player_key() {
 
     case "$input_name" in
         up|down|left|right)
-            keys="p${player}_$input_name"
+            keys="p${player}_${input_name}"
             ;;
         a)
             key="p${player}_button1"
@@ -67,6 +72,8 @@ function _get_player_key() {
             key="p${player}_doubleright_down"
             ;;
         hotkeyenable)
+            # This key name is only used by us to internally identify the hotkey.
+            # It is not used by advmame.
             key='hotkey'
             ;;
         *)
@@ -76,6 +83,7 @@ function _get_player_key() {
     echo "$key"
 }
 
+# Generates the input_map configuration key to use for the advmame UI
 function _get_ui_key() {
     local input_name=$1
     local key=''
@@ -94,6 +102,7 @@ function _get_ui_key() {
     echo "$key"
 }
 
+# Generates the input_map configuration key to use for the advmame UI
 function _get_hotkey() {
     local input_name=$1
     local key=''
@@ -119,18 +128,6 @@ function _get_hotkey() {
 }
 
 function _onstart_advmame() {
-    if [ ! -d '/tmp/retroarch-joypad-autoconfig' ]; then
-      git clone https://github.com/libretro/retroarch-joypad-autoconfig.git /tmp/retroarch-joypad-autoconfig
-    else
-      git -C /tmp/retroarch-joypad-autoconfig pull
-    fi
-
-    declare -g controller_guid="${DEVICE_GUID:10:2}${DEVICE_GUID:8:2}_${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
-    declare -g autoconfig_path=$(grep -iRl "${controller_guid//_/:}" /tmp/retroarch-joypad-autoconfig | head -n 1)
-    if [ -z "$autoconfig_path" ]; then
-        return
-    fi
-
     cp "$advmame_config_path" '/tmp/advmame.rc'
     iniConfig ' ' '' '/tmp/advmame.rc'
 
@@ -139,6 +136,31 @@ function _onstart_advmame() {
 }
 
 function onstart_advmame_joystick() {
+    # Pull down joypad configurations that map the input_id to the name of
+    # the button on the actuall controller.  As far as I can tell, this
+    # information doesn't live anywhere else.  Note we are not talking about
+    # input_name here as that represents the name of the button that we're
+    # mapping to, which can be different.
+    if [ ! -d '/tmp/retroarch-joypad-autoconfig' ]; then
+      git clone https://github.com/libretro/retroarch-joypad-autoconfig.git /tmp/retroarch-joypad-autoconfig
+    else
+      git -C /tmp/retroarch-joypad-autoconfig pull
+    fi
+
+    # Identify controller by its vendor+product by parsing the data from the
+    # SDL-specific GUID.
+    # 
+    # See: https://github.com/libsdl-org/SDL/blob/804e5799ad2b596312b046b1701d1684d3df2fe1/src/joystick/linux/SDL_sysjoystick.c#L125-L130
+    declare -g controller_guid="${DEVICE_GUID:10:2}${DEVICE_GUID:8:2}_${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
+    
+    # Find the configuration for the controller we're configuring.
+    # 
+    # If we can't find it, then we don't map this joystick.
+    declare -g controller_config_path=$(grep -iRl "${controller_guid//_/:}" /tmp/retroarch-joypad-autoconfig | head -n 1)
+    if [ -z "$controller_config_path" ]; then
+        exit
+    fi
+
     _onstart_advmame
 }
 
@@ -259,12 +281,8 @@ function map_advmame() {
     local controller=$3
     local value=$4
 
-    if [ "$key" == 'hotkey' ]; then
-        if [ -z "$hotkey_value" ]; then
-            hotkey_value=$value
-        fi
-        return
-    elif [ -z "${mapped_inputs["$input_name"]}" ]; then
+    # Track how each input was mapped so that we can use it with hotkeys
+    if [ -z "${mapped_inputs["$input_name"]}" ]; then
         mapped_inputs["$input_name"]="$value"
     fi
 
@@ -293,11 +311,13 @@ function map_advmame_joystick() {
     local input_value=$4
 
     for (( player=1; player<=$max_players; player++ )); do
+        # Look up the advmame configuration key this input maps to
         local key=$(_get_player_key "$input_name" "$player")
         if [ -z "$key" ]; then
             return
         fi
 
+        # Get the guid advmame expects for this player #
         local player_guid
         if [ "$player" == '1' ]; then
             player_guid="$controller_guid"
@@ -321,9 +341,13 @@ function map_advmame_joystick() {
                 value="joystick_digital[$player_guid,0,$input_id,$direction]"
                 ;;
             *)
-                local button_config=$(grep "= \"$input_id\"" "$autoconfig_path" | head -n 1)
+                # Look up which physical button this input id actually represents
+                # on the controller
+                local button_config=$(grep "= \"$input_id\"" "$controller_config_path" | head -n 1)
                 local button_config_name=${button_config%% *}
                 local button_name
+
+                # Translate the phsical button name to the advmame button name
                 case "$button_config_name" in
                     input_a_btn)
                         button_name='a'
@@ -373,7 +397,13 @@ function map_advmame_joystick() {
                 ;;
         esac
 
-        map_advmame "$input_name" "$key" "$player_guid" "$value"
+        # The hotkey only gets mapped for player 1
+        if [ "$input_name" == 'hotkeyenable' ]; then
+            hotkey_value=$value
+            break
+        else
+            map_advmame "$input_name" "$key" "$player_guid" "$value"
+        fi
     done
 }
 
@@ -383,18 +413,24 @@ function map_advmame_keyboard() {
     local input_id=$3
     local input_value=$4
 
+    # Look up the advmame configuration key this input maps to
     local key
     key=$(_get_player_key "$input_name" 1)
     if [ -z "$key" ]; then
         return
     fi
 
+    # Find the corresponding advmame key name for the given sdl id
     local mapping=${keymap[$input_id]}
     if [ -n "$mapping" ]; then
         local value="keyboard[0,$mapping]"
     fi
 
-    map_advmame "$input_name" "$key" 'keyboard' "$value"
+    if [ "$input_name" == 'hotkeyenable' ]; then
+        hotkey_value=$value
+    else
+        map_advmame "$input_name" "$key" 'keyboard' "$value"
+    fi
 }
 
 function _onend_advmame() {
