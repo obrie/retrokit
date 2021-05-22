@@ -5,7 +5,7 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
-configscripts_dir="$HOME/RetroPie-Setup/scriptmodules/supplementary/emulationstation/configscripts"
+configscripts_dir="/opt/retropie/supplementary/emulationstation/scripts/configscripts"
 
 install() {
   # Add autoconfig scripts
