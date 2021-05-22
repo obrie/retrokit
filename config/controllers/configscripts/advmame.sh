@@ -15,7 +15,7 @@ function _get_player_key() {
 
     case "$input_name" in
         up|down|left|right)
-            keys="p${player}_${input_name}"
+            key="p${player}_${input_name}"
             ;;
         a)
             key="p${player}_button1"
@@ -90,7 +90,7 @@ function _get_ui_key() {
 
     case "$input_name" in
         up|down|left|right)
-            keys="ui_$input_name"
+            key="ui_$input_name"
             ;;
         a)
             key="ui_select"
@@ -295,6 +295,7 @@ function map_advmame() {
     fi
     merged_value+=$value
 
+    iniDel "input_map\[$key\]"
     iniSet "input_map[$key]" "$merged_value"
 }
 
@@ -398,11 +399,19 @@ function map_advmame_joystick() {
         esac
 
         # The hotkey only gets mapped for player 1
-        if [ "$input_name" == 'hotkeyenable' ]; then
+        if [ "$player" == '1' ] && [ "$input_name" == 'hotkeyenable' ]; then
             hotkey_value=$value
             break
-        else
-            map_advmame "$input_name" "$key" "$player_guid" "$value"
+        fi
+
+        map_advmame "$input_name" "$key" "$player_guid" "$value"
+
+        # UI Keys only get mapped for player 1
+        if [ "$player" == '1' ]; then
+            local ui_key=$(_get_ui_key "$input_name")
+            if [ -n "$ui_key" ]; then
+                map_advmame "$input_name" "$ui_key" "$player_guid" "$value"
+            fi
         fi
     done
 }
@@ -414,8 +423,7 @@ function map_advmame_keyboard() {
     local input_value=$4
 
     # Look up the advmame configuration key this input maps to
-    local key
-    key=$(_get_player_key "$input_name" 1)
+    local key=$(_get_player_key "$input_name" 1)
     if [ -z "$key" ]; then
         return
     fi
@@ -430,6 +438,12 @@ function map_advmame_keyboard() {
         hotkey_value=$value
     else
         map_advmame "$input_name" "$key" 'keyboard' "$value"
+    fi
+
+    # Map UI-related keys
+    local ui_key=$(_get_ui_key "$input_name")
+    if [ -n "$ui_key" ]; then
+        map_advmame "$input_name" "$ui_key" 'keyboard' "$value"
     fi
 }
 
