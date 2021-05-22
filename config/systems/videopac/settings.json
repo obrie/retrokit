@@ -1,0 +1,108 @@
+{
+  "system": "intellivision",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Videopac",
+        "path": "retroarch/overlay/GameBezels/Videopac"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Videopac",
+        "path": "retroarch/overlay/GameBezels/Videopac",
+        "default": "retroarch/overlay/Magnavox-Odyssey-2.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "lr-o2em": {"core_name": "o2em", "library_name": "O2EM", "default": true}
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/Magnavox%20-%20Odyssey2",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "o2rom.bin": "{url}/o2rom.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Magnavox - Odyssey2"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Magnavox - Odyssey2.dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/intellivision/.nointro/{machine}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "priority": [
+      "usa",
+      "world",
+      "europe"
+    ],
+    "filters": {
+      "flags": [
+        "canada",
+        "europe",
+        "usa",
+        "world"
+      ],
+      "!flags": [
+        "proto"
+      ],
+      "!keywords": [
+        "bios"
+      ],
+      "!titles": [
+        "Casino Slot Machine",
+        "Chess",
+        "Chinese Logic",
+        "Computer Intro",
+        "Keyboard Creations",
+        "Las Vegas Blackjack",
+        "Matchmaker + Logix + Buzzword",
+        "Math-A-Magic + Echo",
+        "Musician",
+        "Nimble Numbers Ned",
+        "Type & Tell"
+      ]
+    },
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/videopac/-ALL-"},
+      {
+        "path": "$HOME/RetroPie/roms/videopac",
+        "filters": {
+          "names": [
+            "Alpine Skiing (USA, Europe)",
+            "Blockout + Breakdown (USA, Europe)",
+            "Cosmic Conflict (USA)",
+            "Frogger (Europe)",
+            "K.C. Munchkin (USA)",
+            "Popeye (Europe)",
+            "Smithereens (USA)",
+            "UFO (USA)"
+          ]
+        }
+      }
+    ]
+  }
+}
