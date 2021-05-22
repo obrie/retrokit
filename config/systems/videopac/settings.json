@@ -44,7 +44,9 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/intellivision/.nointro/{machine}.zip"
+          "download": "$HOME/RetroPie/roms/videopac/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/videopac/.nointro/{machine}.bin",
+          "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },
       "auth": "internetarchive"
