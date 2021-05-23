@@ -6,6 +6,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
+  # Zip
+  sudo apt install -y zip
+
   # XML processing
   sudo apt install -y python3-lxml
 
