@@ -141,25 +141,22 @@ function onstart_advmame_joystick() {
     # information doesn't live anywhere else.  Note we are not talking about
     # input_name here as that represents the name of the button that we're
     # mapping to, which can be different.
-    if [ ! -d '/tmp/retroarch-joypad-autoconfig' ]; then
-      git clone https://github.com/libretro/retroarch-joypad-autoconfig.git /tmp/retroarch-joypad-autoconfig
-    else
-      git -C /tmp/retroarch-joypad-autoconfig pull
-    fi
+    curl -fL# -o /tmp/gamecontrollerdb.txt https://raw.githubusercontent.com/gabomdq/SDL_GameControllerDB/master/gamecontrollerdb.txt
 
     # Identify controller by its vendor+product by parsing the data from the
     # SDL-specific GUID.
     # 
     # See: https://github.com/libsdl-org/SDL/blob/804e5799ad2b596312b046b1701d1684d3df2fe1/src/joystick/linux/SDL_sysjoystick.c#L125-L130
-    declare -g controller_guid="${DEVICE_GUID:10:2}${DEVICE_GUID:8:2}_${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
+    local vendor_id_hex="${DEVICE_GUID:10:2}${DEVICE_GUID:8:2}"
+    local product_id_hex="${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
+    declare -g controller_guid="${vendor_id_hex}_${product_id_hex}"
     
-    # Find the configuration for the controller we're configuring.
-    # 
-    # If we can't find it, then we don't map this joystick.
-    declare -g controller_config_path=$(grep -iRl "${controller_guid//_/:}" /tmp/retroarch-joypad-autoconfig | head -n 1)
-    if [ -z "$controller_config_path" ]; then
-        exit
-    fi
+    # Map SDL button id to its associated name
+    declare -Ag buttonmap
+    while IFS=: read button_name button_id; do
+      button_id=${button_id/b/}
+      buttonmap["$button_id"]="$button_name"
+    done < <(grep "$DEVICE_GUID" /tmp/gamecontrollerdb.txt | tr ',' '\n' | grep :b)
 
     _onstart_advmame
 }
@@ -344,52 +341,7 @@ function map_advmame_joystick() {
             *)
                 # Look up which physical button this input id actually represents
                 # on the controller
-                local button_config=$(grep "= \"$input_id\"" "$controller_config_path" | head -n 1)
-                local button_config_name=${button_config%% *}
-                local button_name
-
-                # Translate the phsical button name to the advmame button name
-                case "$button_config_name" in
-                    input_a_btn)
-                        button_name='a'
-                        ;;
-                    input_b_btn)
-                        button_name='b'
-                        ;;
-                    input_x_btn)
-                        button_name='x'
-                        ;;
-                    input_y_btn)
-                        button_name='y'
-                        ;;
-                    input_a_btn)
-                        button_name='b'
-                        ;;
-                    input_b_btn)
-                        button_name='b'
-                        ;;
-                    input_l_btn)
-                        button_name='tl'
-                        ;;
-                    input_r_btn)
-                        button_name='tr'
-                        ;;
-                    input_l2_btn)
-                        button_name='tl2'
-                        ;;
-                    input_r2_btn)
-                        button_name='tr2'
-                        ;;
-                    input_start_btn)
-                        button_name='start'
-                        ;;
-                    input_select_btn)
-                        button_name='select'
-                        ;;
-                    *)
-                        ;;
-                esac
-
+                local button_name=${buttonmap["$input_id"]}
                 if [ -z "$button_name" ]; then
                     return
                 fi

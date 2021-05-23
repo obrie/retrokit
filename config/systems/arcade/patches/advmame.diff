@@ -1,0 +1,11 @@
+--- a/advance/linux/jevent.c
++++ b/advance/linux/jevent.c
+@@ -596,7 +596,7 @@ static adv_error joystickb_setup(struct joystick_item_context* item, int f)
+    }
+  }
+ 
+- if (override_begin != override_end) {
++ if (override_begin != override_end && false) {
+    log_std(("event: override %04x:%04x '%s' %u %u\n", item->vendor, item->product, item->desc, override_begin, override_end));
+ 
+    /*

@@ -24,7 +24,7 @@
     "lr-mame2010": {"core_name": "mame2010", "library_name": "MAME 2010"},
     "lr-mame2015": {"core_name": "mame2015", "library_name": "MAME 2015"},
     "lr-mame2016": {"core_name": "mame2016", "library_name": "MAME 2016"},
-    "advmame": {},
+    "advmame": {"build": "source"},
     "lr-mame": {"build": "source", "branch": "lrmame0222", "core_name": "mame_", "library_name": "MAME"}
   },
   "romsets": [
