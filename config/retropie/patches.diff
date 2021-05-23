@@ -4,7 +4,7 @@
  }
  
  function build_advmame() {
-+    applyPatch "$HOME/retrokit/config/systems/arcade/patches/advmame.diff"
++    applyPatch "/home/pi/retrokit/config/systems/arcade/patches/advmame.diff"
      local params=()
      if isPlatform "videocore"; then
          params+=(--enable-sdl1 --disable-sdl2 --enable-vc)
