@@ -136,13 +136,6 @@ function _onstart_advmame() {
 }
 
 function onstart_advmame_joystick() {
-    # Pull down joypad configurations that map the input_id to the name of
-    # the button on the actuall controller.  As far as I can tell, this
-    # information doesn't live anywhere else.  Note we are not talking about
-    # input_name here as that represents the name of the button that we're
-    # mapping to, which can be different.
-    curl -fL# -o /tmp/gamecontrollerdb.txt https://raw.githubusercontent.com/gabomdq/SDL_GameControllerDB/master/gamecontrollerdb.txt
-
     # Identify controller by its vendor+product by parsing the data from the
     # SDL-specific GUID.
     # 
@@ -153,10 +146,16 @@ function onstart_advmame_joystick() {
     
     # Map SDL button id to its associated name
     declare -Ag buttonmap
-    while IFS=: read button_name button_id; do
-      button_id=${button_id/b/}
-      buttonmap["$button_id"]="$button_name"
-    done < <(grep "$DEVICE_GUID" /tmp/gamecontrollerdb.txt | tr ',' '\n' | grep :b)
+    buttonmap['0']='a'
+    buttonmap['1']='b'
+    buttonmap['2']='x'
+    buttonmap['3']='y'
+    buttonmap['4']='tl'
+    buttonmap['5']='tr'
+    buttonmap['6']='tl2'
+    buttonmap['7']='tr2'
+    buttonmap['8']='select'
+    buttonmap['9']='start'
 
     _onstart_advmame
 }
