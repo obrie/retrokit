@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the advmame configuration where controls are defined
-advmame_config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
+advmame_config_path="$configdir/mame-advmame/advmame.rc"
 
 # Maximum number of players to configure for each controller
 max_players=4
