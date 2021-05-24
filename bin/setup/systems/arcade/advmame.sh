@@ -10,15 +10,19 @@ config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
 
 restore_config() {
   if has_backup "$config_path"; then
-    # Keep track of the profiles since we don't want to lose those
-    grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
+    if [ -f "$config_path" ]; then
+      # Keep track of the profiles since we don't want to lose those
+      grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
 
-    restore "$config_path"
-    sed -i '/^input_map/d' "$config_path"
+      restore "$config_path"
+      sed -i '/^input_map/d' "$config_path"
 
-    # Merge the profiles back in
-    crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
-    rm "$system_tmp_dir/inputs.rc"
+      # Merge the profiles back in
+      crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
+      rm "$system_tmp_dir/inputs.rc"
+    else
+      restore "$config_path"
+    fi
   fi
 }
 
@@ -26,6 +30,7 @@ install() {
   restore_config "$config_path"
   backup "$config_path"
 
+  # Add overrides
   while IFS="$tab" read -r name value; do
     if [ -z "$name" ]; then
       continue
@@ -37,6 +42,11 @@ install() {
     echo "$name $value" >> "$config_path"
   done < <(cat "$system_config_dir/advmame.rc" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
 
+  # Add rom paths
+  sed -i '/dir_rom /d' "$config_path"
+  echo "dir_rom $(system_setting '[.roms.dirs[] | .path] | join(":")' | envsubst)" >> "$config_path"
+
+  # Make the config readable
   sort -o "$config_path" "$config_path"
 
   # Move advmame config directory in arcade system in order to avoid artwork zip

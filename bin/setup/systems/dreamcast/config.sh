@@ -10,14 +10,18 @@ config_path='/opt/retropie/emulators/redream/redream.cfg'
 
 restore_config() {
   if has_backup "$config_path"; then
-    # Keep track of the profiles since we don't want to lose those
-    grep -E '^profile[0-9]+' "$config_path" > "$system_tmp_dir/profiles.cfg"
+    if [ -f "$config_path" ]; then
+      # Keep track of the profiles since we don't want to lose those
+      grep -E '^profile[0-9]+' "$config_path" > "$system_tmp_dir/profiles.cfg"
 
-    restore "$config_path"
+      restore "$config_path"
 
-    # Merge the profiles back in
-    crudini --inplace --merge "$config_path" < "$system_tmp_dir/profiles.cfg"
-    rm "$system_tmp_dir/profiles.cfg"
+      # Merge the profiles back in
+      crudini --inplace --merge "$config_path" < "$system_tmp_dir/profiles.cfg"
+      rm "$system_tmp_dir/profiles.cfg"
+    else
+      restore "$config_path"
+    fi
   fi
 }
 
