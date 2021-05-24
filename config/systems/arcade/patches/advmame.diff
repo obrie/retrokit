@@ -5,7 +5,7 @@
 	}
  
 -	if (override_begin != override_end) {
-+	if (override_begin != override_end && false) {
++	if (override_begin != override_end && 0) {
 		log_std(("event: override %04x:%04x '%s' %u %u\n", item->vendor, item->product, item->desc, override_begin, override_end));
  
 		/*
