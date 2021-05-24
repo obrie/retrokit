@@ -71,6 +71,13 @@ backup() {
   fi
 }
 
+has_backup() {
+  local file=$1
+  local backup_file="$file.rk-src"
+
+  [ -f "$backup_file" ] || [ -f "$backup_file.missing" ]
+}
+
 restore() {
   local file=$1
   local backup_file="$file.rk-src"

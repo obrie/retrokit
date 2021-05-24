@@ -93,7 +93,7 @@ function _get_ui_key() {
             key="ui_$input_name"
             ;;
         a)
-            key="ui_select"
+            key='ui_select'
             ;;
         *)
             ;;
