@@ -143,19 +143,6 @@ function onstart_advmame_joystick() {
     local vendor_id_hex="${DEVICE_GUID:10:2}${DEVICE_GUID:8:2}"
     local product_id_hex="${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
     declare -g controller_guid="${vendor_id_hex}_${product_id_hex}"
-    
-    # Map SDL button id to its associated name
-    declare -Ag buttonmap
-    buttonmap['0']='a'
-    buttonmap['1']='b'
-    buttonmap['2']='x'
-    buttonmap['3']='y'
-    buttonmap['4']='tl'
-    buttonmap['5']='tr'
-    buttonmap['6']='tl2'
-    buttonmap['7']='tr2'
-    buttonmap['8']='select'
-    buttonmap['9']='start'
 
     _onstart_advmame
 }
@@ -338,14 +325,7 @@ function map_advmame_joystick() {
                 value="joystick_digital[$player_guid,0,$input_id,$direction]"
                 ;;
             *)
-                # Look up which physical button this input id actually represents
-                # on the controller
-                local button_name=${buttonmap["$input_id"]}
-                if [ -z "$button_name" ]; then
-                    return
-                fi
-
-                value="joystick_button[$player_guid,$button_name]"
+                value="joystick_button[$player_guid,$input_id]"
                 ;;
         esac
 
