@@ -9,7 +9,7 @@ install() {
   sudo apt install -y ir-keytable
 
   local keymap_path="$(setting '.hardware.ir.keymap')"
-  local keymap_name=$("$keymap_filepath")
+  local keymap_name=$(basename "$keymap_path")
   local target_path="/etc/rc_keymaps/$keymap_name"
 
   # Define a config file to be read by the configscript when setting up a controller
