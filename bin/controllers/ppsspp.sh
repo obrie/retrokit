@@ -5,12 +5,19 @@ ppsspp_config_path="$configdir/psp/PSP/SYSTEM/controls.ini"
 sdldb_path=/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt
 
 function onstart_ppsspp() {
+    local controller=$1
+
     cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
     iniConfig ' = ' '' '/tmp/ppsspp-controls.ini'
+
+    # Reset inputs for this controller
+    local regex="$controller-[0-9]\+"
+    sed -i "/^.\+ = $regex\$/d" '/tmp/ppsspp-controls.ini'
+    sed -i "s/,$regex\|$regex,//g" '/tmp/ppsspp-controls.ini'
 }
 
 function onstart_ppsspp_joystick() {
-    onstart_ppsspp
+    onstart_ppsspp '1'
 
     # SDL codes from https://github.com/hrydgard/ppsspp/blob/6f795fc12043599fcb55b6d7d385e75fe2e525dc/SDL/SDLJoystick.cpp#L108-L144
     # Button codes from:
@@ -35,7 +42,7 @@ function onstart_ppsspp_joystick() {
 }
 
 function onstart_ppsspp_keyboard() {
-    onstart_ppsspp
+    onstart_ppsspp '10'
 
     # SDL codes from https://wiki.libsdl.org/SDLKeycodeLookup
     declare -Ag keymap

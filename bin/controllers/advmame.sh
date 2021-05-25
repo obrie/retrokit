@@ -128,8 +128,20 @@ function _get_hotkey() {
 }
 
 function _onstart_advmame() {
+    local controller=$1
+
     cp "$advmame_config_path" '/tmp/advmame.rc'
     iniConfig ' ' '' '/tmp/advmame.rc'
+
+    # Reset inputs for this controller
+    local regex
+    if [ "$controller" == 'keyboard' ]; then
+        regex="keyboard\[[^]]\+\]"
+    else
+        regex="\(joystick_button\|joystick_digital\)\[$controller[^]]\+\]"
+    fi
+    sudo sed -i "/^input_map\[[^]]\+\] $regex\$/d" '/tmp/advmame.rc'
+    sudo sed -i "s/ or $regex\|$regex or//g" '/tmp/advmame.rc'
 
     declare -Ag mapped_inputs
     declare -g hotkey_value
@@ -144,11 +156,11 @@ function onstart_advmame_joystick() {
     local product_id_hex="${DEVICE_GUID:18:2}${DEVICE_GUID:16:2}"
     declare -g controller_guid="${vendor_id_hex}_${product_id_hex}"
 
-    _onstart_advmame
+    _onstart_advmame "$controller_guid"
 }
 
 function onstart_advmame_keyboard() {
-    _onstart_advmame
+    _onstart_advmame 'keyboard'
 
     declare -Ag keymap
 
