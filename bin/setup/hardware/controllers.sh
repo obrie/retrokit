@@ -10,7 +10,7 @@ configscripts_dir="/opt/retropie/supplementary/emulationstation/scripts/configsc
 install() {
   # Add autoconfig scripts
   while read configscript_path; do
-    cp "$configscript_path" "$configscripts_dir/"
+    sudo cp "$configscript_path" "$configscripts_dir/"
   done < <(find "$bin_dir/controllers" -name '*.sh')
 
   # Run RetroPie autoconfig for each controller input
@@ -27,7 +27,7 @@ uninstall() {
   # Remove autoconfig scripts
   while read configscript_path; do
     local configscript_name=$(basename "$configscript_path")
-    rm -f "$configscripts_dir/$configscript_name"
+    sudo rm -f "$configscripts_dir/$configscript_name"
   done < <(find "$bin_dir/controllers" -name '*.sh')
 }
 
