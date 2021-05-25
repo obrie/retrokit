@@ -22,7 +22,7 @@ install() {
 
 uninstall() {
   local keymap_path="$(setting '.hardware.ir.keymap')"
-  local keymap_name=$("$keymap_filepath")
+  local keymap_name=$(basename "$keymap_path")
   rm -f "/etc/rc_keymaps/$keymap_name" /opt/retropie/configs/rc_keymap.cfg
 }
 
