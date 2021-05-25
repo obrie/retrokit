@@ -13,7 +13,9 @@ function onstart_ppsspp_joystick() {
     onstart_ppsspp
 
     # SDL codes from https://github.com/hrydgard/ppsspp/blob/6f795fc12043599fcb55b6d7d385e75fe2e525dc/SDL/SDLJoystick.cpp#L108-L144
-    # Button codes from https://github.com/hrydgard/ppsspp/blob/6f795fc12043599fcb55b6d7d385e75fe2e525dc/Core/KeyMap.cpp#L236-L247
+    # Button codes from:
+    # * https://github.com/hrydgard/ppsspp/blob/6f795fc12043599fcb55b6d7d385e75fe2e525dc/Core/KeyMap.cpp#L236-L247
+    # * https://github.com/hrydgard/ppsspp/blob/0c40e918c92b897f745abee0d09cf033a1572337/Common/Input/KeyCodes.h
     declare -Ag sdl_button_map
     sdl_button_map['dpup']='19' # NKCODE_DPAD_UP
     sdl_button_map['dpdown']='20' # NKCODE_DPAD_DOWN
@@ -27,6 +29,7 @@ function onstart_ppsspp_joystick() {
     sdl_button_map['leftshoulder']='193' # NKCODE_BUTTON_6
     sdl_button_map['start']='197' # NKCODE_BUTTON_10
     sdl_button_map['back']='196' # NKCODE_BUTTON_9
+    sdl_button_map['guide']='4' # NKCODE_BACK
     sdl_button_map['leftstick']='106' # NKCODE_BUTTON_THUMBL
     sdl_button_map['rightstick']='107' # NKCODE_BUTTON_THUMBR
 }
