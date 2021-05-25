@@ -34,7 +34,7 @@ function onstart_ppsspp_joystick() {
     sdl_button_map['rightstick']='107' # NKCODE_BUTTON_THUMBR
 }
 
-function onstart_redream_keyboard() {
+function onstart_ppsspp_keyboard() {
     onstart_ppsspp
 
     # SDL codes from https://wiki.libsdl.org/SDLKeycodeLookup
