@@ -26,7 +26,7 @@ function onstart_ppsspp_joystick() {
     sdl_button_map['rightshoulder']='192' # NKCODE_BUTTON_5
     sdl_button_map['leftshoulder']='193' # NKCODE_BUTTON_6
     sdl_button_map['start']='197' # NKCODE_BUTTON_10
-    sdl_button_map['select']='196' # NKCODE_BUTTON_9
+    sdl_button_map['back']='196' # NKCODE_BUTTON_9
     sdl_button_map['leftstick']='106' # NKCODE_BUTTON_THUMBL
     sdl_button_map['rightstick']='107' # NKCODE_BUTTON_THUMBR
 }
@@ -233,7 +233,7 @@ function map_ppsspp() {
     if [ -n "$merged_value" ]; then
         merged_value+=','
     fi
-    merged_value+=$value
+    merged_value+="${controller}-${value}"
 
     iniSet "$key" "$merged_value"
 }
@@ -283,7 +283,9 @@ function map_ppsspp_joystick() {
             ;;
     esac
 
-    map_ppsspp "$key" '10' "$value"
+    if [ -n "$value" ]; then
+        map_ppsspp "$key" '10' "$value"
+    fi
 }
 
 function map_ppsspp_keyboard() {
