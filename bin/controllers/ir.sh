@@ -153,16 +153,16 @@ function map_ir_keyboard() {
             keys=('KEY_RIGHT')
             ;;
         a)
-            keys=('KEY_A', 'KEY_RED', 'KEY_SELECT')
+            keys=('KEY_A' 'KEY_RED' 'KEY_SELECT')
             ;;
         b)
-            keys=('KEY_B', 'KEY_GREEN', 'KEY_CANCEL', 'KEY_PREVIOUS')
+            keys=('KEY_B' 'KEY_GREEN' 'KEY_CANCEL' 'KEY_PREVIOUS')
             ;;
         x)
-            keys=('KEY_C', 'KEY_YELLOW')
+            keys=('KEY_C' 'KEY_YELLOW')
             ;;
         y)
-            keys=('KEY_D', 'KEY_BLUE')
+            keys=('KEY_D' 'KEY_BLUE')
             ;;
         leftbottom|leftshoulder)
             keys=('KEY_PAGEDOWN', 'KEY_SCROLLDOWN')
@@ -203,5 +203,5 @@ function map_ir_keyboard() {
 }
 
 function onend_ir_keyboard() {
-    mv '/tmp/rc_keymap.toml' "$target_keymap_path"
+    sudo mv '/tmp/rc_keymap.toml' "$target_keymap_path"
 }
