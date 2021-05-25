@@ -5,22 +5,25 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
-keymap_filepath='/etc/rc_keymaps/tivo.toml'
-
 install() {
   sudo apt install -y ir-keytable
 
-  file_cp "$config_dir/ir/rc_maps.cfg" '/etc/rc_maps.cfg' as_sudo=true
-  file_cp "$config_dir/ir/retropie.toml" "$keymap_filepath" as_sudo=true
-  sudo chmod 644 "$keymap_filepath"
+  local keymap_path="$(setting '.hardware.ir.keymap')"
+  local keymap_name=$("$keymap_filepath")
+  local target_path="/etc/rc_keymaps/$keymap_name"
 
-  # Load
-  sudo ir-keytable -w "$keymap_filepath"
+  # Define a config file to be read by the configscript when setting up a controller
+  local config_path='/opt/retropie/configs/rc_keymap.cfg'
+  rm -f "$config_path"
+  touch "$config_path"
+  crudini --set "$config_path" '' 'source_keymap_path' "$keymap_path"
+  crudini --set "$config_path" '' 'target_keymap_path' "$target_path"
 }
 
 uninstall() {
-  rm "$keymap_filepath"
-  restore '/etc/rc_maps.cfg'
+  local keymap_path="$(setting '.hardware.ir.keymap')"
+  local keymap_name=$("$keymap_filepath")
+  rm -f "/etc/rc_keymaps/$keymap_name" /opt/retropie/configs/rc_keymap.cfg
 }
 
 "${@}"

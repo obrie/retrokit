@@ -10,9 +10,6 @@ hdmi_max_pixel_freq=200000000
 # Disable overscan (causes black bars around screen otherwise)
 disable_overscan=1
 
-# Enable IR configuration
-dtoverlay=gpio-ir,gpio_pin=23,rc-map-name=rc-tivo
-
 # Switch TV to Game Mode when possible
 edid_content_type=4
 
