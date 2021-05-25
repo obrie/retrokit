@@ -6,7 +6,7 @@ sdldb_path=/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt
 
 function onstart_ppsspp() {
     cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
-    iniConfig '=' ' ' '/tmp/ppsspp-controls.ini'
+    iniConfig ' = ' '' '/tmp/ppsspp-controls.ini'
 }
 
 function onstart_ppsspp_joystick() {
