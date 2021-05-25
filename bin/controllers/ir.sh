@@ -17,7 +17,7 @@ function onstart_ir_keyboard() {
     # Create a temp keymap file that has no scan codes
     sed -n '/\[protocols.scancodes\]/q;p' "$source_keymap_path" > '/tmp/rc_keymap.toml'
     echo '[protocols.scancodes]' >> '/tmp/rc_keymap.toml'
-    iniConfig ' ' '"' '/tmp/rc_keymap.toml'
+    iniConfig ' ' '' '/tmp/rc_keymap.toml'
 
     # Inverse the mappings from the keymap file
     declare -Ag scanmap
@@ -137,6 +137,12 @@ function map_ir_keyboard() {
     local input_id=$3
     local input_value=$4
 
+    # Find the corresponding key name for the given sdl id
+    local input_key=${keymap["$input_id"]}
+    if [ -z "$input_key" ]; then
+        return
+    fi
+
     # Look up the ir key this input maps to
     local keys
     case "$input_name" in
@@ -153,50 +159,44 @@ function map_ir_keyboard() {
             keys=('KEY_RIGHT')
             ;;
         a)
-            keys=('KEY_A' 'KEY_RED' 'KEY_SELECT')
+            keys=('KEY_A' 'KEY_1' 'KEY_NUMERIC_1' 'KEY_RED' 'KEY_SELECT')
             ;;
         b)
-            keys=('KEY_B' 'KEY_GREEN' 'KEY_CANCEL' 'KEY_PREVIOUS')
+            keys=('KEY_B' 'KEY_2' 'KEY_NUMERIC_2' 'KEY_GREEN' 'KEY_CANCEL' 'KEY_PREVIOUS')
             ;;
         x)
-            keys=('KEY_C' 'KEY_YELLOW')
+            keys=('KEY_C' 'KEY_3' 'KEY_NUMERIC_3' 'KEY_YELLOW')
             ;;
         y)
-            keys=('KEY_D' 'KEY_BLUE')
+            keys=('KEY_D' 'KEY_4' 'KEY_NUMERIC_4' 'KEY_BLUE')
             ;;
         leftbottom|leftshoulder)
-            keys=('KEY_PAGEDOWN', 'KEY_SCROLLDOWN')
+            keys=('KEY_PAGEDOWN' 'KEY_SCROLLDOWN' 'KEY_CHANNELDOWN')
             ;;
         rightbottom|rightshoulder)
-            keys=('KEY_PAGEUP', 'KEY_SCROLLUP')
+            keys=('KEY_PAGEUP' 'KEY_SCROLLUP' 'KEY_CHANNELUP')
             ;;
         start)
-            keys=('KEY_ENTER', 'KEY_OK')
+            keys=('KEY_ENTER' 'KEY_OK')
             ;;
         select)
-            keys=('KEY_MENU', 'KEY_INFO')
+            keys=('KEY_MENU' 'KEY_INFO')
             ;;
         *)
             ;;
     esac
 
     for key in "${keys[@]}"; do
-        # Find the corresponding key name for the given sdl id
-        local input_key=${keymap["$input_id"]}
-        if [ -z "$input_key" ]; then
-            return
-        fi
-
         # Find the corresponding scancodes
         local scancodes=${scanmap["$key"]}
         if [ -z "$scancodes" ]; then
-            return
+            continue
         fi
 
         # Map each scan code to the corresponding key
         for scancode in ${scancodes//,/ }; do
             if [ -n "$scancode" ]; then
-                iniSet "$scancode" "$input_key"
+                iniSet "$scancode" "\"$input_key\" # Original: $key"
             fi
         done
     done
