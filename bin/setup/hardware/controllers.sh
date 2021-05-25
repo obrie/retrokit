@@ -11,7 +11,7 @@ install() {
   # Add autoconfig scripts
   while read configscript_path; do
     cp "$configscript_path" "$configscripts_dir/"
-  done < <(find "$config_dir/controllers/configscripts" -name '*.sh')
+  done < <(find "$bin_dir/controllers" -name '*.sh')
 
   # Run RetroPie autoconfig for each controller input
   while read input_path; do
@@ -28,7 +28,7 @@ uninstall() {
   while read configscript_path; do
     local configscript_name=$(basename "$configscript_path")
     rm -f "$configscripts_dir/$configscript_name"
-  done < <(find "$config_dir/controllers/configscripts" -name '*.sh')
+  done < <(find "$bin_dir/controllers" -name '*.sh')
 }
 
 "${@}"
