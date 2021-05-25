@@ -1,7 +1,17 @@
 {
   "system": "ngpc",
-  "themes": {
-    "bezel": "NGPC"
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-NGPC",
+        "path": "retroarch/overlay/GameBezels/NGP"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-NGPC",
+        "path": "retroarch/overlay/GameBezels/NGP",
+        "default": "retroarch/overlay/SNK-Neo-Geo-Pocket-Color.png"
+      }
+    ]
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

@@ -5,23 +5,29 @@ practices as I understand them.
 
 Specifically, it can set up:
 
-* Argon cases
-* Display settings
-* Localization
+* Cases (e.g. Argon)
+* Bluetooth
+* Controllers (including autoconfig for advmame, ppsspp, redream, and ir)
 * IR configuration
-* Retroarch configuration
-* Splash screens
-* Scraping
-* Bezels
-* Themes
-* Cheats
-* Launch images
+* SSH
 * VNC
 * Wifi configuration
-* Bluetooth
-* Controllers
 * Overclocking
-* Emulation Station settings / systems
+* Display settings
+* Localization
+* Splash screens (with parallelized loading process)
+* Custom Retropie modules
+* Scraping (via skyscraper)
+* Themes
+* Retroarch configuration
+* EmulationStation configuration
+* Overlays / Bezels
+* Cheats
+* HiScores
+* Launch images
+* Emulator installation
+* ROM Playlist (m3u) auto-generation for multi-disc games
+* EmulationStation Collections management
 * Various fixes / workarounds for many common issues
 
 Additionally, it provides ROM management capabilities, including:
@@ -38,34 +44,41 @@ Additionally, it provides ROM management capabilities, including:
 
 This is all supported for the following systems:
 
-* 3DO
 * Arcade
-* Atari 2600
-* Atari 7800
-* Commodore 64
-* Nintendo 64
-* Nintendo Entertainment System
-* Nintendo Game Boy
-* Nintendo Game Boy Advanced
-* Nintendo Game Boy Color
-* PC
-* PC Engine / TurboGrafx-16
-* Playstation
-* Sega CD0
-* Sega Game Gear
-* Sega Genesis / MegaDrive
-* Sega Mastersystem
-* Super Nintendo Entertainment System
-* Turbografx
-* MegaDrive
-* PSX
-* SegaCD
+* Atari - 2600
+* Atari - 7800
+* Atari - Jaguar
+* Atari - Lynx
+* Coleco - ColecoVision
+* Commodore - 64
+* GCE - Vectrex
+* Mattel - Intellivision
+* Nintendo - Nintendo 64
+* Nintendo - Game Boy
+* Nintendo - Game Boy Advanced
+* Nintendo - Game Boy Color
+* Nintendo - Nintendo Entertainment System
+* Nintendo - Super Nintendo Entertainment System
+* Panasonic - 3DO
+* PC - DOS
+* Philips - Videopac
+* NEC - PC Engine / TurboGrafx-16
+* Sega - 32X
+* Sega - CD
+* Sega - Dreamcast
+* Sega - Game Gear
+* Sega - Genesis / MegaDrive
+* Sega - Mastersystem
+* Sega - SG-1000
+* SNK - Neo Geo Pocket
+* Sony - Playstation
 
 There are also system-specific features, including:
 
 * Automatic joystick selection for Commodore 64 via C64 Dreams spreadsheet
 * Automatic integration of eXoDOS configurations for PC games
-* Automatic selection of the appropriate rom set for arcade games
+* Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
+* Optimized settings per-game for Arcade, Atari Jaguar, and N64
 
 All of this means you can set up your arcade machine from scratch to feature-complete
 with less than a few hours worth of work.  The automated scripts could take
@@ -149,6 +162,7 @@ retrokit what it is.  That includes:
 * [The Bezel Project](https://github.com/thebezelproject)
 * [ehettervik](https://github.com/ehettervik) for the pixel theme
 * [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
+* [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
 * RetroPie forums
 * Reddit forums
 * ...and everyone who has put so much work in over the years to help make all of this even possible
