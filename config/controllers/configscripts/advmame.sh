@@ -360,10 +360,12 @@ function map_advmame_keyboard() {
     fi
 
     # Find the corresponding advmame key name for the given sdl id
-    local mapping=${keymap[$input_id]}
-    if [ -n "$mapping" ]; then
-        local value="keyboard[0,$mapping]"
+    local mapping=${keymap["$input_id"]}
+    if [ -z "$mapping" ]; then
+        return
     fi
+
+    local value="keyboard[0,$mapping]"
 
     if [ "$input_name" == 'hotkeyenable' ]; then
         hotkey_value=$value
