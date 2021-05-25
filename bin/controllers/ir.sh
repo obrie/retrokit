@@ -182,13 +182,13 @@ function map_ir_keyboard() {
 
     for key in "${keys[@]}"; do
         # Find the corresponding key name for the given sdl id
-        local key_name=${keymap["$input_id"]}
-        if [ -z "$key_name" ]; then
+        local input_key=${keymap["$input_id"]}
+        if [ -z "$input_key" ]; then
             return
         fi
 
         # Find the corresponding scancodes
-        local scancodes=${scanmap["$key_name"]}
+        local scancodes=${scanmap["$key"]}
         if [ -z "$scancodes" ]; then
             return
         fi
@@ -196,7 +196,7 @@ function map_ir_keyboard() {
         # Map each scan code to the corresponding key
         for scancode in ${scancodes//,/ }; do
             if [ -n "$scancode" ]; then
-                iniSet "$scancode" "$key_name"
+                iniSet "$scancode" "$input_key"
             fi
         done
     done
