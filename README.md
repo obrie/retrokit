@@ -177,12 +177,3 @@ receive it.
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
 own setup.
-
-## TODO
-
-Differences discovered with my actual machine and what retrokit does on a fresh install.
-
-boot/config.txt:
-
-* Uncomment overscan_scale=1 (and see what impact it has)
-* Comment enable_uart=1
