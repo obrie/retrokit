@@ -144,8 +144,7 @@ function map_drastic_joystick() {
         case "$input_type" in
             hat)
                 # up, right, down, left
-                declare -A sdl_hat_ids=([1]="0" [2]="1" [4]="2" [8]="4")
-                value=$((1089 + ${sdl_hat_ids[$input_value]}))
+                value=$((1088 + $input_value))
                 ;;
             axis)
                 if [[ "$input_value" == '1' ]]; then
