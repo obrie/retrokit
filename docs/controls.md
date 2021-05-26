@@ -25,18 +25,23 @@ Keys to reducing input lag:
 
 References:
 
-* [Input latency](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
-* [Input lag](https://retropie.org.uk/docs/Input-Lag/)
+* [Input latency spreadsheet](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
+* [Input lag tips](https://retropie.org.uk/docs/Input-Lag/)
 * [SDL Keycodes](https://wiki.libsdl.org/SDLKeycodeLookup)
 
-Configurations:
+Autoconfig setup:
 
 * config/controllers
+
+Manual configuration (if necessary):
+
 * config/systems/arcade/advmame.rc
 * config/systems/dreamcast/redream.cfg
-* config/systems/n64/InputAutoCfg.ini (to support d-pad)
+* config/systems/n64/InputAutoCfg.ini
 
 ## Keyboard
+
+Default mapping:
 
 | RetroPad Button | Key         |
 | ----------------| ----------- |
