@@ -53,16 +53,17 @@ This is all supported for the following systems:
 * Commodore - 64
 * GCE - Vectrex
 * Mattel - Intellivision
-* Nintendo - Nintendo 64
+* NEC - PC Engine / TurboGrafx-16
+* Nintendo - DS
 * Nintendo - Game Boy
 * Nintendo - Game Boy Advanced
 * Nintendo - Game Boy Color
+* Nintendo - Nintendo 64
 * Nintendo - Nintendo Entertainment System
 * Nintendo - Super Nintendo Entertainment System
 * Panasonic - 3DO
 * PC - DOS
 * Philips - Videopac
-* NEC - PC Engine / TurboGrafx-16
 * Sega - 32X
 * Sega - CD
 * Sega - Dreamcast
