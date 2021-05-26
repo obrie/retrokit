@@ -26,7 +26,7 @@ install() {
 }
 
 uninstall() {
-  sudo rm /usr/bin/raspi2png
+  sudo rm -f /usr/bin/raspi2png
   sudo apt remove -y mesa-utils screen sysbench
 }
 

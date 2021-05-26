@@ -20,7 +20,9 @@ install() {
 }
 
 uninstall() {
-  argonone-uninstall
+  if [ ! `command -v argonone-uninstall` ]; then
+    argonone-uninstall
+  fi
 }
 
 "${@}"

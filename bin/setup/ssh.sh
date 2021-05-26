@@ -11,8 +11,8 @@ install() {
 }
 
 uninstall() {
-  sudo systemctl stop ssh
-  sudo systemctl disable ssh
+  sudo systemctl stop ssh || true
+  sudo systemctl disable ssh || true
 }
 
 "${@}"
