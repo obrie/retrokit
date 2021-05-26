@@ -39,7 +39,7 @@
           "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS.dat"
         },
         "machine": {
-          "source": "{discovery_url}/{machine}.zip",
+          "source": "{url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip"
         }
       },
