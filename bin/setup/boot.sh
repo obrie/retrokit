@@ -13,7 +13,7 @@ install() {
 
   # Wifi configuration
   if [ "$(setting '.hardware.wifi.enabled')" == 'false' ]; then
-    sudo echo 'dtoverlay=disable-wifi' >> /boot/config.txt
+    echo 'dtoverlay=disable-wifi' | sudo tee -a /boot/config.txt
   fi
 
   # IR configuration
@@ -23,7 +23,7 @@ install() {
     local ir_keymap_filename=$(basename "$ir_keymap_path")
     local rc_map_name=$(grep "$ir_keymap_filename" '/etc/rc_maps.cfg' | tr $'\t' ' ' | cut -d' ' -f 2)
 
-    sudo echo 'dtoverlay=gpio_pin=$ir_gpio_pin,rc-map-name=$rc_map_name' >> /boot/config.txt
+    echo "dtoverlay=gpio_pin=$ir_gpio_pin,rc-map-name=$rc_map_name" | sudo tee -a /boot/config.txt
   fi
 }
 
