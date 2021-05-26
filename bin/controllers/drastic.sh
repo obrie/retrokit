@@ -19,17 +19,9 @@ function _onstart_drastic() {
         UI_UP UI_DOWN UI_LEFT UI_RIGHT UI_SELECT UI_BACK UI_EXIT UI_PAGE_UP UI_PAGE_DOWN UI_SWITCH
     )
     for config_key in "${all_config_keys[@]}"; do
-        iniDel "controllers_$controller\[CONTROL_INDEX_$config_key\]"
-        iniSet "controllers_$controller[CONTROL_INDEX_$config_key]" 65535
+        iniDel "controls_$controller\[CONTROL_INDEX_$config_key\]"
+        iniSet "controls_$controller[CONTROL_INDEX_$config_key]" 65535
     done
-
-    # Menu - M
-    iniDel "controllers_a\[CONTROL_INDEX_MENU\]"
-    iniSet "controllers_a[CONTROL_INDEX_MENU]" 109
-
-    # Quit - Escape
-    iniDel "controllers_a\[CONTROL_INDEX_QUIT\]"
-    iniSet "controllers_a[CONTROL_INDEX_QUIT]" 27
 }
 
 function onstart_drastic_joystick() {
@@ -38,6 +30,14 @@ function onstart_drastic_joystick() {
 
 function onstart_drastic_keyboard() {
     _onstart_drastic 'a'
+
+    # Menu - M
+    iniDel "controls_a\[CONTROL_INDEX_MENU\]"
+    iniSet "controls_a[CONTROL_INDEX_MENU]" 109
+
+    # Quit - Escape
+    iniDel "controls_a\[CONTROL_INDEX_QUIT\]"
+    iniSet "controls_a[CONTROL_INDEX_QUIT]" 27
 }
 
 # Generates the configuration key for a given ES input name
@@ -74,7 +74,13 @@ function _get_config_keys() {
             keys=(L UI_PAGE_DOWN)
             ;;
         rightbottom|rightshoulder)
-            key=(R UI_PAGE_UP)
+            keys=(R UI_PAGE_UP)
+            ;;
+        leftthumb)
+            keys=(TOUCH_CURSOR_PRESS)
+            ;;
+        rightthumb)
+            keys=(TOUCH_CURSOR_PRESS)
             ;;
         start)
             keys=(START)
@@ -153,7 +159,7 @@ function map_drastic_joystick() {
                 ;;
         esac
 
-        _map_drastic 'b' "$key", "$value"
+        _map_drastic 'b' "$key" "$value"
     done
 }
 
@@ -184,7 +190,7 @@ function map_drastic_keyboard() {
 }
 
 function _onend_drastic() {
-    iniSet "$profile_key" "$profile_value"
+    cp '/tmp/drastic.cfg' "$drastic_config_path"
 }
 
 function onend_drastic_joystick() {
@@ -194,5 +200,3 @@ function onend_drastic_joystick() {
 function onend_drastic_keyboard() {
     _onend_drastic
 }
-
-controls_b[CONTROL_INDEX_QUIT] = 65535
