@@ -79,6 +79,8 @@ There are also system-specific features, including:
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
 * Optimized settings per-game for Arcade, Atari Jaguar, and N64
+* Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
+* Conversion of ISO-based ROMS to CSO for PSP
 
 All of this means you can set up your arcade machine from scratch to feature-complete
 with less than a few hours worth of work.  The automated scripts could take
@@ -147,7 +149,7 @@ in the config/ folder, particularly config/settings.json.
 
 To access via VNC:
 
-* Open in browser: `http://<ip address of rpi>:9080/stream/webrtc`
+* Open in VNC client: `<ip address of rpi>:5900`
 
 ## Thanks
 
