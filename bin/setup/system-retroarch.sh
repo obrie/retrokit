@@ -22,7 +22,7 @@ install_core_options() {
   local global_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 
   # Figure out where the core options live for this system
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null || true)
+  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
   if [ -n "$core_options_path" ]; then
     # Use the global defaults as the initial file
     cp "$global_core_options_path" "$core_options_path"
