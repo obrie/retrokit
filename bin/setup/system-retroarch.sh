@@ -40,7 +40,7 @@ install() {
 
 uninstall() {
   # Remove system-specific retroarch core options files
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null || true)
+  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
   if [ -n "$core_options_path" ]; then
     rm -f "$core_options_path"
   fi
