@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 install() {
   ini_merge "$config_dir/retroarch/retroarch.cfg" '/opt/retropie/configs/all/retroarch.cfg'
-  backup_and_restore '/opt/retropie/configs/all/retroarch-core-options.cfg'
+  ini_merge "$config_dir/retroarch/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg'
 }
 
 uninstall() {
