@@ -31,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for rom playlists'
+  find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -rf "{}" \;
 }
 
 "$1" "${@:3}"
