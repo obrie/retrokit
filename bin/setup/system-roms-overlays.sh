@@ -111,7 +111,7 @@ EOF
 }
 
 uninstall() {
-  echo 'No uninstall for overlays'
+  rm -rf "$retroarch_config_dir/overlay/$system"
 }
 
 "$1" "${@:3}"
