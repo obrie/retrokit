@@ -14,7 +14,7 @@ install() {
     rm -f "$target_path.rk-src"
 
     # Copy over the scriptmodule
-    file_cp "$source_path" "$target_path"
+    file_cp "$source_path" "$target_path" envsubst=false
   done < <(find "$config_dir/scriptmodules" -type f -printf '%P\n')
 }
 
