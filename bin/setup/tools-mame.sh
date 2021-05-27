@@ -22,7 +22,7 @@ install_from_source() {
 }
 
 install_from_binary() {
-  sudo unzip "$app_dir/cache/mame/mame0223-tools.zip" -d /usr/local/bin/
+  sudo unzip -o "$app_dir/cache/mame/mame0223-tools.zip" -d /usr/local/bin/
 }
 
 install() {
