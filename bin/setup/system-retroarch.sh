@@ -13,7 +13,7 @@ install_config() {
 install_emulator_config() {
   while IFS="$tab" read library_name; do
     ini_merge "$system_config_dir/retroarch/$library_name/$library_name.cfg" "$retroarch_config_dir/config/$library_name/$library_name.cfg"
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.library_name) | .value.library_name')
+  done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
 }
 
 # Global core options
@@ -51,7 +51,7 @@ uninstall() {
   # Restore emulator-specific retroarch configs
   while IFS="$tab" read library_name; do
     restore "$retroarch_config_dir/config/$library_name/$library_name.cfg" delete_src=true
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.library_name) | .value.library_name')
+  done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
 
   # Restore system-specific retroarch config
   restore "$retropie_system_config_dir/retroarch.cfg"
