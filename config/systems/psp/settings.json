@@ -1,14 +1,5 @@
 {
   "system": "psp",
-  "overlays": {
-    "repos": [
-      {
-        "repo": "thebezelproject/bezelprojectsa-PSP",
-        "path": "retroarch/overlay/GameBezels/PSP",
-        "default": "retroarch/overlay/Sony-PSP.png"
-      }
-    ]
-  },
   "scraper": {
     "sources": ["screenscraper"]
   },
