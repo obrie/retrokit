@@ -7,15 +7,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 cheat_database_path="$retroarch_config_dir/cheats"
 
-get_system_cheat_database_path() {
-  local system_cheat_database_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' 2>/dev/null | tr -d '"' || true)
-  if [ -z "$system_cheat_database_path" ]; then
-    system_cheat_database_path="$cheat_database_path"
-  fi
-
-  echo "$system_cheat_database_path"
-}
-
 install() {
   # Name of the cheats for this system
   local cheats_name=$(system_setting '.cheats')
@@ -31,7 +22,10 @@ install() {
   local source_cheats_dir="$cheat_database_path/$cheats_name"
 
   # Get cheat database path for this system
-  local system_cheat_database_path=$(get_system_cheat_database_path)
+  local system_cheat_database_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' 2>/dev/null | tr -d '"' || true)
+  if [ -z "$system_cheat_database_path" ]; then
+    system_cheat_database_path="$cheat_database_path"
+  fi
 
   # Define mappings to make lookups easier and more reliable
   declare -A cheat_mappings
@@ -61,7 +55,7 @@ install() {
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     if [ -z "$library_name" ]; then
-      # No a libretro emulator
+      # Not a libretro emulator
       continue
     fi
 
@@ -81,11 +75,17 @@ install() {
 }
 
 uninstall() {
-  local system_cheat_database_path=$(get_system_cheat_database_path)
+  local system_cheat_database_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'cheat_database_path' 2>/dev/null | tr -d '"' || true)
 
-  while IFS="$tab" read library_name; do
-    rm -rf "$system_cheat_database_path/$library_name"
-  done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
+  if [ -n "$system_cheat_database_path" ]; then
+    # System has its own database path -- remove it
+    rm -rf "$system_cheat_database_path"
+  else
+    # Remove cheats for each libretro core
+    while IFS="$tab" read library_name; do
+      rm -rf "$cheat_database_path/$library_name"
+    done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
+  fi
 }
 
 "$1" "${@:3}"

@@ -19,7 +19,7 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for launch images'
+  rm -f "$retropie_system_config_dir/launching-extended.png"
 }
 
 "$1" "${@:3}"
