@@ -28,6 +28,8 @@ install() {
 uninstall() {
   sudo rm -f /usr/local/bin/maxcso
   sudo rm -f /usr/local/share/man/man1/maxcso.1
+
+  sudo apt remove -y liblz4-dev libdeflate-dev libuv1-dev
 }
 
 "${@}"
