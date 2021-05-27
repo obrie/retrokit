@@ -10,7 +10,7 @@ reconfigure() {
   sudo timedatectl set-timezone $(cat /etc/timezone)
 
   # Update current session settings
-  export LANG=$(cat /etc/default/locale)
+  source /etc/default/locale
 
   # Update based on new configurations
   sudo dpkg-reconfigure -f noninteractive tzdata
