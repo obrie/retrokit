@@ -22,7 +22,8 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/all/skyscraper/config.ini'
+  rm -f '/opt/retropie/configs/all/skyscraper/video_convert.sh'
+  restore '/opt/retropie/configs/all/skyscraper/config.ini' delete_src=true
   sudo apt remove -y ffmpeg
 }
 
