@@ -20,7 +20,7 @@ install_roms() {
 }
 
 # Define emulators for games that don't use the default
-install_emulators() {
+install_emulator_selections() {
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
   backup "$emulators_config_file"
 
@@ -52,7 +52,7 @@ install_emulators() {
 # Download roms from a remote source
 install() {
   install_roms
-  install_emulators
+  install_emulator_selections
 }
 
 uninstall() {
