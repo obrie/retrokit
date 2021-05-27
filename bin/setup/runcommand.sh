@@ -18,8 +18,8 @@ install_termfix() {
 }
 
 install_configurations() {
-  file_ln "$app_dir/bin/runcommand/onstart.sh" '/opt/retropie/configs/all/runcommand-onstart.sh'
-  file_ln "$app_dir/bin/runcommand/onend.sh" '/opt/retropie/configs/all/runcommand-onend.sh'
+  file_cp "$app_dir/bin/runcommand/onstart.sh" '/opt/retropie/configs/all/runcommand-onstart.sh'
+  file_cp "$app_dir/bin/runcommand/onend.sh" '/opt/retropie/configs/all/runcommand-onend.sh'
 
   ini_merge "$config_dir/runcommand/runcommand.cfg" '/opt/retropie/configs/all/runcommand.cfg'
 }
@@ -30,9 +30,10 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/all/runcommand.cfg'
-  restore '/opt/retropie/configs/all/runcommand-onstart.sh'
-  restore '/opt/retropie/configs/all/runcommand-onend.sh'
+  restore '/opt/retropie/configs/all/runcommand.cfg' delete_src=true
+  restore '/opt/retropie/configs/all/runcommand-onstart.sh' delete_src=true
+  restore '/opt/retropie/configs/all/runcommand-onend.sh' delete_src=true
+  sudo rm /usr/bin/termfix
 }
 
 "${@}"
