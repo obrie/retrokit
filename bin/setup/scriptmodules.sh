@@ -14,12 +14,14 @@ install() {
     rm -f "$target_path.rk-src"
 
     # Copy over the scriptmodule
-    cp "$source_path" "$target_path"
+    file_cp "$source_path" "$target_path"
   done < <(find "$config_dir/scriptmodules" -type f -printf '%P\n')
 }
 
 uninstall() {
-  echo 'No uninstall for script modules'
+  while read -r filepath; do
+    restore "$HOME/RetroPie-Setup/scriptmodules/$filepath" delete_src=true
+  done < <(find "$config_dir/scriptmodules" -type f -printf '%P\n')
 }
 
 "${@}"

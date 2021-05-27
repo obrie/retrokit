@@ -84,6 +84,7 @@ restore() {
   local backup_file="$file.rk-src"
   local as_sudo='false'
   local restore='true'
+  local delete_src='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   if [ "$restore" != 'false' ]; then
@@ -94,9 +95,17 @@ restore() {
     if [ -f "$backup_file" ]; then
       log "Restoring: $backup_file to $file"
       $cmd cp "$backup_file" "$file"
+
+      if [ "$delete_src" == 'true' ]; then
+        rm "$backup_file"
+      fi
     elif [ -f "$backup_file.missing" ]; then
       log "Restoring: $file to non-existent"
       rm -f "$file"
+
+      if [ "$delete_src" == 'true' ]; then
+        rm "$backup_file.missing"
+      fi
     else
       log "Restoring: $file (leaving as-is)"
     fi

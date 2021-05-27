@@ -28,10 +28,10 @@ install() {
 }
 
 uninstall() {
-  restore '/etc/default/keyboard' as_sudo=true
-  restore '/etc/timezone' as_sudo=true
-  restore '/etc/locale.gen' as_sudo=true
-  restore '/etc/default/locale' as_sudo=true
+  restore '/etc/default/keyboard' as_sudo=true delete_src=true
+  restore '/etc/timezone' as_sudo=true delete_src=true
+  restore '/etc/locale.gen' as_sudo=true delete_src=true
+  restore '/etc/default/locale' as_sudo=true delete_src=true
 
   reconfigure
 }

@@ -11,7 +11,7 @@ install() {
 }
 
 uninstall() {
-  restore '/etc/default/console-setup' as_sudo=true
+  restore '/etc/default/console-setup' as_sudo=true delete_src=true
 }
 
 "${@}"
