@@ -11,8 +11,8 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/all/retroarch.cfg'
-  restore '/opt/retropie/configs/all/retroarch-core-options.cfg'
+  restore '/opt/retropie/configs/all/retroarch-core-options.cfg' delete_src=true
+  restore '/opt/retropie/configs/all/retroarch.cfg' delete_src=true
 }
 
 "${@}"
