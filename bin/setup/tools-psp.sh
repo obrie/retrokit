@@ -9,18 +9,20 @@ install() {
   # Install dependencies
   sudo apt install -y liblz4-dev libdeflate-dev libuv1-dev
 
-  # Check out
-  rm -rf "$tmp_dir/maxcso"
-  git clone --depth 1 https://github.com/unknownbrackets/maxcso "$tmp_dir/maxcso"
-  pushd "$tmp_dir/maxcso"
+  if [ ! `command -v maxcso` ]; then
+    # Check out
+    rm -rf "$tmp_dir/maxcso"
+    git clone --depth 1 https://github.com/unknownbrackets/maxcso "$tmp_dir/maxcso"
+    pushd "$tmp_dir/maxcso"
 
-  # Compile
-  make
-  sudo make install
+    # Compile
+    make
+    sudo make install
 
-  # Clean up
-  popd
-  rm -rf "$tmp_dir/maxcso"
+    # Clean up
+    popd
+    rm -rf "$tmp_dir/maxcso"
+  fi
 }
 
 uninstall() {
