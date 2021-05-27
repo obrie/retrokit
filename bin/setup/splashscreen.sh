@@ -7,13 +7,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 splashscreen_config='/opt/retropie/configs/all/splashscreen.cfg'
 splashscreen_list='/etc/splashscreen.list'
+splashscreens_dir="$HOME/RetroPie/splashscreens"
 
 install() {
   backup_and_restore "$splashscreen_config"
   backup_and_restore "$splashscreen_list" as_sudo=true
 
   if [ "$(setting 'has("splashscreen")')" == 'true' ]; then
-    local splashscreens_dir="$HOME/RetroPie/splashscreens"
     local media_file="$splashscreens_dir/splash.mp4"
     mkdir -p "$splashscreens_dir"
 
@@ -28,8 +28,9 @@ install() {
 }
 
 uninstall() {
-  restore "$splashscreen_config"
   restore "$splashscreen_list" as_sudo=true
+  restore "$splashscreen_config"
+  rm -f "$splashscreens_dir/splash.mp4"
 }
 
 "${@}"
