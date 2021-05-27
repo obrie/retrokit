@@ -30,7 +30,7 @@ install() {
 }
 
 uninstall() {
-  sudo apt remove -y mame-tools python3-xml
+  sudo apt remove -y mame-tools python3-xml zip
   sudo rm /usr/local/bin/trrntzip
 }
 
