@@ -97,14 +97,14 @@ restore() {
       $cmd cp "$backup_file" "$file"
 
       if [ "$delete_src" == 'true' ]; then
-        rm "$backup_file"
+        $cmd rm "$backup_file"
       fi
     elif [ -f "$backup_file.missing" ]; then
       log "Restoring: $file to non-existent"
-      rm -f "$file"
+      $cmd rm -f "$file"
 
       if [ "$delete_src" == 'true' ]; then
-        rm "$backup_file.missing"
+        $cmd rm "$backup_file.missing"
       fi
     else
       log "Restoring: $file (leaving as-is)"
