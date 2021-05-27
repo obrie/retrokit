@@ -48,7 +48,19 @@ install() {
 }
 
 uninstall() {
-  restore "$retropie_system_config_dir/emulators.cfg"
+  # Revert changes to the emulators config
+  restore "$retropie_system_config_dir/emulators.cfg" delete_src=true
+
+  # Remove bios files
+  local bios_dir=$(system_setting '.bios.dir')
+  while IFS="$tab" read -r bios_name; do
+    rm -f "$bios_dir/$bios_name"
+  done < <(system_setting 'select(.bios) | .bios.files | keys[]')
+
+  # Uninstall emulators
+  while IFS="$tab" read -r emulator; do
+    uninstall_retropie_package "$emulator"
+  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 }
 
 "$1" "${@:3}"

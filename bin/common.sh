@@ -335,6 +335,11 @@ install_retropie_package() {
   fi
 }
 
+uninstall_retropie_package() {
+  local name=$1
+  sudo ~/RetroPie-Setup/retropie_packages.sh "$name" remove
+}
+
 ##############
 # Utilities
 ##############
