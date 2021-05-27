@@ -10,6 +10,10 @@ install_from_source() {
   # Dreamcast redump images.  This won't be needed once we're on bullseye.
   sudo apt install -y libfontconfig1-dev qt5-default libsdl2-ttf-dev libxinerama-dev libxi-dev
 
+  # Set build flags
+  export CFLAGS='-mcpu=cortex-a72 -mfpu=neon-fp-armv8 -O2'
+  export MAKEFLAGS='-j4'
+
   # Build from source
   rm -rf "$tmp_dir/mame"
   git clone --depth 1 -b mame0230 https://github.com/mamedev/mame "$tmp_dir/mame"
