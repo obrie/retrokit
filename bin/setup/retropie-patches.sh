@@ -11,7 +11,7 @@ install() {
 }
 
 uninstall() {
-  restore "$HOME/scriptmodules/emulators/advmame.sh"
+  restore "$HOME/scriptmodules/emulators/advmame.sh" delete_src=true
 }
 
 "${@}"
