@@ -43,7 +43,7 @@ install() {
 }
 
 uninstall() {
-  restore "$HOME/.emulationstation/es_systems.cfg"
+  restore "$HOME/.emulationstation/es_systems.cfg" delete_src=true
 }
 
 "${@}"
