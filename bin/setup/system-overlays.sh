@@ -5,9 +5,9 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-install() {
-  local overlays_dir="$retroarch_config_dir/overlay"
+overlays_dir="$retroarch_config_dir/overlay"
 
+install() {
   while IFS='^' read repo branch default_image_path vertical_image_path ; do
     branch=${branch:-master}
     local base_url="https://github.com/$repo/raw/$branch"
@@ -28,7 +28,8 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for overlays'
+  rm -f "$overlays_dir/$system.png"
+  rm -f "$overlays_dir/$system-vertical.png"
 }
 
 "$1" "${@:3}"
