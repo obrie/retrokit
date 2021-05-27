@@ -14,7 +14,7 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for cheats'
+  rm -rf /opt/retropie/configs/all/retroarch/cheats/*
 }
 
 "${@}"
