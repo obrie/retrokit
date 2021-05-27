@@ -35,7 +35,7 @@ install() {
 }
 
 uninstall() {
-  restore "$HOME/.emulationstation/es_settings.cfg"
+  restore "$HOME/.emulationstation/es_settings.cfg" delete_src=true
 }
 
 "${@}"
