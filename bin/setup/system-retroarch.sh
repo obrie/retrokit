@@ -26,7 +26,10 @@ install_core_options() {
   if [ -n "$core_options_path" ]; then
     # Use the global defaults as the initial file
     cp "$global_core_options_path" "$core_options_path"
-    crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
+
+    if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
+      crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
+    fi
   else
     ini_merge "$system_config_dir/retroarch-core-options.cfg" "$global_core_options_path" restore=false
   fi
