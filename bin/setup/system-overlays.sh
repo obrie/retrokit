@@ -28,8 +28,7 @@ install() {
 }
 
 uninstall() {
-  rm -f "$overlays_dir/$system.png"
-  rm -f "$overlays_dir/$system-vertical.png"
+  rm -f "$overlays_dir/$system.cfg" "$overlays_dir/$system.png" "$overlays_dir/$system-vertical.cfg" "$overlays_dir/$system-vertical.png"
 }
 
 "$1" "${@:3}"
