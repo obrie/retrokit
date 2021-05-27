@@ -97,7 +97,21 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for rom retroarch configurations'
+  # Remove core options
+  while IFS="$tab" read library_name; do
+    local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
+    find "$retroarch_emulator_config_dir" -name '*.opt' -exec rm -rf "{}" \;
+  done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
+
+  # Remove retroarch remappings
+  local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
+  if [ -n "$remapping_dir" ]; then
+    remapping_dir=${remapping_dir//\"/}
+    find "$remapping_dir" -name '*.rmp' -exec rm -rf "{}" \;
+  fi
+
+  # Remove retroarch configs
+  find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -rf "{}" \;
 }
 
 "$1" "${@:3}"
