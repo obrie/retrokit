@@ -124,6 +124,10 @@ env_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
+  if [ ! -f "$source" ]; then
+    return
+  fi
+
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
   while IFS="$tab" read -r env_line; do
@@ -144,6 +148,10 @@ ini_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
+  if [ ! -f "$source" ]; then
+    return
+  fi
+
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
   if [ "$as_sudo" == 'true' ]; then
@@ -165,6 +173,10 @@ json_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
+  if [ ! -f "$source" ]; then
+    return
+  fi
+
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
   if [ "$as_sudo" == 'true' ]; then
@@ -183,6 +195,10 @@ file_cp() {
   local restore='true'
   local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  if [ ! -f "$source" ]; then
+    return
+  fi
 
   backup "$target" as_sudo="$as_sudo"
 
@@ -203,6 +219,10 @@ file_ln() {
   local as_sudo='false'
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  if [ ! -f "$source" ]; then
+    return
+  fi
 
   backup "$target" as_sudo="$as_sudo"
 
