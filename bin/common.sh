@@ -206,6 +206,9 @@ file_cp() {
     local cmd='sudo'
   fi
 
+  # Remove any existing file
+  $cmd rm -f "$target"
+
   if [ "$envsubst" == 'true' ]; then
     $cmd cp "$(conf_prepare "$source")" "$target"
   else
@@ -230,6 +233,9 @@ file_ln() {
     local cmd='sudo'
   fi
 
+  # Remove any existing file
+  $cmd rm -f "$target"
+  
   $cmd ln -fs "$source" "$target"
 }
 
