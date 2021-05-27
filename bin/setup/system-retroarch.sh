@@ -25,7 +25,7 @@ install_emulator_config() {
 # Global core options
 install_core_options() {
   # Figure out where the core options live for this system
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path')
+  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null || true)
   if [ -z "$core_options_path" ]; then
     core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
   fi

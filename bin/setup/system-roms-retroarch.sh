@@ -41,6 +41,12 @@ find_overrides() {
 # Game-specific libretro core overrides
 # (https://retropie.org.uk/docs/RetroArch-Core-Options/)
 install_retroarch_core_options() {
+  # Figure out where the core options live for this system
+  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null || true)
+  if [ -z "$core_options_path" ]; then
+    core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
+  fi
+
   while IFS="$tab" read rom_name override_file core_name library_name; do
     # Retroarch emulator-specific config
     local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
@@ -53,7 +59,7 @@ install_retroarch_core_options() {
     # Copy over existing core overrides so we don't just get the
     # core defaults
     touch "$target_path"
-    grep -E "^$core_name" /opt/retropie/configs/all/retroarch-core-options.cfg > "$target_path" || true
+    grep -E "^$core_name" "$core_options_path" > "$target_path" || true
 
     # Merge in game-specific overrides
     crudini --merge "$target_path" < "$override_file"
