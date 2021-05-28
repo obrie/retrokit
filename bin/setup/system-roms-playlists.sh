@@ -31,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -rf "{}" \;
+  find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -f "{}" \;
 }
 
 "$1" "${@:3}"

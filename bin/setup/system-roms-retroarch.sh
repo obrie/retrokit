@@ -110,13 +110,13 @@ uninstall() {
   if [ -n "$remapping_dir" ]; then
     remapping_dir=${remapping_dir//\"/}
     if [ -d "$remapping_dir" ]; then
-      find "$remapping_dir" -name '*.rmp' -exec rm -rf "{}" \;
+      find "$remapping_dir" -name '*.rmp' -exec rm -f "{}" \;
     fi
   fi
 
   # Remove retroarch configs
   if [ -d "$HOME/RetroPie/roms/$system/" ]; then
-    find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -rf "{}" \;
+    find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -f "{}" \;
   fi
 }
 
