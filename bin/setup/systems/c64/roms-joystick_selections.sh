@@ -14,7 +14,7 @@ install() {
   while read -r rom_name; do
     local normalized_name=$(normalize_rom_name "$rom_name")
     installed_roms["$normalized_name"]="$rom_name"
-  done < <(romkit_cli list --log-level ERROR | jq -r '.name')
+  done < <(romkit_cache_list | jq -r '.name')
 
   # Set joyport based on the above
   while IFS='^' read -r color unknown title type multidisk joyport other; do
@@ -50,7 +50,10 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for c64'
+  # Remove joyport selections
+  while read opt_file; do
+    crudini --del "$opt_file" '' 'vice_joyport'
+  done < <(find "$retroarch_config_dir/config/VICE x64" -name '*.opt')
 }
 
 "${@}"
