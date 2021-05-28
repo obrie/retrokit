@@ -17,7 +17,7 @@ restore_config() {
       restore "$config_path" "${@}"
 
       # Merge the profiles back in
-      crudini --inplace --merge "$config_path" < "$system_tmp_dir/profiles.cfg"
+      crudini --merge --inplace "$config_path" < "$system_tmp_dir/profiles.cfg"
       rm "$system_tmp_dir/profiles.cfg"
     else
       restore "$config_path" "${@}"
