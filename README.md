@@ -130,6 +130,7 @@ in the config/ folder, particularly config/settings.json.
    ```
    cd /home/pi
    git clone https://github.com/obrie/retrokit.git
+   cp /path/to/.env /home/pi/retrokit/.env
    ```
 1. Update Raspbian
    ```
