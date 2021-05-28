@@ -7,19 +7,51 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 scrape() {
   local source="$1"
+  local mode="$2"
   local IFS=$'\n'
   local extra_args=($(system_setting '.scraper.args[]?'))
 
   stop_emulationstation
 
   log "Scaping $system from $source"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}"
+  if [ "$mode" == 'new' ]; then
+    # Only scrape roms we have no data for
+    /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}"
+  else
+    # Scrape existing roms that have missing textual / artwork resources
+
+    # Remove existing Skyscraper reports
+    find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
+
+    # Generate new reports of missing resources
+    for resource_type in textual artwork; do
+      /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=$resource_type "${extra_args[@]}"
+    done
+
+    # Generate aggregate list of roms
+    local aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
+    cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
+
+    if [ -s "$aggregate_report_file" ]; then
+      /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --fromfile "$aggregate_report_file" "${extra_args[@]}"
+    fi
+
+    rm "$aggregate_report_file"
+  fi
 }
 
 scrape_sources() {
   while read -r source; do
-    scrape "$source"
+    scrape "$source" "${@}"
   done < <(system_setting '.scraper.sources[]')
+}
+
+scrape_missing_media() {
+  scrape_sources missing_media
+}
+
+scrape_new() {
+  scrape_sources new
 }
 
 build_gamelist() {
@@ -52,7 +84,7 @@ vacuum() {
 }
 
 install() {
-  scrape_sources
+  scrape_missing_media
   build_gamelist
 }
 
