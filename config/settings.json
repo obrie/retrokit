@@ -23,11 +23,20 @@
     "case": {
       "model": "argon1"
     },
-    "controllers": [
-      "Keyboard",
-      "Microsoft X-Box 360 pad",
-      "8Bitdo SN30 Pro"
-    ],
+    "controllers": {
+      "inputs": [
+        "Keyboard",
+        "Microsoft X-Box 360 pad",
+        "8Bitdo SN30 Pro"
+      ],
+      "autoconfig": [
+        "advmame",
+        "drastic",
+        "ir",
+        "ppsspp",
+        "redream"
+      ]
+    },
     "ir": {
       "gpio_pin": 23,
       "keymap": "/lib/udev/rc_keymaps/tivo.toml"

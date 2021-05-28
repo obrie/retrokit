@@ -5,19 +5,19 @@ set -ex
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
-configscripts_dir="/opt/retropie/supplementary/emulationstation/scripts/configscripts"
+configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 
 install() {
   # Add autoconfig scripts
-  while read configscript_path; do
-    sudo cp "$configscript_path" "$configscripts_dir/"
-  done < <(find "$bin_dir/controllers" -name '*.sh')
+  while read autoconfig_name; do
+    sudo cp "$bin_dir/controllers/$autoconfig_name.sh" "$configscripts_dir/"
+  done < <(jq '.hardware.controllers.autoconfig[]')
 
   # Run RetroPie autoconfig for each controller input
-  while read input_path; do
-    cp "$input_path" "$HOME/.emulationstation/es_temporaryinput.cfg"
+  while read input_name; do
+    cp "$config_dir/controllers/inputs/$input_name.cfg" "$HOME/.emulationstation/es_temporaryinput.cfg"
     /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh
-  done < <(find "$config_dir/controllers/inputs" -name '*.cfg')
+  done < <(jq '.hardware.controllers.inputs[]')
 }
 
 uninstall() {
@@ -25,10 +25,9 @@ uninstall() {
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation init_input
 
   # Remove autoconfig scripts
-  while read configscript_path; do
-    local configscript_name=$(basename "$configscript_path")
-    sudo rm -f "$configscripts_dir/$configscript_name"
-  done < <(find "$bin_dir/controllers" -name '*.sh')
+  while read autoconfig_name; do
+    sudo rm -f "$configscripts_dir/$autoconfig_name.sh"
+  done < <(jq '.hardware.controllers.autoconfig[]')
 }
 
 "${@}"
