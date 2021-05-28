@@ -21,24 +21,27 @@ install() {
       sed -i "/\/$system\//d" "$target_collection_path"
     fi
 
-    while IFS="$tab" read -r collection_system machine_name; do
-      if [ "$collection_system" == "$system" ]; then
-        while read -r machine_path; do
-          local name_without_flags=$(basename "$machine_path" | grep -oE "^[^\(]+" | sed -e 's/[[:space:]]*$//')
+    while IFS="$tab" read -r collection_system machine_title; do
+      # Machines in collection files contain just the title in order to work
+      # for different regions, so we:
+      # 1. Do an initial naive search based on a substring match in the gamelist.xml
+      # 2. Do an exact match based on comparing the titles
+      while read -r machine_path; do
+        local installed_name=${machine_path%%.*}
+        local installed_title=${installed_name%% (*}
 
-          # If path is found, add it
-          if [ "$name_without_flags" = "$machine_name" ]; then
-            echo "$1" >> "$target_collection_path"
-            break
-          fi
-        done < <(xmlstarlet sel -t -m "*/game[contains(path, \"$machine_name\")]" -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml")
-      fi
-    done < "$source_collection_path"
+        # If the titles match, add it
+        if [ "$installed_title" = "$machine_title" ]; then
+          echo "$1" >> "$target_collection_path"
+          break
+        fi
+      done < <(xmlstarlet sel -t -m "*/game[contains(path, \"$machine_title\")]" -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml")
+    done < <(grep -E "^$system$tab" "$source_collection_path")
   done < <(ls "$source_collections_dir")
 }
 
 uninstall() {
-  echo 'No uninstall for collections'
+  find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -f "{}" \;
 }
 
 "$1" "${@:3}"
