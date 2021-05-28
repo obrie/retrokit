@@ -18,7 +18,7 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for arcade'
+  rm -f "$HOME/RetroPie/BIOS/mame2016/hiscore.dat" "$HOME/RetroPie/BIOS/mame2010/hiscore.dat" "$HOME/RetroPie/BIOS/mame2015/hiscore.dat"
 }
 
 "${@}"
