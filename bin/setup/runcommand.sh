@@ -7,14 +7,16 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Installs a helper for fixing terminal framebuffer issues
 install_termfix() {
-  mkdir $tmp_dir/termfix
-  git clone --depth 1 https://github.com/hobbitalastair/termfix.git $tmp_dir/termfix
-  pushd $tmp_dir/termfix
-  make clean
-  make
-  sudo make install
-  popd
-  rm -rf $tmp_dir/termfix
+  if [ ! `command -v termfix` ]; then
+    mkdir $tmp_dir/termfix
+    git clone --depth 1 https://github.com/hobbitalastair/termfix.git $tmp_dir/termfix
+    pushd $tmp_dir/termfix
+    make clean
+    make
+    sudo make install
+    popd
+    rm -rf $tmp_dir/termfix
+  fi
 }
 
 install_configurations() {
