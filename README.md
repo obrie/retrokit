@@ -7,7 +7,7 @@ Specifically, it can set up:
 
 * Cases (e.g. Argon)
 * Bluetooth
-* Controllers (including autoconfig for advmame, ppsspp, redream, and ir)
+* Controllers (including autoconfig for advmame, drastic, ppsspp, redream, and ir)
 * IR configuration
 * SSH
 * VNC
@@ -72,7 +72,8 @@ This is all supported for the following systems:
 * Sega - Mastersystem
 * Sega - SG-1000
 * SNK - Neo Geo Pocket
-* Sony - Playstation
+* Sony - PlayStation
+* Sony - PlayStation Portable
 
 There are also system-specific features, including:
 
