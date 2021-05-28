@@ -6,8 +6,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  backup_and_restore "$HOME/RetroPie-Setup/scriptmodules/emulators/advmame.sh"
-  patch -p1 --forward -d "$HOME/RetroPie-Setup" < "$config_dir/retropie/patches.diff"
+  if patch -p1 -N --dry-run --silent -d "$HOME/RetroPie-Setup" < "$config_dir/retropie/patches.diff"; then
+    backup_and_restore "$HOME/RetroPie-Setup/scriptmodules/emulators/advmame.sh"
+    patch -p1 -N -d "$HOME/RetroPie-Setup" < "$config_dir/retropie/patches.diff"
+  fi
 }
 
 uninstall() {

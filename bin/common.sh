@@ -322,13 +322,13 @@ install_retropie_package() {
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
   else
     # Source install
-    if [ -n "$branch" ] && [ "$branch" != 'master' ]; then
+    if [ -n "$branch" ] && [ "$branch" != 'master' ] && ! grep ".git $branch" "$scriptmodule"; then
       # Set to correct branch
       backup_and_restore "$scriptmodule"
       sed -i "s/.git master/.git $branch/g" "$scriptmodule"
     fi
 
-    sudo __ignore_module_date=1 "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
+    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
   fi
 
   # Always ensure we run the configuration in case files were restored prior
