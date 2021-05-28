@@ -158,7 +158,7 @@ ini_merge() {
     local cmd='sudo'
   fi
 
-  $cmd crudini --inplace --merge "$target" < "$(conf_prepare "$source")"
+  $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source")"
 
   if [ "$space_around_delimiters" = "false" ]; then
     $cmd sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" "$target"
