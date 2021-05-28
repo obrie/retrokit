@@ -13,9 +13,9 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/n64/InputAutoCfg.ini'
-  restore '/opt/retropie/configs/n64/mupen64plus.cfg'
-  restore '/opt/retropie/configs/n64/GLideN64.custom.ini'
+  restore '/opt/retropie/configs/n64/InputAutoCfg.ini' delete_src=true
+  restore '/opt/retropie/configs/n64/mupen64plus.cfg' delete_src=true
+  restore '/opt/retropie/configs/n64/GLideN64.custom.ini' delete_src=true
 }
 
 "${@}"

@@ -15,6 +15,7 @@ install() {
 }
 
 uninstall() {
+  rm -f "$HOME/eXoDOS"
   sudo apt remove -y fluid-soundfont-gm
 }
 

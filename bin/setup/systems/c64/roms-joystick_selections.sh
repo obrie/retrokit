@@ -53,6 +53,9 @@ uninstall() {
   # Remove joyport selections
   while read opt_file; do
     crudini --del "$opt_file" '' 'vice_joyport'
+    if [ -s "$opt_file" ]; then
+      rm "$opt_file"
+    fi
   done < <(find "$retroarch_config_dir/config/VICE x64" -name '*.opt')
 }
 

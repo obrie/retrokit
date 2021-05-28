@@ -11,7 +11,7 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
+  restore '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini' delete_src=true
 }
 
 "${@}"

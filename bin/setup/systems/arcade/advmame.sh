@@ -22,7 +22,7 @@ restore_config() {
       crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
       rm "$system_tmp_dir/inputs.rc"
     else
-      restore "$config_path"
+      restore "$config_path" "${@}"
     fi
   fi
 }
@@ -73,7 +73,7 @@ uninstall() {
   fi
 
   # Restore advmame.rc, keeping the input_maps in the process
-  restore_config "$config_path"
+  restore_config "$config_path" delete_src=true
 }
 
 if [ "$system" == 'arcade' ]; then

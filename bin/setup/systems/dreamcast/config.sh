@@ -20,7 +20,7 @@ restore_config() {
       crudini --inplace --merge "$config_path" < "$system_tmp_dir/profiles.cfg"
       rm "$system_tmp_dir/profiles.cfg"
     else
-      restore "$config_path"
+      restore "$config_path" "${@}"
     fi
   fi
 }
@@ -31,7 +31,7 @@ install() {
 }
 
 uninstall() {
-  restore_config
+  restore_config delete_src=true
 }
 
 "${@}"
