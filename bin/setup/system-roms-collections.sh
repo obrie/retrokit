@@ -41,7 +41,9 @@ install() {
 }
 
 uninstall() {
-  find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -f "{}" \;
+  if [ -d "$HOME/.emulationstation/collections" ]; then
+    find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -f "{}" \;
+  fi
 }
 
 "$1" "${@:3}"
