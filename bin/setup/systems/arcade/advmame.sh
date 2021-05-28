@@ -15,7 +15,7 @@ restore_config() {
       grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
 
       # Restore and remove any input_maps from the original file
-      restore "$config_path"
+      restore "$config_path" "${@}"
       sed -i '/^input_map/d' "$config_path"
 
       # Merge the input_maps back in

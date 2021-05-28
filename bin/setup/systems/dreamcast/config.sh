@@ -14,7 +14,7 @@ restore_config() {
       # Keep track of the profiles since we don't want to lose those
       grep -E '^profile[0-9]+' "$config_path" > "$system_tmp_dir/profiles.cfg"
 
-      restore "$config_path"
+      restore "$config_path" "${@}"
 
       # Merge the profiles back in
       crudini --inplace --merge "$config_path" < "$system_tmp_dir/profiles.cfg"
