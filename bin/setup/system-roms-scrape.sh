@@ -24,9 +24,7 @@ scrape() {
     find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
 
     # Generate new reports of missing resources
-    for resource_type in title platform cover screenshot wheel marquee; do
-      /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=$resource_type "${extra_args[@]}"
-    done
+    /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=title,platform,cover,screenshot,wheel,marquee "${extra_args[@]}"
 
     # Generate aggregate list of roms
     local aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
