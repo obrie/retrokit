@@ -65,13 +65,17 @@ romkit_cli() {
 # Loads the list of roms marked for install.  This can be called multiple
 # times, but it will only run romkit once.
 romkit_cache_list() {
-  local cache_file="$system_tmp_dir/romkit-list.cache"
+  # Generate a unique name based on a hash of the settings file.
+  # When the settings file changes, the cache file is invalidated.
+  local cache_id=($(md5sum "$system_settings_file"))
+  local cache_file="$system_tmp_dir/romkit-list.cache.$cache_id"
 
-  # If the settings file has been modified recently, look up the
-  # list again and re-cache it.
-  if [ "$system_settings_file" -nt "$cache_file" ]; then
+  if [ ! -f "$cache_file" ]; then
+    # Remove any existing cache files
+    find "$system_tmp_dir" -name "romkit-list.cache*" -exec rm -f "{}" \;
+
+    # Re-cache the list
     romkit_cli list --log-level ERROR > "$cache_file"
-    touch -r "$system_settings_file" "$cache_file"
   fi
 
   cat "$cache_file"
