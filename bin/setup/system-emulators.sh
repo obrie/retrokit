@@ -10,19 +10,19 @@ install_emulators() {
   backup_and_restore "$retropie_system_config_dir/emulators.cfg"
 
   # Install packages
-  while IFS="$tab" read -r emulator name build branch is_default; do
+  while IFS="$tab" read -r package emulator build is_default; do
     local package_type='emulators'
-    if [[ "$emulator" == lr-* ]]; then
+    if [[ "$package" == lr-* ]]; then
       package_type='libretrocores'
     fi
 
-    install_retropie_package "$package_type" "$emulator" "$build" "$branch"
+    install_retropie_package "$package_type" "$package" "$build"
 
     # Set defaults
     if [ "$is_default" == "true" ]; then
-      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$name\""
+      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$emulator\""
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.branch // "master", .value.default // false] | @tsv')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.default // false] | @tsv')
 }
 
 # Install BIOS files required by emulators
@@ -58,8 +58,8 @@ uninstall() {
   done < <(system_setting 'select(.bios) | .bios.files | keys[]')
 
   # Uninstall emulators
-  while IFS="$tab" read -r emulator; do
-    uninstall_retropie_package "$emulator"
+  while IFS="$tab" read -r package; do
+    uninstall_retropie_package "$package"
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 }
 

@@ -42,7 +42,7 @@ install() {
   fi
 
   # Cheats: MAME (Pugsy)
-  if has_emulator 'mame'; then
+  if has_emulator 'lr-mame0222'; then
     if [ ! -f "$system_tmp_dir/mame-cheats.zip" ]; then
       download 'http://cheat.retrogames.com/download/cheat0221.zip' "$system_tmp_dir/mame-cheats.zip"
       unzip -j "$system_tmp_dir/mame-cheats.zip" "cheat.7z" -d "$HOME/RetroPie/BIOS/mame/"

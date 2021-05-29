@@ -300,10 +300,8 @@ install_retropie_package() {
   local package_type=$1
   local name=$2
   local build="${3:-binary}"
-  local branch=$4
 
   local install_dir="/opt/retropie/$package_type/$name"
-  local scriptmodule="$HOME/RetroPie-Setup/scriptmodules/$package_type/$name.sh"
 
   # Determine whether we're updating an existing package or installing
   # a new one
@@ -318,16 +316,9 @@ install_retropie_package() {
     fi
   fi
 
-  if [ "$build" == "binary" ]; then
+  if [ "$build" == 'binary' ]; then
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
   else
-    # Source install
-    if [ -n "$branch" ] && [ "$branch" != 'master' ] && ! grep ".git $branch" "$scriptmodule"; then
-      # Set to correct branch
-      backup_and_restore "$scriptmodule"
-      sed -i "s/.git master/.git $branch/g" "$scriptmodule"
-    fi
-
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
   fi
 

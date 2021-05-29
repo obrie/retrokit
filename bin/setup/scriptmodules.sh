@@ -8,7 +8,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   while read -r filepath; do
     local source_path="$config_dir/scriptmodules/$filepath"
-    local target_path="$HOME/RetroPie-Setup/scriptmodules/$filepath"
+    local target_path="$HOME/RetroPie-Setup/ext/retrokit/scriptmodules/$filepath"
 
     # Remove any backup files for the scriptmodule
     rm -f "$target_path.rk-src"
@@ -19,9 +19,7 @@ install() {
 }
 
 uninstall() {
-  while read -r filepath; do
-    restore "$HOME/RetroPie-Setup/scriptmodules/$filepath" delete_src=true
-  done < <(find "$config_dir/scriptmodules" -type f -printf '%P\n')
+  rm -rf "$HOME/RetroPie-Setup/ext/retrokit/"
 }
 
 "${@}"

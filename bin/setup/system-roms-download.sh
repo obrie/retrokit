@@ -24,13 +24,17 @@ install_emulator_selections() {
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
   backup "$emulators_config_file"
 
+  # Load emulator data
+  load_emulator_data
+
   # Add emulator selections for roms with an explicit one
   # 
   # This is done in one batch because it's a bit slow otherwise
   crudini --merge "$emulators_config_file" < <(
-    while IFS="$tab" read -r rom_name emulator; do
-      if [ -n "$emulator" ]; then
-        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$emulator\""
+    while IFS="$tab" read -r rom_name source_emulator; do
+      local target_emulator=${emulators["$emulator/emulator"]}
+      if [ -n "$target_emulator" ]; then
+        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$target_emulator\""
       fi
     done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
   )
