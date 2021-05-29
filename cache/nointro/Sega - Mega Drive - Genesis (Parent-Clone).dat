@@ -4,8 +4,8 @@
 	<header>
 		<name>Sega - Mega Drive - Genesis (Parent-Clone)</name>
 		<description>Sega - Mega Drive - Genesis (Parent-Clone)</description>
-		<version>20210427-223151</version>
-		<date>20210427-223151</date>
+		<version>20210528-065328</version>
+		<date>20210528-065328</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -1509,7 +1509,7 @@
 	<game name="Brian Lara Cricket (Europe)">
 		<description>Brian Lara Cricket (Europe)</description>
 		<release name="Brian Lara Cricket (Europe)" region="EUR"/>
-		<rom name="Brian Lara Cricket (Europe).md" size="1048576" crc="90f5c2b7" md5="0d5ebd2b9eef80efdd811df85de96f21" sha1="0f4bec98af08027fc034b9801c28bb299a04be35"/>
+		<rom name="Brian Lara Cricket (Europe).md" size="1048576" crc="90f5c2b7" md5="0d5ebd2b9eef80efdd811df85de96f21" sha1="0f4bec98af08027fc034b9801c28bb299a04be35" status="verified"/>
 	</game>
 	<game name="Brian Lara Cricket (Australia)" cloneof="Brian Lara Cricket (Europe)">
 		<description>Brian Lara Cricket (Australia)</description>
@@ -2174,7 +2174,7 @@
 	<game name="Comix Zone (Japan) (En,Ja)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
 		<description>Comix Zone (Japan) (En,Ja)</description>
 		<release name="Comix Zone (Japan) (En,Ja)" region="JPN"/>
-		<rom name="Comix Zone (Japan) (En,Ja).md" size="2097152" crc="7a6027b8" md5="d92ccdfd14118af824b98997ab639bb7" sha1="44f8c2a102971d0afcb0d9bd9081ccf51ff830a9" status="verified"/>
+		<rom name="Comix Zone (Japan) (En,Ja).md" size="2097152" crc="7a6027b8" md5="d92ccdfd14118af824b98997ab639bb7" sha1="44f8c2a102971d0afcb0d9bd9081ccf51ff830a9"/>
 	</game>
 	<game name="Comix Zone (USA)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
 		<description>Comix Zone (USA)</description>
@@ -2785,10 +2785,10 @@
 		<release name="Dick Vitale's 'Awesome, Baby!' College Hoops (USA)" region="USA"/>
 		<rom name="Dick Vitale's 'Awesome, Baby!' College Hoops (USA).md" size="2097152" crc="1312cf22" md5="441c32abf70cf3587096fb4819205b80" sha1="2aac7a1cf92e51a14fd3e12a830e135fee255044"/>
 	</game>
-	<game name="Dino Dini's Soccer (Europe)">
-		<description>Dino Dini's Soccer (Europe)</description>
-		<release name="Dino Dini's Soccer (Europe)" region="EUR"/>
-		<rom name="Dino Dini's Soccer (Europe).md" size="1048576" crc="4608f53a" md5="6a492e2983b2bc306eec905411ee24a8" sha1="49d4a654dd2f393e43a363ed171e73cd4c8ff4f4"/>
+	<game name="Dino Dini's Soccer (Europe) (En,Fr,De)">
+		<description>Dino Dini's Soccer (Europe) (En,Fr,De)</description>
+		<release name="Dino Dini's Soccer (Europe) (En,Fr,De)" region="EUR"/>
+		<rom name="Dino Dini's Soccer (Europe) (En,Fr,De).md" size="1048576" crc="4608f53a" md5="6a492e2983b2bc306eec905411ee24a8" sha1="49d4a654dd2f393e43a363ed171e73cd4c8ff4f4"/>
 	</game>
 	<game name="Dino Land (USA)">
 		<description>Dino Land (USA)</description>
@@ -3750,10 +3750,10 @@
 		<release name="Flicky (USA, Europe)" region="USA"/>
 		<rom name="Flicky (USA, Europe).md" size="131072" crc="4291c8ab" md5="805cc0b3724f041126a57a4d956fd251" sha1="83d8bbf0a9b38c42a0bf492d105cc3abe9644a96" status="verified"/>
 	</game>
-	<game name="Flink (Europe)">
-		<description>Flink (Europe)</description>
-		<release name="Flink (Europe)" region="EUR"/>
-		<rom name="Flink (Europe).md" size="1048576" crc="bef9a4f4" md5="4b6da602b30589b18be136f60b8000b2" sha1="f37518380d3e41598cbff16519ca15fcb751de57"/>
+	<game name="Flink (Europe) (En,Fr,De)">
+		<description>Flink (Europe) (En,Fr,De)</description>
+		<release name="Flink (Europe) (En,Fr,De)" region="EUR"/>
+		<rom name="Flink (Europe) (En,Fr,De).md" size="1048576" crc="bef9a4f4" md5="4b6da602b30589b18be136f60b8000b2" sha1="f37518380d3e41598cbff16519ca15fcb751de57"/>
 	</game>
 	<game name="Flintstones, The (Europe) (Taito)">
 		<description>Flintstones, The (Europe) (Taito)</description>
@@ -3974,22 +3974,22 @@
 		<release name="Garry Kitchen's Super Battletank - War in the Gulf (USA)" region="USA"/>
 		<rom name="Garry Kitchen's Super Battletank - War in the Gulf (USA).md" size="524288" crc="b0b5e3c9" md5="6bb84cefe5cbb94050fd6dc345cfecca" sha1="4ce9aaaa9d3f98e1747af12ad488b6bdbde1afb4"/>
 	</game>
-	<game name="Gauntlet IV (USA, Europe)">
-		<description>Gauntlet IV (USA, Europe)</description>
-		<release name="Gauntlet IV (USA, Europe)" region="EUR"/>
-		<release name="Gauntlet IV (USA, Europe)" region="USA"/>
-		<rom name="Gauntlet IV (USA, Europe).md" size="1048576" crc="3bf46dce" md5="840f9f6fd4f22686b89cfd9a9ade105a" sha1="26c26ee2bb9571d51537d9328a5fd2a91b4e9dc1" status="verified"/>
+	<game name="Gauntlet IV (USA, Europe) (En,Ja)">
+		<description>Gauntlet IV (USA, Europe) (En,Ja)</description>
+		<release name="Gauntlet IV (USA, Europe) (En,Ja)" region="EUR"/>
+		<release name="Gauntlet IV (USA, Europe) (En,Ja)" region="USA"/>
+		<rom name="Gauntlet IV (USA, Europe) (En,Ja).md" size="1048576" crc="3bf46dce" md5="840f9f6fd4f22686b89cfd9a9ade105a" sha1="26c26ee2bb9571d51537d9328a5fd2a91b4e9dc1" status="verified"/>
 	</game>
-	<game name="Gauntlet (Japan) (En,Ja)" cloneof="Gauntlet IV (USA, Europe)">
+	<game name="Gauntlet (Japan) (En,Ja)" cloneof="Gauntlet IV (USA, Europe) (En,Ja)">
 		<description>Gauntlet (Japan) (En,Ja)</description>
 		<release name="Gauntlet (Japan) (En,Ja)" region="JPN"/>
 		<rom name="Gauntlet (Japan) (En,Ja).md" size="1048576" crc="f9872055" md5="9aad96cc5364d2289f470b75c59907a5" sha1="30208982dd1f50634943d894e7458a556127f8e4"/>
 	</game>
-	<game name="Gauntlet (Japan) (En,Ja) (Beta)" cloneof="Gauntlet IV (USA, Europe)">
+	<game name="Gauntlet (Japan) (En,Ja) (Beta)" cloneof="Gauntlet IV (USA, Europe) (En,Ja)">
 		<description>Gauntlet (Japan) (En,Ja) (Beta)</description>
 		<rom name="Gauntlet (Japan) (En,Ja) (Beta).md" size="1048576" crc="7d478079" md5="2539e1b5e332845ede0024a2eed82956" sha1="347209b0d09270d0a492622e7961ba7febdef99b"/>
 	</game>
-	<game name="Gauntlet IV (USA, Europe) (Beta)" cloneof="Gauntlet IV (USA, Europe)">
+	<game name="Gauntlet IV (USA, Europe) (Beta)" cloneof="Gauntlet IV (USA, Europe) (En,Ja)">
 		<description>Gauntlet IV (USA, Europe) (Beta)</description>
 		<rom name="Gauntlet IV (USA, Europe) (Beta).md" size="1048576" crc="f9d60510" md5="5e8ec4c047ef4af15027e93b5358858f" sha1="d28e22207121f0e2980dd409b4fb24f9fb8967ae"/>
 	</game>
@@ -5007,10 +5007,10 @@
 		<description>Kawasaki Superbike Challenge (USA, Europe) (Beta)</description>
 		<rom name="Kawasaki Superbike Challenge (USA, Europe) (Beta).md" size="1048576" crc="55934d1b" md5="29da0d26615fc89885ef201b03bf1355" sha1="a66446d5c3d07ce211d7198faf4ea3ff6dbfa0b9"/>
 	</game>
-	<game name="Kick Off 3 - European Challenge (Europe)">
-		<description>Kick Off 3 - European Challenge (Europe)</description>
-		<release name="Kick Off 3 - European Challenge (Europe)" region="EUR"/>
-		<rom name="Kick Off 3 - European Challenge (Europe).md" size="1048576" crc="bc37401a" md5="640b900fc064c6962dc6160b8a033bf8" sha1="e449cfd4f9d59cf28b4842d465022a399964d0d6"/>
+	<game name="Kick Off 3 - European Challenge (Europe) (En,Fr,De,Es,It)">
+		<description>Kick Off 3 - European Challenge (Europe) (En,Fr,De,Es,It)</description>
+		<release name="Kick Off 3 - European Challenge (Europe) (En,Fr,De,Es,It)" region="EUR"/>
+		<rom name="Kick Off 3 - European Challenge (Europe) (En,Fr,De,Es,It).md" size="1048576" crc="bc37401a" md5="640b900fc064c6962dc6160b8a033bf8" sha1="e449cfd4f9d59cf28b4842d465022a399964d0d6"/>
 	</game>
 	<game name="Kid Chameleon (USA, Europe)">
 		<description>Kid Chameleon (USA, Europe)</description>
@@ -5840,6 +5840,13 @@
 	<game name="Rockman - Mega World (Japan) (Mega Drive Mini)" cloneof="Mega Man - The Wily Wars (Europe)">
 		<description>Rockman - Mega World (Japan) (Mega Drive Mini)</description>
 		<rom name="Rockman - Mega World (Japan) (Mega Drive Mini).md" size="2097152" crc="e8f5668e" md5="f36771942c483192c6f4c3e1127888b1" sha1="77de1a2bdc359044e8aec5a3bcd6a5d878d23837"/>
+	</game>
+	<game name="Mega Marble World (World) (Aftermarket) (Unl)">
+		<description>Mega Marble World (World) (Aftermarket) (Unl)</description>
+		<release name="Mega Marble World (World) (Aftermarket) (Unl)" region="EUR"/>
+		<release name="Mega Marble World (World) (Aftermarket) (Unl)" region="JPN"/>
+		<release name="Mega Marble World (World) (Aftermarket) (Unl)" region="USA"/>
+		<rom name="Mega Marble World (World) (Aftermarket) (Unl).md" size="2621440" crc="438c7511" md5="67f3770662b804ed25543d46a0f7b3e3" sha1="11abaf8c3417df2af16ce157c319db8de3297cbc"/>
 	</game>
 	<game name="Mega SWIV (Europe)">
 		<description>Mega SWIV (Europe)</description>
@@ -10238,11 +10245,11 @@
 		<description>Sylvester &amp; Tweety in Cagey Capers (USA, Europe) (Beta)</description>
 		<rom name="Sylvester &amp; Tweety in Cagey Capers (USA, Europe) (Beta).md" size="2097152" crc="9d9c786b" md5="c215bb67fb8d0f9eba7c4aa5d7feab42" sha1="d1ca731869b2ffd452bd4f2b40bb0afdc997936d"/>
 	</game>
-	<game name="Syndicate (USA, Europe)">
-		<description>Syndicate (USA, Europe)</description>
-		<release name="Syndicate (USA, Europe)" region="EUR"/>
-		<release name="Syndicate (USA, Europe)" region="USA"/>
-		<rom name="Syndicate (USA, Europe).md" size="2097152" crc="95bbf87b" md5="f8dbf7f08131243c18ed3626b10d2d55" sha1="87442ecc50df508d54d241cbd468b41c926b974d"/>
+	<game name="Syndicate (USA, Europe) (En,Fr,De)">
+		<description>Syndicate (USA, Europe) (En,Fr,De)</description>
+		<release name="Syndicate (USA, Europe) (En,Fr,De)" region="EUR"/>
+		<release name="Syndicate (USA, Europe) (En,Fr,De)" region="USA"/>
+		<rom name="Syndicate (USA, Europe) (En,Fr,De).md" size="2097152" crc="95bbf87b" md5="f8dbf7f08131243c18ed3626b10d2d55" sha1="87442ecc50df508d54d241cbd468b41c926b974d"/>
 	</game>
 	<game name="T2 - Terminator 2 - Judgment Day (USA, Europe)">
 		<description>T2 - Terminator 2 - Judgment Day (USA, Europe)</description>
@@ -10652,11 +10659,11 @@
 		<release name="Tetris (Japan) (Mega Drive Mini)" region="JPN"/>
 		<rom name="Tetris (Japan) (Mega Drive Mini).md" size="524288" crc="b6fb7a7d" md5="f5f0cf3a6765c50915bbb0af2c02723c" sha1="dea6ab2dd1aa05ef2119037223fc1bff0c0aa0ca"/>
 	</game>
-	<game name="Theme Park (USA, Europe)">
-		<description>Theme Park (USA, Europe)</description>
-		<release name="Theme Park (USA, Europe)" region="EUR"/>
-		<release name="Theme Park (USA, Europe)" region="USA"/>
-		<rom name="Theme Park (USA, Europe).md" size="2097152" crc="289da2c5" md5="8d30e89b4e56c4abb412b575d4078a47" sha1="03c6504b5d797f10c7c361735d801902e4b00981" status="verified"/>
+	<game name="Theme Park (USA, Europe) (En,Fr,De,Es)">
+		<description>Theme Park (USA, Europe) (En,Fr,De,Es)</description>
+		<release name="Theme Park (USA, Europe) (En,Fr,De,Es)" region="EUR"/>
+		<release name="Theme Park (USA, Europe) (En,Fr,De,Es)" region="USA"/>
+		<rom name="Theme Park (USA, Europe) (En,Fr,De,Es).md" size="2097152" crc="289da2c5" md5="8d30e89b4e56c4abb412b575d4078a47" sha1="03c6504b5d797f10c7c361735d801902e4b00981" status="verified"/>
 	</game>
 	<game name="Thomas the Tank Engine &amp; Friends (USA)">
 		<description>Thomas the Tank Engine &amp; Friends (USA)</description>
@@ -10762,12 +10769,12 @@
 		<description>Tintin in Tibet (Europe) (En,Fr,De,Es,Nl,Sv) (Beta)</description>
 		<rom name="Tintin in Tibet (Europe) (En,Fr,De,Es,Nl,Sv) (Beta).md" size="2097152" crc="5d4e0ea1" md5="0df502e9f69d0774d505d7800a4c8c64" sha1="28a63f4e7c063c127b00dc7c8c3f1439eed437ba"/>
 	</game>
-	<game name="Tiny Toon Adventures - ACME All-Stars (Europe)">
-		<description>Tiny Toon Adventures - ACME All-Stars (Europe)</description>
-		<release name="Tiny Toon Adventures - ACME All-Stars (Europe)" region="EUR"/>
-		<rom name="Tiny Toon Adventures - ACME All-Stars (Europe).md" size="1048576" crc="1227b2b2" md5="abddd42b2548e9b708991f689d726c9a" sha1="2672018d9e005a9a3b5006fa8f61e08f2d1909aa" status="verified"/>
+	<game name="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)">
+		<description>Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)</description>
+		<release name="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)" region="EUR"/>
+		<rom name="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De).md" size="1048576" crc="1227b2b2" md5="abddd42b2548e9b708991f689d726c9a" sha1="2672018d9e005a9a3b5006fa8f61e08f2d1909aa" status="verified"/>
 	</game>
-	<game name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" cloneof="Tiny Toon Adventures - ACME All-Stars (Europe)">
+	<game name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" cloneof="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)">
 		<description>Tiny Toon Adventures - ACME All-Stars (USA, Korea)</description>
 		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" region="KOR"/>
 		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" region="USA"/>

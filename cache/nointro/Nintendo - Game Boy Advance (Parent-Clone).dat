@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Game Boy Advance (Parent-Clone)</name>
 		<description>Nintendo - Game Boy Advance (Parent-Clone)</description>
-		<version>20210502-133728</version>
-		<date>20210502-133728</date>
+		<version>20210528-074339</version>
+		<date>20210528-074339</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -848,12 +848,19 @@
 		<release name="Aggressive Inline (USA)" region="USA"/>
 		<rom name="Aggressive Inline (USA).gba" size="8388608" crc="3a44fcd5" md5="4e8b17bb4b77cd5568b678596c55a8bb" sha1="df41ef94380e074257424f4725738f2ed7ae68b6"/>
 	</game>
-	<game name="Aging Cartridge (World)">
-		<description>Aging Cartridge (World)</description>
-		<release name="Aging Cartridge (World)" region="EUR"/>
-		<release name="Aging Cartridge (World)" region="JPN"/>
-		<release name="Aging Cartridge (World)" region="USA"/>
-		<rom name="Aging Cartridge (World).gba" size="2097152" crc="bbb6a960" md5="9f74b2ad1d33e08e8a570ffe4564cbc3" sha1="c67e0a5e26ea5eba2bc11c99d003027a96e44060" status="verified"/>
+	<game name="AGS Aging Cartridge (World) (v7.1)">
+		<description>AGS Aging Cartridge (World) (v7.1)</description>
+		<release name="AGS Aging Cartridge (World) (v7.1)" region="EUR"/>
+		<release name="AGS Aging Cartridge (World) (v7.1)" region="JPN"/>
+		<release name="AGS Aging Cartridge (World) (v7.1)" region="USA"/>
+		<rom name="AGS Aging Cartridge (World) (v7.1).gba" size="8388608" crc="d047ffdf" md5="1ca28a9463c67a0f18bb1b047993062f" sha1="d1da0137253de862aef724da1cfba5e2ca3cd511"/>
+	</game>
+	<game name="AGS Aging Cartridge (World) (v7.0)" cloneof="AGS Aging Cartridge (World) (v7.1)">
+		<description>AGS Aging Cartridge (World) (v7.0)</description>
+		<release name="AGS Aging Cartridge (World) (v7.0)" region="EUR"/>
+		<release name="AGS Aging Cartridge (World) (v7.0)" region="JPN"/>
+		<release name="AGS Aging Cartridge (World) (v7.0)" region="USA"/>
+		<rom name="AGS Aging Cartridge (World) (v7.0).gba" size="2097152" crc="bbb6a960" md5="9f74b2ad1d33e08e8a570ffe4564cbc3" sha1="c67e0a5e26ea5eba2bc11c99d003027a96e44060" status="verified"/>
 	</game>
 	<game name="Aka-chan Doubutsuen (Japan) (Rev 1)">
 		<description>Aka-chan Doubutsuen (Japan) (Rev 1)</description>
@@ -4512,7 +4519,7 @@
 	<game name="F-Zero - Climax (Japan)">
 		<description>F-Zero - Climax (Japan)</description>
 		<release name="F-Zero - Climax (Japan)" region="JPN"/>
-		<rom name="F-Zero - Climax (Japan).gba" size="16777216" crc="dbdc71e3" md5="8d27b349bca44d938b67f9a28712f6c9" sha1="6eb9208c493e8baa43ecc0dacf71a8cb631be7ca" status="verified"/>
+		<rom name="F-Zero - Climax (Japan).gba" size="16777216" crc="dbdc71e3" md5="8d27b349bca44d938b67f9a28712f6c9" sha1="6eb9208c493e8baa43ecc0dacf71a8cb631be7ca"/>
 	</game>
 	<game name="F-Zero - Climax (Japan) (Virtual Console)" cloneof="F-Zero - Climax (Japan)">
 		<description>F-Zero - Climax (Japan) (Virtual Console)</description>
@@ -10054,10 +10061,10 @@
 		<release name="Nakayoshi Pet Advance Series 2 - Kawaii Koinu (Japan)" region="JPN"/>
 		<rom name="Nakayoshi Pet Advance Series 2 - Kawaii Koinu (Japan).gba" size="4194304" crc="954da3e6" md5="13282333ff803c7c525e5512019fbb51" sha1="aef6aaa2d351bad2c260b85c308d584b91039a99"/>
 	</game>
-	<game name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wankoto Asobou!! Kogata-ken (Japan)">
-		<description>Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wankoto Asobou!! Kogata-ken (Japan)</description>
-		<release name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wankoto Asobou!! Kogata-ken (Japan)" region="JPN"/>
-		<rom name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wankoto Asobou!! Kogata-ken (Japan).gba" size="4194304" crc="ae2a69f3" md5="138f9df1c5d9c7cb0b28760f92a4698e" sha1="0c78a24d5a8a296d05a8b47cf5623de0f031748e"/>
+	<game name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wanko to Asobou!! Kogata-ken (Japan)">
+		<description>Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wanko to Asobou!! Kogata-ken (Japan)</description>
+		<release name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wanko to Asobou!! Kogata-ken (Japan)" region="JPN"/>
+		<rom name="Nakayoshi Pet Advance Series 4 - Kawaii Koinu Mini - Wanko to Asobou!! Kogata-ken (Japan).gba" size="4194304" crc="ae2a69f3" md5="138f9df1c5d9c7cb0b28760f92a4698e" sha1="0c78a24d5a8a296d05a8b47cf5623de0f031748e"/>
 	</game>
 	<game name="Nakayoshi Youchien - Sukoyaka Enji Ikusei Game (Japan) (Rev 1)">
 		<description>Nakayoshi Youchien - Sukoyaka Enji Ikusei Game (Japan) (Rev 1)</description>
@@ -11236,6 +11243,11 @@
 	<game name="Pocket Monsters - Sapphire (Japan) (Pokemon Box)" cloneof="Pokemon - Sapphire Version (USA, Europe) (Rev 2)">
 		<description>Pocket Monsters - Sapphire (Japan) (Pokemon Box)</description>
 		<rom name="Pocket Monsters - Sapphire (Japan) (Pokemon Box).gba" size="8388608" crc="9eaea813" md5="1c1e71c7877fe5bfdb3d612006159bf5" sha1="3df0c0c6142a9c2a6c632419ebc423ca0d5f42f7" status="verified"/>
+	</game>
+	<game name="Pocket Monsters - Sapphire (Japan) (Rev 1)" cloneof="Pokemon - Sapphire Version (USA, Europe) (Rev 2)">
+		<description>Pocket Monsters - Sapphire (Japan) (Rev 1)</description>
+		<release name="Pocket Monsters - Sapphire (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Pocket Monsters - Sapphire (Japan) (Rev 1).gba" size="8388608" crc="01bd60e3" md5="abf042be32e2aeab1b926efe6d4b8b8b" sha1="01f509671445965236ac4c6b5a354fe2f1e69f13" status="verified"/>
 	</game>
 	<game name="Pokemon - Edicion Zafiro (Spain)" cloneof="Pokemon - Sapphire Version (USA, Europe) (Rev 2)">
 		<description>Pokemon - Edicion Zafiro (Spain)</description>

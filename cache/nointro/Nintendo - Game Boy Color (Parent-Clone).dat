@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Game Boy Color (Parent-Clone)</name>
 		<description>Nintendo - Game Boy Color (Parent-Clone)</description>
-		<version>20210504-060424</version>
-		<date>20210504-060424</date>
+		<version>20210528-203028</version>
+		<date>20210528-203028</date>
 		<author>alexian, BitLooter</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -204,6 +204,11 @@
 		<release name="Alone in the Dark - The New Nightmare (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="Alone in the Dark - The New Nightmare (USA) (En,Fr,Es).gbc" size="4194304" crc="c145c036" md5="d97055e4a2fd4624fc924c4834ace35e" sha1="a348aeac500d0d8fdaf90f5277631a026504ff44"/>
 	</game>
+	<game name="AMF Bowling (USA) (Proto)">
+		<description>AMF Bowling (USA) (Proto)</description>
+		<release name="AMF Bowling (USA) (Proto)" region="USA"/>
+		<rom name="AMF Bowling (USA) (Proto).gbc" size="1048576" crc="392559ee" md5="1d2166a2a98aee87882cc8d670f23a23" sha1="1dd7d94f320d119682fd4df80297c8df1b28141b"/>
+	</game>
 	<game name="Animal Breeder 3 (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Animal Breeder 3 (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Animal Breeder 3 (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
@@ -375,6 +380,16 @@
 		<description>Austin Powers - Welcome to my Underground Lair! (USA)</description>
 		<release name="Austin Powers - Welcome to my Underground Lair! (USA)" region="USA"/>
 		<rom name="Austin Powers - Welcome to my Underground Lair! (USA).gbc" size="4194304" crc="aba42b78" md5="1b2190911db606dce58d694e8b591e69" sha1="69b5106a124bde38184875c0dd08de437360bc14"/>
+	</game>
+	<game name="Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto)">
+		<description>Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto)</description>
+		<release name="Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto)" region="EUR"/>
+		<rom name="Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto).gbc" size="2097152" crc="0903ed53" md5="a18746b05badafb5b8456ace6ba3e65f" sha1="b409782cc478104c41668360b63f8589f7677e2a"/>
+	</game>
+	<game name="Austin Powers Episode IV (Europe) (En,Fr,De,Es,It) (Proto)">
+		<description>Austin Powers Episode IV (Europe) (En,Fr,De,Es,It) (Proto)</description>
+		<release name="Austin Powers Episode IV (Europe) (En,Fr,De,Es,It) (Proto)" region="EUR"/>
+		<rom name="Austin Powers Episode IV (Europe) (En,Fr,De,Es,It) (Proto).gbc" size="2097152" crc="f038cda7" md5="974d6664dc7114e637c2c1cc2f252724" sha1="937df6944709732d8d372ad5f629a665ffd12eac"/>
 	</game>
 	<game name="Azarashi Sentai Inazuma - Dokidoki Daisakusen! (Japan)">
 		<description>Azarashi Sentai Inazuma - Dokidoki Daisakusen! (Japan)</description>
@@ -654,6 +669,11 @@
 		<release name="Bikkuriman 2000 - Charging Card GB (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Bikkuriman 2000 - Charging Card GB (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="5be2517c" md5="4cf9559ece4f20e20f0a0df646f4b68b" sha1="c3c608f1b3581a070c9b7eb65b6fb6d1b72d98d3"/>
 	</game>
+	<game name="Billiard Club (Japan) (Proto)">
+		<description>Billiard Club (Japan) (Proto)</description>
+		<release name="Billiard Club (Japan) (Proto)" region="JPN"/>
+		<rom name="Billiard Club (Japan) (Proto).gbc" size="1048576" crc="210c4137" md5="354bbc5f53babeba8207cba0e764dde6" sha1="eb994e523550a8a7fe8a77fd2e85de011bec8627"/>
+	</game>
 	<game name="Billy Bob's Huntin' 'n' Fishin' (USA, Europe)">
 		<description>Billy Bob's Huntin' 'n' Fishin' (USA, Europe)</description>
 		<release name="Billy Bob's Huntin' 'n' Fishin' (USA, Europe)" region="EUR"/>
@@ -774,6 +794,11 @@
 		<description>Bouken! Dondoko-tou (Japan)</description>
 		<release name="Bouken! Dondoko-tou (Japan)" region="JPN"/>
 		<rom name="Bouken! Dondoko-tou (Japan).gbc" size="2097152" crc="5fe759c7" md5="889e643c52ca6916a4948f4d1b8b955b" sha1="c054abfea01a3ceb7b20b27e7ea937abe5157834"/>
+	</game>
+	<game name="Bounced! (USA) (Proto)">
+		<description>Bounced! (USA) (Proto)</description>
+		<release name="Bounced! (USA) (Proto)" region="USA"/>
+		<rom name="Bounced! (USA) (Proto).gbc" size="1048576" crc="3948aee9" md5="2c1ae21f8e8e3d3e4b83bba084719c59" sha1="06d2d0eaea07d7a41834d4c9a5dfdbdda6889be9"/>
 	</game>
 	<game name="Brave Saga - Shinshou Astaria (Japan)">
 		<description>Brave Saga - Shinshou Astaria (Japan)</description>
@@ -948,6 +973,10 @@
 		<release name="Carmageddon - Carpocalypse Now (Germany)" region="GER"/>
 		<rom name="Carmageddon - Carpocalypse Now (Germany).gbc" size="2097152" crc="b447bc06" md5="4a58b26ef9624192afe5542f790cdb01" sha1="505b29e070ce034b179169d834abb3969e84c7e0" status="verified"/>
 	</game>
+	<game name="Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta)">
+		<description>Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta)</description>
+		<rom name="Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta).gbc" size="2097152" crc="e9751f81" md5="cca8749da97aae49def1132a6a72d047" sha1="9f41f86214031dad6440206863bffc13c3e61fc4"/>
+	</game>
 	<game name="Carnivale (USA) (Proto)">
 		<description>Carnivale (USA) (Proto)</description>
 		<release name="Carnivale (USA) (Proto)" region="USA"/>
@@ -1003,6 +1032,10 @@
 		<description>Centipede (USA) (GB Compatible)</description>
 		<release name="Centipede (USA) (GB Compatible)" region="USA"/>
 		<rom name="Centipede (USA) (GB Compatible).gbc" size="1048576" crc="13ad07b1" md5="6815ec13f522fd65637be46220371704" sha1="3e964fb53517c286b97375e6988208987f7bfa21"/>
+	</game>
+	<game name="CGB Test Cartridge (Japan) (En)">
+		<description>CGB Test Cartridge (Japan) (En)</description>
+		<rom name="CGB Test Cartridge (Japan) (En).gbc" size="65536" crc="4c050e29" md5="656b6f47251d18c1606c41e53ef62119" sha1="5133d3dc7a4ced9d059dc72f0f351cb44e22f096"/>
 	</game>
 	<game name="Championship Motocross 2001 featuring Ricky Carmichael (USA, Europe)">
 		<description>Championship Motocross 2001 featuring Ricky Carmichael (USA, Europe)</description>
@@ -1820,6 +1853,11 @@
 		<release name="Emperor's New Groove, The (USA)" region="USA"/>
 		<rom name="Emperor's New Groove, The (USA).gbc" size="2097152" crc="6ebad539" md5="e98b6a7bb91bb0a7e80e40985eefb1d0" sha1="ba663289bd5d9d09bc8b9ac2c1d38293dcba9c02"/>
 	</game>
+	<game name="Equestriad 2001 (USA) (Proto)">
+		<description>Equestriad 2001 (USA) (Proto)</description>
+		<release name="Equestriad 2001 (USA) (Proto)" region="USA"/>
+		<rom name="Equestriad 2001 (USA) (Proto).gbc" size="1048576" crc="626f978f" md5="93671715c210c20ce3a6a1d47de86382" sha1="7698801ef38b63d45fdd2110f9b3ea87e59b9476"/>
+	</game>
 	<game name="ESPN National Hockey Night (USA)">
 		<description>ESPN National Hockey Night (USA)</description>
 		<release name="ESPN National Hockey Night (USA)" region="USA"/>
@@ -2161,6 +2199,11 @@
 		<release name="Ganbare Goemon - Tengutou no Gyakushuu (Japan) (GB Compatible)" region="JPN"/>
 		<rom name="Ganbare Goemon - Tengutou no Gyakushuu (Japan) (GB Compatible).gbc" size="1048576" crc="d829eb2f" md5="18b2c4989209373c0cba9bc58075b2fd" sha1="337cbcbd185a74c6fd5b10823fda3dcf8dca30e4"/>
 	</game>
+	<game name="Ganso! Doubutsu Uranai (Japan) (Proto)">
+		<description>Ganso! Doubutsu Uranai (Japan) (Proto)</description>
+		<release name="Ganso! Doubutsu Uranai (Japan) (Proto)" region="JPN"/>
+		<rom name="Ganso! Doubutsu Uranai (Japan) (Proto).gbc" size="1048576" crc="58421179" md5="9b3f141b7747d6d23bca68ec1ff7af35" sha1="d2512b7bb05771deac7b732cce17671d7807273d"/>
+	</game>
 	<game name="GB Harobots (Japan)">
 		<description>GB Harobots (Japan)</description>
 		<release name="GB Harobots (Japan)" region="JPN"/>
@@ -2296,10 +2339,24 @@
 		<release name="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="80444a86" md5="ef24106662ae769dba0c410933736332" sha1="d245a267b1b1d056e0f5af4ba732c66c8deadde2"/>
 	</game>
+	<game name="Pocket Golf! (USA) (Proto)" cloneof="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Pocket Golf! (USA) (Proto)</description>
+		<release name="Pocket Golf! (USA) (Proto)" region="USA"/>
+		<rom name="Pocket Golf! (USA) (Proto).gbc" size="2097152" crc="d06ecb1f" md5="f2842c70cae57f3e7619966bd1dae886" sha1="bbe2651547c1f3c79bbf822b41ddbb54133a489f"/>
+	</game>
 	<game name="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="634b2d43" md5="296a232c36d6457301fd8ab9d9e35290" sha1="d196af0aaf77ca67f9784d0ccd1ef4b25abed5c2"/>
+	</game>
+	<game name="Golf King (Europe) (En,Fr,De) (Proto)" cloneof="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Golf King (Europe) (En,Fr,De) (Proto)</description>
+		<rom name="Golf King (Europe) (En,Fr,De) (Proto).gbc" size="2097152" crc="3019b4e7" md5="2d52664ee85f0192738fff0b53d4fe20" sha1="d02e09251e7c5078e4b641e6d334958c2c814285"/>
+	</game>
+	<game name="Supershot Golf Robot (USA) (Proto)" cloneof="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Supershot Golf Robot (USA) (Proto)</description>
+		<release name="Supershot Golf Robot (USA) (Proto)" region="USA"/>
+		<rom name="Supershot Golf Robot (USA) (Proto).gbc" size="2097152" crc="b6a7f781" md5="f2be814c8bf513e8a709254d9b72d361" sha1="aa1447d78e380d2a936fb5f713521e34420fe68c"/>
 	</game>
 	<game name="Gonta no Okiraku Daibouken (Japan)">
 		<description>Gonta no Okiraku Daibouken (Japan)</description>
@@ -2310,6 +2367,11 @@
 		<description>Goraku Ou Tango! (Japan) (GB Compatible)</description>
 		<release name="Goraku Ou Tango! (Japan) (GB Compatible)" region="JPN"/>
 		<rom name="Goraku Ou Tango! (Japan) (GB Compatible).gbc" size="1048576" crc="81fb43e1" md5="139334587db40e73f0cadcb06ca0ce61" sha1="1d49232763c1422a00cbb893d0f900c44a2ccf54"/>
+	</game>
+	<game name="Grand Casino (Japan) (Proto)">
+		<description>Grand Casino (Japan) (Proto)</description>
+		<release name="Grand Casino (Japan) (Proto)" region="JPN"/>
+		<rom name="Grand Casino (Japan) (Proto).gbc" size="1048576" crc="8ba3988b" md5="e31b25f35267460f474f7079e445025d" sha1="556e1a6c27c792605925f6f67daa953809f81bfb"/>
 	</game>
 	<game name="Grand Theft Auto (Europe) (En,Fr,De,Es,It) (GB Compatible)">
 		<description>Grand Theft Auto (Europe) (En,Fr,De,Es,It) (GB Compatible)</description>
@@ -2871,6 +2933,11 @@
 		<release name="Jeff Gordon XS Racing (USA) (GB Compatible)" region="USA"/>
 		<rom name="Jeff Gordon XS Racing (USA) (GB Compatible).gbc" size="1048576" crc="a41ed926" md5="4e745e7febe4214c484d9c1e0a62ae57" sha1="3939bd5c3ba034ebb19395d4292f82b703629468"/>
 	</game>
+	<game name="EuroSport XS Racing (Europe) (Proto) (Unl)" cloneof="Jeff Gordon XS Racing (USA) (GB Compatible)">
+		<description>EuroSport XS Racing (Europe) (Proto) (Unl)</description>
+		<release name="EuroSport XS Racing (Europe) (Proto) (Unl)" region="EUR"/>
+		<rom name="EuroSport XS Racing (Europe) (Proto) (Unl).gbc" size="1048576" crc="ca0abfca" md5="f3da15bac37fd41582d8901d55fdc203" sha1="b3dda41ef755cc78680858103bad07d064e155ac"/>
+	</game>
 	<game name="Jeremy McGrath Supercross 2000 (USA, Europe)">
 		<description>Jeremy McGrath Supercross 2000 (USA, Europe)</description>
 		<release name="Jeremy McGrath Supercross 2000 (USA, Europe)" region="EUR"/>
@@ -2940,10 +3007,14 @@
 		<release name="John Romero's Daikatana (Europe) (En,Fr,It)" region="EUR"/>
 		<rom name="John Romero's Daikatana (Europe) (En,Fr,It).gbc" size="1048576" crc="d9062e49" md5="d1934b308085c92b2ee492faa0d159c2" sha1="a5c5b52247b2ab78cd9cad19aa752e07c3df86ef"/>
 	</game>
-	<game name="Daikatana (USA) (Proto) (2000-04-19)" cloneof="John Romero's Daikatana (Europe) (En,Fr,It)">
-		<description>Daikatana (USA) (Proto) (2000-04-19)</description>
-		<release name="Daikatana (USA) (Proto) (2000-04-19)" region="USA"/>
-		<rom name="Daikatana (USA) (Proto) (2000-04-19).gbc" size="4194304" crc="351862bb" md5="ff69bcdedca5ac1325af47d8a1e4823f" sha1="361d05119aa6671415a8c583150dbfa4dfd93e5e"/>
+	<game name="Daikatana (USA) (Proto 1) (2000-04-19)" cloneof="John Romero's Daikatana (Europe) (En,Fr,It)">
+		<description>Daikatana (USA) (Proto 1) (2000-04-19)</description>
+		<rom name="Daikatana (USA) (Proto 1) (2000-04-19).gbc" size="4194304" crc="351862bb" md5="ff69bcdedca5ac1325af47d8a1e4823f" sha1="361d05119aa6671415a8c583150dbfa4dfd93e5e"/>
+	</game>
+	<game name="Daikatana (USA) (Proto 2)" cloneof="John Romero's Daikatana (Europe) (En,Fr,It)">
+		<description>Daikatana (USA) (Proto 2)</description>
+		<release name="Daikatana (USA) (Proto 2)" region="USA"/>
+		<rom name="Daikatana (USA) (Proto 2).gbc" size="1048576" crc="7d451688" md5="d7b5b58cec32e37c4d29336f4b7c61b7" sha1="6eef48f4d467596ff3734bb9ac12db392170eb14"/>
 	</game>
 	<game name="Daikatana GB (Japan) (NP)" cloneof="John Romero's Daikatana (Europe) (En,Fr,It)">
 		<description>Daikatana GB (Japan) (NP)</description>
@@ -3504,6 +3575,11 @@
 		<release name="Little Mermaid II, The - Pinball Frenzy (USA) (En,Fr,De,Es,It) (Rumble Version)" region="USA"/>
 		<rom name="Little Mermaid II, The - Pinball Frenzy (USA) (En,Fr,De,Es,It) (Rumble Version).gbc" size="1048576" crc="364f9ccd" md5="7f8c472f3c7bd1eec56a3bad10a2e94c" sha1="0940a1a86127cf8228a6a015035d8189218f57db"/>
 	</game>
+	<game name="Little Mermaid II, The - Pinball Frenzy (Japan) (Proto)" cloneof="Little Mermaid II, The - Pinball Frenzy (Europe) (En,Fr,De,Es,It)">
+		<description>Little Mermaid II, The - Pinball Frenzy (Japan) (Proto)</description>
+		<release name="Little Mermaid II, The - Pinball Frenzy (Japan) (Proto)" region="JPN"/>
+		<rom name="Little Mermaid II, The - Pinball Frenzy (Japan) (Proto).gbc" size="1048576" crc="6b974b2d" md5="1d719dffbdeff72d4b8f8744ddcbf9d5" sha1="ed001b5792e1afb35178e22d3adf45bbf0c4d721"/>
+	</game>
 	<game name="Little Nicky (USA)">
 		<description>Little Nicky (USA)</description>
 		<release name="Little Nicky (USA)" region="USA"/>
@@ -3721,6 +3797,11 @@
 		<description>Magi Nation (USA)</description>
 		<release name="Magi Nation (USA)" region="USA"/>
 		<rom name="Magi Nation (USA).gbc" size="2097152" crc="5042450b" md5="1624f857098ca278b15629914f48352b" sha1="9972a7bca43210b4b6c0b3f6ee5d1957a865e12d"/>
+	</game>
+	<game name="Magi-Nation - Keeper's Quest (USA) (Proto)">
+		<description>Magi-Nation - Keeper's Quest (USA) (Proto)</description>
+		<release name="Magi-Nation - Keeper's Quest (USA) (Proto)" region="USA"/>
+		<rom name="Magi-Nation - Keeper's Quest (USA) (Proto).gbc" size="1048576" crc="89de57b7" md5="2206b879b38982ed995cdcbc927b7ba2" sha1="7c6b427810be2f0d7496ccb5eff2226d3ed1194e"/>
 	</game>
 	<game name="Magical Chase GB - Minarai Mahoutsukai Kenja no Tani e (Japan)">
 		<description>Magical Chase GB - Minarai Mahoutsukai Kenja no Tani e (Japan)</description>
@@ -5292,6 +5373,11 @@
 		<release name="Prince of Persia (USA, Europe) (En,Fr,De,Es,It) (GB Compatible)" region="USA"/>
 		<rom name="Prince of Persia (USA, Europe) (En,Fr,De,Es,It) (GB Compatible).gbc" size="1048576" crc="e6bec6d1" md5="afeec69d5ba3afa3ce2279fcda944576" sha1="ef2f6402e8ef367273200e3b07f310ebd80ccdc2" status="verified"/>
 	</game>
+	<game name="Prince of Persia (Japan) (Proto)" cloneof="Prince of Persia (USA, Europe) (En,Fr,De,Es,It) (GB Compatible)">
+		<description>Prince of Persia (Japan) (Proto)</description>
+		<release name="Prince of Persia (Japan) (Proto)" region="JPN"/>
+		<rom name="Prince of Persia (Japan) (Proto).gbc" size="1048576" crc="d7dbbe1e" md5="18e83737127010b90aa8ea4d3982b461" sha1="6fd97e1f75570e7568b3dc4ab28834813afb4484"/>
+	</game>
 	<game name="Pro Darts (USA)">
 		<description>Pro Darts (USA)</description>
 		<release name="Pro Darts (USA)" region="USA"/>
@@ -5674,6 +5760,11 @@
 		<release name="Robot Poncots - Star Version (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Robot Poncots - Star Version (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="b28f32ac" md5="9bdc654fc8acb425fe4b68269928fbfb" sha1="27a96410b38e695d9b80ae861af3b472f0e84c60" status="verified"/>
 	</game>
+	<game name="Robopon - Star Version (USA) (Proto)" cloneof="Robot Poncots - Star Version (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Robopon - Star Version (USA) (Proto)</description>
+		<release name="Robopon - Star Version (USA) (Proto)" region="USA"/>
+		<rom name="Robopon - Star Version (USA) (Proto).gbc" size="1048576" crc="cf5f0a63" md5="4e362c69c3d8f1e170f8e2a25d929435" sha1="54e064a24cd50b7e25df5c827c54a20643ec314a"/>
+	</game>
 	<game name="Robot Wars - Metal Mayhem (Europe) (En,Fr,De,It,Nl,Sv)">
 		<description>Robot Wars - Metal Mayhem (Europe) (En,Fr,De,It,Nl,Sv)</description>
 		<release name="Robot Wars - Metal Mayhem (Europe) (En,Fr,De,It,Nl,Sv)" region="EUR"/>
@@ -5801,6 +5892,11 @@
 		<release name="Rumble &amp; Tumble (USA) (Demo) (E3 2001)" region="USA"/>
 		<rom name="Rumble &amp; Tumble (USA) (Demo) (E3 2001).gbc" size="131072" crc="4400496d" md5="f4688e05a723f7299b9493c85b0f946c" sha1="2429581d154ac04a12c99a24c2fd2c1b45a90807"/>
 	</game>
+	<game name="Runelords (USA) (Proto)">
+		<description>Runelords (USA) (Proto)</description>
+		<release name="Runelords (USA) (Proto)" region="USA"/>
+		<rom name="Runelords (USA) (Proto).gbc" size="4194304" crc="392af730" md5="1b3092e1bbc29223eaaa4ea09066bdbd" sha1="2bdcf8208cd0530c75195fd23f2f7839a3480bff"/>
+	</game>
 	<game name="Saban's Power Rangers - Lightspeed Rescue (USA, Europe)">
 		<description>Saban's Power Rangers - Lightspeed Rescue (USA, Europe)</description>
 		<release name="Saban's Power Rangers - Lightspeed Rescue (USA, Europe)" region="EUR"/>
@@ -5898,6 +5994,11 @@
 		<description>SD Hiryuu no Ken EX (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="SD Hiryuu no Ken EX (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="SD Hiryuu no Ken EX (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="365bf43f" md5="919c330030214de201278fc6a232a661" sha1="bed7b913a395ae4b62eac39ff8d6b3093529ed45"/>
+	</game>
+	<game name="Sea-Doo HydroCross (USA) (Proto)">
+		<description>Sea-Doo HydroCross (USA) (Proto)</description>
+		<release name="Sea-Doo HydroCross (USA) (Proto)" region="USA"/>
+		<rom name="Sea-Doo HydroCross (USA) (Proto).gbc" size="1048576" crc="fb1783f3" md5="44cc400d990e2284ae843545fe99402e" sha1="3612e549ba2a71585fc9a57033c97562386cdea4"/>
 	</game>
 	<game name="Sei Hai Densetsu (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Sei Hai Densetsu (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -6221,6 +6322,11 @@
 		<description>Space-Net - Cosmo Blue (Japan)</description>
 		<release name="Space-Net - Cosmo Blue (Japan)" region="JPN"/>
 		<rom name="Space-Net - Cosmo Blue (Japan).gbc" size="2097152" crc="f606d369" md5="062bfa5e5b52b5a4ace5b59c364fe2ff" sha1="9d662a4b95f8b562406eb89fad8cade1edaca954"/>
+	</game>
+	<game name="Space-Net - Cosmo Neo (Japan) (Proto)">
+		<description>Space-Net - Cosmo Neo (Japan) (Proto)</description>
+		<release name="Space-Net - Cosmo Neo (Japan) (Proto)" region="JPN"/>
+		<rom name="Space-Net - Cosmo Neo (Japan) (Proto).gbc" size="2097152" crc="3a9d791b" md5="906c78f13135691d300aa6d23dc58037" sha1="077006fce23059c40bc7135d195766504e376aa8"/>
 	</game>
 	<game name="Space-Net - Cosmo Red (Japan)">
 		<description>Space-Net - Cosmo Red (Japan)</description>
@@ -6732,6 +6838,11 @@
 		<release name="Tiny Toon Adventures - Dizzy's Candy Quest (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
 		<rom name="Tiny Toon Adventures - Dizzy's Candy Quest (Europe) (En,Fr,De,Es,It,Nl).gbc" size="1048576" crc="5a0d41aa" md5="f2f1e41f5843c54c35e731445d6a2beb" sha1="cf8948c148af76c00e7b6b557c5451d9be364f55"/>
 	</game>
+	<game name="Tiny Toon Adventures - Dizzy's Candy Quest (USA) (Proto)" cloneof="Tiny Toon Adventures - Dizzy's Candy Quest (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Tiny Toon Adventures - Dizzy's Candy Quest (USA) (Proto)</description>
+		<release name="Tiny Toon Adventures - Dizzy's Candy Quest (USA) (Proto)" region="USA"/>
+		<rom name="Tiny Toon Adventures - Dizzy's Candy Quest (USA) (Proto).gbc" size="1048576" crc="23bb87a5" md5="b53d2cbd2377cbadb4f55b03fe58cbac" sha1="4eb0359a278173ae6c12e9452a7a2a9573a58c77"/>
+	</game>
 	<game name="Titus the Fox (Europe) (GB Compatible)">
 		<description>Titus the Fox (Europe) (GB Compatible)</description>
 		<release name="Titus the Fox (Europe) (GB Compatible)" region="EUR"/>
@@ -6746,6 +6857,11 @@
 		<description>TNN Outdoors Fishing Champ (USA) (SGB Enhanced) (GB Compatible)</description>
 		<release name="TNN Outdoors Fishing Champ (USA) (SGB Enhanced) (GB Compatible)" region="USA"/>
 		<rom name="TNN Outdoors Fishing Champ (USA) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="00a14d18" md5="6b7d527d4b2062ac2be2cab73aeebfe5" sha1="acfe7c9edd20f7d6b155deebc9428703edf28978"/>
+	</game>
+	<game name="EuroSport Pro Champ Fishing (Europe) (Proto) (GB Compatible)" cloneof="TNN Outdoors Fishing Champ (USA) (SGB Enhanced) (GB Compatible)">
+		<description>EuroSport Pro Champ Fishing (Europe) (Proto) (GB Compatible)</description>
+		<release name="EuroSport Pro Champ Fishing (Europe) (Proto) (GB Compatible)" region="EUR"/>
+		<rom name="EuroSport Pro Champ Fishing (Europe) (Proto) (GB Compatible).gbc" size="1048576" crc="32083abd" md5="2d78683c17765bd98e1c9ccce14b7bba" sha1="565c16da5d2bc5dacffa992ed3f0466ec4888e73"/>
 	</game>
 	<game name="Super Black Bass Pocket 3 (Japan) (SGB Enhanced) (GB Compatible)" cloneof="TNN Outdoors Fishing Champ (USA) (SGB Enhanced) (GB Compatible)">
 		<description>Super Black Bass Pocket 3 (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -6875,6 +6991,11 @@
 		<release name="Tony Hawk's Skateboarding ~ Tony Hawk's Pro Skater (USA, Europe)" region="USA"/>
 		<rom name="Tony Hawk's Skateboarding ~ Tony Hawk's Pro Skater (USA, Europe).gbc" size="1048576" crc="8d8bb5c4" md5="75be6e3561908e705d9e790b34eddb4d" sha1="44236627939371a6db564852f0536f969b21595e" status="verified"/>
 	</game>
+	<game name="Tony Hawk's Pro Skater (Japan) (Proto)" cloneof="Tony Hawk's Skateboarding ~ Tony Hawk's Pro Skater (USA, Europe)">
+		<description>Tony Hawk's Pro Skater (Japan) (Proto)</description>
+		<release name="Tony Hawk's Pro Skater (Japan) (Proto)" region="JPN"/>
+		<rom name="Tony Hawk's Pro Skater (Japan) (Proto).gbc" size="1048576" crc="48f17f97" md5="a26cfbd01895b12ad64b7191a607fc11" sha1="e399c7d67e3bb1f466002f24f60b9c036e234c4e"/>
+	</game>
 	<game name="Toobin' (USA)">
 		<description>Toobin' (USA)</description>
 		<release name="Toobin' (USA)" region="USA"/>
@@ -6936,14 +7057,18 @@
 		<release name="Towers - Lord Baniff's Deceit (USA, Europe)" region="USA"/>
 		<rom name="Towers - Lord Baniff's Deceit (USA, Europe).gbc" size="1048576" crc="7b9b2468" md5="0d7bca4e08d522493491484896f7f3cc" sha1="e1324e5d7f61225366bd8dcf6079c171d23e89ca"/>
 	</game>
-	<game name="Towers II - Plight of the Stargazer (USA) (Proto 2) (2001-12-09)">
-		<description>Towers II - Plight of the Stargazer (USA) (Proto 2) (2001-12-09)</description>
-		<release name="Towers II - Plight of the Stargazer (USA) (Proto 2) (2001-12-09)" region="USA"/>
-		<rom name="Towers II - Plight of the Stargazer (USA) (Proto 2) (2001-12-09).gbc" size="1048576" crc="5784bce0" md5="2b0ad9175fa23c2e278e2174d08df821" sha1="8072c36e198bd5d102052d5175b88e1a45cca9e8"/>
+	<game name="Towers II - Plight of the Stargazer (USA) (Proto 2)">
+		<description>Towers II - Plight of the Stargazer (USA) (Proto 2)</description>
+		<release name="Towers II - Plight of the Stargazer (USA) (Proto 2)" region="USA"/>
+		<rom name="Towers II - Plight of the Stargazer (USA) (Proto 2).gbc" size="1048576" crc="39e4bfd0" md5="b3ebf79679aeb1e7fa4840484fcb94c5" sha1="e9db495992490d88a65df1741f0294357bb96998"/>
 	</game>
-	<game name="Towers II - Plight of the Stargazer (USA) (Proto 1)" cloneof="Towers II - Plight of the Stargazer (USA) (Proto 2) (2001-12-09)">
-		<description>Towers II - Plight of the Stargazer (USA) (Proto 1)</description>
-		<rom name="Towers II - Plight of the Stargazer (USA) (Proto 1).gbc" size="1048576" crc="909143c0" md5="a18fcd9883846e35c507eb3ec98dcd73" sha1="da80a5110913422d48dd8d316fcfb9c8310e4501"/>
+	<game name="Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09) (Alt)" cloneof="Towers II - Plight of the Stargazer (USA) (Proto 2)">
+		<description>Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09) (Alt)</description>
+		<rom name="Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09) (Alt).gbc" size="1048576" crc="909143c0" md5="a18fcd9883846e35c507eb3ec98dcd73" sha1="da80a5110913422d48dd8d316fcfb9c8310e4501"/>
+	</game>
+	<game name="Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09)" cloneof="Towers II - Plight of the Stargazer (USA) (Proto 2)">
+		<description>Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09)</description>
+		<rom name="Towers II - Plight of the Stargazer (USA) (Proto 1) (2001-12-09).gbc" size="1048576" crc="5784bce0" md5="2b0ad9175fa23c2e278e2174d08df821" sha1="8072c36e198bd5d102052d5175b88e1a45cca9e8"/>
 	</game>
 	<game name="Toy Story 2 (USA, Europe) (SGB Enhanced) (GB Compatible)">
 		<description>Toy Story 2 (USA, Europe) (SGB Enhanced) (GB Compatible)</description>
@@ -7172,6 +7297,11 @@
 		<description>VIP (USA) (En,Fr,Es)</description>
 		<release name="VIP (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="VIP (USA) (En,Fr,Es).gbc" size="1048576" crc="436c87d4" md5="435d9fa03b3f891648f9c56d39299807" sha1="3ecff5c68e457ee34c42af6349f9ab2a6845b5de"/>
+	</game>
+	<game name="VR Sports - Powerboat Racing (USA) (Proto)">
+		<description>VR Sports - Powerboat Racing (USA) (Proto)</description>
+		<release name="VR Sports - Powerboat Racing (USA) (Proto)" region="USA"/>
+		<rom name="VR Sports - Powerboat Racing (USA) (Proto).gbc" size="1048576" crc="cff671f1" md5="e4cf23360373168bacf6a7e4925a27ef" sha1="1c77f032cdd373bfa108ea82c463f8f9f6874c71"/>
 	</game>
 	<game name="Wacky Races (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Wacky Races (Europe) (En,Fr,De,Es,It,Nl)</description>

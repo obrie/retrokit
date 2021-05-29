@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</description>
-		<version>20210524-022806</version>
-		<date>20210524-022806</date>
+		<version>20210528-132817</version>
+		<date>20210528-132817</date>
 		<author>kazumi213, Rifu, SonGoku</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -8508,10 +8508,10 @@
 		<release name="Eggheads (Europe)" region="EUR"/>
 		<rom name="Eggheads (Europe).nds" size="8388608" crc="3526a341" md5="5e1ef27aec1e288484397193c481b159" sha1="2c4d59a574195c381363e991a40a435746024fe9"/>
 	</game>
-	<game name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan) [b]">
-		<description>Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan) [b]</description>
-		<release name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan) [b]" region="JPN"/>
-		<rom name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan) [b].nds" size="16777216" crc="fc711823" md5="b8c40223b946af446c1060814c55e0bb" sha1="9c12daeff2530308e2115c69afde6e3e640391a7" status="baddump"/>
+	<game name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan)">
+		<description>Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan)</description>
+		<release name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan)" region="JPN"/>
+		<rom name="Eibun Tadoku DS - Sekai no Bungaku Senshuu (Japan).nds" size="16777216" crc="36370df5" md5="bb637cdeb617c07e7bbb26927b7c0640" sha1="0ca3927251736b61c56676cf06331dc4f0ec392f"/>
 	</game>
 	<game name="Eibun Tadoku DS - Sekai no Meisaku Douwa (Japan)">
 		<description>Eibun Tadoku DS - Sekai no Meisaku Douwa (Japan)</description>
@@ -15124,6 +15124,11 @@
 		<release name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 3)" region="JPN"/>
 		<rom name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 3).nds" size="33554432" crc="a89c56d3" md5="7742643fad8a4012493801090d5e8975" sha1="4ecc5f0b38fea76771bd0cfa0ce5aee868f2a3cf"/>
 	</game>
+	<game name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 1)" cloneof="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan)">
+		<description>Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 1)</description>
+		<release name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 1).nds" size="33554432" crc="22bdb98e" md5="41ecfdcb36a515dab89704f113531f5b" sha1="2eded0ee3787e07d4a9dcfd4b38fbabe33bee0b7"/>
+	</game>
 	<game name="Kaidan Restaurant - Ura Menu 100-sen (Japan)">
 		<description>Kaidan Restaurant - Ura Menu 100-sen (Japan)</description>
 		<release name="Kaidan Restaurant - Ura Menu 100-sen (Japan)" region="JPN"/>
@@ -15504,10 +15509,6 @@
 		<description>Kenkou Ouen Recipe 1000 - DS Kondate Zenshuu (Japan) (Rev 1)</description>
 		<release name="Kenkou Ouen Recipe 1000 - DS Kondate Zenshuu (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Kenkou Ouen Recipe 1000 - DS Kondate Zenshuu (Japan) (Rev 1).nds" size="33554432" crc="1bb1b3b9" md5="13f2b4a44206f8a787049d2ee820a611" sha1="ff6fe772d787aa76788f344c1c465dec3ea219d7"/>
-	</game>
-	<game name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program)">
-		<description>Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program)</description>
-		<rom name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program).nds" size="268435456" crc="729fdcd6" md5="a646ba692001b61a7b79ebee5a0c32a1" sha1="006abc44108bd9b684a78cb7d8f86d4dc9e500e5"/>
 	</game>
 	<game name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v12.2) (Program)">
 		<description>Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v12.2) (Program)</description>
@@ -23278,10 +23279,10 @@
 		<release name="Obunsha Deru-jun - Koumin DS (Japan)" region="JPN"/>
 		<rom name="Obunsha Deru-jun - Koumin DS (Japan).nds" size="16777216" crc="2ca14fe6" md5="84d95133ef80083c5d87d1e65e28dd92" sha1="c5fc1276ec8f996d29e9c0ea07273d1f6c1ef59c"/>
 	</game>
-	<game name="Obunsha Deru-jun - Rekishi DS (Japan) [b]">
-		<description>Obunsha Deru-jun - Rekishi DS (Japan) [b]</description>
-		<release name="Obunsha Deru-jun - Rekishi DS (Japan) [b]" region="JPN"/>
-		<rom name="Obunsha Deru-jun - Rekishi DS (Japan) [b].nds" size="8388608" crc="51776730" md5="b3becd81c10398a44ecf79e1a7c36dfc" sha1="8ac1bfa6762e19246829b27d9abfad9bc507ddba" status="baddump"/>
+	<game name="Obunsha Deru-jun - Rekishi DS (Japan)">
+		<description>Obunsha Deru-jun - Rekishi DS (Japan)</description>
+		<release name="Obunsha Deru-jun - Rekishi DS (Japan)" region="JPN"/>
+		<rom name="Obunsha Deru-jun - Rekishi DS (Japan).nds" size="8388608" crc="6cffa29c" md5="4f2e5c5c505f15c72a7f52065b0dcfe2" sha1="42a1e02cb1e59604fbfc3c8cfa15e53c71935980"/>
 	</game>
 	<game name="Obunsha Deru-jun - Rika DS (Japan)">
 		<description>Obunsha Deru-jun - Rika DS (Japan)</description>
@@ -30875,10 +30876,10 @@
 		<release name="Steal Princess (USA)" region="USA"/>
 		<rom name="Steal Princess (USA).nds" size="67108864" crc="f96a8447" md5="90d02d2b4a438810aa5d7a1d2644c34a" sha1="11f415c98aaa6581df1565f3e9510b89e827c004"/>
 	</game>
-	<game name="Steal Princess - Touzoku Koujo (Japan) [b]" cloneof="Steal Princess (USA)">
-		<description>Steal Princess - Touzoku Koujo (Japan) [b]</description>
-		<release name="Steal Princess - Touzoku Koujo (Japan) [b]" region="JPN"/>
-		<rom name="Steal Princess - Touzoku Koujo (Japan) [b].nds" size="67108864" crc="1b624751" md5="7bd0428425e1baa6777974fe2ae5813a" sha1="9dadf66aee3ed40e41cb4e63cff04ca11fd50e39" status="baddump"/>
+	<game name="Steal Princess - Touzoku Koujo (Japan)" cloneof="Steal Princess (USA)">
+		<description>Steal Princess - Touzoku Koujo (Japan)</description>
+		<release name="Steal Princess - Touzoku Koujo (Japan)" region="JPN"/>
+		<rom name="Steal Princess - Touzoku Koujo (Japan).nds" size="67108864" crc="a92bad7e" md5="4046d60e0fbaa3385e73af1588e663f2" sha1="8b8cce78426718a532aa595e88304b8ffb9b04c5"/>
 	</game>
 	<game name="Steel Horizon (Europe) (En,Fr,De,Es,It)">
 		<description>Steel Horizon (Europe) (En,Fr,De,Es,It)</description>

@@ -2,10 +2,10 @@
 <!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
 <datafile>
 	<header>
-		<name>Nintendo - Super Nintendo Entertainment System (Combined) (Parent-Clone)</name>
-		<description>Nintendo - Super Nintendo Entertainment System (Combined) (Parent-Clone)</description>
-		<version>20210501-075700</version>
-		<date>20210501-075700</date>
+		<name>Nintendo - Super Nintendo Entertainment System (Parent-Clone)</name>
+		<description>Nintendo - Super Nintendo Entertainment System (Parent-Clone)</description>
+		<version>20210528-133733</version>
+		<date>20210528-133733</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -1244,14 +1244,18 @@
 		<release name="Best of the Best - Championship Karate (Europe)" region="EUR"/>
 		<rom name="Best of the Best - Championship Karate (Europe).sfc" size="1048576" crc="d63831a5" md5="06f38a041906426f5d6ecdfd31fe9454" sha1="51975e91bcb109384dfe4f7f0068da325354a358" status="verified"/>
 	</game>
-	<game name="Best of the Best - Championship Karate (Europe) (Beta)" cloneof="Best of the Best - Championship Karate (Europe)">
-		<description>Best of the Best - Championship Karate (Europe) (Beta)</description>
-		<rom name="Best of the Best - Championship Karate (Europe) (Beta).sfc" size="1048576" crc="20aa9b78" md5="38229ae7a69a0c703ef381f698b75f2a" sha1="19a03de573f848c2dafd7ba212dc9f3efc8b82aa"/>
+	<game name="Best of the Best - Championship Karate (Europe) (Beta 2)" cloneof="Best of the Best - Championship Karate (Europe)">
+		<description>Best of the Best - Championship Karate (Europe) (Beta 2)</description>
+		<rom name="Best of the Best - Championship Karate (Europe) (Beta 2).sfc" size="1048576" crc="20aa9b78" md5="38229ae7a69a0c703ef381f698b75f2a" sha1="19a03de573f848c2dafd7ba212dc9f3efc8b82aa"/>
 	</game>
 	<game name="Best of the Best - Championship Karate (USA)" cloneof="Best of the Best - Championship Karate (Europe)">
 		<description>Best of the Best - Championship Karate (USA)</description>
 		<release name="Best of the Best - Championship Karate (USA)" region="USA"/>
 		<rom name="Best of the Best - Championship Karate (USA).sfc" size="1048576" crc="7f6ed86e" md5="3e1afa72971094777d9733289c9043b6" sha1="01a1cb3e4ea1714c145ff06a0826d6df0ed36a06"/>
+	</game>
+	<game name="Best of the Best - Championship Karate (Europe) (Beta 1)" cloneof="Best of the Best - Championship Karate (Europe)">
+		<description>Best of the Best - Championship Karate (Europe) (Beta 1)</description>
+		<rom name="Best of the Best - Championship Karate (Europe) (Beta 1).sfc" size="1048576" crc="590e5a08" md5="966b50f6724bd3d439fd57c61ca812e4" sha1="a94435ec4774bb5986dfcdad42146bfed42eed55"/>
 	</game>
 	<game name="Super Kick Boxing - Best of the Best (Japan) (En)" cloneof="Best of the Best - Championship Karate (Europe)">
 		<description>Super Kick Boxing - Best of the Best (Japan) (En)</description>
@@ -6446,7 +6450,7 @@
 	<game name="Jurassic Park (France)" cloneof="Jurassic Park (Europe)">
 		<description>Jurassic Park (France)</description>
 		<release name="Jurassic Park (France)" region="FRA"/>
-		<rom name="Jurassic Park (France).sfc" size="2097152" crc="61011074" md5="c0c7e365d54ca41cf619908449ed069c" sha1="a02a935c4ad7164ae146623159a4efe746b28952"/>
+		<rom name="Jurassic Park (France).sfc" size="2097152" crc="61011074" md5="c0c7e365d54ca41cf619908449ed069c" sha1="a02a935c4ad7164ae146623159a4efe746b28952" status="verified"/>
 	</game>
 	<game name="Jurassic Park (Germany)" cloneof="Jurassic Park (Europe)">
 		<description>Jurassic Park (Germany)</description>
@@ -6788,6 +6792,10 @@
 	<game name="Metal Jack (USA) (Proto) (1992-07-30)" cloneof="Kikou Keisatsu Metal Jack (Japan)">
 		<description>Metal Jack (USA) (Proto) (1992-07-30)</description>
 		<rom name="Metal Jack (USA) (Proto) (1992-07-30).sfc" size="1048576" crc="bf5a26fb" md5="23431bf7c8ed8175f22433f43bc1e5ba" sha1="4c34312cfd2a8ecba64365e3b78d2c34d9db80ba"/>
+	</game>
+	<game name="Metal Jack (USA) (Proto) (Earlier)" cloneof="Kikou Keisatsu Metal Jack (Japan)">
+		<description>Metal Jack (USA) (Proto) (Earlier)</description>
+		<rom name="Metal Jack (USA) (Proto) (Earlier).sfc" size="1048576" crc="53ac5727" md5="b24b9ad6cd7cff9e7da940fb59af5507" sha1="5f68f64437466358998cecdb129b53536b83b80f"/>
 	</game>
 	<game name="Kikuni Masahiko no Jantoushi Doraou (Japan)">
 		<description>Kikuni Masahiko no Jantoushi Doraou (Japan)</description>
@@ -7837,6 +7845,12 @@
 	<game name="Magical Drop 2 (Japan) (Bunka Housou Special Version)" cloneof="Magical Drop 2 (Japan)">
 		<description>Magical Drop 2 (Japan) (Bunka Housou Special Version)</description>
 		<rom name="Magical Drop 2 (Japan) (Bunka Housou Special Version).sfc" size="2097152" crc="569a1cec" md5="3dcb2881e0848421bc3cec63a3c85281" sha1="2602129615be0b06e9e4e431ab7f987a41c87b2b" status="verified"/>
+	</game>
+	<game name="Magical Drop II (USA, Europe) (Switch Online)" cloneof="Magical Drop 2 (Japan)">
+		<description>Magical Drop II (USA, Europe) (Switch Online)</description>
+		<release name="Magical Drop II (USA, Europe) (Switch Online)" region="EUR"/>
+		<release name="Magical Drop II (USA, Europe) (Switch Online)" region="USA"/>
+		<rom name="Magical Drop II (USA, Europe) (Switch Online).sfc" size="2097152" crc="a499a384" md5="a5c3f9d450aff223c13b73a419b6d6a0" sha1="370136a129e2ce4903fc121da1d60ef5aff08809"/>
 	</game>
 	<game name="Magical Pop'n (Japan)">
 		<description>Magical Pop'n (Japan)</description>
@@ -11599,6 +11613,10 @@
 		<release name="S.O.S - Sink or Swim (USA)" region="USA"/>
 		<rom name="S.O.S - Sink or Swim (USA).sfc" size="524288" crc="dd329f85" md5="0544fe7544b823f3f4886622c06b1021" sha1="1f55e0541297d9b95035614728fae08b3fc80614" status="verified"/>
 	</game>
+	<game name="SA1 Demonstration Program (Unknown)">
+		<description>SA1 Demonstration Program (Unknown)</description>
+		<rom name="SA1 Demonstration Program (Unknown).sfc" size="1048576" crc="239d2862" md5="e383efe58d3ab9a7db9472dfe842e765" sha1="7f72357e99d1e899ca5df82aff86566423e17cbd"/>
+	</game>
 	<game name="Saibara Rieko no Mahjong Hourouki (Japan)">
 		<description>Saibara Rieko no Mahjong Hourouki (Japan)</description>
 		<release name="Saibara Rieko no Mahjong Hourouki (Japan)" region="JPN"/>
@@ -11817,6 +11835,10 @@
 		<description>Secret of Evermore (Spain) (Rev 2)</description>
 		<release name="Secret of Evermore (Spain) (Rev 2)" region="SPA"/>
 		<rom name="Secret of Evermore (Spain) (Rev 2).sfc" size="3145728" crc="ca5935d0" md5="4051abab6ca98f5047d5b1a149e62ff6" sha1="c29fe997740bd9b54a07fba7b2b5442a49245aac"/>
+	</game>
+	<game name="Secret of Evermore (Unknown) (Beta) (Non-working)" cloneof="Secret of Evermore (Europe)">
+		<description>Secret of Evermore (Unknown) (Beta) (Non-working)</description>
+		<rom name="Secret of Evermore (Unknown) (Beta) (Non-working).sfc" size="524288" crc="483e8608" md5="f1e55a334823483f387f7441782e930a" sha1="4bce54dc1568f40d2c0fd9e584842fc64e73c0d2"/>
 	</game>
 	<game name="Secret of Mana (United Kingdom, Australia) (Rev 1)">
 		<description>Secret of Mana (United Kingdom, Australia) (Rev 1)</description>
@@ -15705,7 +15727,7 @@
 	</game>
 	<game name="Taz-Mania (USA)" cloneof="Taz-Mania (Europe)">
 		<description>Taz-Mania (USA)</description>
-		<rom name="Taz-Mania (USA).sfc" size="1048576" crc="6cc571f5" md5="40ba81f7a10b6a2f718d4bcc09fbdf14" sha1="8982e64906e4c2370fd7d9c65300e331b992efb5"/>
+		<rom name="Taz-Mania (USA).sfc" size="1048576" crc="6cc571f5" md5="40ba81f7a10b6a2f718d4bcc09fbdf14" sha1="8982e64906e4c2370fd7d9c65300e331b992efb5" status="verified"/>
 	</game>
 	<game name="Taz-Mania (USA) (Beta)" cloneof="Taz-Mania (Europe)">
 		<description>Taz-Mania (USA) (Beta)</description>

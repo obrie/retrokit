@@ -7,6 +7,7 @@
 setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 export app_dir=$(cd "$setup_dir/.." && pwd)
 export bin_dir="$app_dir/bin"
+export cache_dir="$app_dir/cache"
 export config_dir="$app_dir/config"
 export data_dir="$app_dir/data"
 export tmp_dir="$app_dir/tmp"

@@ -4,8 +4,8 @@
 	<header>
 		<name>Sega - Master System - Mark III (Parent-Clone)</name>
 		<description>Sega - Master System - Mark III (Parent-Clone)</description>
-		<version>20210409-053333</version>
-		<date>20210409-053333</date>
+		<version>20210527-151920</version>
+		<date>20210527-151920</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -124,7 +124,7 @@
 	<game name="8 in 1 - The Best Game Collection (C) (Korea) (Unl)">
 		<description>8 in 1 - The Best Game Collection (C) (Korea) (Unl)</description>
 		<release name="8 in 1 - The Best Game Collection (C) (Korea) (Unl)" region="KOR"/>
-		<rom name="8 in 1 - The Best Game Collection (C) (Korea) (Unl).sms" size="262144" crc="00e9809f" md5="6c4729e7ac7b20746eba51ab16273945" sha1="c7eddfbdf0383e0b813abf2bbf47c1e779587adb"/>
+		<rom name="8 in 1 - The Best Game Collection (C) (Korea) (Unl).sms" size="262144" crc="00e9809f" md5="6c4729e7ac7b20746eba51ab16273945" sha1="c7eddfbdf0383e0b813abf2bbf47c1e779587adb" status="verified"/>
 	</game>
 	<game name="94 Super World Cup Soccer (Korea) (Unl)">
 		<description>94 Super World Cup Soccer (Korea) (Unl)</description>
@@ -173,6 +173,11 @@
 		<description>Aerial Assault (USA)</description>
 		<release name="Aerial Assault (USA)" region="USA"/>
 		<rom name="Aerial Assault (USA).sms" size="262144" crc="15576613" md5="8b603c931418a3680b8723861f55a7b5" sha1="e57b1d4476ca33d18d9071e022ddc9cc702d6497" status="verified"/>
+	</game>
+	<game name="Aerial Assault (Taiwan) (En) (Unl)" cloneof="Aerial Assault (Europe, Brazil)">
+		<description>Aerial Assault (Taiwan) (En) (Unl)</description>
+		<release name="Aerial Assault (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Aerial Assault (Taiwan) (En) (Unl).sms" size="262144" crc="6630e5fd" md5="67d184d1a6d083653e9811c40ad95c2a" sha1="c3305d745792a931ea92da6e6457c43d7cc45cf2"/>
 	</game>
 	<game name="After Burner (World)">
 		<description>After Burner (World)</description>
@@ -227,15 +232,27 @@
 		<description>Alex Kidd in Miracle World (USA, Europe)</description>
 		<rom name="Alex Kidd in Miracle World (USA, Europe).sms" size="131072" crc="17a40e29" md5="3d9a8d5c2d6d3f8ff63a8f7c77ffa983" sha1="8cecf8ed0f765163b2657be1b0a3ce2a9cb767f4" status="verified"/>
 	</game>
-	<game name="Alex Kidd in Miracle World (Taiwan) (Unl)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
-		<description>Alex Kidd in Miracle World (Taiwan) (Unl)</description>
-		<release name="Alex Kidd in Miracle World (Taiwan) (Unl)" region="TAI"/>
-		<rom name="Alex Kidd in Miracle World (Taiwan) (Unl).sms" size="131072" crc="6f8e46cf" md5="e0247a74fb6379e5211817a3b1463705" sha1="da0bf41dc5fd68a191d0f02fb1213ffdb006d7b8"/>
+	<game name="Alex Kidd in Miracle World (World) (BIOS version) (Sega Ages)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
+		<description>Alex Kidd in Miracle World (World) (BIOS version) (Sega Ages)</description>
+		<rom name="Alex Kidd in Miracle World (World) (BIOS version) (Sega Ages).sms" size="131072" crc="025790ff" md5="91b4d4db66e30f2b5ce7f7c2541ee897" sha1="c6cfecec5241951aee7dfeda20871ba45cb785fa" status="verified"/>
+	</game>
+	<game name="Alex Kidd in Miracle World (World) (Ja) (Sega Ages)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
+		<description>Alex Kidd in Miracle World (World) (Ja) (Sega Ages)</description>
+		<rom name="Alex Kidd in Miracle World (World) (Ja) (Sega Ages).sms" size="131072" crc="6f5f3daa" md5="bd8016f2dccd89de716918da79359ff6" sha1="c68a2832d8578b24b1e0820f30b554aeea828ece" status="verified"/>
+	</game>
+	<game name="Alex Kidd in Miracle World (World) (Sega Ages)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
+		<description>Alex Kidd in Miracle World (World) (Sega Ages)</description>
+		<rom name="Alex Kidd in Miracle World (World) (Sega Ages).sms" size="131072" crc="50a8e8a7" md5="89da0a1c14b660741680104024aa5942" sha1="25de50cc6cf8a78998c1f61109a2219b46873bbb" status="verified"/>
 	</game>
 	<game name="Alex Kidd no Miracle World (Japan)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
 		<description>Alex Kidd no Miracle World (Japan)</description>
 		<release name="Alex Kidd no Miracle World (Japan)" region="JPN"/>
 		<rom name="Alex Kidd no Miracle World (Japan).sms" size="131072" crc="08c9ec91" md5="6e8e702e1d8a893ee698b93f5807972a" sha1="62fdc25501e17b87c355378562c3b1966e5f9008" status="verified"/>
+	</game>
+	<game name="Alex Kido (Taiwan) (En) (Unl)" cloneof="Alex Kidd in Miracle World (USA, Europe, Brazil) (Rev 1)">
+		<description>Alex Kido (Taiwan) (En) (Unl)</description>
+		<release name="Alex Kido (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Alex Kido (Taiwan) (En) (Unl).sms" size="131072" crc="6f8e46cf" md5="e0247a74fb6379e5211817a3b1463705" sha1="da0bf41dc5fd68a191d0f02fb1213ffdb006d7b8" status="verified"/>
 	</game>
 	<game name="Alex Kidd in Miracle World 2 (World) (Unl)">
 		<description>Alex Kidd in Miracle World 2 (World) (Unl)</description>
@@ -332,6 +349,11 @@
 		<description>Argos no Juujiken (Japan)</description>
 		<release name="Argos no Juujiken (Japan)" region="JPN"/>
 		<rom name="Argos no Juujiken (Japan).sms" size="131072" crc="bae75805" md5="8e8b04b5a9fe7b6cdb25b6550e7a831e" sha1="a4b63ed417380f8170091e66c0417123799a731f" status="verified"/>
+	</game>
+	<game name="Alocos (Taiwan) (En) (Unl)" cloneof="Argos no Juujiken (Japan)">
+		<description>Alocos (Taiwan) (En) (Unl)</description>
+		<release name="Alocos (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Alocos (Taiwan) (En) (Unl).sms" size="131072" crc="5e4b454e" md5="b409f910da12c01907f8107652be04dc" sha1="5c1fef3b564fe1373101e5e331b38949dd2e583b"/>
 	</game>
 	<game name="Ariel the Little Mermaid (Brazil)">
 		<description>Ariel the Little Mermaid (Brazil)</description>
@@ -457,6 +479,11 @@
 		<release name="Black Belt (USA, Europe, Brazil)" region="USA"/>
 		<rom name="Black Belt (USA, Europe, Brazil).sms" size="131072" crc="da3a2f57" md5="16e6b4a1d71960d64bd20aaf7024e8ac" sha1="7c5524cff2de9b694e925297e8e74c7c8d292e46" status="verified"/>
 	</game>
+	<game name="Black Belt (Taiwan) (En) (Unl)" cloneof="Black Belt (USA, Europe, Brazil)">
+		<description>Black Belt (Taiwan) (En) (Unl)</description>
+		<release name="Black Belt (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Black Belt (Taiwan) (En) (Unl).sms" size="131072" crc="98f64975" md5="261967242243d4867dfca9d1895399b8" sha1="54a8cf79fac1f4c1dd1b2350b6934e42fc766020"/>
+	</game>
 	<game name="Hokuto no Ken (Taiwan) (Unl)" cloneof="Black Belt (USA, Europe, Brazil)">
 		<description>Hokuto no Ken (Taiwan) (Unl)</description>
 		<release name="Hokuto no Ken (Taiwan) (Unl)" region="TAI"/>
@@ -466,6 +493,11 @@
 		<description>Hokuto no Ken (Japan)</description>
 		<release name="Hokuto no Ken (Japan)" region="JPN"/>
 		<rom name="Hokuto no Ken (Japan).sms" size="131072" crc="24f5fe8c" md5="ddd6b56e864a7dfd74a9e04bc4407f41" sha1="26c5da3ee48bc0f8fd3d20f9408e584242edcd9d" status="verified"/>
+	</game>
+	<game name="Northen Ken (Taiwan) (Ja) (Unl)" cloneof="Black Belt (USA, Europe, Brazil)">
+		<description>Northen Ken (Taiwan) (Ja) (Unl)</description>
+		<release name="Northen Ken (Taiwan) (Ja) (Unl)" region="TAI"/>
+		<rom name="Northen Ken (Taiwan) (Ja) (Unl).sms" size="131072" crc="b6207f0d" md5="01ae6095468ee8726181a271dd59911b" sha1="5f7ddc93de74c9713bba2a6ff117efc851483a8d"/>
 	</game>
 	<game name="Blade Eagle ~ Blade Eagle 3-D (World)">
 		<description>Blade Eagle ~ Blade Eagle 3-D (World)</description>
@@ -520,6 +552,11 @@
 		<release name="Bubble Bobble ~ Dragon Maze (Europe, Brazil)" region="BRA"/>
 		<release name="Bubble Bobble ~ Dragon Maze (Europe, Brazil)" region="EUR"/>
 		<rom name="Bubble Bobble ~ Dragon Maze (Europe, Brazil).sms" size="262144" crc="e843ba7e" md5="d79c186a74550876691e97ca830c66c7" sha1="44876b44089b4174858e54202e567e02efa76859" status="verified"/>
+	</game>
+	<game name="Bubble Bobble (Taiwan) (En) (Unl)" cloneof="Bubble Bobble ~ Dragon Maze (Europe, Brazil)">
+		<description>Bubble Bobble (Taiwan) (En) (Unl)</description>
+		<release name="Bubble Bobble (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Bubble Bobble (Taiwan) (En) (Unl).sms" size="262144" crc="b948752e" md5="11b0521d236530f68bcabfcc95f4d119" sha1="3f4b02b6545a3ce0c8b69c4e6791da01a7d7f285"/>
 	</game>
 	<game name="Final Bubble Bobble (Japan)" cloneof="Bubble Bobble ~ Dragon Maze (Europe, Brazil)">
 		<description>Final Bubble Bobble (Japan)</description>
@@ -708,6 +745,11 @@
 		<description>Cyber Shinobi, The (Europe, Brazil) (Beta)</description>
 		<rom name="Cyber Shinobi, The (Europe, Brazil) (Beta).sms" size="131072" crc="dac00a3a" md5="4fd1e417d6f7eb6d52c655791cfa7c5d" sha1="2ac3c0a9bc4028e5e2491e132b75652348308187"/>
 	</game>
+	<game name="Cyber Shinobi, The (Taiwan) (En) (Unl)" cloneof="Cyber Shinobi, The (Europe, Brazil)">
+		<description>Cyber Shinobi, The (Taiwan) (En) (Unl)</description>
+		<release name="Cyber Shinobi, The (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Cyber Shinobi, The (Taiwan) (En) (Unl).sms" size="262144" crc="ad9ff469" md5="25e0a2334375fd9ec907e78355c46a35" sha1="3b411c14c38ecc4cfbddd69362bbb70bed10eb9f"/>
+	</game>
 	<game name="Cyborg Hunter (USA, Europe, Brazil)">
 		<description>Cyborg Hunter (USA, Europe, Brazil)</description>
 		<release name="Cyborg Hunter (USA, Europe, Brazil)" region="BRA"/>
@@ -801,6 +843,11 @@
 		<release name="Double Dragon (World)" region="JPN"/>
 		<release name="Double Dragon (World)" region="USA"/>
 		<rom name="Double Dragon (World).sms" size="262144" crc="a55d89f3" md5="fe9aa8044951b10f876b15f4456161a9" sha1="cad5532af94ed75c0ada8820a83fa04d22f7bef5" status="verified"/>
+	</game>
+	<game name="Double Dragon (Taiwan) (En) (Unl)" cloneof="Double Dragon (World)">
+		<description>Double Dragon (Taiwan) (En) (Unl)</description>
+		<release name="Double Dragon (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Double Dragon (Taiwan) (En) (Unl).sms" size="262144" crc="f4f848c2" md5="6d988cb469b0269426153e4bc7985ee1" sha1="ad438b8ed5aafab4ea615a4aaa75d2ddf7ba81c4"/>
 	</game>
 	<game name="Double Hawk (Europe)">
 		<description>Double Hawk (Europe)</description>
@@ -1045,6 +1092,11 @@
 		<release name="Forgotten Worlds (Europe, Brazil)" region="EUR"/>
 		<rom name="Forgotten Worlds (Europe, Brazil).sms" size="262144" crc="38c53916" md5="68cc1711bb89921da1f215f323f3bb2d" sha1="3f034429b23b6976c961595c1bcbd68826cb760d" status="verified"/>
 	</game>
+	<game name="Forgotten Worlds (Taiwan) (En) (Unl)" cloneof="Forgotten Worlds (Europe, Brazil)">
+		<description>Forgotten Worlds (Taiwan) (En) (Unl)</description>
+		<release name="Forgotten Worlds (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Forgotten Worlds (Taiwan) (En) (Unl).sms" size="262144" crc="44136a72" md5="6d41f5b5226216aaac651aa40a30f735" sha1="d5c8fc8d931b7fb3c4ff88bcf206a606bac3f98a"/>
+	</game>
 	<game name="Fushigi no Oshiro Pit Pot (Japan)">
 		<description>Fushigi no Oshiro Pit Pot (Japan)</description>
 		<release name="Fushigi no Oshiro Pit Pot (Japan)" region="JPN"/>
@@ -1272,6 +1324,11 @@
 		<release name="Great Basketball (World)" region="JPN"/>
 		<release name="Great Basketball (World)" region="USA"/>
 		<rom name="Great Basketball (World).sms" size="131072" crc="2ac001eb" md5="450d68460d4ae07a7cc98d36491fd4f8" sha1="2fdb7ebce61e316ded27b575535d4f475c9dd822" status="verified"/>
+	</game>
+	<game name="94-Nen Super Basketball (Taiwan) (En) (Unl)" cloneof="Great Basketball (World)">
+		<description>94-Nen Super Basketball (Taiwan) (En) (Unl)</description>
+		<release name="94-Nen Super Basketball (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="94-Nen Super Basketball (Taiwan) (En) (Unl).sms" size="131072" crc="6fe448a5" md5="201322a59c6a6607014701e4235b07d5" sha1="3424fea350cde85a3840938a615906bb37769811"/>
 	</game>
 	<game name="Great Football (World)">
 		<description>Great Football (World)</description>
@@ -1535,6 +1592,11 @@
 		<release name="Kung Fu Kid (USA, Europe, Brazil)" region="USA"/>
 		<rom name="Kung Fu Kid (USA, Europe, Brazil).sms" size="131072" crc="1e949d1f" md5="126687037bf172174f697d16cd7e7296" sha1="7e1c32f5abf9ff906ffe113ffab6eecd1c86b381" status="verified"/>
 	</game>
+	<game name="Kung Fu Kid (Taiwan) (En) (Unl)" cloneof="Kung Fu Kid (USA, Europe, Brazil)">
+		<description>Kung Fu Kid (Taiwan) (En) (Unl)</description>
+		<release name="Kung Fu Kid (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Kung Fu Kid (Taiwan) (En) (Unl).sms" size="131072" crc="4762e022" md5="524dc48667d0776f25fc2873abc07531" sha1="e3bb68ce42be58fca1158568012570e5366cd647"/>
+	</game>
 	<game name="Makai Retsuden (Japan)" cloneof="Kung Fu Kid (USA, Europe, Brazil)">
 		<description>Makai Retsuden (Japan)</description>
 		<release name="Makai Retsuden (Japan)" region="JPN"/>
@@ -1594,6 +1656,11 @@
 		<description>Lord of Sword (Japan)</description>
 		<release name="Lord of Sword (Japan)" region="JPN"/>
 		<rom name="Lord of Sword (Japan).sms" size="262144" crc="aa7d6f45" md5="a5736126ed7e8569a189065ec20adf72" sha1="6a08d913fd92a213b1ecf5aa7c5630362cccc6b4" status="verified"/>
+	</game>
+	<game name="Lord of Sword (Taiwan) (Ja) (Unl)" cloneof="Lord of the Sword (USA, Europe, Brazil)">
+		<description>Lord of Sword (Taiwan) (Ja) (Unl)</description>
+		<release name="Lord of Sword (Taiwan) (Ja) (Unl)" region="TAI"/>
+		<rom name="Lord of Sword (Taiwan) (Ja) (Unl).sms" size="262144" crc="7eaed675" md5="5e6159b465375eda70c17ac74864cc75" sha1="cb36be9b9f67966ffcc6c322a37b3936297e1461"/>
 	</game>
 	<game name="Loretta no Shouzou - Sherlock Holmes (Japan)">
 		<description>Loretta no Shouzou - Sherlock Holmes (Japan)</description>
@@ -1790,6 +1857,11 @@
 		<release name="My Hero (USA, Europe, Brazil)" region="USA"/>
 		<rom name="My Hero (USA, Europe, Brazil).sms" size="32768" crc="62f0c23d" md5="efef7361c9c37bcd6a7b84bc121af5f2" sha1="7583c5fb1963c070b7bda72b447cc3fd611ddf1a" status="verified"/>
 	</game>
+	<game name="Action Boy (Taiwan) (En) (Unl)" cloneof="My Hero (USA, Europe, Brazil)">
+		<description>Action Boy (Taiwan) (En) (Unl)</description>
+		<release name="Action Boy (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Action Boy (Taiwan) (En) (Unl).sms" size="32768" crc="d0263024" md5="dbd16d4ea69660f973f38893800c8620" sha1="11cb726c497482895f4f6f6b424615fe52f18a18"/>
+	</game>
 	<game name="Seishun Scandal (Japan)" cloneof="My Hero (USA, Europe, Brazil)">
 		<description>Seishun Scandal (Japan)</description>
 		<release name="Seishun Scandal (Japan)" region="JPN"/>
@@ -1907,6 +1979,11 @@
 		<release name="Paperboy (Europe)" region="EUR"/>
 		<rom name="Paperboy (Europe).sms" size="131072" crc="294e0759" md5="a0a053017d9cae9dd8ce8676355b16b9" sha1="e91dae35a3ca3a475e30b7863c03375d656ec734" status="verified"/>
 	</game>
+	<game name="Paper Boy (Taiwan) (En) (Unl)" cloneof="Paperboy (Europe)">
+		<description>Paper Boy (Taiwan) (En) (Unl)</description>
+		<release name="Paper Boy (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Paper Boy (Taiwan) (En) (Unl).sms" size="131072" crc="354bee78" md5="57f672638078061a95e2d15f8c29ef91" sha1="14b19ee7f6ef398474fe56beac2327ee14ce6157"/>
+	</game>
 	<game name="Paperboy (USA, Brazil)" cloneof="Paperboy (Europe)">
 		<description>Paperboy (USA, Brazil)</description>
 		<release name="Paperboy (USA, Brazil)" region="BRA"/>
@@ -1939,6 +2016,11 @@
 		<release name="Penguin Land (USA, Europe)" region="EUR"/>
 		<release name="Penguin Land (USA, Europe)" region="USA"/>
 		<rom name="Penguin Land (USA, Europe).sms" size="131072" crc="f97e9875" md5="8ddec589f72cdcf2cd4caafb075ec8e4" sha1="8762239c339a084dfb8443cc38515301476bde28" status="verified"/>
+	</game>
+	<game name="Astro Adventure (Taiwan) (En) (Unl)" cloneof="Penguin Land (USA, Europe)">
+		<description>Astro Adventure (Taiwan) (En) (Unl)</description>
+		<release name="Astro Adventure (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Astro Adventure (Taiwan) (En) (Unl).sms" size="131072" crc="fb163003" md5="fa0fe47e5a6b711b00052ab4def0b8f7" sha1="e3da56644c098d07947b1ffd9465002616a69d30"/>
 	</game>
 	<game name="Doki Doki Penguin Land - Uchuu Daibouken (Japan) (Beta)" cloneof="Penguin Land (USA, Europe)">
 		<description>Doki Doki Penguin Land - Uchuu Daibouken (Japan) (Beta)</description>
@@ -2055,6 +2137,11 @@
 		<release name="Prince of Persia (Europe, Brazil)" region="EUR"/>
 		<rom name="Prince of Persia (Europe, Brazil).sms" size="262144" crc="7704287d" md5="70e9b330dd6a91e7310f3c8d9a934ecc" sha1="7ef7b4e2fcec69946844c186c62836c0ae34665f" status="verified"/>
 	</game>
+	<game name="Prince of Persia (Taiwan) (En) (Unl)" cloneof="Prince of Persia (Europe, Brazil)">
+		<description>Prince of Persia (Taiwan) (En) (Unl)</description>
+		<release name="Prince of Persia (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Prince of Persia (Taiwan) (En) (Unl).sms" size="262144" crc="cafd2d83" md5="585c4be60d40aaee3ce70cbd9929761a" sha1="80a5bdc835ed63a0cb19d46aae99dfb78719e091"/>
+	</game>
 	<game name="Pro Wrestling (USA, Europe, Brazil)">
 		<description>Pro Wrestling (USA, Europe, Brazil)</description>
 		<release name="Pro Wrestling (USA, Europe, Brazil)" region="BRA"/>
@@ -2116,6 +2203,11 @@
 		<release name="Double Target - Cynthia no Nemuri (Japan)" region="JPN"/>
 		<rom name="Double Target - Cynthia no Nemuri (Japan).sms" size="131072" crc="52b83072" md5="ba66d377ad3a2eaa13bbc00f63f8e4e7" sha1="51f9ce05e383983ce1fe930ec178406b277db69c" status="verified"/>
 	</game>
+	<game name="Quartet (Taiwan) (En) (Unl)" cloneof="Quartet (USA, Europe)">
+		<description>Quartet (Taiwan) (En) (Unl)</description>
+		<release name="Quartet (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Quartet (Taiwan) (En) (Unl).sms" size="131072" crc="cacdf759" md5="a33fcd2c4fceab860c85e653b1ed7f01" sha1="7c32614ef0fb330fff0934ef16a6eca8369743da"/>
+	</game>
 	<game name="Quest for the Shaven Yak Starring Ren Hoek &amp; Stimpy (Brazil)">
 		<description>Quest for the Shaven Yak Starring Ren Hoek &amp; Stimpy (Brazil)</description>
 		<release name="Quest for the Shaven Yak Starring Ren Hoek &amp; Stimpy (Brazil)" region="BRA"/>
@@ -2131,6 +2223,11 @@
 	<game name="R-Type (World) (Beta)" cloneof="R-Type (World)">
 		<description>R-Type (World) (Beta)</description>
 		<rom name="R-Type (World) (Beta).sms" size="524288" crc="0d0840d5" md5="3d980001fc22393ebec2b5b1cf8a01bc" sha1="3e0bfd3b22740ddea718027b59cf9322bf5297d8"/>
+	</game>
+	<game name="R-Type (Taiwan) (En) (Unl)" cloneof="R-Type (World)">
+		<description>R-Type (Taiwan) (En) (Unl)</description>
+		<release name="R-Type (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="R-Type (Taiwan) (En) (Unl).sms" size="524288" crc="e532716f" md5="14d40fda08235d76d63abb30c1a39bff" sha1="908b532564c67014bf881a524ac9ad186f9013c9"/>
 	</game>
 	<game name="R.C. Grand Prix (USA, Europe, Brazil)">
 		<description>R.C. Grand Prix (USA, Europe, Brazil)</description>
@@ -2283,6 +2380,11 @@
 		<release name="Scramble Spirits (Europe, Brazil)" region="EUR"/>
 		<rom name="Scramble Spirits (Europe, Brazil).sms" size="262144" crc="9a8b28ec" md5="82b9ee0920c3c46798ecd659be0a5d9a" sha1="430154dc7ac1bb580c7663019ca476e5333e0508" status="verified"/>
 	</game>
+	<game name="Scramble Spirits (Taiwan) (En) (Unl)" cloneof="Scramble Spirits (Europe, Brazil)">
+		<description>Scramble Spirits (Taiwan) (En) (Unl)</description>
+		<release name="Scramble Spirits (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Scramble Spirits (Taiwan) (En) (Unl).sms" size="262144" crc="7d59283b" md5="db2cbd4cee97aeb28d2e1af6ee79db75" sha1="b21b5ce444e483cbca79c709eea6a902d53af1d7"/>
+	</game>
 	<game name="Secret Command (Europe)">
 		<description>Secret Command (Europe)</description>
 		<release name="Secret Command (Europe)" region="EUR"/>
@@ -2297,6 +2399,11 @@
 		<description>Rambo - First Blood Part II (USA)</description>
 		<release name="Rambo - First Blood Part II (USA)" region="USA"/>
 		<rom name="Rambo - First Blood Part II (USA).sms" size="131072" crc="bbda65f0" md5="7a080a155ad6a806da88aa1d3576d78c" sha1="dc44b090a01d6a4d9b5700ada764b00c62c00e91" status="verified"/>
+	</game>
+	<game name="Shangwei Mingling (Taiwan) (En) (Unl)" cloneof="Secret Command (Europe)">
+		<description>Shangwei Mingling (Taiwan) (En) (Unl)</description>
+		<release name="Shangwei Mingling (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Shangwei Mingling (Taiwan) (En) (Unl).sms" size="131072" crc="89efcc22" md5="697889b9e620f6cf7073e4dfc441b717" sha1="3b699b84b7ebaa3a2cc7443b34909771e6518c55"/>
 	</game>
 	<game name="Sega Chess (Europe, Brazil)">
 		<description>Sega Chess (Europe, Brazil)</description>
@@ -2326,11 +2433,21 @@
 		<release name="Shadow Dancer - The Secret of Shinobi ~ Shadow Dancer (Europe, Brazil)" region="EUR"/>
 		<rom name="Shadow Dancer - The Secret of Shinobi ~ Shadow Dancer (Europe, Brazil).sms" size="524288" crc="3793c01a" md5="c2055d5c66dd3944b99642c18032ebc4" sha1="99a5995f31dcf6fbbef56d3ea0d2094ef039479f" status="verified"/>
 	</game>
+	<game name="Shadow Dancer (Taiwan) (En) (Unl)" cloneof="Shadow Dancer - The Secret of Shinobi ~ Shadow Dancer (Europe, Brazil)">
+		<description>Shadow Dancer (Taiwan) (En) (Unl)</description>
+		<release name="Shadow Dancer (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Shadow Dancer (Taiwan) (En) (Unl).sms" size="524288" crc="ab67c6bd" md5="0884e52534568d8090565e2a02d6a4e3" sha1="b5fabb4a9a43f7496f2ca40979348b59fde5d14f"/>
+	</game>
 	<game name="Shadow of the Beast (Europe, Brazil)">
 		<description>Shadow of the Beast (Europe, Brazil)</description>
 		<release name="Shadow of the Beast (Europe, Brazil)" region="BRA"/>
 		<release name="Shadow of the Beast (Europe, Brazil)" region="EUR"/>
 		<rom name="Shadow of the Beast (Europe, Brazil).sms" size="262144" crc="1575581d" md5="abc8a9e43c588c7d0535cc8305bdbf94" sha1="45943b021cbaee80a149b80ddb6f3fb5eb8b9e43"/>
+	</game>
+	<game name="Shadow of the Beast (Taiwan) (En) (Unl)" cloneof="Shadow of the Beast (Europe, Brazil)">
+		<description>Shadow of the Beast (Taiwan) (En) (Unl)</description>
+		<release name="Shadow of the Beast (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Shadow of the Beast (Taiwan) (En) (Unl).sms" size="262144" crc="ac2ea669" md5="ce2e1cb88648e27323b6ded5f4109a18" sha1="a63bdab47d3f648537cad25e4161ac55a23c8137"/>
 	</game>
 	<game name="Shanghai (USA, Europe)">
 		<description>Shanghai (USA, Europe)</description>
@@ -2611,6 +2728,11 @@
 		<description>Strider (USA, Europe, Brazil) (Demo)</description>
 		<rom name="Strider (USA, Europe, Brazil) (Demo).sms" size="131072" crc="b990269a" md5="36d936d25715103a4f8388deb4a1fed3" sha1="e8329904397b5389571f20aa1a3cac1ecc31d470"/>
 	</game>
+	<game name="Strider, The (Taiwan) (En) (Unl)" cloneof="Strider (USA, Europe, Brazil)">
+		<description>Strider, The (Taiwan) (En) (Unl)</description>
+		<release name="Strider, The (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Strider, The (Taiwan) (En) (Unl).sms" size="524288" crc="63a7f906" md5="f01ce5fd91877dc14d5eeab502f26e63" sha1="43b822bbccdc666e5bfb7f86f690516ac251b0b3"/>
+	</game>
 	<game name="Strider II (Europe, Brazil)">
 		<description>Strider II (Europe, Brazil)</description>
 		<release name="Strider II (Europe, Brazil)" region="BRA"/>
@@ -2622,6 +2744,11 @@
 		<release name="Submarine Attack (Europe, Brazil)" region="BRA"/>
 		<release name="Submarine Attack (Europe, Brazil)" region="EUR"/>
 		<rom name="Submarine Attack (Europe, Brazil).sms" size="262144" crc="d8f2f1b9" md5="5eaa50519e87d57f40f50731caff5f62" sha1="44384ec8bf91e1ca5512ff88bbcf1ae1ce5a1a35" status="verified"/>
+	</game>
+	<game name="Submarine Attack (Taiwan) (En) (Unl)" cloneof="Submarine Attack (Europe, Brazil)">
+		<description>Submarine Attack (Taiwan) (En) (Unl)</description>
+		<release name="Submarine Attack (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Submarine Attack (Taiwan) (En) (Unl).sms" size="262144" crc="d282ef71" md5="33b70eddebee2317bd62daa110480a2f" sha1="e4e3464aa4b9378761663ae69037308a5e3411f0"/>
 	</game>
 	<game name="Suho Jeonsa (Korea) (Unl)">
 		<description>Suho Jeonsa (Korea) (Unl)</description>
@@ -2850,6 +2977,11 @@
 		<description>Thunder Blade (Japan)</description>
 		<release name="Thunder Blade (Japan)" region="JPN"/>
 		<rom name="Thunder Blade (Japan).sms" size="262144" crc="c0ce19b1" md5="a03bbd3c75e736ce378f2c3fe47f5579" sha1="535dbd339f4b5c5efd502cffbbe719d7b3e7f1c3" status="verified"/>
+	</game>
+	<game name="Thunder Blade (Taiwan) (En) (Unl)" cloneof="Thunder Blade (USA, Europe, Brazil)">
+		<description>Thunder Blade (Taiwan) (En) (Unl)</description>
+		<release name="Thunder Blade (Taiwan) (En) (Unl)" region="TAI"/>
+		<rom name="Thunder Blade (Taiwan) (En) (Unl).sms" size="262144" crc="98cf1254" md5="d70f275b7c4c5463ca07eb185f800adf" sha1="93d93e3f79b7e206c0c58187e3ed047222999af6"/>
 	</game>
 	<game name="Time Soldiers (USA, Europe, Brazil)">
 		<description>Time Soldiers (USA, Europe, Brazil)</description>

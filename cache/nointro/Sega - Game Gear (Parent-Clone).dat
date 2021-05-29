@@ -4,8 +4,8 @@
 	<header>
 		<name>Sega - Game Gear (Parent-Clone)</name>
 		<description>Sega - Game Gear (Parent-Clone)</description>
-		<version>20210426-074002</version>
-		<date>20210426-074002</date>
+		<version>20210519-222604</version>
+		<date>20210519-222604</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -820,6 +820,10 @@
 		<description>Defenders of Oasis (USA, Europe) (Beta)</description>
 		<rom name="Defenders of Oasis (USA, Europe) (Beta).gg" size="262144" crc="c674eccc" md5="503e2946dcf3cba80a7264ebc4793afd" sha1="76e1f94dbb8a12ba428767d2e70f00fe719fa449"/>
 	</game>
+	<game name="Defenders of Oasis (USA, Europe) (Virtual Console)" cloneof="Defenders of Oasis (USA, Europe)">
+		<description>Defenders of Oasis (USA, Europe) (Virtual Console)</description>
+		<rom name="Defenders of Oasis (USA, Europe) (Virtual Console).gg" size="524288" crc="41a367a0" md5="92247960c4a8f0292c94e1e8fc8d4348" sha1="fe4c1df4e8d8cd244e9cef803eeafaec4962c31a"/>
+	</game>
 	<game name="Shadam Crusader - Harukanaru Oukoku (Japan)" cloneof="Defenders of Oasis (USA, Europe)">
 		<description>Shadam Crusader - Harukanaru Oukoku (Japan)</description>
 		<release name="Shadam Crusader - Harukanaru Oukoku (Japan)" region="JPN"/>
@@ -923,10 +927,18 @@
 		<release name="Dragon Crystal (USA, Europe)" region="USA"/>
 		<rom name="Dragon Crystal (USA, Europe).gg" size="131072" crc="0ef2ed93" md5="8431baccd169025f79c9cbc44e31622d" sha1="6d53f32001d419a5b5e9c16cb62e07e548d2f44a" status="verified"/>
 	</game>
+	<game name="Dragon Crystal (USA, Europe) (Virtual Console)" cloneof="Dragon Crystal (USA, Europe)">
+		<description>Dragon Crystal (USA, Europe) (Virtual Console)</description>
+		<rom name="Dragon Crystal (USA, Europe) (Virtual Console).gg" size="131072" crc="baf4369d" md5="19bb76e91f6bdb94a9332135698227c2" sha1="c7d1551b7bbc01f35fa849e5b05073012f76c3a8" status="verified"/>
+	</game>
 	<game name="Dragon Crystal - Tsurani no Meikyuu (Japan)" cloneof="Dragon Crystal (USA, Europe)">
 		<description>Dragon Crystal - Tsurani no Meikyuu (Japan)</description>
 		<release name="Dragon Crystal - Tsurani no Meikyuu (Japan)" region="JPN"/>
 		<rom name="Dragon Crystal - Tsurani no Meikyuu (Japan).gg" size="131072" crc="89f12e1e" md5="da0b9e94ffb9c3930501c7a7a90fbf18" sha1="ea323c4ac28d7762277039450c341d0f025093d8" status="verified"/>
+	</game>
+	<game name="Dragon Crystal - Tsurani no Meikyuu (Japan) (Virtual Console)" cloneof="Dragon Crystal (USA, Europe)">
+		<description>Dragon Crystal - Tsurani no Meikyuu (Japan) (Virtual Console)</description>
+		<rom name="Dragon Crystal - Tsurani no Meikyuu (Japan) (Virtual Console).gg" size="131072" crc="9c8534ec" md5="e6d6fdb864d7878b7b444c7200b84b7c" sha1="df135dd54638e2ce1f18d670c98b0313484d70bc"/>
 	</game>
 	<game name="Dropzone (Europe)">
 		<description>Dropzone (Europe)</description>
@@ -1242,6 +1254,13 @@
 		<release name="GG Aleste (Japan)" region="JPN"/>
 		<rom name="GG Aleste (Japan).gg" size="262144" crc="1b80a75b" md5="43301e7c15fe11f66b29b00e6ec47a52" sha1="4c13dc3601a1702692c35eb6c89f0e09ab966f69" status="verified"/>
 	</game>
+	<game name="GG Aleste 3 (World) (Aleste Collection)">
+		<description>GG Aleste 3 (World) (Aleste Collection)</description>
+		<release name="GG Aleste 3 (World) (Aleste Collection)" region="EUR"/>
+		<release name="GG Aleste 3 (World) (Aleste Collection)" region="JPN"/>
+		<release name="GG Aleste 3 (World) (Aleste Collection)" region="USA"/>
+		<rom name="GG Aleste 3 (World) (Aleste Collection).gg" size="1048576" crc="5ae64731" md5="ba860afbf7b7eb2b1ba08c957d44b34c" sha1="fbef21541adc445c92abf7c92e97088cb073aafa"/>
+	</game>
 	<game name="GG Aleste II ~ Power Strike II (Japan, Europe)">
 		<description>GG Aleste II ~ Power Strike II (Japan, Europe)</description>
 		<release name="GG Aleste II ~ Power Strike II (Japan, Europe)" region="EUR"/>
@@ -1276,6 +1295,10 @@
 		<description>GG Shinobi, The (Japan)</description>
 		<release name="GG Shinobi, The (Japan)" region="JPN"/>
 		<rom name="GG Shinobi, The (Japan).gg" size="262144" crc="83926bd1" md5="21d2e4e7c508e6abbb12bb96c7aac868" sha1="c5e1c2329f94f0804140792a3e3d5be2ac0d5d0d" status="verified"/>
+	</game>
+	<game name="GG Shinobi, The ~ Shinobi (World) (Rev 1) (Virtual Console)" cloneof="GG Shinobi, The ~ Shinobi (World) (Rev 1)">
+		<description>GG Shinobi, The ~ Shinobi (World) (Rev 1) (Virtual Console)</description>
+		<rom name="GG Shinobi, The ~ Shinobi (World) (Rev 1) (Virtual Console).gg" size="262144" crc="b62d934a" md5="a0c373a38ec4271ac42ec99afa2a6be3" sha1="9ad7313da97ef00463800199ab9e4e6f39fbcb0d" status="verified"/>
 	</game>
 	<game name="Global Gladiators (Europe)">
 		<description>Global Gladiators (Europe)</description>
@@ -1796,15 +1819,27 @@
 		<release name="Master of Darkness (Europe, Brazil)" region="EUR"/>
 		<rom name="Master of Darkness (Europe, Brazil).gg" size="262144" crc="07d0eb42" md5="78655dabd43e475c3b4d849c3f0c7046" sha1="f9eabdb7e925360f69b41f5357abcb36f893d72e" status="verified"/>
 	</game>
-	<game name="In the Wake of Vampire (Japan)" cloneof="Master of Darkness (Europe, Brazil)">
-		<description>In the Wake of Vampire (Japan)</description>
-		<release name="In the Wake of Vampire (Japan)" region="JPN"/>
-		<rom name="In the Wake of Vampire (Japan).gg" size="262144" crc="dab0f265" md5="a999c2f72c71c22be50e343e54ff4d73" sha1="da5116b7ed890f35506c5b33c5c9716f528169b1" status="verified"/>
+	<game name="In the Wake of Vampire (Japan) (En)" cloneof="Master of Darkness (Europe, Brazil)">
+		<description>In the Wake of Vampire (Japan) (En)</description>
+		<release name="In the Wake of Vampire (Japan) (En)" region="JPN"/>
+		<rom name="In the Wake of Vampire (Japan) (En).gg" size="262144" crc="dab0f265" md5="a999c2f72c71c22be50e343e54ff4d73" sha1="da5116b7ed890f35506c5b33c5c9716f528169b1" status="verified"/>
+	</game>
+	<game name="In the Wake of Vampire (Japan) (En) (Virtual Console)" cloneof="Master of Darkness (Europe, Brazil)">
+		<description>In the Wake of Vampire (Japan) (En) (Virtual Console)</description>
+		<rom name="In the Wake of Vampire (Japan) (En) (Virtual Console).gg" size="262144" crc="036e03f8" md5="3dcb0e5020d6d9d650a7196fdfe8c5ac" sha1="2ee1aac941829ae172c4913383d14faa8acd09d5"/>
+	</game>
+	<game name="Master of Darkness (Europe) (Virtual Console)" cloneof="Master of Darkness (Europe, Brazil)">
+		<description>Master of Darkness (Europe) (Virtual Console)</description>
+		<rom name="Master of Darkness (Europe) (Virtual Console).gg" size="262144" crc="21402ffb" md5="508f9bb8c63bbde8da3ae4a548572f5d" sha1="fb7f7cd933dd1d0d275faffb06c84645bfa42d5a"/>
 	</game>
 	<game name="Vampire - Master of Darkness (USA)" cloneof="Master of Darkness (Europe, Brazil)">
 		<description>Vampire - Master of Darkness (USA)</description>
 		<release name="Vampire - Master of Darkness (USA)" region="USA"/>
 		<rom name="Vampire - Master of Darkness (USA).gg" size="262144" crc="7ec64025" md5="1e068538747f6d4d99888221a50b7e06" sha1="14e6b1e886355d902b34acdf503eced8df88afe4" status="verified"/>
+	</game>
+	<game name="Vampire - Master of Darkness (USA) (Virtual Console)" cloneof="Master of Darkness (Europe, Brazil)">
+		<description>Vampire - Master of Darkness (USA) (Virtual Console)</description>
+		<rom name="Vampire - Master of Darkness (USA) (Virtual Console).gg" size="262144" crc="5856849c" md5="92106252249ce9975386f2aeae4a593b" sha1="b1d808e0a444ab12145915fad920a43bd04cb669"/>
 	</game>
 	<game name="Mega Man (USA)">
 		<description>Mega Man (USA)</description>
@@ -2517,6 +2552,10 @@
 		<release name="Puyo Puyo Tsuu (Japan)" region="JPN"/>
 		<rom name="Puyo Puyo Tsuu (Japan).gg" size="524288" crc="3ab2393b" md5="7c080a453da2d80add04a3c3d9f264d1" sha1="04ea9ff57faeeccd1bbb17490d22313ae94c86d6" status="verified"/>
 	</game>
+	<game name="Puyo Puyo Tsuu (Japan) (Virtual Console)" cloneof="Puyo Puyo Tsuu (Japan)">
+		<description>Puyo Puyo Tsuu (Japan) (Virtual Console)</description>
+		<rom name="Puyo Puyo Tsuu (Japan) (Virtual Console).gg" size="524288" crc="1095528d" md5="a54d6388dc3cb4303b067a82add93a25" sha1="b4c15e8951230c58d3350a2e4a6f998ea5bc87d3"/>
+	</game>
 	<game name="Puzzle &amp; Action - Ichidanto-R (Japan)">
 		<description>Puzzle &amp; Action - Ichidanto-R (Japan)</description>
 		<release name="Puzzle &amp; Action - Ichidanto-R (Japan)" region="JPN"/>
@@ -2703,6 +2742,10 @@
 		<description>Shining Force - The Sword of Hajya (USA) (Beta) (1994-07-08)</description>
 		<rom name="Shining Force - The Sword of Hajya (USA) (Beta) (1994-07-08).gg" size="524288" crc="80dca91d" md5="a5055e20c3318713ce90b6f547571eaf" sha1="a9dd1254577bff20ee33f7bce56e2c4361f911c4"/>
 	</game>
+	<game name="Shining Force - The Sword of Hajya (USA, Europe) (Virtual Console)" cloneof="Shining Force - The Sword of Hajya (USA)">
+		<description>Shining Force - The Sword of Hajya (USA, Europe) (Virtual Console)</description>
+		<rom name="Shining Force - The Sword of Hajya (USA, Europe) (Virtual Console).gg" size="524288" crc="1dc56beb" md5="e3c8fd81c70cdbfc4bc0b8684fcd8420" sha1="0d31c7dd2ff84f1a18ac5a71203bcd511534951d"/>
+	</game>
 	<game name="Shining Force Gaiden II - Jashin no Kakusei (Japan)" cloneof="Shining Force - The Sword of Hajya (USA)">
 		<description>Shining Force Gaiden II - Jashin no Kakusei (Japan)</description>
 		<release name="Shining Force Gaiden II - Jashin no Kakusei (Japan)" region="JPN"/>
@@ -2717,6 +2760,10 @@
 		<description>Shining Force Gaiden - Final Conflict (Japan)</description>
 		<release name="Shining Force Gaiden - Final Conflict (Japan)" region="JPN"/>
 		<rom name="Shining Force Gaiden - Final Conflict (Japan).gg" size="524288" crc="6019fe5e" md5="35ef27f6b4b4ddc4a6ad6c78db8c890b" sha1="0d4bc152e7ae70457fa74f593e064403cd24ab72" status="verified"/>
+	</game>
+	<game name="Shining Force Gaiden - Final Conflict (Japan) (Virtual Console)" cloneof="Shining Force Gaiden - Final Conflict (Japan)">
+		<description>Shining Force Gaiden - Final Conflict (Japan) (Virtual Console)</description>
+		<rom name="Shining Force Gaiden - Final Conflict (Japan) (Virtual Console).gg" size="524288" crc="eb05c8ec" md5="900fbe67db61b1453c7406fef7426d0e" sha1="bfcf28a05fac271bb5777aa4c1f9af9f34d6fe54"/>
 	</game>
 	<game name="Side Pocket (USA)">
 		<description>Side Pocket (USA)</description>
@@ -2821,6 +2868,10 @@
 		<release name="Sonic Labyrinth (World)" region="USA"/>
 		<rom name="Sonic Labyrinth (World).gg" size="524288" crc="5550173b" md5="aa6598585b2cdb92a14476beeb34991b" sha1="e24bf33d8d5a79f371485f20f207b6b26f5b341e" status="verified"/>
 	</game>
+	<game name="Sonic Labyrinth (USA, Europe) (Virtual Console)" cloneof="Sonic Labyrinth (World)">
+		<description>Sonic Labyrinth (USA, Europe) (Virtual Console)</description>
+		<rom name="Sonic Labyrinth (USA, Europe) (Virtual Console).gg" size="524288" crc="b531a09e" md5="27c46dadda7bd6d04bd7863975cdde39" sha1="77b7a4972725c605346cb441ad0b532bff21065d" status="verified"/>
+	</game>
 	<game name="Sonic Spinball (USA, Europe)">
 		<description>Sonic Spinball (USA, Europe)</description>
 		<release name="Sonic Spinball (USA, Europe)" region="EUR"/>
@@ -2924,6 +2975,10 @@
 		<release name="Sonic The Hedgehog (Japan, USA)" region="USA"/>
 		<rom name="Sonic The Hedgehog (Japan, USA).gg" size="262144" crc="3e31cb8c" md5="8a95b36139206a5ba13a38bb626aee25" sha1="8923295c96b2e05da0a83a827fd709b033fc7332" status="verified"/>
 	</game>
+	<game name="Sonic The Hedgehog (World) (Rev 1) (Virtual Console)" cloneof="Sonic The Hedgehog (Japan, Europe, Brazil) (Rev 1)">
+		<description>Sonic The Hedgehog (World) (Rev 1) (Virtual Console)</description>
+		<rom name="Sonic The Hedgehog (World) (Rev 1) (Virtual Console).gg" size="262144" crc="c2572208" md5="37a20d660517de6a07b4981c253439ef" sha1="da410b0f00cd0b3a70c3e18c83d0d71609d8ea43" status="verified"/>
+	</game>
 	<game name="Sonic The Hedgehog - Triple Trouble (USA, Europe, Brazil)">
 		<description>Sonic The Hedgehog - Triple Trouble (USA, Europe, Brazil)</description>
 		<release name="Sonic The Hedgehog - Triple Trouble (USA, Europe, Brazil)" region="BRA"/>
@@ -2950,6 +3005,10 @@
 	<game name="Sonic The Hedgehog 2 (World) (Auto Demo)" cloneof="Sonic The Hedgehog 2 (World)">
 		<description>Sonic The Hedgehog 2 (World) (Auto Demo)</description>
 		<rom name="Sonic The Hedgehog 2 (World) (Auto Demo).gg" size="262144" crc="15ad37a5" md5="ab191d48adc692adb19f429183361ea7" sha1="b780c6f059b48d1bb48ee2ad521552dab1487c88"/>
+	</game>
+	<game name="Sonic The Hedgehog 2 (World) (Virtual Console)" cloneof="Sonic The Hedgehog 2 (World)">
+		<description>Sonic The Hedgehog 2 (World) (Virtual Console)</description>
+		<rom name="Sonic The Hedgehog 2 (World) (Virtual Console).gg" size="524288" crc="850727a0" md5="39332eb123aeb1b906c70948641fe889" sha1="ba720d925fbed0d68e1d35f61c6f4fec47708718" status="verified"/>
 	</game>
 	<game name="Soukoban (Japan)">
 		<description>Soukoban (Japan)</description>
@@ -3329,6 +3388,10 @@
 		<release name="Tails Adventure ~ Tails Adventures (World) (En,Ja)" region="JPN"/>
 		<release name="Tails Adventure ~ Tails Adventures (World) (En,Ja)" region="USA"/>
 		<rom name="Tails Adventure ~ Tails Adventures (World) (En,Ja).gg" size="524288" crc="5bb6e5d6" md5="a8bdb1beed088ff83c725c5af6b85e1f" sha1="da3df145b8e9f2a2e680d2c92939084d4530ed90" status="verified"/>
+	</game>
+	<game name="Tails Adventure ~ Tails Adventures (World) (En,Ja) (Virtual Console)" cloneof="Tails Adventure ~ Tails Adventures (World) (En,Ja)">
+		<description>Tails Adventure ~ Tails Adventures (World) (En,Ja) (Virtual Console)</description>
+		<rom name="Tails Adventure ~ Tails Adventures (World) (En,Ja) (Virtual Console).gg" size="524288" crc="a354ea49" md5="c2fe111a6e569ec6d58b9ecc32de0e12" sha1="8a3c327b328def981779ce436df7857578c01883" status="verified"/>
 	</game>
 	<game name="Tails no Skypatrol (Japan)">
 		<description>Tails no Skypatrol (Japan)</description>

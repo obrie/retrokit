@@ -4,8 +4,8 @@
 	<header>
 		<name>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</name>
 		<description>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</description>
-		<version>20210327-220650</version>
-		<date>20210327-220650</date>
+		<version>20210505-002811</version>
+		<date>20210505-002811</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -52,7 +52,7 @@
 	<game name="1943 Kai (Japan)">
 		<description>1943 Kai (Japan)</description>
 		<release name="1943 Kai (Japan)" region="JPN"/>
-		<rom name="1943 Kai (Japan).pce" size="524288" crc="fde08d6d" md5="42cfdf8495ce8338d83c73b38ae274b6" sha1="3ac86354155ca01859c53e2f2287a715cd3fca13"/>
+		<rom name="1943 Kai (Japan).pce" size="524288" crc="fde08d6d" md5="42cfdf8495ce8338d83c73b38ae274b6" sha1="3ac86354155ca01859c53e2f2287a715cd3fca13" status="verified"/>
 	</game>
 	<game name="21 Emon - Mezase Hotel Ou!! (Japan)">
 		<description>21 Emon - Mezase Hotel Ou!! (Japan)</description>
@@ -187,7 +187,7 @@
 	<game name="Gunhed (Japan)" cloneof="Blazing Lazers (USA)">
 		<description>Gunhed (Japan)</description>
 		<release name="Gunhed (Japan)" region="JPN"/>
-		<rom name="Gunhed (Japan).pce" size="393216" crc="a17d4d7e" md5="537c1976f0306e264da966a907b93e3f" sha1="0107d93ff5d10325092d45e6bfd21e8130efeed7"/>
+		<rom name="Gunhed (Japan).pce" size="393216" crc="a17d4d7e" md5="537c1976f0306e264da966a907b93e3f" sha1="0107d93ff5d10325092d45e6bfd21e8130efeed7" status="verified"/>
 	</game>
 	<game name="Bloody Wolf (USA)">
 		<description>Bloody Wolf (USA)</description>
@@ -1311,7 +1311,7 @@
 	<game name="P-47 - The Freedom Fighter (Japan)">
 		<description>P-47 - The Freedom Fighter (Japan)</description>
 		<release name="P-47 - The Freedom Fighter (Japan)" region="JPN"/>
-		<rom name="P-47 - The Freedom Fighter (Japan).pce" size="262144" crc="7632db90" md5="bfed2ef7677886467236dc92e09d63c3" sha1="54face25e1bdd6c1b842b957bcce272797ba7f1c"/>
+		<rom name="P-47 - The Freedom Fighter (Japan).pce" size="262144" crc="7632db90" md5="bfed2ef7677886467236dc92e09d63c3" sha1="54face25e1bdd6c1b842b957bcce272797ba7f1c" status="verified"/>
 	</game>
 	<game name="Pac-Land (USA)">
 		<description>Pac-Land (USA)</description>
@@ -1546,7 +1546,7 @@
 	<game name="Shinobi (Japan)">
 		<description>Shinobi (Japan)</description>
 		<release name="Shinobi (Japan)" region="JPN"/>
-		<rom name="Shinobi (Japan).pce" size="393216" crc="bc655cf3" md5="1659d9fa2ed7628d342fd7c7fbe6d439" sha1="c219f8477dc2b34b53c25a419332595835d1f5ec"/>
+		<rom name="Shinobi (Japan).pce" size="393216" crc="bc655cf3" md5="1659d9fa2ed7628d342fd7c7fbe6d439" sha1="c219f8477dc2b34b53c25a419332595835d1f5ec" status="verified"/>
 	</game>
 	<game name="Shiryou Sensen - War of the Dead (Japan)">
 		<description>Shiryou Sensen - War of the Dead (Japan)</description>

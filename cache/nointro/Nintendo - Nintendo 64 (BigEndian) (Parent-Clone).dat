@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</description>
-		<version>20210430-080604</version>
-		<date>20210430-080604</date>
+		<version>20210528-064842</version>
+		<date>20210528-064842</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -972,6 +972,10 @@
 		<release name="Doraemon 3 - Nobita no Machi SOS! (Japan)" region="JPN"/>
 		<rom name="Doraemon 3 - Nobita no Machi SOS! (Japan).z64" size="16777216" crc="d3b68be4" md5="a4a1d490ba67831775fc381b846e2168" sha1="dd9ba0f6cfc10c3b78401cc55d06ad534f39d5b1"/>
 	</game>
+	<game name="Doubutsu Banchou (Japan) (Proto)">
+		<description>Doubutsu Banchou (Japan) (Proto)</description>
+		<rom name="Doubutsu Banchou (Japan) (Proto).z64" size="33554432" crc="6f8e3e71" md5="6c329dc4cc2fc9a96475e8a30abfe735" sha1="95a0f5f2545dd338ffee85705a360ad161c835c7"/>
+	</game>
 	<game name="Doubutsu no Mori (Japan)">
 		<description>Doubutsu no Mori (Japan)</description>
 		<release name="Doubutsu no Mori (Japan)" region="JPN"/>
@@ -1466,6 +1470,10 @@
 	<game name="Glover 2 (USA) (Proto 1)" cloneof="Glover 2 (USA) (Proto 2)">
 		<description>Glover 2 (USA) (Proto 1)</description>
 		<rom name="Glover 2 (USA) (Proto 1).z64" size="33554432" crc="d0809afb" md5="4e15d92cca23e1a01bb65246431b5c5a" sha1="58750c5fb47e35badd41eaf748cc9cdb3b24f64a"/>
+	</game>
+	<game name="Glover 2 (USA) (Unk Proto)" cloneof="Glover 2 (USA) (Proto 2)">
+		<description>Glover 2 (USA) (Unk Proto)</description>
+		<rom name="Glover 2 (USA) (Unk Proto).z64" size="25165824" crc="6dec2351" md5="93e3185d4284ba7e94e8910590a6c4d2" sha1="b65fa904660f1921ea4d1481f200a2de0655221d"/>
 	</game>
 	<game name="Goemon - Mononoke Sugoroku (Japan)">
 		<description>Goemon - Mononoke Sugoroku (Japan)</description>
@@ -3322,7 +3330,7 @@
 	<game name="Pokemon Snap (Italy)" cloneof="Pokemon Snap (Europe)">
 		<description>Pokemon Snap (Italy)</description>
 		<release name="Pokemon Snap (Italy)" region="ITA"/>
-		<rom name="Pokemon Snap (Italy).z64" size="16777216" crc="df56e922" md5="8e1968191dd27655c03be812cf041a95" sha1="a4dae7f86e463fe5351b3e74a1d044a95f3cbf41" status="verified"/>
+		<rom name="Pokemon Snap (Italy).z64" size="16777216" crc="df56e922" md5="8e1968191dd27655c03be812cf041a95" sha1="a4dae7f86e463fe5351b3e74a1d044a95f3cbf41"/>
 	</game>
 	<game name="Pokemon Snap (Spain)" cloneof="Pokemon Snap (Europe)">
 		<description>Pokemon Snap (Spain)</description>

@@ -6,8 +6,8 @@
 		<description>Nintendo - Nintendo Entertainment System (Parent-Clone)</description>
 		<clrmamepro header="No-Intro_NES.xml"/>
 		<romcenter plugin="nes.dll"/>
-		<version>20210430-071108</version>
-		<date>20210430-071108</date>
+		<version>20210528-064508</version>
+		<date>20210528-064508</date>
 		<author>alexian, BitLooter</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -2408,12 +2408,12 @@
 		<release name="Chiisana Obake - Acchi Socchi Kocchi (Japan)" region="JPN"/>
 		<rom name="Chiisana Obake - Acchi Socchi Kocchi (Japan).nes" size="262144" crc="5dec84f8" md5="34fbbdcea8d733c67603570693cc916d" sha1="a9efca330437cb9c5b516b575cb6851be4003a08"/>
 	</game>
-	<game name="Chiller (USA) (Unl)">
-		<description>Chiller (USA) (Unl)</description>
-		<release name="Chiller (USA) (Unl)" region="USA"/>
-		<rom name="Chiller (USA) (Unl).nes" size="65536" crc="b79f2651" md5="44123d8f2a9b4555e5021fb0fb699971" sha1="32c74550c9a33c28f5ab3e025b4251dc50893c25"/>
+	<game name="Chiller (USA) (Unl) [b]">
+		<description>Chiller (USA) (Unl) [b]</description>
+		<release name="Chiller (USA) (Unl) [b]" region="USA"/>
+		<rom name="Chiller (USA) (Unl) [b].nes" size="65536" crc="dc2a266c" md5="45b0d9448c3493aa2ec78323702b9671" sha1="6a571580a3b18acf5673d66dc48794a2bc287697" status="baddump"/>
 	</game>
-	<game name="Chiller (Australia) (Unl)" cloneof="Chiller (USA) (Unl)">
+	<game name="Chiller (Australia) (Unl)" cloneof="Chiller (USA) (Unl) [b]">
 		<description>Chiller (Australia) (Unl)</description>
 		<release name="Chiller (Australia) (Unl)" region="AUS"/>
 		<rom name="Chiller (Australia) (Unl).nes" size="65536" crc="231bc76e" md5="52976be77d35c6a910246f2cff3c2e3f" sha1="3f405f60a43b2b577a2baef1ff50480c83418209"/>
@@ -2799,7 +2799,7 @@
 	<game name="Crash 'n' the Boys - Street Challenge (USA)">
 		<description>Crash 'n' the Boys - Street Challenge (USA)</description>
 		<release name="Crash 'n' the Boys - Street Challenge (USA)" region="USA"/>
-		<rom name="Crash 'n' the Boys - Street Challenge (USA).nes" size="262144" crc="c7f0c457" md5="c4ab7ea3a9c8b25746d7c3ee9b922961" sha1="6f1112340af9899bae7cceabcf65c5e3492f6577" status="verified"/>
+		<rom name="Crash 'n' the Boys - Street Challenge (USA).nes" size="262144" crc="c7f0c457" md5="c4ab7ea3a9c8b25746d7c3ee9b922961" sha1="6f1112340af9899bae7cceabcf65c5e3492f6577"/>
 	</game>
 	<game name="Bikkuri Nekketsu Shin Kiroku! - Harukanaru Kin Medal (Japan)" cloneof="Crash 'n' the Boys - Street Challenge (USA)">
 		<description>Bikkuri Nekketsu Shin Kiroku! - Harukanaru Kin Medal (Japan)</description>
@@ -2861,7 +2861,6 @@
 	<game name="Crystal Mines (Korea) (Unl)" cloneof="Crystal Mines (USA) (Unl)">
 		<description>Crystal Mines (Korea) (Unl)</description>
 		<release name="Crystal Mines (Korea) (Unl)" region="KOR"/>
-		<rom name="Crystal Mines (Korea) (Unl).nes" size="98304" crc="f1e6f5e8" md5="d3e3fe5d40adf9c6142dc78cf870881f" sha1="4b1e268f271ee5e4451f4672db2fc446ec9899bd"/>
 	</game>
 	<game name="Crystalis (USA)">
 		<description>Crystalis (USA)</description>
@@ -3218,7 +3217,7 @@
 	<game name="Devil World (Europe)">
 		<description>Devil World (Europe)</description>
 		<release name="Devil World (Europe)" region="EUR"/>
-		<rom name="Devil World (Europe).nes" size="24576" crc="0c783f0c" md5="2f9c8345d73ec94d6dcd7220fb7b9e85" sha1="c8ea77efbf82f12836467caa9012914af12a87a3" status="verified"/>
+		<rom name="Devil World (Europe).nes" size="24576" crc="0c783f0c" md5="2f9c8345d73ec94d6dcd7220fb7b9e85" sha1="c8ea77efbf82f12836467caa9012914af12a87a3"/>
 	</game>
 	<game name="Devil World (Japan)" cloneof="Devil World (Europe)">
 		<description>Devil World (Japan)</description>
@@ -4515,7 +4514,7 @@
 	<game name="Faxanadu (USA) (Rev 1)" cloneof="Faxanadu (Europe)">
 		<description>Faxanadu (USA) (Rev 1)</description>
 		<release name="Faxanadu (USA) (Rev 1)" region="USA"/>
-		<rom name="Faxanadu (USA) (Rev 1).nes" size="262144" crc="e71db268" md5="28eb470f84bcd54320fa890003d26402" sha1="d0c6af83c44f2dc90bcb0792a69c93f8d167f988" status="verified"/>
+		<rom name="Faxanadu (USA) (Rev 1).nes" size="262144" crc="e71db268" md5="28eb470f84bcd54320fa890003d26402" sha1="d0c6af83c44f2dc90bcb0792a69c93f8d167f988"/>
 	</game>
 	<game name="Felix the Cat (Europe)">
 		<description>Felix the Cat (Europe)</description>
@@ -5095,7 +5094,7 @@
 	<game name="Red Arremer II (Japan)" cloneof="Gargoyle's Quest II (Europe)">
 		<description>Red Arremer II (Japan)</description>
 		<release name="Red Arremer II (Japan)" region="JPN"/>
-		<rom name="Red Arremer II (Japan).nes" size="262144" crc="530bccb4" md5="e790d695a4ca07325acbea87d35f07fd" sha1="56ff3a2641fd2decd5b334aef586739b1532def3" status="verified"/>
+		<rom name="Red Arremer II (Japan).nes" size="262144" crc="530bccb4" md5="e790d695a4ca07325acbea87d35f07fd" sha1="56ff3a2641fd2decd5b334aef586739b1532def3"/>
 	</game>
 	<game name="Garry Kitchen's Battletank (USA)">
 		<description>Garry Kitchen's Battletank (USA)</description>
@@ -6979,7 +6978,7 @@
 	<game name="Kirby's Adventure (Europe)">
 		<description>Kirby's Adventure (Europe)</description>
 		<release name="Kirby's Adventure (Europe)" region="EUR"/>
-		<rom name="Kirby's Adventure (Europe).nes" size="786432" crc="2c088dc5" md5="09e21386297efe7e4bfd717b9c6a697d" sha1="0f2883d7d2de3ffbf8a854ea66904d262592ccf9" status="verified"/>
+		<rom name="Kirby's Adventure (Europe).nes" size="786432" crc="2c088dc5" md5="09e21386297efe7e4bfd717b9c6a697d" sha1="0f2883d7d2de3ffbf8a854ea66904d262592ccf9"/>
 	</game>
 	<game name="Hoshi no Kirby - Yume no Izumi no Monogatari (Japan)" cloneof="Kirby's Adventure (Europe)">
 		<description>Hoshi no Kirby - Yume no Izumi no Monogatari (Japan)</description>
@@ -7008,7 +7007,7 @@
 	<game name="Kirby's Adventure (USA) (Rev 1)" cloneof="Kirby's Adventure (Europe)">
 		<description>Kirby's Adventure (USA) (Rev 1)</description>
 		<release name="Kirby's Adventure (USA) (Rev 1)" region="USA"/>
-		<rom name="Kirby's Adventure (USA) (Rev 1).nes" size="786432" crc="5ed6f221" md5="758744ec2d2fa3d1f2020586401f97e8" sha1="118307da6c77a592f0884baad14120301d8d3a1b" status="verified"/>
+		<rom name="Kirby's Adventure (USA) (Rev 1).nes" size="786432" crc="5ed6f221" md5="758744ec2d2fa3d1f2020586401f97e8" sha1="118307da6c77a592f0884baad14120301d8d3a1b"/>
 	</game>
 	<game name="Kiteretsu Daihyakka (Japan)">
 		<description>Kiteretsu Daihyakka (Japan)</description>
@@ -7157,7 +7156,7 @@
 	<game name="Kung-Fu Heroes (USA)">
 		<description>Kung-Fu Heroes (USA)</description>
 		<release name="Kung-Fu Heroes (USA)" region="USA"/>
-		<rom name="Kung-Fu Heroes (USA).nes" size="65536" crc="aa74a4d8" md5="6acc48763f67b72abb79d30af9dcf988" sha1="d4e928142290da7abaed485051946e69aab95a24" status="verified"/>
+		<rom name="Kung-Fu Heroes (USA).nes" size="65536" crc="aa74a4d8" md5="6acc48763f67b72abb79d30af9dcf988" sha1="d4e928142290da7abaed485051946e69aab95a24"/>
 	</game>
 	<game name="Super Chinese (Japan)" cloneof="Kung-Fu Heroes (USA)">
 		<description>Super Chinese (Japan)</description>
@@ -8044,7 +8043,7 @@
 	<game name="Yoshi (USA)" cloneof="Mario &amp; Yoshi (Europe)">
 		<description>Yoshi (USA)</description>
 		<release name="Yoshi (USA)" region="USA"/>
-		<rom name="Yoshi (USA).nes" size="163840" crc="e7ead93b" md5="7475cb5f648d86da02d3f6e4197c974c" sha1="4e48695ed4ef4db19fbb3806d25397c371a479cd" status="verified"/>
+		<rom name="Yoshi (USA).nes" size="163840" crc="e7ead93b" md5="7475cb5f648d86da02d3f6e4197c974c" sha1="4e48695ed4ef4db19fbb3806d25397c371a479cd"/>
 	</game>
 	<game name="Yoshi no Tamago (Japan)" cloneof="Mario &amp; Yoshi (Europe)">
 		<description>Yoshi no Tamago (Japan)</description>
@@ -8635,7 +8634,7 @@
 	<game name="Mighty Bomb Jack (Europe)">
 		<description>Mighty Bomb Jack (Europe)</description>
 		<release name="Mighty Bomb Jack (Europe)" region="EUR"/>
-		<rom name="Mighty Bomb Jack (Europe).nes" size="65536" crc="842a3fd9" md5="337422e3f827763cd03b59caba401c36" sha1="fd45a6f9710258caa30e42b0ef792d5779610260" status="verified"/>
+		<rom name="Mighty Bomb Jack (Europe).nes" size="65536" crc="842a3fd9" md5="337422e3f827763cd03b59caba401c36" sha1="fd45a6f9710258caa30e42b0ef792d5779610260"/>
 	</game>
 	<game name="Mighty Bomb Jack (Japan)" cloneof="Mighty Bomb Jack (Europe)">
 		<description>Mighty Bomb Jack (Japan)</description>
@@ -9657,45 +9656,6 @@
 		<description>Pac-Land (World) (Namcot Collection, Namco Museum Archives Vol 2)</description>
 		<rom name="Pac-Land (World) (Namcot Collection, Namco Museum Archives Vol 2).nes" size="40960" crc="70cca102" md5="063511a533e1e627cbbae7addf85f7ad" sha1="710cef093620ab126402b1e7d0aaf1d61d031aeb" status="verified"/>
 	</game>
-	<game name="Pac-Man (Europe)">
-		<description>Pac-Man (Europe)</description>
-		<release name="Pac-Man (Europe)" region="EUR"/>
-		<rom name="Pac-Man (Europe).nes" size="24576" crc="81210f63" md5="397164fddfbb1ba87734f6f56887dfab" sha1="d1ea0bb3e919c5b2e5fe3a13d1cdab9849db473c"/>
-	</game>
-	<game name="Pac-Man (Japan) (En)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (Japan) (En)</description>
-		<rom name="Pac-Man (Japan) (En).nes" size="24576" crc="3e95ba25" md5="991118f99cde0ad3fb2bf452d038e93b" sha1="3816ed83b51d53691ee4e4bd3428847df97e58d6" status="verified"/>
-	</game>
-	<game name="Pac-Man (Japan) (En) (Rev A)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (Japan) (En) (Rev A)</description>
-		<rom name="Pac-Man (Japan) (En) (Rev A).nes" size="24576" crc="5cdb2823" md5="e4cc2e365fe5d0a43bb538981ab37bfd" sha1="2716ea4476fd4c6cdcbbf184f94558b5f233b3ae" status="verified"/>
-	</game>
-	<game name="Pac-Man (USA) (Namco)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (USA) (Namco)</description>
-		<release name="Pac-Man (USA) (Namco)" region="USA"/>
-		<rom name="Pac-Man (USA) (Namco).nes" size="24576" crc="9e4e9cc2" md5="ca606bd8a875a396d52735c3bb84fa67" sha1="92c3361b9e3b28a51fd30e7845c988a6d576ee65"/>
-	</game>
-	<game name="Pac-Man (USA) (Tengen)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (USA) (Tengen)</description>
-		<rom name="Pac-Man (USA) (Tengen).nes" size="24576" crc="a9bbf44f" md5="c4ae6cc4e981a8316429572409018dc8" sha1="a34e68372082513209a795786c8eea493cc2cd14" status="verified"/>
-	</game>
-	<game name="Pac-Man (USA) (Tengen) (Unl)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (USA) (Tengen) (Unl)</description>
-		<rom name="Pac-Man (USA) (Tengen) (Unl).nes" size="24576" crc="9d38f8f9" md5="1a860b28ad960dfd700b066924341edb" sha1="ab5dc98f1d6d220708f5dec4e87bec175bb635ab"/>
-	</game>
-	<game name="Pac-Man (Japan) (En) (Rev B)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (Japan) (En) (Rev B)</description>
-		<release name="Pac-Man (Japan) (En) (Rev B)" region="JPN"/>
-		<rom name="Pac-Man (Japan) (En) (Rev B).nes" size="24576" crc="2c7d68f3" md5="10a12b5840a13e8f3a61885c44bf3b8d" sha1="bf49e53c6da49ddf0bf947dd82140573aeb59103" status="verified"/>
-	</game>
-	<game name="Pac-Man (USA) (Virtual Console)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (USA) (Virtual Console)</description>
-		<rom name="Pac-Man (USA) (Virtual Console).nes" size="24576" crc="9b080b6e" md5="bf3a94cd5fc5a8a5733fb5776831fb62" sha1="e273b2533c0d73efed21498564eb82b6b932a205"/>
-	</game>
-	<game name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)" cloneof="Pac-Man (Europe)">
-		<description>Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)</description>
-		<rom name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1).nes" size="24576" crc="43f7cfd5" md5="a9cbf8f3becf919a0228abb8b88ecf9c" sha1="ac7cdf3cb7ee2f1fe71024474c0762361ca73825" status="verified"/>
-	</game>
 	<game name="Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)">
 		<description>Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)</description>
 		<release name="Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)" region="EUR"/>
@@ -10331,7 +10291,7 @@
 	<game name="Super Contra (Japan)" cloneof="Probotector II - Return of the Evil Forces (Europe)">
 		<description>Super Contra (Japan)</description>
 		<release name="Super Contra (Japan)" region="JPN"/>
-		<rom name="Super Contra (Japan).nes" size="262144" crc="b1250d0c" md5="44d7bf041f64841dd7c1b1e270ea67d8" sha1="c7361a39716dcd0364d0ad518d5d5ebd4ba56f87" status="verified"/>
+		<rom name="Super Contra (Japan).nes" size="262144" crc="b1250d0c" md5="44d7bf041f64841dd7c1b1e270ea67d8" sha1="c7361a39716dcd0364d0ad518d5d5ebd4ba56f87"/>
 	</game>
 	<game name="Project Q (Japan)">
 		<description>Project Q (Japan)</description>
@@ -12377,11 +12337,6 @@
 		<description>Sted - Iseki Wakusei no Yabou (Japan)</description>
 		<release name="Sted - Iseki Wakusei no Yabou (Japan)" region="JPN"/>
 		<rom name="Sted - Iseki Wakusei no Yabou (Japan).nes" size="262144" crc="f19a11af" md5="6dee1d350b80d31ef06bab1eecf7e6ec" sha1="70925ef783a6716fad9c6706ba9751d721250fce" status="verified"/>
-	</game>
-	<game name="Steins;Gate (USA) (Nintendo Switch)">
-		<description>Steins;Gate (USA) (Nintendo Switch)</description>
-		<release name="Steins;Gate (USA) (Nintendo Switch)" region="USA"/>
-		<rom name="Steins;Gate (USA) (Nintendo Switch).nes" size="786432" crc="c52d10ab" md5="2c6b48eed7d46def1cbbba5fcbcebe42" sha1="087e66f36f2ed2825df2ed41d279d42d4dee31d9"/>
 	</game>
 	<game name="Stick Hunter - Exciting Ice Hockey (Japan)">
 		<description>Stick Hunter - Exciting Ice Hockey (Japan)</description>
@@ -14443,7 +14398,7 @@
 	<game name="Wario's Woods (Europe)">
 		<description>Wario's Woods (Europe)</description>
 		<release name="Wario's Woods (Europe)" region="EUR"/>
-		<rom name="Wario's Woods (Europe).nes" size="524288" crc="668d1715" md5="04e683b752e2768d4ca2f66550da2fd2" sha1="1cec3b2e93e81f0353be25ad139addae881dc69a" status="verified"/>
+		<rom name="Wario's Woods (Europe).nes" size="524288" crc="668d1715" md5="04e683b752e2768d4ca2f66550da2fd2" sha1="1cec3b2e93e81f0353be25ad139addae881dc69a"/>
 	</game>
 	<game name="Wario no Mori (Japan) (En)" cloneof="Wario's Woods (Europe)">
 		<description>Wario no Mori (Japan) (En)</description>
