@@ -17,9 +17,13 @@ rp_module_repo="git https://github.com/amadvance/advancemame v3.9"
 rp_module_section="opt"
 rp_module_flags="sdl2 sdl1-videocore"
 
-# function install_bin_advmame-joy() {
-#     downloadAndExtract "<url>" "$md_inst" --strip-components 1
-# }
+function __binary_url_advmame-joy() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/advmame-joy-rpi4-buster.tar.gz"
+}
+
+function install_bin_advmame-joy() {
+    downloadAndExtract "$(__binary_url_advmame-joy)" "$md_inst" --strip-components 1
+}
 
 function depends_advmame-joy() {
     depends_advmame
