@@ -32,7 +32,7 @@ install_emulator_selections() {
   # This is done in one batch because it's a bit slow otherwise
   crudini --merge "$emulators_config_file" < <(
     while IFS="$tab" read -r rom_name source_emulator; do
-      local target_emulator=${emulators["$emulator/emulator"]}
+      local target_emulator=${emulators["$source_emulator/emulator"]}
       if [ -n "$target_emulator" ]; then
         echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$target_emulator\""
       fi
