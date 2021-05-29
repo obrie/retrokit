@@ -18,13 +18,17 @@ scrape() {
     # Only scrape roms we have no data for
     /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}"
   else
-    # Scrape existing roms that have missing textual / artwork resources
+    # Scrape existing roms that have missing textual / artwork resources.  This is done in case
+    # there were errors scraping previously.
 
     # Remove existing Skyscraper reports
     find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
 
-    # Generate new reports of missing resources
-    /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=title,platform,cover,screenshot,wheel,marquee "${extra_args[@]}"
+    # Generate new reports of missing resources.  We look at only 2 resources as
+    # indicators of a prior issue:
+    # * Missing title means we likely missed all the textual content
+    # * Missing screenshot means we likely missed the media content
+    /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=title,screenshot "${extra_args[@]}"
 
     # Generate aggregate list of roms
     local aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
