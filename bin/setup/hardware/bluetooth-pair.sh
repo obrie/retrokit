@@ -32,6 +32,7 @@ pair_device() {
 
         # Shut down scanner
         kill $scan_pid
+        rm -f "$tmp_dir/bluetooth.out"
 
         # Pair device
         echo "Pairing with $mac_address"

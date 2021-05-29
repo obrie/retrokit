@@ -130,7 +130,7 @@
       "resources": {
         "dat": {
           "source": "{url}/mame2015.xml",
-          "target": "$HOME/retrokit/tmp/mame2015.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame2015.dat"
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
