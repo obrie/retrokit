@@ -20,6 +20,7 @@ scrape() {
   else
     # Scrape existing roms that have missing textual / artwork resources.  This is done in case
     # there were errors scraping previously.
+    mkdir -p '/opt/retropie/configs/all/skyscraper/reports/'
 
     # Remove existing Skyscraper reports
     find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
