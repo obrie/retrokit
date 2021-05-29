@@ -13,7 +13,7 @@ install() {
   sudo pip3 install crudini==0.9.3
 
   # Env editor
-  download 'https://raw.githubusercontent.com/bashup/dotenv/d71c9d786fe193f43f1cb57c6b4a152ebb01ba60/dotenv' "$tmp_dir/dotenv"
+  download 'https://raw.githubusercontent.com/bashup/dotenv/d71c9d786fe193f43f1cb57c6b4a152ebb01ba60/dotenv' '/usr/local/bin/dotenv' as_sudo=true
 
   # JSON reader
   sudo apt install -y jq
@@ -21,7 +21,7 @@ install() {
 
 uninstall() {
   sudo apt remove -y jq
-  rm -f "$tmp_dir/dotenv"
+  sudo rm -f /usr/local/bin/dotenv
   sudo pip3 uninstall crudini
   sudo apt remove -y python3-pip
 }

@@ -26,8 +26,8 @@ if [ -f "$app_dir/.env" ]; then
 fi
 
 # Add dotenv
-if [ -f "$tmp_dir/dotenv" ]; then
-  . "$tmp_dir/dotenv"
+if [ -f '/usr/local/bin/dotenv' ]; then
+  . '/usr/local/bin/dotenv'
 fi
 
 ##############
@@ -133,7 +133,7 @@ env_merge() {
 
   while IFS="$tab" read -r env_line; do
     if [ "$as_sudo" == 'true' ]; then
-      sudo bash -c ". $tmp_dir/dotenv; .env -f \"$target\" set $env_line"
+      sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
     else
       .env -f "$target" set $env_line
     fi
