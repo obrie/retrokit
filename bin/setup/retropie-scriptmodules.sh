@@ -6,16 +6,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  while read -r filepath; do
-    local source_path="$bin_dir/scriptmodules/$filepath"
-    local target_path="$HOME/RetroPie-Setup/ext/retrokit/scriptmodules/$filepath"
+  # Run the uninstall command so that any old scriptmodules are gone
+  uninstall
 
-    # Remove any backup files for the scriptmodule
-    rm -f "$target_path.rk-src"
-
-    # Copy over the scriptmodule
-    file_cp "$source_path" "$target_path" envsubst=false
-  done < <(find "$bin_dir/scriptmodules" -type f -printf '%P\n')
+  mkdir "$HOME/RetroPie-Setup/ext/retrokit"
+  cp -R "$bin_dir/scriptmodules" "$HOME/RetroPie-Setup/ext/retrokit"
 }
 
 uninstall() {
