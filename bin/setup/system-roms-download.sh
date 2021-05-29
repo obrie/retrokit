@@ -53,15 +53,10 @@ install_emulator_selections() {
   done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
 }
 
-clear_cache() {
-  rm -f "$system_tmp_dir/romkit-list.cache"
-}
-
 # Download roms from a remote source
 install() {
   install_roms
   install_emulator_selections
-  clear_cache
 }
 
 uninstall() {
