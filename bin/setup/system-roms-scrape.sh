@@ -24,7 +24,7 @@ scrape() {
     find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
 
     # Generate new reports of missing resources
-    for resource_type in textual artwork; do
+    for resource_type in title platform cover screenshot wheel marquee; do
       /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=$resource_type "${extra_args[@]}"
     done
 
@@ -36,7 +36,8 @@ scrape() {
       /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --fromfile "$aggregate_report_file" "${extra_args[@]}"
     fi
 
-    rm "$aggregate_report_file"
+    # Clean up reports
+    find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f "{}" \;
   fi
 }
 
