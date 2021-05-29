@@ -33,7 +33,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64 (Tapes).dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64 (Tapes) (Parent-Clone).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -55,7 +55,7 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - 64 (Parent-Clone).dat"
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

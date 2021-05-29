@@ -36,7 +36,7 @@
       "url": "$ROMSET_NDS_NOINTRO_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS.dat"
+          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS (Decrypted) (Parent-Clone).dat"
         },
         "machine": {
           "source": "{url}/{machine}.zip",
