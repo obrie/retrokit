@@ -84,6 +84,7 @@ vacuum() {
 }
 
 install() {
+  scrape_new
   scrape_missing_media
   build_gamelist
 }
