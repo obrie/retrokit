@@ -13,15 +13,19 @@ romkit_cli() {
 }
 
 list() {
-  romkit_cli list --log-level ERROR
+  romkit_cli list ${@}
 }
 
 vacuum() {
-  romkit_cli vacuum --log-level ERROR
+  romkit_cli vacuum ${@}
 }
 
 organize() {
-  romkit_cli organize --log-level ERROR
+  romkit_cli organize ${@}
 }
 
-"$2" "${@:3}"
+if [[ $# -gt 2 ]]; then
+  "$2" "${@:3}"
+else
+  "$2" --log-level ERROR
+fi
