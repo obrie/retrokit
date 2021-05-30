@@ -48,7 +48,7 @@ class CategoryFilter(SubstringFilter):
             data = json.load(file)
             for game in data:
                 if 'genre' in game:
-                    self.categories[game['name']] = game['genre']
+                    self.categories[game['name']] = game['genre'].lower()
 
     def values(self, machine):
         return {self.categories.get(machine.name)}
@@ -67,7 +67,7 @@ class LanguageFilter(SubstringFilter):
             data = json.load(file)
             for game in data:
                 if 'languages' in game:
-                    self.languages[game['name']] = ' '.join(game['languages'])
+                    self.languages[game['name']] = ' '.join(game['languages']).lower()
 
     def values(self, machine):
         return {self.languages.get(machine.name)}

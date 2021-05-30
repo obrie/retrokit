@@ -112,7 +112,7 @@ class CategoryFilter(SubstringFilter):
         config = read_config(self.config_path)
         for section in config.sections():
             for name, value in config.items(section, raw=True):
-                self.categories[name] = section
+                self.categories[name] = section.lower()
 
     def values(self, machine):
         return {self.categories.get(machine.name)}

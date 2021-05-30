@@ -59,8 +59,13 @@ class ExactFilter(BaseFilter):
         return len(self.filter_values & machine_values) > 0
 
 
-# Filter values can be just a substring of values from the machine
+# Filter values can be just a substring of values from the machine.
+# 
+# This is not case-sensitive.
 class SubstringFilter(BaseFilter):
+    def load(self) -> None:
+        self.filter_values = set(map(lambda value: value and value.lower(), self.filter_values))
+
     def match(self, machine: Machine) -> bool:
         machine_values = self.values(machine)
 
