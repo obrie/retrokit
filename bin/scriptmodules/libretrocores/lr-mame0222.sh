@@ -13,7 +13,7 @@ function __binary_url_lr-mame0222() {
 }
 
 function install_bin_lr-mame0222() {
-    downloadAndExtract "$(__binary_url_advmame-joy)" "$md_inst" --strip-components 1
+    downloadAndExtract "$(__binary_url_lr-mame0222)" "$md_inst" --strip-components 1
 }
 
 function depends_lr-mame0222() {
