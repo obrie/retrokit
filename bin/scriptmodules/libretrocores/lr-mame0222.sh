@@ -8,9 +8,13 @@ rp_module_repo="git https://github.com/libretro/mame.git lrmame0222"
 rp_module_section="exp"
 rp_module_flags=""
 
-# function install_bin_lr-mame0222() {
-#     downloadAndExtract "<url>" "$md_inst" --strip-components 1
-# }
+function __binary_url_lr-mame0222() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/lr-mame0222-rpi4-buster.tar.gz"
+}
+
+function install_bin_lr-mame0222() {
+    downloadAndExtract "$(__binary_url_advmame-joy)" "$md_inst" --strip-components 1
+}
 
 function depends_lr-mame0222() {
     depends_lr-mame
