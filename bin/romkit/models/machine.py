@@ -30,7 +30,7 @@ class Machine:
     ) -> None:
         self.romset = romset
         self.name = name
-        self.description = description.lower()
+        self.description = description
         self.orientation = orientation
         self.parent_name = parent_name
         self.bios_name = bios_name

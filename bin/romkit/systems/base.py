@@ -1,4 +1,4 @@
-from romkit.filters import CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
+from romkit.filters import BaseFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
@@ -43,7 +43,7 @@ class BaseSystem:
         ]
 
         # Priority order for choosing a machine (e.g. 1G1R)
-        self.machine_priority = config['roms'].get('priority', set())
+        self.machine_priority = list(BaseFilter.normalize(config['roms'].get('priority', [])))
 
         # Emulator compatibility
         if 'emulators' in config['roms']:
@@ -163,9 +163,10 @@ class BaseSystem:
     def _sort_machines(self, machine: Machine) -> Tuple[int, int]:
         # Default priority is lowest
         priority_index = len(self.machine_priority)
+        flags_str = machine.flags_str.lower()
 
         for index, search_string in enumerate(self.machine_priority):
-            if search_string in machine.flags_str:
+            if search_string in flags_str:
                 # Found a matching priority string: track the index
                 priority_index = index
                 break

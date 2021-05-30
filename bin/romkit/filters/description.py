@@ -15,4 +15,4 @@ class FlagFilter(SubstringFilter):
     name = 'flags'
 
     def values(self, machine: Machine) -> set:
-        return machine.flags
+        return {machine.flags_str}

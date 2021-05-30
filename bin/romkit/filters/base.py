@@ -22,6 +22,7 @@ class BaseFilter:
 
         self.download()
         self.load()
+        self.filter_values = set(self.normalize(self.filter_values))
 
     # Does this filter allow the given machine?
     def allow(self, machine: Machine) -> bool:
@@ -51,11 +52,17 @@ class BaseFilter:
     def match(self, machine: Machine) -> bool:
         raise NotImplementedError
 
+    # Normalizes values so that lowercase/uppercase differences are
+    # ignored during the matching process
+    @staticmethod
+    def normalize(values):
+        return map(lambda value: value and value.lower(), values)
+
 
 # Filter values must match exact values from the machine
 class ExactFilter(BaseFilter):
     def match(self, machine: Machine) -> bool:
-        machine_values = self.values(machine)
+        machine_values = set(self.normalize(self.values(machine)))
         return len(self.filter_values & machine_values) > 0
 
 
@@ -63,14 +70,14 @@ class ExactFilter(BaseFilter):
 # 
 # This is not case-sensitive.
 class SubstringFilter(BaseFilter):
-    def load(self) -> None:
-        self.filter_values = set(map(lambda value: value and value.lower(), self.filter_values))
-
     def match(self, machine: Machine) -> bool:
-        machine_values = self.values(machine)
-
+        machine_values = self.normalize(self.values(machine))
         for machine_value in machine_values:
-            if machine_value and any(filter_value in machine_value for filter_value in self.filter_values):
+            if machine_value and any(
+                machine_value == filter_value if machine_value is None or filter_value is None
+                else filter_value in machine_value
+                for filter_value in self.filter_values
+            ):
                 return True
 
         return False
