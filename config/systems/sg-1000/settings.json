@@ -45,16 +45,16 @@
   ],
   "roms": {
     "priority": [
-      "english",
-      "europe",
-      "australia"
+      "English",
+      "Europe",
+      "Australia"
     ],
     "filters": {
       "flags": [
-        "australia",
-        "english",
-        "europe",
-        "new zealand"
+        "Australia",
+        "English",
+        "Europe",
+        "New Zealand"
       ],
       "!flags": [
         "beta",

@@ -51,23 +51,40 @@
     }
   ],
   "roms": {
+    "priority": [
+      "USA",
+      "Europe"
+    ],
     "filters": {
-      "names": [
-        "Adventures of Batman and Robin, The (USA)",
-        "Batman Returns (USA)",
-        "Cliffhanger (USA)",
-        "Earthworm Jim - Special Edition (USA) (RE)",
-        "Final Fight CD (USA)",
-        "Mad Dog II - The Lost Gold (USA)",
-        "Mad Dog McCree (USA)",
-        "Mortal Kombat (USA)",
-        "NBA Jam (USA)",
-        "Prince of Persia (USA)",
-        "Road Avenger (USA)",
-        "Sonic CD (USA)",
-        "Star Wars - Rebel Assault (USA)",
-        "Terminator, The (USA)",
-        "WWF - Rage in the Cage (USA)"
+      "flags": [
+        "Australia",
+        "Europe",
+        "USA"
+      ],
+      "!flags": [
+        "beta",
+        "demo",
+        "proto"
+      ],
+      "!keywords": [
+        "sampler"
+      ],
+      "titles": [
+        "Adventures of Batman and Robin, The",
+        "Batman Returns",
+        "Cliffhanger",
+        "Earthworm Jim - Special Edition",
+        "Final Fight CD",
+        "Mad Dog II - The Lost Gold",
+        "Mad Dog McCree",
+        "Mortal Kombat",
+        "NBA Jam",
+        "Prince of Persia",
+        "Road Avenger",
+        "Sonic CD",
+        "Star Wars - Rebel Assault",
+        "Terminator, The",
+        "WWF - Rage in the Cage"
       ]
     },
     "dirs": [

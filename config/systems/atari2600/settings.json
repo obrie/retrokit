@@ -45,12 +45,16 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA",
+      "Europe",
+      "Canada"
     ],
     "filters": {
       "flags": [
-        "usa",
-        "europe"
+        "Australia",
+        "Canada",
+        "Europe",
+        "USA"
       ],
       "!flags": [
         "beta",
@@ -76,31 +80,30 @@
       {
         "path": "$HOME/RetroPie/roms/atari2600",
         "filters": {
-          "names": [
-            "Asteroids (Japan, USA)",
-            "Breakout (Europe)",
-            "Breakout ~ Breakaway IV (Japan, USA)",
-            "BurgerTime (USA)",
-            "California Games (USA)",
-            "Centipede (Japan, USA)",
-            "Donkey Kong (USA)",
-            "Double Dragon (USA)",
-            "Frogger (USA)",
-            "Ghostbusters (USA)",
-            "Jungle Hunt (USA)",
-            "Mario Bros. (USA)",
-            "Missile Command (USA)",
-            "Ms. Pac-Man (USA)",
-            "Pac-Man (USA)",
-            "Pitfall II - Lost Caverns (USA)",
-            "Pitfall! - Pitfall Harry's Jungle Adventure (USA)",
-            "Pole Position (USA)",
-            "Popeye (USA)",
-            "Space Invaders (USA)",
-            "Summer Games (USA)",
-            "Super Breakout (USA)",
-            "Winter Games (USA)",
-            "Zaxxon (USA)"
+          "titles": [
+            "Asteroids",
+            "Breakout",
+            "BurgerTime",
+            "California Games",
+            "Centipede",
+            "Donkey Kong",
+            "Double Dragon",
+            "Frogger",
+            "Ghostbusters",
+            "Jungle Hunt",
+            "Mario Bros.",
+            "Missile Command",
+            "Ms. Pac-Man",
+            "Pac-Man",
+            "Pitfall II - Lost Caverns",
+            "Pitfall! - Pitfall Harry's Jungle Adventure",
+            "Pole Position",
+            "Popeye",
+            "Space Invaders",
+            "Summer Games",
+            "Super Breakout",
+            "Winter Games",
+            "Zaxxon"
           ]
         }
       }

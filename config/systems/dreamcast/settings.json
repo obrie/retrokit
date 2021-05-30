@@ -52,59 +52,63 @@
     }
   ],
   "roms": {
+    "priority": [
+      "USA",
+      "World"
+    ],
     "filters": {
-      "names": [
-        "18 Wheeler - American Pro Trucker (USA)",
-        "Chicken Run (USA)",
-        "Confidential Mission (USA)",
-        "Crazy Taxi (USA)",
-        "Crazy Taxi 2 (USA)",
-        "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (USA)",
-        "Grand Theft Auto 2 (USA)",
-        "House of the Dead 2, The (USA)",
-        "Jet Grind Radio (USA)",
-        "MagForce Racing (USA) (En,Fr,De,Es,It)",
-        "Monaco Grand Prix (USA)",
-        "Mortal Kombat Gold (USA)",
-        "NFL Blitz 2001 (USA)",
-        "Pro Pinball Trilogy (Europe)",
-        "Quake III - Arena (USA)",
-        "Rayman 2 - The Great Escape (USA) (En,Fr,De,Es,It)",
-        "Re-Volt (USA)",
-        "Rippin' Riders (USA)",
-        "Sega Rally 2 (USA)",
-        "Sonic Adventure (USA)",
-        "Sonic Adventure 2 (USA) (En,Ja,Fr,De,Es)",
-        "South Park Rally (USA)",
-        "Star Wars - Episode I - Jedi Power Battles (USA)",
-        "Star Wars - Episode I - Racer (USA)",
-        "Super Magnetic Neo (USA)",
-        "Test Drive 6 (USA)",
-        "Test Drive V-Rally (USA) (En,Fr,De)",
-        "Tony Hawk's Pro Skater (USA)",
-        "Tony Hawk's Pro Skater 2 (USA)",
-        "Tomb Raider - The Last Revelation (USA)",
-        "Tomb Raider Chronicles (USA)",
-        "Typing of the Dead, The (USA)",
-        "Unreal Tournament (USA) (En,Fr,De,Es,It)",
-        "Worms Armageddon (USA) (En,Fr,De,Nl,Sv,No,Da)"
+      "flags": [
+        "USA",
+        "Europe",
+        "World"
       ],
-      "#flags": [
-        "usa",
-        "europe",
-        "world"
-      ],
-      "#!flags": [
+      "!flags": [
         "beta",
         "disc",
         "unl"
       ],
-      "#!keywords": [
+      "!keywords": [
         "dreamkey",
         "dreamon",
         "euro edition",
         "magazine",
         "browser"
+      ],
+      "titles": [
+        "18 Wheeler - American Pro Trucker",
+        "Chicken Run",
+        "Confidential Mission",
+        "Crazy Taxi",
+        "Crazy Taxi 2",
+        "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue!",
+        "Grand Theft Auto 2",
+        "House of the Dead 2, The",
+        "Jet Grind Radio",
+        "MagForce Racing",
+        "Monaco Grand Prix",
+        "Mortal Kombat Gold",
+        "NFL Blitz 2001",
+        "Pro Pinball Trilogy",
+        "Quake III - Arena",
+        "Rayman 2 - The Great Escape",
+        "Re-Volt",
+        "Rippin' Riders",
+        "Sega Rally 2",
+        "Sonic Adventure",
+        "Sonic Adventure 2",
+        "South Park Rally",
+        "Star Wars - Episode I - Jedi Power Battles",
+        "Star Wars - Episode I - Racer",
+        "Super Magnetic Neo",
+        "Test Drive 6",
+        "Test Drive V-Rally",
+        "Tony Hawk's Pro Skater",
+        "Tony Hawk's Pro Skater 2",
+        "Tomb Raider - The Last Revelation",
+        "Tomb Raider Chronicles",
+        "Typing of the Dead, The",
+        "Unreal Tournament",
+        "Worms Armageddon"
       ]
     },
     "dirs": [

@@ -73,14 +73,14 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA"
     ],
     "filters": {
       "romsets": [
         "nointro"
       ],
       "flags": [
-        "usa"
+        "USA"
       ],
       "!flags": [
         "unl"

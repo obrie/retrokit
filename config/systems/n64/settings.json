@@ -55,14 +55,14 @@
       "filter": true
     },
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "beta",
@@ -84,6 +84,7 @@
         "Quake II",
         "Rayman 2 - The Great Escape",
         "Top Gear Hyper-Bike",
+        "Top Gear Hyper Bike",
         "Vigilante 8",
         "Vigilante 8 - 2nd Offense",
         "Waialae Country Club - True Golf Classics"
@@ -94,41 +95,40 @@
       {
         "path": "$HOME/RetroPie/roms/n64",
         "filters": {
-          "names": [
-            "Carmageddon 64 (USA)",
-            "Cruis'n USA (USA)",
-            "Donkey Kong 64 (USA)",
-            "Duke Nukem 64 (USA)",
-            "Earthworm Jim 3D (USA)",
-            "Excitebike 64 (USA)",
-            "Indiana Jones and the Infernal Machine (USA)",
-            "Mario Kart 64 (USA)",
-            "Mario Party (USA)",
-            "Mario Party 2 (USA)",
-            "Mario Party 3 (USA)",
-            "Mega Man 64 (USA)",
-            "Mortal Kombat 4 (USA)",
-            "Mortal Kombat Trilogy (USA)",
-            "NBA Jam 2000 (USA)",
-            "NFL Blitz (USA)",
-            "NFL Blitz 2000 (USA)",
-            "Paper Mario (USA)",
-            "Quake (USA)",
-            "Re-Volt (USA)",
-            "Snowboard Kids (USA)",
-            "Snowboard Kids 2 (USA)",
-            "South Park Rally (USA)",
-            "South Park (USA)",
-            "Stunt Racer 64 (USA)",
-            "Super Mario 64 (USA)",
-            "Super Smash Bros. (USA)",
-            "Tony Hawk's Pro Skater (USA)",
-            "Tony Hawk's Pro Skater 2 (USA)",
-            "Top Gear Hyper-Bike (USA)",
-            "Top Gear Overdrive (USA)",
-            "Top Gear Rally 2 (USA)",
-            "Top Gear Rally (USA)",
-            "Worms Armageddon (USA) (En,Fr,Es)"
+          "titles": [
+            "Carmageddon 64",
+            "Cruis'n USA",
+            "Donkey Kong 64",
+            "Duke Nukem 64",
+            "Earthworm Jim 3D",
+            "Excitebike 64",
+            "Indiana Jones and the Infernal Machine",
+            "Mario Kart 64",
+            "Mario Party",
+            "Mario Party 2",
+            "Mario Party 3",
+            "Mega Man 64",
+            "Mortal Kombat 4",
+            "Mortal Kombat Trilogy",
+            "NBA Jam 2000",
+            "NFL Blitz",
+            "NFL Blitz 2000",
+            "Paper Mario",
+            "Quake",
+            "Re-Volt",
+            "Snowboard Kids",
+            "Snowboard Kids 2",
+            "South Park Rally",
+            "South Park",
+            "Stunt Racer 64",
+            "Super Mario 64",
+            "Super Smash Bros.",
+            "Tony Hawk's Pro Skater",
+            "Tony Hawk's Pro Skater 2",
+            "Top Gear Overdrive",
+            "Top Gear Rally 2",
+            "Top Gear Rally",
+            "Worms Armageddon"
           ]
         }
       }

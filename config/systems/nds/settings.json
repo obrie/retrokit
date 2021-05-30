@@ -48,14 +48,23 @@
   ],
   "roms": {
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "beta",
+        "demo",
+        "kiosk",
+        "proto"
+      ],
+      "!keywords": [
+        "bios"
       ],
       "titles": [
         "Advance Wars - Days of Ruin",

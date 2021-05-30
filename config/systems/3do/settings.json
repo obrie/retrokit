@@ -49,23 +49,23 @@
   ],
   "roms": {
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
-      "names": [
-        "Blade Force (USA)",
-        "Captain Quazar (USA)",
-        "Corpse Killer (USA)",
-        "Demolition Man (USA)",
-        "Gex (USA, Europe)",
-        "Return Fire (USA)",
-        "Road Rash (USA)"
+      "titles": [
+        "Blade Force",
+        "Captain Quazar",
+        "Corpse Killer",
+        "Demolition Man",
+        "Gex",
+        "Return Fire",
+        "Road Rash"
       ],
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "demo",

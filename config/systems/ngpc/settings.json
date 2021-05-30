@@ -45,13 +45,14 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "proto"

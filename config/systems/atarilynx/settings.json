@@ -54,12 +54,12 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA"
     ],
     "filters": {
       "flags": [
-        "usa",
-        "europe"
+        "Europe",
+        "USA"
       ],
       "!flags": [
         "beta",
@@ -68,6 +68,9 @@
       ],
       "!keywords": [
         "bios"
+      ],
+      "!titles": [
+        "Lynx II Production Test Program"
       ]
     },
     "files": {
@@ -78,22 +81,22 @@
       {
         "path": "$HOME/RetroPie/roms/atarilynx",
         "filters": {
-          "names": [
-            "Batman Returns (USA, Europe)",
-            "Battle Wheels (USA, Europe)",
-            "Blue Lightning (USA, Europe)",
-            "California Games (USA, Europe)",
-            "Checkered Flag (USA, Europe)",
-            "Lemmings (USA, Europe)",
-            "Ms. Pac-Man (USA, Europe)",
-            "Ninja Gaiden (USA, Europe)",
-            "Pac-Land (USA, Europe)",
-            "Paperboy (USA, Europe)",
-            "Rampage (USA, Europe)",
-            "Scrapyard Dog (USA, Europe)",
-            "S.T.U.N. Runner (USA, Europe)",
-            "Super Asteroids, Missile Command (USA, Europe)",
-            "Xenophobe (USA, Europe)"
+          "titles": [
+            "Batman Returns",
+            "Battle Wheels",
+            "Blue Lightning",
+            "California Games",
+            "Checkered Flag",
+            "Lemmings",
+            "Ms. Pac-Man",
+            "Ninja Gaiden",
+            "Pac-Land",
+            "Paperboy",
+            "Rampage",
+            "Scrapyard Dog",
+            "S.T.U.N. Runner",
+            "Super Asteroids, Missile Command",
+            "Xenophobe"
           ]
         }
       }

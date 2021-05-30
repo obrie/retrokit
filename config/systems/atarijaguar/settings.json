@@ -52,14 +52,14 @@
       "filter": true
     },
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "beta",

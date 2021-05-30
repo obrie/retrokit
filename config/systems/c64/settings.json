@@ -67,13 +67,15 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA",
+      "World"
     ],
     "filters": {
       "c64_dreams": [true],
       "flags": [
-        "usa",
-        "europe"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "arcade classic pak",
@@ -81,8 +83,14 @@
         "unl"
       ],
       "!keywords": [
-        "bios",
-        "strip poker"
+        "bios"
+      ],
+      "!titles": [
+        "Samantha Fox Strip Poker"
+      ],
+      "+titles": [
+        "Frogger",
+        "Pitstop"
       ]
     },
     "dirs": [
@@ -90,38 +98,38 @@
       {
         "path": "$HOME/RetroPie/roms/c64",
         "filters": {
-          "names": [
-            "180 (Europe) (Budget)",
-            "Arkanoid (Europe)",
-            "Arkanoid - Revenge of Doh (Europe)",
-            "Bubble Bobble (Europe) (Budget)",
-            "California Games (Europe)",
-            "Choplifter! (USA, Europe)",
-            "Double Dragon (USA, Europe) (HES)",
-            "Frogger (USA, Europe)",
-            "Ghostbusters (USA, Europe)",
-            "Great Giana Sisters, The (Europe)",
-            "Impossible Mission (Europe)",
-            "Karateka (Europe)",
-            "Jumpman Junior (USA, Europe)",
-            "Last Ninja, The (Europe)",
-            "Leaderboard (Europe)",
-            "Lode Runner (USA, Europe)",
-            "Mario Bros (Europe)",
-            "Paperboy (Europe)",
-            "Pitfall! (USA, Europe)",
-            "Pitfall II - Lost Caverns (USA, Europe)",
-            "Pitstop (USA, Europe)",
-            "Pitstop II (Europe)",
-            "Pole Position (USA, Europe)",
-            "Popeye (USA, Europe)",
-            "Rampage (Europe) (Ocean)",
-            "Summer Games (Europe)",
-            "Summer Games II (Europe)",
-            "Tetris (Europe)",
-            "Winter Games (Europe)",
-            "World Games (Europe)",
-            "Zaxxon (USA, Europe)"
+          "titles": [
+            "180",
+            "Arkanoid",
+            "Arkanoid - Revenge of Doh",
+            "Bubble Bobble",
+            "California Games",
+            "Choplifter!",
+            "Double Dragon",
+            "Frogger",
+            "Ghostbusters",
+            "Great Giana Sisters, The",
+            "Impossible Mission",
+            "Karateka",
+            "Jumpman Junior",
+            "Last Ninja, The",
+            "Leaderboard",
+            "Lode Runner",
+            "Mario Bros",
+            "Paperboy",
+            "Pitfall!",
+            "Pitfall II - Lost Caverns",
+            "Pitstop",
+            "Pitstop II",
+            "Pole Position",
+            "Popeye",
+            "Rampage",
+            "Summer Games",
+            "Summer Games II",
+            "Tetris",
+            "Winter Games",
+            "World Games",
+            "Zaxxon"
           ]
         }
       }

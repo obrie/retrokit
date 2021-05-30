@@ -53,21 +53,26 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA",
+      "Europe"
     ],
     "filters": {
       "flags": [
-        "usa",
-        "europe"
+        "Australia",
+        "Europe",
+        "USA"
       ],
       "!flags": [
         "proto",
         "unl"
       ],
       "!keywords": [
-        "bios",
-        "development card",
-        "test cartrige"
+        "bios"
+      ],
+      "!titles": [
+        "32 in 1",
+        "Atari 7800 Development Card",
+        "Diagnostic Test Cartrige"
       ]
     },
     "files": {

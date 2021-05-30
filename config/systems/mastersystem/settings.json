@@ -55,14 +55,14 @@
   ],
   "roms": {
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "beta",
@@ -72,6 +72,9 @@
       "!keywords": [
         "arcade smash hits",
         "bios"
+      ],
+      "!titles": [
+        "Casino Games"
       ]
     },
     "dirs": [
@@ -79,31 +82,31 @@
       {
         "path": "$HOME/RetroPie/roms/mastersystem",
         "filters": {
-          "names": [
-            "Aladdin (Europe, Brazil)",
-            "Back to the Future Part II (Europe, Brazil)",
-            "Back to the Future Part III (Europe)",
-            "Bubble Bobble ~ Dragon Maze (Europe, Brazil)",
-            "California Games ~ Jogos de Verao (USA, Europe, Brazil)",
-            "California Games II (Europe)",
-            "Double Dragon (World)",
-            "Ghostbusters (USA, Europe, Brazil)",
-            "Lion King, The (Europe, Brazil)",
-            "Mortal Kombat (Europe, Brazil)",
-            "Mortal Kombat II (Europe, Brazil)",
-            "Ms. Pac-Man (Europe, Brazil)",
-            "Paperboy (USA, Brazil)",
-            "Rambo - First Blood Part II (USA)",
-            "Rambo III (USA, Europe, Brazil)",
-            "Rampage (USA, Europe, Brazil)",
-            "Simpsons, The - Bart vs. the Space Mutants (Europe, Brazil)",
-            "Simpsons, The - Bart vs. the World (Europe, Brazil)",
-            "Sonic The Hedgehog (USA, Europe, Brazil)",
-            "Sonic The Hedgehog 2 (Europe, Brazil)",
-            "Summer Games ~ Jogos Olimpicos (Europe, Brazil)",
-            "Terminator 2 - Judgment Day (Europe)",
-            "Terminator, The (Europe)",
-            "Winter Olympics (Europe) (En,Fr,De,Es,It,Pt,Sv,No)"
+          "titles": [
+            "Aladdin",
+            "Back to the Future Part II",
+            "Back to the Future Part III",
+            "Bubble Bobble ~ Dragon Maze",
+            "California Games ~ Jogos de Verao",
+            "California Games II",
+            "Double Dragon",
+            "Ghostbusters",
+            "Lion King, The",
+            "Mortal Kombat",
+            "Mortal Kombat II",
+            "Ms. Pac-Man",
+            "Paperboy",
+            "Rambo - First Blood Part II",
+            "Rambo III",
+            "Rampage",
+            "Simpsons, The - Bart vs. the Space Mutants",
+            "Simpsons, The - Bart vs. the World",
+            "Sonic The Hedgehog",
+            "Sonic The Hedgehog 2",
+            "Summer Games ~ Jogos Olimpicos",
+            "Terminator 2 - Judgment Day",
+            "Terminator, The",
+            "Winter Olympics"
           ]
         }
       }

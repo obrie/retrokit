@@ -53,12 +53,12 @@
   ],
   "roms": {
     "priority": [
-      "usa"
+      "USA"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa"
+        "Europe",
+        "USA"
       ],
       "!flags": [
         "alt",
@@ -75,6 +75,9 @@
         "ColecoVision Monitor Test",
         "Final Test Cartridge",
         "Super Controller Tester"
+      ],
+      "+titles": [
+        "Pac-Man"
       ]
     },
     "dirs": [
@@ -82,23 +85,23 @@
       {
         "path": "$HOME/RetroPie/roms/coleco",
         "filters": {
-          "names": [
-            "Antarctic Adventure (USA, Europe)",
-            "BurgerTime (USA, Europe)",
-            "Choplifter! (USA)",
-            "Donkey Kong (USA)",
-            "Donkey Kong Junior (USA, Europe)",
-            "Frenzy (USA, Europe)",
-            "Frogger (USA)",
-            "Galaxian (USA)",
-            "Pac-Man (USA) (Proto)",
-            "Pitfall! (USA)",
-            "Pitstop (USA)",
-            "Popeye (USA)",
-            "River Raid (USA)",
-            "Smurf - Rescue in Gargamel's Castle (USA, Europe)",
-            "Star Wars - The Arcade Game (USA)",
-            "Zaxxon (USA, Europe)"
+          "titles": [
+            "Antarctic Adventure",
+            "BurgerTime",
+            "Choplifter!",
+            "Donkey Kong",
+            "Donkey Kong Junior",
+            "Frenzy",
+            "Frogger",
+            "Galaxian",
+            "Pac-Man",
+            "Pitfall!",
+            "Pitstop",
+            "Popeye",
+            "River Raid",
+            "Smurf - Rescue in Gargamel's Castle",
+            "Star Wars - The Arcade Game",
+            "Zaxxon"
           ]
         }
       }

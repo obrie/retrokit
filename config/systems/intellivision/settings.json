@@ -53,14 +53,14 @@
   ],
   "roms": {
     "priority": [
-      "usa",
-      "world"
+      "USA",
+      "World"
     ],
     "filters": {
       "flags": [
-        "europe",
-        "usa",
-        "world"
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "beta",
@@ -75,15 +75,19 @@
       "!titles": [
         "ABPA Backgammon ~ Backgammon",
         "Checkers ~ Draughts",
+        "Crosswords",
         "Factor Fun",
         "Jetsons' Ways With Words, The",
         "Las Vegas Poker & Blackjack",
         "Las Vegas Roulette",
         "Learning Fun I: Math Master Factor Fun",
+        "Learning Fun II - Word Wizard, Memory Fun",
         "Math Master",
+        "Memory Fun",
         "Triple Challenge - Chess, Checkers, Backgammon",
         "USCF Chess ~ Chess",
-        "Word Hunt"
+        "Word Hunt",
+        "Word Rockets"
       ]
     },
     "files": {
@@ -94,20 +98,20 @@
       {
         "path": "$HOME/RetroPie/roms/intellivision",
         "filters": {
-          "names": [
-            "Astrosmash (USA, Europe)",
-            "Bump 'n' Jump (USA)",
-            "BurgerTime (USA, Europe)",
-            "Donkey Kong (USA, Europe)",
-            "Donkey Kong Junior (USA, Europe)",
-            "Frogger (USA, Europe)",
-            "Pac-Man (USA) (Atarisoft)",
-            "Pinball (USA)",
-            "Pitfall! (USA, Europe)",
-            "Pole Position (USA)",
-            "Popeye (USA, Europe)",
-            "Star Wars - The Empire Strikes Back (USA, Europe)",
-            "Zaxxon (USA, Europe)"
+          "titles": [
+            "Astrosmash",
+            "Bump 'n' Jump",
+            "BurgerTime",
+            "Donkey Kong",
+            "Donkey Kong Junior",
+            "Frogger",
+            "Pac-Man",
+            "Pinball",
+            "Pitfall!",
+            "Pole Position",
+            "Popeye",
+            "Star Wars - The Empire Strikes Back",
+            "Zaxxon"
           ]
         }
       }

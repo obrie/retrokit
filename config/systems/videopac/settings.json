@@ -54,16 +54,16 @@
   ],
   "roms": {
     "priority": [
-      "usa",
-      "world",
-      "europe"
+      "USA",
+      "World",
+      "Europe"
     ],
     "filters": {
       "flags": [
-        "canada",
-        "europe",
-        "usa",
-        "world"
+        "Canada",
+        "Europe",
+        "USA",
+        "World"
       ],
       "!flags": [
         "proto"
@@ -97,15 +97,15 @@
       {
         "path": "$HOME/RetroPie/roms/videopac",
         "filters": {
-          "names": [
-            "Alpine Skiing (USA, Europe)",
-            "Blockout + Breakdown (USA, Europe)",
-            "Cosmic Conflict (USA)",
-            "Frogger (Europe)",
-            "K.C. Munchkin (USA)",
-            "Popeye (Europe)",
-            "Smithereens (USA)",
-            "UFO (USA)"
+          "titles": [
+            "Alpine Skiing",
+            "Blockout + Breakdown",
+            "Cosmic Conflict",
+            "Frogger",
+            "K.C. Munchkin",
+            "Popeye",
+            "Smithereens",
+            "UFO"
           ]
         }
       }
