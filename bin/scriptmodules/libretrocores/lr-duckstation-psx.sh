@@ -22,7 +22,7 @@ function __binary_url_lr-duckstation-psx() {
 }
 
 function install_bin_lr-duckstation-psx() {
-    downloadAndExtract "$(__binary_url_duckstation-psx)" "$md_inst"
+    downloadAndExtract "$(__binary_url_lr-duckstation-psx)" "$md_inst"
 }
 
 function configure_lr-duckstation-psx() {
