@@ -162,12 +162,12 @@ retrokit what it is.  That includes:
 * [Roslof's compatibility list](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=1985896929) for Arcade and Nintendo 64 emulator / configuration
 * [Progretto-Snaps](https://www.progettosnaps.net/) for filtering arcade roms via categories, ratings, and languages
 * [C64 Dreams](https://www.zombs-lair.com/c64-dreams) for Commodore 64 game configuration settings
-* [eXo](https://***REMOVED***) for Dosbox game configuration settings
 * [Abdessamad Derraz](https://github.com/Abdess)
 * [The Bezel Project](https://github.com/thebezelproject) for overlays
 * [ehettervik](https://github.com/ehettervik) for the pixel theme
 * [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
 * [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
+* eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
 * ...and everyone who has put so much work in over the years to help make all of this even possible
