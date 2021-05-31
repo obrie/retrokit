@@ -25,7 +25,7 @@
     "lr-mame2015": {"core_name": "mame2015", "library_name": "MAME 2015"},
     "lr-mame2016": {"core_name": "mame2016", "library_name": "MAME 2016"},
     "advmame-joy": {"aliases": ["advmame"]},
-    "lr-mame0222": {"aliases": ["lr-mame"], "build": "source", "core_name": "mame_", "library_name": "MAME"}
+    "lr-mame0222": {"aliases": ["lr-mame"], "core_name": "mame_", "library_name": "MAME"}
   },
   "romsets": [
     {
