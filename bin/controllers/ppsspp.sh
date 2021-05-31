@@ -219,10 +219,10 @@ function _get_config_key() {
             key='RightAn.Down'
             ;;
         leftthumb)
-            keys=('ThumbL')
+            key='ThumbL'
             ;;
         rightthumb)
-            keys=('ThumbR')
+            key='ThumbR'
             ;;
         *)
             ;;
