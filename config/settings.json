@@ -25,10 +25,11 @@
     },
     "controllers": {
       "inputs": [
-        "Keyboard",
-        "Microsoft X-Box 360 pad",
-        "8Bitdo SN30 Pro"
+        {"name": "Keyboard"},
+        {"name": "8Bitdo Arcade Stick", "id": "030000005e0400008e02000014010000"},
+        {"name": "8Bitdo SN30 Pro", "id": "05000000c82d00000161000000010000", "swap_buttons": true}
       ],
+      "hotkey": "select",
       "autoconfig": [
         "advmame",
         "drastic",
