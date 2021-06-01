@@ -20,6 +20,8 @@ install() {
     # Clean up
     popd
     rm -rf "$tmp_dir/maxcso"
+  else
+    echo 'Already installed maxcso'
   fi
 }
 

@@ -14,6 +14,8 @@ install_termfix() {
     sudo make install
     popd
     rm -rf $tmp_dir/termfix
+  else
+    echo 'Already installed termfix'
   fi
 }
 

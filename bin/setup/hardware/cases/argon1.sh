@@ -14,6 +14,8 @@ install() {
     download_argon
     bash "$argon_bin"
     rm "$argon_bin"
+  else
+    echo 'Already installed argoneone package'
   fi
 }
 
