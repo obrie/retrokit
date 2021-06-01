@@ -131,6 +131,7 @@ env_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
+    echo "$source does not exist"
     return
   fi
 
@@ -156,6 +157,7 @@ ini_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if [ ! -f "$source" ]; then
+    echo "$source does not exist"
     return
   fi
 
@@ -182,6 +184,7 @@ json_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if [ ! -f "$source" ]; then
+    echo "$source does not exist"
     return
   fi
 
@@ -206,6 +209,7 @@ file_cp() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
+    echo "$source does not exist"
     return
   fi
 
@@ -235,6 +239,7 @@ file_ln() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
+    echo "$source does not exist"
     return
   fi
 
