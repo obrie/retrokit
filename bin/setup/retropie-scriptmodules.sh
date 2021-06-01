@@ -7,6 +7,7 @@ install() {
   # Run the uninstall command so that any old scriptmodules are gone
   uninstall
 
+  echo "Copying RetroPie scriptmodules to $HOME/RetroPie-Setup/ext/retrokit"
   mkdir "$HOME/RetroPie-Setup/ext/retrokit"
   cp -R "$bin_dir/scriptmodules" "$HOME/RetroPie-Setup/ext/retrokit"
 }
