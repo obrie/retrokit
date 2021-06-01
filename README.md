@@ -149,7 +149,7 @@ in the config/ folder, particularly config/settings.json.
    ```
 1. Run retrokit
    ```
-   bin/setup.sh
+   bin/setup.sh install
    ```
 
 To access via VNC:
