@@ -35,7 +35,12 @@ run() {
   local setupmodule=$1
   local action=$2
 
-  print_heading "Running $action for $setupmodule (${@:3})"
+  if [ $# -ge 3 ]; then
+    print_heading "Running $action for $setupmodule (${@:3})"
+  else
+    print_heading "Running $action for $setupmodule"
+  fi
+
   "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
 }
 
