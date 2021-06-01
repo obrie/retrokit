@@ -1,14 +1,12 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 
 # Add autoconfig scripts
-install_configscrippts() {
+install_configscripts() {
   while read autoconfig_name; do
     sudo cp "$bin_dir/controllers/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
@@ -168,9 +166,11 @@ install_inputs() {
       # Auto-generate ES input configuration from name
       create_controller_input "$name" "$(grep -E ",$name," "$sdldb_path")" "$swap_buttons"
     else
+      echo "No controller mapping found for $name"
       continue
     fi
 
+    echo "Generating configurations for $name"
     /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh
   done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false] | @csv' | tr -d '"')
 }

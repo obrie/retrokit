@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
@@ -62,6 +60,7 @@ install_retroarch_core_options() {
     grep -E "^$core_name" "$core_options_path" > "$target_path" || true
 
     # Merge in game-specific overrides
+    echo "Merging ini $override_file to $target_path"
     crudini --merge "$target_path" < "$override_file"
   done < <(find_overrides 'opt')
 }

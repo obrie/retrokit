@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
@@ -23,6 +21,7 @@ install() {
 
     # Duration
     local duration=$(ffprobe -i "$media_file" -show_entries format=duration -v quiet -of csv="p=0" | grep -oE "^[0-9]+")
+    echo "Setting splashscreen duration to $duration seconds"
     .env -f "$splashscreen_config" set DURATION="\"$duration\""
   fi
 }

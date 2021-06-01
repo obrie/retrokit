@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
@@ -11,7 +9,9 @@ install() {
   done < <(setting '.themes.library[] | [.name, .repo] | @tsv')
 
   # Add theme overrides
-  sudo cp -R "$config_dir/themes" /etc/emulationstation
+  while read theme_path; do
+    file_cp "$config_dir/themes/$theme_path" "/etc/emulationstation/$theme_path" as_sudo=true
+  done < <(find "$config_dir/themes" -type f -printf "%P\n")
 }
 
 uninstall() {

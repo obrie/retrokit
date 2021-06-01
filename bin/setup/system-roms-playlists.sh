@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
@@ -26,6 +24,7 @@ install() {
     fi
 
     # Add to the playlist
+    echo "Adding $rom_filename to $playlist_path"
     echo "$rom_filename" >> "$playlist_path"
   done < <(find "$HOME/RetroPie/roms/$system" -type l -name "*(Disc *" | sort)
 }

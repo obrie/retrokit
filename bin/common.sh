@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+[ "$DEBUG" == 'true' ] && set -x
+
 ##############
 # Directories / Files
 ##############
@@ -34,8 +37,10 @@ fi
 # Logging
 ##############
 
-log() {
-  echo "${@}"
+print_section() {
+  echo '= = = = = = = = = = = = = = = = = = = = ='
+  echo "$1"
+  echo '= = = = = = = = = = = = = = = = = = = = ='
 }
 
 ##############
@@ -63,10 +68,10 @@ backup() {
   if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
     # Use a different file to indicate that we're backing up a non-existent file
     if [ -f "$file" ]; then
-      log "Backing up: $file to $backup_file"
+      echo "Backing up: $file to $backup_file"
       $cmd cp "$file" "$backup_file"
     else
-      log "Backing up: $file to $backup_file.missing"
+      echo "Backing up: $file to $backup_file.missing"
       $cmd mkdir -p "$(dirname "$backup_file")"
       $cmd touch "$backup_file.missing"
     fi
@@ -94,21 +99,21 @@ restore() {
     fi
 
     if [ -f "$backup_file" ]; then
-      log "Restoring: $backup_file to $file"
+      echo "Restoring: $backup_file to $file"
       $cmd cp "$backup_file" "$file"
 
       if [ "$delete_src" == 'true' ]; then
         $cmd rm "$backup_file"
       fi
     elif [ -f "$backup_file.missing" ]; then
-      log "Restoring: $file to non-existent"
+      echo "Restoring: $file to non-existent"
       $cmd rm -f "$file"
 
       if [ "$delete_src" == 'true' ]; then
         $cmd rm "$backup_file.missing"
       fi
     else
-      log "Restoring: $file (leaving as-is)"
+      echo "Restoring: $file (leaving as-is)"
     fi
   fi
 }
@@ -131,6 +136,7 @@ env_merge() {
 
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
+  echo "Merging env $source to $target"
   while IFS="$tab" read -r env_line; do
     if [ "$as_sudo" == 'true' ]; then
       sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
@@ -159,6 +165,7 @@ ini_merge() {
     local cmd='sudo'
   fi
 
+  echo "Merging ini $source to $target"
   $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source")"
 
   if [ "$space_around_delimiters" = "false" ]; then
@@ -184,6 +191,7 @@ json_merge() {
     local cmd='sudo'
   fi
 
+  echo "Merging json $source to $target"
   local tmp_target="$(mktemp -p "$tmp_ephemeral_dir")"
   $cmd jq -s '.[0] * .[1]' "$target" "$(conf_prepare "$source")" > "$tmp_target"
   $cmd cp "$tmp_target" "$target"
@@ -206,6 +214,8 @@ file_cp() {
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
   fi
+
+  echo "Copying file $source to $target"
 
   # Remove any existing file
   $cmd rm -f "$target"
@@ -233,6 +243,8 @@ file_ln() {
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
   fi
+
+  echo "Linking file $source as $target"
 
   # Remove any existing file
   $cmd rm -f "$target"

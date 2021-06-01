@@ -1,5 +1,3 @@
-set -ex
-
 setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$setup_dir/../common.sh"
 
@@ -89,6 +87,7 @@ create_overlay_config() {
   local path=$1
   local overlay_filename=$2
 
+  echo "Overlaying $path with $overlay_filename"
   cat > "$path" <<EOF
 overlays = 1
 

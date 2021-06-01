@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
@@ -69,7 +67,11 @@ install() {
     local cheat_name=${cheat_mappings["$(normalize_rom_name "$rom_name")"]}
 
     if [ -n "$cheat_name" ]; then
-      ln -fs "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
+      local source_cheat_path="$source_cheats_dir/$cheat_name.cht"
+      local target_cheat_path="$target_cheats_dir/$rom_name.cht"
+
+      echo "Linking $source_cheat_path to $target_cheat_path"
+      ln -fs "$source_cheat_path" "$target_cheat_path"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .emulator] | join("^")')
 }

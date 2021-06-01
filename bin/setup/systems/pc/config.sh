@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 system='pc'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"

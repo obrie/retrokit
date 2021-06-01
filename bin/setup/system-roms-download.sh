@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
@@ -30,6 +28,7 @@ install_emulator_selections() {
   # Add emulator selections for roms with an explicit one
   # 
   # This is done in one batch because it's a bit slow otherwise
+  echo 'Adding emulator selections...'
   crudini --merge "$emulators_config_file" < <(
     while IFS="$tab" read -r rom_name source_emulator; do
       local target_emulator=${emulators["$source_emulator/emulator"]}
@@ -40,6 +39,7 @@ install_emulator_selections() {
   )
 
   # Remove emulator selections for roms without one
+  echo 'Removing unused emulator selections...'
   while IFS="$tab" read -r rom_name emulator; do
     if [ -z "$emulator" ]; then
       local config_key=$(clean_emulator_config_key "${system}_${rom_name}")

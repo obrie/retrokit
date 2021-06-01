@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -ex
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
@@ -32,6 +30,7 @@ install() {
 
         # If the titles match, add it
         if [ "$installed_title" = "$machine_title" ]; then
+          echo "Adding $1 to $target_collection_path"
           echo "$1" >> "$target_collection_path"
           break
         fi
