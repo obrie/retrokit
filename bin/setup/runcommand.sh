@@ -15,7 +15,7 @@ install_termfix() {
     popd
     rm -rf $tmp_dir/termfix
   else
-    echo 'Already installed termfix'
+    echo 'termfix is already installed'
   fi
 }
 

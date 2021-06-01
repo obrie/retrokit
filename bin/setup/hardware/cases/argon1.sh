@@ -15,7 +15,7 @@ install() {
     bash "$argon_bin"
     rm "$argon_bin"
   else
-    echo 'Already installed argoneone package'
+    echo 'argoneone scripts are already installed'
   fi
 }
 

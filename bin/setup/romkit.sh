@@ -22,7 +22,7 @@ install() {
     popd
     rm -rf $tmp_dir/trrntzip
   else
-    echo 'Already installed trrntzip'
+    echo 'trrntzip is already installed'
   fi
 
   # CHDMan

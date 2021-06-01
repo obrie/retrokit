@@ -21,7 +21,7 @@ install() {
     popd
     rm -rf "$tmp_dir/maxcso"
   else
-    echo 'Already installed maxcso'
+    echo 'maxcso is already installed'
   fi
 }
 

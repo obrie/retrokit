@@ -23,7 +23,7 @@ install() {
     popd
     rm -rf "$tmp_dir/raspi2png"
   else
-    echo 'Already installed raspi2png'
+    echo 'raspi2png is already installed'
   fi
 }
 
