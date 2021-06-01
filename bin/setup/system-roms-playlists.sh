@@ -7,9 +7,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   if [ ! -d "$HOME/RetroPie/roms/$system" ]; then
     # No roms installed
+    echo 'No ROMs to install playlists for'
     return
   fi
 
+  echo 'Looking for multi-disc ROMs...'
   while read -r rom_path; do
     local rom_filename=$(basename "$rom_path")
 
