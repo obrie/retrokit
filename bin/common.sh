@@ -73,6 +73,8 @@ backup() {
       $cmd mkdir -p "$(dirname "$backup_file")"
       $cmd touch "$backup_file.missing"
     fi
+  else
+    echo "Backup for $file already exists"
   fi
 }
 
