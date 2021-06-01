@@ -6,125 +6,9 @@ advmame_config_path="$configdir/mame-advmame/advmame.rc"
 # Maximum number of players to configure for each controller
 max_players=4
 
-# Generates the input_map configuration key to use for a given player
-# number.
-function _get_player_key() {
-    local input_name=$1
-    local player=$2
-    local key=''
-
-    case "$input_name" in
-        up|down|left|right)
-            key="p${player}_${input_name}"
-            ;;
-        a)
-            key="p${player}_button1"
-            ;;
-        b)
-            key="p${player}_button2"
-            ;;
-        x)
-            key="p${player}_button3"
-            ;;
-        y)
-            key="p${player}_button4"
-            ;;
-        start)
-            key="start$player"
-            ;;
-        leftbottom|leftshoulder)
-            key="p${player}_button6"
-            ;;
-        rightbottom|rightshoulder)
-            key="p${player}_button5"
-            ;;
-        lefttop|lefttrigger)
-            key="p${player}_button8"
-            ;;
-        righttop|righttrigger)
-            key="p${player}_button7"
-            ;;
-        select)
-            key="coin$player"
-            ;;
-        leftanalogleft)
-            key="p${player}_doubleleft_left"
-            ;;
-        leftanalogright)
-            key="p${player}_doubleleft_right"
-            ;;
-        leftanalogup)
-            key="p${player}_doubleleft_up"
-            ;;
-        leftanalogdown)
-            key="p${player}_doubleleft_down"
-            ;;
-        rightanalogleft)
-            key="p${player}_doubleright_left"
-            ;;
-        rightanalogright)
-            key="p${player}_doubleright_right"
-            ;;
-        rightanalogup)
-            key="p${player}_doubleright_up"
-            ;;
-        rightanalogdown)
-            key="p${player}_doubleright_down"
-            ;;
-        hotkeyenable)
-            # This key name is only used by us to internally identify the hotkey.
-            # It is not used by advmame.
-            key='hotkey'
-            ;;
-        *)
-            ;;
-    esac
-
-    echo "$key"
-}
-
-# Generates the input_map configuration key to use for the advmame UI
-function _get_ui_key() {
-    local input_name=$1
-    local key=''
-
-    case "$input_name" in
-        up|down|left|right)
-            key="ui_$input_name"
-            ;;
-        a)
-            key='ui_select'
-            ;;
-        *)
-            ;;
-    esac
-
-    echo "$key"
-}
-
-# Generates the input_map configuration key to use for the advmame UI
-function _get_hotkey() {
-    local input_name=$1
-    local key=''
-
-    case "$input_name" in
-        b)
-            key="ui_reset_machine"
-            ;;
-        x)
-            key="ui_configure"
-            ;;
-        y)
-            key="ui_pause"
-            ;;
-        start)
-            key="ui_cancel"
-            ;;
-        *)
-            ;;
-    esac
-
-    echo "$key"
+function check_advmame() {
+    [[ ! -f "$advmame_config_path" ]] && return 1
+    return 0
 }
 
 function _onstart_advmame() {
@@ -268,6 +152,127 @@ function onstart_advmame_keyboard() {
     keymap['1073742052']='rcontrol'
     keymap['1073742053']='rshift'
     keymap['1073742054']='ralt'
+}
+
+# Generates the input_map configuration key to use for a given player
+# number.
+function _get_player_key() {
+    local input_name=$1
+    local player=$2
+    local key=''
+
+    case "$input_name" in
+        up|down|left|right)
+            key="p${player}_${input_name}"
+            ;;
+        a)
+            key="p${player}_button1"
+            ;;
+        b)
+            key="p${player}_button2"
+            ;;
+        x)
+            key="p${player}_button3"
+            ;;
+        y)
+            key="p${player}_button4"
+            ;;
+        start)
+            key="start$player"
+            ;;
+        leftbottom|leftshoulder)
+            key="p${player}_button6"
+            ;;
+        rightbottom|rightshoulder)
+            key="p${player}_button5"
+            ;;
+        lefttop|lefttrigger)
+            key="p${player}_button8"
+            ;;
+        righttop|righttrigger)
+            key="p${player}_button7"
+            ;;
+        select)
+            key="coin$player"
+            ;;
+        leftanalogleft)
+            key="p${player}_doubleleft_left"
+            ;;
+        leftanalogright)
+            key="p${player}_doubleleft_right"
+            ;;
+        leftanalogup)
+            key="p${player}_doubleleft_up"
+            ;;
+        leftanalogdown)
+            key="p${player}_doubleleft_down"
+            ;;
+        rightanalogleft)
+            key="p${player}_doubleright_left"
+            ;;
+        rightanalogright)
+            key="p${player}_doubleright_right"
+            ;;
+        rightanalogup)
+            key="p${player}_doubleright_up"
+            ;;
+        rightanalogdown)
+            key="p${player}_doubleright_down"
+            ;;
+        hotkeyenable)
+            # This key name is only used by us to internally identify the hotkey.
+            # It is not used by advmame.
+            key='hotkey'
+            ;;
+        *)
+            ;;
+    esac
+
+    echo "$key"
+}
+
+# Generates the input_map configuration key to use for the advmame UI
+function _get_ui_key() {
+    local input_name=$1
+    local key=''
+
+    case "$input_name" in
+        up|down|left|right)
+            key="ui_$input_name"
+            ;;
+        a)
+            key='ui_select'
+            ;;
+        *)
+            ;;
+    esac
+
+    echo "$key"
+}
+
+# Generates the input_map configuration key to use for the advmame UI
+function _get_hotkey() {
+    local input_name=$1
+    local key=''
+
+    case "$input_name" in
+        b)
+            key="ui_reset_machine"
+            ;;
+        x)
+            key="ui_configure"
+            ;;
+        y)
+            key="ui_pause"
+            ;;
+        start)
+            key="ui_cancel"
+            ;;
+        *)
+            ;;
+    esac
+
+    echo "$key"
 }
 
 function map_advmame() {

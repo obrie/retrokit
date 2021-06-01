@@ -2,12 +2,20 @@
 
 # Path to the advmame configuration where controls are defined
 ppsspp_config_path="$configdir/psp/PSP/SYSTEM/controls.ini"
-sdldb_path=/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt
+sdldb_path="$rootdir/emulators/ppsspp/assets/gamecontrollerdb.txt"
+
+function check_ppsspp() {
+    [[ ! -d "$rootdir/emulators/ppsspp" ]] && return 1
+    return 0
+}
 
 function onstart_ppsspp() {
     local controller=$1
 
-    cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
+    if [ -f "$ppsspp_config_path" ]; then
+        cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
+    else
+    fi
     iniConfig ' = ' '' '/tmp/ppsspp-controls.ini'
 
     # Reset inputs for this controller

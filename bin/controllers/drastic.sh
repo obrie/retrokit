@@ -3,6 +3,11 @@
 # Path to the drastic configuration where controllers are defined
 drastic_config_path="$configdir/nds/drastic/config/drastic.cfg"
 
+function check_drastic() {
+    [[ ! -f "$drastic_config_path" ]] && return 1
+    return 0
+}
+
 function _onstart_drastic() {
     local controller=$1
 

@@ -3,61 +3,9 @@
 # Path to the redream configuration where controllers are defined
 redream_config_path="$configdir/dreamcast/redream/redream.cfg"
 
-# Generates the configuration key for a given ES input name
-function _get_config_key() {
-    local input_name=$1
-    local key=''
-
-    case "$input_name" in
-        up)
-            key='dpad_up'
-            ;;
-        down)
-            key='dpad_down'
-            ;;
-        left)
-            key='dpad_left'
-            ;;
-        right)
-            key='dpad_right'
-            ;;
-        a|b|x|y|start)
-            key="$input_name"
-            ;;
-        leftbottom|leftshoulder)
-            key='turbo'
-            ;;
-        rightbottom|rightshoulder)
-            key='lcd'
-            ;;
-        lefttop|lefttrigger)
-            key='ltrig'
-            ;;
-        righttop|righttrigger)
-            key='rtrig'
-            ;;
-        select)
-            # Select is configured to exit since there's no ability to use
-            # a hotkey
-            key='exit'
-            ;;
-        leftanalogleft)
-            key='ljoy_left'
-            ;;
-        leftanalogright)
-            key='ljoy_right'
-            ;;
-        leftanalogup)
-            key='ljoy_up'
-            ;;
-        leftanalogdown)
-            key='ljoy_down'
-            ;;
-        *)
-            ;;
-    esac
-
-    echo "$key"
+function check_redream() {
+    [[ ! -f "$redream_config_path" ]] && return 1
+    return 0
 }
 
 function _onstart_redream() {
@@ -199,6 +147,63 @@ function onstart_redream_keyboard() {
     keymap['1073742052']='rctrl'
     keymap['1073742053']='rshift'
     keymap['1073742054']='ralt'
+}
+
+# Generates the configuration key for a given ES input name
+function _get_config_key() {
+    local input_name=$1
+    local key=''
+
+    case "$input_name" in
+        up)
+            key='dpad_up'
+            ;;
+        down)
+            key='dpad_down'
+            ;;
+        left)
+            key='dpad_left'
+            ;;
+        right)
+            key='dpad_right'
+            ;;
+        a|b|x|y|start)
+            key="$input_name"
+            ;;
+        leftbottom|leftshoulder)
+            key='turbo'
+            ;;
+        rightbottom|rightshoulder)
+            key='lcd'
+            ;;
+        lefttop|lefttrigger)
+            key='ltrig'
+            ;;
+        righttop|righttrigger)
+            key='rtrig'
+            ;;
+        select)
+            # Select is configured to exit since there's no ability to use
+            # a hotkey
+            key='exit'
+            ;;
+        leftanalogleft)
+            key='ljoy_left'
+            ;;
+        leftanalogright)
+            key='ljoy_right'
+            ;;
+        leftanalogup)
+            key='ljoy_up'
+            ;;
+        leftanalogdown)
+            key='ljoy_down'
+            ;;
+        *)
+            ;;
+    esac
+
+    echo "$key"
 }
 
 function map_redream_joystick() {

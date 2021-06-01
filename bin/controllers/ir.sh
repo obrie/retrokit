@@ -3,6 +3,11 @@
 # Path to the ir configuration where controls are defined
 ir_config_path="$configdir/rc_keymap.cfg"
 
+function check_ir() {
+    [[ ! -f "$ir_config_path" ]] && return 1
+    return 0
+}
+
 function onstart_ir_keyboard() {
     iniConfig '=' '' '/opt/retropie/configs/rc_keymap.cfg'
 
