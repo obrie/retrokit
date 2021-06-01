@@ -35,7 +35,7 @@ run() {
   local setupmodule=$1
   local action=$2
 
-  print_heading "Running $action for $setupmodule"
+  print_heading "Running $action for $setupmodule (${@:3})"
   "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
 }
 
