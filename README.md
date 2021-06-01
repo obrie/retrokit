@@ -70,6 +70,7 @@ This is all supported for the following systems:
 * Sega - Game Gear
 * Sega - Genesis / MegaDrive
 * Sega - Mastersystem
+* Sega - Saturn
 * Sega - SG-1000
 * SNK - Neo Geo Pocket
 * Sony - PlayStation
@@ -80,6 +81,7 @@ There are also system-specific features, including:
 * Automatic joystick selection for Commodore 64 via C64 Dreams spreadsheet
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
+* Automatic filtering of runnable games for Sega Saturn
 * Optimized settings per-game for Arcade, Atari Jaguar, and N64
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP

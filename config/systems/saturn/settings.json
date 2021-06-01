@@ -1,0 +1,105 @@
+{
+  "system": "saturn",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Saturn",
+        "path": "retroarch/overlay/GameBezels/Saturn"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Saturn",
+        "path": "retroarch/overlay/GameBezels/Saturn",
+        "default": "retroarch/overlay/Sega-Saturn.png"
+      }
+    ]
+  },
+  "scraper": {
+    "sources": ["screenscraper"]
+  },
+  "emulators": {
+    "yabasanshiro": {"build": "source"},
+    "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
+  },
+  "cheats": "Sega - Saturn",
+  "bios": {
+    "url": "$BIOS_URL/libretro/Sega%20-%20Saturn",
+    "dir": "$HOME/RetroPie/roms/saturn/yabasanshiro",
+    "files": {
+      "mpr-17933.bin": "{url}/mpr-17933.bin",
+      "saturn_bios.bin": "{url}/saturn_bios.bin",
+      "sega_101.bin": "{url}/sega_101.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_SATURN_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/ss/",
+          "download": "$HOME/retrokit/tmp/saturn/roms.zip",
+          "target": "$HOME/retrokit/tmp/saturn/roms.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/saturn/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
+      }
+    }
+  ],
+  "roms": {
+    "priority": [
+      "USA",
+      "World"
+    ],
+    "compatibility_rating_url": "file://$HOME/retrokit/config/systems/saturn/compatibility_ratings.tsv",
+    "filters": {
+      "compatibility_ratings": [
+        3,
+        4,
+        5
+      ],
+      "flags": [
+        "USA",
+        "Europe",
+        "World"
+      ],
+      "!flags": [
+        "demo",
+        "proto"
+      ],
+      "!keywords": [
+        "Sega Flash Vol.",
+        "Arcade's Greatest Hits"
+      ],
+      "!titles": [
+        "Gremlin Demo Disc",
+        "Gremlin Demo Disk",
+        "Sega Saturn Choice Cuts",
+        "Street Fighter Collection"
+      ],
+      "titles": [
+        "Contra - Legacy of War",
+        "Die Hard Arcade",
+        "Mortal Kombat II",
+        "Mortal Kombat Trilogy",
+        "Rampage - World Tour",
+        "Sega Rally Championship",
+        "Sonic R",
+        "Steep Slope Sliders",
+        "Street Fighter Alpha - Warriors' Dreams",
+        "Street Fighter Alpha 2"
+      ]
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/saturn"}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
