@@ -9,7 +9,7 @@ install() {
 
   echo "Copying RetroPie scriptmodules to $HOME/RetroPie-Setup/ext/retrokit"
   mkdir "$HOME/RetroPie-Setup/ext/retrokit"
-  cp -R "$bin_dir/scriptmodules" "$HOME/RetroPie-Setup/ext/retrokit"
+  cp -a "$bin_dir/scriptmodules" "$HOME/RetroPie-Setup/ext/retrokit"
 }
 
 uninstall() {

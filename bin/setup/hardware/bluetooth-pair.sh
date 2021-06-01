@@ -52,7 +52,7 @@ install() {
   if [ $(setting '.hardware | has("bluetooth")') == 'true' ]; then
     # Back up bluetooth settings
     if [ ! -d '/var/lib/bluetooth.rk-src' ]; then
-      sudo cp -R /var/lib/bluetooth/ /var/lib/bluetooth.rk-src
+      sudo cp -a /var/lib/bluetooth /var/lib/bluetooth.rk-src
     fi
 
     # Pair devices
@@ -68,7 +68,10 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for bluetooth-pair'
+  if [ -d '/var/lib/bluetooth.rk-src' ]; then
+    sudo rm -rf /var/lib/bluetooth
+    sudo mv /var/lib/bluetooth.rk-src /var/lib/bluetooth
+  fi
 }
 
 "${@}"
