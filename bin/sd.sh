@@ -32,7 +32,7 @@ backup() {
 sync() {
   local sync_to_path=$1
 
-  # This should be the full list of paths that might be modified by the using
+  # This should be the full list of paths that might be modified by using
   # the arcade or using retrokit
   local paths=(/opt/retropie/ /etc/ /home/pi/)
 
@@ -47,7 +47,7 @@ sync_media() {
   # This should be the full list of media paths
   local paths=(
     /opt/retropie/configs/all/emulationstation/downloaded_media/
-    /opt/retropie/configs/all/skyscraper/
+    /opt/retropie/configs/all/skyscraper/cache/
     /home/pi/RetroPie/roms/
     /opt/retropie/configs/all/retroarch/overlay/
   )
