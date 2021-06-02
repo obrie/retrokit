@@ -30,6 +30,7 @@ install() {
   restore_config
 
   # Add overrides.  This is a custom non-ini format, so we need to do it manually.
+  echo "Merging ini $system_config_dir/advmame.rc to $config_path"
   while IFS="$tab" read -r name value; do
     if [ -z "$name" ]; then
       continue

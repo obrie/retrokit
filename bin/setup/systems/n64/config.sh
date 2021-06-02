@@ -11,6 +11,8 @@ install() {
   local source_inputs_file="$system_config_dir/InputAutoCfg.ini"
   local target_inputs_file='/opt/retropie/configs/n64/InputAutoCfg.ini'
   backup "$target_inputs_file"
+
+  echo "Merging ini $source_inputs_file to $target_inputs_file"
   while IFS= read section_name; do
     if grep -q "\[$section_name\]" "$target_inputs_file"; then
       # The section already exists -- we can just do a direct merge

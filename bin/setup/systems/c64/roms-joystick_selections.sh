@@ -15,6 +15,7 @@ install() {
   done < <(romkit_cache_list | jq -r '.name')
 
   # Set joyport based on the above
+  echo 'Selecting joyport for installed ROMs...'
   while IFS='^' read -r color unknown title type multidisk joyport other; do
     local normalized_name=$(normalize_rom_name "$title")
     if [ -z "$normalized_name" ]; then
@@ -41,6 +42,7 @@ install() {
         touch "$opt_file"
 
         # Overwrite joyport selection
+        echo "Setting vice_joyport to $joyport_selection for $opt_file"
         crudini --set "$opt_file" '' 'vice_joyport' "\"$joyport_selection\""
       fi
     fi
