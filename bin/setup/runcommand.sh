@@ -5,12 +5,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Installs a helper for fixing terminal framebuffer issues
 install_termfix() {
-  if [ ! `command -v termfix` ] || has_newer_commit https://github.com/hobbitalastair/termfix "$(cat /etc/termfix.version || true)"; then
+  local version="$(cat /etc/termfix.version || true)"
+  if [ ! `command -v termfix` ] || has_newer_commit https://github.com/hobbitalastair/termfix "$version"; then
     # Check out
     rm -rf "$tmp_dir/termfix"
     git clone --depth 1 https://github.com/hobbitalastair/termfix.git "$tmp_dir/termfix"
     pushd "$tmp_dir/termfix"
-    local version=$(git rev-parse HEAD)
+    version=$(git rev-parse HEAD)
 
     # Compile
     make
@@ -21,7 +22,7 @@ install_termfix() {
     popd
     rm -rf "$tmp_dir/termfix"
   else
-    echo 'termfix is already latest version'
+    echo "termfix is already the newest version ($version)"
   fi
 }
 

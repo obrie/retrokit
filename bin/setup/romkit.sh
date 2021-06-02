@@ -11,25 +11,26 @@ install() {
   sudo apt install -y python3-lxml
 
   # TorrentZip
-  if [ ! `command -v trrntzip` ] || has_newer_commit https://github.com/hydrogen18/trrntzip.git "$(cat /usr/local/etc/trrntzip.version || true)"; then
+  local trrntzip_version="$(cat /usr/local/etc/trrntzip.version || true)"
+  if [ ! `command -v trrntzip` ] || has_newer_commit https://github.com/hydrogen18/trrntzip.git "$trrntzip_version"; then
     # Check out
     rm -rf "$tmp_dir/trrntzip"
     git clone --depth 1 https://github.com/hydrogen18/trrntzip.git "$tmp_dir/trrntzip"
     pushd "$tmp_dir/trrntzip"
-    local version=$(git rev-parse HEAD)
+    trrntzip_version=$(git rev-parse HEAD)
 
     # Compile
     ./autogen.sh
     ./configure
     make
     sudo make install
-    echo "$version" | sudo tee /usr/local/etc/trrntzip.version
+    echo "$trrntzip_version" | sudo tee /usr/local/etc/trrntzip.version
 
     # Clean up
     popd
     rm -rf "$tmp_dir/trrntzip"
   else
-    echo 'trrntzip is already latest version'
+    echo "trrntzip is already the newest version ($trrntzip_version)"
   fi
 
   # CHDMan

@@ -4,15 +4,16 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  # Check out
-  rm -rf "$tmp_dir/dispmanx_vnc"
-  git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
-  pushd "$tmp_dir/dispmanx_vnc"
-  local version=$(git rev-parse HEAD)
-
-  if [ ! -f '/etc/dispmanx_vncserver.version' ] || [ "$version" != "$(cat /etc/dispmanx_vncserver.version)" ]; then
+  local version="$(cat /etc/dispmanx_vncserver.version || true)"
+  if [ ! `command -v dispmanx_vncserver` ] || has_newer_commit https://github.com/patrikolausson/dispmanx_vnc "$version"; then
     # Install dependencies
     sudo apt install -y libvncserver-dev libconfig++-dev
+
+    # Check out
+    rm -rf "$tmp_dir/dispmanx_vnc"
+    git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
+    pushd "$tmp_dir/dispmanx_vnc"
+    version=$(git rev-parse HEAD)
 
     # Apply patches
     patch -p1 < "$config_dir/vnc/0001-fix-keyboard.patch"
@@ -32,13 +33,13 @@ install() {
     sudo systemctl enable dispmanx_vncserver
     sudo systemctl start dispmanx_vncserver
     echo "$version" | sudo tee /etc/dispmanx_vncserver.version
-  else
-    echo "dispmanx_vnc already at latest version ($version)"
-  fi
 
-  # Clean up
-  popd
-  rm -rf $tmp_dir/dispmanx_vnc
+    # Clean up
+    popd
+    rm -rf $tmp_dir/dispmanx_vnc
+  else
+    echo "dispmanx_vnc already the newest version ($version)"
+  fi
 }
 
 uninstall() {

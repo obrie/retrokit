@@ -14,23 +14,24 @@ install() {
   sudo apt install -y mesa-utils
 
   # Screenshots
-  if [ ! `command -v raspi2png` ] || has_newer_commit https://github.com/AndrewFromMelbourne/raspi2png "$(cat /etc/raspi2png.version || true)"; then
+  local raspi2png_version="$(cat /etc/raspi2png.version || true)"
+  if [ ! `command -v raspi2png` ] || has_newer_commit https://github.com/AndrewFromMelbourne/raspi2png "$raspi2png_version"; then
     # Check out
     rm -rf "$tmp_dir/raspi2png"
     git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git "$tmp_dir/raspi2png"
     pushd "$tmp_dir/raspi2png"
-    local version=$(git rev-parse HEAD)
+    raspi2png_version=$(git rev-parse HEAD)
 
     # Compile
     make
     sudo make install
-    echo "$version" | sudo tee /etc/raspi2png.version
+    echo "$raspi2png_version" | sudo tee /etc/raspi2png.version
 
     # Clean up
     popd
     rm -rf "$tmp_dir/raspi2png"
   else
-    echo 'raspi2png is already installed'
+    echo "raspi2png is already the newest version ($raspi2png_version)"
   fi
 }
 
