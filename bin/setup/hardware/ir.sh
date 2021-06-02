@@ -22,6 +22,7 @@ uninstall() {
   local keymap_path="$(setting '.hardware.ir.keymap')"
   local keymap_name=$(basename "$keymap_path")
   sudo rm -f "/etc/rc_keymaps/$keymap_name" /opt/retropie/configs/rc_keymap.cfg
+  sudo apt remove -y ir-keytable
 }
 
 "${@}"
