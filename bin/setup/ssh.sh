@@ -9,8 +9,7 @@ install() {
 }
 
 uninstall() {
-  sudo systemctl stop ssh || true
-  sudo systemctl disable ssh || true
+  echo 'No uninstall for ssh.  Please do this manually.'
 }
 
 "${@}"

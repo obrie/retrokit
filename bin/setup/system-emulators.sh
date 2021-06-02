@@ -54,7 +54,7 @@ uninstall() {
 
   # Uninstall emulators (this will automatically change the default if applicable)
   while IFS="$tab" read -r package; do
-    uninstall_retropie_package "$package"
+    uninstall_retropie_package "$package" || true
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 
   # Remove any remaining custom emulators

@@ -26,7 +26,7 @@ install() {
 }
 
 uninstall() {
-  restore '/boot/config.txt' delete_src=true
+  restore '/boot/config.txt' as_sudo=true delete_src=true
 }
 
 "${@}"

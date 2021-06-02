@@ -41,7 +41,10 @@ install() {
 
 uninstall() {
   if [ -d "$HOME/.emulationstation/collections" ]; then
+    echo "Deleting $HOME/.emulationstation/collections/*.cfg"
     find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -f "{}" \;
+  else
+    echo 'No collections to uninstall'
   fi
 }
 

@@ -17,6 +17,7 @@ install() {
 }
 
 uninstall() {
+  echo "Deleting $retropie_system_config_dir/launching-extended.png"
   rm -f "$retropie_system_config_dir/launching-extended.png"
 }
 

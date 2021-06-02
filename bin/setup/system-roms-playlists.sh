@@ -32,6 +32,7 @@ install() {
 }
 
 uninstall() {
+  echo "Deleting $HOME/RetroPie/roms/$system/*.m3u"
   find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -f "{}" \;
 }
 

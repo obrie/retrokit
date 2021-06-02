@@ -14,7 +14,7 @@ install() {
 }
 
 uninstall() {
-  sudo pip3 uninstall internetarchive
+  sudo pip3 uninstall -y internetarchive
 }
 
 "${@}"

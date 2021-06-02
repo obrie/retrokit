@@ -110,6 +110,7 @@ EOF
 }
 
 uninstall() {
+  echo "Deleting $retroarch_config_dir/overlay/$system"
   rm -rf "$retroarch_config_dir/overlay/$system"
 }
 

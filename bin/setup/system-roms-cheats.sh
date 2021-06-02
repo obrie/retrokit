@@ -83,10 +83,12 @@ uninstall() {
 
   if [ -n "$system_cheat_database_path" ]; then
     # System has its own database path -- remove it
+    echo "Deleting $system_cheat_database_path"
     rm -rf "$system_cheat_database_path"
   else
     # Remove cheats for each libretro core
     while IFS="$tab" read library_name; do
+      echo "Deleting $cheat_database_path/$library_name"
       rm -rf "$cheat_database_path/$library_name"
     done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
   fi

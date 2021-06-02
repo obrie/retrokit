@@ -12,6 +12,7 @@ install() {
 }
 
 uninstall() {
+  echo 'Deleting /opt/retropie/configs/all/retroarch/cheats/*'
   rm -rf /opt/retropie/configs/all/retroarch/cheats/*
 }
 

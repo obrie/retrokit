@@ -11,9 +11,9 @@ reconfigure() {
   export $(grep -v '^#' /etc/default/locale | xargs)
 
   # Update based on new configurations
-  sudo dpkg-reconfigure -f noninteractive tzdata
-  sudo update-locale
   sudo dpkg-reconfigure -f noninteractive locales
+  sudo update-locale
+  sudo dpkg-reconfigure -f noninteractive tzdata
 }
 
 install() {

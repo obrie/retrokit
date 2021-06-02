@@ -13,6 +13,7 @@ install() {
 }
 
 uninstall() {
+  echo "Deleting $HOME/RetroPie-Setup/ext/retrokit/"
   rm -rf "$HOME/RetroPie-Setup/ext/retrokit/"
 }
 
