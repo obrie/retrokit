@@ -187,9 +187,11 @@ class BaseSystem:
     def install_machine(self, machine: Machine) -> bool:
         try:
             machine.install()
+            return True
         except Exception as e:
             logging.error(f'[{machine.name}] Install failed')
             traceback.print_exc()
+            return False
 
     # Organizes the directory structure based on the current list of valid
     # installed machines
