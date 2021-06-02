@@ -43,6 +43,12 @@ setup() {
     # Setting up an individual module
     run "$setupmodule" "$action" "${@:3}"
   fi
+
+  # We need to explicitly reload the locale to avoid issues in
+  # commands executed afterwards
+  if [ "$setupmodule" == 'localization' ]; then
+    . /etc/default/locale
+  fi
 }
 
 run() {
