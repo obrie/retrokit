@@ -312,7 +312,7 @@ download() {
 
 has_newer_commit() {
   local repo_url=$1
-  local current_sha=$1
+  local current_sha=$2
 
   if [ -z "$current_sha" ]; then
     return 0
