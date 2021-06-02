@@ -27,7 +27,7 @@ restore_config() {
 
 install() {
   backup "$config_path"
-  restore_config "$config_path"
+  restore_config
 
   # Add overrides.  This is a custom non-ini format, so we need to do it manually.
   while IFS="$tab" read -r name value; do
@@ -71,7 +71,7 @@ uninstall() {
   fi
 
   # Restore advmame.rc, keeping the input_maps in the process
-  restore_config "$config_path" delete_src=true
+  restore_config delete_src=true
 }
 
 if [ "$system" == 'arcade' ]; then
