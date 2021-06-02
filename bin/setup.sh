@@ -13,7 +13,14 @@ setup_all() {
 
   local modules
   if [[ "$action" == 'install'* ]]; then
-    modules=$(setting '.modules[]')
+    # First, install wifi and dependencies
+    if grep -q '"wifi"' "$config_dir/settings.json"; then
+      setup install wifi
+    fi
+    setup install deps
+
+    # Then install the remaining modules
+    modules=$(setting '.modules[] | select(. != "deps" and . != "wifi")')
   else
     modules=$(setting '.modules | reverse[]')
   fi
