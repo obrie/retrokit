@@ -26,6 +26,7 @@ install() {
   fi
 
   # Define mappings to make lookups easier and more reliable
+  echo 'Loading list of available cheats...'
   declare -A cheat_mappings
   while IFS= read -r cheat_filename; do
     local cheat_name="${cheat_filename%.*}"
