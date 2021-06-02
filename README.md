@@ -125,8 +125,10 @@ in the config/ folder, particularly config/settings.json.
 
 1. Flash new image
    ```
-   bin/sd.sh
+   bin/sd.sh create /path/to/device # e.g. /dev/mmcblk0
    ```
+1. Expand main partition of sd card
+1. Insert sd card into Pi
 1. Start up Pi
 1. Quit EmulationStation
 1. Copy retrokit to your sd card, including .env
