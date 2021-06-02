@@ -21,7 +21,7 @@ install() {
 
 uninstall() {
   if [ ! `command -v argonone-uninstall` ]; then
-    argonone-uninstall
+    echo 'Y' | argonone-uninstall
   fi
 }
 
