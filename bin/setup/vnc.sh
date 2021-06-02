@@ -44,10 +44,11 @@ install() {
 uninstall() {
   sudo systemctl stop dispmanx_vncserver || true
   sudo systemctl disable dispmanx_vncserver || true
-  sudo rm -f /etc/dispmanx_vncserver.version
-  sudo rm -f /etc/systemd/system/dispmanx_vncserver.service
-  sudo rm -f /etc/dispmanx_vncserver.conf
-  sudo rm -f /usr/bin/dispmanx_vncserver
+  sudo rm -f \
+    /etc/dispmanx_vncserver.version \
+    /etc/systemd/system/dispmanx_vncserver.service \
+    /etc/dispmanx_vncserver.conf \
+    /usr/bin/dispmanx_vncserver
 }
 
 "${@}"

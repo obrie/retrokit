@@ -310,6 +310,18 @@ download() {
   fi
 }
 
+has_newer_commit() {
+  local repo_url=$1
+  local current_sha=$1
+
+  if [ -z "$current_sha" ]; then
+    return 0
+  fi
+
+  local latest_sha=$(git ls-remote "$repo_url" HEAD | cut -f1)
+  [ "$current_sha" != "$latest_sha" ]
+}
+
 ##############
 # Package install
 ##############

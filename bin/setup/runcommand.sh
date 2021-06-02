@@ -5,17 +5,23 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Installs a helper for fixing terminal framebuffer issues
 install_termfix() {
-  if [ ! `command -v termfix` ]; then
-    mkdir $tmp_dir/termfix
-    git clone --depth 1 https://github.com/hobbitalastair/termfix.git $tmp_dir/termfix
-    pushd $tmp_dir/termfix
-    make clean
+  if [ ! `command -v termfix` ] || has_newer_commit https://github.com/hobbitalastair/termfix "$(cat /etc/termfix.version || true)"; then
+    # Check out
+    rm -rf "$tmp_dir/termfix"
+    git clone --depth 1 https://github.com/hobbitalastair/termfix.git "$tmp_dir/termfix"
+    pushd "$tmp_dir/termfix"
+    local version=$(git rev-parse HEAD)
+
+    # Compile
     make
     sudo make install
+    echo "$version" | sudo tee /etc/termfix.version
+
+    # Clean up
     popd
-    rm -rf $tmp_dir/termfix
+    rm -rf "$tmp_dir/termfix"
   else
-    echo 'termfix is already installed'
+    echo 'termfix is already latest version'
   fi
 }
 
@@ -35,7 +41,7 @@ uninstall() {
   restore '/opt/retropie/configs/all/runcommand.cfg' delete_src=true
   restore '/opt/retropie/configs/all/runcommand-onstart.sh' delete_src=true
   restore '/opt/retropie/configs/all/runcommand-onend.sh' delete_src=true
-  sudo rm /usr/bin/termfix
+  sudo rm -f /usr/bin/termfix /etc/termfix.version
 }
 
 "${@}"
