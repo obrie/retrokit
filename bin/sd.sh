@@ -12,8 +12,8 @@ usage() {
   echo " $0 create <device> (run from laptop)"
   echo " $0 backup <device> <backup_dir> (run from laptop)"
   echo " $0 restore <device> <backup_dir> (run from laptop)"
-  echo " $0 sync <path> (run from laptop/retropie)"
-  echo " $0 sync_media <path> (run from laptop/retropie)"
+  echo " $0 sync <from_path> <to_path> (run from laptop/retropie)"
+  echo " $0 sync_media <from_path> <to_path> (run from laptop/retropie)"
   exit 1
 }
 
@@ -30,19 +30,21 @@ backup() {
 }
 
 sync() {
-  local sync_to_path=$1
+  local sync_from_path=$1
+  local sync_to_path=$2
 
   # This should be the full list of paths that might be modified by using
   # the arcade or using retrokit
   local paths=(/opt/retropie/ /etc/ /home/pi/)
 
   for path in "${paths[@]}"; do
-    sudo rsync -av "$path" "$sync_to_path$path" --delete
+    sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
   done
 }
 
 sync_media() {
-  local sync_to_path=$1
+  local sync_from_path=$1
+  local sync_to_path=$2
 
   # This should be the full list of media paths
   local paths=(
@@ -53,7 +55,7 @@ sync_media() {
   )
 
   for path in "${paths[@]}"; do
-    sudo rsync -av "$path" "$sync_to_path$path" --delete
+    sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
   done
 }
 
@@ -68,6 +70,7 @@ create() {
   download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" "$image_file"
 
   # Copy the image
+  echo "Copying image to $device..."
   gunzip --stdout "$image_file" | sudo dd bs=4M of="$device"
 }
 
