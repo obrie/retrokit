@@ -11,7 +11,7 @@ scrape() {
 
   stop_emulationstation
 
-  log "Scaping $system from $source"
+  echo "Scaping $system from $source"
   if [ "$mode" == 'new' ]; then
     # Only scrape roms we have no data for
     /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}"
@@ -60,7 +60,7 @@ build_gamelist() {
   local IFS=$'\n'
   local extra_args=($(system_setting '.scraper.args[]?'))
 
-  log "Building gamelist for $system"
+  echo "Building gamelist for $system"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}"
 }
 
