@@ -14,7 +14,15 @@ clean_emulator_config_key() {
 }
 
 install_roms() {
-  romkit_cli install --log-level DEBUG
+  local log_level
+  if [ "$DEBUG" == 'true' ]; then
+    log_level='DEBUG'
+  else
+    log_level='INFO'
+  fi
+
+  echo 'Looking for new ROMs to download...'
+  romkit_cli install --log-level "$log_level"
 }
 
 # Define emulators for games that don't use the default
