@@ -58,7 +58,7 @@ uninstall() {
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 
   # Remove any remaining custom emulators
-  if [ -f "$system_config_dir/emulators.cfg" ]; then
+  if [ -f "$system_config_dir/emulators.cfg" ] && [ -f "$retropie_system_config_dir/emulators.cfg" ]; then
     while read emulator; do
       crudini --del "$retropie_system_config_dir/emulators.cfg" '' "$emulator"
     done < <(crudini --get "$system_config_dir/emulators.cfg" '')
