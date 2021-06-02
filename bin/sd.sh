@@ -54,7 +54,11 @@ sync_media() {
     /opt/retropie/configs/all/retroarch/overlay/
   )
 
+  local remote_user=$(stat -c '%U' "$sync_to_path/opt/retropie/configs")
+  local remote_group=$(stat -c '%G' "$sync_to_path/opt/retropie/configs")
+
   for path in "${paths[@]}"; do
+    sudo install -d -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
     sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
   done
 }
