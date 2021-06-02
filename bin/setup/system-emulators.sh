@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Install emulators
 install_emulators() {
-  backup_and_restore "$retropie_system_config_dir/emulators.cfg"
+  backup "$retropie_system_config_dir/emulators.cfg"
 
   # Install packages
   while IFS="$tab" read -r package emulator build is_default; do
@@ -46,19 +46,23 @@ install() {
 }
 
 uninstall() {
-  # Revert changes to the emulators config
-  restore "$retropie_system_config_dir/emulators.cfg" delete_src=true
-
   # Remove bios files
   local bios_dir=$(system_setting '.bios.dir')
   while IFS="$tab" read -r bios_name; do
     rm -f "$bios_dir/$bios_name"
   done < <(system_setting 'select(.bios) | .bios.files | keys[]')
 
-  # Uninstall emulators
+  # Uninstall emulators (this will automatically change the default if applicable)
   while IFS="$tab" read -r package; do
     uninstall_retropie_package "$package"
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
+
+  # Remove any remaining custom emulators
+  if [ -f "$system_config_dir/emulators.cfg" ]; then
+    while read emulator; do
+      crudini --del "$retropie_system_config_dir/emulators.cfg" '' "$emulator"
+    done < <(crudini --get "$system_config_dir/emulators.cfg" '')
+  fi
 }
 
 "$1" "${@:3}"

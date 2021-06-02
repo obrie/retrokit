@@ -339,15 +339,6 @@ install_retropie_package() {
   else
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
   fi
-
-  # Always ensure we run the configuration in case files were restored prior
-  # to the install.  Note that we only do this when updating since we know that
-  # an install will always run an update.
-  # 
-  # This could end up running `configure` twice if an update actually occurred.
-  if [ "$mode" == '_update_' ]; then
-    sudo ~/RetroPie-Setup/retropie_packages.sh "$name" configure
-  fi
 }
 
 uninstall_retropie_package() {
