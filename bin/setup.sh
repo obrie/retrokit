@@ -11,9 +11,16 @@ usage() {
 setup_all() {
   local action="$1"
 
+  local modules
+  if [[ "$action" == 'install'* ]]; then
+    modules=$(setting '.modules[]')
+  else
+    modules=$(setting '.modules | reverse[]')
+  fi
+
   while read -r setupmodule; do
     setup "$action" "$setupmodule"
-  done < <(setting '.modules[]')
+  done < <(echo "$modules")
 }
 
 setup() {
