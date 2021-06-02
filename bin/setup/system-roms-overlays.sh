@@ -16,6 +16,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   # Check if we're actually installing overlays
   if [ -z "$(system_setting '.overlays.repos')" ]; then
+    echo 'No overlays configured'
     return
   fi
 
