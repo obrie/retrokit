@@ -18,6 +18,7 @@ rp_module_section="opt"
 rp_module_flags="sdl2 sdl1-videocore"
 
 function __binary_url_advmame-joy() {
+    [ -z "$__curl_opts" ] && __curl_opts='-L'
     echo "https://github.com/obrie/retrokit/releases/download/latest/advmame-joy-rpi4-buster.tar.gz"
 }
 

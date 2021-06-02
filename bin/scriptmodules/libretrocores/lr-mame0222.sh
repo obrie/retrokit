@@ -9,6 +9,7 @@ rp_module_section="exp"
 rp_module_flags=""
 
 function __binary_url_lr-mame0222() {
+    [ -z "$__curl_opts" ] && __curl_opts='-L'
     echo "https://github.com/obrie/retrokit/releases/download/latest/lr-mame0222-rpi4-buster.tar.gz"
 }
 
