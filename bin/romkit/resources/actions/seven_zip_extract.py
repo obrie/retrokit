@@ -42,6 +42,7 @@ class SevenZipExtract(BaseAction):
 
                 if self.config.get('include_parent') == False:
                     # Move children to final destination
+                    target.path.mkdir(parents=True)
                     for child_path in tmpdir.glob('*/*'):
                         shutil.move(str(child_path), str(target.path))
                 else:
