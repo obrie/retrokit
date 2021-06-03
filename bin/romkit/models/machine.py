@@ -306,6 +306,7 @@ class Machine:
         else:
             # Re-download the source machine if it's missing files
             if not machine.resource.download_path.contains(roms):
+                logging.info(f'[{self.name}] Downloading {machine.name}')
                 machine.resource.download(force=True)
 
             logging.info(f'[{self.name}] Installing from {machine.name}')
