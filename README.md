@@ -123,18 +123,17 @@ in the config/ folder, particularly config/settings.json.
 
 ## Instructions
 
-1. Flash new image
+1. Flash new image (Note this will also expand the main partition and copy retrokit
+   onto the sd card):
    ```
    bin/sd.sh create /path/to/device # e.g. /dev/mmcblk0
    ```
-1. Expand main partition of sd card (if applicable)
-1. Copy retrokit onto the sd card at /home/pi/retrokit (including .env)
 1. Insert sd card into Pi
 1. Start up Pi
 1. Quit EmulationStation (F4 or leave as-is and SSH into your Pi)
 1. Update Raspbian
    ```
-   bin/update.sh system
+   retrokit/bin/update.sh system
    ```
 1. Reboot
    ```
@@ -142,16 +141,21 @@ in the config/ folder, particularly config/settings.json.
    ```
 1. Update RetroPie-Setup and its packages
    ```
-   bin/update.sh retropie
+   retrokit/bin/update.sh retropie
    ```
 1. Run retrokit
    ```
-   bin/setup.sh install
+   retrokit/bin/setup.sh install
    ```
 
 To access via VNC:
 
 * Open in VNC client: `<ip address of rpi>:5900`
+
+## Testing
+
+Please note that this process has only been tested with an Ubuntu-based
+laptop for flashing the sd card.
 
 ## Thanks
 

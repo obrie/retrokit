@@ -54,8 +54,8 @@ sync_media() {
     /opt/retropie/configs/all/retroarch/overlay/
   )
 
-  local remote_user=$(stat -c '%U' "$sync_to_path/opt/retropie/configs")
-  local remote_group=$(stat -c '%G' "$sync_to_path/opt/retropie/configs")
+  local remote_user=$(stat -c '%U' "$sync_to_path/home/pi")
+  local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
 
   for path in "${paths[@]}"; do
     sudo install -d -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
@@ -73,9 +73,31 @@ create() {
   # Download Retropie
   download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" "$image_file"
 
+  # Make sure the device is unmounted
+  if df | grep -q "$device"; then
+    sudo umount ${device}* || true
+  fi
+
   # Copy the image
   echo "Copying image to $device..."
-  gunzip --stdout "$image_file" | sudo dd bs=4M of="$device"
+  gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device"
+
+  # Expand main partition to consume the entire disk
+  sudo parted "$device" resizepart 2 100%
+
+  # Mount the device
+  local mount_path="$HOME/retrokit-sdcard"
+  mkdir -p "$mount_path"
+  sudo mount "${device}p2" "$mount_path"
+
+  # Copy retrokit
+  local remote_user=$(stat -c '%U' "$mount_path/home/pi")
+  local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
+  sudo rsync -av --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
+
+  # Unmount the device
+  sudo umount "${device}p2"
+  rmdir "$mount_path"
 }
 
 main() {
