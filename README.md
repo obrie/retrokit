@@ -157,6 +157,15 @@ To access via VNC:
 Please note that this process has only been tested with an Ubuntu-based
 laptop for flashing the sd card.
 
+## Emulators
+
+The following emulators / cores are built from source:
+
+* dosbox-staging (unofficial, no binaries available yet)
+* lr-yabasanshiro (unofficial, no binaries available yet)
+* mupen64plus (Due to crashes described [here](https://retropie.org.uk/forum/topic/30313/solved-gliden64-crashing-back-to-emulationstation-for-every-n64-rom?_=1622729300554))
+* yabasanshiro (unofficial, no binaries available yet)
+
 ## Thanks
 
 There are so many people / resources that I've pulled over time to make
