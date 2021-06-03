@@ -8,6 +8,7 @@ pair_device() {
 
   read -p "Do you have device \"$name\" ready for pairing? (y/n): " confirm
   if [[ $confirm == [yY] ]]; then
+    echo 'Scanning for device...'
     local matching_devices=$(hcitool scan | grep "$name")
 
     if [ -n "$matching_devices" ]; then
