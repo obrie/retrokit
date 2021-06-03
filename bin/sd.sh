@@ -48,18 +48,26 @@ sync_media() {
 
   # This should be the full list of media paths
   local paths=(
-    /opt/retropie/configs/all/emulationstation/downloaded_media/
-    /opt/retropie/configs/all/skyscraper/cache/
+    /home/pi/RetroPie/BIOS/fbneo/samples/
+    /home/pi/RetroPie/BIOS/mame/samples/
+    /home/pi/RetroPie/BIOS/mame2003-plus/samples/
+    /home/pi/RetroPie/BIOS/mame2003/samples/
+    /home/pi/RetroPie/BIOS/mame2010/samples/
+    /home/pi/RetroPie/BIOS/mame2016/samples/
     /home/pi/RetroPie/roms/
+    /opt/retropie/configs/all/emulationstation/downloaded_media/
     /opt/retropie/configs/all/retroarch/overlay/
+    /opt/retropie/configs/all/skyscraper/cache/
   )
 
   local remote_user=$(stat -c '%U' "$sync_to_path/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
 
   for path in "${paths[@]}"; do
-    sudo install -d -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
-    sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
+    if [ -d "$sync_from_path$path" ]; then
+      sudo install -d -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
+      sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
+    fi
   done
 }
 
