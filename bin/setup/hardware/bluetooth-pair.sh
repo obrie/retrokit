@@ -19,7 +19,7 @@ pair_device() {
 
         # Scan for device
         rm -f "$tmp_dir/bluetooth.out"
-        stdbuf -i0 -o0 -e0 bluetoothctl --timeout 30 scan on </dev/null >> "/home/pi/retrokit/tmp/bluetooth.out" &
+        stdbuf -i0 -o0 -e0 bluetoothctl --timeout 30 scan on </dev/null >> "$tmp_dir/bluetooth.out" &
         local scan_pid=$!
 
         # Wait for device to appear
@@ -59,7 +59,7 @@ install() {
     while IFS=$'\n' read -r name; do
       retval=0
 
-      # So longer as the user has more devices to pair, keep asking
+      # So long as the user has more devices to pair, keep asking
       while [ $retval == 0 ]; do
         pair_device "$name" </dev/tty || retval=$?
       done
