@@ -1,4 +1,4 @@
-from romkit.filters import BaseFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
+from romkit.filters import BaseFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FavoriteFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
@@ -7,6 +7,9 @@ import traceback
 from copy import copy
 from pathlib import Path
 from typing import Generator, List, Optional, Tuple
+
+# Maximum number of times we'll attempt to install a machine
+MAX_INSTALL_ATTEMPTS = 3
 
 class BaseSystem:
     name = 'base'
@@ -22,6 +25,7 @@ class BaseSystem:
         TitleFilter,
         ROMSetFilter,
         EmulatorFilter,
+        FavoriteFilter,
     ]
 
     # Class to use for building emulator sets
@@ -51,6 +55,9 @@ class BaseSystem:
         else:
             self.emulator_set = self.emulator_set_class(self)
 
+        # Favorites
+        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
+
         # Filters
         self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
 
@@ -59,8 +66,9 @@ class BaseSystem:
             self.filter_set.append(EmulatorCompatibilityFilter(config=self.config))
 
         # Filters: forced name filters
-        for system_dir in self.dirs:
-            for filter in system_dir.filter_set.filters:
+        auxiliary_filter_sets = list(map(lambda system_dir: system_dir.filter_set, self.dirs)) + [self.favorites_set]
+        for filter_set in auxiliary_filter_sets:
+            for filter in filter_set.filters:
                 if filter.name == 'names':
                     new_filter = copy(filter)
                     new_filter.override = True
@@ -185,13 +193,15 @@ class BaseSystem:
     # Installs the given machine and returns true/false depending on whether the
     # install was successful
     def install_machine(self, machine: Machine) -> bool:
-        try:
-            machine.install()
-            return True
-        except Exception as e:
-            logging.error(f'[{machine.name}] Install failed')
-            traceback.print_exc()
-            return False
+        for attempt in range(MAX_INSTALL_ATTEMPTS):
+            try:
+                machine.install()
+                return True
+            except Exception as e:
+                logging.error(f'[{machine.name}] Install failed')
+                traceback.print_exc()
+
+        return False
 
     # Organizes the directory structure based on the current list of valid
     # installed machines
