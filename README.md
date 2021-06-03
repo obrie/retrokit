@@ -127,16 +127,11 @@ in the config/ folder, particularly config/settings.json.
    ```
    bin/sd.sh create /path/to/device # e.g. /dev/mmcblk0
    ```
-1. Expand main partition of sd card
+1. Expand main partition of sd card (if applicable)
+1. Copy retrokit onto the sd card at /home/pi/retrokit (including .env)
 1. Insert sd card into Pi
 1. Start up Pi
-1. Quit EmulationStation
-1. Copy retrokit to your sd card, including .env
-   ```
-   cd /home/pi
-   git clone https://github.com/obrie/retrokit.git
-   cp /path/to/.env /home/pi/retrokit/.env
-   ```
+1. Quit EmulationStation (F4 or leave as-is and SSH into your Pi)
 1. Update Raspbian
    ```
    bin/update.sh system
