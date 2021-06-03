@@ -40,7 +40,7 @@ class ResourcePath:
 
     # Whether this path exists
     def exists(self) -> bool:
-        return self.path.exists()
+        return self.path.exists() and self.path.stat().st_size > 0
 
     # Deletes this path if it exists
     def delete(self) -> None:
