@@ -7,7 +7,7 @@ system="$1"
 system_settings_file="$app_dir/config/systems/$system/settings.json"
 
 romkit_cli() {
-  TMPDIR="$tmp_dir" python3 bin/romkit/cli.py $1 "$system_settings_file" ${@:2}
+  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" $1 "$system_settings_file" ${@:2}
 }
 
 list() {
