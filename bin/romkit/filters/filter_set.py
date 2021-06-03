@@ -42,11 +42,20 @@ class FilterSet:
 
     # Whether the given machine is allowed by the filter set
     def allow(self, machine: Machine) -> Optional[FilterReason]:
-        allowed_by_override = any(filter.override and filter.allow(machine) for filter in self.overrides)
+        allowed_by_override = False
+        for filter in self.overrides:
+            if filter.allow(machine):
+                allowed_by_override = True
+                allowed_by_override_filter = filter.name
+                break
+        
         allowed = all((allowed_by_override and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
 
         if allowed:
-            if allowed_by_override:
+            if allowed_by_override and allowed_by_override_filter == 'name':
+                # Only explicit names will override everything else, including 1G1R
                 return FilterReason.OVERRIDE
             else:
+                # Either this was an override filter that ignored other filters or
+                # all filters agreed that this machine is allowed
                 return FilterReason.ALLOW

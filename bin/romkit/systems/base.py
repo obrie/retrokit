@@ -128,7 +128,7 @@ class BaseSystem:
                         machines_to_install.add(machine)
 
                         # Avoid installing anything else in the group that was a candidate
-                        machine_candidates.pop(group, None)
+                        machine_candidates[group] = machine
 
                     # If a priority is defined, the user is asking for a 1G1R setup.
                     # In that case, we either choose a machine that was explicitly overridden
