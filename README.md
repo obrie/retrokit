@@ -130,14 +130,14 @@ in the config/ folder, particularly config/settings.json.
    ```
 1. Insert sd card into Pi
 1. Start up Pi
-1. Quit EmulationStation (F4 or leave as-is and SSH into your Pi)
+1. Quit EmulationStation (F4)
 1. Update Raspbian
    ```
    retrokit/bin/update.sh system
    ```
 1. Reboot
    ```
-   shutdown -r 0
+   sudo shutdown -r 0
    ```
 1. Update RetroPie-Setup and its packages
    ```
