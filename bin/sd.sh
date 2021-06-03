@@ -93,7 +93,9 @@ create() {
   # Copy retrokit
   local remote_user=$(stat -c '%U' "$mount_path/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
-  sudo rsync -av --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
+  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
+  mkdir "$mount_path/home/pi/retrokit/tmp"
+  chown "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
 
   # Unmount the device
   sudo umount "${device}p2"
