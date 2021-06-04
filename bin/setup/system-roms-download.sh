@@ -33,32 +33,36 @@ install_emulator_selections() {
   # Load emulator data
   load_emulator_data
 
+  # Look up existing emulator selections
+  declare -A existing_selections
+  while read config_key; do
+    existing_selections["$config_key"]=1
+  done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
+
+  # Identify new emulator selections
+  local new_selections=""
+  while IFS="$tab" read -r rom_name source_emulator; do
+    local target_emulator=${emulators["$source_emulator/emulator"]}
+    if [ -n "$target_emulator" ]; then
+      local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
+
+      # Remove it from existing selections so we know what we should delete
+      # at the end of this
+      unset existing_selections["$config_key"]
+
+      new_selections+="$config_key = \"$target_emulator\"\n"
+    fi
+  done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
+
   # Add emulator selections for roms with an explicit one
-  # 
-  # This is done in one batch because it's a bit slow otherwise
   echo 'Adding emulator selections...'
-  crudini --merge "$emulators_config_file" < <(
-    while IFS="$tab" read -r rom_name source_emulator; do
-      local target_emulator=${emulators["$source_emulator/emulator"]}
-      if [ -n "$target_emulator" ]; then
-        echo "$(clean_emulator_config_key "${system}_${rom_name}") = \"$target_emulator\""
-      fi
-    done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
-  )
+  crudini --merge "$emulators_config_file" < <(echo -e "$new_selections")
 
   # Remove emulator selections for roms without one
   echo 'Removing unused emulator selections...'
-  while IFS="$tab" read -r rom_name emulator; do
-    if [ -z "$emulator" ]; then
-      local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
-
-      # Grep for the file before running crudini since crudini is generally much
-      # slower and we don't want to invoke it if we don't need to
-      if grep "$config_key" "$emulators_config_file"; then
-        crudini --del "$emulators_config_file" '' "$config_key"
-      fi
-    fi
-  done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
+  for config_key in "${!existing_selections[@]}"; do
+    crudini --del "$emulators_config_file" '' "$config_key"
+  done
 }
 
 # Download roms from a remote source
