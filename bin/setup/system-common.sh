@@ -100,6 +100,10 @@ overlay0_full_screen = true
 
 overlay0_descs = 0
 EOF
+
+  if [ -f "$system_config_dir/overlay.cfg" ]; then
+    crudini --merge --inplace "$path" < "$system_config_dir/overlay.cfg"
+  fi
 }
 
 ##############
