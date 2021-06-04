@@ -3,27 +3,40 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
-system="$1"
-system_settings_file="$app_dir/config/systems/$system/settings.json"
-
-romkit_cli() {
-  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" $1 "$system_settings_file" ${@:2}
+usage() {
+  echo "usage:"
+  echo " $0 <list|install|organize|vacuum> [system|all] [options]"
+  exit 1
 }
 
-list() {
-  romkit_cli list ${@}
+run() {
+  local command=$1
+  local system=$2
+  local system_settings_file="$app_dir/config/systems/$system/settings.json"
+  local args=("${@:3}")
+
+  if [ -z "$args" ]; then
+    args=(--log-level ERROR)
+  fi
+
+  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
 }
 
-vacuum() {
-  romkit_cli vacuum ${@}
+main() {
+  local command=$1
+  local system=$2
+
+  if [ -z "$system" ] || [ "$system" == 'all' ]; then
+    while read system; do
+      run "$command" "$system" "${@:3}"
+    done < <(setting '.systems[] | select(. != "ports")')
+  else
+    run "$command" "$system" "${@:3}"
+  fi
 }
 
-organize() {
-  romkit_cli organize ${@}
-}
-
-if [[ $# -gt 2 ]]; then
-  "$2" "${@:3}"
-else
-  "$2" --log-level ERROR
+if [[ $# -lt 1 ]]; then
+  usage
 fi
+
+main "$@"
