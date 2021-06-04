@@ -316,7 +316,9 @@ download() {
       echo "Already downloaded $url"
     fi
 
-    if [ $exit_code -ne 0 ] && [ $attempt -ne $DOWNLOAD_MAX_ATTEMPTS ]; then
+    if [ $exit_code -eq 0 ]; then
+      break
+    elif [ $attempt -ne $DOWNLOAD_MAX_ATTEMPTS ]; then
       >&2 echo "Retrying in $DOWNLOAD_RETRY_WAIT_TIME seconds..."
       sleep $DOWNLOAD_RETRY_WAIT_TIME
     fi
