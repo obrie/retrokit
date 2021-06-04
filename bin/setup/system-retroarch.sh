@@ -26,6 +26,7 @@ install_core_options() {
     cp "$global_core_options_path" "$core_options_path"
 
     if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
+      echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
       crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
     fi
   else
