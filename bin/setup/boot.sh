@@ -28,7 +28,7 @@ install() {
   # in order to avoid multiple scripts modifying the /boot/config.txt file.
   local case=$(setting '.hardware.case.model')
   if [ -f "$config_dir/boot/config-$case.txt" ]; then
-    cat "$config_dir/boot/config-$case.txt" >> /boot/config.txt
+    cat "$config_dir/boot/config-$case.txt" | sudo tee -a /boot/config.txt >/dev/null
   fi
 }
 
