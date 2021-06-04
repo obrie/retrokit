@@ -7,6 +7,12 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   download 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=tsv' "$system_tmp_dir/c64_dreams.tsv"
 
+  # Figure out where the core options live
+  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
+  if [ -z "$core_options_path" ]; then
+    core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
+  fi
+
   # Map normalized name to rom name
   declare -A installed_roms
   while read -r rom_name; do
@@ -36,10 +42,15 @@ install() {
       fi
 
       if [ -n "$joyport_selection" ]; then
-        # Ensure file exists
         local opt_file="$retroarch_config_dir/config/VICE x64/$rom_name.opt"
-        mkdir -p "$(dirname "$opt_file")"
-        touch "$opt_file"
+
+        if [ ! -f "$opt_file" ]; then
+          # Copy over existing core overrides so we don't just get the
+          # core defaults
+          mkdir -p "$(dirname "$opt_file")"
+          touch "$opt_file"
+          grep -E '^vice' "$core_options_path" > "$opt_file" || true
+        fi
 
         # Overwrite joyport selection
         echo "Setting vice_joyport to $joyport_selection for $opt_file"
