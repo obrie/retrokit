@@ -44,7 +44,7 @@ install() {
       # Get the Tree SHA for the directory storing the images
       local parent_tree_path=$(dirname "$rom_images_path")
       local sub_tree_name=$(basename "$rom_images_path")
-      local tree_sha=$(curl -s "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
+      local tree_sha=$(download "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
 
       # Get the list of files at that sub-tree
       download "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_path"

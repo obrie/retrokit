@@ -276,6 +276,9 @@ conf_prepare() {
 # Downloads
 ##############
 
+DOWNLOAD_MAX_ATTEMPTS=${DOWNLOAD_MAX_ATTEMPTS:-3}
+DOWNLOAD_RETRY_WAIT_TIME=${DOWNLOAD_RETRY_WAIT_TIME:-30}
+
 download() {
   # Arguments
   local url=$1
@@ -289,25 +292,37 @@ download() {
     local cmd='sudo'
   fi
 
-  if [ ! -s "$target" ] || [ "$force" == "true" ]; then
-    echo "Downloading $url"
+  local exit_code=0
+  for attempt in $(seq 1 $DOWNLOAD_MAX_ATTEMPTS); do
+    if [ -z "$target" ]; then
+      # Print to stdout
+      curl -fL# "$url"
+      exit_code=$?
+    elif [ ! -s "$target" ] || [ "$force" == "true" ]; then
+      echo "Downloading $url"
 
-    # Ensure target directory exists
-    mkdir -p "$(dirname "$target")"
+      # Ensure target directory exists
+      mkdir -p "$(dirname "$target")"
 
-    # Download via curl
-    $cmd curl -fL# -o "$target.tmp" "$url"
-
-    # If the target is empty, clean up and let the caller know
-    if [ -s "$target.tmp" ]; then
-      $cmd mv "$target.tmp" "$target"
+      # Download via curl and check that the target isn't empty
+      if $cmd curl -fL# -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
+        $cmd mv "$target.tmp" "$target"
+        exit_code=0
+      else
+        $cmd rm -f "$target"
+        exit_code=1
+      fi
     else
-      $cmd rm -f "$target"
-      return 1
+      echo "Already downloaded $url"
     fi
-  else
-    echo "Already downloaded $url"
-  fi
+
+    if [ $exit_code -ne 0 ] && [ $attempt -ne $DOWNLOAD_MAX_ATTEMPTS ]; then
+      >&2 echo "Retrying in $DOWNLOAD_RETRY_WAIT_TIME seconds..."
+      sleep $DOWNLOAD_RETRY_WAIT_TIME
+    fi
+  done
+
+  return $exit_code
 }
 
 has_newer_commit() {

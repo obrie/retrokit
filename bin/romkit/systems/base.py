@@ -3,6 +3,7 @@ from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
 import logging
+import os
 import time
 import traceback
 from copy import copy
@@ -10,8 +11,8 @@ from pathlib import Path
 from typing import Generator, List, Optional, Tuple
 
 # Maximum number of times we'll attempt to install a machine
-MAX_INSTALL_ATTEMPTS = 3
-RETRY_WAIT_TIME = 15 # seconds
+INSTALL_MAX_ATTEMPTS = os.getenv('INSTALL_MAX_ATTEMPTS', 3)
+INSTALL_RETRY_WAIT_TIME = os.getenv('INSTALL_RETRY_WAIT_TIME', 30) # seconds
 
 class BaseSystem:
     name = 'base'
@@ -198,14 +199,14 @@ class BaseSystem:
     # Installs the given machine and returns true/false depending on whether the
     # install was successful
     def install_machine(self, machine: Machine) -> bool:
-        for attempt in range(MAX_INSTALL_ATTEMPTS):
+        for attempt in range(INSTALL_MAX_ATTEMPTS):
             try:
                 machine.install()
                 return True
             except Exception as e:
                 logging.error(f'[{machine.name}] Install failed')
                 traceback.print_exc()
-                time.sleep(RETRY_WAIT_TIME)
+                time.sleep(INSTALL_RETRY_WAIT_TIME)
 
         return False
 
