@@ -147,6 +147,11 @@ in the config/ folder, particularly config/settings.json.
    ```
    retrokit/bin/setup.sh install
    ```
+1. Reboot
+   ```
+   sudo shutdown -r 0
+   ```
+1. Have fun!
 
 To access via VNC:
 
