@@ -137,12 +137,12 @@ function onstart_ir_keyboard() {
 
     # Define initial values
     declare -A defaults
-    defaults['KEY_ESC']=('KEY_CLEAR' 'KEY_EXIT')
+    defaults['KEY_ESC']='KEY_CLEAR,KEY_EXIT'
 
     for input_key in "${!defaults[@]}"; do
         local keys=${defaults["$input_key"]}
 
-        for key in "${keys[@]}"; do
+        for key in ${keys//,/ }; do
             # Find the corresponding scancodes
             local scancodes=${scanmap["$key"]}
             if [ -z "$scancodes" ]; then
