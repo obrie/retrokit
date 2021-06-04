@@ -123,6 +123,7 @@ in the config/ folder, particularly config/settings.json.
 
 ## Instructions
 
+1. Update config/ in retrokit to match your personal preferences and hardware requirements
 1. Flash new image (Note this will also expand the main partition and copy retrokit
    onto the sd card):
    ```
@@ -157,10 +158,54 @@ To access via VNC:
 
 * Open in VNC client: `<ip address of rpi>:5900`
 
-## Testing
+## Hardware
 
 Please note that this process has only been tested with an Ubuntu-based
 laptop for flashing the sd card.
+
+### Bluetooth
+
+To find your Blutooth device names to configure in `config/settings.json`, run:
+
+```sh
+hcitool scan
+```
+
+This will list the each device's mac address and its associated device name.
+
+### Controllers
+
+To identify your controller names and ids, there's unfortunately no easy way out
+of the box that I'm aware of.  However, you can follow the instructions here: https://askubuntu.com/a/368711
+
+Here's a simplified version you can run:
+
+```sh
+cat > sdl2-joystick.c <<EOF
+#include <SDL.h>
+int main() {
+  SDL_Init(SDL_INIT_JOYSTICK);
+  for (int i = 0; i < SDL_NumJoysticks(); ++i) {
+    SDL_Joystick* js = SDL_JoystickOpen(i);
+    SDL_JoystickGUID guid = SDL_JoystickGetGUID(js);
+    char guid_str[1024];
+    SDL_JoystickGetGUIDString(guid, guid_str, sizeof(guid_str));
+    const char* name = SDL_JoystickName(js);
+    printf("%s \"%s\"\n", guid_str, name);
+    SDL_JoystickClose(js);
+  }
+  SDL_Quit();
+}
+EOF
+
+gcc -o sdl2-joystick sdl2-joystick.c `pkg-config --libs --cflags sdl2`
+./sdl2-joystick
+```
+
+Alternatively, you can either:
+
+* Find your controller in the [SDL controller database](https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt)
+* Set up your controllers with EmulationStation and find the corresponding ids in /opt/retropie/configs/all/emulationstation/es_input.cfg
 
 ## Emulators
 
