@@ -22,7 +22,7 @@ function onstart_ir_keyboard() {
     # Create a temp keymap file that has no scan codes
     sed -n '/\[protocols.scancodes\]/q;p' "$source_keymap_path" > '/tmp/rc_keymap.toml'
     echo '[protocols.scancodes]' >> '/tmp/rc_keymap.toml'
-    iniConfig ' ' '' '/tmp/rc_keymap.toml'
+    iniConfig ' = ' '' '/tmp/rc_keymap.toml'
 
     # Inverse the mappings from the keymap file
     declare -Ag scanmap
@@ -134,6 +134,29 @@ function onstart_ir_keyboard() {
     keymap['1073742052']='KEY_RIGHTCTRL'
     keymap['1073742053']='KEY_RIGHTSHIFT'
     keymap['1073742054']='KEY_RIGHTALT'
+
+    # Define initial values
+    declare -A defaults
+    defaults['KEY_ESC']=('KEY_CLEAR' 'KEY_EXIT')
+
+    for input_key in "${!defaults[@]}"; do
+        local keys=${defaults["$input_key"]}
+
+        for key in "${keys[@]}"; do
+            # Find the corresponding scancodes
+            local scancodes=${scanmap["$key"]}
+            if [ -z "$scancodes" ]; then
+                continue
+            fi
+
+            # Map each scan code to the corresponding key
+            for scancode in ${scancodes//,/ }; do
+                if [ -n "$scancode" ]; then
+                    iniSet "$scancode" "\"$input_key\" # Original: $key"
+                fi
+            done
+        done
+    done
 }
 
 function map_ir_keyboard() {
