@@ -1,24 +1,10 @@
 {
   "system": "dreamcast",
-  "overlays": {
-    "repos": [
-      {
-        "repo": "thebezelproject/bezelproject-Dreamcast",
-        "path": "retroarch/overlay/GameBezels/Dreamcast"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-Dreamcast",
-        "path": "retroarch/overlay/GameBezels/Dreamcast",
-        "default": "retroarch/overlay/Dreamcast.png"
-      }
-    ]
-  },
   "scraper": {
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "redream": {"default": true},
-    "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
+    "redream": {"default": true}
   },
   "cheats": "Sega - Dreamcast",
   "bios": {
