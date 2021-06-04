@@ -1,18 +1,5 @@
 {
   "system": "nds",
-  "overlays": {
-    "repos": [
-      {
-        "repo": "thebezelproject/bezelproject-NDS",
-        "path": "retroarch/overlay/GameBezels/NDS"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-NDS",
-        "path": "retroarch/overlay/GameBezels/NDS",
-        "default": "retroarch/overlay/Nintendo-DS.png"
-      }
-    ]
-  },
   "scraper": {
     "sources": ["screenscraper"]
   },
