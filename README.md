@@ -204,8 +204,11 @@ gcc -o sdl2-joystick sdl2-joystick.c `pkg-config --libs --cflags sdl2`
 
 Alternatively, you can either:
 
-* Find your controller in the [SDL controller database](https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt)
-* Set up your controllers with EmulationStation and find the corresponding ids in /opt/retropie/configs/all/emulationstation/es_input.cfg
+* Find your controller in the [SDL controller database](https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecontrollerdb.txt) or
+* Set up your controllers through EmulationStation
+
+If you're not familiar with SDL GUIDs, setting up your controllers through EmulationStation
+is probably the best way.
 
 ## Emulators
 
