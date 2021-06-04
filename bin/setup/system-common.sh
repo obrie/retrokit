@@ -68,12 +68,15 @@ romkit_cache_list() {
   local cache_id=($(md5sum "$system_settings_file"))
   local cache_file="$system_tmp_dir/romkit-list.cache.$cache_id"
 
-  if [ ! -f "$cache_file" ]; then
+  if [ ! -s "$cache_file" ]; then
     # Remove any existing cache files
     find "$system_tmp_dir" -name "romkit-list.cache*" -exec rm -f "{}" \;
 
     # Re-cache the list
     romkit_cli list --log-level ERROR > "$cache_file"
+    if [ $? -ne 0 ]; then
+      rm "$cache_file"
+    fi
   fi
 
   cat "$cache_file"
