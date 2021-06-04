@@ -10,7 +10,7 @@ install() {
 
   # Add theme overrides
   while read theme_path; do
-    file_cp "$config_dir/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true
+    file_cp "$config_dir/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true envsubst=false
   done < <(find "$config_dir/themes" -type f -printf "%P\n")
 }
 
