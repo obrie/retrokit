@@ -22,11 +22,12 @@ function onstart_ppsspp() {
     # Reset inputs for this controller
     local regex="$controller-[0-9]\+"
     sed -i "/^.\+ = $regex\$/d" '/tmp/ppsspp-controls.ini'
-    sed -i "s/,$regex\|$regex,//g" '/tmp/ppsspp-controls.ini'
+    sed -i "s/,$regex//g" '/tmp/ppsspp-controls.ini'
+    sed -i "s/ $regex,/ /g" '/tmp/ppsspp-controls.ini'
 }
 
 function onstart_ppsspp_joystick() {
-    onstart_ppsspp '1'
+    onstart_ppsspp '10'
 
     # SDL codes from https://github.com/hrydgard/ppsspp/blob/6f795fc12043599fcb55b6d7d385e75fe2e525dc/SDL/SDLJoystick.cpp#L108-L144
     # Button codes from:
@@ -51,7 +52,7 @@ function onstart_ppsspp_joystick() {
 }
 
 function onstart_ppsspp_keyboard() {
-    onstart_ppsspp '10'
+    onstart_ppsspp '1'
 
     # SDL codes from https://wiki.libsdl.org/SDLKeycodeLookup
     declare -Ag keymap
@@ -328,6 +329,7 @@ function map_ppsspp_keyboard() {
 }
 
 function _onend_ppsspp() {
+    mkdir -p "$(dirname "$ppsspp_config_path")"
     mv '/tmp/ppsspp-controls.ini' "$ppsspp_config_path"
 }
 
