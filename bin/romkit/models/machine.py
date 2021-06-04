@@ -263,6 +263,7 @@ class Machine:
         return {
             'romset': self.romset.name,
             'name': self.name,
+            'description': self.description,
             'parent': self.parent_name,
             'emulator': self.emulator,
             'orientation': self.orientation,
