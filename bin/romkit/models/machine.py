@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from romkit.filters.filter_set import FilterReason
 from romkit.models import Disk, File, Sample
 
 import logging
@@ -41,6 +42,7 @@ class Machine:
         self.roms = roms
         self.sourcefile = sourcefile
         self.emulator = romset.emulator
+        self.favorite = False
         self.custom_context = {}
 
     # Whether this machine is installable
@@ -264,6 +266,7 @@ class Machine:
             'parent': self.parent_name,
             'emulator': self.emulator,
             'orientation': self.orientation,
+            'favorite': self.favorite,
         }
 
     # Determines whether the locally installed set of ROMs is equal to the full set of

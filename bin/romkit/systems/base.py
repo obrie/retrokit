@@ -55,8 +55,8 @@ class BaseSystem:
         else:
             self.emulator_set = self.emulator_set_class(self)
 
-        # Favorites
-        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
+        # Favorites (defaults to false if no favorites are provided)
+        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {'names': [None]}), config, self.supported_filters)
 
         # Filters
         self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
@@ -111,6 +111,9 @@ class BaseSystem:
                 # entire romset)
                 if not machine.emulator:
                     machine.emulator = self.emulator_set.get(machine)
+
+                # Set whether the machine is a favorite
+                machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW
 
                 allow_reason = self.filter_set.allow(machine)
                 if allow_reason:
