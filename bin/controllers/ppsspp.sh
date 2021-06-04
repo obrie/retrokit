@@ -12,7 +12,11 @@ function check_ppsspp() {
 function onstart_ppsspp() {
     local controller=$1
 
-    cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
+    if [ -f "$ppsspp_config_path" ]; then
+        cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
+    else
+        echo '[ControlMapping]' > '/tmp/ppsspp-controls.ini'
+    fi
     iniConfig ' = ' '' '/tmp/ppsspp-controls.ini'
 
     # Reset inputs for this controller
