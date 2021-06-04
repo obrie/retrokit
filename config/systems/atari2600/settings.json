@@ -72,6 +72,33 @@
         "Morse Code Tutor"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Asteroids",
+        "Breakout",
+        "BurgerTime",
+        "California Games",
+        "Centipede",
+        "Donkey Kong",
+        "Double Dragon",
+        "Frogger",
+        "Ghostbusters",
+        "Jungle Hunt",
+        "Mario Bros.",
+        "Missile Command",
+        "Ms. Pac-Man",
+        "Pac-Man",
+        "Pitfall II - Lost Caverns",
+        "Pitfall! - Pitfall Harry's Jungle Adventure",
+        "Pole Position",
+        "Popeye",
+        "Space Invaders",
+        "Summer Games",
+        "Super Breakout",
+        "Winter Games",
+        "Zaxxon"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },
@@ -79,33 +106,7 @@
       {"path": "$HOME/RetroPie/roms/atari2600/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/atari2600",
-        "filters": {
-          "titles": [
-            "Asteroids",
-            "Breakout",
-            "BurgerTime",
-            "California Games",
-            "Centipede",
-            "Donkey Kong",
-            "Double Dragon",
-            "Frogger",
-            "Ghostbusters",
-            "Jungle Hunt",
-            "Mario Bros.",
-            "Missile Command",
-            "Ms. Pac-Man",
-            "Pac-Man",
-            "Pitfall II - Lost Caverns",
-            "Pitfall! - Pitfall Harry's Jungle Adventure",
-            "Pole Position",
-            "Popeye",
-            "Space Invaders",
-            "Summer Games",
-            "Super Breakout",
-            "Winter Games",
-            "Zaxxon"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ]
   }

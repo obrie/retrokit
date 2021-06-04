@@ -90,6 +90,23 @@
         "Word Rockets"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Astrosmash",
+        "Bump 'n' Jump",
+        "BurgerTime",
+        "Donkey Kong",
+        "Donkey Kong Junior",
+        "Frogger",
+        "Pac-Man",
+        "Pinball",
+        "Pitfall!",
+        "Pole Position",
+        "Popeye",
+        "Star Wars - The Empire Strikes Back",
+        "Zaxxon"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },
@@ -97,23 +114,7 @@
       {"path": "$HOME/RetroPie/roms/intellivision/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/intellivision",
-        "filters": {
-          "titles": [
-            "Astrosmash",
-            "Bump 'n' Jump",
-            "BurgerTime",
-            "Donkey Kong",
-            "Donkey Kong Junior",
-            "Frogger",
-            "Pac-Man",
-            "Pinball",
-            "Pitfall!",
-            "Pole Position",
-            "Popeye",
-            "Star Wars - The Empire Strikes Back",
-            "Zaxxon"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ]
   }

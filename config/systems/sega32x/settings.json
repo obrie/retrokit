@@ -64,6 +64,15 @@
         "bios"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Mortal Kombat II",
+        "NBA Jam - Tournament Edition",
+        "Pitfall - The Mayan Adventure",
+        "Star Wars Arcade",
+        "Virtua Fighter"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },

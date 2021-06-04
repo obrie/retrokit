@@ -69,6 +69,18 @@
         "bios"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Breakout 2000",
+        "Doom",
+        "Double Dragon V - The Shadow Falls",
+        "NBA Jam - Tournament Edition",
+        "Pitfall - The Mayan Adventure",
+        "Rayman",
+        "Wolfenstein 3D",
+        "Worms"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },

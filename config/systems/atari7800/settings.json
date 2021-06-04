@@ -75,6 +75,21 @@
         "Diagnostic Test Cartrige"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Asteroids",
+        "Donkey Kong",
+        "Donkey Kong Junior",
+        "Double Dragon",
+        "Karateka",
+        "Mario Bros.",
+        "Ms. Pac-Man",
+        "Pole Position II",
+        "Rampage",
+        "Summer Games",
+        "Winter Games"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },

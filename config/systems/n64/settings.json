@@ -90,47 +90,48 @@
         "Waialae Country Club - True Golf Classics"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Carmageddon 64",
+        "Cruis'n USA",
+        "Donkey Kong 64",
+        "Duke Nukem 64",
+        "Earthworm Jim 3D",
+        "Excitebike 64",
+        "Indiana Jones and the Infernal Machine",
+        "Mario Kart 64",
+        "Mario Party",
+        "Mario Party 2",
+        "Mario Party 3",
+        "Mega Man 64",
+        "Mortal Kombat 4",
+        "Mortal Kombat Trilogy",
+        "NBA Jam 2000",
+        "NFL Blitz",
+        "NFL Blitz 2000",
+        "Paper Mario",
+        "Quake",
+        "Re-Volt",
+        "Snowboard Kids",
+        "Snowboard Kids 2",
+        "South Park Rally",
+        "South Park",
+        "Stunt Racer 64",
+        "Super Mario 64",
+        "Super Smash Bros.",
+        "Tony Hawk's Pro Skater",
+        "Tony Hawk's Pro Skater 2",
+        "Top Gear Overdrive",
+        "Top Gear Rally 2",
+        "Top Gear Rally",
+        "Worms Armageddon"
+      ]
+    },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/n64/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/n64",
-        "filters": {
-          "titles": [
-            "Carmageddon 64",
-            "Cruis'n USA",
-            "Donkey Kong 64",
-            "Duke Nukem 64",
-            "Earthworm Jim 3D",
-            "Excitebike 64",
-            "Indiana Jones and the Infernal Machine",
-            "Mario Kart 64",
-            "Mario Party",
-            "Mario Party 2",
-            "Mario Party 3",
-            "Mega Man 64",
-            "Mortal Kombat 4",
-            "Mortal Kombat Trilogy",
-            "NBA Jam 2000",
-            "NFL Blitz",
-            "NFL Blitz 2000",
-            "Paper Mario",
-            "Quake",
-            "Re-Volt",
-            "Snowboard Kids",
-            "Snowboard Kids 2",
-            "South Park Rally",
-            "South Park",
-            "Stunt Racer 64",
-            "Super Mario 64",
-            "Super Smash Bros.",
-            "Tony Hawk's Pro Skater",
-            "Tony Hawk's Pro Skater 2",
-            "Top Gear Overdrive",
-            "Top Gear Rally 2",
-            "Top Gear Rally",
-            "Worms Armageddon"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ],
     "files": {

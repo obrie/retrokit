@@ -305,6 +305,40 @@
         "deluxe5"
       ]
     },
+    "favorites": {
+      "names": [
+        "area51",
+        "area51mx",
+        "arkanoid",
+        "avsp",
+        "bublbobl",
+        "contra",
+        "dkong",
+        "duckhunt",
+        "mario",
+        "mk",
+        "mk2",
+        "mk3",
+        "mspacman",
+        "nbajam",
+        "pacman",
+        "paperboy",
+        "punchout",
+        "outrun",
+        "rampage",
+        "sf",
+        "sf2",
+        "sf2ce",
+        "simpsons",
+        "suprmrio",
+        "tmnt",
+        "tmnt2",
+        "tron",
+        "xmcota",
+        "xmen",
+        "xmvsf"
+      ]
+    },
     "emulators": {
       "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
       "overrides": {
@@ -320,40 +354,7 @@
       {"path": "$HOME/RetroPie/roms/arcade/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/arcade",
-        "filters": {
-          "names": [
-            "area51",
-            "area51mx",
-            "arkanoid",
-            "avsp",
-            "bublbobl",
-            "contra",
-            "dkong",
-            "duckhunt",
-            "mario",
-            "mk",
-            "mk2",
-            "mk3",
-            "mspacman",
-            "nbajam",
-            "pacman",
-            "paperboy",
-            "punchout",
-            "outrun",
-            "rampage",
-            "sf",
-            "sf2",
-            "sf2ce",
-            "simpsons",
-            "suprmrio",
-            "tmnt",
-            "tmnt2",
-            "tron",
-            "xmcota",
-            "xmen",
-            "xmvsf"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ],
     "files": {

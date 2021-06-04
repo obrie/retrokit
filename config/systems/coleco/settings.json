@@ -80,30 +80,31 @@
         "Pac-Man"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Antarctic Adventure",
+        "BurgerTime",
+        "Choplifter!",
+        "Donkey Kong",
+        "Donkey Kong Junior",
+        "Frenzy",
+        "Frogger",
+        "Galaxian",
+        "Pac-Man",
+        "Pitfall!",
+        "Pitstop",
+        "Popeye",
+        "River Raid",
+        "Smurf - Rescue in Gargamel's Castle",
+        "Star Wars - The Arcade Game",
+        "Zaxxon"
+      ]
+    },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/coleco/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/coleco",
-        "filters": {
-          "titles": [
-            "Antarctic Adventure",
-            "BurgerTime",
-            "Choplifter!",
-            "Donkey Kong",
-            "Donkey Kong Junior",
-            "Frenzy",
-            "Frogger",
-            "Galaxian",
-            "Pac-Man",
-            "Pitfall!",
-            "Pitstop",
-            "Popeye",
-            "River Raid",
-            "Smurf - Rescue in Gargamel's Castle",
-            "Star Wars - The Arcade Game",
-            "Zaxxon"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ],
     "files": {

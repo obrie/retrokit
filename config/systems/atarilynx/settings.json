@@ -73,6 +73,25 @@
         "Lynx II Production Test Program"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Batman Returns",
+        "Battle Wheels",
+        "Blue Lightning",
+        "California Games",
+        "Checkered Flag",
+        "Lemmings",
+        "Ms. Pac-Man",
+        "Ninja Gaiden",
+        "Pac-Land",
+        "Paperboy",
+        "Rampage",
+        "Scrapyard Dog",
+        "S.T.U.N. Runner",
+        "Super Asteroids, Missile Command",
+        "Xenophobe"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },
@@ -80,25 +99,7 @@
       {"path": "$HOME/RetroPie/roms/atarilynx/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/atarilynx",
-        "filters": {
-          "titles": [
-            "Batman Returns",
-            "Battle Wheels",
-            "Blue Lightning",
-            "California Games",
-            "Checkered Flag",
-            "Lemmings",
-            "Ms. Pac-Man",
-            "Ninja Gaiden",
-            "Pac-Land",
-            "Paperboy",
-            "Rampage",
-            "Scrapyard Dog",
-            "S.T.U.N. Runner",
-            "Super Asteroids, Missile Command",
-            "Xenophobe"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ]
   }

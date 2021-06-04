@@ -53,15 +53,6 @@
       "World"
     ],
     "filters": {
-      "titles": [
-        "Blade Force",
-        "Captain Quazar",
-        "Corpse Killer",
-        "Demolition Man",
-        "Gex",
-        "Return Fire",
-        "Road Rash"
-      ],
       "flags": [
         "Europe",
         "USA",
@@ -75,6 +66,21 @@
         "almanac",
         "game guru",
         "sampler"
+      ],
+      "titles": [
+        "Blade Force",
+        "Captain Quazar",
+        "Corpse Killer",
+        "Demolition Man",
+        "Gex",
+        "Return Fire",
+        "Road Rash"
+      ]
+    },
+    "favorites": {
+      "titles": [
+        "Gex",
+        "Road Rash"
       ]
     },
     "dirs": [
