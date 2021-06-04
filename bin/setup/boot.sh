@@ -23,6 +23,13 @@ install() {
 
     echo "dtoverlay=gpio-ir,gpio_pin=$ir_gpio_pin,rc-map-name=$rc_map_name" | sudo tee -a /boot/config.txt
   fi
+
+  # Add case-specific boot options.  We do this here instead of the case setup
+  # in order to avoid multiple scripts modifying the /boot/config.txt file.
+  local case=$(setting '.hardware.case.model')
+  if [ -f "$config_dir/boot/config-$case.txt" ]; then
+    cat "$config_dir/boot/config-$case.txt" >> /boot/config.txt
+  fi
 }
 
 uninstall() {
