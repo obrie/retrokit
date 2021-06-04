@@ -17,7 +17,7 @@ install() {
   # Then add current favorites
   echo 'Setting favorites...'
   while IFS="$tab" read rom_name; do
-    xmlstarlet ed --inplace -s "/gameList/game[name=\"$rom_name\" or contains(image, \"/$rom_name.\")]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
+    xmlstarlet ed --inplace -s "/gameList/game[name=\"$rom_name\" or contains(image, \"/$rom_name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
   done < <(romkit_cache_list | jq -r 'select(.favorite == true) | .name')
 }
 
