@@ -19,7 +19,7 @@ install() {
     # For systems that have vertical orientations (like MAME), install the
     # vertical configuration
     if [ -n "$vertical_image_path" ]; then
-      download "$base_url/$default_image_path" "$overlays_dir/$system-vertical.png"
+      download "$base_url/$vertical_image_path" "$overlays_dir/$system-vertical.png"
       create_overlay_config "$overlays_dir/$system-vertical.cfg" "$system-vertical.png"
     fi
   done < <(system_setting '.overlays.repos[]? | [.repo, .branch, .default, .vertical] | join("^")')
