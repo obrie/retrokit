@@ -4,7 +4,7 @@ system="${2:-arcade}"
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
+config_path='/opt/retropie/configs/mame-advmame/advmame-joy.rc'
 
 restore_config() {
   if has_backup "$config_path"; then
@@ -71,7 +71,7 @@ uninstall() {
     mv "$HOME/RetroPie/roms/arcade/.advmame-config" "$HOME/RetroPie/roms/arcade/advmame"
   fi
 
-  # Restore advmame.rc, keeping the input_maps in the process
+  # Restore advmame config, keeping the input_maps in the process
   restore_config delete_src=true
 }
 
