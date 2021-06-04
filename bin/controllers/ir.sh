@@ -199,10 +199,10 @@ function map_ir_keyboard() {
             keys=('KEY_D' 'KEY_4' 'KEY_NUMERIC_4' 'KEY_BLUE')
             ;;
         leftbottom|leftshoulder)
-            keys=('KEY_PAGEDOWN' 'KEY_SCROLLDOWN' 'KEY_CHANNELDOWN')
+            keys=('KEY_PAGEUP' 'KEY_SCROLLUP' 'KEY_CHANNELUP')
             ;;
         rightbottom|rightshoulder)
-            keys=('KEY_PAGEUP' 'KEY_SCROLLUP' 'KEY_CHANNELUP')
+            keys=('KEY_PAGEDOWN' 'KEY_SCROLLDOWN' 'KEY_CHANNELDOWN')
             ;;
         start)
             keys=('KEY_ENTER' 'KEY_OK')
