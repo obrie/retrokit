@@ -160,6 +160,8 @@ function onstart_ppsspp_keyboard() {
     keymap['1073742052']='114' # NKCODE_CTRL_RIGHT
     keymap['1073742053']='60' # NKCODE_SHIFT_RIGHT
     keymap['1073742054']='58' # NKCODE_ALT_RIGHT
+
+    map_ppsspp 'Pause' '1' '111'
 }
 
 # Generates the configuration key for a given ES input name
@@ -217,7 +219,16 @@ function _get_config_key() {
             key='An.Down'
             ;;
         rightanalogleft)
-            key='Pause'
+            key='RightAn.Left'
+            ;;
+        rightanalogright)
+            key='RightAn.Right'
+            ;;
+        rightanalogup)
+            key='RightAn.Up'
+            ;;
+        rightanalogdown)
+            key='RightAn.Down'
             ;;
         leftthumb)
             key='ThumbL'
