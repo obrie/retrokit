@@ -4,7 +4,7 @@ system='nds'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-config_path="$retropie_system_config_dir/nds/drastic/config/drastic.cfg"
+config_path="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
 restore_config() {
   if has_backup "$config_path"; then
