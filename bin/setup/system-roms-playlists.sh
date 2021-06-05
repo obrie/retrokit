@@ -11,6 +11,13 @@ install() {
     return
   fi
 
+  # Remove existing playlists -- easier than having to keep track
+  # of which we need to delete
+  declare -A existing_playlists
+  while read path; do
+    existing_playlists["$path"]=1
+  done < <(find "$HOME/RetroPie/roms/$system" -name '*.m3u')
+
   echo 'Looking for multi-disc ROMs...'
   while read -r rom_path; do
     local rom_filename=$(basename "$rom_path")
@@ -28,12 +35,17 @@ install() {
     # Add to the playlist
     echo "Adding $rom_filename to $playlist_path"
     echo "$rom_filename" >> "$playlist_path"
+    unset 'existing_playlists["$playlist_path"]'
   done < <(find "$HOME/RetroPie/roms/$system" -type l -name "*(Disc *" | sort)
+
+  # Remove playlists we no longer needed
+  for path in "${!existing_playlists[@]}"; do
+    rm -v "$path"
+  done
 }
 
 uninstall() {
-  echo "Deleting $HOME/RetroPie/roms/$system/*.m3u"
-  find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -f "{}" \;
+  find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -fv "{}" \;
 }
 
 "$1" "${@:3}"
