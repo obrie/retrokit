@@ -93,6 +93,15 @@ days to complete depending on the size of your game collection.
 This is built for RetroPie / Raspberry Pi 4.  You must customize it to your
 own needs.
 
+## Why does this exist?
+
+When I started creating my own RetroPie system, I wanted to build it in such a way
+that I could re-create the exact same setup steps each time.  As it turns out, there's
+a lot involved in building out the perfect Raspberry Pi 4 system.
+
+retrokit (and romkit) represent the work I did to build a configuration management
+system for my arcade.
+
 ## Demo
 
 For a demo of what the end result looks like, see here.
