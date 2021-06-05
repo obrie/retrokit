@@ -9,11 +9,11 @@ install() {
   sudo apt install -y fluid-soundfont-gm
 
   # Create symlink at root
-  ln -fs "$HOME/RetroPie/pc/.exodos" "$HOME/eXoDOS"
+  ln -fsv "$HOME/RetroPie/pc/.exodos" "$HOME/eXoDOS"
 }
 
 uninstall() {
-  rm -f "$HOME/eXoDOS"
+  rm -fv "$HOME/eXoDOS"
   sudo apt remove -y fluid-soundfont-gm
 }
 

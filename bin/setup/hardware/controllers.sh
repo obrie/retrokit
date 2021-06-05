@@ -8,7 +8,7 @@ configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configsc
 # Add autoconfig scripts
 install_configscripts() {
   while read autoconfig_name; do
-    sudo cp "$bin_dir/controllers/$autoconfig_name.sh" "$configscripts_dir/"
+    sudo cp -v "$bin_dir/controllers/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
 
@@ -186,7 +186,7 @@ uninstall() {
 
   # Remove autoconfig scripts
   while read autoconfig_name; do
-    sudo rm -f "$configscripts_dir/$autoconfig_name.sh"
+    sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
 

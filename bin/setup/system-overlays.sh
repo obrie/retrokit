@@ -26,8 +26,7 @@ install() {
 }
 
 uninstall() {
-  echo "Deleting $overlays_dir/$system*.cfg/png"
-  rm -f "$overlays_dir/$system.cfg" "$overlays_dir/$system.png" "$overlays_dir/$system-vertical.cfg" "$overlays_dir/$system-vertical.png"
+  rm -fv "$overlays_dir/$system.cfg" "$overlays_dir/$system.png" "$overlays_dir/$system-vertical.cfg" "$overlays_dir/$system-vertical.png"
 }
 
 "$1" "${@:3}"

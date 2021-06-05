@@ -100,8 +100,7 @@ uninstall() {
   while IFS="$tab" read library_name; do
     local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
     if [ -d "$retroarch_emulator_config_dir" ]; then
-      echo "Deleting $retroarch_emulator_config_dir/*.opt"
-      find "$retroarch_emulator_config_dir" -name '*.opt' -exec rm -rf "{}" \;
+      find "$retroarch_emulator_config_dir" -name '*.opt' -exec rm -fv "{}" \;
     fi
   done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
 
@@ -110,15 +109,13 @@ uninstall() {
   if [ -n "$remapping_dir" ]; then
     remapping_dir=${remapping_dir//\"/}
     if [ -d "$remapping_dir" ]; then
-      echo "Deleting $remapping_dir/*.rmp"
-      find "$remapping_dir" -name '*.rmp' -exec rm -f "{}" \;
+      find "$remapping_dir" -name '*.rmp' -exec rm -fv "{}" \;
     fi
   fi
 
   # Remove retroarch configs
   if [ -d "$HOME/RetroPie/roms/$system/" ]; then
-    echo "Deleting $HOME/RetroPie/roms/$system/*.cfg"
-    find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -f "{}" \;
+    find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -fv "{}" \;
   fi
 }
 

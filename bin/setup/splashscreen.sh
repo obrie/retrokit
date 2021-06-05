@@ -13,11 +13,11 @@ install() {
 
   if [ "$(setting 'has("splashscreen")')" == 'true' ]; then
     local media_file="$splashscreens_dir/splash.mp4"
-    mkdir -p "$splashscreens_dir"
+    mkdir -pv "$splashscreens_dir"
 
     # Media
     download "$(setting '.splashscreen')" "$media_file"
-    sudo sh -c "echo \"$media_file\" > \"$splashscreen_list\""
+    echo "$media_file" | sudo tee "$splashscreen_list" >/dev/null
 
     # Duration
     local duration=$(ffprobe -i "$media_file" -show_entries format=duration -v quiet -of csv="p=0" | grep -oE "^[0-9]+")
@@ -29,7 +29,7 @@ install() {
 uninstall() {
   restore "$splashscreen_list" as_sudo=true delete_src=true
   restore "$splashscreen_config" delete_src=true
-  rm -f "$splashscreens_dir/splash.mp4"
+  rm -fv "$splashscreens_dir/splash.mp4"
 }
 
 "${@}"

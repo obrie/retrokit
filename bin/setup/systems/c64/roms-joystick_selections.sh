@@ -47,7 +47,7 @@ install() {
         if [ ! -f "$opt_file" ]; then
           # Copy over existing core overrides so we don't just get the
           # core defaults
-          mkdir -p "$(dirname "$opt_file")"
+          mkdir -pv "$(dirname "$opt_file")"
           touch "$opt_file"
           grep -E '^vice' "$core_options_path" > "$opt_file" || true
         fi
@@ -65,7 +65,7 @@ uninstall() {
   while read opt_file; do
     crudini --del "$opt_file" '' 'vice_joyport'
     if [ ! -s "$opt_file" ]; then
-      rm "$opt_file"
+      rm -v "$opt_file"
     fi
   done < <(find "$retroarch_config_dir/config/VICE x64" -name '*.opt')
 }

@@ -16,11 +16,11 @@ install() {
   ini_merge "$config_dir/skyscraper/config.ini" '/opt/retropie/configs/all/skyscraper/config.ini' space_around_delimiters=false
 
   # Add video convert script
-  cp "$config_dir/skyscraper/videoconvert.sh" '/opt/retropie/configs/all/skyscraper/'
+  cp -v "$config_dir/skyscraper/videoconvert.sh" '/opt/retropie/configs/all/skyscraper/'
 }
 
 uninstall() {
-  rm -f '/opt/retropie/configs/all/skyscraper/video_convert.sh'
+  rm -fv '/opt/retropie/configs/all/skyscraper/video_convert.sh'
   restore '/opt/retropie/configs/all/skyscraper/config.ini' delete_src=true
   uninstall_retropie_package skyscraper || true
   sudo apt remove -y ffmpeg

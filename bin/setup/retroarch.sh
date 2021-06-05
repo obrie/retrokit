@@ -9,7 +9,9 @@ install() {
 }
 
 uninstall() {
-  rm -f '/opt/retropie/configs/all/retroarch-core-options.cfg.rk-src'
+  # We don't restore the retroarch-core-options because multiple setup modules
+  # potentially write to it
+  rm -fv '/opt/retropie/configs/all/retroarch-core-options.cfg.rk-src'
   restore '/opt/retropie/configs/all/retroarch.cfg' delete_src=true
 }
 

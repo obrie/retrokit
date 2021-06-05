@@ -29,7 +29,7 @@ install() {
 }
 
 uninstall() {
-  sudo rm -f /usr/local/bin/maxcso /usr/local/share/man/man1/maxcso.1 /usr/local/etc/maxcso.version
+  sudo rm -fv /usr/local/bin/maxcso /usr/local/share/man/man1/maxcso.1 /usr/local/etc/maxcso.version
   sudo apt remove -y liblz4-dev libdeflate-dev libuv1-dev
 }
 

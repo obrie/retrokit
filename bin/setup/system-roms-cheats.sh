@@ -61,7 +61,7 @@ install() {
 
     # Ensure the target exists
     local target_cheats_dir="$system_cheat_database_path/$library_name"
-    mkdir -p "$target_cheats_dir"
+    mkdir -pv "$target_cheats_dir"
 
     # We can't just symlink to the source directory because the cheat filenames
     # don't always match the ROM names.  As a result, we need to try to do some
@@ -69,11 +69,7 @@ install() {
     local cheat_name=${cheat_mappings["$(normalize_rom_name "$rom_name")"]}
 
     if [ -n "$cheat_name" ]; then
-      local source_cheat_path="$source_cheats_dir/$cheat_name.cht"
-      local target_cheat_path="$target_cheats_dir/$rom_name.cht"
-
-      echo "Linking $source_cheat_path to $target_cheat_path"
-      ln -fs "$source_cheat_path" "$target_cheat_path"
+      ln -fsv "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .emulator] | join("^")')
 }
@@ -83,13 +79,11 @@ uninstall() {
 
   if [ -n "$system_cheat_database_path" ]; then
     # System has its own database path -- remove it
-    echo "Deleting $system_cheat_database_path"
-    rm -rf "$system_cheat_database_path"
+    rm -rfv "$system_cheat_database_path"
   else
     # Remove cheats for each libretro core
     while IFS="$tab" read library_name; do
-      echo "Deleting $cheat_database_path/$library_name"
-      rm -rf "$cheat_database_path/$library_name"
+      rm -rfv "$cheat_database_path/$library_name"
     done < <(system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name')
   fi
 }

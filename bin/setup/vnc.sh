@@ -45,7 +45,7 @@ install() {
 uninstall() {
   sudo systemctl stop dispmanx_vncserver || true
   sudo systemctl disable dispmanx_vncserver || true
-  sudo rm -f \
+  sudo rm -fv \
     /etc/dispmanx_vncserver.version \
     /etc/systemd/system/dispmanx_vncserver.service \
     /etc/dispmanx_vncserver.conf \

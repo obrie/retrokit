@@ -9,7 +9,7 @@ install() {
 }
 
 uninstall() {
-  restore /usr/bin/btuart
+  restore /usr/bin/btuart delete_src=true
 }
 
 "${@}"

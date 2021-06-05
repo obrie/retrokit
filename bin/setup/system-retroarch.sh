@@ -23,7 +23,7 @@ install_core_options() {
   local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
   if [ -n "$core_options_path" ]; then
     # Use the global defaults as the initial file
-    cp "$global_core_options_path" "$core_options_path"
+    cp -v "$global_core_options_path" "$core_options_path"
 
     if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
       echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
@@ -52,7 +52,7 @@ uninstall() {
   # Remove system-specific retroarch core options files
   local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
   if [ -n "$core_options_path" ]; then
-    rm -f "$core_options_path"
+    rm -fv "$core_options_path"
   fi
 
   # Restore emulator-specific retroarch configs

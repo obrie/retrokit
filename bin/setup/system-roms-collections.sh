@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   local source_collections_dir="$config_dir/emulationstation/collections"
   local target_collections_dir="$HOME/.emulationstation/collections"
-  mkdir -p "$target_collections_dir"
+  mkdir -pv "$target_collections_dir"
 
   while read -r filename; do
     # Identify what collection we're dealing with
@@ -42,8 +42,7 @@ install() {
 
 uninstall() {
   if [ -d "$HOME/.emulationstation/collections" ]; then
-    echo "Deleting $HOME/.emulationstation/collections/*.cfg"
-    find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -f "{}" \;
+    find "$HOME/.emulationstation/collections" -name '*.cfg' -exec rm -fv "{}" \;
   else
     echo 'No collections to uninstall'
   fi

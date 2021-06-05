@@ -19,7 +19,7 @@ install() {
 
 uninstall() {
   sudo apt remove -y jq
-  sudo rm -f /usr/local/bin/dotenv
+  sudo rm -fv /usr/local/bin/dotenv
   sudo pip3 uninstall -y crudini
   sudo apt remove -y python3-pip
 }

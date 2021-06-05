@@ -49,7 +49,7 @@ uninstall() {
   # Remove bios files
   local bios_dir=$(system_setting '.bios.dir')
   while IFS="$tab" read -r bios_name; do
-    rm -f "$bios_dir/$bios_name"
+    rm -fv "$bios_dir/$bios_name"
   done < <(system_setting 'select(.bios) | .bios.files | keys[]')
 
   # Uninstall emulators (this will automatically change the default if applicable)

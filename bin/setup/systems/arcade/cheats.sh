@@ -49,12 +49,12 @@ install() {
 }
 
 uninstall() {
-  rm -f "$HOME/RetroPie/BIOS/mame/cheats.7z"\
+  rm -fv "$HOME/RetroPie/BIOS/mame/cheats.7z"\
     "$HOME/RetroPie/BIOS/advmame/cheat.dat"\
     "$HOME/RetroPie/BIOS/mame2016/cheat.7z"\
     "$HOME/RetroPie/BIOS/mame2015/cheat.7z"\
     "$HOME/RetroPie/BIOS/mame2010/cheat.zip"
-  rm -rf "$HOME/RetroPie/BIOS/fbneo/cheats/"
+  rm -rfv "$HOME/RetroPie/BIOS/fbneo/cheats/"
 }
 
 "${@}"

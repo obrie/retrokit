@@ -42,7 +42,7 @@ uninstall() {
   restore '/opt/retropie/configs/all/runcommand.cfg' delete_src=true
   restore '/opt/retropie/configs/all/runcommand-onstart.sh' delete_src=true
   restore '/opt/retropie/configs/all/runcommand-onend.sh' delete_src=true
-  sudo rm -f /usr/bin/termfix /etc/termfix.version
+  sudo rm -fv /usr/bin/termfix /etc/termfix.version
 }
 
 "${@}"

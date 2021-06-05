@@ -59,16 +59,16 @@ install() {
   # files from being scraped since there's no way to tell Skyscraper to ignore certain
   # directories
   if [ -d "$HOME/RetroPie/roms/arcade/advmame" ]; then
-    rm -rf "$HOME/RetroPie/roms/arcade/.advmame-config"
-    mv "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
+    rm -rfv "$HOME/RetroPie/roms/arcade/.advmame-config"
+    mv -v "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
   fi
 }
 
 uninstall() {
   # Restore the advmame config directory
   if [ -d "$HOME/RetroPie/roms/arcade/.advmame-config" ]; then
-    rm -rf "$HOME/RetroPie/roms/arcade/advmame"
-    mv "$HOME/RetroPie/roms/arcade/.advmame-config" "$HOME/RetroPie/roms/arcade/advmame"
+    rm -rfv "$HOME/RetroPie/roms/arcade/advmame"
+    mv -v "$HOME/RetroPie/roms/arcade/.advmame-config" "$HOME/RetroPie/roms/arcade/advmame"
   fi
 
   # Restore advmame config, keeping the input_maps in the process

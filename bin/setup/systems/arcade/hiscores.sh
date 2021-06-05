@@ -16,7 +16,7 @@ install() {
 }
 
 uninstall() {
-  rm -f "$HOME/RetroPie/BIOS/mame2016/hiscore.dat" "$HOME/RetroPie/BIOS/mame2010/hiscore.dat" "$HOME/RetroPie/BIOS/mame2015/hiscore.dat"
+  rm -fv "$HOME/RetroPie/BIOS/mame2016/hiscore.dat" "$HOME/RetroPie/BIOS/mame2010/hiscore.dat" "$HOME/RetroPie/BIOS/mame2015/hiscore.dat"
 }
 
 "${@}"

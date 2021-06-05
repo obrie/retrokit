@@ -4,17 +4,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  # Run the uninstall command so that any old scriptmodules are gone
-  uninstall
-
-  echo "Copying RetroPie scriptmodules to $HOME/RetroPie-Setup/ext/retrokit"
-  mkdir "$HOME/RetroPie-Setup/ext/retrokit"
-  cp -a "$bin_dir/scriptmodules" "$HOME/RetroPie-Setup/ext/retrokit"
+  local target_path="$HOME/RetroPie-Setup/ext/retrokit/scriptmodules"
+  mkdir -pv "$target_path"
+  rsync -av "$bin_dir/scriptmodules/" "$target_path/" --delete
 }
 
 uninstall() {
-  echo "Deleting $HOME/RetroPie-Setup/ext/retrokit/"
-  rm -rf "$HOME/RetroPie-Setup/ext/retrokit/"
+  rm -rfv "$HOME/RetroPie-Setup/ext/retrokit/"
 }
 
 "${@}"

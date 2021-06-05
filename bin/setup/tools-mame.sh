@@ -33,7 +33,7 @@ install() {
 }
 
 uninstall() {
-  sudo rm -f \
+  sudo rm -fv \
     /usr/local/bin/castool \
     /usr/local/bin/chdman \
     /usr/local/bin/floptool \

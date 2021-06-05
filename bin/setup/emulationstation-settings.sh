@@ -28,7 +28,7 @@ install() {
         > "$es_settings_config"
     done < <(sed -e '$a</settings>' -e '1s/^/<settings>/' "$overrides_config" | xmlstarlet select -t -m '/*/*' -c '.' -n)
   else
-    cp "$overrides_config" "$es_settings_config"
+    cp -v "$overrides_config" "$es_settings_config"
   fi
 }
 

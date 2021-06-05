@@ -25,7 +25,7 @@ install() {
 
   # The directory to which we'll install the configurations and images
   local overlays_dir="$retroarch_config_dir/overlay/$system"
-  mkdir -p "$overlays_dir"
+  mkdir -pv "$overlays_dir"
 
   # Track whether this system supports vertical overlays
   local supports_vertical_overlays=false
@@ -76,7 +76,7 @@ install() {
 
     # Create directory storing the emulator configuration
     local emulator_config_dir="$retroarch_config_dir/config/$library_name"
-    mkdir -p "$emulator_config_dir"
+    mkdir -pv "$emulator_config_dir"
 
     # Look up either by the current rom or the parent rom
     local url=${overlay_urls[$(normalize_rom_name "$rom_name")]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
@@ -111,7 +111,7 @@ EOF
 
 uninstall() {
   echo "Deleting $retroarch_config_dir/overlay/$system"
-  rm -rf "$retroarch_config_dir/overlay/$system"
+  rm -rfv "$retroarch_config_dir/overlay/$system"
 }
 
 "$1" "${@:3}"

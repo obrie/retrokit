@@ -66,8 +66,7 @@ backup() {
   if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
     # Use a different file to indicate that we're backing up a non-existent file
     if [ -f "$file" ]; then
-      echo "Backing up: $file to $backup_file"
-      $cmd cp -p "$file" "$backup_file"
+      $cmd cp -pv "$file" "$backup_file"
     else
       echo "Backing up: $file to $backup_file.missing"
       $cmd mkdir -p "$(dirname "$backup_file")"
@@ -99,18 +98,17 @@ restore() {
     fi
 
     if [ -f "$backup_file" ]; then
-      echo "Restoring: $backup_file to $file"
-      $cmd cp -p "$backup_file" "$file"
+      $cmd cp -pv "$backup_file" "$file"
 
       if [ "$delete_src" == 'true' ]; then
-        $cmd rm "$backup_file"
+        $cmd rm -fv "$backup_file"
       fi
     elif [ -f "$backup_file.missing" ]; then
       echo "Restoring: $file to non-existent"
-      $cmd rm -f "$file"
+      $cmd rm -fv "$file"
 
       if [ "$delete_src" == 'true' ]; then
-        $cmd rm "$backup_file.missing"
+        $cmd rm -fv "$backup_file.missing"
       fi
     else
       echo "Restoring: $file (leaving as-is)"
@@ -222,7 +220,7 @@ file_cp() {
   echo "Copying file $source to $target"
 
   # Remove any existing file
-  $cmd rm -f "$target"
+  $cmd rm -fv "$target"
 
   if [ "$envsubst" == 'true' ]; then
     $cmd cp "$(conf_prepare "$source")" "$target"
@@ -302,7 +300,7 @@ download() {
       echo "Downloading $url"
 
       # Ensure target directory exists
-      mkdir -p "$(dirname "$target")"
+      mkdir -pv "$(dirname "$target")"
 
       # Download via curl and check that the target isn't empty
       if $cmd curl -fL# -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then

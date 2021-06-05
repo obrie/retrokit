@@ -39,7 +39,7 @@ install() {
 
 uninstall() {
   sudo apt remove -y mame-tools python3-lxml zip
-  sudo rm -f /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
+  sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 
 "${@}"
