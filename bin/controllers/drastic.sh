@@ -4,14 +4,18 @@
 drastic_config_path="$configdir/nds/drastic/config/drastic.cfg"
 
 function check_drastic() {
-    [[ ! -f "$drastic_config_path" ]] && return 1
+    [[ ! -f "$configdir/nds/drastic/config" ]] && return 1
     return 0
 }
 
 function _onstart_drastic() {
     local controller=$1
 
-    cp "$drastic_config_path" '/tmp/drastic.cfg'
+    if [ -f "$drastic_config_path" ]; then
+        cp "$drastic_config_path" '/tmp/drastic.cfg'
+    else
+        touch '/tmp/drastic.cfg'
+    fi
     iniConfig ' = ' '' '/tmp/drastic.cfg'
 
     declare -g profile_key
