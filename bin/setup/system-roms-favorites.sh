@@ -3,8 +3,13 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
+
+remove_favorites() {
+  xmlstarlet ed --inplace -d "/gameList/game/favorite" "$gamelist_file"
+}
+
 install() {
-  local gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
   if [ ! -f "$gamelist_file" ]; then
     echo 'No gamelist available'
     return
@@ -12,7 +17,7 @@ install() {
 
   # Reset by removing all favorite tags first.  This is much faster than
   # deleting one-by-one given the size of the file.
-  xmlstarlet ed --inplace -d "/gameList/game/favorite" "$gamelist_file"
+  remove_favorites
 
   # Then add current favorites
   echo 'Setting favorites...'
@@ -22,12 +27,13 @@ install() {
 }
 
 uninstall() {
-  if [ ! -f "$HOME/.emulationstation/gamelists/$system/gamelist.xml" ]; then
+  if [ ! -f "$gamelist_file" ]; then
     echo 'No gamelist available'
     return
   fi
 
-  echo "Removing favorite flags from $HOME/.emulationstation/gamelists/$system/gamelist.xml"
+  echo "Removing favorite flags from $gamelist_file"
+  remove_favorites
 }
 
 "$1" "${@:3}"
