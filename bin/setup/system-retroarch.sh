@@ -38,6 +38,14 @@ install() {
   install_config
   install_emulator_config
   install_core_options
+
+  # Reinstall the game-specific retroarch core options for this system.
+  # Yes, this might mean we install game-specific core options multiple
+  # times, but it also means we don't have to worry about remembering to
+  # re-run system-roms-retroarch after running this setupmodule
+  if [ $(setting ".setup | has(\"system-roms-retroarch\")") == 'true' ]; then
+    "$bin_dir/setup.sh" install_retroarch_core_options system-roms-retroarch "$system"
+  fi
 }
 
 uninstall() {

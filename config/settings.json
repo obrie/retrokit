@@ -81,7 +81,7 @@
     "pc",
     "ports"
   ],
-  "modules": [
+  "setup": [
     "wifi",
     "deps",
     "boot",

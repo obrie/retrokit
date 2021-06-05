@@ -20,9 +20,9 @@ setup_all() {
     setup install deps
 
     # Then install the remaining modules
-    modules=$(setting '.modules[] | select(. != "deps" and . != "wifi")')
+    modules=$(setting '.setup[] | select(. != "deps" and . != "wifi")')
   else
-    modules=$(setting '.modules | reverse[]')
+    modules=$(setting '.setup | reverse[]')
   fi
 
   while read -r setupmodule; do
