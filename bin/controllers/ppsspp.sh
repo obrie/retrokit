@@ -219,16 +219,7 @@ function _get_config_key() {
             key='An.Down'
             ;;
         rightanalogleft)
-            key='RightAn.Left'
-            ;;
-        rightanalogright)
-            key='RightAn.Right'
-            ;;
-        rightanalogup)
-            key='RightAn.Up'
-            ;;
-        rightanalogdown)
-            key='RightAn.Down'
+            key='Pause'
             ;;
         leftthumb)
             key='ThumbL'
