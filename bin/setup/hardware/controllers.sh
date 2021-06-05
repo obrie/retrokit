@@ -171,7 +171,7 @@ install_inputs() {
     fi
 
     echo "Generating configurations for $name"
-    /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh
+    /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
   done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false] | @csv' | tr -d '"')
 }
 
