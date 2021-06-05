@@ -5,11 +5,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
 install() {
-  ini_merge "$system_config_dir/GLideN64.custom.ini" '/opt/retropie/configs/n64/GLideN64.custom.ini'
-  ini_merge "$system_config_dir/mupen64plus.cfg" '/opt/retropie/configs/n64/mupen64plus.cfg'
+  ini_merge "$system_config_dir/GLideN64.custom.ini" "$retropie_system_config_dir/GLideN64.custom.ini"
+  ini_merge "$system_config_dir/mupen64plus.cfg" "$retropie_system_config_dir/mupen64plus.cfg"
 
   local source_inputs_file="$system_config_dir/InputAutoCfg.ini"
-  local target_inputs_file='/opt/retropie/configs/n64/InputAutoCfg.ini'
+  local target_inputs_file="$retropie_system_config_dir/InputAutoCfg.ini"
   backup "$target_inputs_file"
 
   echo "Merging ini $source_inputs_file to $target_inputs_file"
@@ -29,8 +29,8 @@ install() {
 
 uninstall() {
   # Explicitly don't revert InputAutoCfg.ini in case new controllers have been added
-  restore '/opt/retropie/configs/n64/mupen64plus.cfg' delete_src=true
-  restore '/opt/retropie/configs/n64/GLideN64.custom.ini' delete_src=true
+  restore "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
+  restore "$retropie_system_config_dir/GLideN64.custom.ini" delete_src=true
 }
 
 "${@}"
