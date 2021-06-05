@@ -23,7 +23,7 @@
   "cheats": "Sega - Saturn",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Saturn",
-    "dir": "$HOME/RetroPie/roms/saturn/yabasanshiro",
+    "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "mpr-17933.bin": "{url}/mpr-17933.bin",
       "saturn_bios.bin": "{url}/saturn_bios.bin",
