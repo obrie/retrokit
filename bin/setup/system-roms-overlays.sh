@@ -110,8 +110,8 @@ input_overlay = "$overlay_config_path"
 EOF
 
     installed_files["$emulator_config_dir/$rom_name.cfg"]=1
-    installed_files["$overlay_dirs/$rom_name.cfg"]=1
-    installed_files["$overlay_dirs/$image_filename"]=1
+    installed_files["$overlays_dir/$rom_name.cfg"]=1
+    installed_files["$overlays_dir/$image_filename"]=1
   done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator, .orientation] | join("^")')
 
   # Remove old, unused emulator overlay configs
