@@ -102,11 +102,12 @@ install_retroarch_remappings() {
 
 # Game-specific retroarch configuration overrides
 install_retroarch_configs() {
+  declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
     local target_file="$HOME/RetroPie/roms/$system/$rom_name.cfg"
 
     ini_merge "$override_file" "$target_file"
-    installed_paths["$target_file"]=1
+    installed_files["$target_file"]=1
   done < <(find_overrides 'cfg')
 
   # Remove unused configs
