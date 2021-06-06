@@ -62,6 +62,7 @@ install() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
+  declare -A installed_files
   while IFS='^' read rom_name parent_name emulator orientation; do
     local group_name=${parent_name:-$rom_name}
     emulator=${emulator:-default}
@@ -86,6 +87,7 @@ install() {
       # Handle Vertical configurations
       if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
         # Link emulator/rom retroarch config to system vertical overlay config
+        installed_files["$emulator_config_dir/$rom_name.cfg"]=1
         cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$retroarch_config_dir/overlay/$system-vertical.cfg"
 EOF
@@ -106,7 +108,23 @@ EOF
     cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$overlay_config_path"
 EOF
+
+    installed_files["$emulator_config_dir/$rom_name.cfg"]=1
+    installed_files["$overlay_dirs/$rom_name.cfg"]=1
+    installed_files["$overlay_dirs/$image_filename"]=1
   done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator, .orientation] | join("^")')
+
+  # Remove old, unused emulator overlay configs
+  while read library_name; do
+    while read path; do
+      [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+    done < <(find "$retroarch_config_dir/config/$library_name" -name '*.cfg')
+  done < <(get_core_library_names)
+
+  # Remove old, unused system overlay configs
+  while read path; do
+    [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+  done < <(find "$overlays_dir" -name '*.cfg' -o -name '*.png')
 }
 
 uninstall() {

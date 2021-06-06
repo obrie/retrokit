@@ -33,14 +33,9 @@ install_emulator_selections() {
   # Load emulator data
   load_emulator_data
 
-  # Look up existing emulator selections
-  declare -A existing_selections
-  while read config_key; do
-    existing_selections["$config_key"]=1
-  done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
-
   # Identify new emulator selections
-  local new_selections=""
+  declare -A installed_keys
+  local selections_cfg=''
   while IFS="$tab" read -r rom_name source_emulator; do
     local target_emulator=${emulators["$source_emulator/emulator"]}
     if [ -n "$target_emulator" ]; then
@@ -48,21 +43,20 @@ install_emulator_selections() {
 
       # Remove it from existing selections so we know what we should delete
       # at the end of this
-      unset existing_selections["$config_key"]
-
-      new_selections+="$config_key = \"$target_emulator\"\n"
+      installed_keys["$config_key"]=1
+      selections_cfg+="$config_key = \"$target_emulator\"\n"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
 
   # Add emulator selections for roms with an explicit one
   echo 'Adding emulator selections...'
-  crudini --merge "$emulators_config_file" < <(echo -e "$new_selections")
+  crudini --merge "$emulators_config_file" < <(echo -e "$selections_cfg")
 
   # Remove emulator selections for roms without one
   echo 'Removing unused emulator selections...'
-  for config_key in "${!existing_selections[@]}"; do
-    crudini --del "$emulators_config_file" '' "$config_key"
-  done
+  while read config_key; do
+    [ ! "${installed_keys["$config_key"]}" ] && crudini --del "$emulators_config_file" '' "$config_key"
+  done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
 }
 
 # Download roms from a remote source

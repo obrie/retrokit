@@ -132,3 +132,7 @@ load_emulator_data() {
     fi
   done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name, .value.library_name, .value.default // false] | @tsv' | tr "$tab" ',')
 }
+
+get_core_library_names() {
+  system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name'
+}
