@@ -129,7 +129,7 @@ env_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
-    echo "$source does not exist"
+    echo "Skipping $source (does not exist)"
     return
   fi
 
@@ -155,7 +155,7 @@ ini_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if [ ! -f "$source" ]; then
-    echo "$source does not exist"
+    echo "Skipping $source (does not exist)"
     return
   fi
 
@@ -182,7 +182,7 @@ json_merge() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if [ ! -f "$source" ]; then
-    echo "$source does not exist"
+    echo "Skipping $source (does not exist)"
     return
   fi
 
@@ -207,7 +207,7 @@ file_cp() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
-    echo "$source does not exist"
+    echo "Skipping $source (does not exist)"
     return
   fi
 
@@ -237,7 +237,7 @@ file_ln() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ ! -f "$source" ]; then
-    echo "$source does not exist"
+    echo "Skipping $source (does not exist)"
     return
   fi
 
@@ -362,7 +362,12 @@ install_retropie_package() {
   fi
 
   if [ "$build" == 'binary' ]; then
-    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
+    local __curl_opts=''
+    if find "$bin_dir/scriptmodules" -name "$name.sh" | grep . >/dev/null; then
+      __curl_opts='-L'
+    fi
+
+    sudo __curl_opts=$__curl_opts "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
   else
     sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
   fi
