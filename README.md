@@ -126,6 +126,7 @@ The default hardware setup assumes:
 * Argon case
 * 8bitdo SN30 Pro controllers
 * 8Bitdo Arcade Stick
+* 128GB or more storage capacity
 
 You can have complete control over what parts of retrokit get used via everything
 in the config/ folder, particularly config/settings.json.
