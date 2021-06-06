@@ -192,7 +192,7 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 ### Controllers
 
 | System        | Controller setup                                                  |
-| ------------- | ---------------------------------------------------------------- -|
+| ------------- | ----------------------------------------------------------------- |
 | c64           | Switch Port 1 / 2 controller with virtual keyboard (Select)       |
 | intellivision | Switch Left / Right controller with Select                        |
 | videopac      | Requires 2 controllers (Left / Right controller is game-specific) |
@@ -200,7 +200,7 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 ### Cheats
 
 | System        | Emulator      | How to Cheat                                      |
-| ------------- | ---------------------------------------------------------------- -|
+| ------------- | ------------- | ------------------------------------------------- |
 | arcade        | lr-fbneo      | Options menu in Retroarch GUI (Hotkey + X)        |
 | arcade        | lr-mame*      | Cheats menu in MAME UI (Tab on Keyboard)          |
 | *             | lr-*          | Cheats menu in Retroarch GUI (Hotkey + X)         |
