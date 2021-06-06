@@ -77,6 +77,8 @@ install() {
 
   # Remove old, unmapped cheats
   while read library_name; do
+    [ ! -d "$system_cheat_database_path/$library_name" ] && continue
+
     while read path; do
       [ ! "${installed_files["$path"]}" ] && rm -v "$path"
     done < <(find "$system_cheat_database_path/$library_name" -name '*.cht')

@@ -68,6 +68,8 @@ install_retroarch_core_options() {
 
   # Remove old, unused emulator overlay configs
   while read library_name; do
+    [ ! -d "$retroarch_config_dir/config/$library_name" ] && continue
+
     while read path; do
       [ ! "${installed_files["$path"]}" ] && rm -v "$path"
     done < <(find "$retroarch_config_dir/config/$library_name" -name '*.opt')
@@ -93,6 +95,8 @@ install_retroarch_remappings() {
 
     # Remove unused remappings
     while read library_name; do
+      [ ! -d "$remapping_dir$library_name" ] && continue
+
       while read path; do
         [ ! "${installed_files["$path"]}" ] && rm -v "$path"
       done < <(find "$remapping_dir$library_name" -name '*.rmp')
