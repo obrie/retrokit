@@ -65,6 +65,10 @@ class BaseSystem:
             # Just the demo filter
             self.filter_set = FilterSet()
             self.filter_set.append(TitleFilter(config['roms']['filters']['demo'], config=config))
+
+            # Filters: emulators
+            if self.emulator_set.filter:
+                self.filter_set.append(EmulatorCompatibilityFilter(config=self.config))
         else:
             # Filters
             self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
