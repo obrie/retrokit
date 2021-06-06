@@ -31,37 +31,15 @@ References:
 
 Autoconfig setup:
 
-* config/controllers
+* bin/controllers
 
 Manual configuration (if necessary):
 
 * config/systems/arcade/advmame.rc
 * config/systems/dreamcast/redream.cfg
 * config/systems/n64/InputAutoCfg.ini
-
-## Keyboard
-
-Default mapping:
-
-| RetroPad Button | Key         |
-| ----------------| ----------- |
-| A               | X           |
-| B               | Y           |
-| X               | S           |
-| Y               | A           |
-| Start           | Enter       |
-| Select          | Right Shift |
-| LS (L)          | Q           |
-| RS (R)          | W           |
-| LT (L2)         | 1           |
-| RT (R2)         | 2           |
-
-Hotkey: Select
-
-References:
-
-* [Key Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings)
-* [Hotkeys](https://retropie.org.uk/docs/Controller-Configuration/#hotkey)
+* config/systems/nds/drastic.cfg
+* config/systems/psp/controls.ini
 
 ## Commodore 64
 

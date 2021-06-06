@@ -167,6 +167,37 @@ To access via VNC:
 
 * Open in VNC client: `<ip address of rpi>:5900`
 
+## Cheat Sheet
+
+Since the standalone emulators are always going to work slightly differently than
+libretro cores, I have a cheat sheet to remind me how to use the system:
+
+### Exiting
+
+| System        | How to Exit                                  |
+| ------------- | -------------------------------------------- |
+| n64           | Keyboard: ESC, Controller: Default           |
+| pc            | Keyboard: CTRL+F9                            |
+| nds           | Keyboard: ESC, Controller: Right Analog Left |
+| psp           | Keyboard: ESC, Controller: Right Analog Left |
+| *             | Hotkey + Start                               |
+
+### Controllers
+
+| System        | Controller setup                                                  |
+| ------------- | ---------------------------------------------------------------- -|
+| c64           | Switch Port 1 / 2 controller with virtual keyboard (Select)       |
+| intellivision | Switch Left / Right controller with Select                        |
+| videopac      | Requires 2 controllers (Left / Right controller is game-specific) |
+
+### Cheats
+
+| System        | Emulator      | How to Cheat                                      |
+| ------------- | ---------------------------------------------------------------- -|
+| arcade        | lr-fbneo      | Options menu in Retroarch GUI (Hotkey + X)        |
+| arcade        | lr-mame*      | Cheats menu in MAME UI (Tab on Keyboard)          |
+| *             | lr-*          | Cheats menu in Retroarch GUI (Hotkey + X)         |
+
 ## Hardware
 
 Please note that this process has only been tested with an Ubuntu-based
@@ -218,6 +249,28 @@ Alternatively, you can either:
 
 If you're not familiar with SDL GUIDs, setting up your controllers through EmulationStation
 is probably the best way.
+
+### Default Keyboard inputs
+
+| RetroPad Button | Key         |
+| ----------------| ----------- |
+| A               | X           |
+| B               | Y           |
+| X               | S           |
+| Y               | A           |
+| Start           | Enter       |
+| Select          | Right Shift |
+| LS (L)          | Q           |
+| RS (R)          | W           |
+| LT (L2)         | 1           |
+| RT (R2)         | 2           |
+
+Hotkey: Select
+
+References:
+
+* [Key Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings)
+* [Hotkeys](https://retropie.org.uk/docs/Controller-Configuration/#hotkey)
 
 ## Emulators
 
