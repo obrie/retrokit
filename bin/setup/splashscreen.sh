@@ -23,6 +23,8 @@ install() {
     local duration=$(ffprobe -i "$media_file" -show_entries format=duration -v quiet -of csv="p=0" | grep -oE "^[0-9]+")
     echo "Setting splashscreen duration to $duration seconds"
     .env -f "$splashscreen_config" set DURATION="\"$duration\""
+  else
+    uninstall
   fi
 }
 
