@@ -7,6 +7,7 @@ overlays_dir="$retroarch_config_dir/overlay"
 
 install() {
   if [ $(system_setting '.overlays | has("repos")') == 'false' ]; then
+    echo 'No overlays configured'
     uninstall
     return
   fi
