@@ -14,6 +14,7 @@ install() {
     
     download "$(printf "$launch_images_base_url" "$platform")" "$retropie_system_config_dir/launching-extended.png"
   else
+    echo 'No launch images configured'
     uninstall
   fi
 }
