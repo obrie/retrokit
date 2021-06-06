@@ -14,6 +14,11 @@ reconfigure() {
   sudo dpkg-reconfigure -f noninteractive locales
   sudo update-locale
   sudo dpkg-reconfigure -f noninteractive tzdata
+
+  # Reload the console
+  if [ "$(tty | grep -E '/dev/tty[1-6]')" == '' ]; then
+    sudo setupcon -f --force
+  fi
 }
 
 install() {

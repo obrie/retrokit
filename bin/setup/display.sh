@@ -7,7 +7,7 @@ update_console() {
   sudo /etc/init.d/console-setup.sh restart
 
   if [ "$(tty | grep -E '/dev/tty[1-6]')" == '' ]; then
-    setupcon -f --force
+    sudo setupcon -f --force
   fi
 }
 
