@@ -120,6 +120,11 @@ little effort.  However, understand that this is opinionated software.  It uses
 the default settings that I prefer and is configured by default for my hardware
 setup.
 
+Note that, by default, `ROMKIT_DEMO` is enabled, meaning that only a single game
+will be installed for each system / emulator.  To disable this and install all
+games based on the filters defined for each system, set this to `ROMKIT_DEMO=false`
+in your `.env` file.
+
 The default hardware setup assumes:
 
 * Raspberry Pi 4
@@ -134,6 +139,7 @@ in the config/ folder, particularly config/settings.json.
 ## Instructions
 
 1. Update config/ in retrokit to match your personal preferences and hardware requirements
+1. Create a `.env` file based on env.template to provide the required configuration settings
 1. Flash new image (Note this will also expand the main partition and copy retrokit
    onto the sd card):
    ```

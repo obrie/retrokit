@@ -13,7 +13,12 @@ from argparse import ArgumentParser
 from signal import signal, SIGPIPE, SIG_DFL
 
 class ROMKit:
-    def __init__(self, action: str, config_file: str, log_level: str) -> None:
+    def __init__(self,
+        action: str,
+        config_file: str,
+        log_level: str = 'INFO',
+        demo: bool = True,
+    ) -> None:
         self.action = action
 
         # Load configuration (and expand env vars)
@@ -30,7 +35,7 @@ class ROMKit:
         root.addHandler(handler)
 
         # Build system
-        self.system = BaseSystem.from_json(self.config)
+        self.system = BaseSystem.from_json(self.config, demo)
 
     def run(self) -> None:
         getattr(ROMKit, self.action)(self)
@@ -56,10 +61,13 @@ class ROMKit:
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='action', help='Action to perform', choices=['list', 'install', 'organize', 'vacuum'])
-    parser.add_argument(dest='config', help='JSON file containing the configuration')
+    parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
+    parser.add_argument('--demo', dest='demo', action='store_true')
+    parser.add_argument('--no-demo', dest='demo', action='store_false')
+    parser.set_defaults(demo=(os.getenv('ROMKIT_DEMO', 'True').lower() == 'true'))
     args = parser.parse_args()
-    ROMKit(args.action, args.config, args.log_level).run()
+    ROMKit(**vars(args)).run()
 
 
 if __name__ == '__main__':

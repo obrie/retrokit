@@ -261,6 +261,7 @@ class Machine:
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
         return {
+            'system': self.romset.system.name,
             'romset': self.romset.name,
             'name': self.name,
             'description': self.description,

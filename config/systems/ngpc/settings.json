@@ -43,12 +43,6 @@
       "auth": "internetarchive"
     }
   ],
-  "favorites": {
-    "titles": [
-      "Pac-Man",
-      "Sonic The Hedgehog - Pocket Adventure"
-    ]
-  },
   "roms": {
     "priority": [
       "USA",
@@ -73,6 +67,15 @@
         "Shanghai Mini",
         "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
         "SNK vs. Capcom - Card Fighters' Clash - SNK Version"
+      ],
+      "demo": [
+        "Pac-Man"
+      ]
+    },
+    "favorites": {
+      "titles": [
+        "Pac-Man",
+        "Sonic The Hedgehog - Pocket Adventure"
       ]
     },
     "dirs": [
