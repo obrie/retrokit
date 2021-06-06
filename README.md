@@ -260,7 +260,7 @@ is probably the best way.
 ### Default Keyboard inputs
 
 | RetroPad Button | Key         |
-| ----------------| ----------- |
+| --------------- | ----------- |
 | A               | X           |
 | B               | Y           |
 | X               | S           |
