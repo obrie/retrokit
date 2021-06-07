@@ -119,7 +119,8 @@ create() {
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
   sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
   mkdir -v "$mount_path/home/pi/retrokit/tmp"
-  chown -v "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
+  touch "$mount_path/home/pi/retrokit/tmp/.gitkeep"
+  chown -Rv "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
 
   # Unmount the device
   while ! sudo umount -v "$retropie_device"; do
