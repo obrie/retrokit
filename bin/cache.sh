@@ -16,7 +16,7 @@ usage() {
 
 delete() {
   # Remove all temporary cached data
-  rm -rf $tmp_dir/*
+  rm -rfv $tmp_dir/*
 }
 
 sync_nointro_dats() {
@@ -29,7 +29,7 @@ sync_nointro_dats() {
 
       if [ -n "$zip_filename" ]; then
         unzip -j "$nointro_pack_path" "$zip_filename" -d "$tmp_dir/"
-        mv "$tmp_dir/$zip_filename" "$cache_dir/nointro/$nointro_name.dat"
+        mv -v "$tmp_dir/$zip_filename" "$cache_dir/nointro/$nointro_name.dat"
       else
         echo "[WARN] No dat file found for $system"
       fi

@@ -65,7 +65,7 @@ sync_media() {
 
   for path in "${paths[@]}"; do
     if [ -d "$sync_from_path$path" ]; then
-      sudo install -d -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
+      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
       sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
     fi
   done
@@ -83,7 +83,7 @@ create() {
 
   # Make sure the device is unmounted
   if df | grep -q "$device"; then
-    sudo umount ${device}* || true
+    sudo umount -v ${device}* || true
   fi
 
   # Copy the image
@@ -96,18 +96,18 @@ create() {
   # Mount the device
   local mount_path="$HOME/retrokit-sdcard"
   mkdir -p "$mount_path"
-  sudo mount "${device}p2" "$mount_path"
+  sudo mount -v "${device}p2" "$mount_path"
 
   # Copy retrokit
   local remote_user=$(stat -c '%U' "$mount_path/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
   sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
-  mkdir "$mount_path/home/pi/retrokit/tmp"
-  chown "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
+  mkdir -v "$mount_path/home/pi/retrokit/tmp"
+  chown -v "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
 
   # Unmount the device
-  sudo umount "${device}p2"
-  rmdir "$mount_path"
+  sudo umount -v "${device}p2"
+  rmdir -v "$mount_path"
 }
 
 main() {
