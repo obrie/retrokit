@@ -4,7 +4,7 @@
 drastic_config_path="$configdir/nds/drastic/config/drastic.cfg"
 
 function check_drastic() {
-    [[ ! -f "$configdir/nds/drastic/config" ]] && return 1
+    [[ ! -d "$configdir/nds/drastic/config" ]] && return 1
     return 0
 }
 
@@ -40,9 +40,9 @@ function onstart_drastic_joystick() {
 function onstart_drastic_keyboard() {
     _onstart_drastic 'a'
 
-    # Menu - M
+    # Menu - Tab
     iniDel "controls_a\[CONTROL_INDEX_MENU\]"
-    iniSet "controls_a[CONTROL_INDEX_MENU]" 109
+    iniSet "controls_a[CONTROL_INDEX_MENU]" 9
 
     # Quit - Escape
     iniDel "controls_a\[CONTROL_INDEX_QUIT\]"
