@@ -11,12 +11,16 @@ function check_redream() {
 function _onstart_redream() {
     local name=$1
 
+    touch "$redream_config_path"
     iniConfig '=' '' "$redream_config_path"
 
-    declare -g profile_key
+    declare -g profile_key=''
 
     # Look for an existing profile for this controller
-    profile_key=$(grep "name:$name" "$redream_config_path" | head -n 1 | grep -oE '^[^=]+')
+    if [ -f "$redream_config_path" ]; then
+        profile_key=$(grep "name:$name" "$redream_config_path" | head -n 1 | grep -oE '^[^=]+')
+    fi
+
     if [ -z "$profile_key" ]; then
         # No existing profile: determine the next profile id to use
         local next_profile_id=0

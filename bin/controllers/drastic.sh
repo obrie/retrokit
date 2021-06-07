@@ -198,6 +198,7 @@ function map_drastic_keyboard() {
 }
 
 function _onend_drastic() {
+    mkdir -pv "$(dirname "$drastic_config_path")"
     cp '/tmp/drastic.cfg' "$drastic_config_path"
 }
 
