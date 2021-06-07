@@ -89,16 +89,25 @@ create() {
   # Copy the image
   echo "Copying image to $device..."
   gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device"
+  local retropie_device=$(lsblk -nl -o PATH,MAJ:MIN "$device" | grep ':2' | cut -d ' ' -f 1)
+  if [ -z "$retropie_device" ]; then
+    echo 'Could not find retropie partition in lsblk'
+    return 1
+  fi
 
   # Expand main partition to consume the entire disk
-  sudo parted "$device" resizepart 2 100%
+  echo "Expanding $device to 100% capacity"
+  sudo parted -s "$device" resizepart 2 100%
+  sudo e2fsck -fv "$retropie_device"
+  sudo resize2fs "$retropie_device"
 
   # Mount the device
   local mount_path="$HOME/retrokit-sdcard"
   mkdir -p "$mount_path"
-  sudo mount -v "${device}p2" "$mount_path"
+  sudo mount -v "$retropie_device" "$mount_path"
 
   # Copy retrokit
+  echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
   local remote_user=$(stat -c '%U' "$mount_path/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
   sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
@@ -106,7 +115,9 @@ create() {
   chown -v "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
 
   # Unmount the device
-  sudo umount -v "${device}p2"
+  while ! sudo umount -v "$retropie_device"; do
+    sleep 5
+  done
   rmdir -v "$mount_path"
 }
 
