@@ -7,7 +7,7 @@ install() {
   # Install dependencies
   sudo apt install -y liblz4-dev libdeflate-dev libuv1-dev
 
-  local maxcso_version="$(cat /usr/local/etc/maxcso.version || true)"
+  local maxcso_version="$(cat /usr/local/etc/maxcso.version 2>/dev/null || true)"
   if [ ! `command -v maxcso` ] || has_newer_commit https://github.com/unknownbrackets/maxcso "$maxcso_version"; then
     # Check out
     rm -rf "$tmp_dir/maxcso"

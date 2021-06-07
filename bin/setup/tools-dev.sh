@@ -14,7 +14,7 @@ install() {
   sudo apt install -y mesa-utils
 
   # Screenshots
-  local raspi2png_version="$(cat /etc/raspi2png.version || true)"
+  local raspi2png_version="$(cat /etc/raspi2png.version 2>/dev/null || true)"
   if [ ! `command -v raspi2png` ] || has_newer_commit https://github.com/AndrewFromMelbourne/raspi2png "$raspi2png_version"; then
     # Check out
     rm -rf "$tmp_dir/raspi2png"

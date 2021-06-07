@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Installs a helper for fixing terminal framebuffer issues
 install_termfix() {
-  local version="$(cat /etc/termfix.version || true)"
+  local version="$(cat /etc/termfix.version 2>/dev/null || true)"
   if [ ! `command -v termfix` ] || has_newer_commit https://github.com/hobbitalastair/termfix "$version"; then
     # Check out
     rm -rf "$tmp_dir/termfix"

@@ -4,7 +4,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  local version="$(cat /etc/dispmanx_vncserver.version || true)"
+  local version="$(cat /etc/dispmanx_vncserver.version 2>/dev/null || true)"
   if [ ! `command -v dispmanx_vncserver` ] || has_newer_commit https://github.com/patrikolausson/dispmanx_vnc "$version"; then
     # Install dependencies
     sudo apt install -y libvncserver-dev libconfig++-dev

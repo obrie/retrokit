@@ -11,7 +11,7 @@ install() {
   sudo apt install -y python3-lxml
 
   # TorrentZip
-  local trrntzip_version="$(cat /usr/local/etc/trrntzip.version || true)"
+  local trrntzip_version="$(cat /usr/local/etc/trrntzip.version 2>/dev/null || true)"
   if [ ! `command -v trrntzip` ] || has_newer_commit https://github.com/hydrogen18/trrntzip.git "$trrntzip_version"; then
     # Check out
     rm -rf "$tmp_dir/trrntzip"
