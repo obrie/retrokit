@@ -37,15 +37,13 @@ install_emulator_selections() {
   declare -A installed_keys
   local selections_cfg=''
   while IFS="$tab" read -r rom_name source_emulator; do
-    local target_emulator=${emulators["$source_emulator/emulator"]}
-    if [ -n "$target_emulator" ]; then
-      local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
+    local target_emulator=${emulators["$source_emulator/emulator"]:-$source_emulator}
+    local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
 
-      # Remove it from existing selections so we know what we should delete
-      # at the end of this
-      installed_keys["$config_key"]=1
-      selections_cfg+="$config_key = \"$target_emulator\"\n"
-    fi
+    # Remove it from existing selections so we know what we should delete
+    # at the end of this
+    installed_keys["$config_key"]=1
+    selections_cfg+="$config_key = \"$target_emulator\"\n"
   done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
 
   # Add emulator selections for roms with an explicit one
