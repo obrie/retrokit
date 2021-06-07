@@ -286,17 +286,23 @@ download() {
   local as_sudo='false'
   local max_attempts=$DOWNLOAD_MAX_ATTEMPTS
   local retry_wait_time=$DOWNLOAD_RETRY_WAIT_TIME
+  local auth_token=''
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
   fi
 
+  local curl_opts=()
+  if [ -n "$auth_token" ]; then
+    curl_opts+=(-H "Authorization: token $auth_token")
+  fi
+
   local exit_code=0
   for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then
       # Print to stdout
-      curl -fL# "$url"
+      curl -fL# "${curl_opts[@]}" "$url"
       exit_code=$?
     elif [ ! -s "$target" ] || [ "$force" == "true" ]; then
       echo "Downloading $url"
@@ -305,7 +311,7 @@ download() {
       mkdir -pv "$(dirname "$target")"
 
       # Download via curl and check that the target isn't empty
-      if $cmd curl -fL# -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
+      if $cmd curl -fL# "${curl_opts[@]}" -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
         $cmd mv "$target.tmp" "$target"
         exit_code=0
       else

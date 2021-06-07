@@ -3,6 +3,12 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+call_github_api() {
+  local url=$1
+  local path=$2
+  download "$url" "$path" auth_token="$GITHUB_API_KEY"
+}
+
 # This installs individual overlays from The Bezel Project.  We use this instead of
 # The Bezel Project's installer for two primary reasons:
 # 
@@ -44,10 +50,11 @@ install() {
       # Get the Tree SHA for the directory storing the images
       local parent_tree_path=$(dirname "$rom_images_path")
       local sub_tree_name=$(basename "$rom_images_path")
-      local tree_sha=$(download "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
+      call_github_api "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch"
+      local tree_sha=$(call_github_api "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
 
       # Get the list of files at that sub-tree
-      download "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_path"
+      call_github_api "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_path"
     fi
 
     while IFS="$tab" read rom_name encoded_rom_name ; do
