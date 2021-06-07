@@ -284,6 +284,8 @@ download() {
 
   local force='false'
   local as_sudo='false'
+  local max_attempts=$DOWNLOAD_MAX_ATTEMPTS
+  local retry_wait_time=$DOWNLOAD_RETRY_WAIT_TIME
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -291,7 +293,7 @@ download() {
   fi
 
   local exit_code=0
-  for attempt in $(seq 1 $DOWNLOAD_MAX_ATTEMPTS); do
+  for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then
       # Print to stdout
       curl -fL# "$url"
@@ -316,9 +318,9 @@ download() {
 
     if [ $exit_code -eq 0 ]; then
       break
-    elif [ $attempt -ne $DOWNLOAD_MAX_ATTEMPTS ]; then
-      >&2 echo "Retrying in $DOWNLOAD_RETRY_WAIT_TIME seconds..."
-      sleep $DOWNLOAD_RETRY_WAIT_TIME
+    elif [ $attempt -ne $max_attempts ]; then
+      >&2 echo "Retrying in $retry_wait_time seconds..."
+      sleep $retry_wait_time
     fi
   done
 
