@@ -71,7 +71,7 @@ install_retroarch_core_options() {
     [ ! -d "$retroarch_config_dir/config/$library_name" ] && continue
 
     while read path; do
-      [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_config_dir/config/$library_name" -name '*.opt')
   done < <(get_core_library_names)
 }
@@ -98,7 +98,7 @@ install_retroarch_remappings() {
       [ ! -d "$remapping_dir$library_name" ] && continue
 
       while read path; do
-        [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+        [ "${installed_files["$path"]}" ] || rm -v "$path"
       done < <(find "$remapping_dir$library_name" -name '*.rmp')
     done < <(get_core_library_names)
   fi
@@ -116,7 +116,7 @@ install_retroarch_configs() {
 
   # Remove unused configs
   while read path; do
-    [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$HOME/RetroPie/roms/$system" -name '*.cfg')
 }
 

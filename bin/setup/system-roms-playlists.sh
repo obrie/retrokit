@@ -34,7 +34,7 @@ install() {
 
   # Remove playlists we no longer needed
   while read path; do
-    [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$HOME/RetroPie/roms/$system" -name '*.m3u')
 }
 

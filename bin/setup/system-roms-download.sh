@@ -53,7 +53,7 @@ install_emulator_selections() {
   # Remove emulator selections for roms without one
   echo 'Removing unused emulator selections...'
   while read config_key; do
-    [ ! "${installed_keys["$config_key"]}" ] && crudini --del "$emulators_config_file" '' "$config_key"
+    [ "${installed_keys["$config_key"]}" ] || crudini --del "$emulators_config_file" '' "$config_key"
   done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
 }
 

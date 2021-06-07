@@ -119,13 +119,13 @@ EOF
     [ ! -d "$retroarch_config_dir/config/$library_name" ] && continue
 
     while read path; do
-      [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_config_dir/config/$library_name" -name '*.cfg')
   done < <(get_core_library_names)
 
   # Remove old, unused system overlay configs
   while read path; do
-    [ ! "${installed_files["$path"]}" ] && rm -v "$path"
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$overlays_dir" -name '*.cfg' -o -name '*.png')
 }
 
