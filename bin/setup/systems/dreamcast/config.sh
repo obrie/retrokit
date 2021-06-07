@@ -4,7 +4,7 @@ system='dreamcast'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-config_path='/opt/retropie/emulators/redream/redream.cfg'
+config_path="$retropie_system_config_dir/redream/redream.cfg"
 
 restore_config() {
   if has_backup "$config_path"; then
