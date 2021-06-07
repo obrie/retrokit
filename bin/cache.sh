@@ -20,6 +20,7 @@ delete() {
 }
 
 sync_nointro_dats() {
+  [[ $# -ne 1 ]] && usage
   local nointro_pack_path=$1
 
   while read system; do
