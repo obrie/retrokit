@@ -18,18 +18,23 @@ usage() {
 }
 
 restore() {
+  [[ $# -ne 2 ]] && usage
   local device=$1
   local restore_from_path=$2
   gunzip --stdout "$restore_from_path/sd-retropie.img.gz" | sudo dd bs=4M of=$device
 }
 
 backup() {
+  [[ $# -ne 2 ]] && usage
   local device=$1
   local backup_to_path=$2
+  mkdir -p "$backup_to_path"
+
   sudo dd bs=4M if=$device | gzip > "$backup_to_path/sd-retropie.img.gz"
 }
 
 sync() {
+  [[ $# -ne 2 ]] && usage
   local sync_from_path=$1
   local sync_to_path=$2
 
@@ -43,6 +48,7 @@ sync() {
 }
 
 sync_media() {
+  [[ $# -ne 2 ]] && usage
   local sync_from_path=$1
   local sync_to_path=$2
 
@@ -72,6 +78,7 @@ sync_media() {
 }
 
 create() {
+  [[ $# -ne 1 ]] && usage
   local device=$1
   local retropie_version=4.7.1
   local raspbian_version=buster
