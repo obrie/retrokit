@@ -50,7 +50,6 @@ install() {
       # Get the Tree SHA for the directory storing the images
       local parent_tree_path=$(dirname "$rom_images_path")
       local sub_tree_name=$(basename "$rom_images_path")
-      call_github_api "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch"
       local tree_sha=$(call_github_api "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
 
       # Get the list of files at that sub-tree
