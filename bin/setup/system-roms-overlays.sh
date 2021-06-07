@@ -126,7 +126,7 @@ EOF
 
     while read path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_config_dir/config/$library_name" -name '*.cfg')
+    done < <(find "$retroarch_config_dir/config/$library_name" -name '*.cfg' | grep -v "$library_name.cfg")
   done < <(get_core_library_names)
 
   # Remove old, unused system overlay configs
