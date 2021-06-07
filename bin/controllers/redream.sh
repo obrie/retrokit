@@ -4,7 +4,7 @@
 redream_config_path="$configdir/dreamcast/redream/redream.cfg"
 
 function check_redream() {
-    [[ ! -f "$redream_config_path" ]] && return 1
+    [[ ! -d "$rootdir/emulators/redream" ]] && return 1
     return 0
 }
 

@@ -4,7 +4,7 @@
 drastic_config_path="$configdir/nds/drastic/config/drastic.cfg"
 
 function check_drastic() {
-    [[ ! -d "$configdir/nds/drastic/config" ]] && return 1
+    [[ ! -d "$rootdir/emulators/drastic" ]] && return 1
     return 0
 }
 
