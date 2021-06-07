@@ -183,9 +183,7 @@ function _get_config_key() {
             key='rtrig'
             ;;
         select)
-            # Select is configured to exit since there's no ability to use
-            # a hotkey
-            key='exit'
+            key='menu'
             ;;
         leftanalogleft)
             key='ljoy_left'
@@ -198,6 +196,9 @@ function _get_config_key() {
             ;;
         leftanalogdown)
             key='ljoy_down'
+            ;;
+        rightanalogleft)
+            key='exit'
             ;;
         *)
             ;;
@@ -245,16 +246,9 @@ function map_redream_keyboard() {
     local input_id=$3
     local input_value=$4
 
-    local key
-    if [ "$input_name" == 'select' ]; then
-        # For keyboards, we use select to go directly to the redream
-        # UI.  This is only enabled for keyboards.
-        key='menu'
-    else
-        key=$(_get_config_key "$input_name")
-        if [ -z "$key" ]; then
-            return
-        fi
+    local key=$(_get_config_key "$input_name")
+    if [ -z "$key" ]; then
+        return
     fi
 
     local value=${keymap[$input_id]}
