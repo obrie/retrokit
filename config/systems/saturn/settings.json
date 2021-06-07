@@ -17,7 +17,6 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "yabasanshiro": {"build": "source"},
     "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
   },
   "cheats": "Sega - Saturn",
