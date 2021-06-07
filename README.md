@@ -136,6 +136,9 @@ The default hardware setup assumes:
 You can have complete control over what parts of retrokit get used via everything
 in the config/ folder, particularly config/settings.json.
 
+I strongly recommend forking this repo and using your fork to update and track
+all of your personal preferences.
+
 ## Instructions
 
 1. Update config/ in retrokit to match your personal preferences and hardware requirements
@@ -181,13 +184,14 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 
 ### Exiting
 
-| System        | How to Exit                                  |
-| ------------- | -------------------------------------------- |
-| n64           | Keyboard: ESC, Controller: Default           |
-| pc            | Keyboard: CTRL+F9                            |
-| nds           | Keyboard: ESC, Controller: Right Analog Left |
-| psp           | Keyboard: ESC, Controller: Right Analog Left |
-| *             | Hotkey + Start                               |
+| System            | Keyboard       | Controller                  |
+| ----------------- | -------------- | --------------------------- |
+| dreamcast         | ESC            | Right Analog Left           |
+| n64 (mupen64plus) | ESC            | Hotkey + Start              |
+| pc                | CTRL+F9        | None                        |
+| nds               | ESC            | Right Analog Left           |
+| psp               | ESC            | Right Analog Left (to Menu) |
+| *                 | Hotkey + Start | Hotkey + Start              |
 
 ### Controllers
 
@@ -195,7 +199,27 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 | ------------- | ----------------------------------------------------------------- |
 | c64           | Switch Port 1 / 2 controller with virtual keyboard (Select)       |
 | intellivision | Switch Left / Right controller with Select                        |
+| nds           | Only the last configured joystick will be set up                  |
+| psp           | Only the last configured joystick will be set up                  |
 | videopac      | Requires 2 controllers (Left / Right controller is game-specific) |
+
+Please note that due to limitations in how controllers are set up in NDS (Nintendo DS)
+and PSP (PlayStation Portable), retrokit can only automatically configured one
+controller.  The last configured controller input under `.hardware.controllers.inputs`
+in [config/settings.json](config/settings.json) will be the used.
+
+Other controllers can still be used, but you must either manually configure it in the
+emulator's UI or use the same button mappings for all controllers.
+
+### Menus
+
+| System        | Keyboard   | Controller         |
+| ------------- | ---------- | ------------------ |
+| arcade        | Tab        | N/A                |
+| dreamcast     | Select     | Select             |
+| nds           | Tab        | Right Analog Right |
+| psp           | N/A        | Right Analog Left  |
+| *             | Hotkey + X | Hotkey + X         |
 
 ### Cheats
 
@@ -307,11 +331,18 @@ retrokit what it is.  That includes:
 * Reddit forums
 * ...and everyone who has put so much work in over the years to help make all of this even possible
 
-## Future work
+## Future improvements
 
-The only future work I have planned is to automate my Sinden Lightgun setup once I
-receive it.
+There are too many improvements to count here, but some ideas are:
+
+* Sinden Lightgun autoconfig (once I receive it)
+* Support for non-Raspbian platforms
+* Computer-based emulators (Amigo, Apple II, etc.)
+* More advanced filters for certain systems
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
 own setup.
+
+Also, if you have improvements that will help everyone (e.g. perhaps there are better
+ways of doing autconfig for controllers), I'll happily review those.
