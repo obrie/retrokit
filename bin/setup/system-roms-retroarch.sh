@@ -106,7 +106,7 @@ install_retroarch_configs() {
   declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
     while read rom_dir; do
-      if ls $rom_dir/$rom_name.* 2>/dev/null; then
+      if ls $rom_dir/$rom_name.* >/dev/null 2>&1; then
         local target_file="$rom_dir/$rom_name.cfg"
 
         ini_merge "$override_file" "$target_file"
