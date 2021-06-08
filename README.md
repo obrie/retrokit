@@ -93,6 +93,11 @@ days to complete depending on the size of your game collection.
 This is built for RetroPie / Raspberry Pi 4.  You must customize it to your
 own needs.
 
+**NOTE** This repository does not contain ROMs or URLs to websites that provide
+ROMs.  To utilize any download functionality in retrokit, you must provide the
+configurations yourself.  Please familiarize yourself with the law in your country
+before attempting to download ROMs.
+
 ## Why does this exist?
 
 When I started creating my own RetroPie system, I wanted to build it in such a way
