@@ -95,8 +95,10 @@ install() {
 
       # Handle Vertical configurations
       if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
-        # Link emulator/rom retroarch config to system vertical overlay config
         installed_files["$emulator_config_dir/$rom_name.cfg"]=1
+        
+        # Link emulator/rom retroarch config to system vertical overlay config
+        echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $retroarch_overlay_dir/$system-vertical.cfg"
         cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$retroarch_overlay_dir/$system-vertical.cfg"
 EOF
@@ -114,6 +116,7 @@ EOF
     create_overlay_config "$overlay_config_path" "$image_filename"
 
     # Link emulator/rom retroarch config to overlay config
+    echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $overlay_config_path"
     cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$overlay_config_path"
 EOF
