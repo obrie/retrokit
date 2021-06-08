@@ -3,6 +3,11 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
+retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
+retroarch_remapping_dir=${retroarch_remapping_dir//\"/}
+retroarch_remapping_dir=${retroarch_remapping_dir%/}
+
 find_overrides() {
   local extension=$1
 
@@ -39,20 +44,16 @@ find_overrides() {
 # Game-specific libretro core overrides
 # (https://retropie.org.uk/docs/RetroArch-Core-Options/)
 install_retroarch_core_options() {
-  # Figure out where the core options live for this system
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
-  if [ -z "$core_options_path" ]; then
-    core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
-  fi
+  local core_options_path=$(get_retroarch_path 'core_options_path')
 
   declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
     # Retroarch emulator-specific config
-    local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
-    mkdir -p "$retroarch_emulator_config_dir"
+    local emulator_config_dir="$retroarch_config_dir/$library_name"
+    mkdir -p "$emulator_config_dir"
 
     # Back up the existing file
-    local target_path="$retroarch_emulator_config_dir/$rom_name.opt"
+    local target_path="$emulator_config_dir/$rom_name.opt"
     backup_and_restore "$target_path"
 
     # Copy over existing core overrides so we don't just get the
@@ -68,56 +69,58 @@ install_retroarch_core_options() {
 
   # Remove old, unused emulator overlay configs
   while read library_name; do
-    [ ! -d "$retroarch_config_dir/config/$library_name" ] && continue
+    [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
     while read path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_config_dir/config/$library_name" -name '*.opt')
+    done < <(find "$retroarch_config_dir/$library_name" -name '*.opt')
   done < <(get_core_library_names)
 }
 
 # Games-specific controller mapping overrides
 install_retroarch_remappings() {
-  local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
+  declare -A installed_files
+  while IFS="$tab" read rom_name override_file core_name library_name; do
+    # Emulator-specific remapping directory
+    local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
+    mkdir -p "$emulator_remapping_dir"
 
-  if [ -n "$remapping_dir" ]; then
-    remapping_dir=${remapping_dir//\"/}
-    
-    declare -A installed_files
-    while IFS="$tab" read rom_name override_file core_name library_name; do
-      # Emulator-specific remapping directory
-      local emulator_remapping_dir="$remapping_dir$library_name"
-      mkdir -p "$emulator_remapping_dir"
+    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
+    installed_files["$emulator_remapping_dir/$rom_name.rmp"]=1
+  done < <(find_overrides 'rmp')
 
-      ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
-      installed_files["$emulator_remapping_dir/$rom_name.rmp"]=1
-    done < <(find_overrides 'rmp')
+  # Remove unused remappings
+  while read library_name; do
+    [ ! -d "$retroarch_remapping_dir/$library_name" ] && continue
 
-    # Remove unused remappings
-    while read library_name; do
-      [ ! -d "$remapping_dir$library_name" ] && continue
-
-      while read path; do
-        [ "${installed_files["$path"]}" ] || rm -v "$path"
-      done < <(find "$remapping_dir$library_name" -name '*.rmp')
-    done < <(get_core_library_names)
-  fi
+    while read path; do
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
+    done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp')
+  done < <(get_core_library_names)
 }
 
 # Game-specific retroarch configuration overrides
 install_retroarch_configs() {
+  local rom_dirs=$(system_setting '.roms.dirs[] | .path')
+
   declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
-    local target_file="$HOME/RetroPie/roms/$system/$rom_name.cfg"
+    while read rom_dir; do
+      if ls $rom_dir/$rom_name.* 2>/dev/null; then
+        local target_file="$rom_dir/$rom_name.cfg"
 
-    ini_merge "$override_file" "$target_file"
-    installed_files["$target_file"]=1
+        ini_merge "$override_file" "$target_file"
+        installed_files["$target_file"]=1
+      fi
+    done < <(echo "$rom_dirs")
   done < <(find_overrides 'cfg')
 
   # Remove unused configs
-  while read path; do
-    [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$HOME/RetroPie/roms/$system" -name '*.cfg')
+  while read rom_dir; do
+    while read rom_path; do
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
+    done < <(find "$rom_dir" -maxdepth 1 -name '*.cfg')
+  done < <(echo "$rom_dirs")
 }
 
 install() {
@@ -127,27 +130,24 @@ install() {
 }
 
 uninstall() {
-  # Remove core options
   while read library_name; do
-    local retroarch_emulator_config_dir="$retroarch_config_dir/config/$library_name"
-    if [ -d "$retroarch_emulator_config_dir" ]; then
-      find "$retroarch_emulator_config_dir" -name '*.opt' -exec rm -fv "{}" \;
+    # Remove core options
+    local emulator_config_dir="$retroarch_config_dir/$library_name"
+    if [ -d "$emulator_config_dir" ]; then
+      find "$emulator_config_dir" -name '*.opt' -exec rm -fv "{}" \;
+    fi
+
+    # Remove retroarch mappings
+    local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
+    if [ -d "$emulator_remapping_dir" ]; then
+      find "$emulator_remapping_dir" -name '*.rmp' -exec rm -fv "{}" \;
     fi
   done < <(get_core_library_names)
 
-  # Remove retroarch remappings
-  local remapping_dir=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'input_remapping_directory' 2>/dev/null || true)
-  if [ -n "$remapping_dir" ]; then
-    remapping_dir=${remapping_dir//\"/}
-    if [ -d "$remapping_dir" ]; then
-      find "$remapping_dir" -name '*.rmp' -exec rm -fv "{}" \;
-    fi
-  fi
-
   # Remove retroarch configs
-  if [ -d "$HOME/RetroPie/roms/$system/" ]; then
-    find "$HOME/RetroPie/roms/$system/" -name '*.cfg' -exec rm -fv "{}" \;
-  fi
+  while read rom_dir; do
+    find "$rom_dir" -maxdepth 1 -name '*.cfg' -exec rm -fv "{}" \;
+  done < <(system_setting '.roms.dirs[] | .path')
 }
 
 "$1" "${@:3}"

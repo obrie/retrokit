@@ -9,9 +9,11 @@ install_config() {
 }
 
 install_emulator_config() {
+  local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
+
   while read library_name; do
     local source_path="$system_config_dir/retroarch/$library_name/$library_name.cfg"
-    local target_path="$retroarch_config_dir/config/$library_name/$library_name.cfg"
+    local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
 
     if [ -f "$source_path" ]; then
       ini_merge "$source_path" "$target_path"
@@ -23,12 +25,13 @@ install_emulator_config() {
 
 # Global core options
 install_core_options() {
-  # Location of the global file for defaults
-  local global_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
+  local global_core_options_path=${retroarch_dir_defaults['core_options_path']}
+  local core_options_path=$(get_retroarch_path 'core_options_path')
 
-  # Figure out where the core options live for this system
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
-  if [ -n "$core_options_path" ]; then
+  if [ "$core_options_path" == "$global_core_options_path" ]; then
+    # Merging directly into the globals
+    ini_merge "$system_config_dir/retroarch-core-options.cfg" "$global_core_options_path" restore=false
+  else
     # Use the global defaults as the initial file
     cp -v "$global_core_options_path" "$core_options_path"
 
@@ -36,8 +39,6 @@ install_core_options() {
       echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
       crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
     fi
-  else
-    ini_merge "$system_config_dir/retroarch-core-options.cfg" "$global_core_options_path" restore=false
   fi
 
   # Reinstall the game-specific retroarch core options for this system.
@@ -57,14 +58,16 @@ install() {
 
 uninstall() {
   # Remove system-specific retroarch core options files
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
-  if [ -n "$core_options_path" ]; then
+  local global_core_options_path=${retroarch_dir_defaults['core_options_path']}
+  local core_options_path=$(get_retroarch_path 'core_options_path')
+  if [ "$core_options_path" != "$global_core_options_path" ]; then
     rm -fv "$core_options_path"
   fi
 
   # Restore emulator-specific retroarch configs
+  local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   while read library_name; do
-    restore "$retroarch_config_dir/config/$library_name/$library_name.cfg" delete_src=true
+    restore "$retroarch_config_dir/$library_name/$library_name.cfg" delete_src=true
   done < <(get_core_library_names)
 
   # Restore system-specific retroarch config

@@ -3,6 +3,11 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+# The directory to which we'll install the configurations and images
+retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
+retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
+system_overlay_dir="$retroarch_overlay_dir/$system"
+
 call_github_api() {
   local url=$1
   local path=$2
@@ -29,9 +34,7 @@ install() {
   # Load emulator data
   load_emulator_data
 
-  # The directory to which we'll install the configurations and images
-  local overlays_dir="$retroarch_config_dir/overlay/$system"
-  mkdir -pv "$overlays_dir"
+  mkdir -pv "$system_overlay_dir"
 
   # Track whether this system supports vertical overlays
   local supports_vertical_overlays=false
@@ -82,7 +85,7 @@ install() {
     fi
 
     # Create directory storing the emulator configuration
-    local emulator_config_dir="$retroarch_config_dir/config/$library_name"
+    local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -pv "$emulator_config_dir"
 
     # Look up either by the current rom or the parent rom
@@ -95,7 +98,7 @@ install() {
         # Link emulator/rom retroarch config to system vertical overlay config
         installed_files["$emulator_config_dir/$rom_name.cfg"]=1
         cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
-input_overlay = "$retroarch_config_dir/overlay/$system-vertical.cfg"
+input_overlay = "$retroarch_overlay_dir/$system-vertical.cfg"
 EOF
       fi
 
@@ -104,10 +107,10 @@ EOF
 
     # We have an image: download it
     local image_filename="$group_name.png"
-    download "$url" "$overlays_dir/$image_filename"
+    download "$url" "$system_overlay_dir/$image_filename"
 
     # Create overlay config
-    local overlay_config_path="$overlays_dir/$rom_name.cfg"
+    local overlay_config_path="$system_overlay_dir/$rom_name.cfg"
     create_overlay_config "$overlay_config_path" "$image_filename"
 
     # Link emulator/rom retroarch config to overlay config
@@ -116,28 +119,28 @@ input_overlay = "$overlay_config_path"
 EOF
 
     installed_files["$emulator_config_dir/$rom_name.cfg"]=1
-    installed_files["$overlays_dir/$rom_name.cfg"]=1
-    installed_files["$overlays_dir/$image_filename"]=1
+    installed_files["$system_overlay_dir/$rom_name.cfg"]=1
+    installed_files["$system_overlay_dir/$image_filename"]=1
   done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator, .orientation] | join("^")')
 
   # Remove old, unused emulator overlay configs
   while read library_name; do
-    [ ! -d "$retroarch_config_dir/config/$library_name" ] && continue
+    [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
     while read path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_config_dir/config/$library_name" -name '*.cfg' | grep -v "$library_name.cfg")
+    done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' | grep -v "$library_name.cfg")
   done < <(get_core_library_names)
 
   # Remove old, unused system overlay configs
   while read path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$overlays_dir" -name '*.cfg' -o -name '*.png')
+  done < <(find "$system_overlay_dir" -name '*.cfg' -o -name '*.png')
 }
 
 uninstall() {
-  echo "Deleting $retroarch_config_dir/overlay/$system"
-  rm -rfv "$retroarch_config_dir/overlay/$system"
+  find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv "{}" \;
+  rm -rfv "$system_overlay_dir"
 }
 
 "$1" "${@:3}"

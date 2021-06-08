@@ -83,6 +83,28 @@ romkit_cache_list() {
 }
 
 ##############
+# Retroarch
+##############
+
+declare -Ag retroarch_dir_defaults
+retroarch_path_defaults['core_options_path']='/opt/retropie/configs/all/retroarch-core-options.cfg'
+retroarch_path_defaults['cheat_database_path']="$retroarch_config_dir/cheats"
+retroarch_path_defaults['overlay_directory']="$retroarch_config_dir/overlay"
+retroarch_path_defaults['rgui_config_directory']="$retroarch_config_dir/config"
+retroarch_path_defaults['input_remapping_directory']="$retroarch_config_dir/remaps"
+
+get_retroarch_path() {
+  local config_name=$1
+
+  local override_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' "$config_name" 2>/dev/null | tr -d '"' || true)
+  if [ -n "$override_path" ]; then
+    echo "$override_path"
+  else
+    echo "${retroarch_path_defaults["$config_name"]}"
+  fi
+}
+
+##############
 # Overlays
 ##############
 

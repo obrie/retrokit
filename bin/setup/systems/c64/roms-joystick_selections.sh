@@ -4,14 +4,13 @@ system='c64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
+retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
+
 install() {
   download 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=tsv' "$system_tmp_dir/c64_dreams.tsv"
 
   # Figure out where the core options live
-  local core_options_path=$(crudini --get "$retropie_system_config_dir/retroarch.cfg" '' 'core_options_path' 2>/dev/null | tr -d '"' || true)
-  if [ -z "$core_options_path" ]; then
-    core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
-  fi
+  local core_options_path=$(get_retroarch_path 'core_options_path')
 
   # Map normalized name to rom name
   declare -A installed_roms
@@ -42,7 +41,7 @@ install() {
       fi
 
       if [ -n "$joyport_selection" ]; then
-        local opt_file="$retroarch_config_dir/config/VICE x64/$rom_name.opt"
+        local opt_file="$retroarch_config_dir/VICE x64/$rom_name.opt"
 
         if [ ! -f "$opt_file" ]; then
           # Copy over existing core overrides so we don't just get the
@@ -61,7 +60,7 @@ install() {
 }
 
 uninstall() {
-  [ ! -d "$retroarch_config_dir/config/VICE x64" ] && return
+  [ ! -d "$retroarch_config_dir/VICE x64" ] && return
 
   # Remove joyport selections
   while read opt_file; do
@@ -69,7 +68,7 @@ uninstall() {
     if [ ! -s "$opt_file" ]; then
       rm -v "$opt_file"
     fi
-  done < <(find "$retroarch_config_dir/config/VICE x64" -name '*.opt')
+  done < <(find "$retroarch_config_dir/VICE x64" -name '*.opt')
 }
 
 "${@}"
