@@ -38,7 +38,7 @@ setup() {
   # been restarted
   . /etc/default/locale
 
-  if [ -z "$3" ] && [[ "$setupmodule" == system* ]]; then
+  if [ -z "$3" ] && { [ "$setupmodule" == 'system' ] || [[ "$setupmodule" == system-* ]]; }; then
     # Setting up an individual system module for all systems
     while read system; do
       run "$setupmodule" "$action" "$system"
