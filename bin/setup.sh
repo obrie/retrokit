@@ -71,6 +71,8 @@ main() {
   else
     setup_all "$action"
   fi
+
+  echo 'Done!'
 }
 
 if [[ $# -lt 1 ]]; then
