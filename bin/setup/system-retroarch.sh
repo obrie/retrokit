@@ -39,12 +39,6 @@ install_core_options() {
   else
     ini_merge "$system_config_dir/retroarch-core-options.cfg" "$global_core_options_path" restore=false
   fi
-}
-
-install() {
-  install_config
-  install_emulator_config
-  install_core_options
 
   # Reinstall the game-specific retroarch core options for this system.
   # Yes, this might mean we install game-specific core options multiple
@@ -53,6 +47,12 @@ install() {
   if [ $(setting ".setup | any(. == \"system-roms-retroarch\")") == 'true' ]; then
     "$bin_dir/setup.sh" install_retroarch_core_options system-roms-retroarch "$system"
   fi
+}
+
+install() {
+  install_config
+  install_emulator_config
+  install_core_options
 }
 
 uninstall() {
