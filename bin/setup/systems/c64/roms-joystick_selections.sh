@@ -43,12 +43,14 @@ install() {
       if [ -n "$joyport_selection" ]; then
         local opt_file="$retroarch_config_dir/VICE x64/$rom_name.opt"
 
-        if [ ! -f "$opt_file" ]; then
+        if [ ! -f "$opt_file" ] && [ -f "$core_options_path" ]; then
           # Copy over existing core overrides so we don't just get the
           # core defaults
           mkdir -pv "$(dirname "$opt_file")"
           touch "$opt_file"
           grep -E '^vice' "$core_options_path" > "$opt_file" || true
+        else
+          touch "$opt_file"
         fi
 
         # Overwrite joyport selection
