@@ -75,6 +75,17 @@ install_retroarch_core_options() {
       [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_config_dir/$library_name" -name '*.opt')
   done < <(get_core_library_names)
+
+  # Reinstall the game-specific retroarch core options for this system.
+  # Yes, this might mean we install game-specific core options multiple
+  # times, but it also means we don't have to worry about remembering to
+  # re-run system-roms-retroarch after running this setupmodule
+  # 
+  # We might want to consider some sort of "depends" system in the future
+  # so that this isn't hard-coded.
+  if [ "$system" == 'c64' ] && [ $(setting '.setup | any(. == "systems/c64/roms-joystick_selections")') == 'true' ]; then
+    "$bin_dir/setup.sh" install systems/c64/roms-joystick_selections
+  fi
 }
 
 # Games-specific controller mapping overrides
