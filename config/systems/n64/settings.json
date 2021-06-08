@@ -17,7 +17,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "mupen64plus": {"build": "source"},
+    "mupen64plus": {},
     "lr-mupen64plus": {"core_name": "mupen64plus", "library_name": "Mupen64Plus GLES3", "default": true},
     "lr-mupen64plus-next": {"core_name": "mupen64plus-next", "library_name": "Mupen64Plus-Next"},
     "lr-parallel-n64": {"core_name": "parallel-n64", "library_name": "ParaLLEl N64"}
