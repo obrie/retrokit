@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
 install() {
-  while IFS="$tab" read -r port_name package_name package_type; do
+  while IFS="$tab" read port_name package_name package_type; do
     install_retropie_package "$package_type" "$package_name"
 
     # Link over any optional files for the game
@@ -17,7 +17,9 @@ install() {
 }
 
 uninstall() {
-  echo 'No uninstall for ports'
+  while read package_name; do
+    uninstall_retropie_package "$package_name" || true
+  done < <(system_setting '.ports | to_entries[] | .value.package')
 }
 
 "${@}"
