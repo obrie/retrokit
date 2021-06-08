@@ -86,7 +86,7 @@ romkit_cache_list() {
 # Retroarch
 ##############
 
-declare -Ag retroarch_dir_defaults
+declare -Ag retroarch_path_defaults
 retroarch_path_defaults['core_options_path']='/opt/retropie/configs/all/retroarch-core-options.cfg'
 retroarch_path_defaults['cheat_database_path']="$retroarch_config_dir/cheats"
 retroarch_path_defaults['overlay_directory']="$retroarch_config_dir/overlay"

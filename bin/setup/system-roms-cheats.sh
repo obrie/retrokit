@@ -3,7 +3,8 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-cheat_database_path=$(get_retroarch_path 'cheat_database_path')
+cheat_database_path=${retroarch_path_defaults['cheat_database_path']}
+system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
 
 install() {
   # Name of the cheats for this system
@@ -54,7 +55,7 @@ install() {
     fi
 
     # Ensure the target exists
-    local target_cheats_dir="$cheat_database_path/$library_name"
+    local target_cheats_dir="$system_cheat_database_path/$library_name"
     mkdir -pv "$target_cheats_dir"
 
     # We can't just symlink to the source directory because the cheat filenames
@@ -70,18 +71,18 @@ install() {
 
   # Remove old, unmapped cheats
   while read library_name; do
-    [ ! -d "$cheat_database_path/$library_name" ] && continue
+    [ ! -d "$system_cheat_database_path/$library_name" ] && continue
 
     while read path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$cheat_database_path/$library_name" -name '*.cht')
+    done < <(find "$system_cheat_database_path/$library_name" -name '*.cht')
   done < <(get_core_library_names)
 }
 
 uninstall() {
   # Remove cheats for each libretro core
   while read library_name; do
-    rm -rfv "$cheat_database_path/$library_name"
+    rm -rfv "$system_cheat_database_path/$library_name"
   done < <(get_core_library_names)
 }
 

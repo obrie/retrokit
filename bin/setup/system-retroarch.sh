@@ -25,7 +25,7 @@ install_emulator_config() {
 
 # Global core options
 install_core_options() {
-  local global_core_options_path=${retroarch_dir_defaults['core_options_path']}
+  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
 
   if [ "$core_options_path" == "$global_core_options_path" ]; then
@@ -58,7 +58,7 @@ install() {
 
 uninstall() {
   # Remove system-specific retroarch core options files
-  local global_core_options_path=${retroarch_dir_defaults['core_options_path']}
+  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
   if [ "$core_options_path" != "$global_core_options_path" ]; then
     rm -fv "$core_options_path"
