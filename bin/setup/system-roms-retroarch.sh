@@ -118,7 +118,7 @@ install_retroarch_configs() {
   # Remove unused configs
   while read rom_dir; do
     while read rom_path; do
-      [ "${installed_files["$path"]}" ] || rm -v "$path"
+      [ "${installed_files["$rom_path"]}" ] || rm -v "$rom_path"
     done < <(find "$rom_dir" -maxdepth 1 -name '*.cfg')
   done < <(echo "$rom_dirs")
 }
