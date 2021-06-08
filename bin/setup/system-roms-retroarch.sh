@@ -101,7 +101,10 @@ install_retroarch_remappings() {
 
 # Game-specific retroarch configuration overrides
 install_retroarch_configs() {
-  local rom_dirs=$(system_setting '.roms.dirs[] | .path')
+  local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
+  if [ -z "$rom_dirs" ]; then
+    return
+  fi
 
   declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
