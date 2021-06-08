@@ -8,8 +8,7 @@
     "args": ["--excludefiles", "*DOSBox*"]
   },
   "emulators": {
-    "dosbox": {"default": true},
-    "dosbox-staging": {"build": "source"}
+    "dosbox": {"default": true}
   },
   "romsets": [
     {
