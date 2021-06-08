@@ -34,6 +34,10 @@ setup() {
   local action="$1"
   local setupmodule="$2"
 
+  # Always make sure the locale is accurate in case the console session hasn't
+  # been restarted
+  . /etc/default/locale
+
   if [ -z "$3" ] && [[ "$setupmodule" == system-* ]]; then
     # Setting up an individual system module for all systems
     while read system; do
@@ -42,12 +46,6 @@ setup() {
   else
     # Setting up an individual module
     run "$setupmodule" "$action" "${@:3}"
-  fi
-
-  # We need to explicitly reload the locale to avoid issues in
-  # commands executed afterwards
-  if [ "$setupmodule" == 'localization' ]; then
-    . /etc/default/locale
   fi
 }
 
