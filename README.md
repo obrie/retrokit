@@ -349,16 +349,6 @@ emulator's UI or use the same button mappings for all controllers.
 Please note that this process has only been tested with an Ubuntu-based
 laptop for flashing the sd card.
 
-### Bluetooth
-
-To find your Blutooth device names to configure in `config/settings.json`, run:
-
-```sh
-hcitool scan
-```
-
-This will list the each device's mac address and its associated device name.
-
 ### Controllers
 
 To identify your controller names and ids, there's unfortunately no easy way out
