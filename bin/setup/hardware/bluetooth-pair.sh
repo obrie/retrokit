@@ -13,6 +13,11 @@ pair_device() {
 
     if [ -n "$matching_devices" ]; then
       while read -r mac_address hci_name; do
+        if bluetoothctl devices | grep "$mac_address"; then
+          echo "Already paired with $mac_address.  Skipping."
+          continue
+        fi
+
         echo "Found device at $mac_address.  Scanning with bluetoothctl..."
 
         # Turn on agent
