@@ -1,8 +1,5 @@
 {
   "system": "pc",
-  "themes": {
-    "launch_image": false
-  },
   "scraper": {
     "sources": ["screenscraper"],
     "args": ["--excludefiles", "*DOSBox*"]
