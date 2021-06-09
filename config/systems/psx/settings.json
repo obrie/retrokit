@@ -21,8 +21,8 @@
     ]
   },
   "emulators": {
-    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation"},
-    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "library_name": "PCSX-ReARMed", "default": true}
+    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true},
+    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "library_name": "PCSX-ReARMed"}
   },
   "cheats": "Sony - PlayStation",
   "bios": {
