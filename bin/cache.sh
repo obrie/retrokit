@@ -10,7 +10,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 delete"
-  echo " $0 sync_nointro_dats <love_pack_pc_xml_file>"
+  echo " $0 sync_nointro_dats <love_pack_pc_zip_file>"
   exit 1
 }
 
