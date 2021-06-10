@@ -10,8 +10,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 create <device> (run from laptop)"
-  echo " $0 backup <device> <backup_dir> (run from laptop)"
-  echo " $0 restore <device> <backup_dir> (run from laptop)"
+  echo " $0 backup <device> <backup_path.tar.gz> (run from laptop)"
+  echo " $0 restore <device> <backup_path.tar.gz> (run from laptop)"
   echo " $0 sync <from_path> <to_path> (run from laptop/retropie)"
   echo " $0 sync_media <from_path> <to_path> (run from laptop/retropie)"
   exit 1
@@ -20,37 +20,37 @@ usage() {
 restore() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local restore_from_path=$2
-  gunzip --stdout "$restore_from_path/sd-retropie.img.gz" | sudo dd bs=4M of=$device
+  local restore_from_path=${2%/}
+  gunzip --stdout "$restore_from_path" | sudo dd bs=4M of=$device
 }
 
 backup() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local backup_to_path=$2
+  local backup_to_path=${2%/}
   mkdir -p "$backup_to_path"
 
-  sudo dd bs=4M if=$device | gzip > "$backup_to_path/sd-retropie.img.gz"
+  sudo dd bs=4M if=$device | gzip > "$backup_to_path"
 }
 
 sync() {
   [[ $# -ne 2 ]] && usage
-  local sync_from_path=$1
-  local sync_to_path=$2
+  local sync_from_path=${1%/}
+  local sync_to_path=${2%/}
 
   # This should be the full list of paths that might be modified by using
   # the arcade or using retrokit
   local paths=(/opt/retropie/ /etc/ /home/pi/)
 
   for path in "${paths[@]}"; do
-    sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
+    sudo rsync -av "$sync_from_path/$path" "$sync_to_path/$path" --delete
   done
 }
 
 sync_media() {
   [[ $# -ne 2 ]] && usage
-  local sync_from_path=$1
-  local sync_to_path=$2
+  local sync_from_path=${1%/}
+  local sync_to_path=${2%/}
 
   # This should be the full list of media paths
   local paths=(
@@ -70,9 +70,9 @@ sync_media() {
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
 
   for path in "${paths[@]}"; do
-    if [ -d "$sync_from_path$path" ]; then
-      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
-      sudo rsync -av "$sync_from_path$path" "$sync_to_path$path" --delete
+    if [ -d "$sync_from_path/$path" ]; then
+      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path/$path"
+      sudo rsync -av "$sync_from_path/$path" "$sync_to_path/$path" --delete
     fi
   done
 }
