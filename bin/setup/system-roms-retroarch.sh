@@ -83,7 +83,7 @@ install_retroarch_core_options() {
   # 
   # We might want to consider some sort of "depends" system in the future
   # so that this isn't hard-coded.
-  if [ "$system" == 'c64' ] && [ $(setting '.setup | any(. == "systems/c64/roms-joystick_selections")') == 'true' ]; then
+  if [ -z "$SKIP_DEPS" ] && [ "$system" == 'c64' ] && has_setupmodule 'systems/c64/roms-joystick_selections'; then
     "$bin_dir/setup.sh" install systems/c64/roms-joystick_selections
   fi
 }

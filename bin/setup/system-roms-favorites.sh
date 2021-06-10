@@ -17,6 +17,7 @@ install() {
 
   # Reset by removing all favorite tags first.  This is much faster than
   # deleting one-by-one given the size of the file.
+  echo 'Resetting favorites...'
   remove_favorites
 
   # Then add current favorites

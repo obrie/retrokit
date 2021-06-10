@@ -89,6 +89,11 @@ install() {
   scrape_new
   scrape_missing_media
   build_gamelist
+
+  # Reinstall the favorites for this system
+  if [ -z "$SKIP_DEPS" ] && has_setupmodule 'system-roms-favorites'; then
+    "$bin_dir/setup.sh" install system-roms-favorites "$system"
+  fi
 }
 
 uninstall() {

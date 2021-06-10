@@ -11,6 +11,10 @@ usage() {
 setup_all() {
   local action="$1"
 
+  # Don't automatically call dependent setupmodules since they'll all be called
+  # in order
+  export SKIP_DEPS=true
+
   local modules
   if [[ "$action" == 'install'* ]]; then
     # First, install wifi and dependencies

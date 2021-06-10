@@ -49,6 +49,10 @@ setting() {
   jq -r "$1 | values" "$settings_file"
 }
 
+has_setupmodule() {
+  [ $(setting ".setup | any(. == \"$1\")") == 'true' ]
+}
+
 ##############
 # Config Management
 ##############
