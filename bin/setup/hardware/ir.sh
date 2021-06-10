@@ -11,7 +11,7 @@ install() {
   local target_path="/etc/rc_keymaps/$keymap_name"
 
   # Define a config file to be read by the configscript when setting up a controller
-  local config_path='/opt/retropie/configs/rc_keymap.cfg'
+  local config_path='/opt/retropie/configs/all/rc_keymap.cfg'
   rm -f "$config_path"
   touch "$config_path"
   crudini --set "$config_path" '' 'source_keymap_path' "$keymap_path"
@@ -21,7 +21,7 @@ install() {
 uninstall() {
   local keymap_path="$(setting '.hardware.ir.keymap')"
   local keymap_name=$(basename "$keymap_path")
-  sudo rm -fv "/etc/rc_keymaps/$keymap_name" /opt/retropie/configs/rc_keymap.cfg
+  sudo rm -fv "/etc/rc_keymaps/$keymap_name" /opt/retropie/configs/all/rc_keymap.cfg
   sudo apt remove -y ir-keytable
 }
 

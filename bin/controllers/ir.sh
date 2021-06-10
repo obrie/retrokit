@@ -9,7 +9,7 @@ function check_ir() {
 }
 
 function onstart_ir_keyboard() {
-    iniConfig '=' '' '/opt/retropie/configs/rc_keymap.cfg'
+    iniConfig '=' '' "$ir_config_path"
 
     # Get the location of the source keymap file used for defining mappings
     iniGet 'source_keymap_path'
