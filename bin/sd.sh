@@ -95,7 +95,7 @@ create() {
 
   # Copy the image
   echo "Copying image to $device..."
-  gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device"
+  gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device" status=progress
   local retropie_device=$(lsblk -nl -o PATH,MAJ:MIN "$device" | grep ':2' | cut -d ' ' -f 1)
   if [ -z "$retropie_device" ]; then
     echo 'Could not find retropie partition in lsblk'
@@ -106,7 +106,7 @@ create() {
   echo "Expanding $device to 100% capacity"
   sudo parted -s "$device" resizepart 2 100%
   sudo e2fsck -fv "$retropie_device"
-  sudo resize2fs "$retropie_device"
+  sudo resize2fs -p "$retropie_device"
 
   # Mount the device
   local mount_path="$HOME/retrokit-sdcard"
