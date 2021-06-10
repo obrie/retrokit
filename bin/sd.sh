@@ -28,7 +28,7 @@ backup() {
   [[ $# -ne 2 ]] && usage
   local device=$1
   local backup_to_path=${2%/}
-  mkdir -p "$backup_to_path"
+  mkdir -p "$(dirname "$backup_to_path")"
 
   sudo dd bs=4M if=$device | gzip > "$backup_to_path"
 }
