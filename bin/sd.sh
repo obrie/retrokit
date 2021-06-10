@@ -21,7 +21,7 @@ restore() {
   [[ $# -ne 2 ]] && usage
   local device=$1
   local restore_from_path=${2%/}
-  gunzip --stdout "$restore_from_path" | sudo dd bs=4M of=$device
+  gunzip --stdout "$restore_from_path" | sudo dd bs=4M of=$device status=progress
 }
 
 backup() {
@@ -30,7 +30,7 @@ backup() {
   local backup_to_path=${2%/}
   mkdir -p "$(dirname "$backup_to_path")"
 
-  sudo dd bs=4M if=$device | gzip > "$backup_to_path"
+  sudo dd bs=4M if=$device status=progress | gzip > "$backup_to_path"
 }
 
 sync() {
