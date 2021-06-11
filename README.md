@@ -15,7 +15,7 @@ Specifically, it can set up:
 * Overclocking
 * Display settings
 * Localization
-* Splash screens (with parallelized loading process)
+* Splash screens (async loading process, reduces load time by 2s)
 * Custom Retropie modules
 * Scraping (via skyscraper)
 * Themes
