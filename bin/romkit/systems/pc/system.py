@@ -17,7 +17,7 @@ class PCSystem(BaseSystem):
 
         if success:
             self.install_config(machine)
-            self.fix_windows_paths(machine)
+            self.fix_paths(machine)
 
         return success
 
@@ -71,13 +71,18 @@ class PCSystem(BaseSystem):
         if renderer and str(renderer.lower()).startswith('opengl'):
             renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, stdout=subprocess.DEVNULL).stdout
 
-    # Find paths that contain windows-style slashes and replace them with linux-style
-    def fix_windows_paths(self, machine: Machine) -> None:
+    # Find two issues with paths:
+    # * Switch windows-style slashes and replace them with linux-style
+    # * Switch the root .eXoDOS reference to point to the directory that contains the games
+    def fix_paths(self, machine: Machine) -> None:
         machine_dir = machine.resource.target_path.path
-        files_to_fix = subprocess.run(['grep', '-lIR', ".\\eXoDOS", machine.resource.target_path.path], check=True, capture_output=True).stdout
+        files_to_fix = subprocess.run(['grep', '-lIR', ".\\eXoDOS", machine_dir], check=True, capture_output=True).stdout
 
         for filepath in files_to_fix.splitlines():
             subprocess.run(['sed', '-i', '/.\\\\eXoDOS/{s/\\\\/\\//g;}', filepath], check=True)
+
+            exodos_dir = str(machine_dir.parent).replace(str(Path.home()), '')
+            subprocess.run(['sed', '-i', f's|./eXoDOS|.{exodos_dir}|g', filepath], check=True)
 
     # Symlinks the configuration file so that it's visible in the frontend
     def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:
