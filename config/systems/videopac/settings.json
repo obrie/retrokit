@@ -92,6 +92,18 @@
         "Popeye"
       ]
     },
+    "favorites": {
+      "titles": [
+        "Alpine Skiing",
+        "Blockout + Breakdown",
+        "Cosmic Conflict",
+        "Frogger",
+        "K.C. Munchkin",
+        "Popeye",
+        "Smithereens",
+        "UFO"
+      ]
+    },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },
@@ -99,18 +111,7 @@
       {"path": "$HOME/RetroPie/roms/videopac/-ALL-"},
       {
         "path": "$HOME/RetroPie/roms/videopac",
-        "filters": {
-          "titles": [
-            "Alpine Skiing",
-            "Blockout + Breakdown",
-            "Cosmic Conflict",
-            "Frogger",
-            "K.C. Munchkin",
-            "Popeye",
-            "Smithereens",
-            "UFO"
-          ]
-        }
+        "filters": {"favorites": [true]}
       }
     ]
   }
