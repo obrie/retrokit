@@ -201,9 +201,6 @@ function _get_config_key() {
         leftanalogdown)
             key='ljoy_down'
             ;;
-        rightanalogleft)
-            key='exit'
-            ;;
         *)
             ;;
     esac

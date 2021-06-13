@@ -110,10 +110,10 @@ function _get_config_keys() {
             keys=(TOUCH_CURSOR_DOWN)
             ;;
         rightanalogleft)
-            keys=(QUIT)
+            keys=(MENU)
             ;;
         rightanalogright)
-            keys=(MENU)
+            keys=(FAST_FORWARD)
             ;;
         rightanalogup)
             keys=(SAVE_STATE)

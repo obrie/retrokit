@@ -301,12 +301,16 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 
 | System            | Keyboard       | Controller                  |
 | ----------------- | -------------- | --------------------------- |
-| dreamcast         | ESC            | Right Analog Left           |
+| dreamcast         | ESC            | Select (to Menu)            |
 | n64 (mupen64plus) | ESC            | Hotkey + Start              |
 | pc                | CTRL+F9        | None                        |
-| nds               | ESC            | Right Analog Left           |
+| nds               | ESC            | Right Analog Left (to Menu) |
 | psp               | ESC            | Right Analog Left (to Menu) |
 | *                 | Hotkey + Start | Hotkey + Start              |
+
+It's too easy to accidentally hit a single button during gameplay,
+so instead of exiting when pressing Right Analog Left, the emulator
+will always go to its native menu.
 
 ### Controllers
 
@@ -332,7 +336,7 @@ emulator's UI or use the same button mappings for all controllers.
 | ------------- | ---------- | ------------------ |
 | arcade        | Tab        | N/A                |
 | dreamcast     | Select     | Select             |
-| nds           | Tab        | Right Analog Right |
+| nds           | Tab        | Right Analog Left  |
 | psp           | N/A        | Right Analog Left  |
 | *             | Hotkey + X | Hotkey + X         |
 
