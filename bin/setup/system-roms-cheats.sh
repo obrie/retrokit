@@ -8,7 +8,7 @@ system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
 
 install() {
   # Name of the cheats for this system
-  local cheats_name=$(system_setting '.cheats')
+  local cheats_name=$(system_setting '.cheats.name')
   if [ -z "$cheats_name" ]; then
     echo 'No cheats configured'
     return

@@ -19,7 +19,9 @@
   "emulators": {
     "lr-handy": {"core_name": "handy", "library_name": "Handy", "default": true}
   },
-  "cheats": "Atari - Lynx",
+  "cheats": {
+    "name": "Atari - Lynx"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Atari%20-%20Lynx",
     "dir": "$HOME/RetroPie/BIOS",

@@ -19,7 +19,9 @@
   "emulators": {
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
   },
-  "cheats": "Nintendo - Game Boy Color",
+  "cheats": {
+    "name": "Nintendo - Game Boy Color"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Gameboy%20Color",
     "dir": "$HOME/RetroPie/BIOS",

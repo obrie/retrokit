@@ -22,7 +22,9 @@
   "emulators": {
     "lr-snes9x": {"core_name": "snes9x", "library_name": "Snes9x", "default": true}
   },
-  "cheats": "Nintendo - Super Nintendo Entertainment System",
+  "cheats": {
+    "name": "Nintendo - Super Nintendo Entertainment System"
+  },
   "romsets": [
     {
       "name": "nointro",

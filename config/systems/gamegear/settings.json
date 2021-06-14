@@ -19,7 +19,9 @@
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
-  "cheats": "Sega - Game Gear",
+  "cheats": {
+    "name": "Sega - Game Gear"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Game%20Gear",
     "dir": "$HOME/RetroPie/BIOS",

@@ -22,7 +22,7 @@ Specifically, it can set up:
 * Retroarch configuration
 * EmulationStation configuration
 * Overlays / Bezels
-* Cheats
+* Cheats (RetroArch, MAME, NDS, etc.)
 * HiScores
 * Launch images
 * Emulator installation
@@ -345,11 +345,25 @@ emulator's UI or use the same button mappings for all controllers.
 
 ### Cheats
 
-| System        | Emulator      | How to Cheat                                      |
-| ------------- | ------------- | ------------------------------------------------- |
-| arcade        | lr-fbneo      | Options menu in Retroarch GUI (Hotkey + X)        |
-| arcade        | lr-mame*      | Cheats menu in MAME UI (Tab on Keyboard)          |
-| *             | lr-*          | Cheats menu in Retroarch GUI (Hotkey + X)         |
+| System        | Emulator      | How to Cheat                                       |
+| ------------- | ------------- | -------------------------------------------------- |
+| arcade        | lr-fbneo      | Options menu in Retroarch GUI                      |
+| arcade        | lr-mame*      | Cheats menu in MAME GUI                            |
+| dreamcast     | redream       | Cheats menu in Redream GUI                         |
+| nds           | drastic       | Cheats menu in Drastic GUI                         |
+| psp           | ppsspp        | Cheats menu in PPSSPP GUI ("Import from cheat db") |
+| *             | lr-*          | Cheats menu in Retroarch GUI                       |
+
+Cheats are not supported on the following systems / emulators:
+
+* 3do
+* atarijaguar
+* c64
+* intellivision
+* n64 - mupen64plus standalone
+* sg-1000
+* vectrex
+* videopac
 
 ## Hardware
 

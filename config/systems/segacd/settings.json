@@ -22,7 +22,9 @@
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
-  "cheats": "Sega - Mega-CD - Sega CD",
+  "cheats": {
+    "name": "Sega - Mega-CD - Sega CD"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20CD%20-%20Sega%20CD",
     "dir": "$HOME/RetroPie/BIOS",

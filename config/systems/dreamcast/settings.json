@@ -6,7 +6,6 @@
   "emulators": {
     "redream": {"default": true}
   },
-  "cheats": "Sega - Dreamcast",
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
     "dir": "$HOME/RetroPie/BIOS/dc",

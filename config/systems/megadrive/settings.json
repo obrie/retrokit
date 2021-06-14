@@ -22,7 +22,9 @@
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
-  "cheats": "Sega - Mega Drive - Genesis",
+  "cheats": {
+    "name": "Sega - Mega Drive - Genesis"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20Drive%20-%20Genesis",
     "dir": "$HOME/RetroPie/BIOS",

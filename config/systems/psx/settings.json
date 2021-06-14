@@ -27,7 +27,9 @@
     "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true},
     "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "library_name": "PCSX-ReARMed"}
   },
-  "cheats": "Sony - PlayStation",
+  "cheats": {
+    "name": "Sony - PlayStation"
+  },
   "bios": {
     "url": "$BIOS_URL",
     "dir": "$HOME/RetroPie/BIOS",

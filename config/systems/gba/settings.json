@@ -19,7 +19,9 @@
   "emulators": {
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
   },
-  "cheats": "Nintendo - Game Boy Advance",
+  "cheats": {
+    "name": "Nintendo - Game Boy Advance"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Game%20Boy%20Advance",
     "dir": "$HOME/RetroPie/BIOS",

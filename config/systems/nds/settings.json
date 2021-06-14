@@ -6,7 +6,9 @@
   "emulators": {
     "drastic": {"default": true}
   },
-  "cheats": "Nintendo - Nintendo DS",
+  "cheats": {
+    "name": "Nintendo - Nintendo DS"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Nintendo%20DS",
     "dir": "$HOME/RetroPie/BIOS",

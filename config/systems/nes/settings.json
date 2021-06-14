@@ -22,7 +22,9 @@
   "emulators": {
     "lr-fceumm": {"core_name": "fceumm", "library_name": "FCEUmm", "default": true}
   },
-  "cheats": "Nintendo - Nintendo Entertainment System",
+  "cheats": {
+    "name": "Nintendo - Nintendo Entertainment System"
+  },
   "romsets": [
     {
       "name": "nointro",

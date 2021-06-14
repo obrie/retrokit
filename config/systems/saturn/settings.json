@@ -22,7 +22,9 @@
   "emulators": {
     "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
   },
-  "cheats": "Sega - Saturn",
+  "cheats": {
+    "name": "Sega - Saturn"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Saturn",
     "dir": "$HOME/RetroPie/BIOS",

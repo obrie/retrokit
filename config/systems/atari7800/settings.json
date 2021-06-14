@@ -19,7 +19,9 @@
   "emulators": {
     "lr-prosystem": {"core_name": "prosystem", "library_name": "ProSystem", "default": true}
   },
-  "cheats": "Atari - 7800",
+  "cheats": {
+    "name": "Atari - 7800"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Atari%20-%207800",
     "dir": "$HOME/RetroPie/BIOS",

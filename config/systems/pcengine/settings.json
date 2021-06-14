@@ -19,7 +19,9 @@
   "emulators": {
     "lr-beetle-pce-fast": {"core_name": "pce", "library_name": "Beetle PCE Fast", "default": true}
   },
-  "cheats": "NEC - PC Engine - TurboGrafx 16",
+  "cheats": {
+    "name": "NEC - PC Engine - TurboGrafx 16"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx",
     "dir": "$HOME/RetroPie/BIOS",

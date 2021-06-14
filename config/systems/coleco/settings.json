@@ -19,7 +19,9 @@
   "emulators": {
     "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}
   },
-  "cheats": "Coleco - ColecoVision",
+  "cheats": {
+    "name": "Coleco - ColecoVision"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Coleco%20-%20ColecoVision",
     "dir": "$HOME/RetroPie/BIOS/Machines/COL - ColecoVision",
