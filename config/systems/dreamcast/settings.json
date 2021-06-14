@@ -1,10 +1,27 @@
 {
   "system": "dreamcast",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Dreamcast",
+        "path": "retroarch/overlay/GameBezels/Dreamcast"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Dreamcast",
+        "path": "retroarch/overlay/GameBezels/Dreamcast",
+        "default": "retroarch/overlay/Dreamcast.png"
+      }
+    ],
+    "lightgun_border": {
+      "offset_x": 223
+    }
+  },
   "scraper": {
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "redream": {"default": true}
+    "redream": {"default": true},
+    "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
@@ -116,6 +133,22 @@
         "Typing of the Dead, The",
         "Worms Armageddon"
       ]
+    },
+    "emulators": {
+      "overrides": {
+        "Confidential Mission (USA)": "lr-flycast",
+        "Death Crimson 2 (Japan)": "lr-flycast",
+        "Death Crimson OX (Japan)": "lr-flycast",
+        "Death Crimson OX (USA)": "lr-flycast",
+        "Demolition Racer - No Exit (USA)": "lr-flycast",
+        "House of the Dead 2, The (Europe) (En,Fr,De,Es)": "lr-flycast",
+        "House of the Dead 2, The (Japan)": "lr-flycast",
+        "House of the Dead 2, The (USA)": "lr-flycast",
+        "Silent Scope (Europe) (En,Fr,De,Es,It)": "lr-flycast",
+        "Silent Scope (Japan)": "lr-flycast",
+        "Silent Scope (USA)": "lr-flycast",
+        "Virtua Cop 2 (Japan)": "lr-flycast"
+      }
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/dreamcast"}
