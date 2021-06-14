@@ -109,6 +109,8 @@ get_retroarch_path() {
 # Overlays
 ##############
 
+# Generates a Retroarch overlay configuration at the given path with the given
+# overlay image
 create_overlay_config() {
   local path=$1
   local overlay_filename=$2
@@ -127,6 +129,28 @@ EOF
   if [ -f "$system_config_dir/overlay.cfg" ]; then
     crudini --merge --inplace "$path" < "$system_config_dir/overlay.cfg"
   fi
+}
+
+# Outlines that gameplay area for an existing overlay image in order to be
+# compatible with certain lightgun controllers like Sinden.
+# 
+# This allows us to continue to use consistent overlay sources between all
+# games by just dynamically generated compatible lightgun overlays.
+outline_overlay_image() {
+  local source_path="$1"
+  local target_path="$2"
+
+  # Formatting
+  local width=$(setting '.overlays.lightgun_border.width')
+  local color=$(setting '.overlays.lightgun_border.color')
+  
+  # Coordinates
+  local left=$(system_setting '.overlays.lightgun_border.offset_x // 0')
+  local right="-$left"
+  local top=$(system_setting '.overlays.lightgun_border.offset_y // 0')
+  local bottom="-$bottom"
+
+  python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" --left "$left" --right "$right" --width "$width" --color "$color"
 }
 
 ##############

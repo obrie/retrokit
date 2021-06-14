@@ -58,7 +58,7 @@ scrape_new() {
 
 build_gamelist() {
   local IFS=$'\n'
-  local extra_args=($(system_setting '.scraper.args[]?'))
+  local extra_args=($(system_setting '.scraper | .gamelist_args // .args | .[]?'))
 
   echo "Building gamelist for $system"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}"

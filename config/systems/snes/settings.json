@@ -11,7 +11,10 @@
         "path": "retroarch/overlay/GameBezels/SNES",
         "default": "retroarch/overlay/Super-Nintendo-Entertainment-System.png"
       }
-    ]
+    ],
+    "lightgun_border": {
+      "offset_x": 223
+    }
   },
   "scraper": {
     "sources": ["screenscraper"]

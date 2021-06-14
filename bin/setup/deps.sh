@@ -18,13 +18,16 @@ install() {
 
   # Video editor
   sudo apt install -y ffmpeg
+
+  # Image editor
+  sudo pip3 install pillow==8.2.0
 }
 
 uninstall() {
   sudo apt remove -y ffmpeg
   sudo apt remove -y jq
   sudo rm -fv /usr/local/bin/dotenv
-  sudo pip3 uninstall -y crudini
+  sudo pip3 uninstall -y crudini pillow
   sudo apt remove -y python3-pip
 }
 

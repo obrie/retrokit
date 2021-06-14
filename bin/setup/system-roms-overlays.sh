@@ -69,10 +69,17 @@ install() {
     done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
   done < <(system_setting '.overlays.repos[] | [.repo, .branch, .path, .vertical] | join("^")')
 
+  # Get the list of lightgun games for when we need to use a different type of overlay
+  declare -A lightgun_titles
+  while read rom_title; do
+    lightgun_titles["$rom_title"]=1
+  done < <(grep -E "^$system$tab" "$config_dir/emulationstation/collections/custom-lightguns.tsv" | cut -d"$tab" -f 2)
+
   # Download overlays for installed roms and their associated emulator according
   # to romkit
   declare -A installed_files
   while IFS='^' read rom_name parent_name emulator orientation; do
+    local rom_title=${rom_name%% (*}
     local group_name=${parent_name:-$rom_name}
     emulator=${emulator:-default}
 
@@ -102,6 +109,14 @@ install() {
         cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
 input_overlay = "$retroarch_overlay_dir/$system-vertical.cfg"
 EOF
+      elif [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && [ "${lightgun_titles["$rom_title"]}" ]; then
+        installed_files["$emulator_config_dir/$rom_name.cfg"]=1
+
+        # Link emulator/rom retroarch config to system lightgun overlay config
+        echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $retroarch_overlay_dir/$system-lightgun.cfg"
+        cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
+input_overlay = "$retroarch_overlay_dir/$system-lightgun.cfg"
+EOF
       fi
 
       continue
@@ -110,6 +125,15 @@ EOF
     # We have an image: download it
     local image_filename="$group_name.png"
     download "$url" "$system_overlay_dir/$image_filename"
+
+    # Check if this is a lightgun game that needs special processing
+    if [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && [ "${lightgun_titles["$rom_title"]}" ]; then
+      outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$group_name-lightgun.png"
+
+      # Track the old file and update it to the lightgun version
+      installed_files["$system_overlay_dir/$image_filename"]=1
+      image_filename="$group_name-lightgun.png"
+    fi
 
     # Create overlay config
     local overlay_config_path="$system_overlay_dir/$rom_name.cfg"

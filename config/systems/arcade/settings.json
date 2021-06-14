@@ -12,7 +12,10 @@
         "default": "retroarch/overlay/MAME-Horizontal.png",
         "vertical": "retroarch/overlay/MAME-Vertical.png"
       }
-    ]
+    ],
+    "lightgun_border": {
+      "offset_x": 223
+    }
   },
   "scraper": {
     "sources": ["screenscraper", "arcadedb"]

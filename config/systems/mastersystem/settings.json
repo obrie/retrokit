@@ -11,7 +11,10 @@
         "path": "retroarch/overlay/GameBezels/MasterSystem",
         "default": "retroarch/overlay/Sega-Master-System.png"
       }
-    ]
+    ],
+    "lightgun_border": {
+      "offset_x": 223
+    }
   },
   "scraper": {
     "sources": ["screenscraper", "thegamesdb"]

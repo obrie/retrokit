@@ -11,6 +11,13 @@
     ],
     "launch_theme": "pixel-metadata"
   },
+  "overlays": {
+    "lightgun_border": {
+      "enabled": true,
+      "width": 24,
+      "color": "#ffffff"
+    }
+  },
   "retropie": {
     "show_menu": false
   },
@@ -105,6 +112,7 @@
     "systems/ports/packages",
     "emulationstation-systems",
     "hardware/controllers",
+    "hardware/controllers/sinden",
     "system-retroarch",
     "system-launchimages",
     "system-overlays",

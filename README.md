@@ -28,6 +28,9 @@ Specifically, it can set up:
 * Emulator installation
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections management
+* Lightgun collections
+* Lightgun-compatible overlay auto-generation
+* Sinden lightgun controller configuration
 * Various fixes / workarounds for many common issues
 
 Additionally, it provides ROM management capabilities, including:
