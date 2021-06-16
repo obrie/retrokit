@@ -67,30 +67,18 @@
         "World"
       ],
       "!flags": [
-        "beta",
-        "collection",
-        "demo",
-        "pirate",
-        "proto",
-        "unl",
-        "virtual console"
+        "Beta",
+        "Collection",
+        "Demo",
+        "Pirate",
+        "Proto",
+        "Unl",
+        "Virtual Console"
       ],
       "!titles": [
-        "# The titles below are marked as not working",
-        "Glover",
-        "Hey You, Pikachu!",
-        "Knife Edge - Nose Gunner",
+        "# Collections",
         "Midway's Greatest Arcade Hits - Volume 1",
-        "Namco Museum",
-        "NBA Hangtime",
-        "NBA Showtime - NBA on NBC",
-        "Quake II",
-        "Rayman 2 - The Great Escape",
-        "Top Gear Hyper-Bike",
-        "Top Gear Hyper Bike",
-        "Vigilante 8",
-        "Vigilante 8 - 2nd Offense",
-        "Waialae Country Club - True Golf Classics"
+        "Namco Museum"
       ],
       "demo": [
         "1080 Snowboarding",
@@ -103,47 +91,10 @@
     },
     "favorites": {
       "titles": [
-        "Carmageddon 64",
-        "Cruis'n USA",
-        "Donkey Kong 64",
-        "Duke Nukem 64",
-        "Earthworm Jim 3D",
-        "Excitebike 64",
-        "Indiana Jones and the Infernal Machine",
-        "Mario Kart 64",
-        "Mario Party",
-        "Mario Party 2",
-        "Mario Party 3",
-        "Mega Man 64",
-        "Mortal Kombat 4",
-        "Mortal Kombat Trilogy",
-        "NBA Jam 2000",
-        "NFL Blitz",
-        "NFL Blitz 2000",
-        "Paper Mario",
-        "Quake",
-        "Re-Volt",
-        "Snowboard Kids",
-        "Snowboard Kids 2",
-        "South Park Rally",
-        "South Park",
-        "Stunt Racer 64",
-        "Super Mario 64",
-        "Super Smash Bros.",
-        "Tony Hawk's Pro Skater",
-        "Tony Hawk's Pro Skater 2",
-        "Top Gear Overdrive",
-        "Top Gear Rally 2",
-        "Top Gear Rally",
-        "Worms Armageddon"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/n64/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/n64",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/n64"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

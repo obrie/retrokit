@@ -33,24 +33,75 @@
   ],
   "roms": {
     "priority": [
-      "USA",
-      "World"
+      "USA"
     ],
     "filters": {
       "flags": [
-        "USA",
-        "Europe",
-        "World"
+        "USA"
       ],
-      "titles": [
-        "Bubble Bobble Evolution",
-        "Burnout Legends",
-        "Grand Theft Auto - Liberty City Stories",
-        "Grand Theft Auto - Vice City Stories",
-        "Simpsons Game, The",
-        "TMNT",
-        "Worms - Open Warfare",
-        "WipEout Pure"
+      "categories": [
+        "Games"
+      ],
+      "!keywords": [
+        "Cards",
+        "Collection",
+        "Demo",
+        "Poker",
+        "Puzzle",
+        "Quiz",
+        "# Sports franchises",
+        "FIFA Soccer",
+        "Gretzky NHL",
+        "Madden NFL",
+        "MLB 0",
+        "MLB 1",
+        "Major League Baseball",
+        "NBA 0",
+        "NBA 1",
+        "NBA 2",
+        "NBA Live",
+        "NCAA Football",
+        "PES 20",
+        "Tiger Woods PGA Tour",
+        "World Tour Soccer",
+        "WWE SmackDown vs. Raw"
+      ],
+      "!titles": [
+        "# Collections",
+        "2 Games in 1! Archer Maclean's Mercury & Mercury Meltdown",
+        "Activision Hits Remixed",
+        "Atari Classics Evolved",
+        "SNK Arcade Classics Vol. 1",
+        "Sampler Disc for PSP Vol. 1",
+        "Stealth + WipEout Pure",
+        "# Board Games",
+        "Chessmaster - The Art of Learning",
+        "Online Chess Kingdoms",
+        "Scrabble",
+        "# Education",
+        "LittleBigPlanet",
+        "PQ - Practical Intelligence Quotient",
+        "PQ2 - Practical Intelligence Quotient 2",
+        "Spelling Challenges and More!",
+        "# Non-Games",
+        "Marvel Trading Card Game",
+        "Neverland Card Battles",
+        "Traxxpad - Portable Studio"
+      ],
+      "+titles": [
+        "# Latest Sports Franchises (one day make this automatic)",
+        "FIFA Soccer 13",
+        "Gretzky NHL 06",
+        "Madden NFL 12",
+        "MLB 11 - The Show",
+        "Major League Baseball 2K12",
+        "NBA 2K13",
+        "NBA Live 10",
+        "NCAA Football 10",
+        "PES 2014 - Pro Evolution Soccer",
+        "Tiger Woods PGA Tour 10",
+        "World Tour Soccer 06",
+        "WWE SmackDown vs. Raw 2011"
       ],
       "demo": [
         "Simpsons Game, The"
@@ -58,11 +109,6 @@
     },
     "favorites": {
       "titles": [
-        "Bubble Bobble Evolution",
-        "Simpsons Game, The",
-        "TMNT",
-        "Worms - Open Warfare",
-        "WipEout Pure"
       ]
     },
     "dirs": [

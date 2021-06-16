@@ -74,13 +74,12 @@
         "game guru",
         "sampler"
       ],
-      "titles": [
-        "Captain Quazar",
-        "Corpse Killer",
-        "Demolition Man",
-        "Gex",
-        "Return Fire",
-        "Road Rash"
+      "categories": [
+        "Games"
+      ],
+      "!titles": [
+        "Battle Chess",
+        "Cowboy Casino"
       ],
       "demo": [
         "Road Rash"
@@ -88,8 +87,6 @@
     },
     "favorites": {
       "titles": [
-        "Gex",
-        "Road Rash"
       ]
     },
     "dirs": [

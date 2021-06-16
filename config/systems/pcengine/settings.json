@@ -82,33 +82,31 @@
       "USA"
     ],
     "filters": {
-      "romsets": [
-        "nointro"
-      ],
       "flags": [
         "USA"
       ],
       "!flags": [
-        "unl"
+        "Unl"
+      ],
+      "categories": [
+        null,
+        "Games"
       ],
       "!keywords": [
-        "bios"
+        "BIOS"
       ],
-      "+titles": [
-        "Addams Family, The",
-        "Bonk III - Bonk's Big Adventure",
-        "Camp California",
-        "Fighting Street",
-        "Final Zone II",
-        "Forgotten Worlds",
-        "Last Alert",
-        "Lords of Thunder",
-        "Prince of Persia",
-        "Riot Zone",
-        "Super Air Zonk - Rockabilly-Paradise"
+      "!titles": [
+        "# Casino",
+        "King Of Casino",
+        "# Collections",
+        "Gate of Thunder + Bonk's Adventure + Bonk's Revenge"
       ],
       "demo": [
         "Prince of Persia"
+      ]
+    },
+    "favorites": {
+      "titles": [
       ]
     },
     "dirs": [

@@ -67,7 +67,6 @@
     "compatibility_rating_url": "file://$HOME/retrokit/config/systems/saturn/compatibility_ratings.tsv",
     "filters": {
       "compatibility_ratings": [
-        3,
         4,
         5
       ],
@@ -77,30 +76,23 @@
         "World"
       ],
       "!flags": [
-        "demo",
-        "proto"
+        "Demo",
+        "Proto"
+      ],
+      "categories": [
+        "Games"
       ],
       "!keywords": [
-        "Sega Flash Vol.",
-        "Arcade's Greatest Hits"
+        "Demo",
+        "Sega Flash Vol."
       ],
       "!titles": [
-        "Gremlin Demo Disc",
-        "Gremlin Demo Disk",
+        "# Collections",
+        "Arcade's Greatest Hits",
+        "Arcade's Greatest Hits - The Atari Collection 1",
+        "Die Hard Arcade",
         "Sega Saturn Choice Cuts",
         "Street Fighter Collection"
-      ],
-      "titles": [
-        "Contra - Legacy of War",
-        "Die Hard Arcade",
-        "Mortal Kombat II",
-        "Mortal Kombat Trilogy",
-        "Rampage - World Tour",
-        "Sega Rally Championship",
-        "Sonic R",
-        "Steep Slope Sliders",
-        "Street Fighter Alpha - Warriors' Dreams",
-        "Street Fighter Alpha 2"
       ],
       "demo": [
         "Sega Rally Championship"
@@ -108,12 +100,6 @@
     },
     "favorites": {
       "titles": [
-        "Contra - Legacy of War",
-        "Die Hard Arcade",
-        "Mortal Kombat II",
-        "Mortal Kombat Trilogy",
-        "Street Fighter Alpha - Warriors' Dreams",
-        "Street Fighter Alpha 2"
       ]
     },
     "dirs": [

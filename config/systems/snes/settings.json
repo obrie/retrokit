@@ -61,31 +61,37 @@
         "World"
       ],
       "!flags": [
-        "aftermarket",
-        "alt",
-        "beta",
-        "collection",
-        "demo",
-        "enhancement",
-        "pirate",
-        "proto",
-        "sample",
-        "test",
-        "unl",
-        "virtual console"
+        "Aftermarket",
+        "Alt",
+        "Beta",
+        "Collection",
+        "Demo",
+        "Enhancement",
+        "Pirate",
+        "Proto",
+        "Sample",
+        "Test",
+        "Unl",
+        "Virtual Console"
       ],
       "!keywords": [
-        "anniversary",
-        "cartridge",
-        "collector",
-        "gamecube",
-        "teenage mutant hero",
-        "tester"
+        "Anniversary",
+        "Cartridge",
+        "Collector",
+        "Gamecube",
+        "Teenage Mutant Hero",
+        "Tester"
       ],
       "!titles": [
+        "# Collections",
+        "Arcade's Greatest Hits - The Atari Collection 1",
+        "Exertainment Mountain Bike Rally + Speed Racer",
+        "# Board Games",
+        "Chessmaster, The",
+        "# Educational",
+        "Miracle Piano Teaching System, The",
+        "# Non-Games",
         "Super Game Boy",
-        "Tuff E Nuff ~ Fighting Spirit - Tuff E Nuff",
-        "Wolfenstein 3D",
         "XBAND"
       ],
       "demo": [
@@ -94,68 +100,13 @@
     },
     "favorites": {
       "titles": [
-        "Aladdin",
-        "Arkanoid - Doh It Again",
-        "Contra III - The Alien Wars",
-        "Donkey Kong Country",
-        "Donkey Kong Country 2 - Diddy's Kong Quest",
-        "Donkey Kong Country 3 - Dixie Kong's Double Trouble!",
-        "Double Dragon V - The Shadow Falls",
-        "Family Feud",
-        "Final Fight",
-        "Final Fight 2",
-        "Final Fight 3",
-        "Frogger",
-        "George Foreman's KO Boxing",
-        "Ken Griffey Jr. Presents Major League Baseball",
-        "Lion King, The",
-        "Madden NFL '94",
-        "Madden NFL 97",
-        "Marvel Super Heroes in War of the Gems",
-        "Mortal Kombat",
-        "Mortal Kombat 3",
-        "Mortal Kombat II",
-        "Ms. Pac-Man",
-        "NBA Jam",
-        "NBA Jam - Tournament Edition",
-        "NHL '94",
-        "NHL 97",
-        "Olympic Summer Games",
-        "Simpsons, The - Bart's Nightmare",
-        "Space Invaders",
-        "Spider-Man",
-        "Spider-Man - Venom - Maximum Carnage",
-        "Street Fighter II",
-        "Street Fighter II Turbo",
-        "Super Double Dragon",
-        "Super Mario All-Stars",
-        "Super Mario Kart",
-        "Super Mario World",
-        "Super Mario World 2 - Yoshi's Island",
-        "Super Punch-Out!!",
-        "Super Star Wars",
-        "Super Star Wars - Return of the Jedi",
-        "Super Star Wars - The Empire Strikes Back",
-        "Super Tennis",
-        "Teenage Mutant Ninja Turtles - Tournament Fighters",
-        "Teenage Mutant Ninja Turtles IV - Turtles in Time",
-        "Teenage Mutant Ninja Turtles IV - Turtles in Time",
-        "Top Gear",
-        "Top Gear 2",
-        "Ultimate Mortal Kombat 3",
-        "Worms",
-        "X-Men - Mutant Apocalypse"
       ]
     },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/snes/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/snes",
-        "filters": {"favorites": [true]}
-      }
-    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    }
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/snes/-ALL-"}
+    ]
   }
 }

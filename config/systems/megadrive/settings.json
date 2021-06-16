@@ -68,33 +68,39 @@
         "World"
       ],
       "!flags": [
-        "aftermarket",
-        "alt",
-        "beta",
-        "compilation",
-        "genesis mini",
-        "mega drive mini",
-        "program",
-        "proto",
-        "rental version",
-        "sega channel",
-        "test drive version",
-        "unl",
-        "virtual console",
-        "visitor"
+        "Aftermarket",
+        "Alt",
+        "Beta",
+        "Compilation",
+        "Genesis Mini",
+        "Mega Drive Mini",
+        "Program",
+        "Proto",
+        "Rental Version",
+        "Sega Channel",
+        "Test Drive Version",
+        "Unl",
+        "Virtual Console",
+        "Visitor"
       ],
       "!keywords": [
-        "bios",
-        "disney collection",
-        "mega games",
-        "mega drive play tv",
-        "teenage mutant hero"
+        "BIOS",
+        "Collection",
+        "Mega Games",
+        "Mega Drive Play TV",
+        "Teenage Mutant Hero"
       ],
       "!titles": [
+        "# Collections",
         "6-Pak",
         "Fun 'n Games",
         "Math Blaster - Episode 1",
-        "Mega 6 Vol. 3"
+        "Mega 6 Vol. 3",
+        "Sonic & Knuckles + Sonic The Hedgehog",
+        "Sonic & Knuckles + Sonic The Hedgehog 2",
+        "Sonic & Knuckles + Sonic The Hedgehog 3",
+        "Sonic Compilation ~ Sonic Classics",
+        "Williams Arcade's Greatest Hits"
       ],
       "demo": [
         "Mortal Kombat"
@@ -102,61 +108,10 @@
     },
     "favorites": {
       "titles": [
-        "Adventures of Batman & Robin, The",
-        "After Burner II",
-        "Aladdin",
-        "Back to the Future Part III",
-        "Batman Forever",
-        "Batman Returns",
-        "Batman - Revenge of the Joker",
-        "Batman - The Video Game",
-        "California Games",
-        "Championship Pro-Am",
-        "Double Dragon 3 - The Arcade Game",
-        "Double Dragon V - The Shadow Falls",
-        "Double Dribble - The Playoff Edition",
-        "Earthworm Jim 2",
-        "Earthworm Jim",
-        "Ghostbusters",
-        "Indiana Jones and the Last Crusade",
-        "Judge Dredd",
-        "Jurassic Park - Rampage Edition",
-        "Jurassic Park",
-        "Lethal Enforcers II - Gun Fighters",
-        "Lethal Enforcers",
-        "Lion King, The",
-        "Madden NFL 97",
-        "Micro Machines",
-        "Mortal Kombat 3",
-        "Mortal Kombat II",
-        "Mortal Kombat",
-        "Ms. Pac-Man",
-        "NBA Jam - Tournament Edition",
-        "NBA Jam",
-        "NHL 97",
-        "Paperboy 2",
-        "Paperboy",
-        "Rambo III",
-        "Simpsons, The - Bart's Nightmare",
-        "Simpsons, The - Bart vs. the Space Mutants",
-        "Sonic The Hedgehog 2",
-        "Sonic The Hedgehog 3",
-        "Sonic The Hedgehog",
-        "Teenage Mutant Ninja Turtles - The Hyperstone Heist",
-        "Teenage Mutant Ninja Turtles - Tournament Fighters",
-        "Terminator, The",
-        "Top Gear 2",
-        "Winter Olympic Games",
-        "X-Men 2 - Clone Wars",
-        "X-Men"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/megadrive/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/megadrive",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/megadrive"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

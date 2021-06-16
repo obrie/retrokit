@@ -62,34 +62,51 @@
         "World"
       ],
       "!flags": [
-        "aftermarket",
-        "alt",
-        "beta",
-        "collection",
-        "demo",
-        "kiosk",
-        "proto",
-        "sample",
-        "test",
-        "unl",
-        "virtual console"
+        "Aftermarket",
+        "Alt",
+        "Beta",
+        "Collection",
+        "Demo",
+        "Kiosk",
+        "Proto",
+        "Sample",
+        "Test",
+        "Unl",
+        "Virtual Console"
       ],
       "!keywords": [
-        "anniversary",
-        "cartridge",
-        "collector",
-        "gamecube",
-        "game genie",
-        "namco museum",
-        "super mario bros. +",
-        "teenage mutant hero"
-      ],
-      "!names": [
-        "Alex DeMeo's Race America (USA)"
+        "Anniversary",
+        "Cartridge",
+        "Collector",
+        "Gamecube",
+        "Game Genie",
+        "Namco Museum",
+        "Super Mario Bros. +",
+        "Teenage Mutant Hero"
       ],
       "!titles": [
+        "# Board Games",
+        "Anticipation",
         "Chessmaster, The",
-        "Punch-Out!!"
+        "Punch-Out!!",
+        "# Casino",
+        "Caesars Palace",
+        "Casino Kid II",
+        "Vegas Dream",
+        "# Educational",
+        "Color a Dinosaur",
+        "Donkey Kong Jr. Math",
+        "Fisher-Price - I Can Remember",
+        "Mickey's Adventure in Numberland",
+        "Mickey's Safari in Letterland",
+        "Miracle Piano Teaching System, The",
+        "Sesame Street",
+        "Tiny Toon Adventures Cartoon Workshop",
+        "Videomation"
+      ],
+      "!names": [
+        "# Not available",
+        "Alex DeMeo's Race America (USA)"
       ],
       "+names": [
         "Karateka (Japan)"
@@ -100,56 +117,10 @@
     },
     "favorites": {
       "titles": [
-        "Arkanoid",
-        "Bubble Bobble",
-        "Bubble Bobble Part 2",
-        "California Games",
-        "Contra",
-        "Contra Force",
-        "Double Dragon",
-        "Double Dragon II - The Revenge",
-        "Double Dragon III - The Sacred Stones",
-        "Excitebike",
-        "Duck Hunt",
-        "Indiana Jones and the Last Crusade",
-        "Indiana Jones and the Temple of Doom",
-        "Karateka",
-        "Little Mermaid, The",
-        "Marble Madness",
-        "Mike Tyson's Punch-Out!!",
-        "Monster Truck Rally",
-        "Ms. Pac-Man",
-        "Pac-Man",
-        "Popeye",
-        "Rampage",
-        "Paperboy",
-        "R.C. Pro-Am",
-        "R.C. Pro-Am II",
-        "Simpsons, The - Bartman Meets Radioactive Man",
-        "Simpsons, The - Bart vs. the Space Mutants",
-        "Simpsons, The - Bart vs. the World",
-        "Skate or Die",
-        "Skate or Die 2 - The Search for Double Trouble",
-        "Super Mario Bros.",
-        "Super Mario Bros. 2",
-        "Super Mario Bros. 3",
-        "Teenage Mutant Ninja Turtles",
-        "Teenage Mutant Ninja Turtles II - The Arcade Game",
-        "Teenage Mutant Ninja Turtles III - The Manhattan Project",
-        "Tetris",
-        "Tetris 2",
-        "Track & Field",
-        "Track & Field II",
-        "Winter Games",
-        "World Games"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/nes/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/nes",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/nes"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
