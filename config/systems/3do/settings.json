@@ -44,8 +44,8 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "download": "$HOME/RetroPie/roms/3do/.redump/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/3do/.redump/{machine}",
-          "install": {"action": "zip_extract"}
+          "target": "$HOME/RetroPie/roms/3do/.redump/{machine}.chd",
+          "install": {"action": "zip_to_chd"}
         },
         "clones": {
           "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Panasonic%20-%203DO%20Interactive%20Multiplayer.json",
@@ -96,7 +96,7 @@
       {"path": "$HOME/RetroPie/roms/3do"}
     ],
     "files": {
-      "machine": {"source": "*", "target": "{dir}"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }
