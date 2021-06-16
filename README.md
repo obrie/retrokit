@@ -36,6 +36,7 @@ Specifically, it can set up:
 Additionally, it provides ROM management capabilities, including:
 
 * Advanced filtering
+* Clone mappings for redump DATs
 * Emulator assignment
 * Core options overrides
 * Retroarch overrides
@@ -452,6 +453,7 @@ retrokit what it is.  That includes:
 * [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
 * [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
 * [Joshua Rancel](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) for the default splash screen (Retro History)
+* [unexpectedpanda](https://github.com/unexpectedpanda/retool) for retool configurations
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums

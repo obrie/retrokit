@@ -52,6 +52,10 @@
           "download": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
+        },
+        "clones": {
+          "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Dreamcast.json",
+          "target": "$HOME/retrokit/tmp/dreamcast/clones.json"
         }
       }
     }
