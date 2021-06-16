@@ -151,7 +151,7 @@ _EOF_
 # Run RetroPie autoconfig for each controller input
 install_inputs() {
   local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
-  download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true
+  download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
 
   while IFS=, read name id swap_buttons; do
     local config_file="$config_dir/controllers/inputs/$name.cfg"
