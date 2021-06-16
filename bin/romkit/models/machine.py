@@ -11,7 +11,7 @@ from typing import Dict, List, Optional, Set
 # Represents a Game/Device/BIOS
 class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
-    DISC_REGEX = re.compile(r'\(Disc [0-9]+\)')
+    DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
 
     def __init__(self,
@@ -158,7 +158,7 @@ class Machine:
 
         disc_match = self.DISC_REGEX.search(name)
         if disc_match:
-            full_title = f'{full_title} {disc_match.group()}'
+            full_title = f'{full_title} {disc_match.group().replace("0", "")}'
 
         return full_title
 
