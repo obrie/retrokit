@@ -23,6 +23,9 @@
     "redream": {"default": true},
     "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
   },
+  "cheats": {
+    "name": "Sega - Dreamcast"
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
     "dir": "$HOME/RetroPie/BIOS/dc",
