@@ -73,7 +73,7 @@ class SubstringFilter(BaseFilter):
     def match(self, machine: Machine) -> bool:
         machine_values = self.normalize(self.values(machine))
         for machine_value in machine_values:
-            if machine_value and any(
+            if any(
                 machine_value == filter_value if machine_value is None or filter_value is None
                 else filter_value in machine_value
                 for filter_value in self.filter_values
