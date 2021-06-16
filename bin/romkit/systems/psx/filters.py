@@ -51,7 +51,7 @@ class CategoryFilter(SubstringFilter):
                     self.categories[game['name']] = game['genre'].lower()
 
     def values(self, machine):
-        return {self.categories.get(machine.name)}
+        return {self.categories.get(machine.name) or self.categories.get(machine.parent_name)}
 
 # Filter on the language used in the game
 class LanguageFilter(SubstringFilter):
@@ -70,4 +70,4 @@ class LanguageFilter(SubstringFilter):
                     self.languages[game['name']] = ' '.join(game['languages']).lower()
 
     def values(self, machine):
-        return {self.languages.get(machine.name)}
+        return {self.languages.get(machine.name) or self.languages.get(machine.parent_name)}
