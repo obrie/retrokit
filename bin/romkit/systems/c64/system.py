@@ -3,6 +3,6 @@ from romkit.systems.c64.filters import C64DreamsFilter
 
 class C64System(BaseSystem):
     name = 'c64'
-    supported_filters = BaseSystem.supported_filters + [
+    supported_filters = BaseSystem.supported_filters | set([
         C64DreamsFilter,
-    ]
+    ])

@@ -1,5 +1,6 @@
 from romkit.filters.base import BaseFilter, ExactFilter, SubstringFilter
 from romkit.filters.filter_set import FilterReason, FilterSet
+from romkit.filters.category import CategoryFilter
 from romkit.filters.control import ControlFilter
 from romkit.filters.description import FlagFilter, KeywordFilter
 from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter

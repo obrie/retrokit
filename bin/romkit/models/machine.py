@@ -19,6 +19,7 @@ class Machine:
         name: str,
         description: str = '',
         orientation: str = 'horizontal',
+        category: Optional[str] = None,
         parent_name: Optional[str] = None,
         bios_name: Optional[str] = None,
         sample_name: Optional[str] = None,
@@ -33,6 +34,7 @@ class Machine:
         self.name = name
         self.description = description
         self.orientation = orientation
+        self.category = category
         self.parent_name = parent_name
         self.bios_name = bios_name
         self.sample_name = sample_name
@@ -78,10 +80,15 @@ class Machine:
             # and assume the sample archive is the same name as this machine.
             sample_name = xml.get('name')
 
+        category = xml.find('category')
+        if category is not None:
+            category = category.text
+
         machine = cls(
             romset,
             xml.get('name'),
             description=xml.find('description').text,
+            category=category,
             orientation=orientation,
             parent_name=parent_name,
             bios_name=bios_name,

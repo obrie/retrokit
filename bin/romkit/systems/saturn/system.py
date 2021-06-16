@@ -6,6 +6,6 @@ from romkit.systems.saturn.filters import CompatibilityRatingFilter
 class SaturnSystem(BaseSystem):
     name = 'saturn'
 
-    supported_filters = BaseSystem.supported_filters + [
+    supported_filters = BaseSystem.supported_filters | set([
         CompatibilityRatingFilter,
-    ]
+    ])

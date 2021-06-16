@@ -1,4 +1,4 @@
-from romkit.filters import BaseFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FavoriteFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
+from romkit.filters import BaseFilter, CategoryFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FavoriteFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
 from romkit.models import EmulatorSet, Machine, ROMSet
 from romkit.systems.system_dir import SystemDir
 
@@ -18,7 +18,7 @@ class BaseSystem:
     name = 'base'
 
     # Filters that run based on an allowlist/blocklist provided at runtime
-    supported_filters = [
+    supported_filters = set([
         CloneFilter,
         KeywordFilter,
         FlagFilter,
@@ -29,7 +29,8 @@ class BaseSystem:
         ROMSetFilter,
         EmulatorFilter,
         FavoriteFilter,
-    ]
+        CategoryFilter,
+    ])
 
     # Class to use for building emulator sets
     emulator_set_class = EmulatorSet
