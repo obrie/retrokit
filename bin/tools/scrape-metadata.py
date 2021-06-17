@@ -31,12 +31,12 @@ class Scraper:
     def run(self) -> None:
         # Check that we have a scraping config
         if not 'scraper' in self.config:
-            print('No scraper configured')
+            print(f'No scraper configured for {self.config["system"]}')
             return
 
         # Check that we're supposed to scrape metadata
         if 'metadata' not in self.config or 'scraper' not in self.config['metadata']:
-            print('No metadata file configured')
+            print(f'No metadata file configured for {self.config["system"]}')
             return
 
         # Build the system that we're scraping
