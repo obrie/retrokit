@@ -70,15 +70,15 @@
         "World"
       ],
       "!flags": [
-        "beta",
-        "demo",
-        "proto"
+        "Beta",
+        "Demo",
+        "Proto"
       ],
       "!keywords": [
-        "arcade smash hits",
-        "bios"
+        "BIOS"
       ],
       "!titles": [
+        "Arcade Smash Hits",
         "Casino Games"
       ],
       "demo": [
@@ -87,38 +87,10 @@
     },
     "favorites": {
       "titles": [
-        "Aladdin",
-        "Back to the Future Part II",
-        "Back to the Future Part III",
-        "Bubble Bobble ~ Dragon Maze",
-        "California Games ~ Jogos de Verao",
-        "California Games II",
-        "Double Dragon",
-        "Ghostbusters",
-        "Lion King, The",
-        "Mortal Kombat",
-        "Mortal Kombat II",
-        "Ms. Pac-Man",
-        "Paperboy",
-        "Rambo - First Blood Part II",
-        "Rambo III",
-        "Rampage",
-        "Simpsons, The - Bart vs. the Space Mutants",
-        "Simpsons, The - Bart vs. the World",
-        "Sonic The Hedgehog",
-        "Sonic The Hedgehog 2",
-        "Summer Games ~ Jogos Olimpicos",
-        "Terminator 2 - Judgment Day",
-        "Terminator, The",
-        "Winter Olympics"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/mastersystem/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/mastersystem",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/mastersystem"}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

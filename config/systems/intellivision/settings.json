@@ -56,6 +56,9 @@
       "USA",
       "World"
     ],
+    "genres": {
+      "path": "/$HOME/retrokit/cache/genres/intellivision.xml"
+    },
     "filters": {
       "flags": [
         "Europe",
@@ -67,25 +70,29 @@
         "proto"
       ],
       "!keywords": [
-        "bios",
-        "demonstration cartridge",
-        "electric company, the",
-        "test cartridge"
+        "BIOS",
+        "Demonstration Cartridge",
+        "Electric Company, The",
+        "Test Cartridge"
       ],
       "!titles": [
+        "# Board Games",
         "ABPA Backgammon ~ Backgammon",
         "Checkers ~ Draughts",
         "Crosswords",
-        "Factor Fun",
-        "Jetsons' Ways With Words, The",
+        "Triple Challenge - Chess, Checkers, Backgammon",
+        "USCF Chess ~ Chess",
+        "# Casino",
         "Las Vegas Poker & Blackjack",
         "Las Vegas Roulette",
-        "Learning Fun I: Math Master Factor Fun",
+        "# Education",
+        "Factor Fun",
+        "Jetsons' Ways With Words, The",
+        "Learning Fun I - Math Master, Factor Fun",
         "Learning Fun II - Word Wizard, Memory Fun",
         "Math Master",
         "Memory Fun",
-        "Triple Challenge - Chess, Checkers, Backgammon",
-        "USCF Chess ~ Chess",
+        "Royal Dealer",
         "Word Hunt",
         "Word Rockets"
       ],
@@ -95,30 +102,13 @@
     },
     "favorites": {
       "titles": [
-        "Astrosmash",
-        "Bump 'n' Jump",
-        "BurgerTime",
-        "Donkey Kong",
-        "Donkey Kong Junior",
-        "Frogger",
-        "Pac-Man",
-        "Pinball",
-        "Pitfall!",
-        "Pole Position",
-        "Popeye",
-        "Star Wars - The Empire Strikes Back",
-        "Zaxxon"
       ]
     },
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/intellivision/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/intellivision",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/intellivision"}
     ]
   }
 }
