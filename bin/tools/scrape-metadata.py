@@ -103,36 +103,35 @@ class Scraper:
         # *except* arcade which is okay because arcade has its own metadata
         # source that we don't have to scrape from.
         largest_file = sorted(machine.non_merged_roms, key=lambda file: file.size)[-1]
-        romnom = quote(machine.resource.target_path.path.name)
+        romnom = quote(largest_file.name).replace('%28', '(').replace('%29',')')
         crc = largest_file.crc.upper()
 
         # Create a fake file so we can actually invoke skyscraper
-        rom_path = self.tmpdir.joinpath(f'roms').joinpath(machine.name)
+        rom_path = self.tmpdir.joinpath(f'roms').joinpath(f'{machine.name}.zip')
         rom_path.touch()
 
-        for scraper_source in self.scraper_sources:
-            # Run skyscraper against this scraping module
-            # 
-            # Note that this requires 2 requests each time, unfortunately.
-            # We *could* use our own API key instead of going through skyscraper
-            # and maybe we'll do that at some point.
-            # 
-            # For now, though, let skyscraper do the API integration work
-            # instead of us.  Maybe we can get skyscraper to allow querying
-            # without doing an upfront API request for the user's limits.
-            subprocess.run([
-                '/opt/retropie/supplementary/skyscraper/Skyscraper',
-                '-p', self.system.name,
-                '-s', scraper_source,
-                '-c', self.scraper_config_path,
-                '-d', self.tmpdir,
-                '-g', self.tmpdir,
-                '-i', self.tmpdir.joinpath(f'roms'),
-                '--verbosity', '0',
-                '--flags', 'nocovers,nomarquees,noscreenshots,nowheels',
-                '--query', f'crc={crc},romnom={romnom}',
-                rom_path,
-            ], check=True)
+        # Run skyscraper against the screenscraper scraping module
+        # 
+        # Note that this requires 2 requests each time, unfortunately.
+        # We *could* use our own API key instead of going through skyscraper
+        # and maybe we'll do that at some point.
+        # 
+        # For now, though, let skyscraper do the API integration work
+        # instead of us.  Maybe we can get skyscraper to allow querying
+        # without doing an upfront API request for the user's limits.
+        subprocess.run([
+            '/opt/retropie/supplementary/skyscraper/Skyscraper',
+            '-p', self.system.name,
+            '-s', 'screenscraper',
+            '-c', self.scraper_config_path,
+            '-d', self.tmpdir,
+            '-g', self.tmpdir,
+            '-i', self.tmpdir.joinpath(f'roms'),
+            '--verbosity', '3',
+            '--flags', 'nocovers,nomarquees,noscreenshots,nowheels',
+            '--query', f'crc={crc}&romnom={romnom}',
+            rom_path,
+        ], check=True)
 
     # Build an emulationstation gamelist.xml that we can parse
     def build_gamelist(self) -> None:
@@ -145,7 +144,7 @@ class Scraper:
             '-d', self.tmpdir,
             '-g', self.tmpdir,
             '-i', self.tmpdir.joinpath(f'roms'),
-            '--verbosity', '0',
+            '--verbosity', '3',
         ])
 
     # Parse the gamelist and output the metadata in JSON
@@ -161,9 +160,16 @@ class Scraper:
         for event, element in doc:
             name = Path(element.find('path').text).stem
             rating = element.find('rating').text
-            genres = re.split(', *', element.find('genre').text)
+            genres_csv = element.find('genre').text
 
-            self.metadata[name] = {'rating': rating, 'genres': genres}
+            # Only write the metadata if we were able to scrape some genres.
+            # Otherwise, it may be indicating of a failure to scrape or failure
+            # to find the game -- so we want to allow ourselves to retry again
+            # in the future by excluding it from the target.
+            if genres_csv:
+                genres = re.split(', *', genres_csv)
+                self.metadata[name] = {'rating': rating, 'genres': genres}
+
             element.clear()
 
         # Save it to the configured metadata path
