@@ -7,10 +7,11 @@ class File:
     # Status when a ROM isn't actually included in the Machine
     STATUS_NO_DUMP = 'nodump'
 
-    __slots__ = ['name', 'crc', 'id']
+    __slots__ = ['name', 'size', 'crc', 'id']
 
-    def __init__(self, name: str, crc: Optional[str], file_identifier: Optional[str] = None) -> None:
+    def __init__(self, name: str, size: int, crc: Optional[str], file_identifier: Optional[str] = None) -> None:
         self.name = name
+        self.size = size
         if crc:
             self.crc = crc.lower()
         
@@ -29,6 +30,7 @@ class File:
     def from_xml(cls, xml: lxml.etree.ElementBase, **kwargs) -> File:
         return cls(
             xml.get('name'),
+            int(xml.get('size') or 0),
             xml.get('crc'),
             **kwargs,
         )

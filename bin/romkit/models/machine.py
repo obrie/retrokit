@@ -176,6 +176,11 @@ class Machine:
         else:
             return ''
 
+    # Estimated filesize in bytes
+    @property
+    def filesize(self) -> int:
+        return sum(map(lambda file: file.size, self.non_merged_roms))
+
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
@@ -271,6 +276,7 @@ class Machine:
             'system': self.romset.system.name,
             'romset': self.romset.name,
             'name': self.name,
+            'filesize': self.filesize,
             'description': self.description,
             'parent': self.parent_name,
             'emulator': self.emulator,
