@@ -163,7 +163,7 @@ class ROMSet:
                     if not machine.parent_name:
                         machine.parent_name = self.clone_parent_map.get(machine.name)
 
-                    yield machine
+                    yield machine, element
                 else:
                     logging.debug(f"[{element.get('name')}] Ignored (not installable)")
                 

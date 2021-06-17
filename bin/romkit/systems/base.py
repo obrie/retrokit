@@ -118,7 +118,7 @@ class BaseSystem:
             # Machines that are installable or required by installable machines
             machines_to_track = set()
 
-            for machine in romset.iter_machines():
+            for (machine, xml) in romset.iter_machines():
                 # Set the emulator on the machine if we have it based on the
                 # emulator set (assuming the emulator isn't defined for the
                 # entire romset)
@@ -275,7 +275,7 @@ class BaseSystem:
                 installable_sample_names.add(machine.sample.name)
 
         for romset in self.iter_romsets():
-            for machine in romset.iter_machines():
+            for (machine, xml) in romset.iter_machines():
                 if machine.resource.target_path.path not in installable_machine_paths:
                     machine.purge()
 
