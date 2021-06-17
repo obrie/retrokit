@@ -1,1 +1,1 @@
-from systems.psp.system import PSPSystem
+from romkit.systems.psp.system import PSPSystem

@@ -1,1 +1,1 @@
-from systems.arcade.system import ArcadeSystem
+from romkit.systems.arcade.system import ArcadeSystem

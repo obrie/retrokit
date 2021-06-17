@@ -1,1 +1,1 @@
-from systems.pc.system import PCSystem
+from romkit.systems.pc.system import PCSystem

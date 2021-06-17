@@ -1,1 +1,1 @@
-from systems.psx.system import PSXSystem
+from romkit.systems.psx.system import PSXSystem
