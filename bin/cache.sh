@@ -10,7 +10,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 delete"
-  echo " $0 sync_nointro_dats <love_pack_pc_zip_file>"
+  echo " $0 sync_system_nointro_dats <system|all> <love_pack_pc_zip_file>"
+  echo " $0 sync_system_metadata <system|all>"
   exit 1
 }
 
@@ -19,37 +20,49 @@ delete() {
   rm -rfv $tmp_dir/*
 }
 
-sync_nointro_dats() {
-  [[ $# -ne 1 ]] && usage
-  local nointro_pack_path=$1
+sync_system_nointro_dats() {
+  [[ $# -ne 2 ]] && usage
+  local system=$1
+  local nointro_pack_path=$2
 
-  while read system; do
-    while read dat_path; do
-      local nointro_name=$(basename "$dat_path" .dat)
-      local zip_filename=$(zipinfo -1 "$nointro_pack_path" | grep "$nointro_name" | head -n 1)
+  while read dat_path; do
+    local nointro_name=$(basename "$dat_path" .dat)
+    local zip_filename=$(zipinfo -1 "$nointro_pack_path" | grep "$nointro_name" | head -n 1)
 
-      if [ -n "$zip_filename" ]; then
-        unzip -j "$nointro_pack_path" "$zip_filename" -d "$tmp_dir/"
-        mv -v "$tmp_dir/$zip_filename" "$cache_dir/nointro/$nointro_name.dat"
-      else
-        echo "[WARN] No dat file found for $system"
-      fi
-    done < <(jq -r 'select(.romsets) | .romsets[] | select(.name == "nointro") | .resources.dat.source' "$app_dir/config/systems/$system/settings.json")
-  done < <(setting '.systems[]')
+    if [ -n "$zip_filename" ]; then
+      unzip -j "$nointro_pack_path" "$zip_filename" -d "$tmp_dir/"
+      mv -v "$tmp_dir/$zip_filename" "$cache_dir/nointro/$nointro_name.dat"
+    else
+      echo "[WARN] No dat file found for $system"
+    fi
+  done < <(jq -r 'select(.romsets) | .romsets[] | select(.name == "nointro") | .resources.dat.source' "$app_dir/config/systems/$system/settings.json")
 }
 
-sync_game_metadata() {
-  while read system; do
-    local system_settings_file="$app_dir/config/systems/$system/settings.json"
-    TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file"
-  done < <(setting '.systems[]')
+sync_system_metadata() {
+  local system=$1
+  local system_settings_file="$app_dir/config/systems/$system/settings.json"
+  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file"
 }
 
 main() {
-  local action="$1"
-  shift
+  local action=$1
 
-  "$action" "$@"
+  if [[ "$action" == *system* ]]; then
+    # Action is system-specific.  Either run against all systems
+    # or against a specific system.
+    local system=$2
+
+    if [ -z "$system" ] || [ "$system" == 'all' ]; then
+      while read system; do
+        "$action" "$system" "${@:3}"
+      done < <(setting '.systems[] | select(. != "ports")')
+    else
+      "$action" "$system" "${@:3}"
+    fi
+  else
+    # Action is not system-specific.
+    "$action" "${@:2}"
+  fi
 }
 
 if [[ $# -lt 1 ]]; then
