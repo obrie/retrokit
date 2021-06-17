@@ -4,7 +4,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 install() {
-  "$bin_dir/romkit/setup.sh install"
+  "$bin_dir/romkit/setup.sh" install
 }
 
 uninstall() {
