@@ -436,25 +436,35 @@ Game metadata comes from a variety of sources.  When possible, retrokit pulls
 directly from those sources instead of caching and maintaining them in this
 codebase.  An overview of metadata and where it comes from is described below.
 
-| System     | Metadata      | Source                                       |
-| ---------- | ------------- | -------------------------------------------------- |
-| arcade     | Languages                | https://www.progettosnaps.net/                      |
-| arcade     | Categories               | https://www.progettosnaps.net/                            |
-| arcade     | Ratings                  | https://www.progettosnaps.net/                         |
-| c64        | "Best Of"                | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4                         |
-| pc         | DAT                      | exodos (cached in git)                         |
-| pc         | DOSBox Config            | exodos (cached in git) |
-| psp        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| psx        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| saturn     | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| nds        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| pcengine   | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| segacd     | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| dreamcast  | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
-| segacd     | DOSBox Config            | exodos (cached in git) |
-| dreamcast  | DOSBox Config            | exodos (cached in git) |
-| *             | lr-*          | Cheats menu in Retroarch GUI                       |
+| System      | Metadata                 | In Git? | Source                                        |
+| ----------- | ------------------------ | --------------------------------------------- |
+| arcade      | Categories               | No      | https://www.progettosnaps.net/                |
+| arcade      | Emulator compatibility   | No      | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
+| arcade      | Languages                | No      | https://www.progettosnaps.net/                |
+| arcade      | Ratings                  | No      | https://www.progettosnaps.net/                |
+| atarijaguar | Emulator compatibility   | Yes     | https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans |
+| c64         | "Best Of" (C64 Dreams)   | No      | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4 |
+| dreamcast   | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| n64         | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
+| nds         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| pc          | DAT                      | Yes     | exodos                                        |
+| pc          | DOSBox Config            | Yes     | exodos                                        |
+| pcengine    | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| psp         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| psx         | Genres                   | No      | https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json |
+| psx         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| saturn      | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| saturn      | Emulator compatibility   | No      | https://github.com/unexpectedpanda/retool     |
+| segacd      | DOSBox Config            | Yes     | exodos                                        |
+| segacd      | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| *           | No-Intro DATs            | Yes     | https://datomatic.no-intro.org/index.php?page=download |
+| *           | Genre / Rating info      | Yes     | https://www.screenscraper.fr/                 |
 
+If possible, the preference would always be that retrokit/romkit is pulling from
+the source for all of the above metadata.  However, some sources either aren't in
+a format that can be parsed (e.g. they're a forum post), don't allow direct
+downloads (e.g. dat-o-matic), or require an excessively large download to access
+a small file (e.g. pc dosbox configurations).
 
 ## Emulators
 
@@ -489,10 +499,8 @@ retrokit what it is.  That includes:
 
 There are too many improvements to count here, but some ideas are:
 
-* Sinden Lightgun autoconfig (once I receive it)
 * Support for non-Raspbian platforms
 * Computer-based emulators (Amigo, Apple II, etc.)
-* More advanced filters for certain systems
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
