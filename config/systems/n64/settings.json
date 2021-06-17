@@ -51,6 +51,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/n64.json"
+    }
+  },
   "roms": {
     "emulators": {
       "url": "file://$HOME/retrokit/config/systems/n64/emulators.tsv",

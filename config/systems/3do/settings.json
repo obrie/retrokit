@@ -54,6 +54,11 @@
       }
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/3do.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

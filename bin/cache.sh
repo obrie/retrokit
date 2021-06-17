@@ -38,6 +38,13 @@ sync_nointro_dats() {
   done < <(setting '.systems[]')
 }
 
+sync_game_metadata() {
+  while read system; do
+    local system_settings_file="$app_dir/config/systems/$system/settings.json"
+    TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file"
+  done < <(setting '.systems[]')
+}
+
 main() {
   local action="$1"
   shift

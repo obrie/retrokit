@@ -66,6 +66,11 @@
       }
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/psx.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

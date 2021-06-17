@@ -430,6 +430,32 @@ References:
 * [Key Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings)
 * [Hotkeys](https://retropie.org.uk/docs/Controller-Configuration/#hotkey)
 
+## Game Metadata
+
+Game metadata comes from a variety of sources.  When possible, retrokit pulls
+directly from those sources instead of caching and maintaining them in this
+codebase.  An overview of metadata and where it comes from is described below.
+
+| System     | Metadata      | Source                                       |
+| ---------- | ------------- | -------------------------------------------------- |
+| arcade     | Languages                | https://www.progettosnaps.net/                      |
+| arcade     | Categories               | https://www.progettosnaps.net/                            |
+| arcade     | Ratings                  | https://www.progettosnaps.net/                         |
+| c64        | "Best Of"                | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4                         |
+| pc         | DAT                      | exodos (cached in git)                         |
+| pc         | DOSBox Config            | exodos (cached in git) |
+| psp        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| psx        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| saturn     | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| nds        | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| pcengine   | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| segacd     | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| dreamcast  | Parent/Clone info        | https://github.com/unexpectedpanda/retool |
+| segacd     | DOSBox Config            | exodos (cached in git) |
+| dreamcast  | DOSBox Config            | exodos (cached in git) |
+| *             | lr-*          | Cheats menu in Retroarch GUI                       |
+
+
 ## Emulators
 
 The following emulators / cores are built from source:

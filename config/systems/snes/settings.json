@@ -49,6 +49,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/snes.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

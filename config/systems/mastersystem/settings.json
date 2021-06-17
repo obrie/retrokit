@@ -58,6 +58,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/mastersystem.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

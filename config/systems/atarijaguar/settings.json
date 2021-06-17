@@ -46,6 +46,11 @@
       "emulator": "lr-virtualjaguar"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/atarijaguar.json"
+    }
+  },
   "roms": {
     "emulators": {
       "url": "file://$HOME/retrokit/config/systems/atarijaguar/emulators.tsv",

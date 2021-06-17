@@ -43,6 +43,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/ngpc.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

@@ -31,6 +31,11 @@
       }
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/psp.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA"

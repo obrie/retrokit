@@ -46,6 +46,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/sega32x.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

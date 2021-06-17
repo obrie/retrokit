@@ -53,6 +53,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/coleco.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA"

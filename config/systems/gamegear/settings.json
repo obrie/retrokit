@@ -53,6 +53,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/gamegear.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

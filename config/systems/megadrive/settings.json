@@ -56,6 +56,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/megadrive.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

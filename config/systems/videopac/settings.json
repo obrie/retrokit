@@ -52,6 +52,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/videopac.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

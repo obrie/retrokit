@@ -60,6 +60,11 @@
       }
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/dreamcast.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

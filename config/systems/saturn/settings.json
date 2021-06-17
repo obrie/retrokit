@@ -59,6 +59,11 @@
       }
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/saturn.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

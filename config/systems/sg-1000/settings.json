@@ -43,6 +43,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/sg-1000.json"
+    }
+  },
   "roms": {
     "priority": [
       "English",

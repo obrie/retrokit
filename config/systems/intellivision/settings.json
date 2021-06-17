@@ -51,14 +51,16 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/intellivision.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",
       "World"
     ],
-    "genres": {
-      "path": "/$HOME/retrokit/cache/genres/intellivision.xml"
-    },
     "filters": {
       "flags": [
         "Europe",

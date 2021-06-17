@@ -54,6 +54,11 @@
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/gb.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",
