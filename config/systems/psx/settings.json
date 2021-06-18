@@ -58,17 +58,18 @@
           "download": "$HOME/RetroPie/roms/psx/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
-        },
-        "clones": {
-          "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sony%20-%20PlayStation.json",
-          "target": "$HOME/retrokit/tmp/psx/clones.json"
         }
       }
     }
   ],
   "metadata": {
-    "scraper": {
-      "source": "file://$HOME/retrokit/cache/scraper/psx.json"
+    "parent": {
+      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sony%20-%20PlayStation.json",
+      "target": "$HOME/retrokit/tmp/psx/clones.json"
+    },
+    "duckstation_data": {
+      "source": "https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json",
+      "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
   },
   "roms": {
@@ -129,7 +130,7 @@
         "PGA Tour",
         "Triple Play"
       ],
-      "!categories": [
+      "!genres": [
         null,
         "Adventure / Educational",
         "Board",

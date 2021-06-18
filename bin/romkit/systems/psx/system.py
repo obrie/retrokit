@@ -1,16 +1,14 @@
 from __future__ import annotations
 
-from romkit.filters import CategoryFilter as DefaultCategoryFilter
 from romkit.systems.base import BaseSystem
-from romkit.systems.psx.filters import LanguageFilter, CategoryFilter
+from romkit.systems.psx.metadata import DuckstationMetadata
 
 class PSXSystem(BaseSystem):
     name = 'psx'
 
-    supported_filters = (BaseSystem.supported_filters - set([DefaultCategoryFilter])) | set([
-        LanguageFilter,
-        CategoryFilter,
-    ])
+    supported_metadata = BaseSystem.supported_metadata + [
+        DuckstationMetadata,
+    ]
 
     # The end of the name range in each page
     PAGE_1_END = 'F'

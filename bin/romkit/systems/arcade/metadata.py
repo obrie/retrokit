@@ -1,0 +1,136 @@
+from __future__ import annotations
+
+from romkit.metadata.external import ExternalMetadata
+from romkit.metadata import EmulatorMetadata
+
+import configparser
+import csv
+import re
+import tempfile
+from pathlib import Path
+
+class ProgrettoSnapsMetadata(ExternalMetadata):
+    SCRAPE_URL = None
+    VERSION_PATTERN = None
+    default_context = {'version': ''}
+
+    @property
+    def context(self) -> dict:
+        return {'version': self._find_latest_version()}
+
+    # Looks for the pattern in the content of the given url
+    def _find_latest_version(self) -> str:
+        result = None
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            download_path = Path(tmpdir).joinpath('output.html')
+            self.downloader.get(self.SCRAPE_URL, download_path)
+
+            with download_path.open('r') as file:
+                for line in file:
+                    match = re.search(self.VERSION_PATTERN, line)
+                    if match:
+                        result = match.group(1)
+                        break
+        
+        return result             
+
+    def load(self) -> None:
+        self.values = {}
+
+        config = self._read_config()
+        for section in config.sections():
+            for name, value in config.items(section, raw=True):
+                self.values[name] = section
+
+    # Reads the INI configuration at the configured resource path
+    def _read_config(self) -> configparser.ConfigParser:
+        with self.install_path.open('r') as file:
+            config = configparser.ConfigParser(allow_no_value=True)
+            contents = file.read()
+            config.read_string(contents.encode('ascii', 'ignore').decode())
+            return config
+
+# Language metadata managed by progretto-SNAPS
+# 
+# Format: INI
+class LanguageMetadata(ProgrettoSnapsMetadata):
+    name = 'language'
+
+    SCRAPE_URL = 'https://www.progettosnaps.net/languages/'
+    VERSION_PATTERN = r'pS_Languages_([0-9]+).zip'
+
+    def update(self, machine: Machine) -> None:
+        language = self.values.get(machine.name)
+        if language:
+            machine.languages.add(language)
+
+
+# Genre metadata managed by progretto-SNAPS
+# 
+# Format: INI
+class GenreMetadata(ProgrettoSnapsMetadata):
+    name = 'genre'
+    default_context = {'version': ''}
+
+    SCRAPE_URL = 'https://www.progettosnaps.net/catver/'
+    VERSION_PATTERN = r'pS_CatVer_([0-9]+).zip'
+
+    def update(self, machine: Machine) -> None:
+        genre = self.values.get(machine.name)
+        if genre:
+            machine.genres.add(genre)
+
+
+# User rating metadata managed by progretto-SNAPS
+# 
+# Format: INI
+class RatingMetadata(ProgrettoSnapsMetadata):
+    name = 'rating'
+    default_context = {'version': ''}
+
+    SCRAPE_URL = 'https://www.progettosnaps.net/bestgames/'
+    VERSION_PATTERN = r'pS_BestGames_([0-9]+).zip'
+
+    def update(self, machine: Machine) -> None:
+        machine.rating = self.values.get(machine.name)
+
+
+# Compatibility layer for ensuring the appropriate emulator is used
+# 
+# Format: TSV (default)
+#  
+# Columns:
+# * 0 - ROM Name
+# * 2 - Emulator Name
+# * 5 - FPS quality
+# * 6 - Visual quality
+# * 7 - Audio quality
+# * 8 - Controls quality
+class ArcadeEmulatorMetadata(EmulatorMetadata):
+    name = 'emulator'
+
+    # TSV Columns
+    COLUMN_ROM = 0
+    COLUMN_EMULATOR = 2
+    COLUMN_FPS = 5
+    COLUMN_VISUALS = 6
+    COLUMN_AUDIO = 7
+    COLUMN_CONTROLS = 8
+    QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
+
+    def load(self) -> None:
+        self.emulators = self.config.get('overrides', {})
+
+        with self.install_path.open() as file:
+            rows = csv.reader(file, delimiter='\t')
+            for row in rows:
+                if len(row) <= self.COLUMN_CONTROLS:
+                    # Not a valid row in the compatibility list
+                    continue
+
+                rom = row[self.COLUMN_ROM]
+                emulator = row[self.COLUMN_EMULATOR]
+
+                if rom not in self.emulators and not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
+                    self.emulators[rom] = emulator

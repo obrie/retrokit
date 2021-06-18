@@ -1,26 +1,22 @@
 from __future__ import annotations
 
-from romkit.filters.base import SubstringFilter
-from romkit.util import Downloader
+from romkit.metadata.external import ExternalMetadata
 
 import csv
 import re
-import tempfile
 from pathlib import Path
 
-# Arcade-specific temp dir
-TMP_DIR = Path(f'{tempfile.gettempdir()}/c64')
-TMP_DIR.mkdir(parents=True, exist_ok=True)
-
-
-# Filter on the emulator known to be compatible with the machine
-class C64DreamsFilter(SubstringFilter):
+# C64 Dreams collection
+# 
+# Format: CSV
+# 
+# Columns:
+# * 2 - ROM Title
+# * 3 - Archive Type
+class C64DreamsMetadata(ExternalMetadata):
     name = 'c64_dreams'
 
-    # C64 Dreams list
-    URL = 'https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=csv'
-
-    # TSV Columns
+    # CSV Columns
     COLUMN_TITLE = 2
     COLUMN_TYPE = 3
 
@@ -33,16 +29,10 @@ class C64DreamsFilter(SubstringFilter):
     # game in the spreadsheet
     VALID_TYPES = {'crt', 'd64', 'd81', 'EF', 'g64', 't64'}
 
-    def download(self) -> None:
-        self.config_path = Path(f'{TMP_DIR}/dreams.csv')
-        if not self.config_path.exists():
-            Downloader.instance().get(self.URL, self.config_path)
+    def load(self) -> None:
+        self.titles = set()
 
-    def load(self):
-        # Ignore the list of values coming from the config
-        self.filter_values = set()
-
-        with open(self.config_path) as file:
+        with self.install_path.open() as file:
             rows = csv.reader(file)
             for row in rows:
                 # There are some extraneous rows, so we double check that there's enough
@@ -52,10 +42,11 @@ class C64DreamsFilter(SubstringFilter):
                     if archive_type in self.VALID_TYPES:
                         # Only select characters up to the parens
                         title = self.TITLE_MATCH_REGEX.search(row[self.COLUMN_TITLE]).group().strip()
-                        self.filter_values.add(self._clean_title(title))
+                        self.titles.add(self._clean_title(title))
 
-    def values(self, machine: Machine) -> set:
-        return {self._clean_title(machine.title)}
+    def update(self, machine: Machine) -> None:
+        if self._clean_title(machine.title) in self.titles:
+            machine.collections.add('C64 Dreams')
 
     # Builds a title that is consistent between the DAT and the C64 Dreams spreadsheet
     def _clean_title(self, title: str) -> str:

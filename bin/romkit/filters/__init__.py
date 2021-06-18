@@ -1,11 +1,36 @@
 from romkit.filters.base import BaseFilter, ExactFilter, SubstringFilter
 from romkit.filters.filter_set import FilterReason, FilterSet
-from romkit.filters.category import CategoryFilter
+
 from romkit.filters.control import ControlFilter
 from romkit.filters.description import FlagFilter, KeywordFilter
-from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter
+from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter, EmulatorRatingFilter
 from romkit.filters.favorite import FavoriteFilter
+from romkit.filters.language import LanguageFilter
 from romkit.filters.name import NameFilter, TitleFilter
 from romkit.filters.orientation import OrientationFilter
 from romkit.filters.parent import CloneFilter
+from romkit.filters.rating import RatingFilter
 from romkit.filters.romset import ROMSetFilter
+from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter
+
+# The order here helps in terms of performance, so we should order it based
+# on which filters are most likely to reject a game
+__all_filters__ = [
+    CloneFilter,
+    FlagFilter,
+    KeywordFilter,
+    ControlFilter,
+    NameFilter,
+    TitleFilter,
+    EmulatorFilter,
+    EmulatorCompatibilityFilter,
+    GenreFilter,
+    CategoryFilter,
+    CollectionFilter,
+    RatingFilter,
+    EmulatorRatingFilter,
+    LanguageFilter,
+    FavoriteFilter,
+    ROMSetFilter,
+    OrientationFilter,
+]

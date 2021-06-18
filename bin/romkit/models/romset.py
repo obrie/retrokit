@@ -2,11 +2,10 @@ from __future__ import annotations
 
 from romkit.auth import BaseAuth
 from romkit.discovery import BaseDiscovery
-from romkit.models import Machine
-from romkit.resources import ResourceTemplate
+from romkit.models.machine import Machine
+from romkit.resources.resource import ResourceTemplate
 from romkit.util import Downloader
 
-import json
 import logging
 import lxml.etree
 import tempfile
@@ -49,7 +48,6 @@ class ROMSet:
         self.datlist = datlist
 
         self.machines = {}
-        self.clone_parent_map = {}
         self.load()
 
     # Builds a ROMSet from the given JSON data
@@ -87,52 +85,10 @@ class ROMSet:
     def dat(self) -> Optional[Resource]:
         return self.resource('dat')
 
-    # Gets the Clones DAT file for this romset
-    @property
-    def clones_dat(self) -> Optional[Resource]:
-        return self.resource('clones')
-
-    def load_clones(self) -> None:
-        # Read in a custom group mapping from Retool
-        custom_groups = {}
-        with open(str(self.clones_dat.target_path.path)) as f:
-            data = json.loads(f.read())
-            for parent_name, clone_names in data['renames'].items():
-                parent_group = Machine.title_from(Machine, parent_name)
-
-                for (clone_name, other) in clone_names:
-                    custom_groups[Machine.title_from(Machine, clone_name)] = parent_group
-
-        # Find the clones
-        groups = {}
-        doc = lxml.etree.iterparse(str(self.dat.target_path.path), tag=('game'))
-        for event, element in doc:
-            name = element.get('name')
-            group = Machine.title_from(Machine, name)
-            if group in custom_groups:
-                group = custom_groups[group]
-
-            if group not in groups:
-                groups[group] = []
-
-            groups[group].append(name)
-            element.clear()
-
-        # Save the clones
-        for group_title, names in groups.items():
-            if len(names) > 1:
-                prioritized_names = sorted(names, key=names.index)
-                for name in prioritized_names[1:]:
-                    self.clone_parent_map[name] = prioritized_names[0]
-
     # Loads downloaded data into this romset
     def load(self) -> None:
         if self.dat:
             self.dat.install()
-
-        if self.clones_dat:
-            self.clones_dat.install()
-            self.load_clones()
 
     # Tracks the machine so that it can be referenced at a later point
     def track(self, machine: Machine) -> None:
@@ -158,11 +114,6 @@ class ROMSet:
                 if Machine.is_installable(element):
                     machine = Machine.from_xml(self, element)
                     machine.custom_context = self.system.context_for(machine)
-
-                    # Attempt to set the parent/clone relationship if possible
-                    if not machine.parent_name:
-                        machine.parent_name = self.clone_parent_map.get(machine.name)
-
                     yield machine, element
                 else:
                     logging.debug(f"[{element.get('name')}] Ignored (not installable)")

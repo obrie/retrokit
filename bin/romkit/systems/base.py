@@ -1,6 +1,10 @@
-from romkit.filters import BaseFilter, CategoryFilter, CloneFilter, ControlFilter, EmulatorFilter, EmulatorCompatibilityFilter, FavoriteFilter, FilterReason, FilterSet, FlagFilter, KeywordFilter, NameFilter, OrientationFilter, ROMSetFilter, TitleFilter
-from romkit.models import EmulatorSet, Machine, ROMSet
+from romkit.filters import __all_filters__, BaseFilter, FilterReason, FilterSet, TitleFilter
+from romkit.metadata import __all_metadata__, MetadataSet
+from romkit.models.machine import Machine
+from romkit.models.romset import ROMSet
 from romkit.systems.system_dir import SystemDir
+
+import romkit.filters
 
 import logging
 import os
@@ -18,26 +22,15 @@ class BaseSystem:
     name = 'base'
 
     # Filters that run based on an allowlist/blocklist provided at runtime
-    supported_filters = set([
-        CloneFilter,
-        KeywordFilter,
-        FlagFilter,
-        ControlFilter,
-        NameFilter,
-        OrientationFilter,
-        TitleFilter,
-        ROMSetFilter,
-        EmulatorFilter,
-        FavoriteFilter,
-        CategoryFilter,
-    ])
-
-    # Class to use for building emulator sets
-    emulator_set_class = EmulatorSet
+    supported_filters = __all_filters__
+    supported_metadata = __all_metadata__
 
     def __init__(self, config: dict, demo: bool = True) -> None:
         self.config = config
         self.name = config['system']
+
+        # External metadata to load for filtering purposes
+        self.metadata_set = MetadataSet.from_json(config.get('metadata', {}), self.supported_metadata)
 
         # Install directories
         file_templates = config['roms']['files']
@@ -53,12 +46,6 @@ class BaseSystem:
         # Priority order for choosing a machine (e.g. 1G1R)
         self.machine_priority = list(BaseFilter.normalize(config['roms'].get('priority', [])))
 
-        # Emulator compatibility
-        if 'emulators' in config['roms']:
-            self.emulator_set = self.emulator_set_class.from_json(self, config['roms']['emulators'])
-        else:
-            self.emulator_set = self.emulator_set_class(self)
-
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {'names': [None]}), config, self.supported_filters)
 
@@ -66,17 +53,9 @@ class BaseSystem:
             # Just the demo filter
             self.filter_set = FilterSet()
             self.filter_set.append(TitleFilter(config['roms']['filters']['demo'], config=config))
-
-            # Filters: emulators
-            if self.emulator_set.filter:
-                self.filter_set.append(EmulatorCompatibilityFilter(config=self.config))
         else:
             # Filters
             self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
-
-            # Filters: emulators
-            if self.emulator_set.filter:
-                self.filter_set.append(EmulatorCompatibilityFilter(config=self.config))
 
             # Filters: forced name filters
             auxiliary_filter_sets = list(map(lambda system_dir: system_dir.filter_set, self.dirs)) + [self.favorites_set]
@@ -119,11 +98,8 @@ class BaseSystem:
             machines_to_track = set()
 
             for (machine, xml) in romset.iter_machines():
-                # Set the emulator on the machine if we have it based on the
-                # emulator set (assuming the emulator isn't defined for the
-                # entire romset)
-                if not machine.emulator:
-                    machine.emulator = self.emulator_set.get(machine)
+                # Set external emulator metadata
+                self.metadata_set.update(machine)
 
                 # Set whether the machine is a favorite
                 machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW

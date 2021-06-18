@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.models import File
+from romkit.models.file import File
 from romkit.resources.actions import BaseAction, Copy
 from romkit.resources.resource_path import ResourcePath
 from romkit.util import Downloader
@@ -89,8 +89,8 @@ class Resource:
         self.target_path.clean(expected_files)
 
     # Creates a file that's expected to be seen in this resource
-    def build_file(self, name: str, crc: str) -> File:
-        return File(name, crc, self.file_identifier)
+    def build_file(self, name: str, size: int, crc: str) -> File:
+        return File(name, size, crc, self.file_identifier)
 
 class ResourceTemplate:
     def __init__(self,

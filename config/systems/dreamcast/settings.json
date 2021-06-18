@@ -52,17 +52,33 @@
           "download": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
           "install": {"action": "zip_to_chd"}
-        },
-        "clones": {
-          "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Dreamcast.json",
-          "target": "$HOME/retrokit/tmp/dreamcast/clones.json"
         }
       }
     }
   ],
   "metadata": {
+    "parent": {
+      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Dreamcast.json",
+      "target": "$HOME/retrokit/tmp/dreamcast/clones.json"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/dreamcast.json"
+    },
+    "emulator": {
+      "overrides": {
+        "Confidential Mission (USA)": "lr-flycast",
+        "Death Crimson 2 (Japan)": "lr-flycast",
+        "Death Crimson OX (Japan)": "lr-flycast",
+        "Death Crimson OX (USA)": "lr-flycast",
+        "Demolition Racer - No Exit (USA)": "lr-flycast",
+        "House of the Dead 2, The (Europe) (En,Fr,De,Es)": "lr-flycast",
+        "House of the Dead 2, The (Japan)": "lr-flycast",
+        "House of the Dead 2, The (USA)": "lr-flycast",
+        "Silent Scope (Europe) (En,Fr,De,Es,It)": "lr-flycast",
+        "Silent Scope (Japan)": "lr-flycast",
+        "Silent Scope (USA)": "lr-flycast",
+        "Virtua Cop 2 (Japan)": "lr-flycast"
+      }
     }
   },
   "roms": {
@@ -97,22 +113,6 @@
     "favorites": {
       "titles": [
       ]
-    },
-    "emulators": {
-      "overrides": {
-        "Confidential Mission (USA)": "lr-flycast",
-        "Death Crimson 2 (Japan)": "lr-flycast",
-        "Death Crimson OX (Japan)": "lr-flycast",
-        "Death Crimson OX (USA)": "lr-flycast",
-        "Demolition Racer - No Exit (USA)": "lr-flycast",
-        "House of the Dead 2, The (Europe) (En,Fr,De,Es)": "lr-flycast",
-        "House of the Dead 2, The (Japan)": "lr-flycast",
-        "House of the Dead 2, The (USA)": "lr-flycast",
-        "Silent Scope (Europe) (En,Fr,De,Es,It)": "lr-flycast",
-        "Silent Scope (Japan)": "lr-flycast",
-        "Silent Scope (USA)": "lr-flycast",
-        "Virtua Cop 2 (Japan)": "lr-flycast"
-      }
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/dreamcast"}

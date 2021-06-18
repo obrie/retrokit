@@ -230,16 +230,48 @@
       "emulator": "advmame"
     }
   ],
+  "metadata": {
+    "language": {
+      "source": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_{version}.zip",
+      "download": "$HOME/retrokit/tmp/arcade/languages.zip",
+      "target": "$HOME/retrokit/tmp/arcade/languages.ini",
+      "install": {"action": "zip_extract", "file": "folders/languages\\.ini"}
+    },
+    "genre": {
+      "source": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_{version}.zip",
+      "download": "$HOME/retrokit/tmp/arcade/catver.zip",
+      "target": "$HOME/retrokit/tmp/arcade/catver.ini",
+      "install": {"action": "zip_extract", "file": "UI_files/catlist\\.ini"}
+    },
+    "rating": {
+      "source": "https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_{version}.zip",
+      "download": "$HOME/retrokit/tmp/arcade/bestgames.zip",
+      "target": "$HOME/retrokit/tmp/arcade/bestgames.ini",
+      "install": {"action": "zip_extract", "file": "folders/bestgames\\.ini"}
+    },
+    "emulator": {
+      "source": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
+      "target": "$HOME/retrokit/tmp/arcade/emulators.tsv",
+      "overrides": {
+        "area51": "lr-mame2016",
+        "area51mx": "lr-mame2016",
+        "cryptklr": "lr-mame2010",
+        "jdredd": "lr-mame2010",
+        "maxforce": "lr-mame2016"
+      }
+    }
+  },
   "roms": {
     "priority": [
       "USA"
     ],
     "filters": {
+      "emulator_compatibility": [true],
+      "clones": [false],
       "languages": [
         "English"
       ],
-      "clones": [false],
-      "!categories": [
+      "!genres": [
         "Board Game",
         "Casino",
         "Golf",
@@ -349,17 +381,6 @@
         "xmen",
         "xmvsf"
       ]
-    },
-    "emulators": {
-      "url": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
-      "overrides": {
-        "area51": "lr-mame2016",
-        "area51mx": "lr-mame2016",
-        "cryptklr": "lr-mame2010",
-        "jdredd": "lr-mame2010",
-        "maxforce": "lr-mame2016"
-      },
-      "filter": true
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/arcade/-ALL-"},

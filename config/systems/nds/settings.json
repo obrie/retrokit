@@ -30,15 +30,20 @@
         "machine": {
           "source": "{url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip"
-        },
-        "clones": {
-          "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Nintendo%20-%20Nintendo%20DS.json",
-          "target": "$HOME/retrokit/tmp/nds/clones.json"
         }
       },
       "auth": "internetarchive"
     }
   ],
+  "metadata": {
+    "parent": {
+      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Nintendo%20-%20Nintendo%20DS.json",
+      "target": "$HOME/retrokit/tmp/nds/clones.json"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/nds.json"
+    }
+  },
   "roms": {
     "priority": [
       "USA",

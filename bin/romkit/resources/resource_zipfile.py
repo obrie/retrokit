@@ -1,5 +1,5 @@
-from romkit.models import File
-from romkit.resources import ResourcePath
+from romkit.models.file import File
+from romkit.resources.resource_path import ResourcePath
 
 import contextlib
 import logging
@@ -22,8 +22,9 @@ class ResourceZipFile(ResourcePath):
                 with zipfile.ZipFile(self.path, 'r') as zip_ref:
                     for zip_info in zip_ref.infolist():
                         name = zip_info.filename
+                        size = zip_info.compress_size
                         crc = "%0.8X" % zip_info.CRC
-                        files.add(self.build_file(name, crc))
+                        files.add(self.build_file(name, size, crc))
             except zipfile.BadZipFile:
                 # Ignore
                 pass

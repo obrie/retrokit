@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from romkit.filters.filter_set import FilterReason
-from romkit.models import Disk, File, Sample
+from romkit.models.disk import Disk
+from romkit.models.file import File
+from romkit.models.sample import Sample
 
 import logging
 import re
@@ -23,12 +25,19 @@ class Machine:
         parent_name: Optional[str] = None,
         bios_name: Optional[str] = None,
         sample_name: Optional[str] = None,
-        device_names: Set[str] = set(),
-        controls: Set[str] = set(),
-        roms: Set[File] = set(),
-        disks: Set[Disk] = set(),
+        device_names: Set[str] = None,
+        controls: Set[str] = None,
+        roms: Set[File] = None,
+        disks: Set[Disk] = None,
         sourcefile: Optional[str] = None,
-        custom_context: dict = {},
+        custom_context: dict = None,
+
+        # External metadata
+        genres: Set[str] = None,
+        collections: Set[str] = None,
+        languages: Set[str] = None,
+        rating: Optional[int] = None,
+        emulator_rating: Optional[int] = None,
     ) -> None:
         self.romset = romset
         self.name = name
@@ -38,14 +47,21 @@ class Machine:
         self.parent_name = parent_name
         self.bios_name = bios_name
         self.sample_name = sample_name
-        self.device_names = device_names
-        self.controls = controls
-        self.disks = disks
-        self.roms = roms
+        self.device_names = device_names or set()
+        self.controls = controls or set()
+        self.disks = disks or set()
+        self.roms = roms or set()
         self.sourcefile = sourcefile
         self.emulator = romset.emulator
         self.favorite = False
-        self.custom_context = {}
+        self.custom_context = custom_context or {}
+
+        # External attributes
+        self.genres = genres or set()
+        self.collections = collections or set()
+        self.languages = languages or set()
+        self.rating = rating
+        self.emulator_rating = emulator_rating
 
     # Whether this machine is installable
     @staticmethod
@@ -277,11 +293,19 @@ class Machine:
             'romset': self.romset.name,
             'name': self.name,
             'filesize': self.filesize,
+            'category': self.category,
             'description': self.description,
             'parent': self.parent_name,
             'emulator': self.emulator,
             'orientation': self.orientation,
             'favorite': self.favorite,
+
+            # External metadata
+            'genres': list(self.genres),
+            'collections': list(self.collections),
+            'languages': list(self.languages),
+            'rating': self.rating,
+            'emulator_rating': self.emulator_rating,
         }
 
     # Determines whether the locally installed set of ROMs is equal to the full set of

@@ -1,13 +1,12 @@
-from romkit.filters import CategoryFilter as DefaultCategoryFilter
 from romkit.systems import BaseSystem
-from romkit.systems.arcade.emulator_set import ArcadeEmulatorSet
-from romkit.systems.arcade.filters import LanguageFilter, CategoryFilter, RatingFilter
+from romkit.metadata import EmulatorMetadata
+from romkit.systems.arcade.metadata import ArcadeEmulatorMetadata, GenreMetadata, LanguageMetadata, RatingMetadata
 
 class ArcadeSystem(BaseSystem):
     name = 'arcade'
-    supported_filters = (BaseSystem.supported_filters - set([DefaultCategoryFilter])) | set([
-        LanguageFilter,
-        CategoryFilter,
-        RatingFilter,
-    ])
-    emulator_set_class = ArcadeEmulatorSet
+    supported_metadata = [cls for cls in BaseSystem.supported_metadata if cls != EmulatorMetadata] + [
+      ArcadeEmulatorMetadata,
+      GenreMetadata,
+      LanguageMetadata,
+      RatingMetadata,
+    ]

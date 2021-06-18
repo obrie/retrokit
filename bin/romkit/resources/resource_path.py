@@ -28,8 +28,8 @@ class ResourcePath:
         self.path = path
 
     # Builds a file reference
-    def build_file(self, name: str, crc: str) -> File:
-        return self.resource.build_file(name, crc)
+    def build_file(self, name: str, size: int, crc: str) -> File:
+        return self.resource.build_file(name, size, crc)
 
     # Lists files installed in this path
     def contains(self, files: Set[File]) -> bool:

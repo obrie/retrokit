@@ -4,9 +4,9 @@ from romkit.filters.base import ExactFilter
 
 from typing import Set
 
-# Filter on the input controls
-class ControlFilter(ExactFilter):
-    name = 'controls'
+# Filter on languages
+class LanguageFilter(ExactFilter):
+    name = 'languages'
 
     def values(self, machine: Machine) -> Set[str]:
-        return machine.controls
+        return machine.languages

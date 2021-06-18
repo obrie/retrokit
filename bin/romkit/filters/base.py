@@ -6,6 +6,8 @@ import logging
 class BaseFilter:
     name = None
     apply_to_overrides = False
+    normalize_values = True
+    empty = set()
 
     def __init__(self,
         filter_values: set = set(),
@@ -54,16 +56,22 @@ class BaseFilter:
 
     # Normalizes values so that lowercase/uppercase differences are
     # ignored during the matching process
-    @staticmethod
-    def normalize(values):
-        return map(lambda value: value and value.lower(), values)
+    @classmethod
+    def normalize(cls, values):
+        if cls.normalize_values:
+            return map(lambda value: value and value.lower(), values)
+        else:
+            return values
 
 
 # Filter values must match exact values from the machine
 class ExactFilter(BaseFilter):
     def match(self, machine: Machine) -> bool:
         machine_values = set(self.normalize(self.values(machine)))
-        return len(self.filter_values & machine_values) > 0
+        if not machine_values and None in self.filter_values:
+            return True
+        else:
+            return len(self.filter_values & machine_values) > 0
 
 
 # Filter values can be just a substring of values from the machine.
@@ -71,13 +79,12 @@ class ExactFilter(BaseFilter):
 # This is not case-sensitive.
 class SubstringFilter(BaseFilter):
     def match(self, machine: Machine) -> bool:
-        machine_values = self.normalize(self.values(machine))
+        machine_values = set(self.normalize(self.values(machine)))
+        if not machine_values and None in self.filter_values:
+            return True
+
         for machine_value in machine_values:
-            if any(
-                machine_value == filter_value if machine_value is None or filter_value is None
-                else filter_value in machine_value
-                for filter_value in self.filter_values
-            ):
+            if any(filter_value and machine_value and filter_value in machine_value for filter_value in self.filter_values):
                 return True
 
         return False

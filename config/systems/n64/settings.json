@@ -52,20 +52,20 @@
     }
   ],
   "metadata": {
+    "emulator": {
+      "source": "file://$HOME/retrokit/config/systems/n64/emulators.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/n64.json"
     }
   },
   "roms": {
-    "emulators": {
-      "url": "file://$HOME/retrokit/config/systems/n64/emulators.tsv",
-      "filter": true
-    },
     "priority": [
       "USA",
       "World"
     ],
     "filters": {
+      "emulator_compatibility": [true],
       "flags": [
         "Europe",
         "USA",
