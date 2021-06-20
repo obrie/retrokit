@@ -9,4 +9,7 @@ class OrientationFilter(ExactFilter):
     name = 'orientations'
 
     def values(self, machine: Machine) -> Set[str]:
-        return machine.orientation and {machine.orientation} or self.empty
+        if machine.orientation:
+            return {machine.orientation}
+        else:
+            return self.empty

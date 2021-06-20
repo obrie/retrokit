@@ -43,7 +43,7 @@ class EmulatorMetadata(ExternalMetadata):
 
     def update(self, machine: Machine) -> None:
         if not hasattr(self, 'key'):
-            self.key = self.config.get('key', 'name')
+            self.key = self.config.get('key', 'title')
 
         machine_key = getattr(machine, self.key)
         parent_key = getattr(machine, f'parent_{self.key}')

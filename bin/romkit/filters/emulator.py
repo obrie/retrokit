@@ -21,8 +21,6 @@ class EmulatorCompatibilityFilter(ExactFilter):
     def values(self, machine: Machine) -> Set[bool]:
         return {machine.emulator is not None and ((not machine.romset.emulator) or (machine.emulator == machine.romset.emulator))}
 
-from romkit.filters.base import ExactFilter
-
 # Filter on rating of the compatibility of the game with the emulator
 class EmulatorRatingFilter(ExactFilter):
     name = 'emulator_ratings'

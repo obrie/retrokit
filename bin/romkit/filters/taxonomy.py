@@ -9,7 +9,10 @@ class CategoryFilter(SubstringFilter):
     name = 'categories'
 
     def values(self, machine: Machine) -> Set[str]:
-        return machine.category and {machine.category} or self.empty
+        if machine.category:
+            return {machine.category}
+        else:
+            return self.empty
 
 # Filter on genres
 class GenreFilter(SubstringFilter):

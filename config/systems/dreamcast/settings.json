@@ -69,18 +69,13 @@
     },
     "emulator": {
       "overrides": {
-        "Confidential Mission (USA)": "lr-flycast",
-        "Death Crimson 2 (Japan)": "lr-flycast",
-        "Death Crimson OX (Japan)": "lr-flycast",
-        "Death Crimson OX (USA)": "lr-flycast",
-        "Demolition Racer - No Exit (USA)": "lr-flycast",
-        "House of the Dead 2, The (Europe) (En,Fr,De,Es)": "lr-flycast",
-        "House of the Dead 2, The (Japan)": "lr-flycast",
-        "House of the Dead 2, The (USA)": "lr-flycast",
-        "Silent Scope (Europe) (En,Fr,De,Es,It)": "lr-flycast",
-        "Silent Scope (Japan)": "lr-flycast",
-        "Silent Scope (USA)": "lr-flycast",
-        "Virtua Cop 2 (Japan)": "lr-flycast"
+        "Confidential Mission": "lr-flycast",
+        "Death Crimson 2": "lr-flycast",
+        "Death Crimson OX": "lr-flycast",
+        "Demolition Racer - No Exit": "lr-flycast",
+        "House of the Dead 2, The": "lr-flycast",
+        "Silent Scope": "lr-flycast",
+        "Virtua Cop": "lr-flycast"
       }
     }
   },
