@@ -62,13 +62,19 @@
       "!flags": [
         "Proto"
       ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Educational",
+        "Playing cards",
+        "Puzzle-Game"
+      ],
       "!keywords": [
-        "BIOS",
-        "Casino"
+        "BIOS"
       ],
       "!titles": [
         "# Board Games",
-        "Pocket Reversi",
         "Shanghai Mini",
         "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
         "SNK vs. Capcom - Card Fighters' Clash - SNK Version"
@@ -82,7 +88,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/ngpc"}
+      {"path": "$HOME/RetroPie/roms/ngpc", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

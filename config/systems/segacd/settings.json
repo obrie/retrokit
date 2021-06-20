@@ -22,6 +22,9 @@
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
+  "playlists": {
+    "enabled": true
+  },
   "cheats": {
     "name": "Sega - Mega-CD - Sega CD"
   },
@@ -81,20 +84,19 @@
         "Proto",
         "Unl"
       ],
-      "!keywords": [
-        "Sampler"
-      ],
       "categories": [
         "Games"
       ],
-      "!titles": [
-        "# Collections",
-        "Sega Classics Arcade Collection",
-        "Sega Classics Arcade Collection - Limited Edition",
-        "# Board Games",
-        "Software Toolworks' Star Wars Chess, The",
-        "# Trivia",
-        "NFL Football Trivia Challenge"
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
+      "+titles": [
+        "Mary Shelley's Frankenstein",
+        "Wheel of Fortune"
       ],
       "demo": [
         "WWF - Rage in the Cage"
@@ -105,7 +107,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/segacd"}
+      {"path": "$HOME/RetroPie/roms/segacd", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

@@ -76,27 +76,19 @@
       "!keywords": [
         "BIOS"
       ],
+      "!genres": [
+        null,
+        "Educational",
+        "Playing cards"
+      ],
       "!titles": [
-        "# Gambling",
-        "Casino Slot Machine",
-        "Las Vegas Blackjack",
         "# Board Games",
         "4 in 1 Row",
         "Chess",
-        "# Educational",
         "Chinese Logic",
-        "Computer Intro",
-        "Computer Programmer",
-        "I've Got Your Number",
-        "Keyboard Creations",
+        "# Compilation",
         "Matchmaker + Logix + Buzzword",
-        "Math-A-Magic + Echo",
-        "Morse",
-        "Musician",
-        "Newscaster",
-        "Nimble Numbers Ned",
-        "Sid the Spellbinder",
-        "Type & Tell"
+        "Math-A-Magic + Echo"
       ],
       "demo": [
         "Popeye"
@@ -106,15 +98,11 @@
       "titles": [
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/videopac", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/videopac/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/videopac",
-        "filters": {"favorites": [true]}
-      }
-    ]
+    }
   }
 }

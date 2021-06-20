@@ -73,48 +73,28 @@
         "Collection",
         "Demo",
         "Kiosk",
+        "Namco Museum",
         "Proto",
         "Sample",
         "Test",
         "Unl",
         "Virtual Console"
       ],
-      "!keywords": [
-        "Anniversary",
-        "Cartridge",
-        "Collector",
-        "Gamecube",
-        "Game Genie",
-        "Namco Museum",
-        "Super Mario Bros. +",
-        "Teenage Mutant Hero"
+      "!genres": [
+        null,
+        "Adult",
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational",
+        "Playing cards"
+      ],
+      "+titles": [
+        "Jeopardy!",
+        "Karateka"
       ],
       "!titles": [
-        "# Board Games",
-        "Anticipation",
-        "Chessmaster, The",
-        "Punch-Out!!",
-        "# Casino",
-        "Caesars Palace",
-        "Casino Kid II",
-        "Vegas Dream",
-        "# Educational",
-        "Color a Dinosaur",
-        "Donkey Kong Jr. Math",
-        "Fisher-Price - I Can Remember",
-        "Mickey's Adventure in Numberland",
-        "Mickey's Safari in Letterland",
-        "Miracle Piano Teaching System, The",
-        "Sesame Street",
-        "Tiny Toon Adventures Cartoon Workshop",
-        "Videomation"
-      ],
-      "!names": [
-        "# Not available",
-        "Alex DeMeo's Race America (USA)"
-      ],
-      "+names": [
-        "Karateka (Japan)"
+        "Punch-Out!!"
       ],
       "demo": [
         "Bubble Bobble"
@@ -125,7 +105,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/nes"}
+      {"path": "$HOME/RetroPie/roms/nes", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

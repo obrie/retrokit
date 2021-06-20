@@ -61,9 +61,21 @@
         "Kiosk",
         "Proto"
       ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational",
+        "Visual Novel",
+        "Playing cards"
+      ],
       "!keywords": [
         "BIOS",
         "Collection"
+      ],
+      "+titles": [
+        "Mario Party DS"
       ],
       "demo": [
         "Contra 4"
@@ -74,7 +86,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/nds"}
+      {"path": "$HOME/RetroPie/roms/nds", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

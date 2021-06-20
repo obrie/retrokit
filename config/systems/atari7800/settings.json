@@ -70,16 +70,15 @@
         "USA"
       ],
       "!flags": [
-        "proto",
-        "unl"
+        "Proto",
+        "Unl"
       ],
       "!keywords": [
-        "bios"
+        "BIOS"
       ],
-      "!titles": [
-        "32 in 1",
-        "Atari 7800 Development Card",
-        "Diagnostic Test Cartrige"
+      "!genres": [
+        null,
+        "Educational"
       ],
       "demo": [
         "Ms. Pac-Man"
@@ -87,24 +86,13 @@
     },
     "favorites": {
       "titles": [
-        "Asteroids",
-        "Donkey Kong",
-        "Donkey Kong Junior",
-        "Double Dragon",
-        "Karateka",
-        "Mario Bros.",
-        "Ms. Pac-Man",
-        "Pole Position II",
-        "Rampage",
-        "Summer Games",
-        "Winter Games"
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atari7800", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/atari7800"}
-    ]
+    }
   }
 }

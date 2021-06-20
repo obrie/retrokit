@@ -22,6 +22,9 @@
   "emulators": {
     "lr-opera": {"core_name": "opera", "library_name": "Opera", "default": true}
   },
+  "playlists": {
+    "enabled": false
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/3DO%20Company%2C%20The%20-%203DO",
     "dir": "$HOME/RetroPie/BIOS",
@@ -71,20 +74,18 @@
         "World"
       ],
       "!flags": [
-        "demo",
-        "unl"
-      ],
-      "!keywords": [
-        "almanac",
-        "game guru",
-        "sampler"
+        "Demo",
+        "Unl"
       ],
       "categories": [
         "Games"
       ],
-      "!titles": [
-        "Battle Chess",
-        "Cowboy Casino"
+      "!genres": [
+        "Adult",
+        "Board game",
+        "Casino",
+        "Educational",
+        "Playing cards"
       ],
       "demo": [
         "Road Rash"
@@ -95,7 +96,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/3do"}
+      {"path": "$HOME/RetroPie/roms/3do", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

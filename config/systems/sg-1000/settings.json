@@ -51,31 +51,28 @@
   "roms": {
     "priority": [
       "English",
-      "Europe",
-      "Australia"
+      "Europe"
     ],
     "filters": {
       "flags": [
         "Australia",
         "English",
-        "Europe",
-        "New Zealand"
+        "Europe"
       ],
       "!flags": [
         "Beta",
         "Proto",
         "Unl"
       ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
       "!keywords": [
         "BIOS"
-      ],
-      "!titles": [
-        "# Collections",
-        "Complete Arcade Pack Collection, The",
-        "Sega Flipper ~ Video Flipper",
-        "# Educational",
-        "BASIC Level III",
-        "Music"
       ],
       "demo": [
         "Sega-Galaga"
@@ -85,11 +82,11 @@
       "titles": [
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/sg-1000", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/sg-1000"}
-    ]
+    }
   }
 }

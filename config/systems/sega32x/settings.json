@@ -69,6 +69,9 @@
         "Proto",
         "SDK Build"
       ],
+      "!genres": [
+        null
+      ],
       "!keywords": [
         "BIOS"
       ],
@@ -80,11 +83,11 @@
       "titles": [
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/sega32x", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/sega32x"}
-    ]
+    }
   }
 }

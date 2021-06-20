@@ -17,15 +17,13 @@
     }
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"],
-    "args": [
-      "--excludefiles",
-      "*Disc 2*,*Disc 3*,*Disc 4*,*Disc 5*"
-    ]
+    "sources": ["screenscraper", "thegamesdb"]
   },
   "emulators": {
-    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true},
-    "lr-pcsx-rearmed": {"core_name": "pcsx_rearmed", "library_name": "PCSX-ReARMed"}
+    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
+  },
+  "playlists": {
+    "enabled": true
   },
   "cheats": {
     "name": "Sony - PlayStation"
@@ -228,7 +226,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/psx"}
+      {"path": "$HOME/RetroPie/roms/psx", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

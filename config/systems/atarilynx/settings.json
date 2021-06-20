@@ -68,15 +68,16 @@
         "USA"
       ],
       "!flags": [
-        "beta",
-        "proto",
-        "unl"
+        "Beta",
+        "Proto",
+        "Unl"
       ],
       "!keywords": [
-        "bios"
+        "BIOS"
       ],
-      "!titles": [
-        "Lynx II Production Test Program"
+      "!genres": [
+        null,
+        "Board game"
       ],
       "demo": [
         "Paperboy"
@@ -84,32 +85,13 @@
     },
     "favorites": {
       "titles": [
-        "Batman Returns",
-        "Battle Wheels",
-        "Blue Lightning",
-        "California Games",
-        "Checkered Flag",
-        "Lemmings",
-        "Ms. Pac-Man",
-        "Ninja Gaiden",
-        "Pac-Land",
-        "Paperboy",
-        "Rampage",
-        "Scrapyard Dog",
-        "S.T.U.N. Runner",
-        "Super Asteroids, Missile Command",
-        "Xenophobe"
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atarilynx", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/atarilynx/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/atarilynx",
-        "filters": {"favorites": [true]}
-      }
-    ]
+    }
   }
 }

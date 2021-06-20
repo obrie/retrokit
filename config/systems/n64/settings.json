@@ -80,10 +80,17 @@
         "Unl",
         "Virtual Console"
       ],
-      "!titles": [
-        "# Collections",
-        "Midway's Greatest Arcade Hits - Volume 1",
-        "Namco Museum"
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
+      "+titles": [
+        "Mario Party",
+        "Mario Party 2",
+        "Mario Party 3"
       ],
       "demo": [
         "1080 Snowboarding",
@@ -99,7 +106,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/n64"}
+      {"path": "$HOME/RetroPie/roms/n64", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

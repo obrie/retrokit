@@ -62,19 +62,18 @@
         "USA"
       ],
       "!flags": [
-        "beta",
-        "pirate",
-        "proto",
-        "unl"
+        "Beta",
+        "Pirate",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Educational"
       ],
       "!titles": [
         "32 in 1 Game Cartridge",
-        "4 Game in One",
-        "BASIC Programming",
-        "Color Bar Generator",
-        "Frog Demo",
-        "MagiCard",
-        "Morse Code Tutor"
+        "BASIC Programming"
       ],
       "demo": [
         "Double Dragon"
@@ -82,40 +81,13 @@
     },
     "favorites": {
       "titles": [
-        "Asteroids",
-        "Breakout",
-        "BurgerTime",
-        "California Games",
-        "Centipede",
-        "Donkey Kong",
-        "Double Dragon",
-        "Frogger",
-        "Ghostbusters",
-        "Jungle Hunt",
-        "Mario Bros.",
-        "Missile Command",
-        "Ms. Pac-Man",
-        "Pac-Man",
-        "Pitfall II - Lost Caverns",
-        "Pitfall! - Pitfall Harry's Jungle Adventure",
-        "Pole Position",
-        "Popeye",
-        "Space Invaders",
-        "Summer Games",
-        "Super Breakout",
-        "Winter Games",
-        "Zaxxon"
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atari2600", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/atari2600/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/atari2600",
-        "filters": {"favorites": [true]}
-      }
-    ]
+    }
   }
 }

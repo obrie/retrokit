@@ -62,29 +62,29 @@
       "!flags": [
         "Beta",
         "Proto",
-        "Sample",
-        "Unl"
+        "Sample"
+      ],
+      "!genres": [
+        "Educational"
       ],
       "!keywords": [
         "3D",
         "BIOS",
         "Stress Tester"
       ],
-      "!titles": [
-        "# Educational",
-        "AnimAction - Advanced Animation",
-        "Art Master",
-        "Melody Master - Music Composition and Entertainment"
-      ],
       "demo": [
         "Clean Sweep"
       ]
     },
-    "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+    "favorites": {
+      "titles": [
+      ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/vectrex"}
-    ]
+      {"path": "$HOME/RetroPie/roms/vectrex", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
   }
 }

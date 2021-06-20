@@ -304,35 +304,21 @@
         "30 to 40 (Amendable)"
       ],
       "!flags": [
-        "hack",
-        "demo"
+        "Hack",
+        "Demo"
       ],
       "!keywords": [
-        "anniversary",
-        "bootleg",
-        "broken",
-        "cassette",
-        "colors",
-        "colours",
-        "development",
-        "encrypted",
-        "floppy",
-        "homebrew",
-        "imperfect",
-        "incomplete",
-        "no sound",
-        "protected",
-        "prototype",
-        "terrible",
-        "undumped",
-        "unemulated",
-        "pcb"
+        "Anniversary",
+        "Bootleg",
+        "DECO Cassette",
+        "Homebrew",
+        "Prototype"
       ],
       "!controls": [
-        "gambling",
-        "hanafuda",
-        "mahjong",
-        "trackball"
+        "Gambling",
+        "Hanafuda",
+        "Mahjong",
+        "Trackball"
       ],
       "!names": [
         "bjtwin",
@@ -350,44 +336,10 @@
     },
     "favorites": {
       "names": [
-        "area51",
-        "area51mx",
-        "arkanoid",
-        "avsp",
-        "bublbobl",
-        "contra",
-        "dkong",
-        "duckhunt",
-        "mario",
-        "mk",
-        "mk2",
-        "mk3",
-        "mspacman",
-        "nbajam",
-        "pacman",
-        "paperboy",
-        "punchout",
-        "outrun",
-        "rampage",
-        "sf",
-        "sf2",
-        "sf2ce",
-        "simpsons",
-        "suprmrio",
-        "tmnt",
-        "tmnt2",
-        "tron",
-        "xmcota",
-        "xmen",
-        "xmvsf"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/arcade/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/arcade",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/arcade", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"},

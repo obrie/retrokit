@@ -68,35 +68,24 @@
         "World"
       ],
       "!flags": [
-        "beta",
-        "proto"
+        "Beta",
+        "Proto"
       ],
-      "!keywords": [
-        "BIOS",
-        "Demonstration Cartridge",
-        "Electric Company, The",
-        "Test Cartridge"
+      "!genres": [
+        null,
+        "Casino",
+        "Demo",
+        "Educational"
       ],
       "!titles": [
         "# Board Games",
         "ABPA Backgammon ~ Backgammon",
         "Checkers ~ Draughts",
-        "Crosswords",
         "Triple Challenge - Chess, Checkers, Backgammon",
         "USCF Chess ~ Chess",
         "# Casino",
         "Las Vegas Poker & Blackjack",
-        "Las Vegas Roulette",
-        "# Education",
-        "Factor Fun",
-        "Jetsons' Ways With Words, The",
-        "Learning Fun I - Math Master, Factor Fun",
-        "Learning Fun II - Word Wizard, Memory Fun",
-        "Math Master",
-        "Memory Fun",
-        "Royal Dealer",
-        "Word Hunt",
-        "Word Rockets"
+        "Las Vegas Roulette"
       ],
       "demo": [
         "Donkey Kong Junior"
@@ -106,11 +95,11 @@
       "titles": [
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/intellivision", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/intellivision"}
-    ]
+    }
   }
 }

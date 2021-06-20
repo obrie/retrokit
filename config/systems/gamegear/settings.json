@@ -70,22 +70,19 @@
         "World"
       ],
       "!flags": [
-        "alt",
-        "beta",
-        "program",
-        "proto",
-        "unl"
+        "Alt",
+        "Beta",
+        "Test Program",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        "Board game",
+        "Casino",
+        "Compilation"
       ],
       "!keywords": [
-        "arcade classics",
-        "bios",
-        "poker face paul"
-      ],
-      "!titles": [
-        "5 in One FunPak",
-        "Casino FunPak",
-        "Solitaire FunPak",
-        "Solitaire Poker"
+        "BIOS"
       ],
       "demo": [
         "Sonic The Hedgehog"
@@ -93,37 +90,10 @@
     },
     "favorites": {
       "titles": [
-        "Aladdin",
-        "Ariel the Little Mermaid",
-        "Bubble Bobble",
-        "Captain America and the Avengers",
-        "Double Dragon",
-        "Earthworm Jim",
-        "Indiana Jones and the Last Crusade",
-        "Judge Dredd",
-        "Jurassic Park",
-        "Lion King, The",
-        "Marble Madness",
-        "Mega Man",
-        "Micro Machines",
-        "Ms. Pac-Man",
-        "NBA Jam",
-        "Pac-Man",
-        "Pinball Dreams",
-        "R.C. Grand Prix",
-        "Simpsons, The - Bartman Meets Radioactive Man",
-        "Simpsons, The - Bart vs. the Space Mutants",
-        "Sonic The Hedgehog",
-        "Sonic The Hedgehog 2",
-        "Terminator, The"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/gamegear/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/gamegear",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/gamegear", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

@@ -1,1 +1,573 @@
-{}
+{
+    "A.P.B.": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.65"
+    },
+    "Alien vs Predator": {
+        "genres": [
+            "Shooter",
+            "Shooter / 1st person",
+            "Action"
+        ],
+        "rating": null
+    },
+    "Awesome Golf": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.8"
+    },
+    "Baseball Heroes": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.5"
+    },
+    "Basketbrawl": {
+        "genres": [
+            "Sports",
+            "Beat'em Up"
+        ],
+        "rating": "0.5"
+    },
+    "Batman Returns": {
+        "genres": [
+            "Beat'em Up",
+            "Action"
+        ],
+        "rating": "0.55"
+    },
+    "Battle Wheels": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.5"
+    },
+    "Battlezone 2000": {
+        "genres": [
+            "Shooter",
+            "Action"
+        ],
+        "rating": "0.6"
+    },
+    "Bill & Ted's Excellent Adventure": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.5"
+    },
+    "Block Out": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.8"
+    },
+    "Blue Lightning": {
+        "genres": [
+            "Simulation"
+        ],
+        "rating": "0.8"
+    },
+    "Bubble Trouble": {
+        "genres": [
+            "Shooter",
+            "Action"
+        ],
+        "rating": "0.75"
+    },
+    "California Games": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.75"
+    },
+    "Centipede": {
+        "genres": [
+            "Lightgun Shooter"
+        ],
+        "rating": null
+    },
+    "Checkered Flag": {
+        "genres": [
+            "Sports",
+            "Race",
+            "Driving"
+        ],
+        "rating": "1"
+    },
+    "Chip's Challenge": {
+        "genres": [
+            "Strategy",
+            "Puzzle-Game"
+        ],
+        "rating": "0.7"
+    },
+    "Crystal Mines II": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.85"
+    },
+    "Daemonsgate": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": null
+    },
+    "Desert Strike - Return to the Gulf": {
+        "genres": [
+            "Shooter",
+            "Shoot'em Up",
+            "Action"
+        ],
+        "rating": "0.8"
+    },
+    "Dinolympics": {
+        "genres": [
+            "Strategy",
+            "Puzzle-Game"
+        ],
+        "rating": "0.65"
+    },
+    "Dirty Larry - Renegade Cop": {
+        "genres": [
+            "Beat'em Up",
+            "Action"
+        ],
+        "rating": "0.5"
+    },
+    "Double Dragon": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.65"
+    },
+    "Dracula the Undead": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.95"
+    },
+    "Electrocop": {
+        "genres": [
+            "Adventure",
+            "Puzzle-Game"
+        ],
+        "rating": "0.4"
+    },
+    "European Soccer Challenge": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.7"
+    },
+    "Eye of the Beholder": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.45"
+    },
+    "Fat Bobby": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.5"
+    },
+    "Fidelity Ultimate Chess Challenge, The": {
+        "genres": [
+            "Board game",
+            "Puzzle-Game"
+        ],
+        "rating": "0.7"
+    },
+    "Gates of Zendocon": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.8"
+    },
+    "Gauntlet - The Third Encounter": {
+        "genres": [
+            "Action",
+            "Action / Labyrinth",
+            "Adventure"
+        ],
+        "rating": "0.9"
+    },
+    "Gordo 106": {
+        "genres": [
+            "Adventure",
+            "Platform"
+        ],
+        "rating": "0.75"
+    },
+    "Hard Drivin'": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.5"
+    },
+    "Hockey": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.5"
+    },
+    "Hydra": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.6"
+    },
+    "Ishido - The Way of Stones": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.8"
+    },
+    "Jimmy Connors' Tennis": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.45"
+    },
+    "Joust": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.9"
+    },
+    "Klax": {
+        "genres": [
+            "Strategy",
+            "Puzzle-Game"
+        ],
+        "rating": "0.8"
+    },
+    "Krazy Ace - Miniature Golf": {
+        "genres": [
+            "Sports / Golf",
+            "Sports"
+        ],
+        "rating": "0.65"
+    },
+    "Kung Food": {
+        "genres": [
+            "Beat'em Up",
+            "Action"
+        ],
+        "rating": "0.9"
+    },
+    "Lemmings": {
+        "genres": [
+            "Strategy",
+            "Puzzle-Game"
+        ],
+        "rating": "0.7"
+    },
+    "Lexis": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.5"
+    },
+    "Lode Runner": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": null
+    },
+    "Loopz": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": null
+    },
+    "Lynx Casino": {
+        "genres": [
+            "Simulation",
+            "Board game"
+        ],
+        "rating": "0.65"
+    },
+    "Lynx II Production Test Program": {
+        "genres": [],
+        "rating": null
+    },
+    "Malibu Bikini Volleyball": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.6"
+    },
+    "Marlboro Go!": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": null
+    },
+    "Ms. Pac-Man": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "rating": "0.8"
+    },
+    "NFL Football": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.4"
+    },
+    "Ninja Gaiden": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.7"
+    },
+    "Ninja Gaiden III - The Ancient Ship of Doom": {
+        "genres": [
+            "Beat'em Up"
+        ],
+        "rating": "0.8"
+    },
+    "Pac-Land": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.55"
+    },
+    "Paperboy": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.75"
+    },
+    "Pinball Jam": {
+        "genres": [
+            "Action",
+            "Pinball"
+        ],
+        "rating": "0.9"
+    },
+    "Pit-Fighter": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.2"
+    },
+    "Power Factor": {
+        "genres": [
+            "Platform",
+            "Action"
+        ],
+        "rating": "0.5"
+    },
+    "QIX": {
+        "genres": [
+            "Action",
+            "Puzzle-Game"
+        ],
+        "rating": "0.65"
+    },
+    "Raiden": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.45"
+    },
+    "Rampage": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.7"
+    },
+    "Rampart": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.75"
+    },
+    "Road Riot 4WD": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": null
+    },
+    "RoadBlasters": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.9"
+    },
+    "Robo-Squash": {
+        "genres": [
+            "Action / Breakout games",
+            "Action"
+        ],
+        "rating": "0.3"
+    },
+    "Robotron 2084": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": "0.85"
+    },
+    "Rygar": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.65"
+    },
+    "S.T.U.N. Runner": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.8"
+    },
+    "Scrapyard Dog": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.55"
+    },
+    "Shadow of the Beast": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.3"
+    },
+    "Shanghai": {
+        "genres": [
+            "Strategy",
+            "Board game"
+        ],
+        "rating": "0.85"
+    },
+    "Steel Talons": {
+        "genres": [
+            "Simulation",
+            "Shoot'em Up"
+        ],
+        "rating": "0.8"
+    },
+    "Super Asteroids, Missile Command": {
+        "genres": [
+            "Compilation"
+        ],
+        "rating": "0.7"
+    },
+    "Super Off-Road": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.5"
+    },
+    "Super Skweek": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.85"
+    },
+    "Switchblade II": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.6"
+    },
+    "Todd's Adventures in Slime World": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.75"
+    },
+    "Toki": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.7"
+    },
+    "Tournament Cyberball": {
+        "genres": [
+            "Sports / Football",
+            "Sports",
+            "Strategy"
+        ],
+        "rating": "0.6"
+    },
+    "Turbo Sub": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.7"
+    },
+    "Viking Child": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.6"
+    },
+    "Warbirds": {
+        "genres": [
+            "Simulation"
+        ],
+        "rating": "0.6"
+    },
+    "World Class Soccer": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.5"
+    },
+    "Xenophobe": {
+        "genres": [
+            "Shooter",
+            "Action"
+        ],
+        "rating": "0.7"
+    },
+    "Xybots": {
+        "genres": [
+            "Shooter",
+            "Shooter / 3rd person",
+            "Action"
+        ],
+        "rating": "0.7"
+    },
+    "Zaku": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
+        "rating": null
+    },
+    "Zarlor Mercenary": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.9"
+    }
+}

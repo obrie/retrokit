@@ -91,16 +91,8 @@
         "USA",
         "World"
       ],
-      "!flags": [
-        "arcade classic pak",
-        "program",
-        "unl"
-      ],
-      "!keywords": [
-        "bios"
-      ],
-      "!titles": [
-        "Samantha Fox Strip Poker"
+      "!genres": [
+        "Educational"
       ],
       "+titles": [
         "Frogger",
@@ -112,45 +104,10 @@
     },
     "favorites": {
       "titles": [
-        "180",
-        "Arkanoid",
-        "Arkanoid - Revenge of Doh",
-        "Bubble Bobble",
-        "California Games",
-        "Choplifter!",
-        "Double Dragon",
-        "Frogger",
-        "Ghostbusters",
-        "Great Giana Sisters, The",
-        "Impossible Mission",
-        "Karateka",
-        "Jumpman Junior",
-        "Last Ninja, The",
-        "Leaderboard",
-        "Lode Runner",
-        "Mario Bros",
-        "Paperboy",
-        "Pitfall!",
-        "Pitfall II - Lost Caverns",
-        "Pitstop",
-        "Pitstop II",
-        "Pole Position",
-        "Popeye",
-        "Rampage",
-        "Summer Games",
-        "Summer Games II",
-        "Tetris",
-        "Winter Games",
-        "World Games",
-        "Zaxxon"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/c64/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/c64",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/c64", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

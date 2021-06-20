@@ -75,29 +75,23 @@
         "Pirate",
         "Proto",
         "Sample",
-        "Test",
         "Unl",
         "Virtual Console"
       ],
-      "!keywords": [
-        "Anniversary",
-        "Cartridge",
-        "Collector",
-        "Gamecube",
-        "Teenage Mutant Hero",
-        "Tester"
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
       ],
-      "!titles": [
-        "# Collections",
-        "Arcade's Greatest Hits - The Atari Collection 1",
-        "Exertainment Mountain Bike Rally + Speed Racer",
-        "# Board Games",
-        "Chessmaster, The",
-        "# Educational",
-        "Miracle Piano Teaching System, The",
-        "# Non-Games",
-        "Super Game Boy",
-        "XBAND"
+      "!keywords": [
+        "GameCube",
+        "Competition Cartridge",
+        "Teenage Mutant Hero"
+      ],
+      "+titles": [
+        "Jeopardy!"
       ],
       "demo": [
         "NBA Jam"
@@ -107,11 +101,11 @@
       "titles": [
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/snes", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/snes/-ALL-"}
-    ]
+    }
   }
 }

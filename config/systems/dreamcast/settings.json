@@ -23,6 +23,9 @@
     "redream": {"default": true},
     "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
   },
+  "playlists": {
+    "enabled": false
+  },
   "cheats": {
     "name": "Sega - Dreamcast"
   },
@@ -93,18 +96,15 @@
         "World"
       ],
       "!flags": [
-        "beta",
-        "unl"
+        "Beta",
+        "Unl"
       ],
       "categories": [
         "Games"
       ],
-      "!titles": [
-        "Atari Anniversary Edition",
-        "Midway's Greatest Arcade Hits - Volume 1",
-        "Midway's Greatest Arcade Hits - Volume 2",
-        "Namco Museum",
-        "Sega Smash Pack - Volume 1"
+      "!genres": [
+        "Compilation",
+        "Playing cards"
       ],
       "demo": [
         "Crazy Taxi"
@@ -115,7 +115,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/dreamcast"}
+      {"path": "$HOME/RetroPie/roms/dreamcast", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

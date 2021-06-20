@@ -79,12 +79,14 @@
         "Demo",
         "Proto"
       ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation"
+      ],
       "!keywords": [
         "BIOS"
-      ],
-      "!titles": [
-        "Arcade Smash Hits",
-        "Casino Games"
       ],
       "demo": [
         "Sonic The Hedgehog"
@@ -95,7 +97,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/mastersystem"}
+      {"path": "$HOME/RetroPie/roms/mastersystem", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

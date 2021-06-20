@@ -22,6 +22,9 @@
   "emulators": {
     "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
   },
+  "playlists": {
+    "enabled": true
+  },
   "cheats": {
     "name": "Sega - Saturn"
   },
@@ -89,17 +92,15 @@
       "categories": [
         "Games"
       ],
-      "!keywords": [
-        "Demo",
-        "Sega Flash Vol."
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
       ],
-      "!titles": [
-        "# Collections",
-        "Arcade's Greatest Hits",
-        "Arcade's Greatest Hits - The Atari Collection 1",
-        "Die Hard Arcade",
-        "Sega Saturn Choice Cuts",
-        "Street Fighter Collection"
+      "!keywords": [
+        "Demo"
       ],
       "demo": [
         "Sega Rally Championship"
@@ -110,7 +111,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/saturn"}
+      {"path": "$HOME/RetroPie/roms/saturn", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

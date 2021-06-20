@@ -67,11 +67,11 @@
         "World"
       ],
       "!flags": [
-        "beta",
-        "proto"
+        "Beta",
+        "Proto"
       ],
       "!keywords": [
-        "bios"
+        "BIOS"
       ],
       "demo": [
         "Double Dragon V - The Shadow Falls"
@@ -79,21 +79,13 @@
     },
     "favorites": {
       "titles": [
-        "Breakout 2000",
-        "Doom",
-        "Double Dragon V - The Shadow Falls",
-        "NBA Jam - Tournament Edition",
-        "Pitfall - The Mayan Adventure",
-        "Rayman",
-        "Wolfenstein 3D",
-        "Worms"
       ]
     },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atarijaguar", "filters": {}}
+    ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
-    },
-    "dirs": [
-      {"path": "$HOME/RetroPie/roms/atarijaguar"}
-    ]
+    }
   }
 }

@@ -71,28 +71,28 @@
         "World"
       ],
       "!flags": [
-        "alt",
-        "beta",
-        "demo",
-        "ja",
-        "program",
-        "proto",
-        "unl"
+        "Alt",
+        "Beta",
+        "Demo",
+        "Test Program",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
       ],
       "!keywords": [
         "4-in-1",
-        "arcade classic",
-        "arcade hits",
-        "bios",
-        "camera",
-        "card",
-        "casino",
-        "collection",
-        "collector",
-        "gallery",
-        "infogenius",
-        "microsoft",
-        "teenage mutant hero turtles"
+        "BIOS",
+        "Card",
+        "Casino",
+        "Collection",
+        "Collector",
+        "Teenage Mutant Hero Turtles"
       ],
       "!titles": [
         "Chessmaster"
@@ -103,51 +103,10 @@
     },
     "favorites": {
       "titles": [
-        "Aladdin",
-        "Batman Beyond - Return of the Joker",
-        "Carmageddon - Carpocalypse Now",
-        "Classic Bubble Bobble",
-        "Croc 2",
-        "Donkey Kong Country",
-        "Driver - You are the Wheelman",
-        "Duke Nukem",
-        "Earthworm Jim - Menace 2 the Galaxy",
-        "Frogger",
-        "Grand Theft Auto",
-        "Grand Theft Auto 2",
-        "Harry Potter and the Chamber of Secrets",
-        "Harry Potter and the Sorcerer's Stone",
-        "Lion King, The - Simba's Mighty Adventure",
-        "Little Mermaid II, The - Pinball Frenzy",
-        "Mega Man Xtreme",
-        "Mega Man Xtreme 2",
-        "Mickey's Racing Adventure",
-        "Micro Machines V3",
-        "Mortal Kombat 4",
-        "Paperboy",
-        "Rampage - World Tour",
-        "Rayman",
-        "Rayman 2",
-        "Road Rash",
-        "Simpsons, The - Night of the Living Treehouse of Horror",
-        "Space Invaders",
-        "Spider-Man",
-        "Star Wars Episode I - Racer",
-        "Super Mario Bros. Deluxe",
-        "Tomb Raider",
-        "Tony Hawk's Skateboarding ~ Tony Hawk's Pro Skater",
-        "Tony Hawk's Pro Skater 2",
-        "Tony Hawk's Pro Skater 3",
-        "Toy Story Racer",
-        "Worms Armageddon"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/gbc/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/gbc",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/gbc", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

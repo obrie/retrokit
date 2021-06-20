@@ -71,26 +71,26 @@
         "World"
       ],
       "!flags": [
-        "alt",
-        "beta",
-        "demo",
-        "ja",
-        "program",
-        "proto",
-        "unl"
+        "Alt",
+        "Beta",
+        "Demo",
+        "Test Program",
+        "Proto",
+        "Unl"
       ],
       "!keywords": [
-        "4-in-1",
-        "arcade classic",
-        "bios",
-        "camera",
-        "gallery",
-        "infogenius",
-        "teenage mutant hero turtles"
+        "Arcade Classic",
+        "BIOS",
+        "InfoGenius",
+        "Teenage Mutant Hero Turtles"
+      ],
+      "!genres": [
+        "Board game",
+        "Casino",
+        "Compilation"
       ],
       "!titles": [
-        "Chessmaster, The",
-        "New Chessmaster, The",
+        "Game Boy Camera Gold",
         "Solitaire FunPak"
       ],
       "demo": [
@@ -99,79 +99,10 @@
     },
     "favorites": {
       "titles": [
-        "Aladdin",
-        "Amazing Spider-Man, The",
-        "Animaniacs",
-        "Bart Simpson's Escape from Camp Deadly",
-        "Batman - Return of the Joker",
-        "Batman - The Animated Series",
-        "Batman - The Video Game",
-        "Batman Forever",
-        "Bubble Bobble",
-        "Bubble Bobble Part 2",
-        "BurgerTime Deluxe",
-        "Contra - The Alien Wars",
-        "Donkey Kong",
-        "Double Dragon",
-        "Double Dragon 3 - The Arcade Game",
-        "Double Dragon II",
-        "Earthworm Jim",
-        "Frogger",
-        "Jurassic Park",
-        "Jurassic Park Part 2 - The Chaos Continues",
-        "Lion King, The",
-        "Little Mermaid, The",
-        "Marble Madness",
-        "Mega Man - Dr. Wily's Revenge",
-        "Mega Man II",
-        "Mega Man III",
-        "Mega Man IV",
-        "Mega Man V",
-        "Micro Machines",
-        "Micro Machines 2 - Turbo Tournament",
-        "Mortal Kombat",
-        "Mortal Kombat 3",
-        "Mortal Kombat II",
-        "Ms. Pac-Man",
-        "NBA Jam",
-        "NBA Jam - Tournament Edition",
-        "Olympic Summer Games",
-        "Olympic Winter Games - Lillehammer '94",
-        "Operation C",
-        "Pac-Man",
-        "Paperboy",
-        "Paperboy 2",
-        "Pinball Deluxe",
-        "Pinball Dreams",
-        "Pinball Fantasies",
-        "Pinball Mania",
-        "Popeye 2",
-        "Simpsons, The - Bart & the Beanstalk",
-        "Simpsons, The - Bart vs. the Juggernauts",
-        "Skate or Die - Bad 'N Rad",
-        "Skate or Die - Tour de Thrash",
-        "Star Wars",
-        "Star Wars - The Empire Strikes Back",
-        "Street Fighter II",
-        "Super R.C. Pro-Am",
-        "Teenage Mutant Ninja Turtles - Fall of the Foot Clan",
-        "Teenage Mutant Ninja Turtles II - Back from the Sewers",
-        "Teenage Mutant Ninja Turtles III - Radical Rescue",
-        "Tetris",
-        "Tetris 2",
-        "Tetris Attack",
-        "Tetris Blast",
-        "Tetris Plus",
-        "Track & Field",
-        "Worms"
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/gb/-ALL-"},
-      {
-        "path": "$HOME/RetroPie/roms/gb",
-        "filters": {"favorites": [true]}
-      }
+      {"path": "$HOME/RetroPie/roms/gb", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}

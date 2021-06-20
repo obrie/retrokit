@@ -47,12 +47,17 @@
       "categories": [
         "Games"
       ],
+      "!genres": [
+        "Board game",
+        "Compilation",
+        "Educational",
+        "Playing cards",
+        "Puzzle-Game"
+      ],
       "!keywords": [
         "Cards",
         "Collection",
         "Demo",
-        "Poker",
-        "Puzzle",
         "Quiz",
         "# Sports franchises",
         "FIFA Soccer",
@@ -72,29 +77,16 @@
         "WWE SmackDown vs. Raw"
       ],
       "!titles": [
-        "# Collections",
-        "2 Games in 1! Archer Maclean's Mercury & Mercury Meltdown",
-        "Activision Hits Remixed",
-        "Atari Classics Evolved",
-        "SNK Arcade Classics Vol. 1",
-        "Sampler Disc for PSP Vol. 1",
-        "Stealth + WipEout Pure",
-        "# Board Games",
-        "Chessmaster - The Art of Learning",
-        "Online Chess Kingdoms",
-        "Scrabble",
         "# Education",
         "LittleBigPlanet",
-        "PQ - Practical Intelligence Quotient",
         "PQ2 - Practical Intelligence Quotient 2",
-        "Spelling Challenges and More!",
-        "# Non-Games",
-        "Marvel Trading Card Game",
+        "# Playing cards",
         "Neverland Card Battles",
+        "# Non-games",
         "Traxxpad - Portable Studio"
       ],
       "+titles": [
-        "# Latest Sports Franchises (one day make this automatic)",
+        "# Latest Sports Franchises",
         "FIFA Soccer 13",
         "Gretzky NHL 06",
         "Madden NFL 12",
@@ -117,7 +109,7 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/psp"}
+      {"path": "$HOME/RetroPie/roms/psp", "filters": {}}
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"}
