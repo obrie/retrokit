@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</description>
-		<version>20210528-132817</version>
-		<date>20210528-132817</date>
+		<version>20210618-125100</version>
+		<date>20210618-125100</date>
 		<author>kazumi213, Rifu, SonGoku</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -10418,10 +10418,10 @@
 		<release name="Gakuen Alice - Waku Waku Happy Friends (Japan)" region="JPN"/>
 		<rom name="Gakuen Alice - Waku Waku Happy Friends (Japan).nds" size="33554432" crc="7a9e7964" md5="33e2a23134e842291497b7dc0e0f5948" sha1="1a93ac654b7f962b0d32cf016f2c1f160b57de7c"/>
 	</game>
-	<game name="Gakuen Hetalia DS (Japan) [b]">
-		<description>Gakuen Hetalia DS (Japan) [b]</description>
-		<release name="Gakuen Hetalia DS (Japan) [b]" region="JPN"/>
-		<rom name="Gakuen Hetalia DS (Japan) [b].nds" size="536870912" crc="8fff3793" md5="6a8b9c686983772593c6372613e37a36" sha1="af1eabf4b90ef0459da5f5a47c841a435a92c47f" status="baddump"/>
+	<game name="Gakuen Hetalia DS (Japan)">
+		<description>Gakuen Hetalia DS (Japan)</description>
+		<release name="Gakuen Hetalia DS (Japan)" region="JPN"/>
+		<rom name="Gakuen Hetalia DS (Japan).nds" size="536870912" crc="232f464b" md5="f5062d3c0677a5adabebdedd7c5a1bb8" sha1="49be2ee1658e10164aeab0150e1e5072e3a79cac"/>
 	</game>
 	<game name="Galactic Taz Ball (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Galactic Taz Ball (Europe) (En,Fr,De,Es,It,Nl)</description>
@@ -15510,6 +15510,10 @@
 		<release name="Kenkou Ouen Recipe 1000 - DS Kondate Zenshuu (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Kenkou Ouen Recipe 1000 - DS Kondate Zenshuu (Japan) (Rev 1).nds" size="33554432" crc="1bb1b3b9" md5="13f2b4a44206f8a787049d2ee820a611" sha1="ff6fe772d787aa76788f344c1c465dec3ea219d7"/>
 	</game>
+	<game name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program)">
+		<description>Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program)</description>
+		<rom name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v3.0) (Program).nds" size="268435456" crc="729fdcd6" md5="a646ba692001b61a7b79ebee5a0c32a1" sha1="006abc44108bd9b684a78cb7d8f86d4dc9e500e5"/>
+	</game>
 	<game name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v12.2) (Program)">
 		<description>Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v12.2) (Program)</description>
 		<rom name="Kensa-you Flash Card - UJI CHECKER - SEQUENCER (Japan) (En) (v12.2) (Program).nds" size="268435456" crc="e17949db" md5="fb51c1edca260043e779129050513965" sha1="ecb86bd0a98a38f6de700e7d28ee7d450a2aeb06"/>
@@ -18768,6 +18772,7 @@
 	<game name="Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (Demo) (Kiosk) (NDSi Enhanced)" cloneof="Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (En,Fr,De,Es,It) (NDSi Enhanced)">
 		<description>Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (Demo) (Kiosk) (NDSi Enhanced)</description>
 		<release name="Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (Demo) (Kiosk) (NDSi Enhanced)" region="EUR"/>
+		<rom name="Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (Demo) (Kiosk) (NDSi Enhanced).nds" size="33554432" crc="987ff48d" md5="bc689e1e96b9df004096461324fcfd9b" sha1="a1dc1fa8cac201f0294235a4a90d46579b38d9ab"/>
 	</game>
 	<game name="Mario vs. Donkey Kong - Totsugeki! Mini-Land (Japan) (NDSi Enhanced)" cloneof="Mario vs. Donkey Kong - Mini-Land Mayhem! (Europe) (En,Fr,De,Es,It) (NDSi Enhanced)">
 		<description>Mario vs. Donkey Kong - Totsugeki! Mini-Land (Japan) (NDSi Enhanced)</description>
@@ -20499,6 +20504,11 @@
 		<description>Moomin-dani no Okurimono (Japan)</description>
 		<release name="Moomin-dani no Okurimono (Japan)" region="JPN"/>
 		<rom name="Moomin-dani no Okurimono (Japan).nds" size="33554432" crc="af32cde0" md5="5971508fb2ca81e9da39661f85178fde" sha1="74579fdf347f4d4beb12526260c43b018cd090dc"/>
+	</game>
+	<game name="Moomin-dani no Okurimono (Japan) (Rev 1)" cloneof="Moomin-dani no Okurimono (Japan)">
+		<description>Moomin-dani no Okurimono (Japan) (Rev 1)</description>
+		<release name="Moomin-dani no Okurimono (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Moomin-dani no Okurimono (Japan) (Rev 1).nds" size="33554432" crc="bbcbe350" md5="ac74e78c46c47aee7a60c2ed39d18f42" sha1="83319a84ad27f6c38049788247e30f9918667de7"/>
 	</game>
 	<game name="Moon (Europe) (En,Fr,De,Es,It)">
 		<description>Moon (Europe) (En,Fr,De,Es,It)</description>

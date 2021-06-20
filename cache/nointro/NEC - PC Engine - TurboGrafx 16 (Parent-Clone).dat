@@ -4,8 +4,8 @@
 	<header>
 		<name>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</name>
 		<description>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</description>
-		<version>20210505-002811</version>
-		<date>20210505-002811</date>
+		<version>20210607-040618</version>
+		<date>20210607-040618</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -172,7 +172,11 @@
 	<game name="Benkei Gaiden (Japan)">
 		<description>Benkei Gaiden (Japan)</description>
 		<release name="Benkei Gaiden (Japan)" region="JPN"/>
-		<rom name="Benkei Gaiden (Japan).pce" size="393216" crc="c9626a43" md5="41e5131613fd41b9cab87191cee474a5" sha1="0be41c774e7ee75b84efdc2b05a7a45ec0201503" status="verified"/>
+		<rom name="Benkei Gaiden (Japan).pce" size="393216" crc="e1a73797" md5="fe54ee82279992cef3aeb14aa3f795d9" sha1="4bc46592f3707a7c3e514abc23e640e3194879ad"/>
+	</game>
+	<game name="Benkei Gaiden (Japan) (Virtual Console)" cloneof="Benkei Gaiden (Japan)">
+		<description>Benkei Gaiden (Japan) (Virtual Console)</description>
+		<rom name="Benkei Gaiden (Japan) (Virtual Console).pce" size="393216" crc="c9626a43" md5="41e5131613fd41b9cab87191cee474a5" sha1="0be41c774e7ee75b84efdc2b05a7a45ec0201503"/>
 	</game>
 	<game name="Bikkuriman World (Japan)">
 		<description>Bikkuriman World (Japan)</description>
@@ -213,6 +217,10 @@
 		<description>Bomberman (Japan)</description>
 		<release name="Bomberman (Japan)" region="JPN"/>
 		<rom name="Bomberman (Japan).pce" size="262144" crc="9abb4d1f" md5="4bece0e426eec02f894399219f1951cf" sha1="738bbced47d87cd438d7972eba58c08f5c031a74" status="verified"/>
+	</game>
+	<game name="Bomberman (USA) (Bomberman Collection)" cloneof="Bomberman (USA)">
+		<description>Bomberman (USA) (Bomberman Collection)</description>
+		<rom name="Bomberman (USA) (Bomberman Collection).pce" size="262144" crc="3d1f8ece" md5="ee98dbf64d0e9e1d30b781dc84e6c485" sha1="98ad40e638ab27bcb8ec19b2189ce505f63f2749"/>
 	</game>
 	<game name="Bomberman - Users Battle (Japan)">
 		<description>Bomberman - Users Battle (Japan)</description>

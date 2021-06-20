@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</description>
-		<version>20210528-064842</version>
-		<date>20210528-064842</date>
+		<version>20210610-061502</version>
+		<date>20210610-061502</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -1460,7 +1460,7 @@
 	</game>
 	<game name="Whack 'n' Roll (Unknown) (Beta) (1998-02-05)" cloneof="Glover (Europe) (En,Fr,De)">
 		<description>Whack 'n' Roll (Unknown) (Beta) (1998-02-05)</description>
-		<rom name="Whack 'n' Roll (Unknown) (Beta) (1998-02-05).n64" size="3823288" crc="74df67bb" md5="aab9c595a91b9f26e12cae2ff2649881" sha1="1d8f3b0cc37dc357cddc8075fc749bc7d66b5331"/>
+		<rom name="Whack 'n' Roll (Unknown) (Beta) (1998-02-05).z64" size="3823288" crc="74df67bb" md5="aab9c595a91b9f26e12cae2ff2649881" sha1="1d8f3b0cc37dc357cddc8075fc749bc7d66b5331"/>
 	</game>
 	<game name="Glover 2 (USA) (Proto 2)">
 		<description>Glover 2 (USA) (Proto 2)</description>
@@ -1859,7 +1859,7 @@
 	<game name="Jet Force Gemini (USA)" cloneof="Jet Force Gemini (Europe) (En,Fr,De,Es)">
 		<description>Jet Force Gemini (USA)</description>
 		<release name="Jet Force Gemini (USA)" region="USA"/>
-		<rom name="Jet Force Gemini (USA).z64" size="33554432" crc="6753d5a3" md5="772cc6eab2620d2d3cdc17bbc26c4f68" sha1="493ced9008dbe932d6e91179b68e8630cf23a023"/>
+		<rom name="Jet Force Gemini (USA).z64" size="33554432" crc="6753d5a3" md5="772cc6eab2620d2d3cdc17bbc26c4f68" sha1="493ced9008dbe932d6e91179b68e8630cf23a023" status="verified"/>
 	</game>
 	<game name="Jet Force Gemini (USA) (Demo) (Kiosk)" cloneof="Jet Force Gemini (Europe) (En,Fr,De,Es)">
 		<description>Jet Force Gemini (USA) (Demo) (Kiosk)</description>

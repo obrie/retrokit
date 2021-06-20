@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Game Boy Advance (Parent-Clone)</name>
 		<description>Nintendo - Game Boy Advance (Parent-Clone)</description>
-		<version>20210528-074339</version>
-		<date>20210528-074339</date>
+		<version>20210617-025111</version>
+		<date>20210617-025111</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -9456,11 +9456,11 @@
 		<rom name="Metroid - Zero Mission (Japan).gba" size="8388608" crc="44b79e2b" md5="650140ccae6e1ab7af44c74986002375" sha1="096f07685a3dc9286e71aa0b761f233b5efa2fcd"/>
 	</game>
 	<game name="Metroid - Zero Mission (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Metroid - Zero Mission (Europe) (En,Fr,De,Es,It)">
-		<description>Metroid - Zero Mission (Europe) (En,Fr,De,Es,It) (Beta) (Came as .srl, so probably straight from Nintendo.)</description>
+		<description>Metroid - Zero Mission (Europe) (En,Fr,De,Es,It) (Beta)</description>
 		<rom name="Metroid - Zero Mission (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="b6438226" md5="36c8139a261f869d76292e83942e7470" sha1="3c0b7ccd303c30ac5c4ffc9fb0aa7137a533ad69"/>
 	</game>
 	<game name="Metroid - Zero Mission (USA) (Beta)" cloneof="Metroid - Zero Mission (Europe) (En,Fr,De,Es,It)">
-		<description>Metroid - Zero Mission (USA) (Beta) (Came as .srl, so probably came as a digital file originating from the developer.)</description>
+		<description>Metroid - Zero Mission (USA) (Beta)</description>
 		<rom name="Metroid - Zero Mission (USA) (Beta).gba" size="16777216" crc="922c4a10" md5="9c2ddd136b3b893db31b806142d20b8c" sha1="58986c4d6f2e5ccdc04936cc8b7c9d378570710c"/>
 	</game>
 	<game name="Metroid - Zero Mission (USA) (Virtual Console)" cloneof="Metroid - Zero Mission (Europe) (En,Fr,De,Es,It)">
@@ -9500,7 +9500,7 @@
 		<rom name="Metroid Fusion (Europe) (En,Fr,De,Es,It) (Beta) (2002-09-11).gba" size="16777216" crc="3acbd239" md5="37477683a1e646431c5396164df388f3" sha1="a45b539becbf10f3913255d6d624ee954dcc5593"/>
 	</game>
 	<game name="Metroid Fusion (Europe) (En,Fr,De,Es,It) (Beta) (2002-09-16)" cloneof="Metroid Fusion (Europe) (En,Fr,De,Es,It)">
-		<description>Metroid Fusion (Europe) (En,Fr,De,Es,It) (Beta) (2002-09-16) (Came as .srl, so probably straight from Nintendo.)</description>
+		<description>Metroid Fusion (Europe) (En,Fr,De,Es,It) (Beta) (2002-09-16)</description>
 		<rom name="Metroid Fusion (Europe) (En,Fr,De,Es,It) (Beta) (2002-09-16).gba" size="8388608" crc="1605e4f7" md5="305060aa2e1f0a854b772fa23988c2b9" sha1="f688f2d3186a0a90040abb214efd1e8e93a424cd"/>
 	</game>
 	<game name="Metroid Fusion (USA) (Virtual Console)" cloneof="Metroid Fusion (Europe) (En,Fr,De,Es,It)">

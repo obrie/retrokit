@@ -6,8 +6,8 @@
 		<description>Nintendo - Nintendo Entertainment System (Parent-Clone)</description>
 		<clrmamepro header="No-Intro_NES.xml"/>
 		<romcenter plugin="nes.dll"/>
-		<version>20210528-064508</version>
-		<date>20210528-064508</date>
+		<version>20210603-122241</version>
+		<date>20210603-122241</date>
 		<author>alexian, BitLooter</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -9656,6 +9656,53 @@
 		<description>Pac-Land (World) (Namcot Collection, Namco Museum Archives Vol 2)</description>
 		<rom name="Pac-Land (World) (Namcot Collection, Namco Museum Archives Vol 2).nes" size="40960" crc="70cca102" md5="063511a533e1e627cbbae7addf85f7ad" sha1="710cef093620ab126402b1e7d0aaf1d61d031aeb" status="verified"/>
 	</game>
+	<game name="Pac-Man (Europe)">
+		<description>Pac-Man (Europe)</description>
+		<release name="Pac-Man (Europe)" region="EUR"/>
+		<rom name="Pac-Man (Europe).nes" size="24576" crc="81210f63" md5="397164fddfbb1ba87734f6f56887dfab" sha1="d1ea0bb3e919c5b2e5fe3a13d1cdab9849db473c"/>
+	</game>
+	<game name="Pac-Man (Japan) (En)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (Japan) (En)</description>
+		<release name="Pac-Man (Japan) (En)" region="JPN"/>
+		<rom name="Pac-Man (Japan) (En).nes" size="24576" crc="3e95ba25" md5="991118f99cde0ad3fb2bf452d038e93b" sha1="3816ed83b51d53691ee4e4bd3428847df97e58d6" status="verified"/>
+	</game>
+	<game name="Pac-Man (Japan) (En) (Rev A)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (Japan) (En) (Rev A)</description>
+		<release name="Pac-Man (Japan) (En) (Rev A)" region="JPN"/>
+		<rom name="Pac-Man (Japan) (En) (Rev A).nes" size="24576" crc="5cdb2823" md5="e4cc2e365fe5d0a43bb538981ab37bfd" sha1="2716ea4476fd4c6cdcbbf184f94558b5f233b3ae" status="verified"/>
+	</game>
+	<game name="Pac-Man (USA) (Namco)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (USA) (Namco)</description>
+		<release name="Pac-Man (USA) (Namco)" region="USA"/>
+		<rom name="Pac-Man (USA) (Namco).nes" size="24576" crc="9e4e9cc2" md5="ca606bd8a875a396d52735c3bb84fa67" sha1="92c3361b9e3b28a51fd30e7845c988a6d576ee65"/>
+	</game>
+	<game name="Pac-Man (USA) (Tengen)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (USA) (Tengen)</description>
+		<release name="Pac-Man (USA) (Tengen)" region="USA"/>
+		<rom name="Pac-Man (USA) (Tengen).nes" size="24576" crc="a9bbf44f" md5="c4ae6cc4e981a8316429572409018dc8" sha1="a34e68372082513209a795786c8eea493cc2cd14" status="verified"/>
+	</game>
+	<game name="Pac-Man (USA) (Tengen) (Unl)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (USA) (Tengen) (Unl)</description>
+		<release name="Pac-Man (USA) (Tengen) (Unl)" region="USA"/>
+		<rom name="Pac-Man (USA) (Tengen) (Unl).nes" size="24576" crc="9d38f8f9" md5="1a860b28ad960dfd700b066924341edb" sha1="ab5dc98f1d6d220708f5dec4e87bec175bb635ab"/>
+	</game>
+	<game name="Pac-Man (Japan) (En) (Rev B)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (Japan) (En) (Rev B)</description>
+		<release name="Pac-Man (Japan) (En) (Rev B)" region="JPN"/>
+		<rom name="Pac-Man (Japan) (En) (Rev B).nes" size="24576" crc="2c7d68f3" md5="10a12b5840a13e8f3a61885c44bf3b8d" sha1="bf49e53c6da49ddf0bf947dd82140573aeb59103" status="verified"/>
+	</game>
+	<game name="Pac-Man (USA) (Virtual Console)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (USA) (Virtual Console)</description>
+		<release name="Pac-Man (USA) (Virtual Console)" region="USA"/>
+		<rom name="Pac-Man (USA) (Virtual Console).nes" size="24576" crc="9b080b6e" md5="bf3a94cd5fc5a8a5733fb5776831fb62" sha1="e273b2533c0d73efed21498564eb82b6b932a205"/>
+	</game>
+	<game name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)" cloneof="Pac-Man (Europe)">
+		<description>Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)</description>
+		<release name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)" region="EUR"/>
+		<release name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)" region="JPN"/>
+		<release name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1)" region="USA"/>
+		<rom name="Pac-Man (World) (Rev A) (Namcot Collection, Namco Museum Archives Vol 1).nes" size="24576" crc="43f7cfd5" md5="a9cbf8f3becf919a0228abb8b88ecf9c" sha1="ac7cdf3cb7ee2f1fe71024474c0762361ca73825" status="verified"/>
+	</game>
 	<game name="Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)">
 		<description>Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)</description>
 		<release name="Pac-Man Championship Edition (USA, Europe) (Namco Museum Archives Vol 1) (Aftermarket)" region="EUR"/>
@@ -11146,6 +11193,10 @@
 		<description>Saiyuuki World (Japan)</description>
 		<release name="Saiyuuki World (Japan)" region="JPN"/>
 		<rom name="Saiyuuki World (Japan).nes" size="131072" crc="69d07ddb" md5="140927256e745288f2956917b48a0168" sha1="70faf6a01500624fa6def2acc9476397c18dd7b3" status="verified"/>
+	</game>
+	<game name="Saiyuuki World (Japan) (Beta)" cloneof="Saiyuuki World (Japan)">
+		<description>Saiyuuki World (Japan) (Beta)</description>
+		<rom name="Saiyuuki World (Japan) (Beta).nes" size="131072" crc="d44fbb05" md5="0fe25d0d700818badbe68779dbc64566" sha1="7e45cc8718678227b9748c3d239c156887350176"/>
 	</game>
 	<game name="Sakigake!! Otoko Juku - Shippuu Ichi Gou Sei (Japan)">
 		<description>Sakigake!! Otoko Juku - Shippuu Ichi Gou Sei (Japan)</description>

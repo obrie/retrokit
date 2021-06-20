@@ -4,8 +4,8 @@
 	<header>
 		<name>Sega - Mega Drive - Genesis (Parent-Clone)</name>
 		<description>Sega - Mega Drive - Genesis (Parent-Clone)</description>
-		<version>20210528-065328</version>
-		<date>20210528-065328</date>
+		<version>20210618-224446</version>
+		<date>20210618-224446</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -3755,6 +3755,10 @@
 		<release name="Flink (Europe) (En,Fr,De)" region="EUR"/>
 		<rom name="Flink (Europe) (En,Fr,De).md" size="1048576" crc="bef9a4f4" md5="4b6da602b30589b18be136f60b8000b2" sha1="f37518380d3e41598cbff16519ca15fcb751de57"/>
 	</game>
+	<game name="Flink (Europe) (En,Fr,De) (Beta)" cloneof="Flink (Europe) (En,Fr,De)">
+		<description>Flink (Europe) (En,Fr,De) (Beta)</description>
+		<rom name="Flink (Europe) (En,Fr,De) (Beta).md" size="1048576" crc="47b47afc" md5="e60a518d3e5c2a28433ed01173cdb465" sha1="f066548b1a65aedf1e38a530d0e69962cee7b9ef"/>
+	</game>
 	<game name="Flintstones, The (Europe) (Taito)">
 		<description>Flintstones, The (Europe) (Taito)</description>
 		<release name="Flintstones, The (Europe) (Taito)" region="EUR"/>
@@ -7060,6 +7064,11 @@
 		<description>Ottifants, The (Europe) (De) (Beta)</description>
 		<rom name="Ottifants, The (Europe) (De) (Beta).md" size="1048576" crc="c6e3dd23" md5="92c37e268b00bc8b3c5f5c7630c72874" sha1="76d2606d12a94b10208324ad1ff3e295ef89f5f4"/>
 	</game>
+	<game name="Outback Joey (USA)">
+		<description>Outback Joey (USA)</description>
+		<release name="Outback Joey (USA)" region="USA"/>
+		<rom name="Outback Joey (USA).md" size="1048576" crc="10abd93f" md5="a42d1b41ce25d329e869216715ca02cf" sha1="ec2eef751bc8515bc99293d96f833270916c9af7"/>
+	</game>
 	<game name="Outlander (USA)">
 		<description>Outlander (USA)</description>
 		<release name="Outlander (USA)" region="USA"/>
@@ -9572,7 +9581,7 @@
 		<description>Stargate (USA, Europe)</description>
 		<release name="Stargate (USA, Europe)" region="EUR"/>
 		<release name="Stargate (USA, Europe)" region="USA"/>
-		<rom name="Stargate (USA, Europe).md" size="2097152" crc="e587069e" md5="b78fa5e007f119440cacc063493b5084" sha1="d0843442059c89b11db02615670632fda2b2ee85"/>
+		<rom name="Stargate (USA, Europe).md" size="2097152" crc="e587069e" md5="b78fa5e007f119440cacc063493b5084" sha1="d0843442059c89b11db02615670632fda2b2ee85" status="verified"/>
 	</game>
 	<game name="Stargate (USA, Europe) (Beta)" cloneof="Stargate (USA, Europe)">
 		<description>Stargate (USA, Europe) (Beta)</description>
@@ -9892,6 +9901,10 @@
 	<game name="Sub-Terrania (Asia) (En) (Beta) (1994-02-02)" cloneof="Sub-Terrania (Europe)">
 		<description>Sub-Terrania (Asia) (En) (Beta) (1994-02-02)</description>
 		<rom name="Sub-Terrania (Asia) (En) (Beta) (1994-02-02).md" size="2097152" crc="b368e394" md5="6e241867ffd0f5ccf1451cff3a97ac58" sha1="91609b5083fac0d8c00a25d3831eff5fb02eac5b"/>
+	</game>
+	<game name="Sub-Terrania (USA) (Beta) (October, 1993, Alt)" cloneof="Sub-Terrania (Europe)">
+		<description>Sub-Terrania (USA) (Beta) (October, 1993, Alt)</description>
+		<rom name="Sub-Terrania (USA) (Beta) (October, 1993, Alt).md" size="2097152" crc="707fa63c" md5="35aca51fa35e9a6131a4891bed718a8d" sha1="44d3072e25eff5be8de9021f76fe3bb00ecaf56f"/>
 	</game>
 	<game name="Summer Challenge (USA, Europe) (Unl)">
 		<description>Summer Challenge (USA, Europe) (Unl)</description>
@@ -12072,7 +12085,7 @@
 	</game>
 	<game name="Worms (Europe) (Beta)" cloneof="Worms (Europe)">
 		<description>Worms (Europe) (Beta)</description>
-		<rom name="Worms (Europe) (Beta).bin" size="2097152" crc="5f9e85df" md5="03c35f042efa4b6d0019938fe968dc74" sha1="5a11867fdf41c9e065e6ba88668d6a48bcbc476c"/>
+		<rom name="Worms (Europe) (Beta).md" size="2097152" crc="5f9e85df" md5="03c35f042efa4b6d0019938fe968dc74" sha1="5a11867fdf41c9e065e6ba88668d6a48bcbc476c"/>
 	</game>
 	<game name="Wrestle War (Japan, Europe)">
 		<description>Wrestle War (Japan, Europe)</description>

@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Super Nintendo Entertainment System (Parent-Clone)</name>
 		<description>Nintendo - Super Nintendo Entertainment System (Parent-Clone)</description>
-		<version>20210528-133733</version>
-		<date>20210528-133733</date>
+		<version>20210618-222922</version>
+		<date>20210618-222922</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -965,10 +965,10 @@
 		<release name="Bastard!! - Ankoku no Hakaishin (Japan)" region="JPN"/>
 		<rom name="Bastard!! - Ankoku no Hakaishin (Japan).sfc" size="1572864" crc="6742d51c" md5="2d11339b1a2dd1fe166ab1aaac8aad7d" sha1="5512a076116639e36e1bfde38ca86b126ca0d867"/>
 	</game>
-	<game name="Batman (USA) (Proto) [b]">
-		<description>Batman (USA) (Proto) [b]</description>
-		<release name="Batman (USA) (Proto) [b]" region="USA"/>
-		<rom name="Batman (USA) (Proto) [b].sfc" size="524288" crc="9bae4220" md5="70e013cdb4e0c2f39a7f1df83a697ddf" sha1="db0191f23613e74b72fdc113b013501edbbe6311" status="baddump"/>
+	<game name="Batman (USA) (Proto)">
+		<description>Batman (USA) (Proto)</description>
+		<release name="Batman (USA) (Proto)" region="USA"/>
+		<rom name="Batman (USA) (Proto).sfc" size="524288" crc="8862e31d" md5="c3ec465614c09d36eda96749ab3cba7a" sha1="7be714835ec0094aac9fa7952024bd49efed8af3"/>
 	</game>
 	<game name="Batman - Revenge of the Joker (USA) (Proto)">
 		<description>Batman - Revenge of the Joker (USA) (Proto)</description>
@@ -1309,6 +1309,10 @@
 		<description>Biker Mice from Mars (USA)</description>
 		<release name="Biker Mice from Mars (USA)" region="USA"/>
 		<rom name="Biker Mice from Mars (USA).sfc" size="1048576" crc="4e8b2ecb" md5="a1f47d45a9e5f93b3f10057d1d0e1469" sha1="3ea3d8b7cf36eba21a9b180a80b645ee0e221bc0" status="verified"/>
+	</game>
+	<game name="Biker Mice from Mars (Europe) (Sample)" cloneof="Biker Mice from Mars (Europe)">
+		<description>Biker Mice from Mars (Europe) (Sample)</description>
+		<rom name="Biker Mice from Mars (Europe) (Sample).sfc" size="1048576" crc="5706f0ee" md5="5030293a09d3b8f3146184590d8c44ae" sha1="100a83ca362ce71b5adbc1a244ec522888fc8eb7" status="verified"/>
 	</game>
 	<game name="Bill Laimbeer's Combat Basketball (USA)">
 		<description>Bill Laimbeer's Combat Basketball (USA)</description>
@@ -2354,19 +2358,19 @@
 		<release name="Cu-On-Pa SFC (Japan)" region="JPN"/>
 		<rom name="Cu-On-Pa SFC (Japan).sfc" size="1048576" crc="42d0c418" md5="792676437c5a448fc6393cf06ecb50d0" sha1="58469e1ea82fc7b2ecd5d696a561292fa2c5db8a" status="verified"/>
 	</game>
-	<game name="Cutthroat Island (Europe)">
-		<description>Cutthroat Island (Europe)</description>
-		<release name="Cutthroat Island (Europe)" region="EUR"/>
-		<rom name="Cutthroat Island (Europe).sfc" size="2097152" crc="b5799f9c" md5="0f9f6529750accd0aa3705af863a4ea7" sha1="d88bed88c8979bb0ffcd73f02cebb92b7625598b" status="verified"/>
+	<game name="CutThroat Island (Europe)">
+		<description>CutThroat Island (Europe)</description>
+		<release name="CutThroat Island (Europe)" region="EUR"/>
+		<rom name="CutThroat Island (Europe).sfc" size="2097152" crc="b5799f9c" md5="0f9f6529750accd0aa3705af863a4ea7" sha1="d88bed88c8979bb0ffcd73f02cebb92b7625598b" status="verified"/>
 	</game>
-	<game name="Cutthroat Island (USA)" cloneof="Cutthroat Island (Europe)">
-		<description>Cutthroat Island (USA)</description>
-		<release name="Cutthroat Island (USA)" region="USA"/>
-		<rom name="Cutthroat Island (USA).sfc" size="2097152" crc="19ea457b" md5="669f9147ab96a16f07e93ca9f18ef779" sha1="40965e6c9d6aec698b7a0d3106241fef7f2e6ee8"/>
+	<game name="CutThroat Island (USA)" cloneof="CutThroat Island (Europe)">
+		<description>CutThroat Island (USA)</description>
+		<release name="CutThroat Island (USA)" region="USA"/>
+		<rom name="CutThroat Island (USA).sfc" size="2097152" crc="19ea457b" md5="669f9147ab96a16f07e93ca9f18ef779" sha1="40965e6c9d6aec698b7a0d3106241fef7f2e6ee8"/>
 	</game>
-	<game name="Cutthroat Island (USA) (Beta)" cloneof="Cutthroat Island (Europe)">
-		<description>Cutthroat Island (USA) (Beta)</description>
-		<rom name="Cutthroat Island (USA) (Beta).sfc" size="2097152" crc="b7c20c18" md5="5247fa439644b3cc93fc4154a10dabe7" sha1="f2ada790586905c2b33eda6339ab67c1e2dff89b"/>
+	<game name="CutThroat Island (USA) (Beta)" cloneof="CutThroat Island (Europe)">
+		<description>CutThroat Island (USA) (Beta)</description>
+		<rom name="CutThroat Island (USA) (Beta).sfc" size="2097152" crc="b7c20c18" md5="5247fa439644b3cc93fc4154a10dabe7" sha1="f2ada790586905c2b33eda6339ab67c1e2dff89b"/>
 	</game>
 	<game name="CX4 (World) (Enhancement Chip)">
 		<description>CX4 (World) (Enhancement Chip)</description>
@@ -5865,9 +5869,9 @@
 		<release name="Iron Commando - Koutetsu no Senshi (Japan)" region="JPN"/>
 		<rom name="Iron Commando - Koutetsu no Senshi (Japan).sfc" size="1310720" crc="828b5f07" md5="c656e7408b5ef8a774ea8b354bf47779" sha1="1c6127296bc8bf5afcb67d6e7aa0ce7838bdc44a"/>
 	</game>
-	<game name="Iron Commando (Europe) (Proto) [b]" cloneof="Iron Commando - Koutetsu no Senshi (Japan)">
-		<description>Iron Commando (Europe) (Proto) [b]</description>
-		<rom name="Iron Commando (Europe) (Proto) [b].sfc" size="1310720" crc="d967299d" md5="8a64df7014c099c8847872d531d6dfcc" sha1="d667e3012f5964d3bc46bfc931f3a3bdda7b2fe6" status="baddump"/>
+	<game name="Iron Commando (Europe) (Proto)" cloneof="Iron Commando - Koutetsu no Senshi (Japan)">
+		<description>Iron Commando (Europe) (Proto)</description>
+		<rom name="Iron Commando (Europe) (Proto).sfc" size="1310720" crc="d967299d" md5="8a64df7014c099c8847872d531d6dfcc" sha1="d667e3012f5964d3bc46bfc931f3a3bdda7b2fe6"/>
 	</game>
 	<game name="Iron Commando (World) (Aftermarket) (Unl)" cloneof="Iron Commando - Koutetsu no Senshi (Japan)">
 		<description>Iron Commando (World) (Aftermarket) (Unl)</description>
@@ -9172,11 +9176,12 @@
 	</game>
 	<game name="Nekotako (Japan) (Aftermarket) (Unl)">
 		<description>Nekotako (Japan) (Aftermarket) (Unl)</description>
+		<release name="Nekotako (Japan) (Aftermarket) (Unl)" region="JPN"/>
 		<rom name="Nekotako (Japan) (Aftermarket) (Unl).sfc" size="1048576" crc="72bdafbb" md5="291a587292385eb4755bef7b1d8fcfc6" sha1="d16ccb80c855b78ee863f50c84f0bdbc7e3d9ea7"/>
 	</game>
-	<game name="Nekotako (World) (Ja) (Demo) (Aftermarket) (Unl)" cloneof="Nekotako (Japan) (Aftermarket) (Unl)">
-		<description>Nekotako (World) (Ja) (Demo) (Aftermarket) (Unl)</description>
-		<rom name="Nekotako (World) (Ja) (Demo) (Aftermarket) (Unl).sfc" size="1048576" crc="0b490979" md5="59eef731bd76bad3f849663b2a885376" sha1="0af942ef3a95800b6aa3a9e8983126a4fefc083b"/>
+	<game name="Nekotako (Japan) (Demo) (Aftermarket) (Unl)" cloneof="Nekotako (Japan) (Aftermarket) (Unl)">
+		<description>Nekotako (Japan) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Nekotako (Japan) (Demo) (Aftermarket) (Unl).sfc" size="1048576" crc="0b490979" md5="59eef731bd76bad3f849663b2a885376" sha1="0af942ef3a95800b6aa3a9e8983126a4fefc083b"/>
 	</game>
 	<game name="Neugier - Umi to Kaze no Kodou (Japan)">
 		<description>Neugier - Umi to Kaze no Kodou (Japan)</description>
@@ -12910,9 +12915,9 @@
 		<release name="Spider-Man - Venom - Maximum Carnage (USA)" region="USA"/>
 		<rom name="Spider-Man - Venom - Maximum Carnage (USA).sfc" size="2097152" crc="7ef2bb0c" md5="c4f2fe9b3ec4fc5c9c5d1b8ae1bd8054" sha1="e85f33c59903826f76df1f43d60bacf5c024d673" status="verified"/>
 	</game>
-	<game name="Spider-Man - Venom - Maximum Carnage (Europe) (Beta)" cloneof="Spider-Man - Venom - Maximum Carnage (Europe)">
-		<description>Spider-Man - Venom - Maximum Carnage (Europe) (Beta)</description>
-		<rom name="Spider-Man - Venom - Maximum Carnage (Europe) (Beta).sfc" size="2097152" crc="fc1b8e11" md5="39ab2a192402a284e3ca8593f6743aca" sha1="90cf8b6853777c93bf9b2e8d9f30a8cc3e0a3376"/>
+	<game name="Spider-Man - Venom - Maximum Carnage (Europe) (Sample)" cloneof="Spider-Man - Venom - Maximum Carnage (Europe)">
+		<description>Spider-Man - Venom - Maximum Carnage (Europe) (Sample)</description>
+		<rom name="Spider-Man - Venom - Maximum Carnage (Europe) (Sample).sfc" size="2097152" crc="fc1b8e11" md5="39ab2a192402a284e3ca8593f6743aca" sha1="90cf8b6853777c93bf9b2e8d9f30a8cc3e0a3376"/>
 	</game>
 	<game name="Spider-Man - X-Men - Arcade's Revenge (Europe)">
 		<description>Spider-Man - X-Men - Arcade's Revenge (Europe)</description>
@@ -16283,19 +16288,23 @@
 		<release name="Tom and Jerry (Europe)" region="EUR"/>
 		<rom name="Tom and Jerry (Europe).sfc" size="524288" crc="72b57042" md5="730eff17e6df2ddf4e2a8511f12f5b19" sha1="44d11feb60e11d401c79cc98c084150734e27538" status="verified"/>
 	</game>
-	<game name="Tom &amp; Jerry (USA) (Beta)" cloneof="Tom and Jerry (Europe)">
-		<description>Tom &amp; Jerry (USA) (Beta)</description>
-		<rom name="Tom &amp; Jerry (USA) (Beta).sfc" size="524288" crc="cb6d3883" md5="b690ff0d506fc20faf670cd42c3dc01f" sha1="bfbcd8432437f8fff6be15572cd2503fef792c37"/>
-	</game>
 	<game name="Tom and Jerry (USA)" cloneof="Tom and Jerry (Europe)">
 		<description>Tom and Jerry (USA)</description>
 		<release name="Tom and Jerry (USA)" region="USA"/>
 		<rom name="Tom and Jerry (USA).sfc" size="524288" crc="8b1dafbb" md5="bc16be2e9c7e170f7cd10da919f3e099" sha1="768b7b339804ddf13aaca59713a4e2c5e7ef9f3a" status="verified"/>
 	</game>
+	<game name="Tom and Jerry (USA) (Beta)" cloneof="Tom and Jerry (Europe)">
+		<description>Tom and Jerry (USA) (Beta)</description>
+		<rom name="Tom and Jerry (USA) (Beta).sfc" size="524288" crc="cb6d3883" md5="b690ff0d506fc20faf670cd42c3dc01f" sha1="bfbcd8432437f8fff6be15572cd2503fef792c37"/>
+	</game>
 	<game name="Tom to Jerry (Japan)" cloneof="Tom and Jerry (Europe)">
 		<description>Tom to Jerry (Japan)</description>
 		<release name="Tom to Jerry (Japan)" region="JPN"/>
 		<rom name="Tom to Jerry (Japan).sfc" size="524288" crc="ba2de054" md5="5ca81cef38f609c6eb3aef7d567137f5" sha1="8ae694dd0113f4c8dc6dd878b85a5f68dad374ec"/>
+	</game>
+	<game name="Tom to Jerry (Japan) (En) (Beta)" cloneof="Tom and Jerry (Europe)">
+		<description>Tom to Jerry (Japan) (En) (Beta)</description>
+		<rom name="Tom to Jerry (Japan) (En) (Beta).sfc" size="524288" crc="50422852" md5="570f995b9e2f708619df466bb1eddb54" sha1="62ad2eab36de09064458c415ce4248f3ce66b133"/>
 	</game>
 	<game name="Tom vs Jerry - The Chase Is On! (USA) (Proto) (1995-04-28)">
 		<description>Tom vs Jerry - The Chase Is On! (USA) (Proto) (1995-04-28)</description>
@@ -16999,9 +17008,9 @@
 		<release name="Venom - Spider-Man - Separation Anxiety (USA)" region="USA"/>
 		<rom name="Venom - Spider-Man - Separation Anxiety (USA).sfc" size="3145728" crc="919c509d" md5="07f817a784c393b381db699a046fa4a9" sha1="4cc91f82f800b9a10433d91579911083ca47484e"/>
 	</game>
-	<game name="Venom - Spider-Man - Separation Anxiety (USA) (Beta)" cloneof="Venom - Spider-Man - Separation Anxiety (Europe)">
-		<description>Venom - Spider-Man - Separation Anxiety (USA) (Beta)</description>
-		<rom name="Venom - Spider-Man - Separation Anxiety (USA) (Beta).sfc" size="3145728" crc="0ab432ec" md5="b8d7afb1a1aca8f0915a773de9ab253f" sha1="7bbf404cff2defc578be4e3d1f600b6e90abbfaf"/>
+	<game name="Venom - Spider-Man - Separation Anxiety (USA) (Sample)" cloneof="Venom - Spider-Man - Separation Anxiety (Europe)">
+		<description>Venom - Spider-Man - Separation Anxiety (USA) (Sample)</description>
+		<rom name="Venom - Spider-Man - Separation Anxiety (USA) (Sample).sfc" size="3145728" crc="0ab432ec" md5="b8d7afb1a1aca8f0915a773de9ab253f" sha1="7bbf404cff2defc578be4e3d1f600b6e90abbfaf"/>
 	</game>
 	<game name="Verne World (Japan)">
 		<description>Verne World (Japan)</description>
