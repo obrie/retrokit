@@ -20,11 +20,13 @@ class ParentMetadata(ExternalMetadata):
         with self.install_path.open() as f:
             data = json.loads(f.read())
             for parent_name, clone_names in data['renames'].items():
-                parent_group = Machine.title_from(parent_name, disc=True)
+                # We want to link parents by Disc instead of Game Title so that we
+                # don't accidentally mark Disc 2 as having parent Disc 1
+                parent_disc_title = Machine.title_from(parent_name, disc=True)
 
                 # Map each clone to the parent via the disc title
                 for (clone_name, other) in clone_names:
-                    self.custom_groups[Machine.title_from(clone_name, disc=True)] = parent_group
+                    self.custom_groups[Machine.title_from(clone_name, disc=True)] = parent_disc_title
 
     def update(self, machine: Machine) -> None:
         group = self.custom_groups.get(machine.disc_title) or machine.disc_title

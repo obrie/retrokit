@@ -45,6 +45,8 @@ class C64DreamsMetadata(ExternalMetadata):
                         self.titles.add(self._clean_title(title))
 
     def update(self, machine: Machine) -> None:
+        # Note that C64 has not Parent/Clone relationships defined, so we only
+        # need to look at the title on the machine, not the parent
         if self._clean_title(machine.title) in self.titles:
             machine.collections.add('C64 Dreams')
 

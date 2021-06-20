@@ -32,24 +32,25 @@ class ProgrettoSnapsMetadata(ExternalMetadata):
                     if match:
                         result = match.group(1)
                         break
-        
-        return result             
 
+        return result
+
+    # Loads the data from the INI configuration.
+    # 
+    # Format:
+    # * Section: value for the metadata
+    # * Key: name of the machine
     def load(self) -> None:
         self.values = {}
 
-        config = self._read_config()
-        for section in config.sections():
-            for name, value in config.items(section, raw=True):
-                self.values[name] = section
-
-    # Reads the INI configuration at the configured resource path
-    def _read_config(self) -> configparser.ConfigParser:
         with self.install_path.open('r') as file:
             config = configparser.ConfigParser(allow_no_value=True)
-            contents = file.read()
-            config.read_string(contents.encode('ascii', 'ignore').decode())
-            return config
+            config.read_string(file.read().encode('ascii', 'ignore').decode())
+
+            for section in config.sections():
+                for name, value in config.items(section, raw=True):
+                    self.values[name] = section
+
 
 # Language metadata managed by progretto-SNAPS
 # 
@@ -71,7 +72,6 @@ class LanguageMetadata(ProgrettoSnapsMetadata):
 # Format: INI
 class GenreMetadata(ProgrettoSnapsMetadata):
     name = 'genre'
-    default_context = {'version': ''}
 
     SCRAPE_URL = 'https://www.progettosnaps.net/catver/'
     VERSION_PATTERN = r'pS_CatVer_([0-9]+).zip'
@@ -87,7 +87,6 @@ class GenreMetadata(ProgrettoSnapsMetadata):
 # Format: INI
 class RatingMetadata(ProgrettoSnapsMetadata):
     name = 'rating'
-    default_context = {'version': ''}
 
     SCRAPE_URL = 'https://www.progettosnaps.net/bestgames/'
     VERSION_PATTERN = r'pS_BestGames_([0-9]+).zip'
@@ -129,8 +128,8 @@ class ArcadeEmulatorMetadata(EmulatorMetadata):
                     # Not a valid row in the compatibility list
                     continue
 
-                rom = row[self.COLUMN_ROM]
+                name = row[self.COLUMN_ROM]
                 emulator = row[self.COLUMN_EMULATOR]
 
-                if rom not in self.emulators and not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
-                    self.emulators[rom] = emulator
+                if name not in self.emulators and not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
+                    self.emulators[name] = emulator

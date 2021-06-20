@@ -19,18 +19,21 @@ class Machine:
     def __init__(self,
         romset: ROMSet,
         name: str,
+
+        # Internal metadata
         description: str = '',
         orientation: str = 'horizontal',
         category: Optional[str] = None,
+        sourcefile: Optional[str] = None,
+        controls: Set[str] = None,
+
+        # File data
         parent_name: Optional[str] = None,
         bios_name: Optional[str] = None,
         sample_name: Optional[str] = None,
         device_names: Set[str] = None,
-        controls: Set[str] = None,
         roms: Set[File] = None,
         disks: Set[Disk] = None,
-        sourcefile: Optional[str] = None,
-        custom_context: dict = None,
 
         # External metadata
         genres: Set[str] = None,
@@ -38,23 +41,27 @@ class Machine:
         languages: Set[str] = None,
         rating: Optional[int] = None,
         emulator_rating: Optional[int] = None,
+
+        # Additional context to include when rendering resource paths
+        custom_context: dict = None,
     ) -> None:
         self.romset = romset
         self.name = name
+
+        # Internal metadata
         self.description = description
         self.orientation = orientation
         self.category = category
+        self.sourcefile = sourcefile
+        self.controls = controls or set()
+
+        # File data
         self.parent_name = parent_name
         self.bios_name = bios_name
         self.sample_name = sample_name
         self.device_names = device_names or set()
-        self.controls = controls or set()
-        self.disks = disks or set()
         self.roms = roms or set()
-        self.sourcefile = sourcefile
-        self.emulator = romset.emulator
-        self.favorite = False
-        self.custom_context = custom_context or {}
+        self.disks = disks or set()
 
         # External attributes
         self.genres = genres or set()
@@ -62,6 +69,11 @@ class Machine:
         self.languages = languages or set()
         self.rating = rating
         self.emulator_rating = emulator_rating
+
+        # Automatic defaults
+        self.emulator = romset.emulator
+        self.favorite = False
+        self.custom_context = custom_context or {}
 
     # Whether this machine is installable
     @staticmethod
@@ -170,14 +182,14 @@ class Machine:
     # Builds a title from the given name
     @classmethod
     def title_from(cls, name: str, disc: bool = False) -> str:
-        full_title = cls.TITLE_REGEX.search(name).group().strip()
+        title = cls.TITLE_REGEX.search(name).group().strip()
 
         if disc:
             disc_match = cls.DISC_REGEX.search(name)
             if disc_match:
-                full_title = f'{full_title} {disc_match.group().replace("0", "")}'
+                title = f'{title} {disc_match.group().replace("0", "")}'
 
-        return full_title
+        return title
 
     # Flags from description
     @property
@@ -289,7 +301,7 @@ class Machine:
 
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
-        return {
+        data = {
             'system': self.romset.system.name,
             'romset': self.romset.name,
 
@@ -299,16 +311,10 @@ class Machine:
             'title': self.title,
             'category': self.category,
 
-            # Parent
-            'parent': self.parent_name,
-            'parent_disc': self.parent_disc_title,
-            'parent_title': self.parent_title,
-
-            # Additional metadata
+            # ROM info
             'filesize': self.filesize,
             'description': self.description,
             'orientation': self.orientation,
-            'emulator': self.emulator,
 
             # User overrides
             'favorite': self.favorite,
@@ -318,8 +324,18 @@ class Machine:
             'collections': list(self.collections),
             'languages': list(self.languages),
             'rating': self.rating,
+            'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
         }
+
+        if self.parent_name:
+            data['parent'] = {
+                'name': self.parent_name,
+                'disc': self.parent_disc_title,
+                'title': self.parent_title
+            }
+
+        return data
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms

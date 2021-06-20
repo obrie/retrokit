@@ -114,7 +114,7 @@ class ROMSet:
                 if Machine.is_installable(element):
                     machine = Machine.from_xml(self, element)
                     machine.custom_context = self.system.context_for(machine)
-                    yield machine, element
+                    yield machine
                 else:
                     logging.debug(f"[{element.get('name')}] Ignored (not installable)")
                 

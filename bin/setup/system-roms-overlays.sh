@@ -148,7 +148,7 @@ EOF
     installed_files["$emulator_config_dir/$rom_name.cfg"]=1
     installed_files["$system_overlay_dir/$rom_name.cfg"]=1
     installed_files["$system_overlay_dir/$image_filename"]=1
-  done < <(romkit_cache_list | jq -r '[.name, .parent, .emulator, .orientation] | join("^")')
+  done < <(romkit_cache_list | jq -r '[.name, .parent.name, .emulator, .orientation] | join("^")')
 
   # Remove old, unused emulator overlay configs
   while read library_name; do

@@ -21,7 +21,7 @@ class MetadataSet:
     def append(self, metadata: ExternalMetadata) -> None:
         self.metadatas.append(metadata)
 
-    # Adds a new filter
+    # Updates the metadata on the given machine
     def update(self, machine: Machine) -> None:
         for metadata in self.metadatas:
             metadata.update(machine)

@@ -4,8 +4,6 @@ from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
 from romkit.systems.system_dir import SystemDir
 
-import romkit.filters
-
 import logging
 import os
 import time
@@ -97,7 +95,7 @@ class BaseSystem:
             # Machines that are installable or required by installable machines
             machines_to_track = set()
 
-            for (machine, xml) in romset.iter_machines():
+            for machine in romset.iter_machines():
                 # Set external emulator metadata
                 self.metadata_set.update(machine)
 
@@ -252,7 +250,7 @@ class BaseSystem:
                 installable_sample_names.add(machine.sample.name)
 
         for romset in self.iter_romsets():
-            for (machine, xml) in romset.iter_machines():
+            for machine in romset.iter_machines():
                 if machine.resource.target_path.path not in installable_machine_paths:
                     machine.purge()
 

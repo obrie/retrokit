@@ -116,7 +116,7 @@ class Scraper:
             roms_dir.mkdir()
 
         for romset in self.system.iter_romsets():
-            for (machine, xml) in romset.iter_machines():
+            for machine in romset.iter_machines():
                 # Ignore clones
                 if machine.parent_name or machine.title in self.title_scrapes:
                     continue
