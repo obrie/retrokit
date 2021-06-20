@@ -25,4 +25,4 @@ class EmulatorRatingMetadata(ExternalMetadata):
                 self.emulator_ratings[title] = int(rating)
 
     def update(self, machine: Machine) -> None:
-        machine.emulator_rating = self.emulator_ratings.get(machine.title)
+        machine.emulator_rating = self.emulator_ratings.get(machine.title) or self.emulator_ratings.get(machine.parent_title)

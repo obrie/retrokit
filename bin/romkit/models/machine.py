@@ -147,34 +147,35 @@ class Machine:
     def is_clone(self) -> bool:
         return self.parent_name is not None
 
-    # The name to use for grouping machines within a Parent/Clone relationship
-    @property
-    def group_title(self)-> str:
-        return self.parent_title or self.title
-
-    # The parent or machine name
-    @property
-    def group_name(self)-> str:
-        return self.parent_name or self.name
-
-    # Machine title (no extension, no flags except for disc name)
+    # Machine title (no extension, no flags), e.g. Chrono Cross
     @property
     def title(self) -> str:
         return self.title_from(self.name)
 
+    # Machine title (no extension, no flags except disc number), e.g. Chrono Cross (Disc 1)
+    @property
+    def disc_title(self) -> str:
+        return self.title_from(self.name, disc=True)
+
     # Parent machine title (no extension, no flags except for disc name)
     @property
     def parent_title(self) -> Optional[str]:
-        if self.parent_name:
-            return self.title_from(self.parent_name)
+        return self.parent_name and self.title_from(self.parent_name)
+
+    # Parent machine title (no extension, no flags except for disc name)
+    @property
+    def parent_disc_title(self) -> Optional[str]:
+        return self.parent_name and self.title_from(self.parent_name, disc=True)
 
     # Builds a title from the given name
-    def title_from(self, name: str) -> str:
-        full_title = self.TITLE_REGEX.search(name).group().strip()
+    @classmethod
+    def title_from(cls, name: str, disc: bool = False) -> str:
+        full_title = cls.TITLE_REGEX.search(name).group().strip()
 
-        disc_match = self.DISC_REGEX.search(name)
-        if disc_match:
-            full_title = f'{full_title} {disc_match.group().replace("0", "")}'
+        if disc:
+            disc_match = cls.DISC_REGEX.search(name)
+            if disc_match:
+                full_title = f'{full_title} {disc_match.group().replace("0", "")}'
 
         return full_title
 
@@ -291,13 +292,25 @@ class Machine:
         return {
             'system': self.romset.system.name,
             'romset': self.romset.name,
+
+            # Taxonomy
             'name': self.name,
-            'filesize': self.filesize,
+            'disc': self.disc_title,
+            'title': self.title,
             'category': self.category,
-            'description': self.description,
+
+            # Parent
             'parent': self.parent_name,
-            'emulator': self.emulator,
+            'parent_disc': self.parent_disc_title,
+            'parent_title': self.parent_title,
+
+            # Additional metadata
+            'filesize': self.filesize,
+            'description': self.description,
             'orientation': self.orientation,
+            'emulator': self.emulator,
+
+            # User overrides
             'favorite': self.favorite,
 
             # External metadata

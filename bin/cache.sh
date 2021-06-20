@@ -54,9 +54,11 @@ main() {
 
     if [ -z "$system" ] || [ "$system" == 'all' ]; then
       while read system; do
+        print_heading "Running $action for $system (${@:3})"
         "$action" "$system" "${@:3}"
       done < <(setting '.systems[] | select(. != "ports")')
     else
+      print_heading "Running $action for $system (${@:3})"
       "$action" "$system" "${@:3}"
     fi
   else

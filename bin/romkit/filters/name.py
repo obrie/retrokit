@@ -17,4 +17,4 @@ class TitleFilter(ExactFilter):
     name = 'titles'
 
     def values(self, machine: Machine) -> Set[str]:
-        return {machine.title}
+        return {machine.title, machine.disc_title}

@@ -6,8 +6,12 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # Install playlists for multi-disc roms
 install() {
   if [ ! -d "$HOME/RetroPie/roms/$system" ]; then
-    # No roms installed
     echo 'No ROMs to install playlists for'
+    return
+  fi
+
+  if [ $(setting ".playlists.enabled") != 'true' ]; then
+    echo 'Playlists not supported'
     return
   fi
 
@@ -30,6 +34,12 @@ install() {
     echo "Adding $rom_filename to $playlist_path"
     echo "$rom_filename" >> "$playlist_path"
     installed_files["$playlist_path"]=1
+
+    # Remove from the filesystem (safety guard in place to ensure it's a
+    # symlink)
+    if [ -L "$rom_path" ]; then
+      rm "$rom_path"
+    fi
   done < <(find "$HOME/RetroPie/roms/$system" -type l -name "*(Disc *" | sort)
 
   # Remove playlists we no longer needed

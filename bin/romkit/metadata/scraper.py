@@ -18,7 +18,9 @@ class ScraperMetadata(ExternalMetadata):
             self.metadata = json.load(file)
 
     def update(self, machine: Machine) -> None:
-        data = self.metadata.get(machine.group_name)
+        # We look at both self and parent just in case there's an override for
+        # a clone or the parent/clone hierarchy has changed
+        data = self.metadata.get(machine.title) or self.metadata.get(machine.parent_title)
         if data:
             if 'genres' in data:
                 machine.genres.update(data['genres'])

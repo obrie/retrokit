@@ -110,10 +110,11 @@ class BaseSystem:
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Group the machine based on its parent/self title (no flags).
-                    # We can't rely on the name because not all DATs for rom sets
-                    # have Parent/Child relationships defined.
-                    group = machine.group_title
+                    # Group the machine based on its parent/self title (w/ disc).
+                    # We don't want to rely on the group name because (a) we don't always
+                    # have a Parent/Clone relationship map and (b) the flags are
+                    # less stable.
+                    group = machine.parent_disc_title or machine.disc_title
 
                     # Force the machine to be installed if it was allowed by an override
                     if allow_reason == FilterReason.OVERRIDE:

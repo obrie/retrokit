@@ -20,15 +20,19 @@ class ParentMetadata(ExternalMetadata):
         with self.install_path.open() as f:
             data = json.loads(f.read())
             for parent_name, clone_names in data['renames'].items():
-                parent_group = Machine.title_from(Machine, parent_name)
+                parent_group = Machine.title_from(parent_name, disc=True)
 
+                # Map each clone to the parent via the disc title
                 for (clone_name, other) in clone_names:
-                    self.custom_groups[Machine.title_from(Machine, clone_name)] = parent_group
+                    self.custom_groups[Machine.title_from(clone_name, disc=True)] = parent_group
 
     def update(self, machine: Machine) -> None:
-        group = self.custom_groups.get(machine.title) or machine.title
+        group = self.custom_groups.get(machine.disc_title) or machine.disc_title
+
+        # If the group isn't already tracked, then we know this is the primary parent
         if group not in self.group_parents:
             self.group_parents[group] = machine.name
 
+        # Only attach a parent if it's different from this machine
         if not machine.parent_name and self.group_parents[group] != machine.name:
             machine.parent_name = self.group_parents[group]
