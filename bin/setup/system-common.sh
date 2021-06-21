@@ -183,3 +183,12 @@ load_emulator_data() {
 get_core_library_names() {
   system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name'
 }
+
+##############
+# Playlists
+##############
+
+get_playlist_name() {
+  local rom_name=$1
+  echo "${rom_name// (Disc [0-9A-Z]*)/}"
+}

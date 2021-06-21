@@ -23,27 +23,26 @@ install() {
 
   # Restore previously deleted ROMs
   while read -r backup_path; do
-    restore "${backup_path//.rk-src/}"
+    restore "${backup_path//.rk-src/}" delete_src=true
   done < <(find_in_directories '*.rk-src')
 
-  echo 'Looking for multi-disc ROMs...'
+  # Remove existing playlists
+  while read path; do
+    rm -v "$path"
+  done < <(find_in_directories '*.m3u')
+
+  echo 'Creating playlists...'
   declare -A installed_files
   while read -r rom_path; do
+    # Get playlist path
     local rom_filename=$(basename "$rom_path")
-
-    # Generate the playlist path
-    local base_path="${rom_path// (Disc [0-9]*)/}"
-    local base_filename=$(basename "$base_path")
-    local playlist_path="$(dirname "$base_path")/${base_filename%%.*}.m3u"
-
-    # Reset if we're on the first disc
-    if [[ "$rom_filename"  == *'(Disc 1)'* ]]; then
-      truncate -s0 "$playlist_path"
-    fi
+    local rom_name=${rom_filename%%.*}
+    local playlist_name=$(get_playlist_name "$rom_name")
+    local playlist_path="$(dirname "$rom_path")/$playlist_name.m3u"
 
     # Add to the playlist
-    echo "Adding $rom_filename to $playlist_path"
-    echo "$rom_filename" >> "$playlist_path"
+    echo "Adding $rom_path to $playlist_path"
+    echo "$rom_path" >> "$playlist_path"
     installed_files["$playlist_path"]=1
 
     # Remove from the filesystem (safety guard in place to ensure it's a
@@ -53,11 +52,6 @@ install() {
       rm -v "$rom_path"
     fi
   done < <(find_in_directories '*(Disc *')
-
-  # Remove playlists we no longer needed
-  while read path; do
-    [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find_in_directories '*.m3u')
 }
 
 uninstall() {
@@ -66,7 +60,7 @@ uninstall() {
   done < <(find_in_directories '*.m3u')
 
   while read -r backup_path; do
-    restore "${backup_path//.rk-src/}"
+    restore "${backup_path//.rk-src/}" delete_src=true
   done < <(find_in_directories '*.rk-src')
 }
 
