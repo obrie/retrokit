@@ -6,7 +6,7 @@
 * Everything is scripted, so transferring ROMs is easy
 * Using MicroSD frees up a USB port and bus speed
 * Cost is somewhat similar
-* Compatiblity is not an issue
+* Compatibility is not an issue
 * Data will be backed up and stored elsewhere 
 
 ## References
