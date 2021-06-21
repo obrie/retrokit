@@ -1,7 +1,4 @@
 # Fix HDMI settings being misinterpreted, e.g. when using an Argon1 case
-#hdmi_force_hotplug=1
-#hdmi_group=1
-#hdmi_mode=16
 hdmi_ignore_edid=0xa5000080
 
 # Disable 4k output to improve performance
