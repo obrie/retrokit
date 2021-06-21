@@ -44,7 +44,7 @@ install_emulator_selections() {
     # at the end of this
     installed_keys["$config_key"]=1
     selections_cfg+="$config_key = \"$target_emulator\"\n"
-  done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
+  done < <(romkit_cache_list | jq -r 'select(.emulator) | [.name, .emulator] | @tsv')
 
   # Add emulator selections for roms with an explicit one
   echo 'Adding emulator selections...'
