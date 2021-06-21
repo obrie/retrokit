@@ -10,10 +10,12 @@ install() {
     return
   fi
 
-  if [ $(setting ".playlists.enabled") != 'true' ]; then
+  if [ $(system_setting '.playlists.enabled') != 'true' ]; then
     echo 'Playlists not supported'
     return
   fi
+
+  local show_discs=$(system_setting '.playlists.show_discs')
 
   echo 'Looking for multi-disc ROMs...'
   declare -A installed_files
@@ -37,7 +39,7 @@ install() {
 
     # Remove from the filesystem (safety guard in place to ensure it's a
     # symlink)
-    if [ -L "$rom_path" ]; then
+    if [ "$show_discs" != 'true' ] && [ -L "$rom_path" ]; then
       rm "$rom_path"
     fi
   done < <(find "$HOME/RetroPie/roms/$system" -type l -name "*(Disc *" | sort)
