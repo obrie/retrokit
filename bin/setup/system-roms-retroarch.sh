@@ -15,16 +15,19 @@ find_overrides() {
     # Load core/library info for the emulators
     load_emulator_data
 
-    while IFS="^" read rom_name parent_name emulator; do
+    declare -A playlists
+
+    while IFS='^' read rom_name disc title parent_name parent_disc parent_title emulator; do
       emulator=${emulator:-default}
 
       # Find a file for either the rom or its parent
       local override_file=""
-      if [ -f "$system_config_dir/retroarch/$rom_name.$extension" ]; then
-        override_file="$system_config_dir/retroarch/$rom_name.$extension"
-      elif [ -f "$system_config_dir/retroarch/$parent_name.$extension" ]; then
-        override_file="$system_config_dir/retroarch/$parent_name.$extension"
-      fi
+      for filename in "$rom_name" "$disc" "$title" "$parent_name" "$parent_disc" "$parent_title"; do
+        if [ -f "$system_config_dir/retroarch/$filename.$extension" ]; then
+          override_file="$system_config_dir/retroarch/$filename.$extension"
+          break
+        fi
+      done
 
       if [ -n "$override_file" ]; then
         # Look up emulator attributes as those are the important ones
@@ -34,10 +37,21 @@ find_overrides() {
 
         # Make sure this is a libretro core
         if [ -n "$core_name" ] && [ -n "$library_name" ]; then
-          echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
+          if has_disc_config "$rom_name"; then
+            # Generate a config for either a single-disc game or, if configured,
+            # individual discs
+            echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
+          fi
+
+          # Generate a config for the playlist (if applicable)
+          local playlist_name=$(get_playlist_name "$rom_name")
+          if has_playlist_config "$rom_name" && [ ! "${playlists["$playlist_name"]}" ]
+            playlists["$playlist_name"]=1
+            echo "$playlist_name$tab$override_file$tab$core_name$tab$library_name"
+          fi
         fi
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .parent.name, .emulator] | join("^")')
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .parent.name, .parent.disc, .parent.title, .emulator] | join("^")')
   fi
 }
 
@@ -120,7 +134,7 @@ install_retroarch_configs() {
   declare -A installed_files
   while IFS="$tab" read rom_name override_file core_name library_name; do
     while read rom_dir; do
-      if ls $rom_dir/$rom_name.* >/dev/null 2>&1; then
+      if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
         local target_file="$rom_dir/$rom_name.cfg"
 
         ini_merge "$override_file" "$target_file"

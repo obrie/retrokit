@@ -188,6 +188,28 @@ get_core_library_names() {
 # Playlists
 ##############
 
+is_multidisc() {
+  [[ "$1"  == *'(Disc '* ]]
+}
+
+supports_playlists() {
+  [ "$(system_setting '.playlists.enabled')" == 'true' ]
+}
+
+show_discs() {
+  [ "$(system_setting '.playlists.show_discs')" == 'true' ]
+}
+
+has_disc_config() {
+  local rom_name=$1
+  ! supports_playlists || ! is_multidisc "$rom_name" || show_discs
+}
+
+has_playlist_config() {
+  local rom_name=$1
+  supports_playlists &&  is_multidisc "$rom_name"
+}
+
 get_playlist_name() {
   local rom_name=$1
   echo "${rom_name// (Disc [0-9A-Z]*)/}"
