@@ -15,7 +15,7 @@ find_overrides() {
     # Load core/library info for the emulators
     load_emulator_data
 
-    declare -A playlists
+    declare -A installed_playlists
 
     while IFS='^' read rom_name disc title parent_name parent_disc parent_title emulator; do
       emulator=${emulator:-default}
@@ -45,8 +45,8 @@ find_overrides() {
 
           # Generate a config for the playlist (if applicable)
           local playlist_name=$(get_playlist_name "$rom_name")
-          if has_playlist_config "$rom_name" && [ ! "${playlists["$playlist_name"]}" ]
-            playlists["$playlist_name"]=1
+          if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+            installed_playlists["$playlist_name"]=1
             echo "$playlist_name$tab$override_file$tab$core_name$tab$library_name"
           fi
         fi

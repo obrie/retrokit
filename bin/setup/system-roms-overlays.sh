@@ -127,7 +127,7 @@ EOF
     download "$url" "$system_overlay_dir/$image_filename"
 
     # Check if this is a lightgun game that needs special processing
-    if [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && [ "${lightgun_titles["$rom_title"]}" ]; then
+    if [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ] && [ "${lightgun_titles["$rom_title"]}" ]; then
       outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$group_name-lightgun.png"
 
       # Track the old file and update it to the lightgun version
