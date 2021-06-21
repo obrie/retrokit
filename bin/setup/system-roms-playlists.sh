@@ -3,6 +3,10 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+find_in_directories() {
+  system_setting '.roms.dirs[] | .path' | xargs -I{} find "{}" -mindepth 1 -maxdepth 1 -name "$1" 2>/dev/null
+}
+
 # Install playlists for multi-disc roms
 install() {
   if [ ! -d "$HOME/RetroPie/roms/$system" ]; then
@@ -16,6 +20,11 @@ install() {
   fi
 
   local show_discs=$(system_setting '.playlists.show_discs')
+
+  # Restore previously deleted ROMs
+  while read -r backup_path; do
+    restore "${backup_path//.rk-src/}"
+  done < <(find_in_directories '*.rk-src')
 
   echo 'Looking for multi-disc ROMs...'
   declare -A installed_files
@@ -40,20 +49,25 @@ install() {
     # Remove from the filesystem (safety guard in place to ensure it's a
     # symlink)
     if [ "$show_discs" != 'true' ] && [ -L "$rom_path" ]; then
-      rm "$rom_path"
+      backup "$rom_path"
+      rm -v "$rom_path"
     fi
-  done < <(find "$HOME/RetroPie/roms/$system" -type l -name "*(Disc *" | sort)
+  done < <(find_in_directories '*(Disc *')
 
   # Remove playlists we no longer needed
   while read path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$HOME/RetroPie/roms/$system" -name '*.m3u')
+  done < <(find_in_directories '*.m3u')
 }
 
 uninstall() {
-  if [ -d "$HOME/RetroPie/roms/$system" ]; then
-    find "$HOME/RetroPie/roms/$system" -name '*.m3u' -exec rm -fv "{}" \;
-  fi
+  while read path; do
+    rm -fv "$path"
+  done < <(find_in_directories '*.m3u')
+
+  while read -r backup_path; do
+    restore "${backup_path//.rk-src/}"
+  done < <(find_in_directories '*.rk-src')
 }
 
 "$1" "${@:3}"

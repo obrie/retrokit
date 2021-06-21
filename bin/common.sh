@@ -70,7 +70,7 @@ backup() {
   if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
     # Use a different file to indicate that we're backing up a non-existent file
     if [ -f "$file" ]; then
-      $cmd cp -pv "$file" "$backup_file"
+      $cmd cp -Ppv "$file" "$backup_file"
     else
       echo "Backing up: $file to $backup_file.missing"
       $cmd mkdir -p "$(dirname "$backup_file")"
@@ -102,7 +102,7 @@ restore() {
     fi
 
     if [ -f "$backup_file" ]; then
-      $cmd cp -pv "$backup_file" "$file"
+      $cmd cp -Ppv "$backup_file" "$file"
 
       if [ "$delete_src" == 'true' ]; then
         $cmd rm -fv "$backup_file"
