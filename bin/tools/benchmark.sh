@@ -15,8 +15,8 @@ usage() {
 run() {
   local mode=$1
 
-  sysbench --test=cpu --num-threads=4 run > $tmp_dir/$mode-benchmark.txt
-  cat $tmp_dir/$mode-benchmark.txt
+  sysbench --test=cpu --num-threads=4 run > "$tmp_ephemeral_dir/$mode-benchmark.txt"
+  cat "$tmp_ephemeral_dir/$mode-benchmark.txt"
   vcgencmd measure_temp
 }
 

@@ -80,9 +80,9 @@ add_disc_numbers() {
         # Update the title to include the disc number
         local new_title="$scraped_title - $disc_id"
         echo "Updating $name scraped title from \"$scraped_title\" to \"$new_title\""
-        echo "$(basename "$path")" > "$tmp_dir/scraper.input"
-        echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_dir/scraper.input"
-        rm -f "$tmp_dir/scraper.input"
+        echo "$(basename "$path")" > "$tmp_ephemeral_dir/scraper.input"
+        echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_ephemeral_dir/scraper.input"
+        rm -f "$tmp_ephemeral_dir/scraper.input"
       fi
     done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .path] | join("^")')
   fi

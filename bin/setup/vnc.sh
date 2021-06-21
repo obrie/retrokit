@@ -10,9 +10,9 @@ install() {
     sudo apt install -y libvncserver-dev libconfig++-dev
 
     # Check out
-    rm -rf "$tmp_dir/dispmanx_vnc"
-    git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_dir/dispmanx_vnc"
-    pushd "$tmp_dir/dispmanx_vnc"
+    rm -rf "$tmp_ephemeral_dir/dispmanx_vnc"
+    git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_ephemeral_dir/dispmanx_vnc"
+    pushd "$tmp_ephemeral_dir/dispmanx_vnc"
     version=$(git rev-parse HEAD)
 
     # Apply patches
@@ -36,7 +36,7 @@ install() {
 
     # Clean up
     popd
-    rm -rf $tmp_dir/dispmanx_vnc
+    rm -rf "$tmp_ephemeral_dir/dispmanx_vnc"
   else
     echo "dispmanx_vnc already the newest version ($version)"
   fi

@@ -19,21 +19,21 @@ install_deps() {
 install_software() {
   local sinden_version="$(cat /opt/retropie/supplementary/sinden/version 2>/dev/null || true)"
   if [ "$sinden_version" != "$version" ]; then
-    rm -rf "$tmp_dir/$archive_name"
+    rm -rf "$tmp_ephemeral_dir/$archive_name"
     sudo rm -rf "$install_dir"
 
     # Download
-    download "https://www.sindenlightgun.com/software/$archive_name.zip" "$tmp_dir/sinden.zip"
-    unzip "$tmp_dir/sinden.zip" "$archive_name/$rpi_dir/*" -d "$tmp_dir/"
+    download "https://www.sindenlightgun.com/software/$archive_name.zip" "$tmp_ephemeral_dir/sinden.zip"
+    unzip "$tmp_ephemeral_dir/sinden.zip" "$archive_name/$rpi_dir/*" -d "$tmp_ephemeral_dir/"
 
     # Copy drivers
     sudo mkdir -pv "$install_dir"
-    sudo cp -Rv "$tmp_dir/$archive_name/$rpi_dir/Player"* "$install_dir"
+    sudo cp -Rv "$tmp_ephemeral_dir/$archive_name/$rpi_dir/Player"* "$install_dir"
     echo "$version" | sudo tee /opt/retropie/supplementary/sinden/version
 
     # Clean up
-    rm -rf "$tmp_dir/$archive_name"
-    rm -f "$tmp_dir/sinden.zip"
+    rm -rf "$tmp_ephemeral_dir/$archive_name"
+    rm -f "$tmp_ephemeral_dir/sinden.zip"
   fi
 }
 

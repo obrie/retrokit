@@ -17,9 +17,9 @@ install() {
   local raspi2png_version="$(cat /etc/raspi2png.version 2>/dev/null || true)"
   if [ ! `command -v raspi2png` ] || has_newer_commit https://github.com/AndrewFromMelbourne/raspi2png "$raspi2png_version"; then
     # Check out
-    rm -rf "$tmp_dir/raspi2png"
-    git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git "$tmp_dir/raspi2png"
-    pushd "$tmp_dir/raspi2png"
+    rm -rf "$tmp_ephemeral_dir/raspi2png"
+    git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git "$tmp_ephemeral_dir/raspi2png"
+    pushd "$tmp_ephemeral_dir/raspi2png"
     raspi2png_version=$(git rev-parse HEAD)
 
     # Compile
@@ -29,7 +29,7 @@ install() {
 
     # Clean up
     popd
-    rm -rf "$tmp_dir/raspi2png"
+    rm -rf "$tmp_ephemeral_dir/raspi2png"
   else
     echo "raspi2png is already the newest version ($raspi2png_version)"
   fi
