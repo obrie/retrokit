@@ -24,7 +24,7 @@
     "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
   },
   "playlists": {
-    "enabled": false
+    "enabled": true
   },
   "cheats": {
     "name": "Sega - Dreamcast"
@@ -69,13 +69,25 @@
     },
     "emulator": {
       "overrides": {
+        "# Lightgun Games": "",
         "Confidential Mission": "lr-flycast",
         "Death Crimson 2": "lr-flycast",
         "Death Crimson OX": "lr-flycast",
         "Demolition Racer - No Exit": "lr-flycast",
         "House of the Dead 2, The": "lr-flycast",
         "Silent Scope": "lr-flycast",
-        "Virtua Cop": "lr-flycast"
+        "Virtua Cop": "lr-flycast",
+        "# Multi-Disc Games": "",
+        "Alone in the Dark - The New Nightmare": "lr-flycast",
+        "D2": "lr-flycast",
+        "Deep Fighter": "lr-flycast",
+        "Headhunter": "lr-flycast",
+        "Resident Evil - Code - Veronica": "lr-flycast",
+        "Resident Evil 2": "lr-flycast",
+        "Shenmue": "lr-flycast",
+        "Shenmue II": "lr-flycast",
+        "Skies of Arcadia": "lr-flycast",
+        "Stupid Invaders": "lr-flycast"
       }
     }
   },
