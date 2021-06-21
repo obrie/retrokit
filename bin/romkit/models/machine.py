@@ -312,6 +312,7 @@ class Machine:
             'category': self.category,
 
             # ROM info
+            'path': str(self.resource.target_path.path),
             'filesize': self.filesize,
             'description': self.description,
             'orientation': self.orientation,

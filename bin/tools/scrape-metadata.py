@@ -108,6 +108,9 @@ class Scraper:
         self.build_gamelist()
         self.output_metadata()
 
+        # Clean up
+        self.scraper_config_path.unlink()
+
     # Scrape all games for the current system that we don't already have
     def scrape(self) -> None:
         # Path to store the files skyscraper will be looking at

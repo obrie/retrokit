@@ -57,31 +57,34 @@ scrape_new() {
 }
 
 add_disc_numbers() {
+  # Remove existing disc numbers
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
+
   if [ "$(system_setting '.playlists.enabled')" != 'true' ] && [ $(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets') == '"false"' ]; then
     # Playlists are disabled and flags are configured to *not* be included in the
     # display name.  In order to differentiate between different discs within a
     # game, we need to manually specify the title with the disc number.
-    while read name title disc_title; do
+    while IFS='^' read name disc_title title path; do
       if [[ "$disc_title" == *Disc* ]]; then
         # Find the skyscraper id
-        local quickid_config=$(grep "$name" "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | head -n 1 | xmlstarlet sel -t -v '*/@id')
+        local quickid_config=$(grep "$name" "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | head -n 1)
         if [ -z "$quickid_config" ]; then
           continue
         fi
         local quickid=$(echo "$quickid_config" | xmlstarlet sel -t -v '*/@id')
-        local filepath=$(echo "$quickid_config" | xmlstarlet sel -t -v '*/@path')
 
         # Find the scraped title
-        local scraped_title=$(grep $quickid /opt/retropie/configs/all/skyscraper/cache/$system/db.xml | grep 'type="title"' | grep -v 'source="user"' | head -n 1 | xmlstarlet sel -t -v '.' || echo "$title")
-        local disc_id=$(echo "$disc_title" | grep -oE 'Disc[^\)]+')
+        local scraped_title=$(grep $quickid /opt/retropie/configs/all/skyscraper/cache/$system/db.xml | grep 'type="title"' | grep -v 'source="user"' | head -n 1 | xmlstarlet sel -t -v '.' 2>/dev/null || echo "$title")
+        local disc_id=$(echo "$path" | grep -oE 'Disc[^\)]+')
 
         # Update the title to include the disc number
         local new_title="$scraped_title - $disc_id"
-        echo "Updating $name scraped title from \"$scraped_title\" to \"new_title\""
-        echo "$filepath" > "$tmp_dir/scraper.input"
+        echo "Updating $name scraped title from \"$scraped_title\" to \"$new_title\""
+        echo "$(basename "$path")" > "$tmp_dir/scraper.input"
         echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_dir/scraper.input"
+        rm -f "$tmp_dir/scraper.input"
       fi
-    done < <(romkit_cache_list | jq -r '[.name .disc_title] | join("^")'.name )
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .path] | join("^")')
   fi
 }
 
