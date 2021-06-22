@@ -11,7 +11,7 @@ install_config() {
 install_emulator_config() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 
-  while read library_name; do
+  while read -r library_name; do
     local source_path="$system_config_dir/retroarch/$library_name/$library_name.cfg"
     local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
 
@@ -66,7 +66,7 @@ uninstall() {
 
   # Restore emulator-specific retroarch configs
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
-  while read library_name; do
+  while read -r library_name; do
     restore "$retroarch_config_dir/$library_name/$library_name.cfg" delete_src=true
   done < <(get_core_library_names)
 

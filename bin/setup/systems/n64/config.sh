@@ -13,7 +13,7 @@ install() {
   backup "$target_inputs_file"
 
   echo "Merging ini $source_inputs_file to $target_inputs_file"
-  while IFS= read section_name; do
+  while IFS= read -r section_name; do
     if grep -q "\[$section_name\]" "$target_inputs_file"; then
       # The section already exists -- we can just do a direct merge
       crudini --merge --inplace "$target_inputs_file" "$section_name" < "$system_config_dir/InputAutoCfg.ini"

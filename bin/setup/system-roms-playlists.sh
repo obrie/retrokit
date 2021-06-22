@@ -27,7 +27,7 @@ install() {
   done < <(find_in_directories '*.rk-src')
 
   # Remove existing playlists
-  while read path; do
+  while read -r path; do
     rm -v "$path"
   done < <(find_in_directories '*.m3u')
 
@@ -55,7 +55,7 @@ install() {
 }
 
 uninstall() {
-  while read path; do
+  while read -r path; do
     rm -fv "$path"
   done < <(find_in_directories '*.m3u')
 

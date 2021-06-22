@@ -64,7 +64,7 @@ add_disc_numbers() {
     # Playlists are disabled and flags are configured to *not* be included in the
     # display name.  In order to differentiate between different discs within a
     # game, we need to manually specify the title with the disc number.
-    while IFS='^' read name disc_title title path; do
+    while IFS=» read -r name disc_title title path; do
       if [[ "$disc_title" == *Disc* ]]; then
         # Find the skyscraper id
         local quickid_config=$(grep "$name" "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | head -n 1)
@@ -84,7 +84,7 @@ add_disc_numbers() {
         echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_ephemeral_dir/scraper.input"
         rm -f "$tmp_ephemeral_dir/scraper.input"
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .path] | join("^")')
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .path] | join("»")')
   fi
 }
 

@@ -36,7 +36,7 @@ install_emulator_selections() {
   # Identify new emulator selections
   declare -A installed_keys
   local selections_cfg=''
-  while IFS="$tab" read -r rom_name source_emulator; do
+  while IFS=$'\t' read -r rom_name source_emulator; do
     local target_emulator=${emulators["$source_emulator/emulator"]:-$source_emulator}
     local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
 
@@ -52,7 +52,7 @@ install_emulator_selections() {
 
   # Remove emulator selections for roms without one
   echo 'Removing unused emulator selections...'
-  while read config_key; do
+  while read -r config_key; do
     [ "${installed_keys["$config_key"]}" ] || crudini --del "$emulators_config_file" '' "$config_key"
   done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
 }

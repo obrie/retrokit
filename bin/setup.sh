@@ -29,7 +29,7 @@ setup_all() {
     modules=$(setting '.setup | reverse[]')
   fi
 
-  while read -r setupmodule; do
+  while read setupmodule; do
     setup "$action" "$setupmodule"
   done < <(echo "$modules")
 }

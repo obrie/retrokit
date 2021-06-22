@@ -17,7 +17,7 @@ find_overrides() {
 
     declare -A installed_playlists
 
-    while IFS='^' read rom_name disc title parent_name parent_disc parent_title emulator; do
+    while IFS=» read -r rom_name disc title parent_name parent_disc parent_title emulator; do
       emulator=${emulator:-default}
 
       # Find a file for either the rom or its parent
@@ -40,18 +40,18 @@ find_overrides() {
           if has_disc_config "$rom_name"; then
             # Generate a config for either a single-disc game or, if configured,
             # individual discs
-            echo "$rom_name$tab$override_file$tab$core_name$tab$library_name"
+            echo "$rom_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
           fi
 
           # Generate a config for the playlist (if applicable)
           local playlist_name=$(get_playlist_name "$rom_name")
           if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
             installed_playlists["$playlist_name"]=1
-            echo "$playlist_name$tab$override_file$tab$core_name$tab$library_name"
+            echo "$playlist_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
           fi
         fi
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .parent.name, .parent.disc, .parent.title, .emulator] | join("^")')
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .parent.name, .parent.disc, .parent.title, .emulator] | join("»")')
   fi
 }
 
@@ -61,7 +61,7 @@ install_retroarch_core_options() {
   local core_options_path=$(get_retroarch_path 'core_options_path')
 
   declare -A installed_files
-  while IFS="$tab" read rom_name override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -82,10 +82,10 @@ install_retroarch_core_options() {
   done < <(find_overrides 'opt')
 
   # Remove old, unused emulator overlay configs
-  while read library_name; do
+  while read -r library_name; do
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
-    while read path; do
+    while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_config_dir/$library_name" -name '*.opt')
   done < <(get_core_library_names)
@@ -105,7 +105,7 @@ install_retroarch_core_options() {
 # Games-specific controller mapping overrides
 install_retroarch_remappings() {
   declare -A installed_files
-  while IFS="$tab" read rom_name override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
     # Emulator-specific remapping directory
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     mkdir -p "$emulator_remapping_dir"
@@ -115,10 +115,10 @@ install_retroarch_remappings() {
   done < <(find_overrides 'rmp')
 
   # Remove unused remappings
-  while read library_name; do
+  while read -r library_name; do
     [ ! -d "$retroarch_remapping_dir/$library_name" ] && continue
 
-    while read path; do
+    while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp')
   done < <(get_core_library_names)
@@ -132,8 +132,8 @@ install_retroarch_configs() {
   fi
 
   declare -A installed_files
-  while IFS="$tab" read rom_name override_file core_name library_name; do
-    while read rom_dir; do
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+    while read -r rom_dir; do
       if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
         local target_file="$rom_dir/$rom_name.cfg"
 
@@ -144,8 +144,8 @@ install_retroarch_configs() {
   done < <(find_overrides 'cfg')
 
   # Remove unused configs
-  while read rom_dir; do
-    while read rom_path; do
+  while read -r rom_dir; do
+    while read -r rom_path; do
       [ "${installed_files["$rom_path"]}" ] || rm -v "$rom_path"
     done < <(find "$rom_dir" -maxdepth 1 -name '*.cfg')
   done < <(echo "$rom_dirs")
@@ -158,7 +158,7 @@ install() {
 }
 
 uninstall() {
-  while read library_name; do
+  while read -r library_name; do
     # Remove core options
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     if [ -d "$emulator_config_dir" ]; then
@@ -173,7 +173,7 @@ uninstall() {
   done < <(get_core_library_names)
 
   # Remove retroarch configs
-  while read rom_dir; do
+  while read -r rom_dir; do
     find "$rom_dir" -maxdepth 1 -name '*.cfg' -o -name '*.cfg.rk-src*' -exec rm -fv "{}" \;
   done < <(system_setting '.roms.dirs[] | .path')
 }

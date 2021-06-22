@@ -21,7 +21,6 @@ trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
 # Settings
 export settings_file="$app_dir/config/settings.json"
-export tab=$'\t'
 
 # Optional env for secrets
 if [ -f "$app_dir/.env" ]; then
@@ -140,7 +139,7 @@ env_merge() {
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
   echo "Merging env $source to $target"
-  while IFS="$tab" read -r env_line; do
+  while read -r env_line; do
     if [ "$as_sudo" == 'true' ]; then
       sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
     else

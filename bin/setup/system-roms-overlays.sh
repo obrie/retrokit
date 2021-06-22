@@ -42,7 +42,7 @@ install() {
   # Get the list of overlay images available in each repo
   echo "Loading list of available overlays..."
   declare -A overlay_urls
-  while IFS='^' read repo branch rom_images_path vertical_image_path ; do
+  while IFS=» read -r repo branch rom_images_path vertical_image_path; do
     branch=${branch:-master}
     if [ -n "$vertical_image_path" ]; then
       supports_vertical_overlays=true
@@ -59,7 +59,7 @@ install() {
       call_github_api "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_path"
     fi
 
-    while IFS="$tab" read rom_name encoded_rom_name ; do
+    while IFS=$'\t' read -r rom_name encoded_rom_name ; do
       # Generate a unique identifier for this rom
       local rom_id=$(normalize_rom_name "$rom_name")
 
@@ -67,18 +67,18 @@ install() {
         overlay_urls["$rom_id"]="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
       fi
     done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
-  done < <(system_setting '.overlays.repos[] | [.repo, .branch, .path, .vertical] | join("^")')
+  done < <(system_setting '.overlays.repos[] | [.repo, .branch, .path, .vertical] | join("»")')
 
   # Get the list of lightgun games for when we need to use a different type of overlay
   declare -A lightgun_titles
-  while read rom_title; do
+  while read -r rom_title; do
     lightgun_titles["$rom_title"]=1
-  done < <(grep -E "^$system$tab" "$config_dir/emulationstation/collections/custom-lightguns.tsv" | cut -d"$tab" -f 2)
+  done < <(grep -E "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv" | cut -d$'\t' -f 2)
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
   declare -A installed_files
-  while IFS='^' read rom_name parent_name emulator orientation; do
+  while IFS=» read -r rom_name parent_name emulator orientation; do
     local rom_title=${rom_name%% (*}
     local group_name=${parent_name:-$rom_name}
     emulator=${emulator:-default}
@@ -148,19 +148,19 @@ EOF
     installed_files["$emulator_config_dir/$rom_name.cfg"]=1
     installed_files["$system_overlay_dir/$rom_name.cfg"]=1
     installed_files["$system_overlay_dir/$image_filename"]=1
-  done < <(romkit_cache_list | jq -r '[.name, .parent.name, .emulator, .orientation] | join("^")')
+  done < <(romkit_cache_list | jq -r '[.name, .parent.name, .emulator, .orientation] | join("»")')
 
   # Remove old, unused emulator overlay configs
-  while read library_name; do
+  while read -r library_name; do
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
-    while read path; do
+    while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' | grep -v "$library_name.cfg")
   done < <(get_core_library_names)
 
   # Remove old, unused system overlay configs
-  while read path; do
+  while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$system_overlay_dir" -name '*.cfg' -o -name '*.png')
 }

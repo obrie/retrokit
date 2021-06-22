@@ -50,7 +50,7 @@ install_config() {
   fi
 
   echo "Merging config $source to $target"
-  while IFS=',' read key value; do
+  while IFS=$'\t' read -r key value; do
     local xpath="/configuration/appSettings/add[@key=\"$key\"]"
 
     if xmlstarlet select -Q -t -m "$xpath" -c . "$target"; then
@@ -65,7 +65,7 @@ install_config() {
         -i '$config' -t attr -n value -v "$value" \
         "$target"
     fi
-  done < <(xmlstarlet select -t -m '/configuration/appSettings/add' -v 'concat(@key, ",", @value)' -n "$source")
+  done < <(xmlstarlet select -t -m '/configuration/appSettings/add' -v '@key' -o $'\t' -v '@value' -n "$source")
 }
 
 install_configs() {

@@ -21,7 +21,7 @@ install() {
 
   # Set joyport based on the above
   echo 'Selecting joyport for installed ROMs...'
-  while IFS='^' read -r color unknown title type multidisk joyport other; do
+  while IFS='»' read -r color unknown title type multidisk joyport other; do
     local normalized_name=$(normalize_rom_name "$title")
     if [ -z "$normalized_name" ]; then
       continue
@@ -58,14 +58,14 @@ install() {
         crudini --set "$opt_file" '' 'vice_joyport' "\"$joyport_selection\""
       fi
     fi
-  done < <(cat "$system_tmp_dir/c64_dreams.tsv" | tr "$tab" "^")
+  done < <(cat "$system_tmp_dir/c64_dreams.tsv" | tr $'\t' "»")
 }
 
 uninstall() {
   [ ! -d "$retroarch_config_dir/VICE x64" ] && return
 
   # Remove joyport selections
-  while read opt_file; do
+  while read -r opt_file; do
     crudini --del "$opt_file" '' 'vice_joyport'
     if [ ! -s "$opt_file" ]; then
       rm -v "$opt_file"

@@ -161,12 +161,12 @@ outline_overlay_image() {
 load_emulator_data() {
   declare -A -g emulators
 
-  while IFS=',' read package emulator core_name library_name is_default; do
+  while IFS=, read -r package emulator core_name library_name is_default; do
     emulators["$emulator/emulator"]=$emulator
     emulators["$emulator/core_name"]=$core_name
     emulators["$emulator/library_name"]=$library_name
 
-    while read alias_emulator; do
+    while read -r alias_emulator; do
       emulators["$alias_emulator/emulator"]=$emulator
       emulators["$alias_emulator/core_name"]=$core_name
       emulators["$alias_emulator/library_name"]=$library_name
@@ -177,7 +177,7 @@ load_emulator_data() {
       emulators['default/core_name']=$core_name
       emulators['default/library_name']=$library_name
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name, .value.library_name, .value.default // false] | @tsv' | tr "$tab" ',')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name, .value.library_name, .value.default // false] | @csv')
 }
 
 get_core_library_names() {

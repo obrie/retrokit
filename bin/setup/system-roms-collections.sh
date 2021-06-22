@@ -19,7 +19,7 @@ install() {
       sed -i "/\/$system\//d" "$target_collection_path"
     fi
 
-    while IFS="$tab" read -r collection_system machine_title; do
+    while IFS=$'\t' read -r collection_system machine_title; do
       # Machines in collection files contain just the title in order to work
       # for different regions, so we:
       # 1. Do an initial naive search based on a substring match in the gamelist.xml
@@ -36,7 +36,7 @@ install() {
           break
         fi
       done < <(xmlstarlet sel -t -m "*/game[contains(path, \"$machine_title\")]" -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml" | xmlstarlet unesc)
-    done < <(grep -E "^$system$tab" "$source_collection_path")
+    done < <(grep -E "^$system"$'\t' "$source_collection_path")
   done < <(ls "$source_collections_dir")
 }
 

@@ -7,7 +7,7 @@ configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configsc
 
 # Add autoconfig scripts
 install_configscripts() {
-  while read autoconfig_name; do
+  while read -r autoconfig_name; do
     sudo cp -v "$bin_dir/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
@@ -153,7 +153,7 @@ install_inputs() {
   local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
   download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
 
-  while IFS=, read name id swap_buttons; do
+  while IFS=, read -r name id swap_buttons; do
     local config_file="$config_dir/controllers/inputs/$name.cfg"
 
     if [ -f "$config_file" ]; then
@@ -172,7 +172,7 @@ install_inputs() {
 
     echo "Generating configurations for $name"
     /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
-  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false] | @csv' | tr -d '"')
+  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false] | @csv')
 }
 
 install() {
@@ -185,7 +185,7 @@ uninstall() {
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation init_input
 
   # Remove autoconfig scripts
-  while read autoconfig_name; do
+  while read -r autoconfig_name; do
     sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }

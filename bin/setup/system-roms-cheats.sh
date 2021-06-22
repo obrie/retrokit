@@ -23,7 +23,7 @@ install() {
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
   declare -A cheat_mappings
-  while IFS= read -r cheat_filename; do
+  while read -r cheat_filename; do
     local cheat_name="${cheat_filename%.*}"
     local key="$(normalize_rom_name "$cheat_name")"
     local existing_mapping=${cheat_mappings["$key"]}
@@ -47,7 +47,7 @@ install() {
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
   declare -A installed_playlists
-  while IFS="^" read rom_name emulator; do
+  while IFS=$'\t' read -r rom_name emulator; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     if [ -z "$library_name" ]; then
@@ -79,13 +79,13 @@ install() {
         installed_files["$target_cheats_dir/$playlist_name.cht"]=1
       fi
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .emulator] | join("^")')
+  done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
 
   # Remove old, unmapped cheats
-  while read library_name; do
+  while read -r library_name; do
     [ ! -d "$system_cheat_database_path/$library_name" ] && continue
 
-    while read path; do
+    while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
     done < <(find "$system_cheat_database_path/$library_name" -name '*.cht')
   done < <(get_core_library_names)
@@ -93,7 +93,7 @@ install() {
 
 uninstall() {
   # Remove cheats for each libretro core
-  while read library_name; do
+  while read -r library_name; do
     rm -rfv "$system_cheat_database_path/$library_name"
   done < <(get_core_library_names)
 }

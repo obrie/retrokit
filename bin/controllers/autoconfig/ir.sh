@@ -26,7 +26,7 @@ function onstart_ir_keyboard() {
 
     # Inverse the mappings from the keymap file
     declare -Ag scanmap
-    while read scancode keyname; do
+    while read -r scancode keyname; do
         scanmap["$keyname"]="${scanmap["$keyname"]},$scancode"
     done < <(grep "0x" "$source_keymap_path" | sed 's/["=]//g')
 

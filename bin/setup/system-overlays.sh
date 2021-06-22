@@ -12,7 +12,7 @@ install() {
     return
   fi
 
-  while IFS='^' read repo branch default_image_path vertical_image_path ; do
+  while IFS=» read -r repo branch default_image_path vertical_image_path; do
     branch=${branch:-master}
     local base_url="https://github.com/$repo/raw/$branch"
 
@@ -22,7 +22,7 @@ install() {
       create_overlay_config "$retroarch_overlay_dir/$system.cfg" "$system.png"
 
       # For systems that have lightgun games, create a lightgun-specific version
-      if [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && grep -Eq "^$system$tab" "$config_dir/emulationstation/collections/custom-lightguns.tsv"; then
+      if [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && grep -Eq "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv"; then
         outline_overlay_image "$retroarch_overlay_dir/$system.png" "$retroarch_overlay_dir/$system-lightgun.png"
         create_overlay_config "$retroarch_overlay_dir/$system-lightgun.cfg" "$system-lightgun.png"
       fi
@@ -34,7 +34,7 @@ install() {
       download "$base_url/$vertical_image_path" "$retroarch_overlay_dir/$system-vertical.png"
       create_overlay_config "$retroarch_overlay_dir/$system-vertical.cfg" "$system-vertical.png"
     fi
-  done < <(system_setting '.overlays.repos[] | [.repo, .branch, .default, .vertical] | join("^")')
+  done < <(system_setting '.overlays.repos[] | [.repo, .branch, .default, .vertical] | join("»")')
 }
 
 uninstall() {

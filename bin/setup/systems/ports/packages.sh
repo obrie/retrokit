@@ -5,19 +5,19 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
 install() {
-  while IFS="$tab" read port_name package_name package_type; do
+  while IFS=, read -r port_name package_name package_type; do
     install_retropie_package "$package_type" "$package_name"
 
     # Link over any optional files for the game
-    while read -r target_name source_path; do
+    while IFS=, read -r target_name source_path; do
       local target_path="$HOME/RetroPie/roms/ports/$port_name/$target_name"
       file_ln "$source_path" "$target_path"
-    done < <(system_setting ".ports.$port_name.files | try to_entries[] | [.key, .value] | @tsv")
-  done < <(system_setting '.ports | to_entries[] | [.key, .value.package, .value.package_type] | @tsv')
+    done < <(system_setting ".ports.$port_name.files | try to_entries[] | [.key, .value] | @csv")
+  done < <(system_setting '.ports | to_entries[] | [.key, .value.package, .value.package_type] | @csv')
 }
 
 uninstall() {
-  while read package_name; do
+  while read -r package_name; do
     uninstall_retropie_package "$package_name" || true
   done < <(system_setting '.ports | to_entries[] | .value.package')
 }

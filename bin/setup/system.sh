@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 export SKIP_DEPS=true
 
-while read -r setupmodule; do
+while read setupmodule; do
   if [[ "$setupmodule" == system-* ]] || [[ "$setupmodule" == systems/$system/* ]]; then
     print_heading "Running $1 for $setupmodule"
     "$dir/$setupmodule.sh" "${@}"

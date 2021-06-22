@@ -25,7 +25,7 @@ sync_system_nointro_dats() {
   local system=$1
   local nointro_pack_path=$2
 
-  while read dat_path; do
+  while read -r dat_path; do
     local nointro_name=$(basename "$dat_path" .dat)
     local zip_filename=$(zipinfo -1 "$nointro_pack_path" | grep "$nointro_name" | head -n 1)
 
