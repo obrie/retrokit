@@ -207,7 +207,7 @@ has_disc_config() {
 
 has_playlist_config() {
   local rom_name=$1
-  supports_playlists &&  is_multidisc "$rom_name"
+  supports_playlists && is_multidisc "$rom_name"
 }
 
 get_playlist_name() {

@@ -165,7 +165,11 @@ install() {
     fi
 
     # Look up either by the current rom or the parent rom
-    local url=${overlay_urls["$(normalize_rom_name "$rom_name")"]:-${overlay_urls["$(normalize_rom_name "$parent_name")"]}}
+    local url=${overlay_urls[$(normalize_rom_name "$rom_name")]}
+    if [ -z "$url" ] && [ -n "$parent_name" ]; then
+      url=${overlay_urls[$(normalize_rom_name "$parent_name")]}
+    fi
+
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
 
@@ -196,7 +200,7 @@ install() {
     if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
       install_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .parent.name, .orientation, .emulator] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
 
   remove_unused_configs
 }
