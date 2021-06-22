@@ -22,7 +22,7 @@ load_overlay_urls() {
   echo "Loading list of available overlays..."
   declare -Ag overlay_urls
 
-  while IFS=, read -r repo branch rom_images_path; do
+  while IFS=$'\t' read -r repo branch rom_images_path; do
     local github_tree_path="$system_tmp_dir/$repo.list"
 
     if [ ! -f "$github_tree_path" ]; then
@@ -43,7 +43,7 @@ load_overlay_urls() {
         overlay_urls["$rom_id"]="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
       fi
     done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
-  done < <(system_setting '.overlays.repos[] | [.repo, .branch // "master", .path] | @csv')
+  done < <(system_setting '.overlays.repos[] | [.repo, .branch // "master", .path] | @tsv')
 }
 
 # Get the list of lightgun games for when we need to use a different type of overlay

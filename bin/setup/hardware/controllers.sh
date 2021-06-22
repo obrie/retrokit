@@ -172,7 +172,7 @@ install_inputs() {
 
     echo "Generating configurations for $name"
     /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
-  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false] | @csv')
+  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false | tostring] | join(",")')
 }
 
 install() {

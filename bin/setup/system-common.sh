@@ -177,7 +177,7 @@ load_emulator_data() {
       emulators['default/core_name']=$core_name
       emulators['default/library_name']=$library_name
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name, .value.library_name, .value.default // false] | @csv')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name, .value.library_name, .value.default // false | tostring] | join(",")')
 }
 
 get_core_library_names() {
