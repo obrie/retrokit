@@ -1,5 +1,4 @@
 from romkit.discovery import BaseDiscovery
-from romkit.util import Downloader
 
 import lxml.etree
 import tempfile

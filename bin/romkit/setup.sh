@@ -30,6 +30,9 @@ install() {
 
   # CHDMan
   sudo apt install -y mame-tools
+
+  # High-Performance HTTP
+  sudo pip3 install pycurl
 }
 
 "${@}"

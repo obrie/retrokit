@@ -9,6 +9,7 @@ install() {
 
 uninstall() {
   sudo apt remove -y mame-tools python3-lxml zip
+  sudo pip3 uninstall -y pycurl
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 

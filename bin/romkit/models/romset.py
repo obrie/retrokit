@@ -23,6 +23,7 @@ class ROMSet:
         auth: Optional[str] = None,
         discovery: Optional[dict] = None,
         datlist: Optional[List[str]] = None,
+        downloads: Optional[dict] = None,
         context: dict = {},
     ):
         self.system = system
@@ -30,7 +31,7 @@ class ROMSet:
         self.protocol = protocol
         self.url = url
         self.emulator = emulator
-        self.downloader = Downloader(auth=auth)
+        self.downloader = Downloader(auth=auth, **downloads)
 
         # Configure resources
         discovery = discovery and BaseDiscovery.from_json(discovery, downloader=self.downloader)

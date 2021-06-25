@@ -45,6 +45,7 @@ Additionally, it provides ROM management capabilities, including:
 * Installation via public rom sets (using individual ROM downloads)
 * Installation via public bios sets
 * Simple sub-directory management based on filters
+* High-performance multi-threaded downloads
 
 This is all supported for the following systems:
 

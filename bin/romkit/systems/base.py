@@ -26,6 +26,7 @@ class BaseSystem:
     def __init__(self, config: dict, demo: bool = True) -> None:
         self.config = config
         self.name = config['system']
+        self.download_config = config.get('downloads', {})
 
         # External metadata to load for filtering purposes
         self.metadata_set = MetadataSet.from_json(config.get('metadata', {}), self.supported_metadata)
@@ -82,7 +83,7 @@ class BaseSystem:
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         # Load romsets
         for romset_config in self.config['romsets']:
-            yield ROMSet.from_json(romset_config, system=self)
+            yield ROMSet.from_json(romset_config, system=self, downloads=self.download_config)
 
     def list(self) -> List[Machine]:
         # Machines guaranteed to be installed
