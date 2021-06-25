@@ -9,7 +9,7 @@ retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 system_overlay_dir="$retroarch_overlay_dir/$system"
 
 # Overlay support
-supports_vertical_overlays=$(system_setting '.overlays.repos[] | select(.vertical) | [0] | true')
+supports_vertical_overlays=$(system_setting 'select(.overlays) | .overlays.repos[] | select(.vertical) | [0] | true')
 
 call_github_api() {
   local url=$1
