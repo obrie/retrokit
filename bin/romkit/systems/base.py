@@ -46,7 +46,7 @@ class BaseSystem:
         self.machine_priority = list(BaseFilter.normalize(config['roms'].get('priority', [])))
 
         # Favorites (defaults to false if no favorites are provided)
-        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {'names': [None]}), config, self.supported_filters)
+        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
 
         if demo:
             # Just the demo filter

@@ -20,15 +20,15 @@ class FilterSet:
 
         for filter_cls in supported_filters:
             allowlist = json.get(filter_cls.name)
-            if allowlist:
+            if allowlist is not None:
                 filter_set.append(filter_cls(set(allowlist), config=config, log=log))
 
             blocklist = json.get(f'!{filter_cls.name}')
-            if blocklist:
+            if blocklist is not None:
                 filter_set.append(filter_cls(set(blocklist), invert=True, config=config, log=log))
 
             overridelist = json.get(f'+{filter_cls.name}')
-            if overridelist:
+            if overridelist is not None:
                 filter_set.append(filter_cls(set(overridelist), override=True, config=config, log=log))
 
         return filter_set
