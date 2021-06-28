@@ -58,7 +58,7 @@ run() {
   local action=$2
 
   if [ $# -ge 3 ]; then
-    print_heading "Running $action for $setupmodule (${@:3})"
+    print_heading "Running $action for $setupmodule (${*:3})"
   else
     print_heading "Running $action for $setupmodule"
   fi

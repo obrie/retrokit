@@ -7,6 +7,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 from romkit.models.machine import Machine
 from romkit.systems import BaseSystem
 
+import argparse
 import configparser
 import json
 import logging
@@ -17,7 +18,6 @@ import shutil
 import subprocess
 import tempfile
 import time
-from argparse import ArgumentParser
 from enum import Enum
 from signal import signal, SIGPIPE, SIG_DFL
 from typing import List
@@ -135,7 +135,8 @@ class Scraper:
                 # * Configured for empty and the metadata is empty
                 data = self.metadata.get(machine.title)
                 is_missing = (data is None)
-                is_empty = (not is_missing and (data['genres'] or data['rating']))
+                is_empty = (not is_missing and not (data['genres'] or data['rating']))
+
                 if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty):
                     self.scrape_machine(machine)
                 else:
@@ -219,7 +220,7 @@ class Scraper:
             # * Configured to override all machines or
             # * Configured to override just the machines scraped
             if name not in self.failed_scrapes and (self.override == OverrideConfig.ALL or name in self.scrapes):
-                title = Machine.title_from(title)
+                title = Machine.title_from(name)
                 if title not in self.metadata:
                     self.metadata[title] = {'genres': [], 'rating': None}
 
@@ -240,7 +241,7 @@ class Scraper:
             )
 
 def main() -> None:
-    parser = ArgumentParser()
+    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
     parser.add_argument(dest='config_file', help='JSON file containing the configuration')
     parser.add_argument('--refresh', dest='refresh', type=RefreshConfig, choices=list(RefreshConfig))
     parser.add_argument('--override', dest='override', type=OverrideConfig, choices=list(OverrideConfig))
