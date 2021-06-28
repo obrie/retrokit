@@ -60,7 +60,7 @@ add_disc_numbers() {
   # Remove existing disc numbers
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
 
-  if [ "$(system_setting '.playlists.enabled')" != 'true' ] && [ $(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets') == '"false"' ]; then
+  if [ "$(system_setting '.playlists.enabled')" != 'true' ] && [ "$(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets')" == '"false"' ]; then
     # Playlists are disabled and flags are configured to *not* be included in the
     # display name.  In order to differentiate between different discs within a
     # game, we need to manually specify the title with the disc number.

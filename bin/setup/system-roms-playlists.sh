@@ -14,7 +14,7 @@ install() {
     return
   fi
 
-  if [ $(system_setting '.playlists.enabled') != 'true' ]; then
+  if [ "$(system_setting '.playlists.enabled')" != 'true' ]; then
     echo 'Playlists not supported'
     return
   fi

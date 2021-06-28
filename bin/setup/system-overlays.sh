@@ -22,7 +22,7 @@ install() {
       create_overlay_config "$retroarch_overlay_dir/$system.cfg" "$system.png"
 
       # For systems that have lightgun games, create a lightgun-specific version
-      if [ $(setting '.overlays.lightgun_border.enabled') == 'true' ] && grep -Eq "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv"; then
+      if [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ] && grep -Eq "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv"; then
         outline_overlay_image "$retroarch_overlay_dir/$system.png" "$retroarch_overlay_dir/$system-lightgun.png"
         create_overlay_config "$retroarch_overlay_dir/$system-lightgun.cfg" "$system-lightgun.png"
       fi
