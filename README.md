@@ -141,7 +141,7 @@ The default hardware setup assumes:
 * Argon case
 * 8bitdo SN30 Pro controllers
 * 8Bitdo Arcade Stick
-* 128GB or more storage capacity
+* 1TB or more storage capacity
 
 You can have complete control over what parts of retrokit get used via everything
 in the config/ folder, particularly config/settings.json.
@@ -466,6 +466,54 @@ the source for all of the above metadata.  However, some sources either aren't i
 a format that can be parsed (e.g. they're a forum post), don't allow direct
 downloads (e.g. dat-o-matic), or require an excessively large download to access
 a small file (e.g. pc dosbox configurations).
+
+## Storage Capacity
+
+The default filters assume that there is 1TB of capacity available for installing
+ROMs.  These filters generally have the following rules:
+
+* 1G1R (one game per region)
+* Excluded categories: Adult, Board games, Casino, Educational
+* For CD-based systems, 1G1SF (one game per sports franchise)
+
+The approximate capacity required per system is broken down below:
+
+| System        | Capacity |
+| ------------- | -------- |
+| 3do           | 40GB     |
+| arcade        | 13GB     |
+| atari2600     | 6MB      |
+| atari7800     | 3MB      |
+| atarijaguar   | 75MB     |
+| atarilynx     | 10MB     |
+| c64           | 70MB     |
+| coleco        | 3MB      |
+| dreamcast     | 115GB    |
+| gamegear      | 50MB     |
+| gb            | 65MB     |
+| gba           | 3.5GB    |
+| gbc           | 230MB    |
+| intellivision | 2MB      |
+| mastersystem  | 40MB     |
+| megadrive     | 530MB    |
+| n64           | 4.5GB    |
+| nds           | 35GB     |
+| nes           | 75MB     |
+| ngpc          | 20MB     |
+| pc            | 5GB      |
+| pcengine      | 10GB     |
+| ports         | 115MB    |
+| psp           | 2??GB    |
+| psx           | 2??GB    |
+| saturn        | 20GB     |
+| sega32x       | 60MB     |
+| segacd        | 35GB     |
+| sg-1000       | 1MB      |
+| snes          | 650MB    |
+| vectrex       | 200KB    |
+| videopac      | 500KB    |
+
+Note that this does *not* include other data such as BIOS files / scraped media.
 
 ## Emulators
 
