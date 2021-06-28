@@ -519,9 +519,7 @@ Note that this does *not* include other data such as BIOS files / scraped media.
 
 The following emulators / cores are built from source:
 
-* dosbox-staging (unofficial, no binaries available yet)
 * lr-yabasanshiro (unofficial, no binaries available yet)
-* mupen64plus (Due to crashes described [here](https://retropie.org.uk/forum/topic/30313/solved-gliden64-crashing-back-to-emulationstation-for-every-n64-rom?_=1622729300554))
 * yabasanshiro (unofficial, no binaries available yet)
 
 ## Thanks
