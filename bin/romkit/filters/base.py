@@ -84,6 +84,10 @@ class SubstringFilter(BaseFilter):
             return True
 
         for machine_value in machine_values:
+            # Add quotes to allow for exact matching
+            if machine_value:
+                machine_value = f'"{machine_value}"'
+
             if any(filter_value and machine_value and filter_value in machine_value for filter_value in self.filter_values):
                 return True
 
