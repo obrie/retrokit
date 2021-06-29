@@ -210,6 +210,22 @@ class Machine:
     def filesize(self) -> int:
         return sum(map(lambda file: file.size, self.non_merged_roms))
 
+    # Primary rom in the machine.  This is either going to be the *only*
+    # rom or a cue that represents multiple rom files.
+    @property
+    def primary_rom(self) -> Optional[File]:
+        if len(self.non_merged_roms) == 1:
+            # Only one rom in the machine -- that's the primary one
+            return next(iter(self.non_merged_roms))
+        else:
+            # Multiple roms -- see if there's a cue file
+            cue_file = next(filter(lambda rom: '.cue' in rom.name, self.non_merged_roms), None)
+            if cue_file:
+                return cue_file
+
+            # Pick the largest file as a last resort
+            return sorted(self.non_merged_roms, key=lambda file: file.size)[-1]
+
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
@@ -328,6 +344,13 @@ class Machine:
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
         }
+
+        primary_rom = self.primary_rom
+        if primary_rom:
+            data['rom'] = {
+                'name': primary_rom.name,
+                'crc': primary_rom.crc.upper(),
+            }
 
         if self.parent_name:
             data['parent'] = {

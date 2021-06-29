@@ -152,9 +152,9 @@ class Scraper:
         # represent the underlying ROM file.  This works for all systems
         # *except* arcade which is okay because arcade has its own metadata
         # source that we don't have to scrape from.
-        largest_file = sorted(machine.non_merged_roms, key=lambda file: file.size)[-1]
-        romnom = quote(largest_file.name).replace('%28', '(').replace('%29',')')
-        crc = largest_file.crc.upper()
+        primary_rom = machine.primary_rom
+        romnom = quote(primary_rom.name).replace('%28', '(').replace('%29',')')
+        crc = primary_rom.crc.upper()
 
         # Create a fake file so we can actually invoke skyscraper
         rom_path = self.tmpdir.joinpath(f'roms').joinpath(f'{machine.name}.zip')
