@@ -29,8 +29,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sony%20-%20PlayStation%20Portable%20(Redump).json",
-      "target": "$HOME/retrokit/tmp/psp/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/psp/clones.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/psp.json"

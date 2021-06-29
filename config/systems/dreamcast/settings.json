@@ -61,8 +61,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Dreamcast.json",
-      "target": "$HOME/retrokit/tmp/dreamcast/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/dreamcast/clones.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/dreamcast.json"

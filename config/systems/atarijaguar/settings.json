@@ -47,6 +47,9 @@
     }
   ],
   "metadata": {
+    "parent": {
+      "source": "file://$HOME/retrokit/config/systems/atarijaguar/clones.json"
+    },
     "emulator": {
       "source": "file://$HOME/retrokit/config/systems/atarijaguar/emulators.tsv"
     },

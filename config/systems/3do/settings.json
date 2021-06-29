@@ -55,8 +55,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Panasonic%20-%203DO%20Interactive%20Multiplayer.json",
-      "target": "$HOME/retrokit/tmp/3do/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/3do/clones.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/3do.json"

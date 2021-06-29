@@ -60,8 +60,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Mega%20CD%20%26%20Sega%20CD.json",
-      "target": "$HOME/retrokit/tmp/segacd/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/segacd/clones.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"

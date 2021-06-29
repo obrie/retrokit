@@ -60,8 +60,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/Sega%20-%20Saturn.json",
-      "target": "$HOME/retrokit/tmp/saturn/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/saturn/clones.json"
     },
     "emulator_rating": {
       "source": "file://$HOME/retrokit/config/systems/saturn/emulator_ratings.tsv"

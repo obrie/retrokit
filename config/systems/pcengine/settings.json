@@ -78,8 +78,7 @@
   ],
   "metadata": {
     "parent": {
-      "source": "https://github.com/unexpectedpanda/retool/raw/main/clonelists/NEC%20-%20PC%20Engine%20CD%20%26%20TurboGrafx%20CD.json",
-      "target": "$HOME/retrokit/tmp/pcengine/clones.json"
+      "source": "file://$HOME/retrokit/config/systems/pcengine/clones.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/pcengine.json"

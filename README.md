@@ -445,19 +445,19 @@ codebase.  An overview of metadata and where it comes from is described below.
 | arcade      | Ratings                  | No      | https://www.progettosnaps.net/                |
 | atarijaguar | Emulator compatibility   | Yes     | https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans |
 | c64         | "Best Of" (C64 Dreams)   | No      | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4 |
-| dreamcast   | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| dreamcast   | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | n64         | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
-| nds         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| nds         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | pc          | DAT                      | Yes     | exodos                                        |
 | pc          | DOSBox Config            | Yes     | exodos                                        |
-| pcengine    | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
-| psp         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| pcengine    | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
+| psp         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psx         | Genres                   | No      | https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json |
-| psx         | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
-| saturn      | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
-| saturn      | Emulator compatibility   | No      | https://github.com/unexpectedpanda/retool     |
+| psx         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
+| saturn      | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
+| saturn      | Emulator compatibility   | Yes     | https://www.uoyabause.org/games               |
 | segacd      | DOSBox Config            | Yes     | exodos                                        |
-| segacd      | Parent/Clone info        | No      | https://github.com/unexpectedpanda/retool     |
+| segacd      | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | *           | No-Intro DATs            | Yes     | https://datomatic.no-intro.org/index.php?page=download |
 | *           | Genre / Rating info      | Yes     | https://www.screenscraper.fr/                 |
 
@@ -536,7 +536,7 @@ retrokit what it is.  That includes:
 * [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
 * [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
 * [Joshua Rancel](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) for the default splash screen (Retro History)
-* [unexpectedpanda](https://github.com/unexpectedpanda/retool) for retool configurations
+* [unexpectedpanda](https://github.com/unexpectedpanda/retool) for clonelists
 * [ScreenScraper](https://www.screenscraper.fr/) for game metadata
 * eXo for Dosbox game configuration settings
 * RetroPie forums
