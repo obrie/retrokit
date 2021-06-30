@@ -28,9 +28,24 @@
       }
     }
   ],
+  "metadata": {
+    "exodos_data": {
+      "source": "file://$HOME/retrokit/cache/exodos/MS-DOS.xml"
+    }
+  },
   "roms": {
     "filters": {
-      "titles": [
+      "!genres": [
+        "Board / Party Game",
+        "Casino",
+        "Education",
+        "Interactive Fiction",
+        "Interactive Movie",
+        "Puzzle",
+        "Quiz"
+      ],
+      "titles": [],
+      "+titles": [
         "Arkanoid",
         "Arkanoid II - Revenge of Doh",
         "American Gladiators",
