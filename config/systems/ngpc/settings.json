@@ -14,7 +14,7 @@
     ]
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-beetle-ngp": {"core_name": "ngp", "library_name": "Beetle NeoPop", "default": true}

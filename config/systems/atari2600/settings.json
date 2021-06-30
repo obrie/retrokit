@@ -14,7 +14,7 @@
     ]
   },
   "scraper": {
-    "sources": ["screenscraper", "mobygames"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-stella2014": {"core_name": "stella2014", "library_name": "Stella 2014", "default": true}

@@ -17,7 +17,7 @@ Specifically, it can set up:
 * Localization
 * Splash screens (async loading process, reduces load time by 2s)
 * Custom Retropie modules
-* Scraping (via skyscraper)
+* Scraping (via skyscraper) with automated fallback queries
 * Themes
 * Retroarch configuration
 * EmulationStation configuration

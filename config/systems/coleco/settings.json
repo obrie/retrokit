@@ -14,7 +14,7 @@
     ]
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}

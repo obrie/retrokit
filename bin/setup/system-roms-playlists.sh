@@ -36,7 +36,7 @@ install() {
   while read -r rom_path; do
     # Get playlist path
     local rom_filename=$(basename "$rom_path")
-    local rom_name=${rom_filename%%.*}
+    local rom_name=${rom_filename%.*}
     local playlist_name=$(get_playlist_name "$rom_name")
     local playlist_path="$(dirname "$rom_path")/$playlist_name.m3u"
 

@@ -26,7 +26,7 @@ install() {
       # 2. Do an exact match based on comparing the titles
       while read -r machine_path; do
         local machine_filename=${machine_path##*/}
-        local installed_name=${machine_filename%%.*}
+        local installed_name=${machine_filename%.*}
         local installed_title=${installed_name%% (*}
 
         # If the titles match, add it

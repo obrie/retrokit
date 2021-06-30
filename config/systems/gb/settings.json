@@ -14,7 +14,7 @@
     ]
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
@@ -90,6 +90,7 @@
         "Compilation"
       ],
       "!titles": [
+        "Game Boy Camera",
         "Game Boy Camera Gold",
         "Solitaire FunPak"
       ],

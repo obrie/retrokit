@@ -17,7 +17,7 @@
     }
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}

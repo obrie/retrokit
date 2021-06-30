@@ -17,7 +17,7 @@
     }
   },
   "scraper": {
-    "sources": ["screenscraper", "thegamesdb"]
+    "sources": ["screenscraper"]
   },
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
