@@ -12,9 +12,8 @@ class File:
     def __init__(self, name: str, size: int, crc: Optional[str], file_identifier: Optional[str] = None) -> None:
         self.name = name
         self.size = size
-        if crc:
-            self.crc = crc.lower()
-        
+        self.crc = crc and crc.lower()
+
         if file_identifier == 'name':
             self.id = self.name
         else:

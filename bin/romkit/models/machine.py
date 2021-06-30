@@ -349,7 +349,7 @@ class Machine:
         if primary_rom:
             data['rom'] = {
                 'name': primary_rom.name,
-                'crc': primary_rom.crc.upper(),
+                'crc': primary_rom.crc and primary_rom.crc.upper(),
             }
 
         if self.parent_name:
