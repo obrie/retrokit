@@ -12,6 +12,14 @@ load_rom_data() {
   while IFS=$'\t' read -r name rom_name rom_crc; do
     rom_data["$name/rom"]="$rom_name"
     rom_data["$name/crc"]="$rom_crc"
+
+    # If there's a separate playlist name, track it so that we can properly
+    # scrape those as well
+    local playlist_name=$(get_playlist_name "$rom_name")
+    if [ "$playlist_name" != "$rom_name" ]; then
+      rom_data["$playlist_name/rom"]="$rom_name"
+      rom_data["$playlist_name/crc"]="$rom_crc"
+    fi
   done < <(romkit_cache_list | jq -r '[.name, (.rom .name | @uri), .rom .crc] | @tsv')
 }
 
