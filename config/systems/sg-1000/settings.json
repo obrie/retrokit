@@ -49,10 +49,13 @@
     }
   },
   "roms": {
-    "priority": [
-      "English",
-      "Europe"
-    ],
+    "priority": {
+      "flags": [
+        "English",
+        "Europe"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "flags": [
         "Australia",

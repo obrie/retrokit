@@ -52,11 +52,14 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA",
-      "Europe",
-      "Canada"
-    ],
+    "priority": {
+      "flags": [
+        "USA",
+        "Europe",
+        "Canada"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "flags": [
         "Australia",

@@ -262,9 +262,11 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA"
-    ],
+    "priority": {
+      "flags": [
+        "USA"
+      ]
+    },
     "filters": {
       "emulator_compatibility": [true],
       "clones": [false],

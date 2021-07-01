@@ -58,11 +58,14 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA",
-      "World",
-      "Europe"
-    ],
+    "priority": {
+      "flags": [
+        "USA",
+        "World",
+        "Europe"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "flags": [
         "Canada",

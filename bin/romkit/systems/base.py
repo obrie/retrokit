@@ -2,6 +2,7 @@ from romkit.filters import __all_filters__, BaseFilter, FilterReason, FilterSet,
 from romkit.metadata import __all_metadata__, MetadataSet
 from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
+from romkit.sorters import __all_sorters__, SorterSet
 from romkit.systems.system_dir import SystemDir
 
 import logging
@@ -22,6 +23,7 @@ class BaseSystem:
     # Filters that run based on an allowlist/blocklist provided at runtime
     supported_filters = __all_filters__
     supported_metadata = __all_metadata__
+    supported_sorters = __all_sorters__
 
     def __init__(self, config: dict, demo: bool = True) -> None:
         self.config = config
@@ -43,7 +45,7 @@ class BaseSystem:
         ]
 
         # Priority order for choosing a machine (e.g. 1G1R)
-        self.machine_priority = list(BaseFilter.normalize(config['roms'].get('priority', [])))
+        self.machine_priority = SorterSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
 
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
@@ -125,7 +127,7 @@ class BaseSystem:
                     # If a priority is defined, the user is asking for a 1G1R setup.
                     # In that case, we either choose a machine that was explicitly overridden
                     # for install or we choose the highest priority machine in the group.
-                    if self.machine_priority:
+                    if self.machine_priority.length:
                         existing = machine_candidates.get(group)
 
                         if not existing:
@@ -134,7 +136,7 @@ class BaseSystem:
                         elif existing not in machines_to_install:
                             # Decide which of the two machines to install based on the
                             # predefined priority order
-                            prioritized_machines = sorted([existing, machine], key=self._sort_machines)
+                            prioritized_machines = self.machine_priority.sort([existing, machine])
                             machine_candidates[group] = prioritized_machines[0]
                             logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
                     else:
@@ -155,23 +157,6 @@ class BaseSystem:
 
         # Sort by name
         return sorted(machines_to_install, key=lambda machine: machine.name)
-
-    # Sorts machines based on a predefined priority ordering.
-    # 
-    # If two machines have the same priority, the machine with the shortest name
-    # is chosen.
-    def _sort_machines(self, machine: Machine) -> Tuple[int, int]:
-        # Default priority is lowest
-        priority_index = len(self.machine_priority)
-        flags_str = machine.flags_str.lower()
-
-        for index, search_string in enumerate(self.machine_priority):
-            if search_string in flags_str:
-                # Found a matching priority string: track the index
-                priority_index = index
-                break
-
-        return (priority_index, len(machine.name))
 
     # Installs all of the filtered machines
     def install(self) -> None:

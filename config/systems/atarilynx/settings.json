@@ -59,9 +59,12 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA"
-    ],
+    "priority": {
+      "flags": [
+        "USA"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "flags": [
         "Europe",

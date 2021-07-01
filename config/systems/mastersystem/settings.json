@@ -64,10 +64,13 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA",
-      "World"
-    ],
+    "priority": {
+      "flags": [
+        "USA",
+        "World"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "flags": [
         "Europe",

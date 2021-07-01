@@ -70,10 +70,14 @@
     }
   },
   "roms": {
-    "priority": [
-      "USA",
-      "Europe"
-    ],
+    "priority": {
+      "flags": [
+        "USA",
+        "World",
+        "Europe"
+      ],
+      "length": "ascending"
+    },
     "filters": {
       "languages": [
         null,

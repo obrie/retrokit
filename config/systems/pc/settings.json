@@ -34,6 +34,9 @@
     }
   },
   "roms": {
+    "priority": {
+      "name": "descending"
+    },
     "filters": {
       "!genres": [
         "Board / Party Game",
