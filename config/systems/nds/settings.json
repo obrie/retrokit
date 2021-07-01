@@ -36,6 +36,9 @@
     }
   ],
   "metadata": {
+    "rename": {
+      "source": "file://$HOME/retrokit/config/systems/nds/renames.json"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/nds.json"
     }
