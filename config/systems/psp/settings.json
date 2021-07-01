@@ -28,6 +28,9 @@
     }
   ],
   "metadata": {
+    "rename": {
+      "source": "file://$HOME/retrokit/config/systems/psp/renames.json"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/psp/clones.json"
     },
