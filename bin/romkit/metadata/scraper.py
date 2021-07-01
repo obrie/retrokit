@@ -2,10 +2,7 @@ from __future__ import annotations
 
 from romkit.metadata.external import ExternalMetadata
 
-import csv
 import json
-import re
-from pathlib import Path
 
 # Scraper metadata managed by Skyscraper's scraping modules
 # 
