@@ -514,6 +514,10 @@ The approximate capacity required per system is broken down below:
 | videopac      | 500KB    |
 
 Note that this does *not* include other data such as BIOS files / scraped media.
+It also only includes a selection of PC games.
+
+If you wanted to include the entire PC collection, you would need another 500GB
+or so (so a 2TB drive).
 
 ## Emulators
 
