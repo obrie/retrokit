@@ -24,12 +24,11 @@ load_rom_data() {
 }
 
 scrape() {
-  local source=$1
   local IFS=$'\n'
   local extra_args=($(system_setting '.scraper.args[]?'))
 
-  echo "Scaping $system from $source"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" -s "$source" --flags onlymissing "${extra_args[@]}" "${@:2}"
+  echo "Scaping $system (${*})"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@}"
 }
 
 build_missing_reports() {
@@ -42,7 +41,7 @@ build_missing_reports() {
   # indicators of a prior issue:
   # * Missing title means we likely missed all the textual content
   # * Missing screenshot means we likely missed the media content
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache report:missing=title,screenshot "${extra_args[@]}"
+  scrape --cache report:missing=title,screenshot
 
   # Generate aggregate list of roms
   cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
@@ -53,7 +52,7 @@ scrape_source() {
   stop_emulationstation
 
   # Scrape for new roms we've never attempted before
-  scrape "$source" --flags onlymissing
+  scrape -s "$source" --flags onlymissing
 
   build_missing_reports
 
@@ -68,7 +67,7 @@ scrape_source() {
 
       # Scrape with custom query
       if [ -n "$custom_query" ]; then
-        scrape "$source" --query "$custom_query" "$rom_path"
+        scrape -s "$source" --query "$custom_query" "$rom_path"
         if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
           continue
         fi
@@ -82,7 +81,7 @@ scrape_source() {
           exit
         fi
 
-        scrape "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
+        scrape -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
         if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
           continue
         fi
@@ -98,7 +97,7 @@ scrape_source() {
     if [ "$run_final_check" == 'true' ]; then
       build_missing_reports
       if [ -s "$aggregate_report_file" ]; then
-        scrape "$source" --fromfile "$aggregate_report_file"
+        scrape -s "$source" --fromfile "$aggregate_report_file"
       fi
     fi
   fi
