@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
 redream_dir="$retropie_system_config_dir/redream"
-redream_config_path="$config_dir/redream.cfg"
+redream_config_path="$redream_dir/redream.cfg"
 
 restore_config() {
   if has_backup "$redream_config_path"; then
