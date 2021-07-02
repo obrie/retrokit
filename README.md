@@ -46,6 +46,7 @@ Additionally, it provides ROM management capabilities, including:
 * Installation via public bios sets
 * Simple sub-directory management based on filters
 * High-performance multi-threaded downloads
+* Automatic resolution of name differences between DATs and public rom sets
 
 This is all supported for the following systems:
 
