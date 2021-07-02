@@ -4,28 +4,35 @@ system='dreamcast'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-config_path="$retropie_system_config_dir/redream/redream.cfg"
+redream_dir="$retropie_system_config_dir/redream"
+redream_config_path="$config_dir/redream.cfg"
 
 restore_config() {
-  if has_backup "$config_path"; then
-    if [ -f "$config_path" ]; then
+  if has_backup "$redream_config_path"; then
+    if [ -f "$redream_config_path" ]; then
       # Keep track of the profiles since we don't want to lose those
-      grep -E '^profile[0-9]+' "$config_path" > "$system_tmp_dir/profiles.cfg"
+      grep -E '^profile[0-9]+' "$redream_config_path" > "$system_tmp_dir/profiles.cfg"
 
-      restore "$config_path" "${@}"
+      restore "$redream_config_path" "${@}"
 
       # Merge the profiles back in
-      crudini --merge --inplace "$config_path" < "$system_tmp_dir/profiles.cfg"
+      crudini --merge --inplace "$redream_config_path" < "$system_tmp_dir/profiles.cfg"
       rm "$system_tmp_dir/profiles.cfg"
     else
-      restore "$config_path" "${@}"
+      restore "$redream_config_path" "${@}"
     fi
   fi
 }
 
 install() {
   restore_config
-  ini_merge "$system_config_dir/redream.cfg" "$config_path" restore=false
+  ini_merge "$system_config_dir/redream.cfg" "$redream_config_path" restore=false
+
+  # Game overrides
+  while read -r rom_config_path; do
+    local filename=$(basename "$rom_config_path")
+    file_cp "$rom_config_path" "$redream_dir/cache/$filename"
+  done < <(find "$system_config_dir/redream" -name '*.cfg')
 }
 
 uninstall() {
