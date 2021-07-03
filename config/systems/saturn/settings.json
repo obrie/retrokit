@@ -62,8 +62,10 @@
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/saturn/clones.json"
     },
-    "emulator_rating": {
-      "source": "file://$HOME/retrokit/config/systems/saturn/emulator_ratings.tsv"
+    "emulator": {
+      "source": "file://$HOME/retrokit/config/systems/saturn/emulators.tsv",
+      "column_emulator": null,
+      "column_rating": 1
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/saturn.json"
