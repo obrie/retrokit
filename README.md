@@ -501,11 +501,11 @@ The approximate capacity required per system is broken down below:
 | nds           | 35GB     |
 | nes           | 75MB     |
 | ngpc          | 20MB     |
-| pc            | 5GB      |
+| pc            | 13GB     |
 | pcengine      | 10GB     |
 | ports         | 115MB    |
-| psp           | 2??GB    |
-| psx           | 2??GB    |
+| psp           | 265GB    |
+| psx           | 266GB    |
 | saturn        | 20GB     |
 | sega32x       | 60MB     |
 | segacd        | 35GB     |
