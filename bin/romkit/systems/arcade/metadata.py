@@ -118,18 +118,17 @@ class ArcadeEmulatorMetadata(EmulatorMetadata):
     COLUMN_CONTROLS = 8
     QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
 
-    def load(self) -> None:
-        self.emulators = self.config.get('overrides', {})
+    def read_row(self, row: List[str]) -> dict:
+        if len(row) <= self.COLUMN_CONTROLS:
+            # Not a valid row in the compatibility list
+            return
 
-        with self.install_path.open() as file:
-            rows = csv.reader(file, delimiter='\t')
-            for row in rows:
-                if len(row) <= self.COLUMN_CONTROLS:
-                    # Not a valid row in the compatibility list
-                    continue
+        name = row[self.COLUMN_ROM]
+        emulator = row[self.COLUMN_EMULATOR]
 
-                name = row[self.COLUMN_ROM]
-                emulator = row[self.COLUMN_EMULATOR]
+        rating = 5
+        for col in self.QUALITY_COLUMNS:
+            if row[col] == 'x' or row[col] == '!':
+                rating -= 1
 
-                if name not in self.emulators and not any(row[col] == 'x' or row[col] == '!' for col in self.QUALITY_COLUMNS):
-                    self.emulators[name] = emulator
+        return {'rom': name, 'emulator': emulator, 'rating': rating}

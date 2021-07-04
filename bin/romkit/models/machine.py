@@ -217,7 +217,7 @@ class Machine:
         if len(self.non_merged_roms) == 1:
             # Only one rom in the machine -- that's the primary one
             return next(iter(self.non_merged_roms))
-        else:
+        elif len(self.non_merged_roms) > 1:
             # Multiple roms -- see if there's a cue file
             cue_file = next(filter(lambda rom: '.cue' in rom.name, self.non_merged_roms), None)
             if cue_file:
