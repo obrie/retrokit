@@ -527,6 +527,21 @@ The following emulators / cores are built from source:
 * lr-yabasanshiro (unofficial, no binaries available yet)
 * yabasanshiro (unofficial, no binaries available yet)
 
+### Performance
+
+Not all systems perform well on the Pi 4.  Those with performance
+issues include:
+
+* 3do
+* atarijaguar
+* n64
+* saturn
+
+To the best of my ability, I've attempted to capture compatibility
+ratings and emulator selections for these systems to find the games
+that work pretty well.  For these reasons, you'll find that these
+systems have fewer games installed than others.
+
 ## Thanks
 
 There are so many people / resources that I've pulled over time to make
