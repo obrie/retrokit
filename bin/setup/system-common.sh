@@ -184,6 +184,14 @@ get_core_library_names() {
   system_setting 'select(.emulators) | .emulators[] | select(.library_name) | .library_name'
 }
 
+has_emulator() {
+  if [ $(system_setting ".emulators | has(\"$1\")") == 'true' ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
 ##############
 # Playlists
 ##############

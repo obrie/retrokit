@@ -555,6 +555,8 @@ retrokit what it is.  That includes:
 * [ehettervik](https://github.com/ehettervik) for the pixel theme
 * [TMNTturtleguy](https://github.com/TMNTturtleguy) for the ComicBook theme
 * [DTEAM](https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans/8?_=1621951484030) for Atari Jaguar settings
+* [valerino](https://github.com/valerino/RetroPie-Setup) for lr-mess integration
+* [zerojay](https://github.com/zerojay/RetroPie-Extras) for lr-mess-jaguar scriptmodule
 * [Joshua Rancel](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) for the default splash screen (Retro History)
 * [unexpectedpanda](https://github.com/unexpectedpanda/retool) for clonelists
 * [ScreenScraper](https://www.screenscraper.fr/) for game metadata

@@ -4,14 +4,6 @@ system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-has_emulator() {
-  if [ $(system_setting ".emulators | has(\"$1\")") == 'true' ]; then
-    return 0
-  else
-    return 1
-  fi
-}
-
 install() {
   # Cheats: FBNeo
   if has_emulator 'lr-fbneo'; then
