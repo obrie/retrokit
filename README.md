@@ -37,7 +37,7 @@ Additionally, it provides ROM management capabilities, including:
 
 * Advanced filtering
 * Clone mappings for redump DATs
-* Emulator assignment
+* Emulator assignment / compatibility ratings
 * Core options overrides
 * Retroarch overrides
 * Remapping overrides
@@ -451,6 +451,7 @@ codebase.  An overview of metadata and where it comes from is described below.
 | nds         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | pc          | DAT                      | Yes     | exodos                                        |
 | pc          | DOSBox Config            | Yes     | exodos                                        |
+| pc          | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Tx5k3F0_AO6w00WrXULMBSUTRhtLyIhHI8Wz8GuqLfQ/edit#gid=2000917190 |
 | pcengine    | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psp         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psx         | Genres                   | No      | https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json |
@@ -530,17 +531,37 @@ The following emulators / cores are built from source:
 ### Performance
 
 Not all systems perform well on the Pi 4.  Those with performance
-issues include:
+issues on some games include:
 
 * 3do
 * atarijaguar
 * n64
+* pc
 * saturn
 
 To the best of my ability, I've attempted to capture compatibility
 ratings and emulator selections for these systems to find the games
 that work pretty well.  For these reasons, you'll find that these
 systems have fewer games installed than others.
+
+### Compatibility
+
+For emulators that can experience poor performance on the Pi 4, there are
+ratings that have been gathered from various sources to identify which games
+work well and which games don't.
+
+The ratings are roughly categorized like so:
+
+| Rating | Description                                          |
+| ------ | ---------------------------------------------------- |
+| 5      | Near perfection or perfection (no noticeable issues) |
+| 4      | 1 or 2 minor issues                                  |
+| 3      | 1 or 2 major issues, but still playable              |
+| 2      | 3 or more major issues, not fun to play              |
+| 1      | Unplayable                                           |
+
+Some of this is subjective.  For the most part, the defaults in retrokit avoid
+filtering for games that have major issues.
 
 ## Thanks
 
@@ -569,6 +590,7 @@ retrokit what it is.  That includes:
 
 There are too many improvements to count here, but some ideas are:
 
+* More comprehensive compatibility ratings
 * Support for non-Raspbian platforms
 * Computer-based emulators (Amigo, Apple II, etc.)
 

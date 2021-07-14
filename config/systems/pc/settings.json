@@ -32,6 +32,11 @@
     }
   ],
   "metadata": {
+    "emulator": {
+      "source": "file://$HOME/retrokit/config/systems/pc/emulators.tsv",
+      "column_emulator": null,
+      "column_rating": 1
+    },
     "exodos_data": {
       "source": "file://$HOME/retrokit/cache/exodos/MS-DOS.xml"
     }
@@ -41,6 +46,7 @@
       "name": "descending"
     },
     "filters": {
+      "!emulator_ratings": [1, 2],
       "!genres": [
         "Board / Party Game",
         "Casino",
@@ -121,7 +127,12 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/pc", "filters": {}}
+      {
+        "path": "$HOME/RetroPie/roms/pc",
+        "filters": {
+          "!emulator_ratings": [0, 1, 2]
+        }
+      }
     ],
     "files": {
       "conf": {
