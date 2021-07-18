@@ -28,17 +28,12 @@ install_core_options() {
   local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
 
-  if [ "$core_options_path" == "$global_core_options_path" ]; then
-    # Merging directly into the globals
-    ini_merge "$system_config_dir/retroarch-core-options.cfg" "$global_core_options_path" restore=false
-  else
-    # Use the global defaults as the initial file
-    cp -v "$global_core_options_path" "$core_options_path"
+  # Use the global defaults as the initial file
+  cp -v "$global_core_options_path" "$core_options_path"
 
-    if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
-      echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
-      crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
-    fi
+  if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
+    echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
+    crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
   fi
 
   # Reinstall the game-specific retroarch core options for this system.
@@ -58,11 +53,8 @@ install() {
 
 uninstall() {
   # Remove system-specific retroarch core options files
-  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
-  if [ "$core_options_path" != "$global_core_options_path" ]; then
-    rm -fv "$core_options_path"
-  fi
+  rm -fv "$core_options_path"
 
   # Restore emulator-specific retroarch configs
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')

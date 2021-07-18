@@ -41,8 +41,8 @@ install_config() {
 
 install() {
   install_emulators
-  install_bios
   install_config
+  install_bios
 }
 
 uninstall() {
