@@ -3,16 +3,35 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
+retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
+
+restore_config() {
+  if has_backup "$retroarch_config_path"; then
+    if [ -f "$retroarch_config_path" ]; then
+      # Keep track of the inputs since we don't want to lose those
+      grep -E '^input_.+' "$retroarch_config_path" > "$tmp_ephemeral_dir/retroarch-inputs.cfg"
+
+      restore "$retroarch_config_path" "${@}"
+
+      # Merge the inputs back in
+      crudini --merge --inplace "$retroarch_config_path" < "$tmp_ephemeral_dir/retroarch-inputs.cfg"
+      rm "$tmp_ephemeral_dir/retroarch-inputs.cfg"
+    else
+      restore "$retroarch_config_path" "${@}"
+    fi
+  fi
+}
+
 install() {
-  ini_merge "$config_dir/retroarch/retroarch.cfg" '/opt/retropie/configs/all/retroarch.cfg'
-  ini_merge "$config_dir/retroarch/retroarch-core-options.cfg" '/opt/retropie/configs/all/retroarch-core-options.cfg' restore=false
+  restore_config
+  ini_merge "$config_dir/retroarch/retroarch.cfg" "$retroarch_config_path" restore=false
+  ini_merge "$config_dir/retroarch/retroarch-core-options.cfg" "$retroarch_core_options_path"
 }
 
 uninstall() {
-  # We don't restore the retroarch-core-options because multiple setup modules
-  # potentially write to it
-  rm -fv '/opt/retropie/configs/all/retroarch-core-options.cfg.rk-src'
-  restore '/opt/retropie/configs/all/retroarch.cfg' delete_src=true
+  restore "$retroarch_core_options_path" delete_src=true
+  restore_config delete_src=true
 }
 
 "${@}"
