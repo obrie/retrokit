@@ -46,6 +46,15 @@ show_launching_screen() {
   fi
 }
 
+launch_manualkit() {
+  # Clean up processes possibly left behind
+  killall thd || true
+  killall vlc || true
+
+  touch /tmp/manualkit.socket
+  /usr/sbin/thd --triggers /opt/retropie/supplementary/manualkit/triggerhappy.conf --socket /tmp/manualkit.socket --deviceglob '/dev/input/event*' &
+}
+
 # This script shows the launch image in the background while allowing
 # RetroPie to star the game in the foreground.  It improves the load time
 # by a few seconds.
@@ -56,3 +65,4 @@ show_launching_screen() {
 # black screen -> emulation station, which is a bit jarring.
 clear_screen
 show_launching_screen "${@}" </dev/null &>/dev/null
+launch_manualkit </dev/null &>/dev/null
