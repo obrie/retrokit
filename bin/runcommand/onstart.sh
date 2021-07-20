@@ -47,12 +47,29 @@ show_launching_screen() {
 }
 
 launch_manualkit() {
+  local system=$1
+  local emulator=$2
+  local rom_path=$3
+
+  # Check to see if a manual exists
+  local rom_filename=$(basename "$rom_path")
+  local rom_name=${rom_filename%.*}
+  local manual_path="$HOME/.emulationstation/downloaded_media/$system/manuals/$rom_name.pdf"
+  if [ ! -f "$manual_path" ]; then
+    return
+  fi
+
   # Clean up processes possibly left behind
   killall thd || true
   killall vlc || true
 
+  # Create a triggerhappy conf for this manual
+  cp /opt/retropie/supplementary/manualkit/triggerhappy.conf /tmp/manualkit.conf
+  sed -i 's|start$|start "'"$manual_path"'"|g' /tmp/manualkit.conf
+
+  # Start up triggerhappy to monitor keystrokes
   touch /tmp/manualkit.socket
-  /usr/sbin/thd --triggers /opt/retropie/supplementary/manualkit/triggerhappy.conf --socket /tmp/manualkit.socket --deviceglob '/dev/input/event*' &
+  /usr/sbin/thd --triggers /tmp/manualkit.conf --socket /tmp/manualkit.socket --deviceglob '/dev/input/event*' &
 }
 
 # This script shows the launch image in the background while allowing
@@ -65,4 +82,4 @@ launch_manualkit() {
 # black screen -> emulation station, which is a bit jarring.
 clear_screen
 show_launching_screen "${@}" </dev/null &>/dev/null
-launch_manualkit </dev/null &>/dev/null
+launch_manualkit "${@}" </dev/null &>/dev/null

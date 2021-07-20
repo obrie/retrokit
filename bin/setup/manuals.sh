@@ -8,6 +8,8 @@ install_dir='/opt/retropie/supplementary/manualkit'
 install() {
   sudo apt install -y ghostscript
 
+  sudo pip3 install -y pi3d numpy
+
   sudo mkdir -p "$install_dir"
   sudo cp -v "$bin_dir/manualkit/manualkit.sh" "$install_dir/"
 
