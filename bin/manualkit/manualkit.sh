@@ -20,7 +20,7 @@ start() {
   run &
 
   # Suspend emulator
-  kill -TSTP "$emulator_pid"
+  kill -STOP "$emulator_pid"
 
   # Generate images
   gs -dSAFER -dNOPAUSE -dBATCH -dJPEGQ=95 -sDEVICE=jpeg -sOutputFile="$manual_images_dir/page-%03d.jpg" -dFirstPage=2 "$manual_path"
