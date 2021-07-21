@@ -1,9 +1,14 @@
 import ctypes
 import numpy
 import os
+import poppler
+import socket
+import threading
 import time
 
+from pathlib import Path
 from PIL import Image
+from queue import Queue
 from contextlib import contextmanager
 
 bcm = ctypes.CDLL('/opt/vc/lib/libbcm_host.so')
@@ -18,37 +23,151 @@ def c_ints(x):
   return (ctypes.c_int * len(x))(*x)
 
 class ManualKit():
-    def __init__(self, imgw, imgh, layer):
+    # The type of image we'll be rendering to the screen
+    IMAGE_TYPE = VC_IMAGE_RGB888
+
+    def __init__(self,
+        pdf_path: str,
+        socket_path: str = '/tmp/manualkit.sock',
+        layer: int = -1,
+        concurrency: int = 4,
+    ) -> None:
+        self.pdf = poppler.load_from_file(path)
+        self.renderer = poppler.PageRenderer()
+        self.socket = socket
         self.layer = layer
-        bcm.bcm_host_init()
+        self.concurrency = concurrency
 
-        self.width, self.height = ctypes.c_int(), ctypes.c_int()
+        self.display_width = 0
+        self.display_height = 0
+        self._init_display()
 
-        # choose the next smalles multiple of 16 for width and height (might some of the bg)
-        self.imgw, self.imgh = self._align_down(imgw, 16), self._align_down(imgh, 16)
+        # Choose the next smallest multiple of 16 for width and height
+        self.image_width = self._align_down(self.display_width, 16)
+        self.image_height = self._align_down(self.display_height, 16)
+        self.image_rect = c_ints((0, 0, self.image_width, self.image_height))
+        self.pitch = self.image_width * 3
+        assert(self.pitch % 32 == 0)
 
-        success = bcm.graphics_get_display_size(0, ctypes.byref(self.width), ctypes.byref(self.height)) 
-        assert success >= 0
+        # Set up rectangles
+        self.src_rect = c_ints((0, 0, self.image_width << 16, self.image_height << 16))
+        dest_width = int(self.display_height.value * self.image_width / self.image_height)
+        self.dest_rect = c_ints((0, 0, dest_width, self.display_height))
 
-        # LCD setting (0)
-        self.dispman_display = bcm.vc_dispmanx_display_open(0)
-        assert self.dispman_display != 0
+        # Set up the resources on the screen
+        self.image_element = None
+        self.image_resource = None
+        self._create_buffer()
 
-        self.img_element = None
-        self.img_resource = None
+        # Load up all the images
+        self.page = 0
+        self.pages = [None for page in range(0, self.pdf.pages)]
+        self._start_caching()
 
-        self.create_buffer()
+        # Wait for commands
+        self._wait_and_listen(Path(socket_path))
+
+    # 
+    def jump(self, page: int) -> None:
+        self.page = page
+        image = self.pages[page]
+        if not image:
+            return
+
+        # Write the image data to the displayed resource
+        result = bcm.vc_dispmanx_resource_write_data(
+            self.image_resource,
+            self.IMAGE_TYPE,
+            self.pitch,
+            image_buffer.ctypes.data,
+            ctypes.byref(self.image_rect),
+        )
+
+        # Mark it as modified in order to refresh the screen
+        with self._bcm_update() as dispman_update:
+            bcm.vc_dispmanx_element_modified(
+                dispman_update,
+                self.image_element,
+                ctypes.byref(self.dest_rect),
+            )
+
+    # 
+    def next(self) -> None:
+        next_page = self.page + 1
+        if next_page >= self.pdf.pages:
+            next_page = 0
+
+        self.jump(next_page)
+
+    # 
+    def prev(self) -> None:
+        prev_page = self.page - 1
+        if prev_page < 0:
+            next_page = self.pdf.pages - 1
+
+        self.jump(prev_page)
 
     # Cleans up the elements / resources on the display
     def close(self):
-        with self.bcm_update() as dispman_update:
-            bcm.vc_dispmanx_element_remove(dispman_update, self.img_element)
+        with self._bcm_update() as dispman_update:
+            bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
 
-        bcm.vc_dispmanx_resource_delete(self.img_resource)
+        bcm.vc_dispmanx_resource_delete(self.image_resource)
         bcm.vc_dispmanx_display_close(self.dispman_display)
 
+        quit()
+
+    # Initializes the window that we'll draw to
+    def _init_display(self):
+        bcm.bcm_host_init()
+
+        self.display_width, self.display_height = ctypes.c_int(), ctypes.c_int()
+
+        # Look up the display dimensions
+        success = bcm.graphics_get_display_size(0, ctypes.byref(self.display_width), ctypes.byref(self.display_width)) 
+        assert success >= 0
+
+        self.dispman_display = bcm.vc_dispmanx_display_open(0) # LCD
+        assert self.dispman_display != 0
+
+    # Adjusts the given value by rounding it down to the nearest multiple of :align_to:
+    def _align_down(self, value, align_to):
+        return value & ~(align_to - 1)
+
+    # Creates the buffer that'll be used to write to
+    def _create_buffer(self):
+        vc_image_ptr = ctypes.c_uint()
+
+        with self._bcm_update() as dispman_update:
+            # Create resource
+            self.image_resource = bcm.vc_dispmanx_resource_create(
+                self.IMAGE_TYPE,
+                self.image_width,
+                self.image_height,
+                ctypes.byref(vc_image_ptr),
+            )
+            assert self.image_resource != 0
+
+            # scale width so that aspect ratio is retained with display height - might crop right part of the bg
+            alpha = c_ints((DISPMANX_FLAGS_ALPHA_FROM_SOURCE, 255, 0))
+            self.image_element = bcm.vc_dispmanx_element_add(
+                dispman_update,
+                self.dispman_display,
+                self.layer,
+                ctypes.byref(self.dest_rect),
+                self.image_resource,
+                ctypes.byref(self.src_rect),
+                DISPMANX_PROTECTION_NONE,
+                alpha = ctypes.byref(alpha),
+                clamp = 0,
+                transform = DISPMANX_NO_ROTATE,
+            )
+
+            assert(self.image_element != 0)
+
+    # Starts the process for modifying the display
     @contextmanager
-    def bcm_update(self):
+    def _bcm_update(self):
         dispman_update = bcm.vc_dispmanx_update_start(10)
         assert dispman_update != 0
 
@@ -57,88 +176,94 @@ class ManualKit():
         result = bcm.vc_dispmanx_update_submit_sync(dispman_update)
         assert result == 0
 
-    def _align_up(self, n, alignTo):
-        return ((n + alignTo - 1) & ~(alignTo - 1))
+    # Renders and caches each page in the PDF
+    def _start_caching(self) -> None:
+        self.pages_to_cache = list(range(self.pdf.pages))
+        threads = []
+        for i in range(min(len(self.pages_to_cache), self.concurrency)):
+            thread = threading.Thread(target=self._cache_pages)
+            thread.setDaemon(True)
+            thread.start()
 
-    def _align_down(self, n, alignTo):
-        return n & ~(alignTo - 1)
+        try:
+            # Wait for workers to finish
+            for thread in threads:
+                thread.join(raise_exception=True)
+        except Exception as e:
+            # Empty the queue
+            with queue.mutex:
+                queue.queue.clear()
 
-    def create_buffer(self):
-        self.vc_image_ptr = ctypes.c_uint()
-        self.pitch = self.imgw * 3
-        assert(self.pitch % 32 == 0)
+            # Wait for all workers to finish, ignoring any exceptions
+            for thread in threads:
+                thread.join()
 
-        self.imgtype = VC_IMAGE_RGB888
-        with self.bcm_update() as dispman_update:
-            self.img_resource = bcm.vc_dispmanx_resource_create(
-                self.imgtype,
-                self.imgw,
-                self.imgh,
-                ctypes.byref(self.vc_image_ptr),
-            )
-            assert self.img_resource != 0
+            raise e
 
-            self.src_rect = c_ints((0, 0, self.imgw << 16, self.imgh << 16))
+    # Renders and caches the pages from the PDF
+    def _cache_pages(self) -> None:
+        while not self.pages_to_cache.empty():
+            page = self.pages_to_cache.get_nowait()
 
-            # scale width so that aspect ratio is retained with display height - might crop right part of the bg
-            dstw = int(self.h.value * self.imgw / self.imgh)
-            self.dst_rect = c_ints((0, 0, dstw, self.h))
-            self.alpha = c_ints((DISPMANX_FLAGS_ALPHA_FROM_SOURCE, 255, 0))
-            self.img_element = bcm.vc_dispmanx_element_add(
-                dispman_update,
-                self.dispman_display,
-                self.layer,
-                ctypes.byref(self.dst_rect),
-                self.img_resource,
-                ctypes.byref(self.src_rect),
-                DISPMANX_PROTECTION_NONE,
-                ctypes.byref(self.alpha),
-                0,
-                DISPMANX_NO_ROTATE,
-            )
+            # Nothing left -- finish the thread
+            if not page:
+                break
 
-            assert(self.img_element != 0)
+            self.pages[page] = self._render_image(page)
 
-    def loadImg(self, path):
-        from poppler import load_from_file, PageRenderer
+            # If the user was waiting for this page to render, go ahead and
+            # jump to it now
+            if page == self.page:
+                self.jump(page)
 
-        pdf_document = load_from_file(path)
-        page_1 = pdf_document.create_page(0)
-
-        renderer = PageRenderer()
-        pdf_image = renderer.render_page(page_1, 150, 150)
+    # Generates an Image object 
+    def _render_page(self, page: int) -> Image:
+        page_image = self.renderer.render_page(page, 150, 150)
 
         image = Image.frombytes(
-            "RGBA",
-            (pdf_image.width, pdf_image.height),
-            pdf_image.data,
+            'RGBA',
+            (page_image.width, page_image.height),
+            page_image.data,
             "raw",
-            str(pdf_image.format),
+            str(page_image.format),
         )
 
-        # image = Image.open(path)
-        if image.size[0] < self.imgw or image.size[1] < self.imgh:
-            image = image.resize((self.imgw, self.imgh), Image.BILINEAR)
+        if image.size[0] < self.image_width or image.size[1] < self.image_height:
+            image = image.resize((self.image_width, self.image_height), Image.BILINEAR)
 
-        if image.mode != "RGB":
-            image = image.convert("RGB")
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
 
-        return image
+        return numpy.array(image)
 
-    def set_img(self, path):
-        img = self.loadImg(path)
-        bmpRect = c_ints((0, 0, self.imgw, self.imgh))
-        imgbuffer = numpy.array(img)
-        result = bcm.vc_dispmanx_resource_write_data(self.img_resource,
-                                                     self.imgtype,
-                                                     self.pitch,
-                                                     imgbuffer.ctypes.data,
-                                                     ctypes.byref(bmpRect))
-        with self.bcm_update() as dispman_update:
-            bcm.vc_dispmanx_element_modified(dispman_update, self.img_element, ctypes.byref(self.dst_rect));
+    # Starts a listener on the given unix socket to allow for remote commands
+    def _wait_and_listen(self, socket_path: Path) -> None:
+        server = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
+        server.bind(socket_path)
 
-dsp = DispmanxBG(1920, 1080, -1)
-dsp.set_img('/home/pi/.emulationstation/downloaded_media/c64/manuals/180 (Europe) (Budget).good.pdf')
-# dsp.set_img('/home/pi/.emulationstation/downloaded_media/c64/manuals/test3/page-001.jpg')
-time.sleep(5)
-dsp.close()
+        while True:
+            datagram = server.recv(1024)
+            if not datagram:
+                self.close()
+            else:
+                command = datagram.decode('utf-8')
+                if command == 'close':
+                    self.close()
+                elif command == 'next':
+                    self.next()
+                elif command == 'prev':
+                    self.prev()
+
+def main() -> None:
+    parser = ArgumentParser()
+    parser.add_argument(dest='pdf', help='PDF file to display')
+    parser.add_argument('--socket', dest='socket_path', help='UNIX Socket path to listen for commands', default='/tmp/manualkit.sock')
+    parser.add_argument('--layer', type=int, dest='layer', help='Dispmanx layer to render to', default=-1)
+    parser.add_argument('--concurrency', type=int, dest='concurrency', help='Number of concurrent rendering threads to use', default=4)
+    args = parser.parse_args()
+    ManualKit(**vars(args)).run()
+
+
+if __name__ == '__main__':
+    signal(SIGPIPE, SIG_DFL)
+    main()
