@@ -48,18 +48,19 @@ class ManualKit():
         config = configparser.ConfigParser()
         if config_path and Path(config_path).exists():
             config.read(config_path)
-        self.hotkey = config.get('hotkey', hotkey)
-        self.concurrency = config.get('concurrency', concurrency)
-        self.resolution = config.get('resolution', resolution)
-        self.layer = config.get('layer', layer)
+        self.hotkey = config.get('manualkit', 'hotkey', fallback=hotkey)
+        self.concurrency = int(config.get('manualkit', 'concurrency', fallback=concurrency))
+        self.resolution = int(config.get('manualkit', 'resolution', fallback=resolution))
+        self.layer = int(config.get('manualkit', 'layer', fallback=layer))
 
         # Handle kill signals
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
         # Connect to the display
-        self.display_width = 0
-        self.display_height = 0
+        self.dispman_display = None
+        self.display_width = None
+        self.display_height = None
         self.image_element = None
         self.image_resource = None
         self._init_display()
@@ -69,11 +70,11 @@ class ManualKit():
         self.image_height = self._align_down(self.display_height, 16)
         self.image_rect = self._c_ints((0, 0, self.image_width, self.image_height))
         self.pitch = self.image_width * 3
-        assert(self.pitch % 32 == 0)
+        assert self.pitch % 32 == 0
 
         # Set up display coordinates
         self.src_rect = self._c_ints((0, 0, self.image_width << 16, self.image_height << 16))
-        dest_width = int(self.display_height.value * self.image_width / self.image_height)
+        dest_width = int(self.display_height * self.image_width / self.image_height)
         self.dest_rect = self._c_ints((0, 0, dest_width, self.display_height))
 
         # Render and cache the pages from the pdf
@@ -103,7 +104,7 @@ class ManualKit():
 
         # Create the area for us to draw on
         vc_image_ptr = ctypes.c_uint()
-        with self._bcm_update() as dispman_update:
+        with self._update_display() as dispman_update:
             # Create resource
             self.image_resource = bcm.vc_dispmanx_resource_create(
                 self.IMAGE_TYPE,
@@ -136,7 +137,7 @@ class ManualKit():
         try:
             # Remove the image we've been drawing on screen
             if self.image_element:
-                with self._bcm_update() as dispman_update:
+                with self._update_display() as dispman_update:
                     bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
                 self.image_element = None
         finally:
@@ -210,23 +211,26 @@ class ManualKit():
     def _init_display(self) -> None:
         bcm.bcm_host_init()
 
-        self.display_width = ctypes.c_int()
-        self.display_height = ctypes.c_int()
+        display_width = ctypes.c_int()
+        display_height = ctypes.c_int()
 
         # Look up the display dimensions
-        success = bcm.graphics_get_display_size(0, ctypes.byref(self.display_width), ctypes.byref(self.display_width)) 
+        success = bcm.graphics_get_display_size(0, ctypes.byref(display_width), ctypes.byref(display_height)) 
         assert success >= 0
+
+        self.display_width = display_width.value
+        self.display_height = display_height.value
 
         self.dispman_display = bcm.vc_dispmanx_display_open(0) # LCD
         assert self.dispman_display != 0
 
     # Adjusts the given value by rounding it down to the nearest multiple of :align_to:
-    def _align_down(self, value, align_to) -> int:
+    def _align_down(self, value: int, align_to: int) -> int:
         return value & ~(align_to - 1)
 
     # Generates a tuple of c_int objects
-    def _c_ints(x -> Tuple[int]) -> None:
-      return (ctypes.c_int * len(x))(*x)
+    def _c_ints(self, values: Tuple[int]) -> None:
+        return (ctypes.c_int * len(values))(*values)
 
     # Starts the process for modifying the display
     @contextmanager
@@ -241,8 +245,11 @@ class ManualKit():
 
     # Renders and caches each page in the PDF
     def _cache_in_background(self) -> None:
-        queue = list(range(self.pdf.pages))
-        for i in range(min(len(queue), self.concurrency)):
+        queue = Queue()
+        for page in range(self.pdf.pages):
+            queue.put(page)
+
+        for i in range(min(queue.qsize(), self.concurrency)):
             thread = threading.Thread(target=self._cache_pages, args=[queue])
             thread.setDaemon(True)
             thread.start()
@@ -255,10 +262,10 @@ class ManualKit():
             page = queue.get_nowait()
 
             # Nothing left -- finish the thread
-            if not page:
+            if page is None:
                 break
 
-            self.pages[page] = self._render_image(page)
+            self.pages[page] = self._render_page(page, renderer)
 
     # Generates a pixel map for the given page 
     def _render_page(self, page_num: int, renderer: poppler.PageRenderer) -> numpy.array:
