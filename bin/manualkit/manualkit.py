@@ -1,8 +1,9 @@
+import configparser
 import ctypes
 import keyboard
 import numpy
-import os
 import poppler
+import psutil
 import signal
 import socket
 import subprocess
@@ -38,52 +39,63 @@ class ManualKit():
         layer: int = -1,
     ) -> None:
         self.pdf = poppler.load_from_file(path)
-        self.layer = layer
-        self.concurrency = concurrency
 
+        # Read from config
+        config = configparser.ConfigParser()
         if config_path and Path(config_path).exists():
+            config.read(config_path)
 
-
-        # Find the emulator pid
-        runcommand_pid = subprocess.run('pgrep -f runcommand.sh | sort | tail -n 1', shell=True, check=True, capture_output=True).stdout.decode()
-        self.emulator_pid = subprocess.run(f'pstree -T -p {runcommand_pid} | grep -o "([[:digit:]]*)" | grep -o "[[:digit:]]*" | tail -n ', shell=True, check=True, capture_output=True).stdout.decode()
+        self.hotkey = config.get('hotkey', hotkey)
+        self.concurrency = config.get('concurrency', concurrency)
+        self.layer = config.get('layer', layer)
 
         # Handle kill signals
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
+        # Connect to the display
         self.display_width = 0
         self.display_height = 0
+        self.image_element = None
+        self.image_resource = None
         self._init_display()
 
-        # Choose the next smallest multiple of 16 for width and height
+        # Identify the target image dimensions
         self.image_width = self._align_down(self.display_width, 16)
         self.image_height = self._align_down(self.display_height, 16)
         self.image_rect = c_ints((0, 0, self.image_width, self.image_height))
         self.pitch = self.image_width * 3
         assert(self.pitch % 32 == 0)
 
-        # Set up rectangles
+        # Set up display coordinates
         self.src_rect = c_ints((0, 0, self.image_width << 16, self.image_height << 16))
         dest_width = int(self.display_height.value * self.image_width / self.image_height)
         self.dest_rect = c_ints((0, 0, dest_width, self.display_height))
 
-        # Load up all the images
+        # Render and cache the pages from the pdf
         self.page = 0
         self.pages = [None for page in range(0, self.pdf.pages)]
-        self._start_caching()
+        self._cache_in_background()
 
         # Wait for commands
         self._wait_and_listen(Path(socket_path))
 
-    # Set up the resources on the screen
+    @property
+    def emulator_process(self) -> psutil.Process:
+        # Find the emulator pid
+        all_processes = psutil.process_iter(attrs=['pid', 'cmdline'])
+        runcommand_process = next(filter(lambda p: 'runcommand.sh' in ' '.join(p.info['cmdline']), all_processes))
+        return runcommand_process.children(recursive=True)[-1]
+
+    # Set up the resources on the screen and show the first page
     def show(self) -> None:
         # Suspend emulator
-        kill -STOP "$emulator_pid"
+        self.suspend_emulator()
 
-        self.image_element = None
-        self.image_resource = None
-        self._create_buffer()
+        # Create the area for us to draw on
+        self._create_image_resource()
+
+        # Show the first page
         self.jump(0)
 
     def hide(self) -> None:
@@ -91,8 +103,9 @@ class ManualKit():
             if self.image_element:
                 with self._bcm_update() as dispman_update:
                     bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
+                self.image_element = None
         finally:
-            os.kill(self.emulator_pid, signal.SIGCONT)
+            self.resume_emulator()
 
     # 
     def jump(self, page: int) -> None:
@@ -144,6 +157,18 @@ class ManualKit():
 
         quit()
 
+    # 
+    def suspend_emulator(self):
+        process = self.emulator_process
+        if process:
+            process.send_signal(signal.SIGSTOP)
+
+    # 
+    def resume_emulator(self):
+        process = self.emulator_process
+        if process:
+            process.send_signal(signal.SIGCONT)
+
     # Initializes the window that we'll draw to
     def _init_display(self):
         bcm.bcm_host_init()
@@ -162,7 +187,7 @@ class ManualKit():
         return value & ~(align_to - 1)
 
     # Creates the buffer that'll be used to write to
-    def _create_buffer(self):
+    def _create_image_resource(self):
         vc_image_ptr = ctypes.c_uint()
 
         with self._bcm_update() as dispman_update:
@@ -204,7 +229,7 @@ class ManualKit():
         assert result == 0
 
     # Renders and caches each page in the PDF
-    def _start_caching(self) -> None:
+    def _cache_in_background(self) -> None:
         self.pages_to_cache = list(range(self.pdf.pages))
         threads = []
         for i in range(min(len(self.pages_to_cache), self.concurrency)):
