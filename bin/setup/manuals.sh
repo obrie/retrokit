@@ -6,8 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install_dir='/opt/retropie/supplementary/manualkit'
 
 install() {
-  sudo apt install -y libpoppler-cpp-dev
-  sudo pip3 install -y python-poppler numpy keyboard
+  "$bin_dir/manualkit/setup.sh" install
 
   sudo mkdir -p "$install_dir"
   sudo cp -v "$bin_dir/manualkit"/* "$install_dir/"
