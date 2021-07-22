@@ -1,15 +1,19 @@
 import ctypes
+import keyboard
 import numpy
 import os
 import poppler
+import signal
 import socket
+import subprocess
 import threading
 import time
 
+from contextlib import contextmanager
 from pathlib import Path
 from PIL import Image
 from queue import Queue
-from contextlib import contextmanager
+from typing import Optional
 
 bcm = ctypes.CDLL('/opt/vc/lib/libbcm_host.so')
 
@@ -28,13 +32,25 @@ class ManualKit():
 
     def __init__(self,
         pdf_path: str,
-        socket_path: str = '/tmp/manualkit.sock',
-        layer: int = -1,
+        config_path: Optional[str] = None,
+        hotkey: str = 'alt',
         concurrency: int = 4,
+        layer: int = -1,
     ) -> None:
         self.pdf = poppler.load_from_file(path)
         self.layer = layer
         self.concurrency = concurrency
+
+        if config_path and Path(config_path).exists():
+
+
+        # Find the emulator pid
+        runcommand_pid = subprocess.run('pgrep -f runcommand.sh | sort | tail -n 1', shell=True, check=True, capture_output=True).stdout.decode()
+        self.emulator_pid = subprocess.run(f'pstree -T -p {runcommand_pid} | grep -o "([[:digit:]]*)" | grep -o "[[:digit:]]*" | tail -n ', shell=True, check=True, capture_output=True).stdout.decode()
+
+        # Handle kill signals
+        signal.signal(signal.SIGINT, self.exit)
+        signal.signal(signal.SIGTERM, self.exit)
 
         self.display_width = 0
         self.display_height = 0
@@ -52,11 +68,6 @@ class ManualKit():
         dest_width = int(self.display_height.value * self.image_width / self.image_height)
         self.dest_rect = c_ints((0, 0, dest_width, self.display_height))
 
-        # Set up the resources on the screen
-        self.image_element = None
-        self.image_resource = None
-        self._create_buffer()
-
         # Load up all the images
         self.page = 0
         self.pages = [None for page in range(0, self.pdf.pages)]
@@ -64,6 +75,24 @@ class ManualKit():
 
         # Wait for commands
         self._wait_and_listen(Path(socket_path))
+
+    # Set up the resources on the screen
+    def show(self) -> None:
+        # Suspend emulator
+        kill -STOP "$emulator_pid"
+
+        self.image_element = None
+        self.image_resource = None
+        self._create_buffer()
+        self.jump(0)
+
+    def hide(self) -> None:
+        try:
+            if self.image_element:
+                with self._bcm_update() as dispman_update:
+                    bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
+        finally:
+            os.kill(self.emulator_pid, signal.SIGCONT)
 
     # 
     def jump(self, page: int) -> None:
@@ -106,12 +135,12 @@ class ManualKit():
         self.jump(prev_page)
 
     # Cleans up the elements / resources on the display
-    def close(self):
-        with self._bcm_update() as dispman_update:
-            bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
+    def exit(self):
+        if self.image_resource:
+            bcm.vc_dispmanx_resource_delete(self.image_resource)
 
-        bcm.vc_dispmanx_resource_delete(self.image_resource)
-        bcm.vc_dispmanx_display_close(self.dispman_display)
+        if self.dispman_display:
+            bcm.vc_dispmanx_display_close(self.dispman_display)
 
         quit()
 
@@ -237,30 +266,21 @@ class ManualKit():
 
         return numpy.array(image)
 
-    # Starts a listener on the given unix socket to allow for remote commands
-    def _wait_and_listen(self, socket_path: Path) -> None:
-        server = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
-        server.bind(socket_path)
-
-        while True:
-            datagram = server.recv(1024)
-            if not datagram:
-                self.close()
-            else:
-                command = datagram.decode('utf-8')
-                if command == 'close':
-                    self.close()
-                elif command == 'next':
-                    self.next()
-                elif command == 'prev':
-                    self.prev()
+    # Starts listening for keyboard events.  This method will never return.
+    def _wait_and_listen(self) -> None:
+        keyboard.add_hotkey(self.hotkey + '+m', self.show, suppress=True)
+        keyboard.add_hotkey(self.hotkey + '+q', self.hide, suppress=True)
+        keyboard.add_hotkey(self.hotkey + '+n', self.next, suppress=True)
+        keyboard.add_hotkey(self.hotkey + '+b', self.prev, suppress=True)
+        keyboard.wait()
 
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='pdf', help='PDF file to display')
-    parser.add_argument('--socket', dest='socket_path', help='UNIX Socket path to listen for commands', default='/tmp/manualkit.sock')
-    parser.add_argument('--layer', type=int, dest='layer', help='Dispmanx layer to render to', default=-1)
+    parser.add_argument('--config', dest='config_path', help='Configuration file to use')
+    parser.add_argument('--hotkey', dest='hotkey', help='Hotkey to use for listening to events', default='alt')
     parser.add_argument('--concurrency', type=int, dest='concurrency', help='Number of concurrent rendering threads to use', default=4)
+    parser.add_argument('--layer', type=int, dest='layer', help='Dispmanx layer to render to', default=-1)
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 

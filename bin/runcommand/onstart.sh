@@ -59,17 +59,8 @@ launch_manualkit() {
     return
   fi
 
-  # Clean up processes possibly left behind
-  killall thd || true
-  killall vlc || true
-
-  # Create a triggerhappy conf for this manual
-  cp /opt/retropie/supplementary/manualkit/triggerhappy.conf /tmp/manualkit.conf
-  sed -i 's|start$|start "'"$manual_path"'"|g' /tmp/manualkit.conf
-
-  # Start up triggerhappy to monitor keystrokes
-  touch /tmp/manualkit.socket
-  /usr/sbin/thd --triggers /tmp/manualkit.conf --socket /tmp/manualkit.socket --deviceglob '/dev/input/event*' &
+  # Start up manualkit
+  python3 /opt/retropie/supplementary/manualkit/manualkit.py "$manual_path" --config /opt/retropie/configs/all/manualkit.ini
 }
 
 # This script shows the launch image in the background while allowing
