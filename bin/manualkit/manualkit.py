@@ -33,8 +33,6 @@ class ManualKit():
         concurrency: int = 4,
     ) -> None:
         self.pdf = poppler.load_from_file(path)
-        self.renderer = poppler.PageRenderer()
-        self.socket = socket
         self.layer = layer
         self.concurrency = concurrency
 
@@ -202,6 +200,8 @@ class ManualKit():
 
     # Renders and caches the pages from the PDF
     def _cache_pages(self) -> None:
+        renderer = poppler.PageRenderer()
+
         while not self.pages_to_cache.empty():
             page = self.pages_to_cache.get_nowait()
 
@@ -217,8 +217,9 @@ class ManualKit():
                 self.jump(page)
 
     # Generates an Image object 
-    def _render_page(self, page: int) -> Image:
-        page_image = self.renderer.render_page(page, 150, 150)
+    def _render_page(self, page_num: int, renderer: poppler.PageRenderer) -> Image:
+        page = self.pdf.create_page(page_num)
+        page_image = renderer.render_page(page, 150, 150)
 
         image = Image.frombytes(
             'RGBA',
