@@ -123,9 +123,9 @@ class ManualKit():
                 self.image_resource,
                 ctypes.byref(self.src_rect),
                 DISPMANX_PROTECTION_NONE,
-                alpha = ctypes.byref(alpha),
-                clamp = 0,
-                transform = DISPMANX_NO_ROTATE,
+                ctypes.byref(alpha), # alpha
+                0, # clamp
+                DISPMANX_NO_ROTATE, # transform
             )
             assert self.image_element != 0
 
