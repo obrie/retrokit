@@ -61,6 +61,10 @@ class Display():
         dest_width = int(self.height * self.image_width / self.image_height)
         self.dest_rect = _c_ints((0, 0, dest_width, self.height))
 
+    # Whether the display is currently visible
+    def visible(self) -> bool:
+        return self.image_element is not None
+
     # Show an empty black layer
     def show(self) -> None:
         # Create the area for us to draw on

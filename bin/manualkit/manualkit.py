@@ -17,7 +17,7 @@ class ManualKit():
     ) -> None:
         # Read from config
         config = configparser.ConfigParser()
-        conifg.read_dict({'pdf': {}, 'display': {}, 'input': {}})
+        config.read_dict({'pdf': {}, 'display': {}, 'input': {}})
         if config_path and Path(config_path).exists():
             config.read(config_path)
 
@@ -29,9 +29,17 @@ class ManualKit():
         self.pdf = PDF(pdf_path, width=self.display.image_width, height=self.display.image_height, **config['pdf'])
         self.pdf.cache_in_background()
         self.emulator = Emulator()
-        self.input_manager = InputManager(**config['input'])
+        self.input_listener = InputListener(**config['input'])
+        self.input_listener.listen()
 
-    # Renders the first page of the manual on screen
+    # Toggles visibility of the manual
+    def toggle(self) -> None:
+        if self.display.visible():
+            self.show()
+        else:
+            self.hide()
+
+    # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
         self.emulator.suspend()
         self.display.show()
