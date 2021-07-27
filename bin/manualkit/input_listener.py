@@ -67,18 +67,24 @@ class InputDevice():
     # change manualkit behavior
     async def read(self) -> None:
         async for event in self.dev_device.async_read_loop():
-            # High-performance lookup to see if we should run more logic
-            if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in VALID_ABS_CODES):
-                if event.value != 0:
-                    # Key pressed -- only update on non-repeated events
-                    repeat = event.value == 2
-                    if not repeat:
-                        self.active_inputs[event.code] = event.value
+            try:
+                self.handle_event(event)
+            except Exception as e:
+                logging.warn(f'Failed to handle event: {e}')
 
-                    self.check_inputs(event, repeat)
-                else:
-                    # Key released
-                    self.active_inputs.pop(event.code)
+    def handle_event(self, event) -> None:
+        # High-performance lookup to see if we should run more logic
+        if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in VALID_ABS_CODES):
+            if event.value != 0:
+                # Key pressed -- only update on non-repeated events
+                repeat = event.value == 2
+                if not repeat:
+                    self.active_inputs[event.code] = event.value
+
+                self.check_inputs(event, repeat)
+            else:
+                # Key released
+                self.active_inputs.pop(event.code)
 
     # Check the currently active inputs to see if they should trigger an event
     def check_inputs(self, event: evdev.InputEvent, repeat: bool) -> None:
@@ -99,18 +105,18 @@ class InputDevice():
         self.watch_navigation = True
 
         try:
-            self.raw_device.grab()
+            self.dev_device.grab()
         except Exception as e:
-            logging.warn(f'Failed to grab device: {self.raw_device.name} ({e})')
+            logging.warn(f'Failed to grab device: {self.dev_device.name} ({e})')
 
     # Releases control of the current device to the rest of the system
     def ungrab(self):
         self.watch_navigation = False
 
         try:
-            self.raw_device.ungrab()
+            self.dev_device.ungrab()
         except Exception as e:
-            logging.warn(f'Failed to ungrab device: {self.raw_device.name} ({e})')
+            logging.warn(f'Failed to ungrab device: {self.dev_device.name} ({e})')
 
 # Listens for key / button presses that trigger changes to manualkit
 class InputListener():
@@ -166,7 +172,13 @@ class InputListener():
             asyncio.ensure_future(device.read())
 
         loop = asyncio.get_event_loop()
+        loop.set_exception_handler(self.handle_exception)
         loop.run_forever()
+
+    # 
+    def handle_exception(self, loop, context):
+        message = context.get('exception', context['message'])
+        logging.error(f'Caught exception: {message}')
 
     # Toggles control of the devices and triggers the `on_toggle` callback
     def toggle(self):
