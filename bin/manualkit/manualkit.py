@@ -37,11 +37,20 @@ class ManualKit():
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
+        # Connect to the display
         self.display = Display(**config['display'])
+
+        # Start caching the PDF
         self.pdf = PDF(pdf_path, width=self.display.image_width, height=self.display.image_height, **config['pdf'])
         self.pdf.cache_in_background()
-        self.emulator = Emulator()
-        self.input_listener = InputListener(**config['input'])
+
+        # Start listening to inputs
+        self.input_listener = InputListener(
+            on_toggle=self.toggle,
+            on_next=self.next,
+            on_prev=self.prev,
+            **config['input'],
+        )
         self.input_listener.listen()
 
     # Toggles visibility of the manual
@@ -53,7 +62,7 @@ class ManualKit():
 
     # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
-        self.emulator.suspend()
+        Emulator.instance().suspend()
         self.display.show()
 
         # Render whatever was the last active page
@@ -65,7 +74,7 @@ class ManualKit():
             self.display.hide()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
-            self.emulator.resume()
+            Emulator.instance().resume()
 
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self) -> None:
@@ -80,6 +89,7 @@ class ManualKit():
     # Cleans up the elements / resources on the display
     def exit(self) -> None:
         self.display.close()
+        self.input_listener.stop()
         quit()
 
     # Renders the currently active PDF page

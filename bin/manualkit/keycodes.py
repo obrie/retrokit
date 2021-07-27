@@ -1,5 +1,6 @@
 from evdev.ecodes import *
 
+# Retroarch keyboard input name => evdev ecode
 retroarch_keyboard = {
     'a': (KEY_A, 1),
     'add': (KEY_KPPLUS, 1),
@@ -107,7 +108,7 @@ retroarch_keyboard = {
     'z': (KEY_Z, 1),
 }
 
-# Joystick
+# Retroarch joystick input name => evdev ecode
 retroarch_joystick = {
     # - Buttons
     '0': (BTN_SOUTH, 1),
@@ -125,6 +126,7 @@ retroarch_joystick = {
     '12': (BTN_MODE, 1),
     '13': (BTN_THUMBL, 1),
     '14': (BTN_THUMBR, 1),
+    
     # - D-Pad
     'h0up': (ABS_HAT0Y, -1),
     'h0right': (ABS_HAT0X, 1),
