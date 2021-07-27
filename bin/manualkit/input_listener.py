@@ -7,15 +7,15 @@ from enum import Enum
 
 import manualkit.keycodes
 
-from typing import List
+from typing import Callable, List, Optional
 
 # Represents the type of input that we're listening to
 class InputType(Enum):
     KEYBOARD = 'keyboard', manualkit.keycodes.retroarch_keyboard
     JOYSTICK = 'joystick', manualkit.keycodes.retroarch_joystick
 
-    def __init__(self, name: str, retroarch_codes: dict) -> None:
-        self.name = name
+    def __init__(self, type_name: str, retroarch_codes: dict) -> None:
+        self.type_name = type_name
         self.retroarch_codes = retroarch_codes
 
 # Represents an evdev device that we're listening for events from
@@ -48,13 +48,13 @@ class InputDevice():
         # Define expected evdev inputs
         retroarch_codes = input_type.retroarch_codes
 
-        self.toggle_inputs = dict((retroarch_codes[toggle_input]))
+        self.toggle_inputs = dict((retroarch_codes[toggle_input],))
         if hotkey:
             code, value = retroarch_codes[hotkey]
             self.toggle_inputs[code] = value
 
-        self.next_inputs = dict((retroarch_codes[next_input]))
-        self.prev_inputs = dict((retroarch_codes[prev_input]))
+        self.next_inputs = dict((retroarch_codes[next_input],))
+        self.prev_inputs = dict((retroarch_codes[prev_input],))
 
         # List codes that might trigger logic
         self.valid_codes = set(map(lambda name: retroarch_codes[name][0], [toggle_input, next_input, prev_input]))
@@ -68,22 +68,26 @@ class InputDevice():
     async def read(self) -> None:
         async for event in self.dev_device.async_read_loop():
             # High-performance lookup to see if we should run more logic
-            if event.type == ecodes.EV_KEY or (event.type == ecodes.EV_ABS and event.code in VALID_ABS_CODES):
+            if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in VALID_ABS_CODES):
                 if event.value != 0:
-                    # Key pressed
-                    self.active_inputs[event.code] = event.value
-                    self.check_inputs(event)
+                    # Key pressed -- only update on non-repeated events
+                    repeat = event.value == 2
+                    if not repeat:
+                        self.active_inputs[event.code] = event.value
+
+                    self.check_inputs(event, repeat)
                 else:
                     # Key released
                     self.active_inputs.pop(event.code)
 
     # Check the currently active inputs to see if they should trigger an event
-    def check_inputs(self, event: evdev.InputEvent) -> None:
+    def check_inputs(self, event: evdev.InputEvent, repeat: bool) -> None:
         if event.code not in self.valid_codes:
             return
 
         if self.active_inputs == self.toggle_inputs:
-            self.on_toggle()
+            if not repeat:
+                self.on_toggle()
         elif self.watch_navigation:
             if self.active_inputs == self.next_inputs:
                 self.on_next()
@@ -162,7 +166,7 @@ class InputListener():
             asyncio.ensure_future(device.read())
 
         loop = asyncio.get_event_loop()
-        loop.run_forever()        
+        loop.run_forever()
 
     # Toggles control of the devices and triggers the `on_toggle` callback
     def toggle(self):
