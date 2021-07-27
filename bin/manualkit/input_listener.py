@@ -4,6 +4,7 @@ import evdev
 import logging
 import xml
 
+from pathlib import Path
 from typing import Callable
 
 from manualkit.input_device import InputDevice, InputType

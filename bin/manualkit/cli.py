@@ -1,16 +1,21 @@
 #!/usr/bin/python3
 
-import logging
 import os
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import configparser
-
-from manualkit import Display, Emulator, InputManager, PDF
+import logging
+from argparse import ArgumentParser
 from pathlib import Path
+from signal import signal, SIGPIPE, SIG_DFL
 from typing import Optional
+
+from manualkit.display import Display
+from manualkit.emulator import Emulator
+from manualkit.input_listener import InputListener
+from manualkit.pdf import PDF
 
 class ManualKit():
     def __init__(self,
