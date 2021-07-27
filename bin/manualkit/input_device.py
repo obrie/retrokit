@@ -36,6 +36,9 @@ class InputDevice():
         self.on_toggle = on_toggle
         self.on_next = on_next
         self.on_prev = on_prev
+
+        # Whether to watch for navigation input events (only occurs when
+        # inputs have been grabbed to this process)
         self.watch_navigation = False
 
         # Adjust for configparser issues
