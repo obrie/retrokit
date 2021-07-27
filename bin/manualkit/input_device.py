@@ -19,6 +19,8 @@ class InputType(Enum):
 
 # Represents an evdev device that we're listening for events from
 class InputDevice():
+    # List of EV_ABS codes that we actually care about -- everything else can be
+    # ignored.
     VALID_ABS_CODES = {evdev.ecodes.ABS_HAT0X, evdev.ecodes.ABS_HAT0Y}
 
     def __init__(self,
@@ -76,7 +78,7 @@ class InputDevice():
 
     def handle_event(self, event) -> None:
         # High-performance lookup to see if we should run more logic
-        if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in VALID_ABS_CODES):
+        if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in self.VALID_ABS_CODES):
             if event.value != 0:
                 # Key pressed -- only update on non-repeated events
                 repeat = event.value == 2

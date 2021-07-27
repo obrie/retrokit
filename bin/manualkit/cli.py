@@ -7,9 +7,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import configparser
 import logging
+import signal
 from argparse import ArgumentParser
 from pathlib import Path
-from signal import signal, SIGPIPE, SIG_DFL
 from typing import Optional
 
 from manualkit.display import Display
@@ -61,9 +61,9 @@ class ManualKit():
     # Toggles visibility of the manual
     def toggle(self) -> None:
         if self.display.visible():
-            self.show()
-        else:
             self.hide()
+        else:
+            self.show()
 
     # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
@@ -71,7 +71,7 @@ class ManualKit():
         self.display.show()
 
         # Render whatever was the last active page
-        self.render()
+        self.refresh()
 
     # Hides the manual
     def hide(self) -> None:
@@ -84,12 +84,12 @@ class ManualKit():
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self) -> None:
         self.pdf.next()
-        self.render()
+        self.refresh()
 
     # Moves to the previous page or goes to the end if already on the first page
     def prev(self) -> None:
         self.pdf.prev()
-        self.render()
+        self.refresh()
 
     # Cleans up the elements / resources on the display
     def exit(self) -> None:
@@ -98,18 +98,18 @@ class ManualKit():
         quit()
 
     # Renders the currently active PDF page
-    def render(self) -> None:
-        self.display.render(self.pdf.page_image)
+    def refresh(self) -> None:
+        self.display.draw(self.pdf.page_image)
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='pdf', help='PDF file to display')
-    parser.add_argument('--config', dest='config_path', help='Configuration file to use', default='/opt/retropie/configs/all/manualkit.conf')
+    parser.add_argument(dest='pdf_path', help='PDF file to display')
+    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 
 
 if __name__ == '__main__':
-    signal(SIGPIPE, SIG_DFL)
+    signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     main()

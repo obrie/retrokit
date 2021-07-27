@@ -21,6 +21,11 @@ class InputListener():
         keyboard_toggle: str = 'm',
         joystick_toggle: str = 'up',
     ) -> None:
+        self.on_toggle = on_toggle
+        self.on_next = on_next
+        self.on_prev = on_prev
+
+        # Defaults
         self.devices = []
         self.active = False
         self.loop = None

@@ -7,14 +7,26 @@ from queue import Queue
 
 # Represents a PDF-based manual
 class PDF():
-    def __init__(self, path: str, width: int, height: int, concurrency: int = 4) -> None:
+    def __init__(self,
+        path: str,
+        width: int,
+        height: int,
+        resolution: int = 150,
+        concurrency: int = 4,
+    ) -> None:
         self.path = path
         self.width = width
         self.height = height
-        self.concurrency = concurrency
+        self.resolution = int(resolution)
+        self.concurrency = int(concurrency)
         self.document = poppler.load_from_file(self.path)
         self.page = 0
         self.images = [None for page in range(0, self.document.pages)]
+
+    # Gets the image data for the current page
+    @property
+    def page_image(self) -> None:
+        return self.images[self.page]
 
     # cache_in_background and caches each page in the document
     def cache_in_background(self) -> None:
@@ -46,7 +58,6 @@ class PDF():
     # Jumps to the given page number
     def jump(self, page) -> None:
         self.page = page
-        self.page_image = self.images[page]
 
     # Renders and caches the pages from the document
     def _cache_pages(self, pages: Queue) -> None:
@@ -64,7 +75,7 @@ class PDF():
     # Generates a pixel map for the given page 
     def _render_page(self, page_number: int, renderer: poppler.PageRenderer) -> numpy.array:
         # Render the image in Poppler
-        page = self.pdf.create_page(page_number)
+        page = self.document.create_page(page_number)
         page_image = renderer.render_page(page, self.resolution, self.resolution)
 
         # Convert to a PIL image

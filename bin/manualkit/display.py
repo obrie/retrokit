@@ -31,7 +31,7 @@ class Display():
     IMAGE_TYPE = VC_IMAGE_RGB888
 
     def __init__(self, layer: int = -1) -> None:
-        self.layer = layer
+        self.layer = int(layer)
         self.image_element = None
         self.image_resource = None
         self.handle = None
