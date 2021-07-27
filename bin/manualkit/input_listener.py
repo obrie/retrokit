@@ -11,8 +11,12 @@ from typing import List
 
 # Represents the type of input that we're listening to
 class InputType(Enum):
-    KEYBOARD = 'keyboard'
-    JOYSTICK = 'joystick'
+    KEYBOARD = 'keyboard', manualkit.keycodes.retroarch_keyboard
+    JOYSTICK = 'joystick', manualkit.keycodes.retroarch_joystick
+
+    def __init__(self, name: str, retroarch_codes: dict) -> None:
+        self.name = name
+        self.retroarch_codes = retroarch_codes
 
 # Represents an evdev device that we're listening for events from
 class InputDevice():
@@ -42,10 +46,7 @@ class InputDevice():
         prev_input = prev_input.strip('"')
 
         # Define expected evdev inputs
-        if input_type == InputType.KEYBOARD:
-            retroarch_codes = manualkit.keycodes.retroarch_keyboard
-        else:
-            retroarch_codes = manualkit.keycodes.retroarch_joystick
+        retroarch_codes = input_type.retroarch_codes
 
         self.toggle_inputs = dict((retroarch_codes[toggle_input]))
         if hotkey:
