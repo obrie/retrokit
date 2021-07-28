@@ -60,7 +60,7 @@ launch_manualkit() {
   fi
 
   # Start up manualkit
-  python3 /opt/retropie/supplementary/manualkit/manualkit.py "$manual_path" --config /opt/retropie/configs/all/manualkit.ini
+  python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf &
 }
 
 # This script shows the launch image in the background while allowing
