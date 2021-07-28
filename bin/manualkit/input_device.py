@@ -44,7 +44,8 @@ class InputDevice():
         self.watch_navigation = False
 
         # Adjust for configparser issues
-        hotkey = hotkey.strip('"')
+        if hotkey:
+            hotkey = hotkey.strip('"')
         toggle_input = toggle_input.strip('"')
         next_input = next_input.strip('"')
         prev_input = prev_input.strip('"')
@@ -74,6 +75,9 @@ class InputDevice():
             try:
                 self.handle_event(event)
             except Exception as e:
+                import traceback
+                traceback.print_exc()
+                print(e)
                 logging.warn(f'Failed to handle event: {e}')
 
     def handle_event(self, event) -> None:

@@ -19,7 +19,7 @@ class InputListener():
         on_next: Callable,
         on_prev: Callable,
         keyboard_toggle: str = 'm',
-        joystick_toggle: str = 'up',
+        joystick_toggle: str = 'h0up',
     ) -> None:
         self.on_toggle = on_toggle
         self.on_next = on_next
@@ -34,14 +34,14 @@ class InputListener():
         retroarch_config = self._read_retroarch_config(self.RETROARCH_CONFIG_PATH)
 
         for device in [evdev.InputDevice(path) for path in evdev.list_devices()]:
-            autoconfig_path = Path(f'/home/retropie/configs/all/retroarch/autoconfig/{device.name}.cfg')
+            autoconfig_path = Path(f'/opt/retropie/configs/all/retroarch/autoconfig/{device.name}.cfg')
             if autoconfig_path.exists():
                 # Treat it like a joystick
                 joystick_config = self._read_retroarch_config(autoconfig_path)
                 self.devices.append(InputDevice(
                     device,
                     InputType.JOYSTICK,
-                    hotkey=joystick_config.get('input_enable_hotkey', fallback=None),
+                    hotkey=joystick_config.get('input_enable_hotkey_btn', fallback=None),
                     toggle_input=joystick_toggle,
                     next_input=joystick_config.get('input_right_btn', fallback='h0right'),
                     prev_input=joystick_config.get('input_left_btn', fallback='h0left'),
