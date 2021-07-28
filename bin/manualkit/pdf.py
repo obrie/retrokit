@@ -2,7 +2,7 @@ import numpy
 import poppler
 import threading
 
-from PIL import Image
+from PIL import Image, ImageOps
 from queue import Queue
 
 # Represents a PDF-based manual
@@ -62,6 +62,7 @@ class PDF():
     # Renders and caches the pages from the document
     def _cache_pages(self, pages: Queue) -> None:
         renderer = poppler.PageRenderer()
+        renderer.image_format = poppler.image.Image.Format.rgb24
 
         while not pages.empty():
             page = pages.get_nowait()
@@ -79,20 +80,9 @@ class PDF():
         page_image = renderer.render_page(page, self.resolution, self.resolution)
 
         # Convert to a PIL image
-        image = Image.frombytes(
-            'RGBA',
-            (page_image.width, page_image.height),
-            page_image.data,
-            'raw',
-            str(page_image.format),
-        )
+        image = Image.fromarray(numpy.array(page_image.memoryview(), copy=False))
 
         # Make sure it matches the expected image size
-        if image.size[0] < self.width or image.size[1] < self.height:
-            image = image.resize((self.width, self.height), Image.BILINEAR)
+        resized_image = ImageOps.pad(image, (self.width, self.height), color='black')
 
-        # Make sure it matches the display mode
-        if image.mode != 'RGB':
-            image = image.convert('RGB')
-
-        return numpy.array(image)
+        return numpy.array(resized_image)
