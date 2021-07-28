@@ -30,10 +30,10 @@ class Display():
     # The type of image we'll be rendering to the screen
     IMAGE_TYPE = VC_IMAGE_RGB888
 
-    def __init__(self, layer: int = -1) -> None:
-        self.layer = int(layer)
-        self.image_element = None
-        self.handle = None
+    def __init__(self, background_layer: int = -1000, foreground_layer: int = -1) -> None:
+        self.background_layer = int(background_layer)
+        self.foreground_layer = int(foreground_layer)
+        self.current_layer = self.background_layer
 
         # Create a connection to the display
         bcm.bcm_host_init()
@@ -63,52 +63,29 @@ class Display():
         self.dest_rect = _c_ints((0, 0, dest_width, self.height))
 
         # Create image resource
-        vc_image_handle = ctypes.c_uint()
-        self.image_resource = bcm.vc_dispmanx_resource_create(
-            self.IMAGE_TYPE,
-            self.image_width,
-            self.image_height,
-            ctypes.byref(vc_image_handle),
-        )
-        assert self.image_resource != 0
+        self._create_window()
 
     # Whether the display is currently visible
     def visible(self) -> bool:
-        return self.image_element is not None
+        return self.current_layer == self.foreground_layer
 
     # Show an empty black layer
     def show(self) -> None:
-        # Create the area for us to draw on
-        with self._update_display() as dispman_update:
-            alpha_config = _c_ints((
-                # Pick up source alpha from the image
-                self.DISPMANX_FLAGS_ALPHA_FROM_SOURCE,
-                # Opacity (0 - 255)
-                255,
-                # Mask resource handle
-                0,
-            ))
-            self.image_element = bcm.vc_dispmanx_element_add(
-                dispman_update,
-                self.handle,
-                self.layer,
-                ctypes.byref(self.dest_rect),
-                self.image_resource,
-                ctypes.byref(self.src_rect),
-                self.DISPMANX_PROTECTION_NONE,
-                ctypes.byref(alpha_config),
-                0, # clamp
-                self.DISPMANX_NO_ROTATE, # transform
-            )
-            assert self.image_element != 0
+        self.change_layer(self.foreground_layer)
 
     # Hides the layer
     def hide(self) -> None:
-        # Remove the image we've been drawing on screen
-        if self.image_element:
-            with self._update_display() as dispman_update:
-                bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
-            self.image_element = None
+        self.change_layer(self.background_layer)
+
+    # Changes the image to be displayed at the given dispmanx layer.
+    # This allows manualkit to be hidden by putting it behind the
+    # framebuffer (< -127) or visible by putting it in front of the
+    # framebuffer (> -127).
+    def change_layer(self, layer: int) -> None:
+        with self._update_display() as dispman_update:
+            bcm.vc_dispmanx_element_change_layer(dispman_update, self.image_element, layer)
+
+        self.current_layer = layer
 
     # Draws the given image data to the screen
     def draw(self, image_data: numpy.array) -> None:
@@ -132,7 +109,7 @@ class Display():
     # Cleans up the elements / resources on the display
     def close(self) -> None:
         self.hide()
-        
+
         if self.image_resource:
             bcm.vc_dispmanx_resource_delete(self.image_resource)
             self.image_resource = None
@@ -140,6 +117,41 @@ class Display():
         if self.handle:
             bcm.vc_dispmanx_display_close(self.handle)
             self.handle = None
+
+    # Show an empty black layer
+    def _create_window(self) -> None:
+        vc_image_handle = ctypes.c_uint()
+        self.image_resource = bcm.vc_dispmanx_resource_create(
+            self.IMAGE_TYPE,
+            self.image_width,
+            self.image_height,
+            ctypes.byref(vc_image_handle),
+        )
+        assert self.image_resource != 0
+
+        # Create the area for us to draw on
+        with self._update_display() as dispman_update:
+            alpha_config = _c_ints((
+                # Pick up source alpha from the image
+                self.DISPMANX_FLAGS_ALPHA_FROM_SOURCE,
+                # Opacity (0 - 255)
+                255,
+                # Mask resource handle
+                0,
+            ))
+            self.image_element = bcm.vc_dispmanx_element_add(
+                dispman_update,
+                self.handle,
+                self.background_layer,
+                ctypes.byref(self.dest_rect),
+                self.image_resource,
+                ctypes.byref(self.src_rect),
+                self.DISPMANX_PROTECTION_NONE,
+                ctypes.byref(alpha_config),
+                0, # clamp
+                self.DISPMANX_NO_ROTATE, # transform
+            )
+            assert self.image_element != 0
 
     # Adjusts the given value by rounding it down to the nearest multiple of :align_to:
     def _align_down(self, value: int, align_to: int) -> int:
