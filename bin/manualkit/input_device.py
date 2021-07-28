@@ -75,9 +75,6 @@ class InputDevice():
             try:
                 self.handle_event(event)
             except Exception as e:
-                import traceback
-                traceback.print_exc()
-                print(e)
                 logging.warn(f'Failed to handle event: {e}')
 
     def handle_event(self, event) -> None:

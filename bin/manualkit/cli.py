@@ -38,10 +38,6 @@ class ManualKit():
         handler.setFormatter(formatter)
         root.addHandler(handler)
 
-        # Handle kill signals
-        signal.signal(signal.SIGINT, self.exit)
-        signal.signal(signal.SIGTERM, self.exit)
-
         # Connect to the display
         self.display = Display(**config['display'])
 
@@ -56,6 +52,11 @@ class ManualKit():
             on_prev=self.prev,
             **config['input'],
         )
+
+        # Handle kill signals
+        signal.signal(signal.SIGINT, self.exit)
+        signal.signal(signal.SIGTERM, self.exit)
+
         self.input_listener.listen()
 
     # Toggles visibility of the manual
@@ -92,9 +93,10 @@ class ManualKit():
         self.refresh()
 
     # Cleans up the elements / resources on the display
-    def exit(self) -> None:
+    def exit(self, signum, frame) -> None:
         self.display.close()
         self.input_listener.stop()
+
         quit()
 
     # Renders the currently active PDF page

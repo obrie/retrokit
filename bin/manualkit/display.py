@@ -33,7 +33,6 @@ class Display():
     def __init__(self, layer: int = -1) -> None:
         self.layer = int(layer)
         self.image_element = None
-        self.image_resource = None
         self.handle = None
 
         # Create a connection to the display
@@ -63,6 +62,16 @@ class Display():
         dest_width = int(self.height * self.image_width / self.image_height)
         self.dest_rect = _c_ints((0, 0, dest_width, self.height))
 
+        # Create image resource
+        vc_image_handle = ctypes.c_uint()
+        self.image_resource = bcm.vc_dispmanx_resource_create(
+            self.IMAGE_TYPE,
+            self.image_width,
+            self.image_height,
+            ctypes.byref(vc_image_handle),
+        )
+        assert self.image_resource != 0
+
     # Whether the display is currently visible
     def visible(self) -> bool:
         return self.image_element is not None
@@ -70,17 +79,7 @@ class Display():
     # Show an empty black layer
     def show(self) -> None:
         # Create the area for us to draw on
-        vc_image_handle = ctypes.c_uint()
         with self._update_display() as dispman_update:
-            # Create resource
-            self.image_resource = bcm.vc_dispmanx_resource_create(
-                self.IMAGE_TYPE,
-                self.image_width,
-                self.image_height,
-                ctypes.byref(vc_image_handle),
-            )
-            assert self.image_resource != 0
-
             alpha_config = _c_ints((
                 # Pick up source alpha from the image
                 self.DISPMANX_FLAGS_ALPHA_FROM_SOURCE,
@@ -132,6 +131,8 @@ class Display():
 
     # Cleans up the elements / resources on the display
     def close(self) -> None:
+        self.hide()
+        
         if self.image_resource:
             bcm.vc_dispmanx_resource_delete(self.image_resource)
             self.image_resource = None

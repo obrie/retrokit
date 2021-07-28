@@ -71,10 +71,7 @@ class InputListener():
         # Start receiving events
         self.loop = asyncio.get_event_loop()
         self.loop.set_exception_handler(self._handle_exception)
-        try:
-            self.loop.run_forever()
-        finally:
-            self.loop.close()
+        self.loop.run_forever()
 
     # Stops the current asyncio loop so we stop receiving input events
     def stop(self) -> None:
