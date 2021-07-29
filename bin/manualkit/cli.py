@@ -42,7 +42,7 @@ class ManualKit():
         self.display = Display(**config['display'])
 
         # Start caching the PDF
-        self.pdf = PDF(pdf_path, width=self.display.image_width, height=self.display.image_height, **config['pdf'])
+        self.pdf = PDF(pdf_path, width=self.display.width, height=self.display.height, **config['pdf'])
         self.pdf.cache_in_background()
 
         # Start listening to inputs

@@ -51,7 +51,7 @@ class PDF():
     def prev(self) -> None:
         prev_page = self.page - 1
         if prev_page < 0:
-            next_page = self.document.pages - 1
+            prev_page = self.document.pages - 1
 
         self.jump(prev_page)
 

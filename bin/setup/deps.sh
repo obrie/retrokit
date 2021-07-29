@@ -20,7 +20,7 @@ install() {
   sudo apt install -y ffmpeg
 
   # Image editor
-  sudo pip3 install pillow==8.2.0
+  sudo pip3 install pillow==8.3.1
 }
 
 uninstall() {

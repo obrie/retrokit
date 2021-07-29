@@ -14,6 +14,8 @@ def _c_ints(values: Tuple[int]) -> None:
     return (ctypes.c_int * len(values))(*values)
 
 # Provides image rendering for DispmanX displays
+# 
+# TODO: This should get supplemented with EGL / DRM if possible one day.
 class Display():
     # Alpha blending (no transparency)
     DISPMANX_FLAGS_ALPHA_FROM_SOURCE = 0
@@ -50,17 +52,15 @@ class Display():
         self.handle = bcm.vc_dispmanx_display_open(0)
         assert self.handle != 0
 
-        # Define target image dimensions
-        self.image_width = self._align_down(self.width, 16)
-        self.image_height = self._align_down(self.height, 16)
-        self.image_rect = _c_ints((0, 0, self.image_width, self.image_height))
-        self.pitch = self.image_width * 3
-        assert self.pitch % 32 == 0
-
-        # Define display coordinates
-        self.src_rect = _c_ints((0, 0, self.image_width << 16, self.image_height << 16))
-        dest_width = int(self.height * self.image_width / self.image_height)
-        self.dest_rect = _c_ints((0, 0, dest_width, self.height))
+        # Define display coordinates.  Note we are not doing any 16-pixel alignment
+        # on the width / height.  This is a not the most efficient implementation,
+        # but there's currently no indication that we need to optimize here.
+        # 
+        # If needed, we can eventually switch to having a separate buffer_width/
+        # buffer_height/buffer_rect that the images get written into.
+        self.src_rect = _c_ints((0, 0, self.width << 16, self.height << 16))
+        self.dest_rect = _c_ints((0, 0, self.width, self.height))
+        self.pitch = self.width * 3
 
         # Create image resource
         self._create_window()
@@ -95,7 +95,7 @@ class Display():
             self.IMAGE_TYPE,
             self.pitch,
             image_data.ctypes.data,
-            ctypes.byref(self.image_rect),
+            ctypes.byref(self.dest_rect),
         )
 
         # Mark it as modified in order to refresh the screen
@@ -123,8 +123,8 @@ class Display():
         vc_image_handle = ctypes.c_uint()
         self.image_resource = bcm.vc_dispmanx_resource_create(
             self.IMAGE_TYPE,
-            self.image_width,
-            self.image_height,
+            self.width,
+            self.height,
             ctypes.byref(vc_image_handle),
         )
         assert self.image_resource != 0
@@ -152,10 +152,6 @@ class Display():
                 self.DISPMANX_NO_ROTATE, # transform
             )
             assert self.image_element != 0
-
-    # Adjusts the given value by rounding it down to the nearest multiple of :align_to:
-    def _align_down(self, value: int, align_to: int) -> int:
-        return value & ~(align_to - 1)
 
     # Starts the process for modifying the display
     @contextmanager
