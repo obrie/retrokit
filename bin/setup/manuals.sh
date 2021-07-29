@@ -16,7 +16,7 @@ install() {
 
 uninstall() {
   rm -rfv "$install_dir" '/opt/retropie/configs/all/manualkit.conf'
-  sudo pip3 uninstall -y python-poppler numpy evdev psutil
+  sudo pip3 uninstall -y python-poppler numpy evdev pyudev psutil
   sudo apt remove -y libpoppler-cpp-dev
 }
 

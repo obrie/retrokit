@@ -38,6 +38,7 @@ class InputDevice():
         self.on_toggle = on_toggle
         self.on_next = on_next
         self.on_prev = on_prev
+        self.event_reader_task = None
 
         # Whether to watch for navigation input events (only occurs when
         # inputs have been grabbed to this process)
@@ -68,6 +69,15 @@ class InputDevice():
         # when a "up" value is received for the input.
         self.active_inputs = {}
 
+    # The path on the filesystem representing this device (/dev/input/eventX)
+    @property
+    def path(self) -> str:
+        return self.dev_device.path
+
+    # Starts reading events from the device
+    def start_read(self, event_loop) -> None:
+        self.event_reader_task = event_loop.create_task(self.read())
+
     # Interprets events coming from evdev devices to determine if they should
     # change manualkit behavior
     async def read(self) -> None:
@@ -77,7 +87,14 @@ class InputDevice():
             except Exception as e:
                 logging.warn(f'Failed to handle event: {e}')
 
-    def handle_event(self, event) -> None:
+    # Stops reading events from the device
+    def stop_read(self) -> None:
+        if self.event_reader_task:
+            self.event_reader_task.cancel()
+            self.event_reader_task = None
+
+    # Tracks the active inputs and triggers any relevant callbacks
+    def handle_event(self, event: evdev.InputEvent) -> None:
         # High-performance lookup to see if we should run more logic
         if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in self.VALID_ABS_CODES):
             if event.value != 0:
