@@ -33,13 +33,13 @@ class InputListener():
         # Keyboard config (default to those defined in Retroarch)
         retroarch_config = self._read_retroarch_config(self.RETROARCH_CONFIG_PATH)
 
-        for device in [evdev.InputDevice(path) for path in evdev.list_devices()]:
-            autoconfig_path = Path(f'/opt/retropie/configs/all/retroarch/autoconfig/{device.name}.cfg')
+        for dev_device in [evdev.InputDevice(path) for path in evdev.list_devices()]:
+            autoconfig_path = Path(f'/opt/retropie/configs/all/retroarch/autoconfig/{dev_device.name}.cfg')
             if autoconfig_path.exists():
                 # Treat it like a joystick
                 joystick_config = self._read_retroarch_config(autoconfig_path)
-                self.devices.append(InputDevice(
-                    device,
+                input_device = InputDevice(
+                    dev_device,
                     InputType.JOYSTICK,
                     hotkey=joystick_config.get('input_enable_hotkey_btn', fallback=None),
                     toggle_input=joystick_toggle,
@@ -48,11 +48,11 @@ class InputListener():
                     on_toggle=self.toggle,
                     on_next=self.next,
                     on_prev=self.prev,
-                ))
+                )
             else:
                 # Treat it like a keyboard
-                self.devices.append(InputDevice(
-                    device,
+                input_device = InputDevice(
+                    dev_device,
                     InputType.KEYBOARD,
                     hotkey=retroarch_config.get('input_enable_hotkey', fallback=None),
                     toggle_input=keyboard_toggle,
@@ -61,7 +61,9 @@ class InputListener():
                     on_toggle=self.toggle,
                     on_next=self.next,
                     on_prev=self.prev,
-                ))
+                )
+
+            self.devices.append(input_device)
 
     # Listens for input events.  Note that this will loop infinitely.
     def listen(self) -> None:
@@ -81,7 +83,7 @@ class InputListener():
 
     # Toggles control of the devices and triggers the `on_toggle` callback
     def toggle(self):
-        # Remove control of the devices
+        # Update control of the devices
         for device in self.devices:
             if self.active:
                 device.ungrab()
