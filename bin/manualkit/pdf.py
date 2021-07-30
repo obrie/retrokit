@@ -13,12 +13,7 @@ class PDF():
         self.height = height
         self.resolution = int(resolution)
         self.document = fitz.open(self.path)
-        self.page = 0
-
-    # Gets the image data for the current page
-    @property
-    def page_image(self) -> bytes:
-        return self._render_page(self.page)
+        self.jump(0)
 
     # TODO
     @property
@@ -44,6 +39,7 @@ class PDF():
     # Jumps to the given page number
     def jump(self, page) -> None:
         self.page = page
+        self.page_image = self._render_page(page)
 
     def _render_page(self, page_number: int) -> bytes:
         page = self.document[page_number]
