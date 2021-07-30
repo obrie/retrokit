@@ -1,9 +1,4 @@
-import numpy
-import poppler
-import threading
-
-from PIL import Image, ImageOps
-from queue import Queue
+import fitz
 
 # Represents a PDF-based manual
 class PDF():
@@ -12,37 +7,28 @@ class PDF():
         width: int,
         height: int,
         resolution: int = 150,
-        concurrency: int = 4,
     ) -> None:
         self.path = path
         self.width = width
         self.height = height
         self.resolution = int(resolution)
-        self.concurrency = int(concurrency)
-        self.document = poppler.load_from_file(self.path)
+        self.document = fitz.open(self.path)
         self.page = 0
-        self.images = [None for page in range(0, self.document.pages)]
 
     # Gets the image data for the current page
     @property
-    def page_image(self) -> None:
-        return self.images[self.page]
+    def page_image(self) -> bytes:
+        return self._render_page(self.page)
 
-    # cache_in_background and caches each page in the document
-    def cache_in_background(self) -> None:
-        queue = Queue()
-        for page in range(self.document.pages):
-            queue.put(page)
-
-        for i in range(min(queue.qsize(), self.concurrency)):
-            thread = threading.Thread(target=self._cache_pages, args=[queue])
-            thread.setDaemon(True)
-            thread.start()
+    # TODO
+    @property
+    def page_count(self) -> int:
+        return self.document.pageCount
 
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self) -> None:
         next_page = self.page + 1
-        if next_page >= self.document.pages:
+        if next_page >= self.page_count:
             next_page = 0
 
         self.jump(next_page)
@@ -51,7 +37,7 @@ class PDF():
     def prev(self) -> None:
         prev_page = self.page - 1
         if prev_page < 0:
-            prev_page = self.document.pages - 1
+            prev_page = self.page_count - 1
 
         self.jump(prev_page)
 
@@ -59,30 +45,17 @@ class PDF():
     def jump(self, page) -> None:
         self.page = page
 
-    # Renders and caches the pages from the document
-    def _cache_pages(self, pages: Queue) -> None:
-        renderer = poppler.PageRenderer()
-        renderer.image_format = poppler.image.Image.Format.rgb24
+    def _render_page(self, page_number: int) -> bytes:
+        page = self.document[page_number]
+        zoom = min(self.width / page.rect.width, self.height / page.rect.height)
+        image = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
 
-        while not pages.empty():
-            page = pages.get_nowait()
+        offset_x = int((self.width - image.width) / 2)
+        offset_y = int((self.height - image.height) / 2)
 
-            # Nothing left -- finish the thread
-            if page is None:
-                break
+        image.set_origin(offset_x, offset_y)
 
-            self.images[page] = self._render_page(page, renderer)
+        padded_image = fitz.Pixmap(fitz.Colorspace(fitz.CS_RGB), (0, 0, self.width, self.height), False)
+        padded_image.copy(image, (-offset_x, -offset_y, image.width + offset_x, image.height + offset_y))
 
-    # Generates a pixel map for the given page 
-    def _render_page(self, page_number: int, renderer: poppler.PageRenderer) -> numpy.array:
-        # Render the image in Poppler
-        page = self.document.create_page(page_number)
-        page_image = renderer.render_page(page, self.resolution, self.resolution)
-
-        # Convert to a PIL image
-        image = Image.fromarray(numpy.array(page_image.memoryview(), copy=False))
-
-        # Make sure it matches the expected image size
-        resized_image = ImageOps.pad(image, (self.width, self.height), color='black')
-
-        return numpy.array(resized_image)
+        return padded_image.samples

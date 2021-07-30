@@ -88,17 +88,16 @@ class Display():
         self.current_layer = layer
 
     # Draws the given image data to the screen
-    def draw(self, image_data: numpy.array) -> None:
-        # Write the image data to the displayed resource
+    def draw(self, image_data: bytes) -> None:
         result = bcm.vc_dispmanx_resource_write_data(
             self.image_resource,
             self.IMAGE_TYPE,
             self.pitch,
-            image_data.ctypes.data,
+            ctypes.c_char_p(image_data),
             ctypes.byref(self.dest_rect),
         )
 
-        # Mark it as modified in order to refresh the screen
+        # Mark it as modified in order to refresh the scree
         with self._update_display() as dispman_update:
             bcm.vc_dispmanx_element_modified(
                 dispman_update,
@@ -152,6 +151,9 @@ class Display():
                 self.DISPMANX_NO_ROTATE, # transform
             )
             assert self.image_element != 0
+
+    def _align_up(self, value, align_to):
+        return ((value + align_to - 1) & ~(align_to - 1))
 
     # Starts the process for modifying the display
     @contextmanager
