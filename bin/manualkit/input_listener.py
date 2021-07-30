@@ -133,12 +133,12 @@ class InputListener():
         self.on_toggle()
 
     # Triggers the `next` callback
-    def next(self):
-        self.on_next()
+    def next(self, repeat: bool) -> None:
+        self.on_next(repeat)
 
     # Triggers the `on_prev` callback
-    def prev(self):
-        self.on_prev()
+    def prev(self, repeat: bool) -> None:
+        self.on_prev(repeat)
 
     # Handles exceptions in asyncio loops by logging them.  This ensures
     # the event gets consumed.

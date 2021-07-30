@@ -118,9 +118,9 @@ class InputDevice():
                 self.on_toggle()
         elif self.watch_navigation:
             if self.active_inputs == self.next_inputs:
-                self.on_next()
+                self.on_next(repeat)
             elif self.active_inputs == self.prev_inputs:
-                self.on_prev()
+                self.on_prev(repeat)
 
     # Grabs control of the current device so that events only get routed to this process
     def grab(self):
