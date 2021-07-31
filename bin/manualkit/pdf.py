@@ -1,7 +1,13 @@
 import fitz
+import math
+from pathlib import Path
 
 # Represents a PDF-based manual
 class PDF():
+    NO_MANUAL_TEXT = 'No manual found'
+    NO_MANUAL_FONTSIZE = 28
+    NO_MANUAL_HEIGHT = 37
+
     def __init__(self,
         path: str,
         width: int,
@@ -12,7 +18,33 @@ class PDF():
         self.width = width
         self.height = height
         self.resolution = int(resolution)
-        self.document = fitz.open(self.path)
+        self.page = None
+
+        if Path(self.path).exists():
+            self.document = fitz.open(self.path)
+        else:
+            # Create an empty pdf
+            self.document = fitz.open()
+
+            # Calculate width of text
+            width = math.ceil(fitz.get_text_length(self.NO_MANUAL_TEXT, fontsize=self.NO_MANUAL_FONTSIZE))
+
+            # Create page that's wider than the text so that it scales well
+            page = self.document.new_page(width=width * 3, height=self.NO_MANUAL_HEIGHT)
+
+            # Draw a black background
+            page.draw_rect(page.rect, color=(0, 0, 0), fill=(0, 0, 0), overlay=False)
+
+            # Draw the text, positioned in the center
+            text_writer = fitz.TextWriter(page.rect)
+            text_writer.fill_textbox(
+                page.rect,
+                self.NO_MANUAL_TEXT,
+                pos=(int((page.rect.width - width) / 2), self.NO_MANUAL_FONTSIZE),
+                fontsize=self.NO_MANUAL_FONTSIZE,
+            )
+            text_writer.write_text(page, color=(1, 1, 1))
+
         self.jump(0)
 
     # TODO
@@ -38,8 +70,9 @@ class PDF():
 
     # Jumps to the given page number
     def jump(self, page) -> None:
-        self.page = page
-        self.page_image = self._render_page(page)
+        if self.page != page:
+            self.page = page
+            self.page_image = self._render_page(page)
 
     def _render_page(self, page_number: int) -> bytes:
         page = self.document[page_number]
