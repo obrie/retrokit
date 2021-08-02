@@ -55,12 +55,9 @@ launch_manualkit() {
   local rom_filename=$(basename "$rom_path")
   local rom_name=${rom_filename%.*}
   local manual_path="$HOME/.emulationstation/downloaded_media/$system/manuals/$rom_name.pdf"
-  if [ ! -f "$manual_path" ]; then
-    return
-  fi
 
   # Start up manualkit
-  python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf &
+  sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf &
 }
 
 # This script shows the launch image in the background while allowing
