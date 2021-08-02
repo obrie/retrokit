@@ -84,7 +84,7 @@ class PDF():
 
         image.set_origin(offset_x, offset_y)
 
-        padded_image = fitz.Pixmap(fitz.Colorspace(fitz.CS_RGB), (0, 0, self.width, self.height), False)
+        padded_image = fitz.Pixmap(fitz.csRGB, (0, 0, self.width, self.height), False)
         padded_image.copy(image, (-offset_x, -offset_y, image.width + offset_x, image.height + offset_y))
 
         return padded_image.samples

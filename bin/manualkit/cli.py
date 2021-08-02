@@ -8,7 +8,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import configparser
 import logging
 import signal
-import threading
 from argparse import ArgumentParser
 from pathlib import Path
 from typing import Optional
@@ -58,7 +57,6 @@ class ManualKit():
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
-        self.change_thread = None
         self.input_listener.listen()
 
     # Toggles visibility of the manual
@@ -82,38 +80,23 @@ class ManualKit():
             Emulator.instance().resume()
 
     # Moves to the next page or goes back to the beginning if already on the last page
-    def next(self, repeat: bool) -> None:
-        self.queue_change(self.pdf.next, repeat)
+    def next(self) -> None:
+        self.pdf.next()
+        self.refresh()
 
     # Moves to the previous page or goes to the end if already on the first page
-    def prev(self, repeat: bool) -> None:
-        self.queue_change(self.pdf.prev, repeat)
+    def prev(self) -> None:
+        self.pdf.prev()
+        self.refresh()
 
     # Cleans up the elements / resources on the display
     def exit(self, signum, frame) -> None:
         self.input_listener.stop()
-
-        if self.change_thread:
-            self.change_thread.join()
-
         self.display.close()
-
         quit()
 
-    def queue_change(self, operation, repeat) -> None:
-        if not repeat:
-            if self.change_thread:
-                self.change_thread.join()
-
-            self.change(operation)
-        elif not (self.change_thread and self.change_thread.is_alive()):
-            self.change_thread = threading.Thread(target=self.change, args=[operation])
-            self.change_thread.setDaemon(True)
-            self.change_thread.start()
-
     # Renders the currently active PDF page
-    def change(self, operation) -> None:
-        operation()
+    def refresh(self) -> None:
         self.display.draw(self.pdf.page_image)
 
 def main() -> None:

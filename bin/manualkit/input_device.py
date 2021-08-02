@@ -1,7 +1,9 @@
 import asyncio
 import evdev
 import logging
+import traceback
 from enum import Enum
+from evdev.events import KeyEvent
 from pathlib import Path
 
 import manualkit.keycodes
@@ -33,18 +35,27 @@ class InputDevice():
         on_toggle: Callable,
         on_next: Callable,
         on_prev: Callable,
+        repeat_delay: float,
+        repeat_interval: float,
     ) -> None:
         self.dev_device = dev_device
+
+        # Callbacks
         self.on_toggle = on_toggle
         self.on_next = on_next
         self.on_prev = on_prev
+
+        # asyncio tasks
         self.event_reader_task = None
+        self.repeater_task = None
+        self.repeat_delay = repeat_delay
+        self.repeat_interval = repeat_interval
 
         # Whether to watch for navigation input events (only occurs when
         # inputs have been grabbed to this process)
         self.watch_navigation = False
 
-        # Adjust for configparser issues
+        # Adjust inputs for configparser issues
         if hotkey:
             hotkey = hotkey.strip('"')
         toggle_input = toggle_input.strip('"')
@@ -63,7 +74,7 @@ class InputDevice():
         self.prev_inputs = dict((retroarch_codes[prev_input],))
 
         # List codes that might trigger logic
-        self.valid_codes = set(map(lambda name: retroarch_codes[name][0], [toggle_input, next_input, prev_input]))
+        self.trigger_codes = set(map(lambda name: retroarch_codes[name][0], [toggle_input, next_input, prev_input]))
 
         # Track which inputs are currently being pressed.  An input is removed
         # when a "up" value is received for the input.
@@ -74,18 +85,10 @@ class InputDevice():
     def path(self) -> str:
         return self.dev_device.path
 
-    # Starts reading events from the device
-    def start_read(self, event_loop) -> None:
-        self.event_reader_task = event_loop.create_task(self.read())
-
-    # Interprets events coming from evdev devices to determine if they should
-    # change manualkit behavior
-    async def read(self) -> None:
-        async for event in self.dev_device.async_read_loop():
-            try:
-                self.handle_event(event)
-            except Exception as e:
-                logging.warn(f'Failed to handle event: {e}')
+    # Starts asynchronously reading events from the device
+    def start_read(self, event_loop: asyncio.AbstractEventLoop) -> None:
+        self.event_loop = event_loop
+        self.event_reader_task = event_loop.create_task(self.read_events())
 
     # Stops reading events from the device
     def stop_read(self) -> None:
@@ -93,34 +96,84 @@ class InputDevice():
             self.event_reader_task.cancel()
             self.event_reader_task = None
 
-    # Tracks the active inputs and triggers any relevant callbacks
-    def handle_event(self, event: evdev.InputEvent) -> None:
-        # High-performance lookup to see if we should run more logic
-        if event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in self.VALID_ABS_CODES):
-            if event.value != 0:
-                # Key pressed -- only update on non-repeated events
-                repeat = event.value == 2
-                if not repeat:
-                    self.active_inputs[event.code] = event.value
+        if self.repeater_task:
+            self.repeater_task.cancel()
+            self.repeater_task = None
 
-                self.check_inputs(event, repeat)
+    # Interprets events coming from evdev devices to determine if they should
+    # change manualkit behavior
+    async def read_events(self) -> None:
+        async for event in self.dev_device.async_read_loop():
+            print(event)
+            try:
+                await self.read_event(event)
+            except Exception as e:
+                logging.warn(f'Failed to handle event: {e}')
+                traceback.print_exc()
+
+    # Tracks the active inputs and triggers any relevant callbacks
+    async def read_event(self, event: evdev.InputEvent) -> None:
+        value = abs(event.value)
+
+        # High-performance lookup to see if we should run more logic
+        if value != KeyEvent.key_hold and (event.type == evdev.ecodes.EV_KEY or (event.type == evdev.ecodes.EV_ABS and event.code in self.VALID_ABS_CODES)):
+            # Wait for repeater to officially stop
+            await self.stop_repeater()
+
+            if value == KeyEvent.key_down:
+                # Key pressed
+                self.active_inputs[event.code] = event.value
+                self.check_inputs(event)
             else:
                 # Key released
                 self.active_inputs.pop(event.code)
 
     # Check the currently active inputs to see if they should trigger an event
-    def check_inputs(self, event: evdev.InputEvent, repeat: bool) -> None:
-        if event.code not in self.valid_codes:
+    def check_inputs(self, event: evdev.InputEvent) -> None:
+        if event.code not in self.trigger_codes:
             return
 
         if self.active_inputs == self.toggle_inputs:
-            if not repeat:
-                self.on_toggle()
+            self.on_toggle()
         elif self.watch_navigation:
             if self.active_inputs == self.next_inputs:
-                self.on_next(repeat)
+                self.trigger_navigation(self.on_next)
             elif self.active_inputs == self.prev_inputs:
-                self.on_prev(repeat)
+                self.trigger_navigation(self.on_prev)
+
+    # Triggers a navigation callback and starts a new asyncio task in order to
+    # simulate a "hold" pattern in which the event is repeated.
+    # 
+    # This is done in order to handle certain devices (such as joystick) which can
+    # hold down a navigation button but don't actually trigger hold events.
+    def trigger_navigation(self, callback: Callable) -> None:
+        callback()
+        self.start_repeater(callback)
+
+    # Starts asynchronously triggering repeat events to simulate "hold" behavior
+    # on a key
+    def start_repeater(self, callback: Callable) -> None:
+        self.repeater_task = self.event_loop.create_task(self.repeat_callback(callback))
+
+    # Repeatedly triggers the given callback based on the configured repeat delay /
+    # interval.  This will only stop when the task is manually cancelled.
+    async def repeat_callback(self, callback: Callable) -> None:
+        await asyncio.sleep(self.repeat_delay)
+        while True:
+            callback()
+            await asyncio.sleep(self.repeat_interval)
+
+    # Stops any asynchronous task running to repeat events
+    async def stop_repeater(self) -> None:
+        if self.repeater_task:
+            self.repeater_task.cancel()
+
+            try:
+                await self.repeater_task
+            except asyncio.CancelledError as e:
+                pass
+            finally:
+                self.repeater_task = None
 
     # Grabs control of the current device so that events only get routed to this process
     def grab(self):

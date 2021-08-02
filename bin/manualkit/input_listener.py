@@ -21,12 +21,16 @@ class InputListener():
         on_prev: Callable,
         keyboard_toggle: str = 'm',
         joystick_toggle: str = 'h0up',
+        repeat_delay: float = 0.25,
+        repeat_interval: float = 0.01,
     ) -> None:
         self.on_toggle = on_toggle
         self.on_next = on_next
         self.on_prev = on_prev
         self.keyboard_toggle = keyboard_toggle
         self.joystick_toggle = joystick_toggle
+        self.repeat_delay = float(repeat_delay)
+        self.repeat_interval = float(repeat_interval)
 
         # Defaults
         self.devices = []
@@ -46,29 +50,23 @@ class InputListener():
         if autoconfig_path.exists():
             # Treat it like a joystick
             joystick_config = self._read_retroarch_config(autoconfig_path)
-            input_device = InputDevice(
+            input_device = self.create_input_device(
                 dev_device,
                 InputType.JOYSTICK,
                 hotkey=joystick_config.get('input_enable_hotkey_btn', fallback=None),
                 toggle_input=self.joystick_toggle,
                 next_input=joystick_config.get('input_right_btn', fallback='h0right'),
                 prev_input=joystick_config.get('input_left_btn', fallback='h0left'),
-                on_toggle=self.toggle,
-                on_next=self.next,
-                on_prev=self.prev,
             )
         else:
             # Treat it like a keyboard
-            input_device = InputDevice(
+            input_device = self.create_input_device(
                 dev_device,
                 InputType.KEYBOARD,
                 hotkey=self.retroarch_config.get('input_enable_hotkey', fallback=None),
                 toggle_input=self.keyboard_toggle,
                 next_input=self.retroarch_config.get('input_player1_right', fallback='right'),
                 prev_input=self.retroarch_config.get('input_player1_left', fallback='left'),
-                on_toggle=self.toggle,
-                on_next=self.next,
-                on_prev=self.prev,
             )
 
         self.devices.append(input_device)
@@ -81,6 +79,18 @@ class InputListener():
         # is redirected to this process.
         if self.active:
             input_device.grab()
+
+    # Creates a new input device with default configurations and the given overrides
+    def create_input_device(self, *args, **kwargs) -> InputDevice:
+        return InputDevice(
+            *args,
+            on_toggle=self.toggle,
+            on_next=self.next,
+            on_prev=self.prev,
+            repeat_delay=self.repeat_delay,
+            repeat_interval=self.repeat_interval,
+            **kwargs,
+        )
 
     # Removes and stops listening to events from the device at the given
     # filesystem path (/dev/input/eventX).
@@ -133,18 +143,18 @@ class InputListener():
         self.on_toggle()
 
     # Triggers the `next` callback
-    def next(self, repeat: bool) -> None:
-        self.on_next(repeat)
+    def next(self) -> None:
+        self.on_next()
 
     # Triggers the `on_prev` callback
-    def prev(self, repeat: bool) -> None:
-        self.on_prev(repeat)
+    def prev(self) -> None:
+        self.on_prev()
 
     # Handles exceptions in asyncio loops by logging them.  This ensures
     # the event gets consumed.
     def _handle_exception(self, loop, context):
         message = context.get('exception', context['message'])
-        logging.error(f'Caught exception: {message}')
+        logging.error(f'Caught exception: {context} {message}')
 
     # Reads the retroarch config file at the given path.  This handles the fact that
     # retroarch configurations don't have sections.
