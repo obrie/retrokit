@@ -104,7 +104,6 @@ class InputDevice():
     # change manualkit behavior
     async def read_events(self) -> None:
         async for event in self.dev_device.async_read_loop():
-            print(event)
             try:
                 await self.read_event(event)
             except Exception as e:

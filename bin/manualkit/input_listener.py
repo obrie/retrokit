@@ -3,6 +3,7 @@ import configparser
 import evdev
 import logging
 import pyudev
+import traceback
 import xml
 
 from pathlib import Path
@@ -44,7 +45,13 @@ class InputListener():
     # Adds the input device at the given path to the list of devices we'll be
     # listening for events from
     def add_device(self, path: str) -> None:
-        dev_device = evdev.InputDevice(path)
+        try:
+            dev_device = evdev.InputDevice(path)
+        except Exception as e:
+            logging.warn('Failed to create evdev device: {e}')
+            traceback.print_exc()
+            return
+
         autoconfig_path = Path(f'/opt/retropie/configs/all/retroarch/autoconfig/{dev_device.name}.cfg')
 
         if autoconfig_path.exists():
