@@ -3,7 +3,7 @@
 install_mupdf() {
   version=1.18.0
 
-  local current_mupdf_version="$(cat /etc/mupdf.version 2>/dev/null || true)"
+  local current_mupdf_version="$(cat /usr/local/etc/mupdf.version 2>/dev/null || true)"
   if [ ! -f /usr/local/lib/libmupdf.a ] || [ "$current_mupdf_version" != "$version" ]; then
     # Ensure system version isn't installed
     sudo apt remove -y libmupdf-dev mupdf
@@ -28,6 +28,7 @@ install_mupdf() {
     export CFLAGS='-fPIC'
     make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local
     sudo make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local install
+    echo "$version" | sudo tee /usr/local/etc/mupdf.version
 
     popd
     rm -rf "$tmp_dir/mupdf"
