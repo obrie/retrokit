@@ -15,7 +15,7 @@ class InputType(Enum):
     KEYBOARD = 'keyboard', manualkit.keycodes.retroarch_keyboard
     JOYSTICK = 'joystick', manualkit.keycodes.retroarch_joystick
 
-    def __init__(self, type_name: str, retroarch_codes: dict) -> None:
+    def __init__(self, type_name: str, retroarch_codes: Callable) -> None:
         self.type_name = type_name
         self.retroarch_codes = retroarch_codes
 
@@ -63,7 +63,7 @@ class InputDevice():
         prev_input = prev_input.strip('"')
 
         # Define expected evdev inputs
-        retroarch_codes = input_type.retroarch_codes
+        retroarch_codes = input_type.retroarch_codes(dev_device)
 
         self.toggle_inputs = dict((retroarch_codes[toggle_input],))
         if hotkey:
