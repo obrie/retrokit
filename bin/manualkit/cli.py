@@ -22,6 +22,7 @@ class ManualKit():
         pdf_path: str,
         config_path: Optional[str] = None,
         log_level: str = 'INFO',
+        track_emulator: bool = False,
     ) -> None:
         # Read from config
         config = configparser.ConfigParser()
@@ -57,6 +58,10 @@ class ManualKit():
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
+        # Track the emulator
+        if track_emulator:
+            Emulator.instance().track(self._send_terminate_signal)
+
         self.input_listener.listen()
 
     # Toggles visibility of the manual
@@ -90,20 +95,28 @@ class ManualKit():
         self.refresh()
 
     # Cleans up the elements / resources on the display
-    def exit(self, signum, frame) -> None:
-        self.input_listener.stop()
-        self.display.close()
-        quit()
+    def exit(self, *args, **kwargs) -> None:
+        try:
+            # Try to close things gracefully
+            self.input_listener.stop()
+            self.display.close()
+        finally:
+            quit()
 
     # Renders the currently active PDF page
     def refresh(self) -> None:
         self.display.draw(self.pdf.page_image)
+
+    # Sends a SIGINT signal to the current process
+    def _send_terminate_signal(self) -> None:
+        os.kill(os.getpid(), signal.SIGINT)
 
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='pdf_path', help='PDF file to display')
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
+    parser.add_argument('--track-emulator', dest='track_emulator', action='store_true')
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 

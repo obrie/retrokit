@@ -57,7 +57,7 @@ launch_manualkit() {
   local manual_path="$HOME/.emulationstation/downloaded_media/$system/manuals/$rom_name.pdf"
 
   # Start up manualkit
-  sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf &
+  sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf --track-emulator &
 }
 
 # This script shows the launch image in the background while allowing
