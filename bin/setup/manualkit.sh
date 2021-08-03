@@ -9,7 +9,7 @@ install() {
   "$bin_dir/manualkit/setup.sh" install
 
   sudo mkdir -p "$install_dir"
-  sudo cp -v "$bin_dir/manualkit"/* "$install_dir/"
+  sudo rsync -av "$bin_dir/manualkit/" "$install_dir/" --delete
 
   cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
 }
