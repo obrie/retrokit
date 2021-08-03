@@ -12,11 +12,15 @@ class PDF():
         path: str,
         width: int,
         height: int,
+        buffer_width: int,
+        buffer_height: int,
         resolution: int = 150,
     ) -> None:
         self.path = path
         self.width = width
         self.height = height
+        self.buffer_width = buffer_width
+        self.buffer_height = buffer_height
         self.resolution = int(resolution)
         self.page = None
 
@@ -93,7 +97,7 @@ class PDF():
 
         # Create a new pixmap based on the PDF width / height that will contain the
         # zoomed page, centered
-        padded_image = fitz.Pixmap(fitz.csRGB, (0, 0, self.width, self.height), False)
+        padded_image = fitz.Pixmap(fitz.csRGB, (0, 0, self.buffer_width, self.buffer_height), False)
         padded_image.copy(image, (-offset_x, -offset_y, image.width + offset_x, image.height + offset_y))
 
         return padded_image.samples

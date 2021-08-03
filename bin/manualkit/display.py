@@ -48,6 +48,12 @@ class Display():
         self.width = width.value
         self.height = height.value
 
+        # Proper and efficient rendering in dispmanx requires that the width / height be
+        # aligned to 16 bytes.  Any additional pixels beyond the actual dimensions of the
+        # display will be represented as black pixels and simply not be drawn.
+        self.buffer_width = self._align_up(self.width, 16)
+        self.buffer_height = self._align_up(self.height, 16)
+
         # Get a handle to the LCD (0) display
         self.handle = bcm.vc_dispmanx_display_open(0)
         assert self.handle != 0
@@ -58,9 +64,9 @@ class Display():
         # 
         # If needed, we can eventually switch to having a separate buffer_width/
         # buffer_height/buffer_rect that the images get written into.
-        self.src_rect = _c_ints((0, 0, self.width << 16, self.height << 16))
-        self.dest_rect = _c_ints((0, 0, self.width, self.height))
-        self.pitch = self.width * 3
+        self.src_rect = _c_ints((0, 0, self.buffer_width << 16, self.buffer_height << 16))
+        self.dest_rect = _c_ints((0, 0, self.buffer_width, self.buffer_height))
+        self.pitch = self.buffer_width * 3
 
         # Create image resource
         self._create_window()
@@ -79,7 +85,7 @@ class Display():
 
     # Clears the layer by drawing all black
     def clear(self) -> None:
-        self.draw(b'\x00' * self.pitch * self.height)
+        self.draw(b'\x00' * self.pitch * self.buffer_height)
 
     # Changes the image to be displayed at the given dispmanx layer.
     # This allows manualkit to be hidden by putting it behind the
@@ -126,8 +132,8 @@ class Display():
         vc_image_handle = ctypes.c_uint()
         self.image_resource = bcm.vc_dispmanx_resource_create(
             self.IMAGE_TYPE,
-            self.width,
-            self.height,
+            self.buffer_width,
+            self.buffer_height,
             ctypes.byref(vc_image_handle),
         )
         assert self.image_resource != 0

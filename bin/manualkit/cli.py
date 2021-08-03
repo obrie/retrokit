@@ -44,7 +44,13 @@ class ManualKit():
         self.display.clear()
 
         # Start caching the PDF
-        self.pdf = PDF(pdf_path, width=self.display.width, height=self.display.height, **config['pdf'])
+        self.pdf = PDF(pdf_path,
+            width=self.display.width,
+            height=self.display.height,
+            buffer_width=self.display.buffer_width,
+            buffer_height=self.display.buffer_height,
+            **config['pdf'],
+        )
 
         # Start listening to inputs
         self.input_listener = InputListener(
