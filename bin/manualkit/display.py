@@ -77,6 +77,10 @@ class Display():
     def hide(self) -> None:
         self.change_layer(self.background_layer)
 
+    # Clears the layer by drawing all black
+    def clear(self) -> None:
+        self.draw(b'\x00' * self.pitch * self.height)
+
     # Changes the image to be displayed at the given dispmanx layer.
     # This allows manualkit to be hidden by putting it behind the
     # framebuffer (< -127) or visible by putting it in front of the

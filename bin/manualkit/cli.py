@@ -74,12 +74,14 @@ class ManualKit():
     # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
         Emulator.instance().suspend()
+        self.refresh()
         self.display.show()
 
     # Hides the manual
     def hide(self) -> None:
         try:
             self.display.hide()
+            self.display.clear()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
             Emulator.instance().resume()
