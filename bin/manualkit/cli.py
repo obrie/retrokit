@@ -41,10 +41,10 @@ class ManualKit():
 
         # Connect to the display
         self.display = Display(**config['display'])
+        self.display.clear()
 
         # Start caching the PDF
         self.pdf = PDF(pdf_path, width=self.display.width, height=self.display.height, **config['pdf'])
-        self.display.draw(self.pdf.page_image)
 
         # Start listening to inputs
         self.input_listener = InputListener(

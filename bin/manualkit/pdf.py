@@ -47,7 +47,7 @@ class PDF():
 
         self.jump(0)
 
-    # TODO
+    # Total number of pages in the PDF
     @property
     def page_count(self) -> int:
         return self.document.pageCount
@@ -69,21 +69,30 @@ class PDF():
         self.jump(prev_page)
 
     # Jumps to the given page number
-    def jump(self, page) -> None:
-        if self.page != page:
-            self.page = page
-            self.page_image = self._render_page(page)
+    def jump(self, page_number: int) -> None:
+        if self.page != page_number:
+            self.page = page_number
+            self.page_image = self._render_page(page_number)
 
+    # Renders image data for the given page number.
+    # 
+    # This will automatically zoom and center the image according to the width /
+    # height configured for the PDF.
     def _render_page(self, page_number: int) -> bytes:
         page = self.document[page_number]
+
+        # Determine the maximum zoom we can ask for before we'd be exceeding the
+        # configured width / height
         zoom = min(self.width / page.rect.width, self.height / page.rect.height)
         image = page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
 
+        # Determine the offset so that the image is centered
         offset_x = int((self.width - image.width) / 2)
         offset_y = int((self.height - image.height) / 2)
-
         image.set_origin(offset_x, offset_y)
 
+        # Create a new pixmap based on the PDF width / height that will contain the
+        # zoomed page, centered
         padded_image = fitz.Pixmap(fitz.csRGB, (0, 0, self.width, self.height), False)
         padded_image.copy(image, (-offset_x, -offset_y, image.width + offset_x, image.height + offset_y))
 
