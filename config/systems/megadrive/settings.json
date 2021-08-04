@@ -61,6 +61,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/megadrive.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/SEGAGenesisMegaDriveManuals/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/megadrive/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

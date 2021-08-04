@@ -56,6 +56,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/intellivision.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/details/intellivisionmanuals?sort=-week",
+    "target": ""
+  },
   "roms": {
     "priority": {
       "flags": [

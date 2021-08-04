@@ -56,6 +56,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/atarijaguar.json"
     }
   },
+  "manuals": {
+    "download": "https://archive.org/download/AtariJaguarManuals_201812/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/atarijaguar/manuals/{machine}.pdf"
+  },
   "bios": {
     "url": "$ROMSET_MAME_0222_URL",
     "dir": "$HOME/RetroPie/BIOS",

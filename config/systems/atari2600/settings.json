@@ -51,6 +51,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/atari2600.json"
     }
   },
+  "manuals": {
+    "download": "https://archive.org/download/Atari2600Manuals_201812/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/atari2600/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

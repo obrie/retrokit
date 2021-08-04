@@ -84,6 +84,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/pcengine.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/NECTurboGrafx-16Manuals",
+    "target": "$HOME/.emulationstation/downloaded_media/pcengine/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

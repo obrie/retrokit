@@ -69,6 +69,10 @@
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/SonyPlaystationManuals/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/psx/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

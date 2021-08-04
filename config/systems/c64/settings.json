@@ -77,6 +77,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
   },
+  "manuals": {
+    "download": "https://archive.org/download/Commodore64Manuals/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/c64/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

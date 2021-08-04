@@ -58,6 +58,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/atari7800.json"
     }
   },
+  "manuals": {
+    "download": "https://archive.org/download/ImpossibleMissionUSA/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/atari7800/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

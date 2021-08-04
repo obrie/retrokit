@@ -59,6 +59,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/gb.json"
     }
   },
+  "manuals": {
+    "download": "https://archive.org/download/NintendoGameBoyManuals/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/gb/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

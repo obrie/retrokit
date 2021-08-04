@@ -59,6 +59,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/n64.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/Nintendo64Manuals_201812/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/n64/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

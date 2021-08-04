@@ -71,6 +71,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/saturn.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/SEGASaturnManuals_201812/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/saturn/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [

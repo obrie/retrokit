@@ -58,6 +58,10 @@
       "source": "file://$HOME/retrokit/cache/scraper/nes.json"
     }
   },
+  "manuals": {
+    "source": "https://archive.org/download/NESManuals/{machine}.pdf",
+    "target": "$HOME/.emulationstation/downloaded_media/nes/manuals/{machine}.pdf"
+  },
   "roms": {
     "priority": {
       "flags": [
