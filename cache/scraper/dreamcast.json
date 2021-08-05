@@ -68,16 +68,7 @@
         ],
         "rating": "0.8"
     },
-    "Aero Dancing featuring Blue Impulse": {
-        "genres": [
-            "Shooter",
-            "Simulation / Vehicle",
-            "Shooter / Plane",
-            "Simulation"
-        ],
-        "rating": "0.65"
-    },
-    "Aero Dancing i - Jikai-saku made Matemasen": {
+    "Aero Dancing i": {
         "genres": [
             "Shooter",
             "Simulation / Vehicle",
@@ -85,6 +76,15 @@
             "Simulation"
         ],
         "rating": "0.8"
+    },
+    "AeroWings": {
+        "genres": [
+            "Shooter",
+            "Simulation / Vehicle",
+            "Shooter / Plane",
+            "Simulation"
+        ],
+        "rating": "0.65"
     },
     "AeroWings 2 - Airstrike": {
         "genres": [
@@ -201,12 +201,6 @@
         ],
         "rating": "0.8"
     },
-    "Bakuretsu Muteki Bangaioh": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "rating": "0.8"
-    },
     "Baldr Force EXE": {
         "genres": [
             "Adventure"
@@ -219,6 +213,12 @@
             "Action"
         ],
         "rating": "0.6"
+    },
+    "Bangai-O": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.8"
     },
     "Bass Rush Dream - EcoGear PowerWorm Championship": {
         "genres": [
@@ -393,7 +393,7 @@
         "genres": [],
         "rating": null
     },
-    "Capcom vs. SNK - Millennium Fight 2000": {
+    "Capcom vs. SNK": {
         "genres": [
             "Fight"
         ],
@@ -518,13 +518,6 @@
         ],
         "rating": "0.65"
     },
-    "Climax Landers": {
-        "genres": [
-            "Role playing games",
-            "Adventure"
-        ],
-        "rating": "0.5"
-    },
     "Close To - Inori no Oka": {
         "genres": [
             "Adventure"
@@ -556,12 +549,6 @@
             "Strategy"
         ],
         "rating": "0.85"
-    },
-    "Cool Boarders Burrrn!": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.6"
     },
     "Cool Cool Toon": {
         "genres": [
@@ -603,6 +590,13 @@
             "Playing cards"
         ],
         "rating": "0.75"
+    },
+    "Cyber Troopers - Virtual-On - Oratorio Tangram": {
+        "genres": [
+            "Shoot'em Up",
+            "Fight"
+        ],
+        "rating": "0.8"
     },
     "D+Vine [Luv]": {
         "genres": [
@@ -737,13 +731,6 @@
         "genres": [],
         "rating": null
     },
-    "Dennou Senki - Virtual-On - Oratorio Tangram": {
-        "genres": [
-            "Shoot'em Up",
-            "Fight"
-        ],
-        "rating": "0.8"
-    },
     "Denpa Shounen-teki Kenshou Seikatsu Soft - Nasubi no Heya": {
         "genres": [
             "Board game"
@@ -873,18 +860,18 @@
         ],
         "rating": "0.7"
     },
-    "Draconus - Cult of the Wyrm": {
-        "genres": [
-            "Role playing games"
-        ],
-        "rating": "0.8"
-    },
     "Dragon Riders - Chronicles of Pern": {
         "genres": [
             "Role playing games",
             "Adventure"
         ],
         "rating": "0.6"
+    },
+    "Dragons Blood": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.8"
     },
     "Dream Passport": {
         "genres": [],
@@ -1105,7 +1092,7 @@
         "genres": [],
         "rating": null
     },
-    "Dynamite Deka 2": {
+    "Dynamite Cop": {
         "genres": [
             "Beat'em Up"
         ],
@@ -1231,20 +1218,6 @@
         ],
         "rating": "0.8"
     },
-    "Espion-Age-nts": {
-        "genres": [
-            "Simulation",
-            "Strategy",
-            "Role playing games"
-        ],
-        "rating": "0.65"
-    },
-    "Eternal Arcadia": {
-        "genres": [
-            "Role playing games"
-        ],
-        "rating": "0.75"
-    },
     "Eternal Arcadia - Kuuzokuban": {
         "genres": [
             "Role playing games"
@@ -1283,6 +1256,18 @@
         ],
         "rating": "0.7"
     },
+    "Evolution - The World of Sacred Device": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
+    },
+    "Evolution 2 - Far Off Promise": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.6"
+    },
     "Exhibition of Speed": {
         "genres": [
             "Race",
@@ -1296,12 +1281,6 @@
             "Role playing games"
         ],
         "rating": "0.8"
-    },
-    "Expendable": {
-        "genres": [
-            "Shooter"
-        ],
-        "rating": "0.65"
     },
     "F1 Racing Championship": {
         "genres": [
@@ -1326,7 +1305,7 @@
         ],
         "rating": "0.9"
     },
-    "F355 Challenge": {
+    "F355 Challenge - Passione Rossa": {
         "genres": [
             "Race",
             "Driving"
@@ -1381,6 +1360,13 @@
             "Adventure"
         ],
         "rating": "0.75"
+    },
+    "Flag to Flag": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.7"
     },
     "Floigan Bros. - Episode 1": {
         "genres": [
@@ -1487,15 +1473,6 @@
     "Generator Vol. 2": {
         "genres": [],
         "rating": null
-    },
-    "Get Bass 2": {
-        "genres": [
-            "Hunting and Fishing",
-            "Fishing",
-            "Sports",
-            "Various"
-        ],
-        "rating": "0.9"
     },
     "Get!! Colonies": {
         "genres": [
@@ -1835,11 +1812,19 @@
         "genres": [],
         "rating": null
     },
-    "Incoming - Jinrui Saishuu Kessen": {
+    "Incoming": {
         "genres": [
             "Shoot'em Up"
         ],
         "rating": "0.6"
+    },
+    "Industrial Spy - Operation Espionage": {
+        "genres": [
+            "Simulation",
+            "Strategy",
+            "Role playing games"
+        ],
+        "rating": "0.65"
     },
     "Inhabitants": {
         "genres": [
@@ -1903,7 +1888,7 @@
         ],
         "rating": "0.85"
     },
-    "JRA PAT for Dreamcast V50 L10": {
+    "JRA PAT for Dreamcast V40 L10": {
         "genres": [],
         "rating": null
     },
@@ -1962,7 +1947,7 @@
         ],
         "rating": "0.55"
     },
-    "Jojo no Kimyou na Bouken - Mirai e no Isan": {
+    "JoJo's Bizarre Adventure": {
         "genres": [
             "Fight"
         ],
@@ -2430,6 +2415,12 @@
         ],
         "rating": "0.8"
     },
+    "Millennium Soldier - Expendable": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": "0.65"
+    },
     "Miss Moonlight": {
         "genres": [
             "Adventure"
@@ -2473,13 +2464,6 @@
             "Adventure"
         ],
         "rating": "0.55"
-    },
-    "Monaco Grand Prix Racing Simulation 2": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.25"
     },
     "Morita no Saikyou Reversi": {
         "genres": [
@@ -2840,6 +2824,13 @@
         ],
         "rating": "0.75"
     },
+    "Nomad Soul, The": {
+        "genres": [
+            "Adventure",
+            "Role playing games"
+        ],
+        "rating": "0.9"
+    },
     "O-to-i-re - Dreamcast Sequencer": {
         "genres": [],
         "rating": null
@@ -2883,13 +2874,6 @@
     "Official Sega Dreamcast Magazine Vol. 9 - December 2000": {
         "genres": [],
         "rating": null
-    },
-    "Omikron - The Nomad Soul": {
-        "genres": [
-            "Adventure",
-            "Role playing games"
-        ],
-        "rating": "0.9"
     },
     "Omoide ni Kawaru Kimi - Memories Off": {
         "genres": [
@@ -2980,7 +2964,7 @@
         ],
         "rating": "0.6"
     },
-    "PenPen TriIcelon": {
+    "PenPen": {
         "genres": [
             "Action",
             "Race",
@@ -3036,6 +3020,12 @@
             "Strategy"
         ],
         "rating": "0.8"
+    },
+    "Plasma Sword - Nightmare of Bilstein": {
+        "genres": [
+            "Fight"
+        ],
+        "rating": "0.65"
     },
     "Plus Plumb": {
         "genres": [
@@ -3179,7 +3169,7 @@
         ],
         "rating": "0.8"
     },
-    "Project Justice": {
+    "Project Justice - Rival Schools 2": {
         "genres": [
             "Fight"
         ],
@@ -3242,6 +3232,13 @@
         "genres": [],
         "rating": null
     },
+    "Racing Simulation - Monaco Grand Prix": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.25"
+    },
     "Radirgy": {
         "genres": [
             "Shoot'em up / Vertical",
@@ -3276,19 +3273,19 @@
         ],
         "rating": "0.7"
     },
+    "Ready 2 Rumble Boxing": {
+        "genres": [
+            "Sports",
+            "Fight"
+        ],
+        "rating": "0.8"
+    },
     "Ready 2 Rumble Boxing - Round 2": {
         "genres": [
             "Sports / Boxing",
             "Sports"
         ],
         "rating": "0.85"
-    },
-    "Ready 2 Rumble Boxing - Uchikome Warai no Megaton Punch!!": {
-        "genres": [
-            "Sports",
-            "Fight"
-        ],
-        "rating": "0.8"
     },
     "Real Sound - Kaze no Regret": {
         "genres": [
@@ -3309,13 +3306,6 @@
             "Driving"
         ],
         "rating": "0.7"
-    },
-    "Redline Racer": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.6"
     },
     "Reel Fishing + Wild": {
         "genres": [
@@ -3370,7 +3360,7 @@
         ],
         "rating": "0.8"
     },
-    "Ring, The": {
+    "Ring, The - Terror's Realm": {
         "genres": [
             "Adventure",
             "Action"
@@ -3600,6 +3590,15 @@
         ],
         "rating": "0.7"
     },
+    "Sega Bass Fishing 2": {
+        "genres": [
+            "Hunting and Fishing",
+            "Fishing",
+            "Sports",
+            "Various"
+        ],
+        "rating": "0.9"
+    },
     "Sega Extreme Sports": {
         "genres": [
             "Sports"
@@ -3640,7 +3639,7 @@
         ],
         "rating": "0.75"
     },
-    "Sega Worldwide Soccer 2000 - Euro Edition": {
+    "Sega Worldwide Soccer 2000": {
         "genres": [
             "Sports / Soccer",
             "Sports"
@@ -3696,7 +3695,7 @@
         ],
         "rating": "0.6"
     },
-    "Seventh Cross": {
+    "Seventh Cross Evolution": {
         "genres": [
             "Role playing games",
             "Adventure"
@@ -3768,18 +3767,6 @@
         ],
         "rating": "0.6"
     },
-    "Shinki Sekai Evolution": {
-        "genres": [
-            "Role playing games"
-        ],
-        "rating": "0.7"
-    },
-    "Shinki Sekai Evolution 2 - Tooi Yakusoku": {
-        "genres": [
-            "Role playing games"
-        ],
-        "rating": "0.6"
-    },
     "Shinri Game, The": {
         "genres": [
             "Quiz",
@@ -3792,13 +3779,6 @@
             "Adventure"
         ],
         "rating": "0.8"
-    },
-    "Shutokou Battle 2": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.85"
     },
     "Silent Scope": {
         "genres": [
@@ -3844,6 +3824,12 @@
         ],
         "rating": "0.9"
     },
+    "Skies of Arcadia": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.75"
+    },
     "Slave Zero": {
         "genres": [
             "Action"
@@ -3866,6 +3852,12 @@
             "Adventure"
         ],
         "rating": "0.7"
+    },
+    "Snow Surfers": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.6"
     },
     "Soldier of Fortune": {
         "genres": [
@@ -4003,12 +3995,6 @@
         ],
         "rating": "0.7"
     },
-    "Star Gladiator 2 - Nightmare of Bilstein": {
-        "genres": [
-            "Fight"
-        ],
-        "rating": "0.65"
-    },
     "Star Wars - Demolition": {
         "genres": [
             "Race",
@@ -4042,13 +4028,13 @@
         ],
         "rating": "0.8"
     },
-    "Street Fighter III - 3rd Strike - Fight for the Future": {
+    "Street Fighter III - 3rd Strike": {
         "genres": [
             "Fight"
         ],
         "rating": "0.85"
     },
-    "Street Fighter III - W Impact": {
+    "Street Fighter III - Double Impact": {
         "genres": [
             "Fight"
         ],
@@ -4134,13 +4120,6 @@
         ],
         "rating": "0.7"
     },
-    "Super Speed Racing": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.7"
-    },
     "Super Street Fighter II X for Matching Service": {
         "genres": [
             "Fight"
@@ -4154,6 +4133,13 @@
             "Driving"
         ],
         "rating": "0.55"
+    },
+    "Suzuki Alstare - Extreme Racing": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.6"
     },
     "Sweet Season": {
         "genres": [
@@ -4253,6 +4239,13 @@
         ],
         "rating": "0.7"
     },
+    "Time Stalkers": {
+        "genres": [
+            "Role playing games",
+            "Adventure"
+        ],
+        "rating": "0.5"
+    },
     "Tokusatsu Bouken Katsugeki Super Hero Retsuden": {
         "genres": [
             "Action",
@@ -4273,12 +4266,19 @@
         ],
         "rating": "0.8"
     },
-    "Tokyo Xtreme Racer": {
+    "Tokyo Highway Challenge": {
         "genres": [
             "Race",
             "Driving"
         ],
         "rating": "0.7"
+    },
+    "Tokyo Highway Challenge 2": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.85"
     },
     "Tom Clancy's Rainbow Six - Rogue Spear + Mission Pack - Urban Operations": {
         "genres": [
@@ -4314,19 +4314,19 @@
         ],
         "rating": "0.65"
     },
-    "Tony Hawk's Pro Skater": {
-        "genres": [
-            "Sports / Skateboard",
-            "Sports"
-        ],
-        "rating": "0.9"
-    },
     "Tony Hawk's Pro Skater 2": {
         "genres": [
             "Sports / Skateboard",
             "Sports"
         ],
         "rating": "0.7"
+    },
+    "Tony Hawk's Skateboarding": {
+        "genres": [
+            "Sports / Skateboard",
+            "Sports"
+        ],
+        "rating": "0.9"
     },
     "Toy Commander": {
         "genres": [

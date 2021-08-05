@@ -19,7 +19,10 @@ class ParentMetadata(ExternalMetadata):
 
         with self.install_path.open() as f:
             data = json.loads(f.read())
-            for parent_disc_title, clone_disc_titles in data.items():
+            for parent_name, clone_disc_titles in data.items():
+                parent_disc_title = Machine.title_from(parent_name, disc=True)
+                self.group_parents[parent_disc_title] = parent_name
+                
                 for clone_disc_title in clone_disc_titles:
                     self.custom_groups[clone_disc_title] = parent_disc_title
 

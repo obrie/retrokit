@@ -199,13 +199,27 @@
         ],
         "rating": null
     },
-    "Ape Escape Academy": {
+    "Ape Academy": {
         "genres": [
             "Platform",
             "Platform / Run Jump",
             "Casual Game"
         ],
         "rating": "0.8"
+    },
+    "Ape Academy 2": {
+        "genres": [
+            "Platform",
+            "Platform / Run Jump",
+            "Casual Game"
+        ],
+        "rating": "0.8"
+    },
+    "Ape Escape": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.75"
     },
     "Archer Maclean's Mercury": {
         "genres": [
@@ -220,7 +234,7 @@
         "genres": [],
         "rating": null
     },
-    "Armored Core - Formula Front International": {
+    "Armored Core - Formula Front Extreme Battle": {
         "genres": [],
         "rating": null
     },
@@ -273,12 +287,6 @@
             "Role playing games"
         ],
         "rating": "0.8"
-    },
-    "Astonishia Story 2": {
-        "genres": [
-            "Role playing games"
-        ],
-        "rating": "0.7"
     },
     "Astro Boy - The Video Game": {
         "genres": [
@@ -496,20 +504,6 @@
         ],
         "rating": "0.7"
     },
-    "Boku no Watashi no Katamari Damacy": {
-        "genres": [
-            "Puzzle-Game",
-            "Action"
-        ],
-        "rating": "0.75"
-    },
-    "Bokujou Monogatari - Harvest Moon - Boy & Girl": {
-        "genres": [
-            "Simulation",
-            "Simulation / Life"
-        ],
-        "rating": "0.7"
-    },
     "Bomberman": {
         "genres": [
             "Strategy",
@@ -605,7 +599,7 @@
         ],
         "rating": "0.75"
     },
-    "Bust-A-Move - Deluxe": {
+    "Bust-A-Move Ghost": {
         "genres": [
             "Puzzle-Game"
         ],
@@ -617,7 +611,7 @@
         ],
         "rating": "0.75"
     },
-    "Buzz! Das grosse Laenderquiz": {
+    "Buzz! Danske Genier": {
         "genres": [
             "Quiz",
             "Casual Game"
@@ -714,12 +708,6 @@
         "genres": [],
         "rating": null
     },
-    "Carol Vorderman's Sudoku": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "rating": null
-    },
     "Cart Kings": {
         "genres": [],
         "rating": null
@@ -759,10 +747,6 @@
         ],
         "rating": "0.6"
     },
-    "Chi Vuol Essere Milionario - Party Edition": {
-        "genres": [],
-        "rating": "0.45"
-    },
     "Chili Con Carnage": {
         "genres": [
             "Action",
@@ -771,10 +755,6 @@
         "rating": "0.8"
     },
     "Chotto Shot Edit": {
-        "genres": [],
-        "rating": null
-    },
-    "Chronicle of Dungeon Maker": {
         "genres": [],
         "rating": null
     },
@@ -893,6 +873,12 @@
         ],
         "rating": "0.65"
     },
+    "Crimson Gem Saga": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
+    },
     "Crisis Core - Final Fantasy VII": {
         "genres": [
             "Role playing games"
@@ -906,17 +892,15 @@
         ],
         "rating": "0.95"
     },
+    "Cube": {
+        "genres": [],
+        "rating": null
+    },
     "DJ Max Emotional Sense - Fever": {
         "genres": [
             "Music and Dance"
         ],
         "rating": "0.8"
-    },
-    "DJ Max Emotional Sense P - Black Square": {
-        "genres": [
-            "Music and Dance"
-        ],
-        "rating": null
     },
     "DJ Max Emotional Sense P - Clazziquai Edition": {
         "genres": [],
@@ -932,6 +916,12 @@
             "Action"
         ],
         "rating": "0.8"
+    },
+    "DJ Max Portable - Black Square": {
+        "genres": [
+            "Music and Dance"
+        ],
+        "rating": null
     },
     "DJ Max Portable 3": {
         "genres": [
@@ -952,13 +942,6 @@
             "Driving"
         ],
         "rating": "0.85"
-    },
-    "DTM Race Driver 3 - Challenge": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.7"
     },
     "Dai-2-Ji Super Robot Taisen Z Hakai-Hen": {
         "genres": [],
@@ -1079,7 +1062,7 @@
         "genres": [],
         "rating": null
     },
-    "Despicable Me - The Game": {
+    "Despicable Me": {
         "genres": [],
         "rating": "0.5"
     },
@@ -1099,11 +1082,18 @@
         ],
         "rating": null
     },
-    "Diner Dash - Sizzle & Serve": {
+    "Diner Dash": {
         "genres": [
             "Simulation"
         ],
         "rating": "0.55"
+    },
+    "Disgaea - Afternoon of Darkness": {
+        "genres": [
+            "Strategy",
+            "Role playing games"
+        ],
+        "rating": "0.9"
     },
     "Disgaea 2 - Dark Hero Days": {
         "genres": [
@@ -1160,12 +1150,6 @@
         ],
         "rating": "0.3"
     },
-    "Disney-Pixar Oben": {
-        "genres": [
-            "Platform"
-        ],
-        "rating": "0.7"
-    },
     "Disney-Pixar Ratatouille": {
         "genres": [
             "Platform"
@@ -1179,6 +1163,12 @@
             "Adventure"
         ],
         "rating": "0.85"
+    },
+    "Disney-Pixar Up": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.7"
     },
     "Disney-Pixar WALL-E": {
         "genres": [
@@ -1303,6 +1293,10 @@
         ],
         "rating": "0.6"
     },
+    "Dungeon Maker - Hunting Ground": {
+        "genres": [],
+        "rating": null
+    },
     "Dungeon Maker II - The Hidden War": {
         "genres": [
             "Role playing games"
@@ -1322,6 +1316,16 @@
             "Role playing games"
         ],
         "rating": "0.7"
+    },
+    "Dynasty Warriors": {
+        "genres": [],
+        "rating": null
+    },
+    "Dynasty Warriors - Strikeforce": {
+        "genres": [
+            "Beat'em Up"
+        ],
+        "rating": "0.8"
     },
     "Dynasty Warriors Vol. 2": {
         "genres": [
@@ -1398,11 +1402,24 @@
         ],
         "rating": "0.8"
     },
+    "Everybody's Golf 2": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.85"
+    },
     "Everybody's Stress Buster": {
         "genres": [
             "Compilation"
         ],
         "rating": "0.7"
+    },
+    "Everybody's Tennis": {
+        "genres": [
+            "Sports",
+            "Sports / Tennis"
+        ],
+        "rating": "0.8"
     },
     "Exit": {
         "genres": [
@@ -1481,6 +1498,12 @@
         ],
         "rating": "0.75"
     },
+    "FIFA 09": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.7"
+    },
     "FIFA 10": {
         "genres": [
             "Sports"
@@ -1499,17 +1522,17 @@
         ],
         "rating": "0.65"
     },
+    "FIFA 13": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.55"
+    },
     "FIFA 14": {
         "genres": [
             "Sports"
         ],
         "rating": "0.5"
-    },
-    "FIFA Fussball-Weltmeisterschaft Deutschland 2006": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.85"
     },
     "FIFA Soccer": {
         "genres": [
@@ -1517,23 +1540,17 @@
         ],
         "rating": "0.6"
     },
-    "FIFA Soccer 09": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.7"
-    },
-    "FIFA Soccer 13": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.55"
-    },
     "FIFA Street 2": {
         "genres": [
             "Sports"
         ],
         "rating": "0.8"
+    },
+    "FIFA World Cup Germany 2006": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.85"
     },
     "Fading Shadows": {
         "genres": [
@@ -1588,7 +1605,7 @@
         "genres": [],
         "rating": "0.3"
     },
-    "Final Fantasy": {
+    "Final Fantasy - 20th Anniversary Edition": {
         "genres": [
             "Role playing games"
         ],
@@ -1697,7 +1714,7 @@
         ],
         "rating": "0.4"
     },
-    "Ford Bold Moves Street Racing": {
+    "Ford Street Racing - L.A. Duel": {
         "genres": [
             "Race",
             "Driving"
@@ -1793,6 +1810,12 @@
             "Role playing games"
         ],
         "rating": "0.6"
+    },
+    "Gensan": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.55"
     },
     "Gensou Suikoden - Tsumugareshi Hyakunen no Toki": {
         "genres": [
@@ -1902,7 +1925,7 @@
         ],
         "rating": "0.9"
     },
-    "Godfather, The - Mob Wars": {
+    "Godfather, The": {
         "genres": [
             "Strategy"
         ],
@@ -1922,7 +1945,13 @@
         ],
         "rating": "0.6"
     },
-    "Gradius Portable": {
+    "Gottlieb Pinball Classics": {
+        "genres": [
+            "Pinball"
+        ],
+        "rating": "0.75"
+    },
+    "Gradius Collection": {
         "genres": [
             "Action",
             "Compilation",
@@ -2072,7 +2101,7 @@
         ],
         "rating": "0.75"
     },
-    "Gurumin - Une Aventure Monstrueuse": {
+    "Gurumin - A Monstrous Adventure": {
         "genres": [
             "Role playing games"
         ],
@@ -2111,12 +2140,6 @@
         ],
         "rating": "0.8"
     },
-    "Hammerin' Hero": {
-        "genres": [
-            "Platform"
-        ],
-        "rating": "0.55"
-    },
     "Hanaoni - Yume no Tsuzuki": {
         "genres": [],
         "rating": null
@@ -2150,6 +2173,13 @@
             "Adventure"
         ],
         "rating": "0.55"
+    },
+    "Harvest Moon - Boy & Girl": {
+        "genres": [
+            "Simulation",
+            "Simulation / Life"
+        ],
+        "rating": "0.7"
     },
     "Harvest Moon - Hero of Leaf Valley": {
         "genres": [
@@ -2254,19 +2284,6 @@
         ],
         "rating": "0.6"
     },
-    "Hot Shots Golf - Open Tee 2": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.85"
-    },
-    "Hot Shots Tennis - Get a Grip": {
-        "genres": [
-            "Sports",
-            "Sports / Tennis"
-        ],
-        "rating": "0.8"
-    },
     "Hot Wheels - Ultimate Racing": {
         "genres": [
             "Race",
@@ -2345,7 +2362,7 @@
         ],
         "rating": "0.8"
     },
-    "Innocent Life - Shin Bokujou Monogatari": {
+    "Innocent Life - A Futuristic Harvest Moon": {
         "genres": [
             "Simulation",
             "Adventure"
@@ -2397,18 +2414,11 @@
         ],
         "rating": "0.45"
     },
-    "Iron Man 2": {
+    "Iron Man 2 - The Video Game": {
         "genres": [
             "Action"
         ],
         "rating": "0.85"
-    },
-    "Irregular Hunter X": {
-        "genres": [
-            "Action",
-            "Platform"
-        ],
-        "rating": "0.9"
     },
     "Jackass - The Game": {
         "genres": [
@@ -2530,6 +2540,10 @@
         "genres": [],
         "rating": null
     },
+    "Kameleon": {
+        "genres": [],
+        "rating": null
+    },
     "Kamen Rider - Super Climax Heroes": {
         "genres": [
             "Fight"
@@ -2555,10 +2569,6 @@
         ],
         "rating": "1"
     },
-    "Karakuri": {
-        "genres": [],
-        "rating": null
-    },
     "Kazook": {
         "genres": [
             "Casual Game"
@@ -2573,6 +2583,13 @@
     },
     "Kenka Banchou 4 - Ichinen Sensou": {
         "genres": [],
+        "rating": "0.85"
+    },
+    "Key of Heaven": {
+        "genres": [
+            "Role playing games",
+            "Action"
+        ],
         "rating": "0.85"
     },
     "Kidou Keisatsu Patlabor - Kamubakku MiniPato": {
@@ -2638,13 +2655,6 @@
         ],
         "rating": "0.9"
     },
-    "Kingdom of Paradise": {
-        "genres": [
-            "Role playing games",
-            "Action"
-        ],
-        "rating": "0.85"
-    },
     "Kisou Ryouhei Gunhound EX": {
         "genres": [],
         "rating": null
@@ -2664,6 +2674,12 @@
         "genres": [],
         "rating": null
     },
+    "Koloomn": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.4"
+    },
     "Koori no Haka - Ichiyanagi Nagomu, 3-dome no Junan": {
         "genres": [],
         "rating": null
@@ -2680,7 +2696,7 @@
         "genres": [],
         "rating": null
     },
-    "Kuru Kuru Chameleon": {
+    "L.A. Rush": {
         "genres": [],
         "rating": null
     },
@@ -3103,13 +3119,6 @@
         ],
         "rating": null
     },
-    "Makai Senki Disgaea Portable - Tsuushin Taisen Hajimemashita.": {
-        "genres": [
-            "Strategy",
-            "Role playing games"
-        ],
-        "rating": "0.9"
-    },
     "Mana Khemia - Student Alliance": {
         "genres": [
             "Role playing games"
@@ -3157,6 +3166,19 @@
         ],
         "rating": "0.5"
     },
+    "Mawaskes Puzzle": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": null
+    },
+    "Me & My Katamari": {
+        "genres": [
+            "Puzzle-Game",
+            "Action"
+        ],
+        "rating": "0.75"
+    },
     "Medal of Honor - Heroes": {
         "genres": [
             "Shooter / 1st person",
@@ -3178,6 +3200,13 @@
             "Platform"
         ],
         "rating": "0.85"
+    },
+    "Mega Man - Maverick Hunter X": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.9"
     },
     "Mega Man - Powered Up": {
         "genres": [
@@ -3385,19 +3414,19 @@
         "genres": [],
         "rating": null
     },
+    "Monster Hunter Freedom": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.85"
+    },
     "Monster Hunter Freedom 2": {
         "genres": [
             "Strategy"
         ],
         "rating": "0.9"
     },
-    "Monster Hunter Portable": {
-        "genres": [
-            "Strategy"
-        ],
-        "rating": "0.85"
-    },
-    "Monster Hunter Portable 2nd G": {
+    "Monster Hunter Freedom Unite": {
         "genres": [],
         "rating": null
     },
@@ -3454,14 +3483,6 @@
         "rating": "0.85"
     },
     "Moujuutsukai to Oujisama Portable": {
-        "genres": [],
-        "rating": null
-    },
-    "Musou Orochi": {
-        "genres": [],
-        "rating": null
-    },
-    "Musou Orochi - Maou Sairin Enhanced Version": {
         "genres": [],
         "rating": null
     },
@@ -3782,18 +3803,18 @@
         "genres": [],
         "rating": null
     },
+    "Nickelodeon SpongeBob SquarePants - SpongeBob's Truth or Square": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": null
+    },
     "Nickelodeon SpongeBob SquarePants - The Yellow Avenger": {
         "genres": [
             "Platform",
             "Adventure"
         ],
         "rating": "0.6"
-    },
-    "Nickelodeon SpongeBob's Truth or Square": {
-        "genres": [
-            "Platform"
-        ],
-        "rating": null
     },
     "Nise no Chigiri": {
         "genres": [],
@@ -3927,10 +3948,6 @@
             "Puzzle-Game"
         ],
         "rating": "0.7"
-    },
-    "PQ2 - Practical Intelligence Quotient 2": {
-        "genres": [],
-        "rating": null
     },
     "PSP Camera 01": {
         "genres": [],
@@ -4138,25 +4155,11 @@
         ],
         "rating": "0.7"
     },
-    "Pinball Hall of Fame - The Gottlieb Collection": {
-        "genres": [
-            "Pinball"
-        ],
-        "rating": "0.75"
-    },
     "Pipe Mania": {
         "genres": [
             "Puzzle-Game"
         ],
         "rating": "0.7"
-    },
-    "Piposaru Academia 2 - Aiai Saruge Janken Battle": {
-        "genres": [
-            "Platform",
-            "Platform / Run Jump",
-            "Casual Game"
-        ],
-        "rating": "0.8"
     },
     "Pirates of the Caribbean - Dead Man's Chest": {
         "genres": [
@@ -4263,6 +4266,10 @@
         ],
         "rating": "0.9"
     },
+    "Practical IQ - Test Your Intelligence": {
+        "genres": [],
+        "rating": null
+    },
     "Prince of Persia - Revelations": {
         "genres": [
             "Action",
@@ -4326,6 +4333,12 @@
         ],
         "rating": "0.7"
     },
+    "Pro Evolution Soccer 5": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.5"
+    },
     "Pro Evolution Soccer 6": {
         "genres": [
             "Sports"
@@ -4357,6 +4370,12 @@
         ],
         "rating": "0.05"
     },
+    "Professor Sudoku": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": null
+    },
     "Pump It Up - Exceed Portable": {
         "genres": [],
         "rating": null
@@ -4379,7 +4398,7 @@
         ],
         "rating": "0.8"
     },
-    "Puyo Puyo Fever": {
+    "Puyo Pop Fever": {
         "genres": [
             "Puzzle-Game"
         ],
@@ -4406,12 +4425,6 @@
     "Puzzle Chronicles": {
         "genres": [
             "Role playing games",
-            "Puzzle-Game"
-        ],
-        "rating": null
-    },
-    "Puzzle Guzzle": {
-        "genres": [
             "Puzzle-Game"
         ],
         "rating": null
@@ -4464,7 +4477,7 @@
         ],
         "rating": "0.85"
     },
-    "Ragnarok - Hikari to Yami no Koujo": {
+    "Ragnarok Tactics": {
         "genres": [],
         "rating": null
     },
@@ -4594,11 +4607,7 @@
         ],
         "rating": "0.55"
     },
-    "Rush": {
-        "genres": [],
-        "rating": null
-    },
-    "SBK - Superbike World Championship": {
+    "SBK 08 - Superbike World Championship": {
         "genres": [],
         "rating": null
     },
@@ -4730,12 +4739,6 @@
         "genres": [],
         "rating": null
     },
-    "Saru! Get You! P!": {
-        "genres": [
-            "Platform"
-        ],
-        "rating": "0.75"
-    },
     "Saru! Get You! Piposaru Racer": {
         "genres": [],
         "rating": null
@@ -4808,7 +4811,7 @@
         ],
         "rating": "0.95"
     },
-    "Shadow of Memories": {
+    "Shadow of Destiny": {
         "genres": [
             "Adventure"
         ],
@@ -4847,16 +4850,6 @@
             "Role playing games"
         ],
         "rating": "0.9"
-    },
-    "Shin Sangoku Musou": {
-        "genres": [],
-        "rating": null
-    },
-    "Shin Sangoku Musou - Multi Raid": {
-        "genres": [
-            "Beat'em Up"
-        ],
-        "rating": "0.8"
     },
     "Shin Sangoku Musou - Multi Raid 2": {
         "genres": [],
@@ -4929,14 +4922,6 @@
             "Role playing games"
         ],
         "rating": "0.7"
-    },
-    "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri!": {
-        "genres": [],
-        "rating": null
-    },
-    "Simple 2500 Series Portable!! Vol. 2 - The Tennis": {
-        "genres": [],
-        "rating": null
     },
     "Simple 2500 Series Portable!! Vol. 3 - The Dokodemo Suiri - IT Tantei Zen 68 no Jikenbo": {
         "genres": [],
@@ -5315,6 +5300,10 @@
         ],
         "rating": "0.45"
     },
+    "Super Pocket Tennis": {
+        "genres": [],
+        "rating": null
+    },
     "Super Robot Taisen MX Portable": {
         "genres": [
             "Strategy",
@@ -5361,7 +5350,7 @@
         "genres": [],
         "rating": null
     },
-    "TMNT": {
+    "TMNT - Teenage Mutant Ninja Turtles": {
         "genres": [],
         "rating": "0.25"
     },
@@ -5371,6 +5360,13 @@
             "Fight"
         ],
         "rating": "0.6"
+    },
+    "TOCA Race Driver 3 Challenge": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.7"
     },
     "Tactics Ogre - Let Us Cling Together": {
         "genres": [
@@ -5453,14 +5449,14 @@
         "genres": [],
         "rating": null
     },
-    "TalkMan-shiki Shabelingual Eikaiwa for Kids!": {
-        "genres": [],
-        "rating": null
-    },
-    "Talkman Yeongeohoehwa Sudajaeng English": {
+    "TalkMan-shiki Shabelingual Eikaiwa": {
         "genres": [
             "Various"
         ],
+        "rating": null
+    },
+    "TalkMan-shiki Shabelingual Eikaiwa for Kids!": {
+        "genres": [],
         "rating": null
     },
     "Tantei Jinguuji Saburou - Hai to Diamond": {
@@ -5491,18 +5487,18 @@
         "genres": [],
         "rating": null
     },
-    "Tenchu - Time of the Assassins": {
-        "genres": [
-            "Action"
-        ],
-        "rating": "0.65"
-    },
-    "Tenchu 4": {
+    "Tenchu - Shadow Assassins": {
         "genres": [
             "Action / Adventure",
             "Action"
         ],
         "rating": "0.7"
+    },
+    "Tenchu - Time of the Assassins": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.65"
     },
     "Test Drive Unlimited": {
         "genres": [
@@ -5593,6 +5589,10 @@
         "rating": null
     },
     "Toki no Kizuna - Hanamusubi Tsuzuri": {
+        "genres": [],
+        "rating": null
+    },
+    "Tokobot": {
         "genres": [],
         "rating": null
     },
@@ -5709,12 +5709,6 @@
             "Fight"
         ],
         "rating": "0.75"
-    },
-    "Ultimate Block Party": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "rating": "0.4"
     },
     "Ultimate Board Game Collection": {
         "genres": [
@@ -5925,6 +5919,14 @@
         ],
         "rating": "0.8"
     },
+    "Warriors Orochi": {
+        "genres": [],
+        "rating": null
+    },
+    "Warriors Orochi 2": {
+        "genres": [],
+        "rating": null
+    },
     "Warriors of the Lost Empire": {
         "genres": [
             "Role playing games"
@@ -5950,6 +5952,10 @@
             "Role playing games"
         ],
         "rating": "0.7"
+    },
+    "Who Wants to Be a Millionaire - Party Edition": {
+        "genres": [],
+        "rating": "0.45"
     },
     "Wild Arms XF": {
         "genres": [
@@ -6043,12 +6049,6 @@
             "Simulation"
         ],
         "rating": "0.75"
-    },
-    "World Soccer Winning Eleven 9 - Ubiquitous Evolution": {
-        "genres": [
-            "Sports"
-        ],
-        "rating": "0.5"
     },
     "World Tour Soccer": {
         "genres": [

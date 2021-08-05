@@ -522,6 +522,13 @@
         ],
         "rating": "0.55"
     },
+    "Buster Bros.": {
+        "genres": [
+            "Puzzle-Game",
+            "Action"
+        ],
+        "rating": "0.75"
+    },
     "CAL II": {
         "genres": [
             "Adventure"
@@ -546,12 +553,6 @@
             "Simulation"
         ],
         "rating": null
-    },
-    "CD Denjin - Rockabilly Tengoku": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "rating": "0.7"
     },
     "CD Hanafuda - Bishoujo Fan Club": {
         "genres": [
@@ -707,7 +708,7 @@
         ],
         "rating": null
     },
-    "Cosmic Fantasy 2 - Bouken Shounen Ban": {
+    "Cosmic Fantasy 2": {
         "genres": [
             "Role playing games"
         ],
@@ -1111,13 +1112,13 @@
         ],
         "rating": "0.75"
     },
-    "Exile - Toki no Hasama e": {
+    "Exile": {
         "genres": [
             "Role playing games"
         ],
         "rating": "0.7"
     },
-    "Exile II - Janen no Jishou": {
+    "Exile - Wicked Phenomenon": {
         "genres": [
             "Action",
             "Role playing games"
@@ -1522,7 +1523,7 @@
         ],
         "rating": "0.55"
     },
-    "Godzilla Bakutou Retsuden": {
+    "Godzilla": {
         "genres": [
             "Fight",
             "Fight / 2D",
@@ -1834,7 +1835,7 @@
         "genres": [],
         "rating": null
     },
-    "J. B. Harold Series 1 - Murder Club": {
+    "J. B. Harold Murder Club": {
         "genres": [
             "Adventure"
         ],
@@ -1861,19 +1862,19 @@
         ],
         "rating": null
     },
+    "Jack Nicklaus Turbo Golf": {
+        "genres": [
+            "Sports / Golf",
+            "Sports"
+        ],
+        "rating": "0.4"
+    },
     "Jack Nicklaus' Turbo Golf": {
         "genres": [
             "Sports",
             "Sports / Golf"
         ],
         "rating": "0.55"
-    },
-    "Jack Nicklaus' World Tour Golf - 162 Holes": {
-        "genres": [
-            "Sports / Golf",
-            "Sports"
-        ],
-        "rating": "0.4"
     },
     "Jackie Chan's Action Kung Fu": {
         "genres": [
@@ -2160,6 +2161,12 @@
         "genres": [],
         "rating": null
     },
+    "Last Alert": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.7"
+    },
     "Last Armageddon": {
         "genres": [
             "Role playing games"
@@ -2248,6 +2255,12 @@
         ],
         "rating": "0.8"
     },
+    "Lords of the Rising Sun": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.7"
+    },
     "Mad Stalker - Full Metal Force": {
         "genres": [
             "Beat'em Up"
@@ -2273,7 +2286,7 @@
         ],
         "rating": "0.75"
     },
-    "Magical Saurus Tour": {
+    "Magical Dinosaur Tour": {
         "genres": [
             "Educational"
         ],
@@ -2362,13 +2375,6 @@
             "Adventure"
         ],
         "rating": "0.75"
-    },
-    "Makai Eiyuuden - Shape Shifter": {
-        "genres": [
-            "Action / Adventure",
-            "Action"
-        ],
-        "rating": "0.5"
     },
     "Makai Hakkenden Shada": {
         "genres": [
@@ -2545,6 +2551,13 @@
             "Action"
         ],
         "rating": "0.8"
+    },
+    "Monster Lair": {
+        "genres": [
+            "Platform",
+            "Shoot'em Up"
+        ],
+        "rating": "0.65"
     },
     "Monster Maker - Yami no Ryuukishi": {
         "genres": [
@@ -2794,13 +2807,6 @@
         "genres": [],
         "rating": null
     },
-    "Ookami-teki Monshou - Crest of Wolf": {
-        "genres": [
-            "Beat'em Up",
-            "Action"
-        ],
-        "rating": "0.55"
-    },
     "Operation Wolf": {
         "genres": [
             "Lightgun Shooter",
@@ -2950,13 +2956,6 @@
             "Board game"
         ],
         "rating": null
-    },
-    "Pomping World": {
-        "genres": [
-            "Puzzle-Game",
-            "Action"
-        ],
-        "rating": "0.75"
     },
     "Pop'n Magic": {
         "genres": [
@@ -3429,12 +3428,6 @@
         ],
         "rating": null
     },
-    "Red Alert": {
-        "genres": [
-            "Action"
-        ],
-        "rating": "0.7"
-    },
     "Renny Blaster": {
         "genres": [
             "Action"
@@ -3447,11 +3440,12 @@
         ],
         "rating": null
     },
-    "Rising Sun": {
+    "Riot Zone": {
         "genres": [
+            "Beat'em Up",
             "Action"
         ],
-        "rating": "0.7"
+        "rating": "0.55"
     },
     "Road Spirits": {
         "genres": [
@@ -3592,7 +3586,7 @@
         ],
         "rating": null
     },
-    "Shadow of the Beast - Mashou no Okite": {
+    "Shadow of the Beast": {
         "genres": [
             "Action",
             "Beat'em Up"
@@ -3614,6 +3608,13 @@
         ],
         "rating": "0.65"
     },
+    "Shape Shifter": {
+        "genres": [
+            "Action / Adventure",
+            "Action"
+        ],
+        "rating": "0.5"
+    },
     "Sherlock Holmes - Consulting Detective": {
         "genres": [
             "Puzzle-Game",
@@ -3621,7 +3622,7 @@
         ],
         "rating": "0.4"
     },
-    "Sherlock Holmes - Consulting Detective Vol. II": {
+    "Sherlock Holmes - Consulting Detective - Volume 2": {
         "genres": [
             "Puzzle-Game",
             "Adventure"
@@ -3896,7 +3897,7 @@
         ],
         "rating": "0.7"
     },
-    "Splash Lake - Ostrich Daibouken": {
+    "Splash Lake": {
         "genres": [
             "Puzzle-Game",
             "Action"
@@ -4004,6 +4005,12 @@
             "Shoot'em up / Vertical"
         ],
         "rating": "0.65"
+    },
+    "Super Air Zonk - Rockabilly-Paradise": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.7"
     },
     "Super Albatross": {
         "genres": [
@@ -4563,13 +4570,6 @@
         ],
         "rating": null
     },
-    "Wonder Boy III - Monster Lair": {
-        "genres": [
-            "Platform",
-            "Shoot'em Up"
-        ],
-        "rating": "0.65"
-    },
     "Wonder Momo": {
         "genres": [
             "Beat'em Up"
@@ -4705,13 +4705,13 @@
         ],
         "rating": "0.65"
     },
-    "Ys I & II": {
+    "Ys Book I & II": {
         "genres": [
             "Role playing games"
         ],
         "rating": "0.8"
     },
-    "Ys III": {
+    "Ys III - Wanderers from Ys": {
         "genres": [
             "Role playing games"
         ],
