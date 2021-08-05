@@ -61,10 +61,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/3do.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/Panasonic3DOManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/3do/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
