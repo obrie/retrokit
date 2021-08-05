@@ -35,6 +35,7 @@ install() {
 
     local extension="${manual_url##*.}"
     local download_path="$manuals_download_path/$parent_title.$extension"
+    local pdf_path="$manuals_download_path/$parent_title.pdf"
 
     # Download the file if it doesn't already exist
     if [ ! -f "$download_path" ]; then
@@ -44,18 +45,24 @@ install() {
     if [ -f "$download_path" ]; then
       installed_files["$download_path"]=1
 
+      # Convert to pdf if needed
+      if [ "$extension" == 'txt' ]; then
+        enscript "$download_path" --output=- | ps2pdf - > "$pdf_path"
+      fi
+      installed_files["$pdf_path"]=1
+
       # Symlink the rom to the downloaded file
       if [ "$rom_name" != "$parent_title" ]; then
-        ln -fsv "$download_path" "$manuals_download_path/$rom_name.$extension"
-        installed_files["$manuals_download_path/$rom_name.$extension"]=1
+        ln -fsv "$pdf_path" "$manuals_download_path/$rom_name.pdf"
+        installed_files["$manuals_download_path/$rom_name.pdf"]=1
       fi
 
       # Add a playlist symlink if applicable
       local playlist_name=$(get_playlist_name "$rom_name")
       if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-        ln -fsv "$download_path" "$manuals_download_path/$playlist_name.$extension"
+        ln -fsv "$pdf_path" "$manuals_download_path/$playlist_name.pdf"
         installed_playlists["$playlist_name"]=1
-        installed_files["$manuals_download_path/$playlist_name.$extension"]=1
+        installed_files["$manuals_download_path/$playlist_name.pdf"]=1
       fi
     fi
   done < <(romkit_cache_list | jq -r '[.name, .parent .title // .title] | @tsv')
