@@ -30,6 +30,9 @@ install() {
       continue
     fi
 
+    # Explicitly escape # since rom names can have that character
+    manual_url=${manual_url//#/%23}
+
     local extension="${manual_url##*.}"
     local download_path="$manuals_download_path/$parent_title.$extension"
 
