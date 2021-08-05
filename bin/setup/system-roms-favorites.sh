@@ -20,7 +20,7 @@ install() {
   echo 'Resetting favorites...'
   remove_favorites
 
-  # Then add current favorites
+  # Then add current favorites (TODO: This doesn't account for playlists)
   echo 'Setting favorites...'
   while read -r rom_name; do
     xmlstarlet ed --inplace -s "/gameList/game[name=\"$rom_name\" or contains(image, \"/$rom_name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
