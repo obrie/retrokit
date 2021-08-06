@@ -24,7 +24,7 @@ install() {
   declare -A installed_files
   declare -A installed_playlists
   while IFS=$'\t' read -r rom_name parent_title; do
-    local manual_url=${manual_urls["$parent_title"]}
+    local manual_url=${manual_urls["$rom_name"]:-${manual_urls["$title"]:-${manual_urls["$parent_title"]}}}
     if [ -z "$manual_url" ]; then
       echo "[$rom_name] No manual available"
       continue
