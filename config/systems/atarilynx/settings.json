@@ -58,10 +58,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/atarilynx.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/AtariLynxManuals_201812/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/atarilynx/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
