@@ -20,6 +20,8 @@ class InputType(Enum):
         self.retroarch_codes = retroarch_codes
 
 # Represents an evdev device that we're listening for events from
+# 
+# TODO: Can we / should we move from udev to sdl2?
 class InputDevice():
     # List of EV_ABS codes that we actually care about -- everything else can be
     # ignored.
