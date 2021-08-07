@@ -23,7 +23,7 @@ install() {
 
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=$'\t' read -r rom_name parent_title; do
+  while IFS=$'\t' read -r rom_name title parent_title; do
     local manual_url=${manual_urls["$rom_name"]:-${manual_urls["$title"]:-${manual_urls["$parent_title"]}}}
     if [ -z "$manual_url" ]; then
       echo "[$rom_name] No manual available"
@@ -65,7 +65,7 @@ install() {
         installed_files["$manuals_download_path/$playlist_name.pdf"]=1
       fi
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .parent .title // .title] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title // .title] | @tsv')
 
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
