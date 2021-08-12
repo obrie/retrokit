@@ -59,10 +59,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/gbc.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/NintendoGameBoyColorManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/gbc/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
