@@ -58,10 +58,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/gamegear.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/SEGAGameGearManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/gamegear/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
