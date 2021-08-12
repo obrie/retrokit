@@ -58,10 +58,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/coleco.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/ColecoVisionManuals_201812/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/coleco/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
@@ -75,16 +71,7 @@
         "USA"
       ],
       "!flags": [
-        "Alt",
-        "Beta",
-        "Demo",
-        "Program",
-        "Proto",
-        "Unl"
-      ],
-      "!genres": [
-        null,
-        "Educational"
+        "Program"
       ],
       "!keywords": [
         "BIOS"

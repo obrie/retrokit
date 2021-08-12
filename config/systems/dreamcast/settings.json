@@ -90,10 +90,6 @@
       }
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/SEGADreamcastManuals_201812/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/dreamcast/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
