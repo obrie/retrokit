@@ -58,10 +58,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/gba.json"
     }
   },
-  "manuals": {
-    "download": "https://archive.org/download/NintendoGameBoyAdvanceManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/gba/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
