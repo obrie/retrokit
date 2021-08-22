@@ -60,6 +60,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/dreamcast/manuals.tsv"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/dreamcast/clones.json"
     },

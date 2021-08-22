@@ -55,6 +55,9 @@
     "emulator": {
       "source": "file://$HOME/retrokit/config/systems/n64/emulators.tsv"
     },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/n64/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/n64.json"
     }

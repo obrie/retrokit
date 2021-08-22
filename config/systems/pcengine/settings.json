@@ -77,6 +77,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/pcengine/manuals.tsv"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/pcengine/clones.json"
     },

@@ -57,6 +57,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/megadrive/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/megadrive.json"
     }

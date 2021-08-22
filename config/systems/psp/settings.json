@@ -28,6 +28,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/psp/manuals.tsv"
+    },
     "rename": {
       "source": "file://$HOME/retrokit/config/systems/psp/renames.json"
     },

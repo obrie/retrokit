@@ -54,6 +54,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/3do/manuals.tsv"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/3do/clones.json"
     },

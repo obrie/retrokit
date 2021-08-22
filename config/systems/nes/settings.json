@@ -51,6 +51,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/nes/manuals.tsv"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/nes/clones.json"
     },
