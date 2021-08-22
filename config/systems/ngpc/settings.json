@@ -48,10 +48,6 @@
       "source": "file://$HOME/retrokit/cache/scraper/ngpc.json"
     }
   },
-  "manuals": {
-    "source": "https://archive.org/download/NintendoDSManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/ngpc/manuals/{machine}.pdf"
-  },
   "roms": {
     "priority": {
       "flags": [
