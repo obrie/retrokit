@@ -41,6 +41,7 @@ class Machine:
         languages: Set[str] = None,
         rating: Optional[int] = None,
         emulator_rating: Optional[int] = None,
+        manual_url: Optional[str] = None,
 
         # Additional context to include when rendering resource paths
         custom_context: dict = None,
@@ -69,6 +70,7 @@ class Machine:
         self.languages = languages or set()
         self.rating = rating
         self.emulator_rating = emulator_rating
+        self.manual_url = manual_url
 
         # Automatic defaults
         self.emulator = romset.emulator
