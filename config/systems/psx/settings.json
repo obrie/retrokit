@@ -61,6 +61,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/psx/manuals.tsv"
+    },
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/psx/clones.json"
     },
@@ -68,10 +71,6 @@
       "source": "https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json",
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
-  },
-  "manuals": {
-    "source": "https://archive.org/download/SonyPlaystationManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/psx/manuals/{machine}.pdf"
   },
   "roms": {
     "priority": {
