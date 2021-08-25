@@ -47,13 +47,12 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/sega32x/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/sega32x.json"
     }
-  },
-  "manuals": {
-    "source": "https://archive.org/download/SEGA32XManuals_201812/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/sega32x/manuals/{machine}.pdf"
   },
   "roms": {
     "priority": {
