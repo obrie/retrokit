@@ -62,6 +62,9 @@
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/segacd/clones.json"
     },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/segacd/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"
     }
