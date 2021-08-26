@@ -44,6 +44,9 @@
     }
   ],
   "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/sg-1000/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/sg-1000.json"
     }
