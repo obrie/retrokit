@@ -44,6 +44,12 @@
     }
   ],
   "metadata": {
+    "parent": {
+      "source": "file://$HOME/retrokit/config/systems/vectrex/clones.json"
+    },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/vectrex/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/vectrex.json"
     }
