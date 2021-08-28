@@ -12,7 +12,6 @@ class ExodosToDat(BaseAction):
     # Converts an exodos MS-DOS.xml file to a dat file readable by romkit
     def install(self, source: ResourcePath, target: ResourcePath, **kwargs) -> None:
         doc = lxml.etree.iterparse(str(source.path), tag=('Game'))
-        _, root = next(doc)
 
         with tempfile.TemporaryDirectory() as tmpdir:
             # Write initially to a temporary file in case there's a failure part-way through
@@ -49,6 +48,3 @@ class ExodosToDat(BaseAction):
                         game.clear()
 
             tmp_target.rename(target.path)
-
-        # Release memory
-        root.clear()

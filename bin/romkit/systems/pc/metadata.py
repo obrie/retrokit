@@ -16,7 +16,6 @@ class ExodosMetadata(ExternalMetadata):
         self.metadata = {}
 
         doc = lxml.etree.iterparse(str(self.install_path), tag=('Game'))
-        _, root = next(doc)
 
         for event, game in doc:
             application_path = game.find('ApplicationPath').text
