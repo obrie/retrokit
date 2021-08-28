@@ -37,6 +37,9 @@
       "column_emulator": null,
       "column_rating": 1
     },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/pc/manuals.tsv"
+    },
     "exodos_data": {
       "source": "file://$HOME/retrokit/cache/exodos/MS-DOS.xml"
     }
