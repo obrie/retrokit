@@ -13,13 +13,14 @@ install() {
 
   cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
 
-  sudo apt install -y enscript
+  # Convert txt/html to pdf
+  sudo apt install -y chromium
 }
 
 uninstall() {
   rm -rfv "$install_dir" '/opt/retropie/configs/all/manualkit.conf'
   sudo pip3 uninstall -y evdev pyudev psutil PyMuPDF
-  sudo apt remove -y enscript
+  sudo apt remove -y chromium
 }
 
 "${@}"

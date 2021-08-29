@@ -46,8 +46,8 @@ install() {
       installed_files["$download_path"]=1
 
       # Convert to pdf if needed
-      if [ "$extension" == 'txt' ]; then
-        enscript "$download_path" --output=- | ps2pdf - > "$pdf_path"
+      if [[ "$extension" =~ ^(html?|txt)$ ]]; then
+        chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$pdf_path" "$download_path"
       fi
       installed_files["$pdf_path"]=1
 
