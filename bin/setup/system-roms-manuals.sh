@@ -47,7 +47,7 @@ install() {
 
       # Convert to pdf if needed
       if [[ "$extension" =~ ^(html?|txt)$ ]]; then
-        chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$pdf_path" "$download_path"
+        chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$pdf_path" "$download_path" 2>/dev/null
       fi
       installed_files["$pdf_path"]=1
 
