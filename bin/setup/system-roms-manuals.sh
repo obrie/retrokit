@@ -34,6 +34,7 @@ install() {
     manual_url=${manual_url//#/%23}
 
     local extension="${manual_url##*.}"
+    extension="${extension,,}"
     local download_path="$manuals_download_path/$parent_title.$extension"
     local pdf_path="$manuals_download_path/$parent_title.pdf"
 
