@@ -73,6 +73,9 @@
       "source": "https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=csv",
       "target": "$HOME/retrokit/tmp/c64/dreams.csv"
     },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/c64/manuals.tsv"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
