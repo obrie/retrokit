@@ -15,12 +15,15 @@ install() {
 
   # Convert txt/html to pdf
   sudo apt install -y chromium
+
+  # Convert images to pdf
+  sudo apt install -y img2pdf
 }
 
 uninstall() {
   rm -rfv "$install_dir" '/opt/retropie/configs/all/manualkit.conf'
   sudo pip3 uninstall -y evdev pyudev psutil PyMuPDF
-  sudo apt remove -y chromium
+  sudo apt remove -y chromium img2pdf
 }
 
 "${@}"

@@ -40,6 +40,8 @@ install() {
 
     # Download the file if it doesn't already exist
     if [ ! -f "$download_path" ]; then
+      # TODO: Should we compress? e.g.
+      # gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -sColorConversionStrategy=RGB -dColorImageResolution=150 -dGrayImageResolution=150 -dMonoImageResolution=300 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=test3.pdf
       download "$manual_url" "$download_path" || true
     fi
 
@@ -48,7 +50,15 @@ install() {
 
       # Convert to pdf if needed
       if [[ "$extension" =~ ^(html?|txt)$ ]]; then
+        # Print to pdf via chrome
         chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$pdf_path" "$download_path" 2>/dev/null
+      elif [ "$extension" == 'zip' ]; then
+        # Zip of images -- extract and concatenate into pdf
+        local extract_path="$download_path.tmp"
+        rm -rf "$extract_path"
+        unzip -j "$download_path" -d "$extract_path"
+        img2pdf --output "$pdf_path" "$extract_path/*"
+        rm -rf "$extract_path"
       fi
       installed_files["$pdf_path"]=1
 
