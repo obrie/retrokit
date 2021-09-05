@@ -11,6 +11,7 @@ retropie_system_config_dir="/opt/retropie/configs/$system"
 # Retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
 system_settings_file="$system_config_dir/settings.json"
+common_settings_file="$app_dir/config/systems/settings.json"
 
 ##############
 # Settings
@@ -55,7 +56,7 @@ normalize_rom_name() {
 
 romkit_cli() {
   if [ -n "$(system_setting '.roms')" ]; then
-    TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" $1 "$system_settings_file" ${@:2}
+    TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" $1 <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") ${@:2}
   fi
 }
 

@@ -12,6 +12,7 @@ usage() {
 run() {
   local command=$1
   local system=$2
+  local common_settings_file="$app_dir/config/systems/settings.json"
   local system_settings_file="$app_dir/config/systems/$system/settings.json"
   local args=("${@:3}")
 
@@ -19,7 +20,7 @@ run() {
     args=(--log-level ERROR)
   fi
 
-  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
+  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") ${args[@]}
 }
 
 main() {
