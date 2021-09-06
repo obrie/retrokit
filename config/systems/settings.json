@@ -3,29 +3,11 @@
     "manual": {
       "languages": {
         "priority": [
-          "En"
+          "en",
+          "en-gb"
         ],
-        "flags": {
-          "Argentina": ["Es"],
-          "Asia": ["Jp"],
-          "Australia": ["En"],
-          "Brazil": ["Pt"],
-          "Canada": ["En", "Fr"],
-          "English": ["En"],
-          "Europe": ["De", "En", "Es", "Fr", "It", "Nl"],
-          "France": ["Fr"],
-          "Germany": ["De"],
-          "Italy": ["It"],
-          "Japan": ["Ja"],
-          "Korea": ["Kr"],
-          "Netherlands": ["Nl"],
-          "New Zealand": ["En"],
-          "Portugal": ["Pt"],
-          "Spain": ["Es"],
-          "Taiwan": ["Tw"],
-          "United Kingdom": ["En"],
-          "USA": ["En"]
-        }
+        "regional_priority": false,
+        "allow_fallback": true
       }
     }
   },

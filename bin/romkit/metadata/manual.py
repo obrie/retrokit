@@ -14,14 +14,35 @@ import csv
 class ManualMetadata(ExternalMetadata):
     name = 'manual'
 
-    def load(self) -> None:
-        # Look up which languages are supported for each flag
-        self.flag_to_languages = self.config['languages']['flags']
-        for flag, languages in self.flag_to_languages.items():
-            self.flag_to_languages[flag] = set(languages)
+    FLAG_TO_LANGUAGES = {
+      "Argentina": {"es"},
+      "Asia": {"jp"},
+      "Australia": {"en"},
+      "Brazil": {"pt"},
+      "Canada": {"en", "fr"},
+      "English": {"en"},
+      "Europe": {"de", "en-gb", "es", "fr", "it", "nl"},
+      "France": {"fr"},
+      "Germany": {"de"},
+      "Italy": {"it"},
+      "Japan": {"ja"},
+      "Korea": {"kr"},
+      "Netherlands": {"nl"},
+      "New Zealand": {"en"},
+      "Portugal": {"pt"},
+      "Spain": {"es"},
+      "Taiwan": {"tw"},
+      "United Kingdom": {"en"},
+      "USA": {"en"},
+    }
 
+    def load(self) -> None:
         # Look up what languages the user wants to support
         self.languages = self.config['languages']['priority']
+
+        # Priority preferences
+        self.regional_priority = self.config['languages']['regional_priority']
+        self.allow_fallback = self.config['languages']['allow_fallback']
 
         # Look up the available manuals
         self.data = {}
@@ -29,7 +50,8 @@ class ManualMetadata(ExternalMetadata):
             rows = csv.reader(file, delimiter='\t')
             for row in rows:
                 key = row[0]
-                languages = row[1].split(',')
+                languages_str = row[1]
+                languages = languages_str.split(',')
                 url = row[2]
 
                 if key not in self.data:
@@ -38,27 +60,37 @@ class ManualMetadata(ExternalMetadata):
                 manuals = self.data[key]
                 for language in languages:
                     if language not in manuals:
-                        manuals[language] = url
+                        manuals[language] = {"languages": languages_str, "url": url}
 
     def update(self, machine: Machine) -> None:
         manuals = self.data.get(machine.parent_title or machine.title)
 
         if manuals:
-            # Find the unique flags
-            flags = set(flag_part.strip() for flag_parts in machine.flags for flag_part in flag_parts.split(','))
+            # Use a dict, so we get fast lookups and ordered insertions
+            candidate_languages = {}
 
-            # Find the flags that have configured language mappings
-            matching_flags = flags.intersection(self.flag_to_languages.keys())
+            # Check if we should prioritize the regional languages before the
+            # globally configured priority
+            if self.regional_priority:
+                # Find the unique flags
+                all_flags = set(flag_part.strip() for flag_parts in machine.flags for flag_part in flag_parts.split(','))
 
-            if matching_flags:
-                # Look up the languages for the matching flags
-                flag_languages = set().union(*(self.flag_to_languages[flag] for flag in matching_flags))
-                possible_languages = [language for language in self.languages if language in flag_languages]
-            else:
-                # Use the default set of languages
-                possible_languages = self.languages
+                # Find the flags that have configured language mappings
+                region_flags = all_flags.intersection(self.flag_to_languages.keys())
+                region_languages = set().union(*(self.flag_to_languages[flag] for flag in region_flags))
+
+                # Add all regional languages, ordered by global priority
+                for language in self.languages:
+                    if language in region_languages:
+                        candidate_languages[language] = True
+
+            if self.allow_fallback:
+                # Add the default set of languages
+                for language in self.languages:
+                    candidate_languages[language] = True
 
             # Find a language that has a manual
-            matching_language = next((language for language in possible_languages if language in manuals), None)
-            if matching_language:
-                machine.manual = {'language': matching_language, 'url': manuals[matching_language]}
+            print(f'OHAI {candidate_languages}')
+            selected_language = next((language for language in candidate_languages.keys() if language in manuals), None)
+            if selected_language:
+                machine.manual = manuals[selected_language]
