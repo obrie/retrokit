@@ -90,7 +90,6 @@ class ManualMetadata(ExternalMetadata):
                     candidate_languages[language] = True
 
             # Find a language that has a manual
-            print(f'OHAI {candidate_languages}')
             selected_language = next((language for language in candidate_languages.keys() if language in manuals), None)
             if selected_language:
                 machine.manual = manuals[selected_language]
