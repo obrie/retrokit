@@ -10,4 +10,4 @@ class ManualFilter(ExactFilter):
     normalize_values = False
 
     def values(self, machine: Machine) -> Set[bool]:
-        return {machine.manual_url is not None}
+        return {machine.manual is not None}
