@@ -53,6 +53,7 @@ class ManualMetadata(ExternalMetadata):
                 languages_str = row[1]
                 languages = languages_str.split(',')
                 url = row[2]
+                pattern = row[3] if len(row) > 3 else None
 
                 if key not in self.data:
                     self.data[key] = {}
@@ -60,7 +61,7 @@ class ManualMetadata(ExternalMetadata):
                 manuals = self.data[key]
                 for language in languages:
                     if language not in manuals:
-                        manuals[language] = {"languages": languages_str, "url": url}
+                        manuals[language] = {"languages": languages_str, "url": url, "pattern": pattern}
 
     def update(self, machine: Machine) -> None:
         manuals = self.data.get(machine.parent_title or machine.title)
