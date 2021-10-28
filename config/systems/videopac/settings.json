@@ -50,6 +50,30 @@
         }
       },
       "auth": "internetarchive"
+    },
+    {
+      "name": "nointro-plus",
+      "protocol": "http",
+      "discovery": {
+        "type": "nointro",
+        "base": "$ROMSET_NOINTRO_URL",
+        "metadata": "{base}/no-intro_romsets_files.xml",
+        "paths": {
+          "url": "no-intro romsets/Philips - Videopac+"
+        }
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Philips - Videopac+ (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.bin",
+          "install": {"action": "zip_extract", "file": ".*\\.bin"}
+        }
+      },
+      "auth": "internetarchive"
     }
   ],
   "metadata": {
