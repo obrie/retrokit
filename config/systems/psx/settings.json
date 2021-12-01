@@ -26,7 +26,9 @@
     "enabled": true
   },
   "cheats": {
-    "name": "Sony - PlayStation"
+    "names": [
+      "Sony - PlayStation"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL",

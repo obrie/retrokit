@@ -20,7 +20,9 @@
     "lr-handy": {"core_name": "handy", "library_name": "Handy", "default": true}
   },
   "cheats": {
-    "name": "Atari - Lynx"
+    "names": [
+      "Atari - Lynx"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Atari%20-%20Lynx",

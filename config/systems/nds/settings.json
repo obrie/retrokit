@@ -7,7 +7,9 @@
     "drastic": {"default": true}
   },
   "cheats": {
-    "name": "Nintendo - Nintendo DS"
+    "names": [
+      "Nintendo - Nintendo DS"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Nintendo%20DS",

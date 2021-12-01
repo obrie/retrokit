@@ -27,7 +27,9 @@
     "enabled": true
   },
   "cheats": {
-    "name": "Sega - Dreamcast"
+    "names": [
+      "Sega - Dreamcast"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",

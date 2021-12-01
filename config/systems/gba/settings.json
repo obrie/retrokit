@@ -20,7 +20,9 @@
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
   },
   "cheats": {
-    "name": "Nintendo - Game Boy Advance"
+    "names": [
+      "Nintendo - Game Boy Advance"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Nintendo%20-%20Game%20Boy%20Advance",

@@ -20,7 +20,9 @@
     "lr-picodrive": {"core_name": "picodrive", "library_name": "PicoDrive", "default": true}
   },
   "cheats": {
-    "name": "Sega - 32X"
+    "names": [
+      "Sega - 32X"
+    ]
   },
   "romsets": [
     {

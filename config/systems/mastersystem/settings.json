@@ -23,7 +23,9 @@
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
   "cheats": {
-    "name": "Sega - Master System - Mark III"
+    "names": [
+      "Sega - Master System - Mark III"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Master%20System%20-%20Mark%20III",

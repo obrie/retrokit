@@ -8,8 +8,7 @@ system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
 
 install() {
   # Name of the cheats for this system
-  local cheats_name=$(system_setting '.cheats.name')
-  if [ -z "$cheats_name" ]; then
+  if [ -z "$(system_setting '.cheats.names')" ]; then
     echo 'No cheats configured'
     return
   fi
@@ -17,32 +16,36 @@ install() {
   # Load emulator data for finding the library_name
   load_emulator_data
 
-  # Location of the cheats on the filesystem
-  local source_cheats_dir="$cheat_database_path/$cheats_name"
-
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
   declare -A cheat_mappings
-  while read -r cheat_filename; do
-    local cheat_name="${cheat_filename%.*}"
-    local key="$(normalize_rom_name "$cheat_name")"
-    local existing_mapping=${cheat_mappings["$key"]}
+  while read -r cheats_name; do
+    # Location of the cheats on the filesystem
+    local source_cheats_dir="$cheat_database_path/$cheats_name"
 
-    # Only re-map if we need to.  This prioritizes exact matches.
-    if [ -z "$existing_mapping" ]; then
-      cheat_mappings["$key"]="$cheat_name"
+    while read -r cheat_filename; do
+      local cheat_name="${cheat_filename%.*}"
+      local key="$(normalize_rom_name "$cheat_name")"
+      local existing_mapping=${cheat_mappings["$key"]}
 
-      # In some cases, multiple ROMs are combined into a single cheat file
-      while read -r sub_cheat_name; do
-        key="$(normalize_rom_name "$sub_cheat_name")"
-        existing_mapping=${cheat_mappings["$key"]}
+      # Only re-map if we need to.  This prioritizes exact matches.
+      if [ -z "$existing_mapping" ]; then
+        cheat_mappings["$key"]="$cheat_name"
+        cheat_mappings["$key/source"]="$source_cheats_dir"
 
-        if [ -z "$existing_mapping" ]; then
-          cheat_mappings["$key"]="$cheat_name"
-        fi
-      done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
-    fi
-  done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
+        # In some cases, multiple ROMs are combined into a single cheat file
+        while read -r sub_cheat_name; do
+          key="$(normalize_rom_name "$sub_cheat_name")"
+          existing_mapping=${cheat_mappings["$key"]}
+
+          if [ -z "$existing_mapping" ]; then
+            cheat_mappings["$key"]="$cheat_name"
+            cheat_mappings["$key/source"]="$source_cheats_dir"
+          fi
+        done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
+      fi
+    done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
+  done < <(system_setting '.cheats.names[]')
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
@@ -62,7 +65,9 @@ install() {
     # We can't just symlink to the source directory because the cheat filenames
     # don't always match the ROM names.  As a result, we need to try to do some
     # smart matching to find the corresponding cheat file.
-    local cheat_name=${cheat_mappings["$(normalize_rom_name "$rom_name")"]}
+    local normalized_rom_name=$(normalize_rom_name "$rom_name")
+    local cheat_name=${cheat_mappings["$normalized_rom_name"]}
+    local source_cheats_dir=${cheat_mappings["$normalized_rom_name/source"]}
 
     if [ -n "$cheat_name" ]; then
       # Link the cheat for either a single-disc game or, if configured, individual discs

@@ -23,7 +23,9 @@
     "lr-fceumm": {"core_name": "fceumm", "library_name": "FCEUmm", "default": true}
   },
   "cheats": {
-    "name": "Nintendo - Nintendo Entertainment System"
+    "names": [
+      "Nintendo - Nintendo Entertainment System"
+    ]
   },
   "romsets": [
     {

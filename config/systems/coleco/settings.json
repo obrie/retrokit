@@ -20,7 +20,9 @@
     "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}
   },
   "cheats": {
-    "name": "Coleco - ColecoVision"
+    "names": [
+      "Coleco - ColecoVision"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Coleco%20-%20ColecoVision",

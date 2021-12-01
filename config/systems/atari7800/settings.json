@@ -20,7 +20,9 @@
     "lr-prosystem": {"core_name": "prosystem", "library_name": "ProSystem", "default": true}
   },
   "cheats": {
-    "name": "Atari - 7800"
+    "names": [
+      "Atari - 7800"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Atari%20-%207800",

@@ -32,7 +32,11 @@
     "enabled": false
   },
   "cheats": {
-    "name": "NEC - PC Engine - TurboGrafx 16"
+    "name": [
+      "NEC - PC Engine - TurboGrafx 16",
+      "NEC - PC Engine SuperGrafx",
+      "NEC - PC Engine CD - TurboGrafx-CD"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx",

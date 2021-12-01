@@ -26,7 +26,9 @@
     "enabled": true
   },
   "cheats": {
-    "name": "Sega - Mega-CD - Sega CD"
+    "names": [
+      "Sega - Mega-CD - Sega CD"
+    ]
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20CD%20-%20Sega%20CD",
