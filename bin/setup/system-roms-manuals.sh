@@ -45,7 +45,13 @@ convert_to_pdf() {
 
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
     # Print to pdf via chrome
-    chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$source_path" 2>/dev/null
+    # 
+    # Chromium can't access files in hidden directories, so it needs to be sourced
+    # from a different directory
+    local chromium_path="$tmp_ephemeral_dir/$(basename "$source_path")"
+    cp "$source_path" "$chromium_path"
+    chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$chromium_path" 2>/dev/null
+    rm "$chromium_path"
   elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
     # Zip of images -- extract and concatenate into pdf
     local extract_path="$tmp_ephemeral_dir/pdf-extract"
