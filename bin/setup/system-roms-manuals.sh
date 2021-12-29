@@ -219,16 +219,11 @@ install() {
       installed_files["$download_path"]=1
     fi
 
-    # Skip if pdf has already been installed
-    if [ -f "$install_path" ]; then
-      continue
-    fi
-
     # Download the file
     if [ ! -f "$download_path" ] && [ ! -f "$postprocess_path" ]; then
       local archive_url=$(render_template "$archive_url_template" "${template_variables[@]}")
       if ! download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"; then
-        echo "[WARN] Failed to download $manual_url"
+        echo "[$rom_name] Failed to download from $manual_url"
         continue
       fi
     fi
@@ -240,6 +235,7 @@ install() {
     fi
 
     # Install the pdf to location expected for this specific rom
+    echo "Linking $install_path to manual $postprocess_path"
     mkdir -p "$(dirname "$install_path")"
     ln -fsv "$postprocess_path" "$install_path"
 
@@ -248,6 +244,7 @@ install() {
     if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
       local playlist_install_path=$(render_template "$install_path_template" "${template_variables[@]}" name="$playlist_name")
 
+      echo "Linking $playlist_install_path to manual $postprocess_path"
       ln -fsv "$postprocess_path" "$playlist_install_path"
       installed_playlists["$playlist_name"]=1
       installed_files["$playlist_install_path"]=1
@@ -255,7 +252,7 @@ install() {
 
     # Remove unused files (to avoid consuming too much disk space during the loop)
     if [ "$keep_downloads" != 'true' ]; then
-      rm "$download_path"
+      rm -v "$download_path"
     fi
   done < <(list_manuals)
 
