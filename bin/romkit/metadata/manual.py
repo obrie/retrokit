@@ -37,6 +37,9 @@ class ManualMetadata(ExternalMetadata):
     }
 
     def load(self) -> None:
+        if not self.install_path:
+            return
+
         # Look up what languages the user wants to support
         self.languages = self.config['languages']['priority']
 
@@ -53,17 +56,21 @@ class ManualMetadata(ExternalMetadata):
                 languages_str = row[1]
                 languages = languages_str.split(',')
                 url = row[2]
-                pattern = row[3] if len(row) > 3 else None
+                options = row[3] if len(row) > 3 else None
 
                 if key not in self.data:
                     self.data[key] = {}
 
                 manuals = self.data[key]
                 for language in languages:
-                    if language not in manuals:
-                        manuals[language] = {"languages": languages_str, "url": url, "pattern": pattern}
+                    if language not in manuals or len(languages_str) < len(manuals[language]['languages']):
+                        manuals[language] = {"languages": languages_str, "url": url, "options": options}
+
 
     def update(self, machine: Machine) -> None:
+        if not self.install_path:
+            return
+
         manuals = self.data.get(machine.parent_title or machine.title)
 
         if manuals:

@@ -3,88 +3,275 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-manuals_download_path="$HOME/.emulationstation/downloaded_media/$system/manuals"
+# Downloads manuals from the given URL(s)
+# 
+# Manuals that have already been postprocessed will be copied to the
+# postprocess path to indicate that no postprocessing is necessary.
+download_pdf() {
+  local manual_url=$1
+  local archive_url=$2
+  local download_path=$3
+  local postprocess_path=$4
+
+  mkdir -p "$(dirname "$download_path")" "$(dirname "$postprocess_path")"
+
+  # First attempt to download from the archive
+  if [ -n "$archive_url" ] && download "$archive_url" "$download_path" max_attempts=1; then
+    if [ "$(setting '.manuals.archive.processed')" == 'true' ]; then
+      cp "$download_path" "$postprocess_path"
+    fi
+  else
+    # Fall back to the original source of the manual
+    if download "$manual_url" "$download_path"; then
+      # For non-archive.org manuals, we introduce a sleep here in order to
+      # keep site owners happy and not overwhelm their servers
+      if [[ "$manual_url" != *archive.org* ]]; then
+        sleep 60
+      fi
+    else
+      echo "[WARN] Failed to download $manual_url"
+      continue
+    fi
+  fi
+}
+
+# Converts a downloaded file to a PDF so that all manuals are in a standard
+# format for us to work with
+convert_to_pdf() {
+  local source_path=$1
+  local target_path=$2
+  local extension=${source_path##*.}
+
+  mkdir -p "$(dirname "$target_path")"
+
+  if [[ "$extension" =~ ^(html?|txt)$ ]]; then
+    # Print to pdf via chrome
+    chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$source_path" 2>/dev/null
+  elif [ "$extension" == 'zip' ] || [ "$extension" == 'cbz' ]; then
+    # Zip of images -- extract and concatenate into pdf
+    local extract_path="$system_tmp_dir/tmp"
+    rm -rf "$extract_path"
+    unzip -j "$source_path" -d "$extract_path"
+    img2pdf --output "$target_path" "$extract_path"/*
+    rm -rf "$extract_path"
+  elif [ "$extension" == 'rar' ] || [ "$extension" == 'cbr' ]; then
+    # Rar of images -- extract and concatenate into pdf
+    local extract_path="$system_tmp_dir/tmp"
+    rm -rf "$extract_path"
+    unrar e "$source_path" "$extract_path/"
+    img2pdf --output "$target_path" "$extract_path"/*
+    rm -rf "$extract_path"
+  else
+    # No conversion necessary -- copy to the target
+    cp "$source_path" "$target_path"
+  fi
+}
+
+# Runs any configured post-processing on the PDF, including:
+# * Rotate
+# * Truncate
+# * Optimize
+# * Compress
+postprocess_pdf() {
+  local pdf_path=$1 # source
+  local target_path=$2
+  local pages=$3
+  local rotate=${4:-0}
+  local pdf_tmp_path="$system_tmp_dir/postprocess-tmp.pdf"
+
+  # Rotate / Truncate
+  if [ -n "$pages" ] || [ "$rotate" -ne '0' ]; then
+    local args=(-R "$rotate" -o "$pdf_path" "$pdf_path")
+    if [ "$rotate" -ne '0' ]; then
+      args+=("$pages")
+    fi
+
+    mutool draw "${args[@]}"
+  fi
+
+  # Optimize (always)
+  local gsargs=(
+    -sDEVICE=pdfwrite
+    -dCompatibilityLevel=1.4
+    -dNOPAUSE
+    -dQUIET
+    -dBATCH
+    -dAutoRotatePages=/None
+    -dOptimize=true
+    # color format (to optimize rendering)
+    -sProcessColorModel=DeviceRGB
+    -sColorConversionStrategy=sRGB
+    -sColorConversionStrategyForImages=sRGB
+    -dConvertCMYKImagesToRGB=true
+    -dConvertImagesToIndexed=true
+    # remove unnecessary data (to reduce filesize)
+    -dDetectDuplicateImages=true
+    -dDoThumbnails=false
+    -dCreateJobTicket=false
+    -dPreserveEPSInfo=false
+    -dPreserveOPIComments=false
+    -dPreserveOverprintSettings=false
+    -dUCRandBGInfo=/Remove
+    # avoid errors
+    -dCannotEmbedFontPolicy=/Warning
+  )
+  gs "${gsargs[@]}" -sOutputFile="$pdf_tmp_path" -f "$pdf_path"
+  mv "$pdf_tmp_path" "$pdf_path"
+
+  # Compress (if the file is big enough and we're compressing)
+  local filesize_threshold=$(setting '.manuals.postprocess.downsample_filesize_threshold // 0')
+  local resolution=$(setting '.manuals.postprocess.resolution // "original"')
+  if [ $(stat -c%s "$pdf_path") -gt "$filesize_threshold" ] && [ "$resolution" != 'original' ]; then
+    local quality_factor=$(setting '.manuals.postprocess.quality_factor')
+    local downsample_threshold=$(setting '.manuals.postprocess.downsample_threshold')
+
+    gs "${gsargs[@]}" \
+      -sOutputFile="$pdf_tmp_path"
+      -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
+      -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
+      -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true \
+      -dColorImageResolution=$resolution -dGrayImageResolution=$resolution -dMonoImageResolution=$resolution \
+      -c "<< /ColorACSImageDict << /QFactor $quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
+      -c "<< /GrayACSImageDict << /QFactor $quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
+      -c "<< /HWResolution [600 600] >> setpagedevice" \
+      -f "$pdf_path"
+
+    # Only use the compressed file if it's actually smaller
+    if [ $(stat -c%s "$pdf_tmp_path") -lt $(stat -c%s "$pdf_path") ]; then
+      mv "$pdf_tmp_path" "$pdf_path"
+    else
+      rm "$pdf_tmp_path"
+    fi
+  fi
+
+  # Copy to target
+  cp "$pdf_path" "$target_path"
+}
+
+# Renders a path template with the given variables to substitute.
+# 
+# Variables are expected to be in the form {var1}.
+render_path() {
+  local path=$1
+  echo $(
+    export "${@:2}"
+    echo "$path" | sed -r 's/\{([^}]+)\}/$\1/g' | envsubst
+  )
+}
+
+# Lists the manuals to install
+list_manuals() {
+  if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
+    # We're generating the manualkit archive -- list all manuals for all languages
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1 (\2)\t\1\t\2\3/'
+  else
+    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .manual .languages, .manual .url, .manual .options] | @tsv'
+  fi
+}
 
 install() {
-  local manuals_path="$system_config_dir/manuals.tsv"
-  if [ ! -f "$manuals_path" ]; then
+  # Ensure the system has manuals
+  if [ ! -f "$system_config_dir/manuals.tsv" ]; then
     echo 'No manuals configured'
     return
   fi
 
-  # Ensure the target exists
-  mkdir -pv "$manuals_download_path"
+  # Local paths
+  local base_path_template=$(setting '.manuals.paths.base')
+  local download_path_template=$(setting '.manuals.paths.download')
+  local postprocess_path_template=$(setting '.manuals.paths.postprocess')
+  local install_path_template=$(setting '.manuals.paths.install')
+  local keep_downloads=$(setting '.manuals.keep_downloads')
 
-  # Define mappings to make lookups easy
-  declare -A manual_urls
-  while IFS=$'\t' read -r parent_title url; do
-    manual_urls["$parent_title"]="$url"
-  done < <(cat "$system_config_dir/manuals.tsv")
+  # Pre-existing archive to download from
+  local archive_url_template=$(setting '.manuals.archive.url')
 
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=$'\t' read -r rom_name title parent_title; do
-    local manual_url=${manual_urls["$rom_name"]:-${manual_urls["$title"]:-${manual_urls["$parent_title"]}}}
-    if [ -z "$manual_url" ]; then
-      echo "[$rom_name] No manual available"
+  while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
+    # Read processing options
+    declare -A options
+    for option_value in ${manual_options//,/ }; do
+      IFS="=" read option value <<< "$option_value"
+      options["$option"]=$value
+    done
+
+    # Fix URLs:
+    # * Explicitly escape the character "#" since rom names can have that character
+    local manual_url=${manual_url//#/%23}
+
+    # Define template variables
+    local manual_url_extension=${manual_url##*.}
+    local extension=${options['format']:-$manual_url_extension}
+    extension=${extension,,} # lowercase
+    local template_variables=(
+      system="$system"
+      parent_title="$parent_title"
+      languages="$manual_languages"
+      name="$rom_name"
+      extension="$extension"
+    )
+
+    # Render local paths
+    local download_path=$(render_path "$download_path_template" "${template_variables[@]}")
+    local postprocess_path=$(render_path "$postprocess_path_template" "${template_variables[@]}")
+    local install_path=$(render_path "$install_path_template" "${template_variables[@]}")
+
+    # Track paths to ensure they don't get deleted
+    installed_files["$install_path"]=1
+    installed_files["$postprocess_path"]=1
+    # Track the downloads (if configured to persist)
+    if [ "$keep_downloads" == 'true' ]; then
+      installed_files["$download_path"]=1
+    fi
+
+    # Skip if pdf has already been installed
+    if [ -f "$install_path" ]; then
       continue
     fi
 
-    # Explicitly escape # since rom names can have that character
-    manual_url=${manual_url//#/%23}
-
-    local extension="${manual_url##*.}"
-    extension="${extension,,}"
-    local download_path="$manuals_download_path/$parent_title.$extension"
-    local pdf_path="$manuals_download_path/$parent_title.pdf"
-
-    # Download the file if it doesn't already exist
-    if [ ! -f "$download_path" ]; then
-      # TODO: Should we compress? e.g.
-      # gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -sColorConversionStrategy=RGB -dColorImageResolution=150 -dGrayImageResolution=150 -dMonoImageResolution=300 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=test3.pdf
-      download "$manual_url" "$download_path" || true
+    # Download the file
+    if [ ! -f "$download_path" ] && [ ! -f "$postprocess_path" ]; then
+      local archive_url=$(render_path "$archive_url_template" "${template_variables[@]}")
+      download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"
     fi
 
-    if [ -f "$download_path" ]; then
-      installed_files["$download_path"]=1
-
-      # Convert to pdf if needed
-      if [[ "$extension" =~ ^(html?|txt)$ ]]; then
-        # Print to pdf via chrome
-        chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$pdf_path" "$download_path" 2>/dev/null
-      elif [ "$extension" == 'zip' ]; then
-        # Zip of images -- extract and concatenate into pdf
-        local extract_path="$download_path.tmp"
-        rm -rf "$extract_path"
-        unzip -j "$download_path" -d "$extract_path"
-        img2pdf --output "$pdf_path" "$extract_path/*"
-        rm -rf "$extract_path"
-      fi
-      installed_files["$pdf_path"]=1
-
-      # Symlink the rom to the downloaded file
-      if [ "$rom_name" != "$parent_title" ]; then
-        ln -fsv "$pdf_path" "$manuals_download_path/$rom_name.pdf"
-        installed_files["$manuals_download_path/$rom_name.pdf"]=1
-      fi
-
-      # Add a playlist symlink if applicable
-      local playlist_name=$(get_playlist_name "$rom_name")
-      if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-        ln -fsv "$pdf_path" "$manuals_download_path/$playlist_name.pdf"
-        installed_playlists["$playlist_name"]=1
-        installed_files["$manuals_download_path/$playlist_name.pdf"]=1
-      fi
+    # Post-process the pdf
+    if [ ! -f "$postprocess_path" ]; then
+      convert_to_pdf "$download_path" "$system_tmp_dir/rom.pdf"
+      postprocess_pdf "$system_tmp_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title // .title] | @tsv')
 
+    # Install the pdf to location expected for this specific rom
+    mkdir -p "$(dirname "$install_path")"
+    ln -fsv "$postprocess_path" "$install_path"
+
+    # Install a playlist symlink if applicable
+    local playlist_name=$(get_playlist_name "$rom_name")
+    if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+      local playlist_install_path=$(render_path "$install_path_template" "${template_variables[@]}" name="$playlist_name")
+
+      ln -fsv "$postprocess_path" "$playlist_install_path"
+      installed_playlists["$playlist_name"]=1
+      installed_files["$playlist_install_path"]=1
+    fi
+
+    # Remove unused files (to avoid consuming too much disk space during the loop)
+    if [ "$keep_downloads" != 'true' ]; then
+      rm "$download_path"
+    fi
+  done < <(list_manuals)
+
+  # Remove unused files
+  local base_path=$(render_path "$base_path_template" system="$system")
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$manuals_download_path" -not -type d)
+  done < <(find "$base_path" -not -type d)
 }
 
 uninstall() {
-  rm -rfv "$manuals_download_path"
+  local base_path=$(render_path "$(setting '.manuals.paths.base')" system="$system")
+  rm -rfv "$base_path"
 }
 
 "$1" "${@:3}"

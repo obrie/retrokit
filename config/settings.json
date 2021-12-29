@@ -19,7 +19,24 @@
     }
   },
   "manuals": {
-    "hotkey": "KEY_LEFTALT"
+    "hotkey": "KEY_LEFTALT",
+    "archive": {
+      "url": "https://archive.org/download/romkit-manualkit/{system}.zip/{parent_title} ({languages}).pdf",
+      "processed": true
+    },
+    "paths": {
+      "base": "$HOME/.emulationstation/downloaded_media/{system}/manuals",
+      "download": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.download/{parent_title} ({languages}).{extension}",
+      "postprocess": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.files/{parent_title} ({languages}).pdf",
+      "install": "$HOME/.emulationstation/downloaded_media/{system}/manuals/{name}.pdf"
+    },
+    "postprocess": {
+      "resolution": "original",
+      "quality_factor": 0.9,
+      "downsample_filesize_threshold": 0,
+      "downsample_resolution_threshold": 1.0
+    },
+    "keep_downloads": true
   },
   "retropie": {
     "show_menu": false
