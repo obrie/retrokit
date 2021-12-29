@@ -31,9 +31,10 @@ Specifically, it can set up:
 * Lightgun collections
 * Lightgun-compatible overlay auto-generation
 * Sinden lightgun controller configuration
+* In-game manuals
 * Various fixes / workarounds for many common issues
 
-Additionally, it provides ROM management capabilities, including:
+It also provides ROM management capabilities, including:
 
 * Advanced filtering
 * Clone mappings for redump DATs
@@ -47,6 +48,11 @@ Additionally, it provides ROM management capabilities, including:
 * Simple sub-directory management based on filters
 * High-performance multi-threaded downloads
 * Automatic resolution of name differences between DATs and public rom sets
+
+Additionally, it provides Game Manual management capabilities, including:
+
+* Installation via public manual sets
+* In-game viewing and control of manuals via keyboard and joysticks
 
 This is all supported for the following systems:
 
@@ -489,6 +495,131 @@ were dumped.  Additionally, Redump does not provide clone metadata for its ROMs.
 In order to (a) provide some consistency, (b) provide some stability in the metadata, and (c) make
 it easier to work with, the same general rules are applied to the custom clonelists generated for
 Redump DAT files.  In order to reduce maintenance, the clonelists only contain ROMs that have clones.
+
+## Manuals
+
+The manuals in this project were all hand-sourced from a variety of public websites.  Only
+manuals that have been defined in the DAT files used by retrokit are included.  All manuals
+are installed in PDF format, but they can be sourced from a variety of formats.  Details
+about the process are described below.
+
+### Sources
+
+The specific website used to source manuals largely depends on the system and the community
+based around it.  Manuals often exist on many different websites and in different forms.
+In general, the follow priorities are used when determining which source to use:
+
+1. **Quality**: Higher quality > lower quality
+1. **Resolution**: Higher resolution > lower resolution (unless it's 600+ dpi)
+1. **Color**: Color > Black and White
+1. **Watermark**: Non-watermarked manuals > watermarked manuals
+1. **Language**: Single language > multi-language (unless it's just truncated)
+1. **Archives**: Archive.org sources > other sources
+1. **Ownership**: Community-owned websites > individually-owned websites
+
+As you can see, there are a large number of considerations to keep in mind when
+identifying the appropriate source for each individual manual.
+
+### Source formats
+
+The following source formats are supported:
+
+* pdf
+* cbz / zip
+* cbr / rar
+* html
+* txt
+* jpg / jpeg / png
+
+Once downloaded, these formats will all be converted into PDF, maintaining the quality of the
+original manual when possible.
+
+### Archival
+
+In order to support the long-term archival of manuals, all manuals referenced in this project
+have been archived on archive.org.  This not only ensures that the manuals live beyond the
+life of their source projects, but also provides a more stable source to download manuals
+from.  Over time, this archive will be updated to reflect additional manuals made available
+or new systems supported.
+
+Reference: https://archive.org/details/romkit-manualkit
+
+### Compression
+
+For many manuals, the quality of the manual from the original source is higher than necessary
+for use in a typical retro gaming console.  While using the original manuals can sometimes be
+useful, there is a significant disk usage overhead associated with that.  For this reason, the
+default configuration is to enable post-processing on manuals to reduce overall filesize.
+
+The archive.org archives provide 2 already post-processed versions of manuals:
+
+* Original quality
+* Medium/High quality
+
+If you want to configure your own post-processing configuration, you can still use the archive.org
+manuals by using a configuration like so:
+
+config/settings.json:
+```json
+{
+  "manuals": {
+    "archive": {
+      "url": "https://archive.org/download/romkit-manualkit/{system}/original.zip/{parent_title} ({languages}).pdf",
+      "processed": false
+    },
+    "postprocess": {
+      "resolution": 300,
+      "quality_factor": 0.3,
+      "downsample_filesize_threshold": 0,
+      "downsample_resolution_threshold": 1.0
+    }
+  }
+}
+```
+
+### Organization
+
+All manuals have been organized by system and categorized by language.  Every manual has been
+reviewed to identify which languages are included.  The ISO 639-1 standard is used for
+identifying languages.  In general, regional identifiers are not included in the language
+code unless it is significant for differentiating manuals.  For example, `en` generally refers
+to US-based English manuals while `en-gb` generally refers to non-US based English manuals.
+
+The titles given to manuals are based on the *parent* title.  There are, therefore, 2 main
+pieces of information for identification a manual:
+
+* Parent title (no modifier details)
+* Comma-delimited list of languages
+
+### Manual Selection
+
+The logic for determining which manual to use for a specific ROM is largely based on language
+preference for the user, *not* the country identifiers in the ROM filename.  The relevant
+retrokit configuration is:
+
+```json
+  "metadata": {
+    "manual": {
+      "languages": {
+        "priority": [
+          "en",
+          "en-gb"
+        ],
+        "regional_priority": false,
+        "allow_fallback": true
+      }
+    }
+  },
+```
+
+By default, retrokit will prefer languages based on the priority order defined in the system's
+configuration.  However, two additional settings are available to adjust this behavior:
+
+* `regional_priority` - If set to `true`, this will prioritize languages according to the
+  regions from the ROM name rather than the order defined in the configuration
+* `allow_fallback` - If set to `true`, then this will fall back to the list of languages
+  defined in the configuration if `regional_priority` is `true` and no regional languages
+  matched
 
 ## Storage Capacity
 
