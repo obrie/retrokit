@@ -29,8 +29,7 @@ download_pdf() {
         sleep 60
       fi
     else
-      echo "[WARN] Failed to download $manual_url"
-      continue
+      return 1
     fi
   fi
 }
@@ -224,7 +223,10 @@ install() {
     # Download the file
     if [ ! -f "$download_path" ] && [ ! -f "$postprocess_path" ]; then
       local archive_url=$(render_template "$archive_url_template" "${template_variables[@]}")
-      download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"
+      if ! download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"; then
+        echo "[WARN] Failed to download $manual_url"
+        continue
+      fi
     fi
 
     # Post-process the pdf
