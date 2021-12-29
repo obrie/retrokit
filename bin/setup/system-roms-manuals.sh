@@ -190,7 +190,7 @@ install() {
   declare -A installed_playlists
   while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
     # Read processing options
-    declare -A options
+    declare -A options=( [format]= [pages]= [rotate]= )
     for option_value in ${manual_options//,/ }; do
       IFS="=" read option value <<< "$option_value"
       options["$option"]=$value
