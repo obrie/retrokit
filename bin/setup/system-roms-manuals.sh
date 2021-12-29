@@ -109,7 +109,7 @@ postprocess_pdf() {
   if [ -n "$pages" ]; then
     # Truncate
     IFS='-' read first_page last_page <<< "$pages"
-    args+=(
+    gsargs+=(
       -dFirstPage=$first_page
       -dLastPage=$last_page
     )
