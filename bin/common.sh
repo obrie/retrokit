@@ -274,6 +274,21 @@ conf_prepare() {
 }
 
 ##############
+# Templates
+##############
+
+# Renders a template with the given variables to substitute.
+# 
+# Variables are expected to be in the form {var1}.
+render_template() {
+  local template=$1
+  echo $(
+    export "${@:2}"
+    echo "$template" | sed -r 's/\{([^}]+)\}/$\1/g' | envsubst
+  )
+}
+
+##############
 # Downloads
 ##############
 

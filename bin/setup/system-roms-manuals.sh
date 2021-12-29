@@ -148,17 +148,6 @@ postprocess_pdf() {
   cp "$pdf_path" "$target_path"
 }
 
-# Renders a path template with the given variables to substitute.
-# 
-# Variables are expected to be in the form {var1}.
-render_path() {
-  local path=$1
-  echo $(
-    export "${@:2}"
-    echo "$path" | sed -r 's/\{([^}]+)\}/$\1/g' | envsubst
-  )
-}
-
 # Lists the manuals to install
 list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
@@ -213,9 +202,9 @@ install() {
     )
 
     # Render local paths
-    local download_path=$(render_path "$download_path_template" "${template_variables[@]}")
-    local postprocess_path=$(render_path "$postprocess_path_template" "${template_variables[@]}")
-    local install_path=$(render_path "$install_path_template" "${template_variables[@]}")
+    local download_path=$(render_template "$download_path_template" "${template_variables[@]}")
+    local postprocess_path=$(render_template "$postprocess_path_template" "${template_variables[@]}")
+    local install_path=$(render_template "$install_path_template" "${template_variables[@]}")
 
     # Track paths to ensure they don't get deleted
     installed_files["$install_path"]=1
@@ -232,7 +221,7 @@ install() {
 
     # Download the file
     if [ ! -f "$download_path" ] && [ ! -f "$postprocess_path" ]; then
-      local archive_url=$(render_path "$archive_url_template" "${template_variables[@]}")
+      local archive_url=$(render_template "$archive_url_template" "${template_variables[@]}")
       download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"
     fi
 
@@ -249,7 +238,7 @@ install() {
     # Install a playlist symlink if applicable
     local playlist_name=$(get_playlist_name "$rom_name")
     if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-      local playlist_install_path=$(render_path "$install_path_template" "${template_variables[@]}" name="$playlist_name")
+      local playlist_install_path=$(render_template "$install_path_template" "${template_variables[@]}" name="$playlist_name")
 
       ln -fsv "$postprocess_path" "$playlist_install_path"
       installed_playlists["$playlist_name"]=1
@@ -263,14 +252,14 @@ install() {
   done < <(list_manuals)
 
   # Remove unused files
-  local base_path=$(render_path "$base_path_template" system="$system")
+  local base_path=$(render_template "$base_path_template" system="$system")
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$base_path" -not -type d)
 }
 
 uninstall() {
-  local base_path=$(render_path "$(setting '.manuals.paths.base')" system="$system")
+  local base_path=$(render_template "$(setting '.manuals.paths.base')" system="$system")
   rm -rfv "$base_path"
 }
 

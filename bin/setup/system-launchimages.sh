@@ -12,7 +12,7 @@ install() {
     local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo "$default_platform")
     platform=${platform//\"/}
     
-    download "$(printf "$launch_images_base_url" "$platform")" "$retropie_system_config_dir/launching-extended.png"
+    download "$(render_template "$launch_images_base_url" platform="$platform")" "$retropie_system_config_dir/launching-extended.png"
   else
     echo 'No launch images configured'
     uninstall
