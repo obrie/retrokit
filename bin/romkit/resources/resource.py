@@ -149,4 +149,4 @@ class ResourceTemplate:
     # Renders a Path based on the given template
     def _render_path(self, path_template: Optional[str], context: dict) -> Optional[Path]:
         if path_template:
-            return Path(path_template.format(home=str(Path.home()), **context))
+            return Path(path_template.format(**context))
