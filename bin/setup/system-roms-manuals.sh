@@ -47,20 +47,22 @@ convert_to_pdf() {
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
     # Print to pdf via chrome
     chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$source_path" 2>/dev/null
-  elif [ "$extension" == 'zip' ] || [ "$extension" == 'cbz' ]; then
+  elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
     # Zip of images -- extract and concatenate into pdf
     local extract_path="$system_tmp_dir/tmp"
     rm -rf "$extract_path"
     unzip -j "$source_path" -d "$extract_path"
     img2pdf --output "$target_path" "$extract_path"/*
     rm -rf "$extract_path"
-  elif [ "$extension" == 'rar' ] || [ "$extension" == 'cbr' ]; then
+  elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
     local extract_path="$system_tmp_dir/tmp"
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
     img2pdf --output "$target_path" "$extract_path"/*
     rm -rf "$extract_path"
+  elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
+    img2pdf --output "$target_path" "$source_path"
   else
     # No conversion necessary -- copy to the target
     cp "$source_path" "$target_path"
