@@ -320,7 +320,7 @@ download() {
   for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then
       # Print to stdout
-      curl -fL# "${curl_opts[@]}" "$url"
+      curl -fgL# "${curl_opts[@]}" "$url"
       exit_code=$?
     elif [ ! -s "$target" ] || [ "$force" == "true" ]; then
       echo "Downloading $url"
@@ -329,7 +329,7 @@ download() {
       mkdir -pv "$(dirname "$target")"
 
       # Download via curl and check that the target isn't empty
-      if $cmd curl -fL# "${curl_opts[@]}" -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
+      if $cmd curl -fgL# "${curl_opts[@]}" -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
         $cmd mv "$target.tmp" "$target"
         exit_code=0
       else
