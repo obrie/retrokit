@@ -93,13 +93,13 @@ class ManualKit():
             Emulator.instance().resume()
 
     # Moves to the next page or goes back to the beginning if already on the last page
-    def next(self) -> None:
-        self.pdf.next()
+    def next(self, skip: int = 1) -> None:
+        self.pdf.next(skip)
         self.refresh()
 
     # Moves to the previous page or goes to the end if already on the first page
-    def prev(self) -> None:
-        self.pdf.prev()
+    def prev(self, skip: int = 1) -> None:
+        self.pdf.prev(skip)
         self.refresh()
 
     # Cleans up the elements / resources on the display

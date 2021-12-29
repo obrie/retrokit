@@ -2,6 +2,7 @@ import asyncio
 import evdev
 import logging
 import traceback
+from datetime import datetime
 from enum import Enum
 from evdev.events import KeyEvent
 from pathlib import Path
@@ -39,6 +40,8 @@ class InputDevice():
         on_prev: Callable,
         repeat_delay: float,
         repeat_interval: float,
+        repeat_turbo_wait: float,
+        repeat_turbo_skip: int,
     ) -> None:
         self.dev_device = dev_device
 
@@ -52,6 +55,8 @@ class InputDevice():
         self.repeater_task = None
         self.repeat_delay = repeat_delay
         self.repeat_interval = repeat_interval
+        self.repeat_turbo_wait = repeat_turbo_wait
+        self.repeat_turbo_skip = repeat_turbo_skip
 
         # Whether to watch for navigation input events (only occurs when
         # inputs have been grabbed to this process)
@@ -159,8 +164,14 @@ class InputDevice():
     # Repeatedly triggers the given callback based on the configured repeat delay /
     # interval.  This will only stop when the task is manually cancelled.
     async def repeat_callback(self, callback: Callable) -> None:
+        start_time = datetime.utcnow()
+        skip = 1
+
         await asyncio.sleep(self.repeat_delay)
         while True:
+            if (datetime.utcnow() - start_time) >= self.repeat_turbo_wait:
+                skip = self.repeat_turbo_skip
+
             callback()
             await asyncio.sleep(self.repeat_interval)
 

@@ -24,6 +24,8 @@ class InputListener():
         joystick_toggle: str = 'h0up',
         repeat_delay: float = 0.25,
         repeat_interval: float = 0.01,
+        repeat_turbo_wait: float = 5.0,
+        repeat_turbo_skip: int = 2,
     ) -> None:
         self.on_toggle = on_toggle
         self.on_next = on_next
@@ -32,6 +34,8 @@ class InputListener():
         self.joystick_toggle = joystick_toggle
         self.repeat_delay = float(repeat_delay)
         self.repeat_interval = float(repeat_interval)
+        self.repeat_turbo_wait = float(repeat_turbo_wait)
+        self.repeat_turbo_skip = int(repeat_turbo_skip)
 
         # Defaults
         self.devices = []
@@ -96,6 +100,8 @@ class InputListener():
             on_prev=self.prev,
             repeat_delay=self.repeat_delay,
             repeat_interval=self.repeat_interval,
+            repeat_turbo_wait=self.repeat_turbo_wait,
+            repeat_turbo_skip=self.repeat_turbo_skip,
             **kwargs,
         )
 
@@ -150,12 +156,12 @@ class InputListener():
         self.on_toggle()
 
     # Triggers the `next` callback
-    def next(self) -> None:
-        self.on_next()
+    def next(self, skip: int = 1) -> None:
+        self.on_next(skip)
 
     # Triggers the `on_prev` callback
-    def prev(self) -> None:
-        self.on_prev()
+    def prev(self, skip: int = 1) -> None:
+        self.on_prev(skip)
 
     # Handles exceptions in asyncio loops by logging them.  This ensures
     # the event gets consumed.

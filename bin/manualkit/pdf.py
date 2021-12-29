@@ -55,18 +55,18 @@ class PDF():
         return self.document.pageCount
 
     # Moves to the next page or goes back to the beginning if already on the last page
-    def next(self) -> None:
-        next_page = self.page + 1
+    def next(self, skip: int = 1) -> None:
+        next_page = self.page + skip
         if next_page >= self.page_count:
             next_page = 0
 
         self.jump(next_page)
 
     # Moves to the previous page or goes to the end if already on the first page
-    def prev(self) -> None:
-        prev_page = self.page - 1
+    def prev(self, skip: int = 1) -> None:
+        prev_page = self.page - skip
         if prev_page < 0:
-            prev_page = self.page_count - 1
+            prev_page = max(0, self.page_count - skip)
 
         self.jump(prev_page)
 
