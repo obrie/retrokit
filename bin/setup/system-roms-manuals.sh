@@ -80,16 +80,6 @@ postprocess_pdf() {
   local rotate=${4:-0}
   local pdf_tmp_path="$tmp_ephemeral_dir/postprocess-tmp.pdf"
 
-  # Rotate / Truncate
-  if [ -n "$pages" ] || [ "$rotate" -ne '0' ]; then
-    local args=(-R "$rotate" -o "$pdf_path" "$pdf_path")
-    if [ "$rotate" -ne '0' ]; then
-      args+=("$pages")
-    fi
-
-    mutool draw "${args[@]}"
-  fi
-
   # Optimize (always)
   local gsargs=(
     -sDEVICE=pdfwrite
@@ -116,6 +106,15 @@ postprocess_pdf() {
     # avoid errors
     -dCannotEmbedFontPolicy=/Warning
   )
+  if [ -n "$pages" ]; then
+    # Truncate
+    IFS='-' read first_page last_page <<< "$pages"
+    args+=(
+      -dFirstPage=$first_page
+      -dLastPage=$last_page
+    )
+  fi
+
   gs "${gsargs[@]}" -sOutputFile="$pdf_tmp_path" -f "$pdf_path"
   mv "$pdf_tmp_path" "$pdf_path"
 
@@ -143,6 +142,11 @@ postprocess_pdf() {
     else
       rm "$pdf_tmp_path"
     fi
+  fi
+
+  # Rotate
+  if [ "$rotate" != '0' ]; then
+    mutool draw -R "$rotate" -o "$pdf_path" "$pdf_path"
   fi
 
   # Copy to target
