@@ -48,14 +48,14 @@ convert_to_pdf() {
     chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$source_path" 2>/dev/null
   elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
     # Zip of images -- extract and concatenate into pdf
-    local extract_path="$system_tmp_dir/tmp"
+    local extract_path="$tmp_ephemeral_dir/pdf-extract"
     rm -rf "$extract_path"
     unzip -j "$source_path" -d "$extract_path"
     img2pdf --output "$target_path" "$extract_path"/*
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
-    local extract_path="$system_tmp_dir/tmp"
+    local extract_path="$tmp_ephemeral_dir/pdf-extract"
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
     img2pdf --output "$target_path" "$extract_path"/*
@@ -78,7 +78,7 @@ postprocess_pdf() {
   local target_path=$2
   local pages=$3
   local rotate=${4:-0}
-  local pdf_tmp_path="$system_tmp_dir/postprocess-tmp.pdf"
+  local pdf_tmp_path="$tmp_ephemeral_dir/postprocess-tmp.pdf"
 
   # Rotate / Truncate
   if [ -n "$pages" ] || [ "$rotate" -ne '0' ]; then
@@ -231,8 +231,8 @@ install() {
 
     # Post-process the pdf
     if [ ! -f "$postprocess_path" ]; then
-      convert_to_pdf "$download_path" "$system_tmp_dir/rom.pdf"
-      postprocess_pdf "$system_tmp_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
+      convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf"
+      postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
     fi
 
     # Install the pdf to location expected for this specific rom
