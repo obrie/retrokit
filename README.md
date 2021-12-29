@@ -318,6 +318,7 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 | pc                | CTRL+F9        | None                        |
 | nds               | ESC            | Right Analog Left (to Menu) |
 | psp               | ESC            | Right Analog Left (to Menu) |
+| manuals           | Hotkey + Up    | Hotkey + Up                 |
 | *                 | Hotkey + Start | Hotkey + Start              |
 
 It's too easy to accidentally hit a single button during gameplay,
@@ -620,6 +621,14 @@ configuration.  However, two additional settings are available to adjust this be
 * `allow_fallback` - If set to `true`, then this will fall back to the list of languages
   defined in the configuration if `regional_priority` is `true` and no regional languages
   matched
+
+### Controls
+
+`manualkit` can be controlled by keyboard or controller.  These settings can be modified in
+`config/manuals/manualkit.conf`.  It's expected that the `keyboard_toggle` and `joystick_toggle`
+buttons will be pressed in combination with retroarch's configured `hotkey` button.  For
+example, the default configuration expects that `select` + `up` will be used to toggle the
+display of the manual on the screen.
 
 ## Storage Capacity
 

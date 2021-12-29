@@ -19,9 +19,8 @@
     }
   },
   "manuals": {
-    "hotkey": "KEY_LEFTALT",
     "archive": {
-      "url": "https://archive.org/download/romkit-manualkit/{system}.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/romkit-manualkit/{system}/compressed.zip/{parent_title} ({languages}).pdf",
       "processed": true
     },
     "paths": {
