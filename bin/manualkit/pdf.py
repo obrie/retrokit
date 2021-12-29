@@ -14,14 +14,12 @@ class PDF():
         height: int,
         buffer_width: int,
         buffer_height: int,
-        resolution: int = 150,
     ) -> None:
         self.path = path
         self.width = width
         self.height = height
         self.buffer_width = buffer_width
         self.buffer_height = buffer_height
-        self.resolution = int(resolution)
         self.page = None
 
         if Path(self.path).exists():
