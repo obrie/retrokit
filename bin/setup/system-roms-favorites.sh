@@ -9,6 +9,11 @@ remove_favorites() {
   xmlstarlet ed --inplace -d "/gameList/game/favorite" "$gamelist_file"
 }
 
+add_favorite() {
+  local name=$1
+  xmlstarlet ed --inplace -s "/gameList/game[contains(path, \"/$name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
+}
+
 install() {
   if [ ! -f "$gamelist_file" ]; then
     echo 'No gamelist available'
@@ -20,10 +25,16 @@ install() {
   echo 'Resetting favorites...'
   remove_favorites
 
-  # Then add current favorites (TODO: This doesn't account for playlists)
+  # Then add current favorites
   echo 'Setting favorites...'
   while read -r rom_name; do
-    xmlstarlet ed --inplace -s "/gameList/game[name=\"$rom_name\" or contains(image, \"/$rom_name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
+    # Always search for the specific ROM (in case it's a playlists with show_discs enabled)
+    add_favorite "$rom_name"
+
+    # Check for a playlist
+    if has_playlist_config "$rom_name"; then
+      add_favorite "$(get_playlist_name "$rom_name")"
+    fi
   done < <(romkit_cache_list | jq -r 'select(.favorite == true) | .name')
 }
 
