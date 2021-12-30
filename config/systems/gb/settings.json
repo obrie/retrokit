@@ -29,7 +29,7 @@
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "dmg_boot.bin": "{url}/dmg_boot.bin",
-      "gb_boot.bin": "{url}/gb_boot.bin"
+      "gb_bios.bin": "{url}/gb_bios.bin"
     }
   },
   "romsets": [
