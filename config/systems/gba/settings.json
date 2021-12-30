@@ -25,7 +25,7 @@
     ]
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Nintendo%20-%20Game%20Boy%20Advance",
+    "url": "$BIOS_URL/libretro/Nintendo - Game Boy Advance",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "gba_bios.bin": "{url}/gba_bios.bin"

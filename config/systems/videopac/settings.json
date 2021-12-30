@@ -20,7 +20,7 @@
     "lr-o2em": {"core_name": "o2em", "library_name": "O2EM", "default": true}
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Magnavox%20-%20Odyssey2",
+    "url": "$BIOS_URL/libretro/Magnavox - Odyssey2",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "o2rom.bin": "{url}/o2rom.bin"

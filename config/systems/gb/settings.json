@@ -25,7 +25,7 @@
     ]
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Nintendo%20-%20Gameboy",
+    "url": "$BIOS_URL/libretro/Nintendo - Gameboy",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "dmg_boot.bin": "{url}/dmg_boot.bin",

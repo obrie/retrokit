@@ -28,7 +28,7 @@
     ]
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Sega%20-%20Mega%20Drive%20-%20Genesis",
+    "url": "$BIOS_URL/libretro/Sega - Mega Drive - Genesis",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "bios_MD.bin": "{url}/bios_MD.bin"

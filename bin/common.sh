@@ -316,6 +316,9 @@ download() {
     curl_opts+=(-H "Authorization: token $auth_token")
   fi
 
+  # Encode spaces for maximum compatibility
+  url=${url// /%20}
+
   local exit_code=0
   for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then

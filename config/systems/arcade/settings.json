@@ -196,7 +196,7 @@
           "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
         },
         "sample": {
-          "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME%200.196%20EXTRAs%2Fsamples%2F{sample}.zip",
+          "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME 0.196 EXTRAs%2Fsamples%2F{sample}.zip",
           "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },

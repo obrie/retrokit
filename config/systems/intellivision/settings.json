@@ -20,7 +20,7 @@
     "lr-freeintv": {"core_name": "freeintv", "library_name": "FreeIntv", "default": true}
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Mattel%20-%20Intellivision",
+    "url": "$BIOS_URL/libretro/Mattel - Intellivision",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "exec.bin": "{url}/exec.bin",

@@ -32,7 +32,7 @@
     ]
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Sega%20-%20Dreamcast",
+    "url": "$BIOS_URL/libretro/Sega - Dreamcast",
     "dir": "$HOME/RetroPie/BIOS/dc",
     "files": {
       "dc_boot.bin": "{url}/dc_boot.bin",

@@ -25,7 +25,7 @@
     ]
   },
   "bios": {
-    "url": "$BIOS_URL/libretro/Atari%20-%20Lynx",
+    "url": "$BIOS_URL/libretro/Atari - Lynx",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "lynxboot.img": "{url}/lynxboot.img"
