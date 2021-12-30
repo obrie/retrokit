@@ -39,10 +39,15 @@ download_pdf() {
 convert_to_pdf() {
   local source_path=$1
   local target_path=$2
-  local extension=${source_path##*.}
+  local filter_glob_csv=${3:-*}
+
+  # Glob expression for picking out images from archives
+  local extract_path="$tmp_ephemeral_dir/pdf-extract"
+  local filter_glob=$(echo "$filter_glob_csv" | tr , '\n' | sed -r "s|^|$extract_path/|g" | tr '\n' ' ')
 
   mkdir -p "$(dirname "$target_path")"
 
+  local extension=${source_path##*.}
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
     # Print to pdf via chrome
     # 
@@ -54,17 +59,15 @@ convert_to_pdf() {
     rm "$chromium_path"
   elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
     # Zip of images -- extract and concatenate into pdf
-    local extract_path="$tmp_ephemeral_dir/pdf-extract"
     rm -rf "$extract_path"
     unzip -j "$source_path" -d "$extract_path"
-    img2pdf --output "$target_path" "$extract_path"/*
+    img2pdf --output "$target_path" $filter_glob
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
-    local extract_path="$tmp_ephemeral_dir/pdf-extract"
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
-    img2pdf --output "$target_path" "$extract_path"/*
+    img2pdf --output "$target_path" $filter_glob
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
     img2pdf --output "$target_path" "$source_path"
@@ -190,7 +193,7 @@ install() {
   declare -A installed_playlists
   while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
     # Read processing options
-    declare -A options=( [format]= [pages]= [rotate]= )
+    declare -A options=( [format]= [pages]= [rotate]= [filter]= )
     for option_value in ${manual_options//,/ }; do
       IFS="=" read option value <<< "$option_value"
       options["$option"]=$value
@@ -236,7 +239,7 @@ install() {
 
     # Post-process the pdf
     if [ ! -f "$postprocess_path" ]; then
-      convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf"
+      convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${options['filter']}"
       postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
     fi
 
