@@ -34,6 +34,21 @@ download_pdf() {
   fi
 }
 
+# Combines 1 or more images into a PDF
+# 
+# This is a lossless conversion except for PNG images which contain alpha channels.
+combine_images_to_pdf() {
+  local target_path=$1
+  local source_paths=${@:2}
+
+  # Remove alpha channel from PNG images as img2pdf cannot handle them
+  while read source_path; do
+    mogrify -background white -alpha remove -alpha off "$source_path"
+  done < <(ls $source_paths | grep -i .png)
+
+  img2pdf --output "$target_path" $source_paths
+}
+
 # Converts a downloaded file to a PDF so that all manuals are in a standard
 # format for us to work with
 convert_to_pdf() {
@@ -43,7 +58,7 @@ convert_to_pdf() {
 
   # Glob expression for picking out images from archives
   local extract_path="$tmp_ephemeral_dir/pdf-extract"
-  local filter_glob=$(echo "$filter_glob_csv" | tr , '\n' | sed -r "s|^|$extract_path/|g" | tr '\n' ' ')
+  local filter_glob=$(echo "$filter_glob_csv" | tr ';' '\n' | sed -r "s|^|$extract_path/|g" | tr '\n' ' ')
 
   mkdir -p "$(dirname "$target_path")"
 
@@ -61,16 +76,16 @@ convert_to_pdf() {
     # Zip of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
     unzip -j "$source_path" -d "$extract_path"
-    img2pdf --output "$target_path" $filter_glob
+    combine_images_to_pdf "$target_path" $filter_glob
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
-    img2pdf --output "$target_path" $filter_glob
+    combine_images_to_pdf "$source_path" $filter_glob
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
-    img2pdf --output "$target_path" "$source_path"
+    combine_images_to_pdf "$target_path" "$source_path"
   else
     # No conversion necessary -- copy to the target
     cp "$source_path" "$target_path"
