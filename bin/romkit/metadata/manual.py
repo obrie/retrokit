@@ -92,7 +92,7 @@ class ManualMetadata(ExternalMetadata):
                     if language in region_languages:
                         candidate_languages[language] = True
 
-            if self.allow_fallback:
+            if not self.regional_priority or self.allow_fallback:
                 # Add the default set of languages
                 for language in self.languages:
                     candidate_languages[language] = True
