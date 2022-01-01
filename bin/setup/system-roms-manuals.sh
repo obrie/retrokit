@@ -289,10 +289,10 @@ install() {
   done < <(list_manuals)
 
   # Remove unused files
-  # local base_path=$(render_template "$base_path_template" system="$system")
-  # while read -r path; do
-  #   [ "${installed_files["$path"]}" ] || rm -v "$path"
-  # done < <(find "$base_path" -not -type d)
+  local base_path=$(render_template "$base_path_template" system="$system")
+  while read -r path; do
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
+  done < <(find "$base_path" -not -type d)
 }
 
 uninstall() {
