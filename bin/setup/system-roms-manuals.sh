@@ -39,14 +39,22 @@ download_pdf() {
 # This is a lossless conversion except for PNG images which contain alpha channels.
 combine_images_to_pdf() {
   local target_path=$1
-  local source_paths=("${@:2}")
+  local source_path=$2
+  local filter_csv=${3:-*}
+
+  # Figure out which paths should be included, making sure that we find files
+  # based on the order of the filters specified
+  local filtered_paths=()
+  while read -r filter; do
+    IFS=$'\n' filtered_paths+=($(find "$source_path" -type f -wholename "$source_path/$filter" | sort))
+  done < <(echo "$filter_csv" | tr ';' '\n')
 
   # Remove alpha channel from PNG images as img2pdf cannot handle them
   while read source_path; do
     mogrify -background white -alpha remove -alpha off "$source_path"
-  done < <(ls ${source_paths[@]} | grep -i .png)
+  done < <(printf -- '%s\n' "${filtered_paths[@]}" | grep -i .png)
 
-  img2pdf --output "$target_path" ${source_paths[@]}
+  img2pdf --output "$target_path" "${filtered_paths[@]}"
 }
 
 # Converts a downloaded file to a PDF so that all manuals are in a standard
@@ -54,12 +62,10 @@ combine_images_to_pdf() {
 convert_to_pdf() {
   local source_path=$1
   local target_path=$2
-  local filter_glob_csv=${3:-*}
+  local filter_csv=$3
 
   # Glob expression for picking out images from archives
   local extract_path="$tmp_ephemeral_dir/pdf-extract"
-  local filter_glob
-  readarray -t filter_glob <<< $(echo "$filter_glob_csv" | tr ';' '\n' | sed -r "s|^|$extract_path/|g")
 
   mkdir -p "$(dirname "$target_path")"
 
@@ -77,16 +83,16 @@ convert_to_pdf() {
     # Zip of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
     unzip -j "$source_path" -d "$extract_path"
-    combine_images_to_pdf "$target_path" "${filter_glob[@]}"
+    combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
-    combine_images_to_pdf "$source_path" "${filter_glob[@]}"
+    combine_images_to_pdf "$source_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
-    combine_images_to_pdf "$target_path" "$source_path"
+    combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
   else
     # No conversion necessary -- copy to the target
     cp "$source_path" "$target_path"
@@ -210,10 +216,11 @@ install() {
   while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
     # Read processing options
     declare -A options=( [format]= [pages]= [rotate]= [filter]= )
-    for option_value in ${manual_options//,/ }; do
-      IFS="=" read option value <<< "$option_value"
-      options["$option"]=$value
-    done
+    if [ -n "$manual_options" ]; then
+      while IFS='=' read -r option value; do
+        options["$option"]=$value
+      done < <(echo "$manual_options" | tr ',' '\n')
+    fi
 
     # Fix URLs:
     # * Explicitly escape the character "#" since rom names can have that character
