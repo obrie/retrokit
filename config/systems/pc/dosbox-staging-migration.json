@@ -1,0 +1,94 @@
+{
+  "allowlist": {
+    "cpu": [
+      "core",
+      "cputype",
+      "cycledown",
+      "cycles",
+      "cycleup"
+    ],
+    "dos": [
+      "emu",
+      "keyboardlayout",
+      "umb",
+      "xms"
+    ],
+    "dosbox": [
+      "language",
+      "machine",
+      "memsize",
+      "vmemsize"
+    ],
+    "gus": [
+      "gus",
+      "gusdma"
+    ],
+    "ide, primary": [
+      "enable"
+    ],
+    "ide, secondary": [
+      "enable"
+    ],
+    "ide, tertiary": [
+      "enable"
+    ],
+    "ide, quaternary": [
+      "enable"
+    ],
+    "ipx": [
+      "ipx"
+    ],
+    "midi": [
+      "mididevice",
+      "mpu401"
+    ],
+    "mixer": [
+      "blocksize",
+      "prebuffer",
+      "rate"
+    ],
+    "joystick": [
+      "buttonwrap",
+      "joysticktype",
+      "swap34",
+      "timed"
+    ],
+    "render": [
+      "aspect",
+      "scaler"
+    ],
+    "sblaster": [
+      "dma",
+      "hdma",
+      "irq",
+      "oplemu",
+      "oplmode",
+      "sbbase",
+      "sbmixer",
+      "sbtype"
+    ],
+    "sdl": [
+      "priority",
+      "sensitivity"
+    ],
+    "serial": [
+      "serial1"
+    ],
+    "speaker": [
+      "disney",
+      "pcrate",
+      "pcspeaker",
+      "ps1audio",
+      "tandy",
+      "tandyrate"
+    ]
+  },
+  "translations": {
+    "innova": {
+      "innova": ["innovation", "sidmodel", "auto"]
+    },
+    "midi": {
+      "fluid.gain": ["fluidsynth", "soundfont", "/usr/share/sounds/sf2/FluidR3_GM.sf2 {value * 100}"]
+    }
+  }
+}

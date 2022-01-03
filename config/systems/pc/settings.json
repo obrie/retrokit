@@ -5,10 +5,21 @@
     "args": ["--excludefiles", "*DOSBox*"]
   },
   "emulators": {
-    "dosbox": {"default": true}
+    "dosbox-staging": {"default": "true", "build": "source"},
+    "dosbox": {}
   },
   "downloads": {
     "concurrency": 2
+  },
+  "bios": {
+    "url": "$ROMSET_MAME_0222_URL",
+    "dir": "/opt/retropie/configs/pc/mt32-roms",
+    "files": {
+      "cm32l_control.rom": "{url}/cm32l.zip/cm32l_control.rom",
+      "mt32_1.0.7.ic26.bin": "{url}/mt32.zip/mt32_1.0.7.ic26.bin",
+      "r15179945.ic8.bin": "{url}/cm32l.zip/r15179945.ic8.bin",
+      "r15449121.ic37.bin": "{url}/mt32.zip/r15449121.ic37.bin"
+    }
   },
   "romsets": [
     {
@@ -140,7 +151,7 @@
     "files": {
       "conf": {
         "target": "{dir}/{machine}.conf",
-        "global_overrides": "$HOME/retrokit/config/systems/pc/dosbox.conf",
+        "migration": "$HOME/retrokit/config/systems/pc/{emulator}-migration.json",
         "overrides": "$HOME/retrokit/config/systems/pc/conf/{machine}.conf"
       }
     }

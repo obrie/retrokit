@@ -7,10 +7,16 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 install() {
   # Sound driver
   sudo apt install -y fluid-soundfont-gm
+
+  ini_merge "$system_config_dir/dosbox-staging.conf" '/opt/retropie/configs/pc/dosbox-staging.conf'
+  ini_merge "$system_config_dir/dosbox-SVN.conf" '/opt/retropie/configs/pc/dosbox-SVN.conf'
 }
 
 uninstall() {
   sudo apt remove -y fluid-soundfont-gm
+
+  restore '/opt/retropie/configs/pc/dosbox-staging.conf' delete_src=true
+  restore '/opt/retropie/configs/pc/dosbox-SVN.conf' delete_src=true
 }
 
 "${@}"

@@ -1,0 +1,22 @@
+{
+  "blocklist": {
+    "sdl": [
+      "mapperfile",
+      "usescancodes"
+    ],
+    "render": [
+      "aspect"
+    ],
+    "joystick": [
+      "buttonwrap"
+    ],
+    "gus": [
+      "ultradir"
+    ]
+  },
+  "translations": {
+    "sdl": {
+      "output": ["sdl", "output", "{'opengnl' in value and 'surface' or value}"]
+    }
+  }
+}

@@ -3,6 +3,8 @@ from __future__ import annotations
 from romkit.systems.base import BaseSystem
 from romkit.systems.pc.metadata import ExodosMetadata
 
+import configparser
+import json
 import subprocess
 import zipfile
 from pathlib import Path
@@ -42,39 +44,78 @@ class PCSystem(BaseSystem):
                 mapper_file.filename = 'mapper.map'
                 conf_zip.extract(zip_info, mapper_file)
 
-            self.update_config_defaults(machine)
-            self.replace_opengl_renderer(machine)
+            self.setup_config(machine)
 
     # Updates the dosbox configuration with overall and game-specific overrides provided
-    def update_config_defaults(self, machine: Machine) -> None:
+    def setup_config(self, machine: Machine) -> None:
         machine_dir = machine.resource.target_path.path
-        conf_file = machine_dir.joinpath('dosbox.conf')
+        config_path = machine_dir.joinpath('dosbox.conf')
 
-        global_overrides_path = self.config['roms']['files']['conf'].get('global_overrides')
+        config = configparser.ConfigParser()
+        config.optionxform = str
+        config.read(config_path)
+        overwrite = False
 
-        # Override with RPi-specific configurations
-        if global_overrides_path:
-            with open(global_overrides_path) as f:
-                subprocess.run(['crudini', '--merge', conf_file], stdin=f, check=True)
+        # Migrate predefined config to one suitable for the current emulator
+        migration_path_template = self.config['roms']['files']['conf'].get('migration')
+        if migration_path_template:
+            migration_path = Path(migration_path_template.format(emulator=machine.emulator))
+            if migration_path.exists():
+                overwrite = True
+                self.migrate_config(machine, config, migration_path)
 
         # Override with Machine-specific configurations
         overrides_template = self.config['roms']['files']['conf'].get('overrides')
         if overrides_template:
             overrides_path = Path(overrides_template.format(machine=machine.name))
             if overrides_path.exists():
-                with overrides_path.open() as f:
-                    subprocess.run(['crudini', '--merge', conf_file], stdin=f, check=True)
+                overwrite = True
+                self.override_config(machine, config, overrides_path)
 
-    # OpenGL is unreasonably slow on Raspberry Pi 4 + latest kernel/Raspbian.
-    # This replaces any opengl output configurations with surface, which is
-    # known to perform much better.
-    def replace_opengl_renderer(self, machine: Machine) -> None:
-        machine_dir = machine.resource.target_path.path
-        conf_file = machine_dir.joinpath('dosbox.conf')
+        # Overwrite the config if we made any changes
+        with config_path.open('r') as config_file:
+            config.write(config_file)
 
-        renderer = subprocess.run(['crudini', '--get', conf_file, 'sdl', 'output'], check=True, capture_output=True).stdout
-        if renderer and str(renderer.lower()).startswith('opengl'):
-            renderer = subprocess.run(['crudini', '--set', conf_file, 'sdl', 'output', 'surface'], check=True, stdout=subprocess.DEVNULL).stdout
+    # Migrate the configuration based on the given migration file
+    def migrate_config(self, machine: Machine, config: configparser.ConfigParser, migration_path: str) -> None:
+        migration = json.loads(migration_path)
+
+        if 'blocklist' in migration:
+            self.filter_config(config, migration['blocklist'], True)
+
+        if 'allowlist' in migration:
+            self.filter_config(config, migration['allowlist'], False)
+
+        if 'translations' in migration:
+            self.translate_config(config, migration['translations'])
+
+    # Filters options from the given configuration
+    def filter_config(self, config: configparser.ConfigParser, filters: dict, invert: bool) -> None:
+        for section_name in config.sections():
+            if section_name in filters:
+                section_filters = filters[section_name]
+                for option, value in config[section_name].items(raw=True):
+                    if (option in section_filters) == invert:
+                        config.remove_option(section_name, option)
+
+    # Translates from one option to another (when the actual section / option names have
+    # changed from what's in the predefined config files)
+    def translate_config(self, config: configparser.ConfigPraser, translations: dict) -> None:
+        for section_name in translations:
+            if config.has_section(section):
+                section = config[section_name]
+                section_translations = translations[section_name]
+
+                for option, value in section.items(raw=True):
+                    if option in section_translations:
+                        value = section.get(option, raw=True)
+                        new_value_template = section_translations[option]
+                        new_value = eval(f"f'{new_value_template}'")
+                        config.set(section_name, option, new_value)
+
+    # Override with configuration with Machine-specific settings
+    def override_config(self, machine: Machine, config: configparser.ConfigParser, overrides_path: str) -> None:
+        config.read(overrides_path)
 
     # Find two issues with paths:
     # * Switch windows-style slashes and replace them with linux-style
