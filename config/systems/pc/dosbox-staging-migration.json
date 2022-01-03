@@ -19,6 +19,9 @@
       "memsize",
       "vmemsize"
     ],
+    "fluidsynth": [
+      "soundfont"
+    ],
     "gus": [
       "gus",
       "gusdma"
@@ -34,6 +37,9 @@
     ],
     "ide, quaternary": [
       "enable"
+    ],
+    "innovation":[
+      "sidmodel"
     ],
     "ipx": [
       "ipx"
@@ -88,7 +94,7 @@
       "innova": ["innovation", "sidmodel", "auto"]
     },
     "midi": {
-      "fluid.gain": ["fluidsynth", "soundfont", "/usr/share/sounds/sf2/FluidR3_GM.sf2 {value * 100}"]
+      "fluid.gain": ["fluidsynth", "soundfont", "/usr/share/sounds/sf2/FluidR3_GM.sf2 {int(float(value) * 100)}"]
     }
   }
 }

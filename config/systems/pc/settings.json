@@ -151,7 +151,7 @@
     "files": {
       "conf": {
         "target": "{dir}/{machine}.conf",
-        "migration": "$HOME/retrokit/config/systems/pc/{emulator}-migration.json",
+        "migration": "$HOME/retrokit/config/systems/pc/dosbox-staging-migration.json",
         "overrides": "$HOME/retrokit/config/systems/pc/conf/{machine}.conf"
       }
     }
