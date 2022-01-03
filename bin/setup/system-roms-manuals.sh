@@ -21,16 +21,24 @@ download_pdf() {
       cp "$download_path" "$postprocess_path"
     fi
   else
-    # Fall back to the original source of the manual
-    if download "$manual_url" "$download_path"; then
-      # For non-archive.org manuals, we introduce a sleep here in order to
-      # keep site owners happy and not overwhelm their servers
-      if [[ "$manual_url" != *archive.org* ]]; then
-        sleep 60
-      fi
-    else
-      return 1
+    local download_options=()
+    local sleep_interval=0
+    if [[ "$manual_url" != *archive.org* ]]; then
+      # For non-archive.org manuals, we reduce retries and add a sleep interval
+      # in order to skeep site owners happy and not overwhelm their servers
+      download_options=(max_attempts=1)
+      sleep_interval=60
     fi
+
+    # Fall back to the original source of the manual
+    local download_status=0
+    download "$manual_url" "$download_path" "${download_options[@]}" || download_status=$?
+
+    if [ $sleep_interval -gt 0 ]; then
+      sleep $sleep_interval
+    fi
+
+    return $download_status
   fi
 }
 
@@ -207,6 +215,7 @@ install() {
   local postprocess_path_template=$(setting '.manuals.paths.postprocess')
   local install_path_template=$(setting '.manuals.paths.install')
   local keep_downloads=$(setting '.manuals.keep_downloads')
+  local purge_unused_files=$(setting '.manuals.purge_unused_files')
 
   # Pre-existing archive to download from
   local archive_url_template=$(setting '.manuals.archive.url')
@@ -214,6 +223,11 @@ install() {
   declare -A installed_files
   declare -A installed_playlists
   while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
+    if [[ "$manual_url" == *the-eye* ]]; then
+      # Ignore for now until the-eye is back online
+      continue
+    fi
+
     # Read processing options
     declare -A options=( [format]= [pages]= [rotate]= [filter]= )
     if [ -n "$manual_options" ]; then
@@ -289,10 +303,12 @@ install() {
   done < <(list_manuals)
 
   # Remove unused files
-  local base_path=$(render_template "$base_path_template" system="$system")
-  while read -r path; do
-    [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$base_path" -not -type d)
+  if [ "$purge_unused_files" == 'true' ]; then
+    local base_path=$(render_template "$base_path_template" system="$system")
+    while read -r path; do
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
+    done < <(find "$base_path" -not -type d)
+  fi
 }
 
 uninstall() {
