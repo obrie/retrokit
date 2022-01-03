@@ -201,12 +201,14 @@ is_multidisc() {
   [[ "$1"  == *'(Disc '* ]]
 }
 
+supports_playlist_config="$(system_setting '.playlists.enabled')"
 supports_playlists() {
-  [ "$(system_setting '.playlists.enabled')" == 'true' ]
+  [ "$supports_playlist_config" == 'true' ]
 }
 
+show_discs_config="$(system_setting '.playlists.show_discs')"
 show_discs() {
-  [ "$(system_setting '.playlists.show_discs')" == 'true' ]
+  [ "$show_discs_config" == 'true' ]
 }
 
 has_disc_config() {
