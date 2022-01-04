@@ -3,7 +3,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+install_config() {
   ini_merge "$config_dir/boot/config.txt" '/boot/config.txt' space_around_delimiters=false as_sudo=true
 
   # Note that we can't use crudini for dtoverlay additions because it doesn't
@@ -33,8 +33,26 @@ install() {
   fi
 }
 
+install_cmdline() {
+  backup_and_restore '/boot/cmdline.txt' as_sudo=true
+
+  while IFS=$'\t' read search_option replace_option; do
+    if grep -qE "$search_option" /boot/cmdline.txt; then
+      sudo sed -i "s/$search_option[^ ]*/$replace_option/g" /boot/cmdline.txt
+    else
+      sudo sed -i "$ s/$/ $replace_option/" /boot/cmdline.txt
+    fi
+  done < <(cat "$config_dir/boot/cmdline.tsv")
+}
+
+install() {
+  install_config
+  install_cmdline
+}
+
 uninstall() {
   restore '/boot/config.txt' as_sudo=true delete_src=true
+  restore '/boot/cmdline.txt' as_sudo=true delete_src=true
 }
 
 "${@}"
