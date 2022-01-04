@@ -21,6 +21,11 @@ download_pdf() {
       cp "$download_path" "$postprocess_path"
     fi
   else
+    if [[ "$manual_url" == *the-eye* ]]; then
+      # Ignore for now until the-eye is back online
+      return 1
+    fi
+
     local download_options=()
     local sleep_interval=0
     if [[ "$manual_url" != *archive.org* ]]; then
@@ -223,11 +228,6 @@ install() {
   declare -A installed_files
   declare -A installed_playlists
   while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
-    if [[ "$manual_url" == *the-eye* ]]; then
-      # Ignore for now until the-eye is back online
-      continue
-    fi
-
     # Read processing options
     declare -A options=( [format]= [pages]= [rotate]= [filter]= )
     if [ -n "$manual_options" ]; then
