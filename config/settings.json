@@ -20,7 +20,7 @@
   },
   "manuals": {
     "archive": {
-      "url": "https://archive.org/download/romkit-manualkit/{system}/compressed.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/retrokit-manualkit/{system}/highquality.zip/{parent_title} ({languages}).pdf",
       "processed": true
     },
     "paths": {
@@ -35,7 +35,8 @@
       "downsample_filesize_threshold": 0,
       "downsample_resolution_threshold": 1.0
     },
-    "keep_downloads": true
+    "keep_downloads": true,
+    "purge_unused_files": false
   },
   "retropie": {
     "show_menu": false
