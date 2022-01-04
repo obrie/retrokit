@@ -47,7 +47,7 @@ sync_system_metadata() {
 # Sync manuals to internetarchive
 remote_sync_system_manuals() {
   local system=$1
-  local archive_filename=${2:-original}
+  local archive_quality=${2:-original}
   local archive_id=${3:-retrokit-manualkit}
 
   # Download and process the manuals
@@ -63,7 +63,7 @@ remote_sync_system_manuals() {
     # Zip up the files and upload to internetarchive
     local zip_path="$tmp_ephemeral_dir/$system.zip"
     zip -j -db -r "$zip_path" "$postprocess_dir"/*.pdf
-    ia upload "$archive_id" "$zip_path" --remote-name="$system/$archive_filename.zip" --no-derive -H x-archive-keep-old-version:0
+    ia upload "$archive_id" "$zip_path" --remote-name="$system/$system-$archive_quality.zip" --no-derive -H x-archive-keep-old-version:0
     rm "$zip_path"
   fi
 }
