@@ -102,7 +102,7 @@ convert_to_pdf() {
     # Rar of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
     unrar e "$source_path" "$extract_path/"
-    combine_images_to_pdf "$source_path" "$extract_path" "$filter_csv"
+    combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
     combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
