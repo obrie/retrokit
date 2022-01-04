@@ -44,6 +44,30 @@ sync_system_metadata() {
   TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
 }
 
+# Sync manuals to internetarchive
+remote_sync_system_manuals() {
+  local system=$1
+  local archive_filename=${2:-original}
+  local archive_id=${3:-retrokit-manualkit}
+
+  # Download and process the manuals
+  MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system
+
+  # Identify the post-processing base directory
+  local postprocess_path_template=$(setting '.manuals.paths.postprocess')
+  local postprocess_dir_template=$(dirname "$postprocess_path_template")
+  local postprocess_dir=$(render_template "$postprocess_dir_template" system="$system")
+
+  # Ensure the path actually exists and has files in it
+  if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
+    # Zip up the files and upload to internetarchive
+    local zip_path="$tmp_ephemeral_dir/$system.zip"
+    zip -j -db -r "$zip_path" "$postprocess_dir"/*.pdf
+    ia upload "$archive_id" "$zip_path" --remote-name="$system/$archive_filename.zip" --no-derive -H x-archive-keep-old-version:0
+    rm "$zip_path"
+  fi
+}
+
 main() {
   local action=$1
 
