@@ -26,7 +26,7 @@ install() {
         xmlstarlet select -t -m '/*/*' -c '.' -n |\
         sed  -e '1s/^/<?xml version="1.0"?>\n/' \
         > "$es_settings_config"
-    done < <(sed -e '$a</settings>' -e '1s/^/<settings>/' "$overrides_config" | xmlstarlet select -t -m '/*/*' -c '.' -n)
+    done < <(sed -e '$a</settings>' -e 's/<?xml version="1.0"?>/<settings>/g' "$overrides_config" | xmlstarlet select -t -m '/*/*' -c '.' -n)
   else
     cp -v "$overrides_config" "$es_settings_config"
   fi
