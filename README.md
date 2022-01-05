@@ -7,7 +7,7 @@ Specifically, it can set up:
 
 * Cases (e.g. Argon)
 * Bluetooth
-* Controllers (including autoconfig for advmame, drastic, ppsspp, redream, and ir)
+* Controllers (including autoconfig for advmame, drastic, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * SSH
 * VNC
@@ -32,6 +32,7 @@ Specifically, it can set up:
 * Lightgun-compatible overlay auto-generation
 * Sinden lightgun controller configuration
 * In-game manuals
+* Enhanced Kiosk mode (prevent retroarch changes)
 * Various fixes / workarounds for many common issues
 
 It also provides ROM management capabilities, including:
