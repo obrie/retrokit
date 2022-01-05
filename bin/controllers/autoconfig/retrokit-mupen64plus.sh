@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Add support for setting up the keyboard in mupen64plus
+
 function onstart_retrokit-mupen64plus_keyboard() {
     onstart_mupen64plus_joystick
     sdl1_map
