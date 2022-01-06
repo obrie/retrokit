@@ -3,6 +3,43 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+# Tracks the epoch when a domain was last downloaded from
+declare -A domain_timestamps
+
+# The minimum amount of seconds to require between when a previous download
+# completes from a given domain and when a new one starts.
+# 
+# This does not apply to archive.org domains.
+DOWNLOAD_INTERVAL=60
+
+# Downloads the given URL, ensuring that a certain amount of time has passed
+# between subsequent downloads to the domain
+download_with_sleep() {
+  local url=$1
+  local domain=$(echo "$url" | cut -d '/' -f 3)
+  local last_downloaded_at=${domain_timestamps["$domain"]}
+
+  if [ -n "$last_downloaded_at" ]; then
+    local current_epoch=$(date +%s)
+    local sleep_time=$(($last_downloaded_at + $DOWNLOAD_INTERVAL - $current_epoch))
+
+    # Only sleep if DOWNLOAD_INTERVAL seconds hasn't passed yet
+    if [ $sleep_time -gt 0 ]; then
+      sleep $sleep_time
+    fi
+  fi
+
+  local download_status=0
+  download "$url" "${@:2}" || download_status=$?
+
+  # Track the last time this domain was downloaded from
+  if [[ "$domain" != *archive.org* ]]; then
+    domain_timestamps["$domain"]=$(date +%s)
+  fi
+
+  return $download_status
+}
+
 # Downloads manuals from the given URL(s)
 # 
 # Manuals that have already been postprocessed will be copied to the
@@ -16,7 +53,7 @@ download_pdf() {
   mkdir -p "$(dirname "$download_path")" "$(dirname "$postprocess_path")"
 
   # First attempt to download from the archive
-  if [ -n "$archive_url" ] && download "$archive_url" "$download_path" max_attempts=1; then
+  if [ -n "$archive_url" ] && download_with_sleep "$archive_url" "$download_path" max_attempts=1; then
     if [ "$(setting '.manuals.archive.processed')" == 'true' ]; then
       cp "$download_path" "$postprocess_path"
     fi
@@ -27,23 +64,14 @@ download_pdf() {
     fi
 
     local download_options=()
-    local sleep_interval=0
     if [[ "$manual_url" != *archive.org* ]]; then
-      # For non-archive.org manuals, we reduce retries and add a sleep interval
-      # in order to skeep site owners happy and not overwhelm their servers
+      # For non-archive.org manuals, we reduce retries in order to keep site
+      # owners happy and not overwhelm their servers
       download_options=(max_attempts=1)
-      sleep_interval=60
     fi
 
     # Fall back to the original source of the manual
-    local download_status=0
-    download "$manual_url" "$download_path" "${download_options[@]}" || download_status=$?
-
-    if [ $sleep_interval -gt 0 ]; then
-      sleep $sleep_interval
-    fi
-
-    return $download_status
+    download_with_sleep "$manual_url" "$download_path" "${download_options[@]}"
   fi
 }
 
