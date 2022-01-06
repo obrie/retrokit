@@ -48,7 +48,7 @@
         "dat": {
           "source": "http://redump.org/datfile/ss/",
           "download": "$HOME/retrokit/tmp/saturn/roms.zip",
-          "target": "$HOME/retrokit/tmp/saturn/roms.dat",
+          "target": "$HOME/retrokit/cache/redump/Sega - Saturn.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

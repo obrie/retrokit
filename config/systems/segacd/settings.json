@@ -48,7 +48,7 @@
         "dat": {
           "source": "http://redump.org/datfile/mcd/",
           "download": "$HOME/retrokit/tmp/segacd/roms.zip",
-          "target": "$HOME/retrokit/tmp/segacd/roms.dat",
+          "target": "$HOME/retrokit/cache/redump/Sega - Mega CD & Sega CD.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

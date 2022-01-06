@@ -50,7 +50,7 @@
         "dat": {
           "source": "http://redump.org/datfile/psx/",
           "download": "$HOME/retrokit/tmp/psx/roms.zip",
-          "target": "$HOME/retrokit/tmp/psx/roms.dat",
+          "target": "$HOME/retrokit/cache/redump/Sony - PlayStation.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

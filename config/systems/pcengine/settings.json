@@ -102,7 +102,7 @@
         "dat": {
           "source": "http://redump.org/datfile/pce/",
           "download": "$HOME/retrokit/tmp/pcengine/roms.zip",
-          "target": "$HOME/retrokit/tmp/pcengine/roms.dat",
+          "target": "$HOME/retrokit/cache/redump/NEC - PC Engine CD & TurboGrafx CD.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
