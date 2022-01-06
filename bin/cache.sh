@@ -47,24 +47,38 @@ sync_system_metadata() {
 # Sync manuals to internetarchive
 remote_sync_system_manuals() {
   local system=$1
-  local archive_quality=${2:-original}
-  local archive_id=${3:-retrokit-manualkit}
+
+  local version='original'
+  local archive_id='retrokit-manualkit'
+  local sources_only='false'
+  if [ $# -gt 1 ]; then local "${@:2}"; fi
+
+  # Make sure this system has manuals defined for it
+  if [ ! -f "$config_dir/systems/$system/manuals.tsv" ]; then
+    return
+  fi
+
+  # Update the sources reference
+  ia upload "$archive_id" "$config_dir/systems/$system/manuals.tsv" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
+  if [ "$sources_only" == 'true' ]; then
+    return
+  fi
 
   # Download and process the manuals
-  MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system
+  if MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system; then
+    # Identify the post-processing base directory
+    local postprocess_path_template=$(setting '.manuals.paths.postprocess')
+    local postprocess_dir_template=$(dirname "$postprocess_path_template")
+    local postprocess_dir=$(render_template "$postprocess_dir_template" system="$system")
 
-  # Identify the post-processing base directory
-  local postprocess_path_template=$(setting '.manuals.paths.postprocess')
-  local postprocess_dir_template=$(dirname "$postprocess_path_template")
-  local postprocess_dir=$(render_template "$postprocess_dir_template" system="$system")
-
-  # Ensure the path actually exists and has files in it
-  if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
-    # Zip up the files and upload to internetarchive
-    local zip_path="$tmp_ephemeral_dir/$system.zip"
-    zip -j -db -r "$zip_path" "$postprocess_dir"/*.pdf
-    ia upload "$archive_id" "$zip_path" --remote-name="$system/$system-$archive_quality.zip" --no-derive -H x-archive-keep-old-version:0
-    rm "$zip_path"
+    # Ensure the path actually exists and has files in it
+    if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
+      # Zip up the files and upload to internetarchive
+      local zip_path="$tmp_ephemeral_dir/$system.zip"
+      zip -j -db -r "$zip_path" "$postprocess_dir"/*.pdf
+      ia upload "$archive_id" "$zip_path" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
+      rm "$zip_path"
+    fi
   fi
 }
 
