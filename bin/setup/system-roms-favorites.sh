@@ -20,6 +20,12 @@ install() {
     return
   fi
 
+  favorites=$(romkit_cache_list | jq -r 'select(.favorite == true) | .name')
+  if [ -z "$favorites" ]; then
+    echo 'No favorites found.  Assuming favorites are being managed manually.'
+    return
+  fi
+
   # Reset by removing all favorite tags first.  This is much faster than
   # deleting one-by-one given the size of the file.
   echo 'Resetting favorites...'
@@ -35,7 +41,7 @@ install() {
     if has_playlist_config "$rom_name"; then
       add_favorite "$(get_playlist_name "$rom_name")"
     fi
-  done < <(romkit_cache_list | jq -r 'select(.favorite == true) | .name')
+  done < <(echo "$favorites")
 }
 
 uninstall() {
