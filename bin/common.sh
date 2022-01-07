@@ -19,9 +19,6 @@ export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
 # Clean up the ephemeral directory
 trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
-# Settings
-export settings_file="$app_dir/config/settings.json"
-
 # Optional env for secrets
 if [ -f "$app_dir/.env" ]; then
   source "$app_dir/.env"
@@ -44,6 +41,23 @@ print_heading() {
 # Settings
 ##############
 
+conf_prepare() {
+  local source=$1
+  local as_sudo='false'
+  if [ $# -gt 1 ]; then local "${@:2}"; fi
+
+  if [ "$as_sudo" == 'true' ]; then
+    local cmd='sudo'
+  fi
+
+  local target="$(mktemp -p "$tmp_ephemeral_dir")"
+  $cmd envsubst < "$source" > "$target"
+  $cmd chmod --reference="$source" "$target"
+  echo "$target"
+}
+
+# Settings
+export settings_file="$(conf_prepare "$app_dir/config/settings.json")"
 setting() {
   jq -r "$1 | values" "$settings_file"
 }
@@ -256,21 +270,6 @@ file_ln() {
   $cmd rm -f "$target"
   
   $cmd ln -fs "$source" "$target"
-}
-
-conf_prepare() {
-  local source=$1
-  local as_sudo='false'
-  if [ $# -gt 1 ]; then local "${@:2}"; fi
-
-  if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
-  fi
-
-  local target="$(mktemp -p "$tmp_ephemeral_dir")"
-  $cmd envsubst < "$source" > "$target"
-  $cmd chmod --reference="$source" "$target"
-  echo "$target"
 }
 
 ##############
