@@ -90,12 +90,28 @@ combine_images_to_pdf() {
     IFS=$'\n' filtered_paths+=($(find "$source_path" -type f -wholename "$source_path/$filter" | sort))
   done < <(echo "$filter_csv" | tr ';' '\n')
 
-  # Remove alpha channel from PNG images as img2pdf cannot handle them
-  while read source_path; do
-    mogrify -background white -alpha remove -alpha off "$source_path"
-  done < <(printf -- '%s\n' "${filtered_paths[@]}" | grep -i .png)
+  # Identify the filetype we're combining
+  local extension=${filtered_paths[0]##*.}
+  extension=${extension,,} # lowercase
 
-  img2pdf --output "$target_path" "${filtered_paths[@]}"
+  if [ "$extension" == 'pdf' ]; then
+    if [ ${#filtered_paths[@]} -gt 1 ]; then
+      # Combine PDF files
+      gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "${filtered_paths[@]}"
+    else
+      # Copy the PDF directly
+      cp "${filtered_paths[0]}" "$target_path"
+    fi
+  else
+    # Assume we're combining images
+
+    # Remove alpha channel from PNG images as img2pdf cannot handle them
+    while read source_path; do
+      mogrify -background white -alpha remove -alpha off "$source_path"
+    done < <(printf -- '%s\n' "${filtered_paths[@]}" | grep -i .png)
+
+    img2pdf --output "$target_path" "${filtered_paths[@]}"
+  fi
 }
 
 # Converts a downloaded file to a PDF so that all manuals are in a standard
