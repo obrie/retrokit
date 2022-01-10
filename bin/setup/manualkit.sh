@@ -21,12 +21,15 @@ install() {
 
   # Convert cbr archives to pdf
   sudo apt install -y unrar
+
+  # Convert doc to pdf
+  sudo apt install -y unoconv
 }
 
 uninstall() {
   rm -rfv "$install_dir" '/opt/retropie/configs/all/manualkit.conf'
   sudo pip3 uninstall -y evdev pyudev psutil PyMuPDF
-  sudo apt remove -y chromium img2pdf unrar
+  sudo apt remove -y chromium img2pdf unrar unoconv
 }
 
 "${@}"
