@@ -42,6 +42,7 @@ sync_system_metadata() {
   local system=$1
   if [ "$system" == 'ports' ]; then
     return
+  fi
 
   local system_settings_file="$app_dir/config/systems/$system/settings.json"
   TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
