@@ -51,6 +51,7 @@ remote_sync_system_manuals() {
   local version='original'
   local archive_id='retrokit-manualkit'
   local sources_only='false'
+  local install='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
@@ -65,7 +66,7 @@ remote_sync_system_manuals() {
   fi
 
   # Download and process the manuals
-  if MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system; then
+  if [ "$install" == 'false' ] || MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system; then
     # Identify the post-processing base directory
     local postprocess_path_template=$(setting '.manuals.paths.postprocess')
     local postprocess_dir_template=$(dirname "$postprocess_path_template")
