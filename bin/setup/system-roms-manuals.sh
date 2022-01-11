@@ -240,7 +240,7 @@ postprocess_pdf() {
 list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1 (\2)\t\1\t\2\3/'
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\2\3/'
   else
     romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .manual .languages, .manual .url, .manual .options] | @tsv'
   fi
