@@ -20,11 +20,12 @@
   },
   "manuals": {
     "archive": {
-      "url": "https://archive.org/download/retrokit-manualkit/{system}/{system}-hq.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/retrokit-manualkit/{system}/{system}-hd.zip/{parent_title} ({languages}).pdf",
       "processed": true
     },
     "paths": {
       "base": "$HOME/.emulationstation/downloaded_media/{system}/manuals",
+      "archive": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.download/{parent_title} ({languages}) (archive).pdf",
       "download": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.download/{parent_title} ({languages}).{extension}",
       "postprocess": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.files/{parent_title} ({languages}).pdf",
       "install": "$HOME/.emulationstation/downloaded_media/{system}/manuals/{name}.pdf"

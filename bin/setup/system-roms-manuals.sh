@@ -40,39 +40,32 @@ download_with_sleep() {
   return $download_status
 }
 
-# Downloads manuals from the given URL(s)
-# 
-# Manuals that have already been postprocessed will be copied to the
-# postprocess path to indicate that no postprocessing is necessary.
+# Downloads the manual from the given URL
 download_pdf() {
-  local manual_url=$1
-  local archive_url=$2
-  local download_path=$3
-  local postprocess_path=$4
+  local source_url=$1
+  local download_path=$2
+  local max_attempts=3
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  mkdir -p "$(dirname "$download_path")" "$(dirname "$postprocess_path")"
-
-  # First attempt to download from the archive
-  if [ -n "$archive_url" ] && download_with_sleep "$archive_url" "$download_path" max_attempts=1; then
-    if [ "$(setting '.manuals.archive.processed')" == 'true' ]; then
-      cp "$download_path" "$postprocess_path"
-    fi
-  else
-    if [[ "$manual_url" == *the-eye* ]]; then
-      # Ignore for now until the-eye is back online
-      return 1
-    fi
-
-    local download_options=()
-    if [[ "$manual_url" != *archive.org* ]]; then
-      # For non-archive.org manuals, we reduce retries in order to keep site
-      # owners happy and not overwhelm their servers
-      download_options=(max_attempts=1)
-    fi
-
-    # Fall back to the original source of the manual
-    download_with_sleep "$manual_url" "$download_path" "${download_options[@]}"
+  if [ -z "$source_url" ]; then
+    # Source doesn't exist
+    return 1
   fi
+
+  mkdir -p "$(dirname "$download_path")"
+
+  if [[ "$source_url" == *the-eye* ]]; then
+    # Ignore for now until the-eye is back online
+    return 1
+  fi
+
+  if [[ "$source_url" != *archive.org* ]]; then
+    # For non-archive.org manuals, we reduce retries in order to keep site
+    # owners happy and not overwhelm their servers
+    max_attempts=1
+  fi
+
+  download_with_sleep "$source_url" "$download_path" max_attempts=$max_attempts
 }
 
 # Combines 1 or more images into a PDF
@@ -263,6 +256,7 @@ install() {
   # Local paths
   local base_path_template=$(setting '.manuals.paths.base')
   local download_path_template=$(setting '.manuals.paths.download')
+  local archive_path_template=$(setting '.manuals.paths.archive')
   local postprocess_path_template=$(setting '.manuals.paths.postprocess')
   local install_path_template=$(setting '.manuals.paths.install')
   local keep_downloads=$(setting '.manuals.keep_downloads')
@@ -270,6 +264,7 @@ install() {
 
   # Pre-existing archive to download from
   local archive_url_template=$(setting '.manuals.archive.url')
+  local archive_processed=$(setting '.manuals.archive.processed')
 
   declare -A installed_files
   declare -A installed_playlists
@@ -300,6 +295,7 @@ install() {
 
     # Render local paths
     local download_path=$(render_template "$download_path_template" "${template_variables[@]}")
+    local archive_path=$(render_template "$archive_path_template" "${template_variables[@]}")
     local postprocess_path=$(render_template "$postprocess_path_template" "${template_variables[@]}")
     local install_path=$(render_template "$install_path_template" "${template_variables[@]}")
 
@@ -309,21 +305,37 @@ install() {
     # Track the downloads (if configured to persist)
     if [ "$keep_downloads" == 'true' ]; then
       installed_files["$download_path"]=1
+      installed_files["$archive_path"]=1
     fi
 
     # Download the file
-    if [ ! -f "$download_path" ] && [ ! -f "$postprocess_path" ]; then
+    if [ ! -f "$download_path" ] && [ ! -f "$archive_path" ] && [ ! -f "$postprocess_path" ]; then
       local archive_url=$(render_template "$archive_url_template" "${template_variables[@]}")
-      if ! download_pdf "$manual_url" "$archive_url" "$download_path" "$postprocess_path"; then
-        echo "[$rom_name] Failed to download from $manual_url"
+
+      if ! { download_pdf "$archive_url" "$archive_path" max_attempts=1 || download_pdf "$manual_url" "$download_path"; }; then
+        # We couldn't download from the archive or source -- nothing to do
+        echo "[$rom_name] Failed to download from $manual_url (archive: $archive_url)"
         continue
       fi
     fi
 
+    # Use the archive as our download source
+    if [ -f "$archive_path" ]; then
+      download_path=$archive_path
+    fi
+
     # Post-process the pdf
     if [ ! -f "$postprocess_path" ]; then
-      convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${options['filter']}"
-      postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
+      mkdir -p "$(dirname "$postprocess_path")"
+
+      if [ -f "$archive_path" ] && [ "$archive_processed" == 'true' ]; then
+        # Archive file has already been processed -- just do a straight copy
+        cp "$archive_path" "$postprocess_path"
+      else
+        # Download file hasn't been processed -- do so now
+        convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${options['filter']}"
+        postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
+      fi
     fi
 
     # Install the pdf to location expected for this specific rom
@@ -344,17 +356,15 @@ install() {
 
     # Remove unused files (to avoid consuming too much disk space during the loop)
     if [ "$keep_downloads" != 'true' ]; then
-      rm -v "$download_path"
+      rm -fv "$download_path" "$archive_path"
     fi
   done < <(list_manuals)
 
-  # Remove unused files
-  if [ "$purge_unused_files" == 'true' ]; then
-    local base_path=$(render_template "$base_path_template" system="$system")
-    while read -r path; do
-      [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$base_path" -not -type d)
-  fi
+  # Remove unused links
+  local base_path=$(render_template "$base_path_template" system="$system")
+  while read -r path; do
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
+  done < <(find "$base_path" -maxdepth 1 -not -type d)
 }
 
 uninstall() {
