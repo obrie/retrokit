@@ -11,7 +11,7 @@ retropie_system_config_dir="/opt/retropie/configs/$system"
 # Retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
 system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-jq -s '.[0] * .[1]' "$(conf_prepare "$app_dir/config/systems/settings.json")" "$(conf_prepare "$system_config_dir/settings.json")" > "$system_settings_file"
+jq -s '.[0] * .[1]' "$(conf_prepare "$app_dir/config/systems/settings-common.json")" "$(conf_prepare "$system_config_dir/settings.json")" > "$system_settings_file"
 
 ##############
 # Settings

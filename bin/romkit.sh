@@ -12,7 +12,7 @@ usage() {
 run() {
   local command=$1
   local system=$2
-  local common_settings_file="$app_dir/config/systems/settings.json"
+  local common_settings_file="$app_dir/config/systems/settings-common.json"
   local system_settings_file="$app_dir/config/systems/$system/settings.json"
   local args=("${@:3}")
 
