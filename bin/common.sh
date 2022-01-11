@@ -331,8 +331,9 @@ download() {
       mkdir -pv "$(dirname "$target")"
 
       # Download via curl and check that the target isn't empty
-      if $cmd curl -fgL# "${curl_opts[@]}" -o "$target.tmp" "$url" && [ -s "$target.tmp" ]; then
-        $cmd mv "$target.tmp" "$target"
+      local tmp_target="$(mktemp -p "$tmp_ephemeral_dir")"
+      if $cmd curl -fgL# "${curl_opts[@]}" -o "$tmp_target" "$url" && [ -s "$tmp_target" ]; then
+        $cmd mv "$tmp_target" "$target"
         exit_code=0
       else
         $cmd rm -f "$target"
