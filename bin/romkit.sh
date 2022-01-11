@@ -30,7 +30,7 @@ main() {
   if [ -z "$system" ] || [ "$system" == 'all' ]; then
     while read system; do
       run "$command" "$system" "${@:3}"
-    done < <(setting '.systems[] | select(. != "ports")')
+    done < <(setting '.systems[]')
   else
     run "$command" "$system" "${@:3}"
   fi

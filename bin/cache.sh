@@ -40,6 +40,9 @@ sync_system_nointro_dats() {
 
 sync_system_metadata() {
   local system=$1
+  if [ "$system" == 'ports' ]; then
+    return
+
   local system_settings_file="$app_dir/config/systems/$system/settings.json"
   TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
 }
@@ -95,7 +98,7 @@ main() {
       while read system; do
         print_heading "Running $action for $system (${*:3})"
         "$action" "$system" "${@:3}"
-      done < <(setting '.systems[] | select(. != "ports")')
+      done < <(setting '.systems[])')
     else
       print_heading "Running $action for $system (${*:3})"
       "$action" "$system" "${@:3}"
