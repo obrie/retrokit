@@ -225,7 +225,8 @@ class BaseSystem:
         installable_sample_names = set()
 
         for machine in installable_machines:
-            installable_machine_paths.add(machine.resource.target_path.path)
+            if machine.resource:
+                installable_machine_paths.add(machine.resource.target_path.path)
 
             # Track disks
             for disk in machine.disks:
@@ -237,7 +238,7 @@ class BaseSystem:
 
         for romset in self.iter_romsets():
             for machine in romset.iter_machines():
-                if machine.resource.target_path.path not in installable_machine_paths:
+                if machine.resource and machine.resource.target_path.path not in installable_machine_paths:
                     machine.purge()
 
                     # Check disks

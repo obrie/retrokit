@@ -154,7 +154,11 @@ class Machine:
             'parent': (self.parent_name or self.name),
             **self.custom_context,
         }
-        context['machine_filename'] = self.romset.resource('machine', **context).target_path.path.name
+
+        machine_resource = self.romset.resource('machine', **context)
+        if machine_resource:
+            context['machine_filename'] = machine_resource.target_path.path.name
+
         return context
 
     @property
@@ -330,7 +334,7 @@ class Machine:
             'category': self.category,
 
             # ROM info
-            'path': str(self.resource.target_path.path),
+            'path': str(self.resource and self.resource.target_path.path),
             'filesize': self.filesize,
             'description': self.description,
             'orientation': self.orientation,
@@ -367,7 +371,7 @@ class Machine:
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
     def is_valid_nonmerged(self) -> bool:
-        return self.resource.contains(self.non_merged_roms)
+        return not self.resource or self.resource.contains(self.non_merged_roms)
 
     # Installs this machine onto the local filesystem
     def install(self) -> None:
@@ -396,7 +400,7 @@ class Machine:
 
     # Installs the roms from the given source machine
     def install_from(self, machine: Machine, roms: Set[File]) -> None:
-        if not machine:
+        if not machine or not self.resource:
             return
 
         if self.resource.contains(roms):
@@ -412,11 +416,17 @@ class Machine:
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self) -> None:
+        if not self.resource:
+            return
+
         # Clean the resource
         self.resource.clean(self.non_merged_roms)
 
     # Enables this machine to be visible to the emulator
     def enable(self, target_dir: SystemDir):
+        if not self.resource:
+            return
+
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
         
         target_dir.symlink('machine', self.resource.target_path.path, **self.context)
@@ -426,5 +436,8 @@ class Machine:
 
     # Removes this machine from the filesystem
     def purge(self):
+        if not self.resource:
+            return
+
         if self.resource.target_path.exists():
             print(f'rm -rf "{self.resource.target_path.path}"')
