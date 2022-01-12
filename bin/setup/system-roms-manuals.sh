@@ -68,6 +68,11 @@ download_pdf() {
   download_with_sleep "$source_url" "$download_path" max_attempts=$max_attempts
 }
 
+# Checks that the given file path is a valid pdf
+validate_pdf() {
+  pdfinfo "$1" &> /dev/null
+}
+
 # Combines 1 or more images into a PDF
 # 
 # This is a lossless conversion except for PNG images which contain alpha channels.
@@ -145,10 +150,15 @@ convert_to_pdf() {
     combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
   elif [[ "$extension" =~ ^(docx?)$ ]]; then
     unoconv -f pdf -o "$target_path" "$target_path" "$source_path"
-  else
+  elif [[ "$extension" =~ ^(pdf)$ ]]; then
     # No conversion necessary -- copy to the target
     cp "$source_path" "$target_path"
+  else
+    # Unknown extension -- fail
+    return 1
   fi
+
+  validate_pdf "$target_path"
 }
 
 # Runs any configured post-processing on the PDF, including:
@@ -233,7 +243,85 @@ postprocess_pdf() {
   fi
 
   # Copy to target
-  cp "$pdf_path" "$target_path"
+  if validate_pdf "$target_path"; then
+    cp "$pdf_path" "$target_path"
+  else
+    return 1
+  fi
+}
+
+# Path templates
+base_path_template=$(setting '.manuals.paths.base')
+download_path_template=$(setting '.manuals.paths.download')
+archive_path_template=$(setting '.manuals.paths.archive')
+postprocess_path_template=$(setting '.manuals.paths.postprocess')
+install_path_template=$(setting '.manuals.paths.install')
+archive_url_template=$(setting '.manuals.archive.url')
+
+# Builds an associative array representing the manual
+build_manual() {
+  # Look up the variable for us to populate
+  local -n manual_ref=$1
+
+  # Romkit info
+  local rom_name=$2
+  local parent_title=$3
+  local manual_languages=$4
+  local manual_url=$5
+  local postprocess_options=$6
+
+  # Defaults
+  manual_ref=(
+    [rom_name]="$rom_name"
+    [parent_title]="$parent_title"
+    [languages]="$manual_languages"
+    [format]=
+    [pages]=
+    [rotate]=
+    [filter]=
+    [playlist_install_path]=
+  )
+
+  # Define the CSV post-processing options
+  if [ -n "$postprocess_options" ]; then
+    while IFS='=' read -r option value; do
+      manual_ref["$option"]=$value
+    done < <(echo "$postprocess_options" | tr ',' '\n')
+  fi
+
+  # Fix URL:
+  # * Explicitly escape the character "#" since rom names can have that character
+  manual_ref['url']=${manual_url//#/%23}
+
+  # Define the souce manual's extension
+  local manual_url_extension=${manual_ref['url']##*.}
+  local extension=${manual_ref['format']:-$manual_url_extension}
+  manual_ref['extension']=${extension,,} # lowercase
+
+  # Define the base path for manuals
+  local base_template_variables=(system="$system")
+  manual_ref['base_path']=$(render_template "$base_path_template" "${base_template_variables[@]}")
+
+  # Define manual-specific install info
+  local template_variables=(
+    "${base_template_variables[@]}"
+    base="${manual_ref['base_path']}"
+    parent_title="$parent_title"
+    languages="$manual_languages"
+    name="$rom_name"
+    extension="${manual_ref['extension']}"
+  )
+  manual_ref['download_path']=$(render_template "$download_path_template" "${template_variables[@]}")
+  manual_ref['archive_path']=$(render_template "$archive_path_template" "${template_variables[@]}")
+  manual_ref['postprocess_path']=$(render_template "$postprocess_path_template" "${template_variables[@]}")
+  manual_ref['install_path']=$(render_template "$install_path_template" "${template_variables[@]}")
+  manual_ref['archive_url']=$(render_template "$archive_url_template" "${template_variables[@]}")
+
+  # Define playlist info
+  manual_ref['playlist_name']=$(get_playlist_name "$rom_name")
+  if has_playlist_config "$rom_name"; then
+    manual_ref['playlist_install_path']=$(render_template "$install_path_template" "${template_variables[@]}" name="${manual['playlist_name']}")
+  fi
 }
 
 # Lists the manuals to install
@@ -253,68 +341,30 @@ install() {
     return
   fi
 
-  # Local paths
-  local base_path_template=$(setting '.manuals.paths.base')
-  local download_path_template=$(setting '.manuals.paths.download')
-  local archive_path_template=$(setting '.manuals.paths.archive')
-  local postprocess_path_template=$(setting '.manuals.paths.postprocess')
-  local install_path_template=$(setting '.manuals.paths.install')
   local keep_downloads=$(setting '.manuals.keep_downloads')
-  local purge_unused_files=$(setting '.manuals.purge_unused_files')
-
-  # Pre-existing archive to download from
-  local archive_url_template=$(setting '.manuals.archive.url')
   local archive_processed=$(setting '.manuals.archive.processed')
 
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=$'\t' read -r rom_name parent_title manual_languages manual_url manual_options; do
-    # Read processing options
-    declare -A options=( [format]= [pages]= [rotate]= [filter]= )
-    if [ -n "$manual_options" ]; then
-      while IFS='=' read -r option value; do
-        options["$option"]=$value
-      done < <(echo "$manual_options" | tr ',' '\n')
-    fi
+  while IFS=$'\t' read -ra manual_data; do
+    declare -A manual
+    build_manual manual "${manual_data[@]}"
 
-    # Fix URLs:
-    # * Explicitly escape the character "#" since rom names can have that character
-    local manual_url=${manual_url//#/%23}
-
-    # Define template variables
-    local manual_url_extension=${manual_url##*.}
-    local extension=${options['format']:-$manual_url_extension}
-    extension=${extension,,} # lowercase
-    local template_variables=(
-      system="$system"
-      parent_title="$parent_title"
-      languages="$manual_languages"
-      name="$rom_name"
-      extension="$extension"
-    )
-
-    # Render local paths
-    local download_path=$(render_template "$download_path_template" "${template_variables[@]}")
-    local archive_path=$(render_template "$archive_path_template" "${template_variables[@]}")
-    local postprocess_path=$(render_template "$postprocess_path_template" "${template_variables[@]}")
-    local install_path=$(render_template "$install_path_template" "${template_variables[@]}")
-
-    # Track paths to ensure they don't get deleted
-    installed_files["$install_path"]=1
-    installed_files["$postprocess_path"]=1
-    # Track the downloads (if configured to persist)
-    if [ "$keep_downloads" == 'true' ]; then
-      installed_files["$download_path"]=1
-      installed_files["$archive_path"]=1
-    fi
+    # Look up the manual properties
+    local url=${manual['url']}
+    local archive_url=${manual['archive_url']}
+    local download_path=${manual['download_path']}
+    local archive_path=${manual['archive_path']}
+    local postprocess_path=${manual['postprocess_path']}
+    local install_path=${manual['install_path']}
+    local playlist_install_path=${manual['playlist_install_path']}
+    local playlist_name=${manual['playlist_name']}
 
     # Download the file
     if [ ! -f "$download_path" ] && [ ! -f "$archive_path" ] && [ ! -f "$postprocess_path" ]; then
-      local archive_url=$(render_template "$archive_url_template" "${template_variables[@]}")
-
-      if ! { download_pdf "$archive_url" "$archive_path" max_attempts=1 || download_pdf "$manual_url" "$download_path"; }; then
+      if ! { download_pdf "$archive_url" "$archive_path" max_attempts=1 || download_pdf "$url" "$download_path"; }; then
         # We couldn't download from the archive or source -- nothing to do
-        echo "[$rom_name] Failed to download from $manual_url (archive: $archive_url)"
+        echo "[${manual['rom_name']}] Failed to download from $url (archive: $archive_url)"
         continue
       fi
     fi
@@ -333,38 +383,65 @@ install() {
         cp "$archive_path" "$postprocess_path"
       else
         # Download file hasn't been processed -- do so now
-        convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${options['filter']}"
-        postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${options['pages']}" "${options['rotate']}"
+        if ! { convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" && postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['pages']}" "${manual['rotate']}"; }; then
+          echo "[${manual['rom_name']}] Failed to post-process from $url (archive: $archive_url)"
+          continue
+        fi
       fi
     fi
 
     # Install the pdf to location expected for this specific rom
-    echo "Linking $install_path to manual $postprocess_path"
     mkdir -p "$(dirname "$install_path")"
     ln -fsv "$postprocess_path" "$install_path"
 
     # Install a playlist symlink if applicable
-    local playlist_name=$(get_playlist_name "$rom_name")
-    if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-      local playlist_install_path=$(render_template "$install_path_template" "${template_variables[@]}" name="$playlist_name")
-
-      echo "Linking $playlist_install_path to manual $postprocess_path"
+    if [ -n "$playlist_install_path" ] && [ ! "${installed_playlists[$playlist_name]}" ]; then
       ln -fsv "$postprocess_path" "$playlist_install_path"
-      installed_playlists["$playlist_name"]=1
-      installed_files["$playlist_install_path"]=1
+      installed_playlists[$playlist_name]=1
+      installed_files[$playlist_install_path]=1
     fi
 
     # Remove unused files (to avoid consuming too much disk space during the loop)
     if [ "$keep_downloads" != 'true' ]; then
       rm -fv "$download_path" "$archive_path"
     fi
+
+    installed_files[$install_path]=1
   done < <(list_manuals)
 
-  # Remove unused links
+  # Remove unused symlinks
   local base_path=$(render_template "$base_path_template" system="$system")
   while read -r path; do
-    [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$base_path" -maxdepth 1 -not -type d)
+    [ "${installed_files[$path]}" ] || rm -v "$path"
+  done < <(find "$base_path" -maxdepth 1 -type l -not -xtype d)
+}
+
+# Outputs the commands required to remove files no longer required by the current
+# list of roms installed
+vacuum() {
+  local keep_downloads=$(setting '.manuals.keep_downloads')
+
+  # Build the list of files we should *not* delete
+  declare -A files_to_keep
+  while IFS=$'\t' read -ra manual_data; do
+    declare -A manual
+    build_manual manual "${manual_data[@]}"
+
+    # Keep paths to ensure they don't get deleted
+    files_to_keep[${manual['install_path']}]=1
+    files_to_keep[${manual['postprocess_path']}]=1
+
+    # Keep downloads (if configured to persist)
+    if [ "$keep_downloads" == 'true' ]; then
+      files_to_keep[${manual['download_path']}]=1
+      files_to_keep[${manual['archive_path']}]=1
+    fi
+  done < <(list_manuals)
+
+  # Echo the commands (it's up to the user to evaluate them)
+  while read -r path; do
+    [ "${files_to_keep[$path]}" ] || echo "rm -v $(printf '%q' "$path")"
+  done < <(find "${manual['base_path']}" -not -type d)
 }
 
 uninstall() {

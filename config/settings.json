@@ -25,10 +25,10 @@
     },
     "paths": {
       "base": "$HOME/.emulationstation/downloaded_media/{system}/manuals",
-      "archive": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.download/{parent_title} ({languages}) (archive).pdf",
-      "download": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.download/{parent_title} ({languages}).{extension}",
-      "postprocess": "$HOME/.emulationstation/downloaded_media/{system}/manuals/.files/{parent_title} ({languages}).pdf",
-      "install": "$HOME/.emulationstation/downloaded_media/{system}/manuals/{name}.pdf"
+      "archive": "{base}/.download/{parent_title} ({languages}) (archive).pdf",
+      "download": "{base}/.download/{parent_title} ({languages}).{extension}",
+      "postprocess": "{base}/.files/{parent_title} ({languages}).pdf",
+      "install": "{base}/{name}.pdf"
     },
     "postprocess": {
       "resolution": "original",
@@ -36,8 +36,7 @@
       "downsample_filesize_threshold": 0,
       "downsample_resolution_threshold": 1.0
     },
-    "keep_downloads": true,
-    "purge_unused_files": false
+    "keep_downloads": true
   },
   "retropie": {
     "show_menu": false
