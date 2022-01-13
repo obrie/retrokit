@@ -140,7 +140,7 @@ combine_images_to_pdf() {
       mogrify -background white -alpha remove -alpha off "$source_path"
     done < <(printf -- '%s\n' "${filtered_paths[@]}" | grep -i .png)
 
-    img2pdf --output "$target_path" "${filtered_paths[@]}"
+    img2pdf -s 72dpi --output "$target_path" "${filtered_paths[@]}"
   fi
 }
 
