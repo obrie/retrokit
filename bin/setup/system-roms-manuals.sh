@@ -269,7 +269,7 @@ ocr_pdf() {
   done < <(echo "$languages" | tr ',' '\n')
   local ocr_languages_csv=$(IFS=+ ; echo "${ocr_languages[*]}")
 
-  ocrmypdf -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path"
+  ocrmypdf -q -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path"
   mv "$staging_path" "$pdf_path"
 }
 
