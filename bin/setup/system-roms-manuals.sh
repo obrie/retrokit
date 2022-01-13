@@ -13,7 +13,7 @@ declare -A domain_timestamps
 DOWNLOAD_INTERVAL=60
 
 # Maps manual language codes to Tesseract language codes
-TESSERACT_LANGUAGES=(
+declare -A TESSERACT_LANGUAGES=(
   [ar]=ara
   [cs]=ces
   [da]=dan
@@ -264,10 +264,10 @@ ocr_pdf() {
 
   # Translate manual language codes to Tesseract language names
   local ocr_languages=()
-  while IFS=, read language; do
-    ocr_languages+=(${TESSERACT_LANGUAGES[language]})
-  done < <(echo "$languages")
-  local ocr_languages_csv=$(IFS=, ; echo "${ocr_languages[*]}")
+  while read language; do
+    ocr_languages+=(${TESSERACT_LANGUAGES[$language]})
+  done < <(echo "$languages" | tr ',' '\n')
+  local ocr_languages_csv=$(IFS=+ ; echo "${ocr_languages[*]}")
 
   ocrmypdf -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path"
   mv "$staging_path" "$pdf_path"
