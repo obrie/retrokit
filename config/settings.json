@@ -38,7 +38,7 @@
         "enabled": true,
         "resolution": 150,
         "quality_factor": 0.9,
-        "filesize_threshold": 1,
+        "filesize_threshold": 2097152,
         "resolution_threshold": 1.0
       }
     },
