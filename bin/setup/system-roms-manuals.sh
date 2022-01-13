@@ -102,7 +102,7 @@ download_pdf() {
 
 # Checks that the given file path is a valid pdf
 validate_pdf() {
-  pdfinfo "$1" &> /dev/null
+  mutool info "$1" &> /dev/null
 }
 
 # Combines 1 or more images into a PDF
@@ -193,43 +193,9 @@ convert_to_pdf() {
   validate_pdf "$target_path"
 }
 
-# Attempts to make the PDF searchable by running the Tesseract OCR processor
-# against the PDF with the specific languages
-ocr_pdf() {
-  local pdf_path=$1
-  local languages=$2
-
-  # Translate manual language codes to Tesseract language names
-  local ocr_languages=()
-  while IFS=, read language; do
-    ocr_languages+=(${TESSERACT_LANGUAGES[language]})
-  done < <(echo "$languages")
-  local ocr_languages_csv=$(IFS=, ; echo "${ocr_languages[*]}")
-
-  local output_path="$tmp_ephemeral_dir/ocr.pdf"
-  if ocrmypdf -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$output_path"; then
-    mv "$output_path" "$pdf_path"
-  else
-    return 1
-  fi
-}
-
-# Runs any configured post-processing on the PDF, including:
-# * Rotate
-# * Truncate
-# * Optimize
-# * OCR
-# * Compress
-postprocess_pdf() {
-  local pdf_path=$1 # source
-  local target_path=$2
-  local languages=$3
-  local pages=$4
-  local rotate=${5:-0}
-  local pdf_tmp_path="$tmp_ephemeral_dir/postprocess-tmp.pdf"
-
-  # Optimize (always)
-  local gsargs=(
+# Executes the `gs` command with standard defaults built-in
+gs_exec() {
+  local common_args=(
     -sDEVICE=pdfwrite
     -dCompatibilityLevel=1.4
     -dNOPAUSE
@@ -254,6 +220,19 @@ postprocess_pdf() {
     # avoid errors
     -dCannotEmbedFontPolicy=/Warning
   )
+
+  gs "${common_args[@]}" "${@}"
+}
+
+# Optimizes the PDF, without compromising quality, by removing artifacts that
+# are not needed
+optimize_pdf() {
+  local pdf_path=$1
+  local pages=$2
+
+  local staging_path="$tmp_ephemeral_dir/postprocess-optimize.pdf"
+
+  local gsargs=()
   if [ -n "$pages" ]; then
     # Truncate
     IFS='-' read first_page last_page <<< "$pages"
@@ -263,24 +242,51 @@ postprocess_pdf() {
     )
   fi
 
-  gs "${gsargs[@]}" -sOutputFile="$pdf_tmp_path" -f "$pdf_path"
-  mv "$pdf_tmp_path" "$pdf_path"
+  gs_exec "${gsargs[@]}" -sOutputFile="$staging_path" -f "$pdf_path"
+  mv "$staging_path" "$pdf_path"
+}
 
-  # OCR
-  local ocr_enabled=$(setting '.manuals.postprocess.ocr')
-  if [ "$ocr_enabled" == 'true' ]; then
-    ocr_pdf "$pdf_path" "$languages"
-  fi
+# Rotates the PDF the given number of degrees
+rotate_pdf() {
+  local pdf_path=$1
+  local rotate=$2
+
+  mutool draw -R "$rotate" -o "$pdf_path" "$pdf_path"
+}
+
+# Attempts to make the PDF searchable by running the Tesseract OCR processor
+# against the PDF with the specific languages
+ocr_pdf() {
+  local pdf_path=$1
+  local languages=$2
+
+  local staging_path="$tmp_ephemeral_dir/postprocess-ocr.pdf"
+
+  # Translate manual language codes to Tesseract language names
+  local ocr_languages=()
+  while IFS=, read language; do
+    ocr_languages+=(${TESSERACT_LANGUAGES[language]})
+  done < <(echo "$languages")
+  local ocr_languages_csv=$(IFS=, ; echo "${ocr_languages[*]}")
+
+  ocrmypdf -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path"
+  mv "$staging_path" "$pdf_path"
+}
+
+compress_pdf() {
+  local pdf_path=$1
+
+  local staging_path="$tmp_ephemeral_dir/postprocess-compress.pdf"
 
   # Compress (if the file is big enough and we're compressing)
-  local filesize_threshold=$(setting '.manuals.postprocess.downsample_filesize_threshold // 0')
-  local resolution=$(setting '.manuals.postprocess.resolution // "original"')
-  if [ $(stat -c%s "$pdf_path") -gt "$filesize_threshold" ] && [ "$resolution" != 'original' ]; then
-    local quality_factor=$(setting '.manuals.postprocess.quality_factor')
-    local downsample_threshold=$(setting '.manuals.postprocess.downsample_threshold')
+  local filesize_threshold=$(setting '.manuals.postprocess.compress.filesize_threshold // 0')
+  if [ $(stat -c%s "$pdf_path") -gt "$filesize_threshold" ]; then
+    local resolution=$(setting '.manuals.postprocess.compress.resolution')
+    local quality_factor=$(setting '.manuals.postprocess.compress.quality_factor')
+    local downsample_threshold=$(setting '.manuals.postprocess.compress.resolution_threshold')
 
-    gs "${gsargs[@]}" \
-      -sOutputFile="$pdf_tmp_path" \
+    gs_exec \
+      -sOutputFile="$staging_path" \
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true \
@@ -291,22 +297,52 @@ postprocess_pdf() {
       -f "$pdf_path"
 
     # Only use the compressed file if it's actually smaller
-    if [ $(stat -c%s "$pdf_tmp_path") -lt $(stat -c%s "$pdf_path") ]; then
-      mv "$pdf_tmp_path" "$pdf_path"
+    if [ $(stat -c%s "$staging_path") -lt $(stat -c%s "$pdf_path") ]; then
+      mv "$staging_path" "$pdf_path"
     else
-      rm "$pdf_tmp_path"
+      rm "$staging_path"
     fi
   fi
+}
+
+# Runs any configured post-processing on the PDF, including:
+# * Optimize
+# * Truncate
+# * Rotate
+# * OCR
+# * Compress
+postprocess_pdf() {
+  local pdf_path=$1
+  local target_path=$2
+  local languages=$3
+  local pages=$4
+  local rotate=${5:-0}
+
+  # Optimize
+  optimize_pdf "$pdf_path"
 
   # Rotate
   if [ "$rotate" != '0' ]; then
-    mutool draw -R "$rotate" -o "$pdf_path" "$pdf_path"
+    rotate_pdf "$pdf_path" "$rotate"
   fi
 
-  # Copy to target
+  # OCR
+  local ocr_enabled=$(setting '.manuals.postprocess.ocr.enabled // false')
+  if [ "$ocr_enabled" == 'true' ]; then
+    ocr_pdf "$pdf_path" "$languages"
+  fi
+
+  # Compress
+  local compress_enabled=$(setting '.manuals.postprocess.compress.enabled // false')
+  if [ "$compress_enabled" == 'true' ]; then
+    compress_pdf "$pdf_path" "$languages"
+  fi
+
+  # Move to target
   if validate_pdf "$pdf_path"; then
-    cp "$pdf_path" "$target_path"
+    mv "$pdf_path" "$target_path"
   else
+    rm "$pdf_path"
     return 1
   fi
 }
@@ -436,13 +472,8 @@ install() {
         cp "$archive_path" "$postprocess_path"
       else
         # Download file hasn't been processed -- do so now
-        if ! {
-          convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" &&
-          postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['languages']}" "${manual['pages']}" "${manual['rotate']}";
-        }; then
-          echo "[${manual['rom_name']}] Failed to post-process from $url (archive: $archive_url)"
-          continue
-        fi
+        convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}"
+        postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['languages']}" "${manual['pages']}" "${manual['rotate']}"
       fi
     fi
 

@@ -31,11 +31,16 @@
       "install": "{base}/{name}.pdf"
     },
     "postprocess": {
-      "resolution": "original",
-      "quality_factor": 0.9,
-      "downsample_filesize_threshold": 0,
-      "ocr": true,
-      "downsample_resolution_threshold": 1.0
+      "ocr": {
+        "enabled": true
+      },
+      "compress": {
+        "enabled": true,
+        "resolution": 150,
+        "quality_factor": 0.9,
+        "filesize_threshold": 1,
+        "resolution_threshold": 1.0
+      }
     },
     "keep_downloads": true
   },
