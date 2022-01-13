@@ -689,7 +689,6 @@ or so (so a 2TB drive).
 The following emulators / cores are built from source:
 
 * lr-yabasanshiro (unofficial, no binaries available yet)
-* yabasanshiro (unofficial, no binaries available yet)
 
 ### Performance
 
