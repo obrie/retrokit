@@ -218,6 +218,7 @@ ocr_pdf() {
 # * Rotate
 # * Truncate
 # * Optimize
+# * OCR
 # * Compress
 postprocess_pdf() {
   local pdf_path=$1 # source
