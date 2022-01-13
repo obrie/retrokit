@@ -169,13 +169,13 @@ convert_to_pdf() {
   elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
     # Zip of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
-    unzip -j "$source_path" -d "$extract_path"
+    unzip -q -j "$source_path" -d "$extract_path"
     combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
     # Rar of images -- extract and concatenate into pdf
     rm -rf "$extract_path"
-    unrar e "$source_path" "$extract_path/"
+    unrar e -idq "$source_path" "$extract_path/"
     combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
