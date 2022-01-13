@@ -12,6 +12,38 @@ declare -A domain_timestamps
 # This does not apply to archive.org domains.
 DOWNLOAD_INTERVAL=60
 
+# Maps manual language codes to Tesseract language codes
+TESSERACT_LANGUAGES=(
+  [ar]=ara
+  [cs]=ces
+  [da]=dan
+  [de]=deu
+  [en-au]=eng
+  [en-ca]=eng
+  [en-gb]=eng
+  [en]=eng
+  [es]=spa
+  [fi]=fin
+  [fr]=fra
+  [it]=ita
+  [ja]=jpn
+  [ko]=kor
+  [nl]=nld
+  [pl]=pol
+  [pt]=por
+  [ru]=rus
+  [sv]=swe
+  [zh]=chi_sim
+)
+
+# Common settings
+base_path_template=$(setting '.manuals.paths.base')
+download_path_template=$(setting '.manuals.paths.download')
+archive_path_template=$(setting '.manuals.paths.archive')
+postprocess_path_template=$(setting '.manuals.paths.postprocess')
+install_path_template=$(setting '.manuals.paths.install')
+archive_url_template=$(setting '.manuals.archive.url')
+
 # Downloads the given URL, ensuring that a certain amount of time has passed
 # between subsequent downloads to the domain
 download_with_sleep() {
@@ -161,6 +193,27 @@ convert_to_pdf() {
   validate_pdf "$target_path"
 }
 
+# Attempts to make the PDF searchable by running the Tesseract OCR processor
+# against the PDF with the specific languages
+ocr_pdf() {
+  local pdf_path=$1
+  local languages=$2
+
+  # Translate manual language codes to Tesseract language names
+  local ocr_languages=()
+  while IFS=, read language; do
+    ocr_languages+=(${TESSERACT_LANGUAGES[language]})
+  done < <(echo "$languages")
+  local ocr_languages_csv=$(IFS=, ; echo "${ocr_languages[*]}")
+
+  local output_path="$tmp_ephemeral_dir/ocr.pdf"
+  if ocrmypdf -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$output_path"; then
+    mv "$output_path" "$pdf_path"
+  else
+    return 1
+  fi
+}
+
 # Runs any configured post-processing on the PDF, including:
 # * Rotate
 # * Truncate
@@ -169,8 +222,9 @@ convert_to_pdf() {
 postprocess_pdf() {
   local pdf_path=$1 # source
   local target_path=$2
-  local pages=$3
-  local rotate=${4:-0}
+  local languages=$3
+  local pages=$4
+  local rotate=${5:-0}
   local pdf_tmp_path="$tmp_ephemeral_dir/postprocess-tmp.pdf"
 
   # Optimize (always)
@@ -211,6 +265,12 @@ postprocess_pdf() {
   gs "${gsargs[@]}" -sOutputFile="$pdf_tmp_path" -f "$pdf_path"
   mv "$pdf_tmp_path" "$pdf_path"
 
+  # OCR
+  local ocr_enabled=$(setting '.manuals.postprocess.ocr')
+  if [ "$ocr_enabled" == 'true' ]; then
+    ocr_pdf "$pdf_path" "$languages"
+  fi
+
   # Compress (if the file is big enough and we're compressing)
   local filesize_threshold=$(setting '.manuals.postprocess.downsample_filesize_threshold // 0')
   local resolution=$(setting '.manuals.postprocess.resolution // "original"')
@@ -219,7 +279,7 @@ postprocess_pdf() {
     local downsample_threshold=$(setting '.manuals.postprocess.downsample_threshold')
 
     gs "${gsargs[@]}" \
-      -sOutputFile="$pdf_tmp_path"
+      -sOutputFile="$pdf_tmp_path" \
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true \
@@ -243,20 +303,12 @@ postprocess_pdf() {
   fi
 
   # Copy to target
-  if validate_pdf "$target_path"; then
+  if validate_pdf "$pdf_path"; then
     cp "$pdf_path" "$target_path"
   else
     return 1
   fi
 }
-
-# Path templates
-base_path_template=$(setting '.manuals.paths.base')
-download_path_template=$(setting '.manuals.paths.download')
-archive_path_template=$(setting '.manuals.paths.archive')
-postprocess_path_template=$(setting '.manuals.paths.postprocess')
-install_path_template=$(setting '.manuals.paths.install')
-archive_url_template=$(setting '.manuals.archive.url')
 
 # Builds an associative array representing the manual
 build_manual() {
@@ -383,7 +435,10 @@ install() {
         cp "$archive_path" "$postprocess_path"
       else
         # Download file hasn't been processed -- do so now
-        if ! { convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" && postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['pages']}" "${manual['rotate']}"; }; then
+        if ! {
+          convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" &&
+          postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['languages']}" "${manual['pages']}" "${manual['rotate']}";
+        }; then
           echo "[${manual['rom_name']}] Failed to post-process from $url (archive: $archive_url)"
           continue
         fi

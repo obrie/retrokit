@@ -24,6 +24,26 @@ install() {
 
   # Convert doc to pdf
   sudo apt install -y unoconv
+
+  # OCR PDF to make it searchable
+  sudo apt install -y ocrmypdf \
+    tesseract-ocr-ara \
+    tesseract-ocr-ces \
+    tesseract-ocr-chi-sim \
+    tesseract-ocr-dan \
+    tesseract-ocr-deu \
+    tesseract-ocr-fin \
+    tesseract-ocr-fra \
+    tesseract-ocr-ita \
+    tesseract-ocr-jpn \
+    tesseract-ocr-kor \
+    tesseract-ocr-nld \
+    tesseract-ocr-nor \
+    tesseract-ocr-pol \
+    tesseract-ocr-por \
+    tesseract-ocr-rus \
+    tesseract-ocr-spa \
+    tesseract-ocr-swe
 }
 
 uninstall() {

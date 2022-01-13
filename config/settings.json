@@ -34,6 +34,7 @@
       "resolution": "original",
       "quality_factor": 0.9,
       "downsample_filesize_threshold": 0,
+      "ocr": true,
       "downsample_resolution_threshold": 1.0
     },
     "keep_downloads": true

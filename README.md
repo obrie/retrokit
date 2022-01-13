@@ -54,6 +54,7 @@ Additionally, it provides Game Manual management capabilities, including:
 
 * Installation via public manual sets
 * In-game viewing and control of manuals via keyboard and joysticks
+* OCR'd / Searchable
 
 This is all supported for the following systems:
 
