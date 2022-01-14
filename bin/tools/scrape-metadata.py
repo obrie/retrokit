@@ -184,7 +184,10 @@ class Scraper:
         ], check=True, capture_output=True).stdout.decode()
 
         if 'found! :)' not in output and re.search(self.ERROR_PATTERN, output):
+            print(f'[{machine.name}] Found')
             self.failed_scrapes.add(machine.name)
+        else:
+            print(f'[{machine.name}] Not found')
 
     # Build an emulationstation gamelist.xml that we can parse
     def build_gamelist(self) -> None:
