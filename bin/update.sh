@@ -8,7 +8,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
 usage() {
-  echo "usage: $0 [command]"
+  echo "usage: $0 <command> [command_args]"
   exit 1
 }
 
@@ -21,25 +21,31 @@ update_retropie_setup() {
   clear
 }
 
+# Update packages
+update_retropie_packages() {
+  if [ $# -eq 0 ]; then
+    sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
+  else
+    for package in "$@"; do
+      sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
+    done
+  fi
+}
+
 # Update system
 update_system() {
   sudo apt update
   sudo apt-get -y dist-upgrade
 }
 
-# Update packages
-update_packages() {
-  sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
-}
-
 # Update RetroPie-Setup and packages
 update_retropie() {
   update_retropie_setup
-  update_packages
+  update_retropie_packages
 }
 
-if [[ $# -ne 1 ]]; then
+if [[ $# -eq 0 ]]; then
   usage
 fi
 
-"update_$1"
+"update_$1" "${@:2}"

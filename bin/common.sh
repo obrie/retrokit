@@ -384,9 +384,10 @@ install_retropie_package() {
   if [ -d "$install_dir" ]; then
     pkg_origin=$(crudini --get "/opt/retropie/$package_type/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
 
-    # We only update if the package is installed and the build source has remained the same
+    # If the package is already installed and the build source has remained the same,
+    # then don't do anything.  Updates must be done explicitly by the user.
     if [ "$pkg_origin" == "$build" ]; then
-      mode='_update_'
+      return 0
     fi
   fi
 
