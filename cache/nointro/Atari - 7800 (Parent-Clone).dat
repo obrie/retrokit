@@ -5,9 +5,9 @@
 		<name>Atari - 7800 (Parent-Clone)</name>
 		<description>Atari - 7800 (Parent-Clone)</description>
 		<clrmamepro header="No-Intro_A7800.xml"/>
-		<version>20201127-133057</version>
-		<date>20201127-133057</date>
-		<author>alexian</author>
+		<version>20210920-065554</version>
+		<date>20210920-065554</date>
+		<author>BigFred, Flashfire42, Gefflon, Hiccup, omonim2007, relax</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Atari 7800 (Europe)">
@@ -510,6 +510,10 @@
 		<description>Rescue on Fractalus (USA) (Proto)</description>
 		<release name="Rescue on Fractalus (USA) (Proto)" region="USA"/>
 		<rom name="Rescue on Fractalus (USA) (Proto).a78" size="32768" crc="9a74fbf2" md5="8f7eb10ad0bd75474abf0c6c36c08486" sha1="6653022f38e553d475896a918850158eaf8f77ff"/>
+	</game>
+	<game name="Rikki &amp; Vikki (World) (Aftermarket) (Unl)">
+		<description>Rikki &amp; Vikki (World) (Aftermarket) (Unl)</description>
+		<rom name="Rikki &amp; Vikki (World) (Aftermarket) (Unl).a78" size="524288" crc="3ea5d821" md5="b3bc889e9cc498636990c5a4d980e85c" sha1="b26d3125a109fed15e380dc32f2e55d84f350450"/>
 	</game>
 	<game name="Robotron - 2084 (USA)">
 		<description>Robotron - 2084 (USA)</description>

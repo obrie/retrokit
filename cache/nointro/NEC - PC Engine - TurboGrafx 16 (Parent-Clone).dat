@@ -4,8 +4,8 @@
 	<header>
 		<name>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</name>
 		<description>NEC - PC Engine - TurboGrafx 16 (Parent-Clone)</description>
-		<version>20210607-040618</version>
-		<date>20210607-040618</date>
+		<version>20220106-193148</version>
+		<date>20220106-193148</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -83,6 +83,10 @@
 		<description>PC Denjin - Punkic Cyborgs (Japan)</description>
 		<release name="PC Denjin - Punkic Cyborgs (Japan)" region="JPN"/>
 		<rom name="PC Denjin - Punkic Cyborgs (Japan).pce" size="524288" crc="740491c2" md5="7320bc8fb2a9417ee63cf77ada108753" sha1="7713236070c2d5252faa651b6a8b7726cadb9bf4" status="verified"/>
+	</game>
+	<game name="Air Zonk (USA) (Beta)">
+		<description>Air Zonk (USA) (Beta)</description>
+		<rom name="Air Zonk (USA) (Beta).pce" size="524288" crc="4f8299c8" md5="9b7ddd6395c9cea9d8a6da32f2a36b7a" sha1="eb2a75daab0c22a397d448c2daa8a52aac3fb612"/>
 	</game>
 	<game name="Alien Crush (USA)">
 		<description>Alien Crush (USA)</description>
@@ -476,6 +480,10 @@
 		<description>Darius Alpha (Japan) (SG Enhanced)</description>
 		<release name="Darius Alpha (Japan) (SG Enhanced)" region="JPN"/>
 		<rom name="Darius Alpha (Japan) (SG Enhanced).pce" size="393216" crc="b0ba689f" md5="c87135a6af3344c9316fe06fccbcfd97" sha1="f59c538fa632f687c356af70659fb07b37933f78"/>
+	</game>
+	<game name="Darius Alpha (World) (SG Enhanced) (Darius Cozmic Collection)" cloneof="Darius Alpha (Japan) (SG Enhanced)">
+		<description>Darius Alpha (World) (SG Enhanced) (Darius Cozmic Collection)</description>
+		<rom name="Darius Alpha (World) (SG Enhanced) (Darius Cozmic Collection).pce" size="393216" crc="eb2466f9" md5="f98df7740f72fbab06e9252a0160a807" sha1="a31340575de9aaad33338a807baa5fca33d18767"/>
 	</game>
 	<game name="Darius Plus (Japan) (SG Enhanced)">
 		<description>Darius Plus (Japan) (SG Enhanced)</description>
@@ -1721,10 +1729,10 @@
 		<release name="Super Momotarou Dentetsu (Japan)" region="JPN"/>
 		<rom name="Super Momotarou Dentetsu (Japan).pce" size="393216" crc="3eb5304a" md5="f365369bf476cebccb48f3a38fe39cc6" sha1="353a1ff7997df5d7be6ee03f1157fd746939ed61"/>
 	</game>
-	<game name="Super Momotarou Dentetsu (Japan) (Alt 1)" cloneof="Super Momotarou Dentetsu (Japan)">
-		<description>Super Momotarou Dentetsu (Japan) (Alt 1)</description>
-		<release name="Super Momotarou Dentetsu (Japan) (Alt 1)" region="JPN"/>
-		<rom name="Super Momotarou Dentetsu (Japan) (Alt 1).pce" size="393216" crc="69d52e7a" md5="ef3f7d0333b5ee8f09068c6a1bed71af" sha1="e4c6129e98cf37fce6cfc5352d112b1ec728d166"/>
+	<game name="Super Momotarou Dentetsu (Japan) (Alt)" cloneof="Super Momotarou Dentetsu (Japan)">
+		<description>Super Momotarou Dentetsu (Japan) (Alt)</description>
+		<release name="Super Momotarou Dentetsu (Japan) (Alt)" region="JPN"/>
+		<rom name="Super Momotarou Dentetsu (Japan) (Alt).pce" size="393216" crc="69d52e7a" md5="ef3f7d0333b5ee8f09068c6a1bed71af" sha1="e4c6129e98cf37fce6cfc5352d112b1ec728d166"/>
 	</game>
 	<game name="Super Momotarou Dentetsu II (Japan)">
 		<description>Super Momotarou Dentetsu II (Japan)</description>
@@ -1884,6 +1892,10 @@
 		<description>Turrican (USA)</description>
 		<release name="Turrican (USA)" region="USA"/>
 		<rom name="Turrican (USA).pce" size="262144" crc="eb045edf" md5="52d40c4e0a8435308c22c69a54e4baae" sha1="a5830c0d5cd94e3c6f33e1799bb123857400b1bc"/>
+	</game>
+	<game name="TV Sports Baseball (USA) (Proto)">
+		<description>TV Sports Baseball (USA) (Proto)</description>
+		<rom name="TV Sports Baseball (USA) (Proto).pce" size="524288" crc="b6b38d61" md5="9561486f27c94d8a326f0d321ad4f65b" sha1="b37e446f0bf62c582c82f32dc3f2fc080acf2cbc"/>
 	</game>
 	<game name="TV Sports Basketball (USA)">
 		<description>TV Sports Basketball (USA)</description>
@@ -2049,10 +2061,10 @@
 		<release name="Zero4 Champ (Japan)" region="JPN"/>
 		<rom name="Zero4 Champ (Japan).pce" size="524288" crc="ee156721" md5="a755177ecfe1910928fa74d818a10e7c" sha1="79d9878e285e426b9ca58e15249a1bc98186d4e9"/>
 	</game>
-	<game name="Zero4 Champ (Japan) (Alt 1)" cloneof="Zero4 Champ (Japan)">
-		<description>Zero4 Champ (Japan) (Alt 1)</description>
-		<release name="Zero4 Champ (Japan) (Alt 1)" region="JPN"/>
-		<rom name="Zero4 Champ (Japan) (Alt 1).pce" size="524288" crc="b77f2e2f" md5="cf51006c86541b94e8305f456c4d47c5" sha1="2b664760931cc6011d31cae310410dab7cba2067"/>
+	<game name="Zero4 Champ (Japan) (Alt)" cloneof="Zero4 Champ (Japan)">
+		<description>Zero4 Champ (Japan) (Alt)</description>
+		<release name="Zero4 Champ (Japan) (Alt)" region="JPN"/>
+		<rom name="Zero4 Champ (Japan) (Alt).pce" size="524288" crc="b77f2e2f" md5="cf51006c86541b94e8305f456c4d47c5" sha1="2b664760931cc6011d31cae310410dab7cba2067"/>
 	</game>
 	<game name="Zipang (Japan)">
 		<description>Zipang (Japan)</description>

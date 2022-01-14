@@ -2,10 +2,10 @@
 <!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
 <datafile>
 	<header>
-		<name>Commodore - 64 (Parent-Clone)</name>
-		<description>Commodore - 64 (Parent-Clone)</description>
-		<version>20201028-053223</version>
-		<date>20201028-053223</date>
+		<name>Commodore - Commodore 64 (Parent-Clone)</name>
+		<description>Commodore - Commodore 64 (Parent-Clone)</description>
+		<version>20210216-232616</version>
+		<date>20210216-232616</date>
 		<author></author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -302,10 +302,10 @@
 		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (ECRBLU).bin" size="8194" crc="1e394b6c" md5="788cb31614c62b42f7546d5f021b12ee" sha1="d8f893dd1d87ab77a4e4d9ffd3b3f97d000e8a2e"/>
 		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (ECRGRN).bin" size="8194" crc="f569c49c" md5="3e4a0a8183b32581bd18eba2f7dbd31d" sha1="4567cbe4b23670449a904f74dcf5ed56c52c16e7"/>
 	</game>
-	<game name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Alt 1) (Program)">
-		<description>Calc Result - The Spread Sheet - Easy (USA, Europe) (Alt 1) (Program)</description>
-		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Alt 1) (Program) (hn613128).bin" size="16384" crc="927793ec" md5="22232dc88a410eab21ddbf247df11a1b" sha1="2005cf7d8dc024b7bbb730dec6bbeb2ea9e81e57"/>
-		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Alt 1) (Program) (hn61364).bin" size="8192" crc="f617bec4" md5="91b6af5a19cf00dfe73fa10db961ab2b" sha1="c5ef2418cf9dba3e14f586d5d6997f271b521a24"/>
+	<game name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (Alt)">
+		<description>Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (Alt)</description>
+		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (hn613128) (Alt).bin" size="16384" crc="927793ec" md5="22232dc88a410eab21ddbf247df11a1b" sha1="2005cf7d8dc024b7bbb730dec6bbeb2ea9e81e57"/>
+		<rom name="Calc Result - The Spread Sheet - Easy (USA, Europe) (Program) (hn61364) (Alt).bin" size="8192" crc="f617bec4" md5="91b6af5a19cf00dfe73fa10db961ab2b" sha1="c5ef2418cf9dba3e14f586d5d6997f271b521a24"/>
 	</game>
 	<game name="Capture 2 (USA, Europe) (Program)">
 		<description>Capture 2 (USA, Europe) (Program)</description>
@@ -347,9 +347,9 @@
 		<description>Coccinelle cherche dessinateur (France)</description>
 		<rom name="Coccinelle cherche dessinateur (France).crt" size="8272" crc="4b0db110" md5="24f014babfe84955a4ef6d8fb45b0854" sha1="35f25deec4e1fdec7f7cfdab8ea2fa9e8145f5dc"/>
 	</game>
-	<game name="Coco-Notes featuring... the Jazz Scats! (USA, Europe)">
-		<description>Coco-Notes featuring... the Jazz Scats! (USA, Europe)</description>
-		<rom name="Coco-Notes featuring... the Jazz Scats! (USA, Europe).crt" size="16464" crc="1e1ec26f" md5="3c7253744aa4cf01f7a93cd45ab417c1" sha1="f038cedb38d5874aa5ceb5791efb848ec5b3985e"/>
+	<game name="Coco Notes (USA, Europe)">
+		<description>Coco Notes (USA, Europe)</description>
+		<rom name="Coco Notes (USA, Europe).crt" size="16464" crc="1e1ec26f" md5="3c7253744aa4cf01f7a93cd45ab417c1" sha1="f038cedb38d5874aa5ceb5791efb848ec5b3985e"/>
 	</game>
 	<game name="Colossus Chess + Silicon Syborgs + International Football (USA, Europe) (Super Games)">
 		<description>Colossus Chess + Silicon Syborgs + International Football (USA, Europe) (Super Games)</description>
@@ -378,8 +378,8 @@
 	</game>
 	<game name="Counterweight Kate (World) (Aftermarket)">
 		<description>Counterweight Kate (World) (Aftermarket)</description>
-		<rom name="Counterweight Kate (World) (Aftermarket).d64" size="174848" crc="eea2850e" md5="d3bf69bf70b6c7a43cfaa96d87ffafe4" sha1="2584563559bf7a4fe2a9585efbbe3e410c368241" status="verified"/>
-		<rom name="Counterweight Kate (World) (Aftermarket).cjm" size="74" crc="5fabfd96" md5="3d81fe3e690ef7481290db332cffa6ac" sha1="b9616c42d98c1aee306a12122c07afd5127c4d9b" status="verified"/>
+		<rom name="Counterweight Kate (World) (Aftermarket).d64" size="174848" crc="eea2850e" md5="d3bf69bf70b6c7a43cfaa96d87ffafe4" sha1="2584563559bf7a4fe2a9585efbbe3e410c368241"/>
+		<rom name="Counterweight Kate (World) (Aftermarket).cjm" size="74" crc="5fabfd96" md5="3d81fe3e690ef7481290db332cffa6ac" sha1="b9616c42d98c1aee306a12122c07afd5127c4d9b"/>
 	</game>
 	<game name="Crisis Mountain (USA, Europe)">
 		<description>Crisis Mountain (USA, Europe)</description>
@@ -441,9 +441,9 @@
 		<description>Dot Gobbler (USA, Europe)</description>
 		<rom name="Dot Gobbler (USA, Europe).crt" size="8272" crc="d3007491" md5="a6e570659c2f41e99fbd1ffa6342e72f" sha1="b5fcb02678e3c0c65bebb27c31900df0b6c024da"/>
 	</game>
-	<game name="Dot Gobbler (USA, Europe) (Alt 1)">
-		<description>Dot Gobbler (USA, Europe) (Alt 1)</description>
-		<rom name="Dot Gobbler (USA, Europe) (Alt 1).crt" size="8272" crc="99072c64" md5="d3ee06aadfe79fb963fe76a4a3123f54" sha1="484738df7a6dd66ba2878489a94c53523855d120"/>
+	<game name="Dot Gobbler (USA, Europe) (Alt)">
+		<description>Dot Gobbler (USA, Europe) (Alt)</description>
+		<rom name="Dot Gobbler (USA, Europe) (Alt).crt" size="8272" crc="99072c64" md5="d3ee06aadfe79fb963fe76a4a3123f54" sha1="484738df7a6dd66ba2878489a94c53523855d120"/>
 	</game>
 	<game name="Double Dragon (USA, Europe) (HES)">
 		<description>Double Dragon (USA, Europe) (HES)</description>
@@ -598,9 +598,9 @@
 		<description>H.E.R.O. - Helicopter Emergency Rescue Operation (USA, Europe)</description>
 		<rom name="H.E.R.O. - Helicopter Emergency Rescue Operation (USA, Europe).crt" size="16464" crc="894c1b13" md5="fc04ef231521ce76f92a385899d9ba89" sha1="9968558c1afd6960ad97b783e64b555abace251f"/>
 	</game>
-	<game name="Halftime Battlin' Bands featuring... the Jazz Scats! (USA, Europe)">
-		<description>Halftime Battlin' Bands featuring... the Jazz Scats! (USA, Europe)</description>
-		<rom name="Halftime Battlin' Bands featuring... the Jazz Scats! (USA, Europe).crt" size="16464" crc="115a0d9a" md5="0102b3ac6a3e876187f33d5dcd7063db" sha1="6493020f43e0e10ebc4253aa97dbc39f530cf5db"/>
+	<game name="Halftime Battlin' Bands (USA, Europe)">
+		<description>Halftime Battlin' Bands (USA, Europe)</description>
+		<rom name="Halftime Battlin' Bands (USA, Europe).crt" size="16464" crc="115a0d9a" md5="0102b3ac6a3e876187f33d5dcd7063db" sha1="6493020f43e0e10ebc4253aa97dbc39f530cf5db"/>
 	</game>
 	<game name="Happy-Packer (Germany) (Program)">
 		<description>Happy-Packer (Germany) (Program)</description>
@@ -975,9 +975,9 @@
 		<description>Radar Rat Race (Japan) (v02) (MAX)</description>
 		<rom name="Radar Rat Race (Japan) (v02) (MAX).crt" size="8272" crc="742e5f29" md5="953268d49b474e125a99fa31097935f9" sha1="04d1adccf057c0e9d403fecb7058f7285b1e115e"/>
 	</game>
-	<game name="Radar Rat Race (Japan) (v02) (Alt 1) (MAX)">
-		<description>Radar Rat Race (Japan) (v02) (Alt 1) (MAX)</description>
-		<rom name="Radar Rat Race (Japan) (v02) (Alt 1) (MAX).crt" size="8272" crc="04f400e2" md5="cd24678fea44a2512b0449e7433a5e41" sha1="7fe40cb69aa40c0aa3b3330c5e3ce344f52b4437"/>
+	<game name="Radar Rat Race (Japan) (v02) (MAX) (Alt)">
+		<description>Radar Rat Race (Japan) (v02) (MAX) (Alt)</description>
+		<rom name="Radar Rat Race (Japan) (v02) (MAX) (Alt).crt" size="8272" crc="04f400e2" md5="cd24678fea44a2512b0449e7433a5e41" sha1="7fe40cb69aa40c0aa3b3330c5e3ce344f52b4437"/>
 	</game>
 	<game name="Ranch (USA, Europe)">
 		<description>Ranch (USA, Europe)</description>

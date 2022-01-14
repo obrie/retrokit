@@ -31,7 +31,8 @@ sync_system_nointro_dats() {
 
     if [ -n "$zip_filename" ]; then
       unzip -j "$nointro_pack_path" "$zip_filename" -d "$tmp_dir/"
-      mv -v "$tmp_dir/$zip_filename" "$cache_dir/nointro/$nointro_name.dat"
+      cat "$tmp_dir/$zip_filename" | tr -d '\r' > "$cache_dir/nointro/$nointro_name.dat"
+      rm "$tmp_dir/$zip_filename"
     else
       echo "[WARN] No dat file found for $system"
     fi

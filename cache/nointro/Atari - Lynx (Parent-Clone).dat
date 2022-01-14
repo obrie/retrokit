@@ -6,9 +6,9 @@
 		<description>Atari - Lynx (Parent-Clone)</description>
 		<clrmamepro header="No-Intro_LNX.xml"/>
 		<romcenter plugin="lynx.dll"/>
-		<version>20201108-203053</version>
-		<date>20201108-203053</date>
-		<author>BitLooter</author>
+		<version>20220107-200508</version>
+		<date>20220107-200508</date>
+		<author>BigFred, C. V. Reynolds, Flashfire42, Hiccup, kazumi213, norkmetnoil577, omonim2007, relax, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Atari Lynx (USA, Europe)">
@@ -239,7 +239,7 @@
 		<description>Jimmy Connors' Tennis (USA, Europe)</description>
 		<release name="Jimmy Connors' Tennis (USA, Europe)" region="EUR"/>
 		<release name="Jimmy Connors' Tennis (USA, Europe)" region="USA"/>
-		<rom name="Jimmy Connors' Tennis (USA, Europe).lnx" size="524288" crc="2455b6cf" md5="087e6ed018ad0573bd7ce3a91d34f2c9" sha1="d9c4220653b2dfbd6b26c0a0c81c40cb3108ee85"/>
+		<rom name="Jimmy Connors' Tennis (USA, Europe).lnx" size="524288" crc="2455b6cf" md5="087e6ed018ad0573bd7ce3a91d34f2c9" sha1="d9c4220653b2dfbd6b26c0a0c81c40cb3108ee85" status="verified"/>
 	</game>
 	<game name="Joust (USA, Europe)">
 		<description>Joust (USA, Europe)</description>
@@ -280,15 +280,19 @@
 		<release name="Lexis (USA)" region="USA"/>
 		<rom name="Lexis (USA).lnx" size="262144" crc="0271b6e9" md5="7ee41edaef283459c9df93366c5da267" sha1="b973cee4a58dbae5ab2d540b38db90aae78ba323"/>
 	</game>
-	<game name="Lode Runner (USA) (Proto) (Unl)">
-		<description>Lode Runner (USA) (Proto) (Unl)</description>
-		<release name="Lode Runner (USA) (Proto) (Unl)" region="USA"/>
-		<rom name="Lode Runner (USA) (Proto) (Unl).lnx" size="262144" crc="8b4d5ed6" md5="96fd77f3527bc6f65977b99ab63d7f84" sha1="10aaad83a40080fb4400658ff6d667f85647a39c"/>
+	<game name="Lode Runner (USA) (Proto 2)">
+		<description>Lode Runner (USA) (Proto 2)</description>
+		<release name="Lode Runner (USA) (Proto 2)" region="USA"/>
+		<rom name="Lode Runner (USA) (Proto 2).lnx" size="262144" crc="ae5ac8a9" md5="908ced914b1308d166ae83226aa12985" sha1="700e95602fae8439aa992238a8218360b0e5175f"/>
 	</game>
-	<game name="Loopz (USA) (Proto)">
-		<description>Loopz (USA) (Proto)</description>
-		<release name="Loopz (USA) (Proto)" region="USA"/>
-		<rom name="Loopz (USA) (Proto).lnx" size="262144" crc="b1c25ef1" md5="8399c8fba48ba1a4389a96e75838dc49" sha1="b43b0841a5d315d8e515ceaece29875ba6f9afbb"/>
+	<game name="Lode Runner (USA) (Proto 1)" cloneof="Lode Runner (USA) (Proto 2)">
+		<description>Lode Runner (USA) (Proto 1)</description>
+		<rom name="Lode Runner (USA) (Proto 1).lnx" size="262144" crc="8b4d5ed6" md5="96fd77f3527bc6f65977b99ab63d7f84" sha1="10aaad83a40080fb4400658ff6d667f85647a39c"/>
+	</game>
+	<game name="Loopz (USA) (Proto) (1992-11-05)">
+		<description>Loopz (USA) (Proto) (1992-11-05)</description>
+		<release name="Loopz (USA) (Proto) (1992-11-05)" region="USA"/>
+		<rom name="Loopz (USA) (Proto) (1992-11-05).lnx" size="262144" crc="b1c25ef1" md5="8399c8fba48ba1a4389a96e75838dc49" sha1="b43b0841a5d315d8e515ceaece29875ba6f9afbb"/>
 	</game>
 	<game name="Lynx Casino (USA, Europe)">
 		<description>Lynx Casino (USA, Europe)</description>
@@ -363,6 +367,10 @@
 		<release name="Pit-Fighter (USA, Europe)" region="EUR"/>
 		<release name="Pit-Fighter (USA, Europe)" region="USA"/>
 		<rom name="Pit-Fighter (USA, Europe).lnx" size="524288" crc="2393135f" md5="5565889a9a8817f99ec6dda322a70877" sha1="30f8c7acf41a988578768b251e88b636462752cb" status="verified"/>
+	</game>
+	<game name="Pit-Fighter (USA, Europe) (Beta) (1992-10-13)" cloneof="Pit-Fighter (USA, Europe)">
+		<description>Pit-Fighter (USA, Europe) (Beta) (1992-10-13)</description>
+		<rom name="Pit-Fighter (USA, Europe) (Beta) (1992-10-13).lnx" size="524288" crc="e7a5a4d0" md5="95581fd55a30557e2d2ec0419bb4bbb8" sha1="457a97a914ad90f11b6fcbe6eda11d29d9d4e016"/>
 	</game>
 	<game name="Power Factor (USA, Europe)">
 		<description>Power Factor (USA, Europe)</description>

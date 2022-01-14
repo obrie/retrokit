@@ -4,8 +4,8 @@
 	<header>
 		<name>Nintendo - Game Boy Advance (Parent-Clone)</name>
 		<description>Nintendo - Game Boy Advance (Parent-Clone)</description>
-		<version>20210617-025111</version>
-		<date>20210617-025111</date>
+		<version>20220108-192713</version>
+		<date>20220108-192713</date>
 		<author>alexian, kazumi213</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -21,7 +21,7 @@
 		<release name="[BIOS] Game Boy Advance (Japan) (Debug Version)" region="JPN"/>
 		<rom name="[BIOS] Game Boy Advance (Japan) (Debug Version).gba" size="16384" crc="15e1f676" md5="e60e599135009129b288988a1cba91df" sha1="aa98a2ad32b86106340665d1222d7d973a1361c7"/>
 	</game>
-	<game name="[BIOS] Game Boy Advance (World) (GameCube)">
+	<game name="[BIOS] Game Boy Advance (World) (GameCube)" cloneof="[BIOS] Game Boy Advance (World)">
 		<description>[BIOS] Game Boy Advance (World) (GameCube)</description>
 		<rom name="[BIOS] Game Boy Advance (World) (GameCube).gba" size="16384" crc="3f02ea8f" md5="672ea0bf0ffb91095c7a9ed4ee512aa2" sha1="3d4b5d095576f5b994bf62c00cac9428a88b2b78" status="verified"/>
 	</game>
@@ -644,6 +644,10 @@
 		<release name="Ace Combat Advance (USA, Europe)" region="USA"/>
 		<rom name="Ace Combat Advance (USA, Europe).gba" size="4194304" crc="43f5e157" md5="4e46dd3ae5c9c70c49587d093517049a" sha1="856a08e8f60f817b96add5bf2f6db186bea832ef"/>
 	</game>
+	<game name="Ace Combat Advance (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Ace Combat Advance (USA, Europe)">
+		<description>Ace Combat Advance (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Ace Combat Advance (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="2fa2c076" md5="01244a4865974ab2828673591c691159" sha1="f79a22f5927f31e91d9da50e1984451d9663505a"/>
+	</game>
 	<game name="Ace Lightning (Europe)">
 		<description>Ace Lightning (Europe)</description>
 		<release name="Ace Lightning (Europe)" region="EUR"/>
@@ -674,20 +678,20 @@
 		<release name="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)" region="EUR"/>
 		<rom name="Action Replay GBX (Europe) (En,Fr,De,It) (Unl).gba" size="262144" crc="18ce5322" md5="6667961aeaa0ea3e8211aa83cd1bcd11" sha1="3fc60fa1b564afcc6f70e3b8a106158e03bbb463"/>
 	</game>
-	<game name="Action Replay GBX (Europe) (En,Fr,De,It) (Alt 1) (Unl)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
-		<description>Action Replay GBX (Europe) (En,Fr,De,It) (Alt 1) (Unl)</description>
-		<release name="Action Replay GBX (Europe) (En,Fr,De,It) (Alt 1) (Unl)" region="EUR"/>
-		<rom name="Action Replay GBX (Europe) (En,Fr,De,It) (Alt 1) (Unl).gba" size="262144" crc="45bb6f4e" md5="1efa00a76962e01d5a0aebeb7b0ef8cb" sha1="6f1f797c4f2c7751be8783adb159a27849c2e2b7"/>
+	<game name="Action Replay GBX (Europe) (En,Fr,De,It) (Unl) (Alt)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
+		<description>Action Replay GBX (Europe) (En,Fr,De,It) (Unl) (Alt)</description>
+		<release name="Action Replay GBX (Europe) (En,Fr,De,It) (Unl) (Alt)" region="EUR"/>
+		<rom name="Action Replay GBX (Europe) (En,Fr,De,It) (Unl) (Alt).gba" size="262144" crc="45bb6f4e" md5="1efa00a76962e01d5a0aebeb7b0ef8cb" sha1="6f1f797c4f2c7751be8783adb159a27849c2e2b7"/>
 	</game>
 	<game name="Action Replay GBX (Europe) (Unl)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
 		<description>Action Replay GBX (Europe) (Unl)</description>
 		<release name="Action Replay GBX (Europe) (Unl)" region="EUR"/>
 		<rom name="Action Replay GBX (Europe) (Unl).gba" size="262144" crc="5ad72359" md5="136d8ce4db69b232133585f3bac449be" sha1="ee4815180741c99ba75de06a95aa7536d6264152"/>
 	</game>
-	<game name="GameShark GBA (USA) (Alt 1) (Unl)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
-		<description>GameShark GBA (USA) (Alt 1) (Unl)</description>
-		<release name="GameShark GBA (USA) (Alt 1) (Unl)" region="USA"/>
-		<rom name="GameShark GBA (USA) (Alt 1) (Unl).gba" size="262144" crc="9ad94c62" md5="7fa04c2a15d3561c9d2641aab6946d6a" sha1="9ab35e211ac9cc4aa4ce594c073b44c630e46814"/>
+	<game name="GameShark GBA (USA) (Unl) (Alt)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
+		<description>GameShark GBA (USA) (Unl) (Alt)</description>
+		<release name="GameShark GBA (USA) (Unl) (Alt)" region="USA"/>
+		<rom name="GameShark GBA (USA) (Unl) (Alt).gba" size="262144" crc="9ad94c62" md5="7fa04c2a15d3561c9d2641aab6946d6a" sha1="9ab35e211ac9cc4aa4ce594c073b44c630e46814"/>
 	</game>
 	<game name="GameShark GBA (USA) (Unl)" cloneof="Action Replay GBX (Europe) (En,Fr,De,It) (Unl)">
 		<description>GameShark GBA (USA) (Unl)</description>
@@ -1022,6 +1026,11 @@
 		<release name="Animaniacs - Lights, Camera, Action! (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Animaniacs - Lights, Camera, Action! (Europe) (En,Fr,De,Es,It).gba" size="8388608" crc="840d11c1" md5="4075c0553f360e180cf9efc899b1d8bc" sha1="85dd6bd76f285fac7ddbd729b76fbd5ed83e62cc"/>
 	</game>
+	<game name="Another World (World) (En,Fr) (Unl)">
+		<description>Another World (World) (En,Fr) (Unl)</description>
+		<release name="Another World (World) (En,Fr) (Unl)" region="EUR"/>
+		<rom name="Another World (World) (En,Fr) (Unl).gba" size="2010358" crc="86c4f772" md5="9cef2ca9fba8a4532629f8c7e7c9ddf8" sha1="41d39a0c34f72469dd3fbcc90190605b8ada93e6"/>
+	</game>
 	<game name="Ant Bully, The (Europe) (En,Fr,De,Es,It)">
 		<description>Ant Bully, The (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Ant Bully, The (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -1109,6 +1118,14 @@
 		<release name="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
 		<rom name="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl).gba" size="8388608" crc="a9b1ece5" md5="920882439cd994c2f0ab63d32a64eb80" sha1="7145d02143c1a81f6ea72063ac798642b2aaec3c" status="verified"/>
 	</game>
+	<game name="Asterix &amp; Obelix XXL (Europe) (Fr) (Beta 1)" cloneof="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Asterix &amp; Obelix XXL (Europe) (Fr) (Beta 1)</description>
+		<rom name="Asterix &amp; Obelix XXL (Europe) (Fr) (Beta 1).gba" size="8388608" crc="f6a977a5" md5="9f511c25d8d14ffea0f381e157dab483" sha1="ba93d8ac8f61c8655665740bb1f6fce97657b50c"/>
+	</game>
+	<game name="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl) (Beta 2)" cloneof="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl) (Beta 2)</description>
+		<rom name="Asterix &amp; Obelix XXL (Europe) (En,Fr,De,Es,It,Nl) (Beta 2).gba" size="16777216" crc="a3f66d2c" md5="111d4a8f1a4197c0fc05265552ef15c8" sha1="1d0d3b061c9c908abf2cea2c5f9f76dd9c44b7e9"/>
+	</game>
 	<game name="Astro Boy - Omega Factor (Europe) (En,Ja,Fr,De,Es,It)">
 		<description>Astro Boy - Omega Factor (Europe) (En,Ja,Fr,De,Es,It)</description>
 		<release name="Astro Boy - Omega Factor (Europe) (En,Ja,Fr,De,Es,It)" region="EUR"/>
@@ -1154,6 +1171,10 @@
 		<release name="Atomic Betty (USA, Europe)" region="EUR"/>
 		<release name="Atomic Betty (USA, Europe)" region="USA"/>
 		<rom name="Atomic Betty (USA, Europe).gba" size="8388608" crc="8919d82c" md5="a3dd3b98ad5049503af18f80c84731fc" sha1="59e7400802ab634065b9674de3f437ddf8309d6e"/>
+	</game>
+	<game name="Atomic Betty (USA, Europe) (Beta)" cloneof="Atomic Betty (USA, Europe)">
+		<description>Atomic Betty (USA, Europe) (Beta)</description>
+		<rom name="Atomic Betty (USA, Europe) (Beta).gba" size="16777216" crc="622dbecc" md5="c90c3ea34ef2da1808ae8617fd17917d" sha1="e9181fa211956449fd45ba06791abc8b2db1a669"/>
 	</game>
 	<game name="ATV - Quad Power Racing (Europe) (En,Fr,De,Es,It) (Rev 1)">
 		<description>ATV - Quad Power Racing (Europe) (En,Fr,De,Es,It) (Rev 1)</description>
@@ -1220,6 +1241,10 @@
 		<description>Back to Stone (USA) (En,Fr)</description>
 		<release name="Back to Stone (USA) (En,Fr)" region="USA"/>
 		<rom name="Back to Stone (USA) (En,Fr).gba" size="4194304" crc="4c29c9c8" md5="adc583b26cef3920fb9ffd152aeb98dd" sha1="db1fe7581858053b58412a97df262b46838a7be7"/>
+	</game>
+	<game name="Back to Stone (Europe) (En,Fr,De) (Beta)" cloneof="Back to Stone (Europe) (En,Fr)">
+		<description>Back to Stone (Europe) (En,Fr,De) (Beta)</description>
+		<rom name="Back to Stone (Europe) (En,Fr,De) (Beta).gba" size="4194304" crc="ef365600" md5="6cf0aca170ffe4141657c904f3924b9b" sha1="db8ff75f9bb1cf4afcc9c23f4f6a5adb93a900df"/>
 	</game>
 	<game name="Back Track (USA, Europe)">
 		<description>Back Track (USA, Europe)</description>
@@ -1350,6 +1375,10 @@
 	<game name="Banjo-Pilot (Unknown) (Beta)" cloneof="Banjo-Pilot (Europe) (En,Fr,De,Es,It)">
 		<description>Banjo-Pilot (Unknown) (Beta)</description>
 		<rom name="Banjo-Pilot (Unknown) (Beta).gba" size="15545696" crc="817fd31d" md5="8ec1a2fee7a9cc9508bf13dc423d424d" sha1="51b7fe0af316f4c25e08b2c8348b579e86697e3f"/>
+	</game>
+	<game name="Banjo-Pilot (Europe) (En,Fr,De,Es,It) (Beta) (2004-09-29)" cloneof="Banjo-Pilot (Europe) (En,Fr,De,Es,It)">
+		<description>Banjo-Pilot (Europe) (En,Fr,De,Es,It) (Beta) (2004-09-29)</description>
+		<rom name="Banjo-Pilot (Europe) (En,Fr,De,Es,It) (Beta) (2004-09-29).gba" size="33423360" crc="da65ca49" md5="1aa40ca7afd22d19e99c99058dfd4f58" sha1="f6331989356a644225725bc251af477524385217"/>
 	</game>
 	<game name="Barbie - The Princess and the Pauper (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Barbie - The Princess and the Pauper (Europe) (En,Fr,De,Es,It,Nl)</description>
@@ -1566,6 +1595,10 @@
 		<description>Beyblade V-Force - Ultimate Blader Jam (USA)</description>
 		<release name="Beyblade V-Force - Ultimate Blader Jam (USA)" region="USA"/>
 		<rom name="Beyblade V-Force - Ultimate Blader Jam (USA).gba" size="8388608" crc="4a49272b" md5="de37c8d6f9b8cd56dfd81ca0f754e54b" sha1="cd527c8c24e20e33913fc45199e64b3e6138a6e5"/>
+	</game>
+	<game name="Beyblade V-Force - Ultimate Blader Jam (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Beyblade V-Force - Ultimate Blader Jam (Europe) (En,Fr,De,Es,It)">
+		<description>Beyblade V-Force - Ultimate Blader Jam (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Beyblade V-Force - Ultimate Blader Jam (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="94d00a1e" md5="e3510303152cda4169565716599d85f9" sha1="e6e6d5a4eb4f249356dd23c54c178f149828068d"/>
 	</game>
 	<game name="Bibi Blocksberg - Der Magische Hexenkreis (Germany)">
 		<description>Bibi Blocksberg - Der Magische Hexenkreis (Germany)</description>
@@ -2316,9 +2349,17 @@
 		<description>Akumajou Dracula - Circle of the Moon (Japan) (Virtual Console)</description>
 		<rom name="Akumajou Dracula - Circle of the Moon (Japan) (Virtual Console).gba" size="8388608" crc="2c56982d" md5="4fe96ba189bc46167a95753e2f137b03" sha1="7b50b0e5e533d461f5eae648246c442b56e91527"/>
 	</game>
+	<game name="Akumajou Dracula - Circle of the Moon (Japan) (Castlevania Advance Collection)" cloneof="Castlevania (Europe)">
+		<description>Akumajou Dracula - Circle of the Moon (Japan) (Castlevania Advance Collection)</description>
+		<rom name="Akumajou Dracula - Circle of the Moon (Japan) (Castlevania Advance Collection).gba" size="8388608" crc="1e60ec88" md5="a7f1cc981555e953032a5444f2b2e0e6" sha1="0952d6265017fc7c905d0ce0982681922e3140d5"/>
+	</game>
 	<game name="Castlevania (Europe) (Virtual Console)" cloneof="Castlevania (Europe)">
 		<description>Castlevania (Europe) (Virtual Console)</description>
 		<rom name="Castlevania (Europe) (Virtual Console).gba" size="8388608" crc="dba05255" md5="4da06e60c419238f114ca2c632a094c5" sha1="b5fa3402a8fb86786f97d08f88b3cbc790bb5d6e"/>
+	</game>
+	<game name="Castlevania (Europe) (Castlevania Advance Collection)" cloneof="Castlevania (Europe)">
+		<description>Castlevania (Europe) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania (Europe) (Castlevania Advance Collection).gba" size="8388608" crc="050e2164" md5="4081d5667d931445a0a26153100e9fc3" sha1="30a2fd3fe95a8a84b02da7ddbc8b2a90e0553d9b"/>
 	</game>
 	<game name="Castlevania - Circle of the Moon (USA)" cloneof="Castlevania (Europe)">
 		<description>Castlevania - Circle of the Moon (USA)</description>
@@ -2328,6 +2369,10 @@
 	<game name="Castlevania - Circle of the Moon (USA) (Virtual Console)" cloneof="Castlevania (Europe)">
 		<description>Castlevania - Circle of the Moon (USA) (Virtual Console)</description>
 		<rom name="Castlevania - Circle of the Moon (USA) (Virtual Console).gba" size="8388608" crc="d5412e91" md5="2cc38305f62b337281663bad8c901cf9" sha1="e055b4ab00e16ec39c9036ef85463c770d809c6c"/>
+	</game>
+	<game name="Castlevania - Circle of the Moon (USA) (Castlevania Advance Collection)" cloneof="Castlevania (Europe)">
+		<description>Castlevania - Circle of the Moon (USA) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Circle of the Moon (USA) (Castlevania Advance Collection).gba" size="8388608" crc="14c1ab7c" md5="87a1bd6577b6702f97a60fc55772ad74" sha1="9483aa48b384ff3142c47fe81c13ca874a608eb0"/>
 	</game>
 	<game name="Castlevania - Aria of Sorrow (Europe) (En,Fr,De)">
 		<description>Castlevania - Aria of Sorrow (Europe) (En,Fr,De)</description>
@@ -2343,6 +2388,10 @@
 		<description>Castlevania - Akatsuki no Minuet (Japan) (Virtual Console)</description>
 		<rom name="Castlevania - Akatsuki no Minuet (Japan) (Virtual Console).gba" size="8388608" crc="93b6599e" md5="a7f1f118df6437e4dc1d2906dbb2109b" sha1="353bd090e2479fabccc889f1458d00d67ab5b81f"/>
 	</game>
+	<game name="Castlevania - Akatsuki no Minuet (Japan) (Castlevania Advance Collection)" cloneof="Castlevania - Aria of Sorrow (Europe) (En,Fr,De)">
+		<description>Castlevania - Akatsuki no Minuet (Japan) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Akatsuki no Minuet (Japan) (Castlevania Advance Collection).gba" size="8388608" crc="f5c8d8e8" md5="784b6d3c7eeb2c98078f5b7d7d637f75" sha1="7f513361dcb5321a1d430f2fd291eb8aac9ce319"/>
+	</game>
 	<game name="Castlevania - Aria of Sorrow (USA)" cloneof="Castlevania - Aria of Sorrow (Europe) (En,Fr,De)">
 		<description>Castlevania - Aria of Sorrow (USA)</description>
 		<release name="Castlevania - Aria of Sorrow (USA)" region="USA"/>
@@ -2356,6 +2405,14 @@
 		<description>Castlevania - Aria of Sorrow (Europe) (En,Fr,De) (Virtual Console)</description>
 		<rom name="Castlevania - Aria of Sorrow (Europe) (En,Fr,De) (Virtual Console).gba" size="8388608" crc="d97dbfec" md5="e21564dea14e62d831cc1ffe2fefad0b" sha1="458c42a6b8fd6cf18579b0f7eef9dcd12b43c12b"/>
 	</game>
+	<game name="Castlevania - Aria of Sorrow (Europe) (En,Fr,De) (Castlevania Advance Collection)" cloneof="Castlevania - Aria of Sorrow (Europe) (En,Fr,De)">
+		<description>Castlevania - Aria of Sorrow (Europe) (En,Fr,De) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Aria of Sorrow (Europe) (En,Fr,De) (Castlevania Advance Collection).gba" size="8388608" crc="e8156354" md5="5914890e4fa2157e4df5388a038730f1" sha1="02dc76fdfe464877202b3d59cd102d626d194fe6"/>
+	</game>
+	<game name="Castlevania - Aria of Sorrow (USA) (Castlevania Advance Collection)" cloneof="Castlevania - Aria of Sorrow (Europe) (En,Fr,De)">
+		<description>Castlevania - Aria of Sorrow (USA) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Aria of Sorrow (USA) (Castlevania Advance Collection).gba" size="8388608" crc="ca9b82dd" md5="899b136ff8391f574b52be34ddb683fc" sha1="f2869a861f1be637a1d1b57009cb42cc06b82e09"/>
+	</game>
 	<game name="Castlevania - Harmony of Dissonance (Europe)">
 		<description>Castlevania - Harmony of Dissonance (Europe)</description>
 		<release name="Castlevania - Harmony of Dissonance (Europe)" region="EUR"/>
@@ -2366,10 +2423,22 @@
 		<release name="Castlevania - Byakuya no Concerto (Japan)" region="JPN"/>
 		<rom name="Castlevania - Byakuya no Concerto (Japan).gba" size="8388608" crc="379b3248" md5="cade47def03ad1cc02a1bd97b5ea4e9f" sha1="3aeb81ee60fa3e56a56ee069b0ce0d8bc34d9c4c"/>
 	</game>
+	<game name="Castlevania - Byakuya no Concerto (Japan) (Castlevania Advance Collection)" cloneof="Castlevania - Harmony of Dissonance (Europe)">
+		<description>Castlevania - Byakuya no Concerto (Japan) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Byakuya no Concerto (Japan) (Castlevania Advance Collection).gba" size="8388608" crc="247eeb20" md5="5ebc0f4becb9e921af11a46653ff6d81" sha1="094ed1081bc7aa69ac2214718f54b7f99517cad8"/>
+	</game>
 	<game name="Castlevania - Harmony of Dissonance (USA)" cloneof="Castlevania - Harmony of Dissonance (Europe)">
 		<description>Castlevania - Harmony of Dissonance (USA)</description>
 		<release name="Castlevania - Harmony of Dissonance (USA)" region="USA"/>
 		<rom name="Castlevania - Harmony of Dissonance (USA).gba" size="8388608" crc="88c1b562" md5="ea589465486d15e91ba94165c8024b55" sha1="b90da0d9be0b3a0893cd9e2c399056bcf9579e21" status="verified"/>
+	</game>
+	<game name="Castlevania - Harmony of Dissonance (Europe) (Castlevania Advance Collection)" cloneof="Castlevania - Harmony of Dissonance (Europe)">
+		<description>Castlevania - Harmony of Dissonance (Europe) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Harmony of Dissonance (Europe) (Castlevania Advance Collection).gba" size="8388608" crc="e0c4fd69" md5="9dc72587c935d493a4363f598faea56e" sha1="3997c7a3bd3b47165f78fe96e1d20e8037fea555"/>
+	</game>
+	<game name="Castlevania - Harmony of Dissonance (USA) (Castlevania Advance Collection)" cloneof="Castlevania - Harmony of Dissonance (Europe)">
+		<description>Castlevania - Harmony of Dissonance (USA) (Castlevania Advance Collection)</description>
+		<rom name="Castlevania - Harmony of Dissonance (USA) (Castlevania Advance Collection).gba" size="8388608" crc="3a1e789a" md5="35db4a2bacdec253672db68e73a41005" sha1="58a562662f416846b7e3575da2844f2fda72f6c1"/>
 	</game>
 	<game name="Castlevania Double Pack (Europe) (En,Fr,De)">
 		<description>Castlevania Double Pack (Europe) (En,Fr,De)</description>
@@ -2957,6 +3026,10 @@
 		<release name="Crazy Taxi - Catch a Ride (USA)" region="USA"/>
 		<rom name="Crazy Taxi - Catch a Ride (USA).gba" size="8388608" crc="8ec709d6" md5="8bcf4e0da6be539f2099c683ff897b43" sha1="d41f8528e5d010637ece3a50f22c3c809e49b578"/>
 	</game>
+	<game name="Crazy Taxi - Catch a Ride (Europe) (En,Fr,De,Es) (Beta)" cloneof="Crazy Taxi - Catch a Ride (Europe) (En,Fr,De,Es,It)">
+		<description>Crazy Taxi - Catch a Ride (Europe) (En,Fr,De,Es) (Beta)</description>
+		<rom name="Crazy Taxi - Catch a Ride (Europe) (En,Fr,De,Es) (Beta).gba" size="8388608" crc="fe0d0b86" md5="77b95f886779b5c82c726679c498ce09" sha1="f00a8ea228f2a569528cebc810a6f54c8db2491c"/>
+	</game>
 	<game name="Creatures (Europe) (En,Fr,De)">
 		<description>Creatures (Europe) (En,Fr,De)</description>
 		<release name="Creatures (Europe) (En,Fr,De)" region="EUR"/>
@@ -3410,6 +3483,10 @@
 		<release name="Digimon - Battle Spirit (USA)" region="USA"/>
 		<rom name="Digimon - Battle Spirit (USA).gba" size="4194304" crc="ceef2008" md5="a4e3e4754c7bd16e5e2a52ee83ab2be1" sha1="2ba954a54dd34b2b450d9ef718eb8a0f570b6549"/>
 	</game>
+	<game name="Digimon - Battle Spirit (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Digimon - Battle Spirit (Europe) (En,Fr,De,Es,It)">
+		<description>Digimon - Battle Spirit (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Digimon - Battle Spirit (Europe) (En,Fr,De,Es,It) (Beta).gba" size="4194304" crc="da8677ad" md5="197ae930329b3515fa57c039ad81c415" sha1="cbcc59ee879378acb7e86476c2cf80b1ef49321e"/>
+	</game>
 	<game name="Digimon - Battle Spirit 2 (Europe) (En,Fr,De,Es,It)">
 		<description>Digimon - Battle Spirit 2 (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Digimon - Battle Spirit 2 (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -3762,6 +3839,10 @@
 		<release name="Donkey Kong Country 3 (USA)" region="USA"/>
 		<rom name="Donkey Kong Country 3 (USA).gba" size="16777216" crc="fe03e5af" md5="f577a97d679e669f8063910eb060e864" sha1="c50982b4c26e25ba3538be97b585d95737d7ade7"/>
 	</game>
+	<game name="Donkey Kong Country 3 (USA) (Beta)" cloneof="Donkey Kong Country 3 (Europe) (En,Fr,De,Es,It)">
+		<description>Donkey Kong Country 3 (USA) (Beta)</description>
+		<rom name="Donkey Kong Country 3 (USA) (Beta).gba" size="16777216" crc="8dd750ef" md5="132ac906d53969643a2a117425a7bcb5" sha1="6e4855197b7deffd089dfde46875bebdc4739fa2"/>
+	</game>
 	<game name="Super Donkey Kong 3 (Japan)" cloneof="Donkey Kong Country 3 (Europe) (En,Fr,De,Es,It)">
 		<description>Super Donkey Kong 3 (Japan)</description>
 		<release name="Super Donkey Kong 3 (Japan)" region="JPN"/>
@@ -3922,6 +4003,10 @@
 		<release name="Dragon Ball - Advanced Adventure (USA)" region="USA"/>
 		<rom name="Dragon Ball - Advanced Adventure (USA).gba" size="16777216" crc="7d7306df" md5="442bab94b7b3ba7e4a8799d18de52731" sha1="1338584d8cfa57402603197e65d2e2ff0184d24f"/>
 	</game>
+	<game name="Dragon Ball - Advanced Adventure (Europe) (En,Fr,De,Es,It) (Beta) (2005-02-25)" cloneof="Dragon Ball - Advanced Adventure (Europe) (En,Fr,De,Es,It)">
+		<description>Dragon Ball - Advanced Adventure (Europe) (En,Fr,De,Es,It) (Beta) (2005-02-25)</description>
+		<rom name="Dragon Ball - Advanced Adventure (Europe) (En,Fr,De,Es,It) (Beta) (2005-02-25).gba" size="16777216" crc="2b136906" md5="a340d5d4d96a0f49d66112ad25820118" sha1="fe190755f05994f1c796286ad767d7da49c36385"/>
+	</game>
 	<game name="Dragon Ball GT - Transformation (USA)">
 		<description>Dragon Ball GT - Transformation (USA)</description>
 		<release name="Dragon Ball GT - Transformation (USA)" region="USA"/>
@@ -3935,7 +4020,7 @@
 	<game name="Dragon Ball Z - Collectible Card Game (USA)">
 		<description>Dragon Ball Z - Collectible Card Game (USA)</description>
 		<release name="Dragon Ball Z - Collectible Card Game (USA)" region="USA"/>
-		<rom name="Dragon Ball Z - Collectible Card Game (USA).gba" size="8388608" crc="f6124d7f" md5="8ee261b598c4c1189dfaaa3361697c5f" sha1="338e4ed81071fa6c55ca7ca3bbbdf84bc3ba8855"/>
+		<rom name="Dragon Ball Z - Collectible Card Game (USA).gba" size="8388608" crc="f6124d7f" md5="8ee261b598c4c1189dfaaa3361697c5f" sha1="338e4ed81071fa6c55ca7ca3bbbdf84bc3ba8855" status="verified"/>
 	</game>
 	<game name="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It)">
 		<description>Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It)</description>
@@ -3957,6 +4042,14 @@
 		<release name="Dragon Ball Z - Supersonic Warriors (USA)" region="USA"/>
 		<rom name="Dragon Ball Z - Supersonic Warriors (USA).gba" size="16777216" crc="9a857a70" md5="09f49996195a3fce6141306f9eeb2944" sha1="f6f956989773e39cfde407d3763eb7f767ef2033"/>
 	</game>
+	<game name="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 2)" cloneof="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It)">
+		<description>Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 2)</description>
+		<rom name="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 2).gba" size="16777216" crc="73c132fe" md5="76cb4acb0c2a8076429e32ef4aa475d5" sha1="c6cc7bf80a7d92d2be20e14074a1b163016cb0b6"/>
+	</game>
+	<game name="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 1)" cloneof="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It)">
+		<description>Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 1)</description>
+		<rom name="Dragon Ball Z - Supersonic Warriors (Europe) (En,Fr,De,Es,It) (Beta 1).gba" size="16777216" crc="f20c38d0" md5="6e6a8f38f19cf0f98bc52c324143aa64" sha1="dac70eaee4e74263f44bfba1c91279d782987aed"/>
+	</game>
 	<game name="Dragon Ball Z - Taiketsu (Europe) (En,Fr,De,Es,It)">
 		<description>Dragon Ball Z - Taiketsu (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Dragon Ball Z - Taiketsu (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -3966,6 +4059,10 @@
 		<description>Dragon Ball Z - Taiketsu (USA)</description>
 		<release name="Dragon Ball Z - Taiketsu (USA)" region="USA"/>
 		<rom name="Dragon Ball Z - Taiketsu (USA).gba" size="8388608" crc="64ec07e7" md5="b7b1550606411b985b54f75f0750feb1" sha1="1fac4e187b8cf0aeb218ca307f10955f432d258d"/>
+	</game>
+	<game name="Dragon Ball Z - Taiketsu (USA) (Beta)" cloneof="Dragon Ball Z - Taiketsu (Europe) (En,Fr,De,Es,It)">
+		<description>Dragon Ball Z - Taiketsu (USA) (Beta)</description>
+		<rom name="Dragon Ball Z - Taiketsu (USA) (Beta).gba" size="16777216" crc="b4f57e66" md5="d835d01317047ebb5be6370bc056a937" sha1="75bba3303862b68f5992dce070ca718a7916c3ca"/>
 	</game>
 	<game name="Dragon Ball Z - The Legacy of Goku (Europe) (En,Fr,De,Es,It)">
 		<description>Dragon Ball Z - The Legacy of Goku (Europe) (En,Fr,De,Es,It)</description>
@@ -4051,6 +4148,18 @@
 		<release name="Driv3r (USA)" region="USA"/>
 		<rom name="Driv3r (USA).gba" size="8388608" crc="6c66cfbe" md5="3fbc7fda7d0bbaa03ec037e710cf1dd8" sha1="df2238fc239bdd0226a1b39deef06fa521eae48e"/>
 	</game>
+	<game name="Driv3r (Europe) (Beta 1)" cloneof="Driv3r (Europe) (En,Fr,De,Es,It)">
+		<description>Driv3r (Europe) (Beta 1)</description>
+		<rom name="Driv3r (Europe) (Beta 1).gba" size="8388608" crc="0a483c43" md5="f97009a7cca3dc5b334b55f7b852c021" sha1="b87bc695b36492ebd41deaa4bfe5bc023982e4d8"/>
+	</game>
+	<game name="Driv3r (Europe) (Es) (Beta 2)" cloneof="Driv3r (Europe) (En,Fr,De,Es,It)">
+		<description>Driv3r (Europe) (Es) (Beta 2)</description>
+		<rom name="Driv3r (Europe) (Es) (Beta 2).gba" size="16777216" crc="ba2dcfed" md5="cb37aee94e83eace35f2feca32d4b715" sha1="bff9f5585ff127b39b26b56a57951487bc2c5b56"/>
+	</game>
+	<game name="Driv3r (Europe) (Beta 3)" cloneof="Driv3r (Europe) (En,Fr,De,Es,It)">
+		<description>Driv3r (Europe) (Beta 3)</description>
+		<rom name="Driv3r (Europe) (Beta 3).gba" size="16777216" crc="a4243f3f" md5="16deae843ba03714f2e5cd7a1bea126d" sha1="a01bbe00cde186c221ff8d426626e31f7e93470d"/>
+	</game>
 	<game name="Driven (Europe) (En,Fr,De,Es,It)">
 		<description>Driven (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Driven (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -4074,6 +4183,10 @@
 	<game name="Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Driver 2 Advance (Europe) (En,Fr,De,Es,It)">
 		<description>Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta)</description>
 		<rom name="Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta).gba" size="8388608" crc="b24fa448" md5="e07ab5a02cd7c2f503cef587890afb54" sha1="0135a92f0043df0d0ebac7f45c53c44d8b095ae2"/>
+	</game>
+	<game name="Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta) (2002-06-06)" cloneof="Driver 2 Advance (Europe) (En,Fr,De,Es,It)">
+		<description>Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta) (2002-06-06)</description>
+		<rom name="Driver 2 Advance (Europe) (En,Fr,De,Es,It) (Beta) (2002-06-06).gba" size="8388608" crc="2a18850c" md5="f310c0a374d8c59320c2f8b9fc6aaba3" sha1="0123a99e61e5004b37ebac40e04b6723f5d0a8e4"/>
 	</game>
 	<game name="Drome Racers (Europe) (En,Fr,De,Da)">
 		<description>Drome Racers (Europe) (En,Fr,De,Da)</description>
@@ -4119,6 +4232,10 @@
 		<release name="Duel Masters - Kaijudo Showdown (USA)" region="USA"/>
 		<rom name="Duel Masters - Kaijudo Showdown (USA).gba" size="8388608" crc="804e5de2" md5="02f23bf2f90126574bc0de0752bed485" sha1="4a818e070b9097ccfb0d73b2b13636ca4b774a4f"/>
 	</game>
+	<game name="Duel Masters - Kaijudo Showdown (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Duel Masters - Kaijudo Showdown (Europe) (En,Fr,De,Es,It)">
+		<description>Duel Masters - Kaijudo Showdown (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Duel Masters - Kaijudo Showdown (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="84c579dd" md5="d65302dfe91452a9dc01be44a8e55f98" sha1="a2368156300b96717aebec9b3c02a8bd3af5b014"/>
+	</game>
 	<game name="Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It)">
 		<description>Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -4128,6 +4245,10 @@
 		<description>Duel Masters - Sempai Legends (USA)</description>
 		<release name="Duel Masters - Sempai Legends (USA)" region="USA"/>
 		<rom name="Duel Masters - Sempai Legends (USA).gba" size="8388608" crc="1ce344ca" md5="2adeb64ff470fb08a472f3cb6f5d7d44" sha1="524418eee05520a9a1e6b12918780435698c06e1"/>
+	</game>
+	<game name="Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It)">
+		<description>Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Duel Masters - Sempai Legends (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="c3827890" md5="fd1f30fd2420d1840c640f1967c57b0f" sha1="55f89b1b526994c5e9013ef684ef030a2c8b7149"/>
 	</game>
 	<game name="Duel Masters - Shadow of the Code (Europe) (En,Fr,De,Es,It)">
 		<description>Duel Masters - Shadow of the Code (Europe) (En,Fr,De,Es,It)</description>
@@ -4177,6 +4298,10 @@
 		<description>Dungeons &amp; Dragons - Eye of the Beholder (USA)</description>
 		<release name="Dungeons &amp; Dragons - Eye of the Beholder (USA)" region="USA"/>
 		<rom name="Dungeons &amp; Dragons - Eye of the Beholder (USA).gba" size="4194304" crc="91b16892" md5="3aa4f5bd135064deba3394215d4c560d" sha1="6270ccf39dd6968f9f6e7d6516f9ee233aa8cddb"/>
+	</game>
+	<game name="Dungeons &amp; Dragons - Eye of the Beholder (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Dungeons &amp; Dragons - Eye of the Beholder (Europe) (En,Fr,De,Es,It)">
+		<description>Dungeons &amp; Dragons - Eye of the Beholder (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Dungeons &amp; Dragons - Eye of the Beholder (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="c3a6ada9" md5="ada0c5e066188b965a90e9ac875405e1" sha1="489ed43ab0748076c7a660a21adc08f1e861bf74"/>
 	</game>
 	<game name="Dynasty Warriors Advance (Europe) (En,Fr,De,Es,It)">
 		<description>Dynasty Warriors Advance (Europe) (En,Fr,De,Es,It)</description>
@@ -4542,7 +4667,7 @@
 	<game name="F-Zero - GP Legend (USA)" cloneof="F-Zero - GP Legend (Europe) (En,Fr,De,Es,It)">
 		<description>F-Zero - GP Legend (USA)</description>
 		<release name="F-Zero - GP Legend (USA)" region="USA"/>
-		<rom name="F-Zero - GP Legend (USA).gba" size="16777216" crc="781aab58" md5="b6984ca369145367ab79eb33f2f3480e" sha1="977588d9d27b7115e0bb309fb019ae81b9f413ff"/>
+		<rom name="F-Zero - GP Legend (USA).gba" size="16777216" crc="781aab58" md5="b6984ca369145367ab79eb33f2f3480e" sha1="977588d9d27b7115e0bb309fb019ae81b9f413ff" status="verified"/>
 	</game>
 	<game name="F-Zero - GP Legend (USA) (Virtual Console)" cloneof="F-Zero - GP Legend (Europe) (En,Fr,De,Es,It)">
 		<description>F-Zero - GP Legend (USA) (Virtual Console)</description>
@@ -5313,10 +5438,14 @@
 		<release name="Frogger - Kodaibunmei no Nazo (Japan)" region="JPN"/>
 		<rom name="Frogger - Kodaibunmei no Nazo (Japan).gba" size="8388608" crc="6853109b" md5="4564fc48460af11378ab12d5f181b219" sha1="8c1a3208d6bd34df966617fcc5f539b14cc5992a"/>
 	</game>
-	<game name="From TV Animation One Piece - Mezase! King of Belly (Japan)">
-		<description>From TV Animation One Piece - Mezase! King of Belly (Japan)</description>
-		<release name="From TV Animation One Piece - Mezase! King of Belly (Japan)" region="JPN"/>
-		<rom name="From TV Animation One Piece - Mezase! King of Belly (Japan).gba" size="8388608" crc="e6f5bdd5" md5="b4b64ffa04795ef56f3925702a2be291" sha1="9b4e610a2f342f06de3704f7f0b35e6e562da928"/>
+	<game name="From TV Animation One Piece - Mezase! King of Berry (Japan)">
+		<description>From TV Animation One Piece - Mezase! King of Berry (Japan)</description>
+		<release name="From TV Animation One Piece - Mezase! King of Berry (Japan)" region="JPN"/>
+		<rom name="From TV Animation One Piece - Mezase! King of Berry (Japan).gba" size="8388608" crc="e6f5bdd5" md5="b4b64ffa04795ef56f3925702a2be291" sha1="9b4e610a2f342f06de3704f7f0b35e6e562da928"/>
+	</game>
+	<game name="From TV Animation One Piece - Mezase! King of Berry (Japan) (Beta)" cloneof="From TV Animation One Piece - Mezase! King of Berry (Japan)">
+		<description>From TV Animation One Piece - Mezase! King of Berry (Japan) (Beta)</description>
+		<rom name="From TV Animation One Piece - Mezase! King of Berry (Japan) (Beta).gba" size="8388608" crc="4e63dce0" md5="66b9f4c2c0025de207e1dc3a71340d5e" sha1="fa92e37f0a08be40429b82f7bef868de3f3c2baf"/>
 	</game>
 	<game name="From TV Animation One Piece - Nanatsu-jima no Daihihou (Japan)">
 		<description>From TV Animation One Piece - Nanatsu-jima no Daihihou (Japan)</description>
@@ -5448,7 +5577,7 @@
 	<game name="Game &amp; Watch Gallery 4 (USA)" cloneof="Game &amp; Watch Gallery Advance (Europe)">
 		<description>Game &amp; Watch Gallery 4 (USA)</description>
 		<release name="Game &amp; Watch Gallery 4 (USA)" region="USA"/>
-		<rom name="Game &amp; Watch Gallery 4 (USA).gba" size="4194304" crc="7e90cea2" md5="89bd27cd7228736d9c00461abd20c208" sha1="56be8e044aba698f1d573053b5af8e0c0bfcc060"/>
+		<rom name="Game &amp; Watch Gallery 4 (USA).gba" size="4194304" crc="7e90cea2" md5="89bd27cd7228736d9c00461abd20c208" sha1="56be8e044aba698f1d573053b5af8e0c0bfcc060" status="verified"/>
 	</game>
 	<game name="Game &amp; Watch Gallery 4 (USA) (Virtual Console)" cloneof="Game &amp; Watch Gallery Advance (Europe)">
 		<description>Game &amp; Watch Gallery 4 (USA) (Virtual Console)</description>
@@ -5739,6 +5868,14 @@
 		<release name="GBA AV Adapter (China) (Unl)" region="CHN"/>
 		<rom name="GBA AV Adapter (China) (Unl).gba" size="131072" crc="a1b64f16" md5="3947e65e24c82d023b94878fbebf3bcd" sha1="a824210a15e0f4538268bcfe94b6e183303b2ad5"/>
 	</game>
+	<game name="GBA Jukebox (USA)">
+		<description>GBA Jukebox (USA)</description>
+		<rom name="GBA Jukebox (USA).gba" size="4194304" crc="f34b25f2" md5="3c68616a3a2a29733bf1aacbebca01a9" sha1="b15074c114b7e9843180341b0b68faddb72d9b2f"/>
+	</game>
+	<game name="Music Recorder MP3 (Japan)" cloneof="GBA Jukebox (USA)">
+		<description>Music Recorder MP3 (Japan)</description>
+		<rom name="Music Recorder MP3 (Japan).gba" size="4194304" crc="35d154a3" md5="1e0ff992c079acf2e5310699e1fafe45" sha1="2b29f093e8d78737e489510ad4db6387ba128428"/>
+	</game>
 	<game name="GBA Movie Player 2 CF (Spain) (Unl)">
 		<description>GBA Movie Player 2 CF (Spain) (Unl)</description>
 		<release name="GBA Movie Player 2 CF (Spain) (Unl)" region="SPA"/>
@@ -5914,7 +6051,7 @@
 	<game name="Ougon no Taiyou - Hirakareshi Fuuin (Japan)" cloneof="Golden Sun (USA, Europe)">
 		<description>Ougon no Taiyou - Hirakareshi Fuuin (Japan)</description>
 		<release name="Ougon no Taiyou - Hirakareshi Fuuin (Japan)" region="JPN"/>
-		<rom name="Ougon no Taiyou - Hirakareshi Fuuin (Japan).gba" size="8388608" crc="fb96d9de" md5="cf33e45e59b0ee3801b5cf18a9e58524" sha1="35ef9e4c9f38183ebd6a3e3923a11ce9a4333718"/>
+		<rom name="Ougon no Taiyou - Hirakareshi Fuuin (Japan).gba" size="8388608" crc="fb96d9de" md5="cf33e45e59b0ee3801b5cf18a9e58524" sha1="35ef9e4c9f38183ebd6a3e3923a11ce9a4333718" status="verified"/>
 	</game>
 	<game name="Golden Sun - The Lost Age (USA, Europe)">
 		<description>Golden Sun - The Lost Age (USA, Europe)</description>
@@ -5949,11 +6086,39 @@
 	<game name="Ougon no Taiyou - Ushinawareshi Toki (Japan)" cloneof="Golden Sun - The Lost Age (USA, Europe)">
 		<description>Ougon no Taiyou - Ushinawareshi Toki (Japan)</description>
 		<release name="Ougon no Taiyou - Ushinawareshi Toki (Japan)" region="JPN"/>
-		<rom name="Ougon no Taiyou - Ushinawareshi Toki (Japan).gba" size="16777216" crc="830b795f" md5="9d84ad590d1dffa33b1b1e2e1d64fb4d" sha1="4c79e60962299654981628ccd99b122ef27043f7"/>
+		<rom name="Ougon no Taiyou - Ushinawareshi Toki (Japan).gba" size="16777216" crc="830b795f" md5="9d84ad590d1dffa33b1b1e2e1d64fb4d" sha1="4c79e60962299654981628ccd99b122ef27043f7" status="verified"/>
 	</game>
 	<game name="Ougon no Taiyou - Ushinawareshi Toki (Japan) (Virtual Console)" cloneof="Golden Sun - The Lost Age (USA, Europe)">
 		<description>Ougon no Taiyou - Ushinawareshi Toki (Japan) (Virtual Console)</description>
 		<rom name="Ougon no Taiyou - Ushinawareshi Toki (Japan) (Virtual Console).gba" size="16777216" crc="8c9ec3da" md5="718285dfbe8b0f7278b024762b5899f7" sha1="bcc1455cb188b48569e3735da2a926483bc0cf0f"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl).gba" size="13224124" crc="19ba7d80" md5="c94f9c68bdda0a027367e49d67becdd9" sha1="1bf95f8730ecdfa6665b85bea8764f42a88e8e3d"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Ja) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Ja) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Ja) (Demo) (Aftermarket) (Unl).gba" size="13219728" crc="d4621e3e" md5="e5e47dc93685ab0e7299526864d4b450" sha1="5bd59fac58c5f9a375216e9d1cf85fa5262f21f7"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Fr) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Fr) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Fr) (Demo) (Aftermarket) (Unl).gba" size="13225068" crc="21512022" md5="c2d4eb09f51e13a7ec4968e198f323c7" sha1="8832d38f787f3e1da620fcae7514d7387445ccf2"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Es) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Es) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Es) (Demo) (Aftermarket) (Unl).gba" size="13223944" crc="c1811c9b" md5="0281c499edb85107920a73f50e1a2412" sha1="9d413bce82708df137215a2968306a5196b1638b"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Zh) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Zh) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Zh) (Demo) (Aftermarket) (Unl).gba" size="13269108" crc="3360e114" md5="30f60f6ed1faa92d0d9acc8bc5d70616" sha1="50186922ff77714b9ac638948b464cdbf80ab5fb"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Pt) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Pt) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Pt) (Demo) (Aftermarket) (Unl).gba" size="13223696" crc="3477ef15" md5="9abe602980d9bab6a3c8e4f12895c07a" sha1="4b447de09a23fbfdaa6d640824f8ceb5bbe56fab"/>
+	</game>
+	<game name="Goodboy Galaxy (World) (Ar) (Demo) (Aftermarket) (Unl)" cloneof="Goodboy Galaxy (World) (En) (Demo) (Aftermarket) (Unl)">
+		<description>Goodboy Galaxy (World) (Ar) (Demo) (Aftermarket) (Unl)</description>
+		<rom name="Goodboy Galaxy (World) (Ar) (Demo) (Aftermarket) (Unl).gba" size="13250016" crc="a4054c2b" md5="b9e34ed53b8c74e23c55d1f60dcb7379" sha1="c3cd833b9bdf87a8481c9b05251bba782bc3527e"/>
 	</game>
 	<game name="GP-1 Racing (USA) (Proto)">
 		<description>GP-1 Racing (USA) (Proto)</description>
@@ -6133,7 +6298,7 @@
 	<game name="Gyakuten Saiban (Japan) (Rev 1)">
 		<description>Gyakuten Saiban (Japan) (Rev 1)</description>
 		<release name="Gyakuten Saiban (Japan) (Rev 1)" region="JPN"/>
-		<rom name="Gyakuten Saiban (Japan) (Rev 1).gba" size="8388608" crc="a0f4801f" md5="c5780d2cd4873e19434e54595722ed5d" sha1="ea7dabc4f5330c89a341ca38067fb025de73c835"/>
+		<rom name="Gyakuten Saiban (Japan) (Rev 1).gba" size="8388608" crc="a0f4801f" md5="c5780d2cd4873e19434e54595722ed5d" sha1="ea7dabc4f5330c89a341ca38067fb025de73c835" status="verified"/>
 	</game>
 	<game name="Gyakuten Saiban (Japan)" cloneof="Gyakuten Saiban (Japan) (Rev 1)">
 		<description>Gyakuten Saiban (Japan)</description>
@@ -6146,7 +6311,7 @@
 	<game name="Gyakuten Saiban 2 (Japan)">
 		<description>Gyakuten Saiban 2 (Japan)</description>
 		<release name="Gyakuten Saiban 2 (Japan)" region="JPN"/>
-		<rom name="Gyakuten Saiban 2 (Japan).gba" size="8388608" crc="191ad26a" md5="41ae841d5771e442f7fb5393906cb898" sha1="f7a156dbed52d3edb8104112ae40e6e2aaca57f9"/>
+		<rom name="Gyakuten Saiban 2 (Japan).gba" size="8388608" crc="191ad26a" md5="41ae841d5771e442f7fb5393906cb898" sha1="f7a156dbed52d3edb8104112ae40e6e2aaca57f9" status="verified"/>
 	</game>
 	<game name="Gyakuten Saiban 2 (Japan) (Virtual Console)" cloneof="Gyakuten Saiban 2 (Japan)">
 		<description>Gyakuten Saiban 2 (Japan) (Virtual Console)</description>
@@ -6903,7 +7068,11 @@
 		<description>Iridion 3D (USA, Europe)</description>
 		<release name="Iridion 3D (USA, Europe)" region="EUR"/>
 		<release name="Iridion 3D (USA, Europe)" region="USA"/>
-		<rom name="Iridion 3D (USA, Europe).gba" size="4194304" crc="34189e74" md5="f88df40fedb9d31a6e59dba4a9be1b2a" sha1="4c9e0f52078d73d5843487de9eab4462c5c153f7"/>
+		<rom name="Iridion 3D (USA, Europe).gba" size="4194304" crc="34189e74" md5="f88df40fedb9d31a6e59dba4a9be1b2a" sha1="4c9e0f52078d73d5843487de9eab4462c5c153f7" status="verified"/>
+	</game>
+	<game name="Iridion 3D (World) (Aftermarket) (Unl)" cloneof="Iridion 3D (USA, Europe)">
+		<description>Iridion 3D (World) (Aftermarket) (Unl)</description>
+		<rom name="Iridion 3D (World) (Aftermarket) (Unl).gba" size="4194304" crc="4c7ebe42" md5="c68975d3d2cf8aafb150a3b97d020a80" sha1="6f1c77ab88351d2d50da412e4788fc7ca8a6714d"/>
 	</game>
 	<game name="Iridion II (Europe) (En,Fr,De)">
 		<description>Iridion II (Europe) (En,Fr,De)</description>
@@ -7244,6 +7413,18 @@
 		<release name="Kid Paddle (Europe) (Fr,Nl)" region="HOL"/>
 		<rom name="Kid Paddle (Europe) (Fr,Nl).gba" size="8388608" crc="69951aa9" md5="ff99de23c20d8b8136e3afca53734e87" sha1="4ce6021d930fe946c512b2e5584f31d0b6435256"/>
 	</game>
+	<game name="Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-07-08)" cloneof="Kid Paddle (Europe) (Fr,Nl)">
+		<description>Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-07-08)</description>
+		<rom name="Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-07-08).gba" size="8388608" crc="44aad1cb" md5="5dcec1e7f6e1cbf5283d8b245fd8e1b7" sha1="306fbbaa3d0c420683628e37c25494fdccd0ecfd"/>
+	</game>
+	<game name="Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-06-28)" cloneof="Kid Paddle (Europe) (Fr,Nl)">
+		<description>Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-06-28)</description>
+		<rom name="Kid Paddle (Europe) (Fr,Nl) (Beta) (2005-06-28).gba" size="8388608" crc="46648f66" md5="6468bca90aacf0b1490c9f6d85de96ff" sha1="e2d3fdb1421b6d6826cd716fcc122c691dc9cb86"/>
+	</game>
+	<game name="Kid Paddle (Europe) (Fr,Nl) (Beta)" cloneof="Kid Paddle (Europe) (Fr,Nl)">
+		<description>Kid Paddle (Europe) (Fr,Nl) (Beta)</description>
+		<rom name="Kid Paddle (Europe) (Fr,Nl) (Beta).gba" size="8388608" crc="5ab5a26a" md5="deb7a16b2ea673b2ca137d7a7bc76e70" sha1="5848ad4a48c9bec8afd3119e60c61017f8abeed8"/>
+	</game>
 	<game name="Kid's Cards (USA)">
 		<description>Kid's Cards (USA)</description>
 		<release name="Kid's Cards (USA)" region="USA"/>
@@ -7356,6 +7537,11 @@
 		<description>King of Fighters EX 2, The - Howling Blood (USA)</description>
 		<release name="King of Fighters EX 2, The - Howling Blood (USA)" region="USA"/>
 		<rom name="King of Fighters EX 2, The - Howling Blood (USA).gba" size="8388608" crc="15f8f9d5" md5="6be741eea41598baeed52e4dd7ddb9f5" sha1="a1d1d6fcc6f468ae366696dfab7b6c1bd91f1f44"/>
+	</game>
+	<game name="King of Fighters EX 2, The - Howling Blood (USA) (Beta) (2003-04-03)" cloneof="King of Fighters EX 2, The - Howling Blood (Europe)">
+		<description>King of Fighters EX 2, The - Howling Blood (USA) (Beta) (2003-04-03)</description>
+		<release name="King of Fighters EX 2, The - Howling Blood (USA) (Beta) (2003-04-03)" region="USA"/>
+		<rom name="King of Fighters EX 2, The - Howling Blood (USA) (Beta) (2003-04-03).gba" size="8388608" crc="7704ff39" md5="579b17924207e422490e5a1fe4a52aaa" sha1="b859122c1813a5ec9fb565dcca815a9f0a52bf18"/>
 	</game>
 	<game name="King of Fighters EX, The - NeoBlood (Europe)">
 		<description>King of Fighters EX, The - NeoBlood (Europe)</description>
@@ -7822,7 +8008,7 @@
 	<game name="Legend of Zelda, The - A Link to the Past &amp; Four Swords (USA)" cloneof="Legend of Zelda, The - A Link to the Past &amp; Four Swords (Europe) (En,Fr,De,Es,It)">
 		<description>Legend of Zelda, The - A Link to the Past &amp; Four Swords (USA)</description>
 		<release name="Legend of Zelda, The - A Link to the Past &amp; Four Swords (USA)" region="USA"/>
-		<rom name="Legend of Zelda, The - A Link to the Past &amp; Four Swords (USA).gba" size="8388608" crc="8e91cd13" md5="3287ca66e5cc285a9fe3a922051e84c6" sha1="a272055abbbf6c26b0cd54c87395d01699589161"/>
+		<rom name="Legend of Zelda, The - A Link to the Past &amp; Four Swords (USA).gba" size="8388608" crc="8e91cd13" md5="3287ca66e5cc285a9fe3a922051e84c6" sha1="a272055abbbf6c26b0cd54c87395d01699589161" status="verified"/>
 	</game>
 	<game name="Zelda no Densetsu - Kamigami no Triforce &amp; 4tsu no Tsurugi (Japan)" cloneof="Legend of Zelda, The - A Link to the Past &amp; Four Swords (Europe) (En,Fr,De,Es,It)">
 		<description>Zelda no Densetsu - Kamigami no Triforce &amp; 4tsu no Tsurugi (Japan)</description>
@@ -8742,6 +8928,11 @@
 		<release name="Mech Platoon (USA)" region="USA"/>
 		<rom name="Mech Platoon (USA).gba" size="8388608" crc="769fde96" md5="ab0999e2d7c13ada9cf374cd0aa47f97" sha1="8a9bd790c9cd831366a00cdde72a9f3fec89cb61"/>
 	</game>
+	<game name="Mechanic Mechanica (Japan) (Proto)">
+		<description>Mechanic Mechanica (Japan) (Proto)</description>
+		<release name="Mechanic Mechanica (Japan) (Proto)" region="JPN"/>
+		<rom name="Mechanic Mechanica (Japan) (Proto).gba" size="8388608" crc="64251e43" md5="608121040215b0f108ad3ca1e3c9cb61" sha1="a02c9fbcd430d6a0e3295642d5aedfa853b0c74a"/>
+	</game>
 	<game name="Medabots - Metabee (Europe)">
 		<description>Medabots - Metabee (Europe)</description>
 		<release name="Medabots - Metabee (Europe)" region="EUR"/>
@@ -9544,7 +9735,7 @@
 		<description>Midway's Greatest Arcade Hits (USA, Europe)</description>
 		<release name="Midway's Greatest Arcade Hits (USA, Europe)" region="EUR"/>
 		<release name="Midway's Greatest Arcade Hits (USA, Europe)" region="USA"/>
-		<rom name="Midway's Greatest Arcade Hits (USA, Europe).gba" size="4194304" crc="c01c4d0a" md5="cfd85c7cc23e577cd6a338e83e95d618" sha1="194913c9d5a74b9af5f90b539828f6fa77c016ed"/>
+		<rom name="Midway's Greatest Arcade Hits (USA, Europe).gba" size="4194304" crc="c01c4d0a" md5="cfd85c7cc23e577cd6a338e83e95d618" sha1="194913c9d5a74b9af5f90b539828f6fa77c016ed" status="verified"/>
 	</game>
 	<game name="Mighty Beanz - Pocket Puzzles (USA)">
 		<description>Mighty Beanz - Pocket Puzzles (USA)</description>
@@ -10283,6 +10474,10 @@
 		<release name="Nicktoons Racing (USA)" region="USA"/>
 		<rom name="Nicktoons Racing (USA).gba" size="4194304" crc="50ab9bb6" md5="cc25621658169b41ada436ef99c078e8" sha1="ad53fdc15c3e68a4ada8f4d902bfd579c6313025"/>
 	</game>
+	<game name="Nicktoons Racing (USA) (Beta)" cloneof="Nicktoons Racing (Europe) (En,Fr,De,Es,It)">
+		<description>Nicktoons Racing (USA) (Beta)</description>
+		<rom name="Nicktoons Racing (USA) (Beta).gba" size="8388608" crc="38295d30" md5="0ede6970fff60b7f6d4a37f324c813ea" sha1="5c49072d25cb6d3c58c559b4bc510b85e9da591a"/>
+	</game>
 	<game name="Nihon Pro Mahjong Renmei Kounin - Tetsuman Advance - Menkyo Kaiden Series (Japan)">
 		<description>Nihon Pro Mahjong Renmei Kounin - Tetsuman Advance - Menkyo Kaiden Series (Japan)</description>
 		<release name="Nihon Pro Mahjong Renmei Kounin - Tetsuman Advance - Menkyo Kaiden Series (Japan)" region="JPN"/>
@@ -10457,6 +10652,10 @@
 		<release name="Oshaberi Inko Club (Japan)" region="JPN"/>
 		<rom name="Oshaberi Inko Club (Japan).gba" size="8388608" crc="df6901f0" md5="e83c6421a55f4af4394fc8b5fb47efdd" sha1="82e48090b9615282c58747a1f7b105196866f8c9"/>
 	</game>
+	<game name="Oshaberi Inko Club (Japan) (Beta)" cloneof="Oshaberi Inko Club (Japan)">
+		<description>Oshaberi Inko Club (Japan) (Beta)</description>
+		<rom name="Oshaberi Inko Club (Japan) (Beta).gba" size="8388608" crc="f896bb9e" md5="9476b0a926165be6a5cb30378beece99" sha1="e293d18a8a0fb856edafafa03b33454b2d04efd9"/>
+	</game>
 	<game name="Oshare Princess (Japan)">
 		<description>Oshare Princess (Japan)</description>
 		<release name="Oshare Princess (Japan)" region="JPN"/>
@@ -10604,9 +10803,9 @@
 		<release name="Pac-Man World 2 (USA)" region="USA"/>
 		<rom name="Pac-Man World 2 (USA).gba" size="4194304" crc="814a7d33" md5="86e6497272f39b19af6750d699569531" sha1="a3da2ad5cf120cb53e663c2290eb8872f5650ba7"/>
 	</game>
-	<game name="Pac-Man World 2 (Unknown) (Beta)" cloneof="Pac-Man World 2 (Europe) (En,Fr,De,Es,It)">
-		<description>Pac-Man World 2 (Unknown) (Beta)</description>
-		<rom name="Pac-Man World 2 (Unknown) (Beta).gba" size="4194304" crc="b645b5ef" md5="f6c0c5a3ca383ec7769979aa69f551e1" sha1="82fe986f205f733c29bc00cd96ddf3ec46098fc6"/>
+	<game name="Pac-Man World 2 (USA) (Beta)" cloneof="Pac-Man World 2 (Europe) (En,Fr,De,Es,It)">
+		<description>Pac-Man World 2 (USA) (Beta)</description>
+		<rom name="Pac-Man World 2 (USA) (Beta).gba" size="4194304" crc="b645b5ef" md5="f6c0c5a3ca383ec7769979aa69f551e1" sha1="82fe986f205f733c29bc00cd96ddf3ec46098fc6"/>
 	</game>
 	<game name="Paws &amp; Claws - Best Friends - Dogs &amp; Cats (USA)">
 		<description>Paws &amp; Claws - Best Friends - Dogs &amp; Cats (USA)</description>
@@ -10666,6 +10865,13 @@
 		<description>Gadget Racers (USA)</description>
 		<release name="Gadget Racers (USA)" region="USA"/>
 		<rom name="Gadget Racers (USA).gba" size="4194304" crc="95dd156a" md5="484128abb48b33871c909403c90b9b04" sha1="bef8444d0730b61e55883cc3edf754f884f7df61"/>
+	</game>
+	<game name="Perplexus Diodomin (World) (Proto)">
+		<description>Perplexus Diodomin (World) (Proto)</description>
+		<release name="Perplexus Diodomin (World) (Proto)" region="EUR"/>
+		<release name="Perplexus Diodomin (World) (Proto)" region="JPN"/>
+		<release name="Perplexus Diodomin (World) (Proto)" region="USA"/>
+		<rom name="Perplexus Diodomin (World) (Proto).gba" size="1681812" crc="3442f9cf" md5="7a91b281a98eabf2150c0cee965a3066" sha1="f3c7093e9770632de618c7931f287ebc7b5e0aa2"/>
 	</game>
 	<game name="Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es,It,Nl) (Rev 1)">
 		<description>Peter Pan - Return to Neverland (Europe) (En,Fr,De,Es,It,Nl) (Rev 1)</description>
@@ -11177,6 +11383,11 @@
 		<release name="Pocket Monsters - Ruby (Japan)" region="JPN"/>
 		<rom name="Pocket Monsters - Ruby (Japan).gba" size="8388608" crc="cee9471a" md5="27c9f37193977828f9808f3f76ff8c76" sha1="5c5e546720300b99ae45d2aa35c646c8b8ff5c56"/>
 	</game>
+	<game name="Pocket Monsters - Ruby (Japan) (Rev 1)" cloneof="Pokemon - Ruby Version (USA, Europe) (Rev 2)">
+		<description>Pocket Monsters - Ruby (Japan) (Rev 1)</description>
+		<release name="Pocket Monsters - Ruby (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Pocket Monsters - Ruby (Japan) (Rev 1).gba" size="8388608" crc="b448a337" md5="20449adab693bf966bf0f4a907102fb9" sha1="971e0d670a95e5b32240b2deed20405b8daddf47"/>
+	</game>
 	<game name="Pocket Monsters - Ruby (Japan) (Pokemon Box)" cloneof="Pokemon - Ruby Version (USA, Europe) (Rev 2)">
 		<description>Pocket Monsters - Ruby (Japan) (Pokemon Box)</description>
 		<rom name="Pocket Monsters - Ruby (Japan) (Pokemon Box).gba" size="8388608" crc="606c9adb" md5="61657d0452f6b4f1da6e3583ddd15021" sha1="910e90d3b90b83690ba12207f87091b67565d8ba" status="verified"/>
@@ -11330,7 +11541,7 @@
 	<game name="Pokemon Pinball - Ruby &amp; Sapphire (USA)" cloneof="Pokemon Pinball - Ruby &amp; Sapphire (Europe) (En,Fr,De,Es,It)">
 		<description>Pokemon Pinball - Ruby &amp; Sapphire (USA)</description>
 		<release name="Pokemon Pinball - Ruby &amp; Sapphire (USA)" region="USA"/>
-		<rom name="Pokemon Pinball - Ruby &amp; Sapphire (USA).gba" size="8388608" crc="b992a3c0" md5="ba6d0fbff297b8937d3c8e7f2c25fa0f" sha1="9fec81ce2c5df589e0371a0bf2f92a5fe8db730b" status="verified"/>
+		<rom name="Pokemon Pinball - Ruby &amp; Sapphire (USA).gba" size="8388608" crc="b992a3c0" md5="ba6d0fbff297b8937d3c8e7f2c25fa0f" sha1="9fec81ce2c5df589e0371a0bf2f92a5fe8db730b"/>
 	</game>
 	<game name="Pokemon Pinball - Ruby &amp; Sapphire (Japan) (Rev 1)" cloneof="Pokemon Pinball - Ruby &amp; Sapphire (Europe) (En,Fr,De,Es,It)">
 		<description>Pokemon Pinball - Ruby &amp; Sapphire (Japan) (Rev 1)</description>
@@ -11374,6 +11585,15 @@
 		<description>Tsuukin Hitofude (Japan) (Virtual Console)</description>
 		<rom name="Tsuukin Hitofude (Japan) (Virtual Console).gba" size="4194304" crc="f4c7a95b" md5="e38706415aeef12402ea38b8f1f8e0e0" sha1="906dbf246cb40954fc27942763048bc09783b1f8" status="verified"/>
 	</game>
+	<game name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)">
+		<description>Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)</description>
+		<release name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)" region="EUR"/>
+		<rom name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI).gba" size="4194304" crc="13e2a64f" md5="24bc3d8a0ae721d6bdc745c761422b50" sha1="5d4deddc0bca1043bbc28de16d10ab427e193622"/>
+	</game>
+	<game name="Polly Pocket! - Super Splash Island (USA) (DSI)" cloneof="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)">
+		<description>Polly Pocket! - Super Splash Island (USA) (DSI)</description>
+		<rom name="Polly Pocket! - Super Splash Island (USA) (DSI).gba" size="4194304" crc="f120eca2" md5="0d2a4b08c87137212ef39a4c7e9d44cc" sha1="333cf7c32e017f25c1674313b15f05c62676335b"/>
+	</game>
 	<game name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (Vivendi)">
 		<description>Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (Vivendi)</description>
 		<release name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (Vivendi)" region="EUR"/>
@@ -11383,15 +11603,6 @@
 		<description>Polly Pocket! - Super Splash Island (USA) (Vivendi)</description>
 		<release name="Polly Pocket! - Super Splash Island (USA) (Vivendi)" region="USA"/>
 		<rom name="Polly Pocket! - Super Splash Island (USA) (Vivendi).gba" size="4194304" crc="b5de8c6e" md5="d53ca7a7f09e222722e110445e1a4e6c" sha1="e8df35f71cba359a077522815ca5c4887d0ce161"/>
-	</game>
-	<game name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)">
-		<description>Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)</description>
-		<release name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)" region="EUR"/>
-		<rom name="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI).gba" size="4194304" crc="13e2a64f" md5="24bc3d8a0ae721d6bdc745c761422b50" sha1="5d4deddc0bca1043bbc28de16d10ab427e193622"/>
-	</game>
-	<game name="Polly Pocket! - Super Splash Island (USA) (DSI)" cloneof="Polly Pocket! - Super Splash Island (Europe) (En,Fr,De,Es,It) (DSI)">
-		<description>Polly Pocket! - Super Splash Island (USA) (DSI)</description>
-		<rom name="Polly Pocket! - Super Splash Island (USA) (DSI).gba" size="4194304" crc="f120eca2" md5="0d2a4b08c87137212ef39a4c7e9d44cc" sha1="333cf7c32e017f25c1674313b15f05c62676335b"/>
 	</game>
 	<game name="Pop Idol (Europe)">
 		<description>Pop Idol (Europe)</description>
@@ -11899,6 +12110,10 @@
 		<release name="Rebelstar - Tactical Command (USA)" region="USA"/>
 		<rom name="Rebelstar - Tactical Command (USA).gba" size="4194304" crc="fb6c590f" md5="c4874d3f181e4293f27f25ad52763e50" sha1="e2556bce89c4b542786c741dc49ef28afab917ff"/>
 	</game>
+	<game name="Rebelstar - Tactical Command (Europe) (En,Fr,De,Es,It) (Beta)" cloneof="Rebelstar - Tactical Command (Europe) (En,Fr,De,Es,It)">
+		<description>Rebelstar - Tactical Command (Europe) (En,Fr,De,Es,It) (Beta)</description>
+		<rom name="Rebelstar - Tactical Command (Europe) (En,Fr,De,Es,It) (Beta).gba" size="16777216" crc="9706208c" md5="4c2bb6d70f4a2a09b841931588085fd9" sha1="c9b8ac80fde0b6ac8350cfb285d9e0afbfe5daf1"/>
+	</game>
 	<game name="Recca no Honoo - The Game (Japan)">
 		<description>Recca no Honoo - The Game (Japan)</description>
 		<release name="Recca no Honoo - The Game (Japan)" region="JPN"/>
@@ -11947,6 +12162,10 @@
 		<description>Revenge of the Smurfs, The (Europe) (En,Fr,De,Es,It,Nl)</description>
 		<release name="Revenge of the Smurfs, The (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
 		<rom name="Revenge of the Smurfs, The (Europe) (En,Fr,De,Es,It,Nl).gba" size="4194304" crc="516ce770" md5="3f9ea1e569fc4405974537224bd522cb" sha1="846996f49910121b1dd2915c3bf203a767c6408a"/>
+	</game>
+	<game name="Revenge of the Smurfs, The (Europe) (Beta) (2002-03-22)" cloneof="Revenge of the Smurfs, The (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Revenge of the Smurfs, The (Europe) (Beta) (2002-03-22)</description>
+		<rom name="Revenge of the Smurfs, The (Europe) (Beta) (2002-03-22).gba" size="8388608" crc="dd049b0d" md5="4f1da49d1d5efbadf2655872c25b5730" sha1="447e1b55742f6ae7509bb219c22965618e654aa3"/>
 	</game>
 	<game name="Rhythm Tengoku (Japan) (Rev 1)">
 		<description>Rhythm Tengoku (Japan) (Rev 1)</description>
@@ -12000,6 +12219,11 @@
 		<description>Road Rash - Jailbreak (USA)</description>
 		<release name="Road Rash - Jailbreak (USA)" region="USA"/>
 		<rom name="Road Rash - Jailbreak (USA).gba" size="4194304" crc="8834af99" md5="0a4da0bbdad29f2faa5584b49b0a4f5d" sha1="48150529172ff411e3e1bd38b9a74d8b32e5fa59"/>
+	</game>
+	<game name="RoboCop (USA) (Proto)">
+		<description>RoboCop (USA) (Proto)</description>
+		<release name="RoboCop (USA) (Proto)" region="USA"/>
+		<rom name="RoboCop (USA) (Proto).gba" size="8388608" crc="282e6408" md5="8957506ac2d72a332e04d6f94ef5ae39" sha1="0c6b28da8ad9b889d765e65e081848e410095406"/>
 	</game>
 	<game name="Robopon 2 - Cross Version (USA)">
 		<description>Robopon 2 - Cross Version (USA)</description>
@@ -12458,6 +12682,10 @@
 		<description>SEGA Rally Championship (USA)</description>
 		<release name="SEGA Rally Championship (USA)" region="USA"/>
 		<rom name="SEGA Rally Championship (USA).gba" size="8388608" crc="1ae3eb16" md5="f4326bde4b5e9f53f5fc58ce24d7b137" sha1="5ec86056ccef168b57be8e609aada2b1da11f733"/>
+	</game>
+	<game name="SEGA Rally Championship (Europe) (Beta)" cloneof="SEGA Rally Championship (Europe)">
+		<description>SEGA Rally Championship (Europe) (Beta)</description>
+		<rom name="SEGA Rally Championship (Europe) (Beta).gba" size="16777216" crc="31fb92ea" md5="bfa9439b48febdc921ab83f7b2452b26" sha1="81764abfbda1d8d7ab2b222e58c77df65edc1761"/>
 	</game>
 	<game name="SEGA Smash Pack (Europe)">
 		<description>SEGA Smash Pack (Europe)</description>
@@ -13568,7 +13796,7 @@
 	<game name="Spyro Orange - The Cortex Conspiracy (USA) (Rev 1)" cloneof="Spyro Fusion (Europe) (En,Fr,De,Es,It)">
 		<description>Spyro Orange - The Cortex Conspiracy (USA) (Rev 1)</description>
 		<release name="Spyro Orange - The Cortex Conspiracy (USA) (Rev 1)" region="USA"/>
-		<rom name="Spyro Orange - The Cortex Conspiracy (USA) (Rev 1).gba" size="16777216" crc="bbf2549d" md5="0cb99d064f970b580a8f0c1b87bd643b" sha1="eed93ebe63a99de8490d05ae1bc122dbfe5f8596"/>
+		<rom name="Spyro Orange - The Cortex Conspiracy (USA) (Rev 1).gba" size="16777216" crc="bbf2549d" md5="0cb99d064f970b580a8f0c1b87bd643b" sha1="eed93ebe63a99de8490d05ae1bc122dbfe5f8596" status="verified"/>
 	</game>
 	<game name="Spyro Superpack - Spyro - Season of Ice + Spyro 2 - Season of Flame (USA)">
 		<description>Spyro Superpack - Spyro - Season of Ice + Spyro 2 - Season of Flame (USA)</description>
@@ -13625,7 +13853,7 @@
 	<game name="Star Wars - Flight of the Falcon (USA)" cloneof="Star Wars - Flight of the Falcon (Europe) (En,Fr,De)">
 		<description>Star Wars - Flight of the Falcon (USA)</description>
 		<release name="Star Wars - Flight of the Falcon (USA)" region="USA"/>
-		<rom name="Star Wars - Flight of the Falcon (USA).gba" size="8388608" crc="94d2737a" md5="a6cc5b4377dc7396fa275113e1b958b4" sha1="4ce7c96146456b10db85d7bf4a6b0f588ea370b9"/>
+		<rom name="Star Wars - Flight of the Falcon (USA).gba" size="8388608" crc="94d2737a" md5="a6cc5b4377dc7396fa275113e1b958b4" sha1="4ce7c96146456b10db85d7bf4a6b0f588ea370b9" status="verified"/>
 	</game>
 	<game name="Star Wars - Jedi Power Battles (Europe) (En,Fr,De,Es)">
 		<description>Star Wars - Jedi Power Battles (Europe) (En,Fr,De,Es)</description>
@@ -13967,7 +14195,7 @@
 	<game name="Super Mario Advance - Super Mario USA + Mario Brothers (Japan)" cloneof="Super Mario Advance (USA, Europe)">
 		<description>Super Mario Advance - Super Mario USA + Mario Brothers (Japan)</description>
 		<release name="Super Mario Advance - Super Mario USA + Mario Brothers (Japan)" region="JPN"/>
-		<rom name="Super Mario Advance - Super Mario USA + Mario Brothers (Japan).gba" size="4194304" crc="b993b92f" md5="c5240b871426f8bef985a540b9fcadfe" sha1="5ab5ade42ea0c5f255b3fbf00cdcc07b71ba20b8"/>
+		<rom name="Super Mario Advance - Super Mario USA + Mario Brothers (Japan).gba" size="4194304" crc="b993b92f" md5="c5240b871426f8bef985a540b9fcadfe" sha1="5ab5ade42ea0c5f255b3fbf00cdcc07b71ba20b8" status="verified"/>
 	</game>
 	<game name="Super Mario Advance - Super Mario USA + Mario Brothers (Japan) (Virtual Console)" cloneof="Super Mario Advance (USA, Europe)">
 		<description>Super Mario Advance - Super Mario USA + Mario Brothers (Japan) (Virtual Console)</description>
@@ -14115,6 +14343,10 @@
 		<description>Super Monkey Ball Jr. (USA)</description>
 		<release name="Super Monkey Ball Jr. (USA)" region="USA"/>
 		<rom name="Super Monkey Ball Jr. (USA).gba" size="4194304" crc="0a8031f0" md5="77edf4f506b3343e15efe61d64944eba" sha1="0d994a58b7acdfe9357e5405acebe232128b80fe"/>
+	</game>
+	<game name="Super Monkey Ball Jr. (USA) (Beta) (2002-08-06)" cloneof="Super Monkey Ball Jr. (Europe) (En,Fr,De,Es,It)">
+		<description>Super Monkey Ball Jr. (USA) (Beta) (2002-08-06)</description>
+		<rom name="Super Monkey Ball Jr. (USA) (Beta) (2002-08-06).gba" size="8388608" crc="fee7b029" md5="09a9fc30a1b6ccbf83b22af207b12efe" sha1="717e644a198776c45d1978d9616536f789bb3607"/>
 	</game>
 	<game name="Super Puzzle Fighter II (Europe)">
 		<description>Super Puzzle Fighter II (Europe)</description>
@@ -14711,6 +14943,10 @@
 		<release name="Titeuf - Mega Compet (France)" region="FRA"/>
 		<rom name="Titeuf - Mega Compet (France).gba" size="4194304" crc="ffd0a045" md5="8735e3aaab28d157cd5cb0b0c6666b0d" sha1="ff59a9810adc3270295763282c9d86d549f58a6f"/>
 	</game>
+	<game name="Titeuf - Mega Compet (France) (Beta)" cloneof="Titeuf - Mega Compet (France)">
+		<description>Titeuf - Mega Compet (France) (Beta)</description>
+		<rom name="Titeuf - Mega Compet (France) (Beta).gba" size="4194304" crc="c9be7fcf" md5="9b4f26154fa4cd9501dfe75fb155207e" sha1="1ed43c7419b22b1147bd7e3198de52f4c8d3003d"/>
+	</game>
 	<game name="Titeuf - Ze Gag Machine (France)">
 		<description>Titeuf - Ze Gag Machine (France)</description>
 		<release name="Titeuf - Ze Gag Machine (France)" region="FRA"/>
@@ -14733,7 +14969,7 @@
 	<game name="TOCA World Touring Cars (Europe)">
 		<description>TOCA World Touring Cars (Europe)</description>
 		<release name="TOCA World Touring Cars (Europe)" region="EUR"/>
-		<rom name="TOCA World Touring Cars (Europe).gba" size="8388608" crc="d8125874" md5="bcf9dcaca7c0bab4d75184d900d27d50" sha1="6e4360b9d123ed9784db40e7b07e7941d3df5401"/>
+		<rom name="TOCA World Touring Cars (Europe).gba" size="8388608" crc="d8125874" md5="bcf9dcaca7c0bab4d75184d900d27d50" sha1="6e4360b9d123ed9784db40e7b07e7941d3df5401" status="verified"/>
 	</game>
 	<game name="Tokimeki Yume Series 1 - Ohanaya-san ni Narou! (Japan)">
 		<description>Tokimeki Yume Series 1 - Ohanaya-san ni Narou! (Japan)</description>
@@ -14979,6 +15215,10 @@
 		<description>Totally Spies! 2 - Undercover (USA) (En,Fr)</description>
 		<release name="Totally Spies! 2 - Undercover (USA) (En,Fr)" region="USA"/>
 		<rom name="Totally Spies! 2 - Undercover (USA) (En,Fr).gba" size="8388608" crc="2c8eb8a1" md5="27ab3ab9d8c3fee6a38e95ba03fde194" sha1="c45561593bf49f70a9bfd509009746f795e1121a"/>
+	</game>
+	<game name="Totally Spies! 2 - Undercover (Europe) (En,Fr,De,Es,It,Nl) (Beta)" cloneof="Totally Spies! 2 - Undercover (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Totally Spies! 2 - Undercover (Europe) (En,Fr,De,Es,It,Nl) (Beta)</description>
+		<rom name="Totally Spies! 2 - Undercover (Europe) (En,Fr,De,Es,It,Nl) (Beta).gba" size="16777216" crc="0e4ff9a1" md5="639b69191cbeb180eb745497d9391d75" sha1="beec6b7c3168d1ebef21d2fc064067b710466107"/>
 	</game>
 	<game name="Touhai Densetsu Akagi - Yami ni Mai Orita Tensai (Japan)">
 		<description>Touhai Densetsu Akagi - Yami ni Mai Orita Tensai (Japan)</description>
@@ -15878,9 +16118,9 @@
 		<release name="X-Terminator Advance (Japan) (Unl)" region="JPN"/>
 		<rom name="X-Terminator Advance (Japan) (Unl).gba" size="131072" crc="d48d5587" md5="51cfc7008c7c32abd5a43eadf430a6e1" sha1="b6b5febc259d215892a8920a0ca0a6a8067f9cfe"/>
 	</game>
-	<game name="Xploder Advance (Europe) (Alt 1) (Unl)" cloneof="Xploder Advance (Europe) (Unl)">
-		<description>Xploder Advance (Europe) (Alt 1) (Unl)</description>
-		<rom name="Xploder Advance (Europe) (Alt 1) (Unl).gba" size="131072" crc="4f3e7427" md5="fdbd4e62e01ba4a570188b201427d3a4" sha1="4f2252f61e80eb2a27646fd4bfb159da8ea70ca6"/>
+	<game name="Xploder Advance (Europe) (Unl) (Alt)" cloneof="Xploder Advance (Europe) (Unl)">
+		<description>Xploder Advance (Europe) (Unl) (Alt)</description>
+		<rom name="Xploder Advance (Europe) (Unl) (Alt).gba" size="131072" crc="4f3e7427" md5="fdbd4e62e01ba4a570188b201427d3a4" sha1="4f2252f61e80eb2a27646fd4bfb159da8ea70ca6"/>
 	</game>
 	<game name="XS Moto (USA)">
 		<description>XS Moto (USA)</description>
@@ -15951,6 +16191,10 @@
 		<description>Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA)</description>
 		<release name="Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA)" region="USA"/>
 		<rom name="Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA).gba" size="8388608" crc="d3784b52" md5="ffa7898ee8b3bc98e4156f3b5e7cdf63" sha1="2a9825db34a7aedcfd0a9fae5c7cee50292f03b7"/>
+	</game>
+	<game name="Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA) (Beta)" cloneof="Yu Yu Hakusho - Ghostfiles - Spirit Detective (Europe) (En,Fr,De,Es,It)">
+		<description>Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA) (Beta)</description>
+		<rom name="Yu Yu Hakusho - Ghostfiles - Spirit Detective (USA) (Beta).gba" size="16777216" crc="8cbfa66b" md5="30333c382a0818d4293d5247ae428d11" sha1="d3906650386872a94b83c417ecef2369ece5b978"/>
 	</game>
 	<game name="Yu Yu Hakusho - Ghostfiles - Tournament Tactics (USA, Europe)">
 		<description>Yu Yu Hakusho - Ghostfiles - Tournament Tactics (USA, Europe)</description>
@@ -16036,7 +16280,7 @@
 	<game name="Yu-Gi-Oh! - The Sacred Cards (USA)" cloneof="Yu-Gi-Oh! - The Sacred Cards (Europe) (En,Fr,De,Es,It)">
 		<description>Yu-Gi-Oh! - The Sacred Cards (USA)</description>
 		<release name="Yu-Gi-Oh! - The Sacred Cards (USA)" region="USA"/>
-		<rom name="Yu-Gi-Oh! - The Sacred Cards (USA).gba" size="16777216" crc="141fb1cc" md5="0a7c58069d5390165482e88a22158bd2" sha1="a06735f9c3d10be9339657026981aef77af34b27"/>
+		<rom name="Yu-Gi-Oh! - The Sacred Cards (USA).gba" size="16777216" crc="141fb1cc" md5="0a7c58069d5390165482e88a22158bd2" sha1="a06735f9c3d10be9339657026981aef77af34b27" status="verified"/>
 	</game>
 	<game name="Yu-Gi-Oh! Duel Monsters 7 - Kettou Toshi Densetsu (Japan)" cloneof="Yu-Gi-Oh! - The Sacred Cards (Europe) (En,Fr,De,Es,It)">
 		<description>Yu-Gi-Oh! Duel Monsters 7 - Kettou Toshi Densetsu (Japan)</description>

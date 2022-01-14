@@ -4,9 +4,9 @@
 	<header>
 		<name>Atari - Jaguar (J64) (Parent-Clone)</name>
 		<description>Atari - Jaguar (J64) (Parent-Clone)</description>
-		<version>20200926-011159</version>
-		<date>20200926-011159</date>
-		<author>alexian</author>
+		<version>20211101-031342</version>
+		<date>20211101-031342</date>
+		<author>BigFred, BitLooter, Hiccup, Money_114, omonim2007, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Atari Jaguar (World)">
@@ -511,11 +511,11 @@
 	<game name="Thea Realm Fighters (USA) (Proto 2)">
 		<description>Thea Realm Fighters (USA) (Proto 2)</description>
 		<release name="Thea Realm Fighters (USA) (Proto 2)" region="USA"/>
-		<rom name="Thea Realm Fighters (USA) (Proto 2).j64" size="4194304" crc="85be7e07" md5="ad0a68fc6c54564ac1f00c36f507b38d" sha1="07c76d3f4ae05b75ea7ad62147172fd146f4f876"/>
+		<rom name="Thea Realm Fighters (USA) (Proto 2).j64" size="4194304" crc="bb06d3c6" md5="c41842aa3592d8aa07973476d7d706f3" sha1="9ad03858597aa1e1fff26250996b07d1a70d1296"/>
 	</game>
 	<game name="Thea Realm Fighters (USA) (Proto 1)" cloneof="Thea Realm Fighters (USA) (Proto 2)">
 		<description>Thea Realm Fighters (USA) (Proto 1)</description>
-		<rom name="Thea Realm Fighters (USA) (Proto 1).j64" size="4194304" crc="bb06d3c6" md5="c41842aa3592d8aa07973476d7d706f3" sha1="9ad03858597aa1e1fff26250996b07d1a70d1296"/>
+		<rom name="Thea Realm Fighters (USA) (Proto 1).j64" size="4194304" crc="85be7e07" md5="ad0a68fc6c54564ac1f00c36f507b38d" sha1="07c76d3f4ae05b75ea7ad62147172fd146f4f876"/>
 	</game>
 	<game name="Theme Park (World)">
 		<description>Theme Park (World)</description>

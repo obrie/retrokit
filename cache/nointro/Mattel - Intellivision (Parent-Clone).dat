@@ -4,8 +4,8 @@
 	<header>
 		<name>Mattel - Intellivision (Parent-Clone)</name>
 		<description>Mattel - Intellivision (Parent-Clone)</description>
-		<version>20190315-210619</version>
-		<date>20190315-210619</date>
+		<version>20210922-165656</version>
+		<date>20210922-165656</date>
 		<author></author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -41,12 +41,12 @@
 		<release name="[BIOS] Sears Super Video Arcade (USA, Europe)" region="USA"/>
 		<rom name="[BIOS] Sears Super Video Arcade (USA, Europe).int" size="8192" crc="ea552a22" md5="8590d338a1bb5e0feed3e8a8cd493035" sha1="834339de056d42a35571cae7fd5b04d1344001e9"/>
 	</game>
-	<game name="ABPA Backgammon ~ Backgammon (World)">
-		<description>ABPA Backgammon ~ Backgammon (World)</description>
-		<release name="ABPA Backgammon ~ Backgammon (World)" region="EUR"/>
-		<release name="ABPA Backgammon ~ Backgammon (World)" region="JPN"/>
-		<release name="ABPA Backgammon ~ Backgammon (World)" region="USA"/>
-		<rom name="ABPA Backgammon ~ Backgammon (World).int" size="8192" crc="a60e25fc" md5="6890eaf1ac1a7d9a8494b7f5e25a1fac" sha1="71b305f30283a11ccd594071a7e9ea06db6a2071" status="verified"/>
+	<game name="ABPA Backgammon ~ Backgammon (USA, Europe)">
+		<description>ABPA Backgammon ~ Backgammon (USA, Europe)</description>
+		<release name="ABPA Backgammon ~ Backgammon (USA, Europe)" region="EUR"/>
+		<release name="ABPA Backgammon ~ Backgammon (USA, Europe)" region="JPN"/>
+		<release name="ABPA Backgammon ~ Backgammon (USA, Europe)" region="USA"/>
+		<rom name="ABPA Backgammon ~ Backgammon (USA, Europe).int" size="8192" crc="a60e25fc" md5="6890eaf1ac1a7d9a8494b7f5e25a1fac" sha1="71b305f30283a11ccd594071a7e9ea06db6a2071"/>
 	</game>
 	<game name="Advanced Dungeons &amp; Dragons (USA, Europe)">
 		<description>Advanced Dungeons &amp; Dragons (USA, Europe)</description>
@@ -76,13 +76,13 @@
 		<description>Armor Battle (USA, Europe)</description>
 		<release name="Armor Battle (USA, Europe)" region="EUR"/>
 		<release name="Armor Battle (USA, Europe)" region="USA"/>
-		<rom name="Armor Battle (USA, Europe).int" size="8192" crc="6f91fbc1" md5="7fa60b1cb4adac3088727d5ac53ec183" sha1="8bf07ba83bd0de42393187c6a3df60b8e341505d" status="verified"/>
+		<rom name="Armor Battle (USA, Europe).int" size="8192" crc="6f91fbc1" md5="7fa60b1cb4adac3088727d5ac53ec183" sha1="8bf07ba83bd0de42393187c6a3df60b8e341505d"/>
 	</game>
 	<game name="Astrosmash (USA, Europe)">
 		<description>Astrosmash (USA, Europe)</description>
 		<release name="Astrosmash (USA, Europe)" region="EUR"/>
 		<release name="Astrosmash (USA, Europe)" region="USA"/>
-		<rom name="Astrosmash (USA, Europe).int" size="8192" crc="fab2992c" md5="8f6a5b5b65d84f947236e503d378370b" sha1="d3529cad339b3fd5c67b4f503e9360188be9d3e8" status="verified"/>
+		<rom name="Astrosmash (USA, Europe).int" size="8192" crc="fab2992c" md5="8f6a5b5b65d84f947236e503d378370b" sha1="d3529cad339b3fd5c67b4f503e9360188be9d3e8"/>
 	</game>
 	<game name="Meteor (USA, Europe) (Beta)" cloneof="Astrosmash (USA, Europe)">
 		<description>Meteor (USA, Europe) (Beta)</description>
@@ -94,18 +94,18 @@
 		<release name="Atlantis (USA, Europe)" region="USA"/>
 		<rom name="Atlantis (USA, Europe).int" size="16384" crc="13ff363c" md5="317ef1ee4d12df7ce7dd57dbc273b4b1" sha1="094b207668c03a6d903270490f495ddc237cd8d7"/>
 	</game>
-	<game name="Auto Racing (World)">
-		<description>Auto Racing (World)</description>
-		<release name="Auto Racing (World)" region="EUR"/>
-		<release name="Auto Racing (World)" region="JPN"/>
-		<release name="Auto Racing (World)" region="USA"/>
-		<rom name="Auto Racing (World).int" size="8192" crc="b35c1101" md5="97e865e173d137cf5576d080268f7df5" sha1="2e3461853f60a1928c5c93bb23deb9229e0230c9" status="verified"/>
+	<game name="Auto Racing (USA, Europe)">
+		<description>Auto Racing (USA, Europe)</description>
+		<release name="Auto Racing (USA, Europe)" region="EUR"/>
+		<release name="Auto Racing (USA, Europe)" region="JPN"/>
+		<release name="Auto Racing (USA, Europe)" region="USA"/>
+		<rom name="Auto Racing (USA, Europe).int" size="8192" crc="b35c1101" md5="97e865e173d137cf5576d080268f7df5" sha1="2e3461853f60a1928c5c93bb23deb9229e0230c9"/>
 	</game>
 	<game name="B-17 Bomber (USA, Europe)">
 		<description>B-17 Bomber (USA, Europe)</description>
 		<release name="B-17 Bomber (USA, Europe)" region="EUR"/>
 		<release name="B-17 Bomber (USA, Europe)" region="USA"/>
-		<rom name="B-17 Bomber (USA, Europe).int" size="24576" crc="8ad19ab3" md5="44fb31805c87974ac205871e61800a77" sha1="e1ef8a5102b1fc14321f83864d1f6e0e0ce5acf4" status="verified"/>
+		<rom name="B-17 Bomber (USA, Europe).int" size="24576" crc="8ad19ab3" md5="44fb31805c87974ac205871e61800a77" sha1="e1ef8a5102b1fc14321f83864d1f6e0e0ce5acf4"/>
 	</game>
 	<game name="Beamrider (USA, Europe)">
 		<description>Beamrider (USA, Europe)</description>
@@ -127,19 +127,19 @@
 	<game name="Body Slam! - Super Pro Wrestling (USA)">
 		<description>Body Slam! - Super Pro Wrestling (USA)</description>
 		<release name="Body Slam! - Super Pro Wrestling (USA)" region="USA"/>
-		<rom name="Body Slam! - Super Pro Wrestling (USA).int" size="32768" crc="515e1d7e" md5="d0ac7f9a9c2ef3826f7ece1a7dd2202a" sha1="49b474d0317cc0e6c83ce77ba46d5ded2ec56005" status="verified"/>
+		<rom name="Body Slam! - Super Pro Wrestling (USA).int" size="32768" crc="515e1d7e" md5="d0ac7f9a9c2ef3826f7ece1a7dd2202a" sha1="49b474d0317cc0e6c83ce77ba46d5ded2ec56005"/>
 	</game>
 	<game name="Bomb Squad (USA)">
 		<description>Bomb Squad (USA)</description>
 		<release name="Bomb Squad (USA)" region="USA"/>
-		<rom name="Bomb Squad (USA).int" size="24576" crc="32697b72" md5="8d0d0bb758718e663886a890d1412fd5" sha1="bc19d31e771ea3b99aa2e2326da540057e54703c" status="verified"/>
+		<rom name="Bomb Squad (USA).int" size="24576" crc="32697b72" md5="8d0d0bb758718e663886a890d1412fd5" sha1="bc19d31e771ea3b99aa2e2326da540057e54703c"/>
 	</game>
-	<game name="Boxing (World)">
-		<description>Boxing (World)</description>
-		<release name="Boxing (World)" region="EUR"/>
-		<release name="Boxing (World)" region="JPN"/>
-		<release name="Boxing (World)" region="USA"/>
-		<rom name="Boxing (World).int" size="8192" crc="ab87c16f" md5="4b29afc041bf51b1aa0f6505a36d2c6a" sha1="24a10945009acadfe502a5bd5fb5b960885716f4" status="verified"/>
+	<game name="Boxing (USA, Europe)">
+		<description>Boxing (USA, Europe)</description>
+		<release name="Boxing (USA, Europe)" region="EUR"/>
+		<release name="Boxing (USA, Europe)" region="JPN"/>
+		<release name="Boxing (USA, Europe)" region="USA"/>
+		<rom name="Boxing (USA, Europe).int" size="8192" crc="ab87c16f" md5="4b29afc041bf51b1aa0f6505a36d2c6a" sha1="24a10945009acadfe502a5bd5fb5b960885716f4"/>
 	</game>
 	<game name="Brickout! (USA) (Proto)">
 		<description>Brickout! (USA) (Proto)</description>
@@ -163,9 +163,9 @@
 		<release name="Buzz Bombers (USA, Europe)" region="USA"/>
 		<rom name="Buzz Bombers (USA, Europe).int" size="16384" crc="fa492bbd" md5="0032f034ed1d761d1f0dff79115fec78" sha1="a0ef9a23976de6ee88c1f970a6585ded2a2b8c04"/>
 	</game>
-	<game name="Buzz Bombers (USA, Europe) (Alt 1)" cloneof="Buzz Bombers (USA, Europe)">
-		<description>Buzz Bombers (USA, Europe) (Alt 1)</description>
-		<rom name="Buzz Bombers (USA, Europe) (Alt 1).int" size="16384" crc="2a1e0c1c" md5="2b928547d16f0ebc08e7b310e170d000" sha1="b36e5416ad5712942f766030e8a04aa307bf056f" status="verified"/>
+	<game name="Buzz Bombers (USA, Europe) (Alt)" cloneof="Buzz Bombers (USA, Europe)">
+		<description>Buzz Bombers (USA, Europe) (Alt)</description>
+		<rom name="Buzz Bombers (USA, Europe) (Alt).int" size="16384" crc="2a1e0c1c" md5="2b928547d16f0ebc08e7b310e170d000" sha1="b36e5416ad5712942f766030e8a04aa307bf056f"/>
 	</game>
 	<game name="Carnival (USA, Europe)">
 		<description>Carnival (USA, Europe)</description>
@@ -187,12 +187,12 @@
 		<description>Checkers ~ Draughts (USA, Europe)</description>
 		<release name="Checkers ~ Draughts (USA, Europe)" region="EUR"/>
 		<release name="Checkers ~ Draughts (USA, Europe)" region="USA"/>
-		<rom name="Checkers ~ Draughts (USA, Europe).int" size="8192" crc="36e1d858" md5="8122bb07816acdcb3f0a037b72f02142" sha1="4fef3342c0e7100113b4022e4395ad552fddacf1" status="verified"/>
+		<rom name="Checkers ~ Draughts (USA, Europe).int" size="8192" crc="36e1d858" md5="8122bb07816acdcb3f0a037b72f02142" sha1="4fef3342c0e7100113b4022e4395ad552fddacf1"/>
 	</game>
 	<game name="Chip Shot - Super Pro Golf (USA)">
 		<description>Chip Shot - Super Pro Golf (USA)</description>
 		<release name="Chip Shot - Super Pro Golf (USA)" region="USA"/>
-		<rom name="Chip Shot - Super Pro Golf (USA).int" size="32768" crc="0bf464c6" md5="e0d577b333881deca1b0b8cf07b1bea9" sha1="94efb14c0ca0a4921ebe300d40365eb6f75fcda5" status="verified"/>
+		<rom name="Chip Shot - Super Pro Golf (USA).int" size="32768" crc="0bf464c6" md5="e0d577b333881deca1b0b8cf07b1bea9" sha1="94efb14c0ca0a4921ebe300d40365eb6f75fcda5"/>
 	</game>
 	<game name="Commando (USA)">
 		<description>Commando (USA)</description>
@@ -212,7 +212,7 @@
 	<game name="Deep Pockets - Super Pro Pool &amp; Billiards (USA) (Proto)">
 		<description>Deep Pockets - Super Pro Pool &amp; Billiards (USA) (Proto)</description>
 		<release name="Deep Pockets - Super Pro Pool &amp; Billiards (USA) (Proto)" region="USA"/>
-		<rom name="Deep Pockets - Super Pro Pool &amp; Billiards (USA) (Proto).int" size="32768" crc="6802b191" md5="409d186a7289d902f6309136bbebdb8b" sha1="78056057477a3d7b3eeb663ad9aa7735ee9197a6" status="verified"/>
+		<rom name="Deep Pockets - Super Pro Pool &amp; Billiards (USA) (Proto).int" size="32768" crc="6802b191" md5="409d186a7289d902f6309136bbebdb8b" sha1="78056057477a3d7b3eeb663ad9aa7735ee9197a6"/>
 	</game>
 	<game name="Defender (USA)">
 		<description>Defender (USA)</description>
@@ -228,7 +228,7 @@
 	<game name="Demonstration Cartridge - Blue (USA)">
 		<description>Demonstration Cartridge - Blue (USA)</description>
 		<release name="Demonstration Cartridge - Blue (USA)" region="USA"/>
-		<rom name="Demonstration Cartridge - Blue (USA).int" size="16384" crc="02919024" md5="b9591d68433c4d0cf92bd2c2ebfdd2bb" sha1="4e245f579c161e55da55d3cfe8cdf632d279204b" status="verified"/>
+		<rom name="Demonstration Cartridge - Blue (USA).int" size="16384" crc="02919024" md5="b9591d68433c4d0cf92bd2c2ebfdd2bb" sha1="4e245f579c161e55da55d3cfe8cdf632d279204b"/>
 	</game>
 	<game name="Demonstration Cartridge - Green (USA)">
 		<description>Demonstration Cartridge - Green (USA)</description>
@@ -301,12 +301,12 @@
 		<release name="Fathom (USA, Europe)" region="USA"/>
 		<rom name="Fathom (USA, Europe).int" size="16384" crc="4221ede7" md5="c13b1e3b0d33908c0fc073f2032d9be9" sha1="49646878c9698c9749b3665110acde0906b8f69c"/>
 	</game>
-	<game name="Frog Bog (World)">
-		<description>Frog Bog (World)</description>
-		<release name="Frog Bog (World)" region="EUR"/>
-		<release name="Frog Bog (World)" region="JPN"/>
-		<release name="Frog Bog (World)" region="USA"/>
-		<rom name="Frog Bog (World).int" size="8192" crc="37222762" md5="bb806b41644e33b6fc5a4d9d3f8c7aee" sha1="58842e4425ad5a8f6ec65528c4b485039057f289" status="verified"/>
+	<game name="Frog Bog (USA, Europe)">
+		<description>Frog Bog (USA, Europe)</description>
+		<release name="Frog Bog (USA, Europe)" region="EUR"/>
+		<release name="Frog Bog (USA, Europe)" region="JPN"/>
+		<release name="Frog Bog (USA, Europe)" region="USA"/>
+		<rom name="Frog Bog (USA, Europe).int" size="8192" crc="37222762" md5="bb806b41644e33b6fc5a4d9d3f8c7aee" sha1="58842e4425ad5a8f6ec65528c4b485039057f289"/>
 	</game>
 	<game name="Frogger (USA, Europe)">
 		<description>Frogger (USA, Europe)</description>
@@ -345,22 +345,22 @@
 		<release name="Happy Trails (USA, Europe)" region="USA"/>
 		<rom name="Happy Trails (USA, Europe).int" size="8192" crc="4b8c5932" md5="01348ced597a48a4ee87a5b3683616cb" sha1="5bd74fd0246da1441f4af76dc9592f7809f8a821"/>
 	</game>
-	<game name="Horse Racing (World)">
-		<description>Horse Racing (World)</description>
-		<release name="Horse Racing (World)" region="EUR"/>
-		<release name="Horse Racing (World)" region="JPN"/>
-		<release name="Horse Racing (World)" region="USA"/>
-		<rom name="Horse Racing (World).int" size="8192" crc="b5c7f25d" md5="96d52ac29d5d4fd50b69675885801c9a" sha1="bd024190395a6d5c9aecadb49d59511e265ff7b3" status="verified"/>
+	<game name="Horse Racing (USA, Europe)">
+		<description>Horse Racing (USA, Europe)</description>
+		<release name="Horse Racing (USA, Europe)" region="EUR"/>
+		<release name="Horse Racing (USA, Europe)" region="JPN"/>
+		<release name="Horse Racing (USA, Europe)" region="USA"/>
+		<rom name="Horse Racing (USA, Europe).int" size="8192" crc="b5c7f25d" md5="96d52ac29d5d4fd50b69675885801c9a" sha1="bd024190395a6d5c9aecadb49d59511e265ff7b3"/>
 	</game>
 	<game name="Hover Force (USA)">
 		<description>Hover Force (USA)</description>
 		<release name="Hover Force (USA)" region="USA"/>
-		<rom name="Hover Force (USA).int" size="49152" crc="ff83ff80" md5="436cacf587e988368974fe273be78474" sha1="2d96762d78a63f606b74c6619f3b2b82c381fcce" status="verified"/>
+		<rom name="Hover Force (USA).int" size="49152" crc="ff83ff80" md5="436cacf587e988368974fe273be78474" sha1="2d96762d78a63f606b74c6619f3b2b82c381fcce"/>
 	</game>
 	<game name="Hypnotic Lights (USA) (Proto)">
 		<description>Hypnotic Lights (USA) (Proto)</description>
 		<release name="Hypnotic Lights (USA) (Proto)" region="USA"/>
-		<rom name="Hypnotic Lights (USA) (Proto).int" size="8192" crc="a3147630" md5="f92d9f1d08b97383f9a954ba887cecb0" sha1="7aa48d1249d52a51223e99a98799b01f46cfc3d9" status="verified"/>
+		<rom name="Hypnotic Lights (USA) (Proto).int" size="8192" crc="a3147630" md5="f92d9f1d08b97383f9a954ba887cecb0" sha1="7aa48d1249d52a51223e99a98799b01f46cfc3d9"/>
 	</game>
 	<game name="Ice Trek (USA, Europe)">
 		<description>Ice Trek (USA, Europe)</description>
@@ -393,7 +393,7 @@
 	<game name="King of the Mountain (USA) (Proto)">
 		<description>King of the Mountain (USA) (Proto)</description>
 		<release name="King of the Mountain (USA) (Proto)" region="USA"/>
-		<rom name="King of the Mountain (USA) (Proto).int" size="32768" crc="4422868e" md5="eab911e041089584de216bc3feaa5c9a" sha1="3ef8acbc764f7916337a07407222c0bce092a058" status="verified"/>
+		<rom name="King of the Mountain (USA) (Proto).int" size="32768" crc="4422868e" md5="eab911e041089584de216bc3feaa5c9a" sha1="3ef8acbc764f7916337a07407222c0bce092a058"/>
 	</game>
 	<game name="Kool-Aid Man (USA)">
 		<description>Kool-Aid Man (USA)</description>
@@ -409,21 +409,21 @@
 	<game name="Land Battle (USA) (Proto)">
 		<description>Land Battle (USA) (Proto)</description>
 		<release name="Land Battle (USA) (Proto)" region="USA"/>
-		<rom name="Land Battle (USA) (Proto).int" size="16384" crc="3825c25b" md5="712fa2e78a5d8b02c9de067b798e2c69" sha1="97073f31a8c9b5b04e773fcb145c4235a4712ff7" status="verified"/>
+		<rom name="Land Battle (USA) (Proto).int" size="16384" crc="3825c25b" md5="712fa2e78a5d8b02c9de067b798e2c69" sha1="97073f31a8c9b5b04e773fcb145c4235a4712ff7"/>
 	</game>
-	<game name="Las Vegas Poker &amp; Blackjack (World)">
-		<description>Las Vegas Poker &amp; Blackjack (World)</description>
-		<release name="Las Vegas Poker &amp; Blackjack (World)" region="EUR"/>
-		<release name="Las Vegas Poker &amp; Blackjack (World)" region="JPN"/>
-		<release name="Las Vegas Poker &amp; Blackjack (World)" region="USA"/>
-		<rom name="Las Vegas Poker &amp; Blackjack (World).int" size="8192" crc="604611c0" md5="6506a1bf0c749fc768cb6b5162e0cbd7" sha1="a6c03e253e615a06f838e623df5f557636fdf8e1" status="verified"/>
+	<game name="Las Vegas Poker &amp; Blackjack (USA, Europe)">
+		<description>Las Vegas Poker &amp; Blackjack (USA, Europe)</description>
+		<release name="Las Vegas Poker &amp; Blackjack (USA, Europe)" region="EUR"/>
+		<release name="Las Vegas Poker &amp; Blackjack (USA, Europe)" region="JPN"/>
+		<release name="Las Vegas Poker &amp; Blackjack (USA, Europe)" region="USA"/>
+		<rom name="Las Vegas Poker &amp; Blackjack (USA, Europe).int" size="8192" crc="604611c0" md5="6506a1bf0c749fc768cb6b5162e0cbd7" sha1="a6c03e253e615a06f838e623df5f557636fdf8e1"/>
 	</game>
-	<game name="Las Vegas Roulette (World)">
-		<description>Las Vegas Roulette (World)</description>
-		<release name="Las Vegas Roulette (World)" region="EUR"/>
-		<release name="Las Vegas Roulette (World)" region="JPN"/>
-		<release name="Las Vegas Roulette (World)" region="USA"/>
-		<rom name="Las Vegas Roulette (World).int" size="8192" crc="48d74d3c" md5="203efd0d5b6c14b88fd5c7c0ed6bfc16" sha1="b7773c3cc93afe4820287c3f1c14345a1a14e1ee" status="verified"/>
+	<game name="Las Vegas Roulette (USA, Europe)">
+		<description>Las Vegas Roulette (USA, Europe)</description>
+		<release name="Las Vegas Roulette (USA, Europe)" region="EUR"/>
+		<release name="Las Vegas Roulette (USA, Europe)" region="JPN"/>
+		<release name="Las Vegas Roulette (USA, Europe)" region="USA"/>
+		<rom name="Las Vegas Roulette (USA, Europe).int" size="8192" crc="48d74d3c" md5="203efd0d5b6c14b88fd5c7c0ed6bfc16" sha1="b7773c3cc93afe4820287c3f1c14345a1a14e1ee"/>
 	</game>
 	<game name="League of Light (USA) (Proto)">
 		<description>League of Light (USA) (Proto)</description>
@@ -437,11 +437,11 @@
 	</game>
 	<game name="Factor Fun (USA)" cloneof="Learning Fun I - Math Master, Factor Fun (USA)">
 		<description>Factor Fun (USA)</description>
-		<rom name="Factor Fun (USA).int" size="16384" crc="f3ae29ea" md5="2259337d95a907999f76234c9e339d5c" sha1="32f924e5d6cf56783eeecc5a521086285e3bff41" status="verified"/>
+		<rom name="Factor Fun (USA).int" size="16384" crc="f3ae29ea" md5="2259337d95a907999f76234c9e339d5c" sha1="32f924e5d6cf56783eeecc5a521086285e3bff41"/>
 	</game>
 	<game name="Math Master (USA)" cloneof="Learning Fun I - Math Master, Factor Fun (USA)">
 		<description>Math Master (USA)</description>
-		<rom name="Math Master (USA).int" size="16384" crc="662e2812" md5="2cc9862abbc78efe34c31da000c5934d" sha1="dc9369b07bc53a5100a6308d88822c018497ca2a" status="verified"/>
+		<rom name="Math Master (USA).int" size="16384" crc="662e2812" md5="2cc9862abbc78efe34c31da000c5934d" sha1="dc9369b07bc53a5100a6308d88822c018497ca2a"/>
 	</game>
 	<game name="Learning Fun II - Word Wizard, Memory Fun (USA)">
 		<description>Learning Fun II - Word Wizard, Memory Fun (USA)</description>
@@ -450,19 +450,19 @@
 	</game>
 	<game name="Crosswords (USA)" cloneof="Learning Fun II - Word Wizard, Memory Fun (USA)">
 		<description>Crosswords (USA)</description>
-		<rom name="Crosswords (USA).int" size="16384" crc="32162105" md5="778189b03dea11c31e450e278231267b" sha1="b1f019989d74aa63f49070167dabea510c3aa6ed" status="verified"/>
+		<rom name="Crosswords (USA).int" size="16384" crc="32162105" md5="778189b03dea11c31e450e278231267b" sha1="b1f019989d74aa63f49070167dabea510c3aa6ed"/>
 	</game>
 	<game name="Memory Fun (USA)" cloneof="Learning Fun II - Word Wizard, Memory Fun (USA)">
 		<description>Memory Fun (USA)</description>
-		<rom name="Memory Fun (USA).int" size="16384" crc="96e000eb" md5="4b961a8df3be7dce05d26b0b5eba9f53" sha1="9b1d37a7c5c99efbf6f78f9af0a93d5af1ecd75c" status="verified"/>
+		<rom name="Memory Fun (USA).int" size="16384" crc="96e000eb" md5="4b961a8df3be7dce05d26b0b5eba9f53" sha1="9b1d37a7c5c99efbf6f78f9af0a93d5af1ecd75c"/>
 	</game>
 	<game name="Word Hunt (USA)" cloneof="Learning Fun II - Word Wizard, Memory Fun (USA)">
 		<description>Word Hunt (USA)</description>
-		<rom name="Word Hunt (USA).int" size="16384" crc="b8ae7e3b" md5="19a6bcd7d6d32d6f3ce05ed7edda02a9" sha1="a3d141e02e91e2f158c0a751d7014faeb0c55d93" status="verified"/>
+		<rom name="Word Hunt (USA).int" size="16384" crc="b8ae7e3b" md5="19a6bcd7d6d32d6f3ce05ed7edda02a9" sha1="a3d141e02e91e2f158c0a751d7014faeb0c55d93"/>
 	</game>
 	<game name="Word Rockets (USA)" cloneof="Learning Fun II - Word Wizard, Memory Fun (USA)">
 		<description>Word Rockets (USA)</description>
-		<rom name="Word Rockets (USA).int" size="16384" crc="4b35d11d" md5="2e5578e1b08edeaf76ff74aef878bb99" sha1="2b9b7cf8e86e22ef14ea1a379af95f766539a365" status="verified"/>
+		<rom name="Word Rockets (USA).int" size="16384" crc="4b35d11d" md5="2e5578e1b08edeaf76ff74aef878bb99" sha1="2b9b7cf8e86e22ef14ea1a379af95f766539a365"/>
 	</game>
 	<game name="Lock 'N' Chase (USA, Europe) (Rev 1)">
 		<description>Lock 'N' Chase (USA, Europe) (Rev 1)</description>
@@ -484,16 +484,16 @@
 		<release name="Magic Carousel (USA) (Proto)" region="USA"/>
 		<rom name="Magic Carousel (USA) (Proto).int" size="32768" crc="f3b0c759" md5="b97437149ef2073fb10fd098c5101172" sha1="ead96b0122443dd93c58516c956c3c9a53c7dcdb"/>
 	</game>
-	<game name="Magic Carousel (USA) (Proto) (Alt 1)" cloneof="Magic Carousel (USA) (Proto)">
-		<description>Magic Carousel (USA) (Proto) (Alt 1)</description>
-		<rom name="Magic Carousel (USA) (Proto) (Alt 1).int" size="32768" crc="b25b22cb" md5="e2c4b1522c6b185cb266f499b8b7ed2f" sha1="877102665e0674e42db9ee228ce8d540132ea996" status="verified"/>
+	<game name="Magic Carousel (USA) (Proto) (Alt)" cloneof="Magic Carousel (USA) (Proto)">
+		<description>Magic Carousel (USA) (Proto) (Alt)</description>
+		<rom name="Magic Carousel (USA) (Proto) (Alt).int" size="32768" crc="b25b22cb" md5="e2c4b1522c6b185cb266f499b8b7ed2f" sha1="877102665e0674e42db9ee228ce8d540132ea996"/>
 	</game>
-	<game name="Major League Baseball ~ Big League Baseball ~ Baseball (World)">
-		<description>Major League Baseball ~ Big League Baseball ~ Baseball (World)</description>
-		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (World)" region="EUR"/>
-		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (World)" region="JPN"/>
-		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (World)" region="USA"/>
-		<rom name="Major League Baseball ~ Big League Baseball ~ Baseball (World).int" size="8192" crc="dab36628" md5="b88c2989496a5ca5e276d56a2ebfb2ab" sha1="5e83a945f231f55d5ddfa9527f9b94da06e77058" status="verified"/>
+	<game name="Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe)">
+		<description>Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe)</description>
+		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe)" region="EUR"/>
+		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe)" region="JPN"/>
+		<release name="Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe)" region="USA"/>
+		<rom name="Major League Baseball ~ Big League Baseball ~ Baseball (USA, Europe).int" size="8192" crc="dab36628" md5="b88c2989496a5ca5e276d56a2ebfb2ab" sha1="5e83a945f231f55d5ddfa9527f9b94da06e77058"/>
 	</game>
 	<game name="Masters of the Universe - The Power of He-Man (USA, Europe)">
 		<description>Masters of the Universe - The Power of He-Man (USA, Europe)</description>
@@ -528,12 +528,12 @@
 	<game name="Motocross (USA)">
 		<description>Motocross (USA)</description>
 		<release name="Motocross (USA)" region="USA"/>
-		<rom name="Motocross (USA).int" size="16384" crc="5f6e1af6" md5="1ab93dab53b52ea6aa7d964682dfcf03" sha1="109e0a05e73239962ded327827c7957960802744" status="verified"/>
+		<rom name="Motocross (USA).int" size="16384" crc="5f6e1af6" md5="1ab93dab53b52ea6aa7d964682dfcf03" sha1="109e0a05e73239962ded327827c7957960802744"/>
 	</game>
 	<game name="Mountain Madness - Super Pro Skiing (USA)">
 		<description>Mountain Madness - Super Pro Skiing (USA)</description>
 		<release name="Mountain Madness - Super Pro Skiing (USA)" region="USA"/>
-		<rom name="Mountain Madness - Super Pro Skiing (USA).int" size="16384" crc="6b5ea9c4" md5="4c7c9a2bd67863501e678a1e965d5003" sha1="7cbb5fce8b9d44412b98d32a5ea752ec51590785" status="verified"/>
+		<rom name="Mountain Madness - Super Pro Skiing (USA).int" size="16384" crc="6b5ea9c4" md5="4c7c9a2bd67863501e678a1e965d5003" sha1="7cbb5fce8b9d44412b98d32a5ea752ec51590785"/>
 	</game>
 	<game name="Mouse Trap (USA, Europe)">
 		<description>Mouse Trap (USA, Europe)</description>
@@ -551,39 +551,39 @@
 		<release name="MTE201 Intellivision Test Cartridge (USA)" region="USA"/>
 		<rom name="MTE201 Intellivision Test Cartridge (USA).int" size="16386" crc="c83eea4c" md5="8e39e8b421879e01e0d3dede29279a4e" sha1="baf51811e8238ad56f74879e839a8af6b5612962"/>
 	</game>
-	<game name="NASL Soccer ~ Soccer (World)">
-		<description>NASL Soccer ~ Soccer (World)</description>
-		<release name="NASL Soccer ~ Soccer (World)" region="EUR"/>
-		<release name="NASL Soccer ~ Soccer (World)" region="JPN"/>
-		<release name="NASL Soccer ~ Soccer (World)" region="USA"/>
-		<rom name="NASL Soccer ~ Soccer (World).int" size="8192" crc="dbab54ca" md5="ec08c8432f695446bcb78411775fa8b4" sha1="3524384c2e096f22b7cb9608e0a8b9c78f4ef458" status="verified"/>
+	<game name="NASL Soccer ~ Soccer (USA, Europe)">
+		<description>NASL Soccer ~ Soccer (USA, Europe)</description>
+		<release name="NASL Soccer ~ Soccer (USA, Europe)" region="EUR"/>
+		<release name="NASL Soccer ~ Soccer (USA, Europe)" region="JPN"/>
+		<release name="NASL Soccer ~ Soccer (USA, Europe)" region="USA"/>
+		<rom name="NASL Soccer ~ Soccer (USA, Europe).int" size="8192" crc="dbab54ca" md5="ec08c8432f695446bcb78411775fa8b4" sha1="3524384c2e096f22b7cb9608e0a8b9c78f4ef458"/>
 	</game>
 	<game name="NBA Basketball ~ Basketball (USA, Europe)">
 		<description>NBA Basketball ~ Basketball (USA, Europe)</description>
 		<release name="NBA Basketball ~ Basketball (USA, Europe)" region="EUR"/>
 		<release name="NBA Basketball ~ Basketball (USA, Europe)" region="USA"/>
-		<rom name="NBA Basketball ~ Basketball (USA, Europe).int" size="8192" crc="81e7fb8c" md5="efaff20e6bbeb707b2486d031e3e1078" sha1="9c855e864cf926dfd3d09c071e499d7ccd537908" status="verified"/>
+		<rom name="NBA Basketball ~ Basketball (USA, Europe).int" size="8192" crc="81e7fb8c" md5="efaff20e6bbeb707b2486d031e3e1078" sha1="9c855e864cf926dfd3d09c071e499d7ccd537908"/>
 	</game>
-	<game name="NFL Football ~ Football (World)">
-		<description>NFL Football ~ Football (World)</description>
-		<release name="NFL Football ~ Football (World)" region="EUR"/>
-		<release name="NFL Football ~ Football (World)" region="JPN"/>
-		<release name="NFL Football ~ Football (World)" region="USA"/>
-		<rom name="NFL Football ~ Football (World).int" size="8192" crc="4b91cf16" md5="d0ef7a007e8635a13942fb6da48012a2" sha1="525dffeb7b53c88bd2e8076c421388ed72e2c90d" status="verified"/>
+	<game name="NFL Football ~ Football (USA, Europe)">
+		<description>NFL Football ~ Football (USA, Europe)</description>
+		<release name="NFL Football ~ Football (USA, Europe)" region="EUR"/>
+		<release name="NFL Football ~ Football (USA, Europe)" region="JPN"/>
+		<release name="NFL Football ~ Football (USA, Europe)" region="USA"/>
+		<rom name="NFL Football ~ Football (USA, Europe).int" size="8192" crc="4b91cf16" md5="d0ef7a007e8635a13942fb6da48012a2" sha1="525dffeb7b53c88bd2e8076c421388ed72e2c90d"/>
 	</game>
-	<game name="NHL Hockey ~ Hockey (World)">
-		<description>NHL Hockey ~ Hockey (World)</description>
-		<release name="NHL Hockey ~ Hockey (World)" region="EUR"/>
-		<release name="NHL Hockey ~ Hockey (World)" region="JPN"/>
-		<release name="NHL Hockey ~ Hockey (World)" region="USA"/>
-		<rom name="NHL Hockey ~ Hockey (World).int" size="8192" crc="76564a13" md5="6307b4ea467874b393a9a3f07f3eb50f" sha1="3395c6764f60d90d96966b28ee96742b5782d59f" status="verified"/>
+	<game name="NHL Hockey ~ Hockey (USA, Europe)">
+		<description>NHL Hockey ~ Hockey (USA, Europe)</description>
+		<release name="NHL Hockey ~ Hockey (USA, Europe)" region="EUR"/>
+		<release name="NHL Hockey ~ Hockey (USA, Europe)" region="JPN"/>
+		<release name="NHL Hockey ~ Hockey (USA, Europe)" region="USA"/>
+		<rom name="NHL Hockey ~ Hockey (USA, Europe).int" size="8192" crc="76564a13" md5="6307b4ea467874b393a9a3f07f3eb50f" sha1="3395c6764f60d90d96966b28ee96742b5782d59f"/>
 	</game>
-	<game name="Night Stalker (World)">
-		<description>Night Stalker (World)</description>
-		<release name="Night Stalker (World)" region="EUR"/>
-		<release name="Night Stalker (World)" region="JPN"/>
-		<release name="Night Stalker (World)" region="USA"/>
-		<rom name="Night Stalker (World).int" size="8192" crc="7334cd44" md5="b5e9a146f4f04daab3ba68b0ec45958a" sha1="13e321593daf93c2e3e964a05e43e4bb21da6ea6" status="verified"/>
+	<game name="Night Stalker (USA, Europe)">
+		<description>Night Stalker (USA, Europe)</description>
+		<release name="Night Stalker (USA, Europe)" region="EUR"/>
+		<release name="Night Stalker (USA, Europe)" region="JPN"/>
+		<release name="Night Stalker (USA, Europe)" region="USA"/>
+		<rom name="Night Stalker (USA, Europe).int" size="8192" crc="7334cd44" md5="b5e9a146f4f04daab3ba68b0ec45958a" sha1="13e321593daf93c2e3e964a05e43e4bb21da6ea6"/>
 	</game>
 	<game name="Nova Blast (USA, Europe)">
 		<description>Nova Blast (USA, Europe)</description>
@@ -596,9 +596,9 @@
 		<release name="Number Jumble (USA) (Proto)" region="USA"/>
 		<rom name="Number Jumble (USA) (Proto).int" size="32768" crc="e5d1a8d2" md5="f11987699a66c59ac874a50a5d905647" sha1="e27527eb8de824f893762d1b35863824434c8837"/>
 	</game>
-	<game name="Number Jumble (USA) (Proto) (Alt 1)" cloneof="Number Jumble (USA) (Proto)">
-		<description>Number Jumble (USA) (Proto) (Alt 1)</description>
-		<rom name="Number Jumble (USA) (Proto) (Alt 1).int" size="32768" crc="0e4920c1" md5="294473b9091ca56382522b5843877256" sha1="2d6f9169446545b9c0b07fb4898361083307c54e" status="verified"/>
+	<game name="Number Jumble (USA) (Proto) (Alt)" cloneof="Number Jumble (USA) (Proto)">
+		<description>Number Jumble (USA) (Proto) (Alt)</description>
+		<rom name="Number Jumble (USA) (Proto) (Alt).int" size="32768" crc="0e4920c1" md5="294473b9091ca56382522b5843877256" sha1="2d6f9169446545b9c0b07fb4898361083307c54e"/>
 	</game>
 	<game name="Pac-Man (USA) (Atarisoft)">
 		<description>Pac-Man (USA) (Atarisoft)</description>
@@ -617,35 +617,35 @@
 	<game name="Party Line - Hard Hat (USA) (Proto)">
 		<description>Party Line - Hard Hat (USA) (Proto)</description>
 		<release name="Party Line - Hard Hat (USA) (Proto)" region="USA"/>
-		<rom name="Party Line - Hard Hat (USA) (Proto).int" size="16384" crc="b6a3d4de" md5="c4268724c89f44ae71a81400c2ea1a71" sha1="88c68c9766932df8ef11f5110881fa9b6954d965" status="verified"/>
+		<rom name="Party Line - Hard Hat (USA) (Proto).int" size="16384" crc="b6a3d4de" md5="c4268724c89f44ae71a81400c2ea1a71" sha1="88c68c9766932df8ef11f5110881fa9b6954d965"/>
 	</game>
 	<game name="Party Line - Space Cadet (USA) (Proto)">
 		<description>Party Line - Space Cadet (USA) (Proto)</description>
 		<release name="Party Line - Space Cadet (USA) (Proto)" region="USA"/>
 		<rom name="Party Line - Space Cadet (USA) (Proto).int" size="16384" crc="f8ef3e5a" md5="976c2cc2329565aa078e51ea97c7a76c" sha1="f3cfbe285a12194ef2f6087fc70d0ed887c4ec91"/>
 	</game>
-	<game name="Party Line - Space Cadet (USA) (Proto) (Alt 1)" cloneof="Party Line - Space Cadet (USA) (Proto)">
-		<description>Party Line - Space Cadet (USA) (Proto) (Alt 1)</description>
-		<rom name="Party Line - Space Cadet (USA) (Proto) (Alt 1).int" size="16384" crc="4b88fa8e" md5="a67416f1d3344346d833d214a8862dfb" sha1="da243bb89d39e7ac9f420fbbb3275dd81ea876fb" status="verified"/>
+	<game name="Party Line - Space Cadet (USA) (Proto) (Alt)" cloneof="Party Line - Space Cadet (USA) (Proto)">
+		<description>Party Line - Space Cadet (USA) (Proto) (Alt)</description>
+		<rom name="Party Line - Space Cadet (USA) (Proto) (Alt).int" size="16384" crc="4b88fa8e" md5="a67416f1d3344346d833d214a8862dfb" sha1="da243bb89d39e7ac9f420fbbb3275dd81ea876fb"/>
 	</game>
-	<game name="PBA Bowling ~ Bowling (World)">
-		<description>PBA Bowling ~ Bowling (World)</description>
-		<release name="PBA Bowling ~ Bowling (World)" region="EUR"/>
-		<release name="PBA Bowling ~ Bowling (World)" region="JPN"/>
-		<release name="PBA Bowling ~ Bowling (World)" region="USA"/>
-		<rom name="PBA Bowling ~ Bowling (World).int" size="8192" crc="169e3584" md5="26b658bb3f761ee0d50e93cb782e08ec" sha1="71a2bf83f18fdbf4db3af66681fcfa506bf0d31c" status="verified"/>
+	<game name="PBA Bowling ~ Bowling (USA, Europe)">
+		<description>PBA Bowling ~ Bowling (USA, Europe)</description>
+		<release name="PBA Bowling ~ Bowling (USA, Europe)" region="EUR"/>
+		<release name="PBA Bowling ~ Bowling (USA, Europe)" region="JPN"/>
+		<release name="PBA Bowling ~ Bowling (USA, Europe)" region="USA"/>
+		<rom name="PBA Bowling ~ Bowling (USA, Europe).int" size="8192" crc="169e3584" md5="26b658bb3f761ee0d50e93cb782e08ec" sha1="71a2bf83f18fdbf4db3af66681fcfa506bf0d31c"/>
 	</game>
-	<game name="PGA Golf ~ Golf (World)">
-		<description>PGA Golf ~ Golf (World)</description>
-		<release name="PGA Golf ~ Golf (World)" region="EUR"/>
-		<release name="PGA Golf ~ Golf (World)" region="JPN"/>
-		<release name="PGA Golf ~ Golf (World)" region="USA"/>
-		<rom name="PGA Golf ~ Golf (World).int" size="8192" crc="ff87faec" md5="b707c1d38c0c21a7513d1dc0739cdf12" sha1="5bbbdadb74fe62546594a4778928cf1287016083" status="verified"/>
+	<game name="PGA Golf ~ Golf (USA, Europe)">
+		<description>PGA Golf ~ Golf (USA, Europe)</description>
+		<release name="PGA Golf ~ Golf (USA, Europe)" region="EUR"/>
+		<release name="PGA Golf ~ Golf (USA, Europe)" region="JPN"/>
+		<release name="PGA Golf ~ Golf (USA, Europe)" region="USA"/>
+		<rom name="PGA Golf ~ Golf (USA, Europe).int" size="8192" crc="ff87faec" md5="b707c1d38c0c21a7513d1dc0739cdf12" sha1="5bbbdadb74fe62546594a4778928cf1287016083"/>
 	</game>
 	<game name="Pinball (USA)">
 		<description>Pinball (USA)</description>
 		<release name="Pinball (USA)" region="USA"/>
-		<rom name="Pinball (USA).int" size="24576" crc="d7c5849c" md5="2828ce0b76c7f8a5e3a4569fac5c8eb9" sha1="c24bf2e31ce331fac4ca5012501bde7f5bd94adb" status="verified"/>
+		<rom name="Pinball (USA).int" size="24576" crc="d7c5849c" md5="2828ce0b76c7f8a5e3a4569fac5c8eb9" sha1="c24bf2e31ce331fac4ca5012501bde7f5bd94adb"/>
 	</game>
 	<game name="Pitfall! (USA, Europe)">
 		<description>Pitfall! (USA, Europe)</description>
@@ -674,7 +674,7 @@
 		<description>Reversi (USA, Europe)</description>
 		<release name="Reversi (USA, Europe)" region="EUR"/>
 		<release name="Reversi (USA, Europe)" region="USA"/>
-		<rom name="Reversi (USA, Europe).int" size="8192" crc="c7bb1b0e" md5="61d8dd664d255dfca43f8b40802d76ae" sha1="3eea6f5c02942eb3ac96967e3b667911459d09f8" status="verified"/>
+		<rom name="Reversi (USA, Europe).int" size="8192" crc="c7bb1b0e" md5="61d8dd664d255dfca43f8b40802d76ae" sha1="3eea6f5c02942eb3ac96967e3b667911459d09f8"/>
 	</game>
 	<game name="River Raid (USA, Europe)">
 		<description>River Raid (USA, Europe)</description>
@@ -708,7 +708,7 @@
 		<description>Royal Dealer (USA, Europe)</description>
 		<release name="Royal Dealer (USA, Europe)" region="EUR"/>
 		<release name="Royal Dealer (USA, Europe)" region="USA"/>
-		<rom name="Royal Dealer (USA, Europe).int" size="16384" crc="dcf4b15d" md5="bcf1b30ba80303b36b1cc3bdd5042c1e" sha1="0b53bb03d25c345657baa388478aa8df94026c33" status="verified"/>
+		<rom name="Royal Dealer (USA, Europe).int" size="16384" crc="dcf4b15d" md5="bcf1b30ba80303b36b1cc3bdd5042c1e" sha1="0b53bb03d25c345657baa388478aa8df94026c33"/>
 	</game>
 	<game name="Safecracker (USA, Europe)">
 		<description>Safecracker (USA, Europe)</description>
@@ -727,12 +727,12 @@
 		<release name="Scooby Doo's Maze Chase (USA, Europe)" region="USA"/>
 		<rom name="Scooby Doo's Maze Chase (USA, Europe).int" size="16384" crc="e9e3f60d" md5="cb590a4bb37d38ec7e96cf140c6e649d" sha1="4e8b7c7308162f58d36b4afe748a408f8e40c63b"/>
 	</game>
-	<game name="Sea Battle (World)">
-		<description>Sea Battle (World)</description>
-		<release name="Sea Battle (World)" region="EUR"/>
-		<release name="Sea Battle (World)" region="JPN"/>
-		<release name="Sea Battle (World)" region="USA"/>
-		<rom name="Sea Battle (World).int" size="8192" crc="99ae29a9" md5="4e9a8366eb0bb166dad7a7385417eac8" sha1="ccb48a11f3cbfa580f2c6a1012c8d794eee9a5ec" status="verified"/>
+	<game name="Sea Battle (USA, Europe)">
+		<description>Sea Battle (USA, Europe)</description>
+		<release name="Sea Battle (USA, Europe)" region="EUR"/>
+		<release name="Sea Battle (USA, Europe)" region="JPN"/>
+		<release name="Sea Battle (USA, Europe)" region="USA"/>
+		<rom name="Sea Battle (USA, Europe).int" size="8192" crc="99ae29a9" md5="4e9a8366eb0bb166dad7a7385417eac8" sha1="ccb48a11f3cbfa580f2c6a1012c8d794eee9a5ec"/>
 	</game>
 	<game name="Sewer Sam (USA)">
 		<description>Sewer Sam (USA)</description>
@@ -743,66 +743,66 @@
 		<description>Shark! Shark! (USA, Europe)</description>
 		<release name="Shark! Shark! (USA, Europe)" region="EUR"/>
 		<release name="Shark! Shark! (USA, Europe)" region="USA"/>
-		<rom name="Shark! Shark! (USA, Europe).int" size="16384" crc="2a4c761d" md5="9f85b961e6c40c2c786026f460ae02fa" sha1="53d10e890571ef67d39874582f3668b29c580590" status="verified"/>
+		<rom name="Shark! Shark! (USA, Europe).int" size="16384" crc="2a4c761d" md5="9f85b961e6c40c2c786026f460ae02fa" sha1="53d10e890571ef67d39874582f3668b29c580590"/>
 	</game>
 	<game name="Sharp Shot (USA, Europe)">
 		<description>Sharp Shot (USA, Europe)</description>
 		<release name="Sharp Shot (USA, Europe)" region="EUR"/>
 		<release name="Sharp Shot (USA, Europe)" region="USA"/>
-		<rom name="Sharp Shot (USA, Europe).int" size="8192" crc="ff7cb79e" md5="a1c80e87c8b8bf9549b30e78027f137a" sha1="0a0230a5c06f3593d683458aec3d81654904f16d" status="verified"/>
+		<rom name="Sharp Shot (USA, Europe).int" size="8192" crc="ff7cb79e" md5="a1c80e87c8b8bf9549b30e78027f137a" sha1="0a0230a5c06f3593d683458aec3d81654904f16d"/>
 	</game>
 	<game name="Slam Dunk - Super Pro Basketball (USA)">
 		<description>Slam Dunk - Super Pro Basketball (USA)</description>
 		<release name="Slam Dunk - Super Pro Basketball (USA)" region="USA"/>
-		<rom name="Slam Dunk - Super Pro Basketball (USA).int" size="32768" crc="800b572f" md5="6b7d47db4b5bcc2c3d2696fbf65555a1" sha1="ba455f1df7a4badddb129c724f2e9aca46d6f636" status="verified"/>
+		<rom name="Slam Dunk - Super Pro Basketball (USA).int" size="32768" crc="800b572f" md5="6b7d47db4b5bcc2c3d2696fbf65555a1" sha1="ba455f1df7a4badddb129c724f2e9aca46d6f636"/>
 	</game>
 	<game name="Slap Shot - Super Pro Hockey (USA)">
 		<description>Slap Shot - Super Pro Hockey (USA)</description>
 		<release name="Slap Shot - Super Pro Hockey (USA)" region="USA"/>
-		<rom name="Slap Shot - Super Pro Hockey (USA).int" size="16384" crc="ba68ff28" md5="5ec328d358ff8c9664e4ab1deaa89f80" sha1="35e27d918cad45129fcc3924fbb4f2fef8f31776" status="verified"/>
+		<rom name="Slap Shot - Super Pro Hockey (USA).int" size="16384" crc="ba68ff28" md5="5ec328d358ff8c9664e4ab1deaa89f80" sha1="35e27d918cad45129fcc3924fbb4f2fef8f31776"/>
 	</game>
-	<game name="SNAFU (World)">
-		<description>SNAFU (World)</description>
-		<release name="SNAFU (World)" region="EUR"/>
-		<release name="SNAFU (World)" region="JPN"/>
-		<release name="SNAFU (World)" region="USA"/>
-		<rom name="SNAFU (World).int" size="8192" crc="8f959a6e" md5="df286e44cb487dab088a43d22af8ccfb" sha1="9d5c237c7fb1cf3c444f916e84ee4180d9732c4c" status="verified"/>
+	<game name="SNAFU (USA, Europe)">
+		<description>SNAFU (USA, Europe)</description>
+		<release name="SNAFU (USA, Europe)" region="EUR"/>
+		<release name="SNAFU (USA, Europe)" region="JPN"/>
+		<release name="SNAFU (USA, Europe)" region="USA"/>
+		<rom name="SNAFU (USA, Europe).int" size="8192" crc="8f959a6e" md5="df286e44cb487dab088a43d22af8ccfb" sha1="9d5c237c7fb1cf3c444f916e84ee4180d9732c4c"/>
 	</game>
-	<game name="Space Armada (World)">
-		<description>Space Armada (World)</description>
-		<release name="Space Armada (World)" region="EUR"/>
-		<release name="Space Armada (World)" region="JPN"/>
-		<release name="Space Armada (World)" region="USA"/>
-		<rom name="Space Armada (World).int" size="8192" crc="e8b8eba5" md5="b7c771a6062ee673936008754c987fd1" sha1="2d8ddc0881b63b2f691a97eab182ed4c3ca56816" status="verified"/>
+	<game name="Space Armada (USA, Europe)">
+		<description>Space Armada (USA, Europe)</description>
+		<release name="Space Armada (USA, Europe)" region="EUR"/>
+		<release name="Space Armada (USA, Europe)" region="JPN"/>
+		<release name="Space Armada (USA, Europe)" region="USA"/>
+		<rom name="Space Armada (USA, Europe).int" size="8192" crc="e8b8eba5" md5="b7c771a6062ee673936008754c987fd1" sha1="2d8ddc0881b63b2f691a97eab182ed4c3ca56816"/>
 	</game>
-	<game name="Space Battle (World)">
-		<description>Space Battle (World)</description>
-		<release name="Space Battle (World)" region="EUR"/>
-		<release name="Space Battle (World)" region="JPN"/>
-		<release name="Space Battle (World)" region="USA"/>
-		<rom name="Space Battle (World).int" size="8192" crc="f95504e0" md5="8c11519753896450e6f38b8e338cb1f6" sha1="d6036c7e7c0da20878fd7acc9f6b476135d1e8d1" status="verified"/>
+	<game name="Space Battle (USA, Europe)">
+		<description>Space Battle (USA, Europe)</description>
+		<release name="Space Battle (USA, Europe)" region="EUR"/>
+		<release name="Space Battle (USA, Europe)" region="JPN"/>
+		<release name="Space Battle (USA, Europe)" region="USA"/>
+		<rom name="Space Battle (USA, Europe).int" size="8192" crc="f95504e0" md5="8c11519753896450e6f38b8e338cb1f6" sha1="d6036c7e7c0da20878fd7acc9f6b476135d1e8d1"/>
 	</game>
 	<game name="Space Hawk (USA, Europe)">
 		<description>Space Hawk (USA, Europe)</description>
 		<release name="Space Hawk (USA, Europe)" region="EUR"/>
 		<release name="Space Hawk (USA, Europe)" region="USA"/>
-		<rom name="Space Hawk (USA, Europe).int" size="8192" crc="39d3b895" md5="20ba9224386c5f64b62b38fdf12589db" sha1="e7e4b8ad30ee69cd9e75f2b3e3d94b75e7288110" status="verified"/>
+		<rom name="Space Hawk (USA, Europe).int" size="8192" crc="39d3b895" md5="20ba9224386c5f64b62b38fdf12589db" sha1="e7e4b8ad30ee69cd9e75f2b3e3d94b75e7288110"/>
 	</game>
 	<game name="Space Spartans (USA, Europe)">
 		<description>Space Spartans (USA, Europe)</description>
 		<release name="Space Spartans (USA, Europe)" region="EUR"/>
 		<release name="Space Spartans (USA, Europe)" region="USA"/>
-		<rom name="Space Spartans (USA, Europe).int" size="16384" crc="3784dc52" md5="628f7614cc3912f5c33b1052e6c61f04" sha1="954d5911a3a41e8f9b4664ab4f60484b2d2648b3" status="verified"/>
+		<rom name="Space Spartans (USA, Europe).int" size="16384" crc="3784dc52" md5="628f7614cc3912f5c33b1052e6c61f04" sha1="954d5911a3a41e8f9b4664ab4f60484b2d2648b3"/>
 	</game>
 	<game name="Spiker - Super Pro Volleyball (USA)">
 		<description>Spiker - Super Pro Volleyball (USA)</description>
 		<release name="Spiker - Super Pro Volleyball (USA)" region="USA"/>
-		<rom name="Spiker - Super Pro Volleyball (USA).int" size="32768" crc="a95021fc" md5="fa7bf5db6680d9464161914917e16f1f" sha1="cbc9b04ed52034283cd307ed5d3b2843e70f0409" status="verified"/>
+		<rom name="Spiker - Super Pro Volleyball (USA).int" size="32768" crc="a95021fc" md5="fa7bf5db6680d9464161914917e16f1f" sha1="cbc9b04ed52034283cd307ed5d3b2843e70f0409"/>
 	</game>
 	<game name="Stadium Mud Buggies (USA)">
 		<description>Stadium Mud Buggies (USA)</description>
 		<release name="Stadium Mud Buggies (USA)" region="USA"/>
-		<rom name="Stadium Mud Buggies (USA).int" size="32768" crc="b745c1ca" md5="547aaf6281fb4878007bc632f5f051b6" sha1="8547b9cf117ed1a1caf0953a8b545587206dc4f7" status="verified"/>
+		<rom name="Stadium Mud Buggies (USA).int" size="32768" crc="b745c1ca" md5="547aaf6281fb4878007bc632f5f051b6" sha1="8547b9cf117ed1a1caf0953a8b545587206dc4f7"/>
 	</game>
 	<game name="Stampede (USA, Europe)">
 		<description>Stampede (USA, Europe)</description>
@@ -810,12 +810,12 @@
 		<release name="Stampede (USA, Europe)" region="USA"/>
 		<rom name="Stampede (USA, Europe).int" size="8192" crc="2deacd15" md5="e39a9065388384cf439dc1484013d993" sha1="31cf8f77d889c48d2b31670e58b2ec38187f2748"/>
 	</game>
-	<game name="Star Strike (World)">
-		<description>Star Strike (World)</description>
-		<release name="Star Strike (World)" region="EUR"/>
-		<release name="Star Strike (World)" region="JPN"/>
-		<release name="Star Strike (World)" region="USA"/>
-		<rom name="Star Strike (World).int" size="8192" crc="72e11fca" md5="f76a250066e55817f42872083bc854b2" sha1="17c37fbc5ff14c55931ae27e21603dff3db66dbe" status="verified"/>
+	<game name="Star Strike (USA, Europe)">
+		<description>Star Strike (USA, Europe)</description>
+		<release name="Star Strike (USA, Europe)" region="EUR"/>
+		<release name="Star Strike (USA, Europe)" region="JPN"/>
+		<release name="Star Strike (USA, Europe)" region="USA"/>
+		<rom name="Star Strike (USA, Europe).int" size="8192" crc="72e11fca" md5="f76a250066e55817f42872083bc854b2" sha1="17c37fbc5ff14c55931ae27e21603dff3db66dbe"/>
 	</game>
 	<game name="Star Wars - The Empire Strikes Back (USA, Europe)">
 		<description>Star Wars - The Empire Strikes Back (USA, Europe)</description>
@@ -832,7 +832,7 @@
 		<description>Sub Hunt (USA, Europe)</description>
 		<release name="Sub Hunt (USA, Europe)" region="EUR"/>
 		<release name="Sub Hunt (USA, Europe)" region="USA"/>
-		<rom name="Sub Hunt (USA, Europe).int" size="16384" crc="3d9949ea" md5="dd7bc297265cf2f65062966312b0b966" sha1="8b09884a69f4aa8663f42a201dd70df98f4da0fc" status="verified"/>
+		<rom name="Sub Hunt (USA, Europe).int" size="16384" crc="3d9949ea" md5="dd7bc297265cf2f65062966312b0b966" sha1="8b09884a69f4aa8663f42a201dd70df98f4da0fc"/>
 	</game>
 	<game name="Super Cobra (Europe, Canada)">
 		<description>Super Cobra (Europe, Canada)</description>
@@ -853,12 +853,12 @@
 	<game name="Super Pro Decathlon (USA)">
 		<description>Super Pro Decathlon (USA)</description>
 		<release name="Super Pro Decathlon (USA)" region="USA"/>
-		<rom name="Super Pro Decathlon (USA).int" size="32768" crc="16bfb8eb" md5="ef9c76117f52ab8dae9e305c4fdd769e" sha1="51dfca097cf63623d52ad1e49baa703a61b8da11" status="verified"/>
+		<rom name="Super Pro Decathlon (USA).int" size="32768" crc="16bfb8eb" md5="ef9c76117f52ab8dae9e305c4fdd769e" sha1="51dfca097cf63623d52ad1e49baa703a61b8da11"/>
 	</game>
 	<game name="Super Pro Football (USA)">
 		<description>Super Pro Football (USA)</description>
 		<release name="Super Pro Football (USA)" region="USA"/>
-		<rom name="Super Pro Football (USA).int" size="32768" crc="32076e9d" md5="64a2772852b1796be8554a39301bf255" sha1="08c97d4e23b8033d9437241c1f4d8a1486d1e9ea" status="verified"/>
+		<rom name="Super Pro Football (USA).int" size="32768" crc="32076e9d" md5="64a2772852b1796be8554a39301bf255" sha1="08c97d4e23b8033d9437241c1f4d8a1486d1e9ea"/>
 	</game>
 	<game name="Swords &amp; Serpents (USA, Europe)">
 		<description>Swords &amp; Serpents (USA, Europe)</description>
@@ -869,14 +869,14 @@
 	<game name="Takeover (USA) (Proto)">
 		<description>Takeover (USA) (Proto)</description>
 		<release name="Takeover (USA) (Proto)" region="USA"/>
-		<rom name="Takeover (USA) (Proto).int" size="8192" crc="1f584a69" md5="7589db92726d2f6b4c4d9749b4a2c707" sha1="47057bd3811689692ac9ef3deed7248e01a5f4f5" status="verified"/>
+		<rom name="Takeover (USA) (Proto).int" size="8192" crc="1f584a69" md5="7589db92726d2f6b4c4d9749b4a2c707" sha1="47057bd3811689692ac9ef3deed7248e01a5f4f5"/>
 	</game>
-	<game name="Tennis (World)">
-		<description>Tennis (World)</description>
-		<release name="Tennis (World)" region="EUR"/>
-		<release name="Tennis (World)" region="JPN"/>
-		<release name="Tennis (World)" region="USA"/>
-		<rom name="Tennis (World).int" size="8192" crc="03e9e62e" md5="dcf742ed6ee2101769a48faf45145f2c" sha1="e500b803cba6e73228a919fdedc109f0022cee3a" status="verified"/>
+	<game name="Tennis (USA, Europe)">
+		<description>Tennis (USA, Europe)</description>
+		<release name="Tennis (USA, Europe)" region="EUR"/>
+		<release name="Tennis (USA, Europe)" region="JPN"/>
+		<release name="Tennis (USA, Europe)" region="USA"/>
+		<rom name="Tennis (USA, Europe).int" size="8192" crc="03e9e62e" md5="dcf742ed6ee2101769a48faf45145f2c" sha1="e500b803cba6e73228a919fdedc109f0022cee3a"/>
 	</game>
 	<game name="Thin Ice (USA)">
 		<description>Thin Ice (USA)</description>
@@ -885,7 +885,7 @@
 	</game>
 	<game name="Duncan's Thin Ice (USA)" cloneof="Thin Ice (USA)">
 		<description>Duncan's Thin Ice (USA)</description>
-		<rom name="Duncan's Thin Ice (USA).int" size="32768" crc="f3df94e0" md5="0960019b1afcf56baa851d36fac4d295" sha1="4da7b8ad3575a8d036a38bcc2c70903a443da602" status="verified"/>
+		<rom name="Duncan's Thin Ice (USA).int" size="32768" crc="f3df94e0" md5="0960019b1afcf56baa851d36fac4d295" sha1="4da7b8ad3575a8d036a38bcc2c70903a443da602"/>
 	</game>
 	<game name="Thin Ice (USA) (Beta)" cloneof="Thin Ice (USA)">
 		<description>Thin Ice (USA) (Beta)</description>
@@ -894,31 +894,31 @@
 	<game name="Thunder Castle (USA)">
 		<description>Thunder Castle (USA)</description>
 		<release name="Thunder Castle (USA)" region="USA"/>
-		<rom name="Thunder Castle (USA).int" size="32768" crc="c1f1ca74" md5="603ad521602531b5c9ad3e77ac47e590" sha1="e1e1a3992045cc873d09a0e92d6e7955f1d67936" status="verified"/>
+		<rom name="Thunder Castle (USA).int" size="32768" crc="c1f1ca74" md5="603ad521602531b5c9ad3e77ac47e590" sha1="e1e1a3992045cc873d09a0e92d6e7955f1d67936"/>
 	</game>
 	<game name="Tower of Doom (USA)">
 		<description>Tower of Doom (USA)</description>
 		<release name="Tower of Doom (USA)" region="USA"/>
-		<rom name="Tower of Doom (USA).int" size="49152" crc="d1d352a0" md5="95b106acaecab4fe3d43970eae893452" sha1="de35812076bda03999a55b2969a67299ccfb83c4" status="verified"/>
+		<rom name="Tower of Doom (USA).int" size="49152" crc="d1d352a0" md5="95b106acaecab4fe3d43970eae893452" sha1="de35812076bda03999a55b2969a67299ccfb83c4"/>
 	</game>
-	<game name="Triple Action (World)">
-		<description>Triple Action (World)</description>
-		<release name="Triple Action (World)" region="EUR"/>
-		<release name="Triple Action (World)" region="JPN"/>
-		<release name="Triple Action (World)" region="USA"/>
-		<rom name="Triple Action (World).int" size="8192" crc="1ac989e2" md5="df8bf33772ee8a983ee67687a53a0d4a" sha1="6c1011b98ac76653632fd13e93466802f7d4dea9"/>
+	<game name="Triple Action (USA)">
+		<description>Triple Action (USA)</description>
+		<release name="Triple Action (USA)" region="EUR"/>
+		<release name="Triple Action (USA)" region="JPN"/>
+		<release name="Triple Action (USA)" region="USA"/>
+		<rom name="Triple Action (USA).int" size="8192" crc="1ac989e2" md5="df8bf33772ee8a983ee67687a53a0d4a" sha1="6c1011b98ac76653632fd13e93466802f7d4dea9"/>
 	</game>
-	<game name="BattleTanks (USA)" cloneof="Triple Action (World)">
+	<game name="BattleTanks (USA)" cloneof="Triple Action (USA)">
 		<description>BattleTanks (USA)</description>
-		<rom name="BattleTanks (USA).int" size="8192" crc="22a1f245" md5="dd937cfd29c08dbc567284ebf5de9c18" sha1="d90353d11ede41628fc2ebec8eaf41378a2634b0" status="verified"/>
+		<rom name="BattleTanks (USA).int" size="8192" crc="22a1f245" md5="dd937cfd29c08dbc567284ebf5de9c18" sha1="d90353d11ede41628fc2ebec8eaf41378a2634b0"/>
 	</game>
-	<game name="Biplanes (USA)" cloneof="Triple Action (World)">
+	<game name="Biplanes (USA)" cloneof="Triple Action (USA)">
 		<description>Biplanes (USA)</description>
-		<rom name="Biplanes (USA).int" size="8192" crc="44519f2d" md5="6dc9f098927799c6d40a9d9de4281592" sha1="2b66ea4e7945199752c78f3b1323b76656e1c8d3" status="verified"/>
+		<rom name="Biplanes (USA).int" size="8192" crc="44519f2d" md5="6dc9f098927799c6d40a9d9de4281592" sha1="2b66ea4e7945199752c78f3b1323b76656e1c8d3"/>
 	</game>
-	<game name="Racing Cars (USA)" cloneof="Triple Action (World)">
+	<game name="Racing Cars (USA)" cloneof="Triple Action (USA)">
 		<description>Racing Cars (USA)</description>
-		<rom name="Racing Cars (USA).int" size="8192" crc="156a5645" md5="426940b24bd342bdfd8e7062d11f988d" sha1="eec4154acc4cbdbab9fc77e57f9488c66853781a" status="verified"/>
+		<rom name="Racing Cars (USA).int" size="8192" crc="156a5645" md5="426940b24bd342bdfd8e7062d11f988d" sha1="eec4154acc4cbdbab9fc77e57f9488c66853781a"/>
 	</game>
 	<game name="Triple Challenge - Chess, Checkers, Backgammon (USA)">
 		<description>Triple Challenge - Chess, Checkers, Backgammon (USA)</description>
@@ -974,24 +974,24 @@
 		<release name="Tutankham (Europe)" region="EUR"/>
 		<rom name="Tutankham (Europe).int" size="16384" crc="6fa698b3" md5="be9e56495af99f3f29ef3bc3b0a51fd4" sha1="12a96e4111082f1cf5bee27f850f28e20009681b"/>
 	</game>
-	<game name="US Ski Team Skiing ~ Skiing (World)">
-		<description>US Ski Team Skiing ~ Skiing (World)</description>
-		<release name="US Ski Team Skiing ~ Skiing (World)" region="EUR"/>
-		<release name="US Ski Team Skiing ~ Skiing (World)" region="JPN"/>
-		<release name="US Ski Team Skiing ~ Skiing (World)" region="USA"/>
-		<rom name="US Ski Team Skiing ~ Skiing (World).int" size="8192" crc="f093e801" md5="04004ff8abf2bf4ee5992a0a8f20d3c4" sha1="f93df55f45ee9b589db5763cefe6742860b38e79" status="verified"/>
+	<game name="US Ski Team Skiing ~ Skiing (USA, Europe)">
+		<description>US Ski Team Skiing ~ Skiing (USA, Europe)</description>
+		<release name="US Ski Team Skiing ~ Skiing (USA, Europe)" region="EUR"/>
+		<release name="US Ski Team Skiing ~ Skiing (USA, Europe)" region="JPN"/>
+		<release name="US Ski Team Skiing ~ Skiing (USA, Europe)" region="USA"/>
+		<rom name="US Ski Team Skiing ~ Skiing (USA, Europe).int" size="8192" crc="f093e801" md5="04004ff8abf2bf4ee5992a0a8f20d3c4" sha1="f93df55f45ee9b589db5763cefe6742860b38e79"/>
 	</game>
 	<game name="USCF Chess ~ Chess (USA, Europe)">
 		<description>USCF Chess ~ Chess (USA, Europe)</description>
 		<release name="USCF Chess ~ Chess (USA, Europe)" region="EUR"/>
 		<release name="USCF Chess ~ Chess (USA, Europe)" region="USA"/>
-		<rom name="USCF Chess ~ Chess (USA, Europe).int" size="16384" crc="752fd927" md5="11b861f65c37a59e67ff028435ac2025" sha1="4ccf494f9664d5b9e05237d1bc2eee8a7830f067" status="verified"/>
+		<rom name="USCF Chess ~ Chess (USA, Europe).int" size="16384" crc="752fd927" md5="11b861f65c37a59e67ff028435ac2025" sha1="4ccf494f9664d5b9e05237d1bc2eee8a7830f067"/>
 	</game>
 	<game name="Utopia (USA, Europe)">
 		<description>Utopia (USA, Europe)</description>
 		<release name="Utopia (USA, Europe)" region="EUR"/>
 		<release name="Utopia (USA, Europe)" region="USA"/>
-		<rom name="Utopia (USA, Europe).int" size="8192" crc="f9e0789e" md5="b93b1169c33b7220887ac7af54224976" sha1="d72d2a9817e75039d57b1ec877dfe2b96a306b61" status="verified"/>
+		<rom name="Utopia (USA, Europe).int" size="8192" crc="f9e0789e" md5="b93b1169c33b7220887ac7af54224976" sha1="d72d2a9817e75039d57b1ec877dfe2b96a306b61"/>
 	</game>
 	<game name="Vectron (USA, Europe)">
 		<description>Vectron (USA, Europe)</description>
@@ -999,9 +999,9 @@
 		<release name="Vectron (USA, Europe)" region="USA"/>
 		<rom name="Vectron (USA, Europe).int" size="24576" crc="a4a20354" md5="4c149598be3a6c3974ff5f90005484fc" sha1="dab5bc9f2ba1ee97aa8e0bcaf0d5d5c242b607b2"/>
 	</game>
-	<game name="Vectron (USA, Europe) (Alt 1)" cloneof="Vectron (USA, Europe)">
-		<description>Vectron (USA, Europe) (Alt 1)</description>
-		<rom name="Vectron (USA, Europe) (Alt 1).int" size="24576" crc="8f48030f" md5="bd73d7fcb32bc93762167aed93a91fab" sha1="71e82820adcb152e8d2be09ef039cfce3f8c33f6" status="verified"/>
+	<game name="Vectron (USA, Europe) (Alt)" cloneof="Vectron (USA, Europe)">
+		<description>Vectron (USA, Europe) (Alt)</description>
+		<rom name="Vectron (USA, Europe) (Alt).int" size="24576" crc="8f48030f" md5="bd73d7fcb32bc93762167aed93a91fab" sha1="71e82820adcb152e8d2be09ef039cfce3f8c33f6"/>
 	</game>
 	<game name="Venture (USA, Europe)">
 		<description>Venture (USA, Europe)</description>
@@ -1018,7 +1018,7 @@
 	<game name="World Championship Baseball (USA)">
 		<description>World Championship Baseball (USA)</description>
 		<release name="World Championship Baseball (USA)" region="USA"/>
-		<rom name="World Championship Baseball (USA).int" size="24576" crc="10d64e48" md5="627fb809e5069b82036eeba6be0e25bc" sha1="9941ad46b479cafbca0d8c990e8ee76a52628436" status="verified"/>
+		<rom name="World Championship Baseball (USA).int" size="24576" crc="10d64e48" md5="627fb809e5069b82036eeba6be0e25bc" sha1="9941ad46b479cafbca0d8c990e8ee76a52628436"/>
 	</game>
 	<game name="All-Star Major League Baseball (USA) (Beta)" cloneof="World Championship Baseball (USA)">
 		<description>All-Star Major League Baseball (USA) (Beta)</description>

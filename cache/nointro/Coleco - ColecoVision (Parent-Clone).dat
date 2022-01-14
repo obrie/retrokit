@@ -4,8 +4,8 @@
 	<header>
 		<name>Coleco - ColecoVision (Parent-Clone)</name>
 		<description>Coleco - ColecoVision (Parent-Clone)</description>
-		<version>20200926-011306</version>
-		<date>20200926-011306</date>
+		<version>20211202-035230</version>
+		<date>20211202-035230</date>
 		<author>alexian</author>
 		<url>www.no-intro.org</url>
 	</header>
@@ -186,7 +186,7 @@
 	<game name="Castelo (Brazil) (Unl)">
 		<description>Castelo (Brazil) (Unl)</description>
 		<release name="Castelo (Brazil) (Unl)" region="BRA"/>
-		<rom name="Castelo (Brazil) (Unl).col" size="8192" crc="07a3d3db" md5="7bf914ee3d7a66eb0fdb579b26ad1f25" sha1="0406ad601be68014820c77eda4491bfb4ea5c402"/>
+		<rom name="Castelo (Brazil) (Unl).col" size="8192" crc="07a3d3db" md5="7bf914ee3d7a66eb0fdb579b26ad1f25" sha1="0406ad601be68014820c77eda4491bfb4ea5c402" status="verified"/>
 	</game>
 	<game name="CAT S.O.S. Game, The (USA) (Promo)">
 		<description>CAT S.O.S. Game, The (USA) (Promo)</description>
@@ -228,7 +228,7 @@
 	<game name="Cosmic Crisis (Europe)">
 		<description>Cosmic Crisis (Europe)</description>
 		<release name="Cosmic Crisis (Europe)" region="EUR"/>
-		<rom name="Cosmic Crisis (Europe).col" size="16384" crc="7c2c7c41" md5="3ae1ddd596faaced37274dd407d5523c" sha1="081a40414021a51b3219e8957e948163680a9ada" status="verified"/>
+		<rom name="Cosmic Crisis (Europe).col" size="16384" crc="7c2c7c41" md5="3ae1ddd596faaced37274dd407d5523c" sha1="081a40414021a51b3219e8957e948163680a9ada"/>
 	</game>
 	<game name="Dam Busters, The (USA)">
 		<description>Dam Busters, The (USA)</description>
@@ -249,6 +249,10 @@
 		<description>Defender (USA)</description>
 		<release name="Defender (USA)" region="USA"/>
 		<rom name="Defender (USA).col" size="24576" crc="6cf594e5" md5="00123e08f138b7094601ea8d13d5336d" sha1="12b1fb517d8f7308d18f355e0c54796e4b5225a0"/>
+	</game>
+	<game name="Defender (USA) (BUG Fixed)" cloneof="Defender (USA)">
+		<description>Defender (USA) (BUG Fixed)</description>
+		<rom name="Defender (USA) (BUG Fixed).col" size="24576" crc="46a909cc" md5="ad5000952034853819769ce22b9cf788" sha1="6a640c652378950f4f0b95e38cb1e4ba003e3f3a"/>
 	</game>
 	<game name="Destructor (USA, Europe)">
 		<description>Destructor (USA, Europe)</description>
@@ -280,7 +284,7 @@
 	<game name="Dr. Seuss - Fix-Up the Mix-Up Puzzler (USA)">
 		<description>Dr. Seuss - Fix-Up the Mix-Up Puzzler (USA)</description>
 		<release name="Dr. Seuss - Fix-Up the Mix-Up Puzzler (USA)" region="USA"/>
-		<rom name="Dr. Seuss - Fix-Up the Mix-Up Puzzler (USA).col" size="16384" crc="109699e2" md5="ae08d5ca51c1e623ad92511d5c5babb5" sha1="978eb1bf1a0393087cb639adbd4e6575d1725581"/>
+		<rom name="Dr. Seuss - Fix-Up the Mix-Up Puzzler (USA).col" size="16384" crc="109699e2" md5="ae08d5ca51c1e623ad92511d5c5babb5" sha1="978eb1bf1a0393087cb639adbd4e6575d1725581" status="verified"/>
 	</game>
 	<game name="Dragon's Lair (USA) (Proto)">
 		<description>Dragon's Lair (USA) (Proto)</description>
@@ -317,25 +321,25 @@
 		<release name="Facemaker (USA)" region="USA"/>
 		<rom name="Facemaker (USA).col" size="8192" crc="ec9dfb07" md5="d370ffe83d7cb483664bd9921c25a4f5" sha1="490ce706697c0b370a6a2fe65ccaada2bac0a946"/>
 	</game>
-	<game name="Fall Guy (Europe) (Proto)">
-		<description>Fall Guy (Europe) (Proto)</description>
-		<release name="Fall Guy (Europe) (Proto)" region="EUR"/>
-		<rom name="Fall Guy (Europe) (Proto).col" size="16384" crc="8a731b38" md5="bd905555983c05456ab81ea154a570b1" sha1="0e5c84d8fb8a9428aed399f4a9f9309b26bce990"/>
+	<game name="Fall Guy (USA) (Proto)">
+		<description>Fall Guy (USA) (Proto)</description>
+		<release name="Fall Guy (USA) (Proto)" region="USA"/>
+		<rom name="Fall Guy (USA) (Proto).col" size="16384" crc="8a731b38" md5="bd905555983c05456ab81ea154a570b1" sha1="0e5c84d8fb8a9428aed399f4a9f9309b26bce990"/>
 	</game>
 	<game name="Fathom (USA)">
 		<description>Fathom (USA)</description>
 		<release name="Fathom (USA)" region="USA"/>
-		<rom name="Fathom (USA).col" size="16384" crc="b3b767ae" md5="43d37801db445b5411488ac399bbc20c" sha1="145d1758347306e36a8039671a1088841bccaad5" status="verified"/>
+		<rom name="Fathom (USA).col" size="16384" crc="b3b767ae" md5="43d37801db445b5411488ac399bbc20c" sha1="145d1758347306e36a8039671a1088841bccaad5"/>
 	</game>
 	<game name="Final Test Cartridge (USA)">
 		<description>Final Test Cartridge (USA)</description>
 		<release name="Final Test Cartridge (USA)" region="USA"/>
 		<rom name="Final Test Cartridge (USA).col" size="8192" crc="3ae4b58c" md5="34efc675f8eef63f9ab5f0f7f7a37ec1" sha1="cef53b9eae8dfbd877e18277980975f862f95f9d"/>
 	</game>
-	<game name="Fireman (Europe) (Proto)">
-		<description>Fireman (Europe) (Proto)</description>
-		<release name="Fireman (Europe) (Proto)" region="EUR"/>
-		<rom name="Fireman (Europe) (Proto).col" size="32768" crc="64ec761e" md5="b8e8e3700d9a67192451c89452c8bc73" sha1="077182c21b67182b334d4a6b69aab44eb3eecda9"/>
+	<game name="Fireman (USA) (Proto)">
+		<description>Fireman (USA) (Proto)</description>
+		<release name="Fireman (USA) (Proto)" region="USA"/>
+		<rom name="Fireman (USA) (Proto).col" size="32768" crc="64ec761e" md5="b8e8e3700d9a67192451c89452c8bc73" sha1="077182c21b67182b334d4a6b69aab44eb3eecda9"/>
 	</game>
 	<game name="Flipper Slipper (USA, Europe)">
 		<description>Flipper Slipper (USA, Europe)</description>
@@ -378,15 +382,15 @@
 		<release name="Frogger II - ThreeeDeep! (USA)" region="USA"/>
 		<rom name="Frogger II - ThreeeDeep! (USA).col" size="16384" crc="4229ea5a" md5="48f68ea0446584dc330f8be85f660194" sha1="c899debdda6bfb7e2ed0d1c327ab574b9cbc70ae" status="verified"/>
 	</game>
-	<game name="Front Line (USA, Europe)">
-		<description>Front Line (USA, Europe)</description>
-		<release name="Front Line (USA, Europe)" region="EUR"/>
-		<release name="Front Line (USA, Europe)" region="USA"/>
-		<rom name="Front Line (USA, Europe).col" size="24576" crc="d0110137" md5="4520ee5d8d0fcf151a3332966f7ebda0" sha1="62ca275776e4184032224e61b6d01d0636d7e846" status="verified"/>
+	<game name="Front Line (USA, Europe) (Standard Controller)">
+		<description>Front Line (USA, Europe) (Standard Controller)</description>
+		<release name="Front Line (USA, Europe) (Standard Controller)" region="EUR"/>
+		<release name="Front Line (USA, Europe) (Standard Controller)" region="USA"/>
+		<rom name="Front Line (USA, Europe) (Standard Controller).col" size="24576" crc="d0110137" md5="4520ee5d8d0fcf151a3332966f7ebda0" sha1="62ca275776e4184032224e61b6d01d0636d7e846" status="verified"/>
 	</game>
-	<game name="Front Line (USA, Europe) (Green Version)" cloneof="Front Line (USA, Europe)">
-		<description>Front Line (USA, Europe) (Green Version)</description>
-		<rom name="Front Line (USA, Europe) (Green Version).col" size="24576" crc="e16e0917" md5="d145de191e3f694c7f0920787ccbda48" sha1="68889d9410be82ce20f1eedfb5861dce4bd270d0"/>
+	<game name="Front Line (USA, Europe) (Super Action Controller)" cloneof="Front Line (USA, Europe) (Standard Controller)">
+		<description>Front Line (USA, Europe) (Super Action Controller)</description>
+		<rom name="Front Line (USA, Europe) (Super Action Controller).col" size="24576" crc="e16e0917" md5="d145de191e3f694c7f0920787ccbda48" sha1="68889d9410be82ce20f1eedfb5861dce4bd270d0"/>
 	</game>
 	<game name="Galaxian (USA)">
 		<description>Galaxian (USA)</description>
@@ -442,7 +446,7 @@
 	<game name="James Bond 007 (USA)">
 		<description>James Bond 007 (USA)</description>
 		<release name="James Bond 007 (USA)" region="USA"/>
-		<rom name="James Bond 007 (USA).col" size="16384" crc="a3205f21" md5="d6c263a445bbbd87d156ae40fc4b930b" sha1="23823b4f564cb916ab411d8822531eb3a1a57346"/>
+		<rom name="James Bond 007 (USA).col" size="12288" crc="561f2530" md5="c7ea91d9ac4d4a104d8e7832f8db3962" sha1="22ee76c680e94fa016263473d0ffdbed1ea5ab7b"/>
 	</game>
 	<game name="Joust (USA) (Proto)">
 		<description>Joust (USA) (Proto)</description>
@@ -511,7 +515,7 @@
 	<game name="Lord of the Dungeon (USA) (Beta)">
 		<description>Lord of the Dungeon (USA) (Beta)</description>
 		<release name="Lord of the Dungeon (USA) (Beta)" region="USA"/>
-		<rom name="Lord of the Dungeon (USA) (Beta).col" size="32768" crc="fee15196" md5="d5964ac4e7b1fd3ae91a8008ef57a3cc" sha1="681fa9f5c4130f65616c11ad7c598b667a3177f4"/>
+		<rom name="Lord of the Dungeon (USA) (Beta).col" size="32768" crc="fee15196" md5="d5964ac4e7b1fd3ae91a8008ef57a3cc" sha1="681fa9f5c4130f65616c11ad7c598b667a3177f4" status="verified"/>
 	</game>
 	<game name="M.A.S.H (Europe) (Proto)">
 		<description>M.A.S.H (Europe) (Proto)</description>
@@ -523,9 +527,9 @@
 		<release name="Matt Patrol (USA) (Proto)" region="USA"/>
 		<rom name="Matt Patrol (USA) (Proto).col" size="32768" crc="90007079" md5="39355f46ada88b0d50523c2f7f5c9362" sha1="8a1e2db621b84e630960b2341ac459af2723a3f6"/>
 	</game>
-	<game name="Matt Patrol (USA) (Proto) (Alt 1)" cloneof="Matt Patrol (USA) (Proto)">
-		<description>Matt Patrol (USA) (Proto) (Alt 1)</description>
-		<rom name="Matt Patrol (USA) (Proto) (Alt 1).col" size="32768" crc="fbe12de7" md5="8b1b5d34868ec53ddda5780eec94301e" sha1="a801f587360782afe7ac1bb7a9b08525a8363531"/>
+	<game name="Matt Patrol (USA) (Proto) (Alt)" cloneof="Matt Patrol (USA) (Proto)">
+		<description>Matt Patrol (USA) (Proto) (Alt)</description>
+		<rom name="Matt Patrol (USA) (Proto) (Alt).col" size="32768" crc="fbe12de7" md5="8b1b5d34868ec53ddda5780eec94301e" sha1="a801f587360782afe7ac1bb7a9b08525a8363531"/>
 	</game>
 	<game name="Memory Manor (USA)">
 		<description>Memory Manor (USA)</description>
@@ -592,7 +596,7 @@
 	<game name="Mr. Do!'s Castle (USA)">
 		<description>Mr. Do!'s Castle (USA)</description>
 		<release name="Mr. Do!'s Castle (USA)" region="USA"/>
-		<rom name="Mr. Do!'s Castle (USA).col" size="12288" crc="546f2c54" md5="7eaa827c9976e24e47ef49e2b1e2f0f7" sha1="e94e5d8dd549cae8b70d02170502eca4e90a3c30"/>
+		<rom name="Mr. Do!'s Castle (USA).col" size="12288" crc="546f2c54" md5="7eaa827c9976e24e47ef49e2b1e2f0f7" sha1="e94e5d8dd549cae8b70d02170502eca4e90a3c30" status="verified"/>
 	</game>
 	<game name="Nova Blast (USA, Europe)">
 		<description>Nova Blast (USA, Europe)</description>
@@ -650,7 +654,7 @@
 	<game name="Popeye (USA)">
 		<description>Popeye (USA)</description>
 		<release name="Popeye (USA)" region="USA"/>
-		<rom name="Popeye (USA).col" size="16384" crc="a095454d" md5="a7773e1265e0089bc8f148527256a20e" sha1="f54f110ba5864bb3418f84e1c2cdc5c856dda771"/>
+		<rom name="Popeye (USA).col" size="16384" crc="a095454d" md5="a7773e1265e0089bc8f148527256a20e" sha1="f54f110ba5864bb3418f84e1c2cdc5c856dda771" status="verified"/>
 	</game>
 	<game name="Porky's (USA) (Proto)">
 		<description>Porky's (USA) (Proto)</description>
@@ -712,7 +716,7 @@
 	<game name="Root Beer Tapper (USA)">
 		<description>Root Beer Tapper (USA)</description>
 		<release name="Root Beer Tapper (USA)" region="USA"/>
-		<rom name="Root Beer Tapper (USA).col" size="32768" crc="8afd7db2" md5="6cdb3a03f8d66bedbd29899895d83f94" sha1="bbb25e64aefa3adaff9f864713ecabe3b6f0316b"/>
+		<rom name="Root Beer Tapper (USA).col" size="32768" crc="8afd7db2" md5="6cdb3a03f8d66bedbd29899895d83f94" sha1="bbb25e64aefa3adaff9f864713ecabe3b6f0316b" status="verified"/>
 	</game>
 	<game name="Sammy Lightfoot (USA)">
 		<description>Sammy Lightfoot (USA)</description>
@@ -798,6 +802,10 @@
 		<release name="Squish'em Featuring Sam (USA)" region="USA"/>
 		<rom name="Squish'em Featuring Sam (USA).col" size="16384" crc="ac92862d" md5="90e1b27110a1b89cb1ad3e225db20832" sha1="ae25507b840b15ca3a832ba0bd8e1cbfdf4634a6"/>
 	</game>
+	<game name="Star Fire (USA) (Unreleased)">
+		<description>Star Fire (USA) (Unreleased)</description>
+		<rom name="Star Fire (USA) (Unreleased).col" size="18688" crc="ea3aa29e" md5="c095fe730cba0a6e7797f8e358a976e7" sha1="6bca6df0a2869ec916190db783fab82d0ac3b178"/>
+	</game>
 	<game name="Star Trek - Strategic Operations Simulator (USA)">
 		<description>Star Trek - Strategic Operations Simulator (USA)</description>
 		<release name="Star Trek - Strategic Operations Simulator (USA)" region="USA"/>
@@ -832,12 +840,12 @@
 	<game name="Super Action Football (Europe)">
 		<description>Super Action Football (Europe)</description>
 		<release name="Super Action Football (Europe)" region="EUR"/>
-		<rom name="Super Action Football (Europe).col" size="32768" crc="4d6c0458" md5="8aabed060476fde3cc706c6463f02980" sha1="5f43180c243039eecef024ab1f4e70a2e2502fc1" status="verified"/>
+		<rom name="Super Action Football (Europe).col" size="32768" crc="4d6c0458" md5="8aabed060476fde3cc706c6463f02980" sha1="5f43180c243039eecef024ab1f4e70a2e2502fc1"/>
 	</game>
 	<game name="Super Action Football (USA)" cloneof="Super Action Football (Europe)">
 		<description>Super Action Football (USA)</description>
 		<release name="Super Action Football (USA)" region="USA"/>
-		<rom name="Super Action Football (USA).col" size="32768" crc="62619dc0" md5="bee90a110d14b29d2e64f0ff0f303bc6" sha1="4c16f4e233db50e3d9b3a191f4f408338640ac19"/>
+		<rom name="Super Action Football (USA).col" size="32768" crc="62619dc0" md5="bee90a110d14b29d2e64f0ff0f303bc6" sha1="4c16f4e233db50e3d9b3a191f4f408338640ac19" status="verified"/>
 	</game>
 	<game name="Super Cobra (USA)">
 		<description>Super Cobra (USA)</description>
@@ -865,10 +873,10 @@
 		<release name="Super DK! Junior (USA) (Proto)" region="USA"/>
 		<rom name="Super DK! Junior (USA) (Proto).col" size="32768" crc="c2e7f0e0" md5="7a736286fe72eb60e00b1ba28867cd16" sha1="44a22e508002a069f7953668f2e8a3c901c677d6"/>
 	</game>
-	<game name="Super Sketch - Sketch Master (USA) (Program)">
-		<description>Super Sketch - Sketch Master (USA) (Program)</description>
-		<release name="Super Sketch - Sketch Master (USA) (Program)" region="USA"/>
-		<rom name="Super Sketch - Sketch Master (USA) (Program).col" size="8192" crc="8627300a" md5="a46d20d65533ed979933fc1cfe6c0ad7" sha1="3acbae2580c38bfea9ce7ec06274edd39607016d"/>
+	<game name="Super Sketch - Sketch Master (USA) (Program) (Unl)">
+		<description>Super Sketch - Sketch Master (USA) (Program) (Unl)</description>
+		<release name="Super Sketch - Sketch Master (USA) (Program) (Unl)" region="USA"/>
+		<rom name="Super Sketch - Sketch Master (USA) (Program) (Unl).col" size="8192" crc="8627300a" md5="a46d20d65533ed979933fc1cfe6c0ad7" sha1="3acbae2580c38bfea9ce7ec06274edd39607016d"/>
 	</game>
 	<game name="Sword and the Sorcerer, The (USA) (Demo)">
 		<description>Sword and the Sorcerer, The (USA) (Demo)</description>
@@ -878,7 +886,7 @@
 	<game name="Tank Wars (Europe)">
 		<description>Tank Wars (Europe)</description>
 		<release name="Tank Wars (Europe)" region="EUR"/>
-		<rom name="Tank Wars (Europe).col" size="12288" crc="af6bbc7e" md5="3016b5b55ce162ae47f03af71fbb5c0d" sha1="0a32a17a3e5e6c220de91e4dcf036d7d02ad8e30" status="verified"/>
+		<rom name="Tank Wars (Europe).col" size="12288" crc="af6bbc7e" md5="3016b5b55ce162ae47f03af71fbb5c0d" sha1="0a32a17a3e5e6c220de91e4dcf036d7d02ad8e30"/>
 	</game>
 	<game name="Tarzan (USA, Europe)">
 		<description>Tarzan (USA, Europe)</description>
@@ -910,7 +918,7 @@
 	<game name="Tournament Tennis (USA)">
 		<description>Tournament Tennis (USA)</description>
 		<release name="Tournament Tennis (USA)" region="USA"/>
-		<rom name="Tournament Tennis (USA).col" size="16384" crc="c1d5a702" md5="b85e0c632b351c3d42a2be4198cfa663" sha1="0f113cda3b12253d1d42e994896db3f88a5b884d" status="verified"/>
+		<rom name="Tournament Tennis (USA).col" size="16384" crc="c1d5a702" md5="b85e0c632b351c3d42a2be4198cfa663" sha1="0f113cda3b12253d1d42e994896db3f88a5b884d"/>
 	</game>
 	<game name="Tunnels &amp; Trolls (USA) (Demo)">
 		<description>Tunnels &amp; Trolls (USA) (Demo)</description>
@@ -949,14 +957,14 @@
 		<release name="Victory (USA)" region="USA"/>
 		<rom name="Victory (USA).col" size="20480" crc="70142655" md5="200aa603996bfd2734e353098ebe8dd5" sha1="7144c65cb57eeb846f4771aeb402469494f8f56f"/>
 	</game>
-	<game name="Video Hustler (Europe) (Proto 2)">
-		<description>Video Hustler (Europe) (Proto 2)</description>
-		<release name="Video Hustler (Europe) (Proto 2)" region="EUR"/>
-		<rom name="Video Hustler (Europe) (Proto 2).col" size="8192" crc="a9177b20" md5="7f8bbd4a62aedab44e4cc115a6edc637" sha1="08172d85140c004241ab585fc41cdc7841f8290b"/>
+	<game name="Video Hustler (USA) (Proto 2)">
+		<description>Video Hustler (USA) (Proto 2)</description>
+		<release name="Video Hustler (USA) (Proto 2)" region="USA"/>
+		<rom name="Video Hustler (USA) (Proto 2).col" size="8192" crc="a9177b20" md5="7f8bbd4a62aedab44e4cc115a6edc637" sha1="08172d85140c004241ab585fc41cdc7841f8290b"/>
 	</game>
-	<game name="Video Hustler (Europe) (Proto 1)" cloneof="Video Hustler (Europe) (Proto 2)">
-		<description>Video Hustler (Europe) (Proto 1)</description>
-		<rom name="Video Hustler (Europe) (Proto 1).col" size="8192" crc="841d168f" md5="95f8000444fd86ef02ee39ae265bdba0" sha1="5f481ff47762a812c73bb120e60f31ee99fd6b5f"/>
+	<game name="Video Hustler (USA) (Proto 1)" cloneof="Video Hustler (USA) (Proto 2)">
+		<description>Video Hustler (USA) (Proto 1)</description>
+		<rom name="Video Hustler (USA) (Proto 1).col" size="8192" crc="841d168f" md5="95f8000444fd86ef02ee39ae265bdba0" sha1="5f481ff47762a812c73bb120e60f31ee99fd6b5f" status="verified"/>
 	</game>
 	<game name="War Room (USA)">
 		<description>War Room (USA)</description>
@@ -984,10 +992,10 @@
 		<release name="Word Feud (USA)" region="USA"/>
 		<rom name="Word Feud (USA).col" size="8192" crc="f7a29c01" md5="8148c6e4ea8e1e38e43a4f9576468ff5" sha1="9a6188511ae54e6886222b84185714d2ead8cfbc"/>
 	</game>
-	<game name="Yolk's on You, The (Europe) (Proto)">
-		<description>Yolk's on You, The (Europe) (Proto)</description>
-		<release name="Yolk's on You, The (Europe) (Proto)" region="EUR"/>
-		<rom name="Yolk's on You, The (Europe) (Proto).col" size="16384" crc="997ad8de" md5="c10aaca46d063771339d3e5a0582baad" sha1="9b5bfb69d37042d131a5c9576f927e09f44f9666"/>
+	<game name="Yolk's on you, The (Europe) (Proto)">
+		<description>Yolk's on you, The (Europe) (Proto)</description>
+		<release name="Yolk's on you, The (Europe) (Proto)" region="EUR"/>
+		<rom name="Yolk's on you, The (Europe) (Proto).col" size="16384" crc="997ad8de" md5="c10aaca46d063771339d3e5a0582baad" sha1="9b5bfb69d37042d131a5c9576f927e09f44f9666"/>
 	</game>
 	<game name="Zaxxon (USA, Europe)">
 		<description>Zaxxon (USA, Europe)</description>

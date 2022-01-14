@@ -2,12 +2,13 @@
 <!DOCTYPE datafile PUBLIC "-//Logiqx//DTD ROM Management Datafile//EN" "http://www.logiqx.com/Dats/datafile.dtd">
 <datafile>
 	<header>
-		<name>Commodore - 64 (Tapes) (Parent-Clone)</name>
-		<description>Commodore - 64 (Tapes) (Parent-Clone)</description>
-		<version>20180307-232531</version>
-		<date>20180307-232531</date>
-		<author></author>
-		<url>www.no-intro.org</url>
+		<name>Commodore - Commodore 64 (Tapes)</name>
+		<description>Commodore - Commodore 64 (Tapes)</description>
+		<version>20210216-231940</version>
+		<author>C. V. Reynolds</author>
+		<homepage>No-Intro</homepage>
+		<url>http://www.no-intro.org</url>
+		<clrmamepro forcenodump="required"/>
 	</header>
 	<game name="007 - A View to a Kill (Europe)">
 		<description>007 - A View to a Kill (Europe)</description>
@@ -635,9 +636,9 @@
 		<description>Beach-Head II (Europe)</description>
 		<rom name="Beach-Head II (Europe).tap" size="945354" crc="f763a4a4" md5="a9818498387fb6068897277dd8ccc0b2" sha1="3dffa016c7ae1f7f5495675ee8d8e82219664513"/>
 	</game>
-	<game name="Beach-Head II (Europe) (Alt 1)">
-		<description>Beach-Head II (Europe) (Alt 1)</description>
-		<rom name="Beach-Head II (Europe) (Alt 1).tap" size="484338" crc="30d4a8a2" md5="b636cb2599a68fc9a78c63d429e4adba" sha1="2b8f81c1719bb3f72f2b64f4ed17f89eeee555c3"/>
+	<game name="Beach-Head II (Europe) (Alt)">
+		<description>Beach-Head II (Europe) (Alt)</description>
+		<rom name="Beach-Head II (Europe) (Alt).tap" size="484338" crc="30d4a8a2" md5="b636cb2599a68fc9a78c63d429e4adba" sha1="2b8f81c1719bb3f72f2b64f4ed17f89eeee555c3"/>
 	</game>
 	<game name="Beamrider (Europe) (Activision)">
 		<description>Beamrider (Europe) (Activision)</description>
@@ -1325,9 +1326,9 @@
 		<description>Count Duckula (Europe)</description>
 		<rom name="Count Duckula (Europe).tap" size="618470" crc="45b903c5" md5="474333a5f36f341f1eb8b265dbdeff68" sha1="9d87e6f2bbd5cbad4fd4c052e67e39735e13322d"/>
 	</game>
-	<game name="Count Duckula 2 featuring Tremendous Terence (Europe)">
-		<description>Count Duckula 2 featuring Tremendous Terence (Europe)</description>
-		<rom name="Count Duckula 2 featuring Tremendous Terence (Europe).tap" size="453626" crc="d7a27a6a" md5="dade1d3ccef329ff9029ec1bcd7ead4d" sha1="22d478c5b195109aa00092a429d06e4fafb77c76"/>
+	<game name="Count Duckula 2 Featuring Tremendous Terence (Europe)">
+		<description>Count Duckula 2 Featuring Tremendous Terence (Europe)</description>
+		<rom name="Count Duckula 2 Featuring Tremendous Terence (Europe).tap" size="453626" crc="d7a27a6a" md5="dade1d3ccef329ff9029ec1bcd7ead4d" sha1="22d478c5b195109aa00092a429d06e4fafb77c76"/>
 	</game>
 	<game name="Countdown (Europe)">
 		<description>Countdown (Europe)</description>
@@ -2186,9 +2187,9 @@
 		<description>Football Manager (Europe)</description>
 		<rom name="Football Manager (Europe).tap" size="1761944" crc="a29913ff" md5="82557560e292a476834bb60bd220efd5" sha1="f148fb502bb9306b6bad7395d72e8d61dc78e717"/>
 	</game>
-	<game name="Football Manager (Europe) (Alt 1)">
-		<description>Football Manager (Europe) (Alt 1)</description>
-		<rom name="Football Manager (Europe) (Alt 1).tap" size="341315" crc="157862ee" md5="2fe1ee45d01d6672c517874a91376d3d" sha1="6a023ed5639121545d8b9fe9b79228b0f009be4f"/>
+	<game name="Football Manager (Europe) (Alt)">
+		<description>Football Manager (Europe) (Alt)</description>
+		<rom name="Football Manager (Europe) (Alt).tap" size="341315" crc="157862ee" md5="2fe1ee45d01d6672c517874a91376d3d" sha1="6a023ed5639121545d8b9fe9b79228b0f009be4f"/>
 	</game>
 	<game name="Football Manager 2 (Europe)">
 		<description>Football Manager 2 (Europe)</description>
@@ -2900,6 +2901,10 @@
 		<description>Hysteria (Europe)</description>
 		<rom name="Hysteria (Europe).tap" size="651382" crc="f13bb7c4" md5="bfe01b3e5dcedb3be31628db9c875f4a" sha1="b32d438c75e42ebf7b271173ce95ec840e7858fb"/>
 	</game>
+	<game name="I-Xera (Europe)">
+		<description>I-Xera (Europe)</description>
+		<rom name="I-Xera (Europe).tap" size="375930" crc="038ab7e4" md5="99b7bd4dc0dd435c3ffe5a4fc506777a" sha1="7e3ba0ed193b7dd5d803b23a48a7da87488b6233"/>
+	</game>
 	<game name="I, Ball (Europe)">
 		<description>I, Ball (Europe)</description>
 		<rom name="I, Ball (Europe).tap" size="599361" crc="914c13c7" md5="b8db466a184bad44c2cd0d5f2478ed6d" sha1="239fd132097ec5b4010b22f9a23d378e2a317dba"/>
@@ -2907,10 +2912,6 @@
 	<game name="I, Ball 2 - The Quest for the Past (Europe)">
 		<description>I, Ball 2 - The Quest for the Past (Europe)</description>
 		<rom name="I, Ball 2 - The Quest for the Past (Europe).tap" size="484201" crc="534aa57e" md5="2fffb50ccf690e9c4623de39959274a5" sha1="7bd7a52e8b7cfc925b57728a2eae1b589b576bc5"/>
-	</game>
-	<game name="I-Xera (Europe)">
-		<description>I-Xera (Europe)</description>
-		<rom name="I-Xera (Europe).tap" size="375930" crc="038ab7e4" md5="99b7bd4dc0dd435c3ffe5a4fc506777a" sha1="7e3ba0ed193b7dd5d803b23a48a7da87488b6233"/>
 	</game>
 	<game name="I. C. U. P. S. (Europe)">
 		<description>I. C. U. P. S. (Europe)</description>
@@ -4142,9 +4143,9 @@
 		<description>Orc Attack (Europe)</description>
 		<rom name="Orc Attack (Europe).tap" size="599544" crc="1af00406" md5="d6c37ac403ec8c4b3bc2b74d16d660e0" sha1="207d856ee35b5c9fbdaae92cba89a44049f5cea5"/>
 	</game>
-	<game name="Orc Attack (Europe) (Alt 1)">
-		<description>Orc Attack (Europe) (Alt 1)</description>
-		<rom name="Orc Attack (Europe) (Alt 1).tap" size="150142" crc="01576f92" md5="35b9b243a7932632a9c098413c1e1499" sha1="778297f8eb84ffe872085635533dbd58fbbd113e"/>
+	<game name="Orc Attack (Europe) (Alt)">
+		<description>Orc Attack (Europe) (Alt)</description>
+		<rom name="Orc Attack (Europe) (Alt).tap" size="150142" crc="01576f92" md5="35b9b243a7932632a9c098413c1e1499" sha1="778297f8eb84ffe872085635533dbd58fbbd113e"/>
 	</game>
 	<game name="Orion (Europe)">
 		<description>Orion (Europe)</description>
@@ -4325,13 +4326,13 @@
 		<rom name="Pirates! (Europe) (Side 1).tap" size="549998" crc="0f96eaa2" md5="adb6b8e1c1ad4e0c74b67c97f2a9dfd9" sha1="ff05f475f9ed8967974c70b920590458869327ff"/>
 		<rom name="Pirates! (Europe) (Side 2).tap" size="684956" crc="47045e14" md5="d6b759ce54514a2ea1ad2418d797b7e4" sha1="10ecb9eebd84651e9591bd0d69af75cfa1c036fd"/>
 	</game>
-	<game name="Pitfall II - Lost Caverns (Europe) (Budget)">
-		<description>Pitfall II - Lost Caverns (Europe) (Budget)</description>
-		<rom name="Pitfall II - Lost Caverns (Europe) (Budget).tap" size="275006" crc="c7782469" md5="bbe2f848226e1a44a017ba3852f356a3" sha1="40210104aaafe982d0870659137c473253e2a59c"/>
-	</game>
 	<game name="Pitfall II - Lost Caverns (Europe)">
 		<description>Pitfall II - Lost Caverns (Europe)</description>
 		<rom name="Pitfall II - Lost Caverns (Europe).tap" size="989504" crc="f25e31a8" md5="b98bd1f7f08fd05f0d77b7af0cdc425d" sha1="816dc0e6e38ebf51d133f62bd8a109cca6376613"/>
+	</game>
+	<game name="Pitfall II - Lost Caverns (Europe) (Budget)">
+		<description>Pitfall II - Lost Caverns (Europe) (Budget)</description>
+		<rom name="Pitfall II - Lost Caverns (Europe) (Budget).tap" size="275006" crc="c7782469" md5="bbe2f848226e1a44a017ba3852f356a3" sha1="40210104aaafe982d0870659137c473253e2a59c"/>
 	</game>
 	<game name="Pitfall! - Pitfall Harry's Jungle Adventure (Europe)">
 		<description>Pitfall! - Pitfall Harry's Jungle Adventure (Europe)</description>
@@ -4466,13 +4467,13 @@
 		<description>Pro Tennis Simulator (Europe)</description>
 		<rom name="Pro Tennis Simulator (Europe).tap" size="786336" crc="b2b2df0f" md5="f7f4cd6abfaebf7cc161ac900f7f4fb3" sha1="bbf3bfa9b36247db90d981a07dbea334a1778de2"/>
 	</game>
-	<game name="Pro Tennis Tour (Europe) (Budget)">
-		<description>Pro Tennis Tour (Europe) (Budget)</description>
-		<rom name="Pro Tennis Tour (Europe) (Budget).tap" size="726359" crc="24b480d7" md5="827ff8c30d8a380d95d2ff943950ef55" sha1="14f818e398673c0b90af6fcb4aad34160859c811"/>
-	</game>
 	<game name="Pro Tennis Tour (Europe)">
 		<description>Pro Tennis Tour (Europe)</description>
 		<rom name="Pro Tennis Tour (Europe).tap" size="478848" crc="ad675df2" md5="23d14689109e2bda07f652dec320eaaf" sha1="6dd774a8a06cb4de677ad8ca831a1fd319254288"/>
+	</game>
+	<game name="Pro Tennis Tour (Europe) (Budget)">
+		<description>Pro Tennis Tour (Europe) (Budget)</description>
+		<rom name="Pro Tennis Tour (Europe) (Budget).tap" size="726359" crc="24b480d7" md5="827ff8c30d8a380d95d2ff943950ef55" sha1="14f818e398673c0b90af6fcb4aad34160859c811"/>
 	</game>
 	<game name="Prodigy, The (Europe)">
 		<description>Prodigy, The (Europe)</description>
@@ -4764,26 +4765,26 @@
 		<description>Renaissance (Europe)</description>
 		<rom name="Renaissance (Europe).tap" size="410344" crc="5fa21a7b" md5="509b48c00a1b44c4355aabde9e4ff7ce" sha1="31808333b3f859f64db8a3baaadf3569245876f6"/>
 	</game>
-	<game name="Renegade (Europe) (Budget)">
-		<description>Renegade (Europe) (Budget)</description>
-		<rom name="Renegade (Europe) (Budget).tap" size="500294" crc="31178e03" md5="28a96e7d3ef553e33a75d40adaf645c3" sha1="4b4688d729750be07f72548132e496712991a9ed"/>
-	</game>
 	<game name="Renegade (Europe)">
 		<description>Renegade (Europe)</description>
 		<rom name="Renegade (Europe).tap" size="673018" crc="5ef21389" md5="5859b1252a3788616fe9f1ff0f9db411" sha1="1642a00599e6598d866a303dab2385dfdfda876c"/>
+	</game>
+	<game name="Renegade (Europe) (Budget)">
+		<description>Renegade (Europe) (Budget)</description>
+		<rom name="Renegade (Europe) (Budget).tap" size="500294" crc="31178e03" md5="28a96e7d3ef553e33a75d40adaf645c3" sha1="4b4688d729750be07f72548132e496712991a9ed"/>
 	</game>
 	<game name="Renegade III - The Final Chapter (Europe)">
 		<description>Renegade III - The Final Chapter (Europe)</description>
 		<rom name="Renegade III - The Final Chapter (Europe) (Side 1).tap" size="1139698" crc="b20cbbaa" md5="04e27189c26773fc89c45d90be127496" sha1="f9bc074189cf7b1fa468b5e654b3f1d74f6089f5"/>
 		<rom name="Renegade III - The Final Chapter (Europe) (Side 2).tap" size="598114" crc="6fc4e09b" md5="c178b52bdc08739da0e19b24e4f14656" sha1="0112f2bb6fe8b0af3cf7240d513dda4d7a04d056"/>
 	</game>
-	<game name="Rescue on Fractalus! (Europe) (Budget)">
-		<description>Rescue on Fractalus! (Europe) (Budget)</description>
-		<rom name="Rescue on Fractalus! (Europe) (Budget).tap" size="429826" crc="20e41dba" md5="8e2e13a1b13bdb06e9cf9a6f8a09d1ac" sha1="ca8b1dfb1e6b5ade282f99452d787c87535a29c8"/>
-	</game>
 	<game name="Rescue on Fractalus! (Europe)">
 		<description>Rescue on Fractalus! (Europe)</description>
 		<rom name="Rescue on Fractalus! (Europe).tap" size="604288" crc="767ecd70" md5="e6534eea5c5b3c34c284848bfdb842a1" sha1="703554ca89b34d9f34adb11cbc76bf11870d4675"/>
+	</game>
+	<game name="Rescue on Fractalus! (Europe) (Budget)">
+		<description>Rescue on Fractalus! (Europe) (Budget)</description>
+		<rom name="Rescue on Fractalus! (Europe) (Budget).tap" size="429826" crc="20e41dba" md5="8e2e13a1b13bdb06e9cf9a6f8a09d1ac" sha1="ca8b1dfb1e6b5ade282f99452d787c87535a29c8"/>
 	</game>
 	<game name="Return of the Mutant Camels (Europe)">
 		<description>Return of the Mutant Camels (Europe)</description>
@@ -4835,13 +4836,13 @@
 		<description>River Raid (Europe)</description>
 		<rom name="River Raid (Europe).tap" size="977584" crc="f25bbde5" md5="f496655cf44d7f9ea5684726418eb636" sha1="66c7e8aa12a5df5996a855c1b068fa6775ab30c5"/>
 	</game>
-	<game name="River Rescue (Europe) (Budget)">
-		<description>River Rescue (Europe) (Budget)</description>
-		<rom name="River Rescue (Europe) (Budget).tap" size="113922" crc="8d2a9963" md5="71b9ccbbb559c01c60535724e85da3ed" sha1="6f1e036959ae315d51f9584f4b496bae39db98d9"/>
-	</game>
 	<game name="River Rescue (Europe)">
 		<description>River Rescue (Europe)</description>
 		<rom name="River Rescue (Europe).tap" size="111294" crc="f5af522e" md5="b535c223024b725a82b33d6a3603abad" sha1="ca86e7b2460b51414ec5383589ecd1cded6c9f84"/>
+	</game>
+	<game name="River Rescue (Europe) (Budget)">
+		<description>River Rescue (Europe) (Budget)</description>
+		<rom name="River Rescue (Europe) (Budget).tap" size="113922" crc="8d2a9963" md5="71b9ccbbb559c01c60535724e85da3ed" sha1="6f1e036959ae315d51f9584f4b496bae39db98d9"/>
 	</game>
 	<game name="Road Blasters (Europe)">
 		<description>Road Blasters (Europe)</description>
@@ -4885,13 +4886,13 @@
 		<description>Rock n' Bolt (Europe)</description>
 		<rom name="Rock n' Bolt (Europe).tap" size="300631" crc="4623721f" md5="bff20378b87800c19f4a8fd3d6fa2ffa" sha1="7e06c06dce0fbceb6b957229134e2c178dee0cd6"/>
 	</game>
-	<game name="Rock'n Wrestle (Europe) (Budget)">
-		<description>Rock'n Wrestle (Europe) (Budget)</description>
-		<rom name="Rock'n Wrestle (Europe) (Budget).tap" size="809511" crc="042855f1" md5="a8f79438fb6b4134cc446911a76847c8" sha1="a55193f5ffd2455f9c1b7352e0de0aefb5e836e5"/>
-	</game>
 	<game name="Rock'n Wrestle (Europe)">
 		<description>Rock'n Wrestle (Europe)</description>
 		<rom name="Rock'n Wrestle (Europe).tap" size="593472" crc="d9c8a461" md5="0da7778e4a920f51ba7061e8f9ee4fcd" sha1="043e2338f9c789dc10bfbec86d7b8870f2683040"/>
+	</game>
+	<game name="Rock'n Wrestle (Europe) (Budget)">
+		<description>Rock'n Wrestle (Europe) (Budget)</description>
+		<rom name="Rock'n Wrestle (Europe) (Budget).tap" size="809511" crc="042855f1" md5="a8f79438fb6b4134cc446911a76847c8" sha1="a55193f5ffd2455f9c1b7352e0de0aefb5e836e5"/>
 	</game>
 	<game name="Rocket Ball (Europe)">
 		<description>Rocket Ball (Europe)</description>
@@ -4976,13 +4977,13 @@
 		<description>Rygar (Europe)</description>
 		<rom name="Rygar (Europe).tap" size="566034" crc="eb388710" md5="922e0a396d367d198092d47f8692590a" sha1="77e0dd463595d48256b2bee210e4805fc7aa923e"/>
 	</game>
-	<game name="S.D.I. - Strategic Defence Initiative (Europe) (Budget)">
-		<description>S.D.I. - Strategic Defence Initiative (Europe) (Budget)</description>
-		<rom name="S.D.I. - Strategic Defence Initiative (Europe) (Budget).tap" size="726358" crc="ef4ebee4" md5="86edad0adfa9bc92840da589faccd9b3" sha1="94cdd0b36676cdd3c5f96307338e5930528a7b75"/>
-	</game>
 	<game name="S.D.I. - Strategic Defence Initiative (Europe)">
 		<description>S.D.I. - Strategic Defence Initiative (Europe)</description>
 		<rom name="S.D.I. - Strategic Defence Initiative (Europe).tap" size="434640" crc="58fb8a00" md5="b01c7e7c85f89763aa38d36c19e95899" sha1="6ef8622adfc2dea77799fc546ea82871edff5bb7"/>
+	</game>
+	<game name="S.D.I. - Strategic Defence Initiative (Europe) (Budget)">
+		<description>S.D.I. - Strategic Defence Initiative (Europe) (Budget)</description>
+		<rom name="S.D.I. - Strategic Defence Initiative (Europe) (Budget).tap" size="726358" crc="ef4ebee4" md5="86edad0adfa9bc92840da589faccd9b3" sha1="94cdd0b36676cdd3c5f96307338e5930528a7b75"/>
 	</game>
 	<game name="S.O.S. (Europe)">
 		<description>S.O.S. (Europe)</description>
@@ -4993,13 +4994,13 @@
 		<rom name="S.W.I.V. (Europe) (Side 1).tap" size="442310" crc="ccab5238" md5="b904670b27cfd6bc51797ec306b58854" sha1="5f3062e7f71ac6c6350059c0b5a530d4390d412c"/>
 		<rom name="S.W.I.V. (Europe) (Side 2).tap" size="854532" crc="008b97e9" md5="fecbe4af8c513edec2ab1038cd124cff" sha1="67a59892fd308023cc03c854f096d0f4f92ca493"/>
 	</game>
-	<game name="Saboteur (Europe) (Budget)">
-		<description>Saboteur (Europe) (Budget)</description>
-		<rom name="Saboteur (Europe) (Budget).tap" size="530030" crc="ba6f1d65" md5="2470c6ba7222cdd17dc87559c8ddf63f" sha1="b40eb4b0ded14d551519342cb7180e0426a00320"/>
-	</game>
 	<game name="Saboteur (Europe)">
 		<description>Saboteur (Europe)</description>
 		<rom name="Saboteur (Europe).tap" size="1380990" crc="e35d1867" md5="cd0c7c9d85d1259bb2f9194d79d2876d" sha1="378a0dde49af9c81e9ebcbfde8451288c59501fe"/>
+	</game>
+	<game name="Saboteur (Europe) (Budget)">
+		<description>Saboteur (Europe) (Budget)</description>
+		<rom name="Saboteur (Europe) (Budget).tap" size="530030" crc="ba6f1d65" md5="2470c6ba7222cdd17dc87559c8ddf63f" sha1="b40eb4b0ded14d551519342cb7180e0426a00320"/>
 	</game>
 	<game name="Saboteur II (Europe)">
 		<description>Saboteur II (Europe)</description>
@@ -5282,6 +5283,10 @@
 		<description>Skel (Europe)</description>
 		<rom name="Skel (Europe).tap" size="316120" crc="91d6c39e" md5="67d150d718a4768c6d9afaf773035390" sha1="887c146898897c421209a9e2d1b1111bcdd57324"/>
 	</game>
+	<game name="Skool Daze (Europe)">
+		<description>Skool Daze (Europe)</description>
+		<rom name="Skool Daze (Europe).tap" size="444339" crc="295cb9f8" md5="2c30a1fd143ae8bda6f2073cc3562b50" sha1="4f551410406e31cfcaf54696473b198c77625f28"/>
+	</game>
 	<game name="Skool Daze (Europe) (Anirog) (Budget)">
 		<description>Skool Daze (Europe) (Anirog) (Budget)</description>
 		<rom name="Skool Daze (Europe) (Anirog) (Budget).tap" size="408242" crc="87306474" md5="9b22658531cc1b70e073455adc2ecb41" sha1="243a924b82a4d3959da030e2c738ee1c551d9e8d"/>
@@ -5289,10 +5294,6 @@
 	<game name="Skool Daze (Europe) (CHR) (Budget)">
 		<description>Skool Daze (Europe) (CHR) (Budget)</description>
 		<rom name="Skool Daze (Europe) (CHR) (Budget).tap" size="426554" crc="27046b05" md5="0ef692b0b402602ed7598b9876b68bfe" sha1="4d800f8cb80d47baa5bca1c98e3dd2c72e446039"/>
-	</game>
-	<game name="Skool Daze (Europe)">
-		<description>Skool Daze (Europe)</description>
-		<rom name="Skool Daze (Europe).tap" size="444339" crc="295cb9f8" md5="2c30a1fd143ae8bda6f2073cc3562b50" sha1="4f551410406e31cfcaf54696473b198c77625f28"/>
 	</game>
 	<game name="Skramble (Europe) (Anirog)">
 		<description>Skramble (Europe) (Anirog)</description>
@@ -5741,13 +5742,13 @@
 		<description>Storm (Europe)</description>
 		<rom name="Storm (Europe).tap" size="413938" crc="d6032e6a" md5="d866d38f81da64cd7e9a02702f2db2b7" sha1="d62248d3553fe539d4401d1ea3bd1a4cddabfe74"/>
 	</game>
-	<game name="Storm Warrior (Europe) (Budget)">
-		<description>Storm Warrior (Europe) (Budget)</description>
-		<rom name="Storm Warrior (Europe) (Budget).tap" size="729771" crc="ab421b8b" md5="d0382537497a1429b799b760cf8f1957" sha1="7c7e326ef62ea298c2b7233411c19150223b8608"/>
-	</game>
 	<game name="Storm Warrior (Europe)">
 		<description>Storm Warrior (Europe)</description>
 		<rom name="Storm Warrior (Europe).tap" size="574638" crc="c367e59c" md5="f7e8ebf5d8f4a03877d79d3cf8905aa0" sha1="eb20142a0fa5ad3c921e0d4a6f4fdad5e786e624"/>
+	</game>
+	<game name="Storm Warrior (Europe) (Budget)">
+		<description>Storm Warrior (Europe) (Budget)</description>
+		<rom name="Storm Warrior (Europe) (Budget).tap" size="729771" crc="ab421b8b" md5="d0382537497a1429b799b760cf8f1957" sha1="7c7e326ef62ea298c2b7233411c19150223b8608"/>
 	</game>
 	<game name="Stormbringer (Europe) (Budget)">
 		<description>Stormbringer (Europe) (Budget)</description>
@@ -6342,13 +6343,13 @@
 		<description>Touchdown Football (Europe)</description>
 		<rom name="Touchdown Football (Europe).tap" size="599775" crc="0caa2ff7" md5="cd9537a097d3f653243b075a0ac68563" sha1="1e8f5f918f896b6e0895a9c2ac0738b5bd45ba6a"/>
 	</game>
-	<game name="Toy Bizarre (Europe) (Budget)">
-		<description>Toy Bizarre (Europe) (Budget)</description>
-		<rom name="Toy Bizarre (Europe) (Budget).tap" size="372081" crc="26a2e5f3" md5="078166cbd03569f936b1c72b8a2dff01" sha1="591db2c58873f7e2c85005554f8ae862e2577686"/>
-	</game>
 	<game name="Toy Bizarre (Europe)">
 		<description>Toy Bizarre (Europe)</description>
 		<rom name="Toy Bizarre (Europe).tap" size="960701" crc="2c35bec5" md5="2ca9c0f4797e6d96fd0883b5465e7d3a" sha1="bb083daef7b07b0f00c82380c35efaae55f368ac"/>
+	</game>
+	<game name="Toy Bizarre (Europe) (Budget)">
+		<description>Toy Bizarre (Europe) (Budget)</description>
+		<rom name="Toy Bizarre (Europe) (Budget).tap" size="372081" crc="26a2e5f3" md5="078166cbd03569f936b1c72b8a2dff01" sha1="591db2c58873f7e2c85005554f8ae862e2577686"/>
 	</game>
 	<game name="Tracksuit Manager (Europe)">
 		<description>Tracksuit Manager (Europe)</description>
