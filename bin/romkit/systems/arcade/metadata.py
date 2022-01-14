@@ -112,10 +112,10 @@ class ArcadeEmulatorMetadata(EmulatorMetadata):
     # TSV Columns
     COLUMN_ROM = 0
     COLUMN_EMULATOR = 2
-    COLUMN_FPS = 5
-    COLUMN_VISUALS = 6
-    COLUMN_AUDIO = 7
-    COLUMN_CONTROLS = 8
+    COLUMN_FPS = 3
+    COLUMN_VISUALS = 4
+    COLUMN_AUDIO = 5
+    COLUMN_CONTROLS = 6
     QUALITY_COLUMNS = [COLUMN_FPS, COLUMN_VISUALS, COLUMN_AUDIO, COLUMN_CONTROLS]
 
     def read_row(self, row: List[str]) -> dict:
