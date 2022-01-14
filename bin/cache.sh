@@ -53,7 +53,7 @@ remote_sync_system_manuals() {
   local system=$1
 
   local version='original'
-  local archive_id='retrokit-manualkit'
+  local archive_id='retrokit-manuals'
   local sources_only='false'
   local install='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
@@ -72,9 +72,11 @@ remote_sync_system_manuals() {
   # Download and process the manuals
   if [ "$install" == 'false' ] || MANUALKIT_ARCHIVE=true "$bin_dir/setup.sh" install system-roms-manuals $system; then
     # Identify the post-processing base directory
+    local base_path_template=$(setting '.manuals.paths.base')
+    local base_path=$(render_template "$base_path_template" system="$system")
     local postprocess_path_template=$(setting '.manuals.paths.postprocess')
     local postprocess_dir_template=$(dirname "$postprocess_path_template")
-    local postprocess_dir=$(render_template "$postprocess_dir_template" system="$system")
+    local postprocess_dir=$(render_template "$postprocess_dir_template" base="$base_path" system="$system")
 
     # Ensure the path actually exists and has files in it
     if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
@@ -99,7 +101,7 @@ main() {
       while read system; do
         print_heading "Running $action for $system (${*:3})"
         "$action" "$system" "${@:3}"
-      done < <(setting '.systems[])')
+      done < <(setting '.systems[]')
     else
       print_heading "Running $action for $system (${*:3})"
       "$action" "$system" "${@:3}"
