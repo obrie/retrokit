@@ -45,8 +45,9 @@ sync_system_metadata() {
     return
   fi
 
+  local common_settings_file="$app_dir/config/systems/settings-common.json"
   local system_settings_file="$app_dir/config/systems/$system/settings.json"
-  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
+  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") "${@:2}"
 }
 
 # Sync manuals to internetarchive
