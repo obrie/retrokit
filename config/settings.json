@@ -36,9 +36,24 @@
       },
       "compress": {
         "enabled": true,
-        "resolution": 150,
-        "quality_factor": 0.9,
-        "filesize_threshold": 2097152,
+        "color": "original",
+        "jpeg_passthrough": true,
+        "target": {
+          "width": null,
+          "height": null
+        },
+        "downsample": false,
+        "resolution": {
+          "color": 1200,
+          "gray": 1200,
+          "mono": 1200
+        },
+        "quality_factor": {
+          "color": 0.15,
+          "mono": 0.15
+        },
+        "force": false,
+        "filesize_threshold": 0,
         "resolution_threshold": 1.0
       }
     },

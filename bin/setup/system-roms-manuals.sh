@@ -203,12 +203,6 @@ gs_exec() {
     -dBATCH
     -dAutoRotatePages=/None
     -dOptimize=true
-    # color format (to optimize rendering)
-    -sProcessColorModel=DeviceRGB
-    -sColorConversionStrategy=sRGB
-    -sColorConversionStrategyForImages=sRGB
-    -dConvertCMYKImagesToRGB=true
-    -dConvertImagesToIndexed=true
     # remove unnecessary data (to reduce filesize)
     -dDetectDuplicateImages=true
     -dDoThumbnails=false
@@ -224,26 +218,19 @@ gs_exec() {
   gs "${common_args[@]}" "${@}"
 }
 
-# Optimizes the PDF, without compromising quality, by removing artifacts that
-# are not needed
-optimize_pdf() {
+clean_pdf() {
+  local pdf_path=$1
+
+  # TODO: Add -gggg?
+  mutool clean -D "$pdf_path" "$pdf_path"
+}
+
+# Selects specific pages from the PDF to include
+slice_pdf() {
   local pdf_path=$1
   local pages=$2
 
-  local staging_path="$tmp_ephemeral_dir/postprocess-optimize.pdf"
-
-  local gsargs=()
-  if [ -n "$pages" ]; then
-    # Truncate
-    IFS='-' read first_page last_page <<< "$pages"
-    gsargs+=(
-      -dFirstPage=$first_page
-      -dLastPage=$last_page
-    )
-  fi
-
-  gs_exec "${gsargs[@]}" -sOutputFile="$staging_path" -f "$pdf_path"
-  mv "$staging_path" "$pdf_path"
+  mutool merge -o "$pdf_path" "$pdf_path" "$pages"
 }
 
 # Rotates the PDF the given number of degrees
@@ -260,7 +247,13 @@ ocr_pdf() {
   local pdf_path=$1
   local languages=$2
 
+  if mutool info "$pdf_path" | grep 'Encryption'; then
+    echo "[WARN] PDF is encrypted, skipping OCR"
+    return 0
+  fi
+
   local staging_path="$tmp_ephemeral_dir/postprocess-ocr.pdf"
+  rm -f "$staging_path"
 
   # Translate manual language codes to Tesseract language names
   local ocr_languages=()
@@ -269,44 +262,118 @@ ocr_pdf() {
   done < <(echo "$languages" | tr ',' '\n')
   local ocr_languages_csv=$(IFS=+ ; echo "${ocr_languages[*]}")
 
-  ocrmypdf -q -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path"
-  mv "$staging_path" "$pdf_path"
+  local ocr_exit_code=0
+  ocrmypdf -q -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path" || ocr_exit_code=$?
+
+  if [ -f "$staging_path" ]; then
+    if [ $ocr_exit_code -ne 0 ]; then
+      echo "[WARN] OCR exit code is non-zero but generated pdf, still using"
+    fi
+
+    mv "$staging_path" "$pdf_path"
+  else
+    return 1
+  fi
 }
 
 compress_pdf() {
   local pdf_path=$1
 
   local staging_path="$tmp_ephemeral_dir/postprocess-compress.pdf"
+  local force=$(setting '.manuals.postprocess.compress.force')
 
   # Compress (if the file is big enough and we're compressing)
   local filesize_threshold=$(setting '.manuals.postprocess.compress.filesize_threshold // 0')
   if [ $(stat -c%s "$pdf_path") -gt "$filesize_threshold" ]; then
-    local resolution=$(setting '.manuals.postprocess.compress.resolution')
-    local quality_factor=$(setting '.manuals.postprocess.compress.quality_factor')
+    local dynamic_width=$(setting '.manuals.postprocess.compress.target.width')
+    local dynamic_height=$(setting '.manuals.postprocess.compress.target.height')
+    local color_profile=$(setting '.manuals.postprocess.compress.color')
+    local color_resolution=$(setting '.manuals.postprocess.compress.resolution.color')
+    local gray_resolution=$(setting '.manuals.postprocess.compress.resolution.gray')
+    local mono_resolution=$(setting '.manuals.postprocess.compress.resolution.mono')
+    local jpeg_passthrough=$(setting '.manuals.postprocess.compress.jpeg_passthrough')
     local downsample_threshold=$(setting '.manuals.postprocess.compress.resolution_threshold')
+    local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample')
 
-    gs_exec \
+    local color_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.color')
+    local mono_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.mono')
+
+    # Apply a dynamic resolution calculation
+    if [ -n "$dynamic_width" ] && [ -n "$dynamic_height" ] && [ "$downsample_enabled" == 'true' ]; then
+      local images=$(pdfimages -list "$pdf_path" | tail -n +3)
+      local images_count=$(echo "$images" | wc -l)
+      local pages_count=$(pdfinfo "$pdf_path" | grep -- ^Pages | tr -dc '[0-9]')
+
+      if [ "$images_count" == "$pages_count" ]; then
+        # Calculate the resolution required to reduce the size of the image
+        local width=$(echo "$images" | awk '{print ($4)}' | sort -nr | head -n 1)
+        local height=$(echo "$images" | awk '{print ($5)}' | sort -nr | head -n 1)
+        local ppi=$(echo "$images" | awk '{print ($13)}' | sort -nr | head -n 1)
+        local dynamic_resolution_width=$(bc -l <<< "x = (${dynamic_width}.0 / ${width}.0 * $ppi + 1); scale = 0; x / 1")
+        local dynamic_resolution_height=$(bc -l <<< "x = (${dynamic_height}.0 / ${height}.0 * $ppi + 1); scale = 0; x / 1")
+        local dynamic_resolution
+
+        if [ $width -lt $dynamic_width ] || [ $height -lt $dynamic_height ]; then
+          downsample_enabled=false
+        else
+          # Determine the maximum resolution calculated
+          if [ $dynamic_resolution_width -lt $dynamic_resolution_height ]; then
+            dynamic_resolution=$dynamic_resolution_height
+          else
+            dynamic_resolution=$dynamic_resolution_width
+          fi
+
+          # Update color / gray / mono resolutions
+          if [ $dynamic_resolution -lt $color_resolution ]; then
+            color_resolution=$dynamic_resolution
+          fi
+
+          if [ $dynamic_resolution -lt $gray_resolution ]; then
+            gray_resolution=$dynamic_resolution
+          fi
+
+          if [ $dynamic_resolution -lt $mono_resolution ]; then
+            mono_resolution=$dynamic_resolution
+          fi
+        fi
+      fi
+    fi
+
+    local gs_args=()
+    if [ "$color_profile" == 'rgb' ]; then
+      gs_args+=(
+        -sProcessColorModel=DeviceRGB
+        -sColorConversionStrategy=sRGB
+        -sColorConversionStrategyForImages=sRGB
+        -dConvertCMYKImagesToRGB=true
+        -dConvertImagesToIndexed=true
+      )
+    fi
+
+    gs_exec "${gs_args[@]}" \
       -sOutputFile="$staging_path" \
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
-      -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true \
-      -dColorImageResolution=$resolution -dGrayImageResolution=$resolution -dMonoImageResolution=$resolution \
-      -c "<< /ColorACSImageDict << /QFactor $quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
-      -c "<< /GrayACSImageDict << /QFactor $quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
-      -c "<< /HWResolution [600 600] >> setpagedevice" \
+      -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
+      -dColorImageResolution=$color_resolution -dGrayImageResolution=$gray_resolution -dMonoImageResolution=$mono_resolution \
+      -dPassThroughJPEGImages=$jpeg_passthrough \
+      -c "<< /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
+      -c "<< /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
       -f "$pdf_path"
 
     # Only use the compressed file if it's actually smaller
-    if [ $(stat -c%s "$staging_path") -lt $(stat -c%s "$pdf_path") ]; then
+    if [ $(stat -c%s "$staging_path") -lt $(stat -c%s "$pdf_path") ] || [ "$force" == 'true' ]; then
+      echo "[COMPRESS BETTER] $(stat -c%s "$staging_path") => $(stat -c%s "$pdf_path")"
       mv "$staging_path" "$pdf_path"
     else
+      echo "[COMPRESS WORSE] $(stat -c%s "$staging_path") => $(stat -c%s "$pdf_path")"
       rm "$staging_path"
     fi
   fi
 }
 
 # Runs any configured post-processing on the PDF, including:
-# * Optimize
+# * Slice
 # * Truncate
 # * Rotate
 # * OCR
@@ -318,8 +385,12 @@ postprocess_pdf() {
   local pages=$4
   local rotate=${5:-0}
 
-  # Optimize
-  optimize_pdf "$pdf_path"
+  clean_pdf "$pdf_path"
+
+  # Slice
+  if [ -n "$pages" ]; then
+    slice_pdf "$pdf_path" "$pages"
+  fi
 
   # Rotate
   if [ "$rotate" != '0' ]; then
