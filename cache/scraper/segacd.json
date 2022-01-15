@@ -17,6 +17,18 @@
         ],
         "rating": null
     },
+    "AH3 - Thunderstrike": {
+        "genres": [
+            "Simulation"
+        ],
+        "rating": null
+    },
+    "AX-101": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": null
+    },
     "Adventures of Batman and Robin, The": {
         "genres": [
             "Race",
@@ -111,6 +123,12 @@
         ],
         "rating": "0.75"
     },
+    "Bari-Arm": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.75"
+    },
     "Batman Returns": {
         "genres": [
             "Action",
@@ -120,6 +138,21 @@
             "Driving"
         ],
         "rating": "0.75"
+    },
+    "Battle Fantasy": {
+        "genres": [
+            "Fight",
+            "Action"
+        ],
+        "rating": null
+    },
+    "Battle Frenzy": {
+        "genres": [
+            "Shooter / 1st person",
+            "Shooter",
+            "Action"
+        ],
+        "rating": "0.55"
     },
     "BattleTech - Gray Death Legion": {
         "genres": [
@@ -146,6 +179,13 @@
             "Sports"
         ],
         "rating": null
+    },
+    "Black Hole Assault": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.6"
     },
     "Blackhole Assault": {
         "genres": [
@@ -201,8 +241,10 @@
         "rating": "0.35"
     },
     "CD Sonic The Hedgehog": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.8"
     },
     "Cadillacs and Dinosaurs - The Second Cataclysm": {
         "genres": [
@@ -212,6 +254,13 @@
     },
     "Captain Tsubasa": {
         "genres": [
+            "Sports"
+        ],
+        "rating": null
+    },
+    "Championship Soccer '94": {
+        "genres": [
+            "Sports / Soccer",
             "Sports"
         ],
         "rating": null
@@ -300,6 +349,13 @@
         ],
         "rating": "0.9"
     },
+    "Dark Wizard - Yomigaerishi Yami no Madoushi": {
+        "genres": [
+            "Strategy",
+            "Role playing games"
+        ],
+        "rating": "0.9"
+    },
     "Death Bringer": {
         "genres": [
             "Role playing games"
@@ -313,6 +369,13 @@
             "Action"
         ],
         "rating": "0.8"
+    },
+    "Dennin Aleste - Nobunaga and His Ninja Force": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.7"
     },
     "Detonator Orgun": {
         "genres": [
@@ -422,6 +485,12 @@
         ],
         "rating": "0.75"
     },
+    "Ecco the Dolphin CD": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.75"
+    },
     "Egawa Suguru no Super League CD": {
         "genres": [
             "Sports"
@@ -446,6 +515,13 @@
             "Driving"
         ],
         "rating": null
+    },
+    "FIFA International Soccer": {
+        "genres": [
+            "Sports / Soccer",
+            "Sports"
+        ],
+        "rating": "0.75"
     },
     "FIFA International Soccer - Championship Edition": {
         "genres": [
@@ -517,6 +593,13 @@
         ],
         "rating": "0.6"
     },
+    "Garou Densetsu Special": {
+        "genres": [
+            "Fight",
+            "Action"
+        ],
+        "rating": "0.9"
+    },
     "Gen'ei Toshi - Illusion City": {
         "genres": [
             "Role playing games"
@@ -544,6 +627,13 @@
         ],
         "rating": "0.6"
     },
+    "Heavenly Symphony - Formula One World Championship 1993": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": null
+    },
     "Heavy Nova": {
         "genres": [
             "Beat'em Up"
@@ -563,6 +653,12 @@
             "Action"
         ],
         "rating": "0.7"
+    },
+    "IIIrd World War, The": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": null
     },
     "Iron Helix": {
         "genres": [
@@ -607,7 +703,20 @@
         ],
         "rating": "0.7"
     },
+    "Kamen Rider ZO": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.5"
+    },
     "Keio Flying Squadron": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.7"
+    },
+    "Keiou Yuugekitai": {
         "genres": [
             "Action",
             "Shoot'em Up"
@@ -636,6 +745,13 @@
         "rating": null
     },
     "Lethal Enforcers II - Gun Fighters": {
+        "genres": [
+            "Shoot'em Up",
+            "Lightgun Shooter"
+        ],
+        "rating": null
+    },
+    "Lethal Enforcers II - The Western": {
         "genres": [
             "Shoot'em Up",
             "Lightgun Shooter"
@@ -711,6 +827,18 @@
         ],
         "rating": null
     },
+    "Mansion of Hidden Souls": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.75"
+    },
+    "Marko": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": null
+    },
     "Marko's Magic Football": {
         "genres": [
             "Platform"
@@ -745,6 +873,13 @@
         "rating": null
     },
     "Mickey Mania": {
+        "genres": [
+            "Platform",
+            "Action"
+        ],
+        "rating": "0.85"
+    },
+    "Mickey Mania - The Timeless Adventures of Mickey Mouse": {
         "genres": [
             "Platform",
             "Action"
@@ -790,6 +925,12 @@
         ],
         "rating": "0.7"
     },
+    "Mortal Kombat Kanzenban": {
+        "genres": [
+            "Fight"
+        ],
+        "rating": "0.7"
+    },
     "My Paint": {
         "genres": [
             "Various"
@@ -812,6 +953,13 @@
             "Sports"
         ],
         "rating": null
+    },
+    "NHL '94": {
+        "genres": [
+            "Sports / Hockey",
+            "Sports"
+        ],
+        "rating": "0.9"
     },
     "NHL Hockey '94": {
         "genres": [
@@ -871,7 +1019,9 @@
         "rating": null
     },
     "Pier Solar and the Great Architects - The Definitive Original Soundtrack": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "Pier Solar and the Great Architects Enhanced Soundtrack Disc": {
@@ -894,12 +1044,25 @@
         ],
         "rating": "0.75"
     },
+    "PopfulMail": {
+        "genres": [
+            "Action",
+            "Role playing games"
+        ],
+        "rating": "0.75"
+    },
     "Power Factory": {
         "genres": [
             "Action",
             "Various"
         ],
         "rating": "0.5"
+    },
+    "Power Monger": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.55"
     },
     "PowerMonger": {
         "genres": [
@@ -1015,7 +1178,21 @@
         ],
         "rating": "0.8"
     },
+    "Rise of the Dragon - A Blade Hunter Mystery": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.8"
+    },
     "Road Avenger": {
+        "genres": [
+            "Race",
+            "Driving",
+            "Adventure"
+        ],
+        "rating": "0.75"
+    },
+    "Road Blaster FX": {
         "genres": [
             "Race",
             "Driving",
@@ -1060,6 +1237,16 @@
         "genres": [],
         "rating": null
     },
+    "Sega Classic Arcade Collection - Limited Edition": {
+        "genres": [
+            "Compilation"
+        ],
+        "rating": null
+    },
+    "Sega Classics Arcade Collection": {
+        "genres": [],
+        "rating": null
+    },
     "Sega Classics Arcade Collection - Limited Edition": {
         "genres": [
             "Compilation"
@@ -1096,6 +1283,20 @@
             "Lightgun Shooter"
         ],
         "rating": "0.6"
+    },
+    "Shadow of the Beast II": {
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "rating": "0.45"
+    },
+    "Shadow of the Beast II - Juushin no Jubaku": {
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "rating": "0.45"
     },
     "Shadowrun": {
         "genres": [
@@ -1192,6 +1393,12 @@
         ],
         "rating": null
     },
+    "Sonic The Hedgehog CD": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.8"
+    },
     "SoulStar": {
         "genres": [
             "Shoot'em Up"
@@ -1199,8 +1406,10 @@
         "rating": "0.85"
     },
     "SoulStar & Battlecorps": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.85"
     },
     "Space Ace": {
         "genres": [
@@ -1254,6 +1463,13 @@
         ],
         "rating": "0.35"
     },
+    "Switch": {
+        "genres": [
+            "Puzzle-Game",
+            "Adventure"
+        ],
+        "rating": null
+    },
     "Syndicate": {
         "genres": [
             "Strategy"
@@ -1289,6 +1505,13 @@
             "Strategy"
         ],
         "rating": null
+    },
+    "Thunder Storm FX": {
+        "genres": [
+            "Simulation",
+            "Shoot'em Up"
+        ],
+        "rating": "0.15"
     },
     "Thunderhawk": {
         "genres": [
@@ -1341,8 +1564,22 @@
         ],
         "rating": "0.7"
     },
+    "Vay - Ryuusei no Yoroi": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
+    },
     "WWF - Rage in the Cage": {
         "genres": [
+            "Sports",
+            "Fight"
+        ],
+        "rating": "0.15"
+    },
+    "WWF Mania Tour - WWF - Rage in the Cage": {
+        "genres": [
+            "Sports / Wrestling",
             "Sports",
             "Fight"
         ],
@@ -1431,6 +1668,12 @@
         "rating": "0.6"
     },
     "Yumemi Mystery Mansion": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.75"
+    },
+    "Yumemi Yakata no Monogatari": {
         "genres": [
             "Adventure"
         ],

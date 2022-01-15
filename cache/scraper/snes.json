@@ -2779,7 +2779,7 @@
     },
     "Firearm": {
         "genres": [],
-        "rating": null
+        "rating": "0.4"
     },
     "Firemen, The": {
         "genres": [
@@ -3306,8 +3306,11 @@
         "rating": "0.8"
     },
     "Gourmet Warriors": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.8"
     },
     "Gradius III": {
         "genres": [
@@ -3613,8 +3616,10 @@
         "rating": "0.7"
     },
     "Hind Strike": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Simulation"
+        ],
+        "rating": "0.7"
     },
     "Hiouden - Mamono-tachi to no Chikai": {
         "genres": [
@@ -5700,6 +5705,10 @@
         ],
         "rating": "0.75"
     },
+    "Mer Wars": {
+        "genres": [],
+        "rating": null
+    },
     "Metal Combat - Falcon's Revenge": {
         "genres": [
             "Lightgun Shooter"
@@ -6135,8 +6144,11 @@
         "rating": "0.6"
     },
     "NFL Football": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Sports / Football",
+            "Sports"
+        ],
+        "rating": "0.5"
     },
     "NFL Quarterback Club": {
         "genres": [
@@ -7267,7 +7279,9 @@
         "rating": "0.7"
     },
     "PowerFest 94": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "PowerMonger": {
@@ -7555,6 +7569,10 @@
             "Platform",
             "Platform / Run Jump Scrolling"
         ],
+        "rating": null
+    },
+    "Reactor": {
+        "genres": [],
         "rating": null
     },
     "Realm": {
@@ -8121,8 +8139,10 @@
         "rating": "0.5"
     },
     "Shadowhawk": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.85"
     },
     "Shadowrun": {
         "genres": [
@@ -8495,6 +8515,10 @@
             "Role playing games"
         ],
         "rating": "0.7"
+    },
+    "Sleep": {
+        "genres": [],
+        "rating": null
     },
     "Smart Ball": {
         "genres": [
@@ -9265,6 +9289,10 @@
         ],
         "rating": "0.3"
     },
+    "Super Donkey": {
+        "genres": [],
+        "rating": null
+    },
     "Super Double Dragon": {
         "genres": [
             "Action",
@@ -9417,6 +9445,13 @@
             "Fight"
         ],
         "rating": "0.8"
+    },
+    "Super Fire Pro Wrestling X": {
+        "genres": [
+            "Sports",
+            "Sports / Wrestling"
+        ],
+        "rating": null
     },
     "Super Fire Pro Wrestling X Premium": {
         "genres": [

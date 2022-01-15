@@ -691,6 +691,13 @@
         ],
         "rating": "0.5"
     },
+    "Another World": {
+        "genres": [
+            "Action",
+            "Action / Adventure"
+        ],
+        "rating": null
+    },
     "Ant Bully, The": {
         "genres": [
             "Adventure"
@@ -2003,7 +2010,12 @@
         "rating": "0.7"
     },
     "Croket! - Yume no Banker Survival!": {
-        "genres": [],
+        "genres": [
+            "Adventure",
+            "Fight",
+            "Adventure / Visual Novel",
+            "Fight / 2D"
+        ],
         "rating": null
     },
     "Croket! 2 - Yami no Bank to Banqueen": {
@@ -2525,8 +2537,11 @@
         "rating": null
     },
     "Double Game! - Golden Nugget Casino & Texas Hold 'em Poker": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Compilation",
+            "Casino"
+        ],
+        "rating": "0.6"
     },
     "Double Game! - Quad Desert Fury & Monster Trucks": {
         "genres": [
@@ -2626,7 +2641,9 @@
         "rating": null
     },
     "Dragon Quest Characters - Torneko no Daibouken 3 Advance - Fushigi no Dungeon": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "Dragon Quest Monsters - Caravan Heart": {
@@ -3348,7 +3365,10 @@
         "rating": "0.5"
     },
     "Frank Herbert's Dune - Ornithopter Assault": {
-        "genres": [],
+        "genres": [
+            "Shooter",
+            "Shooter / Run and Gun"
+        ],
         "rating": null
     },
     "Franklin the Turtle": {
@@ -3433,6 +3453,10 @@
         "rating": null
     },
     "GBA AV Adapter": {
+        "genres": [],
+        "rating": null
+    },
+    "GBA Jukebox": {
         "genres": [],
         "rating": null
     },
@@ -3656,7 +3680,9 @@
         "rating": null
     },
     "Game Boy Advance Video - Sonic X - Volume 1": {
-        "genres": [],
+        "genres": [
+            "N/A"
+        ],
         "rating": null
     },
     "Game Boy Advance Video - SpongeBob SquarePants - Volume 1": {
@@ -3853,6 +3879,10 @@
         ],
         "rating": "0.95"
     },
+    "Goodboy Galaxy": {
+        "genres": [],
+        "rating": null
+    },
     "Gradius Advance": {
         "genres": [
             "Shoot'em Up",
@@ -3925,7 +3955,9 @@
         "rating": null
     },
     "Guru Logic Champ": {
-        "genres": [],
+        "genres": [
+            "Puzzle-Game"
+        ],
         "rating": null
     },
     "Gyakuten Saiban": {
@@ -4695,11 +4727,15 @@
         "rating": null
     },
     "Keitai Denjuu Telefang 2 - Power": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "Keitai Denjuu Telefang 2 - Speed": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "Kelly Slater's Pro Surfer": {
@@ -4960,7 +4996,9 @@
         "rating": null
     },
     "Kotoba no Puzzle - Mojipittan Advance": {
-        "genres": [],
+        "genres": [
+            "Puzzle-Game"
+        ],
         "rating": null
     },
     "Kouchuu Ouja Mushiking - Greatest Champion e no Michi": {
@@ -5597,6 +5635,10 @@
             "Shooter"
         ],
         "rating": "0.65"
+    },
+    "Mechanic Mechanica": {
+        "genres": [],
+        "rating": null
     },
     "Medabots - Metabee": {
         "genres": [
@@ -6610,7 +6652,9 @@
         "rating": "0.55"
     },
     "Paws & Claws - Pet Vet": {
-        "genres": [],
+        "genres": [
+            "Simulation"
+        ],
         "rating": null
     },
     "Payback": {
@@ -6627,6 +6671,10 @@
         ],
         "rating": "0.55"
     },
+    "Perplexus Diodomin": {
+        "genres": [],
+        "rating": null
+    },
     "Peter Pan - Return to Neverland": {
         "genres": [
             "Action",
@@ -6641,7 +6689,9 @@
         "rating": "0.5"
     },
     "Petz - Hamsterz Life 2": {
-        "genres": [],
+        "genres": [
+            "Simulation"
+        ],
         "rating": null
     },
     "Petz Vet": {
@@ -6786,7 +6836,9 @@
         "rating": "0.6"
     },
     "Pixeline i Pixieland": {
-        "genres": [],
+        "genres": [
+            "Adventure"
+        ],
         "rating": null
     },
     "Planet Monsters": {
@@ -6967,15 +7019,24 @@
         "rating": null
     },
     "Power Pro Kun Pocket 5": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Pro Kun Pocket 6": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Pro Kun Pocket 7": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Rangers - Dino Thunder": {
@@ -7273,7 +7334,10 @@
         "rating": "0.65"
     },
     "Resident Evil 2": {
-        "genres": [],
+        "genres": [
+            "Adventure",
+            "Adventure / Survival Horror"
+        ],
         "rating": null
     },
     "Revenge of Shinobi, The": {
@@ -7323,6 +7387,10 @@
         ],
         "rating": "0.65"
     },
+    "RoboCop": {
+        "genres": [],
+        "rating": null
+    },
     "Robopon 2 - Cross Version": {
         "genres": [
             "Role playing games"
@@ -7342,7 +7410,10 @@
         "rating": "0.45"
     },
     "Robot Wars - Extreme Destruction": {
-        "genres": [],
+        "genres": [
+            "Fight",
+            "Fight / 3D"
+        ],
         "rating": null
     },
     "Robotech - The Macross Saga": {
@@ -7961,7 +8032,7 @@
     },
     "Slime Morimori Dragon Quest - Shougeki no Shippo Dan": {
         "genres": [],
-        "rating": null
+        "rating": "0.9"
     },
     "Slot! Pro 2 Advance - GoGo Juggler & New Tairyou": {
         "genres": [],
@@ -8356,15 +8427,21 @@
         "rating": "0.3"
     },
     "Strawberry Shortcake - Summertime Adventure": {
-        "genres": [],
+        "genres": [
+            "Adventure"
+        ],
         "rating": null
     },
     "Strawberry Shortcake - Summertime Adventure - Special Edition": {
-        "genres": [],
+        "genres": [
+            "Adventure"
+        ],
         "rating": null
     },
     "Strawberry Shortcake - Sweet Dreams": {
-        "genres": [],
+        "genres": [
+            "Adventure"
+        ],
         "rating": null
     },
     "Street Fighter Alpha 3": {
@@ -8966,7 +9043,9 @@
         "rating": "0.75"
     },
     "Tir et But - Edition Champions du Monde": {
-        "genres": [],
+        "genres": [
+            "Quiz"
+        ],
         "rating": null
     },
     "Titeuf - Mega Compet": {

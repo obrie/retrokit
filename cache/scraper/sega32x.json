@@ -133,6 +133,13 @@
         ],
         "rating": "0.85"
     },
+    "Motherbase": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.65"
+    },
     "Motocross Championship": {
         "genres": [
             "Motorcycle Race",
@@ -156,13 +163,6 @@
             "Sports"
         ],
         "rating": "0.6"
-    },
-    "Zaxxon's Motherbase 2000": {
-        "genres": [
-            "Action",
-            "Shoot'em Up"
-        ],
-        "rating": "0.65"
     },
     "Pinocchio": {
         "genres": [
@@ -199,12 +199,6 @@
         ],
         "rating": "0.35"
     },
-    "Stellar Assault": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "rating": "0.75"
-    },
     "Soulstar X": {
         "genres": [
             "Shooter"
@@ -218,6 +212,13 @@
             "Shoot'em Up"
         ],
         "rating": "0.7"
+    },
+    "Spot Goes to Hollywood": {
+        "genres": [
+            "Platform",
+            "Action"
+        ],
+        "rating": "0.8"
     },
     "Star Trek - Starfleet Academy - Starship Bridge Simulator": {
         "genres": [
@@ -235,6 +236,12 @@
         ],
         "rating": "0.7"
     },
+    "Stellar Assault": {
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.75"
+    },
     "T-MEK": {
         "genres": [
             "Action"
@@ -247,6 +254,10 @@
             "Platform"
         ],
         "rating": "0.75"
+    },
+    "Time Warner 32X CMD Download Cartridge": {
+        "genres": [],
+        "rating": null
     },
     "Toughman Contest": {
         "genres": [
@@ -303,5 +314,12 @@
             "Action"
         ],
         "rating": null
+    },
+    "Zaxxon's Motherbase 2000": {
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.65"
     }
 }

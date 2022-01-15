@@ -125,20 +125,6 @@
         ],
         "rating": null
     },
-    "Streets of Rage 2": {
-        "genres": [
-            "Action",
-            "Beat'em Up"
-        ],
-        "rating": "0.65"
-    },
-    "Streets of Rage": {
-        "genres": [
-            "Action",
-            "Beat'em Up"
-        ],
-        "rating": "0.6"
-    },
     "Batman Forever": {
         "genres": [
             "Beat'em Up"
@@ -588,6 +574,13 @@
         ],
         "rating": "0.5"
     },
+    "F1": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.35"
+    },
     "F1 - World Championship Edition": {
         "genres": [
             "Race",
@@ -596,13 +589,6 @@
             "Driving / Race"
         ],
         "rating": "0.6"
-    },
-    "F1": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "rating": "0.35"
     },
     "FIFA International Soccer": {
         "genres": [
@@ -705,13 +691,6 @@
         ],
         "rating": "0.5"
     },
-    "Sonic Blast": {
-        "genres": [
-            "Action",
-            "Platform"
-        ],
-        "rating": "0.75"
-    },
     "GG Aleste": {
         "genres": [
             "Shoot'em up / Vertical",
@@ -745,12 +724,6 @@
             "Various"
         ],
         "rating": "0.3"
-    },
-    "Shinobi II - The Silent Fury": {
-        "genres": [
-            "Platform"
-        ],
-        "rating": "0.85"
     },
     "GG Shinobi, The": {
         "genres": [
@@ -1943,6 +1916,12 @@
         ],
         "rating": "0.75"
     },
+    "Shinobi II - The Silent Fury": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.85"
+    },
     "Side Pocket": {
         "genres": [
             "Sports / Pool",
@@ -2005,6 +1984,13 @@
             "Casino / Cards"
         ],
         "rating": "0.95"
+    },
+    "Sonic Blast": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.75"
     },
     "Sonic Chaos": {
         "genres": [
@@ -2152,6 +2138,20 @@
             "Beat'em Up"
         ],
         "rating": null
+    },
+    "Streets of Rage": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.6"
+    },
+    "Streets of Rage 2": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.65"
     },
     "Striker": {
         "genres": [

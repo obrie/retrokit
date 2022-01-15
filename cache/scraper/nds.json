@@ -280,8 +280,11 @@
         "rating": null
     },
     "4 Game Fun Pack - Monopoly + Boggle + Yahtzee + Battleship": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Compilation",
+            "Board game"
+        ],
+        "rating": "0.15"
     },
     "4 Game Pack! - Battleship + Connect Four + Sorry! + Trouble": {
         "genres": [],
@@ -3738,6 +3741,13 @@
         ],
         "rating": "0.25"
     },
+    "Deal or No Deal - The Official Nintendo DS Game": {
+        "genres": [
+            "Various",
+            "Strategy"
+        ],
+        "rating": "0.25"
+    },
     "Dear Girl - Stories - Hibiki - Hibiki Tokkun Daisakusen!": {
         "genres": [
             "Various"
@@ -4376,6 +4386,12 @@
         ],
         "rating": "0.85"
     },
+    "Dragon Quest Monsters - Joker 2 - Professional": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.8"
+    },
     "Dragon Quest VI - Realms of Reverie": {
         "genres": [
             "Role playing games"
@@ -4428,6 +4444,13 @@
     },
     "Drawn to Life - SpongeBob SquarePants Edition": {
         "genres": [],
+        "rating": null
+    },
+    "Drawn to Life - The Next Chapter": {
+        "genres": [
+            "Action",
+            "Action / Adventure"
+        ],
         "rating": null
     },
     "Dream Chronicles": {
@@ -5235,6 +5258,12 @@
         "rating": null
     },
     "Finding Nemo - Escape to the Big Blue": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.65"
+    },
+    "Finding Nemo - Escape to the Big Blue - Special Edition": {
         "genres": [
             "Puzzle-Game"
         ],
@@ -8362,7 +8391,10 @@
         "rating": null
     },
     "Keiji J.B. Harold no Jikenbo - Manhattan Requiem & Kiss of Murder": {
-        "genres": [],
+        "genres": [
+            "Adventure",
+            "Adventure / Graphics"
+        ],
         "rating": null
     },
     "Keiji J.B. Harold no Jikenbo - Murder Club": {
@@ -8992,6 +9024,12 @@
             "Platform"
         ],
         "rating": "0.75"
+    },
+    "LEGO Star Wars II - The Original Trilogy": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.55"
     },
     "LEGO Star Wars III - The Clone Wars": {
         "genres": [
@@ -10566,7 +10604,10 @@
         "rating": null
     },
     "Meitantei Conan & Kindaichi Shounen no Jikenbo - Meguriau Futari no Meitantei": {
-        "genres": [],
+        "genres": [
+            "Adventure",
+            "Adventure / Visual Novel"
+        ],
         "rating": null
     },
     "Meitantei Conan - Aoki Houseki no Rondo": {
@@ -10637,7 +10678,9 @@
         "rating": "0.75"
     },
     "Metcha! Taiko no Tatsujin DS - 7-tsu no Shima no Daibouken": {
-        "genres": [],
+        "genres": [
+            "Music and Dance"
+        ],
         "rating": null
     },
     "Meteos": {
@@ -10971,6 +11014,10 @@
         "genres": [
             "Action"
         ],
+        "rating": null
+    },
+    "Moe Moe 2-ji Taisen": {
+        "genres": [],
         "rating": null
     },
     "Moe Moe 2-ji Taisen(ryaku) Two - Yamato Nadeshiko": {
@@ -11667,6 +11714,13 @@
         ],
         "rating": "0.6"
     },
+    "My Spanish Coach - Level 2 - Improve Your Spanish": {
+        "genres": [
+            "Educational",
+            "Various"
+        ],
+        "rating": "0.6"
+    },
     "My Vet Practice - In Australia": {
         "genres": [
             "Simulation"
@@ -11694,6 +11748,12 @@
             "Educational"
         ],
         "rating": null
+    },
+    "My Word Coach - Develop Your Vocabulary": {
+        "genres": [
+            "Educational"
+        ],
+        "rating": "0.65"
     },
     "My World, My Way": {
         "genres": [
@@ -12392,6 +12452,10 @@
         "genres": [],
         "rating": null
     },
+    "Nintendo Presents - Crossword Collection": {
+        "genres": [],
+        "rating": null
+    },
     "Nintendo Presents - Style Boutique": {
         "genres": [],
         "rating": null
@@ -12413,7 +12477,9 @@
         "rating": "0.75"
     },
     "Nintendogs - Chihuahua & Friends": {
-        "genres": [],
+        "genres": [
+            "Simulation"
+        ],
         "rating": null
     },
     "Nintendogs - Dachshund & Friends": {
@@ -12609,6 +12675,10 @@
         "rating": "0.85"
     },
     "Oktoberfest - The Official Game": {
+        "genres": [],
+        "rating": null
+    },
+    "Oli Octopus": {
         "genres": [],
         "rating": null
     },
@@ -13002,16 +13072,26 @@
         ],
         "rating": "0.25"
     },
+    "Perdition": {
+        "genres": [],
+        "rating": null
+    },
     "Perfect Kanji Keisan Master DS": {
         "genres": [],
         "rating": null
     },
     "Personal Trainer DS for Men": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Fitness"
+        ],
         "rating": null
     },
     "Personal Trainer DS for Women": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Fitness"
+        ],
         "rating": null
     },
     "Personal Yoga Training - Learn in 15 Minutes a Day": {
@@ -13679,11 +13759,17 @@
         "rating": null
     },
     "Power Pro Kun Pocket 11": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Pro Kun Pocket 12": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Pro Kun Pocket 13": {
@@ -13701,11 +13787,17 @@
         "rating": null
     },
     "Power Pro Kun Pocket 8": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Pro Kun Pocket 9": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "rating": null
     },
     "Power Rangers - Samurai": {
@@ -16459,6 +16551,10 @@
         "genres": [],
         "rating": null
     },
+    "Successfully Learning Mathematics": {
+        "genres": [],
+        "rating": null
+    },
     "Successfully Learning Mathematics - Year 2+3": {
         "genres": [],
         "rating": null
@@ -16900,7 +16996,9 @@
         "rating": "0.9"
     },
     "Taiko no Tatsujin DS - Touch de Dokodon!": {
-        "genres": [],
+        "genres": [
+            "Music and Dance"
+        ],
         "rating": null
     },
     "Taisen!! Kato-chan no Kololon Pe": {
@@ -18986,7 +19084,9 @@
         "rating": "0.75"
     },
     "Xenosaga I & II": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "Xia-Xia": {
@@ -19472,6 +19572,10 @@
             "Platform"
         ],
         "rating": "0.75"
+    },
+    "eSMART 2.0": {
+        "genres": [],
+        "rating": null
     },
     "futureU - The Prep Game for SAT": {
         "genres": [],

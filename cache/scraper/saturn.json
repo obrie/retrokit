@@ -148,6 +148,12 @@
         ],
         "rating": "0.85"
     },
+    "Alone in the Dark 2": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.85"
+    },
     "Amagi Shien": {
         "genres": [
             "Action",
@@ -224,8 +230,10 @@
         "rating": "0.75"
     },
     "Aqua-world - Umi Monogatari": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Simulation"
+        ],
+        "rating": "0.5"
     },
     "Aquazone - Desktop Life": {
         "genres": [
@@ -347,6 +355,12 @@
         ],
         "rating": "0.8"
     },
+    "Athlete Kings": {
+        "genres": [
+            "Sports"
+        ],
+        "rating": "0.8"
+    },
     "Atlantis - The Lost Tales": {
         "genres": [
             "Adventure"
@@ -382,6 +396,12 @@
         "rating": "0.55"
     },
     "Baku Baku Animal - Sekai Shiiku Gakari Senshuken": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.7"
+    },
+    "Baku Baku Animal - World Zookeeper Contest": {
         "genres": [
             "Puzzle-Game"
         ],
@@ -846,6 +866,12 @@
         ],
         "rating": "0.55"
     },
+    "Command & Conquer": {
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.8"
+    },
     "Command & Conquer - Teil 1 - Der Tiberiumkonflikt": {
         "genres": [
             "Strategy"
@@ -929,8 +955,11 @@
         "rating": "0.75"
     },
     "Cross Romance - Koi to Mahjong to Hanafuda to": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
+        "rating": "0.6"
     },
     "Cross Tantei Monogatari": {
         "genres": [
@@ -1225,8 +1254,11 @@
         "rating": "0.4"
     },
     "Deka 4-ku - Tough the Truck": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.6"
     },
     "Delisoba Deluxe": {
         "genres": [
@@ -1336,14 +1368,23 @@
         "rating": "0.85"
     },
     "Devil Summoner - Soul Hackers Extra Dungeon": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
     },
     "Dezaemon 2": {
         "genres": [
             "Lightgun Shooter"
         ],
         "rating": "0.75"
+    },
+    "Die Hard Arcade": {
+        "genres": [
+            "Action",
+            "Beat'em Up"
+        ],
+        "rating": "0.7"
     },
     "Die Hard Trilogy": {
         "genres": [
@@ -1470,6 +1511,12 @@
             "Various"
         ],
         "rating": "0.75"
+    },
+    "Dragon Ball Z - Idainaru Dragon Ball Densetsu": {
+        "genres": [
+            "Fight"
+        ],
+        "rating": "0.8"
     },
     "Dragon Ball Z - La Grande Legende des Boules de Cristal": {
         "genres": [
@@ -2880,6 +2927,13 @@
         ],
         "rating": "0.85"
     },
+    "J.League Victory Goal '97": {
+        "genres": [
+            "Sports / Soccer",
+            "Sports"
+        ],
+        "rating": null
+    },
     "Jantei Battle Cos-Player": {
         "genres": [
             "Asiatic board game",
@@ -3049,6 +3103,14 @@
         ],
         "rating": "0.8"
     },
+    "Keio Flying Squadron 2": {
+        "genres": [
+            "Action",
+            "Adventure",
+            "Platform"
+        ],
+        "rating": "0.7"
+    },
     "Keiou Yuugekitai - Katsugeki-hen": {
         "genres": [
             "Action",
@@ -3187,8 +3249,12 @@
         "rating": "0.7"
     },
     "Koudou Saisoku Densetsu - Initial D": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Race",
+            "Driving",
+            "Race 3rd Pers. view"
+        ],
+        "rating": "0.6"
     },
     "Kouryuu Sangoku Engi": {
         "genres": [
@@ -3197,8 +3263,12 @@
         "rating": null
     },
     "Koutetsu Reiiki - Steeldom": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Action",
+            "Fight",
+            "Various"
+        ],
+        "rating": "0.65"
     },
     "Krazy Ivan": {
         "genres": [
@@ -3739,6 +3809,13 @@
         ],
         "rating": null
     },
+    "Mega Man X3": {
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "rating": "0.75"
+    },
     "MeltyLancer - Ginga Shoujo Keisatsu 2086": {
         "genres": [
             "Strategy",
@@ -3983,6 +4060,13 @@
         ],
         "rating": "0.7"
     },
+    "Mystaria - The Realms of Lore": {
+        "genres": [
+            "Role playing games",
+            "Adventure"
+        ],
+        "rating": "0.85"
+    },
     "Mystery Mansion - Das Haus der verlorenen Seelen": {
         "genres": [
             "Adventure"
@@ -4144,6 +4228,13 @@
             "Shoot'em Up"
         ],
         "rating": "0.7"
+    },
+    "Night Warriors - Darkstalkers' Revenge": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.9"
     },
     "Nightruth - Explanation of the Paranormal - Futatsu Dake no Shinjitsu": {
         "genres": [
@@ -4395,6 +4486,12 @@
             "Shoot'em Up"
         ],
         "rating": "0.85"
+    },
+    "Panzer Dragoon Saga": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.8"
     },
     "Pappara Paoon": {
         "genres": [
@@ -4846,6 +4943,12 @@
             "Strategy"
         ],
         "rating": null
+    },
+    "Resident Evil": {
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.85"
     },
     "Return to Zork": {
         "genres": [
@@ -5658,6 +5761,12 @@
         ],
         "rating": "0.8"
     },
+    "Shining Force III - Scenario 1 - Outo no Kyoshin": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.85"
+    },
     "Shining Force III - Scenario 2 - Nerawareta Miko": {
         "genres": [
             "Role playing games"
@@ -5710,6 +5819,12 @@
             "Role playing games"
         ],
         "rating": "0.65"
+    },
+    "Shinsetsu Yumemi Yakata - Tobira no Oku ni Dareka ga...": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": "0.45"
     },
     "Shippuu Mahou Daisakusen - Kingdom-Grandprix": {
         "genres": [
@@ -5877,6 +5992,12 @@
             "Simulation"
         ],
         "rating": "0.75"
+    },
+    "Sonic 3D - Flickies' Island": {
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.65"
     },
     "Sonic 3D Blast": {
         "genres": [
@@ -6101,6 +6222,20 @@
             "Fight"
         ],
         "rating": "0.65"
+    },
+    "Street Fighter Alpha - Warriors' Dreams": {
+        "genres": [
+            "Fight / 2D",
+            "Fight"
+        ],
+        "rating": "0.8"
+    },
+    "Street Fighter Alpha 2": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.75"
     },
     "Street Fighter Collection": {
         "genres": [
@@ -6595,6 +6730,13 @@
         ],
         "rating": "0.75"
     },
+    "Thor - Seireioukiden": {
+        "genres": [
+            "Role playing games",
+            "Adventure"
+        ],
+        "rating": "0.85"
+    },
     "Three Dirty Dwarves": {
         "genres": [
             "Action",
@@ -6641,6 +6783,10 @@
             "Shoot'em Up"
         ],
         "rating": "0.7"
+    },
+    "Time Bokan Series - Bokan to Ippatsu! Doronbow Kanpekiban": {
+        "genres": [],
+        "rating": null
     },
     "Time Commando": {
         "genres": [
@@ -6727,6 +6873,13 @@
         ],
         "rating": "0.65"
     },
+    "Tomb Raider": {
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "rating": "0.8"
+    },
     "Tomb Raiders": {
         "genres": [
             "Action",
@@ -6777,6 +6930,13 @@
             "Fight"
         ],
         "rating": "0.7"
+    },
+    "Toushinden S": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.6"
     },
     "Toushinden URA": {
         "genres": [
@@ -6985,6 +7145,10 @@
         ],
         "rating": "0.8"
     },
+    "Virtua Fighter CG Portrait Collection": {
+        "genres": [],
+        "rating": null
+    },
     "Virtua Fighter CG Portrait Series Vol. 4 - Pai Chan": {
         "genres": [],
         "rating": null
@@ -6995,6 +7159,13 @@
             "Fight"
         ],
         "rating": "0.95"
+    },
+    "Virtua Fighter Remix": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.9"
     },
     "Virtua Photo Studio - Cameraman Simulation": {
         "genres": [],
@@ -7052,6 +7223,13 @@
             "Mahjong"
         ],
         "rating": null
+    },
+    "Virtual On - Cyber Troopers": {
+        "genres": [
+            "Action",
+            "Fight"
+        ],
+        "rating": "0.8"
     },
     "Virtual Open Tennis": {
         "genres": [
@@ -7129,8 +7307,10 @@
         "rating": "0.8"
     },
     "Waku^2 Monster": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.5"
     },
     "WanChai Connection": {
         "genres": [
@@ -7341,6 +7521,13 @@
         ],
         "rating": "0.55"
     },
+    "World Cup Golf - Professional Edition": {
+        "genres": [
+            "Sports",
+            "Sports / Golf"
+        ],
+        "rating": "0.55"
+    },
     "World Evolution Soccer": {
         "genres": [
             "Sports",
@@ -7385,6 +7572,13 @@
         "rating": "0.75"
     },
     "Worldwide Soccer '98": {
+        "genres": [
+            "Sports / Soccer",
+            "Sports"
+        ],
+        "rating": "0.8"
+    },
+    "Worldwide Soccer - Sega International Victory Goal Edition": {
         "genres": [
             "Sports / Soccer",
             "Sports"
@@ -7509,8 +7703,10 @@
         "rating": "0.7"
     },
     "Zanma Chou Ougi - Valhollian": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.65"
     },
     "Zap! Snowboarding Trix": {
         "genres": [

@@ -477,6 +477,10 @@
         ],
         "rating": null
     },
+    "Barbarian": {
+        "genres": [],
+        "rating": null
+    },
     "Barbie Super Model": {
         "genres": [
             "Adventure",
@@ -658,6 +662,10 @@
         ],
         "rating": "0.85"
     },
+    "Beethoven's 2nd - The Quest for Pups": {
+        "genres": [],
+        "rating": null
+    },
     "Beggar Prince": {
         "genres": [
             "Role playing games"
@@ -772,6 +780,10 @@
             "Action"
         ],
         "rating": "0.35"
+    },
+    "Blow'em Out": {
+        "genres": [],
+        "rating": null
     },
     "Blue Almanac": {
         "genres": [
@@ -1351,6 +1363,10 @@
         "genres": [],
         "rating": null
     },
+    "Cursed Knight, The": {
+        "genres": [],
+        "rating": null
+    },
     "Custodian": {
         "genres": [],
         "rating": null
@@ -1526,7 +1542,10 @@
         "rating": "0.7"
     },
     "Demons of Asteborg": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Action"
+        ],
         "rating": null
     },
     "Desert Demolition Starring Road Runner and Wile E. Coyote": {
@@ -1694,8 +1713,10 @@
         "rating": "0.65"
     },
     "Dragon Ball - Final Bout": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Fight"
+        ],
+        "rating": "0.5"
     },
     "Dragon Ball Z - Buyuu Retsuden": {
         "genres": [
@@ -2592,6 +2613,10 @@
         ],
         "rating": "0.8"
     },
+    "Handy Harvy": {
+        "genres": [],
+        "rating": null
+    },
     "Hard Drivin'": {
         "genres": [
             "Race",
@@ -2831,6 +2856,10 @@
             "Platform"
         ],
         "rating": "0.2"
+    },
+    "Ivanhoe": {
+        "genres": [],
+        "rating": null
     },
     "Izzy's Quest for the Olympic Rings": {
         "genres": [
@@ -3186,6 +3215,10 @@
         ],
         "rating": "0.65"
     },
+    "Kromasphere": {
+        "genres": [],
+        "rating": null
+    },
     "Krusty's Super Fun House": {
         "genres": [
             "Fight",
@@ -3395,7 +3428,9 @@
         "rating": "0.6"
     },
     "Lufia & the Fortress of Doom": {
-        "genres": [],
+        "genres": [
+            "Role playing games"
+        ],
         "rating": null
     },
     "M-1 Abrams Battle Tank": {
@@ -4401,6 +4436,10 @@
         ],
         "rating": "0.7"
     },
+    "Out of the Vortex": {
+        "genres": [],
+        "rating": null
+    },
     "OutRun": {
         "genres": [
             "Race",
@@ -4425,6 +4464,10 @@
             "Driving"
         ],
         "rating": "0.6"
+    },
+    "Outback Joey": {
+        "genres": [],
+        "rating": null
     },
     "Outlander": {
         "genres": [
@@ -4534,11 +4577,43 @@
         ],
         "rating": "0.75"
     },
+    "Papi Commando": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": null
+    },
+    "Papi Commando - Second Blood": {
+        "genres": [],
+        "rating": null
+    },
+    "Papi Commando Reload - TECTOY Demo": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": null
+    },
+    "Papi Commando Remix": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": null
+    },
+    "Papi Commando Remix Deluxe": {
+        "genres": [
+            "Shooter"
+        ],
+        "rating": null
+    },
     "Party Quiz Mega Q": {
         "genres": [
             "Quiz"
         ],
         "rating": "0.6"
+    },
+    "Payne Stewart Pro Golf": {
+        "genres": [],
+        "rating": null
     },
     "Pebble Beach Golf Links": {
         "genres": [
@@ -4564,6 +4639,10 @@
             "Action"
         ],
         "rating": "0.85"
+    },
+    "Perlin & Pinpin - The Robin Tower - Case Closed [somehow]": {
+        "genres": [],
+        "rating": null
     },
     "Pete Sampras Tennis": {
         "genres": [
@@ -4992,6 +5071,14 @@
         ],
         "rating": null
     },
+    "R.B.I. Baseball '95": {
+        "genres": [
+            "Sports / Baseball",
+            "Sports",
+            "Simulation"
+        ],
+        "rating": "0.5"
+    },
     "R.B.I. Baseball 3": {
         "genres": [
             "Sports / Baseball",
@@ -5185,6 +5272,10 @@
         ],
         "rating": "0.75"
     },
+    "Road Riot 4WD": {
+        "genres": [],
+        "rating": null
+    },
     "RoadBlasters": {
         "genres": [
             "Race",
@@ -5282,6 +5373,12 @@
             "Sports"
         ],
         "rating": "0.65"
+    },
+    "Sacred Line Genesis": {
+        "genres": [
+            "Adventure"
+        ],
+        "rating": null
     },
     "Sagaia": {
         "genres": [
@@ -5774,6 +5871,10 @@
         ],
         "rating": "0.7"
     },
+    "Space Hero": {
+        "genres": [],
+        "rating": null
+    },
     "Space Invaders '91": {
         "genres": [
             "Shooter",
@@ -6061,6 +6162,10 @@
         ],
         "rating": "0.75"
     },
+    "Super Heavy Duty": {
+        "genres": [],
+        "rating": null
+    },
     "Super High Impact": {
         "genres": [
             "Sports"
@@ -6336,7 +6441,10 @@
         "rating": "0.45"
     },
     "Tecmo Cup Football Game": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Soccer"
+        ],
         "rating": null
     },
     "Tecmo Super Baseball": {

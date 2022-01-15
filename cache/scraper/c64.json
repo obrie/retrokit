@@ -115,7 +115,12 @@
         "rating": null
     },
     "3D Stock Cars II": {
-        "genres": [],
+        "genres": [
+            "Race",
+            "Driving",
+            "Race",
+            "Driving / Race"
+        ],
         "rating": null
     },
     "4th & Inches": {
@@ -363,7 +368,10 @@
         "rating": null
     },
     "Alleykat": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Alpha Build": {
@@ -375,7 +383,10 @@
         "rating": null
     },
     "Altair 4": {
-        "genres": [],
+        "genres": [
+            "Adventure",
+            "Adventure / Text"
+        ],
         "rating": null
     },
     "Altered Beast": {
@@ -463,7 +474,9 @@
         "rating": null
     },
     "Aquanaut": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up"
+        ],
         "rating": null
     },
     "Aquaplane": {
@@ -627,11 +640,17 @@
         "rating": null
     },
     "Astroblitz": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
         "rating": null
     },
     "Athena": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Fighter Scrolling"
+        ],
         "rating": null
     },
     "Atom Ant": {
@@ -892,8 +911,10 @@
         "rating": "0.85"
     },
     "Battleships": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Strategy"
+        ],
+        "rating": "0.75"
     },
     "Battlezone": {
         "genres": [
@@ -1011,7 +1032,7 @@
     },
     "Bigtop Barney": {
         "genres": [],
-        "rating": null
+        "rating": "0.85"
     },
     "Bionic Commando": {
         "genres": [
@@ -1110,7 +1131,10 @@
         "rating": null
     },
     "Blue Moon": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Blueprint": {
@@ -1240,7 +1264,7 @@
     },
     "Break Fever": {
         "genres": [],
-        "rating": null
+        "rating": "0.35"
     },
     "Breakthru": {
         "genres": [
@@ -1363,8 +1387,10 @@
         "rating": null
     },
     "Burger Time": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.7"
     },
     "Bushido": {
         "genres": [],
@@ -1383,11 +1409,17 @@
         "rating": null
     },
     "CJ in the USA": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "CJ's Elephant Antics": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "COMAL 80": {
@@ -1505,8 +1537,10 @@
         "rating": null
     },
     "Caverns of Sillahc": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shooter"
+        ],
+        "rating": "0.5"
     },
     "Centipede": {
         "genres": [
@@ -1669,7 +1703,10 @@
         "rating": null
     },
     "Cobra": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
         "rating": null
     },
     "Cobra Force": {
@@ -1824,7 +1861,9 @@
         "rating": null
     },
     "Cosmic Pirate": {
-        "genres": [],
+        "genres": [
+            "Shooter"
+        ],
         "rating": null
     },
     "Cosmic Split": {
@@ -1904,8 +1943,11 @@
         "rating": null
     },
     "Crazy Kong 64": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
+        "rating": "0.8"
     },
     "Crazy-Kong": {
         "genres": [],
@@ -1920,7 +1962,10 @@
         "rating": null
     },
     "Cricket Master": {
-        "genres": [],
+        "genres": [
+            "Strategy",
+            "Sports"
+        ],
         "rating": null
     },
     "Crisis Mountain": {
@@ -1992,8 +2037,10 @@
         "rating": null
     },
     "Cyclons": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.8"
     },
     "Cylu": {
         "genres": [
@@ -2003,7 +2050,9 @@
         "rating": null
     },
     "Cyrus II": {
-        "genres": [],
+        "genres": [
+            "Board game"
+        ],
         "rating": null
     },
     "D-Bug": {
@@ -2074,7 +2123,10 @@
         "rating": null
     },
     "Danger Freak": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Dark Fusion": {
@@ -2125,8 +2177,10 @@
         "rating": null
     },
     "Death Star": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.8"
     },
     "Deathscape": {
         "genres": [],
@@ -2195,7 +2249,10 @@
         "rating": null
     },
     "Demon's Kiss": {
-        "genres": [],
+        "genres": [
+            "Fight",
+            "Fight / 2D"
+        ],
         "rating": null
     },
     "Denaris": {
@@ -2290,7 +2347,9 @@
         "rating": null
     },
     "Dizzy": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Dizzy Dice": {
@@ -2328,7 +2387,10 @@
         "rating": null
     },
     "Dominator": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Don Quijote": {
@@ -2366,7 +2428,9 @@
         "rating": null
     },
     "Dot Gobbler": {
-        "genres": [],
+        "genres": [
+            "Action"
+        ],
         "rating": null
     },
     "Double Dragon": {
@@ -2461,7 +2525,7 @@
     },
     "Duck Shoot": {
         "genres": [],
-        "rating": null
+        "rating": "0.45"
     },
     "Ducks Ahoy!": {
         "genres": [],
@@ -2630,8 +2694,11 @@
         "rating": null
     },
     "Escape MCP": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
+        "rating": "0.5"
     },
     "Escape from Doomworld": {
         "genres": [],
@@ -2652,7 +2719,11 @@
         "rating": null
     },
     "Euro Boss": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Soccer",
+            "Strategy"
+        ],
         "rating": null
     },
     "European 5-A-Side": {
@@ -2660,11 +2731,19 @@
         "rating": null
     },
     "European Champions": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Soccer",
+            "Strategy"
+        ],
         "rating": null
     },
     "European II": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Strategy",
+            "Sports / Soccer"
+        ],
         "rating": null
     },
     "European Soccer Challenge": {
@@ -2966,7 +3045,9 @@
         "rating": null
     },
     "Flip & Flop": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Flying Feathers": {
@@ -3054,7 +3135,9 @@
         "rating": null
     },
     "Frankenstein": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Frankenstein Jnr.": {
@@ -3101,15 +3184,17 @@
     },
     "Frogger 64": {
         "genres": [],
-        "rating": null
+        "rating": "0.8"
     },
     "Frogger II - Threeedeep!": {
         "genres": [],
         "rating": null
     },
     "Frontline": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shooter"
+        ],
+        "rating": "0.65"
     },
     "Fruit Machine Simulator": {
         "genres": [],
@@ -3165,8 +3250,11 @@
         "rating": null
     },
     "Galaxy": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
+        "rating": "0.6"
     },
     "Galaxy Force 2": {
         "genres": [
@@ -3264,7 +3352,7 @@
     },
     "Get Off My Garden!": {
         "genres": [],
-        "rating": null
+        "rating": "0.5"
     },
     "Ghettoblaster": {
         "genres": [],
@@ -3474,7 +3562,10 @@
         "rating": "0.65"
     },
     "Gremlins 2": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
         "rating": null
     },
     "Greyfell - The Legend of Norman": {
@@ -3705,8 +3796,11 @@
         "rating": null
     },
     "Heroes of Karn, The": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Adventure",
+            "Adventure / Text"
+        ],
+        "rating": "0.8"
     },
     "Hexenkueche II - Der Kuerbis Schlaegt Zurueck": {
         "genres": [
@@ -3817,8 +3911,10 @@
         "rating": "0.65"
     },
     "Howard the Duck - Adventure on Volcano Island": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Action"
+        ],
+        "rating": "0.6"
     },
     "Hudson Hawk": {
         "genres": [
@@ -3929,7 +4025,9 @@
         "rating": null
     },
     "I, Ball 2 - The Quest for the Past": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up"
+        ],
         "rating": null
     },
     "I-Xera": {
@@ -4196,7 +4294,9 @@
         "rating": "0.65"
     },
     "James Bond 007": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up"
+        ],
         "rating": null
     },
     "James Pond II - Codename Robocod": {
@@ -4267,7 +4367,9 @@
         "rating": null
     },
     "Johnny Reb": {
-        "genres": [],
+        "genres": [
+            "Strategy"
+        ],
         "rating": null
     },
     "Jonah Barrington's Squash": {
@@ -4370,8 +4472,11 @@
         "rating": null
     },
     "Kendo Warrior": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Fight",
+            "Fight / 2D"
+        ],
+        "rating": "0.65"
     },
     "Kenny Dalglish Soccer": {
         "genres": [
@@ -4573,7 +4678,9 @@
         "rating": null
     },
     "Lancer-Lord": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Land of Neverwhere": {
@@ -4667,8 +4774,11 @@
         "rating": null
     },
     "LeMans": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "rating": "0.65"
     },
     "Leader Board - Pro Golf Simulator": {
         "genres": [
@@ -5093,7 +5203,10 @@
         "rating": "0.6"
     },
     "Micro Mouse": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Micro Olympics": {
@@ -5205,8 +5318,10 @@
         "rating": null
     },
     "Monopole": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Board game"
+        ],
+        "rating": "0.9"
     },
     "Monopoly Deluxe": {
         "genres": [],
@@ -5297,7 +5412,10 @@
         "rating": "0.6"
     },
     "Mountie Mick's Death Ride": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
         "rating": null
     },
     "Movie Monster Game, The": {
@@ -5361,7 +5479,10 @@
         "rating": null
     },
     "Munch Mania": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Muncher, The": {
@@ -5478,8 +5599,11 @@
         "rating": null
     },
     "Neutralizor": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
+        "rating": "0.7"
     },
     "New York City": {
         "genres": [],
@@ -5522,7 +5646,9 @@
         "rating": null
     },
     "Ninja Rabbits": {
-        "genres": [],
+        "genres": [
+            "Beat'em Up"
+        ],
         "rating": null
     },
     "Ninja Remix": {
@@ -5551,7 +5677,10 @@
         "rating": "0.7"
     },
     "Nodes of Yesod": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Nonterraqueous": {
@@ -5601,12 +5730,15 @@
         "rating": null
     },
     "Octapolis": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Shooter Scrolling"
+        ],
         "rating": null
     },
     "Octoplex": {
         "genres": [],
-        "rating": null
+        "rating": "0.3"
     },
     "Odysseus - Trojan Warrior": {
         "genres": [],
@@ -5809,7 +5941,10 @@
         "rating": null
     },
     "Pakacuda": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Pancho": {
@@ -5817,7 +5952,10 @@
         "rating": null
     },
     "Pandora": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Adventure"
+        ],
         "rating": null
     },
     "Pandora's Box": {
@@ -5831,16 +5969,21 @@
         "rating": "0.75"
     },
     "Panic 64": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.4"
     },
     "Panic Dizzy": {
         "genres": [],
         "rating": null
     },
     "Panther": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Diagonal"
+        ],
+        "rating": "0.75"
     },
     "Paperboy": {
         "genres": [
@@ -5867,12 +6010,17 @@
         "rating": null
     },
     "Paras, The": {
-        "genres": [],
+        "genres": [
+            "Strategy"
+        ],
         "rating": null
     },
     "Paratroopers": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Action",
+            "Shoot'em Up"
+        ],
+        "rating": "0.65"
     },
     "Park Patrol": {
         "genres": [
@@ -6081,11 +6229,17 @@
         "rating": null
     },
     "Potsworth": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Potty Painter - In the Jungle": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Power Cartridge": {
@@ -6133,7 +6287,11 @@
         "rating": null
     },
     "Premier II": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Strategy",
+            "Sports / Soccer"
+        ],
         "rating": null
     },
     "President Is Missing, The": {
@@ -6149,7 +6307,10 @@
         "rating": null
     },
     "Prince Clumsy": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Prince, The": {
@@ -6664,7 +6825,10 @@
         "rating": null
     },
     "Ricochet": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Adventure"
+        ],
         "rating": null
     },
     "Rigel": {
@@ -6719,7 +6883,10 @@
         "rating": null
     },
     "Robin Smith's International Cricket": {
-        "genres": [],
+        "genres": [
+            "Strategy",
+            "Sports"
+        ],
         "rating": null
     },
     "Robin of the Wood": {
@@ -6727,7 +6894,9 @@
         "rating": null
     },
     "Robin to the Rescue": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "RoboCop 2": {
@@ -6951,8 +7120,11 @@
         "rating": null
     },
     "Samurai Warrior - The Battles of Usagi Yojimbo": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
+        "rating": "0.85"
     },
     "Santa's Christmas Caper": {
         "genres": [
@@ -6980,7 +7152,10 @@
         "rating": null
     },
     "Save New York": {
-        "genres": [],
+        "genres": [
+            "Shooter",
+            "Shooter / Plane"
+        ],
         "rating": null
     },
     "Scalextric": {
@@ -7013,7 +7188,10 @@
         "rating": null
     },
     "Scorpius": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
         "rating": null
     },
     "Scout": {
@@ -7096,7 +7274,10 @@
         "rating": null
     },
     "Sergeant Seymour Robotcop": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Serpentine": {
@@ -7260,7 +7441,7 @@
     },
     "Siren City": {
         "genres": [],
-        "rating": null
+        "rating": "0.5"
     },
     "Skate Rock": {
         "genres": [
@@ -7357,8 +7538,11 @@
         "rating": null
     },
     "Sly Spy Secret Agent": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
+        "rating": "0.8"
     },
     "Smash TV": {
         "genres": [],
@@ -7613,7 +7797,7 @@
     },
     "Spider and the Fly": {
         "genres": [],
-        "rating": null
+        "rating": "0.4"
     },
     "Spikey in Transylvania": {
         "genres": [],
@@ -8041,7 +8225,10 @@
         "rating": null
     },
     "Stuntman Seymour": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Sub Battle Simulator": {
@@ -8404,8 +8591,11 @@
         "rating": null
     },
     "Tai Chi Tortoise": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
+        "rating": "0.55"
     },
     "Tales of the Arabian Nights": {
         "genres": [
@@ -8536,7 +8726,10 @@
         "rating": null
     },
     "Test Master": {
-        "genres": [],
+        "genres": [
+            "Strategy",
+            "Sports"
+        ],
         "rating": null
     },
     "Tetris": {
@@ -8655,7 +8848,10 @@
         "rating": null
     },
     "Time Soldier": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Time Traveller": {
@@ -8861,12 +9057,19 @@
         "rating": null
     },
     "Treble Champions": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Strategy",
+            "Sports / Soccer"
+        ],
         "rating": null
     },
     "Trevor Brooking's World Cup Glory": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Strategy",
+            "Sports"
+        ],
+        "rating": "0.45"
     },
     "Troll": {
         "genres": [],
@@ -8879,8 +9082,12 @@
         "rating": null
     },
     "Trooper Truck": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shooter",
+            "Shooter / Vehicle",
+            "Horizontal"
+        ],
+        "rating": "0.8"
     },
     "Tube, The": {
         "genres": [],
@@ -8955,7 +9162,10 @@
         "rating": null
     },
     "Turrican II - The Final Fight": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump Scrolling"
+        ],
         "rating": null
     },
     "Tusker": {
@@ -9023,8 +9233,11 @@
         "rating": "0.65"
     },
     "Untouchables, The": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Shooter Scrolling"
+        ],
+        "rating": "0.95"
     },
     "Up & Add'Em": {
         "genres": [],
@@ -9039,7 +9252,9 @@
         "rating": null
     },
     "Up'n Down": {
-        "genres": [],
+        "genres": [
+            "Casual Game"
+        ],
         "rating": null
     },
     "Uridium": {
@@ -9133,7 +9348,9 @@
         "rating": null
     },
     "Visible Solar System, The": {
-        "genres": [],
+        "genres": [
+            "Educational"
+        ],
         "rating": null
     },
     "Vixen": {
@@ -9180,7 +9397,9 @@
         "rating": null
     },
     "Wallie Goes to Rhymeland": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Wanderer": {
@@ -9279,7 +9498,7 @@
     },
     "Where's My Bones": {
         "genres": [],
-        "rating": null
+        "rating": "0.4"
     },
     "Whirlinurd": {
         "genres": [],
@@ -9300,15 +9519,17 @@
     },
     "Wibstars": {
         "genres": [],
-        "rating": null
+        "rating": "0.25"
     },
     "Wicked": {
         "genres": [],
         "rating": null
     },
     "Wild Ride": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.5"
     },
     "Wild Streets": {
         "genres": [
@@ -9372,7 +9593,10 @@
         "rating": null
     },
     "Wizard of Wor": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "rating": null
     },
     "Wizard's Lair": {
@@ -9416,7 +9640,11 @@
         "rating": "0.7"
     },
     "World Champions": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Strategy",
+            "Sports / Soccer"
+        ],
         "rating": null
     },
     "World Championship Boxing Manager": {
