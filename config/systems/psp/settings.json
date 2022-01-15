@@ -19,9 +19,9 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}{page_number}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/psp/.redump/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/psp/.redump/{machine}.cso",
+          "source": "{url}{page_number}/{machine_alt_name}.zip",
+          "download": "$HOME/RetroPie/roms/psp/.redump/{machine_id}.zip",
+          "target": "$HOME/RetroPie/roms/psp/.redump/{machine_id}.cso",
           "install": {"action": "zip_to_cso"}
         }
       }
@@ -42,6 +42,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA"

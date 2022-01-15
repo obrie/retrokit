@@ -68,8 +68,8 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.bin",
+          "download": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine_id}.zip",
+          "target": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine_id}.bin",
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },
@@ -88,6 +88,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA",

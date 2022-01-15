@@ -45,8 +45,8 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/n64/.nointro/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/n64/.nointro/{machine}.z64",
+          "download": "$HOME/RetroPie/roms/n64/.nointro/{machine_id}.zip",
+          "target": "$HOME/RetroPie/roms/n64/.nointro/{machine_id}.z64",
           "install": {"action": "zip_extract", "file": ".*\\.z64"}
         }
       },
@@ -65,6 +65,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA",

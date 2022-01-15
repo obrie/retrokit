@@ -29,7 +29,7 @@
       "resources": {
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/pc/.exodos/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/pc/.exodos/{machine_id}.zip",
           "target": "$HOME/RetroPie/roms/pc/.exodos/{machine_sourcefile}",
           "install": {"action": "zip_extract", "include_parent": false},
           "file_identifier": "name"
@@ -56,6 +56,7 @@
     }
   },
   "roms": {
+    "id": "name",
     "priority": {
       "name": "descending"
     },

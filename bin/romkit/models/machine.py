@@ -5,6 +5,7 @@ from romkit.models.disk import Disk
 from romkit.models.file import File
 from romkit.models.sample import Sample
 
+import hashlib
 import logging
 import re
 from pathlib import Path
@@ -48,6 +49,7 @@ class Machine:
     ) -> None:
         self.romset = romset
         self.name = name
+        self.alt_name = name
 
         # Internal metadata
         self.description = description
@@ -145,11 +147,34 @@ class Machine:
     def track(self) -> None:
         self.romset.track(self)
 
+    # Generates a unique identifier for this machine so that if the name changes
+    # from romset release to romset release, we can still reference the original
+    # without having to re-download from the source.
+    @property
+    def id(self) -> str:
+        rom_id_type = self.romset.system.rom_id_type
+        if rom_id_type == 'crc':
+            rom_crcs = list(map(lambda file: file.crc, self.roms))
+
+            # Sort to ensure any change in rom order has no effect
+            rom_crcs.sort()
+
+            # Generate hash based on the underlying ROMs
+            machine_id = hashlib.sha1(''.join(rom_crcs).encode()).hexdigest()
+        elif rom_id_type == 'name':
+            machine_id = self.name
+        else:
+            raise Exception(f'Invalid rom id type: {rom_id_type}')
+
+        return machine_id
+
     # Builds context for formatting dirs/urls
     @property
     def context(self) -> dict:
         context = {
             'machine': self.name,
+            'machine_id': self.id,
+            'machine_alt_name': self.alt_name,
             'machine_sourcefile': self.sourcefile or self.name,
             'parent': (self.parent_name or self.name),
             **self.custom_context,
@@ -329,6 +354,7 @@ class Machine:
 
             # Taxonomy
             'name': self.name,
+            'id': self.id,
             'disc': self.disc_title,
             'title': self.title,
             'category': self.category,

@@ -30,8 +30,8 @@
           "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS (Decrypted) (Parent-Clone).dat"
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip"
+          "source": "{url}/{machine_alt_name}.zip",
+          "target": "$HOME/RetroPie/roms/nds/.nointro/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
@@ -49,6 +49,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA",

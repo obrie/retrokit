@@ -37,7 +37,7 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/vectrex/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/vectrex/.nointro/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
@@ -55,6 +55,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA",

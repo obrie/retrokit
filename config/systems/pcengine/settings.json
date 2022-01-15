@@ -87,7 +87,7 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/pcengine/.nointro/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/pcengine/.nointro/{machine_id}.zip",
           "file_identifier": "name"
         }
       },
@@ -107,8 +107,8 @@
         },
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.chd",
+          "download": "$HOME/RetroPie/roms/pcengine/.redump/{machine_id}.zip",
+          "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
       },
@@ -127,6 +127,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA"

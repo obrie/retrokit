@@ -54,7 +54,7 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/mastersystem/.nointro/{machine}.zip"
+          "target": "$HOME/RetroPie/roms/mastersystem/.nointro/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
@@ -69,6 +69,7 @@
     }
   },
   "roms": {
+    "id": "crc",
     "priority": {
       "flags": [
         "USA",

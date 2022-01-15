@@ -50,6 +50,9 @@ class BaseSystem:
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
 
+        # Attribute type to define the unique machine identifier
+        self.rom_id_type = config['roms']['id']
+
         if demo:
             # Just the demo filter
             self.filter_set = FilterSet()
