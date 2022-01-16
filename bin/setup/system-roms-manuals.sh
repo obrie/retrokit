@@ -394,14 +394,21 @@ postprocess_pdf() {
 
   # OCR
   local ocr_enabled=$(setting '.manuals.postprocess.ocr.enabled // false')
-  if [ "$ocr_enabled" == 'true' ]; then
-    ocr_pdf "$pdf_path" "$languages"
+  local ocr_completed=false
+  if [ "$ocr_enabled" == 'true' ] && ocr_pdf "$pdf_path" "$languages"; then
+    ocr_completed=true
   fi
 
   # Compress
   local compress_enabled=$(setting '.manuals.postprocess.compress.enabled // false')
   if [ "$compress_enabled" == 'true' ]; then
     compress_pdf "$pdf_path" "$languages"
+  fi
+
+  # Re-attempt OCR in case it failed pre-compress
+  if [ "$ocr_enabled" == 'true' ] && [ "$ocr_completed" == 'false' ]; then
+    echo '[WARN] First OCR failed, trying again'
+    ocr_pdf "$pdf_path" "$languages"
   fi
 
   # Move to target
