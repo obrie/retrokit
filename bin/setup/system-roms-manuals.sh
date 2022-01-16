@@ -247,11 +247,6 @@ ocr_pdf() {
   local pdf_path=$1
   local languages=$2
 
-  if mutool info "$pdf_path" | grep 'Encryption'; then
-    echo "[WARN] PDF is encrypted, skipping OCR"
-    return 0
-  fi
-
   local staging_path="$tmp_ephemeral_dir/postprocess-ocr.pdf"
   rm -f "$staging_path"
 
