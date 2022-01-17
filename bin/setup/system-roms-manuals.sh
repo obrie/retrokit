@@ -221,8 +221,7 @@ gs_exec() {
 clean_pdf() {
   local pdf_path=$1
 
-  # TODO: Add -gggg?
-  mutool clean -D "$pdf_path" "$pdf_path"
+  mutool clean -gggg -D "$pdf_path" "$pdf_path"
 }
 
 # Selects specific pages from the PDF to include
@@ -407,8 +406,11 @@ postprocess_pdf() {
 
   # Re-attempt OCR in case it failed pre-compress
   if [ "$ocr_enabled" == 'true' ] && [ "$ocr_completed" == 'false' ]; then
-    echo '[WARN] First OCR failed, trying again'
-    ocr_pdf "$pdf_path" "$languages"
+    echo '[WARN] OCR failed on first attempt, trying again'
+
+    if ! ocr_pdf "$pdf_path" "$languages"; then
+      echo '[WARN] OCR failed (both attempts)'
+    fi
   fi
 
   # Move to target
