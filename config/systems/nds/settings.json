@@ -31,7 +31,8 @@
         },
         "machine": {
           "source": "{url}/{machine_alt_name}.zip",
-          "target": "$HOME/RetroPie/roms/nds/.nointro/{machine_id}.zip"
+          "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/nds/.nointro/.{machine_id}.zip"
         }
       },
       "auth": "internetarchive"

@@ -37,7 +37,8 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/atari2600/.nointro/{machine_id}.zip"
+          "target": "$HOME/RetroPie/roms/atari2600/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/atari2600/.nointro/.{machine_id}.zip"
         }
       },
       "auth": "internetarchive"

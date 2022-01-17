@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Set
 
+import os
+
 # Represents a local path for a resource on the filesystem
 class ResourcePath:
     extensions = []
@@ -38,14 +40,28 @@ class ResourcePath:
         else:
             return self.exists()
 
+    # Looks up the actual underlying file, for example if this is a symbolic
+    # link.
+    def realpath(self) -> Path:
+        return Path(os.path.realpath(self.path))
+
     # Whether this path exists
     def exists(self) -> bool:
-        return self.path.exists() and self.path.stat().st_size > 0
+        return self.path.exists() and self.realpath().stat().st_size > 0
 
     # Deletes this path if it exists
     def delete(self) -> None:
         if self.exists():
             self.path.unlink()
+
+    # Symlinks this resource path to the given target resource path.
+    # 
+    # If this resource path already exists, it'll be deleted.
+    def symlink_to(self, target_resource_path: ResourcePath) -> None:
+        if self.path.is_symlink() or self.path.exists():
+            self.path.unlink()
+
+        self.path.symlink_to(target_resource_path.path)
 
     # Any necessary cleanup
     def clean(self, expected_files: Set[File]) -> None:

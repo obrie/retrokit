@@ -14,6 +14,7 @@ class Resource:
     def __init__(self,
         source_url: str,
         target_path: Optional[Path],
+        xref_path: Optional[Path],
         download_path: Optional[Path],
         install_action: BaseAction,
         file_identifier: str,
@@ -40,6 +41,11 @@ class Resource:
                 # Source is remote: download path is same as target
                 download_path = target_path
         self.download_path = ResourcePath.from_path(self, download_path)
+
+        if xref_path:
+            self.xref_path = ResourcePath.from_path(self, xref_path)
+        else:
+            self.xref_path = None
 
         self.install_action = install_action
         self.file_identifier = file_identifier
@@ -77,6 +83,17 @@ class Resource:
             # Install to target
             self.install_action.install(source.download_path, self.target_path, **kwargs)
 
+    # If there's a valid cross-reference symlink for the target and the target doesn't exist,
+    # rely on the symlink to create the new target
+    def check_xref(self) -> None:
+        if self.xref_path and self.xref_path.exists() and not self.target_path.exists():
+            self.xref_path.realpath().rename(self.target_path.path)
+
+    # Make sure the cross-reference path reflects the current target path
+    def create_xref(self) -> str:
+        if self.xref_path:
+            self.xref_path.symlink_to(self.target_path)
+
     # Determines whether the given files are contained within the target resource path
     def contains(self, files: Set[File]) -> bool:
         return self.target_path.contains(files)
@@ -96,6 +113,7 @@ class ResourceTemplate:
     def __init__(self,
         source_url_template: str,
         target_path_template: Optional[str],
+        xref_path_template: Optional[str] = None,
         download_path_template: Optional[str] = None,
         downloader: Downloader = Downloader.instance(),
         install_action: BaseAction = Copy(),
@@ -105,6 +123,7 @@ class ResourceTemplate:
     ):
         self.source_url_template = source_url_template
         self.target_path_template = target_path_template
+        self.xref_path_template = xref_path_template
         self.download_path_template = download_path_template
         self.downloader = downloader
         self.install_action = install_action
@@ -119,6 +138,7 @@ class ResourceTemplate:
         return cls(
             json['source'],
             target_path_template=json.get('target'),
+            xref_path_template=json.get('xref'),
             download_path_template=json.get('download'),
             install_action=install_action,
             file_identifier=json.get('file_identifier', 'crc'),
@@ -140,6 +160,7 @@ class ResourceTemplate:
         return Resource(
             source_url=self.source_url_template.format(**url_context),
             target_path=self._render_path(self.target_path_template, context),
+            xref_path=self._render_path(self.xref_path_template, context),
             download_path=self._render_path(self.download_path_template, context),
             install_action=self.install_action,
             file_identifier=self.file_identifier,

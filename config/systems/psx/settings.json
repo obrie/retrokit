@@ -55,8 +55,9 @@
         },
         "machine": {
           "source": "{url}{page_number}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/psx/.redump/{machine_id}.zip",
-          "target": "$HOME/RetroPie/roms/psx/.redump/{machine_id}.chd",
+          "download": "$HOME/RetroPie/roms/psx/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
+          "xref": "$HOME/RetroPie/roms/psx/.redump/.{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }

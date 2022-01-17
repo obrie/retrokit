@@ -429,6 +429,8 @@ class Machine:
         if not machine or not self.resource:
             return
 
+        self.resource.check_xref()
+
         if self.resource.contains(roms):
             logging.info(f'[{self.name}] Already installed {machine.name}')
         else:
@@ -439,6 +441,8 @@ class Machine:
 
             logging.info(f'[{self.name}] Installing from {machine.name}')
             self.resource.install(machine.resource, files=roms, force=True)
+
+        self.resource.create_xref()
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self) -> None:

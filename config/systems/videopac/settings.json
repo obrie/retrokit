@@ -46,6 +46,7 @@
           "source": "{discovery_url}/{machine}.zip",
           "download": "$HOME/RetroPie/roms/videopac/.nointro/{machine}.zip",
           "target": "$HOME/RetroPie/roms/videopac/.nointro/{machine}.bin",
+          "xref": "$HOME/RetroPie/roms/videopac/.nointro/.{machine_id}.bin",
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },
@@ -68,8 +69,9 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine_id}.zip",
-          "target": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine_id}.bin",
+          "download": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/videopac/.nointro-plus/{machine}.bin",
+          "xref": "$HOME/RetroPie/roms/videopac/.nointro-plus/.{machine_id}.bin",
           "install": {"action": "zip_extract", "file": ".*\\.bin"}
         }
       },

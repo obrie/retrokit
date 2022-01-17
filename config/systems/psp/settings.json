@@ -20,8 +20,9 @@
         },
         "machine": {
           "source": "{url}{page_number}/{machine_alt_name}.zip",
-          "download": "$HOME/RetroPie/roms/psp/.redump/{machine_id}.zip",
-          "target": "$HOME/RetroPie/roms/psp/.redump/{machine_id}.cso",
+          "download": "$HOME/RetroPie/roms/psp/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/psp/.redump/{machine}.cso",
+          "xref": "$HOME/RetroPie/roms/psp/.redump/.{machine_id}.cso",
           "install": {"action": "zip_to_cso"}
         }
       }

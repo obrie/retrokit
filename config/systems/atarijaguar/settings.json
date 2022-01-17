@@ -39,7 +39,8 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine_id}.zip"
+          "target": "$HOME/RetroPie/roms/atarijaguar/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/atarijaguar/.nointro/.{machine_id}.zip"
         }
       },
       "auth": "internetarchive"

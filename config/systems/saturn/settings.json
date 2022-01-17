@@ -53,8 +53,9 @@
         },
         "machine": {
           "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/saturn/.redump/{machine_id}.zip",
-          "target": "$HOME/RetroPie/roms/saturn/.redump/{machine_id}.chd",
+          "download": "$HOME/RetroPie/roms/saturn/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
+          "xref": "$HOME/RetroPie/roms/saturn/.redump/.{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }
