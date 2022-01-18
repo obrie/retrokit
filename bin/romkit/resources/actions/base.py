@@ -2,6 +2,10 @@ from __future__ import annotations
 
 from typing import Type
 
+def all_subclasses(cls):
+    return set(cls.__subclasses__()).union(
+        [s for c in cls.__subclasses__() for s in all_subclasses(c)])
+
 class BaseAction:
     name = None
 
@@ -18,7 +22,7 @@ class BaseAction:
     # Looks up the action from the given name
     @classmethod
     def for_name(cls, name: str) -> Type[BaseAction]:
-        for subcls in cls.__subclasses__():
+        for subcls in all_subclasses(BaseAction):
             if subcls.name == name:
                 return subcls
 

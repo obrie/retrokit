@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.resources.actions.base import BaseAction
+from romkit.resources.actions.iso_to_cso import IsoToCso
 
 import glob
 import subprocess
@@ -8,7 +8,7 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-class ZipToCso(BaseAction):
+class ZipToCso(IsoToCso):
     name = 'zip_to_cso'
 
     def install(self, source, target, **kwargs):
@@ -18,9 +18,6 @@ class ZipToCso(BaseAction):
             source_zip.extractall(path=extract_dir)
             iso_file = next(extract_dir.rglob('*.iso'))
 
-            # Run maxcso
-            tmp_target = extract_dir.joinpath('out.cso')
-            subprocess.run(['maxcso', '--block=16384', iso_file, '-o', tmp_target], check=True)
-            tmp_target.rename(target.path)
+            super().install(ResourcePath(source.resource, iso_file), target, **kwargs)
 
         source.delete()
