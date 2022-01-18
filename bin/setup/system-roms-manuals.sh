@@ -181,7 +181,7 @@ convert_to_pdf() {
   elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
     combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
   elif [[ "$extension" =~ ^(docx?)$ ]]; then
-    unoconv -f pdf -o "$target_path" "$target_path" "$source_path"
+    unoconv -f pdf -o "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(pdf)$ ]]; then
     # No conversion necessary -- copy to the target
     cp "$source_path" "$target_path"
