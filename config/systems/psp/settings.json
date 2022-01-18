@@ -76,7 +76,16 @@
       "flags": [
         "USA"
       ],
-      "!romsets": [
+      "!flags": [
+        "# PSN",
+        "DLC",
+        "NG",
+        "PCE",
+        "Promo",
+        "PSP",
+        "TGX"
+      ],
+      "romsets": [
         "psn"
       ],
       "!categories": [
