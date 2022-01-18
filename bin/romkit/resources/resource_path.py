@@ -54,11 +54,15 @@ class ResourcePath:
         if self.exists():
             self.path.unlink()
 
+    # Whether this resource path represents a symlink
+    def is_symlink(self) -> bool:
+        return self.path.is_symlink()
+
     # Symlinks this resource path to the given target resource path.
     # 
     # If this resource path already exists, it'll be deleted.
     def symlink_to(self, target_resource_path: ResourcePath) -> None:
-        if self.path.is_symlink() or self.path.exists():
+        if self.is_symlink() or self.path.exists():
             self.path.unlink()
 
         self.path.symlink_to(target_resource_path.path)

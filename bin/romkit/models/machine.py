@@ -471,3 +471,6 @@ class Machine:
 
         if self.resource.target_path.exists():
             print(f'rm -rf "{self.resource.target_path.path}"')
+
+        if self.resource.xref_path.is_symlink():
+            print(f'rm -rf "{self.resource.xref_path.path}"')
