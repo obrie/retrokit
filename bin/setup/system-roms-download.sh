@@ -63,6 +63,12 @@ install() {
   install_emulator_selections
 }
 
+# Outputs the commands required to remove files no longer required by the current
+# list of roms installed
+vacuum() {
+  romkit_cli vacuum
+}
+
 uninstall() {
   echo 'No uninstall for roms'
 }
