@@ -29,6 +29,11 @@
     }
   ],
   "metadata": {
+    "emulator": {
+      "source": "file://$HOME/retrokit/config/systems/psp/emulators.tsv",
+      "column_emulator": null,
+      "column_rating": 1
+    },
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/psp/manuals.tsv"
     },
@@ -57,6 +62,7 @@
       "categories": [
         "Games"
       ],
+      "!emulator_ratings": [1, 2, 3],
       "!genres": [
         "Board game",
         "Compilation",
