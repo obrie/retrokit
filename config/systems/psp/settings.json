@@ -26,6 +26,23 @@
           "install": {"action": "zip_to_cso"}
         }
       }
+    },
+    {
+      "name": "psn",
+      "protocol": "http",
+      "url": "$ROMSET_PSP_PSN_URL",
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{url}/{machine}.iso",
+          "download": "$HOME/RetroPie/roms/psp/.psn/{machine}.iso",
+          "target": "$HOME/RetroPie/roms/psp/.psn/{machine}.cso",
+          "xref": "$HOME/RetroPie/roms/psp/.psn/.{machine_id}.cso",
+          "install": {"action": "iso_to_cso"}
+        }
+      }
     }
   ],
   "metadata": {
@@ -59,8 +76,15 @@
       "flags": [
         "USA"
       ],
-      "categories": [
-        "Games"
+      "!romsets": [
+        "psn"
+      ],
+      "!categories": [
+        "Applications",
+        "Demos",
+        "Educational",
+        "Preproduction",
+        "Video"
       ],
       "!emulator_ratings": [1, 2, 3],
       "!genres": [
