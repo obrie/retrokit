@@ -29,6 +29,7 @@ declare -A TESSERACT_LANGUAGES=(
   [ja]=jpn
   [ko]=kor
   [nl]=nld
+  [no]=nor
   [pl]=pol
   [pt]=por
   [ru]=rus
