@@ -16,6 +16,7 @@ class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
     DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
+    ROOT_REGEX = re.compile(r'^([^\\/]+)')
 
     def __init__(self,
         romset: ROMSet,
@@ -176,6 +177,7 @@ class Machine:
             'machine_id': self.id,
             'machine_alt_name': self.alt_name,
             'machine_sourcefile': self.sourcefile or self.name,
+            'rom_root': self.rom_root,
             'parent': (self.parent_name or self.name),
             **self.custom_context,
         }
@@ -339,6 +341,12 @@ class Machine:
             all_roms.update(machine.roms)
 
         return all_roms
+
+    # Root folder that the ROMs live in (may not be applicable to the current romset)
+    @property
+    def rom_root(self) -> Optional[str]:
+        if self.roms:
+            return self.ROOT_REGEX.search(next(iter(self.roms)).name).group()
 
     # Audio sample
     @property
