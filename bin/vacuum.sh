@@ -18,20 +18,23 @@ usage() {
 }
 
 vacuum_all() {
-  vacuum_roms
-  vacuum_manuals
-  vacuum_media
+  vacuum_roms "$@"
+  vacuum_manuals "$@"
+  vacuum_media "$@"
 }
 
 vacuum_roms() {
+  local system=$1
   $bin_dir/setup.sh vacuum system-roms-download "$system"
 }
 
 vacuum_manuals() {
+  local system=$1
   $bin_dir/setup.sh vacuum system-roms-manuals "$system"
 }
 
 vacuum_media() {
+  local system=$1
   $bin_dir/setup.sh vacuum system-roms-scrape "$system"
 }
 
@@ -41,10 +44,10 @@ main() {
 
   if [ -z "$system" ] || [ "$system" == 'all' ]; then
     while read system; do
-      "vacuum_$action" "$system" "${@:3}" | grep -E "^rm "
+      "vacuum_$action" "$system" "${@:3}" | { grep -E "^rm " || true }
     done < <(setting '.systems[]')
   else
-    "vacuum_$action" "$system" "${@:3}" | grep -E "^rm "
+    "vacuum_$action" "$system" "${@:3}" | { grep -E "^rm " || true }
   fi
 }
 
