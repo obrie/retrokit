@@ -99,6 +99,7 @@ There are also system-specific features, including:
 * Optimized settings per-game for Arcade, Atari Jaguar, and N64
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP
+* DLC support for PSP (PSN) ROMs
 
 All of this means you can set up your arcade machine from scratch to feature-complete
 with less than a few hours worth of work.  The automated scripts could take

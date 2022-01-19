@@ -42,6 +42,32 @@
           "xref": "$HOME/RetroPie/roms/psp/.psn/.{machine_id}.cso",
           "install": {"action": "iso_to_cso"}
         }
+      },
+      "filters": {
+        "!flags": [
+          "DLC"
+        ]
+      }
+    },
+    {
+      "name": "dlc",
+      "protocol": "http",
+      "url": "$ROMSET_PSP_DLC_URL",
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/psp/.dlc/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/psp/.dlc/{rom_root}",
+          "install": {"action": "zip_extract", "include_parent": false}
+        }
+      },
+      "filters": {
+        "flags": [
+          "DLC"
+        ]
       }
     }
   ],
@@ -78,7 +104,6 @@
       ],
       "!flags": [
         "# PSN",
-        "DLC",
         "NG",
         "PCE",
         "Promo",
@@ -86,6 +111,7 @@
         "TGX"
       ],
       "!romsets": [
+        "dlc",
         "psn"
       ],
       "!categories": [
