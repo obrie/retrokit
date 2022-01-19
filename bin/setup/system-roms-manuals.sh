@@ -582,6 +582,11 @@ install() {
 # Outputs the commands required to remove files no longer required by the current
 # list of roms installed
 vacuum() {
+  # Ensure the system has manuals
+  if [ ! -f "$system_config_dir/manuals.tsv" ]; then
+    return
+  fi
+
   local keep_downloads=$(setting '.manuals.keep_downloads')
 
   # Build the list of files we should *not* delete
