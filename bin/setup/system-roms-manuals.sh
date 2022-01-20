@@ -553,6 +553,9 @@ install() {
       fi
     fi
 
+    # Final check to make sure the PDF is valid before installing it
+    validate_pdf "$postprocess_path"
+
     # Install the pdf to location expected for this specific rom
     mkdir -p "$(dirname "$install_path")"
     ln -fsv "$postprocess_path" "$install_path"
