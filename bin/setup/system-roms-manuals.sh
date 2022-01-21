@@ -288,7 +288,7 @@ compress_pdf() {
   local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample.enabled')
   local downsample_width=$(setting '.manuals.postprocess.compress.downsample.width')
   local downsample_height=$(setting '.manuals.postprocess.compress.downsample.height')
-  local downsample_resolution=$(setting '.manuals.postprocess.compress.downsample.default_resolution')
+  local downsample_default_resolution=$(setting '.manuals.postprocess.compress.downsample.default_resolution')
   local downsample_min_resolution=$(setting '.manuals.postprocess.compress.downsample.min_resolution')
   local downsample_threshold=$(setting '.manuals.postprocess.compress.downsample.threshold')
 
@@ -305,43 +305,75 @@ compress_pdf() {
 
   # PDF Info
   local images_info=$(pdfimages -list "$pdf_path" | tail -n +3)
-  local images_count=$(echo "$images_info" | wc -l)
   local pages_count=$(echo "$images_info" | awk '{print ($1)}' | tail -n 1)
   local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep icc)
+
+  # Postscripting
+  local postscript="
+    << /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams
+    << /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams
+  "
 
   # Track whether to actually compress
   local should_compress=false
   local force_compress=false
 
-  # Apply a resolution calculation based on downsample dimensions (we can only do this
-  # effectively if we're dealing with a single image per page)
-  if [ "$downsample_enabled" == 'true' ] && [ -n "$downsample_width" ] && [ -n "$downsample_height" ] && [ "$images_count" == "$pages_count" ]; then
-    local reference_image_width=$(echo "$images_info" | awk '{print ($4)}' | sort -nr | head -n 1)
-    local reference_image_height=$(echo "$images_info" | awk '{print ($5)}' | sort -nr | head -n 1)
+  # Apply a resolution calculation based on downsample dimensions
+  if [ "$downsample_enabled" == 'true' ] && [ -n "$downsample_width" ] && [ -n "$downsample_height" ]; then
+    # Generate postscript for defining the resolution
+    local downsample_ps_start=''
+    local downsample_ps_end=''
 
-    if [ $reference_image_width -gt $downsample_width ] || [ $reference_image_height -gt $downsample_height ]; then
-      # Calculate the resolution required to keep all images at or below the
-      # downsample dimensions
-      local reference_x_ppi=$(echo "$images_info" | awk '{print ($13)}' | sort -nr | head -n 1)
-      local reference_y_ppi=$(echo "$images_info" | awk '{print ($14)}' | sort -nr | head -n 1)
-      local x_ppi=$(bc -l <<< "x = (${downsample_width}.0 / ${reference_image_width}.0 * $reference_x_ppi + 1); scale = 0; x / 1")
-      local y_ppi=$(bc -l <<< "x = (${downsample_height}.0 / ${reference_image_height}.0 * $reference_y_ppi + 1); scale = 0; x / 1")
-      local new_resolution
+    # Calculate per-page resolutions
+    local page
+    for ((page=1;page<=$pages_count;page++)); do
+      local page_info=$(echo "$images_info" | grep -E "^ *$page ")
+      local page_image_width=$(echo "$page_info" | awk '{print ($4)}' | sort -nr | head -n 1)
+      local page_image_height=$(echo "$page_info" | awk '{print ($5)}' | sort -nr | head -n 1)
 
-      # Determine the maximum resolution calculated
-      if [ $x_ppi -lt $y_ppi ]; then
-        new_resolution=$x_ppi
-      else
-        new_resolution=$y_ppi
+      if [ $page_image_width -gt $downsample_width ] || [ $page_image_height -gt $downsample_height ]; then
+        # Calculate the resolution required to keep the image at or below the
+        # downsample dimensions
+        local current_x_ppi=$(echo "$page_info" | awk '{print ($13)}' | sort -nr | head -n 1)
+        local current_y_ppi=$(echo "$page_info" | awk '{print ($14)}' | sort -nr | head -n 1)
+        local new_x_ppi=$(bc -l <<< "x = (${downsample_width}.0 / ${page_image_width}.0 * $current_x_ppi + 1); scale = 0; x / 1")
+        local new_y_ppi=$(bc -l <<< "x = (${downsample_height}.0 / ${page_image_height}.0 * $current_y_ppi + 1); scale = 0; x / 1")
+        local page_resolution
+
+        # Determine the maximum resolution calculated
+        if [ $new_x_ppi -lt $new_y_ppi ]; then
+          page_resolution=$new_x_ppi
+        else
+          page_resolution=$new_y_ppi
+        fi
+
+        # Only use the calculated resolution if it's above the minimum
+        if [ $page_resolution -lt $downsample_min_resolution ]; then
+          page_resolution=$downsample_min_resolution
+        fi
+
+        downsample_ps_start="$downsample_ps_start $page PageNum eq { << /ColorImageResolution $page_resolution /GrayImageResolution $page_resolution /MonoImageResolution $page_resolution >> setdistillerparams } {"
+        downsample_ps_end="} ifelse $downsample_ps_end"
+
+        # Mark this as compressable
+        should_compress=true
       fi
+    done
 
-      # Only use the calculated resolution if it's above the minimum
-      if [ $new_resolution -gt $downsample_min_resolution ]; then
-        downsample_resolution=$new_resolution
-      fi
-
-      # Mark this as compressable
-      should_compress=true
+    # Add the postscript
+    if [ -n "$downsample_ps_start" ]; then
+      downsample_ps_end="<< /ColorImageResolution $downsample_default_resolution /GrayImageResolution $downsample_default_resolution /MonoImageResolution $downsample_default_resolution >> setdistillerparams $downsample_ps_end"
+      postscript="$postscript
+        globaldict /PageNum 1 put
+        << /BeginPage {
+          $downsample_ps_start
+          $downsample_ps_end
+        } bind >> setpagedevice
+        << /EndPage {
+          exch pop
+          0 eq dup { globaldict /PageNum PageNum 1 add put } if
+        } bind >> setpagedevice
+      "
     fi
   fi
 
@@ -389,9 +421,8 @@ compress_pdf() {
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
-      -dColorImageResolution=$downsample_resolution -dGrayImageResolution=$downsample_resolution -dMonoImageResolution=$downsample_resolution \
-      -c "<< /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams" \
-      -c "<< /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams" \
+      -dColorImageResolution=$downsample_default_resolution -dGrayImageResolution=$downsample_default_resolution -dMonoImageResolution=$downsample_default_resolution \
+      -c "$postscript" \
       -f "$pdf_path"
 
     # Calculate how much we compressed
