@@ -416,13 +416,17 @@ compress_pdf() {
   if [ "$should_compress" == 'true' ]; then
     local staging_path="$tmp_ephemeral_dir/postprocess-compress.pdf"
 
+    # Create postscript file
+    local postscript_path="$tmp_ephemeral_dir/postprocess-compress.ps"
+    echo "$postscript" > "$postscript_path"
+
     gs_exec "${gs_args[@]}" \
       -sOutputFile="$staging_path" \
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
       -dColorImageResolution=$downsample_default_resolution -dGrayImageResolution=$downsample_default_resolution -dMonoImageResolution=$downsample_default_resolution \
-      -c "$postscript" \
+      "$postscript_path" \
       -f "$pdf_path"
 
     # Calculate how much we compressed
