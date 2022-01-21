@@ -356,7 +356,7 @@ compress_pdf() {
         # Mark this as compressable
         should_compress=true
       fi
-    done < <(echo "$images_info" | awk '{print ($1)}' | uniq)
+    done < <(echo "$images_info" | awk '{print ($1)}' | uniq | grep -v '^$')
 
     # Add the postscript
     if [ -n "$downsample_ps_start" ]; then
