@@ -304,8 +304,7 @@ compress_pdf() {
   local encode_jpeg2000_images=$(setting '.manuals.postprocess.compress.encode.jpeg2000')
 
   # PDF Info
-  local images_info=$(pdfimages -list "$pdf_path" | tail -n +3)
-  local pages_count=$(echo "$images_info" | awk '{print ($1)}' | tail -n 1)
+  local images_info=$(pdfimages -list "$pdf_path" | tail -n +3 | grep -Ev 'stencil')
   local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep icc)
 
   # Postscripting
@@ -325,8 +324,7 @@ compress_pdf() {
     local downsample_ps_end=''
 
     # Calculate per-page resolutions
-    local page
-    for ((page=1;page<=$pages_count;page++)); do
+    while read page; do
       local page_info=$(echo "$images_info" | grep -E "^ *$page ")
       local page_image_width=$(echo "$page_info" | awk '{print ($4)}' | sort -nr | head -n 1)
       local page_image_height=$(echo "$page_info" | awk '{print ($5)}' | sort -nr | head -n 1)
@@ -358,7 +356,7 @@ compress_pdf() {
         # Mark this as compressable
         should_compress=true
       fi
-    done
+    done < <(echo "$images_info" | awk '{print ($1)}' | uniq)
 
     # Add the postscript
     if [ -n "$downsample_ps_start" ]; then
@@ -406,7 +404,7 @@ compress_pdf() {
     local encodings_filter=$(IFS='|' ; echo "${encodings[*]}")
 
     # Check if there are any images that match the encodings
-    if echo "$images_info" | grep -Ev 'stencil|index' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
+    if echo "$images_info" | grep -Ev 'index' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
       should_compress=true
       force_compress=true
     fi
