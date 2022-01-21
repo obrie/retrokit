@@ -288,7 +288,8 @@ compress_pdf() {
   local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample.enabled')
   local downsample_width=$(setting '.manuals.postprocess.compress.downsample.width')
   local downsample_height=$(setting '.manuals.postprocess.compress.downsample.height')
-  local downsample_resolution=$(setting '.manuals.postprocess.compress.downsample.resolution')
+  local downsample_resolution=$(setting '.manuals.postprocess.compress.downsample.default_resolution')
+  local downsample_min_resolution=$(setting '.manuals.postprocess.compress.downsample.min_resolution')
   local downsample_threshold=$(setting '.manuals.postprocess.compress.downsample.threshold')
 
   # Color settings
@@ -323,14 +324,20 @@ compress_pdf() {
       # downsample dimensions
       local reference_x_ppi=$(echo "$images_info" | awk '{print ($13)}' | sort -nr | head -n 1)
       local reference_y_ppi=$(echo "$images_info" | awk '{print ($14)}' | sort -nr | head -n 1)
-      local device_x_ppi=$(bc -l <<< "x = (${downsample_width}.0 / ${reference_image_width}.0 * $reference_x_ppi + 1); scale = 0; x / 1")
-      local device_y_ppi=$(bc -l <<< "x = (${downsample_height}.0 / ${reference_image_height}.0 * $reference_y_ppi + 1); scale = 0; x / 1")
+      local x_ppi=$(bc -l <<< "x = (${downsample_width}.0 / ${reference_image_width}.0 * $reference_x_ppi + 1); scale = 0; x / 1")
+      local y_ppi=$(bc -l <<< "x = (${downsample_height}.0 / ${reference_image_height}.0 * $reference_y_ppi + 1); scale = 0; x / 1")
+      local new_resolution
 
       # Determine the maximum resolution calculated
-      if [ $device_x_ppi -lt $device_y_ppi ]; then
-        downsample_resolution=$device_x_ppi
+      if [ $x_ppi -lt $y_ppi ]; then
+        new_resolution=$x_ppi
       else
-        downsample_resolution=$device_y_ppi
+        new_resolution=$y_ppi
+      fi
+
+      # Only use the calculated resolution if it's above the minimum
+      if [ $new_resolution -gt $downsample_min_resolution ]; then
+        downsample_resolution=$new_resolution
       fi
 
       # Mark this as compressable
