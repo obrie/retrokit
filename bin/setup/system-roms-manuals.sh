@@ -274,94 +274,129 @@ ocr_pdf() {
 compress_pdf() {
   local pdf_path=$1
 
-  local staging_path="$tmp_ephemeral_dir/postprocess-compress.pdf"
-  local force=$(setting '.manuals.postprocess.compress.force')
+  # Filesize settings
+  local min_filesize_threshold=$(setting '.manuals.postprocess.compress.filesize.minimum_bytes_threshold')
+  local min_reduction_percent_threshold=$(setting '.manuals.postprocess.compress.filesize.reduction_percent_threshold')
 
-  # Compress (if the file is big enough and we're compressing)
-  local filesize_threshold=$(setting '.manuals.postprocess.compress.filesize_threshold // 0')
-  if [ $(stat -c%s "$pdf_path") -gt "$filesize_threshold" ]; then
-    local dynamic_width=$(setting '.manuals.postprocess.compress.target.width')
-    local dynamic_height=$(setting '.manuals.postprocess.compress.target.height')
-    local color_profile=$(setting '.manuals.postprocess.compress.color')
-    local color_resolution=$(setting '.manuals.postprocess.compress.resolution.color')
-    local gray_resolution=$(setting '.manuals.postprocess.compress.resolution.gray')
-    local mono_resolution=$(setting '.manuals.postprocess.compress.resolution.mono')
-    local jpeg_passthrough=$(setting '.manuals.postprocess.compress.jpeg_passthrough')
-    local downsample_threshold=$(setting '.manuals.postprocess.compress.resolution_threshold')
-    local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample')
+  # Check that the filesize meets the necessary minimum threshold to trigger
+  # this process
+  if [ $(stat -c%s "$pdf_path") -lt "$min_filesize_threshold" ]; then
+    return
+  fi
 
-    local color_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.color')
-    local mono_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.mono')
+  # Downsampling settings
+  local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample.enabled')
+  local downsample_width=$(setting '.manuals.postprocess.compress.downsample.width')
+  local downsample_height=$(setting '.manuals.postprocess.compress.downsample.height')
+  local downsample_resolution=$(setting '.manuals.postprocess.compress.downsample.resolution')
+  local downsample_threshold=$(setting '.manuals.postprocess.compress.downsample.threshold')
 
-    # Apply a dynamic resolution calculation
-    if [ -n "$dynamic_width" ] && [ -n "$dynamic_height" ] && [ "$downsample_enabled" == 'true' ]; then
-      local images=$(pdfimages -list "$pdf_path" | tail -n +3)
-      local images_count=$(echo "$images" | wc -l)
-      local pages_count=$(pdfinfo "$pdf_path" | grep -- ^Pages | tr -dc '[0-9]')
+  # Color settings
+  local convert_icc_color_profile=$(setting '.manuals.postprocess.compress.color.icc')
 
-      if [ "$images_count" == "$pages_count" ]; then
-        # Calculate the resolution required to reduce the size of the image
-        local width=$(echo "$images" | awk '{print ($4)}' | sort -nr | head -n 1)
-        local height=$(echo "$images" | awk '{print ($5)}' | sort -nr | head -n 1)
-        local ppi=$(echo "$images" | awk '{print ($13)}' | sort -nr | head -n 1)
-        local dynamic_resolution_width=$(bc -l <<< "x = (${dynamic_width}.0 / ${width}.0 * $ppi + 1); scale = 0; x / 1")
-        local dynamic_resolution_height=$(bc -l <<< "x = (${dynamic_height}.0 / ${height}.0 * $ppi + 1); scale = 0; x / 1")
-        local dynamic_resolution
+  # Quality settings
+  local color_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.color')
+  local mono_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.mono')
 
-        if [ $width -lt $dynamic_width ] || [ $height -lt $dynamic_height ]; then
-          downsample_enabled=false
-        else
-          # Determine the maximum resolution calculated
-          if [ $dynamic_resolution_width -lt $dynamic_resolution_height ]; then
-            dynamic_resolution=$dynamic_resolution_height
-          else
-            dynamic_resolution=$dynamic_resolution_width
-          fi
+  # Encoding settings
+  local encode_uncompressed_images=$(setting '.manuals.postprocess.compress.encode.uncompressed')
+  local encode_jpeg2000_images=$(setting '.manuals.postprocess.compress.encode.jpeg2000')
 
-          # Update color / gray / mono resolutions
-          if [ $dynamic_resolution -lt $color_resolution ]; then
-            color_resolution=$dynamic_resolution
-          fi
+  # PDF Info
+  local images_info=$(pdfimages -list "$pdf_path" | tail -n +3)
+  local images_count=$(echo "$images_info" | wc -l)
+  local pages_count=$(echo "$images_info" | awk '{print ($1)}' | tail -n 1)
+  local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep icc)
 
-          if [ $dynamic_resolution -lt $gray_resolution ]; then
-            gray_resolution=$dynamic_resolution
-          fi
+  # Track whether to actually compress
+  local should_compress=false
+  local force_compress=false
 
-          if [ $dynamic_resolution -lt $mono_resolution ]; then
-            mono_resolution=$dynamic_resolution
-          fi
-        fi
+  # Apply a resolution calculation based on downsample dimensions (we can only do this
+  # effectively if we're dealing with a single image per page)
+  if [ "$downsample_enabled" == 'true' ] && [ -n "$downsample_width" ] && [ -n "$downsample_height" ] && [ "$images_count" == "$pages_count" ]; then
+    local reference_image_width=$(echo "$images_info" | awk '{print ($4)}' | sort -nr | head -n 1)
+    local reference_image_height=$(echo "$images_info" | awk '{print ($5)}' | sort -nr | head -n 1)
+
+    if [ $reference_image_width -gt $downsample_width ] || [ $reference_image_height -gt $downsample_height ]; then
+      # Calculate the resolution required to keep all images at or below the
+      # downsample dimensions
+      local reference_x_ppi=$(echo "$images_info" | awk '{print ($13)}' | sort -nr | head -n 1)
+      local reference_y_ppi=$(echo "$images_info" | awk '{print ($14)}' | sort -nr | head -n 1)
+      local device_x_ppi=$(bc -l <<< "x = (${downsample_width}.0 / ${reference_image_width}.0 * $reference_x_ppi + 1); scale = 0; x / 1")
+      local device_y_ppi=$(bc -l <<< "x = (${downsample_height}.0 / ${reference_image_height}.0 * $reference_y_ppi + 1); scale = 0; x / 1")
+
+      # Determine the maximum resolution calculated
+      if [ $device_x_ppi -lt $device_y_ppi ]; then
+        downsample_resolution=$device_x_ppi
+      else
+        downsample_resolution=$device_y_ppi
       fi
-    fi
 
-    local gs_args=()
-    if [ "$color_profile" == 'rgb' ]; then
-      gs_args+=(
-        -sProcessColorModel=DeviceRGB
-        -sColorConversionStrategy=sRGB
-        -sColorConversionStrategyForImages=sRGB
-        -dConvertCMYKImagesToRGB=true
-        -dConvertImagesToIndexed=true
-      )
+      # Mark this as compressable
+      should_compress=true
     fi
+  fi
+
+  local gs_args=()
+
+  # Convert ICC color profile to RGB
+  if [ "$convert_icc_color_profile" == 'true' ] && [ "$has_icc_encoding" == 'true' ]; then
+    gs_args+=(
+      -sProcessColorModel=DeviceRGB
+      -sColorConversionStrategy=sRGB
+      -sColorConversionStrategyForImages=sRGB
+      -dConvertCMYKImagesToRGB=true
+      -dConvertImagesToIndexed=true
+    )
+
+    should_compress=true
+    force_compress=true
+  fi
+
+  # Check if there are any encodings to convert
+  if [ "$encode_uncompressed_images" == 'true' ] || [ "$encode_jpeg2000_images" == 'true' ]; then
+    # Build the list of encodings to convert
+    local encodings=()
+    if [ "$encode_uncompressed_images" == 'true' ]; then
+      encodings+=(image)
+    fi
+    if [ "$encode_jpeg2000_images" == 'true' ]; then
+      encodings+=(jpx jbig2)
+    fi
+    local encodings_filter=$(IFS='|' ; echo "${encodings[*]}")
+
+    # Check if there are any images that match the encodings
+    if echo "$images_info" | grep -Ev 'stencil|index' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
+      should_compress=true
+      force_compress=true
+    fi
+  fi
+
+  # Run the compression
+  if [ "$should_compress" == 'true' ]; then
+    local staging_path="$tmp_ephemeral_dir/postprocess-compress.pdf"
 
     gs_exec "${gs_args[@]}" \
       -sOutputFile="$staging_path" \
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
-      -dColorImageResolution=$color_resolution -dGrayImageResolution=$gray_resolution -dMonoImageResolution=$mono_resolution \
-      -dPassThroughJPEGImages=$jpeg_passthrough \
-      -c "<< /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
-      -c "<< /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [1 1 1 1] /VSamples [1 1 1 1] >> >> setdistillerparams" \
+      -dColorImageResolution=$downsample_resolution -dGrayImageResolution=$downsample_resolution -dMonoImageResolution=$downsample_resolution \
+      -c "<< /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams" \
+      -c "<< /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams" \
       -f "$pdf_path"
 
+    # Calculate how much we compressed
+    local pdf_bytes_uncompressed=$(stat -c%s "$pdf_path")
+    local pdf_bytes_compressed=$(stat -c%s "$staging_path")
+    local pdf_bytes_compressed_percent=$(bc -l <<< "($pdf_bytes_uncompressed - $pdf_bytes_compressed) / $pdf_bytes_uncompressed" | awk '{printf "%f", $0}')
+
     # Only use the compressed file if it's actually smaller
-    if [ $(stat -c%s "$staging_path") -lt $(stat -c%s "$pdf_path") ] || [ "$force" == 'true' ]; then
-      echo "[COMPRESS BETTER] $(stat -c%s "$staging_path") => $(stat -c%s "$pdf_path")"
+    if [ "$force_compress" == 'true' ] || (( $(echo "$pdf_bytes_compressed_percent >= $min_reduction_percent_threshold" | bc -l) )); then
+      echo "[COMPRESS] Compressed $pdf_bytes_uncompressed => $pdf_bytes_compressed ($pdf_bytes_compressed_percent)"
       mv "$staging_path" "$pdf_path"
     else
-      echo "[COMPRESS WORSE] $(stat -c%s "$staging_path") => $(stat -c%s "$pdf_path")"
       rm "$staging_path"
     fi
   fi
@@ -380,7 +415,10 @@ postprocess_pdf() {
   local pages=$4
   local rotate=${5:-0}
 
-  clean_pdf "$pdf_path"
+  local clean_enabled=$(setting '.manuals.postprocess.clean.enabled // false')
+  if [ "$clean_enabled" == 'true' ]; then
+    clean_pdf "$pdf_path"
+  fi
 
   # Slice
   if [ -n "$pages" ]; then

@@ -13,6 +13,9 @@ install() {
 
   cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
 
+  # Identify per-page PPI easily
+  sudo apt install -y poppler-utils
+
   # Convert txt/html to pdf
   sudo apt install -y chromium
 

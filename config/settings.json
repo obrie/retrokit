@@ -20,7 +20,7 @@
   },
   "manuals": {
     "archive": {
-      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-hd.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-compressed.zip/{parent_title} ({languages}).pdf",
       "processed": true
     },
     "paths": {
@@ -31,30 +31,36 @@
       "install": "{base}/{name}.pdf"
     },
     "postprocess": {
+      "clean": {
+        "enabled": true
+      },
       "ocr": {
         "enabled": true
       },
       "compress": {
         "enabled": true,
-        "color": "original",
-        "jpeg_passthrough": true,
-        "target": {
-          "width": null,
-          "height": null
+        "color": {
+          "icc": false
         },
-        "downsample": false,
-        "resolution": {
-          "color": 1200,
-          "gray": 1200,
-          "mono": 1200
+        "downsample": {
+          "enabled": true,
+          "threshold": 1.05,
+          "width": 1920,
+          "height": 1080,
+          "resolution": 300
         },
         "quality_factor": {
-          "color": 0.15,
-          "mono": 0.15
+          "color": 0.9,
+          "mono": 0.9
         },
-        "force": false,
-        "filesize_threshold": 0,
-        "resolution_threshold": 1.0
+        "encode": {
+          "uncompressed": true,
+          "jpeg2000": true
+        },
+        "filesize": {
+          "minimum_bytes_threshold": 0,
+          "reduction_percent_threshold": 0.1
+        }
       }
     },
     "keep_downloads": true
