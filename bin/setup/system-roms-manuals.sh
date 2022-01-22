@@ -216,6 +216,7 @@ gs_exec() {
     -dCannotEmbedFontPolicy=/Warning
   )
 
+  echo gs "${common_args[@]}" "${@}"
   gs "${common_args[@]}" "${@}"
 }
 
@@ -288,7 +289,7 @@ compress_pdf() {
   local downsample_enabled=$(setting '.manuals.postprocess.compress.downsample.enabled')
   local downsample_width=$(setting '.manuals.postprocess.compress.downsample.width')
   local downsample_height=$(setting '.manuals.postprocess.compress.downsample.height')
-  local downsample_default_resolution=$(setting '.manuals.postprocess.compress.downsample.default_resolution')
+  local downsample_max_resolution=$(setting '.manuals.postprocess.compress.downsample.max_resolution')
   local downsample_min_resolution=$(setting '.manuals.postprocess.compress.downsample.min_resolution')
   local downsample_threshold=$(setting '.manuals.postprocess.compress.downsample.threshold')
 
@@ -360,7 +361,7 @@ compress_pdf() {
 
     # Add the postscript
     if [ -n "$downsample_ps_start" ]; then
-      downsample_ps_end="<< /ColorImageResolution $downsample_default_resolution /GrayImageResolution $downsample_default_resolution /MonoImageResolution $downsample_default_resolution >> setdistillerparams $downsample_ps_end"
+      downsample_ps_end="<< /ColorImageResolution $downsample_max_resolution /GrayImageResolution $downsample_max_resolution /MonoImageResolution $downsample_max_resolution >> setdistillerparams $downsample_ps_end"
       postscript="$postscript
         globaldict /PageNum 1 put
         << /BeginPage {
@@ -423,7 +424,7 @@ compress_pdf() {
       -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
-      -dColorImageResolution=$downsample_default_resolution -dGrayImageResolution=$downsample_default_resolution -dMonoImageResolution=$downsample_default_resolution \
+      -dColorImageResolution=$downsample_max_resolution -dGrayImageResolution=$downsample_max_resolution -dMonoImageResolution=$downsample_max_resolution \
       "$postscript_path" \
       -f "$pdf_path"
 
