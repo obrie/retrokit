@@ -31,12 +31,11 @@
       "name": "nointro",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/Magnavox - Odyssey2"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Magnavox - Odyssey2"
       },
       "resources": {
         "dat": {
@@ -56,12 +55,11 @@
       "name": "nointro-plus",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/Philips - Videopac+"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Philips - Videopac+"
       },
       "resources": {
         "dat": {

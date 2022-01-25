@@ -10,7 +10,14 @@
     {
       "name": "redump",
       "protocol": "http",
-      "url": "$ROMSET_PSP_REDUMP_URL",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_PSP_REDUMP_URL/redump.psp_files.xml",
+          "$ROMSET_PSP_REDUMP_URL.p2/redump.psp.p2_files.xml"
+        ],
+        "match": "(?P<machine>[^/]+)\\.zip"
+      },
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/psp/",
@@ -19,7 +26,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}{page_number}/{machine_alt_name}.zip",
+          "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/psp/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/psp/.redump/{machine}.cso",
           "xref": "$HOME/RetroPie/roms/psp/.redump/.{machine_id}.cso",

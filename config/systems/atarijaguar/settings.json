@@ -26,12 +26,11 @@
       "name": "nointro",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/Atari - Jaguar \\(J64\\)"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Atari - Jaguar \\(J64\\)"
       },
       "resources": {
         "dat": {

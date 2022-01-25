@@ -50,12 +50,11 @@
       "name": "nointro",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/NEC - PC Engine - TurboGrafx 16"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/NEC - PC Engine - TurboGrafx 16"
       },
       "resources": {
         "dat": {
@@ -75,12 +74,11 @@
       "name": "nointro",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/NEC - PC Engine SuperGrafx"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/NEC - PC Engine SuperGrafx"
       },
       "resources": {
         "dat": {

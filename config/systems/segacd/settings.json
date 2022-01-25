@@ -43,7 +43,13 @@
     {
       "name": "redump",
       "protocol": "http",
-      "url": "$ROMSET_SEGACD_REDUMP_URL",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_SEGACD_REDUMP_URL/chd_segacd_files.xml"
+        ],
+        "match": "(?P<machine>[^/]+).chd"
+      },
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/mcd/",
@@ -52,11 +58,9 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/segacd/.redump/{machine}.zip",
+          "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/segacd/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/segacd/.nointro/.{machine_id}.chd",
-          "install": {"action": "zip_to_chd"}
+          "xref": "$HOME/RetroPie/roms/segacd/.nointro/.{machine_id}.chd"
         }
       }
     }
@@ -106,6 +110,10 @@
         "Casino",
         "Compilation",
         "Educational"
+      ],
+      "!names": [
+        "# Unavailable",
+        "Links - The Challenge of Golf (USA)"
       ],
       "+titles": [
         "Mary Shelley's Frankenstein",

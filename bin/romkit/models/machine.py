@@ -373,6 +373,9 @@ class Machine:
             'description': self.description,
             'orientation': self.orientation,
 
+            # Download info
+            'url': str(self.resource and self.resource.source_url),
+
             # User overrides
             'favorite': self.favorite,
 

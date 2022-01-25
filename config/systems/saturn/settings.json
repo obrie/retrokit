@@ -43,7 +43,13 @@
     {
       "name": "redump",
       "protocol": "http",
-      "url": "$ROMSET_SATURN_REDUMP_URL",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_SATURN_REDUMP_URL/chd_saturn_files.xml"
+        ],
+        "match": "(?P<machine>[^/]+).chd"
+      },
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/ss/",
@@ -52,11 +58,9 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/saturn/.redump/{machine}.zip",
+          "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/saturn/.redump/.{machine_id}.chd",
-          "install": {"action": "zip_to_chd"}
+          "xref": "$HOME/RetroPie/roms/saturn/.redump/.{machine_id}.chd"
         }
       }
     }

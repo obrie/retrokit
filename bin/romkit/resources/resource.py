@@ -150,7 +150,7 @@ class ResourceTemplate:
         # Add context already assumed to be encoded
         url_context = self.default_context.copy()
         if self.discovery:
-            for key, url in self.discovery.mappings().items():
+            for key, url in self.discovery.mappings(context).items():
                 url_context[f'discovery_{key}'] = url
 
         # Encode remaining context

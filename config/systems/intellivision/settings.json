@@ -32,12 +32,11 @@
       "name": "nointro",
       "protocol": "http",
       "discovery": {
-        "type": "nointro",
-        "base": "$ROMSET_NOINTRO_URL",
-        "metadata": "{base}/no-intro_romsets_files.xml",
-        "paths": {
-          "url": "no-intro romsets/Mattel - Intellivision"
-        }
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Mattel - Intellivision"
       },
       "resources": {
         "dat": {

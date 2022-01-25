@@ -16,4 +16,4 @@ class RenameMetadata(ExternalMetadata):
 
     def update(self, machine: Machine) -> None:
         if machine.name in self.renames:
-            machine.alt_machine_name = self.renames[machine.name]
+            machine.alt_name = self.renames[machine.name]
