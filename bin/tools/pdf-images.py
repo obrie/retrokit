@@ -3,6 +3,7 @@
 # Intended to look like poppler's `pdfimages -list` command but with some
 # additional data useful for pdf compression.
 
+from typing import Tuple
 import argparse
 import fitz
 import math
@@ -25,18 +26,48 @@ def sizeof_fmt(num: float) -> str:
         num /= 1024.0
     return f'{num:.1f}Y'
 
+# This is a highly optimized version of Page.get_image_rects.  This uses several
+# shortcuts to avoid generating image data digests when possible (since it's
+# incredibly slow).
+def get_image_rects(doc: fitz.Document, page: fitz.Page, image: Tuple) -> (fitz.Rect, fitz.Matrix):
+    image_infos = page.get_image_info()
+    image_info = None
+    xref, smask, width, height, *rest = image
+
+    if len(image_infos) == 1 or len(page.get_images()) == 1:
+        # Only one info object -- use it
+        image_info = image_infos[0]
+    else:
+        # Find distinct matching info objects
+        image_infos = list(filter(lambda info: info['width'] == width and info['height'] == height, image_infos))
+        for info in image_infos:
+            if 'number' in info:
+                info.pop('number')
+        image_infos = list({frozenset(d.items()): d for d in image_infos}.values())
+
+        if len(image_infos) == 1:
+            # Only one distinct match -- use it
+            image_info = image_infos[0]
+        else:
+            # Find based on matching digest (again, optimizing Page.get_image_rects).
+            # This is so we don't have to look up the file size separately later.
+            # image_info = page.get_image_rects(page, transform=True)[0]
+            pix = fitz.Pixmap(page.parent, xref)
+            digest = pix.digest
+            del pix
+            image_infos = page.get_image_info(hashes=True)
+            image_info = next(im for im in image_infos if im['digest'] == digest)
+    
+    rect = fitz.Rect(image_info['bbox'])
+    matrix = fitz.Matrix(image_info['transform'])
+
+    return (rect, matrix)
+
 def run(path: str) -> None:
     doc = fitz.open(path)
     image_num = 0
 
     for page in doc.pages():
-        # Track smasks so we can ignore them
-        smasks = set()
-        for image in page.get_images():
-            xref, smask, *rest = image
-            if smask and smask != 0:
-                smasks.add(smask)
-
         # Page's cropbox (to help identify what part of an image is actually
         # being displayed)
         cropbox_width = page.cropbox.width
@@ -44,6 +75,16 @@ def run(path: str) -> None:
 
         if page.rotation and (abs(page.rotation) == 90 or abs(page.rotation) == 270):
             cropbox_width, cropbox_height = cropbox_height, cropbox_width
+
+        image_count = 0
+
+        # Track smasks so we can ignore them
+        smasks = set()
+        for image in page.get_images():
+            image_count += 1
+            xref, smask, *rest = image
+            if smask and smask != 0:
+                smasks.add(smask)
 
         for image in page.get_images(full=True):
             xref, smask, width, height, bpc, colorspace_name, alt_colorspace_name, name, filter_name, referencer_xref = image
@@ -57,7 +98,7 @@ def run(path: str) -> None:
                 continue
 
             interpolate = 'yes' if doc.xref_get_key(xref, 'Interpolate') == 'true' else 'no'
-            image_bbox_results = page.get_image_bbox(image, transform=True)
+            image_bbox_results = get_image_rects(doc, page, image)
 
             # Skip hidden images
             if type(image_bbox_results) != tuple or image_bbox_results[1] == fitz.Matrix():
@@ -81,14 +122,13 @@ def run(path: str) -> None:
             else:
                 rotation = 0 # unknown, default to no rotation
 
-            # Image's bounding box (not rotated)
-            bbox_width = math.sqrt(matrix.a * matrix.a + matrix.b * matrix.b)
-            bbox_height = math.sqrt(matrix.c * matrix.c + matrix.d * matrix.d)
+            # Image's bounding box (already transformed / rotated)
+            bbox_width = bbox.width
+            bbox_height = bbox.height
 
             # Adjust the image dimensions based on its computed rotation
-            if rotation and (abs(rotation) == 90 or abs(rotation) == 270):
+            if rotation and abs(rotation) == 90:
                 width, height = height, width
-                bbox_width, bbox_height = bbox_height, bbox_width
 
             # Calculate the image's resolution
             ppi_x = round(width * 72 / bbox_width)
