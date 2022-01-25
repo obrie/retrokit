@@ -13,20 +13,6 @@ install() {
 
   cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
 
-  # Identify per-page PPI easily
-  sudo apt install -y poppler-utils
-  # Install poppler from source to fix pdfimages not working properly for some pdfs
-  # 
-  # sudo apt install cmake libboost1.71-dev
-  # git clone https://gitlab.freedesktop.org/poppler/poppler.git "$tmp_ephemeral_dir/poppler"
-  # pushd "$tmp_ephemeral_dir/poppler"
-  # mkdir build
-  # pushd build
-  # cmake ..
-  # make
-  # sudo make install
-  # sudo ldconfig
-
   # Convert txt/html to pdf
   sudo apt install -y chromium
 

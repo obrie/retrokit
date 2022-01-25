@@ -1,0 +1,154 @@
+#!/usr/bin/python3
+
+# Intended to look like poppler's `pdfimages -list` command but with some
+# additional data useful for pdf compression.
+
+import argparse
+import fitz
+import math
+
+# Map colorspace names to their corresponding profile
+colorspaces = {
+    'DeviceRGB': fitz.Colorspace(fitz.CS_RGB),
+    'DeviceGray': fitz.Colorspace(fitz.CS_GRAY),
+    'DeviceCMYK': fitz.Colorspace(fitz.CS_CMYK),
+    'ICCBased': fitz.Colorspace(fitz.CS_RGB),
+}
+
+storage_units = ['B', 'K', 'M', 'G', 'T', 'P', 'E', 'Z']
+
+# Generate a human-readable storage value
+def sizeof_fmt(num: float) -> str:
+    for unit in storage_units:
+        if abs(num) < 1024.0:
+            return f'{num:3.1f}{unit}'
+        num /= 1024.0
+    return f'{num:.1f}Y'
+
+def run(path: str) -> None:
+    doc = fitz.open(path)
+    image_num = 0
+
+    for page in doc.pages():
+        # Track smasks so we can ignore them
+        smasks = set()
+        for image in page.get_images():
+            xref, smask, *rest = image
+            if smask and smask != 0:
+                smasks.add(smask)
+
+        # Page's cropbox (to help identify what part of an image is actually
+        # being displayed)
+        cropbox_width = page.cropbox.width
+        cropbox_height = page.cropbox.height
+
+        if page.rotation and (abs(page.rotation) == 90 or abs(page.rotation) == 270):
+            cropbox_width, cropbox_height = cropbox_height, cropbox_width
+
+        for image in page.get_images(full=True):
+            xref, smask, width, height, bpc, colorspace_name, alt_colorspace_name, name, filter_name, referencer_xref = image
+
+            # Skip masks
+            if xref in smasks:
+                continue
+
+            # Skip images without colorspaces
+            if colorspace_name == '':
+                continue
+
+            interpolate = 'yes' if doc.xref_get_key(xref, 'Interpolate') == 'true' else 'no'
+            image_bbox_results = page.get_image_bbox(image, transform=True)
+
+            # Skip hidden images
+            if type(image_bbox_results) != tuple or image_bbox_results[1] == fitz.Matrix():
+                continue
+
+            bbox, matrix = image_bbox_results
+
+            # Identify the rotation of the image
+            rotation = None
+            if min(matrix.a, matrix.d) > 0 and matrix.b == matrix.c == 0:
+                rotation = 0
+            elif matrix.a == matrix.d == 0:
+                if matrix.b > 0 and matrix.c < 0:
+                    rotation = 90
+                elif matrix.b < 0 and matrix.c > 0:
+                    rotation = -90
+                else:
+                    rotation = 0 # unknown, default to no rotation
+            elif min(matrix.a, matrix.d) < 0 and matrix.b == matrix.c == 0:
+                rotation = 180
+            else:
+                rotation = 0 # unknown, default to no rotation
+
+            # Image's bounding box (not rotated)
+            bbox_width = math.sqrt(matrix.a * matrix.a + matrix.b * matrix.b)
+            bbox_height = math.sqrt(matrix.c * matrix.c + matrix.d * matrix.d)
+
+            # Adjust the image dimensions based on its computed rotation
+            if rotation and (abs(rotation) == 90 or abs(rotation) == 270):
+                width, height = height, width
+                bbox_width, bbox_height = bbox_height, bbox_width
+
+            # Calculate the image's resolution
+            ppi_x = round(width * 72 / bbox_width)
+            ppi_y = round(height * 72 / bbox_height)
+
+            # Colorspace info
+            if colorspace_name in colorspaces:
+                color_components = colorspaces[colorspace_name].n
+            else:
+                color_components = 1
+
+            # Calculate the actual dimensions of the image that are visible.
+            # These diimensions can then be used to help identify the target
+            # downsample resolution for an image.
+            if int(bbox_width) > int(cropbox_width):
+                # The image is cropped -- adjust how wide it appears
+                cropped_width = round(width / (bbox_width / cropbox_width))
+            else:
+                cropped_width = width
+
+            if int(bbox_height) > int(cropbox_height):
+                # The image is cropped -- adjust how tall it appears
+                cropped_height = round(height / (bbox_height / cropbox_height))
+            else:
+                cropped_height = height
+
+            # Compression info
+            compressed_size = len(doc.xref_stream_raw(xref))
+            uncompressed_size = width * height * color_components * bpc / 8
+            compressed_ratio = compressed_size / uncompressed_size
+
+            print('\t'.join([
+                str(page.number + 1),
+                str(image_num),
+                'image', # type
+                str(width),
+                str(height),
+                colorspace_name,
+                str(color_components),
+                str(bpc),
+                filter_name or 'FlateDecode',
+                interpolate,
+                str(xref),
+                '0', # generation
+                str(ppi_x),
+                str(ppi_y),
+                str(sizeof_fmt(compressed_size)),
+                str(round(compressed_ratio * 100, 1)) + '%',
+                str(rotation),
+                str(cropped_width),
+                str(cropped_height),
+            ]))
+
+            image_num += 1
+
+def main() -> None:
+    parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
+    parser.add_argument(dest='path', help='Path of the pdf')
+    args = parser.parse_args()
+    run(**vars(args))
+
+if __name__ == '__main__':
+    main()

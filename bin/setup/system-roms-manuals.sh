@@ -216,7 +216,6 @@ gs_exec() {
     -dCannotEmbedFontPolicy=/Warning
   )
 
-  echo gs "${common_args[@]}" "${@}"
   gs "${common_args[@]}" "${@}"
 }
 
@@ -305,8 +304,8 @@ compress_pdf() {
   local encode_jpeg2000_images=$(setting '.manuals.postprocess.compress.encode.jpeg2000')
 
   # PDF Info
-  local images_info=$(pdfimages -list "$pdf_path" | tail -n +3 | grep -Ev 'stencil')
-  local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep icc)
+  local images_info=$("$bin_dir/tools/pdf-images.py" "$pdf_path" 2>/dev/null)
+  local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep ICCBased)
 
   # Postscripting
   local postscript="
@@ -326,9 +325,12 @@ compress_pdf() {
 
     # Calculate per-page resolutions
     while read page; do
-      local page_info=$(echo "$images_info" | grep -E "^ *$page ")
-      local page_image_width=$(echo "$page_info" | awk '{print ($4)}' | sort -nr | head -n 1)
-      local page_image_height=$(echo "$page_info" | awk '{print ($5)}' | sort -nr | head -n 1)
+      # Identify the size of the image we're working with.  We approximate size and resolution
+      # by taking the largest of what we see.  It's not ideal, but it's close enough.  Ideally
+      # we would change the resolution individually of each image on the page.
+      local page_info=$(echo "$images_info" | grep -E "^$page")
+      local page_image_width=$(echo "$page_info" | awk '{print ($18)}' | sort -nr | head -n 1)
+      local page_image_height=$(echo "$page_info" | awk '{print ($19)}' | sort -nr | head -n 1)
 
       if [ $page_image_width -gt $downsample_width ] || [ $page_image_height -gt $downsample_height ]; then
         # Calculate the resolution required to keep the image at or below the
@@ -397,15 +399,15 @@ compress_pdf() {
     # Build the list of encodings to convert
     local encodings=()
     if [ "$encode_uncompressed_images" == 'true' ]; then
-      encodings+=(image)
+      encodings+=(FlateDecode)
     fi
     if [ "$encode_jpeg2000_images" == 'true' ]; then
-      encodings+=(jpx jbig2)
+      encodings+=(JPXDecode JBIG2Decode)
     fi
     local encodings_filter=$(IFS='|' ; echo "${encodings[*]}")
 
     # Check if there are any images that match the encodings
-    if echo "$images_info" | grep -Ev 'index' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
+    if echo "$images_info" | grep -Ev 'Indexed' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
       should_compress=true
       force_compress=true
     fi
