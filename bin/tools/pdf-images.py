@@ -51,13 +51,11 @@ def get_image_rects(doc: fitz.Document, page: fitz.Page, image: Tuple) -> (fitz.
         else:
             # Find based on matching digest (again, optimizing Page.get_image_rects).
             # This is so we don't have to look up the file size separately later.
-            # image_info = page.get_image_rects(page, transform=True)[0]
             pix = fitz.Pixmap(page.parent, xref)
             digest = pix.digest
             del pix
-            image_infos = page.get_image_info(hashes=True)
-            image_info = next(im for im in image_infos if im['digest'] == digest)
-    
+            image_info = next(im for im in page.get_image_info(hashes=True) if im['digest'] == digest)
+
     rect = fitz.Rect(image_info['bbox'])
     matrix = fitz.Matrix(image_info['transform'])
 
@@ -96,14 +94,16 @@ def run(path: str) -> None:
             if colorspace_name == '':
                 continue
 
-            interpolate = 'yes' if doc.xref_get_key(xref, 'Interpolate') == 'true' else 'no'
-            image_bbox_results = get_image_rects(doc, page, image)
-
-            # Skip hidden images
+            # Skip "dead" (hidden) images
+            image_bbox_results = page.get_image_bbox(image, transform=True)
             if type(image_bbox_results) != tuple or image_bbox_results[1] == fitz.Matrix():
                 continue
 
+            # Calculate accurate bound boxes for the image
+            image_bbox_results = get_image_rects(doc, page, image)
             bbox, matrix = image_bbox_results
+
+            interpolate = 'yes' if doc.xref_get_key(xref, 'Interpolate') == 'true' else 'no'
 
             # Identify the rotation of the image
             image_rotation = None
@@ -132,7 +132,7 @@ def run(path: str) -> None:
                 bbox_width, bbox_height = bbox_height, bbox_width
 
             # Adjust the *original* image dimensions based on its computed rotation
-            if full_image_rotation % 180 == 90:
+            if full_image_rotation == 90:
                 width, height = height, width
 
             # Calculate the image's resolution
