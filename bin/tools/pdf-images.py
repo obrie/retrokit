@@ -70,11 +70,10 @@ def run(path: str) -> None:
     for page in doc.pages():
         # Page's cropbox (to help identify what part of an image is actually
         # being displayed)
-        cropbox_width = page.cropbox.width
-        cropbox_height = page.cropbox.height
-
-        if page.rotation and (abs(page.rotation) == 90 or abs(page.rotation) == 270):
-            cropbox_width, cropbox_height = cropbox_height, cropbox_width
+        page_bbox = page.bound() # already rotated
+        cropbox_width = page_bbox.width
+        cropbox_height = page_bbox.height
+        page_rotation = abs(page.rotation) % 180
 
         image_count = 0
 
@@ -107,27 +106,33 @@ def run(path: str) -> None:
             bbox, matrix = image_bbox_results
 
             # Identify the rotation of the image
-            rotation = None
+            image_rotation = None
             if min(matrix.a, matrix.d) > 0 and matrix.b == matrix.c == 0:
-                rotation = 0
+                image_rotation = 0
             elif matrix.a == matrix.d == 0:
                 if matrix.b > 0 and matrix.c < 0:
-                    rotation = 90
+                    image_rotation = 90
                 elif matrix.b < 0 and matrix.c > 0:
-                    rotation = -90
+                    image_rotation = -90
                 else:
-                    rotation = 0 # unknown, default to no rotation
+                    image_rotation = 0 # unknown, default to no rotation
             elif min(matrix.a, matrix.d) < 0 and matrix.b == matrix.c == 0:
-                rotation = 180
+                image_rotation = 180
             else:
-                rotation = 0 # unknown, default to no rotation
+                image_rotation = 0 # unknown, default to no rotation
+
+            full_image_rotation = abs(page.rotation + image_rotation) % 180
 
             # Image's bounding box (already transformed / rotated)
             bbox_width = bbox.width
             bbox_height = bbox.height
 
-            # Adjust the image dimensions based on its computed rotation
-            if rotation and abs(rotation) == 90:
+            # Adjust the bbox dimensions based on the page's rotation
+            if page_rotation == 90:
+                bbox_width, bbox_height = bbox_height, bbox_width
+
+            # Adjust the *original* image dimensions based on its computed rotation
+            if full_image_rotation % 180 == 90:
                 width, height = height, width
 
             # Calculate the image's resolution
@@ -177,7 +182,7 @@ def run(path: str) -> None:
                 str(ppi_y),
                 str(sizeof_fmt(compressed_size)),
                 str(round(compressed_ratio * 100, 1)) + '%',
-                str(rotation),
+                str(full_image_rotation),
                 str(cropped_width),
                 str(cropped_height),
             ]))
