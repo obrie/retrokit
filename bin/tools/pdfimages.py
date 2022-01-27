@@ -187,7 +187,7 @@ class Page:
 
     # Looks up the image info by xref (this is slower and should be avoided if possible)
     def _build_image(self, info: dict) -> List[Tuple]:
-        matching_xref_images = []
+        matching_xref_images = []   
         xref_image = {}
 
         # 1. Attempt to find images with the same imgae digest
