@@ -44,7 +44,7 @@ class Image:
             # Adjust the bbox dimensions based on the page's rotation
             if self.page.rotation == 90:
                 bbox = self.bbox
-                self.bbox = fitz.Rect(bbox.x1, bbox.x0, bbox.y1, bbox.y0)
+                self.bbox = fitz.Rect(bbox.y0, bbox.x0, bbox.y1, bbox.x1)
 
     # Can this image be downsampled?
     # 
@@ -67,25 +67,22 @@ class Image:
     @property
     def rotation(self) -> int:
         if self._rotation is None:
-            matrix = self.matrix
-
             # Identify the rotation of the image
-            image_rotation = None
-            if min(matrix.a, matrix.d) > 0 and matrix.b == matrix.c == 0:
+            if min(self.matrix.a, self.matrix.d) > 0 and self.matrix.b == self.matrix.c == 0:
                 image_rotation = 0
-            elif matrix.a == matrix.d == 0:
-                if matrix.b > 0 and matrix.c < 0:
+            elif self.matrix.a == self.matrix.d == 0:
+                if self.matrix.b > 0 and self.matrix.c < 0:
                     image_rotation = 90
-                elif matrix.b < 0 and matrix.c > 0:
+                elif self.matrix.b < 0 and self.matrix.c > 0:
                     image_rotation = -90
                 else:
                     image_rotation = 0 # unknown, default to no rotation
-            elif min(matrix.a, matrix.d) < 0 and matrix.b == matrix.c == 0:
+            elif min(self.matrix.a, self.matrix.d) < 0 and self.matrix.b == self.matrix.c == 0:
                 image_rotation = 180
             else:
                 image_rotation = 0 # unknown, default to no rotation
 
-            self._rotation = abs(self.page.rotation + image_rotation) % 180
+            self._rotation = abs(image_rotation) % 180
 
         return self._rotation
 
@@ -225,7 +222,12 @@ class Page:
                     self.xref_images.remove(xref_image)
                     break
 
-        return Image(self, {**info, **(xref_image or {})})
+        # Get the original matrix transform -- this is the only accurate way I've found
+        # to identify the correct rendered rotation from the original dimensions
+        if 'image' in xref_image:
+            xref_image['transform'] = self._page.get_image_bbox(xref_image['image'], transform=True)[1]
+
+        return Image(self, {**info, **xref_image})
 
     # Translate xref image tuples to dictionaries specific to our use case
     def _build_xref_image(self, xref_image: Tuple) -> dict:
@@ -233,6 +235,7 @@ class Page:
 
         return {
             'xref': xref,
+            'image': xref_image,
             'is_mask': smask != 0,
             'width': width,
             'height': height,
@@ -260,6 +263,7 @@ class Formatter:
 
 class Document:
     def __init__(self, path: str) -> None:
+        self.path = path
         self._doc = fitz.open(path)
     
     # Prints information about the xref images in the document
