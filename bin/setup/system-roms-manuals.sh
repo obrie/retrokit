@@ -304,7 +304,10 @@ compress_pdf() {
   local encode_jpeg2000_images=$(setting '.manuals.postprocess.compress.encode.jpeg2000')
 
   # PDF Info
-  local images_info=$("$bin_dir/tools/pdf-images.py" "$pdf_path" 2>/dev/null)
+  local images_info=$("$bin_dir/tools/pdfimages.py" "$pdf_path" 2>/dev/null)
+  if [ $? -ne 0 ]; then
+    exit 1
+  fi
   local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep ICCBased)
 
   # Postscripting
