@@ -33,18 +33,31 @@ class Image:
 
         # Memoized properties
         self._compressed_size = None
-        self._rotation = None
 
         # Perform necessary rotations
         if self.can_downsample():
-            # Adjust the *original* image dimensions based on its computed rotation
-            if self.rotation == 90:
-                self.width, self.height = self.height, self.width
-
             # Adjust the bbox dimensions based on the page's rotation
             if self.page.rotation == 90:
                 bbox = self.bbox
                 self.bbox = fitz.Rect(bbox.y0, bbox.x0, bbox.y1, bbox.x1)
+
+            # Calculate the original width / height of the image
+            self.matrix_width = math.sqrt(self.matrix.a * self.matrix.a + self.matrix.b * self.matrix.b) or self.bbox.width
+            self.matrix_height = math.sqrt(self.matrix.c * self.matrix.c + self.matrix.d * self.matrix.d) or self.bbox.height
+
+            # If the width / height of the image don't match the rendered width / height, then
+            # it was rotated.  This is more reliable than looking at the rotation of the
+            # Matrix itself.
+            if (self.matrix_width > self.matrix_height and self.bbox.width < self.bbox.height) or (self.matrix_width < self.matrix_height and self.bbox.width > self.bbox.height):
+                self.rotation = 90
+            else:
+                self.rotation = 0
+
+            # If there was a rotation, then adjust the matrix and the image's dimensions so that
+            # everything, including the bbox, is in alignment.
+            if self.rotation == 90:
+                self.matrix_width, self.matrix_height = self.matrix_height, self.matrix_width
+                self.width, self.height = self.height, self.width
 
     # Can this image be downsampled?
     # 
@@ -63,38 +76,15 @@ class Image:
     def interpolate(self) -> bool:
         return self.doc._doc.xref_get_key(self.xref, 'Interpolate') == 'true'
 
-    # Rotation degree of dimensions (0 or 90).  This accounts for the page's rotation.
-    @property
-    def rotation(self) -> int:
-        if self._rotation is None:
-            # Identify the rotation of the image
-            if min(self.matrix.a, self.matrix.d) > 0 and self.matrix.b == self.matrix.c == 0:
-                image_rotation = 0
-            elif self.matrix.a == self.matrix.d == 0:
-                if self.matrix.b > 0 and self.matrix.c < 0:
-                    image_rotation = 90
-                elif self.matrix.b < 0 and self.matrix.c > 0:
-                    image_rotation = -90
-                else:
-                    image_rotation = 0 # unknown, default to no rotation
-            elif min(self.matrix.a, self.matrix.d) < 0 and self.matrix.b == self.matrix.c == 0:
-                image_rotation = 180
-            else:
-                image_rotation = 0 # unknown, default to no rotation
-
-            self._rotation = abs(image_rotation) % 180
-
-        return self._rotation
-
     # Image's x-resolution
     @property
     def ppi_x(self) -> int:
-        return round(self.width * 72 / self.bbox.width)
+        return round(self.width * 72 / self.matrix_width)
 
     # Image's y-resolution
     @property
     def ppi_y(self) -> int:
-        return round(self.height * 72 / self.bbox.height)
+        return round(self.height * 72 / self.matrix_height)
 
     # Number of components in the colorspace
     @property
@@ -151,7 +141,9 @@ class Page:
         self.bbox = page.bound()
 
         # Cross-referenced images (ignore masks since they can't be easily downsampled)
-        self.xref_images = list(filter(lambda xref_image: not xref_image['is_mask'], map(self._build_xref_image, page.get_images(full=True))))
+        all_xref_images = list(map(self._build_xref_image, page.get_images(full=True)))
+        smask_xrefs = set(filter(None, map(lambda xref_image: xref_image['smask'], all_xref_images)))
+        self.xref_images = list(filter(lambda xref_image: xref_image['xref'] not in smask_xrefs, all_xref_images))
 
         # Lazy, memoized attributes
 
@@ -222,11 +214,6 @@ class Page:
                     self.xref_images.remove(xref_image)
                     break
 
-        # Get the original matrix transform -- this is the only accurate way I've found
-        # to identify the correct rendered rotation from the original dimensions
-        if 'image' in xref_image:
-            xref_image['transform'] = self._page.get_image_bbox(xref_image['image'], transform=True)[1]
-
         return Image(self, {**info, **xref_image})
 
     # Translate xref image tuples to dictionaries specific to our use case
@@ -235,8 +222,8 @@ class Page:
 
         return {
             'xref': xref,
+            'smask': smask,
             'image': xref_image,
-            'is_mask': smask != 0,
             'width': width,
             'height': height,
             'bpc': bpc,
