@@ -369,7 +369,7 @@ compress_pdf() {
 
       # Enable pass-through JPEG on a per-page basis based on the target
       # image dimension thresholds
-      if [ $pass_through_jpeg_enabled == 'false' ] && [ -n "$pass_through_jpeg_threshold" ]; then
+      if [ "$pass_through_jpeg_enabled" == 'false' ] && [ -n "$pass_through_jpeg_threshold" ]; then
         local width_threshold_met=$(bc -l <<< "(${page_image_width}.0 / ${downsample_width}.0) > $pass_through_jpeg_threshold")
         local height_threshold_met=$(bc -l <<< "x = (${page_image_height}.0 / ${downsample_height}.0) > $pass_through_jpeg_threshold")
 
@@ -405,6 +405,9 @@ compress_pdf() {
       # Disable downsampling as we don't want to go lower than the target
       downsample_enabled=false
     fi
+
+    # Enforce pass-through since it's handled on a per-page basis instead
+    pass_through_jpeg_enabled=true
   fi
 
   local gs_args=()
