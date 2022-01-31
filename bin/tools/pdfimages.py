@@ -27,7 +27,6 @@ class Image:
         self.height = rendering['height']
         self.bpc = rendering['bpc']
         self.colorspace_name = rendering.get('colorspace_name')
-        self.filter_name = rendering.get('filter_name') or 'FlateDecode'
         self.bbox = fitz.Rect(rendering['bbox'])
         self.matrix = fitz.Matrix(rendering['transform'])
 
@@ -131,6 +130,19 @@ class Image:
     def compressed_ratio(self) -> float:
         return self.compressed_size / self.uncompressed_size
 
+    # The original filter of the image
+    @property
+    def filter_name(self) -> str:
+        key_type, filter_name = self.doc._doc.xref_get_key(self.xref, 'Filter')
+        if key_type == 'array':
+            filter_name = filter_name[1:-1].split('/')[-1]
+        elif key_type == 'name':
+            filter_name = filter_name[1:]
+        else:
+            filter_name = 'FlateDecode'
+
+        return filter_name
+
 class Page:
     def __init__(self, doc: fitz.Document, page: fitz.Page) -> None:
         self.doc = doc
@@ -228,7 +240,6 @@ class Page:
             'height': height,
             'bpc': bpc,
             'colorspace_name': colorspace_name,
-            'filter_name': filter_name,
         }
 
 class Formatter:
