@@ -46,13 +46,17 @@
           "enabled": true,
           "threshold": 1.05,
           "width": 1920,
-          "height": 1080,
+          "height": 1440,
           "min_resolution": 72,
           "max_resolution": 300
         },
         "quality_factor": {
           "color": 0.9,
           "mono": 0.9
+        },
+        "pass_through_jpeg": {
+          "enabled": false,
+          "dimension_threshold": 0.66
         },
         "encode": {
           "uncompressed": true,

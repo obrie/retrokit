@@ -299,6 +299,10 @@ compress_pdf() {
   local color_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.color')
   local mono_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.mono')
 
+  # JPEG Pass-through
+  local pass_through_jpeg_enabled=$(setting '.manuals.postprocess.compress.pass_through_jpeg.enabled')
+  local pass_through_jpeg_threshold=$(setting '.manuals.postprocess.compress.pass_through_jpeg.dimension_threshold')
+
   # Encoding settings
   local encode_uncompressed_images=$(setting '.manuals.postprocess.compress.encode.uncompressed')
   local encode_jpeg2000_images=$(setting '.manuals.postprocess.compress.encode.jpeg2000')
@@ -334,6 +338,7 @@ compress_pdf() {
       local page_info=$(echo "$images_info" | grep -E "^$page")
       local page_image_width=$(echo "$page_info" | awk '{print ($18)}' | sort -nr | head -n 1)
       local page_image_height=$(echo "$page_info" | awk '{print ($19)}' | sort -nr | head -n 1)
+      local page_distiller_params=''
 
       if [ $page_image_width -gt $downsample_width ] || [ $page_image_height -gt $downsample_height ]; then
         # Calculate the resolution required to keep the image at or below the
@@ -356,17 +361,35 @@ compress_pdf() {
           page_resolution=$downsample_min_resolution
         fi
 
-        downsample_ps_start="$downsample_ps_start $page PageNum eq { << /ColorImageResolution $page_resolution /GrayImageResolution $page_resolution /MonoImageResolution $page_resolution >> setdistillerparams } {"
-        downsample_ps_end="} ifelse $downsample_ps_end"
+        page_distiller_params="/ColorImageResolution $page_resolution /GrayImageResolution $page_resolution /MonoImageResolution $page_resolution"
 
         # Mark this as compressable
         should_compress=true
+      fi
+
+      # Enable pass-through JPEG on a per-page basis based on the target
+      # image dimension thresholds
+      if [ $pass_through_jpeg_enabled == 'false' ] && [ -n "$pass_through_jpeg_threshold" ]; then
+        local width_threshold_met=$(bc -l <<< "(${page_image_width}.0 / ${downsample_width}.0) > $pass_through_jpeg_threshold")
+        local height_threshold_met=$(bc -l <<< "x = (${page_image_height}.0 / ${downsample_height}.0) > $pass_through_jpeg_threshold")
+
+        if [ $width_threshold_met -eq 1 ] || [ $height_threshold_met -eq 1 ]; then
+          page_distiller_params="$page_distiller_params /PassThroughJPEGImages false"
+          should_compress=true
+        else
+          page_distiller_params="$page_distiller_params /PassThroughJPEGImages true"
+        fi
+      fi
+
+      if [ -n "$page_distiller_params" ]; then
+        downsample_ps_start="$downsample_ps_start $page PageNum eq { << $page_distiller_params >> setdistillerparams } {"
+        downsample_ps_end="} ifelse $downsample_ps_end"
       fi
     done < <(echo "$images_info" | awk '{print ($1)}' | uniq | grep -v '^$')
 
     # Add the postscript
     if [ -n "$downsample_ps_start" ]; then
-      downsample_ps_end="<< /ColorImageResolution $downsample_max_resolution /GrayImageResolution $downsample_max_resolution /MonoImageResolution $downsample_max_resolution >> setdistillerparams $downsample_ps_end"
+      downsample_ps_end="<< /ColorImageResolution $downsample_max_resolution /GrayImageResolution $downsample_max_resolution /MonoImageResolution $downsample_max_resolution /PassThroughJPEGImages true >> setdistillerparams $downsample_ps_end"
       postscript="$postscript
         globaldict /PageNum 1 put
         << /BeginPage {
@@ -378,6 +401,9 @@ compress_pdf() {
           0 eq dup { globaldict /PageNum PageNum 1 add put } if
         } bind >> setpagedevice
       "
+    else
+      # Disable downsampling as we don't want to go lower than the target
+      downsample_enabled=false
     fi
   fi
 
@@ -410,7 +436,7 @@ compress_pdf() {
     local encodings_filter=$(IFS='|' ; echo "${encodings[*]}")
 
     # Check if there are any images that match the encodings
-    if echo "$images_info" | grep -Ev 'Indexed' | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
+    if echo "$images_info" | awk '{print ($9)}' | grep -qE "$encodings_filter"; then
       should_compress=true
       force_compress=true
     fi
@@ -430,19 +456,26 @@ compress_pdf() {
       -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
       -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
       -dColorImageResolution=$downsample_max_resolution -dGrayImageResolution=$downsample_max_resolution -dMonoImageResolution=$downsample_max_resolution \
+      -dPassThroughJPEGImages="$pass_through_jpeg_enabled" \
+      -dPDFSTOPONERROR \
       "$postscript_path" \
       -f "$pdf_path"
 
-    # Calculate how much we compressed
-    local pdf_bytes_uncompressed=$(stat -c%s "$pdf_path")
-    local pdf_bytes_compressed=$(stat -c%s "$staging_path")
-    local pdf_bytes_compressed_percent=$(bc -l <<< "($pdf_bytes_uncompressed - $pdf_bytes_compressed) / $pdf_bytes_uncompressed" | awk '{printf "%f", $0}')
+    if [ $? -eq 0 ]; then
+      # Calculate how much we compressed
+      local pdf_bytes_uncompressed=$(stat -c%s "$pdf_path")
+      local pdf_bytes_compressed=$(stat -c%s "$staging_path")
+      local pdf_bytes_compressed_percent=$(bc -l <<< "($pdf_bytes_uncompressed - $pdf_bytes_compressed) / $pdf_bytes_uncompressed" | awk '{printf "%f", $0}')
 
-    # Only use the compressed file if it's actually smaller
-    if [ "$force_compress" == 'true' ] || (( $(echo "$pdf_bytes_compressed_percent >= $min_reduction_percent_threshold" | bc -l) )); then
-      echo "[COMPRESS] Compressed $pdf_bytes_uncompressed => $pdf_bytes_compressed ($pdf_bytes_compressed_percent)"
-      mv "$staging_path" "$pdf_path"
+      # Only use the compressed file if it's actually smaller
+      if [ "$force_compress" == 'true' ] || (( $(echo "$pdf_bytes_compressed_percent >= $min_reduction_percent_threshold" | bc -l) )); then
+        echo "[COMPRESS] Compressed $pdf_bytes_uncompressed => $pdf_bytes_compressed ($pdf_bytes_compressed_percent)"
+        mv "$staging_path" "$pdf_path"
+      else
+        rm "$staging_path"
+      fi
     else
+      echo '[WARN] Failed to run ghostscript for on $pdf_path'
       rm "$staging_path"
     fi
   fi
