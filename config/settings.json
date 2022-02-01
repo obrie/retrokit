@@ -51,12 +51,12 @@
           "max_resolution": 300
         },
         "quality_factor": {
-          "color": 0.9,
-          "mono": 0.9
-        },
-        "pass_through_jpeg": {
-          "enabled": false,
-          "dimension_threshold": 0.66
+          "highres_color": 0.9,
+          "highres_gray": 0.9,
+          "highres_threshold": 0.66,
+          "lowres_color": 0.4,
+          "lowres_gray": 0.76,
+          "pass_through_jpeg": false
         },
         "encode": {
           "uncompressed": true,

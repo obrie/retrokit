@@ -296,12 +296,13 @@ compress_pdf() {
   local convert_icc_color_profile=$(setting '.manuals.postprocess.compress.color.icc')
 
   # Quality settings
-  local color_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.color')
-  local mono_quality_factor=$(setting '.manuals.postprocess.compress.quality_factor.mono')
-
-  # JPEG Pass-through
-  local pass_through_jpeg_enabled=$(setting '.manuals.postprocess.compress.pass_through_jpeg.enabled')
-  local pass_through_jpeg_threshold=$(setting '.manuals.postprocess.compress.pass_through_jpeg.dimension_threshold')
+  local quality_factor_highres_color=$(setting '.manuals.postprocess.compress.quality_factor.highres_color')
+  local quality_factor_highres_gray=$(setting '.manuals.postprocess.compress.quality_factor.highres_gray')
+  local quality_factor_highres_threshold=$(setting '.manuals.postprocess.compress.quality_factor.highres_threshold')
+  local quality_factor_lowres_color=$(setting '.manuals.postprocess.compress.quality_factor.lowres_color')
+  local quality_factor_lowres_gray=$(setting '.manuals.postprocess.compress.quality_factor.lowres_gray')
+  local pass_through_jpeg=$(setting '.manuals.postprocess.compress.quality_factor.pass_through_jpeg')
+  local acs_image_dict_settings='/Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2]'
 
   # Encoding settings
   local encode_uncompressed_images=$(setting '.manuals.postprocess.compress.encode.uncompressed')
@@ -315,9 +316,17 @@ compress_pdf() {
   local has_icc_encoding=$(echo "$images_info" | awk '{print ($9)}' | grep ICCBased)
 
   # Postscripting
-  local postscript="
-    << /ColorACSImageDict << /QFactor $color_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams
-    << /GrayACSImageDict << /QFactor $mono_quality_factor /Blend 1 /ColorTransform 1 /HSamples [2 1 1 2] /VSamples [2 1 1 2] >> >> setdistillerparams
+  local postscript="<<
+    /DownsampleColorImages $downsample_enabled
+    /DownsampleGrayImages $downsample_enabled
+    /DownsampleMonoImages $downsample_enabled
+    /ColorImageResolution $downsample_max_resolution
+    /GrayImageResolution $downsample_max_resolution
+    /MonoImageResolution $downsample_max_resolution
+    /ColorACSImageDict << /QFactor $quality_factor_highres_color $acs_image_dict_settings >>
+    /GrayACSImageDict << /QFactor $quality_factor_highres_gray $acs_image_dict_settings >>
+    /PassThroughJPEGImages $pass_through_jpeg
+  >> setdistillerparams
   "
 
   # Track whether to actually compress
@@ -361,39 +370,65 @@ compress_pdf() {
           page_resolution=$downsample_min_resolution
         fi
 
-        page_distiller_params="/ColorImageResolution $page_resolution /GrayImageResolution $page_resolution /MonoImageResolution $page_resolution"
+        page_distiller_params="
+          /DownsampleColorImages true
+          /DownsampleGrayImages true
+          /DownsampleMonoImages true
+          /ColorImageResolution $page_resolution
+          /GrayImageResolution $page_resolution
+          /MonoImageResolution $page_resolution
+        "
 
         # Mark this as compressable
         should_compress=true
+      else
+        page_distiller_params="
+          /DownsampleColorImages false
+          /DownsampleGrayImages false
+          /DownsampleMonoImages false
+        "
       fi
 
       # Enable pass-through JPEG on a per-page basis based on the target
       # image dimension thresholds
-      if [ "$pass_through_jpeg_enabled" == 'false' ] && [ -n "$pass_through_jpeg_threshold" ]; then
-        local width_threshold_met=$(bc -l <<< "(${page_image_width}.0 / ${downsample_width}.0) > $pass_through_jpeg_threshold")
-        local height_threshold_met=$(bc -l <<< "x = (${page_image_height}.0 / ${downsample_height}.0) > $pass_through_jpeg_threshold")
+      if [ "$pass_through_jpeg" == 'false' ]; then
+        local has_highres_width=$(bc -l <<< "(${page_image_width}.0 / ${downsample_width}.0) >= $quality_factor_highres_threshold")
+        local has_highres_height=$(bc -l <<< "(${page_image_height}.0 / ${downsample_height}.0) >= $quality_factor_highres_threshold")
 
-        if [ $width_threshold_met -eq 1 ] || [ $height_threshold_met -eq 1 ]; then
-          page_distiller_params="$page_distiller_params /PassThroughJPEGImages false"
-          should_compress=true
+        if [ $has_highres_width -eq 0 ] && [ $has_highres_height -eq 0 ]; then
+          # If there's a low-res factor, use that -- otherwise enable jpeg pass-through
+          if [ -n "$quality_factor_lowres_color" ] && [ -n "$quality_factor_lowres_gray" ]; then
+            page_distiller_params+="
+              /PassThroughJPEGImages false
+              /ColorACSImageDict << /QFactor $quality_factor_lowres_color $acs_image_dict_settings >>
+              /GrayACSImageDict << /QFactor $quality_factor_lowres_gray $acs_image_dict_settings >>
+            "
+          else
+            page_distiller_params+="
+              /PassThroughJPEGImages true
+            "
+          fi
         else
-          page_distiller_params="$page_distiller_params /PassThroughJPEGImages true"
+          # Use high-res quality factor
+          page_distiller_params+="
+            /PassThroughJPEGImages false
+            /ColorACSImageDict << /QFactor $quality_factor_highres_color $acs_image_dict_settings >>
+            /GrayACSImageDict << /QFactor $quality_factor_highres_gray $acs_image_dict_settings >>
+          "
         fi
       fi
 
-      if [ -n "$page_distiller_params" ]; then
-        downsample_ps_start="$downsample_ps_start $page PageNum eq { << $page_distiller_params >> setdistillerparams } {"
-        downsample_ps_end="} ifelse $downsample_ps_end"
-      fi
+      downsample_ps_start+=" $page PageNum eq { << $page_distiller_params >> setdistillerparams } {"
+      downsample_ps_end="} ifelse $downsample_ps_end"
     done < <(echo "$images_info" | awk '{print ($1)}' | uniq | grep -v '^$')
 
     # Add the postscript
     if [ -n "$downsample_ps_start" ]; then
-      downsample_ps_end="<< /ColorImageResolution $downsample_max_resolution /GrayImageResolution $downsample_max_resolution /MonoImageResolution $downsample_max_resolution /PassThroughJPEGImages true >> setdistillerparams $downsample_ps_end"
-      postscript="$postscript
+      postscript="
         globaldict /PageNum 1 put
         << /BeginPage {
           $downsample_ps_start
+          $postscript
           $downsample_ps_end
         } bind >> setpagedevice
         << /EndPage {
@@ -401,13 +436,12 @@ compress_pdf() {
           0 eq dup { globaldict /PageNum PageNum 1 add put } if
         } bind >> setpagedevice
       "
-    else
-      # Disable downsampling as we don't want to go lower than the target
-      downsample_enabled=false
     fi
+  fi
 
-    # Enforce pass-through since it's handled on a per-page basis instead
-    pass_through_jpeg_enabled=true
+  # Try to compress since we're adjusting the quality factor of JPEGs
+  if [ "$pass_through_jpeg" == 'false' ]; then
+    should_compress=true
   fi
 
   local gs_args=()
@@ -457,9 +491,6 @@ compress_pdf() {
         -sOutputFile="$staging_path" \
         -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
         -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
-        -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
-        -dColorImageResolution=$downsample_max_resolution -dGrayImageResolution=$downsample_max_resolution -dMonoImageResolution=$downsample_max_resolution \
-        -dPassThroughJPEGImages="$pass_through_jpeg_enabled" \
         -dPDFSTOPONERROR \
         "$postscript_path" \
         -f "$pdf_path"; then
