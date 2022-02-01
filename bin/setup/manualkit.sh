@@ -44,6 +44,27 @@ install() {
     tesseract-ocr-rus \
     tesseract-ocr-spa \
     tesseract-ocr-swe
+
+  # Install newer version of ghostscript that can handle certain jpx/jbig2 images
+  ghostscript_version=9.55.0
+  local current_ghostscript_version="$(cat /usr/local/etc/ghostscript.version 2>/dev/null || true)"
+  if [ "$(gs --version)" != "$ghostscript_version" ] || [ "$current_ghostscript_version" != "$ghostscript_version" ]; then
+    # Download ghostscript source
+    rm -rf "$tmp_dir/ghostscript"
+    mkdir "$tmp_dir/ghostscript"
+    wget "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${ghostscript_version//.}/ghostscript-$ghostscript_version.tar.gz" -O "$tmp_dir/ghostscript/ghostscript.tar.gz"
+    tar -zxvf "$tmp_dir/ghostscript/ghostscript.tar.gz" -C "$tmp_dir/ghostscript"
+
+    pushd "$tmp_dir/ghostscript/ghostscript-$ghostscript_version"
+    ./configure
+    make
+    sudo make install
+
+    echo "$ghostscript_version" | sudo tee /usr/local/etc/ghostscript.version
+
+    popd
+    rm -rf "$tmp_dir/ghostscript"
+  fi
 }
 
 uninstall() {
