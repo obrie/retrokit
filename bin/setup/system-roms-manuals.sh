@@ -453,18 +453,16 @@ compress_pdf() {
     local postscript_path="$tmp_ephemeral_dir/postprocess-compress.ps"
     echo "$postscript" > "$postscript_path"
 
-    gs_exec "${gs_args[@]}" \
-      -sOutputFile="$staging_path" \
-      -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
-      -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
-      -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
-      -dColorImageResolution=$downsample_max_resolution -dGrayImageResolution=$downsample_max_resolution -dMonoImageResolution=$downsample_max_resolution \
-      -dPassThroughJPEGImages="$pass_through_jpeg_enabled" \
-      -dPDFSTOPONERROR \
-      "$postscript_path" \
-      -f "$pdf_path"
-
-    if [ $? -eq 0 ]; then
+    if gs_exec "${gs_args[@]}" \
+        -sOutputFile="$staging_path" \
+        -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
+        -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
+        -dDownsampleColorImages=$downsample_enabled -dDownsampleGrayImages=$downsample_enabled -dDownsampleMonoImages=$downsample_enabled \
+        -dColorImageResolution=$downsample_max_resolution -dGrayImageResolution=$downsample_max_resolution -dMonoImageResolution=$downsample_max_resolution \
+        -dPassThroughJPEGImages="$pass_through_jpeg_enabled" \
+        -dPDFSTOPONERROR \
+        "$postscript_path" \
+        -f "$pdf_path"; then
       # Calculate how much we compressed
       local pdf_bytes_uncompressed=$(stat -c%s "$pdf_path")
       local pdf_bytes_compressed=$(stat -c%s "$staging_path")
