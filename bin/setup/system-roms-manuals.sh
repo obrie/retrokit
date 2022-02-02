@@ -507,7 +507,7 @@ compress_pdf() {
         rm "$staging_path"
       fi
     else
-      echo '[WARN] Failed to run ghostscript for on $pdf_path'
+      echo '[WARN] Failed to run ghostscript compression'
       rm "$staging_path"
     fi
   fi
