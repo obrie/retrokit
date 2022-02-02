@@ -15,37 +15,47 @@ class ManualMetadata(ExternalMetadata):
     name = 'manual'
 
     FLAG_TO_LANGUAGES = {
-      "Argentina": {"es"},
-      "Asia": {"jp"},
-      "Australia": {"en"},
-      "Brazil": {"pt"},
-      "Canada": {"en", "fr"},
-      "English": {"en"},
-      "Europe": {"de", "en-gb", "es", "fr", "it", "nl"},
-      "France": {"fr"},
-      "Germany": {"de"},
-      "Italy": {"it"},
-      "Japan": {"ja"},
-      "Korea": {"kr"},
-      "Netherlands": {"nl"},
-      "New Zealand": {"en"},
-      "Portugal": {"pt"},
-      "Spain": {"es"},
-      "Taiwan": {"tw"},
-      "United Kingdom": {"en"},
-      "USA": {"en"},
+      'Argentina': {'es'},
+      'Asia': {'jp'},
+      'Australia': {'en', 'en-au'},
+      'Brazil': {'pt'},
+      'Canada': {'en', 'en-ca', 'fr'},
+      'China': {'zh'},
+      'Denmark': {'da'},
+      'English': {'en'},
+      'Europe': {'de', 'en', 'en-gb', 'es', 'fr', 'it', 'nl'},
+      'Finland': {'fi'},
+      'France': {'fr'},
+      'Germany': {'de'},
+      'Italy': {'it'},
+      'Japan': {'ja'},
+      'Korea': {'ko'},
+      'Netherlands': {'nl'},
+      'New Zealand': {'en'},
+      'Norway': {'no'},
+      'Poland': {'pl'},
+      'Portugal': {'pt'},
+      'Russia': {'ru'},
+      'Spain': {'es'},
+      'Sweden': {'sv'},
+      'Taiwan': {'tw'},
+      'United Kingdom': {'en', 'en-gb'},
+      'USA': {'en'},
     }
+
+    # Unique list of all language codes available
+    ALL_LANGUAGE_CODES = ['ar', 'cs', 'da', 'de', 'en', 'en-au', 'en-ca', 'en-gb', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'zh']
 
     def load(self) -> None:
         if not self.install_path:
             return
 
-        # Look up what languages the user wants to support
-        self.languages = self.config['languages']['priority']
+        # Look up what languages the user wants to allow
+        self.allowlist = self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES
 
         # Priority preferences
-        self.regional_priority = self.config['languages']['regional_priority']
-        self.allow_fallback = self.config['languages']['allow_fallback']
+        self.prioritize_region_languages = self.config['languages']['prioritize_region_languages']
+        self.only_region_languages = self.config['languages']['only_region_languages']
 
         # Look up the available manuals
         self.data = {}
@@ -64,7 +74,7 @@ class ManualMetadata(ExternalMetadata):
                 manuals = self.data[key]
                 for language in languages:
                     if language not in manuals or len(languages_str) < len(manuals[language]['languages']):
-                        manuals[language] = {"languages": languages_str, "url": url, "options": options}
+                        manuals[language] = {'languages': languages_str, 'url': url, 'options': options}
 
 
     def update(self, machine: Machine) -> None:
@@ -79,22 +89,22 @@ class ManualMetadata(ExternalMetadata):
 
             # Check if we should prioritize the regional languages before the
             # globally configured priority
-            if self.regional_priority:
+            if self.prioritize_region_languages or self.only_region_languages:
                 # Find the unique flags
                 all_flags = set(flag_part.strip() for flag_parts in machine.flags for flag_part in flag_parts.split(','))
 
                 # Find the flags that have configured language mappings
-                region_flags = all_flags.intersection(self.flag_to_languages.keys())
-                region_languages = set().union(*(self.flag_to_languages[flag] for flag in region_flags))
+                region_flags = all_flags.intersection(self.FLAG_TO_LANGUAGES.keys())
+                region_languages = set().union(*(self.FLAG_TO_LANGUAGES[flag] for flag in region_flags))
 
                 # Add all regional languages, ordered by global priority
-                for language in self.languages:
+                for language in self.allowlist:
                     if language in region_languages:
                         candidate_languages[language] = True
 
-            if not self.regional_priority or self.allow_fallback:
-                # Add the default set of languages
-                for language in self.languages:
+            # Add the full set of allowed languages
+            if not self.only_region_languages:
+                for language in self.allowlist:
                     candidate_languages[language] = True
 
             # Find a language that has a manual

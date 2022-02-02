@@ -2,12 +2,12 @@
   "metadata": {
     "manual": {
       "languages": {
-        "priority": [
+        "allowlist": [
           "en",
           "en-gb"
         ],
-        "regional_priority": false,
-        "allow_fallback": true
+        "prioritize_region_languages": false,
+        "only_region_languages": false
       }
     }
   },
