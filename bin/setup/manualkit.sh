@@ -26,7 +26,8 @@ install() {
   sudo apt install -y unoconv
 
   # OCR PDF to make it searchable
-  sudo apt install -y ocrmypdf \
+  sudo pip3 install ocrmypdf==13.3.0
+  sudo apt install -y \
     tesseract-ocr-ara \
     tesseract-ocr-ces \
     tesseract-ocr-chi-sim \
