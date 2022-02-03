@@ -3,12 +3,22 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+alias install=configure
+alias uninstall=restore
+
+configure() {
+  __configure_global_config
+  __configure_emulator_configs
+  __configure_core_options
+}
+
 # Global configuration overrides
-install_config() {
+__configure_global_config() {
   ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
 }
 
-install_emulator_config() {
+# Emulator-specific configuration overrides
+__configure_emulator_configs() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 
   while read -r library_name; do
@@ -24,7 +34,7 @@ install_emulator_config() {
 }
 
 # Global core options
-install_core_options() {
+__configure_core_options() {
   local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
 
@@ -45,13 +55,7 @@ install_core_options() {
   fi
 }
 
-install() {
-  install_config
-  install_emulator_config
-  install_core_options
-}
-
-uninstall() {
+restore() {
   # Remove system-specific retroarch core options files
   local core_options_path=$(get_retroarch_path 'core_options_path')
   rm -fv "$core_options_path"

@@ -18,9 +18,20 @@ install() {
     fi
   done < <(ls /etc/emulationstation/themes/)
 
+  configure
+}
+
+configure() {
   # Add theme overrides
   while read -r theme_path; do
     file_cp "$config_dir/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true envsubst=false
+  done < <(find "$config_dir/themes" -type f -printf "%P\n")
+}
+
+restore() {
+  # Restore original theme
+  while read -r theme_path; do
+    restore_file "/etc/emulationstation/themes/$theme_path" as_sudo=true delete_src=true
   done < <(find "$config_dir/themes" -type f -printf "%P\n")
 }
 

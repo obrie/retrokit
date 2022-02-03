@@ -11,6 +11,7 @@ install() {
     local package_type=$(jq -r ".$port_name.package_type" "$packages_path")
     local package_name=$(jq -r ".$port_name.package" "$packages_path")
 
+    # Install the package
     install_retropie_package "$package_type" "$package_name"
 
     # Link over any optional files for the game

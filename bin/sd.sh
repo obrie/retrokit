@@ -17,6 +17,13 @@ usage() {
   exit 1
 }
 
+main() {
+  local action="$1"
+  shift
+
+  "$action" "$@"
+}
+
 restore() {
   [[ $# -ne 2 ]] && usage
   local device=$1
@@ -127,13 +134,6 @@ create() {
     sleep 5
   done
   rmdir -v "$mount_path"
-}
-
-main() {
-  local action="$1"
-  shift
-
-  "$action" "$@"
 }
 
 if [[ $# -lt 1 ]]; then

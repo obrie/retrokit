@@ -4,7 +4,10 @@ system='n64'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-install() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
   ini_merge "$system_config_dir/GLideN64.custom.ini" "$retropie_system_config_dir/GLideN64.custom.ini"
   ini_merge "$system_config_dir/mupen64plus.cfg" "$retropie_system_config_dir/mupen64plus.cfg"
 
@@ -27,7 +30,7 @@ install() {
   done < <(crudini --get "$source_inputs_file")
 }
 
-uninstall() {
+restore() {
   # Explicitly don't revert InputAutoCfg.ini in case new controllers have been added
   restore_file "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
   restore_file "$retropie_system_config_dir/GLideN64.custom.ini" delete_src=true

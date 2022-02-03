@@ -9,6 +9,19 @@ usage() {
   exit 1
 }
 
+main() {
+  local command=$1
+  local system=$2
+
+  if [ -z "$system" ] || [ "$system" == 'all' ]; then
+    while read system; do
+      run "$command" "$system" "${@:3}"
+    done < <(setting '.systems[]')
+  else
+    run "$command" "$system" "${@:3}"
+  fi
+}
+
 run() {
   local command=$1
   local system=$2
@@ -21,19 +34,6 @@ run() {
   fi
 
   TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") ${args[@]}
-}
-
-main() {
-  local command=$1
-  local system=$2
-
-  if [ -z "$system" ] || [ "$system" == 'all' ]; then
-    while read system; do
-      run "$command" "$system" "${@:3}"
-    done < <(setting '.systems[]')
-  else
-    run "$command" "$system" "${@:3}"
-  fi
 }
 
 if [[ $# -lt 1 ]]; then

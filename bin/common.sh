@@ -67,6 +67,40 @@ has_setupmodule() {
 }
 
 ##############
+# Action stubs
+##############
+
+configure() {
+  return
+}
+
+install() {
+  configure
+}
+
+reinstall() {
+  uninstall
+  install
+}
+
+update() {
+  FORCE_INSTALL=true
+  install
+}
+
+restore() {
+  return
+}
+
+uninstall() {
+  restore
+}
+
+vacuum() {
+  return
+}
+
+##############
 # Config Management
 ##############
 
@@ -360,6 +394,10 @@ has_newer_commit() {
 
   if [ -z "$current_sha" ]; then
     return 0
+  fi
+
+  if [ "$UPDATE_PACKAGES" != 'true' ]; then
+    return 1
   fi
 
   local latest_sha=$(git ls-remote "$repo_url" HEAD | cut -f1)

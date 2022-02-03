@@ -8,7 +8,109 @@ retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
 retroarch_remapping_dir=${retroarch_remapping_dir//\"/}
 retroarch_remapping_dir=${retroarch_remapping_dir%/}
 
-find_overrides() {
+install() {
+  __install_retroarch_configs
+  __install_retroarch_remappings
+  __install_retroarch_core_options
+}
+
+# Game-specific retroarch configuration overrides
+__install_retroarch_configs() {
+  local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
+  if [ -z "$rom_dirs" ]; then
+    return
+  fi
+
+  declare -A installed_files
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+    while read -r rom_dir; do
+      if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
+        local target_file="$rom_dir/$rom_name.cfg"
+
+        ini_merge "$override_file" "$target_file"
+        installed_files["$target_file"]=1
+      fi
+    done < <(echo "$rom_dirs")
+  done < <(__find_overrides 'cfg')
+
+  # Remove unused configs
+  while read -r rom_dir; do
+    while read -r rom_path; do
+      [ "${installed_files["$rom_path"]}" ] || rm -v "$rom_path"
+    done < <(find "$rom_dir" -maxdepth 1 -name '*.cfg')
+  done < <(echo "$rom_dirs")
+}
+
+# Games-specific controller mapping overrides
+__install_retroarch_remappings() {
+  declare -A installed_files
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+    # Emulator-specific remapping directory
+    local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
+    mkdir -p "$emulator_remapping_dir"
+
+    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
+    installed_files["$emulator_remapping_dir/$rom_name.rmp"]=1
+  done < <(__find_overrides 'rmp')
+
+  # Remove unused remappings
+  while read -r library_name; do
+    [ ! -d "$retroarch_remapping_dir/$library_name" ] && continue
+
+    while read -r path; do
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
+    done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp')
+  done < <(get_core_library_names)
+}
+
+# Game-specific libretro core overrides
+# (https://retropie.org.uk/docs/RetroArch-Core-Options/)
+__install_retroarch_core_options() {
+  local core_options_path=$(get_retroarch_path 'core_options_path')
+
+  declare -A installed_files
+  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+    # Retroarch emulator-specific config
+    local emulator_config_dir="$retroarch_config_dir/$library_name"
+    mkdir -p "$emulator_config_dir"
+
+    # Back up the existing file
+    local target_path="$emulator_config_dir/$rom_name.opt"
+    backup_and_restore "$target_path"
+
+    # Copy over existing core overrides so we don't just get the
+    # core defaults
+    touch "$target_path"
+    grep -E "^$core_name" "$core_options_path" > "$target_path" || true
+
+    # Merge in game-specific overrides
+    echo "Merging ini $override_file to $target_path"
+    crudini --merge "$target_path" < "$override_file"
+    installed_files["$target_path"]=1
+  done < <(__find_overrides 'opt')
+
+  # Remove old, unused emulator overlay configs
+  while read -r library_name; do
+    [ ! -d "$retroarch_config_dir/$library_name" ] && continue
+
+    while read -r path; do
+      [ "${installed_files["$path"]}" ] || rm -v "$path"
+    done < <(find "$retroarch_config_dir/$library_name" -name '*.opt')
+  done < <(get_core_library_names)
+
+  # Reinstall the game-specific retroarch core options for this system.
+  # Yes, this might mean we install game-specific core options multiple
+  # times, but it also means we don't have to worry about remembering to
+  # re-run system-roms-retroarch after running this setupmodule
+  # 
+  # We might want to consider some sort of "depends" system in the future
+  # so that this isn't hard-coded.
+  if [ -z "$SKIP_DEPS" ] && [ "$system" == 'c64' ] && has_setupmodule 'systems/c64/roms-joystick_selections'; then
+    "$bin_dir/setup.sh" install systems/c64/roms-joystick_selections
+  fi
+}
+
+__find_overrides() {
   local extension=$1
 
   if [ -d "$system_config_dir/retroarch" ]; then
@@ -53,108 +155,6 @@ find_overrides() {
       fi
     done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .parent.name, .parent.disc, .parent.title, .emulator] | join("»")')
   fi
-}
-
-# Game-specific libretro core overrides
-# (https://retropie.org.uk/docs/RetroArch-Core-Options/)
-install_retroarch_core_options() {
-  local core_options_path=$(get_retroarch_path 'core_options_path')
-
-  declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
-    # Retroarch emulator-specific config
-    local emulator_config_dir="$retroarch_config_dir/$library_name"
-    mkdir -p "$emulator_config_dir"
-
-    # Back up the existing file
-    local target_path="$emulator_config_dir/$rom_name.opt"
-    backup_and_restore "$target_path"
-
-    # Copy over existing core overrides so we don't just get the
-    # core defaults
-    touch "$target_path"
-    grep -E "^$core_name" "$core_options_path" > "$target_path" || true
-
-    # Merge in game-specific overrides
-    echo "Merging ini $override_file to $target_path"
-    crudini --merge "$target_path" < "$override_file"
-    installed_files["$target_path"]=1
-  done < <(find_overrides 'opt')
-
-  # Remove old, unused emulator overlay configs
-  while read -r library_name; do
-    [ ! -d "$retroarch_config_dir/$library_name" ] && continue
-
-    while read -r path; do
-      [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_config_dir/$library_name" -name '*.opt')
-  done < <(get_core_library_names)
-
-  # Reinstall the game-specific retroarch core options for this system.
-  # Yes, this might mean we install game-specific core options multiple
-  # times, but it also means we don't have to worry about remembering to
-  # re-run system-roms-retroarch after running this setupmodule
-  # 
-  # We might want to consider some sort of "depends" system in the future
-  # so that this isn't hard-coded.
-  if [ -z "$SKIP_DEPS" ] && [ "$system" == 'c64' ] && has_setupmodule 'systems/c64/roms-joystick_selections'; then
-    "$bin_dir/setup.sh" install systems/c64/roms-joystick_selections
-  fi
-}
-
-# Games-specific controller mapping overrides
-install_retroarch_remappings() {
-  declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
-    # Emulator-specific remapping directory
-    local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
-    mkdir -p "$emulator_remapping_dir"
-
-    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
-    installed_files["$emulator_remapping_dir/$rom_name.rmp"]=1
-  done < <(find_overrides 'rmp')
-
-  # Remove unused remappings
-  while read -r library_name; do
-    [ ! -d "$retroarch_remapping_dir/$library_name" ] && continue
-
-    while read -r path; do
-      [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp')
-  done < <(get_core_library_names)
-}
-
-# Game-specific retroarch configuration overrides
-install_retroarch_configs() {
-  local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
-  if [ -z "$rom_dirs" ]; then
-    return
-  fi
-
-  declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
-    while read -r rom_dir; do
-      if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
-        local target_file="$rom_dir/$rom_name.cfg"
-
-        ini_merge "$override_file" "$target_file"
-        installed_files["$target_file"]=1
-      fi
-    done < <(echo "$rom_dirs")
-  done < <(find_overrides 'cfg')
-
-  # Remove unused configs
-  while read -r rom_dir; do
-    while read -r rom_path; do
-      [ "${installed_files["$rom_path"]}" ] || rm -v "$rom_path"
-    done < <(find "$rom_dir" -maxdepth 1 -name '*.cfg')
-  done < <(echo "$rom_dirs")
-}
-
-install() {
-  install_retroarch_configs
-  install_retroarch_remappings
-  install_retroarch_core_options
 }
 
 uninstall() {

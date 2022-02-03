@@ -6,28 +6,21 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 config_path='/opt/retropie/configs/mame-advmame/advmame-joy.rc'
 
-restore_config() {
-  if has_backup_file "$config_path"; then
-    if [ -f "$config_path" ]; then
-      # Keep track of the input_maps since we don't want to lose those
-      grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
-
-      # Restore and remove any input_maps from the original file
-      restore_file "$config_path" "${@}"
-      sed -i '/^input_map/d' "$config_path"
-
-      # Merge the input_maps back in
-      crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
-      rm "$system_tmp_dir/inputs.rc"
-    else
-      restore_file "$config_path" "${@}"
-    fi
+install() {
+  # Move advmame config directory in arcade system in order to avoid artwork zip
+  # files from being scraped since there's no way to tell Skyscraper to ignore certain
+  # directories
+  if [ -d "$HOME/RetroPie/roms/arcade/advmame" ]; then
+    rm -rfv "$HOME/RetroPie/roms/arcade/.advmame-config"
+    mv -v "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
   fi
+
+  configure
 }
 
-install() {
+configure() {
   backup_file "$config_path"
-  restore_config
+  __restore_config
 
   # Add overrides.  This is a custom non-ini format, so we need to do it manually.
   echo "Merging ini $system_config_dir/advmame.rc to $config_path"
@@ -54,13 +47,29 @@ install() {
 
   # Make the config readable
   sort -o "$config_path" "$config_path"
+}
 
-  # Move advmame config directory in arcade system in order to avoid artwork zip
-  # files from being scraped since there's no way to tell Skyscraper to ignore certain
-  # directories
-  if [ -d "$HOME/RetroPie/roms/arcade/advmame" ]; then
-    rm -rfv "$HOME/RetroPie/roms/arcade/.advmame-config"
-    mv -v "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
+restore() {
+  # Restore advmame config, keeping the input_maps in the process
+  __restore_config delete_src=true
+}
+
+__restore_config() {
+  if has_backup_file "$config_path"; then
+    if [ -f "$config_path" ]; then
+      # Keep track of the input_maps since we don't want to lose those
+      grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
+
+      # Restore and remove any input_maps from the original file
+      restore_file "$config_path" "${@}"
+      sed -i '/^input_map/d' "$config_path"
+
+      # Merge the input_maps back in
+      crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
+      rm "$system_tmp_dir/inputs.rc"
+    else
+      restore_file "$config_path" "${@}"
+    fi
   fi
 }
 
@@ -71,8 +80,7 @@ uninstall() {
     mv -v "$HOME/RetroPie/roms/arcade/.advmame-config" "$HOME/RetroPie/roms/arcade/advmame"
   fi
 
-  # Restore advmame config, keeping the input_maps in the process
-  restore_config delete_src=true
+  restore
 }
 
 if [ "$system" == 'arcade' ]; then
