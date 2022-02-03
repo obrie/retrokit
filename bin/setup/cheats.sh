@@ -8,7 +8,6 @@ install() {
 
   download 'http://buildbot.libretro.com/assets/frontend/cheats.zip' "$cheats_zip"
   unzip -o "$cheats_zip" -d '/opt/retropie/configs/all/retroarch/cheats/'
-  rm "$cheats_zip"
 }
 
 uninstall() {

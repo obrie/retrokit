@@ -9,24 +9,6 @@ clear_screen() {
   dd if=/dev/zero of=/dev/fb0 &>/dev/null
 }
 
-# Watches for interrupts to the launching screen
-watch_screen() {
-  while true; do
-    # User has opened runcommand dialog or we're no longer running the game, abort
-    if pgrep dialog || ! kill -0 $PPID; then
-      break
-    fi
-
-    # Maximum time reached for showing the launching screen
-    if [ $SECONDS -ge $MAX_LOADING_TIME ]; then
-      clear_screen
-      break
-    fi
-
-    sleep 1
-  done
-}
-
 show_launching_screen() {
   local system="$1"
   local launch_image="/opt/retropie/configs/$system/launching-extended.png"
@@ -42,8 +24,26 @@ show_launching_screen() {
     ffmpeg -i /opt/retropie/configs/$system/launching-extended.png -s $(< /sys/class/graphics/fb0/virtual_size tr , x) -f fbdev -pix_fmt rgb565le -y /dev/fb0
 
     # Monitor launching screen
-    watch_screen &
+    __watch_screen &
   fi
+}
+
+# Watches for interrupts to the launching screen
+__watch_screen() {
+  while true; do
+    # User has opened runcommand dialog or we're no longer running the game, abort
+    if pgrep dialog || ! kill -0 $PPID; then
+      break
+    fi
+
+    # Maximum time reached for showing the launching screen
+    if [ $SECONDS -ge $MAX_LOADING_TIME ]; then
+      clear_screen
+      break
+    fi
+
+    sleep 1
+  done
 }
 
 launch_manualkit() {

@@ -7,7 +7,31 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 redream_dir="$retropie_system_config_dir/redream"
 redream_config_path="$redream_dir/redream.cfg"
 
-restore_config() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
+  __restore_config
+  ini_merge "$system_config_dir/redream.cfg" "$redream_config_path" restore=false
+
+  # Game overrides
+  while read -r rom_config_path; do
+    local filename=$(basename "$rom_config_path")
+    cp "$rom_config_path" "$redream_dir/cache/$filename"
+  done < <(find "$system_config_dir/redream" -name '*.cfg')
+}
+
+restore() {
+  __restore_config delete_src=true
+
+  # Remove overrides
+  while read -r rom_config_path; do
+    local filename=$(basename "$rom_config_path")
+    rm -fv "$redream_dir/cache/$filename"
+  done < <(find "$system_config_dir/redream" -name '*.cfg')
+}
+
+__restore_config() {
   if has_backup_file "$redream_config_path"; then
     if [ -f "$redream_config_path" ]; then
       # Keep track of the profiles since we don't want to lose those
@@ -22,21 +46,6 @@ restore_config() {
       restore_file "$redream_config_path" "${@}"
     fi
   fi
-}
-
-install() {
-  restore_config
-  ini_merge "$system_config_dir/redream.cfg" "$redream_config_path" restore=false
-
-  # Game overrides
-  while read -r rom_config_path; do
-    local filename=$(basename "$rom_config_path")
-    file_cp "$rom_config_path" "$redream_dir/cache/$filename"
-  done < <(find "$system_config_dir/redream" -name '*.cfg')
-}
-
-uninstall() {
-  restore_config delete_src=true
 }
 
 "${@}"

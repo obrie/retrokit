@@ -6,11 +6,17 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 # Clean the configuration key used for defining ROM-specific emulator options
 # 
 # Implementation pulled from retropie
-clean_emulator_config_key() {
+__clean_emulator_config_key() {
   local name="$1"
   name="${name//\//_}"
   name="${name//[^a-zA-Z0-9_\-]/}"
   echo "$name"
+}
+
+# Download roms from a remote source
+install() {
+  __install_roms
+  configure
 }
 
 install_roms() {
@@ -26,7 +32,7 @@ install_roms() {
 }
 
 # Define emulators for games that don't use the default
-install_emulator_selections() {
+configure() {
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
   backup_file "$emulators_config_file"
 
@@ -55,12 +61,6 @@ install_emulator_selections() {
   while read -r config_key; do
     [ "${installed_keys["$config_key"]}" ] || crudini --del "$emulators_config_file" '' "$config_key"
   done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
-}
-
-# Download roms from a remote source
-install() {
-  install_roms
-  install_emulator_selections
 }
 
 # Outputs the commands required to remove files no longer required by the current

@@ -3,28 +3,26 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Install emulators
-install_emulators() {
-  backup_file "$retropie_system_config_dir/emulators.cfg"
+install() {
+  __install_emulators
+  __install_bios
+  configure
+}
 
-  # Install packages
-  while IFS=$'\t' read -r package emulator build is_default; do
+# Install emulator packages
+__install_emulators() {
+  while IFS=$'\t' read -r package emulator build; do
     local package_type='emulators'
     if [[ "$package" == lr-* ]]; then
       package_type='libretrocores'
     fi
 
     install_retropie_package "$package_type" "$package" "$build"
-
-    # Set defaults
-    if [ "$is_default" == "true" ]; then
-      crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$emulator\""
-    fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.default // false] | @tsv')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary"] | @tsv')
 }
 
 # Install BIOS files required by emulators
-install_bios() {
+__install_bios() {
   local bios_dir=$(system_setting '.bios.dir')
   local base_url=$(system_setting '.bios.url')
 
@@ -34,15 +32,25 @@ install_bios() {
   done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
-install_config() {
-  local config_path="$system_config_dir/emulators.cfg"
-  ini_merge "$config_path" "$retropie_system_config_dir/emulators.cfg" restore=false
+# Configure emulator settings
+configure() {
+  backup_file "$retropie_system_config_dir/emulators.cfg"
+
+  # Set default emulator
+  local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | .value.name // .key')
+  crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$default_emulator\""
+
+  # Additional emulator settings
+  ini_merge "$system_config_dir/emulators.cfg" "$retropie_system_config_dir/emulators.cfg" restore=false
 }
 
-install() {
-  install_emulators
-  install_config
-  install_bios
+restore() {
+  # Remove any custom emulator settings
+  if [ -f "$system_config_dir/emulators.cfg" ] && [ -f "$retropie_system_config_dir/emulators.cfg" ]; then
+    while read -r emulator; do
+      crudini --del "$retropie_system_config_dir/emulators.cfg" '' "$emulator"
+    done < <(crudini --get "$system_config_dir/emulators.cfg" '')
+  fi
 }
 
 uninstall() {
@@ -57,12 +65,7 @@ uninstall() {
     uninstall_retropie_package "$package" || true
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 
-  # Remove any remaining custom emulators
-  if [ -f "$system_config_dir/emulators.cfg" ] && [ -f "$retropie_system_config_dir/emulators.cfg" ]; then
-    while read -r emulator; do
-      crudini --del "$retropie_system_config_dir/emulators.cfg" '' "$emulator"
-    done < <(crudini --get "$system_config_dir/emulators.cfg" '')
-  fi
+  restore
 }
 
 "$1" "${@:3}"

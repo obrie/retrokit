@@ -8,7 +8,10 @@ ia_bin="/usr/local/bin/ia"
 install() {
   # Install CLI
   sudo pip3 install internetarchive==2.0.3
+  configure
+}
 
+configure() {
   # Login
   ia configure -u "$IA_USERNAME" -p "$IA_PASSWORD"
 }

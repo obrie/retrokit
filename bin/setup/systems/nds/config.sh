@@ -6,7 +6,19 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 config_path="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
-restore_config() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
+  __restore_config
+  ini_merge "$system_config_dir/drastic.cfg" "$config_path" restore=false
+}
+
+restore() {
+  __restore_config delete_src=true
+}
+
+__restore_config() {
   if has_backup_file "$config_path"; then
     if [ -f "$config_path" ]; then
       # Keep track of the input_maps since we don't want to lose those
@@ -23,15 +35,6 @@ restore_config() {
       restore_file "$config_path" "${@}"
     fi
   fi
-}
-
-install() {
-  restore_config
-  ini_merge "$system_config_dir/drastic.cfg" "$config_path" restore=false
-}
-
-uninstall() {
-  restore_config delete_src=true
 }
 
 "${@}"

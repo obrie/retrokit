@@ -3,7 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install_config() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
+  __configure_bios
+  __configure_cmdline
+}
+
+__configure_bios() {
   ini_merge "$config_dir/boot/config.txt" '/boot/config.txt' space_around_delimiters=false as_sudo=true
 
   # Note that we can't use crudini for dtoverlay additions because it doesn't
@@ -33,7 +41,7 @@ install_config() {
   fi
 }
 
-install_cmdline() {
+__configure_cmdline() {
   backup_and_restore '/boot/cmdline.txt' as_sudo=true
 
   while IFS=$'\t' read search_option replace_option; do
@@ -45,12 +53,7 @@ install_cmdline() {
   done < <(cat "$config_dir/boot/cmdline.tsv")
 }
 
-install() {
-  install_config
-  install_cmdline
-}
-
-uninstall() {
+restore() {
   restore_file '/boot/config.txt' as_sudo=true delete_src=true
   restore_file '/boot/cmdline.txt' as_sudo=true delete_src=true
 }

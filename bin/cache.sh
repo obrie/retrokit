@@ -15,6 +15,29 @@ usage() {
   exit 1
 }
 
+main() {
+  local action=$1
+
+  if [[ "$action" == *system* ]]; then
+    # Action is system-specific.  Either run against all systems
+    # or against a specific system.
+    local system=$2
+
+    if [ -z "$system" ] || [ "$system" == 'all' ]; then
+      while read system; do
+        print_heading "Running $action for $system (${*:3})"
+        "$action" "$system" "${@:3}"
+      done < <(setting '.systems[]')
+    else
+      print_heading "Running $action for $system (${*:3})"
+      "$action" "$system" "${@:3}"
+    fi
+  else
+    # Action is not system-specific.
+    "$action" "${@:2}"
+  fi
+}
+
 delete() {
   # Remove all temporary cached data
   rm -rfv $tmp_dir/*
@@ -88,29 +111,6 @@ remote_sync_system_manuals() {
       ia upload "$archive_id" "$zip_path" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
       rm "$zip_path"
     fi
-  fi
-}
-
-main() {
-  local action=$1
-
-  if [[ "$action" == *system* ]]; then
-    # Action is system-specific.  Either run against all systems
-    # or against a specific system.
-    local system=$2
-
-    if [ -z "$system" ] || [ "$system" == 'all' ]; then
-      while read system; do
-        print_heading "Running $action for $system (${*:3})"
-        "$action" "$system" "${@:3}"
-      done < <(setting '.systems[]')
-    else
-      print_heading "Running $action for $system (${*:3})"
-      "$action" "$system" "${@:3}"
-    fi
-  else
-    # Action is not system-specific.
-    "$action" "${@:2}"
   fi
 }
 

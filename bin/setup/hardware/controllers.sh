@@ -5,16 +5,48 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 
+install() {
+  __install_configscripts
+  configure
+}
+
 # Add autoconfig scripts
-install_configscripts() {
+__install_configscripts() {
   while read -r autoconfig_name; do
     sudo cp -v "$bin_dir/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
 
+# Run RetroPie autoconfig for each controller input
+configure() {
+  local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
+  download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
+
+  while IFS=, read -r name id swap_buttons; do
+    local config_file="$config_dir/controllers/inputs/$name.cfg"
+
+    if [ -f "$config_file" ]; then
+      # Explicit ES configuration is provided
+      cp "$config_file" "$HOME/.emulationstation/es_temporaryinput.cfg"
+    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_path"; then
+      # Auto-generate ES input configuration from id
+      __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_path")" "$swap_buttons"
+    elif grep -qE ",$name," "$sdldb_path"; then
+      # Auto-generate ES input configuration from name
+      __configure_controller_input "$name" "$(grep -E ",$name," "$sdldb_path")" "$swap_buttons"
+    else
+      echo "No controller mapping found for $name"
+      continue
+    fi
+
+    echo "Generating configurations for $name"
+    /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
+  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false | tostring] | join(",")')
+}
+
 # Create an EmulationStation controller input configuration
 # based on community-provided SDL input mappings
-create_controller_input() {
+__configure_controller_input() {
   local name=$1
   local sdl_config=$2
   local swap_buttons=$3
@@ -148,41 +180,13 @@ _EOF_
 _EOF_
 }
 
-# Run RetroPie autoconfig for each controller input
-install_inputs() {
-  local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
-  download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
-
-  while IFS=, read -r name id swap_buttons; do
-    local config_file="$config_dir/controllers/inputs/$name.cfg"
-
-    if [ -f "$config_file" ]; then
-      # Explicit ES configuration is provided
-      cp "$config_file" "$HOME/.emulationstation/es_temporaryinput.cfg"
-    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_path"; then
-      # Auto-generate ES input configuration from id
-      create_controller_input "$name" "$(grep -E "^$id," "$sdldb_path")" "$swap_buttons"
-    elif grep -qE ",$name," "$sdldb_path"; then
-      # Auto-generate ES input configuration from name
-      create_controller_input "$name" "$(grep -E ",$name," "$sdldb_path")" "$swap_buttons"
-    else
-      echo "No controller mapping found for $name"
-      continue
-    fi
-
-    echo "Generating configurations for $name"
-    /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
-  done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false | tostring] | join(",")')
-}
-
-install() {
-  install_configscripts
-  install_inputs
+restore() {
+  # Reset inputs
+  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
 }
 
 uninstall() {
-  # Reset inputs
-  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation init_input
+  restore
 
   # Remove autoconfig scripts
   while read -r autoconfig_name; do

@@ -5,8 +5,15 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 system_mess_dir="$retropie_system_config_dir/mess"
 
+install() {
+  if has_emulator 'lr-mess'; then
+    __install_cfg_files
+    __install_ini_files
+  fi
+}
+
 # Global configuration overrides
-install_cfg_files() {
+__install_cfg_files() {
   mkdir -pv "$system_mess_dir/cfg"
 
   # Inputs/configs across multiple MESS systems
@@ -20,7 +27,7 @@ install_cfg_files() {
   fi
 }
 
-install_ini_files() {
+__install_ini_files() {
   mkdir -pv "$system_mess_dir/ini"
 
   # Init setup across multiple MESS systems
@@ -31,13 +38,6 @@ install_ini_files() {
   # System-specific MESS init
   if [ -d "$system_config_dir/mess/ini" ]; then
     cp -Rv "$system_config_dir"/mess/ini/* "$system_mess_dir/ini/"
-  fi
-}
-
-install() {
-  if has_emulator 'lr-mess'; then
-    install_cfg_files
-    install_ini_files
   fi
 }
 

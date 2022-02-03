@@ -6,7 +6,21 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
 retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 
-restore_config() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
+  __restore_config
+  ini_merge "$config_dir/retroarch/retroarch.cfg" "$retroarch_config_path" restore=false
+  ini_merge "$config_dir/retroarch/retroarch-core-options.cfg" "$retroarch_core_options_path"
+}
+
+restore() {
+  restore_file "$retroarch_core_options_path" delete_src=true
+  __restore_config delete_src=true
+}
+
+__restore_config() {
   if has_backup_file "$retroarch_config_path"; then
     if [ -f "$retroarch_config_path" ]; then
       # Keep track of the inputs since we don't want to lose those
@@ -21,17 +35,6 @@ restore_config() {
       restore_file "$retroarch_config_path" "${@}"
     fi
   fi
-}
-
-install() {
-  restore_config
-  ini_merge "$config_dir/retroarch/retroarch.cfg" "$retroarch_config_path" restore=false
-  ini_merge "$config_dir/retroarch/retroarch-core-options.cfg" "$retroarch_core_options_path"
-}
-
-uninstall() {
-  restore_file "$retroarch_core_options_path" delete_src=true
-  restore_config delete_src=true
 }
 
 "${@}"

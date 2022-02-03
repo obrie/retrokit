@@ -3,7 +3,10 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+alias install=configure
+alias uninstall=restore
+
+configure() {
   stop_emulationstation
 
   local es_settings_config="$HOME/.emulationstation/es_settings.cfg"
@@ -32,7 +35,7 @@ install() {
   fi
 }
 
-uninstall() {
+restore() {
   restore_file "$HOME/.emulationstation/es_settings.cfg" delete_src=true
 }
 

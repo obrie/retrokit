@@ -12,6 +12,18 @@ usage() {
   exit 1
 }
 
+# Update system
+update_system() {
+  sudo apt update
+  sudo apt-get -y dist-upgrade
+}
+
+# Update RetroPie-Setup and packages
+update_retropie() {
+  update_retropie_setup
+  update_retropie_packages
+}
+
 # Update RetroPie-Setup
 update_retropie_setup() {
   pushd $HOME/RetroPie-Setup
@@ -23,6 +35,9 @@ update_retropie_setup() {
 
 # Update packages
 update_retropie_packages() {
+  # First restore all configurations so that we pick up any changes from RetroPie
+  $bin_dir/setup.sh restore
+
   if [ $# -eq 0 ]; then
     sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
   else
@@ -30,18 +45,10 @@ update_retropie_packages() {
       sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
     done
   fi
-}
 
-# Update system
-update_system() {
-  sudo apt update
-  sudo apt-get -y dist-upgrade
-}
-
-# Update RetroPie-Setup and packages
-update_retropie() {
-  update_retropie_setup
-  update_retropie_packages
+  # After packages have been updated, re-configure all scripts so that they
+  # are merged with the latest changes from RetroPie
+  $bin_dir/setup.sh configure
 }
 
 if [[ $# -eq 0 ]]; then

@@ -24,11 +24,9 @@ install() {
 }
 
 uninstall() {
-  sudo apt remove -y ffmpeg
-  sudo apt remove -y jq
   sudo rm -fv /usr/local/bin/dotenv
   sudo pip3 uninstall -y crudini pillow
-  sudo apt remove -y python3-pip
+  sudo apt remove -y ffmpeg jq python3-pip
 }
 
 "${@}"
