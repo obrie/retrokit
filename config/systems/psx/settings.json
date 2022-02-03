@@ -20,7 +20,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
+    "lr-duckstation-gh": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
   },
   "playlists": {
     "enabled": true
