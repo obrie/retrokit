@@ -8,18 +8,18 @@ redream_dir="$retropie_system_config_dir/redream"
 redream_config_path="$redream_dir/redream.cfg"
 
 restore_config() {
-  if has_backup "$redream_config_path"; then
+  if has_backup_file "$redream_config_path"; then
     if [ -f "$redream_config_path" ]; then
       # Keep track of the profiles since we don't want to lose those
       grep -E '^profile[0-9]+' "$redream_config_path" > "$system_tmp_dir/profiles.cfg"
 
-      restore "$redream_config_path" "${@}"
+      restore_file "$redream_config_path" "${@}"
 
       # Merge the profiles back in
       crudini --merge --inplace "$redream_config_path" < "$system_tmp_dir/profiles.cfg"
       rm "$system_tmp_dir/profiles.cfg"
     else
-      restore "$redream_config_path" "${@}"
+      restore_file "$redream_config_path" "${@}"
     fi
   fi
 }

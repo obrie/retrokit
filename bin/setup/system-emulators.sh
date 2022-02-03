@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # Install emulators
 install_emulators() {
-  backup "$retropie_system_config_dir/emulators.cfg"
+  backup_file "$retropie_system_config_dir/emulators.cfg"
 
   # Install packages
   while IFS=$'\t' read -r package emulator build is_default; do

@@ -18,7 +18,7 @@ install() {
 
 uninstall() {
   rm -fv '/opt/retropie/configs/all/skyscraper/video_convert.sh'
-  restore '/opt/retropie/configs/all/skyscraper/config.ini' delete_src=true
+  restore_file '/opt/retropie/configs/all/skyscraper/config.ini' delete_src=true
   uninstall_retropie_package skyscraper || true
 }
 

@@ -17,7 +17,7 @@ install() {
 }
 
 uninstall() {
-  restore '/etc/default/console-setup' as_sudo=true delete_src=true
+  restore_file '/etc/default/console-setup' as_sudo=true delete_src=true
   update_console
 }
 

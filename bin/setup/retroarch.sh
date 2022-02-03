@@ -7,18 +7,18 @@ retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
 retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 
 restore_config() {
-  if has_backup "$retroarch_config_path"; then
+  if has_backup_file "$retroarch_config_path"; then
     if [ -f "$retroarch_config_path" ]; then
       # Keep track of the inputs since we don't want to lose those
       grep -E '^input_.+' "$retroarch_config_path" > "$tmp_ephemeral_dir/retroarch-inputs.cfg"
 
-      restore "$retroarch_config_path" "${@}"
+      restore_file "$retroarch_config_path" "${@}"
 
       # Merge the inputs back in
       crudini --merge --inplace "$retroarch_config_path" < "$tmp_ephemeral_dir/retroarch-inputs.cfg"
       rm "$tmp_ephemeral_dir/retroarch-inputs.cfg"
     else
-      restore "$retroarch_config_path" "${@}"
+      restore_file "$retroarch_config_path" "${@}"
     fi
   fi
 }
@@ -30,7 +30,7 @@ install() {
 }
 
 uninstall() {
-  restore "$retroarch_core_options_path" delete_src=true
+  restore_file "$retroarch_core_options_path" delete_src=true
   restore_config delete_src=true
 }
 

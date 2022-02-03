@@ -51,8 +51,8 @@ install() {
 }
 
 uninstall() {
-  restore '/boot/config.txt' as_sudo=true delete_src=true
-  restore '/boot/cmdline.txt' as_sudo=true delete_src=true
+  restore_file '/boot/config.txt' as_sudo=true delete_src=true
+  restore_file '/boot/cmdline.txt' as_sudo=true delete_src=true
 }
 
 "${@}"

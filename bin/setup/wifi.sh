@@ -12,7 +12,7 @@ install() {
 }
 
 uninstall() {
-  restore '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true delete_src=true
+  restore_file '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true delete_src=true
 }
 
 "${@}"

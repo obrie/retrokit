@@ -70,7 +70,7 @@ has_setupmodule() {
 # Config Management
 ##############
 
-backup() {
+backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
   local as_sudo='false'
@@ -94,14 +94,14 @@ backup() {
   fi
 }
 
-has_backup() {
+has_backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
 
   [ -f "$backup_file" ] || [ -f "$backup_file.missing" ]
 }
 
-restore() {
+restore_file() {
   local file=$1
   local backup_file="$file.rk-src"
   local as_sudo='false'
@@ -134,8 +134,8 @@ restore() {
 }
 
 backup_and_restore() {
-  backup "${@}"
-  restore "${@}"
+  backup_file "${@}"
+  restore_file "${@}"
 }
 
 env_merge() {
@@ -228,7 +228,7 @@ file_cp() {
     return
   fi
 
-  backup "$target" as_sudo="$as_sudo"
+  backup_file "$target" as_sudo="$as_sudo"
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
@@ -258,7 +258,7 @@ file_ln() {
     return
   fi
 
-  backup "$target" as_sudo="$as_sudo"
+  backup_file "$target" as_sudo="$as_sudo"
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'

@@ -29,8 +29,8 @@ install() {
 }
 
 uninstall() {
-  restore "$splashscreen_list" as_sudo=true delete_src=true
-  restore "$splashscreen_config" delete_src=true
+  restore_file "$splashscreen_list" as_sudo=true delete_src=true
+  restore_file "$splashscreen_config" delete_src=true
   rm -fv "$splashscreens_dir/splash.mp4"
 }
 

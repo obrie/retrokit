@@ -23,7 +23,7 @@ install() {
 
   # Restore previously deleted ROMs
   while read -r backup_path; do
-    restore "${backup_path//.rk-src/}" delete_src=true
+    restore_file "${backup_path//.rk-src/}" delete_src=true
   done < <(find_in_directories '*.rk-src')
 
   # Remove existing playlists
@@ -48,7 +48,7 @@ install() {
     # Remove from the filesystem (safety guard in place to ensure it's a
     # symlink)
     if [ "$show_discs" != 'true' ] && [ -L "$rom_path" ]; then
-      backup "$rom_path"
+      backup_file "$rom_path"
       rm -v "$rom_path"
     fi
   done < <(find_in_directories '*(Disc *')
@@ -60,7 +60,7 @@ uninstall() {
   done < <(find_in_directories '*.m3u')
 
   while read -r backup_path; do
-    restore "${backup_path//.rk-src/}" delete_src=true
+    restore_file "${backup_path//.rk-src/}" delete_src=true
   done < <(find_in_directories '*.rk-src')
 }
 

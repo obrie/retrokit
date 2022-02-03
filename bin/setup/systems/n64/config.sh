@@ -10,7 +10,7 @@ install() {
 
   local source_inputs_file="$system_config_dir/InputAutoCfg.ini"
   local target_inputs_file="$retropie_system_config_dir/InputAutoCfg.ini"
-  backup "$target_inputs_file"
+  backup_file "$target_inputs_file"
 
   echo "Merging ini $source_inputs_file to $target_inputs_file"
   while IFS= read -r section_name; do
@@ -29,8 +29,8 @@ install() {
 
 uninstall() {
   # Explicitly don't revert InputAutoCfg.ini in case new controllers have been added
-  restore "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
-  restore "$retropie_system_config_dir/GLideN64.custom.ini" delete_src=true
+  restore_file "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
+  restore_file "$retropie_system_config_dir/GLideN64.custom.ini" delete_src=true
 }
 
 "${@}"
