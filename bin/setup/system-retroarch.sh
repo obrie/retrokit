@@ -59,11 +59,11 @@ uninstall() {
   # Restore emulator-specific retroarch configs
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   while read -r library_name; do
-    restore "$retroarch_config_dir/$library_name/$library_name.cfg" delete_src=true
+    restore_file "$retroarch_config_dir/$library_name/$library_name.cfg" delete_src=true
   done < <(get_core_library_names)
 
   # Restore system-specific retroarch config
-  restore "$retropie_system_config_dir/retroarch.cfg"
+  restore_file "$retropie_system_config_dir/retroarch.cfg"
 }
 
 "$1" "${@:3}"

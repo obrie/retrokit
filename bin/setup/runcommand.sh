@@ -12,7 +12,7 @@ install() {
 }
 
 uninstall() {
-  restore '/opt/retropie/configs/all/runcommand.cfg' delete_src=true
+  restore_file '/opt/retropie/configs/all/runcommand.cfg' delete_src=true
   rm -fv \
     '/opt/retropie/configs/all/runcommand-onstart.sh' \
     '/opt/retropie/configs/all/runcommand-onend.sh' \

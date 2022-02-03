@@ -10,7 +10,7 @@ install() {
   local system_default_config=/etc/emulationstation/es_systems.cfg
   local system_override_config="$HOME/.emulationstation/es_systems.cfg"
 
-  backup "$system_override_config"
+  backup_file "$system_override_config"
 
   printf '<?xml version="1.0"?>\n<systemList>\n' > "$system_override_config.tmp"
 
@@ -41,7 +41,7 @@ install() {
 }
 
 uninstall() {
-  restore "$HOME/.emulationstation/es_systems.cfg" delete_src=true
+  restore_file "$HOME/.emulationstation/es_systems.cfg" delete_src=true
 }
 
 "${@}"

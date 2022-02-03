@@ -28,7 +28,7 @@ install_roms() {
 # Define emulators for games that don't use the default
 install_emulator_selections() {
   local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
-  backup "$emulators_config_file"
+  backup_file "$emulators_config_file"
 
   # Load emulator data
   load_emulator_data

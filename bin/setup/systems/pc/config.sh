@@ -15,8 +15,8 @@ install() {
 uninstall() {
   sudo apt remove -y fluid-soundfont-gm
 
-  restore '/opt/retropie/configs/pc/dosbox-staging.conf' delete_src=true
-  restore '/opt/retropie/configs/pc/dosbox-SVN.conf' delete_src=true
+  restore_file '/opt/retropie/configs/pc/dosbox-staging.conf' delete_src=true
+  restore_file '/opt/retropie/configs/pc/dosbox-SVN.conf' delete_src=true
 }
 
 "${@}"
