@@ -19,7 +19,7 @@ install() {
     mkdir -pv "$splashscreens_dir"
 
     # Download media
-    if [ ! -f "$version_file" ] || [ $(cat "$version_file") != "$version" ]; then
+    if [ ! -f "$version_file" ] || [ "$(cat "$version_file")" != "$version" ]; then
       download "$(setting '.splashscreen')" "$media_file" force=true
       echo "$version" > "$version_file"
     fi
