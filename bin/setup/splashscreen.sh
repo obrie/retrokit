@@ -9,10 +9,20 @@ splashscreens_dir="$HOME/RetroPie/splashscreens"
 
 install() {
   if [ "$(setting 'has("splashscreen")')" == 'true' ]; then
-    # Media
     local media_file="$splashscreens_dir/splash.mp4"
+    local media_url=$(setting '.splashscreen')
+
+    # Track a version number for the splashscreen in case the source changes
+    local version_file="$splashscreens_dir/splash.version"
+    local version=($(echo "$media_url" | md5sum))
+
     mkdir -pv "$splashscreens_dir"
-    download "$(setting '.splashscreen')" "$media_file"
+
+    # Download media
+    if [ ! -f "$version_file" ] || [ $(cat "$version_file") != "$version" ]; then
+      download "$(setting '.splashscreen')" "$media_file" force=true
+      echo "$version" > "$version_file"
+    fi
 
     configure
   else
@@ -40,7 +50,7 @@ restore() {
 }
 
 uninstall() {
-  rm -fv "$splashscreens_dir/splash.mp4"
+  rm -fv "$splashscreens_dir/splash.mp4" "$splashscreens_dir/splash.versino"
   restore
 }
 
