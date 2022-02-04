@@ -26,12 +26,9 @@ install() {
     sudo cp dispmanx_vncserver /usr/bin
     sudo chmod +x /usr/bin/dispmanx_vncserver
 
-    configure
-
     # Install service
     sudo systemctl daemon-reload
     sudo systemctl enable dispmanx_vncserver
-    sudo systemctl start dispmanx_vncserver
     echo "$version" | sudo tee /etc/dispmanx_vncserver.version
 
     # Clean up
@@ -40,20 +37,19 @@ install() {
   else
     echo "dispmanx_vnc already the newest version ($version)"
   fi
+
+  configure
 }
 
 configure() {
   file_cp "$config_dir/vnc/dispmanx_vncserver.conf" /etc/dispmanx_vncserver.conf as_sudo=true
   file_cp "$config_dir/vnc/dispmanx_vncserver.service" /etc/systemd/system/dispmanx_vncserver.service envsubst=false as_sudo=true
-}
-
-restore() {
-  restore_file /etc/dispmanx_vncserver.conf as_sudo=true delete_src=true
-  restore_file /etc/systemd/system/dispmanx_vncserver.service as_sudo=true delete_src=true
+  sudo systemctl restart dispmanx_vncserver
 }
 
 uninstall() {
-  restore
+  restore_file /etc/dispmanx_vncserver.conf as_sudo=true delete_src=true
+  restore_file /etc/systemd/system/dispmanx_vncserver.service as_sudo=true delete_src=true
   
   sudo systemctl stop dispmanx_vncserver || true
   sudo systemctl disable dispmanx_vncserver || true
