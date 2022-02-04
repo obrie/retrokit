@@ -3,9 +3,6 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   env_merge "$config_dir/display/console-setup" '/etc/default/console-setup' as_sudo=true
   __update_console

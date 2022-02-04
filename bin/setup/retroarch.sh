@@ -6,9 +6,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
 retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   __restore_config
   ini_merge "$config_dir/retroarch/retroarch.cfg" "$retroarch_config_path" restore=false

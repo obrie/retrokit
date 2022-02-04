@@ -3,9 +3,6 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   __configure_global_config
   __configure_emulator_configs

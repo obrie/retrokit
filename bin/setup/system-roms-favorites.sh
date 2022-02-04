@@ -5,9 +5,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   if ! __should_set_favorites; then
     return

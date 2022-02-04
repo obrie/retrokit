@@ -7,8 +7,4 @@ install() {
   sudo $HOME/RetroPie-Setup/retropie_packages.sh bluetooth gui
 }
 
-uninstall() {
-  return
-}
-
 "${@}"

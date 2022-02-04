@@ -3,9 +3,6 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   file_cp "$config_dir/localization/locale" '/etc/default/locale' as_sudo=true
   file_cp "$config_dir/localization/locale.gen" '/etc/locale.gen' as_sudo=true

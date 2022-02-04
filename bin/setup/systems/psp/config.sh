@@ -4,9 +4,6 @@ system='psp'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   ini_merge "$system_config_dir/controls.ini" '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini'
   ini_merge "$system_config_dir/ppsspp.ini" '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
