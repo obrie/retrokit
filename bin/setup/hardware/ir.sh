@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 source_keymap_path=$(setting '.hardware.ir.keymap')
 source_keymap_name=$(basename "$keymap_path")
-target_keymap_path="/etc/rc_keymaps/$keymap_name"
+target_keymap_path="/etc/rc_keymaps/$source_keymap_name"
 keymap_config_path=/opt/retropie/configs/all/rc_keymap.cfg
 
 install() {
