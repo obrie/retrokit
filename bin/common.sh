@@ -41,6 +41,8 @@ print_heading() {
 # Settings
 ##############
 
+# Substitutes environment variables with a file and returns the path to the
+# interpolated file
 conf_prepare() {
   local source=$1
   local as_sudo='false'
@@ -56,12 +58,13 @@ conf_prepare() {
   echo "$target"
 }
 
-# Settings
+# Looks up a setting in the global settings file
 export settings_file="$(conf_prepare "$app_dir/config/settings.json")"
 setting() {
   jq -r "$1 | values" "$settings_file"
 }
 
+# Is the given setupmodule is enabled?
 has_setupmodule() {
   [ $(setting ".setup | any(. == \"$1\")") == 'true' ]
 }
@@ -70,32 +73,40 @@ has_setupmodule() {
 # Action stubs
 ##############
 
-configure() {
-  return
-}
-
+# Installs any dependencies required on the filesystem
 install() {
   configure
 }
 
-reinstall() {
-  uninstall
-  install
+# Configures the setupmodule
+configure() {
+  return
 }
 
+# Forces the setupmodule to be updated
 update() {
   FORCE_INSTALL=true
   install
 }
 
+# Restores the configurations modified by the setupmodule
 restore() {
   return
 }
 
+# Uninstalls everything installed by the setupmodule
 uninstall() {
   restore
 }
 
+# Uninstall / Install shortcut
+reinstall() {
+  uninstall
+  install
+}
+
+# Finds files that can be deleted from the filesystem.  This will only
+# echo the `rm` commands -- you must run them.
 vacuum() {
   return
 }
@@ -104,6 +115,8 @@ vacuum() {
 # Config Management
 ##############
 
+# Creates a backup of the given file.  If the file doesn't existing, then a
+# ".missing" file is created to indicate such.
 backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
@@ -128,6 +141,7 @@ backup_file() {
   fi
 }
 
+# Does a backup file exist?
 has_backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
@@ -135,6 +149,7 @@ has_backup_file() {
   [ -f "$backup_file" ] || [ -f "$backup_file.missing" ]
 }
 
+# Restores a previously backed-up file
 restore_file() {
   local file=$1
   local backup_file="$file.rk-src"
@@ -339,6 +354,10 @@ download() {
   local retry_wait_time=$DOWNLOAD_RETRY_WAIT_TIME
   local auth_token=''
   if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  if [ "$FORCE_INSTALL" == 'true' ]; then
+    force='true'
+  fi
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
