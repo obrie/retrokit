@@ -7,7 +7,11 @@ install() {
   # Install themes
   declare -A installed_themes
   while IFS=$'\t' read -r name repo; do
-    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes install_theme "$name" "$repo"
+    # Only install if not already installed -- updates are done externally
+    if [ ! -d "/etc/emulationstation/themes/$name" ]; then
+      sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes install_theme "$name" "$repo"
+    fi
+
     installed_themes["$name"]=1
   done < <(_list_installed_themes)
 
