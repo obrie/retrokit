@@ -11,7 +11,12 @@ install() {
   sudo pip3 install crudini==0.9.3
 
   # Env editor
-  download 'https://raw.githubusercontent.com/bashup/dotenv/d71c9d786fe193f43f1cb57c6b4a152ebb01ba60/dotenv' '/usr/local/bin/dotenv' as_sudo=true
+  dotenv_version=d71c9d786fe193f43f1cb57c6b4a152ebb01ba60
+  local current_dotenv_version=$(cat /usr/local/etc/dotenv.version 2>/dev/null || true)
+  if [ ! `command -v dotenv` ] || [ "$current_dotenv_version" != "$dotenv_version" ]; then
+    download "https://raw.githubusercontent.com/bashup/dotenv/$dotenv_version/dotenv" '/usr/local/bin/dotenv' as_sudo=true force=true
+    echo "$dotenv_version" | sudo tee /usr/local/etc/dotenv.version
+  fi
 
   # JSON reader
   sudo apt install -y jq
@@ -24,7 +29,7 @@ install() {
 }
 
 uninstall() {
-  sudo rm -fv /usr/local/bin/dotenv
+  sudo rm -fv /usr/local/bin/dotenv /usr/local/etc/dotenv.version
   sudo pip3 uninstall -y crudini pillow
   sudo apt remove -y ffmpeg jq python3-pip
 }
