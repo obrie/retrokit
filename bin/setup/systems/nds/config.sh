@@ -6,9 +6,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 config_path="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   __restore_config
   ini_merge "$system_config_dir/drastic.cfg" "$config_path" restore=false

@@ -7,9 +7,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 redream_dir="$retropie_system_config_dir/redream"
 redream_config_path="$redream_dir/redream.cfg"
 
-alias install=configure
-alias uninstall=restore
-
 configure() {
   __restore_config
   ini_merge "$system_config_dir/redream.cfg" "$redream_config_path" restore=false
