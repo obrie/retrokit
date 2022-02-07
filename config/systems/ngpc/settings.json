@@ -37,7 +37,7 @@
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/ngpc/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/ngpc/.nointro/.{machine_id}.zip"
+          "xref": "$HOME/RetroPie/roms/ngpc/.nointro/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"

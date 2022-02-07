@@ -60,7 +60,7 @@
         "machine": {
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/saturn/.redump/.{machine_id}.chd"
+          "xref": "$HOME/RetroPie/roms/saturn/.redump/.xrefs/{machine_id}.chd"
         }
       }
     }

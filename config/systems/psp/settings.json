@@ -29,7 +29,7 @@
           "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/psp/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/psp/.redump/{machine}.cso",
-          "xref": "$HOME/RetroPie/roms/psp/.redump/.{machine_id}.cso",
+          "xref": "$HOME/RetroPie/roms/psp/.redump/.xrefs/{machine_id}.cso",
           "install": {"action": "zip_to_cso"}
         }
       }
@@ -46,7 +46,7 @@
           "source": "{url}/{machine}.iso",
           "download": "$HOME/RetroPie/roms/psp/.psn/{machine}.iso",
           "target": "$HOME/RetroPie/roms/psp/.psn/{machine}.cso",
-          "xref": "$HOME/RetroPie/roms/psp/.psn/.{machine_id}.cso",
+          "xref": "$HOME/RetroPie/roms/psp/.psn/.xrefs/{machine_id}.cso",
           "install": {"action": "iso_to_cso"}
         }
       },

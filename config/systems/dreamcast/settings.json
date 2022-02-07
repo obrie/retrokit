@@ -56,7 +56,7 @@
           "source": "{url}/{machine}.zip",
           "download": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/dreamcast/.redump/.{machine_id}.chd",
+          "xref": "$HOME/RetroPie/roms/dreamcast/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
       }

@@ -50,7 +50,7 @@
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/gbc/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/gbc/.nointro/.{machine_id}.zip"
+          "xref": "$HOME/RetroPie/roms/gbc/.nointro/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
