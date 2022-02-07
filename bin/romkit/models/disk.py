@@ -28,6 +28,7 @@ class Disk:
     def context(self) -> dict:
         context = {
             'disk': self.name,
+            'sha1': self.sha1,
             **self.machine.context,
         }
         context['disk_filename'] = self.romset.resource('disk', **context).target_path.path.name
