@@ -96,6 +96,8 @@ class Resource:
     # Make sure the cross-reference path reflects the current target path
     def create_xref(self) -> str:
         if self.xref_path:
+            # Ensure xref directory exists
+            self.xref_path.path.parent.mkdir(parents=True, exist_ok=True)
             self.xref_path.symlink_to(self.target_path)
 
     # Determines whether the given files are contained within the target resource path
