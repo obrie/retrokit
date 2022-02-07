@@ -36,4 +36,4 @@ class Sample:
     # Removes this sample from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
+            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')

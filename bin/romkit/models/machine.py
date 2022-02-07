@@ -503,7 +503,7 @@ class Machine:
             return
 
         if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
+            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')
 
         if self.resource.xref_path and self.resource.xref_path.is_symlink():
-            print(f'rm -rf {shlex.quote(self.resource.xref_path.path)}')
+            print(f'rm -rf {shlex.quote(str(self.resource.xref_path.path))}')

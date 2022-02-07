@@ -53,7 +53,7 @@ class Disk:
     # Removes this disk from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
+            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')
 
     # Equality based on Unique ID
     def __eq__(self, other) -> bool:
