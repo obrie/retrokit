@@ -46,7 +46,9 @@ class Disk:
     # Downloads and installs the disk
     def install(self) -> None:
         logging.info(f'[{self.machine.name}] Installing disk {self.name}')
+        self.resource.check_xref()
         self.resource.install()
+        self.resource.create_xref()
 
     # Enables the disk to be accessible to the emulator
     def enable(self, system_dir: SystemDir) -> None:
