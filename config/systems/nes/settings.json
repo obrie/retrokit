@@ -45,7 +45,7 @@
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/nes/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/nes/.nointro/.{machine_id}.zip",
+          "xref": "$HOME/RetroPie/roms/nes/.nointro/.xrefs/{machine_id}.zip",
           "file_identifier": "name"
         }
       },

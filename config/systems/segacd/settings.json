@@ -60,7 +60,7 @@
         "machine": {
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/segacd/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/segacd/.nointro/.{machine_id}.chd"
+          "xref": "$HOME/RetroPie/roms/segacd/.nointro/.xrefs/{machine_id}.chd"
         }
       }
     }

@@ -67,7 +67,7 @@
         "machine": {
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/psx/.redump/.{machine_id}.chd"
+          "xref": "$HOME/RetroPie/roms/psx/.redump/.xrefs/{machine_id}.chd"
         }
       }
     }

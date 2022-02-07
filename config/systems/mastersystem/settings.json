@@ -54,7 +54,7 @@
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/mastersystem/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/mastersystem/.nointro/.{machine_id}.zip"
+          "xref": "$HOME/RetroPie/roms/mastersystem/.nointro/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"

@@ -46,7 +46,7 @@
           "source": "{discovery_url}/{machine}.zip",
           "download": "$HOME/RetroPie/roms/n64/.nointro/{machine}.zip",
           "target": "$HOME/RetroPie/roms/n64/.nointro/{machine}.z64",
-          "xref": "$HOME/RetroPie/roms/n64/.nointro/.{machine_id}.z64",
+          "xref": "$HOME/RetroPie/roms/n64/.nointro/.xrefs/{machine_id}.z64",
           "install": {"action": "zip_extract", "file": ".*\\.z64"}
         }
       },
