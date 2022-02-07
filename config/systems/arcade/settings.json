@@ -67,7 +67,8 @@
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -92,7 +93,8 @@
         },
         "disk": {
           "source": "{url}/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2003/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2003-plus/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -117,7 +119,8 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2010/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -142,7 +145,8 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2015/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -167,7 +171,8 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame2016/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -193,7 +198,8 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME 0.196 EXTRAs%2Fsamples%2F{sample}.zip",
@@ -220,7 +226,8 @@
         },
         "disk": {
           "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
-          "target": "$HOME/RetroPie/roms/arcade/.chd2010/{machine}/{disk}.chd"
+          "target": "$HOME/RetroPie/roms/arcade/.advmame/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
           "source": "{url}/samples/{sample}.zip",
@@ -351,7 +358,7 @@
     ],
     "files": {
       "machine": {"target": "{dir}/{machine_filename}"},
-      "disk": {"source": "..", "target": "{dir}/{machine}"}
+      "disk": {"source": "{target_path}/..", "target": "{dir}/{machine}"}
     }
   }
 }
