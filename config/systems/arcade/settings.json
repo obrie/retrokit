@@ -197,12 +197,12 @@
           "install": {"action": "zip_merge"}
         },
         "disk": {
-          "source": "$ROMSET_MAME_2010_EXTRAS_URL/roms/{machine}/{disk}.chd",
+          "source": "$ROMSET_MAME_0223_URL/Arcade/chd/{machine}/{disk}.chd",
           "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}/{disk}.chd",
           "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
-          "source": "$ROMSET_MAME_0196_EXTRAS_URL/MAME_0.196_EXTRAs.zip/MAME 0.196 EXTRAs%2Fsamples%2F{sample}.zip",
+          "source": "$ROMSET_MAME_0223_URL/Arcade/samples.zip/samples%2F{sample}.zip",
           "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },
