@@ -433,16 +433,20 @@ class Machine:
 
     # Installs this machine onto the local filesystem
     def install(self) -> None:
-        # Self
+        self.resource.check_xref()
+
+        # ROMs: Self
         self.install_from(self, self.roms_from_self)
 
-        # Parent
+        # ROMs: Parent
         if self.parent_machine:
             self.install_from(self.parent_machine, self.roms_from_parent)
 
-        # BIOS
+        # ROMs: BIOS
         if self.bios_machine:
             self.install_from(self.bios_machine, self.bios_machine.roms)
+
+        self.resource.create_xref()
 
         # Devices
         for device_machine in self.device_machines:
@@ -461,9 +465,6 @@ class Machine:
         if not machine or not self.resource:
             return
 
-        # TODO: Should this be under #install?
-        self.resource.check_xref()
-
         if self.resource.contains(roms):
             logging.info(f'[{self.name}] Already installed {machine.name}')
         else:
@@ -474,8 +475,6 @@ class Machine:
 
             logging.info(f'[{self.name}] Installing from {machine.name}')
             self.resource.install(machine.resource, files=roms, force=True)
-
-        self.resource.create_xref()
 
     # Removes unnecessary files from the archive, if applicable
     def clean(self) -> None:
