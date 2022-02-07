@@ -224,7 +224,7 @@ class BaseSystem:
     def vacuum(self) -> None:
         installable_machines = self.list()
         installable_machine_paths = set()
-        installable_disk_names = set()
+        installable_disk_ids = set()
         installable_sample_names = set()
 
         for machine in installable_machines:
@@ -233,7 +233,7 @@ class BaseSystem:
 
             # Track disks
             for disk in machine.disks:
-                installable_disk_names.add(disk.name)
+                installable_disk_ids.add(disk.id)
 
             # Track samples
             if machine.sample:
@@ -246,7 +246,7 @@ class BaseSystem:
 
                     # Check disks
                     for disk in machine.disks:
-                        if disk.name not in installable_disk_names:
+                        if disk.name not in installable_disk_ids:
                             disk.purge()
 
                     # Check samples

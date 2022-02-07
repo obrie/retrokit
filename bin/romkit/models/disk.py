@@ -9,11 +9,13 @@ class Disk:
     # Status when a ROM isn't actually included in the Machine
     STATUS_NO_DUMP = 'nodump'
 
-    def __init__(self, machine: Machine, name: str) -> None:
+    def __init__(self, machine: Machine, name: str, sha1: Optional[str]) -> None:
         self.machine = machine
 
         # Some DATs include the .chd extension, so we standardize by removing it
         self.name = Path(name).stem
+
+        self.id = sha1
 
     # Should this disk be installed to the local filesystem?
     @staticmethod
@@ -52,3 +54,13 @@ class Disk:
     def purge(self):
         if self.resource.target_path.exists():
             print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
+
+    # Equality based on Unique ID
+    def __eq__(self, other) -> bool:
+        if isinstance(other, Disk):
+            return self.id == other.id
+        return False
+
+    # Hash based on Unique ID
+    def __hash__(self) -> str:
+        return hash(self.id)

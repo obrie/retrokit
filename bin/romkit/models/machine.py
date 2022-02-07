@@ -134,7 +134,7 @@ class Machine:
 
         # Disks
         dumped_disks = filter(Disk.is_installable, xml.findall('disk'))
-        machine.disks = {Disk(machine, disk.get('name')) for disk in dumped_disks}
+        machine.disks = {Disk(machine, disk.get('name'), disk.get('sha1')) for disk in dumped_disks}
 
         # ROMs
         dumped_roms = filter(File.is_installable, xml.findall('rom'))
@@ -271,11 +271,14 @@ class Machine:
         if self.parent_name:
             return self.romset.machine(self.parent_name)
 
-    # BIOS machine, if applicable
+    # BIOS machine, if applicable, as defined either in this machine or in the
+    # parent machine
     @property
     def bios_machine(self) -> Optional[Machine]:
         if self.bios_name:
             return self.romset.machine(self.bios_name)
+        elif self.parent_machine and self.parent_machine.bios_machine:
+            return self.parent_machine.bios_machine
 
     # Devices that are required to run this machine
     @property
@@ -301,19 +304,18 @@ class Machine:
 
         return names
 
-    # ROMs installed from the parent
+    # ROMs installed directly from the parent (excluding parent bios)
     # 
     # Note that this assumes ROMs have either the same CRC or the
     # same name.  If using "name" as the file_identifier but the
     # parent ROM has a different name, this will be broken.  We could
     # utilize the @merge property on ROMs to fix this, but at the
     # moment there's no need.
-    # 
-    # TODO: This is wrong -- we need to listen to the @merge property
     @property
     def roms_from_parent(self) -> Set[File]:
         if self.parent_machine:
-            return self.parent_machine.roms & self.roms
+            parent_roms = self.parent_machine.roms_from_self
+            return set(rom for rom in self.roms if rom in parent_roms)
         else:
             return set()
 
@@ -336,7 +338,7 @@ class Machine:
         if self.bios_machine:
             machines.append(self.bios_machine)
 
-        # Build up the full set of RMOs required
+        # Build up the full set of ROMs required
         all_roms = set()
         for machine in machines:
             all_roms.update(machine.roms)
@@ -348,6 +350,24 @@ class Machine:
     def rom_root(self) -> Optional[str]:
         if self.roms:
             return self.ROOT_REGEX.search(next(iter(self.roms)).name).group()
+        else:
+            return ''
+
+    # Disks installed from the parent
+    @property
+    def disks_from_parent(self) -> Set[Disk]:
+        if self.parent_machine:
+            # Avoid set intersection to guarantee we'll use the parent's disks
+            # instead of ours since machines will be compatible with the
+            # installation from the parent
+            return set(disk for disk in self.parent_machine.disks if disk in self.disks)
+        else:
+            return set()
+
+    # Disks installed directly from thismachine
+    @property
+    def disks_from_self(self) -> Set[Disk]:
+        return self.disks - self.disks_from_parent
 
     # Audio sample
     @property
@@ -429,7 +449,7 @@ class Machine:
             self.install_from(device_machine, device_machine.roms)
 
         # Disks
-        for disk in self.disks:
+        for disk in (self.disks_from_self | self.disks_from_parent):
             disk.install()
 
         # Samples
@@ -441,6 +461,7 @@ class Machine:
         if not machine or not self.resource:
             return
 
+        # TODO: Should this be under #install?
         self.resource.check_xref()
 
         if self.resource.contains(roms):
@@ -473,7 +494,7 @@ class Machine:
         
         target_dir.symlink('machine', self.resource.target_path.path, **self.context)
 
-        for disk in self.disks:
+        for disk in (self.disks_from_self | self.disks_from_parent):
             disk.enable(target_dir)
 
     # Removes this machine from the filesystem
@@ -484,5 +505,5 @@ class Machine:
         if self.resource.target_path.exists():
             print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
 
-        if self.resource.xref_path.is_symlink():
+        if self.resource.xref_path and self.resource.xref_path.is_symlink():
             print(f'rm -rf {shlex.quote(self.resource.xref_path.path)}')
