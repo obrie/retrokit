@@ -491,8 +491,11 @@ class Machine:
             return
 
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
-        
-        target_dir.symlink('machine', self.resource.target_path.path, **self.context)
+
+        # Disks get handled separately -- everything else gets symlink'd through
+        # the machine's resource
+        for resource_name in (target_dir.file_templates.keys() - set(['disk'])):
+            target_dir.symlink(resource_name, self.resource, **self.context)
 
         for disk in (self.disks_from_self | self.disks_from_parent):
             disk.enable(target_dir)

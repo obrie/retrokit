@@ -163,8 +163,3 @@ class PCSystem(BaseSystem):
 
             exodos_dir = str(machine_dir.parent).replace(str(Path.home()), '')
             subprocess.run(['sed', '-i', f's|./eXoDOS|.{exodos_dir}|g', filepath], check=True)
-
-    # Symlinks the configuration file so that it's visible in the frontend
-    def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:
-        config_file = machine.resource.target_path.path.joinpath('dosbox.conf')
-        system_dir.symlink('conf', config_file, machine=machine.name)
