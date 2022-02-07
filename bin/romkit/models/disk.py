@@ -15,6 +15,7 @@ class Disk:
         # Some DATs include the .chd extension, so we standardize by removing it
         self.name = Path(name).stem
 
+        self.sha1 = sha1
         self.id = sha1
 
     # Should this disk be installed to the local filesystem?
