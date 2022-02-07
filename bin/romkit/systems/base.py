@@ -244,9 +244,10 @@ class BaseSystem:
                 if machine.resource and machine.resource.target_path.path not in installable_machine_paths:
                     machine.purge()
 
-                    # Check disks
-                    for disk in machine.disks:
-                        if disk.name not in installable_disk_ids:
+                    # Check disks (only those owned by this machine -- parents will
+                    # be handled in a future loop)
+                    for disk in machine.disks_from_self:
+                        if disk.id not in installable_disk_ids:
                             disk.purge()
 
                     # Check samples
