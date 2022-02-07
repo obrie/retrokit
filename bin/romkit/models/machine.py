@@ -8,6 +8,7 @@ from romkit.models.sample import Sample
 import hashlib
 import logging
 import re
+import shlex
 from pathlib import Path
 from typing import Dict, List, Optional, Set
 
@@ -481,7 +482,7 @@ class Machine:
             return
 
         if self.resource.target_path.exists():
-            print(f'rm -rf "{self.resource.target_path.path}"')
+            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
 
         if self.resource.xref_path.is_symlink():
-            print(f'rm -rf "{self.resource.xref_path.path}"')
+            print(f'rm -rf {shlex.quote(self.resource.xref_path.path)}')

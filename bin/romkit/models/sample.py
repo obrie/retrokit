@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import shlex
 
 # Represents an audio file used by a machine
 class Sample:
@@ -35,4 +36,4 @@ class Sample:
     # Removes this sample from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
-            print(f'rm -rf "{self.resource.target_path.path}"')
+            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
