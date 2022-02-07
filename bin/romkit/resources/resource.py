@@ -61,6 +61,10 @@ class Resource:
     def is_locally_sourced(self) -> bool:
         return urlparse(self.source_url).scheme == 'file'
 
+    # Whether this resources exists on disk
+    def exists(self) -> bool:
+        return self.target_path.exists()
+
     # Downloads files needed for this romset
     def download(self, force: bool = False) -> None:
         self.downloader.get(self.source_url, self.download_path.path, force=force)
@@ -74,7 +78,7 @@ class Resource:
         # * Target doesn't exist
         # * Source is from the local filesystem and the target isn't the same (always reinstall)
         # * Explicitly forcing a download
-        if not self.target_path.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path) or force:
+        if not self.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path) or force:
             source.download()
 
             # Ensure target directory exists
@@ -86,7 +90,7 @@ class Resource:
     # If there's a valid cross-reference symlink for the target and the target doesn't exist,
     # rely on the symlink to create the new target
     def check_xref(self) -> None:
-        if self.xref_path and self.xref_path.exists() and not self.target_path.exists():
+        if self.xref_path and self.xref_path.exists() and not self.exists():
             self.xref_path.realpath().rename(self.target_path.path)
 
     # Make sure the cross-reference path reflects the current target path
