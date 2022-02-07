@@ -25,28 +25,23 @@ class SystemDir:
                     filepath.unlink()
 
     # Symlinks a resource with the given source path to this directory
-    def symlink(self, resource_name: str, source: Path, **context) -> None:
+    def symlink(self, resource_name: str, resource: Resource, **context) -> None:
         file_template = self.file_templates[resource_name]
 
-        source_match = file_template.get('source')
+        source = Path(file_template.get('source', '{target_path}').format(
+            target_path=resource.target_path.path,
+            xref_path=(resource.xref_path and resource.xref_path.path or ''),
+        )).resolve()
         target = Path(file_template['target'].format(dir=self.path, **context))
 
         # Ensure target's parent exists
         target.parent.mkdir(parents=True, exist_ok=True)
 
-        if not source_match:
-            # Target is being directly linked
-            target.unlink(missing_ok=True)
-            target.symlink_to(source)
-        elif source_match == '..':
-            # Target is the parent directory
-            target.unlink(missing_ok=True)
-            target.symlink_to(source.parent, target_is_directory=True)
-        elif source_match == '*':
-            # Target is all files within source directory
-            for source_filepath in source.iterdir():
+        if str(source)[-1] == '*':
+            for source_filepath in source.parent.iterdir():
                 subtarget = target.joinpath(source_filepath.name)
                 subtarget.unlink(missing_ok=True)
                 subtarget.symlink_to(source_filepath)
         else:
-            raise Exception(f'Invalid source match: {source_match} (must be None, "..", or "*"")')
+            target.unlink(missing_ok=True)
+            target.symlink_to(source)
