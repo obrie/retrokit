@@ -31,7 +31,9 @@ class Sample:
     # Downloads and installs the sample
     def install(self) -> None:
         logging.info(f'[{self.machine.name}] Installing sample {self.name}')
+        self.resource.check_xref()
         self.resource.install()
+        self.resource.create_xref()
 
     # Removes this sample from the filesystem
     def purge(self):
