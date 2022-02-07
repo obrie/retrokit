@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import shlex
 from pathlib import Path
 
 # Represents an external disk used by a machine
@@ -50,4 +51,4 @@ class Disk:
     # Removes this disk from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
-            print(f'rm -rf "{self.resource.target_path.path}"')
+            print(f'rm -rf {shlex.quote(self.resource.target_path.path)}')
