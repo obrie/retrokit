@@ -51,7 +51,7 @@ class ManualMetadata(ExternalMetadata):
             return
 
         # Look up what languages the user wants to allow
-        self.allowlist = self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES
+        self.allowlist = set(self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES)
 
         # Priority preferences
         self.prioritize_region_languages = self.config['languages']['prioritize_region_languages']
