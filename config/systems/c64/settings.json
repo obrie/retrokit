@@ -66,6 +66,29 @@
         }
       },
       "auth": "internetarchive"
+    },
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Commodore - 64 \\(PP\\)"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip",
+          "install": {"action": "zip_nibconv", "source_extension": "nib", "target_extension": "g64"}
+        }
+      },
+      "auth": "internetarchive"
     }
   ],
   "metadata": {
