@@ -5,5 +5,6 @@ from romkit.resources.actions.iso_to_cso import IsoToCso
 from romkit.resources.actions.seven_zip_extract import SevenZipExtract
 from romkit.resources.actions.zip_extract import ZipExtract
 from romkit.resources.actions.zip_merge import ZipMerge
+from romkit.resources.actions.zip_nibconv import ZipNibconv
 from romkit.resources.actions.zip_to_chd import ZipToChd
 from romkit.resources.actions.zip_to_cso import ZipToCso
