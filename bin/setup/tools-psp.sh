@@ -3,7 +3,10 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+setup_module_id='tools-psp'
+setup_module_desc='PSP tools for managing CSO files'
+
+depends() {
   # Install dependencies
   sudo apt install -y liblz4-dev libdeflate-dev libuv1-dev
 
@@ -28,9 +31,9 @@ install() {
   fi
 }
 
-uninstall() {
+remove() {
   sudo rm -fv /usr/local/bin/maxcso /usr/local/share/man/man1/maxcso.1 /usr/local/etc/maxcso.version
   sudo apt remove -y liblz4-dev libdeflate-dev libuv1-dev
 }
 
-"${@}"
+setup "${@}"

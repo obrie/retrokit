@@ -1,12 +1,23 @@
 #!/bin/bash
 
-install() {
+depends() {
   # Zip
   sudo apt install -y zip
 
-  # XML processing
-  sudo apt install -y python3-lxml
+  # CHDMan
+  sudo apt install -y mame-tools
 
+  # XML processing
+  sudo pip3 install lxml
+
+  # High-Performance HTTP
+  sudo pip3 install pycurl
+
+  # Torrentzip
+  __depends_trrntzip
+}
+
+__depends_trrntzip() {
   if [ ! `command -v trrntzip` ] || [ ! -f /usr/local/etc/trrntzip.version ] || [ $(git ls-remote 'https://github.com/hydrogen18/trrntzip.git' HEAD | cut -f1) != $(cat /usr/local/etc/trrntzip.version) ]; then
     # Check out
     rm -rf '/tmp/trrntzip'
@@ -27,12 +38,6 @@ install() {
   else
     echo "trrntzip is already the newest version ($(cat /usr/local/etc/trrntzip.version))"
   fi
-
-  # CHDMan
-  sudo apt install -y mame-tools
-
-  # High-Performance HTTP
-  sudo pip3 install pycurl
 }
 
 "${@}"

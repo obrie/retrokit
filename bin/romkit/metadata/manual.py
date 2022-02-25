@@ -74,7 +74,7 @@ class ManualMetadata(ExternalMetadata):
                 manuals = self.data[key]
                 for language in languages:
                     if language not in manuals or len(languages_str) < len(manuals[language]['languages']):
-                        manuals[language] = {'languages': languages_str, 'url': url, 'options': options}
+                        manuals[language] = {'name': key, 'languages': languages_str, 'url': url, 'options': options}
 
 
     def update(self, machine: Machine) -> None:

@@ -3,10 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-install() {
+setup_module_id='system-emulators'
+setup_module_desc='Emulator installation and configuration (including BIOS, defaults, and custom commands)'
+
+retropie_emulators_path="$retropie_system_config_dir/emulators.cfg"
+retropie_emulators_backup_path="$emulators_path.rk-src"
+
+build() {
   __install_emulators
-  __install_bios
-  configure
+  __download_bios_files
 }
 
 # Install emulator packages
@@ -22,38 +27,61 @@ __install_emulators() {
 }
 
 # Install BIOS files required by emulators
-__install_bios() {
+__download_bios_files() {
   local bios_dir=$(system_setting '.bios.dir')
   local base_url=$(system_setting '.bios.url')
 
   while IFS=$'\t' read -r bios_name bios_url_template; do
-    local bios_url="${bios_url_template/\{url\}/$base_url}"
+    local bios_url=$(render_template "$bios_url_template" url="$base_url")
     download "$bios_url" "$bios_dir/$bios_name"
   done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
 # Configure emulator settings
 configure() {
-  backup_file "$retropie_system_config_dir/emulators.cfg"
+  # First, restore any emulators we previously overrode
+  restore
+
+  # Back up the emulators we're going to override
+  __backup_emulator 'default'
+  while read -r emulator; do
+    __backup_emulator "$emulator"
+  done < <(crudini --get "$system_config_dir/emulators.cfg" '')
 
   # Set default emulator
   local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | .value.name // .key')
-  crudini --set "$retropie_system_config_dir/emulators.cfg" '' 'default' "\"$default_emulator\""
+  crudini --set "$retropie_emulators_path" '' 'default' "\"$default_emulator\""
 
   # Additional emulator settings
-  ini_merge "$system_config_dir/emulators.cfg" "$retropie_system_config_dir/emulators.cfg" restore=false
+  ini_merge "$system_config_dir/emulators.cfg" "$retropie_emulators_path" backup=false
+}
+
+# Backs up the given emulator configuration
+__backup_emulator() {
+  local emulator=$1
+  local cmd=$(crudini --get "$retropie_emulators_path" '' "$emulator")
+
+  crudini --set "$retropie_emulators_backup_path" '' "$emulator" "\"$cmd\""
 }
 
 restore() {
-  # Remove any custom emulator settings
-  if [ -f "$system_config_dir/emulators.cfg" ] && [ -f "$retropie_system_config_dir/emulators.cfg" ]; then
+  if [ -f "$retropie_emulators_backup_path" ]; then
+    # Reset (or delete) the emulator commands that were backed up
     while read -r emulator; do
-      crudini --del "$retropie_system_config_dir/emulators.cfg" '' "$emulator"
-    done < <(crudini --get "$system_config_dir/emulators.cfg" '')
+      local cmd=$(crudini --get "$retropie_emulators_backup_path" "$emulator")
+      if [ -z "$cmd" ]; then
+        crudini --del "$retropie_emulators_path" '' "$emulator"
+      else
+        crudini --set "$retropie_emulators_path" '' "$emulator" "$cmd"
+      fi
+    done < <(crudini --get "$retropie_emulators_backup_path" '')
+
+    # Remove the backup since we're now fully restored
+    rm "$retropie_emulators_backup_path"
   fi
 }
 
-uninstall() {
+remove() {
   # Remove bios files
   local bios_dir=$(system_setting '.bios.dir')
   while read -r bios_name; do
@@ -64,8 +92,6 @@ uninstall() {
   while read -r package; do
     uninstall_retropie_package "$package" || true
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
-
-  restore
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

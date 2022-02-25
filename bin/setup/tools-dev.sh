@@ -3,7 +3,10 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+setup_module_id='tools-dev'
+setup_module_desc='Common tools useful for testing and development'
+
+depends() {
   # Benchmarking
   sudo apt install -y sysbench
 
@@ -35,9 +38,9 @@ install() {
   fi
 }
 
-uninstall() {
+remove() {
   sudo rm -fv /usr/bin/raspi2png /etc/raspi2png.version
   sudo apt remove -y mesa-utils screen sysbench
 }
 
-"${@}"
+setup "${@}"

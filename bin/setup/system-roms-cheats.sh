@@ -3,10 +3,13 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+setup_module_id='system-roms-cheats'
+setup_module_desc='Link roms to game cheat files for libretro'
+
 cheat_database_path=${retroarch_path_defaults['cheat_database_path']}
 system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
 
-install() {
+configure() {
   # Name of the cheats for this system
   if [ -z "$(system_setting '.cheats.names')" ]; then
     echo 'No cheats configured'
@@ -18,34 +21,7 @@ install() {
 
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
-  declare -A cheat_mappings
-  while read -r cheats_name; do
-    # Location of the cheats on the filesystem
-    local source_cheats_dir="$cheat_database_path/$cheats_name"
-
-    while read -r cheat_filename; do
-      local cheat_name="${cheat_filename%.*}"
-      local key="$(normalize_rom_name "$cheat_name")"
-      local existing_mapping=${cheat_mappings["$key"]}
-
-      # Only re-map if we need to.  This prioritizes exact matches.
-      if [ -z "$existing_mapping" ]; then
-        cheat_mappings["$key"]="$cheat_name"
-        cheat_mappings["$key/source"]="$source_cheats_dir"
-
-        # In some cases, multiple ROMs are combined into a single cheat file
-        while read -r sub_cheat_name; do
-          key="$(normalize_rom_name "$sub_cheat_name")"
-          existing_mapping=${cheat_mappings["$key"]}
-
-          if [ -z "$existing_mapping" ]; then
-            cheat_mappings["$key"]="$cheat_name"
-            cheat_mappings["$key/source"]="$source_cheats_dir"
-          fi
-        done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
-      fi
-    done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
-  done < <(system_setting '.cheats.names[]')
+  __load_cheat_mappings
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
@@ -96,11 +72,47 @@ install() {
   done < <(get_core_library_names)
 }
 
-uninstall() {
+# Define mappings to make lookups easier and more reliable
+__load_cheat_mappings() {
+  declare -Ag cheat_mappings
+  while read -r cheats_name; do
+    # Location of the cheats on the filesystem
+    local source_cheats_dir="$cheat_database_path/$cheats_name"
+
+    while read -r cheat_filename; do
+      # Build a unique key to represent the rom name that we can
+      # match with our own installed roms
+      local cheat_name=${cheat_filename%.*}
+      local key=$(normalize_rom_name "$cheat_name")
+
+      # Only re-map if we need to.  This prioritizes exact matches.
+      local existing_mapping=${cheat_mappings["$key"]}
+      if [ -z "$existing_mapping" ]; then
+        cheat_mappings["$key"]="$cheat_name"
+        cheat_mappings["$key/source"]="$source_cheats_dir"
+
+        # In some cases, multiple ROMs are combined into a single cheat file,
+        # separated by " - ".  We need to map each of those individually as
+        # well.
+        while read -r sub_cheat_name; do
+          key=$(normalize_rom_name "$sub_cheat_name")
+          existing_mapping=${cheat_mappings["$key"]}
+
+          if [ -z "$existing_mapping" ]; then
+            cheat_mappings["$key"]="$cheat_name"
+            cheat_mappings["$key/source"]="$source_cheats_dir"
+          fi
+        done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
+      fi
+    done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
+  done < <(system_setting '.cheats.names[]')
+}
+
+restore() {
   # Remove cheats for each libretro core
   while read -r library_name; do
     rm -rfv "$system_cheat_database_path/$library_name"
   done < <(get_core_library_names)
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

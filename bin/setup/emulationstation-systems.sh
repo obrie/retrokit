@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+setup_module_id='emulationstation-systems'
+setup_module_desc='EmulationStation system sort order and platform/theme overrides'
+
 systems_override_config="$HOME/.emulationstation/es_systems.cfg"
 
 configure() {
@@ -52,4 +55,4 @@ restore() {
   restore_file "$systems_override_config" delete_src=true
 }
 
-"${@}"
+setup "${@}"

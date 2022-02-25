@@ -4,6 +4,9 @@ system='nds'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
+setup_module_id='system/nds/config'
+setup_module_desc='NDS emulator configuration'
+
 config_path="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
 configure() {
@@ -34,4 +37,4 @@ __restore_config() {
   fi
 }
 
-"${@}"
+setup "${@}"

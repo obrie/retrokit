@@ -3,7 +3,10 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+setup_module_id='deps'
+setup_module_desc='retrokit common system dependencies'
+
+depends() {
   # PIP
   sudo apt install -y python3-pip
 
@@ -28,10 +31,10 @@ install() {
   sudo pip3 install pillow==8.3.1
 }
 
-uninstall() {
+remove() {
   sudo rm -fv /usr/local/bin/dotenv /usr/local/etc/dotenv.version
   sudo pip3 uninstall -y crudini pillow
   sudo apt remove -y ffmpeg jq python3-pip
 }
 
-"${@}"
+setup "${@}"

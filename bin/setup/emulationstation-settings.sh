@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+setup_module_id='emulationstation-settings'
+setup_module_desc='EmulationStation configuration settings'
+
 configure() {
   stop_emulationstation
 
@@ -36,4 +39,4 @@ restore() {
   restore_file "$HOME/.emulationstation/es_settings.cfg" delete_src=true
 }
 
-"${@}"
+setup "${@}"

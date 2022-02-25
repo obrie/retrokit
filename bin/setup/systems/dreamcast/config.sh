@@ -4,6 +4,9 @@ system='dreamcast'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
+setup_module_id='system/dreamcast/config'
+setup_module_desc='Dreamcast emulator configuration'
+
 redream_dir="$retropie_system_config_dir/redream"
 redream_config_path="$redream_dir/redream.cfg"
 
@@ -21,11 +24,8 @@ configure() {
 restore() {
   __restore_config delete_src=true
 
-  # Remove overrides
-  while read -r rom_config_path; do
-    local filename=$(basename "$rom_config_path")
-    rm -fv "$redream_dir/cache/$filename"
-  done < <(find "$system_config_dir/redream" -name '*.cfg')
+  # Remove game-specific overrides
+  find "$redream_dir/cache" -name '*.cfg' -exec rm -fv "{}" \;
 }
 
 __restore_config() {
@@ -45,4 +45,4 @@ __restore_config() {
   fi
 }
 
-"${@}"
+setup "${@}"
