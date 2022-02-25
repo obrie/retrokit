@@ -92,9 +92,8 @@
     }
   ],
   "metadata": {
-    "c64_dreams": {
-      "source": "https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4/export?gid=82569470&format=csv",
-      "target": "$HOME/retrokit/tmp/c64/dreams.csv"
+    "collections": {
+      "source": "file://$HOME/retrokit/config/systems/c64/collections.json"
     },
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/c64/manuals.tsv"
