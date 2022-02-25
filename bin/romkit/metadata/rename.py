@@ -12,8 +12,8 @@ class RenameMetadata(ExternalMetadata):
 
     def load(self) -> None:
         with self.install_path.open() as file:
-            self.renames = json.load(file)
+            self.data = json.load(file)
 
     def update(self, machine: Machine) -> None:
-        if machine.name in self.renames:
-            machine.alt_name = self.renames[machine.name]
+        if machine.name in self.data:
+            machine.alt_name = self.data[machine.name]
