@@ -266,7 +266,7 @@ class Machine:
                 return cue_file
 
             # Pick the largest file as a last resort
-            return sorted(self.non_merged_roms, key=lambda file: file.size)[-1]
+            return sorted(self.non_merged_roms, key=lambda file: [file.size, file.name])[-1]
 
     # Target destination for installing this sample
     @property
