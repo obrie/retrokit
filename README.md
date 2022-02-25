@@ -92,7 +92,7 @@ This is all supported for the following systems:
 
 There are also system-specific features, including:
 
-* Automatic joystick selection for Commodore 64 via C64 Dreams spreadsheet
+* Automatic joystick selection for Commodore 64 via C64 Dreams project
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
 * Automatic filtering of runnable games for Sega Saturn
@@ -455,7 +455,7 @@ codebase.  An overview of metadata and where it comes from is described below.
 | arcade      | Languages                | No      | https://www.progettosnaps.net/                |
 | arcade      | Ratings                  | No      | https://www.progettosnaps.net/                |
 | atarijaguar | Emulator compatibility   | Yes     | https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans |
-| c64         | "Best Of" (C64 Dreams)   | No      | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4 |
+| c64         | "Best Of" (C64 Dreams)   | Yes     | https://docs.google.com/spreadsheets/d/1r6kjP_qqLgBeUzXdDtIDXv1TvoysG_7u2Tj7auJsZw4 |
 | dreamcast   | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | n64         | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
 | nds         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
@@ -733,7 +733,7 @@ retrokit what it is.  That includes:
 
 * [Roslof's compatibility list](https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/edit#gid=1985896929) for Arcade and Nintendo 64 emulator / configuration
 * [Progretto-Snaps](https://www.progettosnaps.net/) for filtering arcade roms via categories, ratings, and languages
-* [C64 Dreams](https://www.zombs-lair.com/c64-dreams) for Commodore 64 game configuration settings
+* [C64 Dreams](https://www.zombs-lair.com/c64-dreams) for Commodore 64 gamelists and configuration settings
 * [Abdessamad Derraz](https://github.com/Abdess)
 * [The Bezel Project](https://github.com/thebezelproject) for overlays
 * [ehettervik](https://github.com/ehettervik) for the pixel theme
