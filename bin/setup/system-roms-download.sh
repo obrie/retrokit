@@ -3,23 +3,11 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Clean the configuration key used for defining ROM-specific emulator options
-# 
-# Implementation pulled from retropie
-__clean_emulator_config_key() {
-  local name="$1"
-  name="${name//\//_}"
-  name="${name//[^a-zA-Z0-9_\-]/}"
-  echo "$name"
-}
+setup_module_id='system-roms-download'
+setup_module_desc='Download ROMs via romkit'
 
 # Download roms from a remote source
-install() {
-  __install_roms
-  configure
-}
-
-install_roms() {
+build() {
   local log_level
   if [ "$DEBUG" == 'true' ]; then
     log_level='DEBUG'
@@ -44,7 +32,7 @@ configure() {
   local selections_cfg=''
   while IFS=$'\t' read -r rom_name source_emulator; do
     local target_emulator=${emulators["$source_emulator/emulator"]:-$source_emulator}
-    local config_key=$(clean_emulator_config_key "${system}_${rom_name}")
+    local config_key=$(__clean_emulator_config_key "${system}_${rom_name}")
 
     # Remove it from existing selections so we know what we should delete
     # at the end of this
@@ -63,14 +51,25 @@ configure() {
   done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
 }
 
+# Clean the configuration key used for defining ROM-specific emulator options
+# 
+# Implementation pulled from retropie
+__clean_emulator_config_key() {
+  local name="$1"
+  name="${name//\//_}"
+  name="${name//[^a-zA-Z0-9_\-]/}"
+  echo "$name"
+}
+
 # Outputs the commands required to remove files no longer required by the current
 # list of roms installed
 vacuum() {
   romkit_cli vacuum
 }
 
-uninstall() {
-  echo 'No uninstall for roms'
+restore() {
+  echo 'Removing emulator selections...'
+  sed -i "/^${system}_/d"
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

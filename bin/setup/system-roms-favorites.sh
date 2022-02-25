@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+setup_module_id='system-roms-favorites'
+setup_module_desc='Manages favorites in the system gamelist'
+
 gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
@@ -51,7 +54,7 @@ __should_set_favorites() {
   fi
 }
 
-# Adds the roms with the given name as a favorite
+# Adds the rom with the given name as a favorite
 __add_favorite() {
   local name=$1
   xmlstarlet ed --inplace -s "/gameList/game[contains(path, \"/$name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
@@ -59,7 +62,7 @@ __add_favorite() {
 
 # Removes all configured favorites
 __remove_favorites() {
-  xmlstarlet ed --inplace -d "/gameList/game/favorite" "$gamelist_file"
+  xmlstarlet ed --inplace -d '/gameList/game/favorite' "$gamelist_file"
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

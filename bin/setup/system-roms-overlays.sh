@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+setup_module_id='system-roms-overlays'
+setup_module_desc='Game-specific overlays to display for libretro emulators (lightgun compatible)'
+
 # The directory to which we'll install the configurations and images
 retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
 retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
@@ -10,6 +13,7 @@ system_overlay_dir="$retroarch_overlay_dir/$system"
 
 # Overlay support
 supports_vertical_overlays=$(system_setting 'select(.overlays) | .overlays.repos[] | select(.vertical) | [0] | true')
+enable_lightgun_borders=$(setting '.overlays.lightgun_border.enabled')
 
 # This installs individual overlays from The Bezel Project.  We use this instead of
 # The Bezel Project's installer for two primary reasons:
@@ -21,7 +25,7 @@ supports_vertical_overlays=$(system_setting 'select(.overlays) | .overlays.repos
 # Yes, this takes longer.  However, the pros far outweigh the cons.  We also don't
 # clone so that we don't have to pull down the entire repo any time there's a new
 # ROM added.
-install() {
+configure() {
   # Check if we're actually installing overlays
   if [ -z "$(system_setting '.overlays.repos')" ]; then
     echo 'No overlays configured'
@@ -60,13 +64,13 @@ install() {
 
       # Install overlay for either a single-disc game or, if configured, individual discs
       if has_disc_config "$rom_name"; then
-        __install_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation"
+        __create_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation"
       fi
 
       # Install overlay for the playlist (if applicable)
       local playlist_name=$(get_playlist_name "$rom_name")
       if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-        __install_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation"
+        __create_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation"
       fi
 
       continue
@@ -77,13 +81,13 @@ install() {
 
     # Install overlay for either a single-disc game or, if configured, individual discs
     if has_disc_config "$rom_name"; then
-      __install_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
+      __create_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
     fi
 
     # Install overlay for the playlist (if applicable)
     local playlist_name=$(get_playlist_name "$rom_name")
     if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-      __install_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
+      __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
 
@@ -144,7 +148,7 @@ __install_overlay() {
   download "$url" "$system_overlay_dir/$image_filename"
 
   # Check if this is a lightgun game that needs special processing
-  if [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+  if [ "$enable_lightgun_borders" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
     outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$group_title-lightgun.png"
 
     # Track the old file and update it to the lightgun version
@@ -161,7 +165,10 @@ __install_overlay() {
 
 # Install a retroarch configuration for the given rom to one of the default
 # overlays (horizontal, vertical, or lightgun)
-__install_default_retroarch_config() {
+# 
+# A configuration will only be created if the overlay is vertical or lightgun.
+# Otherwise, the default for the system will be automatically used by retroarch.
+__create_default_retroarch_config() {
   local rom_name=$1
   local emulator=$2
   local group_title=$3
@@ -169,15 +176,15 @@ __install_default_retroarch_config() {
 
   if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
     # Vertical format
-    __install_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-vertical.cfg"
-  elif [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+    __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-vertical.cfg"
+  elif [ "$enable_lightgun_borders" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
     # Lightgun format
-    __install_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-lightgun.cfg"
+    __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-lightgun.cfg"
   fi
 }
 
 # Installs a retroarch configuration for the given rom to a specific overlay configuration
-__install_retroarch_config() {
+__create_retroarch_config() {
   local rom_name=$1
   local emulator=$2
   local overlay_config_path=$3
@@ -209,12 +216,36 @@ __remove_unused_configs() {
   # Remove old, unused system overlay configs
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
-  done < <(find "$system_overlay_dir" -name '*.cfg' -o -name '*.png')
+  done < <(find "$system_overlay_dir" -name '*.cfg')
 }
 
-uninstall() {
-  find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv "{}" \;
+restore() {
+  # Assumption is that ROM cfg files under the emulator directory are *only*
+  # for overlay configurations
+  while read -r library_name; do
+    [ ! -d "$retroarch_config_dir/$library_name" ] && continue
+
+    find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv "{}" \;
+  done < <(get_core_library_names)
+}
+
+vacuum() {
+  # Identify valid overlay images
+  declare -Ag installed_images
+  while read -r group_title; do
+    installed_images["$system_overlay_dir/$group_title.png"]=1
+    installed_images["$system_overlay_dir/$group_title-lightgun.png"]=1
+  done < <(romkit_cache_list | jq -r '.parent.title // .title')
+
+  # Generate rm commands for unused images
+  while read -r path; do
+    [ "${installed_images["$path"]}" ] || echo "rm -v $(printf '%q' "$path")"
+  done < <(find "$system_overlay_dir" -name '*.png')
+}
+
+remove() {
+  # Remove all overlay images
   rm -rfv "$system_overlay_dir"
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

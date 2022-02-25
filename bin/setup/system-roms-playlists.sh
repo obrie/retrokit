@@ -3,14 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Install playlists for multi-disc roms
-install() {
+setup_module_id='system-roms-playlists'
+setup_module_desc='Configure playlists for emulators that support them'
+
+# Configure playlists for multi-disc roms
+configure() {
   if [ ! -d "$HOME/RetroPie/roms/$system" ]; then
     echo 'No ROMs to install playlists for'
     return
-  fi
-
-  if ! supports_playlists; then
+  elif ! supports_playlists; then
     echo 'Playlists not supported'
     return
   fi
@@ -32,8 +33,9 @@ install() {
       echo "$rom_path" >> "$playlist_path"
       installed_files["$playlist_path"]=1
 
-      # Remove from the filesystem (safety guard in place to ensure it's a
-      # symlink)
+      # Remove the disc from being visible in the system's gamelist since it's now
+      # represented by the playlist.  We have a safety guard in place to ensure
+      # it's a symlink.
       if ! show_discs && [ -L "$rom_path" ]; then
         backup_file "$rom_path"
         rm -v "$rom_path"
@@ -42,7 +44,7 @@ install() {
   done < <(romkit_cache_list | jq -r 'select(.disc != .title) | .name' | sort)
 }
 
-uninstall() {
+restore() {
   # Restore previously deleted ROMs
   while read -r backup_path; do
     restore_file "${backup_path//.rk-src/}" delete_src=true
@@ -58,4 +60,4 @@ __find_in_directories() {
   system_setting '.roms.dirs[] | .path' | xargs -I{} find "{}" -mindepth 1 -maxdepth 1 -name "$1" 2>/dev/null
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

@@ -3,18 +3,20 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+setup_module_id='system-roms-scrape'
+setup_module_desc='Scrapes media / images / text via skyscraper, rebuilds the gamelist, and adjusts for multi-disc games'
+
 aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
 
-install() {
+configure() {
   __load_rom_data
   __scrape_sources
   __add_disc_numbers
   __build_gamelist
 
-  # Reinstall the favorites for this system
-  if [ -z "$SKIP_DEPS" ] && has_setupmodule 'system-roms-favorites'; then
-    "$bin_dir/setup.sh" install system-roms-favorites "$system"
-  fi
+  # Reinstall the favorites for this system since the gamelist was just
+  # re-created by skyscraper
+  after_hook configure system-roms-favorites "$system"
 }
 
 # Load data about the roms being installed so that we can potentially use it
@@ -48,7 +50,7 @@ __scrape_source() {
   stop_emulationstation
 
   # Scrape for new roms we've never attempted before
-  scrape -s "$source" --flags onlymissing
+  __scrape -s "$source" --flags onlymissing
 
   # Check if there are previously scraped roms with missing data / media
   build_missing_reports
@@ -66,7 +68,7 @@ __scrape_source() {
     # Scrape with custom query (if one has been provided for this specific rom)
     local custom_query=$(system_setting ".scraper .$source .\"$rom_name\"" || true)
     if [ -n "$custom_query" ]; then
-      scrape -s "$source" --query "$custom_query" "$rom_path"
+      __scrape -s "$source" --query "$custom_query" "$rom_path"
       if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
@@ -83,7 +85,7 @@ __scrape_source() {
       fi
 
       # Scrape with the CRC
-      scrape -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
+      __scrape -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
       if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
@@ -102,7 +104,7 @@ __scrape_source() {
   if [ "$run_final_check" == 'true' ]; then
     build_missing_reports
     if [ -s "$aggregate_report_file" ]; then
-      scrape -s "$source" --fromfile "$aggregate_report_file"
+      __scrape -s "$source" --fromfile "$aggregate_report_file"
     fi
   fi
 }
@@ -127,7 +129,7 @@ __build_missing_reports() {
   # indicators of a prior issue:
   # * Missing title means we likely missed all the textual content
   # * Missing screenshot means we likely missed the media content
-  scrape --cache report:missing=title,screenshot
+  __scrape --cache report:missing=title,screenshot
 
   # Generate aggregate list of roms
   cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
@@ -207,8 +209,4 @@ vacuum_media() {
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }
 
-uninstall() {
-  echo 'No uninstall for scraping'
-}
-
-"$1" "${@:3}"
+setup "$1" "${@:3}"

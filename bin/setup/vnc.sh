@@ -3,10 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-install() {
+setup_module_id='vnc'
+setup_module_desc='Remote access software via VNC protocol'
+
+depends() {
   # Install dependencies
   sudo apt install -y libvncserver-dev libconfig++-dev
+}
 
+build() {
   local version="$(cat /etc/dispmanx_vncserver.version 2>/dev/null || true)"
   if [ ! `command -v dispmanx_vncserver` ] || has_newer_commit https://github.com/patrikolausson/dispmanx_vnc "$version"; then
     # Check out
@@ -33,8 +38,6 @@ install() {
   else
     echo "dispmanx_vnc already the newest version ($version)"
   fi
-
-  configure
 }
 
 configure() {
@@ -49,7 +52,7 @@ configure() {
   sudo systemctl restart dispmanx_vncserver
 }
 
-uninstall() {
+remove() {
   sudo systemctl stop dispmanx_vncserver || true
   sudo systemctl disable dispmanx_vncserver || true
 
@@ -64,4 +67,4 @@ uninstall() {
     /usr/bin/dispmanx_vncserver
 }
 
-"${@}"
+setup "${@}"

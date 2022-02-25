@@ -3,15 +3,13 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
+setup_module_id='hardware/controllers'
+setup_module_desc='Controller autoconfiguration'
+
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 
-install() {
-  __install_configscripts
-  configure
-}
-
-# Add autoconfig scripts
-__install_configscripts() {
+build() {
+  # Add autoconfig scripts
   while read -r autoconfig_name; do
     sudo cp -v "$bin_dir/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
@@ -19,6 +17,7 @@ __install_configscripts() {
 
 # Run RetroPie autoconfig for each controller input
 configure() {
+  # Always update to the latest game controller database
   local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
   download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
 
@@ -93,6 +92,7 @@ _EOF_
       esac
     fi
 
+    # Determine the corresponding ES input name
     case "$sdl_name" in
         dpup)
             input_names=(up)
@@ -139,6 +139,7 @@ _EOF_
     esac
 
     if [ -z "$input_names" ]; then
+      # Nothing corresponds -- just skip it
       continue
     fi
 
@@ -146,15 +147,18 @@ _EOF_
     local input_type=''
     local input_id=''
     if [ "$sdl_type" == 'b' ]; then
+      # Button
       input_type='button'
       input_id=$sdl_value
       input_values=(1)
     elif [ "$sdl_type" == 'h' ]; then
+      # HAT
       local hat_parts=(${sdl_value//./ })
       input_type='hat'
       input_id=${hat_parts[0]}
       input_values=(${hat_parts[1]})
     elif [ "$sdl_type" == 'a' ]; then
+      # Analog
       input_type='axis'
       input_id=$sdl_value
     fi
@@ -166,6 +170,7 @@ _EOF_
         local input_value=${input_values[i]}
         echo "    <input name=\"$input_name\" type=\"$input_type\" id=\"$input_id\" value=\"$input_value\" />" >> "$file"
 
+        # Check if input is configured as the hotkey
         if [ "$input_name" == "$hotkey" ]; then
           echo "    <input name=\"hotkeyenable\" type=\"$input_type\" id=\"$input_id\" value=\"$input_value\" />" >> "$file"
         fi
@@ -185,13 +190,11 @@ restore() {
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
 }
 
-uninstall() {
-  restore
-
+remove() {
   # Remove autoconfig scripts
   while read -r autoconfig_name; do
     sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
 
-"${@}"
+setup "${@}"

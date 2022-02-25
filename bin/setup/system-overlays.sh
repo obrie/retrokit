@@ -3,12 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
+setup_module_id='system-overlays'
+setup_module_desc='System-specific default overlays to display for libretro emulators (lightgun compatible)'
+
 retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
 
-install() {
+configure() {
   if [ $(system_setting '.overlays | has("repos")') == 'false' ]; then
     echo 'No overlays configured'
-    uninstall
+    restore
     return
   fi
 
@@ -16,13 +19,13 @@ install() {
     branch=${branch:-master}
     local base_url="https://github.com/$repo/raw/$branch"
 
-    # Install default overlay configuration
+    # Install default (horizontal) overlay configuration
     if [ -n "$default_image_path" ]; then
       download "$base_url/$default_image_path" "$retroarch_overlay_dir/$system.png"
       create_overlay_config "$retroarch_overlay_dir/$system.cfg" "$system.png"
 
       # For systems that have lightgun games, create a lightgun-specific version
-      if [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ] && grep -Eq "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv"; then
+      if __enable_lightgun_borders && __has_lightgun_titles; then
         outline_overlay_image "$retroarch_overlay_dir/$system.png" "$retroarch_overlay_dir/$system-lightgun.png"
         create_overlay_config "$retroarch_overlay_dir/$system-lightgun.cfg" "$system-lightgun.png"
       fi
@@ -37,13 +40,28 @@ install() {
   done < <(system_setting '.overlays.repos[] | [.repo, .branch, .default, .vertical] | join("»")')
 }
 
-uninstall() {
-  rm -fv "$retroarch_overlay_dir/$system.cfg"\
+# Are lightgun borders enabled for this system?
+__enable_lightgun_borders() {
+  [ "$(setting '.overlays.lightgun_border.enabled')" == 'true' ]
+}
+
+# Does this system have lightgun games to play?
+__has_lightgun_titles() {
+  grep -Eq "^$system"$'\t' "$config_dir/emulationstation/collections/custom-lightguns.tsv"
+}
+
+restore() {
+  rm -fv \
+    "$retroarch_overlay_dir/$system.cfg" \
+    "$retroarch_overlay_dir/$system-vertical.cfg" \
+    "$retroarch_overlay_dir/$system-lightgun.cfg"
+}
+
+remove() {
+  rm -fv \
     "$retroarch_overlay_dir/$system.png"\
-    "$retroarch_overlay_dir/$system-vertical.cfg"\
     "$retroarch_overlay_dir/$system-vertical.png" \
-    "$retroarch_overlay_dir/$system-lightgun.cfg" \
     "$retroarch_overlay_dir/$system-lightgun.png"
 }
 
-"$1" "${@:3}"
+setup "$1" "${@:3}"

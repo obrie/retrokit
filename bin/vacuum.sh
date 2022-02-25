@@ -34,6 +34,7 @@ vacuum_all() {
   vacuum_roms "$@"
   vacuum_manuals "$@"
   vacuum_media "$@"
+  vacuum_overlays "$@"
 }
 
 vacuum_roms() {
@@ -49,6 +50,11 @@ vacuum_manuals() {
 vacuum_media() {
   local system=$1
   $bin_dir/setup.sh vacuum system-roms-scrape "$system"
+}
+
+vacuum_overlays() {
+  local system=$1
+  $bin_dir/setup.sh vacuum system-roms-overlays "$system"
 }
 
 if [[ $# -lt 1 ]]; then

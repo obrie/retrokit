@@ -3,8 +3,8 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-# Tracks the epoch when a domain was last downloaded from
-declare -A domain_timestamps
+setup_module_id='system-roms-manuals'
+setup_module_desc='Downloads PDF manuals for viewing through manualkit'
 
 # The minimum amount of seconds to require between when a previous download
 # completes from a given domain and when a new one starts.
@@ -37,6 +37,9 @@ declare -A TESSERACT_LANGUAGES=(
   [zh]=chi_sim
 )
 
+# Tracks the epoch when a domain was last downloaded from
+declare -A domain_timestamps
+
 # Common settings
 base_path_template=$(setting '.manuals.paths.base')
 download_path_template=$(setting '.manuals.paths.download')
@@ -45,7 +48,7 @@ postprocess_path_template=$(setting '.manuals.paths.postprocess')
 install_path_template=$(setting '.manuals.paths.install')
 archive_url_template=$(setting '.manuals.archive.url')
 
-install() {
+configure() {
   # Ensure the system has manuals
   if [ ! -f "$system_config_dir/manuals.tsv" ]; then
     echo 'No manuals configured'
@@ -132,9 +135,9 @@ install() {
 __list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\2\3/'
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\2\3/'
   else
-    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .manual .languages, .manual .url, .manual .options] | @tsv'
+    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .manual .name, .manual .languages, .manual .url, .manual .options] | @tsv'
   fi
 }
 
@@ -146,14 +149,16 @@ __build_manual() {
   # Romkit info
   local rom_name=$2
   local parent_title=$3
-  local manual_languages=$4
-  local manual_url=$5
-  local postprocess_options=$6
+  local manual_name=$4
+  local manual_languages=$5
+  local manual_url=$6
+  local postprocess_options=$7
 
   # Defaults
   manual_ref=(
     [rom_name]="$rom_name"
     [parent_title]="$parent_title"
+    [name]="$manual_name"
     [languages]="$manual_languages"
     [format]=
     [pages]=
@@ -187,8 +192,9 @@ __build_manual() {
     "${base_template_variables[@]}"
     base="${manual_ref['base_path']}"
     parent_title="$parent_title"
+    name="$manual_name"
     languages="$manual_languages"
-    name="$rom_name"
+    rom_name="$rom_name"
     extension="${manual_ref['extension']}"
   )
   manual_ref['download_path']=$(render_template "$download_path_template" "${template_variables[@]}")
@@ -237,6 +243,7 @@ __download_pdf() {
 __download_with_sleep() {
   local url=$1
   local domain=$(echo "$url" | cut -d '/' -f 3)
+  domain=${domain:-localhost}
   local last_downloaded_at=${domain_timestamps["$domain"]}
 
   if [ -n "$last_downloaded_at" ]; then
@@ -253,7 +260,7 @@ __download_with_sleep() {
   download "$url" "${@:2}" || download_status=$?
 
   # Track the last time this domain was downloaded from
-  if [[ "$domain" != *archive.org* ]]; then
+  if [[ "$domain" != *archive.org* ]] && [ "$domain" != 'localhost' ]; then
     domain_timestamps["$domain"]=$(date +%s)
   fi
 
@@ -294,7 +301,7 @@ __convert_to_pdf() {
     unrar e -idq "$source_path" "$extract_path/"
     __combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
-  elif [[ "$extension" =~ ^(png|jpe?g)$ ]]; then
+  elif [[ "$extension" =~ ^(png|jpe?g|bmp)$ ]]; then
     __combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
   elif [[ "$extension" =~ ^(docx?)$ ]]; then
     unoconv -f pdf -o "$target_path" "$source_path"
@@ -447,7 +454,7 @@ __ocr_pdf() {
   local ocr_languages_csv=$(IFS=+ ; echo "${ocr_languages[*]}")
 
   local ocr_exit_code=0
-  ocrmypdf -q -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 "$pdf_path" "$staging_path" || ocr_exit_code=$?
+  ocrmypdf -q -l "$ocr_languages_csv" --output-type pdf --skip-text --optimize 0 --tesseract-timeout 1200 --skip-big 250 "$pdf_path" "$staging_path" || ocr_exit_code=$?
 
   if [ -f "$staging_path" ]; then
     if [ $ocr_exit_code -ne 0 ]; then
@@ -677,7 +684,7 @@ __compress_pdf() {
     local postscript_path="$tmp_ephemeral_dir/postprocess-compress.ps"
     echo "$postscript" > "$postscript_path"
 
-    if gs_exec "${gs_args[@]}" \
+    if __gs_exec "${gs_args[@]}" \
         -sOutputFile="$staging_path" \
         -dColorImageDownsampleThreshold=$downsample_threshold -dGrayImageDownsampleThreshold=$downsample_threshold -dMonoImageDownsampleThreshold=$downsample_threshold \
         -dColorImageDownsampleType=/Bicubic -dGrayImageDownsampleType=/Bicubic \
@@ -704,7 +711,7 @@ __compress_pdf() {
 }
 
 # Executes the `gs` command with standard defaults built-in
-gs_exec() {
+__gs_exec() {
   local common_args=(
     -sDEVICE=pdfwrite
     -dCompatibilityLevel=1.4
@@ -766,9 +773,4 @@ vacuum() {
   done < <(find "${manual['base_path']}" -not -type d)
 }
 
-uninstall() {
-  local base_path=$(render_template "$(setting '.manuals.paths.base')" system="$system")
-  rm -rfv "$base_path"
-}
-
-"$1" "${@:3}"
+setup "$1" "${@:3}"

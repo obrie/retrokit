@@ -3,15 +3,14 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+setup_module_id='manulakit'
+setup_module_desc='manualkit install and configuration for viewing game manuals'
+
 install_dir='/opt/retropie/supplementary/manualkit'
+ghostscript_version=9.55.0
 
-install() {
-  "$bin_dir/manualkit/setup.sh" install
-
-  sudo mkdir -p "$install_dir"
-  sudo rsync -av "$bin_dir/manualkit/" "$install_dir/" --delete
-
-  cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
+depends() {
+  "$bin_dir/manualkit/setup.sh" depends
 
   # Convert txt/html to pdf
   sudo apt install -y chromium
@@ -47,7 +46,6 @@ install() {
     tesseract-ocr-swe
 
   # Install newer version of ghostscript that can handle certain jpx/jbig2 images
-  ghostscript_version=9.55.0
   if [ "$(gs --version)" != "$ghostscript_version" ]; then
     # Download
     mkdir "$tmp_ephemeral_dir/ghostscript"
@@ -65,12 +63,22 @@ install() {
   fi
 }
 
-uninstall() {
+build() {
+  # Copy manualkit to the retropie install path so that nothing depends
+  # on retrokit being on the system
+  sudo mkdir -p "$install_dir"
+  sudo rsync -av "$bin_dir/manualkit/" "$install_dir/" --delete
+}
+
+configure() {
+  cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
+}
+
+remove() {
   rm -rfv "$install_dir" '/opt/retropie/configs/all/manualkit.conf'
 
+  # Only remove python modules uniquely used by manualkit
   sudo pip3 uninstall -y \
-    evdev \
-    pyudev \
     psutil \
     PyMuPDF \
     ocrmypdf
@@ -98,7 +106,7 @@ uninstall() {
     tesseract-ocr-spa \
     tesseract-ocr-swe
 
-  sudo rm -rf /usr/local/share/ghostscript
+  sudo rm -rfv /usr/local/share/ghostscript
 }
 
-"${@}"
+setup "${@}"

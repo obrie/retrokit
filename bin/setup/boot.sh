@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+setup_module_id='boot'
+setup_module_desc='BIOS / Kernel configuration'
+
 configure() {
   __configure_bios
   __configure_kernel
@@ -65,4 +68,4 @@ restore() {
   restore_file '/boot/cmdline.txt' as_sudo=true delete_src=true
 }
 
-"${@}"
+setup "${@}"

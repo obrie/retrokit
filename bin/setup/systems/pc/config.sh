@@ -4,11 +4,12 @@ system='pc'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-install() {
+setup_module_id='system/pc/config'
+setup_module_desc='PC emulator configuration'
+
+depends() {
   # Sound driver
   sudo apt install -y fluid-soundfont-gm
-
-  configure
 }
 
 configure() {
@@ -21,9 +22,8 @@ restore() {
   restore_file '/opt/retropie/configs/pc/dosbox-SVN.conf' delete_src=true
 }
 
-uninstall() {
+remove() {
   sudo apt remove -y fluid-soundfont-gm
-  restore
 }
 
-"${@}"
+setup "${@}"

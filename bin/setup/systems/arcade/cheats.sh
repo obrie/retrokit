@@ -4,7 +4,10 @@ system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-install() {
+setup_module_id='systems/arcade/cheats'
+setup_module_desc='Cheats for Arcade systems'
+
+build() {
   # Cheats: FBNeo
   if has_emulator 'lr-fbneo'; then
     mkdir -p "$HOME/RetroPie/BIOS/fbneo/cheats"
@@ -27,6 +30,7 @@ install() {
     download 'https://github.com/libretro/mame2016-libretro/raw/master/metadata/cheat.7z' "$HOME/RetroPie/BIOS/mame2016/cheat.7z"
   fi
 
+  # Cheats: AdvMAME
   if has_emulator 'advmame'; then
     download 'https://github.com/amadvance/advancemame/raw/master/support/cheat.dat' "$HOME/RetroPie/BIOS/advmame/cheat.dat"
   fi
@@ -40,13 +44,14 @@ install() {
   fi
 }
 
-uninstall() {
-  rm -fv "$HOME/RetroPie/BIOS/mame/cheats.7z"\
-    "$HOME/RetroPie/BIOS/advmame/cheat.dat"\
-    "$HOME/RetroPie/BIOS/mame2016/cheat.7z"\
-    "$HOME/RetroPie/BIOS/mame2015/cheat.7z"\
-    "$HOME/RetroPie/BIOS/mame2010/cheat.zip"
-  rm -rfv "$HOME/RetroPie/BIOS/fbneo/cheats/"
+remove() {
+  rm -fv \
+    "$HOME/RetroPie/BIOS/advmame/cheat.dat" \
+    "$HOME/RetroPie/BIOS/fbneo/cheats/"\
+    "$HOME/RetroPie/BIOS/mame/cheats.7z" \
+    "$HOME/RetroPie/BIOS/mame2010/cheat.zip" \
+    "$HOME/RetroPie/BIOS/mame2015/cheat.7z" \
+    "$HOME/RetroPie/BIOS/mame2016/cheat.7z"
 }
 
-"${@}"
+setup "${@}"

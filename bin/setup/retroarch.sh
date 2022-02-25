@@ -3,6 +3,9 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+setup_module_id='retroarch'
+setup_module_desc='Retroarch and core configuration options'
+
 retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
 retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 
@@ -34,4 +37,4 @@ __restore_config() {
   fi
 }
 
-"${@}"
+setup "${@}"
