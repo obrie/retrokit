@@ -18,6 +18,7 @@ class Machine:
     DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
+    NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&]+')
 
     def __init__(self,
         romset: ROMSet,
@@ -203,6 +204,11 @@ class Machine:
     def disc_title(self) -> str:
         return self.title_from(self.name, disc=True)
 
+    # Machine title, normalized (no extension, no flags except disc number), e.g. chronocrossdisc1
+    @property
+    def normalized_disc_title(self) -> str:
+        return self.title_from(self.name, disc=True, normalize=True)
+
     # Parent machine title (no extension, no flags except for disc name)
     @property
     def parent_title(self) -> Optional[str]:
@@ -213,15 +219,23 @@ class Machine:
     def parent_disc_title(self) -> Optional[str]:
         return self.parent_name and self.title_from(self.parent_name, disc=True)
 
+    # Parent machine title, normalized (no extension, no flags except for disc name)
+    @property
+    def parent_normalized_disc_title(self) -> Optional[str]:
+        return self.parent_name and self.title_from(self.parent_name, disc=True, normalize=True)
+
     # Builds a title from the given name
     @classmethod
-    def title_from(cls, name: str, disc: bool = False) -> str:
+    def title_from(cls, name: str, disc: bool = False, normalize: bool = False) -> str:
         title = cls.TITLE_REGEX.search(name).group().strip()
 
         if disc:
             disc_match = cls.DISC_REGEX.search(name)
             if disc_match:
                 title = f'{title} {disc_match.group().replace("0", "")}'
+
+        if normalize:
+            title = cls.NORMALIZED_TITLE_REGEX.sub('', title.lower())
 
         return title
 
