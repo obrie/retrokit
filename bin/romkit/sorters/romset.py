@@ -7,4 +7,4 @@ class RomsetSorter(SubstringSorter):
     name = 'romsets'
 
     def value(self, machine: Machine) -> str:
-        return machine.flags_str
+        return machine.romset.name
