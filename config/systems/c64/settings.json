@@ -84,8 +84,7 @@
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip",
-          "install": {"action": "zip_nibconv", "source_extension": "nib", "target_extension": "g64"}
+          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
