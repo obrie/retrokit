@@ -18,7 +18,7 @@ class Machine:
     DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
-    NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&]+')
+    NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
 
     def __init__(self,
         romset: ROMSet,
