@@ -51,7 +51,7 @@ class ManualMetadata(ExternalMetadata):
             return
 
         # Look up what languages the user wants to allow
-        self.allowlist = set(self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES)
+        self.allowlist = self.config['languages'].get('allowlist') or self.ALL_LANGUAGE_CODES
 
         # Priority preferences
         self.prioritize_region_languages = self.config['languages']['prioritize_region_languages']
@@ -69,7 +69,7 @@ class ManualMetadata(ExternalMetadata):
                 options = row[3] if len(row) > 3 else None
 
                 if key not in self.data:
-                    self.data[key] = {}
+                    self.set_data(key, {})
 
                 manuals = self.data[key]
                 for language in languages:
@@ -81,8 +81,7 @@ class ManualMetadata(ExternalMetadata):
         if not self.install_path:
             return
 
-        manuals = self.data.get(machine.parent_title or machine.title)
-
+        manuals = self.get_data(machine)
         if manuals:
             # Use a dict, so we get fast lookups and ordered insertions
             candidate_languages = {}

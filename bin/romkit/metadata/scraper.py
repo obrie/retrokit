@@ -12,14 +12,13 @@ class ScraperMetadata(ExternalMetadata):
 
     def load(self) -> None:
         with self.install_path.open() as file:
-            self.metadata = json.load(file)
+            for key, metadata in json.load(file).items():
+                self.set_data(key, metadata)
 
     def update(self, machine: Machine) -> None:
-        # We look at both self and parent just in case there's an override for
-        # a clone or the parent/clone hierarchy has changed
-        data = self.metadata.get(machine.title) or self.metadata.get(machine.parent_title)
-        if data:
-            if 'genres' in data:
-                machine.genres.update(data['genres'])
+        metadata = self.get_data(machine)
+        if metadata:
+            if 'genres' in metadata:
+                machine.genres.update(metadata['genres'])
 
-            machine.rating = data.get('rating')
+            machine.rating = metadata.get('rating')

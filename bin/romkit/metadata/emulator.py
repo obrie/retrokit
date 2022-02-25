@@ -21,9 +21,8 @@ class EmulatorMetadata(ExternalMetadata):
         self.column_rating = self.config.get('column_rating', 2)
         self.delimiter = self.config.get('delimiter', '\t')
 
-        self.data = {}
         for rom_key, emulator in self.config.get('overrides', {}).items():
-            self.data[rom_key] = {'emulator': emulator, 'rating': None}
+            self.set_data(rom_key, {'emulator': emulator, 'rating': None})
 
         # User may have just specified overrides -- in that case, there's
         # nothing left to load/process
@@ -39,7 +38,7 @@ class EmulatorMetadata(ExternalMetadata):
 
                 rom_key = rom_data.pop('rom')
                 if rom_key not in self.data:
-                    self.data[rom_key] = rom_data
+                    self.set_data(rom_key, rom_data)
                 else:
                     existing = self.data[rom_key]
                     if not existing['emulator'] and rom_data['emulator']:
@@ -59,13 +58,7 @@ class EmulatorMetadata(ExternalMetadata):
         }
 
     def update(self, machine: Machine) -> None:
-        if not hasattr(self, 'key'):
-            self.key = self.config.get('key', 'title')
-
-        machine_key = getattr(machine, self.key)
-        parent_key = getattr(machine, f'parent_{self.key}')
-
-        emulator_data = self.data.get(machine_key) or self.data.get(parent_key)
+        emulator_data = self.get_data(machine)
         if emulator_data:
             if emulator_data['emulator']:
                 machine.emulator = emulator_data['emulator']

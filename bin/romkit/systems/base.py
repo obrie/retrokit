@@ -118,7 +118,7 @@ class BaseSystem:
                     # We don't want to rely on the group name because (a) we don't always
                     # have a Parent/Clone relationship map and (b) the flags are
                     # less stable.
-                    group = machine.parent_normalized_disc_title or machine.normalized_disc_title
+                    group = Machine.normalize(machine.parent_disc_title or machine.disc_title)
 
                     # Force the machine to be installed if it was allowed by an override
                     if allow_reason == FilterReason.OVERRIDE:
