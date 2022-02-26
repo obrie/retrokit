@@ -169,6 +169,7 @@ class Scraper:
         # For now, though, let skyscraper do the API integration work
         # instead of us.  Maybe we can get skyscraper to allow querying
         # without doing an upfront API request for the user's limits.
+        print(f"romnom: {romnom}, crc: {crc}, primary_rom: {primary_rom.rom_name}")
         output = subprocess.run([
             '/opt/retropie/supplementary/skyscraper/Skyscraper',
             '-p', self.system.name,
@@ -184,10 +185,10 @@ class Scraper:
         ], check=True, capture_output=True).stdout.decode()
 
         if 'found! :)' not in output and re.search(self.ERROR_PATTERN, output):
-            print(f'[{machine.name}] Found')
+            print(f'[{machine.name}] Not found')
             self.failed_scrapes.add(machine.name)
         else:
-            print(f'[{machine.name}] Not found')
+            print(f'[{machine.name}] Found')
 
     # Build an emulationstation gamelist.xml that we can parse
     def build_gamelist(self) -> None:
