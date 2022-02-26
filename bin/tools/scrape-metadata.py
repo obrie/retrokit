@@ -169,7 +169,6 @@ class Scraper:
         # For now, though, let skyscraper do the API integration work
         # instead of us.  Maybe we can get skyscraper to allow querying
         # without doing an upfront API request for the user's limits.
-        print(f"romnom: {romnom}, crc: {crc}, primary_rom: {primary_rom.rom_name}")
         output = subprocess.run([
             '/opt/retropie/supplementary/skyscraper/Skyscraper',
             '-p', self.system.name,
