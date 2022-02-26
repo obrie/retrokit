@@ -47,7 +47,7 @@
   },
   "romsets": [
     {
-      "name": "nointro",
+      "name": "nointro-turbografx",
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -71,7 +71,7 @@
       "emulator": "lr-beetle-pce-fast"
     },
     {
-      "name": "nointro",
+      "name": "nointro-supergrafx",
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
