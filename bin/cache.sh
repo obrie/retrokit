@@ -59,7 +59,7 @@ sync_system_nointro_dats() {
     else
       echo "[WARN] No dat file found for $system"
     fi
-  done < <(jq -r 'select(.romsets) | .romsets[] | select(.name == "nointro") | .resources.dat.source' "$app_dir/config/systems/$system/settings.json")
+  done < <(jq -r 'select(.romsets) | .romsets[] | select(.name | test("nointro")) | .resources.dat.source' "$app_dir/config/systems/$system/settings.json")
 }
 
 sync_system_metadata() {
