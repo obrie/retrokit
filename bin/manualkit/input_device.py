@@ -2,7 +2,7 @@ import asyncio
 import evdev
 import logging
 import traceback
-from datetime import datetime
+from datetime import datetime, timedelta
 from enum import Enum
 from evdev.events import KeyEvent
 from pathlib import Path
@@ -20,6 +20,13 @@ class InputType(Enum):
         self.type_name = type_name
         self.retroarch_codes = retroarch_codes
 
+# Represents a callback to invoke when a given code is encountered
+class Handler:
+    def __init__(self, input_filter: dict, callback: Callable, grabbed: bool) -> None:
+        self.input_filter = input_filter
+        self.callback = callback
+        self.grabbed = grabbed
+
 # Represents an evdev device that we're listening for events from
 # 
 # TODO: Can we / should we move from udev to sdl2?
@@ -32,60 +39,43 @@ class InputDevice():
         dev_device: evdev.InputDevice,
         input_type: InputType,
         hotkey: Optional[str],
-        toggle_input: str,
-        next_input: str,
-        prev_input: str,
-        on_toggle: Callable,
-        on_next: Callable,
-        on_prev: Callable,
         repeat_delay: float,
         repeat_interval: float,
         repeat_turbo_wait: float,
-        repeat_turbo_skip: int,
     ) -> None:
         self.dev_device = dev_device
+        self.input_type = input_type
 
-        # Callbacks
-        self.on_toggle = on_toggle
-        self.on_next = on_next
-        self.on_prev = on_prev
+        self.grabbed = False
+        self.hotkey = hotkey
+        self.handlers = {}
 
         # asyncio tasks
         self.event_reader_task = None
         self.repeater_task = None
         self.repeat_delay = repeat_delay
         self.repeat_interval = repeat_interval
-        self.repeat_turbo_wait = repeat_turbo_wait
-        self.repeat_turbo_skip = repeat_turbo_skip
-
-        # Whether to watch for navigation input events (only occurs when
-        # inputs have been grabbed to this process)
-        self.watch_navigation = False
-
-        # Adjust inputs for configparser issues
-        if hotkey:
-            hotkey = hotkey.strip('"')
-        toggle_input = toggle_input.strip('"')
-        next_input = next_input.strip('"')
-        prev_input = prev_input.strip('"')
-
-        # Define expected evdev inputs
-        retroarch_codes = input_type.retroarch_codes(dev_device)
-
-        self.toggle_inputs = dict((retroarch_codes[toggle_input],))
-        if hotkey:
-            code, value = retroarch_codes[hotkey]
-            self.toggle_inputs[code] = value
-
-        self.next_inputs = dict((retroarch_codes[next_input],))
-        self.prev_inputs = dict((retroarch_codes[prev_input],))
-
-        # List codes that might trigger logic
-        self.trigger_codes = set(map(lambda name: retroarch_codes[name][0], [toggle_input, next_input, prev_input]))
+        self.repeat_turbo_wait = timedelta(seconds=repeat_turbo_wait)
 
         # Track which inputs are currently being pressed.  An input is removed
         # when a "up" value is received for the input.
         self.active_inputs = {}
+
+    # Executes a callback when the given input code is detected on this device
+    def on(self, input_code: str, callback: Callable, hotkey: False, grabbed: bool = True) -> None:
+        input_codes = [input_code]
+        if isinstance(hotkey, str):
+            if hotkey != 'false':
+                input_codes.append(hotkey)
+        elif hotkey and self.hotkey:
+            input_codes.append(self.hotkey)
+
+        # Translate retroarch code => evdev code
+        evdev_codes = self.input_type.retroarch_codes(self.dev_device)
+        input_filter = dict(map(lambda code: evdev_codes[code], input_codes))
+
+        # Track the handler
+        self.handlers[frozenset(input_filter)] = Handler(input_filter, callback, grabbed)
 
     # The path on the filesystem representing this device (/dev/input/eventX)
     @property
@@ -117,7 +107,7 @@ class InputDevice():
                 logging.warn(f'Failed to handle event: {e}')
                 traceback.print_exc()
 
-    # Tracks the active inputs and triggers any relevant callbacks
+    # Tracks the active inputs and triggers any relevant handlers
     async def read_event(self, event: evdev.InputEvent) -> None:
         value = abs(event.value)
 
@@ -136,24 +126,17 @@ class InputDevice():
 
     # Check the currently active inputs to see if they should trigger an event
     def check_inputs(self, event: evdev.InputEvent) -> None:
-        if event.code not in self.trigger_codes:
-            return
+        handler = self.handlers.get(frozenset(self.active_inputs))
+        if handler and (not handler.grabbed or self.grabbed):
+            self.trigger(handler.callback)
 
-        if self.active_inputs == self.toggle_inputs:
-            self.on_toggle()
-        elif self.watch_navigation:
-            if self.active_inputs == self.next_inputs:
-                self.trigger_navigation(self.on_next)
-            elif self.active_inputs == self.prev_inputs:
-                self.trigger_navigation(self.on_prev)
-
-    # Triggers a navigation callback and starts a new asyncio task in order to
-    # simulate a "hold" pattern in which the event is repeated.
+    # Triggers a callback and starts a new asyncio task in order to simulate a
+    # "hold" pattern in which the event is repeated.
     # 
     # This is done in order to handle certain devices (such as joystick) which can
     # hold down a navigation button but don't actually trigger hold events.
-    def trigger_navigation(self, callback: Callable) -> None:
-        callback()
+    def trigger(self, callback: Callable) -> None:
+        callback(False)
         self.start_repeater(callback)
 
     # Starts asynchronously triggering repeat events to simulate "hold" behavior
@@ -165,14 +148,14 @@ class InputDevice():
     # interval.  This will only stop when the task is manually cancelled.
     async def repeat_callback(self, callback: Callable) -> None:
         start_time = datetime.utcnow()
-        skip = 1
+        turbo = False
 
         await asyncio.sleep(self.repeat_delay)
         while True:
             if (datetime.utcnow() - start_time) >= self.repeat_turbo_wait:
-                skip = self.repeat_turbo_skip
+                turbo = True
 
-            callback()
+            callback(turbo)
             await asyncio.sleep(self.repeat_interval)
 
     # Stops any asynchronous task running to repeat events
@@ -189,7 +172,7 @@ class InputDevice():
 
     # Grabs control of the current device so that events only get routed to this process
     def grab(self):
-        self.watch_navigation = True
+        self.grabbed = True
 
         try:
             self.dev_device.grab()
@@ -198,7 +181,7 @@ class InputDevice():
 
     # Releases control of the current device to the rest of the system
     def ungrab(self):
-        self.watch_navigation = False
+        self.grabbed = False
 
         try:
             self.dev_device.ungrab()
