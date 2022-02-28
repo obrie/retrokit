@@ -7,6 +7,7 @@ class PDF():
     NO_MANUAL_TEXT = 'No manual found'
     NO_MANUAL_FONTSIZE = 28
     NO_MANUAL_HEIGHT = 37
+    MAX_ZOOM = 5.0
 
     def __init__(self,
         path: str,
@@ -14,6 +15,7 @@ class PDF():
         height: int,
         buffer_width: int,
         buffer_height: int,
+        turbo_skip: int = 2,
     ) -> None:
         self.path = path
         self.width = width
@@ -21,6 +23,8 @@ class PDF():
         self.buffer_width = buffer_width
         self.buffer_height = buffer_height
         self.page = None
+        self.zoom = 1.0
+        self.clip_rect = fitz.Rect()
 
         if Path(self.path).exists():
             self.document = fitz.open(self.path)
@@ -55,7 +59,12 @@ class PDF():
         return self.document.pageCount
 
     # Moves to the next page or goes back to the beginning if already on the last page
-    def next(self, skip: int = 1) -> None:
+    def next(self, turbo: bool = False) -> None:
+        if turbo:
+            skip = self.turbo_skip
+        else:
+            skip = 1
+
         next_page = self.page + skip
         if next_page >= self.page_count:
             next_page = 0
@@ -63,7 +72,12 @@ class PDF():
         self.jump(next_page)
 
     # Moves to the previous page or goes to the end if already on the first page
-    def prev(self, skip: int = 1) -> None:
+    def prev(self, turbo: bool = False) -> None:
+        if turbo:
+            skip = self.turbo_skip
+        else:
+            skip = 1
+
         prev_page = self.page - skip
         if prev_page < 0:
             prev_page = max(0, self.page_count - skip)
@@ -76,12 +90,70 @@ class PDF():
             self.page = page_number
             self.page_image = self._render_page(page_number)
 
+    # 
+    def zoom_in(self) -> None:
+        print('zoom in')
+        pass
+
+    def zoom_out(self) -> None:
+        print('zoom out')
+        pass
+
+    def move_left(self) -> None:
+        print('move left')
+        pass
+
+    def move_right(self) -> None:
+        print('move right')
+        pass
+
+    def move_up(self) -> None:
+        print('move up')
+        pass
+
+    def move_down(self) -> None:
+        print('move down')
+        pass
+
     # Renders image data for the given page number.
     # 
     # This will automatically zoom and center the image according to the width /
     # height configured for the PDF.
     def _render_page(self, page_number: int) -> bytes:
         page = self.document[page_number]
+
+
+    # r = dlist.rect  # the page rectangle
+    # clip = r
+    # # ensure image fits screen:
+    # # exploit, but do not exceed width or height
+    # zoom_0 = 1
+    # if max_size:
+    #     zoom_0 = min(1, max_size[0] / r.width, max_size[1] / r.height)
+    #     if zoom_0 == 1:
+    #         zoom_0 = min(max_size[0] / r.width, max_size[1] / r.height)
+
+    # mat_0 = fitz.Matrix(zoom_0, zoom_0)
+
+    # if not zoom:  # show the total page
+    #     pix = dlist.get_pixmap(matrix=mat_0, alpha=False)
+    # else:
+    #     w2 = r.width / 2  # we need these ...
+    #     h2 = r.height / 2  # a few times
+    #     clip = r * 0.5  # clip rect size is a quarter page
+    #     tl = zoom[0]  # old top-left
+    #     tl.x += zoom[1] * (w2 / 2)  # adjust topl-left ...
+    #     tl.x = max(0, tl.x)  # according to ...
+    #     tl.x = min(w2, tl.x)  # arrow key ...
+    #     tl.y += zoom[2] * (h2 / 2)  # provided, but ...
+    #     tl.y = max(0, tl.y)  # stay within ...
+    #     tl.y = min(h2, tl.y)  # the page rect
+    #     clip = fitz.Rect(tl, tl.x + w2, tl.y + h2)
+    #     # clip rect is ready, now fill it
+    #     mat = mat_0 * fitz.Matrix(2, 2)  # zoom matrix
+    #     pix = dlist.get_pixmap(alpha=False, matrix=mat, clip=clip)
+    # img = pix.tobytes("ppm")  # make PPM image from pixmap for tkinter
+    # return img, clip.tl  # return image, clip position
 
         # Determine the maximum zoom we can ask for before we'd be exceeding the
         # configured width / height

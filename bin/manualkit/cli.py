@@ -9,15 +9,29 @@ import configparser
 import logging
 import signal
 from argparse import ArgumentParser
+from functools import partial
 from pathlib import Path
-from typing import Optional
+from typing import Callable, Optional
 
 from manualkit.display import Display
 from manualkit.emulator import Emulator
-from manualkit.input_listener import InputListener
+from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
 
 class ManualKit():
+    BINDING_DEFAULTS = {
+        'toggle': 'up',
+        'up': 'up',
+        'down': 'down',
+        'left': 'left',
+        'right': 'right',
+        'next': 'r',
+        'prev': 'l',
+        'zoom_in': 'r2',
+        'zoom_out': 'l2',
+        'retroarch': 'true'
+    }
+
     def __init__(self,
         pdf_path: str,
         config_path: Optional[str] = None,
@@ -26,7 +40,7 @@ class ManualKit():
     ) -> None:
         # Read from config
         config = configparser.ConfigParser()
-        config.read_dict({'pdf': {}, 'display': {}, 'input': {}})
+        config.read_dict({'pdf': {}, 'display': {}, 'input': {}, 'keyboard': self.BINDING_DEFAULTS, 'joystick': self.BINDING_DEFAULTS})
         if config_path and Path(config_path).exists():
             config.read(config_path)
 
@@ -53,12 +67,11 @@ class ManualKit():
         )
 
         # Start listening to inputs
-        self.input_listener = InputListener(
-            on_toggle=self.toggle,
-            on_next=self.next,
-            on_prev=self.prev,
-            **config['input'],
-        )
+        self.input_listener = InputListener(**config['input'])
+
+        # Configure joystick handler
+        self._add_handlers(InputType.KEYBOARD, config['keyboard'])
+        self._add_handlers(InputType.JOYSTICK, config['joystick'])
 
         # Handle kill signals
         signal.signal(signal.SIGINT, self.exit)
@@ -71,7 +84,7 @@ class ManualKit():
         self.input_listener.listen()
 
     # Toggles visibility of the manual
-    def toggle(self) -> None:
+    def toggle(self, *args) -> None:
         if self.display.visible():
             self.hide()
         else:
@@ -79,28 +92,20 @@ class ManualKit():
 
     # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
+        self.input_listener.grab()
         Emulator.instance().suspend()
         self.refresh()
         self.display.show()
 
     # Hides the manual
     def hide(self) -> None:
+        self.input_listener.ungrab()
         try:
             self.display.hide()
             self.display.clear()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
             Emulator.instance().resume()
-
-    # Moves to the next page or goes back to the beginning if already on the last page
-    def next(self, skip: int = 1) -> None:
-        self.pdf.next(skip)
-        self.refresh()
-
-    # Moves to the previous page or goes to the end if already on the first page
-    def prev(self, skip: int = 1) -> None:
-        self.pdf.prev(skip)
-        self.refresh()
 
     # Cleans up the elements / resources on the display
     def exit(self, *args, **kwargs) -> None:
@@ -114,6 +119,29 @@ class ManualKit():
     # Renders the currently active PDF page
     def refresh(self) -> None:
         self.display.draw(self.pdf.page_image)
+
+    # Adds toggle / navigation handlers for the given input type
+    def _add_handlers(self, input_type: InputType, config: configparser.SectionProxy) -> None:
+        retroarch = (config['retroarch'] == 'true')
+
+        self.input_listener.on(input_type, config['toggle'], self.toggle, retroarch=retroarch, grabbed=False, hotkey=config.get('hotkey', fallback=True))
+        self.input_listener.on(input_type, config['up'], partial(self._navigate, self.pdf.move_up, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['down'], partial(self._navigate, self.pdf.move_down, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['left'], partial(self._navigate, self.pdf.move_left, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['right'], partial(self._navigate, self.pdf.move_right, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['next'], partial(self._navigate, self.pdf.next, True), retroarch=retroarch)
+        self.input_listener.on(input_type, config['prev'], partial(self._navigate, self.pdf.prev, True), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, self.pdf.zoom_in, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, self.pdf.zoom_out, False), retroarch=retroarch)
+
+    # Calls the given navigation API, optionally including callback arguments
+    def _navigate(self, navigation_api: Callable, include_args: bool, *args) -> None:
+        if include_args:
+            navigation_api(*args)
+        else:
+            navigation_api()
+
+        self.refresh()
 
     # Sends a SIGINT signal to the current process
     def _send_terminate_signal(self) -> None:

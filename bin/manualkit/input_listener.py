@@ -11,27 +11,26 @@ from typing import Callable
 
 from manualkit.input_device import InputDevice, InputType
 
+# Represents a callback to invoke when a given button is encountered
+class Handler:
+    def __init__(self, btn_name: str, callback: Callable, grabbed: bool, hotkey: bool, retroarch: bool) -> None:
+        self.btn_name = btn_name
+        self.callback = callback
+        self.grabbed = grabbed
+        self.hotkey = hotkey
+        self.retroarch = retroarch
+
 # Listens for key / button presses that trigger changes to manualkit
 class InputListener():
     # Path to the Retroarch config for finding hotkeys
     RETROARCH_CONFIG_PATH = Path('/opt/retropie/configs/all/retroarch.cfg')
 
     def __init__(self,
-        on_toggle: Callable,
-        on_next: Callable,
-        on_prev: Callable,
-        keyboard_toggle: str = 'm',
-        joystick_toggle: str = 'h0up',
         repeat_delay: float = 0.25,
         repeat_interval: float = 0.01,
         repeat_turbo_wait: float = 5.0,
         repeat_turbo_skip: int = 2,
     ) -> None:
-        self.on_toggle = on_toggle
-        self.on_next = on_next
-        self.on_prev = on_prev
-        self.keyboard_toggle = keyboard_toggle
-        self.joystick_toggle = joystick_toggle
         self.repeat_delay = float(repeat_delay)
         self.repeat_interval = float(repeat_interval)
         self.repeat_turbo_wait = float(repeat_turbo_wait)
@@ -39,12 +38,11 @@ class InputListener():
 
         # Defaults
         self.devices = []
-        self.active = False
+        self.handlers = {InputType.KEYBOARD: [], InputType.JOYSTICK: []}
+        self.grabbed = False
         self.retroarch_config = self._read_retroarch_config(self.RETROARCH_CONFIG_PATH)
 
         self.event_loop = asyncio.get_event_loop()
-        for path in evdev.list_devices():
-            self.add_device(path)
 
     # Adds the input device at the given path to the list of devices we'll be
     # listening for events from
@@ -60,48 +58,55 @@ class InputListener():
 
         if autoconfig_path.exists():
             # Treat it like a joystick
-            joystick_config = self._read_retroarch_config(autoconfig_path)
-            input_device = self.create_input_device(
-                dev_device,
-                InputType.JOYSTICK,
-                hotkey=joystick_config.get('input_enable_hotkey_btn', fallback=None),
-                toggle_input=self.joystick_toggle,
-                next_input=joystick_config.get('input_right_btn', fallback='h0right'),
-                prev_input=joystick_config.get('input_left_btn', fallback='h0left'),
-            )
+            input_device = self.create_input_device(dev_device, InputType.JOYSTICK, hotkey=joystick_config.get('input_enable_hotkey_btn'))
+            device_config = self._read_retroarch_config(autoconfig_path)
+            btn_prefix = 'input_'
+            btn_suffix = '_btn'
         else:
             # Treat it like a keyboard
-            input_device = self.create_input_device(
-                dev_device,
-                InputType.KEYBOARD,
-                hotkey=self.retroarch_config.get('input_enable_hotkey', fallback=None),
-                toggle_input=self.keyboard_toggle,
-                next_input=self.retroarch_config.get('input_player1_right', fallback='right'),
-                prev_input=self.retroarch_config.get('input_player1_left', fallback='left'),
-            )
+            input_device = self.create_input_device(dev_device, InputType.KEYBOARD, hotkey=self.retroarch_config.get('input_enable_hotkey'))
+            device_config = self.retroarch_config
+            btn_prefix = 'input_player1_'
+            btn_suffix = ''
 
-        self.devices.append(input_device)
+        # Bind handlers
+        for handler in self.handlers[input_device.input_type]:
+            if handler.retroarch:
+                input_code = device_config.get(f'{btn_prefix}{handler.btn_name}{btn_suffix}')
+            else:
+                input_code = handler.btn_name
+
+            if input_code:
+                input_device.on(input_code, handler.callback, grabbed=handler.grabbed, hotkey=handler.hotkey)
 
         # Start listening for events
+        self.devices.append(input_device)
         input_device.start_read(self.event_loop)
 
         # Sometimes devices are added while manualkit is running.  In that
         # case, we immediately grab control of the input so that everything
         # is redirected to this process.
-        if self.active:
+        if self.grabbed:
             input_device.grab()
+
+    # Executes a callback when the given buton is detected on the input type (keyboard / joystick)
+    def on(self,
+        input_type: InputType,
+        btn_name: str,
+        callback: Callable,
+        grabbed: bool = True,
+        hotkey: bool = False,
+        retroarch: bool = True,
+    ):
+        self.handlers[input_type].append(Handler(btn_name, callback, grabbed, hotkey, retroarch))
 
     # Creates a new input device with default configurations and the given overrides
     def create_input_device(self, *args, **kwargs) -> InputDevice:
         return InputDevice(
             *args,
-            on_toggle=self.toggle,
-            on_next=self.next,
-            on_prev=self.prev,
             repeat_delay=self.repeat_delay,
             repeat_interval=self.repeat_interval,
             repeat_turbo_wait=self.repeat_turbo_wait,
-            repeat_turbo_skip=self.repeat_turbo_skip,
             **kwargs,
         )
 
@@ -115,6 +120,10 @@ class InputListener():
 
     # Listens for input events.  Note that this will loop infinitely.
     def listen(self) -> None:
+        # Add currently known devices
+        for path in evdev.list_devices():
+            self.add_device(path)
+
         # Track devices that are added / removed
         context = pyudev.Context()
         monitor = pyudev.Monitor.from_netlink(context)
@@ -141,27 +150,19 @@ class InputListener():
             self.event_loop.stop()
             self.event_loop = None
 
-    # Toggles control of the devices and triggers the `on_toggle` callback
-    def toggle(self):
-        # Update control of the devices
+    # Grabs control of all input devices so that events only get routed to this process
+    def grab(self) -> None:
         for device in self.devices:
-            if self.active:
-                device.ungrab()
-            else:
-                device.grab()
+            device.grab()
 
-        self.active = not self.active
+        self.grabbed = True
 
-        # Trigger the callback
-        self.on_toggle()
+    # Releases control of all input devices to the rest of the system
+    def ungrab(self) -> None:
+        for device in self.devices:
+            device.ungrab()
 
-    # Triggers the `next` callback
-    def next(self, skip: int = 1) -> None:
-        self.on_next(skip)
-
-    # Triggers the `on_prev` callback
-    def prev(self, skip: int = 1) -> None:
-        self.on_prev(skip)
+        self.grabbed = False
 
     # Handles exceptions in asyncio loops by logging them.  This ensures
     # the event gets consumed.
@@ -171,11 +172,16 @@ class InputListener():
 
     # Reads the retroarch config file at the given path.  This handles the fact that
     # retroarch configurations don't have sections.
-    def _read_retroarch_config(self, path: Path) -> configparser.SectionProxy:
+    def _read_retroarch_config(self, path: Path) -> dict:
         with path.open() as f:
             content = '[DEFAULT]\n' + f.read()
 
         config = configparser.ConfigParser()
         config.read_string(content)
 
-        return config['DEFAULT']
+        # Convert to dictionary and replace excessive quotes
+        config_dict = dict(config['DEFAULT'].items())
+        for key, value in config_dict.items():
+            config_dict[key] = config_dict[key].strip('"')
+
+        return config_dict
