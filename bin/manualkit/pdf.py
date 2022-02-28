@@ -96,8 +96,7 @@ class PDF():
     def jump(self, page_number: int) -> None:
         if self.page_number != page_number:
             self.page_number = page_number
-            self.reset_clip()
-            self.refresh()
+            self.render()
 
     # Increases the zoom level of the PDF
     def zoom_in(self) -> None:
@@ -112,25 +111,12 @@ class PDF():
     # Zooms the pdf into the given level
     def zoom(self, level: int) -> None:
         self.zoom_level = level
-        self.reset_clip()
-        self.refresh()
 
-    # Resets the clip rectangle that's shown on screen based on the current zoom
-    # level
-    def reset_clip(self) -> None:
-        # Start with the page's full dimension
-        self.clip_rect = self.page.rect
-
-        # Calculate how much to zoom
-        zoom_factor = self.zoom_multiplier ** self.zoom_level
-
-        # Reduce the width
-        clip_width = self.page.rect.width / zoom_factor
-        self.clip_rect.x1 = self.clip_rect.x0 + clip_width
-
-        # Reduce the height
-        clip_height = self.page.rect.height / zoom_factor
-        self.clip_rect.y1 = self.clip_rect.y0 + clip_height
+        # Render a new image with the given x / y center points
+        self.render(
+            (self.clip_rect.x0 + self.clip_rect.x1) / (2 * self.pixmap.width),
+            (self.clip_rect.y0 + self.clip_rect.y1) / (2 * self.pixmap.height),
+        )
 
     # Moves left, when zoomed in, or to the previous page when not zoomed
     def move_left(self) -> None:
@@ -163,50 +149,76 @@ class PDF():
     # Moves the current clip rect in the given x / y direction
     # 
     # For example, if x is 1 then we move right.  If x is -1, we move left.
-    def move(self, x_direction: int = 0, y_direction: int = 0):
+    def move(self, x_direction: int = 0, y_direction: int = 0, percentage: bool = True):
         clip_width = self.clip_rect.width
         clip_height = self.clip_rect.height
 
+        self.pixmap.set_origin(0, 0)
+        page_rect = self.pixmap.irect
+
+        # Translate percentage movements to pixel movements
+        if percentage:
+            x_direction = int(clip_width * self.PERCENT_SHIFT_PER_MOVE) * x_direction
+            y_direction = int(clip_height * self.PERCENT_SHIFT_PER_MOVE) * y_direction
+
         # Calculate new right-most pixel and ensure it's within the min / max values
         if x_direction:
-            new_x1 = self.clip_rect.x1 + int(clip_width * self.PERCENT_SHIFT_PER_MOVE) * x_direction
-            new_x1 = max(min(new_x1, self.page.rect.x1), clip_width)
+            new_x1 = self.clip_rect.x1 + x_direction
+            new_x1 = max(min(new_x1, page_rect.x1), clip_width)
 
             self.clip_rect.x1 = new_x1
             self.clip_rect.x0 = self.clip_rect.x1 - clip_width
 
         # Calculate new bottom-most pixel and ensure it's within the min / max values
         if y_direction:
-            new_y1 = self.clip_rect.y1 + int(clip_height * self.PERCENT_SHIFT_PER_MOVE) * y_direction
-            new_y1 = max(min(new_y1, self.page.rect.y1), clip_height)
+            new_y1 = self.clip_rect.y1 + y_direction
+            new_y1 = max(min(new_y1, page_rect.y1), clip_height)
 
             self.clip_rect.y1 = new_y1
             self.clip_rect.y0 = self.clip_rect.y1 - clip_height
 
         self.refresh()
 
-    # Re-renders and caches the current view of the page
-    def refresh(self) -> None:
-        self.page_image = self._render_page()
-
     # Renders image data for the given page number.
-    # 
-    # This will automatically zoom and center the image according to the width /
-    # height configured for the PDF.
-    def _render_page(self) -> bytes:
+    def render(self, center_x_percent: float = 0.0, center_y_percent: float = 0.0) -> bytes:
         # Determine the maximum zoom we can ask for before we'd be exceeding the
         # configured width / height
-        zoom = min(self.width / self.page.rect.width, self.height / self.page.rect.height) * (self.zoom_multiplier ** self.zoom_level)
-        image = self.page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False, clip=self.clip_rect)
+        zoom = min(self.width / self.page.rect.width, self.height / self.page.rect.height)
 
-        # Determine the offset so that the image is centered
-        offset_x = max(int((self.width - image.width) / 2), 0)
-        offset_y = max(int((self.height - image.height) / 2), 0)
-        image.set_origin(offset_x, offset_y)
+        # Zoom further based on the user-configured zoom level
+        zoom *= (self.zoom_multiplier ** self.zoom_level)
+
+        # Generate the full image based on the zoom level.  We do this instead of
+        # just the clipped area in order to improve navigation performance.
+        self.pixmap = self.page.get_pixmap(matrix=fitz.Matrix(zoom, zoom), alpha=False)
+
+        # Build the clip rectangle for navigation within the image
+        self.clip_rect = fitz.Rect(0, 0, min(self.width, self.pixmap.width), min(self.height, self.pixmap.height))
+
+        # Move to a center point determined by how far we were into the prior
+        # zoom level
+        self.move(
+            x_direction=max(center_x_percent * self.pixmap.width - self.clip_rect.width / 2, 0),
+            y_direction=max(center_y_percent * self.pixmap.height - self.clip_rect.height / 2, 0),
+            percentage=False,
+        )
+
+    # Re-renders and caches the current view of the page
+    def refresh(self) -> None:
+        # Determine the offset so that the image is centered (for the scenario in which
+        # the aspect ratio doesn't match the configured device width / height)
+        offset_x = max(int((self.width - self.clip_rect.width) / 2), 0)
+        offset_y = max(int((self.height - self.clip_rect.height) / 2), 0)
 
         # Create a new pixmap based on the PDF width / height that will contain the
         # zoomed page, centered
         padded_image = fitz.Pixmap(fitz.csRGB, (0, 0, self.buffer_width, self.buffer_height), False)
-        padded_image.copy(image, (-offset_x, -offset_y, image.width + offset_x, image.height + offset_y))
 
-        return padded_image.samples
+        # Adjust the source to the location we want to copy
+        self.pixmap.set_origin(offset_x - int(self.clip_rect.x0), offset_y - int(self.clip_rect.y0))
+        padded_image.copy(self.pixmap, (0, 0, self.clip_rect.width + offset_x, self.clip_rect.height + offset_y))
+
+        # Reset the source origin so it's set up appropriately the next time we refresh
+        self.pixmap.set_origin(0, 0)
+
+        self.page_image = padded_image.samples
