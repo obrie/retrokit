@@ -75,7 +75,7 @@ class InputDevice():
         input_filter = dict(map(lambda code: evdev_codes[code], input_codes))
 
         # Track the handler
-        self.handlers[frozenset(input_filter)] = Handler(input_filter, callback, grabbed)
+        self.handlers[frozenset(input_filter.items())] = Handler(input_filter, callback, grabbed)
 
     # The path on the filesystem representing this device (/dev/input/eventX)
     @property
@@ -126,7 +126,7 @@ class InputDevice():
 
     # Check the currently active inputs to see if they should trigger an event
     def check_inputs(self, event: evdev.InputEvent) -> None:
-        handler = self.handlers.get(frozenset(self.active_inputs))
+        handler = self.handlers.get(frozenset(self.active_inputs.items()))
         if handler and (not handler.grabbed or self.grabbed):
             self.trigger(handler.callback)
 

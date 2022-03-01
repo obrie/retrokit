@@ -58,19 +58,23 @@ class InputListener():
 
         if autoconfig_path.exists():
             # Treat it like a joystick
-            input_device = self.create_input_device(dev_device, InputType.JOYSTICK, hotkey=joystick_config.get('input_enable_hotkey_btn'))
             device_config = self._read_retroarch_config(autoconfig_path)
+            input_type = InputType.JOYSTICK
+            hotkey_config = 'input_enable_hotkey_btn'
             btn_prefix = 'input_'
             btn_suffix = '_btn'
         else:
             # Treat it like a keyboard
-            input_device = self.create_input_device(dev_device, InputType.KEYBOARD, hotkey=self.retroarch_config.get('input_enable_hotkey'))
             device_config = self.retroarch_config
+            input_type = InputType.KEYBOARD
+            hotkey_config = 'input_enable_hotkey'
             btn_prefix = 'input_player1_'
             btn_suffix = ''
 
+        input_device = self.create_input_device(dev_device, input_type, hotkey=device_config.get(hotkey_config))
+
         # Bind handlers
-        for handler in self.handlers[input_device.input_type]:
+        for handler in self.handlers[input_type]:
             if handler.retroarch:
                 input_code = device_config.get(f'{btn_prefix}{handler.btn_name}{btn_suffix}')
             else:
