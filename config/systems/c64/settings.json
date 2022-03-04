@@ -97,6 +97,9 @@
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/c64/manuals.tsv"
     },
+    "parent": {
+      "source": "file://$HOME/retrokit/config/systems/c64/clones.json"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
