@@ -301,9 +301,9 @@ __convert_to_pdf() {
     unrar e -idq "$source_path" "$extract_path/"
     __combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
     rm -rf "$extract_path"
-  elif [[ "$extension" =~ ^(png|jpe?g|bmp)$ ]]; then
+  elif [[ "$extension" =~ ^(png|jpe?g|bmp|gif)$ ]]; then
     __combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
-  elif [[ "$extension" =~ ^(docx?)$ ]]; then
+  elif [[ "$extension" =~ ^(docx?|rtf)$ ]]; then
     unoconv -f pdf -o "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(pdf)$ ]]; then
     # No conversion necessary -- copy to the target
