@@ -97,7 +97,8 @@ configure() {
         cp "$archive_path" "$postprocess_path"
       else
         # Download file hasn't been processed -- do so now
-        __convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}"
+        rm -f "$tmp_ephemeral_dir/rom.pdf"
+        __convert_to_pdf "$download_path" "$tmp_ephemeral_dir/rom.pdf" "${manual['filter']}" "${manual['rewrite_exif']}"
         __postprocess_pdf "$tmp_ephemeral_dir/rom.pdf" "$postprocess_path" "${manual['languages']}" "${manual['pages']}" "${manual['rotate']}"
       fi
     fi
@@ -164,6 +165,7 @@ __build_manual() {
     [pages]=
     [rotate]=
     [filter]=
+    [rewrite_exif]=
     [playlist_install_path]=
   )
 
@@ -171,7 +173,7 @@ __build_manual() {
   if [ -n "$postprocess_options" ]; then
     while IFS='=' read -r option value; do
       manual_ref["$option"]=$value
-    done < <(echo "$postprocess_options" | tr ',' '\n')
+    done < <(echo "$postprocess_options" | tr ';' '\n')
   fi
 
   # Fix URL:
@@ -272,12 +274,56 @@ __download_with_sleep() {
 __convert_to_pdf() {
   local source_path=$1
   local target_path=$2
-  local filter_csv=$3
-
-  # Glob expression for picking out images from archives
-  local extract_path="$tmp_ephemeral_dir/pdf-extract"
+  local filter_csv=${3:-*}
+  local rewrite_exif=${4:-false}
 
   mkdir -p "$(dirname "$target_path")"
+
+  local extension=${source_path##*.}
+  if [[ "$extension" =~ ^(zip|cbz|7z|cb7|rar|cbr)$ ]]; then
+    # Source is an archive -- we need to extract, filter, and convert each matching file
+    local extract_path="$tmp_ephemeral_dir/pdf-extract"
+    rm -rf "$extract_path"
+
+    # Extract contents
+    if [[ "$extension" =~ ^(zip|cbz)$ ]]; then
+      unzip -q -j "$source_path" -d "$extract_path"
+    elif [[ "$extension" =~ ^(7z|cb7)$ ]]; then
+      7z e -y -o"$extract_path/" "$source_path" >/dev/null
+    else
+      unrar e -idq "$source_path" "$extract_path/"
+    fi
+
+    # Filter files
+    while read -r filter; do
+      while read filtered_path; do
+        if [ ! -f "$target_path" ]; then
+          # Target doesn't exist yet -- let's initialize it with the first matched file
+          __convert_file_to_pdf "$filtered_path" "$target_path"
+        else
+          # We have at least 2 files matched in the filter.  Now we need to merge.
+          mv "$target_path" "$tmp_ephemeral_dir/merge-1.pdf"
+          __convert_file_to_pdf "$filtered_path" "$tmp_ephemeral_dir/merge-2.pdf" rewrite_exif="$rewrite_exif"
+          gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "$tmp_ephemeral_dir/merge-1.pdf" "$tmp_ephemeral_dir/merge-2.pdf"
+        fi
+      done < <(find "$extract_path" -type f -wholename "$extract_path/$filter" | sort)
+    done < <(echo "$filter_csv" | tr ';' '\n')
+
+    rm -rf "$extract_path"
+  else
+    __convert_file_to_pdf "$source_path" "$target_path" rewrite_exif="$rewrite_exif"
+  fi
+
+  __validate_pdf "$target_path"
+}
+
+# Converts a downloaded file to a PDF so that all manuals are in a standard
+# format for us to work with
+__convert_file_to_pdf() {
+  local source_path=$1
+  local target_path=$2
+  local rewrite_exif=false
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   local extension=${source_path##*.}
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
@@ -289,20 +335,15 @@ __convert_to_pdf() {
     cp "$source_path" "$chromium_path"
     chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$chromium_path" 2>/dev/null
     rm "$chromium_path"
-  elif [[ "$extension" =~ ^(zip|cbz)$ ]]; then
-    # Zip of images -- extract and concatenate into pdf
-    rm -rf "$extract_path"
-    unzip -q -j "$source_path" -d "$extract_path"
-    __combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
-    rm -rf "$extract_path"
-  elif [[ "$extension" =~ ^(rar|cbr)$ ]]; then
-    # Rar of images -- extract and concatenate into pdf
-    rm -rf "$extract_path"
-    unrar e -idq "$source_path" "$extract_path/"
-    __combine_images_to_pdf "$target_path" "$extract_path" "$filter_csv"
-    rm -rf "$extract_path"
   elif [[ "$extension" =~ ^(png|jpe?g|bmp|gif)$ ]]; then
-    __combine_images_to_pdf "$target_path" "$(dirname "$source_path")" "$(basename "$source_path")"
+    # Sometimes images have corrupt exif data that causes img2pdf to fail.  In those
+    # cases where we know this is the case, we'll rewrite the exif data so that it
+    # can be properly parsed.
+    if [ "$rewrite_exif" == 'true' ]; then
+      exiftool -q -all= -tagsfromfile @ -all:all "$source_path"
+    fi
+
+    img2pdf -s 72dpi --output "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(docx?|rtf)$ ]]; then
     unoconv -f pdf -o "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(pdf)$ ]]; then
@@ -311,47 +352,6 @@ __convert_to_pdf() {
   else
     # Unknown extension -- fail
     return 1
-  fi
-
-  __validate_pdf "$target_path"
-}
-
-# Combines 1 or more images into a PDF
-# 
-# This is a lossless conversion except for PNG images which contain alpha channels.
-__combine_images_to_pdf() {
-  local target_path=$1
-  local source_path=$2
-  local filter_csv=${3:-*}
-
-  # Figure out which paths should be included, making sure that we find files
-  # based on the order of the filters specified
-  local filtered_paths=()
-  while read -r filter; do
-    IFS=$'\n' filtered_paths+=($(find "$source_path" -type f -wholename "$source_path/$filter" | sort))
-  done < <(echo "$filter_csv" | tr ';' '\n')
-
-  # Identify the filetype we're combining
-  local extension=${filtered_paths[0]##*.}
-  extension=${extension,,} # lowercase
-
-  if [ "$extension" == 'pdf' ]; then
-    if [ ${#filtered_paths[@]} -gt 1 ]; then
-      # Combine PDF files
-      gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "${filtered_paths[@]}"
-    else
-      # Copy the PDF directly
-      cp "${filtered_paths[0]}" "$target_path"
-    fi
-  else
-    # Assume we're combining images
-
-    # Remove alpha channel from PNG images as img2pdf cannot handle them
-    while read source_path; do
-      mogrify -background white -alpha remove -alpha off "$source_path"
-    done < <(printf -- '%s\n' "${filtered_paths[@]}" | grep -i .png)
-
-    img2pdf -s 72dpi --output "$target_path" "${filtered_paths[@]}"
   fi
 }
 

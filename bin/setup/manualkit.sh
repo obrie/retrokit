@@ -24,6 +24,9 @@ depends() {
   # Convert doc to pdf
   sudo apt install -y unoconv
 
+  # Fix exif data
+  sudo apt install -y libimage-exiftool-perl
+
   # OCR PDF to make it searchable
   sudo pip3 install ocrmypdf==13.3.0
   sudo apt install -y \
@@ -88,6 +91,7 @@ remove() {
     img2pdf \
     unrar \
     unoconv \
+    libimage-exiftool-perl \
     tesseract-ocr-ara \
     tesseract-ocr-ces \
     tesseract-ocr-chi-sim \
