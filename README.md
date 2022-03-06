@@ -530,10 +530,11 @@ The following source formats are supported:
 
 * pdf
 * cbz / zip
+* cb7 / 7z
 * cbr / rar
 * html
 * txt
-* jpg / jpeg / png
+* jpg / jpeg / png / gif / bmp
 
 Once downloaded, these formats will all be converted into PDF, maintaining the quality of the
 original manual when possible.
