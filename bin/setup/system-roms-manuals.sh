@@ -326,6 +326,7 @@ __convert_file_to_pdf() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   local extension=${source_path##*.}
+  extension=${extension,,} # lowercase
   if [[ "$extension" =~ ^(html?|txt)$ ]]; then
     # Print to pdf via chrome
     # 
