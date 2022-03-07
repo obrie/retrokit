@@ -24,28 +24,6 @@
   },
   "romsets": [
     {
-      "name": "nointro-tapes",
-      "protocol": "http",
-      "discovery": {
-        "type": "internetarchive",
-        "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
-        ],
-        "match": "no-intro romsets/Commodore - 64 \\(Tapes\\)"
-      },
-      "resources": {
-        "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat"
-        },
-        "machine": {
-          "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip"
-        }
-      },
-      "auth": "internetarchive"
-    },
-    {
       "name": "nointro-carts",
       "protocol": "http",
       "discovery": {
@@ -61,8 +39,30 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip"
+          "target": "$HOME/RetroPie/roms/c64/.nointro-carts/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/c64/.nointro-carts/.xrefs/{machine_id}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    },
+    {
+      "name": "nointro-tapes",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Commodore - 64 \\(Tapes\\)"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/c64/.nointro-tapes/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/c64/.nointro-tapes/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
@@ -83,8 +83,8 @@
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/c64/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/c64/.nointro/.xrefs/{machine_id}.zip"
+          "target": "$HOME/RetroPie/roms/c64/.nointro-pp/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/c64/.nointro-pp/.xrefs/{machine_id}.zip"
         }
       },
       "auth": "internetarchive"
