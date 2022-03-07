@@ -31,7 +31,7 @@ class ParentMetadata(ExternalMetadata):
 
         # If the group isn't already tracked, then we know this is the primary parent
         if group not in self.group_parents:
-            self.group_parents[group] = machine.name
+            self.group_parents[group] = machine.parent_name or machine.name
 
         # Only attach a parent if it's different from this machine
         if not machine.parent_name and self.group_parents[group] != machine.name:
