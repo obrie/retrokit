@@ -107,6 +107,11 @@
   "roms": {
     "id": "crc",
     "priority": {
+      "order": ["romsets", "flags", "length"],
+      "romsets": [
+        "nointro-carts",
+        "nointro-tapes"
+      ],
       "flags": [
         "USA",
         "World"
