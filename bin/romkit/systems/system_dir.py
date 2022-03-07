@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from romkit.filters import FilterSet
 
+import os
 from pathlib import Path
 
 class SystemDir:
@@ -40,8 +41,10 @@ class SystemDir:
         if str(source)[-1] == '*':
             for source_filepath in source.parent.iterdir():
                 subtarget = target.joinpath(source_filepath.name)
-                subtarget.unlink(missing_ok=True)
+                if os.path.lexists(subtarget):
+                    subtarget.unlink()
                 subtarget.symlink_to(source_filepath)
         else:
-            target.unlink(missing_ok=True)
+            if os.path.lexists(target):
+                target.unlink()
             target.symlink_to(source)
