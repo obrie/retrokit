@@ -451,7 +451,7 @@ codebase.  An overview of metadata and where it comes from is described below.
 | System      | Metadata                 | In Git? | Source                                        |
 | ----------- | ------------------------ | ------- | --------------------------------------------- |
 | arcade      | Categories               | No      | https://www.progettosnaps.net/                |
-| arcade      | Emulator compatibility   | No      | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
+| arcade      | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw |
 | arcade      | Languages                | No      | https://www.progettosnaps.net/                |
 | arcade      | Ratings                  | No      | https://www.progettosnaps.net/                |
 | atarijaguar | Emulator compatibility   | Yes     | https://retropie.org.uk/forum/topic/27999/calling-pi-4-atari-jaguar-fans |
