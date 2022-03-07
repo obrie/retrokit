@@ -12,10 +12,17 @@ class SorterSet:
     @classmethod
     def from_json(cls, json: dict, supported_sorters: list) -> SorterSet:
         sorter_set = cls()
-
         sorters_by_name = {sorter.name: sorter for sorter in supported_sorters}
-        for sorter_name, setting in json.items():
-            sorter_set.append(sorters_by_name[sorter_name](setting))
+
+        # Either use a pre-defined order in which to process the sort strategies
+        # or, by default, use the order in which the strategies were defined
+        sorter_names = json.pop('order', json.keys())
+
+        for sorter_name in sorter_names:
+            sorter = sorters_by_name[sorter_name]
+            setting = json[sorter_name]
+
+            sorter_set.append(sorter(setting))
 
         return sorter_set
 
