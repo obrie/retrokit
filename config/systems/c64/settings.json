@@ -120,8 +120,9 @@
     },
     "filters": {
       "collections": [
-        "C64 Dreams: Best Of"
+        "C64 Dreams"
       ],
+      "manuals": [true],
       "flags": [
         "Europe",
         "USA",
@@ -129,6 +130,9 @@
       ],
       "!genres": [
         "Educational"
+      ],
+      "+collections": [
+        "C64 Dreams: Best Of"
       ],
       "+titles": [
         "Frogger",
