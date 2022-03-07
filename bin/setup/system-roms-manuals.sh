@@ -344,7 +344,7 @@ __convert_file_to_pdf() {
     fi
 
     img2pdf -s 72dpi --output "$target_path" "$source_path"
-  elif [[ "$extension" =~ ^(docx?|rtf)$ ]]; then
+  elif [[ "$extension" =~ ^(docx?|rtf|wri)$ ]]; then
     unoconv -f pdf -o "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(pdf)$ ]]; then
     # No conversion necessary -- copy to the target
