@@ -258,14 +258,7 @@
     },
     "emulator": {
       "source": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
-      "target": "$HOME/retrokit/tmp/arcade/emulators.tsv",
-      "overrides": {
-        "area51": "lr-mame2016",
-        "area51mx": "lr-mame2016",
-        "cryptklr": "lr-mame2010",
-        "jdredd": "lr-mame2010",
-        "maxforce": "lr-mame2016"
-      }
+      "target": "$HOME/retrokit/config/systems/arcade/emulators.tsv"
     }
   },
   "roms": {
@@ -337,6 +330,7 @@
         "deluxe5"
       ],
       "+names": [
+        "jdredd",
         "pacman"
       ],
       "demo": [
