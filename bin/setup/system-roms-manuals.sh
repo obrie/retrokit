@@ -307,7 +307,7 @@ __convert_to_pdf() {
           gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "$tmp_ephemeral_dir/merge-1.pdf" "$tmp_ephemeral_dir/merge-2.pdf"
         fi
       done < <(find "$extract_path" -type f -wholename "$extract_path/$filter" | sort)
-    done < <(echo "$filter_csv" | tr ';' '\n')
+    done < <(echo "$filter_csv" | tr ',' '\n')
 
     rm -rf "$extract_path"
   else
