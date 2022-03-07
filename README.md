@@ -534,6 +534,7 @@ The following source formats are supported:
 * cbr / rar
 * html
 * txt
+* doc / docx / wri / rtf
 * jpg / jpeg / png / gif / bmp / tif
 
 Once downloaded, these formats will all be converted into PDF, maintaining the quality of the
