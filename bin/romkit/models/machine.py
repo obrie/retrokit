@@ -441,7 +441,8 @@ class Machine:
 
     # Installs this machine onto the local filesystem
     def install(self) -> None:
-        self.resource.check_xref()
+        if self.resource:
+            self.resource.check_xref()
 
         # ROMs: Self
         self.install_from(self, self.roms_from_self)
@@ -454,7 +455,8 @@ class Machine:
         if self.bios_machine:
             self.install_from(self.bios_machine, self.bios_machine.roms)
 
-        self.resource.create_xref()
+        if self.resource:
+            self.resource.create_xref()
 
         # Devices
         for device_machine in self.device_machines:
