@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from romkit.sorters.base import SubstringSorter
+from romkit.sorters.base import OrderingSorter, SubstringSorter
 
 # Sort on presence of keywords in the name
 class KeywordSorter(SubstringSorter):
@@ -16,3 +16,10 @@ class FlagSorter(SubstringSorter):
 
     def value(self, machine: Machine) -> str:
         return machine.flags_str
+
+# Sort on number of flag groups in the name
+class FlagCountSorter(OrderingSorter):
+    name = 'flags_count'
+
+    def value(self, machine: Machine) -> int:
+        return machine.flags_str.count('(')
