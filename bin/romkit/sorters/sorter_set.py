@@ -16,13 +16,17 @@ class SorterSet:
 
         # Either use a pre-defined order in which to process the sort strategies
         # or, by default, use the order in which the strategies were defined
-        sorter_names = json.pop('order', json.keys())
+        sorter_config_names = json.pop('order', json.keys())
 
-        for sorter_name in sorter_names:
+        for sorter_config_name in sorter_config_names:
+            # Ignore everything after "|" which is used to allow multiple versions
+            # of the same sorter to be used
+            sorter_name = sorter_config_name.split('|')[0]
+
+            # Lookup and create the sorter
             sorter = sorters_by_name[sorter_name]
-            setting = json[sorter_name]
-
-            sorter_set.append(sorter(setting))
+            config = json[sorter_config_name]
+            sorter_set.append(sorter(config))
 
         return sorter_set
 
