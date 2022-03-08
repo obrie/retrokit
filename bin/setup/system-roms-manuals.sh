@@ -344,7 +344,7 @@ __convert_file_to_pdf() {
       exiftool -q -all= -tagsfromfile @ -all:all "$source_path"
     fi
 
-    img2pdf -s 72dpi --output "$target_path" "$source_path"
+    img2pdf -s 72dpi --engine internal --output "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(docx?|rtf|wri)$ ]]; then
     unoconv -f pdf -o "$target_path" "$source_path"
   elif [[ "$extension" =~ ^(pdf)$ ]]; then
