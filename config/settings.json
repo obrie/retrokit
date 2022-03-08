@@ -37,6 +37,9 @@
       "ocr": {
         "enabled": true
       },
+      "mutate": {
+        "enabled": false
+      },
       "compress": {
         "enabled": true,
         "color": {
