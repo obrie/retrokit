@@ -16,7 +16,7 @@
           "$ROMSET_PSP_REDUMP_URL/redump.psp_files.xml",
           "$ROMSET_PSP_REDUMP_URL.p2/redump.psp.p2_files.xml"
         ],
-        "match": "(?P<machine>[^/]+)\\.zip"
+        "match": "(?P<machine_alt_name>[^/]+)\\.zip"
       },
       "resources": {
         "dat": {
