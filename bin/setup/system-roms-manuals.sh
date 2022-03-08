@@ -374,14 +374,17 @@ __postprocess_pdf() {
     __clean_pdf "$pdf_path"
   fi
 
-  # Slice
-  if [ -n "$pages" ]; then
-    __slice_pdf "$pdf_path" "$pages"
-  fi
+  local mutate_enabled=$(setting '.manuals.postprocess.mutate.enabled // false')
+  if [ "$mutate_enabled" == 'true' ]; then
+    # Slice
+    if [ -n "$pages" ]; then
+      __slice_pdf "$pdf_path" "$pages"
+    fi
 
-  # Rotate
-  if [ "$rotate" != '0' ]; then
-    __rotate_pdf "$pdf_path" "$rotate"
+    # Rotate
+    if [ "$rotate" != '0' ]; then
+      __rotate_pdf "$pdf_path" "$rotate"
+    fi
   fi
 
   # OCR
