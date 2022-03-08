@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.resources.actions.iso_to_cso import IsoToCso
+from romkit.resources.resource_path import ResourcePath
 
 import glob
 import subprocess
