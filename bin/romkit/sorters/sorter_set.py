@@ -23,10 +23,16 @@ class SorterSet:
             # of the same sorter to be used
             sorter_name = sorter_config_name.split('|')[0]
 
+            if sorter_name[0] == '!':
+                sorter_name = sorter_name[1:]
+                reverse = True
+            else:
+                reverse = False
+
             # Lookup and create the sorter
             sorter = sorters_by_name[sorter_name]
             config = json[sorter_config_name]
-            sorter_set.append(sorter(config))
+            sorter_set.append(sorter(config, reverse=reverse))
 
         return sorter_set
 

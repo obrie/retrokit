@@ -6,20 +6,16 @@ from typing import List
 class BaseSorter:
     name = None
 
-    def __init__(self, setting) -> None:
+    def __init__(self, setting, reverse: bool = False) -> None:
         self.setting = setting
-
-    # By default, we never reverse the sort order.  This can be overridden for
-    # sorters that explicitly define the ordering.
-    @property
-    def reverse(self) -> bool:
-        return False
+        self.reverse = reverse
 
 
 # Sorts based on the presence of a substring in a value from the machine
 class SubstringSorter(BaseSorter):
-    def __init__(self, setting: List[str]) -> None:
+    def __init__(self, setting: List[str], reverse: bool = False) -> None:
         self.setting = list(map(str.lower, setting))
+        self.reverse = reverse
 
     def sort_key(self, machine: Machine) -> int:
         # Default priority is lowest
@@ -36,9 +32,9 @@ class SubstringSorter(BaseSorter):
 
 # Sorts based on alphabetical ordering in an ascending or descending fashion
 class OrderingSorter(BaseSorter):
-    @property
-    def reverse(self) -> bool:
-        return self.setting == 'descending'
+    def __init__(self, setting: bool, reverse: bool = False) -> None:
+        self.setting = setting
+        self.reverse = self.setting == 'descending'
 
     def sort_key(self, machine: Machine) -> str:
         return self.value(machine)
