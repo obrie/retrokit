@@ -67,12 +67,14 @@
     "id": "crc",
     "priority": {
       "flags": [
-        "USA"
+        "USA",
+        "Europe"
       ],
       "length": "ascending"
     },
     "filters": {
       "flags": [
+        "Canada",
         "Europe",
         "USA"
       ],
