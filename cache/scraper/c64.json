@@ -1470,7 +1470,9 @@
         "rating": null
     },
     "Big Mac - The Mad Maintenance Man": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Big Trouble in Little China": {
@@ -6117,7 +6119,12 @@
         "rating": null
     },
     "Jeep Command": {
-        "genres": [],
+        "genres": [
+            "Race",
+            "Driving",
+            "Race",
+            "Driving / Race"
+        ],
         "rating": null
     },
     "Jeopardy!": {
@@ -8015,13 +8022,13 @@
         ],
         "rating": "0.55"
     },
-    "Navy Seal": {
+    "Navy SEALs": {
         "genres": [
             "Action"
         ],
         "rating": null
     },
-    "Navy SEALs": {
+    "Navy Seal": {
         "genres": [
             "Action"
         ],
@@ -8970,7 +8977,9 @@
         "rating": null
     },
     "Poster Paster": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Postman Pat": {
@@ -14256,7 +14265,9 @@
         "rating": null
     },
     "Zig Zag": {
-        "genres": [],
+        "genres": [
+            "Shooter"
+        ],
         "rating": null
     },
     "Zim Sala Bim": {
