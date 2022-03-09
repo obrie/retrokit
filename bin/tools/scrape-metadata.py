@@ -51,9 +51,9 @@ class Scraper:
         self.config_file = config_file
         self.refresh = refresh
         self.override = override
-        self.scrapes = set()
-        self.title_scrapes = set()
-        self.failed_scrapes = set()
+        self.scrapes_found = set()
+        self.scrapes_missed = set()
+        self.group_titles = {}
 
         with open(self.config_file) as file:
             self.config = json.loads(os.path.expandvars(file.read()))
@@ -120,22 +120,29 @@ class Scraper:
 
         for romset in self.system.iter_romsets():
             for machine in romset.iter_machines():
-                # Ignore clones
-                if machine.parent_name or machine.title in self.title_scrapes:
-                    continue
+                # Set external emulator metadata
+                self.system.metadata_set.update(machine)
+                group_title = machine.parent_title or machine.title
+                self.group_titles[machine.name] = group_title
 
                 # Ignore BIOS
                 if 'bios' in machine.name.lower():
                     print(f'[{machine.name}] Skipping BIOS')
                     continue
 
+                # Skip if we're already:
+                # * Successfully scraped the group or
+                # * Attempted to scrape the specific machine (different clones may have matches)
+                if group_title in self.scrapes_found or machine.name in (self.scrapes_found | self.scrapes_missed):
+                    continue
+
                 # Scrape if:
                 # * Configured for all
-                # * Configured for missing and the machine is missing
+                # * Configured for missing and the metadata is missing
                 # * Configured for empty and the metadata is empty
-                data = self.metadata.get(machine.title)
+                data = self.metadata.get(group_title)
                 is_missing = (data is None)
-                is_empty = (not is_missing and not (data['genres'] or data['rating']))
+                is_empty = (is_missing or not (data['genres'] or data['rating']))
 
                 if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty):
                     self.scrape_machine(machine)
@@ -144,10 +151,6 @@ class Scraper:
 
     # Scrape the given machine
     def scrape_machine(self, machine: Machine) -> None:
-        # Track that we scraped the machine
-        self.scrapes.add(machine.name)
-        self.title_scrapes.add(machine.title)
-
         # Get the query parameters based on the largest file as this will
         # represent the underlying ROM file.  This works for all systems
         # *except* arcade which is okay because arcade has its own metadata
@@ -185,9 +188,20 @@ class Scraper:
 
         if 'found! :)' not in output and re.search(self.ERROR_PATTERN, output):
             print(f'[{machine.name}] Not found')
-            self.failed_scrapes.add(machine.name)
+
+            # Only track the miss for this machine's title -- we can still re-attempt
+            # the parent title if it's different
+            self.scrapes_missed.add(machine.name)
+            self.scrapes_missed.add(machine.title)
         else:
             print(f'[{machine.name}] Found')
+
+            # Track the match for both this machine's title and its parent since there's
+            # no need to re-scrape the parent
+            self.scrapes_found.add(machine.name)
+            self.scrapes_found.add(machine.title)
+            if machine.parent_title:
+                self.scrapes_found.add(machine.parent_title)
 
     # Build an emulationstation gamelist.xml that we can parse
     def build_gamelist(self) -> None:
@@ -222,12 +236,12 @@ class Scraper:
             # * It succeeded
             # * Configured to override all machines or
             # * Configured to override just the machines scraped
-            if name not in self.failed_scrapes and (self.override == OverrideConfig.ALL or name in self.scrapes):
-                title = Machine.title_from(name)
-                if title not in self.metadata:
-                    self.metadata[title] = {'genres': [], 'rating': None}
+            if name not in self.scrapes_missed and (self.override == OverrideConfig.ALL or name in self.scrapes_found):
+                group_title = self.group_titles[name]
+                if group_title not in self.metadata:
+                    self.metadata[group_title] = {'genres': [], 'rating': None}
 
-                data = self.metadata[title]
+                data = self.metadata[group_title]
                 if genres_csv:
                     data['genres'] = re.split(', *', genres_csv)
 
