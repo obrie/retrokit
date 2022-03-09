@@ -1044,7 +1044,7 @@
     },
     "Arthur and the Minimoys": {
         "genres": [],
-        "rating": null
+        "rating": "0.6"
     },
     "Arthur and the Revenge of Maltazard": {
         "genres": [
@@ -1099,8 +1099,10 @@
         "rating": "0.7"
     },
     "Asterix & Obelix XXL 2 - Mission Wifix": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "rating": "0.55"
     },
     "Asterix - Brain Trainer": {
         "genres": [],
@@ -3099,7 +3101,9 @@
         "rating": null
     },
     "Cooking Mama World - Combo Pack - Volume 2": {
-        "genres": [],
+        "genres": [
+            "Compilation"
+        ],
         "rating": null
     },
     "Cooking Mama World - Hobbies & Fun": {
@@ -10091,7 +10095,9 @@
         "rating": null
     },
     "Mama's Combo Pack - Volume 2": {
-        "genres": [],
+        "genres": [
+            "Compilation"
+        ],
         "rating": null
     },
     "Mamegoma - Honobono Nikki": {

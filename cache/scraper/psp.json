@@ -1801,8 +1801,10 @@
         "rating": "0.8"
     },
     "Cho Aniki": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Shoot'em Up"
+        ],
+        "rating": "0.6"
     },
     "Cho Aniki Zero": {
         "genres": [
@@ -4150,7 +4152,10 @@
         "rating": "0.75"
     },
     "Galaga '88": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Galcon Labs": {
@@ -4226,11 +4231,23 @@
         ],
         "rating": "0.55"
     },
+    "Genso Chronicle": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
+    },
     "Genso Suikoden I & II": {
         "genres": [
             "Role playing games"
         ],
         "rating": null
+    },
+    "Gensou Chronicle": {
+        "genres": [
+            "Role playing games"
+        ],
+        "rating": "0.7"
     },
     "Gensou Suikoden - Tsumugareshi Hyakunen no Toki": {
         "genres": [
@@ -6454,8 +6471,10 @@
         "rating": null
     },
     "LocoRoco - Midnight Carnival - Koushiki Guide Book": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.8"
     },
     "LocoRoco - Midnight Carnival - Official Strategy Guide": {
         "genres": [
@@ -8826,8 +8845,10 @@
         "rating": "0.95"
     },
     "Piyotama": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "rating": "0.5"
     },
     "Planetarium Creator Oohira Takayuki Kanshuu - Homestar Portable": {
         "genres": [],
@@ -9574,6 +9595,10 @@
         "genres": [
             "Lightgun Shooter"
         ],
+        "rating": null
+    },
+    "Rock Band - Unplugged": {
+        "genres": [],
         "rating": null
     },
     "Rock Band Unplugged": {
@@ -10914,8 +10939,11 @@
         "rating": "0.4"
     },
     "Super Robot Taisen - Operation Extend": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Strategy",
+            "Role playing games"
+        ],
+        "rating": "0.45"
     },
     "Super Robot Taisen - Operation Extend - Chapter Four": {
         "genres": [],
@@ -10971,7 +10999,10 @@
         "rating": null
     },
     "Super Star Soldier": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
         "rating": null
     },
     "Super Stardust Portable": {
@@ -11347,6 +11378,10 @@
             "Fight"
         ],
         "rating": "0.85"
+    },
+    "Tekken - Dark Resurrection - Ghost Data": {
+        "genres": [],
+        "rating": null
     },
     "Tekken 6": {
         "genres": [
@@ -12081,7 +12116,10 @@
         "rating": null
     },
     "Victory Run": {
-        "genres": [],
+        "genres": [
+            "Race",
+            "Driving"
+        ],
         "rating": null
     },
     "Victory Run - Eikou no 13,000KM": {
@@ -12860,6 +12898,13 @@
     "Yuusha 30": {
         "genres": [],
         "rating": null
+    },
+    "Yuusha no Kuse ni Namaikida": {
+        "genres": [
+            "Strategy",
+            "Simulation"
+        ],
+        "rating": "0.9"
     },
     "Yuusha no Kuse ni Namaikida 3D": {
         "genres": [

@@ -4081,7 +4081,9 @@
         "rating": null
     },
     "Hard Drivin'": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "rating": null
     },
     "Harlem Globetrotters": {
@@ -6580,8 +6582,11 @@
         "rating": "0.8"
     },
     "NES Virus Cleaner": {
-        "genres": [],
-        "rating": null
+        "genres": [
+            "Puzzle-Game",
+            "Strategy"
+        ],
+        "rating": "0.75"
     },
     "NFL": {
         "genres": [
