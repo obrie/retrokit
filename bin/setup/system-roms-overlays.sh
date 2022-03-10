@@ -55,8 +55,12 @@ configure() {
 
     # Look up either by the current rom or the parent rom
     local url=${overlay_urls[$(normalize_rom_name "$rom_name")]}
+    local overlay_title=$title
     if [ -z "$url" ] && [ -n "$parent_name" ]; then
+      # Note we use a different overlay title when referring to the parent because sometimes
+      # the overlays are different between child and parent
       url=${overlay_urls[$(normalize_rom_name "$parent_name")]}
+      overlay_title=$parent_title
     fi
 
     if [ -z "$url" ]; then
@@ -77,17 +81,17 @@ configure() {
     fi
 
     # We have an image: download it
-    __install_overlay "$url" "$group_title"
+    __install_overlay "$url" "$overlay_title" "$group_title"
 
     # Install overlay for either a single-disc game or, if configured, individual discs
     if has_disc_config "$rom_name"; then
-      __create_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
+      __create_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
 
     # Install overlay for the playlist (if applicable)
     local playlist_name=$(get_playlist_name "$rom_name")
     if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-      __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$group_title.cfg"
+      __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
   done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
 
@@ -142,24 +146,25 @@ __load_lightgun_titles() {
 # Download and install an overlay from the given url
 __install_overlay() {
   local url=$1
-  local group_title=$2
+  local overlay_title=$2
+  local group_title=$3
 
-  local image_filename="$group_title.png"
+  local image_filename="$overlay_title.png"
   download "$url" "$system_overlay_dir/$image_filename"
 
   # Check if this is a lightgun game that needs special processing
   if [ "$enable_lightgun_borders" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
-    outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$group_title-lightgun.png"
+    outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$overlay_title-lightgun.png"
 
     # Track the old file and update it to the lightgun version
     installed_files["$system_overlay_dir/$image_filename"]=1
-    image_filename="$group_title-lightgun.png"
+    image_filename="$overlay_title-lightgun.png"
   fi
 
   # Create overlay config
-  local overlay_config_path="$system_overlay_dir/$group_title.cfg"
+  local overlay_config_path="$system_overlay_dir/$overlay_title.cfg"
   create_overlay_config "$overlay_config_path" "$image_filename"
-  installed_files["$system_overlay_dir/$group_title.cfg"]=1
+  installed_files["$system_overlay_dir/$overlay_title.cfg"]=1
   installed_files["$system_overlay_dir/$image_filename"]=1
 }
 
@@ -231,11 +236,16 @@ restore() {
 
 vacuum() {
   # Identify valid overlay images
-  declare -Ag installed_images
-  while read -r group_title; do
-    installed_images["$system_overlay_dir/$group_title.png"]=1
-    installed_images["$system_overlay_dir/$group_title-lightgun.png"]=1
-  done < <(romkit_cache_list | jq -r '.parent.title // .title')
+  declare -A installed_images
+  while IFS=$'\t' read -r title parent_title; do
+    if [ -f "$system_overlay_dir/$title.png" ]; then
+      installed_images["$system_overlay_dir/$title.png"]=1
+      installed_images["$system_overlay_dir/$title-lightgun.png"]=1
+    else
+      installed_images["$system_overlay_dir/$parent_title.png"]=1
+      installed_images["$system_overlay_dir/$parent_title-lightgun.png"]=1
+    fi
+  done < <(romkit_cache_list | jq -r '[.title, .parent.title] | @tsv')
 
   # Generate rm commands for unused images
   while read -r path; do
