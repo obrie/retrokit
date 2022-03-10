@@ -7,7 +7,7 @@ class KeywordSorter(SubstringSorter):
     name = 'keywords'
 
     def value(self, machine: Machine) -> str:
-        return machine.title
+        return f'{machine.description} ({machine.comment})'
 
 
 # Sort on presence of flags in the name

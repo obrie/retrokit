@@ -26,6 +26,7 @@ class Machine:
 
         # Internal metadata
         description: str = '',
+        comment: str = '',
         orientation: str = 'horizontal',
         category: Optional[str] = None,
         sourcefile: Optional[str] = None,
@@ -56,6 +57,7 @@ class Machine:
 
         # Internal metadata
         self.description = description
+        self.comment = comment
         self.orientation = orientation
         self.category = category
         self.sourcefile = sourcefile
@@ -119,10 +121,15 @@ class Machine:
         if category is not None:
             category = category.text
 
+        comment = xml.find('comment')
+        if comment is not None:
+            comment = comment.text
+
         machine = cls(
             romset,
             xml.get('name'),
             description=xml.find('description').text,
+            comment=comment,
             category=category,
             orientation=orientation,
             parent_name=parent_name,
@@ -400,6 +407,7 @@ class Machine:
             'path': str(self.resource and self.resource.target_path.path),
             'filesize': self.filesize,
             'description': self.description,
+            'comment': self.comment,
             'orientation': self.orientation,
 
             # Download info
