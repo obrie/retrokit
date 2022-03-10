@@ -53,7 +53,7 @@ __scrape_source() {
   __scrape -s "$source" --flags onlymissing
 
   # Check if there are previously scraped roms with missing data / media
-  build_missing_reports
+  __build_missing_reports
   if [ ! -s "$aggregate_report_file" ]; then
     return
   fi
@@ -102,7 +102,7 @@ __scrape_source() {
   # This is needed for systems where a CRC / custom query isn't available for
   # us to use when there's missing scraped data.
   if [ "$run_final_check" == 'true' ]; then
-    build_missing_reports
+    __build_missing_reports
     if [ -s "$aggregate_report_file" ]; then
       __scrape -s "$source" --fromfile "$aggregate_report_file"
     fi
