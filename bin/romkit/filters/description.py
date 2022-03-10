@@ -9,7 +9,7 @@ class KeywordFilter(SubstringFilter):
     name = 'keywords'
 
     def values(self, machine: Machine) -> Set[str]:
-        return {machine.description}
+        return {f'{machine.description} ({machine.comment})'}
 
 
 # Filter on flags (text between parens) from the description
