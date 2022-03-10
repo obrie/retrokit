@@ -146,7 +146,7 @@ __add_disc_numbers() {
     return
   fi
 
-  # Remove existing disc numbers
+  # Remove existing overrides we may have previously added
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
 
   while IFS=$'\t' read -r name disc_title title path; do
@@ -165,8 +165,11 @@ __add_disc_numbers() {
     # Find the scraped title
     local scraped_title=$(grep $quickid /opt/retropie/configs/all/skyscraper/cache/$system/db.xml | grep 'type="title"' | grep -v 'source="user"' | head -n 1 | xmlstarlet sel -t -v '.' 2>/dev/null || echo "$title")
     local disc_id=$(echo "$disc_title" | grep -oE '\([^\)]+\)$')
+    disc_id=${disc_id//[()]/}
 
-    # Update the title to include the disc number
+    # Update the title to include the disc number.  We have to:
+    # * Provide the name of the file that's being updated in --fromfile
+    # * Pipe the title we want to set for that file
     local new_title="$scraped_title - $disc_id"
     echo "Updating \"$name\" scraped title from \"$scraped_title\" to \"$new_title\""
     echo "$(basename "$path")" > "$tmp_ephemeral_dir/scraper.input"
