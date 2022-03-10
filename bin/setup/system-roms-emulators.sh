@@ -36,6 +36,9 @@ configure() {
   while read -r config_key; do
     [ "${installed_keys["$config_key"]}" ] || crudini --del "$emulators_config_file" '' "$config_key"
   done < <(crudini --get "$emulators_config_file" '' | grep -E "^${system}_")
+
+  # Sort the file
+  sort -o "$emulators_config_file" "$emulators_config_file"
 }
 
 # Clean the configuration key used for defining ROM-specific emulator options
