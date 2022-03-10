@@ -9,6 +9,36 @@ import re
 import tempfile
 from pathlib import Path
 
+# Map mame names to their equivalent in fbneo
+MAME_TO_FBNEO_NAMES = {
+    "bnglngby": "vsraidbbay",
+    "btlecity": "vsbattlecity",
+    "cluclu": "vsclucluland",
+    "cstlevna": "vscastlevania",
+    "drmario": "vsdrmario",
+    "duckhunt": "vsduckhunt",
+    "excitebk": "vsexcitebike",
+    "goonies": "vsgoonies",
+    "hogalley": "vshogansalley",
+    "iceclimb": "vsiceclimber",
+    "jajamaru": "vsninjajkun",
+    "ladygolf": "vssmgolfla",
+    "nvs_machrider": "vsmachrider",
+    "nvs_mightybj": "vsmightybomjack",
+    "nvs_platoon": "vsplatoon",
+    "rbibb": "vsrbibbal",
+    "smgolf": "vssmgolf",
+    "starlstr": "vsstarluster",
+    "suprmrio": "vssmb",
+    "supxevs": "vssuperxevious",
+    "tkoboxng": "vstkoboxing",
+    "topgun": "vstopgun",
+    "vsfdf": "vsfreedomforce",
+    "vsgshoe": "vsgumshoe",
+    "vspinbal": "vspinball",
+    "vsskykid": "vssuperskykid",
+}
+
 class ProgrettoSnapsMetadata(ExternalMetadata):
     SCRAPE_URL = None
     VERSION_PATTERN = None
@@ -50,6 +80,9 @@ class ProgrettoSnapsMetadata(ExternalMetadata):
             for section in config.sections():
                 for name, value in config.items(section, raw=True):
                     self.values[name] = section
+                    if name in MAME_TO_FBNEO_NAMES:
+                        fbneo_name = MAME_TO_FBNEO_NAMES.get(name)
+                        self.values[fbneo_name] = section
 
 
 # Language metadata managed by progretto-SNAPS
