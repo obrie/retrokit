@@ -194,14 +194,14 @@ vacuum() {
 
 # Removes files from the skyscraper database that it determines are no longer
 # in use.
-vacuum_cache() {
+__vacuum_cache() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache vacuum
 }
 
 # Remove videos / images from emulationstation that are no longer used.
 # 
 # Note this *just* outputs the commands.  You must then run them.
-vacuum_media() {
+__vacuum_media() {
   while read -r media_path; do
     local filename=$(basename "$media_path")
     local rom_name=${filename%.*}
