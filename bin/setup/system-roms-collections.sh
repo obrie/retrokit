@@ -12,43 +12,58 @@ target_collections_dir="$HOME/.emulationstation/collections"
 configure() {
   mkdir -pv "$target_collections_dir"
 
+  __create_custom_collections
+  __create_romkit_collections
+}
+
+# Creates collections defined by custom, pre-defined emulationstation file
+__create_custom_collections() {
   while read -r filename; do
-    __create_collection "$filename"
+    local name=$(basename "$filename" '.tsv')
+    __create_collection "$name" "$source_collections_dir/$filename"
   done < <(ls "$source_collections_dir")
+}
+
+# Creates collections defined by metadata in romkit selections
+__create_romkit_collections() {
+  while read -r name; do
+    __create_collection "custom-$name" <(romkit_cache_list | jq -r "select(.collections | index(\"$name\")) | [\"$system\", .title] | @tsv" | uniq)
+  done < <(romkit_cache_list | jq -r '.collections[]' | sort | uniq)
 }
 
 # Creates the collection defined by the given file
 __create_collection() {
-  local filename=$1
-
-  # Identify what collection we're dealing with
-  local collection_name=$(basename "$filename" '.tsv')
-  local source_collection_path="$source_collections_dir/$filename"
-  local target_collection_path="$target_collections_dir/$collection_name.cfg"
+  local collection_name=$1
+  local source_collection_path=$2
 
   # Remove any existing entries for this system from the collection
+  local target_collection_path="$target_collections_dir/$collection_name.cfg"
   if [ -f "$target_collection_path" ]; then
     sed -i "/\/$system\//d" "$target_collection_path"
   fi
 
-  while IFS=$'\t' read -r collection_system rom_title; do
+  # Track which titles are in this collection
+  declare -A collection_titles
+  while IFS=$'\t' read -r rom_title; do
+    collection_titles["$rom_title"]=1
+  done < <(grep -E "^$system"$'\t' "$source_collection_path" | cut -d$'\t' -f 2)
+
+  while IFS=$'\t' read -r name title parent_title; do
+    if [ -z "${collection_titles["$title"]}" ] && { [ -z "$parent_title" ] || [ -z "${collection_titles["$parent_title"]}" ]; }; then
+      # Not in the collection -- skip
+      continue
+    fi
+
     # ROMs in collection files contain just the title in order to work
     # for different regions, so we find the first installed ROM that matches
-    # the title (the ROM could be present in multiple directories and we
-    # only want one in the collection)
-    while read -r rom_path; do
-      local rom_filename=${rom_path##*/}
-      local installed_name=${rom_filename%.*}
-      local installed_title=${installed_name%% (*}
-
-      # If the titles match, add it
-      if [ "$installed_title" == "$rom_title" ]; then
-        echo "Adding $rom_path to $target_collection_path"
-        echo "$rom_path" >> "$target_collection_path"
-        break
-      fi
-    done < <(__find_in_directories "$rom_title*")
-  done < <(grep -E "^$system"$'\t' "$source_collection_path")
+    # (the ROM could be present in multiple directories and we only want one in
+    # the collection)
+    local rom_path=$(__find_in_directories "$name.*" | head -n 1)
+    if [ -f "$rom_path" ]; then
+      echo "Adding $rom_path to $target_collection_path"
+      echo "$rom_path" >> "$target_collection_path"
+    fi
+  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title] | @tsv' | sort)
 }
 
 # Finds file in the system's configured rom directories
