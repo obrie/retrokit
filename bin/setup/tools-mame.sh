@@ -3,22 +3,29 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
+# We need to install a newer version of chdman for it to work with
+# Dreamcast redump images.  This won't be needed once we're on bullseye.
 setup_module_id='tools-mame'
 setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
 
+chdman_build=binary
 chdman_version=0.230
 
 depends() {
+  if [ "$chdman_build" == 'binary' ]; then
+    return
+  fi
+
+  sudo apt install -y libfontconfig1-dev qt5-default libsdl2-ttf-dev libxinerama-dev libxi-dev
+}
+
+build() {
   if [ ! `command -v chdman` ] || ! chdman | grep -F "$chdman_version"; then
-    __depends_chdman_binary
+    __build_chdman_${chdman_build}
   fi
 }
 
-__depends_chdman_source() {
-  # We need to install a newer version of chdman for it to work with
-  # Dreamcast redump images.  This won't be needed once we're on bullseye.
-  sudo apt install -y libfontconfig1-dev qt5-default libsdl2-ttf-dev libxinerama-dev libxi-dev
-
+__build_chdman_source() {
   # Set build flags
   export CFLAGS='-mcpu=cortex-a72 -mfpu=neon-fp-armv8 -O2'
   export MAKEFLAGS='-j4'
@@ -33,7 +40,7 @@ __depends_chdman_source() {
   popd
 }
 
-__depends_chdman_binary() {
+__build_chdman_binary() {
   sudo unzip -o "$cache_dir/mame/mame0230-tools.zip" -d /usr/local/bin/
 }
 
