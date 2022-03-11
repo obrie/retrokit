@@ -30,6 +30,7 @@
       "postprocess": "{base}/.files/{parent_title} ({languages}).pdf",
       "install": "{base}/{name}.pdf"
     },
+    "keep_downloads": false,
     "postprocess": {
       "clean": {
         "enabled": true
@@ -70,8 +71,7 @@
           "reduction_percent_threshold": 0.1
         }
       }
-    },
-    "keep_downloads": true
+    }
   },
   "retropie": {
     "show_menu": false
