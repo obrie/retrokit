@@ -38,6 +38,11 @@ __configure_core_options() {
   local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
 
+  if [ "$global_core_options_path" == "$core_options_path" ]; then
+    echo 'Skipping core options overrides (core_options_path is missing)'
+    return
+  fi
+
   # Use the global defaults as the initial file
   cp -v "$global_core_options_path" "$core_options_path"
 
