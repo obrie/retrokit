@@ -202,11 +202,23 @@ __vacuum_cache() {
 # 
 # Note this *just* outputs the commands.  You must then run them.
 __vacuum_media() {
+  # Look up which names are installed
+  declare -A installed_names
+  while IFS=$'\t' read -r name; do
+    installed_names["$name"]=1
+
+    local playlist_name=$(get_playlist_name "$name")
+    if [ "$playlist_name" != "$name" ]; then
+      installed_names["$playlist_name"]=1
+    fi
+  done < <(romkit_cache_list | jq -r '.name')
+
+  # Find media with no corresponding installed name
   while read -r media_path; do
     local filename=$(basename "$media_path")
     local rom_name=${filename%.*}
 
-    if ! find "$HOME/RetroPie/roms/$system" -name "$rom_name.*" | grep -q .; then
+    if [ -z "${installed_names["$rom_name"]}" ]; then
       echo "rm -f $(printf '%q' "$media_path")"
     fi
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
