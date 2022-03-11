@@ -12,7 +12,6 @@ config_path='/opt/retropie/configs/mame-advmame/advmame-joy.rc'
 configure() {
   __configure_dirs
   __configure_advmame
-
 }
 
 __configure_dirs() {
