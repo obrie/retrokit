@@ -1,38 +1,36 @@
 # retrokit
 
-retrokit provides hands-off management of arcade systems using currently known best
-practices as I understand them.
+retrokit provides software automation for the management of retro-gaming systems
+with RetroPie / Raspberry Pi 4 using currently known best practices as I understand them.
 
 Specifically, it can set up:
 
 * Cases (e.g. Argon)
-* Bluetooth
 * Controllers (including autoconfig for advmame, drastic, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
-* SSH
 * VNC
-* Wifi configuration
-* Overclocking
 * Display settings
-* Localization
 * Splash screens (async loading process, reduces load time by 2s)
-* Custom Retropie modules
 * Scraping (via skyscraper) with automated fallback queries
 * Themes
 * Retroarch configuration
 * EmulationStation configuration
-* Overlays / Bezels
+* Overlays / Bezels (with lightgun-compatible auto-generatino)
 * Cheats (RetroArch, MAME, NDS, etc.)
 * HiScores
 * Launch images
 * Emulator installation
 * ROM Playlist (m3u) auto-generation for multi-disc games
-* EmulationStation Collections management
-* Lightgun collections
-* Lightgun-compatible overlay auto-generation
+* EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
 * In-game manuals
 * Enhanced Kiosk mode (prevent retroarch changes)
+* Bluetooth
+* SSH
+* Wifi
+* Overclocking
+* Localization
+* Custom Retropie modules
 * Various fixes / workarounds for many common issues
 
 It also provides ROM management capabilities, including:
@@ -54,7 +52,7 @@ Additionally, it provides Game Manual management capabilities, including:
 
 * Installation via public manual sets
 * In-game viewing and control of manuals via keyboard and joysticks
-* OCR'd / Searchable
+* OCR'd / Searchable PDFs
 
 This is all supported for the following systems:
 
@@ -95,13 +93,13 @@ There are also system-specific features, including:
 * Automatic joystick selection for Commodore 64 via C64 Dreams project
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
-* Automatic filtering of runnable games for Sega Saturn
-* Optimized settings per-game for Arcade, Atari Jaguar, and N64
+* Automatic filtering of runnable games for 3Do, PSP, Sega Saturn, and more
+* Optimized settings per-game for Arcade, Atari Jaguar, C64, N64, and more
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP
 * DLC support for PSP (PSN) ROMs
 
-All of this means you can set up your arcade machine from scratch to feature-complete
+All of this means you can set up your system from scratch to feature-complete
 with less than a few hours worth of work.  The automated scripts could take
 days to complete depending on the size of your game collection.
 
@@ -119,8 +117,8 @@ When I started creating my own RetroPie system, I wanted to build it in such a w
 that I could re-create the exact same setup steps each time.  As it turns out, there's
 a lot involved in building out the perfect Raspberry Pi 4 system.
 
-retrokit (and romkit) represent the work I did to build a configuration management
-system for my arcade.
+retrokit, romkit, manualkit, and all of the supporting tools represent the work I did
+to build a configuration management system for my personal setup.
 
 ## Demo
 
@@ -154,7 +152,7 @@ The default hardware setup assumes:
 * 1TB or more storage capacity
 
 You can have complete control over what parts of retrokit get used via everything
-in the config/ folder, particularly config/settings.json.
+in the `config/` folder, particularly `config/settings.json`.
 
 I strongly recommend forking this repo and using your fork to update and track
 all of your personal preferences.
@@ -229,7 +227,7 @@ bin/setup.sh uninstall system
 bin/setup.sh uninstall splashscreen
 
 # Run specific function in a setup module
-bin/setup.sh install_config system-retroarch n64(
+bin/setup.sh configure system-retroarch n64
 
 # Add (very) verbose output
 DEBUG=true bin/setup.sh install splashscreen
@@ -339,9 +337,9 @@ will always go to its native menu.
 | videopac      | Requires 2 controllers (Left / Right controller is game-specific) |
 
 Please note that due to limitations in how controllers are set up in NDS (Nintendo DS)
-and PSP (PlayStation Portable), retrokit can only automatically configured one
+and PSP (PlayStation Portable), retrokit can only automatically configure one
 controller.  The last configured controller input under `.hardware.controllers.inputs`
-in [config/settings.json](config/settings.json) will be the used.
+in [config/settings.json](config/settings.json) will be used.
 
 Other controllers can still be used, but you must either manually configure it in the
 emulator's UI or use the same button mappings for all controllers.
@@ -498,11 +496,11 @@ were dumped.  Additionally, Redump does not provide clone metadata for its ROMs.
 
 In order to (a) provide some consistency, (b) provide some stability in the metadata, and (c) make
 it easier to work with, the same general rules are applied to the custom clonelists generated for
-Redump DAT files.  In order to reduce maintenance, the clonelists only contain ROMs that have clones.
+Redump DAT files.
 
 ## Manuals
 
-The manuals in this project were all hand-sourced from a variety of public websites.  Only
+The manuals used by this project were all hand-sourced from a variety of public websites.  Only
 manuals that have been defined in the DAT files used by retrokit are included.  All manuals
 are installed in PDF format, but they can be sourced from a variety of formats.  Details
 about the process are described below.
@@ -548,7 +546,7 @@ life of their source projects, but also provides a more stable source to downloa
 from.  Over time, this archive will be updated to reflect additional manuals made available
 or new systems supported.
 
-Reference: https://archive.org/details/romkit-manualkit
+Reference: https://archive.org/details/retrokit-manuals
 
 ### Compression
 
@@ -573,12 +571,7 @@ config/settings.json:
       "url": "https://archive.org/download/romkit-manualkit/{system}/original.zip/{parent_title} ({languages}).pdf",
       "processed": false
     },
-    "postprocess": {
-      "resolution": 300,
-      "quality_factor": 0.3,
-      "downsample_filesize_threshold": 0,
-      "downsample_resolution_threshold": 1.0
-    }
+    ...
   }
 }
 ```
@@ -592,7 +585,7 @@ code unless it is significant for differentiating manuals.  For example, `en` ge
 to US-based English manuals while `en-gb` generally refers to non-US based English manuals.
 
 The titles given to manuals are based on the *parent* title.  There are, therefore, 2 main
-pieces of information for identification a manual:
+pieces of information for identifying a manual:
 
 * Parent title (no modifier details)
 * Comma-delimited list of languages
@@ -611,8 +604,8 @@ retrokit configuration is:
           "en",
           "en-gb"
         ],
-        "regional_priority": false,
-        "allow_fallback": true
+        "prioritize_region_languages": false,
+        "only_region_languages": false
       }
     }
   },
@@ -621,11 +614,10 @@ retrokit configuration is:
 By default, retrokit will prefer languages based on the priority order defined in the system's
 configuration.  However, two additional settings are available to adjust this behavior:
 
-* `regional_priority` - If set to `true`, this will prioritize languages according to the
+* `prioritize_region_languages` - If set to `true`, this will prioritize languages according to the
   regions from the ROM name rather than the order defined in the configuration
-* `allow_fallback` - If set to `true`, then this will fall back to the list of languages
-  defined in the configuration if `regional_priority` is `true` and no regional languages
-  matched
+* `only_region_languages` - If set to `true`, then this will only use manuals in languages
+  associated with the region defined for the RM
 
 ### Controls
 
@@ -712,6 +704,7 @@ issues on some games include:
 * atarijaguar
 * n64
 * pc
+* psp
 * saturn
 
 To the best of my ability, I've attempted to capture compatibility
@@ -767,7 +760,7 @@ There are too many improvements to count here, but some ideas are:
 
 * More comprehensive compatibility ratings
 * Support for non-Raspbian platforms
-* Computer-based emulators (Amigo, Apple II, etc.)
+* Computer-based emulators (Amiga, Apple II, etc.)
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
