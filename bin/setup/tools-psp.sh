@@ -9,7 +9,9 @@ setup_module_desc='PSP tools for managing CSO files'
 depends() {
   # Install dependencies
   sudo apt install -y liblz4-dev libdeflate-dev libuv1-dev
+}
 
+build() {
   local maxcso_version="$(cat /usr/local/etc/maxcso.version 2>/dev/null || true)"
   if [ ! `command -v maxcso` ] || has_newer_commit https://github.com/unknownbrackets/maxcso "$maxcso_version"; then
     # Check out
