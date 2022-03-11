@@ -3,7 +3,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_module_id='manulakit'
+setup_module_id='manualkit'
 setup_module_desc='manualkit install and configuration for viewing game manuals'
 
 install_dir='/opt/retropie/supplementary/manualkit'
@@ -19,7 +19,7 @@ depends() {
   sudo apt install -y img2pdf
 
   # Convert cbr archives to pdf
-  sudo apt install -y unrar
+  sudo apt install -y unrar-free
 
   # Convert doc to pdf
   sudo apt install -y unoconv
@@ -89,7 +89,7 @@ remove() {
   sudo apt remove -y \
     chromium \
     img2pdf \
-    unrar \
+    unrar-free \
     unoconv \
     libimage-exiftool-perl \
     tesseract-ocr-ara \
