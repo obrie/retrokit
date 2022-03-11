@@ -687,6 +687,16 @@ It also only includes a selection of PC games.
 If you wanted to include the entire PC collection, you would need another 500GB
 or so (so a 2TB drive).
 
+Additional files:
+
+| Extra        | Capacity |
+| ------------ | -------- |
+| Covers       | 2GB      |
+| Manuals      | 19GB     |
+| Screenshots  | 3GB      |
+| Videos       | 20GB     |
+| Wheels       | 660MB    |
+
 ## Emulators
 
 The following emulators / cores are built from source:
