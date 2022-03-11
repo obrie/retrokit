@@ -18,5 +18,6 @@ remove() {
   sudo apt remove -y zip
   sudo pip3 uninstall -y lxml pycurl
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
+}
 
 setup "${@}"
