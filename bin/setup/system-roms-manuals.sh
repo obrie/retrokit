@@ -74,12 +74,17 @@ configure() {
     local playlist_install_path=${manual['playlist_install_path']}
     local playlist_name=${manual['playlist_name']}
 
+    # Track whether we had to download the file
+    local downloaded=false
+
     # Download the file
     if [ ! -f "$download_path" ] && [ ! -f "$archive_path" ] && [ ! -f "$postprocess_path" ]; then
       if ! { __download_pdf "$archive_url" "$archive_path" max_attempts=1 || __download_pdf "$url" "$download_path"; }; then
         # We couldn't download from the archive or source -- nothing to do
         echo "[${manual['rom_name']}] Failed to download from $url (archive: $archive_url)"
         continue
+      else
+        downloaded=true
       fi
     fi
 
@@ -103,6 +108,13 @@ configure() {
       fi
     fi
 
+    # Remove unused files (to avoid consuming too much disk space during the loop).
+    # We only do this when processing new files -- existing files need to be handled
+    # through a vacuum.
+    if [ "$downloaded" == 'true' ] && [ "$keep_downloads" != 'true' ]; then
+      rm -fv "$download_path" "$archive_path"
+    fi
+
     # Final check to make sure the PDF is valid before installing it
     __validate_pdf "$postprocess_path"
 
@@ -115,11 +127,6 @@ configure() {
       ln -fsv "$postprocess_path" "$playlist_install_path"
       installed_playlists[$playlist_name]=1
       installed_files[$playlist_install_path]=1
-    fi
-
-    # Remove unused files (to avoid consuming too much disk space during the loop)
-    if [ "$keep_downloads" != 'true' ]; then
-      rm -fv "$download_path" "$archive_path"
     fi
 
     installed_files[$install_path]=1
