@@ -28,7 +28,7 @@
       "archive": "{base}/.download/{parent_title} ({languages}) (archive).pdf",
       "download": "{base}/.download/{parent_title} ({languages}).{extension}",
       "postprocess": "{base}/.files/{parent_title} ({languages}).pdf",
-      "install": "{base}/{name}.pdf"
+      "install": "{base}/{rom_name}.pdf"
     },
     "keep_downloads": false,
     "postprocess": {
