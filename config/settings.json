@@ -21,7 +21,8 @@
   "manuals": {
     "archive": {
       "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-compressed.zip/{parent_title} ({languages}).pdf",
-      "processed": true
+      "processed": true,
+      "fallback_to_source": false
     },
     "paths": {
       "base": "$HOME/.emulationstation/downloaded_media/{system}/manuals",
