@@ -24,7 +24,7 @@ Specifically, it can set up:
 * EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
 * In-game manuals
-* Enhanced Kiosk mode (prevent retroarch changes)
+* Autoconfig overrides
 * Bluetooth
 * SSH
 * Wifi
