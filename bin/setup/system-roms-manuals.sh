@@ -47,6 +47,7 @@ archive_path_template=$(setting '.manuals.paths.archive')
 postprocess_path_template=$(setting '.manuals.paths.postprocess')
 install_path_template=$(setting '.manuals.paths.install')
 archive_url_template=$(setting '.manuals.archive.url')
+fallback_to_source=$(setting '.manuals.archive.fallback_to_source')
 
 configure() {
   # Ensure the system has manuals
@@ -81,7 +82,7 @@ configure() {
     if [ ! -f "$download_path" ] && [ ! -f "$archive_path" ] && [ ! -f "$postprocess_path" ]; then
       if ! { __download_pdf "$archive_url" "$archive_path" max_attempts=1 || __download_pdf "$url" "$download_path"; }; then
         # We couldn't download from the archive or source -- nothing to do
-        echo "[${manual['rom_name']}] Failed to download from $url (archive: $archive_url)"
+        echo "[${manual['rom_name']}] Failed to download from $archive_url (source: $url)"
         continue
       else
         downloaded=true
@@ -183,9 +184,14 @@ __build_manual() {
     done < <(echo "$postprocess_options" | tr ';' '\n')
   fi
 
-  # Fix URL:
+  # Add URL only if we're allowed to fall back to downloading from the original
+  # source URL.
+  # 
+  # This also fixes:
   # * Explicitly escape the character "#" since rom names can have that character
-  manual_ref['url']=${manual_url//#/%23}
+  if [ "$fallback_to_source" != 'false' ]; then
+    manual_ref['url']=${manual_url//#/%23}
+  fi
 
   # Define the souce manual's extension
   local manual_url_extension=${manual_ref['url']##*.}
