@@ -180,7 +180,7 @@ class InputListener():
         with path.open() as f:
             content = '[DEFAULT]\n' + f.read()
 
-        config = configparser.ConfigParser()
+        config = configparser.ConfigParser(strict=False)
         config.read_string(content)
 
         # Convert to dictionary and replace excessive quotes
