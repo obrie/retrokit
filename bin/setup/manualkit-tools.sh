@@ -18,17 +18,21 @@ depends() {
 
 # Tools for converting from different formats to PDF
 __depends_conversion_tools() {
-  # Convert txt/html to pdf
-  sudo apt install -y chromium
+  sudo apt install -y
+    # Convert txt/html to pdf
+    chromium \
 
-  # Convert images to pdf
-  sudo apt install -y img2pdf
+    # Convert images to pdf
+    img2pdf \
 
-  # Convert cbr archives to pdf
-  sudo apt install -y unrar-free
+    # Convert cbr archives to pdf
+    unrar-free \
 
-  # Convert doc to pdf
-  sudo apt install -y unoconv
+    # Convert doc to pdf
+    unoconv \
+
+    # Resolution calculations
+    bc
 }
 
 # Tools for fixing exif data
@@ -40,7 +44,7 @@ __depends_exif() {
 __depends_ocr() {
   # Ensure the necessary version of qpdf is installed
   if [ ! `command -v qpdf` ] || version_lt "$(qpdf --version | grep -oE 'version [0-9\.]+')" "version $qpdf_min_version"; then
-    sudo apt remove -y qpdf
+    sudo apt remove -y qpdf libqpdf-dev
 
     # Depends to compile
     sudo apt install -y libjpeg-dev
@@ -109,6 +113,7 @@ remove() {
   sudo pip3 uninstall -y ocrmypdf
 
   sudo apt remove -y \
+    bc \
     chromium \
     img2pdf \
     unrar-free \
