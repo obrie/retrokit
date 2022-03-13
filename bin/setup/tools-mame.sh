@@ -22,6 +22,8 @@ depends() {
 build() {
   if [ ! `command -v chdman` ] || version_lt "$(chdman | grep -oE 'manager [0-9\.]+')" "$chdman_min_version"; then
     __build_chdman_${chdman_build}
+  else
+    echo "chdman is already the minimum required version ($chdman_min_version)"
   fi
 }
 
