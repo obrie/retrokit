@@ -59,6 +59,8 @@ __depends_ocr() {
 
     # Clean up
     popd
+  else
+    echo "qpdf is already the minimum required version ($qpdf_min_version)"
   fi
 
   sudo pip3 install ocrmypdf==13.3.0
@@ -98,6 +100,8 @@ __depends_ghostscript() {
 
     # Clean up
     popd
+  else
+    echo "gs is already the minimum required version ($ghostscript_min_version)"
   fi
 }
 
