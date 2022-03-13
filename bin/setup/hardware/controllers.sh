@@ -17,6 +17,9 @@ build() {
 
 # Run RetroPie autoconfig for each controller input
 configure() {
+  # Copy overrides config
+  sudo cp "$config_dir/retroarch/autoconfig-overrides.cfg" "$configscripts_dir/autoconfig-overrides.cfg"
+
   # Always update to the latest game controller database
   local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
   download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
@@ -191,6 +194,9 @@ restore() {
 }
 
 remove() {
+  # Remove autoconfig overrides
+  sudo rm -fv "$configscripts_dir/autoconfig-overrides.cfg"
+
   # Remove autoconfig scripts
   while read -r autoconfig_name; do
     sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
