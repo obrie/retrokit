@@ -39,7 +39,7 @@ class ManualKit():
         track_emulator: bool = False,
     ) -> None:
         # Read from config
-        config = configparser.ConfigParser()
+        config = configparser.ConfigParser(strict=False)
         config.read_dict({'pdf': {}, 'display': {}, 'input': {}, 'keyboard': self.BINDING_DEFAULTS, 'joystick': self.BINDING_DEFAULTS})
         if config_path and Path(config_path).exists():
             config.read(config_path)
