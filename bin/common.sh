@@ -17,6 +17,7 @@ source "$bin_dir/helpers/downloads.sh"
 source "$bin_dir/helpers/emulationstation.sh"
 source "$bin_dir/helpers/logging.sh"
 source "$bin_dir/helpers/retropie_packages.sh"
+source "$bin_dir/helpers/versions.sh"
 
 # Define package directories
 export cache_dir="$app_dir/cache"

@@ -9,7 +9,7 @@ setup_module_id='tools-mame'
 setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
 
 chdman_build=binary
-chdman_version=0.230
+chdman_min_version=0.230
 
 depends() {
   if [ "$chdman_build" == 'binary' ]; then
@@ -20,7 +20,7 @@ depends() {
 }
 
 build() {
-  if [ ! `command -v chdman` ] || ! chdman | grep -F "$chdman_version"; then
+  if [ ! `command -v chdman` ] || version_lt "$(chdman | grep -oE 'manager [0-9\.]+')" "$chdman_min_version"; then
     __build_chdman_${chdman_build}
   fi
 }
