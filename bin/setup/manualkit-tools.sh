@@ -3,7 +3,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_module_id='manualkit-supplementary'
+setup_module_id='manualkit-tools'
 setup_module_desc='manualkit supplementary tools for processing new manuals'
 
 ghostscript_min_version=9.55.0
