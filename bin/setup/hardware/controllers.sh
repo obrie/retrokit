@@ -8,12 +8,26 @@ setup_module_desc='Controller autoconfiguration'
 
 autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
+sdldb_path="$tmp_dir/gamecontrollerdb.txt"
 
 build() {
-  # Add autoconfig scripts
+  __build_autoconfig_scripts
+  __build_gamecontrollerdb
+}
+
+# Add autoconfig scripts
+__build_autoconfig_scripts() {
   while read -r autoconfig_name; do
     sudo cp -v "$bin_dir/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/"
   done < <(setting '.hardware.controllers.autoconfig[]')
+}
+
+# Download the latest game controller database
+__build_gamecontrollerdb() {
+  local gamecontrollerdb_version="$(cat "$tmp_dir/gamecontrollerdb.version" 2>/dev/null || true)"
+  if has_newer_commit https://github.com/gabomdq/SDL_GameControllerDB "$gamecontrollerdb_version"; then
+    download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
+  fi
 }
 
 # Run RetroPie autoconfig for each controller input
@@ -23,19 +37,12 @@ configure() {
 }
 
 __configure_overrides() {
-  # Backup / restore autoconf
-  backup_file "$autoconf_file"
-  __restore_autoconf
-
   # Copy overrides config
-  ini_merge "$config_dir/controllers/autoconf.cfg" "$autoconf_file" as_sudo=true
+  __restore_autoconf
+  ini_merge "$config_dir/controllers/autoconf.cfg" "$autoconf_file" as_sudo=true restore=false
 }
 
 __configure_controllers() {
-  # Always update to the latest game controller database
-  local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
-  download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
-
   while IFS=, read -r name id swap_buttons; do
     local config_file="$config_dir/controllers/inputs/$name.cfg"
 
