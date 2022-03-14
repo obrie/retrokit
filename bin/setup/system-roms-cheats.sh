@@ -9,6 +9,15 @@ setup_module_desc='Link roms to game cheat files for libretro'
 cheat_database_path=${retroarch_path_defaults['cheat_database_path']}
 system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
 
+# If matched, we must find the corresonding country in the ROM name
+countries_regex='asia|australia|brazil|china|europe|france|germany|italy|japan|korea|russia|spain|sweden|usa'
+
+# If matched, we must find the corresponding version in the ROM name
+versions_regex='proto|rev|beta|demo|unl'
+
+# Prioritized list of which cheat system we prefer (lower index == high priority)
+cheat_systems=("action replay" "game genie" gameshark xploder)
+
 configure() {
   # Name of the cheats for this system
   if [ -z "$(system_setting '.cheats.names')" ]; then
@@ -21,7 +30,7 @@ configure() {
 
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
-  __load_cheat_mappings
+  __load_cheat_mappings | sort | uniq > "$tmp_ephemeral_dir/cheats.tsv"
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
@@ -41,21 +50,19 @@ configure() {
     # We can't just symlink to the source directory because the cheat filenames
     # don't always match the ROM names.  As a result, we need to try to do some
     # smart matching to find the corresponding cheat file.
-    local normalized_rom_name=$(normalize_rom_name "$rom_name")
-    local cheat_name=${cheat_mappings["$normalized_rom_name"]}
-    local source_cheats_dir=${cheat_mappings["$normalized_rom_name/source"]}
+    local source_cheat_path=$(__find_matching_cheat "$rom_name")
 
-    if [ -n "$cheat_name" ]; then
+    if [ -n "$source_cheat_path" ]; then
       # Link the cheat for either a single-disc game or, if configured, individual discs
       if has_disc_config "$rom_name"; then
-        ln -fsv "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$rom_name.cht"
+        ln -fsv "$source_cheat_path" "$target_cheats_dir/$rom_name.cht"
         installed_files["$target_cheats_dir/$rom_name.cht"]=1
       fi
 
       # Link the cheat for the playlist (if applicable)
       local playlist_name=$(get_playlist_name "$rom_name")
       if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
-        ln -fsv "$source_cheats_dir/$cheat_name.cht" "$target_cheats_dir/$playlist_name.cht"
+        ln -fsv "$source_cheat_path" "$target_cheats_dir/$playlist_name.cht"
         installed_playlists["$playlist_name"]=1
         installed_files["$target_cheats_dir/$playlist_name.cht"]=1
       fi
@@ -84,28 +91,80 @@ __load_cheat_mappings() {
       # match with our own installed roms
       local cheat_name=${cheat_filename%.*}
       local key=$(normalize_rom_name "$cheat_name")
+      echo "$key"$'\t'"$cheat_name"$'\t'"$source_cheats_dir/$cheat_filename"
 
-      # Only re-map if we need to.  This prioritizes exact matches.
-      local existing_mapping=${cheat_mappings["$key"]}
-      if [ -z "$existing_mapping" ]; then
-        cheat_mappings["$key"]="$cheat_name"
-        cheat_mappings["$key/source"]="$source_cheats_dir"
-
-        # In some cases, multiple ROMs are combined into a single cheat file,
-        # separated by " - ".  We need to map each of those individually as
-        # well.
+      # In some cases, multiple ROMs are combined into a single cheat file,
+      # separated by " - ".  We need to map each of those individually as
+      # well.
+      if [[ "$cheat_name" == *-* ]]; then
         while read -r sub_cheat_name; do
           key=$(normalize_rom_name "$sub_cheat_name")
-          existing_mapping=${cheat_mappings["$key"]}
-
-          if [ -z "$existing_mapping" ]; then
-            cheat_mappings["$key"]="$cheat_name"
-            cheat_mappings["$key/source"]="$source_cheats_dir"
-          fi
+          echo "$key"$'\t'"$cheat_name"$'\t'"$source_cheats_dir/$cheat_filename"
         done < <(printf '%s\n' "${cheat_name// - /$'\n'}")
       fi
-    done < <(ls "$source_cheats_dir" | awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-)
+    done < <(find "$source_cheats_dir" -name '*.cht' -printf '%f\n')
   done < <(system_setting '.cheats.names[]')
+}
+
+# Sort by:
+# * Number of version flags that match
+# * Number of country flags that match
+# * Total number of flags that match
+# * Cheat system preference
+# * Cheat name length
+__find_matching_cheat() {
+  local rom_name=$1
+  local normalized_rom_name=$(normalize_rom_name "$rom_name")
+
+  # Look up this ROM's associated flags as cheats can be region-specific
+  local rom_flags=$(echo "$rom_name" | grep -oE "\(.+$" | grep -oE "[^\(\), ]+[^\(\),]+" | tr '[:upper:]' '[:lower:]')
+
+  # Track the cheats that might match our ROM
+  local cheat_matches=()
+
+  while IFS=$'\t' read cheat_name cheat_filename; do
+    # If cheat name has flags in it, then we try to prioritize based on
+    # the flags in the rom provided
+    local cheat_flags=$(echo "$cheat_name" | grep -oE "\(.+$" | grep -oE "[^\(\), ]+[^\(\),]+" | tr '[:upper:]' '[:lower:]')
+
+    # Prioritization stats
+    local country_matches_count=0
+    local version_matches_count=0
+    local total_matches_count=0
+    local cheat_system_index=0
+    local cheat_name_length=${#cheat_name}
+
+    # Find matching countries
+    if echo "$cheat_flags" | grep -qE '^('"$countries_regex"')$'; then
+      country_matches_count=$(comm -12 <(echo "$cheat_flags" | grep -E '^('"$countries_regex"')$' | sort | uniq) <(echo "$rom_flags" | grep -E '^('"$countries_regex"')$' | sort | uniq) | wc -l)
+      if [ "$country_matches_count" == '0' ]; then
+        continue
+      fi
+    fi
+
+    # Find matching versions
+    if echo "$cheat_flags" | grep -qE '^('"$versions_regex"')'; then
+      version_matches_count=$(comm -12 <(echo "$cheat_flags" | grep -E '^('"$versions_regex"')' | sort | uniq) <(echo "$rom_flags" | grep -E '^('"$versions_regex"')' | sort | uniq) | wc -l)
+      if [ "$version_matches_count" == '0' ]; then
+        continue
+      fi
+    fi
+
+    # Total matching flags
+    total_matches_count=$(comm -12 <(echo "$cheat_flags" | sort | uniq) <(echo "$rom_flags" | sort | uniq) | wc -l)
+
+    # Find matching cheat system
+    for i in "${!cheat_systems[@]}"; do
+       if [[ "$cheat_flags" == *"${cheat_systems[$i]}"* ]]; then
+          cheat_system_index=$((i+1))
+          break
+       fi
+    done
+
+    cheat_matches+=("$version_matches_count"$'\t'"$country_matches_count"$'\t'"$total_matches_count"$'\t'"$cheat_system_index"$'\t'"$cheat_name_length"$'\t'"$cheat_filename")
+  done < <(grep -E "^$normalized_rom_name"$'\t' "$tmp_ephemeral_dir/cheats.tsv" | cut -d$'\t' -f 2,3)
+
+  printf "%s\n" "${cheat_matches[@]}" | sort -t$'\t' -k1,1n -k2,2n -k3,3n -k4,4rn -k5,5rn -k6,6r | tail -n 1 | cut -d$'\t' -f 6
 }
 
 restore() {
