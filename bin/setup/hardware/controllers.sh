@@ -6,6 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='hardware/controllers'
 setup_module_desc='Controller autoconfiguration'
 
+autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 
 build() {
@@ -17,9 +18,20 @@ build() {
 
 # Run RetroPie autoconfig for each controller input
 configure() {
-  # Copy overrides config
-  sudo cp "$config_dir/retroarch/autoconfig-overrides.cfg" "$configscripts_dir/autoconfig-overrides.cfg"
+  __configure_overrides
+  __configure_controllers
+}
 
+__configure_overrides() {
+  # Backup / restore autoconf
+  backup_file "$autoconf_file"
+  __restore_autoconf
+
+  # Copy overrides config
+  ini_merge "$config_dir/controllers/autoconf.cfg" "$autoconf_file" as_sudo=true
+}
+
+__configure_controllers() {
   # Always update to the latest game controller database
   local sdldb_path="$tmp_dir/gamecontrollerdb.txt"
   download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
@@ -189,8 +201,17 @@ _EOF_
 }
 
 restore() {
-  # Reset inputs
+  __restore_inputs
+  __restore_autoconf
+}
+
+# Reset inputs
+__restore_inputs() {
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
+}
+
+__restore_autoconf() {
+  sed -i '/^retroarch_(keyboard|controller)/d' "$autoconf_file"
 }
 
 remove() {
