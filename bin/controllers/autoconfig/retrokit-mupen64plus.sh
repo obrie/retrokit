@@ -165,9 +165,9 @@ function onend_retrokit-mupen64plus_joystick() {
     # Copy existing config to a temp file for us to modify
     sed -e "/; ${DEVICE_NAME}_START/,/; ${DEVICE_NAME}_END/"'!d' "$file" > /tmp/mp64tempconfig.cfg
 
-    iniConfig " = " "" "/tmp/mp64tempconfig.cfg"
-
     if [ -s /tmp/mp64tempconfig.cfg ] && getAutoConf 'mupen64plus_combine_axis_and_dpad'; then
+        iniConfig " = " "" "/tmp/mp64tempconfig.cfg"
+
         __check_axis_retrokit-mupen64plus 'X Axis' 'DPad L' 'DPad R'
         __check_axis_retrokit-mupen64plus 'Y Axis' 'DPad U' 'DPad D'
 
@@ -199,7 +199,7 @@ function __check_axis_retrokit-mupen64plus() {
     local dpad_key_2_value=$ini_value
 
     # Ensure current value does not contain dpad values and HAT keys *do*
-    if [ -n "$ini_value" ] && [[ "$ini_value" != *hat* ]] && [[ "$dpad_key_1_value" == *hat* ]] && [[ "$dpad_key_2_value" == *hat* ]]; then
+    if [ -n "$current_value" ] && [[ "$current_value" != *hat* ]] && [[ "$dpad_key_1_value" == *hat* ]] && [[ "$dpad_key_2_value" == *hat* ]]; then
         local dpad_key_1_input_id=$(echo "$dpad_key_1_value" | grep -oE '[0-9]+')
         local dpad_key_2_input_id=$(echo "$dpad_key_2_value" | grep -oE '[0-9]+')
 
