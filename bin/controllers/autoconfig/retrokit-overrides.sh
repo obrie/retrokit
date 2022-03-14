@@ -8,27 +8,28 @@ overrides_path="$inputscriptdir/configscripts/autoconfig-overrides.cfg"
 
 function onend_retrokit-overrides_keyboard() {
     iniConfig " = " '"' "$configdir/all/retroarch.cfg"
-    override_settings 'keyboard'
+    __override_retroarch_settings_retrokit 'keyboard'
 }
 
 function onend_retrokit-overrides_joystick() {
     iniConfig " = " '"' "$configdir/all/retroarch-joypads/${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.cfg"
-    override_settings 'joystick'
+    __override_retroarch_settings_retrokit 'joystick'
 }
 
-# Removes the given settings.  Currently there's no control over which controls
-# to disable, though this is set up to potentially support that.
-function override_settings() {
+# Overrides settings according to autoconf.cfg
+function __override_retroarch_settings_retrokit() {
     local input_type=$1
 
     if [ -f "$overrides_path" ]; then
-        while read key; do
-            local override_value=$(crudini --get "$overrides_path" "$input_type" "$key")
+        while IFS='=' read key override_value; do
+            key=${key//retroarch_${input_type}_/}
+            override_value=${value//\"/}
+            
             if [ -n "$override_value" ]; then
                 iniSet "$key" "$override_value"
             else
                 iniDel "$key"
             fi
-        done < <(crudini --get "$overrides_path" "$input_type")
+        done < <(grep "retroarch_${input_type}_" "$configdir/all/autoconf.cfg" | sed 's/ *= */=/g')
     fi
 }
