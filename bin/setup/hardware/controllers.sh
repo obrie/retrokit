@@ -9,6 +9,7 @@ setup_module_desc='Controller autoconfiguration'
 autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 sdldb_path="$tmp_dir/gamecontrollerdb.txt"
+sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
 
 build() {
   __build_autoconfig_scripts
@@ -25,8 +26,17 @@ __build_autoconfig_scripts() {
 # Download the latest game controller database
 __build_gamecontrollerdb() {
   local gamecontrollerdb_version="$(cat "$tmp_dir/gamecontrollerdb.version" 2>/dev/null || true)"
-  if has_newer_commit https://github.com/gabomdq/SDL_GameControllerDB "$gamecontrollerdb_version"; then
-    download 'https://github.com/gabomdq/SDL_GameControllerDB/raw/master/gamecontrollerdb.txt' "$sdldb_path" force=true || [ -f "$sdldb_path" ]
+  if has_newer_commit "$sdldb_repo" "$gamecontrollerdb_version"; then
+    if download "$sdldb_repo/raw/master/gamecontrollerdb.txt" "$sdldb_path" force=true; then
+      # Track the new version
+      git ls-remote "$sdldb_repo" HEAD | cut -f1 > "$tmp_dir/gamecontrollerdb.version"
+    else
+      # Even if downloads fail, still allow the action to succeed if the file was
+      # previously downloaded
+      [ -f "$sdldb_path" ]
+    fi
+  else
+    echo "gamecontrollerdb already the latest version ($gamecontrollerdb_version)"
   fi
 }
 
