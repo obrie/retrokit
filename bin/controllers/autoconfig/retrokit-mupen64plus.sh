@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Add support for setting up the keyboard in mupen64plus
+# Add support for:
+# * Setting up the keyboard in mupen64plus
+# * Overriding joystick configurations to improve axis handling
 
 function onstart_retrokit-mupen64plus_keyboard() {
     onstart_mupen64plus_joystick
@@ -155,4 +157,59 @@ function onend_retrokit-mupen64plus_keyboard() {
     done
 
     onend_mupen64plus_joystick
+}
+
+function onend_retrokit-mupen64plus_joystick() {
+    local file="$configdir/n64/InputAutoCfg.ini"
+
+    # Copy existing config to a temp file for us to modify
+    sed -e "/; ${DEVICE_NAME}_START/,/; ${DEVICE_NAME}_END/"'!d' "$file" > /tmp/mp64tempconfig.cfg
+
+    iniConfig " = " "" "/tmp/mp64tempconfig.cfg"
+
+    if [ -s /tmp/mp64tempconfig.cfg ] && getAutoConf 'mupen64plus_combine_axis_and_dpad'; then
+        __check_axis_retrokit-mupen64plus 'X Axis' 'DPad L' 'DPad R'
+        __check_axis_retrokit-mupen64plus 'Y Axis' 'DPad U' 'DPad D'
+
+        # Abort if old device config cannot be deleted
+        sed -i /"${DEVICE_NAME}_START"/,/"${DEVICE_NAME}_END"/d "$file"
+        if grep -q "$DEVICE_NAME" "$file" ; then
+            rm /tmp/mp64tempconfig.cfg
+            return
+        fi
+
+        # Append new device config to InputAutoCfg.ini
+        cat /tmp/mp64tempconfig.cfg >> "$file"
+        rm /tmp/mp64tempconfig.cfg
+    fi
+}
+
+function __check_axis_retrokit-mupen64plus() {
+    local key=$1
+    local dpad_key_1=$2
+    local dpad_key_2=$3
+
+    iniGet "$key"
+    local current_value=$ini_value
+
+    iniGet "$dpad_key_1"
+    local dpad_key_1_value=$ini_value
+
+    iniGet "$dpad_key_2"
+    local dpad_key_2_value=$ini_value
+
+    # Ensure current value does not contain dpad values and HAT keys *do*
+    if [ -n "$ini_value" ] && [[ "$ini_value" != *hat* ]] && [[ "$dpad_key_1_value" == *hat* ]] && [[ "$dpad_key_2_value" == *hat* ]]; then
+        local dpad_key_1_input_id=$(echo "$dpad_key_1_value" | grep -oE '[0-9]+')
+        local dpad_key_2_input_id=$(echo "$dpad_key_2_value" | grep -oE '[0-9]+')
+
+        if [ "$dpad_key_1_input_id" == "$dpad_key_2_input_id" ]; then
+            local dpad_key_1_direction=$(echo "$dpad_key_1_value" | grep -oE 'Up|Down|Left|Right')
+            local dpad_key_2_direction=$(echo "$dpad_key_2_value" | grep -oE 'Up|Down|Left|Right')
+
+            # Merge existing axis value with HAT values
+            local merged_value="hat($dpad_key_1_input_id $dpad_key_1_direction $dpad_key_2_direction) $current_value"
+            iniSet "$key" "$merged_value"
+        fi
+    fi
 }
