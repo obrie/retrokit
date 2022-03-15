@@ -9,7 +9,6 @@ setup_module_desc='Cheats for Arcade systems'
 
 build() {
   __build_fbneo
-  __build_mame2010
   __build_mame2015
   __build_mame2016
   __build_advmame
@@ -28,12 +27,6 @@ __build_fbneo() {
     else
       echo "Already downloaded $url"
     fi
-  fi
-}
-
-__build_mame2010() {
-  if has_emulator 'lr-mame2010'; then
-    download 'https://github.com/libretro/mame2010-libretro/raw/master/metadata/cheat.zip' "$HOME/RetroPie/BIOS/mame2010/cheat.zip"
   fi
 }
 
@@ -57,7 +50,7 @@ __build_advmame() {
 
 __build_mame() {
   # Cheats: MAME (Pugsy)
-  if has_emulator 'lr-mame0222'; then
+  if has_emulator 'lr-mame'; then
     local url='http://cheat.retrogames.com/download/cheat0221.zip'
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
