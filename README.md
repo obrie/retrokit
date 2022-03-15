@@ -348,11 +348,16 @@ emulator's UI or use the same button mappings for all controllers.
 
 | System        | Keyboard   | Controller         |
 | ------------- | ---------- | ------------------ |
-| arcade        | Tab        | N/A                |
+| arcade - rgui | Hotkey + X | Hotkey + X         |
+| arcade - mame | Tab        | L2                 |
 | dreamcast     | Select     | Select             |
 | nds           | Tab        | Right Analog Left  |
 | psp           | N/A        | Right Analog Left  |
 | *             | Hotkey + X | Hotkey + X         |
+
+The following libretro MAME emulators support viewing the menu with a controller:
+
+* lr-mame2015
 
 ### Cheats
 
@@ -368,6 +373,7 @@ emulator's UI or use the same button mappings for all controllers.
 Cheats are not supported on the following systems / emulators:
 
 * 3do
+* arcade - lr-mame2010
 * atarijaguar
 * c64
 * intellivision
