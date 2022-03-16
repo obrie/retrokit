@@ -312,15 +312,16 @@ libretro cores, I have a cheat sheet to remind me how to use the system:
 
 ### Exiting
 
-| System            | Keyboard       | Controller                  |
-| ----------------- | -------------- | --------------------------- |
-| dreamcast         | ESC            | Select (to Menu)            |
-| n64 (mupen64plus) | ESC            | Hotkey + Start              |
-| pc                | CTRL+F9        | None                        |
-| nds               | ESC            | Right Analog Left (to Menu) |
-| psp               | ESC            | Right Analog Left (to Menu) |
-| manuals           | Hotkey + Up    | Hotkey + Up                 |
-| *                 | Hotkey + Start | Hotkey + Start              |
+| System            | Keyboard               |        Controller           |
+| ----------------- | ---------------------- | --------------------------- |
+| advmame           | Hotkey + Start (once)  | Hotkey + Start (once)       |
+| dreamcast         | ESC                    | Select (to Menu)            |
+| n64 (mupen64plus) | ESC                    | Hotkey + Start              |
+| pc                | CTRL+F9                | None                        |
+| nds               | ESC                    | Right Analog Left (to Menu) |
+| psp               | ESC                    | Right Analog Left (to Menu) |
+| manuals           | Hotkey + Up            | Hotkey + Up                 |
+| *                 | Hotkey + Start (twice) | Hotkey + Start (twice)      |
 
 It's too easy to accidentally hit a single button during gameplay,
 so instead of exiting when pressing Right Analog Left, the emulator
