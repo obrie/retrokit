@@ -7,11 +7,17 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='systems/arcade/cheats'
 setup_module_desc='Cheats for Arcade systems'
 
+# The following emulators have their cheats installed automatically by RetroPie:
+# * advmame (/opt/retropie/emulators/advmame-joy/share/advance/cheat.dat)
+# * lr-mame2003 ($HOME/RetroPie/BIOS/mame2003/cheat.dat)
+# * lr-mame2003-plus ($HOME/RetroPie/BIOS/mame2003-plus/cheat.dat)
+# 
+# Cheats are broken on the following emulators (nothing we can do about it):
+# * lr-mame2010
 build() {
   __build_fbneo
   __build_mame2015
   __build_mame2016
-  __build_advmame
   __build_mame
 }
 
@@ -42,12 +48,6 @@ __build_mame2016() {
   fi
 }
 
-__build_advmame() {
-  if has_emulator 'advmame'; then
-    download 'https://github.com/amadvance/advancemame/raw/master/support/cheat.dat' "$HOME/RetroPie/BIOS/advmame/cheat.dat"
-  fi
-}
-
 __build_mame() {
   # Cheats: MAME (Pugsy)
   if has_emulator 'lr-mame'; then
@@ -63,11 +63,9 @@ __build_mame() {
 }
 
 remove() {
-  rm -fv \
-    "$HOME/RetroPie/BIOS/advmame/cheat.dat" \
-    "$HOME/RetroPie/BIOS/fbneo/cheats/"\
+  rm -rfv \
+    "$HOME/RetroPie/BIOS/fbneo/cheats/" \
     "$HOME/RetroPie/BIOS/mame/cheats.7z" \
-    "$HOME/RetroPie/BIOS/mame2010/cheat.zip" \
     "$HOME/RetroPie/BIOS/mame2015/cheat.7z" \
     "$HOME/RetroPie/BIOS/mame2016/cheat.7z"
 }
