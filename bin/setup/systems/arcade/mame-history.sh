@@ -31,19 +31,23 @@ __build_mame2003_plus() {
 
 __build_mame2016() {
   if has_emulator 'lr-mame2016'; then
-    download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
+    if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
 
-    mkdir -p "$HOME/RetroPie/BIOS/mame2016/history"
-    unzip -q -j "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame2016/history/"
+      mkdir -p "$HOME/RetroPie/BIOS/mame2016/history"
+      unzip -oqj "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame2016/history/"
+    fi
   fi
 }
 
 __build_mame() {
   if has_emulator 'lr-mame'; then
-    download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
+    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
 
-    mkdir -p "$HOME/RetroPie/BIOS/mame/history"
-    unzip -q -j "$tmp_ephemeral_dir/historydat.zip" "$HOME/RetroPie/BIOS/mame/history/"
+      mkdir -p "$HOME/RetroPie/BIOS/mame/history"
+      unzip -oqj "$tmp_ephemeral_dir/historydat.zip" "$HOME/RetroPie/BIOS/mame/history/"
+    fi
   fi
 }
 
