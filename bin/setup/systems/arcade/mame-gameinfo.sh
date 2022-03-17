@@ -26,7 +26,7 @@ __build_mame2016() {
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
-      cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/"
+      cp -v "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/"
     else
       echo "Already installed gameinit.dat (lr-mame2016)"
     fi
@@ -37,14 +37,14 @@ __build_mame() {
   if has_emulator 'lr-mame'; then
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_command_dat
-      cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/"
+      cp -v "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/"
     else
       echo "Already installed command.dat (lr-mame)"
     fi
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
-      cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/"
+      cp -v "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/"
     else
       echo "Already installed gameinit.dat (lr-mame)"
     fi
@@ -61,7 +61,7 @@ __download_command_dat() {
 
   local url=$(render_template "$command_dat_url" filename="$filename")
   download "$url" "$tmp_ephemeral_dir/mame-command.zip"
-  unzip -q -j "$tmp_ephemeral_dir/mame-command.zip" 'dats/command.dat' -d "$tmp_ephemeral_dir/"
+  unzip -ojq "$tmp_ephemeral_dir/mame-command.zip" 'dats/command.dat' -d "$tmp_ephemeral_dir/"
 }
 
 # Looks for the latest version of gameinit.dat and downloads it
@@ -74,7 +74,7 @@ __download_gameinit_dat() {
 
   local url=$(render_template "$gameinit_dat_url" filename="$filename")
   download "$url" "$tmp_ephemeral_dir/mame-gameinit.zip"
-  unzip -q -j "$tmp_ephemeral_dir/mame-gameinit.zip" 'dats/gameinit.dat' -d "$tmp_ephemeral_dir/"
+  unzip -ojq "$tmp_ephemeral_dir/mame-gameinit.zip" 'dats/gameinit.dat' -d "$tmp_ephemeral_dir/"
 }
 
 remove() {
