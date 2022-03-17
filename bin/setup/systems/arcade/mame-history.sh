@@ -25,7 +25,7 @@ build() {
 
 __build_mame2003_plus() {
   if has_emulator 'lr-mame2003-plus'; then
-    download 'https://github.com/libretro/mame2003-plus-libretro/blob/master/metadata/history.dat' "$HOME/RetroPie/BIOS/mame2003-plus/history.dat"
+    ln -fsv '/opt/retropie/libretrocores/lr-mame2003-plus/metadata/history.dat' "$HOME/RetroPie/BIOS/mame2003-plus/history.dat"
   fi
 }
 
@@ -48,7 +48,7 @@ __build_mame() {
       download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
 
       mkdir -p "$HOME/RetroPie/BIOS/mame/history"
-      unzip -oj "$tmp_ephemeral_dir/historydat.zip" "$HOME/RetroPie/BIOS/mame/history/"
+      unzip -oj "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame/history/"
     else
       echo "Already installed history.dat (lr-mame)"
     fi
