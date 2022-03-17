@@ -24,7 +24,8 @@ __build_mame2016() {
     # version of the file that I could find which doesn't break the emulator.
     download 'https://archive.org/download/shmupmame-4.2-mameplus-0.148-extras/SHMUPMAME_4.2_MAMEPLUS_0.148_EXTRAS.zip/command.dat' "$HOME/RetroPie/BIOS/mame2016/history/command.dat"
 
-    if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" ] && __download_gameinit_dat; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+      __download_gameinit_dat
       cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/"
     fi
   fi
@@ -32,11 +33,13 @@ __build_mame2016() {
 
 __build_mame() {
   if has_emulator 'lr-mame'; then
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ] && __download_command_dat; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+      __download_command_dat
       cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/"
     fi
 
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ] && __download_gameinit_dat; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+      __download_gameinit_dat
       cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/"
     fi
   fi
