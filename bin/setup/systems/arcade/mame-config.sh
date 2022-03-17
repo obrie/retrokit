@@ -13,16 +13,16 @@ configure() {
 }
 
 __configure_mame2016() {
-  file_cp "$config_dir/arcade/mame2016/plugin.ini" "$HOME/RetroPie/BIOS/mame2016/ini/plugin.ini"
-  file_cp "$config_dir/arcade/mame2016/ui.ini" "$HOME/RetroPie/BIOS/mame2016/ini/ui.ini"
-  file_cp "$config_dir/arcade/mame2016/default.cfg" "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg"
+  file_cp "$system_config_dir/mame2016/plugin.ini" "$HOME/RetroPie/BIOS/mame2016/ini/plugin.ini"
+  file_cp "$system_config_dir/mame2016/ui.ini" "$HOME/RetroPie/BIOS/mame2016/ini/ui.ini"
+  file_cp "$system_config_dir/mame2016/default.cfg" "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg"
 }
 
 __configure_mame() {
-  file_cp "$config_dir/arcade/mame/mame.ini" "$HOME/RetroPie/BIOS/mame/ini/mame.ini"
-  file_cp "$config_dir/arcade/mame/plugin.ini" "$HOME/RetroPie/BIOS/mame/ini/plugin.ini"
-  file_cp "$config_dir/arcade/mame/ui.ini" "$HOME/RetroPie/BIOS/mame/ini/ui.ini"
-  file_cp "$config_dir/arcade/mame/default.cfg" "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg"
+  file_cp "$system_config_dir/mame/mame.ini" "$HOME/RetroPie/BIOS/mame/ini/mame.ini"
+  file_cp "$system_config_dir/mame/plugin.ini" "$HOME/RetroPie/BIOS/mame/ini/plugin.ini"
+  file_cp "$system_config_dir/mame/ui.ini" "$HOME/RetroPie/BIOS/mame/ini/ui.ini"
+  file_cp "$system_config_dir/mame/default.cfg" "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg"
 }
 
 restore() {

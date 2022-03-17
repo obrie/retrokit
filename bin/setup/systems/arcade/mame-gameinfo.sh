@@ -8,10 +8,10 @@ setup_module_id='systems/arcade/mame-gameinfo'
 setup_module_desc='Game information support for MAME (command / gameinit)'
 
 command_dat_home='https://www.progettosnaps.net/command/'
-command_dat_url='https://www.progettosnaps.net/download/?tipo=command&file={filename}.zip'
+command_dat_url='https://www.progettosnaps.net/download/?tipo=command&file={filename}'
 
 gameinit_dat_home='https://www.progettosnaps.net/gameinit/'
-gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={filename}.zip'
+gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={filename}'
 
 build() {
   __build_mame2016
@@ -27,6 +27,8 @@ __build_mame2016() {
     if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
       cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/"
+    else
+      echo "Already installed gameinit.dat (lr-mame2016)"
     fi
   fi
 }
@@ -36,11 +38,15 @@ __build_mame() {
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_command_dat
       cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/"
+    else
+      echo "Already installed command.dat (lr-mame)"
     fi
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
       cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/"
+    else
+      echo "Already installed gameinit.dat (lr-mame)"
     fi
   fi
 }

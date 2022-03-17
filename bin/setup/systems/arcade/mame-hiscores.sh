@@ -11,6 +11,7 @@ setup_module_desc='Hiscore support for MAME'
 # * advmame (/opt/retropie/emulators/advmame-joy/share/advance/hiscore.dat)
 # * lr-mame2003 ($HOME/RetroPie/BIOS/mame2003/hiscore.dat)
 # * lr-mame2003-plus ($HOME/RetroPie/BIOS/mame2003-plus/hiscore.dat)
+# * lr-fbneo ($HOME/RetroPie/BIOS/fbneo/hiscore.dat)
 # 
 # The following emulators have their hiscores installed in the plugins directory:
 # * lr-mame2016 ($HOME/RetroPie/BIOS/mame2016/plugins/hiscore/hiscore.dat)
