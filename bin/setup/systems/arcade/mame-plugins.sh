@@ -18,6 +18,8 @@ __build_mame2016() {
       git clone --depth 1 https://github.com/libretro/mame2016-libretro "$tmp_ephemeral_dir/mame2016-libretro"
       rm -rf "$HOME/RetroPie/BIOS/mame2016/plugins"
       cp -R "$tmp_ephemeral_dir/mame2016-libretro/plugins/" "$HOME/RetroPie/BIOS/mame2016/"
+    else
+      echo "Already installed plugins (lr-mame2016)"
     fi
   fi
 }
@@ -28,6 +30,8 @@ __build_mame() {
       git clone -b lrmame0222 --depth 1 https://github.com/libretro/mame.git "$tmp_ephemeral_dir/mame-libretro"
       rm -rf "$HOME/RetroPie/BIOS/mame/plugins"
       cp -R "$tmp_ephemeral_dir/mame-libretro/plugins/" "$HOME/RetroPie/BIOS/mame/"
+    else
+      echo "Already installed plugins (lr-mame)"
     fi
   fi
 }

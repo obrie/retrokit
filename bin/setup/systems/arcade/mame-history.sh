@@ -36,6 +36,8 @@ __build_mame2016() {
 
       mkdir -p "$HOME/RetroPie/BIOS/mame2016/history"
       unzip -oqj "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame2016/history/"
+    else
+      echo "Already installed history.dat (lr-mame2016)"
     fi
   fi
 }
@@ -47,6 +49,8 @@ __build_mame() {
 
       mkdir -p "$HOME/RetroPie/BIOS/mame/history"
       unzip -oqj "$tmp_ephemeral_dir/historydat.zip" "$HOME/RetroPie/BIOS/mame/history/"
+    else
+      echo "Already installed history.dat (lr-mame)"
     fi
   fi
 }
