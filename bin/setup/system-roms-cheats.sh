@@ -35,7 +35,7 @@ configure() {
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=$'\t' read -r rom_name emulator; do
+  while IFS=$'\t' read -r rom_name emulator playlist_name; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     if [ -z "$library_name" ]; then
@@ -53,21 +53,18 @@ configure() {
     local source_cheat_path=$(__find_matching_cheat "$rom_name")
 
     if [ -n "$source_cheat_path" ]; then
-      # Link the cheat for either a single-disc game or, if configured, individual discs
-      if has_disc_config "$rom_name"; then
+      if [ -z "$playlist_name" ]; then
+        # Link the cheat for single-disc games
         ln -fsv "$source_cheat_path" "$target_cheats_dir/$rom_name.cht"
         installed_files["$target_cheats_dir/$rom_name.cht"]=1
-      fi
-
-      # Link the cheat for the playlist (if applicable)
-      local playlist_name=$(get_playlist_name "$rom_name")
-      if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+      elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
+        # Link the cheat for the playlist
         ln -fsv "$source_cheat_path" "$target_cheats_dir/$playlist_name.cht"
         installed_playlists["$playlist_name"]=1
         installed_files["$target_cheats_dir/$playlist_name.cht"]=1
       fi
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .emulator] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.name, .emulator, .playlist.name] | @tsv')
 
   # Remove old, unmapped cheats
   while read -r library_name; do

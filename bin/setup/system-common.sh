@@ -192,36 +192,3 @@ has_emulator() {
     return 1
   fi
 }
-
-##############
-# Playlists
-##############
-
-is_multidisc() {
-  [[ "$1"  == *'(Disc '* ]]
-}
-
-supports_playlist_config="$(system_setting '.playlists.enabled')"
-supports_playlists() {
-  [ "$supports_playlist_config" == 'true' ]
-}
-
-show_discs_config="$(system_setting '.playlists.show_discs')"
-show_discs() {
-  [ "$show_discs_config" == 'true' ]
-}
-
-has_disc_config() {
-  local rom_name=$1
-  ! supports_playlists || ! is_multidisc "$rom_name" || show_discs
-}
-
-has_playlist_config() {
-  local rom_name=$1
-  supports_playlists && is_multidisc "$rom_name"
-}
-
-get_playlist_name() {
-  local rom_name=$1
-  echo "${rom_name// (Disc [0-9A-Z]*)/}"
-}

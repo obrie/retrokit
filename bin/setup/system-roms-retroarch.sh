@@ -115,7 +115,7 @@ __find_overrides() {
 
     declare -A installed_playlists
 
-    while IFS=» read -r rom_name disc title parent_name parent_disc parent_title emulator; do
+    while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title emulator; do
       emulator=${emulator:-default}
 
       # Find a file for either the rom or its parent.  Priority order:
@@ -123,7 +123,7 @@ __find_overrides() {
       # * ROM Disc Name
       # * ROM Title
       local override_file=""
-      for filename in "$rom_name" "$disc" "$title" "$parent_name" "$parent_disc" "$parent_title"; do
+      for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$parent_name" "$parent_disc" "$parent_title"; do
         if [ -f "$system_config_dir/retroarch/$filename.$extension" ]; then
           override_file="$system_config_dir/retroarch/$filename.$extension"
           break
@@ -138,21 +138,17 @@ __find_overrides() {
 
         # Make sure this is a libretro core
         if [ -n "$core_name" ] && [ -n "$library_name" ]; then
-          if has_disc_config "$rom_name"; then
-            # Generate a config for either a single-disc game or, if configured,
-            # individual discs
+          if [ -z "$playlist_name" ]; then
+            # Generate a config for single-disc games
             echo "$rom_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
-          fi
-
-          # Generate a config for the playlist (if applicable)
-          local playlist_name=$(get_playlist_name "$rom_name")
-          if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+          elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
+            # Generate a config for the playlist
             installed_playlists["$playlist_name"]=1
             echo "$playlist_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
           fi
         fi
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .parent.name, .parent.disc, .parent.title, .emulator] | join("»")')
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .emulator] | join("»")')
   fi
 }
 

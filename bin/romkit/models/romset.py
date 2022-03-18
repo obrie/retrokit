@@ -79,6 +79,10 @@ class ROMSet:
     def machine(self, name: str) -> Optional[Machine]:
         return self.machines.get(name)
 
+    # Whether this romset has defined the given resource
+    def has_resource(self, name: str) -> bool:
+        return name in self.resource_templates
+
     # Looks up the resource with the given name
     def resource(self, name: str, **context) -> Optional[Resource]:
         resource_template = self.resource_templates.get(name)

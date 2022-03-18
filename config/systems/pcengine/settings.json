@@ -28,9 +28,6 @@
     "lr-beetle-pce-fast": {"core_name": "pce", "library_name": "Beetle PCE Fast", "default": true},
     "lr-beetle-supergrafx": {"core_name": "sgx", "library_name": "Beetle SuperGrafx", "default": true}
   },
-  "playlists": {
-    "enabled": false
-  },
   "cheats": {
     "names": [
       "NEC - PC Engine - TurboGrafx 16",
@@ -111,6 +108,11 @@
           "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/pcengine/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
+        },
+        "playlist": {
+          "source": "file://$HOME/RetroPie/roms/pcengine/.redump/{machine_id}.chd",
+          "target": "$HOME/RetroPie/roms/pcengine/.redump/{playlist}.m3u",
+          "install": {"action": "playlist_to_m3u"}
         }
       },
       "emulator": "lr-beetle-pce-fast"
@@ -173,7 +175,8 @@
       {"path": "$HOME/RetroPie/roms/pcengine", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"},
+      "playlist": {"target": "{dir}/{playlist_filename}"}
     }
   }
 }

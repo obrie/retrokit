@@ -22,9 +22,6 @@
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
-  "playlists": {
-    "enabled": true
-  },
   "cheats": {
     "names": [
       "Sega - Mega-CD - Sega CD"
@@ -61,6 +58,11 @@
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/segacd/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/segacd/.nointro/.xrefs/{machine_id}.chd"
+        },
+        "playlist": {
+          "source": "file://$HOME/RetroPie/roms/segacd/.redump/{machine}.chd",
+          "target": "$HOME/RetroPie/roms/segacd/.redump/{playlist}.m3u",
+          "install": {"action": "playlist_to_m3u"}
         }
       }
     }
@@ -75,10 +77,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"
     }
-  },
-  "manuals": {
-    "source": "https://archive.org/download/SEGACDManuals/{machine}.pdf",
-    "target": "$HOME/.emulationstation/downloaded_media/segacd/manuals/{machine}.pdf"
   },
   "roms": {
     "id": "crc",
@@ -131,7 +129,8 @@
       {"path": "$HOME/RetroPie/roms/segacd", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"},
+      "playlist": {"target": "{dir}/{playlist_filename}"}
     }
   }
 }

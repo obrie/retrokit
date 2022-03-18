@@ -20,13 +20,13 @@ configure() {
 
   # Then add current favorites
   echo 'Setting favorites...'
-  while read -r rom_name; do
-    # Always search for the specific ROM (in case it's a playlists with show_discs enabled)
+  while IFS=$'\t' read -r rom_name playlist_name; do
+    # Always search for the specific ROM
     __add_favorite "$rom_name"
 
     # Check for a playlist
-    if has_playlist_config "$rom_name"; then
-      __add_favorite "$(get_playlist_name "$rom_name")"
+    if [ -n "$playlist_name" ]; then
+      __add_favorite "$playlist_name"
     fi
   done < <(echo "$favorites")
 }
@@ -47,7 +47,7 @@ __should_set_favorites() {
     return 1
   fi
 
-  favorites=$(romkit_cache_list | jq -r 'select(.favorite == true) | .name')
+  favorites=$(romkit_cache_list | jq -r 'select(.favorite == true) | [.name, .playlist.name] | @tsv')
   if [ -z "$favorites" ]; then
     echo 'No favorites found.  Assuming favorites are being managed manually.'
     return 1
