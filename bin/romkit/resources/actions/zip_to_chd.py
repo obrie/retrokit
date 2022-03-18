@@ -11,7 +11,7 @@ from pathlib import Path
 class ZipToChd(BaseAction):
     name = 'zip_to_chd'
 
-    def install(self, source, target, **kwargs):
+    def install(self, source: ResourcePath, target: ResourcePath, **kwargs) -> None:
         with zipfile.ZipFile(source.path, 'r') as source_zip, tempfile.TemporaryDirectory() as extract_dir:
             extract_dir = Path(extract_dir)
 
