@@ -119,18 +119,18 @@ configure() {
     # Final check to make sure the PDF is valid before installing it
     __validate_pdf "$postprocess_path"
 
-    # Install the pdf to location expected for this specific rom
-    mkdir -p "$(dirname "$install_path")"
-    ln -fsv "$postprocess_path" "$install_path"
-
-    # Install a playlist symlink if applicable
-    if [ -n "$playlist_install_path" ] && [ ! "${installed_playlists[$playlist_name]}" ]; then
+    if [ -z "$playlist_name" ]; then
+      # Install the pdf to location expected for this specific rom
+      mkdir -p "$(dirname "$install_path")"
+      ln -fsv "$postprocess_path" "$install_path"
+      installed_files[$install_path]=1
+    elif [ ! "${installed_playlists[$playlist_name]}" ]; then
+      # Install a playlist symlink
+      mkdir -p "$(dirname "$playlist_install_path")"
       ln -fsv "$postprocess_path" "$playlist_install_path"
-      installed_playlists[$playlist_name]=1
       installed_files[$playlist_install_path]=1
+      installed_playlists[$playlist_name]=1
     fi
-
-    installed_files[$install_path]=1
   done < <(__list_manuals)
 
   # Remove unused symlinks
@@ -222,7 +222,7 @@ __build_manual() {
 
   # Define playlist info
   if [ -n "$playlist_name" ]; then
-    manual_ref['playlist_install_path']=$(render_template "$install_path_template" "${template_variables[@]}" name="${manual['playlist_name']}")
+    manual_ref['playlist_install_path']=$(render_template "$install_path_template" "${template_variables[@]}" rom_name="${manual['playlist_name']}")
   fi
 }
 
