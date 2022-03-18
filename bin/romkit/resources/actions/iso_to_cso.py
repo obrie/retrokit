@@ -9,7 +9,7 @@ from pathlib import Path
 class IsoToCso(BaseAction):
     name = 'iso_to_cso'
 
-    def install(self, source, target, **kwargs):
+    def install(self, source: ResourcePath, target: ResourcePath, **kwargs):
         with tempfile.TemporaryDirectory() as tmp_dir:
             # Run maxcso
             tmp_target = Path(tmp_dir).joinpath('out.cso')
