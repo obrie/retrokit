@@ -131,7 +131,7 @@ configure() {
     fi
 
     installed_files[$install_path]=1
-  done < <(__list_manuals | tr $'\t' '»')
+  done < <(__list_manuals)
 
   # Remove unused symlinks
   local base_path=$(render_template "$base_path_template" system="$system")
@@ -144,9 +144,9 @@ configure() {
 __list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\t\2\3/'
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\t\2\3/' | tr $'\t' '»'
   else
-    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | @tsv'
+    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | join("»")'
   fi
 }
 
@@ -783,7 +783,7 @@ vacuum() {
       files_to_keep[${manual['download_path']}]=1
       files_to_keep[${manual['archive_path']}]=1
     fi
-  done < <(__list_manuals | tr $'\t' '»')
+  done < <(__list_manuals)
 
   # Echo the commands (it's up to the user to evaluate them)
   while read -r path; do
