@@ -7,13 +7,14 @@ import shlex
 # Represents a playlist for combining multiple machines
 class Playlist:
     DISC_REGEX = re.compile(r' \(Disc [0-9A-Z]+\)')
+    DISC_FULL_REGEX = re.compile(fr'{DISC_REGEX.pattern}.*$')
 
     def __init__(self, machine: Machine) -> None:
         self.machine = machine
 
     @property
     def name(self) -> str:
-        return self.DISC_REGEX.sub('', self.machine.name)
+        return self.DISC_FULL_REGEX.sub('', self.machine.name)
 
     @property
     def romset(self) -> ROMSet:
