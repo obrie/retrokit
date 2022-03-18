@@ -35,7 +35,7 @@ class Sample:
         self.resource.install()
         self.resource.create_xref()
 
-    # Removes this sample from the filesystem
+    # Prints the commands required to remove this sample from the filesystem
     def purge(self):
         if self.resource.target_path.exists():
             print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')

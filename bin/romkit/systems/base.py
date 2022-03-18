@@ -166,6 +166,9 @@ class BaseSystem:
         # Install and filter out invalid machines
         machines = self.list()
         for machine in machines:
+            machine.before_install()
+
+        for machine in machines:
             self.install_machine(machine)
 
         self.organize(machines)

@@ -23,9 +23,6 @@
     "redream": {"default": true},
     "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
   },
-  "playlists": {
-    "enabled": true
-  },
   "cheats": {
     "names": [
       "Sega - Dreamcast"
@@ -58,6 +55,11 @@
           "target": "$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/dreamcast/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
+        },
+        "playlist": {
+          "source": "file://$HOME/RetroPie/roms/dreamcast/.redump/{machine}.chd",
+          "target": "$HOME/RetroPie/roms/dreamcast/.redump/{playlist}.m3u",
+          "install": {"action": "playlist_to_m3u"}
         }
       }
     }
@@ -138,7 +140,8 @@
       {"path": "$HOME/RetroPie/roms/dreamcast", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"},
+      "playlist": {"target": "{dir}/{playlist_filename}"}
     }
   }
 }

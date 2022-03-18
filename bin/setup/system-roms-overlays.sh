@@ -43,7 +43,7 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name title parent_name parent_title orientation emulator; do
+  while IFS=» read -r rom_name title playlist_name parent_name parent_title orientation emulator; do
     emulator=${emulator:-default}
     local group_title=${parent_title:-$title}
     local library_name=${emulators["$emulator/library_name"]}
@@ -66,14 +66,11 @@ configure() {
     if [ -z "$url" ]; then
       echo "[$rom_name] No overlay available"
 
-      # Install overlay for either a single-disc game or, if configured, individual discs
-      if has_disc_config "$rom_name"; then
+      if [ -z "$playlist_name" ]; then
+        # Install overlay for single-disc games
         __create_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation"
-      fi
-
-      # Install overlay for the playlist (if applicable)
-      local playlist_name=$(get_playlist_name "$rom_name")
-      if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+      elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
+        # Install overlay for the playlist
         __create_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation"
       fi
 
@@ -83,17 +80,14 @@ configure() {
     # We have an image: download it
     __install_overlay "$url" "$overlay_title" "$group_title"
 
-    # Install overlay for either a single-disc game or, if configured, individual discs
-    if has_disc_config "$rom_name"; then
+    if [ -z "$playlist_name" ]; then
+      # Install overlay for single-disc game
       __create_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
-    fi
-
-    # Install overlay for the playlist (if applicable)
-    local playlist_name=$(get_playlist_name "$rom_name")
-    if has_playlist_config "$rom_name" && [ ! "${installed_playlists["$playlist_name"]}" ]; then
+    elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
+      # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
 
   __remove_unused_configs
 }

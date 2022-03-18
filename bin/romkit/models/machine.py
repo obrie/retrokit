@@ -3,6 +3,7 @@ from __future__ import annotations
 from romkit.filters.filter_set import FilterReason
 from romkit.models.disk import Disk
 from romkit.models.file import File
+from romkit.models.playlist import Playlist
 from romkit.models.sample import Sample
 
 import hashlib
@@ -15,7 +16,6 @@ from typing import Dict, List, Optional, Set
 # Represents a Game/Device/BIOS
 class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
-    DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
     NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
@@ -227,9 +227,9 @@ class Machine:
         title = cls.TITLE_REGEX.search(name).group().strip()
 
         if disc:
-            disc_match = cls.DISC_REGEX.search(name)
+            disc_match = Playlist.DISC_REGEX.search(name)
             if disc_match:
-                title = f'{title} {disc_match.group().replace("0", "")}'
+                title = f'{title}{disc_match.group()}'
 
         return title
 
@@ -390,6 +390,12 @@ class Machine:
         if self.sample_name:
             return Sample(self, self.sample_name)
 
+    # Playlist for multi-disc machines
+    @property
+    def playlist(self) -> Optional[Playlist]:
+        if self.disc_title != self.title and self.romset.has_resource('playlist'):
+            return Playlist(self)
+
     # Generates data for use in output actions
     def dump(self) -> Dict[str, str]:
         data = {
@@ -433,6 +439,12 @@ class Machine:
                 'crc': primary_rom.crc and primary_rom.crc.upper(),
             }
 
+        playlist = self.playlist
+        if playlist:
+            data['playlist'] = {
+                'name': playlist.name
+            }
+
         if self.parent_name:
             data['parent'] = {
                 'name': self.parent_name,
@@ -446,6 +458,15 @@ class Machine:
     # non_merged roms
     def is_valid_nonmerged(self) -> bool:
         return not self.resource or self.resource.contains(self.non_merged_roms)
+
+    # Runs any actions required before the machine is installed
+    def before_install(self) -> None:
+        if self.playlist:
+            # Delete existing playlists so that we start empty as each machine
+            # gets added to it.  We prefer this over re-using the existing list
+            # in case the previousy playlist was bad or the number of discs has
+            # been reduced.
+            self.playlist.delete()
 
     # Installs this machine onto the local filesystem
     def install(self) -> None:
@@ -478,6 +499,10 @@ class Machine:
         if self.sample:
             self.sample.install()
 
+        # Playlist
+        if self.playlist:
+            self.playlist.install()
+
     # Installs the roms from the given source machine
     def install_from(self, machine: Machine, roms: Set[File]) -> None:
         if not machine or not self.resource:
@@ -509,15 +534,18 @@ class Machine:
 
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
 
-        # Disks get handled separately -- everything else gets symlink'd through
-        # the machine's resource
-        for resource_name in (target_dir.file_templates.keys() - set(['disk'])):
+        # Disks and playlists get handled separately -- everything else gets symlink'd
+        # through the machine's resource
+        for resource_name in (target_dir.file_templates.keys() - set(['disk', 'playlist'])):
             target_dir.symlink(resource_name, self.resource, **self.context)
 
         for disk in (self.disks_from_self | self.disks_from_parent):
             disk.enable(target_dir)
 
-    # Removes this machine from the filesystem
+        if self.playlist:
+            self.playlist.enable(target_dir)
+
+    # Prints the commands required to remove this machine from the filesystem
     def purge(self):
         if not self.resource:
             return
@@ -527,3 +555,6 @@ class Machine:
 
         if self.resource.xref_path and self.resource.xref_path.is_symlink():
             print(f'rm -rf {shlex.quote(str(self.resource.xref_path.path))}')
+
+        if self.playlist:
+            self.playlist.purge()

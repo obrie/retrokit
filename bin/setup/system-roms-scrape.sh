@@ -23,18 +23,17 @@ configure() {
 # as a source of scraping params
 __load_rom_data() {
   declare -Ag rom_data
-  while IFS=$'\t' read -r name rom_name rom_crc; do
+  while IFS=» read -r name playlist_name rom_name rom_crc; do
     rom_data["$name/rom"]="$rom_name"
     rom_data["$name/crc"]="$rom_crc"
 
     # If there's a separate playlist name, track it so that we can properly
     # scrape those as well
-    local playlist_name=$(get_playlist_name "$name")
-    if [ "$playlist_name" != "$name" ]; then
+    if [ -n "$playlist_name" ]; then
       rom_data["$playlist_name/rom"]="$rom_name"
       rom_data["$playlist_name/crc"]="$rom_crc"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, (.rom .name | @uri), .rom .crc] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc] | join("»")')
 }
 
 # Scrape from all configured sources
@@ -141,7 +140,7 @@ __build_missing_reports() {
 # number in the Skyscraper database.
 __add_disc_numbers() {
   local skyscraper_brackets_enabled=$(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets')
-  if supports_playlists || [ "$skyscraper_brackets_enabled" == '"true"' ]; then
+  if [ "$skyscraper_brackets_enabled" == '"true"' ]; then
     # No need to manually add disc numbers
     return
   fi
@@ -150,7 +149,7 @@ __add_disc_numbers() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
 
   while IFS=$'\t' read -r name disc_title title path; do
-    # Only process titles that have disc numbers
+    # Only process titles that have disc numbers (and no playlist)
     if [[ "$disc_title" != *"("* ]]; then
       continue
     fi
@@ -175,7 +174,7 @@ __add_disc_numbers() {
     echo "$(basename "$path")" > "$tmp_ephemeral_dir/scraper.input"
     echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_ephemeral_dir/scraper.input"
     rm -f "$tmp_ephemeral_dir/scraper.input"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .path] | @tsv')
+  done < <(romkit_cache_list | jq -r 'select(.playlist == null) | [.name, .disc, .title, .path] | @tsv')
 }
 
 # Builds the gamelist.xml that will be used by emulationstation
@@ -204,14 +203,13 @@ __vacuum_cache() {
 __vacuum_media() {
   # Look up which names are installed
   declare -A installed_names
-  while IFS=$'\t' read -r name; do
+  while IFS=$'\t' read -r name playlist_name; do
     installed_names["$name"]=1
 
-    local playlist_name=$(get_playlist_name "$name")
-    if [ "$playlist_name" != "$name" ]; then
+    if [ -n "$playlist_name" ]; then
       installed_names["$playlist_name"]=1
     fi
-  done < <(romkit_cache_list | jq -r '.name')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name] | @tsv')
 
   # Find media with no corresponding installed name
   while read -r media_path; do

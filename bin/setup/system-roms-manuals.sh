@@ -61,7 +61,7 @@ configure() {
 
   declare -A installed_files
   declare -A installed_playlists
-  while IFS=$'\t' read -ra manual_data; do
+  while IFS=» read -ra manual_data; do
     declare -A manual
     __build_manual manual "${manual_data[@]}"
 
@@ -131,7 +131,7 @@ configure() {
     fi
 
     installed_files[$install_path]=1
-  done < <(__list_manuals)
+  done < <(__list_manuals | tr $'\t' '»')
 
   # Remove unused symlinks
   local base_path=$(render_template "$base_path_template" system="$system")
@@ -144,9 +144,9 @@ configure() {
 __list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\2\3/'
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\t\2\3/'
   else
-    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .manual .name, .manual .languages, .manual .url, .manual .options] | @tsv'
+    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | @tsv'
   fi
 }
 
@@ -158,15 +158,17 @@ __build_manual() {
   # Romkit info
   local rom_name=$2
   local parent_title=$3
-  local manual_name=$4
-  local manual_languages=$5
-  local manual_url=$6
-  local postprocess_options=$7
+  local playlist_name=$4
+  local manual_name=$5
+  local manual_languages=$6
+  local manual_url=$7
+  local postprocess_options=$8
 
   # Defaults
   manual_ref=(
     [rom_name]="$rom_name"
     [parent_title]="$parent_title"
+    [playlist_name]="$playlist_name"
     [name]="$manual_name"
     [languages]="$manual_languages"
     [format]=
@@ -219,8 +221,7 @@ __build_manual() {
   manual_ref['archive_url']=$(render_template "$archive_url_template" "${template_variables[@]}")
 
   # Define playlist info
-  manual_ref['playlist_name']=$(get_playlist_name "$rom_name")
-  if has_playlist_config "$rom_name"; then
+  if [ -n "$playlist_name" ]; then
     manual_ref['playlist_install_path']=$(render_template "$install_path_template" "${template_variables[@]}" name="${manual['playlist_name']}")
   fi
 }
@@ -782,7 +783,7 @@ vacuum() {
       files_to_keep[${manual['download_path']}]=1
       files_to_keep[${manual['archive_path']}]=1
     fi
-  done < <(__list_manuals)
+  done < <(__list_manuals | tr $'\t' '»')
 
   # Echo the commands (it's up to the user to evaluate them)
   while read -r path; do

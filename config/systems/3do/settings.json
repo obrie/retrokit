@@ -22,9 +22,6 @@
   "emulators": {
     "lr-opera": {"core_name": "opera", "library_name": "Opera", "default": true}
   },
-  "playlists": {
-    "enabled": false
-  },
   "bios": {
     "url": "$BIOS_URL/libretro/3DO Company, The - 3DO",
     "dir": "$HOME/RetroPie/BIOS",

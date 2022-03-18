@@ -23,9 +23,6 @@
     "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true},
     "lr-swanstation": {"core_name": "duckstation", "library_name": "SwanStation", "build": "source"}
   },
-  "playlists": {
-    "enabled": true
-  },
   "cheats": {
     "names": [
       "Sony - PlayStation"
@@ -69,6 +66,11 @@
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/psx/.redump/.xrefs/{machine_id}.chd"
+        },
+        "playlist": {
+          "source": "file://$HOME/RetroPie/roms/psx/.redump/{machine}.chd",
+          "target": "$HOME/RetroPie/roms/psx/.redump/{playlist}.m3u",
+          "install": {"action": "playlist_to_m3u"}
         }
       }
     }
@@ -250,7 +252,8 @@
       {"path": "$HOME/RetroPie/roms/psx", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"},
+      "playlist": {"target": "{dir}/{playlist_filename}"}
     }
   }
 }
