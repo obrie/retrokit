@@ -144,7 +144,7 @@ configure() {
 __list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\1\t\t\2\3/' | tr $'\t' '»'
+    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\t\1\t\2\3/' | tr $'\t' '»'
   else
     romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | join("»")'
   fi
@@ -196,7 +196,7 @@ __build_manual() {
   fi
 
   # Define the souce manual's extension
-  local manual_url_extension=${manual_ref['url']##*.}
+  local manual_url_extension=${manual_url##*.}
   local extension=${manual_ref['format']:-$manual_url_extension}
   manual_ref['extension']=${extension,,} # lowercase
 
