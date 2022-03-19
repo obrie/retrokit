@@ -629,10 +629,30 @@ configuration.  However, two additional settings are available to adjust this be
 ### Controls
 
 `manualkit` can be controlled by keyboard or controller.  These settings can be modified in
-`config/manuals/manualkit.conf`.  It's expected that the `keyboard_toggle` and `joystick_toggle`
+`config/manuals/manualkit.conf`.  It's expected that the keyboard / joystick `toggle`
 buttons will be pressed in combination with retroarch's configured `hotkey` button.  For
 example, the default configuration expects that `select` + `up` will be used to toggle the
 display of the manual on the screen.
+
+### Arcade manuals
+
+As far as I've been able to find, there doesn't exist any form of player instruction manuals
+for arcade games.  You can attempt to cut out instructions from bezel artwork, but that's a
+very time consuming process that I haven't undertaken.  There *do* exist owner manuals for
+the arcade cabinets themselves, but that's not helpful to most players.
+
+As an alternative, I've built manuals based on several sources:
+
+* Cabinets from https://www.progettosnaps.net/cabinets/
+* Flyers from https://www.progettosnaps.net/flyers/
+* Select artwork from https://www.progettosnaps.net/artworks/
+* Game initialization data from https://www.progettosnaps.net/gameinit/
+
+The generated manuals aren't perfect, but I felt having some form of instructions was better
+than nothing.  You can see how these manuals are generated in the
+[generate_arcade_manuals.sh](bin/tools/generate_arcade_manual.sh) script.
+
+If anyone has better sources or wants to build better manuals, I'd fully support that effort.
 
 ## Storage Capacity
 

@@ -259,6 +259,9 @@
     "emulator": {
       "source": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
       "target": "$HOME/retrokit/config/systems/arcade/emulators.tsv"
+    },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/arcade/manuals.tsv"
     }
   },
   "roms": {
