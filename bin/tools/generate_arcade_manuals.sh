@@ -88,7 +88,7 @@ generate_manual() {
 
     if [ ${#pdfs[@]} -gt 1 ]; then
       # Merge the pdfs
-      gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "${pdfs[@]}"
+      python3 "$bin_dir/tools/pdfmerge.py" "$target_path" "${pdfs[@]}"
     else
       # Copy the individual pdf
       mv "${pdfs[0]}" "$target_path"

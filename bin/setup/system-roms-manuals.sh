@@ -318,7 +318,7 @@ __convert_to_pdf() {
           # We have at least 2 files matched in the filter.  Now we need to merge.
           mv "$target_path" "$tmp_ephemeral_dir/merge-1.pdf"
           __convert_file_to_pdf "$filtered_path" "$tmp_ephemeral_dir/merge-2.pdf" rewrite_exif="$rewrite_exif"
-          gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$target_path" "$tmp_ephemeral_dir/merge-1.pdf" "$tmp_ephemeral_dir/merge-2.pdf"
+          python3 "$bin_dir/tools/pdfmerge.py" "$target_path" "$tmp_ephemeral_dir/merge-1.pdf" "$tmp_ephemeral_dir/merge-2.pdf"
         fi
       done < <(find "$extract_path" -type f -wholename "$extract_path/$filter" | sort)
     done < <(echo "$filter_csv" | tr ',' '\n')
