@@ -54,11 +54,11 @@ each_path() {
       # Check that the path exists before printing it for the caller
       if [ -e "$rendered_path" ]; then
         local full_path=$(realpath "$rendered_path")
-        printf "$full_path" | xargs -0 -I{} $command ${@:3}
+        printf "$full_path" | xargs -0 -I{} $command "${@:3}"
       fi
     done < <(echo "../config,$PROFILES" | tr ',' $'\n')
   elif [ -f "$path_template" ]; then
     # No template detected, but path exists
-    printf "$path_template" | xargs -0 -I{} $command ${@:3}
+    printf "$path_template" | xargs -0 -I{} $command "${@:3}"
   fi
 }
