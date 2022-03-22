@@ -20,6 +20,8 @@
   },
   "manuals": {
     "archive": {
+      "id": "retrokit-manuals",
+      "version": "compressed",
       "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-compressed.zip/{parent_title} ({languages}).pdf",
       "processed": true,
       "fallback_to_source": false

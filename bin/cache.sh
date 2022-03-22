@@ -76,8 +76,6 @@ sync_system_metadata() {
 remote_sync_system_manuals() {
   local system=$1
 
-  local version='original'
-  local archive_id='retrokit-manuals'
   local sources_only='false'
   local install='true'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
@@ -86,6 +84,9 @@ remote_sync_system_manuals() {
   if ! any_path_exists "{config_dir}/systems/$system/manuals.tsv"; then
     return
   fi
+
+  local archive_id=$(setting '.manuals.archive.id')
+  local version=$(setting '.manuals.archive.version')
 
   # Update the sources reference
   ia upload "$archive_id" "$config_dir/systems/$system/manuals.tsv" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0

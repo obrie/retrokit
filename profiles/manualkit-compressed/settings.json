@@ -1,0 +1,25 @@
+{
+  "manuals": {
+    "archive": {
+      "version": "compressed",
+      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-original.zip/{parent_title} ({languages}).pdf",
+      "processed": false
+    },
+    "paths": {
+      "download": "{base}/.files/{parent_title} ({languages}).pdf",
+      "postprocess": "{base}/.files-compressed/{parent_title} ({languages}).pdf"
+    },
+    "keep_downloads": true,
+    "postprocess": {
+      "clean": {
+        "enabled": false
+      },
+      "ocr": {
+        "enabled": false
+      },
+      "mutate": {
+        "enabled": false
+      }
+    }
+  }
+}
