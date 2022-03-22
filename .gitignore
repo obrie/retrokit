@@ -1,3 +1,7 @@
+profiles/*
+profiles/mykit/*
+!profiles/mykit/
+!profiles/mykit/.gitkeep
 tmp/*
 __pycache__
-.env
+/.env

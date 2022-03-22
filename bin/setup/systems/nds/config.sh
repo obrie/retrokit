@@ -11,7 +11,7 @@ config_path="$retropie_system_config_dir/drastic/config/drastic.cfg"
 
 configure() {
   __restore_config
-  ini_merge "$system_config_dir/drastic.cfg" "$config_path" restore=false
+  ini_merge '{system_config_dir}/drastic.cfg' "$config_path" restore=false
 }
 
 restore() {

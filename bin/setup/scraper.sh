@@ -17,11 +17,11 @@ build() {
   install_retropie_package 'supplementary' 'skyscraper'
 
   # Add video convert script
-  cp -v "$config_dir/skyscraper/videoconvert.sh" "$skyscraper_dir/"
+  file_cp '{config_dir}/skyscraper/videoconvert.sh' "$skyscraper_dir/" backup=false envsubst=false
 }
 
 configure() {
-  ini_merge "$config_dir/skyscraper/config.ini" "$skyscraper_dir/config.ini" space_around_delimiters=false
+  ini_merge '{config_dir}/skyscraper/config.ini' "$skyscraper_dir/config.ini" space_around_delimiters=false
 }
 
 restore() {

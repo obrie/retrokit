@@ -14,7 +14,7 @@ configure() {
 
 # System configuration overrides
 __configure_system_config() {
-  ini_merge "$system_config_dir/retroarch.cfg" "$retropie_system_config_dir/retroarch.cfg"
+  ini_merge '{system_config_dir}/retroarch.cfg' "$retropie_system_config_dir/retroarch.cfg"
 }
 
 # Emulator configuration overrides
@@ -22,7 +22,7 @@ __configure_emulator_configs() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 
   while read -r library_name; do
-    local source_path="$system_config_dir/retroarch/$library_name/$library_name.cfg"
+    local source_path="{system_config_dir}/retroarch/$library_name/$library_name.cfg"
     local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
 
     if [ -f "$source_path" ]; then
@@ -45,11 +45,7 @@ __configure_core_options() {
 
   # Use the global defaults as the initial file
   cp -v "$global_core_options_path" "$core_options_path"
-
-  if [ -f "$system_config_dir/retroarch-core-options.cfg" ]; then
-    echo "Merging ini $system_config_dir/retroarch-core-options.cfg to $core_options_path"
-    crudini --merge "$core_options_path" < "$system_config_dir/retroarch-core-options.cfg"
-  fi
+  ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_path" backup=false
 
   # Reinstall the game-specific retroarch core options for this system.
   # Yes, this might mean we install game-specific core options multiple

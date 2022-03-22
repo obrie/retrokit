@@ -49,12 +49,12 @@ configure() {
 __configure_overrides() {
   # Copy overrides config
   __restore_autoconf
-  ini_merge "$config_dir/controllers/autoconf.cfg" "$autoconf_file" as_sudo=true restore=false
+  ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_file" as_sudo=true restore=false
 }
 
 __configure_controllers() {
   while IFS=, read -r name id swap_buttons; do
-    local config_file="$config_dir/controllers/inputs/$name.cfg"
+    local config_file=$(first_path "{config_dir}/controllers/inputs/$name.cfg")
 
     if [ -f "$config_file" ]; then
       # Explicit ES configuration is provided

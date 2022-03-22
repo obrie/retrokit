@@ -20,7 +20,8 @@ build() {
 }
 
 configure() {
-  cp -v "$config_dir/manuals/manualkit.conf" '/opt/retropie/configs/all/manualkit.conf'
+  rm -fv /opt/retropie/configs/all/manualkit.conf
+  ini_merge '{config_dir}/manuals/manualkit.conf' '/opt/retropie/configs/all/manualkit.conf' backup=false
 }
 
 remove() {

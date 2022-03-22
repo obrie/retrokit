@@ -19,29 +19,19 @@ configure() {
 __configure_cfg_files() {
   mkdir -pv "$system_mess_dir/cfg"
 
-  # Inputs/configs across multiple MESS systems
-  if [ -d "$config_dir/mess/cfg/" ]; then
-    cp -Rv "$config_dir"/mess/cfg/* "$system_mess_dir/cfg/"
-  fi
-
-  # System-specific inputs/configs
-  if [ -d "$system_config_dir/mess/cfg" ]; then
-    cp -Rv "$system_config_dir"/mess/cfg/* "$system_mess_dir/cfg/"
-  fi
+  # Inputs/configs (global, system-specific)
+  for config_dirname in 'config_dir' 'system_config_dir'; do
+    each_path "{$config_dirname}/mess/cfg" find '{}' -name '*.cfg' | xargs -I{} cp -v '{}' "$system_mess_dir/cfg/"
+  done
 }
 
 __configure_ini_files() {
   mkdir -pv "$system_mess_dir/ini"
 
-  # Init setup across multiple MESS systems
-  if [ -d "$config_dir/mess/ini" ]; then
-    cp -Rv "$config_dir"/mess/ini/* "$system_mess_dir/ini/"
-  fi
-
-  # System-specific MESS init
-  if [ -d "$system_config_dir/mess/ini" ]; then
-    cp -Rv "$system_config_dir"/mess/ini/* "$system_mess_dir/ini/"
-  fi
+  # MESS init (global, system-specific)
+  for config_dirname in 'config_dir' 'system_config_dir'; do
+    each_path "{$config_dirname}/mess/ini" find '{}' -name '*.ini' | xargs -I{} cp -v '{}' "$system_mess_dir/ini/"
+  done
 }
 
 restore() {

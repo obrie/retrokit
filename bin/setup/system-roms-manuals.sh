@@ -50,12 +50,6 @@ archive_url_template=$(setting '.manuals.archive.url')
 fallback_to_source=$(setting '.manuals.archive.fallback_to_source')
 
 configure() {
-  # Ensure the system has manuals
-  if [ ! -f "$system_config_dir/manuals.tsv" ]; then
-    echo 'No manuals configured'
-    return
-  fi
-
   local keep_downloads=$(setting '.manuals.keep_downloads')
   local archive_processed=$(setting '.manuals.archive.processed')
 
@@ -144,7 +138,7 @@ configure() {
 __list_manuals() {
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     # We're generating the manualkit archive -- list all manuals for all languages
-    cat "$system_config_dir/manuals.tsv" | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\t\1\t\2\3/' | tr $'\t' '»'
+    each_path '{system_config_dir}/manuals.tsv' cat '{}' | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\t\1\t\2\3/' | tr $'\t' '»'
   else
     romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | join("»")'
   fi
@@ -761,11 +755,6 @@ __validate_pdf() {
 # Outputs the commands required to remove files no longer required by the current
 # list of roms installed
 vacuum() {
-  # Ensure the system has manuals
-  if [ ! -f "$system_config_dir/manuals.tsv" ]; then
-    return
-  fi
-
   local keep_downloads=$(setting '.manuals.keep_downloads')
 
   # Build the list of files we should *not* delete

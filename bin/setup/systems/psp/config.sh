@@ -8,8 +8,8 @@ setup_module_id='systems/psp/config'
 setup_module_desc='PSP configuration overrides'
 
 configure() {
-  ini_merge "$system_config_dir/controls.ini" '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini'
-  ini_merge "$system_config_dir/ppsspp.ini" '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
+  ini_merge '{system_config_dir}/controls.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini'
+  ini_merge '{system_config_dir}/ppsspp.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
 }
 
 restore() {

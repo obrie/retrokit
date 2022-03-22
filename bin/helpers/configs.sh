@@ -108,7 +108,7 @@ env_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  if [ ! -f "$source" ]; then
+  if ! any_path_exists "$source"; then
     echo "Skipping $source (does not exist)"
     return
   fi
@@ -116,13 +116,15 @@ env_merge() {
   backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
 
   echo "Merging env $source to $target"
-  while read -r env_line; do
-    if [ "$as_sudo" == 'true' ]; then
-      sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
-    else
-      .env -f "$target" set $env_line
-    fi
-  done < <(cat "$(conf_prepare "$source")" | grep -Ev "^#")
+  while read source_path; do
+    while read -r env_line; do
+      if [ "$as_sudo" == 'true' ]; then
+        sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
+      else
+        .env -f "$target" set $env_line
+      fi
+    done < <(cat "$(conf_prepare "$source_path")" | grep -Ev "^#")
+  done < <(each_path "$source")
 }
 
 # Merges INI files, backing up the target
@@ -136,7 +138,7 @@ ini_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
-  if [ ! -f "$source" ]; then
+  if ! any_path_exists "$source"; then
     echo "Skipping $source (does not exist)"
     return
   fi
@@ -150,11 +152,27 @@ ini_merge() {
   fi
 
   echo "Merging ini $source to $target"
-  $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source")"
+  while read source_path; do
+    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_path")"
+  done < <(each_path "$source")
 
   if [ "$space_around_delimiters" == "false" ]; then
     $cmd sed -i -r "s/(\S*)\s*=\s*(.*)/\1=\2/g" "$target"
   fi
+}
+
+# Looks up a configuration value in an INI file
+ini_get() {
+  local source=$1
+
+  # Read highest priority -> lowest priority, finding the first file
+  # that has the ini configuration
+  while read source_path; do
+    if crudini --get "$source_path" "${@:2}" 2>/dev/null; then
+      # Found a match -- stop
+      return
+    fi
+  done < <(each_path "$source" | tac)
 }
 
 # Merges JSON files, backing up the target
@@ -167,7 +185,7 @@ json_merge() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
-  if [ ! -f "$source" ]; then
+  if ! any_path_exists "$source"; then
     echo "Skipping $source (does not exist)"
     return
   fi
@@ -181,9 +199,20 @@ json_merge() {
   fi
 
   echo "Merging json $source to $target"
-  local tmp_target="$(mktemp -p "$tmp_ephemeral_dir")"
-  $cmd jq -s '.[0] * .[1]' "$target" "$(conf_prepare "$source")" > "$tmp_target"
-  $cmd cp "$tmp_target" "$target"
+  local new_target="$(mktemp -p "$tmp_ephemeral_dir")"
+  if [ -f "$target" ]; then
+    cp "$target" "$new_target"
+  else
+    echo '{}' > "$new_target"
+  fi
+
+  while read source_path; do
+    local tmp_merged="$(mktemp -p "$tmp_ephemeral_dir")"
+    $cmd jq -s '.[0] * .[1]' "$new_target" "$(conf_prepare "$source_path")" > "$tmp_merged"
+    mv "$tmp_merged" "$new_target"
+  done < <(each_path "$source")
+
+  $cmd cp "$new_target" "$target"
 }
 
 # Copies a file, backing up the target and substituting environment variables
@@ -198,7 +227,7 @@ file_cp() {
   local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  if [ ! -f "$source" ]; then
+  if ! any_path_exists "$source"; then
     echo "Skipping $source (does not exist)"
     return
   fi
@@ -211,15 +240,16 @@ file_cp() {
     local cmd='sudo'
   fi
 
-  echo "Copying file $source to $target"
+  local prioritized_source=$(first_path "$source")
+  echo "Copying file $prioritized_source to $target"
 
   # Remove any existing file
   $cmd rm -fv "$target"
 
   if [ "$envsubst" == 'true' ]; then
-    $cmd cp "$(conf_prepare "$source")" "$target"
+    $cmd cp "$(conf_prepare "$prioritized_source")" "$target"
   else
-    $cmd cp "$source" "$target"
+    $cmd cp "$prioritized_source" "$target"
   fi
 }
 
@@ -233,7 +263,7 @@ file_ln() {
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  if [ ! -f "$source" ]; then
+  if ! any_path_exists "$source"; then
     echo "Skipping $source (does not exist)"
     return
   fi
@@ -246,12 +276,13 @@ file_ln() {
     local cmd='sudo'
   fi
 
-  echo "Linking file $source as $target"
+  local prioritized_source=$(first_path "$source")
+  echo "Linking file $prioritized_source as $target"
 
   # Remove any existing file
   $cmd rm -f "$target"
   
-  $cmd ln -fs "$source" "$target"
+  $cmd ln -fs "$prioritized_source" "$target"
 }
 
 # Renders a template with the given variables to substitute.

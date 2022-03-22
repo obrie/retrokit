@@ -88,7 +88,7 @@ __configure_retroarch_core_options() {
 
     # Merge in game-specific overrides
     echo "Merging ini $override_file to $target_path"
-    crudini --merge "$target_path" < "$override_file"
+    ini_merge "$override_file" "$target_path" backup=false
     installed_files["$target_path"]=1
   done < <(__find_overrides 'opt')
 
@@ -109,7 +109,7 @@ __configure_retroarch_core_options() {
 __find_overrides() {
   local extension=$1
 
-  if [ -d "$system_config_dir/retroarch" ]; then
+  if any_path_exists '{system_config_dir}/retroarch'; then
     # Load core/library info for the emulators
     load_emulator_data
 
@@ -124,8 +124,8 @@ __find_overrides() {
       # * ROM Title
       local override_file=""
       for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$parent_name" "$parent_disc" "$parent_title"; do
-        if [ -f "$system_config_dir/retroarch/$filename.$extension" ]; then
-          override_file="$system_config_dir/retroarch/$filename.$extension"
+        if any_path_exists "{system_config_dir}/retroarch/$filename.$extension"; then
+          override_file="{system_config_dir}/retroarch/$filename.$extension"
           break
         fi
       done

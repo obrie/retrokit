@@ -13,8 +13,8 @@ depends() {
 }
 
 configure() {
-  ini_merge "$system_config_dir/dosbox-staging.conf" '/opt/retropie/configs/pc/dosbox-staging.conf'
-  ini_merge "$system_config_dir/dosbox-SVN.conf" '/opt/retropie/configs/pc/dosbox-SVN.conf'
+  ini_merge '{system_config_dir}/dosbox-staging.conf' '/opt/retropie/configs/pc/dosbox-staging.conf'
+  ini_merge '{system_config_dir}/dosbox-SVN.conf' '/opt/retropie/configs/pc/dosbox-SVN.conf'
 }
 
 restore() {

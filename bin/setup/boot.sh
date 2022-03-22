@@ -15,7 +15,7 @@ __configure_bios() {
   # Note that we can't use crudini for dtoverlay additions because it doesn't
   # support repeating the same key multiple times in the same section
 
-  ini_merge "$config_dir/boot/config.txt" '/boot/config.txt' space_around_delimiters=false as_sudo=true
+  ini_merge '{config_dir}/boot/config.txt' '/boot/config.txt' space_around_delimiters=false as_sudo=true
 
   __configure_bios_wifi
   __configure_bios_ir
@@ -46,9 +46,7 @@ __configure_bios_ir() {
 # in order to avoid multiple scripts modifying the /boot/config.txt file.
 __configure_bios_case() {
   local case=$(setting '.hardware.case.model')
-  if [ -f "$config_dir/boot/config/$case.txt" ]; then
-    cat "$config_dir/boot/config/$case.txt" | sudo tee -a /boot/config.txt >/dev/null
-  fi
+  each_path "{config_dir}/boot/config/$case.txt" cat '{}' | sudo tee -a /boot/config.txt >/dev/null
 }
 
 __configure_kernel() {
@@ -60,7 +58,7 @@ __configure_kernel() {
     else
       sudo sed -i "$ s/$/ $replace_option/" /boot/cmdline.txt
     fi
-  done < <(cat "$config_dir/boot/cmdline.tsv")
+  done < <(each_path '{config_dir}/boot/cmdline.tsv' cat '{}')
 }
 
 restore() {

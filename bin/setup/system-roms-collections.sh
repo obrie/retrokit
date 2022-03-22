@@ -6,7 +6,6 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-collections'
 setup_module_desc='Creates EmulationStation custom collections'
 
-source_collections_dir="$config_dir/emulationstation/collections"
 target_collections_dir="$HOME/.emulationstation/collections"
 
 configure() {
@@ -18,10 +17,10 @@ configure() {
 
 # Creates collections defined by custom, pre-defined emulationstation file
 __create_custom_collections() {
-  while read -r filename; do
-    local name=$(basename "$filename" '.tsv')
-    __create_collection "$name" "$source_collections_dir/$filename"
-  done < <(ls "$source_collections_dir")
+  while read -r collection_path; do
+    local name=$(basename "$collection_path" '.tsv')
+    __create_collection "$name" "$collection_path"
+  done < <(each_path '{config_dir}/emulationstation/collections' find '{}' -name '*.tsv')
 }
 
 # Creates collections defined by metadata in romkit selections

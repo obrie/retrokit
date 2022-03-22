@@ -8,8 +8,8 @@ setup_module_id='system/n64/config'
 setup_module_desc='N64 emulator configuration'
 
 configure() {
-  ini_merge "$system_config_dir/GLideN64.custom.ini" "$retropie_system_config_dir/GLideN64.custom.ini"
-  ini_merge "$system_config_dir/mupen64plus.cfg" "$retropie_system_config_dir/mupen64plus.cfg"
+  ini_merge '{system_config_dir}/GLideN64.custom.ini' "$retropie_system_config_dir/GLideN64.custom.ini"
+  ini_merge '{system_config_dir}/mupen64plus.cfg' "$retropie_system_config_dir/mupen64plus.cfg"
 }
 
 restore() {

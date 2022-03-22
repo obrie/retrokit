@@ -13,7 +13,7 @@ build() {
 }
 
 configure() {
-  ini_merge "$config_dir/runcommand/runcommand.cfg" /opt/retropie/configs/all/runcommand.cfg
+  ini_merge '{config_dir}/runcommand/runcommand.cfg' /opt/retropie/configs/all/runcommand.cfg
 }
 
 restore() {
