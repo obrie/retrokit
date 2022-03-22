@@ -7,7 +7,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system/ports/packages'
 setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
 
-packages_path="$(conf_prepare "$system_config_dir/packages.json")"
+packages_path="$(mktemp -p "$tmp_ephemeral_dir")"
+echo '{}' > "$packages_path"
+ini_merge '{system_config_dir}/packages.json' "$packages_path"
 
 build() {
   while IFS=$'\t' read -r port_name; do

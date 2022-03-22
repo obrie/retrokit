@@ -50,10 +50,10 @@ configure() {
     backup_and_restore "$target" as_sudo=true
 
     # Add common settings
-    __configure_player "$config_dir/controllers/sinden/Player.config" "$target"
+    each_path '{config_dir}/controllers/sinden/Player.config' __configure_player "\1" "$target"
 
     # Add player-specific settings
-    __configure_player "$config_dir/controllers/sinden/Player$player_id.config" "$target"
+    each_path "{config_dir}/controllers/sinden/Player$player_id.config" __configure_player "\1" "$target"
   done
 }
 

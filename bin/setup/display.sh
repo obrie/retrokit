@@ -7,7 +7,7 @@ setup_module_id='display'
 setup_module_desc='Console / display configuration'
 
 configure() {
-  env_merge "$config_dir/display/console-setup" '/etc/default/console-setup' as_sudo=true
+  env_merge '{config_dir}/display/console-setup' '/etc/default/console-setup' as_sudo=true
   __update_console
 }
 

@@ -68,9 +68,8 @@ sync_system_metadata() {
     return
   fi
 
-  local common_settings_file="$app_dir/config/systems/settings-common.json"
-  local system_settings_file="$app_dir/config/systems/$system/settings.json"
-  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") "${@:2}"
+  . "$dir/setup/system-common.sh"
+  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
 }
 
 # Sync manuals to internetarchive
@@ -84,7 +83,7 @@ remote_sync_system_manuals() {
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
-  if [ ! -f "$config_dir/systems/$system/manuals.tsv" ]; then
+  if ! any_path_exists "{config_dir}/systems/$system/manuals.tsv"; then
     return
   fi
 

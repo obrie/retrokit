@@ -22,7 +22,7 @@ configure() {
 
   # Add theme overrides
   while read -r theme_path; do
-    file_cp "$config_dir/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true envsubst=false
+    file_cp "{config_dir}/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true envsubst=false
   done < <(_list_theme_override_paths)
 }
 
@@ -60,7 +60,7 @@ _list_installed_themes() {
 
 # List the theme paths that are being overridden
 _list_theme_override_paths() {
-  find "$config_dir/themes" -type f -printf "%P\n"
+  each_path '{config_dir}/themes' find '{}' -type f -printf "%P\n"
 }
 
 setup "${@}"

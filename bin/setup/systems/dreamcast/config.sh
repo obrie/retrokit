@@ -12,13 +12,13 @@ redream_config_path="$redream_dir/redream.cfg"
 
 configure() {
   __restore_config
-  ini_merge "$system_config_dir/redream.cfg" "$redream_config_path" restore=false
+  ini_merge '{system_config_dir}/redream.cfg' "$redream_config_path" restore=false
 
   # Game overrides
   while read -r rom_config_path; do
     local filename=$(basename "$rom_config_path")
     cp "$rom_config_path" "$redream_dir/cache/$filename"
-  done < <(find "$system_config_dir/redream" -name '*.cfg')
+  done < <(each_path '{system_config_dir}/redream' find '{}' -name '*.cfg')
 }
 
 restore() {

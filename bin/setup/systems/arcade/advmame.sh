@@ -29,7 +29,20 @@ __configure_advmame() {
   __restore_config
 
   # Add overrides.  This is a custom non-ini format, so we need to do it manually.
-  echo "Merging ini $system_config_dir/advmame.rc to $config_path"
+  each_path "{system_config_dir}/advmame.rc" __configure_advmame_ini '{}'
+
+  # Add possible rom paths
+  sed -i '/dir_rom /d' "$config_path"
+  echo "dir_rom $(system_setting '[.roms.dirs[] | .path] | join(":")' | envsubst)" >> "$config_path"
+
+  # Make the config readable
+  sort -o "$config_path" "$config_path"
+}
+
+__configure_advmame_ini() {
+  local source_path=$1
+
+  echo "Merging ini $source_path to $config_path"
   while IFS=$'\t' read -r name value; do
     if [ -z "$name" ]; then
       continue
@@ -45,14 +58,7 @@ __configure_advmame() {
 
     # Add it back in
     echo "$name $value" >> "$config_path"
-  done < <(cat "$system_config_dir/advmame.rc" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
-
-  # Add possible rom paths
-  sed -i '/dir_rom /d' "$config_path"
-  echo "dir_rom $(system_setting '[.roms.dirs[] | .path] | join(":")' | envsubst)" >> "$config_path"
-
-  # Make the config readable
-  sort -o "$config_path" "$config_path"
+  done < <(cat "$source_path" | sed -rn 's/^([^ ]+) (.*)$/\1\t\2/p')
 }
 
 restore() {

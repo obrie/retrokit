@@ -36,14 +36,14 @@ __configure_systems() {
 __configure_platforms() {
   while read system; do
     # Override platform
-    local platform=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_platform" 2>/dev/null || echo '')
+    local platform=$(ini_get '{config_dir}/emulationstation/platforms.cfg' '' "${system}_platform")
     if [ -n "$platform" ]; then
       platform=${platform//\"/}
       xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/platform" -v "$platform" "$systems_override_config"
     fi
 
     # Override theme
-    local theme=$(crudini --get "$config_dir/emulationstation/platforms.cfg" '' "${system}_theme" 2>/dev/null || echo '')
+    local theme=$(ini_get '{config_dir}/emulationstation/platforms.cfg' '' "${system}_theme")
     if [ -n "$theme" ]; then
       theme=${theme//\"/}
       xmlstarlet ed -L -u "systemList/system[name=\"$system\"]/theme" -v "$theme" "$systems_override_config"

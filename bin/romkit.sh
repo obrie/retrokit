@@ -25,15 +25,19 @@ main() {
 run() {
   local command=$1
   local system=$2
-  local common_settings_file="$app_dir/config/systems/settings-common.json"
-  local system_settings_file="$app_dir/config/systems/$system/settings.json"
-  local args=("${@:3}")
 
+  # Build settings file
+  local system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  echo '{}' > "$system_settings_file"
+  json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null
+  json_merge "{config_dir}/systems/$system/settings.json" "$system_settings_file" backup=false >/dev/null
+
+  local args=("${@:3}")
   if [ -z "$args" ]; then
     args=(--log-level ERROR)
   fi
 
-  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" <(jq -s '.[0] * .[1]' "$common_settings_file" "$system_settings_file") ${args[@]}
+  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
 }
 
 if [[ $# -lt 1 ]]; then

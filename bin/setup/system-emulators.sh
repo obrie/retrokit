@@ -44,18 +44,16 @@ configure() {
 
   # Back up the emulators we're going to override
   __backup_emulator 'default'
-  if [ -f "$system_config_dir/emulators.cfg" ]; then
-    while read -r emulator; do
-      __backup_emulator "$emulator"
-    done < <(crudini --get "$system_config_dir/emulators.cfg" '')
-  fi
+  while read -r emulator; do
+    __backup_emulator "$emulator"
+  done < <(each_path '{system_config_dir}/emulators.cfg' ini_get '{}' '')
 
   # Set default emulator
   local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | .value.name // .key')
   crudini --set "$retropie_emulators_path" '' 'default' "\"$default_emulator\""
 
   # Additional emulator settings
-  ini_merge "$system_config_dir/emulators.cfg" "$retropie_emulators_path" backup=false
+  ini_merge '{system_config_dir}/emulators.cfg' "$retropie_emulators_path" backup=false
 }
 
 # Backs up the given emulator configuration

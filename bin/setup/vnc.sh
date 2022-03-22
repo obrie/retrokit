@@ -41,8 +41,8 @@ build() {
 }
 
 configure() {
-  file_cp "$config_dir/vnc/dispmanx_vncserver.conf" /etc/dispmanx_vncserver.conf as_sudo=true
-  file_cp "$config_dir/vnc/dispmanx_vncserver.service" /etc/systemd/system/dispmanx_vncserver.service envsubst=false as_sudo=true
+  file_cp '{config_dir}/vnc/dispmanx_vncserver.conf' /etc/dispmanx_vncserver.conf as_sudo=true
+  file_cp '{config_dir}/vnc/dispmanx_vncserver.service' /etc/systemd/system/dispmanx_vncserver.service envsubst=false as_sudo=true
 
   # Ensure service is installed
   sudo systemctl daemon-reload

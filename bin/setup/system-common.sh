@@ -11,7 +11,9 @@ retropie_system_config_dir="/opt/retropie/configs/$system"
 # Retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
 system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-jq -s '.[0] * .[1]' "$(conf_prepare "$app_dir/config/systems/settings-common.json")" "$(conf_prepare "$system_config_dir/settings.json")" > "$system_settings_file"
+echo '{}' > "$system_settings_file"
+json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null
+json_merge '{system_config_dir}/settings.json' "$system_settings_file" backup=false >/dev/null
 
 ##############
 # Settings
@@ -118,18 +120,9 @@ create_overlay_config() {
 
   echo "Overlaying $path with $overlay_filename"
   cat > "$path" <<EOF
-overlays = 1
-
+#include "/opt/retropie/configs/all/retroarch/overlay/base.cfg"
 overlay0_overlay = "$overlay_filename"
-
-overlay0_full_screen = true
-
-overlay0_descs = 0
 EOF
-
-  if [ -f "$system_config_dir/overlay.cfg" ]; then
-    crudini --merge --inplace "$path" < "$system_config_dir/overlay.cfg"
-  fi
 }
 
 # Outlines that gameplay area for an existing overlay image in order to be
