@@ -1,0 +1,15 @@
+{
+  "manuals": {
+    "archive": {
+      "version": "original",
+      "url": null,
+      "fallback_to_source": true
+    },
+    "keep_downloads": true,
+    "postprocess": {
+      "compress": {
+        "enabled": false
+      }
+    }
+  }
+}
