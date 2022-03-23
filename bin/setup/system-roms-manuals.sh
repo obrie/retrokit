@@ -269,8 +269,13 @@ __download_with_sleep() {
   local download_status=0
   download "$url" "${@:2}" || download_status=$?
 
-  # Track the last time this domain was downloaded from
-  if [[ "$domain" != *archive.org* ]] && [ "$domain" != 'localhost' ]; then
+  # Track the last time this domain was downloaded from.  We can skip this for:
+  # * archive.org
+  # * localhost urls
+  # * IP address urls
+  # 
+  # ...as everything else is likely from a website that throttles traffic
+  if ! [[ "$domain" =~ (archive.org|localhost|[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+) ]]; then
     domain_timestamps["$domain"]=$(date +%s)
   fi
 
