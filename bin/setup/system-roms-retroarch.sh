@@ -87,7 +87,6 @@ __configure_retroarch_core_options() {
     grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
 
     # Merge in game-specific overrides
-    echo "Merging ini $override_file to $target_path"
     ini_merge "$override_file" "$target_path" backup=false
     installed_files["$target_path"]=1
   done < <(__find_overrides 'opt')
