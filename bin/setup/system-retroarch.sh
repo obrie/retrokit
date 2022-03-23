@@ -25,7 +25,7 @@ __configure_emulator_configs() {
     local source_path="{system_config_dir}/retroarch/$library_name/$library_name.cfg"
     local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
 
-    if [ -f "$source_path" ]; then
+    if any_path_exists "$source_path"; then
       ini_merge "$source_path" "$target_path"
     else
       rm -fv "$target_path"
