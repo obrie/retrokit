@@ -54,11 +54,28 @@ each_path() {
       # Check that the path exists before printing it for the caller
       if [ -e "$rendered_path" ]; then
         local full_path=$(realpath "$rendered_path")
-        printf "$full_path" | xargs -0 -I{} $command "${@:3}"
+        process_path "$full_path" "${@:2}"
       fi
     done < <(echo "../config,$PROFILES" | tr ',' $'\n')
   elif [ -f "$path_template" ]; then
     # No template detected, but path exists
-    printf "$path_template" | xargs -0 -I{} $command "${@:3}"
+    process_path "${@}"
+  fi
+}
+
+# Runs the provided command, substituting the template "{}" with the path that
+# was matched.  If no command is provided, then the path is simply printed.
+process_path() {
+  if [ $# -gt 1 ]; then
+    # Replace the susbstitution template ({}) with the path
+    local args=()
+    for arg in "${@:2}"; do
+      args+=("${arg/\{\}/"$1"}")
+    done
+
+    # Run the command
+    "${args[@]}"
+  else
+    echo "$1"
   fi
 }
