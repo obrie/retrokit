@@ -29,7 +29,7 @@ __configure_advmame() {
   __restore_config
 
   # Add overrides.  This is a custom non-ini format, so we need to do it manually.
-  each_path "{system_config_dir}/advmame.rc" __configure_advmame_ini '{}'
+  each_path '{system_config_dir}/advmame.rc' __configure_advmame_ini '{}'
 
   # Add possible rom paths
   sed -i '/dir_rom /d' "$config_path"
