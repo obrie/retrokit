@@ -5,7 +5,7 @@
     "args": ["--excludefiles", "*DOSBox*"]
   },
   "emulators": {
-    "dosbox-staging": {"default": "true", "build": "source"},
+    "dosbox-staging": {"default": true, "build": "source"},
     "dosbox": {}
   },
   "downloads": {
