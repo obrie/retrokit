@@ -7,7 +7,7 @@ setup_module_id='system-emulators'
 setup_module_desc='Emulator installation and configuration (including BIOS, defaults, and custom commands)'
 
 retropie_emulators_path="$retropie_system_config_dir/emulators.cfg"
-retropie_emulators_backup_path="$emulators_path.rk-src"
+retropie_emulators_backup_path="$retropie_emulators_path.rk-src"
 
 build() {
   __install_emulators
@@ -59,16 +59,16 @@ configure() {
 # Backs up the given emulator configuration
 __backup_emulator() {
   local emulator=$1
-  local cmd=$(crudini --get "$retropie_emulators_path" '' "$emulator")
+  local cmd=$(crudini --get "$retropie_emulators_path" '' "$emulator" 2>/dev/null)
 
-  crudini --set "$retropie_emulators_backup_path" '' "$emulator" "\"$cmd\""
+  crudini --set "$retropie_emulators_backup_path" '' "$emulator" "$cmd"
 }
 
 restore() {
   if [ -f "$retropie_emulators_backup_path" ]; then
     # Reset (or delete) the emulator commands that were backed up
     while read -r emulator; do
-      local cmd=$(crudini --get "$retropie_emulators_backup_path" "$emulator")
+      local cmd=$(crudini --get "$retropie_emulators_backup_path" '' "$emulator")
       if [ -z "$cmd" ]; then
         crudini --del "$retropie_emulators_path" '' "$emulator"
       else
