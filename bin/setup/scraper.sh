@@ -17,7 +17,7 @@ build() {
   install_retropie_package 'supplementary' 'skyscraper'
 
   # Add video convert script
-  file_cp '{config_dir}/skyscraper/videoconvert.sh' "$skyscraper_dir/" backup=false envsubst=false
+  file_cp '{config_dir}/skyscraper/videoconvert.sh' "$skyscraper_dir/videoconvert.sh" backup=false envsubst=false
 }
 
 configure() {
