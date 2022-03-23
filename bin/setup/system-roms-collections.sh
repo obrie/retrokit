@@ -7,6 +7,7 @@ setup_module_id='system-roms-collections'
 setup_module_desc='Creates EmulationStation custom collections'
 
 target_collections_dir="$HOME/.emulationstation/collections"
+rom_dirs=($(system_setting 'select(.roms) | .roms.dirs[] | .path'))
 
 configure() {
   mkdir -pv "$target_collections_dir"
@@ -47,7 +48,10 @@ __create_collection() {
     collection_titles["$rom_title"]=1
   done < <(grep -E "^$system"$'\t' "$source_collection_path" | cut -d$'\t' -f 2)
 
-  while IFS=$'\t' read -r name title parent_title; do
+  # Track which playlists we've installed
+  declare -A installed_playlists
+
+  while IFS=» read -r name title parent_title playlist_name install_path; do
     if [ -z "${collection_titles["$title"]}" ] && { [ -z "$parent_title" ] || [ -z "${collection_titles["$parent_title"]}" ]; }; then
       # Not in the collection -- skip
       continue
@@ -57,17 +61,39 @@ __create_collection() {
     # for different regions, so we find the first installed ROM that matches
     # (the ROM could be present in multiple directories and we only want one in
     # the collection)
-    local rom_path=$(__find_in_directories "$name.*" | head -n 1)
+    local rom_path
+    if [ -z "$playlist_name" ]; then
+      local rom_filename=$(basename "$install_path")
+      rom_path=$(__find_in_directories "$rom_filename")
+    else
+      if [ "${installed_playlists["$playlist_name"]}" ]; then
+        # Already installed playlist -- skip
+        continue
+      fi
+
+      rom_path=$(__find_in_directories "$playlist_name.m3u")
+      installed_playlists["$playlist_name"]=1
+    fi
+
     if [ -f "$rom_path" ]; then
       echo "Adding $rom_path to $target_collection_path"
       echo "$rom_path" >> "$target_collection_path"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title] | @tsv' | sort)
+  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title, .playlist .name, .path] | join("»")' | sort)
+
+  # Sort the collection at the end
+  sort -o "$target_collection_path" "$target_collection_path"
 }
 
 # Finds file in the system's configured rom directories
 __find_in_directories() {
-  system_setting '.roms.dirs[] | .path' | xargs -I{} find "{}" -mindepth 1 -maxdepth 1 -name "$1" 2>/dev/null
+  for rom_dir in "${rom_dirs[@]}"; do
+    path=$(find "$rom_dir" -mindepth 1 -maxdepth 1 -name "$1" -print -quit)
+    if [ -n "$path" ]; then
+      echo "$path"
+      return
+    fi
+  done
 }
 
 restore() {
