@@ -15,6 +15,7 @@ export bin_dir="$app_dir/bin"
 source "$bin_dir/helpers/configs.sh"
 source "$bin_dir/helpers/downloads.sh"
 source "$bin_dir/helpers/emulationstation.sh"
+source "$bin_dir/helpers/hooks.sh"
 source "$bin_dir/helpers/logging.sh"
 source "$bin_dir/helpers/profiles.sh"
 source "$bin_dir/helpers/retropie_packages.sh"
@@ -141,18 +142,6 @@ remove() {
 # echo the `rm` commands -- you must run them.
 vacuum() {
   return
-}
-
-##############
-# Hooks for invoking other scripts
-##############
-
-after_hook() {
-  local setupmodule_name=$2
-
-  if [ -z "$SKIP_DEPS" ] && has_setupmodule "$setupmodule_name"; then
-    "$bin_dir/setup.sh" "${@}"
-  fi
 }
 
 # Setup configuration files
