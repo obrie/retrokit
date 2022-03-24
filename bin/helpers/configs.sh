@@ -244,7 +244,7 @@ file_cp() {
   echo "Copying file $prioritized_source to $target"
 
   # Remove any existing file
-  $cmd rm -fv "$target"
+  $cmd rm -f "$target"
 
   if [ "$envsubst" == 'true' ]; then
     $cmd cp "$(conf_prepare "$prioritized_source")" "$target"
