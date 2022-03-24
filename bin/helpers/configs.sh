@@ -2,7 +2,7 @@
 # Configuration management helpers
 ##############
 
-ENABLE_RPDIST_BACKUPS=false
+export ENABLE_RPDIST_BACKUPS=${ENABLE_RPDIST_BACKUPS:-false}
 
 # Substitutes environment variables with a file and returns the path to the
 # interpolated file
