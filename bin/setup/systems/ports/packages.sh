@@ -9,7 +9,7 @@ setup_module_desc='MAME 0.230 tools, like chdman, not available through system p
 
 packages_path="$(mktemp -p "$tmp_ephemeral_dir")"
 echo '{}' > "$packages_path"
-ini_merge '{system_config_dir}/packages.json' "$packages_path"
+json_merge '{system_config_dir}/packages.json' "$packages_path"
 
 build() {
   while IFS=$'\t' read -r port_name; do
