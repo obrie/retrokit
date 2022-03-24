@@ -42,11 +42,11 @@ __build_gamecontrollerdb() {
 
 # Run RetroPie autoconfig for each controller input
 configure() {
-  __configure_overrides
+  __configure_autoconf
   __configure_controllers
 }
 
-__configure_overrides() {
+__configure_autoconf() {
   # Copy overrides config
   __restore_autoconf
   ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_file" as_sudo=true restore=false
