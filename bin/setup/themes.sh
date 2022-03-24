@@ -43,7 +43,7 @@ clean() {
 restore() {
   # Restore original theme
   while read backup_file; do
-    restore_file "${backup_file%.rk-src*}"
+    restore_file "${backup_file%.rk-src*}" as_sudo=true
   done < <(find '/etc/emulationstation/themes' -name '*.rk-src' -o -name '*.rk-src.missing')
 }
 
