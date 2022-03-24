@@ -87,7 +87,7 @@ sync_media() {
 create() {
   [[ $# -ne 1 ]] && usage
   local device=$1
-  local retropie_version=4.7.1
+  local retropie_version=4.8
   local raspbian_version=buster
   local rpi_version=rpi4_400
   local image_file="$tmp_dir/retropie-$retropie_version-$raspbian_version-$rpi_version.img.gz"
@@ -103,7 +103,7 @@ create() {
   # Copy the image
   echo "Copying image to $device..."
   gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device" status=progress
-  local retropie_device=$(lsblk -nl -o PATH,MAJ:MIN "$device" | grep ':2' | cut -d ' ' -f 1)
+  local retropie_device=$(lsblk -nl -o PATH,TYPE -x PATH "$device" | grep part | cut -d ' ' -f 1 | head -2 | tail -1)
   if [ -z "$retropie_device" ]; then
     echo 'Could not find retropie partition in lsblk'
     return 1
@@ -124,7 +124,7 @@ create() {
   echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
   local remote_user=$(stat -c '%U' "$mount_path/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
-  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' "$app_dir/" "$mount_path/home/pi/retrokit/"
+  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' --exclude '__pycache__/' "$app_dir/" "$mount_path/home/pi/retrokit/"
   mkdir -v "$mount_path/home/pi/retrokit/tmp"
   touch "$mount_path/home/pi/retrokit/tmp/.gitkeep"
   chown -Rv "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
