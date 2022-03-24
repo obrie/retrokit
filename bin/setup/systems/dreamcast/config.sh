@@ -37,7 +37,7 @@ restore() {
   __restore_config delete_src=true
 
   # Remove game-specific overrides
-  find "$redream_dir/cache" -name '*.cfg' -exec rm -fv "{}" \;
+  find "$redream_dir/cache" -name '*.cfg' -exec rm -fv {} +
 }
 
 __restore_config() {

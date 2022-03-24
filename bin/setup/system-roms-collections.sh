@@ -98,7 +98,7 @@ __find_in_directories() {
 
 restore() {
   if [ -d "$target_collections_dir" ]; then
-    find "$target_collections_dir" -name '*.cfg' -exec rm -fv "{}" \;
+    find "$target_collections_dir" -name '*.cfg' -exec rm -fv {} +
   fi
 }
 
