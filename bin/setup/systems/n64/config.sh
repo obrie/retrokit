@@ -15,8 +15,8 @@ configure() {
 }
 
 restore() {
-  restore_file "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
   __restore_mupen64plus_gliden64
+  restore_file "$retropie_system_config_dir/mupen64plus.cfg" delete_src=true
 }
 
 __restore_mupen64plus_gliden64() {
