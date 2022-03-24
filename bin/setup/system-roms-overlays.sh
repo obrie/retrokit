@@ -224,7 +224,7 @@ restore() {
   while read -r library_name; do
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
-    find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv {} +
+    find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv '{}' +
   done < <(get_core_library_names)
 }
 
