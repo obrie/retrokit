@@ -37,6 +37,11 @@ install_retropie_package() {
   fi
 }
 
+configure_retropie_package() {
+  local name=$1
+  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" configure
+}
+
 uninstall_retropie_package() {
   local name=$1
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" remove
