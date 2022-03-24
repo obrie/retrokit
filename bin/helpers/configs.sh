@@ -52,7 +52,7 @@ has_backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
 
-  [ -f "$backup_file" ] || [ -f "$backup_file.missing" ]
+  [ -f "$backup_file" ] || [ -f "$backup_file.missing" ] || { [ "$RECONFIGURED_PACKAGES" == 'true' ] && [ -f "$file.rp-dist" ]; }
 }
 
 # Restores a previously backed-up file
