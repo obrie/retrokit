@@ -45,7 +45,7 @@ __configure_core_options() {
   fi
 
   # Start with an empty core options -- we'll build it up based on other files
-  rm -fv "$core_options_path"
+  truncate -s0 "$core_options_path"
 
   local tmp_core_options_path=$(mktemp -p "$tmp_ephemeral_dir")
   while read core_name; do
