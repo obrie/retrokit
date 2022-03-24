@@ -72,7 +72,7 @@ romkit_cache_list() {
 
   if [ ! -s "$cache_file" ]; then
     # Remove any existing cache files
-    find "$system_tmp_dir" -name 'romkit-list.cache*' -exec rm -f {} +
+    find "$system_tmp_dir" -name 'romkit-list.cache*' -exec rm -f '{}' +
 
     # Re-cache the list
     romkit_cli list --log-level ERROR > "$cache_file"
