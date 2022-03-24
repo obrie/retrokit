@@ -6,14 +6,15 @@
 # 
 # See each_path for more information.
 any_path_exists() {
-  each_path "${@}" | grep . > /dev/null
+  each_path "$1" | grep . > /dev/null
 }
 
 # Finds the first path that matches the given template.
 # 
 # See each_path for more information.
 first_path() {
-  each_path "${@}" | tail -n 1
+  local path=$(each_path "$1" | tail -n 1)
+  process_path "$path" "${@:2}"
 }
 
 # Finds all paths matching a certain template and executes the provided command
@@ -29,10 +30,16 @@ each_path() {
   local template_name
   if [[ "$path_template" == *{config_dir}* ]]; then
     template_name='config_dir'
+    default_load_path='../config'
     sub_dir=''
   elif [[ "$path_template" == *{system_config_dir}* ]]; then
     template_name='system_config_dir'
+    default_load_path='../config'
     sub_dir="systems/$system"
+  elif [[ "$path_template" == *{bin_dir}* ]]; then
+    template_name='bin_dir'
+    default_load_path='..'
+    sub_dir='bin'
   fi
 
   if [ -n "$template_name" ]; then
@@ -53,7 +60,7 @@ each_path() {
         local full_path=$(realpath "$rendered_path")
         process_path "$full_path" "${@:2}"
       fi
-    done < <(echo "../config,$PROFILES" | tr ',' $'\n')
+    done < <(echo "$default_load_path,$PROFILES" | tr ',' $'\n' | grep .)
   elif [ -f "$path_template" ]; then
     # No template detected, but path exists
     process_path "${@}"

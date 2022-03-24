@@ -9,7 +9,13 @@ setup_module_desc='Custom RetroPie scriptmodules'
 build() {
   local target_path="$HOME/RetroPie-Setup/ext/retrokit/scriptmodules"
   mkdir -pv "$target_path"
-  rsync -av "$bin_dir/scriptmodules/" "$target_path/" --delete
+
+  # Merge script modules from retrokit and profiles into a single directory
+  mkdir -p "$tmp_ephemeral_dir/scriptmodules"
+  each_path '{bin_dir}/scriptmodules' rsync -av '{}/' "$tmp_ephemeral_dir/scriptmodules/"
+
+  # Take the merged directory and rsync that as the source of truth
+  rsync -av "$tmp_ephemeral_dir/scriptmodules/" "$target_path/" --delete
 }
 
 remove() {

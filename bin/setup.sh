@@ -63,7 +63,7 @@ run() {
     print_heading "Running $action for $setupmodule"
   fi
 
-  "$dir/setup/$setupmodule.sh" "$action" "${@:3}"
+  first_path "{bin_dir}/setup/$setupmodule.sh" '{}' "$action" "${@:3}"
 }
 
 main() {

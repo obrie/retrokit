@@ -41,7 +41,7 @@ build() {
 
   # Create ports
   mkdir -pv "$HOME/RetroPie/roms/ports/+sinden"
-  cp -v "$bin_dir/controllers/sinden/Sinden"*.sh "$HOME/RetroPie/roms/ports/+sinden/"
+  each_path '{bin_dir}/controllers/sinden' find '{}' -name 'Sinden*.sh' -exec cp -v -t "$HOME/RetroPie/roms/ports/+sinden/" '{}' +
 }
 
 configure() {

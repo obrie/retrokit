@@ -384,6 +384,34 @@ The following specific configurations will be overwritten entirely by profiles:
 * `config/vnc/*`
 * `config/wifi/*`
 
+### Binary overrides
+
+In addition to overriding configuration settings, you can also override binaries
+that are related to configuration settings.  This includes:
+
+* Retrokit setup scripts
+* Custom RetroPie scriptmodules
+* RetroPie controller autoconfig scripts
+* Sinden controller scripts
+
+These scripts are expected to be located in a `bin/` path under your profile's
+directory with the same structure as retrokit's.  For example, to add a new setup
+script for your profile, you can configure it like so:
+
+profiles/mykit/settings.json:
+
+```json
+{
+   "setup": [
+      "...",
+      "mycustomscript"
+   ]
+}
+```
+
+You would then create your setup script under `profiles/mykit/bin/setup/mycustomscript.sh`
+to match the same structure as retrokit's `bin/` folder.
+
 ### Environment variables
 
 Environment variables can be defined in 3 places:

@@ -19,7 +19,7 @@ build() {
 # Add autoconfig scripts
 __build_autoconfig_scripts() {
   while read -r autoconfig_name; do
-    sudo cp -v "$bin_dir/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/"
+    file_cp "{bin_dir}/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/$autoconfig_name.sh" as_sudo=true backup=false envsubst=false
   done < <(setting '.hardware.controllers.autoconfig[]')
 }
 
