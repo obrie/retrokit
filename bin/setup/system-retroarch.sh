@@ -44,14 +44,27 @@ __configure_core_options() {
     return
   fi
 
-  # Use the global defaults as the initial file
+  # Start with an empty core options -- we'll build it up based on other files
   rm -fv "$core_options_path"
+
+  local tmp_core_options_path=$(mktemp -p "$tmp_ephemeral_dir")
   while read core_name; do
-    echo "Copying $core_name default options to $core_options_path"
-    grep -E "^$core_name" "$global_core_options_path" >> "$core_options_path" || true
+    # Global defaults from RetroPie
+    echo "Merging $core_name core options from $global_core_options_path to $core_options_path"
+    grep -E "^$core_name" "$global_core_options_path" > "$tmp_core_options_path" || true
+    if [ -s "$tmp_core_options_path" ]; then
+      ini_merge "$tmp_core_options_path" "$core_options_path" backup=false >/dev/null
+    fi
+
+    # retrokit global overrides
+    echo "Merging $core_name global overrides to $core_options_path"
+    each_path '{config_dir}/retroarch/retroarch-core-options.cfg' cat '{}' | grep -E "^$core_name" > "$tmp_core_options_path" || true
+    if [ -s "$tmp_core_options_path" ]; then
+      ini_merge "$tmp_core_options_path" "$core_options_path" backup=false >/dev/null
+    fi
   done < <(system_setting 'select(.emulators) | .emulators[] | select(.core_name) | .core_name' | uniq)
 
-  # Merge in overrides
+  # Merge in system-specific overrides
   ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_path" backup=false
   sort -o "$core_options_path" "$core_options_path"
 
