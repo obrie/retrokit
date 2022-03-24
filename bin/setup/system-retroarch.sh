@@ -45,8 +45,15 @@ __configure_core_options() {
   fi
 
   # Use the global defaults as the initial file
-  cp -v "$global_core_options_path" "$core_options_path"
+  rm -fv "$core_options_path"
+  while read core_name; do
+    echo "Copying $core_name default options to $core_options_path"
+    grep -E "^$core_name" "$global_core_options_path" >> "$core_options_path" || true
+  done < <(system_setting 'select(.emulators) | .emulators[] | select(.core_name) | .core_name' | uniq)
+
+  # Merge in overrides
   ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_path" backup=false
+  sort -o "$core_options_path" "$core_options_path"
 
   # Reinstall the game-specific retroarch core options for this system.
   # Yes, this might mean we install game-specific core options multiple
