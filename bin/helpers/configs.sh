@@ -2,6 +2,8 @@
 # Configuration management helpers
 ##############
 
+ENABLE_RPDIST_BACKUPS=false
+
 # Substitutes environment variables with a file and returns the path to the
 # interpolated file
 conf_prepare() {
@@ -17,6 +19,12 @@ conf_prepare() {
   $cmd envsubst < "$source" > "$target"
   $cmd chmod --reference="$source" "$target"
   echo "$target"
+}
+
+# Enables retrokit to use .rp-dist as the primary backup file during file
+# restore
+enable_rpdist_backups() {
+  ENABLE_RPDIST_BACKUPS=true
 }
 
 # Creates a backup of the given file.  If the file doesn't existing, then a
@@ -52,7 +60,7 @@ has_backup_file() {
   local file=$1
   local backup_file="$file.rk-src"
 
-  [ -f "$backup_file" ] || [ -f "$backup_file.missing" ] || { [ "$RECONFIGURED_PACKAGES" == 'true' ] && [ -f "$file.rp-dist" ]; }
+  [ -f "$backup_file" ] || [ -f "$backup_file.missing" ] || { [ "$ENABLE_RPDIST_BACKUPS" == 'true' ] && [ -f "$file.rp-dist" ]; }
 }
 
 # Restores a previously backed-up file
@@ -74,7 +82,7 @@ restore_file() {
   # to use the *original* files as our backup source, rp-dist becomes our source
   # of truth.  This gets copied over to rk-src so that we can make that the new
   # backup.
-  if [ "$RECONFIGURED_PACKAGES" == 'true' ] && [ -f "$file.rp-dist" ]; then
+  if [ "$ENABLE_RPDIST_BACKUPS" == 'true' ] && [ -f "$file.rp-dist" ]; then
     cp -v "$file.rp-dist" "$backup_file"
   fi
 
