@@ -14,11 +14,21 @@ configure() {
   __restore_config
   ini_merge '{system_config_dir}/redream.cfg' "$redream_config_path" restore=false
 
+  declare -A installed_files
+
   # Game overrides
   while read -r rom_config_path; do
     local filename=$(basename "$rom_config_path")
-    cp "$rom_config_path" "$redream_dir/cache/$filename"
+    local target_path="$redream_dir/cache/$filename"
+    cp -v "$rom_config_path" "$target_path"
+
+    installed_files["$target_path"]=1
   done < <(each_path '{system_config_dir}/redream' find '{}' -name '*.cfg')
+
+  # Remove overrides no longer needed
+  while read -r path; do
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
+  done < <(find "$redream_dir/cache" -name '*.cfg')
 }
 
 restore() {
