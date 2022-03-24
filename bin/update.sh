@@ -56,8 +56,28 @@ update_emulator_configs() {
     "$bin_dir/setup.sh" reconfigure_packages system-emulators "$system"
   else
     # All systems updated
-    "$bin_dir/setup.sh" reconfigure_packages retroarch
-    "$bin_dir/setup.sh" reconfigure_packages system-emulators
+
+    # First, we have to restore the autoconf.cfg that's managed by RetroPie because it
+    # can get modified by multiple emulator packages
+    if has_setupmodule 'hardware/controllers'; then
+      "$bin_dir/setup.sh" __restore_autoconf hardware/controllers
+    fi
+
+    # Reconfigure Retroarch on its own as its separate from systems
+    if has_setupmodule 'retroarch'; then
+      "$bin_dir/setup.sh" reconfigure_packages retroarch
+    fi
+
+    # Reconfigure the packages needed for each system.  system-emulators will also
+    # handle reconfiguration of system-specific setup modules in retrokit.
+    if has_setupmodule 'system-emulators' then
+      "$bin_dir/setup.sh" reconfigure_packages system-emulators
+    fi
+
+    # Once all systemks have updated, we can set up the autoconf.cfg again
+    if has_setupmodule 'hardware/controllers'; then
+      "$bin_dir/setup.sh" __configure_autoconf hardware/controllers
+    fi
   fi
 }
 
