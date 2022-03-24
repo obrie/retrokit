@@ -156,19 +156,19 @@ restore() {
     # Remove core options
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     if [ -d "$emulator_config_dir" ]; then
-      find "$emulator_config_dir" -name '*.opt' -o -name '*.opt.rk-src*' -exec rm -fv "{}" \;
+      find "$emulator_config_dir" -name '*.opt' -o -name '*.opt.rk-src*' -exec rm -fv {} +
     fi
 
     # Remove retroarch mappings
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     if [ -d "$emulator_remapping_dir" ]; then
-      find "$emulator_remapping_dir" -name '*.rmp' -o -name '*.rmp.rk-src*' -exec rm -fv "{}" \;
+      find "$emulator_remapping_dir" -name '*.rmp' -o -name '*.rmp.rk-src*' -exec rm -fv {} +
     fi
   done < <(get_core_library_names)
 
   # Remove retroarch configs
   while read -r rom_dir; do
-    find "$rom_dir" -maxdepth 1 -name '*.cfg' -o -name '*.cfg.rk-src*' -exec rm -fv "{}" \;
+    find "$rom_dir" -maxdepth 1 -name '*.cfg' -o -name '*.cfg.rk-src*' -exec rm -fv {} +
   done < <(system_setting '.roms.dirs[] | .path')
 }
 
