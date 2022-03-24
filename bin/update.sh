@@ -64,7 +64,7 @@ update_emulator_configs() {
 
     # Reconfigure the packages needed for each system.  system-emulators will also
     # handle reconfiguration of system-specific setup modules in retrokit.
-    if has_setupmodule 'system-emulators' then
+    if has_setupmodule 'system-emulators'; then
       "$bin_dir/setup.sh" reconfigure_packages system-emulators
     fi
   fi
