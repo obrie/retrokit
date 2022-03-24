@@ -19,6 +19,7 @@ install_retropie_package() {
     # If the package is already installed and the build source has remained the same,
     # then don't do anything.  Updates must be done explicitly by the user.
     if [ "$pkg_origin" == "$build" ]; then
+      echo "$name already installed by RetroPie ($build)"
       return 0
     fi
   fi
