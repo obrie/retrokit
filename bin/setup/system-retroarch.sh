@@ -82,8 +82,11 @@ __configure_core_options() {
 
 restore() {
   # Remove system retroarch core options files
+  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
   local core_options_path=$(get_retroarch_path 'core_options_path')
-  rm -fv "$core_options_path"
+  if [ "$global_core_options_path" != "$core_options_path" ]; then
+    rm -fv "$core_options_path"
+  fi
 
   # Restore emulator retroarch configs
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
