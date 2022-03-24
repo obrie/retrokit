@@ -122,7 +122,7 @@ __build_missing_reports() {
   mkdir -p '/opt/retropie/configs/all/skyscraper/reports/'
 
   # Remove existing Skyscraper reports
-  find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f {} +
+  find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f '{}' +
 
   # Generate new reports of missing resources.  We look at only 2 resources as
   # indicators of a prior issue:
