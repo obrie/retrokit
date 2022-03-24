@@ -7,6 +7,7 @@ setup_module_id='hardware/controllers'
 setup_module_desc='Controller autoconfiguration'
 
 autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
+autoconf_backup_file="$autoconf_file.rk-src"
 configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 sdldb_path="$tmp_dir/gamecontrollerdb.txt"
 sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
@@ -49,7 +50,21 @@ configure() {
 __configure_autoconf() {
   # Copy overrides config
   __restore_autoconf
-  ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_file" as_sudo=true restore=false
+
+  # Staging the changes we're going to merge in
+  ini_merge '{config_dir}/controllers/autoconf.cfg' "$tmp_ephemeral_dir/autoconf.cfg" backup=false
+  cp "$tmp_ephemeral_dir/autoconf.cfg" "$autoconf_backup_file"
+
+  # Track which keys we've overridden and which we've added (so we can later restore with confidence)
+  while read autoconf_key; do
+    local existing_value=$(crudini --get "$autoconf_file" '' "$autoconf_key" 2>/dev/null)
+    if [ -z "$existing_value" ]; then
+      crudini --set "$autoconf_backup_file" '' "$autoconf_key" ''
+    fi
+  done < <(crudini --get "$autoconf_backup_file" '')
+
+  # Merge in the changes
+  ini_merge "$tmp_ephemeral_dir/autoconf.cfg" "$autoconf_file" backup=false
 }
 
 __configure_controllers() {
@@ -228,13 +243,23 @@ __restore_inputs() {
 }
 
 __restore_autoconf() {
-  sed -i '/^retroarch_(keyboard|controller)/d' "$autoconf_file"
+  if [ -f "$autoconf_backup_file" ]; then
+    # Restore original values for the keys we overrode
+    while read -r key; do
+      local value=$(crudini --get "$autoconf_backup_file" '' "$key")
+      if [ -z "$value" ]; then
+        crudini --del "$autoconf_file" '' "$key"
+      else
+        crudini --set "$autoconf_file" '' "$key" "$value"
+      fi
+    done < <(crudini --get "$autoconf_backup_file" '')
+
+    # Remove the backup since we're now fully restored
+    rm -v "$autoconf_backup_file"
+  fi
 }
 
 remove() {
-  # Remove autoconfig overrides
-  sudo rm -fv "$configscripts_dir/autoconfig-overrides.cfg"
-
   # Remove autoconfig scripts
   while read -r autoconfig_name; do
     sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
