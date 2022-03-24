@@ -25,9 +25,6 @@ first_path() {
 each_path() {
   local path_template=$1
 
-  # Default to just printing out the matching paths
-  local command=${2:-echo '{}'}
-
   # Determine which directory we're dealing with
   local template_name
   if [[ "$path_template" == *{config_dir}* ]]; then
@@ -66,16 +63,28 @@ each_path() {
 # Runs the provided command, substituting the template "{}" with the path that
 # was matched.  If no command is provided, then the path is simply printed.
 process_path() {
+  local rendered_path=$1
+
   if [ $# -gt 1 ]; then
     # Replace the susbstitution template ({}) with the path
     local args=()
-    for arg in "${@:2}"; do
-      args+=("${arg/\{\}/"$1"}")
+    for (( index=2; index <= "$#"; index++ )); do
+      # Subsititute {} in the argument with the rendered path
+      local arg=${!index}
+      local rendered_arg="${arg/\{\}/"$rendered_path"}"
+      args+=("$rendered_arg")
+
+      # Stop after the first substitution is made and add the remaining arguments as-is
+      if [ "$rendered_arg" != "$arg" ]; then
+        ((index+=1))
+        args+=("${@:$index}")
+        break
+      fi
     done
 
     # Run the command
     "${args[@]}"
   else
-    echo "$1"
+    echo "$rendered_path"
   fi
 }

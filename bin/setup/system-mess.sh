@@ -21,7 +21,7 @@ __configure_cfg_files() {
 
   # Inputs/configs (global, system-specific)
   for config_dirname in 'config_dir' 'system_config_dir'; do
-    each_path "{$config_dirname}/mess/cfg" find '{}' -name '*.cfg' | xargs -I{} cp -v '{}' "$system_mess_dir/cfg/"
+    each_path "{$config_dirname}/mess/cfg" find '{}' -name '*.cfg' -exec cp -v -t "$system_mess_dir/cfg/" '{}' +
   done
 }
 
@@ -30,7 +30,7 @@ __configure_ini_files() {
 
   # MESS init (global, system-specific)
   for config_dirname in 'config_dir' 'system_config_dir'; do
-    each_path "{$config_dirname}/mess/ini" find '{}' -name '*.ini' | xargs -I{} cp -v '{}' "$system_mess_dir/ini/"
+    each_path "{$config_dirname}/mess/ini" find '{}' -name '*.ini' -exec cp -v -t "$system_mess_dir/ini/" '{}' +
   done
 }
 
