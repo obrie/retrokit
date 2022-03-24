@@ -6,6 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 setup_module_id='system/pc/config'
 setup_module_desc='PC emulator configuration'
+setup_module_reconfigure_after_update=true
 
 depends() {
   # Sound driver

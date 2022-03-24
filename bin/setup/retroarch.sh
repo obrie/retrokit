@@ -10,6 +10,13 @@ retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
 retroarch_core_options_path='/opt/retropie/configs/all/retroarch-core-options.cfg'
 retroarch_default_overlay_path='/opt/retropie/configs/all/retroarch/overlay/base.cfg'
 
+# Re-runs the `configure` action for retroarch
+reconfigure_packages() {
+  restore
+  configure_retropie_package retroarch
+  configure
+}
+
 configure() {
   __restore_config
   ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_path" restore=false

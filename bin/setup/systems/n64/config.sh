@@ -6,6 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 setup_module_id='system/n64/config'
 setup_module_desc='N64 emulator configuration'
+setup_module_reconfigure_after_update=true
 
 configure() {
   __restore_mupen64plus_gliden64

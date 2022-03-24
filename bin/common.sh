@@ -144,5 +144,19 @@ vacuum() {
   return
 }
 
+# Restores the current setup module before RetroPie packages are reconfigured
+before_retropie_reconfigure() {
+  if [ "$setup_module_reconfigure_after_update" == 'true' ]; then
+    restore
+  fi
+}
+
+# Re-configures the current setup module after RetroPie packages were reconfigured
+after_retropie_reconfigure() {
+  if [ "$setup_module_reconfigure_after_update" == 'true' ]; then
+    configure
+  fi
+}
+
 # Setup configuration files
 __setup_configs

@@ -5,6 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 setup_module_id='system-retroarch'
 setup_module_desc='System-specific Retroarch configurations and core options overrides'
+setup_module_reconfigure_after_update=true
 
 configure() {
   __configure_system_config
