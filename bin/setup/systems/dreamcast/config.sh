@@ -20,7 +20,9 @@ configure() {
   while read -r rom_config_path; do
     local filename=$(basename "$rom_config_path")
     local target_path="$redream_dir/cache/$filename"
-    cp -v "$rom_config_path" "$target_path"
+
+    rm -fv "$target_path"
+    ini_merge "$rom_config_path" "$target_path" backup=false
 
     installed_files["$target_path"]=1
   done < <(each_path '{system_config_dir}/redream' find '{}' -name '*.cfg')
