@@ -33,11 +33,10 @@ update_retropie_setup() {
   clear
 }
 
-# Update packages
+# Update packages.  By default, any default configuration changes made to
+# emulators by RetroPie configurations will *not* be picked up.  You must
+# explicitly decide to accept those by running `update_emulator_configs`.
 update_retropie_packages() {
-  # First restore all configurations so that we pick up any changes from RetroPie
-  $bin_dir/setup.sh restore
-
   if [ $# -eq 0 ]; then
     sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
   else
@@ -45,10 +44,6 @@ update_retropie_packages() {
       sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
     done
   fi
-
-  # After packages have been updated, re-configure all scripts so that they
-  # are merged with the latest changes from RetroPie
-  $bin_dir/setup.sh configure
 }
 
 if [[ $# -eq 0 ]]; then
