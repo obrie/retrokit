@@ -40,6 +40,7 @@ install_retropie_package() {
 configure_retropie_package() {
   local name=$1
   sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" configure
+  export RECONFIGURED_PACKAGES=true
 }
 
 uninstall_retropie_package() {

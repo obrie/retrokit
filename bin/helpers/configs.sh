@@ -68,6 +68,16 @@ restore_file() {
     local cmd='sudo'
   fi
 
+  # If we just reconfigured our packages, then we want to use rp-dist as our
+  # backup file instead of any existing rk-src.  The reason for this is that
+  # RetroPie is going to modify *just* the rp-dist file.  Since we always want
+  # to use the *original* files as our backup source, rp-dist becomes our source
+  # of truth.  This gets copied over to rk-src so that we can make that the new
+  # backup.
+  if [ "$RECONFIGURED_PACKAGES" == 'true' ] && [ -f "$file.rp-dist" ]; then
+    cp -v "$file.rp-dist" "$backup_file"
+  fi
+
   if [ -f "$backup_file" ]; then
     $cmd cp -Ppv "$backup_file" "$file"
 

@@ -22,6 +22,7 @@ update_system() {
 update_retropie() {
   update_retropie_setup
   update_retropie_packages
+  update_emulator_configs
 }
 
 # Update RetroPie-Setup
@@ -43,6 +44,20 @@ update_retropie_packages() {
     for package in "$@"; do
       sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
     done
+  fi
+}
+
+# Update emulator configurations based on latest package updates
+update_emulator_configs() {
+  local system=$1
+
+  if [ -n "$system" ]; then
+    # Specific system updated
+    "$bin_dir/setup.sh" reconfigure_packages system-emulators "$system"
+  else
+    # All systems updated
+    "$bin_dir/setup.sh" reconfigure_packages retroarch
+    "$bin_dir/setup.sh" reconfigure_packages system-emulators
   fi
 }
 

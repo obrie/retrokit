@@ -37,6 +37,34 @@ __download_bios_files() {
   done < <(system_setting 'select(.bios) | .bios.files | to_entries[] | [.key, .value] | @tsv')
 }
 
+# Re-runs the `configure` action for all RetroPie packages used by the system
+reconfigure_packages() {
+  # Restore original configurations
+  __reconfigure_packages_hook before_retropie_reconfigure
+
+  # Reconfigure packages for all emulators set up in this system
+  while read -r package; do
+    configure_retropie_package "$package"
+  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
+
+  # Re-apply configuration overrides
+  __reconfigure_packages_hook after_retropie_reconfigure
+}
+
+# Runs the reconfigure hook for this script, system-retroarch, and any system-specific setup
+# script that's configured to handle package reconfigurations
+__reconfigure_packages_hook() {
+  local hook=$1
+
+  # Run our hook
+  "$hook"
+
+  # Run external hooks
+  while read setupmodule; do
+    "$bin_dir/setup.sh" "$hook" "$setupmodule" "$system"
+  done < <(setting ".setup[] | select(. == \"system-retroarch\" or (. | contains(\"systems/$system/\")))")
+}
+
 # Configure emulator settings
 configure() {
   # First, restore any emulators we previously overrode
