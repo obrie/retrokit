@@ -105,7 +105,7 @@ restore() {
     done < <(crudini --get "$retropie_emulators_backup_path" '')
 
     # Remove the backup since we're now fully restored
-    rm "$retropie_emulators_backup_path"
+    rm -v "$retropie_emulators_backup_path"
   fi
 }
 
