@@ -148,7 +148,7 @@ env_merge() {
   echo "Merging env $source to $target"
   while read source_path; do
     while read -r env_line; do
-      $cmd bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
+      $cmd dotenv -f "$target" set "$env_line"
     done < <(cat "$(conf_prepare "$source_path")" | grep -Ev "^#")
   done < <(each_path "$source")
 }

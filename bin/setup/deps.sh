@@ -18,6 +18,7 @@ depends() {
   local current_dotenv_version=$(cat /usr/local/etc/dotenv.version 2>/dev/null || true)
   if [ ! `command -v dotenv` ] || [ "$current_dotenv_version" != "$dotenv_version" ]; then
     download "https://raw.githubusercontent.com/bashup/dotenv/$dotenv_version/dotenv" '/usr/local/bin/dotenv' as_sudo=true force=true
+    chmod +x /usr/local/bin/dotenv
     echo "$dotenv_version" | sudo tee /usr/local/etc/dotenv.version
   fi
 

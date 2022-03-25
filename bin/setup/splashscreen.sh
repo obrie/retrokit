@@ -46,7 +46,7 @@ configure() {
   # Ensure splashscreen doesn't get cut off based on video length
   local duration=$(ffprobe -i "$splashscreen_media_file" -show_entries format=duration -v quiet -of csv="p=0" | grep -oE "^[0-9]+")
   echo "Setting splashscreen duration to $duration seconds"
-  .env -f "$splashscreen_config" set DURATION="\"$duration\""
+  dotenv -f "$splashscreen_config" set DURATION="\"$duration\""
 }
 
 restore() {
