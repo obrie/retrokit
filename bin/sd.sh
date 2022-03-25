@@ -58,6 +58,13 @@ sync_media() {
   [[ $# -ne 2 ]] && usage
   local sync_from_path=${1%/}
   local sync_to_path=${2%/}
+  local delete=false
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  local rsync_args=''
+  if [ "$delete" == 'false' ]; then
+    rsync_args='--delete'
+  fi
 
   # This should be the full list of media paths
   local paths=(
@@ -77,9 +84,9 @@ sync_media() {
   local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
 
   for path in "${paths[@]}"; do
-    if [ -d "$sync_from_path/$path" ]; then
-      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path/$path"
-      sudo rsync -av "$sync_from_path/$path" "$sync_to_path/$path" --delete
+    if [ -d "$sync_from_path$path" ]; then
+      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
+      sudo rsync -av $rsync_args "$sync_from_path$path" "$sync_to_path$path"
     fi
   done
 }
