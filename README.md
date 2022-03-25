@@ -331,11 +331,11 @@ profiles/{profile_name}/{config_file}
 profiles/{profile_name}/{config_dir}/{config_file}
 ```
 
-The directory structure is meant to mirror that of the `config/` folder at the
+The directory structure is meant to mirror that of the folder at the
 root of this project.  For example, suppose you wanted to change which systems
 were installed.  To do so, you would define a `settings.json` override:
 
-profiles/mykit/settings.json:
+profiles/mykit/config/settings.json:
 
 ```json
 {
@@ -398,7 +398,7 @@ These scripts are expected to be located in a `bin/` path under your profile's
 directory with the same structure as retrokit's.  For example, to add a new setup
 script for your profile, you can configure it like so:
 
-profiles/mykit/settings.json:
+profiles/mykit/config/settings.json:
 
 ```json
 {
