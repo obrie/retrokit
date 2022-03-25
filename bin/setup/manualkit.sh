@@ -16,7 +16,7 @@ build() {
   # Copy manualkit to the retropie install path so that nothing depends
   # on retrokit being on the system
   sudo mkdir -p "$install_dir"
-  sudo rsync -av "$bin_dir/manualkit/" "$install_dir/" --delete
+  sudo rsync -av --exclude '__pycache__/' --delete "$bin_dir/manualkit/" "$install_dir/"
 }
 
 configure() {
