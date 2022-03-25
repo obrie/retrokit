@@ -112,6 +112,14 @@ __find_overrides() {
     # Load core/library info for the emulators
     load_emulator_data
 
+    # Load which overrides are available
+    declare -A override_files
+    while read override_file; do
+      local override_name=$(basename "$override_file" ".$extension")
+      override_files["$override_name"]=$override_file
+    done < <(each_path '{system_config_dir}/retroarch' find '{}' -name "*.$extension")
+
+    # Track which playlists we've installed so we don't do it twice
     declare -A installed_playlists
 
     while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title emulator; do
@@ -121,11 +129,14 @@ __find_overrides() {
       # * ROM Name
       # * ROM Disc Name
       # * ROM Title
+      # * ROM Playlist Name
       local override_file=""
       for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$parent_name" "$parent_disc" "$parent_title"; do
-        if any_path_exists "{system_config_dir}/retroarch/$filename.$extension"; then
-          override_file="{system_config_dir}/retroarch/$filename.$extension"
-          break
+        if [ -n "$filename" ]; then
+          override_file=${override_files["$filename"]}
+          if [ -n "$override_file" ]; then
+            break
+          fi
         fi
       done
 
