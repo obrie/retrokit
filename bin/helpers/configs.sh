@@ -123,6 +123,8 @@ env_merge() {
   local target=$2
   
   local as_sudo='false'
+  local overwrite='false'
+  local backup='true'
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
@@ -131,16 +133,22 @@ env_merge() {
     return
   fi
 
-  backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  if [ "$backup" == 'true' ]; then
+    backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  fi
+
+  if [ "$as_sudo" == 'true' ]; then
+    local cmd='sudo'
+  fi
+
+  if [ "$overwrite" == 'true' ]; then
+    $cmd rm -fv "$target"
+  fi
 
   echo "Merging env $source to $target"
   while read source_path; do
     while read -r env_line; do
-      if [ "$as_sudo" == 'true' ]; then
-        sudo bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
-      else
-        .env -f "$target" set $env_line
-      fi
+      $cmd bash -c ". /usr/local/bin/dotenv; .env -f \"$target\" set $env_line"
     done < <(cat "$(conf_prepare "$source_path")" | grep -Ev "^#")
   done < <(each_path "$source")
 }
@@ -152,6 +160,7 @@ ini_merge() {
 
   local space_around_delimiters='true'
   local as_sudo='false'
+  local overwrite='false'
   local backup='true'
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
@@ -167,6 +176,10 @@ ini_merge() {
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
+  fi
+
+  if [ "$overwrite" == 'true' ]; then
+    $cmd rm -fv "$target"
   fi
 
   echo "Merging ini $source to $target"
@@ -199,6 +212,7 @@ json_merge() {
   local target=$2
 
   local as_sudo='false'
+  local overwrite='false'
   local backup='true'
   local restore='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
@@ -214,6 +228,10 @@ json_merge() {
 
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
+  fi
+
+  if [ "$overwrite" == 'true' ]; then
+    $cmd rm -fv "$target"
   fi
 
   echo "Merging json $source to $target"
