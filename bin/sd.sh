@@ -62,7 +62,7 @@ sync_media() {
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   local rsync_args=''
-  if [ "$delete" == 'false' ]; then
+  if [ "$delete" == 'true' ]; then
     rsync_args='--delete'
   fi
 
