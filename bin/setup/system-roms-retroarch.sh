@@ -30,7 +30,7 @@ __configure_retroarch_configs() {
       if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
         local target_file="$rom_dir/$rom_name.cfg"
 
-        ini_merge "$override_file" "$target_file"
+        ini_merge "$override_file" "$target_file" backup=false overwrite=true
         installed_files["$target_file"]=1
       fi
     done < <(echo "$rom_dirs")
@@ -52,7 +52,7 @@ __configure_retroarch_remappings() {
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     mkdir -p "$emulator_remapping_dir"
 
-    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp"
+    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp" backup=false overwrite=true
     installed_files["$emulator_remapping_dir/$rom_name.rmp"]=1
   done < <(__find_overrides 'rmp')
 
@@ -77,13 +77,11 @@ __configure_retroarch_core_options() {
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
 
-    # Back up the existing file
-    local target_path="$emulator_config_dir/$rom_name.opt"
-    backup_and_restore "$target_path"
-
     # Copy over existing core overrides so we don't just get the
     # core defaults
-    touch "$target_path"
+    local target_path="$emulator_config_dir/$rom_name.opt"
+    rm -fv "$target_path"
+    echo "Merging $core_name system overrides to $core_options_path"
     grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
 
     # Merge in game-specific overrides
