@@ -20,8 +20,7 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true},
-    "lr-swanstation": {"core_name": "duckstation", "library_name": "SwanStation", "build": "source"}
+    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
   },
   "cheats": {
     "names": [
