@@ -19,11 +19,13 @@ reconfigure_packages() {
 configure() {
   __restore_config
   ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_path" restore=false
-  ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_path"
+
+  # This is our own custom file, so no need to back up
+  ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_path" backup=false
 }
 
 restore() {
-  restore_file "$retroarch_default_overlay_path" delete_src=true
+  rm -fv "$retroarch_default_overlay_path"
   __restore_config delete_src=true
 }
 
