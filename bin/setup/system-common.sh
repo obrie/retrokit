@@ -179,7 +179,7 @@ get_core_library_names() {
 }
 
 has_emulator() {
-  if [ $(system_setting "(.emulators | keys) + ([.emulators | values[] | .aliases | select(.)] | flatten) | any(. == \"$1\")") == 'true' ]; then
+  if [ $(system_setting "select(.emulators) | (.emulators | keys) + ([.emulators | values[] | .aliases | select(.)] | flatten) | any(. == \"$1\")") == 'true' ]; then
     return 0
   else
     return 1
