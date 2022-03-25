@@ -21,33 +21,39 @@ source "$bin_dir/helpers/profiles.sh"
 source "$bin_dir/helpers/retropie_packages.sh"
 source "$bin_dir/helpers/versions.sh"
 
-# Define package directories
-export cache_dir="$app_dir/cache"
-export config_dir="$app_dir/config"
-export data_dir="$app_dir/data"
-export profiles_dir="$app_dir/profiles"
-export tmp_dir="$app_dir/tmp"
-export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
-trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
+if [ -z "$RETROKIT_HAS_EXPORTS" ]; then
+  # Define package directories
+  export cache_dir="$app_dir/cache"
+  export config_dir="$app_dir/config"
+  export data_dir="$app_dir/data"
+  export profiles_dir="$app_dir/profiles"
+  export tmp_dir="$app_dir/tmp"
+  export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
+  trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
-# Read environment variable overrides.
-# 
-# We always load the root .env first since that may contain the `PROFILES` env override.
-if [ -f "$app_dir/.env" ]; then
-  source "$app_dir/.env"
-fi
-while read env_path; do
-  source "$env_path"
-done < <(each_path '{app_dir}/.env')
+  # Read environment variable overrides.
+  # 
+  # We always load the root .env first since that may contain the `PROFILES` env override.
+  if [ -f "$app_dir/.env" ]; then
+    source "$app_dir/.env"
+  fi
+  while read env_path; do
+    source "$env_path"
+  done < <(each_path '{app_dir}/.env')
 
-# Define settings file
-export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-echo '{}' > "$settings_file"
-if [ `command -v jq` ]; then
-  json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
-else
-  # We haven't installed dependencies yet -- just use the default settings for now
-  cp "$config_dir/settings.json" "$settings_file"
+  # Define settings file
+  export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  echo '{}' > "$settings_file"
+  if [ `command -v jq` ]; then
+    json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
+  else
+    # We haven't installed dependencies yet -- just use the default settings for now
+    cp "$config_dir/settings.json" "$settings_file"
+  fi
+
+  # Mark exports as being complete so that subsequent setup module executions
+  # don't need to re-evaluate all of this
+  export RETROKIT_HAS_EXPORTS=true
 fi
 
 ##############
