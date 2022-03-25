@@ -52,7 +52,10 @@ each_path() {
         continue
       fi
 
-      local profile_subdir="$profile_dir/$sub_dir"
+      local profile_subdir=$profile_dir
+      if [ -n "$sub_dir" ]; then
+        profile_subdir="$profile_subdir/$sub_dir"
+      fi
       local rendered_path=${path_template//\{$template_name\}/$profile_subdir}
 
       # Check that the path exists before printing it for the caller
