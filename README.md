@@ -857,6 +857,7 @@ Additional files:
 
 The following emulators / cores are built from source:
 
+* lr-swanstation (unofficial, no binaries available yet)
 * lr-yabasanshiro (unofficial, no binaries available yet)
 
 ### Performance
