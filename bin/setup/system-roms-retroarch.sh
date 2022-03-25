@@ -81,7 +81,7 @@ __configure_retroarch_core_options() {
     # core defaults
     local target_path="$emulator_config_dir/$rom_name.opt"
     rm -fv "$target_path"
-    echo "Merging $core_name system overrides to $core_options_path"
+    echo "Merging $core_name system overrides to $target_path"
     grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
 
     # Merge in game-specific overrides
