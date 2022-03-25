@@ -235,20 +235,21 @@ json_merge() {
   fi
 
   echo "Merging json $source to $target"
-  local new_target="$(mktemp -p "$tmp_ephemeral_dir")"
+  local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
   if [ -f "$target" ]; then
-    cp "$target" "$new_target"
+    cp "$target" "$staging_path"
   else
-    echo '{}' > "$new_target"
+    echo '{}' > "$staging_path"
   fi
 
+  local merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
+
   while read source_path; do
-    local tmp_merged="$(mktemp -p "$tmp_ephemeral_dir")"
-    $cmd jq -s '.[0] * .[1]' "$new_target" "$(conf_prepare "$source_path")" > "$tmp_merged"
-    mv "$tmp_merged" "$new_target"
+    $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path")" > "$merged_path"
+    mv "$merged_path" "$staging_path"
   done < <(each_path "$source")
 
-  $cmd cp "$new_target" "$target"
+  $cmd mv "$staging_path" "$target"
 }
 
 # Copies a file, backing up the target and substituting environment variables
