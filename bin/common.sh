@@ -28,30 +28,27 @@ export data_dir="$app_dir/data"
 export profiles_dir="$app_dir/profiles"
 export tmp_dir="$app_dir/tmp"
 export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
-
-# Define settings file
-export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-echo '{}' > "$settings_file"
-
-# Clean up the ephemeral directory
 trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
-# Optional env for secrets
+# Read environment variable overrides.
+# 
+# We always load the root .env first since that may contain the `PROFILES` env override.
 if [ -f "$app_dir/.env" ]; then
   source "$app_dir/.env"
 fi
 while read env_path; do
   source "$env_path"
-done < <(each_path '{config_dir}/.env')
+done < <(each_path '{app_dir}/.env')
 
-__setup_configs() {
-  if [ `command -v jq` ]; then
-    json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
-  else
-    # We haven't installed dependencies yet -- just use the default settings for now
-    cp "$config_dir/settings.json" "$settings_file"
-  fi
-}
+# Define settings file
+export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+echo '{}' > "$settings_file"
+if [ `command -v jq` ]; then
+  json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
+else
+  # We haven't installed dependencies yet -- just use the default settings for now
+  cp "$config_dir/settings.json" "$settings_file"
+fi
 
 ##############
 # Settings
@@ -157,6 +154,3 @@ after_retropie_reconfigure() {
     configure
   fi
 }
-
-# Setup configuration files
-__setup_configs

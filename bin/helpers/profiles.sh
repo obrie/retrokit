@@ -2,9 +2,6 @@
 # Profile config helpers
 ##############
 
-# Read list of profiles
-IFS=', ' read -r -a profiles <<< "$PROFILES"
-
 # Determines whether any path exists from the given template.
 # 
 # See each_path for more information.
@@ -29,25 +26,29 @@ first_path() {
 each_path() {
   local path_template=$1
 
+  # Read list of profiles
+  local profiles
+  IFS=', ' read -r -a profiles <<< "$PROFILES"
+
   # Determine which directory we're dealing with
   local template_name
   if [[ "$path_template" == {config_dir}* ]]; then
     template_name='config_dir'
-    default_load_path='../config'
-    sub_dir=''
+    sub_dir='config'
   elif [[ "$path_template" == {system_config_dir}* ]]; then
     template_name='system_config_dir'
-    default_load_path='../config'
-    sub_dir="systems/$system"
+    sub_dir="config/systems/$system"
   elif [[ "$path_template" == {bin_dir}* ]]; then
     template_name='bin_dir'
-    default_load_path='..'
     sub_dir='bin'
+  elif [[ "$path_template" == {app_dir}* ]]; then
+    template_name='app_dir'
+    sub_dir=''
   fi
 
   if [ -n "$template_name" ]; then
     # Find matching paths within each profile
-    for profile in "$default_load_path" "${profiles[@]}"; do
+    for profile in '..' "${profiles[@]}"; do
       # Make sure we're dealing with a valid profile
       local profile_dir="$profiles_dir/$profile"
       if [ ! -d "$profile_dir" ]; then
