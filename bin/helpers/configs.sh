@@ -135,6 +135,8 @@ env_merge() {
 
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  else
+    $cmd mkdir -p "$(dirname "$target")"
   fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -172,6 +174,8 @@ ini_merge() {
 
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  else
+    $cmd mkdir -p "$(dirname "$target")"
   fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -224,6 +228,8 @@ json_merge() {
 
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
+  else
+    $cmd mkdir -p "$(dirname "$target")"
   fi
 
   if [ "$as_sudo" == 'true' ]; then
@@ -271,6 +277,8 @@ file_cp() {
 
   if [ "$backup" == 'true' ]; then
     backup_file "$target" as_sudo="$as_sudo"
+  else
+    $cmd mkdir -p "$(dirname "$target")"
   fi
 
   if [ "$as_sudo" == 'true' ]; then
