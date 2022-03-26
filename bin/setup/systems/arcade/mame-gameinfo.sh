@@ -26,7 +26,7 @@ __build_mame2016() {
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
-      cp -v "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/"
+      file_cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" backup=false envsubst=false
     else
       echo "Already installed gameinit.dat (lr-mame2016)"
     fi
@@ -37,14 +37,14 @@ __build_mame() {
   if has_emulator 'lr-mame'; then
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_command_dat
-      cp -v "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/"
+      file_cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/command.dat" backup=false envsubst=false
     else
       echo "Already installed command.dat (lr-mame)"
     fi
 
     if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
-      cp -v "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/"
+      file_cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" backup=false envsubst=false
     else
       echo "Already installed gameinit.dat (lr-mame)"
     fi
