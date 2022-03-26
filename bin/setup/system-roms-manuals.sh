@@ -116,12 +116,12 @@ configure() {
     if [ -z "$playlist_name" ]; then
       # Install the pdf to location expected for this specific rom
       mkdir -p "$(dirname "$install_path")"
-      ln -fsv "$postprocess_path" "$install_path"
+      ln_if_different "$postprocess_path" "$install_path"
       installed_files[$install_path]=1
     elif [ ! "${installed_playlists[$playlist_name]}" ]; then
       # Install a playlist symlink
       mkdir -p "$(dirname "$playlist_install_path")"
-      ln -fsv "$postprocess_path" "$playlist_install_path"
+      ln_if_different "$postprocess_path" "$playlist_install_path"
       installed_files[$playlist_install_path]=1
       installed_playlists[$playlist_name]=1
     fi
