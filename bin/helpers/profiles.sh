@@ -14,7 +14,9 @@ any_path_exists() {
 # See each_path for more information.
 first_path() {
   local path=$(each_path "$1" | tail -n 1)
-  process_path "$path" "${@:2}"
+  if [ -e "$path" ]; then
+    process_path "$path" "${@:2}"
+  fi
 }
 
 # Finds all paths matching a certain template and executes the provided command
