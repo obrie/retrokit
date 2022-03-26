@@ -63,7 +63,13 @@ run() {
     print_heading "Running $action for $setupmodule"
   fi
 
-  first_path "{bin_dir}/setup/$setupmodule.sh" '{}' "$action" "${@:3}"
+  local script_path=$(first_path "{bin_dir}/setup/$setupmodule.sh")
+  if [ -z "$script_path" ]; then
+    echo "Setup module not found: $setupmodule"
+    return 1
+  fi
+
+  "$script_path" '{}' "$action" "${@:3}"
 }
 
 main() {
