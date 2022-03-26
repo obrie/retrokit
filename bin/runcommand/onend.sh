@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Clear the screen as quickly as we can
-dd if=/dev/zero of=/dev/fb0 &>/dev/null
-
-# Restore text mode for the console
-dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-python "$dir/runcommand-tty.py" /dev/tty text
-
-# Kill off manualkit
-sudo pkill -f manualkit/cli.py
+if [ -d /opt/retropie/configs/all/runcommand.d ]; then
+  for runcommand_app in /opt/retropie/configs/all/runcommand.d/*; do
+    if [ -f "$runcommand_app/onend.sh" ]; then
+      "$runcommand_app/onend.sh" "${@}"
+    fi
+  done
+fi

@@ -6,10 +6,21 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='runcommand'
 setup_module_desc='runcommand hooks and configuration'
 
+runcommand_apps_path='/opt/retropie/configs/all/runcommand.d'
+
 build() {
-  cp -v "$app_dir/bin/runcommand/onstart.sh" /opt/retropie/configs/all/runcommand-onstart.sh
-  cp -v "$app_dir/bin/runcommand/onend.sh" /opt/retropie/configs/all/runcommand-onend.sh
-  cp -v "$app_dir/bin/runcommand/tty.py" /opt/retropie/configs/all/runcommand-tty.py
+  file_cp '{bin_dir}/runcommand/onstart.sh' /opt/retropie/configs/all/runcommand-onstart.sh backup=false envsubst=false
+  file_cp '{bin_dir}/runcommand/onend.sh' /opt/retropie/configs/all/runcommand-onend.sh backup=false envsubst=false
+
+  # Copy enabled runcommand daemons
+  while read runcommand_app; do
+    # Reset the app's directory
+    mkdir -p "$runcommand_apps_path/$runcommand_app"
+    rm -rf "$runcommand_apps_path/$runcommand_app/"*
+
+    # Copy over the app's files
+    each_path "{bin_dir}/runcommand/$runcommand_app" cp -Rv '{}' "$runcommand_apps_path/"
+  done < <(setting '.runcommand .apps[]')
 }
 
 configure() {
@@ -21,10 +32,10 @@ restore() {
 }
 
 remove() {
-  rm -fv \
+  rm -frv \
     /opt/retropie/configs/all/runcommand-onstart.sh \
     /opt/retropie/configs/all/runcommand-onend.sh \
-    /opt/retropie/configs/all/runcommand-tty.py
+    /opt/retropie/configs/all/runcommand.d
 }
 
 setup "${@}"

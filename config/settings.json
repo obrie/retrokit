@@ -108,6 +108,12 @@
       "enabled": false
     }
   },
+  "runcommand": {
+    "apps": [
+      "launchimages",
+      "manualkit"
+    ]
+  },
   "systems": [
     "arcade",
     "atari2600",
