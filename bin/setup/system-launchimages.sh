@@ -29,7 +29,7 @@ configure() {
   download "$(render_template "$launch_images_base_url" platform="$platform")" "$download_path"
 
   # Promote it to the primary launch screen for the system
-  ln -fsv "$download_path" "$retropie_system_config_dir/launching-extended.png"
+  ln_if_different "$download_path" "$retropie_system_config_dir/launching-extended.png"
 }
 
 restore() {

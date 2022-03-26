@@ -25,7 +25,7 @@ build() {
 
 __build_mame2003_plus() {
   if has_emulator 'lr-mame2003-plus'; then
-    ln -fsv '/opt/retropie/libretrocores/lr-mame2003-plus/metadata/history.dat' "$HOME/RetroPie/BIOS/mame2003-plus/history.dat"
+    ln_if_different '/opt/retropie/libretrocores/lr-mame2003-plus/metadata/history.dat' "$HOME/RetroPie/BIOS/mame2003-plus/history.dat"
   fi
 }
 

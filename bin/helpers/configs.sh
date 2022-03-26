@@ -317,17 +317,31 @@ file_ln() {
     backup_file "$target" as_sudo="$as_sudo"
   fi
 
+  local prioritized_source=$(first_path "$source")
+  ln_if_different "$prioritized_path" "$target" as_sudo="$as_sudo"
+}
+
+# Symlinks to the given target if, and only if, the existing link is *different
+# than the target (to avoid unnecessary filesystem modifications)
+ln_if_different() {
+  local target=$1
+  local link_name=$2
+
+  local as_sudo='false'
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
   if [ "$as_sudo" == 'true' ]; then
     local cmd='sudo'
   fi
 
-  local prioritized_source=$(first_path "$source")
-  echo "Linking file $prioritized_source as $target"
-
-  # Remove any existing file
-  $cmd rm -f "$target"
-  
-  $cmd ln -fs "$prioritized_source" "$target"
+  # Replace the symlink if it's changed
+  if [ "$(readlink "$link_name")" != "$target" ]; then
+    echo "Linking file $target as $link_name"
+    $cmd rm -f "$link_name"
+    $cmd ln -fs "$target" "$link_name"
+  else
+    echo "Skipping $target (already symlinked as $link_name)"
+  fi
 }
 
 # Renders a template with the given variables to substitute.

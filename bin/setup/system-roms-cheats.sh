@@ -55,11 +55,11 @@ configure() {
     if [ -n "$source_cheat_path" ]; then
       if [ -z "$playlist_name" ]; then
         # Link the cheat for single-disc games
-        ln -fsv "$source_cheat_path" "$target_cheats_dir/$rom_name.cht"
+        ln_if_different "$source_cheat_path" "$target_cheats_dir/$rom_name.cht"
         installed_files["$target_cheats_dir/$rom_name.cht"]=1
       elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
         # Link the cheat for the playlist
-        ln -fsv "$source_cheat_path" "$target_cheats_dir/$playlist_name.cht"
+        ln_if_different "$source_cheat_path" "$target_cheats_dir/$playlist_name.cht"
         installed_playlists["$playlist_name"]=1
         installed_files["$target_cheats_dir/$playlist_name.cht"]=1
       fi
