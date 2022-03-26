@@ -67,6 +67,7 @@ sync_media() {
   fi
 
   # This should be the full list of media paths
+  # TODO: Double check ownership is set correctly in all parent folders
   local paths=(
     /home/pi/RetroPie/BIOS/fbneo/samples/
     /home/pi/RetroPie/BIOS/mame/samples/
