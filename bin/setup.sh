@@ -69,7 +69,7 @@ run() {
     return 1
   fi
 
-  "$script_path" '{}' "$action" "${@:3}"
+  "$script_path" "$action" "${@:3}"
 }
 
 main() {
