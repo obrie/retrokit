@@ -7,10 +7,14 @@ setup_module_id='wifi'
 setup_module_desc='Wifi authentication configuration'
 
 configure() {
-  if [ -n "$WIFI_SSID" ]; then
+  if any_path_exists '{config_dir}/wifi/wpa_supplicant.conf'; then
     file_cp '{config_dir}/wifi/wpa_supplicant.conf' '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
-  else
-    echo 'Missing wifi auth (skipping)'
+
+    if [ -n "$WIFI_SSID" ]; then
+      each_path '{config_dir}/wifi/wpa_supplicant.auth.conf' cat '{}' | tee -a '/etc/wpa_supplicant/wpa_supplicant.conf' >/dev/null
+    else
+      echo 'Missing wifi auth (skipping)'
+    fi
   fi
 }
 
