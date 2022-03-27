@@ -118,7 +118,7 @@ __cleanup_unused_collections() {
     # Remove this system from the given collection
     local collection_path="$target_collections_dir/$collection_name.cfg"
     if [ -f "$collection_path" ]; then
-      sed -i "/\/$system\//d" "$target_collection_path"
+      sed -i "/\/$system\//d" "$collection_path"
     fi
 
     # Delete the collection if it's now empty
