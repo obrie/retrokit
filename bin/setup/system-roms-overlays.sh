@@ -134,7 +134,7 @@ __load_lightgun_titles() {
 
   while read -r rom_title; do
     lightgun_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-lightguns.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
+  done < <(each_path '{config_dir}/emulationstation/collections/custom-Lightguns.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
 # Download and install an overlay from the given url

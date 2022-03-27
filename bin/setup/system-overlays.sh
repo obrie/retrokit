@@ -47,7 +47,7 @@ __enable_lightgun_borders() {
 
 # Does this system have lightgun games to play?
 __has_lightgun_titles() {
-  each_path '{config_dir}/emulationstation/collections/custom-lightguns.tsv' cat '{}' | grep -Eq "^$system"$'\t'
+  each_path '{config_dir}/emulationstation/collections/custom-Lightguns.tsv' cat '{}' | grep -Eq "^$system"$'\t'
 }
 
 restore() {
