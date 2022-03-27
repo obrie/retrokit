@@ -22,10 +22,10 @@ configure() {
     while read menu; do
       if [ "${enabled_menus["$menu"]}" ]; then
         # Ensure we've removed any previously added <hidden> tag
-        xmlstarlet ed --inplace -d "/gameList/game[name=\"$name\"]/hidden" "$gamelist_file"
+        xmlstarlet ed --inplace -d "/gameList/game[name=\"$menu\"]/hidden" "$gamelist_file"
       else
         # Add the <hidden> tag (as long as it's not there)
-        xmlstarlet ed --inplace -s "/gameList/game[name=\"$name\"][1][not(hidden)]" -t elem -n 'hidden' -v 'true' "$gamelist_file"
+        xmlstarlet ed --inplace -s "/gameList/game[name=\"$menu\"][1][not(hidden)]" -t elem -n 'hidden' -v 'true' "$gamelist_file"
       fi
     done < <(xmlstarlet sel -t -v '/gameList/game/name' "$gamelist_file")
   else
