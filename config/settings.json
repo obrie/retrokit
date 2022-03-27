@@ -77,7 +77,12 @@
     }
   },
   "retropie": {
-    "show_menu": false
+    "show_menu": true,
+    "menus": [
+      "Bluetooth",
+      "RetroArch Net Play",
+      "WiFi"
+    ]
   },
   "hardware": {
     "case": {
@@ -168,6 +173,7 @@
     "cheats",
     "manualkit",
     "runcommand",
+    "retropie-menus",
     "retropie-scriptmodules",
     "emulationstation-settings",
     "romkit",
