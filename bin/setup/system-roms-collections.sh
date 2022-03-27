@@ -9,11 +9,14 @@ setup_module_desc='Creates EmulationStation custom collections'
 target_collections_dir="$HOME/.emulationstation/collections"
 rom_dirs=($(system_setting 'select(.roms) | .roms.dirs[] | .path'))
 
+declare -A installed_collections
+
 configure() {
   mkdir -pv "$target_collections_dir"
 
   __create_custom_collections
   __create_romkit_collections
+  __cleanup_unused_collections
 }
 
 # Creates collections defined by custom, pre-defined emulationstation file
@@ -41,6 +44,10 @@ __create_collection() {
   if [ -f "$target_collection_path" ]; then
     sed -i "/\/$system\//d" "$target_collection_path"
   fi
+
+  # Mark this collection as being managed by retrokit
+  installed_collections["$collection_name"]=1
+  touch "$target_collection_path.rk-src"
 
   # Track which titles are in this collection
   declare -A collection_titles
@@ -96,10 +103,33 @@ __find_in_directories() {
   done
 }
 
-restore() {
-  if [ -d "$target_collections_dir" ]; then
-    find "$target_collections_dir" -name '*.cfg' -exec rm -fv '{}' +
+# Clean collections we didn't install to
+__cleanup_unused_collections() {
+  if [ ! -d "$target_collections_dir" ]; then
+    return
   fi
+
+  while read collection_ref_path; do
+    local collection_name=$(basename "$collection_ref_path" .cfg.rk-src)
+    if [ "${installed_collections["$collection_name"]}" ]; then
+      continue
+    fi
+
+    # Remove this system from the given collection
+    local collection_path="$target_collections_dir/$collection_name.cfg"
+    if [ -f "$collection_path" ]; then
+      sed -i "/\/$system\//d" "$target_collection_path"
+    fi
+
+    # Delete the collection if it's now empty
+    if [ ! -s "$collection_path" ]; then
+      rm -fv "$collection_path" "$collection_path.rk-src"
+    fi
+  done < <(find "$target_collections_dir" -name '*.cfg.rk-src')
+}
+
+restore() {
+  __cleanup_unused_collections
 }
 
 setup "$1" "${@:3}"
