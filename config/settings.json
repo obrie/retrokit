@@ -5,8 +5,7 @@
       {
         "name": "pixel-metadata",
         "repo": "ehettervik",
-        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{platform}/launching.png",
-        "#launch_images_base_url": "https://raw.githubusercontent.com/ehettervik/es-runcommand-splash/master/{platform}/launching.png"
+        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/16x9-Launching_ComicRip/{platform}/launching.png"
       }
     ],
     "launch_theme": "pixel-metadata"
