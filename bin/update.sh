@@ -27,7 +27,7 @@ update_retropie() {
 
 # Update RetroPie-Setup
 update_retropie_setup() {
-  pushd $HOME/RetroPie-Setup
+  pushd "$HOME/RetroPie-Setup"
   git pull --ff-only
   popd
   sudo $HOME/RetroPie-Setup/retropie_packages.sh setup post_update
@@ -45,6 +45,33 @@ update_retropie_packages() {
       sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
     done
   fi
+}
+
+# Update retrokit and profiles
+update_retrokit() {
+  update_retrokit_setup
+  update_retrokit_profiles
+}
+
+# Update the primary retrokit git repo
+update_retrokit_setup() {
+  pushd "$app_dir" >/dev/null
+  git pull --ff-only
+  popd >/dev/null
+}
+
+# Update all third-party profiles managed in git
+update_retrokit_profiles() {
+  while read profile_dir; do
+    if [ -d "$profile_dir/.git" ]; then
+      local profile_name=$(basename "$profile_dir")
+
+      echo "Updating retrokit profile: $profile_name"
+      pushd "$profile_dir" >/dev/null
+      git pull --ff-only
+      popd >/dev/null
+    fi
+  done < <(find "$profiles_dir" -mindepth 1 -maxdepth 1 -type d)
 }
 
 # Update emulator configurations based on latest package updates
