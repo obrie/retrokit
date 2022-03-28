@@ -239,7 +239,10 @@ restore() {
 
 # Reset inputs
 __restore_inputs() {
-  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
+  local has_configured_inputs=$(setting '.hardware.controllers.inputs | length > 0')
+  if [ "$has_configured_inputs" == 'true' ]; then
+    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
+  fi
 }
 
 __restore_autoconf() {
