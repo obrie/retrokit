@@ -1,9 +1,6 @@
 profiles/*
-profiles/mykit/*
 !profiles/manualkit-compressed
 !profiles/manualkit-original
-!profiles/mykit/
-!profiles/mykit/.gitkeep
 tmp/*
 __pycache__
 /.env
