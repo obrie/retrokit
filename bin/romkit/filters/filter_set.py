@@ -18,7 +18,9 @@ class FilterSet:
     def from_json(cls, json: dict, config: dict, supported_filters: list, log: bool = True) -> FilterSet:
         filter_set = cls()
 
-        for filter_cls in supported_filters:
+        enabled_filters = json.get('enabled', supported_filters)
+
+        for filter_cls in enabled_filters:
             allowlist = json.get(filter_cls.name)
             if allowlist is not None:
                 filter_set.append(filter_cls(set(allowlist), config=config, log=log))
