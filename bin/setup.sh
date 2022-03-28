@@ -82,7 +82,7 @@ main() {
     setup_all "$action"
   fi
 
-  echo 'Done!'
+  >&2 echo 'Done!'
 }
 
 if [[ $# -lt 1 ]]; then
