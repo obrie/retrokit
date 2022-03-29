@@ -12,6 +12,28 @@ configure() {
   stop_emulationstation
   backup_and_restore "$gamelist_file"
 
+  __install_retrokit
+  __hide_menus
+}
+
+__install_retrokit() {
+    local rpdir="$home/RetroPie/retropiemenu"
+    local file='retrokit'
+    local name='Retrokit'
+    local desc='Manages your retrokit installation'
+    local image="$home/RetroPie/retropiemenu/icons/${files[i]}.png"
+
+    touch "$rpdir/$file.rp"
+
+    local function
+    for function in $(compgen -A function _add_rom_); do
+        "$function" "retropie" "RetroPie" "$file.rp" "$name" "$desc" "$image"
+    done
+
+    configure_retropie_package "$package"
+}
+
+__hide_menus() {
   # Look up which menus we've enabled
   declare -A enabled_menus
   while read menu; do
