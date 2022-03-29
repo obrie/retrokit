@@ -38,23 +38,19 @@ vacuum_all() {
 }
 
 vacuum_roms() {
-  local system=$1
-  "$bin_dir/setup.sh" vacuum system-roms-download "$system"
+  "$bin_dir/setup.sh" vacuum system-roms-download "${@}"
 }
 
 vacuum_manuals() {
-  local system=$1
-  "$bin_dir/setup.sh" vacuum system-roms-manuals "$system"
+  "$bin_dir/setup.sh" vacuum system-roms-manuals "${@}"
 }
 
 vacuum_media() {
-  local system=$1
-  "$bin_dir/setup.sh" vacuum system-roms-scrape "$system"
+  "$bin_dir/setup.sh" vacuum system-roms-scrape "${@}"
 }
 
 vacuum_overlays() {
-  local system=$1
-  "$bin_dir/setup.sh" vacuum system-roms-overlays "$system"
+  "$bin_dir/setup.sh" vacuum system-roms-overlays "${@}"
 }
 
 if [[ $# -lt 1 ]]; then
