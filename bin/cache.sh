@@ -39,8 +39,15 @@ main() {
 }
 
 delete() {
-  # Remove all temporary cached data
-  rm -rfv $tmp_dir/*
+  local system=$1
+
+  local delete_path=$tmp_dir
+  if [ -n "$system" ] && [ "$system" != 'all' ]; then
+    delete_path="$delete_path/$system"
+  fi
+
+  # Remove cached data
+  rm -rfv "$delete_path"/*
 }
 
 sync_system_nointro_dats() {
