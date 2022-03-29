@@ -37,6 +37,7 @@ if [ -z "$RETROKIT_HAS_EXPORTS" ]; then
   if [ -f "$app_dir/.env" ]; then
     source "$app_dir/.env"
   fi
+  init_profiles
   while read env_path; do
     source "$env_path"
   done < <(each_path '{app_dir}/.env')
@@ -54,6 +55,8 @@ if [ -z "$RETROKIT_HAS_EXPORTS" ]; then
   # Mark exports as being complete so that subsequent setup module executions
   # don't need to re-evaluate all of this
   export RETROKIT_HAS_EXPORTS=true
+else
+  init_profiles
 fi
 
 ##############
