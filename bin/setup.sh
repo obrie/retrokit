@@ -25,8 +25,10 @@ setup_all() {
 
     # Then install the remaining modules
     modules=$(setting '.setup[] | select(. != "deps" and . != "wifi")')
-  else
+  elif [[ "$action" =~ ^(uninstall|restore|remove) ]]; then
     modules=$(setting '.setup | reverse[]')
+  else
+    modules=$(setting '.setup[]')
   fi
 
   while read setupmodule; do
@@ -76,10 +78,10 @@ main() {
   local action="$1"
   local setupmodule="$2"
 
-  if [ -n "$setupmodule" ]; then
-    setup "$action" "$setupmodule" "${@:3}"
-  else
+  if [ -z "$setupmodule" ] || [ "$setupmodule" == 'all' ]; then
     setup_all "$action"
+  else
+    setup "$action" "$setupmodule" "${@:3}"
   fi
 
   >&2 echo 'Done!'
