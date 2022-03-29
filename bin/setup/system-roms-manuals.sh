@@ -764,7 +764,7 @@ vacuum() {
 
   # Build the list of files we should *not* delete
   declare -A files_to_keep
-  while IFS=$'\t' read -ra manual_data; do
+  while IFS=» read -ra manual_data; do
     declare -A manual
     __build_manual manual "${manual_data[@]}"
 
