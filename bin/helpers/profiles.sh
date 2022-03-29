@@ -2,6 +2,28 @@
 # Profile config helpers
 ##############
 
+# Local cache of profile info
+declare -a __profiles=()
+declare -a __profile_dirs=()
+
+# Loads and caches the current profiles being used
+init_profiles() {
+  # Read list of profiles
+  IFS=',' read -r -a __profiles <<< "$PROFILES"
+
+  for profile in '..' "${__profiles[@]}"; do
+    local profile_dir="$profiles_dir/$profile"
+
+    # Make sure we're dealing with a valid profile
+    if [ -d "$profile_dir" ]; then
+      local full_profile_dir=$(realpath "$profile_dir")
+      __profile_dirs+=("$full_profile_dir")
+    else
+      >&2 echo "[INFO] Profile not found: $profile"
+    fi
+  done
+}
+
 # Determines whether any path exists from the given template.
 # 
 # See each_path for more information.
@@ -19,6 +41,11 @@ first_path() {
   fi
 }
 
+# List the current profile directories being processed
+list_profile_dirs() {
+  printf "%s\n" "${__profile_dirs[@]}"
+}
+
 # Finds all paths matching a certain template and executes the provided command
 # by susbtituting {} within that template, e.g.
 # 
@@ -27,10 +54,6 @@ first_path() {
 # * each_path '{system_config_dir}/settings.json' cat '{}'
 each_path() {
   local path_template=$1
-
-  # Read list of profiles
-  local profiles
-  IFS=', ' read -r -a profiles <<< "$PROFILES"
 
   # Determine which directory we're dealing with
   local template_name
@@ -49,15 +72,8 @@ each_path() {
   fi
 
   if [ -n "$template_name" ]; then
-    # Find matching paths within each profile
-    for profile in '..' "${profiles[@]}"; do
-      # Make sure we're dealing with a valid profile
-      local profile_dir="$profiles_dir/$profile"
-      if [ ! -d "$profile_dir" ]; then
-        >&2 echo "[WARN] Cannot find profile: $profile"
-        continue
-      fi
-
+    # Find matching paths within each profile directory
+    for profile_dir in "${__profile_dirs[@]}"; do
       local profile_subdir=$profile_dir
       if [ -n "$sub_dir" ]; then
         profile_subdir="$profile_subdir/$sub_dir"
@@ -66,8 +82,7 @@ each_path() {
 
       # Check that the path exists before printing it for the caller
       if [ -e "$rendered_path" ]; then
-        local full_path=$(realpath "$rendered_path")
-        process_path "$full_path" "${@:2}"
+        process_path "$rendered_path" "${@:2}"
       fi
     done
   elif [ -f "$path_template" ]; then
