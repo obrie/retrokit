@@ -144,7 +144,7 @@ function _gui_setup_action_retrokit() {
 
             clear
 
-            _run_retrokit "$home/retrokit/bin/setup.sh" "$action" "${@}"
+            _run_and_show_retrokit "$home/retrokit/bin/setup.sh" "$action" "${@}"
         else
             break
         fi
@@ -174,7 +174,7 @@ function _gui_update_retrokit() {
 
             clear
 
-            _run_retrokit "$home/retrokit/bin/update.sh" "$choice"
+            _run_and_show_retrokit "$home/retrokit/bin/update.sh" "$choice"
         else
             break
         fi
@@ -208,7 +208,7 @@ function _gui_cache_run_retrokit() {
 
     clear
 
-    _run_retrokit "$home/retrokit/bin/cache.sh" "${@}"
+    _run_and_show_retrokit "$home/retrokit/bin/cache.sh" "${@}"
 }
 
 # Vacuum menu
@@ -255,6 +255,7 @@ function _gui_vacuum_run_retrokit() {
     clear
 }
 
+# Edit menu
 function _gui_edit_retrokit() {
     while true; do
         local cmd=(dialog --colors --backtitle "$__backtitle" --cancel-label "Back" --menu "Edit profiles" 22 85 16)
@@ -279,6 +280,7 @@ function _gui_edit_retrokit() {
     done
 }
 
+# Edit file selection
 function _gui_edit_file_retrokit() {
     local profile=$1
 
