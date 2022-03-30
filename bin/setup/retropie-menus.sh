@@ -8,29 +8,20 @@ setup_module_desc='RetroPie menu visibility configuration'
 
 gamelist_file="$HOME/.emulationstation/gamelists/retropie/gamelist.xml"
 
+build() {
+  install_retropie_package 'supplementary' 'retrokit' 'binary'
+}
+
 configure() {
   stop_emulationstation
-  backup_and_restore "$gamelist_file"
+  backup_file "$gamelist_file"
 
-  __install_retrokit
+  __reconfigure_retrokit
   __hide_menus
 }
 
-__install_retrokit() {
-    local rpdir="$home/RetroPie/retropiemenu"
-    local file='retrokit'
-    local name='Retrokit'
-    local desc='Manages your retrokit installation'
-    local image="$home/RetroPie/retropiemenu/icons/${files[i]}.png"
-
-    touch "$rpdir/$file.rp"
-
-    local function
-    for function in $(compgen -A function _add_rom_); do
-        "$function" "retropie" "RetroPie" "$file.rp" "$name" "$desc" "$image"
-    done
-
-    configure_retropie_package "$package"
+__reconfigure_retrokit() {
+  configure_retropie_package 'retrokit'
 }
 
 __hide_menus() {
@@ -57,7 +48,12 @@ __hide_menus() {
 }
 
 restore() {
-  restore_file "$gamelist_file" delete_src=true
+  # Revert "hide" flag
+  xmlstarlet ed --inplace -d '/gameList/game/hidden' "$gamelist_file"
+}
+
+remove() {
+  uninstall_retropie_package 'retrokit'
 }
 
 setup "${@}"

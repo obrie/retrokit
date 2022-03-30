@@ -9,17 +9,24 @@ function deps_retrokit() {
     aptInstall jq
 }
 
+function install_bin_retrokit() {
+    return
+}
+
 function configure_retrokit() {
+    [[ "$md_mode" == "remove" ]] && return
+
     # Copy menu icon
     local rpdir="$home/RetroPie/retropiemenu"
     cp -Rv "$md_data/icon.png" "$rpdir/icons/retrokit.png"
 
-    local file='retrokit'
-    local name='Retrokit'
-    local desc='Manages your retrokit installation'
+    local file="retrokit"
+    local name="Retrokit"
+    local desc="Manages your retrokit installation"
     local image="$home/RetroPie/retropiemenu/icons/retrokit.png"
 
     touch "$rpdir/$file.rp"
+    chown $user:$user "$rpdir/$file.rp"
 
     # Add retrokit to the retropie system
     local function
@@ -28,12 +35,15 @@ function configure_retrokit() {
     done
 }
 
-function __get_settings_retrokit() {
-    if [ -z "$__settings_retrokit" ]; then
-        __settings_retrokit=$(_run_retrokit "$home/retrokit/bin/setup.sh" show_retrokit_settings about 2>/dev/null)
-    fi
+function remove_retrokit() {
+    rm -fv \
+        "$home/RetroPie/retropiemenu/retrokit.rp" \
+        "$home/RetroPie/retropiemenu/icons/retrokit.png"
 
-    echo "$__settings_retrokit"
+    # Remove menu item
+    if [ -f "$home/.emulationstation/gamelists/retropie/gamelist.xml" ]; then
+        xmlstarlet ed --inplace -d '/gameList/game[name="Retrokit"]' "$home/.emulationstation/gamelists/retropie/gamelist.xml"
+    fi
 }
 
 # Main menu
@@ -355,4 +365,12 @@ function _run_and_show_retrokit() {
 
 function _run_retrokit() {
     sudo -u pi "${@}"
+}
+
+function __get_settings_retrokit() {
+    if [ -z "$__settings_retrokit" ]; then
+        __settings_retrokit=$(_run_retrokit "$home/retrokit/bin/setup.sh" show_retrokit_settings about 2>/dev/null)
+    fi
+
+    echo "$__settings_retrokit"
 }
