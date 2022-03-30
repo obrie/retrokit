@@ -42,6 +42,11 @@ first_path() {
 }
 
 # List the current profile directories being processed
+list_profiles() {
+  printf "%s\n" "${__profiles[@]}"
+}
+
+# List the current profile directories being processed
 list_profile_dirs() {
   printf "%s\n" "${__profile_dirs[@]}"
 }

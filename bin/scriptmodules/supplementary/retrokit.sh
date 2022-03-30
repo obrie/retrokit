@@ -257,14 +257,41 @@ function _gui_vacuum_run_retrokit() {
 
 function _gui_edit_retrokit() {
     while true; do
-        local cmd=(dialog --colors --backtitle "$__backtitle" --cancel-label "Back" --menu "Edit configurations" 22 85 16)
+        local cmd=(dialog --colors --backtitle "$__backtitle" --cancel-label "Back" --menu "Edit profiles" 22 85 16)
         local options=(
-            0 ".env"
-            1 "config/settings.json"
+            0 "default"
         )
 
         # Add system settings
-        local index=2
+        local index=1
+        while read profile; do
+            options+=($index "$profile")
+            index=$((index+1))
+        done < <(_run_retrokit "$home/retrokit/bin/setup.sh" list_profiles about 2>/dev/null)
+
+        local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
+        if [[ -n "$choice" ]]; then
+            local profile_choice=${options[$((choice*2+1))]}
+            _gui_edit_file_retrokit "$profile_choice"
+        else
+            break
+        fi
+    done
+}
+
+function _gui_edit_file_retrokit() {
+    local profile=$1
+
+    while true; do
+        local cmd=(dialog --colors --backtitle "$__backtitle" --cancel-label "Back" --menu "Edit $profile configurations" 22 85 16)
+        local options=(
+            0 ".env"
+            1 "config/settings.json"
+            2 "config/systems/settings-common.json"
+        )
+
+        # Add system settings
+        local index=3
         while read system; do
             options+=($index "config/systems/$system/settings.json")
             index=$((index+1))
@@ -274,25 +301,28 @@ function _gui_edit_retrokit() {
         if [[ -n "$choice" ]]; then
             local path_choice=${options[$((choice*2+1))]}
 
-            # Build a template path for retrokit to find, so we can either use what's in
-            # the configured profile or what's provided by retrokit
-            local path_template
-            if [[ "$path_choice" == ".env" ]]; then
-                path_template="{app_dir}/$path_choice"
+            # Determine which path we should use as a starting point to edit
+            local reference_path="$home/retrokit/$path_choice"
+            if [ "$profile" == 'default' ]; then
+                save_path=$reference_path
             else
-                path_template=${path_choice/config\//\{config_dir\}\/}
+                save_path="$home/retrokit/profiles/$profile/$path_choice"
+
+                while read active_profile; do
+                    # If this profile has an override for the selected path, then we use that as the
+                    # reference
+                    local active_profile_path="$home/retrokit/profiles/$active_profile/$path_choice"
+                    if [[ -f "$active_profile_path" ]]; then
+                        reference_path=$active_profile_path
+                    fi
+
+                    # Stop when we've reached the currently selected profile as we don't want to use
+                    # higher-priority profiles as the starting point
+                    if [[ "$active_profile" == "$profile" ]]; then
+                        break
+                    fi
+                done < <(_run_retrokit "$home/retrokit/bin/setup.sh" list_profiles about 2>/dev/null)
             fi
-
-            # Ask retrokit which path we should use as a starting point to edit
-            local reference_path=$(_run_retrokit "$home/retrokit/bin/setup.sh" first_path about "$path_template" 2>/dev/null)
-
-            # Use the default if the reference path is empty
-            if [[ ! -s "$reference_path" ]]; then
-                reference_path="$home/retrokit/$path_choice"
-            fi
-
-            # Identify where to save the file
-            local profile_dir=$(_run_retrokit "$home/retrokit/bin/setup.sh" list_profile_dirs about 2>/dev/null | tail -n 1)
 
             # Create staging file
             local staging_path=$(mktemp)
@@ -300,12 +330,11 @@ function _gui_edit_retrokit() {
 
             # Edit file
             if editFile "$staging_path" && ! diff "$staging_path" "$reference_path" >/dev/null; then
-                local save_path="$profile_dir/$path_choice"
-                mkdir -p "$(dirname "$save_path")"
+                sudo -u $user mkdir -p "$(dirname "$save_path")"
                 mv "$staging_path" "$save_path"
 
                 # Make sure permissions are set correctly since we're running as root
-                chown -R $user:$user "$profile_dir"
+                chown -R $user:$user "$save_path"
                 chmod 664 "$save_path"
 
                 printMsgs "dialog" "Saved to $save_path"
