@@ -160,6 +160,8 @@ all of your personal preferences.
 
 ## Instructions
 
+### Creating a base image
+
 1. Update config/ in retrokit to match your personal preferences and hardware requirements
 1. Create a `.env` file based on env.template to provide the required configuration settings
 1. Flash new image (Note this will also expand the main partition and copy retrokit
@@ -182,6 +184,9 @@ all of your personal preferences.
    ```
    retrokit/bin/update.sh retropie
    ```
+
+### Install via base image
+
 1. Run retrokit
    ```
    retrokit/bin/setup.sh install
@@ -195,6 +200,31 @@ all of your personal preferences.
 To access via VNC:
 
 * Open in VNC client: `<ip address of rpi>:5900`
+
+Alternatively, you can run the retrokit setup script via the RetroPie
+EmulationStation menu.
+
+### Install via git
+
+1. Clone repo
+   ```
+   cd $HOME
+   git clone https://github.com/obrie/retrokit
+   ```
+1. Follow steps from base image install
+
+### Install via scriptmodule
+
+1. Download scriptmodule
+   ```
+   curl https://github.com/obrie/retrokit/raw/main/bin/scriptmodules/supplementary/retrokit.sh --create-dirs -o $HOME/RetroPie-Setup/ext/retrokit/supplementary/retrokit.sh
+   curl https://github.com/obrie/retrokit/raw/main/bin/scriptmodules/supplementary/retrokit/icon.png --create-dirs -o $HOME/RetroPie-Setup/ext/retrokit/supplementary/retrokit/icon.png
+   ```
+2. Install script module via UI or:
+   ```
+   sudo /home/pi/RetroPie-Setup/retropie_packages.sh retrokit _source_
+   ```
+3. Follow steps from base image install
 
 ## Usage
 
