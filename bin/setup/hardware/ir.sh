@@ -12,7 +12,7 @@ target_keymap_path="/etc/rc_keymaps/$source_keymap_name"
 keymap_config_path=/opt/retropie/configs/all/rc_keymap.cfg
 
 depends() {
-  sudo apt install -y ir-keytable
+  sudo apt-get install -y ir-keytable
 }
 
 configure() {
@@ -25,7 +25,7 @@ configure() {
 
 remove() {
   sudo rm -fv "$target_keymap_path" "$keymap_config_path"
-  sudo apt remove -y ir-keytable
+  sudo apt-get remove -y ir-keytable
 }
 
 setup "${@}"

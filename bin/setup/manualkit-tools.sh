@@ -18,7 +18,7 @@ depends() {
 
 # Tools for converting from different formats to PDF
 __depends_conversion_tools() {
-  sudo apt install -y
+  sudo apt-get install -y
     # Convert txt/html to pdf
     chromium \
 
@@ -37,17 +37,17 @@ __depends_conversion_tools() {
 
 # Tools for fixing exif data
 __depends_exif() {
-  sudo apt install -y libimage-exiftool-perl
+  sudo apt-get install -y libimage-exiftool-perl
 }
 
 # Tools to make PDFs searchable
 __depends_ocr() {
   # Ensure the necessary version of qpdf is installed
   if [ ! `command -v qpdf` ] || version_lt "$(qpdf --version | grep -oE 'version [0-9\.]+')" "version $qpdf_min_version"; then
-    sudo apt remove -y qpdf libqpdf-dev
+    sudo apt-get remove -y qpdf libqpdf-dev
 
     # Depends to compile
-    sudo apt install -y libjpeg-dev
+    sudo apt-get install -y libjpeg-dev
 
     # Download
     mkdir "$tmp_ephemeral_dir/qpdf"
@@ -68,7 +68,7 @@ __depends_ocr() {
   fi
 
   sudo pip3 install ocrmypdf==13.3.0
-  sudo apt install -y \
+  sudo apt-get install -y \
     tesseract-ocr-ara \
     tesseract-ocr-ces \
     tesseract-ocr-chi-sim \
@@ -112,7 +112,7 @@ __depends_ghostscript() {
 remove() {
   sudo pip3 uninstall -y ocrmypdf
 
-  sudo apt remove -y \
+  sudo apt-get remove -y \
     bc \
     chromium \
     img2pdf \

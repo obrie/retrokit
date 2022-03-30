@@ -8,7 +8,7 @@ setup_module_desc='Remote access software via VNC protocol'
 
 depends() {
   # Install dependencies
-  sudo apt install -y libvncserver-dev libconfig++-dev
+  sudo apt-get install -y libvncserver-dev libconfig++-dev
 }
 
 build() {

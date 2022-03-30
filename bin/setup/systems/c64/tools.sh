@@ -11,7 +11,7 @@ opencbm_version=0.4.99.104
 
 depends() {
   if [ ! `command -v cbmcopy` ] || ! cbmcopy --version | grep "$opencbm_version"; then
-    sudo apt install -y libusb-dev libncurses5-dev tcpser cc65
+    sudo apt-get install -y libusb-dev libncurses5-dev tcpser cc65
 
     local version_path=${opencbm_version//./_}
     wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$tmp_ephemeral_dir/opencbm/opencbm.zip"
@@ -63,7 +63,7 @@ remove() {
     popd
   fi
 
-  sudo apt remove -y libncurses5-dev libusb-dev tcpser cc65
+  sudo apt-get remove -y libncurses5-dev libusb-dev tcpser cc65
 }
 
 setup "${@}"

@@ -12,7 +12,7 @@ archive_rpi_dir="SindenLightgunLinuxSoftwareV$version/Pi-Arm/Lightgun"
 retropie_module_install_dir='/opt/retropie/supplementary/sinden'
 
 depends() {
-  sudo apt install -y \
+  sudo apt-get install -y \
     mono-complete \
     v4l-utils \
     libsdl1.2-dev \
@@ -104,7 +104,7 @@ remove() {
   sudo rm -rfv /opt/retropie/supplementary/sinden
 
   # We only remove mono as other dependencies are used by other parts of the system
-  sudo apt remove -y mono-complete
+  sudo apt-get remove -y mono-complete
 }
 
 setup "${@}"
