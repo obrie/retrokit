@@ -19,10 +19,10 @@ _set_mupdf_version() {
 depends_mupdf() {
   if [ ! -f /usr/local/lib/libmupdf.a ] || [ "$(_get_mupdf_version)" != "$target_mupdf_version" ]; then
     # Ensure system version isn't installed
-    sudo apt remove -y libmupdf-dev mupdf
+    sudo apt-get remove -y libmupdf-dev mupdf
 
     # System dependencies
-    sudo apt install -y libfreetype6-dev
+    sudo apt-get install -y libfreetype6-dev
     sudo ln -fs /usr/include/freetype2/ft2build.h /usr/include/ft2build.h
     sudo ln -fs /usr/include/freetype2/freetype/ /usr/include/freetype
 

@@ -34,7 +34,7 @@ __configure_bios_ir() {
   local ir_gpio_pin=$(setting '.hardware.ir.gpio_pin')
   local ir_keymap_path=$(setting '.hardware.ir.keymap')
   if [ -n "$ir_gpio_pin" ] || [ -n "$ir_keymap_path" ]; then
-    sudo apt install -y ir-keytable
+    sudo apt-get install -y ir-keytable
     local ir_keymap_filename=$(basename "$ir_keymap_path")
     local rc_map_name=$(grep "$ir_keymap_filename" '/etc/rc_maps.cfg' | tr $'\t' ' ' | cut -d' ' -f 2)
 

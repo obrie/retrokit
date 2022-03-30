@@ -16,7 +16,7 @@ depends() {
     return
   fi
 
-  sudo apt install -y libfontconfig1-dev qt5-default libsdl2-ttf-dev libxinerama-dev libxi-dev
+  sudo apt-get install -y libfontconfig1-dev qt5-default libsdl2-ttf-dev libxinerama-dev libxi-dev
 }
 
 build() {

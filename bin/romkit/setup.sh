@@ -2,10 +2,10 @@
 
 depends() {
   # Zip
-  sudo apt install -y zip
+  sudo apt-get install -y zip
 
   # CHDMan
-  sudo apt install -y mame-tools
+  sudo apt-get install -y mame-tools
 
   # XML processing
   sudo pip3 install lxml

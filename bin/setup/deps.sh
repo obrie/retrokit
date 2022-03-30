@@ -8,7 +8,7 @@ setup_module_desc='retrokit common system dependencies'
 
 depends() {
   # PIP
-  sudo apt install -y python3-pip
+  sudo apt-get install -y python3-pip
 
   # Ini editor
   sudo pip3 install crudini==0.9.3
@@ -23,10 +23,10 @@ depends() {
   fi
 
   # JSON reader
-  sudo apt install -y jq
+  sudo apt-get install -y jq
 
   # Video editor
-  sudo apt install -y ffmpeg
+  sudo apt-get install -y ffmpeg
 
   # Image editor
   sudo pip3 install pillow==8.3.1
@@ -35,7 +35,7 @@ depends() {
 remove() {
   sudo rm -fv /usr/local/bin/dotenv /usr/local/etc/dotenv.version
   sudo pip3 uninstall -y crudini pillow
-  sudo apt remove -y ffmpeg jq python3-pip
+  sudo apt-get remove -y ffmpeg jq python3-pip
 }
 
 setup "${@}"

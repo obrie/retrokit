@@ -10,7 +10,7 @@ setup_module_reconfigure_after_update=true
 
 depends() {
   # Sound driver
-  sudo apt install -y fluid-soundfont-gm
+  sudo apt-get install -y fluid-soundfont-gm
 }
 
 configure() {
@@ -24,7 +24,7 @@ restore() {
 }
 
 remove() {
-  sudo apt remove -y fluid-soundfont-gm
+  sudo apt-get remove -y fluid-soundfont-gm
 }
 
 setup "${@}"
