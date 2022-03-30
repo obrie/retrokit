@@ -306,6 +306,22 @@ bin/sd.sh sync /path/to/mounted_retropie_source /path/to/retropie_target
 bin/sd.sh sync_media /path/to/mounted_retropie_source /path/to/retropie_target
 ```
 
+vacuum:
+
+```
+# Vacuum ROM files no longer needed
+bin/vacuum.sh roms | bash
+
+# Vacuum manuals for ROMs no longer installed
+bin/vacuum.sh manuals | bash
+
+# Vacuum scraped media for ROMs no longer installed
+bin/vacuum.sh media | bash
+
+# Vacuum overlays for ROMs no longer installed
+bin/vacuum.sh overlays | bash
+```
+
 ## Profiles
 
 To override any configuration settings, you have two options:
