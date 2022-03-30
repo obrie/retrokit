@@ -9,7 +9,7 @@ setup_module_desc='RetroPie menu visibility configuration'
 gamelist_file="$HOME/.emulationstation/gamelists/retropie/gamelist.xml"
 
 build() {
-  install_retropie_package 'supplementary' 'retrokit' 'binary'
+  install_retropie_package 'supplementary' 'retrokit' 'source'
 }
 
 configure() {
