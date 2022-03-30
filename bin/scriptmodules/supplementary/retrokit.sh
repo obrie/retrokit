@@ -252,12 +252,15 @@ function _gui_vacuum_run_retrokit() {
 
     clear
 
+    echo "Vacuuming $media_type in $system..."
+
     output=$(_run_retrokit "$home/retrokit/bin/vacuum.sh" "${@}" 2>/dev/null)
     if [ -n "$output" ]; then
         dialog --colors --defaultno --no-collapse --yesno "$output" 22 85 2>&1 >/dev/tty || return
 
         # Run the commands
-        echo "$output" | bash
+        local vacuum_output=$(echo "$output" | bash 2>&1)
+        printMsgs "dialog" "Ouput:\n\n$vacuum_output"
     else
         printMsgs "dialog" "Nothing found to vacuum."
     fi
