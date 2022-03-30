@@ -2,15 +2,26 @@
 
 rp_module_id="retrokit"
 rp_module_desc="Configure Retrokit settings"
-rp_module_section="config"
+rp_module_repo="git https://github.com/obrie/retrokit.git main"
+rp_module_section="exp"
 rp_module_flags="!all rpi"
 
 function deps_retrokit() {
     aptInstall jq
 }
 
+function sources_retrokit() {
+    if [ -d "$home/retrokit" ]; then
+        pushd "$home/retrokit" > /dev/null
+        sudo -u $user git pull --ff-only
+        popd > /dev/null
+    else
+        gitPullOrClone "$home/retrokit"
+    fi
+}
+
 function install_bin_retrokit() {
-    return
+    chown -R $user:$user "$home/retrokit"
 }
 
 function configure_retrokit() {
