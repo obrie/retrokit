@@ -254,15 +254,15 @@ function _gui_vacuum_run_retrokit() {
 
     echo "Vacuuming $media_type in $system..."
 
-    output=$(_run_retrokit "$home/retrokit/bin/vacuum.sh" "${@}" 2>/dev/null)
+    output=$(_run_retrokit "$home/retrokit/bin/vacuum.sh" "${@}" 2>/dev/null | tee /dev/tty)
     if [ -n "$output" ]; then
         dialog --colors --defaultno --no-collapse --yesno "$output" 22 85 2>&1 >/dev/tty || return
 
         # Run the commands
         local vacuum_output=$(echo "$output" | bash 2>&1)
-        printMsgs "dialog" "Ouput:\n\n$vacuum_output"
+        _show_msg_retrokit "Ouput:\n\n$vacuum_output"
     else
-        printMsgs "dialog" "Nothing found to vacuum."
+        _show_msg_retrokit "Nothing found to vacuum."
     fi
 
     clear
@@ -352,7 +352,7 @@ function _gui_edit_file_retrokit() {
                 chown -R $user:$user "$save_path"
                 chmod 664 "$save_path"
 
-                printMsgs "dialog" "Saved to $save_path"
+                _show_msg_retrokit "Saved to $save_path"
             fi
         else
             break
@@ -361,9 +361,12 @@ function _gui_edit_file_retrokit() {
 }
 
 function _run_and_show_retrokit() {
-    output=$(_run_retrokit "${@}" 2>&1)
+    output=$(_run_retrokit "${@}" 2>&1 | tee /dev/tty)
+    _show_msg_retrokit "Command: ${*}\n\nOuput:\n\n$output"
+}
 
-    printMsgs "dialog" "Command: ${*}\n\nOuput:\n\n$output"
+function _show_msg_retrokit() {
+    dialog --backtitle "$__backtitle" --cr-wrap --no-collapse --msgbox "$1" 20 120 >/dev/tty
 }
 
 function _run_retrokit() {

@@ -23,10 +23,10 @@ main() {
 
   if [ -z "$system" ] || [ "$system" == 'all' ]; then
     while read system; do
-      "vacuum_$action" "$system" "${@:3}" | { grep -E "^rm " || true; }
+      "vacuum_$action" "$system" "${@:3}"
     done < <(setting '.systems[]')
   else
-    "vacuum_$action" "$system" "${@:3}" | { grep -E "^rm " || true; }
+    "vacuum_$action" "$system" "${@:3}"
   fi
 }
 
