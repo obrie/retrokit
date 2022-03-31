@@ -16,6 +16,7 @@ class PDF():
         height: int,
         buffer_width: int,
         buffer_height: int,
+        supplementary_path: str = None,
         turbo_skip: int = 2,
         zoom_multiplier: float = 1.5,
     ) -> None:
@@ -24,6 +25,7 @@ class PDF():
         self.height = height
         self.buffer_width = buffer_width
         self.buffer_height = buffer_height
+        self.supplementary_path = supplementary_path
         self.zoom_multiplier = zoom_multiplier
         self.zoom_level = 0
         self.page_number = None
@@ -53,6 +55,12 @@ class PDF():
                 fontsize=self.NO_MANUAL_FONTSIZE,
             )
             text_writer.write_text(page, color=(1, 1, 1))
+
+        # Add supplementary material (usually reference info)
+        if self.supplementary_path and Path(self.supplementary_path).exists():
+            pdf = fitz.open(self.supplementary_path)
+            self.document.insert_pdf(pdf)
+            pdf.close()
 
         self.jump(0)
 
