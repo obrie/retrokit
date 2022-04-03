@@ -268,9 +268,7 @@
   "roms": {
     "id": "name",
     "priority": {
-      "flags": [
-        "USA"
-      ]
+      "enabled": false
     },
     "filters": {
       "emulator_compatibility": [true],
