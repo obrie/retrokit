@@ -13,6 +13,7 @@
   },
   "roms": {
     "priority": {
+      "order": ["flags", "length"],
       "flags": [
         "USA",
         "World",
