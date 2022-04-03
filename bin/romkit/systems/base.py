@@ -39,6 +39,7 @@ class BaseSystem:
             SystemDir(
                 dir_config['path'],
                 FilterSet.from_json(dir_config.get('filters', {}), config, self.supported_filters, log=False),
+                dir_config.get('context', {}),
                 file_templates,
             )
             for dir_config in config['roms']['dirs']
@@ -130,7 +131,7 @@ class BaseSystem:
                     # If a priority is defined, the user is asking for a 1G1R setup.
                     # In that case, we either choose a machine that was explicitly overridden
                     # for install or we choose the highest priority machine in the group.
-                    if self.machine_priority.length:
+                    if self.machine_priority.enabled:
                         existing = machine_candidates.get(group)
 
                         if not existing:

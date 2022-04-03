@@ -6,9 +6,15 @@ import os
 from pathlib import Path
 
 class SystemDir:
-    def __init__(self, path: str, filter_set: FilterSet, file_templates: dict = {}) -> None:
+    def __init__(self,
+        path: str,
+        filter_set: FilterSet,
+        context: dict = {},
+        file_templates: dict = {},
+    ) -> None:
         self.path = Path(path)
         self.filter_set = filter_set
+        self.context = context
         self.file_templates = file_templates
 
     # Whether the given machine should be enabled in this dir
@@ -33,7 +39,11 @@ class SystemDir:
             target_path=resource.target_path.path,
             xref_path=(resource.xref_path and resource.xref_path.path or ''),
         )).resolve()
-        target = Path(file_template['target'].format(dir=self.path, **context))
+        target = Path(file_template['target'].format(
+            dir=self.path,
+            **context,
+            **self.context,
+        ))
 
         # Ensure target's parent exists
         target.parent.mkdir(parents=True, exist_ok=True)
