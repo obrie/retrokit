@@ -132,8 +132,14 @@
   "roms": {
     "id": "crc",
     "priority": {
+      "order": ["flags", "romsets", "length"],
       "flags": [
         "USA"
+      ],
+      "romsets": [
+        "nointro-turbografx",
+        "nointro-supergrafx",
+        "redump"
       ],
       "length": "ascending"
     },
@@ -142,6 +148,7 @@
         "USA"
       ],
       "!flags": [
+        "Beta",
         "Proto",
         "Unl"
       ],
