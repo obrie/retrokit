@@ -17,8 +17,8 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA"},
-    "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual", "default": true}
+    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true},
+    "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual"}
   },
   "cheats": {
     "names": [
@@ -54,8 +54,7 @@
           "xref": "$HOME/RetroPie/roms/gb/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive",
-      "emulator": "lr-mgba"
+      "auth": "internetarchive"
     }
   ],
   "metadata": {
@@ -129,14 +128,11 @@
         "path": "$HOME/RetroPie/roms/gb/-2 Player-",
         "filters": {
           "collections": ["Game Boy: Multiplayer"]
-        },
-        "context": {
-          "suffix": " (2 Player)"
         }
       }
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine}{suffix}.zip"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }
