@@ -7,11 +7,14 @@ from typing import List
 class SorterSet:
     def __init__(self) -> None:
         self.sorters = []
+        self.enabled = True
 
     # Builds a SorterSet from the given json data
     @classmethod
     def from_json(cls, json: dict, supported_sorters: list) -> SorterSet:
         sorter_set = cls()
+        sorter_set.enabled = json.get('enabled', True)
+
         sorters_by_name = {sorter.name: sorter for sorter in supported_sorters}
 
         # Either use a pre-defined order in which to process the sort strategies
