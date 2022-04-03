@@ -1,7 +1,8 @@
 profiles/*
 !profiles/manualkit-compressed
 !profiles/manualkit-original
-!profiles/nofilter
+!profiles/nofilter-1g1r
+!profiles/nofilter-all
 tmp/*
 __pycache__
 /.env
