@@ -17,7 +17,8 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
+    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA"},
+    "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual", "default": true}
   },
   "cheats": {
     "names": [
@@ -53,10 +54,14 @@
           "xref": "$HOME/RetroPie/roms/gb/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive"
+      "auth": "internetarchive",
+      "emulator": "lr-mgba"
     }
   ],
   "metadata": {
+    "collections": {
+      "source": "file://$HOME/retrokit/config/systems/gb/collections.json"
+    },
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/gb/manuals.tsv"
     },
@@ -83,8 +88,9 @@
         "Alt",
         "Beta",
         "Demo",
-        "Test Program",
         "Proto",
+        "Sample",
+        "Test Program",
         "Unl"
       ],
       "!keywords": [
@@ -98,6 +104,7 @@
         "Compilation"
       ],
       "!titles": [
+        "Game Boy Aging Cartridge",
         "Game Boy Camera",
         "Game Boy Camera Gold",
         "Solitaire FunPak"
@@ -111,10 +118,25 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/gb", "filters": {}}
+      {
+        "path": "$HOME/RetroPie/roms/gb",
+        "filters": {},
+        "context": {
+          "suffix": ""
+        }
+      },
+      {
+        "path": "$HOME/RetroPie/roms/gb/-2 Player-",
+        "filters": {
+          "collections": ["Game Boy: Multiplayer"]
+        },
+        "context": {
+          "suffix": " (2 Player)"
+        }
+      }
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine}{suffix}.zip"}
     }
   }
 }
