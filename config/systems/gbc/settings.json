@@ -17,7 +17,8 @@
     "sources": ["screenscraper"]
   },
   "emulators": {
-    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true}
+    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA"},
+    "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual", "default": true}
   },
   "cheats": {
     "names": [
@@ -53,10 +54,14 @@
           "xref": "$HOME/RetroPie/roms/gbc/.nointro/.xrefs/{machine_id}.zip"
         }
       },
-      "auth": "internetarchive"
+      "auth": "internetarchive",
+      "emulator": "lr-mgba"
     }
   ],
   "metadata": {
+    "collections": {
+      "source": "file://$HOME/retrokit/config/systems/gbc/collections.json"
+    },
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/gbc/manuals.tsv"
     },
@@ -83,8 +88,8 @@
         "Alt",
         "Beta",
         "Demo",
-        "Test Program",
         "Proto",
+        "Test Program",
         "Unl"
       ],
       "!genres": [
@@ -112,10 +117,26 @@
       ]
     },
     "dirs": [
-      {"path": "$HOME/RetroPie/roms/gbc", "filters": {}}
+      {
+        "path": "$HOME/RetroPie/roms/gbc",
+        "filters": {},
+        "context": {
+          "suffix": ""
+        }
+      },
+      {
+        "path": "$HOME/RetroPie/roms/gbc/-2 Player-",
+        "filters": {
+          "collections": ["Game Boy: Multiplayer"]
+        },
+        "context": {
+          "suffix": " (2 Player)",
+        }
+      }
+
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"}
+      "machine": {"target": "{dir}/{machine}{suffix}.zip"}
     }
   }
 }
