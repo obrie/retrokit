@@ -6,7 +6,7 @@
 		<description>Coleco - ColecoVision (Parent-Clone)</description>
 		<version>20211202-035230</version>
 		<date>20211202-035230</date>
-		<author>alexian</author>
+		<author>C. V. Reynolds, kazumi213, MeguCocoa, omonim2007, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] ColecoVision (USA, Europe)">
@@ -183,10 +183,10 @@
 		<release name="Carnival (USA, Europe)" region="USA"/>
 		<rom name="Carnival (USA, Europe).col" size="16384" crc="70f315c2" md5="f44e87fd71785824ac2ffb9927337886" sha1="d4f34382d43897774101e3620384a402dd3d2ec1" status="verified"/>
 	</game>
-	<game name="Castelo (Brazil) (Unl)">
-		<description>Castelo (Brazil) (Unl)</description>
-		<release name="Castelo (Brazil) (Unl)" region="BRA"/>
-		<rom name="Castelo (Brazil) (Unl).col" size="8192" crc="07a3d3db" md5="7bf914ee3d7a66eb0fdb579b26ad1f25" sha1="0406ad601be68014820c77eda4491bfb4ea5c402" status="verified"/>
+	<game name="Castelo (Brazil) (En) (Unl)">
+		<description>Castelo (Brazil) (En) (Unl)</description>
+		<release name="Castelo (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Castelo (Brazil) (En) (Unl).col" size="8192" crc="07a3d3db" md5="7bf914ee3d7a66eb0fdb579b26ad1f25" sha1="0406ad601be68014820c77eda4491bfb4ea5c402" status="verified"/>
 	</game>
 	<game name="CAT S.O.S. Game, The (USA) (Promo)">
 		<description>CAT S.O.S. Game, The (USA) (Promo)</description>

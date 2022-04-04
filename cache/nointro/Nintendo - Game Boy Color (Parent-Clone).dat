@@ -4,9 +4,9 @@
 	<header>
 		<name>Nintendo - Game Boy Color (Parent-Clone)</name>
 		<description>Nintendo - Game Boy Color (Parent-Clone)</description>
-		<version>20220112-010749</version>
-		<date>20220112-010749</date>
-		<author>akubi, Aringon, Bent, BigFred, BitLooter, C. V. Reynolds, chillerecke, coraz, darthcloud, DeadSkullzJr, Densetsu, DeriLoko3, Flashfire42, foxe, fuzzball, Hiccup, hking0036, InternalLoss, kazumi213, Madeline, Money_114, NGEfreak, norkmetnoil577, omonim2007, PPLToast, relax, Rifu, sCZther, SonGoku, Tauwasser, togemet2, Whovian9369, xuom2, zg</author>
+		<version>20220401-222821</version>
+		<date>20220401-222821</date>
+		<author>akubi, Arctic Circle System, Aringon, Bent, BigFred, BitLooter, C. V. Reynolds, chillerecke, coraz, darthcloud, DeadSkullzJr, Densetsu, DeriLoko3, Flashfire42, foxe, fuzzball, Hiccup, hking0036, InternalLoss, kazumi213, Madeline, Money_114, NGEfreak, norkmetnoil577, NovaAurora, omonim2007, PPLToast, relax, Rifu, sCZther, SonGoku, Tauwasser, togemet2, Whovian9369, xuom2, zg</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Nintendo Game Boy Color Boot ROM (Japan) (En)">
@@ -23,6 +23,10 @@
 	<game name="[BIOS] Nintendo Game Boy Color Boot ROM (World) (Pokemon Stadium)" cloneof="[BIOS] Nintendo Game Boy Color Boot ROM (Japan) (En)">
 		<description>[BIOS] Nintendo Game Boy Color Boot ROM (World) (Pokemon Stadium)</description>
 		<rom name="[BIOS] Nintendo Game Boy Color Boot ROM (World) (Pokemon Stadium).gbc" size="1008" crc="b18c78e8" md5="99ef61da48d0d05b5337b237543bc1e8" sha1="d24f388ac71b1cbc9b1d258fd10be13f8cdd3328"/>
+	</game>
+	<game name="[BIOS] Nintendo Game Boy Color Boot ROM (World) (Beta) (Virtual Console)" cloneof="[BIOS] Nintendo Game Boy Color Boot ROM (Japan) (En)">
+		<description>[BIOS] Nintendo Game Boy Color Boot ROM (World) (Beta) (Virtual Console)</description>
+		<rom name="[BIOS] Nintendo Game Boy Color Boot ROM (World) (Beta) (Virtual Console).gbc" size="2304" crc="e95dc95d" md5="48991ee7b1813d0cba5b099df6578668" sha1="f5f33729a956131d9c44310f0ae3bb0599e9ec3e"/>
 	</game>
 	<game name="007 - The World Is Not Enough (USA, Europe)">
 		<description>007 - The World Is Not Enough (USA, Europe)</description>
@@ -171,10 +175,11 @@
 		<release name="Alice in Wonderland (Europe) (En,Fr,De,Es)" region="EUR"/>
 		<rom name="Alice in Wonderland (Europe) (En,Fr,De,Es).gbc" size="2097152" crc="85545d81" md5="265de745b9b6c8e84e02acbf80d0428e" sha1="ea8647cce2d4b5f7993190c6e485669cc6046a29"/>
 	</game>
-	<game name="Alice in Wonderland (USA)" cloneof="Alice in Wonderland (Europe) (En,Fr,De,Es)">
-		<description>Alice in Wonderland (USA)</description>
-		<release name="Alice in Wonderland (USA)" region="USA"/>
-		<rom name="Alice in Wonderland (USA).gbc" size="2097152" crc="3199f65f" md5="0ed5b9ffe7ad90d819cac810d05b669c" sha1="02c49003d5eb1498f239149089a517cdfb6bda0b"/>
+	<game name="Alice in Wonderland (USA, Australia)" cloneof="Alice in Wonderland (Europe) (En,Fr,De,Es)">
+		<description>Alice in Wonderland (USA, Australia)</description>
+		<release name="Alice in Wonderland (USA, Australia)" region="AUS"/>
+		<release name="Alice in Wonderland (USA, Australia)" region="USA"/>
+		<rom name="Alice in Wonderland (USA, Australia).gbc" size="2097152" crc="3199f65f" md5="0ed5b9ffe7ad90d819cac810d05b669c" sha1="02c49003d5eb1498f239149089a517cdfb6bda0b"/>
 	</game>
 	<game name="Aliens - Thanatos Encounter (USA, Europe)">
 		<description>Aliens - Thanatos Encounter (USA, Europe)</description>
@@ -182,10 +187,19 @@
 		<release name="Aliens - Thanatos Encounter (USA, Europe)" region="USA"/>
 		<rom name="Aliens - Thanatos Encounter (USA, Europe).gbc" size="1048576" crc="bec3c24b" md5="73a78663a6388bf4d1c56e05bbf790d4" sha1="e1b1c79c15a34984dddbe270fc6770b32a31a0d7"/>
 	</game>
-	<game name="All Star Tennis 2000 (Europe) (GB Compatible)">
-		<description>All Star Tennis 2000 (Europe) (GB Compatible)</description>
-		<release name="All Star Tennis 2000 (Europe) (GB Compatible)" region="EUR"/>
-		<rom name="All Star Tennis 2000 (Europe) (GB Compatible).gbc" size="1048576" crc="952b94e5" md5="c5e3bb77000c5d3755e816f6c0eed489" sha1="50f99b0fc5c2f5edc2e76ba973cc42fb0a1a02c8"/>
+	<game name="All Star Tennis 2000 (Europe) (AZTP) (GB Compatible)">
+		<description>All Star Tennis 2000 (Europe) (AZTP) (GB Compatible)</description>
+		<release name="All Star Tennis 2000 (Europe) (AZTP) (GB Compatible)" region="EUR"/>
+		<rom name="All Star Tennis 2000 (Europe) (AZTP) (GB Compatible).gbc" size="1048576" crc="952b94e5" md5="c5e3bb77000c5d3755e816f6c0eed489" sha1="50f99b0fc5c2f5edc2e76ba973cc42fb0a1a02c8"/>
+	</game>
+	<game name="All Star Tennis 2000 (USA) (Proto) (GB Compatible)" cloneof="All Star Tennis 2000 (Europe) (AZTP) (GB Compatible)">
+		<description>All Star Tennis 2000 (USA) (Proto) (GB Compatible)</description>
+		<release name="All Star Tennis 2000 (USA) (Proto) (GB Compatible)" region="USA"/>
+		<rom name="All Star Tennis 2000 (USA) (Proto) (GB Compatible).gbc" size="1048576" crc="9890bcb4" md5="9aa127615d6f0de4ccc534774fe54c37" sha1="f6829ac5bba08732f875fc5812284d62f3d727e6"/>
+	</game>
+	<game name="All Star Tennis 2000 (Europe) (AZTX) (Proto) (GB Compatible)" cloneof="All Star Tennis 2000 (Europe) (AZTP) (GB Compatible)">
+		<description>All Star Tennis 2000 (Europe) (AZTX) (Proto) (GB Compatible)</description>
+		<rom name="All Star Tennis 2000 (Europe) (AZTX) (Proto) (GB Compatible).gbc" size="1048576" crc="deff8dfb" md5="6bbdbc468d32a31d21727ec0136ee419" sha1="c9db40e3e348668fe6fc41d031263acbe9041a67"/>
 	</game>
 	<game name="All-Star Baseball 2000 (USA, Europe)">
 		<description>All-Star Baseball 2000 (USA, Europe)</description>
@@ -383,15 +397,15 @@
 		<release name="Austin Powers - Oh, Behave! (USA)" region="USA"/>
 		<rom name="Austin Powers - Oh, Behave! (USA).gbc" size="4194304" crc="bb89190e" md5="2aba33e89caca45c9091b25a276dd4c6" sha1="aa6cb6ab4fe083cbe0274c40bd30e0013a2f7645"/>
 	</game>
-	<game name="Austin Powers - Welcome to my Underground Lair! (Europe) (En,Fr,De,Es,It)">
-		<description>Austin Powers - Welcome to my Underground Lair! (Europe) (En,Fr,De,Es,It)</description>
-		<release name="Austin Powers - Welcome to my Underground Lair! (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Austin Powers - Welcome to my Underground Lair! (Europe) (En,Fr,De,Es,It).gbc" size="4194304" crc="693f50da" md5="93226ce541766d8b8b7d1f70866ad530" sha1="02c7c61928ab82b4a8a07bb067d5f5ca32511df7"/>
+	<game name="Austin Powers - Welcome to My Underground Lair! (Europe) (En,Fr,De,Es,It)">
+		<description>Austin Powers - Welcome to My Underground Lair! (Europe) (En,Fr,De,Es,It)</description>
+		<release name="Austin Powers - Welcome to My Underground Lair! (Europe) (En,Fr,De,Es,It)" region="EUR"/>
+		<rom name="Austin Powers - Welcome to My Underground Lair! (Europe) (En,Fr,De,Es,It).gbc" size="4194304" crc="693f50da" md5="93226ce541766d8b8b7d1f70866ad530" sha1="02c7c61928ab82b4a8a07bb067d5f5ca32511df7"/>
 	</game>
-	<game name="Austin Powers - Welcome to my Underground Lair! (USA)" cloneof="Austin Powers - Welcome to my Underground Lair! (Europe) (En,Fr,De,Es,It)">
-		<description>Austin Powers - Welcome to my Underground Lair! (USA)</description>
-		<release name="Austin Powers - Welcome to my Underground Lair! (USA)" region="USA"/>
-		<rom name="Austin Powers - Welcome to my Underground Lair! (USA).gbc" size="4194304" crc="aba42b78" md5="1b2190911db606dce58d694e8b591e69" sha1="69b5106a124bde38184875c0dd08de437360bc14"/>
+	<game name="Austin Powers - Welcome to My Underground Lair! (USA)" cloneof="Austin Powers - Welcome to My Underground Lair! (Europe) (En,Fr,De,Es,It)">
+		<description>Austin Powers - Welcome to My Underground Lair! (USA)</description>
+		<release name="Austin Powers - Welcome to My Underground Lair! (USA)" region="USA"/>
+		<rom name="Austin Powers - Welcome to My Underground Lair! (USA).gbc" size="4194304" crc="aba42b78" md5="1b2190911db606dce58d694e8b591e69" sha1="69b5106a124bde38184875c0dd08de437360bc14"/>
 	</game>
 	<game name="Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto)">
 		<description>Austin Powers Episode III (Europe) (En,Fr,De,Es,It) (Proto)</description>
@@ -509,37 +523,37 @@
 		<release name="Barbie - Magic Genie Adventure (USA)" region="USA"/>
 		<rom name="Barbie - Magic Genie Adventure (USA).gbc" size="1048576" crc="57f1a202" md5="829da007514e8a1ccc7efe6a7ee5226f" sha1="30e779f19cd8f8c979bda38dd90e9798c742a66c"/>
 	</game>
-	<game name="Barbie - Ocean Discovery (Europe) (GB Compatible)">
-		<description>Barbie - Ocean Discovery (Europe) (GB Compatible)</description>
-		<release name="Barbie - Ocean Discovery (Europe) (GB Compatible)" region="EUR"/>
-		<rom name="Barbie - Ocean Discovery (Europe) (GB Compatible).gbc" size="1048576" crc="fdc8e7f1" md5="0d4f6b00b4a1b047ef13a91537f7314a" sha1="c0c37864e17f11fffa8b8a61a0abe4b2b80c235c"/>
+	<game name="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
+		<description>Barbie - Ocean Discovery (United Kingdom) (GB Compatible)</description>
+		<release name="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)" region="EUR"/>
+		<rom name="Barbie - Ocean Discovery (United Kingdom) (GB Compatible).gbc" size="1048576" crc="fdc8e7f1" md5="0d4f6b00b4a1b047ef13a91537f7314a" sha1="c0c37864e17f11fffa8b8a61a0abe4b2b80c235c"/>
 	</game>
-	<game name="Barbie - Aventura Submarina (Spain) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Aventura Submarina (Spain) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Aventura Submarina (Spain) (GB Compatible)</description>
 		<release name="Barbie - Aventura Submarina (Spain) (GB Compatible)" region="SPA"/>
 		<rom name="Barbie - Aventura Submarina (Spain) (GB Compatible).gbc" size="1048576" crc="0cf2b7f2" md5="28dd8318bd521b42243af4546062ecab" sha1="7b342745f14f0a2245b961cfd6e23d1b2e98c249"/>
 	</game>
-	<game name="Barbie - Avventure nell'Oceano (Italy) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Avventure nell'Oceano (Italy) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Avventure nell'Oceano (Italy) (GB Compatible)</description>
 		<release name="Barbie - Avventure nell'Oceano (Italy) (GB Compatible)" region="ITA"/>
 		<rom name="Barbie - Avventure nell'Oceano (Italy) (GB Compatible).gbc" size="1048576" crc="59645a18" md5="8565f7b388a1741fe41a8c972d95869e" sha1="79ea73d94d2402525c718563b5613bee71b69b44"/>
 	</game>
-	<game name="Barbie - Chasse au Tresor Sous-Marine (France) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Chasse au Tresor Sous-Marine (France) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Chasse au Tresor Sous-Marine (France) (GB Compatible)</description>
 		<release name="Barbie - Chasse au Tresor Sous-Marine (France) (GB Compatible)" region="FRA"/>
 		<rom name="Barbie - Chasse au Tresor Sous-Marine (France) (GB Compatible).gbc" size="1048576" crc="4068e981" md5="21d99fb62922e3538c0b11749a7db8e4" sha1="bc44d39cce1f3143e9fa830ede2b4126a4d61b54"/>
 	</game>
-	<game name="Barbie - Diepzee Avontuur (Netherlands) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Diepzee Avontuur (Netherlands) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Diepzee Avontuur (Netherlands) (GB Compatible)</description>
 		<release name="Barbie - Diepzee Avontuur (Netherlands) (GB Compatible)" region="HOL"/>
 		<rom name="Barbie - Diepzee Avontuur (Netherlands) (GB Compatible).gbc" size="1048576" crc="39c6b8df" md5="cc130e8228a37ecc3d38f7f34aafedaa" sha1="3e93df9512819679deac989895de398a6159645c" status="verified"/>
 	</game>
-	<game name="Barbie - Meeres Abenteuer (Germany) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Meeres Abenteuer (Germany) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Meeres Abenteuer (Germany) (GB Compatible)</description>
 		<release name="Barbie - Meeres Abenteuer (Germany) (GB Compatible)" region="GER"/>
 		<rom name="Barbie - Meeres Abenteuer (Germany) (GB Compatible).gbc" size="1048576" crc="5e46d64a" md5="ce1b3efd190f51e089bec904e92a5f01" sha1="c392aefb3d657cae6602e285f5fb57ec079a818e"/>
 	</game>
-	<game name="Barbie - Ocean Discovery (USA) (GB Compatible)" cloneof="Barbie - Ocean Discovery (Europe) (GB Compatible)">
+	<game name="Barbie - Ocean Discovery (USA) (GB Compatible)" cloneof="Barbie - Ocean Discovery (United Kingdom) (GB Compatible)">
 		<description>Barbie - Ocean Discovery (USA) (GB Compatible)</description>
 		<release name="Barbie - Ocean Discovery (USA) (GB Compatible)" region="USA"/>
 		<rom name="Barbie - Ocean Discovery (USA) (GB Compatible).gbc" size="1048576" crc="746936c6" md5="89de435cb69325b42d569015ca09f49f" sha1="fab988692a19d53e71fc754dea3a01506b104d9f"/>
@@ -734,6 +748,23 @@
 		<release name="Blue's Clues - Blue's Alphabet Book (USA)" region="USA"/>
 		<rom name="Blue's Clues - Blue's Alphabet Book (USA).gbc" size="1048576" crc="748d1345" md5="6af9bb4957485a0f5cebc9b44e805392" sha1="f703b54746cb2ef08deba2518ce7b7a3836142aa"/>
 	</game>
+	<game name="Blue's Clues - Blue's Alphabet Book (USA) (Rev 1) (Proto)" cloneof="Blue's Clues - Blue's Alphabet Book (USA)">
+		<description>Blue's Clues - Blue's Alphabet Book (USA) (Rev 1) (Proto)</description>
+		<rom name="Blue's Clues - Blue's Alphabet Book (USA) (Rev 1) (Proto).gbc" size="1048576" crc="f89f58b7" md5="e3846151ea7d911c9b0b76de2fe5239a" sha1="7fdedfe8acde9557a5ff57661ed17082813e09a1"/>
+	</game>
+	<game name="Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
+		<description>Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)</description>
+		<release name="Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)" region="EUR"/>
+		<rom name="Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl).gbc" size="524288" crc="a4c6523d" md5="ab3245958e1ddea3209841c62ca8448e" sha1="2b4b8c3a4a74fdf7acc4138125fea5d8f5a9a093"/>
+	</game>
+	<game name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1)" cloneof="Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
+		<description>Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1)</description>
+		<rom name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1).gbc" size="524288" crc="617d7667" md5="b542fbcf77dea9de05ceab312648af6d" sha1="b215146fe8e2a5836d0ac6fa4785f95db464fc1a"/>
+	</game>
+	<game name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2)" cloneof="Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
+		<description>Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2)</description>
+		<rom name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2).gbc" size="524288" crc="6bfcfd87" md5="91889ebca9b20510ece17eabdf2f071a" sha1="83c64dd44d3d03e3fd0711b23bf63e2264256dea"/>
+	</game>
 	<game name="Bob the Builder - Fix it Fun! (Europe) (En,Fr,De,Es,Nl)">
 		<description>Bob the Builder - Fix it Fun! (Europe) (En,Fr,De,Es,Nl)</description>
 		<release name="Bob the Builder - Fix it Fun! (Europe) (En,Fr,De,Es,Nl)" region="EUR"/>
@@ -868,10 +899,10 @@
 		<release name="Bugs Bunny - Crazy Castle 4 (Japan)" region="JPN"/>
 		<rom name="Bugs Bunny - Crazy Castle 4 (Japan).gbc" size="1048576" crc="d6387eaa" md5="30567b9d1cf0881fee0e15cdfdc250da" sha1="e4a198d4acf5ac987071a1d2b91501caca62269b"/>
 	</game>
-	<game name="Bugs Bunny et le Chateau des Catastrophes (France)" cloneof="Bugs Bunny in - Crazy Castle 4 (Europe)">
-		<description>Bugs Bunny et le Chateau des Catastrophes (France)</description>
-		<release name="Bugs Bunny et le Chateau des Catastrophes (France)" region="FRA"/>
-		<rom name="Bugs Bunny et le Chateau des Catastrophes (France).gbc" size="1048576" crc="6da8e6eb" md5="7fbbfa00a51547639750e69ff802fa76" sha1="19590017c888266c285360f824f5ef6cea166287"/>
+	<game name="Bugs Bunny et le Chateau des Catastrophes (France) (En)" cloneof="Bugs Bunny in - Crazy Castle 4 (Europe)">
+		<description>Bugs Bunny et le Chateau des Catastrophes (France) (En)</description>
+		<release name="Bugs Bunny et le Chateau des Catastrophes (France) (En)" region="FRA"/>
+		<rom name="Bugs Bunny et le Chateau des Catastrophes (France) (En).gbc" size="1048576" crc="6da8e6eb" md5="7fbbfa00a51547639750e69ff802fa76" sha1="19590017c888266c285360f824f5ef6cea166287"/>
 	</game>
 	<game name="Bugs Bunny in - Crazy Castle 4 (USA)" cloneof="Bugs Bunny in - Crazy Castle 4 (Europe)">
 		<description>Bugs Bunny in - Crazy Castle 4 (USA)</description>
@@ -969,6 +1000,10 @@
 		<release name="Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan)" region="JPN"/>
 		<rom name="Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan).gbc" size="2097152" crc="f78f7998" md5="3a998a2ec99c89696c9b23bbbd87f116" sha1="1809154979b289750b572a61da1dc93b1b76360f"/>
 	</game>
+	<game name="Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan) (Rev 1) (Proto)" cloneof="Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan)">
+		<description>Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan) (Rev 1) (Proto)</description>
+		<rom name="Cardcaptor Sakura - Tomoeda Shougakkou Daiundoukai (Japan) (Rev 1) (Proto).gbc" size="2097152" crc="d2cc40c2" md5="bf02f5bfc27ef44ceb2878359c7a9e0e" sha1="031b00495b3700b2145a741f2d03cc820ffa6fde"/>
+	</game>
 	<game name="Carl Lewis Athletics 2000 (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Carl Lewis Athletics 2000 (Europe) (En,Fr,De,Es,It,Nl)</description>
 		<release name="Carl Lewis Athletics 2000 (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
@@ -989,9 +1024,9 @@
 		<release name="Carmageddon - Carpocalypse Now (Germany)" region="GER"/>
 		<rom name="Carmageddon - Carpocalypse Now (Germany).gbc" size="2097152" crc="b447bc06" md5="4a58b26ef9624192afe5542f790cdb01" sha1="505b29e070ce034b179169d834abb3969e84c7e0" status="verified"/>
 	</game>
-	<game name="Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta)" cloneof="Carmageddon - Carpocalypse Now (USA, Europe) (En,Fr,Es,It)">
-		<description>Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta)</description>
-		<rom name="Carmageddon - Carpocalypse Now (USA, Europe) (En,Es) (Beta).gbc" size="2097152" crc="e9751f81" md5="cca8749da97aae49def1132a6a72d047" sha1="9f41f86214031dad6440206863bffc13c3e61fc4"/>
+	<game name="Carmageddon - Carpocalypse Now (USA) (En,Es) (Beta)" cloneof="Carmageddon - Carpocalypse Now (USA, Europe) (En,Fr,Es,It)">
+		<description>Carmageddon - Carpocalypse Now (USA) (En,Es) (Beta)</description>
+		<rom name="Carmageddon - Carpocalypse Now (USA) (En,Es) (Beta).gbc" size="2097152" crc="e9751f81" md5="cca8749da97aae49def1132a6a72d047" sha1="9f41f86214031dad6440206863bffc13c3e61fc4"/>
 	</game>
 	<game name="Carnivale (USA) (Proto)">
 		<description>Carnivale (USA) (Proto)</description>
@@ -1013,6 +1048,10 @@
 		<description>Casper (USA)</description>
 		<release name="Casper (USA)" region="USA"/>
 		<rom name="Casper (USA).gbc" size="1048576" crc="c775d653" md5="e99687d3558fd7fc4af702ea1abd9957" sha1="82ac50380c3ed39fad13cc0bbe35e6457806a294"/>
+	</game>
+	<game name="Casper (USA) (Rev 1) (Proto)" cloneof="Casper (Europe) (En,Fr,De)">
+		<description>Casper (USA) (Rev 1) (Proto)</description>
+		<rom name="Casper (USA) (Rev 1) (Proto).gbc" size="1048576" crc="5edd88b5" md5="1453eaee1c4c0197b2feed653e5ff342" sha1="6f44a817c7424a5b24919b01e1e868d2c2650341"/>
 	</game>
 	<game name="Caterpillar Construction Zone (USA, Europe) (GB Compatible)">
 		<description>Caterpillar Construction Zone (USA, Europe) (GB Compatible)</description>
@@ -1052,6 +1091,11 @@
 	<game name="CGB Test Cartridge (Japan) (En)">
 		<description>CGB Test Cartridge (Japan) (En)</description>
 		<rom name="CGB Test Cartridge (Japan) (En).gbc" size="65536" crc="4c050e29" md5="656b6f47251d18c1606c41e53ef62119" sha1="5133d3dc7a4ced9d059dc72f0f351cb44e22f096"/>
+	</game>
+	<game name="Challenger GB (USA) (Unl)">
+		<description>Challenger GB (USA) (Unl)</description>
+		<release name="Challenger GB (USA) (Unl)" region="USA"/>
+		<rom name="Challenger GB (USA) (Unl).gbc" size="32768" crc="59579caa" md5="bb3d567c4476a73151d88b1f42243fd5" sha1="d88c4f29a8d383b2becfe4123671c5ce1f5fdf7b"/>
 	</game>
 	<game name="Championship Motocross 2001 featuring Ricky Carmichael (USA, Europe)">
 		<description>Championship Motocross 2001 featuring Ricky Carmichael (USA, Europe)</description>
@@ -1400,6 +1444,10 @@
 		<release name="Dejiko no Mahjong Party (Japan)" region="JPN"/>
 		<rom name="Dejiko no Mahjong Party (Japan).gbc" size="2097152" crc="c5501fce" md5="314fddcec1489efe4a4f959d353ee4db" sha1="d9dd4196a85bceee6e77a317a357e9e0b14d26eb"/>
 	</game>
+	<game name="Dejiko no Mahjong Party (Japan) (Rev 1) (Proto)" cloneof="Dejiko no Mahjong Party (Japan)">
+		<description>Dejiko no Mahjong Party (Japan) (Rev 1) (Proto)</description>
+		<rom name="Dejiko no Mahjong Party (Japan) (Rev 1) (Proto).gbc" size="2097152" crc="7e515a7e" md5="3b24fbc8e72140fab38a9874b587c479" sha1="fbc2b66a6595bbb3ed85f35545152442283eaea3"/>
+	</game>
 	<game name="Denki Blocks! (Europe) (En,Fr,De,Es,It)">
 		<description>Denki Blocks! (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Denki Blocks! (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -1414,6 +1462,12 @@
 		<description>Densha de Go! 2 (Japan)</description>
 		<release name="Densha de Go! 2 (Japan)" region="JPN"/>
 		<rom name="Densha de Go! 2 (Japan).gbc" size="8388608" crc="b72603fc" md5="ab58102005b510a2d905ed7de9d6267a" sha1="63bcca7177712a9bc6f032c83c2e129d9b9af0fa" status="verified"/>
+	</game>
+	<game name="Dexter's Laboratory - Robot Rampage (USA, Europe)">
+		<description>Dexter's Laboratory - Robot Rampage (USA, Europe)</description>
+		<release name="Dexter's Laboratory - Robot Rampage (USA, Europe)" region="EUR"/>
+		<release name="Dexter's Laboratory - Robot Rampage (USA, Europe)" region="USA"/>
+		<rom name="Dexter's Laboratory - Robot Rampage (USA, Europe).gbc" size="1048576" crc="d24d6601" md5="2a147b2d7731ac26a999390c3f5ff2ac" sha1="db107af55df07fb8c771c712b05d6aebb175e3c5"/>
 	</game>
 	<game name="Dino Breeder 3 - Gaia Fukkatsu (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Dino Breeder 3 - Gaia Fukkatsu (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -1656,9 +1710,9 @@
 		<description>Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 2)</description>
 		<rom name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 2).gbc" size="2097152" crc="2353bbe4" md5="0256340ec50afb921f07763ea4628966" sha1="b93c142b6da94c7d69956011ccbda9f22e5fae9f"/>
 	</game>
-	<game name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta) (All Unlocked)" cloneof="Dragon Ball Z - Legendary Super Warriors (Europe)">
-		<description>Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta) (All Unlocked)</description>
-		<rom name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta) (All Unlocked).gbc" size="2097152" crc="f646bd3b" md5="ca74e5da2f81da8280ca6aa6e6fc4788" sha1="08a947763c36f4ad64f51c388da863d5852540a1"/>
+	<game name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 3) (All Unlocked)" cloneof="Dragon Ball Z - Legendary Super Warriors (Europe)">
+		<description>Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 3) (All Unlocked)</description>
+		<rom name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 3) (All Unlocked).gbc" size="2097152" crc="f646bd3b" md5="ca74e5da2f81da8280ca6aa6e6fc4788" sha1="08a947763c36f4ad64f51c388da863d5852540a1"/>
 	</game>
 	<game name="Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 3)" cloneof="Dragon Ball Z - Legendary Super Warriors (Europe)">
 		<description>Dragon Ball Z - Legendaere Superkaempfer (Germany) (Beta 3)</description>
@@ -1691,6 +1745,15 @@
 		<description>Dragon Dance (USA) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Dragon Dance (USA) (SGB Enhanced) (GB Compatible)" region="USA"/>
 		<rom name="Dragon Dance (USA) (SGB Enhanced) (GB Compatible).gbc" size="262144" crc="0602dbe1" md5="0c6a0f2add131ca4afd24763fe3c3a04" sha1="a28bfabc4db62ad5aa6bfe29114b0878429586cc"/>
+	</game>
+	<game name="Dragon Dance (Europe) (Proto) (SGB Enhanced) (GB Compatible)" cloneof="Dragon Dance (USA) (SGB Enhanced) (GB Compatible)">
+		<description>Dragon Dance (Europe) (Proto) (SGB Enhanced) (GB Compatible)</description>
+		<release name="Dragon Dance (Europe) (Proto) (SGB Enhanced) (GB Compatible)" region="EUR"/>
+		<rom name="Dragon Dance (Europe) (Proto) (SGB Enhanced) (GB Compatible).gbc" size="262144" crc="8b0dd3b2" md5="e027bb984964e07be2feeaa712715987" sha1="76de183317c952276dbdad9d8f0592493652f31e"/>
+	</game>
+	<game name="Dragon Dance (USA) (Beta) (SGB Enhanced) (GB Compatible)" cloneof="Dragon Dance (USA) (SGB Enhanced) (GB Compatible)">
+		<description>Dragon Dance (USA) (Beta) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Dragon Dance (USA) (Beta) (SGB Enhanced) (GB Compatible).gbc" size="262144" crc="a0cd0ed7" md5="2ccd7a904115b2a96c8b398a142854e2" sha1="7df48e776ce2be88f7a9459530b855cef2f012b6"/>
 	</game>
 	<game name="Pocket Color Block (Japan) (SGB Enhanced) (GB Compatible)" cloneof="Dragon Dance (USA) (SGB Enhanced) (GB Compatible)">
 		<description>Pocket Color Block (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -1751,6 +1814,10 @@
 		<release name="Dragon Quest Monsters - Terry no Wonderland (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Dragon Quest Monsters - Terry no Wonderland (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="d263d88d" md5="b28c999d1b43e8e39998827ff39965cc" sha1="a32198d1645741979e24956afd6479b64c258647" status="verified"/>
 	</game>
+	<game name="Dragon Quest Monsters - Terry no Wonderland (Japan) (Rev 1) (SGB Enhanced, GB Compatible) (NP)" cloneof="Dragon Warrior Monsters (USA, Europe) (SGB Enhanced) (GB Compatible)">
+		<description>Dragon Quest Monsters - Terry no Wonderland (Japan) (Rev 1) (SGB Enhanced, GB Compatible) (NP)</description>
+		<rom name="Dragon Quest Monsters - Terry no Wonderland (Japan) (Rev 1) (SGB Enhanced, GB Compatible) (NP).gbc" size="2097152" crc="66b83e3a" md5="1ee701313c509947d7e9ce0e54a85cb3" sha1="378794e041f2eb286f2d5243a3cada2faf265bb5"/>
+	</game>
 	<game name="Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible)">
 		<description>Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible)" region="USA"/>
@@ -1763,7 +1830,7 @@
 	<game name="Dragon Quest Monsters 2 - Maruta no Fushigi na Kagi - Ruka no Tabidachi (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Dragon Warrior Monsters 2 - Cobi's Journey (USA) (SGB Enhanced) (GB Compatible)">
 		<description>Dragon Quest Monsters 2 - Maruta no Fushigi na Kagi - Ruka no Tabidachi (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Dragon Quest Monsters 2 - Maruta no Fushigi na Kagi - Ruka no Tabidachi (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" region="JPN"/>
-		<rom name="Dragon Quest Monsters 2 - Maruta no Fushigi na Kagi - Ruka no Tabidachi (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="649e8d97" md5="b863839c61e45db5c6c6492d24688032" sha1="217faaf8e7d60545bd07f818a3b3373843e6318d"/>
+		<rom name="Dragon Quest Monsters 2 - Maruta no Fushigi na Kagi - Ruka no Tabidachi (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="649e8d97" md5="b863839c61e45db5c6c6492d24688032" sha1="217faaf8e7d60545bd07f818a3b3373843e6318d" status="verified"/>
 	</game>
 	<game name="Dragon Warrior Monsters 2 - Tara's Adventure (USA) (SGB Enhanced) (GB Compatible)">
 		<description>Dragon Warrior Monsters 2 - Tara's Adventure (USA) (SGB Enhanced) (GB Compatible)</description>
@@ -1826,6 +1893,10 @@
 		<release name="Dungeon Savior (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Dungeon Savior (Japan) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="2bcb5f78" md5="3f56e5776ff9a2b08a0c22f5eacf6017" sha1="766ab65d9420f361d8d9a4754ea8c6b692e34c36"/>
 	</game>
+	<game name="Dungeon Savior (Japan) (Rev 1) (Proto) (SGB Enhanced) (GB Compatible)" cloneof="Dungeon Savior (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Dungeon Savior (Japan) (Rev 1) (Proto) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Dungeon Savior (Japan) (Rev 1) (Proto) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="0180364b" md5="64e6738e474b22efd3132e786c18271f" sha1="c5e93f04cc41404320aaf70eb10b55465edb1083"/>
+	</game>
 	<game name="DX Jinsei Game (Japan)">
 		<description>DX Jinsei Game (Japan)</description>
 		<release name="DX Jinsei Game (Japan)" region="JPN"/>
@@ -1887,11 +1958,6 @@
 		<description>Elevator Action EX (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Elevator Action EX (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Elevator Action EX (Europe) (En,Fr,De,Es,It).gbc" size="1048576" crc="2154763c" md5="f88959b615f284cc120cd17f5263d018" sha1="498308efb907c8dc79c9699d27ff349941fac23a"/>
-	</game>
-	<game name="Dexter's Laboratory - Robot Rampage (USA, Europe)" cloneof="Elevator Action EX (Europe) (En,Fr,De,Es,It)">
-		<description>Dexter's Laboratory - Robot Rampage (USA, Europe)</description>
-		<release name="Dexter's Laboratory - Robot Rampage (USA, Europe)" region="USA"/>
-		<rom name="Dexter's Laboratory - Robot Rampage (USA, Europe).gbc" size="1048576" crc="d24d6601" md5="2a147b2d7731ac26a999390c3f5ff2ac" sha1="db107af55df07fb8c771c712b05d6aebb175e3c5"/>
 	</game>
 	<game name="Elevator Action EX (Japan)" cloneof="Elevator Action EX (Europe) (En,Fr,De,Es,It)">
 		<description>Elevator Action EX (Japan)</description>
@@ -1962,6 +2028,11 @@
 	<game name="F-1 World Grand Prix (Europe) (Beta)" cloneof="F-1 World Grand Prix (Europe) (En,Fr,De,Es)">
 		<description>F-1 World Grand Prix (Europe) (Beta)</description>
 		<rom name="F-1 World Grand Prix (Europe) (Beta).gbc" size="2097152" crc="d6496fe9" md5="09c21d37f66cca587663a461c81606be" sha1="9285bb4fbab8678b65cc8736f43e4ea3895c1cf4"/>
+	</game>
+	<game name="F-1 World Grand Prix (Japan) (En) (NP)" cloneof="F-1 World Grand Prix (Europe) (En,Fr,De,Es)">
+		<description>F-1 World Grand Prix (Japan) (En) (NP)</description>
+		<release name="F-1 World Grand Prix (Japan) (En) (NP)" region="JPN"/>
+		<rom name="F-1 World Grand Prix (Japan) (En) (NP).gbc" size="1048576" crc="5e24811e" md5="5dfe3d8c181023b30cfc942a9aa40a69" sha1="25c83cb589ce85917b99757090a94e588cb799b9"/>
 	</game>
 	<game name="F-18 Thunder Strike (USA, Europe)">
 		<description>F-18 Thunder Strike (USA, Europe)</description>
@@ -2087,6 +2158,11 @@
 		<release name="Formula One 2000 (USA)" region="USA"/>
 		<rom name="Formula One 2000 (USA).gbc" size="1048576" crc="703c057f" md5="3e7736b358b7750bb451d505816d8b11" sha1="7a38195842e536581fdcea42e4ebe50967581736"/>
 	</game>
+	<game name="Formula One 2000 (Europe) (En,Fr,De,Es,It) (Proto)" cloneof="Formula One 2000 (USA)">
+		<description>Formula One 2000 (Europe) (En,Fr,De,Es,It) (Proto)</description>
+		<release name="Formula One 2000 (Europe) (En,Fr,De,Es,It) (Proto)" region="EUR"/>
+		<rom name="Formula One 2000 (Europe) (En,Fr,De,Es,It) (Proto).gbc" size="1048576" crc="e689bf16" md5="5dda88b002742dc16fd232ad569dc4c8" sha1="7aa7073b7b494522f7cfcd268aa066b7fe52c671"/>
+	</game>
 	<game name="Fort Boyard (Europe) (En,Fr,De,Es,It,Nl,Pt)">
 		<description>Fort Boyard (Europe) (En,Fr,De,Es,It,Nl,Pt)</description>
 		<release name="Fort Boyard (Europe) (En,Fr,De,Es,It,Nl,Pt)" region="EUR"/>
@@ -2123,6 +2199,14 @@
 		<description>From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="a7317bb8" md5="b883323e9ae3c85548169babe3f9b4f0" sha1="7fa5fbb94390876dee807216c2097cdb42510efe"/>
+	</game>
+	<game name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 1) (SGB Enhanced) (GB Compatible)" cloneof="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 1) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 1) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="a86de7b7" md5="d4b6a73e0b9c9bd7dc88baa36c839723" sha1="f2c04440f5d668b14623c924faec460f63158a29"/>
+	</game>
+	<game name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 2) (SGB Enhanced) (GB Compatible)" cloneof="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 2) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="From TV Animation One Piece - Maboroshi no Grand Line Boukenki! (Japan) (Beta 2) (SGB Enhanced) (GB Compatible).gbc" size="4194304" crc="419befcc" md5="3143162338a87a52b49d8791909c2b3d" sha1="e11809babdca45527b81d7db02741263407aeb46"/>
 	</game>
 	<game name="From TV Animation One Piece - Yume no Luffy Kaizokudan Tanjou! (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)">
 		<description>From TV Animation One Piece - Yume no Luffy Kaizokudan Tanjou! (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
@@ -2167,9 +2251,9 @@
 		<release name="Gakkyuu Ou Yamazaki (Japan) (Rev 1) (GB Compatible)" region="JPN"/>
 		<rom name="Gakkyuu Ou Yamazaki (Japan) (Rev 1) (GB Compatible).gbc" size="1048576" crc="ef2cfd99" md5="52a9d2992a270ee3184553caf4fdba2b" sha1="3a2718efa3d1cac7345fbbcddb7c3f666fc6c70c" status="verified"/>
 	</game>
-	<game name="Gakkyuu Ou Yamazaki (Japan) (Possible Proto) (GB Compatible)" cloneof="Gakkyuu Ou Yamazaki (Japan) (Rev 1) (GB Compatible)">
-		<description>Gakkyuu Ou Yamazaki (Japan) (Possible Proto) (GB Compatible)</description>
-		<rom name="Gakkyuu Ou Yamazaki (Japan) (Possible Proto) (GB Compatible).gbc" size="1048576" crc="b8147b5c" md5="f6e5ce8f0b2f886c6f26af215e2438cf" sha1="132b872391565d418ccc9d0e1c643510d778c066"/>
+	<game name="Gakkyuu Ou Yamazaki (Japan) (GB Compatible)" cloneof="Gakkyuu Ou Yamazaki (Japan) (Rev 1) (GB Compatible)">
+		<description>Gakkyuu Ou Yamazaki (Japan) (GB Compatible)</description>
+		<rom name="Gakkyuu Ou Yamazaki (Japan) (GB Compatible).gbc" size="1048576" crc="b8147b5c" md5="f6e5ce8f0b2f886c6f26af215e2438cf" sha1="132b872391565d418ccc9d0e1c643510d778c066"/>
 	</game>
 	<game name="Galaga - Destination Earth (USA)">
 		<description>Galaga - Destination Earth (USA)</description>
@@ -2190,6 +2274,11 @@
 		<release name="Game &amp; Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible)" region="EUR"/>
 		<release name="Game &amp; Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible)" region="USA"/>
 		<rom name="Game &amp; Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="969c8961" md5="cbf4a5b2ff566554b014118e3d0e3e9a" sha1="ce81d3260e8c5e1dd241caf6de315eb3e63dbc15" status="verified"/>
+	</game>
+	<game name="Game Boy Gallery 2 (Japan) (SGB Enhanced, GB Compatible) (NP)" cloneof="Game &amp; Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible)">
+		<description>Game Boy Gallery 2 (Japan) (SGB Enhanced, GB Compatible) (NP)</description>
+		<release name="Game Boy Gallery 2 (Japan) (SGB Enhanced, GB Compatible) (NP)" region="JPN"/>
+		<rom name="Game Boy Gallery 2 (Japan) (SGB Enhanced, GB Compatible) (NP).gbc" size="1048576" crc="e99beba5" md5="d8de3e22c969198f8701bf861cc60974" sha1="90a9b368bca0f47fe72028ff4d50fb3d3060c32f"/>
 	</game>
 	<game name="Game Boy Gallery 3 (Australia) (SGB Enhanced) (GB Compatible)" cloneof="Game &amp; Watch Gallery 2 (USA, Europe) (SGB Enhanced) (GB Compatible)">
 		<description>Game Boy Gallery 3 (Australia) (SGB Enhanced) (GB Compatible)</description>
@@ -2348,10 +2437,18 @@
 		<description>Gift (Europe) (Sample)</description>
 		<rom name="Gift (Europe) (Sample).gbc" size="1048576" crc="d8e357ba" md5="bcf3e2445346b4ef40c1278b4b46408c" sha1="a9e2d5e1fd5d3993acb87888d287612a09ecaa8b"/>
 	</game>
+	<game name="Gift (Europe) (Rev 1) (Proto)" cloneof="Gift (Europe)">
+		<description>Gift (Europe) (Rev 1) (Proto)</description>
+		<rom name="Gift (Europe) (Rev 1) (Proto).gbc" size="1048576" crc="19681ac2" md5="0f3161b9427b5540ff20f0d793a5d047" sha1="12561be4c0979b9dc8ba22caff8ac3513e1611a6"/>
+	</game>
 	<game name="Gifty (Germany) (En)" cloneof="Gift (Europe)">
 		<description>Gifty (Germany) (En)</description>
 		<release name="Gifty (Germany) (En)" region="GER"/>
 		<rom name="Gifty (Germany) (En).gbc" size="1048576" crc="b97a8cb8" md5="d1b2c36def4b361645eae44f6a0c53ea" sha1="f92997128f6bce74f5e5c0787f98fa3d2b6c3133"/>
+	</game>
+	<game name="Gifty (Germany) (En) (Rev 1) (Proto)" cloneof="Gift (Europe)">
+		<description>Gifty (Germany) (En) (Rev 1) (Proto)</description>
+		<rom name="Gifty (Germany) (En) (Rev 1) (Proto).gbc" size="1048576" crc="96b929e8" md5="1bf7c941e9d9fb2d34b51e142f3db5e4" sha1="b0c9eb2ad7a41f17d8621c40a5c0ae3e53166253"/>
 	</game>
 	<game name="Gimmick Land (Japan) (Proto)">
 		<description>Gimmick Land (Japan) (Proto)</description>
@@ -2403,19 +2500,19 @@
 		<release name="Pro Foot (France) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)" region="FRA"/>
 		<rom name="Pro Foot (France) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible).gbc" size="1048576" crc="a9905932" md5="71608f971986dd740c8e94f61f9cd020" sha1="c43daa82286d3a910a6a922d4ea722c594a2cde0"/>
 	</game>
-	<game name="Three Lions (Europe) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)" cloneof="Golden Goal (Europe) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)">
-		<description>Three Lions (Europe) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)</description>
-		<rom name="Three Lions (Europe) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible).gbc" size="1048576" crc="1cbea1aa" md5="bd34182264a2f503d4e6982718d3bb6d" sha1="d6d4eb47595b72c9c3ad77b5f9fa85b76f0acf4c"/>
+	<game name="Three Lions (United Kingdom) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)" cloneof="Golden Goal (Europe) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)">
+		<description>Three Lions (United Kingdom) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible)</description>
+		<rom name="Three Lions (United Kingdom) (En,Fr,De,Es,It,Nl,Sv) (GB Compatible).gbc" size="1048576" crc="1cbea1aa" md5="bd34182264a2f503d4e6982718d3bb6d" sha1="d6d4eb47595b72c9c3ad77b5f9fa85b76f0acf4c"/>
 	</game>
 	<game name="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="80444a86" md5="ef24106662ae769dba0c410933736332" sha1="d245a267b1b1d056e0f5af4ba732c66c8deadde2"/>
 	</game>
-	<game name="Pocket Golf! (USA) (Proto)" cloneof="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)">
-		<description>Pocket Golf! (USA) (Proto)</description>
-		<release name="Pocket Golf! (USA) (Proto)" region="USA"/>
-		<rom name="Pocket Golf! (USA) (Proto).gbc" size="2097152" crc="d06ecb1f" md5="f2842c70cae57f3e7619966bd1dae886" sha1="bbe2651547c1f3c79bbf822b41ddbb54133a489f"/>
+	<game name="Pocket Golf! (USA) (Proto) (SGB Enhanced) (GB Compatible)" cloneof="Golf Daisuki! (Japan) (SGB Enhanced) (GB Compatible)">
+		<description>Pocket Golf! (USA) (Proto) (SGB Enhanced) (GB Compatible)</description>
+		<release name="Pocket Golf! (USA) (Proto) (SGB Enhanced) (GB Compatible)" region="USA"/>
+		<rom name="Pocket Golf! (USA) (Proto) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="d06ecb1f" md5="f2842c70cae57f3e7619966bd1dae886" sha1="bbe2651547c1f3c79bbf822b41ddbb54133a489f"/>
 	</game>
 	<game name="Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Golf Ou - The King of Golf (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -2459,7 +2556,7 @@
 	<game name="Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It)">
 		<description>Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It).gbc" size="2097152" crc="ad563bd9" md5="7de54692e7b42e945b318d20079a5efd" sha1="a7577d81de3ab03b93b364f9e775c303c842dad2"/>
+		<rom name="Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It).gbc" size="2097152" crc="ad563bd9" md5="7de54692e7b42e945b318d20079a5efd" sha1="a7577d81de3ab03b93b364f9e775c303c842dad2" status="verified"/>
 	</game>
 	<game name="Grand Theft Auto 2 (USA)" cloneof="Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It)">
 		<description>Grand Theft Auto 2 (USA)</description>
@@ -2484,6 +2581,18 @@
 		<description>Great Battle Pocket, The (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Great Battle Pocket, The (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Great Battle Pocket, The (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="b471c095" md5="e952d78a439e47ab4d77b563973797d5" sha1="617752e18894590b5959f565f1cdbfd218141e7d"/>
+	</game>
+	<game name="Green Beret (Unknown) (Proto 3)">
+		<description>Green Beret (Unknown) (Proto 3)</description>
+		<rom name="Green Beret (Unknown) (Proto 3).gbc" size="262144" crc="fac3f4c5" md5="efeb35261663e96d216615704c469a77" sha1="dd69f3d9ef87198334b4cc0f54c88a29fb353e44"/>
+	</game>
+	<game name="Green Beret (Unknown) (Proto 1)" cloneof="Green Beret (Unknown) (Proto 3)">
+		<description>Green Beret (Unknown) (Proto 1)</description>
+		<rom name="Green Beret (Unknown) (Proto 1).gbc" size="32768" crc="c66c546f" md5="7aa123c53442881d101036559e704dca" sha1="5b92b0db1af9803e27a4ebb23ad9ed8377d6d87b"/>
+	</game>
+	<game name="Green Beret (Unknown) (Proto 2)" cloneof="Green Beret (Unknown) (Proto 3)">
+		<description>Green Beret (Unknown) (Proto 2)</description>
+		<rom name="Green Beret (Unknown) (Proto 2).gbc" size="65536" crc="702af305" md5="37817f1d239b5c8b8c2dac4d49262d7d" sha1="f8e6ee070147c56e280abf2a31316ee8124b953c"/>
 	</game>
 	<game name="Gremlins - Unleashed (Europe) (En,Fr,De,Es,It,Pt)">
 		<description>Gremlins - Unleashed (Europe) (En,Fr,De,Es,It,Pt)</description>
@@ -2724,10 +2833,10 @@
 		<release name="Hello Kitty's Cube Frenzy (USA) (GB Compatible)" region="USA"/>
 		<rom name="Hello Kitty's Cube Frenzy (USA) (GB Compatible).gbc" size="1048576" crc="937729f6" md5="29f236dd1a64c15a7c1f66110579ccc3" sha1="6f15379553a0ec8a8174b85a35eaa4085dec6b43"/>
 	</game>
-	<game name="Hello Kitty's Cube Frenzy (Europe) (Proto)" cloneof="Hello Kitty's Cube Frenzy (USA) (GB Compatible)">
-		<description>Hello Kitty's Cube Frenzy (Europe) (Proto)</description>
-		<release name="Hello Kitty's Cube Frenzy (Europe) (Proto)" region="EUR"/>
-		<rom name="Hello Kitty's Cube Frenzy (Europe) (Proto).gbc" size="1048576" crc="9606a07f" md5="5e374708237a17f322a077daba43ac76" sha1="2225da8a68e489c0f562afcb8e90fc9387321af0"/>
+	<game name="Hello Kitty's Cube Frenzy (Europe) (Proto) (GB Compatible)" cloneof="Hello Kitty's Cube Frenzy (USA) (GB Compatible)">
+		<description>Hello Kitty's Cube Frenzy (Europe) (Proto) (GB Compatible)</description>
+		<release name="Hello Kitty's Cube Frenzy (Europe) (Proto) (GB Compatible)" region="EUR"/>
+		<rom name="Hello Kitty's Cube Frenzy (Europe) (Proto) (GB Compatible).gbc" size="1048576" crc="9606a07f" md5="5e374708237a17f322a077daba43ac76" sha1="2225da8a68e489c0f562afcb8e90fc9387321af0"/>
 	</game>
 	<game name="Hercules - The Legendary Journeys (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Hercules - The Legendary Journeys (Europe) (En,Fr,De,Es,It,Nl)</description>
@@ -2749,6 +2858,10 @@
 		<release name="Heroes of Might and Magic (USA) (En,Fr,De)" region="USA"/>
 		<rom name="Heroes of Might and Magic (USA) (En,Fr,De).gbc" size="1048576" crc="bb0672a6" md5="6a2a5ab0dc979f162cbfa4389d1cd71f" sha1="209d8a9cdd240a8c73d03d8575373bfa53948869"/>
 	</game>
+	<game name="Heroes of Might and Magic (USA) (En,Fr,De) (Rev 1) (Proto)" cloneof="Heroes of Might and Magic (Europe) (En,Fr,De)">
+		<description>Heroes of Might and Magic (USA) (En,Fr,De) (Rev 1) (Proto)</description>
+		<rom name="Heroes of Might and Magic (USA) (En,Fr,De) (Rev 1) (Proto).gbc" size="1048576" crc="0753927e" md5="14889eccdacd80ce70fc88a74a216fa6" sha1="2ad31a64d113909180fd85dc6707a3c487ec2bfb"/>
+	</game>
 	<game name="Heroes of Might and Magic II (USA) (En,Fr,De)">
 		<description>Heroes of Might and Magic II (USA) (En,Fr,De)</description>
 		<release name="Heroes of Might and Magic II (USA) (En,Fr,De)" region="USA"/>
@@ -2764,6 +2877,10 @@
 		<description>Glocal Hexcite (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Glocal Hexcite (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Glocal Hexcite (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f1908391" md5="e019b0790ef6e7b2dd39afdbec8ba651" sha1="7d13220593c8d89af1b4cae955caacff7df3817a"/>
+	</game>
+	<game name="Hexcite (Europe) (En,Fr,De) (Proto) (SGB Enhanced) (GB Compatible)" cloneof="Hexcite - The Shapes of Victory (USA, Europe) (SGB Enhanced) (GB Compatible)">
+		<description>Hexcite (Europe) (En,Fr,De) (Proto) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Hexcite (Europe) (En,Fr,De) (Proto) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="2c6bdcfa" md5="410677787033aa6a5e36fa57eb9a1262" sha1="9380ad9ccc193682eb98be7d7447dabadd67beae"/>
 	</game>
 	<game name="Hiryuu no Ken - Retsuden GB (Japan)">
 		<description>Hiryuu no Ken - Retsuden GB (Japan)</description>
@@ -2870,10 +2987,10 @@
 		<release name="Hype - The Time Quest (Europe) (En,Fr,De,Es,It,Nl,Sv,Da)" region="EUR"/>
 		<rom name="Hype - The Time Quest (Europe) (En,Fr,De,Es,It,Nl,Sv,Da).gbc" size="1048576" crc="24846d65" md5="7039b471857d20f77a5ba7f48065ed53" sha1="8e26e7e2e64d4bf866b67387586fc5c4a9c56855"/>
 	</game>
-	<game name="Hype - The Time Quest (Brazil)" cloneof="Hype - The Time Quest (Europe) (En,Fr,De,Es,It,Nl,Sv,Da)">
-		<description>Hype - The Time Quest (Brazil)</description>
-		<release name="Hype - The Time Quest (Brazil)" region="BRA"/>
-		<rom name="Hype - The Time Quest (Brazil).gbc" size="1048576" crc="cafb8035" md5="0d8cd9b749af9f5e8463cf3f48b36090" sha1="7c7dca7c48dc478d0278c273ba37723b9e9dce5b"/>
+	<game name="Hype - The Time Quest (Brazil) (En)" cloneof="Hype - The Time Quest (Europe) (En,Fr,De,Es,It,Nl,Sv,Da)">
+		<description>Hype - The Time Quest (Brazil) (En)</description>
+		<release name="Hype - The Time Quest (Brazil) (En)" region="BRA"/>
+		<rom name="Hype - The Time Quest (Brazil) (En).gbc" size="1048576" crc="cafb8035" md5="0d8cd9b749af9f5e8463cf3f48b36090" sha1="7c7dca7c48dc478d0278c273ba37723b9e9dce5b"/>
 	</game>
 	<game name="Ide Yousuke no Mahjong Kyoushitsu GB (Japan)">
 		<description>Ide Yousuke no Mahjong Kyoushitsu GB (Japan)</description>
@@ -3006,16 +3123,21 @@
 		<release name="Jeff Gordon XS Racing (USA) (GB Compatible)" region="USA"/>
 		<rom name="Jeff Gordon XS Racing (USA) (GB Compatible).gbc" size="1048576" crc="a41ed926" md5="4e745e7febe4214c484d9c1e0a62ae57" sha1="3939bd5c3ba034ebb19395d4292f82b703629468"/>
 	</game>
-	<game name="EuroSport XS Racing (Europe) (Proto) (Unl)" cloneof="Jeff Gordon XS Racing (USA) (GB Compatible)">
-		<description>EuroSport XS Racing (Europe) (Proto) (Unl)</description>
-		<release name="EuroSport XS Racing (Europe) (Proto) (Unl)" region="EUR"/>
-		<rom name="EuroSport XS Racing (Europe) (Proto) (Unl).gbc" size="1048576" crc="ca0abfca" md5="f3da15bac37fd41582d8901d55fdc203" sha1="b3dda41ef755cc78680858103bad07d064e155ac"/>
+	<game name="EuroSport XS Racing (Europe) (Proto) (GB Compatible)" cloneof="Jeff Gordon XS Racing (USA) (GB Compatible)">
+		<description>EuroSport XS Racing (Europe) (Proto) (GB Compatible)</description>
+		<release name="EuroSport XS Racing (Europe) (Proto) (GB Compatible)" region="EUR"/>
+		<rom name="EuroSport XS Racing (Europe) (Proto) (GB Compatible).gbc" size="1048576" crc="ca0abfca" md5="f3da15bac37fd41582d8901d55fdc203" sha1="b3dda41ef755cc78680858103bad07d064e155ac"/>
 	</game>
 	<game name="Jeremy McGrath Supercross 2000 (USA, Europe)">
 		<description>Jeremy McGrath Supercross 2000 (USA, Europe)</description>
 		<release name="Jeremy McGrath Supercross 2000 (USA, Europe)" region="EUR"/>
 		<release name="Jeremy McGrath Supercross 2000 (USA, Europe)" region="USA"/>
 		<rom name="Jeremy McGrath Supercross 2000 (USA, Europe).gbc" size="1048576" crc="f0f9abe6" md5="0143dbb62b1a88e7cce65f9779ce9d4b" sha1="5b48252bde9f47d0ffd33f0e84cf30ec769946e7"/>
+	</game>
+	<game name="Jeremy McGrath Supercross 2000 (Japan) (En) (NP)" cloneof="Jeremy McGrath Supercross 2000 (USA, Europe)">
+		<description>Jeremy McGrath Supercross 2000 (Japan) (En) (NP)</description>
+		<release name="Jeremy McGrath Supercross 2000 (Japan) (En) (NP)" region="JPN"/>
+		<rom name="Jeremy McGrath Supercross 2000 (Japan) (En) (NP).gbc" size="1048576" crc="666d2a75" md5="600e9e24ebbe4f2b8a09d429b4aee54c" sha1="dd204c1d47290f52ef264ce32d59cb5f58a2701d"/>
 	</game>
 	<game name="Jet de Go! - Let's Go by Airliner (Japan)">
 		<description>Jet de Go! - Let's Go by Airliner (Japan)</description>
@@ -3055,6 +3177,11 @@
 		<description>Jimmy White's Cueball (Europe)</description>
 		<release name="Jimmy White's Cueball (Europe)" region="EUR"/>
 		<rom name="Jimmy White's Cueball (Europe).gbc" size="1048576" crc="27632f4f" md5="8e23226758be3ae7a83803f9147ada5e" sha1="ed9a76a235edd862f642b4dc974cd37126a267a8"/>
+	</game>
+	<game name="Jimmy White's Cueball (USA) (Proto)" cloneof="Jimmy White's Cueball (Europe)">
+		<description>Jimmy White's Cueball (USA) (Proto)</description>
+		<release name="Jimmy White's Cueball (USA) (Proto)" region="USA"/>
+		<rom name="Jimmy White's Cueball (USA) (Proto).gbc" size="1048576" crc="62c49da9" md5="12d8b6827053a17b8301efeb1586c83f" sha1="54a72ed5ef210b947a97e81208752c4431ef715c"/>
 	</game>
 	<game name="Jinsei Game - Tomodachi Takusan Tsukurou yo! (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Jinsei Game - Tomodachi Takusan Tsukurou yo! (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -3204,7 +3331,7 @@
 	<game name="Karate Joe (Europe) (Unl)">
 		<description>Karate Joe (Europe) (Unl)</description>
 		<release name="Karate Joe (Europe) (Unl)" region="EUR"/>
-		<rom name="Karate Joe (Europe) (Unl).gbc" size="262144" crc="b8a54e29" md5="3abeffb860d9e7bea74ce18d0e67029d" sha1="bc9e760dcc851a01240b49b28cde8fe5ab18df91" status="verified"/>
+		<rom name="Karate Joe (Europe) (Unl).gbc" size="262144" crc="b8a54e29" md5="3abeffb860d9e7bea74ce18d0e67029d" sha1="bc9e760dcc851a01240b49b28cde8fe5ab18df91"/>
 	</game>
 	<game name="Kaseki Sousei Reborn II - Monster Digger (Japan) (SGB Enhanced) (GB Compatible)">
 		<description>Kaseki Sousei Reborn II - Monster Digger (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -3334,17 +3461,17 @@
 		<release name="Klustar (USA) (GB Compatible)" region="USA"/>
 		<rom name="Klustar (USA) (GB Compatible).gbc" size="262144" crc="3f8d6041" md5="d0308455ba266cc5b0cd6ca9b671cb4b" sha1="096748f23f61e83837568c4070a34572d11ff48e"/>
 	</game>
-	<game name="Klustar (Japan) (Proto)" cloneof="Klustar (Europe) (En,Fr,De,Es,It) (GB Compatible)">
-		<description>Klustar (Japan) (Proto)</description>
-		<rom name="Klustar (Japan) (Proto).gbc" size="262144" crc="65da9075" md5="ee5fe52488da10e838a123649d33d809" sha1="9c60c858f647b42007fc27c5d21f3f57923c4cda"/>
+	<game name="Klustar (Japan) (Proto 2) (1999-09-28) (GB Compatible)" cloneof="Klustar (Europe) (En,Fr,De,Es,It) (GB Compatible)">
+		<description>Klustar (Japan) (Proto 2) (1999-09-28) (GB Compatible)</description>
+		<rom name="Klustar (Japan) (Proto 2) (1999-09-28) (GB Compatible).gbc" size="262144" crc="65da9075" md5="ee5fe52488da10e838a123649d33d809" sha1="9c60c858f647b42007fc27c5d21f3f57923c4cda"/>
 	</game>
 	<game name="Klustar (Europe) (En,Fr,De,Es,It) (Beta) (1998-10-01) (GB Compatible)" cloneof="Klustar (Europe) (En,Fr,De,Es,It) (GB Compatible)">
 		<description>Klustar (Europe) (En,Fr,De,Es,It) (Beta) (1998-10-01) (GB Compatible)</description>
 		<rom name="Klustar (Europe) (En,Fr,De,Es,It) (Beta) (1998-10-01) (GB Compatible).gbc" size="131072" crc="fc56bb35" md5="dca07583bc53befabea1d5467d4ec4d2" sha1="7512484c9c84592e65f19f135cbe629f5a1ee84e"/>
 	</game>
-	<game name="Klustar (Japan) (Beta) (1998-10-01) (GB Compatible)" cloneof="Klustar (Europe) (En,Fr,De,Es,It) (GB Compatible)">
-		<description>Klustar (Japan) (Beta) (1998-10-01) (GB Compatible)</description>
-		<rom name="Klustar (Japan) (Beta) (1998-10-01) (GB Compatible).gbc" size="131072" crc="f9c6e0a5" md5="bcf0f4e74c63c6f11e46353cf51c27dd" sha1="4990b427f1b85ceca9646b3edfa921ed160a55a9"/>
+	<game name="Klustar (Japan) (Proto 1) (1998-10-01) (GB Compatible)" cloneof="Klustar (Europe) (En,Fr,De,Es,It) (GB Compatible)">
+		<description>Klustar (Japan) (Proto 1) (1998-10-01) (GB Compatible)</description>
+		<rom name="Klustar (Japan) (Proto 1) (1998-10-01) (GB Compatible).gbc" size="131072" crc="f9c6e0a5" md5="bcf0f4e74c63c6f11e46353cf51c27dd" sha1="4990b427f1b85ceca9646b3edfa921ed160a55a9"/>
 	</game>
 	<game name="Knockout Kings (USA, Europe)">
 		<description>Knockout Kings (USA, Europe)</description>
@@ -3397,14 +3524,14 @@
 		<release name="Konchuu Fighters (Japan)" region="JPN"/>
 		<rom name="Konchuu Fighters (Japan).gbc" size="2097152" crc="c6758b0b" md5="e27e5d2079fb84a439dbafda7c6e2ef1" sha1="8bb171b72c3bb761de07954299b5aa379145e8f1"/>
 	</game>
-	<game name="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)">
-		<description>Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)</description>
-		<release name="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
-		<rom name="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="b6381744" md5="0db5276e6a52112bcb71dd20f4f39782" sha1="e4bcfb94aa1c09a013a03f26f978b32e74f70d23"/>
+	<game name="Konchuu Hakase 2 (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)">
+		<description>Konchuu Hakase 2 (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
+		<release name="Konchuu Hakase 2 (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" region="JPN"/>
+		<rom name="Konchuu Hakase 2 (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="d390430e" md5="4c634b29b3f20529cc4e0808199fa73e" sha1="59fa1707247f12b0c48eeb2e8fec274b9231d968"/>
 	</game>
-	<game name="Konchuu Hakase 2 (Japan) (Rev 1) (Possible Proto) (SGB Enhanced) (GB Compatible)" cloneof="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)">
-		<description>Konchuu Hakase 2 (Japan) (Rev 1) (Possible Proto) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Konchuu Hakase 2 (Japan) (Rev 1) (Possible Proto) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="d390430e" md5="4c634b29b3f20529cc4e0808199fa73e" sha1="59fa1707247f12b0c48eeb2e8fec274b9231d968"/>
+	<game name="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)" cloneof="Konchuu Hakase 2 (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)">
+		<description>Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Konchuu Hakase 2 (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="b6381744" md5="0db5276e6a52112bcb71dd20f4f39782" sha1="e4bcfb94aa1c09a013a03f26f978b32e74f70d23"/>
 	</game>
 	<game name="Konchuu Hakase 3 (Japan)">
 		<description>Konchuu Hakase 3 (Japan)</description>
@@ -3445,6 +3572,10 @@
 		<description>Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da) (Beta)</description>
 		<rom name="Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da) (Beta).gbc" size="1048576" crc="f90a3dae" md5="37824faeedc1d562cae1ceee675c6ac8" sha1="772539821e4b703259b2e2ad535d74a03fa22760"/>
 	</game>
+	<game name="Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da) (Rev 1) (Proto)" cloneof="Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da)">
+		<description>Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da) (Rev 1) (Proto)</description>
+		<rom name="Laura (Europe) (En,Fr,De,Es,It,Nl,Sv,Da) (Rev 1) (Proto).gbc" size="1048576" crc="cf8e2371" md5="a41843374fe3bce0b61a641fafd6f415" sha1="f7b19c1501d325dd8ee219ccae2eaca130a5a21b"/>
+	</game>
 	<game name="Le Mans 24 Hours (Europe) (En,Fr,De,Es,It)">
 		<description>Le Mans 24 Hours (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Le Mans 24 Hours (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -3464,6 +3595,11 @@
 		<description>Kawa no Nushi Tsuri 4 (Japan) (Rumble Version) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Kawa no Nushi Tsuri 4 (Japan) (Rumble Version) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Kawa no Nushi Tsuri 4 (Japan) (Rumble Version) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f0b09ddb" md5="8ce641b1efbf76cc5f2a841942345a0f" sha1="dbdac654d4056ade51a139614192742ce8800d7e"/>
+	</game>
+	<game name="Kawa no Nushi Tsuri 4 (Japan) (Rev 1) (Rumble Version) (SGB Enhanced, GB Compatible) (NP)" cloneof="Legend of the River King 2 (Europe) (SGB Enhanced) (GB Compatible)">
+		<description>Kawa no Nushi Tsuri 4 (Japan) (Rev 1) (Rumble Version) (SGB Enhanced, GB Compatible) (NP)</description>
+		<release name="Kawa no Nushi Tsuri 4 (Japan) (Rev 1) (Rumble Version) (SGB Enhanced, GB Compatible) (NP)" region="JPN"/>
+		<rom name="Kawa no Nushi Tsuri 4 (Japan) (Rev 1) (Rumble Version) (SGB Enhanced, GB Compatible) (NP).gbc" size="1048576" crc="456d4dfc" md5="09232e1c83dde06aa5b67d14618f4e08" sha1="69e56fd73eb365dba87713c2a3ea2e74bd63f63c"/>
 	</game>
 	<game name="Legend of the River King 2 (USA) (SGB Enhanced) (GB Compatible)" cloneof="Legend of the River King 2 (Europe) (SGB Enhanced) (GB Compatible)">
 		<description>Legend of the River King 2 (USA) (SGB Enhanced) (GB Compatible)</description>
@@ -3491,44 +3627,104 @@
 		<release name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)" region="USA"/>
 		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="06887a34" md5="7351daa3c0a91d8f6fe2fbcca6182478" sha1="1c091225688d966928cc74336dbef2e07d12a47c" status="verified"/>
 	</game>
-	<game name="Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f48824fe" md5="1043fd167d0ed9c4094e3c9d8e757f1e" sha1="9a679e30b03e119a21ae7daac65e73e0ef4e0894"/>
-	</game>
 	<game name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
 		<description>Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (SGB Enhanced) (GB Compatible)" region="FRA"/>
 		<rom name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="4e2b75e7" md5="68242187b65166b5f8225b20e2021659" sha1="b5e4df1a67432c609fa0f23519315297c6dcdc1d"/>
 	</game>
-	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="fed5959b" md5="e91fd46e7092d32ca264f21853f09539" sha1="8cd9d786547bfb3ddbe16ad2a84a36cf895ac16e"/>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-22) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-22) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-22) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="3e88a24a" md5="61d38e254879b2b99490573499a801b1" sha1="1cbca5313b1c0163620d7d81b649f158ba59e6b3"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="a8855c67" md5="853eb2ec6feb27869b7af78f929fe7d2" sha1="a86161ca5ce9e1e8c7a6ab0931edb12a1ace5f39"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Europe) (Rev 2) (Beta) (1999-09-19) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Europe) (Rev 2) (Beta) (1999-09-19) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Europe) (Rev 2) (Beta) (1999-09-19) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f9a66cda" md5="491d97b847cadc6c854172008a09fc83" sha1="eb862e0ab4d0456d98187ddfb4948cd45d923f6d"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-07) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-07) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-07) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="5715d896" md5="0c0cd721044c7c91d32ed704564e6fe4" sha1="8b8eeb368dfadc73e4f051fb53134974d688491d"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="05f23861" md5="c83e117ad79a22c6a91586a419cdf1f5" sha1="a3f5445fcb463e801b70466e736fe2d495581289"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (France) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="865cc1ed" md5="f5aa2d1278788af857ee082c0c03a02e" sha1="7d78f4bda653ff76618a38f33444602d1b54b206"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-08-19) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="fdccc2bd" md5="c73016626b9e7eae04b9a53a3dc4fb78" sha1="6daa7e77b0f329da5641e61bcdb0fecf941437f0"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="33c65722" md5="7e9fd020f578c846fa3ae1d39d0a4671" sha1="b76adb353acf520084529c4f9c9cd137b07016c5"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (Beta) (1999-09-04) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="84415b28" md5="b85674c7d71d84cef9dcc9b2e35185d3" sha1="95417ae15e0b89c918d97e2e658056a6869eb0ef"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (Beta) (1998-12-11) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (Beta) (1998-12-11) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (Beta) (1998-12-11) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="be5e366e" md5="e39b039557a7c0629553ce7fed602bb3" sha1="6bcd23a3a8afde7c220bc1da4e32d47749139305"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="b38eb9de" md5="ccbb56212e3dbaa9007d389a17e9d075" sha1="363d184d9b1e9faa5a2facd80897b7e118446164"/>
+	</game>
+	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="97822948" md5="07c211479386825042efb4ad31bb525f" sha1="d90ac17e9bf17b6c61624ad9f05447bdb5efc01a" status="verified"/>
 	</game>
 	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
 		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (SGB Enhanced) (GB Compatible)" region="GER"/>
 		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="efb76777" md5="b0080c2f1919a4bb0ea73b788f4a6786" sha1="7f5c39fa297cb17abf51c6f91fbdebc9f07e3de8" status="verified"/>
 	</game>
-	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="97822948" md5="07c211479386825042efb4ad31bb525f" sha1="d90ac17e9bf17b6c61624ad9f05447bdb5efc01a" status="verified"/>
+	<game name="Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (Germany) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="fed5959b" md5="e91fd46e7092d32ca264f21853f09539" sha1="8cd9d786547bfb3ddbe16ad2a84a36cf895ac16e"/>
 	</game>
-	<game name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="b38eb9de" md5="ccbb56212e3dbaa9007d389a17e9d075" sha1="363d184d9b1e9faa5a2facd80897b7e118446164"/>
-	</game>
-	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="d974abea" md5="f75874e3654360094fc2b09bd1fed7e8" sha1="b810925bf9d9f4f6cd97c5e46c94c1a9dd61a113"/>
-	</game>
-	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
-		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="bd8a1041" md5="6d8f9cd72201caabdfd0455a819af9ce" sha1="d3de302d44bdb240bcf55a5dc70f491f5456d721"/>
+	<game name="Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Legend of Zelda, The - Link's Awakening DX (France) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f48824fe" md5="1043fd167d0ed9c4094e3c9d8e757f1e" sha1="9a679e30b03e119a21ae7daac65e73e0ef4e0894"/>
 	</game>
 	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 2) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
 		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 2) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 2) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 2) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="e998e595" md5="2e2596c008d47df901394d28f5bd66ec" sha1="5fdffae3caef63a9fb295bcbd38f923190254e01" status="verified"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="bd8a1041" md5="6d8f9cd72201caabdfd0455a819af9ce" sha1="d3de302d44bdb240bcf55a5dc70f491f5456d721"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="d974abea" md5="f75874e3654360094fc2b09bd1fed7e8" sha1="b810925bf9d9f4f6cd97c5e46c94c1a9dd61a113"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-06-30) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-06-30) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-06-30) (GB Compatible).gbc" size="1048576" crc="f46f0ced" md5="bc56b4a1ec8b993b06405f6eccc982b3" sha1="99d587b4baf363a798fdb8c1fca42fe1be061c2f"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 18.00.56) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 18.00.56) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 18.00.56) (GB Compatible).gbc" size="1048576" crc="11290c31" md5="21bbb6dceb4a367431779873f6162ced" sha1="8d7ab85686ced1642b9519bcb6a3e157c6bd8938"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 21.55.32) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 21.55.32) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-05 21.55.32) (GB Compatible).gbc" size="1048576" crc="3c63e083" md5="d56e7601673af3c0f78def06c34c8efa" sha1="a068abd403a1dad70bd9b53d215995f8159aea47"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-07) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-07) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-07) (GB Compatible).gbc" size="1048576" crc="879cdf7d" md5="f8228ad67881ba0b2947f7a0b67de2b1" sha1="0b6f595e5f306099d5c1bd7aab1156c2a9c917a1"/>
+	</game>
+	<game name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-14) (GB Compatible)" cloneof="Legend of Zelda, The - Link's Awakening DX (USA, Europe) (Rev 2) (SGB Enhanced) (GB Compatible)">
+		<description>Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-14) (GB Compatible)</description>
+		<rom name="Zelda no Densetsu - Yume o Miru Shima DX (Japan) (Beta) (1998-07-14) (GB Compatible).gbc" size="1048576" crc="13c76902" md5="5c8af4e0a5c140ed96af55bc85828abc" sha1="08dea3565740a4b5bd5c13e82adb61e3d5669a31"/>
 	</game>
 	<game name="Legend of Zelda, The - Oracle of Ages (Europe) (En,Fr,De,Es,It)">
 		<description>Legend of Zelda, The - Oracle of Ages (Europe) (En,Fr,De,Es,It)</description>
@@ -3606,6 +3802,11 @@
 		<description>Lemmings &amp; Oh No! More Lemmings (USA)</description>
 		<release name="Lemmings &amp; Oh No! More Lemmings (USA)" region="USA"/>
 		<rom name="Lemmings &amp; Oh No! More Lemmings (USA).gbc" size="4194304" crc="97e5ce2f" md5="0476c7220327d99e3d039faaa4cdde8f" sha1="2662b9fdfb243392ec1268feea993ed36ac840b1"/>
+	</game>
+	<game name="Lemmings (Europe) (Proto)" cloneof="Lemmings &amp; Oh No! More Lemmings (USA)">
+		<description>Lemmings (Europe) (Proto)</description>
+		<release name="Lemmings (Europe) (Proto)" region="EUR"/>
+		<rom name="Lemmings (Europe) (Proto).gbc" size="4194304" crc="5ea0796b" md5="37b3cf7650235536e14ec856b497fe61" sha1="f1f9ab3878c606b488e89c24068af10060b1640f"/>
 	</game>
 	<game name="Lemmings VS (Japan)" cloneof="Lemmings &amp; Oh No! More Lemmings (USA)">
 		<description>Lemmings VS (Japan)</description>
@@ -3706,13 +3907,13 @@
 		<release name="Looney Tunes Collector - Alert! (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="Looney Tunes Collector - Alert! (USA) (En,Fr,Es).gbc" size="2097152" crc="54509d24" md5="164c4fcfe733d89fff3ddc42b017c5ca" sha1="54c4f732a8c328a9331a8a500438b1b1e9472b39"/>
 	</game>
-	<game name="Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta)" cloneof="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl)">
-		<description>Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta)</description>
-		<rom name="Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta).gbc" size="2097152" crc="3acb4840" md5="5cc6ad2a2406c6c860f36107f6eb414e" sha1="4c05c1a15bb90feb09fbc2d8dfbfb42794313936"/>
+	<game name="Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta 1) (1999-10-28)" cloneof="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta 1) (1999-10-28)</description>
+		<rom name="Looney Tunes Collector - Martian Alert! (Europe) (Fr) (Beta 1) (1999-10-28).gbc" size="2097152" crc="3acb4840" md5="5cc6ad2a2406c6c860f36107f6eb414e" sha1="4c05c1a15bb90feb09fbc2d8dfbfb42794313936"/>
 	</game>
-	<game name="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta)" cloneof="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl)">
-		<description>Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta)</description>
-		<rom name="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta).gbc" size="2097152" crc="9058eae3" md5="2759a17974aa716d3db2cc015cda3ab4" sha1="601236c323f4adbe5bd6091fac8871e11d71f105"/>
+	<game name="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta 2)" cloneof="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta 2)</description>
+		<rom name="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl) (Beta 2).gbc" size="2097152" crc="9058eae3" md5="2759a17974aa716d3db2cc015cda3ab4" sha1="601236c323f4adbe5bd6091fac8871e11d71f105"/>
 	</game>
 	<game name="Looney Tunes Collector - Martian Quest! (Japan)" cloneof="Looney Tunes Collector - Martian Alert! (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Looney Tunes Collector - Martian Quest! (Japan)</description>
@@ -4227,6 +4428,10 @@
 		<release name="Bakusou Senki Metal Walker GB - Koutetsu no Yuujou (Japan) (GB Compatible)" region="JPN"/>
 		<rom name="Bakusou Senki Metal Walker GB - Koutetsu no Yuujou (Japan) (GB Compatible).gbc" size="1048576" crc="d514c9a0" md5="ceb1a6c3ce3d2921c0fb65f420f811fa" sha1="1f8088a739df180ecceaff1b37ed5c1a50772405"/>
 	</game>
+	<game name="Bakusou Senki Metal Walker GB - Koutetsu no Yuujou (Japan) (Rev 1) (Proto) (GB Compatible)" cloneof="Metal Walker (USA) (GB Compatible)">
+		<description>Bakusou Senki Metal Walker GB - Koutetsu no Yuujou (Japan) (Rev 1) (Proto) (GB Compatible)</description>
+		<rom name="Bakusou Senki Metal Walker GB - Koutetsu no Yuujou (Japan) (Rev 1) (Proto) (GB Compatible).gbc" size="1048576" crc="570bafdb" md5="68bffbbabc15da177c071eea0e055713" sha1="3d6ea44dd8426e3d7bf87a8778dd91e8095ddd35"/>
+	</game>
 	<game name="Metamode (Japan)">
 		<description>Metamode (Japan)</description>
 		<release name="Metamode (Japan)" region="JPN"/>
@@ -4289,17 +4494,17 @@
 		<release name="Microsoft Pinball Arcade (USA)" region="USA"/>
 		<rom name="Microsoft Pinball Arcade (USA).gbc" size="1048576" crc="504f55c5" md5="31f7a606b52e8d10fc010b4efe9fb514" sha1="da4593edb37be892374e00d0174e45ff6301c907"/>
 	</game>
-	<game name="Midway presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)">
-		<description>Midway presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)</description>
-		<release name="Midway presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)" region="EUR"/>
-		<release name="Midway presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)" region="USA"/>
-		<rom name="Midway presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible).gbc" size="1048576" crc="4c1ececb" md5="341249f65f19579b9d335c807982b6fa" sha1="f0f35970517090165797568448b5ef5cad8e4952"/>
+	<game name="Midway Presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)">
+		<description>Midway Presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)</description>
+		<release name="Midway Presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)" region="EUR"/>
+		<release name="Midway Presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible)" region="USA"/>
+		<rom name="Midway Presents Arcade Hits - Joust &amp; Defender (USA, Europe) (GB Compatible).gbc" size="1048576" crc="4c1ececb" md5="341249f65f19579b9d335c807982b6fa" sha1="f0f35970517090165797568448b5ef5cad8e4952"/>
 	</game>
-	<game name="Midway presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)">
-		<description>Midway presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)</description>
-		<release name="Midway presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)" region="EUR"/>
-		<release name="Midway presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)" region="USA"/>
-		<rom name="Midway presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible).gbc" size="1048576" crc="f40199c9" md5="8ffcf9da76aa9ba1c5b1789a92f47d21" sha1="8dc667e7d44b46ad42ec7e465091cfacc0009974" status="verified"/>
+	<game name="Midway Presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)">
+		<description>Midway Presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)</description>
+		<release name="Midway Presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)" region="EUR"/>
+		<release name="Midway Presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible)" region="USA"/>
+		<rom name="Midway Presents Arcade Hits - Moon Patrol &amp; Spy Hunter (USA, Europe) (GB Compatible).gbc" size="1048576" crc="f40199c9" md5="8ffcf9da76aa9ba1c5b1789a92f47d21" sha1="8dc667e7d44b46ad42ec7e465091cfacc0009974" status="verified"/>
 	</game>
 	<game name="Minna no Shougi - Shokyuu Hen (Japan) (Rev 1) (GB Compatible)">
 		<description>Minna no Shougi - Shokyuu Hen (Japan) (Rev 1) (GB Compatible)</description>
@@ -4325,19 +4530,20 @@
 		<release name="Missile Command (USA) (Rumble Version)" region="USA"/>
 		<rom name="Missile Command (USA) (Rumble Version).gbc" size="1048576" crc="47543c51" md5="1fc58f4e3a2437f4c20c9812162797d8" sha1="7bd68586df8754cbc81b2dcbb6e2b5de43f812e8"/>
 	</game>
-	<game name="Mission - Impossible (Europe) (En,Fr,De,Es,It)">
+	<game name="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1)">
+		<description>Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1)</description>
+		<release name="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1)" region="EUR"/>
+		<rom name="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1).gbc" size="1048576" crc="9c51f4c7" md5="9884397baf27070bf210138ac6b5c4e7" sha1="f822bda01d881f34d1e17664465faf6a3ff64356"/>
+	</game>
+	<game name="Mission - Impossible (Europe) (En,Fr,De,Es,It)" cloneof="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1)">
 		<description>Mission - Impossible (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Mission - Impossible (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Mission - Impossible (Europe) (En,Fr,De,Es,It).gbc" size="1048576" crc="0af32baa" md5="aff1aa8c293dc5e26fa704eb1693dc0c" sha1="5eb8dad248ff23809016a2515657089116e8df33" status="verified"/>
 	</game>
-	<game name="Mission - Impossible (USA) (En,Fr,Es)" cloneof="Mission - Impossible (Europe) (En,Fr,De,Es,It)">
+	<game name="Mission - Impossible (USA) (En,Fr,Es)" cloneof="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1)">
 		<description>Mission - Impossible (USA) (En,Fr,Es)</description>
 		<release name="Mission - Impossible (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="Mission - Impossible (USA) (En,Fr,Es).gbc" size="1048576" crc="41230d11" md5="11454ce5a4ad703c29b3a8bdc8b5c3ab" sha1="a987998cf57d2eb2275de94cd0e81254b711ccac"/>
-	</game>
-	<game name="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1) (Possible Proto)" cloneof="Mission - Impossible (Europe) (En,Fr,De,Es,It)">
-		<description>Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1) (Possible Proto)</description>
-		<rom name="Mission - Impossible (Europe) (En,Fr,De,Es,It) (Rev 1) (Possible Proto).gbc" size="1048576" crc="9c51f4c7" md5="9884397baf27070bf210138ac6b5c4e7" sha1="f822bda01d881f34d1e17664465faf6a3ff64356"/>
 	</game>
 	<game name="Mizuki Shigeru no Shin Youkaiden (Japan)">
 		<description>Mizuki Shigeru no Shin Youkaiden (Japan)</description>
@@ -4409,9 +4615,9 @@
 		<release name="Monster Traveler (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Monster Traveler (Japan) (Rev 1).gbc" size="4194304" crc="f60a376e" md5="9d1067c75dcbce5aacabacabb06b95c4" sha1="23842b7ad88a051b14c1676b1f561b933177f150" status="verified"/>
 	</game>
-	<game name="Monster Traveler (Japan) (Possible Proto)" cloneof="Monster Traveler (Japan) (Rev 1)">
-		<description>Monster Traveler (Japan) (Possible Proto)</description>
-		<rom name="Monster Traveler (Japan) (Possible Proto).gbc" size="4194304" crc="5d596cf6" md5="83e34702e7c38cd36b506d1084e5ab97" sha1="5195f55ad6aaa302c0a0e11c0ec6ecad4efe0e27"/>
+	<game name="Monster Traveler (Japan)" cloneof="Monster Traveler (Japan) (Rev 1)">
+		<description>Monster Traveler (Japan)</description>
+		<rom name="Monster Traveler (Japan).gbc" size="4194304" crc="5d596cf6" md5="83e34702e7c38cd36b506d1084e5ab97" sha1="5195f55ad6aaa302c0a0e11c0ec6ecad4efe0e27"/>
 	</game>
 	<game name="Monsters, Inc. (Europe) (Rev 1)">
 		<description>Monsters, Inc. (Europe) (Rev 1)</description>
@@ -4692,14 +4898,18 @@
 		<release name="NBA in the Zone (USA) (Rev 1) (SGB Enhanced) (GB Compatible)" region="USA"/>
 		<rom name="NBA in the Zone (USA) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="be949f74" md5="b3a3b81d16bf534afe80200995dfc683" sha1="f4ba926ad640d7b3e9d175fb58c90347dafcbef4"/>
 	</game>
-	<game name="NBA in the Zone (USA) (Possible Proto) (SGB Enhanced) (GB Compatible)" cloneof="NBA Pro 99 (Europe) (SGB Enhanced) (GB Compatible)">
-		<description>NBA in the Zone (USA) (Possible Proto) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="NBA in the Zone (USA) (Possible Proto) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f6bae9a0" md5="61e893ad650d4f7003cd76ff55d244b4" sha1="7f0d5a37956ae58077656a42b26629784c203038"/>
+	<game name="NBA in the Zone (USA) (SGB Enhanced) (GB Compatible)" cloneof="NBA Pro 99 (Europe) (SGB Enhanced) (GB Compatible)">
+		<description>NBA in the Zone (USA) (SGB Enhanced) (GB Compatible)</description>
+		<rom name="NBA in the Zone (USA) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="f6bae9a0" md5="61e893ad650d4f7003cd76ff55d244b4" sha1="7f0d5a37956ae58077656a42b26629784c203038"/>
 	</game>
 	<game name="NBA Show Time - NBA on NBC (USA)">
 		<description>NBA Show Time - NBA on NBC (USA)</description>
 		<release name="NBA Show Time - NBA on NBC (USA)" region="USA"/>
 		<rom name="NBA Show Time - NBA on NBC (USA).gbc" size="1048576" crc="7ae23888" md5="e89653bd33d07e1a50a3ff78c2818a53" sha1="a72cd784883f2299b8b51d763ff4f8cf99a103bd"/>
+	</game>
+	<game name="NBA Show Time - NBA on NBC (USA) (Rev 1) (Proto)" cloneof="NBA Show Time - NBA on NBC (USA)">
+		<description>NBA Show Time - NBA on NBC (USA) (Rev 1) (Proto)</description>
+		<rom name="NBA Show Time - NBA on NBC (USA) (Rev 1) (Proto).gbc" size="1048576" crc="8bc9be45" md5="88206c0a37bc9c6d42745211e0c18681" sha1="fd4bb16f306e309834e276ed768e8e2ed402e138"/>
 	</game>
 	<game name="Net de Get - Minigame @ 100 (Japan)">
 		<description>Net de Get - Minigame @ 100 (Japan)</description>
@@ -4850,6 +5060,10 @@
 		<description>Orbital Diagnostic System (Unknown) (Unl)</description>
 		<rom name="Orbital Diagnostic System (Unknown) (Unl).gbc" size="32768" crc="731c6ff4" md5="f885704250cb2a26450eecea8b115c79" sha1="2d4f9dc954d9485fbd7d402e07edf42beebbeb8c"/>
 	</game>
+	<game name="Orbital Diagnostic System (Unknown) (Alt) (Unl)" cloneof="Orbital Diagnostic System (Unknown) (Unl)">
+		<description>Orbital Diagnostic System (Unknown) (Alt) (Unl)</description>
+		<rom name="Orbital Diagnostic System (Unknown) (Alt) (Unl).gbc" size="32768" crc="424912fe" md5="615ceab2d4482855f6f226559b2e1764" sha1="bd5735021e4593ec07082e6197e683496d0ecf0b"/>
+	</game>
 	<game name="Original Moorhuhn Jagd, Die (Germany)">
 		<description>Original Moorhuhn Jagd, Die (Germany)</description>
 		<release name="Original Moorhuhn Jagd, Die (Germany)" region="GER"/>
@@ -4920,11 +5134,6 @@
 		<description>Papyrus (Europe) (En,Fr,De,Es,It,Nl)</description>
 		<release name="Papyrus (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
 		<rom name="Papyrus (Europe) (En,Fr,De,Es,It,Nl).gbc" size="1048576" crc="da3a3278" md5="59f3f8585cfc12876db9a27018d41f78" sha1="422c5f48f307820ee7c610e761a30a8cab85aed9"/>
-	</game>
-	<game name="Visiteurs, Les (France) (GB Compatible)" cloneof="Papyrus (Europe) (En,Fr,De,Es,It,Nl)">
-		<description>Visiteurs, Les (France) (GB Compatible)</description>
-		<release name="Visiteurs, Les (France) (GB Compatible)" region="FRA"/>
-		<rom name="Visiteurs, Les (France) (GB Compatible).gbc" size="1048576" crc="d843f898" md5="5962e70172bbe5a77ae507a409d12aa9" sha1="307b5d80fd7def049d446bf3406ec8d57dfee93d"/>
 	</game>
 	<game name="PaZeek (USA) (Proto)">
 		<description>PaZeek (USA) (Proto)</description>
@@ -5058,6 +5267,11 @@
 		<description>Pocket Music (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Pocket Music (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Pocket Music (Europe) (En,Fr,De,Es,It).gbc" size="1048576" crc="1bfb531e" md5="84eede6bb298dd354f251eccb1259316" sha1="74dc5efab773fde400304d3df8034a095af8a742"/>
+	</game>
+	<game name="Pocket Music (USA) (En,Fr,De,Es,It) (Proto)" cloneof="Pocket Music (Europe) (En,Fr,De,Es,It)">
+		<description>Pocket Music (USA) (En,Fr,De,Es,It) (Proto)</description>
+		<release name="Pocket Music (USA) (En,Fr,De,Es,It) (Proto)" region="USA"/>
+		<rom name="Pocket Music (USA) (En,Fr,De,Es,It) (Proto).gbc" size="1048576" crc="c4387812" md5="6ca4b011f72523dbd40d9ea470d2b4ea" sha1="ad547a79af864eb56a18e1c2ad4346eb35df41ed"/>
 	</game>
 	<game name="Pocket no Naka no Oukoku (Japan) (Proto)">
 		<description>Pocket no Naka no Oukoku (Japan) (Proto)</description>
@@ -5229,7 +5443,7 @@
 	</game>
 	<game name="Pokemon - Silberne Edition (Germany) (Beta) (SGB Enhanced) (GB Compatible)" cloneof="Pokemon - Silver Version (USA, Europe) (SGB Enhanced) (GB Compatible)">
 		<description>Pokemon - Silberne Edition (Germany) (Beta) (SGB Enhanced) (GB Compatible)</description>
-		<rom name="Pokemon - Silberne Edition (Germany) (Beta) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="576f5ced" md5="a3799918a413d72787d4434935df2117" sha1="76fa60d66b2f22a035adc54c61aad9a415c894cd" status="verified"/>
+		<rom name="Pokemon - Silberne Edition (Germany) (Beta) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="576f5ced" md5="a3799918a413d72787d4434935df2117" sha1="76fa60d66b2f22a035adc54c61aad9a415c894cd"/>
 	</game>
 	<game name="Pokemon - Version Argent (France) (SGB Enhanced) (GB Compatible)" cloneof="Pokemon - Silver Version (USA, Europe) (SGB Enhanced) (GB Compatible)">
 		<description>Pokemon - Version Argent (France) (SGB Enhanced) (GB Compatible)</description>
@@ -5240,6 +5454,11 @@
 		<description>Pokemon - Versione Argento (Italy) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Pokemon - Versione Argento (Italy) (SGB Enhanced) (GB Compatible)" region="ITA"/>
 		<rom name="Pokemon - Versione Argento (Italy) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="cba6d2d4" md5="9357c3dab850692ac8184ccf655d4efd" sha1="c9eca9d0a837beb9137bb7d779e469c54e9f8d77"/>
+	</game>
+	<game name="Pokemon Adventure (Taiwan) (Unl) (Pirate)">
+		<description>Pokemon Adventure (Taiwan) (Unl) (Pirate)</description>
+		<release name="Pokemon Adventure (Taiwan) (Unl) (Pirate)" region="TAI"/>
+		<rom name="Pokemon Adventure (Taiwan) (Unl) (Pirate).gbc" size="524288" crc="8edb9eb7" md5="c851452c0cb8837add5802ad214eca15" sha1="f86884a85cc560b91340a4c53a37cc8026699ddc"/>
 	</game>
 	<game name="Pokemon Card GB 2 - GR Dan Sanjou! (Japan)">
 		<description>Pokemon Card GB 2 - GR Dan Sanjou! (Japan)</description>
@@ -5377,15 +5596,15 @@
 		<release name="Power Pro Kun Pocket 2 (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Power Pro Kun Pocket 2 (Japan) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="c2a4a3eb" md5="2c03cc138be009ed83f036f919ff8f0a" sha1="5c0ba404cf30296dceeb427a54e3644415c9e8db"/>
 	</game>
-	<game name="Power Quest (Europe) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)">
-		<description>Power Quest (Europe) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)</description>
-		<release name="Power Quest (Europe) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" region="EUR"/>
-		<rom name="Power Quest (Europe) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="30e1e567" md5="3286d6b332edfb46d8504bceba7e55d7" sha1="b9b41a90baba13888ac8f3788b96935f4d394c2c" status="verified"/>
+	<game name="Power Quest (Europe) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)">
+		<description>Power Quest (Europe) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)</description>
+		<release name="Power Quest (Europe) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" region="EUR"/>
+		<rom name="Power Quest (Europe) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="30e1e567" md5="3286d6b332edfb46d8504bceba7e55d7" sha1="b9b41a90baba13888ac8f3788b96935f4d394c2c" status="verified"/>
 	</game>
-	<game name="Power Quest (USA) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" cloneof="Power Quest (Europe) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)">
-		<description>Power Quest (USA) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)</description>
-		<release name="Power Quest (USA) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" region="USA"/>
-		<rom name="Power Quest (USA) (En,Fr,De,Es,It) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="dad6f6b4" md5="ac1f4ad52996882c60ce83cac01e9ccf" sha1="d1665784a007c122d65f43bd2751db6b395ff3cd"/>
+	<game name="Power Quest (USA) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" cloneof="Power Quest (Europe) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)">
+		<description>Power Quest (USA) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)</description>
+		<release name="Power Quest (USA) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible)" region="USA"/>
+		<rom name="Power Quest (USA) (En-US,En-GB,Fr,De,Es,It) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="dad6f6b4" md5="ac1f4ad52996882c60ce83cac01e9ccf" sha1="d1665784a007c122d65f43bd2751db6b395ff3cd"/>
 	</game>
 	<game name="Powerpuff Girls, The - Bad Mojo Jojo (Europe)">
 		<description>Powerpuff Girls, The - Bad Mojo Jojo (Europe)</description>
@@ -5439,30 +5658,30 @@
 		<release name="Super Nenas, Las - Lucha Con Ese (Spain)" region="SPA"/>
 		<rom name="Super Nenas, Las - Lucha Con Ese (Spain).gbc" size="2097152" crc="7ba87c11" md5="6a38f9f550a6858f7ced15ba03d2a8cd" sha1="06b0835c40d4f27ad45833d54f606a0964e09de0"/>
 	</game>
-	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
-		<description>Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)</description>
-		<release name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)" region="USA"/>
-		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2).gbc" size="2097152" crc="443367ae" md5="aeec41031271f75b5e0b1d132b8a4505" sha1="ef93e793067bbb3748aac17d661c8c8b68ccee9b"/>
-	</game>
-	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
-		<description>Powerpuff Girls, The - Paint the Townsville Green (USA)</description>
-		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA).gbc" size="2097152" crc="9d47261a" md5="967488fc18b9ee5140c33090fedd7a79" sha1="2d52551fce2cb6d246c6296beeb6a8a3dfbc2159"/>
-	</game>
-	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
-		<description>Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1)</description>
-		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1).gbc" size="2097152" crc="295b3646" md5="c8f68e280f379ff7cc10c8ec4ed89142" sha1="023d4d9374e7fe9844f970dd0004c5d7eefd2d38" status="verified"/>
-	</game>
-	<game name="Powerpuff Girls, The - Paint the Townsville Green (Europe)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
+	<game name="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
 		<description>Powerpuff Girls, The - Paint the Townsville Green (Europe)</description>
 		<release name="Powerpuff Girls, The - Paint the Townsville Green (Europe)" region="EUR"/>
 		<rom name="Powerpuff Girls, The - Paint the Townsville Green (Europe).gbc" size="2097152" crc="98e4b0c4" md5="b3e8e32a3f8c3366cb12b4ea7b0a9169" sha1="e214ab665ffab3682b9833b4e4d0494fc53cd26f" status="verified"/>
 	</game>
-	<game name="Powerpuff Girls, The - Panique a Townsville (France)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
+	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
+		<description>Powerpuff Girls, The - Paint the Townsville Green (USA)</description>
+		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA).gbc" size="2097152" crc="9d47261a" md5="967488fc18b9ee5140c33090fedd7a79" sha1="2d52551fce2cb6d246c6296beeb6a8a3dfbc2159"/>
+	</game>
+	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
+		<description>Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)</description>
+		<release name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)" region="USA"/>
+		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2).gbc" size="2097152" crc="443367ae" md5="aeec41031271f75b5e0b1d132b8a4505" sha1="ef93e793067bbb3748aac17d661c8c8b68ccee9b"/>
+	</game>
+	<game name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
+		<description>Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1)</description>
+		<rom name="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 1).gbc" size="2097152" crc="295b3646" md5="c8f68e280f379ff7cc10c8ec4ed89142" sha1="023d4d9374e7fe9844f970dd0004c5d7eefd2d38" status="verified"/>
+	</game>
+	<game name="Powerpuff Girls, The - Panique a Townsville (France)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
 		<description>Powerpuff Girls, The - Panique a Townsville (France)</description>
 		<release name="Powerpuff Girls, The - Panique a Townsville (France)" region="FRA"/>
-		<rom name="Powerpuff Girls, The - Panique a Townsville (France).gbc" size="2097152" crc="79a417db" md5="69ebfa592721cd1d9c835d1b810b7266" sha1="978d68300b625d8e375571475b4f2c2c1a65fd60"/>
+		<rom name="Powerpuff Girls, The - Panique a Townsville (France).gbc" size="2097152" crc="79a417db" md5="69ebfa592721cd1d9c835d1b810b7266" sha1="978d68300b625d8e375571475b4f2c2c1a65fd60" status="verified"/>
 	</game>
-	<game name="Super Nenas, Las - Panico en Townsville (Spain)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (USA) (Rev 2)">
+	<game name="Super Nenas, Las - Panico en Townsville (Spain)" cloneof="Powerpuff Girls, The - Paint the Townsville Green (Europe)">
 		<description>Super Nenas, Las - Panico en Townsville (Spain)</description>
 		<release name="Super Nenas, Las - Panico en Townsville (Spain)" region="SPA"/>
 		<rom name="Super Nenas, Las - Panico en Townsville (Spain).gbc" size="2097152" crc="03edb574" md5="5b36c3da8bcfee8a5f14a6db12f533a3" sha1="34463c99193e4cf99aa1833242fa2b30db9fe522"/>
@@ -6269,7 +6488,7 @@
 	<game name="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)">
 		<description>Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)" region="JPN"/>
-		<rom name="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="3d4ae536" md5="0ff2e1d40bb0405e6a2506f75c90ea83" sha1="421d20bf556e28d07801d808ecfef45daf86a974" status="verified"/>
+		<rom name="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible).gbc" size="2097152" crc="3d4ae536" md5="0ff2e1d40bb0405e6a2506f75c90ea83" sha1="421d20bf556e28d07801d808ecfef45daf86a974"/>
 	</game>
 	<game name="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (SGB Enhanced) (GB Compatible)" cloneof="Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (Rev 1) (SGB Enhanced) (GB Compatible)">
 		<description>Shin Megami Tensei Devil Children - Kuro no Sho (Japan) (SGB Enhanced) (GB Compatible)</description>
@@ -6279,6 +6498,10 @@
 		<description>Shin Megami Tensei Devil Children - Shiro no Sho (Japan)</description>
 		<release name="Shin Megami Tensei Devil Children - Shiro no Sho (Japan)" region="JPN"/>
 		<rom name="Shin Megami Tensei Devil Children - Shiro no Sho (Japan).gbc" size="2097152" crc="39a10855" md5="9354cc341aa23da3e29829da76b8888e" sha1="0ad803e30cd4653855a0c878e4c7a63f1183e369" status="verified"/>
+	</game>
+	<game name="Shin Megami Tensei Devil Children - Shiro no Sho (Japan) (Rev 1) (Proto)" cloneof="Shin Megami Tensei Devil Children - Shiro no Sho (Japan)">
+		<description>Shin Megami Tensei Devil Children - Shiro no Sho (Japan) (Rev 1) (Proto)</description>
+		<rom name="Shin Megami Tensei Devil Children - Shiro no Sho (Japan) (Rev 1) (Proto).gbc" size="2097152" crc="79ea53f4" md5="dce795b0fe13ca2617edb2273cccf0be" sha1="6ba2a43d6975340852eb2ce85f36f35855b36eaf"/>
 	</game>
 	<game name="Shin Megami Tensei Trading Card - Card Summoner (Japan)">
 		<description>Shin Megami Tensei Trading Card - Card Summoner (Japan)</description>
@@ -6659,7 +6882,7 @@
 		<description>Super Mario Bros. Deluxe (USA, Europe) (Rev 2)</description>
 		<release name="Super Mario Bros. Deluxe (USA, Europe) (Rev 2)" region="EUR"/>
 		<release name="Super Mario Bros. Deluxe (USA, Europe) (Rev 2)" region="USA"/>
-		<rom name="Super Mario Bros. Deluxe (USA, Europe) (Rev 2).gbc" size="1048576" crc="62bbae83" md5="b5a71128227f5bc953fd55cb0025807f" sha1="254f2254e9d54e2501e3e4ebe09491e03573a6a4" status="verified"/>
+		<rom name="Super Mario Bros. Deluxe (USA, Europe) (Rev 2).gbc" size="1048576" crc="62bbae83" md5="b5a71128227f5bc953fd55cb0025807f" sha1="254f2254e9d54e2501e3e4ebe09491e03573a6a4"/>
 	</game>
 	<game name="Super Mario Bros. Deluxe (Japan) (NP)" cloneof="Super Mario Bros. Deluxe (USA, Europe) (Rev 2)">
 		<description>Super Mario Bros. Deluxe (Japan) (NP)</description>
@@ -6676,7 +6899,7 @@
 	</game>
 	<game name="Super Mario Bros. Deluxe (Japan) (En) (Rev 1) (NP)" cloneof="Super Mario Bros. Deluxe (USA, Europe) (Rev 2)">
 		<description>Super Mario Bros. Deluxe (Japan) (En) (Rev 1) (NP)</description>
-		<rom name="Super Mario Bros. Deluxe (Japan) (En) (Rev 1) (NP).gbc" size="1048576" crc="f4e91f63" md5="3dfc97eb20570f845bb07db304687666" sha1="e61d564e1ff19eb4b7c62a6cd96214f2bca4b01d" status="verified"/>
+		<rom name="Super Mario Bros. Deluxe (Japan) (En) (Rev 1) (NP).gbc" size="1048576" crc="f4e91f63" md5="3dfc97eb20570f845bb07db304687666" sha1="e61d564e1ff19eb4b7c62a6cd96214f2bca4b01d"/>
 	</game>
 	<game name="Super Me-Mail GB - Me-Mail Bear no Happy Mail Town (Japan)">
 		<description>Super Me-Mail GB - Me-Mail Bear no Happy Mail Town (Japan)</description>
@@ -6722,19 +6945,6 @@
 		<description>Survival Kids 2 - Dasshutsu!! Futago-Jima! (Japan) (SGB Enhanced) (GB Compatible)</description>
 		<release name="Survival Kids 2 - Dasshutsu!! Futago-Jima! (Japan) (SGB Enhanced) (GB Compatible)" region="JPN"/>
 		<rom name="Survival Kids 2 - Dasshutsu!! Futago-Jima! (Japan) (SGB Enhanced) (GB Compatible).gbc" size="1048576" crc="ab8b25d8" md5="9d2f7e1ac30a46456a841c264963e5ea" sha1="8fd720d5b035939b553910a3ec45c1bd052484eb"/>
-	</game>
-	<game name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
-		<description>Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)</description>
-		<release name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)" region="EUR"/>
-		<rom name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl).gbc" size="524288" crc="a4c6523d" md5="ab3245958e1ddea3209841c62ca8448e" sha1="2b4b8c3a4a74fdf7acc4138125fea5d8f5a9a093"/>
-	</game>
-	<game name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1)" cloneof="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
-		<description>Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1)</description>
-		<rom name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 1).gbc" size="524288" crc="617d7667" md5="b542fbcf77dea9de05ceab312648af6d" sha1="b215146fe8e2a5836d0ac6fa4785f95db464fc1a"/>
-	</game>
-	<game name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2)" cloneof="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl)">
-		<description>Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2)</description>
-		<rom name="Suske en Wiske - De Tijdtemmers ~ Bob et Bobette - Les Dompteurs du Temps (Europe) (Fr,Nl) (Beta 2).gbc" size="524288" crc="6bfcfd87" md5="91889ebca9b20510ece17eabdf2f071a" sha1="83c64dd44d3d03e3fd0711b23bf63e2264256dea"/>
 	</game>
 	<game name="Sutte Hakkun GB (Japan) (Proto)">
 		<description>Sutte Hakkun GB (Japan) (Proto)</description>
@@ -7439,6 +7649,11 @@
 		<description>VIP (USA) (En,Fr,Es)</description>
 		<release name="VIP (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="VIP (USA) (En,Fr,Es).gbc" size="1048576" crc="436c87d4" md5="435d9fa03b3f891648f9c56d39299807" sha1="3ecff5c68e457ee34c42af6349f9ab2a6845b5de"/>
+	</game>
+	<game name="Visiteurs, Les (France) (GB Compatible)">
+		<description>Visiteurs, Les (France) (GB Compatible)</description>
+		<release name="Visiteurs, Les (France) (GB Compatible)" region="FRA"/>
+		<rom name="Visiteurs, Les (France) (GB Compatible).gbc" size="1048576" crc="d843f898" md5="5962e70172bbe5a77ae507a409d12aa9" sha1="307b5d80fd7def049d446bf3406ec8d57dfee93d"/>
 	</game>
 	<game name="VR Sports - Powerboat Racing (USA) (Proto)">
 		<description>VR Sports - Powerboat Racing (USA) (Proto)</description>

@@ -6,9 +6,9 @@
 		<description>Nintendo - Nintendo Entertainment System (Parent-Clone)</description>
 		<clrmamepro header="No-Intro_NES.xml"/>
 		<romcenter plugin="nes.dll"/>
-		<version>20220109-193505</version>
-		<date>20220109-193505</date>
-		<author>alexian, BitLooter</author>
+		<version>20220331-225336</version>
+		<date>20220331-225336</date>
+		<author>aci68, Arctic Circle System, BigFred, BitLooter, Blank, C. V. Reynolds, chillerecke, DeadSkullzJr, DeriLoko3, einstein95, fuzzball, Gefflon, Hiccup, jimmsu, Just001Kim, kazumi213, Madeline, Money_114, niemand, norkmetnoil577, NovaAurora, omonim2007, Powerpuff, relax, RetroUprising, Rifu, sCZther, SonGoku, Special T, Tauwasser, togemet2, Vigi, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Sharp Famicom Titler (Japan)">
@@ -46,11 +46,11 @@
 		<release name="110 in 1 (Asia) (En) (Unl) (Pirate)" region="ASI"/>
 		<rom name="110 in 1 (Asia) (En) (Unl) (Pirate).nes" size="3145728" crc="a34abebc" md5="291c495087be358a1d6296d7350216b2" sha1="e1a603cd41a8bd5a3e824055becbcbbf58de61f5"/>
 	</game>
-	<game name="1942 (Japan, USA)">
-		<description>1942 (Japan, USA)</description>
-		<release name="1942 (Japan, USA)" region="JPN"/>
-		<release name="1942 (Japan, USA)" region="USA"/>
-		<rom name="1942 (Japan, USA).nes" size="40960" crc="171251e3" md5="0b66fdf88964235c434daff62837af60" sha1="7f57eace7cada7c36412a50f2299231b304527a8" status="verified"/>
+	<game name="1942 (Japan, USA) (En)">
+		<description>1942 (Japan, USA) (En)</description>
+		<release name="1942 (Japan, USA) (En)" region="JPN"/>
+		<release name="1942 (Japan, USA) (En)" region="USA"/>
+		<rom name="1942 (Japan, USA) (En).nes" size="40960" crc="171251e3" md5="0b66fdf88964235c434daff62837af60" sha1="7f57eace7cada7c36412a50f2299231b304527a8" status="verified"/>
 	</game>
 	<game name="1943 - The Battle of Midway (USA)">
 		<description>1943 - The Battle of Midway (USA)</description>
@@ -180,6 +180,10 @@
 		<description>Action 52 (USA) (Unl)</description>
 		<rom name="Action 52 (USA) (Unl).nes" size="2097152" crc="0c222495" md5="233cddd94c3f3d5b9a9f4670a914e74d" sha1="8e5767e4a6d5842684e1538d21948538643e0393"/>
 	</game>
+	<game name="Action 53 Function 16 Volume One (World) (Aftermarket) (Unl)">
+		<description>Action 53 Function 16 Volume One (World) (Aftermarket) (Unl)</description>
+		<rom name="Action 53 Function 16 Volume One (World) (Aftermarket) (Unl).nes" size="524288" crc="6441e8f6" md5="a9bba8bb21bd51370b32979560983e58" sha1="da92a26ecc64767fdbb63ab8b2d9e7dcd7884fcc"/>
+	</game>
 	<game name="Action in New York (Europe)">
 		<description>Action in New York (Europe)</description>
 		<release name="Action in New York (Europe)" region="EUR"/>
@@ -208,10 +212,10 @@
 		<release name="Adam &amp; Eve (Asia) (En) (Mega Soft) (Unl)" region="ASI"/>
 		<rom name="Adam &amp; Eve (Asia) (En) (Mega Soft) (Unl).nes" size="49152" crc="89e6c1f1" md5="1e3999dfd989d9277dbd1863c27c047e" sha1="ad449b940ffb70fe4f9301c47d4814c0b1617a32"/>
 	</game>
-	<game name="Adan y Eva (Spain) (Gluk Video) (Unl)" cloneof="Adam &amp; Eve (Asia) (En) (Mega Soft) (Unl)">
-		<description>Adan y Eva (Spain) (Gluk Video) (Unl)</description>
-		<release name="Adan y Eva (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Adan y Eva (Spain) (Gluk Video) (Unl).nes" size="65536" crc="637ba508" md5="cda7bebd460df7569db0740bdd843a28" sha1="13b988a23f7f58ff8d0c9bd3ed678b136f5f94fa" status="verified"/>
+	<game name="Adan y Eva (Spain) (En) (Gluk Video) (Unl)" cloneof="Adam &amp; Eve (Asia) (En) (Mega Soft) (Unl)">
+		<description>Adan y Eva (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Adan y Eva (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Adan y Eva (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="637ba508" md5="cda7bebd460df7569db0740bdd843a28" sha1="13b988a23f7f58ff8d0c9bd3ed678b136f5f94fa" status="verified"/>
 	</game>
 	<game name="Addams Family, The (Europe) (En,Fr,De)">
 		<description>Addams Family, The (Europe) (En,Fr,De)</description>
@@ -594,16 +598,16 @@
 		<release name="Aladdin (Europe)" region="EUR"/>
 		<rom name="Aladdin (Europe).nes" size="262144" crc="41d32fd7" md5="0a4152a81309d82a58d8782e41e5d103" sha1="f1ffbecbc99558eef25e8c6db1eeb9c408e2f33e" status="verified"/>
 	</game>
-	<game name="Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl)">
-		<description>Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl)</description>
-		<release name="Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl).nes" size="65536" crc="303d483d" md5="c7ed7087af206980af19216139edb441" sha1="44c6d04ef8f870efe18cde437f0ce31f955128a0"/>
+	<game name="Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl)">
+		<description>Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl)</description>
+		<release name="Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl).nes" size="65536" crc="303d483d" md5="c7ed7087af206980af19216139edb441" sha1="44c6d04ef8f870efe18cde437f0ce31f955128a0"/>
 	</game>
-	<game name="Alfombra Magica, La (Spain) (Gluk Video) (Unl)" cloneof="Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl)">
-		<description>Alfombra Magica, La (Spain) (Gluk Video) (Unl)</description>
-		<rom name="Alfombra Magica, La (Spain) (Gluk Video) (Unl).nes" size="65536" crc="cb04726d" md5="00a00114462675e4596d33db870acc91" sha1="0364c6b27c89d82bf24167fd7ea1a79568b5f5f4"/>
+	<game name="Alfombra Magica, La (Spain) (En) (Gluk Video) (Unl)" cloneof="Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl)">
+		<description>Alfombra Magica, La (Spain) (En) (Gluk Video) (Unl)</description>
+		<rom name="Alfombra Magica, La (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="cb04726d" md5="00a00114462675e4596d33db870acc91" sha1="0364c6b27c89d82bf24167fd7ea1a79568b5f5f4"/>
 	</game>
-	<game name="Magic Carpet 1001 (USA) (Unl)" cloneof="Alfombra Magica, La (Spain) (Rev 1) (Gluk Video) (Unl)">
+	<game name="Magic Carpet 1001 (USA) (Unl)" cloneof="Alfombra Magica, La (Spain) (En) (Rev 1) (Gluk Video) (Unl)">
 		<description>Magic Carpet 1001 (USA) (Unl)</description>
 		<release name="Magic Carpet 1001 (USA) (Unl)" region="USA"/>
 		<rom name="Magic Carpet 1001 (USA) (Unl).nes" size="65536" crc="c3aacd94" md5="f159fe8fea5cece7523bf208768a1ba0" sha1="0ebad09bc9b47a4164d2f7c5b04517b3ed3b5c66"/>
@@ -674,10 +678,6 @@
 	<game name="ASO - Armored Scrum Object (Japan) (En) (Sample)" cloneof="Alpha Mission (Europe)">
 		<description>ASO - Armored Scrum Object (Japan) (En) (Sample)</description>
 		<rom name="ASO - Armored Scrum Object (Japan) (En) (Sample).nes" size="65536" crc="e326e0f5" md5="229bbd859e15ad2c0e993d9fde1f58af" sha1="cc37f837c0ac865f3ff494b474016542534d5bee"/>
-	</game>
-	<game name="Alwa's Awakening (World) (Proto) (Aftermarket) (Unl)">
-		<description>Alwa's Awakening (World) (Proto) (Aftermarket) (Unl)</description>
-		<rom name="Alwa's Awakening (World) (Proto) (Aftermarket) (Unl).nes" size="524288" crc="10066391" md5="d8fb50cb38ce3974407ce365c76e9cc7" sha1="90e01f4e7b36462333aafb0261a72a2ecc602d54"/>
 	</game>
 	<game name="Amagon (USA)">
 		<description>Amagon (USA)</description>
@@ -841,6 +841,11 @@
 		<description>Astro Fang - Super Machine (Japan)</description>
 		<release name="Astro Fang - Super Machine (Japan)" region="JPN"/>
 		<rom name="Astro Fang - Super Machine (Japan).nes" size="262144" crc="e949ef8a" md5="3f8b65930ea2cc7844ad7dabc5f41200" sha1="83661a1a58a5ad8285eaffbbbe42c4a25aa211b1" status="verified"/>
+	</game>
+	<game name="Astro Ninja Man (Japan) (Aftermarket) (Unl)">
+		<description>Astro Ninja Man (Japan) (Aftermarket) (Unl)</description>
+		<release name="Astro Ninja Man (Japan) (Aftermarket) (Unl)" region="JPN"/>
+		<rom name="Astro Ninja Man (Japan) (Aftermarket) (Unl).nes" size="786432" crc="95d7b116" md5="2a4690d1949326e1eed462c67bdfe2ea" sha1="33346ed2bbbea20503b574d1436f0494d35cccdb"/>
 	</game>
 	<game name="Astro Robo Sasa (Japan)">
 		<description>Astro Robo Sasa (Japan)</description>
@@ -1009,10 +1014,10 @@
 		<release name="Baby Boomer (USA) (Unl)" region="USA"/>
 		<rom name="Baby Boomer (USA) (Unl).nes" size="81920" crc="bbe40dc4" md5="06d42e38b367823f7a44b18ec449e172" sha1="d2899308f62272d0547e8d42240bd1d20c61f4e7"/>
 	</game>
-	<game name="Baby Boomer (Korea) (Unl)" cloneof="Baby Boomer (USA) (Unl)">
-		<description>Baby Boomer (Korea) (Unl)</description>
-		<release name="Baby Boomer (Korea) (Unl)" region="KOR"/>
-		<rom name="Baby Boomer (Korea) (Unl).nes" size="81920" crc="b133cfa7" md5="15e05b3318f7681e73fbb7969c53f81d" sha1="7a41c690aadbcd499cb184fd1cad91e8f86e77b6"/>
+	<game name="Baby Boomer (Korea) (En) (Unl)" cloneof="Baby Boomer (USA) (Unl)">
+		<description>Baby Boomer (Korea) (En) (Unl)</description>
+		<release name="Baby Boomer (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Baby Boomer (Korea) (En) (Unl).nes" size="81920" crc="b133cfa7" md5="15e05b3318f7681e73fbb7969c53f81d" sha1="7a41c690aadbcd499cb184fd1cad91e8f86e77b6"/>
 	</game>
 	<game name="Back to the Future (USA)">
 		<description>Back to the Future (USA)</description>
@@ -1115,6 +1120,10 @@
 	<game name="Balloon Fight (Europe) (Virtual Console)" cloneof="Balloon Fight (Europe)">
 		<description>Balloon Fight (Europe) (Virtual Console)</description>
 		<rom name="Balloon Fight (Europe) (Virtual Console).nes" size="24576" crc="06384200" md5="bac639db86f4bcac7672123575cc26da" sha1="d19977518890a2f3cfc60a66f8dc9e849fbee978"/>
+	</game>
+	<game name="Balloon Fight (USA) (e-Reader Edition)" cloneof="Balloon Fight (Europe)">
+		<description>Balloon Fight (USA) (e-Reader Edition)</description>
+		<rom name="Balloon Fight (USA) (e-Reader Edition).nes" size="24576" crc="c979cbf6" md5="ff8e9f3d8df4e728bbad11fd4d6e44fc" sha1="0d9d04dcd2e75d82329ab3c4a4bbf942e208a4ec"/>
 	</game>
 	<game name="Baltron (Japan)">
 		<description>Baltron (Japan)</description>
@@ -1250,6 +1259,10 @@
 	<game name="Baseball (Japan) (En) (GameCube Edition)" cloneof="Baseball (USA, Europe)">
 		<description>Baseball (Japan) (En) (GameCube Edition)</description>
 		<rom name="Baseball (Japan) (En) (GameCube Edition).nes" size="24576" crc="1fb5c75d" md5="dbdb425c059be472dfce6826400926b0" sha1="c882f59088b1831c3fbee9e6b13e9fc1550faffd"/>
+	</game>
+	<game name="Baseball (USA) (e-Reader Edition)" cloneof="Baseball (USA, Europe)">
+		<description>Baseball (USA) (e-Reader Edition)</description>
+		<rom name="Baseball (USA) (e-Reader Edition).nes" size="24576" crc="fa94d850" md5="4ec67ea5901b457b3f5b1d3bacc0441d" sha1="c14831307095a5cd711bfad1ff5085f7982d0481"/>
 	</game>
 	<game name="Baseball Fighter (Japan)">
 		<description>Baseball Fighter (Japan)</description>
@@ -1511,6 +1524,10 @@
 		<description>Battletoads (USA)</description>
 		<release name="Battletoads (USA)" region="USA"/>
 		<rom name="Battletoads (USA).nes" size="262144" crc="279710dc" md5="eefac97ac3b85048f3685e1623210efb" sha1="d85c9ff489672534fbf61a15f8fa56fff489a34b"/>
+	</game>
+	<game name="Battletoads (Japan) (Aftermarket)" cloneof="Battletoads (Europe)">
+		<description>Battletoads (Japan) (Aftermarket)</description>
+		<rom name="Battletoads (Japan) (Aftermarket).nes" size="262144" crc="5622823a" md5="ad59f0cb2d5039f776ba1a7df287192f" sha1="b1967b2b162e22fbfc1df6a95e5395d034ae0f12"/>
 	</game>
 	<game name="Battletoads-Double Dragon (Europe)">
 		<description>Battletoads-Double Dragon (Europe)</description>
@@ -1899,17 +1916,17 @@
 		<release name="Booby Kids (Japan)" region="JPN"/>
 		<rom name="Booby Kids (Japan).nes" size="131072" crc="4178497a" md5="bb1e51539ebd4adf9652eff031c3e98c" sha1="f1b35efdecc98f52a560b32acb75ebd719cbc9de" status="verified"/>
 	</game>
-	<game name="Booky Man (Spain) (Gluk Video) (Unl)">
-		<description>Booky Man (Spain) (Gluk Video) (Unl)</description>
-		<release name="Booky Man (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Booky Man (Spain) (Gluk Video) (Unl).nes" size="24576" crc="bc06543c" md5="1c9fcc7283074d45e36b7d9185b9fda7" sha1="0b84285dcc9f2de240c813f4f52e6c0a44746bb8" status="verified"/>
+	<game name="Booky Man (Spain) (En) (Gluk Video) (Unl)">
+		<description>Booky Man (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Booky Man (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Booky Man (Spain) (En) (Gluk Video) (Unl).nes" size="24576" crc="bc06543c" md5="1c9fcc7283074d45e36b7d9185b9fda7" sha1="0b84285dcc9f2de240c813f4f52e6c0a44746bb8" status="verified"/>
 	</game>
-	<game name="Booky Man (Brazil) (CCE) (Unl)" cloneof="Booky Man (Spain) (Gluk Video) (Unl)">
-		<description>Booky Man (Brazil) (CCE) (Unl)</description>
-		<release name="Booky Man (Brazil) (CCE) (Unl)" region="BRA"/>
-		<rom name="Booky Man (Brazil) (CCE) (Unl).nes" size="24576" crc="f6b67be1" md5="c5ced3aa489ca59703ef886f22c9c191" sha1="13b7952e91fc194b46d3b9a0b93ed6ab50c338e0"/>
+	<game name="Booky Man (Brazil) (En) (CCE) (Unl)" cloneof="Booky Man (Spain) (En) (Gluk Video) (Unl)">
+		<description>Booky Man (Brazil) (En) (CCE) (Unl)</description>
+		<release name="Booky Man (Brazil) (En) (CCE) (Unl)" region="BRA"/>
+		<rom name="Booky Man (Brazil) (En) (CCE) (Unl).nes" size="24576" crc="f6b67be1" md5="c5ced3aa489ca59703ef886f22c9c191" sha1="13b7952e91fc194b46d3b9a0b93ed6ab50c338e0"/>
 	</game>
-	<game name="Brush Roller (Asia) (Ja) (Unl)" cloneof="Booky Man (Spain) (Gluk Video) (Unl)">
+	<game name="Brush Roller (Asia) (Ja) (Unl)" cloneof="Booky Man (Spain) (En) (Gluk Video) (Unl)">
 		<description>Brush Roller (Asia) (Ja) (Unl)</description>
 		<release name="Brush Roller (Asia) (Ja) (Unl)" region="ASI"/>
 		<rom name="Brush Roller (Asia) (Ja) (Unl).nes" size="24576" crc="ac92e9e0" md5="5fb42111dad880fb6835fcb134ff99c1" sha1="2f79a27f2157a0c5d3f1f5d1e7ea04a4331e0fcf"/>
@@ -2030,10 +2047,10 @@
 		<description>Bugs Bunny Fun House (USA) (Beta)</description>
 		<rom name="Bugs Bunny Fun House (USA) (Beta).nes" size="262144" crc="ae97627c" md5="9d5a2961ba90df88543428fb66bfa3b5" sha1="00293fe817fcf7c242c08d27be2a8f0a157edf28"/>
 	</game>
-	<game name="BugTris (Korea) (Unl)">
-		<description>BugTris (Korea) (Unl)</description>
-		<release name="BugTris (Korea) (Unl)" region="KOR"/>
-		<rom name="BugTris (Korea) (Unl).nes" size="40960" crc="2e6f1a75" md5="2c8274092264605e9f0714f21ec4f484" sha1="c9d2ff99aa02da462dc38f87a22b6f8819122595"/>
+	<game name="BugTris (Korea) (En) (Unl)">
+		<description>BugTris (Korea) (En) (Unl)</description>
+		<release name="BugTris (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="BugTris (Korea) (En) (Unl).nes" size="40960" crc="2e6f1a75" md5="2c8274092264605e9f0714f21ec4f484" sha1="c9d2ff99aa02da462dc38f87a22b6f8819122595"/>
 	</game>
 	<game name="Bump 'n' Jump (USA)">
 		<description>Bump 'n' Jump (USA)</description>
@@ -2694,6 +2711,10 @@
 		<description>Clu Clu Land (World) (Virtual Console)</description>
 		<rom name="Clu Clu Land (World) (Virtual Console).nes" size="24576" crc="bc3ead71" md5="f4d4eb0e4d2cf398732bd462190ccdd0" sha1="f3e3f5a8acde77b005c577cea98f9109e08e6f3a" status="verified"/>
 	</game>
+	<game name="Clu Clu Land (USA) (e-Reader Edition)" cloneof="Clu Clu Land (World)">
+		<description>Clu Clu Land (USA) (e-Reader Edition)</description>
+		<rom name="Clu Clu Land (USA) (e-Reader Edition).nes" size="24576" crc="c9e2b4de" md5="2c466c72886efed28086a6c0ec82f234" sha1="83d2c6209761524a9d8391f1db936e5fbf3d4dcb"/>
+	</game>
 	<game name="Cobra Command (USA)">
 		<description>Cobra Command (USA)</description>
 		<release name="Cobra Command (USA)" region="USA"/>
@@ -2761,6 +2782,10 @@
 		<description>Senjou no Ookami (Japan)</description>
 		<release name="Senjou no Ookami (Japan)" region="JPN"/>
 		<rom name="Senjou no Ookami (Japan).nes" size="131072" crc="441aeae6" md5="bd3e40868c3aa06d4e3a8c1b290daa95" sha1="3eb406f0518dbdf513c0c192f09695f4e4f9cda2" status="verified"/>
+	</game>
+	<game name="Senjou no Ookami (Japan) (EPROM) (FamicomBox)" cloneof="Commando (USA)">
+		<description>Senjou no Ookami (Japan) (EPROM) (FamicomBox)</description>
+		<rom name="Senjou no Ookami (Japan) (EPROM) (FamicomBox).nes" size="131072" crc="7c2cbb96" md5="c8a33d4d50e247105740a22bd0ecb814" sha1="1e6ef6615c6c45f366263ac39f54f312a37c134f" status="verified"/>
 	</game>
 	<game name="Conan (USA)">
 		<description>Conan (USA)</description>
@@ -2837,10 +2862,10 @@
 		<release name="Cosmos Cop (Asia) (En) (Mega Soft) (Unl)" region="ASI"/>
 		<rom name="Cosmos Cop (Asia) (En) (Mega Soft) (Unl).nes" size="65536" crc="026c1e1a" md5="04d9fc0664ea878b3e85b25273d0c652" sha1="0d0a7f3e95bdfe38f15b4923303d9d1597ee5b9f"/>
 	</game>
-	<game name="Cosmos Cop (Spain) (Gluk Video) (Unl)" cloneof="Cosmos Cop (Asia) (En) (Mega Soft) (Unl)">
-		<description>Cosmos Cop (Spain) (Gluk Video) (Unl)</description>
-		<release name="Cosmos Cop (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Cosmos Cop (Spain) (Gluk Video) (Unl).nes" size="65536" crc="e9ad2163" md5="2e79867102ad869de86d0134e06f1938" sha1="7116136c1be75c8806d37d90f1153b23636ff95d" status="verified"/>
+	<game name="Cosmos Cop (Spain) (En) (Gluk Video) (Unl)" cloneof="Cosmos Cop (Asia) (En) (Mega Soft) (Unl)">
+		<description>Cosmos Cop (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Cosmos Cop (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Cosmos Cop (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="e9ad2163" md5="2e79867102ad869de86d0134e06f1938" sha1="7116136c1be75c8806d37d90f1153b23636ff95d" status="verified"/>
 	</game>
 	<game name="Cowboy Kid (USA)">
 		<description>Cowboy Kid (USA)</description>
@@ -2886,19 +2911,19 @@
 		<release name="Crazy Climber (Japan)" region="JPN"/>
 		<rom name="Crazy Climber (Japan).nes" size="131072" crc="c68363f6" md5="c71947155de403fdc7028ee8a0c29681" sha1="003b7f1315f5ee0dc60c5f9d989ec8bab0811ed4" status="verified"/>
 	</game>
-	<game name="Creatom (Spain) (Gluk Video) (Unl)">
-		<description>Creatom (Spain) (Gluk Video) (Unl)</description>
-		<release name="Creatom (Spain) (Gluk Video) (Unl)" region="ASI"/>
-		<rom name="Creatom (Spain) (Gluk Video) (Unl).nes" size="98304" crc="bb0f2d56" md5="335d7e999daa5a8fbdef1e8bf7d23793" sha1="7484aba91599c954a765dc5821f4630a335bdaa7"/>
+	<game name="Creatom (Spain) (En) (Gluk Video) (Unl)">
+		<description>Creatom (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Creatom (Spain) (En) (Gluk Video) (Unl)" region="ASI"/>
+		<rom name="Creatom (Spain) (En) (Gluk Video) (Unl).nes" size="98304" crc="bb0f2d56" md5="335d7e999daa5a8fbdef1e8bf7d23793" sha1="7484aba91599c954a765dc5821f4630a335bdaa7"/>
 	</game>
 	<game name="Creepy Brawlers (World) (Demo) (Aftermarket) (Unl)">
 		<description>Creepy Brawlers (World) (Demo) (Aftermarket) (Unl)</description>
 		<rom name="Creepy Brawlers (World) (Demo) (Aftermarket) (Unl).nes" size="524288" crc="538ffc02" md5="ec9ba98c9144e454e466dbac8ac1630d" sha1="31d103ee5ab6291d58b62f63818d5d611ba75603"/>
 	</game>
-	<game name="Crime Busters (Brazil) (Unl)">
-		<description>Crime Busters (Brazil) (Unl)</description>
-		<release name="Crime Busters (Brazil) (Unl)" region="BRA"/>
-		<rom name="Crime Busters (Brazil) (Unl).nes" size="163840" crc="4d68cfb1" md5="5cd7dd58a121660dacc5426704b7ec2d" sha1="8e7260f2f2775cff1a774f61a157f8b4477d1038"/>
+	<game name="Crime Busters (Brazil) (En) (Unl)">
+		<description>Crime Busters (Brazil) (En) (Unl)</description>
+		<release name="Crime Busters (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Crime Busters (Brazil) (En) (Unl).nes" size="163840" crc="4d68cfb1" md5="5cd7dd58a121660dacc5426704b7ec2d" sha1="8e7260f2f2775cff1a774f61a157f8b4477d1038"/>
 	</game>
 	<game name="Crisis Force (Japan)">
 		<description>Crisis Force (Japan)</description>
@@ -3270,12 +3295,12 @@
 		<release name="Tenchi o Kurau (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Tenchi o Kurau (Japan) (Rev 1).nes" size="262144" crc="637a7acb" md5="03a00ca579783adeaaa7d433ae032e9b" sha1="a1bc81c0a467c114b3af255a64a236d2d427b0dd"/>
 	</game>
-	<game name="Destructor, El (Spain) (Gluk Video) (Unl)">
-		<description>Destructor, El (Spain) (Gluk Video) (Unl)</description>
-		<release name="Destructor, El (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Destructor, El (Spain) (Gluk Video) (Unl).nes" size="65536" crc="322c9f6a" md5="29c357713691168d1334e24dec2b74bd" sha1="7ad1a20da65855c5f064882388843e9eb9185441" status="verified"/>
+	<game name="Destructor, El (Spain) (En) (Gluk Video) (Unl)">
+		<description>Destructor, El (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Destructor, El (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Destructor, El (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="322c9f6a" md5="29c357713691168d1334e24dec2b74bd" sha1="7ad1a20da65855c5f064882388843e9eb9185441" status="verified"/>
 	</game>
-	<game name="Destroyer (Asia) (En) (Mega Soft) (Unl)" cloneof="Destructor, El (Spain) (Gluk Video) (Unl)">
+	<game name="Destroyer (Asia) (En) (Mega Soft) (Unl)" cloneof="Destructor, El (Spain) (En) (Gluk Video) (Unl)">
 		<description>Destroyer (Asia) (En) (Mega Soft) (Unl)</description>
 		<release name="Destroyer (Asia) (En) (Mega Soft) (Unl)" region="ASI"/>
 		<rom name="Destroyer (Asia) (En) (Mega Soft) (Unl).nes" size="65536" crc="2efe622f" md5="14b849f4188b0d2e599bd4a08c4eba77" sha1="c9c77e8333a2f5edc48dac03302a98c4c9bce709"/>
@@ -3388,6 +3413,10 @@
 		<release name="Dirty Harry (USA)" region="USA"/>
 		<rom name="Dirty Harry (USA).nes" size="393216" crc="0c2e7863" md5="189afd9f1613014aace921d51c2e822f" sha1="ac559393aa094802f17de952bd87099b0243a02e"/>
 	</game>
+	<game name="Disk Writer EEPROM Pak (Japan) (En) (Program) [b]">
+		<description>Disk Writer EEPROM Pak (Japan) (En) (Program) [b]</description>
+		<rom name="Disk Writer EEPROM Pak (Japan) (En) (Program) [b].bin" size="8192" crc="84346bed" md5="0e64768ae48b4106d9597eb10bc8cc38" sha1="219cbd099f9f99ffe598c7ec5edb28560ac5515d" status="baddump"/>
+	</game>
 	<game name="Dizzy the Adventurer (USA) (Aladdin Compact Cartridge) (Unl)">
 		<description>Dizzy the Adventurer (USA) (Aladdin Compact Cartridge) (Unl)</description>
 		<release name="Dizzy the Adventurer (USA) (Aladdin Compact Cartridge) (Unl)" region="USA"/>
@@ -3438,6 +3467,10 @@
 		<description>Donkey Kong (World) (Rev 1) (GameCube Edition)</description>
 		<rom name="Donkey Kong (World) (Rev 1) (GameCube Edition).nes" size="40960" crc="9d779b08" md5="0dd95c3047bb0336823c39fefb7639c3" sha1="a851ec7302d07557d7558472877d1b88ebb13537" status="verified"/>
 	</game>
+	<game name="Donkey Kong (USA) (Rev 1) (e-Reader Edition)" cloneof="Donkey Kong (World) (Rev 1)">
+		<description>Donkey Kong (USA) (Rev 1) (e-Reader Edition)</description>
+		<rom name="Donkey Kong (USA) (Rev 1) (e-Reader Edition).nes" size="24576" crc="5c184cbb" md5="48edd50b302ab3f1dbaa5e2aa98e5850" sha1="0965b051b749aed785f6209488874e750edf501c"/>
+	</game>
 	<game name="Donkey Kong - Original Edition (USA) (Virtual Console)" cloneof="Donkey Kong (World) (Rev 1)">
 		<description>Donkey Kong - Original Edition (USA) (Virtual Console)</description>
 		<rom name="Donkey Kong - Original Edition (USA) (Virtual Console).nes" size="65536" crc="5519a326" md5="c50d0ddb64ad3c74e8b235cbd4b1f35e" sha1="fb50e8c5e655ddcc207a96d083cfcb472df0def4"/>
@@ -3456,6 +3489,10 @@
 	<game name="Donkey Kong 3 (World) (GameCube Edition)" cloneof="Donkey Kong 3 (World)">
 		<description>Donkey Kong 3 (World) (GameCube Edition)</description>
 		<rom name="Donkey Kong 3 (World) (GameCube Edition).nes" size="40960" crc="aac10c16" md5="d8d53431a07e504ddd48c3809722a7c3" sha1="aca0bc3f621f1985d30f7df1f722724a39c59486"/>
+	</game>
+	<game name="Donkey Kong 3 (USA) (e-Reader Edition)" cloneof="Donkey Kong 3 (World)">
+		<description>Donkey Kong 3 (USA) (e-Reader Edition)</description>
+		<rom name="Donkey Kong 3 (USA) (e-Reader Edition).nes" size="24576" crc="07bd51db" md5="458b99674cdb1d77d543d33d8a4ca980" sha1="559319053d2a79659f795fcff5beb9a5a6a8f791"/>
 	</game>
 	<game name="Donkey Kong Classics (USA, Europe)">
 		<description>Donkey Kong Classics (USA, Europe)</description>
@@ -3477,6 +3514,10 @@
 	<game name="Donkey Kong Jr. (World) (Rev 1) (GameCube Edition)" cloneof="Donkey Kong Jr. (World) (Rev 1)">
 		<description>Donkey Kong Jr. (World) (Rev 1) (GameCube Edition)</description>
 		<rom name="Donkey Kong Jr. (World) (Rev 1) (GameCube Edition).nes" size="40960" crc="a69a1f2a" md5="6631ceac1aaef8efb063a34da86bacb1" sha1="bd53f0bd971805097d663c7afde1c39cba44c052" status="verified"/>
+	</game>
+	<game name="Donkey Kong Jr. (USA) (Rev 1) (e-Reader Edition)" cloneof="Donkey Kong Jr. (World) (Rev 1)">
+		<description>Donkey Kong Jr. (USA) (Rev 1) (e-Reader Edition)</description>
+		<rom name="Donkey Kong Jr. (USA) (Rev 1) (e-Reader Edition).nes" size="24576" crc="3f23c194" md5="9452ab9edf8ec276c57713abb00a458c" sha1="1872341e8e50cf9b6b1bfd694ac10e59fe653b17"/>
 	</game>
 	<game name="Donkey Kong Jr. + Jr. Lesson (Japan)">
 		<description>Donkey Kong Jr. + Jr. Lesson (Japan)</description>
@@ -3665,15 +3706,15 @@
 		<release name="Dr. Mario (Europe)" region="EUR"/>
 		<rom name="Dr. Mario (Europe).nes" size="65536" crc="9735d267" md5="0f9fb5b5721d5fd69a9df856e23464ab" sha1="a0939930d9655e7fd2c3fae69d558614f2d27480" status="verified"/>
 	</game>
-	<game name="Dr. Mario (Japan, USA)" cloneof="Dr. Mario (Europe)">
-		<description>Dr. Mario (Japan, USA)</description>
-		<rom name="Dr. Mario (Japan, USA).nes" size="65536" crc="198c2f41" md5="5b401f4ca7e1b12af3f29d8fc758dd2f" sha1="ff6459bc3af5743e3d303823999f33d74abdf1aa" status="verified"/>
+	<game name="Dr. Mario (Japan, USA) (En)" cloneof="Dr. Mario (Europe)">
+		<description>Dr. Mario (Japan, USA) (En)</description>
+		<rom name="Dr. Mario (Japan, USA) (En).nes" size="65536" crc="198c2f41" md5="5b401f4ca7e1b12af3f29d8fc758dd2f" sha1="ff6459bc3af5743e3d303823999f33d74abdf1aa" status="verified"/>
 	</game>
-	<game name="Dr. Mario (Japan, USA) (Rev 1)" cloneof="Dr. Mario (Europe)">
-		<description>Dr. Mario (Japan, USA) (Rev 1)</description>
-		<release name="Dr. Mario (Japan, USA) (Rev 1)" region="JPN"/>
-		<release name="Dr. Mario (Japan, USA) (Rev 1)" region="USA"/>
-		<rom name="Dr. Mario (Japan, USA) (Rev 1).nes" size="65536" crc="de581355" md5="9d961a26f2104e461667c6a1cc57ab21" sha1="59b43881456c0720e9a35e391b11c4b2c55a8f91" status="verified"/>
+	<game name="Dr. Mario (Japan, USA) (En) (Rev 1)" cloneof="Dr. Mario (Europe)">
+		<description>Dr. Mario (Japan, USA) (En) (Rev 1)</description>
+		<release name="Dr. Mario (Japan, USA) (En) (Rev 1)" region="JPN"/>
+		<release name="Dr. Mario (Japan, USA) (En) (Rev 1)" region="USA"/>
+		<rom name="Dr. Mario (Japan, USA) (En) (Rev 1).nes" size="65536" crc="de581355" md5="9d961a26f2104e461667c6a1cc57ab21" sha1="59b43881456c0720e9a35e391b11c4b2c55a8f91" status="verified"/>
 	</game>
 	<game name="Dr. Mario (USA) (Beta 3)" cloneof="Dr. Mario (Europe)">
 		<description>Dr. Mario (USA) (Beta 3)</description>
@@ -4210,27 +4251,31 @@
 		<release name="Excitebike (Europe)" region="EUR"/>
 		<rom name="Excitebike (Europe).nes" size="24576" crc="8a0c7337" md5="16c66d6ee6827ff49e3a2efbf4b66c5a" sha1="6281d62c1cbb34b1734d20747a8e3d8de2af1443" status="verified"/>
 	</game>
-	<game name="Excitebike (Japan, USA)" cloneof="Excitebike (Europe)">
-		<description>Excitebike (Japan, USA)</description>
-		<release name="Excitebike (Japan, USA)" region="JPN"/>
-		<release name="Excitebike (Japan, USA)" region="USA"/>
-		<rom name="Excitebike (Japan, USA).nes" size="24576" crc="49aeb3a6" md5="9b0727e0adb0a7b4f94e072b7cf28a5a" sha1="ba8d9227a0d02b62ee6cb9e691fa5a5134c303a8" status="verified"/>
+	<game name="Excitebike (Japan, USA) (En)" cloneof="Excitebike (Europe)">
+		<description>Excitebike (Japan, USA) (En)</description>
+		<release name="Excitebike (Japan, USA) (En)" region="JPN"/>
+		<release name="Excitebike (Japan, USA) (En)" region="USA"/>
+		<rom name="Excitebike (Japan, USA) (En).nes" size="24576" crc="49aeb3a6" md5="9b0727e0adb0a7b4f94e072b7cf28a5a" sha1="ba8d9227a0d02b62ee6cb9e691fa5a5134c303a8" status="verified"/>
 	</game>
-	<game name="Excitebike (Japan, USA) (GameCube Edition)" cloneof="Excitebike (Europe)">
-		<description>Excitebike (Japan, USA) (GameCube Edition)</description>
-		<rom name="Excitebike (Japan, USA) (GameCube Edition).nes" size="24576" crc="662b8c9c" md5="2bf3976d15ec25a756846465a16b064c" sha1="55450eef7cb640dc24d9f655bbfcd4623a788b43" status="verified"/>
+	<game name="Excitebike (Japan, USA) (En) (GameCube Edition)" cloneof="Excitebike (Europe)">
+		<description>Excitebike (Japan, USA) (En) (GameCube Edition)</description>
+		<rom name="Excitebike (Japan, USA) (En) (GameCube Edition).nes" size="24576" crc="662b8c9c" md5="2bf3976d15ec25a756846465a16b064c" sha1="55450eef7cb640dc24d9f655bbfcd4623a788b43" status="verified"/>
 	</game>
 	<game name="Excitebike (Europe) (Virtual Console)" cloneof="Excitebike (Europe)">
 		<description>Excitebike (Europe) (Virtual Console)</description>
 		<rom name="Excitebike (Europe) (Virtual Console).nes" size="40960" crc="3bc0ade6" md5="b08d041b0d0962c6fedca901e6046dec" sha1="b814e7087046fda3ba6d7f30159316e0763a4e18"/>
 	</game>
-	<game name="Excitebike (Japan, USA) (Virtual Console)" cloneof="Excitebike (Europe)">
-		<description>Excitebike (Japan, USA) (Virtual Console)</description>
-		<rom name="Excitebike (Japan, USA) (Virtual Console).nes" size="40960" crc="b7cb1734" md5="c73d271317f1613a3b568c145891ad7e" sha1="7be56b9461dcdc91fe82adfd1660ab0e47381bfb" status="verified"/>
+	<game name="Excitebike (Japan, USA) (En) (Virtual Console)" cloneof="Excitebike (Europe)">
+		<description>Excitebike (Japan, USA) (En) (Virtual Console)</description>
+		<rom name="Excitebike (Japan, USA) (En) (Virtual Console).nes" size="40960" crc="b7cb1734" md5="c73d271317f1613a3b568c145891ad7e" sha1="7be56b9461dcdc91fe82adfd1660ab0e47381bfb" status="verified"/>
 	</game>
 	<game name="Excitebike (World) (Switch Online)" cloneof="Excitebike (Europe)">
 		<description>Excitebike (World) (Switch Online)</description>
 		<rom name="Excitebike (World) (Switch Online).nes" size="40960" crc="3b833cca" md5="15e2782419fe3390bcf49a983a93cbe8" sha1="bb0acc984e531a28a74c41498fd8fcbcb0e3386d" status="verified"/>
+	</game>
+	<game name="Excitebike (USA) (e-Reader Edition)" cloneof="Excitebike (Europe)">
+		<description>Excitebike (USA) (e-Reader Edition)</description>
+		<rom name="Excitebike (USA) (e-Reader Edition).nes" size="24576" crc="d1fc0ed6" md5="eebc11d4473181900e221947214d4d65" sha1="ebc84fee38356bbb4a20fd0116b310fddd8cf21b"/>
 	</game>
 	<game name="Exciting Boxing (Japan)">
 		<description>Exciting Boxing (Japan)</description>
@@ -4274,10 +4319,10 @@
 		<description>F-15 City War (USA) (v1.0) (Unl)</description>
 		<rom name="F-15 City War (USA) (v1.0) (Unl).nes" size="65536" crc="88a6b192" md5="a65015646932e8f738a2c4e76b7db0ed" sha1="12f58963dd70d32cca2784bc1d83ec889fec8e5d"/>
 	</game>
-	<game name="F-15 City War (Spain) (Gluk Video) (Unl)" cloneof="F-15 City War (USA) (v1.1) (Unl)">
-		<description>F-15 City War (Spain) (Gluk Video) (Unl)</description>
-		<release name="F-15 City War (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="F-15 City War (Spain) (Gluk Video) (Unl).nes" size="65536" crc="2fbea66d" md5="2469693f0ecc8f9fac5e07bca49e97d4" sha1="109f4bdfb2b1a59cc546b173eefac2cbc0302e36"/>
+	<game name="F-15 City War (Spain) (En) (Gluk Video) (Unl)" cloneof="F-15 City War (USA) (v1.1) (Unl)">
+		<description>F-15 City War (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="F-15 City War (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="F-15 City War (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="2fbea66d" md5="2469693f0ecc8f9fac5e07bca49e97d4" sha1="109f4bdfb2b1a59cc546b173eefac2cbc0302e36"/>
 	</game>
 	<game name="F-15 City War (Asia) (En) (Idea-Tek) (Unl)" cloneof="F-15 City War (USA) (v1.1) (Unl)">
 		<description>F-15 City War (Asia) (En) (Idea-Tek) (Unl)</description>
@@ -4384,6 +4429,14 @@
 		<description>Famicom Yakyuu Ban (Japan)</description>
 		<release name="Famicom Yakyuu Ban (Japan)" region="JPN"/>
 		<rom name="Famicom Yakyuu Ban (Japan).nes" size="262144" crc="d0a9f4e1" md5="d354585b310e084b64aadc61c71a5ee6" sha1="008aad423dcdecca9fc6b3ba8362556750e10af5" status="verified"/>
+	</game>
+	<game name="FamicomBox (Japan) (Menu Cart)">
+		<description>FamicomBox (Japan) (Menu Cart)</description>
+		<rom name="FamicomBox (Japan) (Menu Cart).nes" size="40960" crc="646170ef" md5="ee1dfcbd2cc2ab3708b1438c988d3b05" sha1="fd63394bdfd7da653f3caf2ce1e9e9361b63fdc7" status="verified"/>
+	</game>
+	<game name="FamicomStation (Japan) (Menu Cart)">
+		<description>FamicomStation (Japan) (Menu Cart)</description>
+		<rom name="FamicomStation (Japan) (Menu Cart).nes" size="40960" crc="05f73cb8" md5="63c42944b0dd171c4e98a5ccd828a592" sha1="8bf4b89cf26d0c4b1ab9da54eea2974c000617f8"/>
 	</game>
 	<game name="Family BASIC (Japan) (Rev 2)">
 		<description>Family BASIC (Japan) (Rev 2)</description>
@@ -5055,6 +5108,10 @@
 		<release name="Galaxy 5000 - Racing in the 51st Century (Europe)" region="EUR"/>
 		<rom name="Galaxy 5000 - Racing in the 51st Century (Europe).nes" size="262144" crc="4f089e8a" md5="e0dc0f6b60fcfdf59f86ce668dbbcf48" sha1="0adda9f12af174bf7e724c9f23745e13f66194ba" status="verified"/>
 	</game>
+	<game name="Galaxy 5000 (USA) (Beta)" cloneof="Galaxy 5000 - Racing in the 51st Century (Europe)">
+		<description>Galaxy 5000 (USA) (Beta)</description>
+		<rom name="Galaxy 5000 (USA) (Beta).nes" size="262144" crc="11386543" md5="fde1c9040a04871af0298cc42bb4e234" sha1="e6407f64637a813ae466641efcc28c640d35b936"/>
+	</game>
 	<game name="Galaxy 5000 - Racing in the 51st Century (USA)" cloneof="Galaxy 5000 - Racing in the 51st Century (Europe)">
 		<description>Galaxy 5000 - Racing in the 51st Century (USA)</description>
 		<release name="Galaxy 5000 - Racing in the 51st Century (USA)" region="USA"/>
@@ -5362,10 +5419,10 @@
 		<release name="Go! Benny! (Asia) (En) (Unl)" region="ASI"/>
 		<rom name="Go! Benny! (Asia) (En) (Unl).nes" size="65536" crc="4c1bff78" md5="120e386fa1f1ca9040014b651d06254e" sha1="f06cd596c87b4d401499126d1ca05e5a359f502a"/>
 	</game>
-	<game name="Corre Benny (Spain) (Gluk Video) (Unl)" cloneof="Go! Benny! (Asia) (En) (Unl)">
-		<description>Corre Benny (Spain) (Gluk Video) (Unl)</description>
-		<release name="Corre Benny (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Corre Benny (Spain) (Gluk Video) (Unl).nes" size="65536" crc="86083fbc" md5="6ba79820dda62f736122eba09a9707ea" sha1="d1ae8b4c64d4c5e387446a5d3b5ca3b152e0e26a" status="verified"/>
+	<game name="Corre Benny (Spain) (En) (Gluk Video) (Unl)" cloneof="Go! Benny! (Asia) (En) (Unl)">
+		<description>Corre Benny (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Corre Benny (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Corre Benny (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="86083fbc" md5="6ba79820dda62f736122eba09a9707ea" sha1="d1ae8b4c64d4c5e387446a5d3b5ca3b152e0e26a" status="verified"/>
 	</game>
 	<game name="Goal! (Europe)">
 		<description>Goal! (Europe)</description>
@@ -5424,6 +5481,10 @@
 	<game name="Golf (Japan) (En) (GameCube Edition)" cloneof="Golf (Europe)">
 		<description>Golf (Japan) (En) (GameCube Edition)</description>
 		<rom name="Golf (Japan) (En) (GameCube Edition).nes" size="40960" crc="814f7e11" md5="9603d477aa153eb361378ca8ff8be5dc" sha1="2c8380c6b121fcd541cd162998bb4d3ff540511c"/>
+	</game>
+	<game name="Golf (USA) (e-Reader Edition)" cloneof="Golf (Europe)">
+		<description>Golf (USA) (e-Reader Edition)</description>
+		<rom name="Golf (USA) (e-Reader Edition).nes" size="24576" crc="a4a8d689" md5="a6bc75fa9b94e357b1781d7a7d4e2b7e" sha1="316c0ace8422a4e2b464f431876e741d6e073115"/>
 	</game>
 	<game name="Golf '92, The (Japan)">
 		<description>Golf '92, The (Japan)</description>
@@ -5532,15 +5593,19 @@
 		<release name="Gradius (USA)" region="USA"/>
 		<rom name="Gradius (USA).nes" size="65536" crc="350d835e" md5="49c0ffbd6fca692e7c567b4d72ae0847" sha1="9282e87c643557682aee674174821bf3a0fe3876" status="verified"/>
 	</game>
+	<game name="Gradius (Japan) (FamicomBox)">
+		<description>Gradius (Japan) (FamicomBox)</description>
+		<rom name="Gradius (Japan) (FamicomBox).nes" size="65536" crc="0e48ba0a" md5="0fcb7a26b30f597f4a279e06242c6ccf" sha1="cc122d22ec85c43012d61c830f4d47082d7cdec8"/>
+	</game>
 	<game name="Gradius II (Japan)">
 		<description>Gradius II (Japan)</description>
 		<release name="Gradius II (Japan)" region="JPN"/>
 		<rom name="Gradius II (Japan).nes" size="262144" crc="5adbf660" md5="148f4d81c1b833fd16f8ea51152ad3a9" sha1="6a493cc7a3745f44e2ec4ba0fa71bfa89ff5cf37" status="verified"/>
 	</game>
-	<game name="Gran Aventura Submarina, La (Spain) (Gluk Video) (Unl)">
-		<description>Gran Aventura Submarina, La (Spain) (Gluk Video) (Unl)</description>
-		<release name="Gran Aventura Submarina, La (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Gran Aventura Submarina, La (Spain) (Gluk Video) (Unl).nes" size="65536" crc="2ba86f76" md5="fac1fc74aec2dc99e8cb7e5a810fafaa" sha1="09d2f5a6f4c129fb9f7fb3dc427d85f46402c52f"/>
+	<game name="Gran Aventura Submarina, La (Spain) (En) (Gluk Video) (Unl)">
+		<description>Gran Aventura Submarina, La (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Gran Aventura Submarina, La (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Gran Aventura Submarina, La (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="2ba86f76" md5="fac1fc74aec2dc99e8cb7e5a810fafaa" sha1="09d2f5a6f4c129fb9f7fb3dc427d85f46402c52f"/>
 	</game>
 	<game name="Grand Master (Japan)">
 		<description>Grand Master (Japan)</description>
@@ -6134,17 +6199,21 @@
 		<release name="I Love Softball (Japan)" region="JPN"/>
 		<rom name="I Love Softball (Japan).nes" size="262144" crc="aa4318ae" md5="39eae74c09f39d53c819069f660e1619" sha1="48531166ef9e995a396431f1e8a86d1688527c89"/>
 	</game>
-	<game name="Ice Climber (USA, Europe, Korea)">
-		<description>Ice Climber (USA, Europe, Korea)</description>
-		<release name="Ice Climber (USA, Europe, Korea)" region="EUR"/>
-		<release name="Ice Climber (USA, Europe, Korea)" region="KOR"/>
-		<release name="Ice Climber (USA, Europe, Korea)" region="USA"/>
-		<rom name="Ice Climber (USA, Europe, Korea).nes" size="24576" crc="fb98d46e" md5="c9c94df2ebb19bd6d717b2cfbf977574" sha1="22d57ac6066529d199fcd299159d94820042c7d0" status="verified"/>
+	<game name="Ice Climber (USA, Europe, Korea) (En)">
+		<description>Ice Climber (USA, Europe, Korea) (En)</description>
+		<release name="Ice Climber (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="Ice Climber (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="Ice Climber (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="Ice Climber (USA, Europe, Korea) (En).nes" size="24576" crc="fb98d46e" md5="c9c94df2ebb19bd6d717b2cfbf977574" sha1="22d57ac6066529d199fcd299159d94820042c7d0" status="verified"/>
 	</game>
-	<game name="Ice Climber (Japan) (En)" cloneof="Ice Climber (USA, Europe, Korea)">
+	<game name="Ice Climber (Japan) (En)" cloneof="Ice Climber (USA, Europe, Korea) (En)">
 		<description>Ice Climber (Japan) (En)</description>
 		<release name="Ice Climber (Japan) (En)" region="JPN"/>
 		<rom name="Ice Climber (Japan) (En).nes" size="24576" crc="0b58880c" md5="f19cca57b6d350454c64149db8242419" sha1="4d55f5e718e6beea1ac0e72ecfc2d4c04da68ecf" status="verified"/>
+	</game>
+	<game name="Ice Climber (USA) (e-Reader Edition)" cloneof="Ice Climber (USA, Europe, Korea) (En)">
+		<description>Ice Climber (USA) (e-Reader Edition)</description>
+		<rom name="Ice Climber (USA) (e-Reader Edition).nes" size="24576" crc="a46acaa6" md5="8c1b261dfefee35a1af18e49f92973cf" sha1="d3c6f2d47fdb80a7b177442499308c01155307f6"/>
 	</game>
 	<game name="Ice Hockey (Europe)">
 		<description>Ice Hockey (Europe)</description>
@@ -6516,10 +6585,10 @@
 		<description>John Smith - Special Agent (USA) (Beta) (1992-08-27)</description>
 		<rom name="John Smith - Special Agent (USA) (Beta) (1992-08-27).nes" size="262144" crc="250dc104" md5="941d29f8a36742ae3af416f73bfb9f2d" sha1="e69cbf5ebf3305237989e2cc34003a5b83bc3363"/>
 	</game>
-	<game name="Janggun-ui Adeul (Korea) (Unl)">
-		<description>Janggun-ui Adeul (Korea) (Unl)</description>
-		<release name="Janggun-ui Adeul (Korea) (Unl)" region="KOR"/>
-		<rom name="Janggun-ui Adeul (Korea) (Unl).nes" size="655360" crc="d1464464" md5="5a23f3ff580253cb085b2a83384fcdb1" sha1="8f8b72b378af4c199490e69d86367ff93cdf0794"/>
+	<game name="Janggun-ui Adeul (Korea) (En) (Unl)">
+		<description>Janggun-ui Adeul (Korea) (En) (Unl)</description>
+		<release name="Janggun-ui Adeul (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Janggun-ui Adeul (Korea) (En) (Unl).nes" size="655360" crc="d1464464" md5="5a23f3ff580253cb085b2a83384fcdb1" sha1="8f8b72b378af4c199490e69d86367ff93cdf0794"/>
 	</game>
 	<game name="Jangou (Japan)">
 		<description>Jangou (Japan)</description>
@@ -6845,15 +6914,15 @@
 		<release name="Karaoke Studio (Japan)" region="JPN"/>
 		<rom name="Karaoke Studio (Japan).nes" size="131072" crc="adfad6b6" md5="1da347963c14675af6aa2b0e0e536f1e" sha1="5ab1d9cd55978af770a87749bd375741a63cb3d8"/>
 	</game>
-	<game name="Karaoke Studio Senyou Cassette Vol. 1 (Japan)">
-		<description>Karaoke Studio Senyou Cassette Vol. 1 (Japan)</description>
-		<release name="Karaoke Studio Senyou Cassette Vol. 1 (Japan)" region="JPN"/>
-		<rom name="Karaoke Studio Senyou Cassette Vol. 1 (Japan).nes" size="262144" crc="4b6ef399" md5="a3f3c7f56b1c955c66fb71f95de830a1" sha1="153cf8e6d76a5d2de991c3c01fc966efe2e0ae7f"/>
+	<game name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 1 (Japan)">
+		<description>Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 1 (Japan)</description>
+		<release name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 1 (Japan)" region="JPN"/>
+		<rom name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 1 (Japan).nes" size="262144" crc="4b6ef399" md5="a3f3c7f56b1c955c66fb71f95de830a1" sha1="153cf8e6d76a5d2de991c3c01fc966efe2e0ae7f"/>
 	</game>
-	<game name="Karaoke Studio Senyou Cassette Vol. 2 (Japan)">
-		<description>Karaoke Studio Senyou Cassette Vol. 2 (Japan)</description>
-		<release name="Karaoke Studio Senyou Cassette Vol. 2 (Japan)" region="JPN"/>
-		<rom name="Karaoke Studio Senyou Cassette Vol. 2 (Japan).nes" size="262144" crc="50f3e338" md5="1a9b1113969723920b9bcd43c9327894" sha1="0cd87e8627e57a8c62492a3e886f4d1089809eba"/>
+	<game name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 2 (Japan)">
+		<description>Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 2 (Japan)</description>
+		<release name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 2 (Japan)" region="JPN"/>
+		<rom name="Karaoke Studio Senyou Cassette - Top Hit 20 Vol. 2 (Japan).nes" size="262144" crc="50f3e338" md5="1a9b1113969723920b9bcd43c9327894" sha1="0cd87e8627e57a8c62492a3e886f4d1089809eba"/>
 	</game>
 	<game name="Karate Champ (USA) (Rev 1)">
 		<description>Karate Champ (USA) (Rev 1)</description>
@@ -7122,10 +7191,10 @@
 		<release name="Hoshi no Kirby - Yume no Izumi no Monogatari (Japan)" region="JPN"/>
 		<rom name="Hoshi no Kirby - Yume no Izumi no Monogatari (Japan).nes" size="786432" crc="e4a7d436" md5="4d22184ed99efec06bbec5cd7805cc56" sha1="bb71a65706f75da8008a1bac02ecae06ea176f1f" status="verified"/>
 	</game>
-	<game name="Kirby's Adventure (Canada)" cloneof="Kirby's Adventure (Europe)">
-		<description>Kirby's Adventure (Canada)</description>
-		<release name="Kirby's Adventure (Canada)" region="CAN"/>
-		<rom name="Kirby's Adventure (Canada).nes" size="786432" crc="37088eff" md5="f397d53818b0697e6a80ee5cc30d2a23" sha1="780fb2a9adbaea8fc19c6064551f45e53dd1ddc2"/>
+	<game name="Kirby's Adventure (Canada) (Fr)" cloneof="Kirby's Adventure (Europe)">
+		<description>Kirby's Adventure (Canada) (Fr)</description>
+		<release name="Kirby's Adventure (Canada) (Fr)" region="CAN"/>
+		<rom name="Kirby's Adventure (Canada) (Fr).nes" size="786432" crc="37088eff" md5="f397d53818b0697e6a80ee5cc30d2a23" sha1="780fb2a9adbaea8fc19c6064551f45e53dd1ddc2"/>
 	</game>
 	<game name="Kirby's Adventure (France)" cloneof="Kirby's Adventure (Europe)">
 		<description>Kirby's Adventure (France)</description>
@@ -7195,12 +7264,16 @@
 		<release name="Knight Rider (USA)" region="USA"/>
 		<rom name="Knight Rider (USA).nes" size="196608" crc="ebcfe7c5" md5="d68a5022531260b1d4a807bebb7c93f9" sha1="5af88be752fe06673874574a039ad03749c2bba1"/>
 	</game>
-	<game name="Koko Adventure (Korea) (Unl)">
-		<description>Koko Adventure (Korea) (Unl)</description>
-		<release name="Koko Adventure (Korea) (Unl)" region="KOR"/>
-		<rom name="Koko Adventure (Korea) (Unl).nes" size="262144" crc="86b206b1" md5="9a6d634b0d6ffda513339f8e7ce0d2f5" sha1="ebdb34b7212704221e012572903e85e491614e66"/>
+	<game name="Knight Rider (Japan) (FamicomBox)" cloneof="Knight Rider (Europe)">
+		<description>Knight Rider (Japan) (FamicomBox)</description>
+		<rom name="Knight Rider (Japan) (FamicomBox).nes" size="262144" crc="1a40024c" md5="436e4fbe52997096ab9a4014b9257030" sha1="a80c4b002c557563e689b012de59a64f42497e53"/>
 	</game>
-	<game name="Buzz &amp; Waldog (USA) (Proto) (Unl)" cloneof="Koko Adventure (Korea) (Unl)">
+	<game name="Koko Adventure (Korea) (En) (Unl)">
+		<description>Koko Adventure (Korea) (En) (Unl)</description>
+		<release name="Koko Adventure (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Koko Adventure (Korea) (En) (Unl).nes" size="262144" crc="86b206b1" md5="9a6d634b0d6ffda513339f8e7ce0d2f5" sha1="ebdb34b7212704221e012572903e85e491614e66"/>
+	</game>
+	<game name="Buzz &amp; Waldog (USA) (Proto) (Unl)" cloneof="Koko Adventure (Korea) (En) (Unl)">
 		<description>Buzz &amp; Waldog (USA) (Proto) (Unl)</description>
 		<release name="Buzz &amp; Waldog (USA) (Proto) (Unl)" region="USA"/>
 		<rom name="Buzz &amp; Waldog (USA) (Proto) (Unl).nes" size="262144" crc="ccc03440" md5="bde4c741b8c9fef1f2204e47fc7aef1d" sha1="d4702a831a398107d8f87bc93bd56c4d8ca78f2a"/>
@@ -7279,11 +7352,11 @@
 		<release name="Kung Fu (Europe)" region="EUR"/>
 		<rom name="Kung Fu (Europe).nes" size="40960" crc="464a67ab" md5="24beeebcd540f08471be5ef1353dd332" sha1="de7c148907f5e2de0946fa2022688be1ad5999a3" status="verified"/>
 	</game>
-	<game name="Kung Fu (Japan, USA)" cloneof="Kung Fu (Europe)">
-		<description>Kung Fu (Japan, USA)</description>
-		<release name="Kung Fu (Japan, USA)" region="JPN"/>
-		<release name="Kung Fu (Japan, USA)" region="USA"/>
-		<rom name="Kung Fu (Japan, USA).nes" size="40960" crc="d5c64257" md5="08b21d774b2adaed5480f6a941c576e4" sha1="24a25f9dc3227687239fca9e7bbb1f1b7664d6dd" status="verified"/>
+	<game name="Kung Fu (Japan, USA) (En)" cloneof="Kung Fu (Europe)">
+		<description>Kung Fu (Japan, USA) (En)</description>
+		<release name="Kung Fu (Japan, USA) (En)" region="JPN"/>
+		<release name="Kung Fu (Japan, USA) (En)" region="USA"/>
+		<rom name="Kung Fu (Japan, USA) (En).nes" size="40960" crc="d5c64257" md5="08b21d774b2adaed5480f6a941c576e4" sha1="24a25f9dc3227687239fca9e7bbb1f1b7664d6dd" status="verified"/>
 	</game>
 	<game name="Spartan X (Japan)" cloneof="Kung Fu (Europe)">
 		<description>Spartan X (Japan)</description>
@@ -7438,6 +7511,10 @@
 		<description>Fighting Golf (Japan)</description>
 		<release name="Fighting Golf (Japan)" region="JPN"/>
 		<rom name="Fighting Golf (Japan).nes" size="262144" crc="8308fed7" md5="375f7547323b16df21f454f5a79aa332" sha1="b26baf7ed80d33b8da1ff4eabb00d76e0ecfb03c" status="verified"/>
+	</game>
+	<game name="Fighting Golf (Japan) (FamicomBox)" cloneof="Lee Trevino's Fighting Golf (Europe)">
+		<description>Fighting Golf (Japan) (FamicomBox)</description>
+		<rom name="Fighting Golf (Japan) (FamicomBox).nes" size="262144" crc="9ff3089b" md5="eb3db185cac18067d308e81ce73997ba" sha1="c68e559d34e42750e0bf08c3d3be4d9245581d02"/>
 	</game>
 	<game name="Lee Trevino's Fighting Golf (USA)" cloneof="Lee Trevino's Fighting Golf (Europe)">
 		<description>Lee Trevino's Fighting Golf (USA)</description>
@@ -7833,27 +7910,27 @@
 		<release name="Mach Rider (Europe)" region="EUR"/>
 		<rom name="Mach Rider (Europe).nes" size="40960" crc="e57e5384" md5="6aed8e56765891b9d4c5bbb766150ddd" sha1="a322ba4cefaff2668763cc20491fcbfcace7347e" status="verified"/>
 	</game>
-	<game name="Mach Rider (Japan, USA)" cloneof="Mach Rider (Europe)">
-		<description>Mach Rider (Japan, USA)</description>
-		<rom name="Mach Rider (Japan, USA).nes" size="40960" crc="59977a46" md5="0256e02693147fad9383190528ff0576" sha1="3959de9e2f63b34bc992a60ddcc73027f401dc64" status="verified"/>
+	<game name="Mach Rider (Japan, USA) (En)" cloneof="Mach Rider (Europe)">
+		<description>Mach Rider (Japan, USA) (En)</description>
+		<rom name="Mach Rider (Japan, USA) (En).nes" size="40960" crc="59977a46" md5="0256e02693147fad9383190528ff0576" sha1="3959de9e2f63b34bc992a60ddcc73027f401dc64" status="verified"/>
 	</game>
-	<game name="Mach Rider (Japan, USA) (Rev 1)" cloneof="Mach Rider (Europe)">
-		<description>Mach Rider (Japan, USA) (Rev 1)</description>
-		<release name="Mach Rider (Japan, USA) (Rev 1)" region="JPN"/>
-		<release name="Mach Rider (Japan, USA) (Rev 1)" region="USA"/>
-		<rom name="Mach Rider (Japan, USA) (Rev 1).nes" size="40960" crc="38810a91" md5="70648d346f902e599f943963667f65ce" sha1="65caac674f3847ed46654313382ecc0f854a0f54" status="verified"/>
+	<game name="Mach Rider (Japan, USA) (En) (Rev 1)" cloneof="Mach Rider (Europe)">
+		<description>Mach Rider (Japan, USA) (En) (Rev 1)</description>
+		<release name="Mach Rider (Japan, USA) (En) (Rev 1)" region="JPN"/>
+		<release name="Mach Rider (Japan, USA) (En) (Rev 1)" region="USA"/>
+		<rom name="Mach Rider (Japan, USA) (En) (Rev 1).nes" size="40960" crc="38810a91" md5="70648d346f902e599f943963667f65ce" sha1="65caac674f3847ed46654313382ecc0f854a0f54" status="verified"/>
 	</game>
 	<game name="Mach Rider (Europe) (Virtual Console)" cloneof="Mach Rider (Europe)">
 		<description>Mach Rider (Europe) (Virtual Console)</description>
 		<rom name="Mach Rider (Europe) (Virtual Console).nes" size="40960" crc="b08d0374" md5="cc781251fb5eba207af5a1bbfed954e9" sha1="86b5feb477669ebdfe4182330ba049d57bc6afe6"/>
 	</game>
-	<game name="Mach Rider (Japan, USA) (Virtual Console)" cloneof="Mach Rider (Europe)">
-		<description>Mach Rider (Japan, USA) (Virtual Console)</description>
-		<rom name="Mach Rider (Japan, USA) (Virtual Console).nes" size="40960" crc="f8d564f9" md5="03160660a33af18c133926c078211440" sha1="c5b2366e8a43accece0c8e8b628ecddcbe89b609"/>
+	<game name="Mach Rider (Japan, USA) (En) (Virtual Console)" cloneof="Mach Rider (Europe)">
+		<description>Mach Rider (Japan, USA) (En) (Virtual Console)</description>
+		<rom name="Mach Rider (Japan, USA) (En) (Virtual Console).nes" size="40960" crc="f8d564f9" md5="03160660a33af18c133926c078211440" sha1="c5b2366e8a43accece0c8e8b628ecddcbe89b609"/>
 	</game>
-	<game name="Mach Rider (Japan, USA) (Rev 1) (Virtual Console)" cloneof="Mach Rider (Europe)">
-		<description>Mach Rider (Japan, USA) (Rev 1) (Virtual Console)</description>
-		<rom name="Mach Rider (Japan, USA) (Rev 1) (Virtual Console).nes" size="40960" crc="99c3142e" md5="ce483284d638493f92a0f9de3789c7f8" sha1="e2efb869252f992f21ae5430283a2a60df6aabc4"/>
+	<game name="Mach Rider (Japan, USA) (En) (Rev 1) (Virtual Console)" cloneof="Mach Rider (Europe)">
+		<description>Mach Rider (Japan, USA) (En) (Rev 1) (Virtual Console)</description>
+		<rom name="Mach Rider (Japan, USA) (En) (Rev 1) (Virtual Console).nes" size="40960" crc="99c3142e" md5="ce483284d638493f92a0f9de3789c7f8" sha1="e2efb869252f992f21ae5430283a2a60df6aabc4"/>
 	</game>
 	<game name="Mad Max (USA)">
 		<description>Mad Max (USA)</description>
@@ -7884,10 +7961,10 @@
 		<release name="Magic Block (Asia) (En) (Mega Soft) (Unl)" region="ASI"/>
 		<rom name="Magic Block (Asia) (En) (Mega Soft) (Unl).nes" size="131072" crc="ed4d696f" md5="636b6e6ac849d55eab111cf520a5b6e3" sha1="4e33e591136ef3bfa64cafbbd152bf517d090ea2"/>
 	</game>
-	<game name="Bloque Magico, El (Spain) (Gluk Video) (Unl)" cloneof="Magic Block (Asia) (En) (Mega Soft) (Unl)">
-		<description>Bloque Magico, El (Spain) (Gluk Video) (Unl)</description>
-		<release name="Bloque Magico, El (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Bloque Magico, El (Spain) (Gluk Video) (Unl).nes" size="65536" crc="baacf521" md5="cd9f05e9dde9569514cb479363ff68ef" sha1="112e0a01fe5ed2e5ec178df989b69cf567816b02"/>
+	<game name="Bloque Magico, El (Spain) (En) (Gluk Video) (Unl)" cloneof="Magic Block (Asia) (En) (Mega Soft) (Unl)">
+		<description>Bloque Magico, El (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Bloque Magico, El (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Bloque Magico, El (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="baacf521" md5="cd9f05e9dde9569514cb479363ff68ef" sha1="112e0a01fe5ed2e5ec178df989b69cf567816b02"/>
 	</game>
 	<game name="Magic Candle, The (Japan)">
 		<description>Magic Candle, The (Japan)</description>
@@ -7929,10 +8006,10 @@
 		<release name="Magic Johnson's Fast Break (USA)" region="USA"/>
 		<rom name="Magic Johnson's Fast Break (USA).nes" size="196608" crc="c6c2edb5" md5="20f7b437da6a7069cc12ca0f7ba20730" sha1="bfe87facfa2222d9e4984b8a893e033bd5796a8e"/>
 	</game>
-	<game name="Magic Kid Googoo (Korea) (Unl)">
-		<description>Magic Kid Googoo (Korea) (Unl)</description>
-		<release name="Magic Kid Googoo (Korea) (Unl)" region="ASI"/>
-		<rom name="Magic Kid Googoo (Korea) (Unl).nes" size="393216" crc="0e76e4c1" md5="5b8a7eeb4982df0ba91a29b6fda9ddae" sha1="8630dcedcf37b2e2a9da4bcf8dcd3ca07114f71c"/>
+	<game name="Magic Kid Googoo (Korea) (En) (Unl)">
+		<description>Magic Kid Googoo (Korea) (En) (Unl)</description>
+		<release name="Magic Kid Googoo (Korea) (En) (Unl)" region="ASI"/>
+		<rom name="Magic Kid Googoo (Korea) (En) (Unl).nes" size="393216" crc="0e76e4c1" md5="5b8a7eeb4982df0ba91a29b6fda9ddae" sha1="8630dcedcf37b2e2a9da4bcf8dcd3ca07114f71c"/>
 	</game>
 	<game name="Magic of Scheherazade, The (USA)">
 		<description>Magic of Scheherazade, The (USA)</description>
@@ -8228,6 +8305,10 @@
 		<description>Mario Bros. (World) (GameCube Edition)</description>
 		<rom name="Mario Bros. (World) (GameCube Edition).nes" size="40960" crc="8db31730" md5="d67ee6a0a7af959c417ce894470a49cb" sha1="d70aad989425f9e5b7949afdb7e52c2c2b8e7b31" status="verified"/>
 	</game>
+	<game name="Mario Bros. (USA) (e-Reader Edition)" cloneof="Mario Bros. (Europe) (PAL-MC-0, Classic Series)">
+		<description>Mario Bros. (USA) (e-Reader Edition)</description>
+		<rom name="Mario Bros. (USA) (e-Reader Edition).nes" size="24576" crc="c1a602e8" md5="d7bf2eaec00ee1ccda52bd49eac05e4d" sha1="4cd94efc7e7776962b231cb071f7b8d17e34f701"/>
+	</game>
 	<game name="Mario is Missing! (Europe)">
 		<description>Mario is Missing! (Europe)</description>
 		<release name="Mario is Missing! (Europe)" region="EUR"/>
@@ -8337,7 +8418,7 @@
 	</game>
 	<game name="Mega Man (World) (Mega Man Legacy Collection)" cloneof="Mega Man (Europe)">
 		<description>Mega Man (World) (Mega Man Legacy Collection)</description>
-		<rom name="Mega Man (World) (Mega Man Legacy Collection) (Unl).nes" size="131072" crc="1c47d202" md5="f26a4de87f10552fde0ab93c3069d24c" sha1="63e8a6e3a443bc7fc27e939ff59c7b160046392e"/>
+		<rom name="Mega Man (World) (Mega Man Legacy Collection) (Unl).nes" size="131072" crc="1c47d202" md5="f26a4de87f10552fde0ab93c3069d24c" sha1="63e8a6e3a443bc7fc27e939ff59c7b160046392e" status="verified"/>
 	</game>
 	<game name="Mega Man (USA) (Virtual Console)" cloneof="Mega Man (Europe)">
 		<description>Mega Man (USA) (Virtual Console)</description>
@@ -8364,7 +8445,7 @@
 	</game>
 	<game name="Mega Man 2 (World) (Mega Man Legacy Collection)" cloneof="Mega Man 2 (Europe)">
 		<description>Mega Man 2 (World) (Mega Man Legacy Collection)</description>
-		<rom name="Mega Man 2 (World) (Mega Man Legacy Collection).nes" size="262144" crc="cf5de2bc" md5="37f2c36ce7592f1e16b3434b3985c497" sha1="5d11fe03bdcee860d3e161c6a0af4a7a3bbb9834"/>
+		<rom name="Mega Man 2 (World) (Mega Man Legacy Collection).nes" size="262144" crc="cf5de2bc" md5="37f2c36ce7592f1e16b3434b3985c497" sha1="5d11fe03bdcee860d3e161c6a0af4a7a3bbb9834" status="verified"/>
 	</game>
 	<game name="Mega Man 2 (Europe) (Virtual Console)" cloneof="Mega Man 2 (Europe)">
 		<description>Mega Man 2 (Europe) (Virtual Console)</description>
@@ -8610,10 +8691,10 @@
 		<release name="Wei Lai Xiao Zi - Joy Van Kid (Asia) (En) (Unl)" region="ASI"/>
 		<rom name="Wei Lai Xiao Zi - Joy Van Kid (Asia) (En) (Unl).nes" size="65536" crc="cec28502" md5="669eb647103a9a80e114ec878debf665" sha1="6a1cb30d0ec613ebebc1a1e42016377810dff084"/>
 	</game>
-	<game name="Metal Force (Korea) (Unl)">
-		<description>Metal Force (Korea) (Unl)</description>
-		<release name="Metal Force (Korea) (Unl)" region="KOR"/>
-		<rom name="Metal Force (Korea) (Unl).nes" size="524288" crc="ec6d910e" md5="a3a716c064ba73a0a165e5918bca4153" sha1="816366ef0b1417be7553957fa3d256493dd0bf85"/>
+	<game name="Metal Force (Korea) (En) (Unl)">
+		<description>Metal Force (Korea) (En) (Unl)</description>
+		<release name="Metal Force (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Metal Force (Korea) (En) (Unl).nes" size="524288" crc="ec6d910e" md5="a3a716c064ba73a0a165e5918bca4153" sha1="816366ef0b1417be7553957fa3d256493dd0bf85"/>
 	</game>
 	<game name="Metal Gear (Europe)">
 		<description>Metal Gear (Europe)</description>
@@ -8638,6 +8719,10 @@
 	<game name="Metal Max (Japan) (Virtual Console)" cloneof="Metal Max (Japan)">
 		<description>Metal Max (Japan) (Virtual Console)</description>
 		<rom name="Metal Max (Japan) (Virtual Console).nes" size="524288" crc="7feae646" md5="6708c55d23d34763a57da59706bcd870" sha1="791280156be20eb07f427cb8ad0c0fdc622da207"/>
+	</game>
+	<game name="Metal Max (Japan) (Beta)" cloneof="Metal Max (Japan)">
+		<description>Metal Max (Japan) (Beta)</description>
+		<rom name="Metal Max (Japan) (Beta).nes" size="524288" crc="ce2cbd09" md5="afac05e5a54f5e55aff360e99cd45ff7" sha1="a44485453ab9727abfc58a7f1022e1da496aa836"/>
 	</game>
 	<game name="Metal Slader Glory (Japan)">
 		<description>Metal Slader Glory (Japan)</description>
@@ -9069,15 +9154,15 @@
 		<release name="Monster Truck Rally (USA)" region="USA"/>
 		<rom name="Monster Truck Rally (USA).nes" size="65536" crc="2f698c4d" md5="1309fa33e953ae709985320af74070ec" sha1="3c0ff6f5760de40c6701b7d07c1c6dfc6b022042"/>
 	</game>
-	<game name="Monstruo de los Globos, El (Spain) (Rev 1) (Gluk Video) (Unl)">
-		<description>Monstruo de los Globos, El (Spain) (Rev 1) (Gluk Video) (Unl)</description>
-		<release name="Monstruo de los Globos, El (Spain) (Rev 1) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Monstruo de los Globos, El (Spain) (Rev 1) (Gluk Video) (Unl).nes" size="40960" crc="0b3513a0" md5="88384318ccb8852ff591e836ee0e719b" sha1="da908b14d2a0f8c174df44fafbb4fe180ac629fe"/>
+	<game name="Monstruo de los Globos, El (Spain) (En) (Rev 1) (Gluk Video) (Unl)">
+		<description>Monstruo de los Globos, El (Spain) (En) (Rev 1) (Gluk Video) (Unl)</description>
+		<release name="Monstruo de los Globos, El (Spain) (En) (Rev 1) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Monstruo de los Globos, El (Spain) (En) (Rev 1) (Gluk Video) (Unl).nes" size="40960" crc="0b3513a0" md5="88384318ccb8852ff591e836ee0e719b" sha1="da908b14d2a0f8c174df44fafbb4fe180ac629fe"/>
 	</game>
-	<game name="Monstruo de los Globos, El (Spain) (Gluk Video) (Unl)" cloneof="Monstruo de los Globos, El (Spain) (Rev 1) (Gluk Video) (Unl)">
-		<description>Monstruo de los Globos, El (Spain) (Gluk Video) (Unl)</description>
-		<release name="Monstruo de los Globos, El (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Monstruo de los Globos, El (Spain) (Gluk Video) (Unl).nes" size="40960" crc="905b93f6" md5="9e549928af63dad7bd95aee90a6f9c02" sha1="affffa5489b7d229b3741a23761ca38246ae4ef1" status="verified"/>
+	<game name="Monstruo de los Globos, El (Spain) (En) (Gluk Video) (Unl)" cloneof="Monstruo de los Globos, El (Spain) (En) (Rev 1) (Gluk Video) (Unl)">
+		<description>Monstruo de los Globos, El (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Monstruo de los Globos, El (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Monstruo de los Globos, El (Spain) (En) (Gluk Video) (Unl).nes" size="40960" crc="905b93f6" md5="9e549928af63dad7bd95aee90a6f9c02" sha1="affffa5489b7d229b3741a23761ca38246ae4ef1" status="verified"/>
 	</game>
 	<game name="Moon Crystal (Japan)">
 		<description>Moon Crystal (Japan)</description>
@@ -9538,6 +9623,10 @@
 		<description>Gegege no Kitarou - Youkai Daimakyou (Japan) (Beta)</description>
 		<rom name="Gegege no Kitarou - Youkai Daimakyou (Japan) (Beta).nes" size="65536" crc="ce2450c0" md5="2abeb1c1b58d37cc39be06ff74c2d806" sha1="6893b9e699a36a9c63cb275bb98550cb1c9dabe0"/>
 	</game>
+	<game name="Ninja Ryuukenden (Japan) (FamicomBox)">
+		<description>Ninja Ryuukenden (Japan) (FamicomBox)</description>
+		<rom name="Ninja Ryuukenden (Japan) (FamicomBox).nes" size="262144" crc="8528e509" md5="32d0fa1e344d70f343f0c7707a25637f" sha1="931dc1d8d517a71549efbcab9bfd62061ba85071"/>
+	</game>
 	<game name="Ninja-kun - Ashura no Shou (Japan)">
 		<description>Ninja-kun - Ashura no Shou (Japan)</description>
 		<release name="Ninja-kun - Ashura no Shou (Japan)" region="JPN"/>
@@ -9567,10 +9656,10 @@
 		<release name="Nintendo - NTF2 Test Cartridge (USA) (Test Program)" region="USA"/>
 		<rom name="Nintendo - NTF2 Test Cartridge (USA) (Test Program).nes" size="40960" crc="2f4fbbb3" md5="4fd26cf54f5523070ca4e66f01e05af0" sha1="b52d7f4515665c523333993658becd48be1325df"/>
 	</game>
-	<game name="Nintendo Campus Challenge 1991 (USA) (Competition Cart)">
-		<description>Nintendo Campus Challenge 1991 (USA) (Competition Cart)</description>
-		<release name="Nintendo Campus Challenge 1991 (USA) (Competition Cart)" region="USA"/>
-		<rom name="Nintendo Campus Challenge 1991 (USA) (Competition Cart).nes" size="786432" crc="1d55c59f" md5="3d69de457f1280d5a3fd2d65afb99902" sha1="f6d7772bce803a4e58626f8c461c0e4d83ba1fe3"/>
+	<game name="Nintendo Campus Challenge 1991 (USA) (Competition Cart) [b]">
+		<description>Nintendo Campus Challenge 1991 (USA) (Competition Cart) [b]</description>
+		<release name="Nintendo Campus Challenge 1991 (USA) (Competition Cart) [b]" region="USA"/>
+		<rom name="Nintendo Campus Challenge 1991 (USA) (Competition Cart) [b].nes" size="786432" crc="1d55c59f" md5="3d69de457f1280d5a3fd2d65afb99902" sha1="f6d7772bce803a4e58626f8c461c0e4d83ba1fe3" status="baddump"/>
 	</game>
 	<game name="Nintendo World Championships 1990 (USA) (Competition Cart)">
 		<description>Nintendo World Championships 1990 (USA) (Competition Cart)</description>
@@ -9741,10 +9830,10 @@
 		<release name="Okkotoshi Puzzle - Tonjan! (Japan)" region="JPN"/>
 		<rom name="Okkotoshi Puzzle - Tonjan! (Japan).nes" size="262144" crc="25edaf5c" md5="06b99a61255c4131aa3f867f4b9f1ebf" sha1="97450bf88f2f86d5e8ebb68ab44e01d2b57485e8" status="verified"/>
 	</game>
-	<game name="Olympic I.Q. (Korea) (Unl)">
-		<description>Olympic I.Q. (Korea) (Unl)</description>
-		<release name="Olympic I.Q. (Korea) (Unl)" region="KOR"/>
-		<rom name="Olympic I.Q. (Korea) (Unl).nes" size="98304" crc="4ca11295" md5="734528d97213bb5417660c6c85d58856" sha1="e289d7415e62bb774cc69db7806f73429c843d99"/>
+	<game name="Olympic I.Q. (Korea) (En) (Unl)">
+		<description>Olympic I.Q. (Korea) (En) (Unl)</description>
+		<release name="Olympic I.Q. (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Olympic I.Q. (Korea) (En) (Unl).nes" size="98304" crc="4ca11295" md5="734528d97213bb5417660c6c85d58856" sha1="e289d7415e62bb774cc69db7806f73429c843d99"/>
 	</game>
 	<game name="Olympic IQ (Asia) (Ja) (PAL) (Unl)">
 		<description>Olympic IQ (Asia) (Ja) (PAL) (Unl)</description>
@@ -10197,19 +10286,23 @@
 		<release name="Pinball (Europe)" region="EUR"/>
 		<rom name="Pinball (Europe).nes" size="24576" crc="d6ad4e9d" md5="4380e5b9edab63b677a6dfa11a39ec71" sha1="e6dbeab6b373b44a2fabf778bb394eac3a636f7a" status="verified"/>
 	</game>
-	<game name="Pinball (Japan, USA)" cloneof="Pinball (Europe)">
-		<description>Pinball (Japan, USA)</description>
-		<release name="Pinball (Japan, USA)" region="JPN"/>
-		<release name="Pinball (Japan, USA)" region="USA"/>
-		<rom name="Pinball (Japan, USA).nes" size="24576" crc="035dc2e9" md5="ad809323fe92d0e083bf77ccecae462e" sha1="be348431a9c03d1a588a8363c0094b5a0722d9be" status="verified"/>
+	<game name="Pinball (Japan, USA) (En)" cloneof="Pinball (Europe)">
+		<description>Pinball (Japan, USA) (En)</description>
+		<release name="Pinball (Japan, USA) (En)" region="JPN"/>
+		<release name="Pinball (Japan, USA) (En)" region="USA"/>
+		<rom name="Pinball (Japan, USA) (En).nes" size="24576" crc="035dc2e9" md5="ad809323fe92d0e083bf77ccecae462e" sha1="be348431a9c03d1a588a8363c0094b5a0722d9be" status="verified"/>
 	</game>
-	<game name="Pinball (Japan, USA) (GameCube Edition)" cloneof="Pinball (Europe)">
-		<description>Pinball (Japan, USA) (GameCube Edition)</description>
-		<rom name="Pinball (Japan, USA) (GameCube Edition).nes" size="24576" crc="e8000bf7" md5="bfab5f738adb919f1ba389f5c38deb67" sha1="7f238a869d5cc12859c0b06587f94b16dfed346c" status="verified"/>
+	<game name="Pinball (Japan, USA) (En) (GameCube Edition)" cloneof="Pinball (Europe)">
+		<description>Pinball (Japan, USA) (En) (GameCube Edition)</description>
+		<rom name="Pinball (Japan, USA) (En) (GameCube Edition).nes" size="24576" crc="e8000bf7" md5="bfab5f738adb919f1ba389f5c38deb67" sha1="7f238a869d5cc12859c0b06587f94b16dfed346c" status="verified"/>
 	</game>
 	<game name="Pinball (Japan) (En) (GameCube Edition)" cloneof="Pinball (Europe)">
 		<description>Pinball (Japan) (En) (GameCube Edition)</description>
 		<rom name="Pinball (Japan) (En) (GameCube Edition).nes" size="40960" crc="de01497a" md5="438b82eeb85cfff7936ec83730da1ff0" sha1="3c5687101382a8deae7d70b6062c0484bd0ad420"/>
+	</game>
+	<game name="Pinball (USA) (e-Reader Edition)" cloneof="Pinball (Europe)">
+		<description>Pinball (USA) (e-Reader Edition)</description>
+		<rom name="Pinball (USA) (e-Reader Edition).nes" size="24576" crc="4069d3df" md5="af0b15298bbee2946a8caf0028048a58" sha1="04465ec7dafbee69c8260b9fb6ffb14b84a4df87"/>
 	</game>
 	<game name="Pinball Quest (USA)">
 		<description>Pinball Quest (USA)</description>
@@ -10231,11 +10324,11 @@
 		<release name="Pipe Dream (USA)" region="USA"/>
 		<rom name="Pipe Dream (USA).nes" size="65536" crc="bce77871" md5="6ff5c5da9f7ff2600e18f0f168cd8389" sha1="7ae08f6c3358b434d2782d646482fa37bc3fbe21" status="verified"/>
 	</game>
-	<game name="Pipe V (Asia, Australia) (Unl)">
-		<description>Pipe V (Asia, Australia) (Unl)</description>
-		<release name="Pipe V (Asia, Australia) (Unl)" region="ASI"/>
-		<release name="Pipe V (Asia, Australia) (Unl)" region="AUS"/>
-		<rom name="Pipe V (Asia, Australia) (Unl).nes" size="49152" crc="68379fdb" md5="d93744516d36a6f238edbc9778d31040" sha1="0cde48db89896946f0c2e78936ea290348994ed5"/>
+	<game name="Pipe V (Asia, Australia) (En) (Unl)">
+		<description>Pipe V (Asia, Australia) (En) (Unl)</description>
+		<release name="Pipe V (Asia, Australia) (En) (Unl)" region="ASI"/>
+		<release name="Pipe V (Asia, Australia) (En) (Unl)" region="AUS"/>
+		<rom name="Pipe V (Asia, Australia) (En) (Unl).nes" size="49152" crc="68379fdb" md5="d93744516d36a6f238edbc9778d31040" sha1="0cde48db89896946f0c2e78936ea290348994ed5"/>
 	</game>
 	<game name="Pirates! (Europe)">
 		<description>Pirates! (Europe)</description>
@@ -10296,10 +10389,10 @@
 		<release name="Poker Mahjong - Pu Ke Mao Que (Asia) (Ja) (Unl)" region="ASI"/>
 		<rom name="Poker Mahjong - Pu Ke Mao Que (Asia) (Ja) (Unl).nes" size="65536" crc="2d8730e2" md5="003b6f60f45ea586117f7c7cfb811837" sha1="c282316d30790e41d0a4a0e8949024b980cee572"/>
 	</game>
-	<game name="Policeman (Spain) (Gluk Video) (Unl)">
-		<description>Policeman (Spain) (Gluk Video) (Unl)</description>
-		<release name="Policeman (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Policeman (Spain) (Gluk Video) (Unl).nes" size="131072" crc="2cecd630" md5="7c83b2202fa70dfdfe353cc1dc7bbcaf" sha1="e80d826c2777bac92359cf44cb4fefcf178472dc" status="verified"/>
+	<game name="Policeman (Spain) (En) (Gluk Video) (Unl)">
+		<description>Policeman (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Policeman (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Policeman (Spain) (En) (Gluk Video) (Unl).nes" size="131072" crc="2cecd630" md5="7c83b2202fa70dfdfe353cc1dc7bbcaf" sha1="e80d826c2777bac92359cf44cb4fefcf178472dc" status="verified"/>
 	</game>
 	<game name="Polygondwanaland - 2nd Edition (World) (Aftermarket) (Unl)">
 		<description>Polygondwanaland - 2nd Edition (World) (Aftermarket) (Unl)</description>
@@ -10481,7 +10574,7 @@
 	<game name="Pro Wres (Japan) (FamicomBox)" cloneof="Pro Wrestling (Europe)">
 		<description>Pro Wres (Japan) (FamicomBox)</description>
 		<release name="Pro Wres (Japan) (FamicomBox)" region="JPN"/>
-		<rom name="Pro Wres (Japan) (FamicomBox).nes" size="131072" crc="01609f57" md5="bae1775f41ae2be500813773e3853591" sha1="6522d58f58e57ef293d1d9df1e36b95e9266148b"/>
+		<rom name="Pro Wres (Japan) (FamicomBox).nes" size="131072" crc="01609f57" md5="bae1775f41ae2be500813773e3853591" sha1="6522d58f58e57ef293d1d9df1e36b95e9266148b" status="verified"/>
 	</game>
 	<game name="Pro Wrestling (USA)" cloneof="Pro Wrestling (Europe)">
 		<description>Pro Wrestling (USA)</description>
@@ -10590,13 +10683,13 @@
 		<description>Mike Tyson's Punch-Out!! (Europe) (Rev 1)</description>
 		<rom name="Mike Tyson's Punch-Out!! (Europe) (Rev 1).nes" size="262144" crc="25551f3f" md5="674d1f31be809615d4f352cb8c5f606b" sha1="7329a36d5c38270bbeba4bc613a874550be49ce8" status="verified"/>
 	</game>
-	<game name="Mike Tyson's Punch-Out!! (Japan, USA)" cloneof="Punch-Out!! (Europe)">
-		<description>Mike Tyson's Punch-Out!! (Japan, USA)</description>
-		<rom name="Mike Tyson's Punch-Out!! (Japan, USA).nes" size="262144" crc="92a2185c" md5="1ddde6a84e43ad524a3f81fbfe22f9fc" sha1="339eb36acbbbec96c8d177f0265253a5764cc1fb" status="verified"/>
+	<game name="Mike Tyson's Punch-Out!! (Japan, USA) (En)" cloneof="Punch-Out!! (Europe)">
+		<description>Mike Tyson's Punch-Out!! (Japan, USA) (En)</description>
+		<rom name="Mike Tyson's Punch-Out!! (Japan, USA) (En).nes" size="262144" crc="92a2185c" md5="1ddde6a84e43ad524a3f81fbfe22f9fc" sha1="339eb36acbbbec96c8d177f0265253a5764cc1fb" status="verified"/>
 	</game>
-	<game name="Mike Tyson's Punch-Out!! (Japan, USA) (Rev 1)" cloneof="Punch-Out!! (Europe)">
-		<description>Mike Tyson's Punch-Out!! (Japan, USA) (Rev 1)</description>
-		<rom name="Mike Tyson's Punch-Out!! (Japan, USA) (Rev 1).nes" size="262144" crc="2c818014" md5="5bc7fac06e58fda15fd981fd03572c34" sha1="b6f6bd9d78cdd264a117d4b647aee3309993e9a9" status="verified"/>
+	<game name="Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1)" cloneof="Punch-Out!! (Europe)">
+		<description>Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1)</description>
+		<rom name="Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1).nes" size="262144" crc="2c818014" md5="5bc7fac06e58fda15fd981fd03572c34" sha1="b6f6bd9d78cdd264a117d4b647aee3309993e9a9" status="verified"/>
 	</game>
 	<game name="Punch-Out!! (Japan) (Gold Edition)" cloneof="Punch-Out!! (Europe)">
 		<description>Punch-Out!! (Japan) (Gold Edition)</description>
@@ -10612,9 +10705,9 @@
 		<description>Punch-Out!! (Europe) (Virtual Console)</description>
 		<rom name="Punch-Out!! (Europe) (Virtual Console).nes" size="262144" crc="dccac6d9" md5="ba69e34f05daf3dac07702c1553bdd5f" sha1="4d5c2bf0b8eaa1690182d692a02be1cc871481f4"/>
 	</game>
-	<game name="Punch-Out!! (Japan, USA) (Virtual Console)" cloneof="Punch-Out!! (Europe)">
-		<description>Punch-Out!! (Japan, USA) (Virtual Console)</description>
-		<rom name="Punch-Out!! (Japan, USA) (Virtual Console).nes" size="262144" crc="b7bda5fa" md5="36feb05079c13bedd26a1d539cab8268" sha1="18a2c8e0665a9e87536fe1cd90fd1d0585b9ceb7" status="verified"/>
+	<game name="Punch-Out!! (Japan, USA) (En) (Virtual Console)" cloneof="Punch-Out!! (Europe)">
+		<description>Punch-Out!! (Japan, USA) (En) (Virtual Console)</description>
+		<rom name="Punch-Out!! (Japan, USA) (En) (Virtual Console).nes" size="262144" crc="b7bda5fa" md5="36feb05079c13bedd26a1d539cab8268" sha1="18a2c8e0665a9e87536fe1cd90fd1d0585b9ceb7" status="verified"/>
 	</game>
 	<game name="Punisher, The (USA)">
 		<description>Punisher, The (USA)</description>
@@ -10646,10 +10739,10 @@
 		<release name="Puzzle (Asia) (En) (Idea-Tek) (Unl)" region="ASI"/>
 		<rom name="Puzzle (Asia) (En) (Idea-Tek) (Unl).nes" size="49152" crc="ad56c447" md5="a2265d2b30774f91b476b4715db801d3" sha1="aa01aad512fecb10fd4f8148739014e434e0a1ed"/>
 	</game>
-	<game name="Puzzle (Spain) (Gluk Video) (Unl)" cloneof="Puzzle (USA) (Unl)">
-		<description>Puzzle (Spain) (Gluk Video) (Unl)</description>
-		<release name="Puzzle (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Puzzle (Spain) (Gluk Video) (Unl).nes" size="65536" crc="7984ae6d" md5="9691c1f78c613ec031c0623c6f4cecc3" sha1="e17e5fde688af7b340c64b6500b8103eb6ff7cef"/>
+	<game name="Puzzle (Spain) (En) (Gluk Video) (Unl)" cloneof="Puzzle (USA) (Unl)">
+		<description>Puzzle (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Puzzle (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Puzzle (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="7984ae6d" md5="9691c1f78c613ec031c0623c6f4cecc3" sha1="e17e5fde688af7b340c64b6500b8103eb6ff7cef"/>
 	</game>
 	<game name="Puzzle (USA) (Beta) (Unl)" cloneof="Puzzle (USA) (Unl)">
 		<description>Puzzle (USA) (Beta) (Unl)</description>
@@ -11024,6 +11117,10 @@
 	<game name="Renegade (USA) (Virtual Console)" cloneof="Renegade (USA)">
 		<description>Renegade (USA) (Virtual Console)</description>
 		<rom name="Renegade (USA) (Virtual Console).nes" size="131072" crc="1ca40faf" md5="0a2fa595ee741d4f16f8e963d1bdeff7" sha1="330e223eb82dec490829b54247b54c43bc4b4185"/>
+	</game>
+	<game name="Renegade (USA) (Beta)" cloneof="Renegade (USA)">
+		<description>Renegade (USA) (Beta)</description>
+		<rom name="Renegade (USA) (Beta).nes" size="131072" crc="066e2671" md5="9d377891ef17aba0466de9de576b5ba9" sha1="6ac014cc1f82bb1e0289afceff42bf4bc2327c25"/>
 	</game>
 	<game name="Rescue - The Embassy Mission (Europe)">
 		<description>Rescue - The Embassy Mission (Europe)</description>
@@ -11401,6 +11498,10 @@
 		<release name="Rygar (Europe)" region="EUR"/>
 		<rom name="Rygar (Europe).nes" size="131072" crc="8f197b0a" md5="de9bcff6b3c93a4be9dcef851b27c388" sha1="81cb1057c361acac0bb19bcc7b3b5e7c30d923fd" status="verified"/>
 	</game>
+	<game name="Argos no Senshi (Japan) (FamicomBox)" cloneof="Rygar (Europe)">
+		<description>Argos no Senshi (Japan) (FamicomBox)</description>
+		<rom name="Argos no Senshi (Japan) (FamicomBox).nes" size="131072" crc="fba8113b" md5="30af13c3232b1edda99e0f87dd2ab063" sha1="511a4ad60b87e3def630c45910b41eee1f45b850"/>
+	</game>
 	<game name="Argos no Senshi - Hachamecha Daishingeki (Japan)" cloneof="Rygar (Europe)">
 		<description>Argos no Senshi - Hachamecha Daishingeki (Japan)</description>
 		<release name="Argos no Senshi - Hachamecha Daishingeki (Japan)" region="JPN"/>
@@ -11408,7 +11509,7 @@
 	</game>
 	<game name="Rygar (USA)" cloneof="Rygar (Europe)">
 		<description>Rygar (USA)</description>
-		<rom name="Rygar (USA).nes" size="131072" crc="b3783f2a" md5="d77e12f6f3cabf1b705fb8ecdc1b8c62" sha1="b76593a8fbd39447cc5a5d85e525427b9eceb6f8"/>
+		<rom name="Rygar (USA).nes" size="131072" crc="b3783f2a" md5="d77e12f6f3cabf1b705fb8ecdc1b8c62" sha1="b76593a8fbd39447cc5a5d85e525427b9eceb6f8" status="verified"/>
 	</game>
 	<game name="Rygar (USA) (Rev 1)" cloneof="Rygar (Europe)">
 		<description>Rygar (USA) (Rev 1)</description>
@@ -12057,10 +12158,10 @@
 		<description>Simpsons, The - Bartman Meets Radioactive Man (USA) (Beta)</description>
 		<rom name="Simpsons, The - Bartman Meets Radioactive Man (USA) (Beta).nes" size="393216" crc="77f0f71d" md5="5991ec668b8f43d96c8facaa04d5b84c" sha1="42e4ee7065306eed87a72b796633313d332ebf4b"/>
 	</game>
-	<game name="Skate Boy (Spain) (Gluk Video) (Unl)">
-		<description>Skate Boy (Spain) (Gluk Video) (Unl)</description>
-		<release name="Skate Boy (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Skate Boy (Spain) (Gluk Video) (Unl).nes" size="40960" crc="757efb63" md5="e898c6724a8136af034b52d8cbb12020" sha1="57c58545fe2ad64195f110264a66d5f9d3581f01" status="verified"/>
+	<game name="Skate Boy (Spain) (En) (Gluk Video) (Unl)">
+		<description>Skate Boy (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Skate Boy (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Skate Boy (Spain) (En) (Gluk Video) (Unl).nes" size="40960" crc="757efb63" md5="e898c6724a8136af034b52d8cbb12020" sha1="57c58545fe2ad64195f110264a66d5f9d3581f01" status="verified"/>
 	</game>
 	<game name="Skate or Die (Europe)">
 		<description>Skate or Die (Europe)</description>
@@ -12096,10 +12197,10 @@
 		<release name="Skull &amp; Crossbones (USA) (Unl)" region="USA"/>
 		<rom name="Skull &amp; Crossbones (USA) (Unl).nes" size="196608" crc="b422a67a" md5="0a18e169ec9008028b3b1e514c166eb6" sha1="085ee66db817a06d97670e8a80a0c41ccad49e96" status="verified"/>
 	</game>
-	<game name="Skull &amp; Crossbones (Korea) (Unl)" cloneof="Skull &amp; Crossbones (USA) (Unl)">
-		<description>Skull &amp; Crossbones (Korea) (Unl)</description>
-		<release name="Skull &amp; Crossbones (Korea) (Unl)" region="KOR"/>
-		<rom name="Skull &amp; Crossbones (Korea) (Unl).nes" size="196608" crc="ec3b7b47" md5="ae3b6cb2110ccb433f3a3ed716a00622" sha1="12b4e706d589af6e20bbc7a204909b6113cca855"/>
+	<game name="Skull &amp; Crossbones (Korea) (En) (Unl)" cloneof="Skull &amp; Crossbones (USA) (Unl)">
+		<description>Skull &amp; Crossbones (Korea) (En) (Unl)</description>
+		<release name="Skull &amp; Crossbones (Korea) (En) (Unl)" region="KOR"/>
+		<rom name="Skull &amp; Crossbones (Korea) (En) (Unl).nes" size="196608" crc="ec3b7b47" md5="ae3b6cb2110ccb433f3a3ed716a00622" sha1="12b4e706d589af6e20bbc7a204909b6113cca855"/>
 	</game>
 	<game name="Sky Destroyer (Japan)">
 		<description>Sky Destroyer (Japan)</description>
@@ -12222,11 +12323,11 @@
 		<release name="Soccer (Europe)" region="EUR"/>
 		<rom name="Soccer (Europe).nes" size="40960" crc="972d2784" md5="bf40369da6fefb904a087699d2283218" sha1="65e12a86355aa7cf89fbf212ded36ec77b6e1e2d" status="verified"/>
 	</game>
-	<game name="Soccer (Japan, USA)" cloneof="Soccer (Europe)">
-		<description>Soccer (Japan, USA)</description>
-		<release name="Soccer (Japan, USA)" region="JPN"/>
-		<release name="Soccer (Japan, USA)" region="USA"/>
-		<rom name="Soccer (Japan, USA).nes" size="40960" crc="657f7875" md5="c432b613606c41bafa4a09470d75e75f" sha1="a54e246f1c4e7336ed71aed2656288d943c6e36c" status="verified"/>
+	<game name="Soccer (Japan, USA) (En)" cloneof="Soccer (Europe)">
+		<description>Soccer (Japan, USA) (En)</description>
+		<release name="Soccer (Japan, USA) (En)" region="JPN"/>
+		<release name="Soccer (Japan, USA) (En)" region="USA"/>
+		<rom name="Soccer (Japan, USA) (En).nes" size="40960" crc="657f7875" md5="c432b613606c41bafa4a09470d75e75f" sha1="a54e246f1c4e7336ed71aed2656288d943c6e36c" status="verified"/>
 	</game>
 	<game name="Soccer League - Winner's Cup (Japan)">
 		<description>Soccer League - Winner's Cup (Japan)</description>
@@ -13093,6 +13194,10 @@
 		<release name="Super Rugby (Japan)" region="JPN"/>
 		<rom name="Super Rugby (Japan).nes" size="262144" crc="9f5138cb" md5="b8f1d67056244f55daf6f553035e2943" sha1="cb22ad7975fe4be7fe576ea6f8f1467415bd2421" status="verified"/>
 	</game>
+	<game name="Super Russian Roulette (World) (Aftermarket) (Unl)">
+		<description>Super Russian Roulette (World) (Aftermarket) (Unl)</description>
+		<rom name="Super Russian Roulette (World) (Aftermarket) (Unl).nes" size="8912896" crc="497c6a69" md5="645ac882414a3d633ef8f505bf5f65de" sha1="803e5312f7a3fec50ad5a389d1a78a40ebd73d37"/>
+	</game>
 	<game name="Super Spike V'Ball (Europe)">
 		<description>Super Spike V'Ball (Europe)</description>
 		<release name="Super Spike V'Ball (Europe)" region="EUR"/>
@@ -13382,10 +13487,10 @@
 		<description>Tank (Asia) (En) (Asder) (Unl)</description>
 		<rom name="Tank (Asia) (En) (Asder) (Unl).nes" size="40960" crc="f0666b3c" md5="cc77b7e89a48cac0b26d07eaeceb7c3e" sha1="029b592dd0e474da270071da5fa0466a2b7c56ad"/>
 	</game>
-	<game name="Tanque (Spain) (Gluk Video) (Unl)" cloneof="Tank (Asia) (En) (Caltron) (Unl)">
-		<description>Tanque (Spain) (Gluk Video) (Unl)</description>
-		<release name="Tanque (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Tanque (Spain) (Gluk Video) (Unl).nes" size="40960" crc="b4badf56" md5="8c12e63531158158b286e188a0178dfe" sha1="37deb30abdf48632d5f8eee869aba47a0fb3b72f"/>
+	<game name="Tanque (Spain) (En) (Gluk Video) (Unl)" cloneof="Tank (Asia) (En) (Caltron) (Unl)">
+		<description>Tanque (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Tanque (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Tanque (Spain) (En) (Gluk Video) (Unl).nes" size="40960" crc="b4badf56" md5="8c12e63531158158b286e188a0178dfe" sha1="37deb30abdf48632d5f8eee869aba47a0fb3b72f"/>
 	</game>
 	<game name="Tank Fengyun - King Tank (Asia) (Unl)">
 		<description>Tank Fengyun - King Tank (Asia) (Unl)</description>
@@ -13658,15 +13763,19 @@
 		<release name="Tennis (Europe)" region="EUR"/>
 		<rom name="Tennis (Europe).nes" size="24576" crc="304fa926" md5="492a13fd1cb8e4333bc249f223351d5e" sha1="effe8ccaa78f94f061b142042557b478b4b213ee" status="verified"/>
 	</game>
-	<game name="Tennis (Japan, USA)" cloneof="Tennis (Europe)">
-		<description>Tennis (Japan, USA)</description>
-		<release name="Tennis (Japan, USA)" region="JPN"/>
-		<release name="Tennis (Japan, USA)" region="USA"/>
-		<rom name="Tennis (Japan, USA).nes" size="24576" crc="d4d9e21a" md5="32a5e44b320ae588f560196e49ba13c6" sha1="dc851c8dd5f7d6b402d1402c4239400a88382a1f" status="verified"/>
+	<game name="Tennis (Japan, USA) (En)" cloneof="Tennis (Europe)">
+		<description>Tennis (Japan, USA) (En)</description>
+		<release name="Tennis (Japan, USA) (En)" region="JPN"/>
+		<release name="Tennis (Japan, USA) (En)" region="USA"/>
+		<rom name="Tennis (Japan, USA) (En).nes" size="24576" crc="d4d9e21a" md5="32a5e44b320ae588f560196e49ba13c6" sha1="dc851c8dd5f7d6b402d1402c4239400a88382a1f" status="verified"/>
 	</game>
-	<game name="Tennis (Japan, USA) (GameCube Edition)" cloneof="Tennis (Europe)">
-		<description>Tennis (Japan, USA) (GameCube Edition)</description>
-		<rom name="Tennis (Japan, USA) (GameCube Edition).nes" size="40960" crc="d6bbd8ba" md5="cbb2c477a37b28517e330d1c562049f8" sha1="de4b39d509875284e9ff024430608847b36aab6b" status="verified"/>
+	<game name="Tennis (Japan, USA) (En) (GameCube Edition)" cloneof="Tennis (Europe)">
+		<description>Tennis (Japan, USA) (En) (GameCube Edition)</description>
+		<rom name="Tennis (Japan, USA) (En) (GameCube Edition).nes" size="40960" crc="d6bbd8ba" md5="cbb2c477a37b28517e330d1c562049f8" sha1="de4b39d509875284e9ff024430608847b36aab6b" status="verified"/>
+	</game>
+	<game name="Tennis (USA) (e-Reader Edition)" cloneof="Tennis (Europe)">
+		<description>Tennis (USA) (e-Reader Edition)</description>
+		<rom name="Tennis (USA) (e-Reader Edition).nes" size="24576" crc="bbab82c8" md5="42b78931347bf28895a8758cf40f10f0" sha1="be19a9d749f82061746ed39d93ac6145ad0f3776"/>
 	</game>
 	<game name="Terao no Dosukoi Oozumou (Japan)">
 		<description>Terao no Dosukoi Oozumou (Japan)</description>
@@ -13825,10 +13934,10 @@
 		<release name="Thunder Warrior (Asia) (Ja) (Unl)" region="ASI"/>
 		<rom name="Thunder Warrior (Asia) (Ja) (Unl).nes" size="262144" crc="3eea372e" md5="b477e9932d59ce7d3bee5492157f732c" sha1="4704118a8525a2e4d8730d00e8d800b05fd3f2ac"/>
 	</game>
-	<game name="Gluk the Thunder Warrior (Spain) (Gluk Video) (Unl)" cloneof="Thunder Warrior (Asia) (Ja) (Unl)">
-		<description>Gluk the Thunder Warrior (Spain) (Gluk Video) (Unl)</description>
-		<release name="Gluk the Thunder Warrior (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Gluk the Thunder Warrior (Spain) (Gluk Video) (Unl).nes" size="262144" crc="1570a0c8" md5="f0592a4fe76b3ea98876a7c68c43c958" sha1="dd6f641fcb1473a15e194c8c816c8aa22042d6dc" status="verified"/>
+	<game name="Gluk the Thunder Warrior (Spain) (En) (Gluk Video) (Unl)" cloneof="Thunder Warrior (Asia) (Ja) (Unl)">
+		<description>Gluk the Thunder Warrior (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Gluk the Thunder Warrior (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Gluk the Thunder Warrior (Spain) (En) (Gluk Video) (Unl).nes" size="262144" crc="1570a0c8" md5="f0592a4fe76b3ea98876a7c68c43c958" sha1="dd6f641fcb1473a15e194c8c816c8aa22042d6dc" status="verified"/>
 	</game>
 	<game name="Thunderbirds (USA)">
 		<description>Thunderbirds (USA)</description>
@@ -14042,10 +14151,10 @@
 		<release name="Toobin' (USA) (Unl)" region="USA"/>
 		<rom name="Toobin' (USA) (Unl).nes" size="196608" crc="5800be2d" md5="6d87b3cb41d36eba79e6e5cc3a6666f1" sha1="577017fd038b0f5d0b2835e3259c2165d4860a21"/>
 	</game>
-	<game name="Toobin' (Korea) (Supercom) (Unl)" cloneof="Toobin' (USA) (Unl)">
-		<description>Toobin' (Korea) (Supercom) (Unl)</description>
-		<release name="Toobin' (Korea) (Supercom) (Unl)" region="KOR"/>
-		<rom name="Toobin' (Korea) (Supercom) (Unl).nes" size="196608" crc="10d17b9b" md5="fcbd7f25ceac4877e839f9264b4a82c8" sha1="86a70eebd20512c3b896742378aec15aaeac199c"/>
+	<game name="Toobin' (Korea) (En) (Supercom) (Unl)" cloneof="Toobin' (USA) (Unl)">
+		<description>Toobin' (Korea) (En) (Supercom) (Unl)</description>
+		<release name="Toobin' (Korea) (En) (Supercom) (Unl)" region="KOR"/>
+		<rom name="Toobin' (Korea) (En) (Supercom) (Unl).nes" size="196608" crc="10d17b9b" md5="fcbd7f25ceac4877e839f9264b4a82c8" sha1="86a70eebd20512c3b896742378aec15aaeac199c"/>
 	</game>
 	<game name="Top Gun (Europe)">
 		<description>Top Gun (Europe)</description>
@@ -14337,6 +14446,10 @@
 		<release name="TwinBee (Japan)" region="JPN"/>
 		<rom name="TwinBee (Japan).nes" size="49152" crc="985b1d05" md5="22fb493a8e19550a82b593982f8db840" sha1="3aeadf8a86ced1b4e2d824aa39669f26ab00bb0b" status="verified"/>
 	</game>
+	<game name="TwinBee (Japan) (FamicomBox)" cloneof="TwinBee (Japan)">
+		<description>TwinBee (Japan) (FamicomBox)</description>
+		<rom name="TwinBee (Japan) (FamicomBox).nes" size="49152" crc="53d32862" md5="5cc195b999b0a375a940309482645460" sha1="b3220111be7a9ad00e82145314993ebf043e58ec"/>
+	</game>
 	<game name="TwinBee 3 - Poko Poko Daimaou (Japan)">
 		<description>TwinBee 3 - Poko Poko Daimaou (Japan)</description>
 		<release name="TwinBee 3 - Poko Poko Daimaou (Japan)" region="JPN"/>
@@ -14558,6 +14671,10 @@
 		<release name="Urban Champion (World)" region="USA"/>
 		<rom name="Urban Champion (World).nes" size="24576" crc="656d4265" md5="cb7f1463c90cdcdf5ef315c125f12fe2" sha1="9df9bb3775e8cca0214e3765cdc0443ef81636c4" status="verified"/>
 	</game>
+	<game name="Urban Champion (USA) (e-Reader Edition)" cloneof="Urban Champion (World)">
+		<description>Urban Champion (USA) (e-Reader Edition)</description>
+		<rom name="Urban Champion (USA) (e-Reader Edition).nes" size="24576" crc="c3185047" md5="772db2792f0530d3d0536ce76fb83f6d" sha1="8cc3f7641f265744dbc9216689ae4bfea853f06d"/>
+	</game>
 	<game name="Urusei Yatsura - Lum no Wedding Bell (Japan)">
 		<description>Urusei Yatsura - Lum no Wedding Bell (Japan)</description>
 		<release name="Urusei Yatsura - Lum no Wedding Bell (Japan)" region="JPN"/>
@@ -14628,10 +14745,10 @@
 		<description>Venice Beach Volleyball (Asia) (En) (Idea-Tek) (Unl)</description>
 		<rom name="Venice Beach Volleyball (Asia) (En) (Idea-Tek) (Unl).nes" size="65536" crc="d96f61a9" md5="9c7febec082e4e96df38392a59ea7db4" sha1="72ad19bbdacaa555ec2e0ced65609d9a5b79948b"/>
 	</game>
-	<game name="Volley Ball (Spain) (Gluk Video) (Unl)" cloneof="Venice Beach Volleyball (USA) (Unl)">
-		<description>Volley Ball (Spain) (Gluk Video) (Unl)</description>
-		<release name="Volley Ball (Spain) (Gluk Video) (Unl)" region="SPA"/>
-		<rom name="Volley Ball (Spain) (Gluk Video) (Unl).nes" size="65536" crc="a23cb659" md5="85fbf0ef35477a3d34ae82d311e0c53a" sha1="cd8f5b0a10a3eda8aba5b5bfb96ef9870ab53a43" status="verified"/>
+	<game name="Volley Ball (Spain) (En) (Gluk Video) (Unl)" cloneof="Venice Beach Volleyball (USA) (Unl)">
+		<description>Volley Ball (Spain) (En) (Gluk Video) (Unl)</description>
+		<release name="Volley Ball (Spain) (En) (Gluk Video) (Unl)" region="SPA"/>
+		<rom name="Volley Ball (Spain) (En) (Gluk Video) (Unl).nes" size="65536" crc="a23cb659" md5="85fbf0ef35477a3d34ae82d311e0c53a" sha1="cd8f5b0a10a3eda8aba5b5bfb96ef9870ab53a43" status="verified"/>
 	</game>
 	<game name="Venus Senki - Back the City (Japan)">
 		<description>Venus Senki - Back the City (Japan)</description>
@@ -14672,6 +14789,10 @@
 	<game name="Volleyball (USA, Europe) (Virtual Console)" cloneof="Volleyball (USA, Europe)">
 		<description>Volleyball (USA, Europe) (Virtual Console)</description>
 		<rom name="Volleyball (USA, Europe) (Virtual Console).nes" size="40960" crc="70a192c5" md5="edc58fc83077a0e8713e2c2c73ef7306" sha1="7d6938f5f880f6ee0584f6d02456ad517931ceb2" status="verified"/>
+	</game>
+	<game name="Volleyball (Japan) (FamicomBox)" cloneof="Volleyball (USA, Europe)">
+		<description>Volleyball (Japan) (FamicomBox)</description>
+		<rom name="Volleyball (Japan) (FamicomBox).nes" size="40960" crc="e9ee81e1" md5="5607158055b0e2c75c521fbea812d642" sha1="2264262d4ee3f7389902ac3173efc56247330d58"/>
 	</game>
 	<game name="Wacky Races (USA)">
 		<description>Wacky Races (USA)</description>
@@ -14761,11 +14882,11 @@
 		<release name="Wang Zi Fu Chou Ji (Asia) (Unl)" region="ASI"/>
 		<rom name="Wang Zi Fu Chou Ji (Asia) (Unl).nes" size="1048576" crc="90150fac" md5="408ea0070ea6932119cb1ed550567d1f" sha1="0d6dda4af970459d532957d50b937ca42395cf8f"/>
 	</game>
-	<game name="War in the Gulf (Brazil, Spain) (CCE, Gluk Video) (Unl)">
-		<description>War in the Gulf (Brazil, Spain) (CCE, Gluk Video) (Unl)</description>
-		<release name="War in the Gulf (Brazil, Spain) (CCE, Gluk Video) (Unl)" region="BRA"/>
-		<release name="War in the Gulf (Brazil, Spain) (CCE, Gluk Video) (Unl)" region="SPA"/>
-		<rom name="War in the Gulf (Brazil, Spain) (CCE, Gluk Video) (Unl).nes" size="262144" crc="638dbc52" md5="b2990a023217d5a26e89b554c9617954" sha1="a46ccd2a7784ab7c157cc3060357c4cfa3030977" status="verified"/>
+	<game name="War in the Gulf (Brazil, Spain) (En) (CCE, Gluk Video) (Unl)">
+		<description>War in the Gulf (Brazil, Spain) (En) (CCE, Gluk Video) (Unl)</description>
+		<release name="War in the Gulf (Brazil, Spain) (En) (CCE, Gluk Video) (Unl)" region="BRA"/>
+		<release name="War in the Gulf (Brazil, Spain) (En) (CCE, Gluk Video) (Unl)" region="SPA"/>
+		<rom name="War in the Gulf (Brazil, Spain) (En) (CCE, Gluk Video) (Unl).nes" size="262144" crc="638dbc52" md5="b2990a023217d5a26e89b554c9617954" sha1="a46ccd2a7784ab7c157cc3060357c4cfa3030977" status="verified"/>
 	</game>
 	<game name="War on Wheels (USA) (Proto)">
 		<description>War on Wheels (USA) (Proto)</description>
@@ -14911,9 +15032,9 @@
 		<release name="Wild Gunman (World) (Rev 1)" region="USA"/>
 		<rom name="Wild Gunman (World) (Rev 1).nes" size="24576" crc="5112dc21" md5="4635d8d82a86e8b99390a0586c96d536" sha1="598958b8253cb1e6319d351b8fc50a169d863472" status="verified"/>
 	</game>
-	<game name="Wild Gunman (Japan, USA)" cloneof="Wild Gunman (World) (Rev 1)">
-		<description>Wild Gunman (Japan, USA)</description>
-		<rom name="Wild Gunman (Japan, USA).nes" size="24576" crc="b8b9aca3" md5="852b58f1f08aaea4d3bcd3d72cd63270" sha1="b038d3c653daa0e3d671e373a3813c971ee8ec85" status="verified"/>
+	<game name="Wild Gunman (Japan, USA) (En)" cloneof="Wild Gunman (World) (Rev 1)">
+		<description>Wild Gunman (Japan, USA) (En)</description>
+		<rom name="Wild Gunman (Japan, USA) (En).nes" size="24576" crc="b8b9aca3" md5="852b58f1f08aaea4d3bcd3d72cd63270" sha1="b038d3c653daa0e3d671e373a3813c971ee8ec85" status="verified"/>
 	</game>
 	<game name="Willow (Europe)">
 		<description>Willow (Europe)</description>

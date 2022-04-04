@@ -294,21 +294,21 @@
 		<release name="Neo 21 - Pocket Casino Series (World)" region="USA"/>
 		<rom name="Neo 21 - Pocket Casino Series (World).ngc" size="1048576" crc="95c38985" md5="a60719b4839dd94bb3a8aa93ce91983d" sha1="98463a834e3f42dc02662b620e8e66f3856b1d4f"/>
 	</game>
-	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)">
-		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)</description>
-		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)" region="EUR"/>
-		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)" region="JPN"/>
-		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16).ngc" size="1048576" crc="22aab454" md5="1018f765f460588d975c9b4e9385a547" sha1="80218804eb591e50831d098b5bd213a3586849a5"/>
+	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)">
+		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)</description>
+		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)" region="EUR"/>
+		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)" region="JPN"/>
+		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16).ngc" size="1048576" crc="22aab454" md5="1018f765f460588d975c9b4e9385a547" sha1="80218804eb591e50831d098b5bd213a3586849a5"/>
 	</game>
-	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (Beta)" cloneof="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)">
-		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (Beta)</description>
-		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (Beta).ngc" size="1048576" crc="80880498" md5="2685ad9eba4e9c86e1055e39917dc3ed" sha1="aeb77b92155e0a291d00ef3c97319788cc3d1006"/>
+	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (Beta)" cloneof="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)">
+		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (Beta)</description>
+		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (Beta).ngc" size="1048576" crc="80880498" md5="2685ad9eba4e9c86e1055e39917dc3ed" sha1="aeb77b92155e0a291d00ef3c97319788cc3d1006"/>
 	</game>
-	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v11)" cloneof="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v16)">
-		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (v11)</description>
-		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v11)" region="EUR"/>
-		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v11)" region="JPN"/>
-		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (v11).ngc" size="1048576" crc="495071a9" md5="b94513b88f622a9c4d3142d2bb7a442e" sha1="7749e828a508fdd399ee2bbf60a71befb8e9bb0e"/>
+	<game name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v11)" cloneof="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v16)">
+		<description>Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v11)</description>
+		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v11)" region="EUR"/>
+		<release name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v11)" region="JPN"/>
+		<rom name="Neo Baccarat - Pocket Casino Series (Japan, Europe) (En) (v11).ngc" size="1048576" crc="495071a9" md5="b94513b88f622a9c4d3142d2bb7a442e" sha1="7749e828a508fdd399ee2bbf60a71befb8e9bb0e"/>
 	</game>
 	<game name="Neo Cherry Master Color - Pocket Casino Series (World) (En,Ja)">
 		<description>Neo Cherry Master Color - Pocket Casino Series (World) (En,Ja)</description>
@@ -525,22 +525,22 @@
 		<release name="Puyo Pop (World) (En,Ja) (v05)" region="USA"/>
 		<rom name="Puyo Pop (World) (En,Ja) (v05).ngc" size="1048576" crc="3090b2fd" md5="7ff625dc216783b034b011351c98255f" sha1="27c3250fb17f291832fa7189a35478d017a0ef5e"/>
 	</game>
-	<game name="Puzzle Bobble Mini (Japan, Europe)">
-		<description>Puzzle Bobble Mini (Japan, Europe)</description>
-		<release name="Puzzle Bobble Mini (Japan, Europe)" region="EUR"/>
-		<release name="Puzzle Bobble Mini (Japan, Europe)" region="JPN"/>
-		<rom name="Puzzle Bobble Mini (Japan, Europe).ngc" size="1048576" crc="d31312dc" md5="f371e9278973926ad01a0982772f16ae" sha1="0966c6ea1ae5b6ae15f769be5aae41f65acfb3f7"/>
+	<game name="Puzzle Bobble Mini (Japan, Europe) (En)">
+		<description>Puzzle Bobble Mini (Japan, Europe) (En)</description>
+		<release name="Puzzle Bobble Mini (Japan, Europe) (En)" region="EUR"/>
+		<release name="Puzzle Bobble Mini (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Puzzle Bobble Mini (Japan, Europe) (En).ngc" size="1048576" crc="d31312dc" md5="f371e9278973926ad01a0982772f16ae" sha1="0966c6ea1ae5b6ae15f769be5aae41f65acfb3f7"/>
 	</game>
-	<game name="Bust-A-Move Pocket (USA)" cloneof="Puzzle Bobble Mini (Japan, Europe)">
+	<game name="Bust-A-Move Pocket (USA)" cloneof="Puzzle Bobble Mini (Japan, Europe) (En)">
 		<description>Bust-A-Move Pocket (USA)</description>
 		<release name="Bust-A-Move Pocket (USA)" region="USA"/>
 		<rom name="Bust-A-Move Pocket (USA).ngc" size="1048576" crc="b073d601" md5="d91fd1c6c941bc2bde4ada3580fe408f" sha1="3b102e32fccf8ff389c508be55517368d56b144f"/>
 	</game>
-	<game name="Bust-A-Move Pocket (USA) (Demo)" cloneof="Puzzle Bobble Mini (Japan, Europe)">
+	<game name="Bust-A-Move Pocket (USA) (Demo)" cloneof="Puzzle Bobble Mini (Japan, Europe) (En)">
 		<description>Bust-A-Move Pocket (USA) (Demo)</description>
 		<rom name="Bust-A-Move Pocket (USA) (Demo).ngc" size="1048576" crc="78a1361d" md5="29a8a310b704e8dafee71cea0ad53df0" sha1="2af0197415bdf1679342d8aeca5c35ea3eff8b73"/>
 	</game>
-	<game name="Puzzle Bobble Mini (Japan, Europe) (En,Ja) (Demo)" cloneof="Puzzle Bobble Mini (Japan, Europe)">
+	<game name="Puzzle Bobble Mini (Japan, Europe) (En,Ja) (Demo)" cloneof="Puzzle Bobble Mini (Japan, Europe) (En)">
 		<description>Puzzle Bobble Mini (Japan, Europe) (En,Ja) (Demo)</description>
 		<rom name="Puzzle Bobble Mini (Japan, Europe) (En,Ja) (Demo).ngc" size="1048576" crc="d6544f6c" md5="25582ba7d573db17de4ff717f08d0221" sha1="0e9e5e60f60d7795430f4e3d4b655e796998f856"/>
 	</game>
