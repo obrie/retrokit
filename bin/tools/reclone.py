@@ -17,8 +17,11 @@ class Recloner:
     DISC_REGEX = re.compile(r'\(Disc [0-9A-Z]+\)')
     PROTO_REGEX = re.compile(r'\((Proto|Beta|Alpha|Demo|Unl|Alt|Pirate)')
     VERSION_REGEX = re.compile(r'\((Version|Rev|v|Ver.)')
+    NUMBER_REGEX = re.compile(r'[0-9]+')
     FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
     FLAG_CHARS = re.compile(r'[^A-Za-z0-9 ]')
+    DISC_CODE_FLAG_REGEX = re.compile(r'^([0-9]+)[A-Z]+$')
+    NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
     PRIMARY_COUNTRIES = ['Europe', 'USA', 'Japan']
     PRIMARY_LANGUAGES = {'En', 'English'}
     OTHER_FLAGS = ['Made in EU', 'Made in Japan']
@@ -48,6 +51,10 @@ class Recloner:
             title = f'{title} {disc_match.group().replace("0", "")}'
 
         return title
+
+    # Normalizes the title to account for differences in case / symbols
+    def normalize(self, title: str) -> str:
+        return self.NORMALIZED_TITLE_REGEX.sub('', title.lower())
 
     # Generates the sort keys for the given ROM name.  The keys are sorted by
     # highest priority => lowest priority.
@@ -110,11 +117,23 @@ class Recloner:
         # Sort by title length
         keys.append(len(title))
 
+        # Sort by lowest number detected in the title (e.g. year, version)
+        number_match = self.NUMBER_REGEX.search(title)
+        if number_match:
+            keys.append(int(number_match.group()))
+        else:
+            keys.append(-1)
+
+        # Sort by earlier disc code (e.g. 1M, 1S)
+        disc_code_flags = sorted(filter(lambda f: self.DISC_CODE_FLAG_REGEX.search(f), flags))
+        if disc_code_flags:
+            disc_code_flag = disc_code_flags[0]
+            keys.append(int(self.DISC_CODE_FLAG_REGEX.search(disc_code_flag).group(1)))
+        else:
+            keys.append(-1)
+
         # Sort by name length
         keys.append(len(name))
-
-        if 'Burnout Legends' in name:
-            print(f'{name}: {keys}')
 
         return keys
 
@@ -128,17 +147,19 @@ class Recloner:
         # Track existing custom configurations
         for parent_name, clone_disc_titles in old_clones.items():
             parent_disc_title = self.get_disc_title(parent_name)
-            disc_title_to_group[parent_disc_title] = parent_disc_title
+            disc_title_to_group[self.normalize(parent_disc_title)] = parent_disc_title
+
             for clone_disc_title in clone_disc_titles:
-                disc_title_to_group[clone_disc_title] = parent_disc_title
+                disc_title_to_group[self.normalize(clone_disc_title)] = parent_disc_title
 
         # Group together related ROMs
         doc = lxml.etree.iterparse(self.dat_path, tag=('game', 'machine'))
         for event, element in doc:
             name = element.get('name')
             disc_title = self.get_disc_title(name)
+            normalized_disc_title = self.normalize(disc_title)
 
-            group_id = disc_title_to_group.get(disc_title, disc_title)
+            group_id = disc_title_to_group.get(normalized_disc_title, normalized_disc_title)
             if group_id not in groups:
                 groups[group_id] = []
             groups[group_id].append(name)
