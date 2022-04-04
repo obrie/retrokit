@@ -423,9 +423,9 @@ class Machine:
             'favorite': self.favorite,
 
             # External metadata
-            'genres': list(self.genres),
-            'collections': list(self.collections),
-            'languages': list(self.languages),
+            'genres': sorted(list(self.genres)),
+            'collections': sorted(list(self.collections)),
+            'languages': sorted(list(self.languages)),
             'rating': self.rating,
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
