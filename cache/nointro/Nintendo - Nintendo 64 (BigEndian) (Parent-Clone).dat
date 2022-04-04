@@ -4,9 +4,9 @@
 	<header>
 		<name>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo 64 (BigEndian) (Parent-Clone)</description>
-		<version>20220111-120137</version>
-		<date>20220111-120137</date>
-		<author>aci68, Aringon, BigFred, BitLooter, Blank, C. V. Reynolds, chillerecke, DeriLoko3, einstein95, ElBarto, Fake Shemp, Hiccup, jimmsu, kazumi213, Madeline, Money_114, omonim2007, Powerpuff, PPLToast, relax, Rifu, scorp256, sCZther, SonGoku, Special T, TeamEurope, togemet2, xuom2</author>
+		<version>20220331-153147</version>
+		<date>20220331-153147</date>
+		<author>aci68, Arctic Circle System, Aringon, BigFred, BitLooter, Blank, C. V. Reynolds, chillerecke, DeriLoko3, einstein95, ElBarto, Fake Shemp, Gefflon, Hiccup, jimmsu, kazumi213, Madeline, MeguCocoa, Money_114, NovaAurora, omonim2007, Powerpuff, PPLToast, relax, Rifu, scorp256, sCZther, SonGoku, Special T, TeamEurope, togemet2, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="007 - The World Is Not Enough (Europe) (En,Fr,De)">
@@ -46,6 +46,10 @@
 	<game name="40 Winks (USA) (Aftermarket) (Unl)" cloneof="40 Winks (Europe) (En,Es,It) (Proto) (1999-10-07)">
 		<description>40 Winks (USA) (Aftermarket) (Unl)</description>
 		<rom name="40 Winks (USA) (Aftermarket) (Unl).z64" size="33554432" crc="31c19633" md5="b88c172ed14f4acb43c4a352d71cc640" sha1="420f0ed3b67f802b5f3ab4bd17167c266f8f36ce"/>
+	</game>
+	<game name="40 Winks (USA) (Proto)">
+		<description>40 Winks (USA) (Proto)</description>
+		<rom name="40 Winks (USA) (Proto).z64" size="33554432" crc="3a674026" md5="8c3e4fe5f6b2d37c66a71097e8b1c72a" sha1="e671412580800013703be666e56e1b7e512aa55c"/>
 	</game>
 	<game name="64 de Hakken!! Tamagotchi - Minna de Tamagotchi World (Japan)">
 		<description>64 de Hakken!! Tamagotchi - Minna de Tamagotchi World (Japan)</description>
@@ -154,7 +158,7 @@
 	<game name="Airboarder 64 (Europe)">
 		<description>Airboarder 64 (Europe)</description>
 		<release name="Airboarder 64 (Europe)" region="EUR"/>
-		<rom name="Airboarder 64 (Europe).z64" size="8388608" crc="c14d45ac" md5="e8891f8f498a615a6cbaf75b7ddc9fa6" sha1="2171fe2c0a9253cba56828f24a5e6153726c1516"/>
+		<rom name="Airboarder 64 (Europe).z64" size="8388608" crc="c14d45ac" md5="e8891f8f498a615a6cbaf75b7ddc9fa6" sha1="2171fe2c0a9253cba56828f24a5e6153726c1516" status="verified"/>
 	</game>
 	<game name="Air Boarder 64 (Japan)" cloneof="Airboarder 64 (Europe)">
 		<description>Air Boarder 64 (Japan)</description>
@@ -189,7 +193,7 @@
 	<game name="All-Star Baseball 99 (Europe)">
 		<description>All-Star Baseball 99 (Europe)</description>
 		<release name="All-Star Baseball 99 (Europe)" region="EUR"/>
-		<rom name="All-Star Baseball 99 (Europe).z64" size="12582912" crc="d0de3584" md5="ed5f1e12da36dbec8a0a24ed98d4aed5" sha1="3ac0d13f2260797dabf99cfedabf7e3676c5b2e2"/>
+		<rom name="All-Star Baseball 99 (Europe).z64" size="12582912" crc="d0de3584" md5="ed5f1e12da36dbec8a0a24ed98d4aed5" sha1="3ac0d13f2260797dabf99cfedabf7e3676c5b2e2" status="verified"/>
 	</game>
 	<game name="All-Star Baseball 99 (USA)" cloneof="All-Star Baseball 99 (Europe)">
 		<description>All-Star Baseball 99 (USA)</description>
@@ -219,7 +223,7 @@
 	<game name="Army Men - Sarge's Heroes (Europe) (En,Fr,De)">
 		<description>Army Men - Sarge's Heroes (Europe) (En,Fr,De)</description>
 		<release name="Army Men - Sarge's Heroes (Europe) (En,Fr,De)" region="EUR"/>
-		<rom name="Army Men - Sarge's Heroes (Europe) (En,Fr,De).z64" size="8388608" crc="e79048e2" md5="53e2872612760133ab7b2cc2e22b847c" sha1="00e594fa64da61c2ad3138a31a22b9854bb3fafa"/>
+		<rom name="Army Men - Sarge's Heroes (Europe) (En,Fr,De).z64" size="8388608" crc="e79048e2" md5="53e2872612760133ab7b2cc2e22b847c" sha1="00e594fa64da61c2ad3138a31a22b9854bb3fafa" status="verified"/>
 	</game>
 	<game name="Army Men - Sarge's Heroes (USA)" cloneof="Army Men - Sarge's Heroes (Europe) (En,Fr,De)">
 		<description>Army Men - Sarge's Heroes (USA)</description>
@@ -406,7 +410,7 @@
 	<game name="Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl)</description>
 		<release name="Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl)" region="EUR"/>
-		<rom name="Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl).z64" size="16777216" crc="8fb41658" md5="31b4a8ed52b48e756b344c9f22736e50" sha1="d641afca71a7d83587f9d7105d5e6dffdeaa8016"/>
+		<rom name="Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl).z64" size="16777216" crc="8fb41658" md5="31b4a8ed52b48e756b344c9f22736e50" sha1="d641afca71a7d83587f9d7105d5e6dffdeaa8016" status="verified"/>
 	</game>
 	<game name="Blues Brothers 2000 (USA)" cloneof="Blues Brothers 2000 (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Blues Brothers 2000 (USA)</description>
@@ -563,7 +567,7 @@
 	<game name="Carmageddon 64 (Europe) (En,Fr,Es,It)">
 		<description>Carmageddon 64 (Europe) (En,Fr,Es,It)</description>
 		<release name="Carmageddon 64 (Europe) (En,Fr,Es,It)" region="EUR"/>
-		<rom name="Carmageddon 64 (Europe) (En,Fr,Es,It).z64" size="16777216" crc="8036f999" md5="59eb5646fa079bcbd7a340d7a10196dd" sha1="a26831c07ecc57dbf5846db847a30d9f735297c2"/>
+		<rom name="Carmageddon 64 (Europe) (En,Fr,Es,It).z64" size="16777216" crc="8036f999" md5="59eb5646fa079bcbd7a340d7a10196dd" sha1="a26831c07ecc57dbf5846db847a30d9f735297c2" status="verified"/>
 	</game>
 	<game name="Carmageddon 64 (Europe) (En,Fr,De,Es)" cloneof="Carmageddon 64 (Europe) (En,Fr,Es,It)">
 		<description>Carmageddon 64 (Europe) (En,Fr,De,Es)</description>
@@ -734,7 +738,7 @@
 	<game name="Conker's Bad Fur Day (Europe)">
 		<description>Conker's Bad Fur Day (Europe)</description>
 		<release name="Conker's Bad Fur Day (Europe)" region="EUR"/>
-		<rom name="Conker's Bad Fur Day (Europe).z64" size="67108864" crc="4667cfe9" md5="05194d49c14e52055df72a54d40791e1" sha1="ee7bc6656fd1e1d9ffb3d19add759f28b88df710"/>
+		<rom name="Conker's Bad Fur Day (Europe).z64" size="67108864" crc="4667cfe9" md5="05194d49c14e52055df72a54d40791e1" sha1="ee7bc6656fd1e1d9ffb3d19add759f28b88df710" status="verified"/>
 	</game>
 	<game name="Conker's Bad Fur Day (USA)" cloneof="Conker's Bad Fur Day (Europe)">
 		<description>Conker's Bad Fur Day (USA)</description>
@@ -1061,7 +1065,7 @@
 	<game name="Duke Nukem 64 (France)" cloneof="Duke Nukem 64 (Europe)">
 		<description>Duke Nukem 64 (France)</description>
 		<release name="Duke Nukem 64 (France)" region="FRA"/>
-		<rom name="Duke Nukem 64 (France).z64" size="8388608" crc="b9c9f07a" md5="e2e79c7167bdb26e176d220904739c91" sha1="2c48706c4280a51e52691331543606e4170a19a9"/>
+		<rom name="Duke Nukem 64 (France).z64" size="8388608" crc="b9c9f07a" md5="e2e79c7167bdb26e176d220904739c91" sha1="2c48706c4280a51e52691331543606e4170a19a9" status="verified"/>
 	</game>
 	<game name="Duke Nukem 64 (USA)" cloneof="Duke Nukem 64 (Europe)">
 		<description>Duke Nukem 64 (USA)</description>
@@ -1249,6 +1253,10 @@
 		<description>F1 Racing Championship (Brazil) (En,Fr)</description>
 		<release name="F1 Racing Championship (Brazil) (En,Fr)" region="BRA"/>
 		<rom name="F1 Racing Championship (Brazil) (En,Fr).z64" size="16777216" crc="c05b9184" md5="44d5f87127053a21db120bd108b7ac0c" sha1="4c95cee963c9f8b477c41c03afccb3362a14e7ce"/>
+	</game>
+	<game name="F1 Racing Championship (Unknown) (Beta)" cloneof="F1 Racing Championship (Europe) (En,Fr,De,Es,It)">
+		<description>F1 Racing Championship (Unknown) (Beta)</description>
+		<rom name="F1 Racing Championship (Unknown) (Beta).z64" size="33554432" crc="5a55b4c2" md5="40246128052b0aa0fffc7a06a72930f2" sha1="499dd70cb9d85f6e0c65af0e07c08fc1c0919638"/>
 	</game>
 	<game name="Famista 64 (Japan)">
 		<description>Famista 64 (Japan)</description>
@@ -1442,7 +1450,7 @@
 		<description>Gex 3 - Deep Cover Gecko (Europe) (Fr,De)</description>
 		<release name="Gex 3 - Deep Cover Gecko (Europe) (Fr,De)" region="FRA"/>
 		<release name="Gex 3 - Deep Cover Gecko (Europe) (Fr,De)" region="GER"/>
-		<rom name="Gex 3 - Deep Cover Gecko (Europe) (Fr,De).z64" size="33554432" crc="a43cb8e4" md5="43b9a7a5ccb6ea3f4860f9f80d73669d" sha1="4bcd958526d9145acf4e3ee7ee484e62dc1bb4ba"/>
+		<rom name="Gex 3 - Deep Cover Gecko (Europe) (Fr,De).z64" size="33554432" crc="a43cb8e4" md5="43b9a7a5ccb6ea3f4860f9f80d73669d" sha1="4bcd958526d9145acf4e3ee7ee484e62dc1bb4ba" status="verified"/>
 	</game>
 	<game name="Gex 3 - Deep Cover Gecko (USA)" cloneof="Gex 3 - Deep Cover Gecko (Europe) (En,Es,It)">
 		<description>Gex 3 - Deep Cover Gecko (USA)</description>
@@ -1484,7 +1492,7 @@
 	<game name="Glover 2 (USA) (Proto 2)">
 		<description>Glover 2 (USA) (Proto 2)</description>
 		<release name="Glover 2 (USA) (Proto 2)" region="USA"/>
-		<rom name="Glover 2 (USA) (Proto 2).z64" size="33554432" crc="27015724" md5="c40cbb9f4fbcdde20f9d9d75a493eb4f" sha1="32293d3ef0db83acc640fd0a9216dd3ba491ecb6"/>
+		<rom name="Glover 2 (USA) (Proto 2).z64" size="8388608" crc="29966555" md5="d06713b543022414a1a09261f0be42a6" sha1="5e644f7436b2cc0ff07335863e7e2c254d8438a8"/>
 	</game>
 	<game name="Glover 2 (USA) (Proto 1)" cloneof="Glover 2 (USA) (Proto 2)">
 		<description>Glover 2 (USA) (Proto 1)</description>
@@ -2198,9 +2206,9 @@
 		<release name="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (GameCube)" region="EUR"/>
 		<rom name="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (GameCube).z64" size="33554432" crc="832d6449" md5="1618403427e4344a57833043db5ce3c3" sha1="f46239439f59a2a594ef83cf68ef65043b1bffe2"/>
 	</game>
-	<game name="Legend of Zelda, The - Ocarina of Time - Master Quest (USA) (Debug) (GameCube)" cloneof="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (GameCube)">
-		<description>Legend of Zelda, The - Ocarina of Time - Master Quest (USA) (Debug) (GameCube)</description>
-		<rom name="Legend of Zelda, The - Ocarina of Time - Master Quest (USA) (Debug) (GameCube).z64" size="67108864" crc="62f92704" md5="8ca71e87de4ce5e9f6ec916202a623e9" sha1="50bebedad9e0f10746a52b07239e47fa6c284d03"/>
+	<game name="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (Debug) (GameCube)" cloneof="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (GameCube)">
+		<description>Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (Debug) (GameCube)</description>
+		<rom name="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (Debug) (GameCube).z64" size="67108864" crc="a1d34e08" md5="09ae099051bdf6377d482d1944171dfc" sha1="cfecfdc58d650e71a200c81f033de4e6d617a9f6"/>
 	</game>
 	<game name="Legend of Zelda, The - Ocarina of Time - Master Quest (USA) (GameCube)" cloneof="Legend of Zelda, The - Ocarina of Time - Master Quest (Europe) (GameCube)">
 		<description>Legend of Zelda, The - Ocarina of Time - Master Quest (USA) (GameCube)</description>
@@ -2225,7 +2233,7 @@
 	<game name="Lode Runner 3-D (Europe) (En,Fr,De,Es,It)">
 		<description>Lode Runner 3-D (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Lode Runner 3-D (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Lode Runner 3-D (Europe) (En,Fr,De,Es,It).z64" size="8388608" crc="7148251d" md5="e62f4fdcc82c244ba9709e40756d9b62" sha1="3b198c0117da808b25fbc4e543d282228bb4780a"/>
+		<rom name="Lode Runner 3-D (Europe) (En,Fr,De,Es,It).z64" size="8388608" crc="7148251d" md5="e62f4fdcc82c244ba9709e40756d9b62" sha1="3b198c0117da808b25fbc4e543d282228bb4780a" status="verified"/>
 	</game>
 	<game name="Lode Runner 3-D (Japan)" cloneof="Lode Runner 3-D (Europe) (En,Fr,De,Es,It)">
 		<description>Lode Runner 3-D (Japan)</description>
@@ -2497,6 +2505,10 @@
 		<release name="Mario Party 3 (USA)" region="USA"/>
 		<rom name="Mario Party 3 (USA).z64" size="33554432" crc="b7445ddc" md5="76a8bbc81bc2060ec99c9645867237cc" sha1="6beb80ff822b96bcf85dcdb512e8b2b7969d8259"/>
 	</game>
+	<game name="Mario Party 3 (USA) (Beta)" cloneof="Mario Party 3 (Europe) (En,Fr,De,Es)">
+		<description>Mario Party 3 (USA) (Beta)</description>
+		<rom name="Mario Party 3 (USA) (Beta).z64" size="67108864" crc="697c1777" md5="f6e3475f64b966b3ff2867ca69dbf759" sha1="c0c2a8eefa4c06264095df9dc78f459a9f3975bb"/>
+	</game>
 	<game name="Mario Tennis (Europe)">
 		<description>Mario Tennis (Europe)</description>
 		<release name="Mario Tennis (Europe)" region="EUR"/>
@@ -2712,7 +2724,7 @@
 	<game name="Mortal Kombat 4 (Europe)">
 		<description>Mortal Kombat 4 (Europe)</description>
 		<release name="Mortal Kombat 4 (Europe)" region="EUR"/>
-		<rom name="Mortal Kombat 4 (Europe).z64" size="16777216" crc="635adeca" md5="264b82f0fc2431d6eefde9c9f3ed7596" sha1="34a25cc52f0d2b5ff3a65552f9d43d8714a8e10c"/>
+		<rom name="Mortal Kombat 4 (Europe).z64" size="16777216" crc="635adeca" md5="264b82f0fc2431d6eefde9c9f3ed7596" sha1="34a25cc52f0d2b5ff3a65552f9d43d8714a8e10c" status="verified"/>
 	</game>
 	<game name="Mortal Kombat 4 (USA)" cloneof="Mortal Kombat 4 (Europe)">
 		<description>Mortal Kombat 4 (USA)</description>
@@ -2722,7 +2734,7 @@
 	<game name="Mortal Kombat Mythologies - Sub-Zero (Europe)">
 		<description>Mortal Kombat Mythologies - Sub-Zero (Europe)</description>
 		<release name="Mortal Kombat Mythologies - Sub-Zero (Europe)" region="EUR"/>
-		<rom name="Mortal Kombat Mythologies - Sub-Zero (Europe).z64" size="16777216" crc="ea21015a" md5="38a82a56ae61a4d354c6a26e64d25e1c" sha1="e674e0f08d7218136f31ca99a9c5323f0d2bb4d4"/>
+		<rom name="Mortal Kombat Mythologies - Sub-Zero (Europe).z64" size="16777216" crc="ea21015a" md5="38a82a56ae61a4d354c6a26e64d25e1c" sha1="e674e0f08d7218136f31ca99a9c5323f0d2bb4d4" status="verified"/>
 	</game>
 	<game name="Mortal Kombat Mythologies - Sub-Zero (USA)" cloneof="Mortal Kombat Mythologies - Sub-Zero (Europe)">
 		<description>Mortal Kombat Mythologies - Sub-Zero (USA)</description>
@@ -2874,7 +2886,7 @@
 	<game name="NBA Jam 99 (Europe)">
 		<description>NBA Jam 99 (Europe)</description>
 		<release name="NBA Jam 99 (Europe)" region="EUR"/>
-		<rom name="NBA Jam 99 (Europe).z64" size="12582912" crc="90e4275b" md5="be72be370bc0a76d403ff2b9ed2a9173" sha1="cf6c46785b75f9bc1d5b1fd08dafb72dd595f68a"/>
+		<rom name="NBA Jam 99 (Europe).z64" size="12582912" crc="90e4275b" md5="be72be370bc0a76d403ff2b9ed2a9173" sha1="cf6c46785b75f9bc1d5b1fd08dafb72dd595f68a" status="verified"/>
 	</game>
 	<game name="NBA Jam 99 (USA)" cloneof="NBA Jam 99 (Europe)">
 		<description>NBA Jam 99 (USA)</description>
@@ -3003,7 +3015,7 @@
 	<game name="NFL Quarterback Club 99 (Europe)">
 		<description>NFL Quarterback Club 99 (Europe)</description>
 		<release name="NFL Quarterback Club 99 (Europe)" region="EUR"/>
-		<rom name="NFL Quarterback Club 99 (Europe).z64" size="12582912" crc="f688bdf3" md5="7ec0484c2ba6aa9f0a45d7ac1f4117da" sha1="1ee4ebaf6b0c189164397ea257f17b45eedf0767"/>
+		<rom name="NFL Quarterback Club 99 (Europe).z64" size="12582912" crc="f688bdf3" md5="7ec0484c2ba6aa9f0a45d7ac1f4117da" sha1="1ee4ebaf6b0c189164397ea257f17b45eedf0767" status="verified"/>
 	</game>
 	<game name="NFL Quarterback Club 99 (USA)" cloneof="NFL Quarterback Club 99 (Europe)">
 		<description>NFL Quarterback Club 99 (USA)</description>
@@ -3063,7 +3075,7 @@
 	<game name="Nuclear Strike 64 (Europe) (En,Fr)">
 		<description>Nuclear Strike 64 (Europe) (En,Fr)</description>
 		<release name="Nuclear Strike 64 (Europe) (En,Fr)" region="EUR"/>
-		<rom name="Nuclear Strike 64 (Europe) (En,Fr).z64" size="33554432" crc="9afbfcaf" md5="710ba49ebd5c9a2b26653fae93bd667a" sha1="34a23cfa247de4e8ecdb8d72431af93d35c69753"/>
+		<rom name="Nuclear Strike 64 (Europe) (En,Fr).z64" size="33554432" crc="9afbfcaf" md5="710ba49ebd5c9a2b26653fae93bd667a" sha1="34a23cfa247de4e8ecdb8d72431af93d35c69753" status="verified"/>
 	</game>
 	<game name="Nuclear Strike 64 (Germany)" cloneof="Nuclear Strike 64 (Europe) (En,Fr)">
 		<description>Nuclear Strike 64 (Germany)</description>
@@ -3469,7 +3481,7 @@
 	<game name="Power Rangers - Lightspeed Rescue (Europe)">
 		<description>Power Rangers - Lightspeed Rescue (Europe)</description>
 		<release name="Power Rangers - Lightspeed Rescue (Europe)" region="EUR"/>
-		<rom name="Power Rangers - Lightspeed Rescue (Europe).z64" size="12582912" crc="36ee5ca8" md5="92bb1bc5e6466f1944943d34d25f2daf" sha1="c7fec2a9d57f656b8d0b4404c8797c46136fd971"/>
+		<rom name="Power Rangers - Lightspeed Rescue (Europe).z64" size="12582912" crc="36ee5ca8" md5="92bb1bc5e6466f1944943d34d25f2daf" sha1="c7fec2a9d57f656b8d0b4404c8797c46136fd971" status="verified"/>
 	</game>
 	<game name="Power Rangers - Lightspeed Rescue (USA)" cloneof="Power Rangers - Lightspeed Rescue (Europe)">
 		<description>Power Rangers - Lightspeed Rescue (USA)</description>
@@ -3638,7 +3650,7 @@
 	<game name="Resident Evil 2 (USA) (Rev 1)" cloneof="Resident Evil 2 (Europe) (En,Fr)">
 		<description>Resident Evil 2 (USA) (Rev 1)</description>
 		<release name="Resident Evil 2 (USA) (Rev 1)" region="USA"/>
-		<rom name="Resident Evil 2 (USA) (Rev 1).z64" size="67108864" crc="848fbc0d" md5="1add2c0217662b307cdfd876b35fbf7a" sha1="62ec19bead748c12d38f6c5a7ab0831edbd3d44b"/>
+		<rom name="Resident Evil 2 (USA) (Rev 1).z64" size="67108864" crc="848fbc0d" md5="1add2c0217662b307cdfd876b35fbf7a" sha1="62ec19bead748c12d38f6c5a7ab0831edbd3d44b" status="verified"/>
 	</game>
 	<game name="Resident Evil 2 (USA)" cloneof="Resident Evil 2 (Europe) (En,Fr)">
 		<description>Resident Evil 2 (USA)</description>
@@ -3739,7 +3751,7 @@
 	<game name="Rugrats in Paris - The Movie (Europe)">
 		<description>Rugrats in Paris - The Movie (Europe)</description>
 		<release name="Rugrats in Paris - The Movie (Europe)" region="EUR"/>
-		<rom name="Rugrats in Paris - The Movie (Europe).z64" size="16777216" crc="cd74b07e" md5="229089089661f517c863242d6bb77746" sha1="fdda27e7c418728391a5ec53f62fdb5e1b21a0df"/>
+		<rom name="Rugrats in Paris - The Movie (Europe).z64" size="16777216" crc="cd74b07e" md5="229089089661f517c863242d6bb77746" sha1="fdda27e7c418728391a5ec53f62fdb5e1b21a0df" status="verified"/>
 	</game>
 	<game name="Rugrats in Paris - The Movie (USA)" cloneof="Rugrats in Paris - The Movie (Europe)">
 		<description>Rugrats in Paris - The Movie (USA)</description>
@@ -4062,6 +4074,11 @@
 		<description>Star Wars - Shadows of the Empire (USA) (Beta) (1996-10-15)</description>
 		<rom name="Star Wars - Shadows of the Empire (USA) (Beta) (1996-10-15).z64" size="12582912" crc="28368603" md5="4076973cfda277fc876e9f066cc73deb" sha1="0f642f17693adf1b97121a61bbeca37df59bb55a"/>
 	</game>
+	<game name="Star Wars - Shadows of the Empire (USA) (Aftermarket) (Unl)" cloneof="Star Wars - Shadows of the Empire (Europe)">
+		<description>Star Wars - Shadows of the Empire (USA) (Aftermarket) (Unl)</description>
+		<release name="Star Wars - Shadows of the Empire (USA) (Aftermarket) (Unl)" region="USA"/>
+		<rom name="Star Wars - Shadows of the Empire (USA) (Aftermarket) (Unl).z64" size="16777216" crc="776a069b" md5="4e12b97690897465a27bdf0dda722826" sha1="6932f8b10a5de27500521de50d04e3ba097dd9d9" status="verified"/>
+	</game>
 	<game name="Star Wars - Teikoku no Kage (Japan)" cloneof="Star Wars - Shadows of the Empire (Europe)">
 		<description>Star Wars - Teikoku no Kage (Japan)</description>
 		<release name="Star Wars - Teikoku no Kage (Japan)" region="JPN"/>
@@ -4091,6 +4108,11 @@
 		<description>Star Wars Episode I - Racer (USA)</description>
 		<release name="Star Wars Episode I - Racer (USA)" region="USA"/>
 		<rom name="Star Wars Episode I - Racer (USA).z64" size="33554432" crc="c53c1035" md5="1ee8800a4003e7f9688c5a35f929d01b" sha1="3542d5597c8a56ea8f5c63bceae97a24c4c08d58"/>
+	</game>
+	<game name="Star Wars Episode I - Racer (USA) (Aftermarket) (Unl)" cloneof="Star Wars Episode I - Racer (Europe) (En,Fr,De)">
+		<description>Star Wars Episode I - Racer (USA) (Aftermarket) (Unl)</description>
+		<release name="Star Wars Episode I - Racer (USA) (Aftermarket) (Unl)" region="USA"/>
+		<rom name="Star Wars Episode I - Racer (USA) (Aftermarket) (Unl).z64" size="33554432" crc="fb401a2a" md5="0b2b4d3c38426763059d68aa53b86fdf" sha1="f71908f15a14ee124f9b471467432ade87e0951c" status="verified"/>
 	</game>
 	<game name="StarCraft 64 (USA)">
 		<description>StarCraft 64 (USA)</description>
@@ -4919,7 +4941,7 @@
 	<game name="Wipeout 64 (USA)" cloneof="Wipeout 64 (Europe)">
 		<description>Wipeout 64 (USA)</description>
 		<release name="Wipeout 64 (USA)" region="USA"/>
-		<rom name="Wipeout 64 (USA).z64" size="8388608" crc="4888d0fe" md5="73c6d87dbe50f73f3b44e0f237a546d7" sha1="54e4795aba4fc326f79d0703ffdb51a212dd4b5c"/>
+		<rom name="Wipeout 64 (USA).z64" size="8388608" crc="4888d0fe" md5="73c6d87dbe50f73f3b44e0f237a546d7" sha1="54e4795aba4fc326f79d0703ffdb51a212dd4b5c" status="verified"/>
 	</game>
 	<game name="Wipeout 64 (Europe) (Beta)" cloneof="Wipeout 64 (Europe)">
 		<description>Wipeout 64 (Europe) (Beta)</description>

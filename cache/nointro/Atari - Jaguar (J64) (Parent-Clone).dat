@@ -4,9 +4,9 @@
 	<header>
 		<name>Atari - Jaguar (J64) (Parent-Clone)</name>
 		<description>Atari - Jaguar (J64) (Parent-Clone)</description>
-		<version>20211101-031342</version>
-		<date>20211101-031342</date>
-		<author>BigFred, BitLooter, Hiccup, Money_114, omonim2007, xuom2</author>
+		<version>20220323-120752</version>
+		<date>20220323-120752</date>
+		<author>BigFred, BitLooter, Hiccup, Money_114, NovaAurora, omonim2007, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Atari Jaguar (World)">
@@ -476,6 +476,10 @@
 		<release name="Space War 2000 (World)" region="JPN"/>
 		<release name="Space War 2000 (World)" region="USA"/>
 		<rom name="Space War 2000 (World).j64" size="2097152" crc="d821f5eb" md5="8045ac181d02e3fc92eae066607073f3" sha1="6b010477155f30f1ecec7eab2c9a7544242bbd19" status="verified"/>
+	</game>
+	<game name="Speedster II (USA) (Proto)">
+		<description>Speedster II (USA) (Proto)</description>
+		<rom name="Speedster II (USA) (Proto).j64" size="2097152" crc="f7cfe6e6" md5="1b01e8ebfcf63a296daeae0c67d12cdd" sha1="508692e1b9bb57cdec35bb95829b23e49d6ec17e"/>
 	</game>
 	<game name="Super Burnout (World)">
 		<description>Super Burnout (World)</description>

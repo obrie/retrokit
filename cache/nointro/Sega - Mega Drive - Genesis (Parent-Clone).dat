@@ -4,9 +4,9 @@
 	<header>
 		<name>Sega - Mega Drive - Genesis (Parent-Clone)</name>
 		<description>Sega - Mega Drive - Genesis (Parent-Clone)</description>
-		<version>20220112-172707</version>
-		<date>20220112-172707</date>
-		<author>BigFred, BitLooter, C. V. Reynolds, coraz, dead_screem, DeadSkullzJr, Densetsu, DeriLoko3, einstein95, ElBarto, Flashfire42, Gefflon, gigadeath, Hiccup, Jack, Madeline, Money_114, niemand, norkmetnoil577, omonim2007, Powerpuff, relax, RetroUprising, Rifu, sCZther, SonGoku, Special T, sunbeam, Tauwasser, TeamEurope, Vigi, xNo, xuom2</author>
+		<version>20220330-051241</version>
+		<date>20220330-051241</date>
+		<author>Arctic Circle System, BigFred, BitLooter, C. V. Reynolds, coraz, dead_screem, DeadSkullzJr, Densetsu, DeriLoko3, einstein95, ElBarto, Flashfire42, Gefflon, gigadeath, Hiccup, Jack, Madeline, Money_114, niemand, norkmetnoil577, NovaAurora, omonim2007, Powerpuff, relax, RetroUprising, Rifu, sCZther, SonGoku, Special T, sunbeam, Tauwasser, TeamEurope, Vigi, xNo, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] Aiwa CSD-GM1 (Japan)">
@@ -153,10 +153,10 @@
 		<release name="[BIOS] Sega Teradrive - TMSS (Japan)" region="JPN"/>
 		<rom name="[BIOS] Sega Teradrive - TMSS (Japan).md" size="4096" crc="424a9d11" md5="9f567d86705317eedd7d5bf2a729ff1b" sha1="1c470a9a8d0b211c5feea1c1c2376aa1f7934b16"/>
 	</game>
-	<game name="10 Super Jogos (Brazil)">
-		<description>10 Super Jogos (Brazil)</description>
-		<release name="10 Super Jogos (Brazil)" region="BRA"/>
-		<rom name="10 Super Jogos (Brazil).md" size="4194304" crc="c19ae368" md5="0d1c2d48509985f2d79b0fc3c8fe213a" sha1="791a4de13cfe2af4302aac969753d67dd76e89c8"/>
+	<game name="10 Super Jogos (Brazil) (En)">
+		<description>10 Super Jogos (Brazil) (En)</description>
+		<release name="10 Super Jogos (Brazil) (En)" region="BRA"/>
+		<rom name="10 Super Jogos (Brazil) (En).md" size="4194304" crc="c19ae368" md5="0d1c2d48509985f2d79b0fc3c8fe213a" sha1="791a4de13cfe2af4302aac969753d67dd76e89c8"/>
 	</game>
 	<game name="16 Zhang Mahjong (Taiwan) (Unl)">
 		<description>16 Zhang Mahjong (Taiwan) (Unl)</description>
@@ -253,11 +253,6 @@
 	<game name="Addams Family, The (USA, Europe) (Beta)" cloneof="Addams Family, The (USA, Europe)">
 		<description>Addams Family, The (USA, Europe) (Beta)</description>
 		<rom name="Addams Family, The (USA, Europe) (Beta).md" size="1048576" crc="2803a5ca" md5="f734e0d527d77396ceec2ef754338642" sha1="34deb427637d0458ce229b4fe3e55ad7901a0a34"/>
-	</game>
-	<game name="Advanced Busterhawk Gleylancer (Japan)">
-		<description>Advanced Busterhawk Gleylancer (Japan)</description>
-		<release name="Advanced Busterhawk Gleylancer (Japan)" region="JPN"/>
-		<rom name="Advanced Busterhawk Gleylancer (Japan).md" size="1048576" crc="42cf9b5b" md5="8bd4a97783cda077c342173df0a9b51e" sha1="529d88f96eb7082bfbc00be3f42a1b2e365c34b7"/>
 	</game>
 	<game name="Advanced Daisenryaku - Deutsch Dengeki Sakusen (Japan) (Rev A)">
 		<description>Advanced Daisenryaku - Deutsch Dengeki Sakusen (Japan) (Rev A)</description>
@@ -524,6 +519,10 @@
 		<description>Alien Soldier (USA) (Virtual Console)</description>
 		<rom name="Alien Soldier (USA) (Virtual Console).md" size="2097152" crc="9b1a1d7f" md5="54d06fe70c75bf6828a503bb8ce806b0" sha1="a7c6e7d6b3df26a3ca381a170ad06efab0043c97"/>
 	</game>
+	<game name="Alien Soldier (USA, Europe) (Switch Online)" cloneof="Alien Soldier (Europe)">
+		<description>Alien Soldier (USA, Europe) (Switch Online)</description>
+		<rom name="Alien Soldier (USA, Europe) (Switch Online).md" size="2097152" crc="560cf8bb" md5="64e55a0d84d37a1c4b40cefa6033868b" sha1="e2c60bab384acdba99cdd10bcedbfa1210eefa87"/>
+	</game>
 	<game name="Alien Storm (World)">
 		<description>Alien Storm (World)</description>
 		<release name="Alien Storm (World)" region="EUR"/>
@@ -724,13 +723,13 @@
 		<release name="Ozaki Naomichi no Super Masters (Japan)" region="JPN"/>
 		<rom name="Ozaki Naomichi no Super Masters (Japan).md" size="524288" crc="088ba825" md5="da0c9622e14da9c9aa9a45a99fc9e791" sha1="662a87d679066aad0638b2ffb01c807d9f376121" status="verified"/>
 	</game>
-	<game name="Arrow Flash (Japan, Europe)">
-		<description>Arrow Flash (Japan, Europe)</description>
-		<release name="Arrow Flash (Japan, Europe)" region="EUR"/>
-		<release name="Arrow Flash (Japan, Europe)" region="JPN"/>
-		<rom name="Arrow Flash (Japan, Europe).md" size="524288" crc="d49f8444" md5="cc6c03def1e6ca137ee4814d4920fa7d" sha1="5d2ca55704b7fe8d83fa7564fb1efc62834d3148" status="verified"/>
+	<game name="Arrow Flash (Japan, Europe) (En)">
+		<description>Arrow Flash (Japan, Europe) (En)</description>
+		<release name="Arrow Flash (Japan, Europe) (En)" region="EUR"/>
+		<release name="Arrow Flash (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Arrow Flash (Japan, Europe) (En).md" size="524288" crc="d49f8444" md5="cc6c03def1e6ca137ee4814d4920fa7d" sha1="5d2ca55704b7fe8d83fa7564fb1efc62834d3148" status="verified"/>
 	</game>
-	<game name="Arrow Flash (USA)" cloneof="Arrow Flash (Japan, Europe)">
+	<game name="Arrow Flash (USA)" cloneof="Arrow Flash (Japan, Europe) (En)">
 		<description>Arrow Flash (USA)</description>
 		<release name="Arrow Flash (USA)" region="USA"/>
 		<rom name="Arrow Flash (USA).md" size="524288" crc="4d89e66b" md5="7f8f0a581158a00b6799204c9afe646b" sha1="916524d2b403a633108cf457eec13b4df7384d95" status="verified"/>
@@ -942,11 +941,11 @@
 		<release name="Bahamut Senki (Japan)" region="JPN"/>
 		<rom name="Bahamut Senki (Japan).md" size="524288" crc="b1e268da" md5="e67c277cc6cbc821c3e0c1898a635daf" sha1="cee49b613298e060d938de523dfcbb27e790b5af" status="verified"/>
 	</game>
-	<game name="Ball Jacks (Japan, Europe)">
-		<description>Ball Jacks (Japan, Europe)</description>
-		<release name="Ball Jacks (Japan, Europe)" region="EUR"/>
-		<release name="Ball Jacks (Japan, Europe)" region="JPN"/>
-		<rom name="Ball Jacks (Japan, Europe).md" size="262144" crc="f5c3c54f" md5="4e1dea42312f072440322da246e8bbdf" sha1="c8aa71c5632a5cc59da430ca3870cffb37fbd30f" status="verified"/>
+	<game name="Ball Jacks (Japan, Europe) (En)">
+		<description>Ball Jacks (Japan, Europe) (En)</description>
+		<release name="Ball Jacks (Japan, Europe) (En)" region="EUR"/>
+		<release name="Ball Jacks (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Ball Jacks (Japan, Europe) (En).md" size="262144" crc="f5c3c54f" md5="4e1dea42312f072440322da246e8bbdf" sha1="c8aa71c5632a5cc59da430ca3870cffb37fbd30f" status="verified"/>
 	</game>
 	<game name="Ballz 3D - Fighting at Its Ballziest ~ Ballz 3D - The Battle of the Ballz (USA, Europe)">
 		<description>Ballz 3D - Fighting at Its Ballziest ~ Ballz 3D - The Battle of the Ballz (USA, Europe)</description>
@@ -1101,11 +1100,11 @@
 		<release name="Battle Golfer Yui (Japan)" region="JPN"/>
 		<rom name="Battle Golfer Yui (Japan).md" size="524288" crc="4aa03e4e" md5="8cfd0e5a169193cf9c66e6d237a45d77" sha1="84db25ff7a0d2db6afddcfe4cdc7c26e20d0dd72" status="verified"/>
 	</game>
-	<game name="Battle Mania Daiginjou (Japan, Korea)">
-		<description>Battle Mania Daiginjou (Japan, Korea)</description>
-		<release name="Battle Mania Daiginjou (Japan, Korea)" region="JPN"/>
-		<release name="Battle Mania Daiginjou (Japan, Korea)" region="KOR"/>
-		<rom name="Battle Mania Daiginjou (Japan, Korea).md" size="1048576" crc="312fa0f2" md5="1ffe5b490cddeb691e3add6947024f83" sha1="fbcf7e899ff964f52ade160793d6cb22bf68375c" status="verified"/>
+	<game name="Battle Mania Daiginjou (Japan, Korea) (Ja)">
+		<description>Battle Mania Daiginjou (Japan, Korea) (Ja)</description>
+		<release name="Battle Mania Daiginjou (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Battle Mania Daiginjou (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Battle Mania Daiginjou (Japan, Korea) (Ja).md" size="1048576" crc="312fa0f2" md5="1ffe5b490cddeb691e3add6947024f83" sha1="fbcf7e899ff964f52ade160793d6cb22bf68375c" status="verified"/>
 	</game>
 	<game name="Battle Squadron (USA, Europe)">
 		<description>Battle Squadron (USA, Europe)</description>
@@ -1195,7 +1194,7 @@
 		<rom name="Beggar Prince (World) (Rev 1) (Aftermarket) (Unl).md" size="4194304" crc="6332edcc" md5="52ff6253cd6087fd3ecd23843d051672" sha1="1aeaef203c7d55fa678b92776b5b8cbc76533652"/>
 	</game>
 	<game name="Beggar Prince (World) (Aftermarket) (Unl)" cloneof="Beggar Prince (World) (Rev 1) (Aftermarket) (Unl)">
-		<description>Beggar Prince (World) (Aftermarket) (Unl) (The hash data is from the first printing of this game)</description>
+		<description>The hash data is from the first printing of this game</description>
 		<rom name="Beggar Prince (World) (Aftermarket) (Unl).md" size="4194304" crc="f3af46cd" md5="b5616628e9ff5d6861201388d018b8bc" sha1="f481b970756c482d8f408c4bab8902172837e7d8"/>
 	</game>
 	<game name="Xin Qi Gai Wang Zi (Taiwan) (Unl)" cloneof="Beggar Prince (World) (Rev 1) (Aftermarket) (Unl)">
@@ -1307,11 +1306,11 @@
 		<release name="Best of the Best - Championship Karate (Europe) (Proto)" region="EUR"/>
 		<rom name="Best of the Best - Championship Karate (Europe) (Proto).md" size="1048576" crc="f842240b" md5="cf51fc9636aeef801b918f2d98831219" sha1="c7ffaa2af35d0365340075555b6a5c3f252d33b3"/>
 	</game>
-	<game name="Kick Boxing, The (Japan, Korea)" cloneof="Best of the Best - Championship Karate (USA)">
-		<description>Kick Boxing, The (Japan, Korea)</description>
-		<release name="Kick Boxing, The (Japan, Korea)" region="JPN"/>
-		<release name="Kick Boxing, The (Japan, Korea)" region="KOR"/>
-		<rom name="Kick Boxing, The (Japan, Korea).md" size="1048576" crc="9bdc230c" md5="bb98f63238f108c1aedda815493c44c6" sha1="c3f74c01e8124d5d08f817ff6e0c9416545b8302" status="verified"/>
+	<game name="Kick Boxing, The (Japan, Korea) (Ja)" cloneof="Best of the Best - Championship Karate (USA)">
+		<description>Kick Boxing, The (Japan, Korea) (Ja)</description>
+		<release name="Kick Boxing, The (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Kick Boxing, The (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Kick Boxing, The (Japan, Korea) (Ja).md" size="1048576" crc="9bdc230c" md5="bb98f63238f108c1aedda815493c44c6" sha1="c3f74c01e8124d5d08f817ff6e0c9416545b8302" status="verified"/>
 	</game>
 	<game name="Beyond Zero Tolerance (USA) (Proto) (1995-06-23)">
 		<description>Beyond Zero Tolerance (USA) (Proto) (1995-06-23)</description>
@@ -1438,53 +1437,53 @@
 		<description>Body Count (Europe) (En,Fr,De,Es,It) (Beta)</description>
 		<rom name="Body Count (Europe) (En,Fr,De,Es,It) (Beta).md" size="1048576" crc="b4ffb6ce" md5="e64db3d4c2ccc0b0b3a24b54bc425ec3" sha1="a01971cdce4d98e770d9c083a5accb8cb5260112"/>
 	</game>
-	<game name="Body Count (Brazil)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
-		<description>Body Count (Brazil)</description>
-		<release name="Body Count (Brazil)" region="BRA"/>
-		<rom name="Body Count (Brazil).md" size="1048576" crc="649607d1" md5="6251cf2d9e84f5f2407fefb1e933b27a" sha1="d881a5281c619d3b80bc740a2783634818a8fc4c" status="verified"/>
+	<game name="Body Count (Brazil) (En)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
+		<description>Body Count (Brazil) (En)</description>
+		<release name="Body Count (Brazil) (En)" region="BRA"/>
+		<rom name="Body Count (Brazil) (En).md" size="1048576" crc="649607d1" md5="6251cf2d9e84f5f2407fefb1e933b27a" sha1="d881a5281c619d3b80bc740a2783634818a8fc4c" status="verified"/>
 	</game>
-	<game name="Body Count (Brazil) (Beta) (1994-01-27)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
-		<description>Body Count (Brazil) (Beta) (1994-01-27)</description>
-		<rom name="Body Count (Brazil) (Beta) (1994-01-27).md" size="1048576" crc="66ca4e71" md5="3bc0937881c6084925cdf92595843d6b" sha1="8cbea2b2c0435fadc6031a2704d7a60c1a386615"/>
+	<game name="Body Count (Brazil) (En) (Beta) (1994-01-27)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
+		<description>Body Count (Brazil) (En) (Beta) (1994-01-27)</description>
+		<rom name="Body Count (Brazil) (En) (Beta) (1994-01-27).md" size="1048576" crc="66ca4e71" md5="3bc0937881c6084925cdf92595843d6b" sha1="8cbea2b2c0435fadc6031a2704d7a60c1a386615"/>
 	</game>
-	<game name="Body Count (Brazil) (Beta) (1994-02-08)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
-		<description>Body Count (Brazil) (Beta) (1994-02-08)</description>
-		<rom name="Body Count (Brazil) (Beta) (1994-02-08).md" size="1046784" crc="c5fed897" md5="226654e9b049306b2167014660cbad7b" sha1="1c13134c32dc620dd663f33150c82d12cc69d442"/>
+	<game name="Body Count (Brazil) (En) (Beta) (1994-02-08)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
+		<description>Body Count (Brazil) (En) (Beta) (1994-02-08)</description>
+		<rom name="Body Count (Brazil) (En) (Beta) (1994-02-08).md" size="1046784" crc="c5fed897" md5="226654e9b049306b2167014660cbad7b" sha1="1c13134c32dc620dd663f33150c82d12cc69d442"/>
 	</game>
-	<game name="Body Count (Brazil) (Beta) (1994-03-08)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
-		<description>Body Count (Brazil) (Beta) (1994-03-08)</description>
-		<rom name="Body Count (Brazil) (Beta) (1994-03-08).md" size="1048576" crc="8965213f" md5="7a0af89e2903e2aeaf163f97b0af8e3e" sha1="dbd4fec001f61c6a8414b2035e884ebfbf48b899"/>
+	<game name="Body Count (Brazil) (En) (Beta) (1994-03-08)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
+		<description>Body Count (Brazil) (En) (Beta) (1994-03-08)</description>
+		<rom name="Body Count (Brazil) (En) (Beta) (1994-03-08).md" size="1048576" crc="8965213f" md5="7a0af89e2903e2aeaf163f97b0af8e3e" sha1="dbd4fec001f61c6a8414b2035e884ebfbf48b899"/>
 	</game>
-	<game name="Body Count (Brazil) (Beta) (1994-03-03)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
-		<description>Body Count (Brazil) (Beta) (1994-03-03)</description>
-		<rom name="Body Count (Brazil) (Beta) (1994-03-03).md" size="1048576" crc="6abc6e77" md5="09ff6549ce8d3b950f1de2ab10eddccb" sha1="0c50d81ff0630fb79a600f65dfacb894dfe62f4d"/>
+	<game name="Body Count (Brazil) (En) (Beta) (1994-03-03)" cloneof="Body Count (Europe) (En,Fr,De,Es,It)">
+		<description>Body Count (Brazil) (En) (Beta) (1994-03-03)</description>
+		<rom name="Body Count (Brazil) (En) (Beta) (1994-03-03).md" size="1048576" crc="6abc6e77" md5="09ff6549ce8d3b950f1de2ab10eddccb" sha1="0c50d81ff0630fb79a600f65dfacb894dfe62f4d"/>
 	</game>
-	<game name="Bomber (Brazil) (Unl)">
-		<description>Bomber (Brazil) (Unl)</description>
-		<release name="Bomber (Brazil) (Unl)" region="BRA"/>
-		<rom name="Bomber (Brazil) (Unl).md" size="131072" crc="6389a658" md5="fd36dc99f8915416005880427fdae2d9" sha1="fe6415e4cd3754316606cae0f0d85856d8ee00e0"/>
+	<game name="Bomber (Brazil) (En) (Unl)">
+		<description>Bomber (Brazil) (En) (Unl)</description>
+		<release name="Bomber (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Bomber (Brazil) (En) (Unl).md" size="131072" crc="6389a658" md5="fd36dc99f8915416005880427fdae2d9" sha1="fe6415e4cd3754316606cae0f0d85856d8ee00e0"/>
 	</game>
 	<game name="Bomboy (Taiwan) (En) (Unl)">
 		<description>Bomboy (Taiwan) (En) (Unl)</description>
 		<release name="Bomboy (Taiwan) (En) (Unl)" region="TAI"/>
 		<rom name="Bomboy (Taiwan) (En) (Unl).md" size="524288" crc="065d2019" md5="c5816740d93932870c5c466ea2931a4f" sha1="206fff31bccbb9a973de95c9ae780acb462548dd" status="verified"/>
 	</game>
-	<game name="Bonanza Bros. (USA, Europe, Korea) (Rev B)">
-		<description>Bonanza Bros. (USA, Europe, Korea) (Rev B)</description>
-		<release name="Bonanza Bros. (USA, Europe, Korea) (Rev B)" region="EUR"/>
-		<release name="Bonanza Bros. (USA, Europe, Korea) (Rev B)" region="KOR"/>
-		<release name="Bonanza Bros. (USA, Europe, Korea) (Rev B)" region="USA"/>
-		<rom name="Bonanza Bros. (USA, Europe, Korea) (Rev B).md" size="524288" crc="20d1ad4c" md5="dc3847b07cd94a15b1b9e0fb2ff5db11" sha1="31c589bc0d1605502cdd04069dc4877811e84e58" status="verified"/>
+	<game name="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)">
+		<description>Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)</description>
+		<release name="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)" region="EUR"/>
+		<release name="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)" region="KOR"/>
+		<release name="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)" region="USA"/>
+		<rom name="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B).md" size="524288" crc="20d1ad4c" md5="dc3847b07cd94a15b1b9e0fb2ff5db11" sha1="31c589bc0d1605502cdd04069dc4877811e84e58" status="verified"/>
 	</game>
-	<game name="Bonanza Bros. (Japan, Europe)" cloneof="Bonanza Bros. (USA, Europe, Korea) (Rev B)">
-		<description>Bonanza Bros. (Japan, Europe)</description>
-		<rom name="Bonanza Bros. (Japan, Europe).md" size="524288" crc="adf6476c" md5="9c6b56e9916aadee638f93c7f4bb1e20" sha1="ce46f2b53988f06e0bdfaad1b0dc3e9ca936e1e8" status="verified"/>
+	<game name="Bonanza Bros. (Japan, Europe) (En)" cloneof="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)">
+		<description>Bonanza Bros. (Japan, Europe) (En)</description>
+		<rom name="Bonanza Bros. (Japan, Europe) (En).md" size="524288" crc="adf6476c" md5="9c6b56e9916aadee638f93c7f4bb1e20" sha1="ce46f2b53988f06e0bdfaad1b0dc3e9ca936e1e8" status="verified"/>
 	</game>
-	<game name="Bonanza Bros. (Japan, Europe) (Rev A)" cloneof="Bonanza Bros. (USA, Europe, Korea) (Rev B)">
-		<description>Bonanza Bros. (Japan, Europe) (Rev A)</description>
-		<release name="Bonanza Bros. (Japan, Europe) (Rev A)" region="EUR"/>
-		<release name="Bonanza Bros. (Japan, Europe) (Rev A)" region="JPN"/>
-		<rom name="Bonanza Bros. (Japan, Europe) (Rev A).md" size="524288" crc="c6aac589" md5="acf4aa6aea84be72afaa1a86954b85cb" sha1="f7313ecaf7143873597e3a6ebf58d542d06c3ef3" status="verified"/>
+	<game name="Bonanza Bros. (Japan, Europe) (En) (Rev A)" cloneof="Bonanza Bros. (USA, Europe, Korea) (En) (Rev B)">
+		<description>Bonanza Bros. (Japan, Europe) (En) (Rev A)</description>
+		<release name="Bonanza Bros. (Japan, Europe) (En) (Rev A)" region="EUR"/>
+		<release name="Bonanza Bros. (Japan, Europe) (En) (Rev A)" region="JPN"/>
+		<rom name="Bonanza Bros. (Japan, Europe) (En) (Rev A).md" size="524288" crc="c6aac589" md5="acf4aa6aea84be72afaa1a86954b85cb" sha1="f7313ecaf7143873597e3a6ebf58d542d06c3ef3" status="verified"/>
 	</game>
 	<game name="Bonkers (USA, Europe)">
 		<description>Bonkers (USA, Europe)</description>
@@ -1693,11 +1692,11 @@
 		<release name="Burning Force (USA)" region="USA"/>
 		<rom name="Burning Force (USA).md" size="524288" crc="bdc8f02c" md5="da536d20ac0f0e3a62d9709078690032" sha1="28fcb1c9b5c72255443ab5bb950a52030baaf409" status="verified"/>
 	</game>
-	<game name="Cadash (USA, Korea)">
-		<description>Cadash (USA, Korea)</description>
-		<release name="Cadash (USA, Korea)" region="KOR"/>
-		<release name="Cadash (USA, Korea)" region="USA"/>
-		<rom name="Cadash (USA, Korea).md" size="524288" crc="13bdf374" md5="c9b85d5f6880e7734112887675115220" sha1="5791cc9a1b118c58fc5209bf2e64156ffdb80134" status="verified"/>
+	<game name="Cadash (USA, Korea) (En)">
+		<description>Cadash (USA, Korea) (En)</description>
+		<release name="Cadash (USA, Korea) (En)" region="KOR"/>
+		<release name="Cadash (USA, Korea) (En)" region="USA"/>
+		<rom name="Cadash (USA, Korea) (En).md" size="524288" crc="13bdf374" md5="c9b85d5f6880e7734112887675115220" sha1="5791cc9a1b118c58fc5209bf2e64156ffdb80134" status="verified"/>
 	</game>
 	<game name="Caesars Palace (USA)">
 		<description>Caesars Palace (USA)</description>
@@ -1835,7 +1834,7 @@
 	</game>
 	<game name="CDX Pro (World) (v1.70) (Program) (Unl) [b]" cloneof="CDX Pro (World) (v1.8I) (Program) (Unl)">
 		<description>CDX Pro (World) (v1.70) (Program) (Unl) [b]</description>
-		<rom name="CDX Pro (World) (v1.70) (Program) (Alt) (Unl) [b].md" size="131072" crc="e7f3a492" md5="e71a93d1eb9208cf611fedfd6e87983a" sha1="27259c41165327ca35ac072231522c5131079a60" status="baddump"/>
+		<rom name="CDX Pro (World) (v1.70) (Program) (Unl) (Alt) [b].md" size="131072" crc="e7f3a492" md5="e71a93d1eb9208cf611fedfd6e87983a" sha1="27259c41165327ca35ac072231522c5131079a60" status="baddump"/>
 	</game>
 	<game name="Centurion - Defender of Rome (USA, Europe)">
 		<description>Centurion - Defender of Rome (USA, Europe)</description>
@@ -1933,10 +1932,10 @@
 		<release name="Cheese Cat-Astrophe Starring Speedy Gonzales (Europe) (En,Fr,De,Es)" region="EUR"/>
 		<rom name="Cheese Cat-Astrophe Starring Speedy Gonzales (Europe) (En,Fr,De,Es).md" size="2097152" crc="ff634b28" md5="a0a6cd7f82d2215ee51baec4bda150c6" sha1="12bb0d838c675b34cecc9041d3560fe35145ec39"/>
 	</game>
-	<game name="Chess (Russia) (Unl)">
-		<description>Chess (Russia) (Unl)</description>
-		<release name="Chess (Russia) (Unl)" region="RUS"/>
-		<rom name="Chess (Russia) (Unl).md" size="524288" crc="47380edd" md5="102947ce4e33e4a90b3d45b58af8015e" sha1="42e56fc5543dcb40da73447b582c84c4ff50a825"/>
+	<game name="Chess (Russia) (En) (Unl)">
+		<description>Chess (Russia) (En) (Unl)</description>
+		<release name="Chess (Russia) (En) (Unl)" region="RUS"/>
+		<rom name="Chess (Russia) (En) (Unl).md" size="524288" crc="47380edd" md5="102947ce4e33e4a90b3d45b58af8015e" sha1="42e56fc5543dcb40da73447b582c84c4ff50a825"/>
 	</game>
 	<game name="Chester Cheetah - Too Cool to Fool (USA)">
 		<description>Chester Cheetah - Too Cool to Fool (USA)</description>
@@ -1969,11 +1968,11 @@
 		<release name="Chiki Chiki Boys (USA, Europe)" region="USA"/>
 		<rom name="Chiki Chiki Boys (USA, Europe).md" size="1048576" crc="813a7d62" md5="b89406ff3537d74f77a4f7e5e71b25b7" sha1="3cbeb068751c39790116aa8f422dd6f333be42e0" status="verified"/>
 	</game>
-	<game name="Chiki Chiki Boys (Japan, Korea)" cloneof="Chiki Chiki Boys (USA, Europe)">
-		<description>Chiki Chiki Boys (Japan, Korea)</description>
-		<release name="Chiki Chiki Boys (Japan, Korea)" region="JPN"/>
-		<release name="Chiki Chiki Boys (Japan, Korea)" region="KOR"/>
-		<rom name="Chiki Chiki Boys (Japan, Korea).md" size="1048576" crc="06918c17" md5="e91cc2771c7801e8669117a0c2e06e40" sha1="77191eaee3775a425147ae7140ddf6ed3b6b41d2" status="verified"/>
+	<game name="Chiki Chiki Boys (Japan, Korea) (Ja)" cloneof="Chiki Chiki Boys (USA, Europe)">
+		<description>Chiki Chiki Boys (Japan, Korea) (Ja)</description>
+		<release name="Chiki Chiki Boys (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Chiki Chiki Boys (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Chiki Chiki Boys (Japan, Korea) (Ja).md" size="1048576" crc="06918c17" md5="e91cc2771c7801e8669117a0c2e06e40" sha1="77191eaee3775a425147ae7140ddf6ed3b6b41d2" status="verified"/>
 	</game>
 	<game name="Chou Kyuukai Miracle Nine (Japan)">
 		<description>Chou Kyuukai Miracle Nine (Japan)</description>
@@ -2203,11 +2202,11 @@
 		<release name="Columns III (USA)" region="USA"/>
 		<rom name="Columns III (USA).md" size="524288" crc="dc678f6d" md5="441b7e9c9811e22458660eb73975569c" sha1="8e52a5d0adbff3b2a15f32e9299b4ffdf35f5541" status="verified"/>
 	</game>
-	<game name="Columns III - Taiketsu! Columns World (Japan, Korea)" cloneof="Columns III (USA)">
-		<description>Columns III - Taiketsu! Columns World (Japan, Korea)</description>
-		<release name="Columns III - Taiketsu! Columns World (Japan, Korea)" region="JPN"/>
-		<release name="Columns III - Taiketsu! Columns World (Japan, Korea)" region="KOR"/>
-		<rom name="Columns III - Taiketsu! Columns World (Japan, Korea).md" size="524288" crc="cd07462f" md5="eeb557cd38ad00d6b4df48585098269a" sha1="2e850c2b737098b9926ac0fc9b8b2116fc5aa48a" status="verified"/>
+	<game name="Columns III - Taiketsu! Columns World (Japan, Korea) (Ja)" cloneof="Columns III (USA)">
+		<description>Columns III - Taiketsu! Columns World (Japan, Korea) (Ja)</description>
+		<release name="Columns III - Taiketsu! Columns World (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Columns III - Taiketsu! Columns World (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Columns III - Taiketsu! Columns World (Japan, Korea) (Ja).md" size="524288" crc="cd07462f" md5="eeb557cd38ad00d6b4df48585098269a" sha1="2e850c2b737098b9926ac0fc9b8b2116fc5aa48a" status="verified"/>
 	</game>
 	<game name="Combat Aces (USA) (Proto) (Unl)">
 		<description>Combat Aces (USA) (Proto) (Unl)</description>
@@ -2233,13 +2232,13 @@
 		<description>Comix Zone (USA) (Beta) (1995-06-03)</description>
 		<rom name="Comix Zone (USA) (Beta) (1995-06-03).md" size="2097152" crc="aff32614" md5="1e042423d5c4de6305f5fe8db8bc9e73" sha1="9cfead71b55cfa48fa6fb66d2d7c6294776fe4ed"/>
 	</game>
-	<game name="Comix Zone (USA) (Beta) (1995-06-01) (Alt3)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
-		<description>Comix Zone (USA) (Beta) (1995-06-01) (Alt3)</description>
-		<rom name="Comix Zone (USA) (Beta) (1995-06-01) (Alt3).md" size="2097152" crc="9ae93c9d" md5="2de83c5f995d0ae8f02f164872e3bacb" sha1="3599c2d52a1edc9876befb2a754be3506959a12b"/>
+	<game name="Comix Zone (USA) (Beta) (1995-06-01) (Alt 3)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
+		<description>Comix Zone (USA) (Beta) (1995-06-01) (Alt 3)</description>
+		<rom name="Comix Zone (USA) (Beta) (1995-06-01) (Alt 3).md" size="2097152" crc="9ae93c9d" md5="2de83c5f995d0ae8f02f164872e3bacb" sha1="3599c2d52a1edc9876befb2a754be3506959a12b"/>
 	</game>
-	<game name="Comix Zone (USA) (Beta) (1995-06-01) (Alt2)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
-		<description>Comix Zone (USA) (Beta) (1995-06-01) (Alt2)</description>
-		<rom name="Comix Zone (USA) (Beta) (1995-06-01) (Alt2).md" size="2097152" crc="413b9a94" md5="e0e12c8fc66e81cbfccfd2e0513026c6" sha1="aae5dd875e36b9416c8169bdf5dd51e4612e98db"/>
+	<game name="Comix Zone (USA) (Beta) (1995-06-01) (Alt 2)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
+		<description>Comix Zone (USA) (Beta) (1995-06-01) (Alt 2)</description>
+		<rom name="Comix Zone (USA) (Beta) (1995-06-01) (Alt 2).md" size="2097152" crc="413b9a94" md5="e0e12c8fc66e81cbfccfd2e0513026c6" sha1="aae5dd875e36b9416c8169bdf5dd51e4612e98db"/>
 	</game>
 	<game name="Comix Zone (USA) (Beta) (1995-06-01) (Alt)" cloneof="Comix Zone (Europe) (En,Fr,De,Es)">
 		<description>Comix Zone (USA) (Beta) (1995-06-01) (Alt)</description>
@@ -2318,11 +2317,11 @@
 		<description>Cool Spot (USA) (Beta)</description>
 		<rom name="Cool Spot (USA) (Beta).md" size="1048576" crc="0ebaa4a8" md5="6b78857672b5cb69e04448adf2569e41" sha1="9b42bb33186ddc759a469ed3e0ee12e5dee0b809"/>
 	</game>
-	<game name="Cool Spot (Japan, Korea)" cloneof="Cool Spot (Europe)">
-		<description>Cool Spot (Japan, Korea)</description>
-		<release name="Cool Spot (Japan, Korea)" region="JPN"/>
-		<release name="Cool Spot (Japan, Korea)" region="KOR"/>
-		<rom name="Cool Spot (Japan, Korea).md" size="1048576" crc="e869efb1" md5="202349abae72c5328b46f75ab0e65d0a" sha1="e32826ca9ae5173d5ef9722b52bfcb4ad390a7bb" status="verified"/>
+	<game name="Cool Spot (Japan, Korea) (Ja)" cloneof="Cool Spot (Europe)">
+		<description>Cool Spot (Japan, Korea) (Ja)</description>
+		<release name="Cool Spot (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Cool Spot (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Cool Spot (Japan, Korea) (Ja).md" size="1048576" crc="e869efb1" md5="202349abae72c5328b46f75ab0e65d0a" sha1="e32826ca9ae5173d5ef9722b52bfcb4ad390a7bb" status="verified"/>
 	</game>
 	<game name="Corporation (Europe)">
 		<description>Corporation (Europe)</description>
@@ -2574,23 +2573,23 @@
 		<description>Daimakaimura (Japan)</description>
 		<rom name="Daimakaimura (Japan).md" size="655360" crc="5659f379" md5="203213c107fc17731dc7953343b5ffab" sha1="a08a5764dc8651d31ef72466028cfb87fb6dd166" status="verified"/>
 	</game>
-	<game name="Daimakaimura ~ Ghouls'n Ghosts (Japan, USA)" cloneof="Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A)">
-		<description>Daimakaimura ~ Ghouls'n Ghosts (Japan, USA)</description>
-		<rom name="Daimakaimura ~ Ghouls'n Ghosts (Japan, USA).md" size="655360" crc="d31bd910" md5="815aab1193bf534063e8f032ec76852a" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f" status="verified"/>
+	<game name="Daimakaimura ~ Ghouls'n Ghosts (Japan, USA) (En)" cloneof="Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A)">
+		<description>Daimakaimura ~ Ghouls'n Ghosts (Japan, USA) (En)</description>
+		<rom name="Daimakaimura ~ Ghouls'n Ghosts (Japan, USA) (En).md" size="655360" crc="d31bd910" md5="815aab1193bf534063e8f032ec76852a" sha1="3a3e9eb5caaf6cfb75e99ed2843d58b3dda7284f" status="verified"/>
 	</game>
 	<game name="Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A) (Sega Channel)" cloneof="Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A)">
 		<description>Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A) (Sega Channel)</description>
 		<rom name="Daimakaimura ~ Ghouls'n Ghosts (World) (Rev A) (Sega Channel).md" size="1048576" crc="4552a3de" md5="1b877b9ce4e46722e4a3a59719f579ba" sha1="622b1cafcd3919e8228b4431763adbe760d055a1"/>
 	</game>
-	<game name="Daisenpuu ~ Twin Hawk (Japan, Europe)">
-		<description>Daisenpuu ~ Twin Hawk (Japan, Europe)</description>
-		<release name="Daisenpuu ~ Twin Hawk (Japan, Europe)" region="EUR"/>
-		<release name="Daisenpuu ~ Twin Hawk (Japan, Europe)" region="JPN"/>
-		<rom name="Daisenpuu ~ Twin Hawk (Japan, Europe).md" size="524288" crc="a2ec8c67" md5="ebd5c5829e6992542770773e276ebac3" sha1="f884f2a41dd50f4c1a17c26da7f2d31093bb36b6" status="verified"/>
+	<game name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En)">
+		<description>Daisenpuu ~ Twin Hawk (Japan, Europe) (En)</description>
+		<release name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En)" region="EUR"/>
+		<release name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En).md" size="524288" crc="a2ec8c67" md5="ebd5c5829e6992542770773e276ebac3" sha1="f884f2a41dd50f4c1a17c26da7f2d31093bb36b6" status="verified"/>
 	</game>
-	<game name="Daisenpuu ~ Twin Hawk (Japan, Europe) (Beta) (1990-04-06)" cloneof="Daisenpuu ~ Twin Hawk (Japan, Europe)">
-		<description>Daisenpuu ~ Twin Hawk (Japan, Europe) (Beta) (1990-04-06)</description>
-		<rom name="Daisenpuu ~ Twin Hawk (Japan, Europe) (Beta) (1990-04-06).md" size="524288" crc="dde94356" md5="b69c08081e2744d043600d57ea773051" sha1="382122be778fb1b14c80499930b4ff9e36caddcc"/>
+	<game name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En) (Beta) (1990-04-06)" cloneof="Daisenpuu ~ Twin Hawk (Japan, Europe) (En)">
+		<description>Daisenpuu ~ Twin Hawk (Japan, Europe) (En) (Beta) (1990-04-06)</description>
+		<rom name="Daisenpuu ~ Twin Hawk (Japan, Europe) (En) (Beta) (1990-04-06).md" size="524288" crc="dde94356" md5="b69c08081e2744d043600d57ea773051" sha1="382122be778fb1b14c80499930b4ff9e36caddcc"/>
 	</game>
 	<game name="Dangerous Seed (Japan)">
 		<description>Dangerous Seed (Japan)</description>
@@ -2609,21 +2608,25 @@
 		<release name="Darius (World) (Genesis Mini, Mega Drive Mini)" region="USA"/>
 		<rom name="Darius (World) (Genesis Mini, Mega Drive Mini).md" size="4194304" crc="26ca4234" md5="05dac074b9f194d74c44848eb15ad53f" sha1="4841d8f05a73cb7c5f98b710f14ebd72be1a6504"/>
 	</game>
+	<game name="Darius - Extra Edition (World) (Aftermarket) (Unl)">
+		<description>Darius - Extra Edition (World) (Aftermarket) (Unl)</description>
+		<rom name="Darius - Extra Edition (World) (Aftermarket) (Unl).md" size="4194304" crc="f1e17a96" md5="ce9bbde3d0198cab89fee68c398ef7d2" sha1="16b7fe0a4618e922f7b80608bbae93a1addfdb95"/>
+	</game>
 	<game name="Dark Castle (USA, Europe)">
 		<description>Dark Castle (USA, Europe)</description>
 		<release name="Dark Castle (USA, Europe)" region="EUR"/>
 		<release name="Dark Castle (USA, Europe)" region="USA"/>
 		<rom name="Dark Castle (USA, Europe).md" size="524288" crc="0464aca4" md5="56965eb7dde9bc22d16ffa72331c0e09" sha1="23e1ad9822338362113e55087d60fb9a1674bf8a" status="verified"/>
 	</game>
-	<game name="Darwin 4081 (Japan, Korea)">
-		<description>Darwin 4081 (Japan, Korea)</description>
-		<release name="Darwin 4081 (Japan, Korea)" region="JPN"/>
-		<release name="Darwin 4081 (Japan, Korea)" region="KOR"/>
-		<rom name="Darwin 4081 (Japan, Korea).md" size="524288" crc="7a33b0cb" md5="70b6289a3857f411361ef8cfd4bba4bf" sha1="e9decc48451aba62d949a7710e466e1d041a2210" status="verified"/>
+	<game name="Darwin 4081 (Japan, Korea) (En)">
+		<description>Darwin 4081 (Japan, Korea) (En)</description>
+		<release name="Darwin 4081 (Japan, Korea) (En)" region="JPN"/>
+		<release name="Darwin 4081 (Japan, Korea) (En)" region="KOR"/>
+		<rom name="Darwin 4081 (Japan, Korea) (En).md" size="524288" crc="7a33b0cb" md5="70b6289a3857f411361ef8cfd4bba4bf" sha1="e9decc48451aba62d949a7710e466e1d041a2210" status="verified"/>
 	</game>
-	<game name="Darwin 4081 (Japan, Korea) (Beta) (1990-02-21)" cloneof="Darwin 4081 (Japan, Korea)">
-		<description>Darwin 4081 (Japan, Korea) (Beta) (1990-02-21)</description>
-		<rom name="Darwin 4081 (Japan, Korea) (Beta) (1990-02-21).md" size="524288" crc="db68d1ac" md5="30b8d95e8d11baa846b97442d3f755dd" sha1="a4e5d757fb734ab3b8ece62340d7687d92efa0e4"/>
+	<game name="Darwin 4081 (Japan, Korea) (En) (Beta) (1990-02-21)" cloneof="Darwin 4081 (Japan, Korea) (En)">
+		<description>Darwin 4081 (Japan, Korea) (En) (Beta) (1990-02-21)</description>
+		<rom name="Darwin 4081 (Japan, Korea) (En) (Beta) (1990-02-21).md" size="524288" crc="db68d1ac" md5="30b8d95e8d11baa846b97442d3f755dd" sha1="a4e5d757fb734ab3b8ece62340d7687d92efa0e4"/>
 	</game>
 	<game name="Dashin' Desperadoes (USA)">
 		<description>Dashin' Desperadoes (USA)</description>
@@ -2698,11 +2701,11 @@
 		<release name="Deadly Moves (USA)" region="USA"/>
 		<rom name="Deadly Moves (USA).md" size="1048576" crc="35cbd237" md5="208652cf1e1f77405cf3e854f009d2b8" sha1="8733d179292d4dc5c3513459539d96484b6d018f"/>
 	</game>
-	<game name="Power Athlete (Japan, Korea)" cloneof="Deadly Moves (USA)">
-		<description>Power Athlete (Japan, Korea)</description>
-		<release name="Power Athlete (Japan, Korea)" region="JPN"/>
-		<release name="Power Athlete (Japan, Korea)" region="KOR"/>
-		<rom name="Power Athlete (Japan, Korea).md" size="1048576" crc="b41b77cf" md5="2391922125eed997b77a015135454ebb" sha1="d371e339c5d85b69c34007dc514c1adb524dac2a" status="verified"/>
+	<game name="Power Athlete (Japan, Korea) (Ja)" cloneof="Deadly Moves (USA)">
+		<description>Power Athlete (Japan, Korea) (Ja)</description>
+		<release name="Power Athlete (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Power Athlete (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Power Athlete (Japan, Korea) (Ja).md" size="1048576" crc="b41b77cf" md5="2391922125eed997b77a015135454ebb" sha1="d371e339c5d85b69c34007dc514c1adb524dac2a" status="verified"/>
 	</game>
 	<game name="Death and Return of Superman, The (Europe)">
 		<description>Death and Return of Superman, The (Europe)</description>
@@ -2723,12 +2726,12 @@
 		<description>Death Duel (USA) (Beta) (1992-05-06)</description>
 		<rom name="Death Duel (USA) (Beta) (1992-05-06).md" size="1048576" crc="2f979365" md5="d74e4a4218a5357808a43d94ba495c63" sha1="21f8ec496fca1fb09d0671a301e80e86c32b74dd"/>
 	</game>
-	<game name="DEcapAttack (USA, Europe, Korea)">
-		<description>DEcapAttack (USA, Europe, Korea)</description>
-		<release name="DEcapAttack (USA, Europe, Korea)" region="EUR"/>
-		<release name="DEcapAttack (USA, Europe, Korea)" region="KOR"/>
-		<release name="DEcapAttack (USA, Europe, Korea)" region="USA"/>
-		<rom name="DEcapAttack (USA, Europe, Korea).md" size="524288" crc="73dc0dd8" md5="283c180cede3352dabec75fff677052e" sha1="9665f54a6149d71ea72db9c168755e62cb61649c" status="verified"/>
+	<game name="DEcapAttack (USA, Europe, Korea) (En)">
+		<description>DEcapAttack (USA, Europe, Korea) (En)</description>
+		<release name="DEcapAttack (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="DEcapAttack (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="DEcapAttack (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="DEcapAttack (USA, Europe, Korea) (En).md" size="524288" crc="73dc0dd8" md5="283c180cede3352dabec75fff677052e" sha1="9665f54a6149d71ea72db9c168755e62cb61649c" status="verified"/>
 	</game>
 	<game name="Demolition Man (USA, Europe)">
 		<description>Demolition Man (USA, Europe)</description>
@@ -2811,22 +2814,22 @@
 		<release name="Desert Strike - Return to the Gulf (USA, Europe)" region="USA"/>
 		<rom name="Desert Strike - Return to the Gulf (USA, Europe).md" size="1048576" crc="67a9860b" md5="6f37f036c8de2bf78d11079cd2424370" sha1="d7e7d8c358eb845b84fb08f904cc0b95d0a4053d" status="verified"/>
 	</game>
-	<game name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea)" cloneof="Desert Strike - Return to the Gulf (USA, Europe)">
-		<description>Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea)</description>
-		<release name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea)" region="JPN"/>
-		<release name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea)" region="KOR"/>
-		<rom name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea).md" size="1048576" crc="1e740145" md5="414a548a2ab68a8e4840359c08b24ab9" sha1="9e01c6c45670e2950242facfba6c5b79052550ed" status="verified"/>
+	<game name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea) (Ja)" cloneof="Desert Strike - Return to the Gulf (USA, Europe)">
+		<description>Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea) (Ja)</description>
+		<release name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Desert Strike - Wangan Sakusen ~ Desert Strike (Japan, Korea) (Ja).md" size="1048576" crc="1e740145" md5="414a548a2ab68a8e4840359c08b24ab9" sha1="9e01c6c45670e2950242facfba6c5b79052550ed" status="verified"/>
 	</game>
 	<game name="Devilish - The Next Possession (USA)">
 		<description>Devilish - The Next Possession (USA)</description>
 		<release name="Devilish - The Next Possession (USA)" region="USA"/>
 		<rom name="Devilish - The Next Possession (USA).md" size="524288" crc="d3f300ac" md5="6fa7cd092a175c9040b318d289ffff93" sha1="bc6f346a162cf91a788a88e44daa246d3d31ee8b" status="verified"/>
 	</game>
-	<game name="Bad Omen (Japan, Korea)" cloneof="Devilish - The Next Possession (USA)">
-		<description>Bad Omen (Japan, Korea)</description>
-		<release name="Bad Omen (Japan, Korea)" region="JPN"/>
-		<release name="Bad Omen (Japan, Korea)" region="KOR"/>
-		<rom name="Bad Omen (Japan, Korea).md" size="524288" crc="975693ce" md5="81b14012e083985135ca8f1420074d0e" sha1="5378af243fb6f592f1e1cd17e3722e2c5e807e72" status="verified"/>
+	<game name="Bad Omen (Japan, Korea) (Ja)" cloneof="Devilish - The Next Possession (USA)">
+		<description>Bad Omen (Japan, Korea) (Ja)</description>
+		<release name="Bad Omen (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Bad Omen (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Bad Omen (Japan, Korea) (Ja).md" size="524288" crc="975693ce" md5="81b14012e083985135ca8f1420074d0e" sha1="5378af243fb6f592f1e1cd17e3722e2c5e807e72" status="verified"/>
 	</game>
 	<game name="Devilish (USA) (Beta) (1992-01-16)" cloneof="Devilish - The Next Possession (USA)">
 		<description>Devilish (USA) (Beta) (1992-01-16)</description>
@@ -2934,10 +2937,10 @@
 		<release name="Donald in Maui Mallard (Europe) (Rev A)" region="EUR"/>
 		<rom name="Donald in Maui Mallard (Europe) (Rev A).md" size="4194304" crc="fa5a79f7" md5="989ae9c548dbf6ce7243fc27619b67cb" sha1="2886da07d36f770d0a8bf00ee840f0b1bbc9a766"/>
 	</game>
-	<game name="Donald in Maui Mallard (Brazil)" cloneof="Donald in Maui Mallard (Europe) (Rev A)">
-		<description>Donald in Maui Mallard (Brazil)</description>
-		<release name="Donald in Maui Mallard (Brazil)" region="BRA"/>
-		<rom name="Donald in Maui Mallard (Brazil).md" size="4194304" crc="77772691" md5="f8e870b82457981b9a659792717be43f" sha1="4296e64e7f1c8f9eea7e32acfcb296e8676f6c40"/>
+	<game name="Donald in Maui Mallard (Brazil) (En)" cloneof="Donald in Maui Mallard (Europe) (Rev A)">
+		<description>Donald in Maui Mallard (Brazil) (En)</description>
+		<release name="Donald in Maui Mallard (Brazil) (En)" region="BRA"/>
+		<rom name="Donald in Maui Mallard (Brazil) (En).md" size="4194304" crc="77772691" md5="f8e870b82457981b9a659792717be43f" sha1="4296e64e7f1c8f9eea7e32acfcb296e8676f6c40"/>
 	</game>
 	<game name="Doom Troopers (USA)">
 		<description>Doom Troopers (USA)</description>
@@ -3079,10 +3082,14 @@
 		<release name="Du Shen Zhi Meng Huan Poker (Taiwan) (Unl)" region="TAI"/>
 		<rom name="Du Shen Zhi Meng Huan Poker (Taiwan) (Unl).md" size="1048576" crc="1d81a67c" md5="2adca8888f29ecff85f8924386750b20" sha1="03f48da0541dac5a11788460c427d5fdb34bbd1b"/>
 	</game>
-	<game name="Duke Nukem 3D (Brazil)">
-		<description>Duke Nukem 3D (Brazil)</description>
-		<release name="Duke Nukem 3D (Brazil)" region="BRA"/>
-		<rom name="Duke Nukem 3D (Brazil).md" size="4194304" crc="6bd2accb" md5="5093ad6641abb0c3757d24da094a51e6" sha1="a4663f2b96787a92db604a92491fa27e2b5ced9e"/>
+	<game name="Duke Nukem 3D (Brazil) (En)">
+		<description>Duke Nukem 3D (Brazil) (En)</description>
+		<release name="Duke Nukem 3D (Brazil) (En)" region="BRA"/>
+		<rom name="Duke Nukem 3D (Brazil) (En).md" size="4194304" crc="6bd2accb" md5="5093ad6641abb0c3757d24da094a51e6" sha1="a4663f2b96787a92db604a92491fa27e2b5ced9e"/>
+	</game>
+	<game name="Duke Nukem 3D - Directors Cut (World) (Aftermarket) (Unl)" cloneof="Duke Nukem 3D (Brazil) (En)">
+		<description>Duke Nukem 3D - Directors Cut (World) (Aftermarket) (Unl)</description>
+		<rom name="Duke Nukem 3D - Directors Cut (World) (Aftermarket) (Unl).md" size="4194304" crc="7a851b5a" md5="f275ad208fb1e9d0b21d1391fdfe4268" sha1="490aa19321718033a6fd2d4dc434e723f3d91d63"/>
 	</game>
 	<game name="Dune II - The Battle for Arrakis (Europe)">
 		<description>Dune II - The Battle for Arrakis (Europe)</description>
@@ -3093,6 +3100,10 @@
 		<description>Dune - The Battle for Arrakis (USA)</description>
 		<release name="Dune - The Battle for Arrakis (USA)" region="USA"/>
 		<rom name="Dune - The Battle for Arrakis (USA).md" size="1048576" crc="4dea40ba" md5="d4df66f77d52718798ec07d350d3a3cd" sha1="0f7c1c130cb39abc97f57545933e1ef6c481783d"/>
+	</game>
+	<game name="Dune - The Battle for Arrakis (Unknown) (Beta)" cloneof="Dune II - The Battle for Arrakis (Europe)">
+		<description>Dune - The Battle for Arrakis (Unknown) (Beta)</description>
+		<rom name="Dune - The Battle for Arrakis (Unknown) (Beta).md" size="1048576" crc="692cd794" md5="ef5a717e4d09a629fed72898faafbab2" sha1="2eea4201195994d84f57f7b9003d825a2f96d0b3"/>
 	</game>
 	<game name="Dune II - Kampf um den Wuestenplaneten (Germany)" cloneof="Dune II - The Battle for Arrakis (Europe)">
 		<description>Dune II - Kampf um den Wuestenplaneten (Germany)</description>
@@ -3198,11 +3209,11 @@
 		<description>Earnest Evans (USA) (Beta)</description>
 		<rom name="Earnest Evans (USA) (Beta).md" size="1048576" crc="11475fac" md5="88e130fe3401078d64feb4199be44656" sha1="6ca1610f2898e5f45343314fbff4ce8df74248a0"/>
 	</game>
-	<game name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (Unl)">
-		<description>Earth Defense ~ Earth Defend, The (USA, Taiwan) (Unl)</description>
-		<release name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (Unl)" region="TAI"/>
-		<release name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (Unl)" region="USA"/>
-		<rom name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (Unl).md" size="524288" crc="3519c422" md5="48aa49720a75068b6e2a1b0f2c6e73b2" sha1="9bf4cda850495d7811df578592289018862df575"/>
+	<game name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (En) (Unl)">
+		<description>Earth Defense ~ Earth Defend, The (USA, Taiwan) (En) (Unl)</description>
+		<release name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (En) (Unl)" region="TAI"/>
+		<release name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (En) (Unl)" region="USA"/>
+		<rom name="Earth Defense ~ Earth Defend, The (USA, Taiwan) (En) (Unl).md" size="524288" crc="3519c422" md5="48aa49720a75068b6e2a1b0f2c6e73b2" sha1="9bf4cda850495d7811df578592289018862df575"/>
 	</game>
 	<game name="Earthworm Jim (Europe)">
 		<description>Earthworm Jim (Europe)</description>
@@ -3269,23 +3280,23 @@
 		<description>Ecco Jr. (USA, Australia) (Beta)</description>
 		<rom name="Ecco Jr. (USA, Australia) (Beta).md" size="1048576" crc="3c517975" md5="ca8c0a6917554496bf6a08d8f00fb317" sha1="636d2fb5f865f916e4a9fe0ff1819fcbc61b4258"/>
 	</game>
-	<game name="Ecco the Dolphin (USA, Europe, Korea)">
-		<description>Ecco the Dolphin (USA, Europe, Korea)</description>
-		<release name="Ecco the Dolphin (USA, Europe, Korea)" region="EUR"/>
-		<release name="Ecco the Dolphin (USA, Europe, Korea)" region="KOR"/>
-		<release name="Ecco the Dolphin (USA, Europe, Korea)" region="USA"/>
-		<rom name="Ecco the Dolphin (USA, Europe, Korea).md" size="1048576" crc="45547390" md5="18b49fe6ad55975b6021b40b193035f5" sha1="2cad130f3118c189d39fd1d46c5c31a5060ce894" status="verified"/>
+	<game name="Ecco the Dolphin (USA, Europe, Korea) (En)">
+		<description>Ecco the Dolphin (USA, Europe, Korea) (En)</description>
+		<release name="Ecco the Dolphin (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="Ecco the Dolphin (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="Ecco the Dolphin (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="Ecco the Dolphin (USA, Europe, Korea) (En).md" size="1048576" crc="45547390" md5="18b49fe6ad55975b6021b40b193035f5" sha1="2cad130f3118c189d39fd1d46c5c31a5060ce894" status="verified"/>
 	</game>
-	<game name="Ecco the Dolphin (Japan)" cloneof="Ecco the Dolphin (USA, Europe, Korea)">
+	<game name="Ecco the Dolphin (Japan)" cloneof="Ecco the Dolphin (USA, Europe, Korea) (En)">
 		<description>Ecco the Dolphin (Japan)</description>
 		<release name="Ecco the Dolphin (Japan)" region="JPN"/>
 		<rom name="Ecco the Dolphin (Japan).md" size="1048576" crc="6520304d" md5="fdfc181b6f949788f336662dbabf5929" sha1="1440fb5821ebb08048f73a0a71ac22e0cdbcf394" status="verified"/>
 	</game>
-	<game name="Ecco the Dolphin (USA, Europe, Korea) (Rev A) (Beta) (1993-06-29)" cloneof="Ecco the Dolphin (USA, Europe, Korea)">
-		<description>Ecco the Dolphin (USA, Europe, Korea) (Rev A) (Beta) (1993-06-29)</description>
-		<rom name="Ecco the Dolphin (USA, Europe, Korea) (Rev A) (Beta) (1993-06-29).md" size="1048576" crc="6fb62649" md5="b951ed4208a1fd0a0798acb7ef066030" sha1="f6b71b40e185828acf970095bb213ec5ff3cc927"/>
+	<game name="Ecco the Dolphin (USA, Europe, Korea) (En) (Rev A) (Beta) (1993-06-29)" cloneof="Ecco the Dolphin (USA, Europe, Korea) (En)">
+		<description>Ecco the Dolphin (USA, Europe, Korea) (En) (Rev A) (Beta) (1993-06-29)</description>
+		<rom name="Ecco the Dolphin (USA, Europe, Korea) (En) (Rev A) (Beta) (1993-06-29).md" size="1048576" crc="6fb62649" md5="b951ed4208a1fd0a0798acb7ef066030" sha1="f6b71b40e185828acf970095bb213ec5ff3cc927"/>
 	</game>
-	<game name="Ecco the Dolphin (Japan) (Beta) (1993-04-21)" cloneof="Ecco the Dolphin (USA, Europe, Korea)">
+	<game name="Ecco the Dolphin (Japan) (Beta) (1993-04-21)" cloneof="Ecco the Dolphin (USA, Europe, Korea) (En)">
 		<description>Ecco the Dolphin (Japan) (Beta) (1993-04-21)</description>
 		<rom name="Ecco the Dolphin (Japan) (Beta) (1993-04-21).md" size="1048576" crc="17e24509" md5="fc7352e3ac3c38a851f2d9c1d550be07" sha1="2c24350bc21ffa0e6110ab87d475977b69d6c089"/>
 	</game>
@@ -3418,20 +3429,20 @@
 		<description>Eternal Champions (Europe) (Beta)</description>
 		<rom name="Eternal Champions (Europe) (Beta).md" size="3145728" crc="e0665f06" md5="1f6621e0892cbd3705e8d2157013b69b" sha1="c06f2d9ff29b6e6ec2dbec06eab2eac21e80e423"/>
 	</game>
-	<game name="Eternal Champions (Japan, Korea)" cloneof="Eternal Champions (Europe)">
-		<description>Eternal Champions (Japan, Korea)</description>
-		<release name="Eternal Champions (Japan, Korea)" region="JPN"/>
-		<release name="Eternal Champions (Japan, Korea)" region="KOR"/>
-		<rom name="Eternal Champions (Japan, Korea).md" size="3145728" crc="66aa3c64" md5="9f72a583823d839d6e2d68a8d418fc5f" sha1="1b115e64e138ca045acfe64e2337fc68172be576" status="verified"/>
+	<game name="Eternal Champions (Japan, Korea) (Ja)" cloneof="Eternal Champions (Europe)">
+		<description>Eternal Champions (Japan, Korea) (Ja)</description>
+		<release name="Eternal Champions (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Eternal Champions (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Eternal Champions (Japan, Korea) (Ja).md" size="3145728" crc="66aa3c64" md5="9f72a583823d839d6e2d68a8d418fc5f" sha1="1b115e64e138ca045acfe64e2337fc68172be576" status="verified"/>
 	</game>
 	<game name="Eternal Champions (USA)" cloneof="Eternal Champions (Europe)">
 		<description>Eternal Champions (USA)</description>
 		<release name="Eternal Champions (USA)" region="USA"/>
 		<rom name="Eternal Champions (USA).md" size="3145728" crc="48f1a42e" md5="bde8b2396241aa27463ca875e604b8d3" sha1="5e978217c10b679a42d7d2966a4ccb77e1715962" status="verified"/>
 	</game>
-	<game name="Eternal Champions (Japan, Korea) (Beta) (1993-11-17)" cloneof="Eternal Champions (Europe)">
-		<description>Eternal Champions (Japan, Korea) (Beta) (1993-11-17)</description>
-		<rom name="Eternal Champions (Japan, Korea) (Beta) (1993-11-17).md" size="3142832" crc="c486b439" md5="b61eab3ef7055625e5dcbc1ecb12b8b3" sha1="ba82947bef2c42021cc35512c21d91430c6fc55c"/>
+	<game name="Eternal Champions (Japan, Korea) (Ja) (Beta) (1993-11-17)" cloneof="Eternal Champions (Europe)">
+		<description>Eternal Champions (Japan, Korea) (Ja) (Beta) (1993-11-17)</description>
+		<rom name="Eternal Champions (Japan, Korea) (Ja) (Beta) (1993-11-17).md" size="3142832" crc="c486b439" md5="b61eab3ef7055625e5dcbc1ecb12b8b3" sha1="ba82947bef2c42021cc35512c21d91430c6fc55c"/>
 	</game>
 	<game name="European Club Soccer (Europe)">
 		<description>European Club Soccer (Europe)</description>
@@ -3495,6 +3506,10 @@
 	<game name="Eyra - The Crow Maiden (World) (Demo) (Aftermarket) (Unl)">
 		<description>Eyra - The Crow Maiden (World) (Demo) (Aftermarket) (Unl)</description>
 		<rom name="Eyra - The Crow Maiden (World) (Demo) (Aftermarket) (Unl).md" size="1091840" crc="e7891db4" md5="06a5a716957eecce76e0d627c6071dd2" sha1="f5ab7588e88663c2649231a2b472dbd1f624f5f2"/>
+	</game>
+	<game name="Eyra - The Crow Maiden (World) (Aftermarket) (Unl)">
+		<description>Eyra - The Crow Maiden (World) (Aftermarket) (Unl)</description>
+		<rom name="Eyra - The Crow Maiden (World) (Aftermarket) (Unl).md" size="2083840" crc="d48289e3" md5="b164442a71afa3abc32f0f611f0c863c" sha1="22301d6366eac1b89234e59605d40d5e9e6559b5"/>
 	</game>
 	<game name="F-117 Night Storm (USA, Europe)">
 		<description>F-117 Night Storm (USA, Europe)</description>
@@ -3628,29 +3643,29 @@
 		<release name="Fastest 1 (Japan)" region="JPN"/>
 		<rom name="Fastest 1 (Japan).md" size="524288" crc="bb43f0de" md5="691ce650c029476956b413481a584ff1" sha1="837a19b4b821076f1cd01d53d90b4553a0252340" status="verified"/>
 	</game>
-	<game name="Fatal Fury (Europe, Korea)">
-		<description>Fatal Fury (Europe, Korea)</description>
-		<release name="Fatal Fury (Europe, Korea)" region="EUR"/>
-		<release name="Fatal Fury (Europe, Korea)" region="KOR"/>
-		<rom name="Fatal Fury (Europe, Korea).md" size="2097152" crc="71aa889e" md5="e0d332e04a19012c50194ebff346c51e" sha1="cf99b7044e3fdf5c2ec76a69c2b7f3b54fa1b2cc" status="verified"/>
+	<game name="Fatal Fury (Europe, Korea) (En)">
+		<description>Fatal Fury (Europe, Korea) (En)</description>
+		<release name="Fatal Fury (Europe, Korea) (En)" region="EUR"/>
+		<release name="Fatal Fury (Europe, Korea) (En)" region="KOR"/>
+		<rom name="Fatal Fury (Europe, Korea) (En).md" size="2097152" crc="71aa889e" md5="e0d332e04a19012c50194ebff346c51e" sha1="cf99b7044e3fdf5c2ec76a69c2b7f3b54fa1b2cc" status="verified"/>
 	</game>
-	<game name="Fatal Fury (USA)" cloneof="Fatal Fury (Europe, Korea)">
+	<game name="Fatal Fury (USA)" cloneof="Fatal Fury (Europe, Korea) (En)">
 		<description>Fatal Fury (USA)</description>
 		<release name="Fatal Fury (USA)" region="USA"/>
 		<rom name="Fatal Fury (USA).md" size="1572864" crc="98d49170" md5="57f13963c9cfdade16cf8207f8889ee5" sha1="48b6277fc73368d8e96ba407a66f908c3bd87c39" status="verified"/>
 	</game>
-	<game name="Garou Densetsu - Shukumei no Tatakai (Japan)" cloneof="Fatal Fury (Europe, Korea)">
+	<game name="Garou Densetsu - Shukumei no Tatakai (Japan)" cloneof="Fatal Fury (Europe, Korea) (En)">
 		<description>Garou Densetsu - Shukumei no Tatakai (Japan)</description>
 		<release name="Garou Densetsu - Shukumei no Tatakai (Japan)" region="JPN"/>
 		<rom name="Garou Densetsu - Shukumei no Tatakai (Japan).md" size="1572864" crc="bf3e3fa4" md5="204ae6f8f97293e877ffb51c0904dd7c" sha1="b9eb37dbc77d0c6919ad78e587fa4c3403e9e9af" status="verified"/>
 	</game>
-	<game name="Fatal Fury 2 (USA, Korea)">
-		<description>Fatal Fury 2 (USA, Korea)</description>
-		<release name="Fatal Fury 2 (USA, Korea)" region="KOR"/>
-		<release name="Fatal Fury 2 (USA, Korea)" region="USA"/>
-		<rom name="Fatal Fury 2 (USA, Korea).md" size="3145728" crc="1b1754cb" md5="e5a4bbe296224c2d6e71079807dfd183" sha1="52a269de38ed43ea5c6623906af6b64f01696ffb"/>
+	<game name="Fatal Fury 2 (USA, Korea) (En)">
+		<description>Fatal Fury 2 (USA, Korea) (En)</description>
+		<release name="Fatal Fury 2 (USA, Korea) (En)" region="KOR"/>
+		<release name="Fatal Fury 2 (USA, Korea) (En)" region="USA"/>
+		<rom name="Fatal Fury 2 (USA, Korea) (En).md" size="3145728" crc="1b1754cb" md5="e5a4bbe296224c2d6e71079807dfd183" sha1="52a269de38ed43ea5c6623906af6b64f01696ffb"/>
 	</game>
-	<game name="Garou Densetsu 2 - Aratanaru Tatakai (Japan)" cloneof="Fatal Fury 2 (USA, Korea)">
+	<game name="Garou Densetsu 2 - Aratanaru Tatakai (Japan)" cloneof="Fatal Fury 2 (USA, Korea) (En)">
 		<description>Garou Densetsu 2 - Aratanaru Tatakai (Japan)</description>
 		<release name="Garou Densetsu 2 - Aratanaru Tatakai (Japan)" region="JPN"/>
 		<rom name="Garou Densetsu 2 - Aratanaru Tatakai (Japan).md" size="3145728" crc="2af4427f" md5="700616115a3709ac4c9868eb2179d52a" sha1="08eadaf6177d884b8e1fb66c5949850f10c5d77c" status="verified"/>
@@ -3749,9 +3764,9 @@
 		<release name="FIFA Soccer 95 (USA, Europe) (En,Fr,De,Es)" region="USA"/>
 		<rom name="FIFA Soccer 95 (USA, Europe) (En,Fr,De,Es).md" size="2097152" crc="b389d036" md5="26ac4f884df64349dcf46344db85812b" sha1="586f9d0f218cf6bb3388a8610b44b6ebb9538fb5" status="verified"/>
 	</game>
-	<game name="FIFA 2003 (Unknown) (Unl) (Pirate)" cloneof="FIFA Soccer 95 (USA, Europe) (En,Fr,De,Es)">
-		<description>FIFA 2003 (Unknown) (Unl) (Pirate)</description>
-		<rom name="FIFA 2003 (Unknown) (Unl) (Pirate).md" size="2097152" crc="419bcb02" md5="a4f7b31be452ba9e1fa6bd09ce6eeed3" sha1="8dc04a0f137323ec95d6c7dfa9cb03fa572bdc51"/>
+	<game name="FIFA 2003 (Unknown) (Es) (Unl) (Pirate)" cloneof="FIFA Soccer 95 (USA, Europe) (En,Fr,De,Es)">
+		<description>FIFA 2003 (Unknown) (Es) (Unl) (Pirate)</description>
+		<rom name="FIFA 2003 (Unknown) (Es) (Unl) (Pirate).md" size="2097152" crc="419bcb02" md5="a4f7b31be452ba9e1fa6bd09ce6eeed3" sha1="8dc04a0f137323ec95d6c7dfa9cb03fa572bdc51"/>
 	</game>
 	<game name="FIFA Soccer 95 (Korea) (En,Fr,De,Es)" cloneof="FIFA Soccer 95 (USA, Europe) (En,Fr,De,Es)">
 		<description>FIFA Soccer 95 (Korea) (En,Fr,De,Es)</description>
@@ -3791,11 +3806,11 @@
 		<release name="Fighting Masters (USA)" region="USA"/>
 		<rom name="Fighting Masters (USA).md" size="524288" crc="5f51983b" md5="b6813ec7475012936d017c3c93412282" sha1="2a860f06473e436041c2017342deb9125c1c7af5" status="verified"/>
 	</game>
-	<game name="Fighting Masters (Japan, Korea)" cloneof="Fighting Masters (USA)">
-		<description>Fighting Masters (Japan, Korea)</description>
-		<release name="Fighting Masters (Japan, Korea)" region="JPN"/>
-		<release name="Fighting Masters (Japan, Korea)" region="KOR"/>
-		<rom name="Fighting Masters (Japan, Korea).md" size="524288" crc="39be80ec" md5="baf3777249a1bbb03efb3dd419e4d589" sha1="f944a8314d615ef58f0207e5760767fb417cbeb9" status="verified"/>
+	<game name="Fighting Masters (Japan, Korea) (Ja)" cloneof="Fighting Masters (USA)">
+		<description>Fighting Masters (Japan, Korea) (Ja)</description>
+		<release name="Fighting Masters (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Fighting Masters (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Fighting Masters (Japan, Korea) (Ja).md" size="524288" crc="39be80ec" md5="baf3777249a1bbb03efb3dd419e4d589" sha1="f944a8314d615ef58f0207e5760767fb417cbeb9" status="verified"/>
 	</game>
 	<game name="Fire Mustang (Japan)">
 		<description>Fire Mustang (Japan)</description>
@@ -3963,11 +3978,11 @@
 		<release name="FX Unit Yuki - The Henshin Engine (World) (Aftermarket) (Unl)" region="USA"/>
 		<rom name="FX Unit Yuki - The Henshin Engine (World) (Aftermarket) (Unl).md" size="6291456" crc="2906876b" md5="9c0a4c071a15fe7b273ae586b39ddfd4" sha1="3adca8c5a4758e2a670eebe93b80b5b0019e91ed"/>
 	</game>
-	<game name="FZ Senki Axis ~ Final Zone (Japan, USA)">
-		<description>FZ Senki Axis ~ Final Zone (Japan, USA)</description>
-		<release name="FZ Senki Axis ~ Final Zone (Japan, USA)" region="JPN"/>
-		<release name="FZ Senki Axis ~ Final Zone (Japan, USA)" region="USA"/>
-		<rom name="FZ Senki Axis ~ Final Zone (Japan, USA).md" size="524288" crc="731fa4a1" md5="0cbb16c044d7c8e7366d954b5e844d1a" sha1="e891e5c89fa13e3f9813d5a45feeed0cb7710acb"/>
+	<game name="FZ Senki Axis ~ Final Zone (Japan, USA) (En)">
+		<description>FZ Senki Axis ~ Final Zone (Japan, USA) (En)</description>
+		<release name="FZ Senki Axis ~ Final Zone (Japan, USA) (En)" region="JPN"/>
+		<release name="FZ Senki Axis ~ Final Zone (Japan, USA) (En)" region="USA"/>
+		<rom name="FZ Senki Axis ~ Final Zone (Japan, USA) (En).md" size="524288" crc="731fa4a1" md5="0cbb16c044d7c8e7366d954b5e844d1a" sha1="e891e5c89fa13e3f9813d5a45feeed0cb7710acb"/>
 	</game>
 	<game name="G-LOC - Air Battle (World)">
 		<description>G-LOC - Air Battle (World)</description>
@@ -3989,11 +4004,11 @@
 		<release name="Gadget Twins (USA)" region="USA"/>
 		<rom name="Gadget Twins (USA).md" size="1048576" crc="7ae5e248" md5="6d588eec80c083ee60d06e2bde3ed488" sha1="ce565d7df0abee02879b85866de0e1a609729ad8" status="verified"/>
 	</game>
-	<game name="Gaiares (Japan, USA)">
-		<description>Gaiares (Japan, USA)</description>
-		<release name="Gaiares (Japan, USA)" region="JPN"/>
-		<release name="Gaiares (Japan, USA)" region="USA"/>
-		<rom name="Gaiares (Japan, USA).md" size="1048576" crc="5d8bf68b" md5="47e140ae1e70984e6cd638e6e8f8485f" sha1="f62e8be872dc116c4cc331c50ae63a63f013eb58" status="verified"/>
+	<game name="Gaiares (Japan, USA) (En)">
+		<description>Gaiares (Japan, USA) (En)</description>
+		<release name="Gaiares (Japan, USA) (En)" region="JPN"/>
+		<release name="Gaiares (Japan, USA) (En)" region="USA"/>
+		<rom name="Gaiares (Japan, USA) (En).md" size="1048576" crc="5d8bf68b" md5="47e140ae1e70984e6cd638e6e8f8485f" sha1="f62e8be872dc116c4cc331c50ae63a63f013eb58" status="verified"/>
 	</game>
 	<game name="Gain Ground (Europe)">
 		<description>Gain Ground (Europe)</description>
@@ -4170,6 +4185,11 @@
 		<description>Ghostbusters (USA, Europe) (Beta) (1990-05-01)</description>
 		<rom name="Ghostbusters (USA, Europe) (Beta) (1990-05-01).md" size="524288" crc="4fc33173" md5="82a7ff0c2308b00e1919fb959a3e4b58" sha1="fab458d2f0b88ca4cd77ca1968228d632419b9d5"/>
 	</game>
+	<game name="Gleylancer (Japan)">
+		<description>Gleylancer (Japan)</description>
+		<release name="Gleylancer (Japan)" region="JPN"/>
+		<rom name="Gleylancer (Japan).md" size="1048576" crc="42cf9b5b" md5="8bd4a97783cda077c342173df0a9b51e" sha1="529d88f96eb7082bfbc00be3f42a1b2e365c34b7"/>
+	</game>
 	<game name="Global Gladiators (Europe)">
 		<description>Global Gladiators (Europe)</description>
 		<release name="Global Gladiators (Europe)" region="EUR"/>
@@ -4265,19 +4285,19 @@
 		<release name="Gouketsuji Ichizoku (Japan)" region="JPN"/>
 		<rom name="Gouketsuji Ichizoku (Japan).md" size="3145728" crc="abe9c415" md5="18ff626a183c188f789d71f17dd739d5" sha1="db6b2046e8b6373f141e8c5db68450f2db377dd8" status="verified"/>
 	</game>
-	<game name="Granada (Japan, USA) (Rev A)">
-		<description>Granada (Japan, USA) (Rev A)</description>
-		<release name="Granada (Japan, USA) (Rev A)" region="JPN"/>
-		<release name="Granada (Japan, USA) (Rev A)" region="USA"/>
-		<rom name="Granada (Japan, USA) (Rev A).md" size="524288" crc="e89d1e66" md5="93a809c145d5dacc8d8e33a27fdcfb9a" sha1="4eb8bbdb9ee8adcefaa202281cb88c19970437f7" status="verified"/>
+	<game name="Granada (Japan, USA) (En) (Rev A)">
+		<description>Granada (Japan, USA) (En) (Rev A)</description>
+		<release name="Granada (Japan, USA) (En) (Rev A)" region="JPN"/>
+		<release name="Granada (Japan, USA) (En) (Rev A)" region="USA"/>
+		<rom name="Granada (Japan, USA) (En) (Rev A).md" size="524288" crc="e89d1e66" md5="93a809c145d5dacc8d8e33a27fdcfb9a" sha1="4eb8bbdb9ee8adcefaa202281cb88c19970437f7" status="verified"/>
 	</game>
-	<game name="Granada (Japan, USA)" cloneof="Granada (Japan, USA) (Rev A)">
-		<description>Granada (Japan, USA)</description>
-		<rom name="Granada (Japan, USA).md" size="524288" crc="7f45719b" md5="9e215cea722159b321a2eac544573f0d" sha1="6830d6ca1d7e2b220eb4431b42d33382e16e2791" status="verified"/>
+	<game name="Granada (Japan, USA) (En)" cloneof="Granada (Japan, USA) (En) (Rev A)">
+		<description>Granada (Japan, USA) (En)</description>
+		<rom name="Granada (Japan, USA) (En).md" size="524288" crc="7f45719b" md5="9e215cea722159b321a2eac544573f0d" sha1="6830d6ca1d7e2b220eb4431b42d33382e16e2791" status="verified"/>
 	</game>
-	<game name="Granada (Japan, USA) (Rev A) (Beta)" cloneof="Granada (Japan, USA) (Rev A)">
-		<description>Granada (Japan, USA) (Rev A) (Beta)</description>
-		<rom name="Granada (Japan, USA) (Rev A) (Beta).md" size="524288" crc="129a37dd" md5="76d4181f42a549c23ac854050d50c2cf" sha1="ae23265cdc4907bae676101d3086929425ef641a"/>
+	<game name="Granada (Japan, USA) (En) (Rev A) (Beta)" cloneof="Granada (Japan, USA) (En) (Rev A)">
+		<description>Granada (Japan, USA) (En) (Rev A) (Beta)</description>
+		<rom name="Granada (Japan, USA) (En) (Rev A) (Beta).md" size="524288" crc="129a37dd" md5="76d4181f42a549c23ac854050d50c2cf" sha1="ae23265cdc4907bae676101d3086929425ef641a"/>
 	</game>
 	<game name="GrandSlam - The Tennis Tournament (Europe)">
 		<description>GrandSlam - The Tennis Tournament (Europe)</description>
@@ -4349,11 +4369,11 @@
 		<description>Growl (USA) (Beta) (1991-08-26)</description>
 		<rom name="Growl (USA) (Beta) (1991-08-26).md" size="524288" crc="aa973de7" md5="0f6115db9cee69227fb9b14799d444fb" sha1="554885a8ec5fcd238cd6fce667f2c082ab138786"/>
 	</game>
-	<game name="Runark (Japan, Korea)" cloneof="Growl (USA)">
-		<description>Runark (Japan, Korea)</description>
-		<release name="Runark (Japan, Korea)" region="JPN"/>
-		<release name="Runark (Japan, Korea)" region="KOR"/>
-		<rom name="Runark (Japan, Korea).md" size="524288" crc="0894d8fb" md5="5a41a9e23515f2a6097fcb279e345ba8" sha1="25a0322db3b82e3da6f1dab550b3e52f21be6b58" status="verified"/>
+	<game name="Runark (Japan, Korea) (En)" cloneof="Growl (USA)">
+		<description>Runark (Japan, Korea) (En)</description>
+		<release name="Runark (Japan, Korea) (En)" region="JPN"/>
+		<release name="Runark (Japan, Korea) (En)" region="KOR"/>
+		<rom name="Runark (Japan, Korea) (En).md" size="524288" crc="0894d8fb" md5="5a41a9e23515f2a6097fcb279e345ba8" sha1="25a0322db3b82e3da6f1dab550b3e52f21be6b58" status="verified"/>
 	</game>
 	<game name="Gunfight 3 in 1 (Taiwan) (En) (Unl)">
 		<description>Gunfight 3 in 1 (Taiwan) (En) (Unl)</description>
@@ -4649,11 +4669,11 @@
 		<release name="Insector X (USA)" region="USA"/>
 		<rom name="Insector X (USA).md" size="524288" crc="70626304" md5="77574085187602bf50dd1167da389f60" sha1="4f4ecff167d5ada699b0b1d4b0e547b5ed9964d5" status="verified"/>
 	</game>
-	<game name="Insector X (Japan, Korea)" cloneof="Insector X (USA)">
-		<description>Insector X (Japan, Korea)</description>
-		<release name="Insector X (Japan, Korea)" region="JPN"/>
-		<release name="Insector X (Japan, Korea)" region="KOR"/>
-		<rom name="Insector X (Japan, Korea).md" size="524288" crc="9625c434" md5="ae4322417c5827364837d04a2952facb" sha1="204351b97aff579853cdba646b427ea299b1eddf" status="verified"/>
+	<game name="Insector X (Japan, Korea) (Ja)" cloneof="Insector X (USA)">
+		<description>Insector X (Japan, Korea) (Ja)</description>
+		<release name="Insector X (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Insector X (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Insector X (Japan, Korea) (Ja).md" size="524288" crc="9625c434" md5="ae4322417c5827364837d04a2952facb" sha1="204351b97aff579853cdba646b427ea299b1eddf" status="verified"/>
 	</game>
 	<game name="Instruments of Chaos Starring Young Indiana Jones (USA)">
 		<description>Instruments of Chaos Starring Young Indiana Jones (USA)</description>
@@ -4710,19 +4730,19 @@
 		<release name="International Sensible Soccer (Europe) (En,Fr,De,It)" region="EUR"/>
 		<rom name="International Sensible Soccer (Europe) (En,Fr,De,It).md" size="524288" crc="04e3bcca" md5="403ceb23b4cf27d3d9c8965409960bb4" sha1="b88833ba92e084d4433e2b22eeb67e71ed36cd5c" status="verified"/>
 	</game>
-	<game name="International Superstar Soccer Deluxe (Europe, Brazil)">
-		<description>International Superstar Soccer Deluxe (Europe, Brazil)</description>
-		<release name="International Superstar Soccer Deluxe (Europe, Brazil)" region="BRA"/>
-		<release name="International Superstar Soccer Deluxe (Europe, Brazil)" region="EUR"/>
-		<rom name="International Superstar Soccer Deluxe (Europe, Brazil).md" size="2097152" crc="9bb3b180" md5="494d00e7c0a3ee5448e6b82fa091bac8" sha1="ccc60352b43f8c3d536267dd05a8f2c0f3b73df6" status="verified"/>
+	<game name="International Superstar Soccer Deluxe (Europe, Brazil) (En)">
+		<description>International Superstar Soccer Deluxe (Europe, Brazil) (En)</description>
+		<release name="International Superstar Soccer Deluxe (Europe, Brazil) (En)" region="BRA"/>
+		<release name="International Superstar Soccer Deluxe (Europe, Brazil) (En)" region="EUR"/>
+		<rom name="International Superstar Soccer Deluxe (Europe, Brazil) (En).md" size="2097152" crc="9bb3b180" md5="494d00e7c0a3ee5448e6b82fa091bac8" sha1="ccc60352b43f8c3d536267dd05a8f2c0f3b73df6" status="verified"/>
 	</game>
-	<game name="Futbol Argentino (Argentina) (Unl) (Pirate)" cloneof="International Superstar Soccer Deluxe (Europe, Brazil)">
+	<game name="Futbol Argentino (Argentina) (Unl) (Pirate)" cloneof="International Superstar Soccer Deluxe (Europe, Brazil) (En)">
 		<description>Futbol Argentino (Argentina) (Unl) (Pirate)</description>
 		<rom name="Futbol Argentino (Argentina) (Unl) (Pirate).md" size="2097152" crc="a35c2b2f" md5="b17b7cde78952e15e64cfb12cae76c5b" sha1="f5a342616054e1eff03e69111caff6ad9cdfa497"/>
 	</game>
-	<game name="Ronaldinho 98 (Unknown) (Unl) (Pirate)" cloneof="International Superstar Soccer Deluxe (Europe, Brazil)">
-		<description>Ronaldinho 98 (Unknown) (Unl) (Pirate)</description>
-		<rom name="Ronaldinho 98 (Unknown) (Unl) (Pirate).md" size="2097152" crc="dd27c84e" md5="d4d87c02660059a232773add892c2592" sha1="183ba7d8fe6bcddf0b7738c9ef2aa163725eb261"/>
+	<game name="Ronaldinho 98 (Unknown) (Pt) (Unl) (Pirate)" cloneof="International Superstar Soccer Deluxe (Europe, Brazil) (En)">
+		<description>Ronaldinho 98 (Unknown) (Pt) (Unl) (Pirate)</description>
+		<rom name="Ronaldinho 98 (Unknown) (Pt) (Unl) (Pirate).md" size="2097152" crc="dd27c84e" md5="d4d87c02660059a232773add892c2592" sha1="183ba7d8fe6bcddf0b7738c9ef2aa163725eb261"/>
 	</game>
 	<game name="Ishido - The Way of Stones (USA) (Unl)">
 		<description>Ishido - The Way of Stones (USA) (Unl)</description>
@@ -4835,11 +4855,11 @@
 		<release name="James Pond II - Codename - Robocod (USA, Europe)" region="USA"/>
 		<rom name="James Pond II - Codename - Robocod (USA, Europe).md" size="524288" crc="f4abedba" md5="bb689dd3822853a5417cdec4a3da114b" sha1="e00c9ab1f22aeed3031ed9dd985539aa6e31a7a4" status="verified"/>
 	</game>
-	<game name="James Pond II (Japan, Korea)" cloneof="James Pond II - Codename - Robocod (USA, Europe)">
-		<description>James Pond II (Japan, Korea)</description>
-		<release name="James Pond II (Japan, Korea)" region="JPN"/>
-		<release name="James Pond II (Japan, Korea)" region="KOR"/>
-		<rom name="James Pond II (Japan, Korea).md" size="524288" crc="98794702" md5="3f371946ef10d5b1b3518b73494d0800" sha1="fa7d4e77fd98eb1fc9f8e1d66269bf86881c695d" status="verified"/>
+	<game name="James Pond II (Japan, Korea) (Ja)" cloneof="James Pond II - Codename - Robocod (USA, Europe)">
+		<description>James Pond II (Japan, Korea) (Ja)</description>
+		<release name="James Pond II (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="James Pond II (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="James Pond II (Japan, Korea) (Ja).md" size="524288" crc="98794702" md5="3f371946ef10d5b1b3518b73494d0800" sha1="fa7d4e77fd98eb1fc9f8e1d66269bf86881c695d" status="verified"/>
 	</game>
 	<game name="Jammit (USA)">
 		<description>Jammit (USA)</description>
@@ -4999,11 +5019,11 @@
 		<description>Judge Dredd (World) (Beta)</description>
 		<rom name="Judge Dredd (World) (Beta).md" size="2097152" crc="8d46f4da" md5="e99630f4ff63cca1ad99e278e4c8fc75" sha1="84bb0ee7c42612abfd41c5676e7ecb1b828ee42a"/>
 	</game>
-	<game name="Junction (Japan, USA)">
-		<description>Junction (Japan, USA)</description>
-		<release name="Junction (Japan, USA)" region="JPN"/>
-		<release name="Junction (Japan, USA)" region="USA"/>
-		<rom name="Junction (Japan, USA).md" size="524288" crc="94cdce8d" md5="6d8a871ce4b1e88aecd4d0d50a137e99" sha1="7981e5764458f5230184c7b2cf77469e1ed34270" status="verified"/>
+	<game name="Junction (Japan, USA) (En)">
+		<description>Junction (Japan, USA) (En)</description>
+		<release name="Junction (Japan, USA) (En)" region="JPN"/>
+		<release name="Junction (Japan, USA) (En)" region="USA"/>
+		<rom name="Junction (Japan, USA) (En).md" size="524288" crc="94cdce8d" md5="6d8a871ce4b1e88aecd4d0d50a137e99" sha1="7981e5764458f5230184c7b2cf77469e1ed34270" status="verified"/>
 	</game>
 	<game name="Jungle Book, The (Europe)">
 		<description>Jungle Book, The (Europe)</description>
@@ -5360,14 +5380,14 @@
 		<release name="Last Action Hero (USA, Europe)" region="USA"/>
 		<rom name="Last Action Hero (USA, Europe).md" size="1048576" crc="15357dde" md5="960d31f44cc668d331d2711dd7def19d" sha1="8efa876894c8bfb0ea457e86173eb5b233861cd0"/>
 	</game>
-	<game name="Last Battle (USA, Europe, Korea)">
-		<description>Last Battle (USA, Europe, Korea)</description>
-		<release name="Last Battle (USA, Europe, Korea)" region="EUR"/>
-		<release name="Last Battle (USA, Europe, Korea)" region="KOR"/>
-		<release name="Last Battle (USA, Europe, Korea)" region="USA"/>
-		<rom name="Last Battle (USA, Europe, Korea).md" size="524288" crc="bbfaad77" md5="1164d4b9e1c69c914f68a3f0e126039b" sha1="6ebef9c86779040bd2996564caa8631f4c41cf03" status="verified"/>
+	<game name="Last Battle (USA, Europe, Korea) (En)">
+		<description>Last Battle (USA, Europe, Korea) (En)</description>
+		<release name="Last Battle (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="Last Battle (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="Last Battle (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="Last Battle (USA, Europe, Korea) (En).md" size="524288" crc="bbfaad77" md5="1164d4b9e1c69c914f68a3f0e126039b" sha1="6ebef9c86779040bd2996564caa8631f4c41cf03" status="verified"/>
 	</game>
-	<game name="Hokuto no Ken - Shin Seikimatsu Kyuuseishu Densetsu (Japan)" cloneof="Last Battle (USA, Europe, Korea)">
+	<game name="Hokuto no Ken - Shin Seikimatsu Kyuuseishu Densetsu (Japan)" cloneof="Last Battle (USA, Europe, Korea) (En)">
 		<description>Hokuto no Ken - Shin Seikimatsu Kyuuseishu Densetsu (Japan)</description>
 		<release name="Hokuto no Ken - Shin Seikimatsu Kyuuseishu Densetsu (Japan)" region="JPN"/>
 		<rom name="Hokuto no Ken - Shin Seikimatsu Kyuuseishu Densetsu (Japan).md" size="524288" crc="1b6585e7" md5="f5e327aa603b334fd5713fda10464748" sha1="7d489e1087a0816e2091261f6550f42a61474915" status="verified"/>
@@ -5406,11 +5426,11 @@
 		<release name="Lemmings (Europe)" region="EUR"/>
 		<rom name="Lemmings (Europe).md" size="1048576" crc="6a1a4579" md5="0b00509e9857cb97243e9f2741e90de1" sha1="f4b86031e348edb4dcffaf969998f368955828ce" status="verified"/>
 	</game>
-	<game name="Lemmings (Japan, Korea)" cloneof="Lemmings (Europe)">
-		<description>Lemmings (Japan, Korea)</description>
-		<release name="Lemmings (Japan, Korea)" region="JPN"/>
-		<release name="Lemmings (Japan, Korea)" region="KOR"/>
-		<rom name="Lemmings (Japan, Korea).md" size="1048576" crc="68c70362" md5="03af74df7f90f5bd7286ef3b48f0a6ae" sha1="61d468378c06a3d1044a8e11255294b46d0c094d" status="verified"/>
+	<game name="Lemmings (Japan, Korea) (En)" cloneof="Lemmings (Europe)">
+		<description>Lemmings (Japan, Korea) (En)</description>
+		<release name="Lemmings (Japan, Korea) (En)" region="JPN"/>
+		<release name="Lemmings (Japan, Korea) (En)" region="KOR"/>
+		<rom name="Lemmings (Japan, Korea) (En).md" size="1048576" crc="68c70362" md5="03af74df7f90f5bd7286ef3b48f0a6ae" sha1="61d468378c06a3d1044a8e11255294b46d0c094d" status="verified"/>
 	</game>
 	<game name="Lemmings (USA)" cloneof="Lemmings (Europe)">
 		<description>Lemmings (USA)</description>
@@ -5763,11 +5783,11 @@
 		<release name="Mahjong Cop Ryuu - Shiro Ookami no Yabou (Japan)" region="JPN"/>
 		<rom name="Mahjong Cop Ryuu - Shiro Ookami no Yabou (Japan).md" size="262144" crc="1ccbc782" md5="7c4de0eca81e799768908c4fd6a4a9c3" sha1="7fd5866347067e6111739833595278e192d275fb" status="verified"/>
 	</game>
-	<game name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (Unl)">
-		<description>Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (Unl)</description>
-		<release name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (Unl)" region="TAI"/>
-		<release name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (Unl)" region="USA"/>
-		<rom name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (Unl).md" size="524288" crc="1bdd02b8" md5="7d20d74e81524773409f4f89e944cfaa" sha1="4b45801b112a641fee936e41a31728ee7aa2f834"/>
+	<game name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (En) (Unl)">
+		<description>Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (En) (Unl)</description>
+		<release name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (En) (Unl)" region="TAI"/>
+		<release name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (En) (Unl)" region="USA"/>
+		<rom name="Mallet Legend's Whac-a-Critter ~ Mallet Legend (USA, Taiwan) (En) (Unl).md" size="524288" crc="1bdd02b8" md5="7d20d74e81524773409f4f89e944cfaa" sha1="4b45801b112a641fee936e41a31728ee7aa2f834"/>
 	</game>
 	<game name="Mamono Hunter Youko - Dai 7 no Keishou (Japan)">
 		<description>Mamono Hunter Youko - Dai 7 no Keishou (Japan)</description>
@@ -5870,11 +5890,11 @@
 		<release name="Mazin Saga (Asia) (En)" region="ASI"/>
 		<rom name="Mazin Saga (Asia) (En).md" size="1048576" crc="36459b59" md5="a9979ae2dd33c6db2c2bd87a28d5ebde" sha1="3509fdf8bd0a589c216a5032eef0c09a51c7a578"/>
 	</game>
-	<game name="Mazin Saga (Japan, Korea)" cloneof="Mazin Wars (Europe)">
-		<description>Mazin Saga (Japan, Korea)</description>
-		<release name="Mazin Saga (Japan, Korea)" region="JPN"/>
-		<release name="Mazin Saga (Japan, Korea)" region="KOR"/>
-		<rom name="Mazin Saga (Japan, Korea).md" size="1048576" crc="45b3a34b" md5="f3ae6147d9ad2d40e781a49c7263f746" sha1="bcaf2820f22d4a7bcf6324f288698192996875bd" status="verified"/>
+	<game name="Mazin Saga (Japan, Korea) (Ja)" cloneof="Mazin Wars (Europe)">
+		<description>Mazin Saga (Japan, Korea) (Ja)</description>
+		<release name="Mazin Saga (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Mazin Saga (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Mazin Saga (Japan, Korea) (Ja).md" size="1048576" crc="45b3a34b" md5="f3ae6147d9ad2d40e781a49c7263f746" sha1="bcaf2820f22d4a7bcf6324f288698192996875bd" status="verified"/>
 	</game>
 	<game name="Mazin Saga - Mutant Fighter (USA)" cloneof="Mazin Wars (Europe)">
 		<description>Mazin Saga - Mutant Fighter (USA)</description>
@@ -5919,13 +5939,13 @@
 		<release name="Mega Anser (Japan) (Program)" region="JPN"/>
 		<rom name="Mega Anser (Japan) (Program).md" size="524288" crc="08ece367" md5="48577e9f9a9c12499838ca3fa1d396e7" sha1="d353e673bd332aa71370fa541e6fd26d918b5a2b"/>
 	</game>
-	<game name="Mega Bomberman (Europe, Korea)">
-		<description>Mega Bomberman (Europe, Korea)</description>
-		<release name="Mega Bomberman (Europe, Korea)" region="EUR"/>
-		<release name="Mega Bomberman (Europe, Korea)" region="KOR"/>
-		<rom name="Mega Bomberman (Europe, Korea).md" size="1048576" crc="54ab3beb" md5="5a94b1e8792bb3572db92c2019d99377" sha1="01f76e2f719bdae5f21ff0e5a1ac1262c2def279" status="verified"/>
+	<game name="Mega Bomberman (Europe, Korea) (En)">
+		<description>Mega Bomberman (Europe, Korea) (En)</description>
+		<release name="Mega Bomberman (Europe, Korea) (En)" region="EUR"/>
+		<release name="Mega Bomberman (Europe, Korea) (En)" region="KOR"/>
+		<rom name="Mega Bomberman (Europe, Korea) (En).md" size="1048576" crc="54ab3beb" md5="5a94b1e8792bb3572db92c2019d99377" sha1="01f76e2f719bdae5f21ff0e5a1ac1262c2def279" status="verified"/>
 	</game>
-	<game name="Mega Bomberman (USA)" cloneof="Mega Bomberman (Europe, Korea)">
+	<game name="Mega Bomberman (USA)" cloneof="Mega Bomberman (Europe, Korea) (En)">
 		<description>Mega Bomberman (USA)</description>
 		<release name="Mega Bomberman (USA)" region="USA"/>
 		<rom name="Mega Bomberman (USA).md" size="1048576" crc="4bd6667d" md5="514f6cad98f5f632d680983a050fffc4" sha1="89495a8acbcb0ddcadfe5b7bada50f4d9efd0ddd" status="verified"/>
@@ -5947,11 +5967,11 @@
 		<release name="Mega Games 2 (Europe)" region="EUR"/>
 		<rom name="Mega Games 2 (Europe).md" size="2097152" crc="30d59f2f" md5="d9e4ef8f23f3573557701e0e67cf1b34" sha1="1cf425556de9352c1efe60b07e592b610e78cfbd" status="verified"/>
 	</game>
-	<game name="Mega Games 3 (Europe, Asia)">
-		<description>Mega Games 3 (Europe, Asia)</description>
-		<release name="Mega Games 3 (Europe, Asia)" region="ASI"/>
-		<release name="Mega Games 3 (Europe, Asia)" region="EUR"/>
-		<rom name="Mega Games 3 (Europe, Asia).md" size="2097152" crc="b4247d98" md5="b03cfa8f4b28f90a204f336e1f8880b4" sha1="4329d7fa2c4b8e6ed0b4adfc64dca474d0ee5a51" status="verified"/>
+	<game name="Mega Games 3 (Europe, Asia) (En)">
+		<description>Mega Games 3 (Europe, Asia) (En)</description>
+		<release name="Mega Games 3 (Europe, Asia) (En)" region="ASI"/>
+		<release name="Mega Games 3 (Europe, Asia) (En)" region="EUR"/>
+		<rom name="Mega Games 3 (Europe, Asia) (En).md" size="2097152" crc="b4247d98" md5="b03cfa8f4b28f90a204f336e1f8880b4" sha1="4329d7fa2c4b8e6ed0b4adfc64dca474d0ee5a51" status="verified"/>
 	</game>
 	<game name="Mega Games 6 (Europe)">
 		<description>Mega Games 6 (Europe)</description>
@@ -5977,6 +5997,11 @@
 		<description>Mega Man - The Wily Wars (USA) (Genesis Mini)</description>
 		<release name="Mega Man - The Wily Wars (USA) (Genesis Mini)" region="USA"/>
 		<rom name="Mega Man - The Wily Wars (USA) (Genesis Mini).md" size="2097152" crc="0cd405db" md5="8e860e4f7c7ee5febad9134a56766112" sha1="26ad72719991e94dbe477c78e65d68f4a4fe51e6"/>
+	</game>
+	<game name="Mega Man - The Wily Wars (USA) (Aftermarket) (Unl)" cloneof="Mega Man - The Wily Wars (Europe)">
+		<description>Mega Man - The Wily Wars (USA) (Aftermarket) (Unl)</description>
+		<release name="Mega Man - The Wily Wars (USA) (Aftermarket) (Unl)" region="USA"/>
+		<rom name="Mega Man - The Wily Wars (USA) (Aftermarket) (Unl).md" size="2097152" crc="0831020b" md5="fb4fc95ce806265417bb44eec2aca488" sha1="617bc1ee5f31f4215cf47c5337fa7ca0bceb6a45"/>
 	</game>
 	<game name="Rockman - Mega World (Japan)" cloneof="Mega Man - The Wily Wars (Europe)">
 		<description>Rockman - Mega World (Japan)</description>
@@ -6017,6 +6042,10 @@
 		<description>Mega Turrican (Japan) (En) (Proto) (1993-05-18)</description>
 		<rom name="Mega Turrican (Japan) (En) (Proto) (1993-05-18).md" size="1048576" crc="3ba35acd" md5="5878569bf3a7efde76fc7120fb3299de" sha1="486fd963b1389806a565dab21c81c46c273c8e5f"/>
 	</game>
+	<game name="Mega Turrican - Director's Cut (World) (Aftermarket) (Unl)" cloneof="Mega Turrican (Europe)">
+		<description>Mega Turrican - Director's Cut (World) (Aftermarket) (Unl)</description>
+		<rom name="Mega Turrican - Director's Cut (World) (Aftermarket) (Unl).md" size="3145728" crc="cde15a2a" md5="ef94581f72e2c46e8832f3d6fbb92815" sha1="1f750a8f2742aa8a28e2158c34121ba1054a15ff"/>
+	</game>
 	<game name="Mega-lo-Mania (Europe)">
 		<description>Mega-lo-Mania (Europe)</description>
 		<release name="Mega-lo-Mania (Europe)" region="EUR"/>
@@ -6046,10 +6075,10 @@
 		<release name="MegaMind (Japan) (SegaNet)" region="JPN"/>
 		<rom name="MegaMind (Japan) (SegaNet).md" size="262144" crc="76df2ae2" md5="08a419f456adfc71205a0e723988aaa8" sha1="dc5697f6baeeafe04250b39324464bb6dcdcac7f"/>
 	</game>
-	<game name="MegaNet (Brazil) (Program)">
-		<description>MegaNet (Brazil) (Program)</description>
-		<release name="MegaNet (Brazil) (Program)" region="BRA"/>
-		<rom name="MegaNet (Brazil) (Program).md" size="262144" crc="fab33cc2" md5="170b24f2fdb1f3dcb59c4197afeff7dd" sha1="7969fe1b43d29b65a1e24e118f4a6fea27437e9c"/>
+	<game name="MegaNet (Brazil) (En) (Program)">
+		<description>MegaNet (Brazil) (En) (Program)</description>
+		<release name="MegaNet (Brazil) (En) (Program)" region="BRA"/>
+		<rom name="MegaNet (Brazil) (En) (Program).md" size="262144" crc="fab33cc2" md5="170b24f2fdb1f3dcb59c4197afeff7dd" sha1="7969fe1b43d29b65a1e24e118f4a6fea27437e9c"/>
 	</game>
 	<game name="MegaPanel (Japan)">
 		<description>MegaPanel (Japan)</description>
@@ -6090,13 +6119,13 @@
 		<release name="Michael Jackson's Moonwalker (World) (Rev A)" region="USA"/>
 		<rom name="Michael Jackson's Moonwalker (World) (Rev A).md" size="524288" crc="11ce1f9e" md5="73b63cac3f15bfe4a7bad170654878a9" sha1="70d9b760c87196af364492512104fa18c9d69cce" status="verified"/>
 	</game>
-	<game name="Michael Jackson's Moonwalker (Japan, USA)" cloneof="Michael Jackson's Moonwalker (World) (Rev A)">
-		<description>Michael Jackson's Moonwalker (Japan, USA)</description>
-		<rom name="Michael Jackson's Moonwalker (Japan, USA).md" size="524288" crc="6a70791b" md5="7baf9fb775ee130bd7a4a779cb3bb612" sha1="8960bac2027cdeadb07e535a77597fb783e1433b" status="verified"/>
+	<game name="Michael Jackson's Moonwalker (Japan, USA) (En)" cloneof="Michael Jackson's Moonwalker (World) (Rev A)">
+		<description>Michael Jackson's Moonwalker (Japan, USA) (En)</description>
+		<rom name="Michael Jackson's Moonwalker (Japan, USA) (En).md" size="524288" crc="6a70791b" md5="7baf9fb775ee130bd7a4a779cb3bb612" sha1="8960bac2027cdeadb07e535a77597fb783e1433b" status="verified"/>
 	</game>
-	<game name="Michael Jackson's Moonwalker (Japan, USA) (Beta) (1990-04-24)" cloneof="Michael Jackson's Moonwalker (World) (Rev A)">
-		<description>Michael Jackson's Moonwalker (Japan, USA) (Beta) (1990-04-24)</description>
-		<rom name="Michael Jackson's Moonwalker (Japan, USA) (Beta) (1990-04-24).md" size="524288" crc="dc7ed8c1" md5="a72e7aa20c5f5ad49e8f51a79a7e9db6" sha1="6ce4ce7af4265d9be6bfe5021eb64839a73fdac6"/>
+	<game name="Michael Jackson's Moonwalker (Japan, USA) (En) (Beta) (1990-04-24)" cloneof="Michael Jackson's Moonwalker (World) (Rev A)">
+		<description>Michael Jackson's Moonwalker (Japan, USA) (En) (Beta) (1990-04-24)</description>
+		<rom name="Michael Jackson's Moonwalker (Japan, USA) (En) (Beta) (1990-04-24).md" size="524288" crc="dc7ed8c1" md5="a72e7aa20c5f5ad49e8f51a79a7e9db6" sha1="6ce4ce7af4265d9be6bfe5021eb64839a73fdac6"/>
 	</game>
 	<game name="Mickey Mania (Europe)">
 		<description>Mickey Mania (Europe)</description>
@@ -6131,9 +6160,9 @@
 		<release name="Micro Machines (Europe)" region="EUR"/>
 		<rom name="Micro Machines (Europe).md" size="524288" crc="7ffbd1ad" md5="bdd8341f55f01202a48fcddf5bf80ff7" sha1="6c822ab42a37657aa2a4e70e44b201f8e8365a98"/>
 	</game>
-	<game name="Micro Machines (Europe) (Alt2)" cloneof="Micro Machines (Europe)">
-		<description>Micro Machines (Europe) (Alt2)</description>
-		<rom name="Micro Machines (Europe) (Alt2).md" size="524288" crc="50081a0b" md5="aee593260dc6d484534b30914bba1768" sha1="56a8844c376f2e79e92cf128681fa3fef81c36d6" status="verified"/>
+	<game name="Micro Machines (Europe) (Alt 2)" cloneof="Micro Machines (Europe)">
+		<description>Micro Machines (Europe) (Alt 2)</description>
+		<rom name="Micro Machines (Europe) (Alt 2).md" size="524288" crc="50081a0b" md5="aee593260dc6d484534b30914bba1768" sha1="56a8844c376f2e79e92cf128681fa3fef81c36d6" status="verified"/>
 	</game>
 	<game name="Micro Machines (Europe) (Alt)" cloneof="Micro Machines (Europe)">
 		<description>Micro Machines (Europe) (Alt)</description>
@@ -6260,10 +6289,10 @@
 		<description>Mighty Morphin Power Rangers (USA) (Beta) (1994-08-09)</description>
 		<rom name="Mighty Morphin Power Rangers (USA) (Beta) (1994-08-09).md" size="2097152" crc="4356fe0a" md5="c71f72a8dfda92c9ffe90c9c94d55570" sha1="a91cf34ae5178696e66a71770872b3720265d61c"/>
 	</game>
-	<game name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (Unl)">
-		<description>Mighty Morphin Power Rangers - The Fighting Edition (Russia) (Unl)</description>
-		<release name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (Unl)" region="RUS"/>
-		<rom name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (Unl).md" size="2097152" crc="1046d696" md5="92d06b0670d46cdd6c876dcdbf03f684" sha1="25d2d6a5ab20e16b8b42b67e5fb338421b64b29b"/>
+	<game name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (En) (Unl)">
+		<description>Mighty Morphin Power Rangers - The Fighting Edition (Russia) (En) (Unl)</description>
+		<release name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (En) (Unl)" region="RUS"/>
+		<rom name="Mighty Morphin Power Rangers - The Fighting Edition (Russia) (En) (Unl).md" size="2097152" crc="1046d696" md5="92d06b0670d46cdd6c876dcdbf03f684" sha1="25d2d6a5ab20e16b8b42b67e5fb338421b64b29b"/>
 	</game>
 	<game name="Mighty Morphin Power Rangers - The Movie (Europe)">
 		<description>Mighty Morphin Power Rangers - The Movie (Europe)</description>
@@ -6389,6 +6418,10 @@
 		<description>Mortal Kombat 3 (USA)</description>
 		<release name="Mortal Kombat 3 (USA)" region="USA"/>
 		<rom name="Mortal Kombat 3 (USA).md" size="4194304" crc="dd638af6" md5="4cca5c00ad312409791123258967d216" sha1="55cdcba77f7fcd9994e748524d40c98089344160" status="verified"/>
+	</game>
+	<game name="Mortal Kombat 3 (USA) (Beta)" cloneof="Mortal Kombat 3 (Europe)">
+		<description>Mortal Kombat 3 (USA) (Beta)</description>
+		<rom name="Mortal Kombat 3 (USA) (Beta).md" size="4194304" crc="7ab140e1" md5="c7ed32a66bbc2ed2d0ab2da690b178f2" sha1="e220766fefc1dacd052724bd705a6ceade12059e"/>
 	</game>
 	<game name="Mortal Kombat II (World)">
 		<description>Mortal Kombat II (World)</description>
@@ -7038,18 +7071,18 @@
 		<release name="Nigel Mansell's World Championship Racing (USA)" region="USA"/>
 		<rom name="Nigel Mansell's World Championship Racing (USA).md" size="1048576" crc="6bc57b2c" md5="53bae19b3db06e8d1a4de105fe88cbf5" sha1="a64b3c8e8ad221cd02d47d551f3492515658ee1d"/>
 	</game>
-	<game name="Nightmare Circus (Brazil)">
-		<description>Nightmare Circus (Brazil)</description>
-		<release name="Nightmare Circus (Brazil)" region="BRA"/>
-		<rom name="Nightmare Circus (Brazil).md" size="2097152" crc="06da3217" md5="697fe71f7c6601b80ff486297124d301" sha1="3c80ff5ba54abe4702a3bb7d812571d3dc50c00f"/>
+	<game name="Nightmare Circus (Brazil) (En)">
+		<description>Nightmare Circus (Brazil) (En)</description>
+		<release name="Nightmare Circus (Brazil) (En)" region="BRA"/>
+		<rom name="Nightmare Circus (Brazil) (En).md" size="2097152" crc="06da3217" md5="697fe71f7c6601b80ff486297124d301" sha1="3c80ff5ba54abe4702a3bb7d812571d3dc50c00f"/>
 	</game>
-	<game name="Nightmare Circus (Brazil) (Beta 2)" cloneof="Nightmare Circus (Brazil)">
-		<description>Nightmare Circus (Brazil) (Beta 2)</description>
-		<rom name="Nightmare Circus (Brazil) (Beta 2).md" size="2097152" crc="31de5a94" md5="6e325bc3fe03b2bbcd39e667cf0b567a" sha1="61b7d25e15011d379d07a8dad4f8c5bb5f75e29f"/>
+	<game name="Nightmare Circus (Brazil) (En) (Beta 2)" cloneof="Nightmare Circus (Brazil) (En)">
+		<description>Nightmare Circus (Brazil) (En) (Beta 2)</description>
+		<rom name="Nightmare Circus (Brazil) (En) (Beta 2).md" size="2097152" crc="31de5a94" md5="6e325bc3fe03b2bbcd39e667cf0b567a" sha1="61b7d25e15011d379d07a8dad4f8c5bb5f75e29f"/>
 	</game>
-	<game name="Nightmare Circus (Brazil) (Beta 1)" cloneof="Nightmare Circus (Brazil)">
-		<description>Nightmare Circus (Brazil) (Beta 1)</description>
-		<rom name="Nightmare Circus (Brazil) (Beta 1).md" size="4194304" crc="ee96f1b8" md5="9d8869bf8dec6223440aaed3af202fa7" sha1="c48a0f275a46a4a814a4aa0926c084d27812f5ec"/>
+	<game name="Nightmare Circus (Brazil) (En) (Beta 1)" cloneof="Nightmare Circus (Brazil) (En)">
+		<description>Nightmare Circus (Brazil) (En) (Beta 1)</description>
+		<rom name="Nightmare Circus (Brazil) (En) (Beta 1).md" size="4194304" crc="ee96f1b8" md5="9d8869bf8dec6223440aaed3af202fa7" sha1="c48a0f275a46a4a814a4aa0926c084d27812f5ec"/>
 	</game>
 	<game name="Nikkan Sports Pro Yakyuu VAN (Japan)">
 		<description>Nikkan Sports Pro Yakyuu VAN (Japan)</description>
@@ -7172,11 +7205,11 @@
 		<release name="Ooze, The (Europe)" region="EUR"/>
 		<rom name="Ooze, The (Europe).md" size="1048576" crc="e16b102c" md5="cfeed2515b26497e3f172f19f396e755" sha1="0e45b84e875aa4e27bf003cbc0f857f2e5659625" status="verified"/>
 	</game>
-	<game name="Ooze, The (Japan, USA)" cloneof="Ooze, The (Europe)">
-		<description>Ooze, The (Japan, USA)</description>
-		<release name="Ooze, The (Japan, USA)" region="JPN"/>
-		<release name="Ooze, The (Japan, USA)" region="USA"/>
-		<rom name="Ooze, The (Japan, USA).md" size="1048576" crc="1c0dd42f" md5="9a56d0dabe7b7359436923e2b33996ef" sha1="dafcda90285e71151072ba36134f94f1e9d76a23" status="verified"/>
+	<game name="Ooze, The (Japan, USA) (En)" cloneof="Ooze, The (Europe)">
+		<description>Ooze, The (Japan, USA) (En)</description>
+		<release name="Ooze, The (Japan, USA) (En)" region="JPN"/>
+		<release name="Ooze, The (Japan, USA) (En)" region="USA"/>
+		<rom name="Ooze, The (Japan, USA) (En).md" size="1048576" crc="1c0dd42f" md5="9a56d0dabe7b7359436923e2b33996ef" sha1="dafcda90285e71151072ba36134f94f1e9d76a23" status="verified"/>
 	</game>
 	<game name="Ooze, The (Europe) (Beta) (1995-07-28)" cloneof="Ooze, The (Europe)">
 		<description>Ooze, The (Europe) (Beta) (1995-07-28)</description>
@@ -7560,10 +7593,10 @@
 		<release name="Phantasy Star II (USA, Europe) (Rev A)" region="USA"/>
 		<rom name="Phantasy Star II (USA, Europe) (Rev A).md" size="786432" crc="904fa047" md5="0fa38b12cf0ab0163d865600ac731a9a" sha1="0711080e968490a6b8c5fafbb9db3e62ba597231" status="verified"/>
 	</game>
-	<game name="Phantasy Star II (Brazil)" cloneof="Phantasy Star II (USA, Europe) (Rev A)">
-		<description>Phantasy Star II (Brazil)</description>
-		<release name="Phantasy Star II (Brazil)" region="BRA"/>
-		<rom name="Phantasy Star II (Brazil).md" size="786432" crc="e6688b66" md5="f2d46a63b34cf6e5a2c8264fb59c06e7" sha1="ab62fac112cb4dd1f19cb973bd7952b161f6d100"/>
+	<game name="Phantasy Star II (Brazil) (En)" cloneof="Phantasy Star II (USA, Europe) (Rev A)">
+		<description>Phantasy Star II (Brazil) (En)</description>
+		<release name="Phantasy Star II (Brazil) (En)" region="BRA"/>
+		<rom name="Phantasy Star II (Brazil) (En).md" size="786432" crc="e6688b66" md5="f2d46a63b34cf6e5a2c8264fb59c06e7" sha1="ab62fac112cb4dd1f19cb973bd7952b161f6d100"/>
 	</game>
 	<game name="Phantasy Star II (USA, Europe)" cloneof="Phantasy Star II (USA, Europe) (Rev A)">
 		<description>Phantasy Star II (USA, Europe)</description>
@@ -7626,23 +7659,23 @@
 		<release name="Phantasy Star II - Yushis's Adventure (Japan) (SegaNet)" region="JPN"/>
 		<rom name="Phantasy Star II - Yushis's Adventure (Japan) (SegaNet).md" size="262144" crc="d40c76d6" md5="83f22a27147bdfd85d405daf111fde92" sha1="85679e11000387b6ef002c53bb03593f1c3f1c11"/>
 	</game>
-	<game name="Phantasy Star III - Generations of Doom (USA, Europe, Korea)">
-		<description>Phantasy Star III - Generations of Doom (USA, Europe, Korea)</description>
-		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea)" region="EUR"/>
-		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea)" region="KOR"/>
-		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea)" region="USA"/>
-		<rom name="Phantasy Star III - Generations of Doom (USA, Europe, Korea).md" size="786432" crc="c6b42b0f" md5="82c7bc027685cc8fc6c9e077beb1a75a" sha1="59d4914e652672fd1e453c76b8250d17e8ca154e" status="verified"/>
+	<game name="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)">
+		<description>Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)</description>
+		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En).md" size="786432" crc="c6b42b0f" md5="82c7bc027685cc8fc6c9e077beb1a75a" sha1="59d4914e652672fd1e453c76b8250d17e8ca154e" status="verified"/>
 	</game>
-	<game name="Phantasy Star III - Generations of Doom (Brazil)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea)">
-		<description>Phantasy Star III - Generations of Doom (Brazil)</description>
-		<release name="Phantasy Star III - Generations of Doom (Brazil)" region="BRA"/>
-		<rom name="Phantasy Star III - Generations of Doom (Brazil).md" size="786432" crc="2e9b4c23" md5="43b322e74938969b6736c620f9fa6fc3" sha1="59ccfc6b85b95666d0e2c85e3e08c847c4a7ad34"/>
+	<game name="Phantasy Star III - Generations of Doom (Brazil) (En)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)">
+		<description>Phantasy Star III - Generations of Doom (Brazil) (En)</description>
+		<release name="Phantasy Star III - Generations of Doom (Brazil) (En)" region="BRA"/>
+		<rom name="Phantasy Star III - Generations of Doom (Brazil) (En).md" size="786432" crc="2e9b4c23" md5="43b322e74938969b6736c620f9fa6fc3" sha1="59ccfc6b85b95666d0e2c85e3e08c847c4a7ad34"/>
 	</game>
-	<game name="Phantasy Star III - Generations of Doom (USA, Europe) (PC Rerelease)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea)">
+	<game name="Phantasy Star III - Generations of Doom (USA, Europe) (PC Rerelease)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)">
 		<description>Phantasy Star III - Generations of Doom (USA, Europe) (PC Rerelease)</description>
 		<rom name="Phantasy Star III - Generations of Doom (USA, Europe) (PC Rerelease).md" size="786432" crc="1d1c62fb" md5="ea7f5732cc220f46960aa2b0f691aa4e" sha1="75a139b9f93413753aa512f53bb8da8932f4f24b" status="verified"/>
 	</game>
-	<game name="Toki no Keishousha - Phantasy Star III (Japan)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea)">
+	<game name="Toki no Keishousha - Phantasy Star III (Japan)" cloneof="Phantasy Star III - Generations of Doom (USA, Europe, Korea) (En)">
 		<description>Toki no Keishousha - Phantasy Star III (Japan)</description>
 		<release name="Toki no Keishousha - Phantasy Star III (Japan)" region="JPN"/>
 		<rom name="Toki no Keishousha - Phantasy Star III (Japan).md" size="786432" crc="6c48c06f" md5="359958755d967864711bb503a125ccc7" sha1="68b0f8e73dea5dca1b6ac8c0e12bc1d9761edf32" status="verified"/>
@@ -7861,7 +7894,7 @@
 	<game name="Populous (USA) (Unl)" cloneof="Populous (Europe)">
 		<description>Populous (USA) (Unl)</description>
 		<release name="Populous (USA) (Unl)" region="USA"/>
-		<rom name="Populous (USA) (Unl).md" size="524288" crc="bd74b31e" md5="23495b29851e9d495939a88b627ce2cd" sha1="89907c4ba4fd9db4e8ef2271c0253bb0e4b6d52d"/>
+		<rom name="Populous (USA) (Unl).md" size="524288" crc="bd74b31e" md5="23495b29851e9d495939a88b627ce2cd" sha1="89907c4ba4fd9db4e8ef2271c0253bb0e4b6d52d" status="verified"/>
 	</game>
 	<game name="Power Drive (Europe) (En,Fr,De,Es,Pt)">
 		<description>Power Drive (Europe) (En,Fr,De,Es,Pt)</description>
@@ -7874,11 +7907,11 @@
 		<release name="Power Monger (USA, Europe)" region="USA"/>
 		<rom name="Power Monger (USA, Europe).md" size="1048576" crc="fb599b86" md5="72db40c6dd4046e02fa068ccce6f21b1" sha1="f088e8cdb90c037b4ce1c5ae600a75f4e4219c87" status="verified"/>
 	</game>
-	<game name="Power Monger (Japan, Korea)" cloneof="Power Monger (USA, Europe)">
-		<description>Power Monger (Japan, Korea)</description>
-		<release name="Power Monger (Japan, Korea)" region="JPN"/>
-		<release name="Power Monger (Japan, Korea)" region="KOR"/>
-		<rom name="Power Monger (Japan, Korea).md" size="1048576" crc="553289b3" md5="4096d4e55de03b6999e1663a91b89b74" sha1="f0a48f25d87f7a6d17ff76f5e29ea7be2d430ce4" status="verified"/>
+	<game name="Power Monger (Japan, Korea) (Ja)" cloneof="Power Monger (USA, Europe)">
+		<description>Power Monger (Japan, Korea) (Ja)</description>
+		<release name="Power Monger (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Power Monger (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Power Monger (Japan, Korea) (Ja).md" size="1048576" crc="553289b3" md5="4096d4e55de03b6999e1663a91b89b74" sha1="f0a48f25d87f7a6d17ff76f5e29ea7be2d430ce4" status="verified"/>
 	</game>
 	<game name="Powerball (USA)">
 		<description>Powerball (USA)</description>
@@ -7990,11 +8023,11 @@
 		<release name="Probotector (Europe) (En,Fr,De)" region="EUR"/>
 		<rom name="Probotector (Europe) (En,Fr,De).md" size="2097152" crc="bc597d48" md5="22289fe42b00a5fe5df3299747480fc0" sha1="69d905751ffa6a921586767263e45ddeb73333c2" status="verified"/>
 	</game>
-	<game name="Contra - Hard Corps (USA, Korea)" cloneof="Probotector (Europe) (En,Fr,De)">
-		<description>Contra - Hard Corps (USA, Korea)</description>
-		<release name="Contra - Hard Corps (USA, Korea)" region="KOR"/>
-		<release name="Contra - Hard Corps (USA, Korea)" region="USA"/>
-		<rom name="Contra - Hard Corps (USA, Korea).md" size="2097152" crc="c579f45e" md5="2bd30479556da5c310d8f2a1fe66e8fa" sha1="68ea84146105bda91f6056932ff4fb42aa3eb4a7" status="verified"/>
+	<game name="Contra - Hard Corps (USA, Korea) (En)" cloneof="Probotector (Europe) (En,Fr,De)">
+		<description>Contra - Hard Corps (USA, Korea) (En)</description>
+		<release name="Contra - Hard Corps (USA, Korea) (En)" region="KOR"/>
+		<release name="Contra - Hard Corps (USA, Korea) (En)" region="USA"/>
+		<rom name="Contra - Hard Corps (USA, Korea) (En).md" size="2097152" crc="c579f45e" md5="2bd30479556da5c310d8f2a1fe66e8fa" sha1="68ea84146105bda91f6056932ff4fb42aa3eb4a7" status="verified"/>
 	</game>
 	<game name="Contra - Hard Corps (USA) (Genesis Mini)" cloneof="Probotector (Europe) (En,Fr,De)">
 		<description>Contra - Hard Corps (USA) (Genesis Mini)</description>
@@ -8243,25 +8276,25 @@
 		<description>Radical Rex (Europe) (Beta)</description>
 		<rom name="Radical Rex (Europe) (Beta).md" size="1048576" crc="bf2912e3" md5="b17bcea8aefc7af6b34c891745cd1fbf" sha1="da7400580b757d531f86e62b3f211798d8663237"/>
 	</game>
-	<game name="Raiden Densetsu ~ Raiden Trad (Japan, USA)">
-		<description>Raiden Densetsu ~ Raiden Trad (Japan, USA)</description>
-		<release name="Raiden Densetsu ~ Raiden Trad (Japan, USA)" region="JPN"/>
-		<release name="Raiden Densetsu ~ Raiden Trad (Japan, USA)" region="USA"/>
-		<rom name="Raiden Densetsu ~ Raiden Trad (Japan, USA).md" size="1048576" crc="f839a811" md5="af6b6c2e4870a46e61b90bd6d662e7fa" sha1="9d4011d650179c62acdba0ed58143aa77b97d0e9" status="verified"/>
+	<game name="Raiden Densetsu ~ Raiden Trad (Japan, USA) (En)">
+		<description>Raiden Densetsu ~ Raiden Trad (Japan, USA) (En)</description>
+		<release name="Raiden Densetsu ~ Raiden Trad (Japan, USA) (En)" region="JPN"/>
+		<release name="Raiden Densetsu ~ Raiden Trad (Japan, USA) (En)" region="USA"/>
+		<rom name="Raiden Densetsu ~ Raiden Trad (Japan, USA) (En).md" size="1048576" crc="f839a811" md5="af6b6c2e4870a46e61b90bd6d662e7fa" sha1="9d4011d650179c62acdba0ed58143aa77b97d0e9" status="verified"/>
 	</game>
 	<game name="Rainbow Islands Extra (Japan)">
 		<description>Rainbow Islands Extra (Japan)</description>
 		<release name="Rainbow Islands Extra (Japan)" region="JPN"/>
 		<rom name="Rainbow Islands Extra (Japan).md" size="524288" crc="c74dcb35" md5="30682a233a4afba0b0065d0e98b5c6cc" sha1="e35fcc88e37d1691cd2572967e1ae193fcd303eb"/>
 	</game>
-	<game name="Rambo III (USA, Europe, Korea) (Rev A)">
-		<description>Rambo III (USA, Europe, Korea) (Rev A)</description>
-		<release name="Rambo III (USA, Europe, Korea) (Rev A)" region="EUR"/>
-		<release name="Rambo III (USA, Europe, Korea) (Rev A)" region="KOR"/>
-		<release name="Rambo III (USA, Europe, Korea) (Rev A)" region="USA"/>
-		<rom name="Rambo III (USA, Europe, Korea) (Rev A).md" size="262144" crc="4d47a647" md5="d0140fde92f051cde0b986b854f28e99" sha1="e337e618653830f84c77789e81724c5fc69888be" status="verified"/>
+	<game name="Rambo III (USA, Europe, Korea) (En) (Rev A)">
+		<description>Rambo III (USA, Europe, Korea) (En) (Rev A)</description>
+		<release name="Rambo III (USA, Europe, Korea) (En) (Rev A)" region="EUR"/>
+		<release name="Rambo III (USA, Europe, Korea) (En) (Rev A)" region="KOR"/>
+		<release name="Rambo III (USA, Europe, Korea) (En) (Rev A)" region="USA"/>
+		<rom name="Rambo III (USA, Europe, Korea) (En) (Rev A).md" size="262144" crc="4d47a647" md5="d0140fde92f051cde0b986b854f28e99" sha1="e337e618653830f84c77789e81724c5fc69888be" status="verified"/>
 	</game>
-	<game name="Rambo III (Japan) (En)" cloneof="Rambo III (USA, Europe, Korea) (Rev A)">
+	<game name="Rambo III (Japan) (En)" cloneof="Rambo III (USA, Europe, Korea) (En) (Rev A)">
 		<description>Rambo III (Japan) (En)</description>
 		<release name="Rambo III (Japan) (En)" region="JPN"/>
 		<rom name="Rambo III (Japan) (En).md" size="262144" crc="2232f03d" md5="a5904e2515d2d0a402a83de41bcb4c26" sha1="ece53156a43fe14597a44f36a4e65e13cfc6d9d5" status="verified"/>
@@ -8271,11 +8304,11 @@
 		<release name="Rampart (USA)" region="USA"/>
 		<rom name="Rampart (USA).md" size="524288" crc="9c4dd057" md5="d55d86586e11cfe139df6212d42dd2b6" sha1="9dd4ee99e2ccf8759446d355584a9cbf685a3d8b" status="verified"/>
 	</game>
-	<game name="Rampart (Japan, Korea)" cloneof="Rampart (USA)">
-		<description>Rampart (Japan, Korea)</description>
-		<release name="Rampart (Japan, Korea)" region="JPN"/>
-		<release name="Rampart (Japan, Korea)" region="KOR"/>
-		<rom name="Rampart (Japan, Korea).md" size="524288" crc="16ead64c" md5="5da90e74fafadf44d628848661e5d68d" sha1="15f9284da9b27b2803bc53790b51b9dac5185a09" status="verified"/>
+	<game name="Rampart (Japan, Korea) (Ja)" cloneof="Rampart (USA)">
+		<description>Rampart (Japan, Korea) (Ja)</description>
+		<release name="Rampart (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Rampart (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Rampart (Japan, Korea) (Ja).md" size="524288" crc="16ead64c" md5="5da90e74fafadf44d628848661e5d68d" sha1="15f9284da9b27b2803bc53790b51b9dac5185a09" status="verified"/>
 	</game>
 	<game name="Ranger X (Europe)">
 		<description>Ranger X (Europe)</description>
@@ -8450,11 +8483,11 @@
 		<release name="Risky Woods (USA, Europe)" region="USA"/>
 		<rom name="Risky Woods (USA, Europe).md" size="1048576" crc="d975e93c" md5="7034bdcc1a0cb38e4d8fc3e44ace6c20" sha1="5664febf187d26274996c888778b0ff5268474f2" status="verified"/>
 	</game>
-	<game name="Jashin Draxos (Japan, Korea)" cloneof="Risky Woods (USA, Europe)">
-		<description>Jashin Draxos (Japan, Korea)</description>
-		<release name="Jashin Draxos (Japan, Korea)" region="JPN"/>
-		<release name="Jashin Draxos (Japan, Korea)" region="KOR"/>
-		<rom name="Jashin Draxos (Japan, Korea).md" size="1048576" crc="1ea07af2" md5="32c09d5fe55a2f484d8b75d8b7833e8e" sha1="9652b8ed0e36ee17ef6c0b007ca3ad237c13a7a0" status="verified"/>
+	<game name="Jashin Draxos (Japan, Korea) (Ja)" cloneof="Risky Woods (USA, Europe)">
+		<description>Jashin Draxos (Japan, Korea) (Ja)</description>
+		<release name="Jashin Draxos (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Jashin Draxos (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Jashin Draxos (Japan, Korea) (Ja).md" size="1048576" crc="1ea07af2" md5="32c09d5fe55a2f484d8b75d8b7833e8e" sha1="9652b8ed0e36ee17ef6c0b007ca3ad237c13a7a0" status="verified"/>
 	</game>
 	<game name="Ristar (USA, Europe)">
 		<description>Ristar (USA, Europe)</description>
@@ -8474,11 +8507,11 @@
 		<description>Ristar (USA, Europe) (Beta) (Later)</description>
 		<rom name="Ristar (USA, Europe) (Beta) (Later).md" size="2097152" crc="9700139b" md5="62e40b8c8012d02df4fac1c68f10eb16" sha1="cf0215feddd38f19cd2d27bfa96dd4d742ba8bf7"/>
 	</game>
-	<game name="Ristar - The Shooting Star (Japan, Korea)" cloneof="Ristar (USA, Europe)">
-		<description>Ristar - The Shooting Star (Japan, Korea)</description>
-		<release name="Ristar - The Shooting Star (Japan, Korea)" region="JPN"/>
-		<release name="Ristar - The Shooting Star (Japan, Korea)" region="KOR"/>
-		<rom name="Ristar - The Shooting Star (Japan, Korea).md" size="2097152" crc="ce464f0e" md5="376f344f8ef5a4f8365867c9e94efb3e" sha1="a4dd8dc0b673afe7372ba9c05c8d6090302dcf4e" status="verified"/>
+	<game name="Ristar - The Shooting Star (Japan, Korea) (Ja)" cloneof="Ristar (USA, Europe)">
+		<description>Ristar - The Shooting Star (Japan, Korea) (Ja)</description>
+		<release name="Ristar - The Shooting Star (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Ristar - The Shooting Star (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Ristar - The Shooting Star (Japan, Korea) (Ja).md" size="2097152" crc="ce464f0e" md5="376f344f8ef5a4f8365867c9e94efb3e" sha1="a4dd8dc0b673afe7372ba9c05c8d6090302dcf4e" status="verified"/>
 	</game>
 	<game name="Ristar - The Shooting Star (Japan) (Beta) (1994-07-01)" cloneof="Ristar (USA, Europe)">
 		<description>Ristar - The Shooting Star (Japan) (Beta) (1994-07-01)</description>
@@ -8571,11 +8604,11 @@
 		<release name="RoboCop Versus The Terminator (USA)" region="USA"/>
 		<rom name="RoboCop Versus The Terminator (USA).md" size="2097152" crc="bbad77a4" md5="cfc3568cc985f7b73dd5afa69c9f28a4" sha1="b67b708006145406f2a8dacb237517ededec359a" status="verified"/>
 	</game>
-	<game name="RoboCop Versus The Terminator (Japan, Korea)" cloneof="RoboCop Versus The Terminator (Europe)">
-		<description>RoboCop Versus The Terminator (Japan, Korea)</description>
-		<release name="RoboCop Versus The Terminator (Japan, Korea)" region="JPN"/>
-		<release name="RoboCop Versus The Terminator (Japan, Korea)" region="KOR"/>
-		<rom name="RoboCop Versus The Terminator (Japan, Korea).md" size="2097152" crc="d444e1f0" md5="06f90c41aa7cdae56635fdd11da6c0c7" sha1="23f5d494e69a737f2026b5c54984d0d8a98f2cb0" status="verified"/>
+	<game name="RoboCop Versus The Terminator (Japan, Korea) (En)" cloneof="RoboCop Versus The Terminator (Europe)">
+		<description>RoboCop Versus The Terminator (Japan, Korea) (En)</description>
+		<release name="RoboCop Versus The Terminator (Japan, Korea) (En)" region="JPN"/>
+		<release name="RoboCop Versus The Terminator (Japan, Korea) (En)" region="KOR"/>
+		<rom name="RoboCop Versus The Terminator (Japan, Korea) (En).md" size="2097152" crc="d444e1f0" md5="06f90c41aa7cdae56635fdd11da6c0c7" sha1="23f5d494e69a737f2026b5c54984d0d8a98f2cb0" status="verified"/>
 	</game>
 	<game name="RoboCop Versus The Terminator (USA) (Beta) (1993-04-30)" cloneof="RoboCop Versus The Terminator (Europe)">
 		<description>RoboCop Versus The Terminator (USA) (Beta) (1993-04-30)</description>
@@ -8847,10 +8880,10 @@
 		<release name="Sega Sports 1 (Europe)" region="EUR"/>
 		<rom name="Sega Sports 1 (Europe).md" size="2621440" crc="07fedaf1" md5="61c6f43629f218f75e9e78ff2e59bf55" sha1="ff03bb2aced48c82de0ddfb048b114ec84daf16a"/>
 	</game>
-	<game name="Sega Top Five (Brazil)">
-		<description>Sega Top Five (Brazil)</description>
-		<release name="Sega Top Five (Brazil)" region="BRA"/>
-		<rom name="Sega Top Five (Brazil).md" size="2097152" crc="61069069" md5="4e939c29d924b05a14ef46e90f5cd1c3" sha1="b13ba8e49fb9e8b41835e3d4af86ad25f27c804c"/>
+	<game name="Sega Top Five (Brazil) (En)">
+		<description>Sega Top Five (Brazil) (En)</description>
+		<release name="Sega Top Five (Brazil) (En)" region="BRA"/>
+		<rom name="Sega Top Five (Brazil) (En).md" size="2097152" crc="61069069" md5="4e939c29d924b05a14ef46e90f5cd1c3" sha1="b13ba8e49fb9e8b41835e3d4af86ad25f27c804c"/>
 	</game>
 	<game name="Senjou no Ookami II ~ Mercs (World)">
 		<description>Senjou no Ookami II ~ Mercs (World)</description>
@@ -9032,10 +9065,10 @@
 		<release name="Shining and the Darkness (Japan)" region="JPN"/>
 		<rom name="Shining and the Darkness (Japan).md" size="1048576" crc="496af51c" md5="380741cee5ff1c89498270d45af7521a" sha1="c09ff5bcee1a29a48c65be4ad584708b85ca549b" status="verified"/>
 	</game>
-	<game name="Shining in the Darkness (Brazil)" cloneof="Shining in the Darkness (USA, Europe)">
-		<description>Shining in the Darkness (Brazil)</description>
-		<release name="Shining in the Darkness (Brazil)" region="BRA"/>
-		<rom name="Shining in the Darkness (Brazil).md" size="1048576" crc="3ee2bbc4" md5="5bdb8286d071ec744df1ef92529156d5" sha1="08c6e884d48329c45d9f090aeea03efd4c1918c0"/>
+	<game name="Shining in the Darkness (Brazil) (En)" cloneof="Shining in the Darkness (USA, Europe)">
+		<description>Shining in the Darkness (Brazil) (En)</description>
+		<release name="Shining in the Darkness (Brazil) (En)" region="BRA"/>
+		<rom name="Shining in the Darkness (Brazil) (En).md" size="1048576" crc="3ee2bbc4" md5="5bdb8286d071ec744df1ef92529156d5" sha1="08c6e884d48329c45d9f090aeea03efd4c1918c0"/>
 	</game>
 	<game name="Shinobi III - Return of the Ninja Master (Europe)">
 		<description>Shinobi III - Return of the Ninja Master (Europe)</description>
@@ -9055,11 +9088,11 @@
 		<description>Shinobi III - Return of the Ninja Master (USA) (Genesis Mini)</description>
 		<rom name="Shinobi III - Return of the Ninja Master (USA) (Genesis Mini).md" size="1048576" crc="c0f1de3c" md5="96ce4719e6525b5411e449ddb38630ff" sha1="a9e23c79662949e465f0ac233203dc6039e54867"/>
 	</game>
-	<game name="Super Shinobi II, The (Japan, Korea)" cloneof="Shinobi III - Return of the Ninja Master (Europe)">
-		<description>Super Shinobi II, The (Japan, Korea)</description>
-		<release name="Super Shinobi II, The (Japan, Korea)" region="JPN"/>
-		<release name="Super Shinobi II, The (Japan, Korea)" region="KOR"/>
-		<rom name="Super Shinobi II, The (Japan, Korea).md" size="1048576" crc="5b412816" md5="6ce59f3e7ee52dc8c6df7b4d8a166826" sha1="e3dbe326aa93320d405c561c306fc3954ab8ea7c" status="verified"/>
+	<game name="Super Shinobi II, The (Japan, Korea) (Ja)" cloneof="Shinobi III - Return of the Ninja Master (Europe)">
+		<description>Super Shinobi II, The (Japan, Korea) (Ja)</description>
+		<release name="Super Shinobi II, The (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Super Shinobi II, The (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Super Shinobi II, The (Japan, Korea) (Ja).md" size="1048576" crc="5b412816" md5="6ce59f3e7ee52dc8c6df7b4d8a166826" sha1="e3dbe326aa93320d405c561c306fc3954ab8ea7c" status="verified"/>
 	</game>
 	<game name="Super Shinobi II, The (Japan) (Beta 2)" cloneof="Shinobi III - Return of the Ninja Master (Europe)">
 		<description>Super Shinobi II, The (Japan) (Beta 2)</description>
@@ -9117,11 +9150,11 @@
 		<release name="Side Pocket (Europe)" region="EUR"/>
 		<rom name="Side Pocket (Europe).md" size="1048576" crc="36e08145" md5="49c78f9e16ea62931ecb770a32b393dd" sha1="a19cd561397dfda55942cf4f9771b0e815f95f65"/>
 	</game>
-	<game name="Side Pocket (Japan, Korea)" cloneof="Side Pocket (Europe)">
-		<description>Side Pocket (Japan, Korea)</description>
-		<release name="Side Pocket (Japan, Korea)" region="JPN"/>
-		<release name="Side Pocket (Japan, Korea)" region="KOR"/>
-		<rom name="Side Pocket (Japan, Korea).md" size="1048576" crc="336bbf3e" md5="213899f86e17e95f41498c0b54d702b0" sha1="161c1f67b712d8f4f82115877072486832b913fb" status="verified"/>
+	<game name="Side Pocket (Japan, Korea) (Ja)" cloneof="Side Pocket (Europe)">
+		<description>Side Pocket (Japan, Korea) (Ja)</description>
+		<release name="Side Pocket (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Side Pocket (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Side Pocket (Japan, Korea) (Ja).md" size="1048576" crc="336bbf3e" md5="213899f86e17e95f41498c0b54d702b0" sha1="161c1f67b712d8f4f82115877072486832b913fb" status="verified"/>
 	</game>
 	<game name="Side Pocket (USA)" cloneof="Side Pocket (Europe)">
 		<description>Side Pocket (USA)</description>
@@ -9225,11 +9258,11 @@
 		<release name="Socket (USA)" region="USA"/>
 		<rom name="Socket (USA).md" size="1048576" crc="3c14e15a" md5="9df8251cbfe05a47a5ff8fd9cf328b32" sha1="fee9eb272362bd6f36d552a9ebfd25f5f0db7d2f" status="verified"/>
 	</game>
-	<game name="Time Dominator 1st (Japan, Korea)" cloneof="Socket (USA)">
-		<description>Time Dominator 1st (Japan, Korea)</description>
-		<release name="Time Dominator 1st (Japan, Korea)" region="JPN"/>
-		<release name="Time Dominator 1st (Japan, Korea)" region="KOR"/>
-		<rom name="Time Dominator 1st (Japan, Korea).md" size="1048576" crc="7eba7a5c" md5="5f43a98bcf064fd5789c188bba85b34f" sha1="c9358fb57314be5792af5e97748f7b886a7194d2" status="verified"/>
+	<game name="Time Dominator 1st (Japan, Korea) (Ja)" cloneof="Socket (USA)">
+		<description>Time Dominator 1st (Japan, Korea) (Ja)</description>
+		<release name="Time Dominator 1st (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Time Dominator 1st (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Time Dominator 1st (Japan, Korea) (Ja).md" size="1048576" crc="7eba7a5c" md5="5f43a98bcf064fd5789c188bba85b34f" sha1="c9358fb57314be5792af5e97748f7b886a7194d2" status="verified"/>
 	</game>
 	<game name="Sol-Deace (USA)">
 		<description>Sol-Deace (USA)</description>
@@ -9328,11 +9361,11 @@
 		<release name="Sonic &amp; Knuckles + Sonic The Hedgehog (USA, Europe)" region="USA"/>
 		<rom name="Sonic &amp; Knuckles + Sonic The Hedgehog (USA, Europe).md" size="2621440" crc="e01f6ed5" md5="17ffe04bb891253e7ac3fb0952bb2edb" sha1="a3084262f5af481df1a5c5ab03c4862551a53c91" status="verified"/>
 	</game>
-	<game name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea)" cloneof="Sonic &amp; Knuckles + Sonic The Hedgehog (USA, Europe)">
-		<description>Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea)</description>
-		<release name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea)" region="JPN"/>
-		<release name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea)" region="KOR"/>
-		<rom name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea).md" size="2621440" crc="b6c67eac" md5="7bd6d3708af3a36983107249a3ab5505" sha1="252fdd1e3f1dc630e13a5ff51162bb454e6fed34"/>
+	<game name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea) (En)" cloneof="Sonic &amp; Knuckles + Sonic The Hedgehog (USA, Europe)">
+		<description>Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea) (En)</description>
+		<release name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea) (En)" region="JPN"/>
+		<release name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea) (En)" region="KOR"/>
+		<rom name="Sonic &amp; Knuckles + Sonic The Hedgehog (Japan, Korea) (En).md" size="2621440" crc="b6c67eac" md5="7bd6d3708af3a36983107249a3ab5505" sha1="252fdd1e3f1dc630e13a5ff51162bb454e6fed34"/>
 	</game>
 	<game name="Sonic &amp; Knuckles + Sonic The Hedgehog 2 (World)">
 		<description>Sonic &amp; Knuckles + Sonic The Hedgehog 2 (World)</description>
@@ -9373,11 +9406,11 @@
 		<release name="Sonic 3 (Europe)" region="EUR"/>
 		<rom name="Sonic 3 (Europe).md" size="2097152" crc="6a632503" md5="ab74fc7f42ce9b4a8f760d12cae69a2a" sha1="2ff45bb056ede0f745e52f8d02c54b4ca724ca4c" status="verified"/>
 	</game>
-	<game name="Sonic The Hedgehog 3 (Japan, Korea)" cloneof="Sonic 3 (Europe)">
-		<description>Sonic The Hedgehog 3 (Japan, Korea)</description>
-		<release name="Sonic The Hedgehog 3 (Japan, Korea)" region="JPN"/>
-		<release name="Sonic The Hedgehog 3 (Japan, Korea)" region="KOR"/>
-		<rom name="Sonic The Hedgehog 3 (Japan, Korea).md" size="2097152" crc="f4951d1f" md5="eaa77c15fbb36099ee6e6d6015ded368" sha1="7b98b21b7274233e962132bc22a7ccdf548c0ddb" status="verified"/>
+	<game name="Sonic The Hedgehog 3 (Japan, Korea) (Ja)" cloneof="Sonic 3 (Europe)">
+		<description>Sonic The Hedgehog 3 (Japan, Korea) (Ja)</description>
+		<release name="Sonic The Hedgehog 3 (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Sonic The Hedgehog 3 (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Sonic The Hedgehog 3 (Japan, Korea) (Ja).md" size="2097152" crc="f4951d1f" md5="eaa77c15fbb36099ee6e6d6015ded368" sha1="7b98b21b7274233e962132bc22a7ccdf548c0ddb" status="verified"/>
 	</game>
 	<game name="Sonic The Hedgehog 3 (USA)" cloneof="Sonic 3 (Europe)">
 		<description>Sonic The Hedgehog 3 (USA)</description>
@@ -9396,53 +9429,53 @@
 		<description>Sonic The Hedgehog 3 (USA) (Sonic Classic Collection)</description>
 		<rom name="Sonic The Hedgehog 3 (USA) (Sonic Classic Collection).md" size="2097152" crc="fc0429dd" md5="3af1c74639a2586e103caf3a1dcb1f36" sha1="7ceb83de0871962fa3cd8fdc0ba8b5dec9a32ca9"/>
 	</game>
-	<game name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)</description>
-		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)" region="EUR"/>
-		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)" region="KOR"/>
-		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)" region="USA"/>
-		<rom name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea).md" size="4194304" crc="44a2ca44" md5="50acbea2461d179b2bf11460a1cc6409" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7" status="verified"/>
+	<game name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)</description>
+		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)" region="EUR"/>
+		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)" region="KOR"/>
+		<release name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En).md" size="4194304" crc="44a2ca44" md5="50acbea2461d179b2bf11460a1cc6409" sha1="89957568386a5023d198ac2251ded9dfb2ab65e7" status="verified"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-19)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-19)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-19).md" size="4194304" crc="2c43f43a" md5="7a676b50e4e5f89ba51e08bb3c678abc" sha1="334ed5ca3e1aea2d9714bfd4c9a5697ae6a862d9"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-19)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-19)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-19).md" size="4194304" crc="2c43f43a" md5="7a676b50e4e5f89ba51e08bb3c678abc" sha1="334ed5ca3e1aea2d9714bfd4c9a5697ae6a862d9"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-07-03)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-07-03)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-07-03).md" size="2097152" crc="93b75e99" md5="8cb84ea6f747357ee5384f7bb59566bc" sha1="5343001b4608e2eef02e11d4ca2d36df0a34b8a0"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-07-03)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-07-03)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-07-03).md" size="2097152" crc="93b75e99" md5="8cb84ea6f747357ee5384f7bb59566bc" sha1="5343001b4608e2eef02e11d4ca2d36df0a34b8a0"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-14)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-14)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-14).md" size="4194304" crc="d64e7675" md5="eb8d295605fa8647047cba2907b8b90c" sha1="65ceb54f904cbc55c61547705455d1ef9832fee6"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-14)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-14)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-14).md" size="4194304" crc="d64e7675" md5="eb8d295605fa8647047cba2907b8b90c" sha1="65ceb54f904cbc55c61547705455d1ef9832fee6"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-25)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-25)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-25).md" size="4194304" crc="465bcfbd" md5="d04a109e1cb0be8a7268e8f20c1f95b3" sha1="228ee9a01afc7d6a65c64fb0b0ba66f5a1d72718"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-25)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-25)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-25).md" size="4194304" crc="465bcfbd" md5="d04a109e1cb0be8a7268e8f20c1f95b3" sha1="228ee9a01afc7d6a65c64fb0b0ba66f5a1d72718"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-30)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-30)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-30).md" size="4194054" crc="57640422" md5="8bb7afc833254fc5a1c23b8f40e97e09" sha1="44fa57e640380a46580f75f1a1460d3f6ecc12b8"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-30)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-30)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-30).md" size="4194054" crc="57640422" md5="8bb7afc833254fc5a1c23b8f40e97e09" sha1="44fa57e640380a46580f75f1a1460d3f6ecc12b8"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-31)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-31)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-08-31).md" size="4194304" crc="5933e453" md5="41ab84e532725d9753af5ea03447f851" sha1="1ec28a2495ca70c897dd2b513db7e8fdcc30d7f6"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-31)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-31)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-08-31).md" size="4194304" crc="5933e453" md5="41ab84e532725d9753af5ea03447f851" sha1="1ec28a2495ca70c897dd2b513db7e8fdcc30d7f6"/>
 	</game>
-	<game name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-09-04)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
-		<description>Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-09-04)</description>
-		<rom name="Sonic 3D Blast (USA, Europe, Korea) (Beta) (1996-09-04).md" size="4194304" crc="2f2a4271" md5="ceb2ce0267a8803c55e3bceaa2312d9c" sha1="d8aea4a5b3b593985e66ed37104f4f536f0d291b"/>
+	<game name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-09-04)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
+		<description>Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-09-04)</description>
+		<rom name="Sonic 3D Blast (USA, Europe, Korea) (En) (Beta) (1996-09-04).md" size="4194304" crc="2f2a4271" md5="ceb2ce0267a8803c55e3bceaa2312d9c" sha1="d8aea4a5b3b593985e66ed37104f4f536f0d291b"/>
 	</game>
-	<game name="Sonic 3D Blast - Director's Cut (World) (Unl)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea)">
+	<game name="Sonic 3D Blast - Director's Cut (World) (Unl)" cloneof="Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea) (En)">
 		<description>Sonic 3D Blast - Director's Cut (World) (Unl)</description>
 		<rom name="Sonic 3D Blast - Director's Cut (World) (Unl).md" size="4191682" crc="9767e840" md5="742dd5c98d143ff6716800dee6a25dc5" sha1="4072d34e119e199131b839d338f1fc38e472203a"/>
 	</game>
-	<game name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)">
-		<description>Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)</description>
-		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)" region="EUR"/>
-		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)" region="KOR"/>
-		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)" region="USA"/>
-		<rom name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A).md" size="3145728" crc="95b5e8d7" md5="59a5029e58a43c40b715fb8906e6634f" sha1="2196cbe754cfcd1d7bbbd0a8a45ae44de4deb2fb" status="verified"/>
+	<game name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)">
+		<description>Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)</description>
+		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)" region="EUR"/>
+		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)" region="KOR"/>
+		<release name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)" region="USA"/>
+		<rom name="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A).md" size="3145728" crc="95b5e8d7" md5="59a5029e58a43c40b715fb8906e6634f" sha1="2196cbe754cfcd1d7bbbd0a8a45ae44de4deb2fb" status="verified"/>
 	</game>
-	<game name="Sonic Compilation (Europe)" cloneof="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (Rev A)">
+	<game name="Sonic Compilation (Europe)" cloneof="Sonic Compilation ~ Sonic Classics (USA, Europe, Korea) (En) (Rev A)">
 		<description>Sonic Compilation (Europe)</description>
 		<rom name="Sonic Compilation (Europe).md" size="3145728" crc="8c70b84e" md5="1e8c38878d4184977718b8b3c90642b8" sha1="109e6d7b31d00fbdb9d4ecb304d4ea19e96c8607" status="verified"/>
 	</game>
@@ -9499,11 +9532,11 @@
 		<release name="Sonic The Hedgehog (USA, Europe)" region="USA"/>
 		<rom name="Sonic The Hedgehog (USA, Europe).md" size="524288" crc="f9394e97" md5="1bc674be034e43c96b86487ac69d9293" sha1="6ddb7de1e17e7f6cdb88927bd906352030daa194" status="verified"/>
 	</game>
-	<game name="Sonic The Hedgehog (Japan, Europe, Korea)" cloneof="Sonic The Hedgehog (USA, Europe)">
-		<description>Sonic The Hedgehog (Japan, Europe, Korea)</description>
-		<release name="Sonic The Hedgehog (Japan, Europe, Korea)" region="JPN"/>
-		<release name="Sonic The Hedgehog (Japan, Europe, Korea)" region="KOR"/>
-		<rom name="Sonic The Hedgehog (Japan, Europe, Korea).md" size="524288" crc="afe05eee" md5="09dadb5071eb35050067a32462e39c5f" sha1="69e102855d4389c3fd1a8f3dc7d193f8eee5fe5b" status="verified"/>
+	<game name="Sonic The Hedgehog (Japan, Europe, Korea) (En)" cloneof="Sonic The Hedgehog (USA, Europe)">
+		<description>Sonic The Hedgehog (Japan, Europe, Korea) (En)</description>
+		<release name="Sonic The Hedgehog (Japan, Europe, Korea) (En)" region="JPN"/>
+		<release name="Sonic The Hedgehog (Japan, Europe, Korea) (En)" region="KOR"/>
+		<rom name="Sonic The Hedgehog (Japan, Europe, Korea) (En).md" size="524288" crc="afe05eee" md5="09dadb5071eb35050067a32462e39c5f" sha1="69e102855d4389c3fd1a8f3dc7d193f8eee5fe5b" status="verified"/>
 	</game>
 	<game name="Sonic The Hedgehog (Japan) (En) (Virtual Console)" cloneof="Sonic The Hedgehog (USA, Europe)">
 		<description>Sonic The Hedgehog (Japan) (En) (Virtual Console)</description>
@@ -9755,16 +9788,16 @@
 		<release name="Splatterhouse 3 (USA)" region="USA"/>
 		<rom name="Splatterhouse 3 (USA).md" size="2097152" crc="00f05d07" md5="8c2a9b15ba24b611c895efd49c175ebe" sha1="7f29f00ec724e20cb93907f1e33ac4af16879827" status="verified"/>
 	</game>
-	<game name="Splatterhouse Part 3 (Japan, Korea)" cloneof="Splatterhouse 3 (USA)">
-		<description>Splatterhouse Part 3 (Japan, Korea)</description>
-		<release name="Splatterhouse Part 3 (Japan, Korea)" region="JPN"/>
-		<release name="Splatterhouse Part 3 (Japan, Korea)" region="KOR"/>
-		<rom name="Splatterhouse Part 3 (Japan, Korea).md" size="2097152" crc="31b83d22" md5="7277b3202363800a03e6790d3810f362" sha1="1fcb8adfdb19cb772adabac14e78c560d4f2e718" status="verified"/>
+	<game name="Splatterhouse Part 3 (Japan, Korea) (Ja)" cloneof="Splatterhouse 3 (USA)">
+		<description>Splatterhouse Part 3 (Japan, Korea) (Ja)</description>
+		<release name="Splatterhouse Part 3 (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Splatterhouse Part 3 (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Splatterhouse Part 3 (Japan, Korea) (Ja).md" size="2097152" crc="31b83d22" md5="7277b3202363800a03e6790d3810f362" sha1="1fcb8adfdb19cb772adabac14e78c560d4f2e718" status="verified"/>
 	</game>
-	<game name="Sport Games (Brazil)">
-		<description>Sport Games (Brazil)</description>
-		<release name="Sport Games (Brazil)" region="BRA"/>
-		<rom name="Sport Games (Brazil).md" size="4194304" crc="bc61aa50" md5="9fe2148e0b0718bb064865707448920c" sha1="8eda55c745162e761013a36ba65d007eab2dc7e7"/>
+	<game name="Sport Games (Brazil) (En)">
+		<description>Sport Games (Brazil) (En)</description>
+		<release name="Sport Games (Brazil) (En)" region="BRA"/>
+		<rom name="Sport Games (Brazil) (En).md" size="4194304" crc="bc61aa50" md5="9fe2148e0b0718bb064865707448920c" sha1="8eda55c745162e761013a36ba65d007eab2dc7e7"/>
 	</game>
 	<game name="Sports Talk Baseball (USA)">
 		<description>Sports Talk Baseball (USA)</description>
@@ -9885,11 +9918,11 @@
 		<release name="Steel Talons (USA, Europe)" region="USA"/>
 		<rom name="Steel Talons (USA, Europe).md" size="524288" crc="10e4ec63" md5="4523a96042e40b0d1ad24cc80be72c37" sha1="b4f0a13646c13911be5550103301af25827fcd0c" status="verified"/>
 	</game>
-	<game name="Steel Talons (Japan, Korea)" cloneof="Steel Talons (USA, Europe)">
-		<description>Steel Talons (Japan, Korea)</description>
-		<release name="Steel Talons (Japan, Korea)" region="JPN"/>
-		<release name="Steel Talons (Japan, Korea)" region="KOR"/>
-		<rom name="Steel Talons (Japan, Korea).md" size="524288" crc="04f388e6" md5="edfa7b1d6ce95725d2803b8f82e01b90" sha1="93c51ec9fcc56d858642018905b3defc17442c26" status="verified"/>
+	<game name="Steel Talons (Japan, Korea) (Ja)" cloneof="Steel Talons (USA, Europe)">
+		<description>Steel Talons (Japan, Korea) (Ja)</description>
+		<release name="Steel Talons (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Steel Talons (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Steel Talons (Japan, Korea) (Ja).md" size="524288" crc="04f388e6" md5="edfa7b1d6ce95725d2803b8f82e01b90" sha1="93c51ec9fcc56d858642018905b3defc17442c26" status="verified"/>
 	</game>
 	<game name="Steel Talons (USA, Europe) (Beta)" cloneof="Steel Talons (USA, Europe)">
 		<description>Steel Talons (USA, Europe) (Beta)</description>
@@ -10007,11 +10040,11 @@
 		<description>Street Fighter II' - Special Champion Edition (Europe) (Virtual Console)</description>
 		<rom name="Street Fighter II' - Special Champion Edition (Europe) (Virtual Console).md" size="3145728" crc="ed3f3e20" md5="727d88b508e960db9433e81e97603ce1" sha1="379a7af5768d5badc348e626712af8c6ea1bff76"/>
 	</game>
-	<game name="Street Fighter II' Plus - Champion Edition (Japan, Korea)" cloneof="Street Fighter II' - Special Champion Edition (Europe)">
-		<description>Street Fighter II' Plus - Champion Edition (Japan, Korea)</description>
-		<release name="Street Fighter II' Plus - Champion Edition (Japan, Korea)" region="JPN"/>
-		<release name="Street Fighter II' Plus - Champion Edition (Japan, Korea)" region="KOR"/>
-		<rom name="Street Fighter II' Plus - Champion Edition (Japan, Korea).md" size="3145728" crc="2e487ee3" md5="8828f4691cfbb4b9f2448ee4ca9c2755" sha1="0d624f1a34014ead022dd8d5df1134a88eca69bb" status="verified"/>
+	<game name="Street Fighter II' Plus - Champion Edition (Japan, Korea) (Ja)" cloneof="Street Fighter II' - Special Champion Edition (Europe)">
+		<description>Street Fighter II' Plus - Champion Edition (Japan, Korea) (Ja)</description>
+		<release name="Street Fighter II' Plus - Champion Edition (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Street Fighter II' Plus - Champion Edition (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Street Fighter II' Plus - Champion Edition (Japan, Korea) (Ja).md" size="3145728" crc="2e487ee3" md5="8828f4691cfbb4b9f2448ee4ca9c2755" sha1="0d624f1a34014ead022dd8d5df1134a88eca69bb" status="verified"/>
 	</game>
 	<game name="Street Fighter II' Plus - Champion Edition (Japan) (Virtual Console)" cloneof="Street Fighter II' - Special Champion Edition (Europe)">
 		<description>Street Fighter II' Plus - Champion Edition (Japan) (Virtual Console)</description>
@@ -10026,15 +10059,15 @@
 		<description>Street Racer (Europe) (Beta) (1995-03-21)</description>
 		<rom name="Street Racer (Europe) (Beta) (1995-03-21).md" size="1048576" crc="a439a96e" md5="d240289db4df2ac27dfbc204652218c9" sha1="674e3c5185923a98bd8e9ae9bc0409d0c6503432"/>
 	</game>
-	<game name="Street Smart (Japan, USA)">
-		<description>Street Smart (Japan, USA)</description>
-		<release name="Street Smart (Japan, USA)" region="JPN"/>
-		<release name="Street Smart (Japan, USA)" region="USA"/>
-		<rom name="Street Smart (Japan, USA).md" size="524288" crc="b1dedfad" md5="7a926aaea9e526066a75c253738b633c" sha1="a9cb2295b9cd42475904cba19b983e075a1b6014"/>
+	<game name="Street Smart (Japan, USA) (En)">
+		<description>Street Smart (Japan, USA) (En)</description>
+		<release name="Street Smart (Japan, USA) (En)" region="JPN"/>
+		<release name="Street Smart (Japan, USA) (En)" region="USA"/>
+		<rom name="Street Smart (Japan, USA) (En).md" size="524288" crc="b1dedfad" md5="7a926aaea9e526066a75c253738b633c" sha1="a9cb2295b9cd42475904cba19b983e075a1b6014"/>
 	</game>
-	<game name="Street Smart (Japan, USA) (Beta) (1990-06-29)" cloneof="Street Smart (Japan, USA)">
-		<description>Street Smart (Japan, USA) (Beta) (1990-06-29)</description>
-		<rom name="Street Smart (Japan, USA) (Beta) (1990-06-29).md" size="524288" crc="d1de6a2e" md5="1e439309c5cced355fb7e94454c82f41" sha1="d8f0b2695adf4653b463c6a52ac6b6d41cdb771d"/>
+	<game name="Street Smart (Japan, USA) (En) (Beta) (1990-06-29)" cloneof="Street Smart (Japan, USA) (En)">
+		<description>Street Smart (Japan, USA) (En) (Beta) (1990-06-29)</description>
+		<rom name="Street Smart (Japan, USA) (En) (Beta) (1990-06-29).md" size="524288" crc="d1de6a2e" md5="1e439309c5cced355fb7e94454c82f41" sha1="d8f0b2695adf4653b463c6a52ac6b6d41cdb771d"/>
 	</game>
 	<game name="Streets of Rage 3 (Europe)">
 		<description>Streets of Rage 3 (Europe)</description>
@@ -10130,11 +10163,11 @@
 		<description>Strider (USA, Europe) (Virtual Console)</description>
 		<rom name="Strider (USA, Europe) (Virtual Console).md" size="1048576" crc="5b96a532" md5="1f7b353c9591c71aaf786d20d1cb43f5" sha1="aa7987b642507ca78ae6d9fd191cd3087dc7864d" status="verified"/>
 	</game>
-	<game name="Strider Hiryuu (Japan, Korea)" cloneof="Strider (USA, Europe)">
-		<description>Strider Hiryuu (Japan, Korea)</description>
-		<release name="Strider Hiryuu (Japan, Korea)" region="JPN"/>
-		<release name="Strider Hiryuu (Japan, Korea)" region="KOR"/>
-		<rom name="Strider Hiryuu (Japan, Korea).md" size="1048576" crc="859173f2" md5="46ab937c360932b8ad31a866fb9a2c7a" sha1="4198030057a1a0479b382fc2d69cfe32a523fa32" status="verified"/>
+	<game name="Strider Hiryuu (Japan, Korea) (Ja)" cloneof="Strider (USA, Europe)">
+		<description>Strider Hiryuu (Japan, Korea) (Ja)</description>
+		<release name="Strider Hiryuu (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Strider Hiryuu (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Strider Hiryuu (Japan, Korea) (Ja).md" size="1048576" crc="859173f2" md5="46ab937c360932b8ad31a866fb9a2c7a" sha1="4198030057a1a0479b382fc2d69cfe32a523fa32" status="verified"/>
 	</game>
 	<game name="Strider Hiryuu (Japan) (Rev A) (Virtual Console)" cloneof="Strider (USA, Europe)">
 		<description>Strider Hiryuu (Japan) (Rev A) (Virtual Console)</description>
@@ -10401,11 +10434,11 @@
 		<description>Pat Riley Basketball (USA) (Beta) (1990-06-14)</description>
 		<rom name="Pat Riley Basketball (USA) (Beta) (1990-06-14).md" size="524288" crc="00f4c7cc" md5="b4e1b92d38eb5ccf6951d6c4b559f27f" sha1="b939dd0e18800f93f8674114c6838e364d74021a"/>
 	</game>
-	<game name="Super Real Basketball (Japan, Korea)" cloneof="Super Real Basketball (Europe)">
-		<description>Super Real Basketball (Japan, Korea)</description>
-		<release name="Super Real Basketball (Japan, Korea)" region="JPN"/>
-		<release name="Super Real Basketball (Japan, Korea)" region="KOR"/>
-		<rom name="Super Real Basketball (Japan, Korea).md" size="524288" crc="4346e11a" md5="50576153aa8102d02b122210ffaff07f" sha1="c86725780027ef9783cb7884c8770cc030b0cd0d" status="verified"/>
+	<game name="Super Real Basketball (Japan, Korea) (Ja)" cloneof="Super Real Basketball (Europe)">
+		<description>Super Real Basketball (Japan, Korea) (Ja)</description>
+		<release name="Super Real Basketball (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Super Real Basketball (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Super Real Basketball (Japan, Korea) (Ja).md" size="524288" crc="4346e11a" md5="50576153aa8102d02b122210ffaff07f" sha1="c86725780027ef9783cb7884c8770cc030b0cd0d" status="verified"/>
 	</game>
 	<game name="Super Skidmarks (Europe) (J-Cart)">
 		<description>Super Skidmarks (Europe) (J-Cart)</description>
@@ -10929,10 +10962,10 @@
 		<release name="Tel-Tel Stadium (Japan)" region="JPN"/>
 		<rom name="Tel-Tel Stadium (Japan).md" size="524288" crc="54cf8c29" md5="10de73887a8f42561e9966bdeadf7ad4" sha1="2924ed0b4266edddbb981f97acb93bbdf90494e6" status="verified"/>
 	</game>
-	<game name="Telebradesco Residencia (Brazil) (Program)">
-		<description>Telebradesco Residencia (Brazil) (Program)</description>
-		<release name="Telebradesco Residencia (Brazil) (Program)" region="BRA"/>
-		<rom name="Telebradesco Residencia (Brazil) (Program).md" size="262144" crc="1db99045" md5="aa465b9d9aa4367c5d48219f42c6f73a" sha1="917c0f72e21c98ee2ee367c4d42c992c886a3aa2"/>
+	<game name="Telebradesco Residencia (Brazil) (En) (Program)">
+		<description>Telebradesco Residencia (Brazil) (En) (Program)</description>
+		<release name="Telebradesco Residencia (Brazil) (En) (Program)" region="BRA"/>
+		<rom name="Telebradesco Residencia (Brazil) (En) (Program).md" size="262144" crc="1db99045" md5="aa465b9d9aa4367c5d48219f42c6f73a" sha1="917c0f72e21c98ee2ee367c4d42c992c886a3aa2"/>
 	</game>
 	<game name="Tenchi o Kurau III - Sangoku Gaiden (Taiwan) (Unl)">
 		<description>Tenchi o Kurau III - Sangoku Gaiden (Taiwan) (Unl)</description>
@@ -11001,15 +11034,15 @@
 		<release name="Thunder Force II MD (Japan)" region="JPN"/>
 		<rom name="Thunder Force II MD (Japan).md" size="524288" crc="e75ec3e0" md5="5b134b597779c5d6c2783fe3ee401766" sha1="44b173b74225e5b562cdf3982926a051f05ed98e"/>
 	</game>
-	<game name="Thunder Force III (Japan, USA)">
-		<description>Thunder Force III (Japan, USA)</description>
-		<release name="Thunder Force III (Japan, USA)" region="JPN"/>
-		<release name="Thunder Force III (Japan, USA)" region="USA"/>
-		<rom name="Thunder Force III (Japan, USA).md" size="524288" crc="1b3f399a" md5="64766dae889d039eb391bc5bf2973f5d" sha1="9eadee76eb0509d5a0f16372fc9eac7a883e5f2d" status="verified"/>
+	<game name="Thunder Force III (Japan, USA) (En)">
+		<description>Thunder Force III (Japan, USA) (En)</description>
+		<release name="Thunder Force III (Japan, USA) (En)" region="JPN"/>
+		<release name="Thunder Force III (Japan, USA) (En)" region="USA"/>
+		<rom name="Thunder Force III (Japan, USA) (En).md" size="524288" crc="1b3f399a" md5="64766dae889d039eb391bc5bf2973f5d" sha1="9eadee76eb0509d5a0f16372fc9eac7a883e5f2d" status="verified"/>
 	</game>
-	<game name="Thunder Force III (Japan, USA) (Beta) (1990-08-01)" cloneof="Thunder Force III (Japan, USA)">
-		<description>Thunder Force III (Japan, USA) (Beta) (1990-08-01)</description>
-		<rom name="Thunder Force III (Japan, USA) (Beta) (1990-08-01).md" size="524288" crc="2b5c2063" md5="5d694df1dbe9648ea6533871a6a07c3e" sha1="5debc42ff0355e6ade7cf30f778b6a5c682fea7f"/>
+	<game name="Thunder Force III (Japan, USA) (En) (Beta) (1990-08-01)" cloneof="Thunder Force III (Japan, USA) (En)">
+		<description>Thunder Force III (Japan, USA) (En) (Beta) (1990-08-01)</description>
+		<rom name="Thunder Force III (Japan, USA) (En) (Beta) (1990-08-01).md" size="524288" crc="2b5c2063" md5="5d694df1dbe9648ea6533871a6a07c3e" sha1="5debc42ff0355e6ade7cf30f778b6a5c682fea7f"/>
 	</game>
 	<game name="Thunder Force IV (Europe)">
 		<description>Thunder Force IV (Europe)</description>
@@ -11102,21 +11135,21 @@
 		<release name="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)" region="EUR"/>
 		<rom name="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De).md" size="1048576" crc="1227b2b2" md5="abddd42b2548e9b708991f689d726c9a" sha1="2672018d9e005a9a3b5006fa8f61e08f2d1909aa" status="verified"/>
 	</game>
-	<game name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" cloneof="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)">
-		<description>Tiny Toon Adventures - ACME All-Stars (USA, Korea)</description>
-		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" region="KOR"/>
-		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea)" region="USA"/>
-		<rom name="Tiny Toon Adventures - ACME All-Stars (USA, Korea).md" size="1048576" crc="2f9faa1d" md5="1def1d7dbe4ab6b9e1fc90093292de6a" sha1="d64736a69fca430fc6a84a60335add0c765feb71" status="verified"/>
+	<game name="Tiny Toon Adventures - ACME All-Stars (USA, Korea) (En)" cloneof="Tiny Toon Adventures - ACME All-Stars (Europe) (En,Fr,De)">
+		<description>Tiny Toon Adventures - ACME All-Stars (USA, Korea) (En)</description>
+		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea) (En)" region="KOR"/>
+		<release name="Tiny Toon Adventures - ACME All-Stars (USA, Korea) (En)" region="USA"/>
+		<rom name="Tiny Toon Adventures - ACME All-Stars (USA, Korea) (En).md" size="1048576" crc="2f9faa1d" md5="1def1d7dbe4ab6b9e1fc90093292de6a" sha1="d64736a69fca430fc6a84a60335add0c765feb71" status="verified"/>
 	</game>
 	<game name="Tiny Toon Adventures - Buster's Hidden Treasure (Europe)">
 		<description>Tiny Toon Adventures - Buster's Hidden Treasure (Europe)</description>
 		<release name="Tiny Toon Adventures - Buster's Hidden Treasure (Europe)" region="EUR"/>
 		<rom name="Tiny Toon Adventures - Buster's Hidden Treasure (Europe).md" size="524288" crc="d10fba51" md5="f34b286c0abd5eaab6a2e98a1c4c5176" sha1="9e63b150cc2ec0ef141e68ffda862aa8db604441" status="verified"/>
 	</game>
-	<game name="Tiny Toon Adventures (Korea)" cloneof="Tiny Toon Adventures - Buster's Hidden Treasure (Europe)">
-		<description>Tiny Toon Adventures (Korea)</description>
-		<release name="Tiny Toon Adventures (Korea)" region="KOR"/>
-		<rom name="Tiny Toon Adventures (Korea).md" size="524288" crc="4ca3a8fb" md5="c1e16666cac05be073583ce0c4869dc9" sha1="365d190088d78813f65610ff2b5b50c0e4060e24"/>
+	<game name="Tiny Toon Adventures (Korea) (En)" cloneof="Tiny Toon Adventures - Buster's Hidden Treasure (Europe)">
+		<description>Tiny Toon Adventures (Korea) (En)</description>
+		<release name="Tiny Toon Adventures (Korea) (En)" region="KOR"/>
+		<rom name="Tiny Toon Adventures (Korea) (En).md" size="524288" crc="4ca3a8fb" md5="c1e16666cac05be073583ce0c4869dc9" sha1="365d190088d78813f65610ff2b5b50c0e4060e24"/>
 	</game>
 	<game name="Tiny Toon Adventures - Buster's Hidden Treasure (USA)" cloneof="Tiny Toon Adventures - Buster's Hidden Treasure (Europe)">
 		<description>Tiny Toon Adventures - Buster's Hidden Treasure (USA)</description>
@@ -11148,16 +11181,16 @@
 		<release name="Slime World (Japan)" region="JPN"/>
 		<rom name="Slime World (Japan).md" size="524288" crc="7ff5529f" md5="e091a9c36be441ef0ad2fb6dc690255b" sha1="02cf05687a7f3f8177b2aff0a0cfbd5c490e557d" status="verified"/>
 	</game>
-	<game name="ToeJam &amp; Earl (Japan, Europe) (Rev A)">
-		<description>ToeJam &amp; Earl (Japan, Europe) (Rev A)</description>
-		<release name="ToeJam &amp; Earl (Japan, Europe) (Rev A)" region="EUR"/>
-		<release name="ToeJam &amp; Earl (Japan, Europe) (Rev A)" region="JPN"/>
-		<rom name="ToeJam &amp; Earl (Japan, Europe) (Rev A).md" size="1048576" crc="7a588f4b" md5="72dc91fd2c5528b384f082a38db9ddda" sha1="85e8d0a4fac591b25b77c35680ac4175976f251b" status="verified"/>
+	<game name="ToeJam &amp; Earl (Japan, Europe) (En) (Rev A)">
+		<description>ToeJam &amp; Earl (Japan, Europe) (En) (Rev A)</description>
+		<release name="ToeJam &amp; Earl (Japan, Europe) (En) (Rev A)" region="EUR"/>
+		<release name="ToeJam &amp; Earl (Japan, Europe) (En) (Rev A)" region="JPN"/>
+		<rom name="ToeJam &amp; Earl (Japan, Europe) (En) (Rev A).md" size="1048576" crc="7a588f4b" md5="72dc91fd2c5528b384f082a38db9ddda" sha1="85e8d0a4fac591b25b77c35680ac4175976f251b" status="verified"/>
 	</game>
-	<game name="ToeJam &amp; Earl (USA, Europe, Korea)" cloneof="ToeJam &amp; Earl (Japan, Europe) (Rev A)">
-		<description>ToeJam &amp; Earl (USA, Europe, Korea)</description>
-		<release name="ToeJam &amp; Earl (USA, Europe, Korea)" region="USA"/>
-		<rom name="ToeJam &amp; Earl (USA, Europe, Korea).md" size="1048576" crc="d1b36786" md5="0a6af20d9c5b3ec4e23c683f083b92cd" sha1="7f82d8b57fff88bdca5d8aff85b01e231dc1239a" status="verified"/>
+	<game name="ToeJam &amp; Earl (USA, Europe, Korea) (En)" cloneof="ToeJam &amp; Earl (Japan, Europe) (En) (Rev A)">
+		<description>ToeJam &amp; Earl (USA, Europe, Korea) (En)</description>
+		<release name="ToeJam &amp; Earl (USA, Europe, Korea) (En)" region="USA"/>
+		<rom name="ToeJam &amp; Earl (USA, Europe, Korea) (En).md" size="1048576" crc="d1b36786" md5="0a6af20d9c5b3ec4e23c683f083b92cd" sha1="7f82d8b57fff88bdca5d8aff85b01e231dc1239a" status="verified"/>
 	</game>
 	<game name="ToeJam &amp; Earl in Panic on Funkotron (Europe)">
 		<description>ToeJam &amp; Earl in Panic on Funkotron (Europe)</description>
@@ -11377,15 +11410,15 @@
 		<release name="Tun Shi Tian Di III (Taiwan) (Simple Chinese) (Unl)" region="TAI"/>
 		<rom name="Tun Shi Tian Di III (Taiwan) (Simple Chinese) (Unl).md" size="2097152" crc="ea57b668" md5="88f19e23af14c35152d4964f426529e1" sha1="7040e96c053f29c75cf0524ddb168a83d0fb526f"/>
 	</game>
-	<game name="Turbo OutRun (Japan, Europe)">
-		<description>Turbo OutRun (Japan, Europe)</description>
-		<release name="Turbo OutRun (Japan, Europe)" region="EUR"/>
-		<release name="Turbo OutRun (Japan, Europe)" region="JPN"/>
-		<rom name="Turbo OutRun (Japan, Europe).md" size="524288" crc="0c661369" md5="32fb1f12205e350cfe2bb66616043b59" sha1="3e4b9881dde758ef7bb090b39d3556d9bc0d9f1e" status="verified"/>
+	<game name="Turbo OutRun (Japan, Europe) (En)">
+		<description>Turbo OutRun (Japan, Europe) (En)</description>
+		<release name="Turbo OutRun (Japan, Europe) (En)" region="EUR"/>
+		<release name="Turbo OutRun (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Turbo OutRun (Japan, Europe) (En).md" size="524288" crc="0c661369" md5="32fb1f12205e350cfe2bb66616043b59" sha1="3e4b9881dde758ef7bb090b39d3556d9bc0d9f1e" status="verified"/>
 	</game>
-	<game name="Turbo OutRun (Japan, Europe) (Beta) (1991-12-09)" cloneof="Turbo OutRun (Japan, Europe)">
-		<description>Turbo OutRun (Japan, Europe) (Beta) (1991-12-09)</description>
-		<rom name="Turbo OutRun (Japan, Europe) (Beta) (1991-12-09).md" size="524288" crc="2a7f2b36" md5="2dfece94b43477a87b2c3ac0e74b5cfa" sha1="9695c91c42f635e6b3a046ca813d3cbe6d180a83"/>
+	<game name="Turbo OutRun (Japan, Europe) (En) (Beta) (1991-12-09)" cloneof="Turbo OutRun (Japan, Europe) (En)">
+		<description>Turbo OutRun (Japan, Europe) (En) (Beta) (1991-12-09)</description>
+		<rom name="Turbo OutRun (Japan, Europe) (En) (Beta) (1991-12-09).md" size="524288" crc="2a7f2b36" md5="2dfece94b43477a87b2c3ac0e74b5cfa" sha1="9695c91c42f635e6b3a046ca813d3cbe6d180a83"/>
 	</game>
 	<game name="Turrican (USA, Europe) (Unl)">
 		<description>Turrican (USA, Europe) (Unl)</description>
@@ -11654,10 +11687,10 @@
 		<release name="Virtua Fighter 2 (USA, Europe)" region="USA"/>
 		<rom name="Virtua Fighter 2 (USA, Europe).md" size="4194304" crc="937380f3" md5="61b922208e0518a2e127939d374a43cb" sha1="c283bf31b646489c2341f8325c52fb8b788a3702" status="verified"/>
 	</game>
-	<game name="Virtua Fighter 2 (Korea)" cloneof="Virtua Fighter 2 (USA, Europe)">
-		<description>Virtua Fighter 2 (Korea)</description>
-		<release name="Virtua Fighter 2 (Korea)" region="KOR"/>
-		<rom name="Virtua Fighter 2 (Korea).md" size="4194304" crc="a95d0949" md5="ad3fb9946f0bf18c73413d0e4d57ddbf" sha1="dff095c9c252bf4af5aae52b83bc3c9d243176b7" status="verified"/>
+	<game name="Virtua Fighter 2 (Korea) (En)" cloneof="Virtua Fighter 2 (USA, Europe)">
+		<description>Virtua Fighter 2 (Korea) (En)</description>
+		<release name="Virtua Fighter 2 (Korea) (En)" region="KOR"/>
+		<rom name="Virtua Fighter 2 (Korea) (En).md" size="4194304" crc="a95d0949" md5="ad3fb9946f0bf18c73413d0e4d57ddbf" sha1="dff095c9c252bf4af5aae52b83bc3c9d243176b7" status="verified"/>
 	</game>
 	<game name="Virtua Fighter 2 (USA, Europe) (Beta) (1996-08-19)" cloneof="Virtua Fighter 2 (USA, Europe)">
 		<description>Virtua Fighter 2 (USA, Europe) (Beta) (1996-08-19)</description>
@@ -11967,11 +12000,11 @@
 		<release name="Wolverine - Adamantium Rage (USA, Europe)" region="USA"/>
 		<rom name="Wolverine - Adamantium Rage (USA, Europe).md" size="2097152" crc="d2437bb7" md5="edcab9581877ad444db121e1badd45f9" sha1="261f8ed75586ca7cdec176eb81550458bf1ff437" status="verified"/>
 	</game>
-	<game name="Wonder Boy III - Monster Lair (Japan, Europe)">
-		<description>Wonder Boy III - Monster Lair (Japan, Europe)</description>
-		<release name="Wonder Boy III - Monster Lair (Japan, Europe)" region="EUR"/>
-		<release name="Wonder Boy III - Monster Lair (Japan, Europe)" region="JPN"/>
-		<rom name="Wonder Boy III - Monster Lair (Japan, Europe).md" size="524288" crc="c24bc5e4" md5="17f53791945ce7ccd83a4e812e3705e4" sha1="1fd3f77a2223ebeda547b81e49f3dfc9d0197439" status="verified"/>
+	<game name="Wonder Boy III - Monster Lair (Japan, Europe) (En)">
+		<description>Wonder Boy III - Monster Lair (Japan, Europe) (En)</description>
+		<release name="Wonder Boy III - Monster Lair (Japan, Europe) (En)" region="EUR"/>
+		<release name="Wonder Boy III - Monster Lair (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Wonder Boy III - Monster Lair (Japan, Europe) (En).md" size="524288" crc="c24bc5e4" md5="17f53791945ce7ccd83a4e812e3705e4" sha1="1fd3f77a2223ebeda547b81e49f3dfc9d0197439" status="verified"/>
 	</game>
 	<game name="Wonder Boy in Monster World (USA, Europe)">
 		<description>Wonder Boy in Monster World (USA, Europe)</description>
@@ -11984,15 +12017,15 @@
 		<release name="Turma da Monica na Terra dos Monstros (Brazil)" region="BRA"/>
 		<rom name="Turma da Monica na Terra dos Monstros (Brazil).md" size="1048576" crc="f8288de1" md5="fc0671e09a03e6ca6481f34eb5e2114e" sha1="80fc2a6a6b8b943f781598094f3b5a5fe4f05ede"/>
 	</game>
-	<game name="Wonder Boy V - Monster World III (Japan, Korea)" cloneof="Wonder Boy in Monster World (USA, Europe)">
-		<description>Wonder Boy V - Monster World III (Japan, Korea)</description>
-		<release name="Wonder Boy V - Monster World III (Japan, Korea)" region="JPN"/>
-		<release name="Wonder Boy V - Monster World III (Japan, Korea)" region="KOR"/>
-		<rom name="Wonder Boy V - Monster World III (Japan, Korea).md" size="655360" crc="45a50f96" md5="e25afc5b755555397e4047061050ae05" sha1="1582f159e1969ff0541319a9bd7e6f7a53505d01" status="verified"/>
+	<game name="Wonder Boy V - Monster World III (Japan, Korea) (Ja)" cloneof="Wonder Boy in Monster World (USA, Europe)">
+		<description>Wonder Boy V - Monster World III (Japan, Korea) (Ja)</description>
+		<release name="Wonder Boy V - Monster World III (Japan, Korea) (Ja)" region="JPN"/>
+		<release name="Wonder Boy V - Monster World III (Japan, Korea) (Ja)" region="KOR"/>
+		<rom name="Wonder Boy V - Monster World III (Japan, Korea) (Ja).md" size="655360" crc="45a50f96" md5="e25afc5b755555397e4047061050ae05" sha1="1582f159e1969ff0541319a9bd7e6f7a53505d01" status="verified"/>
 	</game>
-	<game name="Wonder Boy V - Monster World III (Japan, Korea) (Beta) (1991-07-25)" cloneof="Wonder Boy in Monster World (USA, Europe)">
-		<description>Wonder Boy V - Monster World III (Japan, Korea) (Beta) (1991-07-25)</description>
-		<rom name="Wonder Boy V - Monster World III (Japan, Korea) (Beta) (1991-07-25).md" size="786432" crc="334035f8" md5="419668e422d0956b01556fef16721b66" sha1="1677039ede9a4cf51ac182cfe27d797c864290c8"/>
+	<game name="Wonder Boy V - Monster World III (Japan, Korea) (Ja) (Beta) (1991-07-25)" cloneof="Wonder Boy in Monster World (USA, Europe)">
+		<description>Wonder Boy V - Monster World III (Japan, Korea) (Ja) (Beta) (1991-07-25)</description>
+		<rom name="Wonder Boy V - Monster World III (Japan, Korea) (Ja) (Beta) (1991-07-25).md" size="786432" crc="334035f8" md5="419668e422d0956b01556fef16721b66" sha1="1677039ede9a4cf51ac182cfe27d797c864290c8"/>
 	</game>
 	<game name="Wonder Library (Japan) (Program)">
 		<description>Wonder Library (Japan) (Program)</description>
@@ -12104,19 +12137,19 @@
 		<description>World Cup Soccer (Japan) (En)</description>
 		<rom name="World Cup Soccer (Japan) (En).md" size="262144" crc="b01c3d70" md5="9ef694ab80344a7cced0d33f9c84a1b5" sha1="39bbab6430aad3fa9bf024c4b42387ba4ba3e488"/>
 	</game>
-	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA)" cloneof="World Cup Italia '90 (Europe)">
-		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA)</description>
-		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA).md" size="262144" crc="6363ef45" md5="45833513720e70b5fcf23a4e5934fe5e" sha1="305468b4f74329a7e4f4aa35bd02289798f6652d"/>
+	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En)" cloneof="World Cup Italia '90 (Europe)">
+		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA) (En)</description>
+		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En).md" size="262144" crc="6363ef45" md5="45833513720e70b5fcf23a4e5934fe5e" sha1="305468b4f74329a7e4f4aa35bd02289798f6652d"/>
 	</game>
-	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev B)" cloneof="World Cup Italia '90 (Europe)">
-		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev B)</description>
-		<release name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev B)" region="JPN"/>
-		<release name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev B)" region="USA"/>
-		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev B).md" size="262144" crc="bf272bcb" md5="a1647bee0108acba9e2f99daab336c18" sha1="9da376f266c98c93ae387bec541c513fec84a0e9" status="verified"/>
+	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev B)" cloneof="World Cup Italia '90 (Europe)">
+		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev B)</description>
+		<release name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev B)" region="JPN"/>
+		<release name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev B)" region="USA"/>
+		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev B).md" size="262144" crc="bf272bcb" md5="a1647bee0108acba9e2f99daab336c18" sha1="9da376f266c98c93ae387bec541c513fec84a0e9" status="verified"/>
 	</game>
-	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev A)" cloneof="World Cup Italia '90 (Europe)">
-		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev A)</description>
-		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (Rev A).md" size="262144" crc="bf84ede6" md5="34d356930dcb13fe02a3ec42b3d8d70e" sha1="ef8c106acad9c3b4a5db2cd0d311762491d28392" status="verified"/>
+	<game name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev A)" cloneof="World Cup Italia '90 (Europe)">
+		<description>World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev A)</description>
+		<rom name="World Cup Soccer ~ World Championship Soccer (Japan, USA) (En) (Rev A).md" size="262144" crc="bf84ede6" md5="34d356930dcb13fe02a3ec42b3d8d70e" sha1="ef8c106acad9c3b4a5db2cd0d311762491d28392" status="verified"/>
 	</game>
 	<game name="World Cup USA 94 (USA, Europe, Korea) (En,Fr,De,Es,It,Nl,Pt,Sv)">
 		<description>World Cup USA 94 (USA, Europe, Korea) (En,Fr,De,Es,It,Nl,Pt,Sv)</description>
@@ -12222,19 +12255,19 @@
 		<release name="I Love Mickey and Donald - Fushigi na Magic Box (Japan) (Rev 1)" region="JPN"/>
 		<rom name="I Love Mickey and Donald - Fushigi na Magic Box (Japan) (Rev 1).md" size="1048576" crc="277bdb4c" md5="b44c84ad8ffd258d016538a4a6ce4b2a" sha1="849f9707ba7c308a2833368c7fdf5960de78acfd" status="verified"/>
 	</game>
-	<game name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 1)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
-		<description>World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 1)</description>
-		<rom name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 1).md" size="1048576" crc="577f680f" md5="541367d403fee99c53aab4d4ecd9f866" sha1="c3d721dc3d6660156f28728d729a2c0d4bb23fdf"/>
+	<game name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Ja) (Beta 1)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
+		<description>World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Ja) (Beta 1)</description>
+		<rom name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Ja) (Beta 1).md" size="1048576" crc="577f680f" md5="541367d403fee99c53aab4d4ecd9f866" sha1="c3d721dc3d6660156f28728d729a2c0d4bb23fdf"/>
 	</game>
-	<game name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 2)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
-		<description>World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 2)</description>
-		<rom name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (Beta 2).md" size="1048576" crc="f807176c" md5="c6691880c916f95949785cfa4a3a097a" sha1="42f9c3e8f3a3b4808a9ab0dd23968709732029c7"/>
+	<game name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (En) (Beta 2)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
+		<description>World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (En) (Beta 2)</description>
+		<rom name="World of Illusion starring Mickey Mouse &amp; Donald Duck (USA, Korea) (En) (Beta 2).md" size="1048576" crc="f807176c" md5="c6691880c916f95949785cfa4a3a097a" sha1="42f9c3e8f3a3b4808a9ab0dd23968709732029c7"/>
 	</game>
-	<game name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
-		<description>World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea)</description>
-		<release name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea)" region="KOR"/>
-		<release name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea)" region="USA"/>
-		<rom name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea).md" size="1048576" crc="921ebd1c" md5="c2c5a4b990ce72f98b7b7f236e66c022" sha1="adb0a2edebb6f978c3217075a2f29003a8b025c6" status="verified"/>
+	<game name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea) (En)" cloneof="World of Illusion Starring Mickey Mouse and Donald Duck (Europe)">
+		<description>World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea) (En)</description>
+		<release name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea) (En)" region="KOR"/>
+		<release name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea) (En)" region="USA"/>
+		<rom name="World of Illusion Starring Mickey Mouse and Donald Duck (USA, Korea) (En).md" size="1048576" crc="921ebd1c" md5="c2c5a4b990ce72f98b7b7f236e66c022" sha1="adb0a2edebb6f978c3217075a2f29003a8b025c6" status="verified"/>
 	</game>
 	<game name="World Series Baseball (USA)">
 		<description>World Series Baseball (USA)</description>
@@ -12406,15 +12439,15 @@
 		<description>Worms (Europe) (Beta)</description>
 		<rom name="Worms (Europe) (Beta).md" size="2097152" crc="5f9e85df" md5="03c35f042efa4b6d0019938fe968dc74" sha1="5a11867fdf41c9e065e6ba88668d6a48bcbc476c"/>
 	</game>
-	<game name="Wrestle War (Japan, Europe)">
-		<description>Wrestle War (Japan, Europe)</description>
-		<release name="Wrestle War (Japan, Europe)" region="EUR"/>
-		<release name="Wrestle War (Japan, Europe)" region="JPN"/>
-		<rom name="Wrestle War (Japan, Europe).md" size="524288" crc="2d162a85" md5="276250d5d7309a80973df869e8700e46" sha1="1eac51029fd7fb1da1c5546cbd959220244cf3e5" status="verified"/>
+	<game name="Wrestle War (Japan, Europe) (En)">
+		<description>Wrestle War (Japan, Europe) (En)</description>
+		<release name="Wrestle War (Japan, Europe) (En)" region="EUR"/>
+		<release name="Wrestle War (Japan, Europe) (En)" region="JPN"/>
+		<rom name="Wrestle War (Japan, Europe) (En).md" size="524288" crc="2d162a85" md5="276250d5d7309a80973df869e8700e46" sha1="1eac51029fd7fb1da1c5546cbd959220244cf3e5" status="verified"/>
 	</game>
-	<game name="Wrestle War (Japan, Europe) (Beta) (September, 1990)" cloneof="Wrestle War (Japan, Europe)">
-		<description>Wrestle War (Japan, Europe) (Beta) (September, 1990)</description>
-		<rom name="Wrestle War (Japan, Europe) (Beta) (September, 1990).md" size="524288" crc="1cdee87b" md5="4f25842f29135ddda34ebd09cfee81f9" sha1="65c4815c6271bb7d526d84dac1bf177741e35364"/>
+	<game name="Wrestle War (Japan, Europe) (Ja) (Beta) (September, 1990)" cloneof="Wrestle War (Japan, Europe) (En)">
+		<description>Wrestle War (Japan, Europe) (Ja) (Beta) (September, 1990)</description>
+		<rom name="Wrestle War (Japan, Europe) (Ja) (Beta) (September, 1990).md" size="524288" crc="1cdee87b" md5="4f25842f29135ddda34ebd09cfee81f9" sha1="65c4815c6271bb7d526d84dac1bf177741e35364"/>
 	</game>
 	<game name="WWF RAW (World)">
 		<description>WWF RAW (World)</description>
@@ -12657,6 +12690,11 @@
 		<description>Zero Wing (Japan)</description>
 		<release name="Zero Wing (Japan)" region="JPN"/>
 		<rom name="Zero Wing (Japan).md" size="1048576" crc="7e203d2b" md5="9647d8ec9183f3ec9f944d5ea49a99a9" sha1="fad499e21ac55a3b8513110dc1f6e3f6cdeca8dd" status="verified"/>
+	</game>
+	<game name="Zero Wing (USA) (Aftermarket) (Unl)" cloneof="Zero Wing (Europe)">
+		<description>Zero Wing (USA) (Aftermarket) (Unl)</description>
+		<release name="Zero Wing (USA) (Aftermarket) (Unl)" region="USA"/>
+		<rom name="Zero Wing (USA) (Aftermarket) (Unl).md" size="1048576" crc="d525babb" md5="1e88ddbafd310eda65c506d0175f34d6" sha1="49336f51e047e58aeb079845760732d09e06047c"/>
 	</game>
 	<game name="Zhan Qi Chinese Battle Chess (Taiwan) (Unl)">
 		<description>Zhan Qi Chinese Battle Chess (Taiwan) (Unl)</description>

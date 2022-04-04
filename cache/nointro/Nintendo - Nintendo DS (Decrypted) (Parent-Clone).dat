@@ -4,9 +4,9 @@
 	<header>
 		<name>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</name>
 		<description>Nintendo - Nintendo DS (Decrypted) (Parent-Clone)</description>
-		<version>20220112-095946</version>
-		<date>20220112-095946</date>
-		<author>aci68, ajshell1, Aringon, asapy, Baronluigi, Bent, C. V. Reynolds, chillerecke, Connie, coraz, darthcloud, Datman, DeadSkullzJr, Densetsu, DeriLoko3, diego-rbb, DirkDagger, einstein95, Fonix, fuzzball, Gefflon, Hiccup, hydr0x, iAmGhost, Icyelut, InternalLoss, Jhon591, jimmsu, kazumi213, leekindo, Madeline, MaxG, MeguCocoa, michal99, Money_114, Mr.K, NGEfreak, nhlay, niemand, omonim2007, Powerpuff, PPLToast, rarenight, relax, RetroGamer, Rifu, scorp256, Sir VG, SonGoku, Tauwasser, togemet2, Tori, u53r123, ufocrossing, Vallaine01, Vigi, Whovian9369, Xenirina, xuom2, zg</author>
+		<version>20220330-182541</version>
+		<date>20220330-182541</date>
+		<author>aci68, ajshell1, Arctic Circle System, Aringon, asapy, Baronluigi, Bent, C. V. Reynolds, chillerecke, Connie, coraz, darthcloud, Datman, DeadSkullzJr, Densetsu, DeriLoko3, diego-rbb, DirkDagger, einstein95, Flashfire42, Fonix, fuzzball, Gefflon, Hiccup, hydr0x, iAmGhost, Icyelut, InternalLoss, Jhon591, jimmsu, kazumi213, leekindo, MaxG, MeguCocoa, michal99, Money_114, Mr.K, NGEfreak, nhlay, niemand, omonim2007, Powerpuff, PPLToast, rarenight, relax, RetroGamer, Rifu, scorp256, Sir VG, SonGoku, Tauwasser, togemet2, Tori, u53r123, ufocrossing, Vallaine01, Vigi, Whovian9369, Xenirina, xuom2, zg</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="[BIOS] iQue DS Lite Firmware (China)">
@@ -89,10 +89,10 @@
 		<release name="007 - Blood Stone (USA)" region="USA"/>
 		<rom name="007 - Blood Stone (USA).nds" size="67108864" crc="8aa9e6c7" md5="03ba799635f3e34cfd64f353330f6799" sha1="dadbccf3ccaa2a084d4fe3ece410c495c842811f"/>
 	</game>
-	<game name="007 - Blood Stone (Canada)" cloneof="007 - Blood Stone (United Kingdom)">
-		<description>007 - Blood Stone (Canada)</description>
-		<release name="007 - Blood Stone (Canada)" region="EUR"/>
-		<rom name="007 - Blood Stone (Canada).nds" size="67108864" crc="cdf33ad4" md5="58ddff08ba51075caf7556edb7dd5b3b" sha1="c9a6f28d3c356810a8d2df48c540a48a0b80263d"/>
+	<game name="007 - Blood Stone (Canada) (Fr)" cloneof="007 - Blood Stone (United Kingdom)">
+		<description>007 - Blood Stone (Canada) (Fr)</description>
+		<release name="007 - Blood Stone (Canada) (Fr)" region="EUR"/>
+		<rom name="007 - Blood Stone (Canada) (Fr).nds" size="67108864" crc="cdf33ad4" md5="58ddff08ba51075caf7556edb7dd5b3b" sha1="c9a6f28d3c356810a8d2df48c540a48a0b80263d"/>
 	</game>
 	<game name="007 - Quantum of Solace (Europe) (En,Fr)">
 		<description>007 - Quantum of Solace (Europe) (En,Fr)</description>
@@ -1013,6 +1013,10 @@
 		<release name="ALC no 10-punkan Eigo Master - Joukyuu (Japan) (Rev 1)" region="JPN"/>
 		<rom name="ALC no 10-punkan Eigo Master - Joukyuu (Japan) (Rev 1).nds" size="67108864" crc="4a363f2e" md5="c263c80f3725b79b80d45ae760f5f437" sha1="56c0215accd51092d05f12179609ad9a519604e6"/>
 	</game>
+	<game name="ALC no 10-punkan Eigo Master - Joukyuu (Japan)" cloneof="ALC no 10-punkan Eigo Master - Joukyuu (Japan) (Rev 1)">
+		<description>ALC no 10-punkan Eigo Master - Joukyuu (Japan)</description>
+		<rom name="ALC no 10-punkan Eigo Master - Joukyuu (Japan).nds" size="67108864" crc="e2c5a7c5" md5="c74bca7a749f2d0f118bffe3e63d1010" sha1="711d3c8e13b26c27dc82717713fe137303bc3b89"/>
+	</game>
 	<game name="ALC no 10-punkan Eigo Master - Shokyuu (Japan)">
 		<description>ALC no 10-punkan Eigo Master - Shokyuu (Japan)</description>
 		<release name="ALC no 10-punkan Eigo Master - Shokyuu (Japan)" region="JPN"/>
@@ -1597,10 +1601,10 @@
 		<release name="Apassionata (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Apassionata (Europe) (En,Fr,De,Es,It).nds" size="33554432" crc="9a78e4ab" md5="be405ae579230ce238ab152cd2a0367c" sha1="e477430e99f7f2578ab25e62d86e5aca91ba7c0f"/>
 	</game>
-	<game name="Apathy - Narukami Gakuen Toshi Densetsu Tantei Kyoku (Japan)">
-		<description>Apathy - Narukami Gakuen Toshi Densetsu Tantei Kyoku (Japan)</description>
-		<release name="Apathy - Narukami Gakuen Toshi Densetsu Tantei Kyoku (Japan)" region="JPN"/>
-		<rom name="Apathy - Narukami Gakuen Toshi Densetsu Tantei Kyoku (Japan).nds" size="33554432" crc="b9139fbf" md5="5d0edfaff9414369ecc7315910039fd8" sha1="731791d9a3c22ec828faff2678a6c9fd0392d43d"/>
+	<game name="Apathy - Narugami Gakuen Toshi Densetsu Tantei Kyoku (Japan)">
+		<description>Apathy - Narugami Gakuen Toshi Densetsu Tantei Kyoku (Japan)</description>
+		<release name="Apathy - Narugami Gakuen Toshi Densetsu Tantei Kyoku (Japan)" region="JPN"/>
+		<rom name="Apathy - Narugami Gakuen Toshi Densetsu Tantei Kyoku (Japan).nds" size="33554432" crc="b9139fbf" md5="5d0edfaff9414369ecc7315910039fd8" sha1="731791d9a3c22ec828faff2678a6c9fd0392d43d"/>
 	</game>
 	<game name="Apollo Justice - Ace Attorney (Europe)">
 		<description>Apollo Justice - Ace Attorney (Europe)</description>
@@ -3509,7 +3513,7 @@
 	<game name="Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt)">
 		<description>Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt)</description>
 		<release name="Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt)" region="EUR"/>
-		<rom name="Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt).nds" size="134217728" crc="bccc90d8" md5="26c26b6f12bc01909bd3ff2fb9f3cabd" sha1="8541320d478ff80becea6a20f19c6b795280393c"/>
+		<rom name="Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt).nds" size="134217728" crc="bccc90d8" md5="26c26b6f12bc01909bd3ff2fb9f3cabd" sha1="8541320d478ff80becea6a20f19c6b795280393c" status="verified"/>
 	</game>
 	<game name="Boogie (USA) (En,Fr,Es)" cloneof="Boogie (Europe) (En,Fr,De,Es,It,Nl,Pt)">
 		<description>Boogie (USA) (En,Fr,Es)</description>
@@ -4046,10 +4050,10 @@
 		<release name="Call of Duty - Black Ops (Europe) (Es,It)" region="EUR"/>
 		<rom name="Call of Duty - Black Ops (Europe) (Es,It).nds" size="134217728" crc="111568be" md5="7dffbf08d750615c8401189310bfff44" sha1="eeaec5afe1951c45f915dac0d073e1c8be1b9d7b"/>
 	</game>
-	<game name="Call of Duty - Black Ops (Canada)" cloneof="Call of Duty - Black Ops (United Kingdom)">
-		<description>Call of Duty - Black Ops (Canada)</description>
-		<release name="Call of Duty - Black Ops (Canada)" region="CAN"/>
-		<rom name="Call of Duty - Black Ops (Canada).nds" size="67108864" crc="9731ca72" md5="77f6a9ee5fb0e8c21b74b4a51e1557b7" sha1="7ea1fdfe27ebb5c322be620eb0938fa6e5ab07c1"/>
+	<game name="Call of Duty - Black Ops (Canada) (Fr-CA)" cloneof="Call of Duty - Black Ops (United Kingdom)">
+		<description>Call of Duty - Black Ops (Canada) (Fr-CA)</description>
+		<release name="Call of Duty - Black Ops (Canada) (Fr-CA)" region="CAN"/>
+		<rom name="Call of Duty - Black Ops (Canada) (Fr-CA).nds" size="67108864" crc="9731ca72" md5="77f6a9ee5fb0e8c21b74b4a51e1557b7" sha1="7ea1fdfe27ebb5c322be620eb0938fa6e5ab07c1"/>
 	</game>
 	<game name="Call of Duty - Modern Warfare - Mobilized (United Kingdom)">
 		<description>Call of Duty - Modern Warfare - Mobilized (United Kingdom)</description>
@@ -4081,10 +4085,10 @@
 		<release name="Call of Duty - Modern Warfare - Mobilized (Spain)" region="SPA"/>
 		<rom name="Call of Duty - Modern Warfare - Mobilized (Spain).nds" size="67108864" crc="f9e20411" md5="4deb10ec7946dbfcdd9a31359a9a3230" sha1="e19d4b6a2456fa3c7c03881ff6464e50f10d16d4"/>
 	</game>
-	<game name="Call of Duty - Modern Warfare - Mobilized (Canada)" cloneof="Call of Duty - Modern Warfare - Mobilized (United Kingdom)">
-		<description>Call of Duty - Modern Warfare - Mobilized (Canada)</description>
-		<release name="Call of Duty - Modern Warfare - Mobilized (Canada)" region="CAN"/>
-		<rom name="Call of Duty - Modern Warfare - Mobilized (Canada).nds" size="67108864" crc="e8fec966" md5="5a01d1a9c258f9ca293d0da5f7485280" sha1="9a52b542903672681b10638ac5d505d169a9cd21"/>
+	<game name="Call of Duty - Modern Warfare - Mobilized (Canada) (Fr)" cloneof="Call of Duty - Modern Warfare - Mobilized (United Kingdom)">
+		<description>Call of Duty - Modern Warfare - Mobilized (Canada) (Fr)</description>
+		<release name="Call of Duty - Modern Warfare - Mobilized (Canada) (Fr)" region="CAN"/>
+		<rom name="Call of Duty - Modern Warfare - Mobilized (Canada) (Fr).nds" size="67108864" crc="e8fec966" md5="5a01d1a9c258f9ca293d0da5f7485280" sha1="9a52b542903672681b10638ac5d505d169a9cd21"/>
 	</game>
 	<game name="Call of Duty - Modern Warfare 3 - Defiance (United Kingdom)">
 		<description>Call of Duty - Modern Warfare 3 - Defiance (United Kingdom)</description>
@@ -4111,10 +4115,10 @@
 		<release name="Call of Duty - Modern Warfare 3 - Defiance (Europe) (Es,It)" region="EUR"/>
 		<rom name="Call of Duty - Modern Warfare 3 - Defiance (Europe) (Es,It).nds" size="134217728" crc="998fe743" md5="58455350a064ef02f6e850f36c4de1cf" sha1="aca6f882ec9007931f1c97c55a85b74f10725908"/>
 	</game>
-	<game name="Call of Duty - Modern Warfare 3 - Defiance (Canada)" cloneof="Call of Duty - Modern Warfare 3 - Defiance (United Kingdom)">
-		<description>Call of Duty - Modern Warfare 3 - Defiance (Canada)</description>
-		<release name="Call of Duty - Modern Warfare 3 - Defiance (Canada)" region="CAN"/>
-		<rom name="Call of Duty - Modern Warfare 3 - Defiance (Canada).nds" size="67108864" crc="00cc9436" md5="4c4209ecba6981ef4b6b2604626b7b40" sha1="12bb41646be3361f666f7ad8bbf7c56df20ce077"/>
+	<game name="Call of Duty - Modern Warfare 3 - Defiance (Canada) (Fr)" cloneof="Call of Duty - Modern Warfare 3 - Defiance (United Kingdom)">
+		<description>Call of Duty - Modern Warfare 3 - Defiance (Canada) (Fr)</description>
+		<release name="Call of Duty - Modern Warfare 3 - Defiance (Canada) (Fr)" region="CAN"/>
+		<rom name="Call of Duty - Modern Warfare 3 - Defiance (Canada) (Fr).nds" size="67108864" crc="00cc9436" md5="4c4209ecba6981ef4b6b2604626b7b40" sha1="12bb41646be3361f666f7ad8bbf7c56df20ce077"/>
 	</game>
 	<game name="Call of Duty - World at War (Europe)">
 		<description>Call of Duty - World at War (Europe)</description>
@@ -6731,6 +6735,14 @@
 		<release name="Diddl Puzzle - Echter Puzzlespass fuer Unterwegs (Europe) (En,Fr,De,Es,It)" region="EUR"/>
 		<rom name="Diddl Puzzle - Echter Puzzlespass fuer Unterwegs (Europe) (En,Fr,De,Es,It).nds" size="8388608" crc="8f00378e" md5="1208e845c44cb4f696d868e911c5aba2" sha1="e338b91d275c281cc22cbbbd5ef01ac9b29b46cd"/>
 	</game>
+	<game name="Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-31)">
+		<description>Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-31)</description>
+		<rom name="Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-31).nds" size="743424" crc="2191a4f6" md5="732624964203d21c77ad010b51ca5134" sha1="5e7860176626882854eaee41b972fec55b078c04"/>
+	</game>
+	<game name="Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-27)" cloneof="Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-31)">
+		<description>Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-27)</description>
+		<rom name="Diddy Kong Racing (Unknown) (Proto) (Climax, 2004-05-27).nds" size="385536" crc="4ead89f8" md5="621827a01c855e66b7e89f2214ce37f6" sha1="0cfe192d23cec4d2d364bf59625e7f8bf00d7f07"/>
+	</game>
 	<game name="Diddy Kong Racing DS (Europe) (En,Fr,De,Es,It)">
 		<description>Diddy Kong Racing DS (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Diddy Kong Racing DS (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -7193,10 +7205,10 @@
 		<release name="Dokapon Journey (USA)" region="USA"/>
 		<rom name="Dokapon Journey (USA).nds" size="16777216" crc="62749e3a" md5="2d4462515b88dd9b3881d2626b552bd8" sha1="0cd71012f463c8a4ec2e221956754989c5ecd6a5"/>
 	</game>
-	<game name="Dokapon Journey! - Nakayoku Kenka Shite (Japan) [b]" cloneof="Dokapon Journey (USA)">
-		<description>Dokapon Journey! - Nakayoku Kenka Shite (Japan) [b]</description>
-		<release name="Dokapon Journey! - Nakayoku Kenka Shite (Japan) [b]" region="JPN"/>
-		<rom name="Dokapon Journey! - Nakayoku Kenka Shite (Japan) [b].nds" size="16777216" crc="391f2331" md5="3fcf71e5848d17e6ccb47de12612f486" sha1="7a7a85a37c3642f03b13aee19358dc0246926b89" status="baddump"/>
+	<game name="Dokapon Journey! - Nakayoku Kenka Shite (Japan)" cloneof="Dokapon Journey (USA)">
+		<description>Dokapon Journey! - Nakayoku Kenka Shite (Japan)</description>
+		<release name="Dokapon Journey! - Nakayoku Kenka Shite (Japan)" region="JPN"/>
+		<rom name="Dokapon Journey! - Nakayoku Kenka Shite (Japan).nds" size="16777216" crc="7d0cc588" md5="efcd6dfc3d825c3cc3d1fa828ba9d735" sha1="84d70af6e576879379afe396b21072d5c54375f3"/>
 	</game>
 	<game name="Doki Doki Majo Shinpan Duo (Japan)">
 		<description>Doki Doki Majo Shinpan Duo (Japan)</description>
@@ -10587,10 +10599,14 @@
 		<release name="Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan)" region="JPN"/>
 		<rom name="Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan).nds" size="67108864" crc="0491521f" md5="0408f68bbda4144673c54c550f76f4e2" sha1="a90e1c3491a3120567385245fdb7302c9866fcd4"/>
 	</game>
+	<game name="Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan) (Demo) (Kiosk)" cloneof="Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan)">
+		<description>Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan) (Demo) (Kiosk)</description>
+		<rom name="Ganbare Goemon - TokaiDouchuu Ooedo Tengurigaeshi no Maki (Japan) (Demo) (Kiosk).nds" size="33554432" crc="3feba639" md5="2c82577801ebeb17c85b1175658f8da3" sha1="587e53b769d5daee358e87045ebed7e83b246c97"/>
+	</game>
 	<game name="Ganbaru Watashi no Kakei Diary (Japan) (Rev 1)">
 		<description>Ganbaru Watashi no Kakei Diary (Japan) (Rev 1)</description>
 		<release name="Ganbaru Watashi no Kakei Diary (Japan) (Rev 1)" region="JPN"/>
-		<rom name="Ganbaru Watashi no Kakei Diary (Japan) (Rev 1).nds" size="16777216" crc="62d7785f" md5="57419023e4fdad84ee075b4c140e62ad" sha1="8e7c8cd2e1484ea9f2cdd8889dd7150ace8794d1"/>
+		<rom name="Ganbaru Watashi no Kakei Diary (Japan) (Rev 1).nds" size="16777216" crc="62d7785f" md5="57419023e4fdad84ee075b4c140e62ad" sha1="8e7c8cd2e1484ea9f2cdd8889dd7150ace8794d1" status="verified"/>
 	</game>
 	<game name="Ganbaru Watashi no Kakei Diary (Japan)" cloneof="Ganbaru Watashi no Kakei Diary (Japan) (Rev 1)">
 		<description>Ganbaru Watashi no Kakei Diary (Japan)</description>
@@ -10678,7 +10694,7 @@
 		<rom name="Gauntlet (Europe) (En,Fr,De,Es,It) (Proto).nds" size="67108864" crc="88f2e3f8" md5="7a848f57e7cb5b66d43f0e1117a649b7" sha1="ade1dc1ce1d6ba31c1f3dc8648e2772de810662c"/>
 	</game>
 	<game name="Gauntlet (USA) (En,Fr,Es) (Proto)" cloneof="Gauntlet (Europe) (En,Fr,De,Es,It) (Proto)">
-		<description>Gauntlet (USA) (En,Fr,Es) (Proto) ([Encrypted release])</description>
+		<description>[Encrypted release]</description>
 		<release name="Gauntlet (USA) (En,Fr,Es) (Proto)" region="USA"/>
 		<rom name="Gauntlet (USA) (En,Fr,Es) (Proto).nds" size="67108864" crc="ae3a578b" md5="8380ce863ea1f3e533c87eda03da805e" sha1="672390e2707be6eb989e89b43a274104de0021a9"/>
 	</game>
@@ -11125,10 +11141,10 @@
 		<release name="GoldenEye 007 (Spain)" region="SPA"/>
 		<rom name="GoldenEye 007 (Spain).nds" size="67108864" crc="8182ce5a" md5="0146e048692ba25d1c27b9f7ba6f3a0a" sha1="21377759596e6bd8ead12e2f3408d956b7071a75"/>
 	</game>
-	<game name="GoldenEye 007 (Canada)" cloneof="GoldenEye 007 (United Kingdom)">
-		<description>GoldenEye 007 (Canada)</description>
-		<release name="GoldenEye 007 (Canada)" region="EUR"/>
-		<rom name="GoldenEye 007 (Canada).nds" size="67108864" crc="a7c5bdc7" md5="90fc8105bb8e15068dd8363fb974aa16" sha1="e61bf4c03a833cd8edf0b8fcaa2cdd0d8778a330"/>
+	<game name="GoldenEye 007 (Canada) (Fr)" cloneof="GoldenEye 007 (United Kingdom)">
+		<description>GoldenEye 007 (Canada) (Fr)</description>
+		<release name="GoldenEye 007 (Canada) (Fr)" region="EUR"/>
+		<rom name="GoldenEye 007 (Canada) (Fr).nds" size="67108864" crc="a7c5bdc7" md5="90fc8105bb8e15068dd8363fb974aa16" sha1="e61bf4c03a833cd8edf0b8fcaa2cdd0d8778a330"/>
 	</game>
 	<game name="Golgo 13 - File G13 o Oe (Japan)">
 		<description>Golgo 13 - File G13 o Oe (Japan)</description>
@@ -12171,7 +12187,7 @@
 	<game name="Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It)">
 		<description>Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It).nds" size="67108864" crc="3ef026f5" md5="f6117f87104e111ae372979ccf07d5fa" sha1="e161b611107ec3d2932bc76843d04997c04dc18a"/>
+		<rom name="Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It).nds" size="67108864" crc="3ef026f5" md5="f6117f87104e111ae372979ccf07d5fa" sha1="e161b611107ec3d2932bc76843d04997c04dc18a" status="verified"/>
 	</game>
 	<game name="Henry Hatsworth in the Puzzling Adventure (USA) (En,Fr,De,Es,It)" cloneof="Henry Hatsworth in the Puzzling Adventure (Europe) (En,Fr,De,Es,It)">
 		<description>Henry Hatsworth in the Puzzling Adventure (USA) (En,Fr,De,Es,It)</description>
@@ -14040,10 +14056,10 @@
 		<release name="Irozuki Tingle no Koi no Balloon Trip (Japan)" region="JPN"/>
 		<rom name="Irozuki Tingle no Koi no Balloon Trip (Japan).nds" size="134217728" crc="c7a78a3e" md5="608525cfa0819175eef7f7877b9f06aa" sha1="560c0a0ab940cb957a37feab650904f5be089967" status="verified"/>
 	</game>
-	<game name="Ishin no Arashi - Shippuu Ryouma Den (Japan) [b]">
-		<description>Ishin no Arashi - Shippuu Ryouma Den (Japan) [b]</description>
-		<release name="Ishin no Arashi - Shippuu Ryouma Den (Japan) [b]" region="JPN"/>
-		<rom name="Ishin no Arashi - Shippuu Ryouma Den (Japan) [b].nds" size="67108864" crc="2debed4d" md5="10db877d77c937b481ffc7b942e17665" sha1="9cc70a72cefea6956766ada1b4bce15d6c91a236" status="baddump"/>
+	<game name="Ishin no Arashi - Shippuu Ryouma Den (Japan)">
+		<description>Ishin no Arashi - Shippuu Ryouma Den (Japan)</description>
+		<release name="Ishin no Arashi - Shippuu Ryouma Den (Japan)" region="JPN"/>
+		<rom name="Ishin no Arashi - Shippuu Ryouma Den (Japan).nds" size="67108864" crc="7f559eca" md5="8d3228656ea034edd86a018de123704b" sha1="57a798f9320970efd23a73cae1cf64d4127d18bb"/>
 	</game>
 	<game name="It's Tehodoki! Hannya Shingyou Nyuumon (Japan)">
 		<description>It's Tehodoki! Hannya Shingyou Nyuumon (Japan)</description>
@@ -14197,10 +14213,14 @@
 		<release name="Hiite Utaeru DS Guitar 'M-06' (Japan)" region="JPN"/>
 		<rom name="Hiite Utaeru DS Guitar 'M-06' (Japan).nds" size="67108864" crc="1a9c9357" md5="3c9f4ef0bc101d7a0680ffab50648de7" sha1="25dbf69a7e80260502eaa34a3704f1c594c7615b"/>
 	</game>
+	<game name="Jam Sessions - Sing &amp; Play Guitar (USA) (Rev 1)" cloneof="Jam Sessions - Sing &amp; Play Guitar (Europe) (En,Fr,De,Es,It,Nl)">
+		<description>Jam Sessions - Sing &amp; Play Guitar (USA) (Rev 1)</description>
+		<rom name="Jam Sessions - Sing &amp; Play Guitar (USA) (Rev 1).nds" size="67108864" crc="60cb0405" md5="37e6c9fc90214385a9de1526a44c9683" sha1="f7cdbd156ee12089d3ea2325a40a267a108cbe08"/>
+	</game>
 	<game name="Jam Sessions - Sing and Play Guitar (USA) (En,Fr,De,Es,It,Nl)" cloneof="Jam Sessions - Sing &amp; Play Guitar (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Jam Sessions - Sing and Play Guitar (USA) (En,Fr,De,Es,It,Nl)</description>
 		<release name="Jam Sessions - Sing and Play Guitar (USA) (En,Fr,De,Es,It,Nl)" region="USA"/>
-		<rom name="Jam Sessions - Sing and Play Guitar (USA) (En,Fr,De,Es,It,Nl).nds" size="67108864" crc="a0359680" md5="46cb1c51af7437881f8c798c03a53ed6" sha1="a502c2f1d8b3b5362648b041148034d25c2598b8"/>
+		<rom name="Jam Sessions - Sing and Play Guitar (USA) (En,Fr,De,Es,It,Nl).nds" size="67108864" crc="a0359680" md5="46cb1c51af7437881f8c798c03a53ed6" sha1="a502c2f1d8b3b5362648b041148034d25c2598b8" status="verified"/>
 	</game>
 	<game name="Jam Sessions 2 (USA) (En,Fr,Es) (NDSi Enhanced)">
 		<description>Jam Sessions 2 (USA) (En,Fr,Es) (NDSi Enhanced)</description>
@@ -15182,10 +15202,10 @@
 		<release name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan)" region="JPN"/>
 		<rom name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan).nds" size="33554432" crc="50d2b91a" md5="5c11d67d208e760ab10c169a8bfbb43b" sha1="a61036c506e8e4bb11c466bb809ab60023d645c8"/>
 	</game>
-	<game name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2) [b]" cloneof="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan)">
-		<description>Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2) [b]</description>
-		<release name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2) [b]" region="JPN"/>
-		<rom name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2) [b].nds" size="32736496" crc="4b496abc" md5="fc94d77fc3bfd68958e7ff393089649f" sha1="5fe372156793f3b316bdc4891ea65d49990ecbe7" status="baddump"/>
+	<game name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2)" cloneof="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan)">
+		<description>Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2)</description>
+		<release name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2)" region="JPN"/>
+		<rom name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 2).nds" size="33554432" crc="d9122710" md5="8ec17997ac0f35649361a9d2e729d737" sha1="e4c83b3474345ab5a30afc2be12a53020537d3ec"/>
 	</game>
 	<game name="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 3)" cloneof="Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan)">
 		<description>Kaibou Seirigaku DS - Touch de Hirogaru! Jintai no Kouzou to Kinou (Japan) (Rev 3)</description>
@@ -15891,7 +15911,7 @@
 	<game name="Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It)">
 		<description>Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It).nds" size="134217728" crc="2442f725" md5="bc96372cb83a4be50b738ab691bc2afa" sha1="ee9243bb2fbf8d1b002a0a6686aca3eba28b9a34"/>
+		<rom name="Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It).nds" size="134217728" crc="2442f725" md5="bc96372cb83a4be50b738ab691bc2afa" sha1="ee9243bb2fbf8d1b002a0a6686aca3eba28b9a34" status="verified"/>
 	</game>
 	<game name="Hoshi no Kirby Ultra Super Deluxe (Japan)" cloneof="Kirby Super Star Ultra (Europe) (En,Fr,De,Es,It)">
 		<description>Hoshi no Kirby Ultra Super Deluxe (Japan)</description>
@@ -16198,6 +16218,11 @@
 		<release name="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan)" region="JPN"/>
 		<rom name="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan).nds" size="33554432" crc="33f9da86" md5="eeefb9ef3635be34cfc54a670e74a01d" sha1="6018eb82b7f1a0dde14e54e54b972465f7ea5684"/>
 	</game>
+	<game name="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan) (Rev 1)" cloneof="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan)">
+		<description>Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan) (Rev 1)</description>
+		<release name="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Kou-chan no Shiawase! Kantan! Oryouri Recipe (Japan) (Rev 1).nds" size="33554432" crc="ff6ccbcd" md5="b07490ace93da765ad5e6e48410b5110" sha1="b57c1625a917b8514be18c704998239f46083a70"/>
+	</game>
 	<game name="Kouchuu Kakutou - Mushi-1 Grand-Prix (Japan)">
 		<description>Kouchuu Kakutou - Mushi-1 Grand-Prix (Japan)</description>
 		<release name="Kouchuu Kakutou - Mushi-1 Grand-Prix (Japan)" region="JPN"/>
@@ -16399,7 +16424,7 @@
 		<rom name="Kururin Doughnut - Okashi na Recipe (Japan).nds" size="33554432" crc="d7529baa" md5="49edc64e36c860717acbbabd746e7350" sha1="4bf66d9875d7433eabba84a0b7a47ef4472c82a1"/>
 	</game>
 	<game name="Kurutore eCDP (Japan) (Not for Resale)">
-		<description>Kurutore eCDP (Japan) (Not for Resale) (1st password is 482500, 2nd password is 482500)</description>
+		<description>1st password is 482500, 2nd password is 482500</description>
 		<release name="Kurutore eCDP (Japan) (Not for Resale)" region="JPN"/>
 		<rom name="Kurutore eCDP (Japan) (Not for Resale).nds" size="268435456" crc="088cea8f" md5="c421495142caa1c4bec8ba115a05d415" sha1="136aacc9d3d7c8567381cd4e735ff3c004a018d0" status="verified"/>
 	</game>
@@ -16906,7 +16931,7 @@
 	<game name="LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da)">
 		<description>LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da)</description>
 		<release name="LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da)" region="EUR"/>
-		<rom name="LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da).nds" size="67108864" crc="90769f96" md5="8cc80d2c906c6c6393782f38f8d07fe9" sha1="a9a8c6ac64ecf86c213f17758c772d2859e234ed"/>
+		<rom name="LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da).nds" size="67108864" crc="90769f96" md5="8cc80d2c906c6c6393782f38f8d07fe9" sha1="a9a8c6ac64ecf86c213f17758c772d2859e234ed" status="verified"/>
 	</game>
 	<game name="LEGO Indiana Jones 2 - The Adventure Continues (USA) (En,Fr,Es)" cloneof="LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Da)">
 		<description>LEGO Indiana Jones 2 - The Adventure Continues (USA) (En,Fr,Es)</description>
@@ -16991,7 +17016,7 @@
 	<game name="LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da)">
 		<description>LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da)</description>
 		<release name="LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da)" region="EUR"/>
-		<rom name="LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da).nds" size="67108864" crc="bc39e766" md5="0026406295d0b0b2974fcb11eb315d0f" sha1="450109512a1334c22e439fa75f633e619fc7907c"/>
+		<rom name="LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da).nds" size="67108864" crc="bc39e766" md5="0026406295d0b0b2974fcb11eb315d0f" sha1="450109512a1334c22e439fa75f633e619fc7907c" status="verified"/>
 	</game>
 	<game name="LEGO Star Wars - The Complete Saga (USA)" cloneof="LEGO Star Wars - The Complete Saga (Europe) (En,Fr,De,Es,It,Da)">
 		<description>LEGO Star Wars - The Complete Saga (USA)</description>
@@ -17461,7 +17486,7 @@
 	<game name="Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It)">
 		<description>Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It)" region="EUR"/>
-		<rom name="Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It).nds" size="67108864" crc="a9239fca" md5="9bbaf0fdbf4b7e535214ddd8c519d703" sha1="c072691a13eeaa71aa673692eb99a21e835c0f85"/>
+		<rom name="Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It).nds" size="67108864" crc="a9239fca" md5="9bbaf0fdbf4b7e535214ddd8c519d703" sha1="c072691a13eeaa71aa673692eb99a21e835c0f85" status="verified"/>
 	</game>
 	<game name="Littlest Pet Shop - Spring (USA) (En,Fr,Es)" cloneof="Littlest Pet Shop - Spring (Europe) (En,Fr,De,Es,It)">
 		<description>Littlest Pet Shop - Spring (USA) (En,Fr,Es)</description>
@@ -17792,6 +17817,11 @@
 		<release name="Lucky Star - Moe Drill (Japan)" region="JPN"/>
 		<rom name="Lucky Star - Moe Drill (Japan).nds" size="67108864" crc="a2b1ed7b" md5="bc23da35a8e83d19550df160933a1ed4" sha1="42a9df00c7978c449065ca8dd38aa6b96aa726de"/>
 	</game>
+	<game name="Lucky Star - Moe Drill (Japan) (Rev 1)" cloneof="Lucky Star - Moe Drill (Japan)">
+		<description>Lucky Star - Moe Drill (Japan) (Rev 1)</description>
+		<release name="Lucky Star - Moe Drill (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Lucky Star - Moe Drill (Japan) (Rev 1).nds" size="67108864" crc="c72d405c" md5="928d34db6f9a13f536bca039b1f6ace7" sha1="25bac04e5d3d286a2fc6f22cdbaa649fea097e65"/>
+	</game>
 	<game name="Lufia - Curse of the Sinistrals (USA)">
 		<description>Lufia - Curse of the Sinistrals (USA)</description>
 		<release name="Lufia - Curse of the Sinistrals (USA)" region="USA"/>
@@ -18016,10 +18046,10 @@
 		<release name="Madagascar - Escape 2 Africa (USA)" region="USA"/>
 		<rom name="Madagascar - Escape 2 Africa (USA).nds" size="67108864" crc="cfedaea0" md5="be6f5aec28ba37b019ab83b30e03f135" sha1="547575bf1178777f2b251ea31054a680f164a6a7"/>
 	</game>
-	<game name="Madagascar 2 (Canada) [b]" cloneof="Madagascar - Escape 2 Africa (United Kingdom)">
-		<description>Madagascar 2 (Canada) [b]</description>
-		<release name="Madagascar 2 (Canada) [b]" region="CAN"/>
-		<rom name="Madagascar 2 (Canada) [b].nds" size="67108864" crc="5f780573" md5="11045e7cc027547724b8609785071515" sha1="a679948dc9a76dae2c7936cb3ff4e72da2e77695" status="baddump"/>
+	<game name="Madagascar 2 (Canada) (Fr) [b]" cloneof="Madagascar - Escape 2 Africa (United Kingdom)">
+		<description>Madagascar 2 (Canada) (Fr) [b]</description>
+		<release name="Madagascar 2 (Canada) (Fr) [b]" region="CAN"/>
+		<rom name="Madagascar 2 (Canada) (Fr) [b].nds" size="67108864" crc="5f780573" md5="11045e7cc027547724b8609785071515" sha1="a679948dc9a76dae2c7936cb3ff4e72da2e77695" status="baddump"/>
 	</game>
 	<game name="Madagascar 2 (Netherlands)" cloneof="Madagascar - Escape 2 Africa (United Kingdom)">
 		<description>Madagascar 2 (Netherlands)</description>
@@ -19520,6 +19550,10 @@
 		<release name="Rockman ZX - Advent (Japan)" region="JPN"/>
 		<rom name="Rockman ZX - Advent (Japan).nds" size="67108864" crc="89c919bc" md5="396ab0f79547b774ad51d934c7710fea" sha1="e0b869b83fe6b56ee11d2fe53a6464fae50303c1"/>
 	</game>
+	<game name="Rockman ZX - Advent (Japan) (Rev 1)" cloneof="Mega Man ZX - Advent (Europe) (En,Ja,Fr,De,Es,It)">
+		<description>Rockman ZX - Advent (Japan) (Rev 1)</description>
+		<rom name="Rockman ZX - Advent (Japan) (Rev 1).nds" size="67108864" crc="6b256b2a" md5="fddde92dd86fc96e674e22d0b08b9f1f" sha1="b059109fa7a450eabe8a70d6e2f1be4c507605b2"/>
+	</game>
 	<game name="Mega Mindy (Europe) (Fr,Nl) (Rev 2)">
 		<description>Mega Mindy (Europe) (Fr,Nl) (Rev 2)</description>
 		<release name="Mega Mindy (Europe) (Fr,Nl) (Rev 2)" region="EUR"/>
@@ -19685,6 +19719,10 @@
 		<description>Meteos (USA)</description>
 		<release name="Meteos (USA)" region="USA"/>
 		<rom name="Meteos (USA).nds" size="67108864" crc="e88bf82e" md5="ae04471a3d3952f349fb7f7269d7b848" sha1="fcec22e2dd3f07a9f100ed1df0affee6f9037c35" status="verified"/>
+	</game>
+	<game name="Meteos (Japan) (Demo) (Kiosk)" cloneof="Meteos (Europe) (En,Fr,De,Es,It)">
+		<description>Meteos (Japan) (Demo) (Kiosk)</description>
+		<rom name="Meteos (Japan) (Demo) (Kiosk).nds" size="67108864" crc="83cc1881" md5="cada8a33246afc21bf5fa58a7f3d0efd" sha1="6747b18ef77b3e50a47ebe9085280cae7716faac"/>
 	</game>
 	<game name="Meteos - Disney Magic (Europe) (En,Fr,De,Es,It)">
 		<description>Meteos - Disney Magic (Europe) (En,Fr,De,Es,It)</description>
@@ -20157,10 +20195,10 @@
 		<release name="Minna no Mahjong DS (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Minna no Mahjong DS (Japan) (Rev 1).nds" size="8388608" crc="4c532b0b" md5="6c36e7131e26716ab27f0e618654de30" sha1="ec230f3e4a94f3d079e9e9e603d51ce5d698bc22"/>
 	</game>
-	<game name="Minna no Oekakiya-san (Japan) [b]">
-		<description>Minna no Oekakiya-san (Japan) [b]</description>
-		<release name="Minna no Oekakiya-san (Japan) [b]" region="JPN"/>
-		<rom name="Minna no Oekakiya-san (Japan) [b].nds" size="16777216" crc="1ceec73b" md5="f6c536a9e84337a8ce42a6aff31d4526" sha1="eed9492b0d4365c150ac149fcd31bcd8d9b61a95" status="baddump"/>
+	<game name="Minna no Oekakiya-san (Japan)">
+		<description>Minna no Oekakiya-san (Japan)</description>
+		<release name="Minna no Oekakiya-san (Japan)" region="JPN"/>
+		<rom name="Minna no Oekakiya-san (Japan).nds" size="16777216" crc="041bfb3f" md5="51365fd8df5621fbcca6527f65d4416f" sha1="148e23a9107802f0616c765f2a72b79b52739d7c"/>
 	</game>
 	<game name="Minna no Suizokukan (Japan)">
 		<description>Minna no Suizokukan (Japan)</description>
@@ -20289,6 +20327,11 @@
 		<release name="Momotarou Dentetsu DS - Tokyo &amp; Japan (Japan)" region="JPN"/>
 		<rom name="Momotarou Dentetsu DS - Tokyo &amp; Japan (Japan).nds" size="33554432" crc="186da9d7" md5="5cf472f7b4f509de3ea947c937a1a2e7" sha1="80c7a757c2fd4201da686bad819124ddea36175a"/>
 	</game>
+	<game name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada) (Fr-CA)">
+		<description>Mon Coach Personnel - J'Ameliore Mon Anglais (Canada) (Fr-CA)</description>
+		<release name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada) (Fr-CA)" region="CAN"/>
+		<rom name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada) (Fr-CA).nds" size="33554432" crc="f9ccdd0b" md5="6f1db286b9bc07c49ee8bd731f95e3cf" sha1="f4f30c113af03096f6d6bd9e406a8c58edba64b2"/>
+	</game>
 	<game name="Mon Coach Personnel - J'Ameliore Mon Anglais (France)">
 		<description>Mon Coach Personnel - J'Ameliore Mon Anglais (France)</description>
 		<release name="Mon Coach Personnel - J'Ameliore Mon Anglais (France)" region="FRA"/>
@@ -20313,20 +20356,15 @@
 		<release name="Mio Coach, Il - Arricchisco il Mio Inglese (Italy)" region="ITA"/>
 		<rom name="Mio Coach, Il - Arricchisco il Mio Inglese (Italy).nds" size="33554432" crc="55975211" md5="ada6f6eb4991a20c8c1d15b2bef4d524" sha1="0bde57a64010fb07dc890296e8797a238eb6de1d"/>
 	</game>
-	<game name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada)">
-		<description>Mon Coach Personnel - J'Ameliore Mon Anglais (Canada)</description>
-		<release name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada)" region="CAN"/>
-		<rom name="Mon Coach Personnel - J'Ameliore Mon Anglais (Canada).nds" size="33554432" crc="f9ccdd0b" md5="6f1db286b9bc07c49ee8bd731f95e3cf" sha1="f4f30c113af03096f6d6bd9e406a8c58edba64b2"/>
+	<game name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada) (Fr-CA)">
+		<description>Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada) (Fr-CA)</description>
+		<release name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada) (Fr-CA)" region="CAN"/>
+		<rom name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada) (Fr-CA).nds" size="33554432" crc="efb17b08" md5="69b51a363753453a8d9a1ca2c44fd4f6" sha1="bfe7358cf471737655ea2571536d3a9be73c9768"/>
 	</game>
-	<game name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada)">
-		<description>Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada)</description>
-		<release name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada)" region="CAN"/>
-		<rom name="Mon Coach Personnel - J'Ameliore Mon Espagnol (Canada).nds" size="33554432" crc="efb17b08" md5="69b51a363753453a8d9a1ca2c44fd4f6" sha1="bfe7358cf471737655ea2571536d3a9be73c9768"/>
-	</game>
-	<game name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada)">
-		<description>Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada)</description>
-		<release name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada)" region="CAN"/>
-		<rom name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada).nds" size="67108864" crc="407a40ed" md5="098c7d629cbe15e435f8969ef44096d5" sha1="8b23b8e8cb39581a3e6b798c766dac955b255821"/>
+	<game name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada) (Fr-CA)">
+		<description>Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada) (Fr-CA)</description>
+		<release name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada) (Fr-CA)" region="CAN"/>
+		<rom name="Mon Coach Personnel - J'Enrichis Mon Vocabulaire (Canada) (Fr-CA).nds" size="67108864" crc="407a40ed" md5="098c7d629cbe15e435f8969ef44096d5" sha1="8b23b8e8cb39581a3e6b798c766dac955b255821"/>
 	</game>
 	<game name="Mon Premier Bescherelle (France)">
 		<description>Mon Premier Bescherelle (France)</description>
@@ -20528,10 +20566,10 @@
 		<release name="Monster Rancher DS (USA)" region="USA"/>
 		<rom name="Monster Rancher DS (USA).nds" size="67108864" crc="91800cb2" md5="e9ca25244b441d1faedbbc302410d151" sha1="f55c1250425896e53b7c3539d94871f37fcd353b"/>
 	</game>
-	<game name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan) [b]" cloneof="Monster Rancher DS (USA)">
-		<description>Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan) [b]</description>
-		<release name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan) [b]" region="JPN"/>
-		<rom name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan) [b].nds" size="67108864" crc="c1e7a441" md5="e038f84a3d12eb132c31ab4e34274caf" sha1="f7653ca2f83bd6e97cad7339527f260fc6ba860e" status="baddump"/>
+	<game name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan)" cloneof="Monster Rancher DS (USA)">
+		<description>Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan)</description>
+		<release name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan)" region="JPN"/>
+		<rom name="Monster Farm DS 2 - Yomigaeru! Master Breeder Densetsu (Japan).nds" size="67108864" crc="32128251" md5="121d956e5866e45a4b2014e882550732" sha1="b4c8fb902853f00967cd2e0402caee917f5d1311"/>
 	</game>
 	<game name="Monster Tale (USA)">
 		<description>Monster Tale (USA)</description>
@@ -23912,6 +23950,11 @@
 		<release name="Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 2)" region="JPN"/>
 		<rom name="Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 2).nds" size="33554432" crc="374bdac5" md5="9a0a159f7b953568ee6cc51b9605498c" sha1="7f1775f6d9f9dc5e6c05bbcffd7b6f194bdebc55"/>
 	</game>
+	<game name="Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 1)" cloneof="Paint by DS (Europe) (En,Fr,De,Es,It)">
+		<description>Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 1)</description>
+		<release name="Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Kokoro o Yasumeru - Otona no Nurie DS (Japan) (Rev 1).nds" size="33554432" crc="129c1877" md5="74e049e90276025b301ecbf266bec53f" sha1="05e0faf0eade7b6bd80fa4b6acff8e6ce0ead471"/>
+	</game>
 	<game name="Paint by DS - Classic Masterpieces (Europe) (En,Fr,It) [b]">
 		<description>Paint by DS - Classic Masterpieces (Europe) (En,Fr,It) [b]</description>
 		<release name="Paint by DS - Classic Masterpieces (Europe) (En,Fr,It) [b]" region="EUR"/>
@@ -24461,6 +24504,10 @@
 		<description>Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es)</description>
 		<release name="Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es)" region="USA"/>
 		<rom name="Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es).nds" size="16777216" crc="0ece2b45" md5="b5c862fc8d3f69ccfaea5e995bf23e90" sha1="f330468f6261682415702321bbf1b2317f84efbe"/>
+	</game>
+	<game name="Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es) (Beta)" cloneof="Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es)">
+		<description>Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es) (Beta)</description>
+		<rom name="Petz - Puppyz &amp; Kittenz (USA) (En,Fr,Es) (Beta).nds" size="16777216" crc="d129159a" md5="857e79a5e17375cee05d1973168b09a2" sha1="60a84557c732c46d12578dfe92ecf6f4f4038219"/>
 	</game>
 	<game name="Petz Fantasy - Moonlight Magic (USA) (En,Fr,Es) (NDSi Enhanced)">
 		<description>Petz Fantasy - Moonlight Magic (USA) (En,Fr,Es) (NDSi Enhanced)</description>
@@ -25593,6 +25640,10 @@
 		<release name="Pokemon Fushigi no Dungeon - Ao no Kyuujotai (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Pokemon Fushigi no Dungeon - Ao no Kyuujotai (Japan) (Rev 1).nds" size="33554432" crc="fb65485a" md5="aad180c5990bfca30f5d674ecc57e613" sha1="1169d048e92d3edc776c4abeed6864393b98b01b"/>
 	</game>
+	<game name="Pokemon Fushigi no Dungeon - Ao no Kyuujotai (Japan) (Demo) (Kiosk)" cloneof="Pokemon Mystery Dungeon - Blue Rescue Team (Europe) (En,Fr,De,Es,It)">
+		<description>Pokemon Fushigi no Dungeon - Ao no Kyuujotai (Japan) (Demo) (Kiosk)</description>
+		<rom name="Pokemon Fushigi no Dungeon - Ao no Kyuujotai (Japan) (Demo) (Kiosk).nds" size="16777216" crc="fb2c4187" md5="3a3dd936abae4822bbf59f31871a26da" sha1="707226412dafa2eb46802a68f638eb3deb4db687"/>
+	</game>
 	<game name="Pokemon Mystery Dungeon - Blue Rescue Team (USA)" cloneof="Pokemon Mystery Dungeon - Blue Rescue Team (Europe) (En,Fr,De,Es,It)">
 		<description>Pokemon Mystery Dungeon - Blue Rescue Team (USA)</description>
 		<release name="Pokemon Mystery Dungeon - Blue Rescue Team (USA)" region="USA"/>
@@ -25968,6 +26019,11 @@
 		<release name="Poupeegirl DS 2 - Sweet Pink Style (Japan)" region="JPN"/>
 		<rom name="Poupeegirl DS 2 - Sweet Pink Style (Japan).nds" size="268435456" crc="9fb6d0ef" md5="cae4872d4c2b335f7f38c3e7b9e81a77" sha1="44d935d047ece41d44e1dde8cc6e46993f21ce7f"/>
 	</game>
+	<game name="Poupeegirl DS 2 - Sweet Pink Style (Japan) (Rev 1)" cloneof="Poupeegirl DS 2 - Sweet Pink Style (Japan)">
+		<description>Poupeegirl DS 2 - Sweet Pink Style (Japan) (Rev 1)</description>
+		<release name="Poupeegirl DS 2 - Sweet Pink Style (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Poupeegirl DS 2 - Sweet Pink Style (Japan) (Rev 1).nds" size="268435456" crc="f604bd62" md5="dcae31df396e05fc40b78705eae12e22" sha1="652fcc2be042be377c62333c60b8cf724fd042c4"/>
+	</game>
 	<game name="Power Play Pool (Europe) (En,Fr,De,Es,It)">
 		<description>Power Play Pool (Europe) (En,Fr,De,Es,It)</description>
 		<release name="Power Play Pool (Europe) (En,Fr,De,Es,It)" region="EUR"/>
@@ -26144,6 +26200,10 @@
 	<game name="Prince of Persia - The Forgotten Sands (USA) (En,Fr,De,Es,It,Nl) (Beta)" cloneof="Prince of Persia - The Forgotten Sands (Europe) (En,Fr,De,Es,It,Nl) (NDSi Enhanced)">
 		<description>Prince of Persia - The Forgotten Sands (USA) (En,Fr,De,Es,It,Nl) (Beta)</description>
 		<rom name="Prince of Persia - The Forgotten Sands (USA) (En,Fr,De,Es,It,Nl) (Beta).nds" size="33554432" crc="2c318a98" md5="0c9dc1fc0aceb27de41d4dc9306703cf" sha1="aff44287462dc40d071af6edd66cc3897295d3c2"/>
+	</game>
+	<game name="Prince of Persia - The Forgotten Sands (Unknown) (Beta)" cloneof="Prince of Persia - The Forgotten Sands (Europe) (En,Fr,De,Es,It,Nl) (NDSi Enhanced)">
+		<description>Prince of Persia - The Forgotten Sands (Unknown) (Beta)</description>
+		<rom name="Prince of Persia - The Forgotten Sands (Unknown) (Beta).nds" size="67108864" crc="94f82cb1" md5="99ad4ab33fd157e043d5a5dd46005fd8" sha1="425d2b2c12ae7532a04deea6d7682c62e1dea426"/>
 	</game>
 	<game name="Princess and the Frog, The (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Princess and the Frog, The (Europe) (En,Fr,De,Es,It,Nl)</description>
@@ -26790,6 +26850,10 @@
 		<description>Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan)</description>
 		<release name="Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan)" region="JPN"/>
 		<rom name="Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan).nds" size="33554432" crc="89ace37b" md5="01b680fa2de48cffb80fc7e6fb1ee78f" sha1="78cca1ea2e13ec52685818a5e053bccbb937fdf0"/>
+	</game>
+	<game name="Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan) (Rev 1)" cloneof="Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan)">
+		<description>Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan) (Rev 1)</description>
+		<rom name="Pururun! Shizuku-chan Aha - DS Drill Sansuu (Japan) (Rev 1).nds" size="33554432" crc="42e9d3da" md5="20129e42e18f1efd85b26b985443b698" sha1="e38f6e909acaeb1df7db14e98ed57c27416ee546"/>
 	</game>
 	<game name="Puss in Boots (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Puss in Boots (Europe) (En,Fr,De,Es,It,Nl)</description>
@@ -28417,6 +28481,11 @@
 		<release name="Sangokushi DS 3 (Japan)" region="JPN"/>
 		<rom name="Sangokushi DS 3 (Japan).nds" size="67108864" crc="58e981cd" md5="ba072b5743814a8a41c58c1f4f707735" sha1="b2e33ee0826db5862ed096ae93086c93d51713da"/>
 	</game>
+	<game name="Sangokushi DS 3 (Japan) (Rev 1)" cloneof="Sangokushi DS 3 (Japan)">
+		<description>Sangokushi DS 3 (Japan) (Rev 1)</description>
+		<release name="Sangokushi DS 3 (Japan) (Rev 1)" region="JPN"/>
+		<rom name="Sangokushi DS 3 (Japan) (Rev 1).nds" size="67108864" crc="5a244949" md5="da16c49396864206209109948c11fffc" sha1="e1fd7b99c85ec5948dafe6eded6db2d917c333d9"/>
+	</game>
 	<game name="Sangokushi Taisen DS (Japan)">
 		<description>Sangokushi Taisen DS (Japan)</description>
 		<release name="Sangokushi Taisen DS (Japan)" region="JPN"/>
@@ -29371,6 +29440,10 @@
 		<description>Signal (Japan)</description>
 		<release name="Signal (Japan)" region="JPN"/>
 		<rom name="Signal (Japan).nds" size="268435456" crc="aeebb206" md5="6893dd283a43438320d4bbbfc1d8856c" sha1="fc71f3af125e1dea153e4c650fddd7f65b123149"/>
+	</game>
+	<game name="Signal (Japan) (Rev 1)" cloneof="Signal (Japan)">
+		<description>Signal (Japan) (Rev 1)</description>
+		<rom name="Signal (Japan) (Rev 1).nds" size="268435456" crc="638281a7" md5="f88a9820a9c72863926f4a38053c88a1" sha1="1c695454a8991ad500ac90e89db15089a52385a7"/>
 	</game>
 	<game name="Silke - Pixelines Lillesoester - Hoensefoedder og Guleroedder (Denmark)">
 		<description>Silke - Pixelines Lillesoester - Hoensefoedder og Guleroedder (Denmark)</description>
@@ -30591,10 +30664,10 @@
 		<release name="SpongeBob vs the Big One - Beach Party Cook-Off (USA) (En,Fr)" region="USA"/>
 		<rom name="SpongeBob vs the Big One - Beach Party Cook-Off (USA) (En,Fr).nds" size="67108864" crc="e12d6a2d" md5="bc164ab7a24cfe1a30d4f18b4423dd65" sha1="134d40bef3162f8f8422d8f6d7d500da8a4527e4"/>
 	</game>
-	<game name="SpongeBob Yori Daesodong (Korea) [b]" cloneof="SpongeBob SquarePants - Frantic Fry Cook (Europe) (En,Fr,De,It,Nl)">
-		<description>SpongeBob Yori Daesodong (Korea) [b]</description>
-		<release name="SpongeBob Yori Daesodong (Korea) [b]" region="KOR"/>
-		<rom name="SpongeBob Yori Daesodong (Korea) [b].nds" size="33554432" crc="76adaf01" md5="086b68b015dc24ea79889fd6f9386f1b" sha1="25966c7fbec4c40b1984cfcfb4daa18ab667ffbd" status="baddump"/>
+	<game name="SpongeBob Yori Daesodong (Korea) (En) [b]" cloneof="SpongeBob SquarePants - Frantic Fry Cook (Europe) (En,Fr,De,It,Nl)">
+		<description>SpongeBob Yori Daesodong (Korea) (En) [b]</description>
+		<release name="SpongeBob Yori Daesodong (Korea) (En) [b]" region="KOR"/>
+		<rom name="SpongeBob Yori Daesodong (Korea) (En) [b].nds" size="33554432" crc="76adaf01" md5="086b68b015dc24ea79889fd6f9386f1b" sha1="25966c7fbec4c40b1984cfcfb4daa18ab667ffbd" status="baddump"/>
 	</game>
 	<game name="SpongeBob SquarePants - Plankton's Robotic Revenge (Europe) (En,Fr,De,Es,It,Nl,Sv)">
 		<description>SpongeBob SquarePants - Plankton's Robotic Revenge (Europe) (En,Fr,De,Es,It,Nl,Sv)</description>
@@ -31215,6 +31288,10 @@
 		<description>Sugar Sugar Rune - Queen Shiken wa Dai-panic (Japan)</description>
 		<release name="Sugar Sugar Rune - Queen Shiken wa Dai-panic (Japan)" region="JPN"/>
 		<rom name="Sugar Sugar Rune - Queen Shiken wa Dai-panic (Japan).nds" size="33554432" crc="a12b62cd" md5="8ae2255dd6aea992d27221c445e434e3" sha1="20d7c752fa1024d7fc5f07c477a36b5fd3340a66"/>
+	</game>
+	<game name="Suguroku DS (Japan) (Not for Resale)">
+		<description>Suguroku DS (Japan) (Not for Resale)</description>
+		<rom name="Suguroku DS (Japan) (Not for Resale).nds" size="16777216" crc="cb17b664" md5="cbd871a5182fcfb8c3ed1bf455b4d224" sha1="68eba71e907cb93a74531c1adc09e2a71b8f5e8f"/>
 	</game>
 	<game name="Suikoden - Tierkreis (Europe) (En,Fr,De,Es,It)">
 		<description>Suikoden - Tierkreis (Europe) (En,Fr,De,Es,It)</description>
@@ -32013,7 +32090,7 @@
 	<game name="Tangled (USA) (En,Fr,Es)" cloneof="Tangled (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Tangled (USA) (En,Fr,Es)</description>
 		<release name="Tangled (USA) (En,Fr,Es)" region="USA"/>
-		<rom name="Tangled (USA) (En,Fr,Es).nds" size="67108864" crc="8f0f64d6" md5="9021ed328857de1c4539f21311f9d134" sha1="7f04ef885bdf28d658fe62dfccefe8aa5a53dad9"/>
+		<rom name="Tangled (USA) (En,Fr,Es).nds" size="67108864" crc="8f0f64d6" md5="9021ed328857de1c4539f21311f9d134" sha1="7f04ef885bdf28d658fe62dfccefe8aa5a53dad9" status="verified"/>
 	</game>
 	<game name="Tangled (Europe) (En,Sv,No,Da)" cloneof="Tangled (Europe) (En,Fr,De,Es,It,Nl)">
 		<description>Tangled (Europe) (En,Sv,No,Da)</description>
@@ -33201,10 +33278,10 @@
 		<release name="Tokyo Odaiba Casino (Japan)" region="JPN"/>
 		<rom name="Tokyo Odaiba Casino (Japan).nds" size="8388608" crc="70d2b71a" md5="2036d703b1d41d3f9c7ff332ec56793e" sha1="348aa19cc0b082a71b4f99c1990c1f104c221b11"/>
 	</game>
-	<game name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan) [b]">
-		<description>Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan) [b]</description>
-		<release name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan) [b]" region="JPN"/>
-		<rom name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan) [b].nds" size="67108864" crc="81e99f74" md5="80a9f91286b9658b7974ca7f9194e9aa" sha1="fb698406b3455db636d7a7d8ef82cc737540b875" status="baddump"/>
+	<game name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan)">
+		<description>Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan)</description>
+		<release name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan)" region="JPN"/>
+		<rom name="Tokyo Twilight Busters - Kindan no Ikenie Teito Jigokuhen (Japan).nds" size="67108864" crc="8187e34a" md5="9e45ef9733397d515e58d177b2248903" sha1="d9c822d8ce8e2f539097b916d1a06f3240098d38"/>
 	</game>
 	<game name="Tom and Jerry Tales (Europe) (En,Fr,De,Es,It)">
 		<description>Tom and Jerry Tales (Europe) (En,Fr,De,Es,It)</description>
@@ -33621,10 +33698,10 @@
 		<release name="TouchMaster 4 - Connect (Europe) (En,Fr,De,Es,It) (Rev 1) (NDSi Enhanced)" region="EUR"/>
 		<rom name="TouchMaster 4 - Connect (Europe) (En,Fr,De,Es,It) (Rev 1) (NDSi Enhanced).nds" size="67108864" crc="24eb5c13" md5="02d6fbd05964d7e333b32612da083bdd" sha1="8d9b6d6bfc03a0e44e3c3f431f4ba2cff0169de1"/>
 	</game>
-	<game name="Toudai Shougi - Meijinsen Doujou DS (Japan) [b]">
-		<description>Toudai Shougi - Meijinsen Doujou DS (Japan) [b]</description>
-		<release name="Toudai Shougi - Meijinsen Doujou DS (Japan) [b]" region="JPN"/>
-		<rom name="Toudai Shougi - Meijinsen Doujou DS (Japan) [b].nds" size="22401088" crc="ec27d006" md5="a0d3bdb9559c1ebfc303289c7335e8cb" sha1="952389c4cf79b38bb87ae621c79e4080fdc336b9" status="baddump"/>
+	<game name="Toudai Shougi - Meijinsen Doujou DS (Japan)">
+		<description>Toudai Shougi - Meijinsen Doujou DS (Japan)</description>
+		<release name="Toudai Shougi - Meijinsen Doujou DS (Japan)" region="JPN"/>
+		<rom name="Toudai Shougi - Meijinsen Doujou DS (Japan).nds" size="33554432" crc="a463754e" md5="4df59d0911fcdda16b25774e0cf16771" sha1="4f7d2abba39be2c3eaa7b5307a0b41da1f7160e5"/>
 	</game>
 	<game name="Toudou Ryuunosuke Tantei Nikki - Aen no Hakobune - Souma-tei Renzoku Satsujin Jiken (Japan)">
 		<description>Toudou Ryuunosuke Tantei Nikki - Aen no Hakobune - Souma-tei Renzoku Satsujin Jiken (Japan)</description>
@@ -33987,7 +34064,7 @@
 		<rom name="Transformers Animated - The Game (USA).nds" size="67108864" crc="d6adf980" md5="fec81b3205ab14a6437042e9d359a400" sha1="af5e038405ebddeb5624ff4375e6242b3c094fb9" status="verified"/>
 	</game>
 	<game name="Transformers Demo Card (USA) (Demo) (Wi-Fi Kiosk)">
-		<description>Transformers Demo Card (USA) (Demo) (Wi-Fi Kiosk) (Technically a DS Download Station.)</description>
+		<description>Technically a DS Download Station.</description>
 		<release name="Transformers Demo Card (USA) (Demo) (Wi-Fi Kiosk)" region="USA"/>
 		<rom name="Transformers Demo Card (USA) (Demo) (Wi-Fi Kiosk).nds" size="16777216" crc="a09f1d15" md5="70fe0b2573c4dd5d6984522ff6f90bb8" sha1="08dc83834d9d98686d45790b0dc82bfef4bd04e6"/>
 	</game>
@@ -34040,6 +34117,10 @@
 		<description>Chou Shittou Caduceus (Japan) (Rev 1)</description>
 		<release name="Chou Shittou Caduceus (Japan) (Rev 1)" region="JPN"/>
 		<rom name="Chou Shittou Caduceus (Japan) (Rev 1).nds" size="16777216" crc="60e5e85c" md5="638031989938f47e513f2a6e48bfc68b" sha1="af096c8150fad93e5ad4f8b659dfbd527cf8c28a"/>
+	</game>
+	<game name="Chou Shittou Caduceus (Japan) (Demo) (Kiosk)" cloneof="Trauma Center - Under the Knife (Europe) (En,Fr,De,Es,It)">
+		<description>Chou Shittou Caduceus (Japan) (Demo) (Kiosk)</description>
+		<rom name="Chou Shittou Caduceus (Japan) (Demo) (Kiosk).nds" size="8388608" crc="9d4b2c96" md5="93b56d820b92b3443ee35019a4859ad9" sha1="e0b9fb3fc5019d7bad0d0a5c167fb01385fa3bac"/>
 	</game>
 	<game name="Trauma Center - Under the Knife (USA)" cloneof="Trauma Center - Under the Knife (Europe) (En,Fr,De,Es,It)">
 		<description>Trauma Center - Under the Knife (USA)</description>
@@ -34933,6 +35014,10 @@
 		<description>Sawaru Made in Wario (Japan) (Rev 3)</description>
 		<release name="Sawaru Made in Wario (Japan) (Rev 3)" region="JPN"/>
 		<rom name="Sawaru Made in Wario (Japan) (Rev 3).nds" size="33554432" crc="76769ad1" md5="4970cdd82fe5f0348acf72755d829a26" sha1="dbfebcc333582e3c40f53f7ce4da17a5e1050e7a"/>
+	</game>
+	<game name="Sawaru Made in Wario (Japan) (Demo) (Kiosk)" cloneof="WarioWare - Touched! (Europe) (En,Fr,De,Es,It)">
+		<description>Sawaru Made in Wario (Japan) (Demo) (Kiosk)</description>
+		<rom name="Sawaru Made in Wario (Japan) (Demo) (Kiosk).nds" size="16777216" crc="357086ba" md5="128689ec58c7a7e23a81c9de2b7698d0" sha1="e0f9261286556a0d4c1fa680a4763cafb723e828"/>
 	</game>
 	<game name="WarioWare - Touched! (USA)" cloneof="WarioWare - Touched! (Europe) (En,Fr,De,Es,It)">
 		<description>WarioWare - Touched! (USA)</description>

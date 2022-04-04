@@ -6,13 +6,13 @@
 		<description>Commodore - Commodore 64 (Parent-Clone)</description>
 		<version>20210216-232616</version>
 		<date>20210216-232616</date>
-		<author></author>
+		<author>C. V. Reynolds, Hiccup, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
-	<game name="[BIOS] Commodore 1541 (Japan, USA)">
-		<description>[BIOS] Commodore 1541 (Japan, USA)</description>
-		<rom name="[BIOS] Commodore 1541 (Japan, USA).ub3" size="8192" crc="29ae9752" md5="41f5af978d69fc20f1f2fcad7c2ad8cf" sha1="8e0547430135ba462525c224e76356bd3d430f11"/>
-		<rom name="[BIOS] Commodore 1541 (Japan, USA).ub4" size="8192" crc="9a48d3f0" md5="5ecc503165c18e5b975e57172dfd8303" sha1="7a1054c6156b51c25410caec0f609efb079d3a77"/>
+	<game name="[BIOS] Commodore 1541 (Japan, USA) (En)">
+		<description>[BIOS] Commodore 1541 (Japan, USA) (En)</description>
+		<rom name="[BIOS] Commodore 1541 (Japan, USA) (En).ub3" size="8192" crc="29ae9752" md5="41f5af978d69fc20f1f2fcad7c2ad8cf" sha1="8e0547430135ba462525c224e76356bd3d430f11"/>
+		<rom name="[BIOS] Commodore 1541 (Japan, USA) (En).ub4" size="8192" crc="9a48d3f0" md5="5ecc503165c18e5b975e57172dfd8303" sha1="7a1054c6156b51c25410caec0f609efb079d3a77"/>
 	</game>
 	<game name="[BIOS] Commodore 1541 (World)">
 		<description>[BIOS] Commodore 1541 (World)</description>

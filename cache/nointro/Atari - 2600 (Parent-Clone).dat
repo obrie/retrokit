@@ -4,9 +4,9 @@
 	<header>
 		<name>Atari - 2600 (Parent-Clone)</name>
 		<description>Atari - 2600 (Parent-Clone)</description>
-		<version>20211206-131945</version>
-		<date>20211206-131945</date>
-		<author></author>
+		<version>20220331-182926</version>
+		<date>20220331-182926</date>
+		<author>Arctic Circle System, C. V. Reynolds, Fake Shemp, Flashfire42, Hiccup, omonim2007, RetroUprising, SonGoku, xuom2</author>
 		<url>www.no-intro.org</url>
 	</header>
 	<game name="3-D Genesis (USA) (Proto)">
@@ -118,15 +118,15 @@
 		<release name="Air-Sea Battle (Europe)" region="EUR"/>
 		<rom name="Air-Sea Battle (Europe).a26" size="2048" crc="cf7f8944" md5="0c7926d660f903a2d6910c254660c32c" sha1="b96c7a509bf610f61f82377bfd506db3dba2b423"/>
 	</game>
-	<game name="Air-Sea Battle ~ Target Fun (Japan, USA)" cloneof="Air-Sea Battle (Europe)">
-		<description>Air-Sea Battle ~ Target Fun (Japan, USA)</description>
-		<release name="Air-Sea Battle ~ Target Fun (Japan, USA)" region="JPN"/>
-		<release name="Air-Sea Battle ~ Target Fun (Japan, USA)" region="USA"/>
-		<rom name="Air-Sea Battle ~ Target Fun (Japan, USA).a26" size="2048" crc="1fc6c0f1" md5="16cb43492987d2f32b423817cdaaf7c4" sha1="a746fdc82b336a9d499bf17f50b41e0193ba595e" status="verified"/>
+	<game name="Air-Sea Battle ~ Target Fun (Japan, USA) (En)" cloneof="Air-Sea Battle (Europe)">
+		<description>Air-Sea Battle ~ Target Fun (Japan, USA) (En)</description>
+		<release name="Air-Sea Battle ~ Target Fun (Japan, USA) (En)" region="JPN"/>
+		<release name="Air-Sea Battle ~ Target Fun (Japan, USA) (En)" region="USA"/>
+		<rom name="Air-Sea Battle ~ Target Fun (Japan, USA) (En).a26" size="2048" crc="1fc6c0f1" md5="16cb43492987d2f32b423817cdaaf7c4" sha1="a746fdc82b336a9d499bf17f50b41e0193ba595e" status="verified"/>
 	</game>
-	<game name="Air-Sea Battle ~ Target Fun (Japan, USA) (Atari Anthology)">
-		<description>Air-Sea Battle ~ Target Fun (Japan, USA) (Atari Anthology)</description>
-		<rom name="Air-Sea Battle ~ Target Fun (Japan, USA) (Atari Anthology).a26" size="2048" crc="2a2a9f81" md5="835967c3a2475d852286f04b1b8c62d9" sha1="fe70d356b84c9bef28497332c6b36d9b52a0205d" status="verified"/>
+	<game name="Air-Sea Battle ~ Target Fun (Japan, USA) (En) (Atari Anthology)">
+		<description>Air-Sea Battle ~ Target Fun (Japan, USA) (En) (Atari Anthology)</description>
+		<rom name="Air-Sea Battle ~ Target Fun (Japan, USA) (En) (Atari Anthology).a26" size="2048" crc="2a2a9f81" md5="835967c3a2475d852286f04b1b8c62d9" sha1="fe70d356b84c9bef28497332c6b36d9b52a0205d" status="verified"/>
 	</game>
 	<game name="Airlock (Europe)">
 		<description>Airlock (Europe)</description>
@@ -147,10 +147,10 @@
 		<release name="Alien (USA)" region="USA"/>
 		<rom name="Alien (USA).a26" size="4096" crc="6d61059f" md5="f1a0a23e6464d954e3a9579c4ccd01c8" sha1="01d99bf307262825db58631e8002dd008a42cb1e"/>
 	</game>
-	<game name="Alien (Brazil) (Unl)" cloneof="Alien (USA)">
-		<description>Alien (Brazil) (Unl)</description>
-		<release name="Alien (Brazil) (Unl)" region="BRA"/>
-		<rom name="Alien (Brazil) (Unl).a26" size="4096" crc="e61021ec" md5="956496f81775de0b69a116a0d1ad41cc" sha1="abf186c0108791d998f7738324d0e49a977b015b"/>
+	<game name="Alien (Brazil) (En) (Unl)" cloneof="Alien (USA)">
+		<description>Alien (Brazil) (En) (Unl)</description>
+		<release name="Alien (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Alien (Brazil) (En) (Unl).a26" size="4096" crc="e61021ec" md5="956496f81775de0b69a116a0d1ad41cc" sha1="abf186c0108791d998f7738324d0e49a977b015b"/>
 	</game>
 	<game name="Alien's Return (Europe)">
 		<description>Alien's Return (Europe)</description>
@@ -175,15 +175,15 @@
 		<description>Alpha Beam (Europe) (Beta) (1983-06-03)</description>
 		<rom name="Alpha Beam (Europe) (Beta) (1983-06-03).a26" size="8192" crc="1651f45e" md5="df95e4af466c809619299f49ece92365" sha1="ea1124a3eac39133f59d664545c33cc514022067"/>
 	</game>
-	<game name="Alpha Beam (Japan, USA) (Beta) (1982-12-22)" cloneof="Alpha Beam with Ernie (Europe)">
-		<description>Alpha Beam (Japan, USA) (Beta) (1982-12-22)</description>
-		<rom name="Alpha Beam (Japan, USA) (Beta) (1982-12-22).a26" size="8192" crc="85f1cb08" md5="8f5ac5139419c5d49bacc296e342a247" sha1="7118f2401a0d34996762d9838d2f4bacf745fde3"/>
+	<game name="Alpha Beam (Japan, USA) (En) (Beta) (1982-12-22)" cloneof="Alpha Beam with Ernie (Europe)">
+		<description>Alpha Beam (Japan, USA) (En) (Beta) (1982-12-22)</description>
+		<rom name="Alpha Beam (Japan, USA) (En) (Beta) (1982-12-22).a26" size="8192" crc="85f1cb08" md5="8f5ac5139419c5d49bacc296e342a247" sha1="7118f2401a0d34996762d9838d2f4bacf745fde3"/>
 	</game>
-	<game name="Alpha Beam with Ernie (Japan, USA)" cloneof="Alpha Beam with Ernie (Europe)">
-		<description>Alpha Beam with Ernie (Japan, USA)</description>
-		<release name="Alpha Beam with Ernie (Japan, USA)" region="JPN"/>
-		<release name="Alpha Beam with Ernie (Japan, USA)" region="USA"/>
-		<rom name="Alpha Beam with Ernie (Japan, USA).a26" size="8192" crc="27c6b897" md5="9e01f7f95cb8596765e03b9a36e8e33c" sha1="a1f660827ce291f19719a5672f2c5d277d903b03"/>
+	<game name="Alpha Beam with Ernie (Japan, USA) (En)" cloneof="Alpha Beam with Ernie (Europe)">
+		<description>Alpha Beam with Ernie (Japan, USA) (En)</description>
+		<release name="Alpha Beam with Ernie (Japan, USA) (En)" region="JPN"/>
+		<release name="Alpha Beam with Ernie (Japan, USA) (En)" region="USA"/>
+		<rom name="Alpha Beam with Ernie (Japan, USA) (En).a26" size="8192" crc="27c6b897" md5="9e01f7f95cb8596765e03b9a36e8e33c" sha1="a1f660827ce291f19719a5672f2c5d277d903b03"/>
 	</game>
 	<game name="Amidar (Europe)">
 		<description>Amidar (Europe)</description>
@@ -205,10 +205,10 @@
 		<release name="Aquaventure (USA) (Proto) (1983-08-12)" region="USA"/>
 		<rom name="Aquaventure (USA) (Proto) (1983-08-12).a26" size="8192" crc="87a8cb8b" md5="038e1e79c3d4410defde4bfe0b99cc32" sha1="7d132ab776ff755b86bf4f204165aa54e9e1f1cf"/>
 	</game>
-	<game name="Aquaventure (Brazil) (Proto) (Unl)" cloneof="Aquaventure (USA) (Proto) (1983-08-12)">
-		<description>Aquaventure (Brazil) (Proto) (Unl)</description>
-		<release name="Aquaventure (Brazil) (Proto) (Unl)" region="BRA"/>
-		<rom name="Aquaventure (Brazil) (Proto) (Unl).a26" size="8192" crc="7fa61fa0" md5="f69d4fcf76942fcd9bdf3fd8fde790fb" sha1="cb400de2653e125e704abd8b0fe5dddb43e3438b"/>
+	<game name="Aquaventure (Brazil) (En) (Proto) (Unl)" cloneof="Aquaventure (USA) (Proto) (1983-08-12)">
+		<description>Aquaventure (Brazil) (En) (Proto) (Unl)</description>
+		<release name="Aquaventure (Brazil) (En) (Proto) (Unl)" region="BRA"/>
+		<rom name="Aquaventure (Brazil) (En) (Proto) (Unl).a26" size="8192" crc="7fa61fa0" md5="f69d4fcf76942fcd9bdf3fd8fde790fb" sha1="cb400de2653e125e704abd8b0fe5dddb43e3438b"/>
 	</game>
 	<game name="Armor Ambush (Europe)">
 		<description>Armor Ambush (Europe)</description>
@@ -235,11 +235,11 @@
 		<release name="Asteroids (Europe)" region="EUR"/>
 		<rom name="Asteroids (Europe).a26" size="8192" crc="0a2f8288" md5="8cf0d333bbe85b9549b1e6b1e2390b8d" sha1="1cb8f057acad6dc65fef07d3202088ff4ae355cd"/>
 	</game>
-	<game name="Asteroids (Japan, USA)" cloneof="Asteroids (Europe)">
-		<description>Asteroids (Japan, USA)</description>
-		<release name="Asteroids (Japan, USA)" region="JPN"/>
-		<release name="Asteroids (Japan, USA)" region="USA"/>
-		<rom name="Asteroids (Japan, USA).a26" size="8192" crc="c7d64c94" md5="dd7884b4f93cab423ac471aa1935e3df" sha1="d68937e57a367e61eaa4b44550ae8b9d69456661" status="verified"/>
+	<game name="Asteroids (Japan, USA) (En)" cloneof="Asteroids (Europe)">
+		<description>Asteroids (Japan, USA) (En)</description>
+		<release name="Asteroids (Japan, USA) (En)" region="JPN"/>
+		<release name="Asteroids (Japan, USA) (En)" region="USA"/>
+		<rom name="Asteroids (Japan, USA) (En).a26" size="8192" crc="c7d64c94" md5="dd7884b4f93cab423ac471aa1935e3df" sha1="d68937e57a367e61eaa4b44550ae8b9d69456661" status="verified"/>
 	</game>
 	<game name="Asteroids (USA) (Atari Anthology)">
 		<description>Asteroids (USA) (Atari Anthology)</description>
@@ -259,10 +259,10 @@
 		<description>Astroblast (USA)</description>
 		<rom name="Astroblast (USA).a26" size="4096" crc="d214f241" md5="75169c08b56e4e6c36681e599c4d8cc5" sha1="b850bd72d18906d9684e1c7251cb699588cbcf64"/>
 	</game>
-	<game name="Astrowar (Brazil) (Unl)">
-		<description>Astrowar (Brazil) (Unl)</description>
-		<release name="Astrowar (Brazil) (Unl)" region="BRA"/>
-		<rom name="Astrowar (Brazil) (Unl).a26" size="4096" crc="7b4b7eaf" md5="8f53a3b925f0fd961d9b8c4d46ee6755" sha1="b6f01797e3e8d80f4e33da73e64aa2935af96038"/>
+	<game name="Astrowar (Brazil) (En) (Unl)">
+		<description>Astrowar (Brazil) (En) (Unl)</description>
+		<release name="Astrowar (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Astrowar (Brazil) (En) (Unl).a26" size="4096" crc="7b4b7eaf" md5="8f53a3b925f0fd961d9b8c4d46ee6755" sha1="b6f01797e3e8d80f4e33da73e64aa2935af96038"/>
 	</game>
 	<game name="Atari Video Cube (USA, Europe) (Atari Anthology)">
 		<description>Atari Video Cube (USA, Europe) (Atari Anthology)</description>
@@ -327,10 +327,10 @@
 		<release name="Barnstorming (USA)" region="USA"/>
 		<rom name="Barnstorming (USA).a26" size="4096" crc="4a005181" md5="f8240e62d8c0a64a61e19388414e3104" sha1="372663097b419ced64f44ef743fe8d0af4317f46"/>
 	</game>
-	<game name="Barnstorming (Brazil) (Unl)" cloneof="Barnstorming (Europe)">
-		<description>Barnstorming (Brazil) (Unl)</description>
-		<release name="Barnstorming (Brazil) (Unl)" region="BRA"/>
-		<rom name="Barnstorming (Brazil) (Unl).a26" size="4096" crc="281736d6" md5="5ae73916fa1da8d38ceff674fa25a78a" sha1="72f0bd35b49e4a35f6e51df6ec8ea579b5a673eb"/>
+	<game name="Barnstorming (Brazil) (En) (Unl)" cloneof="Barnstorming (Europe)">
+		<description>Barnstorming (Brazil) (En) (Unl)</description>
+		<release name="Barnstorming (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Barnstorming (Brazil) (En) (Unl).a26" size="4096" crc="281736d6" md5="5ae73916fa1da8d38ceff674fa25a78a" sha1="72f0bd35b49e4a35f6e51df6ec8ea579b5a673eb"/>
 	</game>
 	<game name="Base Attack (Europe)">
 		<description>Base Attack (Europe)</description>
@@ -372,19 +372,19 @@
 		<release name="Battlezone (Europe)" region="EUR"/>
 		<rom name="Battlezone (Europe).a26" size="8192" crc="5cc921f6" md5="fbe554aa8f759226d251ba6b64a9cce4" sha1="d33a367fc4890bea8c2d9a7283d84720b20cabf8" status="verified"/>
 	</game>
-	<game name="Battlezone (Japan, USA)" cloneof="Battlezone (Europe)">
-		<description>Battlezone (Japan, USA)</description>
-		<release name="Battlezone (Japan, USA)" region="JPN"/>
-		<release name="Battlezone (Japan, USA)" region="USA"/>
-		<rom name="Battlezone (Japan, USA).a26" size="8192" crc="9155dd1d" md5="41f252a66c6301f1e8ab3612c19bc5d4" sha1="e4134a3b4a065c856802bc935c12fa7e9868110a" status="verified"/>
+	<game name="Battlezone (Japan, USA) (En)" cloneof="Battlezone (Europe)">
+		<description>Battlezone (Japan, USA) (En)</description>
+		<release name="Battlezone (Japan, USA) (En)" region="JPN"/>
+		<release name="Battlezone (Japan, USA) (En)" region="USA"/>
+		<rom name="Battlezone (Japan, USA) (En).a26" size="8192" crc="9155dd1d" md5="41f252a66c6301f1e8ab3612c19bc5d4" sha1="e4134a3b4a065c856802bc935c12fa7e9868110a" status="verified"/>
 	</game>
-	<game name="Battlezone (Japan, USA) (Beta) (1983-05-02)" cloneof="Battlezone (Europe)">
-		<description>Battlezone (Japan, USA) (Beta) (1983-05-02)</description>
-		<rom name="Battlezone (Japan, USA) (Beta) (1983-05-02).a26" size="8192" crc="c1e6d7cf" md5="e434c0e161dd3c3fb435eb6bad2e182c" sha1="fafd522e36a4888dfc2a40b1d5879ee8a33d7931"/>
+	<game name="Battlezone (Japan, USA) (En) (Beta) (1983-05-02)" cloneof="Battlezone (Europe)">
+		<description>Battlezone (Japan, USA) (En) (Beta) (1983-05-02)</description>
+		<rom name="Battlezone (Japan, USA) (En) (Beta) (1983-05-02).a26" size="8192" crc="c1e6d7cf" md5="e434c0e161dd3c3fb435eb6bad2e182c" sha1="fafd522e36a4888dfc2a40b1d5879ee8a33d7931"/>
 	</game>
-	<game name="Battlezone (Japan, USA) (Beta) (1983-05-12)" cloneof="Battlezone (Europe)">
-		<description>Battlezone (Japan, USA) (Beta) (1983-05-12)</description>
-		<rom name="Battlezone (Japan, USA) (Beta) (1983-05-12).a26" size="8192" crc="63f31af6" md5="5b85e987e2b1618769d97ba9182333d0" sha1="3e226d8ffa975b937d808f73f79b3f052c3b067e"/>
+	<game name="Battlezone (Japan, USA) (En) (Beta) (1983-05-12)" cloneof="Battlezone (Europe)">
+		<description>Battlezone (Japan, USA) (En) (Beta) (1983-05-12)</description>
+		<rom name="Battlezone (Japan, USA) (En) (Beta) (1983-05-12).a26" size="8192" crc="63f31af6" md5="5b85e987e2b1618769d97ba9182333d0" sha1="3e226d8ffa975b937d808f73f79b3f052c3b067e"/>
 	</game>
 	<game name="Beamrider (Europe)">
 		<description>Beamrider (Europe)</description>
@@ -401,10 +401,10 @@
 		<release name="Beany Bopper (USA)" region="USA"/>
 		<rom name="Beany Bopper (USA).a26" size="4096" crc="b722bc8f" md5="d0b9df57bfea66378c0418ec68cfe37f" sha1="fad0c97331a525a4aeba67987552ba324629a7a0"/>
 	</game>
-	<game name="Beany Bopper (Brazil) (Unl)" cloneof="Beany Bopper (USA)">
-		<description>Beany Bopper (Brazil) (Unl)</description>
-		<release name="Beany Bopper (Brazil) (Unl)" region="BRA"/>
-		<rom name="Beany Bopper (Brazil) (Unl).a26" size="4096" crc="624c9345" md5="6a9e0c72fab92df70084eccd9061fdbd" sha1="73d55cf63ccabf881148e71dfdbd7d4445889f80"/>
+	<game name="Beany Bopper (Brazil) (En) (Unl)" cloneof="Beany Bopper (USA)">
+		<description>Beany Bopper (Brazil) (En) (Unl)</description>
+		<release name="Beany Bopper (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Beany Bopper (Brazil) (En) (Unl).a26" size="4096" crc="624c9345" md5="6a9e0c72fab92df70084eccd9061fdbd" sha1="73d55cf63ccabf881148e71dfdbd7d4445889f80"/>
 	</game>
 	<game name="Beat'Em &amp; Eat'Em (Europe)">
 		<description>Beat'Em &amp; Eat'Em (Europe)</description>
@@ -416,10 +416,10 @@
 		<release name="Beat'Em &amp; Eat'Em (USA)" region="USA"/>
 		<rom name="Beat'Em &amp; Eat'Em (USA).a26" size="4096" crc="c90d4f84" md5="59e96de9628e8373d1c685f5e57dcf10" sha1="e2c29d0a73a4575028b62dca745476a17f07c8f0" status="verified"/>
 	</game>
-	<game name="Beat'Em &amp; Eat'Em (Brazil) (Unl)" cloneof="Beat'Em &amp; Eat'Em (Europe)">
-		<description>Beat'Em &amp; Eat'Em (Brazil) (Unl)</description>
-		<release name="Beat'Em &amp; Eat'Em (Brazil) (Unl)" region="BRA"/>
-		<rom name="Beat'Em &amp; Eat'Em (Brazil) (Unl).a26" size="4096" crc="e4f66058" md5="6c25f58fd184632ca76020f589bb3767" sha1="8e8e334fa481698d0adb7f9cb7852e49ac462eb9"/>
+	<game name="Beat'Em &amp; Eat'Em (Brazil) (En) (Unl)" cloneof="Beat'Em &amp; Eat'Em (Europe)">
+		<description>Beat'Em &amp; Eat'Em (Brazil) (En) (Unl)</description>
+		<release name="Beat'Em &amp; Eat'Em (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Beat'Em &amp; Eat'Em (Brazil) (En) (Unl).a26" size="4096" crc="e4f66058" md5="6c25f58fd184632ca76020f589bb3767" sha1="8e8e334fa481698d0adb7f9cb7852e49ac462eb9"/>
 	</game>
 	<game name="Berenstain Bears (USA)">
 		<description>Berenstain Bears (USA)</description>
@@ -441,43 +441,47 @@
 		<release name="Berzerk (Europe)" region="EUR"/>
 		<rom name="Berzerk (Europe).a26" size="4096" crc="d7f66624" md5="0805366f1b165a64b6d4df20d2c39d25" sha1="afb983a2f881a017b2cfb593b0d32742093612dd"/>
 	</game>
-	<game name="Berzerk (Japan, USA)" cloneof="Berzerk (Europe)">
-		<description>Berzerk (Japan, USA)</description>
-		<release name="Berzerk (Japan, USA)" region="JPN"/>
-		<release name="Berzerk (Japan, USA)" region="USA"/>
-		<rom name="Berzerk (Japan, USA).a26" size="4096" crc="2e8b4b5f" md5="136f75c4dd02c29283752b7e5799f978" sha1="08bcbc8954473e8f0242b881315b0af4466998ae" status="verified"/>
+	<game name="Berzerk (Japan, USA) (En)" cloneof="Berzerk (Europe)">
+		<description>Berzerk (Japan, USA) (En)</description>
+		<release name="Berzerk (Japan, USA) (En)" region="JPN"/>
+		<release name="Berzerk (Japan, USA) (En)" region="USA"/>
+		<rom name="Berzerk (Japan, USA) (En).a26" size="4096" crc="2e8b4b5f" md5="136f75c4dd02c29283752b7e5799f978" sha1="08bcbc8954473e8f0242b881315b0af4466998ae" status="verified"/>
 	</game>
-	<game name="Berzerk (Brazil) (Unl)" cloneof="Berzerk (Europe)">
-		<description>Berzerk (Brazil) (Unl)</description>
-		<release name="Berzerk (Brazil) (Unl)" region="BRA"/>
-		<rom name="Berzerk (Brazil) (Unl).a26" size="4096" crc="f973d708" md5="fac28963307b6e85082ccd77c88325e7" sha1="6bffbbe1207662de89c7ea02c1fcd004071fb9e4"/>
+	<game name="Berzerk (Brazil) (En) (Unl)" cloneof="Berzerk (Europe)">
+		<description>Berzerk (Brazil) (En) (Unl)</description>
+		<release name="Berzerk (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Berzerk (Brazil) (En) (Unl).a26" size="4096" crc="f973d708" md5="fac28963307b6e85082ccd77c88325e7" sha1="6bffbbe1207662de89c7ea02c1fcd004071fb9e4"/>
 	</game>
 	<game name="Big Bird's Egg Catch (Europe)">
 		<description>Big Bird's Egg Catch (Europe)</description>
 		<release name="Big Bird's Egg Catch (Europe)" region="EUR"/>
 		<rom name="Big Bird's Egg Catch (Europe).a26" size="8192" crc="b0555578" md5="f283cc294ece520c2badf9da20cfc025" sha1="fd9822ec54add04569b629d631182d9deac7184d"/>
 	</game>
-	<game name="Big Bird's Egg Catch (Japan, USA)" cloneof="Big Bird's Egg Catch (Europe)">
-		<description>Big Bird's Egg Catch (Japan, USA)</description>
-		<release name="Big Bird's Egg Catch (Japan, USA)" region="JPN"/>
-		<release name="Big Bird's Egg Catch (Japan, USA)" region="USA"/>
-		<rom name="Big Bird's Egg Catch (Japan, USA).a26" size="8192" crc="96dc9a9c" md5="1802cc46b879b229272501998c5de04f" sha1="5e4517db83c061926130ab65975e3b83d9401cc9" status="verified"/>
+	<game name="Big Bird's Egg Catch (Japan, USA) (En)" cloneof="Big Bird's Egg Catch (Europe)">
+		<description>Big Bird's Egg Catch (Japan, USA) (En)</description>
+		<release name="Big Bird's Egg Catch (Japan, USA) (En)" region="JPN"/>
+		<release name="Big Bird's Egg Catch (Japan, USA) (En)" region="USA"/>
+		<rom name="Big Bird's Egg Catch (Japan, USA) (En).a26" size="8192" crc="96dc9a9c" md5="1802cc46b879b229272501998c5de04f" sha1="5e4517db83c061926130ab65975e3b83d9401cc9" status="verified"/>
 	</game>
-	<game name="Big Bird's Egg Catch (Japan, USA) (Beta) (1982-12-08)" cloneof="Big Bird's Egg Catch (Europe)">
-		<description>Big Bird's Egg Catch (Japan, USA) (Beta) (1982-12-08)</description>
-		<rom name="Big Bird's Egg Catch (Japan, USA) (Beta) (1982-12-08).a26" size="8192" crc="9de03520" md5="afd2cf258d51ae4965ee21abba3627ab" sha1="a3ab3699d945ac356aeff637046f197f9d6f7063"/>
+	<game name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1982-12-08)" cloneof="Big Bird's Egg Catch (Europe)">
+		<description>Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1982-12-08)</description>
+		<rom name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1982-12-08).a26" size="8192" crc="9de03520" md5="afd2cf258d51ae4965ee21abba3627ab" sha1="a3ab3699d945ac356aeff637046f197f9d6f7063"/>
 	</game>
-	<game name="Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-02)" cloneof="Big Bird's Egg Catch (Europe)">
-		<description>Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-02)</description>
-		<rom name="Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-02).a26" size="8192" crc="eeb65efa" md5="151fa3218d8d7600114eb5bcd79c85cb" sha1="aafb88ef8f95b1051cb8b6a153b165215c95c7bd"/>
+	<game name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-02)" cloneof="Big Bird's Egg Catch (Europe)">
+		<description>Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-02)</description>
+		<rom name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-02).a26" size="8192" crc="eeb65efa" md5="151fa3218d8d7600114eb5bcd79c85cb" sha1="aafb88ef8f95b1051cb8b6a153b165215c95c7bd"/>
 	</game>
-	<game name="Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-17)" cloneof="Big Bird's Egg Catch (Europe)">
-		<description>Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-17)</description>
-		<rom name="Big Bird's Egg Catch (Japan, USA) (Beta) (1983-05-17).a26" size="8192" crc="3a4038ac" md5="0b17ed42984000da8b727ca46143f87a" sha1="e2b0304de695cea7c98344642254b7f181e928d2"/>
+	<game name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-17)" cloneof="Big Bird's Egg Catch (Europe)">
+		<description>Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-17)</description>
+		<rom name="Big Bird's Egg Catch (Japan, USA) (En) (Beta) (1983-05-17).a26" size="8192" crc="3a4038ac" md5="0b17ed42984000da8b727ca46143f87a" sha1="e2b0304de695cea7c98344642254b7f181e928d2"/>
 	</game>
 	<game name="Bionic Breakthrough (USA) (Proto)">
 		<description>Bionic Breakthrough (USA) (Proto)</description>
 		<rom name="Bionic Breakthrough (USA) (Proto).a26" size="8192" crc="928e4b47" md5="f0541d2f7cda5ec7bab6d62b6128b823" sha1="f6a41507b8cf890ab7c59bb1424f0500534385ce"/>
+	</game>
+	<game name="Birthday Mania (USA) (Robert A. Tokar)">
+		<description>Birthday Mania (USA) (Robert A. Tokar)</description>
+		<rom name="Birthday Mania (USA) (Robert A. Tokar).a26" size="4096" crc="a9400431" md5="a6239810564638de7e4c54e66b3014e4" sha1="d51e8f48f985557da31a70ed79b044dd52381b25"/>
 	</game>
 	<game name="Black Jack (Europe)">
 		<description>Black Jack (Europe)</description>
@@ -532,14 +536,14 @@
 		<description>Bobby Is Going Home (Europe) (Beta)</description>
 		<rom name="Bobby Is Going Home (Europe) (Beta).a26" size="4096" crc="3e662128" md5="ccb56107ff0492232065b85493daa635" sha1="4aef30b43249621e09a690d54ebe23377289a997"/>
 	</game>
-	<game name="Bobby Is Going Home (Brazil) (NTSC) (Unl)" cloneof="Bobby Is Going Home (Europe)">
-		<description>Bobby Is Going Home (Brazil) (NTSC) (Unl)</description>
-		<release name="Bobby Is Going Home (Brazil) (NTSC) (Unl)" region="BRA"/>
-		<rom name="Bobby Is Going Home (Brazil) (NTSC) (Unl).a26" size="4096" crc="358940e3" md5="075069ad80cde15eca69e3c98bd66714" sha1="e00202da428db2d05e30cdd59488e5e0d405c678"/>
+	<game name="Bobby Is Going Home (Brazil) (En) (NTSC) (Unl)" cloneof="Bobby Is Going Home (Europe)">
+		<description>Bobby Is Going Home (Brazil) (En) (NTSC) (Unl)</description>
+		<release name="Bobby Is Going Home (Brazil) (En) (NTSC) (Unl)" region="BRA"/>
+		<rom name="Bobby Is Going Home (Brazil) (En) (NTSC) (Unl).a26" size="4096" crc="358940e3" md5="075069ad80cde15eca69e3c98bd66714" sha1="e00202da428db2d05e30cdd59488e5e0d405c678"/>
 	</game>
-	<game name="Bobby Is Going Home (Brazil) (PAL) (Unl)" cloneof="Bobby Is Going Home (Europe)">
-		<description>Bobby Is Going Home (Brazil) (PAL) (Unl)</description>
-		<rom name="Bobby Is Going Home (Brazil) (PAL) (Unl).a26" size="4096" crc="5c4a04c8" md5="3cbdf71bb9fd261fbc433717f547d738" sha1="876c3b01e68568100db716bc69bf58189acb72c2"/>
+	<game name="Bobby Is Going Home (Brazil) (En) (PAL) (Unl)" cloneof="Bobby Is Going Home (Europe)">
+		<description>Bobby Is Going Home (Brazil) (En) (PAL) (Unl)</description>
+		<rom name="Bobby Is Going Home (Brazil) (En) (PAL) (Unl).a26" size="4096" crc="5c4a04c8" md5="3cbdf71bb9fd261fbc433717f547d738" sha1="876c3b01e68568100db716bc69bf58189acb72c2"/>
 	</game>
 	<game name="Boggle (USA) (Proto) (1978-08-07)">
 		<description>Boggle (USA) (Proto) (1978-08-07)</description>
@@ -586,10 +590,10 @@
 		<release name="Boxing (USA)" region="USA"/>
 		<rom name="Boxing (USA).a26" size="2048" crc="9ece0021" md5="c3ef5c4653212088eda54dc91d787870" sha1="14b9cd91188c7fb0d4566442d639870f8d6f174d" status="verified"/>
 	</game>
-	<game name="Boxing (Brazil) (Unl)" cloneof="Boxing (Europe)">
-		<description>Boxing (Brazil) (Unl)</description>
-		<release name="Boxing (Brazil) (Unl)" region="BRA"/>
-		<rom name="Boxing (Brazil) (Unl).a26" size="2048" crc="0411ae6b" md5="a8b3ea6836b99bea77c8f603cf1ea187" sha1="a7716af544f0813ce7657bb8a1a55ff6088f09c3"/>
+	<game name="Boxing (Brazil) (En) (Unl)" cloneof="Boxing (Europe)">
+		<description>Boxing (Brazil) (En) (Unl)</description>
+		<release name="Boxing (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Boxing (Brazil) (En) (Unl).a26" size="2048" crc="0411ae6b" md5="a8b3ea6836b99bea77c8f603cf1ea187" sha1="a7716af544f0813ce7657bb8a1a55ff6088f09c3"/>
 	</game>
 	<game name="Brain Games (Europe)">
 		<description>Brain Games (Europe)</description>
@@ -606,11 +610,11 @@
 		<release name="Breakout (Europe)" region="EUR"/>
 		<rom name="Breakout (Europe).a26" size="2048" crc="33717471" md5="6c76fe09aa8b39ee52035e0da6d0808b" sha1="4d37ccf1d983917ff59659b78573d1430ad4f273" status="verified"/>
 	</game>
-	<game name="Breakout ~ Breakaway IV (Japan, USA)" cloneof="Breakout (Europe)">
-		<description>Breakout ~ Breakaway IV (Japan, USA)</description>
-		<release name="Breakout ~ Breakaway IV (Japan, USA)" region="JPN"/>
-		<release name="Breakout ~ Breakaway IV (Japan, USA)" region="USA"/>
-		<rom name="Breakout ~ Breakaway IV (Japan, USA).a26" size="2048" crc="3037638c" md5="f34f08e5eb96e500e851a80be3277a56" sha1="8d473b87b70e26890268e6c417c0bb7f01e402eb" status="verified"/>
+	<game name="Breakout ~ Breakaway IV (Japan, USA) (En)" cloneof="Breakout (Europe)">
+		<description>Breakout ~ Breakaway IV (Japan, USA) (En)</description>
+		<release name="Breakout ~ Breakaway IV (Japan, USA) (En)" region="JPN"/>
+		<release name="Breakout ~ Breakaway IV (Japan, USA) (En)" region="USA"/>
+		<rom name="Breakout ~ Breakaway IV (Japan, USA) (En).a26" size="2048" crc="3037638c" md5="f34f08e5eb96e500e851a80be3277a56" sha1="8d473b87b70e26890268e6c417c0bb7f01e402eb" status="verified"/>
 	</game>
 	<game name="Bridge (Europe)">
 		<description>Bridge (Europe)</description>
@@ -759,11 +763,11 @@
 		<release name="Centipede (Europe)" region="EUR"/>
 		<rom name="Centipede (Europe).a26" size="8192" crc="44d16280" md5="17d000a2882f9fdaa8b4a391ad367f00" sha1="1841ce27fc14cc2aa741d67e91f64f7924e3bf3e"/>
 	</game>
-	<game name="Centipede (Japan, USA)" cloneof="Centipede (Europe)">
-		<description>Centipede (Japan, USA)</description>
-		<release name="Centipede (Japan, USA)" region="JPN"/>
-		<release name="Centipede (Japan, USA)" region="USA"/>
-		<rom name="Centipede (Japan, USA).a26" size="8192" crc="77396102" md5="91c2098e88a6b13f977af8c003e0bca5" sha1="0b5914bc1526a9beaf54d7fd11408175cd8fcc72" status="verified"/>
+	<game name="Centipede (Japan, USA) (En)" cloneof="Centipede (Europe)">
+		<description>Centipede (Japan, USA) (En)</description>
+		<release name="Centipede (Japan, USA) (En)" region="JPN"/>
+		<release name="Centipede (Japan, USA) (En)" region="USA"/>
+		<rom name="Centipede (Japan, USA) (En).a26" size="8192" crc="77396102" md5="91c2098e88a6b13f977af8c003e0bca5" sha1="0b5914bc1526a9beaf54d7fd11408175cd8fcc72" status="verified"/>
 	</game>
 	<game name="Centipede (Europe) (Beta)" cloneof="Centipede (Europe)">
 		<description>Centipede (Europe) (Beta)</description>
@@ -829,11 +833,11 @@
 		<release name="Circus Atari (Europe)" region="EUR"/>
 		<rom name="Circus Atari (Europe).a26" size="4096" crc="95c9fe2b" md5="30e0ab8be713208ae9a978b34e9e8e8c" sha1="342cabe30592db8dcf692994666e40fb176c8d86" status="verified"/>
 	</game>
-	<game name="Circus Atari (Japan, USA)" cloneof="Circus Atari (Europe)">
-		<description>Circus Atari (Japan, USA)</description>
-		<release name="Circus Atari (Japan, USA)" region="JPN"/>
-		<release name="Circus Atari (Japan, USA)" region="USA"/>
-		<rom name="Circus Atari (Japan, USA).a26" size="4096" crc="d2a330a3" md5="a7b96a8150600b3e800a4689c3ec60a2" sha1="8a91ecdbd8bf9d412da051c3422abb004eab8603" status="verified"/>
+	<game name="Circus Atari (Japan, USA) (En)" cloneof="Circus Atari (Europe)">
+		<description>Circus Atari (Japan, USA) (En)</description>
+		<release name="Circus Atari (Japan, USA) (En)" region="JPN"/>
+		<release name="Circus Atari (Japan, USA) (En)" region="USA"/>
+		<rom name="Circus Atari (Japan, USA) (En).a26" size="4096" crc="d2a330a3" md5="a7b96a8150600b3e800a4689c3ec60a2" sha1="8a91ecdbd8bf9d412da051c3422abb004eab8603" status="verified"/>
 	</game>
 	<game name="Coco Nuts (USA)">
 		<description>Coco Nuts (USA)</description>
@@ -1478,6 +1482,10 @@
 		<description>International Soccer (USA)</description>
 		<rom name="International Soccer (USA).a26" size="4096" crc="b9d549a2" md5="b4030c38a720dd84b84178b6ce1fc749" sha1="fa5bf10d9058eeb2e32ab65a25a906c17b445903"/>
 	</game>
+	<game name="INV+ (World) (Aftermarket)">
+		<description>INV+ (World) (Aftermarket)</description>
+		<rom name="INV+ (World) (Aftermarket).a26" size="4096" crc="8ebde037" md5="9ea8ed9dec03082973244a080941e58a" sha1="74dc0247a9c9e4ecec1c173e01274e2391643a60"/>
+	</game>
 	<game name="IQ 180 (USA)">
 		<description>IQ 180 (USA)</description>
 		<rom name="IQ 180 (USA).a26" size="4096" crc="5ea5d7e3" md5="ab301d3d7f2f4fe3fdd8a3540b7a74f5" sha1="f157de7adac8d14231d3f8e6f35df8c39bb1b75f"/>
@@ -1918,14 +1926,14 @@
 		<description>4 Game in One (Europe) (Bit Corporation)</description>
 		<rom name="4 Game in One (Europe) (Bit Corporation).a26" size="4096" crc="23a8d1af" md5="90578a63441de4520be5324e8f015352" sha1="3fcff056232bb7dca13e84ebe9bb2dc6bb5cd5fd"/>
 	</game>
-	<game name="Abre-te, Sesamo! (Brazil) (Unl)" cloneof="Open Sesame (Europe) (Bit Corporation)">
-		<description>Abre-te, Sesamo! (Brazil) (Unl)</description>
-		<release name="Abre-te, Sesamo! (Brazil) (Unl)" region="BRA"/>
-		<rom name="Abre-te, Sesamo! (Brazil) (Unl).a26" size="4096" crc="8cf511a4" md5="52385334ac9e9b713e13ffa4cc5cb940" sha1="cc00c5138fd1a3b723c5f1acc90ff8e6e87942c1"/>
+	<game name="Abre-te, Sesamo! (Brazil) (En) (Unl)" cloneof="Open Sesame (Europe) (Bit Corporation)">
+		<description>Abre-te, Sesamo! (Brazil) (En) (Unl)</description>
+		<release name="Abre-te, Sesamo! (Brazil) (En) (Unl)" region="BRA"/>
+		<rom name="Abre-te, Sesamo! (Brazil) (En) (Unl).a26" size="4096" crc="8cf511a4" md5="52385334ac9e9b713e13ffa4cc5cb940" sha1="cc00c5138fd1a3b723c5f1acc90ff8e6e87942c1"/>
 	</game>
-	<game name="Apples and Dolls (Brazil) (Unl)" cloneof="Open Sesame (Europe) (Bit Corporation)">
-		<description>Apples and Dolls (Brazil) (Unl)</description>
-		<rom name="Apples and Dolls (Brazil) (Unl).a26" size="4096" crc="e7514705" md5="e73838c43040bcbc83e4204a3e72eef4" sha1="62e92508cf43acc28bff8b03a197137d56a5df79"/>
+	<game name="Apples and Dolls (Brazil) (En) (Unl)" cloneof="Open Sesame (Europe) (Bit Corporation)">
+		<description>Apples and Dolls (Brazil) (En) (Unl)</description>
+		<rom name="Apples and Dolls (Brazil) (En) (Unl).a26" size="4096" crc="e7514705" md5="e73838c43040bcbc83e4204a3e72eef4" sha1="62e92508cf43acc28bff8b03a197137d56a5df79"/>
 	</game>
 	<game name="Open Sesame (Europe) (Goliath)" cloneof="Open Sesame (Europe) (Bit Corporation)">
 		<description>Open Sesame (Europe) (Goliath)</description>
@@ -3040,7 +3048,7 @@
 		<rom name="Xenophobe (USA).a26" size="16384" crc="f875c406" md5="eaf744185d5e8def899950ba7c6e7bb5" sha1="160b6e36437ad6acbc2686fbde1002e2fa88c5fb"/>
 	</game>
 	<game name="Xevious (USA) (1984-01-18) (Proto)">
-		<description>Xevious (USA) (1984-01-18) (Proto) (Unreleased prototype but nearly 100% finished version)</description>
+		<description>Unreleased prototype but nearly 100% finished version</description>
 		<release name="Xevious (USA) (1984-01-18) (Proto)" region="USA"/>
 		<rom name="Xevious (USA) (1984-01-18) (Proto).a26" size="8192" crc="f5802a6c" md5="af6f3e9718bccfcd8afb421f96561a34" sha1="53f941cabf661a9ce763142b070571f6fd4c8820"/>
 	</game>
