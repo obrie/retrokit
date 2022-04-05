@@ -52,6 +52,12 @@ class Recloner:
 
         return title
 
+    # Gets the disc code number (e.g. 1 if flag is 1M)
+    def get_disc_code_number(self, flag: str) -> int:
+        disc_code_match = self.DISC_CODE_FLAG_REGEX.search(flag)
+        if disc_code_match:
+            return int(disc_code_match.group(1))
+
     # Normalizes the title to account for differences in case / symbols
     def normalize(self, title: str) -> str:
         return self.NORMALIZED_TITLE_REGEX.sub('', title.lower())
@@ -125,10 +131,9 @@ class Recloner:
             keys.append(-1)
 
         # Sort by earlier disc code (e.g. 1M, 1S)
-        disc_code_flags = sorted(filter(lambda f: self.DISC_CODE_FLAG_REGEX.search(f), flags))
-        if disc_code_flags:
-            disc_code_flag = disc_code_flags[0]
-            keys.append(int(self.DISC_CODE_FLAG_REGEX.search(disc_code_flag).group(1)))
+        disc_codes = sorted(filter(None, map(self.get_disc_code_number, flags)))
+        if disc_codes:
+            keys.append(disc_codes[0])
         else:
             keys.append(-1)
 
