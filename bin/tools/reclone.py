@@ -48,7 +48,7 @@ class Recloner:
 
         disc_match = self.DISC_REGEX.search(name)
         if disc_match:
-            title = f'{title} {disc_match.group().replace("0", "")}'
+            title = f'{title} {disc_match.group()}'
 
         return title
 
