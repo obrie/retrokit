@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from romkit.metadata.external import ExternalMetadata
+from romkit.models.machine import Machine
 
 import json
 from pathlib import Path
@@ -18,14 +19,17 @@ class DuckstationMetadata(ExternalMetadata):
             data = json.load(file)
             for game in data:
                 if 'genre' in game or 'language' in game:
-                    self.metadata[game['name']] = {
+                    self.set_data(game['name'], {
                         'genre': game.get('genre'),
                         'language': game.get('language')
-                    }
+                    })
 
     def update(self, machine: Machine) -> None:
-        machine_data = self.metadata.get(machine.name)
-        parent_data = self.metadata.get(machine.parent_name)
+        machine_data = self.data.get(Machine.normalize(machine.name))
+        if machine.parent_name:
+            parent_data = self.data.get(Machine.normalize(machine.parent_name))
+        else:
+            parent_data = None
 
         # Genre
         genre = machine_data and machine_data['genre'] or parent_data and parent_data['genre']
