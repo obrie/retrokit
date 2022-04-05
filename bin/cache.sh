@@ -121,6 +121,21 @@ remote_sync_system_manuals() {
   fi
 }
 
+reclone_system_redump_dats() {
+  local system=$1
+
+  . "$dir/setup/system-common.sh"
+
+  # Look to see whether a redump dat exists
+  local redump_dat_path=$(system_setting '.romsets[] | select(.name == "redump") | .resources.dat.target')
+  if [ -z "$redump_dat_path" ]; then
+    return
+  fi
+
+  # Re-generate clones
+  "$bin_dir/tools/reclone.py" "$system_config_dir/clones.json" "$redump_dat_path"
+}
+
 if [[ $# -lt 1 ]]; then
   usage
 fi
