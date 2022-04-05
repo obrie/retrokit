@@ -195,9 +195,10 @@ class Recloner:
 
         # Wirte out the new clone config
         clones_json = json.dumps(new_clones, indent=4, sort_keys=True)
-        print(clones_json)
 
-        if not self.dry_run:
+        if self.dry_run:
+            print(clones_json)
+        else:
             with open(self.clones_path, 'w') as f:
                 f.write(clones_json)
 
