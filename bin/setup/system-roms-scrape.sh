@@ -170,9 +170,9 @@ __add_disc_numbers() {
     # * Provide the name of the file that's being updated in --fromfile
     # * Pipe the title we want to set for that file
     local new_title="$scraped_title - $disc_id"
+    local filename=$(basename  "$path")
     echo "Updating \"$name\" scraped title from \"$scraped_title\" to \"$new_title\""
-    echo "$(basename "$path")" > "$tmp_ephemeral_dir/scraper.input"
-    echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --fromfile "$tmp_ephemeral_dir/scraper.input"
+    echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --startat "$filename" --endat "$filename"
     rm -f "$tmp_ephemeral_dir/scraper.input"
   done < <(romkit_cache_list | jq -r 'select(.playlist == null) | [.name, .disc, .title, .path] | @tsv')
 }
