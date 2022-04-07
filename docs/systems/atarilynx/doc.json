@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "atarilynx",
+    "description": "The Atari Lynx is the world's first handheld gaming console with a color screen. It was released by Atari in 1989."
+  },
+  "features": {
+    "saves": false,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

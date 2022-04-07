@@ -1,0 +1,15 @@
+{
+  "system": {
+    "name": "atari2600",
+    "description": "The Atari 2600 was a home video game console released by Atari in 1977."
+  },
+  "features": {
+    "saves": false,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "images": {
+    "retropad": "retropad.jpg"
+  }
+}

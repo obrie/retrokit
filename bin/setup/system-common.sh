@@ -10,6 +10,7 @@ retropie_system_config_dir="/opt/retropie/configs/$system"
 
 # Retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
+system_docs_dir="$docs_dir/systems/$system"
 system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
 echo '{}' > "$system_settings_file"
 json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null

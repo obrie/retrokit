@@ -26,6 +26,7 @@ if [ -z "$RETROKIT_HAS_EXPORTS" ]; then
   export cache_dir="$app_dir/cache"
   export config_dir="$app_dir/config"
   export data_dir="$app_dir/data"
+  export docs_dir="$app_dir/docs"
   export profiles_dir="$app_dir/profiles"
   export tmp_dir="$app_dir/tmp"
   export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")

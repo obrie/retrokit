@@ -1,0 +1,34 @@
+{
+  "system": {
+    "name": "intellivision",
+    "description": "The Intellivision is a home video game console released by Mattel in 1979."
+  },
+  "features": {
+    "saves": false,
+    "states": true,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png"
+  },
+  "controls": {
+    "retropad": {
+      "dpad": "8-way Movement",
+      "left_stick": "16-way Disc",
+      "right_stick": "Keypad 1-9",
+      "a": "Right Action Button",
+      "b": "Left Action Button",
+      "y": "Top Action Button",
+      "x": "Last Selected Keypad",
+      "l1": "Mini-Keypad",
+      "r1": "Mini-Keypad",
+      "l2": "Keypad Clear",
+      "r2": "Keypad Clear",
+      "l3": "Keypad 0",
+      "r3": "Keypad 5",
+      "start": "Pause",
+      "select": "Controller Swap"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "psx",
+    "description": "The PlayStation is a 5th generation video game console released by Sony in 1994."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

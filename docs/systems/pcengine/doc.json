@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "pcengine",
+    "description": "This console, known as the PC Engine in Japan and as the TurboGrafx-16 Entertainment SuperSystem in the USA, is a home video game console joint-developed by Hudson Soft and NEC, released in 1987."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

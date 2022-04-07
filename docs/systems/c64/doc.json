@@ -1,0 +1,18 @@
+{
+  "system": {
+    "name": "c64",
+    "description": "The Commodore 64 is an 8 Bit personal computer introduced in 1982 by Commodore International."
+  },
+  "features": {
+    "saves": false,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "images": {
+    "controller": "keyboard.png"
+  },
+  "controls": {
+    "keyboard_raw": true
+  }
+}

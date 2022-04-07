@@ -1,0 +1,22 @@
+{
+  "system": {
+    "name": "videopac",
+    "description": "The Magnavox Odyssey2 known in Europe as the Philips Videopac G7000 is a home video game console released in 1978."
+  },
+  "features": {
+    "saves": false,
+    "states": true,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  },
+  "controls": {
+    "hotkeys_extra": {
+      "select": "Toggle Keyboard",
+      "y": "Move Keyboard Up/Down"
+    }
+  }
+}

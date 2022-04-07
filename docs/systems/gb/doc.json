@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "gb",
+    "description": "The Game Boy was released by Nintendo in 1989 thus kicking off the era of handheld gaming and Pokemon."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

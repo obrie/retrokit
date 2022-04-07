@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "saturn",
+    "description": "The Sega Saturn is a 32 bit 5th generation home video game console released by Sega in 1994."
+  },
+  "features": {
+    "saves": true,
+    "states": false,
+    "netplay": false,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

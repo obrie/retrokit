@@ -68,12 +68,18 @@ each_path() {
   elif [[ "$path_template" == {system_config_dir}* ]]; then
     template_name='system_config_dir'
     sub_dir="config/systems/$system"
+  elif [[ "$path_template" == {system_docs_dir}* ]]; then
+    template_name='system_docs_dir'
+    sub_dir="docs/systems/$system"
   elif [[ "$path_template" == {bin_dir}* ]]; then
     template_name='bin_dir'
     sub_dir='bin'
   elif [[ "$path_template" == {app_dir}* ]]; then
     template_name='app_dir'
     sub_dir=''
+  elif [[ "$path_template" == {docs_dir}* ]]; then
+    template_name='docs_dir'
+    sub_dir='docs'
   fi
 
   if [ -n "$template_name" ]; then
