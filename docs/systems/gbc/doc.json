@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "gbc",
+    "description": "The Game Boy Color was an 8 bit handheld gaming console released by Nintendo in 1998."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.jpg",
+    "retropad": "retropad.png"
+  }
+}

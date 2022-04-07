@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "n64",
+    "description": "The Nintendo 64 is a 5th generation gaming console released by Nintendo in 1996."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "nes",
+    "description": "The Nintendo Entertainment System (NES) is an 8-bit home video game console that was released by Nintendo in 1985."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

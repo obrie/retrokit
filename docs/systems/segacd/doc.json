@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "sega32x",
+    "description": "The Sega CD was an add-on to the Sega Mega Drive/Genesis. It was released in 1991."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "../megadrive/controller.png",
+    "retropad": "../megadrive/retropad.png"
+  }
+}

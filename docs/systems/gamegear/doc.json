@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "gamegear",
+    "description": "The Sega Game Gear was an 8 bit handheld gaming console released in 1990."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "system": {
+    "name": "pc",
+    "description": "DOS is an operating system originally released by IBM in the 1980's."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "controls": {
+    "keyboard_raw": true,
+    "keyboard_extra": {
+      "Ctrl + F9": "Quit"
+    }
+  }
+}

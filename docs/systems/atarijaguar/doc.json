@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "atarijaguar",
+    "description": "The Atari Jaguar was the first 64 bit video game console released in 1993."
+  },
+  "features": {
+    "saves": true,
+    "states": false,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

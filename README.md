@@ -20,6 +20,8 @@ Specifically, it can set up:
 * HiScores
 * Launch images
 * Emulator installation
+* Game manuals
+* System controller reference guides
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
@@ -837,6 +839,30 @@ than nothing.  You can see how these manuals are generated in the
 
 If anyone has better sources or wants to build better manuals, I'd fully support that effort.
 
+### Reference Guides
+
+In addition to the game manuals themselves, reference "cheat" sheets have been created for
+each individual system with documentation on what controls / hotkeys are available for the
+system and how they map between the original controller and your controller.
+
+The intention behind these reference guides is to make it easy to look up what controls
+are available rather than having to look up the controls in RetroPie or RetroArch
+documentation.
+
+These guides include:
+
+* System features available (e.g. cheats, netplay, etc.)
+* Keyboard controls
+* Hotkey configurations
+* Images of the system's original controller
+* Images of RetroArch's controller configuration
+* Game-specific controller overrides
+
+The guides can be viewed by loading the manual via manualkit's configured hotkey and
+scrolling to the end of the manual (you can just go in reverse if you're on the first
+page of the manual).  If the game has no manual, an image will be displayed saying
+"No Manual".  However, you'll still be able to scroll forward to the reference guide.
+
 ## Storage Capacity
 
 The default filters assume that there is 1TB of capacity available for installing
@@ -960,6 +986,10 @@ retrokit what it is.  That includes:
 * [Joshua Rancel](https://www.youtube.com/watch?v=Dwa6LDLZ2rE) for the default splash screen (Retro History)
 * [unexpectedpanda](https://github.com/unexpectedpanda/retool) for clonelists
 * [ScreenScraper](https://www.screenscraper.fr/) for game metadata
+* [Steven Cozart](https://github.com/Texacate/Visual-RetroPie-Control-Maps) for arcade control maps (including Kevin Jonas, Howard Casto and yo1dog)
+* [Dan Patric](https://archive.org/download/console-logos-professionally-redrawn-plus-official-versions) for console logos
+* [Mark Davis](https://vectogram.us/) for controller images
+* [Wikimedia](https://commons.wikimedia.org/) for conroller images
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums

@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "3do",
+    "description": "The Panasonic 3DO REAL Interactive Multiplayer was a home video console developed by the 3DO company in 1994."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "snes",
+    "description": "The Super Nintendo Entertainment System (or SNES) was a 4th generation video game console released by Nintendo in 1991."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

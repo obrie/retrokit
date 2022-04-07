@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="../stylesheets/reference.css" />
+  <base href="../" />
+</head>
+
+<body id="system-{{system.name}}">
+
+<div id="info">
+  <div id="info-system">
+    <div id="system-overview">
+      <img src="systems/{{system.name}}/{{images.logo}}" />
+      <p><em>{{system.description}}</em></p>
+    </div>
+
+    <table id="system-features">
+      <thead>
+        <tr class="header">
+          <th>Feature</th>
+          <th>Supported</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for feature, supported in features.items() %}
+        <tr>
+          <td>{{feature|title}}</td>
+          <td>{{'✔' if supported else '✕'}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div id="info-usage">
+    {% set retropad_button_names = ['select', 'start', 'a', 'b', 'x', 'y', 'l1', 'l2', 'l3', 'r1', 'r2', 'r3', 'dpad_left', 'dpad_up', 'dpad_right', 'dpad_down', 'dpad', 'left_stick', 'right_stick'] %}
+
+    {% if controls.keyboard or controls.keyboard_extra %}
+    <div id="usage-keyboard">
+      {% set keyboard_controls = controls.keyboard or {} %}
+      {% set _dummy = keyboard_controls.update(controls.keyboard_extra or {}) %}
+
+      {%- for keyboard_items in keyboard_controls.items()|batch(10) -%}
+      <table>
+        <thead>
+          <tr class="header">
+            <th>Key</th>
+            <th>Mapping</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for key, mapping in keyboard_items %}
+          <tr>
+            <td>{{key}}</td>
+            <td>
+              {% if mapping in retropad_button_names %}
+              <img src="images/retropad/retro_{{mapping}}.png" />
+              {% else %}
+              {{mapping}}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {%- endfor -%}
+    </div>
+    {% endif %}
+
+    {% if controls.hotkeys or controls.hotkeys_extra %}
+    <div id="usage-hotkeys">
+      {% set hotkey_controls = controls.hotkeys or {} %}
+      {% set _dummy = hotkey_controls.update(controls.hotkeys_extra or {}) %}
+      {% set hotkey_actions = hotkey_controls.keys()|list %}
+      {% set hotkey_button = (hotkey_controls.values()|list)[hotkey_actions.index('Hotkey')] if 'Hotkey' in hotkey_actions else None %}
+      <table>
+        <thead>
+          <tr class="header">
+            <th>Hotkey</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for buttons, hotkey_action in hotkey_controls.items() %}
+          <tr>
+            <td>
+              {%- for button in buttons.split(',') -%}
+                {%- if button in retropad_button_names -%}
+              <img src="images/retropad/retro_{{button}}.png" />
+                {%- else -%}
+              {{button}}
+                {%- endif -%}
+              {%- endfor -%}
+            </td>
+            <td>{{hotkey_action}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div id="controllers">
+  {% if images and images.controller %}
+  <div id="controller-system">
+    <p><strong>Original Controller</strong></p>
+    <img src="systems/{{system.name}}/{{images.controller}}" />
+  </div>
+  {% endif %}
+
+  {% if images and images.retropad %}
+  <div id="controller-retropad">
+    <p><strong>Your Controller</strong></p>
+    <img src="systems/{{system.name}}/{{images.retropad}}" />
+  </div>
+  {% endif %}
+
+  {% if controls.retropad %}
+  <div id="controller-mappings">
+    {%- for retropad_items in controls.retropad.items()|batch(8) -%}
+    <table>
+      <thead>
+        <tr class="header">
+          <th>RetroPad</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for retropad_button, action in retropad_items %}
+        <tr>
+          <td><img src="images/retropad/retro_{{retropad_button}}.png" /></td>
+          <td>{{action}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {%- endfor -%}
+  </div>
+  {% endif %}
+
+  {% if controls.description %}
+  <div id="controller-description">
+    <div id="controller-description-inner">
+      {{controls.description|join('')}}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+</div>
+</body>
+</html>

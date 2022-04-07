@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "gba",
+    "description": "The Game Boy Advance is a 32 bit handheld video game console released by Nintendo in 2001."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

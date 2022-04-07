@@ -1,0 +1,25 @@
+{
+  "system": {
+    "name": "nds",
+    "description": "The Sega Dreamcast is a 6th generation home video game console released by Sega in 1998."
+  },
+  "features": {
+    "saves": true,
+    "states": false,
+    "netplay": false,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  },
+  "controls": {
+    "keyboard_extra": {
+      "Tab": "Menu",
+      "Escape": "Quit"
+    },
+    "hotkeys_extra": {
+      "right_stick,+ Left": "Menu"
+    }
+  }
+}

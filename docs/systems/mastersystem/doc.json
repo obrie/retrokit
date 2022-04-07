@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "mastersystem",
+    "description": "The Sega Master System was a 4th generation video game console released by Sega in 1987."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "system": {
+    "name": "psp",
+    "description": "The PlayStation Portable or PSP is a handheld video game system released by Sony in 2004."
+  },
+  "features": {
+    "saves": true,
+    "states": false,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  },
+  "controls": {
+    "keyboard_extra": {
+      "Tab": "Menu",
+      "Escape": "Quit"
+    },
+    "hotkeys_extra": {
+      "right_stick,+ Left": "Menu"
+    }
+  }
+}

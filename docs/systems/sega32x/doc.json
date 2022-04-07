@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "sega32x",
+    "description": "The Sega 32X was released as an add-on for the Sega Genesis/Mega Drive in 1994."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "controller": "../megadrive/controller.png",
+    "retropad": "../megadrive/retropad.png"
+  }
+}

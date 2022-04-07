@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "vectrex",
+    "description": "The Vectrex is a vector display-based home video game console released in 1982."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}

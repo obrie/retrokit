@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "atari7800",
+    "description": "The Atari 7800 was a video game console released by Atari in 1986."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": false
+  },
+  "images": {
+    "controller": "controller.png",
+    "retropad": "retropad.png"
+  }
+}
