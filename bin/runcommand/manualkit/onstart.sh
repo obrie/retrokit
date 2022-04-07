@@ -10,9 +10,15 @@ launch_manualkit() {
   local rom_name=${rom_filename%.*}
   local manual_path="$HOME/.emulationstation/downloaded_media/$system/manuals/$rom_name.pdf"
 
+  # Look up reference guid
+  local reference_path="$HOME/.emulationstation/downloaded_media/$system/docs/$rom_name.pdf"
+  if [ ! -f "$reference_path" ]; then
+    reference_path="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
+  fi
+
   # Start up manualkit
   if [ -f /opt/retropie/supplementary/manualkit/cli.py ]; then
-    sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf --track-emulator &
+    sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf --supplementary-pdf "$reference_path" --track-emulator &
   fi
 }
 
