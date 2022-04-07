@@ -7,6 +7,11 @@ setup_module_id='system-docs'
 setup_module_desc='System reference sheet builder'
 
 build() {
+  if ! any_path_exists '{system_docs_dir}/doc.json'; then
+    echo 'No documentation configured'
+    return
+  fi
+
   local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
   mkdir -p "$(dirname "$output_path")"
 
