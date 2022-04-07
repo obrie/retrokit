@@ -13,6 +13,7 @@ build() {
   echo '{}' > "$controls_file"
 
   __source_system_extensions || true
+  __add_hrefs
   __add_system_theme
   __add_keyboard_controls
   __add_hotkey_controls

@@ -3,8 +3,6 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
-build_dir="$docs_dir/build"
-
 # RetroArch hotkey actions
 retroarch_actions_list=(
   menu_toggle exit_emulator reset close_content
@@ -210,6 +208,14 @@ retropad_buttons_map=(
 # Path to which custom controls will be tracked
 controls_file="$tmp_ephemeral_dir/controls.json"
 
+__add_hrefs() {
+  local stylesheet_href=$(first_path "{docs_dir}/stylesheets/reference.css")
+  local base_href=$docs_dir
+
+  __edit_json ".hrefs.stylesheet" "file://$stylesheet_href" "$controls_file"
+  __edit_json ".hrefs.base" "file://$base_href/" "$controls_file"
+}
+
 # Add theme overrides for adjusting logos
 __add_system_theme() {
   local theme=$(xmlstarlet sel -t -v "/systemList/system[name='$system']/theme" "$HOME/.emulationstation/es_systems.cfg")
@@ -310,16 +316,14 @@ __build_pdf() {
   local output_path=$1
 
   # Build full JSON variables for system (static + controls)
-  jq -s '.[0] * .[1]' "$(first_path '{system_docs_dir}/doc.json')" "$controls_file" > "$build_dir/system.json"
+  jq -s '.[0] * .[1]' "$(first_path '{system_docs_dir}/doc.json')" "$controls_file" > "$tmp_ephemeral_dir/system.json"
 
   # Render Jinja => Markdown
   local reference_template=$(first_path '{docs_dir}/reference.html.jinja')
-  jinja2 "$reference_template" "$build_dir/system.json" > "$build_dir/reference.html"
+  jinja2 "$reference_template" "$tmp_ephemeral_dir/system.json" > "$tmp_ephemeral_dir/reference.html"
 
   # Render HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$build_dir/reference.html" 2>/dev/null
-
-  google-chrome "$build_dir/reference.html" &
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$tmp_ephemeral_dir/reference.html" 2>/dev/null
 }
 
 # List all Retroarch configuration files which might contain controller info
