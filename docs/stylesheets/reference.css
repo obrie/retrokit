@@ -200,7 +200,7 @@ table td {
 #system-arcade #controller-retropad-html {
   width: 600px;
   height: 350px;
-  margin: 100px auto 100px;
+  margin: 75px auto;
   padding: 20px;
   border-style: groove;
   border-width: 6px;
@@ -227,11 +227,12 @@ table td {
 /* Info Boxes */
 #system-arcade #controller-retropad .info {
   position: absolute;
-  display: table;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #efefef;
   border: 3px solid #7a7a7a;
   border-radius: 10px;
-  padding: 4px 0 4px 60px;
   max-width: 100%;
   min-height: 48px;
   text-align: left;
@@ -243,12 +244,10 @@ table td {
 
 /* Info Box - RetroPad Button Names */
 #system-arcade #controller-retropad .info .name {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
+  display: block;
   width: 60px;
   height: 60px;
+  min-width: 60px;
   color: transparent;
   background-repeat: no-repeat;
   background-size: 60px;
@@ -281,7 +280,7 @@ table td {
 
 /* Info Box - Actions */
 #system-arcade #controller-retropad .info .action {
-  display: table-cell;
+  display: block;
   vertical-align: middle;
   padding: 0 9px 0 3px;
 }
@@ -343,21 +342,33 @@ table td {
   transform: translate(-10px, 10px);
 }
 
+/* Position: Left Column */
+#system-arcade #controller-retropad .position-column-1 {
+  left: 0;
+}
+
+/* Position: Middle Column */
+#system-arcade #controller-retropad .position-column-2 {
+  left: 50%;
+}
+
+/* Position: Right Column */
+#system-arcade #controller-retropad .position-column-3 {
+  left: 100%;
+}
+
 /* Position: Top-Left */
 #system-arcade #controller-retropad .position-top1 {
-  left: 0;
   transform: translate(0, 50%);
 }
 
 /* Position: Top-Middle */
 #system-arcade #controller-retropad .position-top2 {
-  left: 50%;
   transform: translate(-60px, 0);
 }
 
 /* Position: Top-Right */
 #system-arcade #controller-retropad .position-top3 {
-  left: 100%;
   transform: translate(-120px, 50%);
 }
 
@@ -383,19 +394,12 @@ table td {
   transform: translate(-10px, -10px);
 }
 
-/* Position: Bottom-Left */
-#system-arcade #controller-retropad .position-bottom1 {
-  left: 0;
-}
-
 /* Position: Bottom-Middle */
 #system-arcade #controller-retropad .position-bottom2 {
-  left: 50%;
   transform: translate(-60px, -50%);
 }
 
 /* Position: Bottom-Right */
 #system-arcade #controller-retropad .position-bottom3 {
-  left: 100%;
   transform: translate(-120px, 0);
 }
