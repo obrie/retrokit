@@ -283,7 +283,7 @@ table td {
 #system-arcade #controller-retropad .info .action {
   display: table-cell;
   vertical-align: middle;
-  padding: 0 5px 0 0;
+  padding: 0 9px 0 3px;
 }
 
 /* Connectors */
@@ -307,8 +307,7 @@ table td {
 #system-arcade #controller-retropad .button {
   display: block;
   background-color: #313130;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#313130), to(#949493));
-  background-image: -webkit-linear-gradient(top, #313130, #949493); 
+  background-image: linear-gradient(to bottom, #313130, #949493);
   width: 120px;
   height: 120px;
   line-height: 120px;
@@ -319,8 +318,7 @@ table td {
 
 #system-arcade #controller-retropad .button-enabled {
   background-color: #00973e;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#00973e), to(#1aa675));
-  background-image: -webkit-linear-gradient(top, #00973e, #1aa675); 
+  background-image: linear-gradient(to bottom, #00973e, #1aa675);
 }
 
 /* Position: Top */
@@ -363,28 +361,24 @@ table td {
   transform: translate(-120px, 50%);
 }
 
-/* Position: Bottom-Left & Bottom-Right */
-#system-arcade #controller-retropad .position-bottom1,
-#system-arcade #controller-retropad .position-bottom3 {
+/* Position: Bottom */
+#system-arcade #controller-retropad .position-row-bottom {
   bottom: 0;
 }
 
-#system-arcade #controller-retropad .position-bottom1 .info,
-#system-arcade #controller-retropad .position-bottom3 .info {
+#system-arcade #controller-retropad .position-row-bottom .info {
   top: 131px;
+  transform: translate(-50%, 0) translate(60px, 0);
 }
 
-#system-arcade #controller-retropad .position-bottom1 .connector,
-#system-arcade #controller-retropad .position-bottom3 .connector {
+#system-arcade #controller-retropad .position-row-bottom .connector {
   height: 65px;
   top: 0;
   transform: translate(-2px, -100%) translate(0, -2px);
   left: 50%;
 }
 
-#system-arcade #controller-retropad .position-bottom1 .dot,
-#system-arcade #controller-retropad .position-bottom2 .dot,
-#system-arcade #controller-retropad .position-bottom3 .dot {
+#system-arcade #controller-retropad .position-row-bottom .dot {
   top: 0;
   transform: translate(-10px, -10px);
 }
@@ -394,41 +388,14 @@ table td {
   left: 0;
 }
 
-#system-arcade #controller-retropad .position-bottom1 .info {
-  left: 0;
-  transform: translate(-50%, 0) translate(60px, 0);
-}
-
 /* Position: Bottom-Middle */
 #system-arcade #controller-retropad .position-bottom2 {
-  bottom: 0;
   left: 50%;
   transform: translate(-60px, -50%);
 }
 
-#system-arcade #controller-retropad .position-bottom2 .info {
-  top: 130px;
-  transform: translate(-50%, 0) translate(60px, 0);
-  max-width: 100%;
-}
-
-#system-arcade #controller-retropad .position-bottom2 .connector {
-  height: 69px;
-  top: 0;
-  transform: translate(-2px, -100%) translate(0, -2px);
-  left: 50%;
-}
-
 /* Position: Bottom-Right */
 #system-arcade #controller-retropad .position-bottom3 {
-  right: 0;
-}
-
-#system-arcade #controller-retropad .position-bottom3 .button {
-  margin-left: auto;
-}
-
-#system-arcade #controller-retropad .position-bottom3 .info {
-  right: 0;
-  transform: translate(50%, 0) translate(-60px, 0);
+  left: 100%;
+  transform: translate(-120px, 0);
 }
