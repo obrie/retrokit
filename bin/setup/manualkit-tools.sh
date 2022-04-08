@@ -10,38 +10,14 @@ ghostscript_min_version=9.55.0
 qpdf_min_version=10.6.3
 
 depends() {
+  __depends_qpdf
   __depends_conversion_tools
   __depends_exif
   __depends_ocr
   __depends_ghostscript
 }
 
-# Tools for converting from different formats to PDF
-__depends_conversion_tools() {
-  sudo apt-get install -y
-    # Convert txt/html to pdf
-    chromium \
-
-    # Convert images to pdf
-    img2pdf \
-
-    # Convert cbr archives to pdf
-    unrar-free \
-
-    # Convert doc to pdf
-    unoconv \
-
-    # Resolution calculations
-    bc
-}
-
-# Tools for fixing exif data
-__depends_exif() {
-  sudo apt-get install -y libimage-exiftool-perl
-}
-
-# Tools to make PDFs searchable
-__depends_ocr() {
+__depends_qpdf() {
   # Ensure the necessary version of qpdf is installed
   if [ ! `command -v qpdf` ] || version_lt "$(qpdf --version | grep -oE 'version [0-9\.]+')" "version $qpdf_min_version"; then
     sudo apt-get remove -y qpdf libqpdf-dev
@@ -66,7 +42,34 @@ __depends_ocr() {
   else
     echo "qpdf is already the minimum required version ($qpdf_min_version)"
   fi
+}
 
+# Tools for converting from different formats to PDF
+__depends_conversion_tools() {
+  sudo apt-get install -y
+    # Convert txt/html to pdf
+    chromium \
+
+    # Convert cbr archives to pdf
+    unrar-free \
+
+    # Convert doc to pdf
+    unoconv \
+
+    # Resolution calculations
+    bc
+
+  # Convert images to pdf
+  sudo pip3 install img2pdf==0.4.4
+}
+
+# Tools for fixing exif data
+__depends_exif() {
+  sudo apt-get install -y libimage-exiftool-perl
+}
+
+# Tools to make PDFs searchable
+__depends_ocr() {
   sudo pip3 install ocrmypdf==13.3.0
   sudo apt-get install -y \
     tesseract-ocr-ara \
