@@ -112,10 +112,16 @@
   </div>
   {% endif %}
 
-  {% if images and images.retropad %}
+  {% if images and (images.retropad or images.retropad_html) %}
   <div id="controller-retropad">
     <p><strong>Your Controller</strong></p>
+    {% if images.retropad %}
     <img src="systems/{{system.name}}/{{images.retropad}}" />
+    {% else %}
+    <div id="controller-retropad-html">
+      {{images.retropad_html}}
+    </div>
+    {% endif %}
   </div>
   {% endif %}
 
@@ -144,9 +150,9 @@
 
   {% if controls.description %}
   <div id="controller-description">
-    <div id="controller-description-inner">
-      {{controls.description|join('')}}
-    </div>
+    {%- for line in controls.description -%}
+    <p>{{line}}</p>
+    {%- endfor -%}
   </div>
   {% endif %}
 </div>

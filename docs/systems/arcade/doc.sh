@@ -24,44 +24,49 @@ __add_system_extensions() {
 
   # Look up the layout
   local layout_button_index=($(jq -r '.controls .layout .ids[]' "$(first_path '{system_docs_dir}/doc.json')"))
+  local layout_button_names=($(jq -r '.controls .layout .buttons[]' "$(first_path '{system_docs_dir}/doc.json')"))
 
   # Read the button names for this game or use system defaults
-  local buttons
+  local button_actions=()
+  local button_class
   if [ -n "$name" ]; then
     local buttons_csv=${arcade_controls[$name]:-${arcade_controls[$parent_name]}}
-    IFS=, read -r -a buttons <<< "$buttons_csv"
+    IFS=, read -r -a button_actions <<< "$buttons_csv"
   else
-    buttons=($(jq -r '.controls .layout .buttons[]' "$(first_path '{system_docs_dir}/doc.json')"))
+    button_class='button-enabled'
   fi
 
   # Build top row
   local html=""
   for column in $(seq 1 3); do
     local button_index=${layout_button_index[column-1]}
-    html="${html}$(__create_button 'top' $column "${buttons[button_index-1]}")"
+    html="${html}$(__create_button 'top' $column "${layout_button_names[button_index-1]}" "${button_actions[button_index-1]}" "$button_class")"
   done
 
   # Build bottom row
   for column in $(seq 1 3); do
     local button_index=${layout_button_index[column+2]}
-    html="${html}$(__create_button 'bottom' $column "${buttons[button_index-1]}")"
+    html="${html}$(__create_button 'bottom' $column "${layout_button_names[button_index-1]}" "${button_actions[button_index-1]}" "$button_class")"
   done
 
-  __edit_json '.controls.description' "$html" "$controls_file"
+  html="<ol id=\"controller-retropad-buttons\">$html</ol>"
+  __edit_json '.images.retropad_html' "$html" "$controls_file"
 }
 
 # Creates the html for the button at the given row / column in the layout
 __create_button() {
   local row=$1
   local column=$2
-  local value=$3
+  local name=$3
+  local action=$4
+  local button_class=$5
 
-  local color
-  if [ -n "$value" ]; then
-    color='green'
-  else
-    color='black'
+  local html="<li class=\"position-container position-row-$row position-column-$column position-$row$column\"><div class=\"info\"><span class=\"name name-$name\">$name</span>"
+  local button_class
+  if [ -n "$action" ]; then
+    html="$html<span class=\"action\">$action</span>"
+    button_class="button-enabled"
   fi
 
-  echo "<img class=\"button button-$row$column\" src=\"systems/arcade/button-$color.png\"><span class=\"description button-$row$column\">$value</span>"
+  echo "$html<span class=\"connector\"><span class=\"dot\"></span></span></div><span class=\"button $button_class\"></span></li>"
 }

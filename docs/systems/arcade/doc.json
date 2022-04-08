@@ -16,6 +16,9 @@
     "hotkeys_extra": {
       "l2": "MAME Menu"
     },
+    "retropad": {
+      "select": "Insert Coin"
+    },
     "layout": {
       "buttons": ["Y", "X", "L", "B", "A", "R"],
       "ids": [1, 2, 3, 4, 5, 6]

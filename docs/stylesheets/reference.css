@@ -192,97 +192,243 @@ table td {
 }
 
 /* System-specific overrides */
-#system-arcade #controller-description {
-  width: 600px;
-  height: 350px;
-  margin: 30px auto 0;
-  padding: 65px 116px;
-  border-style: groove;
-  border-width: 10px;
-  background: black;
+#system-arcade #controller-retropad {
+  margin: 0;
+  padding: 0;
 }
 
-#system-arcade #controller-description-inner {
+#system-arcade #controller-retropad-html {
+  width: 600px;
+  height: 350px;
+  margin: 100px auto 100px;
+  padding: 20px;
+  border-style: groove;
+  border-width: 6px;
+  background: #ddd;
+}
+
+#system-arcade #controller-retropad-buttons {
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-#system-arcade img.button {
-  position: absolute;
-  max-width: 140px;
-}
-
-#system-arcade span.description {
+/* Position Containers */
+#system-arcade #controller-retropad .position-container {
   position: absolute;
   display: block;
-  max-width: 350px;
-  color: #ffffff;
-  font-size: 36px;
-  font-weight: bold;
+  width: 238px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Info Boxes */
+#system-arcade #controller-retropad .info {
+  position: absolute;
+  display: table;
+  background: #efefef;
+  border: 3px solid #7a7a7a;
+  border-radius: 10px;
+  padding: 4px 0 4px 60px;
+  max-width: 100%;
+  min-height: 48px;
+  text-align: left;
   line-height: 1;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  z-index: 1;
+  color: #777777;
+  font-size: 26px;
+  font-weight: bold;
 }
 
-#system-arcade .button-top1 {
+/* Info Box - RetroPad Button Names */
+#system-arcade #controller-retropad .info .name {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 60px;
+  height: 60px;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: 0 0;
+}
+#system-arcade #controller-retropad .info .name-A {
+  background-image: url(../images/retropad/retro_a.png);
+}
+#system-arcade #controller-retropad .info .name-B {
+  background-image: url(../images/retropad/retro_b.png);
+}
+#system-arcade #controller-retropad .info .name-X {
+  background-image: url(../images/retropad/retro_x.png);
+}
+#system-arcade #controller-retropad .info .name-Y {
+  background-image: url(../images/retropad/retro_y.png);
+}
+#system-arcade #controller-retropad .info .name-L {
+  background-image: url(../images/retropad/retro_l1.png);
+}
+#system-arcade #controller-retropad .info .name-R {
+  background-image: url(../images/retropad/retro_r1.png);
+}
+#system-arcade #controller-retropad .info .name-L2 {
+  background-image: url(../images/retropad/retro_l2.png);
+}
+#system-arcade #controller-retropad .info .name-R2 {
+  background-image: url(../images/retropad/retro_r2.png);
+}
+
+/* Info Box - Actions */
+#system-arcade #controller-retropad .info .action {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 5px 0 0;
+}
+
+/* Connectors */
+#system-arcade #controller-retropad .connector {
+  position: absolute;
+  display: block;
+  width: 6px;
+  background: black;
+}
+
+#system-arcade #controller-retropad .dot {
+  position: absolute;
+  display: block;
+  height: 26px;
+  width: 26px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* Button Image */
+#system-arcade #controller-retropad .button {
+  display: block;
+  background-color: #313130;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#313130), to(#949493));
+  background-image: -webkit-linear-gradient(top, #313130, #949493); 
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0px 8px 2px #666, inset 0px 2px 3px #fff;
+}
+
+#system-arcade #controller-retropad .button-enabled {
+  background-color: #00973e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00973e), to(#1aa675));
+  background-image: -webkit-linear-gradient(top, #00973e, #1aa675); 
+}
+
+/* Position: Top */
+#system-arcade #controller-retropad .position-row-top {
   top: 0;
+}
+
+#system-arcade #controller-retropad .position-row-top .info {
+  bottom: 120px;
+  transform: translate(-50%, 0) translate(60px, 0);
+}
+
+#system-arcade #controller-retropad .position-row-top .connector {
+  height: 65px;
+  bottom: 0;
+  transform: translate(-2px, 100%) translate(0, 2px);
+  left: 50%;
+}
+
+#system-arcade #controller-retropad .position-row-top .dot {
+  bottom: 0;
+  transform: translate(-10px, 10px);
+}
+
+/* Position: Top-Left */
+#system-arcade #controller-retropad .position-top1 {
   left: 0;
   transform: translate(0, 50%);
 }
 
-#system-arcade span.button-top1 {
-  transform: translate(-50%, 60px) translate(70px, 0px);
-}
-
-#system-arcade .button-top2 {
-  top: 0;
+/* Position: Top-Middle */
+#system-arcade #controller-retropad .position-top2 {
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-60px, 0);
 }
 
-#system-arcade span.button-top2 {
-  width: 100%;
-  max-width: 100%;
+/* Position: Top-Right */
+#system-arcade #controller-retropad .position-top3 {
+  left: 100%;
+  transform: translate(-120px, 50%);
 }
 
-#system-arcade .button-top3 {
-  top: 0;
-  right: 0;
-  transform: translate(0, 50%);
-}
-
-#system-arcade span.button-top3 {
-  transform: translate(50%, 60px) translate(-70px, 0px);
-}
-
-#system-arcade .button-bottom1 {
+/* Position: Bottom-Left & Bottom-Right */
+#system-arcade #controller-retropad .position-bottom1,
+#system-arcade #controller-retropad .position-bottom3 {
   bottom: 0;
+}
+
+#system-arcade #controller-retropad .position-bottom1 .info,
+#system-arcade #controller-retropad .position-bottom3 .info {
+  top: 131px;
+}
+
+#system-arcade #controller-retropad .position-bottom1 .connector,
+#system-arcade #controller-retropad .position-bottom3 .connector {
+  height: 65px;
+  top: 0;
+  transform: translate(-2px, -100%) translate(0, -2px);
+  left: 50%;
+}
+
+#system-arcade #controller-retropad .position-bottom1 .dot,
+#system-arcade #controller-retropad .position-bottom2 .dot,
+#system-arcade #controller-retropad .position-bottom3 .dot {
+  top: 0;
+  transform: translate(-10px, -10px);
+}
+
+/* Position: Bottom-Left */
+#system-arcade #controller-retropad .position-bottom1 {
   left: 0;
 }
 
-#system-arcade span.button-bottom1 {
-  transform: translate(-50%, -88px) translate(70px, 0px);
+#system-arcade #controller-retropad .position-bottom1 .info {
+  left: 0;
+  transform: translate(-50%, 0) translate(60px, 0);
 }
 
-#system-arcade .button-bottom2 {
-  width: 100%;
-  max-width: 100%;
+/* Position: Bottom-Middle */
+#system-arcade #controller-retropad .position-bottom2 {
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60px, -50%);
 }
 
-#system-arcade span.button-bottom2 {
-  width: 100%;
-  bottom: 132px;
+#system-arcade #controller-retropad .position-bottom2 .info {
+  top: 130px;
+  transform: translate(-50%, 0) translate(60px, 0);
+  max-width: 100%;
 }
 
-#system-arcade .button-bottom3 {
-  bottom: 0;
+#system-arcade #controller-retropad .position-bottom2 .connector {
+  height: 69px;
+  top: 0;
+  transform: translate(-2px, -100%) translate(0, -2px);
+  left: 50%;
+}
+
+/* Position: Bottom-Right */
+#system-arcade #controller-retropad .position-bottom3 {
   right: 0;
 }
 
-#system-arcade span.button-bottom3 {
-  transform: translate(50%, -88px) translate(-70px, 0px);
+#system-arcade #controller-retropad .position-bottom3 .button {
+  margin-left: auto;
+}
+
+#system-arcade #controller-retropad .position-bottom3 .info {
+  right: 0;
+  transform: translate(50%, 0) translate(-60px, 0);
 }
