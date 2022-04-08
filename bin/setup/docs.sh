@@ -7,7 +7,7 @@ setup_module_id='docs'
 setup_module_desc='Documentation builder for Retrokit'
 
 depends() {
-  sudo apt-get install -y pandoc chromium img2pdf
+  sudo apt-get install -y pandoc chromium
 
   sudo pip3 install jinja2-cli
 }

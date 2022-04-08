@@ -333,10 +333,7 @@ __build_pdf() {
   jinja2 "$reference_template" "$tmp_ephemeral_dir/system.json" > "$tmp_ephemeral_dir/reference.html"
 
   # Render HTML => PDF
-  # # Currently rendering chrome-generated PDFs from our html is slow
-  # chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$tmp_ephemeral_dir/reference.html" 2>/dev/null
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --screenshot="$tmp_ephemeral_dir/reference.pdf" --window-size=1920,1080 "$tmp_ephemeral_dir/reference.html" 2>/dev/null
-  img2pdf -s 72dpi --engine internal --output "$output_path" "$tmp_ephemeral_dir/reference.pdf" 2>/dev/null
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$tmp_ephemeral_dir/reference.html" 2>/dev/null
 }
 
 # List all Retroarch configuration files which might contain controller info

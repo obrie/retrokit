@@ -312,7 +312,8 @@ table td {
   line-height: 120px;
   margin: 0;
   border-radius: 50%;
-  box-shadow: 0px 8px 2px #666, inset 0px 2px 3px #fff;
+  border: 2px solid #666;
+  border-bottom: 7px solid #666;
 }
 
 #system-arcade #controller-retropad .button-enabled {
@@ -326,12 +327,12 @@ table td {
 }
 
 #system-arcade #controller-retropad .position-row-top .info {
-  bottom: 120px;
+  bottom: 131px;
   transform: translate(-50%, 0) translate(60px, 0);
 }
 
 #system-arcade #controller-retropad .position-row-top .connector {
-  height: 65px;
+  height: 67px;
   bottom: 0;
   transform: translate(-2px, 100%) translate(0, 2px);
   left: 50%;
@@ -383,7 +384,7 @@ table td {
 }
 
 #system-arcade #controller-retropad .position-row-bottom .connector {
-  height: 65px;
+  height: 73px;
   top: 0;
   transform: translate(-2px, -100%) translate(0, -2px);
   left: 50%;
