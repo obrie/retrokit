@@ -263,6 +263,10 @@ __add_hotkey_controls() {
       local button_config=$(__find_retroarch_hotkey_button "$retroarch_action")
       if [ -n "$button_config" ]; then
         local retropad_button=${retropad_buttons_map[$button_config]}
+        if [ -z "$retropad_button" ]; then
+          # Map to the original config (a keyboard key)
+          retropad_button=$(echo "$button_config" | sed 's/RETROK_//g')
+        fi
 
         # We found a retropad button mapped as a hotkey -- go ahead and add it
         local buttons=''
@@ -295,16 +299,22 @@ __find_retroarch_hotkey_button() {
   local action=$1
 
   while read joypad_file; do
-    if ! grep -qE "^(input_${action}_btn|input_player1_$action)" "$joypad_file"; then
+    if ! grep -qE "^(input_${action}_btn|input_$action)" "$joypad_file"; then
       continue
     fi
 
-    local button_id=$(crudini --get "$joypad_file" '' "input_${action}_btn" 2>/dev/null || crudini --get "$joypad_file" '' "input_player1_$action" 2>/dev/null)
+    local button_id=$(crudini --get "$joypad_file" '' "input_${action}_btn" 2>/dev/null || crudini --get "$joypad_file" '' "input_$action" 2>/dev/null)
 
     if [ -n "$button_id" ]; then
       # Look up the retropad button name (e.g. input_{button_name}_... = ...)
-      local button=$(grep "$button_id" "$joypad_file" | grep -v "input_${action}_" | sed 's/_btn\|input_player1_\|input_//g' | cut -d' ' -f 1 | head -n 1)
-      echo "$button"
+      local button=$(grep "$button_id" "$joypad_file" | grep -Ev "input_$action" | sed 's/_btn\|input_player1_\|input_//g' | cut -d' ' -f 1 | head -n 1)
+      if [ -n "$button" ]; then
+        # Retropad mapping
+        echo "$button"
+      else
+        # Keyboard mapping
+        echo "RETROK_$button_id" | tr -d '"'
+      fi
 
       return
     fi
@@ -331,7 +341,7 @@ __list_joypad_files() {
   find \
     /opt/retropie/configs/$system/retroarch.cfg \
     /opt/retropie/configs/all/retroarch.cfg \
-    /opt/retropie/configs/all/retroarch-joypads \
+    /opt/retropie/configs/all/retroarch-joypads/ \
     -name '*.cfg' 2>/dev/null
 }
 
