@@ -213,6 +213,7 @@ __add_system_extensions() {
 # Add keyboard mappings
 __add_vice_keyboard_controls() {
   local core_options_file=$1
+  local edit_args=()
 
   for vice_action in ${vice_actions_list[@]}; do
     local core_option_name="vice_mapper_$vice_action"
@@ -229,14 +230,19 @@ __add_vice_keyboard_controls() {
       local vice_action_description=${vice_actions[$vice_action]}
       local retro_key_description=${retro_keys[$retro_key]}
 
-      __edit_json ".controls.keyboard.\"$retro_key_description\"" "$vice_action_description" "$controls_file"
+      edit_args+=(".controls.keyboard.\"$retro_key_description\"" "$vice_action_description")
     fi
   done
+
+  if [ ${#edit_args[@]} -gt 0 ]; then
+    json_edit "$controls_file" "${edit_args[@]}"
+  fi
 }
 
 # Add controller mappings
 __add_vice_retropad_controls() {
   local core_options_file=$1
+  local edit_args=()
 
   for vice_button in ${vice_mapper_buttons[@]}; do
     local core_option_name="vice_mapper_$vice_button"
@@ -252,7 +258,11 @@ __add_vice_retropad_controls() {
       local retropad_button=${vice_mapper_retropad_map[$vice_button]}
       local retro_key_description=${retro_keys[$retro_key]}
 
-      __edit_json ".controls.retropad.\"$retropad_button\"" "$retro_key_description" "$controls_file"
+      edit_args+=(".controls.retropad.\"$retropad_button\"" "$retro_key_description")
     fi
   done
+
+  if [ ${#edit_args[@]} -gt 0 ]; then
+    json_edit "$controls_file" "${edit_args[@]}"
+  fi
 }

@@ -212,8 +212,9 @@ __add_hrefs() {
   local stylesheet_href=$(first_path "{docs_dir}/stylesheets/reference.css")
   local base_href=$docs_dir
 
-  __edit_json ".hrefs.stylesheet" "file://$stylesheet_href" "$controls_file"
-  __edit_json ".hrefs.base" "file://$base_href/" "$controls_file"
+  json_edit "$controls_file" \
+    ".hrefs.stylesheet" "file://$stylesheet_href" \
+    ".hrefs.base" "file://$base_href/"
 }
 
 # Add theme overrides for adjusting logos
@@ -226,7 +227,7 @@ __add_system_theme() {
     suffix=''
   fi
 
-  __edit_json ".images.logo" "logo$suffix.png" "$controls_file"
+  json_edit "$controls_file" ".images.logo" "logo$suffix.png"
 }
 
 # Add libretro keyboard controls
@@ -235,20 +236,22 @@ __add_keyboard_controls() {
   # as an actual keyboard
   local uses_raw_keyboard=$(jq '.controls .keyboard_raw' "$(first_path '{system_docs_dir}/doc.json')")
   if [ "$uses_raw_keyboard" != 'true' ]; then
-    for button_config in "${retroarch_keyboard_buttons_list[@]}"; do
-      # Check if config exists before reading it
-      if ! grep -qE "^input_player1_$button_config" /opt/retropie/configs/all/retroarch.cfg; then
-        continue
-      fi
+    local edit_args=()
 
+    for button_config in "${retroarch_keyboard_buttons_list[@]}"; do
       # Find the corresponding keyboard button
-      local keyboard_key=$(crudini --get '/opt/retropie/configs/all/retroarch.cfg' '' "input_player1_$button_config" 2>/dev/null | tr -d '"')
+      local keyboard_key=$(__get_ini_config_value '/opt/retropie/configs/all/retroarch.cfg' "input_player1_$button_config")
+
       if [ -n "$keyboard_key" ]; then
         local keyboard_description=${keyboard_keys[$keyboard_key]:-$keyboard_key}
         local retropad_button=${retropad_buttons_map[$button_config]}
-        __edit_json ".controls.keyboard.\"$keyboard_description\"" "$retropad_button" "$controls_file"
+        edit_args+=(".controls.keyboard.\"$keyboard_description\"" "$retropad_button")
       fi
     done
+
+    if [ ${#edit_args[@]} -gt 0 ]; then
+      json_edit "$controls_file" "${edit_args[@]}"
+    fi
   fi
 }
 
@@ -258,6 +261,7 @@ __add_hotkey_controls() {
   if [ -n "$libretro_names" ]; then
     # Figure out if there's a hotkey button
     local hotkey_button=$(__find_retroarch_hotkey_button 'enable_hotkey')
+    local edit_args=()
 
     for retroarch_action in "${retroarch_actions_list[@]}"; do
       local button_config=$(__find_retroarch_hotkey_button "$retroarch_action")
@@ -277,9 +281,13 @@ __add_hotkey_controls() {
 
         # Update the controls json
         local description=${retroarch_actions[$retroarch_action]}
-        __edit_json ".controls.hotkeys.\"$buttons\"" "$description" "$controls_file"
+        edit_args+=(".controls.hotkeys.\"$buttons\"" "$description")
       fi
     done
+
+    if [ ${#edit_args[@]} -gt 0 ]; then
+      json_edit "$controls_file" "${edit_args[@]}"
+    fi
   fi
 }
 
@@ -299,15 +307,12 @@ __find_retroarch_hotkey_button() {
   local action=$1
 
   while read joypad_file; do
-    if ! grep -qE "^(input_${action}_btn|input_$action)" "$joypad_file"; then
-      continue
-    fi
-
-    local button_id=$(crudini --get "$joypad_file" '' "input_${action}_btn" 2>/dev/null || crudini --get "$joypad_file" '' "input_$action" 2>/dev/null)
+    local button_id=$(__get_ini_config_value "$joypad_file" "input_${action}_btn" || __get_ini_config_value "$joypad_file" "input_$action")
 
     if [ -n "$button_id" ]; then
-      # Look up the retropad button name (e.g. input_{button_name}_... = ...)
-      local button=$(grep "$button_id" "$joypad_file" | grep -Ev "input_$action" | sed 's/_btn\|input_player1_\|input_//g' | cut -d' ' -f 1 | head -n 1)
+      # Look up the retropad button name (e.g. input_{button_name}_... = ...) that
+      # maps to the button id
+      local button=$(grep "\"$button_id\"" "$joypad_file" | grep -Ev "input_$action" | sed 's/_btn\|input_player1_\|input_//g' | cut -d' ' -f 1 | head -n 1)
       if [ -n "$button" ]; then
         # Retropad mapping
         echo "$button"
@@ -345,12 +350,16 @@ __list_joypad_files() {
     -name '*.cfg' 2>/dev/null
 }
 
-# Runs a JQ edit command on the following file, modifying it in-place
-__edit_json() {
-  local key=$1
-  local value=$2
-  local file=$3
-
-  jq --arg value "$value" "$key = \$value" "$file" > "$file.replace"
-  mv "$file.replace" "$file"
+# High-performance lookup of retroarch configuration data.  This is used over
+# crudini (our preferred tool) due to crudini's performance and the number of
+# lookups we need to do.
+__get_ini_config_value() {
+  local file=$1
+  local key=$2
+  local value=$(sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\" \t]*\)\"*.*/\1/p" "$file" | tail -1)
+  if [ -n "$value" ]; then
+    echo "$value"
+  else
+    return 1
+  fi
 }

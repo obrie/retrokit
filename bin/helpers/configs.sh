@@ -258,6 +258,39 @@ json_merge() {
   $cmd mv "$staging_path" "$target"
 }
 
+# Edits in-place one or more keys on the given JSON file
+json_edit() {
+  local target=$1
+  shift
+  local jq_commands=''
+  local jq_args=()
+
+  local index=0
+  while true; do
+    local key=$1
+    if [ -n "$key" ]; then
+      # Multiple commands need to be delimited
+      if [ -n "$jq_commands" ]; then
+        jq_commands="$jq_commands |"
+      fi
+
+      jq_commands="$jq_commands$key = \$ARGS.positional[$index]"
+      jq_args+=("$2")
+      ((index=index+1))
+      shift 2
+    else
+      # No more keys found -- stop
+      break
+    fi
+  done
+
+  # jq doesn't support in-place writes, so first write to a staging file before
+  # we overwrite
+  local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
+  jq "$jq_commands" "$target" --args "${jq_args[@]}" > "$staging_path"
+  mv "$staging_path" "$target"
+}
+
 # Copies a file, backing up the target and substituting environment variables
 # in the source file
 file_cp() {

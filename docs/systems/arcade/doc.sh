@@ -50,7 +50,7 @@ __add_system_extensions() {
   done
 
   html="<ol id=\"controller-retropad-buttons\">$html</ol>"
-  __edit_json '.images.retropad_html' "$html" "$controls_file"
+  json_edit "$controls_file" '.images.retropad_html' "$html"
 }
 
 # Creates the html for the button at the given row / column in the layout
