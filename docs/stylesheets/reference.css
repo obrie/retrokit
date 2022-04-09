@@ -305,8 +305,7 @@ table td {
 /* Button Image */
 #system-arcade #controller-retropad .button {
   display: block;
-  background-color: #313130;
-  background-image: linear-gradient(to bottom, #313130, #949493);
+  background-color: #949493;
   width: 120px;
   height: 120px;
   line-height: 120px;
@@ -318,7 +317,6 @@ table td {
 
 #system-arcade #controller-retropad .button-enabled {
   background-color: #00973e;
-  background-image: linear-gradient(to bottom, #00973e, #1aa675);
 }
 
 /* Position: Top */
