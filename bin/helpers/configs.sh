@@ -274,8 +274,8 @@ json_edit() {
         jq_commands="$jq_commands |"
       fi
 
-      jq_commands="$jq_commands$key = \$ARGS.positional[$index]"
-      jq_args+=("$2")
+      jq_commands="$jq_commands$key = \$value$index"
+      jq_args+=(--arg "value$index" "$2")
       ((index=index+1))
       shift 2
     else
@@ -287,7 +287,7 @@ json_edit() {
   # jq doesn't support in-place writes, so first write to a staging file before
   # we overwrite
   local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
-  jq "$jq_commands" "$target" --args "${jq_args[@]}" > "$staging_path"
+  jq "${jq_args[@]}" "$jq_commands" "$target" > "$staging_path"
   mv "$staging_path" "$target"
 }
 
