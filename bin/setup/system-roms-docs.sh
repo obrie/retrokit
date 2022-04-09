@@ -35,8 +35,13 @@ build() {
       continue
     fi
 
-    echo "[$name] Building documentation..."
     local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/$name.pdf"
+    if [ -f "$output_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+      echo "[$name] Already built documentation"
+      continue
+    fi
+
+    echo "[$name] Building documentation..."
     mkdir -p "$(dirname "$output_path")"
 
     # Build the PDF
