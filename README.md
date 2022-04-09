@@ -999,9 +999,12 @@ retrokit what it is.  That includes:
 
 There are too many improvements to count here, but some ideas are:
 
-* More comprehensive compatibility ratings
+* Move manualkit to sdl2
+* Unify system metadata into a single file
+* Support for more systems (Amiga, Apple II, etc.)
 * Support for non-Raspbian platforms
-* Computer-based emulators (Amiga, Apple II, etc.)
+* Separate retrokit, romkit, and manualkit
+* More comprehensive compatibility ratings
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
 contributions for anything that will make it easier for you to customize this to your
