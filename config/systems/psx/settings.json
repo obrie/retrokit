@@ -81,6 +81,9 @@
     "parent": {
       "source": "file://$HOME/retrokit/config/systems/psx/clones.json"
     },
+    "rename": {
+      "source": "file://$HOME/retrokit/config/systems/psx/renames.json"
+    },
     "duckstation_data": {
       "source": "https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json",
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
