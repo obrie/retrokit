@@ -15,6 +15,11 @@ build() {
   local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
   mkdir -p "$(dirname "$output_path")"
 
+  if [ -f "$output_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+    echo "Documentation already built for $system"
+    return
+  fi
+
   echo '{}' > "$controls_file"
 
   __source_system_extensions || true
