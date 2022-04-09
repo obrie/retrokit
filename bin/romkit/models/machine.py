@@ -534,16 +534,18 @@ class Machine:
 
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
 
-        # Disks and playlists get handled separately -- everything else gets symlink'd
-        # through the machine's resource
-        for resource_name in (target_dir.file_templates.keys() - set(['disk', 'playlist'])):
-            target_dir.symlink(resource_name, self.resource, **self.context)
+        if self.playlist:
+            # When there's a playlist, it's the only thing from the machine that
+            # needs to get enabled
+            self.playlist.enable(target_dir)
+        else:
+            # Disks get handled separately -- everything else gets symlink'd
+            # through the machine's resource
+            for resource_name in (target_dir.file_templates.keys() - set(['disk', 'playlist'])):
+                target_dir.symlink(resource_name, self.resource, **self.context)
 
         for disk in (self.disks_from_self | self.disks_from_parent):
             disk.enable(target_dir)
-
-        if self.playlist:
-            self.playlist.enable(target_dir)
 
     # Prints the commands required to remove this machine from the filesystem
     def purge(self):
