@@ -557,6 +557,3 @@ class Machine:
 
         if self.resource.xref_path and self.resource.xref_path.is_symlink():
             print(f'rm -rf {shlex.quote(str(self.resource.xref_path.path))}')
-
-        if self.playlist:
-            self.playlist.purge()
