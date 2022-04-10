@@ -199,7 +199,9 @@ __import_titles() {
   done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name] | @tsv')
 
   # Import the data
-  __scrape -s import
+  if find "$import_dir/textual" -name '*.txt'; then
+    __scrape -s import
+  fi
 
   # Clean up unused files
   rm -rf "$import_dir"
