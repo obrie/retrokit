@@ -771,8 +771,12 @@ vacuum() {
 
     # Keep paths to ensure they don't get deleted
     files_to_keep[${manual['install_path']}]=1
-    files_to_keep[${manual['playlist_install_path']}]=1
     files_to_keep[${manual['postprocess_path']}]=1
+
+    local playlist_name=${manual['playlist_name']}
+    if [ -n "$playlist_name" ]; then
+      files_to_keep[${manual['playlist_install_path']}]=1
+    fi
 
     # Keep downloads (if configured to persist)
     if [ "$keep_downloads" == 'true' ]; then
