@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "mupen64plus": {},
     "lr-mupen64plus": {"core_name": "mupen64plus", "library_name": "Mupen64Plus GLES3", "default": true},

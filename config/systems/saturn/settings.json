@@ -17,7 +17,7 @@
     }
   },
   "scraper": {
-    "sources": ["screenscraper"]
+    "args": ["--addext", "*.m3u"]
   },
   "emulators": {
     "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}

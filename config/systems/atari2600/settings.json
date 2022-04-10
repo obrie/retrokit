@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-stella": {"core_name": "stella", "library_name": "Stella", "default": true}
   },

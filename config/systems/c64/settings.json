@@ -16,9 +16,6 @@
       "offset_x": 223
     }
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-vice": {"core_name": "vice", "library_name": "VICE x64", "default": true}
   },

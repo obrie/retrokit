@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-prosystem": {"core_name": "prosystem", "library_name": "ProSystem", "default": true}
   },

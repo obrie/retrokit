@@ -16,9 +16,6 @@
       "offset_x": 223
     }
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
   },

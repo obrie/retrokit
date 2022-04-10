@@ -1,4 +1,9 @@
 {
+  "scraper": {
+    "sources": ["screenscraper"],
+    "import_dat_titles": true,
+    "gamelist_args": ["--flags skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"]
+  },
   "metadata": {
     "manual": {
       "languages": {

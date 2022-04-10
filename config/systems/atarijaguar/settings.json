@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-mess": {},
     "lr-mess-jaguar": {"build": "source", "core_name": "mame", "library_name": "MAME"},

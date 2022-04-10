@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-vecx": {"core_name": "vecx", "library_name": "VecX", "default": true}
   },

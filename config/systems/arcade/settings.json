@@ -18,7 +18,8 @@
     }
   },
   "scraper": {
-    "sources": ["screenscraper", "arcadedb"]
+    "sources": ["screenscraper", "arcadedb"],
+    "import_dat_titles": false
   },
   "emulators": {
     "lr-fbneo": {"default": true, "core_name": "fbneo", "library_name": "FinalBurn Neo"},

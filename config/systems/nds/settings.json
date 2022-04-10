@@ -1,8 +1,5 @@
 {
   "system": "nds",
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "drastic": {"default": true}
   },

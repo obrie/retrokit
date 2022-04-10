@@ -16,9 +16,6 @@
       "offset_x": 223
     }
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-snes9x": {"core_name": "snes9x", "library_name": "Snes9x", "default": true}
   },

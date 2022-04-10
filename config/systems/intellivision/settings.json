@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-freeintv": {"core_name": "freeintv", "library_name": "FreeIntv", "default": true}
   },

@@ -11,7 +11,7 @@ aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$syst
 configure() {
   __load_rom_data
   __scrape_sources
-  __add_disc_numbers
+  __import_titles
   __build_gamelist
 
   # Reinstall the favorites for this system since the gamelist was just
@@ -134,47 +134,75 @@ __build_missing_reports() {
   cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
 }
 
-# When playlists are disabled and flags are configured to *not* be included in
-# the display name, we need to differentiate between different discs within a
-# game.  This functions allows us to manually specify the title *with* the disc
-# number in the Skyscraper database.
-__add_disc_numbers() {
-  local skyscraper_brackets_enabled=$(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets')
-  if [ "$skyscraper_brackets_enabled" == '"true"' ]; then
-    # No need to manually add disc numbers
+# Imports titles from DAT files to override what was scraped
+__import_titles() {
+  local import_dat_titles=$(system_setting '.scraper .import_dat_titles')
+  if [ "$import_dat_titles" != 'true' ]; then
+    # Don't import titles from romkit (purge anything we've previously imported for this system)
+    __scrape --cache purge:m=import
     return
   fi
 
-  # Remove existing overrides we may have previously added
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
+  local import_dir="$HOME/.skyscraper/import/$system"
+  mkdir -p "$import_dir/textual"
 
-  while IFS=$'\t' read -r name disc_title title path; do
-    # Only process titles that have disc numbers (and no playlist)
-    if [[ "$disc_title" != *"("* ]]; then
+  # Define the structure of the import
+  echo 'Title: ###TITLE###' > "$import_dir/definitions.dat"
+
+  # Remove existing files
+  find "$import_dir/textual" -name '*.txt' -exec rm -fv '{}' +
+
+  # Identify corresponding filename for each skyscraper quickid
+  declare -A quickid_names
+  while IFS=$'\t' read quickid filepath; do
+    local filename=$(basename "$filepath")
+    local name=${filename%.*}
+    quickid_names[$name]=$quickid
+  done < <(xmlstarlet select -t -m '/*/*' -v '@id' -o $'\t' -v '@filepath' -n "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | xmlstarlet unesc)
+
+  # Identify which titles we've already imported so we don't do it again
+  declare -A imported_titles
+  while IFS=$'\t' read quickid title; do
+    imported_titles[$quickid]=$title
+  done < <(xmlstarlet select -t -m '/*/*[@type="title" and @source="import"]' -v '@id' -o $'\t' -v '.' -n "/opt/retropie/configs/all/skyscraper/cache/$system/db.xml" | xmlstarlet unesc)
+
+  # Find new titles to import
+  while IFS=$'\t' read -r name disc_title playlist_name; do
+    # Determine which filename we're targeting
+    local target_name
+    local title_to_import
+    if [ -n "$playlist_name" ]; then
+      title_to_import=$title
+      target_name=$playlist_name
+    else
+      # Always use the Disc title, ensuring that the disc identifier is not hidden
+      # within parentheses
+      title_to_import=$(echo "$disc_title" | sed 's/(/- /; s/)//g')
+      target_name=$name
+    fi
+
+    # Check if we've already written to this file (this can happen for playlists)
+    if [ -f "$import_dir/textual/$target_name.txt" ]; then
       continue
     fi
 
-    # Find the skyscraper id
-    local quickid_config=$(grep "$name" "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | head -n 1)
-    if [ -z "$quickid_config" ]; then
-      continue
+    # Check to see if we're previously imported this game's title
+    local quickid=${quickid_names[$target_name]}
+    if [ -n "$quickid" ]; then
+      local imported_title=${imported_titles[$quickid]}
+      if [ "$imported_title" == "$title_to_import" ]; then
+        continue
+      fi
     fi
-    local quickid=$(echo "$quickid_config" | xmlstarlet sel -t -v '*/@id')
 
-    # Find the scraped title
-    local scraped_title=$(grep $quickid /opt/retropie/configs/all/skyscraper/cache/$system/db.xml | grep 'type="title"' | grep -v 'source="user"' | head -n 1 | xmlstarlet sel -t -v '.' 2>/dev/null || echo "$title")
-    local disc_id=$(echo "$disc_title" | grep -oE '\([^\)]+\)$')
-    disc_id=${disc_id//[()]/}
+    echo "Title: $title_to_import" > "$import_dir/textual/$target_name.txt"
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name] | @tsv')
 
-    # Update the title to include the disc number.  We have to:
-    # * Provide the name of the file that's being updated in --fromfile
-    # * Pipe the title we want to set for that file
-    local new_title="$scraped_title - $disc_id"
-    local filename=$(basename  "$path")
-    echo "Updating \"$name\" scraped title from \"$scraped_title\" to \"$new_title\""
-    echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --startat "$filename" --endat "$filename"
-    rm -f "$tmp_ephemeral_dir/scraper.input"
-  done < <(romkit_cache_list | jq -r 'select(.playlist == null) | [.name, .disc, .title, .path] | @tsv')
+  # Import the data
+  __scrape import
+
+  # Clean up unused files
+  rm -rf "$import_dir"
 }
 
 # Builds the gamelist.xml that will be used by emulationstation
