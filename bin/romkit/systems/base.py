@@ -98,6 +98,9 @@ class BaseSystem:
         # Machines that are candidates until we've gone through all of them
         machine_candidates = {}
 
+        # Normalized title => groupd id
+        machine_groups = {}
+
         for romset in self.iter_romsets():
             # Machines that are installable or required by installable machines
             machines_to_track = set()
@@ -119,7 +122,12 @@ class BaseSystem:
                     # We don't want to rely on the group name because (a) we don't always
                     # have a Parent/Clone relationship map and (b) the flags are
                     # less stable.
-                    group = Machine.normalize(machine.parent_disc_title or machine.disc_title)
+                    normalized_disc_title = Machine.normalize(machine.disc_title)
+                    normalized_parent_disc_title = Machine.normalize(machine.parent_disc_title)
+                    group = (normalized_parent_disc_title and machine_groups.get(normalized_parent_disc_title)) or machine_groups.get(normalized_disc_title) or normalized_parent_disc_title or normalized_disc_title
+                    machine_groups[normalized_disc_title] = group
+                    if normalized_parent_disc_title:
+                        machine_groups[normalized_parent_disc_title] = group
 
                     # Force the machine to be installed if it was allowed by an override
                     if allow_reason == FilterReason.OVERRIDE:
@@ -230,6 +238,7 @@ class BaseSystem:
         installable_machine_paths = set()
         installable_disk_ids = set()
         installable_sample_names = set()
+        installable_playlist_names = set()
 
         for machine in installable_machines:
             if machine.resource:
@@ -242,6 +251,10 @@ class BaseSystem:
             # Track samples
             if machine.sample:
                 installable_sample_names.add(machine.sample.name)
+
+            # Track playlists
+            if machine.playlist:
+                installable_playlist_names.add(machine.playlist.name)
 
         for romset in self.iter_romsets():
             for machine in romset.iter_machines():
@@ -257,3 +270,6 @@ class BaseSystem:
                     # Check samples
                     if machine.sample and machine.sample.name not in installable_sample_names:
                         machine.sample.purge()
+
+                    if machine.playlist and machine.playlist.name not in installable_playlist_names:
+                        machine.playlist.purge()
