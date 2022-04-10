@@ -11,17 +11,7 @@ aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$syst
 configure() {
   __load_rom_data
   __scrape_sources
-
-  # Distinguish between titles that will appear identical in the gamelist
-  local skyscraper_brackets_enabled=$(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets')
-  if [ "$skyscraper_brackets_enabled" != '"true"' ]; then
-    # Remove existing overrides we may have previously added
-    /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
-
-    __add_disc_numbers
-    __rename_identical_titles
-  fi
-
+  __add_disc_numbers
   __build_gamelist
 
   # Reinstall the favorites for this system since the gamelist was just
@@ -149,6 +139,15 @@ __build_missing_reports() {
 # game.  This functions allows us to manually specify the title *with* the disc
 # number in the Skyscraper database.
 __add_disc_numbers() {
+  local skyscraper_brackets_enabled=$(crudini --get /opt/retropie/configs/all/skyscraper/config.ini 'main' 'brackets')
+  if [ "$skyscraper_brackets_enabled" == '"true"' ]; then
+    # No need to manually add disc numbers
+    return
+  fi
+
+  # Remove existing overrides we may have previously added
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
+
   while IFS=$'\t' read -r name disc_title title path; do
     # Only process titles that have disc numbers (and no playlist)
     if [[ "$disc_title" != *"("* ]]; then
@@ -174,75 +173,8 @@ __add_disc_numbers() {
     local filename=$(basename  "$path")
     echo "Updating \"$name\" scraped title from \"$scraped_title\" to \"$new_title\""
     echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --startat "$filename" --endat "$filename"
+    rm -f "$tmp_ephemeral_dir/scraper.input"
   done < <(romkit_cache_list | jq -r 'select(.playlist == null) | [.name, .disc, .title, .path] | @tsv')
-}
-
-# Rnames games that were scraped with identical titles.  This should ideally be
-# fixed in the scraper source, but we can't always anticipate that.  So, instead,
-# we try to get the best experience we can by at least making the difference clear
-# in the UI when the titles are displayed.
-__rename_identical_titles() {
-  # Identify corresponding filename for each skyscraper quickid
-  declare -A quickid_filenames
-  while IFS=$'\t' read quickid filepath; do
-    local filename=$(basename "$filepath")
-    quickid_filenames["$quickid"]="$filename"
-  done < <(xmlstarlet select -t -m '/*/*' -v '@id' -o $'\t' -v '@filepath' -n "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml")
-
-  # Identify which titles we've already overridden -- we're not going to touch those
-  declare -A overridden_quickids
-  while IFS=$'\t' read quickid; do
-    overridden_quickids[$quickid]=1
-  done < <(xmlstarlet select -t -m '/*/*[@type="title" and @source="user"]' -v '@id' -n "/opt/retropie/configs/all/skyscraper/cache/$system/db.xml")
-
-  # Find out which ids are duplicates
-  declare -A quickid_titles
-  declare -A titles_to_edit
-  declare -A titles_seen
-  while IFS=$'\t' read quickid title; do
-    # Make sure this id hasn't already been overwritten
-    if [ -n "${overridden_quickids[$quickid]}" ]; then
-      continue
-    fi
-
-    quickid_titles[$quickid]=$title
-    local filename=${quickid_filenames[$quickid]}
-    local conflicting_id=${titles_seen[$title]}
-
-    # Another game has this same title -- let's figure out who should get edited
-    if [ -n "$conflicting_id" ]; then
-      local conflicting_filename=${quickid_filenames[$conflicting_id]}
-
-      # If the filenames are the same, then it's not a conflict
-      if [ "$conflicting_filename" != "$filename" ]; then
-        local normalized_scraped_title=$(normalize_rom_name "$title")
-        local normalized_title=$(normalize_rom_name "$filename")
-        local normalized_conflicting_title=$(normalize_rom_name "$conflicting_filename")
-
-        if [ "$normalized_conflicting_title" == "$normalized_scraped_title" ]; then
-          # When normalized titles match, we assume it owns the title and mark
-          # this title and needing to be edited
-          titles_to_edit[$quickid]=${filename%% \(*}
-        else
-          # If the titles don't match, then we mark the original as conflicting
-          titles_seen[$title]=$quickid
-          titles_to_edit[$conflicting_id]=${conflicting_filename%% \(*}
-        fi
-      fi
-    else
-      titles_seen[$title]=$quickid
-    fi
-  done < <(xmlstarlet select -t -m '/*/*[@type="title"]' -v '@id' -o $'\t' -v '.' -n "/opt/retropie/configs/all/skyscraper/cache/$system/db.xml")
-
-  # Update the titles for duplicates
-  for quickid in ${!titles_to_edit[@]}; do
-    local old_title=${quickid_titles[$quickid]}
-    local new_title=${titles_to_edit[$quickid]}
-    local filename=${quickid_filenames[$quickid]}
-
-    echo "Updating \"$filename\" scraped title from \"$old_title\" to \"$new_title\""
-    echo "$new_title" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=title --startat "$filename" --endat "$filename"
-  done
 }
 
 # Builds the gamelist.xml that will be used by emulationstation
