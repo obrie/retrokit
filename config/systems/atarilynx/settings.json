@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-handy": {"core_name": "handy", "library_name": "Handy", "default": true}
   },

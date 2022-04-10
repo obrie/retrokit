@@ -16,9 +16,6 @@
       "offset_x": 232
     }
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-fceumm": {"core_name": "fceumm", "library_name": "FCEUmm", "default": true}
   },

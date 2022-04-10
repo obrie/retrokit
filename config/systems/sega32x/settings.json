@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-picodrive": {"core_name": "picodrive", "library_name": "PicoDrive", "default": true}
   },

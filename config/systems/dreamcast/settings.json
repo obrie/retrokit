@@ -16,9 +16,6 @@
       "offset_x": 223
     }
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "redream": {"default": true},
     "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}

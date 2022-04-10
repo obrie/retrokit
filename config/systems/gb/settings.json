@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true},
     "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual"}

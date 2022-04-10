@@ -1,7 +1,6 @@
 {
   "system": "pc",
   "scraper": {
-    "sources": ["screenscraper"],
     "args": ["--excludefiles", "*DOSBox*"]
   },
   "emulators": {

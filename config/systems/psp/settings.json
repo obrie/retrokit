@@ -1,8 +1,5 @@
 {
   "system": "psp",
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "ppsspp": {"default": true}
   },

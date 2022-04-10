@@ -13,9 +13,6 @@
       }
     ]
   },
-  "scraper": {
-    "sources": ["screenscraper"]
-  },
   "emulators": {
     "lr-o2em": {"core_name": "o2em", "library_name": "O2EM", "default": true}
   },
