@@ -167,7 +167,7 @@ __import_titles() {
   done < <(xmlstarlet select -t -m '/*/*[@type="title" and @source="import"]' -v '@id' -o $'\t' -v '.' -n "/opt/retropie/configs/all/skyscraper/cache/$system/db.xml" | xmlstarlet unesc)
 
   # Find new titles to import
-  while IFS=$'\t' read -r name disc_title playlist_name; do
+  while IFS=$'\t' read -r name disc_title title playlist_name; do
     # Determine which filename we're targeting
     local target_name
     local title_to_import
@@ -199,7 +199,7 @@ __import_titles() {
   done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name] | @tsv')
 
   # Import the data
-  if find "$import_dir/textual" -name '*.txt'; then
+  if find "$import_dir/textual" -name '*.txt' >/dev/null; then
     __scrape -s import
   fi
 
