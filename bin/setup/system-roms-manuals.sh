@@ -771,6 +771,7 @@ vacuum() {
 
     # Keep paths to ensure they don't get deleted
     files_to_keep[${manual['install_path']}]=1
+    files_to_keep[${manual['playlist_install_path']}]=1
     files_to_keep[${manual['postprocess_path']}]=1
 
     # Keep downloads (if configured to persist)
