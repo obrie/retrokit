@@ -265,6 +265,14 @@ json_edit() {
   local jq_commands=''
   local jq_args=()
 
+  # Determine if the user is editing raw values or encoded json
+  local arg_type
+  if [ "$jq_data_type" == 'json' ]; then
+    arg_type=argjson
+  else
+    arg_type=arg
+  fi
+
   local index=0
   while true; do
     local key=$1
@@ -275,7 +283,7 @@ json_edit() {
       fi
 
       jq_commands="$jq_commands$key = \$value$index"
-      jq_args+=(--arg "value$index" "$2")
+      jq_args+=(--$arg_type "value$index" "$2")
       ((index=index+1))
       shift 2
     else
