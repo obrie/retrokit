@@ -1,7 +1,8 @@
 {
   "system": "pc",
   "scraper": {
-    "args": ["--excludefiles", "*DOSBox*"]
+    "args": ["--excludefiles", "*DOSBox*"],
+    "gamelist_args": ["--excludefiles", "*DOSBox*", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"]
   },
   "emulators": {
     "dosbox-staging": {"default": true},
