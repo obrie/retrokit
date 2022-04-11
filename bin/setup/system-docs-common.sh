@@ -205,14 +205,14 @@ retropad_buttons_map=(
   [r_y_minus]='R Axis Down'
 )
 
-# Path to which custom controls will be tracked
-controls_file="$tmp_ephemeral_dir/controls.json"
+# Path to which documenation data will be tracked
+doc_data_file="$tmp_ephemeral_dir/doc.json"
 
 __add_hrefs() {
   local stylesheet_href=$(first_path "{docs_dir}/stylesheets/reference.css")
   local base_href=$docs_dir
 
-  json_edit "$controls_file" \
+  json_edit "$doc_data_file" \
     ".hrefs.stylesheet" "file://$stylesheet_href" \
     ".hrefs.base" "file://$base_href/"
 }
@@ -227,7 +227,7 @@ __add_system_theme() {
     suffix=''
   fi
 
-  json_edit "$controls_file" ".images.logo" "logo$suffix.png"
+  json_edit "$doc_data_file" ".images.logo" "logo$suffix.png"
 }
 
 # Add libretro keyboard controls
@@ -250,7 +250,7 @@ __add_keyboard_controls() {
     done
 
     if [ ${#edit_args[@]} -gt 0 ]; then
-      json_edit "$controls_file" "${edit_args[@]}"
+      json_edit "$doc_data_file" "${edit_args[@]}"
     fi
   fi
 }
@@ -286,7 +286,7 @@ __add_hotkey_controls() {
     done
 
     if [ ${#edit_args[@]} -gt 0 ]; then
-      json_edit "$controls_file" "${edit_args[@]}"
+      json_edit "$doc_data_file" "${edit_args[@]}"
     fi
   fi
 }
@@ -331,7 +331,7 @@ __build_pdf() {
   local output_path=$1
 
   # Build full JSON variables for system (static + controls)
-  jq -s '.[0] * .[1]' "$(first_path '{system_docs_dir}/doc.json')" "$controls_file" > "$tmp_ephemeral_dir/system.json"
+  jq -s '.[0] * .[1]' "$(first_path '{system_docs_dir}/doc.json')" "$doc_data_file" > "$tmp_ephemeral_dir/system.json"
 
   # Render Jinja => Markdown
   local reference_template=$(first_path '{docs_dir}/reference.html.jinja')

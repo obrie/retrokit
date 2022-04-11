@@ -20,7 +20,7 @@ build() {
     return
   fi
 
-  echo '{}' > "$controls_file"
+  echo '{}' > "$doc_data_file"
 
   __source_system_extensions || true
   __add_hrefs
