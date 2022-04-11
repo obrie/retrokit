@@ -51,6 +51,12 @@ __scrape_source() {
   # Scrape for new roms we've never attempted before
   __scrape -s "$source" --flags onlymissing
 
+  # Only re-scrape roms a second time if the user has explicitly asked us to update
+  # the scraped data
+  if [ "$FORCE_UPDATE" != 'true' ]; then
+    return
+  fi
+
   # Check if there are previously scraped roms with missing data / media
   __build_missing_reports
   if [ ! -s "$aggregate_report_file" ]; then
