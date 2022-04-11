@@ -2,7 +2,7 @@
   "system": "ports",
   "scraper": {
     "args": ["--excludefiles", "*Freedoom*,*Sinden*"],
-    "gamelist_args": ["--excludefiles", "*Freedoom*"],
+    "gamelist_args": ["--excludefiles", "*Freedoom*", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
     "import_dat_titles": false
   },
   "romsets": [
