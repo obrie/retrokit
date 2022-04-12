@@ -26,6 +26,7 @@ Specifically, it can set up:
 * EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
 * In-game manuals
+* Printable gamelists
 * Autoconfig overrides
 * Bluetooth
 * SSH
@@ -862,6 +863,30 @@ The guides can be viewed by loading the manual via manualkit's configured hotkey
 scrolling to the end of the manual (you can just go in reverse if you're on the first
 page of the manual).  If the game has no manual, an image will be displayed saying
 "No Manual".  However, you'll still be able to scroll forward to the reference guide.
+
+## Documentation
+
+In addition to manuals and reference sheets available per-game, printable documentation
+can also be generated.  This documentation currently includes:
+
+* Introduction to the system
+* Game lists
+
+In particiular, game lists are useful if you want others to be able to look through which
+games to play while someone is playing a game or controlling the system.  Think of it like
+a karaoke playlist.
+
+To generate the documentation, you can use the following commands:
+
+```bash
+bin/docs.sh build
+
+bin/docs.sh build_intro
+
+bin/docs.sh build_gamelist
+```
+
+This will generate PDF files in the `docs/build` folder.
 
 ## Storage Capacity
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="{{hrefs.stylesheet}}" />
+</head>
+
+<body id="gamelist">
+
+{% set header_names = {'name': 'Title', 'system': 'System', 'players': '👤', 'genres': 'Genre'} %}
+<table>
+  <thead>
+    <tr>
+    {% for groups in range(2) %}
+      {% for header in table.headers %}
+      <th class="{{header}}">{{header_names[header]}}</th>
+      {% endfor %}
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for games in gamelist|sort(attribute=table.headers[0])|batch(table.rows_per_page * 2) %}
+    {% set games_count = games|length %}
+    {% set rows_count = (games_count / 2)|round(method='ceil')|int %}
+
+    {% for row_id in range(rows_count) %}
+    <tr>
+      {% set game1 = games[row_id] -%}
+      {% set game2 = games[row_id+rows_count] if games_count > (row_id+rows_count) else None %}
+
+      {% for game in [game1, game2] %}
+        {% set game_data = {'system': system_titles[game.system]|default(game.system), 'name': game.name, 'players': game.players, 'genres': game.genres} %}
+        {% for header in table.headers %}
+      <td class="{{header}}">{{game_data[header]}}</td>
+        {% endfor %}
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  {% endfor %}
+</tbody>
+</table>
