@@ -16,7 +16,7 @@ build() {
   build_gamelist '["name", "system", "players", "genres"]' "$docs_dir/build/gamelist-by_name.pdf"
 }
 
-build_personalized_intro() {
+build_intro() {
   local target_path=$1
   local template=$(first_path '{docs_dir}/intro.html.jinja')
 
@@ -89,11 +89,6 @@ __build_file() {
 
   # HTML => PDF
   chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$tmp_ephemeral_dir/doc.html" 2>/dev/null
-
-  cp "$tmp_ephemeral_dir/doc.html" /tmp/doc.html
-  google-chrome /tmp/doc.html &
-
-  evince "$app_dir/output.pdf" &
 }
 
 if [[ $# -lt 1 ]]; then

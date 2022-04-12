@@ -21,11 +21,3 @@ p {
 #intro {
   font-size: 17px;
 }
-
-#intro #triforce {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto;
-  background-image: url(../images/zelda-triforce.svg);
-  background-size: 180px 180px;
-}
