@@ -1,0 +1,70 @@
+@page {
+  margin: 10px;
+  width: 816px;
+}
+
+html {
+  width: 796px;
+}
+
+/* Game List */
+#gamelist {
+  font-size: 8px;
+  line-height: 1;
+}
+
+#gamelist table {
+  table-layout: fixed;
+  width: 100%;
+  border-right: none;
+  border-bottom: none;
+}
+
+#gamelist table th,
+#gamelist table td {
+  padding: 0 2px;
+}
+
+#gamelist th {
+  border-left: none;
+}
+
+#gamelist td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: none;
+}
+
+#gamelist td:nth-of-type(5) {
+  border-left: 1px solid #ddd;
+}
+
+/* System */
+#gamelist .system {
+  width: 85px;
+}
+
+/* Title */
+#gamelist .title {
+  width: 178px;
+}
+
+/* Num Players */
+#gamelist .players {
+  width: 15px;
+  text-align: center;
+}
+
+#gamelist th.players {
+  font-size: 7px;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+  -webkit-print-color-adjust: exact;
+  -webkit-filter: opacity(1);
+}
+
+/* Genres */
+#gamelist .genres {
+  width: 100px;
+}

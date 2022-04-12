@@ -1,0 +1,59 @@
+@page {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.7;
+  margin: auto;
+  background: #fff;
+  color: #444;
+  font-family: Roboto, "Helvetica Neue", Arial;
+  font-size: 12px;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: 0 10px;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  text-align: left;
+}
+
+table td {
+  padding: 0 10px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  vertical-align: top;
+  text-align: left;
+}

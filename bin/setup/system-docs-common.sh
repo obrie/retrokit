@@ -209,11 +209,13 @@ retropad_buttons_map=(
 doc_data_file="$tmp_ephemeral_dir/doc.json"
 
 __add_hrefs() {
+  local common_stylesheet_href=$(first_path "{docs_dir}/stylesheets/common.css")
   local stylesheet_href=$(first_path "{docs_dir}/stylesheets/reference.css")
   local base_href=$docs_dir
 
   json_edit "$doc_data_file" \
-    ".hrefs.stylesheet" "file://$stylesheet_href" \
+    ".hrefs.common_stylesheet" "file://$common_stylesheet_href" \
+    ".hrefs.page_stylesheet" "file://$stylesheet_href" \
     ".hrefs.base" "file://$base_href/"
 }
 
