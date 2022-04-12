@@ -12,12 +12,20 @@ usage() {
 build() {
   mkdir -p "$docs_dir/build"
 
+  build_intro "$docs_dir/build/intro.pdf"
   build_gamelist '["system", "name", "players", "genres"]' "$docs_dir/build/gamelist-by_system.pdf"
   build_gamelist '["name", "system", "players", "genres"]' "$docs_dir/build/gamelist-by_name.pdf"
 }
 
 build_intro() {
-  return
+  local target_path=$1
+  local template=$(first_path '{docs_dir}/intro.html.jinja')
+
+  local doc_data_path="$tmp_ephemeral_dir/doc-intro.json"
+  echo '{}' > "$doc_data_path"
+
+  local stylesheet_href=$(first_path '{docs_dir}/stylesheets/manual.css')
+  __build_file "$template" "$target_path" "$doc_data_path" "$stylesheet_href"
 }
 
 build_gamelist() {
@@ -26,13 +34,6 @@ build_gamelist() {
 
   local doc_data_path="$tmp_ephemeral_dir/doc-extra.json"
   echo '{}' > "$doc_data_path"
-
-  # Add hrefs
-  local stylesheet_href=$(first_path "{docs_dir}/stylesheets/manual.css")
-  local base_href=$docs_dir
-  json_edit "$doc_data_path" \
-    ".hrefs.stylesheet" "file://$stylesheet_href" \
-    ".hrefs.base" "file://$base_href/"
 
   # Add list of games that are installed on all the systems
   local gamelist_data_path="$tmp_ephemeral_dir/doc-gamelist.json"
@@ -65,7 +66,8 @@ build_gamelist() {
 
   # Render the documentation
   local template=$(first_path '{docs_dir}/gamelist.html.jinja')
-  __build_file "$template" "$target_path" "$doc_data_path"
+  local stylesheet_href=$(first_path '{docs_dir}/stylesheets/gamelist.css')
+  __build_file "$template" "$target_path" "$doc_data_path" "$stylesheet_href"
 }
 
 # Builds the given file
@@ -73,7 +75,15 @@ __build_file() {
   local source_path=$1
   local target_path=$2
   local json_metadata_path=$3
-  local stylesheets_path=$(first_path '{docs_dir}/stylesheets/manual.css')
+  local page_stylesheet_href=$4
+  local common_stylesheet_href=$(first_path '{docs_dir}/stylesheets/common.css')
+
+  # Add hrefs
+  local base_href=$docs_dir
+  json_edit "$json_metadata_path" \
+    ".hrefs.common_stylesheet" "file://$common_stylesheet_href" \
+    ".hrefs.page_stylesheet" "file://$page_stylesheet_href" \
+    ".hrefs.base" "file://$base_href/"
 
   # Jinja => Markdown
   jinja2 "$source_path" "$json_metadata_path" > "$tmp_ephemeral_dir/doc.html"
@@ -81,10 +91,10 @@ __build_file() {
   # HTML => PDF
   chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$tmp_ephemeral_dir/doc.html" 2>/dev/null
 
-  # cp "$tmp_ephemeral_dir/doc.html" /tmp/doc.html
-  # google-chrome /tmp/doc.html &
+  cp "$tmp_ephemeral_dir/doc.html" /tmp/doc.html
+  google-chrome /tmp/doc.html &
 
-  # evince "$app_dir/output.pdf" &
+  evince "$app_dir/output.pdf" &
 }
 
 if [[ $# -lt 1 ]]; then
