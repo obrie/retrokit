@@ -876,14 +876,10 @@ In particiular, game lists are useful if you want others to be able to look thro
 games to play while someone is playing a game or controlling the system.  Think of it like
 a karaoke playlist.
 
-To generate the documentation, you can use the following commands:
+To generate the documentation, you can use the following command(s):
 
 ```bash
 bin/docs.sh build
-
-bin/docs.sh build_intro
-
-bin/docs.sh build_gamelist
 ```
 
 This will generate PDF files in the `docs/build` folder.

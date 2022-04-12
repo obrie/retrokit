@@ -12,12 +12,11 @@ usage() {
 build() {
   mkdir -p "$docs_dir/build"
 
-  build_intro "$docs_dir/build/intro.pdf"
   build_gamelist '["system", "name", "players", "genres"]' "$docs_dir/build/gamelist-by_system.pdf"
   build_gamelist '["name", "system", "players", "genres"]' "$docs_dir/build/gamelist-by_name.pdf"
 }
 
-build_intro() {
+build_personalized_intro() {
   local target_path=$1
   local template=$(first_path '{docs_dir}/intro.html.jinja')
 
