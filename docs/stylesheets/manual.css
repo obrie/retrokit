@@ -21,3 +21,10 @@ p {
 #intro {
   font-size: 17px;
 }
+
+#logo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
