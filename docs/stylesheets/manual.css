@@ -23,8 +23,9 @@ p {
 }
 
 #logo {
+  float: left;
   display: block;
   width: 150px;
   height: 150px;
-  margin: 0 auto;
+  margin-right: 10px;
 }
