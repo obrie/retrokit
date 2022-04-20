@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import logging
 import re
-import shlex
 
 # Represents a playlist for combining multiple machines
 class Playlist:
@@ -47,8 +46,3 @@ class Playlist:
     # Removes this playlist permanently from the filesystem
     def delete(self):
         self.resource.target_path.delete()
-
-    # Prints the commands required to remove this playlist from the filesystem
-    def purge(self):
-        if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')

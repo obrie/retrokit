@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-import shlex
 from pathlib import Path
 
 # Represents an external disk used by a machine
@@ -53,11 +52,6 @@ class Disk:
     # Enables the disk to be accessible to the emulator
     def enable(self, system_dir: SystemDir) -> None:
         system_dir.symlink('disk', self.resource, **self.context)
-
-    # Removes this disk from the filesystem
-    def purge(self):
-        if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')
 
     # Equality based on Unique ID
     def __eq__(self, other) -> bool:
