@@ -9,7 +9,6 @@ from romkit.models.sample import Sample
 import hashlib
 import logging
 import re
-import shlex
 from pathlib import Path
 from typing import Dict, List, Optional, Set
 
@@ -546,14 +545,3 @@ class Machine:
 
         for disk in (self.disks_from_self | self.disks_from_parent):
             disk.enable(target_dir)
-
-    # Prints the commands required to remove this machine from the filesystem
-    def purge(self):
-        if not self.resource:
-            return
-
-        if self.resource.target_path.exists():
-            print(f'rm -rf {shlex.quote(str(self.resource.target_path.path))}')
-
-        if self.resource.xref_path and self.resource.xref_path.is_symlink():
-            print(f'rm -rf {shlex.quote(str(self.resource.xref_path.path))}')

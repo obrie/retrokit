@@ -7,6 +7,7 @@ from romkit.systems.system_dir import SystemDir
 
 import logging
 import os
+import shlex
 import time
 import traceback
 from copy import copy
@@ -234,42 +235,52 @@ class BaseSystem:
 
     # Purges machines that were not installed
     def vacuum(self) -> None:
-        installable_machines = self.list()
-        installable_machine_paths = set()
-        installable_disk_ids = set()
-        installable_sample_names = set()
-        installable_playlist_names = set()
+        # Identify all of the valid paths for machines that are installed
+        installable_paths = set()
+        for machine in self.list():
+            resource_models = list(filter(None, {machine, machine.sample, machine.playlist} | machine.disks))
 
-        for machine in installable_machines:
-            if machine.resource:
-                installable_machine_paths.add(machine.resource.target_path.path)
+            for resource_model in resource_models:
+                resource = resource_model.resource
+                if resource:
+                    installable_paths.add(resource.target_path.path)
+                    if resource.xref_path:
+                        installable_paths.add(resource.xref_path.path)
 
-            # Track disks
-            for disk in machine.disks:
-                installable_disk_ids.add(disk.id)
-
-            # Track samples
-            if machine.sample:
-                installable_sample_names.add(machine.sample.name)
-
-            # Track playlists
-            if machine.playlist:
-                installable_playlist_names.add(machine.playlist.name)
-
+        # Identify the installable path globs.  It's important that the context
+        # includes all of the necessary glob patterns, otherwise this'll error out.
+        installable_path_globs = set()
+        resource_names = {'machine', 'disk', 'sample', 'playlist'}
+        resource_context = {
+            'disk': '*',
+            'machine': '*',
+            'machine_alt_name': '*',
+            'machine_id': '*',
+            'machine_sourcefile': '*',
+            'parent': '*',
+            'sample': '*',
+            'sha1': '*',
+            'url': '',
+        }
         for romset in self.iter_romsets():
-            for machine in romset.iter_machines():
-                if machine.resource and machine.resource.target_path.path not in installable_machine_paths:
-                    machine.purge()
+            for resource_name in resource_names:
+                resource = romset.resource(resource_name, **resource_context)
+                if resource:
+                    resource_paths = map(
+                        lambda resource_path: resource_path.path,
+                        filter(None, [
+                            resource.download_path,
+                            resource.target_path,
+                            resource.xref_path,
+                        ])
+                    )
 
-                    # Check disks (only those owned by this machine -- parents will
-                    # be handled in a future loop)
-                    for disk in machine.disks_from_self:
-                        if disk.id not in installable_disk_ids:
-                            disk.purge()
+                    installable_path_globs.update(resource_paths)
 
-                    # Check samples
-                    if machine.sample and machine.sample.name not in installable_sample_names:
-                        machine.sample.purge()
-
-                    if machine.playlist and machine.playlist.name not in installable_playlist_names:
-                        machine.playlist.purge()
+        # Look up all files that match the path template glob pattern.  If they
+        # weren't tracked as an installable resource, then we know they can be
+        # deleted.
+        for path_glob in installable_path_globs:
+            for path in Path('/').glob(str(path_glob)[1:]):
+                if path not in installable_paths:
+                    print(f'rm -rf {shlex.quote(str(path))}')
