@@ -269,11 +269,14 @@
   "roms": {
     "id": "name",
     "priority": {
-      "enabled": false
+      "order": ["romsets"],
+      "romsets": [
+        "fbneo"
+      ]
     },
     "filters": {
       "emulator_compatibility": [true],
-      "emulator_ratings": [5],
+      "emulator_ratings": [4, 5],
       "clones": [false],
       "languages": [
         null,
@@ -337,7 +340,6 @@
         "deluxe5"
       ],
       "+names": [
-        "jdredd",
         "pacman"
       ],
       "demo": [
