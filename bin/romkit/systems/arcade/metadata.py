@@ -161,7 +161,13 @@ class ArcadeEmulatorMetadata(EmulatorMetadata):
 
         rating = 5
         for col in self.QUALITY_COLUMNS:
-            if row[col] == 'x' or row[col] == '!':
+            if row[col] == 'x':
+                rating -= 1
+            elif row[col] == '!':
+                # Start out lower when there's something significantly broken
+                if rating == 5:
+                    rating = 4
+
                 rating -= 1
 
-        return {'rom': name, 'emulator': emulator, 'rating': rating}
+        return {'rom': name, 'emulator': emulator, 'rating': max(0, rating)}
