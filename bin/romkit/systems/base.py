@@ -258,6 +258,7 @@ class BaseSystem:
             'machine_id': '*',
             'machine_sourcefile': '*',
             'parent': '*',
+            'rom_root': '*',
             'sample': '*',
             'sha1': '*',
             'url': '',
