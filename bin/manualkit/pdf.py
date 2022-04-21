@@ -31,7 +31,7 @@ class PDF():
         self.page_number = None
         self.clip_rect = fitz.Rect()
 
-        if Path(self.path).exists():
+        if self.path and Path(self.path).exists():
             self.document = fitz.open(self.path)
         else:
             # Create an empty pdf
@@ -63,6 +63,10 @@ class PDF():
             pdf.close()
 
         self.jump(0)
+
+    # Closes the PDF so it can no longer be used
+    def close(self) -> None:
+        self.document.close()
 
     # Total number of pages in the PDF
     @property
