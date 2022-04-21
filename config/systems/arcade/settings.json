@@ -241,22 +241,16 @@
   ],
   "metadata": {
     "language": {
-      "source": "https://www.progettosnaps.net/download/?tipo=languages&file=pS_Languages_{version}.zip",
-      "download": "$HOME/retrokit/tmp/arcade/languages.zip",
-      "target": "$HOME/retrokit/tmp/arcade/languages.ini",
-      "install": {"action": "zip_extract", "file": "folders/languages\\.ini"}
+      "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_Languages_{version}.zip/folders%2Flanguages.ini",
+      "target": "$HOME/retrokit/tmp/arcade/languages.ini"
     },
     "genre": {
-      "source": "https://www.progettosnaps.net/download/?tipo=catver&file=pS_CatVer_{version}.zip",
-      "download": "$HOME/retrokit/tmp/arcade/catver.zip",
-      "target": "$HOME/retrokit/tmp/arcade/catver.ini",
-      "install": {"action": "zip_extract", "file": "UI_files/catlist\\.ini"}
+      "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_CatVer_{version}.zip/UI_files%2Fcatlist.ini",
+      "target": "$HOME/retrokit/tmp/arcade/catver.ini"
     },
     "rating": {
-      "source": "https://www.progettosnaps.net/download/?tipo=bestgames&file=pS_BestGames_{version}.zip",
-      "download": "$HOME/retrokit/tmp/arcade/bestgames.zip",
-      "target": "$HOME/retrokit/tmp/arcade/bestgames.ini",
-      "install": {"action": "zip_extract", "file": "folders/bestgames\\.ini"}
+      "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_BestGames_{version}.zip/folders%2Fbestgames.ini",
+      "target": "$HOME/retrokit/tmp/arcade/bestgames.ini"
     },
     "emulator": {
       "source": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",

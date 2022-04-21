@@ -40,7 +40,7 @@ MAME_TO_FBNEO_NAMES = {
 }
 
 class ProgrettoSnapsMetadata(ExternalMetadata):
-    SCRAPE_URL = None
+    SCRAPE_URL = 'https://archive.org/download/mame-support/mame-support_files.xml'
     VERSION_PATTERN = None
     default_context = {'version': ''}
 
@@ -91,7 +91,6 @@ class ProgrettoSnapsMetadata(ExternalMetadata):
 class LanguageMetadata(ProgrettoSnapsMetadata):
     name = 'language'
 
-    SCRAPE_URL = 'https://www.progettosnaps.net/languages/'
     VERSION_PATTERN = r'pS_Languages_([0-9]+).zip'
 
     def update(self, machine: Machine) -> None:
@@ -106,7 +105,6 @@ class LanguageMetadata(ProgrettoSnapsMetadata):
 class GenreMetadata(ProgrettoSnapsMetadata):
     name = 'genre'
 
-    SCRAPE_URL = 'https://www.progettosnaps.net/catver/'
     VERSION_PATTERN = r'pS_CatVer_([0-9]+).zip'
 
     def update(self, machine: Machine) -> None:
@@ -121,7 +119,6 @@ class GenreMetadata(ProgrettoSnapsMetadata):
 class RatingMetadata(ProgrettoSnapsMetadata):
     name = 'rating'
 
-    SCRAPE_URL = 'https://www.progettosnaps.net/bestgames/'
     VERSION_PATTERN = r'pS_BestGames_([0-9]+).zip'
 
     def update(self, machine: Machine) -> None:
