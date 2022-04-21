@@ -235,7 +235,7 @@ __add_vice_keyboard_controls() {
   done
 
   if [ ${#edit_args[@]} -gt 0 ]; then
-    json_edit "$controls_file" "${edit_args[@]}"
+    json_edit "$doc_data_file" "${edit_args[@]}"
   fi
 }
 
@@ -263,6 +263,6 @@ __add_vice_retropad_controls() {
   done
 
   if [ ${#edit_args[@]} -gt 0 ]; then
-    json_edit "$controls_file" "${edit_args[@]}"
+    json_edit "$doc_data_file" "${edit_args[@]}"
   fi
 }
