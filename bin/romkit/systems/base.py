@@ -258,6 +258,7 @@ class BaseSystem:
             'machine_id': '*',
             'machine_sourcefile': '*',
             'parent': '*',
+            'playlist': '*',
             'rom_root': '*',
             'sample': '*',
             'sha1': '*',
