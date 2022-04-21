@@ -17,9 +17,8 @@ launch_manualkit() {
   fi
 
   # Start up manualkit
-  if [ -f /opt/retropie/supplementary/manualkit/cli.py ]; then
-    sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf --supplementary-pdf "$reference_path" --track-emulator &
-  fi
+  local runcommand_pid=$(ps aux | grep 'runcommand.sh' | grep -Ev grep | awk '/ +/ { print $2 }' | head -n 1)
+  sudo python3 /opt/retropie/supplementary/manualkit/cli.py "$manual_path" /opt/retropie/configs/all/manualkit.conf --supplementary-pdf "$reference_path" --track-pid $runcommand_pid &
 }
 
 launch_manualkit "${@}" </dev/null &>/dev/null

@@ -14,9 +14,9 @@ from pathlib import Path
 from typing import Callable, Optional
 
 from manualkit.display import Display
-from manualkit.emulator import Emulator
 from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
+from manualkit.process_watcher import ProcessWatcher
 
 class ManualKit():
     BINDING_DEFAULTS = {
@@ -37,7 +37,7 @@ class ManualKit():
         config_path: Optional[str] = None,
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
-        track_emulator: bool = False,
+        track_pid: int = None,
     ) -> None:
         # Read from config
         config = configparser.ConfigParser(strict=False)
@@ -59,14 +59,14 @@ class ManualKit():
         self.display.clear()
 
         # Start caching the PDF
-        self.pdf = PDF(pdf_path,
+        self.pdf = PDF(
             width=self.display.width,
             height=self.display.height,
             buffer_width=self.display.buffer_width,
             buffer_height=self.display.buffer_height,
-            supplementary_path=supplementary_pdf_path,
             **config['pdf'],
         )
+        self.pdf.load(pdf_path, supplementary_pdf_path)
 
         # Start listening to inputs
         self.input_listener = InputListener(**config['input'])
@@ -79,9 +79,11 @@ class ManualKit():
         signal.signal(signal.SIGINT, self.exit)
         signal.signal(signal.SIGTERM, self.exit)
 
-        # Track the emulator
-        if track_emulator:
-            Emulator.instance().track(self._send_terminate_signal)
+        # Track the PID
+        if track_pid:
+            self.process_watcher = ProcessWatcher(track_pid, self._send_terminate_signal)
+        else:
+            self.process_watcher = None
 
         self.input_listener.listen()
 
@@ -155,7 +157,7 @@ def main() -> None:
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
-    parser.add_argument('--track-emulator', dest='track_emulator', action='store_true')
+    parser.add_argument('--track-pid', dest='track_pid', help='PID to track to auto-exit', type=int)
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 
