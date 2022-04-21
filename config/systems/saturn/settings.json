@@ -16,10 +16,6 @@
       "offset_x": 223
     }
   },
-  "scraper": {
-    "args": ["--addext", "*.m3u"],
-    "gamelist_args": ["--addext", "*.m3u", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"]
-  },
   "emulators": {
     "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
   },
@@ -59,11 +55,6 @@
           "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/saturn/.redump/.xrefs/{machine_id}.chd"
-        },
-        "playlist": {
-          "source": "file://$HOME/RetroPie/roms/saturn/.redump/{machine}.chd",
-          "target": "$HOME/RetroPie/roms/saturn/.redump/{playlist}.m3u",
-          "install": {"action": "playlist_to_m3u"}
         }
       }
     }
@@ -133,8 +124,7 @@
       {"path": "$HOME/RetroPie/roms/saturn", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"},
-      "playlist": {"target": "{dir}/{playlist_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }
