@@ -8,7 +8,11 @@ setup_module_desc='EmulationStation configuration settings'
 
 configure() {
   stop_emulationstation
+  __configure_es_settings
+  __configure_autostart
+}
 
+__configure_es_settings() {
   local es_settings_file="$HOME/.emulationstation/es_settings.cfg"
   backup_and_restore "$es_settings_file"
 
@@ -52,8 +56,13 @@ configure() {
     > "$es_settings_file"
 }
 
+__configure_autostart() {
+  file_cp '{config_dir}/emulationstation/autostart.sh' '/opt/retropie/configs/all/autostart.sh' envsubst=false
+}
+
 restore() {
   restore_file "$HOME/.emulationstation/es_settings.cfg" delete_src=true
+  restore_file '/opt/retropie/configs/all/autostart.sh' delete_src=true
 }
 
 setup "${@}"
