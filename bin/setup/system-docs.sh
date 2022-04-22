@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ "$2" == 'retropie' ]; then
+  export SKIP_SYSTEM_CHECK=true
+fi
+
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-docs-common.sh"
 

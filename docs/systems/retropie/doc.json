@@ -1,0 +1,34 @@
+{
+  "system": {
+    "name": "retropie",
+    "description": "RetroPie is an emulation system platform for retro games."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": true
+  },
+  "images": {
+    "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "start": "Menu",
+      "select": "Options",
+      "a": "Select",
+      "b": "Back",
+      "x": "Random",
+      "y": "Favorite",
+      "l1": "Page Up",
+      "r1": "Page Down",
+      "dpad_left": "Left",
+      "dpad_right": "Right",
+      "dpad_up": "Up",
+      "dpad_down": "Down"
+    },
+    "hotkeys_extra": {
+      "select,dpad_down": "Toggle Manual"
+    }
+  }
+}

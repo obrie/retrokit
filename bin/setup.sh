@@ -49,6 +49,11 @@ setup() {
     while read system; do
       run "$setupmodule" "$action" "$system"
     done < <(setting '.systems[]')
+
+    # Exceptions for the "retropie" system
+    if [ "$setup_module" == 'system-docs' ]; then
+      run "$setupmodule" "$action" retropie
+    fi
   else
     # Setting up an individual module
     run "$setupmodule" "$action" "${@:3}"

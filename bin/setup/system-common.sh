@@ -24,7 +24,7 @@ system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
 
-if [ -z $(setting ".systems | index(\"$system\")") ]; then
+if [ "$SKIP_SYSTEM_CHECK" != 'true' ] && [ -z $(setting ".systems | index(\"$system\")") ]; then
   echo "$system is not a valid system"
   exit 1
 fi
