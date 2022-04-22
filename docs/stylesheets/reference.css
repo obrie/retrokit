@@ -18,6 +18,11 @@ body {
 
 table th {
   padding: 0 12px;
+  text-align: center;
+}
+
+table td {
+  text-align: center;
 }
 
 #info {
