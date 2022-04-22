@@ -72,6 +72,7 @@ class Display():
         self._create_window()
 
     # Whether the display is currently visible
+    @property
     def visible(self) -> bool:
         return self.current_layer == self.foreground_layer
 

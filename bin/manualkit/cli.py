@@ -59,14 +59,14 @@ class ManualKit():
         self.display.clear()
 
         # Start caching the PDF
-        self.pdf = PDF(
+        self.pdf = PDF(pdf_path,
             width=self.display.width,
             height=self.display.height,
             buffer_width=self.display.buffer_width,
             buffer_height=self.display.buffer_height,
+            supplementary_path=supplementary_pdf_path,
             **config['pdf'],
         )
-        self.pdf.load(pdf_path, supplementary_pdf_path)
 
         # Start listening to inputs
         self.input_listener = InputListener(**config['input'])
@@ -82,6 +82,7 @@ class ManualKit():
         # Track the PID
         if track_pid:
             self.process_watcher = ProcessWatcher(track_pid, self._send_terminate_signal)
+            self.process_watcher.track()
         else:
             self.process_watcher = None
 
@@ -89,17 +90,24 @@ class ManualKit():
 
     # Toggles visibility of the manual
     def toggle(self, *args) -> None:
-        if self.display.visible():
+        if self.display.visible:
             self.hide()
         else:
             self.show()
 
     # Shows the manual on either the first page or the last page the user left off
     def show(self) -> None:
-        self.input_listener.grab()
-        Emulator.instance().suspend()
-        self.refresh()
-        self.display.show()
+        try:
+            self.input_listener.grab()
+            if self.process_watcher:
+                self.process_watcher.suspend()
+            self.refresh()
+            self.display.show()
+        except Exception as e:
+            # If there's an error, then we're going to hide ourselves in order
+            # to have the best chance at ensuring the screen isn't blocked
+            self.hide()
+            raise e
 
     # Hides the manual
     def hide(self) -> None:
@@ -109,7 +117,8 @@ class ManualKit():
             self.display.clear()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
-            Emulator.instance().resume()
+            if self.process_watcher:
+                self.process_watcher.resume()
 
     # Cleans up the elements / resources on the display
     def exit(self, *args, **kwargs) -> None:
