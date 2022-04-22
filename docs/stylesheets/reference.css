@@ -154,6 +154,10 @@ table td {
 }
 
 /* System-specific overrides */
+#system-retropie #controller-retropad img {
+  max-height: 400px;
+}
+
 #system-arcade #controller-retropad {
   margin: 0;
   padding: 0;
