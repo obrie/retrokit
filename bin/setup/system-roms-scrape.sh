@@ -12,6 +12,7 @@ configure() {
   __load_rom_data
   __scrape_sources
   __import_titles
+  __import_user_overrides
   __build_gamelist
 
   # Reinstall the favorites for this system since the gamelist was just
@@ -23,9 +24,10 @@ configure() {
 # as a source of scraping params
 __load_rom_data() {
   declare -Ag rom_data
-  while IFS=» read -r name playlist_name rom_name rom_crc; do
+  while IFS=» read -r name playlist_name rom_name rom_crc rom_path; do
     rom_data["$name/rom"]="$rom_name"
     rom_data["$name/crc"]="$rom_crc"
+    rom_data["$name/path"]="$rom_path"
 
     # If there's a separate playlist name, track it so that we can properly
     # scrape those as well
@@ -33,7 +35,7 @@ __load_rom_data() {
       rom_data["$playlist_name/rom"]="$rom_name"
       rom_data["$playlist_name/crc"]="$rom_crc"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, (.rom .name | @uri), .rom .crc, .path] | join("»")')
 }
 
 # Scrape from all configured sources
@@ -211,6 +213,29 @@ __import_titles() {
 
   # Clean up unused files
   rm -rf "$import_dir"
+}
+
+__import_user_overrides() {
+  # Remove existing overrides we may have previously added
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
+
+  # Look up any overrides we want to add to the skyscraper database
+  local overrides_path=$(first_path '{system_dir}/scrape-overrides.tsv')
+  if [ -z "$overrides_path" ]; then
+    return
+  fi
+
+  while IFS=$'\t' read rom_name resource_type resource_value; do
+    local rom_path=${rom_data["$rom_name/path"]}
+    if [ -z "$rom_path" ]; then
+      # ROM isn't installed -- we can skip it
+      continue
+    fi
+
+    local rom_filename=$(basename "$rom_path")
+    echo "Updating \"$rom_filename\" $resource_type to \"$resource_value\""
+    echo "$resource_value" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
+  done < <(cat "$overrides_path")
 }
 
 # Builds the gamelist.xml that will be used by emulationstation
