@@ -1011,6 +1011,7 @@ retrokit what it is.  That includes:
 * [Dan Patric](https://archive.org/download/console-logos-professionally-redrawn-plus-official-versions) for console logos
 * [Mark Davis](https://vectogram.us/) for controller images
 * [Wikimedia](https://commons.wikimedia.org/) for conroller images
+* [louiehummv](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue) for axis calibration fixes
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
