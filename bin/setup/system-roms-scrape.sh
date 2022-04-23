@@ -220,7 +220,7 @@ __import_user_overrides() {
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
 
   # Look up any overrides we want to add to the skyscraper database
-  local overrides_path=$(first_path '{system_dir}/scrape-overrides.tsv')
+  local overrides_path=$(first_path '{system_config_dir}/scrape-overrides.tsv')
   if [ -z "$overrides_path" ]; then
     return
   fi
