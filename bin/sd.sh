@@ -77,6 +77,7 @@ sync_media() {
     /home/pi/RetroPie/BIOS/mame2016/samples/
     /home/pi/RetroPie/roms/
     /opt/retropie/configs/all/emulationstation/downloaded_media/
+    /opt/retropie/configs/all/emulationstation/gamelists/
     /opt/retropie/configs/all/retroarch/overlay/
     /opt/retropie/configs/all/skyscraper/cache/
   )
