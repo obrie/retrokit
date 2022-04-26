@@ -151,6 +151,7 @@ class ManualKit():
             # If there's an error, then we're going to hide ourselves in order
             # to have the best chance at ensuring the screen isn't blocked
             self.hide()
+            logging.error(f'Failed to show: {e}')
             raise e
 
     # Hides the manual
