@@ -172,6 +172,10 @@ class ManualKit():
             self.input_listener.stop()
             self.display.close()
         finally:
+            # Always make sure the emulator gets resumed regardless of what happens
+            if self.process_watcher:
+                self.process_watcher.resume()
+
             quit()
 
     # Renders the currently active PDF page
