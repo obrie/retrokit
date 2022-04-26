@@ -203,7 +203,8 @@ class ManualKit():
         self.refresh()
 
     # Sends a SIGINT signal to the current process
-    def _send_terminate_signal(self) -> None:
+    def _process_ended(self) -> None:
+        self.process_watcher = None
         os.kill(os.getpid(), signal.SIGINT)
 
 def main() -> None:
