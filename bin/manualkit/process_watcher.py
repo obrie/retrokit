@@ -16,7 +16,7 @@ class ProcessWatcher():
         enabled: bool = True,
         suspend: bool = True,
     ) -> None:
-        self.parent_process = psutil.Process(pid)
+        self.parent_process = psutil.Process(int(pid))
         self.callback = callback
         self.enabled = bool(enabled)
         self.suspend_enabled = bool(suspend)

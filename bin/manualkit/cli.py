@@ -39,6 +39,9 @@ class ManualKit():
         log_level: str = 'INFO',
         track_pid: int = None,
     ) -> None:
+        self.pdf = None
+        self.process_watcher = None
+
         # Read from config
         config = configparser.ConfigParser(strict=False)
         config.read_dict({'pdf': {}, 'display': {}, 'input': {}, 'keyboard': self.BINDING_DEFAULTS, 'joystick': self.BINDING_DEFAULTS})
@@ -58,19 +61,11 @@ class ManualKit():
         self.display = Display(**config['display'])
         self.display.clear()
 
-        # Start caching the PDF
-        self.pdf = PDF(pdf_path,
-            width=self.display.width,
-            height=self.display.height,
-            buffer_width=self.display.buffer_width,
-            buffer_height=self.display.buffer_height,
-            supplementary_path=supplementary_pdf_path,
-            **config['pdf'],
-        )
-        self.pdf.jump(0)
-
         # Start listening to inputs
         self.input_listener = InputListener(**config['input'])
+
+        # Start caching the PDF
+        self.load(pdf_path, supplementary_pdf_path)
 
         # Configure joystick handler
         self._add_handlers(InputType.KEYBOARD, config['keyboard'])
@@ -81,13 +76,49 @@ class ManualKit():
         signal.signal(signal.SIGTERM, self.exit)
 
         # Track the PID
-        if track_pid:
-            self.process_watcher = ProcessWatcher(track_pid, self._send_terminate_signal)
+        self.track_pid(pid_to_track)
+
+        self.input_listener.listen()
+
+    # Loads the given PDFs
+    def load(self, path: str = None, supplementary_path: str = None, prerender: True) -> None:
+        # Free up resources from any existing PDF
+        if self.pdf:
+            if self.pdf.path == self.pdf_path and self.pdf.supplementary_path == self.supplementary_path:
+                # Paths haven't changed -- don't do anything
+                return
+            else:
+                # Paths have changed -- clean up existing resources
+                self.pdf.close()
+
+        self.pdf = PDF(path,
+            width=self.display.width,
+            height=self.display.height,
+            buffer_width=self.display.buffer_width,
+            buffer_height=self.display.buffer_height,
+            supplementary_path=supplementary_path,
+            **self.config['pdf'],
+        )
+
+        # When a new PDF is being loaded, we force manualkit to be hidden
+        self.hide()
+
+        if bool(prerender):
+            # "Show" performance enhancement -- pre-render the first page so that
+            # it shows up as quickly as possible when the user requests it
+            self.jump(0)
+
+    # Tracks and coordinates execution with the given PID
+    def track_pid(self, pid: int = None) -> None:
+        # Stop watching any existing PID
+        if self.process_watcher:
+            self.process_watcher.stop()
+
+        if pid:
+            self.process_watcher = ProcessWatcher(pid, self._process_ended)
             self.process_watcher.track()
         else:
             self.process_watcher = None
-
-        self.input_listener.listen()
 
     # Toggles visibility of the manual
     def toggle(self, *args) -> None:
