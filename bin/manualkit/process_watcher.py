@@ -73,8 +73,12 @@ class ProcessWatcher():
 
         if self.suspended_process and self.suspended_process.is_running():
             logging.debug(f'Resuming {self.suspended_process}')
-            self.suspended_process.send_signal(signal.SIGCONT)
-            self.suspended_process = None
+            try:
+                self.suspended_process.send_signal(signal.SIGCONT)
+            except psutil.NoSuchProcess:
+                logging.debug(f'Could not resume {self.suspended_process}')
+
+        self.suspended_process = None
 
     # Invokes the given callback when the emulator terminates
     def _track_process(self, callback: Callable) -> None:
