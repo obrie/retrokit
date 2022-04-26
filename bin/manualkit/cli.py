@@ -158,8 +158,9 @@ class ManualKit():
     def hide(self) -> None:
         self.input_listener.ungrab()
         try:
-            self.display.hide()
-            self.display.clear()
+            if self.display.visible:
+                self.display.hide()
+                self.display.clear()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
             if self.process_watcher:
