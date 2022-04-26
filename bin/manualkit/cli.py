@@ -67,6 +67,7 @@ class ManualKit():
             supplementary_path=supplementary_pdf_path,
             **config['pdf'],
         )
+        self.pdf.jump(0)
 
         # Start listening to inputs
         self.input_listener = InputListener(**config['input'])
@@ -131,7 +132,7 @@ class ManualKit():
 
     # Renders the currently active PDF page
     def refresh(self) -> None:
-        self.display.draw(self.pdf.page_image)
+        self.display.draw(self.pdf.get_page_image())
 
     # Adds toggle / navigation handlers for the given input type
     def _add_handlers(self, input_type: InputType, config: configparser.SectionProxy) -> None:
