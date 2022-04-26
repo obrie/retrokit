@@ -11,12 +11,19 @@ import signal
 from argparse import ArgumentParser
 from functools import partial
 from pathlib import Path
+from threading import RLock
 from typing import Callable, Optional
 
 from manualkit.display import Display
 from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
 from manualkit.process_watcher import ProcessWatcher
+
+def synchronized(func):
+    def _synchronized(self, *args, **kwargs):
+         with self.lock:
+            return func(self, *args, **kwargs)
+    return _synchronized
 
 class ManualKit():
     BINDING_DEFAULTS = {
@@ -41,6 +48,7 @@ class ManualKit():
     ) -> None:
         self.pdf = None
         self.process_watcher = None
+        self.lock = RLock()
 
         # Read from config
         config = configparser.ConfigParser(strict=False)
@@ -81,6 +89,7 @@ class ManualKit():
         self.input_listener.listen()
 
     # Loads the given PDFs
+    @synchronized
     def load(self, path: str = None, supplementary_path: str = None, prerender: True) -> None:
         # Free up resources from any existing PDF
         if self.pdf:
@@ -109,6 +118,7 @@ class ManualKit():
             self.jump(0)
 
     # Tracks and coordinates execution with the given PID
+    @synchronized
     def track_pid(self, pid: int = None) -> None:
         # Stop watching any existing PID
         if self.process_watcher:
@@ -121,6 +131,7 @@ class ManualKit():
             self.process_watcher = None
 
     # Toggles visibility of the manual
+    @synchronized
     def toggle(self, *args) -> None:
         if self.display.visible:
             self.hide()
@@ -128,6 +139,7 @@ class ManualKit():
             self.show()
 
     # Shows the manual on either the first page or the last page the user left off
+    @synchronized
     def show(self) -> None:
         try:
             self.input_listener.grab()
@@ -142,6 +154,7 @@ class ManualKit():
             raise e
 
     # Hides the manual
+    @synchronized
     def hide(self) -> None:
         self.input_listener.ungrab()
         try:
@@ -180,6 +193,7 @@ class ManualKit():
         self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, self.pdf.zoom_out, False), retroarch=retroarch)
 
     # Calls the given navigation API, optionally including callback arguments
+    @synchronized
     def _navigate(self, navigation_api: Callable, include_args: bool, *args) -> None:
         if include_args:
             navigation_api(*args)
