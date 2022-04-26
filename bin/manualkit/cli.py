@@ -44,7 +44,7 @@ class ManualKit():
         pdf_path: Optional[str] = None,
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
-        track_pid: int = None,
+        pid_to_track: int = None,
     ) -> None:
         self.pdf = None
         self.process_watcher = None
@@ -223,7 +223,7 @@ def main() -> None:
     parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
-    parser.add_argument('--track-pid', dest='track_pid', help='PID to track to auto-exit', type=int)
+    parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 
