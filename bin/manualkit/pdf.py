@@ -29,6 +29,7 @@ class PDF():
         self.zoom_multiplier = zoom_multiplier
         self.zoom_level = 0
         self.page_number = None
+        self.page_image = None
         self.clip_rect = fitz.Rect()
 
         if self.path and Path(self.path).exists():
@@ -62,8 +63,6 @@ class PDF():
             self.document.insert_pdf(pdf)
             pdf.close()
 
-        self.jump(0)
-
     # Closes the PDF so it can no longer be used
     def close(self) -> None:
         self.document.close()
@@ -77,6 +76,14 @@ class PDF():
     @property
     def page(self) -> int:
         return self.document[self.page_number]
+
+    # Gets the image bytes represented by the page we're currently on.  If no page
+    # has yet been rendered, then this will jump to the first page and render it.
+    def get_page_image(self) -> bytes:
+        if not self.page_image:
+            self.jump(0)
+
+        return self.page_image
 
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self, turbo: bool = False) -> None:
