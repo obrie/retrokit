@@ -172,6 +172,9 @@ class InputDevice():
 
     # Grabs control of the current device so that events only get routed to this process
     def grab(self):
+        if self.grabbed:
+            return
+
         self.grabbed = True
 
         try:
@@ -181,6 +184,9 @@ class InputDevice():
 
     # Releases control of the current device to the rest of the system
     def ungrab(self):
+        if not self.grabbed:
+            return
+
         self.grabbed = False
 
         try:
