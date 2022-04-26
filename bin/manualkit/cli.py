@@ -200,22 +200,22 @@ class ManualKit():
         retroarch = (config['retroarch'] == 'true')
 
         self.input_listener.on(input_type, config['toggle'], self.toggle, retroarch=retroarch, grabbed=False, hotkey=config.get('hotkey', fallback=True))
-        self.input_listener.on(input_type, config['up'], partial(self._navigate, self.pdf.move_up, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['down'], partial(self._navigate, self.pdf.move_down, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['left'], partial(self._navigate, self.pdf.move_left, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['right'], partial(self._navigate, self.pdf.move_right, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['next'], partial(self._navigate, self.pdf.next, True), retroarch=retroarch)
-        self.input_listener.on(input_type, config['prev'], partial(self._navigate, self.pdf.prev, True), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, self.pdf.zoom_in, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, self.pdf.zoom_out, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['right'], partial(self._navigate, PDF.move_right, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['next'], partial(self._navigate, PDF.next, True), retroarch=retroarch)
+        self.input_listener.on(input_type, config['prev'], partial(self._navigate, PDF.prev, True), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, PDF.zoom_in, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, PDF.zoom_out, False), retroarch=retroarch)
 
     # Calls the given navigation API, optionally including callback arguments
     @synchronized
     def _navigate(self, navigation_api: Callable, include_args: bool, *args) -> None:
         if include_args:
-            navigation_api(*args)
+            navigation_api(self.pdf, *args)
         else:
-            navigation_api()
+            navigation_api(self.pdf)
 
         self.refresh()
 
