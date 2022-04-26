@@ -132,7 +132,11 @@ class ManualKit():
 
     # Toggles visibility of the manual
     @synchronized
-    def toggle(self, *args) -> None:
+    def toggle(self, turbo: bool = False) -> None:
+        # Ignore repeat toggle callbacks
+        if turbo:
+            return
+
         if self.display.visible:
             self.hide()
         else:
