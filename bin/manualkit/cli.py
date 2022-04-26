@@ -40,8 +40,8 @@ class ManualKit():
     }
 
     def __init__(self,
-        pdf_path: str,
         config_path: Optional[str] = None,
+        pdf_path: Optional[str] = None,
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
         track_pid: int = None,
@@ -219,8 +219,8 @@ class ManualKit():
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='pdf_path', help='PDF file to display')
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
+    parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     parser.add_argument('--track-pid', dest='track_pid', help='PID to track to auto-exit', type=int)
