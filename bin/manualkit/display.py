@@ -32,7 +32,7 @@ class Display():
     # The type of image we'll be rendering to the screen
     IMAGE_TYPE = VC_IMAGE_RGB888
 
-    def __init__(self, background_layer: int = -1000, foreground_layer: int = -1) -> None:
+    def __init__(self, background_layer: int = -1000, foreground_layer: int = 10011) -> None:
         self.background_layer = int(background_layer)
         self.foreground_layer = int(foreground_layer)
         self.current_layer = self.background_layer
