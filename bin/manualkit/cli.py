@@ -51,10 +51,17 @@ class ManualKit():
         self.lock = RLock()
 
         # Read from config
-        config = configparser.ConfigParser(strict=False)
-        config.read_dict({'pdf': {}, 'display': {}, 'input': {}, 'keyboard': self.BINDING_DEFAULTS, 'joystick': self.BINDING_DEFAULTS})
+        self.config = configparser.ConfigParser(strict=False)
+        self.config.read_dict({
+            'pdf': {},
+            'display': {},
+            'input': {},
+            'process_watcher': {},
+            'keyboard': self.BINDING_DEFAULTS,
+            'joystick': self.BINDING_DEFAULTS,
+        })
         if config_path and Path(config_path).exists():
-            config.read(config_path)
+            self.config.read(config_path)
 
         # Set up logger
         root = logging.getLogger()
@@ -66,18 +73,18 @@ class ManualKit():
         root.addHandler(handler)
 
         # Connect to the display
-        self.display = Display(**config['display'])
+        self.display = Display(**self.config['display'])
         self.display.clear()
 
         # Start listening to inputs
-        self.input_listener = InputListener(**config['input'])
+        self.input_listener = InputListener(**self.config['input'])
 
         # Start caching the PDF
         self.load(pdf_path, supplementary_pdf_path)
 
         # Configure joystick handler
-        self._add_handlers(InputType.KEYBOARD, config['keyboard'])
-        self._add_handlers(InputType.JOYSTICK, config['joystick'])
+        self._add_handlers(InputType.KEYBOARD, self.config['keyboard'])
+        self._add_handlers(InputType.JOYSTICK, self.config['joystick'])
 
         # Handle kill signals
         signal.signal(signal.SIGINT, self.exit)
@@ -125,7 +132,7 @@ class ManualKit():
             self.process_watcher.stop()
 
         if pid:
-            self.process_watcher = ProcessWatcher(pid, self._process_ended)
+            self.process_watcher = ProcessWatcher(pid, self._process_ended, **self.config['process_watcher'])
             self.process_watcher.track()
         else:
             self.process_watcher = None
