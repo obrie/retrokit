@@ -107,10 +107,10 @@ class ManualKit():
 
     # Loads the given PDFs
     @synchronized
-    def load(self, path: str = None, supplementary_path: str = None, prerender: True) -> None:
+    def load(self, path: str = None, supplementary_path: str = None, prerender: bool = True) -> None:
         # Free up resources from any existing PDF
         if self.pdf:
-            if self.pdf.path == self.pdf_path and self.pdf.supplementary_path == self.supplementary_path:
+            if self.pdf.path == path and self.pdf.supplementary_path == supplementary_path:
                 # Paths haven't changed -- don't do anything
                 return
             else:
@@ -134,7 +134,7 @@ class ManualKit():
         if bool(prerender):
             # "Show" performance enhancement -- pre-render the first page so that
             # it shows up as quickly as possible when the user requests it
-            self.jump(0)
+            self.pdf.jump(0)
 
     # Tracks and coordinates execution with the given PID
     @synchronized
@@ -156,13 +156,13 @@ class ManualKit():
 
     # Toggles visibility of the manual
     @synchronized
-    def toggle(self, profile: str = self.toggle_profile, turbo: bool = False) -> None:
+    def toggle(self, profile: str = None, turbo: bool = False) -> None:
         # Ignore repeat toggle callbacks
         if turbo:
             return
 
         # Only process toggle events for the currently active profile
-        if profile != self.toggle_profile:
+        if profile is not None and profile != self.toggle_profile:
             return
 
         if self.display.visible:
