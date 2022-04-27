@@ -23,7 +23,8 @@ from manualkit.server import Server
 
 class ManualKit():
     BINDING_DEFAULTS = {
-        'toggle': 'up',
+        'toggle_hotkey': 'up',
+        'toggle_nohotkey': 'l2',
         'up': 'up',
         'down': 'down',
         'left': 'left',
@@ -41,6 +42,7 @@ class ManualKit():
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
         pid_to_track: int = None,
+        toggle_profile: str = 'hotkey',
         server: bool = False,
     ) -> None:
         self.pdf = None
@@ -80,6 +82,7 @@ class ManualKit():
         self.load(pdf_path, supplementary_pdf_path)
 
         # Configure joystick handler
+        self.set_toggle_profile(toggle_profile)
         self._add_handlers(InputType.KEYBOARD, self.config['keyboard'])
         self._add_handlers(InputType.JOYSTICK, self.config['joystick'])
 
@@ -95,6 +98,7 @@ class ManualKit():
             self.server.on('load', self.load)
             self.server.on('track_pid', self.track_pid)
             self.server.on('hide', self.hide)
+            self.server.on('toggle_profile', self.set_toggle_profile)
             self.server.start()
         else:
             self.server = None
@@ -143,11 +147,20 @@ class ManualKit():
         else:
             self.process_watcher = None
 
+    # Defines which input configuration to use for toggling
+    @synchronized
+    def set_toggle_profile(self, profile_name: str) -> None:
+        self.toggle_profile = profile_name
+
     # Toggles visibility of the manual
     @synchronized
-    def toggle(self, turbo: bool = False) -> None:
+    def toggle(self, profile: str = self.toggle_profile, turbo: bool = False) -> None:
         # Ignore repeat toggle callbacks
         if turbo:
+            return
+
+        # Only process toggle events for the currently active profile
+        if profile != self.toggle_profile:
             return
 
         if self.display.visible:
@@ -206,7 +219,8 @@ class ManualKit():
     def _add_handlers(self, input_type: InputType, config: configparser.SectionProxy) -> None:
         retroarch = (config['retroarch'] == 'true')
 
-        self.input_listener.on(input_type, config['toggle'], self.toggle, retroarch=retroarch, grabbed=False, hotkey=config.get('hotkey', fallback=True))
+        self.input_listener.on(input_type, config['toggle_hotkey'], partial(self.toggle, 'hotkey'), retroarch=retroarch, grabbed=False, hotkey=config.get('hotkey', fallback=True))
+        self.input_listener.on(input_type, config['toggle_nohotkey'], partial(self.toggle, 'nohotkey'), retroarch=retroarch, grabbed=False)
         self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up, False), retroarch=retroarch)
         self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down, False), retroarch=retroarch)
         self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left, False), retroarch=retroarch)
@@ -239,6 +253,7 @@ def main() -> None:
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
     parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
+    parser.add_argument('--toggle-profile', dest='toggle_profile', help='Which toggle input configuration to use')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
     parser.add_argument('--server', dest='server', help='Whether to run this as a server', action='store_true')
