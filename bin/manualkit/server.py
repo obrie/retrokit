@@ -57,19 +57,20 @@ class Server():
             # The queue closes when the writer closes, so we need to keep
             # re-opening the file so long as the server is running
             with self.fifo_path.open() as fifo:
-                try:
-                    message = fifo.readline()
-                    if len(message) == 0:
-                        # Writer has stopped
+                while self.running:
+                    try:
+                        message = fifo.readline()
+                        if len(message) == 0:
+                            # Writer has stopped
+                            break
+
+                        self._process_message(message)
+                    except Exception as e:
+                        # Never let an exception stop the server
+                        logging.warn(f'Failed to process "{message}": {e}')
+
+                        # Stop reading from the file
                         break
-
-                    self._process_message(message)
-                except Exception as e:
-                    # Never let an exception stop the server
-                    logging.warn(f'Failed to process {event}: {e}')
-
-                    # Stop reading from the file
-                    break
 
     # Processes a message from the queue
     @synchronized
