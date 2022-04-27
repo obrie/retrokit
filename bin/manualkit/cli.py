@@ -14,16 +14,12 @@ from pathlib import Path
 from threading import RLock
 from typing import Callable, Optional
 
+from manualkit.decorators import synchronized
 from manualkit.display import Display
 from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
 from manualkit.process_watcher import ProcessWatcher
-
-def synchronized(func):
-    def _synchronized(self, *args, **kwargs):
-         with self.lock:
-            return func(self, *args, **kwargs)
-    return _synchronized
+from manualkit.server import Server
 
 class ManualKit():
     BINDING_DEFAULTS = {
@@ -45,6 +41,7 @@ class ManualKit():
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
         pid_to_track: int = None,
+        server: bool = False,
     ) -> None:
         self.pdf = None
         self.process_watcher = None
@@ -79,7 +76,7 @@ class ManualKit():
         # Start listening to inputs
         self.input_listener = InputListener(**self.config['input'])
 
-        # Start caching the PDF
+        # Load the PDF
         self.load(pdf_path, supplementary_pdf_path)
 
         # Configure joystick handler
@@ -92,6 +89,15 @@ class ManualKit():
 
         # Track the PID
         self.track_pid(pid_to_track)
+
+        if server:
+            self.server = Server(**self.config['server'])
+            self.server.on('load', self.load)
+            self.server.on('track_pid', self.track_pid)
+            self.server.on('hide', self.hide)
+            self.server.start()
+        else:
+            self.server = None
 
         self.input_listener.listen()
 
@@ -182,6 +188,7 @@ class ManualKit():
     def exit(self, *args, **kwargs) -> None:
         try:
             # Try to close things gracefully
+            self.server.stop()
             self.input_listener.stop()
             self.display.close()
         finally:
@@ -221,8 +228,11 @@ class ManualKit():
 
     # Sends a SIGINT signal to the current process
     def _process_ended(self) -> None:
-        self.process_watcher = None
-        os.kill(os.getpid(), signal.SIGINT)
+        if self.server:
+            self.process_watcher = None
+            self.hide()
+        else:
+            os.kill(os.getpid(), signal.SIGINT)
 
 def main() -> None:
     parser = ArgumentParser()
@@ -231,6 +241,7 @@ def main() -> None:
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
+    parser.add_argument('--server', dest='server', help='Whether to run this as a server', action='store_true')
     args = parser.parse_args()
     ManualKit(**vars(args)).run()
 
