@@ -126,7 +126,9 @@ class ManualKit():
             **self.config['pdf'],
         )
 
-        # When a new PDF is being loaded, we force manualkit to be hidden
+        # When a new PDF is being loaded, we force manualkit to be hidden and stop
+        # tracking whatever process we were previously tracking
+        self.track_pid(None)
         self.hide()
 
         if bool(prerender):
