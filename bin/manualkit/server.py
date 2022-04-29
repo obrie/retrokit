@@ -14,7 +14,7 @@ from manualkit.decorators import synchronized
 # elsewhere in the system
 class Server():
     def __init__(self, fifo_path: str) -> None:
-        self.fifo_path = Path(fifo_path, mode=0o666)
+        self.fifo_path = Path(fifo_path)
         self.handlers = {}
         self.lock = threading.Lock()
 
@@ -48,7 +48,7 @@ class Server():
     # Reads from the FIFO path, attempting to process all incoming events
     def listen(self) -> None:
         if not self.fifo_path.exists():
-            os.mkfifo(self.fifo_path)
+            os.mkfifo(self.fifo_path, mode=0o666)
 
         while self.running:
             # The queue closes when the writer closes, so we need to keep
