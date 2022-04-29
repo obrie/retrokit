@@ -20,7 +20,7 @@ else
   rom_reference_path="$media_dir/docs/default.pdf"
 fi
 
-exec 4<>/opt/retropie/configs/all/manualkit.fifo
+exec 4<>/var/run/manualkit.fifo
 >&4 echo \
   'hide'$'\n' \
   'load'$'\t'"$rom_manual_path"$'\t'"$rom_reference_path"$'\t''true'$'\n' \
