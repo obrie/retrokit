@@ -251,8 +251,10 @@ json_merge() {
   local merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
 
   while read source_path; do
-    $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path")" > "$merged_path"
-    mv "$merged_path" "$staging_path"
+    if [ -s "$source_path" ]; then
+      $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path")" > "$merged_path"
+      mv "$merged_path" "$staging_path"
+    fi
   done < <(each_path "$source")
 
   $cmd mv "$staging_path" "$target"
