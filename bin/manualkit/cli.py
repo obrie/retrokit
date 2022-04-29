@@ -33,8 +33,8 @@ class ManualKit():
         'right': 'right',
         'next': 'r',
         'prev': 'l',
-        'zoom_in': 'r2',
-        'zoom_out': 'l2',
+        'zoom_in': 'x',
+        'zoom_out': 'y',
         'retroarch': 'true'
     }
 
