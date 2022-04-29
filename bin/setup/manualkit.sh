@@ -20,7 +20,7 @@ build() {
 }
 
 configure() {
-  ini_merge '{config_dir}/manuals/manualkit.conf' '/opt/retropie/configs/all/manualkit.conf' backup=false overwrite=true
+  ini_merge '{config_dir}/manualkit/manualkit.conf' '/opt/retropie/configs/all/manualkit.conf' backup=false overwrite=true
 }
 
 remove() {
