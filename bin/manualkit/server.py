@@ -48,7 +48,8 @@ class Server():
     # Reads from the FIFO path, attempting to process all incoming events
     def listen(self) -> None:
         if not self.fifo_path.exists():
-            os.mkfifo(self.fifo_path, mode=0o666)
+            os.mkfifo(self.fifo_path)
+            self.fifo_path.chmod(0o666)
 
         while self.running:
             # The queue closes when the writer closes, so we need to keep
