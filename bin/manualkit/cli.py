@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import configparser
+import distutils.util
 import logging
 import signal
 from argparse import ArgumentParser
@@ -18,13 +19,14 @@ from manualkit.decorators import synchronized
 from manualkit.display import Display
 from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
-from manualkit.process_watcher import ProcessWatcher
+from manualkit.process_watcher import ProcessEvent, ProcessWatcher
+from manualkit.profile import Profile
 from manualkit.server import Server
 
 class ManualKit():
     BINDING_DEFAULTS = {
-        'toggle_hotkey': 'up',
-        'toggle_nohotkey': 'l2',
+        'toggle_emulator': 'up',
+        'toggle_frontend': 'l2',
         'up': 'up',
         'down': 'down',
         'left': 'left',
@@ -42,7 +44,7 @@ class ManualKit():
         supplementary_pdf_path: Optional[str] = None,
         log_level: str = 'INFO',
         pid_to_track: int = None,
-        toggle_profile: str = 'hotkey',
+        profile_name: str = 'frontend',
         server: bool = False,
     ) -> None:
         self.pdf = None
@@ -58,6 +60,8 @@ class ManualKit():
             'process_watcher': {},
             'keyboard': self.BINDING_DEFAULTS,
             'joystick': self.BINDING_DEFAULTS,
+            'profile_frontend': {},
+            'profile_emulator': {},
         })
         if config_path and Path(config_path).exists():
             self.config.read(config_path)
@@ -81,8 +85,15 @@ class ManualKit():
         # Load the PDF
         self.load(pdf_path, supplementary_pdf_path)
 
+        # Configure profiles
+        self.profiles = {}
+        for section in self.config.sections():
+            if section.startswith('profile_'):
+                profile_name = section.replace('profile_', '')
+                self.profiles[profile_name] = Profile(profile_name, **self.config[section])
+        self.set_profile(profile_name)
+
         # Configure joystick handler
-        self.set_toggle_profile(toggle_profile)
         self._add_handlers(InputType.KEYBOARD, self.config['keyboard'])
         self._add_handlers(InputType.JOYSTICK, self.config['joystick'])
 
@@ -96,9 +107,8 @@ class ManualKit():
         if server:
             self.server = Server(**self.config['server'])
             self.server.on('load', self.load)
-            self.server.on('track_pid', self.track_pid)
             self.server.on('hide', self.hide)
-            self.server.on('toggle_profile', self.set_toggle_profile)
+            self.server.on('set_profile', self.set_profile)
             self.server.start()
         else:
             self.server = None
@@ -107,7 +117,7 @@ class ManualKit():
 
     # Loads the given PDFs
     @synchronized
-    def load(self, path: str = None, supplementary_path: str = None, prerender: bool = True) -> None:
+    def load(self, path: str = None, supplementary_path: str = None, prerender: bool = False) -> None:
         # Free up resources from any existing PDF
         if self.pdf:
             if self.pdf.path == path and self.pdf.supplementary_path == supplementary_path:
@@ -128,10 +138,9 @@ class ManualKit():
 
         # When a new PDF is being loaded, we force manualkit to be hidden and stop
         # tracking whatever process we were previously tracking
-        self.track_pid(None)
         self.hide()
 
-        if bool(prerender):
+        if distutils.util.strtobool(str(prerender)):
             # "Show" performance enhancement -- pre-render the first page so that
             # it shows up as quickly as possible when the user requests it
             self.pdf.jump(0)
@@ -144,25 +153,26 @@ class ManualKit():
             self.process_watcher.stop()
 
         if pid:
-            self.process_watcher = ProcessWatcher(pid, self._process_ended, **self.config['process_watcher'])
+            self.process_watcher = ProcessWatcher(pid, **self.config['process_watcher'])
+            self.process_watcher.on(ProcessEvent.EXIT, self._process_ended)
             self.process_watcher.track()
         else:
             self.process_watcher = None
 
     # Defines which input configuration to use for toggling
     @synchronized
-    def set_toggle_profile(self, profile_name: str) -> None:
-        self.toggle_profile = profile_name
+    def set_profile(self, profile_name: str) -> None:
+        self.profile = self.profiles[profile_name]
 
     # Toggles visibility of the manual
     @synchronized
-    def toggle(self, profile: str = None, turbo: bool = False) -> None:
+    def toggle(self, profile_name: str, turbo: bool = False) -> None:
         # Ignore repeat toggle callbacks
         if turbo:
             return
 
         # Only process toggle events for the currently active profile
-        if profile is not None and profile != self.toggle_profile:
+        if profile_name != self.profile.name:
             return
 
         if self.display.visible:
@@ -175,7 +185,7 @@ class ManualKit():
     def show(self) -> None:
         try:
             self.input_listener.grab()
-            if self.process_watcher:
+            if self.process_watcher and self.profile.suspend:
                 self.process_watcher.suspend()
             self.refresh()
             self.display.show()
@@ -196,11 +206,12 @@ class ManualKit():
                 self.display.clear()
         finally:
             # Always make sure the emulator gets resumed regardless of what happens
-            if self.process_watcher:
+            if self.process_watcher and self.profile.suspend:
                 self.process_watcher.resume()
 
     # Cleans up the elements / resources on the display
     def exit(self, *args, **kwargs) -> None:
+        logging.debug('Exiting')
         try:
             # Try to close things gracefully
             self.server.stop()
@@ -221,8 +232,11 @@ class ManualKit():
     def _add_handlers(self, input_type: InputType, config: configparser.SectionProxy) -> None:
         retroarch = (config['retroarch'] == 'true')
 
-        self.input_listener.on(input_type, config['toggle_hotkey'], partial(self.toggle, 'hotkey'), retroarch=retroarch, grabbed=False, hotkey=config.get('hotkey', fallback=True))
-        self.input_listener.on(input_type, config['toggle_nohotkey'], partial(self.toggle, 'nohotkey'), retroarch=retroarch, grabbed=False)
+        # Add hotkey listeners for each profile
+        for profile in self.profiles.values():
+            hotkey = profile.hotkey_enable and config.get('hotkey', fallback=True)
+            self.input_listener.on(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey)
+
         self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up, False), retroarch=retroarch)
         self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down, False), retroarch=retroarch)
         self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left, False), retroarch=retroarch)
@@ -244,18 +258,14 @@ class ManualKit():
 
     # Sends a SIGINT signal to the current process
     def _process_ended(self) -> None:
-        if self.server:
-            self.process_watcher = None
-            self.hide()
-        else:
-            os.kill(os.getpid(), signal.SIGINT)
+        os.kill(os.getpid(), signal.SIGINT)
 
 def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
     parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
-    parser.add_argument('--toggle-profile', dest='toggle_profile', help='Which toggle input configuration to use')
+    parser.add_argument('--profile', dest='profile_name', help='Which toggle profile configuration to use')
     parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
     parser.add_argument('--server', dest='server', help='Whether to run this as a server', action='store_true')

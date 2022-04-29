@@ -151,6 +151,7 @@ class InputListener():
     # Stops the current asyncio loop so we stop receiving input events
     def stop(self) -> None:
         if self.event_loop:
+            logging.debug('Stopping input listener')
             self.event_loop.stop()
             self.event_loop = None
 

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ctypes
 import ctypes.util
+import logging
 
 from contextlib import contextmanager
 from typing import Generator, Optional, Tuple
@@ -118,6 +119,7 @@ class Display():
 
     # Cleans up the elements / resources on the display
     def close(self) -> None:
+        logging.debug('Closing display')
         self.hide()
 
         if self.image_resource:
