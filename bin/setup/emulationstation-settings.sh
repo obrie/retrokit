@@ -56,13 +56,8 @@ __configure_es_settings() {
     > "$es_settings_file"
 }
 
-__configure_autostart() {
-  file_cp '{config_dir}/emulationstation/autostart.sh' '/opt/retropie/configs/all/autostart.sh' envsubst=false
-}
-
 restore() {
   restore_file "$HOME/.emulationstation/es_settings.cfg" delete_src=true
-  restore_file '/opt/retropie/configs/all/autostart.sh' delete_src=true
 }
 
 setup "${@}"

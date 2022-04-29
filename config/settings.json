@@ -73,7 +73,8 @@
           "reduction_percent_threshold": 0.1
         }
       }
-    }
+    },
+    "integration": "emulationstation"
   },
   "retropie": {
     "show_menu": true,
@@ -111,9 +112,8 @@
     }
   },
   "runcommand": {
-    "apps": [
-      "launchimages",
-      "manualkit"
+    "scripts": [
+      "launchimages"
     ]
   },
   "systems": [
@@ -164,6 +164,9 @@
     "display",
     "localization",
     "splashscreen",
+    "retropie-settings",
+    "retropie-scriptmodules",
+    "retropie-menus",
     "scraper",
     "themes",
     "retroarch",
@@ -171,8 +174,6 @@
     "docs",
     "manualkit",
     "runcommand",
-    "retropie-scriptmodules",
-    "retropie-menus",
     "emulationstation-settings",
     "romkit",
     "tools-mame",

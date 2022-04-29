@@ -12,7 +12,7 @@ build() {
   file_cp '{bin_dir}/runcommand/onstart.sh' /opt/retropie/configs/all/runcommand-onstart.sh backup=false envsubst=false
   file_cp '{bin_dir}/runcommand/onend.sh' /opt/retropie/configs/all/runcommand-onend.sh backup=false envsubst=false
 
-  # Copy enabled runcommand daemons
+  # Copy enabled runcommand apps
   while read runcommand_app; do
     # Reset the app's directory
     mkdir -p "$runcommand_apps_path/$runcommand_app"
@@ -20,7 +20,7 @@ build() {
 
     # Copy over the app's files
     each_path "{bin_dir}/runcommand/$runcommand_app" cp -Rv '{}' "$runcommand_apps_path/"
-  done < <(setting '.runcommand .apps[]')
+  done < <(setting '.runcommand .scripts[]')
 }
 
 configure() {

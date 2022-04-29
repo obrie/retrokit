@@ -1,1 +1,0 @@
-emulationstation --no-exit #auto
