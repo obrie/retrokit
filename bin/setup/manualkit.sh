@@ -42,7 +42,7 @@ __configure_manualkit() {
 __configure_autostart() {
   mkdir -pv /opt/retropie/configs/all/autostart.d/manualkit/
   for hook in onstart onend; do
-    file_cp "{bin_dir}/manualkit/autostart/$hook.sh" "/opt/retropie/configs/all/autostart.d/manualkit/$hook.sh" backup=false envsubst=false
+    file_cp "{config_dir}/manualkit/autostart/$hook.sh" "/opt/retropie/configs/all/autostart.d/manualkit/$hook.sh" backup=false envsubst=false
   done
 }
 
@@ -59,7 +59,7 @@ __configure_emulationstation() {
 __configure_runcommand() {
   mkdir -pv /opt/retropie/configs/all/runcommand.d/manualkit/
   for hook in onstart onend; do
-    file_cp "{bin_dir}/manualkit/runcommand/$hook.sh" "/opt/retropie/configs/all/runcommand.d/manualkit/$hook.sh" backup=false envsubst=false
+    file_cp "{config_dir}/manualkit/runcommand/$hook.sh" "/opt/retropie/configs/all/runcommand.d/manualkit/$hook.sh" backup=false envsubst=false
   done
 }
 
