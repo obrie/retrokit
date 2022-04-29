@@ -32,6 +32,9 @@ __create_romkit_collections() {
   while read -r name; do
     __create_collection "custom-$name" <(romkit_cache_list | jq -r "select(.collections | index(\"$name\")) | [\"$system\", .title] | @tsv" | uniq)
   done < <(romkit_cache_list | jq -r '.collections[]' | sort | uniq)
+
+  # Create manuals collection
+  __create_collection 'custom-Manuals' <(romkit_cache_list | jq -r "select(.manual) | [\"$system\", .title] | @tsv" | uniq)
 }
 
 # Creates the collection defined by the given file
