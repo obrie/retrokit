@@ -67,7 +67,7 @@ class ManualKit():
             self.config.read(config_path)
 
         # Set up logger
-        log_level = self.config['logging']['log_level']
+        log_level = self.config['logging']['level']
         root = logging.getLogger()
         root.setLevel(getattr(logging, log_level))
         handler = logging.StreamHandler(sys.stdout)
