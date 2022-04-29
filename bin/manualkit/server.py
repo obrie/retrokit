@@ -32,11 +32,8 @@ class Server():
     # around on the filesystem.
     @synchronized
     def stop(self) -> None:
+        logging.debug('Stopping server')
         self.running = False
-
-        # Stop the processing thread
-        self.listener_thread.raise_exception()
-        self.listener_thread.join()
 
         # Remove the fifo file
         self.fifo_path.unlink()
