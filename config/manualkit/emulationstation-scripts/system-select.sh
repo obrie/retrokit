@@ -9,7 +9,7 @@ else
   system_reference_path="$media_dir/retropie/docs/default.pdf"
 fi
 
-exec 4<>/var/run/manualkit.fifo
+exec 4<>/opt/retropie/configs/all/manualkit.fifo
 >&4 echo \
   'load'$'\t'"$system_reference_path"$'\n' \
   'set_profile'$'\t''frontend'
