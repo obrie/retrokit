@@ -42,7 +42,6 @@ class ManualKit():
         config_path: Optional[str] = None,
         pdf_path: Optional[str] = None,
         supplementary_pdf_path: Optional[str] = None,
-        log_level: str = 'INFO',
         pid_to_track: int = None,
         profile_name: str = 'frontend',
         server: bool = False,
@@ -57,6 +56,7 @@ class ManualKit():
             'pdf': {},
             'display': {},
             'input': {},
+            'logging': {'level': 'INFO'},
             'process_watcher': {},
             'keyboard': self.BINDING_DEFAULTS,
             'joystick': self.BINDING_DEFAULTS,
@@ -67,6 +67,7 @@ class ManualKit():
             self.config.read(config_path)
 
         # Set up logger
+        log_level = self.config['logging']['log_level']
         root = logging.getLogger()
         root.setLevel(getattr(logging, log_level))
         handler = logging.StreamHandler(sys.stdout)
@@ -266,7 +267,6 @@ def main() -> None:
     parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--profile', dest='profile_name', help='Which toggle profile configuration to use')
-    parser.add_argument('--log-level', dest='log_level', help='Log level', default='INFO', choices=['DEBUG', 'INFO', 'WARN', 'ERROR'])
     parser.add_argument('--track-pid', dest='pid_to_track', help='PID to track to auto-exit', type=int)
     parser.add_argument('--server', dest='server', help='Whether to run this as a server', action='store_true')
     args = parser.parse_args()
