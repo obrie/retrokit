@@ -9,7 +9,6 @@ setup_module_desc='EmulationStation configuration settings'
 configure() {
   stop_emulationstation
   __configure_es_settings
-  __configure_autostart
 }
 
 __configure_es_settings() {
