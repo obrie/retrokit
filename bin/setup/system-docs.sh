@@ -35,7 +35,7 @@ build() {
 
   # Move PDF to final location
   mkdir -p "$(dirname "$output_path")"
-  mv "$staging_path" "$output_path"
+  mv -v "$staging_path" "$output_path"
 }
 
 remove() {
