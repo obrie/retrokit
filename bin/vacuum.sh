@@ -33,6 +33,7 @@ main() {
 vacuum_all() {
   vacuum_roms "$@"
   vacuum_manuals "$@"
+  vacuum_media_cache "$@"
   vacuum_media "$@"
   vacuum_overlays "$@"
 }
@@ -45,8 +46,13 @@ vacuum_manuals() {
   "$bin_dir/setup.sh" vacuum system-roms-manuals "${@}"
 }
 
+vacuum_media_cache() {
+  "$bin_dir/setup.sh" __vacuum_cache system-roms-scrape "${@}"
+}
+
 vacuum_media() {
-  "$bin_dir/setup.sh" vacuum system-roms-scrape "${@}"
+  # TODO: This is always vacuuming all ports files
+  "$bin_dir/setup.sh" __vacuum_media system-roms-scrape "${@}"
 }
 
 vacuum_overlays() {
