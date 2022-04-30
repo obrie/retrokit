@@ -361,7 +361,7 @@ file_ln() {
   fi
 
   local prioritized_source=$(first_path "$source")
-  ln_if_different "$prioritized_path" "$target" as_sudo="$as_sudo"
+  ln_if_different "$prioritized_source" "$target" as_sudo="$as_sudo"
 }
 
 # Symlinks to the given target if, and only if, the existing link is *different
