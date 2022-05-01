@@ -1021,11 +1021,12 @@ retrokit what it is.  That includes:
 
 There are too many improvements to count here, but some ideas are:
 
+* Unify system metadata into a single file per system
 * Move manualkit to sdl2
-* Unify system metadata into a single file
 * Support for more systems (Amiga, Apple II, etc.)
 * Support for non-Raspbian platforms
 * Separate retrokit, romkit, and manualkit
+* Support different frontends (attractmode, pegasus)
 * More comprehensive compatibility ratings
 
 If you want to make changes for your own specific setup, feel free to.  I'll accept
