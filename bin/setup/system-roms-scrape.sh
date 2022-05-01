@@ -272,6 +272,16 @@ __vacuum_media() {
     fi
   done < <(romkit_cache_list | jq -r '[.name, .playlist .name] | @tsv')
 
+  # Look up additional files in the gamelist that may have been installed outside
+  # of romkit
+  if [ -f "$HOME/.emulationstation/gamelists/$system/gamelist.xml" ]; then
+    while IFS=$'\t' read -r rom_path; do
+      local rom_filename=${rom_path##*/}
+      local rom_name=${rom_filename%.*}
+      installed_names["$rom_name"]=1
+    done < <(xmlstarlet select -t -m '/*/*' -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml" | xmlstarlet unesc)
+  fi
+
   # Find media with no corresponding installed name
   while read -r media_path; do
     local filename=$(basename "$media_path")
