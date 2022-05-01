@@ -96,7 +96,7 @@ retroarch_keyboard_buttons_list=(
 declare -A keyboard_keys
 keyboard_keys=(
   [add]='Numpad +'
-  [alt]='Left ALt'
+  [alt]='Left Alt'
   [backquote]='`'
   [backslash]='\\'
   [backspace]='Backspace'
@@ -242,7 +242,7 @@ __add_keyboard_controls() {
 
     for button_config in "${retroarch_keyboard_buttons_list[@]}"; do
       # Find the corresponding keyboard button
-      local keyboard_key=$(__get_ini_config_value '/opt/retropie/configs/all/retroarch.cfg' "input_player1_$button_config")
+      local keyboard_key=$(__find_retroarch_keyboard_key "$button_config")
 
       if [ -n "$keyboard_key" ]; then
         local keyboard_description=${keyboard_keys[$keyboard_key]:-$keyboard_key}
@@ -304,6 +304,22 @@ __add_system_extensions() {
   return
 }
 
+# Finds the retroarch keyboard key associated with the given button
+__find_retroarch_keyboard_key() {
+  local button_config=$1
+
+  while read joypad_file; do
+    local key=$(__get_ini_config_value "$joypad_file" "input_player1_$button_config")
+
+    if [ "$key" == 'nul' ]; then
+      return
+    elif [ -n "$key" ]; then
+      echo "$key"
+      return
+    fi
+  done < <(__list_joypad_files)
+}
+
 # Finds the retropad button associated with the given hotkey action
 __find_retroarch_hotkey_button() {
   local action=$1
@@ -311,7 +327,9 @@ __find_retroarch_hotkey_button() {
   while read joypad_file; do
     local button_id=$(__get_ini_config_value "$joypad_file" "input_${action}_btn" || __get_ini_config_value "$joypad_file" "input_$action")
 
-    if [ -n "$button_id" ]; then
+    if [ "$button_id" == 'nul' ]; then
+      return
+    elif [ -n "$button_id" ]; then
       # Look up the retropad button name (e.g. input_{button_name}_... = ...) that
       # maps to the button id
       local button=$(grep "\"$button_id\"" "$joypad_file" | grep -Ev "input_$action" | sed 's/_btn\|input_player1_\|input_//g' | cut -d' ' -f 1 | head -n 1)
@@ -359,6 +377,7 @@ __get_ini_config_value() {
   local file=$1
   local key=$2
   local value=$(sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\" \t]*\)\"*.*/\1/p" "$file" | tail -1)
+
   if [ -n "$value" ]; then
     echo "$value"
   else

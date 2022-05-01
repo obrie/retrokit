@@ -10,17 +10,17 @@ declare -Ag vice_actions
 vice_actions=(
   [vkbd]='Keyboard'
   [statusbar]='Statusbar'
-  [joyport_switch]='Switch Joyport'
+  [joyport_switch]='Swap Joyport'
   [reset]='Reset'
   [warp_mode]='Warp Mode'
   [aspect_ratio_toggle]='Toggle Aspect'
   [zoom_mode_toggle]='Toggle Zoom'
-  [datasette_toggle_hotkeys]='Datasette: Toggle Hotkeys'
-  [datasette_start]='Datasette: Start'
-  [datasette_stop]='Datasette: Stop'
-  [datasette_rewind]='Datasette: Rewind'
-  [datasette_forward]='Datasette: Forward'
-  [datasette_reset]='Datasette: Reset'
+  [datasette_toggle_hotkeys]='Tape: Toggle'
+  [datasette_start]='Tape: Start'
+  [datasette_stop]='Tape: Stop'
+  [datasette_rewind]='Tape: Rewind'
+  [datasette_forward]='Tape: Forward'
+  [datasette_reset]='Tape: Reset'
 )
 
 declare -Ag vice_action_defaults
@@ -37,6 +37,8 @@ vice_action_defaults=(
 # Retro Key human-readable descriptions
 declare -Ag retro_keys
 retro_keys=(
+  [JOYSTICK_FIRE]='Fire Button 1'
+  [JOYSTICK_FIRE2]='Fire Button 2'
   [MOUSE_FASTER]='Mouse Faster'
   [MOUSE_SLOWER]='Mouse Slower'
   [RETROK_0]='0'
@@ -60,7 +62,7 @@ retro_keys=(
   [RETROK_DOWN]='Down'
   [RETROK_END]='End'
   [RETROK_EQUALS]='='
-  [RETROK_ESCAPE]='Escape (RUN/STOP)'
+  [RETROK_ESCAPE]='Esc (RUN/STOP)'
   [RETROK_F10]='F10'
   [RETROK_F11]='F11'
   [RETROK_F12]='F12'
@@ -150,9 +152,9 @@ retro_keys=(
   [RETROK_x]='X'
   [RETROK_y]='Y'
   [RETROK_z]='Z'
-  [SWITCH_JOYPORT]='Switch Joyport'
-  [TOGGLE_STATUSBAR]='Toggle Statusbar'
-  [TOGGLE_VKBD]='Toggle Keyboard'
+  [SWITCH_JOYPORT]='Swap Joyport'
+  [TOGGLE_STATUSBAR]='Statusbar'
+  [TOGGLE_VKBD]='Keyboard'
 )
 
 # VICE RetroPad Mapper
@@ -189,6 +191,8 @@ vice_mapper_retropad_map=(
 declare -Ag vice_mapper_defaults
 vice_mapper_defaults=(
   [select]='TOGGLE_VKBD'
+  [a]='JOYSTICK_FIRE2'
+  [b]='JOYSTICK_FIRE'
   [x]='RETROK_SPACE'
   [l2]='RETROK_ESCAPE'
   [r2]='RETROK_RETURN'
@@ -206,6 +210,7 @@ __has_rom_overrides() {
 
 # Add c64-specific controls
 __add_system_extensions() {
+  __add_keyboard_controls
   __add_vice_keyboard_controls "${@}"
   __add_vice_retropad_controls "${@}"
 }
@@ -214,6 +219,8 @@ __add_system_extensions() {
 __add_vice_keyboard_controls() {
   local core_options_file=$1
   local edit_args=()
+
+  local datasette_keys_enabled=$(crudini -- get "$core_options_file" '' vice_datasette_hotkeys 2>/dev/null | tr -d '"')
 
   for vice_action in ${vice_actions_list[@]}; do
     local core_option_name="vice_mapper_$vice_action"
@@ -226,7 +233,13 @@ __add_vice_keyboard_controls() {
       retro_key=$(crudini --get "$core_options_file" '' "$core_option_name" 2>/dev/null | tr -d '"')
     fi
 
-    if [ -n "$retro_key" ] && [ "$retro_key" != '---' ]; then
+    # Check if there's a setting that disables this action
+    local enabled=true
+    if [[ "$vice_action" == *datasette* ]] && [ "$vice_action" != 'datasette_toggle_hotkeys' ] && [ "$datasette_keys_enabled" != 'true' ]; then
+      enabled=false
+    fi
+
+    if [ "$enabled" == 'true' ] && [ -n "$retro_key" ] && [ "$retro_key" != '---' ]; then
       local vice_action_description=${vice_actions[$vice_action]}
       local retro_key_description=${retro_keys[$retro_key]}
 
@@ -244,6 +257,8 @@ __add_vice_retropad_controls() {
   local core_options_file=$1
   local edit_args=()
 
+  local datasette_keys_enabled=$(crudini -- get "$core_options_file" '' vice_datasette_hotkeys 2>/dev/null | tr -d '"')
+
   for vice_button in ${vice_mapper_buttons[@]}; do
     local core_option_name="vice_mapper_$vice_button"
 
@@ -252,6 +267,12 @@ __add_vice_retropad_controls() {
       retro_key="${vice_mapper_defaults[$vice_button]}"
     else
       retro_key=$(crudini --get "$core_options_file" '' "$core_option_name" 2>/dev/null | tr -d '"')
+    fi
+
+    # Check if there's a setting that disables this action
+    local enabled=true
+    if [[ "$vice_action" == *datasette* ]] && [ "$vice_action" != 'datasette_toggle_hotkeys' ] && [ "$datasette_keys_enabled" != 'true' ]; then
+      enabled=false
     fi
 
     if [ -n "$retro_key" ] && [ "$retro_key" != '---' ]; then
