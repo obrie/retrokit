@@ -20,13 +20,12 @@ Specifically, it can set up:
 * HiScores
 * Launch images
 * Emulator installation
-* Game manuals
+* In-game manuals
 * System controller reference guides
+* Printable gamelists
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
-* In-game manuals
-* Printable gamelists
 * Autoconfig overrides
 * Bluetooth
 * SSH
@@ -97,7 +96,7 @@ There are also system-specific features, including:
 * Automatic joystick selection for Commodore 64 via C64 Dreams project
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
-* Automatic filtering of runnable games for 3Do, PSP, Sega Saturn, and more
+* Automatic filtering of runnable games for 3DO, PSP, Sega Saturn, and more
 * Optimized settings per-game for Arcade, Atari Jaguar, C64, N64, and more
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP
@@ -150,9 +149,6 @@ in your `.env` file.
 The default hardware setup assumes:
 
 * Raspberry Pi 4
-* Argon case
-* 8bitdo SN30 Pro controllers
-* 8Bitdo Arcade Stick
 * 1TB or more storage capacity
 
 You can have complete control over what parts of retrokit get used via everything
