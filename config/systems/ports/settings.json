@@ -3,6 +3,7 @@
   "scraper": {
     "args": ["--excludefiles", "*Freedoom*,*Sinden*"],
     "gamelist_args": ["--excludefiles", "*Freedoom*", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
+    "gamelist_include_base_args": false,
     "import_dat_titles": false
   },
   "romsets": [
