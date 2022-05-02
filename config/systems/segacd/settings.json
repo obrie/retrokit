@@ -16,6 +16,9 @@
       "offset_x": 223
     }
   },
+  "scraper": {
+    "args": ["--addext", "*.m3u"]
+  },
   "emulators": {
     "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
   },
