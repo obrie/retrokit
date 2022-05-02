@@ -241,10 +241,18 @@ __import_user_overrides() {
 # Builds the gamelist.xml that will be used by emulationstation
 __build_gamelist() {
   local IFS=$'\n'
-  local extra_args=($(system_setting '.scraper | .gamelist_args // .args | .[]?'))
+  local args=()
+
+  # Add base arguments
+  if [ "$(system_setting '.scraper | .gamelist_include_base_args')" == 'true' ]; then
+    args+=($(system_setting '.scraper | .args? | .[]'))
+  fi
+
+  # Add gamelist arguments
+  args+=($(system_setting '.scraper | .gamelist_args? | .[]'))
 
   echo "Building gamelist for $system"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}"
+  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${args[@]}"
 }
 
 vacuum() {
