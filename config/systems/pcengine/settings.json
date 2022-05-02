@@ -113,11 +113,6 @@
           "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/pcengine/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
-        },
-        "playlist": {
-          "source": "file://$HOME/RetroPie/roms/pcengine/.redump/{machine_id}.chd",
-          "target": "$HOME/RetroPie/roms/pcengine/.redump/{playlist}.m3u",
-          "install": {"action": "playlist_to_m3u"}
         }
       },
       "emulator": "lr-beetle-pce-fast"
@@ -187,8 +182,7 @@
       {"path": "$HOME/RetroPie/roms/pcengine", "filters": {}}
     ],
     "files": {
-      "machine": {"target": "{dir}/{machine_filename}"},
-      "playlist": {"target": "{dir}/{playlist_filename}"}
+      "machine": {"target": "{dir}/{machine_filename}"}
     }
   }
 }
