@@ -161,7 +161,7 @@ all of your personal preferences.
 
 ### Creating a base image
 
-1. Update config/ in retrokit to match your personal preferences and hardware requirements
+1. Override settings in `profiles/mykit/` to match your personal preferences and hardware requirements
 1. Create a `.env` file based on env.template to provide the required configuration settings
 1. Flash new image (Note this will also expand the main partition and copy retrokit
    onto the sd card):
@@ -344,6 +344,9 @@ bin/vacuum.sh roms | bash
 # Vacuum manuals for ROMs no longer installed
 bin/vacuum.sh manuals | bash
 
+# Vacuum scraper cache for ROMs no longer installed
+bin/vacuum.sh media_cache | bash
+
 # Vacuum scraped media for ROMs no longer installed
 bin/vacuum.sh media | bash
 
@@ -403,7 +406,7 @@ PROFILES=base,crt
 # PROFILES=base,hd
 ```
 
-In the examples about, a `base` profile defines overrides that you want to use for
+In the examples above, a `base` profile defines overrides that you want to use for
 all of your profiles.  A `crt` or `hd` profile then defines overrides that you want
 to use for specific hardware configurations.
 
@@ -631,9 +634,9 @@ References:
 
 ## Game Metadata
 
-Game metadata comes from a variety of sources.  When possible, retrokit pulls
-directly from those sources instead of caching and maintaining them in this
-codebase.  An overview of metadata and where it comes from is described below.
+Game metadata comes from a variety of sources.  When possible, retrokit caches those
+those sources instead of pulling from them directlycodebase.  An overview of metadata
+and where it comes from is described below.
 
 | System      | Metadata                 | In Git? | Source                                        |
 | ----------- | ------------------------ | ------- | --------------------------------------------- |
@@ -887,7 +890,7 @@ ROMs.  These filters generally have the following rules:
 
 * 1G1R (one game per region)
 * Excluded categories: Adult, Board games, Casino, Educational
-* For CD-based systems, 1G1SF (one game per sports franchise)
+* For CD-based systems, 1G1F (one game per franchise, e.g. sports franchies)
 
 The approximate capacity required per system is broken down below:
 
