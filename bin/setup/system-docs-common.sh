@@ -109,7 +109,7 @@ keyboard_keys=(
   [end]='End'
   [enter]='Return'
   [equals]='='
-  [escape]='Escape'
+  [escape]='Esc'
   [f10]='F10'
   [f11]='F11'
   [f12]='F12'
@@ -242,7 +242,7 @@ __add_keyboard_controls() {
 
     for button_config in "${retroarch_keyboard_buttons_list[@]}"; do
       # Find the corresponding keyboard button
-      local keyboard_key=$(__find_retroarch_keyboard_key "$button_config")
+      local keyboard_key=$(__find_retroarch_config "input_player1_$button_config")
 
       if [ -n "$keyboard_key" ]; then
         local keyboard_description=${keyboard_keys[$keyboard_key]:-$keyboard_key}
@@ -265,6 +265,9 @@ __add_hotkey_controls() {
     local hotkey_button=$(__find_retroarch_hotkey_button 'enable_hotkey')
     local edit_args=()
 
+    # Determine if we're needing to quit twice
+    local quit_press_twice=$(__find_retroarch_config 'quit_press_twice')
+
     for retroarch_action in "${retroarch_actions_list[@]}"; do
       local button_config=$(__find_retroarch_hotkey_button "$retroarch_action")
       if [ -n "$button_config" ]; then
@@ -280,6 +283,11 @@ __add_hotkey_controls() {
           buttons="$hotkey_button,"
         fi
         buttons="$buttons$retropad_button"
+
+        # Special case: Handle needing to press the quit button twice
+        if [ "$retroarch_action" == 'exit_emulator' ] && [ "$quit_press_twice" == 'true' ]; then
+          buttons="$buttons,2x"
+        fi
 
         # Update the controls json
         local description=${retroarch_actions[$retroarch_action]}
@@ -305,16 +313,16 @@ __add_system_extensions() {
 }
 
 # Finds the retroarch keyboard key associated with the given button
-__find_retroarch_keyboard_key() {
-  local button_config=$1
+__find_retroarch_config() {
+  local config_name=$1
 
   while read joypad_file; do
-    local key=$(__get_ini_config_value "$joypad_file" "input_player1_$button_config")
+    local value=$(__get_ini_config_value "$joypad_file" "$config_name")
 
-    if [ "$key" == 'nul' ]; then
+    if [ "$value" == 'nul' ]; then
       return
-    elif [ -n "$key" ]; then
-      echo "$key"
+    elif [ -n "$value" ]; then
+      echo "$value"
       return
     fi
   done < <(__list_joypad_files)
