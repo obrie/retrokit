@@ -91,6 +91,8 @@
               <img src="images/retropad/retro_{{button}}.png" />
                 {%- elif loop.counter == 1 -%}
               {{button}}
+                {%- elif button == '2x' -%}
+              ²
                 {%- else -%}
               + {{button}}
                 {%- endif -%}
