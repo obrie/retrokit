@@ -8,7 +8,7 @@ class Disk:
     # Status when a ROM isn't actually included in the Machine
     STATUS_NO_DUMP = 'nodump'
 
-    def __init__(self, machine: Machine, name: str, sha1: Optional[str]) -> None:
+    def __init__(self, machine: Machine, name: str, sha1: Optional[str] = None) -> None:
         self.machine = machine
 
         # Some DATs include the .chd extension, so we standardize by removing it
@@ -27,10 +27,13 @@ class Disk:
     def context(self) -> dict:
         context = {
             'disk': self.name,
-            'sha1': self.sha1,
             **self.machine.context,
         }
+        if self.sha1:
+            context['sha1'] = self.sha1
+
         context['disk_filename'] = self.romset.resource('disk', **context).target_path.path.name
+
         return context
 
     @property

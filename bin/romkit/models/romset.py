@@ -49,7 +49,10 @@ class ROMSet:
         }
 
         # Internal dat list for systems that don't have dat files
-        self.datlist = datlist
+        if type(datlist) is list:
+            self.datlist = [{'name': name} for name in datlist]
+        else:
+            self.datlist = [{'name': name, **attrs} for name, attrs in datlist.items()]
 
         self.machines = {}
         self.load()
@@ -112,8 +115,8 @@ class ROMSet:
     def iter_machines(self) -> Generator[None, Machine, None]:
         if self.datlist:
             # Read from an internal dat list
-            for name in self.datlist:
-                machine = Machine(self, name)
+            for machine_attrs in self.datlist:
+                machine = Machine.from_dict(self, machine_attrs)
                 machine.custom_context = self.system.context_for(machine)
                 yield machine
         else:
