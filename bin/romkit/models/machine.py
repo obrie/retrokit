@@ -152,6 +152,24 @@ class Machine:
 
         return machine
 
+    @classmethod
+    def from_dict(cls, romset: ROMSet, attrs: dict) -> Machine:
+        machine_attrs = {key: attrs[key] for key in attrs if key not in ['disks', 'roms']}
+        machine = cls(romset, **machine_attrs)
+
+        # Disks
+        if 'disks' in attrs:
+            machine.disks = {Disk(machine, **disk_attrs) for disk_attrs in attrs['disks']}
+
+        # ROMs
+        if 'roms' in attrs:
+            machine.roms = {
+                File(**rom_attrs, file_identifier=romset.resource_templates['machine'].file_identifier)
+                for rom_attrs in attrs['roms']
+            }
+
+        return machine
+
     # Tracks this machine so that it can be referenced later from the romset
     def track(self) -> None:
         self.romset.track(self)
@@ -184,6 +202,7 @@ class Machine:
             'machine': self.name,
             'machine_id': self.id,
             'machine_alt_name': self.alt_name,
+            'machine_description': self.description,
             'machine_sourcefile': self.sourcefile or self.name,
             'rom_root': self.rom_root,
             'parent': (self.parent_name or self.name),
