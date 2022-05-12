@@ -900,10 +900,11 @@ The approximate capacity required per system is broken down below:
 | arcade        | 13GB     |
 | atari2600     | 6MB      |
 | atari7800     | 3MB      |
-| atarijaguar   | 125MB     |
+| atarijaguar   | 125MB    |
 | atarilynx     | 11MB     |
-| c64           | 135MB     |
+| c64           | 135MB    |
 | coleco        | 3MB      |
+| daphne        | 23GB     |
 | dreamcast     | 113GB    |
 | gamegear      | 51MB     |
 | gb            | 61MB     |

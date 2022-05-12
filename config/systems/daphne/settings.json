@@ -1,0 +1,80 @@
+{
+  "system": "daphne",
+  "emulators": {
+    "hypseus": {"default": true}
+  },
+  "romsets": [
+    {
+      "name": "laserdisc",
+      "protocol": "http",
+      "url": "$ROMSET_LASERDISC_URL",
+      "resources": {
+        "machine": {
+          "source": "{url}/roms.zip/roms/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/daphne/.roms/{machine}.zip"
+        },
+        "disk": {
+          "source": "{url}/{machine_description}.zip",
+          "download": "$HOME/RetroPie/roms/daphne/.laserdiscs/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/daphne/.laserdiscs/{machine}.daphne",
+          "install": {"action": "zip_extract", "include_parent": false},
+          "file_identifier": "name"
+        }
+      },
+      "datlist": {
+        "ace": {"description": "Space Ace", "disks": [{"name": "ace"}]},
+        "astron": {"description": "Astron Belt", "disks": [{"name": "astron"}]},
+        "badlands": {"description": "Badlands", "disks": [{"name": "badlands"}]},
+        "bega": {"description": "Bega's Battle", "disks": [{"name": "bega"}]},
+        "cliff": {"description": "Cliff Hanger", "disks": [{"name": "cliff"}]},
+        "cobra": {"description": "Cobra Command", "disks": [{"name": "cobra"}]},
+        "dle21": {"description": "Dragon Lair v2.1", "disks": [{"name": "dle21"}]},
+        "esh": {"description": "Eshs aununmilla", "disks": [{"name": "esh"}]},
+        "galaxy": {"description": "Galaxy Range", "disks": [{"name": "galaxy"}]},
+        "gpworld": {"description": "GP World", "disks": [{"name": "gpworld"}]},
+        "interstellar": {"description": "InterStellar", "disks": [{"name": "interstellar"}]},
+        "lair": {"description": "Dragon lair", "disks": [{"name": "lair"}]},
+        "lair2": {"description": "Dragon Lair 2", "disks": [{"name": "lair2"}]},
+        "mach3": {"description": "M.A.C.H. 3", "disks": [{"name": "mach3"}]},
+        "roadblaster": {"description": "Road Blaster", "disks": [{"name": "roadblaster"}]},
+        "sdq": {"description": "Super Don Quix-Ote", "disks": [{"name": "sdq"}]},
+        "tq": {"description": "Thayer's Quest", "disks": [{"name": "tq"}]},
+        "uvt": {"description": "Us vs Them", "disks": [{"name": "uvt"}]}
+      }
+    }
+  ],
+  "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/daphne/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/daphne.json"
+    }
+  },
+  "roms": {
+    "id": "name",
+    "filters": {
+      "names": [
+        "ace",
+        "cliff",
+        "lair",
+        "lair2",
+        "sdq"
+      ],
+      "demo": [
+        "lair"
+      ]
+    },
+    "favorites": {
+      "titles": [
+      ]
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/daphne", "filters": {}}
+    ],
+    "files": {
+      "disk": {"target": "{dir}/roms/{machine_filename}"},
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
