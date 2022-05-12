@@ -229,6 +229,11 @@ restore() {
 }
 
 vacuum() {
+  if [ ! -d "$system_overlay_dir" ]; then
+    # No overlays configured
+    return
+  fi
+
   # Identify valid overlay images
   declare -A installed_images
   while IFS=$'\t' read -r title parent_title; do
