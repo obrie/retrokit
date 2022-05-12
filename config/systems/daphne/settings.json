@@ -73,7 +73,7 @@
       {"path": "$HOME/RetroPie/roms/daphne", "filters": {}}
     ],
     "files": {
-      "disk": {"target": "{dir}/{machine_filename}"},
+      "disk": {"target": "{dir}/{machine}.daphne"},
       "machine": {"target": "{dir}/roms/{machine_filename}"}
     }
   }
