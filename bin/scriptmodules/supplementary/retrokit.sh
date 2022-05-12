@@ -154,6 +154,7 @@ function _gui_setup_action_retrokit() {
             "restore" "Restores configuration files to their defaults."
             "remove" "Removes non-configuration files, including dependencies."
             "uninstall" "Shortcut for: \Zbrestore\Zn, \Zbremove\Zn."
+            "reinstall" "Shortcut for: \Zbuninstall\Zn, \Zbinstall\Zn."
             "vacuum" "Deletes media files no longer needed (scraped media, roms, etc.)."
         )
 
