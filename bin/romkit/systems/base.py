@@ -255,6 +255,7 @@ class BaseSystem:
             'disk': '*',
             'machine': '*',
             'machine_alt_name': '*',
+            'machine_description': '*',
             'machine_id': '*',
             'machine_sourcefile': '*',
             'parent': '*',
