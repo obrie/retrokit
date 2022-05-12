@@ -13,12 +13,11 @@ configure() {
     return
   fi
 
-  # Reset by removing all favorite tags first.  This is much faster than
-  # deleting one-by-one given the size of the file.
-  echo 'Resetting favorites...'
-  __remove_favorites
-
-  # Then add current favorites
+  # Add current favorites.
+  # 
+  # Note this will *not* remove existing favorites.  If you want to
+  # completely replace your favorites list, you should run a reinstall
+  # of this setup module.
   echo 'Setting favorites...'
   while IFS=$'\t' read -r rom_name playlist_name; do
     # Always search for the specific ROM
