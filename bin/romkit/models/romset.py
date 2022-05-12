@@ -49,10 +49,13 @@ class ROMSet:
         }
 
         # Internal dat list for systems that don't have dat files
-        if type(datlist) is list:
-            self.datlist = [{'name': name} for name in datlist]
+        if datlist:
+            if type(datlist) is list:
+                self.datlist = [{'name': name} for name in datlist]
+            else:
+                self.datlist = [{'name': name, **attrs} for name, attrs in datlist.items()]
         else:
-            self.datlist = [{'name': name, **attrs} for name, attrs in datlist.items()]
+            self.datlist = None
 
         self.machines = {}
         self.load()
