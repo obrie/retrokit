@@ -1,5 +1,8 @@
 {
   "system": "daphne",
+  "scraper": {
+    "import_dat_titles": false
+  },
   "emulators": {
     "hypseus": {"default": true}
   },
