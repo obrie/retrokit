@@ -762,6 +762,11 @@ __validate_pdf() {
 # list of roms installed
 vacuum() {
   local keep_downloads=$(setting '.manuals.keep_downloads')
+  local base_path=$(render_template "$base_path_template" system="$system")
+  if [ ! -d "$base_path" ]; then
+    # No manuals configured
+    return
+  fi
 
   # Build the list of files we should *not* delete
   declare -A files_to_keep
@@ -788,7 +793,7 @@ vacuum() {
   # Echo the commands (it's up to the user to evaluate them)
   while read -r path; do
     [ "${files_to_keep[$path]}" ] || echo "rm -v $(printf '%q' "$path")"
-  done < <(find "${manual['base_path']}" -not -type d)
+  done < <(find "$base_path" -not -type d)
 }
 
 setup "$1" "${@:3}"
