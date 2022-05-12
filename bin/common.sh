@@ -145,6 +145,12 @@ remove() {
   return
 }
 
+# Uninstalls everything and then installs it again
+reinstall() {
+  uninstall
+  install
+}
+
 # Finds files that can be deleted from the filesystem.  This will only
 # echo the `rm` commands -- you must run them.
 vacuum() {
