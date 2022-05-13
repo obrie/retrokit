@@ -156,8 +156,12 @@ class Scraper:
         # *except* arcade which is okay because arcade has its own metadata
         # source that we don't have to scrape from.
         primary_rom = machine.primary_rom
-        romnom = quote(primary_rom.name).replace('%28', '(').replace('%29',')')
-        crc = primary_rom.crc.upper()
+        if primary_rom:
+            romnom = quote(primary_rom.name).replace('%28', '(').replace('%29',')')
+            crc = primary_rom.crc.upper()
+        else:
+            romnom = machine.resource.target_path.path.name
+            crc = ''
 
         # Create a fake file so we can actually invoke skyscraper
         rom_path = self.tmpdir.joinpath(f'roms').joinpath(f'{machine.name}.zip')
