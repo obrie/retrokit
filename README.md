@@ -738,6 +738,13 @@ life of their source projects, but also provides a more stable source to downloa
 from.  Over time, this archive will be updated to reflect additional manuals made available
 or new systems supported.
 
+To generate archives:
+
+```
+PROFILES=manualkit-original bin/setup.sh install system-roms-manuals
+PROFILES=manualkit-compressed bin/setup.sh install system-roms-manuals
+```
+
 Reference: https://archive.org/details/retrokit-manuals
 
 ### Compression
