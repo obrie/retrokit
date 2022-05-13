@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the ir configuration where controls are defined
-ir_config_path="$configdir/rc_keymap.cfg"
+ir_config_path="$configdir/all/rc_keymap.cfg"
 
 function check_ir() {
     [[ ! -f "$ir_config_path" ]] && return 1
