@@ -129,9 +129,11 @@ configure() {
 
   # Remove unused symlinks
   local base_path=$(render_template "$base_path_template" system="$system")
-  while read -r path; do
-    [ "${installed_files[$path]}" ] || rm -v "$path"
-  done < <(find "$base_path" -maxdepth 1 -type l -not -xtype d)
+  if [ -d "$base_path" ]; then
+    while read -r path; do
+      [ "${installed_files[$path]}" ] || rm -v "$path"
+    done < <(find "$base_path" -maxdepth 1 -type l -not -xtype d)
+  fi
 }
 
 # Lists the manuals to install
