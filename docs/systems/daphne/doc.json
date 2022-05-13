@@ -1,7 +1,7 @@
 {
   "system": {
     "name": "daphne",
-    "description": "Laserdiscs were predecessors to the DVD. Laserdisc games function much like interactive fiction where you choose your own story and the video adapts to the path you choose to take."
+    "description": "Laserdisc games function like interactive fiction where you choose your own story and the video adapts to the path you take."
   },
   "features": {
     "saves": false,
@@ -10,9 +10,24 @@
     "cheats": true
   },
   "images": {
-    "controller": "keyboard.png"
   },
   "controls": {
-    "keyboard_raw": true
+    "keyboard_raw": true,
+    "retropad": {
+      "dpad_up": "Up",
+      "dpad_down": "Down",
+      "dpad_left": "Left",
+      "dpad_up": "Up",
+      "a": "Fire #1",
+      "b": "Fire #2",
+      "x": "Button #3",
+      "y": "Coin",
+      "l1": "Skill: Cadet",
+      "r1": "Skill: Captain",
+      "l2": "Skill: Space Ace",
+      "r2": "Service Mode",
+      "start": "Start",
+      "select": "Quit"
+    }
   }
 }
