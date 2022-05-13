@@ -6,7 +6,7 @@ with RetroPie / Raspberry Pi 4 using currently known best practices as I underst
 Specifically, it can set up:
 
 * Cases (e.g. Argon)
-* Controllers (including autoconfig for advmame, drastic, mupen64plus, ppsspp, redream, and ir)
+* Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * VNC
 * Display settings
@@ -15,7 +15,7 @@ Specifically, it can set up:
 * Themes
 * Retroarch configuration
 * EmulationStation configuration
-* Overlays / Bezels (with lightgun-compatible auto-generatino)
+* Overlays / Bezels (with lightgun-compatible auto-generation)
 * Cheats (RetroArch, MAME, NDS, etc.)
 * HiScores
 * Launch images
