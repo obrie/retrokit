@@ -125,9 +125,11 @@ create() {
   # *NOTE* For reasons I don't yet understand, resizing to 100% of the
   # available disk space causes the image to go into an failure
   # boot loop.  This is why we expand to *almost* 100% :/
+  # 
+  # I tried changing the disk id, but this didn't make a difference.
   echo "Expanding $device to 100% capacity"
   local device_size=$(cat "/sys/block/$device_id/size")
-  sudo parted -s "$device" u s resizepart 2 $((device_size-4096))
+  sudo parted -s "$device" u s resizepart 2 $((device_size-2))
   sudo e2fsck -fv "$retropie_device"
   sudo resize2fs -p "$retropie_device"
 
@@ -135,6 +137,9 @@ create() {
   local mount_path="$HOME/retrokit-sdcard"
   mkdir -p "$mount_path"
   sudo mount -v "$retropie_device" "$mount_path"
+
+  # Modify partition timeout to account for fsck runtime
+  sudo sed -i '2,$s/defaults/defaults,x-systemd.device-timeout=900s/g' "$mount_path/etc/fstab"
 
   # Copy retrokit
   echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
