@@ -66,6 +66,7 @@ function gui_retrokit() {
             "update" "Manages system updates (Raspbian, RetroPie, or Retrokit)."
             "cache" "Manages data cached by retrokit."
             "vacuum" "Removes media no longer be needed (scraped media, roms, etc.)."
+            "migrate" "Migrate rom filenames after a DAT update."
             "edit" "Edit .env and settings.json files."
         )
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -276,6 +277,37 @@ function _gui_vacuum_run_retrokit() {
         _show_msg_retrokit "Ouput:\n\n$vacuum_output"
     else
         _show_msg_retrokit "Nothing found to vacuum."
+    fi
+
+    clear
+}
+
+# Migrate menu
+function _gui_migrate_retrokit() {
+    _gui_system_select_retrokit 'migrate_run'
+}
+
+# Confirms and runs migrate.sh
+function _gui_migrate_run_retrokit() {
+    local system=$1
+
+    local text="Are you sure you want to migrate \Zb$system\Zn?"
+    text+="\n\n\ZbNOTE\Zn - An additional confirmation dialog will be shown before renaming any files."
+    dialog --colors --defaultno --yesno "$text" 22 76 2>&1 >/dev/tty || return
+
+    clear
+
+    echo "Migrating $system..."
+
+    output=$(_run_retrokit "$home/retrokit/bin/migrate.sh" "${@}" 2>/dev/null | tee /dev/tty)
+    if [ -n "$output" ]; then
+        dialog --colors --defaultno --no-collapse --yesno "$output" 22 85 2>&1 >/dev/tty || return
+
+        # Run the commands
+        local migrate_output=$(echo "$output" | bash 2>&1)
+        _show_msg_retrokit "Ouput:\n\n$migrate_output"
+    else
+        _show_msg_retrokit "Nothing found to migrate."
     fi
 
     clear

@@ -470,6 +470,11 @@ class Machine:
                 'title': self.parent_title
             }
 
+        if self.resource.xref_path:
+            data['xref'] = {
+                'path': str(self.resource.xref_path.path),
+            }
+
         return data
 
     # Determines whether the locally installed set of ROMs is equal to the full set of
