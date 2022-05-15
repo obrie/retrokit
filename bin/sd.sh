@@ -96,6 +96,8 @@ sync_media() {
 create() {
   [[ $# -ne 1 ]] && usage
   local device=$1
+  local device_id=$(basename "$device")
+
   local retropie_version=4.8
   local raspbian_version=buster
   local rpi_version=rpi4_400
@@ -111,6 +113,7 @@ create() {
 
   # Copy the image
   echo "Copying image to $device..."
+  sudo wipefs -a "$device"
   gunzip -v --stdout "$image_file" | sudo dd bs=4M of="$device" status=progress
   local retropie_device=$(lsblk -nl -o PATH,TYPE -x PATH "$device" | grep part | cut -d ' ' -f 1 | head -2 | tail -1)
   if [ -z "$retropie_device" ]; then
@@ -119,8 +122,12 @@ create() {
   fi
 
   # Expand main partition to consume the entire disk
+  # *NOTE* For reasons I don't yet understand, resizing to 100% of the
+  # available disk space causes the image to go into an failure
+  # boot loop.  This is why we expand to *almost* 100% :/
   echo "Expanding $device to 100% capacity"
-  sudo parted -s "$device" resizepart 2 100%
+  local device_size=$(cat "/sys/block/$device_id/size")
+  sudo parted -s "$device" u s resizepart 2 $((device_size-4096))
   sudo e2fsck -fv "$retropie_device"
   sudo resize2fs -p "$retropie_device"
 
