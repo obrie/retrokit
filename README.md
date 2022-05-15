@@ -354,6 +354,16 @@ bin/vacuum.sh media | bash
 bin/vacuum.sh overlays | bash
 ```
 
+migrate:
+
+```
+# Migrate filenames after updating to newer system DAT files
+bin/migrate.sh
+
+# Migrate a specific system
+bin/migrate.sh nes
+```
+
 ## Profiles
 
 To override any configuration settings, you have two options:
