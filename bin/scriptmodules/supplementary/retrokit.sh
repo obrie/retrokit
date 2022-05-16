@@ -30,6 +30,7 @@ function configure_retrokit() {
     # Copy menu icon
     local rpdir="$home/RetroPie/retropiemenu"
     cp -Rv "$md_data/icon.png" "$rpdir/icons/retrokit.png"
+    chown $user:$user "$rpdir/icons/retrokit.png"
 
     local file="retrokit"
     local name="Retrokit"
