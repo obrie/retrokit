@@ -22,7 +22,6 @@ update_system() {
 update_retropie() {
   update_retropie_setup
   update_retropie_packages
-  update_emulator_configs
 }
 
 # Update RetroPie-Setup

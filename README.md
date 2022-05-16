@@ -304,6 +304,9 @@ bin/update.sh packages
 
 # Update just the OS
 bin/update.sh system
+
+# Update emulator configurations (after emulator package updates)
+bin/update.sh emulator_configs
 ```
 
 cache:
@@ -362,6 +365,36 @@ bin/migrate.sh
 
 # Migrate a specific system
 bin/migrate.sh nes
+```
+
+Common commands:
+
+```
+# Update RetroPie and configs
+bin/update.sh retropie
+bin/update.sh emulator_configs
+
+# Update system
+bin/update.sh system
+
+# Update retrokit
+bin/update.sh retrokit
+
+# Install/Update system
+bin/setup.sh install <system>
+
+# Update custom scriptmodules
+bin/setup.sh install retropie-scriptmodules
+
+# Re-do everything
+bin/update.sh system
+bin/update.sh retropie
+bin/update.sh emulator_configs
+bin/setup.sh install
+
+# Re-create reference documentation
+bin/setup.sh update system-docs
+bin/setup.sh update system-roms-docs
 ```
 
 ## Profiles
