@@ -470,7 +470,7 @@ class Machine:
                 'title': self.parent_title
             }
 
-        if self.resource.xref_path:
+        if self.resource and self.resource.xref_path:
             data['xref'] = {
                 'path': str(self.resource.xref_path.path),
             }
