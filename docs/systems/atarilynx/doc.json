@@ -12,5 +12,11 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "hotkeys_extra": {
+      "start,l1": "Restart",
+      "start,l2": "Flip Screen"
+    }
   }
 }
