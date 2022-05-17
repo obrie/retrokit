@@ -12,5 +12,14 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "select": "Select",
+      "start": "Pause",
+      "x": "Reset",
+      "l1": "Left Difficulty",
+      "r1": "Right Difficulty"
+    }
   }
 }
