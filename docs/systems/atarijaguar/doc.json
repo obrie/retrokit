@@ -12,5 +12,16 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "x": "Numpad 0",
+      "l1": "Numpad 1",
+      "r1": "Numpad 2",
+      "l2": "Numpad 3",
+      "r2": "Numpad 4",
+      "l3": "Numpad 5",
+      "r3": "Numpad 6"
+    }
   }
 }
