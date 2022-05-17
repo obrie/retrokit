@@ -85,7 +85,10 @@ class InputDevice():
     # Starts asynchronously reading events from the device
     def start_read(self, event_loop: asyncio.AbstractEventLoop) -> None:
         self.event_loop = event_loop
-        self.event_reader_task = event_loop.create_task(self.read_events())
+        if event_loop.is_running():
+            self.event_reader_task = asyncio.run_coroutine_threadsafe(self.read_events(), event_loop)
+        else:
+            self.event_reader_task = event_loop.create_task(self.read_events())
 
     # Stops reading events from the device
     def stop_read(self) -> None:
