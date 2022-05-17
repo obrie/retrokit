@@ -51,7 +51,7 @@ setup() {
     done < <(setting '.systems[]')
 
     # Exceptions for the "retropie" system
-    if [ "$setup_module" == 'system-docs' ]; then
+    if [ "$setupmodule" == 'system-docs' ]; then
       run "$setupmodule" "$action" retropie
     fi
   else
