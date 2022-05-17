@@ -73,8 +73,6 @@
     <div id="usage-hotkeys">
       {% set hotkey_controls = controls.hotkeys or {} %}
       {% set _dummy = hotkey_controls.update(controls.hotkeys_extra or {}) %}
-      {% set hotkey_actions = hotkey_controls.keys()|list %}
-      {% set hotkey_button = (hotkey_controls.values()|list)[hotkey_actions.index('Hotkey')] if 'Hotkey' in hotkey_actions else None %}
       <table>
         <thead>
           <tr class="header">
