@@ -55,6 +55,9 @@ __configure_emulationstation() {
     mkdir -pv "$target_dir"
     file_cp "{config_dir}/manualkit/emulationstation-scripts/$hook.sh" "$target_dir/manualkit.sh" backup=false envsubst=false
   done < <(each_path '{config_dir}/manualkit/emulationstation-scripts' ls '{}' | uniq)
+
+  xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$HOME/.emulationstation/es_input.cfg"
+  xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$HOME/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$HOME/.emulationstation/es_input.cfg"
 }
 
 # Install emulationstation hooks
@@ -72,6 +75,7 @@ restore() {
 
 __restore_emulationstation() {
   rm -rfv /opt/retropie/configs/all/autostart.d/manualkit/
+  xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$HOME/.emulationstation/es_input.cfg"
 }
 
 __restore_autostart() {
