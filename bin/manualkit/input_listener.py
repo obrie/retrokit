@@ -64,13 +64,17 @@ class InputListener():
             hotkey_config = 'input_enable_hotkey_btn'
             btn_prefix = 'input_'
             btn_suffix = '_btn'
-        else:
+        elif self._is_keyboard_device(dev_device):
             # Treat it like a keyboard
             device_config = self.retroarch_config
             input_type = InputType.KEYBOARD
             hotkey_config = 'input_enable_hotkey'
             btn_prefix = 'input_player1_'
             btn_suffix = ''
+        else:
+            # Not a keyboard or known joystick -- abort
+            logging.debug(f'Skipping device: {path} ({dev_device.name})')
+            return
 
         input_device = self.create_input_device(dev_device, input_type, hotkey=device_config.get(hotkey_config))
 
@@ -187,6 +191,13 @@ class InputListener():
             device.ungrab()
 
         self.grabbed = False
+
+    # Makes a best-effort attempt to see if the given device is a keyboard
+    # 
+    # There's no standard way to detect a keyboard, but it's a pretty good
+    # bet that the device will report EV_REP as a capability.
+    def _is_keyboard_device(self, device: evdev.InputDevice):
+        return evdev.ecodes.EV_REP in device.capabilities().get(evdev.ecodes.EV_KEY, [])
 
     # Handles exceptions in asyncio loops by logging them.  This ensures
     # the event gets consumed.
