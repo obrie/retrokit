@@ -79,12 +79,12 @@ restore() {
 }
 
 __restore_emulationstation() {
-  rm -rfv /opt/retropie/configs/all/autostart.d/manualkit/
+  rm -rfv "$HOME/.emulationstation/scripts"/*/manualkit.sh
   xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$HOME/.emulationstation/es_input.cfg"
 }
 
 __restore_autostart() {
-  rm -rfv "$HOME/.emulationstation/scripts"/*/manualkit.sh
+  rm -rfv /opt/retropie/configs/all/autostart.d/manualkit/
 }
 
 __restore_runcommand() {
