@@ -7,18 +7,19 @@ import traceback
 import xml
 
 from pathlib import Path
-from typing import Callable
+from typing import Callable, NamedTuple
 
 from manualkit.input_device import InputDevice, InputType
 
 # Represents a callback to invoke when a given button is encountered
-class Handler:
-    def __init__(self, btn_name: str, callback: Callable, grabbed: bool, hotkey: bool, retroarch: bool) -> None:
-        self.btn_name = btn_name
-        self.callback = callback
-        self.grabbed = grabbed
-        self.hotkey = hotkey
-        self.retroarch = retroarch
+class Handler(NamedTuple):
+    btn_name: str
+    callback: Callable
+    grabbed: bool
+    hotkey: bool
+    retroarch: bool
+    on_key_down: bool
+    repeat: bool
 
 # Listens for key / button presses that trigger changes to manualkit
 class InputListener():
@@ -81,7 +82,7 @@ class InputListener():
                 input_code = handler.btn_name
 
             if input_code:
-                input_device.on(input_code, handler.callback, grabbed=handler.grabbed, hotkey=handler.hotkey)
+                input_device.on(input_code, handler.callback, grabbed=handler.grabbed, hotkey=handler.hotkey, on_key_down=handler.on_key_down, repeat=handler.repeat)
 
         # Start listening for events
         self.devices.append(input_device)
@@ -101,8 +102,10 @@ class InputListener():
         grabbed: bool = True,
         hotkey: bool = False,
         retroarch: bool = True,
+        on_key_down: bool = True,
+        repeat: bool = True,
     ):
-        self.handlers[input_type].append(Handler(btn_name, callback, grabbed, hotkey, retroarch))
+        self.handlers[input_type].append(Handler(btn_name, callback, grabbed, hotkey, retroarch, on_key_down, repeat))
 
     # Creates a new input device with default configurations and the given overrides
     def create_input_device(self, *args, **kwargs) -> InputDevice:

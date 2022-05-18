@@ -90,8 +90,8 @@ class ManualKit():
         self.profiles = {}
         for section in self.config.sections():
             if section.startswith('profile_'):
-                profile_name = section.replace('profile_', '')
-                self.profiles[profile_name] = Profile(profile_name, **self.config[section])
+                section_name = section.replace('profile_', '')
+                self.profiles[section_name] = Profile(section_name, **self.config[section])
         self.set_profile(profile_name)
 
         # Configure joystick handler
@@ -236,7 +236,7 @@ class ManualKit():
         # Add hotkey listeners for each profile
         for profile in self.profiles.values():
             hotkey = profile.hotkey_enable and config.get('hotkey', fallback=True)
-            self.input_listener.on(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey)
+            self.input_listener.on(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey, on_key_down=False, repeat=False)
 
         self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up, False), retroarch=retroarch)
         self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down, False), retroarch=retroarch)
