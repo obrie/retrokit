@@ -12,5 +12,15 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "x": "Turbo A",
+      "y": "Turbo B",
+      "l2": "Turbo L",
+      "r2": "Turbo R",
+      "l3": "Darken Solar Sensor",
+      "r3": "Brighten Solar Sensor"
+    }
   }
 }
