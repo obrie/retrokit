@@ -110,6 +110,7 @@ class ManualKit():
             self.server.on('load', self.load)
             self.server.on('hide', self.hide)
             self.server.on('set_profile', self.set_profile)
+            self.server.on('reload_devices', self.reload_devices)
             self.server.start()
         else:
             self.server = None
@@ -164,6 +165,11 @@ class ManualKit():
     @synchronized
     def set_profile(self, profile_name: str) -> None:
         self.profile = self.profiles[profile_name]
+
+    # Reloads the configuration for all current input devices
+    @synchronized
+    def reload_devices(self) -> None:
+        self.input_listener.reload_devices()
 
     # Toggles visibility of the manual
     @synchronized

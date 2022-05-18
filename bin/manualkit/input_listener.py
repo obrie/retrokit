@@ -125,6 +125,22 @@ class InputListener():
             device.stop_read()
             self.devices.remove(device)
 
+    # Reloads the configuration for all current devices.  This will:
+    # * Stop reading from the devices
+    # * Reload the associated autoconfiguration for them
+    # * Start listening to the devices again
+    # 
+    # This is intended to allow manualkit to sync up with the system
+    # when a new controller has been configured.
+    def reload_devices(self) -> None:
+        for device in self.devices:
+            device.stop_read()
+
+        self.devices.clear()
+
+        for path in evdev.list_devices():
+            self.add_device(path)
+
     # Listens for input events.  Note that this will loop infinitely.
     def listen(self) -> None:
         # Add currently known devices
