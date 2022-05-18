@@ -12,5 +12,11 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "x": "Turbo A",
+      "y": "Turbo B"
+    }
   }
 }
