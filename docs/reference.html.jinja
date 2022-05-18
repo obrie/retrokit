@@ -140,7 +140,15 @@
       <tbody>
         {% for retropad_button, action in retropad_items %}
         <tr>
-          <td><img src="images/retropad/retro_{{retropad_button}}.png" /></td>
+          <td>
+          {%- for button in retropad_button.split(',') -%}
+            {%- if button in retropad_button_names -%}
+            <img src="images/retropad/retro_{{button}}.png" />
+            {%- else -%}
+            {{button}}
+            {%- endif -%}
+          {%- endfor -%}
+          </td>
           <td>{{action}}</td>
         </tr>
         {% endfor %}

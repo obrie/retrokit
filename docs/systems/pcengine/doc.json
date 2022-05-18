@@ -12,5 +12,10 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "l2": "Mode Switch"
+    }
   }
 }

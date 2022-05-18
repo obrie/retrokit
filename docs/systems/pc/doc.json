@@ -12,7 +12,18 @@
   "controls": {
     "keyboard_raw": true,
     "keyboard_extra": {
-      "Ctrl + F9": "Quit"
+      "Ctrl + F9": "Quit",
+      "Ctrl + F1": "Keymapper",
+      "Ctrl + F4": "Change CD",
+      "Ctrl + F5": "Screenshot",
+      "Ctrl + Alt + F5": "Record Video",
+      "Ctrl + F6": "Record Audio",
+      "Ctrl + F7": "Frameskip -",
+      "Ctrl + F8": "Frameskip +",
+      "Ctrl + F10": "Toggle Mouse",
+      "Ctrl + F11": "Cycles -",
+      "Ctrl + F12": "Cycles +",
+      "Alt + F12": "Turbo"
     }
   }
 }

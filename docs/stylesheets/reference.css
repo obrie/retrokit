@@ -129,11 +129,11 @@ table td {
 }
 
 #controllers div:nth-child(1):nth-last-child(3) img {
-  max-height: 200px;
+  max-height: 150px;
 }
 
 #controllers div:nth-child(2):nth-last-child(2) img {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 #controller-mappings img {
