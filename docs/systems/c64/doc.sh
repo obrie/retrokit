@@ -220,7 +220,7 @@ __add_vice_keyboard_controls() {
   local core_options_file=$1
   local edit_args=()
 
-  local datasette_keys_enabled=$(crudini -- get "$core_options_file" '' vice_datasette_hotkeys 2>/dev/null | tr -d '"')
+  local datasette_keys_enabled=$(crudini --get "$core_options_file" '' vice_datasette_hotkeys 2>/dev/null | tr -d '"')
 
   for vice_action in ${vice_actions_list[@]}; do
     local core_option_name="vice_mapper_$vice_action"
@@ -257,8 +257,6 @@ __add_vice_retropad_controls() {
   local core_options_file=$1
   local edit_args=()
 
-  local datasette_keys_enabled=$(crudini -- get "$core_options_file" '' vice_datasette_hotkeys 2>/dev/null | tr -d '"')
-
   for vice_button in ${vice_mapper_buttons[@]}; do
     local core_option_name="vice_mapper_$vice_button"
 
@@ -267,12 +265,6 @@ __add_vice_retropad_controls() {
       retro_key="${vice_mapper_defaults[$vice_button]}"
     else
       retro_key=$(crudini --get "$core_options_file" '' "$core_option_name" 2>/dev/null | tr -d '"')
-    fi
-
-    # Check if there's a setting that disables this action
-    local enabled=true
-    if [[ "$vice_action" == *datasette* ]] && [ "$vice_action" != 'datasette_toggle_hotkeys' ] && [ "$datasette_keys_enabled" != 'true' ]; then
-      enabled=false
     fi
 
     if [ -n "$retro_key" ] && [ "$retro_key" != '---' ]; then
