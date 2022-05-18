@@ -141,11 +141,6 @@ daphne_keys=(
 
 hypseus_mapping_file='/opt/retropie/configs/daphne/hypinput.ini'
 
-# Determines whether the given ROM has any doc overrides
-__has_rom_overrides() {
-  return 1
-}
-
 # Add daphne-specific controls
 __add_system_extensions() {
   __add_hypseus_keyboard_controls "${@}"
