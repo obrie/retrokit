@@ -41,26 +41,29 @@ __configure_manualkit() {
 # Install autostart script
 __configure_autostart() {
   mkdir -pv /opt/retropie/configs/all/autostart.d/manualkit/
-  for hook in onstart onend; do
+  while read hook_filename; do
+    local hook=${hook_filename%.*}
     file_cp "{config_dir}/manualkit/autostart/$hook.sh" "/opt/retropie/configs/all/autostart.d/manualkit/$hook.sh" backup=false envsubst=false
-  done
+  done < <(each_path '{config_dir}/manualkit/autostart' ls '{}' | uniq)
 }
 
 # Install emulationstation hooks
 __configure_emulationstation() {
-  for hook in game-end game-select game-start quit system-select; do
+  while read hook_filename; do
+    local hook=${hook_filename%.*}
     local target_dir="$HOME/.emulationstation/scripts/$hook"
     mkdir -pv "$target_dir"
     file_cp "{config_dir}/manualkit/emulationstation-scripts/$hook.sh" "$target_dir/manualkit.sh" backup=false envsubst=false
-  done
+  done < <(each_path '{config_dir}/manualkit/emulationstation-scripts' ls '{}' | uniq)
 }
 
 # Install emulationstation hooks
 __configure_runcommand() {
   mkdir -pv /opt/retropie/configs/all/runcommand.d/manualkit/
-  for hook in onstart onend; do
+  while read hook_filename; do
+    local hook=${hook_filename%.*}
     file_cp "{config_dir}/manualkit/runcommand/$hook.sh" "/opt/retropie/configs/all/runcommand.d/manualkit/$hook.sh" backup=false envsubst=false
-  done
+  done < <(each_path '{config_dir}/manualkit/runcommand' ls '{}' | uniq)
 }
 
 restore() {
