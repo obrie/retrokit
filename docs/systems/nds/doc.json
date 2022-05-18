@@ -18,8 +18,13 @@
       "Tab": "Menu",
       "Esc": "Quit"
     },
-    "hotkeys_extra": {
-      "right_stick,Left": "Menu"
+    "retropad": {
+      "l3": "Cursor Press",
+      "left_stick,✛": "Cursor Move",
+      "right_stick,⬅": "Menu",
+      "right_stick,➡": "Fast Forward",
+      "right_stick,⬆": "State: Save",
+      "right_stick,⬇": "State: Load"
     }
   }
 }
