@@ -312,6 +312,11 @@ __add_system_extensions() {
   return
 }
 
+# Determines whether the given ROM has any doc overrides
+__has_rom_overrides() {
+  return 1
+}
+
 # Finds the retroarch keyboard key associated with the given button
 __find_retroarch_config() {
   local config_name=$1
