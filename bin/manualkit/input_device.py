@@ -9,7 +9,7 @@ from pathlib import Path
 
 import manualkit.keycodes
 
-from typing import Callable, Optional
+from typing import Callable, NamedTuple, Optional
 
 # Represents the type of input that we're listening to
 class InputType(Enum):
@@ -21,11 +21,12 @@ class InputType(Enum):
         self.retroarch_codes = retroarch_codes
 
 # Represents a callback to invoke when a given code is encountered
-class Handler:
-    def __init__(self, input_filter: dict, callback: Callable, grabbed: bool) -> None:
-        self.input_filter = input_filter
-        self.callback = callback
-        self.grabbed = grabbed
+class Handler(NamedTuple):
+    input_filter: dict
+    callback: Callable
+    grabbed: bool
+    on_key_down: bool
+    repeat: bool
 
 # Represents an evdev device that we're listening for events from
 # 
@@ -49,6 +50,7 @@ class InputDevice():
         self.grabbed = False
         self.hotkey = hotkey
         self.handlers = {}
+        self.release_handler = None
 
         # asyncio tasks
         self.event_reader_task = None
@@ -62,7 +64,7 @@ class InputDevice():
         self.active_inputs = {}
 
     # Executes a callback when the given input code is detected on this device
-    def on(self, input_code: str, callback: Callable, hotkey: False, grabbed: bool = True) -> None:
+    def on(self, input_code: str, callback: Callable, hotkey: False, grabbed: bool = True, on_key_down: bool = True, repeat: bool = True) -> None:
         input_codes = [input_code]
         if isinstance(hotkey, str):
             if hotkey != 'false':
@@ -75,7 +77,7 @@ class InputDevice():
         input_filter = dict(map(lambda code: evdev_codes[code], input_codes))
 
         # Track the handler
-        self.handlers[frozenset(input_filter.items())] = Handler(input_filter, callback, grabbed)
+        self.handlers[frozenset(input_filter.items())] = Handler(input_filter, callback, grabbed, on_key_down, repeat)
 
     # The path on the filesystem representing this device (/dev/input/eventX)
     @property
@@ -120,6 +122,10 @@ class InputDevice():
             await self.stop_repeater()
 
             if value == KeyEvent.key_down:
+                # Since a new key has been pressed, we have to clear any handler that
+                # was intended to be triggered on release
+                self.release_handler = None
+
                 # Key pressed
                 self.active_inputs[event.code] = event.value
                 self.check_inputs(event)
@@ -127,20 +133,32 @@ class InputDevice():
                 # Key released
                 self.active_inputs.pop(event.code)
 
+            if not self.active_inputs and self.release_handler:
+                # All inputs have been released -- now we can trigger the handler
+                self.trigger(self.release_handler)
+
     # Check the currently active inputs to see if they should trigger an event
     def check_inputs(self, event: evdev.InputEvent) -> None:
         handler = self.handlers.get(frozenset(self.active_inputs.items()))
         if handler and (not handler.grabbed or self.grabbed):
-            self.trigger(handler.callback)
+            if handler.on_key_down:
+                # Trigger the handler immediately
+                self.trigger(handler)
+            else:
+                # Only trigger the handler once all inputs have been released
+                self.release_handler = handler
 
     # Triggers a callback and starts a new asyncio task in order to simulate a
     # "hold" pattern in which the event is repeated.
     # 
     # This is done in order to handle certain devices (such as joystick) which can
     # hold down a navigation button but don't actually trigger hold events.
-    def trigger(self, callback: Callable) -> None:
-        callback(False)
-        self.start_repeater(callback)
+    def trigger(self, handler: Handler) -> None:
+        self.release_handler = None
+
+        handler.callback(False)
+        if handler.repeat:
+            self.start_repeater(handler.callback)
 
     # Starts asynchronously triggering repeat events to simulate "hold" behavior
     # on a key
