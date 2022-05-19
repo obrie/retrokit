@@ -12,5 +12,10 @@
   "images": {
     "controller": "controller.png",
     "retropad": "retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "start": "Pause"
+    }
   }
 }
