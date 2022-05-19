@@ -4,10 +4,6 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Sega32X",
-        "path": "retroarch/overlay/GameBezels/Sega32X"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-Sega32X",
         "path": "retroarch/overlay/GameBezels/Sega32X",
         "default": "retroarch/overlay/Sega-32X.png"
       }
