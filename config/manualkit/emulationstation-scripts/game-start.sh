@@ -10,7 +10,7 @@ rom_name=${rom_filename%.*}
 # Determine system name.  We can't use $1 because this will be "all" or "favorites"
 # when browsing those collections.  We instead need to rely on the rom path.
 system_relative_dir=${rom_path/"$HOME/RetroPie/roms/"/}
-system=${system_relative_dir%/*}
+system=${system_relative_dir%%/*}
 
 media_dir="$HOME/.emulationstation/downloaded_media/$system"
 rom_manual_path="$media_dir/manuals/$rom_name.pdf"
