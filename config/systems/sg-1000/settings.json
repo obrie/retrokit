@@ -4,10 +4,6 @@
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SG-1000",
-        "path": "retroarch/overlay/GameBezels/SG-1000"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-SG-1000",
         "path": "retroarch/overlay/GameBezels/SG-1000",
         "default": "retroarch/overlay/Sega-SG-1000.png"
       }
