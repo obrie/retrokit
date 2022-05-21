@@ -139,28 +139,28 @@ class PDF():
 
     # Moves left, when zoomed in, or to the previous page when not zoomed
     def move_left(self) -> None:
-        if self.zoom_level == 0:
+        if self.clip_rect.width <= self.width:
             self.prev()
         else:
             self.move(x_direction=-1)
 
     # Moves right, when zoomed in, or to the next page when not zoomed
     def move_right(self) -> None:
-        if self.zoom_level == 0:
+        if self.clip_rect.width <= self.width:
             self.next()
         else:
             self.move(x_direction=1)
 
     # Moves up, when zoomed in, or to the previous page when not zoomed
     def move_up(self) -> None:
-        if self.zoom_level == 0:
+        if self.clip_rect.height <= self.height:
             self.prev()
         else:
             self.move(y_direction=-1)
 
     # Moves down, when zoomed in, or to the next page when not zoomed
     def move_down(self) -> None:
-        if self.zoom_level == 0:
+        if self.clip_rect.height <= self.height:
             self.next()
         else:
             self.move(y_direction=1)
