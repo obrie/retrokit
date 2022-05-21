@@ -16,7 +16,14 @@
   "controls": {
     "retropad": {
       "select": "Keyboard",
-      "y": "Keyboard +/-"
+      "y": "Keyboard +/-",
+      "x": "Num 0",
+      "l1": "Num 1",
+      "r1": "Num 2",
+      "l2": "Num 3",
+      "r2": "Num 4",
+      "l3": "Num 5",
+      "r3": "Num 6"
     }
   }
 }

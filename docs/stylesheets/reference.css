@@ -136,6 +136,10 @@ table td {
   max-height: 400px;
 }
 
+#controllers div:nth-child(3):nth-last-child(1) thead {
+  display: none;
+}
+
 #controller-mappings img {
   height: 60px;
 }
