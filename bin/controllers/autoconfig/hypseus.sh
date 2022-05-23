@@ -244,10 +244,13 @@ function map_hypseus_joystick() {
                     button="${BASH_REMATCH[3]}"
 
                     if [[ "$input_value" == "1" ]]; then
-                        axis="+$((input_id+1))"
+                        axis="+0$((input_id+1))"
                     else
-                        axis="-$((input_id+1))"
+                        axis="-0$((input_id+1))"
                     fi
+                elif [[ "$input_type" == "hat" ]]; then
+                    button="0"
+                    axis="${BASH_REMATCH[4]}"
                 else
                     button=$((input_id+1))
                     axis="${BASH_REMATCH[4]}"
