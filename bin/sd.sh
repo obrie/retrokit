@@ -40,6 +40,18 @@ backup() {
   sudo dd bs=4M if=$device status=progress | gzip > "$backup_to_path"
 }
 
+clone() {
+  [[ $# -ne 2 ]] && usage
+  local source_device=$1
+  local target_device=$2
+
+  read -p "This will overwrite the data on $target_device. Are you sure (y/n)? " -n 1 -r
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    sudo dd bs=4M if=$source_device of=$target_device status=progress
+  fi
+}
+
 sync() {
   [[ $# -ne 2 ]] && usage
   local sync_from_path=${1%/}
