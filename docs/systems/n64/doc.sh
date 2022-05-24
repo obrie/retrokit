@@ -219,7 +219,7 @@ __add_mupen64plus_keyboard_controls() {
     if [ ! -f "$config_file" ] || ! grep -Eq "^$config_name " "$config_file"; then
       input_id="${keyboard_action_defaults[$keyboard_action]}"
     else
-      input_id=$(crudini --get "$config_file" 'Core Events' "$config_name" 2>/dev/null | tr -d '"')
+      input_id=$(crudini --get "$config_file" 'CoreEvents' "$config_name" 2>/dev/null | tr -d '"')
     fi
 
     if [ -n "$input_id" ] && [ "${sdl1_map[$input_id]}" != '' ]; then
