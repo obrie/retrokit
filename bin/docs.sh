@@ -5,7 +5,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 usage() {
   echo "usage:"
-  echo " $0 <build>"
+  echo " $0 build"
+  echo " $0 build_intro <target_pdf_path>"
   exit 1
 }
 
@@ -18,6 +19,10 @@ build() {
 
 build_intro() {
   local target_path=$1
+  if [ -z "$target_path" ]; then
+    usage
+  fi
+
   local template=$(first_path '{docs_dir}/intro.html.jinja')
 
   local doc_data_path="$tmp_ephemeral_dir/doc-intro.json"
