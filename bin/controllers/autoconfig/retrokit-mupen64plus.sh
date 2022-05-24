@@ -2,7 +2,8 @@
 
 # Add support for:
 # * Setting up the keyboard in mupen64plus
-# * Overriding joystick configurations to improve axis handling
+# * Overriding joystick configurations to improve axis handling by allowing a joystick's
+#   HAT to be used for the Axis configuration
 
 function onstart_retrokit-mupen64plus_keyboard() {
     onstart_mupen64plus_joystick
