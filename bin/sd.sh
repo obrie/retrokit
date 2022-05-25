@@ -94,12 +94,23 @@ sync_media() {
     /opt/retropie/configs/all/skyscraper/cache/
   )
 
-  local remote_user=$(stat -c '%U' "$sync_to_path/home/pi")
-  local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
-
   for path in "${paths[@]}"; do
     if [ -d "$sync_from_path$path" ]; then
-      sudo install -dv -m 0755 -o "$remote_user" -g "$remote_group" "$sync_to_path$path"
+      # Get the top-level new directory we're creating
+      local sync_to_base_path="$sync_to_path$path"
+      while [ ! -d "$(dirname "$sync_to_base_path")" ]; do
+        sync_to_base_path=$(dirname "$sync_to_base_path")
+      done
+
+      # Make sure permissions are set properly
+      if [ ! -d "$sync_to_base_path" ]; then
+        local remote_user=$(stat -c '%U' "$sync_from_path$path")
+        local remote_group=$(stat -c '%G' "$sync_from_path$path")
+        mkdir -pv "$sync_to_path$path"
+        chown -Rv "$remote_user:$remote_group" "$sync_to_base_path"
+      fi
+
+      # Copy over files
       sudo rsync -av $rsync_args "$sync_from_path$path" "$sync_to_path$path"
     fi
   done
