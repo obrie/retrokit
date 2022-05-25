@@ -177,7 +177,7 @@ all of your personal preferences.
    ```
 1. Reboot
    ```
-   sudo shutdown -r 0
+   sudo reboot
    ```
 1. Update RetroPie-Setup and its packages
    ```
@@ -192,7 +192,7 @@ all of your personal preferences.
    ```
 1. Reboot
    ```
-   sudo shutdown -r 0
+   sudo reboot
    ```
 1. Have fun!
 
@@ -332,10 +332,12 @@ bin/sd.sh backup /path/to/device /path/to/backup/folder
 bin/sd.sh restore /path/to/device /path/to/backup/folder
 
 # RSync files from the retropie partition to another directory
-bin/sd.sh sync /path/to/mounted_retropie_source /path/to/retropie_target
+# (recommend sudo for long-running ops)
+sudo bin/sd.sh sync /path/to/mounted_retropie_source /path/to/retropie_target
 
 # RSync media files only from the retropie partition to another directory
-bin/sd.sh sync_media /path/to/mounted_retropie_source /path/to/retropie_target
+# (recommend sudo for long-running ops)
+sudo bin/sd.sh sync_media /path/to/mounted_retropie_source /path/to/retropie_target
 ```
 
 vacuum:
