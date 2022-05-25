@@ -42,11 +42,6 @@ class PCSystem(BaseSystem):
             conf_file.filename = 'dosbox.conf'
             conf_zip.extract(conf_file, machine_dir)
 
-            if f'{exodos_name}/mapper.map' in conf_zip.namelist():
-                mapper_file = conf_zip.getinfo(f'{exodos_name}/mapper.map')
-                mapper_file.filename = 'mapper.map'
-                conf_zip.extract(zip_info, mapper_file)
-
             self.setup_config(machine)
 
     # Updates the dosbox configuration with overall and game-specific overrides provided
