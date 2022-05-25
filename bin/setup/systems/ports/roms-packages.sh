@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 . "$dir/helpers.sh"
 
-setup_module_id='system/ports/packages'
+setup_module_id='system/ports/roms-packages'
 setup_module_desc='RetroPie Port installation (games ported to linux)'
 
 build() {

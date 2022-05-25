@@ -183,7 +183,7 @@
 
     "system-emulators",
     "systems/arcade/advmame",
-    "systems/ports/packages",
+    "systems/ports/roms-packages",
     "emulationstation-systems",
     "hardware/controllers",
     "hardware/controllers/sinden",
@@ -215,7 +215,7 @@
     "systems/n64/config",
     "systems/nds/config",
     "systems/pc/config",
-    "systems/ports/gamefiles",
+    "systems/ports/roms-gamefiles",
     "systems/psp/config",
     "systems/psp/cheats",
     "systems/videopac/samples"

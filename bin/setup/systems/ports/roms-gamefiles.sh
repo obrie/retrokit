@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 . "$dir/helpers.sh"
 
-setup_module_id='system/ports/gamefiles'
+setup_module_id='system/ports/roms-gamefiles'
 setup_module_desc='Port file installation, using files from the system-roms-download setup script'
 
 configure() {
