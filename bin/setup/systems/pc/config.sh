@@ -16,11 +16,14 @@ depends() {
 configure() {
   ini_merge '{system_config_dir}/dosbox-staging.conf' '/opt/retropie/configs/pc/dosbox-staging.conf'
   ini_merge '{system_config_dir}/dosbox-SVN.conf' '/opt/retropie/configs/pc/dosbox-SVN.conf'
+  file_cp '{system_config_dir}/mapperfiles/default.map' '/opt/retropie/configs/pc/mapperfiles/default.map' backup=false
+  sed -i '/^[ \t]*#/d' /opt/retropie/configs/pc/mapperfiles/default.map
 }
 
 restore() {
   restore_file '/opt/retropie/configs/pc/dosbox-staging.conf' delete_src=true
   restore_file '/opt/retropie/configs/pc/dosbox-SVN.conf' delete_src=true
+  rm -rfv /opt/retropie/configs/pc/mapperfiles
 }
 
 remove() {
