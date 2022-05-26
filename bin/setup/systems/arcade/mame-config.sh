@@ -14,15 +14,15 @@ configure() {
 }
 
 __configure_mame2016() {
-  ini_merge '{system_config_dir}/mame2016/plugin.ini' "$HOME/RetroPie/BIOS/mame2016/ini/plugin.ini" backup=false
-  ini_merge '{system_config_dir}/mame2016/ui.ini' "$HOME/RetroPie/BIOS/mame2016/ini/ui.ini" backup=false
+  file_cp '{system_config_dir}/mame2016/plugin.ini' "$HOME/RetroPie/BIOS/mame2016/ini/plugin.ini" backup=false
+  file_cp '{system_config_dir}/mame2016/ui.ini' "$HOME/RetroPie/BIOS/mame2016/ini/ui.ini" backup=false
   file_cp '{system_config_dir}/mame2016/default.cfg' "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg" backup=false
 }
 
 __configure_mame() {
-  ini_merge '{system_config_dir}/mame/mame.ini' "$HOME/RetroPie/BIOS/mame/ini/mame.ini" backup=false
-  ini_merge '{system_config_dir}/mame/plugin.ini' "$HOME/RetroPie/BIOS/mame/ini/plugin.ini" backup=false
-  ini_merge '{system_config_dir}/mame/ui.ini' "$HOME/RetroPie/BIOS/mame/ini/ui.ini" backup=false
+  file_cp '{system_config_dir}/mame/mame.ini' "$HOME/RetroPie/BIOS/mame/ini/mame.ini" backup=false
+  file_cp '{system_config_dir}/mame/plugin.ini' "$HOME/RetroPie/BIOS/mame/ini/plugin.ini" backup=false
+  file_cp '{system_config_dir}/mame/ui.ini' "$HOME/RetroPie/BIOS/mame/ini/ui.ini" backup=false
   file_cp '{system_config_dir}/mame/default.cfg' "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg" backup=false
 }
 
