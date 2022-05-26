@@ -40,13 +40,13 @@ __add_system_extensions() {
   local html=""
   for column in $(seq 1 3); do
     local button_index=${layout_button_index[column-1]}
-    html="${html}$(__create_button 'top' $column "${layout_button_names[button_index-1]}" "${button_actions[button_index-1]}" "$button_class")"
+    html="${html}$(__create_button 'top' $column "${layout_button_names[column-1]}" "${button_actions[button_index-1]}" "$button_class")"
   done
 
   # Build bottom row
   for column in $(seq 1 3); do
     local button_index=${layout_button_index[column+2]}
-    html="${html}$(__create_button 'bottom' $column "${layout_button_names[button_index-1]}" "${button_actions[button_index-1]}" "$button_class")"
+    html="${html}$(__create_button 'bottom' $column "${layout_button_names[column+2]}" "${button_actions[button_index-1]}" "$button_class")"
   done
 
   html="<ol id=\"controller-retropad-buttons\">$html</ol>"
