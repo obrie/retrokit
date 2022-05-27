@@ -1,7 +1,7 @@
 {
   "system": "pc",
   "scraper": {
-    "args": ["--excludefiles", "*DOSBox*"]
+    "args": ["--excludepattern", "*DOSBox*"]
   },
   "emulators": {
     "dosbox-staging": {"default": true},
