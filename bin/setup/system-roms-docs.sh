@@ -46,7 +46,7 @@ build() {
 
     # Build the PDF
     cp "$base_doc_data_file" "$doc_data_file"
-    __add_system_extensions "$core_options_file" "$name" "$parent_name"
+    __add_system_extensions "$core_options_file" "$name" "$parent_name" "$emulator"
     __build_pdf "$staging_path"
 
     # Move PDF to final location
