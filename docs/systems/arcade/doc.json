@@ -20,8 +20,113 @@
       "select": "Insert Coin"
     },
     "layout": {
-      "buttons": ["Y", "X", "L", "B", "A", "R"],
-      "ids": [4, 5, 6, 1, 2, 3]
+      "panel": "YXLBAR",
+      "emulators": {
+        "ABXYLR": [
+          "lr-mame2003",
+          "lr-mame2010",
+          "lr-mame2015",
+          "lr-mame2016",
+          "advmame"
+        ],
+        "BAYXRL": [
+          "default",
+          "lr-mame2003-plus",
+          "lr-mame",
+          "lr-fbneo"
+        ]
+      },
+      "roms": {
+        "YXBALR": [
+          "avengrgs",
+          "bloodwar",
+          "daraku",
+          "drgnmst",
+          "primrage",
+          "rabbit",
+          "shogwarr",
+          "tekken",
+          "tekken2",
+          "tkdensho",
+          "vf"
+        ],
+        "YXABLR": [
+          "jojo",
+          "jojoba",
+          "souledge",
+          "soulclbr",
+          "svg"
+        ],
+        "BYXALR": [
+          "doapp"
+        ],
+        "YBAXLR": [
+          "ehrgeiz"
+        ],
+        "LYXRBA": [
+          "ts2"
+        ],
+        "YXLBAR": [
+          "dstlk",
+          "hsf2",
+          "msh",
+          "mshvsf",
+          "mvsc",
+          "nwarr",
+          "redearth",
+          "rvschool",
+          "sf2",
+          "sf2ce",
+          "sf2hf",
+          "sfa",
+          "sfa2",
+          "sfa3",
+          "sfex",
+          "sfex2",
+          "sfex2p",
+          "sfexp",
+          "sfiii",
+          "sfiii2",
+          "sfiii3",
+          "sftm",
+          "sfz2al",
+          "ssf2",
+          "ssf2t",
+          "vhunt2",
+          "vsav",
+          "vsav2",
+          "xmcota",
+          "xmvsf",
+          "astrass",
+          "brival",
+          "btlkroad",
+          "dankuga",
+          "dragoona",
+          "ffreveng",
+          "fghthist",
+          "fgtlayer",
+          "gaxeduel",
+          "groovef",
+          "kaiserkn"
+        ],
+        "LYXRBA": [
+          "kinst"
+        ],
+        "LYXBAR": [
+         "kinst2"
+        ],
+        "YXRBAL": [
+          "tektagt",
+          "tekken3"
+        ],
+        "YLXBAR": [
+          "mk",
+          "mk2",
+          "mk3",
+          "umk3",
+          "wwfmania"
+        ]
+      }
     }
   }
 }
