@@ -910,7 +910,25 @@ These guides include:
 * Images of RetroArch's controller configuration
 * Game-specific controller overrides
 
-The guides can be viewed by loading the manual via manualkit's configured hotkey and
+The guides are dynamically generated from your current configuration in RetroArch
+and additional system-specific configurations for:
+
+* c64
+* daphne
+* n64
+* nes
+* pc
+* pcengine
+
+Additionally, there are ROM-specific guides available with special features, including:
+
+* arcade: Joystick layout and button actions
+
+With the Arcade reference guides, you can quickly pull up which buttons map to which
+actions within the game and have it drawn on the screen to match your own control
+panel layout.
+
+All guides can be viewed by loading the manual via manualkit's configured hotkey and
 scrolling to the end of the manual (you can just go in reverse if you're on the first
 page of the manual).  If the game has no manual, an image will be displayed saying
 "No Manual".  However, you'll still be able to scroll forward to the reference guide.
