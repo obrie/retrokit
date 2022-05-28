@@ -1,5 +1,8 @@
 {
   "system": "c64",
+  "scraper": {
+    "args": ["--includepattern", "*.zip"]
+  },
   "overlays": {
     "repos": [
       {
