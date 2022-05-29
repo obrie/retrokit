@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='systems/arcade/advmame'
 setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
 
-config_path='/opt/retropie/configs/mame-advmame/advmame-joy.rc'
+config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
 
 configure() {
   __configure_dirs
