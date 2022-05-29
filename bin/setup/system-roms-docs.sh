@@ -16,7 +16,6 @@ build() {
 
   # Start with a base controls file
   local base_doc_data_file=$doc_data_file
-  echo '{}' > "$base_doc_data_file"
   __add_hrefs
   __add_system_theme
   __add_keyboard_controls

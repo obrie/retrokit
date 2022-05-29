@@ -23,8 +23,6 @@ build() {
     return
   fi
 
-  echo '{}' > "$doc_data_file"
-
   __source_system_extensions || true
   __add_hrefs
   __add_system_theme
