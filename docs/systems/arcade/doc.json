@@ -21,6 +21,7 @@
     },
     "layout": {
       "panel": "YXLBAR",
+      "labels": ["Y", "X", "L", "B", "A", "R"],
       "emulators": {
         "ABXYLR": [
           "lr-mame2003",
