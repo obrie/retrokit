@@ -44,8 +44,10 @@ function install_advmame-joy() {
 
 function configure_advmame-joy() {
     # Symlink the rc file
-    mkUserDir "$md_conf_root/mame-advmame"
-    ln -sf "$md_conf_root/mame-advmame/advmame.rc" "$md_conf_root/mame-advmame/$md_id.rc"
+    if [[ "$md_mode" == "install" ]]; then
+        mkUserDir "$md_conf_root/mame-advmame"
+        ln -sf "$md_conf_root/mame-advmame/advmame.rc" "$md_conf_root/mame-advmame/$md_id.rc"
+    fi
 
     configure_advmame
 }
