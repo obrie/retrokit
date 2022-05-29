@@ -16,8 +16,8 @@ function onstart_ir_keyboard() {
     local source_keymap_path=$ini_value
 
     # Get the location of the target keymap file that wiil have the mappings
-    iniGet 'target_keymap_path'
-    declare -g target_keymap_path=$ini_value
+    iniGet 'ir_target_keymap_path'
+    declare -g ir_target_keymap_path=$ini_value
 
     # Create a temp keymap file that has no scan codes
     sed -n '/\[protocols.scancodes\]/q;p' "$source_keymap_path" > '/tmp/rc_keymap.toml'
@@ -25,9 +25,9 @@ function onstart_ir_keyboard() {
     iniConfig ' = ' '' '/tmp/rc_keymap.toml'
 
     # Inverse the mappings from the keymap file
-    declare -Ag scanmap
+    declare -Ag ir_scanmap
     while read -r scancode keyname; do
-        scanmap["$keyname"]="${scanmap["$keyname"]},$scancode"
+        ir_scanmap["$keyname"]="${ir_scanmap["$keyname"]},$scancode"
     done < <(grep "0x" "$source_keymap_path" | sed 's/["=]//g')
 
     # SDL codes from https://wiki.libsdl.org/SDLKeycodeLookup
@@ -144,7 +144,7 @@ function onstart_ir_keyboard() {
 
         for key in ${keys//,/ }; do
             # Find the corresponding scancodes
-            local scancodes=${scanmap["$key"]}
+            local scancodes=${ir_scanmap["$key"]}
             if [ -z "$scancodes" ]; then
                 continue
             fi
@@ -216,7 +216,7 @@ function map_ir_keyboard() {
 
     for key in "${keys[@]}"; do
         # Find the corresponding scancodes
-        local scancodes=${scanmap["$key"]}
+        local scancodes=${ir_scanmap["$key"]}
         if [ -z "$scancodes" ]; then
             continue
         fi
@@ -231,5 +231,5 @@ function map_ir_keyboard() {
 }
 
 function onend_ir_keyboard() {
-    sudo mv '/tmp/rc_keymap.toml' "$target_keymap_path"
+    sudo mv '/tmp/rc_keymap.toml' "$ir_target_keymap_path"
 }
