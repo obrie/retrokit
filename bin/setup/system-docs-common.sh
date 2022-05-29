@@ -207,6 +207,8 @@ retropad_buttons_map=(
 
 # Path to which documenation data will be tracked
 doc_data_file="$tmp_ephemeral_dir/doc.json"
+echo '{}' > "$doc_data_file"
+json_merge '{system_docs_dir}/doc.json' "$doc_data_file" backup=false >/dev/null
 
 __add_hrefs() {
   local common_stylesheet_href=$(first_path "{docs_dir}/stylesheets/common.css")
@@ -236,7 +238,7 @@ __add_system_theme() {
 __add_keyboard_controls() {
   # Look up keyboard controls as long as the system doesn't use the keyboard
   # as an actual keyboard
-  local uses_raw_keyboard=$(jq '.controls .keyboard_raw' "$(first_path '{system_docs_dir}/doc.json')")
+  local uses_raw_keyboard=$(jq '.controls .keyboard_raw' "$doc_data_file")
   if [ "$uses_raw_keyboard" != 'true' ]; then
     local edit_args=()
 
@@ -363,12 +365,9 @@ __find_retroarch_hotkey_button() {
 __build_pdf() {
   local output_path=$1
 
-  # Build full JSON variables for system (static + controls)
-  jq -s '.[0] * .[1]' "$(first_path '{system_docs_dir}/doc.json')" "$doc_data_file" > "$tmp_ephemeral_dir/system.json"
-
   # Render Jinja => Markdown
   local reference_template=$(first_path '{docs_dir}/reference.html.jinja')
-  jinja2 "$reference_template" "$tmp_ephemeral_dir/system.json" > "$tmp_ephemeral_dir/reference.html"
+  jinja2 "$reference_template" "$doc_data_file" > "$tmp_ephemeral_dir/reference.html"
 
   # Render HTML => PDF
   chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$tmp_ephemeral_dir/reference.html" 2>/dev/null
