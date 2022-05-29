@@ -23,18 +23,8 @@
       "panel": "YXLBAR",
       "labels": ["Y", "X", "L", "B", "A", "R"],
       "emulators": {
-        "ABXYLR": [
-          "lr-mame2003",
-          "lr-mame2010",
-          "lr-mame2015",
-          "lr-mame2016",
-          "advmame"
-        ],
         "BAYXRL": [
-          "default",
-          "lr-mame2003-plus",
-          "lr-mame",
-          "lr-fbneo"
+          "default"
         ]
       },
       "roms": {

@@ -29,6 +29,16 @@ function _onstart_advmame() {
 
     declare -Ag mapped_inputs
     declare -g hotkey_value
+
+    # Determine which layout we're setting up for advmame
+    local advmame_layout=$(getAutoConf 'advmame_layout')
+    advmame_layout=${advmame_layout:-b=1,a=2,y=3,x=4,r=5,l=6,r2=7,l2=8,r3=9,l3=10}
+    declare -Ag button_mappings
+
+    for mapping in ${advmame_layout//,/ }; do
+        IFS='=' read button_name button_id <<< $mapping
+        button_mappings[$button_name]=$button_id
+    done
 }
 
 function onstart_advmame_joystick() {
@@ -165,32 +175,29 @@ function _get_player_key() {
         up|down|left|right)
             key="p${player}_${input_name}"
             ;;
-        a)
-            key="p${player}_button1"
-            ;;
-        b)
-            key="p${player}_button2"
-            ;;
-        x)
-            key="p${player}_button3"
-            ;;
-        y)
-            key="p${player}_button4"
+        a|b|x|y)
+            key="p${player}_button${button_mappings[$input_name]}"
             ;;
         start)
             key="start$player"
             ;;
         leftbottom|leftshoulder)
-            key="p${player}_button6"
+            key="p${player}_button${button_mappings[l]}"
             ;;
         rightbottom|rightshoulder)
-            key="p${player}_button5"
+            key="p${player}_button${button_mappings[r]}"
             ;;
         lefttop|lefttrigger)
-            key="p${player}_button8"
+            key="p${player}_button${button_mappings[l2]}"
             ;;
         righttop|righttrigger)
-            key="p${player}_button7"
+            key="p${player}_button${button_mappings[r2]}"
+            ;;
+        leftthumb)
+            key="p${player}_button${button_mappings[l3]}"
+            ;;
+        rightthumb)
+            key="p${player}_button${button_mappings[r3]}"
             ;;
         select)
             key="coin$player"
