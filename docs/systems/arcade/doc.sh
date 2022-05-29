@@ -34,10 +34,11 @@ __add_system_extensions() {
   fi
 
   # Look up the control panel layout
-  local control_panel_layout=$(jq -r '.controls .layout .panel' "$(first_path '{system_docs_dir}/doc.json')")
+  local control_panel_layout=$(jq -r '.controls .layout .panel' "$doc_data_file")
+  local control_panel_labels=($(jq -r '.controls .layout .labels[]' "$doc_data_file"))
 
   # Look up the button mapping layout
-  local button_mappings=$(jq -r "(.controls .layout .roms | to_entries[] | select(.value | index(\"${parent_name:-$name}\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"$emulator\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"default\")) | .key)" "$(first_path '{system_docs_dir}/doc.json')")
+  local button_mappings=$(jq -r "(.controls .layout .roms | to_entries[] | select(.value | index(\"${parent_name:-$name}\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"$emulator\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"default\")) | .key)" "$doc_data_file")
 
   # Map button names to the corresponding actions based on their mapping index
   # (i.e. the index of each button within $button_mappings)
@@ -56,17 +57,19 @@ __add_system_extensions() {
   local html=""
   for column in $(seq 1 3); do
     local control_panel_name=${control_panel_layout:column-1:1}
+    local control_panel_label=${control_panel_labels[column-1]}
     local button_action=${button_name_actions[$control_panel_name]}
 
-    html="${html}$(__create_button 'top' $column "$control_panel_name" "$button_action" "$button_class")"
+    html="${html}$(__create_button 'top' $column "$control_panel_label" "$button_action" "$button_class")"
   done
 
   # Build bottom row
   for column in $(seq 1 3); do
     local control_panel_name=${control_panel_layout:column+2:1}
+    local control_panel_label=${control_panel_labels[column+2]}
     local button_action=${button_name_actions[$control_panel_name]}
 
-    html="${html}$(__create_button 'bottom' $column "$control_panel_name" "$button_action" "$button_class")"
+    html="${html}$(__create_button 'bottom' $column "$control_panel_label" "$button_action" "$button_class")"
   done
 
   html="<ol id=\"controller-retropad-buttons\">$html</ol>"
