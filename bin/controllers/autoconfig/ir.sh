@@ -16,7 +16,7 @@ function onstart_ir_keyboard() {
     local source_keymap_path=$ini_value
 
     # Get the location of the target keymap file that wiil have the mappings
-    iniGet 'ir_target_keymap_path'
+    iniGet 'target_keymap_path'
     declare -g ir_target_keymap_path=$ini_value
 
     # Create a temp keymap file that has no scan codes
