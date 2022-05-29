@@ -27,17 +27,18 @@ function _onstart_advmame() {
     sudo sed -i "/^input_map\[[^]]\+\] $regex\$/d" '/tmp/advmame.rc'
     sudo sed -i "s/ or $regex\|$regex or//g" '/tmp/advmame.rc'
 
-    declare -Ag mapped_inputs
-    declare -g hotkey_value
+    declare -Ag advmame_mapped_inputs
+    declare -g advmame_hotkey_value
 
     # Determine which layout we're setting up for advmame
     local advmame_layout=$(getAutoConf 'advmame_layout')
     advmame_layout=${advmame_layout:-b=1,a=2,y=3,x=4,r=5,l=6,r2=7,l2=8,r3=9,l3=10}
-    declare -Ag button_mappings
+    declare -Ag advmame_buttons
 
-    for mapping in ${advmame_layout//,/ }; do
-        IFS='=' read button_name button_id <<< $mapping
-        button_mappings[$button_name]=$button_id
+    local button_config
+    for button_config in ${advmame_layout//,/ }; do
+        IFS='=' read button_name button_id <<< $button_config
+        advmame_buttons[$button_name]=$button_id
     done
 }
 
@@ -176,28 +177,28 @@ function _get_player_key() {
             key="p${player}_${input_name}"
             ;;
         a|b|x|y)
-            key="p${player}_button${button_mappings[$input_name]}"
+            key="p${player}_button${advmame_buttons[$input_name]}"
             ;;
         start)
             key="start$player"
             ;;
         leftbottom|leftshoulder)
-            key="p${player}_button${button_mappings[l]}"
+            key="p${player}_button${advmame_buttons[l]}"
             ;;
         rightbottom|rightshoulder)
-            key="p${player}_button${button_mappings[r]}"
+            key="p${player}_button${advmame_buttons[r]}"
             ;;
         lefttop|lefttrigger)
-            key="p${player}_button${button_mappings[l2]}"
+            key="p${player}_button${advmame_buttons[l2]}"
             ;;
         righttop|righttrigger)
-            key="p${player}_button${button_mappings[r2]}"
+            key="p${player}_button${advmame_buttons[r2]}"
             ;;
         leftthumb)
-            key="p${player}_button${button_mappings[l3]}"
+            key="p${player}_button${advmame_buttons[l3]}"
             ;;
         rightthumb)
-            key="p${player}_button${button_mappings[r3]}"
+            key="p${player}_button${advmame_buttons[r3]}"
             ;;
         select)
             key="coin$player"
@@ -289,8 +290,8 @@ function map_advmame() {
     local value=$4
 
     # Track how each input was mapped so that we can use it with hotkeys
-    if [ -z "${mapped_inputs["$input_name"]}" ]; then
-        mapped_inputs["$input_name"]="$value"
+    if [ -z "${advmame_mapped_inputs["$input_name"]}" ]; then
+        advmame_mapped_inputs["$input_name"]="$value"
     fi
 
     iniGet "input_map\[$key\]"
@@ -355,7 +356,7 @@ function map_advmame_joystick() {
 
         # The hotkey only gets mapped for player 1
         if [ "$player" == '1' ] && [ "$input_name" == 'hotkeyenable' ]; then
-            hotkey_value=$value
+            advmame_hotkey_value=$value
             break
         fi
 
@@ -392,7 +393,7 @@ function map_advmame_keyboard() {
     local value="keyboard[0,$mapping]"
 
     if [ "$input_name" == 'hotkeyenable' ]; then
-        hotkey_value=$value
+        advmame_hotkey_value=$value
     else
         map_advmame "$input_name" "$key" 'keyboard' "$value"
     fi
@@ -408,15 +409,15 @@ function _onend_advmame() {
     local controller=$1
 
     # If a hotkey was defined, set up all the pairings now
-    if [ -n "$hotkey_value" ]; then
-        for input_name in "${!mapped_inputs[@]}"; do
-            local pair_value=${mapped_inputs[$input_name]}
+    if [ -n "$advmame_hotkey_value" ]; then
+        for input_name in "${!advmame_mapped_inputs[@]}"; do
+            local pair_value=${advmame_mapped_inputs[$input_name]}
 
             # Check if there's a hotkey configuration for this input
             local hotkey=$(_get_hotkey "$input_name")
 
             if [ -n "$hotkey" ]; then
-                map_advmame "$input_name" "$hotkey" "$controller" "$hotkey_value $pair_value"
+                map_advmame "$input_name" "$hotkey" "$controller" "$advmame_hotkey_value $pair_value"
             fi
         done
     fi

@@ -18,8 +18,6 @@ function _onstart_drastic() {
     fi
     iniConfig ' = ' '' '/tmp/drastic.cfg'
 
-    declare -g profile_key
-
     local all_config_keys=(
         UP DOWN LEFT RIGHT A B X Y L R START SELECT HINGE
         TOUCH_CURSOR_UP TOUCH_CURSOR_DOWN TOUCH_CURSOR_LEFT TOUCH_CURSOR_RIGHT TOUCH_CURSOR_PRESS
