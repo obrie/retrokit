@@ -10,6 +10,7 @@ setup_module_reconfigure_after_update=true
 configure() {
   __configure_system_config
   __configure_emulator_configs
+  __configure_emulator_remappings
   __configure_core_options
 }
 
@@ -25,6 +26,23 @@ __configure_emulator_configs() {
   while read -r library_name; do
     local source_path="{system_config_dir}/retroarch/$library_name/$library_name.cfg"
     local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
+
+    if any_path_exists "$source_path"; then
+      ini_merge "$source_path" "$target_path"
+    else
+      rm -fv "$target_path"
+    fi
+  done < <(get_core_library_names)
+}
+
+# Emulator control remapping overrides
+__configure_emulator_remappings() {
+  local retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
+  local retroarch_remapping_dir=${retroarch_remapping_dir%/}
+
+  while read -r library_name; do
+    local source_path="{system_config_dir}/retroarch/$library_name/$library_name.rmp"
+    local target_path="$retroarch_remapping_dir/$library_name/$library_name.rmp"
 
     if any_path_exists "$source_path"; then
       ini_merge "$source_path" "$target_path"
