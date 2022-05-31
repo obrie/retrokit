@@ -28,7 +28,7 @@ function _onstart_advmame() {
     sudo sed -i "s/ or $regex\|$regex or//g" '/tmp/advmame.rc'
 
     declare -Ag advmame_mapped_inputs
-    declare -g advmame_hotkey_value
+    declare -g advmame_hotkey_value=''
 
     # Determine which layout we're setting up for advmame
     local advmame_layout=$(getAutoConf 'advmame_layout')
