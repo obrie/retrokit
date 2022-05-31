@@ -22,6 +22,13 @@ else
   rom_reference_path="$media_dir/docs/default.pdf"
 fi
 
+# Swap the manual with the reference for arcade games since the manual tends to have less information
+if [ "$system" == 'arcade' ]; then
+  orig_rom_manual_path=$rom_manual_path
+  rom_manual_path=$rom_reference_path
+  rom_reference_path=$orig_rom_manual_path
+fi
+
 exec 4<>/opt/retropie/configs/all/manualkit.fifo
 >&4 echo \
   'hide'$'\n' \
