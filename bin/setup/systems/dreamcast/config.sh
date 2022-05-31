@@ -31,6 +31,9 @@ configure() {
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$redream_dir/cache" -name '*.cfg')
+
+  # Check for the redream premium key
+  file_cp '{system_config_dir}/redream.key' '/opt/retropie/emulators/redream/redream.key'
 }
 
 restore() {
