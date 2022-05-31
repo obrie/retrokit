@@ -410,6 +410,7 @@ function _onend_advmame() {
 
     # If a hotkey was defined, set up all the pairings now
     if [ -n "$advmame_hotkey_value" ]; then
+        local input_name
         for input_name in "${!advmame_mapped_inputs[@]}"; do
             local pair_value=${advmame_mapped_inputs[$input_name]}
 

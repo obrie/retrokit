@@ -151,6 +151,7 @@ __find_matching_cheat() {
     total_matches_count=$(comm -12 <(echo "$cheat_flags" | sort | uniq) <(echo "$rom_flags" | sort | uniq) | wc -l)
 
     # Find matching cheat system
+    local i
     for i in "${!cheat_systems[@]}"; do
        if [[ "$cheat_flags" == *"${cheat_systems[$i]}"* ]]; then
           cheat_system_index=$((i+1))

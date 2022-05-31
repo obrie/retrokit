@@ -242,6 +242,7 @@ __add_keyboard_controls() {
   if [ "$uses_raw_keyboard" != 'true' ]; then
     local edit_args=()
 
+    local button_config
     for button_config in "${retroarch_keyboard_buttons_list[@]}"; do
       # Find the corresponding keyboard button
       local keyboard_key=$(__find_retroarch_config "input_player1_$button_config")
@@ -270,6 +271,7 @@ __add_hotkey_controls() {
     # Determine if we're needing to quit twice
     local quit_press_twice=$(__find_retroarch_config 'quit_press_twice')
 
+    local retroarch_action
     for retroarch_action in "${retroarch_actions_list[@]}"; do
       local button_config=$(__find_retroarch_hotkey_button "$retroarch_action")
       if [ -n "$button_config" ]; then

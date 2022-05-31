@@ -25,6 +25,7 @@ function _onstart_drastic() {
         LOAD_GAME QUIT
         UI_UP UI_DOWN UI_LEFT UI_RIGHT UI_SELECT UI_BACK UI_EXIT UI_PAGE_UP UI_PAGE_DOWN UI_SWITCH
     )
+    local config_key
     for config_key in "${all_config_keys[@]}"; do
         iniDel "controls_$controller\[CONTROL_INDEX_$config_key\]"
         iniSet "controls_$controller[CONTROL_INDEX_$config_key]" 65535
@@ -146,6 +147,7 @@ function map_drastic_joystick() {
         return
     fi
 
+    local key
     for key in "${keys[@]}"; do
         local value
         case "$input_type" in
@@ -180,6 +182,7 @@ function map_drastic_keyboard() {
         return
     fi
 
+    local key
     for key in "${keys[@]}"; do
         local value
         if [ "$input_id" -lt 1073741881 ]; then
