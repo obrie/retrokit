@@ -142,6 +142,7 @@ function onstart_ir_keyboard() {
     for input_key in "${!defaults[@]}"; do
         local keys=${defaults["$input_key"]}
 
+        local key
         for key in ${keys//,/ }; do
             # Find the corresponding scancodes
             local scancodes=${ir_scanmap["$key"]}
@@ -150,6 +151,7 @@ function onstart_ir_keyboard() {
             fi
 
             # Map each scan code to the corresponding key
+            local scancode
             for scancode in ${scancodes//,/ }; do
                 if [ -n "$scancode" ]; then
                     iniSet "$scancode" "\"$input_key\" # Original: $key"
@@ -214,6 +216,7 @@ function map_ir_keyboard() {
             ;;
     esac
 
+    local key
     for key in "${keys[@]}"; do
         # Find the corresponding scancodes
         local scancodes=${ir_scanmap["$key"]}
@@ -222,6 +225,7 @@ function map_ir_keyboard() {
         fi
 
         # Map each scan code to the corresponding key
+        local scancode
         for scancode in ${scancodes//,/ }; do
             if [ -n "$scancode" ]; then
                 iniSet "$scancode" "\"$input_key\" # Original: $key"

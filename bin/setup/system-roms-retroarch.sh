@@ -129,6 +129,7 @@ __find_overrides() {
       # * ROM Title
       # * ROM Playlist Name
       local override_file=""
+      local filename
       for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$parent_name" "$parent_disc" "$parent_title"; do
         if [ -n "$filename" ]; then
           override_file=${override_files["$filename"]}

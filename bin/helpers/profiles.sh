@@ -11,6 +11,7 @@ init_profiles() {
   # Read list of profiles
   IFS=',' read -r -a __profiles <<< "$PROFILES"
 
+  local profile
   for profile in '..' "${__profiles[@]}"; do
     local profile_dir="$profiles_dir/$profile"
 
@@ -84,6 +85,7 @@ each_path() {
 
   if [ -n "$template_name" ]; then
     # Find matching paths within each profile directory
+    local profile_dir
     for profile_dir in "${__profile_dirs[@]}"; do
       local profile_subdir=$profile_dir
       if [ -n "$sub_dir" ]; then
@@ -110,6 +112,7 @@ process_path() {
   if [ $# -gt 1 ]; then
     # Replace the susbstitution template ({}) with the path
     local args=()
+    local index
     for (( index=2; index <= "$#"; index++ )); do
       # Subsititute {} in the argument with the rendered path
       local arg=${!index}

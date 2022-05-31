@@ -97,6 +97,7 @@ __create_collection() {
 
 # Finds file in the system's configured rom directories
 __find_in_directories() {
+  local rom_dir
   for rom_dir in "${rom_dirs[@]}"; do
     path=$(find "$rom_dir" -mindepth 1 -maxdepth 1 -name "$1" -print -quit)
     if [ -n "$path" ]; then

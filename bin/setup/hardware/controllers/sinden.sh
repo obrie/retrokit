@@ -45,6 +45,7 @@ build() {
 }
 
 configure() {
+  local player_id
   for player_id in $(seq 1 2); do
     local target=$(__retropie_config_path_for_player $player_id)
     backup_and_restore "$target" as_sudo=true
@@ -84,6 +85,7 @@ __configure_player() {
 }
 
 restore() {
+  local player_id
   for player_id in $(seq 1 2); do
     restore_file "$(__retropie_config_path_for_player $player_id)" as_sudo=true
   done

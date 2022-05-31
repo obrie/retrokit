@@ -37,6 +37,7 @@ download() {
   url=${url// /%20}
 
   local exit_code=0
+  local attempt
   for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then
       # No target provided -- print url contents to stdout

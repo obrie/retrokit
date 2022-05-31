@@ -109,6 +109,7 @@ __configure_controller_input() {
   <inputConfig type="joystick" deviceName="$name" deviceGUID="$id">
 _EOF_
 
+  local sdl_property
   for sdl_property in "${sdl_properties[@]}"; do
     local sdl_parts=(${sdl_property//:/ })
     local sdl_name=${sdl_parts[0]}
@@ -212,6 +213,7 @@ _EOF_
 
     # Add input
     if [ -n "$input_type" ] && [ -n "$input_values" ]; then
+      local i
       for i in "${!input_names[@]}"; do
         local input_name=${input_names[i]}
         local input_value=${input_values[i]}
