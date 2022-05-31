@@ -18,7 +18,7 @@
 # * RetroPad IDs: https://github.com/libretro/FBNeo/blob/607eed06f59dd744dc568c9060045ee20151bac2/src/burner/libretro/libretro-common/include/libretro.h#L183-L203
 # * RetroPad Button Mappings: https://github.com/libretro/FBNeo/blob/607eed06f59dd744dc568c9060045ee20151bac2/src/burner/libretro/retro_input.cpp#L2063-L2081
 # 
-# This adjusts the mappings to match modern MAME / FBNeo (b,a,r,l,r2,l2,r3,l3)
+# This adjusts the mappings to match classic FBNeo (b,a,y,x,r,l,r2,l2,r3,l3)
 
 input_player1_btn_a = "1"
 input_player1_btn_x = "8"
