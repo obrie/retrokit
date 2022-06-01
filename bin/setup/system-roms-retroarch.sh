@@ -62,7 +62,7 @@ __configure_retroarch_remappings() {
 
     while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp')
+    done < <(find "$retroarch_remapping_dir/$library_name" -name '*.rmp' -not -name "$library_name.rmp")
   done < <(get_core_library_names)
 }
 
