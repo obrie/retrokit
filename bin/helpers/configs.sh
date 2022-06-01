@@ -11,8 +11,9 @@ conf_prepare() {
   local as_sudo='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   local target="$(mktemp -p "$tmp_ephemeral_dir")"
@@ -35,8 +36,9 @@ backup_file() {
   local as_sudo='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   if [ ! -f "$backup_file" ] && [ ! -f "$backup_file.missing" ]; then
@@ -72,8 +74,9 @@ restore_file() {
   local delete_src='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   # If we just reconfigured our packages, then we want to use rp-dist as our
@@ -139,8 +142,9 @@ env_merge() {
     $cmd mkdir -p "$(dirname "$target")"
   fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -178,8 +182,9 @@ ini_merge() {
     $cmd mkdir -p "$(dirname "$target")"
   fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -232,8 +237,9 @@ json_merge() {
     $cmd mkdir -p "$(dirname "$target")"
   fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -324,8 +330,9 @@ file_cp() {
     $cmd mkdir -p "$(dirname "$target")"
   fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   local prioritized_source=$(first_path "$source")
@@ -373,8 +380,9 @@ ln_if_different() {
   local as_sudo='false'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
+  local cmd=
   if [ "$as_sudo" == 'true' ]; then
-    local cmd='sudo'
+    cmd='sudo'
   fi
 
   # Replace the symlink if it's changed
