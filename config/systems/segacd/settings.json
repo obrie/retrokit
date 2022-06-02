@@ -78,6 +78,11 @@
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.brm"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {

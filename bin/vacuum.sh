@@ -13,7 +13,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 usage() {
   echo "usage:"
-  echo " $0 <all|roms|manuals|media> <all|system>"
+  echo " $0 <all|roms|manuals|media|media_cache|overlays|gamefiles> <all|system>"
   exit 1
 }
 
@@ -51,12 +51,15 @@ vacuum_media_cache() {
 }
 
 vacuum_media() {
-  # TODO: This is always vacuuming all ports files
   "$bin_dir/setup.sh" __vacuum_media system-roms-scrape "${@}"
 }
 
 vacuum_overlays() {
   "$bin_dir/setup.sh" vacuum system-roms-overlays "${@}"
+}
+
+vacuum_gamefiles() {
+  "$bin_dir/setup.sh" vacuum system-roms-gamefiles "${@}"
 }
 
 if [[ $# -lt 1 ]]; then

@@ -48,6 +48,11 @@
       "source": "file://$HOME/retrokit/cache/scraper/ngpc.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.flash"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {
