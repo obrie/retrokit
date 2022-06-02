@@ -62,7 +62,7 @@ __reconfigure_packages_hook() {
   # Run external hooks
   while read setupmodule; do
     "$bin_dir/setup.sh" "$hook" "$setupmodule" "$system"
-  done < <(setting ".setup[] | select(. == \"system-retroarch\" or (. | contains(\"systems/$system/\")))")
+  done < <(list_setupmodules | grep -E "^system-retroarch$|systems/$system")
 }
 
 # Configure emulator settings

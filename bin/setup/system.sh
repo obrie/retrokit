@@ -10,4 +10,4 @@ while read setupmodule; do
     print_heading "Running $1 for $setupmodule"
     "$dir/$setupmodule.sh" "${@}"
   fi
-done < <(setting '.setup[]')
+done < <(list_setupmodules)
