@@ -53,8 +53,13 @@ class BaseDiscovery:
 
     # Downloads the given source url
     def download(self, source: str, target: Path) -> None:
-        if not target.exists() or (time.time() - target.stat().st_mtime) >= self.ttl:
+        if not target.exists():
             self.downloader.get(source, target, force=True)
+        elif (time.time() - target.stat().st_mtime) >= self.ttl:
+            try:
+                self.downloader.get(source, target, force=True)
+            except Exception as e:
+                logging.warn(f'Failed to refresh discovery source: {source}')
 
     # Loads the data needed for discovery
     def load(self) -> None:
