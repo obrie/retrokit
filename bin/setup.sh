@@ -24,11 +24,11 @@ setup_all() {
     setup install deps
 
     # Then install the remaining modules
-    modules=$(setting '.setup[] | select(. != "deps" and . != "wifi")')
+    modules=$(list_setupmodules | grep -Ev '^(deps|wifi)')
   elif [[ "$action" =~ ^(uninstall|restore|remove) ]]; then
-    modules=$(setting '.setup | reverse[]')
+    modules=$(list_setupmodules | tac)
   else
-    modules=$(setting '.setup[]')
+    modules=$(list_setupmodules)
   fi
 
   while read setupmodule; do

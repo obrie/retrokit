@@ -94,7 +94,7 @@ function _gui_setup_retrokit() {
         while read setupmodule; do
             options+=($index "$setupmodule")
             index=$((index+1))
-        done < <(__get_settings_retrokit | jq -r '.setup[]')
+        done < <(__get_settings_retrokit | jq -r '.setup | (.default + .add - .remove)[]')
 
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
         if [[ -n "$choice" ]]; then
@@ -245,6 +245,8 @@ function _gui_vacuum_retrokit() {
             "media_cache" "Deletes cached scraper media for games no longer installed."
             "media" "Deletes non-cached media for games no longer installed."
             "roms" "Deletes rom files for games no longer installed."
+            "overlays" "Deletes retroarch overlays for games no longer installed."
+            "gamefiles" "Deletes rom game state (e.g. saves) for games no longer installed."
         )
 
         local media_type=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)

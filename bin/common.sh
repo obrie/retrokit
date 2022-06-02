@@ -77,9 +77,13 @@ setting() {
   jq -r "$1 | values" "$settings_file"
 }
 
+list_setupmodules() {
+  setting '.setup | (.default + .add - .remove)[]'
+}
+
 # Is the given setupmodule is enabled?
 has_setupmodule() {
-  [ $(setting ".setup | any(. == \"$1\")") == 'true' ]
+  list_setupmodules | grep -q "^$1\$"
 }
 
 ##############
