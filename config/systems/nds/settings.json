@@ -46,6 +46,12 @@
       "source": "file://$HOME/retrokit/cache/scraper/nds.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "/opt/retropie/configs/nds/drastic/backup/*",
+      "/opt/retropie/configs/nds/drastic/savestates/*"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {

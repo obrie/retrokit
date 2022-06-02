@@ -357,6 +357,9 @@ bin/vacuum.sh media | bash
 
 # Vacuum overlays for ROMs no longer installed
 bin/vacuum.sh overlays | bash
+
+# Vacuum game state for ROMs no longer installed
+bin/vacuum.sh gamefiles | bash
 ```
 
 migrate:

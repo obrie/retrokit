@@ -94,6 +94,12 @@
       "source": "file://$HOME/retrokit/cache/scraper/psp.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "/opt/retropie/configs/psp/PSP/SAVEDATA/*",
+      "/opt/retropie/configs/psp/PSP/PPSSPP_STATE/*"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {

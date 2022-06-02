@@ -86,6 +86,11 @@
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.mcd"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {
