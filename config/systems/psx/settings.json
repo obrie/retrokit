@@ -88,7 +88,7 @@
   },
   "gamefiles": {
     "state": [
-      "{rom_dir}/{rom}.mcd"
+      "{rom_dir}/{rom}_*.mcd"
     ]
   },
   "roms": {
