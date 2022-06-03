@@ -29,7 +29,7 @@ vacuum() {
     # Generate rm commands for unused gamefiles
     path_expression=${path_expression/'{rom}'/*}
     while read -r path; do
-      [ "${gamefiles["$path"]}" ] || echo "rm -v $(printf '%q' "$path")"
+      [ "${gamefiles["$path"]}" ] || echo "rm -rfv $(printf '%q' "$path")"
     done < <(__glob_path "$path_expression")
   done < <(__list_path_expressions | grep -F '{rom}')
 }
@@ -37,7 +37,7 @@ vacuum() {
 # Removes all known gamefiles
 remove() {
   while read path; do
-    echo "rm -v $(printf '%q' "$path")"
+    echo "rm -rfv $(printf '%q' "$path")"
   done < <(__list_all_paths)
 }
 
