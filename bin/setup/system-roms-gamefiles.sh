@@ -44,7 +44,7 @@ remove() {
 # Lists files using the given glob
 __glob_path() {
   local path=$1
-  path=${path/*/'"*"'}
+  path=${path/'*'/'"*"'}
   path="\"$path\""
   eval ls -Ad $path 2>/dev/null || true
 }
