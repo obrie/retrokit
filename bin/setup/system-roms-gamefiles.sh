@@ -30,7 +30,7 @@ vacuum() {
     path_expression=${path_expression/'{rom}'/*}
     while read -r path; do
       [ "${gamefiles["$path"]}" ] || echo "rm -v $(printf '%q' "$path")"
-    done < <(ls -Ad $path_expression 2>/dev/null || true)
+    done < <(__glob_path "$path_expression")
   done < <(__list_path_expressions | grep -F '{rom}')
 }
 
@@ -38,14 +38,22 @@ vacuum() {
 remove() {
   while read path; do
     echo "rm -v $(printf '%q' "$path")"
-  done < <(__list_paths)
+  done < <(__list_all_paths)
+}
+
+# Lists files using the given glob
+__glob_path() {
+  local path=$1
+  path=${path/*/"*"}
+  path="\"$path\""
+  eval ls -Ad $path 2>/dev/null || true
 }
 
 # Lists the resolved gamefile path expressions
-__list_paths() {
+__list_all_paths() {
   while read path_expression; do
-    path_expression=${path_expression/'{rom}'/*}
-    ls -Ad $path_expression 2>/dev/null || true
+    local path=${path_expression/'{rom}'/*}
+    __glob_path "$path"
   done < <(__list_path_expressions)
 }
 
