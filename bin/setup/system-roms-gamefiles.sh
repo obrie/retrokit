@@ -38,7 +38,7 @@ vacuum() {
 remove() {
   while read path; do
     echo "rm -rfv $(printf '%q' "$path")"
-  done < <(__list_all_paths)
+  done < <(__glob_all_paths)
 }
 
 # Lists files using the given glob
@@ -50,7 +50,7 @@ __glob_path() {
 }
 
 # Lists the resolved gamefile path expressions
-__list_all_paths() {
+__glob_all_paths() {
   while read path_expression; do
     local path=${path_expression/'{rom}'/*}
     __glob_path "$path"
