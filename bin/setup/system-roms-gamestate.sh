@@ -20,10 +20,22 @@ vacuum() {
   # related to the name of the ROM.  In some systems, the game state is
   # based on some other identified from the ROM that we can't easily predict.
   while read path_expression; do
+    if [ "$rom_name" != *'{rom}'** ]; then
+      # Path can't be vacuumed because it's not predictable
+      continue
+    fi
+
     declare -A gamestate_files
     while read rom_name; do
       local path=${path_expression//'{rom}'/$rom_name}
-      gamestate_files["$path"]=1
+      if [ "$path" == *'*'* ]]; then
+        # Expands the glob pattern to find on the specific files on disk
+        while read -r expanded_path; do
+          gamestate_files["$expanded_path"]=1
+        done < <(__glob_path "$path")
+      else
+        gamestate_files["$path"]=1
+      fi
     done < <(echo "$rom_names")
 
     # Generate rm commands for unused game state
