@@ -22,12 +22,12 @@ vacuum() {
   while read path_expression; do
     declare -A gamefiles
     while read rom_name; do
-      local rom_gamefile=${path_expression/'{rom}'/$rom_name}
+      local rom_gamefile=${path_expression//'{rom}'/$rom_name}
       gamefiles["$rom_gamefile"]=1
     done < <(echo "$rom_names")
 
     # Generate rm commands for unused gamefiles
-    path_expression=${path_expression/'{rom}'/*}
+    path_expression=${path_expression//'{rom}'/*}
     while read -r path; do
       [ "${gamefiles["$path"]}" ] || echo "rm -rfv $(printf '%q' "$path")"
     done < <(__glob_path "$path_expression")
@@ -52,7 +52,7 @@ __glob_path() {
 # Lists the resolved gamefile path expressions
 __glob_all_paths() {
   while read path_expression; do
-    local path=${path_expression/'{rom}'/*}
+    local path=${path_expression//'{rom}'/*}
     __glob_path "$path"
   done < <(__list_path_expressions)
 }
