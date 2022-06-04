@@ -96,8 +96,8 @@
       }
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "/opt/retropie/configs/dreamcast/redream/cache/*",
       "/opt/retropie/configs/dreamcast/redream/saves/*",
       "/opt/retropie/configs/dreamcast/redream/states/*",

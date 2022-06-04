@@ -246,7 +246,7 @@ function _gui_vacuum_retrokit() {
             "media" "Deletes non-cached media for games no longer installed."
             "roms" "Deletes rom files for games no longer installed."
             "overlays" "Deletes retroarch overlays for games no longer installed."
-            "gamefiles" "Deletes rom game state (e.g. saves) for games no longer installed."
+            "gamestate" "Deletes rom game state (e.g. saves) for games no longer installed."
         )
 
         local media_type=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)

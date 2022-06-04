@@ -65,8 +65,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/gb.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "{rom_dir}/{rom}.rtc"
     ]
   },

@@ -13,7 +13,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 usage() {
   echo "usage:"
-  echo " $0 <all|roms|manuals|media|media_cache|overlays|gamefiles> <all|system>"
+  echo " $0 <all|roms|manuals|media|media_cache|overlays|gamestate> <all|system>"
   exit 1
 }
 
@@ -58,8 +58,8 @@ vacuum_overlays() {
   "$bin_dir/setup.sh" vacuum system-roms-overlays "${@}"
 }
 
-vacuum_gamefiles() {
-  "$bin_dir/setup.sh" vacuum system-roms-gamefiles "${@}"
+vacuum_gamestate() {
+  "$bin_dir/setup.sh" vacuum system-roms-gamestate "${@}"
 }
 
 if [[ $# -lt 1 ]]; then

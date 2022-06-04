@@ -359,7 +359,7 @@ bin/vacuum.sh media | bash
 bin/vacuum.sh overlays | bash
 
 # Vacuum game state for ROMs no longer installed
-bin/vacuum.sh gamefiles | bash
+bin/vacuum.sh gamestate | bash
 ```
 
 migrate:
