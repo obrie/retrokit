@@ -20,10 +20,10 @@
   },
   "gamestate": {
     "retroarch_files": [
-      "{rom_dir}/{rom}.*ldci",
-      "{rom_dir}/{rom}.*sav",
-      "{rom_dir}/{rom}.*srm",
-      "{rom_dir}/{rom}.*state"
+      "{rom_dir}/{rom}.ldci",
+      "{rom_dir}/{rom}.sav",
+      "{rom_dir}/{rom}.srm",
+      "{rom_dir}/{rom}.state"
     ]
   },
   "roms": {
