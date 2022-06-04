@@ -60,6 +60,11 @@
       "source": "file://$HOME/retrokit/cache/scraper/coleco.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.sram"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {

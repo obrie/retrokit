@@ -104,6 +104,14 @@
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.nvr",
+      "{rom_dir}/vice_printer.txt",
+      "{rom_dir}/vice_work",
+      "{rom_dir}/vice_work.*"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {
