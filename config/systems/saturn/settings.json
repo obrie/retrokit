@@ -33,6 +33,11 @@
       "sega_101.bin": "{url}/sega_101.bin"
     }
   },
+  "gamefiles": {
+    "state": [
+      "$HOME/RetroPie/roms/saturn/yabasanshiro/backup.bin"
+    ]
+  },
   "romsets": [
     {
       "name": "redump",

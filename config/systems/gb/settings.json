@@ -65,6 +65,11 @@
       "source": "file://$HOME/retrokit/cache/scraper/gb.json"
     }
   },
+  "gamefiles": {
+    "state": [
+      "{rom_dir}/{rom}.rtc"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {
