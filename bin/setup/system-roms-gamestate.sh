@@ -85,4 +85,8 @@ __list_path_templates() {
   system_setting '.gamestate | select(.state) | .state[]'
 }
 
+# Disable confirmation since none of the destruction of actions in this script
+# actually do anything destructive on their own.
+CONFIRM=false
+
 setup "$1" "${@:3}"
