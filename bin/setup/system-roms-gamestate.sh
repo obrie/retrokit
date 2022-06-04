@@ -20,7 +20,7 @@ vacuum() {
   # related to the name of the ROM.  In some systems, the game state is
   # based on some other identified from the ROM that we can't easily predict.
   while read path_expression; do
-    if [ "$rom_name" != *'{rom}'** ]; then
+    if [[ "$rom_name" != *'{rom}'* ]]; then
       # Path can't be vacuumed because it's not predictable
       continue
     fi
