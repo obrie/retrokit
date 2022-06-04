@@ -86,8 +86,8 @@
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "{rom_dir}/{rom}_*.mcd"
     ]
   },

@@ -260,8 +260,8 @@
       "source": "file://$HOME/retrokit/config/systems/arcade/manuals.tsv"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "$HOME/RetroPie/roms/arcade/fbneo/{rom}.fs",
       "$HOME/RetroPie/roms/arcade/fbneo/{rom}.nv",
       "$HOME/RetroPie/roms/arcade/mame2003-plus/diff/{rom}.df",

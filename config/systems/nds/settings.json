@@ -46,8 +46,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/nds.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "/opt/retropie/configs/nds/drastic/backup/*",
       "/opt/retropie/configs/nds/drastic/savestates/*"
     ]

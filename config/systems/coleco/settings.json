@@ -60,8 +60,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/coleco.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "{rom_dir}/{rom}.sram"
     ]
   },

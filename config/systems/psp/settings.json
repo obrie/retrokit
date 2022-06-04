@@ -94,8 +94,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/psp.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "/opt/retropie/configs/psp/PSP/SAVEDATA/*",
       "/opt/retropie/configs/psp/PSP/PPSSPP_STATE/*"
     ]

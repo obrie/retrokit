@@ -48,8 +48,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/ngpc.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "file": [
       "{rom_dir}/{rom}.zip#{rom}.flash"
     ]
   },

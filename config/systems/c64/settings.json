@@ -104,8 +104,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "{rom_dir}/{rom}.nvr",
       "{rom_dir}/vice_printer.txt",
       "{rom_dir}/vice_work",

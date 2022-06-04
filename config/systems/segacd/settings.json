@@ -78,8 +78,8 @@
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"
     }
   },
-  "gamefiles": {
-    "state": [
+  "gamestate": {
+    "files": [
       "{rom_dir}/{rom}.brm"
     ]
   },
