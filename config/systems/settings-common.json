@@ -19,7 +19,7 @@
     }
   },
   "gamestate": {
-    "retroarch_files": [
+    "retroarch_state": [
       "{rom_dir}/{rom}.*ldci",
       "{rom_dir}/{rom}.*sav",
       "{rom_dir}/{rom}.*srm",
