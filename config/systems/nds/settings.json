@@ -48,7 +48,7 @@
   },
   "gamestate": {
     "files": [
-      "/opt/retropie/configs/nds/drastic/backup/*",
+      "/opt/retropie/configs/nds/drastic/backup/{rom}.dsv",
       "/opt/retropie/configs/nds/drastic/savestates/*"
     ]
   },

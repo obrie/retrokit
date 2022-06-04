@@ -63,6 +63,13 @@
       "jaguar.zip": "{url}/jaguar.zip"
     }
   },
+  "gamestate": {
+    "files": [
+      "{rom_dir}/{rom}.cdrom.srm",
+      "{rom_dir}/{rom}.zip#{rom}.srm",
+      "{rom_dir}/{rom}.zip#{rom}.cdrom.srm"
+    ]
+  },
   "roms": {
     "id": "crc",
     "priority": {
