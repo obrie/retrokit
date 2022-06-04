@@ -78,11 +78,11 @@ __list_path_templates() {
   # List libretro paths
   local libretro_names=$(get_core_library_names)
   if [ -n "$libretro_names" ]; then
-    system_setting '.gamestate .retroarch_state[]'
+    system_setting '.gamestate .retroarch_files[]'
   fi
 
   # List system-specific paths
-  system_setting '.gamestate | select(.state) | .state[]'
+  system_setting '.gamestate | select(.files) | .files[]'
 }
 
 # Disable confirmation since none of the destruction of actions in this script
