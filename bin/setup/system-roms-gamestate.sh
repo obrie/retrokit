@@ -11,7 +11,13 @@ rom_dirs=($(system_setting 'select(.roms) | .roms.dirs[] | .path'))
 # Attempts to find game state that we aren't needed anymore
 vacuum() {
   # Look up the list of currently installed ROMs
-  local rom_names=$(romkit_cache_list | jq -r '.name')
+  local rom_names=$(romkit_cache_list | jq -r '.playlist .name // .name')
+
+  # Identify paths that can be vacuumed since they're predictable
+  local path_expressions=$(__list_path_expressions | grep -F '{rom}')
+  if [ -z "$path_expressions" ]; then
+    return
+  fi
 
   # Generate a list of possible game state paths
   # 
@@ -20,15 +26,10 @@ vacuum() {
   # related to the name of the ROM.  In some systems, the game state is
   # based on some other identified from the ROM that we can't easily predict.
   while read path_expression; do
-    if [[ "$rom_name" != *'{rom}'* ]]; then
-      # Path can't be vacuumed because it's not predictable
-      continue
-    fi
-
     declare -A gamestate_files
     while read rom_name; do
       local path=${path_expression//'{rom}'/$rom_name}
-      if [ "$path" == *'*'* ]]; then
+      if [[ "$path" == *'*'* ]]; then
         # Expands the glob pattern to find on the specific files on disk
         while read -r expanded_path; do
           gamestate_files["$expanded_path"]=1
@@ -37,13 +38,16 @@ vacuum() {
         gamestate_files["$path"]=1
       fi
     done < <(echo "$rom_names")
+  done < <(echo "$path_expressions")
 
-    # Generate rm commands for unused game state
+  # Generate rm commands for unused game state
+  while read path_expression; do
     path_expression=${path_expression//'{rom}'/*}
+
     while read -r path; do
       [ "${gamestate_files["$path"]}" ] || echo "rm -rfv $(printf '%q' "$path")"
     done < <(__glob_path "$path_expression")
-  done < <(__list_path_expressions | grep -F '{rom}')
+  done < <(echo "$path_expressions")
 }
 
 # Removes all known game state
