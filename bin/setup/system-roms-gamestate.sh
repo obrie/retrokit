@@ -13,12 +13,6 @@ vacuum() {
   # Look up the list of currently installed ROMs
   local rom_names=$(romkit_cache_list | jq -r '.playlist .name // .name')
 
-  # Identify paths that can be vacuumed since they're predictable
-  local path_expressions=$(__list_path_expressions | grep -F '{rom}')
-  if [ -z "$path_expressions" ]; then
-    return
-  fi
-
   # Generate a list of possible game state paths
   # 
   # Note that we can only do this for path expressions that include {rom}
@@ -27,18 +21,25 @@ vacuum() {
   # based on some other identified from the ROM that we can't easily predict.
   while read path_expression; do
     declare -A gamestate_files
-    while read rom_name; do
-      local path=${path_expression//'{rom}'/$rom_name}
-      if [[ "$path" == *'*'* ]]; then
-        # Expands the glob pattern to find on the specific files on disk
-        while read -r expanded_path; do
-          gamestate_files["$expanded_path"]=1
-        done < <(__glob_path "$path")
-      else
-        gamestate_files["$path"]=1
-      fi
-    done < <(echo "$rom_names")
-  done < <(echo "$path_expressions")
+    if [[ "$path_expression" == *'{rom}'* ]]; then
+      # Generate rom-specific paths
+      while read rom_name; do
+        local path=${path_expression//'{rom}'/$rom_name}
+        if [[ "$path" == *'*'* ]]; then
+          # Expands the glob pattern to find the specific files on disk
+          while read -r expanded_path; do
+            gamestate_files["$expanded_path"]=1
+          done < <(__glob_path "$path")
+        else
+          # Reference a single rom-specific path
+          gamestate_files["$path"]=1
+        fi
+      done < <(echo "$rom_names")
+    else
+      # Use the path as-is as it's likely static
+      gamestate_files["$path_expression"]=1
+    fi
+  done < <(__list_path_expressions)
 
   # Generate rm commands for unused game state
   while read path_expression; do
@@ -47,7 +48,7 @@ vacuum() {
     while read -r path; do
       [ "${gamestate_files["$path"]}" ] || echo "rm -rfv $(printf '%q' "$path")"
     done < <(__glob_path "$path_expression")
-  done < <(echo "$path_expressions")
+  done < <(__list_path_expressions | grep -F '{rom}')
 }
 
 # Removes all known game state
