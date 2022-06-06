@@ -54,7 +54,9 @@ vacuum() {
 # Removes all known game state
 remove() {
   while read path; do
-    echo "rm -rfv $(printf '%q' "$path")"
+    if [ ! -f "$path.rk-src" ]; then
+      echo "rm -rfv $(printf '%q' "$path")"
+    fi
   done < <(__glob_all_paths)
 }
 
