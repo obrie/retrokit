@@ -15,8 +15,21 @@
   },
   "emulators": {
     "lr-mess": {},
-    "lr-mess-jaguar": {"build": "source", "core_name": "mame", "library_name": "MAME"},
-    "lr-virtualjaguar": {"core_name": "virtualjaguar", "library_name": "Virtual Jaguar", "default": true}
+    "lr-mess-jaguar": {
+      "build": "source",
+      "core_name": "mame",
+      "library_name": "MAME"
+    },
+    "lr-virtualjaguar": {
+      "default": true,
+      "core_name": "virtualjaguar",
+      "library_name": "Virtual Jaguar",
+      "gamestate": [
+        "{rom_dir}/{rom}.cdrom.srm",
+        "{rom_dir}/{rom}.zip#{rom}.srm",
+        "{rom_dir}/{rom}.zip#{rom}.cdrom.srm"
+      ]
+    }
   },
   "romsets": [
     {
@@ -62,13 +75,6 @@
     "files": {
       "jaguar.zip": "{url}/jaguar.zip"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}.cdrom.srm",
-      "{rom_dir}/{rom}.zip#{rom}.srm",
-      "{rom_dir}/{rom}.zip#{rom}.cdrom.srm"
-    ]
   },
   "roms": {
     "id": "crc",

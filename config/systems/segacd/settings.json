@@ -20,7 +20,18 @@
     "args": ["--addext", "*.m3u"]
   },
   "emulators": {
-    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
+    "lr-genesis-plus-gx": {
+      "default": true,
+      "core_name": "genesis_plus_gx",
+      "library_name": "Genesis Plus GX",
+      "gamestate": [
+        "{rom_dir}/cart.brm",
+        "{rom_dir}/scd_E.brm",
+        "{rom_dir}/scd_J.brm",
+        "{rom_dir}/scd_U.brm",
+        "{rom_dir}/{rom}.brm"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -77,15 +88,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/segacd.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/cart.brm",
-      "{rom_dir}/scd_E.brm",
-      "{rom_dir}/scd_J.brm",
-      "{rom_dir}/scd_U.brm",
-      "{rom_dir}/{rom}.brm"
-    ]
   },
   "roms": {
     "id": "crc",

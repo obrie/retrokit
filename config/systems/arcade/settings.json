@@ -22,14 +22,94 @@
     "import_dat_titles": false
   },
   "emulators": {
-    "lr-fbneo": {"default": true, "core_name": "fbneo", "library_name": "FinalBurn Neo"},
-    "lr-mame2003": {"core_name": "mame2003", "library_name": "MAME 2003 (0.78)"},
-    "lr-mame2003-plus": {"core_name": "mame2003-plus", "library_name": "MAME 2003-Plus"},
-    "lr-mame2010": {"core_name": "mame2010", "library_name": "MAME 2010"},
-    "lr-mame2015": {"core_name": "mame2015", "library_name": "MAME 2015"},
-    "lr-mame2016": {"core_name": "mame2016", "library_name": "MAME 2016"},
-    "advmame-joy": {"aliases": ["advmame"]},
-    "lr-mame0222": {"aliases": ["lr-mame"], "core_name": "mame_", "library_name": "MAME"}
+    "lr-fbneo": {
+      "default": true,
+      "core_name": "fbneo",
+      "library_name": "FinalBurn Neo",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/fbneo/{rom}.fs",
+        "$HOME/RetroPie/roms/arcade/fbneo/{rom}.nv"
+      ]
+    },
+    "lr-mame2003": {
+      "core_name": "mame2003",
+      "library_name": "MAME 2003 (0.78)",
+      "gamestate": [
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/cfg/default.cfg",
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/diff/{rom}.df",
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/memcard/{rom}.mc",
+        "$HOME/RetroPie/roms/mame-libretro/mame2003/nvram/{rom}"
+      ]
+    },
+    "lr-mame2003-plus": {
+      "core_name": "mame2003-plus",
+      "library_name": "MAME 2003-Plus",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/memcard/{rom}.mc",
+        "$HOME/RetroPie/roms/arcade/mame2003-plus/nvram/{rom}.nv"
+      ]
+    },
+    "lr-mame2010": {
+      "core_name": "mame2010",
+      "library_name": "MAME 2010",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame2010/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2010/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2010/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame2010/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/arcade/mame2010/memcard/{rom}.mc",
+        "$HOME/RetroPie/roms/arcade/mame2010/nvram/{rom}.nv"
+      ]
+    },
+    "lr-mame2015": {
+      "core_name": "mame2015",
+      "library_name": "MAME 2015",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame2015/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2015/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2015/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame2015/nvram/{rom}"
+      ]
+    },
+    "lr-mame2016": {
+      "core_name": "mame2016",
+      "library_name": "MAME 2016",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2016/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame2016/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame2016/nvram/{rom}"
+      ]
+    },
+    "advmame-joy": {
+      "aliases": ["advmame"],
+      "gamestate": [
+        "$HOME/RetroPie/roms/mame-advmame/cfg/default.cfg",
+        "$HOME/RetroPie/roms/mame-advmame/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/mame-advmame/diff/{rom}.dif",
+        "$HOME/RetroPie/roms/mame-advmame/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/mame-advmame/memcard/{rom}.mc",
+        "$HOME/RetroPie/roms/mame-advmame/nvram/{rom}.nv",
+        "$HOME/RetroPie/roms/mame-advmame/nvram/{rom}.sta"
+      ]
+    },
+    "lr-mame0222": {
+      "aliases": ["lr-mame"],
+      "core_name": "mame_",
+      "library_name": "MAME",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame/nvram/{rom}"
+      ]
+    }
   },
   "romsets": [
     {
@@ -259,45 +339,6 @@
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/arcade/manuals.tsv"
     }
-  },
-  "gamestate": {
-    "files": [
-      "$HOME/RetroPie/roms/arcade/fbneo/{rom}.fs",
-      "$HOME/RetroPie/roms/arcade/fbneo/{rom}.nv",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/cfg/default.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/diff/{rom}.df",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/hi/{rom}.hi",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/memcard/{rom}.mc",
-      "$HOME/RetroPie/roms/arcade/mame2003-plus/nvram/{rom}.nv",
-      "$HOME/RetroPie/roms/arcade/mame2010/cfg/default.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2010/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2010/diff/{rom}.df",
-      "$HOME/RetroPie/roms/arcade/mame2010/hi/{rom}.hi",
-      "$HOME/RetroPie/roms/arcade/mame2010/memcard/{rom}.mc",
-      "$HOME/RetroPie/roms/arcade/mame2010/nvram/{rom}.nv",
-      "$HOME/RetroPie/roms/arcade/mame2015/cfg/default.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2015/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2015/diff/{rom}.df",
-      "$HOME/RetroPie/roms/arcade/mame2015/nvram/{rom}",
-      "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2016/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/arcade/mame2016/diff/{rom}.df",
-      "$HOME/RetroPie/roms/arcade/mame2016/nvram/{rom}",
-      "$HOME/RetroPie/roms/mame-advmame/cfg/default.cfg",
-      "$HOME/RetroPie/roms/mame-advmame/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/mame-advmame/diff/{rom}.dif",
-      "$HOME/RetroPie/roms/mame-advmame/hi/{rom}.hi",
-      "$HOME/RetroPie/roms/mame-advmame/memcard/{rom}.mc",
-      "$HOME/RetroPie/roms/mame-advmame/nvram/{rom}.nv",
-      "$HOME/RetroPie/roms/mame-advmame/nvram/{rom}.sta",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/cfg/default.cfg",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/cfg/{rom}.cfg",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/diff/{rom}.df",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/hi/{rom}.hi",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/memcard/{rom}.mc",
-      "$HOME/RetroPie/roms/mame-libretro/mame2003/nvram/{rom}"
-    ]
   },
   "roms": {
     "id": "name",

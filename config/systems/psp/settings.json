@@ -1,7 +1,13 @@
 {
   "system": "psp",
   "emulators": {
-    "ppsspp": {"default": true}
+    "ppsspp": {
+      "default": true,
+      "gamestate": [
+        "/opt/retropie/configs/psp/PSP/SAVEDATA/*",
+        "/opt/retropie/configs/psp/PSP/PPSSPP_STATE/*"
+      ]
+    }
   },
   "romsets": [
     {
@@ -93,12 +99,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/psp.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "/opt/retropie/configs/psp/PSP/SAVEDATA/*",
-      "/opt/retropie/configs/psp/PSP/PPSSPP_STATE/*"
-    ]
   },
   "roms": {
     "id": "crc",

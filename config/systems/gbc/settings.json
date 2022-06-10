@@ -14,8 +14,18 @@
     ]
   },
   "emulators": {
-    "lr-mgba": {"core_name": "mgba", "library_name": "mGBA", "default": true},
-    "lr-tgbdual": {"core_name": "tgbdual", "library_name": "TGB Dual"}
+    "lr-mgba": {
+      "default": true,
+      "core_name": "mgba",
+      "library_name": "mGBA"
+    },
+    "lr-tgbdual": {
+      "core_name": "tgbdual",
+      "library_name": "TGB Dual",
+      "gamestate": [
+        "{rom_dir}/{rom}.rtc"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -64,11 +74,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/gbc.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}.rtc"
-    ]
   },
   "roms": {
     "id": "crc",

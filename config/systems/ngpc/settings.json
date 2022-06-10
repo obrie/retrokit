@@ -14,7 +14,14 @@
     ]
   },
   "emulators": {
-    "lr-beetle-ngp": {"core_name": "ngp", "library_name": "Beetle NeoPop", "default": true}
+    "lr-beetle-ngp": {
+      "default": true,
+      "core_name": "ngp",
+      "library_name": "Beetle NeoPop",
+      "gamestate": [
+        "{rom_dir}/{rom}.zip#{rom}.flash"
+      ]
+    }
   },
   "romsets": [
     {
@@ -47,11 +54,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/ngpc.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}.zip#{rom}.flash"
-    ]
   },
   "roms": {
     "id": "crc",
