@@ -20,34 +20,27 @@ class ExternalMetadata:
         if 'source' in config:
             # If this has an external source attached to it, let's try to
             # install it
-            self.resource_template = ResourceTemplate.from_json(
-                config,
-                downloader=downloader,
-            )
-            self.install()
-        else:
-            self.resource_template = None
+            resource_template = ResourceTemplate.from_json(config, downloader=downloader)
 
-        self.load()
-
-    # Target destination for installing this attribute data
-    @property
-    def resource(self) -> Resource:
-        if self.resource_template:
             # Avoid building context if we can since it may result in downloading
             # unnecessary external data
-            resource = self.resource_template.render(**self.default_context)
+            resource = resource_template.render(**self.default_context)
             if resource.target_path.exists():
-                return resource
+                self.resource = resource
             else:
-                return self.resource_template.render(**self.context)
+                self.resource = resource_template.render(**self.context)
+
+            self.install()
+        else:
+            self.resource = None
+
+        self.load()
 
     # Path that the external data has been installed
     @property
     def install_path(self) -> Path:
-        resource = self.resource
-        if resource:
-            return resource.target_path.path
+        if self.resource:
+            return self.resource.target_path.path
 
     # Builds context for formatting urls
     @property
