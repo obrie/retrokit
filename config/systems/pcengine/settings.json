@@ -30,8 +30,15 @@
     ]
   },
   "emulators": {
-    "lr-beetle-pce-fast": {"core_name": "pce", "library_name": "Beetle PCE Fast", "default": true},
-    "lr-beetle-supergrafx": {"core_name": "sgx", "library_name": "Beetle SuperGrafx"}
+    "lr-beetle-pce-fast": {
+      "default": true,
+      "core_name": "pce",
+      "library_name": "Beetle PCE Fast"
+    },
+    "lr-beetle-supergrafx": {
+      "core_name": "sgx",
+      "library_name": "Beetle SuperGrafx"
+    }
   },
   "cheats": {
     "names": [

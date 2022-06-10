@@ -14,7 +14,11 @@
     ]
   },
   "emulators": {
-    "lr-handy": {"core_name": "handy", "library_name": "Handy", "default": true}
+    "lr-handy": {
+      "default": true,
+      "core_name": "handy",
+      "library_name": "Handy"
+    }
   },
   "cheats": {
     "names": [

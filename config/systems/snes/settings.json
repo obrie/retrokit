@@ -17,7 +17,11 @@
     }
   },
   "emulators": {
-    "lr-snes9x": {"core_name": "snes9x", "library_name": "Snes9x", "default": true}
+    "lr-snes9x": {
+      "default": true,
+      "core_name": "snes9x",
+      "library_name": "Snes9x"
+    }
   },
   "cheats": {
     "names": [

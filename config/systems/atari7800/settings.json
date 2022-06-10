@@ -14,7 +14,11 @@
     ]
   },
   "emulators": {
-    "lr-prosystem": {"core_name": "prosystem", "library_name": "ProSystem", "default": true}
+    "lr-prosystem": {
+      "default": true,
+      "core_name": "prosystem",
+      "library_name": "ProSystem"
+    }
   },
   "cheats": {
     "names": [

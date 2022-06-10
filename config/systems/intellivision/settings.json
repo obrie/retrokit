@@ -14,7 +14,11 @@
     ]
   },
   "emulators": {
-    "lr-freeintv": {"core_name": "freeintv", "library_name": "FreeIntv", "default": true}
+    "lr-freeintv": {
+      "default": true,
+      "core_name": "freeintv",
+      "library_name": "FreeIntv"
+    }
   },
   "bios": {
     "url": "$BIOS_URL/libretro/Mattel - Intellivision",
