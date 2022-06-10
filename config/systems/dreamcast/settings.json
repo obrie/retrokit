@@ -17,8 +17,19 @@
     }
   },
   "emulators": {
-    "redream": {"default": true},
-    "lr-flycast": {"core_name": "flycast", "library_name": "Flycast"}
+    "redream": {
+      "default": true,
+      "gamestate": [
+        "/opt/retropie/configs/dreamcast/redream/cache/*",
+        "/opt/retropie/configs/dreamcast/redream/saves/*",
+        "/opt/retropie/configs/dreamcast/redream/states/*",
+        "/opt/retropie/configs/dreamcast/redream/vmu*.bin"
+      ]
+    },
+    "lr-flycast": {
+      "core_name": "flycast",
+      "library_name": "Flycast"
+    }
   },
   "cheats": {
     "names": [
@@ -95,14 +106,6 @@
         "Stupid Invaders": "lr-flycast"
       }
     }
-  },
-  "gamestate": {
-    "files": [
-      "/opt/retropie/configs/dreamcast/redream/cache/*",
-      "/opt/retropie/configs/dreamcast/redream/saves/*",
-      "/opt/retropie/configs/dreamcast/redream/states/*",
-      "/opt/retropie/configs/dreamcast/redream/vmu*.bin"
-    ]
   },
   "roms": {
     "id": "crc",

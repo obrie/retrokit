@@ -17,7 +17,15 @@
     }
   },
   "emulators": {
-    "lr-yabasanshiro": {"build": "source", "core_name": "yabasanshiro", "library_name": "YabaSanshiro", "default": true}
+    "lr-yabasanshiro": {
+      "default": true,
+      "build": "source",
+      "core_name": "yabasanshiro",
+      "library_name": "YabaSanshiro",
+      "gamestate": [
+        "$HOME/RetroPie/roms/saturn/yabasanshiro/backup.bin"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -32,11 +40,6 @@
       "saturn_bios.bin": "{url}/saturn_bios.bin",
       "sega_101.bin": "{url}/sega_101.bin"
     }
-  },
-  "gamestate": {
-    "files": [
-      "$HOME/RetroPie/roms/saturn/yabasanshiro/backup.bin"
-    ]
   },
   "romsets": [
     {

@@ -14,7 +14,14 @@
     ]
   },
   "emulators": {
-    "lr-bluemsx": {"core_name": "bluemsx", "library_name": "blueMSX", "default": true}
+    "lr-bluemsx": {
+      "default": true,
+      "core_name": "bluemsx",
+      "library_name": "blueMSX",
+      "gamestate": [
+        "{rom_dir}/{rom}.sram"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -59,11 +66,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/coleco.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}.sram"
-    ]
   },
   "roms": {
     "id": "crc",

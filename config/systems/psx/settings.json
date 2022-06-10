@@ -17,7 +17,14 @@
     }
   },
   "emulators": {
-    "lr-duckstation": {"core_name": "duckstation", "library_name": "DuckStation", "default": true}
+    "lr-duckstation": {
+      "default": true,
+      "core_name": "duckstation",
+      "library_name": "DuckStation",
+      "gamestate": [
+        "{rom_dir}/{rom}_*.mcd"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -85,11 +92,6 @@
       "source": "https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json",
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}_*.mcd"
-    ]
   },
   "roms": {
     "id": "crc",

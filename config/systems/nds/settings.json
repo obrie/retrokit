@@ -1,7 +1,13 @@
 {
   "system": "nds",
   "emulators": {
-    "drastic": {"default": true}
+    "drastic": {
+      "default": true,
+      "gamestate": [
+        "/opt/retropie/configs/nds/drastic/backup/{rom}.dsv",
+        "/opt/retropie/configs/nds/drastic/savestates/*"
+      ]
+    }
   },
   "cheats": {
     "names": [
@@ -45,12 +51,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/nds.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "/opt/retropie/configs/nds/drastic/backup/{rom}.dsv",
-      "/opt/retropie/configs/nds/drastic/savestates/*"
-    ]
   },
   "roms": {
     "id": "crc",

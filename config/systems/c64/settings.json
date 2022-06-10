@@ -20,7 +20,17 @@
     }
   },
   "emulators": {
-    "lr-vice": {"core_name": "vice", "library_name": "VICE x64", "default": true}
+    "lr-vice": {
+      "default": true,
+      "core_name": "vice",
+      "library_name": "VICE x64",
+      "gamestate": [
+        "{rom_dir}/{rom}.nvr",
+        "{rom_dir}/vice_printer.txt",
+        "{rom_dir}/vice_work",
+        "{rom_dir}/vice_work.*"
+      ]
+    }
   },
   "romsets": [
     {
@@ -103,14 +113,6 @@
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/c64.json"
     }
-  },
-  "gamestate": {
-    "files": [
-      "{rom_dir}/{rom}.nvr",
-      "{rom_dir}/vice_printer.txt",
-      "{rom_dir}/vice_work",
-      "{rom_dir}/vice_work.*"
-    ]
   },
   "roms": {
     "id": "crc",
