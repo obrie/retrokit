@@ -13,7 +13,11 @@
     }
   },
   "emulators": {
-    "lr-genesis-plus-gx": {"core_name": "genesis_plus_gx", "library_name": "Genesis Plus GX", "default": true}
+    "lr-genesis-plus-gx": {
+      "default": true,
+      "core_name": "genesis_plus_gx",
+      "library_name": "Genesis Plus GX"
+    }
   },
   "cheats": {
     "names": [

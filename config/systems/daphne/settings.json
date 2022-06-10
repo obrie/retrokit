@@ -4,7 +4,9 @@
     "import_dat_titles": false
   },
   "emulators": {
-    "hypseus": {"default": true}
+    "hypseus": {
+      "default": true
+    }
   },
   "romsets": [
     {

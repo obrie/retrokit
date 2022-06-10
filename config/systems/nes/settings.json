@@ -17,7 +17,11 @@
     }
   },
   "emulators": {
-    "lr-fceumm": {"core_name": "fceumm", "library_name": "FCEUmm", "default": true}
+    "lr-fceumm": {
+      "default": true,
+      "core_name": "fceumm",
+      "library_name": "FCEUmm"
+    }
   },
   "cheats": {
     "names": [

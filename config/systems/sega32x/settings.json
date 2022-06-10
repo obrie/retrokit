@@ -10,7 +10,11 @@
     ]
   },
   "emulators": {
-    "lr-picodrive": {"core_name": "picodrive", "library_name": "PicoDrive", "default": true}
+    "lr-picodrive": {
+      "default": true,
+      "core_name": "picodrive",
+      "library_name": "PicoDrive"
+    }
   },
   "cheats": {
     "names": [
