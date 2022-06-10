@@ -83,6 +83,8 @@ class Machine:
         self.favorite = False
         self.custom_context = custom_context or {}
 
+        self._resource = None
+
     # Whether this machine is installable
     @staticmethod
     def is_installable(xml: lxml.etree.ElementBase) -> bool:
@@ -195,10 +197,19 @@ class Machine:
 
         return machine_id
 
-    # Builds context for formatting dirs/urls
+    # Builds context for formatting dirs/urls, including resource filenames
     @property
     def context(self) -> dict:
-        context = {
+        context = {**self.__resource_context}
+        if self.resource:
+            context['machine_filename'] = self.resource.target_path.path.name
+
+        return context
+
+    # Builds context for formatting dirs/urls
+    @property
+    def __resource_context(self) -> dict:
+        return {
             'machine': self.name,
             'machine_id': self.id,
             'machine_alt_name': self.alt_name,
@@ -208,12 +219,6 @@ class Machine:
             'parent': (self.parent_name or self.name),
             **self.custom_context,
         }
-
-        machine_resource = self.romset.resource('machine', **context)
-        if machine_resource:
-            context['machine_filename'] = machine_resource.target_path.path.name
-
-        return context
 
     @property
     def is_clone(self) -> bool:
@@ -296,7 +301,9 @@ class Machine:
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('machine', **self.context)
+        if not self._resource:
+            self._resource = self.romset.resource('machine', **self.__resource_context)
+        return self._resource
 
     # Parent machine, if applicable
     @property

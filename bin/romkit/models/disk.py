@@ -17,24 +17,30 @@ class Disk:
         self.sha1 = sha1
         self.id = sha1
 
+        self._resource = None
+
     # Should this disk be installed to the local filesystem?
     @staticmethod
     def is_installable(xml: lxml.etree.ElementBase) -> bool:
         return xml.get('status') != Disk.STATUS_NO_DUMP
 
-    # Builds context for formatting dirs/urls
+    # Builds context for formatting dirs/urls, including resource filenames
     @property
     def context(self) -> dict:
+        return {
+            **self.__resource_context,
+            'disk_filename': self.resource.target_path.path.name,
+        }
+
+    # Builds context for formatting dirs/urls
+    @property
+    def __resource_context(self) -> dict:
         context = {
             'disk': self.name,
             **self.machine.context,
         }
         if self.sha1:
             context['sha1'] = self.sha1
-
-        context['disk_filename'] = self.romset.resource('disk', **context).target_path.path.name
-
-        return context
 
     @property
     def romset(self) -> ROMSet:
@@ -43,7 +49,9 @@ class Disk:
     # Target destination for installing this sample
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('disk', **self.context)
+        if not self._resource:
+            self._resource = self.romset.resource('disk', **self.__resource_context)
+        return self._resource
 
     # Downloads and installs the disk
     def install(self) -> None:
