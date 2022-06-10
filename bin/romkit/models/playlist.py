@@ -10,6 +10,7 @@ class Playlist:
 
     def __init__(self, machine: Machine) -> None:
         self.machine = machine
+        self._resource = None
 
     @property
     def name(self) -> str:
@@ -22,17 +23,25 @@ class Playlist:
     # Builds context for formatting dirs/urls
     @property
     def context(self) -> dict:
-        context = {
+        return {
+            **self.__resource_context,
+            'playlist_filename': self.resource.target_path.path.name,
+        }
+
+    # Builds context for formatting dirs/urls
+    @property
+    def __resource_context(self) -> dict:
+        return {
             'playlist': self.name,
             **self.machine.context,
         }
-        context['playlist_filename'] = self.romset.resource('playlist', **context).target_path.path.name
-        return context
 
     # Target destination for installing this playlist
     @property
     def resource(self) -> Resource:
-        return self.romset.resource('playlist', **self.context)
+        if not self._resource:
+            self._resource = self.romset.resource('playlist', **self.__resource_context)
+        return self._resource
 
     # Adds the associated machine to the playlist
     def install(self) -> None:
