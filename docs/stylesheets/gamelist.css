@@ -57,7 +57,7 @@ html {
 }
 
 #gamelist th.players {
-  font-size: 7px;
+  font-size: 6px;
   color: transparent;
   text-shadow: 0 0 0 #000;
   -webkit-print-color-adjust: exact;
