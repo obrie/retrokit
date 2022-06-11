@@ -951,7 +951,8 @@ a karaoke playlist.
 To generate the documentation, you can use the following command(s):
 
 ```bash
-bin/docs.sh build
+bin/docs.sh build [/path/to/output_dir/]
+bin/docs.sh build_intro [/path/to/output.pdf]
 ```
 
 This will generate PDF files in the `docs/build` folder.

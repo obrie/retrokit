@@ -5,24 +5,21 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 usage() {
   echo "usage:"
-  echo " $0 build"
-  echo " $0 build_intro <target_pdf_path>"
+  echo " $0 build [/path/to/output_dir/]|build_intro [path/to/output.pdf]"
   exit 1
 }
 
 build() {
-  mkdir -p "$docs_dir/build"
+  local target_dir=${1:-"$docs_dir/build"}
+  mkdir -pv "$target_dir"
 
-  build_gamelist '["system", "name", "players", "genres"]' "$docs_dir/build/gamelist-by_system.pdf"
-  build_gamelist '["name", "system", "players", "genres"]' "$docs_dir/build/gamelist-by_name.pdf"
+  build_gamelist '["system", "name", "players", "genres"]' "$target_dir/gamelist-by_system.pdf"
+  build_gamelist '["name", "system", "players", "genres"]' "$target_dir/gamelist-by_name.pdf"
+  build_intro "$target_dir/intro.pdf"
 }
 
 build_intro() {
-  local target_path=$1
-  if [ -z "$target_path" ]; then
-    usage
-  fi
-
+  local target_path=${1:-"$docs_dir/build/intro.pdf"}
   local template=$(first_path '{docs_dir}/intro.html.jinja')
 
   local doc_data_path="$tmp_ephemeral_dir/doc-intro.json"
