@@ -208,7 +208,6 @@ __add_system_extensions() {
       key_names_csv=${key_names_csv::-1}
     fi
 
-    echo "key_names_csv: $key_names_csv"
     if [ -n "$key_names_csv" ]; then
       # Generate a description ofthe key(s)
       local key_description=
