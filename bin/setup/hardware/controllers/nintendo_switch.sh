@@ -41,6 +41,9 @@ build_joycond() {
 
   cmake .
   sudo make install
+}
+
+configure() {
   sudo systemctl enable --now joycond
 }
 
