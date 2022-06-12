@@ -69,6 +69,32 @@ vacuum() {
   done < <(__list_path_expressions | grep -F '{rom}')
 }
 
+export() {
+  local target_path=${1:-"$tmp_dir/$system/gamestate.zip"}
+  local merge=false
+  if [ $# -gt 1 ]; then local "${@:2}"; fi
+
+  local staging_path
+  if [ "$merge" == 'true' ]; then
+    # Merge new files with the target path
+    staging_path=$target_path
+  else
+    # Stage export to an empty zip file
+    staging_path="$tmp_ephemeral_dir/gamestate.zip"
+    echo UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA== | base64 -d > "$staging_path"
+  fi
+
+  while read path; do
+    if [ ! -f "$path.rk-src" ]; then
+      zip "$staging_path" "$path"
+    fi
+  done < <(__glob_all_paths)
+
+  if [ "$staging_path" != "$target_path" ]; then
+    mv -v "$staging_path" "$target_path"
+  fi
+}
+
 # Removes all known game state
 remove() {
   while read path; do
