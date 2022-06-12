@@ -44,10 +44,10 @@ setup() {
   # been restarted
   . /etc/default/locale
 
-  if [ -z "$3" ] && { [ "$setupmodule" == 'system' ] || [[ "$setupmodule" == system-* ]]; }; then
+  if { [ -z "$3" ] || [ "$3" == 'all' ]; } && { [ "$setupmodule" == 'system' ] || [[ "$setupmodule" == system-* ]]; }; then
     # Setting up an individual system module for all systems
     while read system; do
-      run "$setupmodule" "$action" "$system"
+      run "$setupmodule" "$action" "$system" "${@:4}"
     done < <(setting '.systems[]')
 
     # Exceptions for the "retropie" system
