@@ -8,7 +8,7 @@ setup_module_desc='Nintendo switch controller setup and configuration'
 
 module_version=3.2
 
-deps() {
+depends() {
   sudo apt-get install -y libevdev-dev
 }
 
