@@ -19,6 +19,7 @@ build() {
 
 build_kernel_module() {
   if [ -d /var/lib/dkms/nintendo/$module_version ]; then
+    echo 'hid-nintendo is already installed'
     return
   fi
 
@@ -33,6 +34,7 @@ build_kernel_module() {
 
 build_joycond() {
   if [ -f /usr/bin/joycond ] && [ "$FORCE_UPDATE" != 'true' ]; then
+    echo 'joycond is already installed'
     return
   fi
 
