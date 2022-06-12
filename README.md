@@ -154,7 +154,8 @@ The default hardware setup assumes:
 You can have complete control over what parts of retrokit get used via everything
 in the `config/` folder, particularly `config/settings.json`.
 
-I strongly recommend forking this repo and using your fork to update and track
+I strongly recommend using profiles to customize your configuration.  That being
+said, feel free to fork this repo and use your fork to update and track
 all of your personal preferences.
 
 ## Instructions
