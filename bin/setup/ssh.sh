@@ -36,10 +36,14 @@ __configure_private_keys() {
     file_cp "$source_key_path" "$target_key_path"
     chmod 600 "$target_key_path"
   done < <(each_path '{config_dir}/ssh' find '{}' -name 'id_rsa*')
+
+  file_cp '{config_dir}/ssh/config' "$HOME/.ssh/config"
+  chmod 600 "$HOME/.ssh/config"
 }
 
 restore() {
   restore_file "$HOME/.ssh/authorized_keys" delete_src=true
+  restore_file "$HOME/.ssh/config" delete_src=true
 
   while read key_path; do
     restore_file "$key_path" delete_src=true
