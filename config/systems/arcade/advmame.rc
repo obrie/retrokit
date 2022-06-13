@@ -20,3 +20,8 @@ shienryu/display_magnify 2
 strtdriv/display_magnify 2
 sokyugrt/display_magnify 3
 thunt/display_magnify 3
+
+input_map[p1_dialx] mouse[0,x] mouse[1,x] mouse[2,x] mouse[3,x]
+input_map[p1_paddlex] mouse[0,x] mouse[1,x] mouse[2,x] mouse[3,x]
+input_map[p1_trackballx] mouse[0,x] mouse[1,x] mouse[2,x] mouse[3,x]
+input_map[p1_trackbally] mouse[0,y] mouse[1,y] mouse[2,y] mouse[3,y]
