@@ -24,8 +24,8 @@ function _onstart_advmame() {
     else
         regex="\(joystick_button\|joystick_digital\)\[$controller[^]]\+\]"
     fi
-    sudo sed -i "/^input_map\[[^]]\+\] $regex\$/d" '/tmp/advmame.rc'
-    sudo sed -i "s/ or $regex\|$regex or//g" '/tmp/advmame.rc'
+    sudo sed -i "/^input_map\[[^]]\+\] $regex\( $regex\)\?\$/d" '/tmp/advmame.rc'
+    sudo sed -i "s/ or $regex\( $regex\)\?\|$regex\( $regex\)\? or//g" '/tmp/advmame.rc'
 
     declare -Ag advmame_mapped_inputs
     declare -g advmame_hotkey_value=''
