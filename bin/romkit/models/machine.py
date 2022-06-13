@@ -94,13 +94,11 @@ class Machine:
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
-        
-        # Controls
-        controls = {control.get('name') for control in xml.findall('control')}
 
         # Orientation
-        if xml.findall('video'):
-            orientation = xml.findall('video')[0].get('orientation')
+        video_tags = xml.findall('video')
+        if video_tags:
+            orientation = video_tags[0].get('orientation')
         else:
             orientation = 'horizontal'
 
@@ -137,7 +135,6 @@ class Machine:
             bios_name=bios_name,
             sample_name=sample_name,
             device_names=device_names,
-            controls=controls,
             sourcefile=xml.get('sourcefile'),
         )
 
@@ -440,6 +437,7 @@ class Machine:
             'description': self.description,
             'comment': self.comment,
             'orientation': self.orientation,
+            'controls': sorted(list(self.controls)),
 
             # Download info
             'url': str(self.resource and self.resource.source_url),

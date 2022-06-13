@@ -338,6 +338,9 @@
     },
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/arcade/manuals.tsv"
+    },
+    "controls": {
+      "source": "file://$HOME/retrokit/config/systems/arcade/controls.tsv"
     }
   },
   "roms": {
@@ -402,10 +405,9 @@
         "Prototype"
       ],
       "!controls": [
-        "Gambling",
-        "Hanafuda",
-        "Mahjong",
-        "Trackball"
+        "gambling",
+        "hanafuda",
+        "mahjong"
       ],
       "!names": [
         "47pie2",
