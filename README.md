@@ -23,6 +23,7 @@ Specifically, it can set up:
 * In-game manuals
 * System controller reference guides
 * Printable gamelists
+* Game state management (import/export)
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections management (including lightguns)
 * Sinden lightgun controller configuration
@@ -1063,6 +1064,50 @@ The ratings are roughly categorized like so:
 
 Some of this is subjective.  For the most part, the defaults in retrokit avoid
 filtering for games that have major issues.
+
+## Game state
+
+Game state can be quickly exported / imported using the `system-roms-gamestate`
+setup module.  Additionally, you can vacuum (i.e. remove unused game state) and
+delete all game state using this module as well.
+
+The export / import functionality currently supports either generating a single
+export ZIP file per system or a shared export file across all systems.
+
+Below is some example usage:
+
+```
+# Remove unused game state for all systems (only prints commands, does not execute them)
+bin/setup.sh vacuum system-roms-gamestate
+
+# Remove unused game state for specific system
+bin/setup.sh vacuum system-roms-gamestate nes
+
+# Remove all game state (only prints commands, does not execute them)
+bin/setup.sh remove system-roms-gamestate nes
+
+# Generates a per-system export file to tmp/<system>/export.zip
+bin/setup.sh export system-roms-gamestate
+
+# Generates an export file to the given path
+bin/setup.sh export system-roms-gamestate nes /path/to/export.zip
+
+# Generates a single export file for all systems to the given path
+bin/setup.sh export system-roms-gamestate /path/to/export.zip merge=true
+
+# Imports, without ovewriting, game state for all systems
+bin/setup.sh import system-roms-gamestate
+
+# Imports game state for a specific system from the given path, without overwriting
+bin/setup.sh import system-roms-gamestate nes /path/to/export.zip
+
+# Imports *and* overwrites game state for a specific system / export path
+bin/setup.sh import system-roms-gamestate nes /path/to/export.zip overwrite=true
+```
+
+This functionality could be enhanced in a large number of ways, or you can build
+some form of backup on top of this feature.  The implementation is fairly straightforward
+since all of the work to identify the relevant game state files is already done.
 
 ## Thanks
 
