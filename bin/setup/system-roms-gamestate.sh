@@ -69,6 +69,7 @@ vacuum() {
   done < <(__list_path_expressions | grep -F '{rom}')
 }
 
+# Exports the system's ROM gamestate (saves, etc.) to the given file
 export() {
   local target_path=${1:-"$tmp_dir/$system/gamestate.zip"}
   local merge=false
@@ -93,6 +94,34 @@ export() {
   if [ "$staging_path" != "$target_path" ]; then
     mv -v "$staging_path" "$target_path"
   fi
+}
+
+# Imports ROM gamestates from the given file
+import() {
+  local source_path=${1:-"$tmp_dir/$system/gamestate.zip"}
+  local overwrite=false
+  if [ $# -gt 1 ]; then local "${@:2}"; fi
+
+  if [ "$CONFIRM" != 'false' ] && [ "$overwrite" == 'true' ]; then
+    read -p "This will ovewrite any current game state for this system.  Are you sure? (y/n) " -r
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      echo 'Aborted.'
+      exit 1
+    fi
+  fi
+
+  while IFS=$'\t' read emulator path_expression; do
+    local path=${path_expression//'{rom}'/*}
+    local options
+
+    if [ "$overwrite" == 'true' ]; then
+      options='-o'
+    else
+      options='-n'
+    fi
+
+    unzip $options "$source_path" "${path:1}" -d / 2>&1 | grep -Ev 'caution|Archive' || true
+  done < <(__list_path_expressions)
 }
 
 # Removes all known game state
@@ -150,6 +179,8 @@ __list_path_templates() {
 
 # Disable confirmation since none of the destruction of actions in this script
 # actually do anything destructive on their own.
-CONFIRM=false
+if [ "$1" == 'remove' ]; then
+  CONFIRM=false
+fi
 
 setup "$1" "${@:3}"
