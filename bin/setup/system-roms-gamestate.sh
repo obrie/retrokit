@@ -134,7 +134,7 @@ remove() {
 }
 
 # Resets running game stats in EmulationStation
-reset_gamelists() {
+reset_gamelist() {
   if [ "$CONFIRM" != 'false' ]; then
     read -p "This will reset the Last Played / Play Count stats for this system.  Are you sure? (y/n) " -r
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
