@@ -90,11 +90,25 @@ function _gui_setup_retrokit() {
         )
 
         # Add specific modules
+        declare -A setupmodules=()
         local index=3
         while read setupmodule; do
+            setupmodules[$setupmodule]=1
             options+=($index "$setupmodule")
             index=$((index+1))
         done < <(__get_settings_retrokit | jq -r '.setup | (.default + .add - .remove)[]')
+
+        options+=("" "---")
+        index=$((index+1))
+
+        # Add other modules not explicitly in config
+        while read setupmodule; do
+            if [[ ! "$setupmodule" =~ common|about|helpers ]] && [ -z "${setupmodules[$setupmodule]}" ]; then
+                setupmodules[$setupmodule]=1
+                options+=($index "$setupmodule")
+                index=$((index+1))
+            fi
+        done < <(find "$home/retrokit" -wholename '*bin/setup/*.sh' -printf '%P\n' | sed 's/\.sh$//g; s|.*bin/setup/||g' | sort)
 
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
         if [[ -n "$choice" ]]; then
