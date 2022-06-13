@@ -133,6 +133,21 @@ remove() {
   done < <(__glob_all_paths)
 }
 
+# Resets running game stats in EmulationStation
+reset_gamelists() {
+  if [ "$CONFIRM" != 'false' ]; then
+    read -p "This will reset the Last Played / Play Count stats for this system.  Are you sure? (y/n) " -r
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      echo 'Aborted.'
+      exit 1
+    fi
+  fi
+
+  local gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
+  xmlstarlet ed --inplace -d '/gameList/game/playcount' "$gamelist_file"
+  xmlstarlet ed --inplace -d '/gameList/game/lastplayed' "$gamelist_file"
+}
+
 # Lists files using the given glob
 __glob_path() {
   local path=$1
