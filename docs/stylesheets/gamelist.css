@@ -7,6 +7,10 @@ html {
   width: 796px;
 }
 
+body {
+  color: #000;
+}
+
 /* Game List */
 #gamelist {
   font-size: 8px;
