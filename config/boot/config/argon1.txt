@@ -1,5 +1,8 @@
 # Additional parameters added to support the argon1 case
 
+# Fix HDMI settings being misinterpreted when using an Argon1 case
+hdmi_ignore_edid=0xa5000080
+
 # Enable I2C
 dtparam=i2c_arm=on
 

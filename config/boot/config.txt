@@ -1,6 +1,3 @@
-# Fix HDMI settings being misinterpreted, e.g. when using an Argon1 case
-hdmi_ignore_edid=0xa5000080
-
 # Disable 4k output to improve performance
 hdmi_max_pixel_freq=200000000
 
