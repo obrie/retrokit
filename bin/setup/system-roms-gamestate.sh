@@ -143,6 +143,8 @@ reset_gamelist() {
     fi
   fi
 
+  stop_emulationstation
+
   local gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
   sed -i '/<playcount>/d; /<lastplayed>/d' "$gamelist_file"
 }
