@@ -144,8 +144,7 @@ reset_gamelist() {
   fi
 
   local gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
-  xmlstarlet ed --inplace -d '/gameList/game/playcount' "$gamelist_file"
-  xmlstarlet ed --inplace -d '/gameList/game/lastplayed' "$gamelist_file"
+  sed -i '/<playcount>/d; /<lastplayed>/d' "$gamelist_file"
 }
 
 # Lists files using the given glob
