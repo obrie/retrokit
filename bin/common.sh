@@ -78,7 +78,7 @@ setting() {
 }
 
 list_setupmodules() {
-  setting '.setup | (.default + .add - .remove)[]' | uniq
+  setting '.setup | (.default + .add - .remove)[]' | awk '!x[$0]++'
 }
 
 # Is the given setupmodule is enabled?
