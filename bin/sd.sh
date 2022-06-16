@@ -73,13 +73,18 @@ sync_media() {
   local delete=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
+  if [[ "$(id -u)" -ne 0 ]]; then
+    # We must run as sudo since the rsync can take a long time
+    echo "Script must be run under sudo. Try 'sudo $0'"
+    exit 1
+  fi
+
   local rsync_args=''
   if [ "$delete" == 'true' ]; then
     rsync_args='--delete'
   fi
 
   # This should be the full list of media paths
-  # TODO: Double check ownership is set correctly in all parent folders
   local paths=(
     /home/pi/RetroPie/BIOS/fbneo/samples/
     /home/pi/RetroPie/BIOS/mame/samples/
