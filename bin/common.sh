@@ -78,7 +78,7 @@ setting() {
 }
 
 list_setupmodules() {
-  setting '.setup | (.default + .add - .remove)[]'
+  setting '.setup | (.default + .add - .remove)[]' | uniq
 }
 
 # Is the given setupmodule is enabled?
