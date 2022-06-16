@@ -10,6 +10,9 @@ usage() {
 
 setup_all() {
   local action="$1"
+  local from_setupmodule=''
+  local to_setupmodule=''
+  if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Don't automatically call dependent setupmodules since they'll all be called
   # in order
@@ -33,7 +36,7 @@ setup_all() {
 
   while read setupmodule; do
     setup "$action" "$setupmodule"
-  done < <(echo "$modules")
+  done < <(echo "$modules" | sed -n "\|${from_setupmodule:-.*}|, \|${to_setupmodule}|p")
 }
 
 setup() {
@@ -85,6 +88,9 @@ main() {
 
   if [ -z "$setupmodule" ] || [ "$setupmodule" == 'all' ]; then
     setup_all "$action"
+  elif [[ "$setupmodule" == *~* ]]; then
+    IFS='~' read -ra range <<< "$setupmodule"
+    setup_all "$action" from_setupmodule="${range[0]}" to_setupmodule="${range[1]}"
   else
     setup "$action" "$setupmodule" "${@:3}"
   fi

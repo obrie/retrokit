@@ -240,6 +240,12 @@ bin/setup.sh install
 # Install specific setup module
 bin/setup.sh install splashscreen
 
+# Install a range of setup modules (from splashscreen onward)
+bin/setup.sh install splashscreen~
+
+# Install a range of setup modules (based on order in config/settings.json)
+bin/setup.sh install splashscreen~runcommand
+
 # Install all system-specific setup modules for all systems
 bin/setup.sh install system
 
