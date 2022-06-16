@@ -16,6 +16,8 @@ depends() {
 configure() {
   ini_merge '{system_config_dir}/dosbox-staging.conf' '/opt/retropie/configs/pc/dosbox-staging.conf'
   ini_merge '{system_config_dir}/dosbox-SVN.conf' '/opt/retropie/configs/pc/dosbox-SVN.conf'
+
+  mkdir -p /opt/retropie/configs/pc/mapperfiles
   each_path '{system_config_dir}/mapperfiles' find '{}' -name '*.map' -exec cp -v -t '/opt/retropie/configs/pc/mapperfiles/' '{}' +
   sed -i '/^[ \t]*#/d' /opt/retropie/configs/pc/mapperfiles/*.map
 }
