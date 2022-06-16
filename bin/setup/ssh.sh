@@ -11,6 +11,7 @@ configure() {
   __configure_authentication
   __configure_authorized_keys
   __configure_private_keys
+  __configure_known_hosts
 }
 
 __configure_service() {
@@ -41,7 +42,12 @@ __configure_private_keys() {
   chmod 600 "$HOME/.ssh/config"
 }
 
+__configure_known_hosts() {
+  file_cp '{config_dir}/ssh/known_hosts' "$HOME/.ssh/known_hosts-retrokit"
+}
+
 restore() {
+  restore_file "$HOME/.ssh/known_hosts" delete_src=true
   restore_file "$HOME/.ssh/authorized_keys" delete_src=true
   restore_file "$HOME/.ssh/config" delete_src=true
 
