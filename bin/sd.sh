@@ -162,7 +162,7 @@ create() {
   sudo mount -v "$retropie_device" "$mount_path"
 
   # Modify partition timeout to account for fsck runtime
-  sudo sed -i '2,$s/defaults/defaults,x-systemd.device-timeout=900s/g' "$mount_path/etc/fstab"
+  sudo sed -i '2,$s/defaults/defaults,x-systemd.device-timeout=3600s/g' "$mount_path/etc/fstab"
 
   # Copy retrokit
   echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
