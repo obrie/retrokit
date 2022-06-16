@@ -42,6 +42,8 @@ class Disk:
         if self.sha1:
             context['sha1'] = self.sha1
 
+        return context
+
     @property
     def romset(self) -> ROMSet:
         return self.machine.romset
