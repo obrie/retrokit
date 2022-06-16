@@ -36,6 +36,7 @@ vacuum_all() {
   vacuum_media_cache "$@"
   vacuum_media "$@"
   vacuum_overlays "$@"
+  vacuum_gamestate "$@"
 }
 
 vacuum_roms() {
