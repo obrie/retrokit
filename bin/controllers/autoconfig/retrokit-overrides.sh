@@ -2,38 +2,9 @@
 
 # Adds support for overriding certain joystick controls automatically.
 # This is most typically used for disabling hotkeys.
-# 
-# Also adds support for missing keyboard hotkeys.
-
-function onstart_retrokit-overrides_keyboard() {
-    iniConfig " = " '"' "$configdir/all/retroarch.cfg"
-}
-
-function map_retroarch_keyboard() {
-    local input_name="$1"
-    local input_type="$2"
-    local input_id="$3"
-    local input_value="$4"
-
-    local key
-    case "$input_name" in
-        leftbottom|leftshoulder)
-            keys=("input_load_state")
-            ;;
-        rightbottom|rightshoulder)
-            keys=("input_save_state")
-            ;;
-        *)
-            return
-            ;;
-    esac
-
-    for key in "${keys[@]}"; do
-        iniSet "$key" "${retroarchkeymap[$input_id]}"
-    done
-}
 
 function onend_retrokit-overrides_keyboard() {
+    iniConfig " = " '"' "$configdir/all/retroarch.cfg"
     __override_retroarch_settings_retrokit 'keyboard'
 }
 
