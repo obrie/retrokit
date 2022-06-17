@@ -29,7 +29,7 @@ update_retropie_setup() {
   pushd "$HOME/RetroPie-Setup"
   git pull --ff-only
   popd
-  sudo $HOME/RetroPie-Setup/retropie_packages.sh setup post_update
+  sudo __nodialog=1 $HOME/RetroPie-Setup/retropie_packages.sh setup post_update
   clear
 }
 
