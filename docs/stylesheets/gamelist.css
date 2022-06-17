@@ -30,6 +30,8 @@ body {
 }
 
 #gamelist th {
+  background-color: #fff;
+  border-top: none;
   border-left: none;
 }
 
