@@ -1,0 +1,11 @@
+[Unit]
+Description=RetroFlag safe shutdown
+After=rc-local.service
+
+[Service]
+Type=simple
+ExecStart=python /opt/RetroFlag/SafeShutdown.py
+TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target
