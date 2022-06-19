@@ -1,0 +1,5 @@
+# Enable PW IO
+dtoverlay=RetroFlag_pw_io.dtbo
+
+# Enable serial console
+enable_uart=1
