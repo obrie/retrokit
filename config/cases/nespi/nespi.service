@@ -4,7 +4,7 @@ After=rc-local.service
 
 [Service]
 Type=simple
-ExecStart=python /opt/RetroFlag/SafeShutdown.py
+ExecStart=python3 /opt/RetroFlag/safe_shutdown.py
 TimeoutSec=0
 
 [Install]
