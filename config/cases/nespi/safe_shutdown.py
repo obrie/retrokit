@@ -10,7 +10,7 @@ import shutil
 import subprocess
 
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 # This is a modified version of:
 # * https://github.com/crcerror/ES-generic-shutdown
@@ -32,25 +32,29 @@ class SafeShutdown():
         config_path: Optional[str] = None,
     ) -> None:
         self.led = gpiozero.LED(LED_PIN)
-        self.led.on()
-
         self.power = gpiozero.LED(POWEREN_PIN)
-        self.power.on()
 
     # Looks up the currently running emulator
     @property
     def runcommand_process(self) -> Optional[psutil.Process]:
         all_processes = psutil.process_iter(attrs=['pid', 'cmdline'])
-        return next(filter(lambda p: 'runcommand.sh' in ' '.join(p.info['cmdline']), all_processes), None)
+        return next(filter(lambda p: 'runcommand.sh' in ' '.join(p.info['cmdline']), self._all_processes()), None)
 
     # Looks up the currently running EmulationStation process
     @property
     def es_process(self) -> Optional[psutil.Process]:
-        all_processes = psutil.process_iter(attrs=['pid', 'cmdline'])
-        return next(filter(lambda p: 'emulationstation' in ' '.join(p.info['cmdline']), all_processes), None)
+        return next(filter(lambda p: p.info['cmdline'] and p.info['cmdline'][0] == '/opt/retropie/supplementary/emulationstation/emulationstation', self._all_processes()), None)
+
+    # Looks up all currently running processes
+    def _all_processes(self) -> List[psutil.Process]:
+        return sorted(psutil.process_iter(attrs=['pid', 'cmdline']), key=lambda p: p.create_time(), reverse=True)
 
     # Starts listening for button presses
     def run():
+        # Mark pins as being ON
+        self.led.on()
+        self.power.on()
+
         power_button = gpiozero.Button(POWER_PIN, hold_time=HOLD_SECONDS)
         power_button.when_pressed = self.shutdown
         power_button.when_released = self.enable_led
@@ -72,7 +76,7 @@ class SafeShutdown():
 
             try:
                 es_process.kill()
-                psutil.wait_proces([es_process])
+                psutil.wait_procs([es_process])
             except psutil.NoSuchProcess:
                 # Failed to talk to ES: manually shut down
                 os.system('sudo shutdown -h now')
@@ -109,7 +113,7 @@ class SafeShutdown():
 
             try:
                 es_process.kill()
-                psutil.wait_proces([es_process])
+                psutil.wait_procs([es_process])
             except psutil.NoSuchProcess:
                 # Failed to talk to ES: manually reboot
                 os.system('sudo reboot')
