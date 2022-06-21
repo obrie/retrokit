@@ -9,6 +9,7 @@ import signal
 import shutil
 import subprocess
 
+from argparse import ArgumentParser
 from pathlib import Path
 from typing import List, Optional
 
@@ -28,11 +29,9 @@ class SafeShutdown():
     # that a shut down was intended
     HOLD_SECONDS = 1
 
-    def __init__(self,
-        config_path: Optional[str] = None,
-    ) -> None:
-        self.led = gpiozero.LED(LED_PIN)
-        self.power = gpiozero.LED(POWEREN_PIN)
+    def __init__(self) -> None:
+        self.led = gpiozero.LED(self.LED_PIN)
+        self.power = gpiozero.LED(self.POWEREN_PIN)
 
     # Looks up the currently running emulator
     @property
@@ -55,11 +54,11 @@ class SafeShutdown():
         self.led.on()
         self.power.on()
 
-        power_button = gpiozero.Button(POWER_PIN, hold_time=HOLD_SECONDS)
+        power_button = gpiozero.Button(self.POWER_PIN, hold_time=HOLD_SECONDS)
         power_button.when_pressed = self.shutdown
         power_button.when_released = self.enable_led
 
-        reset_button = gpiozero.Button(RESET_PIN)
+        reset_button = gpiozero.Button(self.RESET_PIN)
         reset_button.when_pressed = self.reset
 
         signal.pause()
@@ -124,7 +123,6 @@ class SafeShutdown():
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/safe_shutdown.conf')
     args = parser.parse_args()
     SafeShutdown(**vars(args)).run()
 
