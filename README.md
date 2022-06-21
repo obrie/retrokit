@@ -1138,6 +1138,7 @@ retrokit what it is.  That includes:
 * [Mark Davis](https://vectogram.us/) for controller images
 * [Wikimedia](https://commons.wikimedia.org/) for conroller images
 * [louiehummv](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue) for axis calibration fixes
+* [crcerror](https://github.com/crcerror/ES-generic-shutdown) for alternate NesPi safe shutdown design
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
