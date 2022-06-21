@@ -109,7 +109,7 @@
       "keymap": "/lib/udev/rc_keymaps/tivo.toml"
     },
     "wifi": {
-      "enabled": false
+      "enabled": true
     }
   },
   "runcommand": {
