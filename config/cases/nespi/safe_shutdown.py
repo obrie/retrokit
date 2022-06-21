@@ -49,12 +49,12 @@ class SafeShutdown():
         return sorted(psutil.process_iter(attrs=['pid', 'cmdline']), key=lambda p: p.create_time(), reverse=True)
 
     # Starts listening for button presses
-    def run():
+    def run(self):
         # Mark pins as being ON
         self.led.on()
         self.power.on()
 
-        power_button = gpiozero.Button(self.POWER_PIN, hold_time=HOLD_SECONDS)
+        power_button = gpiozero.Button(self.POWER_PIN, hold_time=self.HOLD_SECONDS)
         power_button.when_pressed = self.shutdown
         power_button.when_released = self.enable_led
 
@@ -64,7 +64,7 @@ class SafeShutdown():
         signal.pause()
 
     # Shuts down the computer, either by asking ES to do it or by doing it ourselves
-    def shutdown():
+    def shutdown(self):
         self.led.blink(0.2, 0.2)
 
         es_process = self.es_process
@@ -83,14 +83,14 @@ class SafeShutdown():
             os.system('sudo shutdown -h now')
 
     # Turns on the LED
-    def enable_led():
+    def enable_led(self):
         self.led.on()
 
     # Handles pressing the reset button:
     # * If emulator is running, kill it
     # * If EmulationStation is running, restart it
     # * If neither emulator nor EmulationStation is running, restart the computer
-    def reset():
+    def reset(self):
         runcommand_process = self.runcommand_process
         es_process = self.es_process
 
