@@ -15,6 +15,12 @@ configure() {
     else
       echo 'Missing wifi auth (skipping)'
     fi
+
+    # Explicitly enable the country in order to trigger rfkill changes
+    country=$(crudini --get /etc/wpa_supplicant/wpa_supplicant.conf '' 'country')
+    if [ -n "$country" ]; then
+      sudo raspi-config nonint do_wifi_country "$country" >/dev/null
+    fi
   fi
 }
 
