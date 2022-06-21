@@ -11,9 +11,8 @@ depends() {
 }
 
 build() {
-  download 'https://github.com/RetroFlag/retroflag-picase/raw/master/RetroFlag_pw_io.dtbo' /boot/overlays/RetroFlag_pw_io.dtbo as_sudo=true
-  file_cp '{config_dir}/cases/nespi/nespi.service' /etc/systemd/system/nespi.service as_sudo=true
-  file_cp '{config_dir}/cases/nespi/safe_shutdown.py' /opt/RetroFlag/safe_shutdown.py as_sudo=true
+  file_cp '{config_dir}/cases/nespi/nespi.service' /etc/systemd/system/nespi.service as_sudo=true backup=false
+  file_cp '{config_dir}/cases/nespi/safe_shutdown.py' /opt/RetroFlag/safe_shutdown.py as_sudo=true backup=false
 }
 
 configure() {
@@ -27,7 +26,6 @@ restore() {
 
 remove() {
   sudo rm -fv \
-    /boot/overlays/RetroFlag_pw_io.dtbo \
     /opt/RetroFlag/safe_shutdown.py \
     /etc/systemd/system/nespi.service
 
