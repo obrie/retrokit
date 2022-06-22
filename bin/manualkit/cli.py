@@ -48,6 +48,7 @@ class ManualKit():
     ) -> None:
         self.pdf = None
         self.process_watcher = None
+        self.display = None
         self.lock = RLock()
 
         # Read from config
@@ -77,8 +78,7 @@ class ManualKit():
         root.addHandler(handler)
 
         # Connect to the display
-        self.display = Display(**self.config['display'])
-        self.display.clear()
+        self.reset_display()
 
         # Start listening to inputs
         self.input_listener = InputListener(**self.config['input'])
@@ -111,6 +111,7 @@ class ManualKit():
             self.server.on('hide', self.hide)
             self.server.on('set_profile', self.set_profile)
             self.server.on('reload_devices', self.reload_devices)
+            self.server.on('reset_display', self.reset_display)
             self.server.start()
         else:
             self.server = None
@@ -170,6 +171,15 @@ class ManualKit():
     @synchronized
     def reload_devices(self) -> None:
         self.input_listener.reload_devices()
+
+    # Re-creates the display
+    @synchronized
+    def reset_display(self) -> None:
+        if self.display:
+            self.display.close()
+
+        self.display = Display(**self.config['display'])
+        self.display.clear()
 
     # Toggles visibility of the manual
     @synchronized
