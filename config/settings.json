@@ -154,11 +154,12 @@
   ],
   "setup": {
     "default": [
-      "wifi",
+      "network-wifi",
       "deps",
       "ssh",
       "boot",
       "tools-dev",
+      "network-dhcpd",
       "hardware/cpu",
       "hardware/case",
       "hardware/bluetooth-pair",

@@ -3,15 +3,15 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
-setup_module_id='wifi'
+setup_module_id='network-wifi'
 setup_module_desc='Wifi authentication configuration'
 
 configure() {
-  if any_path_exists '{config_dir}/wifi/wpa_supplicant.conf'; then
-    file_cp '{config_dir}/wifi/wpa_supplicant.conf' '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
+  if any_path_exists '{config_dir}/network/wpa_supplicant/wpa_supplicant.conf'; then
+    file_cp '{config_dir}/network/wpa_supplicant/wpa_supplicant.conf' '/etc/wpa_supplicant/wpa_supplicant.conf' as_sudo=true
 
     if [ -n "$WIFI_SSID" ]; then
-      each_path '{config_dir}/wifi/wpa_supplicant.auth.conf' cat '{}' | tee -a '/etc/wpa_supplicant/wpa_supplicant.conf' >/dev/null
+      each_path '{config_dir}/network/wpa_supplicant/wpa_supplicant.auth.conf' cat '{}' | tee -a '/etc/wpa_supplicant/wpa_supplicant.conf' >/dev/null
     else
       echo 'Missing wifi auth (skipping)'
     fi
