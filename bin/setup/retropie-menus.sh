@@ -40,7 +40,7 @@ __hide_menus() {
         # Add the <hidden> tag (as long as it's not there)
         xmlstarlet ed --inplace -s "/gameList/game[name=\"$menu\"][1][not(hidden)]" -t elem -n 'hidden' -v 'true' "$gamelist_file"
       fi
-    done < <(xmlstarlet sel -t -v '/gameList/game/name' "$gamelist_file")
+    done < <(xmlstarlet sel -t -v '/gameList/game/name' -n "$gamelist_file")
   else
     # Show all menus
     xmlstarlet ed --inplace -d '/gameList/game/hidden' "$gamelist_file"
