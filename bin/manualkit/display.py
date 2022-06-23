@@ -55,10 +55,6 @@ class Display():
         self.buffer_width = self._align_up(self.width, 16)
         self.buffer_height = self._align_up(self.height, 16)
 
-        # Get a handle to the LCD (0) display
-        self.handle = bcm.vc_dispmanx_display_open(0)
-        assert self.handle != 0
-
         # Define display coordinates.  Note we are not doing any 16-pixel alignment
         # on the width / height.  This is a not the most efficient implementation,
         # but there's currently no indication that we need to optimize here.
@@ -69,8 +65,8 @@ class Display():
         self.dest_rect = _c_ints((0, 0, self.buffer_width, self.buffer_height))
         self.pitch = self.buffer_width * 3
 
-        # Create image resource
-        self._create_window()
+        # Open a resource to the display
+        self.open()
 
     # Whether the display is currently visible
     @property
@@ -117,21 +113,13 @@ class Display():
                 ctypes.byref(self.dest_rect),
             )
 
-    # Cleans up the elements / resources on the display
-    def close(self) -> None:
-        logging.debug('Closing display')
-        self.hide()
+    # Opens a connection to the display, creating the necessary image resources /
+    # elements to render on screen.
+    def open(self) -> None:
+        # Get a handle to the LCD (0) display
+        self.handle = bcm.vc_dispmanx_display_open(0)
+        assert self.handle != 0
 
-        if self.image_resource:
-            bcm.vc_dispmanx_resource_delete(self.image_resource)
-            self.image_resource = None
-
-        if self.handle:
-            bcm.vc_dispmanx_display_close(self.handle)
-            self.handle = None
-
-    # Show an empty black layer
-    def _create_window(self) -> None:
         vc_image_handle = ctypes.c_uint()
         self.image_resource = bcm.vc_dispmanx_resource_create(
             self.IMAGE_TYPE,
@@ -164,6 +152,24 @@ class Display():
                 self.DISPMANX_NO_ROTATE, # transform
             )
             assert self.image_element != 0
+
+    # Cleans up the elements / resources on the display
+    def close(self) -> None:
+        logging.debug('Closing display')
+        self.hide()
+
+        if self.image_resource:
+            if self.image_element:
+                with self._update_display() as dispman_update:
+                    bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
+                    self.image_element = None
+
+            bcm.vc_dispmanx_resource_delete(self.image_resource)
+            self.image_resource = None
+
+        if self.handle:
+            bcm.vc_dispmanx_display_close(self.handle)
+            self.handle = None
 
     def _align_up(self, value, align_to):
         return ((value + align_to - 1) & ~(align_to - 1))
