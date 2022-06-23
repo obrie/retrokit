@@ -33,6 +33,19 @@ __build_mame2015() {
   fi
 }
 
+configure() {
+  __configure_mame
+}
+
+__configure_mame() {
+  file_cp '{system_config_dir}/mame/hiscore.ini' "$HOME/RetroPie/BIOS/mame/ini/hiscore.ini" backup=false
+}
+
+restore() {
+  rm -fv \
+    "$HOME/RetroPie/BIOS/mame/ini/hiscore.ini"
+}
+
 remove() {
   rm -fv \
     "$HOME/RetroPie/BIOS/mame2010/hiscore.dat" \
