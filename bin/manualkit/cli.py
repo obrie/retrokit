@@ -177,9 +177,10 @@ class ManualKit():
     def reset_display(self) -> None:
         if self.display:
             self.display.close()
-
-        self.display = Display(**self.config['display'])
-        self.display.clear()
+            self.display.open()
+        else:
+            self.display = Display(**self.config['display'])
+            self.display.clear()
 
     # Toggles visibility of the manual
     @synchronized
