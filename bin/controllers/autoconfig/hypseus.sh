@@ -253,7 +253,7 @@ function map_hypseus_joystick() {
                     axis="${BASH_REMATCH[4]}"
                 else
                     button=$((input_id+1))
-                    axis="${BASH_REMATCH[4]}"
+                    axis=""
                 fi
             fi
         done < "$mapping_file"
