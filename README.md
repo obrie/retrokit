@@ -5,7 +5,7 @@ with RetroPie / Raspberry Pi 4 using currently known best practices as I underst
 
 Specifically, it can set up:
 
-* Cases (e.g. Argon)
+* Cases (e.g. Argon, NESPi)
 * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * VNC
@@ -23,9 +23,9 @@ Specifically, it can set up:
 * In-game manuals
 * System controller reference guides
 * Printable gamelists
-* Game state management (import/export)
+* Game state (import/export)
 * ROM Playlist (m3u) auto-generation for multi-disc games
-* EmulationStation Collections management (including lightguns)
+* EmulationStation Collections (including lightguns)
 * Sinden lightgun controller configuration
 * Autoconfig overrides
 * Bluetooth
@@ -67,6 +67,7 @@ This is all supported for the following systems:
 * Atari - Lynx
 * Coleco - ColecoVision
 * Commodore - 64
+* Daphne
 * GCE - Vectrex
 * Mattel - Intellivision
 * NEC - PC Engine / TurboGrafx-16
