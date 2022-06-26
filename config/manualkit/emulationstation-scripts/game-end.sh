@@ -6,5 +6,6 @@
 # * We stop tracking any external PIDs since it's not necessary with ES
 exec 4<>/opt/retropie/configs/all/manualkit.fifo
 >&4 echo \
+  'hide'$'\n' \
   'reset_display'$'\n' \
   'set_profile'$'\t''frontend'
