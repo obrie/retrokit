@@ -286,4 +286,4 @@ class BaseSystem:
         for path_glob in installable_path_globs:
             for path in Path('/').glob(str(path_glob)[1:]):
                 if path not in installable_paths:
-                    print(f'rm -rf {shlex.quote(str(path))}')
+                    print(f'rm -rfv {shlex.quote(str(path))}')
