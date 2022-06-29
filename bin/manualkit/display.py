@@ -37,14 +37,75 @@ class Display():
         self.background_layer = int(background_layer)
         self.foreground_layer = int(foreground_layer)
         self.current_layer = self.background_layer
+        self.active = False
 
         # Create a connection to the display
         bcm.bcm_host_init()
 
+    # Whether the display is currently visible
+    @property
+    def visible(self) -> bool:
+        return self.current_layer == self.foreground_layer
+
+    # Show an empty black layer
+    def show(self) -> None:
+        self.change_layer(self.foreground_layer)
+
+    # Hides the layer
+    def hide(self) -> None:
+        self.change_layer(self.background_layer)
+
+    # Clears the layer by drawing all black
+    def clear(self) -> None:
+        if not self.active:
+            return
+
+        self.draw(b'\x00' * self.pitch * self.buffer_height)
+
+    # Changes the image to be displayed at the given dispmanx layer.
+    # This allows manualkit to be hidden by putting it behind the
+    # framebuffer (< -127) or visible by putting it in front of the
+    # framebuffer (> -127).
+    def change_layer(self, layer: int) -> None:
+        if not self.active:
+            return
+
+        with self._update_display() as dispman_update:
+            bcm.vc_dispmanx_element_change_layer(dispman_update, self.image_element, layer)
+
+        self.current_layer = layer
+
+    # Draws the given image data to the screen
+    def draw(self, image_data: bytes) -> None:
+        if not self.active:
+            return
+
+        result = bcm.vc_dispmanx_resource_write_data(
+            self.image_resource,
+            self.IMAGE_TYPE,
+            self.pitch,
+            ctypes.c_char_p(image_data),
+            ctypes.byref(self.dest_rect),
+        )
+
+        # Mark it as modified in order to refresh the screen
+        with self._update_display() as dispman_update:
+            bcm.vc_dispmanx_element_modified(
+                dispman_update,
+                self.image_element,
+                ctypes.byref(self.dest_rect),
+            )
+
+    # Opens a connection to the display, creating the necessary image resources /
+    # elements to render on screen.
+    def open(self) -> None:
+        if self.active:
+            return
+
         # Look up the display dimensions
         width = ctypes.c_int()
         height = ctypes.c_int()
-        success = bcm.graphics_get_display_size(0, ctypes.byref(width), ctypes.byref(height)) 
+        success = bcm.graphics_get_display_size(0, ctypes.byref(width), ctypes.byref(height))
         assert success >= 0
         self.width = width.value
         self.height = height.value
@@ -65,57 +126,6 @@ class Display():
         self.dest_rect = _c_ints((0, 0, self.buffer_width, self.buffer_height))
         self.pitch = self.buffer_width * 3
 
-        # Open a resource to the display
-        self.open()
-
-    # Whether the display is currently visible
-    @property
-    def visible(self) -> bool:
-        return self.current_layer == self.foreground_layer
-
-    # Show an empty black layer
-    def show(self) -> None:
-        self.change_layer(self.foreground_layer)
-
-    # Hides the layer
-    def hide(self) -> None:
-        self.change_layer(self.background_layer)
-
-    # Clears the layer by drawing all black
-    def clear(self) -> None:
-        self.draw(b'\x00' * self.pitch * self.buffer_height)
-
-    # Changes the image to be displayed at the given dispmanx layer.
-    # This allows manualkit to be hidden by putting it behind the
-    # framebuffer (< -127) or visible by putting it in front of the
-    # framebuffer (> -127).
-    def change_layer(self, layer: int) -> None:
-        with self._update_display() as dispman_update:
-            bcm.vc_dispmanx_element_change_layer(dispman_update, self.image_element, layer)
-
-        self.current_layer = layer
-
-    # Draws the given image data to the screen
-    def draw(self, image_data: bytes) -> None:
-        result = bcm.vc_dispmanx_resource_write_data(
-            self.image_resource,
-            self.IMAGE_TYPE,
-            self.pitch,
-            ctypes.c_char_p(image_data),
-            ctypes.byref(self.dest_rect),
-        )
-
-        # Mark it as modified in order to refresh the scree
-        with self._update_display() as dispman_update:
-            bcm.vc_dispmanx_element_modified(
-                dispman_update,
-                self.image_element,
-                ctypes.byref(self.dest_rect),
-            )
-
-    # Opens a connection to the display, creating the necessary image resources /
-    # elements to render on screen.
-    def open(self) -> None:
         # Get a handle to the LCD (0) display
         self.handle = bcm.vc_dispmanx_display_open(0)
         assert self.handle != 0
@@ -153,13 +163,16 @@ class Display():
             )
             assert self.image_element != 0
 
+        # Mark the display component as ready and active to draw
+        self.active = True
+
     # Cleans up the elements / resources on the display
     def close(self) -> None:
         logging.debug('Closing display')
-        self.hide()
 
         if self.image_resource:
             if self.image_element:
+                self.hide()
                 with self._update_display() as dispman_update:
                     bcm.vc_dispmanx_element_remove(dispman_update, self.image_element)
                     self.image_element = None
@@ -170,6 +183,8 @@ class Display():
         if self.handle:
             bcm.vc_dispmanx_display_close(self.handle)
             self.handle = None
+
+        self.active = False
 
     def _align_up(self, value, align_to):
         return ((value + align_to - 1) & ~(align_to - 1))

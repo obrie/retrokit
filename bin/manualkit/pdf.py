@@ -39,10 +39,10 @@ class PDF():
             self.document = fitz.open()
 
             # Calculate width of text
-            width = math.ceil(fitz.get_text_length(self.NO_MANUAL_TEXT, fontsize=self.NO_MANUAL_FONTSIZE))
+            text_width = math.ceil(fitz.get_text_length(self.NO_MANUAL_TEXT, fontsize=self.NO_MANUAL_FONTSIZE))
 
             # Create page that's wider than the text so that it scales well
-            page = self.document.new_page(width=width * 3, height=self.NO_MANUAL_HEIGHT)
+            page = self.document.new_page(width=text_width * 3, height=self.NO_MANUAL_HEIGHT)
 
             # Draw a black background
             page.draw_rect(page.rect, color=(0, 0, 0), fill=(0, 0, 0), overlay=False)
@@ -52,7 +52,7 @@ class PDF():
             text_writer.fill_textbox(
                 page.rect,
                 self.NO_MANUAL_TEXT,
-                pos=(int((page.rect.width - width) / 2), self.NO_MANUAL_FONTSIZE),
+                pos=(int((page.rect.width - text_width) / 2), self.NO_MANUAL_FONTSIZE),
                 fontsize=self.NO_MANUAL_FONTSIZE,
             )
             text_writer.write_text(page, color=(1, 1, 1))
@@ -84,6 +84,22 @@ class PDF():
             self.jump(0)
 
         return self.page_image
+
+    # Changes the target render size of the PDF, refreshing any currently cached image
+    def resize(self,
+        width: int,
+        height: int,
+        buffer_width: int,
+        buffer_height: int
+    ) -> None:
+        self.width = width
+        self.height = height
+        self.buffer_width = buffer_width
+        self.buffer_height = buffer_height
+
+        # Only re-cache if there's currently data cached
+        if self.page_image:
+            self.refresh()
 
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self, turbo: bool = False) -> None:
