@@ -794,7 +794,7 @@ vacuum() {
 
   # Echo the commands (it's up to the user to evaluate them)
   while read -r path; do
-    [ "${files_to_keep[$path]}" ] || echo "rm -v $(printf '%q' "$path")"
+    [ "${files_to_keep[$path]}" ] || echo "rm -fv $(printf '%q' "$path")"
   done < <(find "$base_path" -not -type d)
 }
 
