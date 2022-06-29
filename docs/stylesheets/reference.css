@@ -66,6 +66,10 @@ table td {
   margin-top: 5px;
 }
 
+#system-features {
+  font-size: 22px;
+}
+
 #info-usage {
   clear: left;
   text-align: center;
