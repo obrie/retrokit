@@ -32,5 +32,6 @@ fi
 exec 4<>/opt/retropie/configs/all/manualkit.fifo
 >&4 echo \
   'hide'$'\n' \
+  'reset_display'$'\n' \
   'load'$'\t'"$rom_manual_path"$'\t'"$rom_reference_path"$'\t''true'$'\n' \
   'set_profile'$'\t''emulator'

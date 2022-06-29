@@ -78,7 +78,9 @@ class ManualKit():
         root.addHandler(handler)
 
         # Connect to the display
-        self.reset_display()
+        self.display = Display(**self.config['display'])
+        self.display.open()
+        self.display.clear()
 
         # Start listening to inputs
         self.input_listener = InputListener(**self.config['input'])
@@ -172,15 +174,11 @@ class ManualKit():
     def reload_devices(self) -> None:
         self.input_listener.reload_devices()
 
-    # Re-creates the display
+    # Resets the connected display, to be re-opened the next time we attempt to show
+    # a PDF
     @synchronized
     def reset_display(self) -> None:
-        if self.display:
-            self.display.close()
-            self.display.open()
-        else:
-            self.display = Display(**self.config['display'])
-            self.display.clear()
+        self.display.close()
 
     # Toggles visibility of the manual
     @synchronized
@@ -244,6 +242,18 @@ class ManualKit():
 
     # Renders the currently active PDF page
     def refresh(self) -> None:
+        # Ensure display is connected
+        self.display.open()
+
+        # Check to see if the display size has changed
+        if self.pdf.width != self.display.width or self.pdf.height != self.display.height:
+            self.pdf.resize(
+                self.display.width,
+                self.display.height,
+                self.display.buffer_width,
+                self.display.buffer_height,
+            )
+
         self.display.draw(self.pdf.get_page_image())
 
     # Adds toggle / navigation handlers for the given input type
