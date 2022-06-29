@@ -50,7 +50,7 @@ __create_collection() {
 
   # Mark this collection as being managed by retrokit
   installed_collections["$collection_name"]=1
-  touch "$target_collection_path.rk-src"
+  touch "$target_collection_path" "$target_collection_path.rk-src"
 
   # Track which titles are in this collection
   declare -A collection_titles
