@@ -31,12 +31,16 @@ main() {
 }
 
 vacuum_all() {
+  vacuum_installation "$@"
+  vacuum_gamestate "$@"
+}
+
+vacuum_installation() {
   vacuum_roms "$@"
   vacuum_manuals "$@"
   vacuum_media_cache "$@"
   vacuum_media "$@"
   vacuum_overlays "$@"
-  vacuum_gamestate "$@"
 }
 
 vacuum_roms() {
@@ -48,7 +52,7 @@ vacuum_manuals() {
 }
 
 vacuum_media_cache() {
-  "$bin_dir/setup.sh" __vacuum_cache system-roms-scrape "${@}"
+  "$bin_dir/setup.sh" __vacuum_cache system-roms-scrape "${@}" 1>&2
 }
 
 vacuum_media() {
