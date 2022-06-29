@@ -296,7 +296,7 @@ __vacuum_media() {
     local rom_name=${filename%.*}
 
     if [ -z "${installed_names["$rom_name"]}" ]; then
-      echo "rm -f $(printf '%q' "$media_path")"
+      echo "rm -fv $(printf '%q' "$media_path")"
     fi
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }

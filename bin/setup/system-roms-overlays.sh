@@ -248,7 +248,7 @@ vacuum() {
 
   # Generate rm commands for unused images
   while read -r path; do
-    [ "${installed_images["$path"]}" ] || echo "rm -v $(printf '%q' "$path")"
+    [ "${installed_images["$path"]}" ] || echo "rm -fv $(printf '%q' "$path")"
   done < <(find "$system_overlay_dir" -name '*.png')
 }
 
