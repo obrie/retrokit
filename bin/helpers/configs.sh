@@ -136,15 +136,15 @@ env_merge() {
     return
   fi
 
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
   else
     $cmd mkdir -p "$(dirname "$target")"
-  fi
-
-  local cmd=
-  if [ "$as_sudo" == 'true' ]; then
-    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -176,15 +176,15 @@ ini_merge() {
     return
   fi
 
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
   else
     $cmd mkdir -p "$(dirname "$target")"
-  fi
-
-  local cmd=
-  if [ "$as_sudo" == 'true' ]; then
-    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -231,15 +231,15 @@ json_merge() {
     return
   fi
 
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
   if [ "$backup" == 'true' ]; then
     backup_and_restore "$target" as_sudo="$as_sudo" restore="$restore"
   else
     $cmd mkdir -p "$(dirname "$target")"
-  fi
-
-  local cmd=
-  if [ "$as_sudo" == 'true' ]; then
-    cmd='sudo'
   fi
 
   if [ "$overwrite" == 'true' ]; then
@@ -324,15 +324,15 @@ file_cp() {
     return
   fi
 
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
   if [ "$backup" == 'true' ]; then
     backup_file "$target" as_sudo="$as_sudo"
   else
     $cmd mkdir -p "$(dirname "$target")"
-  fi
-
-  local cmd=
-  if [ "$as_sudo" == 'true' ]; then
-    cmd='sudo'
   fi
 
   local prioritized_source=$(first_path "$source")
