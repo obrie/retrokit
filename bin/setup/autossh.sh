@@ -12,8 +12,8 @@ depends() {
 
 build() {
   file_cp '{config_dir}/autossh/autossh.service' '/etc/systemd/system/autossh.service' as_sudo=true backup=false envsubst=false
-  sudo mkdir -p /var/log/autossh
-  sudo chown pi:pi /var/log/autossh
+  sudo mkdir -p /var/log/autossh /var/run/autossh
+  sudo chown pi:pi /var/log/autossh /var/run/autossh
 }
 
 configure() {
@@ -32,7 +32,7 @@ remove() {
     /etc/systemd/system/autossh.service \
     /var/log/autossh \
     /etc/autossh \
-    /var/run/autossh.default.pid
+    /var/run/autossh
 
   sudo apt-get remove -y autossh
 }
