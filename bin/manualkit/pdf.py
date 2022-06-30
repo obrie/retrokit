@@ -99,7 +99,7 @@ class PDF():
 
         # Only re-cache if there's currently data cached
         if self.page_image:
-            self.refresh()
+            self.zoom(self.zoom_level)
 
     # Moves to the next page or goes back to the beginning if already on the last page
     def next(self, turbo: bool = False) -> None:
