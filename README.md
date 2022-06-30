@@ -29,7 +29,7 @@ Specifically, it can set up:
 * Sinden lightgun controller configuration
 * Autoconfig overrides
 * Bluetooth
-* SSH
+* SSH + AutoSSH for remote management
 * Wifi
 * Overclocking
 * Localization
