@@ -3,7 +3,6 @@ Description=Keep an ssh tunnel open
 After=network-online.target
 
 [Service]
-Type=forking
 User=pi
 Environment=AUTOSSH_LOGFILE=/var/log/autossh/default.log AUTOSSH_PIDFILE=/var/run/autossh/default.pid
 EnvironmentFile=/etc/autossh/default.conf
