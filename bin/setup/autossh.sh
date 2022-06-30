@@ -11,7 +11,7 @@ depends() {
 }
 
 build() {
-  file_cp '{config_dir}/autossh/autossh.service' '/etc/systemd/system/autossh.service' as_sudo=true backup=false
+  file_cp '{config_dir}/autossh/autossh.service' '/etc/systemd/system/autossh.service' as_sudo=true backup=false envsubst=false
   sudo mkdir -p /var/log/autossh
   sudo chown pi:pi /var/log/autossh
 }
