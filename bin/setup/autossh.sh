@@ -28,7 +28,7 @@ restore() {
 }
 
 remove() {
-  sudo rm -fv \
+  sudo rm -rfv \
     /etc/systemd/system/autossh.service \
     /var/log/autossh \
     /etc/autossh \
