@@ -115,6 +115,12 @@ Those controllers are covered below and I've confirmed work with retrokit.
 | Arcade Trackball  | Kensington Orbit Wireless Trackball | $53   | https://www.amazon.com/dp/B09DGMYVPP |
 | Lightgun          | Sinden Lightgun                     | $103  | https://www.sindenlightgun.com/ |
 
+For even more controllers, I strongly suggest any of the wired or bluetooth controllers from
+[8Bitdo](https://www.8bitdo.com/#Products), particularly either of these:
+
+* [8Bitdo SN30 Pro](https://www.8bitdo.com/sn30-pro-g-classic-or-sn30-pro-sn/)
+* [8Bitdo Pro 2](https://www.8bitdo.com/pro2/)
+
 Some notes:
 
 * The Sinden Lightgun can also come with recoil for an additional $60
