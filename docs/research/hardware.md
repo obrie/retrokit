@@ -23,6 +23,8 @@ purchase.
 
 This configuration is intended to look like an old NES.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | Computer          | Raspberry Pi 4 4GB              | $55   | https://www.canakit.com/raspberry-pi-4-4gb.html |
 | Case              | Retroflag NESPi4 Case           | $40   | https://www.amazon.com/dp/B08CRDKX6T |
 | TV Cable          | CanaKit Micro HDMI Cable        | $15   | https://www.amazon.com/dp/B07TTKD38N |
@@ -51,6 +53,8 @@ Important notes:
 This configuration is intended to give you a modern-looking cooling solution that will allow
 your Raspberry Pi to run at a cool temperature so that you can effectively overclock.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | Computer          | Raspberry Pi 4 4GB              | $55   | https://www.canakit.com/raspberry-pi-4-4gb.html |
 | Case              | Argon ONE M.2 Case              | $47   | https://www.amazon.com/dp/B08MJ3CSW7 |
 | TV Cable          | HDMI Cable                      | $7    | https://www.amazon.com/B01GCGKI3O |
@@ -91,6 +95,8 @@ The system configurations above cover basics like arcade sticks and controllers.
 are additionall controller types for arcade systems that will provide a much better experience.
 Those controllers are covered below and I've confirmed work with retrokit.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | Arcade Trackball  | Kensington Orbit Wireless Trackball | $53   | https://www.amazon.com/dp/B09DGMYVPP |
 | Lightgun          | Sinden Lightgun                     | $103  | https://www.sindenlightgun.com/ |
 
@@ -103,6 +109,8 @@ Some notes:
 The Raspbery Pi 4B has decent Bluetooth performance / range.  However, you can get even better
 performance by using an external adapter.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | Bluetooth Adapter | 8Bitdo Wireless USB Adapter     | $18   | https://www.amazon.com/dp/B09M8CVMYF |
 
 ### Better Arcade Stick
@@ -112,6 +120,8 @@ works great for games like Street Fighter but is less than ideal for older arcad
 since it's difficult to hit the correct 4-way directionals.  An octagonal restrictor plate with a
 premium SANWA joystick provides a better experience.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | Joystick          | SANWA JLF-TP-8YT Joystick       | $25   | https://www.amazon.com/dp/B005BIC9QE |
 | Restrictor Gate   | SANWA GT-Y Octagonal Restrictor | $8    | https://www.amazon.com/dp/B06VVG936T |
 | USB Encoder       | Hikig 5-Pin USB Encoder Cable   | $7    | https://www.amazon.com/dp/B07BK12QBG |
@@ -132,10 +142,14 @@ corruption.
 
 To handle more controllers and limit amp usage from your Raspberry Pi, I suggest a powered USB Hub.
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | 7-Port Hub        | Anker 7-Port USB 3.0 Data Hub   | $50   | https://www.amazon.com/dp/B014ZQ07NE |
 
 ### Tool-Free Hard Drive Enclosures
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | M.2 Enclosure     | Sabrent M.2 NVMe / SATA USB     |  $29   | https://www.amazon.com/dp/B08RVC6F9Y |
 
 USB Hard Drive enclosures are notorious for being problematic on the Raspberry Pi.  This is covered in
@@ -157,6 +171,8 @@ The instructions I followed came from the websites above and are covered here:
 If you don't want to deal with this (I don't blame you) here are additional enclosure whose hardware
 appears to be compatible with the Raspberry Pi without a firmware upgrade:
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | M.2 Enclosure     | ORICO M.2 SATA USB              | $14   | https://www.amazon.com/dp/B08JV3HZ9S |
 
 ## Downgrades
@@ -170,6 +186,8 @@ A 1TB hard drive is only necessary for the default configuration.  You can easil
 fewer games and reduce the required hard drive size.  Additionally, you can switch to a simple SD card
 setup:
 
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
 | 128GB SD Card     | Samsung EVO Plus 128GB MicroSD   | $24   | https://www.samsung.com/us/computing/memory-storage/memory-cards/evo-plus---adapter-microsdxc-128gb-mb-mc128ka-am/ |
 
 Samsung EVO+ is the most common, well-rounded SD card.  Recommend buying direct from Samsung to avoid
