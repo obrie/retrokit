@@ -19,6 +19,21 @@ Keep in mind that the costs below are for the entire configuration as-is.  There
 you can cut costs, such as using different controllers or reducing the number of controllers you
 purchase.
 
+### The Minimalist
+
+This represents a minimal configuration that I would be comfortable with running.
+
+| Component         | Description                     | Cost  | URL |
+| - | - | - | - |
+| Computer          | Raspberry Pi 4 2GB              | $45   | https://www.canakit.com/raspberry-pi-4-2gb.html |
+| Case              | Argon ONE M.2 Case              | $25   | https://www.amazon.com/dp/B07WP8WC3V |
+| TV Cable          | HDMI Cable                      | $7    | https://www.amazon.com/dp/B01GCGKI3O |
+| Power Supply      | CanaKit 3.5A Power Supply       | $10   | https://www.amazon.com/dp/B07TYQRXTK |
+| Hard Drive        | Samsung EVO Plus 64GB MicroSD   | $14   | https://www.samsung.com/us/computing/memory-storage/memory-cards/evo-plus---adapter-microsdxc-64gb-mb-mc64ka-am/ |
+
+This includes no controllers but gets you a running system for $100 that you can always upgrade
+in the future.
+
 ### The Old Timer
 
 This configuration is intended to look like an old NES.
@@ -37,7 +52,7 @@ This configuration is intended to look like an old NES.
 | Controller        | 8Bitdo SN30 Pro (2)             | $40   | https://www.amazon.com/dp/B08Y9QLCKM |
 | Keyboard + Mouse  | Arteck 2.4ghz Keyboard + Mouse  | $30   | https://www.amazon.com/dp/B07MCTZ3LZ |
 
-Total cost: $540
+Total cost: $250 ($540 with controllers)
 
 Important notes:
 
@@ -57,7 +72,7 @@ your Raspberry Pi to run at a cool temperature so that you can effectively overc
 | - | - | - | - |
 | Computer          | Raspberry Pi 4 4GB              | $55   | https://www.canakit.com/raspberry-pi-4-4gb.html |
 | Case              | Argon ONE M.2 Case              | $47   | https://www.amazon.com/dp/B08MJ3CSW7 |
-| TV Cable          | HDMI Cable                      | $7    | https://www.amazon.com/B01GCGKI3O |
+| TV Cable          | HDMI Cable                      | $7    | https://www.amazon.com/dp/B01GCGKI3O |
 | Power Supply      | CanaKit 3.5A Power Supply       | $10   | https://www.amazon.com/dp/B07TYQRXTK |
 | Hard Drive        | Western Digital 1TB M.2 SSD     | $90   | https://www.westerndigital.com/products/internal-drives/wd-blue-sata-m-2-ssd#WDS100T2B0B |
 | USB Cable         | USB 2.0 Male to Male A Cable    | $9    | https://www.amazon.com/dp/B07BZ2M3WM |
@@ -66,7 +81,7 @@ your Raspberry Pi to run at a cool temperature so that you can effectively overc
 | Controller        | 8Bitdo SN30 Pro (2)             | $40   | https://www.amazon.com/dp/B08Y9QLCKM |
 | Keyboard + Mouse  | Arteck 2.4ghz Keyboard + Mouse  | $30   | https://www.amazon.com/dp/B07MCTZ3LZ |
 
-Total cost: $521
+Total cost: $231 ($521 with controllers)
 
 Important notes:
 
