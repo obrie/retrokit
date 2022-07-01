@@ -11,7 +11,7 @@ Some notes about the choices below:
 * 4GB is more than enough for what RetroPie requires; you can probably get away with 2GB
 * 2.4ghz controllers / keyboards are faster and easier to use than Bluetooth, so I generally
   prefer those
-* SSD drives are preferred over SD cards due to their availability capacity and durability
+* SSD drives are preferred over SD cards due to their available capacity and durability
 * A 3.5A power supply is recommended for stable USB power needs
 * 8Bitdo has the only wireless arcade stick I've found and supports 2.4ghz
 
@@ -65,7 +65,7 @@ Important notes:
 
 ### The Speed Runner
 
-This configuration is intended to give you a modern-looking cooling solution that will allow
+This configuration is intended to give you a modern-looking solution that will allow
 your Raspberry Pi to run at a cool temperature so that you can effectively overclock.
 
 | Component         | Description                     | Cost  | URL |
@@ -107,7 +107,7 @@ There are a lot of upgrades you can consider that I've used and am happy with.
 ### Additional Controllers
 
 The system configurations above cover basics like arcade sticks and controllers.  However, there
-are additionall controller types for arcade systems that will provide a much better experience.
+are additional controller types for arcade systems that will provide a much better experience.
 Those controllers are covered below and I've confirmed work with retrokit.
 
 | Component         | Description                     | Cost  | URL |
@@ -189,7 +189,7 @@ The instructions I followed came from the websites above and are covered here:
 4. Plug in the Sabrent, open `UTHSB_MPtool_Lite.exe` in Windows, and you should see MPtool has picked the `SA8307.cfg` file.
 5. Click the Upload Device button and enjoy the latest, fastest and most stable firmware for your Sabrent.
 
-If you don't want to deal with this (I don't blame you) here are additional enclosure whose hardware
+If you don't want to deal with this (I don't blame you) here are additional enclosures whose hardware
 appears to be compatible with the Raspberry Pi without a firmware upgrade:
 
 | Component         | Description                     | Cost  | URL |
