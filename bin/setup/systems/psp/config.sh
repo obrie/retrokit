@@ -6,15 +6,25 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 setup_module_id='systems/psp/config'
 setup_module_desc='PSP configuration overrides'
+setup_module_reconfigure_after_update=true
+
+after_retropie_reconfigure() {
+  rm -fv '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt.rk-src'
+  configure
+}
 
 configure() {
   ini_merge '{system_config_dir}/controls.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini'
   ini_merge '{system_config_dir}/ppsspp.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
+
+  backup_file '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt'
+  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | tee -a /opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt
 }
 
 restore() {
   restore_file '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini' delete_src=true
   restore_file '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini' delete_src=true
+  restore_file '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt' delete_src=true
 }
 
 setup "${@}"

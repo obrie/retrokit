@@ -68,18 +68,23 @@ __configure_autoconf() {
 }
 
 __configure_controllers() {
+  # Combine gamecontrollerdb.txt files
+  local sdldb_combined_path="$tmp_ephemeral_dir/gamecontrollerdb.txt"
+  cp "$sdldb_path" "$sdldb_combined_path"
+  each_path "{config_dir}/controllers/gamecontrollerdb.local.txt" cat '{}' | tee -a "$sdldb_combined_path"
+
   while IFS=, read -r name id swap_buttons; do
     local config_file=$(first_path "{config_dir}/controllers/inputs/$name.cfg")
 
     if [ -f "$config_file" ]; then
       # Explicit ES configuration is provided
       cp "$config_file" "$HOME/.emulationstation/es_temporaryinput.cfg"
-    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_path"; then
+    elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_combined_path"; then
       # Auto-generate ES input configuration from id
-      __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_path")" "$swap_buttons"
-    elif grep -qE ",$name," "$sdldb_path"; then
+      __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_combined_path" | tail -n 1)" "$swap_buttons"
+    elif grep -qE ",$name," "$sdldb_combined_path"; then
       # Auto-generate ES input configuration from name
-      __configure_controller_input "$name" "$(grep -E ",$name," "$sdldb_path")" "$swap_buttons"
+      __configure_controller_input "$name" "$(grep -E ",$name," "$sdldb_combined_path" | tail -n 1)" "$swap_buttons"
     else
       echo "No controller mapping found for $name"
       continue
