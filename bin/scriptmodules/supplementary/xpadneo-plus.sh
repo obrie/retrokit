@@ -47,7 +47,7 @@ function remove_xpadneo-plus() {
 function configure_xpadneo-plus() {
     configure_xpadneo
 
-    if [[ ! -f /etc/modprobe.d/99-xpadneo-bluetooth.conf ]]; then
-        echo "options hid_xpadneo triggers_to_buttons=1" | sudo tee /etc/modprobe.d/99-xpadneo-bluetooth.conf
+    if [[ ! -f /etc/modprobe.d/99-xpadneo-bluetooth-overrides.conf ]]; then
+        echo "options hid_xpadneo triggers_to_buttons=1" | sudo tee /etc/modprobe.d/99-xpadneo-bluetooth-overrides.conf
     fi
 }
