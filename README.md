@@ -27,6 +27,7 @@ Specifically, it can set up:
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections (including lightguns)
 * Sinden lightgun controller configuration
+* Xbox bluetooth support + customizations
 * Autoconfig overrides
 * Bluetooth
 * SSH + AutoSSH for remote management
