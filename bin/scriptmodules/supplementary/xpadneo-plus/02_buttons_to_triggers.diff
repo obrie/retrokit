@@ -4,7 +4,7 @@
  		 "(bool) Disable dead zone handling for raw processing by Wine/Proton, confuses joydev. "
  		 "0: disable, 1: enable.");
  
-+static bool param_triggers_to_buttons = 0;
++static bool param_triggers_to_buttons = 1;
 +module_param_named(triggers_to_buttons, param_triggers_to_buttons, bool, 0444);
 +MODULE_PARM_DESC(triggers_to_buttons,
 +		 "(bool) Enable translating trigger axes to buttons. "
@@ -36,26 +36,21 @@
  
  	/* do not report the consumer control buttons as part of the gamepad */
  	__clear_bit(BTN_SHARE, xdata->idev->keybit);
-@@ -939,10 +952,20 @@ static int xpadneo_event(struct hid_device *hdev, struct hid_field *field,
+@@ -939,9 +952,17 @@ static int xpadneo_event(struct hid_device *hdev, struct hid_field *field,
  			break;
  		case ABS_Z:
  			xdata->last_abs_z = value;
--			goto combine_z_axes;
 +			if (param_triggers_to_buttons) {
 +				input_report_key(idev, BTN_TL2, value);
 +				goto stop_processing;
-+			} else {
-+				goto combine_z_axes;
 +			}
+ 			goto combine_z_axes;
  		case ABS_RZ:
  			xdata->last_abs_rz = value;
--			goto combine_z_axes;
 +			if (param_triggers_to_buttons) {
 +				input_report_key(idev, BTN_TR2, value);
 +				goto stop_processing;
-+			} else {
-+				goto combine_z_axes;
 +			}
+ 			goto combine_z_axes;
  		}
  	} else if ((usage->type == EV_KEY) && (usage->code == BTN_XBOX)) {
- 		/*
