@@ -55,9 +55,8 @@ class InputListener():
             traceback.print_exc()
             return
 
-        autoconfig_path = Path(f'/opt/retropie/configs/all/retroarch/autoconfig/{dev_device.name}.cfg')
-
-        if autoconfig_path.exists():
+        autoconfig_path = self._find_config_for_device(dev_device)
+        if autoconfig_path:
             # Treat it like a joystick
             device_config = self._read_retroarch_config(autoconfig_path)
             input_type = InputType.JOYSTICK
@@ -191,6 +190,25 @@ class InputListener():
             device.ungrab()
 
         self.grabbed = False
+
+    # Looks up the autoconfiguration file for the given device
+    def _find_config_for_device(self, device: evdev.InputDevice) -> Path:
+        # Generate SDL GUID
+        device_id = '%02x%02x0000%02x%02x0000%02x%02x0000%02x%02x0000' % (
+            dev_device.info.bustype & 0xFF, dev_device.info.bustype >> 8,
+            dev_device.info.vendor & 0xFF, dev_device.info.vendor >> 8,
+            dev_device.info.product & 0xFF, dev_device.info.product >> 8,
+            dev_device.info.version & 0xFF, dev_device.info.version >> 8,
+        )
+
+        autoconfig_path = Path('/opt/retropie/configs/all/retroarch/autoconfig')
+
+        # Prioritize a matching named configuration before we attempt to look up
+        # the device id in other configurations
+        cfg_paths = [autoconfig_path.join(f'{dev_device.name}.cfg')] + sorted(autoconfig_path.iterdir())
+        for cfg_path in cfg_paths:
+            if cfg_path.exists() and device_id in cfg_path.read_text():
+                return cfg_ath
 
     # Makes a best-effort attempt to see if the given device is a keyboard
     # 
