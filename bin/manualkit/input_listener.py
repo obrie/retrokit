@@ -205,7 +205,7 @@ class InputListener():
 
         # Prioritize a matching named configuration before we attempt to look up
         # the device id in other configurations
-        cfg_paths = [autoconfig_path.join(f'{device.name}.cfg')] + sorted(autoconfig_path.iterdir())
+        cfg_paths = [autoconfig_path.joinpath(f'{device.name}.cfg')] + sorted(autoconfig_path.iterdir())
         for cfg_path in cfg_paths:
             if cfg_path.exists() and device_id in cfg_path.read_text():
                 return cfg_ath
