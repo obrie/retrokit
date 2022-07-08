@@ -22,7 +22,7 @@ depends() {
 configure() {
   local rules=()
 
-  while IFS=$'\t' read controller_name axis_config; do
+  while IFS=» read controller_name controller_id axis_config; do
     local script=$script_start
 
     # Add a write command for each axis code we need to calibrate
@@ -34,10 +34,21 @@ configure() {
     script="$script$script_end"
     script="${script//$'\n'/; }"
 
-    # Add the rule for this controller name
-    local rule='SUBSYSTEM=="input", KERNEL=="event*", ACTION=="add", ATTRS{name}=="'"$controller_name"'", RUN+="/usr/bin/python3 -c \"'"$script"'\""'
+    # Add rule for this controller
+    local rule='SUBSYSTEM=="input", KERNEL=="event*", ACTION=="add", '
+    if [ -n "$controller_id" ]; then
+      # Add filter on controller id
+      local vendor_id_hex="${controller_id:10:2}${controller_id:8:2}"
+      local product_id_hex="${controller_id:18:2}${controller_id:16:2}"
+      rule+='ATTRS{idVendor}=="'"$vendor_id_hex"'", ENV{idProduct}=="'"$product_id_hex"'"'
+    else
+      # Add filter on controller name
+      rule+='ATTRS{name}=="'"$controller_name"'"'
+    fi
+    rule+=', RUN+="/usr/bin/python3 -c \"'"$script"'\""'
+
     rules+=("$rule")
-  done < <(setting '.hardware.controllers.inputs[] | select(.axis) | [.name, ([.axis | to_entries[] | [.key, .value | tostring] | join("=")] | join(","))] | @tsv')
+  done < <(setting '.hardware.controllers.inputs[] | select(.axis) | [.name, .id, ([.axis | to_entries[] | [.key, .value | tostring] | join("=")] | join(","))] | join("»")')
 
   # Write the udev rule
   echo "${rules[@]}" | sudo tee /etc/udev/rules.d/99-joystick.rules >/dev/null
