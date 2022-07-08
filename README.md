@@ -668,6 +668,48 @@ Alternatively, you can either:
 If you're not familiar with SDL GUIDs, setting up your controllers through EmulationStation
 is probably the best way.
 
+### Configuration
+
+You can configure your controllers through `config/settings.json` like so:
+
+```
+{
+  "hardware": {
+    "controllers": {
+      "inputs": [
+        {
+          "name": "Keyboard"
+        },
+        {
+          "name": "Xbox 360 Controller",
+          "id": "030000005e0400008e02000014010000",
+          "description": "8Bitdo X-Input, Wired, Triggers to Buttons, Xbox layout (Arcade Stick)",
+          "swap_buttons": false
+        },
+        {
+          "name": "Xbox One Controller",
+          "id": "050000005e040000fd02000030110000",
+          "description": "8Bitdo X-Input, Bluetooth, Triggers to Buttons, Xbox layout (Arcade Stick)",
+          "swap_buttons": false
+        },
+        {
+          "name": "8BitDo SN30 Pro",
+          "id": "05000000c82d00000161000000010000",
+          "description": "8Bitdo D-Input, Bluetooth, Nintendo Layout",
+          "swap_buttons": true,
+          "axis": {
+            "ABS_X": 128,
+            "ABS_Y": 128,
+            "ABS_Z": 128,
+            "ABS_RZ": 128
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 ### Default Keyboard inputs
 
 | RetroPad Button | Key         |
