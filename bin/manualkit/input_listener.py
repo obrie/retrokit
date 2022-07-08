@@ -195,17 +195,17 @@ class InputListener():
     def _find_config_for_device(self, device: evdev.InputDevice) -> Path:
         # Generate SDL GUID
         device_id = '%02x%02x0000%02x%02x0000%02x%02x0000%02x%02x0000' % (
-            dev_device.info.bustype & 0xFF, dev_device.info.bustype >> 8,
-            dev_device.info.vendor & 0xFF, dev_device.info.vendor >> 8,
-            dev_device.info.product & 0xFF, dev_device.info.product >> 8,
-            dev_device.info.version & 0xFF, dev_device.info.version >> 8,
+            device.info.bustype & 0xFF, device.info.bustype >> 8,
+            device.info.vendor & 0xFF, device.info.vendor >> 8,
+            device.info.product & 0xFF, device.info.product >> 8,
+            device.info.version & 0xFF, device.info.version >> 8,
         )
 
         autoconfig_path = Path('/opt/retropie/configs/all/retroarch/autoconfig')
 
         # Prioritize a matching named configuration before we attempt to look up
         # the device id in other configurations
-        cfg_paths = [autoconfig_path.join(f'{dev_device.name}.cfg')] + sorted(autoconfig_path.iterdir())
+        cfg_paths = [autoconfig_path.join(f'{device.name}.cfg')] + sorted(autoconfig_path.iterdir())
         for cfg_path in cfg_paths:
             if cfg_path.exists() and device_id in cfg_path.read_text():
                 return cfg_ath
