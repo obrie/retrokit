@@ -693,7 +693,7 @@ You can configure your controllers through `config/settings.json` like so:
           "swap_buttons": false
         },
         {
-          "name": "8BitDo SN30 Pro",
+          "name": "8Bitdo SN30 Pro",
           "id": "05000000c82d00000161000000010000",
           "description": "8Bitdo D-Input, Bluetooth, Nintendo Layout",
           "swap_buttons": true,
