@@ -193,7 +193,7 @@ class InputListener():
 
     # Looks up the autoconfiguration file for the given device
     def _find_config_for_device(self, device: evdev.InputDevice) -> Path:
-        # Generate SDL GUID
+        # Generate SDL GUID (to be used at some point?)
         device_id = '%02x%02x0000%02x%02x0000%02x%02x0000%02x%02x0000' % (
             device.info.bustype & 0xFF, device.info.bustype >> 8,
             device.info.vendor & 0xFF, device.info.vendor >> 8,
@@ -203,12 +203,10 @@ class InputListener():
 
         autoconfig_path = Path('/opt/retropie/configs/all/retroarch/autoconfig')
 
-        # Prioritize a matching named configuration before we attempt to look up
-        # the device id in other configurations
-        cfg_paths = [autoconfig_path.joinpath(f'{device.name}.cfg')] + sorted(autoconfig_path.iterdir())
-        for cfg_path in cfg_paths:
-            if cfg_path.exists() and device_id in cfg_path.read_text():
-                return cfg_ath
+        # Prioritize a matching named configuration
+        cfg_path = autoconfig_path.joinpath(f'{device.name}.cfg')
+        if cfg_path.exists():
+            return cfg_path
 
     # Makes a best-effort attempt to see if the given device is a keyboard
     # 
