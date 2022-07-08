@@ -71,7 +71,7 @@ __configure_controllers() {
   # Combine gamecontrollerdb.txt files
   local sdldb_combined_path="$tmp_ephemeral_dir/gamecontrollerdb.txt"
   cp "$sdldb_path" "$sdldb_combined_path"
-  each_path "{config_dir}/controllers/gamecontrollerdb.local.txt" cat '{}' | tee -a "$sdldb_combined_path"
+  each_path "{config_dir}/controllers/gamecontrollerdb.local.txt" cat '{}' | tee -a "$sdldb_combined_path" >/dev/null
 
   while IFS=, read -r name id swap_buttons; do
     local config_file=$(first_path "{config_dir}/controllers/inputs/$name.cfg")
