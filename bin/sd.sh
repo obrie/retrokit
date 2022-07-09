@@ -53,7 +53,7 @@ clone() {
 }
 
 sync_full() {
-  [[ $# -ne 2 ]] && usage
+  [[ $# -lt 2 ]] && usage
   local sync_from_path=${1%/}
   local sync_to_path=${2%/}
   local dry_run=false
@@ -73,7 +73,7 @@ sync_full() {
   # -X (Preserve extended attributes)
   # -S (Handle sparse files efficiently)
   # --numeric-ids (Avoid mapping uid/guid values by user/group name)
-  sudo rsync -avxHAWXS --numeric-ids --delete $rsync_opts "$sync_from_path" "$sync_to_path"
+  sudo rsync -avxHAWXS --numeric-ids --delete $rsync_opts "$sync_from_path/" "$sync_to_path/"
 }
 
 sync_media() {
