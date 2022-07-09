@@ -4,7 +4,7 @@
  		 "(bool) Disable dead zone handling for raw processing by Wine/Proton, confuses joydev. "
  		 "0: disable, 1: enable.");
  
-+static bool param_triggers_to_buttons = 1;
++static bool param_triggers_to_buttons = 0;
 +module_param_named(triggers_to_buttons, param_triggers_to_buttons, bool, 0444);
 +MODULE_PARM_DESC(triggers_to_buttons,
 +		 "(bool) Enable translating trigger axes to buttons. "
