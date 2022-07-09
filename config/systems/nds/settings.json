@@ -1,11 +1,34 @@
 {
   "system": "nds",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-NDS",
+        "path": "retroarch/overlay/GameBezels/NDS"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectSA-NDS",
+        "path": "retroarch/overlay/GameBezels/NDS",
+        "default": "retroarch/overlay/Nintendo-DS.png"
+      }
+    ],
+    "lightgun_border": {
+      "offset_x": 585
+    }
+  },
   "emulators": {
     "drastic": {
       "default": true,
       "gamestate": [
         "/opt/retropie/configs/nds/drastic/backup/{rom}.dsv",
         "/opt/retropie/configs/nds/drastic/savestates/*"
+      ]
+    },
+    "lr-desmume-2015": {
+      "core_name": "desmume2015",
+      "library_name": "DeSmuME 2015",
+      "gamestate": [
+        "{rom_dir}/{rom}.dsv"
       ]
     }
   },
@@ -50,6 +73,15 @@
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/nds.json"
+    },
+    "emulator": {
+      "overrides": {
+        "# Lightgun Games": "",
+        "Dead'n'Furious": "lr-desmume-2015",
+        "Moorhuhn DS": "lr-desmume-2015",
+        "Point Blank DS": "lr-desmume-2015",
+        "Whac-A-Mole": "lr-desmume-2015"
+      }
     }
   },
   "roms": {
