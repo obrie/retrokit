@@ -1,4 +1,11 @@
 [pi4]
 # Overclocking
+
+# Low bost
 over_voltage=2
 arm_freq=1750
+
+# High boost
+# over_voltage=4
+# arm_freq=1950
+# v3d_freq=750
