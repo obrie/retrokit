@@ -343,7 +343,7 @@ bin/sd.sh restore /path/to/device /path/to/backup/folder
 
 # RSync files from the retropie partition to another directory
 # (recommend sudo for long-running ops)
-sudo bin/sd.sh sync /path/to/mounted_retropie_source /path/to/retropie_target
+sudo bin/sd.sh sync_full /path/to/mounted_retropie_source /path/to/retropie_target
 
 # RSync media files only from the retropie partition to another directory
 # (recommend sudo for long-running ops)

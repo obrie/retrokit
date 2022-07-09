@@ -12,7 +12,7 @@ usage() {
   echo " $0 create <device> (run from laptop)"
   echo " $0 backup <device> <backup_path.tar.gz> (run from laptop)"
   echo " $0 restore <device> <backup_path.tar.gz> (run from laptop)"
-  echo " $0 sync <from_path> <to_path> (run from laptop/retropie)"
+  echo " $0 sync_full <from_path> <to_path> (run from laptop/retropie)"
   echo " $0 sync_media <from_path> <to_path> (run from laptop/retropie)"
   exit 1
 }
@@ -52,18 +52,28 @@ clone() {
   fi
 }
 
-sync() {
+sync_full() {
   [[ $# -ne 2 ]] && usage
   local sync_from_path=${1%/}
   local sync_to_path=${2%/}
+  local dry_run=false
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  # This should be the full list of paths that might be modified by using
-  # the arcade or using retrokit
-  local paths=(/opt/retropie/ /etc/ /home/pi/)
+  local rsync_opts=''
+  if [ "$dry_run" == 'true' ]; then
+    rsync_opts='--dry-run'
+  fi
 
-  for path in "${paths[@]}"; do
-    sudo rsync -av "$sync_from_path/$path" "$sync_to_path/$path" --delete
-  done
+  # -a (Archive)
+  # -v (Verbose)
+  # -x (Stay on one filesystem, i.e. only copy from one filesystem)
+  # -H (Preserve hard links)
+  # -A (Preserve ACLs / permissions)
+  # -W (Avoid calculating deltas / diffs)
+  # -X (Preserve extended attributes)
+  # -S (Handle sparse files efficiently)
+  # --numeric-ids (Avoid mapping uid/guid values by user/group name)
+  sudo rsync -avxHAWXS --numeric-ids --delete $rsync_opts "$sync_from_path" "$sync_to_path"
 }
 
 sync_media() {
