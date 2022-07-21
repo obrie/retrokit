@@ -171,6 +171,9 @@ create() {
   sudo e2fsck -fv "$retropie_device"
   sudo resize2fs -p "$retropie_device"
 
+  # Claim back some of the disk from system reserved space (default is 5%)
+  sudo tune2fs -m 2 "$retropie_device"
+
   # Mount the device
   local mount_path="$HOME/retrokit-sdcard"
   mkdir -p "$mount_path"
