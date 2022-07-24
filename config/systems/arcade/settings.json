@@ -333,6 +333,12 @@
       "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_BestGames_{version}.zip/folders%2Fbestgames.ini",
       "target": "$HOME/retrokit/tmp/arcade/bestgames.ini"
     },
+    "players": {
+      "source": "http://nplayers.arcadebelgium.be/files/nplayers0245a.zip",
+      "download": "$HOME/retrokit/tmp/arcade/nplayers.zip",
+      "target": "$HOME/retrokit/tmp/arcade/nplayers.ini",
+      "install": {"action": "zip_extract", "file": "folders/Multiplayer.ini"}
+    },
     "emulator": {
       "source": "https://docs.google.com/spreadsheets/d/1Rq4shU1RUSdcc7cTVWeORMD-mcO6BwXwQ7TGw8f5_zw/export?gid=0&format=tsv",
       "target": "$HOME/retrokit/config/systems/arcade/emulators.tsv"
