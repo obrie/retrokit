@@ -142,7 +142,7 @@ class Scraper:
                 # * Configured for empty and the metadata is empty
                 data = self.metadata.get(group_title)
                 is_missing = (data is None)
-                is_empty = (is_missing or not (data['genres'] or data['rating']))
+                is_empty = (is_missing or not (data['genres'] or data['rating'] or data['players']))
 
                 if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty):
                     self.scrape_machine(machine)
@@ -235,6 +235,7 @@ class Scraper:
             name = Path(element.find('path').text).stem
             rating = element.find('rating').text
             genres_csv = element.find('genre').text
+            players = element.find('players').text
 
             # Only add the metadata if:
             # * It succeeded
@@ -243,7 +244,7 @@ class Scraper:
             if name not in self.scrapes_missed and (self.override == OverrideConfig.ALL or name in self.scrapes_found):
                 group_title = self.group_titles[name]
                 if group_title not in self.metadata:
-                    self.metadata[group_title] = {'genres': [], 'rating': None}
+                    self.metadata[group_title] = {'genres': [], 'rating': None, 'players': None}
 
                 data = self.metadata[group_title]
                 if genres_csv:
@@ -251,6 +252,9 @@ class Scraper:
 
                 if rating:
                     data['rating'] = rating
+
+                if players:
+                    data['players'] = players
 
             element.clear()
 
