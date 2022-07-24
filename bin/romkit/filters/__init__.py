@@ -1,7 +1,7 @@
 from romkit.filters.base import BaseFilter, ExactFilter, SubstringFilter
 from romkit.filters.filter_set import FilterReason, FilterSet
 
-from romkit.filters.control import ControlFilter
+from romkit.filters.control import ControlFilter, PlayerFilter
 from romkit.filters.description import FlagFilter, KeywordFilter
 from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter, EmulatorRatingFilter
 from romkit.filters.favorite import FavoriteFilter
@@ -21,6 +21,7 @@ __all_filters__ = [
     FlagFilter,
     KeywordFilter,
     ControlFilter,
+    PlayerFilter,
     NameFilter,
     TitleFilter,
     EmulatorFilter,

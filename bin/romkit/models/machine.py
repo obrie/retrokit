@@ -44,6 +44,7 @@ class Machine:
         collections: Set[str] = None,
         languages: Set[str] = None,
         rating: Optional[int] = None,
+        players: Optional[int] = None,
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
 
@@ -75,6 +76,7 @@ class Machine:
         self.collections = collections or set()
         self.languages = languages or set()
         self.rating = rating
+        self.players = players
         self.emulator_rating = emulator_rating
         self.manual = manual
 
@@ -450,6 +452,7 @@ class Machine:
             'collections': sorted(list(self.collections)),
             'languages': sorted(list(self.languages)),
             'rating': self.rating,
+            'players': self.players,
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
             'manual': self.manual,

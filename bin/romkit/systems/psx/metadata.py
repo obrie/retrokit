@@ -18,10 +18,11 @@ class DuckstationMetadata(ExternalMetadata):
         with self.install_path.open() as file:
             data = json.load(file)
             for game in data:
-                if 'genre' in game or 'language' in game:
+                if 'genre' in game or 'language' in game or 'maxPlayers' in game:
                     self.set_data(game['name'], {
                         'genre': game.get('genre'),
-                        'language': game.get('language')
+                        'language': game.get('language'),
+                        'players': game.get('maxPlayers'),
                     })
 
     def update(self, machine: Machine) -> None:
@@ -40,3 +41,8 @@ class DuckstationMetadata(ExternalMetadata):
         language = machine_data and machine_data['language'] or parent_data and parent_data['language']
         if language:
             machine.languages.add(language)
+
+        # Num. Players
+        players = machine_data and machine_data['players'] or parent_data and parent_data['players']
+        if players:
+            machine.players = players

@@ -125,6 +125,41 @@ class RatingMetadata(ProgrettoSnapsMetadata):
         machine.rating = self.values.get(machine.name)
 
 
+# Number of players, managed by Arcade Belgium
+# 
+# Format: INI
+class NPlayersMetadata(ProgrettoSnapsMetadata):
+    name = 'players'
+
+    @property
+    def context(self) -> dict:
+        return {}
+
+    def load(self) -> None:
+        super().load()
+
+        nplayer_mappings = {}
+        for machine_name, nplayer_desc in self.values.items():
+            if nplayer_desc not in nplayer_mappings:
+                # Find all player configurations (e.g. "4P alt / 2P sim" = ["4", "2"])
+                players_list = [int(s) for s in re.findall(r'\d+', nplayer_desc)]
+                if players_list:
+                    # Get the largest number of players supported
+                    players = sorted(players_list)[-1]
+                else:
+                    # Not a real nplayer mapping -- ignore
+                    players = None
+
+                nplayer_mappings[nplayer_desc] = players
+            else:
+                players = nplayer_mappings[nplayer_desc]
+
+            self.values[machine_name] = players
+
+    def update(self, machine: Machine) -> None:
+        machine.players = self.values.get(machine.name)
+
+
 # Compatibility layer for ensuring the appropriate emulator is used
 # 
 # Format: TSV (default)

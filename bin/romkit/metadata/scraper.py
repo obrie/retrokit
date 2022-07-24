@@ -22,3 +22,4 @@ class ScraperMetadata(ExternalMetadata):
                 machine.genres.update(metadata['genres'])
 
             machine.rating = metadata.get('rating')
+            machine.players = metadata.get('players')
