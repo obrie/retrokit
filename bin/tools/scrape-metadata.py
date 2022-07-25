@@ -142,7 +142,7 @@ class Scraper:
                 # * Configured for empty and the metadata is empty
                 data = self.metadata.get(group_title)
                 is_missing = (data is None)
-                is_empty = (is_missing or not (data['genres'] or data['rating'] or data['players']))
+                is_empty = (is_missing or not (data.get('genres') or data.get('rating') or data.get('players')))
 
                 if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty):
                     self.scrape_machine(machine)
