@@ -1,17 +1,20 @@
 {
     "32 in 1": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "7800 Monitor Cart": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Ace of Aces": {
         "genres": [
             "Action",
             "Simulation"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Alien Brigade": {
@@ -19,6 +22,7 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": "0.8"
     },
     "Asteroids": {
@@ -26,36 +30,43 @@
             "Shooter",
             "Action"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "Atari 7800 Development Card": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Ballblazer": {
         "genres": [
             "Sports",
             "Action"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "Barnyard Blaster": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.55"
     },
     "Baseball": {
         "genres": [
+            "Sports / Baseball",
             "Sports",
             "Action"
         ],
+        "players": "2",
         "rating": "0.4"
     },
     "Basketbrawl": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": "0.45"
     },
     "Centipede": {
@@ -64,18 +75,21 @@
             "Shoot'em up / Vertical",
             "Shooter"
         ],
+        "players": "2",
         "rating": "0.85"
     },
     "Choplifter!": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "Commando": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.8"
     },
     "Crack'ed": {
@@ -83,6 +97,7 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Crossbow": {
@@ -90,12 +105,14 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": "0.85"
     },
     "Dark Chambers": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Desert Falcon": {
@@ -104,16 +121,19 @@
             "Shoot'em up / Diagonal",
             "Action"
         ],
+        "players": "1",
         "rating": "0.65"
     },
     "Diagnostic Test Cartrige": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Dig Dug": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "Donkey Kong": {
@@ -121,6 +141,7 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Donkey Kong Junior": {
@@ -128,18 +149,21 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "Double Dragon": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "F-18 Hornet": {
         "genres": [
             "Platform"
         ],
+        "players": "1",
         "rating": null
     },
     "Fatal Run": {
@@ -148,6 +172,7 @@
             "Driving",
             "Action"
         ],
+        "players": "1",
         "rating": "0.45"
     },
     "Fight Night": {
@@ -155,12 +180,14 @@
             "Sports",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Food Fight": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "GATO": {
@@ -168,6 +195,7 @@
             "Action",
             "Simulation"
         ],
+        "players": "1",
         "rating": null
     },
     "Galaga": {
@@ -177,23 +205,27 @@
             "Shooter",
             "Action"
         ],
+        "players": "2",
         "rating": "0.65"
     },
     "Hat Trick": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "High Score Cartridge": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Ikari Warriors": {
         "genres": [
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "Impossible Mission": {
@@ -201,24 +233,28 @@
             "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Jinks": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.3"
     },
     "Joust": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.9"
     },
     "Karateka": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Klax": {
@@ -227,12 +263,14 @@
             "Action",
             "Strategy"
         ],
+        "players": "1",
         "rating": null
     },
     "Kung-Fu Master": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Mario Bros.": {
@@ -240,6 +278,7 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Mat Mania Challenge": {
@@ -247,19 +286,23 @@
             "Sports",
             "Action"
         ],
+        "players": "2",
         "rating": "0.35"
     },
     "Mean 18 Ultimate Golf": {
         "genres": [
+            "Sports / Golf",
             "Sports",
             "Educational"
         ],
+        "players": "2",
         "rating": "0.4"
     },
     "Meltdown": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Midnight Mutants": {
@@ -267,6 +310,7 @@
             "Action",
             "Adventure"
         ],
+        "players": "1",
         "rating": "0.85"
     },
     "Missing in Action": {
@@ -274,6 +318,7 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Motor Psycho": {
@@ -281,6 +326,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Ms. Pac-Man": {
@@ -289,25 +335,30 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Ninja Golf": {
         "genres": [
+            "Sports / Golf",
             "Sports",
             "Action"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "One-on-One Basketball": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": "0.2"
     },
     "Pit Fighter": {
         "genres": [
             "Fight"
         ],
+        "players": "2",
         "rating": null
     },
     "Planet Smashers": {
@@ -315,12 +366,14 @@
             "Shooter",
             "Action"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Plutos": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Pole Position II": {
@@ -328,23 +381,28 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Rampage": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "Rampart": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "RealSports Baseball": {
         "genres": [
+            "Sports / Baseball",
             "Sports",
             "Action"
         ],
+        "players": "2",
         "rating": "0.4"
     },
     "Rescue on Fractalus": {
@@ -356,12 +414,14 @@
     },
     "Rikki & Vikki": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Robotron - 2084": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.9"
     },
     "Scrapyard Dog": {
@@ -370,12 +430,14 @@
             "Action",
             "Adventure"
         ],
+        "players": "1",
         "rating": "0.35"
     },
     "Sentinel": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Sirius": {
@@ -389,6 +451,7 @@
             "Sports",
             "Action"
         ],
+        "players": "8",
         "rating": "0.4"
     },
     "Super Huey UH-IX": {
@@ -396,6 +459,7 @@
             "Action",
             "Simulation"
         ],
+        "players": "1",
         "rating": "0.3"
     },
     "Super Skateboardin'": {
@@ -403,18 +467,21 @@
             "Sports",
             "Action"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Tank Command": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Title Match Pro Wrestling": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": "0.35"
     },
     "Tomcat - The F-14 Fighter Simulator": {
@@ -422,18 +489,21 @@
             "Action",
             "Simulation"
         ],
+        "players": "1",
         "rating": "1"
     },
     "Touchdown Football": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Tower Toppler": {
         "genres": [
             "Platform"
         ],
+        "players": "2",
         "rating": null
     },
     "Water Ski": {
@@ -441,6 +511,7 @@
             "Sports",
             "Action"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Winter Games": {
@@ -448,18 +519,21 @@
             "Sports",
             "Action"
         ],
+        "players": "8",
         "rating": "0.55"
     },
     "Xenophobe": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.3"
     },
     "Xevious": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     }
 }
