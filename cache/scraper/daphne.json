@@ -5,6 +5,7 @@
             "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": "0.9"
     },
     "astron": {
@@ -14,6 +15,7 @@
             "Shooter",
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "badlands": {
@@ -23,6 +25,7 @@
             "Race",
             "Driving"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "bega": {
@@ -30,6 +33,7 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "cliff": {
@@ -37,12 +41,14 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "2",
         "rating": "0.9"
     },
     "cobra": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": "0.75"
     },
     "dle21": {
@@ -52,6 +58,7 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "2",
         "rating": "0.8"
     },
     "esh": {
@@ -59,6 +66,7 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "galaxy": {
@@ -67,6 +75,7 @@
             "1st person",
             "Shooter"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "gpworld": {
@@ -75,6 +84,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "interstellar": {
@@ -84,6 +94,7 @@
             "Shooter",
             "Race 1st Pers. view"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "lair": {
@@ -93,6 +104,7 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "2",
         "rating": "0.8"
     },
     "lair2": {
@@ -102,12 +114,14 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.9"
     },
     "mach3": {
         "genres": [
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": "0.9"
     },
     "roadblaster": {
@@ -115,12 +129,14 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": "0.85"
     },
     "sdq": {
         "genres": [
             "Adventure"
         ],
+        "players": "1",
         "rating": "0.8"
     },
     "tq": {
@@ -128,12 +144,14 @@
             "Platform / Run Jump",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "uvt": {
         "genres": [
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": "0.7"
     }
 }

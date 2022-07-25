@@ -3,24 +3,28 @@
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Air Battle": {
         "genres": [
             "Simulation"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "Alien Invaders - Plus": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Alpine Skiing": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Armored Encounter + Sub Chase": {
@@ -30,6 +34,7 @@
             "3rd person",
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Atlantis": {
@@ -37,64 +42,77 @@
             "Action",
             "Shooter"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Attack of the Timelord": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Baseball": {
         "genres": [
+            "Sports / Baseball",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Billard Electrique": {
         "genres": [
             "Various"
         ],
+        "players": "4",
         "rating": null
     },
     "Blobbers, The": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Blockout + Breakdown": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Bowling + Basketball": {
         "genres": [
+            "Sports / Bowling",
             "Sports"
         ],
+        "players": "1",
         "rating": null
     },
     "Buraco Negro": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Casino Slot Machine": {
         "genres": [
             "Playing cards"
         ],
+        "players": "2",
         "rating": null
     },
     "Catch the Ball + Noughts and Crosses": {
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Chess": {
         "genres": [
+            "Board game",
             "Strategy"
         ],
         "rating": null
@@ -109,36 +127,42 @@
         "genres": [
             "Strategy"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "Clay Pigeon": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Comando Noturno": {
         "genres": [
             "Simulation"
         ],
+        "players": "1",
         "rating": null
     },
     "Computer Programmer": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Conquest of the World": {
         "genres": [
             "Strategy"
         ],
+        "players": "6",
         "rating": null
     },
     "Cosmic Conflict": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Demon Attack": {
@@ -146,18 +170,21 @@
             "Action",
             "Strategy"
         ],
+        "players": "2",
         "rating": "0.45"
     },
     "Depth Charge + Marksman": {
         "genres": [
             "Strategy"
         ],
+        "players": "1",
         "rating": "0.25"
     },
     "Electronic Table Soccer": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Exojet": {
@@ -170,30 +197,36 @@
         "genres": [
             "Various"
         ],
+        "players": "4",
         "rating": null
     },
     "Football": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Freedom Fighters": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Frogger": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.75"
     },
     "Golf": {
         "genres": [
+            "Sports / Golf",
             "Sports"
         ],
+        "players": "4",
         "rating": null
     },
     "Great Wall Street Fortune Hunt, The": {
@@ -201,62 +234,74 @@
             "Strategy",
             "Simulation"
         ],
+        "players": "2",
         "rating": null
     },
     "Gunfighter": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Helicopter Rescue": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Hockey + Soccer": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "I've Got Your Number": {
         "genres": [
             "Educational"
         ],
+        "players": "2",
         "rating": null
     },
     "Interpol": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Jeu de Quilles + Basketball": {
         "genres": [
+            "Sports / Bowling",
             "Sports"
         ],
+        "players": "1",
         "rating": null
     },
     "Jumping Acrobats": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "K.C.'s Krazy Chase": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Killer Bees": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Labyrinth Game, A + Supermind": {
         "genres": [
             "Various"
         ],
+        "players": "1",
         "rating": null
     },
     "Las Vegas Blackjack": {
@@ -269,12 +314,14 @@
         "genres": [
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Loony Balloon": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Martian Threat": {
@@ -282,18 +329,21 @@
             "Action",
             "Shooter"
         ],
+        "players": "1",
         "rating": "0.4"
     },
     "Matchmaker + Logix + Buzzword": {
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Math-A-Magic + Echo": {
         "genres": [
             "Various"
         ],
+        "players": "1",
         "rating": null
     },
     "Mission Impossible": {
@@ -306,33 +356,39 @@
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Morse": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": "0.55"
     },
     "Moto-Crash": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Mousing Cat, The": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.65"
     },
     "Munchkin": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Musician": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Newscaster": {
         "genres": [
@@ -344,28 +400,33 @@
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.4"
     },
     "Nimble Numbers Ned": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Norseman": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Out of This World + Helicopter Rescue": {
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Pachinko": {
         "genres": [
             "Strategy"
         ],
+        "players": "2",
         "rating": null
     },
     "Pairs + Space Rendezvous + Logic": {
@@ -373,12 +434,14 @@
             "Strategy",
             "Various"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Pick Axe Pete": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Pinball": {
@@ -392,18 +455,21 @@
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Pocket Billiards": {
         "genres": [
             "Various"
         ],
+        "players": "2",
         "rating": null
     },
     "Popeye": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "Power Lords": {
@@ -411,30 +477,35 @@
             "Action",
             "Shooter"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Q-Bert": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Quest for the Rings": {
         "genres": [
             "Various"
         ],
+        "players": "5",
         "rating": null
     },
     "Race + Spin-out + Cryptogram": {
         "genres": [
             "Various"
         ],
+        "players": "1",
         "rating": null
     },
     "Red Baron": {
         "genres": [
             "Simulation"
         ],
+        "players": "1",
         "rating": "0.5"
     },
     "Robot City": {
@@ -447,12 +518,14 @@
         "genres": [
             "Strategy"
         ],
+        "players": "2",
         "rating": null
     },
     "Satellite Attack": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Secret of the Pharaohs": {
@@ -460,42 +533,49 @@
             "Strategy",
             "Puzzle-Game"
         ],
+        "players": "2",
         "rating": null
     },
     "Shark Hunter": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Sid the Spellbinder": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Speedway + Spin-out + Crypto-logic": {
         "genres": [
             "Various"
         ],
+        "players": "1",
         "rating": null
     },
     "Spider-Man": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Stone Sling": {
         "genres": [
             "Strategy"
         ],
+        "players": "2",
         "rating": null
     },
     "Super Bee": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Super Cobra": {
@@ -503,6 +583,7 @@
             "Action",
             "Shooter"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Syracuse": {
@@ -515,18 +596,21 @@
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Terrahawks": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Thunderball": {
         "genres": [
             "Various"
         ],
+        "players": "4",
         "rating": null
     },
     "Trans American Rally": {
@@ -546,12 +630,14 @@
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": "0.75"
     },
     "Tutankham": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Type & Tell": {
@@ -562,7 +648,8 @@
     },
     "Verkehrsspiele 1": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Verkehrsspiele 2": {
         "genres": [
@@ -574,12 +661,14 @@
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "War of Nerves": {
         "genres": [
             "Strategy"
         ],
+        "players": "2",
         "rating": null
     }
 }

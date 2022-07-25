@@ -4,56 +4,73 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "BASIC Level II": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "BASIC Level III": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Bank Panic": {
         "genres": [
+            "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": "0.9"
     },
     "Black Onyx, The": {
         "genres": [
             "Role playing games"
         ],
+        "players": "1",
         "rating": null
     },
     "Bomb Jack": {
         "genres": [
+            "Platform",
+            "Platform / Run Jump",
             "Action"
         ],
-        "rating": null
+        "players": "2",
+        "rating": "0.7"
     },
     "Bomberman Special": {
         "genres": [
+            "Action / Labyrinth",
             "Action"
         ],
-        "rating": null
+        "players": "1",
+        "rating": "0.85"
     },
     "Borderline": {
         "genres": [
+            "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "C_So!": {
         "genres": [
+            "Platform",
+            "Platform / Run Jump",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Cabbage Patch Kids": {
         "genres": [
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Castle, The": {
@@ -61,12 +78,15 @@
             "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Chack'n Pop": {
         "genres": [
+            "Action / Labyrinth",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Challenge Derby": {
@@ -75,6 +95,7 @@
             "Sports with Animals",
             "Sports"
         ],
+        "players": "1",
         "rating": null
     },
     "Champion Baseball": {
@@ -82,6 +103,7 @@
             "Sports / Baseball",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Billiards": {
@@ -89,6 +111,7 @@
             "Sports / Pool",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Boxing": {
@@ -96,6 +119,7 @@
             "Sports / Boxing",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Golf": {
@@ -103,6 +127,7 @@
             "Sports / Golf",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Ice Hockey": {
@@ -110,12 +135,14 @@
             "Sports / Hockey",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Kendou": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Pro Wrestling": {
@@ -123,6 +150,7 @@
             "Sports / Wrestling",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Soccer": {
@@ -130,6 +158,7 @@
             "Sports / Soccer",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Champion Tennis": {
@@ -137,24 +166,30 @@
             "Sports / Tennis",
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Championship Lode Runner": {
         "genres": [
-            "Action"
+            "Platform",
+            "Platform / Run Jump"
         ],
+        "players": "1",
         "rating": null
     },
     "Choplifter": {
         "genres": [
+            "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Chuugaku Hisshuu Eibunpou - Chuugaku 1-Nen": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Chuugaku Hisshuu Eibunpou - Chuugaku 2-Nen": {
@@ -167,66 +202,86 @@
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Chuugaku Hisshuu Eisakubun - Chuugaku 2-Nen": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Chuugaku Hisshuu Eitango - Chuugaku 1-Nen": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Chuugaku Hisshuu Eitango - Chuugaku 2-Nen": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Circus Charlie": {
         "genres": [],
+        "players": "2",
         "rating": null
     },
     "Complete Arcade Pack Collection, The": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Congo Bongo": {
         "genres": [
+            "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Disk BASIC": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Doki Doki Penguin Land": {
         "genres": [
             "Puzzle-Game"
         ],
+        "players": "2",
         "rating": null
     },
     "Dragon Wang": {
         "genres": [
+            "Platform",
+            "Platform / Fighter Scrolling",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Drol": {
         "genres": [
+            "Platform",
+            "Platform / Run Jump",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Electronic Salesman": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Elevator Action": {
         "genres": [
+            "Platform",
+            "Platform / Shooter Scrolling",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Exerion": {
@@ -234,12 +289,16 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Flicky": {
         "genres": [
+            "Platform",
+            "Platform / Run Jump",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "GP World": {
@@ -247,18 +306,23 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Girl's Garden": {
         "genres": [
+            "Adventure",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Golgo 13": {
         "genres": [
+            "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Gulkave": {
@@ -266,18 +330,23 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Guzzler": {
         "genres": [
+            "Action / Labyrinth",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "H.E.R.O.": {
         "genres": [
+            "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Hang On II": {
@@ -285,10 +354,12 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Home BASIC": {
         "genres": [],
+        "players": "1",
         "rating": null
     },
     "Home Mahjong": {
@@ -297,42 +368,51 @@
             "Mahjong",
             "Puzzle-Game"
         ],
+        "players": "2",
         "rating": null
     },
     "Hustle Chumy": {
         "genres": [
+            "Platform",
+            "Platform / Run Jump",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Hyper Sports": {
         "genres": [
             "Sports"
         ],
+        "players": "2",
         "rating": null
     },
     "Hyper Sports 2": {
         "genres": [
             "Sports"
         ],
+        "players": "1",
         "rating": null
     },
     "Kagaku": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Kamikaze": {
         "genres": [
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": null
     },
     "King's Valley": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Knightmare": {
@@ -340,6 +420,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Legend of Kage, The": {
@@ -349,16 +430,20 @@
             "Action",
             "Shoot'em Up"
         ],
+        "players": "2",
         "rating": "0.45"
     },
     "LinkWord": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Lode Runner": {
         "genres": [
+            "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Magical Kid Wiz": {
@@ -366,6 +451,7 @@
             "Adventure",
             "Action"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Magical Tree": {
@@ -373,6 +459,7 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": "0.55"
     },
     "Mahjong": {
@@ -381,6 +468,7 @@
             "Mahjong",
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Monaco GP": {
@@ -388,6 +476,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Music Editor": {
@@ -400,12 +489,14 @@
         "genres": [
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Nihonshi Nenpyou": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Ninja Princess": {
@@ -413,6 +504,7 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Okamoto Ayako no Match Play Golf": {
@@ -420,6 +512,7 @@
             "Sports / Golf",
             "Sports"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Orguss": {
@@ -427,6 +520,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Othello": {
@@ -434,6 +528,7 @@
             "Asiatic board game",
             "Puzzle-Game"
         ],
+        "players": "2",
         "rating": null
     },
     "Pacar": {
@@ -441,6 +536,7 @@
             "Action / Labyrinth",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Pachinko": {
@@ -448,6 +544,7 @@
             "Casino",
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Pachinko II": {
@@ -455,22 +552,26 @@
             "Casino",
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Ping Pong": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Pippols": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Pitfall II - The Lost Caverns": {
         "genres": [
             "Platform"
         ],
+        "players": "2",
         "rating": null
     },
     "Pop Flamer": {
@@ -478,6 +579,7 @@
             "Action / Labyrinth",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Poseidon Wars + Space Panic + Rambo": {
@@ -485,12 +587,14 @@
             "Simulation",
             "Various"
         ],
+        "players": "1",
         "rating": "0.45"
     },
     "Q-bert": {
         "genres": [
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Rally-X": {
@@ -499,6 +603,7 @@
             "Driving",
             "Action"
         ],
+        "players": "1",
         "rating": "0.55"
     },
     "Road Fighter": {
@@ -506,22 +611,26 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Rock n' Bolt": {
         "genres": [
             "Puzzle-Game"
         ],
+        "players": "2",
         "rating": null
     },
     "SG-1000 M2 Test Cartridge": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Safari Hunting": {
         "genres": [
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Safari Race": {
@@ -529,6 +638,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "San-nin Mahjong": {
@@ -536,6 +646,7 @@
             "Asiatic board game",
             "Mahjong"
         ],
+        "players": "3",
         "rating": null
     },
     "Sega Flipper": {
@@ -543,23 +654,27 @@
             "Pinball",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Sega Logo": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Sega-Galaga": {
         "genres": [
             "Shoot'em up / Vertical",
             "Shoot'em Up"
         ],
+        "players": "2",
         "rating": null
     },
     "Sekaishi Nenpyou": {
         "genres": [
             "Educational"
         ],
+        "players": "1",
         "rating": null
     },
     "Serizawa Hachidan no Tsumeshougi": {
@@ -567,6 +682,7 @@
             "Casual Game",
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Shinnyushain Tooru-kun": {
@@ -574,18 +690,21 @@
             "Action / Labyrinth",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Sindbad Mystery": {
         "genres": [
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Soukoban": {
         "genres": [
             "Puzzle-Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Space Armor": {
@@ -593,6 +712,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Space Invaders": {
@@ -600,6 +720,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Space Mountain": {
@@ -607,6 +728,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Space Slalom": {
@@ -614,6 +736,7 @@
             "Action",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Star Force": {
@@ -622,6 +745,7 @@
             "Shoot'em up / Vertical",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Star Jacker": {
@@ -629,18 +753,21 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Star Soldier": {
         "genres": [
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": null
     },
     "Super Tank": {
         "genres": [
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Tank Battalion": {
@@ -648,6 +775,7 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "Tanoshii Sansuu - Shougaku 4-Nen Ge": {
@@ -658,29 +786,35 @@
     },
     "Tanoshii Sansuu - Shougaku 4-Nen Jou": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Tanoshii Sansuu - Shougaku 5-Nen Ge": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Tanoshii Sansuu - Shougaku 5-Nen Jou": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Tanoshii Sansuu - Shougaku 6-Nen Ge": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Tanoshii Sansuu - Shougaku 6-Nen Jou": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Terebi Oekaki": {
         "genres": [
             "Various",
             "Action"
         ],
+        "players": "1",
         "rating": null
     },
     "TwinBee": {
@@ -688,12 +822,14 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Uranai Angel Cutie": {
         "genres": [
             "Casual Game"
         ],
+        "players": "1",
         "rating": null
     },
     "Wonder Boy": {
@@ -701,6 +837,7 @@
             "Platform",
             "Action"
         ],
+        "players": "2",
         "rating": null
     },
     "Yamato": {
@@ -708,17 +845,20 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Yie Ar Kung-Fu": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Yie Ar Kung-Fu II": {
         "genres": [
             "Beat'em Up",
             "Shooter"
         ],
+        "players": "2",
         "rating": null
     },
     "Zaxxon": {
@@ -726,6 +866,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Zippy Race": {
@@ -733,6 +874,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Zoom 909": {
@@ -740,6 +882,7 @@
             "Shoot'em Up",
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     }
 }

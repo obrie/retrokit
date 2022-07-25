@@ -1,19 +1,24 @@
 {
     "32X Sample Program - PWM Sound Demo": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "After Burner Complete": {
         "genres": [
             "Action",
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Amazing Spider-Man, The - Web of Fire": {
         "genres": [
+            "Platform",
+            "Platform / Fighter Scrolling",
             "Action"
         ],
+        "players": "1",
         "rating": "0.8"
     },
     "BC Racers": {
@@ -21,6 +26,7 @@
             "Race",
             "Driving"
         ],
+        "players": "2",
         "rating": "0.55"
     },
     "Blackthorne": {
@@ -28,12 +34,14 @@
             "Action",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Brutal - Above the Claw": {
         "genres": [
             "Fight"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "ClayFighter 2": {
@@ -41,6 +49,7 @@
             "Fight",
             "Fight / 2D"
         ],
+        "players": "2",
         "rating": null
     },
     "Cosmic Carnage": {
@@ -48,6 +57,7 @@
             "Action",
             "Fight"
         ],
+        "players": "2",
         "rating": "0.45"
     },
     "Darxide": {
@@ -57,6 +67,7 @@
             "Fight",
             "Lightgun Shooter"
         ],
+        "players": "1",
         "rating": "0.45"
     },
     "Doom": {
@@ -65,17 +76,20 @@
             "Shooter",
             "Action"
         ],
+        "players": "1",
         "rating": "0.55"
     },
     "Ecco the Dolphin": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "FIFA Soccer 96": {
         "genres": [
             "Sports / Soccer",
             "Sports"
         ],
+        "players": "4",
         "rating": "0.5"
     },
     "Golf Magazine Presents - 36 Great Holes Starring Fred Couples": {
@@ -83,6 +97,7 @@
             "Sports / Golf",
             "Sports"
         ],
+        "players": "8",
         "rating": "0.3"
     },
     "Knuckles' Chaotix": {
@@ -90,6 +105,7 @@
             "Action",
             "Platform"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "Kolibri": {
@@ -98,39 +114,47 @@
             "Action",
             "Shoot'em Up"
         ],
+        "players": "2",
         "rating": "0.8"
     },
     "Mars Check Program Version 1.0": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Mars Sample Program - Gnu Sierra": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Mars Sample Program - Pharaoh": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Mars Sample Program - Runlength Mode Test": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Mars Sample Program - Texture Test": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Metal Head": {
         "genres": [
             "Simulation",
             "Action"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Mortal Kombat II": {
         "genres": [
             "Fight"
         ],
+        "players": "2",
         "rating": "0.85"
     },
     "Motherbase": {
@@ -138,6 +162,7 @@
             "Action",
             "Shoot'em Up"
         ],
+        "players": "2",
         "rating": "0.65"
     },
     "Motocross Championship": {
@@ -148,6 +173,7 @@
             "Race",
             "Driving"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "NBA Jam - Tournament Edition": {
@@ -155,13 +181,16 @@
             "Sports / Basketball",
             "Sports"
         ],
+        "players": "4",
         "rating": "0.8"
     },
     "NFL Quarterback Club": {
         "genres": [
+            "Sports / Football",
             "Simulation",
             "Sports"
         ],
+        "players": "4",
         "rating": "0.6"
     },
     "Pinocchio": {
@@ -169,12 +198,14 @@
             "Action",
             "Action / Adventure"
         ],
+        "players": "1",
         "rating": "0.8"
     },
     "Pitfall - The Mayan Adventure": {
         "genres": [
             "Platform"
         ],
+        "players": "1",
         "rating": "0.6"
     },
     "Primal Rage": {
@@ -182,13 +213,16 @@
             "Action",
             "Fight"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "RBI Baseball '95": {
         "genres": [
+            "Sports / Baseball",
             "Sports",
             "Simulation"
         ],
+        "players": "2",
         "rating": "0.5"
     },
     "Sangokushi IV": {
@@ -197,12 +231,14 @@
             "Strategy",
             "Role playing games"
         ],
+        "players": "1",
         "rating": "0.35"
     },
     "Soulstar X": {
         "genres": [
             "Shooter"
         ],
+        "players": "1",
         "rating": null
     },
     "Space Harrier": {
@@ -211,6 +247,7 @@
             "Lightgun Shooter",
             "Shoot'em Up"
         ],
+        "players": "1",
         "rating": "0.7"
     },
     "Spot Goes to Hollywood": {
@@ -218,6 +255,7 @@
             "Platform",
             "Action"
         ],
+        "players": "1",
         "rating": "0.8"
     },
     "Star Trek - Starfleet Academy - Starship Bridge Simulator": {
@@ -225,6 +263,7 @@
             "Simulation",
             "Lightgun Shooter"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Star Wars Arcade": {
@@ -234,18 +273,24 @@
             "1st person",
             "Action"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Stellar Assault": {
         "genres": [
             "Shoot'em Up"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "T-MEK": {
         "genres": [
+            "Shooter",
+            "Shooter / Vehicle",
+            "1st person",
             "Action"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Tempo": {
@@ -253,11 +298,13 @@
             "Action",
             "Platform"
         ],
+        "players": "1",
         "rating": "0.75"
     },
     "Time Warner 32X CMD Download Cartridge": {
         "genres": [],
-        "rating": null
+        "rating": null,
+        "players": null
     },
     "Toughman Contest": {
         "genres": [
@@ -265,12 +312,14 @@
             "Sports",
             "Fight"
         ],
+        "players": "8",
         "rating": "0.5"
     },
     "Virtua Fighter": {
         "genres": [
             "Fight"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "Virtua Hamster": {
@@ -278,6 +327,7 @@
             "Race",
             "Driving"
         ],
+        "players": "1",
         "rating": null
     },
     "Virtua Racing Deluxe": {
@@ -285,21 +335,26 @@
             "Race",
             "Driving"
         ],
+        "players": "2",
         "rating": "0.75"
     },
     "WWF Raw": {
         "genres": [
+            "Sports / Wrestling",
             "Action",
             "Sports",
             "Fight"
         ],
+        "players": "4",
         "rating": "0.7"
     },
     "WWF WrestleMania - The Arcade Game": {
         "genres": [
+            "Sports / Wrestling",
             "Sports",
             "Fight"
         ],
+        "players": "2",
         "rating": "0.7"
     },
     "World Series Baseball Starring Deion Sanders": {
@@ -307,6 +362,7 @@
             "Sports / Baseball",
             "Sports"
         ],
+        "players": "2",
         "rating": "0.6"
     },
     "X-Men": {
