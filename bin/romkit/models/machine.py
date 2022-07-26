@@ -43,7 +43,7 @@ class Machine:
         genres: Set[str] = None,
         collections: Set[str] = None,
         languages: Set[str] = None,
-        rating: Optional[int] = None,
+        rating: Optional[float] = None,
         players: Optional[int] = None,
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
