@@ -251,10 +251,10 @@ class Scraper:
                     data['genres'] = re.split(', *', genres_csv)
 
                 if rating:
-                    data['rating'] = rating
+                    data['rating'] = float(rating)
 
                 if players:
-                    data['players'] = players
+                    data['players'] = int(players)
 
             element.clear()
 
