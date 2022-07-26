@@ -25,10 +25,10 @@ __configure_retroarch_configs() {
 
   # Create cfg files
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
     while read -r rom_dir; do
-      if ls "$rom_dir/$rom_name".* >/dev/null 2>&1; then
-        local target_file="$rom_dir/$rom_name.cfg"
+      if ls "$rom_dir/$rom_filename" >/dev/null 2>&1; then
+        local target_file="$rom_dir/$rom_filename.cfg"
 
         ini_merge "$override_file" "$target_file" backup=false overwrite=true
         installed_files["$target_file"]=1
@@ -47,7 +47,7 @@ __configure_retroarch_configs() {
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
     # Emulator-specific remapping directory
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     mkdir -p "$emulator_remapping_dir"
@@ -72,7 +72,7 @@ __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -120,7 +120,7 @@ __find_overrides() {
     # Track which playlists we've installed so we don't do it twice
     declare -A installed_playlists
 
-    while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title emulator; do
+    while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title rom_path emulator; do
       emulator=${emulator:-default}
 
       # Find a file for either the rom or its parent.  Priority order:
@@ -147,17 +147,19 @@ __find_overrides() {
 
         # Make sure this is a libretro core
         if [ -n "$core_name" ] && [ -n "$library_name" ]; then
+          local rom_filename=${rom_path##*/}
+
           if [ -z "$playlist_name" ]; then
             # Generate a config for single-disc games
-            echo "$rom_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
+            echo "$rom_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
           elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
             # Generate a config for the playlist
             installed_playlists["$playlist_name"]=1
-            echo "$playlist_name"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
+            echo "$playlist_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
           fi
         fi
       fi
-    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .emulator] | join("»")')
+    done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .path, .emulator] | join("»")')
   fi
 }
 
