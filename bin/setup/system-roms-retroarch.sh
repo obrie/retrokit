@@ -11,9 +11,20 @@ retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
 retroarch_remapping_dir=${retroarch_remapping_dir%/}
 
 configure() {
+  __load_multitap_titles
+
   __configure_retroarch_configs
   __configure_retroarch_remappings
   __configure_retroarch_core_options
+}
+
+# Get the list of games which support multi-tap devices
+__load_multitap_titles() {
+  declare -Ag multitap_titles
+
+  while read -r rom_title; do
+    multitap_titles["$rom_title"]=1
+  done < <(each_path '{config_dir}/emulationstation/collections/custom-Multitap.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
 # Game-specific retroarch configuration overrides
@@ -25,13 +36,19 @@ __configure_retroarch_configs() {
 
   # Create cfg files
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file group_title core_name library_name; do
     while read -r rom_dir; do
       if ls "$rom_dir/$rom_filename" >/dev/null 2>&1; then
-        local target_file="$rom_dir/$rom_filename.cfg"
+        local target_path="$rom_dir/$rom_filename.cfg"
+        rm -fv "$target_path"
 
-        ini_merge "$override_file" "$target_file" backup=false overwrite=true
-        installed_files["$target_file"]=1
+        # Copy over multitap overrides
+        if [ "${multitap_titles["$group_title"]}" ]; then
+          ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
+        fi
+
+        ini_merge "$override_file" "$target_path" backup=false
+        installed_files["$target_path"]=1
       fi
     done < <(echo "$rom_dirs")
   done < <(__find_overrides 'cfg')
@@ -47,7 +64,7 @@ __configure_retroarch_configs() {
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file group_title core_name library_name; do
     # Emulator-specific remapping directory
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     mkdir -p "$emulator_remapping_dir"
@@ -72,7 +89,7 @@ __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
   declare -A installed_files
-  while IFS=$'\t' read -r rom_name rom_filename override_file core_name library_name; do
+  while IFS=$'\t' read -r rom_name rom_filename override_file group_title core_name library_name; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -83,6 +100,11 @@ __configure_retroarch_core_options() {
     rm -fv "$target_path"
     echo "Merging $core_name system overrides to $target_path"
     grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
+
+    # Copy over multitap overrides
+    if [ "${multitap_titles["$group_title"]}" ]; then
+      ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
+    fi
 
     # Merge in game-specific overrides
     ini_merge "$override_file" "$target_path" backup=false
@@ -148,14 +170,15 @@ __find_overrides() {
         # Make sure this is a libretro core
         if [ -n "$core_name" ] && [ -n "$library_name" ]; then
           local rom_filename=${rom_path##*/}
+          local group_title=${parent_title:-$title}
 
           if [ -z "$playlist_name" ]; then
             # Generate a config for single-disc games
-            echo "$rom_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
+            echo "$rom_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$library_name"
           elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
             # Generate a config for the playlist
             installed_playlists["$playlist_name"]=1
-            echo "$playlist_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$core_name"$'\t'"$library_name"
+            echo "$playlist_name"$'\t'"$rom_filename"$'\t'"$override_file"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$library_name"
           fi
         fi
       fi

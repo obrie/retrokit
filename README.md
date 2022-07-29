@@ -18,6 +18,7 @@ Specifically, it can set up:
 * Overlays / Bezels (with lightgun-compatible auto-generation)
 * Cheats (RetroArch, MAME, NDS, etc.)
 * HiScores
+* Multi-Tap devices
 * Launch images
 * Emulator installation
 * In-game manuals
@@ -100,6 +101,7 @@ There are also system-specific features, including:
 * Automatic integration of eXoDOS configurations for PC games
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
 * Automatic filtering of runnable games for 3DO, PSP, Sega Saturn, and more
+* Automatic multi-tap support for NES, SNES, MegaDrive, and Playstation
 * Optimized settings per-game for Arcade, Atari Jaguar, C64, N64, and more
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP
