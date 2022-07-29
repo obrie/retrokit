@@ -13,6 +13,7 @@ retroarch_remapping_dir=${retroarch_remapping_dir%/}
 configure() {
   restore
 
+  __load_multitap_titles
   __configure_retroarch_configs
   __configure_retroarch_remappings
   __configure_retroarch_core_options
@@ -34,6 +35,8 @@ __configure_retroarch_configs() {
     return
   fi
 
+  local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-multitap.cfg' && echo 'true')
+
   # Merge in rom-specific overrides
   while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
     while read -r rom_dir; do
@@ -41,7 +44,7 @@ __configure_retroarch_configs() {
         local target_path="$rom_dir/$rom_filename.cfg"
 
         # Copy over multitap overrides
-        if [ "${multitap_titles["$group_title"]}" ]; then
+        if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
           ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
         fi
 
@@ -73,7 +76,14 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
+  local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
+
   while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
+    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ ! "${multitap_titles["$group_title"]}" ]; }; then
+      # No overrides to define at the rom-level
+      continue
+    fi
+
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -85,8 +95,8 @@ __configure_retroarch_core_options() {
     grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
 
     # Copy over multitap overrides
-    if [ "${multitap_titles["$group_title"]}" ]; then
-      ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
+    if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
+      ini_merge '{system_config_dir}/retroarch-core-options-multitap.cfg' "$target_path" backup=false
     fi
 
     # Merge in game-specific overrides
@@ -101,7 +111,6 @@ __list_libretro_roms() {
 
   # Load core/library info for the emulators
   load_emulator_data
-  __load_multitap_titles
 
   # Load which overrides are available
   declare -Ag override_files
