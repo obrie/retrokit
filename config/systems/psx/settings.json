@@ -91,6 +91,9 @@
     "duckstation_data": {
       "source": "https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json",
       "target": "$HOME/retrokit/tmp/psx/gamedb.json"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/cache/scraper/psx.json"
     }
   },
   "roms": {
@@ -104,6 +107,9 @@
       "length": "ascending"
     },
     "filters": {
+      "categories": [
+        "Games"
+      ],
       "languages": [
         null,
         "English"

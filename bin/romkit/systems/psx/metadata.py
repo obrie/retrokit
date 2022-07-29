@@ -35,6 +35,8 @@ class DuckstationMetadata(ExternalMetadata):
         # Genre
         genre = machine_data and machine_data['genre'] or parent_data and parent_data['genre']
         if genre:
+            # Prefer Duckstation genres over scraped genres
+            machine.genres.clear()
             machine.genres.add(genre)
 
         # Language
@@ -42,7 +44,7 @@ class DuckstationMetadata(ExternalMetadata):
         if language:
             machine.languages.add(language)
 
-        # Num. Players
+        # Num. Players (override only if Duckstation thinks more are supported)
         players = machine_data and machine_data['players'] or parent_data and parent_data['players']
-        if players:
+        if players and (not machine.players or machine.players < players):
             machine.players = players
