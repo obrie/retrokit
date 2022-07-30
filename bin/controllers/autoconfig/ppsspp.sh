@@ -267,7 +267,7 @@ function map_ppsspp_joystick() {
     case "$input_type" in
         hat)
             # Get the SDL button name that's associated with this HAT direction
-            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:h$input_id.$input_value," | cut -d ':' -f 1)
+            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:h$input_id.$input_value," | cut -d ':' -f 1 | tail -n 1)
             if [ -z "$sdl_button_name" ]; then
                 return
             fi
@@ -287,7 +287,7 @@ function map_ppsspp_joystick() {
             ;;
         *)
             # Get the SDL button name that's associated with this button id
-            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:b$input_id," | cut -d ':' -f 1)
+            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:b$input_id," | cut -d ':' -f 1 | tail -n 1)
             if [ -z "$sdl_button_name" ]; then
                 return
             fi

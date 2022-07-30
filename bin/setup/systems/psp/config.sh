@@ -17,7 +17,7 @@ configure() {
   ini_merge '{system_config_dir}/controls.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini'
   ini_merge '{system_config_dir}/ppsspp.ini' '/opt/retropie/configs/psp/PSP/SYSTEM/ppsspp.ini'
 
-  backup_file '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt' as_sudo=true
+  backup_and_restore '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt' as_sudo=true
   each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a /opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt >/dev/null
 }
 
