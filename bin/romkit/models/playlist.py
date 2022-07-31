@@ -14,7 +14,11 @@ class Playlist:
 
     @property
     def name(self) -> str:
-        return self.DISC_FULL_REGEX.sub('', self.machine.name)
+        return self.name_from(self.machine.name)
+
+    @classmethod
+    def name_from(cls, name: str) -> str:
+        return cls.DISC_FULL_REGEX.sub('', name)
 
     @property
     def romset(self) -> ROMSet:

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from romkit.metadata.external import ExternalMetadata
 from romkit.models.machine import Machine
+from romkit.models.playlist import Playlist
 
 import json
 import re
@@ -24,29 +25,37 @@ class DuckstationMetadata(ExternalMetadata):
                 if 'genre' in game or 'language' in game or 'maxPlayers' in game:
                     name = game['name']
                     title = Machine.title_from(name)
+                    playlist_name = Playlist.name_from(name)
 
-                    # Pre-existing shared metadata betweeen regional games
-                    shared_metadata = self.data.get(title) or {}
-
-                    language = game.get('language')
+                    # Shared: Find metadata shared between titles under different regions
+                    shared_metadata = self.data.get(Machine.normalize(title)) or {}
                     players = game.get('maxPlayers')
                     genre = game.get('genre')
 
-                    # Update players / genre shared metadata between regional games
+                    # Shared: Prioritize most # of players identified
                     if players and (not shared_metadata.get('players') or shared_metadata['players'] < players):
                         shared_metadata['players'] = players
 
-                    if genre and (not shared_metadata.get('genre')):
+                    # Shared: Prioritize more specific genres (approximated by length)
+                    if genre and (not shared_metadata.get('genre') or len(shared_metadata['genre']) < len(genre)):
                         genre = self.GENRE_REPLACE_REGEX.sub('', genre)
                         shared_metadata['genre'] = genre
 
-                    # Region-specific metadata
-                    game_metadata = {}
-                    if language:
-                        game_metadata['language'] = language
-
-                    self.set_data(name, game_metadata)
                     self.set_data(title, shared_metadata)
+
+                    if title == playlist_name:
+                        # There was no region specified, so we provide a default language if one's there
+                        if language:
+                            shared_metadata['language'] = language
+                    else:
+                        # Region-specific metadata
+                        game_metadata = {}
+                        language = game.get('language')
+
+                        if language:
+                            game_metadata['language'] = language
+
+                        self.set_data(playlist_name, game_metadata)
 
     def update(self, machine: Machine) -> None:
         # Prioritize (lowest to highest):
@@ -56,12 +65,12 @@ class DuckstationMetadata(ExternalMetadata):
         # * Name
         data = {
             **self.data.get(Machine.normalize(machine.title), {}),
-            **self.data.get(Machine.normalize(machine.name), {}),
+            **self.data.get(Machine.normalize(Playlist.name_from(machine.name)), {}),
         }
         if machine.parent_name:
             data = {
                 **self.data.get(Machine.normalize(machine.parent_title), {}),
-                **self.data.get(Machine.normalize(machine.parent_name), {}),
+                **self.data.get(Machine.normalize(Playlist.name_from(machine.parent_name)), {}),
                 **data,
             }
 
