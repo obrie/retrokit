@@ -10,7 +10,7 @@ import hashlib
 import logging
 import re
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, Union
 
 # Represents a Game/Device/BIOS
 class Machine:
@@ -43,7 +43,7 @@ class Machine:
         genres: Set[str] = None,
         collections: Set[str] = None,
         languages: Set[str] = None,
-        rating: Optional[float] = None,
+        rating: Optional[Union[float, str]] = None,
         players: Optional[int] = None,
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
