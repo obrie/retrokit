@@ -61,7 +61,7 @@ sync_full() {
 
   local rsync_opts=''
   if [ "$dry_run" == 'true' ]; then
-    rsync_opts='--dry-run'
+    rsync_opts="$rsync_opts --dry-run"
   fi
 
   # -a (Archive)
@@ -77,9 +77,10 @@ sync_full() {
 }
 
 sync_media() {
-  [[ $# -ne 2 ]] && usage
+  [[ $# -lt 2 ]] && usage
   local sync_from_path=${1%/}
   local sync_to_path=${2%/}
+  local dry_run=false
   local delete=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
@@ -90,8 +91,12 @@ sync_media() {
   fi
 
   local rsync_args=''
+  if [ "$dry_run" == 'true' ]; then
+    rsync_opts="$rsync_opts --dry-run"
+  fi
+
   if [ "$delete" == 'true' ]; then
-    rsync_args='--delete'
+    rsync_args="$rsync_opts --delete"
   fi
 
   # This should be the full list of media paths
