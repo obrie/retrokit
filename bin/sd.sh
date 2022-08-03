@@ -90,13 +90,13 @@ sync_media() {
     exit 1
   fi
 
-  local rsync_args=''
+  local rsync_opts=''
   if [ "$dry_run" == 'true' ]; then
     rsync_opts="$rsync_opts --dry-run"
   fi
 
   if [ "$delete" == 'true' ]; then
-    rsync_args="$rsync_opts --delete"
+    rsync_opts="$rsync_opts --delete"
   fi
 
   # This should be the full list of media paths
@@ -131,7 +131,7 @@ sync_media() {
       fi
 
       # Copy over files
-      sudo rsync -av $rsync_args "$sync_from_path$path" "$sync_to_path$path"
+      sudo rsync -av $rsync_opts "$sync_from_path$path" "$sync_to_path$path"
     fi
   done
 }
