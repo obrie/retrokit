@@ -14,7 +14,7 @@ class BaseProvider():
 
         for subcls in cls.__subclasses__():
             if subcls.name == name:
-                return subcls()
+                return subcls(config)
 
         return cls(config)
 
