@@ -75,7 +75,9 @@ __configure_runcommand() {
 }
 
 restore() {
-  rm -rfv "$install_dir" /opt/retropie/configs/all/manualkit.conf
+  __restore_emulationstation
+  __restore_autostart
+  __restore_runcommand
 }
 
 __restore_emulationstation() {
@@ -92,6 +94,8 @@ __restore_runcommand() {
 }
 
 remove() {
+  rm -rfv "$install_dir" /opt/retropie/configs/all/manualkit.conf
+
   # Only remove python modules uniquely used by manualkit
   sudo pip3 uninstall -y \
     psutil \
