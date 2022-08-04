@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from powerkit.providers import BaseProvider
+
 import gpiozero
 
 # This is a modified version of:
@@ -7,7 +9,7 @@ import gpiozero
 # 
 # Notes about how signals are sent:
 # * https://github.com/spapadim/argon1
-class Argon1():
+class Argon1(BaseProvider):
     name = 'argon1'
 
     # Pin numbers

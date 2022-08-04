@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
+from powerkit.providers import BaseProvider
+
 import gpiozero
 
-class Nespi():
+class Nespi(BaseProvider):
     name = 'nespi'
 
     # Pin numbers
