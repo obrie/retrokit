@@ -2,15 +2,19 @@
 
 from __future__ import annotations
 
-import gpiozero
 import os
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from powerkit.providers import BaseProvider
+
+import configparser
 import psutil
 import signal
 import shutil
-import subprocess
 
 from argparse import ArgumentParser
-from pathlib import Path
 from typing import List, Optional
 
 # This is a modified version of:
@@ -18,20 +22,26 @@ from typing import List, Optional
 # * https://github.com/RetroFlag/retroflag-picase
 # 
 # It's written only in Python and provides a few additional nice-to-haves.
-class SafeShutdown():
-    # Pin numbers
-    POWER_PIN = 3
-    RESET_PIN = 2
-    LED_PIN = 14
-    POWEREN_PIN = 4
+class PowerKit():
+    def __init__(self, config_path: str) -> None:
+        # Read user configuration
+        self.config = configparser.ConfigParser(strict=False)
+        self.config.read_dict({
+            'provider': {'id': None},
+            'shutdown': {'enabled': True, 'hold_time': 2},
+            'reset': {'enabled': True},
+        })
+        self.config.read(config_path)
 
-    # Number of seconds to wait while the button is being pressed before we decide
-    # that a shut down was intended
-    HOLD_SECONDS = 1
+        # Identify which power provider we're working with
+        self.provider = BaseProvider.from_config(self.config)
 
-    def __init__(self) -> None:
-        self.led = gpiozero.LED(self.LED_PIN)
-        self.power = gpiozero.LED(self.POWEREN_PIN)
+        # Add event handler
+        if self.config['shutdown']['enabled']:
+            self.provider.on('shutdown', self.shutdown)
+
+        if self.config['reset']['enabled']:
+            self.provider.on('reset', self.reset)
 
     # Looks up the currently running emulator
     @property
@@ -50,22 +60,12 @@ class SafeShutdown():
 
     # Starts listening for button presses
     def run(self):
-        # Mark pins as being ON
-        self.led.on()
-        self.power.on()
-
-        power_button = gpiozero.Button(self.POWER_PIN, hold_time=self.HOLD_SECONDS)
-        power_button.when_pressed = self.shutdown
-        power_button.when_released = self.enable_led
-
-        reset_button = gpiozero.Button(self.RESET_PIN)
-        reset_button.when_pressed = self.reset
-
+        self.provider.run()
         signal.pause()
 
     # Shuts down the computer, either by asking ES to do it or by doing it ourselves
     def shutdown(self):
-        self.led.blink(0.2, 0.2)
+        self.provider.blink()
 
         es_process = self.es_process
         if es_process:
@@ -81,10 +81,6 @@ class SafeShutdown():
                 os.system('sudo shutdown -h now')
         else:
             os.system('sudo shutdown -h now')
-
-    # Turns on the LED
-    def enable_led(self):
-        self.led.on()
 
     # Handles pressing the reset button:
     # * If emulator is running, kill it
@@ -123,8 +119,9 @@ class SafeShutdown():
 
 def main() -> None:
     parser = ArgumentParser()
+    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/powerkit.conf')
     args = parser.parse_args()
-    SafeShutdown(**vars(args)).run()
+    PowerKit(**vars(args)).run()
 
 
 if __name__ == '__main__':

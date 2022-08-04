@@ -1,0 +1,11 @@
+[Unit]
+Description=Hardware case safe shutdown
+After=rc-local.service
+
+[Service]
+Type=simple
+ExecStart=python3 /opt/retropie/supplementary/powerkit/cli.py /opt/retropie/configs/all/powerkit.ini
+TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target

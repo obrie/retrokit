@@ -5,7 +5,7 @@ with RetroPie / Raspberry Pi 4 using currently known best practices as I underst
 
 Specifically, it can set up:
 
-* Cases (e.g. Argon, NESPi)
+* Cases (e.g. Argon, NESPi), including safe reset/shutdown
 * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * VNC
@@ -125,8 +125,8 @@ When I started creating my own RetroPie system, I wanted to build it in such a w
 that I could re-create the exact same setup steps each time.  As it turns out, there's
 a lot involved in building out the perfect Raspberry Pi 4 system.
 
-retrokit, romkit, manualkit, and all of the supporting tools represent the work I did
-to build a configuration management system for my personal setup.
+retrokit, romkit, manualkit, powerkit, and all of the supporting tools represent the
+work I did to build a configuration management system for my personal setup.
 
 ## Demo
 
@@ -632,6 +632,32 @@ Cheats are not supported on the following systems / emulators:
 
 Please note that this process has only been tested with an Ubuntu-based
 laptop for flashing the sd card.
+
+### Cases
+
+In addition to installing tools for managing hardware like fan speed within cases,
+retrokit also includes a service called powerkit which manages safe shutdown of
+your system.
+
+There are 2 buttons that powerkit understands: reset and shutdown.  The function
+of reset varies depending on the context in which the system is running:
+
+* If an emulator is running, `reset` will terminate the emulator
+* If EmulationStation is running, `reset` will restart EmulationStation
+* If neither an emulator nor EmulationStation is running, `reset` will restart the OS
+
+On the other hand, `shutdown` will always be interpreted as a request to gracefully
+turn off the system.
+
+Keep in mind that the actual buttons that trigger a `reset` or `shutdown` will vary
+based on case:
+
+| Case    | Function  | How to trigger                              |
+| ------- | --------- | ------------------------------------------- |
+| nespi   | reset     | Press the "Reset" button                    |
+| nespi   | shutdown  | Press the "Power" button                    |
+| argon1  | reset     | Double tap the Power button                 |
+| argon1  | shutdown  | Hold the Power button for 3+ seconds        |
 
 ### Controllers
 
