@@ -27,9 +27,9 @@ class PowerKit():
         # Read user configuration
         self.config = configparser.ConfigParser(strict=False)
         self.config.read_dict({
-            'provider': {'id': None},
-            'shutdown': {'enabled': True, 'hold_time': 2},
-            'reset': {'enabled': True},
+            'provider': {'id': ''},
+            'shutdown': {'enabled': 'true', 'hold_time': '2'},
+            'reset': {'enabled': 'true'},
         })
         self.config.read(config_path)
 
@@ -37,10 +37,10 @@ class PowerKit():
         self.provider = BaseProvider.from_config(self.config)
 
         # Add event handler
-        if self.config['shutdown']['enabled']:
+        if self.config['shutdown']['enabled'] == 'true':
             self.provider.on('shutdown', self.shutdown)
 
-        if self.config['reset']['enabled']:
+        if self.config['reset']['enabled'] == 'true':
             self.provider.on('reset', self.reset)
 
     # Looks up the currently running emulator

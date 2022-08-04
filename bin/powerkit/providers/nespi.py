@@ -20,7 +20,7 @@ class Nespi():
         self.led.on()
         self.power.on()
 
-        power_button = gpiozero.Button(self.POWER_PIN, hold_time=self.config['shutdown']['hold_time'])
+        power_button = gpiozero.Button(self.POWER_PIN, hold_time=float(self.config['shutdown']['hold_time']))
         power_button.when_pressed = self.shutdown
         power_button.when_released = self.__enable_led
 
