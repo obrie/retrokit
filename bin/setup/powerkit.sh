@@ -3,7 +3,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../common.sh"
 
-setup_module_id='hardware/powerkit'
+setup_module_id='powerkit'
 setup_module_desc='Hardware safe shutdown scripts'
 
 install_dir='/opt/retropie/supplementary/powerkit'
