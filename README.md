@@ -747,7 +747,7 @@ You can configure your controllers through `config/settings.json` like so:
 | X               | S           |
 | Y               | A           |
 | Start           | Enter       |
-| Select          | Right Shift |
+| Select          | Space       |
 | LS (L)          | Q           |
 | RS (R)          | W           |
 | LT (L2)         | 1           |
