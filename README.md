@@ -27,7 +27,7 @@ Specifically, it can set up:
 * Game state (import/export)
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * EmulationStation Collections (including lightguns)
-* Sinden lightgun controller configuration
+* Sinden lightgun autoconfiguration
 * Xbox bluetooth support + customizations
 * Autoconfig overrides
 * Bluetooth
