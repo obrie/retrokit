@@ -43,6 +43,9 @@ build() {
   # Create ports
   mkdir -pv "$HOME/RetroPie/roms/ports/+sinden"
   each_path '{bin_dir}/controllers/sinden' find '{}' -name 'Sinden*.sh' -exec cp -v -t "$HOME/RetroPie/roms/ports/+sinden/" '{}' +
+
+  # Add management script
+  file_cp '{bin_dir}/controllers/sinden/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
 }
 
 configure() {
