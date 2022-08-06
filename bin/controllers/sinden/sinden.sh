@@ -3,8 +3,6 @@
 set -ex
 
 install_path=/opt/retropie/supplementary/sinden
-lightgun_config=/opt/retropie/configs/all/retroarch/config/lightgun.cfg
-lightgun_swap_config=/opt/retropie/configs/all/retroarch/config/lightgun-swap.cfg
 
 # Runs an action in the background via a job in order to avoid blocking udev
 function backgrounded() {
