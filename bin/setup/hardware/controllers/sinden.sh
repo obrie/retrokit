@@ -13,6 +13,7 @@ retropie_module_install_dir='/opt/retropie/supplementary/sinden'
 
 depends() {
   sudo apt-get install -y \
+    at \
     mono-complete \
     v4l-utils \
     libsdl1.2-dev \
@@ -45,6 +46,19 @@ build() {
 }
 
 configure() {
+  __configure_autostart
+  __configure_players
+}
+
+__configure_autostart() {
+  # Write the udev rule
+  file_cp '{config_dir}/controllers/sinden/99-sinden-lightgun.rules' /etc/udev/rules.d/99-sinden-lightgun.rules as_sudo=true backup=false
+
+  # Reload the configuration (reboot still required)
+  sudo udevadm control --reload-rules && sudo udevadm trigger
+}
+
+__configure_players() {
   local player_id
   for player_id in $(seq 1 2); do
     local target=$(__retropie_config_path_for_player $player_id)
@@ -85,6 +99,16 @@ __configure_player() {
 }
 
 restore() {
+  __restore_autostart
+  __restore_players
+}
+
+__restore_autostart() {
+  sudo rm -fv /etc/udev/rules.d/99-sinden-lightgun.rules
+  sudo udevadm control --reload
+}
+
+__restore_players() {
   local player_id
   for player_id in $(seq 1 2); do
     restore_file "$(__retropie_config_path_for_player $player_id)" as_sudo=true
