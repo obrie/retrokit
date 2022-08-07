@@ -119,7 +119,7 @@ class PowerKit():
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/powerkit.conf')
+    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/powerkit.cfg')
     args = parser.parse_args()
     PowerKit(**vars(args)).run()
 

@@ -35,7 +35,7 @@ configure() {
 }
 
 __configure_manualkit() {
-  ini_merge '{config_dir}/manualkit/manualkit.conf' '/opt/retropie/configs/all/manualkit.conf' backup=false overwrite=true
+  ini_merge '{config_dir}/manualkit/manualkit.cfg' '/opt/retropie/configs/all/manualkit.cfg' backup=false overwrite=true
 }
 
 # Install autostart script
@@ -94,7 +94,7 @@ __restore_runcommand() {
 }
 
 remove() {
-  rm -rfv "$install_dir" /opt/retropie/configs/all/manualkit.conf
+  rm -rfv "$install_dir" /opt/retropie/configs/all/manualkit.cfg
 
   # Only remove python modules uniquely used by manualkit
   sudo pip3 uninstall -y \

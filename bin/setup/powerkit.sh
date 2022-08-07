@@ -22,7 +22,7 @@ build() {
 }
 
 configure() {
-  CASE_MODEL="$(setting '.hardware.case.model')" ini_merge '{config_dir}/powerkit/powerkit.conf' '/opt/retropie/configs/all/powerkit.conf' backup=false overwrite=true
+  CASE_MODEL="$(setting '.hardware.case.model')" ini_merge '{config_dir}/powerkit/powerkit.cfg' '/opt/retropie/configs/all/powerkit.cfg' backup=false overwrite=true
   sudo systemctl enable --now powerkit.service
 }
 
@@ -34,7 +34,7 @@ restore() {
 remove() {
   rm -rfv \
     "$install_dir" \
-    /opt/retropie/configs/all/powerkit.conf \
+    /opt/retropie/configs/all/powerkit.cfg \
     /etc/systemd/system/powerkit.service
 
   sudo pip3 uninstall -y gpiozero

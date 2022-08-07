@@ -290,7 +290,7 @@ class ManualKit():
 
 def main() -> None:
     parser = ArgumentParser()
-    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.conf')
+    parser.add_argument(dest='config_path', help='INI file containing the configuration', default='/opt/retropie/configs/all/manualkit.cfg')
     parser.add_argument('--pdf', dest='pdf_path', help='PDF file to display')
     parser.add_argument('--supplementary-pdf', dest='supplementary_pdf_path', help='Supplementary PDF')
     parser.add_argument('--profile', dest='profile_name', help='Which toggle profile configuration to use')

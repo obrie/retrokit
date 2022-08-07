@@ -949,7 +949,7 @@ configuration.  However, two additional settings are available to adjust this be
 ### Controls
 
 `manualkit` can be controlled by keyboard or controller.  These settings can be modified in
-`config/manuals/manualkit.conf`.  It's expected that the keyboard / joystick `toggle`
+`config/manualkit/manualkit.cfg`.  It's expected that the keyboard / joystick `toggle`
 buttons will be pressed in combination with retroarch's configured `hotkey` button.  For
 example, the default configuration expects that `select` + `up` will be used to toggle the
 display of the manual on the screen.

@@ -4,7 +4,7 @@ After=rc-local.service
 
 [Service]
 Type=simple
-ExecStart=python3 /opt/retropie/supplementary/powerkit/cli.py /opt/retropie/configs/all/powerkit.conf
+ExecStart=python3 /opt/retropie/supplementary/powerkit/cli.py /opt/retropie/configs/all/powerkit.cfg
 TimeoutSec=0
 
 [Install]
