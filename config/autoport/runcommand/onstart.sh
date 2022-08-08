@@ -266,7 +266,8 @@ __match_players() {
   local prioritized_devices_count=$((priority_index-1))
 
   # Start identifying players!
-  local player_index=1
+  local player_index_start=$(__setting "$profile" "${device_type}_start")
+  local player_index=${player_index_start:-1}
 
   # See if the profile specifies the order in which the prioritized devices should
   # be matched against player numbers.  Typically, it's a 1:1 mapping (i.e. player 1
@@ -275,10 +276,12 @@ __match_players() {
   declare -a device_order
   IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
   for priority_index in "${device_order[@]}"; do
-    local device_index=${prioritized_devices[$priority_index]}
-    if [ -n "$device_index" ]; then
-      prioritized_devices["$device_index/processed"]=1
-      echo "$player_index"$'\t'"$device_index"$'\t'"${devices["$device_index/name"]}"
+    if [ -n "$priority_index" ]; then
+      local device_index=${prioritized_devices[$priority_index]}
+      if [ -n "$device_index" ]; then
+        prioritized_devices["$device_index/processed"]=1
+        echo "$player_index"$'\t'"$device_index"$'\t'"${devices["$device_index/name"]}"
+      fi
     fi
 
     ((player_index+=1))
