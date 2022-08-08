@@ -38,15 +38,24 @@ __restore_redream() {
 }
 
 __restore_ppsspp() {
-  echo 'ppsspp autoport restore not implemented yet'
+  __restore_joystick_config /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
 }
 
 __restore_drastic() {
-  echo 'drastic autoport restore not implemented yet'
+  __restore_joystick_config /opt/retropie/configs/nds/drastic/config/drastic.cfg
 }
 
 __restore_hypseus() {
-  echo 'hypseus autoport restore not implemented yet'
+  __restore_joystick_config /opt/retropie/configs/daphne/hypinput.ini
+}
+
+__restore_joystick_config() {
+  local config_path=$1
+  local config_backup_path="$config_path.autoport"
+
+  if [ -f "$config_backup_path" ]; then
+    mv -v "$config_backup_path" "$config_path"
+  fi
 }
 
 run "${@}"
