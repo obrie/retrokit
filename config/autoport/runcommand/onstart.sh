@@ -6,11 +6,13 @@ run() {
   local system=$1
   local emulator=$2
   local rom_path=$3
+  local rom_filename=${rom_path##*/}
+  local rom_name=${rom_filename%.*}
 
   # Define config paths
   default_config_path='/opt/retropie/configs/all/autoport.cfg'
   system_override_path="/opt/retropie/configs/$system/autoport.cfg"
-  rom_override_path="/opt/retropie/configs/$system/autoport/${rom_path%.*}.cfg"
+  rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
 
   # Make sure we're actually setup for autoconfiguration
   if [ "$(__setting 'autoport' 'enabled')" != 'true' ]; then
@@ -194,9 +196,10 @@ __match_players() {
   # Store device type information
   local devices_count=0
   declare -A devices
-  while read index sysfs product_id name; do
+  while read index sysfs vendor_id product_id name; do
     devices["$index/name"]=$name
     devices["$index/sysfs"]=$sysfs
+    devices["$index/vendor_id"]=$vendor_id
     devices["$index/product_id"]=$product_id
     devices_count=$index
   done < <(__list_devices "$device_type")
@@ -214,8 +217,9 @@ __match_players() {
       # No more devices to process
       break
     fi
-    local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
+    local config_vendor_id=$(__setting "$profile" "${device_type}${config_index}_vendor_id")
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
+    local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
 
     # Start working our way through each connected input
     for device_index in $(seq 1 $devices_count); do
@@ -224,15 +228,21 @@ __match_players() {
         continue
       fi
 
-      # Match sysfs (usb path)
-      local device_sysfs=${devices["$device_index/sysfs"]}
-      if [ -n "$config_usb_path" ] && [[ "$device_sysfs" != *"$config_usb_path"* ]]; then
+      # Match vendor id
+      local device_vendor_id=${devices["$device_index/vendor_id"]}
+      if [ -n "$config_vendor_id" ] && [[ "$device_vendor_id" != "$config_vendor_id" ]]; then
         continue
       fi
 
       # Match product id
       local device_product_id=${devices["$device_index/product_id"]}
       if [ -n "$config_product_id" ] && [[ "$device_product_id" != "$config_product_id" ]]; then
+        continue
+      fi
+
+      # Match sysfs (usb path)
+      local device_sysfs=${devices["$device_index/sysfs"]}
+      if [ -n "$config_usb_path" ] && [[ "$device_sysfs" != *"$config_usb_path"* ]]; then
         continue
       fi
 
@@ -291,7 +301,7 @@ __match_players() {
 # Lists the *ordered* inputs of the given device type which should match the index order
 # that RetroArch uses.
 #
-# Output is: {index}\t{sysfs}\t{product_id}\t{name}
+# Output is: {index}\t{sysfs}\t{vendor_id}\t{product_id}\t{name}
 #
 # The *index* should be used as the port number configuration for specific players.
 __list_devices() {
@@ -302,7 +312,7 @@ __list_devices() {
 # Lists the raw input devices as they appear in /proc/bus/input/devices (I think this lists
 # based on the order in which the input were registered).
 #
-# Output is: {sysfs}\t{device_type}\t{product_id}\t{name}
+# Output is: {sysfs}\t{device_type}\t{vendor_id}\t{product_id}\t{name}
 #
 # Where device_type is one of:
 # * joystick
@@ -311,6 +321,7 @@ __list_raw_devices() {
   local sysfs
   local name
   local device_type
+  local vendor_id
   local product_id
  
   while read key value; do
@@ -334,6 +345,9 @@ __list_raw_devices() {
         ;;
 
       I)
+        vendor_id=${value#*Vendor=}
+        vendor_id=${vendor_id%% *}
+
         product_id=${value#*Product=}
         product_id=${product_id%% *}
         ;;
@@ -345,13 +359,14 @@ __list_raw_devices() {
       *)
 
         if [ -n "$device_type" ]; then
-          echo "$sysfs"$'\t'"$device_type"$'\t'"$product_id"$'\t'"$name"
+          echo "$sysfs"$'\t'"$device_type"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$name"
         fi
 
         # Reset attributes
         sysfs=
         name=
         device_type=
+        vendor_id=
         product_id=
         ;;
     esac
