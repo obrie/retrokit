@@ -166,7 +166,8 @@ __swap_joystick_config() {
   local device_config_path="${config_path%.*}-$device_name.${config_path##*.}"
 
   if [ -z "$device_name" ] || [ ! -f "$device_config_path" ]; then
-    echo "No control overrides found for $device_name"
+    echo "No control overrides found for profile \"$profile\""
+    return
   fi
 
   if [ -f "$config_backup_path" ]; then
