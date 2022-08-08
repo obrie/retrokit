@@ -13,7 +13,7 @@ run() {
   rom_override_path="/opt/retropie/configs/$system/autoport/${rom_path%.*}.cfg"
 
   # Make sure we're actually setup for autoconfiguration
-  if [ "$(_setting 'autoport' 'enabled')" != 'true' ]; then
+  if [ "$(__setting 'autoport' 'enabled')" != 'true' ]; then
     echo 'autoport disabled'
     return
   fi
@@ -70,7 +70,7 @@ __find_setting() {
   fi
 
   # Find the associated key within that section
-  local value=$(echo "$section" | sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\" \t]*\)\"*.*/\1/p" | tail -n 1)
+  local value=$(echo "$section" | sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\"\r]*\)\"*.*/\1/p" | tail -n 1)
   if [ -n "$value" ]; then
     echo "$value"
   else
@@ -108,8 +108,13 @@ __setup_libretro_input() {
   local profile=$1
   local device_type=$2
   local retroarch_device_type=$3
+  local retroarch_config_path=/dev/shm/retroarch.cfg
+
+  # Remove any existing runtime overrides
+  sed -i "/^input_player.*$retroarch_device_type/d" "$retroarch_config_path"
 
   while IFS=$'\t' read player_index device_index device_name; do
+    echo "Player $player_index: $device_name (index $device_index)"
     echo "input_player${player_index}_${retroarch_device_type}_index = $device_index" >> "$retroarch_config_path"
   done < <(__match_players "$profile" "$device_type")
 }
@@ -251,7 +256,7 @@ __match_players() {
   # player 2 to be priority 1.
   declare -a device_order
   IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
-  for priority_index in "${!device_order[@]}"; do
+  for priority_index in "${device_order[@]}"; do
     local device_index=${prioritized_devices[$priority_index]}
     if [ -n "$device_index" ]; then
       prioritized_devices["$device_index/processed"]=1
@@ -345,4 +350,4 @@ __list_raw_devices() {
   done < <(cat /proc/bus/input/devices | sed s'/^\([A-Z]\): /\1\t/g')
 }
 
-run "${@}" </dev/null &>/dev/null
+run "${@}"
