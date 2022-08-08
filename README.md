@@ -9,29 +9,30 @@ Specifically, it can set up:
 * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * VNC
-* Display settings
 * Splash screens (async loading process, reduces load time by 2s)
 * Scraping (via skyscraper) with automated fallback queries
-* Themes
 * Retroarch configuration
 * EmulationStation configuration
 * Overlays / Bezels (with lightgun-compatible auto-generation)
-* Cheats (RetroArch, MAME, NDS, etc.)
-* HiScores
+* Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
+* HiScores for MAME
 * Multi-Tap devices
-* Launch images
-* Emulator installation
+* Port selection based on input name
+* ROM Playlist (m3u) auto-generation for multi-disc games
 * In-game manuals
 * System controller reference guides
 * Printable gamelists
-* Game state (import/export)
-* ROM Playlist (m3u) auto-generation for multi-disc games
+* Launch images
+* Emulator installation
 * EmulationStation Collections (including lightguns)
 * Sinden lightgun autoconfiguration
 * Xbox bluetooth support + customizations
+* Game state (import/export)
 * Autoconfig overrides
 * Bluetooth
 * SSH + AutoSSH for remote management
+* Themes
+* Display settings
 * Wifi
 * Overclocking
 * Localization
@@ -102,6 +103,7 @@ There are also system-specific features, including:
 * Automatic selection of the best emulator per-game for Arcade, Atari Jaguar, and N64
 * Automatic filtering of runnable games for 3DO, PSP, Sega Saturn, and more
 * Automatic multi-tap support for NES, SNES, MegaDrive, and Playstation
+* Automatic per-game port selection based on predetermined input types
 * Optimized settings per-game for Arcade, Atari Jaguar, C64, N64, and more
 * Conversion of ISO-based ROMs to CHD for Dreamcast, PCEngine, PSX, and SegaCD
 * Conversion of ISO-based ROMS to CSO for PSP
@@ -659,7 +661,7 @@ based on case:
 | argon1  | reset     | Double tap the Power button                 |
 | argon1  | shutdown  | Hold the Power button for 3+ seconds        |
 
-### Controllers
+## Controllers
 
 To identify your controller names and ids, there's unfortunately no easy way out
 of the box that I'm aware of.  However, you can follow the instructions here: https://askubuntu.com/a/368711
@@ -759,6 +761,39 @@ References:
 
 * [Key Bindings](https://docs.libretro.com/guides/input-and-controls/#default-retroarch-keyboard-bindings)
 * [Hotkeys](https://retropie.org.uk/docs/Controller-Configuration/#hotkey)
+
+### Automatic port selection
+
+In some cases, you may want to prioritize the order in which specific controllers are chosen
+as Player 1, Player 2, etc.  For example, you may have:
+
+* Controllers for specific systems
+* Lightgun controllers for lightgun games
+* Trackball inputs for trackball games
+* etc.
+
+To support this, you can use a feature built into retrokit called `autoport`.  Autoport uses
+pre-configured profiles to determine the priority order of joystick and mouse devices when
+starting up a game.  You will find these configurations located here:
+
+| Scope  | retrokit path                                     | RetroPie path                                            |
+| ------ | ------------------------------------------------- | --------------------------------------------------------- |
+| Global | config/autoport/autoport.cfg                      | /opt/retropie/config/systems/all/autoport.cfg             |
+| System | config/systems/{system}/autoport.cfg              | /opt/retropie/config/systems/{system}/autoport.cfg        |
+| Game   | config/systems/{system}/autoport/{name|title}.cfg | /opt/retropie/config/systems/{system}/autoport/{name}.cfg |
+
+See `config/autoport/autoport.cfg` for the examples and documentation on how to use this.
+
+These configurations will be processed during the runcommand `onstart` hook.  It will prioritize
+each of the above configurations like so (highest to lowest):
+
+* Game
+* System
+* Global
+
+When looping through the set of devices, `autoport` will attempt to match as many inputs
+of a particular name before it moves onto the next input name.  If an input can't be found,
+then it will move onto the next input.
 
 ## Game Metadata
 
@@ -1211,6 +1246,7 @@ retrokit what it is.  That includes:
 * [Wikimedia](https://commons.wikimedia.org/) for conroller images
 * [louiehummv](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue) for axis calibration fixes
 * [crcerror](https://github.com/crcerror/ES-generic-shutdown) for alternate NesPi safe shutdown design
+* [meleu](https://github.com/meleu/RetroPie-joystick-selection) for joystick selection reference implementation
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums

@@ -182,6 +182,7 @@
       "manualkit",
       "emulationstation-settings",
       "romkit",
+      "autoport",
       "tools-mame",
       "tools-psp",
 
@@ -197,6 +198,7 @@
       "hardware/controllers/sinden",
       "hardware/controllers/calibrate",
       "system-retroarch",
+      "system-inputs",
       "system-mess",
       "system-launchimages",
       "system-overlays",
@@ -205,6 +207,7 @@
       "system-roms-download",
       "system-roms-emulators",
       "system-roms-retroarch",
+      "system-roms-inputs",
       "system-roms-overlays",
       "system-roms-cheats",
       "system-roms-scrape",
