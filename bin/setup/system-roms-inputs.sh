@@ -40,9 +40,9 @@ configure() {
     if [ -n "$override_file" ]; then
       ini_merge "$override_file" "$target_path" backup=false
     elif [ "${lightgun_titles["$group_title"]}" ]; then
-      echo 'profile = lightgun' > "$target_path"
+      echo 'profile = "lightgun"' > "$target_path"
     elif [ "${trackball_titles["$group_title"]}" ]; then
-      echo 'profile = trackball' > "$target_path"
+      echo 'profile = "trackball"' > "$target_path"
     else
       target_path_created=false
     fi
