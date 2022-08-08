@@ -18,7 +18,10 @@ build() {
 
 configure() {
   env_merge '{config_dir}/autossh/default.conf' '/etc/autossh/default.conf' as_sudo=true backup=false
-  sudo systemctl enable --now autossh.service
+  sudo systemctl enable autossh.service
+
+  # Restart
+  sudo systemctl restart autossh
 }
 
 restore() {
