@@ -220,6 +220,7 @@ __match_players() {
     local config_vendor_id=$(__setting "$profile" "${device_type}${config_index}_vendor_id")
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
     local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
+    local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
 
     # Start working our way through each connected input
     for device_index in $(seq 1 $devices_count); do
@@ -243,6 +244,11 @@ __match_players() {
       # Match sysfs (usb path)
       local device_sysfs=${devices["$device_index/sysfs"]}
       if [ -n "$config_usb_path" ] && [[ "$device_sysfs" != *"$config_usb_path"* ]]; then
+        continue
+      fi
+
+      # Match related usb path
+      if [ -n "$config_related_usb_path" ] && ! find "/sys$device_sysfs/../../../.." | grep -Eq "$config_related_usb_path"; then
         continue
       fi
 
