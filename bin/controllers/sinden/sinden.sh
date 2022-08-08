@@ -5,22 +5,22 @@ set -ex
 install_path=/opt/retropie/supplementary/sinden
 
 # Runs an action in the background via a job in order to avoid blocking udev
-function backgrounded() {
+backgrounded() {
   echo "$install_path/sinden.sh" "${@}" | at now
 }
 
 # Adds a Sinden controller with the given video devpath / devname
-function add_device() {
+add_device() {
   __modify_device start "${@}"
 }
 
 # Removes a Sinden controller with the given video devpath / devname
-function remove_device() {
+remove_device() {
   __modify_device stop "${@}"
 }
 
 # Modifies a Sinden controller state by running the given action
-function __modify_device() {
+__modify_device() {
   local action=$1
   local video_devpath=$2
   local video_devname=$3
@@ -42,7 +42,7 @@ function __modify_device() {
 }
 
 # Looks up which video device we're dealing with (index 0 or 1)
-function __lookup_video_index() {
+__lookup_video_index() {
   if udevadm info --query=all --name="$video_devname" | grep -q index0; then
     echo 0
   else
@@ -51,7 +51,7 @@ function __lookup_video_index() {
 }
 
 # Looks up the Sinden serial port for the given video device
-function __lookup_serial_port() {
+__lookup_serial_port() {
   local video_devpath=$1
 
   # Get the root USB devpath
@@ -65,7 +65,7 @@ function __lookup_serial_port() {
 }
 
 # Looks up which player number is associated with the given TTY devname
-function __lookup_player_id() {
+__lookup_player_id() {
   local serial_port=$1
 
   if grep -q "$serial_port" "$install_path/Player1/LightgunMono.exe.config"; then
@@ -82,19 +82,19 @@ start_all() {
 }
 
 # Starts the given player number in the background
-function start() {
+start() {
   local player_id=$1
   __run $player_id true
 }
 
 # Stops all players
-function stop_all() {
+stop_all() {
   stop 1
   stop 2
 }
 
 # Stops the given player number
-function stop() {
+stop() {
   local player_id=$1
   local bin_name=$(__player_bin_name "$player_id")
   local lockfile="/tmp/$bin_name.lock"
@@ -110,21 +110,29 @@ function stop() {
 }
 
 # Stops / starts the given player number
-function restart() {
+restart() {
   local player_id=$1
 
   stop $player_id
   start $player_id
 }
 
+# Checks whether the sinden service is running for the given player id
+__is_running() {
+  local player_id=$1
+  local bin_name=$(__player_bin_name "$player_id")
+
+  pgrep -f "$bin_name" >/dev/null
+}
+
 # Runs the calibration test for the given player number
-function calibrate() {
+calibrate() {
   local player_id=$1
   __run $player_id false sdl 30
 }
 
 # Runs the Sinden lightgun software for the given player number
-function __run() {
+__run() {
   local player_id=$1
   local background=$2
 
@@ -138,7 +146,7 @@ function __run() {
   sudo $mono_bin $(__player_bin_name "$player_id") ${@:3}
 }
 
-function __player_bin_name() {
+__player_bin_name() {
   local player_id=$1
   if [ "$player_id" == '1' ]; then
     echo LightgunMono.exe
@@ -148,18 +156,22 @@ function __player_bin_name() {
 }
 
 # Modifies the configuration on all players
-function edit_all() {
+edit_all() {
   edit 1 "${@}"
   edit 2 "${@}"
 }
 
-function edit() {
+edit() {
   local player_id=$1
   local key=$2
   local value=$3
 
   local config_path="$install_play/Player$player_id/$(__player_bin_name "$player_id").config"
   sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$key\"]/@value" --value "$value" "$config_path"
+
+  if __is_running "$player_id"; then
+    restart "$player_id"
+  fi
 }
 
 "${@}"
