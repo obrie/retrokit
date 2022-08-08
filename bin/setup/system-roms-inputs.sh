@@ -11,6 +11,8 @@ configure() {
   __load_lightgun_titles
   __load_trackball_titles
 
+  mkdir -p "$retropie_system_config_dir/autoport"
+
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
   declare -A installed_files
@@ -28,6 +30,10 @@ configure() {
     local override_file=""
     local filename
     for filename in "$rom_name" "$title" "$parent_name" "$parent_title"; do
+      if [ -z "$filename" ]; then
+        continue
+      fi
+
       override_file=${override_files["$filename"]}
       if [ -n "$override_file" ]; then
         break
@@ -41,8 +47,10 @@ configure() {
       ini_merge "$override_file" "$target_path" backup=false
     elif [ "${lightgun_titles["$group_title"]}" ]; then
       echo 'profile = "lightgun"' > "$target_path"
+      echo "Setting profile to \"lightgun\" in $target_path"
     elif [ "${trackball_titles["$group_title"]}" ]; then
       echo 'profile = "trackball"' > "$target_path"
+      echo "Setting profile to \"trackball\" in $target_path"
     else
       target_path_created=false
     fi
