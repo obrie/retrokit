@@ -390,7 +390,7 @@ __list_joypad_files() {
 __get_ini_config_value() {
   local file=$1
   local key=$2
-  local value=$(sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\" \t]*\)\"*.*/\1/p" "$file" | tail -1)
+  local value=$(sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\"\r]*\)\"*.*/\1/p" "$file" | tail -1)
 
   if [ -n "$value" ]; then
     echo "$value"
