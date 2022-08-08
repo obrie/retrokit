@@ -132,7 +132,7 @@ __setup_redream() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_ppsspp() {
   local profile=$1
-  __swap_joystick_config "$profile" /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  __swap_joystick_config "$profile" joystick /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
 }
 
 # Drastic:
@@ -140,7 +140,7 @@ __setup_ppsspp() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_drastic() {
   local profile=$1
-  __swap_joystick_config "$profile" /opt/retropie/configs/nds/drastic/config/drastic.cfg
+  __swap_joystick_config "$profile" joystick /opt/retropie/configs/nds/drastic/config/drastic.cfg
 }
 
 # Hypseus-Singe:
@@ -148,7 +148,7 @@ __setup_drastic() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_hypseus() {
   local profile=$1
-  __swap_joystick_config "$profile" /opt/retropie/configs/daphne/hypinput.ini
+  __swap_joystick_config "$profile" joystick /opt/retropie/configs/daphne/hypinput.ini
 }
 
 # Swaps the primary emulator input configuration with a device-specific configuration
@@ -159,23 +159,30 @@ __setup_hypseus() {
 # * Create a backup to /opt/retropie/configs/{system}/inputs.ini.autoport
 # * Override the primary config path with /opt/retropie/configs/{system}/inputs-{device_name}.ini
 __swap_joystick_config() {
-  local config_path=$1
+  local profile=$1
+  local device_type=$2
+  local config_path=$3
   local config_backup_path="$config_path.autoport"
 
   local device_name=$(__match_players "$profile" "$device_type" | head -n 1 | cut -d$'\t' -f 3)
   local device_config_path="${config_path%.*}-$device_name.${config_path##*.}"
 
-  if [ -z "$device_name" ] || [ ! -f "$device_config_path" ]; then
+  # Always restore the original configuration file if one was found
+  if [ -f "$config_backup_path" ]; then
+    mv -v "$config_backup_path" "$config_path"
+  fi
+
+  if [ -z "$device_name" ]; then
     echo "No control overrides found for profile \"$profile\""
     return
   fi
 
-  if [ -f "$config_backup_path" ]; then
-    mv -v "$config_backup_path" "$config_path"
-  else
-    cp -v "$config_path" "$config_backup_path"
+  if [ ! -f "$device_config_path" ]; then
+    echo "No control overrides found at path: $device_config_path"
+    return
   fi
 
+  cp -v "$config_path" "$config_backup_path"
   cp -v "$device_config_path" "$config_path"
 }
 
