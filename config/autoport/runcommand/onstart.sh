@@ -221,6 +221,10 @@ __match_players() {
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
     local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
     local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
+    local config_limit=$(__setting "$profile" "${device_type}${config_index}_limit")
+
+    # Track how many matches we've found for this config in case there's a limit
+    local matched_count=0
 
     # Start working our way through each connected input
     for device_index in $(seq 1 $devices_count); do
@@ -260,10 +264,16 @@ __match_players() {
 
       # Found a match!
       devices["$device_index/matched"]=1
+      ((matched_count+=1))
 
       # Add it to the prioritized list
       prioritized_devices[$priority_index]=$device_index
       ((priority_index+=1))
+
+      # Stop going through the inputs if we've hit our limit
+      if [ -n "$config_limit" ] && [ $matched_count -ge $config_limit ]; then
+        break
+      fi
     done
 
     # Move onto the next matcher
