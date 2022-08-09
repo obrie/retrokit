@@ -248,7 +248,7 @@ __match_players() {
       fi
 
       # Match related usb path
-      if [ -n "$config_related_usb_path" ] && ! find "/sys$device_sysfs/../../../.." | grep -Eq "$config_related_usb_path"; then
+      if [ -n "$config_related_usb_path" ] && { [[ "$device_sysfs" != *usb* ]] || ! find "/sys$device_sysfs/../../../.." | grep -Eq "$config_related_usb_path"; }; then
         continue
       fi
 
@@ -315,7 +315,7 @@ __match_players() {
 # The *index* should be used as the port number configuration for specific players.
 __list_devices() {
   local device_type=$1
-  __list_raw_devices | sort | grep -F $'\t'"$device_type" | cut -d$'\t' -f 1,3- | nl -d$'\t' -w1
+  __list_raw_devices | sort | grep -F $'\t'"$device_type" | cut -d$'\t' -f 1,3- | nl -d$'\t' -v0 -w1
 }
 
 # Lists the raw input devices as they appear in /proc/bus/input/devices (I think this lists
