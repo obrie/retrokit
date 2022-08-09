@@ -285,7 +285,7 @@ __match_players() {
     if [ -n "$priority_index" ]; then
       local device_index=${prioritized_devices[$priority_index]}
       if [ -n "$device_index" ]; then
-        prioritized_devices["$device_index/processed"]=1
+        prioritized_devices["$priority_index/processed"]=1
         echo "$player_index"$'\t'"$device_index"$'\t'"${devices["$device_index/name"]}"
       fi
     fi
