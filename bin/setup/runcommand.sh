@@ -10,6 +10,7 @@ runcommand_apps_path='/opt/retropie/configs/all/runcommand.d'
 
 build() {
   file_cp '{bin_dir}/runcommand/onstart.sh' /opt/retropie/configs/all/runcommand-onstart.sh backup=false envsubst=false
+  file_cp '{bin_dir}/runcommand/onlaunch.sh' /opt/retropie/configs/all/runcommand-onlaunch.sh backup=false envsubst=false
   file_cp '{bin_dir}/runcommand/onend.sh' /opt/retropie/configs/all/runcommand-onend.sh backup=false envsubst=false
 
   # Copy enabled runcommand apps
@@ -34,6 +35,7 @@ restore() {
 remove() {
   rm -frv \
     /opt/retropie/configs/all/runcommand-onstart.sh \
+    /opt/retropie/configs/all/runcommand-onlaunch.sh \
     /opt/retropie/configs/all/runcommand-onend.sh \
     /opt/retropie/configs/all/runcommand.d
 }

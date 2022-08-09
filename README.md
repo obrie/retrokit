@@ -784,7 +784,7 @@ starting up a game.  You will find these configurations located here:
 
 See `config/autoport/autoport.cfg` for the examples and documentation on how to use this.
 
-These configurations will be processed during the runcommand `onstart` hook.  It will prioritize
+These configurations will be processed during the runcommand `onlaunch` hook.  It will prioritize
 each of the above configurations like so (highest to lowest):
 
 * Game
