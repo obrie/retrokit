@@ -14,6 +14,7 @@ configure() {
   restore
 
   __load_multitap_titles
+  __load_lightgun_titles
   __configure_retroarch_configs
   __configure_retroarch_remappings
   __configure_retroarch_core_options
@@ -28,6 +29,15 @@ __load_multitap_titles() {
   done < <(each_path '{config_dir}/emulationstation/collections/custom-Multitap.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
+# Get the list of games which support lightgun devices
+__load_lightgun_titles() {
+  declare -Ag lightgun_titles
+
+  while read -r rom_title; do
+    lightgun_titles["$rom_title"]=1
+  done < <(each_path '{config_dir}/emulationstation/collections/custom-Lightgun.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
+}
+
 # Game-specific retroarch configuration overrides
 __configure_retroarch_configs() {
   local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
@@ -36,6 +46,7 @@ __configure_retroarch_configs() {
   fi
 
   local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-multitap.cfg' && echo 'true')
+  local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-lightgun.cfg' && echo 'true')
 
   # Merge in rom-specific overrides
   while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
@@ -46,6 +57,11 @@ __configure_retroarch_configs() {
         # Copy over multitap overrides
         if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
           ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
+        fi
+
+        # Copy over lightgun overrides
+        if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+          ini_merge '{system_config_dir}/retroarch-lightgun.cfg' "$target_path" backup=false
         fi
 
         if [ -n "$override_file" ]; then
@@ -77,9 +93,10 @@ __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
   local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
+  local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-lightgun.cfg' && echo 'true')
 
   while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
-    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ ! "${multitap_titles["$group_title"]}" ]; }; then
+    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ ! "${multitap_titles["$group_title"]}" ]; } && { [ "$has_lightgun_config" != 'true' ] || [ ! "${lightgun_titles["$group_title"]}" ]; }; then
       # No overrides to define at the rom-level
       continue
     fi
@@ -97,6 +114,11 @@ __configure_retroarch_core_options() {
     # Copy over multitap overrides
     if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
       ini_merge '{system_config_dir}/retroarch-core-options-multitap.cfg' "$target_path" backup=false
+    fi
+
+    # Copy over lightgun overrides
+    if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+      ini_merge '{system_config_dir}/retroarch-core-options-lightgun.cfg' "$target_path" backup=false
     fi
 
     # Merge in game-specific overrides
