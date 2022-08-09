@@ -166,7 +166,7 @@ edit() {
   local key=$2
   local value=$3
 
-  local config_path="$install_play/Player$player_id/$(__player_bin_name "$player_id").config"
+  local config_path="$install_path/Player$player_id/$(__player_bin_name "$player_id").config"
   sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$key\"]/@value" --value "$value" "$config_path"
 
   if __is_running "$player_id"; then
