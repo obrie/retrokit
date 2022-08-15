@@ -392,6 +392,9 @@ __match_players() {
   done
   local prioritized_devices_count=$((priority_index-1))
 
+  # Overall player matching limit
+  local player_limit=${_setting "$profile" "${device_type}_count"}
+
   # Start identifying players!
   local player_index_start=$(__setting "$profile" "${device_type}_start")
   local player_index=${player_index_start:-1}
@@ -413,6 +416,11 @@ __match_players() {
 
     player_indexes+=($player_index)
     ((player_index+=1))
+
+    # Stop going through the players if we've hit our limit
+    if [ -n "$player_limit" ] && [ ${#player_indexes[@]} -ge $player_limit ]; then
+      return
+    fi
   done
 
   # Once we've gone through the specific ordered devices, we process the rest here,
@@ -428,6 +436,11 @@ __match_players() {
 
     player_indexes+=($player_index)
     ((player_index+=1))
+
+    # Stop going through the players if we've hit our limit
+    if [ -n "$player_limit" ] && [ ${#player_indexes[@]} -ge $player_limit ]; then
+      return
+    fi
   done
 }
 
