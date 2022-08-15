@@ -157,8 +157,12 @@ __setup_redream() {
     local device_type=${players["$player_index/device_type"]:-controller}
     local device_guid=${devices["$device_index/guid"]}
 
-    # Indexes are offset by 3
-    ((device_index+=3))
+    # Indexes are offset by 4
+    # * 0 = auto
+    # * 1 = disabled
+    # * 2 = keyboard
+    # * 3 = unknown
+    ((device_index+=4))
 
     # Players start at offset 0
     ((player_index-=1))
@@ -296,9 +300,14 @@ __match_players() {
     devices["$index/vendor_id"]=$vendor_id
     devices["$index/product_id"]=$product_id
     devices["$index/version"]=$version
-    devices["$index/guid"]="${bus:2:2}${bus:0:2}0000${vendor_id:2:2}${vendor_id:0:2}0000${product_id:2:2}${product_id:0:2}0000${version:2:2}${version:0:2}"
-    devices_count=$index
+    devices["$index/guid"]="${bus:2:2}${bus:0:2}0000${vendor_id:2:2}${vendor_id:0:2}0000${product_id:2:2}${product_id:0:2}0000${version:2:2}${version:0:2}0000"
+    devices_count=$((index+1))
   done < <(__list_devices "$device_type")
+
+  if [ $devices_count -eq 0 ]; then
+    # No devices found
+    return
+  fi
 
   # Track which player is mapped to which port
   declare -A prioritized_devices
@@ -324,7 +333,7 @@ __match_players() {
     local matched_count=0
 
     # Start working our way through each connected input
-    for device_index in $(seq 1 $devices_count); do
+    for device_index in $(seq 0 $((devices_count-1))); do
       if [ "${devices["$device_index/matched"]}" ]; then
         # Already matched this device
         continue
@@ -414,6 +423,8 @@ __match_players() {
 
     local device_index=${prioritized_devices[$priority_index]}
     players["$player_index/device_index"]=$device_index
+
+    player_indexes+=($player_index)
     ((player_index+=1))
   done
 }
