@@ -135,7 +135,42 @@ __setup_libretro_input() {
 # Rewrites the port{index} settings in redream.cfg based on the highest
 # priority matches.
 __setup_redream() {
-  echo 'redream autoport setup not implemented yet'
+  local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
+  local config_backup_path="$config_path.autoport"
+
+  # Restore config backup
+  if [ -f "$config_backup_path" ]; then
+    mv -v "$config_backup_path" "$config_path"
+  fi
+
+  __match_players "$profile" joystick
+  if [ ${#player_indexes[@]} -eq 0 ]; then
+    # No matches found, use defaults
+    return
+  fi
+
+  # Create config backup
+  cp -v "$config_path" "$config_backup_path"
+
+  for player_index in "${player_indexes[@]}"; do
+    local device_index=${players["$player_index/device_index"]}
+    local device_type=${players["$player_index/device_type"]:-controller}
+    local device_guid=${devices["$device_index/guid"]}
+
+    # Indexes are offset by 3
+    ((device_index+=3))
+
+    # Players start at offset 0
+    ((player_index-=1))
+
+    echo "Player $player_index: index $device_index"
+
+    # Remove existing setting
+    sed -i "/^port${player_index}=/d" "$config_path"
+
+    # Add new setting
+    echo "port${player_index}=dev:${device_index},desc:${device_guid},type:${device_type}" >> "$config_path"
+  done
 }
 
 # PPSSPP:
@@ -254,11 +289,14 @@ __match_players() {
   # Store device type information
   local devices_count=0
   declare -Ag devices
-  while read index sysfs vendor_id product_id name; do
+  while read index sysfs bus vendor_id product_id version name; do
     devices["$index/name"]=$name
     devices["$index/sysfs"]=$sysfs
+    devices["$index/bus"]=$bus
     devices["$index/vendor_id"]=$vendor_id
     devices["$index/product_id"]=$product_id
+    devices["$index/version"]=$version
+    devices["$index/guid"]="${bus:2:2}${bus:0:2}0000${vendor_id:2:2}${vendor_id:0:2}0000${product_id:2:2}${product_id:0:2}0000${version:2:2}${version:0:2}"
     devices_count=$index
   done < <(__list_devices "$device_type")
 
@@ -383,7 +421,7 @@ __match_players() {
 # Lists the *ordered* inputs of the given device type which should match the index order
 # that RetroArch uses.
 #
-# Output is: {index}\t{sysfs}\t{vendor_id}\t{product_id}\t{name}
+# Output is: {index}\t{sysfs}\t{bus}\t{vendor_id}\t{product_id}\t{version}\t{name}
 #
 # The *index* should be used as the port number configuration for specific players.
 __list_devices() {
@@ -394,7 +432,7 @@ __list_devices() {
 # Lists the raw input devices as they appear in /proc/bus/input/devices (I think this lists
 # based on the order in which the input were registered).
 #
-# Output is: {sysfs}\t{device_type}\t{vendor_id}\t{product_id}\t{name}
+# Output is: {sysfs}\t{device_type}\t{bus}\t{vendor_id}\t{product_id}\t{version}\t{name}
 #
 # Where device_type is one of:
 # * joystick
@@ -403,8 +441,10 @@ __list_raw_devices() {
   local sysfs
   local name
   local device_type
+  local bus
   local vendor_id
   local product_id
+  local version
  
   while read key value; do
     case $key in
@@ -427,11 +467,17 @@ __list_raw_devices() {
         ;;
 
       I)
+        bus=${value#*Bus=}
+        bus=${bus%% *}
+
         vendor_id=${value#*Vendor=}
         vendor_id=${vendor_id%% *}
 
         product_id=${value#*Product=}
         product_id=${product_id%% *}
+
+        version=${value#*Version=}
+        version=${version%% *}
         ;;
 
       N|P|U)
@@ -441,15 +487,17 @@ __list_raw_devices() {
       *)
 
         if [ -n "$device_type" ]; then
-          echo "$sysfs"$'\t'"$device_type"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$name"
+          echo "$sysfs"$'\t'"$device_type"$'\t'"$bus"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$version"$'\t'"$name"
         fi
 
         # Reset attributes
         sysfs=
         name=
         device_type=
+        bus=
         vendor_id=
         product_id=
+        version=
         ;;
     esac
   done < <(cat /proc/bus/input/devices | sed s'/^\([A-Z]\): /\1\t/g')

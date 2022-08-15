@@ -34,7 +34,7 @@ __restore_libretro() {
 }
 
 __restore_redream() {
-  echo 'redream autoport restore not implemented yet'
+  __restore_joystick_config /opt/retropie/configs/dreamcast/redream/redream.cfg
 }
 
 __restore_ppsspp() {
