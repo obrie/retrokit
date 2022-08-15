@@ -267,20 +267,20 @@ __prepare_config_overwrite() {
 
   # Always restore the original configuration file if one was found
   if [ -f "$config_backup_path" ]; then
-    mv -v "$config_backup_path" "$config_path"
+    mv "$config_backup_path" "$config_path"
   fi
 
   if [ -z "$device_name" ]; then
-    echo "No control overrides found for profile \"$profile\""
+    >&2 echo "No control overrides found for profile \"$profile\""
     return 1
   fi
 
   if [ ! -f "$device_config_path" ]; then
-    echo "No control overrides found at path: $device_config_path"
+    >&2 echo "No control overrides found at path: $device_config_path"
     return 1
   fi
 
-  cp -v "$config_path" "$config_backup_path"
+  cp "$config_path" "$config_backup_path"
 
   echo "$device_config_path"
 }
@@ -290,9 +290,13 @@ __match_players() {
   local profile=$1
   local device_type=$2
 
+  # Shared variables
+  declare -Ag devices
+  declare -Ag players
+  declare -ag player_indexes
+
   # Store device type information
   local devices_count=0
-  declare -Ag devices
   while read index sysfs bus vendor_id product_id version name; do
     devices["$index/name"]=$name
     devices["$index/sysfs"]=$sysfs
@@ -389,8 +393,6 @@ __match_players() {
   local prioritized_devices_count=$((priority_index-1))
 
   # Start identifying players!
-  declare -Ag players
-  declare -ag player_indexes
   local player_index_start=$(__setting "$profile" "${device_type}_start")
   local player_index=${player_index_start:-1}
 
