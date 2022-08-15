@@ -130,7 +130,7 @@ _EOF_
     fi
 
     # Device-specific config
-    echo '' > "$device_mapping_file"
+    truncate -s0 "$device_mapping_file"
 }
 
 function map_hypseus_joystick() {

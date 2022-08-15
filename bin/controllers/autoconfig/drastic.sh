@@ -40,7 +40,7 @@ function onstart_drastic_joystick() {
     _onstart_drastic 'b'
 
     # Define initial device-specific config
-    echo '' > /tmp/drastic-device.cfg
+    truncate -s0 /tmp/drastic-device.cfg
 }
 
 function onstart_drastic_keyboard() {

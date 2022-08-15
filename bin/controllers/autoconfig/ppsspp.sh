@@ -55,7 +55,7 @@ function onstart_ppsspp_joystick() {
     ppsspp_sdl_button_map['rightstick']='107' # NKCODE_BUTTON_THUMBR
 
     # Define initial device-specific config
-    echo '' > /tmp/ppsspp-device-controls.ini
+    truncate -s0 /tmp/ppsspp-device-controls.ini
 }
 
 function onstart_ppsspp_keyboard() {
