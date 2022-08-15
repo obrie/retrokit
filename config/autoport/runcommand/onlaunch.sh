@@ -213,7 +213,7 @@ __setup_drastic() {
   fi
 
   # Remove joystick configurations
-  sed -i 's/controls_b//g' "$config_file"
+  sed -i '/controls_b/d' "$config_file"
 
   # Merge in those from the device
   cat "$device_config_file" | tee -a "$config_file" >/dev/null
