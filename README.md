@@ -17,7 +17,7 @@ Specifically, it can set up:
 * Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
 * HiScores for MAME
 * Multi-Tap devices
-* Port selection based on input name
+* Port selection based on input name (libretro cores, drastic, ppsspp, redream, and hypseus)
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * In-game manuals
 * System controller reference guides
@@ -794,6 +794,14 @@ each of the above configurations like so (highest to lowest):
 When looping through the set of devices, `autoport` will attempt to match as many inputs
 of a particular name before it moves onto the next input name.  If an input can't be found,
 then it will move onto the next input.
+
+This feature is supported on the following emulators:
+
+* libretro cores
+* drastic
+* hypseus
+* ppsspp
+* redream
 
 ## Game Metadata
 
