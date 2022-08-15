@@ -16,6 +16,7 @@ function check_hypseus() {
 
 function onstart_hypseus_joystick() {
     local -r mapping_file="$configdir/daphne/hypinput.ini"
+    local -r device_mapping_file="$configdir/daphne/hypinput-$DEVICE_NAME.ini"
     local -r force_joy_file="$configdir/daphne/hypinput-forcejoy.ini"
     local -r force_key_file="$configdir/daphne/hypinput-forcekey.ini"
 
@@ -127,6 +128,9 @@ _EOF_
 END
 _EOF_
     fi
+
+    # Device-specific config
+    echo '' > "$device_mapping_file"
 }
 
 function map_hypseus_joystick() {
@@ -136,6 +140,7 @@ function map_hypseus_joystick() {
     local input_value="$4"
 
     local -r mapping_file="$configdir/daphne/hypinput.ini"
+    local -r device_mapping_file="$configdir/daphne/hypinput-$DEVICE_NAME.ini"
     local -r force_joy_file="$configdir/daphne/hypinput-forcejoy.ini"
     local -r force_key_file="$configdir/daphne/hypinput-forcekey.ini"
 
@@ -262,7 +267,9 @@ function map_hypseus_joystick() {
     # Write new button config
     if [[ -n "$axis" ]]; then
         sed -i "s/^$key = .* .* .*\$/$key = $key1 $key2 $button $axis/g" "$mapping_file"
+        echo "$key = $button $axis" >> "$device_mapping_file"
     else
         sed -i "s/^$key = .* .* .*\$/$key = $key1 $key2 $button/g" "$mapping_file"
+        echo "$key = $button" >> "$device_mapping_file"
     fi
 }

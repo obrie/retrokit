@@ -115,10 +115,19 @@ __setup_libretro_input() {
   # Remove any existing runtime overrides
   sed -i "/^input_player.*$retroarch_device_type/d" "$retroarch_config_path"
 
-  while IFS=$'\t' read player_index device_index device_name; do
-    echo "Player $player_index: $device_name (index $device_index)"
+  __match_players "$profile" "$device_type"
+
+  for player_index in "${player_indexes[@]}"; do
+    local device_index=${players["$player_index/device_index"]}
+    local device_type=${players["$player_index/device_type"]}
+
+    echo "Player $player_index: index $device_index"
     echo "input_player${player_index}_${retroarch_device_type}_index = $device_index" >> "$retroarch_config_path"
-  done < <(__match_players "$profile" "$device_type")
+
+    if [ -n "$device_type" ]; then
+      echo "input_libretro_device_p${player_index} = $device_type" >> "$retroarch_config_path"
+    fi
+  done
 }
 
 # Redream:
@@ -134,7 +143,23 @@ __setup_redream() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_ppsspp() {
   local profile=$1
-  __swap_joystick_config "$profile" joystick /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  local config_file=/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
+    return
+  fi
+
+  # Remove joystick configurations
+  sed -i 's/10-[0-9]*\|,//g' "$config_file"
+
+  # Merge in those from the device
+  while read key separator value; do
+    # Merge with existing value
+    sed -i "/^$key *= *1/ s/\$/,$value/" "$config_file"
+
+    # ...or set on its own
+    sed -i "/^$key *= *\$/ s/\$/$value/" "$config_file"
+  done < <(cat "$device_config_file" | grep -Ev '^ *#')
 }
 
 # Drastic:
@@ -142,7 +167,17 @@ __setup_ppsspp() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_drastic() {
   local profile=$1
-  __swap_joystick_config "$profile" joystick /opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local config_file=/opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
+    return
+  fi
+
+  # Remove joystick configurations
+  sed -i 's/controls_b//g' "$config_file"
+
+  # Merge in those from the device
+  cat "$device_config_file" | tee -a "$config_file" >/dev/null
 }
 
 # Hypseus-Singe:
@@ -150,23 +185,45 @@ __setup_drastic() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_hypseus() {
   local profile=$1
-  __swap_joystick_config "$profile" joystick /opt/retropie/configs/daphne/hypinput.ini
+  local config_file=/opt/retropie/configs/daphne/hypinput.ini
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
+    return
+  fi
+
+  # Remove joystick configurations (and default to 0)
+  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\)/\1 = \2 \3 0/g' "$config_file"
+
+  # Merge in those from the device
+  while read key separator button axis; do
+    local joystick_value=$button
+    if [ -n "$axis" ]; then
+      joystick_value="$joystick_value $axis"
+    fi
+
+    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\)/$key = \2 \3 $joystick_value/g" "$config_file"
+  done < <(cat "$device_config_file" | grep -Ev '^ *#')
 }
 
-# Swaps the primary emulator input configuration with a device-specific configuration
+# Prepares the primary emulator input configuration to be merged with a
+# device-specific configuration
 #
 # For example, if the input config path is /opt/retropie/configs/{system}/inputs.ini,
 # then this will:
 #
+# * Restore a backup if it already exists at /opt/retropie/configs/{system}/inputs.ini.autoport
 # * Create a backup to /opt/retropie/configs/{system}/inputs.ini.autoport
-# * Override the primary config path with /opt/retropie/configs/{system}/inputs-{device_name}.ini
-__swap_joystick_config() {
+# * Print the expected device-specific configuration path
+__prepare_config_overwrite() {
   local profile=$1
   local device_type=$2
   local config_path=$3
   local config_backup_path="$config_path.autoport"
 
-  local device_name=$(__match_players "$profile" "$device_type" | head -n 1 | cut -d$'\t' -f 3)
+  __match_players "$profile" "$device_type"
+
+  local device_index=${players["1/device_index"]}
+  local device_name=${devices["$device_index/name"]}
   local device_config_path="${config_path%.*}-$device_name.${config_path##*.}"
 
   # Always restore the original configuration file if one was found
@@ -176,16 +233,17 @@ __swap_joystick_config() {
 
   if [ -z "$device_name" ]; then
     echo "No control overrides found for profile \"$profile\""
-    return
+    return 1
   fi
 
   if [ ! -f "$device_config_path" ]; then
     echo "No control overrides found at path: $device_config_path"
-    return
+    return 1
   fi
 
   cp -v "$config_path" "$config_backup_path"
-  cp -v "$device_config_path" "$config_path"
+
+  echo "$device_config_path"
 }
 
 # Matches player ids with device input indexes (i.e. ports)
@@ -195,7 +253,7 @@ __match_players() {
 
   # Store device type information
   local devices_count=0
-  declare -A devices
+  declare -Ag devices
   while read index sysfs vendor_id product_id name; do
     devices["$index/name"]=$name
     devices["$index/sysfs"]=$sysfs
@@ -221,6 +279,7 @@ __match_players() {
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
     local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
     local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
+    local config_device_type=$(__setting "$profile" "${device_type}${config_index}_device_type")
     local config_limit=$(__setting "$profile" "${device_type}${config_index}_limit")
 
     # Track how many matches we've found for this config in case there's a limit
@@ -264,6 +323,7 @@ __match_players() {
 
       # Found a match!
       devices["$device_index/matched"]=1
+      devices["$device_index/device_type"]=$config_device_type
       ((matched_count+=1))
 
       # Add it to the prioritized list
@@ -282,6 +342,8 @@ __match_players() {
   local prioritized_devices_count=$((priority_index-1))
 
   # Start identifying players!
+  declare -Ag players
+  declare -ag player_indexes
   local player_index_start=$(__setting "$profile" "${device_type}_start")
   local player_index=${player_index_start:-1}
 
@@ -296,10 +358,11 @@ __match_players() {
       local device_index=${prioritized_devices[$priority_index]}
       if [ -n "$device_index" ]; then
         prioritized_devices["$priority_index/processed"]=1
-        echo "$player_index"$'\t'"$device_index"$'\t'"${devices["$device_index/name"]}"
+        players["$player_index/device_index"]=$device_index
       fi
     fi
 
+    player_indexes+=($player_index)
     ((player_index+=1))
   done
 
@@ -312,7 +375,7 @@ __match_players() {
     fi
 
     local device_index=${prioritized_devices[$priority_index]}
-    echo "$player_index"$'\t'"$device_index"$'\t'"${devices["$device_index/name"]}"
+    players["$player_index/device_index"]=$device_index
     ((player_index+=1))
   done
 }

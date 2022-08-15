@@ -17,13 +17,17 @@ function onstart_ppsspp() {
     else
         echo '[ControlMapping]' > '/tmp/ppsspp-controls.ini'
     fi
-    iniConfig ' = ' '' '/tmp/ppsspp-controls.ini'
+    _set_ppsspp_ini '/tmp/ppsspp-controls.ini'
 
     # Reset inputs for this controller
     local regex="$controller-[0-9]\+"
     sed -i "/^.\+ = $regex\$/d" '/tmp/ppsspp-controls.ini'
     sed -i "s/,$regex//g" '/tmp/ppsspp-controls.ini'
     sed -i "s/ $regex,/ /g" '/tmp/ppsspp-controls.ini'
+}
+
+function _set_ppsspp_ini() {
+    iniConfig ' = ' '' "$1"
 }
 
 function onstart_ppsspp_joystick() {
@@ -49,6 +53,9 @@ function onstart_ppsspp_joystick() {
     ppsspp_sdl_button_map['guide']='4' # NKCODE_BACK
     ppsspp_sdl_button_map['leftstick']='106' # NKCODE_BUTTON_THUMBL
     ppsspp_sdl_button_map['rightstick']='107' # NKCODE_BUTTON_THUMBR
+
+    # Define initial device-specific config
+    echo '' > /tmp/ppsspp-device-controls.ini
 }
 
 function onstart_ppsspp_keyboard() {
@@ -297,6 +304,11 @@ function map_ppsspp_joystick() {
     esac
 
     if [ -n "$value" ]; then
+        _set_ppsspp_ini /tmp/ppsspp-controls.ini
+        map_ppsspp "$key" '10' "$value"
+
+        # Device-specific config
+        _set_ppsspp_ini /tmp/ppsspp-device-controls.ini
         map_ppsspp "$key" '10' "$value"
     fi
 }
@@ -328,6 +340,10 @@ function _onend_ppsspp() {
 
 function onend_ppsspp_joystick() {
     _onend_ppsspp
+
+    # Define a device-specific file in order to support multiple joysticks
+    local ppsspp_device_config_path="$configdir/psp/PSP/SYSTEM/controls-$DEVICE_NAME.ini"
+    cp '/tmp/ppsspp-device-controls.ini' "$ppsspp_device_config_path"
 }
 
 function onend_ppsspp_keyboard() {

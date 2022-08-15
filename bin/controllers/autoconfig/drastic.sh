@@ -16,7 +16,7 @@ function _onstart_drastic() {
     else
         touch '/tmp/drastic.cfg'
     fi
-    iniConfig ' = ' '' '/tmp/drastic.cfg'
+    _set_drastic_ini '/tmp/drastic.cfg'
 
     local all_config_keys=(
         UP DOWN LEFT RIGHT A B X Y L R START SELECT HINGE
@@ -32,8 +32,15 @@ function _onstart_drastic() {
     done
 }
 
+function _set_drastic_ini() {
+    iniConfig ' = ' '' "$1"
+}
+
 function onstart_drastic_joystick() {
     _onstart_drastic 'b'
+
+    # Define initial device-specific config
+    echo '' > /tmp/drastic-device.cfg
 }
 
 function onstart_drastic_keyboard() {
@@ -167,6 +174,11 @@ function map_drastic_joystick() {
                 ;;
         esac
 
+        _set_drastic_ini /tmp/drastic.cfg
+        _map_drastic 'b' "$key" "$value"
+
+        # Device-specific config
+        _set_drastic_ini /tmp/drastic-device.cfg
         _map_drastic 'b' "$key" "$value"
     done
 }
@@ -205,6 +217,9 @@ function _onend_drastic() {
 
 function onend_drastic_joystick() {
     _onend_drastic
+
+    local drastic_device_config_path="$configdir/nds/drastic/config/drastic-$DEVICE_NAME.cfg"
+    cp '/tmp/drastic-device.cfg' "$drastic_device_config_path"
 }
 
 function onend_drastic_keyboard() {
