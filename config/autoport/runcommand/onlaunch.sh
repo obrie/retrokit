@@ -231,7 +231,7 @@ __setup_hypseus() {
   fi
 
   # Remove joystick configurations (and default to 0)
-  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\)/\1 = \2 \3 0/g' "$config_file"
+  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\).*$/\1 = \2 \3 0/g' "$config_file"
 
   # Merge in those from the device
   while read key separator button axis; do
@@ -240,7 +240,7 @@ __setup_hypseus() {
       joystick_value="$joystick_value $axis"
     fi
 
-    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\)/$key = \2 \3 $joystick_value/g" "$config_file"
+    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_file"
   done < <(cat "$device_config_file" | grep -Ev '^ *#')
 }
 
