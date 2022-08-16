@@ -46,7 +46,7 @@ __setting() {
   local section=$1
   local key=$2
 
-  __find_setting "$rom_override_path" "$section" "$key" ignore_section=true || \
+  __find_setting "$rom_override_path" "$section" "$key" || \
   __find_setting "$system_override_path" "$section" "$key" || \
   __find_setting "$default_config_path" "$section" "$key"
 }
