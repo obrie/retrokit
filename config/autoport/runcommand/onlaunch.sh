@@ -406,7 +406,7 @@ __match_players() {
   IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
   if [ ${#device_order[@]} -gt 0 ]; then
     for priority_index in "${device_order[@]}"; do
-      if [ -z "$priority_index" ]; then
+      if [ -z "$priority_index" ] || [ "$priority_index" == 'nul' ]; then
         continue
       fi
 
