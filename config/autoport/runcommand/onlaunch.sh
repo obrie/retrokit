@@ -404,43 +404,37 @@ __match_players() {
   # player 2 to be priority 1.
   declare -a device_order
   IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
-  for priority_index in "${device_order[@]}"; do
-    if [ -n "$priority_index" ]; then
+  if [ ${#device_order[@]} -gt 0 ]; then
+    for priority_index in "${device_order[@]}"; do
+      if [ -z "$priority_index" ]; then
+        continue
+      fi
+
       local device_index=${prioritized_devices[$priority_index]}
       if [ -n "$device_index" ]; then
-        prioritized_devices["$priority_index/processed"]=1
+        # Found a matching device: update the player
         players["$player_index/device_index"]=$device_index
+        player_indexes+=($player_index)
       fi
-    fi
 
-    player_indexes+=($player_index)
-    ((player_index+=1))
+      ((player_index+=1))
+    done
+  else
+    # No order was specified -- use a 1:1 mapping between player
+    # and priority.
+    for priority_index in $(seq 1 $prioritized_devices_count); do
+      local device_index=${prioritized_devices[$priority_index]}
+      players["$player_index/device_index"]=$device_index
 
-    # Stop going through the players if we've hit our limit
-    if [ -n "$player_limit" ] && [ ${#player_indexes[@]} -ge $player_limit ]; then
-      return
-    fi
-  done
+      player_indexes+=($player_index)
+      ((player_index+=1))
 
-  # Once we've gone through the specific ordered devices, we process the rest here,
-  # taking precaution to not list the same device a 2nd time.
-  for priority_index in $(seq 1 $prioritized_devices_count); do
-    if [ "${prioritized_devices["$priority_index/processed"]}" ]; then
-      # Already processed this device
-      continue
-    fi
-
-    local device_index=${prioritized_devices[$priority_index]}
-    players["$player_index/device_index"]=$device_index
-
-    player_indexes+=($player_index)
-    ((player_index+=1))
-
-    # Stop going through the players if we've hit our limit
-    if [ -n "$player_limit" ] && [ ${#player_indexes[@]} -ge $player_limit ]; then
-      return
-    fi
-  done
+      # Stop going through the players if we've hit our limit
+      if [ -n "$player_limit" ] && [ ${#player_indexes[@]} -ge $player_limit ]; then
+        return
+      fi
+    done
+  fi
 }
 
 # Lists the *ordered* inputs of the given device type which should match the index order
