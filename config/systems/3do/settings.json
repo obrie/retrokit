@@ -27,6 +27,7 @@
     "url": "$BIOS_URL/libretro/3DO Company, The - 3DO",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
+      "3do_arcade_saot.bin": "{url}/3do_arcade_saot.bin",
       "panafz10.bin": "{url}/panafz10.bin"
     }
   },
