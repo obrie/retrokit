@@ -26,7 +26,20 @@ configure() {
       continue
     fi
 
-    # Find a file for either the rom or its parent
+    # Remove existing file
+    rm -fv "$target_path"
+
+    # Create a default file based on the input type used by the game
+    # (e.g. lightgun vs. trackball)
+    if [ "${lightgun_titles["$group_title"]}" ]; then
+      echo -e '[autoport]\nprofile = "lightgun"' > "$target_path"
+      echo "Setting profile to \"lightgun\" in $target_path"
+    elif [ "${trackball_titles["$group_title"]}" ]; then
+      echo -e '[autoport]\nprofile = "trackball"' > "$target_path"
+      echo "Setting profile to \"trackball\" in $target_path"
+    fi
+
+    # Find an override file for either the rom or its parent
     local override_file=""
     local filename
     for filename in "$rom_name" "$title" "$parent_name" "$parent_title"; do
@@ -36,27 +49,13 @@ configure() {
 
       override_file=${override_files["$filename"]}
       if [ -n "$override_file" ]; then
+        ini_merge "$override_file" "$target_path" backup=false
         break
       fi
     done
 
-    # Either use the override file or a default based on the input type used by
-    # the game (e.g. lightgun vs. trackball)
-    local target_path_created=true
-    if [ -n "$override_file" ]; then
-      ini_merge "$override_file" "$target_path" backup=false
-    elif [ "${lightgun_titles["$group_title"]}" ]; then
-      echo 'profile = "lightgun"' > "$target_path"
-      echo "Setting profile to \"lightgun\" in $target_path"
-    elif [ "${trackball_titles["$group_title"]}" ]; then
-      echo 'profile = "trackball"' > "$target_path"
-      echo "Setting profile to \"trackball\" in $target_path"
-    else
-      target_path_created=false
-    fi
-
     # Track the newly created configuration
-    if [ "$target_path_created" == 'true' ]; then
+    if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
   done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .playlist.name] | join("»")')
