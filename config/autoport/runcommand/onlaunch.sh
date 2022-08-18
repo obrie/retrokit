@@ -406,15 +406,14 @@ __match_players() {
   IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
   if [ ${#device_order[@]} -gt 0 ]; then
     for priority_index in "${device_order[@]}"; do
-      if [ -z "$priority_index" ] || [ "$priority_index" == 'nul' ]; then
-        continue
-      fi
+      if [ -n "$priority_index" ] && [ "$priority_index" != 'nul' ]; then
+        local device_index=${prioritized_devices[$priority_index]}
 
-      local device_index=${prioritized_devices[$priority_index]}
-      if [ -n "$device_index" ]; then
-        # Found a matching device: update the player
-        players["$player_index/device_index"]=$device_index
-        player_indexes+=($player_index)
+        if [ -n "$device_index" ]; then
+          # Found a matching device: update the player
+          players["$player_index/device_index"]=$device_index
+          player_indexes+=($player_index)
+        fi
       fi
 
       ((player_index+=1))
