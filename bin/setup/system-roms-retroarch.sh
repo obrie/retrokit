@@ -205,7 +205,7 @@ restore() {
     # Remove retroarch mappings
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     if [ -d "$emulator_remapping_dir" ]; then
-      find "$emulator_remapping_dir" -name '*.rmp' -o -name '*.rmp.rk-src*' -exec rm -fv '{}' +
+      find "$emulator_remapping_dir" -name '*.rmp' -not -name "$library_name.rmp" -o -name '*.rmp.rk-src*' -not -name "$library_name.rmp" -exec rm -fv '{}' +
     fi
   done < <(get_core_library_names)
 
