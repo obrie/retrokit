@@ -28,7 +28,6 @@ patches=(
   ['Policenauts (Japan) (Disc 2)']=1
   ['Project - Horned Owl (USA)']=1
   ['Star Wars - Rebel Assault II - The Hidden Empire (USA) (Disc 1)']=1
-  ['Star Wars - Rebel Assault II - The Hidden Empire (USA) (Disc 2)']=1
 )
 
 deps() {
