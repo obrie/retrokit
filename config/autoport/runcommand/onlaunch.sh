@@ -290,9 +290,9 @@ __match_players() {
   local device_type=$2
 
   # Shared variables
-  declare -Ag devices
-  declare -Ag players
-  declare -ag player_indexes
+  declare -Ag devices=()
+  declare -Ag players=()
+  declare -ag player_indexes=()
 
   # Store device type information
   local devices_count=0
