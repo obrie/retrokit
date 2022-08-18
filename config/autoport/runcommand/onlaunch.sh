@@ -392,7 +392,7 @@ __match_players() {
   local prioritized_devices_count=$((priority_index-1))
 
   # Overall player matching limit
-  local player_limit=${_setting "$profile" "${device_type}_count"}
+  local player_limit=$(_setting "$profile" "${device_type}_limit")
 
   # Start identifying players!
   local player_index_start=$(__setting "$profile" "${device_type}_start")
