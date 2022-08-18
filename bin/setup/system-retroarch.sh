@@ -85,17 +85,6 @@ __configure_core_options() {
   # Merge in system-specific overrides
   ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_path" backup=false
   sort -o "$core_options_path" "$core_options_path"
-
-  # Reinstall the game-specific retroarch core options for this system.
-  # Yes, this might mean we install game-specific core options multiple
-  # times, but it also means we don't have to worry about remembering to
-  # re-run system-roms-retroarch after running this setupmodule.
-  # 
-  # This is required because retroarch currently has no concept of reading
-  # from multiple core options files.  So, if you have an override at a
-  # global / system level, then any rom-specific core options file *also*
-  # has to include that configuration.
-  after_hook __configure_retroarch_core_options system-roms-retroarch "$system"
 }
 
 restore() {
