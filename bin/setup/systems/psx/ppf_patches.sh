@@ -45,7 +45,7 @@ deps() {
 configure() {
   local rom_name chd_path
   while IFS=$'\t' read -r rom_name chd_path; do
-    if [ ! "${patches["$rom_name"]}" ] || [ -f "$path.patched" ]; then
+    if [ ! "${patches["$rom_name"]}" ] || [ -f "$chd_path.patched" ]; then
       continue
     fi
 
