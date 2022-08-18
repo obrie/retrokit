@@ -121,10 +121,10 @@ __setup_libretro_input() {
     local device_type=${players["$player_index/device_type"]}
 
     echo "Player $player_index: index $device_index"
-    echo "input_player${player_index}_${retroarch_device_type}_index = $device_index" >> "$retroarch_config_path"
+    echo "input_player${player_index}_${retroarch_device_type}_index = \"$device_index\"" >> "$retroarch_config_path"
 
     if [ -n "$device_type" ]; then
-      echo "input_libretro_device_p${player_index} = $device_type" >> "$retroarch_config_path"
+      echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$retroarch_config_path"
     fi
   done
 }
