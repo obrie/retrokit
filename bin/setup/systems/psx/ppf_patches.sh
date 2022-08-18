@@ -16,8 +16,8 @@ guncon_patch_base_url='https://archive.org/download/ps1-guncon-patches'
 # As a result, we rely on manually patching and forgetting about
 # what the emulators do.
 
-declare -A ppf
-ppf=(
+declare -A patches
+patches=(
   ['Crypt Killer (USA)']=1
   ['Die Hard Trilogy (Europe) (En,Fr,De,Es,It,Sv)']=1
   ['Die Hard Trilogy (USA) (Rev 1)']=1
@@ -33,7 +33,7 @@ ppf=(
 
 deps() {
   if [ ! `command -v applyppf` ]; then
-    git clone --depth 1 https://github.com/meunierd/ppf.git "$tmp_ephemeral_dir/nibtools"
+    git clone --depth 1 https://github.com/meunierd/ppf.git "$tmp_ephemeral_dir/ppf"
     pushd "$tmp_ephemeral_dir/ppf/ppfdev/applyppf_src"
 
     gcc -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE  -o applyppf applyppf3_linux.c
@@ -44,11 +44,13 @@ deps() {
 }
 
 configure() {
+  local rom_name chd_path
   while IFS=$'\t' read -r rom_name chd_path; do
-    if [ ! "${patches[$rom_name]}" ] || [ -f "$path.patched" ]; then
+    if [ ! "${patches["$rom_name"]}" ] || [ -f "$path.patched" ]; then
       continue
     fi
 
+    echo "Applying GunCon patch to $chd_path"
     __apply_patch "$chd_path" a
   done < <(romkit_cache_list | jq -r '[.name, .path] | @tsv')
 }
@@ -56,15 +58,20 @@ configure() {
 restore() {
   while read patch_file; do
     local chd_path=${patch_file%.patched}
+
+    echo "Removing GunCon patch from $chd_path"
     __apply_patch "$chd_path" u
   done < <(find "$HOME/RetroPie/roms/$system" -name '*.chd.patched')
 }
 
 __apply_patch() {
-  local chd_path=$1
+  local original_chd_path=$1
   local command=$2
 
-  local rom_dir=$(dirname "$chd_path")
+  local rom_dir=$(dirname "$original_chd_path")
+  local rom_filename=${original_chd_path##*/}
+  local rom_name=${rom_filename%.chd}
+
   local ppf_path="$rom_dir/$rom_name.ppf"
   local cue_path="$tmp_ephemeral_dir/$rom_name.cue"
   local bin_path="$tmp_ephemeral_dir/$rom_name.bin"
@@ -74,20 +81,29 @@ __apply_patch() {
   download "$guncon_patch_base_url/$rom_name.ppf" "$ppf_path"
 
   # Extract the bin/cue so we can patch
-  chdman extractcd -i "$path" -o "$cue_path" -ob "$bin_path"
+  chdman extractcd -f -i "$original_chd_path" -o "$cue_path" -ob "$bin_path"
 
   # Apply the patch
-  applyppf $command "$ppf_path" "$bin_path"
+  local ppf_output=$(applyppf $command "$bin_path" "$ppf_path")
+  echo "$ppf_output"
+
+  # Check if the patch was successful
+  if ! echo "$ppf_output" | grep -q 'successful'; then
+    # Failed to patch -- escape
+    echo "Aborting patch process for $original_chd_path"
+    rm -f "$cue_path" "$bin_path"
+    return
+  fi
 
   # Re-build the chd file
-  chdman createcd -i "$cue_path" -o "$patched_chd_path"
+  chdman createcd -f -i "$cue_path" -o "$patched_chd_path"
 
   # Copy and mark the file as patched
-  mv "$patched_chd_path" "$path"
+  mv "$patched_chd_path" "$original_chd_path"
   if [ "$command" == 'a' ]; then
-    touch "$path.patched"
+    touch "$original_chd_path.patched"
   else
-    rm "$path.patched"
+    rm "$original_chd_path.patched"
   fi
 
   # Remove the unused files

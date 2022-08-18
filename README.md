@@ -26,6 +26,7 @@ Specifically, it can set up:
 * Emulator installation
 * EmulationStation Collections (including lightguns)
 * Sinden lightgun autoconfiguration
+* Playstation GunCon patches (PPF)
 * Xbox bluetooth support + customizations
 * Game state (import/export)
 * Autoconfig overrides
