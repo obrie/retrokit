@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='hardware/controllers/sinden'
 setup_module_desc='Sinden lightgun setup and configuration'
 
-version='1.07'
+version='1.08'
 archive_name="SindenLightgunSoftwareReleaseV$version"
 archive_rpi_dir="SindenLightgunLinuxSoftwareV$version/Pi-Arm/Lightgun"
 retropie_module_install_dir='/opt/retropie/supplementary/sinden'
