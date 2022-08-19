@@ -146,13 +146,13 @@ outline_overlay_image() {
   local left=$(system_setting '.overlays.lightgun_border.offset_x // 0')
   local right="-$left"
   local top=$(system_setting '.overlays.lightgun_border.offset_y // 0')
-  local bottom="-$bottom"
+  local bottom="-$top"
 
   # Canvas Coordinates
   local canvas_left=$(system_setting '.overlays.lightgun_border.canvas_offset_x // 0')
   local canvas_right="-$canvas_left"
   local canvas_top=$(system_setting '.overlays.lightgun_border.canvas_offset_y // 0')
-  local canvas_bottom="-$canvas_bottom"
+  local canvas_bottom="-$canvas_top"
 
   python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" \
     --left "$left" --right "$right" --top "$top" --bottom "$bottom" --width "$width" \
