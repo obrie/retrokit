@@ -20,7 +20,7 @@ def make(
 ) -> None:
     image = Image.open(source)
 
-    # Convert to RGB so that we can draw our outline
+    # Convert to RGBA so that we can draw our outline
     if image.mode != 'RGBA':
         rgba_image = image.convert('RGBA')
     else:
@@ -43,36 +43,42 @@ def make(
         canvas_color = canvas_color.lstrip('#')
         color_len = len(canvas_color)
         canvas_color_rgba = tuple(int(canvas_color[i:i + color_len // 3], 16) for i in range(0, color_len, color_len // 3))
+
+        canvas = Image.new('RGBA', rgba_image.size, canvas_color_rgba + (0,))
+        canvas_drawing = ImageDraw.Draw(canvas)
+
         if canvas_opacity != None and canvas_opacity != '':
             canvas_color_rgba += (int(canvas_opacity),)
 
         if left != 0:
             # Left gutter
-            drawing.rectangle(
+            canvas_drawing.rectangle(
                 [(0, 0), (left - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
 
         if right != 0:
             # Right gutter
-            drawing.rectangle(
+            canvas_drawing.rectangle(
                 [(image.width + right, 0), (image.width - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
 
         if top != 0:
             # Top gutter
-            drawing.rectangle(
+            canvas_drawing.rectangle(
                 [(0, 0), (image.width - 1, top - 1)],
                 fill=canvas_color_rgba,
             )
 
         if bottom != 0:
             # Bottom gutter
-            drawing.rectangle(
+            canvas_drawing.rectangle(
                 [(0, image.height + bottom), (image.width - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
+
+        rgba_image = Image.alpha_composite(rgba_image, canvas)
 
     # Convert back to the original image's format
     if image.mode != 'RGBA':
