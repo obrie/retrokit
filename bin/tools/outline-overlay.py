@@ -14,6 +14,7 @@ def make(
     left: int = 0,
     width: int = 15,
     color: str = '#ffffff',
+    canvas_color: str = None,
     output_format: str = 'PNG',
 ) -> None:
     image = Image.open(source)
@@ -36,6 +37,36 @@ def make(
         width=width,
     )
 
+    # Cover parts beyond the outline if requested
+    if canvas_color:
+        if left != 0:
+            # Left gutter
+            drawing.rectangle(
+                [(0, 0), (left - 1, image.height - 1)],
+                fill=canvas_color,
+            )
+
+        if right != 0:
+            # Right gutter
+            drawing.rectangle(
+                [(image.width + right, 0), (image.width - 1, image.height - 1)],
+                fill=canvas_color,
+            )
+
+        if top != 0:
+            # Top gutter
+            drawing.rectangle(
+                [(0, 0), (image.width - 1, top - 1)],
+                fill=canvas_color,
+            )
+
+        if bottom != 0:
+            # Bottom gutter
+            drawing.rectangle(
+                [(0, image.height + bottom), (image.width - 1, image.height - 1)],
+                fill=canvas_color,
+            )
+
     # Convert back to the original image's format
     if image.mode != 'RGBA':
         output_image = rgba_image.convert(image.mode)
@@ -49,12 +80,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
     parser.add_argument(dest='source', help='Source path of the image')
     parser.add_argument(dest='target', help='Target path for the image')
-    parser.add_argument('--top', type=int, help='Border width in pixels')
-    parser.add_argument('--right', type=int, help='Border width in pixels')
-    parser.add_argument('--bottom', type=int, help='Border width in pixels')
-    parser.add_argument('--left', type=int, help='Border width in pixels')
-    parser.add_argument('--width', type=int, help='Border width in pixels')
-    parser.add_argument('--color', help='Border color')
+    parser.add_argument('--top', type=int, help='Outline top coordinate, in pixels')
+    parser.add_argument('--right', type=int, help='Outline right coordinate, in pixels')
+    parser.add_argument('--bottom', type=int, help='Outline bottom coordinate, in pixels')
+    parser.add_argument('--left', type=int, help='Outline left coordinate, in pixels')
+    parser.add_argument('--width', type=int, help='Outline width, in pixels')
+    parser.add_argument('--color', help='Outline color')
+    parser.add_argument('--canvas_color', help='Canvas color')
     parser.add_argument('--format', dest='output_format', help='Image output format')
     args = parser.parse_args()
     make(**vars(args))
