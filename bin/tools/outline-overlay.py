@@ -80,8 +80,7 @@ def make(
     else:
         fill_color = None
 
-    # Use the pixel in the middle of the image for a reference for how to fill the
-    # rectangle.  This should typically just be a transparent pixel.
+    # Draw the outline
     drawing.rectangle(
         [(left, top), (image.width + right - 1, image.height + bottom - 1)],
         fill=fill_color,

@@ -138,7 +138,7 @@ outline_overlay_image() {
   # Formatting
   local width=$(setting '.overlays.lightgun_border.width')
   local color=$(setting '.overlays.lightgun_border.color')
-  local fill_opacity=$(setting '.overlays.lightgun_border.fill_opacity')
+  local fill=$(setting '.overlays.lightgun_border.fill')
   local canvas_color=$(setting '.overlays.lightgun_border.canvas_color')
   local canvas_opacity=$(setting '.overlays.lightgun_border.canvas_opacity')
   
@@ -156,7 +156,7 @@ outline_overlay_image() {
 
   python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" \
     --left "$left" --right "$right" --top "$top" --bottom "$bottom" --width "$width" \
-    --color "$color" --fill_opacity "$fill_opacity" \
+    --color "$color" --fill "${fill:-true}" \
     --canvas_left "$canvas_left" --canvas_right "$canvas_right" --canvas_top "$canvas_top" --canvas_bottom "$canvas_bottom" \
     --canvas_color "$canvas_color" --canvas_opacity "$canvas_opacity"
 }
