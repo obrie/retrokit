@@ -139,6 +139,7 @@ outline_overlay_image() {
   local width=$(setting '.overlays.lightgun_border.width')
   local color=$(setting '.overlays.lightgun_border.color')
   local canvas_color=$(setting '.overlays.lightgun_border.canvas_color')
+  local canvas_opacity=$(setting '.overlays.lightgun_border.canvas_opacity')
   
   # Coordinates
   local left=$(system_setting '.overlays.lightgun_border.offset_x // 0')
@@ -146,7 +147,7 @@ outline_overlay_image() {
   local top=$(system_setting '.overlays.lightgun_border.offset_y // 0')
   local bottom="-$bottom"
 
-  python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" --left "$left" --right "$right" --width "$width" --color "$color" --canvas_color "$canvas_color"
+  python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" --left "$left" --right "$right" --width "$width" --color "$color" --canvas_color "$canvas_color" --canvas_opacity "$canvas_opacity"
 }
 
 ##############

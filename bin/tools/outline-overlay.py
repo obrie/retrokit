@@ -15,6 +15,7 @@ def make(
     width: int = 15,
     color: str = '#ffffff',
     canvas_color: str = None,
+    canvas_opacity: int = 255,
     output_format: str = 'PNG',
 ) -> None:
     image = Image.open(source)
@@ -39,32 +40,38 @@ def make(
 
     # Cover parts beyond the outline if requested
     if canvas_color:
+        canvas_color = canvas_color.lstrip('#')
+        color_len = len(canvas_color)
+        canvas_color_rgba = tuple(int(canvas_color[i:i + color_len // 3], 16) for i in range(0, color_len, color_len // 3))
+        if canvas_opacity != None and canvas_opacity != '':
+            canvas_color_rgba += (int(canvas_opacity),)
+
         if left != 0:
             # Left gutter
             drawing.rectangle(
                 [(0, 0), (left - 1, image.height - 1)],
-                fill=canvas_color,
+                fill=canvas_color_rgba,
             )
 
         if right != 0:
             # Right gutter
             drawing.rectangle(
                 [(image.width + right, 0), (image.width - 1, image.height - 1)],
-                fill=canvas_color,
+                fill=canvas_color_rgba,
             )
 
         if top != 0:
             # Top gutter
             drawing.rectangle(
                 [(0, 0), (image.width - 1, top - 1)],
-                fill=canvas_color,
+                fill=canvas_color_rgba,
             )
 
         if bottom != 0:
             # Bottom gutter
             drawing.rectangle(
                 [(0, image.height + bottom), (image.width - 1, image.height - 1)],
-                fill=canvas_color,
+                fill=canvas_color_rgba,
             )
 
     # Convert back to the original image's format
@@ -87,6 +94,7 @@ def main() -> None:
     parser.add_argument('--width', type=int, help='Outline width, in pixels')
     parser.add_argument('--color', help='Outline color')
     parser.add_argument('--canvas_color', help='Canvas color')
+    parser.add_argument('--canvas_opacity', help='Canvas opacity')
     parser.add_argument('--format', dest='output_format', help='Image output format')
     args = parser.parse_args()
     make(**vars(args))
