@@ -14,6 +14,11 @@ def make(
     left: int = 0,
     width: int = 15,
     color: str = '#ffffff',
+    fill: bool = True,
+    canvas_top: int = 0,
+    canvas_right: int = 0,
+    canvas_bottom: int = 0,
+    canvas_left: int = 0,
     canvas_color: str = None,
     canvas_opacity: int = 255,
     output_format: str = 'PNG',
@@ -25,18 +30,6 @@ def make(
         rgba_image = image.convert('RGBA')
     else:
         rgba_image = image
-
-    drawing = ImageDraw.Draw(rgba_image)
-
-    # Use the pixel in the middle of the image for a reference for how to fill the
-    # rectangle.  This should typically just be a transparent pixel.
-    reference_fill_pixel = image.getpixel((image.width / 2, image.height / 2))
-    drawing.rectangle(
-        [(left, top), (image.width + right - 1, image.height + bottom - 1)],
-        fill=reference_fill_pixel,
-        outline=color,
-        width=width,
-    )
 
     # Cover parts beyond the outline if requested
     if canvas_color:
@@ -50,35 +43,51 @@ def make(
         if canvas_opacity != None and canvas_opacity != '':
             canvas_color_rgba += (int(canvas_opacity),)
 
-        if left != 0:
+        if canvas_left != 0:
             # Left gutter
             canvas_drawing.rectangle(
-                [(0, 0), (left - 1, image.height - 1)],
+                [(0, 0), (canvas_left - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
 
-        if right != 0:
+        if canvas_right != 0:
             # Right gutter
             canvas_drawing.rectangle(
-                [(image.width + right, 0), (image.width - 1, image.height - 1)],
+                [(image.width + canvas_right, 0), (image.width - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
 
-        if top != 0:
+        if canvas_top != 0:
             # Top gutter
             canvas_drawing.rectangle(
-                [(0, 0), (image.width - 1, top - 1)],
+                [(0, 0), (image.width - 1, canvas_top - 1)],
                 fill=canvas_color_rgba,
             )
 
-        if bottom != 0:
+        if canvas_bottom != 0:
             # Bottom gutter
             canvas_drawing.rectangle(
-                [(0, image.height + bottom), (image.width - 1, image.height - 1)],
+                [(0, image.height + canvas_bottom), (image.width - 1, image.height - 1)],
                 fill=canvas_color_rgba,
             )
 
         rgba_image = Image.alpha_composite(rgba_image, canvas)
+
+    drawing = ImageDraw.Draw(rgba_image)
+
+    if fill == True or fill == 'true':
+        fill_color = (0, 0, 0, 0)
+    else:
+        fill_color = None
+
+    # Use the pixel in the middle of the image for a reference for how to fill the
+    # rectangle.  This should typically just be a transparent pixel.
+    drawing.rectangle(
+        [(left, top), (image.width + right - 1, image.height + bottom - 1)],
+        fill=fill_color,
+        outline=color,
+        width=width,
+    )
 
     # Convert back to the original image's format
     if image.mode != 'RGBA':
@@ -99,8 +108,13 @@ def main() -> None:
     parser.add_argument('--left', type=int, help='Outline left coordinate, in pixels')
     parser.add_argument('--width', type=int, help='Outline width, in pixels')
     parser.add_argument('--color', help='Outline color')
+    parser.add_argument('--fill', help='Whether to fill within the outline')
+    parser.add_argument('--canvas_top', type=int, help='Canvas top coordinate, in pixels')
+    parser.add_argument('--canvas_right', type=int, help='Canvas right coordinate, in pixels')
+    parser.add_argument('--canvas_bottom', type=int, help='Canvas bottom coordinate, in pixels')
+    parser.add_argument('--canvas_left', type=int, help='Canvas left coordinate, in pixels')
     parser.add_argument('--canvas_color', help='Canvas color')
-    parser.add_argument('--canvas_opacity', help='Canvas opacity')
+    parser.add_argument('--canvas_opacity', help='Canvas opacity (0-255)')
     parser.add_argument('--format', dest='output_format', help='Image output format')
     args = parser.parse_args()
     make(**vars(args))
