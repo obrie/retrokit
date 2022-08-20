@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import argparse
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageEnhance
 
 # Converts a 1080p image to be compatible with Lightguns like Sinden by
 # creating a rectangular white border around the gameplay area
@@ -15,12 +15,7 @@ def make(
     width: int = 15,
     color: str = '#ffffff',
     fill: bool = True,
-    canvas_top: int = 0,
-    canvas_right: int = 0,
-    canvas_bottom: int = 0,
-    canvas_left: int = 0,
-    canvas_color: str = None,
-    canvas_opacity: int = 255,
+    brightness: float = 1.0,
     output_format: str = 'PNG',
 ) -> None:
     image = Image.open(source)
@@ -31,49 +26,9 @@ def make(
     else:
         rgba_image = image
 
-    # Cover parts beyond the outline if requested
-    if canvas_color:
-        canvas_color = canvas_color.lstrip('#')
-        color_len = len(canvas_color)
-        canvas_color_rgba = tuple(int(canvas_color[i:i + color_len // 3], 16) for i in range(0, color_len, color_len // 3))
-
-        canvas = Image.new('RGBA', rgba_image.size, canvas_color_rgba + (0,))
-        canvas_drawing = ImageDraw.Draw(canvas)
-
-        if canvas_opacity != None and canvas_opacity != '':
-            canvas_color_rgba += (int(canvas_opacity),)
-
-        if canvas_left != 0:
-            # Left gutter
-            canvas_drawing.rectangle(
-                [(0, 0), (canvas_left - 1, image.height - 1)],
-                fill=canvas_color_rgba,
-            )
-
-        if canvas_right != 0:
-            # Right gutter
-            canvas_drawing.rectangle(
-                [(image.width + canvas_right, 0), (image.width - 1, image.height - 1)],
-                fill=canvas_color_rgba,
-            )
-
-        if canvas_top != 0:
-            # Top gutter
-            canvas_drawing.rectangle(
-                [(0, 0), (image.width - 1, canvas_top - 1)],
-                fill=canvas_color_rgba,
-            )
-
-        if canvas_bottom != 0:
-            # Bottom gutter
-            canvas_drawing.rectangle(
-                [(0, image.height + canvas_bottom), (image.width - 1, image.height - 1)],
-                fill=canvas_color_rgba,
-            )
-
-        rgba_image = Image.alpha_composite(rgba_image, canvas)
-
-    drawing = ImageDraw.Draw(rgba_image)
+    # Decrease brightness of image
+    enhancer = ImageEnhance.Brightness(rgba_image)
+    rgba_image = enhancer.enhance(float(brightness))
 
     if fill == True or fill == 'true':
         fill_color = (0, 0, 0, 0)
@@ -81,6 +36,7 @@ def make(
         fill_color = None
 
     # Draw the outline
+    drawing = ImageDraw.Draw(rgba_image)
     drawing.rectangle(
         [(left, top), (image.width + right - 1, image.height + bottom - 1)],
         fill=fill_color,
@@ -108,12 +64,7 @@ def main() -> None:
     parser.add_argument('--width', type=int, help='Outline width, in pixels')
     parser.add_argument('--color', help='Outline color')
     parser.add_argument('--fill', help='Whether to fill within the outline')
-    parser.add_argument('--canvas_top', type=int, help='Canvas top coordinate, in pixels')
-    parser.add_argument('--canvas_right', type=int, help='Canvas right coordinate, in pixels')
-    parser.add_argument('--canvas_bottom', type=int, help='Canvas bottom coordinate, in pixels')
-    parser.add_argument('--canvas_left', type=int, help='Canvas left coordinate, in pixels')
-    parser.add_argument('--canvas_color', help='Canvas color')
-    parser.add_argument('--canvas_opacity', help='Canvas opacity (0-255)')
+    parser.add_argument('--brightness', help='Brightness enhance (0.0 to 1.0)')
     parser.add_argument('--format', dest='output_format', help='Image output format')
     args = parser.parse_args()
     make(**vars(args))
