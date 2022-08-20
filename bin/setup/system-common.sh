@@ -149,7 +149,7 @@ outline_overlay_image() {
 
   python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" \
     --left "$left" --right "$right" --top "$top" --bottom "$bottom" --width "$width" \
-    --color "$color" --fill "${fill:-true}" --brightness "$brightness" \
+    --color "$color" --fill "${fill:-true}" --brightness "$brightness"
 }
 
 ##############
