@@ -252,7 +252,7 @@ __setup_mupen64plus() {
   local profile=$1
   local config_path=/opt/retropie/configs/n64/mupen64plus.cfg
   local config_backup_path="$config_path.autoport"
-  local auto_config_path=/opt/retropie/configs/n64/AutoInputCfg.ini
+  local auto_config_path=/opt/retropie/configs/n64/InputAutoCfg.ini
 
   # Restore config backup
   if [ -f "$config_backup_path" ]; then
@@ -313,7 +313,6 @@ _EOF_
 
     # Add auto-configuration values
     for auto_config_key in "${auto_config_keys[@]}"; do
-      echo __find_setting "$auto_config_path" "$device_name" "$auto_config_key"
       local value=$(__find_setting "$auto_config_path" "$device_name" "$auto_config_key")
       echo "$auto_config_key = \"$value\"" >> "$config_path"
     done
