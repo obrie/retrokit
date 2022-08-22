@@ -182,23 +182,23 @@ __setup_redream() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_ppsspp() {
   local profile=$1
-  local config_file=/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
-  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
-  if [ -z "$device_config_file" ]; then
+  local config_path=/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
+  if [ -z "$device_config_path" ]; then
     return
   fi
 
   # Remove joystick configurations
-  sed -i 's/10-[0-9]*\|,//g' "$config_file"
+  sed -i 's/10-[0-9]*\|,//g' "$config_path"
 
   # Merge in those from the device
   while read key separator value; do
     # Merge with existing value
-    sed -i "/^$key *= *1/ s/\$/,$value/" "$config_file"
+    sed -i "/^$key *= *1/ s/\$/,$value/" "$config_path"
 
     # ...or set on its own
-    sed -i "/^$key *= *\$/ s/\$/$value/" "$config_file"
-  done < <(cat "$device_config_file" | grep -Ev '^ *#')
+    sed -i "/^$key *= *\$/ s/\$/$value/" "$config_path"
+  done < <(cat "$device_config_path" | grep -Ev '^ *#')
 }
 
 # Drastic:
@@ -206,17 +206,17 @@ __setup_ppsspp() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_drastic() {
   local profile=$1
-  local config_file=/opt/retropie/configs/nds/drastic/config/drastic.cfg
-  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
-  if [ -z "$device_config_file" ]; then
+  local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
+  if [ -z "$device_config_path" ]; then
     return
   fi
 
   # Remove joystick configurations
-  sed -i '/controls_b/d' "$config_file"
+  sed -i '/controls_b/d' "$config_path"
 
   # Merge in those from the device
-  cat "$device_config_file" | tee -a "$config_file" >/dev/null
+  cat "$device_config_path" | tee -a "$config_path" >/dev/null
 }
 
 # Hypseus-Singe:
@@ -224,14 +224,14 @@ __setup_drastic() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_hypseus() {
   local profile=$1
-  local config_file=/opt/retropie/configs/daphne/hypinput.ini
-  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
-  if [ -z "$device_config_file" ]; then
+  local config_path=/opt/retropie/configs/daphne/hypinput.ini
+  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
+  if [ -z "$device_config_path" ]; then
     return
   fi
 
   # Remove joystick configurations (and default to 0)
-  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\).*$/\1 = \2 \3 0/g' "$config_file"
+  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\).*$/\1 = \2 \3 0/g' "$config_path"
 
   # Merge in those from the device
   while read key separator button axis; do
@@ -240,8 +240,8 @@ __setup_hypseus() {
       joystick_value="$joystick_value $axis"
     fi
 
-    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_file"
-  done < <(cat "$device_config_file" | grep -Ev '^ *#')
+    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_path"
+  done < <(cat "$device_config_path" | grep -Ev '^ *#')
 }
 
 # Mupen64plus:
@@ -250,9 +250,9 @@ __setup_hypseus() {
 # highest priority matches.
 __setup_mupen64plus() {
   local profile=$1
-  local config_file=/opt/retropie/configs/n64/mupen64plus.cfg
+  local config_path=/opt/retropie/configs/n64/mupen64plus.cfg
   local config_backup_path="$config_path.autoport"
-  local auto_config_file=/opt/retropie/configs/n64/AutoInputCfg.ini
+  local auto_config_path=/opt/retropie/configs/n64/AutoInputCfg.ini
 
   # Restore config backup
   if [ -f "$config_backup_path" ]; then
@@ -300,10 +300,10 @@ __setup_mupen64plus() {
     local player_section="Input-SDL-Control$player_index"
 
     # Remove the existing section for this player
-    sed -i "/^\[$player_section\]/, /\[/ { //"'!'"d }; /^\[$player_section\]/d" "$config_file"
+    sed -i "/^\[$player_section\]/, /\[/ { //"'!'"d }; /^\[$player_section\]/d" "$config_path"
 
     # Start the new section
-    cat >> "$config_file" << _EOF_
+    cat >> "$config_path" << _EOF_
 [$player_section]
 version = 2.000000
 mode = 0
@@ -313,8 +313,9 @@ _EOF_
 
     # Add auto-configuration values
     for auto_config_key in "${auto_config_keys[@]}"; do
-      local value=(__find_setting "$auto_config_file" "$device_name" "$auto_config_key")
-      echo "$auto_config_key = \"$value\"" >> "$config_file"
+      echo __find_setting "$auto_config_path" "$device_name" "$auto_config_key"
+      local value=$(__find_setting "$auto_config_path" "$device_name" "$auto_config_key")
+      echo "$auto_config_key = \"$value\"" >> "$config_path"
     done
   done
 }
