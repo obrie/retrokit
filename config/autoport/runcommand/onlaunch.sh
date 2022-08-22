@@ -87,8 +87,8 @@ __get_system_type() {
 
   if [[ "$emulator" == "lr-"* ]]; then
     echo 'libretro'
-  elif [[ "$emulator" =~ (redream|drastic|ppsspp|hypseus) ]]; then
-    echo "$emulator"
+  elif [[ "$emulator" =~ ^(redream|drastic|ppsspp|hypseus|mupen64plus) ]]; then
+    echo "${BASH_REMATCH[1]}"
   fi
 }
 
@@ -134,6 +134,7 @@ __setup_libretro_input() {
 # Rewrites the port{index} settings in redream.cfg based on the highest
 # priority matches.
 __setup_redream() {
+  local profile=$1
   local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
   local config_backup_path="$config_path.autoport"
 
@@ -241,6 +242,81 @@ __setup_hypseus() {
 
     sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_file"
   done < <(cat "$device_config_file" | grep -Ev '^ *#')
+}
+
+# Mupen64plus:
+#
+# Rewrites the Input-SDL-Control{index} settings in mupen64plus.cfg based on the
+# highest priority matches.
+__setup_mupen64plus() {
+  local profile=$1
+  local config_file=/opt/retropie/configs/n64/mupen64plus.cfg
+  local config_backup_path="$config_path.autoport"
+  local auto_config_file=/opt/retropie/configs/n64/AutoInputCfg.ini
+
+  # Restore config backup
+  if [ -f "$config_backup_path" ]; then
+    mv -v "$config_backup_path" "$config_path"
+  fi
+
+  __match_players "$profile" joystick
+  if [ ${#player_indexes[@]} -eq 0 ]; then
+    # No matches found, use defaults
+    return
+  fi
+
+  # Create config backup
+  cp -v "$config_path" "$config_backup_path"
+
+  local auto_config_keys=(
+    'A Button'
+    'AnalogDeadzone'
+    'AnalogPeak'
+    'B Button'
+    'C Button D'
+    'C Button L'
+    'C Button R'
+    'C Button U'
+    'DPad D'
+    'DPad L'
+    'DPad R'
+    'DPad U'
+    'L Trig'
+    'Mempark switch'
+    'mouse'
+    'plugged'
+    'plugin'
+    'R Trig'
+    'Rumblepak switch'
+    'Start'
+    'X Axis'
+    'Y Axis'
+    'Z Trig'
+  )
+
+  for player_index in "${player_indexes[@]}"; do
+    local device_index=${players["$player_index/device_index"]}
+    local device_name=${devices["$device_index/name"]}
+    local player_section="Input-SDL-Control$player_index"
+
+    # Remove the existing section for this player
+    sed -i "/^\[$player_section\]/, /\[/ { //"'!'"d }; /^\[$player_section\]/d" "$config_file"
+
+    # Start the new section
+    cat >> "$config_file" << _EOF_
+[$player_section]
+version = 2.000000
+mode = 0
+device = $device_index
+name = "$device_name"
+_EOF_
+
+    # Add auto-configuration values
+    for auto_config_key in "${auto_config_keys[@]}"; do
+      local value=(__find_setting "$auto_config_file" "$device_name" "$auto_config_key")
+      echo "$auto_config_key = \"$value\"" >> "$config_file"
+    done
+  done
 }
 
 # Prepares the primary emulator input configuration to be merged with a

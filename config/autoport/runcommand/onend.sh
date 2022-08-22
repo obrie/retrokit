@@ -49,6 +49,10 @@ __restore_hypseus() {
   __restore_joystick_config /opt/retropie/configs/daphne/hypinput.ini
 }
 
+__restore_mupen64plus() {
+  __restore_joystick_config /opt/retropie/configs/n64/mupen64plus.cfg
+}
+
 __restore_joystick_config() {
   local config_path=$1
   local config_backup_path="$config_path.autoport"

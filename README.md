@@ -17,7 +17,7 @@ Specifically, it can set up:
 * Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
 * HiScores for MAME
 * Multi-Tap devices
-* Port selection based on input name (libretro cores, drastic, ppsspp, redream, and hypseus)
+* Port selection based on input (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
 * ROM Playlist (m3u) auto-generation for multi-disc games
 * In-game manuals
 * System controller reference guides
