@@ -23,8 +23,8 @@ __get_system_type() {
 
   if [[ "$emulator" == "lr-"* ]]; then
     echo 'libretro'
-  elif [[ "$emulator" =~ (redream|drastic|ppsspp|hypseus) ]]; then
-    echo "$emulator"
+  elif [[ "$emulator" =~ ^(redream|drastic|ppsspp|hypseus|mupen64plus) ]]; then
+    echo "${BASH_REMATCH[1]}"
   fi
 }
 
