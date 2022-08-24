@@ -76,7 +76,7 @@ table td {
 }
 
 #info-usage img {
-  height: 60px;
+  height: 55px;
 }
 
 #info-usage table {
@@ -91,7 +91,7 @@ table td {
 
 #info-usage td {
   vertical-align: middle;
-  height: 60px;
+  height: 55px;
 }
 
 #usage-hotkeys,
@@ -145,11 +145,11 @@ table td {
 }
 
 #controller-mappings img {
-  height: 60px;
+  height: 55px;
 }
 
 #controller-mappings td {
-  height: 60px;
+  height: 55px;
   vertical-align: middle;
 }
 
