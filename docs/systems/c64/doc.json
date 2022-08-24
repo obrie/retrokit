@@ -12,5 +12,21 @@
   },
   "images": {
     "controller": "keyboard.png"
+  },
+  "controls": {
+    "keyboard_extra": {
+      "ESC": "RUN/STOP",
+      "Tab": "Ctrl",
+      "Left Ctrl": "Commodore",
+      "Backspace": "DEL",
+      "PgUp": "RESTORE",
+      "Home": "CLR/HOME",
+      "Insert": "£",
+      "Delete": "↑ / π",
+      "`": "←",
+      "[": "@",
+      "]": "*",
+      "\\": "="
+    }
   }
 }
