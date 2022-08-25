@@ -194,9 +194,8 @@ __create_retroarch_config() {
 
   # Link emulator/rom retroarch config to overlay config
   echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $overlay_config_path"
-  cat > "$emulator_config_dir/$rom_name.cfg" <<EOF
-input_overlay = "$overlay_config_path"
-EOF
+  touch "$emulator_config_dir/$rom_name.cfg"
+  crudini --set "$emulator_config_dir/$rom_name.cfg" '' 'input_overlay' "\"$overlay_config_path\""
 
   installed_files["$emulator_config_dir/$rom_name.cfg"]=1
 }
@@ -208,8 +207,16 @@ __remove_unused_configs() {
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
     while read -r path; do
-      [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' | grep -v "$library_name.cfg")
+      if [ ! "${installed_files["$path"]}" ] && grep -q input_overlay "$path"; then
+        # Remove the input_overlay override
+        crudini --del "$path" '' input_overlay
+
+        # Delete the file if it's now empty
+        if [ ! -s "$path" ]; then
+          rm -fv "$path"
+        fi
+      fi
+    done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' -not -name "$library_name.cfg")
   done < <(get_core_library_names)
 
   # Remove old, unused system overlay configs
@@ -219,12 +226,21 @@ __remove_unused_configs() {
 }
 
 restore() {
-  # Assumption is that ROM cfg files under the emulator directory are *only*
-  # for overlay configurations
   while read -r library_name; do
+    # Check if any overrides exist
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
-    find "$retroarch_config_dir/$library_name" -name '*.cfg' -exec rm -fv '{}' +
+    while read rom_config_path; do
+      if grep -q input_overlay "$rom_config_path"; then
+        # Remove the input_overlay override
+        crudini --del "$rom_config_path" '' input_overlay
+
+        # Delete the file if it's now empty
+        if [ ! -s "$rom_config_path" ]; then
+          rm -fv "$rom_config_path"
+        fi
+      fi
+    done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' -not -name "$library_name.cfg")
   done < <(get_core_library_names)
 }
 

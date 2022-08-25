@@ -39,6 +39,12 @@ __load_lightgun_titles() {
 }
 
 # Game-specific retroarch configuration overrides
+# 
+# Note that overrides get defined under the retroarch emulator's directory
+# instead of the RetroPie roms directory.  This is because the `--appendconfig`
+# option that's used by RetroPie cannot override configurations defined in an
+# existing built-in RetroArch configuration, which makes configurations a pain
+# to manage otherwise.
 __configure_retroarch_configs() {
   local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
   if [ -z "$rom_dirs" ]; then
@@ -50,25 +56,25 @@ __configure_retroarch_configs() {
 
   # Merge in rom-specific overrides
   while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
-    while read -r rom_dir; do
-      if ls "$rom_dir/$rom_filename" >/dev/null 2>&1; then
-        local target_path="$rom_dir/$rom_filename.cfg"
+    # Retroarch emulator-specific config
+    local emulator_config_dir="$retroarch_config_dir/$library_name"
+    mkdir -p "$emulator_config_dir"
 
-        # Copy over multitap overrides
-        if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
-          ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
-        fi
+    local target_path="$emulator_config_dir/$rom_name.cfg"
 
-        # Copy over lightgun overrides
-        if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
-          ini_merge '{system_config_dir}/retroarch-lightgun.cfg' "$target_path" backup=false
-        fi
+    # Copy over multitap overrides
+    if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
+      ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
+    fi
 
-        if [ -n "$override_file" ]; then
-          ini_merge "$override_file" "$target_path" backup=false
-        fi
-      fi
-    done < <(echo "$rom_dirs")
+    # Copy over lightgun overrides
+    if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+      ini_merge '{system_config_dir}/retroarch-lightgun.cfg' "$target_path" backup=false
+    fi
+
+    if [ -n "$override_file" ]; then
+      ini_merge "$override_file" "$target_path" backup=false
+    fi
   done < <(__list_libretro_roms 'cfg')
 }
 
@@ -196,23 +202,28 @@ __list_libretro_roms() {
 
 restore() {
   while read -r library_name; do
-    # Remove core options
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     if [ -d "$emulator_config_dir" ]; then
-      find "$emulator_config_dir" '(' -name '*.opt' -o -name '*.opt.rk-src*' ')' -exec rm -fv '{}' +
+      # Remove core options
+      find "$emulator_config_dir" -name '*.opt' -exec rm -fv '{}' +
+
+      # Remove retroarch config overrides
+      while read rom_config_path; do
+        if grep -q input_overlay "$rom_config_path"; then
+          # Keep input_overlay as that's managed by system-roms-overlays
+          sed -i '/^input_overlay[ =]/!d' "$rom_config_path"
+        else
+          rm -fv "$rom_config_path"
+        fi
+      done < <(find "$emulator_config_dir" -name '*.cfg' -not -name "$library_name.cfg")
     fi
 
     # Remove retroarch mappings
     local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
     if [ -d "$emulator_remapping_dir" ]; then
-      find "$emulator_remapping_dir" '(' -name '*.rmp' -o -name '*.rmp.rk-src*' ')' -not -name "$library_name.rmp*" -exec rm -fv '{}' +
+      find "$emulator_remapping_dir" -name '*.rmp' -not -name "$library_name.rmp*" -exec rm -fv '{}' +
     fi
   done < <(get_core_library_names)
-
-  # Remove retroarch configs
-  while read -r rom_dir; do
-    find "$rom_dir" -maxdepth 1 '(' -name '*.cfg' -o -name '*.cfg.rk-src*' ')' -exec rm -fv '{}' +
-  done < <(system_setting '.roms.dirs[] | .path')
 }
 
 setup "$1" "${@:3}"
