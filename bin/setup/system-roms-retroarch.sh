@@ -209,12 +209,14 @@ restore() {
 
       # Remove retroarch config overrides
       while read rom_config_path; do
-        if grep -q input_overlay "$rom_config_path"; then
+        if grep -qvF input_overlay "$rom_config_path"; then
           # Keep input_overlay as that's managed by system-roms-overlays
           echo "Removing overrides from $rom_config_path"
           sed -i '/^input_overlay[ =]/!d' "$rom_config_path"
-        else
-          rm -fv "$rom_config_path"
+
+          if [ ! -s "$rom_config_path" ]; then
+            rm -fv "$rom_config_path"
+          fi
         fi
       done < <(find "$emulator_config_dir" -name '*.cfg' -not -name "$library_name.cfg")
     fi
