@@ -211,6 +211,7 @@ restore() {
       while read rom_config_path; do
         if grep -q input_overlay "$rom_config_path"; then
           # Keep input_overlay as that's managed by system-roms-overlays
+          echo "Removing overrides from $rom_config_path"
           sed -i '/^input_overlay[ =]/!d' "$rom_config_path"
         else
           rm -fv "$rom_config_path"
