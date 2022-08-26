@@ -24,6 +24,13 @@
       "gamestate": [
         "{rom_dir}/{rom}_*.mcd"
       ]
+    },
+    "lr-pcsx-rearmed": {
+      "core_name": "pcsx_rearmed",
+      "library_name": "PCSX-ReARMed",
+      "gamestate": [
+        "{rom_dir}/pcsx-card2.mcd"
+      ]
     }
   },
   "cheats": {
@@ -94,6 +101,10 @@
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/psx.json"
+    },
+    "emulator": {
+      "source": "file://$HOME/retrokit/config/systems/psx/emulators.tsv",
+      "column_rating": null
     }
   },
   "roms": {
@@ -237,7 +248,9 @@
       ],
       "!names": [
         "# Missing patches to convert to GunCon",
-        "Die Hard Trilogy (USA)"
+        "Die Hard Trilogy (USA)",
+        "# Lightgun is disabled (use other regions instead)",
+        "Resident Evil - Survivor (USA)"
       ],
       "+titles": [
         "Carmageddon",
