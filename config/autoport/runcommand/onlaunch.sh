@@ -405,7 +405,7 @@ __match_players() {
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
     local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
     local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
-    local config_device_type=$(__setting "$profile" "${device_type}${config_index}_device_type")
+    local config_device_type=$(__setting "$profile" "${device_type}${config_index}_device_type" || __setting "$profile" "${device_type}_device_type")
     local config_limit=$(__setting "$profile" "${device_type}${config_index}_limit")
 
     # Track how many matches we've found for this config in case there's a limit
