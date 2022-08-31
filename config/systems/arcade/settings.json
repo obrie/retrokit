@@ -312,7 +312,7 @@
           "target": "$HOME/retrokit/tmp/arcade/mame0244.dat"
         },
         "machine": {
-          "source": "{url}/roms.zip/roms%2F{machine}.zip",
+          "source": "{url}/MAME%200.245%20ROMs%20%28split%29{machine}.zip",
           "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
