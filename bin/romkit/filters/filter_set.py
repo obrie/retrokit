@@ -18,7 +18,11 @@ class FilterSet:
     def from_json(cls, json: dict, config: dict, supported_filters: list, log: bool = True) -> FilterSet:
         filter_set = cls()
 
-        enabled_filters = json.get('enabled', supported_filters)
+        enabled_filter_names = json.get('enabled')
+        if enabled_filter_names:
+            enabled_filters = filter(lambda filter_cls: filter_cls.name in enabled_filter_names, supported_filters)
+        else:
+            enabled_filters = supported_filters
 
         for filter_cls in enabled_filters:
             allowlist = json.get(filter_cls.name)
