@@ -312,8 +312,7 @@
           "target": "$HOME/retrokit/tmp/arcade/mame0244.dat"
         },
         "machine": {
-          "source": "{url}/{parent}.zip",
-          "download": "$HOME/RetroPie/roms/arcade/.mame/{parent}.merged.zip",
+          "source": "{url}/roms.zip/roms%2F{machine}.zip",
           "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
