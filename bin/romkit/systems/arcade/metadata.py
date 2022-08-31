@@ -194,7 +194,10 @@ class ArcadeEmulatorMetadata(EmulatorMetadata):
         rating = 5
         for col in self.QUALITY_COLUMNS:
             if row[col] == 'x':
-                rating -= 1
+                if col == self.COLUMN_FPS:
+                    rating -= 2
+                else:
+                    rating -= 1
             elif row[col] == '!':
                 # Start out lower when there's something significantly broken
                 if rating == 5:
