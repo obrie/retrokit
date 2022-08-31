@@ -91,6 +91,7 @@ class Resource:
     # rely on the symlink to create the new target
     def check_xref(self) -> None:
         if self.xref_path and self.xref_path.exists() and not self.exists():
+            self.target_path.path.parent.mkdir(parents=True, exist_ok=True)
             self.xref_path.realpath().rename(self.target_path.path)
 
     # Make sure the cross-reference path reflects the current target path
