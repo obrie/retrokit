@@ -100,6 +100,17 @@
       ]
     },
     "lr-mame0222": {
+      "core_name": "mame_",
+      "library_name": "MAME",
+      "gamestate": [
+        "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg",
+        "$HOME/RetroPie/roms/arcade/mame/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/arcade/mame/diff/{rom}.df",
+        "$HOME/RetroPie/roms/arcade/mame/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/arcade/mame/nvram/{rom}"
+      ]
+    },
+    "lr-mame0244": {
       "aliases": ["lr-mame"],
       "core_name": "mame_",
       "library_name": "MAME",
@@ -271,7 +282,7 @@
       "resources": {
         "dat": {
           "source": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame.dat"
+          "target": "$HOME/retrokit/tmp/arcade/mame0222.dat"
         },
         "machine": {
           "source": "{url}/{parent}.zip",
@@ -286,6 +297,33 @@
         },
         "sample": {
           "source": "$ROMSET_MAME_0223_URL/Arcade/samples.zip/samples%2F{sample}.zip",
+          "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
+        }
+      },
+      "emulator": "lr-mame0222"
+    },
+    {
+      "name": "mame-0244",
+      "protocol": "http",
+      "url": "$ROMSET_MAME_0244_URL",
+      "resources": {
+        "dat": {
+          "source": "https://archive.org/download/mame0244/mame0244lx.zip/mame0244.xml",
+          "target": "$HOME/retrokit/tmp/arcade/mame0244.dat"
+        },
+        "machine": {
+          "source": "{url}/{parent}.zip",
+          "download": "$HOME/RetroPie/roms/arcade/.mame/{parent}.merged.zip",
+          "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}.zip",
+          "install": {"action": "zip_merge"}
+        },
+        "disk": {
+          "source": "$ROMSET_MAME_LATEST_URL/{machine}/{disk}.chd",
+          "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}/{disk}.chd",
+          "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
+        },
+        "sample": {
+          "source": "$ROMSET_MAME_0245_URL/samples/{sample}.zip",
           "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },
