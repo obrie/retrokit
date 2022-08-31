@@ -305,7 +305,7 @@
     {
       "name": "mame-0244",
       "protocol": "http",
-      "url": "$ROMSET_MAME_0244_URL",
+      "url": "$ROMSET_MAME_0245_URL",
       "resources": {
         "dat": {
           "source": "https://archive.org/download/mame0244/mame0244lx.zip/mame0244.xml",
@@ -323,7 +323,7 @@
           "xref": "$HOME/RetroPie/roms/arcade/.chd/{machine}/{disk}-{sha1}.chd"
         },
         "sample": {
-          "source": "$ROMSET_MAME_0245_URL/samples/{sample}.zip",
+          "source": "$ROMSET_MAME_LATEST_URL/samples/{sample}.zip",
           "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
         }
       },
