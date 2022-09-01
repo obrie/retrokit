@@ -30,7 +30,7 @@ __build_mame0222() {
     if [ ! -f "$HOME/RetroPie/BIOS/mame0222/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       git clone -b lrmame0222 --depth 1 https://github.com/libretro/mame.git "$tmp_ephemeral_dir/mame0222-libretro"
       rm -rf "$HOME/RetroPie/BIOS/mame0222/plugins"
-      cp -Rv "$tmp_ephemeral_dir/mame-libretro/plugins/" "$HOME/RetroPie/BIOS/mame0222/"
+      cp -Rv "$tmp_ephemeral_dir/mame0222-libretro/plugins/" "$HOME/RetroPie/BIOS/mame0222/"
     else
       echo "Already installed plugins (lr-mame0222)"
     fi
