@@ -100,7 +100,7 @@
       ]
     },
     "lr-mame0222": {
-      "core_name": "mame_",
+      "core_name": "mame",
       "library_name": "MAME",
       "gamestate": [
         "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg",
@@ -112,7 +112,7 @@
     },
     "lr-mame0244": {
       "aliases": ["lr-mame"],
-      "core_name": "mame_",
+      "core_name": "mame",
       "library_name": "MAME",
       "gamestate": [
         "$HOME/RetroPie/roms/arcade/mame/cfg/default.cfg",

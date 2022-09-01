@@ -115,7 +115,7 @@ __configure_retroarch_core_options() {
     # core defaults
     local target_path="$emulator_config_dir/$rom_name.opt"
     echo "Merging $core_name system overrides to $target_path"
-    grep -E "^$core_name" "$system_core_options_path" > "$target_path" || true
+    grep -E "^$core_name[\-_]" "$system_core_options_path" > "$target_path" || true
 
     # Copy over multitap overrides
     if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
