@@ -70,7 +70,7 @@
     }
   },
   "bios": {
-    "url": "$ROMSET_MAME_0222_URL",
+    "url": "$ROMSET_MAME_LATEST_URL",
     "dir": "$HOME/RetroPie/BIOS",
     "files": {
       "jaguar.zip": "{url}/jaguar.zip"

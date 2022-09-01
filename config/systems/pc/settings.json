@@ -11,7 +11,7 @@
     "concurrency": 2
   },
   "bios": {
-    "url": "$ROMSET_MAME_0222_URL",
+    "url": "$ROMSET_MAME_LATEST_URL",
     "dir": "/opt/retropie/configs/pc/mt32-roms",
     "files": {
       "cm32l_control.rom": "{url}/cm32l.zip/cm32l_control.rom",
