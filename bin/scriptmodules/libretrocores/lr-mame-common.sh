@@ -39,7 +39,7 @@ function configure_lr-mame-common() {
   for system in arcade mame-libretro; do
       mkRomDir "$system"
       defaultRAConfig "$system"
-      addEmulator 0 "$md_id" "$system" "$current_dir $retroarch_bin $md_inst/mamearcade_libretro.so $retroarch_config $biosdir %ROM%"
+      addEmulator 0 "$md_id" "$system" "$script_runner $retroarch_bin $md_inst/mamearcade_libretro.so $retroarch_config $biosdir %ROM%"
       addSystem "$system"
   done
 }
