@@ -41,9 +41,9 @@ __build_mame0244() {
   if has_emulator 'lr-mame0244'; then
     if [ ! -f "$HOME/RetroPie/BIOS/mame0244/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       download "https://github.com/mamedev/mame/archive/ee3942fc824edaf67768c249f2dd57ec3a20f4b5.zip" "$tmp_ephemeral_dir/mame0244.zip"
-      unzip "$tmp_ephemeral_dir/mame0244.zip" "mame-*/plugins/*"
+      unzip "$tmp_ephemeral_dir/mame0244.zip" "mame-*/plugins/*" -d "$tmp_ephemeral_dir/mame0244"
       rm -rf "$HOME/RetroPie/BIOS/mame0244/plugins"
-      cp -Rv "$tmp_ephemeral_dir/mame-"*"/plugins/" "$HOME/RetroPie/BIOS/mame0244/"
+      cp -Rv "$tmp_ephemeral_dir/mame0244/mame-"*"/plugins/" "$HOME/RetroPie/BIOS/mame0244/"
     else
       echo "Already installed plugins (lr-mame0244)"
     fi
