@@ -39,6 +39,8 @@ first_path() {
   local path=$(each_path "$1" | tail -n 1)
   if [ -e "$path" ]; then
     process_path "$path" "${@:2}"
+  else
+    return 1
   fi
 }
 

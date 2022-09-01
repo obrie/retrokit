@@ -18,7 +18,8 @@ build() {
   __build_fbneo
   __build_mame2015
   __build_mame2016
-  __build_mame
+  __build_mame0222
+  __build_mame0244
 }
 
 __build_fbneo() {
@@ -48,14 +49,28 @@ __build_mame2016() {
   fi
 }
 
-__build_mame() {
+__build_mame0222() {
   # Cheats: MAME (Pugsy)
   if has_emulator 'lr-mame'; then
     local url='http://cheat.retrogames.com/download/cheat0221.zip'
 
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0222/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       download "$url" "$tmp_ephemeral_dir/mame-cheats.zip"
-      unzip -jo "$tmp_ephemeral_dir/mame-cheats.zip" "cheat.7z" -d "$HOME/RetroPie/BIOS/mame/"
+      unzip -jo "$tmp_ephemeral_dir/mame-cheats.zip" "cheat.7z" -d "$HOME/RetroPie/BIOS/mame0222/"
+    else
+      echo "Already downloaded $url"
+    fi
+  fi
+}
+
+__build_mame0244() {
+  # Cheats: MAME (Pugsy)
+  if has_emulator 'lr-mame'; then
+    local url='http://cheat.retrogames.com/download/cheat0245.zip'
+
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0244/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      download "$url" "$tmp_ephemeral_dir/mame-cheats.zip"
+      unzip -jo "$tmp_ephemeral_dir/mame-cheats.zip" "cheat.7z" -d "$HOME/RetroPie/BIOS/mame0244/"
     else
       echo "Already downloaded $url"
     fi
@@ -65,9 +80,10 @@ __build_mame() {
 remove() {
   rm -rfv \
     "$HOME/RetroPie/BIOS/fbneo/cheats/" \
-    "$HOME/RetroPie/BIOS/mame/cheats.7z" \
     "$HOME/RetroPie/BIOS/mame2015/cheat.7z" \
-    "$HOME/RetroPie/BIOS/mame2016/cheat.7z"
+    "$HOME/RetroPie/BIOS/mame2016/cheat.7z" \
+    "$HOME/RetroPie/BIOS/mame0222/cheats.7z" \
+    "$HOME/RetroPie/BIOS/mame0244/cheats.7z"
 }
 
 setup "${@}"

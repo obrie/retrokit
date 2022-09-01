@@ -33,5 +33,5 @@ function install_lr-mame0222() {
 }
 
 function configure_lr-mame0222() {
-    configure_lr-mame
+    configure_lr-mame-common 0222
 }

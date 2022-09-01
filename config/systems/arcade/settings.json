@@ -297,7 +297,7 @@
         },
         "sample": {
           "source": "$ROMSET_MAME_0223_URL/Arcade/samples.zip/samples%2F{sample}.zip",
-          "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame0222/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame0222"
@@ -323,7 +323,7 @@
         },
         "sample": {
           "source": "$ROMSET_MAME_LATEST_URL/samples/{sample}.zip",
-          "target": "$HOME/RetroPie/BIOS/mame/samples/{sample}.zip"
+          "target": "$HOME/RetroPie/BIOS/mame0244/samples/{sample}.zip"
         }
       },
       "emulator": "lr-mame"

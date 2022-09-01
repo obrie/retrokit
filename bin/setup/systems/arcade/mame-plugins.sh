@@ -9,7 +9,8 @@ setup_module_desc='Plugins support for MAME 2016 and newer (cheat, hiscore, data
 
 build() {
   __build_mame2016
-  __build_mame
+  __build_mame0222
+  __build_mame0244
 }
 
 __build_mame2016() {
@@ -24,14 +25,27 @@ __build_mame2016() {
   fi
 }
 
-__build_mame() {
-  if has_emulator 'lr-mame'; then
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      git clone -b lrmame0222 --depth 1 https://github.com/libretro/mame.git "$tmp_ephemeral_dir/mame-libretro"
-      rm -rf "$HOME/RetroPie/BIOS/mame/plugins"
-      cp -Rv "$tmp_ephemeral_dir/mame-libretro/plugins/" "$HOME/RetroPie/BIOS/mame/"
+__build_mame0222() {
+  if has_emulator 'lr-mame0222'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0222/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      git clone -b lrmame0222 --depth 1 https://github.com/libretro/mame.git "$tmp_ephemeral_dir/mame0222-libretro"
+      rm -rf "$HOME/RetroPie/BIOS/mame0222/plugins"
+      cp -Rv "$tmp_ephemeral_dir/mame-libretro/plugins/" "$HOME/RetroPie/BIOS/mame0222/"
     else
-      echo "Already installed plugins (lr-mame)"
+      echo "Already installed plugins (lr-mame0222)"
+    fi
+  fi
+}
+
+__build_mame0244() {
+  if has_emulator 'lr-mame0244'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0244/plugins/boot.lua" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      download "https://github.com/mamedev/mame/archive/ee3942fc824edaf67768c249f2dd57ec3a20f4b5.zip" "$tmp_ephemeral_dir/mame0244.zip"
+      unzip "$tmp_ephemeral_dir/mame0244.zip" "mame-*/plugins/*"
+      rm -rf "$HOME/RetroPie/BIOS/mame0244/plugins"
+      cp -Rv "$tmp_ephemeral_dir/mame-"*"/plugins/" "$HOME/RetroPie/BIOS/mame0244/"
+    else
+      echo "Already installed plugins (lr-mame0244)"
     fi
   fi
 }
@@ -39,7 +53,8 @@ __build_mame() {
 remove() {
   rm -rfv \
     "$HOME/RetroPie/BIOS/mame2016/plugins/" \
-    "$HOME/RetroPie/BIOS/mame/plugins/"
+    "$HOME/RetroPie/BIOS/mame0222/plugins/" \
+    "$HOME/RetroPie/BIOS/mame0244/plugins/"
 }
 
 setup "${@}"

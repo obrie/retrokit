@@ -102,7 +102,8 @@ sync_media() {
   # This should be the full list of media paths
   local paths=(
     /home/pi/RetroPie/BIOS/fbneo/samples/
-    /home/pi/RetroPie/BIOS/mame/samples/
+    /home/pi/RetroPie/BIOS/mame0222/mame/samples/
+    /home/pi/RetroPie/BIOS/mame0244/mame/samples/
     /home/pi/RetroPie/BIOS/mame2003-plus/samples/
     /home/pi/RetroPie/BIOS/mame2003/samples/
     /home/pi/RetroPie/BIOS/mame2010/samples/

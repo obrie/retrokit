@@ -15,7 +15,8 @@ gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={fi
 
 build() {
   __build_mame2016
-  __build_mame
+  __build_mame0222
+  __build_mame0244
 }
 
 __build_mame2016() {
@@ -33,20 +34,38 @@ __build_mame2016() {
   fi
 }
 
-__build_mame() {
-  if has_emulator 'lr-mame'; then
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+__build_mame0222() {
+  if has_emulator 'lr-mame0222'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0222/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_command_dat
-      file_cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame/history/command.dat" backup=false envsubst=false
+      file_cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame0222/history/command.dat" backup=false envsubst=false
     else
       echo "Already installed command.dat (lr-mame)"
     fi
 
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0222/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
       __download_gameinit_dat
-      file_cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame/history/gameinit.dat" backup=false envsubst=false
+      file_cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame0222/history/gameinit.dat" backup=false envsubst=false
     else
-      echo "Already installed gameinit.dat (lr-mame)"
+      echo "Already installed gameinit.dat (lr-mame0222)"
+    fi
+  fi
+}
+
+__build_mame0244() {
+  if has_emulator 'lr-mame'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0244/history/command.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+      __download_command_dat
+      file_cp "$tmp_ephemeral_dir/command.dat" "$HOME/RetroPie/BIOS/mame0244/history/command.dat" backup=false envsubst=false
+    else
+      echo "Already installed command.dat (lr-mame)"
+    fi
+
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0244/history/gameinit.dat" ]  || [ "$FORCE_UPDATE" == 'true' ]; then
+      __download_gameinit_dat
+      file_cp "$tmp_ephemeral_dir/gameinit.dat" "$HOME/RetroPie/BIOS/mame0244/history/gameinit.dat" backup=false envsubst=false
+    else
+      echo "Already installed gameinit.dat (lr-mame0244)"
     fi
   fi
 }
@@ -79,10 +98,12 @@ __download_gameinit_dat() {
 
 remove() {
   rm -fv \
-    "$HOME/RetroPie/BIOS/mame/command.dat" \
-    "$HOME/RetroPie/BIOS/mame/gameinit.dat" \
-    "$HOME/RetroPie/BIOS/mame2016/command.dat" \
-    "$HOME/RetroPie/BIOS/mame2016/gameinit.dat"
+    "$HOME/RetroPie/BIOS/mame2016/history/command.dat" \
+    "$HOME/RetroPie/BIOS/mame2016/history/gameinit.dat" \
+    "$HOME/RetroPie/BIOS/mame0222/history/command.dat" \
+    "$HOME/RetroPie/BIOS/mame0222/history/gameinit.dat" \
+    "$HOME/RetroPie/BIOS/mame0244/history/command.dat" \
+    "$HOME/RetroPie/BIOS/mame0244/history/gameinit.dat"
 }
 
 setup "${@}"

@@ -15,7 +15,8 @@ setup_module_desc='Hiscore support for MAME'
 # 
 # The following emulators have their hiscores installed in the plugins directory:
 # * lr-mame2016 ($HOME/RetroPie/BIOS/mame2016/plugins/hiscore/hiscore.dat)
-# * lr-mame ($HOME/RetroPie/BIOS/mame/plugins/hiscore/hiscore.dat)
+# * lr-mame0222 ($HOME/RetroPie/BIOS/mame0222/plugins/hiscore/hiscore.dat)
+# * lr-mame0244 ($HOME/RetroPie/BIOS/mame0244/plugins/hiscore/hiscore.dat)
 build() {
   __build_mame2010
   __build_mame2015
@@ -34,16 +35,26 @@ __build_mame2015() {
 }
 
 configure() {
-  __configure_mame
+  if has_emulator 'lr-mame0222'; then
+    __configure_mame 0222
+  fi
+
+  if has_emulator 'lr-mame0244'; then
+    __configure_mame 0244
+  fi
 }
 
 __configure_mame() {
-  file_cp '{system_config_dir}/mame/hiscore.ini' "$HOME/RetroPie/BIOS/mame/ini/hiscore.ini" backup=false
+  local version=$1
+
+  local hiscore_path=$(first_path "{system_config_dir}/mame$version/hiscore.ini" || first_path '{system_config_dir}/mame/hiscore.ini')
+  file_cp "$hiscore_path" "$HOME/RetroPie/BIOS/mame$version/ini/hiscore.ini" backup=false
 }
 
 restore() {
   rm -fv \
-    "$HOME/RetroPie/BIOS/mame/ini/hiscore.ini"
+    "$HOME/RetroPie/BIOS/mame0222/ini/hiscore.ini" \
+    "$HOME/RetroPie/BIOS/mame0244/ini/hiscore.ini"
 }
 
 remove() {

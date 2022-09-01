@@ -20,7 +20,8 @@ history_dat_url='https://www.arcade-history.com/dats/historydat241.zip'
 build() {
   __build_mame2003_plus
   __build_mame2016
-  __build_mame
+  __build_mame0222
+  __build_mame0244
 }
 
 __build_mame2003_plus() {
@@ -42,15 +43,28 @@ __build_mame2016() {
   fi
 }
 
-__build_mame() {
-  if has_emulator 'lr-mame'; then
-    if [ ! -f "$HOME/RetroPie/BIOS/mame/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+__build_mame0222() {
+  if has_emulator 'lr-mame0222'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0222/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       download "$history_dat_url" "$tmp_ephemeral_dir/historydat.zip"
 
-      mkdir -p "$HOME/RetroPie/BIOS/mame/history"
-      unzip -oj "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame/history/"
+      mkdir -p "$HOME/RetroPie/BIOS/mame0222/history"
+      unzip -oj "$tmp_ephemeral_dir/historydat.zip" -d "$HOME/RetroPie/BIOS/mame0222/history/"
     else
-      echo "Already installed history.dat (lr-mame)"
+      echo "Already installed history.dat (lr-mame0222)"
+    fi
+  fi
+}
+
+__build_mame0244() {
+  if has_emulator 'lr-mame0244'; then
+    if [ ! -f "$HOME/RetroPie/BIOS/mame0244/history/history.xml" ] || [ "$FORCE_UPDATE" == 'true' ]; then
+      download 'https://www.arcade-history.com/dats/historyxml244.zip' "$tmp_ephemeral_dir/historyxml.zip"
+
+      mkdir -p "$HOME/RetroPie/BIOS/mame0244/history"
+      unzip -oj "$tmp_ephemeral_dir/historyxml.zip" -d "$HOME/RetroPie/BIOS/mame0244/history/"
+    else
+      echo "Already installed history.dat (lr-mame0244)"
     fi
   fi
 }
@@ -58,7 +72,8 @@ __build_mame() {
 remove() {
   rm -fv \
     "$HOME/RetroPie/BIOS/mame2016/history/history.dat" \
-    "$HOME/RetroPie/BIOS/mame/history/history.dat"
+    "$HOME/RetroPie/BIOS/mame0222/history/history.dat" \
+    "$HOME/RetroPie/BIOS/mame0244/history/history.xml"
 }
 
 setup "${@}"
