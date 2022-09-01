@@ -12,11 +12,11 @@ rom_dir=$(dirname "$rom_path")
 # Generate parameters for MAME cmd file
 mame_cmd=(
   mame
-  -samplepath "$rom_dir/mame$mame_version/samples"
-  -artpath "$rom_dir/mame$mame_version/artwork"
-  -cheatpath "$rom_dir/mame$mame_version/cheat"
-  -inipath "$rom_dir/mame$mame_version/ini"
-  -hashpath "$rom_dir/mame$mame_version/hash"
+  -samplepath "$bios_dir/mame$mame_version/samples"
+  -artpath "$bios_dir/mame$mame_version/artwork"
+  -cheatpath "$bios_dir/mame$mame_version/cheat"
+  -inipath "$bios_dir/mame$mame_version/ini"
+  -hashpath "$bios_dir/mame$mame_version/hash"
   -rompath "$rom_dir"
   \""$rom_path"\"
 )
