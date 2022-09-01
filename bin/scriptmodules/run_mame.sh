@@ -17,6 +17,7 @@ mame_cmd=(
   -cheatpath "$rom_dir/mame$mame_version/cheat"
   -inipath "$rom_dir/mame$mame_version/ini"
   -hashpath "$rom_dir/mame$mame_version/hash"
+  -rompath "$rom_dir"
   \""$rom_path"\"
 )
 
