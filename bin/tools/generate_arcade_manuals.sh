@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../setup/system-common.sh"
 
 # Path to MAME dats (like gameinit.dat)
-dat_path="$HOME/RetroPie/BIOS/mame/history"
+dat_path="$HOME/RetroPie/BIOS/mame0244/history"
 
 # Path to MAME media (like flyers and artwork from https://www.progettosnaps.net/)
 mame_media_path="$HOME/.emulationstation/downloaded_media/arcade/mame"
