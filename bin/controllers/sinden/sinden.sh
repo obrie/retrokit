@@ -163,11 +163,13 @@ edit_all() {
 
 edit() {
   local player_id=$1
-  local key=$2
-  local value=$3
 
   local config_path="$install_path/Player$player_id/$(__player_bin_name "$player_id").config"
-  sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$key\"]/@value" --value "$value" "$config_path"
+
+  for setting_config in "${@:2}"; do
+    IFS='=' read setting_name setting_value <<< $setting_config
+    sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$setting_name\"]/@value" --value "$setting_value" "$config_path"
+  done
 
   if __is_running "$player_id"; then
     restart "$player_id"
