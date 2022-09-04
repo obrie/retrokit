@@ -41,8 +41,10 @@ build() {
   fi
 
   # Create ports
-  mkdir -pv "$HOME/RetroPie/roms/ports/+sinden"
-  each_path '{bin_dir}/controllers/sinden' find '{}' -name 'Sinden*.sh' -exec cp -v -t "$HOME/RetroPie/roms/ports/+sinden/" '{}' +
+  local ports_path="$HOME/RetroPie/roms/ports/+Sinden/"
+  rm -rfv "$ports_path"
+  mkdir -pv "$ports_path"
+  each_path '{bin_dir}/controllers/sinden/ports' rsync -avzR '{}' "$ports_path"
 
   # Add management script
   file_cp '{bin_dir}/controllers/sinden/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
@@ -129,7 +131,7 @@ __retropie_config_path_for_player() {
 }
 
 remove() {
-  rm -rfv  "$HOME/RetroPie/roms/ports/+sinden"
+  rm -rfv  "$HOME/RetroPie/roms/ports/+Sinden"
   sudo rm -rfv /opt/retropie/supplementary/sinden
 
   # We only remove mono as other dependencies are used by other parts of the system

@@ -128,7 +128,16 @@ __is_running() {
 # Runs the calibration test for the given player number
 calibrate() {
   local player_id=$1
+
+  # Make sure the service is stopped before running the calibration
+  # tool, otherwise it can cause problems
+  stop $player_id
+
+  # Start calibration
   __run $player_id false sdl 30
+
+  # Start the main service back up
+  start $player_id
 }
 
 # Runs the Sinden lightgun software for the given player number
