@@ -44,7 +44,8 @@ build() {
   local ports_path="$HOME/RetroPie/roms/ports/+Sinden/"
   rm -rfv "$ports_path"
   mkdir -pv "$ports_path"
-  each_path '{bin_dir}/controllers/sinden/ports' rsync -avzR '{}' "$ports_path"
+  # This is include the full /home path
+  each_path '{bin_dir}/controllers/sinden/ports' rsync -avzR '{}/./' "$ports_path"
 
   # Add management script
   file_cp '{bin_dir}/controllers/sinden/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
