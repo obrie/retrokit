@@ -45,10 +45,10 @@ build() {
   rm -rfv "$ports_path"
   mkdir -pv "$ports_path"
   # This is include the full /home path
-  each_path '{bin_dir}/controllers/sinden/ports' rsync -avzR '{}/./' "$ports_path"
+  each_path '{lib_dir}/sindenkit/shortcuts' rsync -avzR '{}/./' "$ports_path"
 
   # Add management script
-  file_cp '{bin_dir}/controllers/sinden/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
+  file_cp '{lib_dir}/sindenkit/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
 }
 
 configure() {
@@ -58,7 +58,7 @@ configure() {
 
 __configure_autostart() {
   # Write the udev rule
-  file_cp '{config_dir}/controllers/sinden/99-sinden-lightgun.rules' /etc/udev/rules.d/99-sinden-lightgun.rules as_sudo=true backup=false
+  file_cp '{lib_dir}/sindenkit/udev/99-sinden-lightgun.rules' /etc/udev/rules.d/99-sinden-lightgun.rules as_sudo=true backup=false
 
   # Reload the configuration (reboot still required)
   sudo udevadm control --reload-rules && sudo udevadm trigger
