@@ -48,6 +48,10 @@ class Resource:
             self.xref_path = None
 
         self.install_action = install_action
+        # Don't delete the source on install if locally sourced
+        if self.is_locally_sourced and 'delete_source' not in self.install_action.config:
+            self.install_action.config['delete_source'] = False
+
         self.file_identifier = file_identifier
         self.downloader = downloader
 
@@ -76,9 +80,9 @@ class Resource:
 
         # Download source if:
         # * Target doesn't exist
-        # * Source is from the local filesystem and the target isn't the same (always reinstall)
+        # * Source is from the local filesystem, target isn't the same, and install action allows overwrites
         # * Explicitly forcing a download
-        if not self.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path) or force:
+        if not self.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path and self.install_action.ovewrite_target) or force:
             source.download()
 
             # Ensure target directory exists

@@ -151,8 +151,9 @@
       "url": "$ROMSET_MAME_2003_URL",
       "resources": {
         "dat": {
-          "source": "{url}/mame2003.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame2003.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.78.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame2003.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
@@ -177,8 +178,9 @@
       "url": "$ROMSET_MAME_2003_PLUS_URL",
       "resources": {
         "dat": {
-          "source": "{url}/MAME 2003-Plus - 2018-12-31.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame2003-plus.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.78-Plus.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame2003-plus.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms/{machine}.zip",
@@ -203,8 +205,9 @@
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
-          "source": "{url}/MAME 2010 DAT - 2019-01-05.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame2010.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.139.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame2010.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -229,8 +232,9 @@
       "url": "$ROMSET_MAME_2015_URL",
       "resources": {
         "dat": {
-          "source": "{url}/mame2015.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame2015.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.160.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame2015.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -255,8 +259,9 @@
       "url": "$ROMSET_MAME_2016_URL",
       "resources": {
         "dat": {
-          "source": "{url}/MAME 2016 XML (Arcade Only).xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame2016.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.174.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame2016.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -281,8 +286,9 @@
       "url": "$ROMSET_MAME_0222_URL",
       "resources": {
         "dat": {
-          "source": "https://archive.org/download/mame-mame0222/mame0222lx.zip/mame0222.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame0222.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.222.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame0222.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/{parent}.zip",
@@ -308,8 +314,9 @@
       "url": "$ROMSET_MAME_0245_URL",
       "resources": {
         "dat": {
-          "source": "https://archive.org/download/mame0244/mame0244lx.zip/mame0244.xml",
-          "target": "$HOME/retrokit/tmp/arcade/mame0244.dat"
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
+          "target": "$HOME/retrokit/tmp/arcade/mame0244.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
           "source": "{url}/MAME%200.245%20ROMs%20%28split%29{machine}.zip",
@@ -334,8 +341,7 @@
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
-          "source": "https://www.progettosnaps.net/download/?tipo=dat_mame&file=/dats/MAME/packs/MAME_Dats_106.7z",
-          "download": "$HOME/retrokit/tmp/arcade/advmame.7z",
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.106.7z",
           "target": "$HOME/retrokit/tmp/arcade/advmame.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
@@ -360,20 +366,20 @@
   "metadata": {
     "language": {
       "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_Languages_{version}.zip/folders%2Flanguages.ini",
-      "target": "$HOME/retrokit/tmp/arcade/languages.ini"
+      "target": "$HOME/retrokit/cache/mame/languages.ini"
     },
     "genre": {
       "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_CatVer_{version}.zip/UI_files%2Fcatlist.ini",
-      "target": "$HOME/retrokit/tmp/arcade/catver.ini"
+      "target": "$HOME/retrokit/cache/mame/catver.ini"
     },
     "rating": {
       "source": "https://archive.org/download/mame-support/Support/Support-Files/pS_BestGames_{version}.zip/folders%2Fbestgames.ini",
-      "target": "$HOME/retrokit/tmp/arcade/bestgames.ini"
+      "target": "$HOME/retrokit/cache/mame/bestgames.ini"
     },
     "players": {
-      "source": "http://nplayers.arcadebelgium.be/files/nplayers0245a.zip",
+      "source": "http://nplayers.arcadebelgium.be/files/nplayers0246.zip",
       "download": "$HOME/retrokit/tmp/arcade/nplayers.zip",
-      "target": "$HOME/retrokit/tmp/arcade/nplayers.ini",
+      "target": "$HOME/retrokit/cache/mame/nplayers.ini",
       "install": {"action": "zip_extract", "file": "folders/Multiplayer.ini"}
     },
     "emulator": {
