@@ -826,7 +826,7 @@ and where it comes from is described below.
 | pc          | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Tx5k3F0_AO6w00WrXULMBSUTRhtLyIhHI8Wz8GuqLfQ/edit#gid=2000917190 |
 | pcengine    | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psp         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
-| psx         | Genres                   | No      | https://github.com/stenzek/duckstation/raw/master/data/database/gamedb.json |
+| psx         | Genres                   | No      | https://github.com/stenzek/duckstation/raw/master/data/resources/database/gamedb.json |
 | psx         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | saturn      | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | saturn      | Emulator compatibility   | Yes     | https://www.uoyabause.org/games               |
