@@ -114,11 +114,6 @@
       "enabled": true
     }
   },
-  "runcommand": {
-    "scripts": [
-      "launchimages"
-    ]
-  },
   "systems": [
     "arcade",
     "atari2600",
@@ -178,6 +173,7 @@
       "runcommand",
       "scraper",
       "themes",
+      "launchkit",
       "retroarch",
       "cheats",
       "docs",

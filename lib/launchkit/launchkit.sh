@@ -1,18 +1,25 @@
 #!/bin/bash
 
+# This script shows the launch image in the background while allowing
+# RetroPie to start the game in the foreground.  It improves the load time
+# by a few seconds.
+# 
+# It also proactively clears the screen so that when you exit the game,
+# the transition is smooth from game -> black screen -> emulation station.
+# Without this, there's a hard transition from game -> launch image ->
+# black screen -> emulation station, which is a bit jarring.
+
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # The maximum amount of time that we'll show the launch image
 MAX_LOADING_TIME=10
 
-clear_screen() {
-  dd if=/dev/zero of=/dev/fb0 &>/dev/null
-}
-
-show_launching_screen() {
+show() {
   local system="$1"
-  local launch_image="/opt/retropie/configs/$system/launching-extended.png"
 
+  __blank_screen
+
+  local launch_image="/opt/retropie/configs/$system/launching-extended.png"
   if [ -f "$launch_image" ]; then
     # Change tty to graphics mode
     python "$dir/tty.py" /dev/tty graphics
@@ -26,6 +33,10 @@ show_launching_screen() {
     # Monitor launching screen
     __watch_screen &
   fi
+}
+
+__blank_screen() {
+  dd if=/dev/zero of=/dev/fb0 &>/dev/null
 }
 
 # Watches for interrupts to the launching screen
@@ -46,13 +57,12 @@ __watch_screen() {
   done
 }
 
-# This script shows the launch image in the background while allowing
-# RetroPie to star the game in the foreground.  It improves the load time
-# by a few seconds.
-# 
-# It also proactively clears the screen so that when you exit the game,
-# the transition is smooth from game -> black screen -> emulation station.
-# Without this, there's a hard transition from game -> launch image ->
-# black screen -> emulation station, which is a bit jarring.
-clear_screen
-show_launching_screen "${@}" </dev/null &>/dev/null
+clear() {
+  # Clear the screen as quickly as we can
+  __blank_screen
+
+  # Restore text mode for the console
+  python "$dir/tty.py" /dev/tty text
+}
+
+"${@}"
