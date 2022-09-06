@@ -11,7 +11,7 @@ depends() {
   # like chdman)
   sudo apt-get install -y zip
   sudo pip3 install lxml pycurl
-  "$bin_dir/romkit/setup.sh" __depends_trrntzip
+  "$lib_dir/romkit/setup.sh" __depends_trrntzip
 }
 
 remove() {

@@ -59,7 +59,7 @@ normalize_rom_name() {
 
 romkit_cli() {
   if [ -n "$(system_setting '.roms')" ]; then
-    TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" $1 "$system_settings_file" ${@:2}
+    TMPDIR="$tmp_dir" python3 "$lib_dir/romkit/cli.py" $1 "$system_settings_file" ${@:2}
   fi
 }
 

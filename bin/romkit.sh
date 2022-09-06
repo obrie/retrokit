@@ -37,7 +37,7 @@ run() {
     args=(--log-level ERROR)
   fi
 
-  TMPDIR="$tmp_dir" python3 "$bin_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
+  TMPDIR="$tmp_dir" python3 "$lib_dir/romkit/cli.py" "$command" "$system_settings_file" ${args[@]}
 }
 
 if [[ $# -lt 1 ]]; then

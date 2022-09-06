@@ -9,14 +9,14 @@ setup_module_desc='manualkit install and configuration for viewing game manuals'
 install_dir='/opt/retropie/supplementary/manualkit'
 
 depends() {
-  "$bin_dir/manualkit/setup.sh" depends
+  "$lib_dir/manualkit/setup.sh" depends
 }
 
 build() {
   # Copy manualkit to the retropie install path so that nothing depends
   # on retrokit being on the system
   sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$bin_dir/manualkit/" "$install_dir/"
+  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/manualkit/" "$install_dir/"
 }
 
 configure() {

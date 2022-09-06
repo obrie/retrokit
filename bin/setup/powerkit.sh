@@ -9,7 +9,7 @@ setup_module_desc='Hardware safe shutdown scripts'
 install_dir='/opt/retropie/supplementary/powerkit'
 
 depends() {
-  "$bin_dir/powerkit/setup.sh" depends
+  "$lib_dir/powerkit/setup.sh" depends
 }
 
 build() {
@@ -18,7 +18,7 @@ build() {
   # Copy powerkit to the retropie install path so that nothing depends
   # on retrokit being on the system
   sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$bin_dir/powerkit/" "$install_dir/"
+  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/powerkit/" "$install_dir/"
 }
 
 configure() {
