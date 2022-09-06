@@ -97,7 +97,7 @@
     },
     "duckstation_data": {
       "source": "https://github.com/stenzek/duckstation/raw/master/data/resources/database/gamedb.json",
-      "target": "$HOME/retrokit/tmp/psx/gamedb.json"
+      "target": "$HOME/retrokit/cache/psx/gamedb.json"
     },
     "scraper": {
       "source": "file://$HOME/retrokit/cache/scraper/psx.json"
