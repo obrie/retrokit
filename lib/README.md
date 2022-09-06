@@ -5,6 +5,7 @@ retrokit.
 
 It includes:
 
+* autoport - Automatic controller port selection / prioritization
 * launchkit - An alternative for displaying launch images
 * manualkit - An application for displaying game manuals
 * powerkit - A service for integrating physical power/reset button behaviors

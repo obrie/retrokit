@@ -2,7 +2,13 @@
 
 declare -g default_config_path system_override_path rom_override_path
 
-run() {
+# Sets up the port configurations for the given system running the
+# given emulator / rom
+# 
+# * system - Name of the system (e.g. arcade)
+# * emulator - Name of the emulator (e.g. lr-fbneo)
+# * rom_path - Path to the ROM being loaded
+setup() {
   local system=$1
   local emulator=$2
   local rom_path=$3
@@ -597,4 +603,58 @@ __list_raw_devices() {
   done < <(cat /proc/bus/input/devices | sed s'/^\([A-Z]\): /\1\t/g')
 }
 
-run "${@}"
+# Restores the emulator configuration back to how it was originally set up
+# prior to the overrides introduced by autoport
+restore() {
+  local system=$1
+  local emulator=$2
+  local rom_path=$3
+
+  # Determine what type of port configuration system we're dealing with
+  local system_type=$(__get_system_type "$emulator")
+  if [ -z "$system_type" ]; then
+    return
+  fi
+
+  # Restore any permanently modified configurations for the given system type
+  __restore_${system_type}
+}
+
+__restore_libretro() {
+  # No-op
+  return
+}
+
+__restore_redream() {
+  __restore_joystick_config /opt/retropie/configs/dreamcast/redream/redream.cfg
+}
+
+__restore_ppsspp() {
+  __restore_joystick_config /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+}
+
+__restore_drastic() {
+  __restore_joystick_config /opt/retropie/configs/nds/drastic/config/drastic.cfg
+}
+
+__restore_hypseus() {
+  __restore_joystick_config /opt/retropie/configs/daphne/hypinput.ini
+}
+
+__restore_mupen64plus() {
+  __restore_joystick_config /opt/retropie/configs/n64/mupen64plus.cfg
+}
+
+__restore_joystick_config() {
+  local config_path=$1
+  local config_backup_path="$config_path.autoport"
+
+  if [ -f "$config_backup_path" ]; then
+    mv -v "$config_backup_path" "$config_path"
+  fi
+}
+
+# Primary entrypoints:
+# * setup
+# * restore
+"${@}"
