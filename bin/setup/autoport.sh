@@ -13,22 +13,21 @@ build() {
   # on retrokit being on the system
   sudo mkdir -p "$install_dir"
   sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/autoport/" "$install_dir/"
-
-  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/autoport
 }
 
 configure() {
+  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/autoport
   ini_merge '{config_dir}/autoport/autoport.cfg' '/opt/retropie/configs/all/autoport.cfg' backup=false overwrite=true
 }
 
 restore() {
-  rm -rfv /opt/retropie/configs/all/autoport.cfg
+  rm -fv \
+    /opt/retropie/configs/all/autoport.cfg \
+    /opt/retropie/configs/all/runcommand.d/autoport/
 }
 
 remove() {
-  rm -rfv \
-    /opt/retropie/supplementary/autoport/ \
-    /opt/retropie/configs/all/runcommand.d/autoport/
+  rm -rfv /opt/retropie/supplementary/autoport/
 }
 
 setup "${@}"
