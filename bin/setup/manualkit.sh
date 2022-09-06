@@ -40,42 +40,30 @@ __configure_manualkit() {
 
 # Install autostart script
 __configure_autostart() {
-  __restore_autostart
-  
-  mkdir -pv /opt/retropie/configs/all/autostart.d/manualkit/
-  while read hook_filename; do
-    local hook=${hook_filename%.*}
-    file_cp "{config_dir}/manualkit/autostart/$hook.sh" "/opt/retropie/configs/all/autostart.d/manualkit/$hook.sh" backup=false envsubst=false
-  done < <(each_path '{config_dir}/manualkit/autostart' ls '{}' | uniq)
+  ln -fs "$install_dir/autostart" /opt/retropie/configs/all/runcommand.d/autostart
 }
 
 # Install emulationstation hooks
 __configure_emulationstation() {
   __restore_emulationstation
 
-  while read hook_filename; do
-    local hook=${hook_filename%.*}
+  while read hook_path; do
+    local hook=$(basename "$hook_path" .sh)
     local target_dir="$HOME/.emulationstation/scripts/$hook"
     mkdir -pv "$target_dir"
-    file_cp "{config_dir}/manualkit/emulationstation-scripts/$hook.sh" "$target_dir/manualkit.sh" backup=false envsubst=false
-  done < <(each_path '{config_dir}/manualkit/emulationstation-scripts' ls '{}' | uniq)
+    ln -fs "$hook_path" "$target_dir/manualkit.sh"
+  done < <(ls "$install_dir/emulationstation-scripts/"*.sh)
 
   xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$HOME/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$HOME/.emulationstation/es_input.cfg"
 }
 
 # Install emulationstation hooks
 __configure_runcommand() {
-  __restore_runcommand
-
-  mkdir -pv /opt/retropie/configs/all/runcommand.d/manualkit/
-  while read hook_filename; do
-    local hook=${hook_filename%.*}
-    file_cp "{config_dir}/manualkit/runcommand/$hook.sh" "/opt/retropie/configs/all/runcommand.d/manualkit/$hook.sh" backup=false envsubst=false
-  done < <(each_path '{config_dir}/manualkit/runcommand' ls '{}' | uniq)
+  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
 }
 
 restore() {
-  rm -rfv /opt/retropie/configs/all/manualkit.cfg
+  rm -fv /opt/retropie/configs/all/manualkit.cfg
   
   __restore_emulationstation
   __restore_autostart
@@ -83,16 +71,16 @@ restore() {
 }
 
 __restore_emulationstation() {
-  rm -rfv "$HOME/.emulationstation/scripts"/*/manualkit.sh
+  rm -fv "$HOME/.emulationstation/scripts"/*/manualkit.sh
   xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$HOME/.emulationstation/es_input.cfg"
 }
 
 __restore_autostart() {
-  rm -rfv /opt/retropie/configs/all/autostart.d/manualkit/
+  rm -fv /opt/retropie/configs/all/autostart.d/manualkit/
 }
 
 __restore_runcommand() {
-  rm -rfv /opt/retropie/configs/all/runcommand.d/manualkit/
+  rm -fv /opt/retropie/configs/all/runcommand.d/manualkit/
 }
 
 remove() {
