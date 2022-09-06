@@ -8,20 +8,11 @@ setup_module_desc='Controller autoconfiguration'
 
 autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
 autoconf_backup_file="$autoconf_file.rk-src"
-configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
 sdldb_path="$tmp_dir/gamecontrollerdb.txt"
 sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
 
 build() {
-  __build_autoconfig_scripts
   __build_gamecontrollerdb
-}
-
-# Add autoconfig scripts
-__build_autoconfig_scripts() {
-  while read -r autoconfig_name; do
-    file_cp "{bin_dir}/controllers/autoconfig/$autoconfig_name.sh" "$configscripts_dir/$autoconfig_name.sh" as_sudo=true backup=false envsubst=false
-  done < <(setting '.hardware.controllers.autoconfig[]')
 }
 
 # Download the latest game controller database
@@ -270,10 +261,7 @@ __restore_autoconf() {
 }
 
 remove() {
-  # Remove autoconfig scripts
-  while read -r autoconfig_name; do
-    sudo rm -fv "$configscripts_dir/$autoconfig_name.sh"
-  done < <(setting '.hardware.controllers.autoconfig[]')
+  rm -fv "$sdldb_path"
 }
 
 setup "${@}"
