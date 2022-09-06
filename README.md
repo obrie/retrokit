@@ -807,7 +807,7 @@ This feature is supported on the following emulators:
 ## Game Metadata
 
 Game metadata comes from a variety of sources.  When possible, retrokit caches those
-those sources instead of pulling from them directlycodebase.  An overview of metadata
+those sources instead of pulling from them directly.  An overview of metadata
 and where it comes from is described below.
 
 | System      | Metadata                 | In Git? | Source                                        |
