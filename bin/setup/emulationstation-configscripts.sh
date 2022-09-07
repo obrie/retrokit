@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../../common.sh"
+. "$dir/../common.sh"
 
 setup_module_id='emulationstation-configscripts'
 setup_module_desc='EmulationStation scripts for automatic input configuration'
