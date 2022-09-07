@@ -103,8 +103,7 @@
       "source": "file://$HOME/retrokit/cache/scraper/psx.json"
     },
     "emulator": {
-      "source": "file://$HOME/retrokit/config/systems/psx/emulators.tsv",
-      "column_rating": null
+      "source": "file://$HOME/retrokit/config/systems/psx/emulators.tsv"
     }
   },
   "roms": {
@@ -118,6 +117,7 @@
       "length": "ascending"
     },
     "filters": {
+      "!emulator_ratings": [1],
       "categories": [
         "Games"
       ],
