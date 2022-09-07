@@ -40,7 +40,7 @@ __configure_manualkit() {
 
 # Install autostart script
 __configure_autostart() {
-  ln -fsn "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/manualkit
+  ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/manualkit
 }
 
 # Install emulationstation hooks
@@ -51,7 +51,7 @@ __configure_emulationstation() {
     local hook=$(basename "$hook_path" .sh)
     local target_dir="$HOME/.emulationstation/scripts/$hook"
     mkdir -pv "$target_dir"
-    ln -fs "$hook_path" "$target_dir/manualkit.sh"
+    ln -fsv "$hook_path" "$target_dir/manualkit.sh"
   done < <(ls "$install_dir/emulationstation-scripts/"*.sh)
 
   xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$HOME/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$HOME/.emulationstation/es_input.cfg"
@@ -59,7 +59,7 @@ __configure_emulationstation() {
 
 # Install emulationstation hooks
 __configure_runcommand() {
-  ln -fsn "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
+  ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
 }
 
 restore() {
