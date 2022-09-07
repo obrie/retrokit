@@ -84,7 +84,7 @@ __restore_runcommand() {
 }
 
 remove() {
-  rm -rfv "$install_dir"
+  sudo rm -rfv "$install_dir"
 
   # Only remove python modules uniquely used by manualkit
   sudo pip3 uninstall -y \

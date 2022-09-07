@@ -16,17 +16,15 @@ build() {
 }
 
 configure() {
-  restore
-
-  mkdir -pv /opt/retropie/configs/all/runcommand.d/launchkit/
-  while read hook_filename; do
-    local hook=${hook_filename%.*}
-    file_cp "{lib_dir}/launchkit/runcommand/$hook.sh" "/opt/retropie/configs/all/runcommand.d/launchkit/$hook.sh" backup=false envsubst=false
-  done < <(each_path '{config_dir}/launchkit/runcommand' ls '{}' | uniq)
+  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/launchkit
 }
 
 restore() {
-  rm -rfv /opt/retropie/configs/all/runcommand.d/launchkit/
+  rm -fv /opt/retropie/configs/all/runcommand.d/launchkit
+}
+
+remove() {
+  sudo rm -rf "$install_dir"
 }
 
 setup "${@}"

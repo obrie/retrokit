@@ -35,7 +35,7 @@ restore() {
 }
 
 remove() {
-  rm -rfv \
+  sudo rm -rfv \
     "$install_dir" \
     /opt/retropie/configs/all/powerkit.cfg \
     /etc/systemd/system/powerkit.service
