@@ -16,7 +16,7 @@ build() {
 }
 
 configure() {
-  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/launchkit
+  ln -fsn "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/launchkit
 }
 
 restore() {

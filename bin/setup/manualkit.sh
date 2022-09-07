@@ -40,7 +40,7 @@ __configure_manualkit() {
 
 # Install autostart script
 __configure_autostart() {
-  ln -fs "$install_dir/autostart" /opt/retropie/configs/all/runcommand.d/autostart
+  ln -fsn "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/manualkit
 }
 
 # Install emulationstation hooks
@@ -59,7 +59,7 @@ __configure_emulationstation() {
 
 # Install emulationstation hooks
 __configure_runcommand() {
-  ln -fs "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
+  ln -fsn "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
 }
 
 restore() {
