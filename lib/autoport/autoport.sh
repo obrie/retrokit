@@ -411,6 +411,7 @@ __match_players() {
     local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
     local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
     local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
+    local config_running_process=$(__setting "$profile" "${device_type}${config_index}_running_process")
     local config_device_type=$(__setting "$profile" "${device_type}${config_index}_device_type" || __setting "$profile" "${device_type}_device_type")
     local config_limit=$(__setting "$profile" "${device_type}${config_index}_limit")
 
@@ -444,6 +445,11 @@ __match_players() {
 
       # Match related usb path
       if [ -n "$config_related_usb_path" ] && { [[ "$device_sysfs" != *usb* ]] || ! find "/sys$device_sysfs/../../../.." | grep -Eq "$config_related_usb_path"; }; then
+        continue
+      fi
+
+      # Match running process
+      if [ -n "$config_running_process" ] && ! pgrep -f "$config_running_process" >/dev/null; then
         continue
       fi
 
