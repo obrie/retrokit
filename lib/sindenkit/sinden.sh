@@ -77,8 +77,13 @@ __lookup_player_id() {
 
 # Starts all players
 start_all() {
-  start 1
-  start 2
+  if ! __is_running 1; then
+    start 1
+  fi
+
+  if ! __is_running 2; then
+    start 2
+  fi
 }
 
 # Starts the given player number in the background
