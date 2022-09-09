@@ -494,6 +494,10 @@ __match_players() {
         local device_index=${prioritized_devices[$priority_index]}
 
         if [ -n "$device_index" ]; then
+          # Determine player-specific device type override
+          local player_device_type=$(__setting "$profile" "${driver_name}_device_type_p$player_index")
+          player_device_type=${player_device_type:-${devices["$device_index/device_type"]}}
+
           # Found a matching device: update the player
           players["$player_index/device_index"]=$device_index
           players["$player_index/device_type"]=${devices["$device_index/device_type"]}
@@ -523,9 +527,13 @@ __match_players() {
         ((player_index+=1))
       done
 
+      # Determine player-specific device type override
+      local player_device_type=$(__setting "$profile" "${driver_name}_device_type_p$player_index")
+      player_device_type=${player_device_type:-${devices["$device_index/device_type"]}}
+
       local device_index=${prioritized_devices[$priority_index]}
       players["$player_index/device_index"]=$device_index
-      players["$player_index/device_type"]=${devices["$device_index/device_type"]}
+      players["$player_index/device_type"]=$player_device_type
 
       player_indexes+=($player_index)
       ((player_index+=1))
