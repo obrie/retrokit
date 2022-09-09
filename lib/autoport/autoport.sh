@@ -113,21 +113,21 @@ __setup_libretro() {
 # Set up port index overrides for the provided device type
 __setup_libretro_input() {
   local profile=$1
-  local device_type=$2
-  local retroarch_device_type=$3
+  local driver_name=$2
+  local retroarch_driver_name=$3
   local retroarch_config_path=/dev/shm/retroarch.cfg
 
   # Remove any existing runtime overrides
-  sed -i "/^input_player.*$retroarch_device_type/d" "$retroarch_config_path"
+  sed -i "/^input_player.*$retroarch_driver_name/d" "$retroarch_config_path"
 
-  __match_players "$profile" "$device_type"
+  __match_players "$profile" "$driver_name"
 
   for player_index in "${player_indexes[@]}"; do
     local device_index=${players["$player_index/device_index"]}
     local device_type=${devices["$device_index/device_type"]}
 
     echo "Player $player_index: index $device_index"
-    echo "input_player${player_index}_${retroarch_device_type}_index = \"$device_index\"" >> "$retroarch_config_path"
+    echo "input_player${player_index}_${retroarch_driver_name}_index = \"$device_index\"" >> "$retroarch_config_path"
 
     if [ -n "$device_type" ]; then
       echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$retroarch_config_path"
@@ -336,11 +336,11 @@ _EOF_
 # * Print the expected device-specific configuration path
 __prepare_config_overwrite() {
   local profile=$1
-  local device_type=$2
+  local driver_name=$2
   local config_path=$3
   local config_backup_path="$config_path.autoport"
 
-  __match_players "$profile" "$device_type"
+  __match_players "$profile" "$driver_name"
 
   local device_index=${players["1/device_index"]}
   local device_name=${devices["$device_index/name"]}
@@ -369,7 +369,7 @@ __prepare_config_overwrite() {
 # Matches player ids with device input indexes (i.e. ports)
 __match_players() {
   local profile=$1
-  local device_type=$2
+  local driver_name=$2
 
   # Shared variables
   declare -Ag devices=()
@@ -387,7 +387,7 @@ __match_players() {
     devices["$index/version"]=$version
     devices["$index/guid"]="${bus:2:2}${bus:0:2}0000${vendor_id:2:2}${vendor_id:0:2}0000${product_id:2:2}${product_id:0:2}0000${version:2:2}${version:0:2}0000"
     devices_count=$((index+1))
-  done < <(__list_devices "$device_type")
+  done < <(__list_devices "$driver_name")
 
   if [ $devices_count -eq 0 ]; then
     # No devices found
@@ -402,18 +402,18 @@ __match_players() {
   local config_index=1
   while true; do
     # Look up what we're matching
-    local config_name=$(__setting "$profile" "${device_type}${config_index}")
+    local config_name=$(__setting "$profile" "${driver_name}${config_index}")
     if [ -z "$config_name" ]; then
       # No more devices to process
       break
     fi
-    local config_vendor_id=$(__setting "$profile" "${device_type}${config_index}_vendor_id")
-    local config_product_id=$(__setting "$profile" "${device_type}${config_index}_product_id")
-    local config_usb_path=$(__setting "$profile" "${device_type}${config_index}_usb_path")
-    local config_related_usb_path=$(__setting "$profile" "${device_type}${config_index}_related_usb_path")
-    local config_running_process=$(__setting "$profile" "${device_type}${config_index}_running_process")
-    local config_device_type=$(__setting "$profile" "${device_type}${config_index}_device_type" || __setting "$profile" "${device_type}_device_type")
-    local config_limit=$(__setting "$profile" "${device_type}${config_index}_limit")
+    local config_vendor_id=$(__setting "$profile" "${driver_name}${config_index}_vendor_id")
+    local config_product_id=$(__setting "$profile" "${driver_name}${config_index}_product_id")
+    local config_usb_path=$(__setting "$profile" "${driver_name}${config_index}_usb_path")
+    local config_related_usb_path=$(__setting "$profile" "${driver_name}${config_index}_related_usb_path")
+    local config_running_process=$(__setting "$profile" "${driver_name}${config_index}_running_process")
+    local config_device_type=$(__setting "$profile" "${driver_name}${config_index}_device_type" || __setting "$profile" "${driver_name}_device_type")
+    local config_limit=$(__setting "$profile" "${driver_name}${config_index}_limit")
 
     # Track how many matches we've found for this config in case there's a limit
     local matched_count=0
@@ -480,10 +480,10 @@ __match_players() {
   local prioritized_devices_count=$((priority_index-1))
 
   # Overall player matching limit
-  local player_limit=$(__setting "$profile" "${device_type}_limit")
+  local player_limit=$(__setting "$profile" "${driver_name}_limit")
 
   # Start identifying players!
-  local player_index_start=$(__setting "$profile" "${device_type}_start")
+  local player_index_start=$(__setting "$profile" "${driver_name}_start")
   local player_index=${player_index_start:-1}
 
   # See if the profile specifies the order in which the prioritized devices should
@@ -491,7 +491,7 @@ __match_players() {
   # is priority 1).  However, in some games we want player 1 to be priority 2 and
   # player 2 to be priority 1.
   declare -a device_order
-  IFS=, read -ra device_order <<< $(__setting "$profile" "${device_type}_order")
+  IFS=, read -ra device_order <<< $(__setting "$profile" "${driver_name}_order")
   if [ ${#device_order[@]} -gt 0 ]; then
     for priority_index in "${device_order[@]}"; do
       if [ -n "$priority_index" ] && [ "$priority_index" != 'nul' ]; then
@@ -531,22 +531,22 @@ __match_players() {
 #
 # The *index* should be used as the port number configuration for specific players.
 __list_devices() {
-  local device_type=$1
-  __list_raw_devices | sort | grep -F $'\t'"$device_type" | cut -d$'\t' -f 1,3- | nl -d$'\t' -v0 -w1
+  local driver_name=$1
+  __list_raw_devices | sort | grep -F $'\t'"$driver_name" | cut -d$'\t' -f 1,3- | nl -d$'\t' -v0 -w1
 }
 
 # Lists the raw input devices as they appear in /proc/bus/input/devices (I think this lists
 # based on the order in which the input were registered).
 #
-# Output is: {sysfs}\t{device_type}\t{bus}\t{vendor_id}\t{product_id}\t{version}\t{name}
+# Output is: {sysfs}\t{driver_name}\t{bus}\t{vendor_id}\t{product_id}\t{version}\t{name}
 #
-# Where device_type is one of:
+# Where driver_name is one of:
 # * joystick
 # * mouse
 __list_raw_devices() {
   local sysfs
   local name
-  local device_type
+  local driver_name
   local bus
   local vendor_id
   local product_id
@@ -566,9 +566,9 @@ __list_raw_devices() {
       H)
         local handlers=${value#*Handlers=}
         if [[ "$handlers" == *mouse* ]]; then
-          device_type=mouse
+          driver_name=mouse
         elif [[ "$handlers" == *js* ]]; then
-          device_type=joystick
+          driver_name=joystick
         fi
         ;;
 
@@ -592,14 +592,14 @@ __list_raw_devices() {
 
       *)
 
-        if [ -n "$device_type" ]; then
-          echo "$sysfs"$'\t'"$device_type"$'\t'"$bus"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$version"$'\t'"$name"
+        if [ -n "$driver_name" ]; then
+          echo "$sysfs"$'\t'"$driver_name"$'\t'"$bus"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$version"$'\t'"$name"
         fi
 
         # Reset attributes
         sysfs=
         name=
-        device_type=
+        driver_name=
         bus=
         vendor_id=
         product_id=
