@@ -479,13 +479,6 @@ __match_players() {
   done
   local prioritized_devices_count=$((priority_index-1))
 
-  # Overall player matching limit
-  local player_limit=$(__setting "$profile" "${driver_name}_limit")
-
-  # Start identifying players!
-  local player_index_start=$(__setting "$profile" "${driver_name}_start")
-  local player_index=${player_index_start:-1}
-
   # See if the profile specifies the order in which the prioritized devices should
   # be matched against player numbers.  Typically, it's a 1:1 mapping (i.e. player 1
   # is priority 1).  However, in some games we want player 1 to be priority 2 and
@@ -493,6 +486,9 @@ __match_players() {
   declare -a device_order
   IFS=, read -ra device_order <<< $(__setting "$profile" "${driver_name}_order")
   if [ ${#device_order[@]} -gt 0 ]; then
+    # Assume we always start at Player 1
+    local player_index=1
+
     for priority_index in "${device_order[@]}"; do
       if [ -n "$priority_index" ] && [ "$priority_index" != 'nul' ]; then
         local device_index=${prioritized_devices[$priority_index]}
@@ -509,7 +505,23 @@ __match_players() {
   else
     # No order was specified -- use a 1:1 mapping between player
     # and priority.
+
+    # Overall player matching limit
+    local player_limit=$(__setting "$profile" "${driver_name}_limit")
+
+    # Identify which player numbers we're skipping
+    local player_skip=$(__setting "$profile" "${driver_name}_skip")
+
+    # Start identifying players!
+    local player_index_start=$(__setting "$profile" "${driver_name}_start")
+    local player_index=${player_index_start:-1}
+
     for priority_index in $(seq 1 $prioritized_devices_count); do
+      # Increment the player index until we have one that isn't skipped
+      while [[ "$player_skip" == *$player_index* ]]; do
+        ((player_index+=1))
+      done
+
       local device_index=${prioritized_devices[$priority_index]}
       players["$player_index/device_index"]=$device_index
 
