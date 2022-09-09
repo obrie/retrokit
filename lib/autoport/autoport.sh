@@ -124,7 +124,7 @@ __setup_libretro_input() {
 
   for player_index in "${player_indexes[@]}"; do
     local device_index=${players["$player_index/device_index"]}
-    local device_type=${devices["$device_index/device_type"]}
+    local device_type=${players["$player_index/device_type"]}
 
     echo "Player $player_index: index $device_index"
     echo "input_player${player_index}_${retroarch_driver_name}_index = \"$device_index\"" >> "$retroarch_config_path"
@@ -160,7 +160,7 @@ __setup_redream() {
 
   for player_index in "${player_indexes[@]}"; do
     local device_index=${players["$player_index/device_index"]}
-    local device_type=${devices["$device_index/device_type"]:-controller}
+    local device_type=${players["$player_index/device_type"]:-controller}
     local device_guid=${devices["$device_index/guid"]}
 
     # Indexes are offset by 4
@@ -496,6 +496,7 @@ __match_players() {
         if [ -n "$device_index" ]; then
           # Found a matching device: update the player
           players["$player_index/device_index"]=$device_index
+          players["$player_index/device_type"]=${devices["$device_index/device_type"]}
           player_indexes+=($player_index)
         fi
       fi
@@ -524,6 +525,7 @@ __match_players() {
 
       local device_index=${prioritized_devices[$priority_index]}
       players["$player_index/device_index"]=$device_index
+      players["$player_index/device_type"]=${devices["$device_index/device_type"]}
 
       player_indexes+=($player_index)
       ((player_index+=1))
