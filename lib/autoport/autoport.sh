@@ -414,8 +414,8 @@ __match_players() {
     local config_related_usb_path=$(__setting "$profile" "${driver_name}${config_index}_related_usb_path")
     local config_device_id=$(__setting "$profile" "${driver_name}${config_index}_device_id")
     local config_running_process=$(__setting "$profile" "${driver_name}${config_index}_running_process")
-    local config_device_type=$(__setting "$profile" "${driver_name}${config_index}_device_type" || __setting "$profile" "${driver_name}_device_type")
     local config_limit=$(__setting "$profile" "${driver_name}${config_index}_limit")
+    local config_device_type=$(__setting "$profile" "${driver_name}${config_index}_set_device_type" || __setting "$profile" "${driver_name}_set_device_type")
 
     # Track how many matches we've found for this config in case there's a limit
     local matched_count=0
@@ -502,7 +502,7 @@ __match_players() {
 
         if [ -n "$device_index" ]; then
           # Determine player-specific device type override
-          local player_device_type=$(__setting "$profile" "${driver_name}_device_type_p$player_index")
+          local player_device_type=$(__setting "$profile" "${driver_name}_set_device_type_p$player_index")
           player_device_type=${player_device_type:-${devices["$device_index/device_type"]}}
 
           # Found a matching device: update the player
@@ -537,7 +537,7 @@ __match_players() {
       local device_index=${prioritized_devices[$priority_index]}
 
       # Determine player-specific device type override
-      local player_device_type=$(__setting "$profile" "${driver_name}_device_type_p$player_index")
+      local player_device_type=$(__setting "$profile" "${driver_name}_set_device_type_p$player_index")
       player_device_type=${player_device_type:-${devices["$device_index/device_type"]}}
 
       players["$player_index/device_index"]=$device_index
