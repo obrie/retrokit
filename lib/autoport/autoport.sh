@@ -523,7 +523,7 @@ __match_players() {
 
     for priority_index in $(seq 1 $prioritized_devices_count); do
       # Increment the player index until we have one that isn't skipped
-      while [[ "$player_skip" == *$player_index* ]]; do
+      while [[ "$player_skip" =~ (^|,)$player_index($|,) ]]; do
         ((player_index+=1))
       done
 
