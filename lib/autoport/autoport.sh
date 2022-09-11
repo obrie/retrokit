@@ -502,8 +502,8 @@ __match_players() {
 
         if [ -n "$device_index" ]; then
           # Determine player-specific device type override
-          local player_device_type=$(__setting "$profile" "${driver_name}_set_device_type_p$player_index")
-          player_device_type=${player_device_type:-${devices["$device_index/device_type"]}}
+          local default_default_type=${devices["$device_index/device_type"]}
+          local player_device_type=$(__setting "$profile" "${driver_name}_set_device_type_p$player_index" || echo "$default_default_type")
 
           # Found a matching device: update the player
           players["$player_index/device_index"]=$device_index
