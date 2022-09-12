@@ -70,16 +70,16 @@ __find_setting() {
   fi
 
   # Find the relevant section
-  local section
+  local section_content
   if [ "$ignore_section" == 'true' ]; then
-    section=$(cat "$path")
+    section_content=$(cat "$path")
   else
-    section=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
+    section_content=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
   fi
 
   # Find the associated key within that section
-  if echo "$section" | grep -Eq "^[ \t]*$key[ \t]*="; then
-    echo "$section" | sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\"\r]*\)\"*.*/\1/p" | tail -n 1
+  if echo "$section_content" | grep -Eq "^[ \t]*$key[ \t]*="; then
+    echo "$section_content" | sed -n "s/^[ \t]*$key[ \t]*=[ \t]*\"*\([^\"\r]*\)\"*.*/\1/p" | tail -n 1
   else
     return 1
   fi
