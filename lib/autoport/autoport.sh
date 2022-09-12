@@ -619,6 +619,7 @@ __list_raw_devices() {
 
       U)
         uniq=${value#*Uniq=}
+        ;;
 
       N|P)
         continue
