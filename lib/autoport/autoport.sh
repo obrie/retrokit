@@ -378,7 +378,7 @@ __match_players() {
 
   # Store device type information
   local devices_count=0
-  while read index sysfs bus vendor_id product_id version name uniq_id; do
+  while IFS=$'\t' read index sysfs bus vendor_id product_id version name uniq_id; do
     devices["$index/name"]=$name
     devices["$index/sysfs"]=$sysfs
     devices["$index/bus"]=$bus
