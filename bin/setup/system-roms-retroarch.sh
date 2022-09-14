@@ -115,7 +115,7 @@ __configure_retroarch_core_options() {
     # core defaults
     local target_path="$emulator_config_dir/$rom_name.opt"
     echo "Merging $core_name system overrides to $target_path"
-    grep -E "^$core_name[\-_]" "$system_core_options_path" > "$target_path" || true
+    cp -v "$system_core_options_path" "$target_path"
 
     # Copy over multitap overrides
     if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
@@ -126,6 +126,9 @@ __configure_retroarch_core_options() {
     if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
       ini_merge '{system_config_dir}/retroarch-core-options-lightgun.cfg' "$target_path" backup=false
     fi
+
+    # Select options specific to this core
+    sed -i -n "/^$core_name[\-_]/p" "$target_path"
 
     # Merge in game-specific overrides
     if [ -n "$override_file" ]; then
