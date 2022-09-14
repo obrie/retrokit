@@ -77,9 +77,11 @@
         "$HOME/RetroPie/roms/arcade/mame2015/nvram/{rom}"
       ]
     },
-    "lr-mame2016": {
+    "lr-mame2016-lightgun": {
+      "aliases": ["lr-mame2016"],
       "core_name": "mame2016",
       "library_name": "MAME 2016",
+      "build": "source",
       "gamestate": [
         "$HOME/RetroPie/roms/arcade/mame2016/cfg/default.cfg",
         "$HOME/RetroPie/roms/arcade/mame2016/cfg/{rom}.cfg",
