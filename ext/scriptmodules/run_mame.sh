@@ -41,6 +41,3 @@ echo "${mame_cmd[@]}" > "$cmd_path"
 set -- "$retroarch_bin" --config "$retroarch_config" -L "$mame_lib" ${@:7} "$cmd_path"
 echo "Launching: $@"
 "$@"
-
-
-"$emudir/retroarch/bin/retroarch -L $cmd --config $md_conf_root/$system/retroarch.cfg %ROM%"
