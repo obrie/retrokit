@@ -44,7 +44,6 @@ build() {
   local ports_path="$HOME/RetroPie/roms/ports/+Sinden/"
   rm -rfv "$ports_path"
   mkdir -pv "$ports_path"
-  # This is include the full /home path
   each_path '{lib_dir}/sindenkit/shortcuts' rsync -avzR '{}/./' "$ports_path"
 
   # Add management script
