@@ -395,6 +395,26 @@ ln_if_different() {
   fi
 }
 
+# Rsyncs a directory to the given target.  This will *remove* the existing
+# target and the run an rsync with all matching paths from both retrokit
+# and profiles.
+dir_rsync() {
+  local source=$1
+  local target=$2
+
+  local as_sudo='false'
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
+
+  local cmd=
+  if [ "$as_sudo" == 'true' ]; then
+    cmd='sudo'
+  fi
+
+  rm -rfv "$target"/*
+  mkdir -pv "$target"
+  each_path "$source" rsync -avzR '{}/./' "$target"
+}
+
 # Renders a template with the given variables to substitute.
 # 
 # Variables are expected to be in the form {var1}.

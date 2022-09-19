@@ -41,10 +41,7 @@ build() {
   fi
 
   # Create ports
-  local ports_path="$HOME/RetroPie/roms/ports/+Sinden/"
-  rm -rfv "$ports_path"
-  mkdir -pv "$ports_path"
-  each_path '{lib_dir}/sindenkit/shortcuts' rsync -avzR '{}/./' "$ports_path"
+  dir_rsync '{lib_dir}/sindenkit/shortcuts' "$HOME/RetroPie/roms/ports/+Sinden/"
 
   # Add management script
   file_cp '{lib_dir}/sindenkit/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
