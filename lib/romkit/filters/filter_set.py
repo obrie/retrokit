@@ -19,10 +19,10 @@ class FilterSet:
         filter_set = cls()
 
         enabled_filter_names = json.get('enabled')
-        if enabled_filter_names:
-            enabled_filters = filter(lambda filter_cls: filter_cls.name in enabled_filter_names, supported_filters)
-        else:
+        if enabled_filter_names is None:
             enabled_filters = supported_filters
+        else:
+            enabled_filters = filter(lambda filter_cls: filter_cls.name in enabled_filter_names, supported_filters)
 
         for filter_cls in enabled_filters:
             allowlist = json.get(filter_cls.name)
