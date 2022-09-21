@@ -57,6 +57,7 @@
     },
     "lr-mame2010": {
       "core_name": "mame2010",
+      "core_option_prefix": "mame",
       "library_name": "MAME 2010",
       "gamestate": [
         "$HOME/RetroPie/roms/arcade/mame2010/cfg/default.cfg",

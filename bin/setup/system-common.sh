@@ -160,23 +160,26 @@ outline_overlay_image() {
 load_emulator_data() {
   declare -A -g emulators
 
-  while IFS=, read -r package emulator core_name library_name is_default; do
+  while IFS=, read -r package emulator core_name core_option_prefix library_name is_default; do
     emulators["$emulator/emulator"]=$emulator
     emulators["$emulator/core_name"]=$core_name
+    emulators["$emulator/core_option_prefix"]=$core_option_prefix
     emulators["$emulator/library_name"]=$library_name
 
     while read -r alias_emulator; do
       emulators["$alias_emulator/emulator"]=$emulator
       emulators["$alias_emulator/core_name"]=$core_name
+      emulators["$alias_emulator/core_option_prefix"]=$core_option_prefix
       emulators["$alias_emulator/library_name"]=$library_name
     done < <(system_setting ".emulators.\"$package\" | select(.aliases) | .aliases[]")
 
     if [ "$is_default" == "true" ]; then
       emulators['default/emulator']=$emulator
       emulators['default/core_name']=$core_name
+      emulators['default/core_option_prefix']=$core_option_prefix
       emulators['default/library_name']=$library_name
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name // "", .value.library_name // "", .value.default // false | tostring] | join(",")')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name // "", .value.core_option_prefix // .value.core_name // "", .value.library_name // "", .value.default // false | tostring] | join(",")')
 }
 
 get_core_library_names() {

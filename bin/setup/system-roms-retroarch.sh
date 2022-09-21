@@ -55,7 +55,7 @@ __configure_retroarch_configs() {
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-lightgun.cfg' && echo 'true')
 
   # Merge in rom-specific overrides
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -80,7 +80,7 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
     if [ -z "$override_file" ]; then
       continue
     fi
@@ -101,7 +101,7 @@ __configure_retroarch_core_options() {
   local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-lightgun.cfg' && echo 'true')
 
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name library_name override_file; do
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
     if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ ! "${multitap_titles["$group_title"]}" ]; } && { [ "$has_lightgun_config" != 'true' ] || [ ! "${lightgun_titles["$group_title"]}" ]; }; then
       # No overrides to define at the rom-level
       continue
@@ -114,7 +114,7 @@ __configure_retroarch_core_options() {
     # Copy over existing core overrides so we don't just get the
     # core defaults
     local target_path="$emulator_config_dir/$rom_name.opt"
-    echo "Merging $core_name system overrides to $target_path"
+    echo "Merging $core_option_prefix system overrides to $target_path"
     cp -v "$system_core_options_path" "$target_path"
 
     # Copy over multitap overrides
@@ -128,7 +128,7 @@ __configure_retroarch_core_options() {
     fi
 
     # Select options specific to this core
-    sed -i -n "/^$core_name[\-_]/p" "$target_path"
+    sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
 
     # Merge in game-specific overrides
     if [ -n "$override_file" ]; then
@@ -158,6 +158,7 @@ __list_libretro_roms() {
     # for configuration purposes
     emulator=${emulator:-default}
     local core_name=${emulators["$emulator/core_name"]}
+    local core_option_prefix=${emulators["$emulator/core_option_prefix"]}
     local library_name=${emulators["$emulator/library_name"]}
     if [ -z "$core_name" ] || [ -z "$library_name" ]; then
       continue
@@ -199,7 +200,7 @@ __list_libretro_roms() {
       fi
     done
 
-    echo "$target_name"$'\t'"$target_filename"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$library_name"$'\t'"$override_file"
+    echo "$target_name"$'\t'"$target_filename"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$override_file"
   done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .path, .emulator] | join("»")')
 }
 
