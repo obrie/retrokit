@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -g default_config_path system_override_path rom_override_path
+declare -g default_config_path system_override_path emulator_override_path rom_override_path
 
 # Sets up the port configurations for the given system running the
 # given emulator / rom
@@ -18,6 +18,7 @@ setup() {
   # Define config paths
   default_config_path='/opt/retropie/configs/all/autoport.cfg'
   system_override_path="/opt/retropie/configs/$system/autoport.cfg"
+  emulator_override_path="/opt/retropie/configs/$system/autoport/$emulator.cfg"
   rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
 
   # Make sure we're actually setup for autoconfiguration
@@ -53,6 +54,7 @@ __setting() {
   local key=$2
 
   __find_setting "$rom_override_path" "$section" "$key" || \
+  __find_setting "$emulator_override_path" "$section" "$key" || \
   __find_setting "$system_override_path" "$section" "$key" || \
   __find_setting "$default_config_path" "$section" "$key"
 }
