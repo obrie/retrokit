@@ -19,22 +19,28 @@ __configure_system_config() {
 
 # Emulator configuration overrides
 __configure_emulator_configs() {
-  local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
-
   while read -r emulator_name; do
     local source_path="{system_config_dir}/autoport/$emulator_name.cfg"
-    local target_path="$retroarch_config_dir/autoport/$emulator_name.cfg"
+    local target_path="$retropie_system_config_dir/autoport/$emulator_name.cfg"
 
     if any_path_exists "$source_path"; then
       ini_merge "$source_path" "$target_path"
     else
       rm -fv "$target_path"
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
+  done < <(__list_emulator_names)
+}
+
+__list_emulator_names() {
+  system_setting 'select(.emulators) | .emulators | keys[]'
 }
 
 restore() {
-  rm -rfv "$retropie_system_config_dir/autoport.cfg"
+  rm -fv "$retropie_system_config_dir/autoport.cfg"
+
+  while read -r emulator_name; do
+    rm -fv "$retropie_system_config_dir/autoport/$emulator_name.cfg"
+  done < <(__list_emulator_names)
 }
 
 setup "$1" "${@:3}"
