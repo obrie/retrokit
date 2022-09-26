@@ -4,6 +4,24 @@ set -ex
 
 install_path=/opt/retropie/supplementary/sinden
 
+usage() {
+  set +x
+
+  echo "usage:"
+  echo " $0 backgrounded <add_device|remove_device> <devpath> <devname>"
+  echo " $0 add_device <devpath> <devname>"
+  echo " $0 remove_device <devpath> <devname>"
+  echo " $0 start_all"
+  echo " $0 start <player_id>"
+  echo " $0 stop_all"
+  echo " $0 stop <player_id>"
+  echo " $0 restart <player_id>"
+  echo " $0 calibrate <player_id>"
+  echo " $0 edit_all key1=value1 key2=value2 ..."
+  echo " $0 edit <player_id> key1=value1 key2=value2 ..."
+  exit 1
+}
+
 # Runs an action in the background via a job in order to avoid blocking udev
 backgrounded() {
   echo "$install_path/sinden.sh" "${@}" | at now
@@ -11,11 +29,15 @@ backgrounded() {
 
 # Adds a Sinden controller with the given video devpath / devname
 add_device() {
+  [ "$#" -eq 2 ] || usage
+
   __modify_device start "${@}"
 }
 
 # Removes a Sinden controller with the given video devpath / devname
 remove_device() {
+  [ "$#" -eq 2 ] || usage
+
   __modify_device stop "${@}"
 }
 
@@ -77,6 +99,8 @@ __lookup_player_id() {
 
 # Starts all players
 start_all() {
+  [ "$#" -eq 0 ] || usage
+
   if ! __is_running 1; then
     start 1
   fi
@@ -88,18 +112,24 @@ start_all() {
 
 # Starts the given player number in the background
 start() {
+  [ "$#" -eq 1 ] || usage
+
   local player_id=$1
   __run $player_id true
 }
 
 # Stops all players
 stop_all() {
+  [ "$#" -eq 0 ] || usage
+
   stop 1
   stop 2
 }
 
 # Stops the given player number
 stop() {
+  [ "$#" -eq 1 ] || usage
+
   local player_id=$1
   local bin_name=$(__player_bin_name "$player_id")
   local lockfile="/tmp/$bin_name.lock"
@@ -116,6 +146,8 @@ stop() {
 
 # Stops / starts the given player number
 restart() {
+  [ "$#" -eq 1 ] || usage
+
   local player_id=$1
 
   stop $player_id
@@ -132,6 +164,8 @@ __is_running() {
 
 # Runs the calibration test for the given player number
 calibrate() {
+  [ "$#" -eq 1 ] || usage
+
   local player_id=$1
 
   # Make sure the service is stopped before running the calibration
@@ -171,11 +205,15 @@ __player_bin_name() {
 
 # Modifies the configuration on all players
 edit_all() {
+  [ "$#" -gt 0 ] || usage
+
   edit 1 "${@}"
   edit 2 "${@}"
 }
 
 edit() {
+  [ "$#" -gt 1 ] || usage
+
   local player_id=$1
 
   local config_path="$install_path/Player$player_id/$(__player_bin_name "$player_id").config"
@@ -189,5 +227,7 @@ edit() {
     restart "$player_id"
   fi
 }
+
+[ "$#" -gt 0 ] || usage
 
 "${@}"
