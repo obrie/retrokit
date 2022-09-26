@@ -43,7 +43,7 @@ restore() {
   done < <(__list_emulator_names)
 
   # Check if the directory is now empty
-  if [ -z "$(ls -A "$retropie_system_config_dir/autoport")" ]; then
+  if [ -d "$retropie_system_config_dir/autoport" ] && [ -z "$(ls -A "$retropie_system_config_dir/autoport")" ]; then
     rmdir -v "$retropie_system_config_dir/autoport"
   fi
 }
