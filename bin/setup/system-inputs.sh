@@ -41,6 +41,11 @@ restore() {
   while read -r emulator_name; do
     rm -fv "$retropie_system_config_dir/autoport/$emulator_name.cfg"
   done < <(__list_emulator_names)
+
+  # Check if the directory is now empty
+  if [ -z "$(ls -A "$retropie_system_config_dir/autoport")" ]; then
+    rmdir -v "$retropie_system_config_dir/autoport"
+  fi
 }
 
 setup "$1" "${@:3}"
