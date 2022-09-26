@@ -24,7 +24,7 @@ __configure_emulator_configs() {
     local target_path="$retropie_system_config_dir/autoport/$emulator_name.cfg"
 
     if any_path_exists "$source_path"; then
-      ini_merge "$source_path" "$target_path"
+      ini_merge "$source_path" "$target_path" backup=false overwrite=true
     else
       rm -fv "$target_path"
     fi
