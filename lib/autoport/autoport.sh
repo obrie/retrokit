@@ -2,6 +2,11 @@
 
 declare -g default_config_path system_override_path emulator_override_path rom_override_path
 
+usage() {
+  echo "usage: $0 <setup|restore> <system_name> <emulator_name> /path/to/rom"
+  exit 1
+}
+
 # Sets up the port configurations for the given system running the
 # given emulator / rom
 # 
@@ -9,6 +14,8 @@ declare -g default_config_path system_override_path emulator_override_path rom_o
 # * emulator - Name of the emulator (e.g. lr-fbneo)
 # * rom_path - Path to the ROM being loaded
 setup() {
+  [ "$#" -eq 3 ] || usage
+
   local system=$1
   local emulator=$2
   local rom_path=$3
@@ -650,6 +657,10 @@ __list_raw_devices() {
 # Restores the emulator configuration back to how it was originally set up
 # prior to the overrides introduced by autoport
 restore() {
+  if [ "$#" -lt 3 ]; then
+    usage
+  fi
+
   local system=$1
   local emulator=$2
   local rom_path=$3
@@ -697,6 +708,8 @@ __restore_joystick_config() {
     mv -v "$config_backup_path" "$config_path"
   fi
 }
+
+[ "$#" -gt 0 ] || usage
 
 # Primary entrypoints:
 # * setup
