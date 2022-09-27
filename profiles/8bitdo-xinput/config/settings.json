@@ -1,0 +1,29 @@
+{
+  "hardware": {
+    "controllers": {
+      "inputs": [
+        {
+          "name": "Keyboard"
+        },
+        {
+          "name": "Microsoft X-Box 360 pad",
+          "id": "030000005e0400008e02000014010000",
+          "description": "8Bitdo X-Input, Wired, Triggers to Buttons, Nintendo Layout (Arcade Stick + SN30)",
+          "swap_buttons": true
+        },
+        {
+          "name": "8BitDo Arcade Stick",
+          "id": "050000005e040000fd02000030110000",
+          "description": "8Bitdo X-Input, Bluetooth, Triggers to Buttons, Nintendo Layout (Arcade Stick)",
+          "swap_buttons": true
+        },
+        {
+          "name": "8Bitdo SN30 Pro",
+          "id": "050000005e040000fd02000030110000",
+          "description": "8Bitdo X-Input, Bluetooth, Triggers to Buttons, Nintendo Layout",
+          "swap_buttons": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "hardware": {
+    "case": {
+      "model": "argon1"
+    },
+    "ir": {
+      "gpio_pin": 23,
+      "keymap": "/lib/udev/rc_keymaps/tivo.toml"
+    }
+  }
+}

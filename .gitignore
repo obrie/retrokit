@@ -1,10 +1,5 @@
 docs/build
-profiles/*
-!profiles/manualkit-compressed
-!profiles/manualkit-original
-!profiles/nofilter-1g1r
-!profiles/nofilter-all
-!profiles/overclock
+profiles/mykit
 tmp/*
 __pycache__
 /.env
