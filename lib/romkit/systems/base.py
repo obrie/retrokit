@@ -26,7 +26,7 @@ class BaseSystem:
     supported_metadata = __all_metadata__
     supported_sorters = __all_sorters__
 
-    def __init__(self, config: dict, demo: bool = True) -> None:
+    def __init__(self, config: dict) -> None:
         self.config = config
         self.name = config['system']
         self.download_config = config.get('downloads', {})
@@ -55,33 +55,28 @@ class BaseSystem:
         # Attribute type to define the unique machine identifier
         self.rom_id_type = config['roms']['id']
 
-        if demo:
-            # Just the demo filter
-            self.filter_set = FilterSet()
-            self.filter_set.append(TitleFilter(config['roms']['filters']['demo'], config=config))
-        else:
-            # Filters
-            self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
+        # Filters
+        self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
 
-            # Filters: forced name filters
-            auxiliary_filter_sets = list(map(lambda system_dir: system_dir.filter_set, self.dirs)) + [self.favorites_set]
-            for filter_set in auxiliary_filter_sets:
-                for filter in filter_set.filters:
-                    if filter.name == 'names':
-                        new_filter = copy(filter)
-                        new_filter.override = True
-                        self.filter_set.append(new_filter)
+        # Filters: forced name filters
+        auxiliary_filter_sets = list(map(lambda system_dir: system_dir.filter_set, self.dirs)) + [self.favorites_set]
+        for filter_set in auxiliary_filter_sets:
+            for filter in filter_set.filters:
+                if filter.name == 'names':
+                    new_filter = copy(filter)
+                    new_filter.override = True
+                    self.filter_set.append(new_filter)
 
     # Looks up the system from the given name
     @classmethod
-    def from_json(cls, json: dict, demo: bool = False) -> None:
+    def from_json(cls, json: dict) -> None:
         name = json['system']
 
         for subcls in cls.__subclasses__():
             if subcls.name == name:
-                return subcls(json, demo)
+                return subcls(json)
 
-        return cls(json, demo)
+        return cls(json)
 
     # Additional context for rendering Machine URLs
     def context_for(self, machine: Machine) -> dict:

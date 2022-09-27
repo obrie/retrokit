@@ -67,36 +67,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA"
-      ],
-      "!flags": [
-        "Beta",
-        "Proto",
-        "Unl"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Compilation"
-      ],
-      "demo": [
-        "Paperboy"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/atarilynx", "filters": {}}

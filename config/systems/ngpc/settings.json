@@ -58,45 +58,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Proto"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Educational",
-        "Playing cards",
-        "Puzzle-Game"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "!titles": [
-        "# Board Games",
-        "Shanghai Mini",
-        "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
-        "SNK vs. Capcom - Card Fighters' Clash - SNK Version"
-      ],
-      "demo": [
-        "Pac-Man"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/ngpc", "filters": {}}

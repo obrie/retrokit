@@ -1,0 +1,36 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Alt",
+        "Beta",
+        "Demo",
+        "Proto",
+        "Sample",
+        "Test Program",
+        "Unl"
+      ],
+      "!keywords": [
+        "Arcade Classic",
+        "BIOS",
+        "InfoGenius"
+      ],
+      "!genres": [
+        "Board game",
+        "Casino",
+        "Compilation"
+      ],
+      "!titles": [
+        "Game Boy Aging Cartridge",
+        "Game Boy Camera",
+        "Game Boy Camera Gold",
+        "Solitaire FunPak"
+      ]
+    }
+  }
+}

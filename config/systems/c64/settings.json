@@ -117,80 +117,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "order": ["!flags", "romsets", "flags|@countries", "flags_count", "flags", "length"],
-      "!flags": [
-        "(Proto)"
-      ],
-      "romsets": [
-        "nointro-carts",
-        "nointro-tapes"
-      ],
-      "flags|@countries": [
-        "USA",
-        "World"
-      ],
-      "flags_count": "ascending",
-      "flags": [
-        "# Publishers",
-        "Lucasfilm",
-        "(Activision)",
-        "Anirog",
-        "Cosmi",
-        "Electric Dreams",
-        "Hewson",
-        "Imagine",
-        "Melbourne House",
-        "Ocean",
-        "Palace",
-        "Psygnosis",
-        "Trillium",
-
-        "# Re-releases",
-        "Budget",
-
-        "# Loaders",
-        "Cyberload",
-        "Burner",
-        "Rasterload",
-        "Virgin",
-        "CHR",
-        "Freeload",
-        "Novaload",
-        "Wildsave",
-
-        "# Game flavors",
-        "Winners Edition"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "collections": [
-        "C64 Dreams"
-      ],
-      "manuals": [true],
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Proto",
-        "ROM"
-      ],
-      "!genres": [
-        "Educational"
-      ],
-      "+collections": [
-        "C64 Dreams: Best Of"
-      ],
-      "demo": [
-        "Pitstop"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/c64", "filters": {}}

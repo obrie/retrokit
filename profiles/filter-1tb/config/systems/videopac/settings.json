@@ -1,0 +1,31 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Canada",
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Proto"
+      ],
+      "!genres": [
+        "Educational",
+        "Playing cards"
+      ],
+      "!titles": [
+        "# Board Games",
+        "4 in 1 Row",
+        "Chess",
+        "Chinese Logic",
+        "# Compilation",
+        "Matchmaker + Logix + Buzzword",
+        "Math-A-Magic + Echo",
+        "# Educational",
+        "Musician",
+        "Verkehrsspiele 1"
+      ]
+    }
+  }
+}

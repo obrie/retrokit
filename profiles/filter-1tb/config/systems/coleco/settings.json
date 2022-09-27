@@ -1,0 +1,23 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Canada",
+        "Europe",
+        "USA"
+      ],
+      "!flags": [
+        "Alt",
+        "Beta",
+        "Demo",
+        "Program",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Educational"
+      ]
+    }
+  }
+}

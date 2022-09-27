@@ -90,58 +90,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "USA",
-        "Europe",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Unl"
-      ],
-      "categories": [
-        "Games"
-      ],
-      "!genres": [
-        "Casino",
-        "Compilation",
-        "Playing cards"
-      ],
-      "!keywords": [
-        "# Sports Franchises",
-        "NBA 2K",
-        "NFL 2K",
-        "NFL Blitz",
-        "NHL 2K",
-        "World Series Baseball 2K"
-      ],
-      "!titles": [
-        "Phantasy Star Online"
-      ],
-      "+titles": [
-        "# Latest Sports Franchises (one day make this automatic)",
-        "NBA 2K2",
-        "NFL 2K2",
-        "NFL Blitz 2001",
-        "NHL 2K2",
-        "World Series Baseball 2K2"
-      ],
-      "demo": [
-        "Crazy Taxi",
-        "Headhunter",
-        "House of the Dead 2, The"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/dreamcast", "filters": {}}

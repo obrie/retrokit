@@ -92,51 +92,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "Europe"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Australia",
-        "Europe",
-        "USA"
-      ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Proto",
-        "Unl"
-      ],
-      "categories": [
-        "Games"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
-        "Quiz"
-      ],
-      "!names": [
-        "# Unavailable",
-        "Links - The Challenge of Golf (USA)"
-      ],
-      "+titles": [
-        "Jeopardy!",
-        "Mary Shelley's Frankenstein",
-        "Wheel of Fortune"
-      ],
-      "demo": [
-        "WWF - Rage in the Cage"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/segacd", "filters": {}}

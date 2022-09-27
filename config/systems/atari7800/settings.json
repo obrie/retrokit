@@ -67,36 +67,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "Europe"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Australia",
-        "Europe",
-        "USA"
-      ],
-      "!flags": [
-        "Proto",
-        "Unl"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "!genres": [
-        null,
-        "Educational"
-      ],
-      "demo": [
-        "Ms. Pac-Man"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/atari7800", "filters": {}}

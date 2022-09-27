@@ -59,20 +59,8 @@
   "roms": {
     "id": "name",
     "filters": {
-      "names": [
-        "ace",
-        "cliff",
-        "dle21",
-        "lair2",
-        "sdq"
-      ],
-      "demo": [
-        "dle21"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/daphne", "filters": {}}

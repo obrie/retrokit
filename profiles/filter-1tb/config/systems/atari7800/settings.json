@@ -1,0 +1,19 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Australia",
+        "Europe",
+        "USA"
+      ],
+      "!flags": [
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Educational"
+      ]
+    }
+  }
+}

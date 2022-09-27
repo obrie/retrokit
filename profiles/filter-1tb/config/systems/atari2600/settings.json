@@ -1,0 +1,28 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Australia",
+        "Canada",
+        "Europe",
+        "USA"
+      ],
+      "!flags": [
+        "Aftermarket",
+        "Beta",
+        "Demo",
+        "Pirate",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Educational"
+      ],
+      "!titles": [
+        "32 in 1 Game Cartridge",
+        "BASIC Programming"
+      ]
+    }
+  }
+}

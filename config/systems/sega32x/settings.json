@@ -56,38 +56,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Developer Cart",
-        "Proto",
-        "SDK Build"
-      ],
-      "!genres": [
-        null
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "demo": [
-        "Pitfall - The Mayan Adventure"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/sega32x", "filters": {}}

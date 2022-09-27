@@ -58,38 +58,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Proto",
-        "Sample"
-      ],
-      "!genres": [
-        "Educational"
-      ],
-      "!keywords": [
-        "3D",
-        "BIOS",
-        "Stress Tester"
-      ],
-      "demo": [
-        "Clean Sweep"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/vectrex", "filters": {}}

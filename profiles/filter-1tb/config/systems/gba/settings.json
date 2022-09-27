@@ -1,0 +1,43 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Alt",
+        "Beta",
+        "Demo",
+        "Kiosk",
+        "Phantasy Star Online",
+        "Test Program",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational",
+        "Playing cards"
+      ],
+      "!keywords": [
+        "BIOS",
+        "Battle Network",
+        "Classic NES Series",
+        "Collection",
+        "Game Boy Advance Video",
+        "Namco Museum"
+      ],
+      "!titles": [
+        "Ultimate Arcade Games",
+        "Ultimate Brain Games",
+        "Ultimate Card Games",
+        "Ultimate Puzzle Games"
+      ]
+    }
+  }
+}

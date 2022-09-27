@@ -1,0 +1,21 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Beta",
+        "Demo",
+        "Developer Cart",
+        "Proto",
+        "SDK Build"
+      ],
+      "!genres": [
+        null
+      ]
+    }
+  }
+}

@@ -87,54 +87,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Kiosk",
-        "Proto"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
-        "Simulation / Life",
-        "Thinking",
-        "Visual Novel",
-        "Playing cards",
-        "Simulation"
-      ],
-      "!keywords": [
-        "BIOS",
-        "Collection"
-      ],
-      "+titles": [
-        "Mario Party DS"
-      ],
-      "!names": [
-        "# Unavailable",
-        "Ben 10 - Alien Force (USA) (En,Fr,De,Es,It)"
-      ],
-      "demo": [
-        "Contra 4"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/nds", "filters": {}}

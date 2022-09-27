@@ -68,42 +68,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Proto",
-        "Sega Channel",
-        "Unl"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation"
-      ],
-      "!keywords": [
-        "BIOS",
-        "Hang On &"
-      ],
-      "demo": [
-        "Sonic The Hedgehog"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/mastersystem", "filters": {}}

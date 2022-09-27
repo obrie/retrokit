@@ -1,0 +1,27 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
+      "!keywords": [
+        "-in-1",
+        "BIOS",
+        "Card",
+        "Casino",
+        "Chess",
+        "Collection",
+        "Collector"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Aftermarket",
+        "Alt",
+        "Beta",
+        "Collection",
+        "Demo",
+        "Enhancement",
+        "GameCube",
+        "Pirate",
+        "Proto",
+        "Sample",
+        "Switch Online",
+        "Unl",
+        "Virtual Console",
+        "[b]"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
+      "+titles": [
+        "Jeopardy!"
+      ]
+    }
+  }
+}

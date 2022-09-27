@@ -1,0 +1,105 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "USA"
+      ],
+      "!flags": [
+        "# PSN",
+        "NG",
+        "PCE",
+        "Promo",
+        "PSP",
+        "TGX"
+      ],
+      "!romsets": [
+        "dlc",
+        "psn"
+      ],
+      "!categories": [
+        "Applications",
+        "Demos",
+        "Educational",
+        "Preproduction",
+        "Video"
+      ],
+      "!emulator_ratings": [1, 2, 3],
+      "!genres": [
+        "Board game",
+        "Compilation",
+        "Educational",
+        "Fight",
+        "Japanese RPG",
+        "Music and Dance",
+        "Playing cards",
+        "Puzzle-Game",
+        "Simulation",
+        "Sports",
+        "Visual Novel"
+      ],
+      "!keywords": [
+        "Anniversary Edition",
+        "Cards",
+        "Collection",
+        "Demo",
+        "Quiz",
+        "# Sports franchises",
+        "FIFA Soccer",
+        "Gretzky NHL",
+        "Hot Shots Golf - Open Tee",
+        "Madden NFL",
+        "MLB 0",
+        "MLB 1",
+        "Major League Baseball",
+        "NBA 0",
+        "NBA 1",
+        "NBA 2",
+        "NBA Live",
+        "NCAA Football",
+        "NFL Street",
+        "PES 20",
+        "Tiger Woods PGA Tour",
+        "Virtua Tennis",
+        "World Tour Soccer",
+        "WWE SmackDown vs. Raw"
+      ],
+      "!titles": [
+        "# Education",
+        "LittleBigPlanet",
+        "PQ2 - Practical Intelligence Quotient 2",
+        "# Playing cards",
+        "Neverland Card Battles",
+        "# Casino",
+        "Hard Rock Casino",
+        "Stacked with Daniel Negreanu",
+        "# Digital Novels",
+        "Disgaea Infinite",
+        "Metal Gear Solid - Digital Graphic Novel",
+        "# Non-games",
+        "Traxxpad - Portable Studio",
+        "Hilton Garden Inn - Ultimate Team Play"
+      ],
+      "+titles": [
+        "# Latest Sports Franchises",
+        "# FIFA Soccer 13",
+        "# Gretzky NHL 06",
+        "# Hot Shots Golf - Open Tee 2",
+        "# Madden NFL 12",
+        "# MLB 11 - The Show",
+        "# Major League Baseball 2K12",
+        "# NBA 2K13",
+        "# NBA Live 10",
+        "# NCAA Football 10",
+        "# NFL Street 3",
+        "# PES 2014 - Pro Evolution Soccer",
+        "# Tiger Woods PGA Tour 10",
+        "# Virtua Tennis 3",
+        "# World Tour Soccer 06",
+        "# WWE SmackDown vs. Raw 2011",
+        "# Sports titles we allow",
+        "Tony Hawk's Project 8",
+        "Tony Hawk's Underground 2 Remix"
+      ]
+    }
+  }
+}

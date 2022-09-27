@@ -1,0 +1,41 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!genres": [
+        null,
+        "Casino",
+        "Demo",
+        "Educational"
+      ],
+      "!keywords": [
+        "Test Cartridge"
+      ],
+      "!titles": [
+        "# Board Games",
+        "ABPA Backgammon ~ Backgammon",
+        "Checkers ~ Draughts",
+        "Triple Challenge - Chess, Checkers, Backgammon",
+        "USCF Chess ~ Chess",
+        "# Casino",
+        "Las Vegas Poker & Blackjack",
+        "Las Vegas Roulette",
+        "# ECS (Entertainment Computer System)",
+        "Game Factory",
+        "Jetsons' Ways with Words, The",
+        "Melody Blaster",
+        "Mind Strike",
+        "Mr. BASIC Meets Bits 'N Bytes",
+        "NASL Soccer ~ Soccer",
+        "NFL Football ~ Football",
+        "Number Jumble",
+        "Scooby Doo's Maze Chase",
+        "World Series Major League Baseball"
+      ]
+    }
+  }
+}

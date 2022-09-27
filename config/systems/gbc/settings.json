@@ -78,45 +78,8 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Beta",
-        "Demo",
-        "Proto",
-        "Test Program",
-        "Unl"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational"
-      ],
-      "!keywords": [
-        "-in-1",
-        "BIOS",
-        "Card",
-        "Casino",
-        "Chess",
-        "Collection",
-        "Collector"
-      ],
-      "demo": [
-        "Super Mario Bros. Deluxe"
-      ]
     },
     "favorites": {
       "titles": [

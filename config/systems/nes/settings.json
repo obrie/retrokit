@@ -67,57 +67,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Aftermarket",
-        "Alt",
-        "Beta",
-        "Collection",
-        "Competition Cart",
-        "Demo",
-        "Kiosk",
-        "Namco Museum",
-        "Proto",
-        "Sample",
-        "Test",
-        "Unl",
-        "Virtual Console",
-        "e-Reader"
-      ],
-      "!genres": [
-        null,
-        "Adult",
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
-        "Playing cards"
-      ],
-      "+titles": [
-        "Jeopardy!",
-        "Karateka"
-      ],
-      "!titles": [
-        "Punch-Out!!"
-      ],
-      "demo": [
-        "Bubble Bobble"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/nes", "filters": {}}

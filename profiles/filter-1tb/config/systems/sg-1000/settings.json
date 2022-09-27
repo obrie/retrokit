@@ -1,0 +1,24 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Australia",
+        "English",
+        "Europe"
+      ],
+      "!flags": [
+        "Alt",
+        "Beta",
+        "Proto",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ]
+    }
+  }
+}

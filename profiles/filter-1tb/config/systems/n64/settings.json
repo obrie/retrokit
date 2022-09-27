@@ -1,0 +1,34 @@
+{
+  "roms": {
+    "filters": {
+      "emulator_compatibility": [true],
+      "emulator_ratings": [5],
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Beta",
+        "Collection",
+        "Demo",
+        "Pirate",
+        "Proto",
+        "Unl",
+        "Virtual Console"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Educational"
+      ],
+      "+titles": [
+        "Mario Party",
+        "Mario Party 2",
+        "Mario Party 3"
+      ]
+    }
+  }
+}

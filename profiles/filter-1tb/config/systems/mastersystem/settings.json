@@ -1,0 +1,28 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Beta",
+        "Demo",
+        "Proto",
+        "Sega Channel",
+        "Unl"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Compilation"
+      ],
+      "!keywords": [
+        "BIOS",
+        "Hang On &"
+      ]
+    }
+  }
+}

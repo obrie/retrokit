@@ -67,43 +67,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Auto Demo",
-        "Beta",
-        "Demo",
-        "Test Program",
-        "Proto",
-        "Unl",
-        "Virtual Console"
-      ],
-      "!genres": [
-        "Board game",
-        "Casino",
-        "Compilation"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "demo": [
-        "Sonic The Hedgehog"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/gamegear", "filters": {}}

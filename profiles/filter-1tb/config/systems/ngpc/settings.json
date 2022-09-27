@@ -1,0 +1,28 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Proto"
+      ],
+      "!genres": [
+        null,
+        "Board game",
+        "Casino",
+        "Educational",
+        "Playing cards",
+        "Puzzle-Game"
+      ],
+      "!titles": [
+        "# Board Games",
+        "Shanghai Mini",
+        "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
+        "SNK vs. Capcom - Card Fighters' Clash - SNK Version"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "roms": {
+    "filters": {
+      "emulator_compatibility": [true],
+      "emulator_ratings": [4, 5],
+      "languages": [
+        null,
+        "English"
+      ],
+      "!genres": [
+        "Board Game",
+        "Casino",
+        "Golf",
+        "Mature",
+        "Medal Game",
+        "Multiplay",
+        "MultiGame / Compilation",
+        "Music Game",
+        "Puzzle / Match",
+        "Quiz",
+        "Slot Machine",
+        "Sports / Baseball",
+        "Sports / Bowling",
+        "Sports / Handball",
+        "Sports / Hang Gliding",
+        "Sports / Hockey",
+        "Sports / Horse Racing",
+        "Sports / Misc.",
+        "Sports / Pool",
+        "Sports / Shuffleboard",
+        "Sports / Soccer",
+        "Sports / Swimming",
+        "Sports / Tennis",
+        "Sports / Volleyball",
+        "Tabletop"
+      ],
+      "!ratings": [
+        "0 to 10 (Worst)",
+        "10 to 20 (Horrible)",
+        "20 to 30 (Bad)",
+        "30 to 40 (Amendable)"
+      ],
+      "!flags": [
+        "Hack",
+        "Demo"
+      ],
+      "!keywords": [
+        "Anniversary",
+        "Bootleg",
+        "DECO Cassette",
+        "(Hack)",
+        "HB,",
+        "Homebrew",
+        "Prototype"
+      ],
+      "!controls": [
+        "gambling",
+        "hanafuda",
+        "mahjong"
+      ],
+      "!names": [
+        "47pie2",
+        "bjtwin",
+        "canvas",
+        "deluxe5"
+      ],
+      "+names": [
+        "pacman"
+      ]
+    }
+  }
+}

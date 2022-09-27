@@ -70,40 +70,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "Europe"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Canada",
-        "Europe",
-        "USA"
-      ],
-      "!flags": [
-        "Alt",
-        "Beta",
-        "Demo",
-        "Program",
-        "Proto",
-        "Unl"
-      ],
-      "!genres": [
-        null,
-        "Educational"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "demo": [
-        "BurgerTime"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/coleco", "filters": {}}

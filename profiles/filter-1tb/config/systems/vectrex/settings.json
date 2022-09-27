@@ -1,0 +1,24 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
+      "!flags": [
+        "Beta",
+        "Proto",
+        "Sample"
+      ],
+      "!genres": [
+        "Educational"
+      ],
+      "!keywords": [
+        "3D",
+        "BIOS",
+        "Stress Tester"
+      ]
+    }
+  }
+}

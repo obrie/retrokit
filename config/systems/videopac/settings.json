@@ -91,49 +91,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World",
-        "Europe"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Canada",
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Proto"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "!genres": [
-        "Educational",
-        "Playing cards"
-      ],
-      "!titles": [
-        "# Board Games",
-        "4 in 1 Row",
-        "Chess",
-        "Chinese Logic",
-        "# Compilation",
-        "Matchmaker + Logix + Buzzword",
-        "Math-A-Magic + Echo",
-        "# Educational",
-        "Musician",
-        "Verkehrsspiele 1"
-      ],
-      "demo": [
-        "Popeye"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/videopac", "filters": {}}

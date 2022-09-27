@@ -75,54 +75,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Demo",
-        "Unl"
-      ],
-      "categories": [
-        "Games"
-      ],
-      "!emulator_ratings": [1, 2, 3],
-      "!genres": [
-        "Adult",
-        "Board game",
-        "Casino",
-        "Educational",
-        "Playing cards",
-        "Simulation"
-      ],
-      "!names": [
-        "# Unavailable",
-        "Fun 'n Games (USA)",
-        "Jammit (USA)",
-        "Out of This World (USA)",
-        "Putt-Putt Goes to the Moon (USA)",
-        "Quarterback Attack (USA)",
-        "Starblade (USA)",
-        "Syndicate (USA)",
-        "Theme Park (USA)",
-        "Who Shot Johnny Rock (USA)"
-      ],
-      "demo": [
-        "D",
-        "Road Rash"
-       ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/3do", "filters": {}}

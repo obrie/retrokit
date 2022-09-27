@@ -1,0 +1,28 @@
+{
+  "roms": {
+    "priority": {
+      "order": ["flags", "length"],
+      "flags": [
+        "USA",
+        "World",
+        "English",
+        "Europe",
+        "Canada",
+        "Australia"
+      ],
+      "length": "ascending"
+    },
+    "filters": {
+      "!flags": [
+        "Alt",
+        "Beta",
+        "Demo",
+        "Kiosk",
+        "Proto",
+        "Sample",
+        "Test Program",
+        "Unl"
+      ]
+    }
+  }
+}

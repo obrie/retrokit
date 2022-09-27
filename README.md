@@ -128,8 +128,9 @@ When I started creating my own RetroPie system, I wanted to build it in such a w
 that I could re-create the exact same setup steps each time.  As it turns out, there's
 a lot involved in building out the perfect Raspberry Pi 4 system.
 
-retrokit, romkit, manualkit, powerkit, and all of the supporting tools represent the
-work I did to build a configuration management system for my personal setup.
+retrokit, romkit, manualkit, powerkit, launchkit, sindenkit, and all of the supporting
+tools represent the work I did to build a configuration management system for my
+personal setup.
 
 ## Demo
 
@@ -149,15 +150,9 @@ little effort.  However, understand that this is opinionated software.  It uses
 the default settings that I prefer and is configured by default for my hardware
 setup.
 
-Note that, by default, `ROMKIT_DEMO` is enabled, meaning that only a single game
-will be installed for each system / emulator.  To disable this and install all
-games based on the filters defined for each system, set this to `ROMKIT_DEMO=false`
-in your `.env` file.
-
 The default hardware setup assumes:
 
 * Raspberry Pi 4
-* 1TB or more storage capacity
 
 You can have complete control over what parts of retrokit get used via everything
 in the `config/` folder, particularly `config/settings.json`.
@@ -465,12 +460,12 @@ a "base" profile and then layer customizations for different systems on top of t
 To do that, add something like this to your `.env`:
 
 ```
-PROFILES=base,crt
-# PROFILES=base,hd
+PROFILES=mykit/base,mykit/crt
+# PROFILES=mykit/base,mykit/hd
 ```
 
-In the examples above, a `base` profile defines overrides that you want to use for
-all of your profiles.  A `crt` or `hd` profile then defines overrides that you want
+In the examples above, a `mykit/base` profile defines overrides that you want to use for
+all of your profiles.  A `mykit/crt` or `mykit/hd` profile then defines overrides that you want
 to use for specific hardware configurations.
 
 ### Overrides
@@ -535,15 +530,15 @@ Which environment variables take priority largely depends on how you've defined
 your environment variables.  If your `.env` is configured like so:
 
 ```sh
-export ROMKIT_DEMO=true
+export PROFILES=filter-demo
 ```
 
-...then `ROMKIT_DEMO` will always be `"true"` regardless of the current shell
+...then `PROFILES` will always be `"filter-demo"` regardless of the current shell
 environment.  To instead respect the current environment, you can change the format
 to:
 
 ```sh
-export ROMKIT_DEMO=${ROMKIT_DEMO:-true}
+export PROFILES=${PROFILES:-filter-demo}
 ```
 
 ### Use cases
@@ -1083,7 +1078,7 @@ This will generate PDF files in the `docs/build` folder.
 
 ## Storage Capacity
 
-The default filters assume that there is 1TB of capacity available for installing
+The `filter-1tb` profile assumes that there is 1TB of capacity available for installing
 ROMs.  These filters generally have the following rules:
 
 * 1G1R (one game per region)

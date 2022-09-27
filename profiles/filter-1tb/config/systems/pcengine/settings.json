@@ -1,0 +1,29 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "USA"
+      ],
+      "!flags": [
+        "Beta",
+        "Proto",
+        "Unl"
+      ],
+      "categories": [
+        null,
+        "Games"
+      ],
+      "!genres": [
+        "Adult",
+        "Board game",
+        "Casino",
+        "Educational",
+        "Playing cards"
+      ],
+      "!titles": [
+        "# Collections",
+        "Gate of Thunder + Bonk's Adventure + Bonk's Revenge"
+      ]
+    }
+  }
+}

@@ -70,57 +70,8 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Aftermarket",
-        "Alt",
-        "Beta",
-        "Compilation",
-        "Genesis Mini",
-        "Mega Drive Mini",
-        "PC Rerelease",
-        "Program",
-        "Proto",
-        "Sega Ages",
-        "Unl",
-        "Virtual Console"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational"
-      ],
-      "!keywords": [
-        "BIOS",
-        "Collection"
-      ],
-      "!titles": [
-        "# Collections",
-        "Fun 'n Games",
-        "Sonic & Knuckles + Sonic The Hedgehog",
-        "Sonic & Knuckles + Sonic The Hedgehog 2",
-        "Sonic & Knuckles + Sonic The Hedgehog 3"
-      ],
-      "+titles": [
-        "Jeopardy!",
-        "Wheel of Fortune"
-      ],
-      "demo": [
-        "Mortal Kombat"
-      ]
     },
     "favorites": {
       "titles": [

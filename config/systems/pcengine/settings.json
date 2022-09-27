@@ -151,39 +151,8 @@
       "length": "ascending"
     },
     "filters": {
-      "flags": [
-        "USA"
-      ],
-      "!flags": [
-        "Beta",
-        "Proto",
-        "Unl"
-      ],
-      "categories": [
-        null,
-        "Games"
-      ],
-      "!genres": [
-        "Adult",
-        "Board game",
-        "Casino",
-        "Educational",
-        "Playing cards"
-      ],
-      "!keywords": [
-        "BIOS"
-      ],
-      "!titles": [
-        "# Collections",
-        "Gate of Thunder + Bonk's Adventure + Bonk's Revenge"
-      ],
-      "demo": [
-        "Prince of Persia"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/pcengine", "filters": {}}

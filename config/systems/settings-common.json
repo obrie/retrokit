@@ -27,17 +27,10 @@
     ]
   },
   "roms": {
-    "priority": {
-      "order": ["flags", "length"],
-      "flags": [
-        "USA",
-        "World",
-        "English",
-        "Europe",
-        "Canada",
-        "Australia"
-      ],
-      "length": "ascending"
+    "filters": {
+      "!keywords": [
+        "BIOS"
+      ]
     }
   }
 }

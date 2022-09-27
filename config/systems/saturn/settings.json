@@ -86,47 +86,10 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "flags": [
-        "USA",
-        "World"
-      ],
-      "length": "ascending"
     },
     "filters": {
-      "emulator_ratings": [
-        4,
-        5
-      ],
-      "flags": [
-        "USA",
-        "Europe",
-        "World"
-      ],
-      "!flags": [
-        "Demo",
-        "Proto"
-      ],
-      "categories": [
-        "Games"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
-        "Sports"
-      ],
-      "!keywords": [
-        "Demo"
-      ],
-      "demo": [
-        "Sega Rally Championship"
-      ]
     },
     "favorites": {
-      "titles": [
-      ]
     },
     "dirs": [
       {"path": "$HOME/RetroPie/roms/saturn", "filters": {}}
