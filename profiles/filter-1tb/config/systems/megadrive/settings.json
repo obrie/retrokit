@@ -1,24 +1,11 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Aftermarket",
-        "Alt",
-        "Beta",
-        "Compilation",
+      "!flags|extra": [
         "Genesis Mini",
         "Mega Drive Mini",
         "PC Rerelease",
-        "Program",
-        "Proto",
-        "Sega Ages",
-        "Unl",
-        "Virtual Console"
+        "Sega Ages"
       ],
       "!genres": [
         null,
@@ -27,8 +14,7 @@
         "Compilation",
         "Educational"
       ],
-      "!keywords": [
-        "BIOS",
+      "!keywords|extra": [
         "Collection"
       ],
       "!titles": [

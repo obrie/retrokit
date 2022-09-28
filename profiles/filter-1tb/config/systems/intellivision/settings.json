@@ -1,18 +1,13 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
       "!genres": [
         null,
         "Casino",
         "Demo",
         "Educational"
       ],
-      "!keywords": [
+      "!keywords|extra": [
         "Test Cartridge"
       ],
       "!titles": [

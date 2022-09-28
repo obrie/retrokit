@@ -1,18 +1,6 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "USA",
-        "Europe",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Unl"
-      ],
-      "categories": [
-        "Games"
-      ],
       "!genres": [
         "Casino",
         "Compilation",

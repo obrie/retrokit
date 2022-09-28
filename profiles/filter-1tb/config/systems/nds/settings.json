@@ -1,17 +1,6 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Kiosk",
-        "Proto"
-      ],
       "!genres": [
         null,
         "Board game",
@@ -24,8 +13,7 @@
         "Playing cards",
         "Simulation"
       ],
-      "!keywords": [
-        "BIOS",
+      "!keywords|extra": [
         "Collection"
       ],
       "+titles": [

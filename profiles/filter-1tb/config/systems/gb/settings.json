@@ -1,23 +1,8 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Beta",
-        "Demo",
-        "Proto",
-        "Sample",
-        "Test Program",
-        "Unl"
-      ],
-      "!keywords": [
+      "!keywords|extra": [
         "Arcade Classic",
-        "BIOS",
         "InfoGenius"
       ],
       "!genres": [

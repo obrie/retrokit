@@ -3,10 +3,6 @@
     "filters": {
       "emulator_compatibility": [true],
       "emulator_ratings": [4, 5],
-      "languages": [
-        null,
-        "English"
-      ],
       "!genres": [
         "Board Game",
         "Casino",
@@ -40,6 +36,7 @@
         "20 to 30 (Bad)",
         "30 to 40 (Amendable)"
       ],
+      "flags": null,
       "!flags": [
         "Hack",
         "Demo"

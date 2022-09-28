@@ -2,23 +2,11 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1],
-      "categories": [
-        "Games"
-      ],
-      "languages": [
-        null,
-        "English"
-      ],
       "flags": [
         "USA",
         "Europe"
       ],
-      "!flags": [
-        "Beta",
-        "Demo",
-        "Preview",
-        "Proto",
-        "Unl",
+      "!flags|extra": [
         "The Making of"
       ],
       "!keywords": [

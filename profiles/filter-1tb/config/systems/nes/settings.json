@@ -1,25 +1,9 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Aftermarket",
-        "Alt",
-        "Beta",
-        "Collection",
+      "!flags|extra": [
         "Competition Cart",
-        "Demo",
-        "Kiosk",
         "Namco Museum",
-        "Proto",
-        "Sample",
-        "Test",
-        "Unl",
-        "Virtual Console",
         "e-Reader"
       ],
       "!genres": [

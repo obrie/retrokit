@@ -1,9 +1,6 @@
 {
   "roms": {
     "filters": {
-      "categories": [
-        "Games"
-      ],
       "!emulator_ratings": [1, 2, 3],
       "!names": [
         "# Unavailable",
@@ -16,15 +13,6 @@
         "Syndicate (USA)",
         "Theme Park (USA)",
         "Who Shot Johnny Rock (USA)"
-      ],
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Demo",
-        "Unl"
       ],
       "!genres": [
         "Adult",

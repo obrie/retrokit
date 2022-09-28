@@ -1,0 +1,12 @@
+{
+  "roms": {
+    "filters": {
+      "enabled": ["names"],
+      "names": [
+        "doom",
+        "duke3d",
+        "quake"
+      ]
+    }
+  }
+}

@@ -13,15 +13,39 @@
       "length": "ascending"
     },
     "filters": {
+      "categories": [
+        null,
+        "Games"
+      ],
+      "languages": [
+        null,
+        "English"
+      ],
+      "flags": [
+        "Europe",
+        "USA",
+        "World"
+      ],
       "!flags": [
+        "Aftermarket",
         "Alt",
+        "Auto Demo",
         "Beta",
+        "Collection",
+        "Compilation",
         "Demo",
+        "Developer Cart",
         "Kiosk",
+        "Pirate",
+        "Preview",
+        "Program",
         "Proto",
         "Sample",
+        "SDK Build",
+        "Test",
         "Test Program",
-        "Unl"
+        "Unl",
+        "Virtual Console"
       ]
     }
   }

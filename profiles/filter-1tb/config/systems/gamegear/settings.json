@@ -1,28 +1,10 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Auto Demo",
-        "Beta",
-        "Demo",
-        "Test Program",
-        "Proto",
-        "Unl",
-        "Virtual Console"
-      ],
       "!genres": [
         "Board game",
         "Casino",
         "Compilation"
-      ],
-      "!keywords": [
-        "BIOS"
       ]
     }
   }

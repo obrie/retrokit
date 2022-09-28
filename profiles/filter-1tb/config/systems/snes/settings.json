@@ -1,25 +1,10 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Aftermarket",
-        "Alt",
-        "Beta",
-        "Collection",
-        "Demo",
+      "!flags|extra": [
         "Enhancement",
         "GameCube",
-        "Pirate",
-        "Proto",
-        "Sample",
         "Switch Online",
-        "Unl",
-        "Virtual Console",
         "[b]"
       ],
       "!genres": [

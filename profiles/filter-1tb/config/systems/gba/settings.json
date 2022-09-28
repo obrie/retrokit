@@ -1,20 +1,8 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!flags": [
-        "Alt",
-        "Beta",
-        "Demo",
-        "Kiosk",
-        "Phantasy Star Online",
-        "Test Program",
-        "Proto",
-        "Unl"
+      "!flags|extra": [
+        "Phantasy Star Online"
       ],
       "!genres": [
         null,
