@@ -7,6 +7,12 @@ class FilterReason(Enum):
     ALLOW = 1
     OVERRIDE = 2
 
+class FilterModifier(Enum):
+    ALLOW = ''
+    BLOCK = '!'
+    OVERRIDE = '+'
+    UNION = '|'
+
 # Represents a collection of machine filters
 class FilterSet:
     def __init__(self) -> None:
@@ -18,24 +24,43 @@ class FilterSet:
     def from_json(cls, json: dict, config: dict, supported_filters: list, log: bool = True) -> FilterSet:
         filter_set = cls()
 
-        enabled_filter_names = json.get('enabled')
-        if enabled_filter_names is None:
-            enabled_filters = supported_filters
-        else:
-            enabled_filters = filter(lambda filter_cls: filter_cls.name in enabled_filter_names, supported_filters)
+        # Determine which filter configurations are actively being used
+        filter_configs = {key: json[key] for key in json if key != 'enabled'}
+        enabled_filter_config_names = json.get('enabled', filter_configs.keys())
 
-        for filter_cls in enabled_filters:
-            allowlist = json.get(filter_cls.name)
-            if allowlist is not None:
-                filter_set.append(filter_cls(set(allowlist), config=config, log=log))
+        # Combine related configurations into a single filter config (in case the
+        # user is unioning through configurations like "names" / "names|extra")
+        combined_filter_configs = {}
+        for filter_config_name in enabled_filter_config_names:
+            filter_name = filter_config_name.split(FilterModifier.UNION.value)[0]
+            filter_values = filter_configs[filter_config_name]
 
-            blocklist = json.get(f'!{filter_cls.name}')
-            if blocklist is not None:
-                filter_set.append(filter_cls(set(blocklist), invert=True, config=config, log=log))
+            # We only process non-null values as null is an indication that we want
+            # to ignore what was there previously
+            if filter_values is not None:
+                # We union the values as this is effectively what the "|" modifier means
+                combined_filter_configs[filter_name] = combined_filter_configs.get(filter_name, set()) | set(filter_values)
 
-            overridelist = json.get(f'+{filter_cls.name}')
-            if overridelist is not None:
-                filter_set.append(filter_cls(set(overridelist), override=True, config=config, log=log))
+        # Add a hash lookup for each supported filter class
+        supported_filter_lookup = {filter_cls.name: filter_cls for filter_cls in supported_filters}
+
+        # Add each filter to the set
+        for filter_name, filter_values in combined_filter_configs.items():
+            # Determine the filter to create.  The class name will be the name
+            # without modifiers. For example, the filter class name for "!names" is "names".
+            filter_modifier = filter_name[0]
+            filter_options = {}
+            if filter_modifier == FilterModifier.BLOCK.value:
+                filter_cls_name = filter_name[1:]
+                filter_options['invert'] = True
+            elif filter_modifier == FilterModifier.OVERRIDE.value:
+                filter_cls_name = filter_name[1:]
+                filter_options['override'] = True
+            else:
+                filter_cls_name = filter_name
+
+            filter_cls = supported_filter_lookup[filter_cls_name]
+            filter_set.append(filter_cls(set(filter_values), config=config, log=log, **filter_options))
 
         return filter_set
 
