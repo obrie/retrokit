@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent.parent.parent.joinpath('lib')))
 
 from romkit.models.machine import Machine
 from romkit.systems import BaseSystem
@@ -29,6 +29,9 @@ class RefreshConfig(Enum):
 
     # Only refresh machines that have empty genres
     EMPTY = 'empty'
+
+    # Only refresh machines that have missing data (genres, players, or rating)
+    INCOMPLETE = 'incomplete'
 
     # Refresh all machines
     ALL = 'all'
@@ -70,7 +73,7 @@ class Scraper:
             return
 
         # Build the system that we're scraping
-        self.system = BaseSystem.from_json(self.config, demo=False)
+        self.system = BaseSystem.from_json(self.config)
         self.scraper_sources = self.config['scraper']['sources']
 
         # Load existing metadata
@@ -140,11 +143,13 @@ class Scraper:
                 # * Configured for all
                 # * Configured for missing and the metadata is missing
                 # * Configured for empty and the metadata is empty
+                # * Configured for incomplete and the metadata is incomplete
                 data = self.metadata.get(group_title)
                 is_missing = (data is None)
                 is_empty = (is_missing or not (data.get('genres') or data.get('rating') or data.get('players')))
+                is_incomplete = (is_empty or not (data.get('genres') and data.get('rating') and data.get('players')))
 
-                if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty):
+                if self.refresh == RefreshConfig.ALL or (self.refresh == RefreshConfig.MISSING and is_missing) or (self.refresh == RefreshConfig.EMPTY and is_empty) or (self.refresh == RefreshConfig.INCOMPLETE and is_incomplete):
                     self.scrape_machine(machine)
                 else:
                     print(f'[{machine.name}] Already scraped')
