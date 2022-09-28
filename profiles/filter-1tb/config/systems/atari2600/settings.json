@@ -1,15 +1,8 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Australia",
-        "Canada",
-        "Europe",
-        "USA"
-      ],
-      "!genres": [
-        null,
-        "Educational"
+      "!genres|extra": [
+        null
       ],
       "!titles": [
         "32 in 1 Game Cartridge",

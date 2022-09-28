@@ -2,11 +2,8 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1],
-      "flags": [
-        "USA",
-        "Europe"
-      ],
       "!flags|extra": [
+        "(Australia)",
         "The Making of"
       ],
       "!keywords": [

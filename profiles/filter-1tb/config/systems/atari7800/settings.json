@@ -1,14 +1,8 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Australia",
-        "Europe",
-        "USA"
-      ],
-      "!genres": [
-        null,
-        "Educational"
+      "!genres|extra": [
+        null
       ]
     }
   }

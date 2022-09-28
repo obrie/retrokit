@@ -2,16 +2,8 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1, 2],
-      "!genres": [
-        "Board / Party Game",
-        "Casino",
-        "Education",
-        "Interactive Fiction",
-        "Interactive Movie",
-        "Puzzle",
-        "Quiz"
+      "titles": [
       ],
-      "titles": [],
       "+titles": [
         "# Loosely based on https://www.reddit.com/r/gaming/comments/vj5t4/100_amazing_dos_games_this_was_my_childhood/",
         "Abuse",

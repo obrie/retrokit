@@ -1,11 +1,6 @@
 {
   "roms": {
     "filters": {
-      "!genres": [
-        "Casino",
-        "Compilation",
-        "Playing cards"
-      ],
       "!keywords": [
         "# Sports Franchises",
         "NBA 2K",
@@ -23,7 +18,10 @@
         "NFL 2K2",
         "NFL Blitz 2001",
         "NHL 2K2",
-        "World Series Baseball 2K2"
+        "World Series Baseball 2K2",
+        "# Exceptions",
+        "South Park - Chef's Luv Shack",
+        "Typing of the Dead, The"
       ]
     }
   }

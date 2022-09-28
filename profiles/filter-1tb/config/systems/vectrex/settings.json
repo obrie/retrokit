@@ -1,12 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!genres": [
-        "Educational"
-      ],
-      "!keywords": [
+      "!keywords|extra": [
         "3D",
-        "BIOS",
         "Stress Tester"
       ]
     }

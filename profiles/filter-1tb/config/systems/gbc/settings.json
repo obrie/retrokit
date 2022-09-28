@@ -1,12 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational"
+      "!genres|extra": [
+        null
       ],
       "!keywords|extra": [
         "-in-1",

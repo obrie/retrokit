@@ -21,7 +21,21 @@
         null,
         "English"
       ],
+      "!genres": [
+        "Adult",
+        "Board game",
+        "Casino",
+        "Compilation",
+        "Demo",
+        "Educational",
+        "Playing cards",
+        "Simulation / Life",
+        "Thinking",
+        "Visual Novel"
+      ],
       "flags": [
+        "Australia",
+        "Canada",
         "Europe",
         "USA",
         "World"
@@ -35,6 +49,7 @@
         "Compilation",
         "Demo",
         "Developer Cart",
+        "Hack",
         "Kiosk",
         "Pirate",
         "Preview",
@@ -46,6 +61,11 @@
         "Test Program",
         "Unl",
         "Virtual Console"
+      ],
+      "!keywords": [
+        "BIOS",
+        " Demo ",
+        "Test Cartridge"
       ]
     }
   }

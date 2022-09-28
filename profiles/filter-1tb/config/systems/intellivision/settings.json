@@ -1,14 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!genres": [
-        null,
-        "Casino",
-        "Demo",
-        "Educational"
-      ],
-      "!keywords|extra": [
-        "Test Cartridge"
+      "!genres|extra": [
+        null
       ],
       "!titles": [
         "# Board Games",

@@ -1,14 +1,8 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Europe",
-        "USA"
-      ],
-      "!genres": [
-        null,
-        "Board game",
-        "Compilation"
+      "!genres|extra": [
+        null
       ]
     }
   }

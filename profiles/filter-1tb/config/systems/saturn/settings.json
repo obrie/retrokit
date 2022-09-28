@@ -1,20 +1,10 @@
 {
   "roms": {
     "filters": {
-      "emulator_ratings": [
-        4,
-        5
-      ],
-      "!genres": [
+      "emulator_ratings": [4, 5],
+      "!genres|extra": [
         null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
         "Sports"
-      ],
-      "!keywords": [
-        "Demo"
       ]
     }
   }

@@ -1,16 +1,6 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Canada",
-        "Europe",
-        "USA",
-        "World"
-      ],
-      "!genres": [
-        "Educational",
-        "Playing cards"
-      ],
       "!titles": [
         "# Board Games",
         "4 in 1 Row",

@@ -1,11 +1,6 @@
 {
   "roms": {
     "filters": {
-      "flags": [
-        "Australia",
-        "Europe",
-        "USA"
-      ],
       "!genres": [
         null,
         "Board game",

@@ -3,12 +3,8 @@
     "filters": {
       "emulator_compatibility": [true],
       "emulator_ratings": [5],
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational"
+      "!genres|extra": [
+        null
       ],
       "+titles": [
         "Mario Party",
