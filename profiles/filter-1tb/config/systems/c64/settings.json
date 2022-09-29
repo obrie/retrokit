@@ -52,22 +52,18 @@
         "C64 Dreams"
       ],
       "manuals": [true],
-      "flags": [
-        "Europe",
-        "USA",
-        "World"
-      ],
       "!flags": [
         "Alt",
         "Proto",
         "ROM"
       ],
-      "!genres": [
-        "Educational"
+      "+titles": [
+        "Quedex"
       ],
       "+collections": [
         "C64 Dreams: Best Of"
-      ]
+      ],
+      "!genres|empty": null
     }
   }
 }

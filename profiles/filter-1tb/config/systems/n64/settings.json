@@ -3,9 +3,6 @@
     "filters": {
       "emulator_compatibility": [true],
       "emulator_ratings": [5],
-      "!genres|extra": [
-        null
-      ],
       "+titles": [
         "Mario Party",
         "Mario Party 2",

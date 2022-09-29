@@ -1,18 +1,6 @@
 {
   "roms": {
     "filters": {
-      "!flags|extra": [
-        "Genesis Mini",
-        "Mega Drive Mini",
-        "PC Rerelease",
-        "Sega Ages"
-      ],
-      "!genres|extra": [
-        null
-      ],
-      "!keywords|extra": [
-        "Collection"
-      ],
       "!titles": [
         "# Collections",
         "Fun 'n Games",

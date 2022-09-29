@@ -2,14 +2,11 @@
   "roms": {
     "filters": {
       "!genres|extra": [
-        null,
         "Puzzle-Game"
       ],
       "!titles": [
         "# Board Games",
-        "Shanghai Mini",
-        "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
-        "SNK vs. Capcom - Card Fighters' Clash - SNK Version"
+        "Shanghai Mini"
       ]
     }
   }

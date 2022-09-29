@@ -2,15 +2,7 @@
   "roms": {
     "filters": {
       "!genres|extra": [
-        null,
         "Simulation"
-      ],
-      "!keywords|extra": [
-        "Collection"
-      ],
-      "!titles": [
-        "# Gambling",
-        "PokerDome Poker Master - No Limit Texas Hold'em Poker"
       ],
       "+titles": [
         "Mario Party DS"

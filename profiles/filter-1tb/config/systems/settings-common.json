@@ -28,11 +28,13 @@
         "Compilation",
         "Demo",
         "Educational",
+        "Japanese RPG",
         "Playing cards",
         "Simulation / Life",
         "Thinking",
         "Visual Novel"
       ],
+      "!genres|empty": [null],
       "flags": [
         "Australia",
         "Canada",
@@ -49,24 +51,48 @@
         "Compilation",
         "Demo",
         "Developer Cart",
+        "Enhancement",
+        "GameCube",
+        "Genesis Mini",
         "Hack",
         "Kiosk",
+        "Mega Drive Mini",
         "Pirate",
         "Preview",
         "Program",
         "Proto",
+        "PC Rerelease",
         "Sample",
         "SDK Build",
+        "Sega Ages",
+        "Sega Channel",
+        "Switch Online",
         "Test",
         "Test Program",
         "Unl",
-        "Virtual Console"
+        "Virtual Console",
+        "[b]"
       ],
       "!keywords": [
+        "-in-1",
+        "Anniversary Edition",
+        "Arcade Classic",
         "BIOS",
-        " Demo ",
-        "Test Cartridge"
-      ]
+        "Cards",
+        "Casino",
+        "Checkers",
+        "Chess",
+        "Collection",
+        "Collector",
+        "Namco Museum",
+        "Poker",
+        "Quiz",
+        "Solitaire",
+        "Test Cartridge",
+        " in 1",
+        " Card ",
+        " Demo "
+     ]
     }
   }
 }

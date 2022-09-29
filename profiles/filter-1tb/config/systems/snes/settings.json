@@ -1,15 +1,6 @@
 {
   "roms": {
     "filters": {
-      "!flags|extra": [
-        "Enhancement",
-        "GameCube",
-        "Switch Online",
-        "[b]"
-      ],
-      "!genres|extra": [
-        null
-      ],
       "+titles": [
         "Jeopardy!"
       ]

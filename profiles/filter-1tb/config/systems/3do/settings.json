@@ -2,6 +2,9 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1, 2, 3],
+      "!genres|extra": [
+        "Simulation"
+      ],
       "!names": [
         "# Unavailable",
         "Fun 'n Games (USA)",
@@ -13,9 +16,6 @@
         "Syndicate (USA)",
         "Theme Park (USA)",
         "Who Shot Johnny Rock (USA)"
-      ],
-      "!genres|extra": [
-        "Simulation"
       ]
     }
   }
