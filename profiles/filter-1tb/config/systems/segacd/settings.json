@@ -1,6 +1,9 @@
 {
   "roms": {
     "filters": {
+      "!genres|extra": [
+        "Quiz"
+      ],
       "!names": [
         "# Unavailable",
         "Links - The Challenge of Golf (USA)"
