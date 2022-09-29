@@ -2744,8 +2744,10 @@
         "rating": null
     },
     "Diadroids World - Evil Teikoku no Yabou": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure"
+        ],
+        "players": 1,
         "rating": null
     },
     "Diddy Kong Pilot": {
@@ -8274,8 +8276,11 @@
         "rating": 0.7
     },
     "Pia Carrot e Youkoso!! 3.3": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure",
+            "Adventure / Visual Novel"
+        ],
+        "players": 1,
         "rating": null
     },
     "Piglet's Big Game": {
@@ -8980,6 +8985,7 @@
             "Adventure",
             "Adventure / Survival Horror"
         ],
+        "players": 1,
         "rating": null
     },
     "Revenge of Shinobi, The": {
@@ -9484,7 +9490,10 @@
         "rating": 0.3
     },
     "Shanghai Advance": {
-        "genres": [],
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
         "players": null,
         "rating": null
     },
@@ -9755,8 +9764,10 @@
     },
     "Sims 2, The": {
         "genres": [
+            "Simulation / Life",
             "Simulation"
         ],
+        "players": 1,
         "rating": 0.7
     },
     "Sims 2, The - Pets": {
@@ -10461,6 +10472,7 @@
         "genres": [
             "Role playing games"
         ],
+        "players": 1,
         "rating": 0.7
     },
     "Super Robot Taisen - Original Generation 2": {
@@ -10471,8 +10483,11 @@
         "rating": 0.8
     },
     "Super Robot Taisen A": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Tactical RPG"
+        ],
+        "players": 1,
         "rating": null
     },
     "Super Robot Taisen D": {
@@ -10487,8 +10502,11 @@
         "rating": null
     },
     "Super Robot Taisen R": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Tactical RPG"
+        ],
+        "players": 1,
         "rating": null
     },
     "Super Street Fighter II Turbo - Revival": {

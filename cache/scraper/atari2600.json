@@ -1676,6 +1676,7 @@
         "genres": [
             "Shoot'em Up"
         ],
+        "players": 2,
         "rating": null
     },
     "James Bond 007": {
@@ -1863,6 +1864,7 @@
             "Platform",
             "Action"
         ],
+        "players": 1,
         "rating": null
     },
     "Lochjaw": {
@@ -2173,6 +2175,8 @@
     "MotoRodeo": {
         "genres": [
             "Race",
+            "Driving / Motorcycle",
+            "Race",
             "Driving",
             "Sports"
         ],
@@ -2251,6 +2255,7 @@
             "Sports / Golf",
             "Sports"
         ],
+        "players": 2,
         "rating": null
     },
     "Mysterious Thief, A": {
@@ -2523,6 +2528,7 @@
         "genres": [
             "Action"
         ],
+        "players": 1,
         "rating": null
     },
     "Plaque Attack": {
@@ -2660,6 +2666,7 @@
         "genres": [
             "Action"
         ],
+        "players": 2,
         "rating": null
     },
     "Racer": {
@@ -2672,6 +2679,7 @@
             "Race",
             "Driving"
         ],
+        "players": 1,
         "rating": null
     },
     "Racquetball": {
@@ -2714,14 +2722,14 @@
             "Action"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.8
     },
     "Rampage!": {
         "genres": [
             "Action"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.4
     },
     "Raumpatrouille": {
         "genres": [
@@ -2807,7 +2815,7 @@
             "Action"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.8
     },
     "Riddle of the Sphinx": {
         "genres": [
@@ -2822,7 +2830,7 @@
             "Action"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.65
     },
     "River Raid": {
         "genres": [
@@ -2851,7 +2859,7 @@
             "Action"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.45
     },
     "Robot Tank": {
         "genres": [
@@ -2871,6 +2879,7 @@
         "genres": [
             "Action"
         ],
+        "players": 1,
         "rating": null
     },
     "Room of Doom": {
@@ -2993,7 +3002,7 @@
     },
     "See Saw": {
         "genres": [],
-        "players": null,
+        "players": 2,
         "rating": null
     },
     "Sentinel": {
@@ -3062,7 +3071,7 @@
             "Sports"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.4
     },
     "Ski Run": {
         "genres": [
@@ -3472,6 +3481,8 @@
     },
     "Stargunner": {
         "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal",
             "Action"
         ],
         "players": 2,
@@ -3540,7 +3551,8 @@
         "genres": [
             "Platform"
         ],
-        "rating": null
+        "players": 1,
+        "rating": 0.15
     },
     "Sub-Scan": {
         "genres": [

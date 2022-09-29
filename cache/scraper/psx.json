@@ -1474,9 +1474,11 @@
         "rating": 0.7
     },
     "Arcade Hits - Suiko Enbu - Outlaws of the Lost Dynasty": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Fight"
+        ],
+        "players": 2,
+        "rating": 0.6
     },
     "Arcade Hits - Wolf Fang - Kuuga 2001": {
         "genres": [
@@ -1817,9 +1819,12 @@
         "rating": 0.7
     },
     "Asuka 120% Special - Burning Fest. Special": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Fight",
+            "Fight / 2D"
+        ],
+        "players": 2,
+        "rating": 0.7
     },
     "Asuncia - Majou no Jubaku": {
         "genres": [
@@ -2782,8 +2787,10 @@
         "rating": 0.7
     },
     "Bishoujo Hanafuda Kikou - Michinoku Hitou Koi Monogatari": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Simulation"
+        ],
+        "players": 1,
         "rating": null
     },
     "Bishoujo Ren'ai Mahjong Series - Karan Koron Gakuen - Doki Doki-hen": {
@@ -3369,9 +3376,11 @@
         "rating": 0.75
     },
     "Brave Saga 2 - Koushiki Data Disc - Yuusha no Akashi 2": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Role playing games"
+        ],
+        "players": 1,
+        "rating": 0.75
     },
     "Brave Sword": {
         "genres": [
@@ -4952,9 +4961,11 @@
         "rating": 0.7
     },
     "Command & Conquer Complete": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Strategy"
+        ],
+        "players": 1,
+        "rating": 0.7
     },
     "Community Pom": {
         "genres": [
@@ -6817,9 +6828,12 @@
         "rating": 0.55
     },
     "DigiCro - Digital Number Crossword": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Puzzle-Game",
+            "Thinking"
+        ],
+        "players": 1,
+        "rating": 0.5
     },
     "Digical League": {
         "genres": [
@@ -8128,8 +8142,10 @@
         "rating": null
     },
     "Eisei Meijin II": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Asiatic board game"
+        ],
+        "players": 2,
         "rating": null
     },
     "Eisei Meijin III - Game Creator Yoshimura Nobuhiro no Zunou": {
@@ -10154,9 +10170,12 @@
         "rating": 0.8
     },
     "Final Round": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Sports / Golf",
+            "Sports"
+        ],
+        "players": 4,
+        "rating": 0.65
     },
     "Finger Flashing": {
         "genres": [
@@ -10176,6 +10195,7 @@
     },
     "Fire Pro Wrestling G": {
         "genres": [
+            "Sports / Wrestling",
             "Sports"
         ],
         "players": 2,
@@ -11118,6 +11138,8 @@
     },
     "Game no Tetsujin - The Shanghai": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 1,
@@ -11436,8 +11458,11 @@
         "rating": null
     },
     "GetBackers - Dakkan'ya": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Adventure"
+        ],
+        "players": 2,
         "rating": null
     },
     "Getter Robo Daikessen!": {
@@ -12175,9 +12200,12 @@
         "rating": null
     },
     "Hamunaptra - Ushinawareta Sabaku no Miyako": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "players": 1,
+        "rating": 0.6
     },
     "Hana to Ryuu": {
         "genres": [
@@ -13894,9 +13922,16 @@
         "rating": null
     },
     "Irem Arcade Classics": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Sports",
+            "Race",
+            "Driving",
+            "Sports / Football",
+            "Beat'em Up",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.65
     },
     "Iron Man & X-O Manowar in Heavy Metal": {
         "genres": [
@@ -15833,7 +15868,7 @@
     },
     "Kita Denshi - Virtua Pachi-Slot": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Kita Denshi - Virtua Pachi-Slot 2": {
@@ -15871,8 +15906,10 @@
         "rating": null
     },
     "Kizuna toyuu Na no Pendant with Toybox Stories": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure"
+        ],
+        "players": 1,
         "rating": null
     },
     "Klaymen Gun-Hockey": {
@@ -16339,8 +16376,10 @@
         "rating": 0.75
     },
     "Kuubo Senki": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Strategy"
+        ],
+        "players": 1,
         "rating": null
     },
     "Kyaiin no Tanoshi Mail - PS. I Love You": {
@@ -18047,8 +18086,11 @@
         "rating": null
     },
     "Matsumoto Reiji 999 - Story of Galaxy Express 999": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "players": 1,
         "rating": null
     },
     "Mawatte Mucho!": {
@@ -18857,9 +18899,12 @@
         "rating": null
     },
     "Misadventures of Tron Bonne, The": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Action",
+            "Platform"
+        ],
+        "players": 1,
+        "rating": 0.9
     },
     "Misaki Aggressive!": {
         "genres": [
@@ -21186,8 +21231,10 @@
         "rating": null
     },
     "Nippon Ichi Mahjong - Souryuu": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Asiatic board game"
+        ],
+        "players": 1,
         "rating": null
     },
     "Nise Flopon-kun P! Famitsuu Nottori Version": {
@@ -21873,8 +21920,10 @@
         "rating": null
     },
     "Oh-chan no Oekaki Logic 3": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 1,
         "rating": null
     },
     "Oha-Studio Dance Dance Revolution": {
@@ -21953,8 +22002,10 @@
         "rating": 0.85
     },
     "Omiai Commando - Ba-Couple ni Tsukkomi o": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Simulation"
+        ],
+        "players": 1,
         "rating": null
     },
     "Omise de Tenshu": {
@@ -22508,8 +22559,10 @@
         "rating": null
     },
     "Pachi Slot Teiou - Big Wave, Pika Gorou, BB Junky 7": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Pachi Slot Teiou W - Arabesque R, Hot Rod Queen": {
@@ -22560,8 +22613,10 @@
         "rating": null
     },
     "Pachi-Slot Kanzen Kaiseki - Wai Wai Pulsar 2 & 77 2": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Pachi-Slot Kanzen Kouryaku - Aruze Koushiki Guide Volume 4": {
@@ -22661,13 +22716,17 @@
         "rating": null
     },
     "Pachi-Slot Teiou - Maker Suishou Manual Vol. 3 - I'm Angel - White 2 & Blue 2": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Pachi-Slot Teiou - Maker Suishou Manual Vol. 4 - Exhaust, Ooedo Sakura Fubuki 2": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Pachi-Slot Teiou - Maker Suishou Manual Vol. 5 - Race Queen 2, Tomcat": {
@@ -22742,8 +22801,10 @@
         "rating": null
     },
     "Pachi-Slot Teiou 7 - Maker Suishou Manual Vol. 1 - Beat the Dragon 2, Lupin Sansei, Hot Rod Queen": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Pachi-Slot Teiou Mini - Dr. A7": {
@@ -26923,8 +26984,10 @@
         "rating": null
     },
     "Sangokushi II": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Strategy"
+        ],
+        "players": 8,
         "rating": null
     },
     "Sangokushi III": {
@@ -27510,6 +27573,8 @@
     },
     "Shanghai - Banri no Choujou": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 2,
@@ -27517,6 +27582,8 @@
     },
     "Shanghai - Great Moments": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 2,
@@ -27524,6 +27591,8 @@
     },
     "Shanghai - Shouryuu Sairin": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 2,
@@ -27736,8 +27805,10 @@
         "rating": null
     },
     "Shin Sedai Robot Senki - Brave Saga - Yuusha Gentei Koushiki Data Disc - Yuusha no Akashi": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games"
+        ],
+        "players": 1,
         "rating": null
     },
     "Shin Seiki Evangelion - Eva to Yukai na Nakama-tachi": {
@@ -27794,6 +27865,8 @@
     },
     "Shin Theme Park": {
         "genres": [
+            "Simulation",
+            "Build And Management",
             "Strategy"
         ],
         "players": 1,
@@ -27903,8 +27976,10 @@
         "rating": null
     },
     "Shinsou Kaiten!! Wan Wan Umi Monogatari - Sanyo Pachinko Paradise DX": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Shiritsu Justice Gakuen - Nekketsu Seishun Nikki 2": {
@@ -28394,9 +28469,12 @@
         "rating": null
     },
     "Simple 1500 Series Vol. 14 - The Block Kuzushi": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Action / Breakout games",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
     },
     "Simple 1500 Series Vol. 15 - The Pachinko": {
         "genres": [
@@ -28628,8 +28706,10 @@
         "rating": null
     },
     "Simple 1500 Series Vol. 5 - The Igo": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Asiatic board game"
+        ],
+        "players": 2,
         "rating": null
     },
     "Simple 1500 Series Vol. 50 - The Billiard 2": {
@@ -29388,8 +29468,10 @@
         "rating": null
     },
     "Slotter Mania 9 - Gokunetsu 30 Phi! Haibi & Splash Seven": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Slotter Mania Core - Tokonatsu no Atsusa! Oasis": {
@@ -29462,9 +29544,12 @@
         "rating": 0.75
     },
     "Snobow Kids Plus": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Sports / Skiing",
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.7
     },
     "Snow Racer 98": {
         "genres": [
@@ -29507,8 +29592,11 @@
         "rating": 0.55
     },
     "Soeldnerschild Special": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Strategy"
+        ],
+        "players": 1,
         "rating": null
     },
     "Sol Divide": {
@@ -30142,9 +30230,11 @@
         "rating": 0.9
     },
     "Spyro 2 - Ripto's Rage! + Crash Team Racing": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "players": 1,
+        "rating": 0.9
     },
     "Spyro the Dragon": {
         "genres": [
@@ -31657,6 +31747,8 @@
     },
     "SuperLite 1500 Series - Shanghai - Dynasty": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 2,
@@ -32028,8 +32120,10 @@
         "rating": 0.3
     },
     "Sven-Goeran Eriksson's World Manager": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Simulation"
+        ],
+        "players": 1,
         "rating": null
     },
     "Swagman": {
@@ -32112,8 +32206,11 @@
         "rating": 0.85
     },
     "TFX - Tactical Fighter eXperiment": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Simulation",
+            "Action"
+        ],
+        "players": 1,
         "rating": null
     },
     "TIZ - Tokyo Insect Zoo": {
@@ -32302,6 +32399,13 @@
         "rating": 0.7
     },
     "Tales of Destiny II": {
+        "genres": [
+            "Role playing games"
+        ],
+        "players": 1,
+        "rating": 0.85
+    },
+    "Tales of Eternia": {
         "genres": [
             "Role playing games"
         ],
@@ -33428,8 +33532,11 @@
         "rating": null
     },
     "Tokyo Majin Gakuen Denki - Jin no Shou - Tokyo Majin Gakuen Kenpuuchou Emaki": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure",
+            "Role playing games"
+        ],
+        "players": 1,
         "rating": null
     },
     "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan": {
@@ -34214,8 +34321,10 @@
         "rating": null
     },
     "Twilight Syndrome - The Memorize": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure"
+        ],
+        "players": 1,
         "rating": null
     },
     "Twin Goddesses": {
@@ -34873,8 +34982,12 @@
         "rating": null
     },
     "Value 1500 - The Shanghai": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Asiatic board game",
+            "Mahjong",
+            "Puzzle-Game"
+        ],
+        "players": 1,
         "rating": null
     },
     "Vampir - Kyuuketsuki Densetsu": {
@@ -35024,8 +35137,10 @@
         "rating": null
     },
     "Victory Zone": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Casino"
+        ],
+        "players": 1,
         "rating": null
     },
     "Victory Zone 2": {
@@ -35435,8 +35550,11 @@
         "rating": null
     },
     "Wai Wai Bowling": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Sports",
+            "Sports / Bowling"
+        ],
+        "players": 4,
         "rating": null
     },
     "Wai Wai Jansou": {
@@ -36757,9 +36875,12 @@
         "rating": null
     },
     "Yeh Yeh Tennis": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Sports / Tennis",
+            "Sports"
+        ],
+        "players": 4,
+        "rating": 0.5
     },
     "Yellow Brick Road": {
         "genres": [
@@ -37158,9 +37279,11 @@
         "rating": null
     },
     "Zeus II - Carnage Heart": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Strategy"
+        ],
+        "players": 1,
+        "rating": 0.7
     },
     "ZigZagBall": {
         "genres": [
@@ -37260,9 +37383,12 @@
         "rating": 0.6
     },
     "Zutto Issho - With Me Everytime...": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Simulation",
+            "Adventure"
+        ],
+        "players": 1,
+        "rating": 0.7
     },
     "e-Jump": {
         "genres": [],

@@ -435,7 +435,10 @@
         "rating": null
     },
     "A-Max Boxing": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Boxing"
+        ],
         "players": null,
         "rating": null
     },
@@ -904,6 +907,7 @@
     },
     "Animal Boxing": {
         "genres": [
+            "Sports / Boxing",
             "Sports",
             "Puzzle-Game"
         ],
@@ -1704,7 +1708,7 @@
     },
     "Barnyard Blast - Swine of the Night": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Bartender DS": {
@@ -2456,6 +2460,7 @@
         "genres": [
             "Action"
         ],
+        "players": 1,
         "rating": null
     },
     "Build-A-Bear Workshop - Welcome to Hugsville": {
@@ -5275,6 +5280,8 @@
     "Ducati Moto": {
         "genres": [
             "Race",
+            "Driving / Motorcycle",
+            "Race",
             "Driving"
         ],
         "rating": 0.35
@@ -7085,10 +7092,13 @@
         "genres": [
             "Adventure"
         ],
-        "rating": null
+        "rating": 0.6
     },
     "Goosebumps HorrorLand": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Adventure"
+        ],
         "players": null,
         "rating": null
     },
@@ -7273,8 +7283,11 @@
         "rating": null
     },
     "Gyakuten Kenji 2": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure",
+            "Adventure / Visual Novel"
+        ],
+        "players": 1,
         "rating": null
     },
     "Gyakuten Saiban Jiten": {
@@ -11551,6 +11564,7 @@
     },
     "Mah-Jong 300": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Board game"
         ],
@@ -11622,6 +11636,7 @@
     },
     "Mahjongg DS": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Puzzle-Game"
         ],
@@ -12745,7 +12760,10 @@
         "rating": null
     },
     "Minna de Asobou - Shanghai DS 2": {
-        "genres": [],
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
         "players": null,
         "rating": null
     },
@@ -14380,7 +14398,7 @@
             "Action",
             "Fight"
         ],
-        "rating": 1
+        "rating": 1.0
     },
     "Ni Hao, Kai-Lan - New Year's Celebration": {
         "genres": [],
@@ -17885,7 +17903,10 @@
         "rating": 0.9
     },
     "Shanghai": {
-        "genres": [],
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
         "players": null,
         "rating": null
     },
@@ -18491,6 +18512,7 @@
     },
     "Sims 2, The - Pets": {
         "genres": [
+            "Simulation / Life",
             "Simulation"
         ],
         "rating": 0.5
@@ -21858,6 +21880,7 @@
     },
     "Wheel of Fortune": {
         "genres": [
+            "Quiz",
             "Various"
         ],
         "players": 3,

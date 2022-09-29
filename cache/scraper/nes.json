@@ -4624,7 +4624,7 @@
     },
     "Hana no Star Kaidou": {
         "genres": [
-            "Action"
+            "Platform"
         ],
         "players": 1,
         "rating": null
@@ -5396,7 +5396,9 @@
         "rating": 0.8
     },
     "Jackpot": {
-        "genres": [],
+        "genres": [
+            "Casino"
+        ],
         "players": null,
         "rating": null
     },
@@ -5431,7 +5433,9 @@
         "rating": 0.45
     },
     "Janggun-ui Adeul": {
-        "genres": [],
+        "genres": [
+            "Fight"
+        ],
         "players": null,
         "rating": null
     },
@@ -5716,8 +5720,7 @@
     },
     "Kaiketsu Yancha Maru 2 - Karakuri Land": {
         "genres": [
-            "Platform",
-            "Action"
+            "Platform"
         ],
         "players": 1,
         "rating": null
@@ -5731,7 +5734,9 @@
         "rating": 0.8
     },
     "Kamen Rider Club": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "players": 1,
         "rating": null
     },
@@ -5744,7 +5749,7 @@
     },
     "Kamen no Ninja - Akakage": {
         "genres": [
-            "Action"
+            "Platform"
         ],
         "players": 1,
         "rating": null
@@ -5855,21 +5860,20 @@
     },
     "Kero Kero Keroppi no Daibouken 2 - Donuts Ike wa Oosawagi!": {
         "genres": [
-            "Platform",
-            "Action"
+            "Platform"
         ],
         "rating": null
     },
     "Keroppi to Keroriinu no Splash Bomb!": {
         "genres": [
-            "Action / Labyrinth",
-            "Action"
+            "Action",
+            "Action / Labyrinth"
         ],
         "rating": null
     },
     "Ki no Bouken - The Quest of Ki": {
         "genres": [
-            "Action"
+            "Platform"
         ],
         "players": 1,
         "rating": null
@@ -6770,6 +6774,7 @@
     },
     "Mahjong": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Strategy"
         ],
@@ -9831,6 +9836,8 @@
     },
     "Shanghai": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Strategy"
         ],
         "players": 1,
@@ -9838,6 +9845,8 @@
     },
     "Shanghai II": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Strategy"
         ],
         "players": 1,

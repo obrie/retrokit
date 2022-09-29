@@ -1181,6 +1181,7 @@
         "genres": [
             "Fight"
         ],
+        "players": 2,
         "rating": 0.65
     },
     "Bleach - Soul Carnival": {
@@ -2344,7 +2345,9 @@
         "rating": null
     },
     "Dango Sanshimai": {
-        "genres": [],
+        "genres": [
+            "Puzzle-Game"
+        ],
         "players": null,
         "rating": null
     },
@@ -3098,6 +3101,7 @@
         "genres": [
             "Action"
         ],
+        "players": 1,
         "rating": 0.85
     },
     "Dragonball - Evolution": {
@@ -4128,6 +4132,8 @@
     },
     "Football Manager Handheld 2013": {
         "genres": [
+            "Sports",
+            "Sports / Soccer",
             "Simulation"
         ],
         "rating": 0.4
@@ -7104,7 +7110,8 @@
             "Sports / Football",
             "Sports"
         ],
-        "rating": null
+        "players": 2,
+        "rating": 0.8
     },
     "Madden NFL 08": {
         "genres": [
@@ -7171,6 +7178,7 @@
     },
     "Mahjong Artifacts": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Puzzle-Game"
         ],
@@ -7178,6 +7186,7 @@
     },
     "Mahjong Artifacts - Chapter 2": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Puzzle-Game"
         ],
@@ -7195,6 +7204,7 @@
     },
     "Mahjong Solitaire": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Puzzle-Game"
         ],
@@ -8174,6 +8184,7 @@
             "Sports / Basketball",
             "Sports"
         ],
+        "players": 2,
         "rating": 0.8
     },
     "NBA Live 09": {
@@ -8691,8 +8702,10 @@
     },
     "One Piece - Romance Dawn - Bouken no Yoake": {
         "genres": [
+            "Action RPG",
             "Role playing games"
         ],
+        "players": 1,
         "rating": 0.85
     },
     "One Two Boat Racing": {
@@ -9504,7 +9517,10 @@
         "rating": null
     },
     "Power League 4": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Baseball"
+        ],
         "players": null,
         "rating": null
     },
@@ -10480,7 +10496,9 @@
         "rating": null
     },
     "Sangokushi VI": {
-        "genres": [],
+        "genres": [
+            "Strategy"
+        ],
         "players": null,
         "rating": null
     },
@@ -10490,7 +10508,9 @@
         "rating": null
     },
     "Sanguozhi V": {
-        "genres": [],
+        "genres": [
+            "Strategy"
+        ],
         "players": null,
         "rating": null
     },
@@ -10607,12 +10627,17 @@
         "rating": 0.8
     },
     "Sengoku Basara - Battle Heroes": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Beat'em Up"
+        ],
+        "players": 1,
         "rating": null
     },
     "Sengoku Basara - Chronicle Heroes": {
-        "genres": [],
+        "genres": [
+            "Fight"
+        ],
+        "players": 1,
         "rating": 0.8
     },
     "Sengoku Cannon - Sengoku Ace Episode III": {
@@ -10808,7 +10833,10 @@
         "rating": null
     },
     "Shock Troopers": {
-        "genres": [],
+        "genres": [
+            "Shooter",
+            "Shooter / Run and Gun"
+        ],
         "players": null,
         "rating": null
     },
@@ -11787,7 +11815,10 @@
         "rating": 0.85
     },
     "Taiko no Tatsujin Portable": {
-        "genres": [],
+        "genres": [
+            "Music and Dance",
+            "Rhythm"
+        ],
         "players": null,
         "rating": null
     },
@@ -11797,7 +11828,10 @@
         "rating": null
     },
     "Taiko no Tatsujin Portable 2": {
-        "genres": [],
+        "genres": [
+            "Music and Dance",
+            "Rhythm"
+        ],
         "players": null,
         "rating": null
     },
@@ -11807,8 +11841,12 @@
         "rating": null
     },
     "Taikou Risshiden V": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Tactical RPG",
+            "Strategy"
+        ],
+        "players": 1,
         "rating": null
     },
     "Taisen Chess": {
@@ -12388,6 +12426,7 @@
     },
     "Toriko - Gourmet Survival": {
         "genres": [],
+        "players": 2,
         "rating": 0.7
     },
     "Toriko - Gourmet Survival! 2": {
@@ -12743,12 +12782,16 @@
         "rating": 0.7
     },
     "Valis": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "players": null,
         "rating": null
     },
     "Valis II": {
-        "genres": [],
+        "genres": [
+            "Platform"
+        ],
         "players": null,
         "rating": null
     },
@@ -13518,8 +13561,11 @@
         "rating": 0.8
     },
     "Ys III - Wanderers from Ys": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Action RPG"
+        ],
+        "players": 1,
         "rating": null
     },
     "Ys IV - The Dawn of Ys": {
@@ -13644,8 +13690,10 @@
         "rating": 0.7
     },
     "Zettai Hero Kaizou Keikaku": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games"
+        ],
+        "players": 1,
         "rating": null
     },
     "Zhuo Hou La - Hou Zi Ai Zuo Zhan": {
@@ -13659,6 +13707,7 @@
         "genres": [
             "Role playing games"
         ],
+        "players": 1,
         "rating": null
     },
     "Zodiac": {

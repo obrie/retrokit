@@ -229,9 +229,10 @@
     },
     "ADIDAS Championship Tie Break": {
         "genres": [
+            "Sports / Tennis",
             "Sports"
         ],
-        "rating": null
+        "rating": 0.8
     },
     "ATV Simulator": {
         "genres": [
@@ -573,6 +574,7 @@
     },
     "Aliants - The Desperate Battle for Earth": {
         "genres": [
+            "Action / Adventure",
             "Strategy",
             "Action"
         ],
@@ -1464,7 +1466,10 @@
         "rating": null
     },
     "Barry McGuigan World Championship Boxing": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Boxing"
+        ],
         "players": null,
         "rating": null
     },
@@ -1775,8 +1780,11 @@
         "rating": null
     },
     "Bitmania": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
+        "players": 1,
         "rating": null
     },
     "Bitte Waehlen": {
@@ -1845,11 +1853,14 @@
     },
     "Blasteroids": {
         "genres": [
+            "Shooter",
+            "Shooter / Plane",
+            "3rd person",
             "Action",
             "Shoot'em Up"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.85
     },
     "Blazing Thunder": {
         "genres": [
@@ -2323,9 +2334,11 @@
         "rating": null
     },
     "Burger Chase": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Platform"
+        ],
+        "players": 2,
+        "rating": 0.8
     },
     "Burger Time": {
         "genres": [
@@ -2417,8 +2430,10 @@
         "rating": null
     },
     "Captain America and the Doom Tube": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Adventure"
+        ],
+        "players": 1,
         "rating": null
     },
     "Captain Blood": {
@@ -2607,8 +2622,11 @@
         "rating": null
     },
     "Challenger": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Shooter",
+            "Shooter / Plane"
+        ],
+        "players": 1,
         "rating": null
     },
     "Chameleon": {
@@ -2627,7 +2645,7 @@
             "Sports / Pool"
         ],
         "players": 8,
-        "rating": null
+        "rating": 0.9
     },
     "Championship Baseball": {
         "genres": [
@@ -2682,6 +2700,7 @@
             "Race",
             "Driving"
         ],
+        "players": 1,
         "rating": 0.45
     },
     "Checkers": {
@@ -2725,9 +2744,11 @@
         "rating": null
     },
     "Chimera": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Adventure"
+        ],
+        "players": 1,
+        "rating": 0.7
     },
     "China Miner": {
         "genres": [
@@ -2739,8 +2760,8 @@
     },
     "Chinese Juggler": {
         "genres": [],
-        "players": null,
-        "rating": null
+        "players": 1,
+        "rating": 0.8
     },
     "Chip's Challenge": {
         "genres": [
@@ -3151,7 +3172,7 @@
     },
     "Count Duckula 2 Featuring Tremendous Terence": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Countdown": {
@@ -3232,7 +3253,10 @@
         "rating": 0.8
     },
     "Crazy-Kong": {
-        "genres": [],
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
         "players": 1,
         "rating": null
     },
@@ -3264,8 +3288,11 @@
         "rating": null
     },
     "Crisis Mountain": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Platform",
+            "Platform / Run Jump"
+        ],
+        "players": 1,
         "rating": null
     },
     "Critical Mass": {
@@ -3364,7 +3391,9 @@
         "rating": null
     },
     "Cybernoid II": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up"
+        ],
         "players": 1,
         "rating": null
     },
@@ -3489,9 +3518,12 @@
     },
     "Dandy": {
         "genres": [
+            "Shooter",
+            "Action / Labyrinth",
             "Action"
         ],
-        "rating": null
+        "players": 2,
+        "rating": 0.3
     },
     "Danger Freak": {
         "genres": [
@@ -3756,8 +3788,11 @@
         "rating": null
     },
     "Derby Day": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Sports with Animals",
+            "Horses race"
+        ],
+        "players": 4,
         "rating": null
     },
     "Desert Fox": {
@@ -5158,6 +5193,7 @@
     },
     "Frank Bruno's Boxing": {
         "genres": [
+            "Sports / Boxing",
             "Sports",
             "Fight"
         ],
@@ -6049,9 +6085,12 @@
         "rating": null
     },
     "Gryphon": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Platform",
+            "Platform / Shooter Scrolling"
+        ],
+        "players": 1,
+        "rating": 0.8
     },
     "Gryzor": {
         "genres": [
@@ -6255,8 +6294,10 @@
     },
     "Hard Hat Mack": {
         "genres": [
+            "Platform",
             "Action"
         ],
+        "players": 1,
         "rating": 0.6
     },
     "Hardball!": {
@@ -6287,13 +6328,16 @@
     },
     "Haunted House": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Havoc": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical"
+        ],
+        "players": 1,
+        "rating": 0.6
     },
     "Hawkeye": {
         "genres": [
@@ -7023,12 +7067,18 @@
         "rating": null
     },
     "International Hockey": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Hockey"
+        ],
         "players": null,
         "rating": null
     },
     "International Ice Hockey": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Hockey"
+        ],
         "players": null,
         "rating": null
     },
@@ -7469,9 +7519,12 @@
         "rating": null
     },
     "Kaktus": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Shooter",
+            "Shooter / Vertical"
+        ],
+        "players": 1,
+        "rating": 0.6
     },
     "Kamikaze": {
         "genres": [
@@ -8246,8 +8299,11 @@
         "rating": null
     },
     "Lord Of The Balrogs": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Role playing games",
+            "Dungeon Crawler RPG"
+        ],
+        "players": 1,
         "rating": null
     },
     "Lords of Chaos": {
@@ -8297,7 +8353,9 @@
         "rating": null
     },
     "Lunar Outpost": {
-        "genres": [],
+        "genres": [
+            "Shooter"
+        ],
         "players": 1,
         "rating": null
     },
@@ -8462,7 +8520,7 @@
     },
     "Mangrove": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Maniac Mansion": {
@@ -9896,8 +9954,12 @@
         "rating": null
     },
     "Omega Run, The": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Shoot'em Up",
+            "Simulation",
+            "Simulation / Vehicle"
+        ],
+        "players": 1,
         "rating": null
     },
     "On Court Tennis": {
@@ -10358,9 +10420,12 @@
         "rating": null
     },
     "Pesky Painter": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
         "players": 2,
-        "rating": null
+        "rating": 0.8
     },
     "Peter Pack Rat": {
         "genres": [],
@@ -10501,7 +10566,7 @@
             "Platform / Run Jump Scrolling"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.6
     },
     "Pitstop": {
         "genres": [
@@ -10641,7 +10706,7 @@
             "Platform"
         ],
         "players": 2,
-        "rating": null
+        "rating": 1.0
     },
     "Postman Pat": {
         "genres": [
@@ -11054,8 +11119,8 @@
     },
     "Purple Turtles": {
         "genres": [],
-        "players": null,
-        "rating": null
+        "players": 1,
+        "rating": 0.7
     },
     "Puzznic": {
         "genres": [
@@ -11891,8 +11956,10 @@
         "rating": null
     },
     "Rock n' Bolt": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 2,
         "rating": null
     },
     "Rock'n Roll": {
@@ -12250,7 +12317,7 @@
             "Shooter / Plane"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.8
     },
     "Scalextric": {
         "genres": [],
@@ -12548,7 +12615,10 @@
         "rating": null
     },
     "Shanghai": {
-        "genres": [],
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
         "players": null,
         "rating": null
     },
@@ -13547,9 +13617,12 @@
         "rating": null
     },
     "Squish 'em": {
-        "genres": [],
+        "genres": [
+            "Action",
+            "Action / Climbing"
+        ],
         "players": 1,
-        "rating": null
+        "rating": 0.4
     },
     "Stack Up": {
         "genres": [
@@ -13612,7 +13685,10 @@
         "rating": null
     },
     "Star Rank Boxing - Main Event": {
-        "genres": [],
+        "genres": [
+            "Sports",
+            "Sports / Boxing"
+        ],
         "players": null,
         "rating": null
     },
@@ -13826,13 +13902,13 @@
     },
     "Sting 64": {
         "genres": [],
-        "players": null,
+        "players": 1,
         "rating": null
     },
     "Stix": {
         "genres": [],
         "players": null,
-        "rating": null
+        "rating": 0.75
     },
     "Stop the Express": {
         "genres": [
@@ -13840,7 +13916,7 @@
             "Platform / Run Jump Scrolling"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.65
     },
     "Storm": {
         "genres": [
@@ -14026,9 +14102,12 @@
         "rating": null
     },
     "Strontium Dog": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
+        "players": 1,
+        "rating": 0.7
     },
     "Stun Runner": {
         "genres": [
@@ -14354,9 +14433,12 @@
         "rating": null
     },
     "Super Skramble!": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
+        "players": 1,
+        "rating": 0.8
     },
     "Super Smash": {
         "genres": [],
@@ -14425,6 +14507,7 @@
         "genres": [
             "Platform"
         ],
+        "players": 1,
         "rating": 0.75
     },
     "Super Zaxxon": {
@@ -14968,7 +15051,7 @@
             "Platform"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.95
     },
     "Thomas the Tank Engine": {
         "genres": [
@@ -15087,14 +15170,14 @@
             "Shoot'em up / Vertical"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.5
     },
     "Tiger Road": {
         "genres": [
             "Action"
         ],
         "players": 1,
-        "rating": null
+        "rating": 0.75
     },
     "Tilt": {
         "genres": [
@@ -15241,7 +15324,7 @@
             "Sports / Baseball"
         ],
         "players": 2,
-        "rating": null
+        "rating": 0.7
     },
     "Toobin'": {
         "genres": [
@@ -15854,7 +15937,9 @@
         "rating": 0.75
     },
     "Uridium+": {
-        "genres": [],
+        "genres": [
+            "Shoot'em Up"
+        ],
         "players": null,
         "rating": null
     },
@@ -16784,9 +16869,12 @@
         "rating": null
     },
     "X-15 Alpha Mission": {
-        "genres": [],
-        "players": null,
-        "rating": null
+        "genres": [
+            "Simulation",
+            "Simulation / Vehicle"
+        ],
+        "players": 1,
+        "rating": 0.45
     },
     "X-Men - Madness in Murderworld": {
         "genres": [],

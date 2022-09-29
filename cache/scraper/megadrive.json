@@ -10,6 +10,8 @@
     },
     "16 Zhang Mahjong": {
         "genres": [
+            "Asiatic board game",
+            "Mahjong",
             "Puzzle-Game"
         ],
         "players": 1,
@@ -1582,8 +1584,11 @@
         "rating": null
     },
     "Cursed Knight, The": {
-        "genres": [],
-        "players": null,
+        "genres": [
+            "Shoot'em Up",
+            "Platform"
+        ],
+        "players": 1,
         "rating": null
     },
     "Custodian": {
@@ -2025,6 +2030,7 @@
     },
     "Dragon's Eye Plus - Shanghai III": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Action"
         ],
@@ -2361,6 +2367,7 @@
         "genres": [
             "Action"
         ],
+        "players": 1,
         "rating": null
     },
     "F-117 Night Storm": {
@@ -4053,7 +4060,10 @@
         "rating": null
     },
     "Ma Qiao E Mo Ta - Devilish Mahjong Tower": {
-        "genres": [],
+        "genres": [
+            "Asiatic board game",
+            "Mahjong"
+        ],
         "players": null,
         "rating": null
     },
@@ -6317,6 +6327,7 @@
     },
     "Sangokushi V": {
         "genres": [
+            "Strategy",
             "Simulation"
         ],
         "rating": null
@@ -7379,6 +7390,8 @@
     },
     "Taikou Risshiden": {
         "genres": [
+            "Role playing games",
+            "Tactical RPG",
             "Strategy"
         ],
         "rating": null
@@ -7589,6 +7602,7 @@
     },
     "Tel-Tel Mahjong": {
         "genres": [
+            "Mahjong",
             "Asiatic board game",
             "Strategy"
         ],
