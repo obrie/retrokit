@@ -1,14 +1,6 @@
 {
   "roms": {
     "filters": {
-      "!genres": [
-        null,
-        "Board game",
-        "Casino",
-        "Compilation",
-        "Educational",
-        "Quiz"
-      ],
       "!names": [
         "# Unavailable",
         "Links - The Challenge of Golf (USA)"
@@ -17,6 +9,10 @@
         "Jeopardy!",
         "Mary Shelley's Frankenstein",
         "Wheel of Fortune"
+      ],
+      "+names": [
+        "Night Trap (USA) (Disc 1)",
+        "Night Trap (USA) (Disc 2)"
       ]
     }
   }
