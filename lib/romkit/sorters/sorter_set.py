@@ -19,7 +19,8 @@ class SorterSet:
 
         # Either use a pre-defined order in which to process the sort strategies
         # or, by default, use the order in which the strategies were defined
-        sorter_config_names = json.pop('order', json.keys())
+        sorter_configs = {key: json[key] for key in json if key != 'enabled' and key != 'order'}
+        sorter_config_names = json.pop('order', sorter_configs.keys())
 
         for sorter_config_name in sorter_config_names:
             # Ignore everything after "|" which is used to allow multiple versions
@@ -34,7 +35,7 @@ class SorterSet:
 
             # Lookup and create the sorter
             sorter = sorters_by_name[sorter_name]
-            config = json[sorter_config_name]
+            config = sorter_configs[sorter_config_name]
             sorter_set.append(sorter(config, reverse=reverse))
 
         return sorter_set
