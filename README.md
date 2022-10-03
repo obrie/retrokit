@@ -30,6 +30,7 @@ Specifically, it can set up:
 * Xbox bluetooth support + customizations
 * Game state (import/export)
 * Autoconfig overrides
+* Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard
 * Bluetooth
 * SSH + AutoSSH for remote management
 * Themes

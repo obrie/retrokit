@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+import powerkit.providers
 from powerkit.providers import BaseProvider
 
 import configparser
@@ -30,18 +31,29 @@ class PowerKit():
             'provider': {'id': ''},
             'shutdown': {'enabled': 'true', 'hold_time': '2'},
             'reset': {'enabled': 'true'},
+            'hotkey': {'keyboard': 'true', 'joystick': 'true', 'trigger_delay': '2'}
         })
         self.config.read(config_path)
 
         # Identify which power provider we're working with
         self.provider = BaseProvider.from_config(self.config)
+        if not isinstance(self.provider, powerkit.providers.Hotkey):
+            self.hotkey_provider = powerkit.providers.Hotkey(self.config)
+            self.hotkey_provider.on('maybe_reset', self.track_emulator)
+        else:
+            self.hotkey_provider = None
 
         # Add event handler
-        if self.config['shutdown']['enabled'] == 'true':
+        if self.config['shutdown'].getboolean('enabled'):
             self.provider.on('shutdown', self.shutdown)
 
-        if self.config['reset']['enabled'] == 'true':
+        if self.config['reset'].getboolean('enabled'):
             self.provider.on('reset', self.reset)
+
+            if self.hotkey_provider:
+                self.hotkey_provider.on('reset', self.hotkey_reset)
+
+        self.last_runcommand_process = None
 
     # Looks up the currently running emulator
     @property
@@ -60,7 +72,17 @@ class PowerKit():
 
     # Starts listening for button presses
     def run(self):
+        # Handle kill signals
+        signal.signal(signal.SIGINT, self.exit)
+        signal.signal(signal.SIGTERM, self.exit)
+
+        # Run primary provider
         self.provider.run()
+
+        # Run secondary, software-based provider
+        if self.hotkey_provider:
+            self.hotkey_provider.run()
+
         signal.pause()
 
     # Shuts down the computer, either by asking ES to do it or by doing it ourselves
@@ -86,7 +108,7 @@ class PowerKit():
     # * If emulator is running, kill it
     # * If EmulationStation is running, restart it
     # * If neither emulator nor EmulationStation is running, restart the computer
-    def reset(self):
+    def reset(self) -> None:
         runcommand_process = self.runcommand_process
         es_process = self.es_process
 
@@ -115,6 +137,28 @@ class PowerKit():
         else:
             # Restart computer
             os.system('sudo reboot')
+
+    # Handles pressing the reset hotkey.
+    # 
+    # In order to ensure we don't double reset, we have to ensure that we give
+    # the emulator time to reset from its own hotkey quit configurations.
+    def hotkey_reset(self) -> None:
+        if not self.last_runcommand_process or self.last_runcommand_process and self.last_runcommand_process.is_running():
+            self.last_runcommand_process = None
+            self.reset()
+
+    # Track whether there's an emulator currently running so that when the hotkey
+    # provider runs, we know to terminate the emulator
+    def track_emulator(self) -> None:
+        self.last_runcommand_process = self.runcommand_process
+
+    # Cleans up the resources used by the app
+    def exit(self, *args, **kwargs) -> None:
+        try:
+            # Try to close things gracefully
+            self.hotkey_provider.stop()
+        finally:
+            quit()
 
 
 def main() -> None:

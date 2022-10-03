@@ -9,7 +9,10 @@ setup_module_desc='Hardware safe shutdown scripts'
 install_dir='/opt/retropie/supplementary/powerkit'
 
 depends() {
+  "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/powerkit/setup.sh" depends
+
+  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/devicekit/" "/opt/retropie/supplementary/devicekit/"
 }
 
 build() {
