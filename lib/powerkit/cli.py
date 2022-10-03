@@ -11,6 +11,7 @@ import powerkit.providers
 from powerkit.providers import BaseProvider
 
 import configparser
+import logging
 import psutil
 import signal
 import shutil
@@ -28,12 +29,23 @@ class PowerKit():
         # Read user configuration
         self.config = configparser.ConfigParser(strict=False)
         self.config.read_dict({
+            'logging': {'level': 'INFO'},
             'provider': {'id': ''},
             'shutdown': {'enabled': 'true', 'hold_time': '2'},
             'reset': {'enabled': 'true'},
             'hotkey': {'keyboard': 'true', 'joystick': 'true', 'trigger_delay': '2'}
         })
         self.config.read(config_path)
+
+        # Set up logger
+        log_level = self.config['logging']['level']
+        root = logging.getLogger()
+        root.setLevel(getattr(logging, log_level))
+        handler = logging.StreamHandler(sys.stdout)
+        handler.setLevel(getattr(logging, log_level))
+        formatter = logging.Formatter('%(asctime)s - %(message)s')
+        handler.setFormatter(formatter)
+        root.addHandler(handler)
 
         # Identify which power provider we're working with
         self.provider = BaseProvider.from_config(self.config)
@@ -91,6 +103,7 @@ class PowerKit():
 
         es_process = self.es_process
         if es_process:
+            logging.info(f'Shutting down runcommand process')
             restart_path = Path('/tmp/es-shutdown')
             restart_path.touch()
             shutil.chown(restart_path, user='pi', group='pi')
@@ -100,8 +113,10 @@ class PowerKit():
                 psutil.wait_procs([es_process])
             except psutil.NoSuchProcess:
                 # Failed to talk to ES: manually shut down
+                logging.error(f'Failed to shutdown EmulationStation; shutting down system')
                 os.system('sudo shutdown -h now')
         else:
+            logging.info(f'Shutting down system')
             os.system('sudo shutdown -h now')
 
     # Handles pressing the reset button:
@@ -113,6 +128,8 @@ class PowerKit():
         es_process = self.es_process
 
         if runcommand_process:
+            logging.info(f'Terminating runcommand process')
+
             # Kill all child processes and wait until we've confirmed they're terminated
             child_processes = runcommand_process.children(recursive=True)
             for child_process in child_processes:
@@ -123,6 +140,8 @@ class PowerKit():
 
             psutil.wait_procs(child_processes)
         elif es_process:
+            logging.info(f'Restarting EmulationStation process')
+
             # Tell ES to restart itself
             restart_path = Path('/tmp/es-restart')
             restart_path.touch()
@@ -133,9 +152,11 @@ class PowerKit():
                 psutil.wait_procs([es_process])
             except psutil.NoSuchProcess:
                 # Failed to talk to ES: manually reboot
+                logging.error(f'Failed to terminate EmulationStation; rebooting system')
                 os.system('sudo reboot')
         else:
             # Restart computer
+            logging.info(f'Rebooting system')
             os.system('sudo reboot')
 
     # Handles pressing the reset hotkey.
@@ -151,6 +172,7 @@ class PowerKit():
     # provider runs, we know to terminate the emulator
     def track_emulator(self) -> None:
         self.last_runcommand_process = self.runcommand_process
+        logging.debug(f'Tracking last runcommand process as {self.last_runcommand_process}')
 
     # Cleans up the resources used by the app
     def exit(self, *args, **kwargs) -> None:
