@@ -15,9 +15,11 @@ from pathlib import Path
 from threading import RLock
 from typing import Callable, Optional
 
+from devicekit.input_listener import InputListener
+from devicekit.input_type import InputType
+
 from manualkit.decorators import synchronized
 from manualkit.display import Display
-from manualkit.input_listener import InputListener, InputType
 from manualkit.pdf import PDF
 from manualkit.process_watcher import ProcessEvent, ProcessWatcher
 from manualkit.profile import Profile
@@ -82,8 +84,11 @@ class ManualKit():
         self.display.open()
         self.display.clear()
 
-        # Start listening to inputs
-        self.input_listener = InputListener(**self.config['input'])
+        # Start listening to inputs, properly typecasting the values
+        self.input_listener = InputListener(**{
+            **self.config['input'],
+            **{k: float(v) for k, v in self.config['input'].items() if k in ['repeat_delay', 'repeat_interval', 'repeat_turbo_wait']},
+        })
 
         # Load the PDF
         self.load(pdf_path, supplementary_pdf_path)
