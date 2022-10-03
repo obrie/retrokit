@@ -15,6 +15,7 @@ import logging
 import psutil
 import signal
 import shutil
+import time
 
 from argparse import ArgumentParser
 from typing import List, Optional
@@ -51,7 +52,6 @@ class PowerKit():
         self.provider = BaseProvider.from_config(self.config)
         if not isinstance(self.provider, powerkit.providers.Hotkey):
             self.hotkey_provider = powerkit.providers.Hotkey(self.config)
-            self.hotkey_provider.on('maybe_reset', self.track_emulator)
         else:
             self.hotkey_provider = None
 
@@ -159,20 +159,25 @@ class PowerKit():
             logging.info(f'Rebooting system')
             os.system('sudo reboot')
 
-    # Handles pressing the reset hotkey.
-    # 
-    # In order to ensure we don't double reset, we have to ensure that we give
-    # the emulator time to reset from its own hotkey quit configurations.
+    # Handles pressing the reset hotkey
     def hotkey_reset(self) -> None:
-        if not self.last_runcommand_process or self.last_runcommand_process and self.last_runcommand_process.is_running():
-            self.last_runcommand_process = None
-            self.reset()
+        runcommand_process = self.runcommand_process
 
-    # Track whether there's an emulator currently running so that when the hotkey
-    # provider runs, we know to terminate the emulator
-    def track_emulator(self) -> None:
-        self.last_runcommand_process = self.runcommand_process
-        logging.debug(f'Tracking last runcommand process as {self.last_runcommand_process}')
+        if not runcommand_process:
+            # No runcommand / emulator running -- follow our standard process
+            self.reset()
+        else:
+            # In some cases, we're going to want to delay the trigger a few seconds.
+            # For example, libretro emulators will handle quitting on their own.
+            # Other standalone emulators will do the same as well.
+            # 
+            # This delay ensures that the emulator is given a chance to quit before
+            # we do it ourselves.
+            logging.debug(f'Waiting {self.hotkey_provider.trigger_delay}s before terminating runcommand')
+            time.sleep(self.hotkey_provider.trigger_delay)
+
+            if runcommand_process.is_running():
+                self.reset()
 
     # Cleans up the resources used by the app
     def exit(self, *args, **kwargs) -> None:

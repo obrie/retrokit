@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import time
 from datetime import datetime, timedelta
 
 import devicekit.retroarch as retroarch
@@ -24,7 +23,7 @@ class Hotkey(BaseProvider):
         self._quit_press_twice = retroarch_config.get('quit_press_twice') == 'true'
         self._press_count = 0
         self._last_pressed = None
-        self._trigger_delay = self.config['hotkey'].getint('trigger_delay', 0)
+        self.trigger_delay = self.config['hotkey'].getint('trigger_delay', 0)
 
         keyboard_enabled = self.config['hotkey'].getboolean('keyboard')
         joystick_enabled = self.config['hotkey'].getboolean('joystick')
@@ -68,15 +67,4 @@ class Hotkey(BaseProvider):
     def _trigger_reset(self) -> None:
         self._press_count = 0
         self._last_pressed = None
-        self.trigger('maybe_reset')
-
-        # In some cases, we're going to want to delay the trigger a few seconds.
-        # For example, libretro emulators will handle quitting on their own.
-        # Other standalone emulators will do the same as well.
-        # 
-        # This delay ensures that the emulator is given a chance to quit before
-        # we do it.
-        if self._trigger_delay:
-            time.sleep(self._trigger_delay)
-
         self.reset()
