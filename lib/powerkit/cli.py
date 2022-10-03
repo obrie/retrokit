@@ -16,6 +16,7 @@ import psutil
 import signal
 import shutil
 import time
+from datetime import datetime, timedelta
 
 from argparse import ArgumentParser
 from typing import List, Optional
@@ -33,7 +34,7 @@ class PowerKit():
             'logging': {'level': 'INFO'},
             'provider': {'id': ''},
             'shutdown': {'enabled': 'true', 'hold_time': '2'},
-            'reset': {'enabled': 'true'},
+            'reset': {'enabled': 'true', 'min_process_interval': '5'},
             'hotkey': {'keyboard': 'true', 'joystick': 'true', 'trigger_delay': '2'}
         })
         self.config.read(config_path)
@@ -65,6 +66,8 @@ class PowerKit():
             if self.hotkey_provider:
                 self.hotkey_provider.on('reset', self.hotkey_reset)
 
+        self.last_reset = None
+        self.min_reset_interval = self.config['reset'].getint('min_process_interval', 0)
         self.last_runcommand_process = None
 
     # Looks up the currently running emulator
@@ -124,6 +127,12 @@ class PowerKit():
     # * If EmulationStation is running, restart it
     # * If neither emulator nor EmulationStation is running, restart the computer
     def reset(self) -> None:
+        if self.last_reset and (datetime.utcnow() - self.last_reset) < timedelta(seconds=self.min_reset_interval):
+            logging.info(f'Ignoring reset since less than {self.min_reset_interval}s have passed since the last reset')
+            return
+
+        self.last_reset = datetime.utcnow()
+
         runcommand_process = self.runcommand_process
         es_process = self.es_process
 
@@ -167,6 +176,8 @@ class PowerKit():
             # No runcommand / emulator running -- follow our standard process
             self.reset()
         else:
+            last_reset = datetime.utcnow()
+
             # In some cases, we're going to want to delay the trigger a few seconds.
             # For example, libretro emulators will handle quitting on their own.
             # Other standalone emulators will do the same as well.
@@ -178,6 +189,8 @@ class PowerKit():
 
             if runcommand_process.is_running():
                 self.reset()
+
+            self.last_reset = last_reset
 
     # Cleans up the resources used by the app
     def exit(self, *args, **kwargs) -> None:
