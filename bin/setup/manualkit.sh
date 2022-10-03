@@ -9,7 +9,10 @@ setup_module_desc='manualkit install and configuration for viewing game manuals'
 install_dir='/opt/retropie/supplementary/manualkit'
 
 depends() {
+  "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/manualkit/setup.sh" depends
+
+  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/devicekit/" "/opt/retropie/supplementary/devicekit/"
 }
 
 build() {
