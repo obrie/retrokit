@@ -20,14 +20,14 @@ class Argon1(BaseProvider):
         self.was_held = False
 
         self.power_button = gpiozero.Button(self.POWER_PIN, pull_up=False, hold_time=0.03)
-        self.power_button.when_released = self.__button_released
-        self.power_button.when_held = self.__button_held
+        self.power_button.when_released = self._button_released
+        self.power_button.when_held = self._button_held
 
     # A physical hold of 3+ seconds triggers a 30-50ms hold and must force a shutdown
-    def __button_held(self) -> None:
+    def _button_held(self) -> None:
         self.was_held = True
 
-    def __button_released(self) -> None:
+    def _button_released(self) -> None:
         if self.was_held:
             self.shutdown()
         else:

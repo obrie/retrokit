@@ -24,7 +24,7 @@ class Nespi(BaseProvider):
 
         power_button = gpiozero.Button(self.POWER_PIN, hold_time=float(self.config['shutdown']['hold_time']))
         power_button.when_pressed = self.shutdown
-        power_button.when_released = self.__enable_led
+        power_button.when_released = self._enable_led
 
         reset_button = gpiozero.Button(self.RESET_PIN)
         reset_button.when_pressed = self.reset
@@ -34,5 +34,5 @@ class Nespi(BaseProvider):
         self.led.blink(0.2, 0.2)
 
     # Turns on the LED
-    def __enable_led(self) -> None:
+    def _enable_led(self) -> None:
         self.led.on()

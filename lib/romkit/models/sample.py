@@ -17,13 +17,13 @@ class Sample:
     @property
     def context(self) -> dict:
         return {
-            **self.__resource_context,
+            **self._resource_context,
             'sample_filename': self.resource.target_path.path.name,
         }
 
     # Builds context for formatting dirs/urls
     @property
-    def __resource_context(self) -> dict:
+    def _resource_context(self) -> dict:
         return {
             'sample': self.name,
             **self.machine.context,
@@ -33,7 +33,7 @@ class Sample:
     @property
     def resource(self) -> Resource:
         if not self._resource:
-            self._resource = self.romset.resource('sample', **self.__resource_context)
+            self._resource = self.romset.resource('sample', **self._resource_context)
         return self._resource
 
     # Downloads and installs the sample

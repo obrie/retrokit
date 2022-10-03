@@ -28,13 +28,13 @@ class Disk:
     @property
     def context(self) -> dict:
         return {
-            **self.__resource_context,
+            **self._resource_context,
             'disk_filename': self.resource.target_path.path.name,
         }
 
     # Builds context for formatting dirs/urls
     @property
-    def __resource_context(self) -> dict:
+    def _resource_context(self) -> dict:
         context = {
             'disk': self.name,
             **self.machine.context,
@@ -52,7 +52,7 @@ class Disk:
     @property
     def resource(self) -> Resource:
         if not self._resource:
-            self._resource = self.romset.resource('disk', **self.__resource_context)
+            self._resource = self.romset.resource('disk', **self._resource_context)
         return self._resource
 
     # Downloads and installs the disk

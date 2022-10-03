@@ -199,7 +199,7 @@ class Machine:
     # Builds context for formatting dirs/urls, including resource filenames
     @property
     def context(self) -> dict:
-        context = {**self.__resource_context}
+        context = {**self._resource_context}
         if self.resource:
             context['machine_filename'] = self.resource.target_path.path.name
 
@@ -207,7 +207,7 @@ class Machine:
 
     # Builds context for formatting dirs/urls
     @property
-    def __resource_context(self) -> dict:
+    def _resource_context(self) -> dict:
         return {
             'machine': self.name,
             'machine_id': self.id,
@@ -301,7 +301,7 @@ class Machine:
     @property
     def resource(self) -> Resource:
         if not self._resource:
-            self._resource = self.romset.resource('machine', **self.__resource_context)
+            self._resource = self.romset.resource('machine', **self._resource_context)
         return self._resource
 
     # Parent machine, if applicable

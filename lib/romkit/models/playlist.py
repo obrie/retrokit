@@ -28,13 +28,13 @@ class Playlist:
     @property
     def context(self) -> dict:
         return {
-            **self.__resource_context,
+            **self._resource_context,
             'playlist_filename': self.resource.target_path.path.name,
         }
 
     # Builds context for formatting dirs/urls
     @property
-    def __resource_context(self) -> dict:
+    def _resource_context(self) -> dict:
         return {
             'playlist': self.name,
             **self.machine.context,
@@ -44,7 +44,7 @@ class Playlist:
     @property
     def resource(self) -> Resource:
         if not self._resource:
-            self._resource = self.romset.resource('playlist', **self.__resource_context)
+            self._resource = self.romset.resource('playlist', **self._resource_context)
         return self._resource
 
     # Adds the associated machine to the playlist
