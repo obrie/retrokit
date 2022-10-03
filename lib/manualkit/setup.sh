@@ -55,16 +55,16 @@ depends() {
   # available via apt is too old.  As a result, we need to build from source.
   depends_mupdf
 
+  # TODO: Add dependency on devicekit here
+
   # Python libs
   sudo pip3 install \
-    evdev==1.4.0 \
-    pyudev==0.22.0 \
     psutil==5.8.0 \
     PyMuPDF==1.18.15
 }
 
 remove() {
-  sudo pip3 uninstall -y evdev pyudev psutil PyMuPDF
+  sudo pip3 uninstall -y psutil PyMuPDF
 }
 
 "${@}"
