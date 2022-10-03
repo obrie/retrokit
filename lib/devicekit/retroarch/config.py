@@ -1,13 +1,12 @@
 import configparser
 from pathlib import Path
-from typing import Any, Callable, NamedTuple, Optional
+from typing import Any, List, NamedTuple, Optional
 
 from devicekit.input_type import InputType
 
 class ButtonConfig(NamedTuple):
-    btn_prefix: str
+    btn_prefixes: List[str]
     btn_suffix: str
-    hotkey_config_name: str
 
 class Config:
     # Path to the global RetroArch configuration
@@ -18,8 +17,8 @@ class Config:
 
     # Config name structure for each device type for looking up inputs
     BUTTON_CONFIGS = {
-        InputType.JOYSTICK: ButtonConfig('input_', '_btn', 'input_enable_hotkey_btn'),
-        InputType.KEYBOARD: ButtonConfig('input_player1_', '', 'input_enable_hotkey'),
+        InputType.JOYSTICK: ButtonConfig(['input_'], '_btn'),
+        InputType.KEYBOARD: ButtonConfig(['input_', 'input_player1_'], ''),
     }
 
     def __init__(self, path: str = GLOBAL_CONFIG_PATH, input_type: InputType = InputType.KEYBOARD):
@@ -47,7 +46,7 @@ class Config:
     # The hotkey defined in the current configuration
     @property
     def hotkey(self) -> Optional[str]:
-        return self.get(self._button_config.hotkey_config_name)
+        return self.get_button('enable_hotkey')
 
     @property
     def _button_config(self) -> ButtonConfig:
@@ -60,4 +59,7 @@ class Config:
     # Reads the configuration key associated with the given button name
     def get_button(self, btn_name: str) -> str:
         button_config = self._button_config
-        return self.get(f'{button_config.btn_prefix}{btn_name}{button_config.btn_suffix}')
+        for btn_prefix in button_config.btn_prefixes:
+            value = self.get(f'{btn_prefix}{btn_name}{button_config.btn_suffix}')
+            if value is not None:
+                return value
