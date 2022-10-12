@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import asyncio
 import evdev
 import logging
@@ -33,6 +35,10 @@ class Handler(NamedTuple):
     def match(self, event: evdev.InputEvent, grabbed: bool) -> bool:
         return (not self.grabbed or grabbed) and self.event_type == abs(event.value)
 
+class DeviceEvent(NamedTuple):
+    device: InputDevice
+    turbo: bool = False
+
 # Represents an evdev device that we're listening for events from
 class InputDevice():
     def __init__(self,
@@ -65,6 +71,11 @@ class InputDevice():
         self.active_inputs = {}
         self.last_active_inputs = {}
         self.grabbed = False
+
+    # Unique identifier for the device
+    @property
+    def id(self) -> str:
+        return self.dev_device.path
 
     # Executes a callback when the given input code is detected on this device
     def on(self,
@@ -193,14 +204,14 @@ class InputDevice():
 
         for handler in matched_handlers:
             if handler and handler.match(event, self.grabbed):
-                handler.callback(False)
+                handler.callback(DeviceEvent(self))
 
                 # Run a repeater in order to simulate a "hold" pattern
                 # 
                 # This is done in order to handle certain devices (such as joystick) which can
                 # hold down a navigation button but don't actually trigger hold events.
                 if handler.repeat:
-                    repeater = InputRepeater(handler.callback, self.repeat_delay, self.repeat_interval, self.repeat_turbo_wait)
+                    repeater = InputRepeater(self, handler.callback)
                     repeater.start(self.event_loop)
                     self.repeaters.append(repeater)
 
@@ -208,15 +219,14 @@ class InputDevice():
 # Encapsulates the logic for repeat callbacks when they're being held down
 class InputRepeater:
     def __init__(self,
+        device: InputDevice,
         callback: Callable,
-        repeat_delay: float,
-        repeat_interval: float,
-        repeat_turbo_wait: float,
     ) -> None:
+        self.device = device
         self.callback = callback
-        self.repeat_delay = repeat_delay
-        self.repeat_interval = repeat_interval
-        self.repeat_turbo_wait = repeat_turbo_wait
+        self.repeat_delay = device.repeat_delay
+        self.repeat_interval = device.repeat_interval
+        self.repeat_turbo_wait = device.repeat_turbo_wait
 
     # Starts asynchronously triggering repeat events to simulate "hold" behavior
     # on a key
@@ -234,7 +244,7 @@ class InputRepeater:
             if (datetime.utcnow() - start_time) >= self.repeat_turbo_wait:
                 turbo = True
 
-            callback(turbo)
+            callback(DeviceEvent(self.device, turbo))
             await asyncio.sleep(self.repeat_interval)
 
     # Stops any asynchronous task running to repeat events.  This ensures the tasks

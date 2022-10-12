@@ -15,6 +15,7 @@ from pathlib import Path
 from threading import RLock
 from typing import Callable, Optional
 
+from devicekit.input_device import DeviceEvent
 from devicekit.input_listener import InputListener
 from devicekit.input_type import InputType
 
@@ -187,9 +188,9 @@ class ManualKit():
 
     # Toggles visibility of the manual
     @synchronized
-    def toggle(self, profile_name: str, turbo: bool = False) -> None:
+    def toggle(self, profile_name: str, event: DeviceEvent) -> None:
         # Ignore repeat toggle callbacks
-        if turbo:
+        if event.:
             return
 
         # Only process toggle events for the currently active profile
@@ -270,23 +271,25 @@ class ManualKit():
             hotkey = profile.hotkey_enable and config.get('hotkey', fallback=True)
             self.input_listener.on(input_type, config[f'toggle_{profile.name}'], partial(self.toggle, profile.name), retroarch=retroarch, grabbed=False, hotkey=hotkey, on_key_down=False, repeat=False)
 
-        self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['right'], partial(self._navigate, PDF.move_right, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['next'], partial(self._navigate, PDF.next, True), retroarch=retroarch)
-        self.input_listener.on(input_type, config['prev'], partial(self._navigate, PDF.prev, True), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, PDF.zoom_in, False), retroarch=retroarch)
-        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, PDF.zoom_out, False), retroarch=retroarch)
+        self.input_listener.on(input_type, config['up'], partial(self._navigate, PDF.move_up), retroarch=retroarch)
+        self.input_listener.on(input_type, config['down'], partial(self._navigate, PDF.move_down), retroarch=retroarch)
+        self.input_listener.on(input_type, config['left'], partial(self._navigate, PDF.move_left), retroarch=retroarch)
+        self.input_listener.on(input_type, config['right'], partial(self._navigate, PDF.move_right), retroarch=retroarch)
+        self.input_listener.on(input_type, config['next'], partial(self._navigate_with_turbo, PDF.next), retroarch=retroarch)
+        self.input_listener.on(input_type, config['prev'], partial(self._navigate_with_turbo, PDF.prev), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_in'], partial(self._navigate, PDF.zoom_in), retroarch=retroarch)
+        self.input_listener.on(input_type, config['zoom_out'], partial(self._navigate, PDF.zoom_out), retroarch=retroarch)
 
-    # Calls the given navigation API, optionally including callback arguments
+    # Calls the given navigation API
     @synchronized
-    def _navigate(self, navigation_api: Callable, include_args: bool, *args) -> None:
-        if include_args:
-            navigation_api(self.pdf, *args)
-        else:
-            navigation_api(self.pdf)
+    def _navigate(self, navigation_api: Callable, event: DeviceEvent) -> None:
+        navigation_api(self.pdf)
+        self.refresh()
 
+    # Calls the given navigation API, including the turbo value
+    @synchronized
+    def _navigate_with_turbo(self, navigation_api: Callable, event: DeviceEvent) -> None:
+        navigation_api(self.pdf, event.turbo)
         self.refresh()
 
     # Sends a SIGINT signal to the current process

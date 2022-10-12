@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta
 
 import devicekit.retroarch as retroarch
+from devicekit.input_device import DeviceEvent
 from devicekit.input_type import InputType
 from devicekit.input_listener import InputListener
 
@@ -21,8 +22,7 @@ class Hotkey(BaseProvider):
         # Keep track of button presses in case we're configured to have to
         # press twice to quit
         self._quit_press_twice = retroarch_config.get('quit_press_twice') == 'true'
-        self._press_count = 0
-        self._last_pressed = None
+        self._last_pressed_by_device = {}
         self.trigger_delay = self.config['hotkey'].getint('trigger_delay', 0)
 
         keyboard_enabled = self.config['hotkey'].getboolean('keyboard')
@@ -44,27 +44,24 @@ class Hotkey(BaseProvider):
     def stop(self) -> None:
         self._listener.stop()
 
-    def _button_pressed(self, turbo: bool) -> None:
+    def _button_pressed(self, event: DeviceEvent) -> None:
         now = datetime.utcnow()
-        self._press_count += 1
+        device_id = event.device.id
+        last_pressed = self._last_pressed_by_device.get(device_id)
 
         if not self._quit_press_twice:
             # Only requires a single trigger to reset
             self._trigger_reset()
-        elif self._last_pressed:
-            time_elapsed = (now - self._last_pressed)
-            self._last_pressed = now
+        elif last_pressed:
+            time_elapsed = (now - last_pressed)
+            self._last_pressed_by_device[device_id] = now
 
-            if time_elapsed > timedelta(seconds=self.QUIT_TWICE_WINDOW_SECS):
-                # It's been more than the allowed interval: reset back to 1 press
-                self._press_count = 1
-            else:
+            if time_elapsed <= timedelta(seconds=self.QUIT_TWICE_WINDOW_SECS):
                 # Pressed twice -- go ahead and reset
                 self._trigger_reset()
         else:
-            self._last_pressed = now
+            self._last_pressed_by_device[device_id] = now
 
     def _trigger_reset(self) -> None:
-        self._press_count = 0
-        self._last_pressed = None
+        self._last_pressed_by_device.clear()
         self.reset()
