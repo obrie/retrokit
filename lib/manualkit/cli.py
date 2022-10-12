@@ -190,7 +190,7 @@ class ManualKit():
     @synchronized
     def toggle(self, profile_name: str, event: DeviceEvent) -> None:
         # Ignore repeat toggle callbacks
-        if event.:
+        if event.turbo:
             return
 
         # Only process toggle events for the currently active profile
