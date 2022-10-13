@@ -1,0 +1,40 @@
+{
+  "roms": {
+    "filters": {
+      "!genres|512gb-extra": [
+        "Pinball",
+        "Puzzle",
+        "Sports / Baseball",
+        "Sports / Basketball",
+        "Sports / Beach Volleyball",
+        "Sports / Bowling",
+        "Sports / Boxing",
+        "Sports / Ice Hockey",
+        "Sports / Snowboarding",
+        "Sports / Squash",
+        "Sports / Softball",
+        "Sports / Tennis",
+        "Sports / Wrestling"
+      ],
+      "+titles": [
+        "Carmageddon",
+        "Earthworm Jim 2",
+        "Worms Pinball",
+        "# Single Sports Franchises",
+        "All Star Tennis 2000",
+        "Championship Motocross 2001 featuring Ricky Carmichael",
+        "Colin McRae Rally 2.0",
+        "EA Sports Supercross 2000",
+        "Formula 1 Championship Edition",
+        "Knockout Kings 2001",
+        "MLB 2005",
+        "Madden NFL 2005",
+        "NASCAR 2001",
+        "NBA Live 2003",
+        "NCAA Final Four 2001",
+        "NHL 2001"
+      ],
+      "+names": []
+    }
+  }
+}

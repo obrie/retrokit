@@ -1,0 +1,31 @@
+{
+  "systems": [
+    "arcade",
+    "atari2600",
+    "atarilynx",
+    "nes",
+    "snes",
+    "n64",
+    "gb",
+    "gbc",
+    "gba",
+    "nds",
+    "megadrive",
+    "gamegear",
+    "psx",
+    "psp",
+    "ngpc"
+  ],
+  "setup": {
+    "add": [
+    ],
+    "remove": [
+      "systems/ports/roms-packages",
+      "hardware/controllers/sinden",
+      "system-overlays",
+      "system-roms-overlays",
+      "systems/pc/config",
+      "systems/ports/roms-gamefiles"
+    ]
+  }
+}

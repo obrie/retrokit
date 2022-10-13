@@ -1,0 +1,28 @@
+{
+  "roms": {
+    "filters": {
+      "flags": [
+        "USA",
+        "World"
+      ],
+      "!genres|512gb": [
+        "1st person",
+        "Breakout",
+        "Cycling",
+        "Fishing",
+        "Football",
+        "Golf",
+        "Gun",
+        "Hunting",
+        "Lightgun",
+        "Olympic",
+        "Point and Click",
+        "Quiz",
+        "Shooter",
+        "Simulation",
+        "Sports / Surf",
+        "Survival Horror"
+      ]
+    }
+  }
+}
