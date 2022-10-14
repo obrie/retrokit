@@ -1,0 +1,8 @@
+# Force HDMI to be always on
+hdmi_force_hotplug=1
+hdmi_drive=2
+hdmi_ignore_edid=0xa5000080
+
+# Force 1080p60
+hdmi_group=1
+hdmi_mode=16
