@@ -15,18 +15,25 @@ __configure_bios() {
   # Note that we can't use crudini for dtoverlay additions because it doesn't
   # support repeating the same key multiple times in the same section
 
-  ini_merge '{config_dir}/boot/config.txt' '/boot/config.txt' space_around_delimiters=false as_sudo=true
+  local case=$(setting '.hardware.case.model')
 
-  __configure_bios_wifi
+  # Build base config.txt without dtoverlay/dtparam settings
+  ini_merge '{config_dir}/boot/config.txt' "$tmp_ephemeral_dir/boot-staging.txt" space_around_delimiters=false backup=false overwrite=true
+  ini_merge "{config_dir}/boot/config/$case.txt" "$tmp_ephemeral_dir/boot-staging.txt" space_around_delimiters=false backup=false
+  sed -i '/^dt\(overlay\|param\)=/d' "$tmp_ephemeral_dir/boot-staging.txt"
+
+  # Merge into /boot
+  ini_merge "$tmp_ephemeral_dir/boot-staging.txt" '/boot/config.txt' space_around_delimiters=false as_sudo=true
+
+  # Add repeating dtoverlay/dtparam configurations since crudini will just merge
+  while read config_path; do
+    while read section_name; do
+      local section_content=$(sed -n "/^\[$section_name\]/,/^\[/p" "$config_path")
+      grep -E '^dt(overlay|param)=' "$config_path" | sudo tee -a /boot/config.txt
+    done < <(crudini --get "$config_path")
+  done < <(each_path '{config_dir}/boot/config.txt')
+
   __configure_bios_ir
-  __configure_bios_case
-}
-
-# Wifi configuration
-__configure_bios_wifi() {
-  if [ "$(setting '.hardware.wifi.enabled')" == 'false' ]; then
-    echo 'dtoverlay=disable-wifi' | sudo tee -a /boot/config.txt
-  fi
 }
 
 # IR configuration
@@ -40,13 +47,6 @@ __configure_bios_ir() {
 
     echo "dtoverlay=gpio-ir,gpio_pin=$ir_gpio_pin,rc-map-name=$rc_map_name" | sudo tee -a /boot/config.txt
   fi
-}
-
-# Add case-specific boot options.  We do this here instead of the case setup
-# in order to avoid multiple scripts modifying the /boot/config.txt file.
-__configure_bios_case() {
-  local case=$(setting '.hardware.case.model')
-  each_path "{config_dir}/boot/config/$case.txt" cat '{}' | sudo tee -a /boot/config.txt >/dev/null
 }
 
 __configure_kernel() {

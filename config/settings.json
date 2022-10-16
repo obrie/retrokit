@@ -109,9 +109,6 @@
     "ir": {
       "gpio_pin": null,
       "keymap": "/lib/udev/rc_keymaps/tivo.toml"
-    },
-    "wifi": {
-      "enabled": true
     }
   },
   "systems": [
