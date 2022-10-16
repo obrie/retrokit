@@ -37,7 +37,7 @@ __configure_bios() {
 
       grep -E '^dt(overlay|param)=' "$config_path" | sudo tee -a /boot/config.txt
     done < <(crudini --get "$config_path")
-  done < <(each_path '{config_dir}/boot/config.txt')
+  done < <(cat <(each_path '{config_dir}/boot/config.txt') <(each_path "{config_dir}/boot/config/$case.txt"))
 
   __configure_bios_ir
 }
