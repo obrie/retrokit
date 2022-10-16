@@ -28,7 +28,13 @@ __configure_bios() {
   # Add repeating dtoverlay/dtparam configurations since crudini will just merge
   while read config_path; do
     while read section_name; do
-      local section_content=$(sed -n "/^\[$section_name\]/,/^\[/p" "$config_path")
+      local section_content
+      if [ "$section_name" == 'DEFAULT' ]; then
+        section_content=$(sed -n "1,/^\[/p" "$config_path")
+      else
+        section_content=$(sed -n "/^\[$section_name\]/,/^\[/p" "$config_path")
+      fi
+
       grep -E '^dt(overlay|param)=' "$config_path" | sudo tee -a /boot/config.txt
     done < <(crudini --get "$config_path")
   done < <(each_path '{config_dir}/boot/config.txt')
