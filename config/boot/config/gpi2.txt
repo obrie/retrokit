@@ -1,0 +1,42 @@
+# Default GPi2 configuration assumes LCD Display is being used
+
+# HDMI *NOT* connected
+[gpio18=0]
+# Disable on-board audio
+dtparam=audio=off
+
+# Enable overscan
+overscan_left=0
+overscan_right=0
+overscan_top=0
+overscan_bottom=0
+
+# Set display dimensions
+framebuffer_width=640
+framebuffer_height=480
+
+# Enable LCD
+dtoverlay=dpi24
+enable_dpi_lcd=1
+display_default_lcd=1
+
+# Set raw DPI timings (80hz)
+dpi_group=2
+dpi_mode=87
+dpi_output_format=0x00016
+hdmi_timings=640 0 41 40 41 480 0 18 9 18 0 0 0 60 0 24000000 1
+
+# HDMI connected
+[gpio18=0]
+# Enable HDMI
+hdmi_drive=2
+hdmi_force_hotplug=1
+hdmi_group=1
+hdmi_ignore_edid=0xa5000080
+hdmi_mode=16
+
+# Disable overscan
+disable_overscan=1
+
+[all]
+dtoverlay=dwc2,dr_mode=host

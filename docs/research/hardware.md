@@ -100,6 +100,26 @@ Additional benefits:
 I don't know what this configuration looks like yet, but it involves the use of Intel NUC
 in order to support Playstation 2 / Wii.
 
+### The Traveler
+
+This represents a portable configuration that you can take anywhere.
+
+| Component         | Description                         | Cost  | URL |
+| - | - | - | - |
+| Computer          | Raspberry Pi CM4 Lite 4GB, Wireless | $80   | https://www.pishop.us/product/raspberry-pi-compute-module-4-wireless-4gb-lite-cm4104000/ |
+| Case              | Retroflag GPi Case 2 w/ Dock        | $90   | https://www.amazon.com/dp/B09DPM2GSF |
+| TV Cable          | HDMI Cable                          | $7    | https://www.amazon.com/dp/B01GCGKI3O |
+| Power Supply      | CanaKit 3.5A Power Supply           | $10   | https://www.amazon.com/dp/B07TYQRXTK |
+| Hard Drive        | Samsung EVO Plus+ 512GB microSDXC   | $65   | https://www.samsung.com/us/computing/memory-storage/memory-cards/evo-plus---adapter-microsdxc-512gb-mb-mc512ka-am/ |
+| Keyboard + Mouse  | Arteck 2.4ghz Keyboard + Mouse      | $30   | https://www.amazon.com/dp/B07MCTZ3LZ |
+
+Total cost: $252 ($282 with keyboard)
+
+Important notes:
+
+* You must get the CM4 Lite (no eMMC) in order to use an SD card
+* Strongly recommend getting a CM4 with wireless to simplify setup and configuration
+
 ## Upgrades
 
 There are a lot of upgrades you can consider that I've used and am happy with.
