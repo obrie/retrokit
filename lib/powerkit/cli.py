@@ -51,8 +51,11 @@ class PowerKit():
 
         # Identify which power provider we're working with
         self.provider = BaseProvider.from_config(self.config)
+
+        # Add optional hotkey provider
         if not isinstance(self.provider, powerkit.providers.Hotkey):
             self.hotkey_provider = powerkit.providers.Hotkey(self.config)
+            self.hotkey_provider.on('maybe_reset', self.track_emulator)
         else:
             self.hotkey_provider = None
 
@@ -170,7 +173,7 @@ class PowerKit():
 
     # Handles pressing the reset hotkey
     def hotkey_reset(self) -> None:
-        runcommand_process = self.runcommand_process
+        runcommand_process = self.last_runcommand_process
 
         if not runcommand_process:
             # No runcommand / emulator running -- follow our standard process
@@ -191,6 +194,16 @@ class PowerKit():
                 self.reset()
 
             self.last_reset = last_reset
+
+    # Track whether there's an emulator currently running so that when the hotkey
+    # provider runs, we know to terminate the emulator.
+    # 
+    # This is particularly important in cases where the emulator supports a native
+    # hotkey quit command, but doesn't support a quit_press_twice configuration like
+    # RetroArch.  We want to track what was running on the first hotkey press.
+    def track_emulator(self) -> None:
+        self.last_runcommand_process = self.runcommand_process
+        logging.debug(f'Tracking last runcommand process as {self.last_runcommand_process}')
 
     # Cleans up the resources used by the app
     def exit(self, *args, **kwargs) -> None:

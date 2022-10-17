@@ -51,6 +51,7 @@ class Hotkey(BaseProvider):
 
         if not self._quit_press_twice:
             # Only requires a single trigger to reset
+            self.trigger('maybe_reset')
             self._trigger_reset()
         elif last_pressed:
             time_elapsed = (now - last_pressed)
@@ -60,6 +61,7 @@ class Hotkey(BaseProvider):
                 # Pressed twice -- go ahead and reset
                 self._trigger_reset()
         else:
+            self.trigger('maybe_reset')
             self._last_pressed_by_device[device_id] = now
 
     def _trigger_reset(self) -> None:
