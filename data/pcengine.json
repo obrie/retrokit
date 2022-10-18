@@ -68,7 +68,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Addams_Family/Addams_Family.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -97,7 +104,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Aero Blasters (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -124,7 +138,20 @@
       "Shoot'em up / Horizontal",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Air Zonk (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NECPCEngineManuals/PC Denjin - Punkic Cyborgs (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -150,7 +177,14 @@
       "Action",
       "Pinball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Alien Crush (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -167,7 +201,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/AlnamNoKibaManualJPPCEngine/Alnam no Kiba (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -185,7 +226,14 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Panza Kick Boxing (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.25
   },
@@ -375,7 +423,17 @@
       "Puzzle-Game",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "options": {
+          "filter": "manual*"
+        },
+        "url": "https://archive.org/compress/manual-01/formats=JPEG&file=/manual-01.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -384,7 +442,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Battle Royale (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -420,7 +485,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Beyond_Shadowgate/Beyond_Shadowgate.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -486,7 +558,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Blazing Lazers (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -506,7 +585,14 @@
       "Shooter / Run and Gun",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bloody_Wolf/Bloody_Wolf.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -523,7 +609,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bomberman (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.8
   },
@@ -532,7 +625,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bomberman_93/Bomberman_93.pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.9
   },
@@ -582,7 +682,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bonk_3/Bonk_3_HuCARD.pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.75
   },
@@ -598,7 +705,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bonk's Adventure (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -606,7 +720,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bonk's Revenge (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -622,7 +743,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Boxyboy (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -640,7 +768,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bravoman (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -694,7 +829,14 @@
       "Japanese RPG",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/BuraiManualJPPCEngine/Burai (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -703,7 +845,14 @@
       "Japanese RPG",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Burai2ManualJPPCEngine/Burai 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -731,7 +880,14 @@
       "Puzzle-Game",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Buster_Bros/Buster_Bros.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -800,7 +956,14 @@
       "Role playing games",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cadash/Cadash.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -842,7 +1005,14 @@
       "Sports",
       "Sports / Boxing"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Champions_Forever_Boxing/Champions_Forever_Boxing.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -851,7 +1021,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Taito Chase H.Q. (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -859,7 +1036,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Chew_Man_Fu/Chew_Man_Fu.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -894,7 +1078,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/China Warrior (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -969,7 +1160,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/CosmicFantasyManualJPPCEngine/Cosmic Fantasy (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -977,7 +1175,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cosmic_Fantasy_2/Cosmic_Fantasy_2.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1010,7 +1215,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cratermaze/Cratermaze.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1036,7 +1248,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cyber_Core/Cyber_Core.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1071,7 +1290,17 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "options": {
+          "filter": "*Manual*"
+        },
+        "url": "https://archive.org/compress/DaimakaimuraSuperGrafxHiResScans/formats=JPEG&file=/DaimakaimuraSuperGrafxHiResScans.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1115,7 +1344,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Darkwing Duck (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1124,7 +1360,14 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Davis Cup Tennis (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.45
   },
@@ -1174,7 +1417,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Double_Dungeons/Double_Dungeons.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1225,7 +1475,14 @@
     "genres": [
       "Pinball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Devil's Crush - Naxat Pinball (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1387,7 +1644,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Dragon_Slayer/Dragon_Slayer.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1403,7 +1667,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dragon Spirit (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1411,7 +1682,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dragon's Curse (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -1420,7 +1698,14 @@
       "Action",
       "Action / Breakout games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Drop_Off/Drop_Off.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1428,7 +1713,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dungeon Explorer (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.65
   },
@@ -1436,7 +1728,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Explorer_II/Dungeon_Explorer_II.pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.9
   },
@@ -1444,7 +1743,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Master/Dungeon_Master.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1453,7 +1759,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Order of the Griffon (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1475,7 +1788,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/EferaJilioraManualJPPCEngine/Efera and Jiliora (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1501,7 +1821,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/emeralddragonguidebook/Emerald Dragon Guide Book.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1527,7 +1854,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/arjak/Exile/Exile.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1641,7 +1975,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Falcon (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1658,7 +1999,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Fantasy Zone (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1666,7 +2014,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/TengaiMakyouFuunKabukiDenManualJPPCEngine/Tengai Makyou Fuun Kabuki Den (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1674,7 +2029,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/TengaiMakyouZiriaManualJPPCEngine/Tengai Makyou (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1682,7 +2044,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/TengaiMakyou2ManualJPPCEngine/Tengai Makyou 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1690,7 +2059,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/FarjiusNoJakouteiManualJPPCEngine/Farjius no Jakoutei (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1741,7 +2117,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Final Lap Twin (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -1823,7 +2206,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Forgotten_Worlds/Forgotten_Worlds.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1909,7 +2299,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Galaga '90 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1962,7 +2359,14 @@
       "Shoot'em up / Horizontal",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Gate_of_Thunder/Gate_of_Thunder.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2013,7 +2417,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Ghost_Manor/Ghost_Manor.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2030,7 +2441,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/GingaOjousamaDensetsuYunaManualJPPCEngine/Ginga Ojousama Densetsu Yuna (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2038,7 +2456,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/GingaOjousamaDensetsuYuna2ManualJPPCEngine/Ginga Ojousama Densetsu Yuna 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2218,7 +2643,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hatsukoi-monogatari-manual-scan-jp-pcengine/Hatsukoi Monogatari (Manual)(Scan)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2486,7 +2918,20 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/J.B._Harold_Murder_Club_1991_NEC_US/J.B._Harold_Murder_Club_1991_NEC_US.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://mocagh.org/miscgame/murderclubpce-manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -2495,7 +2940,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/J.J. & Jeff (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2531,7 +2983,14 @@
       "Sports",
       "Sports / Golf"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Jack Nicklaus' Turbo Golf (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -2540,7 +2999,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Jackie_Chan/Jackie_Chan.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2714,7 +3180,14 @@
       "Role playing games",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/KazeNoDensetsuXanaduPCEngineJPManuals/KazeNoDensetsuXanadumanualjppcEngine.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2722,7 +3195,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Keith Courage in Alpha Zones (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2766,7 +3246,14 @@
     "genres": [
       "Casino"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/King of Casino (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.8
   },
@@ -2774,7 +3261,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/KisouLougaManualJPPCEngine/Kisou Louga (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2791,7 +3285,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Klax (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2884,7 +3385,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/LangrisserManualScanJPPCEngine/Langrisser (Manual)(Scan)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2914,7 +3422,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Last_Alert/Last_Alert.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2931,7 +3446,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NECPCEngineManuals/Legend of Hero Tonma (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2940,7 +3462,14 @@
       "Role playing games",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/legendofxanaduthepcenginehiresscans/Legend of Xanadu, The - Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2948,7 +3477,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/KazeNoDensetsuXanadu2PCEngineJPManuals/KazenoDensetsuXanadu2ManualJPPcEngine.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2957,7 +3493,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Legendary Axe II, The (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3032,7 +3575,14 @@
       "Shoot'em up / Horizontal",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Lords_of_Thunder/Lords_of_Thunder.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3293,7 +3843,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/MegamiParadiseManualJPPCEngine/Megami Paradise (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3351,7 +3908,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Might_and_Magic_III/Might_and_Magic_III.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3438,7 +4002,14 @@
       "Platform",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Monster_Lair/Monster_Lair.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3463,7 +4034,14 @@
       "Action / Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/MoonlightLadyPCEngineJPManuals/Moonlight Lady (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3481,7 +4059,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Moto Roader (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.7
   },
@@ -3650,7 +4235,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Neutopia (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3659,7 +4251,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Neutopia_II/Neutopia_II.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3667,7 +4266,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/New Adventure Island (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3685,7 +4291,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Night_Creatures/Night_Creatures.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -3719,7 +4332,14 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NECPCEngineManuals/Ninja Warriors, The (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -3789,7 +4409,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Ordyne/Ordyne.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3904,7 +4531,17 @@
       "Casino",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "options": {
+          "filter": "*manual*"
+        },
+        "url": "https://archive.org/download/PachiokunMaboroshinoDensetsuPCEngineCJCD1001NTSCJ/000_Pachio-kun_Maboroshi_no_Densetsu_PC_Engine_CJCD1001_NTSC-J_manual_01_preview.jpg"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3940,7 +4577,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Parasol_Stars/Parasol_Stars.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4040,7 +4684,14 @@
       "Sports",
       "Sports / Golf"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Power Golf (USA).pdf"
+      }
+    ],
     "players": 3,
     "rating": 0.6
   },
@@ -4134,7 +4785,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/PrivateEyedolManualJPPCEngine/Private Eyedol (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4189,7 +4847,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/AYAPsychicDetectiveSeriesVol.3ManualJPPCEngine/AYA Psychic Detective Series Vol.3 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4381,7 +5046,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/R_Type/R_Type.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4501,7 +5173,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Raiden/Raiden.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4581,7 +5260,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/LodossTouSenkiManualJPPCEngine/Lodoss Tou Senki (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4589,7 +5275,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/LodossTouSenki2ManualJPPCEngine/Lodoss Tou Senki 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4692,7 +5385,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Samurai_Ghost/Samurai_Ghost.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4833,7 +5533,14 @@
       "Action / Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/arjak/Shape_Shifter/Shape_Shifter.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4842,7 +5549,20 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Sherlock_Holmes/Sherlock_Holmes.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SherlockHolmesNoTanteiKouzaManualJPPCEngine/Sherlock Holmes no Tantei Kouza (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -4851,7 +5571,20 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Sherlock_Holmes_2/Sherlock_Holmes_2.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SherlockHolmesNoTanteiKouza2ManualJPPCEngine/Sherlock Holmes no Tantei Kouza 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4937,7 +5670,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Shockman (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4972,7 +5712,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/SideArms - Hyper Dyne (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4982,7 +5729,14 @@
       "Action",
       "Shooter / 1st person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Silent Debuggers (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -4991,7 +5745,14 @@
       "Educational",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Sim_Earth/Sim_Earth.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5064,7 +5825,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Soldier_Blade/Soldier_Blade.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5109,7 +5877,14 @@
       "Sports / Volleyball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Sonic Spike - World Championship Beach Volleyball (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -5126,7 +5901,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SotsugyouGraduationManualJPPCEngine/Sotsugyou Graduation (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5212,7 +5994,14 @@
       "Puzzle-Game",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/arjak/Splash_Lake/Splash_Lake.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5221,7 +6010,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Splatterhouse (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5375,7 +6171,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SuperDaisenryakuHandBook/Super Daisenryaku Hand Book.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5484,7 +6287,14 @@
       "Simulation / SciFi",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SchwarzschildWorldTechnicalFile/Schwarzschild World & Technical File.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5503,7 +6313,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Super_Star_Soldier/Super_Star_Soldier.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -5586,7 +6403,14 @@
       "Sports",
       "Sports / Football"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/TV Sports Football (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.5
   },
@@ -5595,7 +6419,14 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/TV Sports Hockey (USA).pdf"
+      }
+    ],
     "players": 5,
     "rating": 0.55
   },
@@ -5629,7 +6460,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Takin' It to the Hoop (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -5758,7 +6596,14 @@
     "genres": [
       "Pinball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/time_cruise_manual/time cruise manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5802,7 +6647,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/TokimekiMemorialManualJPPCEngine/Tokimeki Memorial (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5887,7 +6739,14 @@
       "Platform",
       "Platform / Shooter Scrolling"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Turrican (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5984,7 +6843,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Vasteel/Vasteel.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -6000,7 +6866,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Veigues - Tactical Gladiator (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -6009,7 +6882,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Victory Run (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -6018,7 +6898,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Vigilante (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -6069,7 +6956,14 @@
       "Thinking",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/CarmenSandiegoWoOeSekaiHenManualJPPCEngine/Carmen Sandiego wo Oe Sekai Hen (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6130,7 +7024,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/World Class Baseball (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -6139,7 +7040,14 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/World Court Tennis (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6287,7 +7195,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/arjak/Ys_Book_I_II/Ys_Book_I_II.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6295,7 +7210,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/arjak/Ys_III/Ys_III.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -6303,7 +7225,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ysivthedawnofyspcenginehirescans/Ys IV - The Dawn of Ys.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },

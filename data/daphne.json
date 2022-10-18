@@ -5,7 +5,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_and_Space_Ace_Operation_and_Maintenance_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -16,7 +23,14 @@
       "Shooter",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Astron_Belt_Parts_and_Operating_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -27,7 +41,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Badlands_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -45,7 +66,14 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Cliff_Hanger_Manual_Rev_3.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -53,7 +81,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Cobra_Command_Conversion_for_Begas_Battle_Installation_Instructions.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -64,7 +99,14 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_II_Owners_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -73,7 +115,14 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Eshs_Aurunmilla_1985_J/Eshs_Aurunmilla_1985_J.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -83,7 +132,14 @@
       "1st person",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Galaxy_Ranger_Parts_and_Operating_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -104,7 +160,14 @@
       "Shooter",
       "Race 1st Pers. view"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Inter_Stellar_Laser_Fantasy_Service_Manual_Upright.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -115,7 +178,14 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_Operation_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -126,7 +196,14 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_II_Owners_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -134,7 +211,17 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "filter": "*.pdf"
+        },
+        "url": "http://www.dragons-lair-project.com/tech/manuals/mach3_m.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -151,7 +238,17 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "filter": "*.pdf"
+        },
+        "url": "http://www.dragons-lair-project.com/tech/manuals/superdon_m.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -160,7 +257,17 @@
       "Platform / Run Jump",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "filter": "*.pdf"
+        },
+        "url": "http://www.dragons-lair-project.com/tech/manuals/thayers_m.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -168,7 +275,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/usthem_m.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   }

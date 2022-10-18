@@ -4,19 +4,46 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/57/007_James_Bond_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": null
   },
   "BASIC Level II": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/BASIC_Level_II_A_1983_J/BASIC_Level_II_A_1983_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
   "BASIC Level III": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/BASIC_Level_III_1983_Au/BASIC_Level_III_1983_Au.cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/BASIC_Level_III_1983_J/BASIC_Level_III_1983_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -25,7 +52,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/09/Bank_Panic_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -33,7 +67,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a6/Black_Onyx_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -43,7 +84,14 @@
       "Platform / Run Jump",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/9f/Bomb_Jack_SG-1000_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -61,7 +109,20 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/4/48/Borderline_SG-1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Borderline_1983_J_color/Borderline_1983_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -71,7 +132,14 @@
       "Platform / Run Jump",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cb/C_So!_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -88,7 +156,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/42/CastleSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -97,7 +172,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0d/Chack'n_Pop_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -116,7 +198,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b3/ChampionBaseballSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -125,7 +214,14 @@
       "Sports / Pool",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/95/ChampionBilliardsSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -134,7 +230,14 @@
       "Sports / Boxing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1c/ChampionBoxingCartSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -143,7 +246,20 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/f/f5/Champion_Golf_SG-1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bb/Champion_Golf_MyCard_SG1000_JP_Manual_v2.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -152,7 +268,14 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/15/ChampionIceHockeySGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -160,7 +283,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c4/Champion_Kendo_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -169,7 +299,14 @@
       "Sports / Wrestling",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b4/Champion_Pro_Wrestling_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -178,7 +315,14 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a1/ChampionSoccerSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -187,7 +331,20 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/b/bf/Champion_Tennis_SG1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cd/Champion_Tennis_TypeC_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -196,7 +353,14 @@
       "Platform",
       "Platform / Run Jump"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/46/Championship_Lode_Runner_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -205,7 +369,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e8/ChoplifterSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -229,13 +400,27 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Chuugaku_Hisshuu_Eisakubun_Chuugaku_1-Nen_1983_J/Chuugaku_Hisshuu_Eisakubun_Chuugaku_1-Nen_1983_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
   "Chuugaku Hisshuu Eisakubun - Chuugaku 2-Nen": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Chuugaku_Hisshuu_Eisakubun_Chuugaku_2-Nen_1983_J/Chuugaku_Hisshuu_Eisakubun_Chuugaku_2-Nen_1983_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -249,7 +434,14 @@
   },
   "Chuugaku Hisshuu Eitango - Chuugaku 2-Nen": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Chuugaku_Hisshuu_Eitango_Chuugaku_2-Nen_1983_J/Chuugaku_Hisshuu_Eitango_Chuugaku_2-Nen_1983_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -261,7 +453,14 @@
   },
   "Complete Arcade Pack Collection, The": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Arcade_Pack_I_1986_NZ_color/Arcade_Pack_I_1986_NZ_color.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -270,7 +469,20 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/0/05/Congo_Bongo_SG1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0c/Congo_Bongo_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -284,7 +496,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cc/Doki_Doki_Penguin_Land_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -294,7 +513,14 @@
       "Platform / Fighter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a9/DragonWangSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -304,7 +530,14 @@
       "Platform / Run Jump",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6f/DrolSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -320,7 +553,14 @@
       "Platform / Shooter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/03/Elevator_Action_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -329,7 +569,20 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/e/e2/Exerion_SG-1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/33/Exerion_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -339,7 +592,14 @@
       "Platform / Run Jump",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/16/FlickySGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -348,7 +608,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b4/GP_World_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -357,7 +624,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/08/GirlsGardenSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -366,7 +640,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6b/Golgo_13_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -375,7 +656,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b9/Gulkave_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -384,7 +672,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/16/Guzzler_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -393,7 +688,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/58/HEROSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -402,13 +704,27 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1a/HangOn2SGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
   "Home BASIC": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Home_BASIC_1985_J/Home_BASIC_1985_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -418,7 +734,14 @@
       "Mahjong",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cb/Home_Mahjong_D_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -428,7 +751,14 @@
       "Platform / Run Jump",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/ac/HustleChumySGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -436,7 +766,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/56/Hyper_Sports_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -452,7 +789,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Kagaku_Gensokigou_Master_1983_J/Kagaku_Gensokigou_Master_1983_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -460,7 +804,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/Kamikaze_1984_Fr_color/Kamikaze_1984_Fr_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -503,7 +854,23 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Lode_Runner_1984_E_4L/Lode_Runner_1984_E_4L.cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/4c/LodeRunnerSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -531,7 +898,14 @@
       "Mahjong",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a5/Mahjong_TypeA_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -540,7 +914,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Monaco_GP_Card_1985_J_color/Monaco_GP_Card_1985_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -548,7 +929,20 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Music_Editor_1983_Au/Music_Editor_1983_Au.cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Music_Editor_1983_J/Music_Editor_1983_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -556,7 +950,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/N-Sub_1983_J_color/N-Sub_1983_J_color.cbr"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -564,7 +965,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Nihonshi_Nenpyou_1983_J/Nihonshi_Nenpyou_1983_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -573,7 +981,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/ad/Ninja_Princess_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -582,7 +997,14 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/be/Ayako_Okamoto's_Match_Play_Golf_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -591,7 +1013,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Orguss_1984_J_color/Orguss_1984_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -600,7 +1029,14 @@
       "Asiatic board game",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/ba/OthelloSGJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -609,7 +1045,20 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/6/6f/Pacar_SG1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/Pacar_French_Translation_Inlay_1983_Fr/Pacar_French_Translation_Inlay_1983_Fr.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -618,7 +1067,14 @@
       "Casino",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SG-1000_Manual_Pachinko/Pachinko_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -627,7 +1083,14 @@
       "Casino",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/74/Pachinko_II_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -649,7 +1112,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Pitfall_II_The_Lost_Caverns_1985_J_color/Pitfall_II_The_Lost_Caverns_1985_J_color.cbr"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -658,7 +1128,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/52/Pop_Flamer_SG-1000_AU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -675,7 +1152,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/91/Q_Bert_SG1000_JP_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -702,7 +1186,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1a/Rock_n'_Bolt_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -716,7 +1207,20 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/4/48/Safari_Hunting_SG-1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/63/Safari_Hunting_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -725,7 +1229,23 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Safari_Race_1984_E_4L_color/Safari_Race_1984_E_4L_color.cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/93/Safari_Race_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -734,7 +1254,14 @@
       "Asiatic board game",
       "Mahjong"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c5/Sannin_Mahjong_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 3,
     "rating": null
   },
@@ -743,7 +1270,14 @@
       "Pinball",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/6/6a/Sega_Flipper_SG1000_AU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -758,7 +1292,14 @@
       "Shoot'em up / Vertical",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6b/Sega_Galaga_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -766,7 +1307,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Sekaishi_Nenpyou_Monbushou_Shidouyouryou_Junkyo_1983_J/Sekaishi_Nenpyou_Monbushou_Shidouyouryou_Junkyo_1983_J.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -775,7 +1323,14 @@
       "Casual Game",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d7/Tsumeshogi_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -784,7 +1339,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c9/Shinnyuushain_Tooru-Kun_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -792,7 +1354,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Sindbad_Mystery_1983_Au_color/Sindbad_Mystery_1983_Au_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -800,7 +1369,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6e/SoukobanSGJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -809,7 +1385,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/03/Space_Armor_B_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -818,7 +1401,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c6/Space_Invaders_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -827,7 +1417,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1d/Space_Mountain_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -836,7 +1433,14 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/86/Space_Slalom_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -846,7 +1450,14 @@
       "Shoot'em up / Vertical",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a8/Star_Force_MyCard_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -855,7 +1466,26 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/55/Star_Jacker_SG1000_AU_Manual.PDF"
+      },
+      {
+        "languages": [
+          "it"
+        ],
+        "url": "https://segaretro.org/images/0/03/Star_Jacker_SG1000_IT_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/9d/Star_Jacker_C_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -871,7 +1501,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/8/80/Super_Tank_SG-1000_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -888,7 +1525,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Tanoshii_Sansuu_Elementary_School_4th_vol.1_1983_J/Tanoshii_Sansuu_Elementary_School_4th_vol.1_1983_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -912,7 +1556,14 @@
   },
   "Tanoshii Sansuu - Shougaku 6-Nen Ge": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Tanoshii_Sansuu_Shougaku_6-Nen_Ge_1984_J/Tanoshii_Sansuu_Shougaku_6-Nen_Ge_1984_J.cbr"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -927,7 +1578,14 @@
       "Various",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6e/Terebi_Oekaki_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -944,7 +1602,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Uranai_Angel_Cutie_1984_J_color/Uranai_Angel_Cutie_1984_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -953,7 +1618,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0e/Wonder_Boy_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -962,7 +1634,20 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/e/e4/Yamato_SG-1000_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d4/Yamato_SG-1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -986,7 +1671,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Zaxxon_1985_J_color/Zaxxon_1985_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -995,7 +1687,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/91/Zippyrace_mycard_jp_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1004,7 +1703,14 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Zoom_909_1985_J_color/Zoom_909_1985_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": null
   }

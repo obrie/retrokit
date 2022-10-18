@@ -4,7 +4,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/18 Wheeler - American Pro Trucker (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/18 Wheeler - American Pro Trucker (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -21,7 +34,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/4 Wheel Thunder (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/4 Wheel Thunder (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -31,7 +57,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/4x4 Evolution (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -114,7 +147,20 @@
       "Shooter / Plane",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Aerowings (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Aerowings (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -125,7 +171,14 @@
       "Shooter / Plane",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/AeroWings 2 - Air Strike (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -141,7 +194,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Aikagi_Hidamari_To_Kanojo_No_Heyagi_2003_J_color/Aikagi_Hidamari_To_Kanojo_No_Heyagi_2003_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -150,7 +210,14 @@
       "Various",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/5c/Air_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -158,7 +225,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/9b/ADKPP_dc_jp_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -191,7 +265,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Alien Front Online (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -200,7 +281,20 @@
       "Adventure / Survival Horror",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Alone in the Dark - The New Nightmare (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Alone in the Dark - The New Nightmare (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -251,7 +345,14 @@
       "Role playing games",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Armada (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -259,7 +360,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Army Men - Sarge's Heroes (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -267,7 +375,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Atari Anniversary Edition (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -292,7 +407,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/BANG! Gunship Elite (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -300,7 +422,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Bangai-O (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Bangai-O_1999_J_color/Bangai-O_1999_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -352,7 +487,14 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/9f/BiohazardCodeVeronica_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -380,7 +522,26 @@
       "Adventure / Survival Horror",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Blue Stinger (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Blue Stinger (France).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Blue_Stinger_200x_Br/Blue_Stinger_200x_Br.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -430,7 +591,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Bomber Hehhe! (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -438,7 +606,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Bomberman Online (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -446,7 +621,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Border_Down_2003_J_color/Border_Down_2003_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -479,7 +661,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/TNN Motorsports Hardcore Heat (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d4/Buggy_Heat_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -487,7 +682,26 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Bust-A-Move 4 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Bust-A-Move 4 (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d9/Puzzle_Bobble_4_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -506,7 +720,14 @@
       "Various",
       "Playing cards"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Caesars Palace 2000 - Millennium Gold Edition (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -538,7 +759,26 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Cannon Spike (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/Cannon_Spike_2002_E-Fr/Cannon_Spike_2002_E-Fr.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Gunspike_2000_J_color/Gunspike_2000_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -553,7 +793,14 @@
   },
   "Capcom Taisen Fan Disc": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8b/Capcom_vs._SNK_2_Taisen_Fan_Disc_(Japan)_Manual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -561,7 +808,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Capcom vs. SNK (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Capcom vs. SNK (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e5/CapcomVsSNK2000DCJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -570,7 +836,14 @@
       "Fight",
       "Fight / 2D"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cb/CapcomVsSNK2000ProDCJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -579,7 +852,14 @@
       "Fight",
       "Fight / Versus"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8d/CapcomVsSNK2DCJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -614,7 +894,27 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Carrier (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Carrier (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/62/CarrierDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -632,7 +932,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Centipede (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -640,7 +947,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Championship Surfer (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -648,7 +962,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Chaos_Field_2004_J_color/Chaos_Field_2004_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -656,7 +977,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Charge 'N Blast (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/3d/ChargeNBlastDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -684,7 +1018,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Chicken Run (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -709,7 +1050,14 @@
       "Various",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c4/Christmas_Seaman_Message_Disc_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -718,7 +1066,26 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Chu Chu Rocket! (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Chu Chu Rocket! (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ChuChu_Rocket_1999_J_color/ChuChu_Rocket_1999_J_color.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -743,7 +1110,14 @@
       "Various",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Coaster Works (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -759,7 +1133,20 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Confidential Mission (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Confidential Mission (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -768,7 +1155,20 @@
       "Simulation",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Conflict Zone - Modern War Strategy (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Conflict Zone (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -796,7 +1196,14 @@
       "Sports",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Cosmic Smash (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -805,7 +1212,29 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Crazy Taxi (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Crazy Taxi (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/5e/Crazytaxi_dc_jp_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -814,7 +1243,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Crazy Taxi 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Crazy Taxi 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b0/CrazyTaxi2DCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -831,7 +1279,14 @@
       "Shoot'em Up",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/f/fe/CyberTroopersDCUSManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -850,7 +1305,14 @@
       "Action / Adventure",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/D2 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -884,7 +1346,14 @@
   },
   "Dabi Tsuku - Derby-ba o Tsukurou!": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f7/DerbyTsuku_DC_JP_Manual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -907,7 +1376,14 @@
       "Simulation",
       "Music and Dance"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/38/Dance_Dance_Revolution_-_2nd_Mix_-_Dreamcast_Edition_(Japan)_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -934,7 +1410,20 @@
       "Sports / Cycling",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dave Mirra Freestyle BMX (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dave Mirra Freestyle BMX (France).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -943,7 +1432,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Daytona USA (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/2e/Daytonausa_dc_jp_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Daytona_USA_200x_Br/Daytona_USA_200x_Br.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -951,7 +1459,20 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dead or Alive 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Dead_Or_Alive_2_Limited_Edition_2000_J_color_w_pages_1819/Dead_Or_Alive_2_Limited_Edition_2000_J_color_w_pages_1819.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -960,7 +1481,28 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Deadly Skies (Europe).pdf"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Airforce Delta (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Airforce_Delta_200x_Br/Airforce_Delta_200x_Br.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -968,7 +1510,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bf/Death_Crimson_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -976,7 +1525,14 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Death Crimson OX (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -985,7 +1541,14 @@
       "Simulation",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Deep Fighter (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1000,7 +1563,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Demolition Racer - No Exit (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1058,7 +1628,14 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dino Crisis (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1066,7 +1643,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's 102 Dalmatians - Puppies to the Rescue (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1074,7 +1658,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's Dinosaur (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/Disneys_Dinosaur_2000_E-Fr/Disneys_Dinosaur_2000_E-Fr.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1083,7 +1680,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's Donald Duck - Goin' Quackers (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's Donald Duck - Quack Attack (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1092,7 +1702,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Buzz Lightyear of Star Command (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1100,7 +1717,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Story 2 - Buzz Lightyear to the Rescue! (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1205,7 +1829,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dragon Riders - Chronicles of Pern (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1213,7 +1844,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Draconus - Cult of the Wyrm (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dragon's Blood (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1291,7 +1935,14 @@
   },
   "Dreamcast Express Vol. 2": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/56/DreamcastExpressV2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1540,7 +2191,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ducati World Racing Challenge (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -1554,7 +2212,14 @@
   },
   "Dux Version 1.5": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/DUX (Europe).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1562,7 +2227,26 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dynamite Cop! (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dynamite Cop! (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/2b/Dynamite_Deka_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1571,7 +2255,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/ECW Anarchy Rulz (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -1580,7 +2271,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/1/1b/ECWDCUSManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -1588,7 +2286,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/ESPN International Track & Field (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -1597,7 +2302,14 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/ESPN NBA 2Night (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1607,7 +2319,20 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ecco the Dolphin - Defender of the Future (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ecco the Dolphin - Defender of the Future (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1649,7 +2374,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/7b/EldoradoGateVol3_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1689,7 +2421,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/EGG - Elemental Gimmick Gear (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/4d/Elemental_Gimmick_Gear_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1770,7 +2515,20 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evil Dead - Hail to the King (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evil Dead - Hail to the King (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -1779,7 +2537,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evil Twin - Cyprien's Chronicles (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1787,7 +2552,26 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evolution - The World of Sacred Device (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evolution - The World of Sacred Device (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/35/Evolution_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1795,7 +2579,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evolution 2 - Far Off Promise (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1831,7 +2622,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1841,7 +2639,15 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix II (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -1850,7 +2656,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/F355 Challenge - Passione Rossa (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/F355 Challenge - Passione Rossa (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f6/F355Challenge_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -1866,7 +2691,20 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fatal Fury - Mark of the Wolves (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/45/Garou_Mark_Of_The_Wolves_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -1874,7 +2712,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Feet of Fury (Europe) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1883,7 +2728,14 @@
       "Adventure",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fighting Force 2 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1891,7 +2743,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bd/Fighting_Vipers_2_DC_JP_Manual_23.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1933,7 +2792,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Flag to Flag (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/fc/Flag2FlagDCBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1960,7 +2832,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/96/FloiganBrosDCUSManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1984,7 +2863,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/7b/Frame_Gride_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2001,7 +2887,14 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Razor Freestyle Scooter (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2010,7 +2903,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/59/Frogger2DCUSManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -2018,7 +2918,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fur Fighters (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fur Fighters (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -2083,7 +2996,14 @@
       "Role playing games",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Gauntlet Legends (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -2112,7 +3032,14 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/b/b5/GhostBlade_DC_le_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -2146,7 +3073,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Giga Wing (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/ce/Giga_Wing_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -2154,7 +3094,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/e/ef/GigaWing2_DC_US_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/66/Giga_Wing_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -2162,7 +3115,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/30/Godzilla_Generations_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2178,7 +3138,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/2d/GolemnoMaigo_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2187,7 +3154,14 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d5/Golf_Shiyouyo_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -2215,7 +3189,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/8/88/GTA2_DC_US_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2223,7 +3204,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/9b/GrandiaII_DC_US_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e4/Grandia2DCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2268,7 +3262,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/f/fc/Grinch_DC_US_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -2276,7 +3277,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/9c/Guilty_Gear_X_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2284,7 +3292,27 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/f/f9/Gunbird2_DC_US_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Gunbird 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/60/Gunbird_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2309,7 +3337,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/d/db/GundamSideStory0079_DC_US_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2375,7 +3410,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f7/HappyLesson_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2384,7 +3426,14 @@
       "Compilation",
       "Board game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/25/HappyLesson1st_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -2403,7 +3452,14 @@
       "Adventure",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Headhunter (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2411,7 +3467,26 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Heavy Metal - Geomatrix (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Heavy Metal - Geomatrix (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Heavy_Metal_Geomatrix_2001_J_color_w_pages_3435/Heavy_Metal_Geomatrix_2001_J_color_w_pages_3435.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2466,7 +3541,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/04/Hello_Kitty_no_Waku_Waku_Cookies_DC_Japan_Manual_.PDF"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -2483,7 +3565,20 @@
       "Action",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hidden & Dangerous (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hidden & Dangerous (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -2506,7 +3601,26 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/House of the Dead 2, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/House of the Dead 2, The (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/51/House_Of_The_Dead_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2515,7 +3629,14 @@
       "Casino",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/3/3d/HoyleCasino_DC_US_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -2533,7 +3654,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hydro Thunder (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/Hydro_Thunder_1999_De-Fr-Nl_1L/Hydro_Thunder_1999_De-Fr-Nl_1L.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/44/HydroThunderDCBRManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -2552,7 +3692,14 @@
       "Shoot'em up / Vertical",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Ikaruga_2002_ESP_JP/Ikaruga_2002_ESP_JP.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2561,7 +3708,20 @@
       "Adventure / Survival Horror",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/dreamcast/illbleed.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/2c/Illbleed_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2575,7 +3735,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Incoming (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2585,7 +3752,14 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Industrial Spy - Operation Espionage (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2642,7 +3816,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/d/d9/Irides_-_Master_of_Blocks_(World)_(Unl)_DC_Manual.PDF"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2662,7 +3843,14 @@
       "Simulation",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Iron Aces (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2708,7 +3896,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jeremy Mcgrath Supercross 2000 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -2726,7 +3921,33 @@
       "Action / Adventure",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jet Grind Radio (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jet Set Radio (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/3b/Jet_Set_Radio_DC_JP_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/04/JetGrindRadioDCBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -2735,7 +3956,14 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/4b/JikkyouPowerfulProDC_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2745,7 +3973,14 @@
       "Sports",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jimmy White's 2 - Cueball (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2770,7 +4005,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/JoJo's Bizarre Adventure (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/JoJo's Bizarre Adventure (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bf/Jojo_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2788,7 +4042,14 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/KISS Psycho Circus - The Nightmare Child (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2822,7 +4083,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Kao the Kangaroo (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Kao the Kangaroo (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2890,7 +4164,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f0/King_Of_Fighters_2000_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2898,7 +4179,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/5c/King_Of_Fighters_2001_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2907,7 +4195,14 @@
       "Fight / Versus",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/King_Of_Fighters_2002_The_2003_J_color/King_Of_Fighters_2002_The_2003_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2915,7 +4210,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/King of Fighters Dream Match 1999, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0f/King_Of_Fighters_Dream_Match_1999_DC_JP_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f4/KOF99-DMDCBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -2923,7 +4237,20 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/King of Fighters '99 Evolution, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/82/King_Of_Fighters_99_Evolution_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3004,7 +4331,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/43/Lack_Of_Love_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -3022,7 +4356,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0b/Langrisser_Millenium_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -3030,7 +4371,20 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Last Blade 2 - Heart of the Samurai, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/9e/Gekka_No_Kenshi_Final_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3039,7 +4393,15 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Last Hope - Limited Edition (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3048,7 +4410,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive Le Mans (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -3058,7 +4427,20 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Legacy of Kain - Soul Reaver (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Legacy of Kain - Soul Reaver (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3077,7 +4459,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/7/7a/Looney_Tunes_Space_Race_DC_US_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -3101,7 +4490,20 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MDK 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MDK 2 (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3116,7 +4518,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/c/cc/Metropolis_Street_Racer_DC_US_Manual.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Metropolis Street Racer (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3135,7 +4550,20 @@
       "Sports / Skateboard",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MTV Sports - Skateboarding Featuring Andy McDonald (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MTV Sports - Skateboarding Featuring Andy McDonald (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3152,7 +4580,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Macross_M3_2001_J_color/Macross_M3_2001_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3161,7 +4596,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/MagForce Racing (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -3205,7 +4647,26 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Maken X (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Maken X (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f9/MakenXDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3214,7 +4675,14 @@
       "Asiatic board game",
       "Mahjong"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/d/dd/Maqiupai_(World)_(Unl)_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3273,7 +4741,14 @@
       "Shoot'em up / Vertical",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mars Matrix (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -3281,7 +4756,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel vs. Capcom (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel vs. Capcom (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/12/Marvel_Vs_Capcom_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -3289,7 +4783,27 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel vs. Capcom 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel Vs. Capcom 2 - New Age Of Heroes (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/09/MarvelvsCapcom2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -3298,7 +4812,14 @@
       "Sports / Cycling",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mat Hoffman's Pro BMX (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -3306,7 +4827,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Max Steel (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3315,7 +4843,14 @@
       "Sports",
       "Sports / Pool"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Maximum Pool (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3392,7 +4927,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Midway's Greatest Arcade Hits Volume 1 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3400,7 +4942,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Midway's Greatest Arcade Hits Volume 2 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3416,7 +4965,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Expendable (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3501,7 +5057,28 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mortal Kombat Gold (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/4/49/Mortal_Kombat_Gold_DC_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mortal Kombat Gold (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3519,7 +5096,20 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mr. Driller (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/83/MrDriller_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3529,7 +5119,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ms. Pac-Man Maze Madness (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3564,7 +5161,23 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3573,7 +5186,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K1 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3582,7 +5202,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Sega_Sports_NBA_2K2_2001_Sega_US/Sega_Sports_NBA_2K2_2001_Sega_US.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -3591,7 +5218,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Hoopz (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -3600,7 +5234,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Showtime - NBA on NBC (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -3609,7 +5250,14 @@
       "Sports",
       "Sports / Football"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NCAA College Football 2K2 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3618,7 +5266,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -3627,7 +5282,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K1 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3636,7 +5298,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K2 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -3645,7 +5314,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Blitz 2000 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -3654,7 +5330,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Blitz 2001 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -3663,7 +5346,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL QB Club 2001 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.25
   },
@@ -3672,7 +5362,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Quarterback Club 2000 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -3681,7 +5378,14 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -3690,7 +5394,14 @@
       "Sports",
       "Sports / Hockey"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K2 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3708,7 +5419,14 @@
       "Compilation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Namco Museum (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3744,7 +5462,14 @@
       "Casino",
       "Casino / Slot machine"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/fe/Neppachi_dc_jp_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3894,7 +5619,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Next Tetris - On-line Edition, The (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3903,7 +5635,14 @@
       "Adventure / Survival Horror",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/3/3e/NightmareCreaturesII_DC_US_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3946,7 +5685,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/aa/NobunaganoYabouSwithP_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -3955,13 +5701,33 @@
       "Adventure",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Omikron - The Nomad Soul (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Nomad Soul, The (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
   "O-to-i-re - Dreamcast Sequencer": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/O\u00b7TO\u00b7I\u00b7RE - Dreamcast Sequencer (Japan).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4040,7 +5806,14 @@
       "Adventure",
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ooga Booga (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -4087,7 +5860,20 @@
       "Shooter",
       "Shooter / 3rd person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Outtrigger (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Outtrigger (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4096,7 +5882,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/POD - Speedzone (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/POD 2 - Multiplayer Online (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -4158,7 +5957,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Pen Pen TriIcelon (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/65/Pen_Pen_Triicelon_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -4166,7 +5978,26 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f3/PSO-DCBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -4174,7 +6005,26 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online Ver. 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Phantasy Star Online Ver. 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a4/PSOV2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -4223,7 +6073,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Planet Ring (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4231,7 +6088,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Plasma Sword - Nightmare of Bilstein (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Plasma Sword - Nightmare of Bilstein (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4298,7 +6174,27 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/07/Power_Stone_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -4306,7 +6202,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Power Stone 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/31/Power_Stone_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4316,7 +6231,14 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Prince of Persia - Arabian Nights (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4392,7 +6314,14 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c5/Pro_Yakyu_Team_Asobou_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4432,7 +6361,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Project_Justice_2001_U/Project_Justice_2001_U.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4440,7 +6376,20 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Psychic Force 2012 (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Psychic_Force_2012_1999_J_color_w_back_cover/Psychic_Force_2012_1999_J_color_w_back_cover.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4449,7 +6398,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1c/Psyvariar_2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4458,7 +6414,14 @@
       "Music and Dance",
       "Rhythm"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8a/PuyoPuyoDa_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4474,7 +6437,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a2/Puyo_Puyon_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4483,7 +6453,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Q-Bert (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -4492,7 +6469,26 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Quake III Arena (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Quake III Arena (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bd/Q3DCBRManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -4523,7 +6519,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Monaco Grand Prix (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Monaco Grand Prix - Racing Simulation 2 (France).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.25
   },
@@ -4533,7 +6542,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f2/Radirgy_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4542,7 +6558,14 @@
       "Strategy",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Railroad Tycoon II - Gold Edition (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4551,7 +6574,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/ed/Rainbow_Cotton_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4559,7 +6589,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rayman 2 - The Great Escape (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rayman 2 - The Great Escape (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -4568,7 +6611,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Re-Volt_1999_U/Re-Volt_1999_U.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Re-Volt (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4577,7 +6633,20 @@
       "Sports",
       "Sports / Boxing"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/9e/Ready2RDCBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -4586,7 +6655,20 @@
       "Sports",
       "Sports / Boxing"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing - Round 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing - Round 2 (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -4603,7 +6685,32 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Record of Lodoss War (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Record of Lodoss War (Europe).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Record of Lodoss War (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e5/Lodoss_War_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4615,7 +6722,14 @@
       "3rd person",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Red Dog - Superior Firepower (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4633,7 +6747,14 @@
       "Fishing",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Reel Fishing - Wild (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4649,7 +6770,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/ab/RentAHeroNo1_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4658,7 +6786,20 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil Code - Veronica (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Biohazard_Code_Veronica_2001_Capcom_JP/Biohazard_Code_Veronica_2001_Capcom_JP.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -4667,7 +6808,26 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 2 (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/78/ResidentEvil2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4676,7 +6836,27 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (Europe).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4693,7 +6873,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rez (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a4/Rez_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -4702,7 +6895,14 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ring - Terror's Realm, The (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -4711,7 +6911,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Roadsters (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -4761,7 +6968,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/fc/Rune_Jade_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4779,7 +6993,14 @@
       "Role playing games",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Segaga (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -4790,7 +7011,14 @@
       "Simulation",
       "Build And Management"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Soccer_Tsuku_Tokudaigou_J.League_Pro_Soccer_Club_O_Tsukurou_2000_J_color/Soccer_Tsuku_Tokudaigou_J.League_Pro_Soccer_Club_O_Tsukurou_2000_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4838,7 +7066,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/00/Sakura_Taisen_2_LE_DC_JP_Manual.jpg"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4858,7 +7093,14 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Sakura_Taisen_3_Paris_Wa_Moeteiru_Ka_2001_J_color/Sakura_Taisen_3_Paris_Wa_Moeteiru_Ka_2001_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -4937,7 +7179,20 @@
       "Rhythm",
       "Music and Dance"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Samba de Amigo (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6b/Samba_De_Amigo_Dreamcast_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4955,7 +7210,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/San Francisco Rush 2049 (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4980,7 +7242,14 @@
       "Simulation",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seaman (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4996,7 +7265,20 @@
       "Fishing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0b/GetBassDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5006,7 +7288,14 @@
       "Fishing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing 2 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -5014,7 +7303,20 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Xtreme Sports (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Extreme Sports (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5023,7 +7325,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega GT (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega GT (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e6/SegaGT_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -5033,7 +7354,14 @@
       "Fishing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Sega_Marine_Fishing_2000_Sega_US/Sega_Marine_Fishing_2000_Sega_US.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -5042,7 +7370,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Rally Championship 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Rally 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e8/SegaRally2_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5050,7 +7397,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Smash Pack Volume 1 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5067,7 +7421,18 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Worldwide Soccer 2000 (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -5143,7 +7508,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seventh Cross Evolution (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -5152,7 +7524,20 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shadow Man (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shadow Man (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5169,7 +7554,26 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/86/Shenmue_DC_JP_Manual_LimitedEdition.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5177,7 +7581,15 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue II (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -5186,7 +7598,14 @@
       "Shoot'em up / Vertical",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Shikigami_No_Shiro_II_2004_J_color/Shikigami_No_Shiro_II_2004_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5252,7 +7671,20 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silent Scope (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silent Scope (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5261,7 +7693,20 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silver (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silver (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5313,7 +7758,26 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Skies of Arcadia (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Skies of Arcadia (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/47/SkiesofArcadia_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5321,7 +7785,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Slave Zero (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -5336,7 +7807,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sno-Cross Championship Racing (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sno-Cross Championship Racing (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5353,7 +7837,26 @@
       "Sports / Skiing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rippin' Riders (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Snow Surfers (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/27/CoolBoardersDCJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -5362,7 +7865,20 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soldier of Fortune (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soldier of Fortune (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5370,7 +7886,29 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Sonic_Adventure_1998_Sega_JP/Sonic_Adventure_1998_Sega_JP.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5378,7 +7916,26 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "http://info.sonicretro.org/images/b/b3/SonicAdventure2_DC_JP_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5386,7 +7943,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure 2 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5394,7 +7958,20 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Shuffle (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "http://info.sonicretro.org/images/5/5d/SonicShuffle_DC_JP_manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -5402,7 +7979,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/fe/Sorcerian_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -5411,7 +7995,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Soukou_No_Kihei_Space_Griffon_1999_J_color/Soukou_No_Kihei_Space_Griffon_1999_J_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -5419,7 +8010,14 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Fighter (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -5427,7 +8025,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Calibur (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Calibur (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f1/Soul_Calibur_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5436,7 +8053,14 @@
       "Board game",
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park - Chef's Luv Shack (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5445,7 +8069,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park Rally (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5453,7 +8084,26 @@
     "genres": [
       "Music and Dance"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Space Channel 5 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Space Channel 5 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/69/Space_Channel_5_Sega_Dreamcast_Japan_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5477,7 +8127,26 @@
       "Action / Adventure",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spawn - In the Demon's Hand (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spawn - In the Demon's Hand (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Spawn_In_The_Demons_Hand_2000_J_color/Spawn_In_The_Demons_Hand_2000_J_color.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -5486,7 +8155,14 @@
       "Shooter",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spec Ops II - Omega Squad (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -5495,7 +8171,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5504,7 +8187,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils Online Racing (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -5512,7 +8202,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spider-Man (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spider-Man (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5521,7 +8224,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spirit of Speed 1937 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -5529,7 +8239,20 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sports Jam (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/3b/SportsJam_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5538,7 +8261,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/a5/StarWarsDemolition_DC_US_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5546,7 +8276,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars Episode I - Jedi Power Battles (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -5555,7 +8292,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars - Episode I Racer (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars - Episode I Racer (France).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5564,7 +8314,20 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Starlancer (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Starlancer (Europe).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -5572,7 +8335,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter Alpha 3 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter Alpha 3 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Street_Fighter_Zero_3_1999_J_color/Street_Fighter_Zero_3_1999_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5580,7 +8362,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - 3rd Strike (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - 3rd Strike (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/bc/StreetFighterIII3rd_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5588,7 +8389,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - Double Impact (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Street Fighter III - Double Impact (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c9/SF3DI_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5606,7 +8426,20 @@
       "Adventure / Point and Click",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Stupid Invaders (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Stupid Invaders (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5615,7 +8448,14 @@
       "Shoot'em up / Horizontal",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/0/09/Sturmwind_(World)_(Unl)_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -5656,7 +8496,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Magnetic Neo (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/d5/SuperMagneticNeo_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5680,7 +8533,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Super_Puzzle_Fighter_II_X_For_Matching_Service_2001_J_color/Super_Puzzle_Fighter_II_X_For_Matching_Service_2001_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5699,7 +8559,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Runabout - San Francisco Edition (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Runabout - San Francisco Edition (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5707,7 +8580,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Super_Street_Fighter_II_X_For_Matching_Service_2000_J_color/Super_Street_Fighter_II_X_For_Matching_Service_2000_J_color.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5717,7 +8597,14 @@
       "Driving",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Surf Rocket Racers (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -5726,7 +8613,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Suzuki_Alstare_Extreme_Racing_1999_U/Suzuki_Alstare_Extreme_Racing_1999_U.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Suzuki Alstare Extreme Racing (France).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/24/RedlineRacer_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -5744,7 +8650,14 @@
       "Beat'em Up",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sword of the Berserk - Guts' Rage (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5753,7 +8666,14 @@
       "Sports",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sydney 2000 (USA).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.3
   },
@@ -5814,7 +8734,20 @@
       "Fight",
       "Fight / 3D"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tech Romancer (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tech Romancer (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5823,7 +8756,20 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tee Off (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tee Off (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5849,7 +8795,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive 6 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -5865,7 +8818,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Time Stalkers (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/50/ClimaxLandersDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -5874,7 +8840,14 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6e/SuperHeroRetsudenDCJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -5882,7 +8855,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/13/Tokyobusguide_dc_jp_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5899,7 +8879,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5908,7 +8901,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer 2 (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5919,7 +8925,20 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six - Rogue Spear (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six - Rogue Spear (France).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -5930,7 +8949,14 @@
       "Shooter / 1st person",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5938,7 +8964,32 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - The Last Revelation (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - The Last Revelation (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/35/Tomb_Raider_IV_The_Last_Revelation_DC_JP_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/02/TombRiderLRDCBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5948,7 +8999,14 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - Chronicles (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -5957,7 +9015,14 @@
       "Sports",
       "Sports / Skateboard"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater 2 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5966,7 +9031,14 @@
       "Sports / Skateboard",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -5975,7 +9047,20 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Commander (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Commander (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -5984,7 +9069,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Racer (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6002,7 +9094,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Trickstyle (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -6027,7 +9126,14 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/27/Trigger_Heart_Exelica_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -6036,7 +9142,14 @@
       "Shoot'em up / Vertical",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8d/Trizeal_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -6061,7 +9174,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/3b/Twinkle_Star_Sprites_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -6071,7 +9191,14 @@
       "Adventure / Visual Novel",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/52/TypingOfTheDateDCJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6081,7 +9208,20 @@
       "Lightgun Shooter",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Typing of the Dead, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/87/Typing_Of_The_Dead_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6090,7 +9230,14 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/UEFA Dream Soccer (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6099,7 +9246,20 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Striker Pro 2000 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/UEFA Striker (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -6108,7 +9268,26 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ultimate Fighting Championship (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ultimate Fighting Championship (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1e/UltimateFighting_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6118,7 +9297,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Under_Defeat_2006_J_color_w_back_cover/Under_Defeat_2006_J_color_w_back_cover.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -6137,7 +9323,26 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Unreal Tournament (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Unreal Tournament (France).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/23/UnrealTDCBRManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6146,7 +9351,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Urban Chaos (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6164,7 +9376,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive V-Rally (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/V-Rally 2 - Expert Edition (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -6172,7 +9397,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f8/Vampire_Chronicle_DC_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -6181,7 +9413,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vanishing Point (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6200,7 +9439,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vigilante 8 - 2nd Offense (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6209,7 +9455,20 @@
       "Sports",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Athlete 2000 (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Athlete 2K (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6226,7 +9485,20 @@
       "Fight / 3D",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Fighter 3tb (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/28/Vf3_dc_jp_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -6247,7 +9519,20 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Striker 2 (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a2/Virtuastriker2_dc_jp_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6256,7 +9541,14 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Tennis (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -6265,7 +9557,14 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Tennis_2K2_2001_U_color/Tennis_2K2_2001_U_color.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -6279,7 +9578,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Volgarr_The_Viking_2015_U_color/Volgarr_The_Viking_2015_U_color.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6289,7 +9595,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/WWF Attitude (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -6299,7 +9612,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/WWF Royal Rumble (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6308,7 +9628,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/af/WackyRaces_DC_US_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -6317,7 +9644,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/b/b3/WDWQMRT_DC_US_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -6365,7 +9699,20 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wetrix+ (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wetrix+ (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6389,7 +9736,14 @@
     "genres": [
       "Quiz"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Who Wants to Beat up a Millionaire (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6397,7 +9751,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wild Metal (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wild Metal (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -6414,7 +9781,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en",
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/37/Wind_and_Water_-_Puzzle_Battles_(World)_(Unl)_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -6460,7 +9835,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K1 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -6469,7 +9851,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K2 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6478,7 +9867,20 @@
       "Simulation",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms Armageddon (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms Armageddon (France).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -6487,7 +9889,20 @@
       "Simulation",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms World Party (USA).pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms World Party (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -6558,7 +9973,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/43/Zero_Gunner_2_(Japan)_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -6566,7 +9988,20 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGADreamcastManuals_201812/Zombie Revenge (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e9/Zombierevenge_dc_jp_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },

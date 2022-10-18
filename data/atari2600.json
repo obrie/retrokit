@@ -26,7 +26,24 @@
       "Strategy",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/3dtictactoe.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/3-d-tic-tac-toe-atari-2600-eur-m-5/3-D Tic-Tac-Toe (Atari 2600)(EUR)[M5].pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -43,7 +60,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/32-in-1-atari-2600-us/32 in1 (Atari 2600)(US).pdf"
+      }
+    ],
     "players": 3,
     "rating": 0.4
   },
@@ -52,7 +76,16 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Acid Drop (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -60,7 +93,25 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/G.I. Joe - Cobra Strike (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/action-man-action-force-atari-2600-eur-m-6-images/Action Man - Action Force (Atari 2600)(EUR)[M6].pdf"
+      }
+    ],
     "players": 3,
     "rating": null
   },
@@ -68,7 +119,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/actionauts_repro.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -76,7 +134,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/decathlon.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -84,7 +149,24 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/adventure.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/adventure-atari-2600-eur-m-5/Adventure (Atari 2600)(EUR)[M5].pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -92,7 +174,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/adv_tron.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -114,7 +203,14 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Air Raiders (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -123,7 +219,24 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Air-Sea Battle (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/air-sea-battle-atari-2600-eur-m-5/Air-Sea Battle (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -132,7 +245,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Airlock (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -141,7 +261,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/alien.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -149,7 +276,19 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Alien's Return (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -165,7 +304,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/alpha_beam.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -173,7 +319,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/amidar.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/amidar-atari-2600-eur-m-5/Amidar (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -202,7 +366,14 @@
       "3rd person",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/armor_ambush.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -210,7 +381,25 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Artillery_Duel_1983_Xonox/Artillery_Duel_1983_Xonox.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/artillery-duel-double-ender-atari-2600-eur-m-6/Artillery Duel (Double-Ender)(Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -219,7 +408,24 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/asteroids.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/asteroids-atari-2600-eur-m-5/Asteroids (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -227,7 +433,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Astroblast (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -236,7 +449,14 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/atlantis-day.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -244,7 +464,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Atlantis II (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -260,7 +487,24 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/basic_programming.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/basic-programming-atari-2600-eur-m-5/BASIC Programming (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -269,7 +513,14 @@
       "Sports / Cycling",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/BMX Air Master (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -277,7 +528,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/bachelor.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.25
   },
@@ -286,7 +544,14 @@
       "Action",
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bachelorette Party (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -295,7 +560,27 @@
       "Board game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-7"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/backgammon.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/backgammon-atari-eur-m-5/Backgammon (Atari)(EUR)(M5)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -306,7 +591,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bank Heist (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -314,7 +606,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Barnstorming (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/barnstorming-eur-atari-2600-m-5/Barnstorming (EUR)(Atari 2600)(M5).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -322,7 +631,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/base_attack.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -330,7 +646,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Basic Math (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -339,7 +662,24 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/basketball.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/basketball-eur-atari-2600-m-5/Basketball (EUR)(Atari 2600)(M5).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -351,7 +691,24 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/battlezone.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Battlezone (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -360,7 +717,25 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/beamrider.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/beamrider-atari-2600-eur-m-6/Beamrider (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -368,7 +743,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/beany_bopper.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -376,7 +758,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Beat 'Em & Eat 'Em (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -384,7 +773,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Berenstain Bears (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -392,7 +788,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bermuda Triangle (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -401,7 +804,24 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/berzerk.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/berzerk-atari-2600-eur-m-5/Berzerk (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -409,7 +829,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/bigbird.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -433,7 +860,14 @@
       "Casino / Cards",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Blackjack (USA).pdf"
+      }
+    ],
     "players": 3,
     "rating": 0.35
   },
@@ -441,7 +875,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Blueprint (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -449,7 +890,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bobby Is Going Home (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -465,7 +913,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Boing! (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -480,7 +935,24 @@
       "Sports / Bowling",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bowling (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/bowling-atari-2600-eur-m-5/Bowling (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -488,7 +960,17 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "5-8"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/boxing.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -496,7 +978,27 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-6"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/brain_games.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/brain-games-atari-2600-eur-m-5/Brain Games (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -505,7 +1007,27 @@
       "Action / Breakout games",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-6"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/breakout.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/breakout-atari-2600-eur-m-5/Breakout (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -514,7 +1036,14 @@
       "Playing cards",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bridge (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -523,7 +1052,24 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/buck_rogers.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/buck-rogers-planet-of-zoom-atari-2600-eur-m-5/Buck Rogers - Planet of Zoom (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -531,7 +1077,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bugs (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/bugs-atari-2600-eur-m-6/Bugs (Atari 2600)(EUR)(M6)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -539,7 +1103,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bugs Bunny (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -549,7 +1120,14 @@
       "Driving",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bump 'n' Jump (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -558,7 +1136,14 @@
       "Pinball",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Bumper Bash (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -567,7 +1152,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/BurgerTime (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -575,7 +1167,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Burning Desire (Australia).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -583,7 +1182,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/cpk_adventures_park.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -591,7 +1197,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cakewalk (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -600,7 +1213,14 @@
       "Sports",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/California Games (USA).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.6
   },
@@ -608,7 +1228,17 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "9-12"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/canyon_bomber.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -624,7 +1254,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Carnival (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/carnival-atari-2600-deu-m-6/Carnival (Atari 2600)(DEU)[M6]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -634,7 +1282,17 @@
       "Casino / Cards",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-6"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/casino.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.3
   },
@@ -643,7 +1301,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cat Trax (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -651,7 +1316,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cathouse Blues (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -659,7 +1331,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/centipede.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/centipede-atari-2600-eur-m-5/Centipede (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -668,7 +1357,14 @@
       "Action",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Challenge of.... Nexar, The (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -677,7 +1373,14 @@
       "Sports",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Championship Soccer (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -685,7 +1388,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Chase the Chuckwagon (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -694,7 +1404,14 @@
       "Strategy",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/checkers.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -702,7 +1419,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/China Syndrome (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/china-syndrome-atari-2600-eur-m-5/China Syndrome (Atari 2600)(EUR)[M5]]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -711,7 +1445,24 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/choppercommandgamemanualatari26001982/Chopper Command game manual Atari 2600 (1982).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/chopper-command-atari-2600-eur-m-5/Chopper Command (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -719,7 +1470,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Chuck Norris Superkicks (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -727,7 +1485,24 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/circus_atari.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/circus-atari-atari-2600-eur-m-5/Circus Atari (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -735,7 +1510,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Coco Nuts (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -744,13 +1526,37 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/codebreaker.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/codebreaker-atari-2600-eur-m-5/Codebreaker (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
   "Color Bar Generator": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/color_bar_generator.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -764,7 +1570,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/combat.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/combat-atari-2600-eur-m-5/Combat (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -772,7 +1595,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Combat Two (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -780,7 +1610,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Commando (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -789,7 +1626,14 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Commando Raid (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -797,7 +1641,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Communist Mutants from Space (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -815,7 +1666,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/condor_attack.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -823,7 +1681,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Confrontation (USA) (Proto).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -832,7 +1697,24 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Congo Bongo (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/congo-bongo-atari-2600-eur-m-5/Congo Bongo (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -840,7 +1722,24 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/cookie_monster.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cookie Monster Munch (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -849,7 +1748,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/cosmic_ark.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -857,7 +1763,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cosmic Commuter (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -865,7 +1778,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cosmic Creeps (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -874,7 +1794,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cosmic Swarm (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -883,7 +1810,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Crack'ed (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -892,7 +1826,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/crackpots.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -900,7 +1841,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Crash Dive (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/crash-dive-atari-2600-eur-m-5/Crash Dive (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -908,7 +1866,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/crazy_climber.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -916,7 +1881,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Cross Force (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/cross-force-atari-2600-eur-m-5/Cross Force (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -924,7 +1906,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/crossbow.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -933,7 +1922,14 @@
       "Action / Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Crypts of Chaos (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -941,7 +1937,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/crystal_castles.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/crystal-castles-atari-2600-eur-m6/Crystal Castles (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -949,7 +1963,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/cubicolor.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -958,7 +1979,14 @@
       "Action",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Custer's Revenge (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -967,7 +1995,21 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dishaster.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Dancing Plate (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -975,7 +2017,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Dark Cavern (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -984,7 +2033,14 @@
       "Action / Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dark_chambers.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -994,7 +2050,14 @@
       "Shooter / Vertical",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Deadly Duck (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1002,7 +2065,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/death_trap.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1012,7 +2082,36 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Defender (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/defender-atari-2600-eur-m-5/Defender (Atari 2600)(EUR)[M5]_images.zip"
+      },
+      {
+        "languages": [
+          "nl"
+        ],
+        "url": "https://archive.org/download/defender-atari-2600-nl/Defender (Atari 2600)(NL)_images.zip"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/defender-atari-2600-br/Defender (Atari 2600)(BR)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1020,7 +2119,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Demolition Herby (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -1030,7 +2136,14 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Demon Attack (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1042,7 +2155,30 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/demons_diamonds.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/demons-to-diamonds-atari-2600-eur-m-5/Demons to Diamonds (Atari 2600)(EUR)[M5]_images.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/demons-to-diamonds-atari-2800-jp/\u30c7\u30a3\u30e2\u30f3\uff08\u5c0f\u9b3c\uff09\u304b\u3089\u30c0\u30a4\u30e4\u30e2\u30f3\u30c9 (Demons to Diamonds) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1051,7 +2187,14 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/depth_charge.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1059,7 +2202,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/desert_falcon.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1067,7 +2217,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Dice Puzzle (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1075,7 +2232,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dig_dug.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/dig-dug-atari-2600-eur-m5/Dig Dug (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1093,7 +2267,24 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dodge_em.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/dodge-em-atari-2600-eur-m-5/Dodge 'Em (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1101,7 +2292,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dolphin.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1118,7 +2316,25 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/donkey_kong-atari.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/donkey-kong-atari-2600-eur-m-6/Donkey Kong (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1127,7 +2343,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Donkey Kong Junior (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -1136,7 +2359,14 @@
       "Beat'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Double Dragon (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1145,7 +2375,14 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/double_dunk.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1161,7 +2398,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dragonfire.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1169,7 +2413,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Dragonstomper (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1178,7 +2429,24 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/dragster.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/dragster-atari-2600-eur-m-5/Dragster (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1213,7 +2481,30 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/E.T._The_Extra-Terrestrial_1982_Atari/E.T._The_Extra-Terrestrial_1982_Atari.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/e.-t.-the-extra-terrestrial-atari-2600-eur-m-5/E.T. the Extra-Terrestrial (Atari 2600)(EUR)[M5]_images.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/e.-t.-the-extra-terrestrial-atari-2800-jp/E.T. the Extra-Terrestrial (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -1223,7 +2514,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Earth Dies Screaming, The (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1231,7 +2529,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Eggomania (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -1239,7 +2544,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/elevator_action.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1253,7 +2565,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/elis_ladder.txt"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1261,7 +2580,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/elk_attack.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1271,7 +2597,14 @@
       "Shooter / Vertical",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Encounter at L-5 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1280,7 +2613,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/enduro.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1288,7 +2628,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Entity, The (USA) (Proto).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1297,7 +2644,14 @@
       "Strategy",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/entombed.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1305,7 +2659,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Escape from the Mindmaster (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1315,7 +2676,14 @@
       "Shooter / Vertical",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Espial (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1331,7 +2699,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Fantastic Voyage (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1348,7 +2723,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Fast Eddie (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1356,7 +2738,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/fast_food.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -1365,7 +2754,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/fatal_run.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1373,7 +2769,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Fathom (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/fathom-atari-2600-eur-m-6/Fathom (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1381,7 +2795,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Final Approach (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -1389,7 +2810,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/fire_fighter.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/fire-fighter-atari-2600l-eur-m-5/Fire Fighter (Atari 2600l)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1397,7 +2835,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Fire Fly (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -1413,7 +2858,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Fireball (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -1421,7 +2873,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Fishing_Derby_1980_Activision/Fishing_Derby_1980_Activision.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1429,7 +2888,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/flag_capture.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1439,7 +2905,14 @@
       "Shooter / Horizontal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Flash Gordon (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1448,7 +2921,20 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/football.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/football-atari-2600-fr/Football (Atari 2600)(FR)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -1456,7 +2942,15 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Forest (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1465,7 +2959,25 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Frankenstein's Monster (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "da",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/frankensteins-monster-atari-2600-eur-m-6/Frankenstein's Monster (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1473,7 +2985,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Freeway (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1495,7 +3014,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/frog_pond.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1503,7 +3029,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/frogger.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/frogger-atari-2600-eur-m-6/Frogger (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1512,7 +3056,21 @@
       "Action",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Frogger II - Threeedeep! (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/frogger-ii-threeedeep-atari-2600-eur-m-2/Frogger II - Threeedeep! (Atari 2600)(EUR)[M2]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1520,7 +3078,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Frogs and Flies (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1528,7 +3093,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/front_line.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1536,7 +3108,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/frostbite.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1544,7 +3123,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Funky Fish (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1553,7 +3139,20 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/galaxian.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/galaxian-atari-2800-jp/\u30ae\u30e3\u30e9\u30af\u30b7\u30a2\u30f3 (Galaxian) (Atari 2800)(JP).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1561,7 +3160,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/gamma-attack.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1569,7 +3175,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gangster Alley (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/gangster-alley-atari-2600-eur-m-5/Gangster Alley (Atari 2600)(EUR)[M5]_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -1587,7 +3210,14 @@
       "Shooter / Horizontal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gas Hog (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1596,7 +3226,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gauntlet (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1604,7 +3241,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/ghost_manor.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/ghost-manor-spikes-peak-atari-2600eurm6/Ghost Manor (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1612,7 +3267,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Ghostbusters (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1620,7 +3282,16 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Ghostbusters II (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -1628,7 +3299,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gigolo (USA).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1636,7 +3314,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Glacier Patrol (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1645,7 +3330,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Glib - Video Word Game (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1660,13 +3352,43 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/golf.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/golf-atari-2600-eur-m-5/Golf (Atari 2600)(EUR)[M5]_images.zip"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/golf-atari-2800-jp/\u30b4\u30eb\u30d5 (Golf) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
   "Good Luck, Charlie Brown": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/good_luck_charlie_brown.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1674,7 +3396,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gopher (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1682,7 +3411,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gorf (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/gorf-atari-2600-eur-m-6/Gorf (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1691,7 +3438,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/grand_prix.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1700,7 +3454,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/gravitar.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1710,7 +3471,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals - Atari 2600/USA/Great Escape (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -1718,7 +3486,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/gremlins.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1734,7 +3509,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/guardian.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1743,7 +3525,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Gyruss (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1751,7 +3540,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/hero.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/H.E.R.O. (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1759,7 +3565,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Halloween (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1767,7 +3580,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/hangman.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1789,7 +3609,20 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/haunted_house.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/haunted-house-atari-2800-jp/\u30db\u30fc\u30f3\u30c6\u30a3\u30c9\u30fb\u30cf\u30a6\u30b9 (Haunted House) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1805,7 +3638,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Holey Moley (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1814,7 +3654,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/home_run.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -1822,7 +3669,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/humancannonballgamemanualatari26001979/Human Cannonball game manual Atari 2600 (1979).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1830,7 +3684,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/hunt_score.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -1841,7 +3702,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/I_Want_My_Mommy_1983_ZiMAG_US/I_Want_My_Mommy_1983_ZiMAG_US.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1865,7 +3733,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/iq180.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1874,7 +3749,14 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/ice_hockey.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1882,7 +3764,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/ikari_warriors.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1899,7 +3788,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/indy_500.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1908,7 +3804,14 @@
       "Platform",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/infiltrate.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1918,7 +3821,14 @@
       "Sports / Soccer",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/International Soccer (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1934,7 +3844,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/James Bond 007 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1942,7 +3859,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Jawbreaker (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1950,7 +3874,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Journey Escape (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1958,7 +3889,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/joust.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/joust-atari-2800-jp/\u98db\u3073\u9ce5\u6226\u58eb (Joust) (Atari 2800)(JP).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1967,7 +3911,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/jr_pac-man.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1975,7 +3926,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Jungle Fever (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -1984,7 +3942,20 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/jungle_hunt.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/jungle-hunt-atari-2800-jp/\u30b8\u30e3\u30f3\u30b0\u30eb\u30cf\u30f3\u30c8 (Jungle Hunt) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1992,7 +3963,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Kabobber (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2000,7 +3978,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/kaboom.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2016,7 +4001,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/kangaroo.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2025,7 +4017,14 @@
       "Sports",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Karate (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -2033,7 +4032,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/keystone_kapers.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2047,7 +4053,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Killer Satellites (USA).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2055,7 +4068,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/king_kong.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2064,7 +4084,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/klax.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2080,7 +4107,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Kool-Aid Man (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -2088,7 +4122,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/krull.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2096,7 +4137,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Kung-Fu Master (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2112,7 +4160,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Lady in Wading (USA).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2120,7 +4175,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/laser_blast.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2128,7 +4190,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Laser Gates (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2136,7 +4205,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/lasercade.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2153,7 +4229,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Lochjaw (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.15
   },
@@ -2161,7 +4244,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/lockn_chase.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2169,7 +4259,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/London Blitz (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2177,7 +4274,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/looping.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2185,7 +4289,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/lord_rings_fellowship.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2193,7 +4304,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Lost Luggage (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2201,7 +4319,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/M.A.D. (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2210,13 +4335,27 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/mash.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
   "MagiCard": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/MagiCard (USA).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2224,7 +4363,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Malagai (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2232,7 +4378,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mangia' (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2241,7 +4394,14 @@
       "Action",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Marauder (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2249,7 +4409,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Marine Wars (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2258,7 +4425,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/mario_bros.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2266,7 +4440,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Master Builder (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2274,7 +4455,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Masters of the Universe - The Power of He-Man (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2283,7 +4471,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/math_gran_prix.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/math-gran-prix-2800-jp/\u7b97\u6570\u30b0\u30e9\u30f3\u30d7\u30ea (Math Gran Prix) 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2291,7 +4492,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/maze_craze.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2305,7 +4513,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/mcdonalds.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2313,7 +4528,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mega Force (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2329,7 +4551,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/megamania.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2337,7 +4566,15 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Challenge (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2345,7 +4582,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Meltdown (USA) (Proto).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2353,7 +4597,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/midnight_magic.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2362,7 +4613,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/millipede.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2378,7 +4636,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Miner 2049er - Starring Bounty Bob (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2386,7 +4651,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Miner 2049er Volume II (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2394,7 +4666,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mines of Minos (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2403,7 +4682,14 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/miniature_golf.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -2419,7 +4705,23 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-6"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/missile_command.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/missile-command-atari-2800-jp/\u30df\u30b5\u30a4\u30eb\u7dcf\u53f8\u4ee4\u90e8 (Missile Command) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2427,7 +4729,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Missile Control (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2444,7 +4753,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mission 3,000 A.D. (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -2460,7 +4776,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/mogul_maniac.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2474,7 +4797,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Montezuma's Revenge - Featuring Panama Joe (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2482,7 +4812,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/moon_patrol.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2491,7 +4828,14 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Moonsweeper (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2509,7 +4853,14 @@
       "Driving",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/motorodeo.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2527,7 +4878,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Motocross Racer (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2535,7 +4893,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/mountainkinggamemanualatari26001983/Mountain King game manual Atari 2600 (1983).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2543,7 +4908,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Mouse_Trap_1982_Coleco/Mouse_Trap_1982_Coleco.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2551,7 +4923,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mr. Do! (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2559,7 +4938,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mr. Do!'s Castle (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2568,7 +4954,15 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Mr. Postman (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2577,7 +4971,17 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-12"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/ms_pac-man.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2585,7 +4989,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Music Machine, The (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2594,7 +5005,14 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/My Golf (Australia).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2612,7 +5030,14 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Name This Game (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -2622,7 +5047,23 @@
       "Driving",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-4"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/night_driver.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/night-driver-atari-2800-jp/\u30ca\u30a4\u30c8\u30fb\u30c9\u30e9\u30a4\u30d0\u30fc (Night Driver) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2630,7 +5071,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/No Escape! (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2638,7 +5086,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/nuts.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2646,7 +5101,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Obelix (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2654,7 +5116,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/off_your_rocker.txt"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -2662,7 +5131,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/off_the_wall.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2670,7 +5146,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/frogger-starpath.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -2678,7 +5161,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/oink.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2686,7 +5176,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Omega Race (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2697,7 +5194,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Open Sesame (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2706,7 +5210,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/oscars_trash_race.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2715,7 +5226,14 @@
       "Board game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/othello.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2724,7 +5242,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Out of Control (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2732,7 +5257,17 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "options": {
+          "pages": "1-4"
+        },
+        "url": "http://www.digitpress.com/library/manuals/atari2600/outlaw.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -2741,7 +5276,20 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pac-man.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pac-man-atari-2800-jp/\u30d1\u30c3\u30af\u30de\u30f3 (Pac-Man) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2766,7 +5314,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Party Mix (USA).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -2782,7 +5337,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pengo.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2791,7 +5353,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pete_rose_baseball.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2807,7 +5376,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/agm_Pharaohs_curse/Pharaohs_curse.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2815,7 +5391,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Phaser Patrol (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2823,7 +5406,30 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/phoenix.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Phoenix (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/phoenix-atari-2800-jp/\u30d5\u30a7\u30cb\u30c3\u30af\u30b9 (Phoenix) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2832,7 +5438,14 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pick_n_pile.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2840,7 +5453,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Pick Up (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2848,7 +5468,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Picnic (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -2856,7 +5483,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Piece o' Cake (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2864,7 +5498,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pigs_in_space.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2874,7 +5515,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pitfall2_diary.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2883,7 +5531,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pitfall.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2891,7 +5546,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pizza_chef.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2899,7 +5561,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Planet Patrol (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2915,7 +5584,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/plaque_attack.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2924,7 +5600,14 @@
       "Action",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Pleiades (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2932,7 +5615,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Polaris (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2941,7 +5631,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/pole_position.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2949,7 +5646,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Polo (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2964,7 +5668,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Pooyan (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2972,7 +5683,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Popeye (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2981,7 +5699,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Porky's (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -2995,7 +5720,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Pressure Cooker (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -3003,13 +5735,27 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Private Eye (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
   "Pursuit of the Pink Panther": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/pursuit_pink_panther.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3025,7 +5771,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/q-bert-atari2600-hiresscans/Q-Bert - Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3034,7 +5787,14 @@
       "Action",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Q-bert's Qubes (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3042,7 +5802,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Quadrun (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3050,7 +5817,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/quintana_roo.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3058,7 +5832,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Quick Step! (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3066,13 +5847,27 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Rabbit Transit (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
   "Racer": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/racer.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3089,7 +5884,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/raquetball.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3097,7 +5899,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Exocet (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -3105,7 +5914,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/radar_lock.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3113,7 +5929,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Raft Rider (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3121,7 +5944,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rotla.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3129,7 +5959,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Ram It (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3137,7 +5974,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Rampage! (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3154,7 +5998,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/reactor.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3163,7 +6014,20 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_baseball.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/real-sports-baseball-atari-2800-jp/\u30ea\u30a2\u30eb\u30b9\u30dd\u30fc\u30c4 \u30d9\u30fc\u30b9\u30dc\u30fc\u30eb (RealSports Baseball) (Atari 2800)(JP).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3171,7 +6035,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_basketball.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3179,7 +6050,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_boxing.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3187,7 +6065,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/RealsportsFootballAtari2600HiReScans/RealSports Football - Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3195,7 +6080,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_soccer.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -3203,7 +6095,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_tennis.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3211,7 +6110,20 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rs_volleyball.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/real-sports-volleyball-atari-2800-jp/\u30ea\u30a2\u30eb\u30b9\u30dd\u30fc\u30c4 \u30d0\u30ec\u30fc\u30dc\u30fc\u30eb (RealSports Volleyball) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3219,7 +6131,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/red_sea_crossing_fan-based.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3227,7 +6146,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Rescue Terra I (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3235,7 +6161,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Revenge of the Beefsteak Tomatoes (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3244,7 +6177,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/riddle_sphinx.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3252,7 +6192,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/River Patrol (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3260,7 +6207,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/riverraidgamemanualatari26001982/River Raid game manual Atari 2600 (1982).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3268,7 +6222,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/River Raid II (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -3277,7 +6238,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/road_runner.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -3285,7 +6253,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Robin Hood (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -3293,7 +6268,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/robot_tank.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3301,7 +6283,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/rocn_rope.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3317,7 +6306,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Room of Doom (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3326,7 +6322,14 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Atari Video Cube (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3334,7 +6337,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Rubik's Cube 3-D (USA) (Proto).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3343,7 +6353,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Rush Hour (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3351,7 +6368,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/sac_alert.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3365,7 +6389,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Saboteur (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3381,7 +6412,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/save_our_ship.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3389,7 +6427,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Save the Whales (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3397,7 +6442,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sea Battle (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3406,7 +6458,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Seahawk (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3414,7 +6473,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sea_hunt.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3422,7 +6488,15 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sea Monster (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -3430,7 +6504,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/seaquest.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3438,7 +6519,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Secret Agent (USA) (Proto).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3446,7 +6534,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/secret_quest.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3460,7 +6555,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sentinel.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3469,7 +6571,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Shootin' Gallery (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -3485,7 +6594,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Shuttle Orbiter (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3501,7 +6617,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sir Lancelot (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -3515,7 +6638,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Skate Boardin' (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3523,7 +6653,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Skeet Shoot (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.15
   },
@@ -3548,7 +6685,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Skiing_1980_Activision/Skiing_1980_Activision.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3557,7 +6701,14 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Assault (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3565,7 +6716,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sky_diver.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -3575,7 +6733,14 @@
       "Driving",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sky_jinks.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3591,7 +6756,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sky Skipper (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3601,7 +6773,14 @@
       "Casino / Slot machine",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/slot_machine.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -3609,7 +6788,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/slot_racers.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3617,7 +6803,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/smurf.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3625,7 +6818,14 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Smurfs Save the Day (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3634,7 +6834,14 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sneak 'n Peek (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -3642,7 +6849,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/snoopy.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3651,7 +6865,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Snow White and the Seven Dwarfs (USA) (Proto).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3659,7 +6880,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Solar Fox (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -3667,7 +6895,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Solar Storm (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3675,7 +6910,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/solaris.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3683,7 +6925,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sorcerer (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -3691,7 +6940,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sorcerers_apprentice.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3705,7 +6961,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_attack.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3713,7 +6976,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_cavern.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3726,7 +6996,14 @@
       "Action",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_invaders.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3734,7 +7011,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_jockey.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -3743,7 +7027,14 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_shuttle.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3751,7 +7042,21 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Space Tunnel (Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_tunnel.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3760,7 +7065,14 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/space_war.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -3768,7 +7080,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/SpaceMaster X-7 (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3776,7 +7095,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/spacechase.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3784,7 +7110,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/spider_fighter.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3800,7 +7133,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/spider_man.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3808,7 +7148,25 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/spikes_peak.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/ghost-manor-spikes-peak-atari-2600eurm6/Spike's Peak (Atari 2600)(EUR)[M6]_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -3816,7 +7174,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/spinning_fireball.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3824,7 +7189,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Spitfire Attack (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3832,7 +7204,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Springer (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3841,7 +7220,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sprint_master.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3851,7 +7237,14 @@
       "Driving",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Spy Hunter (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -3859,7 +7252,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Squeeze Box (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3867,7 +7267,15 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Snail Against Squirrel (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3881,7 +7289,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sssnake (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3889,7 +7304,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Stampede (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3897,7 +7319,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Star Fox (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3906,7 +7335,20 @@
       "Strategy",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/star_raiders.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/star-raiders-atari-2800-jp/\u30b9\u30bf\u30fc\u30fb\u30ec\u30fc\u30c0\u30fc\u30ba (Star Raiders) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3914,7 +7356,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/star_ship.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -3922,7 +7371,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Star Strike (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3930,7 +7386,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/star_trek.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3938,7 +7401,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/star_voyager.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3946,7 +7416,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Star Wars - Jedi Arena (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3955,7 +7432,14 @@
       "Action",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/star-wars-return-of-the-jedi-death-star-atari2600-hiresscans/Star Wars - Return of the Jedi Death Star Battle - Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3963,7 +7447,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Star Wars - Return of the Jedi - Ewok Adventure (USA) (Proto).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3972,7 +7463,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Star Wars - The Arcade Game (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3980,7 +7478,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/star_wars_empire.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3988,7 +7493,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/starmaster.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3998,7 +7510,14 @@
       "Shooter / Horizontal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/stargate.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4008,7 +7527,14 @@
       "Shoot'em up / Horizontal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/stargunner.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4017,7 +7543,14 @@
       "Sports",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/steeplechase.pdf"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -4025,7 +7558,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/stellar_track.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4033,7 +7573,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Stone Age (Brazil).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4041,7 +7588,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Strategy X (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -4050,7 +7604,14 @@
       "Strategy",
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Strawberry Shortcake - Musical Match-Ups (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4059,7 +7620,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/street_racer.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4069,7 +7637,14 @@
       "Shoot'em up / Diagonal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Stronghold (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4078,7 +7653,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/stunt_cycle.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4086,7 +7668,21 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/stunt_man.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Nightmare (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -4094,7 +7690,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sub-Scan (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4102,7 +7705,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/submarine_commander.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4111,7 +7721,14 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Subterranea (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -4119,7 +7736,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Suicide Mission (USA).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4127,7 +7751,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Summer Games (USA).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.3
   },
@@ -4136,7 +7767,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/super_baseball.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4146,7 +7784,20 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/super_breakout.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/super-breakout-atari-2800-jp/\u30b9\u30fc\u30d1\u30fc\u30fb\u30d6\u30ec\u30a4\u30af\u30a2\u30a6\u30c8 (Super Breakout) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4155,7 +7806,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Super Challenge Baseball (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4164,7 +7822,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Super Challenge Football (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4172,7 +7837,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/super_cobra.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -4180,7 +7852,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/super_football.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4189,7 +7868,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/superman.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4205,7 +7891,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Surfer's Paradise - But Danger Below! (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4213,7 +7906,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/surround.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -4221,7 +7921,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Survival Island (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4229,7 +7936,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Survival Run (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4245,7 +7959,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Sword of Saros (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4254,7 +7975,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sq_earth.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4263,7 +7991,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sq_fire.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4272,7 +8007,14 @@
       "Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/sq_water.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4280,7 +8022,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Swordfight (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4288,7 +8037,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/tron_deadly_discs.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4296,7 +8052,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tac-Scan (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4310,7 +8073,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/tanks_but_no_tanks.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4318,7 +8088,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/tape_worm.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4326,7 +8103,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tapper (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -4334,7 +8118,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tax Avoiders (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4342,7 +8133,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/taz.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4366,7 +8164,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/tennis.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -4374,7 +8179,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Texas Chainsaw Massacre, The (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -4382,7 +8194,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Threshold (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4390,7 +8209,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/thunderground.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4398,7 +8224,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/thwocker.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4406,7 +8239,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Time Pilot (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4416,7 +8256,15 @@
       "Shooter",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Time Warp (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4424,7 +8272,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Title Match Pro Wrestling (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -4432,7 +8287,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tomarc the Barbarian (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -4440,7 +8302,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tomcat - The F-14 Fighter Simulator (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4448,7 +8317,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tooth Protectors (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4456,7 +8332,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/towering-inferno-atari2600-hiresscans/Towering Inferno - Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4464,7 +8347,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/track_field.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4473,7 +8363,14 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Treasure Below (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4482,7 +8379,14 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/treasure_island.txt"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4491,7 +8395,14 @@
       "Sports / Pool",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Trick Shot (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -4499,13 +8410,27 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Tunnel Runner (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
   "Turbo": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.ataricompendium.com/archives/manuals/vcs/turbo.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4513,7 +8438,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Turmoil_1982_20th_Century_Fox/Turmoil_1982_20th_Century_Fox.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4521,7 +8453,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/tutankham.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4529,7 +8468,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Universal Chaos (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4538,7 +8484,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Up 'n Down (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4546,7 +8499,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Vanguard (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -4554,7 +8514,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Vault Assault (USA) (Unl).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4562,7 +8529,14 @@
     "genres": [
       "Demo"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/venetian_blinds.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4571,7 +8545,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/venture.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4580,7 +8561,14 @@
       "Board game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_checkers.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -4590,7 +8578,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_chess.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4598,7 +8593,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_jogger.txt"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4606,7 +8608,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Video Life (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4614,7 +8623,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_olympics.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -4624,7 +8640,14 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_pinball.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4632,7 +8655,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/video_reflex.txt"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4648,7 +8678,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/wabbit.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -4664,7 +8701,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/wall_ball.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4672,7 +8716,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/wall_break.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -4680,7 +8731,20 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Warlords (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/warlords-atari-2800-jp/\u6226\u3046\u5c06\u8ecd (Warlords) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4688,7 +8752,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Warplock (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4696,7 +8767,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Wing War (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4710,7 +8788,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Winter Games (USA).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.6
   },
@@ -4726,7 +8811,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Wizard of Wor (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -4734,7 +8826,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Word Zapper (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -4758,7 +8857,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Worm War I (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4766,7 +8872,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/xman.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4774,7 +8887,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Xenophobe (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4789,7 +8909,20 @@
       "Shoot'em Up",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/yars_revenge.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/yars-revenge-atari-2800-jp/\u30e4\u30fc\u306e\u5fa9\u8b90 (Yars' Revenge) (Atari 2800)(JP)_images.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4797,7 +8930,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/atari2600/ztack.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -4805,7 +8945,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Atari2600Manuals_201812/Zaxxon (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },

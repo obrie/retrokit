@@ -24,7 +24,14 @@
     "genres": [
       "Playing cards"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/007-QuantumOfSolaceusaenfr.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -46,7 +53,15 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_100_classic.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -411,13 +426,27 @@
   },
   "4 Game Pack! - Battleship + Connect Four + Sorry! + Trouble": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/4GamePack-BattleshipConnectFourSorryTroubleusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
   "4 Game Pack! - Clue + Aggravation + Perfection + Mouse Trap": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/4GamePack-ClueAggravationPerfectionMouseTrapusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -444,7 +473,14 @@
       "Playing cards",
       "Thinking"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Club_House_Games.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -595,7 +631,14 @@
       "Driving",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/ATV Quad Frenzy (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -654,7 +697,14 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Magnetica.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -668,7 +718,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Underground Pool (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -733,7 +790,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Advance_Wars_DoR.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -741,7 +805,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_AdvanceWarsDuelStrike_EN.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -992,7 +1063,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/amazing-adventures-the-forgotten-ruins/Amazing Adventures - The Forgotten Ruins.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1012,7 +1090,14 @@
   },
   "America's Test Kitchen - Let's Get Cooking": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Amer_Test_Kitchen.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1020,7 +1105,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/American Dragon - Jake Long - Attack of the Dark Dragon (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -1044,7 +1136,14 @@
   },
   "An M. Night Shyamalan Film - The Last Airbender": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Avatar-TheLastAirbender-TheBurningEarthusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1106,7 +1205,14 @@
       "Various",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Animal_Crossing_Wild_World.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -1263,7 +1369,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Trace Memory (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1301,7 +1414,16 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/AntNationusaenfres.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1467,7 +1589,15 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Art_Academy.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1520,7 +1650,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Asphalt Urban GT (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1723,7 +1860,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/B-17 - Fortress in the Sky (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -1751,7 +1895,14 @@
   },
   "Baby Pals": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/BabyPalsusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1812,7 +1963,14 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/BackyardBasketballusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1821,7 +1979,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/BackyardFootballusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1829,7 +1994,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/BackyardFootball09usab.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.5
   },
@@ -1838,7 +2010,14 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/BackyardHockeyusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.5
   },
@@ -2179,7 +2358,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Bee Movie Game (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -2435,7 +2621,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Big_Brain_Academy.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2528,7 +2721,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Bionicle Heroes (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -2690,7 +2890,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Bomberman_-_2005_-_Hudson_Soft.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2707,7 +2914,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Bomberman Land Touch (U).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -2985,7 +3199,14 @@
   },
   "Build-a-Lot": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Build-a-lotusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3016,7 +3237,15 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Burnout_Legends_-_2005_-_Electronic_Arts.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3030,7 +3259,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Bust-a-moveDsusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3167,7 +3403,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CallOfDuty-ModernWarfare-Mobilizedusa.pdf"
+      }
+    ],
     "players": 6,
     "rating": 0.75
   },
@@ -3183,7 +3426,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CallOfDuty-WorldAtWarusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -3191,7 +3441,14 @@
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Call of Duty 4 (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3322,7 +3579,14 @@
       "Driving",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Cars2usaenfresndsiEnhancedb.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -3366,7 +3630,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Castlevania - Dawn of Sorrow (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -3383,7 +3654,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Castlevania - Portrait of Ruin (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -3509,7 +3787,14 @@
     "genres": [
       "Playing cards"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Chaotic-ShadowWarriorsusaenfrb.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -3523,7 +3808,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Charlotte-s_Web_-_2006_-_Sega.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3644,7 +3936,14 @@
   },
   "Chicken Little - Ace in Action": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Chicken Little - Ace in Action (U).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3729,7 +4028,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Children of Mana (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3844,7 +4150,21 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/ChroniclesOfMystery-CurseOfTheAncientTempleusaenfresb.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/mystery-quest-curse-of-the-ancient-spirits/Mystery Quest - Curse of the Ancient Spirits.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -3873,7 +4193,14 @@
       "Role playing games",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/ChronoTriggerusaenfr.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4072,13 +4399,27 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualzz-id-740702/740702.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
   "Clueless Fashion": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/clueless-fashion-manual-text-english-r-5/Clueless Fashion Manual Text - English r5.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4245,7 +4586,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/contact-manual-scan-jp-nintendo-ds-ds-nds/Contact (Manual)(Scan)(JP)(Nintendo DS)(DS)(NDS).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4270,7 +4618,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/cookieandcreamds/formats=PNG&file=/cookieandcreamds.zip"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -4292,7 +4647,20 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Personal_Trainer_Cooking.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Personal_Trainer_CookingFR.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4316,7 +4684,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CookingMama3-ShopChopusab.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4438,7 +4813,14 @@
   },
   "Crash - Mind over Mutant": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Crash-MindOverMutantusaenfrdeesitnlb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4446,7 +4828,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CrashBoomBangusa.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.35
   },
@@ -4596,7 +4985,15 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CroodsThe-PrehistoricPartyusaenfres.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4637,7 +5034,14 @@
   },
   "Crystal Mines": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/CrystalMineseuropeenfrdeesit.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -5206,7 +5610,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Touch the Dead (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5287,7 +5698,14 @@
       "Role playing games",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DeepLabyrinthusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5333,7 +5751,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Dementium-TheWardusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5341,7 +5766,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DementiumIiusaenfrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5488,7 +5920,15 @@
       "Driving",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Diddy_Kong_Racing.pdf"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -5586,7 +6026,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Diner_Dash-_Sizzle_-_Serve_-_2007_-_Eidos_Interactive.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -5639,7 +6086,14 @@
       "Simulation",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Disney Friends (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5833,7 +6287,15 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_DK_Jungle_Climber.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -5888,7 +6350,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DoraTheExplorer-DoraSavesTheMermaidsusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5968,13 +6437,27 @@
       "Puzzle-Game",
       "Thinking"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Brain_Age.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
   "Dr Reiner Knizia's Brainbenders": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Brain Voyage (U).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -6089,7 +6572,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DragonQuestIv-ChaptersOfTheChosenusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6097,7 +6587,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DragonQuestV-HandOfTheHeavenlyBrideusaenfresb.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -6113,7 +6610,21 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Dragon_Quest_IX.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dragonquest9manualscanjpnintendodsdsnds/Dragon Quest 9 (Manual)(Scan)(JP)(Nintendo DS)(DS)(NDS).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -6122,7 +6633,14 @@
       "Role playing games",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Dragon Quest Monsters - Joker (E).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6146,7 +6664,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DragonQuestVi-RealmsOfRevelationusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6229,7 +6754,14 @@
   },
   "Dream Chronicles": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/DreamChroniclesusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -6668,7 +7200,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Electroplankton.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -6731,7 +7270,14 @@
       "Music and Dance",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Elite_Beat_Agents.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6864,7 +7410,15 @@
     "genres": [
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MagiciansQuest-MysteriousTimesusaenfresb.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -6949,7 +7503,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Etrian Odyssey (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -6957,7 +7518,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/EtrianOdysseyIi-HeroesOfLagaardusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6965,7 +7533,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/EtrianOdysseyIii-TheDrownedCityusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -7096,7 +7671,14 @@
   },
   "Fabulous Finds": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/fabulous-finds/Fabulous Finds.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -7282,7 +7864,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/FinalFantasy-The4HeroesOfLightusa.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -7309,7 +7898,14 @@
       "Casual Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Final Fantasy Fables - Chocobo Tales (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -7317,7 +7913,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Final Fantasy III (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -7326,7 +7929,14 @@
       "Role playing games",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/FinalFantasyIvusaenfres.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -7334,7 +7944,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Final Fantasy Tactics A2 (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -7342,7 +7959,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/FinalFantasyXii-RevenantWingsusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7372,7 +7996,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_FireEmblem_Shadow.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -7598,7 +8230,15 @@
       "Role playing games",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Fossil_Fighters.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7675,7 +8315,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/rosyrupeelandmanual/rosyrupeeland.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7692,7 +8339,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Frogger-HelmetChaosusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -8046,7 +8700,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_GameWatch_Club.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -8222,7 +8883,14 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Geometry Wars - Galaxies (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -8267,7 +8935,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Ghostbusters-TheVideoGameusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -8323,7 +8998,14 @@
   },
   "Girls Life - Jewellery Style": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/StyleLab-JewelryDesignusaenfresndsiEnhancedb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -8343,7 +9025,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Glory Days II (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8351,7 +9040,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Glory_Heracles.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8459,7 +9156,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Golden_Sun_Dark_Dawn.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8469,7 +9174,15 @@
       "Shooter",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/GoldenEye Rogue Agent (U).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.7
   },
@@ -8508,7 +9221,14 @@
   },
   "Gormiti - The Lords of Nature!": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Gormiti-TheLordsOfNatureusaenfrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -8662,7 +9382,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/GuitarHero-OnTourusaenfr.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -8846,7 +9573,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HannahMontanausa.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -8967,7 +9701,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HarryPotterAndTheDeathlyHallows-Part2usaenfres.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -8976,7 +9717,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HarryPotterAndTheGobletOfFireusaenfrdeesit.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -9056,7 +9804,14 @@
   },
   "Harvest Moon DS Cute": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HarvestMoonDsCuteusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9155,7 +9910,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HelloKitty-BigCityDreamsusaenfresb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -9163,7 +9925,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HelloKitty-BirthdayAdventuresusaenfrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -9229,7 +9998,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Herbie - Rescue Rally (U).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9255,7 +10031,14 @@
       "Strategy",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HeroesOfManausa.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -9306,7 +10089,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HiddenMysteries-SalemSecrets-WitchTrialsOf1692usab.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9608,7 +10398,14 @@
   },
   "Hoshizora no Comic Garden": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/HoshizoraNoComicGardenManualJPNintendoDSDSNDS/Hoshizora no Comic Garden (Manual)(JP)(Nintendo DS)(DS)(NDS).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9659,7 +10456,15 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Hotel_Dusk_Room_215.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -9714,7 +10519,14 @@
   },
   "How to Train Your Dragon": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/HowToTrainYourDragonusaenfr.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9909,7 +10721,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/IceAge-DawnOfTheDinosaursusaenfrb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -10454,7 +11273,14 @@
       "Action",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/IronManusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -10462,7 +11288,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/IronMan2usaenfresb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -10477,7 +11310,14 @@
   },
   "Irozuki Tingle no Koi no Balloon Trip": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/cover_20210719/balloontrip.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -10622,7 +11462,14 @@
       "Various",
       "Music and Dance"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/JamSessions-SingAndPlayGuitarusaenfrdeesitnl.pdf"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -10666,7 +11513,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/James Pond - Codename RoboCod (U).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -10767,7 +11621,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/jewel-master-cradle-of-athena/Jewel Master - Cradle of Athena.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -11289,7 +12150,15 @@
   },
   "Junior Mystery Stories": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en",
+          "fr"
+        ],
+        "url": "https://archive.org/download/junior-mystery-quest/Junior Mystery Quest.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11951,7 +12820,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Kim Possible - Global Gemini (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -12056,7 +12932,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Kirby_Squeak_Squad.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12064,7 +12947,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_KirbyPowerPaintbrush_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12073,7 +12963,14 @@
       "Casual Game",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_KirbyMassAttack_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -12082,7 +12979,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Kirby Super Star Ultra (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 1
   },
@@ -12281,7 +13185,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Konami Classics Series - Arcade Hits (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -12315,7 +13226,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Korg Ds-10 Synthesizer (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12422,13 +13340,27 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Kung Fu Panda (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
   "Kung Fu Panda - Legendary Warriors": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/KungFuPanda-LegendaryWarriorsusaenfrb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -12582,7 +13514,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoHarryPotter-Years1-4usaenfres.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -12590,13 +13529,27 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoHarryPotter-Years5-7usaenfres.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
   "LEGO Indiana Jones - The Original Adventures": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoIndianaJones-TheOriginalAdventuresusaenfrdeesitda.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -12634,7 +13587,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoPiratesOfTheCaribbean-TheVideoGameusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12652,7 +13612,14 @@
       "Driving",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoStarWars-TheCompleteSagausa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -12660,7 +13627,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Lego Star Wars II - The Original Trilogy (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -12668,7 +13642,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoStarWarsIii-TheCloneWarsusaenfres.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -12677,7 +13658,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LegoTheLordOfTheRingsusaenfrespt.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -12736,7 +13724,14 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/LaraCroftTombRaider-Legendusaenfrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -12855,7 +13850,15 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Zelda_Phantom_Hourglass.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -12863,7 +13866,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_TheLegendOfZeldaSpiritTracks_EN.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -12887,7 +13898,15 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Legendary_Starfy.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -12987,7 +14006,14 @@
   },
   "Let's Pilates!": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/letspilatesmanual/letspilatesmanual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -13424,7 +14450,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Lost in Blue 2 (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -13440,7 +14473,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Lost Magic (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -13662,7 +14702,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MxVs.AtvUntamedusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.4
   },
@@ -13696,7 +14743,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Madagascar-Escape2Africausab.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -13812,7 +14866,15 @@
       "Various",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Master_of_Illusion.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -14072,7 +15134,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MajorLeagueBaseball2k10usa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -14253,7 +15322,20 @@
       "Platform",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mario_Luigi_IS_ENG.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mario_Luigi_IS_FR.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -14262,7 +15344,14 @@
       "Role playing games",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_MarioAndLuigiPartnersInTime_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -14271,7 +15360,14 @@
       "Sports",
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MarioSonicAtTheOlympicGamesusaenfrdeesit.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -14280,7 +15376,14 @@
       "Sports",
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MarioSonicAtTheOlympicWinterGamesusaenfres.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -14289,7 +15392,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_MarioKartDS_EN.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -14299,7 +15409,14 @@
       "Strategy",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_MarioPartyDS_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14309,7 +15426,14 @@
       "Fight",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mario_Hoops_3_on_3.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14317,7 +15441,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mario_vs_DK_Mayhem.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14325,7 +15457,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mario_vs_Donkey_Kong_March_of_the_Minis.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -14488,7 +15627,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Marvel-UltimateAlliance2usab.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -14532,7 +15678,14 @@
       "Horses race",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/ChampionshipPonyusa.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -14687,7 +15840,14 @@
   },
   "MechAssault - Phantom War": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/MechAssault - Phantom War (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -14724,7 +15884,14 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Meet the Robinsons (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -14741,7 +15908,14 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MegaManBattleNetwork5-DoubleTeamDsusa.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -14765,7 +15939,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MegaManStarForce-Pegasususa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -14781,7 +15962,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MegaManStarForce2-ZerkerXSaurianusa.pdf"
+      }
+    ],
     "players": 7,
     "rating": 0.85
   },
@@ -14806,7 +15994,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Mega Man ZX (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -14962,7 +16157,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/metalslug7ntscu/Metal Slug 7 (NTSC-U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -14978,7 +16180,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Meteos (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14986,7 +16195,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Meteos - Disney Magic (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -15000,7 +16216,14 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Metroid_Prime_Hunters.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -15010,7 +16233,14 @@
       "Simulation",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Metroid Prime Pinball (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -15690,7 +16920,14 @@
       "Various",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MonsterTaleusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -15698,13 +16935,27 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MonsterTrucksDsusa.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.1
   },
   "Monsters vs Aliens": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/MonstersVsAliensusaenfrb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -15760,7 +17011,14 @@
   },
   "More Brain Training from Dr Kawashima - How Old Is Your Brain": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Brain_Age_2.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -15886,7 +17144,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Mr Driller - Drill Spirits (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -16556,7 +17821,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Mystery_Case_Files.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -16581,7 +17854,14 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Touch Detective (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -16862,7 +18142,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Naruto-NinjaCouncil3usa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.5
   },
@@ -17133,7 +18420,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Nervous Brickdown (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17231,7 +18525,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_New_Super_Mario_Bros.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17251,7 +18552,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/The New York Times Crosswords (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.1
   },
@@ -17274,7 +18582,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NiNoKuniManualJPNintendoDSDSNDS/NiNoKuniManualJPNintendoDSDSNDS.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.95
   },
@@ -17364,7 +18679,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/NineHoursNinePersonsNineDoorsusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -17380,7 +18702,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Ninja Gaiden - Dragon Sword (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17440,13 +18769,28 @@
   },
   "Nintendo Presents - Crossword Collection": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Crosswords_DS.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
   "Nintendo Presents - Style Boutique": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_NintendoPresentsStyleBoutique_EN.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -17469,7 +18813,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Nintendogs (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -17579,7 +18930,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Nostalgiausab.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -17751,7 +19109,14 @@
   },
   "Okaeri! Chibi-Robo! - Happy Rich Oosouji!": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/okaerichibirobo/csmanual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -17859,7 +19224,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/OrcsElvesusaenfrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -18020,7 +19392,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/OurHouseusab.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -18035,7 +19414,14 @@
       "Adventure",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/OverTheHedgeusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -18583,7 +19969,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/PhineasAndFerb-AcrossThe2ndDimensionusaenfres.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -18605,7 +19998,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Phoenix Wright (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -18613,7 +20013,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Phoenix Wright - Justice for All (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -18664,7 +20071,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Picross.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -18717,7 +20131,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Ping Pals (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -18780,7 +20201,14 @@
   },
   "Pirates of the Caribbean - At World's End": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Pirates of the Caribbean - At Worlds End (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -18828,7 +20256,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/PlantsVs.Zombiesusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -18919,7 +20354,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Point Blank DS (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -18928,7 +20370,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Black.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -18936,7 +20385,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_pokemon_black_2.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -18944,7 +20401,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Diamond.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -18961,7 +20425,15 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_HeartGold.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -18969,7 +20441,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Pearl.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -18977,7 +20456,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Platinum.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -18986,7 +20473,15 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_SoulSilver.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -18995,7 +20490,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_White.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -19003,7 +20505,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_pokemon_white_2.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -19018,7 +20528,15 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Conquest.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -19042,7 +20560,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_PokemonMysteryDungeonBlueRescueTeam_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -19050,7 +20575,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Mystery_Darkness.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -19058,7 +20591,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_PokemonMysteryDungeonExplorersOfSky_EN.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -19066,7 +20606,15 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Mystery_Time.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -19088,7 +20636,15 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Ranger.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -19097,7 +20653,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_PokemonRangerGuardianSigns_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -19105,7 +20668,15 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Pokemon_Almia.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -19136,7 +20707,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Polarium (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -19144,7 +20722,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Pony Friends (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -19321,7 +20906,14 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/pawapoke9_manual/\u30d1\u30ef\u30d7\u30ed\u30af\u30f3\u30dd\u30b1\u30c3\u30c89 \u53d6\u6271\u8aac\u660e\u66f8.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -19434,7 +21026,14 @@
       "Action",
       "Action / Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/PrinceOfPersia-TheFallenKingusaenfrdeesitb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -19529,7 +21128,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Prism (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -19613,7 +21219,15 @@
       "Puzzle-Game",
       "Educational"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Personal_Trainer_Math.pdf"
+      }
+    ],
     "players": 16,
     "rating": 0.75
   },
@@ -19622,7 +21236,15 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Professor_Layton_Diabolical_Box.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -19631,7 +21253,15 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Layton_Village.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -19640,7 +21270,15 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Professor_Layton_3.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -19675,7 +21313,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Feel the Magic - XY'XX (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -19804,7 +21449,16 @@
       "Role playing games",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/PuzzleChroniclesusaenfres.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -19835,7 +21489,14 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Planet Puzzle League (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -19861,7 +21522,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Puzzle Quest (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -20009,7 +21677,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/puzzler-world-nintendo-ds/Puzzler World (Nintendo DS).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -20055,7 +21730,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/QuickSpot (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.5
   },
@@ -20152,7 +21834,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/RabbidsGoHome-AComedyAdventureusaenfresndsiEnhancedb.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -20163,7 +21852,14 @@
       "Race",
       "Driving / Race"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Race Driver - Create and Race (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -20180,7 +21876,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/RadiantHistoriausa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -20279,7 +21982,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Rayman-RavingRabbids-TvPartyusaenfresb.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -20295,7 +22005,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Rayman DS (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -20552,7 +22269,15 @@
       "Music and Dance",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Rythm_Heaven.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -20573,7 +22298,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Ridge Racer DS (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -20733,7 +22465,14 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/The Rub Rabbits (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -20778,7 +22517,14 @@
       "Role playing games",
       "Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Rune Factory (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -20859,7 +22605,14 @@
       "Simulation",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Sega Casino (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -21081,7 +22834,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SandsOfDestructionusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -21186,7 +22946,14 @@
   },
   "Scooby-Doo! - First Frights": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Scooby-doo-FirstFrightsusaenfrdeesitb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -21242,7 +23009,14 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Scribblenautsusaenfresptb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -21609,7 +23383,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/ShinMegamiTensei-StrangeJourneyusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -21739,7 +23520,14 @@
   },
   "Shrek - Forever After": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Shrek-ForeverAfterusaenfrndsiEnhancedb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -21747,7 +23535,14 @@
     "genres": [
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Shrek-OgresDronkeysusa.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.1
   },
@@ -21773,7 +23568,14 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Shrek the Third (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -21826,7 +23628,15 @@
   },
   "Sight Training - Enjoy Exercising and Relaxing Your Eyes": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Flash_Focus.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -21905,7 +23715,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/SimCity DS (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -22166,7 +23983,14 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Sims2Theusaenfrdeesit.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -22431,7 +24255,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Sonic Chronicles - The Dark Brotherhood (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -22441,7 +24272,14 @@
       "Compilation",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SonicClassicCollectionusaenfresndsiEnhancedb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -22457,7 +24295,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Sonic Rush (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -22466,7 +24311,14 @@
       "Platform",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SonicRushAdventureusaenjafrdeesit.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -22517,7 +24369,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Soul Bubbles (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -22605,13 +24464,27 @@
       "Strategy",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Spectrobes-BeyondThePortalsusab.pdf"
+      }
+    ],
     "players": 16,
     "rating": 0.75
   },
   "Spectrobes - Beyond the Portals": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Spectrobesusaenfrdeesit.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -22648,7 +24521,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Spider-Man - Friend or Foe (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -22657,7 +24537,14 @@
       "Platform",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Spider-man-ShatteredDimensionsusaenfr.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -22665,7 +24552,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Spider-man-WebOfShadowsusaenfrb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -22682,7 +24576,14 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Spider-Man 3 (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -22736,7 +24637,14 @@
       "Action / Adventure",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SpongebobsTruthOrSquareusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -22817,7 +24725,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SporeCreaturesusaenfrdeesitnl.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -22847,7 +24762,14 @@
   },
   "Sprung - The Dating Game": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Sprung (U).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -22903,7 +24825,14 @@
       "Strategy",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Star_Fox_Command.pdf"
+      }
+    ],
     "players": 6,
     "rating": 0.8
   },
@@ -23195,7 +25124,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Sodoku_Gridmaster.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -23296,7 +25232,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Summon Night - Twin Age (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -23319,7 +25262,14 @@
   },
   "Sun Crossword Challenge, The": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/UsaTodayCrosswordChallengeusaenes.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -23410,7 +25360,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_SuperMario64DS_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -23420,7 +25377,14 @@
       "Action / Labyrinth",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Super Monkey Ball - Touch and Roll (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -23429,7 +25393,15 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Super_Peach.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -23482,7 +25454,14 @@
       "Puzzle-Game",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/SuperScribblenautsusaenfrespt.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -24050,7 +26029,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TaosAdventure-CurseOfTheDemonSealusa.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -24130,7 +26116,15 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Tenchu_Dark_Secret.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -24254,7 +26248,14 @@
       "Strategy",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Tetris_DS.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -24262,7 +26263,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TetrisPartyDeluxeusaenfres.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -24314,7 +26322,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Theme Park (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -24322,7 +26337,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Theresia..usab.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -24424,7 +26446,15 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Tiger Woods PGA Tour (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -24894,7 +26924,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TombRaider-Underworldusaenfresb.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -24939,7 +26976,14 @@
       "Sports / Skateboard",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TonyHawksAmericanSk8landusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -24959,7 +27003,14 @@
       "Sports / Skateboard",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TonyHawksMotionusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -24969,7 +27020,14 @@
       "Sports",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Tony Hawks Proving Ground (U).pdf"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -25022,7 +27080,14 @@
       "Sports / Tennis",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Top Spin 2 (E).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -25198,7 +27263,14 @@
       "Compilation",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/TouchMaster (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -25396,19 +27468,40 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Transformers - Autobots  (U).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
   "Transformers - Dark of the Moon - Autobots": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-DarkOfTheMoon-Autobotsusaenfr.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
   "Transformers - Dark of the Moon - Decepticons": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-DarkOfTheMoon-Decepticonsusaenfr.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -25416,7 +27509,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Transformers - Decepticons  (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -25424,7 +27524,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-RevengeOfTheFallen-AutobotsVersionusaenfrb.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -25432,7 +27539,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-RevengeOfTheFallen-DecepticonsVersionusaenfrb.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -25446,13 +27560,27 @@
   },
   "Transformers - War for Cybertron - Autobots": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-WarForCybertron-Autobotsusaenfr.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
   "Transformers - War for Cybertron - Decepticons": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Transformers-WarForCybertron-Decepticonsusaenfr.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -25460,7 +27588,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TransformersAnimated-TheGameusab.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -25486,7 +27621,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/TraumaCenter-UnderTheKnifeusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -25582,7 +27724,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Trioncube (U).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -25830,7 +27979,15 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Urbz-_Sims_in_the_City_-_2004_-_Electronic_Arts.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -26071,7 +28228,15 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Personal_Trainer_Walking.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -26124,7 +28289,14 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Wario_Master_of_Disguise.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -26133,7 +28305,15 @@
       "Various",
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Wario_Ware_DIY.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -26141,7 +28321,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_WarioWareTouched_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -26481,7 +28668,16 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Wirewayusaenfresb.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -26633,7 +28829,14 @@
       "Role playing games",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/The World Ends with You (U).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -26679,7 +28882,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/Worms - Open Warfare 2 (E).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -26693,7 +28903,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/X-men-Destinyusa.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -26757,7 +28974,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/YamahaSupercrossusab.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -26897,7 +29121,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_YoshiTouchAndGo_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -26906,7 +29137,14 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://cdn02.nintendo-europe.com/media/downloads/games_8/emanuals/nintendo_ds_21/Manual_NintendoDS_YoshisIslandDS_EN.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -26914,7 +29152,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/you-dont-know-jack-nintendo-ds/You Don't Know Jack (Nintendo DS).pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -27022,7 +29267,16 @@
     "genres": [
       "Playing cards"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/Yu-gi-oh5ds-WorldChampionship2011-OverTheNexususaenjafrdeesit.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -27154,7 +29408,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Zendoku_-_2007_-_Eidos_Interactive.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -27327,7 +29588,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Nintendo_DS/Manual/formated/Zoo_Keeper_-_2004_-_Success_Corp..pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -27427,7 +29695,14 @@
     "genres": [
       "Casual Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NintendoDSManuals/IcarlyusaenfrndsiEnhancedb.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },

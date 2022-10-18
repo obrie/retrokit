@@ -10,7 +10,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/After Burner (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/After_Burner_Complete_1994_Sega_JP/After_Burner_Complete_1994_Sega_JP.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -20,7 +33,14 @@
       "Platform / Fighter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Amazing Spider-Man, The - Web of Fire (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -29,7 +49,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/BC Racers (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -38,7 +65,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Blackthorne (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -46,7 +80,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Brutal Unleashed - Above the Claw (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -64,7 +105,26 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Cosmic Carnage (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Cyber_Brawl_1994_J_color/Cyber_Brawl_1994_J_color.cbr"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Cosmic_Carnage_1995_Br/Cosmic_Carnage_1995_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -85,7 +145,20 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Doom (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Doom_1994_J_color/Doom_1994_J_color.cbr"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -109,7 +182,26 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Golf Magazine 36 Great Holes Starring Fred Couples (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Golf_Magazine_36_Great_Holes_1994_J_color/Golf_Magazine_36_Great_Holes_1994_J_color.cbr"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Golf_Magazine_36_Great_Holes_1994_Br/Golf_Magazine_36_Great_Holes_1994_Br.cbr"
+      }
+    ],
     "players": 8,
     "rating": 0.3
   },
@@ -118,7 +210,38 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Knuckles_Chaotix_1995_U/Knuckles_Chaotix_1995_U.cbr"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/Knuckles_Chaotix_1995_E_7L/Knuckles_Chaotix_1995_E_7L.cbr"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "http://info.sonicretro.org/images/4/40/Chaotix_32X_JP_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "http://info.sonicretro.org/images/1/15/Chaotix_32X_BR_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -128,7 +251,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Kolibri (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Kolibri_1995_Br/Kolibri_1995_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -167,7 +303,26 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Metal Head (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Metal_Head_1995_J_color/Metal_Head_1995_J_color.cbr"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Metal_Head_1995_Br/Metal_Head_1995_Br.cbr"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -175,7 +330,26 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Mortal Kombat II (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Mortal_Kombat_II_1994_J_color/Mortal_Kombat_II_1994_J_color.cbr"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/07/Mortal_Kombat_II_32X_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -184,7 +358,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Zaxxon's Motherbase 2000 (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Parasquad_1995_Sega_JP/Parasquad_1995_Sega_JP.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -196,7 +383,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Motocross Championship (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Motocross_Championship_1994_Br/Motocross_Championship_1994_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -205,7 +405,20 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/NBA Jam Tournament Edition (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/75/Nbajamte_32x_jp_manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -215,7 +428,20 @@
       "Simulation",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/NFL Quarterback Club (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NFL_Quarterback_Club_1995_Acclaim_JP/NFL_Quarterback_Club_1995_Acclaim_JP.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -232,7 +458,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Pitfall - The Mayan Adventure (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -241,7 +474,14 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Primal Rage (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -251,7 +491,14 @@
       "Sports",
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/RBI Baseball '95 (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -261,7 +508,14 @@
       "Strategy",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Sangokushi IV (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -279,7 +533,20 @@
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Space Harrier (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Space_Harrier_1994_Sega_JP/Space_Harrier_1994_Sega_JP.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -297,7 +564,20 @@
       "Simulation",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Star Trek Starfleet Academy - Starship Bridge Simulator (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Star_Trek_Starfleet_Academy_1995_Br/Star_Trek_Starfleet_Academy_1995_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -308,7 +588,26 @@
       "1st person",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Star Wars Arcade (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Star_Wars_Arcade_1994_Sega_JP/Star_Wars_Arcade_1994_Sega_JP.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Star_Wars_Arcade_1994_Br/Star_Wars_Arcade_1994_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -316,7 +615,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Shadow Squadron (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Stellar_Assault_1995_Sega_JP/Stellar_Assault_1995_Sega_JP.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -327,7 +639,14 @@
       "1st person",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/T-Mek (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -336,7 +655,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Tempo (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Tempo_1995_Sega_JP/Tempo_1995_Sega_JP.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -352,7 +684,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Toughman Contest (USA, Europe).pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.5
   },
@@ -360,7 +699,38 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Virtua Fighter (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/0/05/VirtuaFighter_32X_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Virtua_Fighter_1995_Sega_JP/Virtua_Fighter_1995_Sega_JP.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Virtua_Fighter_1995_Br/Virtua_Fighter_1995_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -378,7 +748,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/Virtua Racing Deluxe (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Virtua_Racing_Deluxe_1994_Sega_JP/Virtua_Racing_Deluxe_1994_Sega_JP.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Virtua_Racing_Deluxe_1994_Br/Virtua_Racing_Deluxe_1994_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -389,7 +778,20 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/WWF Raw (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/WWF_RAW_1995_Acclaim_JP/WWF_RAW_1995_Acclaim_JP.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -399,7 +801,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/WWF WrestleMania - The Arcade Game (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -408,7 +817,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGA32XManuals_201812/World Series Baseball Starring Deion Sanders (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },

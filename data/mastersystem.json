@@ -4,7 +4,14 @@
       "Action",
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/20 em 1 (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -18,7 +25,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/4 Pak All Action (Australia).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -42,7 +56,25 @@
       "Simulation",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/99/Ace_of_Aces_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/ba/Aceofaces_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -51,7 +83,30 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Action Fighter (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/9/9d/Action_Fighter_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/09/Actionfighter_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -69,7 +124,22 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Aerial Assault (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Aerial Assault (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -78,7 +148,36 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/After Burner (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/After Burner (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c3/After_Burner_Mark_III_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/20/AfterBurner_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -87,7 +186,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/de/Airrescue_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -95,7 +201,26 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/98/Disney's_Aladdin_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/ee/Aladdin_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -103,7 +228,37 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Alex Kidd - High-Tech World (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/5/53/Alex_Kidd_High-Tech_World_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/a/a7/AnmitsuHimeSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/a/ad/AKHTW_SMS_BR3_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -111,7 +266,36 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/e/e2/Alexkiddloststars_sms_us_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/0/0c/Alex_Kidd_The_Lost_Stars_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/48/AlexKiddLostStarsSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/2b/AKtLS_SMS_BR_Cardboard_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -121,7 +305,37 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/8/85/Alexkiddmiracleworld_sms_us_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Alex Kidd in Miracle World (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6c/AlexKiddInMiracleWorldSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/b6/AKiMW_SMS_BR_Manual_Alt.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -139,7 +353,31 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Alex Kidd in Shinobi World (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/a/a4/Alex_Kidd_in_Shinobi_World_(6_Languages)_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/6e/AlexKiddInShinobiWorld_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -147,7 +385,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Alf (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -163,7 +408,27 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/2/24/Alien3_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5e/Alien3_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -172,7 +437,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/7c/AlienStormSMSBRManual.PDF"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -182,7 +454,26 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Alien Syndrome (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/fb/AlienSyndromeSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/db/Aliensyndrome_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -190,7 +481,36 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ar"
+        ],
+        "url": "https://segaretro.org/images/0/0b/AlteredBeast_sms_arabic_manual.pdf"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Altered Beast (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/2/2c/Altered_Beast_Master_System_Euro_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c0/AlteredBeast_SMS_BR_Manual_Blue_Alt.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -199,7 +519,20 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Reggie Jackson Baseball (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/cf/AmericanBaseball_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -208,7 +541,14 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Walter Payton Football (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -217,7 +557,21 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/0/06/Andre_Agassi_Tennis_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -226,7 +580,14 @@
       "Compilation",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Arcade Smash Hits (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -235,7 +596,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1f/ArgosNoJuujikenSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -253,7 +621,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/e/e7/Assault_City_(Light_Phaser_Version)_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -261,7 +636,25 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Asterix (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/4c/Asterix_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -269,7 +662,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Asterix and the Great Rescue (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/d5/AatGR_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -277,7 +683,25 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/3/35/Ast\u00e9rix_and_the_Secret_Mission_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/9e/Aatsm_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -286,7 +710,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Astro Warrior (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c0/AstroWorriorSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -294,7 +731,14 @@
     "genres": [
       "Compilation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/1/17/Astro_Warrior_Pit_Pot_SMS_AU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -302,7 +746,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/7f/Tvcolosso_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -311,7 +762,32 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/91/Super_Monaco_GP_II_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/2/24/Ayrton_Senna's_Super_Monaco_GP_II_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f9/Ayrtonsenna_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -322,7 +798,36 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Aztec Adventure - The Golden Road to Paradise (World).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/5/59/Aztec_Adventure_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cb/Nazca88SMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/88/AztecAdventure_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -331,7 +836,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/63/BMXTrialAlexKiddSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -339,7 +851,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Back to the Future Part II (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -347,7 +866,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Back to the Future Part III (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -356,7 +882,14 @@
       "Puzzle-Game",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Baku Baku Animal (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -364,7 +897,24 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/5/5c/Bank_Panic_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Bank Panic (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -373,7 +923,25 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/b/b7/Basketball_Nightmare_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Batman Returns (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -385,7 +953,25 @@
       "Shoot'em Up",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/c/cd/Batman_Returns_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/32/Batmanreturns_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -394,7 +980,25 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/9d/Battle_OutRun_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/cd/BattleOutRun_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -411,7 +1015,26 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Black Belt (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/99/HokutoNoKenSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/b7/BlackBelt_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -420,7 +1043,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Blade Eagle (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/40/BladeEagleSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -437,7 +1073,24 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Bomber Raid (World).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/4/46/Bomber_Raid_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -446,7 +1099,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/0/07/Bonanza_Bros._SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -454,7 +1120,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Bonkers Wax Up! (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -463,7 +1136,19 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/4/4c/Bram_Stoker's_Dracula_Euro_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -472,7 +1157,27 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/1/1e/Bubble_Bobble_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Bubble Bobble (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -481,7 +1186,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bb/Buggyrun_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -497,7 +1209,31 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/California Games (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/8/86/California_Games_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1d/CaliforniaGames_SMS_BR_Manual_Alt.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.7
   },
@@ -505,7 +1241,26 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/d9/California_Games_II_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/13/Jogosdeveraoii_sms_br_manual.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.15
   },
@@ -514,7 +1269,36 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Captain Silver (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/e/e0/Captain_Silver_Euro_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/30/CaptainSilverSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/d2/Captainsilver_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -524,7 +1308,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Casino Games (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -532,7 +1323,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Castelo Ra-Tim-Bum (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -542,7 +1340,33 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Castle of Illusion Starring Mickey Mouse (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/9a/Castle_of_Illusion_Starring_Mickey_Mouse_(8_Languages)_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/3f/CastleofIllusion_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -551,7 +1375,27 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/3/3c/Champions_of_Europe_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/cd/Championsofeurope_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -568,7 +1412,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/70/CxD_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -577,7 +1428,26 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/e/e5/Cheese_Cat-Astrophe_Starring_Speedy_Gonzales_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cheese Cat-astrophe Starring Speedy Gonzales (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -586,7 +1456,20 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Choplifter (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/ba/ChoplifterSMSBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -595,7 +1478,27 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/d3/Chuck_Rock_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/cd/Chuck_Rock_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -603,7 +1506,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1f/Chuckrockii_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -612,7 +1522,31 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cloud Master (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/5/52/Cloud_Master_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/b0/CloudMaster_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -626,7 +1560,33 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Columns (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/da/Columns_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1b/Columns_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -644,7 +1604,19 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cool Spot (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -652,7 +1624,21 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cosmic Spacehead (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -660,7 +1646,16 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cyber Shinobi, The (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -669,7 +1664,21 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cyborg Hunter (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Cyborg Hunter (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -693,7 +1702,26 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/4/41/Daffy_Duck_in_Hollywood_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/0e/DDiHW_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -711,7 +1739,19 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/93/Danan_The_Jungle_Fighter_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -722,7 +1762,20 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Dead Angle (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/0e/DeadAngle_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -732,7 +1785,26 @@
       "Sports",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Deep Duck Trouble Starring Donald Duck (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/60/Deepducktrouble_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -741,7 +1813,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Desert Speedtrap Starring Road Runner and Wile E. Coyote (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -760,7 +1839,31 @@
       "Lightgun Shooter",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Dick Tracy (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/5/5d/Dick_Tracy_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/69/DickTracySMSBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -777,7 +1880,26 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Double Dragon (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8b/DoubleDragonSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/10/DoubleDragon_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -786,7 +1908,19 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Double Hawk (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -802,7 +1936,26 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Dr. Robotnik's Mean Bean Machine (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "http://info.sonicretro.org/images/7/7f/DRMBM_SMS_BR_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -819,7 +1972,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/f/f9/Dragon_Crystal_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bb/Dragoncrystal_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -836,7 +2002,25 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/50/Dynamite_Dux_MS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/8/85/Dynamite_Dux_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -855,7 +2039,31 @@
       "Platform / Shooter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/E-SWAT - City Under Siege (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/61/Cyber_Police_ESWAT_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f4/ESWAT_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -881,7 +2089,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/0/02/Earthwormjim_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -898,7 +2113,14 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/6/6c/Ecco_the_Dolphin_SMS_AU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -907,7 +2129,30 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Enduro Racer (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Enduro Racer (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/ff/EnduroRacer_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -932,7 +2177,36 @@
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/F-16 Fighting Falcon (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/e/e2/F-16_Fighter_(Card_Version)_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/39/F-16SMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/db/F16_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -943,7 +2217,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/8f/Manual_F1_Master_System_-_Brazil.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -968,7 +2249,19 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Fantastic Dizzy (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -977,7 +2270,30 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Fantasy Zone (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Fantasy Zone (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/54/FantasyZone_SMS_JP_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -987,7 +2303,26 @@
       "Action / Labyrinth",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Fantasy Zone - The Maze (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/93/OpaOpaSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/95/FZTheMaze_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -996,7 +2331,26 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Fantasy Zone II - The Tears of Opa-Opa (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/86/FantasyZoneIISMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/dd/FantasyZoneIISMSBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1031,7 +2385,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/b/be/The_Flash_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1048,7 +2415,24 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/6/6e/The_Flintstones_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/15/Flintstones_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1058,7 +2442,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/e/ea/Forgotten_Worlds_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1066,7 +2457,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/f5/FushigiNoOshiroPitPotSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1075,7 +2473,20 @@
       "Simulation",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/a9/Gloc_ms_eu_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/47/G-Loc_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1084,7 +2495,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/68/GPRider_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1092,7 +2510,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ko"
+        ],
+        "url": "https://segaretro.org/images/1/19/GaegujangiKkachiSMSKrManual.pdf"
+      }
+    ],
     "players": null,
     "rating": 0.35
   },
@@ -1100,7 +2525,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/c/cc/GainGround_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -1109,7 +2541,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Galactic Protector (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1127,7 +2566,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Galaxy Force (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/64/GalaxyForceSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1135,13 +2587,27 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bc/Gbsc_sms_br_manual.pdf"
+      }
+    ],
     "players": 8,
     "rating": 0.65
   },
   "Game de Check! Koutsuu Anzen": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/ca/GameDeCheckKoutsuuAnzen_SMS_JP_manual_KoutsuuAnzenKyouikuyouTVGame.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1158,7 +2624,20 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Gangster Town (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/27/GangsterTown_SMS_BR_Manual_Alt.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1167,7 +2646,14 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Gauntlet (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1176,7 +2662,25 @@
       "Sports / Boxing",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/69/Heavyweight_Champ_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/ee/HWC_SMS_BR2_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1185,7 +2689,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/42/Geraldinho_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1194,7 +2705,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ghost House (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1202,7 +2720,31 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ghostbusters (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/8/88/Ghostbusters_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/79/Ghostbusters_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1210,7 +2752,31 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ghouls'n Ghosts (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/f/f3/Ghouls'n_Ghosts_(6_Languages)_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/18/GnG_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1219,7 +2785,36 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Global Defense (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/a/a2/Global_Defense_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/0/0c/SDISMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1f/GlobalDefense_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1228,7 +2823,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Mick & Mack as the Global Gladiators (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1238,7 +2840,31 @@
       "Action",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Golden Axe (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/a/ad/Golden_Axe_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/26/GoldenAxe_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1247,7 +2873,14 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Golden Axe Warrior (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1256,7 +2889,25 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Golfamania (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/85/GolfamaniaSMSBRManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -1264,7 +2915,26 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Golvellius (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/ff/GolvelliusSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/dc/GolvelliusSMSBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1273,7 +2943,20 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Baseball (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Baseball (Japan).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1282,7 +2965,20 @@
       "Sports / Basketball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Basketball (World).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/e3/GreatBasketSMSBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1291,7 +2987,20 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Football (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/cb/GreatFootballSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1300,7 +3009,30 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Golf (World).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/2/2b/Great_Golf_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/3e/MastersGolfSMSJPManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -1309,7 +3041,20 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Ice Hockey (Japan, USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/9/97/GreatIceHockeySMSJManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -1318,7 +3063,20 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Soccer (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e6/GreatSoccerSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1327,7 +3085,26 @@
       "Sports / Volleyball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Great Volleyball (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/df/GreatVolleyballSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f9/GreatVoley_SMS_BR_Cardboard_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1344,7 +3121,27 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://segaretro.org/images/1/14/HangOn_SMS_DE_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Hang-On (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/66/HangOnSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1353,7 +3150,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/9b/Hangonastrowarrior_sms_us_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -1363,7 +3167,30 @@
       "Driving",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Hang-On & Safari Hunt (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/0/03/Hang-On_-_Safari_Hunt_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/91/HangOnSafariHunt_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1371,7 +3198,30 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "options": {
+          "rotate": "90"
+        },
+        "url": "https://segaretro.org/images/a/a6/Heroes_of_the_Lance_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c8/HotL_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1379,7 +3229,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/High School! Kimengumi (Japan) (Translated En).pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1411,7 +3268,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/ca/HoshiWoSagashiteSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1420,7 +3284,25 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Impossible Mission (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bd/ImpossibleMission_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1429,7 +3311,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c7/Crashdummies_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1446,7 +3335,25 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/0/0a/Indiana_Jones_and_the_Last_Crusade_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/21/IJatLC_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -1454,7 +3361,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/4/4c/JamesBondSMSAuManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1f/Jamesbond_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1462,7 +3382,27 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/60/James_Pond_II_Codename_RoboCod_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5c/JamesPondIISMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1493,7 +3433,20 @@
       "Sports / Football",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Joe Montana Football (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/20/JMF_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -1503,7 +3456,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://segaretro.org/images/5/53/The_Jungle_Book_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c7/JungleBook_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1514,7 +3480,26 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/1/11/Jurassic_Park_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Jurassic Park (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1523,7 +3508,27 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/f/f8/Klax_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/69/Klax_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1532,7 +3537,26 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Kenseiden (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/50/KenseidenSMSJManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/20/Kenseiden_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1548,7 +3572,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/King's Quest - Quest for the Crown (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1566,7 +3597,14 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/45/Krustysfunhouse_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1575,7 +3613,30 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Kung Fu Kid (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/6/6d/Kung_Fu_Kid_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/de/MakaiRetsudenSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1584,7 +3645,26 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Land of Illusion Starring Mickey Mouse (Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/6e/Land_of_Illusion_Starring_Mickey_Mouse_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1593,7 +3673,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/0/00/Laser_Ghost_SMS_AU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1602,7 +3689,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Legend of Illusion Starring Mickey Mouse (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1612,7 +3706,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/3/3c/Lemmings_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/b0/Lemmings_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1638,7 +3751,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Lion King, The (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1648,7 +3768,26 @@
       "Role playing games",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Lord of the Sword (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/1c/LordOfSwordSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/39/LordoftheSword_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1656,7 +3795,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/38/Loretta_no_Shouzou_SG1000_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1667,7 +3813,26 @@
       "Fight",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Lucky Dime Caper Starring Donald Duck, The (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/68/TLDC_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1677,7 +3842,14 @@
       "Mahjong",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/31/MahjongSengokuJidaiSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1695,7 +3867,24 @@
       "Compilation",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Marksman Shooting & Trap Shooting (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/0/06/Marksman_Shooting_-_Trap_Shooting_-_Safari_Hunt_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1713,7 +3902,32 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/50/Master_of_Darkness_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/1/11/Master_of_Darkness_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/32/MasterofDarkness_SMS_BR2_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1721,7 +3935,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Masters_Of_Combat_199x_Br/Masters_Of_Combat_199x_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1730,7 +3951,26 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Maze Hunter 3-D (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b6/MazeWalkerSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/a/ac/MazeHunter3D_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1738,7 +3978,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Megumi Rescue (Japan).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1747,7 +3994,26 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/3/32/Mercs_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5e/Mercs_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1756,7 +4022,31 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Michael Jackson's Moonwalker (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Michael Jackson's Moonwalker (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/eb/MJMoonwalker_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1765,7 +4055,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f4/Mickeysuc_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1774,7 +4071,18 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Micro Machines (Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1791,7 +4099,20 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Miracle Warriors - Seal of the Dark Lord (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/41/HajaNoFuuinSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1800,7 +4121,27 @@
       "Lightgun Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Missile Defense 3-D (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Missile Defense 3-D (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/8b/MissileDefense3DSMSBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1808,7 +4149,14 @@
     "genres": [
       "Board game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Monopoly (USA).pdf"
+      }
+    ],
     "players": 10,
     "rating": 0.55
   },
@@ -1817,7 +4165,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Montezuma's Revenge Featuring Panama Joe (USA).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1834,7 +4189,27 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/b/be/Mortal_Kombat_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/2f/Mortalkombat_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1843,7 +4218,14 @@
       "Fight",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/fd/MK3_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1852,7 +4234,14 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bc/MK2_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1861,7 +4250,27 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/5/55/Ms._Pac-Man_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Ms._Pac-Man_199x_Br/Ms._Pac-Man_199x_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1870,7 +4279,30 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/My Hero (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/My Hero (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/29/GangFighterSMSBRManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1888,7 +4320,14 @@
       "Sports / Baseball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e5/NekkyuuKoushienSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -1921,7 +4360,21 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/b/b1/The_NewZealand_Story_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1930,7 +4383,32 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/7/7c/NinjaGaidenSMSAUManual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ninja Gaiden (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c4/NinjaGaiden_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1939,7 +4417,30 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ninja, The (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ninja, The (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8d/NinjaSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1947,7 +4448,20 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Olympic Gold (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/53/OlympicGold_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -1956,7 +4470,19 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/e/e3/Operation_Wolf_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1965,7 +4491,26 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/c/c8/The_Ottifants_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5b/Ottifants_SMS_BR_Manual_(Alt).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -1974,7 +4519,26 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/OutRun (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/22/OutRunSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/a/a0/OutRunSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1983,7 +4547,21 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/OutRun 3-D (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/62/OutRun3D_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1992,7 +4570,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/d/d9/Outrun_Europa_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/9a/OutRunEuropaSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2010,7 +4601,19 @@
       "Action / Labyrinth",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Pac-Mania (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2020,7 +4623,31 @@
       "Sports / Cycling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Paperboy (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/7/70/Paperboy_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/d1/Paperboy_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2028,7 +4655,20 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Parlour Games (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/38/FamilyGamesSMSJPManual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -2054,7 +4694,30 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Penguin Land (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/5/59/Penguin_Land_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/8/8e/DokiDokiSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2064,7 +4727,32 @@
       "Action / Labyrinth",
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Phantasy Star (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/2/23/PhantasyStarSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "ko"
+        ],
+        "url": "https://segaretro.org/images/8/82/PhantasyStarSMSKrManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/6c/PhantasyStar_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2073,7 +4761,14 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/11/Pitfighter_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -2099,7 +4794,14 @@
       "Simulation",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Poseidon Wars 3-D (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -2116,7 +4818,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Power Strike (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/64/AlesteSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2125,7 +4840,14 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Power_Strike_II_199x_Br/Power_Strike_II_199x_Br.cbr"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2142,7 +4864,14 @@
       "Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Predator_2_1992_Br/Predator_2_1992_Br.cbr"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2151,7 +4880,21 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/e/e0/Prince_of_Persia_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2161,7 +4904,14 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Pro Wrestling (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2170,7 +4920,14 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/43/ProYakyuuSMSJPManual.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2185,7 +4942,25 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/0/08/Psychic_World_Master_System_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/99/Psychic_World_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2195,7 +4970,25 @@
       "Action",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Psycho Fox (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/1/13/Psycho_Fox_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2204,7 +4997,20 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/2/28/Putt_&_Putter_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2221,7 +5027,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Quartet (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2229,7 +5042,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/8f/QuestForTheShavenYakSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2238,7 +5058,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/R-Type (World).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/7/74/RTypeSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2247,7 +5080,20 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/R.C. Grand Prix (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/ff/RCGrandPrix_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -2256,7 +5102,26 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rainbow Islands - The Story of Bubble Bobble 2 (Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/f/fb/Rainbow_Islands_The_Story_of_Bubble_Bobble_2_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2265,7 +5130,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rambo III (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2273,7 +5145,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rampage (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2281,7 +5160,21 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/4/4f/Rampart_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2290,7 +5183,24 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rastan (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/e/e7/Rastan_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2298,7 +5208,14 @@
     "genres": [
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Renegade_1993_Br/Renegade_1993_Br.cbr"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2307,7 +5224,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rescue Mission (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2325,7 +5249,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/21/RoadRash_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2345,7 +5276,20 @@
       "Platform / Shooter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://segaretro.org/images/4/4c/RoboCop_Versus_The_Terminator_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/fa/Rvst_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2355,7 +5299,26 @@
       "Sports",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rocky (World).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/57/RockySMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/2/27/Rocky_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -2373,7 +5336,26 @@
       "Shoot'em up / Horizontal",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/9/98/Sagaia_Master_System_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/4/47/Sagaia_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2405,7 +5387,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/df/SapoXuleSOS_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2414,7 +5403,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/38/SXVOIDB_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2440,7 +5436,19 @@
       "Shoot'em up / Vertical",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/e/eb/Scramble_Spirits_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2449,7 +5457,20 @@
       "Shooter",
       "Shooter / Run and Gun"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Rambo - First Blood Part II (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/55/AshuraSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2458,7 +5479,14 @@
       "Board game",
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5e/SegaChess_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2491,7 +5519,27 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/0/02/Shadow_Dancer_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f2/ShadowDancer_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2500,7 +5548,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/14/Sotb_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2509,7 +5564,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Shanghai (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2518,7 +5580,55 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Shinobi (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/da/ShinobiSMSEUManual8L.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Shinobi (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/58/ShinobiSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "ko"
+        ],
+        "url": "https://segaretro.org/images/2/23/ShinobiSMSKrManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c0/Shinobi_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2527,7 +5637,20 @@
       "Lightgun Shooter",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Shooting Gallery (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f1/ShootingGallery_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2539,7 +5662,14 @@
       "N/A",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/ff/BvtSM_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2547,7 +5677,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/52/SimpsonsBartVsTheWorldSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -2555,7 +5692,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/9a/Sitio_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2580,7 +5724,25 @@
       "Sports / Hockey",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Slap Shot (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/e/e7/Slap_Shot_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2588,7 +5750,14 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/d6/TheSmurfs_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2597,7 +5766,14 @@
       "Strategy",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/4b/SolomonNoKagiSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2606,7 +5782,14 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Sonic Blast (Brazil).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2614,7 +5797,26 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Sonic_Chaos_1993_Au/Sonic_Chaos_1993_Au.cbr"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "http://info.sonicretro.org/images/8/88/Sonic_Chaos_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2622,7 +5824,32 @@
     "genres": [
       "Pinball"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://info.sonicretro.org/images/1/19/Sonic_Spinball_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "http://info.sonicretro.org/images/7/72/SonicSpinball_SMS_EU_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "http://info.sonicretro.org/images/0/0f/SonicSpinball_SMS_BR_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2631,7 +5858,32 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://info.sonicretro.org/images/1/17/Sonic_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Sonic The Hedgehog (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "http://info.sonicretro.org/images/1/17/Sonic_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2640,7 +5892,26 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "http://info.sonicretro.org/images/6/67/Sonic2_SMS_EU_manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "http://info.sonicretro.org/images/b/b9/Sonic2_SMS_BR_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2657,7 +5928,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/6/64/Space_Gun_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2667,7 +5945,20 @@
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Space Harrier (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/6/6b/SpaceHarrier_SMS_JP_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2675,7 +5966,26 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Space Harrier 3-D (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/d/da/SpaceHarrier3DSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/10/SpaceHarrier3DSMSBRManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2693,7 +6003,21 @@
       "Sports / Handball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/c/c4/Speedball_(Virgin_Games)_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2702,7 +6026,14 @@
       "Sports / Handball",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/d/dc/Speedball_2_Brutal_Deluxe_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2710,7 +6041,14 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/SpellCaster (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2719,7 +6057,33 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/e/e7/Spiderman_sms_us_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/da/Spider-Man_vs._The_Kingpin_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/59/SpiderMan_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2727,7 +6091,27 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Spider-Man vs. The Kingpin (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/87/Smrotss_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2735,7 +6119,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Sports Pad Football (USA).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.15
   },
@@ -2752,7 +6143,14 @@
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Spy vs. Spy (USA, Europe).pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2763,7 +6161,20 @@
       "Action",
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://segaretro.org/images/7/74/Star_Wars_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/d/df/Starwars_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -2771,7 +6182,14 @@
     "genres": [
       "Fight"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/35/Sf2_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2788,7 +6206,20 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Streets of Rage (Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2797,7 +6228,14 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/81/SoR2_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2806,7 +6244,27 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Strider (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/15/Strider_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2814,7 +6272,21 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/b/bc/Strider_II_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2823,7 +6295,20 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/0/05/Submarine_Attack_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/e4/SubmarineAttackSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2837,7 +6322,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Sukeban Deka II - Shoujo Tekkamen Densetsu (Japan) (Translated En).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -2845,7 +6337,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/89/SummerGames_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -2915,7 +6414,14 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/e3/SuperKickOff_SMS_BR_Box_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2924,7 +6430,27 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Super Monaco GP (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/f/fc/Super_Monaco_GP_(8_Languages)_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2942,7 +6468,14 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/5/5b/SuperRacingSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2962,7 +6495,14 @@
       "Shooter",
       "Shooter / Space Invaders Like"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/ac/Super_Space_Invaders_SMS_AU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2971,7 +6511,24 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Super Tennis (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/f/f3/Super_Tennis_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -2987,7 +6544,20 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/b/ba/Superman_The_Man_of_Steel_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/5e/SupermanSMSBrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -3022,7 +6592,26 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/7/70/Taz-Mania_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/cc/TazMania_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3041,7 +6630,20 @@
       "Action",
       "Various"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Teddy Boy (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/c/c3/TeddyboyBluesSMSJPManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3050,7 +6652,14 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/82/TennisAce_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3058,7 +6667,14 @@
     "genres": [
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/7/7b/TensaiBakabonSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -3080,7 +6696,21 @@
       "Platform / Shooter Scrolling",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/f/fc/The_Terminator_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -3096,7 +6726,30 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Thunder Blade (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/8/8e/Thunder_Blade_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/8/8f/ThunderBlade_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3105,7 +6758,24 @@
       "Action",
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Time Soldiers (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/c/c6/Time_Soldiers_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3113,7 +6783,26 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/1/1d/Tom_and_Jerry_The_Movie_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c0/TaJTM_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -3122,7 +6811,14 @@
       "Platform",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ko"
+        ],
+        "url": "https://segaretro.org/images/e/ef/TotoWorld3SMSKrManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -3131,7 +6827,27 @@
       "Action",
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/TransBot (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/TransBot (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/38/TransBot_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3141,7 +6857,17 @@
       "Board game",
       "Puzzle-Game"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Trivial Pursuit - Genus Edition (Europe).pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.05
   },
@@ -3149,7 +6875,28 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ultima IV - Quest of the Avatar (Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/3/31/Ultima_IV_Quest_of_the_Avatar_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/9d/UltimaIV_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -3158,7 +6905,20 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/a/a1/Ultimate_Soccer_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3167,7 +6927,20 @@
       "Action",
       "Beat'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Vigilante (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/1/1f/Vigilante_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3177,7 +6950,14 @@
       "Fight / 2D",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/54/Vfanimation_sms_br_manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3195,7 +6975,14 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Wanted (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3203,7 +6990,20 @@
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Where in the World is Carmen Sandiego (USA).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/41/Witwics_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3212,7 +7012,14 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/c/c7/Wimbledon_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3221,7 +7028,20 @@
       "Sports / Tennis",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/d/d2/Wimbledon_II_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3229,7 +7049,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/b/bf/WinterOlympics_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -3238,7 +7065,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/b/b2/Wolfchild_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/4/40/Wolfchild_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -3248,7 +7088,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Wonder Boy (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/5/55/WonderBoySMSBrManual.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3256,7 +7109,31 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Wonder Boy III - The Dragon's Trap (USA, Europe).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/6/6f/Wonder_Boy_III_The_Dragon's_Trap_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/9/96/Wonderboyiii_sms_br_manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -3265,7 +7142,33 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Wonder Boy in Monster Land (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Wonder Boy in Monster Land (Europe).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/40/Wonderboy-In-Monster-Land-JP-Master-System-Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/f/f9/MnCdD_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3290,7 +7193,14 @@
       "Puzzle-Game",
       "Action"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/e/e3/WoodyPopSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3299,7 +7209,21 @@
       "Sports / Golf",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/9/91/World_Class_Leader_Board_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -3308,7 +7232,20 @@
       "Sports / Soccer",
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://segaretro.org/images/8/8c/World_Cup_Italia_90_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/a/a3/SuperFutebolII_SMS_BR_Manual_BuiltIn.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -3325,7 +7262,14 @@
     "genres": [
       "Sports"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/6/6f/WorldGames_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 4,
     "rating": 0.35
   },
@@ -3335,7 +7279,27 @@
       "Race",
       "Driving"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/World Grand Prix (USA).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/World Grand Prix (Europe).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/c/c8/WorldGrandPrix_SMS_BR_Manual_Older.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -3344,7 +7308,36 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/a2/Greatsoccer_sms_us_manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/9/9a/World_Soccer_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/4/48/SportsPadSoccerSMSJPManual.pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/e/e2/WorldSoccer_SMS_BR_Manual_Alt.pdf"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3361,7 +7354,27 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/1/1d/Xenon_2_SMS_AU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fi",
+          "fr",
+          "it",
+          "nl",
+          "sv"
+        ],
+        "url": "https://segaretro.org/images/f/f7/Xenon_2_(Virgin)_SMS_EU_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -3375,7 +7388,14 @@
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Ys - The Vanished Omens (USA, Europe).pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3383,7 +7403,20 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Zaxxon 3-D (World).pdf"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://segaretro.org/images/3/35/Zaxxon3D_SMS_BR_Manual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3392,7 +7425,20 @@
       "Action",
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Zillion (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/1/10/ZillionSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3400,7 +7446,30 @@
     "genres": [
       "Platform"
     ],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGAMasterSystemManuals/Zillion II - The Tri Formation (World).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
+        ],
+        "url": "https://segaretro.org/images/e/e6/Zillion_II_The_Tri_Formation_SMS_EU_Manual.pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/3/34/TriFormationSMSJPManual.pdf"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },

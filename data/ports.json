@@ -1,19 +1,40 @@
 {
   "doom": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Microsoft_DOS/Manual/formated/DOOM.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
   "duke3d": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Microsoft_DOS/Manual/formated/Duke_Nukem_3D.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   },
   "quake": {
     "genres": [],
-    "manuals": [],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Microsoft_DOS/Manual/formated/Quake.pdf"
+      }
+    ],
     "players": null,
     "rating": null
   }
