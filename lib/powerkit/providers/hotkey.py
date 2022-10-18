@@ -50,19 +50,20 @@ class Hotkey(BaseProvider):
         last_pressed = self._last_pressed_by_device.get(device_id)
 
         if not self._quit_press_twice:
-            # Only requires a single trigger to reset
+            # Only requires a single trigger to reset.  We call `maybe_reset` here
+            # in order to make sure powerkit is aware of the currently running process.
             self.trigger('maybe_reset')
             self._trigger_reset()
-        elif last_pressed:
-            time_elapsed = (now - last_pressed)
-            self._last_pressed_by_device[device_id] = now
-
-            if time_elapsed <= timedelta(seconds=self.QUIT_TWICE_WINDOW_SECS):
-                # Pressed twice -- go ahead and reset
-                self._trigger_reset()
+        elif last_pressed and (now - last_pressed) <= timedelta(seconds=self.QUIT_TWICE_WINDOW_SECS):
+            # Pressed twice -- go ahead and reset
+            # 
+            # We don't run `maybe_reset` here because we want to use the process that
+            # was tracked by powerkit on the first press
+            self._trigger_reset()
         else:
-            self.trigger('maybe_reset')
+            # Consider this the first press -- track time and the potential for reset
             self._last_pressed_by_device[device_id] = now
+            self.trigger('maybe_reset')
 
     def _trigger_reset(self) -> None:
         self._last_pressed_by_device.clear()
