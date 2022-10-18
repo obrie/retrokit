@@ -1,0 +1,51 @@
+# Mappings:
+# b  = Button 1 = 0
+# y  = Button 2 = 1
+# x  = Button 3 = 9
+# a  = Button 4 = 8
+# l  = Button 5 = 10
+# r  = Button 6 = 11
+# l2 = Button 7 = 12
+# r2 = Button 8 = 13
+# l3 = Button 9 = 14
+# r3 = Button 10 = 15
+# 
+# Adjust controls for 8BitDo Arcade Stick in X-Input mode:
+# X Y R  L  => 3 4 6 8
+# A B R2 L2 => 1 2 5 7
+
+input_player1_btn_a = "8"
+input_player1_btn_b = "0"
+input_player1_btn_x = "9"
+input_player1_btn_y = "1"
+input_player1_btn_l = "13"
+input_player1_btn_r = "11"
+input_player1_btn_l2 = "12"
+input_player1_btn_r2 = "10"
+
+input_player2_btn_a = "8"
+input_player2_btn_b = "0"
+input_player2_btn_x = "9"
+input_player2_btn_y = "1"
+input_player2_btn_l = "13"
+input_player2_btn_r = "11"
+input_player2_btn_l2 = "12"
+input_player2_btn_r2 = "10"
+
+input_player3_btn_a = "8"
+input_player3_btn_b = "0"
+input_player3_btn_x = "9"
+input_player3_btn_y = "1"
+input_player3_btn_l = "13"
+input_player3_btn_r = "11"
+input_player3_btn_l2 = "12"
+input_player3_btn_r2 = "10"
+
+input_player4_btn_a = "8"
+input_player4_btn_b = "0"
+input_player4_btn_x = "9"
+input_player4_btn_y = "1"
+input_player4_btn_l = "13"
+input_player4_btn_r = "11"
+input_player4_btn_l2 = "12"
+input_player4_btn_r2 = "10"
