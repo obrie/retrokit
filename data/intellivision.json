@@ -1,1110 +1,1270 @@
 {
-    "ABPA Backgammon ~ Backgammon": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Advanced Dungeons & Dragons": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Advanced Dungeons & Dragons - Treasure of Tarmin": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Air Strike": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Armor Battle": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Astrosmash": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Atlantis": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Auto Racing": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "B-17 Bomber": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Beamrider": {
-        "genres": [
-            "Action"
-        ],
-        "players": 4,
-        "rating": 0.7
-    },
-    "Beauty & the Beast": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Blockade Runner": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Body Slam! - Super Pro Wrestling": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Bomb Squad": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Boxing": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 1
-    },
-    "Brickout!": {
-        "genres": [],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Bump 'n' Jump": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "BurgerTime": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Buzz Bombers": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Carnival": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Centipede": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Championship Tennis": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Checkers ~ Draughts": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Chip Shot - Super Pro Golf": {
-        "genres": [
-            "Sports / Golf",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Commando": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Congo Bongo": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Crazy Clones": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Deep Pockets - Super Pro Pool & Billiards": {
-        "genres": [],
-        "players": 2,
-        "rating": null
-    },
-    "Defender": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Demon Attack": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Demonstration Cartridge - Blue": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Demonstration Cartridge - Green": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Demonstration Cartridge - Red": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Dig Dug": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Diner": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Donkey Kong": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Donkey Kong Junior": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Dracula": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Dragonfire": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Dreadnaught Factor, The": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Electric Company, The - Math Fun": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Electric Company, The - Word Fun": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Fathom": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.35
-    },
-    "Frog Bog": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Frogger": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "Game Factory": {
-        "genres": [
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Go for the Gold": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Grid Shock": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Happy Holidays - Easter Eggcitement": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Happy Holidays - Santa's Helper": {
-        "genres": [
-            "Demo"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Happy Trails": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.95
-    },
-    "Horse Racing": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 6,
-        "rating": 0.75
-    },
-    "Hover Force": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Hypnotic Lights": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "IMI Test Cartridge": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Ice Trek": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Illusions": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "International Demonstration Cartridge": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Jetsons' Ways with Words, The": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "King of the Mountain": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Kool-Aid Man": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Lady Bug": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Land Battle": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Las Vegas Poker & Blackjack": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Las Vegas Roulette": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "League of Light": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Learning Fun I - Math Master, Factor Fun": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Learning Fun II - Word Wizard, Memory Fun": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Lock 'N' Chase": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Loco-Motion": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "MTE201 Intellivision Test Cartridge": {
-        "genres": [
-            "Sports",
-            "Sports / Baseball"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Magic Carousel": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Major League Baseball ~ Big League Baseball ~ Baseball": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Masters of the Universe - The Power of He-Man": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Melody Blaster": {
-        "genres": [
-            "Music and Dance"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Microsurgeon": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Mind Strike": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Mission X": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Motocross": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.95
-    },
-    "Mountain Madness - Super Pro Skiing": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Mouse Trap": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 1
-    },
-    "Mr. BASIC Meets Bits 'N Bytes": {
-        "genres": [
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "NASL Soccer ~ Soccer": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "NBA Basketball ~ Basketball": {
-        "genres": [
-            "Sports / Basketball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "NFL Football ~ Football": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "NHL Hockey ~ Hockey": {
-        "genres": [
-            "Sports / Hockey",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Night Stalker": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Nova Blast": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Number Jumble": {
-        "genres": [
-            "Various"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "PBA Bowling ~ Bowling": {
-        "genres": [
-            "Sports / Bowling",
-            "Sports"
-        ],
-        "players": 4,
-        "rating": null
-    },
-    "PGA Golf ~ Golf": {
-        "genres": [
-            "Sports / Golf",
-            "Sports"
-        ],
-        "players": 4,
-        "rating": 0.35
-    },
-    "Pac-Man": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Party Line - Blow Out": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Party Line - Hard Hat": {
-        "genres": [],
-        "players": 2,
-        "rating": null
-    },
-    "Party Line - Space Cadet": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Pinball": {
-        "genres": [
-            "Pinball",
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Pitfall!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Pole Position": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Popeye": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Q-bert": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Reversi": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "River Raid": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Robot Rubble": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Rocky & Bullwinckle": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Royal Dealer": {
-        "genres": [
-            "Casino",
-            "Casino / Cards"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "SNAFU": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Safecracker": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Scarfinger": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Scooby Doo's Maze Chase": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Sea Battle": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 1
-    },
-    "Sewer Sam": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Shark! Shark!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Sharp Shot": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Slam Dunk - Super Pro Basketball": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Slap Shot - Super Pro Hockey": {
-        "genres": [
-            "Sports / Hockey",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Space Armada": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Space Battle": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.2
-    },
-    "Space Hawk": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.45
-    },
-    "Space Spartans": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Spiker - Super Pro Volleyball": {
-        "genres": [
-            "Sports",
-            "Sports / Volleyball"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Stadium Mud Buggies": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Stampede": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Star Strike": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Star Wars - The Empire Strikes Back": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Street ~ Happy Holidays - Trick or Treat": {
-        "genres": [
-            "Demo"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Sub Hunt": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Super Cobra": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "Super Masters!": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Super NFL Footbal": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Super Pro Decathlon": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 4,
-        "rating": null
-    },
-    "Super Pro Football": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Swords & Serpents": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "TRON": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "TRON Deadly Discs": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "TRON Maze-A-Tron": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "TRON Solar Sailer": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Takeover": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tennis": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Thin Ice": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Thunder Castle": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Tower of Doom": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Triple Action": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Triple Challenge - Chess, Checkers, Backgammon": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tropical Trouble": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Truckin'": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Turbo": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.25
-    },
-    "Tutankham": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "US Ski Team Skiing ~ Skiing": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 6,
-        "rating": 0.95
-    },
-    "USCF Chess ~ Chess": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Utopia": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Vectron": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Venture": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "White Water!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "World Championship Baseball": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "World Cup Football": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "World Series Major League Baseball": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Worm Whomper": {
-        "genres": [
-            "Shooter",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "Yogi's Frustration": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Zaxxon": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Zzzz! Spina the Bee": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    }
+  "ABPA Backgammon ~ Backgammon": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Advanced Dungeons & Dragons": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Advanced Dungeons & Dragons - Treasure of Tarmin": {
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Air Strike": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Armor Battle": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Astrosmash": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Atlantis": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Auto Racing": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "B-17 Bomber": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Beamrider": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": 0.7
+  },
+  "Beauty & the Beast": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Blockade Runner": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Body Slam! - Super Pro Wrestling": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Bomb Squad": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Boxing": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 1
+  },
+  "Brickout!": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Bump 'n' Jump": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "BurgerTime": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.85
+  },
+  "Buzz Bombers": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.5
+  },
+  "Carnival": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Centipede": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Championship Tennis": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Checkers ~ Draughts": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Chip Shot - Super Pro Golf": {
+    "genres": [
+      "Sports / Golf",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Commando": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Congo Bongo": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.4
+  },
+  "Crazy Clones": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Deep Pockets - Super Pro Pool & Billiards": {
+    "genres": [],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Defender": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Demon Attack": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Demonstration Cartridge - Blue": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Demonstration Cartridge - Green": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Demonstration Cartridge - Red": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Dig Dug": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.65
+  },
+  "Diner": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.4
+  },
+  "Donkey Kong": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Donkey Kong Junior": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.65
+  },
+  "Dracula": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.85
+  },
+  "Dragonfire": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Dreadnaught Factor, The": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "Electric Company, The - Math Fun": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Electric Company, The - Word Fun": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Fathom": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.35
+  },
+  "Frog Bog": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.85
+  },
+  "Frogger": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.55
+  },
+  "Game Factory": {
+    "genres": [
+      "Various"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Go for the Gold": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Grid Shock": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Happy Holidays - Easter Eggcitement": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Happy Holidays - Santa's Helper": {
+    "genres": [
+      "Demo"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Happy Trails": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.95
+  },
+  "Horse Racing": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 6,
+    "rating": 0.75
+  },
+  "Hover Force": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "Hypnotic Lights": {
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "IMI Test Cartridge": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Ice Trek": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Illusions": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "International Demonstration Cartridge": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Jetsons' Ways with Words, The": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "King of the Mountain": {
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Kool-Aid Man": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Lady Bug": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Land Battle": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Las Vegas Poker & Blackjack": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Las Vegas Roulette": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "League of Light": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Learning Fun I - Math Master, Factor Fun": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Learning Fun II - Word Wizard, Memory Fun": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Lock 'N' Chase": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Loco-Motion": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "MTE201 Intellivision Test Cartridge": {
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Magic Carousel": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Major League Baseball ~ Big League Baseball ~ Baseball": {
+    "genres": [
+      "Sports / Baseball",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Masters of the Universe - The Power of He-Man": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.65
+  },
+  "Melody Blaster": {
+    "genres": [
+      "Music and Dance"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Microsurgeon": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.9
+  },
+  "Mind Strike": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Mission X": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Motocross": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.95
+  },
+  "Mountain Madness - Super Pro Skiing": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Mouse Trap": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 1
+  },
+  "Mr. BASIC Meets Bits 'N Bytes": {
+    "genres": [
+      "Various"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "NASL Soccer ~ Soccer": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "NBA Basketball ~ Basketball": {
+    "genres": [
+      "Sports / Basketball",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "NFL Football ~ Football": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "NHL Hockey ~ Hockey": {
+    "genres": [
+      "Sports / Hockey",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Night Stalker": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Nova Blast": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Number Jumble": {
+    "genres": [
+      "Various"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "PBA Bowling ~ Bowling": {
+    "genres": [
+      "Sports / Bowling",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": null
+  },
+  "PGA Golf ~ Golf": {
+    "genres": [
+      "Sports / Golf",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": 0.35
+  },
+  "Pac-Man": {
+    "genres": [
+      "Action / Labyrinth",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Party Line - Blow Out": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Party Line - Hard Hat": {
+    "genres": [],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Party Line - Space Cadet": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Pinball": {
+    "genres": [
+      "Pinball",
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Pitfall!": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "Pole Position": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.45
+  },
+  "Popeye": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Q-bert": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Reversi": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "River Raid": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.65
+  },
+  "Robot Rubble": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Rocky & Bullwinckle": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Royal Dealer": {
+    "genres": [
+      "Casino",
+      "Casino / Cards"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "SNAFU": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.9
+  },
+  "Safecracker": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Scarfinger": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Scooby Doo's Maze Chase": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Sea Battle": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 1
+  },
+  "Sewer Sam": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Shark! Shark!": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Sharp Shot": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Slam Dunk - Super Pro Basketball": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Slap Shot - Super Pro Hockey": {
+    "genres": [
+      "Sports / Hockey",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Space Armada": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Space Battle": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.2
+  },
+  "Space Hawk": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.45
+  },
+  "Space Spartans": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Spiker - Super Pro Volleyball": {
+    "genres": [
+      "Sports",
+      "Sports / Volleyball"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Stadium Mud Buggies": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Stampede": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Star Strike": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.45
+  },
+  "Star Wars - The Empire Strikes Back": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Street ~ Happy Holidays - Trick or Treat": {
+    "genres": [
+      "Demo"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Sub Hunt": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Super Cobra": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.3
+  },
+  "Super Masters!": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Super NFL Footbal": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Super Pro Decathlon": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": null
+  },
+  "Super Pro Football": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Swords & Serpents": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "TRON": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "TRON Deadly Discs": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "TRON Maze-A-Tron": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.5
+  },
+  "TRON Solar Sailer": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Takeover": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Tennis": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Thin Ice": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Thunder Castle": {
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Tower of Doom": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Triple Action": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Triple Challenge - Chess, Checkers, Backgammon": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Tropical Trouble": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Truckin'": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Turbo": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.25
+  },
+  "Tutankham": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.3
+  },
+  "US Ski Team Skiing ~ Skiing": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 6,
+    "rating": 0.95
+  },
+  "USCF Chess ~ Chess": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Utopia": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Vectron": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Venture": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "White Water!": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "World Championship Baseball": {
+    "genres": [
+      "Sports / Baseball",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "World Cup Football": {
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "World Series Major League Baseball": {
+    "genres": [
+      "Sports / Baseball",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Worm Whomper": {
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.55
+  },
+  "Yogi's Frustration": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Zaxxon": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Zzzz! Spina the Bee": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  }
 }

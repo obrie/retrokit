@@ -1,285 +1,321 @@
 {
-    "3D Crazy Coaster": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "3D Mine Storm": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "3D Narrow Escape": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "AnimAction - Advanced Animation": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Armor..Attack": {
-        "genres": [
-            "Shooter / Vehicle",
-            "3rd person",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Art Master": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Bedlam": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Berzerk": {
-        "genres": [
-            "Action",
-            "Action / Labyrinth",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Blitz! - Action Football": {
-        "genres": [
-            "Sports / Football",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Clean Sweep": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "Cosmic Chasm": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Dark Tower": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Engine Analyzer": {
-        "genres": [
-            "Various"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Fortress of Narzod": {
-        "genres": [
-            "Shooter / Vehicle",
-            "Diagonal",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Heads-Up - Action Soccer": {
-        "genres": [
-            "Sports / Soccer",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "HyperChase - Auto Race": {
-        "genres": [
-            "Race",
-            "Driving",
-            "Race",
-            "Driving / Race"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Mail Plane": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Melody Master - Music Composition and Entertainment": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Mine Storm": {
-        "genres": [
-            "Shooter",
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Pitcher's Duel": {
-        "genres": [
-            "Sports",
-            "Sports / Baseball"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Polar Rescue": {
-        "genres": [
-            "Shooter",
-            "Shooter / Vehicle",
-            "1st person",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Pole Position": {
-        "genres": [
-            "Race 3rd Pers. view",
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "RA+A Spectrum I+ Stress Tester": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Rip Off": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Scramble": {
-        "genres": [
-            "Shooter / Vehicle",
-            "Horizontal",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Sledge 3D": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Solar Quest": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Space Wars": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Spike": {
-        "genres": [
-            "Platform",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Spin ball": {
-        "genres": [
-            "Pinball"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Star Castle": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Star Ship": {
-        "genres": [
-            "Shooter / Vehicle",
-            "1st person",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "StarHawk": {
-        "genres": [
-            "Shooter / Vehicle",
-            "1st person",
-            "Shooter",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Test Cartridge": {
-        "genres": [
-            "Various"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Tour De France": {
-        "genres": [
-            "Sports",
-            "Sports / Cycling",
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "WebWarp": {
-        "genres": [
-            "Shooter / Vehicle",
-            "Diagonal",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.8
-    }
+  "3D Crazy Coaster": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.9
+  },
+  "3D Mine Storm": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "3D Narrow Escape": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "AnimAction - Advanced Animation": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "Armor..Attack": {
+    "genres": [
+      "Shooter / Vehicle",
+      "3rd person",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Art Master": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "Bedlam": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Berzerk": {
+    "genres": [
+      "Action",
+      "Action / Labyrinth",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Blitz! - Action Football": {
+    "genres": [
+      "Sports / Football",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Clean Sweep": {
+    "genres": [
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.55
+  },
+  "Cosmic Chasm": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Dark Tower": {
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Engine Analyzer": {
+    "genres": [
+      "Various"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Fortress of Narzod": {
+    "genres": [
+      "Shooter / Vehicle",
+      "Diagonal",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Heads-Up - Action Soccer": {
+    "genres": [
+      "Sports / Soccer",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "HyperChase - Auto Race": {
+    "genres": [
+      "Race",
+      "Driving",
+      "Race",
+      "Driving / Race"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Mail Plane": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Melody Master - Music Composition and Entertainment": {
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Mine Storm": {
+    "genres": [
+      "Shooter",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Pitcher's Duel": {
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Polar Rescue": {
+    "genres": [
+      "Shooter",
+      "Shooter / Vehicle",
+      "1st person",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Pole Position": {
+    "genres": [
+      "Race 3rd Pers. view",
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "RA+A Spectrum I+ Stress Tester": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Rip Off": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Scramble": {
+    "genres": [
+      "Shooter / Vehicle",
+      "Horizontal",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Sledge 3D": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Solar Quest": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Space Wars": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Spike": {
+    "genres": [
+      "Platform",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Spin ball": {
+    "genres": [
+      "Pinball"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Star Castle": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Star Ship": {
+    "genres": [
+      "Shooter / Vehicle",
+      "1st person",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "StarHawk": {
+    "genres": [
+      "Shooter / Vehicle",
+      "1st person",
+      "Shooter",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.65
+  },
+  "Test Cartridge": {
+    "genres": [
+      "Various"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Tour De France": {
+    "genres": [
+      "Sports",
+      "Sports / Cycling",
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "WebWarp": {
+    "genres": [
+      "Shooter / Vehicle",
+      "Diagonal",
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  }
 }

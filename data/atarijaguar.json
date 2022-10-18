@@ -1,525 +1,597 @@
 {
-    "Aircars": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 8,
-        "rating": 0.3
-    },
-    "Alien vs Predator": {
-        "genres": [
-            "Shooter",
-            "Shooter / 1st person"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Arena Football '95": {
-        "genres": [
-            "Sports / Football",
-            "Sports"
-        ],
-        "players": 8,
-        "rating": null
-    },
-    "Atari Karts": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Attack of the Mutant Penguins": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "Barkley Shut Up and Jam": {
-        "genres": [
-            "Sports",
-            "Sports / Basketball"
-        ],
-        "players": 4,
-        "rating": 0.65
-    },
-    "Battle Sphere": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Breakout 2000": {
-        "genres": [
-            "Action / Breakout games",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Brett Hull Hockey": {
-        "genres": [
-            "Sports",
-            "Sports / Hockey"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Brutal Sports Football": {
-        "genres": [
-            "Sports",
-            "Sports / Football"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Bubsy in Fractured Furry Tales": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Cannon Fodder": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Checkered Flag": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.4
-    },
-    "Club Drive": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.25
-    },
-    "Cybermorph": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Defender 2000": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Doom": {
-        "genres": [
-            "Shooter",
-            "Shooter / 1st person"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Double Dragon V - The Shadow Falls": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.1
-    },
-    "Dragon - The Bruce Lee Story": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 1,
-        "rating": 0.35
-    },
-    "Evolution - Dino Dudes": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.35
-    },
-    "Fever Pitch Soccer": {
-        "genres": [
-            "Sports",
-            "Sports / Soccer"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Fight for Life": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Flashback - The Quest for Identity": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Flip Out!": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Frog Feast": {
-        "genres": [
-            "Action",
-            "Casual Game"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "High Voltage C Maze": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Hover Strike": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Hyper Force": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "I-War": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "International Sensible Soccer": {
-        "genres": [
-            "Sports",
-            "Sports / Soccer"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Iron Soldier": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Iron Soldier 2": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Jack Nicklaus Cyber Golf": {
-        "genres": [
-            "Sports",
-            "Sports / Golf"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Kasumi Ninja": {
-        "genres": [
-            "Beat'em Up"
-        ],
-        "players": 2,
-        "rating": 0.45
-    },
-    "Missile Command 3D": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "NBA Jam - Tournament Edition": {
-        "genres": [
-            "Sports",
-            "Sports / Basketball"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Native": {
-        "genres": [
-            "Demo",
-            "Shoot'em up / Horizontal",
-            "Shoot'em Up"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Phase Zero": {
-        "genres": [
-            "Shooter",
-            "Shooter / Vehicle",
-            "1st person"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Pinball Fantasies": {
-        "genres": [
-            "Pinball"
-        ],
-        "players": 8,
-        "rating": 0.4
-    },
-    "Pitfall - The Mayan Adventure": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Plucky Duck in Hollywood Hijinks": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Power Drive Rally": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Protector": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.2
-    },
-    "Raiden": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Rayman": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "Ruiner Pinball": {
-        "genres": [
-            "Pinball"
-        ],
-        "players": 4,
-        "rating": 0.6
-    },
-    "Skyhammer": {
-        "genres": [
-            "Lightgun Shooter"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Slam Racer": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Soccer Kid": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Space War 2000": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Speedster II": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Super Burnout": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Supercross 3D": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Syndicate": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Tempest 2000": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Thea Realm Fighters": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Theme Park": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Tiny Toon Adventures": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Total Carnage": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Towers II - Plight of the Stargazer": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Trevor McFur in the Crescent Galaxy": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Troy Aikman NFL Football": {
-        "genres": [
-            "Sports",
-            "Sports / Football"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Ultra Vortek": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Val d'Isere Skiing and Snowboarding": {
-        "genres": [
-            "Sports",
-            "Sports / Skiing"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Virtual VCS": {
-        "genres": [
-            "Compilation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "White Men Can't Jump": {
-        "genres": [
-            "Sports",
-            "Sports / Basketball"
-        ],
-        "players": 4,
-        "rating": 0.2
-    },
-    "Wolfenstein 3D": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Worms": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Zero 5": {
-        "genres": [
-            "Shoot'em Up"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Zool 2": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Zoop": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Zzyorxx II": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    }
+  "Aircars": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 8,
+    "rating": 0.3
+  },
+  "Alien vs Predator": {
+    "genres": [
+      "Shooter",
+      "Shooter / 1st person"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "Arena Football '95": {
+    "genres": [
+      "Sports / Football",
+      "Sports"
+    ],
+    "manuals": [],
+    "players": 8,
+    "rating": null
+  },
+  "Atari Karts": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Attack of the Mutant Penguins": {
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.9
+  },
+  "Barkley Shut Up and Jam": {
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": 0.65
+  },
+  "Battle Sphere": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Breakout 2000": {
+    "genres": [
+      "Action / Breakout games",
+      "Action"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Brett Hull Hockey": {
+    "genres": [
+      "Sports",
+      "Sports / Hockey"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Brutal Sports Football": {
+    "genres": [
+      "Sports",
+      "Sports / Football"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.65
+  },
+  "Bubsy in Fractured Furry Tales": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.5
+  },
+  "Cannon Fodder": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "Checkered Flag": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.4
+  },
+  "Club Drive": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.25
+  },
+  "Cybermorph": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.6
+  },
+  "Defender 2000": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.9
+  },
+  "Doom": {
+    "genres": [
+      "Shooter",
+      "Shooter / 1st person"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Double Dragon V - The Shadow Falls": {
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.1
+  },
+  "Dragon - The Bruce Lee Story": {
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.35
+  },
+  "Evolution - Dino Dudes": {
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.35
+  },
+  "Fever Pitch Soccer": {
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Fight for Life": {
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Flashback - The Quest for Identity": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Flip Out!": {
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.6
+  },
+  "Frog Feast": {
+    "genres": [
+      "Action",
+      "Casual Game"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "High Voltage C Maze": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Hover Strike": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Hyper Force": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.45
+  },
+  "I-War": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.55
+  },
+  "International Sensible Soccer": {
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.4
+  },
+  "Iron Soldier": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "Iron Soldier 2": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.65
+  },
+  "Jack Nicklaus Cyber Golf": {
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Kasumi Ninja": {
+    "genres": [
+      "Beat'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.45
+  },
+  "Missile Command 3D": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "NBA Jam - Tournament Edition": {
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Native": {
+    "genres": [
+      "Demo",
+      "Shoot'em up / Horizontal",
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Phase Zero": {
+    "genres": [
+      "Shooter",
+      "Shooter / Vehicle",
+      "1st person"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Pinball Fantasies": {
+    "genres": [
+      "Pinball"
+    ],
+    "manuals": [],
+    "players": 8,
+    "rating": 0.4
+  },
+  "Pitfall - The Mayan Adventure": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Plucky Duck in Hollywood Hijinks": {
+    "genres": [],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Power Drive Rally": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Protector": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.2
+  },
+  "Raiden": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.8
+  },
+  "Rayman": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.9
+  },
+  "Ruiner Pinball": {
+    "genres": [
+      "Pinball"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": 0.6
+  },
+  "Skyhammer": {
+    "genres": [
+      "Lightgun Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.8
+  },
+  "Slam Racer": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Soccer Kid": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.6
+  },
+  "Space War 2000": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.6
+  },
+  "Speedster II": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  },
+  "Super Burnout": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.85
+  },
+  "Supercross 3D": {
+    "genres": [
+      "Race",
+      "Driving"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.6
+  },
+  "Syndicate": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.65
+  },
+  "Tempest 2000": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.85
+  },
+  "Thea Realm Fighters": {
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "Theme Park": {
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.65
+  },
+  "Tiny Toon Adventures": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": null
+  },
+  "Total Carnage": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.5
+  },
+  "Towers II - Plight of the Stargazer": {
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.85
+  },
+  "Trevor McFur in the Crescent Galaxy": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.45
+  },
+  "Troy Aikman NFL Football": {
+    "genres": [
+      "Sports",
+      "Sports / Football"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Ultra Vortek": {
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.75
+  },
+  "Val d'Isere Skiing and Snowboarding": {
+    "genres": [
+      "Sports",
+      "Sports / Skiing"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Virtual VCS": {
+    "genres": [
+      "Compilation"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": null
+  },
+  "White Men Can't Jump": {
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "manuals": [],
+    "players": 4,
+    "rating": 0.2
+  },
+  "Wolfenstein 3D": {
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.75
+  },
+  "Worms": {
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Zero 5": {
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.7
+  },
+  "Zool 2": {
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [],
+    "players": 2,
+    "rating": 0.5
+  },
+  "Zoop": {
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [],
+    "players": 1,
+    "rating": 0.7
+  },
+  "Zzyorxx II": {
+    "genres": [],
+    "manuals": [],
+    "players": null,
+    "rating": null
+  }
 }
