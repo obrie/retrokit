@@ -1,5 +1,9 @@
 {
   "Aircars": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Race",
       "Driving"
@@ -16,6 +20,10 @@
     "rating": 0.3
   },
   "Alien vs Predator": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -41,6 +49,10 @@
     "rating": null
   },
   "Atari Karts": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Race",
       "Driving"
@@ -57,6 +69,10 @@
     "rating": 0.7
   },
   "Attack of the Mutant Penguins": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Puzzle-Game"
     ],
@@ -72,6 +88,10 @@
     "rating": 0.9
   },
   "Barkley Shut Up and Jam": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -96,6 +116,10 @@
     "rating": 0.7
   },
   "Breakout 2000": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Action / Breakout games",
       "Action"
@@ -121,6 +145,10 @@
     "rating": 0.7
   },
   "Brutal Sports Football": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Sports",
       "Sports / Football"
@@ -137,6 +165,10 @@
     "rating": 0.65
   },
   "Bubsy in Fractured Furry Tales": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    },
     "genres": [
       "Platform"
     ],
@@ -152,6 +184,10 @@
     "rating": 0.5
   },
   "Cannon Fodder": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Strategy"
     ],
@@ -167,6 +203,10 @@
     "rating": 0.85
   },
   "Checkered Flag": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 4
+    },
     "genres": [
       "Race",
       "Driving"
@@ -199,6 +239,10 @@
     "rating": 0.25
   },
   "Cybermorph": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Shooter"
     ],
@@ -214,6 +258,10 @@
     "rating": 0.6
   },
   "Defender 2000": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -229,6 +277,10 @@
     "rating": 0.9
   },
   "Doom": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    },
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -245,6 +297,10 @@
     "rating": 0.6
   },
   "Double Dragon V - The Shadow Falls": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Fight"
     ],
@@ -260,6 +316,10 @@
     "rating": 0.1
   },
   "Dragon - The Bruce Lee Story": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 3
+    },
     "genres": [
       "Fight"
     ],
@@ -275,6 +335,10 @@
     "rating": 0.35
   },
   "Evolution - Dino Dudes": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    },
     "genres": [
       "Puzzle-Game"
     ],
@@ -290,6 +354,10 @@
     "rating": 0.35
   },
   "Fever Pitch Soccer": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -306,6 +374,10 @@
     "rating": 0.7
   },
   "Fight for Life": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Fight"
     ],
@@ -321,6 +393,10 @@
     "rating": 0.7
   },
   "Flashback - The Quest for Identity": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Platform"
     ],
@@ -366,6 +442,10 @@
     "rating": null
   },
   "Hover Strike": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -381,6 +461,10 @@
     "rating": 0.6
   },
   "Hyper Force": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 3
+    },
     "genres": [
       "Platform"
     ],
@@ -396,6 +480,10 @@
     "rating": 0.45
   },
   "I-War": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Shooter"
     ],
@@ -411,6 +499,10 @@
     "rating": 0.55
   },
   "International Sensible Soccer": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 1
+    },
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -466,6 +558,10 @@
     "rating": null
   },
   "Kasumi Ninja": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Beat'em Up"
     ],
@@ -481,6 +577,10 @@
     "rating": 0.45
   },
   "Missile Command 3D": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Shooter"
     ],
@@ -496,6 +596,10 @@
     "rating": 0.7
   },
   "NBA Jam - Tournament Edition": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -522,6 +626,10 @@
     "rating": null
   },
   "Phase Zero": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Shooter",
       "Shooter / Vehicle",
@@ -532,6 +640,10 @@
     "rating": null
   },
   "Pinball Fantasies": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 4
+    },
     "genres": [
       "Pinball"
     ],
@@ -547,6 +659,10 @@
     "rating": 0.4
   },
   "Pitfall - The Mayan Adventure": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Platform"
     ],
@@ -584,6 +700,10 @@
     "rating": 0.75
   },
   "Protector": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -606,6 +726,10 @@
     "rating": 0.2
   },
   "Raiden": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -621,6 +745,10 @@
     "rating": 0.8
   },
   "Rayman": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Platform"
     ],
@@ -677,6 +805,10 @@
     "rating": null
   },
   "Soccer Kid": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Platform"
     ],
@@ -692,6 +824,10 @@
     "rating": 0.6
   },
   "Space War 2000": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 4
+    },
     "genres": [
       "Shooter"
     ],
@@ -729,6 +865,10 @@
     "rating": 0.85
   },
   "Supercross 3D": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Race",
       "Driving"
@@ -745,6 +885,10 @@
     "rating": 0.6
   },
   "Syndicate": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Strategy"
     ],
@@ -760,6 +904,10 @@
     "rating": 0.65
   },
   "Tempest 2000": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 3
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -783,6 +931,10 @@
     "rating": null
   },
   "Theme Park": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Simulation"
     ],
@@ -798,6 +950,10 @@
     "rating": 0.65
   },
   "Tiny Toon Adventures": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Platform"
     ],
@@ -806,6 +962,10 @@
     "rating": null
   },
   "Total Carnage": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Shooter"
     ],
@@ -829,6 +989,10 @@
     "rating": 0.85
   },
   "Trevor McFur in the Crescent Galaxy": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -844,6 +1008,10 @@
     "rating": 0.45
   },
   "Troy Aikman NFL Football": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Sports",
       "Sports / Football"
@@ -860,6 +1028,10 @@
     "rating": 0.5
   },
   "Ultra Vortek": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Fight"
     ],
@@ -875,6 +1047,10 @@
     "rating": 0.75
   },
   "Val d'Isere Skiing and Snowboarding": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    },
     "genres": [
       "Sports",
       "Sports / Skiing"
@@ -915,6 +1091,10 @@
     "rating": 0.2
   },
   "Wolfenstein 3D": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    },
     "genres": [
       "Shooter"
     ],
@@ -930,6 +1110,10 @@
     "rating": 0.75
   },
   "Worms": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    },
     "genres": [
       "Strategy"
     ],
@@ -945,6 +1129,10 @@
     "rating": 0.7
   },
   "Zero 5": {
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    },
     "genres": [
       "Shoot'em Up"
     ],
@@ -960,6 +1148,10 @@
     "rating": 0.7
   },
   "Zool 2": {
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    },
     "genres": [
       "Platform"
     ],
