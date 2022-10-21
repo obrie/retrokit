@@ -266,6 +266,15 @@
         "url": "https://archive.org/download/tenpin-bowling-basketball-eur-philips-videopac-1980/Tenpin Bowling - Basketball (EUR)(Philips Videopac)(1980).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Jeu de Quilles + Basketball",
+          "Tenpin Bowling + Basketball"
+        ],
+        "name": "Bowling + Basketball (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -296,6 +305,14 @@
           "sv"
         ],
         "url": "https://archive.org/download/neutron-star-eur-philips-videopac-1983/Neutron Star (EUR)(Philips Videopac+)(1983).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Neutron Star"
+        ],
+        "name": "Buraco Negro (Brazil)"
       }
     ],
     "players": 1,
@@ -1207,6 +1224,14 @@
         "url": "https://archive.org/download/Mousing_Cat_The_1982_Philips_en-de/Mousing_Cat_The_1982_Philips_en-de.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Chat et Souris"
+        ],
+        "name": "Mousing Cat, The (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1438,6 +1463,14 @@
         "url": "https://archive.org/download/pickaxe-pete-eur-philips-videopac-1982/Pickaxe Pete (EUR)(Philips Videopac)(1982).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Pickaxe Pete"
+        ],
+        "name": "Pick Axe Pete (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1500,6 +1533,17 @@
           "de"
         ],
         "url": "https://archive.org/download/Electronic_Billiards_1981_Philips_en-de/Electronic_Billiards_1981_Philips_en-de.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Billard Americain",
+          "Billard Electrique",
+          "Billiard Americain",
+          "Electronic Billiards"
+        ],
+        "name": "Pocket Billiards (USA, Europe)"
       }
     ],
     "players": 2,
@@ -1746,6 +1790,14 @@
           "sv"
         ],
         "url": "https://archive.org/download/race-spin-out-cryptogram-us-philips-videopac-1978/Race  Spin-out  Cryptogram (US)(Philips Videopac)(1978).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Race + Spin-out + Cryptogram"
+        ],
+        "name": "Speedway + Spin-out + Crypto-logic (USA, Europe)"
       }
     ],
     "players": 1,

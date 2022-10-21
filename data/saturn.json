@@ -41,6 +41,14 @@
         "url": "https://segaretro.org/images/5/5c/3dbaseball_sat_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "3D Baseball - The Majors"
+        ],
+        "name": "3D Baseball (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -57,6 +65,11 @@
           "fr"
         ],
         "url": "https://segaretro.org/images/5/5d/3D_Lemmings_Sat_EU_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "3D Lemmings (Europe)"
       }
     ],
     "players": 1,
@@ -126,6 +139,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/VR Golf '97 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "VR Golf '97"
+        ],
+        "name": "Actua Golf (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -143,6 +164,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/VR Soccer (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Actua Soccer",
+          "VR Soccer"
+        ],
+        "name": "Actua Soccer - Club Edition (Europe)"
       }
     ],
     "players": 2,
@@ -169,6 +199,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Advanced World War - Sennen Teikoku no Koubou - Last of the Millennium (Japan) (2M)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -243,6 +278,14 @@
         "url": "https://archive.org/download/albertodysseygaidenmanualscanjpsegasaturn/Albert Odyssey Gaiden (Manual)(Scan)(JP)(Sega Saturn).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Albert Odyssey Gaiden - Legend of Eldean"
+        ],
+        "name": "Albert Odyssey - Legend of Eldean (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -282,6 +325,11 @@
         "url": "https://archive.org/download/Alien_Trilogy_1996_Acclaim_EU/Alien_Trilogy_1996_Acclaim_EU.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Alien Trilogy (Europe) (En,Fr,Es,It) (4S)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -317,6 +365,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Alone in the Dark - One-Eyed Jack's Revenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Alone in the Dark - One-Eyed Jack's Revenge",
+          "Alone in the Dark 2"
+        ],
+        "name": "Alone in the Dark - Jack Is Back (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -363,6 +420,11 @@
         "url": "https://archive.org/download/AMOK_199x_Br/AMOK_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Amok (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -402,6 +464,11 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/1/1e/Andretti_Racing_Sat_BR_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Andretti Racing (Europe)"
       }
     ],
     "players": 2,
@@ -640,6 +707,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Arcade's Greatest Hits - The Atari Collection 1 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Arcade's Greatest Hits - The Atari Collection 1 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.55
   },
@@ -676,6 +748,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Area 51 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Area 51 (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 2,
@@ -734,6 +811,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Astal (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Kisuishou Densetsu Astal"
+        ],
+        "name": "Astal (USA) (1S)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -789,6 +874,15 @@
         "url": "https://archive.org/download/Decathlete_1996_J_color/Decathlete_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "DecAthlete",
+          "DecAthlete for SegaNet"
+        ],
+        "name": "Athlete Kings (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -805,6 +899,14 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Atlantis - The Lost Tales (Europe) (Disc 1).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Atlantis - The Lost Tales (Europe) (En,De,Es) (Disc 1)"
+      },
+      {
+        "name": "Atlantis - The Lost Tales (Europe) (En,De,Es) (Disc 2)"
       }
     ],
     "players": 1,
@@ -888,6 +990,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Baku_Baku_Animal_1995_J_color/Baku_Baku_Animal_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Baku Baku Animal - Sekai Shiiku Gakari Senshuken"
+        ],
+        "name": "Baku Baku Animal - World Zookeeper Contest (Europe)"
       }
     ],
     "players": 2,
@@ -987,6 +1097,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Bases Loaded '96 - Double Header (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Moero!! Pro Yakyuu '95 - Double Header"
+        ],
+        "name": "Bases Loaded '96 - Double Header (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1004,6 +1122,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Batman Forever - The Arcade Game (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Batman Forever - The Arcade Game (Europe)"
       }
     ],
     "players": 2,
@@ -1044,6 +1167,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Battle Arena Toshinden Remix (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Toushinden S"
+        ],
+        "name": "Battle Arena Toshinden Remix (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1067,6 +1198,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Toshinden_Ultimate_Revenge_Attack_1996_J_color/Toshinden_Ultimate_Revenge_Attack_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Toushinden URA"
+        ],
+        "name": "Battle Arena Toshinden URA - Ultimate Revenge Attack (Europe)"
       }
     ],
     "players": 2,
@@ -1108,6 +1247,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Battle Monsters (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Battle Monsters (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -1130,6 +1274,11 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/Battle_Stations_1997_E/Battle_Stations_1997_E.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Battle Stations (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -1178,6 +1327,11 @@
       "Casino / Roulette"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Big Ichigeki! Pachi-Slot Daikouryaku - Universal Museum (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1233,6 +1387,11 @@
         "url": "https://segaretro.org/images/9/90/Black_Dawn_Sat_BR_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Black Dawn (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1245,6 +1404,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Black-Matrix (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1262,6 +1426,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Black Fire (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "BlackFire (Europe)"
       }
     ],
     "players": 1,
@@ -1288,6 +1457,14 @@
         "url": "https://segaretro.org/images/1/11/Machine_Head_Sat_BR_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Machine Head"
+        ],
+        "name": "Blam! Machinehead (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1302,6 +1479,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Blast Chamber (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Blast Chamber (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -1334,6 +1516,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Blazing Dragons (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Blazing Dragons (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1343,6 +1530,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Blue Breaker - Ken yori mo Hohoemi o (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1383,6 +1575,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bootleg Sampler (Europe) (Made in EU, Made in Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1410,6 +1607,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bouken Katsugeki Monomono (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1437,6 +1639,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Brain Dead 13 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "BrainDead 13 (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1454,6 +1661,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Break Point Tennis (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Break Point Tennis"
+        ],
+        "name": "Break Point (Europe) (En,Fr)"
       }
     ],
     "players": 4,
@@ -1480,6 +1695,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Bubble Bobble - Also featuring Rainbow Islands (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Bubble Bobble also featuring Rainbow Islands (Europe)"
       }
     ],
     "players": 2,
@@ -1511,6 +1731,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Bug Too! (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Bug Too! (Europe)"
       }
     ],
     "players": 2,
@@ -1546,6 +1771,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Bug_Jump_Shite_Fundzukechatte_Pecchanko_1995_J_color/Bug_Jump_Shite_Fundzukechatte_Pecchanko_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Bug! Jump Shite, Funzukechatte, Petchanko"
+        ],
+        "name": "Bug! (Europe)"
       }
     ],
     "players": 1,
@@ -1589,6 +1822,11 @@
         "url": "https://archive.org/download/Burning_Rangers_199x_Br/Burning_Rangers_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Burning Rangers (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1611,6 +1849,11 @@
         "url": "https://archive.org/download/Bust-A-Move_2_Arcade_Edition_1996_Acclaim_EU/Bust-A-Move_2_Arcade_Edition_1996_Acclaim_EU.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Bust-A-Move 2 - Arcade Edition (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -1625,6 +1868,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Bust-A-Move 3 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Bust-A-Move 3 (Europe)"
       }
     ],
     "players": 2,
@@ -1665,6 +1913,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Can_Can_Bunny_Premiere_2_1996_J_color/Can_Can_Bunny_Premiere_2_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Can Can Bunny Premiere 2 (Japan) (Disc 1)"
+      },
+      {
+        "name": "Can Can Bunny Premiere 2 (Japan) (Disc 2) (Can Bani Himekuri Calendar)"
       }
     ],
     "players": 1,
@@ -1746,6 +2002,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Casper (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Casper (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1774,6 +2035,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Chaos Control (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Chaos Control (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -1870,6 +2136,11 @@
         "url": "https://archive.org/download/Christmas_NiGHTS_Into_Dreams_1996_J_color/Christmas_NiGHTS_Into_Dreams_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Christmas NiGHTS into Dreams... (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1931,6 +2202,14 @@
         "url": "https://archive.org/download/Clockwork_Knight_Pepperouchau_No_Daibouken_Joukan_1994_J_color/Clockwork_Knight_Pepperouchau_No_Daibouken_Joukan_1994_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Clockwork Knight - Pepperouchau no Daibouken Joukan"
+        ],
+        "name": "Clockwork Knight - Pepperouchau's Adventure (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1956,6 +2235,14 @@
         "url": "https://archive.org/download/Clockwork_Knight_Pepperouchau_No_Daibouken_Gekan_1995_J_color/Clockwork_Knight_Pepperouchau_No_Daibouken_Gekan_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Clockwork Knight - Pepperouchau no Daibouken Gekan"
+        ],
+        "name": "Clockwork Knight 2 - Pepperouchau's Adventure (Europe) (2S)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1972,6 +2259,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Code R (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2011,6 +2303,20 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/Command_Conquer_1996_E/Command__Conquer_1996_E.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 1)"
+        ],
+        "name": "Command & Conquer (Europe) (En,Fr,De) (Disc 1) (GDI)"
+      },
+      {
+        "clones": [
+          "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 2)"
+        ],
+        "name": "Command & Conquer (Europe) (En,Fr,De) (Disc 2) (NOD)"
       }
     ],
     "players": 1,
@@ -2109,6 +2415,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Courier Crisis (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Courier Crisis - The Saga of the Modern Fatalist (Europe) (En,Fr,De,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2124,6 +2435,20 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Creature Shock (USA) (Disc 1).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Creature Shock (Disc 1)"
+        ],
+        "name": "Creature Shock - Special Edition (USA) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Creature Shock (Disc 2)"
+        ],
+        "name": "Creature Shock - Special Edition (USA) (Disc 2)"
       }
     ],
     "players": 1,
@@ -2154,6 +2479,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Crime Wave (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Crimewave (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -2173,6 +2503,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Criticom - The Critical Combat (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Criticom - The Critical Combat"
+        ],
+        "name": "Criticom (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -2187,6 +2525,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Croc - Legend of the Gobbos (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Croc! Pau-Pau Island"
+        ],
+        "name": "Croc - Legend of the Gobbos (Europe)"
       }
     ],
     "players": 1,
@@ -2210,6 +2556,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Cross Tantei Monogatari (Japan) (Demo 1)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2236,6 +2587,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Crow, The - City of Angels (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Crow, The - City of Angels (Europe)"
       }
     ],
     "players": 2,
@@ -2267,6 +2623,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Crusader - No Remorse (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Crusader - No Remorse (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2283,6 +2644,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Crypt Killer (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Henry Explorers"
+        ],
+        "name": "Crypt Killer (Europe) (R)"
       }
     ],
     "players": null,
@@ -2326,6 +2695,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Culdcept (Japan) (Rev A) (10M)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -2333,6 +2707,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Custom Web Browser (Version 2) (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2363,6 +2742,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Cyber Speedway (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Gran Chaser"
+        ],
+        "name": "Cyber Speedway (Europe) (RE)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2380,6 +2767,11 @@
       "3rd Pers."
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Cyberbots - Fullmetal Madness (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2394,6 +2786,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Cyberia (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Cyberia (Europe) (En,Fr,De)"
       }
     ],
     "players": 1,
@@ -2420,6 +2817,20 @@
         "url": "https://archive.org/download/D_No_Shokutaku_1995_J_color/D_No_Shokutaku_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "D no Shokutaku (Disc 1)"
+        ],
+        "name": "D (Europe) (Disc I)"
+      },
+      {
+        "clones": [
+          "D no Shokutaku (Disc 2)"
+        ],
+        "name": "D (Europe) (Disc II)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2431,6 +2842,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "D-Xhird (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -2440,6 +2856,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "DJ Wars (Japan) (Rev A) (10M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2534,6 +2955,11 @@
         "url": "https://archive.org/download/Darius_Gaiden_1995_J_color/Darius_Gaiden_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Darius Gaiden (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2550,6 +2976,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/dariusii/dariusii.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Darius II (Europe)"
       }
     ],
     "players": 2,
@@ -2589,6 +3020,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Dark Legend (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Suiko Enbu"
+        ],
+        "name": "Dark Legend (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2611,6 +3050,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Dark_Savior_1996_J_color/Dark_Savior_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dark Savior (Europe)"
       }
     ],
     "players": 1,
@@ -2644,6 +3088,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Darklight Conflict (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Darklight Conflict (Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "players": 1,
@@ -2723,6 +3172,16 @@
         "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_199x_Br/Daytona_USA_Championship_Circuit_Edition_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Daytona USA - Championship Circuit Edition",
+          "Daytona USA - Circuit Edition",
+          "Daytona USA C.C.E. Net Link Edition"
+        ],
+        "name": "Daytona USA (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2776,6 +3235,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Dead_Or_Alive_1997_J_color/Dead_Or_Alive_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dead or Alive (Japan) (1M)"
       }
     ],
     "players": 2,
@@ -2845,6 +3309,14 @@
         "url": "https://archive.org/download/Deep_Fear_1998_J_color/Deep_Fear_1998_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Deep Fear (Europe) (Disc 1)"
+      },
+      {
+        "name": "Deep Fear (Europe) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2861,6 +3333,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Defcon 5 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Defcon 5 - Peace Has a Price..."
+        ],
+        "name": "Defcon 5 (Europe)"
       }
     ],
     "players": 1,
@@ -2884,6 +3364,11 @@
       "Casual Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Denpa Shounen-teki Game (Japan) (Rerelease)"
+      }
+    ],
     "players": 7,
     "rating": 0.45
   },
@@ -2950,6 +3435,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Desire (Japan) (Disc 2) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2965,6 +3455,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Destruction_Derby_1996_J_color_w_pages_1819/Destruction_Derby_1996_J_color_w_pages_1819.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Destruction Derby (Europe)"
       }
     ],
     "players": 1,
@@ -3030,6 +3525,11 @@
       "Demo"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Devil Summoner - Soul Hackers + Ronde (Japan) (Demo 1)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3091,6 +3591,14 @@
         "url": "https://archive.org/download/Die_Hard_Arcade_1997_E_3L/Die_Hard_Arcade_1997_E_3L.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dynamite Deka"
+        ],
+        "name": "Die Hard Arcade (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3109,6 +3617,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Die Hard Trilogy (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Die Hard Trilogy (Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "players": 1,
@@ -3138,6 +3651,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Digital Dance Mix Vol. 1 - Namie Amuro (Japan) (Rev A) (10M, 12M)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3173,6 +3691,16 @@
           "ja"
         ],
         "url": "https://archive.org/download/Digital_Pinball_Last_Gladiators_1995_J_color/Digital_Pinball_Last_Gladiators_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Digital Pinball - Last Gladiators",
+          "Digital Pinball - Last Gladiators Ver.9.7",
+          "Last Gladiators - Digital Pinball"
+        ],
+        "name": "Digital Pinball (Europe) (4S)"
       }
     ],
     "players": 1,
@@ -3252,6 +3780,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "DoDonPachi (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -3261,6 +3794,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "DonPachi (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3289,6 +3827,11 @@
           "it"
         ],
         "url": "https://archive.org/download/Doom_1997_E_5L/Doom_1997_E_5L.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Doom (Europe) (R)"
       }
     ],
     "players": 1,
@@ -3334,6 +3877,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Doukoku_Soshite..._1998_J_color/Doukoku_Soshite..._1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Doukoku Soshite... (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -3389,6 +3937,14 @@
         "url": "https://archive.org/download/Dragon_Ball_Z_Idainaru_Dragon_Ball_Densetsu_1996_Bandai_JP/Dragon_Ball_Z_Idainaru_Dragon_Ball_Densetsu_1996_Bandai_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dragon Ball Z - La Grande Legende des Boules de Cristal"
+        ],
+        "name": "Dragon Ball Z - Idainaru Dragon Ball Densetsu (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -3431,6 +3987,11 @@
         "url": "https://archive.org/download/DragonForceManualJPSegaSaturn/Dragon Force (Manual)(JP)(Sega Saturn).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dragon Force (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3448,6 +4009,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Dragon_Force_II_Kami_Sarishi_Daichi_Ni_1998_J_color/Dragon_Force_II_Kami_Sarishi_Daichi_Ni_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dragon Force II - Kami Sarishi Daichi ni (Japan)"
       }
     ],
     "players": 1,
@@ -3486,6 +4052,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Dragonheart - Fire & Steel (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "DragonHeart - Fire & Steel (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3513,6 +4084,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Drift King Shutokou Battle '97 - Tsuchiya Keiichi & Bandou Masaaki (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3546,6 +4122,11 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/Duke_Nukem_3D_1997_E/Duke_Nukem_3D_1997_E.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Duke Nukem 3D (Europe)"
       }
     ],
     "players": 2,
@@ -3590,6 +4171,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "EGWord Ver 2.00"
+        ],
+        "name": "EGWord (Japan) (1M)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3607,6 +4196,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Earthworm Jim 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Earthworm Jim 2 (Europe)"
       }
     ],
     "players": 1,
@@ -3758,6 +4352,20 @@
         "url": "https://archive.org/download/Enemy_Zero_199x_Br/Enemy_Zero_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Enemy Zero (Europe) (Disc 0) (Opening Disc)"
+      },
+      {
+        "name": "Enemy Zero (Europe) (Disc 1) (Game Disc)"
+      },
+      {
+        "name": "Enemy Zero (Europe) (Disc 2) (Game Disc)"
+      },
+      {
+        "name": "Enemy Zero (Europe) (Disc 3) (Game Disc)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3769,6 +4377,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Eternal Melody (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3805,6 +4418,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Eve - The Lost One (Japan) (Disc 3) (Lost One Disc) (1M)"
+      },
+      {
+        "name": "Eve - The Lost One (Japan) (Disc 4) (Extra Disc) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3831,6 +4452,15 @@
         "url": "https://archive.org/download/Seireki_1999_Pharaoh_No_Fukkatsu_1996_J_color/Seireki_1999_Pharaoh_No_Fukkatsu_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Powerslave",
+          "Seireki 1999 - Pharaoh no Fukkatsu"
+        ],
+        "name": "Exhumed (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3855,6 +4485,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/F1 Challenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "F-1 Live Information",
+          "F1 Challenge"
+        ],
+        "name": "F-1 Challenge (Europe)"
       }
     ],
     "players": 1,
@@ -3899,6 +4538,16 @@
         "url": "https://archive.org/download/FIFA_Road_To_World_Cup_98_1997_Fr/FIFA_Road_To_World_Cup_98_1997_Fr.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA - Die WM-Qualifikation 98",
+          "FIFA - En Route pour la Coupe du Monde 98",
+          "FIFA - Rumbo al Mundial 98"
+        ],
+        "name": "FIFA - Road to World Cup 98 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -3918,6 +4567,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/FIFA Soccer 97 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 97"
+        ],
+        "name": "FIFA 97 (Europe) (En,Fr,De,Es,It,Sv)"
+      }
+    ],
     "players": 6,
     "rating": 0.65
   },
@@ -3935,6 +4592,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/FIFA Soccer 96 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "players": 6,
@@ -3966,6 +4628,11 @@
       "Compilation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Falcom Classics II (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -4012,6 +4679,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Farland Story - Habou no Mai (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4065,6 +4737,11 @@
         "url": "https://archive.org/download/Fighters_Megamix_1996_J_color/Fighters_Megamix_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Fighters Megamix (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4099,6 +4776,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Fighting_Vipers_1996_J_color/Fighting_Vipers_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fighting Vipers (Europe)"
       }
     ],
     "players": 2,
@@ -4151,6 +4833,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fire Pro Gaiden Blazing Tornado (Japan)"
+      }
+    ],
     "players": null,
     "rating": 0.55
   },
@@ -4168,6 +4855,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/FireProWrestlingS6MenScrambleSegaSaturnJPManuals/Fire Pro Wrestling S 6 Men Scramble (Manual)(JP)(Sega Saturn).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fire Prowrestling S - 6Men Scramble (Japan) (1M)"
       }
     ],
     "players": 6,
@@ -4193,6 +4885,15 @@
           "it"
         ],
         "url": "https://archive.org/download/Firestorm_Thunderhawk_2_1995_Core_EU/Firestorm_Thunderhawk_2_1995_Core_EU.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Thunderhawk II",
+          "Thunderstrike 2"
+        ],
+        "name": "Firestorm - Thunderhawk 2 (Europe) (En,Fr)"
       }
     ],
     "players": 1,
@@ -4518,6 +5219,11 @@
         "url": "https://archive.org/download/Frank_Thomas_Big_Hurt_Baseball_1996_J_color/Frank_Thomas_Big_Hurt_Baseball_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Frank Thomas Big Hurt Baseball (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4576,6 +5282,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fully Cowled Mini Yonku - Super Factory (Japan) (Rev A) (10M)"
+      }
+    ],
     "players": 5,
     "rating": 0.65
   },
@@ -4595,6 +5306,14 @@
       "Sports / Boxing"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Funky Head Boxers Plus"
+        ],
+        "name": "Funky Head Boxers (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4698,6 +5417,14 @@
         "url": "https://archive.org/download/Layer_Section_1995_J_color/Layer_Section_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Layer Section"
+        ],
+        "name": "Galactic Attack (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4714,6 +5441,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Galaxy Fight (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Galaxy Fight - Universal Warriors"
+        ],
+        "name": "Galaxy Fight (Europe)"
       }
     ],
     "players": 2,
@@ -4792,6 +5527,11 @@
       "Board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Game no Tatsujin (Japan) (4M)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4819,6 +5559,11 @@
       "Board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Game of Life, The - DX Jinsei Game (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4911,6 +5656,11 @@
       "Lightgun Shooter"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gebockers (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -4944,6 +5694,11 @@
       "Sports / Baseball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gekitotsu Koushien (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -4997,6 +5752,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Gex (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Gex (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5014,6 +5774,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Ghen War (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ghen War (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5024,6 +5789,14 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Ginga Eiyuu Densetsu Plus"
+        ],
+        "name": "Ginga Eiyuu Densetsu (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5102,6 +5875,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Girls in Motion Puzzle Vol. 2 - Body Special 264 (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5131,6 +5909,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Goiken Muyou - Anarchy in the Nippon (Japan)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -5147,6 +5930,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Golden Axe - The Duel (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Golden Axe - The Duel (Europe)"
       }
     ],
     "players": 2,
@@ -5242,6 +6030,14 @@
         "url": "https://archive.org/download/Grandia_Adventure_Manual_1997_J_color/Grandia_Adventure_Manual_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Grandia (Japan) (Disc 1) (1M)"
+      },
+      {
+        "name": "Grandia (Japan) (Disc 2) (1M, 2M)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5253,6 +6049,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Grandia - Digital Museum (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5275,6 +6076,11 @@
       "Sports / Baseball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Greatest Nine '96 (Japan) (2M)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -5303,6 +6109,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Grid Runner (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Grid Runner"
+        ],
+        "name": "Grid Run (Europe)"
       }
     ],
     "players": 2,
@@ -5347,6 +6161,11 @@
         "url": "https://archive.org/download/Guardian_Heroes_1996_E_6L/Guardian_Heroes_1996_E_6L.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Guardian Heroes (Europe)"
+      }
+    ],
     "players": 6,
     "rating": 0.75
   },
@@ -5362,6 +6181,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Gungriffon (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Gungriffon"
+        ],
+        "name": "Gun Griffon (Europe)"
       }
     ],
     "players": 1,
@@ -5408,6 +6235,11 @@
       "Shooter / 1st person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gungriffon II (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -5464,6 +6296,15 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Hang-on Gp (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hang On GP '95",
+          "Hang-On GP"
+        ],
+        "name": "Hang On GP '96 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5474,6 +6315,11 @@
       "Action / Labyrinth"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hansha de Spark! (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -5491,6 +6337,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/TNN Motor Sports - Hardcore 4X4 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Deka 4-ku - Tough the Truck",
+          "TNN Motor Sports HardCore 4X4"
+        ],
+        "name": "Hardcore 4x4 (Europe) (En,Fr,De)"
       }
     ],
     "players": 1,
@@ -5571,6 +6426,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Popoitto Hebereke"
+        ],
+        "name": "Hebereke's Popoitto (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -5592,6 +6455,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Heir of Zendor - The Legend and The Land (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Gotha II - Tenkuu no Kishi"
+        ],
+        "name": "Heir of Zendor - The Legend and The Land (USA)"
       }
     ],
     "players": 1,
@@ -5647,6 +6518,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Hexen - Beyond Heretic (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hexen - Beyond Heretic"
+        ],
+        "name": "Hexen (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5666,6 +6545,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Hi-Octane - The Track Fights Back! (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hi-Octane - The Track Fights Back!"
+        ],
+        "name": "Hi-Octane (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -5683,6 +6570,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/High Velocity - Mountain Racing Challenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Touge King the Spirits"
+        ],
+        "name": "High Velocity - Mountain Racing Challenge (USA)"
       }
     ],
     "players": 2,
@@ -5719,6 +6614,14 @@
         "url": "https://archive.org/download/Wangan_Dead_Heat_1995_J_color/Wangan_Dead_Heat_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Wangan Dead Heat"
+        ],
+        "name": "Highway 2000 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -5737,6 +6640,11 @@
       "Casino"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hissatsu Pachinko Collection (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -5835,6 +6743,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Horde, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Horde, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -5849,6 +6762,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Horror_Tour_1996_J_color/Horror_Tour_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Horror Tour (Japan)"
       }
     ],
     "players": 1,
@@ -5913,6 +6831,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/House_Of_The_Dead_Taikenban_The_1998_J_color/House_Of_The_Dead_Taikenban_The_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "House of the Dead, The (Europe)"
       }
     ],
     "players": 2,
@@ -6060,6 +6983,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Idol Mahjong - Final Romance R (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -6077,6 +7005,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Impact Racing (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Impact Racing (Europe)"
       }
     ],
     "players": 1,
@@ -6098,6 +7031,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/In the Hunt (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Kaitei Daisensou"
+        ],
+        "name": "In the Hunt (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6114,6 +7055,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Incredible Hulk, The - The Pantheon Saga (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Incredible Hulk, The - The Pantheon Saga (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -6135,6 +7081,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Independence Day (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Independence Day"
+        ],
+        "name": "Independence Day - The Game (Europe) (En,Fr,De,Es,It,Sv)"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -6152,6 +7106,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Worldwide Soccer - Sega International Victory Goal Edition (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sega International Victory Goal",
+          "Worldwide Soccer - Sega International Victory Goal Edition"
+        ],
+        "name": "International Victory Goal (Europe)"
       }
     ],
     "players": 4,
@@ -6191,6 +7154,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Iron Man X-O Manowar in Heavy Metal (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Iron Man & X-O Manowar in Heavy Metal (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -6213,6 +7181,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/0/00/WADIronStorm_SS_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "World Advanced Daisenryaku - Koutetsu no Senpuu"
+        ],
+        "name": "Iron Storm (USA)"
       }
     ],
     "players": 1,
@@ -6279,6 +7255,11 @@
         "url": "https://archive.org/download/j-league-honoo-saturn-manual/J League Honoo Saturn Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "J.League Jikkyou Honoo no Striker (Japan) (1M)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6292,6 +7273,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "J.League Pro Soccer Club o Tsukurou! (Japan)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -6305,6 +7291,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "J.League Pro Soccer Club o Tsukurou! 2 (Japan) (1M)"
+      }
+    ],
     "players": 8,
     "rating": 0.9
   },
@@ -6322,6 +7313,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Victory_Goal_96_1996_J_color/Victory_Goal_96_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "J.League Victory Goal '97"
+        ],
+        "name": "J.League Victory Goal '96 (Japan) (1M, 3M)"
       }
     ],
     "players": 4,
@@ -6363,6 +7362,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Oracle no Houseki - Jewels of the Oracle"
+        ],
+        "name": "Jewels of the Oracle (Europe) (En,Ja,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -6491,6 +7498,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Johnny Bazookatone (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Johnny Bazooka"
+        ],
+        "name": "Johnny Bazookatone (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6501,6 +7516,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Jonah Lomu Rugby (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -6612,6 +7632,11 @@
       "Shougi"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kanazawa Shougi (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -6622,6 +7647,11 @@
       "Sports / Baseball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kanzen Chuukei Pro Yakyuu Greatest Nine (Japan) (Rev A)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6648,6 +7678,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Keiou Yuugekitai - Katsugeki-hen"
+        ],
+        "name": "Keio Flying Squadron 2 (Europe)"
       }
     ],
     "players": 1,
@@ -6687,6 +7725,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Keriotosse! (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -6820,6 +7863,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "King of Fighters '95, The (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6837,6 +7885,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/King_Of_Fighters_96_The_1996_J_color/King_Of_Fighters_96_The_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "King of Fighters '96, The (Japan) (1M)"
       }
     ],
     "players": 2,
@@ -6868,6 +7921,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kiss yori... (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -6877,6 +7935,11 @@
       "Board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kochira Katsushikaku Kameari Kouenmae - Hashutsujo - Nakagawa Land Dai-Race! no Maki (Japan)"
+      }
+    ],
     "players": 6,
     "rating": 0.55
   },
@@ -6969,6 +8032,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Krazy Ivan (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7005,6 +8073,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Kuro_No_Danshou_The_Literary_Fragment_Genteiban_1997_J_color/Kuro_No_Danshou_The_Literary_Fragment_Genteiban_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Kuro no Danshou - The Literary Fragment (Japan) (2M)"
       }
     ],
     "players": 1,
@@ -7080,6 +8153,11 @@
         "url": "https://segaretro.org/images/9/95/Langrisser_Dramatic_Edition_JP_\u53d6\u6271\u8aac\u660e\u66f8.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Langrisser - Dramatic Edition (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7096,6 +8174,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/d/d9/Langrisser_III_JP_\u53d6\u6271\u8aac\u660e\u66f8.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Langrisser III (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -7138,6 +8221,11 @@
         "url": "https://segaretro.org/images/b/b2/Langrisser_V_The_End_of_Legend_JP_\u53d6\u6271\u8aac\u660e\u66f8.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Langrisser V - The End of Legend (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7169,6 +8257,11 @@
         "url": "https://segaretro.org/images/b/b6/Last-bronx-manual-saturn-br.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Last Bronx (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -7186,6 +8279,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Layer_Section_Satakore_1997_J_color/Layer_Section_Satakore_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Layer Section II (Japan)"
       }
     ],
     "players": 2,
@@ -7284,6 +8382,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Loaded (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Blood Factory"
+        ],
+        "name": "Loaded (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7331,6 +8437,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Norse by Norsewest - The Return of The Lost Vikings (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Norse by Norsewest - The Return of the Lost Vikings"
+        ],
+        "name": "Lost Vikings 2 - Norse by Norsewest (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -7360,6 +8474,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Lost_World_Jurassic_Park_The_1997_J_color/Lost_World_Jurassic_Park_The_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lost World, The - Jurassic Park (Europe)"
       }
     ],
     "players": 1,
@@ -7396,6 +8515,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Lunar_Silver_Star_Story_1996_J_color/Lunar_Silver_Star_Story_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Lunar - Silver Star Story Complete"
+        ],
+        "name": "Lunar - Silver Star Story (Japan)"
       }
     ],
     "players": 1,
@@ -7473,6 +8600,11 @@
         "url": "https://archive.org/download/Machi_1998_J_color/Machi_1998_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Machi (Japan) (Demo) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -7488,6 +8620,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Madden NFL 97 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Madden NFL 97 (Europe)"
       }
     ],
     "players": 8,
@@ -7507,6 +8644,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Madden NFL 98 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Madden NFL 98 (Europe)"
       }
     ],
     "players": 8,
@@ -7539,6 +8681,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Magic Carpet (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Magic Carpet (Europe) (En,Fr,De,Es,Sv)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -7564,6 +8711,11 @@
         "url": "https://archive.org/download/Magic_Knight_Rayearth_1995_J_color/Magic_Knight_Rayearth_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Magic Knight Rayearth (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -7575,6 +8727,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Magical Drop (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -7600,6 +8757,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Magical_Drop_III_Toretate_Zoukangou_1997_J_color/Magical_Drop_III_Toretate_Zoukangou_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Magical Drop III - Toretate Zoukan-gou! (Japan) (2M)"
       }
     ],
     "players": 2,
@@ -7711,6 +8873,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mahjong Kaigan Monogatari - Mahjong-kyou Jidai Sexy Idol-hen (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7721,6 +8888,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mahjong Taikai II Special (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7778,6 +8950,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Mahou_Gakuen_Lunar_1997_J_color/Mahou_Gakuen_Lunar_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Mahou Gakuen Lunar! (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -7876,6 +9053,17 @@
         "url": "https://archive.org/download/Manoir_Des_Ames_Perdues_Le_1995_Fr/Manoir_Des_Ames_Perdues_Le_1995_Fr.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Manoir des Ames Perdues, Le",
+          "Mansion de las Almas Ocultas, La",
+          "Mystery Mansion - Das Haus der verlorenen Seelen",
+          "Shinsetsu Yumemi Yakata - Tobira no Oku ni Dareka ga..."
+        ],
+        "name": "Mansion of Hidden Souls, The (Europe) (1S)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -7893,6 +9081,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Manx TT SuperBike (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Manx TT SuperBike (Europe)"
       }
     ],
     "players": 2,
@@ -7968,6 +9161,11 @@
         "url": "https://archive.org/download/Marvel_Super_Heroes_1997_J_color/Marvel_Super_Heroes_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Marvel Super Heroes (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -7996,6 +9194,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Mass Destruction (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Mass Destruction - Otousan ni mo Dekiru Soft"
+        ],
+        "name": "Mass Destruction (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -8054,6 +9260,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Maximum Force (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Maximum Force (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -8070,6 +9281,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Mechwarrior 2 - 31st Century Combat (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "MechWarrior 2"
+        ],
+        "name": "MechWarrior 2 - 31st Century Combat - Arcade Combat Edition (Europe)"
       }
     ],
     "players": 1,
@@ -8108,6 +9327,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Mega Man 8 - Anniversary Collector's Edition (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Rockman 8 - Metal Heroes"
+        ],
+        "name": "Mega Man 8 (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -8120,6 +9347,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Rockman X3"
+        ],
+        "name": "Mega Man X3 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8138,6 +9373,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Megaman X4 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Rockman X4"
+        ],
+        "name": "Mega Man X4 (USA)"
       }
     ],
     "players": 1,
@@ -8169,6 +9412,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Message Navi (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -8189,6 +9437,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Metal Black (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -8223,6 +9476,11 @@
         "url": "https://archive.org/download/Metal_Slug_1997_J_color/Metal_Slug_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Metal Slug - Super Vehicle-001 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -8244,6 +9502,11 @@
       "Lightgun Shooter"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mighty Hits (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.5
   },
@@ -8287,6 +9550,14 @@
         "url": "https://archive.org/download/Side_Pocket_2_Legend_Of_Hustler_1995_J_color/Side_Pocket_2_Legend_Of_Hustler_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Side Pocket 2 - Densetsu no Hustler"
+        ],
+        "name": "Minnesota Fats - Pool Legend (USA) (R)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8325,6 +9596,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mobile Suit Gundam (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8347,6 +9623,11 @@
       "Shooter / 1st person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mobile Suit Gundam Side Story I - Senritsu no Blue (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -8424,6 +9705,11 @@
       "Board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Momotarou Douchuuki (Japan) (1M)"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -8434,6 +9720,11 @@
       "Puzzle-Game / Fall"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Monster Slider (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -8462,6 +9753,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Mortal Kombat II (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Mortal Kombat II Kanzenban"
+        ],
+        "name": "Mortal Kombat II (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -8486,6 +9785,11 @@
           "pt"
         ],
         "url": "https://archive.org/download/Mortal_Kombat_Trilogy_199x_Br/Mortal_Kombat_Trilogy_199x_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Mortal Kombat Trilogy (Europe)"
       }
     ],
     "players": 2,
@@ -8540,6 +9844,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Mr._Bones_1997_J_color/Mr._Bones_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Mr. Bones (Europe) (Disc 1)"
+      },
+      {
+        "name": "Mr. Bones (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -8619,6 +9931,11 @@
         "url": "https://archive.org/download/Myst_1996_Br/Myst_1996_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Myst (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -8645,6 +9962,15 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Blazing Heroes (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Blazing Heroes",
+          "Riglordsaga"
+        ],
+        "name": "Mystaria - The Realms of Lore (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -8660,6 +9986,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NASCAR '98 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NASCAR 98 (Europe)"
       }
     ],
     "players": 2,
@@ -8679,6 +10010,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NBA Action (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Action (Europe)"
+      }
+    ],
     "players": 10,
     "rating": 0.6
   },
@@ -8696,6 +10032,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NBA Action 98 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA Action 98 (Europe)"
       }
     ],
     "players": 8,
@@ -8723,6 +10064,11 @@
         "url": "https://archive.org/download/NBA_Jam_Tournament_Edition_1995_J/NBA_Jam_Tournament_Edition_1995_J.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Jam - Tournament Edition (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -8746,6 +10092,11 @@
         "url": "https://archive.org/download/NBA_Jam_Extreme_1996_E/NBA_Jam_Extreme_1996_E.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Jam Extreme (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -8761,6 +10112,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NBA Live 97 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA Live 97 (Europe)"
       }
     ],
     "players": 10,
@@ -8782,6 +10138,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NBA Live 98 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Live 98 (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.4
   },
@@ -8796,6 +10157,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NFL '97 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NFL '97 (USA)"
       }
     ],
     "players": 8,
@@ -8820,6 +10186,14 @@
         "url": "https://archive.org/download/NFL_Quarterback_Club_96_1996_J/NFL_Quarterback_Club_96_1996_J.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "NFL Quarterback Club '96"
+        ],
+        "name": "NFL Quarterback Club 96 (Europe)"
+      }
+    ],
     "players": 12,
     "rating": 0.6
   },
@@ -8842,6 +10216,14 @@
         "url": "https://archive.org/download/NFL_Quarterback_Club_97_1997_Acclaim_JP/NFL_Quarterback_Club_97_1997_Acclaim_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "NFL Quarterback Club '97"
+        ],
+        "name": "NFL Quarterback Club 97 (Europe)"
+      }
+    ],
     "players": 12,
     "rating": 0.6
   },
@@ -8859,6 +10241,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NHL 97 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NHL 97 (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.6
   },
@@ -8873,6 +10260,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NHL 98 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NHL 98 (Europe)"
       }
     ],
     "players": 8,
@@ -8892,6 +10284,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NHL All-Star Hockey (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NHL All-Star Hockey (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.55
   },
@@ -8909,6 +10306,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/NHL All-Star Hockey 98 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NHL All-Star Hockey 98 (Europe)"
       }
     ],
     "players": 8,
@@ -8931,6 +10333,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/NHL_Powerplay_96_1997_J_color/NHL_Powerplay_96_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NHL Powerplay '96 (Europe)"
       }
     ],
     "players": 6,
@@ -8963,6 +10370,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Nanatsu no Hikan (Japan) (Disc 1) (1M)"
+      },
+      {
+        "name": "Nanatsu no Hikan (Japan) (Disc 2) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -9051,6 +10466,11 @@
         "url": "https://segaretro.org/images/5/58/NiGHTS_into_Dreams_Sat_BR_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NiGHTS into Dreams... (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9079,6 +10499,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Night Warriors - Darkstalkers' Revenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Vampire Hunter - Darkstalker's Revenge",
+          "Vampire Hunter - Darkstalkers' Revenge"
+        ],
+        "name": "Night Warriors - Darkstalkers' Revenge (Europe)"
       }
     ],
     "players": 2,
@@ -9201,6 +10630,11 @@
       "Action / Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ninja Jajamaru-kun - Onigiri Ninpouchou Gold (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -9344,6 +10778,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Off-World Interceptor Extreme (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Off-World Interceptor Extreme (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -9386,6 +10825,11 @@
         "url": "https://archive.org/download/Ojousama_Wo_Nerae_1998_J_color/Ojousama_Wo_Nerae_1998_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Ojousama o Nerae!! (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -9418,6 +10862,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Olympic_Soccer_1996_J_color/Olympic_Soccer_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Olympic Soccer (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -9472,6 +10921,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/P.T.O. II - Pacific Theater of Operations (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Teitoku no Ketsudan II"
+        ],
+        "name": "P.T.O. - Pacific Theater of Operations II (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -9498,6 +10955,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/PGA Tour 97 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "PGA Tour 97 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -9521,6 +10983,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Pad Nifty 1.1 & Habitat II"
+        ],
+        "name": "Pad Nifty (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9546,6 +11016,14 @@
         "url": "https://archive.org/download/Magical_Hoppers_1997_J_color/Magical_Hoppers_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Magical Hoppers"
+        ],
+        "name": "Pandemonium! (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -9569,6 +11047,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Panic_Chan_Genteiban_Audio_Mini_CD_1997_J/Panic_Chan_Genteiban_Audio_Mini_CD_1997_J.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Panic-chan (Japan) (Rev A) (10M)"
       }
     ],
     "players": 1,
@@ -9607,6 +11090,11 @@
         "url": "https://archive.org/download/Panzer_Dragoon_Booklet_1995_J_color/Panzer_Dragoon_Booklet_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Panzer Dragoon (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9640,6 +11128,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Panzer_Dragoon_Zwei_1996_J_color/Panzer_Dragoon_Zwei_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Panzer Dragoon II Zwei (Europe)"
       }
     ],
     "players": 1,
@@ -9677,6 +11170,32 @@
         "url": "https://segaretro.org/images/b/b1/PanzerDragoonSaga_SS_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Azel - Panzer Dragoon RPG (Disc 1)"
+        ],
+        "name": "Panzer Dragoon Saga (Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Azel - Panzer Dragoon RPG (Disc 2)"
+        ],
+        "name": "Panzer Dragoon Saga (Europe) (Disc 2)"
+      },
+      {
+        "clones": [
+          "Azel - Panzer Dragoon RPG (Disc 3)"
+        ],
+        "name": "Panzer Dragoon Saga (Europe) (Disc 3)"
+      },
+      {
+        "clones": [
+          "Azel - Panzer Dragoon RPG (Disc 4)"
+        ],
+        "name": "Panzer Dragoon Saga (Europe) (Disc 4)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9706,6 +11225,14 @@
       "Shoot'em up / Horizontal"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Gokujou Parodius Da! Deluxe Pack"
+        ],
+        "name": "Parodius (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -9740,6 +11267,14 @@
         "url": "https://archive.org/download/Pebble_Beach_Golf_Links_Stadler_Ni_Chousen_1995_J_color/Pebble_Beach_Golf_Links_Stadler_Ni_Chousen_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Pebble Beach Golf Links - Stadler ni Chousen"
+        ],
+        "name": "Pebble Beach Golf Links (Europe) (3S)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -9750,6 +11285,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PhantasM (Japan) (Disc 6) (4M)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -9757,6 +11297,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Photo CD Operating System (Europe) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -9802,6 +11347,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pia Carrot e Youkoso!! 2 (Japan) (Disc 1) (Game Disc) (2M)"
+      },
+      {
+        "name": "Pia Carrot e Youkoso!! 2 (Japan) (Disc 2) (Special Disc) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -9813,6 +11366,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pia Carrot e Youkoso!! We've Been Waiting for You (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -9846,6 +11404,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/Pinball_Graffiti_1996_E_3L/Pinball_Graffiti_1996_E_3L.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Pinball Graffiti (Europe)"
       }
     ],
     "players": 2,
@@ -9937,6 +11500,11 @@
         "url": "https://archive.org/download/PriCla_Daisakusen_1996_J_color/PriCla_Daisakusen_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "PriKura (Princess Kurara) Daisakusen (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -9966,6 +11534,11 @@
         "url": "https://archive.org/download/Primal_Rage_1996_E_5L/Primal_Rage_1996_E_5L.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Primal Rage (Europe) (En,Fr,De,Es,It,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -9991,6 +11564,11 @@
         "url": "https://segaretro.org/images/c/c4/Princess_Crown_Sat_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Princess Crown (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -10005,6 +11583,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/PrincessMakerYumemiruYouseiManualJPSegaSaturn/Princess Maker Yumemiru Yousei (Manual)(JP)(Sega Saturn).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Princess Maker - Yumemiru Yousei (Japan)"
       }
     ],
     "players": 1,
@@ -10025,6 +11608,11 @@
         "url": "https://archive.org/download/Princess_Maker_2_1995_J_color/Princess_Maker_2_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Princess Maker 2 (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10036,6 +11624,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Princess Quest (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10181,6 +11774,11 @@
         "url": "https://archive.org/download/Pro_Mahjong_Kiwame_S_Satakore_1997_J_color/Pro_Mahjong_Kiwame_S_Satakore_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Pro Mahjong Kiwame-S (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10210,6 +11808,11 @@
         "url": "https://segaretro.org/images/0/09/GreatestNine97_Saturn_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Pro Yakyuu Greatest Nine '97 (Japan) (Rev A)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -10237,6 +11840,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Pro_Yakyuu_Greatest_Nine_98_1998_J_color/Pro_Yakyuu_Greatest_Nine_98_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Pro Yakyuu Greatest Nine '98 (Japan) (Rev A)"
       }
     ],
     "players": 2,
@@ -10275,6 +11883,11 @@
         "url": "https://archive.org/download/Pro_Yakyuu_Team_Mo_Tsukurou_1998_J_color/Pro_Yakyuu_Team_Mo_Tsukurou_1998_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Pro Yakyuu Team mo Tsukurou! (Japan)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -10289,6 +11902,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Pro Pinball (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Pro-Pinball"
+        ],
+        "name": "Pro-Pinball - The Web (Europe)"
       }
     ],
     "players": 4,
@@ -10328,6 +11949,14 @@
         "url": "https://archive.org/download/Puyo_Puyo_Sun_1997_J_color/Puyo_Puyo_Sun_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Puyo Puyo Sun for SegaNet"
+        ],
+        "name": "Puyo Puyo Sun (Japan) (1M, 3M)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -10347,6 +11976,11 @@
         "url": "https://archive.org/download/Puyo_Puyo_Tsuu_1995_J_color/Puyo_Puyo_Tsuu_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Puyo Puyo Tsuu (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -10356,6 +11990,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Puzzle Bobble 2X (Japan) (2M2)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -10365,6 +12004,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Puzzle Bobble 3 for SegaNet"
+        ],
+        "name": "Puzzle Bobble 3 (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -10396,6 +12043,11 @@
           "pt"
         ],
         "url": "https://archive.org/download/Quake_199x_Br/Quake_199x_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Quake (Europe)"
       }
     ],
     "players": 1,
@@ -10442,6 +12094,11 @@
       "Quiz"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Quiz Nanairo Dreams - Nijiirochou no Kiseki (Japan)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -10495,6 +12152,11 @@
       "Fight / 2D"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Rabbit (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10544,6 +12206,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Rampage - World Tour (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Rampage - World Tour (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10581,6 +12248,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Rayman (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Rayman (Europe) (En,Fr,De) (1S)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -10593,6 +12265,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Real Bout Garou Densetsu (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -10605,6 +12282,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Real Bout Garou Densetsu Special (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10614,6 +12296,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Real Mahjong Adventure Umi e - Summer Waltz (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10628,6 +12315,20 @@
           "ja"
         ],
         "url": "https://archive.org/compress/Real_Sound_Kaze_no_Regret_Documents/formats=PNG&file=/Real_Sound_Kaze_no_Regret_Documents.zip"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 1) (2M, 3M)"
+      },
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 2) (1M)"
+      },
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 3) (1M)"
+      },
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 4) (2M)"
       }
     ],
     "players": 1,
@@ -10681,6 +12382,14 @@
         "url": "https://archive.org/download/Resident_Evil_199x_Br/Resident_Evil_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Bio Hazard"
+        ],
+        "name": "Resident Evil (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -10695,6 +12404,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/7/74/Return_to_Zork_Sat_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Return to Zork (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -10723,6 +12437,11 @@
         "url": "https://archive.org/download/Revolution_X_1996_J/Revolution_X_1996_J.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Revolution X - Music Is the Weapon (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -10734,6 +12453,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Riglordsaga 2 (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10750,6 +12474,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Resurrection - Rise 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Rise 2 - Resurrection (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -10769,6 +12498,32 @@
           "pt"
         ],
         "url": "https://archive.org/download/Riven_The_Sequel_To_Myst_199x_Br/Riven_The_Sequel_To_Myst_199x_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Riven - A Sequencia de Myst (Disc 1)"
+        ],
+        "name": "Riven - The Sequel to Myst (Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Riven - A Sequencia de Myst (Disc 2)"
+        ],
+        "name": "Riven - The Sequel to Myst (Europe) (Disc 2)"
+      },
+      {
+        "clones": [
+          "Riven - A Sequencia de Myst (Disc 3)"
+        ],
+        "name": "Riven - The Sequel to Myst (Europe) (Disc 3)"
+      },
+      {
+        "clones": [
+          "Riven - A Sequencia de Myst (Disc 4)"
+        ],
+        "name": "Riven - The Sequel to Myst (Europe) (Disc 4)"
       }
     ],
     "players": 1,
@@ -10800,6 +12555,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Need for Speed, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Nissan Presents - Over Drivin' GT-R"
+        ],
+        "name": "Road & Track Presents - The Need for Speed (Europe) (En,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -10819,6 +12582,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Road Rash (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Road Rash (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -10833,6 +12601,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Robo Pit (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Robo Pit (Europe)"
       }
     ],
     "players": 2,
@@ -10854,6 +12627,15 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Robotica (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Deadalus",
+          "Robotica"
+        ],
+        "name": "Robotica - Cybernation Revolt (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -10872,6 +12654,16 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Romance of the Three Kingdoms IV - Wall Of Fire (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sangokushi IV",
+          "Sangokushi IV with Power-Up Kit",
+          "Sanguozhi IV"
+        ],
+        "name": "Romance of the Three Kingdoms IV - Wall of Fire (USA)"
       }
     ],
     "players": 8,
@@ -10896,6 +12688,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Roommate - Inoue Ryouko (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -10914,6 +12711,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Roommate 3 - Ryouko Kaze no Kagayaku Asa ni (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -11007,6 +12809,14 @@
         "url": "https://archive.org/download/Sakura_Taisen_1996_J_color/Sakura_Taisen_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Sakura Taisen (Japan) (Disc 1) (6M)"
+      },
+      {
+        "name": "Sakura Taisen (Japan) (Disc 2) (6M)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -11017,6 +12827,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sakura Taisen - Hanagumi Taisen Columns (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -11033,6 +12848,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Sakura_Taisen_Hanagumi_Tsuushin_1997_J_color/Sakura_Taisen_Hanagumi_Tsuushin_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sakura Taisen - Hanagumi Tsuushin (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -11072,6 +12892,17 @@
           "ja"
         ],
         "url": "https://archive.org/download/Sakura_Taisen_2_Kimi_Shinitamou_Koto_Nakare_1998_J_color/Sakura_Taisen_2_Kimi_Shinitamou_Koto_Nakare_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 1) (Shokai Tokutenban)"
+      },
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 2) (Shokai Tokutenban)"
+      },
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 3) (Shokai Tokutenban)"
       }
     ],
     "players": 1,
@@ -11128,6 +12959,11 @@
         "url": "https://archive.org/download/Samurai_Spirits_Amakusa_Kourin_1997_J_color/Samurai_Spirits_Amakusa_Kourin_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Samurai Spirits - Amakusa Kourin (Japan) (En,Ja,Es,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -11176,6 +13012,14 @@
         "url": "https://segaretro.org/images/a/a0/Sangokushi_Koumeiden_1997_J_color.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sanguozhi Yingjiezhuan"
+        ],
+        "name": "Sangokushi Koumeiden (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -11197,6 +13041,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Sanguozhi V"
+        ],
+        "name": "Sangokushi V (Japan)"
+      }
+    ],
     "players": 8,
     "rating": null
   },
@@ -11272,6 +13124,11 @@
         "url": "https://archive.org/download/Saturn_Bomberman_1996_J_color/Saturn_Bomberman_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Saturn Bomberman (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -11288,6 +13145,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Saturn_Bomberman_Fight_1997_J_color/Saturn_Bomberman_Fight_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Saturn Bomberman Fight!! (Japan)"
       }
     ],
     "players": 4,
@@ -11318,6 +13180,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Saturn Super Henshuubu Hen - Taikenban Saturn Soft Taizen (Japan) (1M)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11325,6 +13192,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Saturn Super Vol. 1 (Japan) (6M)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11346,6 +13218,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Saturn Super Vol. 2 (Japan) (1M)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11374,6 +13251,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Saturn Super Vol. 6 (Japan) (1M)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11432,6 +13314,11 @@
         "url": "https://archive.org/download/Scorcher_199x_Br/Scorcher_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Scorcher (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -11460,6 +13347,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "SeaBass Fishing"
+        ],
+        "name": "Sea Bass Fishing (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -11572,6 +13467,11 @@
         "url": "https://segaretro.org/images/3/3e/Sega_Ages_OutRun_(Manual)(JP)(Sega_Saturn).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sega Ages - OutRun (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -11636,6 +13536,11 @@
         "url": "https://archive.org/download/Sega_Ages_Vol.2_Space_Harrier_1996_J_color/Sega_Ages_Vol.2_Space_Harrier_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Sega Ages - Space Harrier (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -11654,6 +13559,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Sega Ages (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sega Ages Volume 1 (Europe)"
       }
     ],
     "players": 1,
@@ -11677,6 +13587,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sega Flash Vol. 3 (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11741,6 +13656,11 @@
         "url": "https://archive.org/download/Sega_Rally_Championship_1995_1995_J_color/Sega_Rally_Championship_1995_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Sega Rally Championship (Europe) (Made in EU)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -11760,6 +13680,14 @@
         "url": "https://archive.org/download/Sega_Rally_Championship_NetLink_Edition_1998_U/Sega_Rally_Championship_NetLink_Edition_1998_U.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Rally Championship Plus"
+        ],
+        "name": "Sega Rally Championship Plus Netlink Edition (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -11776,6 +13704,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sega Saturn Choice Cuts (USA) (R2)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11817,6 +13750,11 @@
         "url": "https://archive.org/download/Sega_Touring_Car_Championship_1997_J_color/Sega_Touring_Car_Championship_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Sega Touring Car Championship (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -11842,6 +13780,15 @@
         "url": "https://archive.org/download/Sega_Worldwide_Soccer_98_Club_Edition_1997_E/Sega_Worldwide_Soccer_98_Club_Edition_1997_E.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Worldwide Soccer '98",
+          "Worldwide Soccer '98"
+        ],
+        "name": "Sega Worldwide Soccer '98 - Club Edition (Europe) (En,Fr,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -11865,6 +13812,15 @@
           "pt"
         ],
         "url": "https://archive.org/download/Sega_Worldwide_Soccer_97_199x_Br/Sega_Worldwide_Soccer_97_199x_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Worldwide Soccer '97",
+          "Victory Goal Worldwide Edition"
+        ],
+        "name": "Sega Worldwide Soccer 97 (Europe)"
       }
     ],
     "players": 4,
@@ -11930,6 +13886,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SegaSaturn Photo CD Operator (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11957,6 +13918,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Seifuku Densetsu - Pretty Fighter X (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -12007,6 +13973,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Senkutsu Katsuryu Taisen - Chaos Seed (Japan) (Disc 1) (Game Disc) (Rev A) (10M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -12033,6 +14004,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Sentimental_Graffiti_1998_J_color/Sentimental_Graffiti_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sentimental Graffiti (Japan) (Disc 1) (Game Disc) (1M)"
+      },
+      {
+        "name": "Sentimental Graffiti (Japan) (Disc 2) (Second Window) (1M, 2M)"
       }
     ],
     "players": 1,
@@ -12093,6 +14072,11 @@
       "Asiatic board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Shanghai - Great Moments (Japan) (1M)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -12108,6 +14092,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Shanghai - Triple Threat (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shanghai - Banri no Choujou - The Great Wall"
+        ],
+        "name": "Shanghai - Triple-Threat (USA)"
       }
     ],
     "players": 2,
@@ -12151,6 +14143,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/Shellshock_1996_Core_FR/Shellshock_1996_Core_FR.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shellshock (Europe)"
       }
     ],
     "players": 1,
@@ -12233,6 +14230,11 @@
         "url": "https://archive.org/download/Shin_Megami_Tensei_Devil_Summoner_1995_J_color/Shin_Megami_Tensei_Devil_Summoner_1995_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Shin Megami Tensei - Devil Summoner (Japan) (Rev A)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -12270,6 +14272,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Shinseiki_Evangelion_2nd_Impression_1997_J_color/Shinseiki_Evangelion_2nd_Impression_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shin Seiki Evangelion - 2nd Impression (Japan) (Made in Japan)"
       }
     ],
     "players": 1,
@@ -12310,6 +14317,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Shining Force III (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shining Force III - Scenario 1 - Outo no Kyoshin"
+        ],
+        "name": "Shining Force III (Europe) (R)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12321,6 +14336,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Shining Force III - Scenario 2 - Nerawareta Miko (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12361,6 +14381,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Shining Wisdom (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Shining Wisdom (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -12383,6 +14408,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/shiningtheholyarksegasaturnhiresscans/Shining the Holy Ark - Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shining the Holy Ark (Europe)"
       }
     ],
     "players": 1,
@@ -12408,6 +14438,15 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/e/e8/Shinobi_Legions_Sat_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shin Shinobiden",
+          "Shinobi Legions"
+        ],
+        "name": "Shinobi-X - Shin Shinobi Den (Europe)"
       }
     ],
     "players": 1,
@@ -12483,6 +14522,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Shockwave Assault (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shockwave Assault (Europe)"
       }
     ],
     "players": 1,
@@ -12575,6 +14619,11 @@
         "url": "https://archive.org/download/Side_Pocket_3_1997_J_color/Side_Pocket_3_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Side Pocket 3 (Japan)"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -12591,6 +14640,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/2/2b/Silhouette_Mirage_Sat_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Silhouette Mirage (Japan)"
       }
     ],
     "players": 1,
@@ -12610,6 +14664,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/SimCity 2000 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "SimCity 2000 (Europe)"
       }
     ],
     "players": 1,
@@ -12649,6 +14708,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Skeleton Warriors (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Skeleton Warriors (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -12684,6 +14748,11 @@
         "url": "https://archive.org/download/Sky_Target_1997_J_color/Sky_Target_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Sky Target (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -12701,6 +14770,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Slam 'N Jam '96 featuring Magic & Kareem (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Slam 'n Jam '96 featuring Magic & Kareem"
+        ],
+        "name": "Slam 'n Jam '96 featuring Magic & Kareem - Signature Edition (Europe)"
       }
     ],
     "players": 4,
@@ -12725,6 +14802,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Slayers Royal 2 (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -12786,6 +14868,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Solo Crisis (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -12819,6 +14906,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Sonic_3D_Flickies_Island_1997_J_color/Sonic_3D_Flickies_Island_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sonic 3D Blast"
+        ],
+        "name": "Sonic 3D - Flickies' Island (Europe)"
       }
     ],
     "players": 1,
@@ -12864,6 +14959,11 @@
         "url": "https://archive.org/download/SonicJam-ManualDeInstruesPT/Publica\u00e7\u00e3o1.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sonic Jam (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -12893,6 +14993,11 @@
           "pt"
         ],
         "url": "https://archive.org/download/Sonic_R_1997_Br/Sonic_R_1997_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sonic R (Europe)"
       }
     ],
     "players": 2,
@@ -12958,6 +15063,11 @@
         "url": "https://segaretro.org/images/2/27/SotsugyouII_Sat_JP_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sotsugyou II - Neo Generation (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -12994,6 +15104,11 @@
         "url": "https://archive.org/download/Soukyugurentai_1997_J_color/Soukyugurentai_1997_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Soukyuu Gurentai (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -13016,6 +15131,11 @@
       "Adventure / Visual Novel"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sound Novel Machi (Japan) (Disc 2) (10.13-10.15 Incl.) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -13061,6 +15181,11 @@
         "url": "https://archive.org/download/Soviet_Strike_1997_Electronic_Arts_EU/Soviet_Strike_1997_Electronic_Arts_EU.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Soviet Strike (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -13078,6 +15203,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Space Hulk - Vengeance of the Blood Angels (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Space Hulk - Vengeance of the Blood Angels (Europe)"
       }
     ],
     "players": 1,
@@ -13109,6 +15239,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Space Jam (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Space Jam (Europe)"
+      }
+    ],
     "players": 6,
     "rating": 0.65
   },
@@ -13131,6 +15266,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Spot Goes To Hollywood (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Spot Goes to Hollywood (Europe)"
       }
     ],
     "players": 1,
@@ -13198,6 +15338,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Star Fighter (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Star Fighter"
+        ],
+        "name": "StarFighter 3000 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -13226,6 +15374,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Steamgear Mash (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -13244,6 +15397,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Steep Slope Sliders (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Steep Slope Sliders (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -13255,6 +15413,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Stellar Assault SS (Japan)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -13278,6 +15441,15 @@
           "ja"
         ],
         "url": "https://archive.org/download/Thor_Seireioukiden_1996_J_color/Thor_Seireioukiden_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Legend of Oasis, The",
+          "Thor - Seireioukiden"
+        ],
+        "name": "Story of Thor 2, The (Europe)"
       }
     ],
     "players": 1,
@@ -13308,6 +15480,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Street Fighter - The Movie (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter - Real Battle on Film"
+        ],
+        "name": "Street Fighter - The Movie (Europe) (2S)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -13333,6 +15513,14 @@
         "url": "https://archive.org/download/Street_Fighter_Zero_1996_J_color/Street_Fighter_Zero_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter Zero"
+        ],
+        "name": "Street Fighter Alpha - Warriors' Dreams (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13356,6 +15544,15 @@
           "ja"
         ],
         "url": "https://archive.org/download/Street_Fighter_Zero_2_1996_J_color/Street_Fighter_Zero_2_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter Zero 2",
+          "Street Fighter Zero 2'"
+        ],
+        "name": "Street Fighter Alpha 2 (Europe)"
       }
     ],
     "players": 2,
@@ -13387,6 +15584,14 @@
           "pt"
         ],
         "url": "https://archive.org/download/Street_Fighter_Collection_199x_Br/Street_Fighter_Collection_199x_Br.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Street Fighter Collection (Europe) (Disc 1) (R)"
+      },
+      {
+        "name": "Street Fighter Collection (Europe) (Disc 2) (R)"
       }
     ],
     "players": 2,
@@ -13438,6 +15643,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Street Racer Extra"
+        ],
+        "name": "Street Racer (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.65
   },
@@ -13455,6 +15668,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Striker '96 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Striker 96 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -13465,6 +15683,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Strikers 1945 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -13508,6 +15731,11 @@
       "Fight / 2D"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Suiko Enbu - Fuuun Saiki (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -13539,6 +15767,17 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Adventure Rockman (Japan) (Disc 1) (Episode 1 - Tsuki no Shinden)"
+      },
+      {
+        "name": "Super Adventure Rockman (Japan) (Disc 2) (Episode 2 - Shitou! Wily Numbers)"
+      },
+      {
+        "name": "Super Adventure Rockman (Japan) (Disc 3) (Episode 3 - Saigo no Tatakai!!)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -13572,6 +15811,14 @@
         "url": "https://archive.org/download/Super_Puzzle_Fighter_II_X_1996_J_color/Super_Puzzle_Fighter_II_X_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Super Puzzle Fighter II X"
+        ],
+        "name": "Super Puzzle Fighter II Turbo (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -13583,6 +15830,11 @@
       "Compilation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Real Mahjong Graffiti (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -13612,6 +15864,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Real Mahjong P7 (Japan) (P's Club Special Edition)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -13624,6 +15881,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Real Mahjong PVI (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -13642,6 +15904,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Super_Robot_Taisen_F_1997_J_color/Super_Robot_Taisen_F_1997_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Super Robot Taisen F (Japan) (Rev A) (10M, 11M, 12M, 13M)"
       }
     ],
     "players": 1,
@@ -13664,6 +15931,11 @@
         "url": "https://segaretro.org/images/9/94/Super_Robot_Taisen_F_Kanketsuhen_(\u30b9\u30fc\u30d1\u30fc\u30ed\u30dc\u30c3\u30c8\u5927\u6226\uff26_\uff5e\u5b8c\u7d50\u7de8\uff5e)_Saturn_JP_\u53d6\u6271\u8aac\u660e\u66f8\u3092\u53d6\u308b.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Super Robot Taisen F - Kanketsu-hen (Japan) (2M, 3M)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -13682,6 +15954,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Swagman (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -13698,6 +15975,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/SwordSorcerySegaSaturnJPManuals/Sword and Sorcery (Manual)(JP)(Sega Saturn).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sword & Sorcery (Japan) (2M)"
       }
     ],
     "players": 1,
@@ -13728,6 +16010,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tactics Formula (Japan)"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -13789,6 +16076,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Taikou Risshiden II (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -13842,6 +16134,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/f/f6/TanjouSDebut_Saturn_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tanjou - Debut S (Japan) (1M)"
       }
     ],
     "players": 1,
@@ -14003,6 +16300,14 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Teitoku no Ketsudan III with Power-Up Kit"
+        ],
+        "name": "Teitoku no Ketsudan III (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -14020,6 +16325,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Tempest 2000 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tempest 2000 (Europe)"
       }
     ],
     "players": 1,
@@ -14047,6 +16357,11 @@
       "Board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tenant Wars (Japan)"
+      }
+    ],
     "players": 4,
     "rating": null
   },
@@ -14179,6 +16494,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Discworld"
+        ],
+        "name": "Terry Pratchett's Discworld (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -14195,6 +16518,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Tetris Plus (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tetris Plus (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -14205,6 +16533,11 @@
       "Puzzle-Game / Fall"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tetris S (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -14234,6 +16567,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Theme Park (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shin Theme Park"
+        ],
+        "name": "Theme Park (Europe) (En,Fr,De,Es,Sv)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -14251,6 +16592,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Three Dirty Dwarves (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Three Dirty Dwarves (Europe)"
       }
     ],
     "players": 3,
@@ -14286,6 +16632,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Thunder Force V (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14320,6 +16671,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Hyper 3-D Pinball (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Hyper 3-D Pinball",
+          "Hyper 3D Pinball"
+        ],
+        "name": "Tilt! (Europe) (En,Fr,De)"
       }
     ],
     "players": 4,
@@ -14370,6 +16730,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Solar Eclipse (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Solar Eclipse"
+        ],
+        "name": "Titan Wars (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.1
   },
@@ -14400,6 +16768,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tokimeki Memorial - Forever with You (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -14411,6 +16784,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tokimeki Memorial Drama Series Vol. 1 - Nijiiro no Seishun (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -14452,6 +16830,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/tokimeki-memorial-puzzle-manual/tokimeki memorial puzzle manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tokimeki Memorial Taisen Puzzledama (Japan) (1M)"
       }
     ],
     "players": 2,
@@ -14513,6 +16896,14 @@
         "url": "https://archive.org/download/Tomb_Raider_199x_Br/Tomb_Raider_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tomb Raiders"
+        ],
+        "name": "Tomb Raider (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14541,6 +16932,22 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Lunacy (USA) (Disc 1).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Gekka Mugentan Torico (Disc A)",
+          "Lunacy (Disc 1)"
+        ],
+        "name": "Torico (Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Gekka Mugentan Torico (Disc B)",
+          "Lunacy (Disc 2)"
+        ],
+        "name": "Torico (Europe) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -14558,6 +16965,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/touge-king-2-manual/touge king 2 manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Touge King the Spirits 2 (Japan)"
       }
     ],
     "players": 2,
@@ -14632,6 +17044,14 @@
         "url": "https://archive.org/download/Tekkyuu_True_Pinball_1996_J_color/Tekkyuu_True_Pinball_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tekkyuu - True Pinball"
+        ],
+        "name": "True Pinball (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -14669,6 +17089,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Tunnel B1 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "3D Mission Shooting - Finalist"
+        ],
+        "name": "Tunnel B1 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -14747,6 +17175,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Ultimate Mortal Kombat 3 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ultimate Mortal Kombat 3 (Europe)"
       }
     ],
     "players": 2,
@@ -14844,6 +17277,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Valora Valley Golf (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hyper Golf, The - Devil's Course"
+        ],
+        "name": "Valora Valley Golf (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -14902,6 +17343,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Vatlva (Japan) (Rev A)"
+      }
+    ],
     "players": 6,
     "rating": 0.7
   },
@@ -14918,6 +17364,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Center Ring Boxing (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Center Ring Boxing"
+        ],
+        "name": "Victory Boxing (Europe)"
       }
     ],
     "players": 2,
@@ -14937,6 +17391,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Victory_Goal_1995_J_color/Victory_Goal_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Victory Goal (Japan) (1A)"
       }
     ],
     "players": 4,
@@ -14962,6 +17421,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Virtua_Cop_1995_J_color/Virtua_Cop_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Cop (Europe)"
       }
     ],
     "players": 2,
@@ -14993,6 +17457,11 @@
           "pt"
         ],
         "url": "https://archive.org/download/manual-virtua-cop-2/manual-virtua-cop-2.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Cop 2 (Europe)"
       }
     ],
     "players": 2,
@@ -15046,6 +17515,14 @@
         "url": "https://archive.org/download/Virtua_Fighter_Remix_199x_Br/Virtua_Fighter_Remix_199x_Br.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Virtua Fighter Remix"
+        ],
+        "name": "Virtua Fighter (Europe) (Made in EU)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -15069,6 +17546,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Virtua_Fighter_2_1995_J_color/Virtua_Fighter_2_1995_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Fighter 2 (Europe) (Made in EU)"
       }
     ],
     "players": 2,
@@ -15142,6 +17624,24 @@
         "url": "https://archive.org/download/Virtua_Fighter_CG_Portrait_Series_Vol.9_Kage_Maru_1996_Sega_JP/Virtua_Fighter_CG_Portrait_Series_Vol.9_Kage_Maru_1996_Sega_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Virtua Fighter CG Portrait Series - The Final - Dural",
+          "Virtua Fighter CG Portrait Series Vol. 1 - Sarah Bryant",
+          "Virtua Fighter CG Portrait Series Vol. 10 - Jeffry McWild",
+          "Virtua Fighter CG Portrait Series Vol. 2 - Jacky Bryant",
+          "Virtua Fighter CG Portrait Series Vol. 3 - Akira Yuki",
+          "Virtua Fighter CG Portrait Series Vol. 4 - Pai Chan",
+          "Virtua Fighter CG Portrait Series Vol. 5 - Wolf Hawkfield",
+          "Virtua Fighter CG Portrait Series Vol. 6 - Lau Chan",
+          "Virtua Fighter CG Portrait Series Vol. 7 - Shun Di",
+          "Virtua Fighter CG Portrait Series Vol. 8 - Lion Rafale",
+          "Virtua Fighter CG Portrait Series Vol. 9 - Kage Maru"
+        ],
+        "name": "Virtua Fighter CG Portrait Collection (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -15165,6 +17665,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Virtua_Fighter_Kids_1996_J_color/Virtua_Fighter_Kids_1996_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Fighter Kids (Europe)"
       }
     ],
     "players": 2,
@@ -15202,6 +17707,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/VR Virtua Racing (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Virtua Racing (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -15234,6 +17744,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Virtual Casino (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Virtual Casino (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -15244,6 +17759,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Tournament Leader"
+        ],
+        "name": "Virtual Golf (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -15266,6 +17789,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/VirtualHydlideManualsJPSegaSaturn/Virtual Hydlide (Manual)(JP)(Sega Saturn).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtual Hydlide (Europe)"
       }
     ],
     "players": 1,
@@ -15334,6 +17862,14 @@
         "url": "https://archive.org/download/Dennou_Senki_Virtual-On_1996_J_color/Dennou_Senki_Virtual-On_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dennou Senki - Virtual On - Cyber Troopers"
+        ],
+        "name": "Virtual On - Cyber Troopers (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -15348,6 +17884,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Virtual-On_Cyber_Troopers_NetLink_Edition_1997_U/Virtual-On_Cyber_Troopers_NetLink_Edition_1997_U.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Dennou Senki - Virtual On - Cyber Troopers for SegaNet"
+        ],
+        "name": "Virtual On - Cyber Troopers Net Link Edition (USA)"
       }
     ],
     "players": 2,
@@ -15365,6 +17909,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Virtual Open Tennis (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtual Open Tennis (Europe)"
       }
     ],
     "players": 4,
@@ -15433,6 +17982,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/WWF In Your House (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WWF In Your House (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.2
   },
@@ -15451,6 +18005,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/WWF Wrestlemania - The Arcade Game (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "WWF WrestleMania - The Arcade Game (Europe)"
       }
     ],
     "players": 2,
@@ -15492,6 +18051,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Waku Waku 7 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -15503,6 +18067,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Waku Waku Puyo Puyo Dungeon (Japan) (3M)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -15582,6 +18151,11 @@
         "url": "https://archive.org/download/war2-manual/war2-manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WarCraft II - The Dark Saga (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -15618,6 +18192,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Whizz (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -15667,6 +18246,14 @@
         "url": "https://segaretro.org/images/a/a2/Wing_Arms_Sat_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Wing Arms - Kareinaru Gekitsuiou"
+        ],
+        "name": "Wing Arms (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -15698,6 +18285,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Winning Post 2 (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -15733,6 +18325,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Winning Post 3 (Japan) (2M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -15780,6 +18377,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Winter Heat (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Winter Heat (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -15799,6 +18401,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/WipEout (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WipEout (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -15814,6 +18421,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Wipeout_XL_1998_J_color/Wipeout_XL_1998_J_color.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Wipeout XL"
+        ],
+        "name": "WipEout 2097 (Europe)"
       }
     ],
     "players": 1,
@@ -15850,6 +18465,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Wizard's Harmony 2 (Japan) (1M)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -15898,6 +18518,11 @@
         "url": "https://archive.org/download/Wizardry_VI_VII_Complete_1996_J_color/Wizardry_VI__VII_Complete_1996_J_color.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Wizardry VI & VII Complete (Japan) (3M)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -15925,6 +18550,11 @@
         "url": "https://segaretro.org/images/7/7d/WADOperationFiles_SS_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Advanced Daisenryaku - Sakusen File (Japan) (1M)"
+      }
+    ],
     "players": 5,
     "rating": 0.8
   },
@@ -15950,6 +18580,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/World Cup Golf - Professional Edition (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "World Cup Golf - In Hyatt Dorado Beach"
+        ],
+        "name": "World Cup Golf - Professional Edition (Europe) (1S)"
       }
     ],
     "players": 2,
@@ -16004,6 +18642,14 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/World Series Baseball (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hideo Nomo World Series Baseball"
+        ],
+        "name": "World Series Baseball (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -16042,6 +18688,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/World Series Baseball II (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Series Baseball II (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -16061,6 +18712,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Worms (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Worms (Europe)"
+      }
+    ],
     "players": 16,
     "rating": 0.65
   },
@@ -16072,6 +18728,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "X Japan - Virtual Shock 001 (Japan) (3M)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -16097,6 +18758,11 @@
         "url": "https://archive.org/download/X-Men_Children_of_the_Atom_1996_Acclaim_JP/X-Men_Children_of_the_Atom_1996_Acclaim_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "X-Men - Children of the Atom (Europe) (2S)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -16113,6 +18779,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/4/45/X-menvsstreetfighter_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "X-Men vs. Street Fighter (Japan) (1M)"
       }
     ],
     "players": 2,
@@ -16203,6 +18874,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yumimi Mix Remix (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -16212,6 +18888,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yuukyuu Gensoukyoku (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -16221,6 +18902,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yuukyuu Gensoukyoku 2nd Album (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -16248,6 +18934,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yuukyuu no Kobako Official Collection (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -16307,6 +18998,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Zen Nihon Pro Wres featuring Virtua (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },

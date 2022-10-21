@@ -19,6 +19,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/18 Wheeler - American Pro Trucker (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "18 Wheeler - American Pro Trucker (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -51,6 +56,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/4 Wheel Thunder (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "4 Wheel Thunder (Europe) (En,Fr)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -78,6 +88,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "J.League Spectacle Soccer"
+        ],
+        "name": "90 Minutes - Sega Championship Football (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -143,6 +161,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Aero Dancing i - Jikai-saku made Matemasen"
+        ],
+        "name": "Aero Dancing i (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -175,6 +201,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Aerowings (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Aero Dancing featuring Blue Impulse"
+        ],
+        "name": "AeroWings (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -192,6 +226,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/AeroWings 2 - Air Strike (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Aero Dancing F"
+        ],
+        "name": "AeroWings 2 - Airstrike (Europe) (En,De)"
       }
     ],
     "players": 2,
@@ -321,6 +363,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Alone in the Dark - The New Nightmare (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Alone in the Dark - The New Nightmare (Europe) (Disc 1)"
+      },
+      {
+        "name": "Alone in the Dark - The New Nightmare (Europe) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -401,6 +451,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Army Men - Sarge's Heroes (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Army Men - Sarge's Heroes (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -426,6 +481,14 @@
       "Asiatic board game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Atsumare! Guru Guru Onsen BB"
+        ],
+        "name": "Atsumare! Guru Guru Onsen (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -472,6 +535,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Bangai-O_1999_J_color/Bangai-O_1999_J_color.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Bakuretsu Muteki Bangaioh"
+        ],
+        "name": "Bangai-O (Europe) (En,Fr,De)"
       }
     ],
     "players": 1,
@@ -587,6 +658,11 @@
           "pt"
         ],
         "url": "https://archive.org/download/Blue_Stinger_200x_Br/Blue_Stinger_200x_Br.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Blue Stinger (Europe)"
       }
     ],
     "players": 1,
@@ -734,6 +810,14 @@
         "url": "https://segaretro.org/images/d/d4/Buggy_Heat_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "TNN Motorsports Hardcore Heat"
+        ],
+        "name": "Buggy Heat (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -762,6 +846,14 @@
         "url": "https://segaretro.org/images/d/d9/Puzzle_Bobble_4_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Puzzle Bobble 4"
+        ],
+        "name": "Bust-A-Move 4 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -788,6 +880,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Caesars Palace 2000 - Millennium Gold Edition (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Caesars Palace 2000 - Millennium Gold Edition (Europe)"
       }
     ],
     "players": 1,
@@ -845,6 +942,14 @@
         "url": "https://archive.org/download/Gunspike_2000_J_color/Gunspike_2000_J_color.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Gunspike"
+        ],
+        "name": "Cannon Spike (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -895,6 +1000,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/e/e5/CapcomVsSNK2000DCJPManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Capcom vs. SNK - Millennium Fight 2000"
+        ],
+        "name": "Capcom vs. SNK (Europe)"
       }
     ],
     "players": 2,
@@ -990,6 +1103,11 @@
         "url": "https://segaretro.org/images/6/62/CarrierDCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Carrier (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1033,6 +1151,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Championship Surfer (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Championship Surfer (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -1069,6 +1192,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/3/3d/ChargeNBlastDCJPManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Charge 'N Blast (Europe)"
       }
     ],
     "players": 1,
@@ -1110,6 +1238,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Chicken Run (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Chicken Run (Europe) (Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1119,6 +1252,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Chocolat - Maid Cafe Curio (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1143,6 +1281,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/c/c4/Christmas_Seaman_Message_Disc_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Christmas Seaman - Omoi o Tsutaeru Mou Hitotsu no Houhou (Japan) (Message Disc)"
       }
     ],
     "players": 1,
@@ -1172,6 +1315,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/ChuChu_Rocket_1999_J_color/ChuChu_Rocket_1999_J_color.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Chu-Chu Rocket!"
+        ],
+        "name": "ChuChu Rocket! (Europe) (En,Ja,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -1209,6 +1360,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Coaster Works (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Jet Coaster Dream"
+        ],
+        "name": "Coaster Works (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -1242,6 +1401,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Confidential Mission (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Confidential Mission (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1265,6 +1429,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Conflict Zone (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Conflict Zone (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1276,6 +1445,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Cool Cool Toon (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -1335,6 +1509,11 @@
         "url": "https://segaretro.org/images/5/5e/Crazytaxi_dc_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Crazy Taxi (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1364,6 +1543,11 @@
         "url": "https://segaretro.org/images/b/b0/CrazyTaxi2DCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Crazy Taxi 2 (Europe) (En,Ja,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1388,6 +1572,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/f/fe/CyberTroopersDCUSManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Dennou Senki - Virtual-On - Oratorio Tangram"
+        ],
+        "name": "Cyber Troopers - Virtual-On - Oratorio Tangram (USA)"
       }
     ],
     "players": 2,
@@ -1418,6 +1610,32 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/D2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "D2 - D no Shokutaku 2 (Disc 1)"
+        ],
+        "name": "D2 (USA) (Disc 1)"
+      },
+      {
+        "clones": [
+          "D2 - D no Shokutaku 2 (Disc 2)"
+        ],
+        "name": "D2 (USA) (Disc 2)"
+      },
+      {
+        "clones": [
+          "D2 - D no Shokutaku 2 (Disc 3)"
+        ],
+        "name": "D2 (USA) (Disc 3)"
+      },
+      {
+        "clones": [
+          "D2 - D no Shokutaku 2 (Disc 4)"
+        ],
+        "name": "D2 (USA) (Disc 4)"
       }
     ],
     "players": 1,
@@ -1464,6 +1682,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/f/f7/DerbyTsuku_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dabi Tsuku - Derby-ba o Tsukurou! (Japan)"
       }
     ],
     "players": null,
@@ -1542,6 +1765,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dave Mirra Freestyle BMX (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dave Mirra Freestyle BMX (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1571,6 +1799,14 @@
         "url": "https://archive.org/download/Daytona_USA_200x_Br/Daytona_USA_200x_Br.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Daytona USA"
+        ],
+        "name": "Daytona USA 2001 (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -1591,6 +1827,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Dead_Or_Alive_2_Limited_Edition_2000_J_color_w_pages_1819/Dead_Or_Alive_2_Limited_Edition_2000_J_color_w_pages_1819.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dead or Alive 2 (Europe)"
       }
     ],
     "players": 4,
@@ -1622,6 +1863,14 @@
           "pt"
         ],
         "url": "https://archive.org/download/Airforce_Delta_200x_Br/Airforce_Delta_200x_Br.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "AirForce Delta"
+        ],
+        "name": "Deadly Skies (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -1660,6 +1909,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Death Crimson OX (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Death Crimson OX (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -1677,6 +1931,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Deep Fighter (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Deep Fighter (Europe) (En,It) (Disc 1)"
+      },
+      {
+        "name": "Deep Fighter (Europe) (En,It) (Disc 2)"
       }
     ],
     "players": 1,
@@ -1703,6 +1965,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Demolition Racer - No Exit (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Demolition Racer - No Exit (USA)"
       }
     ],
     "players": 2,
@@ -1777,6 +2044,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dino Crisis (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dino Crisis (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1791,6 +2063,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's 102 Dalmatians - Puppies to the Rescue (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "102 Dalmatians - Puppies to the Rescue"
+        ],
+        "name": "Disney's 102 Dalmatians - Puppies to the Rescue (Europe) (Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -1813,6 +2093,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/Disneys_Dinosaur_2000_E-Fr/Disneys_Dinosaur_2000_E-Fr.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Disney's Dinosaur (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -1838,6 +2123,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's Donald Duck - Quack Attack (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Disney's Donald Duck - Goin' Quackers"
+        ],
+        "name": "Disney's Donald Duck - Quack Attack (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1855,6 +2148,15 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Buzz Lightyear of Star Command (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Disney-Pixar Captain Buzz Lightyear - Star Command",
+          "Disney-Pixar Les Aventures de Buzz L'Eclair"
+        ],
+        "name": "Disney-Pixar Buzz Lightyear of Star Command (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1869,6 +2171,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Story 2 - Buzz Lightyear to the Rescue! (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Disney-Pixar Toy Story 2 - Buzz Lightyear eilt zur Hilfe!",
+          "Disney-Pixar Toy Story 2 - Buzz l'Eclair a la Rescousse!"
+        ],
+        "name": "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue! (Europe)"
       }
     ],
     "players": 1,
@@ -1999,6 +2310,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dragon Riders - Chronicles of Pern (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dragon Riders - Chronicles of Pern (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2019,6 +2335,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dragon's Blood (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Draconus - Cult of the Wyrm"
+        ],
+        "name": "Dragons Blood (Europe) (En,Fr,De)"
       }
     ],
     "players": 1,
@@ -2182,6 +2506,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dreamkey (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2196,6 +2525,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dreamkey 3.1 (Spain)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2203,6 +2537,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dreamkey Version 1.5 (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2210,6 +2549,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Dreamkey Versao 2.0"
+        ],
+        "name": "Dreamkey Version 2.0 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2245,6 +2592,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dreamon Volume 10 (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2416,6 +2768,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ducati World Racing Challenge (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ducati World - Racing Challenge"
+        ],
+        "name": "Ducati World (Europe) (En,Fr,De,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.35
   },
@@ -2437,6 +2797,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/DUX (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dux Version 1.5 (USA, Japan) (Unl) (Rerelease)"
       }
     ],
     "players": null,
@@ -2467,6 +2832,15 @@
         "url": "https://segaretro.org/images/2/2b/Dynamite_Deka_2_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dynamite Cop!",
+          "Dynamite Deka 2"
+        ],
+        "name": "Dynamite Cop (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2482,6 +2856,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/ECW Anarchy Rulz (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "ECW Anarchy Rulz (Europe)"
       }
     ],
     "players": 4,
@@ -2501,6 +2880,11 @@
         "url": "https://segaretro.org/images/1/1b/ECWDCUSManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "ECW Hardcore Revolution (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -2515,6 +2899,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/ESPN International Track & Field (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Ganbare! Nippon! Olympic 2000"
+        ],
+        "name": "ESPN International Track & Field (Europe) (En,Fr,De)"
       }
     ],
     "players": 4,
@@ -2556,6 +2948,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ecco the Dolphin - Defender of the Future (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ecco the Dolphin - Defender of the Future (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -2670,6 +3067,11 @@
         "url": "https://segaretro.org/images/4/4d/Elemental_Gimmick_Gear_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Elemental Gimmick Gear (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -2774,6 +3176,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evil Dead - Hail to the King (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Evil Dead - Hail to the King (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -2789,6 +3196,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evil Twin - Cyprien's Chronicles (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Evil Twin - Cyprien's Chronicles (Europe) (En,Fr)"
       }
     ],
     "players": 1,
@@ -2819,6 +3231,14 @@
         "url": "https://segaretro.org/images/3/35/Evolution_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shinki Sekai Evolution"
+        ],
+        "name": "Evolution - The World of Sacred Device (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2833,6 +3253,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evolution 2 - Far Off Promise (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shinki Sekai Evolution 2 - Tooi Yakusoku"
+        ],
+        "name": "Evolution 2 - Far Off Promise (Europe)"
       }
     ],
     "players": 1,
@@ -2882,6 +3310,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "F1 World Grand Prix for Dreamcast"
+        ],
+        "name": "F1 World Grand Prix (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2899,6 +3335,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix II (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "F1 World Grand Prix II for Dreamcast (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -2930,6 +3371,14 @@
         "url": "https://segaretro.org/images/f/f6/F355Challenge_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "F355 Challenge"
+        ],
+        "name": "F355 Challenge - Passione Rossa (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -2959,6 +3408,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/4/45/Garou_Mark_Of_The_Wolves_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Garou - Mark of the Wolves"
+        ],
+        "name": "Fatal Fury - Mark of the Wolves (USA)"
       }
     ],
     "players": 2,
@@ -2994,6 +3451,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fighting Force 2 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Fighting Force 2 (Europe) (En,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -3008,6 +3470,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/b/bd/Fighting_Vipers_2_DC_JP_Manual_23.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fighting Vipers 2 (Europe) (En,Ja,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -3070,6 +3537,14 @@
         "url": "https://segaretro.org/images/f/fc/Flag2FlagDCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Super Speed Racing"
+        ],
+        "name": "Flag to Flag (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3105,6 +3580,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/9/96/FloiganBrosDCUSManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Floigan Bros. - Episode 1 (Europe)"
       }
     ],
     "players": 1,
@@ -3167,6 +3647,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Razor Freestyle Scooter (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Razor Freestyle Scooter"
+        ],
+        "name": "Freestyle Scooter (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3204,6 +3692,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Fur Fighters (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fur Fighters (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -3256,6 +3749,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "GameShark CDX (USA) (Unl)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3287,6 +3785,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Gauntlet Legends (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Gauntlet Legends (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -3294,6 +3797,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Generator Vol. 1 (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3378,6 +3886,11 @@
         "url": "https://segaretro.org/images/c/ce/Giga_Wing_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "GigaWing (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -3398,6 +3911,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/6/66/Giga_Wing_2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "GigaWing 2 (USA)"
       }
     ],
     "players": 4,
@@ -3458,6 +3976,11 @@
         "url": "https://segaretro.org/images/d/d5/Golf_Shiyouyo_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Golf Shiyou yo (Japan) (Rev A)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -3496,6 +4019,11 @@
         "url": "https://segaretro.org/images/8/88/GTA2_DC_US_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Grand Theft Auto 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3516,6 +4044,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/e/e4/Grandia2DCJPManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Grandia II (Europe)"
       }
     ],
     "players": 1,
@@ -3577,6 +4110,11 @@
         "url": "https://segaretro.org/images/f/fc/Grinch_DC_US_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Grinch, The (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -3591,6 +4129,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/9/9c/Guilty_Gear_X_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Guilty Gear X (Japan) (Taikenban)"
       }
     ],
     "players": 1,
@@ -3620,6 +4163,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/6/60/Gunbird_2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Gunbird 2 (Europe)"
       }
     ],
     "players": 2,
@@ -3655,6 +4203,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/d/db/GundamSideStory0079_DC_US_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Gundam Side Story 0079 - Rise from the Ashes (USA)"
       }
     ],
     "players": 1,
@@ -3813,6 +4366,11 @@
         "url": "https://archive.org/download/Heavy_Metal_Geomatrix_2001_J_color_w_pages_3435/Heavy_Metal_Geomatrix_2001_J_color_w_pages_3435.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Heavy Metal - Geomatrix (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -3914,6 +4472,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Hidden & Dangerous (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Hidden & Dangerous (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -3961,6 +4524,11 @@
         "url": "https://segaretro.org/images/5/51/House_Of_The_Dead_2_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "House of the Dead 2, The (Japan, Europe) (Taikenban)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3988,6 +4556,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hundred Swords (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4015,6 +4588,11 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/4/44/HydroThunderDCBRManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Hydro Thunder (Europe)"
       }
     ],
     "players": 4,
@@ -4068,6 +4646,11 @@
         "url": "https://segaretro.org/images/2/2c/Illbleed_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Illbleed (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4091,6 +4674,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Incoming (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Incoming - Jinrui Saishuu Kessen"
+        ],
+        "name": "Incoming (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -4107,6 +4698,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Industrial Spy - Operation Espionage (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Espion-Age-nts"
+        ],
+        "name": "Industrial Spy - Operation Espionage (USA)"
       }
     ],
     "players": 1,
@@ -4209,6 +4808,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Iron Aces (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Imperial no Taka - Fighter of Zero"
+        ],
+        "name": "Iron Aces (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -4237,6 +4844,16 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "JRA PAT for Dreamcast V40 L11",
+          "JRA PAT for Dreamcast V40 L12",
+          "JRA PAT for Dreamcast V50 L10"
+        ],
+        "name": "JRA PAT for Dreamcast V40 L10 (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4265,6 +4882,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jeremy Mcgrath Supercross 2000 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Jeremy McGrath Supercross 2000 (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -4311,6 +4933,15 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/0/04/JetGrindRadioDCBRManual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "De La Jet Set Radio",
+          "Jet Grind Radio"
+        ],
+        "name": "Jet Set Radio (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -4395,6 +5026,15 @@
         "url": "https://segaretro.org/images/b/bf/Jojo_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Jojo no Kimyou na Bouken - Mirai e no Isan",
+          "Jojo no Kimyou na Bouken - Mirai e no Isan for Matching Service"
+        ],
+        "name": "JoJo's Bizarre Adventure (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4405,6 +5045,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "July (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -4420,6 +5065,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/KISS Psycho Circus - The Nightmare Child (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "KISS Psycho Circus - The Nightmare Child (Europe)"
       }
     ],
     "players": 1,
@@ -4471,6 +5121,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Kao the Kangaroo (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Kao the Kangaroo (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -4540,6 +5195,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kindan no Pet - Seaman - Gasse Hakase no Jikken-tou (Japan) (Rev A)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4617,6 +5277,11 @@
         "url": "https://segaretro.org/images/f/f4/KOF99-DMDCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "King of Fighters, The - Dream Match 1999 (USA) (En,Ja,Es,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -4637,6 +5302,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/8/82/King_Of_Fighters_99_Evolution_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "King of Fighters '99, The - Evolution"
+        ],
+        "name": "King of Fighters, The - Evolution (USA) (En,Ja,Es,Pt)"
       }
     ],
     "players": 2,
@@ -4720,6 +5393,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kuon no Kizuna - Sairinshou (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4785,6 +5463,14 @@
         "url": "https://segaretro.org/images/9/9e/Gekka_No_Kenshi_Final_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Final Edition"
+        ],
+        "name": "Last Blade 2, The - Heart of the Samurai (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4820,6 +5506,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive Le Mans (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Test Drive Le Mans"
+        ],
+        "name": "Le Mans 24 Hours (Europe) (En,Fr,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -4842,6 +5536,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Legacy of Kain - Soul Reaver (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Legacy of Kain - Soul Reaver (Europe)"
       }
     ],
     "players": 1,
@@ -4870,6 +5569,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/7/7a/Looney_Tunes_Space_Race_DC_US_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Looney Tunes - Space Race (Europe) (En,Fr,De,Es,It,Nl)"
       }
     ],
     "players": 4,
@@ -4912,6 +5616,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/MDK 2 (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "MDK2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -4919,6 +5628,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MP3 DC - Use MP3 Audio CD's on Your Dreamcast (Europe) (Unl)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4940,6 +5654,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Metropolis Street Racer (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "MSR - Metropolis Street Racer (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 2,
@@ -4976,6 +5695,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/MTV Sports - Skateboarding Featuring Andy McDonald (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "MTV Sports - Skateboarding featuring Andy Macdonald (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -4986,6 +5710,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Maboroshi Tsukiyo (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5000,6 +5729,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Macross_M3_2001_J_color/Macross_M3_2001_J_color.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Macross M3 (Japan)"
       }
     ],
     "players": 1,
@@ -5017,6 +5751,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/MagForce Racing (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "MagForce Racing (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -5087,6 +5826,11 @@
         "url": "https://segaretro.org/images/f/f9/MakenXDCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Maken X (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -5124,6 +5868,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Marie & Elie no Atelier - Salburg no Renkinjutsushi 1 & 2 (Japan) (Game Disc)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5177,6 +5926,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mars Matrix (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Mars Matrix (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -5203,6 +5957,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/1/12/Marvel_Vs_Capcom_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Marvel vs. Capcom - Clash of Super Heroes (Europe)"
       }
     ],
     "players": 4,
@@ -5232,6 +5991,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/0/09/MarvelvsCapcom2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Marvel vs. Capcom 2"
+        ],
+        "name": "Marvel vs. Capcom 2 - New Age of Heroes (Europe)"
       }
     ],
     "players": 2,
@@ -5361,6 +6128,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Microsoft WebTV Setsuzoku Kit (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -5375,6 +6147,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Midway's Greatest Arcade Hits Volume 1 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Midway's Greatest Arcade Hits - Volume 1 (Europe)"
       }
     ],
     "players": 2,
@@ -5416,6 +6193,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Expendable (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Expendable",
+          "Seitai Heiki Expendable"
+        ],
+        "name": "Millennium Soldier - Expendable (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -5494,6 +6280,11 @@
       "Othello"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Morita no Saikyou Reversi (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5534,6 +6325,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Mortal Kombat Gold (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Mortal Kombat Gold (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5565,6 +6361,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/8/83/MrDriller_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Mr. Driller (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -5640,6 +6441,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA 2K (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -5655,6 +6461,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA 2K1 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA 2K1 (USA)"
       }
     ],
     "players": 4,
@@ -5674,6 +6485,11 @@
         "url": "https://archive.org/download/Sega_Sports_NBA_2K2_2001_Sega_US/Sega_Sports_NBA_2K2_2001_Sega_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA 2K2 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -5691,6 +6507,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Hoopz (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Hoopz (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -5706,6 +6527,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NBA Showtime - NBA on NBC (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA Showtime - NBA on NBC (Europe)"
       }
     ],
     "players": 4,
@@ -5742,6 +6568,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NFL 2K (USA)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -5757,6 +6588,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K1 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NFL 2K1 (USA)"
       }
     ],
     "players": 4,
@@ -5776,6 +6612,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL 2K2 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NFL 2K2 (USA)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -5791,6 +6632,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Blitz 2000 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NFL Blitz 2000 (Europe)"
       }
     ],
     "players": 4,
@@ -5844,6 +6690,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NFL Quarterback Club 2000 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NFL Quarterback Club 2000 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5861,6 +6712,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NHL 2K (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -5876,6 +6732,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/NHL 2K2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NHL 2K2 (USA)"
       }
     ],
     "players": 4,
@@ -6126,6 +6987,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Next Tetris - On-line Edition, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Next Tetris, The - On-Line Edition"
+        ],
+        "name": "Next Tetris, The (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -6141,6 +7010,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/3/3e/NightmareCreaturesII_DC_US_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Nightmare Creatures II (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -6219,6 +7093,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Nomad Soul, The (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Omikron - The Nomad Soul"
+        ],
+        "name": "Nomad Soul, The (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -6398,6 +7280,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Outtrigger (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Outtrigger (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -6419,6 +7306,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/POD 2 - Multiplayer Online (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "POD - Speedzone"
+        ],
+        "name": "POD 2 - Multiplayer Online (Europe)"
       }
     ],
     "players": 4,
@@ -6503,6 +7398,14 @@
         "url": "https://segaretro.org/images/6/65/Pen_Pen_Triicelon_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "PenPen TriIcelon"
+        ],
+        "name": "PenPen (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -6531,6 +7434,11 @@
         "url": "https://segaretro.org/images/f/f3/PSO-DCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Phantasy Star Online (Europe) (En,Ja,Fr,De,Es) (Rev 1)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6557,6 +7465,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/a/a4/PSOV2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Phantasy Star Online Ver. 2 (Europe) (En,Ja,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -6647,6 +7560,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Star Gladiator 2 - Nightmare of Bilstein"
+        ],
+        "name": "Plasma Sword - Nightmare of Bilstein (Europe)"
       }
     ],
     "players": 2,
@@ -6744,6 +7665,11 @@
         "url": "https://segaretro.org/images/0/07/Power_Stone_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Power Stone (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6770,6 +7696,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/3/31/Power_Stone_2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Power Stone 2 (Europe)"
       }
     ],
     "players": 4,
@@ -6882,6 +7813,11 @@
         "url": "https://segaretro.org/images/c/c5/Pro_Yakyu_Team_Asobou_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Pro Yakyuu Team de Asobou! (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -6934,6 +7870,15 @@
         "url": "https://archive.org/download/Project_Justice_2001_U/Project_Justice_2001_U.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Moero! Justice Gakuen",
+          "Project Justice"
+        ],
+        "name": "Project Justice - Rival Schools 2 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -6954,6 +7899,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Psychic_Force_2012_1999_J_color_w_back_cover/Psychic_Force_2012_1999_J_color_w_back_cover.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Psychic Force 2012 (Europe)"
       }
     ],
     "players": 2,
@@ -7015,6 +7965,11 @@
         "url": "https://segaretro.org/images/a/a2/Puyo_Puyon_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Puyo Puyoon (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -7061,6 +8016,11 @@
         "url": "https://segaretro.org/images/b/bd/Q3DCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Quake III - Arena (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -7079,6 +8039,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Quiz Aa Megami-sama - Tatakau Tsubasa to Tomoni (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -7107,6 +8072,16 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Monaco Grand Prix - Racing Simulation 2 (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Monaco Grand Prix",
+          "Monaco Grand Prix Racing Simulation 2",
+          "Racing Simulation 2 - Monaco Grand Prix On-Line"
+        ],
+        "name": "Racing Simulation - Monaco Grand Prix (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -7142,6 +8117,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Railroad Tycoon II - Gold Edition (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Railroad Tycoon II (Europe) (En,Fr,De)"
       }
     ],
     "players": 1,
@@ -7183,6 +8163,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rayman 2 - The Great Escape (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Rayman - Kaizokusen kara no Dasshutsu!"
+        ],
+        "name": "Rayman 2 - The Great Escape (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -7204,6 +8192,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Re-Volt (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Re-Volt (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -7229,6 +8222,14 @@
         "url": "https://segaretro.org/images/9/9e/Ready2RDCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ready 2 Rumble Boxing - Uchikome Warai no Megaton Punch!!"
+        ],
+        "name": "Ready 2 Rumble Boxing (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -7252,6 +8253,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ready 2 Rumble Boxing - Round 2 (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ready 2 Rumble Boxing - Round 2 (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -7261,6 +8267,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 1) (Rev A)"
+      },
+      {
+        "name": "Real Sound - Kaze no Regret (Japan) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7296,6 +8310,14 @@
         "url": "https://segaretro.org/images/e/e5/Lodoss_War_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Record of Lodoss War - The Advent of Cardice"
+        ],
+        "name": "Record of Lodoss War (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -7314,6 +8336,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Red Dog - Superior Firepower (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Red Dog - Superior Firepower (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -7341,6 +8368,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Reel Fishing - Wild (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Fish Eyes + Wild"
+        ],
+        "name": "Reel Fishing + Wild (USA)"
       }
     ],
     "players": 1,
@@ -7393,6 +8428,20 @@
         "url": "https://archive.org/download/Biohazard_Code_Veronica_2001_Capcom_JP/Biohazard_Code_Veronica_2001_Capcom_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Biohazard - Code - Veronica (Disc 1)"
+        ],
+        "name": "Resident Evil - Code - Veronica (Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Biohazard - Code - Veronica (Disc 2)"
+        ],
+        "name": "Resident Evil - Code - Veronica (Europe) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -7424,6 +8473,20 @@
         "url": "https://segaretro.org/images/7/78/ResidentEvil2_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Biohazard 2 - Value Plus (Disc 1)"
+        ],
+        "name": "Resident Evil 2 (Europe) (En,Fr) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Biohazard 2 - Value Plus (Disc 2)"
+        ],
+        "name": "Resident Evil 2 (Europe) (En,Fr) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -7452,6 +8515,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Biohazard 3 - Last Escape"
+        ],
+        "name": "Resident Evil 3 - Nemesis (Europe)"
       }
     ],
     "players": 1,
@@ -7486,6 +8557,11 @@
         "url": "https://segaretro.org/images/a/a4/Rez_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Rez (Europe) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7503,6 +8579,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ring - Terror's Realm, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ring, The"
+        ],
+        "name": "Ring, The - Terror's Realm (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -7518,6 +8602,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Roadsters (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Roadsters (Europe) (En,Fr,De,Es,It,Nl)"
       }
     ],
     "players": 4,
@@ -7629,6 +8718,11 @@
         "url": "https://archive.org/download/Soccer_Tsuku_Tokudaigou_J.League_Pro_Soccer_Club_O_Tsukurou_2000_J_color/Soccer_Tsuku_Tokudaigou_J.League_Pro_Soccer_Club_O_Tsukurou_2000_J_color.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Saka Tsuku Tokudai-gou - J.League Pro Soccer Club o Tsukurou! (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7687,6 +8781,17 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/0/00/Sakura_Taisen_2_LE_DC_JP_Manual.jpg"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 1)"
+      },
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 2)"
+      },
+      {
+        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 3)"
       }
     ],
     "players": 1,
@@ -7819,6 +8924,11 @@
         "url": "https://segaretro.org/images/6/6b/Samba_De_Amigo_Dreamcast_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Samba de Amigo (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -7846,6 +8956,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/San Francisco Rush 2049 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Rush 2049"
+        ],
+        "name": "San Francisco Rush 2049 (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -7855,6 +8973,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Sangokushi VI with Power-Up Kit"
+        ],
+        "name": "Sangokushi VI (Japan)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -7912,6 +9038,14 @@
         "url": "https://segaretro.org/images/0/0b/GetBassDCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Get Bass"
+        ],
+        "name": "Sega Bass Fishing (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -7928,6 +9062,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Get Bass 2"
+        ],
+        "name": "Sega Bass Fishing 2 (USA)"
       }
     ],
     "players": 1,
@@ -7950,6 +9092,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Extreme Sports (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Xtreme Sports"
+        ],
+        "name": "Sega Extreme Sports (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 2,
@@ -7981,6 +9131,14 @@
         "url": "https://segaretro.org/images/e/e6/SegaGT_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sega GT - Homologation Special"
+        ],
+        "name": "Sega GT (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -7997,6 +9155,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Sega_Marine_Fishing_2000_Sega_US/Sega_Marine_Fishing_2000_Sega_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sega Marine Fishing (USA)"
       }
     ],
     "players": 1,
@@ -8026,6 +9189,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/e/e8/SegaRally2_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sega Rally 2 (Europe)"
       }
     ],
     "players": 2,
@@ -8074,6 +9242,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Worldwide Soccer 2000 (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Worldwide Soccer 2000 - Euro Edition"
+        ],
+        "name": "Sega Worldwide Soccer 2000 (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -8091,6 +9267,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Seireiki Rayblade (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -8166,6 +9347,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seventh Cross Evolution (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Seventh Cross"
+        ],
+        "name": "Seventh Cross Evolution (USA)"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -8187,6 +9376,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shadow Man (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shadow Man (Europe) (En,Fr,Es,It)"
       }
     ],
     "players": 1,
@@ -8229,6 +9423,36 @@
         "url": "https://segaretro.org/images/8/86/Shenmue_DC_JP_Manual_LimitedEdition.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shenmue - Ichishou Yokosuka (Disc 1)",
+          "US Shenmue (Disc 1)"
+        ],
+        "name": "Shenmue (Europe) (En,Fr,De,Es) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Shenmue - Ichishou Yokosuka (Disc 2)",
+          "US Shenmue (Disc 2)"
+        ],
+        "name": "Shenmue (Europe) (En,Fr,De,Es) (Disc 2)"
+      },
+      {
+        "clones": [
+          "Shenmue - Ichishou Yokosuka (Disc 3)",
+          "US Shenmue (Disc 3)"
+        ],
+        "name": "Shenmue (Europe) (En,Fr,De,Es) (Disc 3)"
+      },
+      {
+        "clones": [
+          "Shenmue - Ichishou Yokosuka",
+          "US Shenmue"
+        ],
+        "name": "Shenmue (Europe) (En,Fr,De,Es) (Shenmue Passport)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8246,6 +9470,20 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Shenmue II (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Shenmue II (Europe) (En,Fr,De,Es) (Disc 1)"
+      },
+      {
+        "name": "Shenmue II (Europe) (En,Fr,De,Es) (Disc 2)"
+      },
+      {
+        "name": "Shenmue II (Europe) (En,Fr,De,Es) (Disc 3)"
+      },
+      {
+        "name": "Shenmue II (Europe) (En,Fr,De,Es) (Disc 4)"
       }
     ],
     "players": 1,
@@ -8354,6 +9592,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silent Scope (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Silent Scope (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8375,6 +9618,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Silver (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Silver (Europe) (En,Nl)"
       }
     ],
     "players": 1,
@@ -8456,6 +9704,20 @@
         "url": "https://segaretro.org/images/4/47/SkiesofArcadia_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Eternal Arcadia (Disc 1)"
+        ],
+        "name": "Skies of Arcadia (Europe) (En,Fr,De,Es) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Eternal Arcadia (Disc 2)"
+        ],
+        "name": "Skies of Arcadia (Europe) (En,Fr,De,Es) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8470,6 +9732,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Slave Zero (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Slave Zero (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -8500,6 +9767,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sno-Cross Championship Racing (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "SnoCross Championship Racing (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -8540,6 +9812,15 @@
         "url": "https://segaretro.org/images/2/27/CoolBoardersDCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Cool Boarders Burrrn!",
+          "Rippin' Riders"
+        ],
+        "name": "Snow Surfers (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -8561,6 +9842,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soldier of Fortune (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Soldier of Fortune (Europe)"
       }
     ],
     "players": 1,
@@ -8594,6 +9880,15 @@
         "url": "https://archive.org/download/Sonic_Adventure_1998_Sega_JP/Sonic_Adventure_1998_Sega_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sonic Adventure - Limited Edition",
+          "Sonic Adventure International"
+        ],
+        "name": "Sonic Adventure (Europe) (En,Ja,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8622,6 +9917,11 @@
         "url": "http://info.sonicretro.org/images/b/b3/SonicAdventure2_DC_JP_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sonic Adventure 2 (Europe) (En,Ja,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -8636,6 +9936,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sonic Adventure 2 - The Trial (USA, Japan) (En,Ja)"
       }
     ],
     "players": 2,
@@ -8658,6 +9963,11 @@
           "ja"
         ],
         "url": "http://info.sonicretro.org/images/5/5d/SonicShuffle_DC_JP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sonic Shuffle (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -8709,6 +10019,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Soul Fighter (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Soul Fighter (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -8737,6 +10052,11 @@
         "url": "https://segaretro.org/images/f/f1/Soul_Calibur_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Soulcalibur (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -8754,6 +10074,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park - Chef's Luv Shack (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "South Park - Chef's Luv Shack (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -8769,6 +10094,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/South Park Rally (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "South Park Rally (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -8797,6 +10127,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/6/69/Space_Channel_5_Sega_Dreamcast_Japan_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Space Channel 5 (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -8845,6 +10180,11 @@
         "url": "https://archive.org/download/Spawn_In_The_Demons_Hand_2000_J_color/Spawn_In_The_Demons_Hand_2000_J_color.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Spawn - In the Demon's Hand (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -8860,6 +10200,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spec Ops II - Omega Squad (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Spec Ops II - Omega Squad (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -8879,6 +10224,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Speed Devils (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -8894,6 +10244,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Speed Devils Online Racing (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Speed Devils - Online Racing (Europe)"
       }
     ],
     "players": 4,
@@ -8918,6 +10273,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spider-Man (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Spider-Man (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8933,6 +10293,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Spirit of Speed 1937 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Spirit of Speed 1937 (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -8957,6 +10322,11 @@
         "url": "https://segaretro.org/images/3/3b/SportsJam_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sports Jam (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -8974,6 +10344,11 @@
         "url": "https://segaretro.org/images/a/a5/StarWarsDemolition_DC_US_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars - Demolition (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -8988,6 +10363,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars Episode I - Jedi Power Battles (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Star Wars - Episode I - Jedi Power Battles (Europe)"
       }
     ],
     "players": 2,
@@ -9013,6 +10393,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Star Wars - Episode I Racer (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars - Episode I - Racer (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -9034,6 +10419,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Starlancer (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "StarLancer (Europe)"
       }
     ],
     "players": 8,
@@ -9064,6 +10454,15 @@
         "url": "https://archive.org/download/Street_Fighter_Zero_3_1999_J_color/Street_Fighter_Zero_3_1999_J_color.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter Zero 3 - Saikyo-ryu Dojo",
+          "Street Fighter Zero 3 - Saikyo-ryu Dojo for Matching Service"
+        ],
+        "name": "Street Fighter Alpha 3 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -9092,6 +10491,14 @@
         "url": "https://segaretro.org/images/b/bc/StreetFighterIII3rd_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter III - 3rd Strike - Fight for the Future"
+        ],
+        "name": "Street Fighter III - 3rd Strike (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -9118,6 +10525,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/c/c9/SF3DI_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter III - W Impact"
+        ],
+        "name": "Street Fighter III - Double Impact (Europe)"
       }
     ],
     "players": 2,
@@ -9153,6 +10568,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Stupid Invaders (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Stupid Invaders (Europe) (En,Fr,De,It) (Disc 1)"
+      },
+      {
+        "name": "Stupid Invaders (Europe) (En,Fr,De,It) (Disc 2)"
       }
     ],
     "players": 1,
@@ -9231,6 +10654,14 @@
         "url": "https://segaretro.org/images/d/d5/SuperMagneticNeo_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Super Magnetic Niuniu"
+        ],
+        "name": "Super Magnetic Neo (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9299,6 +10730,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Runabout - San Francisco Edition (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Super Runabout"
+        ],
+        "name": "Super Runabout - San Francisco Edition (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -9333,6 +10772,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Surf Rocket Racers (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Surf Rocket Racers (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -9362,6 +10806,14 @@
         "url": "https://segaretro.org/images/2/24/RedlineRacer_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Redline Racer"
+        ],
+        "name": "Suzuki Alstare - Extreme Racing (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -9389,6 +10841,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sword of the Berserk - Guts' Rage (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Berserk - Millennium Falcon-hen - Wasurebana no Shou"
+        ],
+        "name": "Sword of the Berserk - Guts' Rage (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -9404,6 +10864,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sydney 2000 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sydney 2000 (Europe)"
       }
     ],
     "players": 8,
@@ -9454,6 +10919,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tantei Shinshi Dash! (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9487,6 +10957,15 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tech Romancer (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Choukou Senki Kikaioh",
+          "Choukou Senki Kikaioh for Matching Service"
+        ],
+        "name": "Tech Romancer (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -9508,6 +10987,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tee Off (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tee Off (Europe)"
       }
     ],
     "players": 4,
@@ -9577,6 +11061,14 @@
         "url": "https://segaretro.org/images/5/50/ClimaxLandersDCJPManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Climax Landers"
+        ],
+        "name": "Time Stalkers (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -9608,6 +11100,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/1/13/Tokyobusguide_dc_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tokyo Bus Guide (Japan)"
       }
     ],
     "players": 1,
@@ -9642,6 +11139,15 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer (Japan).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shutokou Battle",
+          "Tokyo Xtreme Racer"
+        ],
+        "name": "Tokyo Highway Challenge (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -9663,6 +11169,15 @@
           "ja"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer 2 (Japan).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shutokou Battle 2",
+          "Tokyo Xtreme Racer 2"
+        ],
+        "name": "Tokyo Highway Challenge 2 (Europe)"
       }
     ],
     "players": 2,
@@ -9690,6 +11205,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six - Rogue Spear (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tom Clancy's Rainbow Six - Rogue Spear + Mission Pack - Urban Operations (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -9707,6 +11227,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Tom Clancy's Rainbow Six with Eagle Watch Missions"
+        ],
+        "name": "Tom Clancy's Rainbow Six incl. Eagle Watch Missions (Europe)"
       }
     ],
     "players": 1,
@@ -9743,6 +11271,15 @@
         "url": "https://segaretro.org/images/0/02/TombRiderLRDCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tomb Raider - La Revelation Finale",
+          "Tomb Raider IV - The Last Revelation"
+        ],
+        "name": "Tomb Raider - The Last Revelation (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -9759,6 +11296,16 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - Chronicles (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Tomb Raider - Die Chronik",
+          "Tomb Raider - Sur les Traces de Lara Croft",
+          "Tomb Raider Chronicles - La Leggenda di Lara Croft"
+        ],
+        "name": "Tomb Raider Chronicles (Europe)"
       }
     ],
     "players": 1,
@@ -9778,6 +11325,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater 2 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tony Hawk's Pro Skater 2 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -9793,6 +11345,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Tony Hawk's Pro Skater"
+        ],
+        "name": "Tony Hawk's Skateboarding (Europe)"
       }
     ],
     "players": 2,
@@ -9816,6 +11376,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Commander (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Totsugeki! Teketeke!! Toy Ranger"
+        ],
+        "name": "Toy Commander (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -9860,6 +11428,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Trickstyle (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "TrickStyle (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -9991,6 +11564,11 @@
         "url": "https://segaretro.org/images/8/87/Typing_Of_The_Dead_DC_JP_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Typing of the Dead, The (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -10006,6 +11584,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/UEFA Dream Soccer (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "UEFA Dream Soccer (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -10029,6 +11612,15 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/UEFA Striker (France).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Striker Pro 2000",
+          "Super Euro Soccer 2000"
+        ],
+        "name": "UEFA Striker (Europe) (En,Fr,De,Es,It,Nl)"
       }
     ],
     "players": 4,
@@ -10058,6 +11650,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/1/1e/UltimateFighting_DC_JP_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ultimate Fighting Championship (Europe)"
       }
     ],
     "players": 2,
@@ -10118,6 +11715,11 @@
         "url": "https://segaretro.org/images/2/23/UnrealTDCBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Unreal Tournament (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -10133,6 +11735,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Urban Chaos (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Urban Chaos (Europe) (En,Fr)"
       }
     ],
     "players": 4,
@@ -10168,6 +11775,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/V-Rally 2 - Expert Edition (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Test Drive V-Rally"
+        ],
+        "name": "V-Rally 2 - Expert Edition (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -10201,6 +11816,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vanishing Point (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Vanishing Point (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10229,6 +11849,14 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vigilante 8 - 2nd Offense (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Vigilante 8 - 2nd Battle"
+        ],
+        "name": "Vigilante 8 - 2nd Offense (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -10250,6 +11878,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Athlete 2K (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Virtua Athlete 2000"
+        ],
+        "name": "Virtua Athlete 2K (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -10284,6 +11920,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/2/28/Vf3_dc_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Fighter 3tb (Europe)"
       }
     ],
     "players": 2,
@@ -10323,6 +11964,14 @@
         "url": "https://segaretro.org/images/a/a2/Virtuastriker2_dc_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Virtua Striker 2"
+        ],
+        "name": "Virtua Striker 2 Ver. 2000.1 (Europe) (En,Ja,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10340,6 +11989,15 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Tennis (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Power Smash - Sega Professional Tennis",
+          "Virtua Tennis"
+        ],
+        "name": "Virtua Tennis - Sega Professional Tennis (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -10355,6 +12013,15 @@
           "en"
         ],
         "url": "https://archive.org/download/Tennis_2K2_2001_U_color/Tennis_2K2_2001_U_color.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Power Smash 2 - Sega Professional Tennis",
+          "Tennis 2K2"
+        ],
+        "name": "Virtua Tennis 2 - Sega Professional Tennis (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 4,
@@ -10398,6 +12065,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/WWF Attitude (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WWF Attitude (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -10414,6 +12086,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/WWF Royal Rumble (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "WWF Royal Rumble (Europe)"
       }
     ],
     "players": 4,
@@ -10433,6 +12110,11 @@
         "url": "https://segaretro.org/images/a/af/WackyRaces_DC_US_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Wacky Races (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -10450,6 +12132,11 @@
         "url": "https://segaretro.org/images/b/b3/WDWQMRT_DC_US_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Walt Disney World Quest - Magical Racing Tour (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -10459,6 +12146,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Weakness Hero Torauman DC (Japan) (Game Disc)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -10466,6 +12158,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Web Browser (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -10516,6 +12213,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wetrix+ (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Wetrix+ (Europe) (En,Fr,De)"
       }
     ],
     "players": 4,
@@ -10572,6 +12274,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Wild Metal (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Wild Metal (Europe) (En,Fr,De,Es,It,Pt)"
       }
     ],
     "players": 2,
@@ -10659,6 +12366,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K1 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Series Baseball 2K1 (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -10674,6 +12386,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/World Series Baseball 2K2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "World Series Baseball 2K2 (USA)"
       }
     ],
     "players": 2,
@@ -10699,6 +12416,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms Armageddon (France).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Worms Armageddon (Europe) (En,Fr,De,Nl,Sv,No,Da)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -10722,6 +12444,11 @@
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Worms World Party (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Worms World Party (Europe) (En,Fr,De,Es,It,Nl,Sv,Da)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -10729,6 +12456,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Xploder DC (USA) (Unl)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -10831,6 +12563,11 @@
         "url": "https://segaretro.org/images/e/e9/Zombierevenge_dc_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Zombie Revenge (Europe) (En,Ja)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10842,6 +12579,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Zusar Vasar (Japan) (En,Ja)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },

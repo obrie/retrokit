@@ -252,6 +252,14 @@
         "url": "https://archive.org/download/air-sea-battle-atari-2600-eur-m-5/Air-Sea Battle (Atari 2600)(EUR)[M5]_images.zip"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Air-Sea Battle ~ Target Fun"
+        ],
+        "name": "Air-Sea Battle (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -1653,6 +1661,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Colors"
+        ],
+        "name": "Colours (USA, Europe) (Atari Anthology)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2125,6 +2141,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Dancing Plate (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dishaster"
+        ],
+        "name": "Dancing Plate (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2428,6 +2452,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/dolphin.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Vogel Flieh"
+        ],
+        "name": "Dolphin (USA)"
       }
     ],
     "players": 2,
@@ -3938,6 +3970,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "I.Q. Memory Teaser"
+        ],
+        "name": "I.Q. 180 (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4452,6 +4492,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Laser Gates (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Laaser Voley"
+        ],
+        "name": "Laser Gates (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -4508,6 +4556,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/lockn_chase.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Pygmy"
+        ],
+        "name": "Lock 'n' Chase (USA)"
       }
     ],
     "players": 2,
@@ -5037,6 +5093,14 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Astrowar"
+        ],
+        "name": "Missile War ~ Astro War (Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6279,6 +6343,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Exocet (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Exocet"
+        ],
+        "name": "Radar (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -6730,6 +6802,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Atari Video Cube (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Atari Video Cube"
+        ],
+        "name": "Rubik's Cube (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6876,6 +6956,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Seahawk (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Seahawk"
+        ],
+        "name": "Sea Hawk (USA)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6890,6 +6978,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sea_hunt.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Skindiver"
+        ],
+        "name": "Sea Hunt ~ Scuba Diver (USA)"
       }
     ],
     "players": 1,
@@ -6907,6 +7003,14 @@
           "de"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Sea Monster (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "O Monstro Marinho"
+        ],
+        "name": "Sea Monster (USA)"
       }
     ],
     "players": 2,
@@ -7509,6 +7613,14 @@
         "url": "http://www.digitpress.com/library/manuals/atari2600/space_tunnel.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tunnel de L'Espace, Le"
+        ],
+        "name": "Space Tunnel (USA)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7572,6 +7684,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/spider_fighter.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Phantom UFO"
+        ],
+        "name": "Spider Fighter (USA)"
       }
     ],
     "players": 1,
@@ -7740,6 +7860,14 @@
           "de"
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Snail Against Squirrel (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Snail Against Squirrel"
+        ],
+        "name": "Squirrel ~ O Esquilo (USA)"
       }
     ],
     "players": 1,
@@ -8175,6 +8303,14 @@
         "url": "https://archive.org/download/Atari2600Manuals_201812/Nightmare (Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Nightmare"
+        ],
+        "name": "Stunt Man (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -8598,6 +8734,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/tanks_but_no_tanks.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Phantom Tank"
+        ],
+        "name": "Tanks But no Tanks (USA)"
       }
     ],
     "players": 2,
@@ -9285,6 +9429,14 @@
           "en"
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/wall_break.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Wall Break"
+        ],
+        "name": "Wall-Defender (USA)"
       }
     ],
     "players": null,

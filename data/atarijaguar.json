@@ -114,6 +114,14 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Battle Sphere Gold"
+        ],
+        "name": "Battle Sphere (World)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -733,6 +741,14 @@
         ],
         "title": "Protector - Special Edition",
         "url": "https://archive.org/download/Protector_Special_Edition_1999_Songbird_Productions/Protector_Special_Edition_1999_Songbird_Productions.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Protector - Special Edition"
+        ],
+        "name": "Protector (World)"
       }
     ],
     "players": 2,

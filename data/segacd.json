@@ -43,6 +43,14 @@
         "url": "https://segaretro.org/images/a/a4/AX101_MD_jp_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "AX-101"
+        ],
+        "name": "A-X-101 (USA) (RE)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -66,6 +74,11 @@
         "url": "https://segaretro.org/images/9/9e/AdventuresOfB&RMCDBRManual.PDF"
       }
     ],
+    "parents": [
+      {
+        "name": "Adventures of Batman and Robin, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -80,6 +93,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/1/10/Willybeamish_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Adventures of Willy Beamish, The (USA)"
       }
     ],
     "players": 1,
@@ -112,6 +130,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/After_Burner_III_1992_Sega_JP/After_Burner_III_1992_Sega_JP.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "After Burner III (Europe)"
       }
     ],
     "players": 1,
@@ -156,6 +179,11 @@
         "url": "https://segaretro.org/images/6/61/Amazingspiderman_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Amazing Spider-Man vs. The Kingpin, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -172,6 +200,14 @@
         "url": "https://segaretro.org/images/8/8c/Androidassault_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Bari-Arm"
+        ],
+        "name": "Android Assault - The Revenge of Bari-Arm (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -186,6 +222,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/f/fe/Animals_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Animals!, The (Europe)"
       }
     ],
     "players": 1,
@@ -255,6 +296,11 @@
         "url": "https://segaretro.org/images/d/df/Bcracers_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "BC Racers (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -284,6 +330,11 @@
         "url": "https://segaretro.org/images/d/de/Batmanreturns_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Batman Returns (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -309,6 +360,11 @@
         "url": "https://segaretro.org/images/c/cc/Battlecorps_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Battlecorps (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -324,6 +380,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Shadow of the Beast II (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shadow of the Beast II",
+          "Shadow of the Beast II - Juushin no Jubaku"
+        ],
+        "name": "Beast II (Europe)"
       }
     ],
     "players": 1,
@@ -347,6 +412,11 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/a/af/Billwalsh_mcd_br_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Bill Walsh College Football (Europe)"
       }
     ],
     "players": 4,
@@ -378,6 +448,14 @@
         "url": "https://archive.org/download/Black_Hole_Assault_1992_Micronet_JP/Black_Hole_Assault_1992_Micronet_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Black Hole Assault"
+        ],
+        "name": "Blackhole Assault (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -389,6 +467,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Battle Frenzy"
+        ],
+        "name": "Bloodshot ~ Battle Frenzy (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -422,6 +508,11 @@
         "url": "https://segaretro.org/images/1/1a/Dracula_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Bram Stoker's Dracula (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -437,6 +528,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/3/3c/Brutalpawsoffury_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Brutal - Paws of Fury (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -523,6 +619,11 @@
         "url": "https://segaretro.org/images/d/d5/ChuckRockMegaCDEUManual.PDF"
       }
     ],
+    "parents": [
+      {
+        "name": "Chuck Rock (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -544,6 +645,11 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/f/f6/Chuck_Rock_II_MCD_BR_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Chuck Rock II - Son of Chuck (Europe)"
       }
     ],
     "players": 1,
@@ -606,6 +712,14 @@
         "url": "https://archive.org/download/Thunder_Storm_FX_1992_Wolf_Team_JP/Thunder_Storm_FX_1992_Wolf_Team_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Thunder Storm FX"
+        ],
+        "name": "Cobra Command (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -638,6 +752,11 @@
         "url": "https://segaretro.org/images/d/d2/Comptons_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Compton's Interactive Encyclopedia (USA) (Version 2.00S)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -653,6 +772,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/2/25/Corpsekiller_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Corpse Killer (Europe)"
       }
     ],
     "players": 1,
@@ -737,6 +861,14 @@
         "url": "https://archive.org/download/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dark Wizard - Yomigaerishi Yami no Madoushi"
+        ],
+        "name": "Dark Wizard (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -818,6 +950,11 @@
         "url": "https://archive.org/download/Double_Switch_1995_Sega_JP/Double_Switch_1995_Sega_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Double Switch (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -832,6 +969,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/2/20/Draculaunleashed_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dracula Unleashed (Europe) (Disc 1) (Made in E.U.)"
+      },
+      {
+        "name": "Dracula Unleashed (Europe) (Disc 2) (Made in E.U.)"
       }
     ],
     "players": 1,
@@ -849,6 +994,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/2/2f/Dragonslair_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dragon's Lair (Europe)"
       }
     ],
     "players": 1,
@@ -873,6 +1023,11 @@
         "url": "https://segaretro.org/images/4/48/DuneMegaCDEUManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dune (Europe) (En,Fr,De,Es,It,Ar)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -887,6 +1042,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/f/f7/Dungeonexplorer_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dungeon Explorer (Europe)"
       }
     ],
     "players": 4,
@@ -920,6 +1080,11 @@
         "url": "https://segaretro.org/images/b/bc/DungeonMasterII_MCD_JP_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dungeon Master II - Skullkeep (Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -951,6 +1116,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/2/2f/Espnbaseballtonight_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "ESPN Baseball Tonight (Europe)"
       }
     ],
     "players": 2,
@@ -1036,6 +1206,11 @@
         "url": "https://segaretro.org/images/a/a3/Earthwormjim_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Earthworm Jim - Special Edition (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -1051,6 +1226,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/3/3c/Ecco2_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Ecco the Dolphin CD (Disc 2)"
+        ],
+        "name": "Ecco - The Tides of Time (Europe) (En,Fr,De,Es)"
       }
     ],
     "players": 1,
@@ -1079,6 +1262,14 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/3/38/Ecco_the_Dolphin_MCD_BR_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Ecco the Dolphin CD (Disc 1)"
+        ],
+        "name": "Ecco the Dolphin (Europe)"
       }
     ],
     "players": 1,
@@ -1113,6 +1304,11 @@
         "url": "https://segaretro.org/images/0/05/Eternalchampions_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Eternal Champions - Challenge from the Dark Side (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1127,6 +1323,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/a/ad/Eotb_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Eye of the Beholder (Europe)"
       }
     ],
     "players": 1,
@@ -1170,6 +1371,14 @@
         "url": "https://segaretro.org/images/a/a7/FIFA_MCD_EU_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA International Soccer"
+        ],
+        "name": "FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -1184,6 +1393,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Sega_Mega_CD_32X_Fahrenheit_1994_U/Sega_Mega_CD_32X_Fahrenheit_1994_U.cbr"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Fahrenheit (Disc 1)"
+        ],
+        "name": "Fahrenheit (Europe)"
       }
     ],
     "players": 1,
@@ -1215,6 +1432,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Garou_Densetsu_Special_1995_Victor_JP/Garou_Densetsu_Special_1995_Victor_JP.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Garou Densetsu Special"
+        ],
+        "name": "Fatal Fury Special (Europe)"
       }
     ],
     "players": 2,
@@ -1250,6 +1475,11 @@
         "url": "https://archive.org/download/Final_Fight_CD_1993_Sega_JP/Final_Fight_CD_1993_Sega_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Final Fight CD (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -1269,6 +1499,14 @@
         "url": "https://segaretro.org/images/a/a5/Flashback_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Flashback"
+        ],
+        "name": "Flashback - The Quest for Identity (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -1284,6 +1522,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/8/8a/Flink_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Flink (Europe)"
       }
     ],
     "players": 1,
@@ -1307,6 +1550,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Heavenly Symphony - Formula One World Championship 1993"
+        ],
+        "name": "Formula One World Championship - Beyond the Limit (Europe)"
       }
     ],
     "players": 1,
@@ -1365,6 +1616,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/a/a7/Groundzerotexas_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ground Zero Texas (Europe) (Disc 1)"
+      },
+      {
+        "name": "Ground Zero Texas (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -1434,6 +1693,11 @@
         "url": "https://segaretro.org/images/b/b8/Heimdall_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Heimdall (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1449,6 +1713,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/c/c8/Hook_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Hook (Europe)"
       }
     ],
     "players": 1,
@@ -1504,6 +1773,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/6/6e/JaguarXJ220_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Jaguar XJ220 (Europe) (En,Ja)"
       }
     ],
     "players": 2,
@@ -1577,6 +1851,11 @@
         "url": "https://segaretro.org/images/f/fe/Jurassicpark_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Jurassic Park (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1592,6 +1871,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/5/50/Kfs_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Keiou Yuugekitai"
+        ],
+        "name": "Keio Flying Squadron (Europe)"
       }
     ],
     "players": 1,
@@ -1610,6 +1897,11 @@
         "url": "https://segaretro.org/images/0/00/Kidsonsite_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Kids on Site (Europe) (RE-1)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1625,6 +1917,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/0/00/Lawnmowerman_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lawnmower Man, The (Europe)"
       }
     ],
     "players": 1,
@@ -1645,6 +1942,11 @@
         "url": "https://segaretro.org/images/8/84/Lethalenforcers_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lethal Enforcers (Europe)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1662,6 +1964,14 @@
         "url": "https://segaretro.org/images/d/d3/Lethalenforcers2_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Lethal Enforcers II - The Western"
+        ],
+        "name": "Lethal Enforcers II - Gun Fighters (Europe)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -1677,6 +1987,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/4/44/Links_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Links - The Challenge of Golf (USA)"
       }
     ],
     "players": 1,
@@ -1712,6 +2027,11 @@
         "url": "https://segaretro.org/images/0/01/Lordsofthunder_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lords of Thunder (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -1734,6 +2054,11 @@
         "url": "https://segaretro.org/images/e/e2/LunarEternalBlue_MCD_JP_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lunar - Eternal Blue (USA) (RE)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1754,6 +2079,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/5/59/LunarTheSilverStar_MCD_JP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lunar - The Silver Star (USA)"
       }
     ],
     "players": 1,
@@ -1814,6 +2144,11 @@
         "url": "https://segaretro.org/images/8/86/Inxs_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Make My Video - INXS (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -1828,6 +2163,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/0/08/Krisskross_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Make My Video - Kris Kross (Europe)"
       }
     ],
     "players": 1,
@@ -1846,6 +2186,11 @@
         "url": "https://segaretro.org/images/0/03/Markymark_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Make My Video - Marky Mark and the Funky Bunch (USA)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1855,6 +2200,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Marko"
+        ],
+        "name": "Marko's Magic Football (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1892,6 +2245,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/3/3a/TheMaskedRiderZO_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Kamen Rider ZO"
+        ],
+        "name": "Masked Rider, The - Kamen Rider ZO (USA)"
       }
     ],
     "players": 1,
@@ -1938,6 +2299,14 @@
         "url": "https://segaretro.org/images/8/83/Mickeymania_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Mickey Mania - The Timeless Adventures of Mickey Mouse"
+        ],
+        "name": "Mickey Mania (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1957,6 +2326,11 @@
         "url": "https://segaretro.org/images/b/bc/Microcosm_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Microcosm (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1972,6 +2346,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/b/b2/Midnightraiders_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Midnight Raiders (Europe)"
       }
     ],
     "players": 1,
@@ -2024,6 +2403,11 @@
         "url": "https://segaretro.org/images/9/97/Mmpr_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Mighty Morphin Power Rangers (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2050,6 +2434,14 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/7/76/Mortal_Kombat_MCD_BR_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Mortal Kombat Kanzenban"
+        ],
+        "name": "Mortal Kombat (Europe)"
       }
     ],
     "players": 2,
@@ -2083,6 +2475,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/a/a5/Nbajam_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA Jam (Europe)"
       }
     ],
     "players": 4,
@@ -2135,6 +2532,14 @@
         "url": "https://segaretro.org/images/1/18/Nhl94_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "NHL '94"
+        ],
+        "name": "NHL Hockey '94 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -2159,6 +2564,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/5/56/Nighttrap_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Night Trap (Europe) (Disc 1)"
+      },
+      {
+        "name": "Night Trap (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -2212,6 +2625,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Note! Color Mechanica (USA) (Unl)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2226,6 +2644,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/9/9c/Novastorm_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Novastorm (Europe)"
       }
     ],
     "players": 1,
@@ -2249,6 +2672,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/c/cf/SWITCH_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Switch"
+        ],
+        "name": "Panic! (USA) (RE)"
       }
     ],
     "players": 1,
@@ -2286,6 +2717,11 @@
         "url": "https://segaretro.org/images/a/a4/Pitfall_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Pitfall - The Mayan Adventure (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2301,6 +2737,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/c/c7/Popfulmail_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "PopfulMail"
+        ],
+        "name": "Popful Mail (USA) (RE)"
       }
     ],
     "players": 1,
@@ -2320,6 +2764,11 @@
         "url": "https://segaretro.org/images/6/6d/Powerfactory_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Power Factory (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2334,6 +2783,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/d/d2/Powermonger_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Power Monger"
+        ],
+        "name": "PowerMonger (Europe)"
       }
     ],
     "players": 1,
@@ -2351,6 +2808,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/6/6c/Princeofpersia_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Prince of Persia (Europe)"
       }
     ],
     "players": 1,
@@ -2374,6 +2836,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/3/30/PrizeFighter_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Prize Fighter (Europe) (Disc 1)"
+      },
+      {
+        "name": "Prize Fighter (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -2417,6 +2887,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Psygnosis Christmas Sampler (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2432,6 +2907,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/a/a9/Puggsy_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Puggsy (Europe)"
       }
     ],
     "players": 1,
@@ -2546,6 +3026,11 @@
         "url": "https://archive.org/download/recordoflodosswarofficialguidemook/Record of Lodoss War Official Guide Mook.cbr"
       }
     ],
+    "parents": [
+      {
+        "name": "Record of Lodoss War (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2580,6 +3065,14 @@
         "url": "https://archive.org/download/SEGACDManuals/Revengers of Vengeance (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Battle Fantasy"
+        ],
+        "name": "Revengers of Vengeance (USA)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2600,6 +3093,14 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/5/56/RiseoftheDragon_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Rise of the Dragon - A Blade Hunter Mystery"
+        ],
+        "name": "Rise of the Dragon (USA)"
       }
     ],
     "players": 1,
@@ -2629,6 +3130,14 @@
           "nl"
         ],
         "url": "https://segaretro.org/images/a/a5/Road_Avenger_MCD_EU_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Road Blaster FX"
+        ],
+        "name": "Road Avenger (Europe)"
       }
     ],
     "players": 1,
@@ -2677,6 +3186,14 @@
         "url": "https://segaretro.org/images/b/b2/RoboAleste_mcd_EU_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Dennin Aleste - Nobunaga and His Ninja Force"
+        ],
+        "name": "Robo Aleste (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2691,6 +3208,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Samurai Shodown (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Samurai Shodown (Europe)"
       }
     ],
     "players": 2,
@@ -2723,6 +3245,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/4/48/Secretofmonkeyisland_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Secret of Monkey Island, The (USA) (RE)"
       }
     ],
     "players": 1,
@@ -2760,6 +3287,15 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/e/e6/SegaClassic_MCD_JP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Classic Arcade Collection - Limited Edition",
+          "Sega Classics Arcade Collection"
+        ],
+        "name": "Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A)"
       }
     ],
     "players": 2,
@@ -2820,6 +3356,14 @@
         "url": "https://segaretro.org/images/2/21/Championshipsoccer94_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Championship Soccer '94"
+        ],
+        "name": "Sensible Soccer (Europe)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -2835,6 +3379,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Sewer_Shark_1992_Sony_Imagesoft_US_a/Sewer_Shark_1992_Sony_Imagesoft_US_a.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sewer Shark (Europe)"
       }
     ],
     "players": 1,
@@ -2863,6 +3412,11 @@
         "url": "https://archive.org/download/SEGACDManuals/Sherlock Holmes - Consulting Detective (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sherlock Holmes - Consulting Detective (Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2878,6 +3432,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/5/54/Sherlockholmesii_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sherlock Holmes - Consulting Detective Vol. II (Europe) (Disc 1)"
+      },
+      {
+        "name": "Sherlock Holmes - Consulting Detective Vol. II (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -2912,6 +3474,11 @@
         "url": "https://segaretro.org/images/6/68/ShiningForceCD_MCD_JP_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Shining Force CD (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2932,6 +3499,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/c/cf/Silpheed_MCD_JAP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Silpheed (Europe)"
       }
     ],
     "players": 1,
@@ -2975,6 +3547,20 @@
         "url": "https://segaretro.org/images/d/db/Slamcity_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Slam City with Scottie Pippen (Europe) (Disc 1) (Fingers)"
+      },
+      {
+        "name": "Slam City with Scottie Pippen (Europe) (Disc 2) (Juice)"
+      },
+      {
+        "name": "Slam City with Scottie Pippen (Europe) (Disc 3) (Mad Dog)"
+      },
+      {
+        "name": "Slam City with Scottie Pippen (Europe) (Disc 4) (Smash)"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -3006,6 +3592,11 @@
         "url": "https://segaretro.org/images/d/db/Snatcher_mcd_EU_Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Snatcher (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3021,6 +3612,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Star Wars Chess (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Software Toolworks' Star Wars Chess, The (Europe)"
       }
     ],
     "players": 2,
@@ -3055,6 +3651,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/b/b9/Sol-Feace_MCD_JAP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sol-Feace (Europe)"
       }
     ],
     "players": 1,
@@ -3096,6 +3697,15 @@
         "url": "https://segaretro.org/images/6/6f/SonicCDSegaCDBRManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "CD Sonic The Hedgehog",
+          "Sonic The Hedgehog CD"
+        ],
+        "name": "Sonic CD (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3119,6 +3729,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Soulstar (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "SoulStar (Europe) (En,Fr,De)"
       }
     ],
     "players": 2,
@@ -3146,6 +3761,11 @@
         "url": "https://segaretro.org/images/3/3e/Spaceace_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Space Ace (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -3161,6 +3781,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Space Adventure, The (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Space Adventure, The - Cobra - The Legendary Bandit (Europe)"
       }
     ],
     "players": 1,
@@ -3180,6 +3805,11 @@
         "url": "https://segaretro.org/images/1/15/Swrebelassault_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars - Rebel Assault (Europe)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3195,6 +3825,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SEGACDManuals/Starblade (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Starblade (Europe)"
       }
     ],
     "players": 1,
@@ -3243,6 +3878,14 @@
         "url": "https://segaretro.org/images/a/af/Supremewarrior_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Supreme Warrior (Europe) (Disc 1)"
+      },
+      {
+        "name": "Supreme Warrior (Europe) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3259,6 +3902,11 @@
           "en"
         ],
         "url": "https://segaretro.org/images/1/15/Surgicalstrike_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Surgical Strike (Europe)"
       }
     ],
     "players": 1,
@@ -3331,6 +3979,11 @@
         "url": "https://segaretro.org/images/6/64/TerminatorMegaCDEUManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Terminator, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3366,6 +4019,14 @@
         "url": "https://segaretro.org/images/f/fd/Thirdworldwar_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "IIIrd World War, The"
+        ],
+        "name": "Third World War (USA)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3386,6 +4047,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/Thunderhawk_1993_Victor_JP/Thunderhawk_1993_Victor_JP.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "AH3 - Thunderstrike"
+        ],
+        "name": "Thunderhawk (Europe) (En,Fr,De,Es) (RE)"
       }
     ],
     "players": 1,
@@ -3420,6 +4089,11 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/8/8e/TimeGal_MCD_JP_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Time Gal (Europe)"
       }
     ],
     "players": 1,
@@ -3457,6 +4131,11 @@
           "nl"
         ],
         "url": "https://segaretro.org/images/2/2d/Tomcat_Alley_MCD_EU_Manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tomcat Alley (Europe)"
       }
     ],
     "players": 1,
@@ -3509,6 +4188,11 @@
         "url": "https://archive.org/download/Uresei_Yatsura_Dear_My_Friends_1994_Game_Arts_JP/Uresei_Yatsura_Dear_My_Friends_1994_Game_Arts_JP.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Urusei Yatsura - Dear My Friends (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3531,6 +4215,14 @@
         "url": "https://segaretro.org/images/a/a2/SCDManualTomcatAlleyTecToy.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Vay - Ryuusei no Yoroi"
+        ],
+        "name": "Vay (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3547,6 +4239,14 @@
           "en"
         ],
         "url": "https://segaretro.org/images/2/2b/Wwfrageinthecage_mcd_us_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "WWF Mania Tour - WWF - Rage in the Cage"
+        ],
+        "name": "WWF - Rage in the Cage (Europe)"
       }
     ],
     "players": 4,
@@ -3649,6 +4349,11 @@
         "url": "https://segaretro.org/images/5/51/Wingcommander_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Wing Commander (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -3700,6 +4405,11 @@
         "url": "https://segaretro.org/images/8/86/Wolfchild_mcd_us_manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Wolfchild (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 1
   },
@@ -3721,6 +4431,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/Wonder_Dog_1991_Victor_JP/Wonder_Dog_1991_Victor_JP.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Wonder Dog (Europe)"
       }
     ],
     "players": 1,
@@ -3760,6 +4475,11 @@
         "url": "https://segaretro.org/images/f/fa/WCUSA94MegaCDEUManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Cup USA '94 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -3780,6 +4500,15 @@
           "ja"
         ],
         "url": "https://segaretro.org/images/7/77/YumemiMysteryMansion_MD_jp_manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Mansion of Hidden Souls",
+          "Yumemi Yakata no Monogatari"
+        ],
+        "name": "Yumemi Mystery Mansion (Europe) (Made in EU)"
       }
     ],
     "players": 1,

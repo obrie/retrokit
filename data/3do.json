@@ -24,6 +24,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/3D Atlas (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "3D Atlas (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -129,6 +134,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Alone in the Dark (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Alone in the Dark (Europe) (En,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -144,6 +154,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Alone_in_the_Dark_2_1995_Interplay_US/Alone_in_the_Dark_2_1995_Interplay_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Alone in the Dark 2 (USA)"
       }
     ],
     "players": 1,
@@ -174,6 +189,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "AutoBahn Tokio (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -200,6 +220,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "BFS - Blue Forest Story (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -251,6 +276,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Battle Chess (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Battle Chess (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -276,6 +306,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/BattleSport (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "BattleSport (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -299,6 +334,11 @@
           "en"
         ],
         "url": "https://archive.org/download/BladeForce_1995_Studio_3DO_US/BladeForce_1995_Studio_3DO_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Blade Force (Europe)"
       }
     ],
     "players": 1,
@@ -335,6 +375,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Brain Dead 13 Starring Fritz (USA) (Disc 1).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "BrainDead 13 (USA) (Disc 1)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -346,6 +391,11 @@
       "1st person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Burning Soldier (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.2
   },
@@ -362,6 +412,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Cannon Fodder (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Cannon Fodder (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -376,6 +431,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Captain Quazar (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Captain Quazar (Europe)"
       }
     ],
     "players": 1,
@@ -437,6 +497,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Chiki Chiki Machine Mou Race 2 - In Space (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -467,6 +532,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Corpse Killer (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Corpse Killer (USA)"
       }
     ],
     "players": 1,
@@ -502,6 +572,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Crash 'n Burn (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Crash 'n Burn (USA) (Not for Resale)"
       }
     ],
     "players": 1,
@@ -585,6 +660,11 @@
         "url": "https://archive.org/download/Cyberia_1996_Interplay_US/Cyberia_1996_Interplay_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Cyberia (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -600,6 +680,20 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/D (USA, Europe) (Disc 1).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "D no Shokutaku (Disc 1)"
+        ],
+        "name": "D (USA, Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "D no Shokutaku (Disc 2)"
+        ],
+        "name": "D (USA, Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -626,6 +720,32 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Daedalus Encounter, The (USA) (Disc 1).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 1)"
+        ],
+        "name": "Daedalus Encounter, The (USA) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 2)"
+        ],
+        "name": "Daedalus Encounter, The (USA) (Disc 2)"
+      },
+      {
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 3)"
+        ],
+        "name": "Daedalus Encounter, The (USA) (Disc 3)"
+      },
+      {
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 4)"
+        ],
+        "name": "Daedalus Encounter, The (USA) (Disc 4)"
       }
     ],
     "players": 1,
@@ -662,6 +782,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Defcon 5 (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -676,6 +801,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Demolition Man (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Demolition Man (USA)"
       }
     ],
     "players": 1,
@@ -791,6 +921,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Dragon's Lair (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dragon's Lair (USA) (RE1)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -841,6 +976,26 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Golf  Lower Your Score with Tom Kite (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 1)"
+        ],
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 1)"
+      },
+      {
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 2)"
+        ],
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 2)"
+      },
+      {
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 3)"
+        ],
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 3)"
       }
     ],
     "players": 1,
@@ -897,6 +1052,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Escape from Monster Manor - A Terrifying Hunt for the Undead (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Virtual Horror - Norowareta Yakata"
+        ],
+        "name": "Escape from Monster Manor (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -922,6 +1085,11 @@
           "en"
         ],
         "url": "https://archive.org/download/FIFA_International_Soccer_1994_EA_Sports_US/FIFA_International_Soccer_1994_EA_Sports_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "FIFA International Soccer (Europe)"
       }
     ],
     "players": 6,
@@ -958,6 +1126,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Fatty Bear's Birthday Surprise (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Fatty Bear's Birthday Surprise (USA)"
+      }
+    ],
     "players": 10,
     "rating": 0.6
   },
@@ -974,6 +1147,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Fatty Bear's Funpack (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Fatty Bear's Fun Pack"
+        ],
+        "name": "Fatty Bear's Funpack (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -984,6 +1165,11 @@
       "Pinball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fire Ball!! (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1011,6 +1197,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Flashback - The Quest for Identity (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Flashback - The Quest for Identity"
+        ],
+        "name": "Flashback (Europe) (En,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -1036,6 +1230,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Flying Nightmares (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Flying Nightmares (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1052,6 +1251,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Foes_of_Ali_1995_Electronic_Arts_US/Foes_of_Ali_1995_Electronic_Arts_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Foes of Ali (Europe)"
       }
     ],
     "players": 2,
@@ -1127,6 +1331,11 @@
         "url": "https://archive.org/download/Gex_1995_Crystal_Dynamics_US/Gex_1995_Crystal_Dynamics_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Gex (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1136,6 +1345,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ghost Hunter Series - Kuroki Shi no Kamen (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1161,6 +1375,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Gridders (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Gridders (Europe)"
       }
     ],
     "players": 1,
@@ -1290,6 +1509,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Horde, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Horde, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1368,6 +1592,15 @@
         "url": "https://archive.org/download/Immercenary_1995_Electronic_Arts_US/Immercenary_1995_Electronic_Arts_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Immercenary - Combat in a Digital World",
+          "Perfect World - Combat in a Digital World"
+        ],
+        "name": "Immercenary (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1391,6 +1624,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Incredible Machine, The (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Incredible Machine, The - Pararancho"
+        ],
+        "name": "Incredible Machine, The (Europe)"
       }
     ],
     "players": 1,
@@ -1430,6 +1671,14 @@
         "url": "https://archive.org/download/Iron_Angel_of_the_Apocalypse_1994_Synergy_US/Iron_Angel_of_the_Apocalypse_1994_Synergy_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tetsujin"
+        ],
+        "name": "Iron Angel of the Apocalypse - Tetsujin (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -1444,6 +1693,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Iron Angel of the Apocalypse (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Tetsujin Returns"
+        ],
+        "name": "Iron Angel of the Apocalypse - The Return (USA)"
       }
     ],
     "players": 1,
@@ -1522,6 +1779,15 @@
         "url": "https://archive.org/download/John_Madden_Football_1994_EA_Sports_US/John_Madden_Football_1994_EA_Sports_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "John Madden Football",
+          "NFL Madden Football"
+        ],
+        "name": "John Madden NFL Football (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -1555,6 +1821,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Jurassic Park Interactive (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Jurassic Park Interactive (USA)"
       }
     ],
     "players": 1,
@@ -1606,6 +1877,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Killing Time (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tozasareta Yakata"
+        ],
+        "name": "Killing Time (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -1631,6 +1910,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Konpeki no Kantai (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1673,6 +1957,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Lemmings (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lemmings (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1713,6 +2002,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Life Stage, The - Virtual House (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Life Stage, The - Virtual House (USA)"
       }
     ],
     "players": 1,
@@ -1824,6 +2118,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Lost Files of Sherlock Holmes, The (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lost Files of Sherlock Holmes, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1847,6 +2146,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lucienne's Quest (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sword & Sorcery"
+        ],
+        "name": "Lucienne's Quest (USA)"
       }
     ],
     "players": 1,
@@ -1967,6 +2274,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/MegaRace (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "MegaRace (USA, Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -1981,6 +2293,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Microcosm (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Microcosm (USA)"
       }
     ],
     "players": 2,
@@ -2006,6 +2323,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Montana Jones (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2039,6 +2361,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Myst (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Myst (USA)"
       }
     ],
     "players": 1,
@@ -2112,6 +2439,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Night Trap (USA) (Disc 1)"
+      },
+      {
+        "name": "Night Trap (USA) (Disc 2)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2162,6 +2497,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Novastorm (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Nova-Storm"
+        ],
+        "name": "Novastorm (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2179,6 +2522,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Oceans Below (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Oceans Below (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2193,6 +2541,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Off-world Interceptor (USA, Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Off-World Interceptor (USA, Europe)"
       }
     ],
     "players": 2,
@@ -2293,6 +2646,14 @@
         "url": "https://archive.org/download/Out_of_this_World_1993_Interplay_US/Out_of_this_World_1993_Interplay_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Outer World"
+        ],
+        "name": "Out of This World (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2318,6 +2679,11 @@
           "en"
         ],
         "url": "https://archive.org/download/PGA_Tour_96_1995_EA_Sports_US/PGA_Tour_96_1995_EA_Sports_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "PGA Tour 96 (Europe)"
       }
     ],
     "players": 4,
@@ -2353,6 +2719,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/PaTaank (USA, Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "PaTaank (USA, Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -2362,6 +2733,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Paddock Note '95 (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -2374,6 +2750,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic_REAL_3DO_Interactive_Multiplayer_Sampler_CD_1994_Panasonic_US/Panasonic_REAL_3DO_Interactive_Multiplayer_Sampler_CD_1994_Panasonic_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD (USA) (ZAZ)"
       }
     ],
     "players": null,
@@ -2441,6 +2822,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Phoenix 3 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Phoenix 3 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2491,6 +2877,14 @@
         "url": "https://archive.org/download/GuardianWarManual/GuardianWarManual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Guardian War"
+        ],
+        "name": "Powers Kingdom (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2515,6 +2909,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Bishoujo Senshi Sailor Moon S (Japan).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Pretty Soldier SailorMoon S (Japan)"
       }
     ],
     "players": 2,
@@ -2564,6 +2963,11 @@
       "Sports / Baseball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pro Yakyuu Virtual Stadium - Professional Baseball (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2606,6 +3010,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Putt-Putt Joins the Parade (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2615,6 +3024,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Putt-Putt's Fun Pack (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2630,6 +3044,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Bust-A-Move (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Puzzle Bobble (Japan)"
       }
     ],
     "players": 1,
@@ -2685,6 +3104,11 @@
         "url": "https://archive.org/download/Real_Pinball_1994_Panasonic_US/Real_Pinball_1994_Panasonic_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Real Pinball (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2702,6 +3126,11 @@
         "url": "https://archive.org/download/Return_Fire_1995_Prolific_US/Return_Fire_1995_Prolific_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Return Fire (Japan, Europe) (En,Ja,Fr,De,Es,It,Pt,Ko,Ru,Ar)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -2711,6 +3140,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Return Fire - Maps O' Death (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2721,6 +3155,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Rise of the Robots (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.1
   },
@@ -2736,6 +3175,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Need for Speed, The (USA, Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Road & Track Presents - OverDrivin'"
+        ],
+        "name": "Road & Track Presents - The Need for Speed (USA, Europe)"
       }
     ],
     "players": 1,
@@ -2755,6 +3202,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Road Rash (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Road Rash (Europe)"
       }
     ],
     "players": 1,
@@ -2793,6 +3245,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Shadow - War of Succession (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "SHADOW Warriors"
+        ],
+        "name": "SHADOW - War of Succession (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2808,6 +3268,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Samurai_Shodown_1994_Crystal_Dynamics_US/Samurai_Shodown_1994_Crystal_Dynamics_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Samurai Shodown (USA, Europe)"
       }
     ],
     "players": 2,
@@ -2835,6 +3300,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Scramble Cobra (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Scramble Cobra (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2849,6 +3319,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Seal of the Pharaoh (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Virtual Quest - Pharaoh no Fuuin"
+        ],
+        "name": "Seal of the Pharaoh (USA)"
       }
     ],
     "players": 1,
@@ -2892,6 +3370,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Sesame Street - Numbers (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sesame Street - Numbers (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -2933,6 +3416,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Shanghai - Triple-Threat (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shanghai - Banri no Choujou - The Great Wall"
+        ],
+        "name": "Shanghai - Triple-Threat (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2958,6 +3449,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Shockwave - Invasion Earth 2019 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Shock Wave (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2965,6 +3461,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Shock Wave - Operation JumpGate (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2979,6 +3480,20 @@
           "en"
         ],
         "url": "https://archive.org/download/Shockwave_2_Beyond_the_Gate_1995_Electronic_Arts_US_operations_guide/Shockwave_2_Beyond_the_Gate_1995_Electronic_Arts_US_operations_guide.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shockwave 2 - Beyond the Gate (Disc 01)"
+        ],
+        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 1)"
+      },
+      {
+        "clones": [
+          "Shockwave 2 - Beyond the Gate (Disc 02)"
+        ],
+        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 2)"
       }
     ],
     "players": 1,
@@ -3012,6 +3527,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Slam 'N Jam '95 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Slam 'n Jam '95 (USA, Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3026,6 +3546,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Slayer_1994_SSi_US/Slayer_1994_SSi_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Lost Dungeon"
+        ],
+        "name": "Slayer (Europe)"
       }
     ],
     "players": 1,
@@ -3069,6 +3597,14 @@
         "url": "https://archive.org/download/soccer-kid-3do/manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Great! Soccer Kid"
+        ],
+        "name": "Soccer Kid (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3079,6 +3615,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sotsugyou - Graduation - Final (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -3104,6 +3645,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Ace (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Space Ace (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3119,6 +3665,14 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Hulk - Vengeance of the Blood Angels (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Blood Angels"
+        ],
+        "name": "Space Hulk - Vengeance of the Blood Angels (Europe)"
       }
     ],
     "players": 1,
@@ -3170,6 +3724,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Star Control II (USA, Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Star Control II - The Ur-Quan Masters"
+        ],
+        "name": "Star Control II (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3186,6 +3748,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Star Fighter (USA, Europe).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Fighter (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3200,6 +3767,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Star_Wars_Rebel_Assault_1993_Electronic_Arts_US/Star_Wars_Rebel_Assault_1993_Electronic_Arts_US.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Star Wars - Rebel Assault (USA, Europe)"
       }
     ],
     "players": 1,
@@ -3219,6 +3791,11 @@
         "url": "https://archive.org/download/StarBlade_1994_Panasonic_US/StarBlade_1994_Panasonic_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Starblade (Europe, Germany)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -3233,6 +3810,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Stellar 7 - Draxon's Revenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Stellar 7 - Draxon's Revenge (USA)"
       }
     ],
     "players": 1,
@@ -3270,6 +3852,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Strahl (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Strahl (USA)"
       }
     ],
     "players": 1,
@@ -3325,6 +3912,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Super Street Fighter II Turbo (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Super Street Fighter II X - Grand Master Challenge"
+        ],
+        "name": "Super Street Fighter II Turbo (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -3339,6 +3934,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Super Wing Commander (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Super Wing Commander (Europe)"
       }
     ],
     "players": 1,
@@ -3368,6 +3968,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Supreme Warrior - Ying Heung (USA) (Disc 1).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Supreme Warrior (USA) (Disc 2) (Wind & Fang Tu)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3384,6 +3989,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Syndicate (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Syndicate (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3394,6 +4004,11 @@
       "Sports / Golf"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "T&E VR Golf - Masters - Harukanaru Augusta 3 (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3458,6 +4073,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Theme Park (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Theme Park (Europe) (En,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3508,6 +4128,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Total Eclipse (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Total Eclipse (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3515,6 +4140,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Totsugeki Karakuri! Megadas!! (Japan)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -3543,6 +4173,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Uchuu Seibutsu Flopon-kun"
+        ],
+        "name": "Trip'd (USA, Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -3558,6 +4196,15 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Pebble Beach Golf Links (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Pebble Beach Golf Links",
+          "T&E VR Golf - Pebble Beach no Hatou"
+        ],
+        "name": "True Golf Classics - Pebble Beach Golf Links (Europe)"
       }
     ],
     "players": 4,
@@ -3585,6 +4232,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Twisted - The Game Show (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Twisted"
+        ],
+        "name": "Twisted - The Game Show (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3604,6 +4259,11 @@
       "Sports / Soccer"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "V Goal Soccer '96 (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3618,6 +4278,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/VR Stalker (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "VR Stalker (Europe) (Improved Version)"
       }
     ],
     "players": 1,
@@ -3668,6 +4333,11 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Virtuoso (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Virtuoso (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3678,6 +4348,15 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "T&E VR Golf - Waialae no Kiseki",
+          "True Golf Classics - Waialae Country Club"
+        ],
+        "name": "Waialae Country Club (USA, Canada)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3700,6 +4379,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Way of the Warrior (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Way of the Warrior (USA)"
       }
     ],
     "players": 2,
@@ -3734,6 +4418,14 @@
         "url": "https://archive.org/download/wicked18-3do-usa/manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "T&E VR Golf - Devil's Course"
+        ],
+        "name": "Wicked 18 (USA)"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -3749,6 +4441,20 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Wing Commander III - Heart of the Tiger (USA) (Disc 1).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Wing Commander III - Heart of the Tiger (USA, Europe) (Disc 1)"
+      },
+      {
+        "name": "Wing Commander III - Heart of the Tiger (USA, Europe) (Disc 2)"
+      },
+      {
+        "name": "Wing Commander III - Heart of the Tiger (USA, Europe) (Disc 3)"
+      },
+      {
+        "name": "Wing Commander III - Heart of the Tiger (USA, Europe) (Disc 4)"
       }
     ],
     "players": 1,
@@ -3777,6 +4483,11 @@
           "en"
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Wolfenstein 3D (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Wolfenstein 3D (Europe)"
       }
     ],
     "players": 1,
@@ -3844,6 +4555,11 @@
         "url": "https://archive.org/download/World_Cup_Golf_Hyatt_Dorado_Beach_1994_U.S._Gold_US/World_Cup_Golf_Hyatt_Dorado_Beach_1994_U.S._Gold_US.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Cup Golf - Hyatt Dorado Beach (USA, Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3895,6 +4611,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yu Yu Hakusho (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -3904,6 +4625,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yuujou Densetsu - The Doraemons (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },

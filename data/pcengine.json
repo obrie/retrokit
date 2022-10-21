@@ -42,6 +42,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "3x3 Eyes - Sanjiyan Henjou (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -69,6 +74,11 @@
       "Adult"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "AV Tanjou (Japan) (Unl)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -227,6 +237,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/AlnamNoKibaManualJPPCEngine/Alnam no Kiba (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Alnam no Kiba - Juuzoku Juuni Shinto Densetsu (Japan) (FAAT)"
       }
     ],
     "players": 1,
@@ -595,6 +610,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bishoujo Senshi Sailor Moon Collection (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -722,6 +742,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bomberman - Panic Bomber (Japan) (FAAT)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -755,6 +780,15 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Bonk_3/Bonk_3_HuCARD.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Bonk III - Bonk's Big Adventure",
+          "PC Genjin 3 - Pithecanthropus Computerurus"
+        ],
+        "name": "Bonk 3 - Bonk's Big Adventure (USA)"
       }
     ],
     "players": 5,
@@ -972,6 +1006,14 @@
         "url": "http://www.tg-16.com/contributors/bernie/Buster_Bros/Buster_Bros.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Pomping World"
+        ],
+        "name": "Buster Bros. (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -981,6 +1023,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "CAL II (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1280,6 +1327,11 @@
         "url": "https://archive.org/download/CosmicFantasyManualJPPCEngine/Cosmic Fantasy (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Cosmic Fantasy - Bouken Shounen Yuu (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1294,6 +1346,14 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Cosmic_Fantasy_2/Cosmic_Fantasy_2.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Cosmic Fantasy 2 - Bouken Shounen Ban"
+        ],
+        "name": "Cosmic Fantasy 2 (USA)"
       }
     ],
     "players": 1,
@@ -1695,6 +1755,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Doukyuusei (Japan) (Rev 3)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -1814,6 +1879,11 @@
         "url": "http://www.tg-16.com/contributors/bernie/Dragon_Slayer/Dragon_Slayer.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dragon Slayer - The Legend of Heroes (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1904,6 +1974,11 @@
         "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Explorer_II/Dungeon_Explorer_II.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dungeon Explorer II (USA)"
+      }
+    ],
     "players": 5,
     "rating": 0.9
   },
@@ -1918,6 +1993,11 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Master/Dungeon_Master.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dungeon Master - Theron's Quest (USA)"
       }
     ],
     "players": 1,
@@ -1953,6 +2033,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Chou Eiyuu Densetsu - Dynastic Hero"
+        ],
+        "name": "Dynastic Hero, The (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2005,6 +2093,11 @@
         "url": "https://archive.org/download/emeralddragonguidebook/Emerald Dragon Guide Book.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Emerald Dragon (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2041,6 +2134,14 @@
         "url": "http://www.tg-16.com/contributors/arjak/Exile/Exile.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Exile - Toki no Hasama e"
+        ],
+        "name": "Exile (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2051,6 +2152,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Exile II - Janen no Jishou"
+        ],
+        "name": "Exile - Wicked Phenomenon (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2111,6 +2220,11 @@
       "Sports / Running trails"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "F1 Circus Special - Pole to Win (Japan) (FABT)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2150,6 +2264,11 @@
       "Shooter / 1st person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Faceball (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -2185,6 +2304,11 @@
       "Shoot'em up / Horizontal"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fantastic Night Dreams - Cotton (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -2217,6 +2341,11 @@
         "url": "https://archive.org/download/TengaiMakyouFuunKabukiDenManualJPPCEngine/Tengai Makyou Fuun Kabuki Den (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Far East of Eden - Tengai Makyou - Fuun Kabuki-den (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2231,6 +2360,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/TengaiMakyouZiriaManualJPPCEngine/Tengai Makyou (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Far East of Eden - Tengai Makyou - Ziria (Japan) (Hibaihin)"
       }
     ],
     "players": 1,
@@ -2263,6 +2397,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/FarjiusNoJakouteiManualJPPCEngine/Farjius no Jakoutei (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Farjius no Jakoutei - Neo Metal Fantasy (Japan)"
       }
     ],
     "players": 1,
@@ -2302,6 +2441,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fighting Street (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -2369,6 +2513,11 @@
       "Shoot'em up / Vertical"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Final Zone II (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2425,6 +2574,11 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Forgotten_Worlds/Forgotten_Worlds.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Forgotten Worlds (USA) (En,Ja)"
       }
     ],
     "players": 1,
@@ -2559,6 +2713,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Garou Densetsu 2 - Aratanaru Tatakai (Japan) (FABT, FAET, FAFT)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2569,6 +2728,11 @@
       "Fight / 2D"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Garou Densetsu Special (Japan) (FABT)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -2670,6 +2834,11 @@
       "Shoot'em up / Vertical"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ginga Fukei Densetsu Sapphire (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2686,6 +2855,11 @@
         "url": "https://archive.org/download/GingaOjousamaDensetsuYunaManualJPPCEngine/Ginga Ojousama Densetsu Yuna (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ginga Ojousama Densetsu Yuna (Japan) (FAFT)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2700,6 +2874,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/GingaOjousamaDensetsuYuna2ManualJPPCEngine/Ginga Ojousama Densetsu Yuna 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ginga Ojousama Densetsu Yuna 2 - Eien no Princess (Japan) (FAAT)"
       }
     ],
     "players": 1,
@@ -2742,6 +2921,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Godzilla Bakutou Retsuden"
+        ],
+        "name": "Godzilla (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2771,6 +2958,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Golden Axe (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -2838,6 +3030,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gyuwambler Jiko Chuushinha - Gekitou 36 Janshi (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -2908,6 +3105,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/hatsukoi-monogatari-manual-scan-jp-pcengine/Hatsukoi Monogatari (Manual)(Scan)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Hatsukoi Monogatari (Japan) (Rev 1)"
       }
     ],
     "players": 1,
@@ -3070,6 +3272,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hyper Dyne - SideArms Special (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3079,6 +3286,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hyper Wars (Japan) (SAAS)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3223,6 +3435,14 @@
         "url": "https://mocagh.org/miscgame/murderclubpce-manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "J. B. Harold Series 1 - Murder Club"
+        ],
+        "name": "J. B. Harold Murder Club (USA) (En,Ja)"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -3270,6 +3490,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Jack Nicklaus' World Tour Golf - 162 Holes"
+        ],
+        "name": "Jack Nicklaus Turbo Golf (USA)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -3402,6 +3630,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Juuouki (Japan) (Rev 4)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -3421,6 +3654,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kabuki Ittouryoudan (Japan) (FAAT)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -3593,6 +3831,11 @@
         "url": "https://archive.org/download/KisouLougaManualJPPCEngine/Kisou Louga (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Kisou Louga (Japan) (FABT)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3739,6 +3982,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Laplace no Ma (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3771,6 +4019,14 @@
         "url": "http://www.tg-16.com/contributors/bernie/Last_Alert/Last_Alert.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Red Alert"
+        ],
+        "name": "Last Alert (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3780,6 +4036,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Last Armageddon (Japan) (Rev 5)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3868,6 +4129,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Legion (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3886,6 +4152,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Linda^3 (Japan) (Rev 1)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -3912,6 +4183,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Loom (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3938,6 +4214,14 @@
         "url": "http://www.tg-16.com/contributors/bernie/Lords_of_Thunder/Lords_of_Thunder.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Winds of Thunder"
+        ],
+        "name": "Lords of Thunder (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3947,6 +4231,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Rising Sun"
+        ],
+        "name": "Lords of the Rising Sun (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3956,6 +4248,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mad Stalker - Full Metal Force (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -4004,6 +4301,14 @@
       "Educational"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Magical Saurus Tour"
+        ],
+        "name": "Magical Dinosaur Tour (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4105,6 +4410,11 @@
       "Mahjong"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mahjong Vanilla Syndrome (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4283,6 +4593,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Meteor Blaster DX (USA) (Unl)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4306,6 +4621,11 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Might_and_Magic_III/Might_and_Magic_III.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Might and Magic III - Isles of Terra (USA)"
       }
     ],
     "players": 1,
@@ -4412,6 +4732,14 @@
         "url": "http://www.tg-16.com/contributors/bernie/Monster_Lair/Monster_Lair.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Wonder Boy III - Monster Lair"
+        ],
+        "name": "Monster Lair (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -4421,6 +4749,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Monster Maker - Yami no Ryuukishi (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -4530,6 +4863,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mysterious Song (USA) (En,Fr,Es) (Unl)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5001,6 +5339,11 @@
         "url": "https://archive.org/download/PachiokunMaboroshinoDensetsuPCEngineCJCD1001NTSCJ/000_Pachio-kun_Maboroshi_no_Densetsu_PC_Engine_CJCD1001_NTSC-J_manual_01_preview.jpg"
       }
     ],
+    "parents": [
+      {
+        "name": "Pachio-kun - Maboroshi no Densetsu (Japan) (Rev 7)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5103,6 +5446,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PopfulMail (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5235,6 +5583,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Prince of Persia (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -5345,6 +5698,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/AYAPsychicDetectiveSeriesVol.3ManualJPPCEngine/AYA Psychic Detective Series Vol.3 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Psychic Detective Series Vol. 3 - Aya (Japan)"
       }
     ],
     "players": 1,
@@ -5498,6 +5856,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Quiz Marugoto the World (Japan) (Rev 7)"
+      }
+    ],
     "players": 5,
     "rating": null
   },
@@ -5647,6 +6010,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "ROM^2 Karaoke Volume 1 (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -5823,6 +6191,11 @@
         "url": "https://archive.org/download/LodossTouSenki2ManualJPPCEngine/Lodoss Tou Senki 2 (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Record of Lodoss War II (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -5851,6 +6224,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Ookami-teki Monshou - Crest of Wolf"
+        ],
+        "name": "Riot Zone (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -5891,6 +6272,11 @@
       "Fight / 2D"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ryuuko no Ken (Japan) (En,Ja,Es) (FAAT)"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -5984,6 +6370,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Seiryuu Densetsu - Monbit (Japan) (Rev 1)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6003,6 +6394,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Seiya Monogatari - Anearth Fantasy Stories (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6071,6 +6467,14 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Shadow of the Beast - Mashou no Okite"
+        ],
+        "name": "Shadow of the Beast (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -6109,6 +6513,14 @@
         "url": "http://www.tg-16.com/contributors/arjak/Shape_Shifter/Shape_Shifter.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Makai Eiyuuden - Shape Shifter"
+        ],
+        "name": "Shape Shifter (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -6132,6 +6544,11 @@
         "url": "https://archive.org/download/SherlockHolmesNoTanteiKouzaManualJPPCEngine/Sherlock Holmes no Tantei Kouza (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sherlock Holmes - Consulting Detective (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -6153,6 +6570,14 @@
           "ja"
         ],
         "url": "https://archive.org/download/SherlockHolmesNoTanteiKouza2ManualJPPCEngine/Sherlock Holmes no Tantei Kouza 2 (Manual)(JP)(PC Engine).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Sherlock Holmes - Consulting Detective Vol. II"
+        ],
+        "name": "Sherlock Holmes - Consulting Detective - Volume 2 (USA)"
       }
     ],
     "players": 1,
@@ -6339,6 +6764,11 @@
         "url": "http://www.tg-16.com/contributors/bernie/Sim_Earth/Sim_Earth.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "SimEarth - The Living Planet (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -6511,6 +6941,11 @@
         "url": "https://archive.org/download/SotsugyouGraduationManualJPPCEngine/Sotsugyou Graduation (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sotsugyou - Graduation (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6614,6 +7049,14 @@
         "url": "http://www.tg-16.com/contributors/arjak/Splash_Lake/Splash_Lake.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Splash Lake - Ostrich Daibouken"
+        ],
+        "name": "Splash Lake (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6688,6 +7131,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Startling Odyssey II - Maryuu Sensou (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -6777,6 +7225,14 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "CD Denjin - Rockabilly Tengoku"
+        ],
+        "name": "Super Air Zonk - Rockabilly-Paradise (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -6822,6 +7278,11 @@
       "Shooter / Horizontal"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Darius (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7012,6 +7473,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "TerraForming"
+        ],
+        "name": "SydMead's TerraForming (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -7336,6 +7805,11 @@
         "url": "https://archive.org/download/TokimekiMemorialManualJPPCEngine/Tokimeki Memorial (Manual)(JP)(PC Engine).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tokimeki Memorial (Japan)"
+      }
+    ],
     "players": 1,
     "rating": null
   },
@@ -7508,6 +7982,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Valis II (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -7518,6 +7997,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Valis III (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7553,6 +8037,11 @@
           "en"
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Vasteel/Vasteel.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Vasteel (USA)"
       }
     ],
     "players": 2,
@@ -7779,6 +8268,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "World Heroes 2 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -7942,6 +8436,14 @@
         "url": "http://www.tg-16.com/contributors/arjak/Ys_Book_I_II/Ys_Book_I_II.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ys I & II"
+        ],
+        "name": "Ys Book I & II (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7958,6 +8460,14 @@
         "url": "http://www.tg-16.com/contributors/arjak/Ys_III/Ys_III.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ys III"
+        ],
+        "name": "Ys III - Wanderers from Ys (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7972,6 +8482,11 @@
           "ja"
         ],
         "url": "https://archive.org/download/ysivthedawnofyspcenginehirescans/Ys IV - The Dawn of Ys.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ys IV - The Dawn of Ys (Japan) (Rev 3)"
       }
     ],
     "players": 1,

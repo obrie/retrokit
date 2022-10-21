@@ -16,6 +16,11 @@
       "Shooter / 3rd person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "007 - From Russia with Love (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.6
   },
@@ -113,6 +118,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/2010 FIFA World Cup - South Africa (EUR).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "2010 FIFA World Cup South Africa (Europe) (En,Nl)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -149,6 +159,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "300 - March to Glory (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -172,6 +187,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/3rd Birthday, The (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "3rd Birthday, The (Europe)"
       }
     ],
     "players": 1,
@@ -224,6 +244,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "50 Cent - Bulletproof - G-Unit Edition (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -241,6 +266,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "7 Wonders of the Ancient World (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -301,6 +331,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "AKB1-149 - Ren'ai Sousenkyo (Japan) (Game Disc)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -360,6 +395,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/ATV Offroad Fury - Blazin' Trails (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "ATV Offroad Fury - Blazin' Trails (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -370,6 +410,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "ATV Offroad Fury Pro (Europe) (En,Fr,De,Es,It,Pt,Pl,Ru,El)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -420,6 +465,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ace Combat Joint Assault ULES01408.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ace Combat - Joint Assault (Europe) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -434,6 +484,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ace Combat X - Skies of Deception (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ace Combat X - Skies of Deception (Europe) (En,Ja,Fr,De,Es,It,Ko)"
       }
     ],
     "players": 2,
@@ -470,6 +525,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Activision Hits Remixed ULUS10186.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Activision Hits Remixed (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -489,6 +549,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Adventures to Go! (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -537,6 +602,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/After Burner - Black Falcon (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "After Burner - Black Falcon (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 8,
@@ -611,6 +681,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Alien Syndrome (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -629,6 +704,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Aliens vs. Predator - Requiem (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -788,6 +868,16 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Academy UCES00010.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ape Escape Academy",
+          "Piposaru Academia - Dossari! Saruge Daizenshuu",
+          "Piposaru Academia - Sagomungchi Neungryeokpyeongga Wanjeonjeongbog"
+        ],
+        "name": "Ape Academy (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -809,6 +899,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Academy 2 UCES00302.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Piposaru Academia 2 - Aiai Saruge Janken Battle"
+        ],
+        "name": "Ape Academy 2 (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -826,6 +924,16 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Escape P UCES00045.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Ape Escape - On the Loose",
+          "Piposarugetchu P",
+          "Saru! Get You! P!"
+        ],
+        "name": "Ape Escape (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -1006,6 +1114,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Archer Maclean's Mercury ULES00011.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hg Hydrium"
+        ],
+        "name": "Archer Maclean's Mercury (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1041,6 +1157,15 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Armored Core - Formula Front",
+          "Armored Core - Formula Front International"
+        ],
+        "name": "Armored Core - Formula Front Extreme Battle (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -1082,6 +1207,11 @@
       "Shooter / 3rd person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Army of Two - The 40th Day (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -1109,6 +1239,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Arthur and the Minimoys (Europe) (En,Fr,Es,Nl,Sv)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -1116,6 +1251,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan - McDonald's Ver."
+        ],
+        "name": "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -1146,6 +1289,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Assassin's Creed - Bloodlines (Europe) (En,Fr,De,Es,It,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1172,6 +1320,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Astonishia Story (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Astonishia Story (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1181,6 +1334,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Astro Boy - The Video Game (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -1269,6 +1427,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/B-Boy UCES00249.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "B-Boy (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -1288,6 +1451,11 @@
       "Playing cards"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bakugan - Defenders of the Core (Europe) (En,Fr,De,Es,It,Nl,Sv)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -1457,6 +1625,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "BattleZone (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -1504,6 +1677,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Beaterator ULES01023.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Beaterator (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1540,6 +1718,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ben 10 - Alien Force (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -1549,6 +1732,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ben 10 - Alien Force - Vilgax Attacks (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1559,6 +1747,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ben 10 - Protector of Earth (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -1568,6 +1761,11 @@
       "Action / Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ben 10 - Ultimate Alien - Cosmic Destruction (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -1589,6 +1787,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Beowulf - The Game (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Beowulf - The Game (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -1714,6 +1917,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Blade Dancer - Lineage of Light (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Blade Dancer - Lineage of Light (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -1741,6 +1949,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "BlazBlue - Calamity Trigger (Europe) (En,Ja,Fr,De,Es,Zh,Ko)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -1759,6 +1972,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "BlazBlue - Continuum Shift II (Europe) (En,Ja,Zh,Ko)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -1786,6 +2004,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Blazing Souls Accelate (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -1840,6 +2063,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bleach - Heat the Soul 6 (Japan)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -1849,6 +2077,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bleach - Heat the Soul 7 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -1926,6 +2159,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Blokus Portable - Steambot Championship (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -1945,6 +2183,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Blood Bowl ULES01230.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Blood Bowl (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -2038,6 +2281,11 @@
         "url": "https://archive.org/compress/box_20210408/formats=JPEG&file=/box_20210408.zip"
       }
     ],
+    "parents": [
+      {
+        "name": "Bomberman (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -2089,6 +2337,14 @@
         "url": "https://archive.org/compress/bombermanlandpspjp/formats=JPEG&file=/bombermanlandpspjp.zip"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Bomberman Land Portable"
+        ],
+        "name": "Bomberman Land (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -2126,6 +2382,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Bounty Hounds (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2244,6 +2505,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Breath of Fire III ULES00193.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Breath of Fire III (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -2253,6 +2519,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Ricky Ponting 2007 - Pressure Play"
+        ],
+        "name": "Brian Lara 2007 - Pressure Play (Europe)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -2312,6 +2586,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Brothers in Arms - D-Day (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -2322,6 +2601,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Brunswick Pro Bowling (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -2337,6 +2621,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Bubble Bobble - Evolution (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Bubble Bobble Evolution (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -2416,6 +2705,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Burnout Dominator ULES00703.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Burnout Dominator (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -2443,6 +2737,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Burnout Legends ULES00125.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Burnout Legends (Europe, Australia) (En,Fr,De,Es,It,Nl) (v1.01)"
+      }
+    ],
     "players": 6,
     "rating": 0.75
   },
@@ -2459,6 +2758,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Bust-A-Move - Deluxe"
+        ],
+        "name": "Bust-A-Move Ghost (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -2525,6 +2832,24 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Buzz! Brain of... UCES01201.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Buzz! Brain of Oz",
+          "Buzz! Brain of the UK",
+          "Buzz! Das grosse Laenderquiz",
+          "Buzz! De Slimste van Nederland",
+          "Buzz! De Strafste van Belgie",
+          "Buzz! Deutschlands Superquiz",
+          "Buzz! Il Quizzone Nazionale",
+          "Buzz! Polskie Lamiglowki ~ Buzz! Mozak Hrvatske",
+          "Buzz! Que Sabes de tu Pais",
+          "Buzz! Quem e o Genio Portugues ~ Buzz! Sokrovishha nacii",
+          "Buzz! Svenska Genier ~ Buzz! Suomen Neropatti"
+        ],
+        "name": "Buzz! Danske Genier (Europe) (No,Da)"
+      }
+    ],
     "players": 6,
     "rating": 0.5
   },
@@ -2535,6 +2860,11 @@
       "Casual Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Buzz! Master Quiz (Europe) (En,Pl)"
+      }
+    ],
     "players": 6,
     "rating": 0.6
   },
@@ -2550,6 +2880,14 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Buzz! Quiz World UCES01296.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Buzz! Concurso Universal"
+        ],
+        "name": "Buzz! Quiz World (Europe) (En,Pl)"
       }
     ],
     "players": 6,
@@ -2590,6 +2928,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Buzz! The Ultimate Music Quiz UCES01485.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Buzz! The Ultimate Music Quiz (Europe)"
+      }
+    ],
     "players": 6,
     "rating": 0.5
   },
@@ -2616,6 +2959,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "CID the Dummy (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -2641,6 +2989,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Cabela's Dangerous Hunts - Ultimate Challenge (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -2682,6 +3035,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Call of Duty - Roads to Victory (Europe) (En,Fr,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.7
   },
@@ -2718,6 +3076,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Capcom Classics Collection Reloaded ULES00377.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Capcom Classics Collection"
+        ],
+        "name": "Capcom Classics Collection Reloaded (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -2745,6 +3111,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Capcom Classics Collection Remixed ULES00347.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Capcom Classics Collection Remixed (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -2770,6 +3141,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Capcom Puzzle World ULES00647.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Capcom Puzzle World (Europe)"
       }
     ],
     "players": 2,
@@ -2905,6 +3281,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Castlevania - The Dracula X Chronicles (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Akumajou Dracula X - Chronicle"
+        ],
+        "name": "Castlevania - The Dracula X Chronicles (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -2946,6 +3330,14 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Championship Manager 2006 ULES00330.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Scudetto 2006 - Championship Manager"
+        ],
+        "name": "Championship Manager 2006 (Europe)"
       }
     ],
     "players": 1,
@@ -3025,6 +3417,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Chessmaster The Art of Learning ULES01013.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Chessmaster - The Art of Learning (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -3049,6 +3446,11 @@
       "Lightgun Shooter"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Chili Con Carnage (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3144,6 +3546,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Clank & Ratchet - Maru Hi Mission - Ignition!"
+        ],
+        "name": "Clank & Ratchet - Maruhi Mission Ignition! (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -3187,6 +3597,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Cloudy with a Chance of Meatballs (Europe, Australia)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -3212,6 +3627,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Code Lyoko - Quest for Infinity (Europe) (En,Fr,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3228,6 +3648,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Coded Arms (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Coded Arms (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3242,6 +3667,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Coded Arms - Contagion (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Coded Arms - Contagion (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 8,
@@ -3273,6 +3703,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "DiRT 2"
+        ],
+        "name": "Colin McRae - DiRT 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -3294,6 +3732,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Colin McRae Rally 2005 Plus ULES00111.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Colin McRae Rally 2005 Plus (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -3310,6 +3753,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Con, The (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -3389,6 +3837,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Crash - Mind over Mutant (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3400,6 +3853,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Crash Tag Team Racing (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.65
   },
@@ -3410,6 +3868,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Crash of the Titans (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -3441,6 +3904,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Crazy Taxi Fare Wars ULES00811.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Crazy Taxi - Fare Wars (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3469,6 +3937,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Astonishia Story 2"
+        ],
+        "name": "Crimson Gem Saga (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -3493,6 +3969,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Crisis Core - Final Fantasy VII (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Crisis Core - Final Fantasy VII (Europe)"
       }
     ],
     "players": 1,
@@ -3520,6 +4001,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Crush ULES00765.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Crush (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -3572,6 +4058,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Cube 3D Puzzle Mayhem ULES00722.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri!"
+        ],
+        "name": "Cube (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": null,
@@ -3673,6 +4167,14 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "DJ Max Emotional Sense P - Black Square"
+        ],
+        "name": "DJ Max Portable - Black Square (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -3712,6 +4214,15 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "TOCA Race Driver 2",
+          "V8 Supercars Australia 2"
+        ],
+        "name": "DTM Race Driver 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -3823,6 +4334,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dante's Inferno (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -3859,6 +4375,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Darkstalkers Chronicle - The Chaos Tower (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Vampire Chronicle - The Chaos Tower"
+        ],
+        "name": "Darkstalkers Chronicle - The Chaos Tower (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -3874,6 +4398,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Dave Mirra BMX Challenge (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dave Mirra BMX Challenge (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -3902,6 +4431,11 @@
           "nl"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Daxter NPEG00025.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Daxter (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -3936,6 +4470,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dead Head Fred ULES00902.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Dead Head Fred (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -3945,6 +4484,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dead or Alive - Paradise (Europe) (En,Fr,De) (ULES-01416)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -3954,6 +4498,11 @@
       "Shooter / 3rd person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dead to Rights - Reckoning (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -3969,6 +4518,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Death Jr. (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Death Jr. (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -3987,6 +4541,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Death Jr. II - Root of Evil (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Death Jr. II - Root of Evil (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -3996,6 +4555,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Def Jam - Fight for NY - The Takeover (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -4021,6 +4585,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Demo Disc for PSP Vol. 1 (Europe) (UCJB-98302)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -4195,6 +4764,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Despicable Me - The Game"
+        ],
+        "name": "Despicable Me (Europe) (En,Fr,De,Es,It,Sv,No,Da,Fi)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -4286,6 +4863,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Diner Dash - Sizzle & Serve"
+        ],
+        "name": "Diner Dash (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -4307,6 +4892,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Disgaea Afternoon of Darkness ULES00999.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Disgaea Portable",
+          "Makai Senki Disgaea Portable - Tsuushin Taisen Hajimemashita."
+        ],
+        "name": "Disgaea - Afternoon of Darkness (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -4317,6 +4911,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Disgaea 2 - Dark Hero Days (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4358,6 +4957,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/G-Force ULES01238.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Disney G-Force (Europe) (En,Fr,Es)"
       }
     ],
     "players": null,
@@ -4409,6 +5013,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Pirates of the Caribbean At World's End ULES00727.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Disney Pirates of the Caribbean - At World's End (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -4435,6 +5044,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/TRON Evolution ULES01494.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Disney TRON - Evolution (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -4459,6 +5073,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Cars ULES00319.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Disney-Pixar Cars (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -4471,6 +5090,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Disney-Pixar Cars - Race-O-Rama (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -4481,6 +5105,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Disney-Pixar Cars 2 (Europe) (En,Fr,De,Es,It,Nl,Pt,Pl,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.3
   },
@@ -4502,6 +5131,15 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ratatouille ULES00748.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Disney - Pixar Ratatouille",
+          "Disney-Pixar Ratatui"
+        ],
+        "name": "Disney-Pixar Ratatouille (Europe)"
       }
     ],
     "players": 2,
@@ -4527,6 +5165,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Toy Story 3 ULES01406.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Disney-Pixar Toy Story 3 (Europe) (En,Es) (v1.01)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -4550,6 +5193,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Up ULES01255.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Disney-Pixar Oben",
+          "Disney-Pixar Up - Altamente!"
+        ],
+        "name": "Disney-Pixar Up (Europe) (En,Fr)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -4571,6 +5223,14 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/WALL-E ULES01082.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Disney-Pixar WALL-E - Der Letzte raeumt die Erde auf"
+        ],
+        "name": "Disney-Pixar WALL-E (Europe)"
       }
     ],
     "players": 2,
@@ -4605,6 +5265,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Dissidia 012 - Duodecim Final Fantasy (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Dissidia 012 - Duodecim Final Fantasy (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 9,
@@ -4825,6 +5490,14 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Dissidia Final Fantasy - Universal Tuning"
+        ],
+        "name": "Dissidia Final Fantasy (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -5003,6 +5676,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dragon Ball Z - Shin Budokai (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5012,6 +5690,14 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Dragon Ball Z - Shin Budokai - Another Road"
+        ],
+        "name": "Dragon Ball Z - Shin Budokai 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5021,6 +5707,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dragon Ball Z - Tenkaichi Tag Team (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -5048,6 +5739,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dragonball - Evolution (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.2
   },
@@ -5057,6 +5753,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Dragoneer's Aria - Ryu ga Nemuru Made"
+        ],
+        "name": "Dragoneer's Aria (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5066,6 +5770,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "DreamWorks Megamind - The Blue Defender (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -5075,6 +5784,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "DreamWorks Vecinos Invasores - Hammy Enloquece"
+        ],
+        "name": "DreamWorks Over the Hedge - Hammy Goes Nuts! (Europe) (En,Fr,De,It,Nl)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -5087,6 +5804,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "DreamWorks Shrek - Smash n' Crash Racing (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -5101,6 +5823,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Shrek the Third (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "DreamWorks Shrek the Third (Europe) (En,Fr,De,Es,It,Nl)"
       }
     ],
     "players": 2,
@@ -5125,6 +5852,11 @@
           "nl"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Driver 76 ULES00740.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Driver 76 (Europe)"
       }
     ],
     "players": 2,
@@ -5165,6 +5897,15 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Dungeon Explorer - Meiyaku no Tobira",
+          "Dungeon Explorer - Warriors of Ancient Arts"
+        ],
+        "name": "Dungeon Explorer (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 3,
     "rating": 0.6
   },
@@ -5181,6 +5922,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Chronicle of Dungeon Maker"
+        ],
+        "name": "Dungeon Maker - Hunting Ground (USA)"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -5200,6 +5949,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dungeon Siege - Throne of Agony (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -5210,6 +5964,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Dungeons & Dragons - Tactics (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -5244,6 +6003,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors ULES00026.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Jin Samguk Mussang",
+          "Shin Sangoku Musou"
+        ],
+        "name": "Dynasty Warriors (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -5262,6 +6030,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors Strikeforce ULES01221.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Shin Sangoku Musou - Multi Raid"
+        ],
+        "name": "Dynasty Warriors - Strikeforce (Europe) (En,Fr,De)"
       }
     ],
     "players": 4,
@@ -5283,6 +6059,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors Vol. 2 NPEH00014.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Jin Samguk Mussang 2nd Evolution"
+        ],
+        "name": "Dynasty Warriors Vol. 2 (Europe)"
       }
     ],
     "players": 4,
@@ -5308,6 +6092,11 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/EA Replay ULES00592.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "EA Replay (Europe) (En,De,Es,It,Nl)"
       }
     ],
     "players": 4,
@@ -5349,6 +6138,14 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/echochrome UCES01011.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Mugen Kairou"
+        ],
+        "name": "Echochrome (Europe, Australia) (En,Fr,De,Es,It,Nl,Pt,Ru)"
       }
     ],
     "players": 1,
@@ -5414,6 +6211,14 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/echoshift UCES01313.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Jigen Kairou"
+        ],
+        "name": "Echoshift (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (v1.00)"
       }
     ],
     "players": 1,
@@ -5575,6 +6380,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Eragon (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -5623,6 +6433,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Every Extend Extra (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -5645,6 +6460,15 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Golf UCES00012.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Hot Shots Golf - Open Tee",
+          "Minna no Golf Portable"
+        ],
+        "name": "Everybody's Golf (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 8,
@@ -5671,6 +6495,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Golf 2 UCES00767.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hot Shots Golf - Open Tee 2",
+          "Minna no Golf Portable 2"
+        ],
+        "name": "Everybody's Golf 2 (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -5685,6 +6518,14 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Stress Buster (Blue Pack) NPEG00047.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Minna no Sukkiri"
+        ],
+        "name": "Everybody's Stress Buster (Asia) (En,Zh)"
       }
     ],
     "players": 1,
@@ -5772,6 +6613,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Tennis UCES01420.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Hot Shots Tennis - Get a Grip"
+        ],
+        "name": "Everybody's Tennis (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -5794,6 +6643,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Exit (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5869,6 +6723,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/The Eye of Judgment Legends UCES01334.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Eye of Judgment, The - Legends (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -5911,6 +6770,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "EyePet (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -5937,6 +6801,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "F1 2009 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5947,6 +6816,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "F1 Grand Prix (Europe) (En,Fr,De,Es,It) (v1.00)"
+      }
+    ],
     "players": 8,
     "rating": 0.55
   },
@@ -5964,6 +6838,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 06"
+        ],
+        "name": "FIFA 06 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -5974,6 +6856,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 07"
+        ],
+        "name": "FIFA 07 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -5984,6 +6874,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 08"
+        ],
+        "name": "FIFA 08 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -6011,6 +6909,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/FIFA 09 ULES01135.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 09"
+        ],
+        "name": "FIFA 09 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -6026,6 +6932,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/FIFA Soccer 10 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 10"
+        ],
+        "name": "FIFA 10 (Europe)"
       }
     ],
     "players": 1,
@@ -6045,6 +6959,14 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/FIFA 11 (EUR).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 11"
+        ],
+        "name": "FIFA 11 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -6055,6 +6977,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 12"
+        ],
+        "name": "FIFA 12 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -6065,6 +6995,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Soccer 13"
+        ],
+        "name": "FIFA 13 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -6075,6 +7013,15 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA 14 - Edicion Legado",
+          "FIFA 14 - Legacy Edition"
+        ],
+        "name": "FIFA 14 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -6085,6 +7032,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "FIFA Soccer (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -6102,6 +7054,11 @@
         "url": "https://archive.org/download/psp-fifa-street-2-manuale-ita/PSP - FIFA Street 2 - Manuale (ITA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "FIFA Street 2 (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -6112,6 +7069,16 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "FIFA Fussball-Weltmeisterschaft Deutschland 2006",
+          "FIFA World Cup Deutsch Taikai 2006",
+          "Mondiali FIFA 2006"
+        ],
+        "name": "FIFA World Cup Germany 2006 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -6135,6 +7102,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Fading Shadows ULES00858.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fading Shadows (Europe) (En,Fr,De,Es,It,Nl,Ru)"
       }
     ],
     "players": 2,
@@ -6177,6 +7149,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Family Guy (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Family Guy - Video Game! (Europe, Australia)"
       }
     ],
     "players": 1,
@@ -6226,6 +7203,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Fast and the Furious, The (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -6247,6 +7229,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Fat Princess Fistful of Cake UCES01312.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fat Princess - Fistful of Cake (Europe, Australia) (En,Fr,De,Es,It,Nl,Pt,Ru)"
       }
     ],
     "players": 8,
@@ -6307,6 +7294,11 @@
         "url": "http://fateextra.ghostlight.uk.com/manuals/Fate-Extra-IT-Manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Fate-Extra (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6352,6 +7344,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Field Commander (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Field Commander (Europe, Australia) (En,Fr,De,Es)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -6385,6 +7382,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Fight Night Round 3 ULES00270.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Fight Night Round 3 (Europe) (En,Fr)"
       }
     ],
     "players": 2,
@@ -6421,6 +7423,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Final Fantasy"
+        ],
+        "name": "Final Fantasy - 20th Anniversary Edition (Europe) (En,Ja)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6430,6 +7440,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Final Fantasy II"
+        ],
+        "name": "Final Fantasy II - 20th Anniversary Edition (Europe) (En,Ja)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -6448,6 +7466,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Final Fantasy IV Complete Collection - Final Fantasy IV & The After Years"
+        ],
+        "name": "Final Fantasy IV - The Complete Collection (Europe) (En,Ja,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -6479,6 +7505,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Final Fantasy Tactics - The War of the Lions (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Final Fantasy Tactics - Shishi Sensou"
+        ],
+        "name": "Final Fantasy Tactics - The War of the Lions (Europe)"
       }
     ],
     "players": 2,
@@ -6668,6 +7702,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/FlatOut Head On ULES00968.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "FlatOut - Head On (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -6802,6 +7841,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Ford Bold Moves Street Racing (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ford Bold Moves Street Racing"
+        ],
+        "name": "Ford Street Racing - L.A. Duel (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.55
   },
@@ -6821,6 +7868,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "F1 06 Portable"
+        ],
+        "name": "Formula One 06 (Europe) (En,Fr,De,Es,It,Pt,Fi)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -6863,6 +7918,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Frantix - A Puzzle Adventure (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Frantix (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -6912,6 +7972,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Frogger - Helmet Chaos (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -6934,6 +7999,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Full Auto 2 - Battlelines (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Full Auto 2 - Battlelines (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -7022,6 +8092,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "G.I. Joe - The Rise of Cobra (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.3
   },
@@ -7106,6 +8181,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gangs of London (Europe) (En,Fr,De,Es,It,Pt)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -7163,6 +8243,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Generation of Chaos ULES00820.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sincheon Magye - GOC IV - Another Side"
+        ],
+        "name": "Generation of Chaos (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -7194,6 +8282,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gensan NPEH00119.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Hammerin' Hero"
+        ],
+        "name": "Gensan (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -7293,6 +8389,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ghost Rider (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -7303,6 +8404,11 @@
       "Shooter / 1st person"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ghost in the Shell - Stand Alone Complex (Europe)"
+      }
+    ],
     "players": 6,
     "rating": 0.65
   },
@@ -7312,6 +8418,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ghostbusters - The Video Game (Europe) (En,Fr,Es,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -7335,6 +8446,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gitaroo Man Lives! (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -7351,6 +8467,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gladiator Begins ULES01515.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Gladiator Begins (Europe)"
       }
     ],
     "players": 2,
@@ -7387,6 +8508,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Go! Sudoku UCES00152.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Kazuo"
+        ],
+        "name": "Go! Sudoku (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -7397,6 +8526,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Go!Explore (UK) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -7406,6 +8540,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "God Eater Burst"
+        ],
+        "name": "God Eater (Japan)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -7455,6 +8597,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/God of War Chains of Olympus NPEG00023.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "God of War - Rakujitsu no Hisoukyoku"
+        ],
+        "name": "God of War - Chains of Olympus (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -7496,6 +8646,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/God of War Ghost of Sparta NPEG00044.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "God of War - Koutan no Kokuin"
+        ],
+        "name": "God of War - Ghost of Sparta (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -7512,6 +8670,17 @@
         "url": "https://archive.org/download/SonyPSPManuals/Godfather, The - Mob Wars (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Godfather, The - Mob Wars",
+          "Padrino, El",
+          "Padrino, Il",
+          "Pate, Der"
+        ],
+        "name": "Godfather, The (Europe) (En,Nl,Pl)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -7526,6 +8695,11 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gods Eater Burst ULES01519.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Gods Eater Burst (Europe)"
       }
     ],
     "players": 4,
@@ -7565,6 +8739,17 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "A la croisee des mondes - La Boussole d'or",
+          "Brujula Dorada, La",
+          "Bussola d'Oro, La",
+          "Goldene Kompass, Der"
+        ],
+        "name": "Golden Compass, The (Europe) (En,Nl,Sv,No,Da)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -7596,6 +8781,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gottlieb Pinball Classics ULES00213.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Pinball Hall of Fame - The Gottlieb Collection"
+        ],
+        "name": "Gottlieb Pinball Classics (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -7623,6 +8816,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Gradius Collection (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Gradius Portable"
+        ],
+        "name": "Gradius Collection (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -7640,6 +8841,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gran Turismo (Europe) (En,Fr,De,Es,It) (v1.01)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -7673,6 +8879,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Grand Theft Auto Chinatown Wars ULES01347.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Grand Theft Auto - Chinatown Wars (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -7704,6 +8915,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Grand Theft Auto Liberty City Stories ULES00151.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Grand Theft Auto - Liberty City Stories (Europe) (En,Fr,De,Es,It) (v1.05)"
+      }
+    ],
     "players": 6,
     "rating": 0.85
   },
@@ -7731,6 +8947,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Grand Theft Auto Vice City Stories ULES00502.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Grand Theft Auto - Vice City Stories (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 6,
@@ -7974,6 +9195,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Gripshift (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Gripshift (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -8040,6 +9266,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Guilty Gear Judgment (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Guilty Gear Judgment (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -8049,6 +9280,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Guilty Gear XX Accent Core Plus (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.9
   },
@@ -8068,6 +9304,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gun Showdown (Europe) (En,Fr,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8145,6 +9386,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Gunpey (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -8154,6 +9400,15 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Gurumin",
+          "Gurumin - Une Aventure Monstrueuse"
+        ],
+        "name": "Gurumin - A Monstrous Adventure (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8253,6 +9508,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Half-Minute Hero ULES01359.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Yuusha 30"
+        ],
+        "name": "Half-Minute Hero (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8311,6 +9574,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Hannah Montana Rock Out the Show ULES01303.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Hannah Montana - Rock Out the Show (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -8321,6 +9589,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hard Rock Casino (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.45
   },
@@ -8330,6 +9603,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Harry Potter et la Coupe de Feu"
+        ],
+        "name": "Harry Potter and the Goblet of Fire (Europe)"
+      }
+    ],
     "players": 3,
     "rating": 0.6
   },
@@ -8339,6 +9620,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Harry Potter and the Half-Blood Prince (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -8348,6 +9634,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Harry Potter and the Order of the Phoenix (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -8379,6 +9670,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Harvest Moon - Boy & Girl (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Bokujou Monogatari - Harvest Moon - Boy & Girl"
+        ],
+        "name": "Harvest Moon - Boy & Girl (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -8389,6 +9688,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Harvest Moon - Hero of Leaf Valley (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -8447,6 +9751,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hatsune Miku - Project Diva 2nd (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -8502,6 +9811,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Heatseeker (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -8511,6 +9825,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hellboy - The Science of Evil (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -8586,6 +9905,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hexyz Force (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -8698,6 +10022,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hot Brain (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -8707,6 +10036,11 @@
       "Casual Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hot Pixel (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -8760,6 +10094,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hot Wheels - Ultimate Racing (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -8795,6 +10134,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Hustle, The - Detroit Streets (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -8859,6 +10203,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/IL-2 Sturmovik Birds of Prey ULES01316.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "IL-2 Sturmovik - Birds of Prey (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -9005,6 +10354,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Impossible Mission (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -9025,6 +10379,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Indiana Jones and the Staff of Kings ULES00939.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Indiana Jones and the Staff of Kings (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -9034,6 +10393,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Infected (Europe) (En,Fr,Es)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -9060,6 +10424,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Initial D - Street Stage (Japan)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -9078,6 +10447,14 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Innocent Life A Futuristic Harvest Moon ULES00658.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Innocent Life - Shin Bokujou Monogatari"
+        ],
+        "name": "Innocent Life - A Futuristic Harvest Moon (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -9139,6 +10516,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/inviZimals UCES01241.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Invizimals (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -9167,6 +10549,11 @@
           "sv"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/inviZimals Shadow Zone UCES01411.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Invizimals - Shadow Zone (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
       }
     ],
     "players": 2,
@@ -9227,6 +10614,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Iron Man (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Iron Man (Europe) (En,De,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.45
   },
@@ -9236,6 +10628,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Iron Man 2"
+        ],
+        "name": "Iron Man 2 - The Video Game (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -9311,6 +10711,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Jackass - The Game (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Jackass - The Game (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -9342,6 +10747,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Jak and Daxter The Lost Frontier UCES01225.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Jak and Daxter - The Lost Frontier (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -9363,6 +10773,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/James Cameron's Avatar The Game NPEH00031.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "James Cameron's Avatar - The Game (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -9382,6 +10797,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Jeanne d'Arc (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -9549,6 +10969,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Jikkyou Powerful Pro Yakyuu Portable 3 (Japan)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -9606,6 +11031,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Juiced - Eliminator (Europe)"
+      }
+    ],
     "players": 5,
     "rating": 0.7
   },
@@ -9616,6 +11046,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Juiced 2 - Hot Import Nights (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -9646,6 +11081,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Justice League Heroes (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -9738,6 +11178,15 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Chameleon",
+          "Kuru Kuru Chameleon"
+        ],
+        "name": "Kameleon (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -9815,6 +11264,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Kao Challengers (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Kao Challengers (Europe) (En,Fr,De,Es,It) (v1.00)"
+      }
+    ],
     "players": 4,
     "rating": 1
   },
@@ -9874,6 +11328,14 @@
       "Casual Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "X-treme Party"
+        ],
+        "name": "Kazook (Europe) (En,Fr,De,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -9897,6 +11359,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Kenka Banchou 3 - Zenkoku Seiha"
+        ],
+        "name": "Kenka Bancho - Badass Rumble (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -9952,6 +11422,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Key of Heaven UCES00178.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Kingdom of Paradise",
+          "Tenchi no Mon"
+        ],
+        "name": "Key of Heaven (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -9998,6 +11477,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kidou Senshi Gundam - Senjou no Kizuna Portable (Japan, Asia)"
+      }
+    ],
     "players": 8,
     "rating": null
   },
@@ -10023,6 +11507,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan, Asia)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -10049,6 +11538,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Killzone Liberation NPEG00007.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Killzone - Liberation (Europe) (En,Fr,De,Es,It,Nl,Pl,Ru)"
       }
     ],
     "players": 6,
@@ -10125,6 +11619,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "King of Fighters Collection, The - The Orochi Saga (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -10165,6 +11664,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Kingdom Hearts - Birth by Sleep - Final Mix"
+        ],
+        "name": "Kingdom Hearts - Birth by Sleep (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -10247,6 +11754,15 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Kollon",
+          "Ultimate Block Party"
+        ],
+        "name": "Koloomn (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -10374,6 +11890,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Rush"
+        ],
+        "name": "L.A. Rush (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -10407,6 +11931,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LEGO Batman The Video Game ULES01151.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LEGO Batman - The Videogame (Europe) (En,Fr,De,Es,It,Da)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -10416,6 +11945,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "LEGO Harry Potter - Years 1-4 (Europe) (En,Fr,De,Es,It,Da) (v2.01)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -10425,6 +11959,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "LEGO Harry Potter - Years 5-7 (Europe) (En,Pl,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -10451,6 +11990,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LEGO Indiana Jones The Original Adventures ULES01086.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LEGO Indiana Jones - The Original Adventures (Europe) (En,Fr,De,Es,It,Da)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -10460,6 +12004,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "LEGO Indiana Jones 2 - The Adventure Continues (Europe) (En,Fr,De,Es,It,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -10486,6 +12035,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LEGO Pirates of the Caribbean The Video Game ULES01528.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LEGO Pirates of the Caribbean - The Video Game (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da,Fi)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -10502,6 +12056,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/LEGO Star Wars II - The Original Trilogy (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LEGO Star Wars II - The Original Trilogy (Europe) (En,Fr,De,Es,It,Da)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -10511,6 +12070,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "LEGO Star Wars III - The Clone Wars (Europe) (En,Fr,De,Es,It,Da)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -10570,6 +12134,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tomb Raider Anniversary ULES00826.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Lara Croft Tomb Raider - Anniversary (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -10594,6 +12163,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tomb Raider Legend ULES00283.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lara Croft Tomb Raider - Legend (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -10688,6 +12262,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/The Legend of Heroes Trails in the Sky ULES01556.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Eiyuu Densetsu - Sora no Kiseki FC"
+        ],
+        "name": "Legend of Heroes, The - Trails in the Sky (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -10706,6 +12288,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Legend of the Dragon (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -10735,6 +12322,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Lemmings UCES00109.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lemmings (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -10803,6 +12395,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LittleBigPlanet UCES01264.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "LittleBigPlanet (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
       }
     ],
     "players": 1,
@@ -11036,6 +12633,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LocoRoco UCES00304.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LocoRoco (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -11091,6 +12693,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LocoRoco 2 UCES01059.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "LocoRoco 2 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Ru)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -11109,6 +12716,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Lord of Arcana (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -11125,6 +12737,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Lord of the Rings, The - Aragorn's Quest (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -11140,6 +12757,16 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Lord of the Rings, The - Tactics (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Herr der Ringe, Der - Taktiken",
+          "Senor de los Anillos, El - Tacticas",
+          "Signore degli Anelli, Il - Tactics"
+        ],
+        "name": "Lord of the Rings, The - Tactics (Europe)"
       }
     ],
     "players": 4,
@@ -11181,6 +12808,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Lumines (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Lumines"
+        ],
+        "name": "Lumines - Puzzle Fusion (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -11195,6 +12830,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Lumines II ULUS10183.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Lumines II (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -11222,6 +12862,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Luxor - Pharaoh's Challenge (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -11242,6 +12887,11 @@
       "Lightgun Shooter"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "M.A.C.H. - Modified Air Combat Heroes (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -11292,6 +12942,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MLB 07 - The Show (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11309,6 +12964,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/MLB 08 - The Show (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "MLB 08 - The Show (USA)"
+      }
+    ],
     "players": 2,
     "rating": null
   },
@@ -11319,6 +12979,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MLB 09 - The Show (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11349,6 +13014,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MTV Pimp My Ride (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.35
   },
@@ -11360,6 +13030,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MTX Mototrax (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -11370,6 +13045,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MVP Baseball (USA)"
+      }
+    ],
     "players": null,
     "rating": 0.55
   },
@@ -11382,6 +13062,11 @@
       "3rd Pers."
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MX vs. ATV On the Edge (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -11394,6 +13079,11 @@
       "3rd Pers."
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MX vs. ATV Reflex (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -11406,6 +13096,11 @@
       "3rd Pers."
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MX vs. ATV Untamed (Europe, Australia)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -11489,6 +13184,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Madden NFL 06 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Madden NFL 06 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -11523,6 +13223,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Madden NFL 08 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Madden NFL 08 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -11538,6 +13243,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Madden NFL 09 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Madden NFL 09 (Europe)"
       }
     ],
     "players": 4,
@@ -11825,6 +13535,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Major League Baseball 2K9 NPEH00008.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Major League Baseball 2K9 (USA)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -11892,6 +13607,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Mana Khemia Student Alliance ULES01215.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Mana Khemia - Student Alliance (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -11910,6 +13630,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Manhunt 2 ULES00756.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Manhunt 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -11954,6 +13679,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Marvel - Ultimate Alliance (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.6
   },
@@ -11963,6 +13693,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Marvel - Ultimate Alliance 2 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -11972,6 +13707,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Marvel Nemesis - Rise of the Imperfects (Europe) (En,Fr,De,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -11981,6 +13721,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Marvel Super Hero Squad (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -11996,6 +13741,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Marvel Trading Card Game (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Marvel Trading Card Game (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -12016,6 +13766,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Puzzle Guzzle"
+        ],
+        "name": "Mawaskes Puzzle (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 8,
     "rating": null
   },
@@ -12026,6 +13784,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Boku no Watashi no Katamari Damacy"
+        ],
+        "name": "Me & My Katamari (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -12062,6 +13828,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Medal of Honor - Heroes (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Medal of Honor - Heroes (Europe)"
+      }
+    ],
     "players": 32,
     "rating": 0.8
   },
@@ -12090,6 +13861,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Medal of Honor Heroes 2 ULES00955.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Medal of Honor - Heroes 2 (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -12116,6 +13892,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/MediEvil Resurrection UCES00006.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "MediEvil - Resurrection (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -12137,6 +13918,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Mega Man Maverick Hunter X ULES00251.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Irregular Hunter X"
+        ],
+        "name": "Mega Man - Maverick Hunter X (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -12147,6 +13936,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Rockman Rockman"
+        ],
+        "name": "Mega Man - Powered Up (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -12222,6 +14019,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Mercury Meltdown ULES00466.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Mercury Meltdown (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -12260,6 +14062,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Metal Gear Ac!d (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Metal Gear Ac!d (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -12275,6 +14082,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Metal Gear Ac!d 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Metal Gear Ac!d 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -12293,6 +14105,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Metal Gear Solid - Digital Graphic Novel (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Metal Gear Solid - Digital Graphic Novel (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12309,6 +14126,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Metal Gear Solid - Peace Walker [ULUS-10509].pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Metal Gear Solid - Peace Walker (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 6,
@@ -12336,6 +14158,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Metal Gear Solid Portable Ops ULES00645.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Metal Gear Solid - Portable Ops (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.85
   },
@@ -12360,6 +14187,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Metal Gear Solid Portable Ops Plus ULES01003.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Metal Gear Solid - Portable Ops Plus (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 6,
@@ -12402,6 +14234,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Metal Slug Anthology (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Metal Slug Complete"
+        ],
+        "name": "Metal Slug Anthology (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -12426,6 +14266,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Metal Slug XX NPEH00118.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Metal Slug XX (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -12460,6 +14305,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Miami Vice - The Game (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Miami Vice - The Game (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -12470,6 +14320,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Michael Jackson - The Experience (Europe) (En,Fr,De,Es,It,Pl,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -12501,6 +14356,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Midnight Club L. A. Remix ULES01144.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Midnight Club - L.A. Remix (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -12528,6 +14388,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Midnight Club 3 DUB Edition ULES00108.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Midnight Club 3 - DUB Edition (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12542,6 +14407,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Midway Arcade Treasures - Extended Play (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Midway Arcade Treasures - Extended Play (Europe)"
       }
     ],
     "players": 4,
@@ -12589,6 +14459,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mind Quiz - Exercise Your Brain (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -12737,6 +14612,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/ModNation Racers UCES01327.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "ModNation Racers (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -12820,6 +14700,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Monster Hunter Freedom (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Monster Hunter Portable"
+        ],
+        "name": "Monster Hunter Freedom (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -12834,6 +14722,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Monster Hunter Freedom 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Monster Hunter Portable 2nd"
+        ],
+        "name": "Monster Hunter Freedom 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -12854,6 +14750,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Monster Hunter Freedom Unite ULES01213.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Monster Hunter Portable 2nd G"
+        ],
+        "name": "Monster Hunter Freedom Unite (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -12894,6 +14798,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Monster Jam - Urban Assault (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -12903,6 +14812,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Monster Kingdom - Jewel Summoner (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -12926,6 +14840,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Mortal Kombat - Unchained (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Mortal Kombat - Unchained (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -12956,6 +14875,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "MotoGP (Europe) (En,Fr,De,It,Nl)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -12980,6 +14904,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/MotorStorm Arctic Edge UCES01250.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "MotorStorm - Arctic Edge (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru,El)"
       }
     ],
     "players": 1,
@@ -13065,6 +14994,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Myst (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -13118,6 +15052,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Mytran Wars (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13128,6 +15067,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "N Plus (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13139,6 +15083,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NASCAR (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -13169,6 +15118,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA 07 (USA)"
+      }
+    ],
     "players": null,
     "rating": 0.95
   },
@@ -13185,6 +15139,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/NBA 08 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NBA 08 (USA)"
       }
     ],
     "players": 2,
@@ -13231,6 +15190,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/NBA 2K10 NPEH00025.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA 2K10 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -13241,6 +15205,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA 2K11 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -13251,6 +15220,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA 2K12 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -13261,6 +15235,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA 2K13 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -13288,6 +15267,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA Live 06 (Europe) (En,De,It)"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -13298,6 +15282,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA Live 07 (Europe) (En,De,It)"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -13317,6 +15306,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/NBA Live 08 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "NBA Live 08 (Europe) (En,Fr,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13327,6 +15321,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA Live 09 (Europe) (En,De,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -13337,6 +15336,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA Live 10 (Europe) (En,De,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -13347,6 +15351,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NBA Street Showdown (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13362,6 +15371,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/NCAA Football 07 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "NCAA Football 07 (USA)"
       }
     ],
     "players": 2,
@@ -13400,6 +15414,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NFL Street 2 - Unleashed (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -13409,6 +15428,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NFL Street 3 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -13418,6 +15442,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "NHL 07 (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -13444,6 +15473,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Namco Museum (Japan, Asia)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -13455,6 +15489,11 @@
       "Compilation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Namco Museum Battle Collection (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -13495,6 +15534,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Naruto - Ultimate Ninja Heroes (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Naruto - Ultimate Ninja Heroes (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -13511,6 +15555,14 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Naruto - Ultimate Ninja Heroes 2 - The Phantom Fortress (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Naruto - Narutimate Portable - Mugenjou no Maki"
+        ],
+        "name": "Naruto - Ultimate Ninja Heroes 2 - The Phantom Fortress (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -13521,6 +15573,14 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Naruto Shippuuden - Kizuna Drive"
+        ],
+        "name": "Naruto Shippuden - Kizuna Drive (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.45
   },
@@ -13531,6 +15591,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Naruto Shippuden - Legends - Akatsuki Rising (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -13541,6 +15606,14 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Naruto Shippuuden - Narutimate Accel 3"
+        ],
+        "name": "Naruto Shippuden - Ultimate Ninja Heroes 3 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -13565,6 +15638,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Naruto Shippuden Ultimate Ninja Impact ULES01537.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Naruto - Narutimate Impact"
+        ],
+        "name": "Naruto Shippuden - Ultimate Ninja Impact (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -13600,6 +15681,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Need for Speed - Carbon - Own the City (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -13633,6 +15719,11 @@
         "url": "https://archive.org/download/psp-need-for-speed-most-wanted-5-1-0-manuale-ita/PSP - Need for Speed Most Wanted 5-1-0 - Manuale (ITA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Need for Speed - Most Wanted - 5-1-0 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -13664,6 +15755,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Need for Speed ProStreet ULES01019.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Need for Speed - ProStreet (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -13680,6 +15776,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Need for Speed - Shift - Manual - PSP.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Need for Speed - Shift (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -13690,6 +15791,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Need for Speed - Undercover (Europe) (En,Fr,De,Es,It,Nl,Pl,Ru,Cs,Hu)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -13705,6 +15811,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Need for Speed - Underground Rivals (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Need for Speed - Underground Rivals (Europe, Australia) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -13838,6 +15949,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Nickelodeon Avatar - The Last Airbender"
+        ],
+        "name": "Nickelodeon Avatar - The Legend of Aang (Europe) (En,Fr,De,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -13847,6 +15966,15 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Nickelodeon Bob Esponja - Atrapados en el Congelador",
+          "Nickelodeon SpongeBob's Truth or Square"
+        ],
+        "name": "Nickelodeon SpongeBob SquarePants - SpongeBob's Truth or Square (Europe) (En,De,It,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -13857,6 +15985,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Nickelodeon SpongeBob SquarePants - The Yellow Avenger (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -14086,6 +16219,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/ObsCure The Aftermath PSP ULES01340 PAL manual.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "ObsCure - The Aftermath (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -14105,6 +16243,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Ford Racing - Off Road"
+        ],
+        "name": "Off Road (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.5
   },
@@ -14153,6 +16299,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Online Chess Kingdoms (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -14187,6 +16338,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Open Season (Europe) (En,Fr,Es,Da)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -14276,6 +16432,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/OutRun 2006 - Coast 2 Coast (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "OutRun 2006 - Coast 2 Coast (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.75
   },
@@ -14329,6 +16490,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PDC World Championship Darts (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -14346,6 +16512,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Pro Evolution Soccer 2008 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven - Ubiquitous Evolution 2008"
+        ],
+        "name": "PES 2008 - Pro Evolution Soccer (Europe) (En,Fr,De,Es,It,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -14356,6 +16530,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven 2009"
+        ],
+        "name": "PES 2009 - Pro Evolution Soccer (Europe) (En,Fr,De,Es,It,Pt)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -14366,6 +16548,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven 2010"
+        ],
+        "name": "PES 2010 - Pro Evolution Soccer (Europe) (En,Nl,Sv,Ru)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -14376,6 +16566,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven 2011"
+        ],
+        "name": "PES 2011 - Pro Evolution Soccer (Europe) (En,Nl,Sv,Ru)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14386,6 +16584,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven 2012"
+        ],
+        "name": "PES 2012 - Pro Evolution Soccer (Europe) (En,Nl,Sv,Ru,Tr)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -14396,6 +16602,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PES 2013 - Pro Evolution Soccer (Europe) (En,Nl,Sv,Ru,Tr)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -14406,6 +16617,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PES 2014 - Pro Evolution Soccer (Europe) (En,Nl,Sv,Ru,Tr)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -14415,6 +16631,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PQ - Practical Intelligence Quotient (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -14481,6 +16702,11 @@
       "Music and Dance"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PaRappa the Rapper (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -14520,6 +16746,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pac-Man World 3 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -14584,6 +16815,14 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Fantasy Golf Pangya Portable"
+        ],
+        "name": "Pangya - Fantasy Golf (USA)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -14662,6 +16901,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Passport to... Rome (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -14692,6 +16936,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Patapon UCES00995.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Patapon (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -14715,6 +16964,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Patapon 2 UCES01177.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Patapon 2 - Don-Chaka"
+        ],
+        "name": "Patapon 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -14736,6 +16993,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Patapon 3 UCES01421.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Patapon 3 (Europe) (En,Fr,De,Es,It,Nl,Pt,Pl,Ru)"
       }
     ],
     "players": 1,
@@ -14867,6 +17129,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Peter Jackson's King Kong ULES00225.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Peter Jackson's King Kong - The Official Game of the Movie (Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da,Fi)"
+      }
+    ],
     "players": 1,
     "rating": 0.4
   },
@@ -14877,6 +17144,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Petz - Hamsterz Bunch"
+        ],
+        "name": "Petz - My Baby Hamster (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 1,
     "rating": 0.15
   },
@@ -14887,6 +17162,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Petz - Dogz Family"
+        ],
+        "name": "Petz - My Puppy Family (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -14922,6 +17205,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Phantasy Star Portable (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -14940,6 +17228,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Phantasy Star Portable 2 ULES01439.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Phantasy Star Portable 2 Infinity"
+        ],
+        "name": "Phantasy Star Portable 2 (Europe)"
       }
     ],
     "players": 4,
@@ -15127,6 +17423,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pipe Mania (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -15174,6 +17475,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Pirates of the Caribbean - Dead Man's Chest (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Pirates of the Caribbean - Dead Man's Chest (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -15192,6 +17498,14 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "PixelJunk Monsters UMD Limited Edition"
+        ],
+        "name": "PixelJunk Monsters - Deluxe (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.95
   },
@@ -15234,6 +17548,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Platypus (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -15250,6 +17569,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "PlayEnglish (Spain)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -15369,6 +17693,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/PoPoLoCrois (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "PoPoLoCrois (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -15397,6 +17726,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Pocket Racers (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.15
   },
@@ -15469,6 +17803,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Power Stone Collection ULES00496.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Power Stone Collection (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -15478,6 +17817,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "PQ2 - Practical Intelligence Quotient 2"
+        ],
+        "name": "Practical IQ - Test Your Intelligence (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -15516,6 +17863,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Prince of Persia Revelations ULES00223.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Prince of Persia - Revelations (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -15542,6 +17894,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Prince of Persia Rival Swords ULES00579.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Prince of Persia - Rival Swords (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -15553,6 +17910,14 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Prince of Persia - Boukyaku no Suna"
+        ],
+        "name": "Prince of Persia - The Forgotten Sands (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -15608,6 +17973,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Prinny Can I Really Be the Hero ULES01278.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Prinny - Can I Really Be the Hero (Europe) (En,Fr)"
       }
     ],
     "players": 1,
@@ -15761,6 +18131,15 @@
         "url": "https://archive.org/download/SonyPSPManuals/World Soccer Winning Eleven 9 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "World Soccer Winning Eleven 9 - Ubiquitous Evolution",
+          "World Tour Soccer - Winning Eleven 9"
+        ],
+        "name": "Pro Evolution Soccer 5 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.5
   },
@@ -15776,6 +18155,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Winning Eleven - Pro Evolution Soccer 2007 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Winning Eleven - Pro Evolution Soccer 2007",
+          "World Soccer Winning Eleven 10 - Ubiquitous Evolution"
+        ],
+        "name": "Pro Evolution Soccer 6 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -15829,6 +18217,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "ProStroke Golf - World Tour 2007 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.05
   },
@@ -15843,6 +18236,15 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Carol Vorderman's Sudoku (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Carol Vorderman's Sudoku",
+          "Sudoku Coach"
+        ],
+        "name": "Professor Sudoku (Europe) (En,Es,It)"
       }
     ],
     "players": 2,
@@ -15913,6 +18315,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Pursuit Force UCES00019.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Chase Cop - Pursuit Force"
+        ],
+        "name": "Pursuit Force (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.5
   },
@@ -15937,6 +18347,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Pursuit Force Extreme Justice UCES00694.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Pursuit Force - Extreme Justice (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -15946,6 +18361,14 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Puyo Puyo Fever"
+        ],
+        "name": "Puyo Pop Fever (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -16006,6 +18429,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Puzzle Chronicles (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -16025,6 +18453,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Puzzle Quest Challenge of the Warlords ULES00909.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Simple 2500 Series Portable!! Vol. 11 - The Puzzle Quest - Agaria no Kishi"
+        ],
+        "name": "Puzzle Quest - Challenge of the Warlords (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -16050,6 +18486,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Puzzler Collection (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -16112,6 +18553,14 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "R-Type Command"
+        ],
+        "name": "R-Type Tactics (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -16150,6 +18599,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Ragnarok - Hikari to Yami no Koujo"
+        ],
+        "name": "Ragnarok Tactics (USA)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -16159,6 +18616,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Rainbow Islands Evolution (Europe) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.4
   },
@@ -16274,6 +18736,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ratchet & Clank Size Matters UCES00420.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ratchet & Clank - Size Matters (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -16283,6 +18750,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Ratchet & Clank 5 - Gekitotsu! Dodeka Ginga no MiriMiri Gundan (Japan)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -16341,6 +18813,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Reel Fishing - The Great Outdoors (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -16373,6 +18850,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Rengoku - The Tower of Purgatory (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Rengoku - The Tower of Purgatory (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.35
   },
@@ -16387,6 +18869,11 @@
           "en"
         ],
         "url": "https://archive.org/download/rengoku-ii/Rengoku II.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Rengoku II - The Stairway to H.E.A.V.E.N. (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -16419,6 +18906,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Resistance Retribution UCES01184.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Resistance - Retribution (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 8,
@@ -16474,6 +18966,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Rezel Cross (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -16491,6 +18988,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Ridge Racer (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Ridge Racers"
+        ],
+        "name": "Ridge Racer (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -16506,6 +19011,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ridge Racer 2 (Europe).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Ridge Racer 2 (Europe, Australia) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -16541,6 +19051,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Riviera The Promised Land ULES00818.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Riviera - Yakusoku no Chi"
+        ],
+        "name": "Riviera - The Promised Land (Europe) (En,Fr,It)"
       }
     ],
     "players": 1,
@@ -16601,6 +19119,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Rock Band Unplugged NPEH00012.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Rock Band Unplugged (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -16656,6 +19179,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Rocky Balboa (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Rocky Balboa (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -16751,6 +19279,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "SBK - Superbike World Championship"
+        ],
+        "name": "SBK 08 - Superbike World Championship (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.5
   },
@@ -16772,6 +19308,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Hannspree Ten Kate Honda - SBK Superbike World Championship"
+        ],
+        "name": "SBK-07 - Superbike World Championship (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -16779,6 +19323,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SCEJ PSP Browser (Japan) (UTST-99261)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -16818,6 +19367,11 @@
       "Compilation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SNK Arcade Classics Vol. 1 (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -16856,6 +19410,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/SOCOM U.S. Navy SEALs Fireteam Bravo UCES00038.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "SOCOM - U.S. Navy SEALs - Fireteam Bravo (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -16865,6 +19424,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SOCOM - U.S. Navy SEALs - Fireteam Bravo 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 16,
     "rating": 0.85
   },
@@ -16888,6 +19452,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/SOCOM Fireteam Bravo 3 UCES01242.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "SOCOM - U.S. Navy SEALs - Fireteam Bravo 3 (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
+      }
+    ],
     "players": 16,
     "rating": 0.85
   },
@@ -16904,6 +19473,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/SOCOM - U.S. Navy Seals - Tactical Strike (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "SOCOM - U.S. Navy SEALs - Tactical Strike (Europe) (En,Fr,De,Es,It,Nl,Ko)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -16914,6 +19488,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SSX On Tour (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -16923,6 +19502,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "SWAT - Target Liberty (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.5
   },
@@ -17043,6 +19627,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Samurai Warriors - State of War (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Geki Sengoku Musou"
+        ],
+        "name": "Samurai Warriors - State of War (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -17150,6 +19742,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Scarface - Money. Power. Respect. (Europe) (En,Fr,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.3
   },
@@ -17166,6 +19763,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Scooby-Doo! Who's Watching Who (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17203,6 +19805,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Secret Agent Clank (Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
+      }
+    ],
     "players": 1,
     "rating": 0.9
   },
@@ -17212,6 +19819,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Secret Saturdays, The - Beasts of the 5th Sun (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17234,6 +19846,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Sega Mega Drive Collection ULES00556.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Sega Genesis Collection"
+        ],
+        "name": "Sega Mega Drive Collection (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -17244,6 +19864,14 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Sega Rally Revo"
+        ],
+        "name": "Sega Rally (Europe) (En,Fr,De,Es,It) (v1.00)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17331,6 +19959,14 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Shadow of Memories"
+        ],
+        "name": "Shadow of Destiny (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -17356,6 +19992,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Shaun White Snowboarding (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -17448,6 +20089,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Shin Megami Tensei Persona 2 - Innocent Sin ULES01557.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Shin Megami Tensei - Persona 2 - Innocent Sin (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17462,6 +20108,14 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Shin Megami Tensei Persona 3 Portable ULES01523.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "P3P - Yeosin Jeonsaeng - Persona 3 Portable"
+        ],
+        "name": "Shin Megami Tensei - Persona 3 Portable (Europe)"
       }
     ],
     "players": 1,
@@ -17623,6 +20277,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Sid Meier's Pirates! ULES00688.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sid Meier's Pirates! (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -17634,6 +20293,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Silent Hill - Shattered Memories (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -17656,6 +20320,14 @@
           "en-gb"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Silent Hill Origins PSP ULES00869 PAL manual.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Silent Hill Zero"
+        ],
+        "name": "Silent Hill Origins (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -17709,6 +20381,16 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Simpson, I - Il Videogioco",
+          "Simpson, Les - Le Jeu",
+          "Simpsons, Die - Das Spiel"
+        ],
+        "name": "Simpsons Game, The (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -17718,6 +20400,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sims 2, The (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -17727,6 +20414,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl,Pt)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -17736,6 +20428,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Sims 2, The - Pets (Europe) (En,Fr,De,Es,It,Nl)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -17782,6 +20479,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Smart Bomb (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Baku-No"
+        ],
+        "name": "Smart Bomb (USA)"
+      }
+    ],
     "players": 4,
     "rating": 0.4
   },
@@ -17791,6 +20496,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Smash Court Tennis 3 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -17921,6 +20631,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Sonic Rivals ULES00622.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Sonic Rivals (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -17942,6 +20657,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Sonic Rivals 2 ULES00940.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Sonic Rivals 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -18009,6 +20729,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/SoulCalibur Broken Destiny ULES01298.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Soulcalibur - Broken Destiny (Europe) (En,Ja,Fr,De,Es,It,Ru)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -18031,6 +20756,11 @@
       "Shoot'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Space Invaders Extreme (Europe, Australia) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -18097,6 +20827,15 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Spectral Souls Resurrection of the Ethereal Empire NPEH00105.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shinki Gensou - SSII Unlimited Side",
+          "Singi Hwansang - SSII Unlimited Side"
+        ],
+        "name": "Spectral Souls - Resurrection of the Ethereal Empires (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -18106,6 +20845,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Spectral vs. Generation (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -18140,6 +20884,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Spider-Man - Friend or Foe (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Spider-Man - Freund oder Feind"
+        ],
+        "name": "Spider-Man - Friend or Foe (Europe) (En,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.45
   },
@@ -18149,6 +20901,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Spider-Man - Web of Shadows - Amazing Allies Edition (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.25
   },
@@ -18159,6 +20916,11 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Spider-Man 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -18168,6 +20930,11 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Spider-Man 3 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.65
   },
@@ -18223,6 +20990,14 @@
           "sv"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Split_Second Velocity ULES01402.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Split-Second"
+        ],
+        "name": "Split-Second - Velocity (Europe) (En,Fr,De,Es,It,Ru)"
       }
     ],
     "players": 1,
@@ -18297,6 +21072,11 @@
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Star Ocean - First Departure (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Ocean - First Departure (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -18311,6 +21091,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Star Ocean - Second Evolution (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Star Ocean - Second Evolution (Europe)"
       }
     ],
     "players": 1,
@@ -18339,6 +21124,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Star Trek - Tactical Assault (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -18359,6 +21149,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Star Wars Battlefront II ULES00183.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars - Battlefront II (Europe, Australia) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -18368,6 +21163,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Star Wars - Lethal Alliance (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -18385,6 +21185,11 @@
           "fr"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Star Wars The Clone Wars - Republic Heroes ULES01284.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Star Wars - The Clone Wars - Republic Heroes (Europe) (En,Fr,Es)"
       }
     ],
     "players": 1,
@@ -18413,6 +21218,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Star Wars The Force Unleashed ULES00981.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars - The Force Unleashed (Europe) (En,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -18435,6 +21245,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Star Wars Battlefront Elite Squadron ULES01214.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Star Wars Battlefront - Elite Squadron (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 16,
     "rating": 0.8
   },
@@ -18450,6 +21265,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Star Wars Battlefront - Renegade Squadron (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Star Wars Battlefront - Renegade Squadron (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 16,
@@ -18539,6 +21359,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Stealth + WipEout Pure (Europe) (En,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.75
   },
@@ -18579,6 +21404,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Steel Horizon (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Steel Horizon (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -18625,6 +21455,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Storm Lover (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -18665,6 +21500,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Street Fighter Alpha 3 MAX ULES00235.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Street Fighter Zero 3 Double Upper"
+        ],
+        "name": "Street Fighter Alpha 3 Max (Europe)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -18694,6 +21537,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Street Supremacy (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -18751,6 +21599,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Summon Night 5 (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -18769,6 +21622,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Super Collapse! 3 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -18851,6 +21709,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Super Monkey Ball Adventure ULES00364.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Super Monkey Ball Adventure (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.45
   },
@@ -18869,6 +21732,14 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Super Pocket Tennis ULES00619.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Simple 2500 Series Portable!! Vol. 2 - The Tennis"
+        ],
+        "name": "Super Pocket Tennis (Europe)"
       }
     ],
     "players": null,
@@ -19025,6 +21896,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Surf's Up ULES00817.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Surf's Up (Europe) (En,Fr,Es)"
+      }
+    ],
     "players": 8,
     "rating": 0.6
   },
@@ -19158,6 +22034,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Syphon Filter Dark Mirror UCES00310.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Syphon Filter - Dark Mirror (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.85
   },
@@ -19185,6 +22066,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Syphon Filter Logan's Shadow UCES00710.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Syphon Filter - Logan's Shadow (Europe) (En,Fr,De,Es,It,Pl,Ru)"
       }
     ],
     "players": 8,
@@ -19219,6 +22105,11 @@
       "Beat'em Up"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "TMNT (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.25
   },
@@ -19229,6 +22120,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "TNA Impact! Cross the Line (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -19260,6 +22156,15 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "DTM Race Driver 3 - Challenge",
+          "V8 Supercars Australia 3 - Shootout"
+        ],
+        "name": "TOCA Race Driver 3 Challenge (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 12,
     "rating": 0.7
   },
@@ -19302,6 +22207,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tactics Ogre Let Us Cling Together ULES01500.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Tactics Ogre - Unmei no Wa"
+        ],
+        "name": "Tactics Ogre - Let Us Cling Together (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -19312,6 +22225,11 @@
       "Rhythm"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Taiko no Tatsujin Portable (Japan, Asia) (v2.00)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -19426,6 +22344,11 @@
       "Compilation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Taito Legends Power-Up (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -19496,6 +22419,11 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tales of the World - Radiant Mythology (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -19523,6 +22451,11 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "TalkMan (Europe, Australia) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -19530,6 +22463,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "TalkMan Euro! TalkMan Europa Gengo-ban (Japan) (En,Ja,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -19539,6 +22477,14 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Talkman Yeongeohoehwa Sudajaeng English"
+        ],
+        "name": "TalkMan-shiki Shabelingual Eikaiwa (Japan)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -19546,6 +22492,11 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "name": "TalkMan-shiki Shabelingual Eikaiwa for Kids! (Japan) (En,Ja) (Microphone Doukonban)"
+      }
+    ],
     "players": null,
     "rating": null
   },
@@ -19655,6 +22606,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Tekken - Dark Resurrection (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tekken - Dark Resurrection (Europe) (En,Fr,De,Es,It) (v1.00)"
+      }
+    ],
     "players": 2,
     "rating": 0.85
   },
@@ -19682,6 +22638,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tekken 6 ULES01376.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tekken 6 (Europe) (En,Ja,Fr,De,Es,It,Ko,Ru)"
       }
     ],
     "players": 2,
@@ -19733,6 +22694,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Tenchu 4"
+        ],
+        "name": "Tenchu - Shadow Assassins (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -19742,6 +22711,14 @@
       "Action"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Tenchu - Shinobi Taizen"
+        ],
+        "name": "Tenchu - Time of the Assassins (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.65
   },
@@ -19777,6 +22754,11 @@
       "Driving"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Test Drive Unlimited (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.95
   },
@@ -19827,6 +22809,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Thrillville (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.45
   },
@@ -19837,6 +22824,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Thrillville - Off the Rails (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -19873,6 +22865,11 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.6
   },
@@ -19890,6 +22887,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Tiger Woods PGA Tour 06 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour 06 (Europe) (En,Fr,De)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -19901,6 +22903,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour 07 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -19917,6 +22924,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Tiger Woods PGA Tour 08 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour 08 (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.65
   },
@@ -19931,6 +22943,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Tiger Woods PGA Tour 09 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour 09 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": null,
@@ -19950,6 +22967,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tiger Woods PGA Tour 10 ULES01260.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tiger Woods PGA Tour 10 (Europe)"
       }
     ],
     "players": 2,
@@ -20070,6 +23092,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tokobot ULES00312.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Karakuri"
+        ],
+        "name": "Tokobot (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.75
   },
@@ -20093,6 +23123,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Tom Clancy's EndWar (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tom Clancy's EndWar (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.6
   },
@@ -20114,6 +23149,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tom Clancy's Ghost Recon Advanced Warfighter 2 ULES00770.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tom Clancy's Ghost Recon - Advanced Warfighter 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.55
   },
@@ -20133,6 +23173,11 @@
           "nl"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tom Clancy's Ghost Recon Predator ULES01350.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tom Clancy's Ghost Recon - Predator (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 3,
@@ -20157,6 +23202,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tom Clancy's Rainbow Six Vegas ULES00584.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Tom Clancy's Rainbow Six - Vegas (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -20177,6 +23227,11 @@
           "nl"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tom Clancy's Splinter Cell Essentials ULES00281.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tom Clancy's Splinter Cell - Essentials (Europe, Australia) (En,Fr,De,Es,It) (v1.02)"
       }
     ],
     "players": 2,
@@ -20229,6 +23284,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Tony Hawk's Project 8 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -20244,6 +23304,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Tony Hawk's Underground 2 Remix (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Tony Hawk's Underground 2 Remix (Europe)"
       }
     ],
     "players": 4,
@@ -20409,6 +23474,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Transformers - Revenge of the Fallen (Europe) (En,Fr)"
+      }
+    ],
     "players": 2,
     "rating": 0.15
   },
@@ -20423,6 +23493,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Transformers - The Game (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Transformers - The Game (Europe)"
       }
     ],
     "players": 4,
@@ -20541,6 +23616,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Twisted Metal - Head On (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Twisted Metal - Head-On (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.7
   },
@@ -20551,6 +23631,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "UEFA Champions League 2006-2007 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -20568,6 +23653,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/UEFA Euro 2008 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "UEFA Euro 2008 - Austria-Switzerland (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -20578,6 +23668,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "UFC Undisputed 2010 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -20605,6 +23700,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ultimate Board Game Collection ULES01017.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ultimate Board Game Collection (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 6,
     "rating": 0.6
   },
@@ -20625,6 +23725,15 @@
       "Platform"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Goku Makaimura",
+          "Goku Makaimura Kai"
+        ],
+        "name": "Ultimate Ghosts'n Goblins (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -20667,6 +23776,11 @@
       "Adventure"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Undead Knights (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -20683,6 +23797,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Untold Legends - Brotherhood of the Blade (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Untold Legends - Brotherhood of the Blade (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -20697,6 +23816,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Untold Legends - The Warrior's Code (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Untold Legends - The Warrior's Code (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -20854,6 +23978,11 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Valhalla Knights ULES00657.pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Valhalla Knights (Europe)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -20868,6 +23997,11 @@
           "en"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Valhalla Knights 2 Battle Stance NPEH00070.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Valhalla Knights 2 (Europe)"
       }
     ],
     "players": 1,
@@ -20918,6 +24052,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Valkyria Chronicles II ULES01417.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Senjou no Valkyria 2 - Gallia Ouritsu Shikan Gakkou"
+        ],
+        "name": "Valkyria Chronicles II (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -20932,6 +24074,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Valkyrie Profile - Lenneth (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Valkyrie Profile - Lenneth (Europe)"
       }
     ],
     "players": 1,
@@ -21030,6 +24177,14 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Viewtiful Joe - Battle Carnival"
+        ],
+        "name": "Viewtiful Joe - Red Hot Rumble (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -21062,6 +24217,14 @@
         "url": "https://archive.org/download/psp-virtua-tennis-world-tour-manuale-ita/PSP - Virtua Tennis World Tour - Manuale (ITA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Power Smash - New Generation"
+        ],
+        "name": "Virtua Tennis - World Tour (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -21077,6 +24240,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Virtua Tennis 3 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Virtua Tennis 3 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -21142,6 +24310,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/WRC - FIA World Rally Championship (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WRC - FIA World Rally Championship (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.6
   },
@@ -21151,6 +24324,14 @@
       "Various"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Beit Hell 2000"
+        ],
+        "name": "WTF - Work Time Fun (USA)"
+      }
+    ],
     "players": 2,
     "rating": 0.7
   },
@@ -21161,6 +24342,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "WWE All Stars (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.7
   },
@@ -21181,6 +24367,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2006 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.9
   },
@@ -21198,6 +24389,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/WWE SmackDown! vs. RAW 2007 (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2007 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -21213,6 +24409,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/WWE SmackDown! vs. RAW 2008 featuring ECW (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2008 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": null,
@@ -21238,6 +24439,11 @@
         "url": "https://archive.org/download/psp-smack-down-vs-raw-2009-manuale-ita/PSP - SmackDown vs RAW 2009 - Manuale (ITA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2009 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.55
   },
@@ -21248,6 +24454,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2010 (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -21258,6 +24469,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "WWE SmackDown vs. Raw 2011 (Europe)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -21351,6 +24567,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Warhammer 40,000 - Squad Command (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.8
   },
@@ -21381,6 +24602,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Warriors Orochi ULES01054.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Musou Orochi"
+        ],
+        "name": "Warriors Orochi (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.85
   },
@@ -21401,6 +24630,16 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Warriors Orochi 2 ULES01261.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Musou Orochi - Maou Sairin",
+          "Musou Orochi - Maou Sairin Enhanced Version",
+          "Mussang Orochi - Mawang Jaerim Plus"
+        ],
+        "name": "Warriors Orochi 2 (Europe) (En,Fr)"
+      }
+    ],
     "players": null,
     "rating": 0.9
   },
@@ -21411,6 +24650,11 @@
       "Action RPG"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Warriors of the Lost Empire (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.75
   },
@@ -21430,6 +24674,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/The Warriors ULES00483.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Warriors, The (Europe)"
       }
     ],
     "players": 2,
@@ -21479,6 +24728,14 @@
       "Simulation"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Yuusha no Kuse ni Namaikida or2"
+        ],
+        "name": "What Did I Do to Deserve This, My Lord! 2 (Europe) (En,Fr)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -21525,6 +24782,14 @@
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/White Knight Chronicles Origins UCES01511.pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Shirokishi Monogatari Episode Portable - Dogma Wars"
+        ],
+        "name": "White Knight Chronicles - Origins (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -21532,6 +24797,14 @@
     "emulation": {},
     "genres": [],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Chi Vuol Essere Milionario - Party Edition"
+        ],
+        "name": "Who Wants to Be a Millionaire - Party Edition (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.45
   },
@@ -21584,6 +24857,14 @@
         "url": "https://archive.org/download/SonyPSPManuals/Wild Arms XF (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "clones": [
+          "Wild Arms - Crossfire"
+        ],
+        "name": "Wild Arms XF (Europe)"
+      }
+    ],
     "players": 1,
     "rating": 0.8
   },
@@ -21593,6 +24874,14 @@
       "Pinball"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Pinball Hall of Fame - The Williams Collection"
+        ],
+        "name": "Williams Pinball Classics (Europe) (En,Fr,De,Es)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -21640,6 +24929,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Winx Club - Join the Club (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Winx Club - Join the Club (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.15
   },
@@ -21662,6 +24956,11 @@
           "ru"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/WipEout Pulse UCES00465.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "WipEout Pulse (Europe, Australia) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -21717,6 +25016,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/WipEout Pure UCES00001.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "WipEout Pure (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 8,
@@ -21837,6 +25141,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/World Championship Poker 2 featuring Howard Lederer (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Championship Poker 2 featuring Howard Lederer (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 8,
     "rating": 0.45
   },
@@ -21851,6 +25160,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/World Championship Poker featuring Howard Lederer - All In (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "World Championship Poker featuring Howard Lederer - All In (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": null,
@@ -21902,6 +25216,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/World Poker Tour (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Poker Tour (Europe) (En,Fr,De)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -21918,6 +25237,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/World Series of Poker (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "World Series of Poker (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.6
   },
@@ -21927,6 +25251,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "World Series of Poker - Tournament of Champions - 2007 Edition (Europe)"
+      }
+    ],
     "players": null,
     "rating": 0.8
   },
@@ -21936,6 +25265,11 @@
       "Puzzle-Game"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "World Series of Poker 2008 - Battle for the Bracelets (Europe)"
+      }
+    ],
     "players": 9,
     "rating": 0.7
   },
@@ -21981,6 +25315,11 @@
       "Sports"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "World Tour Soccer (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": null,
     "rating": 0.65
   },
@@ -21995,6 +25334,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/World Tour Soccer 06 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "World Tour Soccer 06"
+        ],
+        "name": "World Tour Soccer 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": null,
@@ -22048,6 +25395,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Worms - Open Warfare (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.75
   },
@@ -22057,6 +25409,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Worms - Open Warfare 2 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.85
   },
@@ -22066,6 +25423,14 @@
       "Role playing games"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "X-Men Legends II - El Ascenso de Apocalipsis"
+        ],
+        "name": "X-Men Legends II - Rise of Apocalypse (Europe) (En,Fr,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -22075,6 +25440,11 @@
       "Fight"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "X-Men Origins - Wolverine (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 1,
     "rating": 0.55
   },
@@ -22090,6 +25460,11 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Xiaolin Showdown (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Xiaolin Showdown (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 4,
@@ -22110,6 +25485,11 @@
           "it"
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Xyanide Resurrection NPEH00060.pdf"
+      }
+    ],
+    "parents": [
+      {
+        "name": "Xyanide - Resurrection (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 2,
@@ -22152,6 +25532,11 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yggdra Union (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.75
   },
@@ -22185,6 +25570,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ys - The Ark of Napishtim (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Ys VI - Napishtim no Hako"
+        ],
+        "name": "Ys - The Ark of Napishtim (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
@@ -22249,6 +25642,11 @@
         "url": "https://archive.org/download/ys-vii-manual-scan-jp-play-station-portable-psp/Ys VII (Manual)(Scan)(JP)(PlayStation Portable)(PSP).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Ys Seven (USA)"
+      }
+    ],
     "players": 1,
     "rating": 0.85
   },
@@ -22267,6 +25665,11 @@
       "Playing cards"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "name": "Yu-Gi-Oh! 5D's - Tag Force 4 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.8
   },
@@ -22277,6 +25680,14 @@
       "Strategy"
     ],
     "manuals": [],
+    "parents": [
+      {
+        "clones": [
+          "Yu-Gi-Oh! 5D's Tag Force 5"
+        ],
+        "name": "Yu-Gi-Oh! 5D's - Tag Force 5 (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 4,
     "rating": 0.7
   },
@@ -22311,6 +25722,11 @@
         "url": "https://archive.org/download/SonyPSPManuals/Yu-Gi-Oh! GX - Tag Force (USA).pdf"
       }
     ],
+    "parents": [
+      {
+        "name": "Yu-Gi-Oh! GX - Tag Force (Europe) (En,Fr,De,Es,It)"
+      }
+    ],
     "players": 2,
     "rating": 0.8
   },
@@ -22325,6 +25741,14 @@
           "en"
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Yu-Gi-Oh! GX - Tag Force 2 (USA).pdf"
+      }
+    ],
+    "parents": [
+      {
+        "clones": [
+          "Yu-Gi-Oh! Duel Monsters GX - Tag Force 2"
+        ],
+        "name": "Yu-Gi-Oh! GX - Tag Force 2 (Europe) (En,Fr,De,Es,It)"
       }
     ],
     "players": 1,
