@@ -1,12 +1,11 @@
-{
-  "Aircars": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+[
+  {
+    "name": "Aircars",
+    "players": 8,
+    "rating": 0.3,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -16,14 +15,15 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Air Cars (World).pdf"
       }
     ],
-    "players": 8,
-    "rating": 0.3
-  },
-  "Alien vs Predator": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
+      "emulator": "lr-virtualjaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Alien vs Predator",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -36,27 +36,26 @@
         "url": "https://archive.org/download/Alien_VS_Predator_1994_3L/Alien_VS_Predator_1994_3L.cbr"
       }
     ],
-    "players": 1,
-    "rating": 0.85
-  },
-  "Arena Football '95": {
-    "emulation": {},
-    "genres": [
-      "Sports / Football",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 8,
-    "rating": null
-  },
-  "Atari Karts": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    }
+  },
+  {
+    "name": "Arena Football '95",
+    "players": 8,
     "genres": [
-      "Race",
-      "Driving"
+      "Sports",
+      "Sports / Football"
+    ]
+  },
+  {
+    "name": "Atari Karts",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -66,14 +65,15 @@
         "url": "https://archive.org/download/Atari_Karts_1995_3L/Atari_Karts_1995_3L.cbr"
       }
     ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Attack of the Mutant Penguins": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "Attack of the Mutant Penguins",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Puzzle-Game"
     ],
@@ -85,14 +85,15 @@
         "url": "https://archive.org/download/Attack_of_the_Mutant_Penguins_1996_Sunrise_Games/Attack_of_the_Mutant_Penguins_1996_Sunrise_Games.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.9
-  },
-  "Barkley Shut Up and Jam": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "Barkley Shut Up and Jam",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -105,34 +106,34 @@
         "url": "http://www.myatari.com/bsuj4p.pdf"
       }
     ],
-    "players": 4,
-    "rating": 0.65
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
   },
-  "Battle Sphere": {
-    "emulation": {},
+  {
+    "name": "Battle Sphere",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Shoot'em Up"
     ],
-    "manuals": [],
     "parents": [
       {
+        "name": "Battle Sphere (World)",
         "clones": [
           "Battle Sphere Gold"
-        ],
-        "name": "Battle Sphere (World)"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Breakout 2000": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
+  {
+    "name": "Breakout 2000",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Action / Breakout games",
-      "Action"
+      "Action",
+      "Action / Breakout games"
     ],
     "manuals": [
       {
@@ -142,24 +143,24 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Breakout 2000.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.75
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    }
   },
-  "Brett Hull Hockey": {
-    "emulation": {},
+  {
+    "name": "Brett Hull Hockey",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Sports",
       "Sports / Hockey"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Brutal Sports Football": {
-    "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 5
-    },
+  {
+    "name": "Brutal Sports Football",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Sports",
       "Sports / Football"
@@ -172,14 +173,15 @@
         "url": "https://archive.org/download/Brutal_Sports_Football_1994_Atari/Brutal_Sports_Football_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.65
-  },
-  "Bubsy in Fractured Furry Tales": {
     "emulation": {
       "emulator": "lr-mess-jaguar",
-      "rating": 4
-    },
+      "rating": 5
+    }
+  },
+  {
+    "name": "Bubsy in Fractured Furry Tales",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -191,14 +193,15 @@
         "url": "https://archive.org/download/Bubsy_In_Fractured_Furry_Tails_1994_3L/Bubsy_In_Fractured_Furry_Tails_1994_3L.cbr"
       }
     ],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Cannon Fodder": {
     "emulation": {
       "emulator": "lr-mess-jaguar",
-      "rating": 5
-    },
+      "rating": 4
+    }
+  },
+  {
+    "name": "Cannon Fodder",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Strategy"
     ],
@@ -210,17 +213,18 @@
         "url": "https://archive.org/download/Cannon_Fodder_1995_Atari/Cannon_Fodder_1995_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.85
-  },
-  "Checkered Flag": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 4
-    },
+      "emulator": "lr-mess-jaguar",
+      "rating": 5
+    }
+  },
+  {
+    "name": "Checkered Flag",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -230,14 +234,18 @@
         "url": "https://archive.org/download/Checkered_Flag_1994_Atari/Checkered_Flag_1994_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.4
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 4
+    }
   },
-  "Club Drive": {
-    "emulation": {},
+  {
+    "name": "Club Drive",
+    "players": 2,
+    "rating": 0.25,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -246,15 +254,12 @@
         ],
         "url": "https://archive.org/download/Club_Drive_1994_Atari/Club_Drive_1994_Atari.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.25
+    ]
   },
-  "Cybermorph": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
+  {
+    "name": "Cybermorph",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Shooter"
     ],
@@ -266,14 +271,15 @@
         "url": "https://archive.org/download/Cybermorph_1993_Atari/Cybermorph_1993_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Defender 2000": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "rating": 2
+    }
+  },
+  {
+    "name": "Defender 2000",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Shoot'em Up"
     ],
@@ -285,14 +291,15 @@
         "url": "https://archive.org/download/Defender_2000_1996_Atari/Defender_2000_1996_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.9
-  },
-  "Doom": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 4
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
+  },
+  {
+    "name": "Doom",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -305,14 +312,15 @@
         "url": "https://archive.org/download/Doom_Evil_Unleashed_1994_Atari/Doom_Evil_Unleashed_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.6
-  },
-  "Double Dragon V - The Shadow Falls": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    }
+  },
+  {
+    "name": "Double Dragon V - The Shadow Falls",
+    "players": 2,
+    "rating": 0.1,
     "genres": [
       "Fight"
     ],
@@ -324,14 +332,15 @@
         "url": "https://archive.org/download/Double_Dragon_V_The_Shadow_Falls_1995/Double_Dragon_V_The_Shadow_Falls_1995.cbr"
       }
     ],
-    "players": 2,
-    "rating": 0.1
-  },
-  "Dragon - The Bruce Lee Story": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 3
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    }
+  },
+  {
+    "name": "Dragon - The Bruce Lee Story",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Fight"
     ],
@@ -343,14 +352,15 @@
         "url": "https://archive.org/download/Dragon_The_Bruce_Lee_Story_1994_Atari/Dragon_The_Bruce_Lee_Story_1994_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.35
-  },
-  "Evolution - Dino Dudes": {
     "emulation": {
       "emulator": "lr-mess-jaguar",
-      "rating": 4
-    },
+      "rating": 3
+    }
+  },
+  {
+    "name": "Evolution - Dino Dudes",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Puzzle-Game"
     ],
@@ -362,14 +372,15 @@
         "url": "https://archive.org/download/Evolution_Dino_Dudes_1994_Atari/Evolution_Dino_Dudes_1994_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.35
-  },
-  "Fever Pitch Soccer": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    }
+  },
+  {
+    "name": "Fever Pitch Soccer",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -382,14 +393,15 @@
         "url": "https://archive.org/download/Fever_Pitch_Soccer_1995_Atari/Fever_Pitch_Soccer_1995_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Fight for Life": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "Fight for Life",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Fight"
     ],
@@ -401,14 +413,15 @@
         "url": "https://archive.org/download/Fight_For_Your_Life_1996_Atari/Fight_For_Your_Life_1996_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Flashback - The Quest for Identity": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+      "rating": 3
+    }
+  },
+  {
+    "name": "Flashback - The Quest for Identity",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -420,11 +433,15 @@
         "url": "https://archive.org/download/Flashback_1994_US_Gold/Flashback_1994_US_Gold.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.8
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    }
   },
-  "Flip Out!": {
-    "emulation": {},
+  {
+    "name": "Flip Out!",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
     ],
@@ -435,32 +452,24 @@
         ],
         "url": "https://archive.org/download/Flip_Out_1995_Atari/Flip_Out_1995_Atari.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Frog Feast": {
-    "emulation": {},
+  {
+    "name": "Frog Feast",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Casual Game"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "High Voltage C Maze"
+  },
+  {
+    "name": "Hover Strike",
     "players": 2,
-    "rating": 0.5
-  },
-  "High Voltage C Maze": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hover Strike": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+    "rating": 0.6,
     "genres": [
       "Shoot'em Up"
     ],
@@ -472,14 +481,15 @@
         "url": "https://archive.org/download/Hover_Strike_1995_Atari/Hover_Strike_1995_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.6
-  },
-  "Hyper Force": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
+      "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "Hyper Force",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Platform"
     ],
@@ -491,14 +501,15 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Hyper Force (World).pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.45
-  },
-  "I-War": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
+      "emulator": "lr-mess-jaguar",
+      "rating": 3
+    }
+  },
+  {
+    "name": "I-War",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Shooter"
     ],
@@ -510,14 +521,15 @@
         "url": "https://archive.org/download/I_War_1995_Atari/I_War_1995_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.55
-  },
-  "International Sensible Soccer": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 1
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    }
+  },
+  {
+    "name": "International Sensible Soccer",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -530,11 +542,15 @@
         "url": "https://archive.org/download/Sensible_Soccer_1995_Telegames/Sensible_Soccer_1995_Telegames.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.4
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 1
+    }
   },
-  "Iron Soldier": {
-    "emulation": {},
+  {
+    "name": "Iron Soldier",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -545,12 +561,12 @@
         ],
         "url": "https://archive.org/download/Iron_Soldier_1994_Atari/Iron_Soldier_1994_Atari.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Iron Soldier 2": {
-    "emulation": {},
+  {
+    "name": "Iron Soldier 2",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Simulation"
     ],
@@ -561,25 +577,20 @@
         ],
         "url": "https://archive.org/download/Iron_Soldier_2_1995_Telegames/Iron_Soldier_2_1995_Telegames.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Jack Nicklaus Cyber Golf": {
-    "emulation": {},
+  {
+    "name": "Jack Nicklaus Cyber Golf",
+    "players": 1,
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Kasumi Ninja": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
+  {
+    "name": "Kasumi Ninja",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Beat'em Up"
     ],
@@ -591,14 +602,15 @@
         "url": "https://archive.org/download/Kasumi_Ninja_1994_Atari/Kasumi_Ninja_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.45
-  },
-  "Missile Command 3D": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "rating": 2
+    }
+  },
+  {
+    "name": "Missile Command 3D",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Shooter"
     ],
@@ -610,14 +622,15 @@
         "url": "https://archive.org/download/Missile_Command_3D_1995_Atari/Missile_Command_3D_1995_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "NBA Jam - Tournament Edition": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "NBA Jam - Tournament Edition",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -630,39 +643,37 @@
         "url": "https://archive.org/download/NBA_Jam_TE_1996_High_Voltage_Software/NBA_Jam_TE_1996_High_Voltage_Software.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.8
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
   },
-  "Native": {
-    "emulation": {},
+  {
+    "name": "Native",
+    "players": 1,
     "genres": [
       "Demo",
-      "Shoot'em up / Horizontal",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ]
   },
-  "Phase Zero": {
+  {
+    "name": "Phase Zero",
+    "players": 1,
+    "genres": [
+      "1st person",
+      "Shooter",
+      "Shooter / Vehicle"
+    ],
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 2
-    },
-    "genres": [
-      "Shooter",
-      "Shooter / Vehicle",
-      "1st person"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    }
   },
-  "Pinball Fantasies": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 4
-    },
+  {
+    "name": "Pinball Fantasies",
+    "players": 8,
+    "rating": 0.4,
     "genres": [
       "Pinball"
     ],
@@ -674,14 +685,15 @@
         "url": "https://archive.org/download/Pinball_Fantasies_1995_Atari/Pinball_Fantasies_1995_Atari.pdf"
       }
     ],
-    "players": 8,
-    "rating": 0.4
-  },
-  "Pitfall - The Mayan Adventure": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "rating": 4
+    }
+  },
+  {
+    "name": "Pitfall - The Mayan Adventure",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -693,21 +705,22 @@
         "url": "https://archive.org/download/Pitfall_The_Mayan_Adventure_1995_Atari/Pitfall_The_Mayan_Adventure_1995_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.8
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
   },
-  "Plucky Duck in Hollywood Hijinks": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+  {
+    "name": "Plucky Duck in Hollywood Hijinks",
+    "players": 1
   },
-  "Power Drive Rally": {
-    "emulation": {},
+  {
+    "name": "Power Drive Rally",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -716,17 +729,22 @@
         ],
         "url": "https://archive.org/download/Power_Drive_Rally_1995_Time_Warner/Power_Drive_Rally_1995_Time_Warner.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Protector": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+  {
+    "name": "Protector",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Protector (World)",
+        "clones": [
+          "Protector - Special Edition"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -736,29 +754,22 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Protector.pdf"
       },
       {
+        "title": "Protector - Special Edition",
         "languages": [
           "en"
         ],
-        "title": "Protector - Special Edition",
         "url": "https://archive.org/download/Protector_Special_Edition_1999_Songbird_Productions/Protector_Special_Edition_1999_Songbird_Productions.pdf"
       }
     ],
-    "parents": [
-      {
-        "clones": [
-          "Protector - Special Edition"
-        ],
-        "name": "Protector (World)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.2
-  },
-  "Raiden": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 5
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
+  },
+  {
+    "name": "Raiden",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Shoot'em Up"
     ],
@@ -770,14 +781,15 @@
         "url": "https://archive.org/download/Raiden_1994_Atari/Raiden_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.8
-  },
-  "Rayman": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
+      "emulator": "lr-mess-jaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Rayman",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Platform"
     ],
@@ -791,11 +803,15 @@
         "url": "https://archive.org/download/Rayman_1995_Uft_Entertainment/Rayman_1995_Ubisoft_Entertainment.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.9
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    }
   },
-  "Ruiner Pinball": {
-    "emulation": {},
+  {
+    "name": "Ruiner Pinball",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
       "Pinball"
     ],
@@ -806,12 +822,12 @@
         ],
         "url": "https://archive.org/download/Ruiner_Pinball_1995_Atari/Ruiner_Pinball_1995_Atari.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Skyhammer": {
-    "emulation": {},
+  {
+    "name": "Skyhammer",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -822,25 +838,20 @@
         ],
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Skyhammer (World).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Slam Racer": {
-    "emulation": {},
+  {
+    "name": "Slam Racer",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Driving",
+      "Race"
+    ]
   },
-  "Soccer Kid": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+  {
+    "name": "Soccer Kid",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
     ],
@@ -852,14 +863,15 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Soccer Kid (World).pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Space War 2000": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 4
-    },
+      "rating": 5
+    }
+  },
+  {
+    "name": "Space War 2000",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Shooter"
     ],
@@ -871,21 +883,21 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Space War 2000 (World).pdf"
       }
     ],
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 4
+    }
+  },
+  {
+    "name": "Speedster II"
+  },
+  {
+    "name": "Super Burnout",
     "players": 2,
-    "rating": 0.6
-  },
-  "Speedster II": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Super Burnout": {
-    "emulation": {},
+    "rating": 0.85,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -894,18 +906,15 @@
         ],
         "url": "https://archive.org/download/Super_Burnout_1995_Atari/Super_Burnout_1995_Atari.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Supercross 3D": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+  {
+    "name": "Supercross 3D",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -915,14 +924,15 @@
         "url": "https://archive.org/download/Super_Cross_3D_1995_Atari/Super_Cross_3D_1995_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Syndicate": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Syndicate",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
     ],
@@ -934,14 +944,15 @@
         "url": "https://archive.org/download/Syndicate_1995_Ocean/Syndicate_1995_Ocean.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Tempest 2000": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 3
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    }
+  },
+  {
+    "name": "Tempest 2000",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Shoot'em Up"
     ],
@@ -953,23 +964,22 @@
         "url": "https://archive.org/download/Tempest_2000_1994_Atari/Tempest_2000_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.85
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 3
+    }
   },
-  "Thea Realm Fighters": {
-    "emulation": {},
+  {
+    "name": "Thea Realm Fighters",
+    "players": 2,
     "genres": [
       "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Theme Park": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+  {
+    "name": "Theme Park",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Simulation"
     ],
@@ -981,35 +991,38 @@
         "url": "https://archive.org/download/Theme_Park_1995_Ocean/Theme_Park_1995_Ocean.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Tiny Toon Adventures": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
-    "genres": [
-      "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Total Carnage": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
-    },
+    }
+  },
+  {
+    "name": "Tiny Toon Adventures",
+    "players": 1,
+    "genres": [
+      "Platform"
+    ],
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    }
+  },
+  {
+    "name": "Total Carnage",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Shooter"
     ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
   },
-  "Towers II - Plight of the Stargazer": {
-    "emulation": {},
+  {
+    "name": "Towers II - Plight of the Stargazer",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Role playing games"
     ],
@@ -1020,15 +1033,12 @@
         ],
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Towers II (World).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Trevor McFur in the Crescent Galaxy": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 5
-    },
+  {
+    "name": "Trevor McFur in the Crescent Galaxy",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Shoot'em Up"
     ],
@@ -1040,14 +1050,15 @@
         "url": "https://archive.org/download/Trevor_McFur_in_the_Crescent_Galaxy_1993_Atari/Trevor_McFur_in_the_Crescent_Galaxy_1993_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.45
-  },
-  "Troy Aikman NFL Football": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
+      "emulator": "lr-virtualjaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Troy Aikman NFL Football",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Sports",
       "Sports / Football"
@@ -1060,14 +1071,15 @@
         "url": "https://archive.org/download/Troy_Aikman_NFL_Football_1995_Atari/Troy_Aikman_NFL_Football_1995_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.5
-  },
-  "Ultra Vortek": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
+      "emulator": "lr-mess-jaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Ultra Vortek",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Fight"
     ],
@@ -1079,14 +1091,15 @@
         "url": "https://archive.org/download/Ultra_Vortek_1995_Beyond_Games/Ultra_Vortek_1995_Beyond_Games.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.75
-  },
-  "Val d'Isere Skiing and Snowboarding": {
     "emulation": {
       "emulator": "lr-virtualjaguar",
-      "rating": 3
-    },
+      "rating": 5
+    }
+  },
+  {
+    "name": "Val d'Isere Skiing and Snowboarding",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Sports",
       "Sports / Skiing"
@@ -1099,20 +1112,22 @@
         "url": "https://archive.org/download/Val_DIsere_Skiing_Snowboarding_1994/Val_DIsere_Skiing__Snowboarding_1994.cbr"
       }
     ],
-    "players": 2,
-    "rating": 0.5
+    "emulation": {
+      "emulator": "lr-virtualjaguar",
+      "rating": 3
+    }
   },
-  "Virtual VCS": {
-    "emulation": {},
+  {
+    "name": "Virtual VCS",
+    "players": 2,
     "genres": [
       "Compilation"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "White Men Can't Jump": {
-    "emulation": {},
+  {
+    "name": "White Men Can't Jump",
+    "players": 4,
+    "rating": 0.2,
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -1124,15 +1139,12 @@
         ],
         "url": "https://archive.org/download/White_Men_Cant_Jump_1995_Atari/White_Men_Cant_Jump_1995_Atari.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.2
+    ]
   },
-  "Wolfenstein 3D": {
-    "emulation": {
-      "emulator": "lr-virtualjaguar",
-      "rating": 2
-    },
+  {
+    "name": "Wolfenstein 3D",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -1144,14 +1156,15 @@
         "url": "https://archive.org/download/Wolfenstein_3D_1994_Atari/Wolfenstein_3D_1994_Atari.pdf"
       }
     ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Worms": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 5
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 2
+    }
+  },
+  {
+    "name": "Worms",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Strategy"
     ],
@@ -1163,14 +1176,15 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Worms (World).pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Zero 5": {
     "emulation": {
-      "emulator": "lr-virtualjaguar",
+      "emulator": "lr-mess-jaguar",
       "rating": 5
-    },
+    }
+  },
+  {
+    "name": "Zero 5",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Shoot'em Up"
     ],
@@ -1182,14 +1196,15 @@
         "url": "https://archive.org/download/AtariJaguarManuals_201812/Zero 5 (World).pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Zool 2": {
     "emulation": {
-      "emulator": "lr-mess-jaguar",
-      "rating": 4
-    },
+      "emulator": "lr-virtualjaguar",
+      "rating": 5
+    }
+  },
+  {
+    "name": "Zool 2",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -1201,11 +1216,15 @@
         "url": "https://archive.org/download/Zool_2_1994_Atari/Zool_2_1994_Atari.pdf"
       }
     ],
-    "players": 2,
-    "rating": 0.5
+    "emulation": {
+      "emulator": "lr-mess-jaguar",
+      "rating": 4
+    }
   },
-  "Zoop": {
-    "emulation": {},
+  {
+    "name": "Zoop",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Puzzle-Game"
     ],
@@ -1216,15 +1235,9 @@
         ],
         "url": "https://archive.org/download/Zoop_1996_Atari/Zoop_1996_Atari.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Zzyorxx II": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Zzyorxx II"
   }
-}
+]

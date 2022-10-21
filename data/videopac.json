@@ -1,6 +1,7 @@
-{
-  "4 in 1 Row": {
-    "emulation": {},
+[
+  {
+    "name": "4 in 1 Row",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -11,12 +12,12 @@
         ],
         "url": "https://archive.org/download/Four_in_1_row_1982_Philips_EU/Four_in_1_row_1982_Philips_EU.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Air Battle": {
-    "emulation": {},
+  {
+    "name": "Air Battle",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Simulation"
     ],
@@ -36,12 +37,11 @@
         ],
         "url": "https://archive.org/download/air-battle-eur-philips-videopac-1983/Air Battle (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Alien Invaders - Plus": {
-    "emulation": {},
+  {
+    "name": "Alien Invaders - Plus",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -52,12 +52,11 @@
         ],
         "url": "https://archive.org/download/alien-invaders-plus-us-odyssey-2-1979/Alien Invaders \u2013 Plus! (US)(Odyssey 2)(1979).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Alpine Skiing": {
-    "emulation": {},
+  {
+    "name": "Alpine Skiing",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -83,16 +82,15 @@
         ],
         "url": "https://archive.org/download/Skiing_1980_Philips_en-de/Skiing_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Armored Encounter + Sub Chase": {
-    "emulation": {},
+  {
+    "name": "Armored Encounter + Sub Chase",
+    "players": 2,
     "genres": [
+      "3rd person",
       "Shooter",
       "Shooter / Vehicle",
-      "3rd person",
       "Various"
     ],
     "manuals": [
@@ -116,12 +114,12 @@
         ],
         "url": "https://archive.org/download/air-sea-war-battle-eur-philips-videopac-1980/Air-Sea War  Battle (EUR)(Philips Videopac)(1980).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Atlantis": {
-    "emulation": {},
+  {
+    "name": "Atlantis",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Shooter"
@@ -133,12 +131,11 @@
         ],
         "url": "https://archive.org/download/Atlantis_1983_Imagic_EU/Atlantis_1983_Imagic_EU.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Attack of the Timelord": {
-    "emulation": {},
+  {
+    "name": "Attack of the Timelord",
+    "players": 1,
     "genres": [
       "Shooter"
     ],
@@ -149,15 +146,14 @@
         ],
         "url": "https://archive.org/download/attack-of-the-timelord-us-odyssey-2-1982/Attack of the Timelord! (US)(Odyssey 2)(1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Baseball": {
-    "emulation": {},
+  {
+    "name": "Baseball",
+    "players": 2,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -193,21 +189,19 @@
         ],
         "url": "https://archive.org/download/baseball-manual-JP/\u30d9 \u30fc \u30b9 \u30dc \u30eb (Baseball) Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Billard Electrique": {
-    "emulation": {},
+  {
+    "name": "Billard Electrique",
+    "players": 4,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Blobbers, The": {
-    "emulation": {},
+  {
+    "name": "Blobbers, The",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -218,12 +212,11 @@
         ],
         "url": "https://archive.org/download/Blobbers_1983_Philips_EU/Blobbers_1983_Philips_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Blockout + Breakdown": {
-    "emulation": {},
+  {
+    "name": "Blockout + Breakdown",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -234,15 +227,23 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/odyssey2/blockout.txt"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Bowling + Basketball": {
-    "emulation": {},
+  {
+    "name": "Bowling + Basketball",
+    "players": 1,
     "genres": [
-      "Sports / Bowling",
-      "Sports"
+      "Sports",
+      "Sports / Bowling"
+    ],
+    "parents": [
+      {
+        "name": "Bowling + Basketball (USA, Europe)",
+        "clones": [
+          "Jeu de Quilles + Basketball",
+          "Tenpin Bowling + Basketball"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -265,23 +266,21 @@
         ],
         "url": "https://archive.org/download/tenpin-bowling-basketball-eur-philips-videopac-1980/Tenpin Bowling - Basketball (EUR)(Philips Videopac)(1980).pdf"
       }
+    ]
+  },
+  {
+    "name": "Buraco Negro",
+    "players": 1,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
+        "name": "Buraco Negro (Brazil)",
         "clones": [
-          "Jeu de Quilles + Basketball",
-          "Tenpin Bowling + Basketball"
-        ],
-        "name": "Bowling + Basketball (USA, Europe)"
+          "Neutron Star"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Buraco Negro": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -306,20 +305,11 @@
         ],
         "url": "https://archive.org/download/neutron-star-eur-philips-videopac-1983/Neutron Star (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Neutron Star"
-        ],
-        "name": "Buraco Negro (Brazil)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Casino Slot Machine": {
-    "emulation": {},
+  {
+    "name": "Casino Slot Machine",
+    "players": 2,
     "genres": [
       "Playing cards"
     ],
@@ -330,12 +320,11 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Casino Slot Machine (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Catch the Ball + Noughts and Crosses": {
-    "emulation": {},
+  {
+    "name": "Catch the Ball + Noughts and Crosses",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -361,22 +350,17 @@
         ],
         "url": "https://archive.org/download/Catch_The_Ball_1980_Philips_en-de/Catch_The_Ball_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Chess": {
-    "emulation": {},
+  {
+    "name": "Chess",
     "genres": [
       "Board game",
       "Strategy"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Chez Maxime": {
-    "emulation": {},
+  {
+    "name": "Chez Maxime",
     "genres": [
       "Action"
     ],
@@ -387,12 +371,12 @@
         ],
         "url": "https://archive.org/download/Chez_Maxime_198x_Jopac/Chez_Maxime_198x_Jopac.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Chinese Logic": {
-    "emulation": {},
+  {
+    "name": "Chinese Logic",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Strategy"
     ],
@@ -418,12 +402,11 @@
         ],
         "url": "https://archive.org/download/Chinese_Logic_1980_Philips_en-de/Chinese_Logic_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Clay Pigeon": {
-    "emulation": {},
+  {
+    "name": "Clay Pigeon",
+    "players": 1,
     "genres": [
       "Shooter"
     ],
@@ -434,21 +417,18 @@
         ],
         "url": "https://archive.org/download/62_PLUS_Clay_Pigeon_1984_Philips_EU/62_PLUS_Clay_Pigeon_1984_Philips_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Comando Noturno": {
-    "emulation": {},
+  {
+    "name": "Comando Noturno",
+    "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Computer Programmer": {
-    "emulation": {},
+  {
+    "name": "Computer Programmer",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -459,12 +439,11 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Computer Programmer (Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Conquest of the World": {
-    "emulation": {},
+  {
+    "name": "Conquest of the World",
+    "players": 6,
     "genres": [
       "Strategy"
     ],
@@ -481,12 +460,11 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Conquest of the World (USA, Europe).pdf"
       }
-    ],
-    "players": 6,
-    "rating": null
+    ]
   },
-  "Cosmic Conflict": {
-    "emulation": {},
+  {
+    "name": "Cosmic Conflict",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -519,12 +497,12 @@
         ],
         "url": "https://archive.org/download/Cosmic_Conflict_1978_Philips_en-de/Cosmic_Conflict_1978_Philips_en-de.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Demon Attack": {
-    "emulation": {},
+  {
+    "name": "Demon Attack",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Action",
       "Strategy"
@@ -536,12 +514,12 @@
         ],
         "url": "https://archive.org/download/Demon_Attack_1993_Imagic/Demon_Attack_1993_Imagic.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Depth Charge + Marksman": {
-    "emulation": {},
+  {
+    "name": "Depth Charge + Marksman",
+    "players": 1,
+    "rating": 0.25,
     "genres": [
       "Strategy"
     ],
@@ -560,12 +538,11 @@
         ],
         "url": "https://archive.org/download/depth-charge-marksman-eur-philips-videopac-1979/Depth Charge - Marksman (EUR)(Philips Videopac)(1979).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.25
+    ]
   },
-  "Electronic Table Soccer": {
-    "emulation": {},
+  {
+    "name": "Electronic Table Soccer",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -577,12 +554,10 @@
         ],
         "url": "https://archive.org/download/Electronic_Table_Football_1980_Philips_EU/Electronic_Table_Football_1980_Philips_EU.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Exojet": {
-    "emulation": {},
+  {
+    "name": "Exojet",
     "genres": [
       "Action"
     ],
@@ -593,12 +568,11 @@
         ],
         "url": "https://archive.org/download/Exojet_198x_Jopac/Exojet_198x_Jopac.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Flipper Game": {
-    "emulation": {},
+  {
+    "name": "Flipper Game",
+    "players": 4,
     "genres": [
       "Various"
     ],
@@ -617,12 +591,11 @@
         ],
         "url": "https://archive.org/download/flipper-game-eur-philips-videopac-1980/Flipper Game (EUR)(Philips Videopac)(1980).pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Football": {
-    "emulation": {},
+  {
+    "name": "Football",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -639,12 +612,11 @@
         ],
         "url": "https://archive.org/download/American_Football_1978_Philips_EU/American_Football_1978_Philips_EU.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Freedom Fighters": {
-    "emulation": {},
+  {
+    "name": "Freedom Fighters",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -670,12 +642,12 @@
         ],
         "url": "https://archive.org/download/freedom-fighters-eur-philips-videopac-1982/Freedom Fighters (EUR)(Philips Videopac)(1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Frogger": {
-    "emulation": {},
+  {
+    "name": "Frogger",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -686,15 +658,14 @@
         ],
         "url": "https://archive.org/download/Frogger_1982_Parker_Brothers_EU/Frogger_1982_Parker_Brothers_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Golf": {
-    "emulation": {},
+  {
+    "name": "Golf",
+    "players": 4,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -717,15 +688,14 @@
         ],
         "url": "https://archive.org/download/golf-eur-philips-videopac-1978/Golf (EUR)(Philips Videopac)(1978).pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Great Wall Street Fortune Hunt, The": {
-    "emulation": {},
+  {
+    "name": "Great Wall Street Fortune Hunt, The",
+    "players": 2,
     "genres": [
-      "Strategy",
-      "Simulation"
+      "Simulation",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -734,12 +704,11 @@
         ],
         "url": "https://archive.org/download/great-wall-street-fortune-hunt-the/Great Wall Street Fortune Hunt, The.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Gunfighter": {
-    "emulation": {},
+  {
+    "name": "Gunfighter",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -765,12 +734,10 @@
         ],
         "url": "https://archive.org/download/Gunfighter_1978_Philips_en-de/Gunfighter_1978_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Helicopter Rescue": {
-    "emulation": {},
+  {
+    "name": "Helicopter Rescue",
     "genres": [
       "Action"
     ],
@@ -782,12 +749,11 @@
         ],
         "url": "https://archive.org/download/59_PLUS_Helicopter_Rescue_1983_Philips_en-de/59_PLUS_Helicopter_Rescue_1983_Philips_en-de.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Hockey + Soccer": {
-    "emulation": {},
+  {
+    "name": "Hockey + Soccer",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -805,12 +771,11 @@
         ],
         "url": "https://archive.org/download/Electronic_Hockey_Soccer_1981_Philips_en-de/Electronic_Hockey_Soccer_1981_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "I've Got Your Number": {
-    "emulation": {},
+  {
+    "name": "I've Got Your Number",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -821,13 +786,10 @@
         ],
         "url": "https://archive.org/download/ive-got-your-number-usodyssey-21978/I've Got Your Number! (US)(Odyssey 2)(1978).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Interpol": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Interpol",
     "manuals": [
       {
         "languages": [
@@ -835,22 +797,19 @@
         ],
         "url": "https://archive.org/download/Interpol_1984_Philips_FR/Interpol_1984_Philips_FR.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Jeu de Quilles + Basketball": {
-    "emulation": {},
-    "genres": [
-      "Sports / Bowling",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Jeu de Quilles + Basketball",
     "players": 1,
-    "rating": null
+    "genres": [
+      "Sports",
+      "Sports / Bowling"
+    ]
   },
-  "Jumping Acrobats": {
-    "emulation": {},
+  {
+    "name": "Jumping Acrobats",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -883,12 +842,11 @@
         ],
         "url": "https://archive.org/download/Jumping_Acrobats_1981_Philips_en-de/Jumping_Acrobats_1981_Philips_en-de.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "K.C.'s Krazy Chase": {
-    "emulation": {},
+  {
+    "name": "K.C.'s Krazy Chase",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -899,12 +857,11 @@
         ],
         "url": "https://archive.org/download/kcskrazychaseodyssey21982/KC's Krazy Chase game manual Odyssey 2 (1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Killer Bees": {
-    "emulation": {},
+  {
+    "name": "Killer Bees",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -931,12 +888,11 @@
         ],
         "url": "https://archive.org/download/killer-bees-eur-philips-videopac-1983/Killer Bees (EUR)(Philips Videopac)(1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Labyrinth Game, A + Supermind": {
-    "emulation": {},
+  {
+    "name": "Labyrinth Game, A + Supermind",
+    "players": 1,
     "genres": [
       "Various"
     ],
@@ -962,12 +918,10 @@
         ],
         "url": "https://archive.org/download/a-labyrinth-game-supermind-eur-philips-videopac-1981/A Labyrinth Game - Supermind (EUR)(Philips Videopac)(1981).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Las Vegas Blackjack": {
-    "emulation": {},
+  {
+    "name": "Las Vegas Blackjack",
     "genres": [
       "Playing cards"
     ],
@@ -999,12 +953,11 @@
         ],
         "url": "https://archive.org/download/Blackjack_1978_Philips_en-de/Blackjack_1978_Philips_en-de.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Laser War": {
-    "emulation": {},
+  {
+    "name": "Laser War",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -1037,12 +990,11 @@
         ],
         "url": "https://archive.org/download/Laser_War_1980_Philips_en-de/Laser_War_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Loony Balloon": {
-    "emulation": {},
+  {
+    "name": "Loony Balloon",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1063,22 +1015,20 @@
         ],
         "url": "https://archive.org/download/loony-balloon-eur-philips-videopac-1983/Loony Balloon (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Martian Threat": {
-    "emulation": {},
+  {
+    "name": "Martian Threat",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action",
       "Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Matchmaker + Logix + Buzzword": {
-    "emulation": {},
+  {
+    "name": "Matchmaker + Logix + Buzzword",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -1089,12 +1039,11 @@
         ],
         "url": "https://archive.org/download/matchmaker-buzzword-logix-us-odyssey-2-1978/Matchmaker!  Buzzword!  Logix! (US)(Odyssey 2)(1978).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Math-A-Magic + Echo": {
-    "emulation": {},
+  {
+    "name": "Math-A-Magic + Echo",
+    "players": 1,
     "genres": [
       "Various"
     ],
@@ -1119,12 +1068,10 @@
         ],
         "url": "https://archive.org/download/mathematician-echo-eur-philips-videopac-1978/Mathematician - Echo (EUR)(Philips Videopac)(1978).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Mission Impossible": {
-    "emulation": {},
+  {
+    "name": "Mission Impossible",
     "genres": [
       "Strategy"
     ],
@@ -1135,12 +1082,11 @@
         ],
         "url": "https://archive.org/download/Mission_Impossible_2006_Humanoid_Games_en-de/Mission_Impossible_2006_Humanoid_Games_en-de.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Monkeyshines": {
-    "emulation": {},
+  {
+    "name": "Monkeyshines",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1166,12 +1112,12 @@
         ],
         "url": "https://archive.org/download/monkeyshines-eur-philips-videopac-1982/Monkeyshines (EUR)(Philips Videopac)(1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Morse": {
-    "emulation": {},
+  {
+    "name": "Morse",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Educational"
     ],
@@ -1192,13 +1138,10 @@
         ],
         "url": "https://archive.org/download/Morse_1982_Philips_EU/Morse_1982_Philips_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Moto-Crash": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Moto-Crash",
     "manuals": [
       {
         "languages": [
@@ -1206,14 +1149,22 @@
         ],
         "url": "https://archive.org/download/Moto-Crash_198x_Jopac/Moto-Crash_198x_Jopac.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Mousing Cat, The": {
-    "emulation": {},
+  {
+    "name": "Mousing Cat, The",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Mousing Cat, The (Europe)",
+        "clones": [
+          "Chat et Souris"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1223,20 +1174,11 @@
         ],
         "url": "https://archive.org/download/Mousing_Cat_The_1982_Philips_en-de/Mousing_Cat_The_1982_Philips_en-de.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Chat et Souris"
-        ],
-        "name": "Mousing Cat, The (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Munchkin": {
-    "emulation": {},
+  {
+    "name": "Munchkin",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1262,13 +1204,10 @@
         ],
         "url": "https://archive.org/download/munchkin-eur-philips-videopac-1981/Munchkin (EUR)(Philips Videopac)(1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Musician": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Musician",
     "manuals": [
       {
         "languages": [
@@ -1276,12 +1215,10 @@
         ],
         "url": "https://archive.org/download/Musician_1983_Philips_EU/Musician_1983_Philips_EU.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Newscaster": {
-    "emulation": {},
+  {
+    "name": "Newscaster",
     "genres": [
       "Educational"
     ],
@@ -1298,12 +1235,12 @@
         ],
         "url": "https://archive.org/download/Videopac_Newscaster_Instructions_for_Use_1978_Philips_EU/Videopac_Newscaster_Instructions_for_Use_1978_Philips_EU.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Nightmare": {
-    "emulation": {},
+  {
+    "name": "Nightmare",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -1331,12 +1268,12 @@
         ],
         "url": "https://archive.org/download/53_PLUS_Nightmare_1983_Philips_en-de/53_PLUS_Nightmare_1983_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Nimble Numbers Ned": {
-    "emulation": {},
+  {
+    "name": "Nimble Numbers Ned",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Educational"
     ],
@@ -1347,12 +1284,10 @@
         ],
         "url": "https://archive.org/download/nimble-numbers-ned/Nimble Numbers Ned.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Norseman": {
-    "emulation": {},
+  {
+    "name": "Norseman",
     "genres": [
       "Strategy"
     ],
@@ -1373,12 +1308,11 @@
         ],
         "url": "https://archive.org/download/norseman-eur-philips-videopac-1983/Norseman (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Out of This World + Helicopter Rescue": {
-    "emulation": {},
+  {
+    "name": "Out of This World + Helicopter Rescue",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -1389,12 +1323,11 @@
         ],
         "url": "https://archive.org/download/OutOfThisWorldHelicopterRescueOdyssey2/out of this world helicopter rescue odyssey2.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pachinko": {
-    "emulation": {},
+  {
+    "name": "Pachinko",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -1405,12 +1338,12 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Pachinko (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pairs + Space Rendezvous + Logic": {
-    "emulation": {},
+  {
+    "name": "Pairs + Space Rendezvous + Logic",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Strategy",
       "Various"
@@ -1430,14 +1363,21 @@
         ],
         "url": "https://archive.org/download/pairs-space-rendezvous-logic-eurphilips-videopac1978/Pairs  Space Rendezvous  Logic (EUR)(Philips Videopac)(1978).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Pick Axe Pete": {
-    "emulation": {},
+  {
+    "name": "Pick Axe Pete",
+    "players": 1,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Pick Axe Pete (USA, Europe)",
+        "clones": [
+          "Pickaxe Pete"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1462,30 +1402,18 @@
         ],
         "url": "https://archive.org/download/pickaxe-pete-eur-philips-videopac-1982/Pickaxe Pete (EUR)(Philips Videopac)(1982).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Pickaxe Pete"
-        ],
-        "name": "Pick Axe Pete (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Pinball": {
-    "emulation": {},
+  {
+    "name": "Pinball",
     "genres": [
-      "Pinball",
-      "Action"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+      "Action",
+      "Pinball"
+    ]
   },
-  "Playtag": {
-    "emulation": {},
+  {
+    "name": "Playtag",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -1496,14 +1424,24 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Playtag (Europe) (Proto).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pocket Billiards": {
-    "emulation": {},
+  {
+    "name": "Pocket Billiards",
+    "players": 2,
     "genres": [
       "Various"
+    ],
+    "parents": [
+      {
+        "name": "Pocket Billiards (USA, Europe)",
+        "clones": [
+          "Billard Americain",
+          "Billard Electrique",
+          "Billiard Americain",
+          "Electronic Billiards"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1534,23 +1472,12 @@
         ],
         "url": "https://archive.org/download/Electronic_Billiards_1981_Philips_en-de/Electronic_Billiards_1981_Philips_en-de.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Billard Americain",
-          "Billard Electrique",
-          "Billiard Americain",
-          "Electronic Billiards"
-        ],
-        "name": "Pocket Billiards (USA, Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Popeye": {
-    "emulation": {},
+  {
+    "name": "Popeye",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -1561,12 +1488,12 @@
         ],
         "url": "https://archive.org/download/Popeye_1983_Parker_Brothers_EU/Popeye_1983_Parker_Brothers_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Power Lords": {
-    "emulation": {},
+  {
+    "name": "Power Lords",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Shooter"
@@ -1578,12 +1505,11 @@
         ],
         "url": "https://archive.org/download/power-lords-us-odyssey-2-1983/Power Lords (US)(Odyssey 2)(1983)_images.zip"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Q-Bert": {
-    "emulation": {},
+  {
+    "name": "Q-Bert",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1594,12 +1520,11 @@
         ],
         "url": "https://archive.org/download/Q-Bert_1983_Parker_Brothers_EU/Q-Bert_1983_Parker_Brothers_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Quest for the Rings": {
-    "emulation": {},
+  {
+    "name": "Quest for the Rings",
+    "players": 5,
     "genres": [
       "Various"
     ],
@@ -1622,39 +1547,32 @@
         ],
         "url": "https://archive.org/download/em-busca-dos-aneis-perdidos-br-philips-odyssey-1981/Em Busca dos Aneis Perdidos (BR)(Philips Odyssey)(1981).pdf"
       }
-    ],
-    "players": 5,
-    "rating": null
+    ]
   },
-  "Race + Spin-out + Cryptogram": {
-    "emulation": {},
+  {
+    "name": "Race + Spin-out + Cryptogram",
+    "players": 1,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Red Baron": {
-    "emulation": {},
+  {
+    "name": "Red Baron",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Robot City": {
-    "emulation": {},
+  {
+    "name": "Robot City",
     "genres": [
       "Shooter"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Samurai": {
-    "emulation": {},
+  {
+    "name": "Samurai",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -1673,12 +1591,11 @@
         ],
         "url": "https://archive.org/download/samurai-eur-philips-videopac-1979/Samurai (EUR)(Philips Videopac)(1979).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Satellite Attack": {
-    "emulation": {},
+  {
+    "name": "Satellite Attack",
+    "players": 1,
     "genres": [
       "Shooter"
     ],
@@ -1704,15 +1621,14 @@
         ],
         "url": "https://archive.org/download/satellite-attack-eur-philips-videopac-1981/Satellite Attack (EUR)(Philips Videopac)(1981).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Secret of the Pharaohs": {
-    "emulation": {},
+  {
+    "name": "Secret of the Pharaohs",
+    "players": 2,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -1736,21 +1652,19 @@
         ],
         "url": "https://archive.org/download/Secret_of_the_Pharaohs_1980_Philips_en-de/Secret_of_the_Pharaohs_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Shark Hunter": {
-    "emulation": {},
+  {
+    "name": "Shark Hunter",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Sid the Spellbinder": {
-    "emulation": {},
+  {
+    "name": "Sid the Spellbinder",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -1761,14 +1675,21 @@
         ],
         "url": "https://archive.org/download/sid-the-spellbinder-us-odyssey-2-1982/Sid the Spellbinder  (US)(Odyssey 2)(1982).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Speedway + Spin-out + Crypto-logic": {
-    "emulation": {},
+  {
+    "name": "Speedway + Spin-out + Crypto-logic",
+    "players": 1,
     "genres": [
       "Various"
+    ],
+    "parents": [
+      {
+        "name": "Speedway + Spin-out + Crypto-logic (USA, Europe)",
+        "clones": [
+          "Race + Spin-out + Cryptogram"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1791,20 +1712,12 @@
         ],
         "url": "https://archive.org/download/race-spin-out-cryptogram-us-philips-videopac-1978/Race  Spin-out  Cryptogram (US)(Philips Videopac)(1978).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Race + Spin-out + Cryptogram"
-        ],
-        "name": "Speedway + Spin-out + Crypto-logic (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Spider-Man": {
-    "emulation": {},
+  {
+    "name": "Spider-Man",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1815,12 +1728,11 @@
         ],
         "url": "https://archive.org/download/Spiderman_198x_Parker_Brothers_EU/Spiderman_198x_Parker_Brothers_EU.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Stone Sling": {
-    "emulation": {},
+  {
+    "name": "Stone Sling",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -1852,12 +1764,12 @@
         ],
         "url": "https://archive.org/download/Stone_Sling_1980_Philips_en-de/Stone_Sling_1980_Philips_en-de.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Super Bee": {
-    "emulation": {},
+  {
+    "name": "Super Bee",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1878,22 +1790,19 @@
         ],
         "url": "https://archive.org/download/super-bee-eur-philips-videopac-1983/Super Bee (EUR)(Philips Videopac)(1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Super Cobra": {
-    "emulation": {},
+  {
+    "name": "Super Cobra",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Syracuse": {
-    "emulation": {},
+  {
+    "name": "Syracuse",
     "genres": [
       "Action"
     ],
@@ -1909,12 +1818,11 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Syracuse (Europe) (Jopac).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Take the Money and Run": {
-    "emulation": {},
+  {
+    "name": "Take the Money and Run",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1925,12 +1833,11 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Take the Money and Run (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Terrahawks": {
-    "emulation": {},
+  {
+    "name": "Terrahawks",
+    "players": 1,
     "genres": [
       "Shooter"
     ],
@@ -1942,12 +1849,11 @@
         ],
         "url": "https://archive.org/download/51_PLUS_Terrahawks_1983_Philips_en-de/51_PLUS_Terrahawks_1983_Philips_en-de.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Thunderball": {
-    "emulation": {},
+  {
+    "name": "Thunderball",
+    "players": 4,
     "genres": [
       "Various"
     ],
@@ -1958,15 +1864,13 @@
         ],
         "url": "https://archive.org/download/thunderballgamemanualodyssey21979/thunderball! game manual odyssey 2 (1979).pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Trans American Rally": {
-    "emulation": {},
+  {
+    "name": "Trans American Rally",
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1983,12 +1887,10 @@
         ],
         "url": "https://archive.org/download/trans-american-rally-eur-philips-videopac-1983/Trans American Rally (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Tresor Englouti, Le": {
-    "emulation": {},
+  {
+    "name": "Tresor Englouti, Le",
     "genres": [
       "Action"
     ],
@@ -1999,12 +1901,12 @@
         ],
         "url": "https://archive.org/download/Tresor_Englouti_Le_198x_Jopac_FR/Tresor_Englouti_Le_198x_Jopac_FR.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Turtles": {
-    "emulation": {},
+  {
+    "name": "Turtles",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -2025,12 +1927,12 @@
         ],
         "url": "https://archive.org/download/turtles-eur-philips-videopac-1983/Turtles (EUR)(Philips Videopac)(1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Tutankham": {
-    "emulation": {},
+  {
+    "name": "Tutankham",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -2041,12 +1943,10 @@
         ],
         "url": "https://archive.org/download/Magnavoxodyssey2Manuals/Tutankham (Europe) (Proto).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Type & Tell": {
-    "emulation": {},
+  {
+    "name": "Type & Tell",
     "genres": [
       "Educational"
     ],
@@ -2057,28 +1957,20 @@
         ],
         "url": "https://archive.org/download/TypeTellOdyssey21982/type & tell odyssey 2 1982.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Verkehrsspiele 1": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Verkehrsspiele 1"
   },
-  "Verkehrsspiele 2": {
-    "emulation": {},
+  {
+    "name": "Verkehrsspiele 2",
     "genres": [
       "Educational"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Volleyball": {
-    "emulation": {},
+  {
+    "name": "Volleyball",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -2098,12 +1990,11 @@
         ],
         "url": "https://archive.org/download/electronic-volleyball-eur-philips-videopac-1981/Electronic Volleyball (EUR)(Philips Videopac)(1981).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "War of Nerves": {
-    "emulation": {},
+  {
+    "name": "War of Nerves",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -2114,8 +2005,6 @@
         ],
         "url": "https://archive.org/download/warofnervesodyssey21979/war of nerves odyssey 2 (1979).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   }
-}
+]

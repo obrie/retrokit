@@ -1,9 +1,11 @@
-{
-  "A.P.B.": {
-    "emulation": {},
+[
+  {
+    "name": "A.P.B.",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -12,26 +14,24 @@
         ],
         "url": "https://archive.org/download/A.P.B._1991/A.P.B._1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Alien vs Predator": {
-    "emulation": {},
+  {
+    "name": "Alien vs Predator",
+    "players": 1,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / 1st person",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Shooter / 1st person"
+    ]
   },
-  "Awesome Golf": {
-    "emulation": {},
+  {
+    "name": "Awesome Golf",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -40,15 +40,15 @@
         ],
         "url": "https://archive.org/download/Awesome_Golf_1991/Awesome_Golf_1991.cbr"
       }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "Baseball Heroes": {
-    "emulation": {},
+  {
+    "name": "Baseball Heroes",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -57,16 +57,16 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Baseball Heroes (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Basketbrawl": {
-    "emulation": {},
+  {
+    "name": "Basketbrawl",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Basketball",
+      "Beat'em Up",
       "Sports",
-      "Beat'em Up"
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -75,15 +75,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Basketbrawl (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Batman Returns": {
-    "emulation": {},
+  {
+    "name": "Batman Returns",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Beat'em Up",
-      "Action"
+      "Action",
+      "Beat'em Up"
     ],
     "manuals": [
       {
@@ -92,15 +92,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Batman Returns (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Battle Wheels": {
-    "emulation": {},
+  {
+    "name": "Battle Wheels",
+    "players": 6,
+    "rating": 0.5,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -109,15 +109,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Battle Wheels (USA, Europe).pdf"
       }
-    ],
-    "players": 6,
-    "rating": 0.5
+    ]
   },
-  "Battlezone 2000": {
-    "emulation": {},
+  {
+    "name": "Battlezone 2000",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -128,12 +128,12 @@
         ],
         "url": "https://archive.org/download/atarilynxbattlezone2000/atarilynxbattlezone2000.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Bill & Ted's Excellent Adventure": {
-    "emulation": {},
+  {
+    "name": "Bill & Ted's Excellent Adventure",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Adventure"
     ],
@@ -144,12 +144,12 @@
         ],
         "url": "https://archive.org/download/Bill_Teds_Excellent_Adventure_1991/Bill__Teds_Excellent_Adventure_1991.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Block Out": {
-    "emulation": {},
+  {
+    "name": "Block Out",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
     ],
@@ -160,12 +160,12 @@
         ],
         "url": "https://archive.org/download/Block_Out_1991/Block_Out_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Blue Lightning": {
-    "emulation": {},
+  {
+    "name": "Blue Lightning",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Simulation"
     ],
@@ -176,15 +176,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Blue Lightning (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Bubble Trouble": {
-    "emulation": {},
+  {
+    "name": "Bubble Trouble",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -193,12 +193,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Bubble Trouble (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "California Games": {
-    "emulation": {},
+  {
+    "name": "California Games",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Sports"
     ],
@@ -209,25 +209,23 @@
         ],
         "url": "https://archive.org/download/atarilynxcaliforniagames/atarilynxcaliforniagames.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Centipede": {
-    "emulation": {},
+  {
+    "name": "Centipede",
+    "players": 1,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Checkered Flag": {
-    "emulation": {},
+  {
+    "name": "Checkered Flag",
+    "players": 6,
+    "rating": 1,
     "genres": [
-      "Sports",
+      "Driving",
       "Race",
-      "Driving"
+      "Sports"
     ],
     "manuals": [
       {
@@ -236,15 +234,15 @@
         ],
         "url": "https://archive.org/download/Checkered_Flag_1991/Checkered_Flag_1991.cbr"
       }
-    ],
-    "players": 6,
-    "rating": 1
+    ]
   },
-  "Chip's Challenge": {
-    "emulation": {},
+  {
+    "name": "Chip's Challenge",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -253,12 +251,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Chip's Challenge (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Crystal Mines II": {
-    "emulation": {},
+  {
+    "name": "Crystal Mines II",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Puzzle-Game"
     ],
@@ -269,25 +267,23 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Crystal Mines II (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Daemonsgate": {
-    "emulation": {},
+  {
+    "name": "Daemonsgate",
+    "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Desert Strike - Return to the Gulf": {
-    "emulation": {},
+  {
+    "name": "Desert Strike - Return to the Gulf",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Shooter",
+      "Action",
       "Shoot'em Up",
-      "Action"
+      "Shooter"
     ],
     "manuals": [
       {
@@ -296,15 +292,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Desert Strike - Return to the Gulf (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Dinolympics": {
-    "emulation": {},
+  {
+    "name": "Dinolympics",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -313,29 +309,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Dinolympics (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Dirty Larry - Renegade Cop": {
-    "emulation": {},
-    "genres": [
-      "Beat'em Up",
-      "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/AtariLynxManuals_201812/Dirty Larry - Renegade Cop (USA, Europe).pdf"
-      }
-    ],
+  {
+    "name": "Dirty Larry - Renegade Cop",
     "players": 1,
-    "rating": 0.5
-  },
-  "Double Dragon": {
-    "emulation": {},
+    "rating": 0.5,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -345,17 +324,34 @@
         "languages": [
           "en"
         ],
+        "url": "https://archive.org/download/AtariLynxManuals_201812/Dirty Larry - Renegade Cop (USA, Europe).pdf"
+      }
+    ]
+  },
+  {
+    "name": "Double Dragon",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Beat'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/atarilynxdoubledragon/atarilynxdoubledragon.pdf",
         "options": {
           "pages": "1-15"
-        },
-        "url": "https://archive.org/download/atarilynxdoubledragon/atarilynxdoubledragon.pdf"
+        }
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Dracula the Undead": {
-    "emulation": {},
+  {
+    "name": "Dracula the Undead",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Adventure"
     ],
@@ -366,12 +362,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Dracula the Undead (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Electrocop": {
-    "emulation": {},
+  {
+    "name": "Electrocop",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Adventure",
       "Puzzle-Game"
@@ -381,20 +377,20 @@
         "languages": [
           "en"
         ],
+        "url": "https://archive.org/download/atarilynxelectrocop/atarilynxelectrocop.pdf",
         "options": {
           "pages": "1,3-7"
-        },
-        "url": "https://archive.org/download/atarilynxelectrocop/atarilynxelectrocop.pdf"
+        }
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "European Soccer Challenge": {
-    "emulation": {},
+  {
+    "name": "European Soccer Challenge",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -403,21 +399,20 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/European Soccer Challenge (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Eye of the Beholder": {
-    "emulation": {},
+  {
+    "name": "Eye of the Beholder",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Fat Bobby": {
-    "emulation": {},
+  {
+    "name": "Fat Bobby",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -428,12 +423,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Fat Bobby (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Fidelity Ultimate Chess Challenge, The": {
-    "emulation": {},
+  {
+    "name": "Fidelity Ultimate Chess Challenge, The",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Board game",
       "Puzzle-Game"
@@ -445,12 +440,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Fidelity Ultimate Chess Challenge, The (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Gates of Zendocon": {
-    "emulation": {},
+  {
+    "name": "Gates of Zendocon",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -462,12 +457,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Gates of Zendocon, The (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Gauntlet - The Third Encounter": {
-    "emulation": {},
+  {
+    "name": "Gauntlet - The Third Encounter",
+    "players": 4,
+    "rating": 0.9,
     "genres": [
       "Action",
       "Action / Labyrinth",
@@ -480,12 +475,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Gauntlet - The Third Encounter (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.9
+    ]
   },
-  "Gordo 106": {
-    "emulation": {},
+  {
+    "name": "Gordo 106",
+    "players": 4,
+    "rating": 0.75,
     "genres": [
       "Adventure",
       "Platform"
@@ -497,15 +492,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Gordo 106 - The Mutated Lab Monkey (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.75
+    ]
   },
-  "Hard Drivin'": {
-    "emulation": {},
+  {
+    "name": "Hard Drivin'",
+    "players": 4,
+    "rating": 0.5,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -514,15 +509,15 @@
         ],
         "url": "https://archive.org/download/Hard_Drivin_1991/Hard_Drivin_1991.cbr"
       }
-    ],
-    "players": 4,
-    "rating": 0.5
+    ]
   },
-  "Hockey": {
-    "emulation": {},
+  {
+    "name": "Hockey",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -531,15 +526,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Hockey (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Hydra": {
-    "emulation": {},
+  {
+    "name": "Hydra",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -548,12 +543,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Hydra (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Ishido - The Way of Stones": {
-    "emulation": {},
+  {
+    "name": "Ishido - The Way of Stones",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
     ],
@@ -564,15 +559,15 @@
         ],
         "url": "https://archive.org/download/Ishido_The_Way_Of_Stones_1991/Ishido_The_Way_Of_Stones_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Jimmy Connors' Tennis": {
-    "emulation": {},
+  {
+    "name": "Jimmy Connors' Tennis",
+    "players": 4,
+    "rating": 0.45,
     "genres": [
-      "Sports / Tennis",
-      "Sports"
+      "Sports",
+      "Sports / Tennis"
     ],
     "manuals": [
       {
@@ -581,12 +576,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Jimmy Connors' Tennis (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.45
+    ]
   },
-  "Joust": {
-    "emulation": {},
+  {
+    "name": "Joust",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action",
       "Platform"
@@ -598,15 +593,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Joust (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Klax": {
-    "emulation": {},
+  {
+    "name": "Klax",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -615,15 +610,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Klax (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Krazy Ace - Miniature Golf": {
-    "emulation": {},
+  {
+    "name": "Krazy Ace - Miniature Golf",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -632,15 +627,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Krazy Ace - Miniature Golf (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "Kung Food": {
-    "emulation": {},
+  {
+    "name": "Kung Food",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
-      "Beat'em Up",
-      "Action"
+      "Action",
+      "Beat'em Up"
     ],
     "manuals": [
       {
@@ -649,15 +644,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Kung Food (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Lemmings": {
-    "emulation": {},
+  {
+    "name": "Lemmings",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -666,12 +661,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Lemmings (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Lexis": {
-    "emulation": {},
+  {
+    "name": "Lexis",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Puzzle-Game"
     ],
@@ -682,33 +677,29 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Lexis (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Lode Runner": {
-    "emulation": {},
+  {
+    "name": "Lode Runner",
+    "players": 1,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Loopz": {
-    "emulation": {},
+  {
+    "name": "Loopz",
+    "players": 2,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Lynx Casino": {
-    "emulation": {},
+  {
+    "name": "Lynx Casino",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Simulation",
-      "Board game"
+      "Board game",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -717,22 +708,18 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Lynx Casino (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Lynx II Production Test Program": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Lynx II Production Test Program"
   },
-  "Malibu Bikini Volleyball": {
-    "emulation": {},
+  {
+    "name": "Malibu Bikini Volleyball",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Volleyball",
-      "Sports"
+      "Sports",
+      "Sports / Volleyball"
     ],
     "manuals": [
       {
@@ -741,25 +728,23 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Malibu Bikini Volleyball (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Marlboro Go!": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
+  {
+    "name": "Marlboro Go!",
     "players": 1,
-    "rating": null
-  },
-  "Ms. Pac-Man": {
-    "emulation": {},
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "Ms. Pac-Man",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -768,22 +753,21 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Ms. Pac-Man (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "NFL Football": {
-    "emulation": {},
-    "genres": [
-      "Sports / Football",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "NFL Football",
     "players": 2,
-    "rating": 0.4
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Football"
+    ]
   },
-  "Ninja Gaiden": {
-    "emulation": {},
+  {
+    "name": "Ninja Gaiden",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -795,12 +779,12 @@
         ],
         "url": "https://archive.org/download/Ninja_Gaiden_1991/Ninja_Gaiden_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Ninja Gaiden III - The Ancient Ship of Doom": {
-    "emulation": {},
+  {
+    "name": "Ninja Gaiden III - The Ancient Ship of Doom",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Beat'em Up"
     ],
@@ -811,12 +795,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Ninja Gaiden III - The Ancient Ship of Doom (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pac-Land": {
-    "emulation": {},
+  {
+    "name": "Pac-Land",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action",
       "Platform"
@@ -828,16 +812,16 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Pac-Land (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Paperboy": {
-    "emulation": {},
+  {
+    "name": "Paperboy",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
+      "Action",
       "Sports",
-      "Sports / Cycling",
-      "Action"
+      "Sports / Cycling"
     ],
     "manuals": [
       {
@@ -846,12 +830,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Paperboy (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Pinball Jam": {
-    "emulation": {},
+  {
+    "name": "Pinball Jam",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Action",
       "Pinball"
@@ -863,12 +847,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Pinball Jam (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Pit-Fighter": {
-    "emulation": {},
+  {
+    "name": "Pit-Fighter",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Action",
       "Fight"
@@ -880,15 +864,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Pit Fighter - The Ultimate Competition (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "Power Factor": {
-    "emulation": {},
+  {
+    "name": "Power Factor",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -897,12 +881,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Power Factor (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "QIX": {
-    "emulation": {},
+  {
+    "name": "QIX",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Puzzle-Game"
@@ -914,22 +898,21 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Qix (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Raiden": {
-    "emulation": {},
+  {
+    "name": "Raiden",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Rampage": {
-    "emulation": {},
+  {
+    "name": "Rampage",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -940,12 +923,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Rampage (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Rampart": {
-    "emulation": {},
+  {
+    "name": "Rampart",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Strategy"
     ],
@@ -956,25 +939,23 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Rampart (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Road Riot 4WD": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
+  {
+    "name": "Road Riot 4WD",
     "players": 1,
-    "rating": null
-  },
-  "RoadBlasters": {
-    "emulation": {},
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "RoadBlasters",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -983,15 +964,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/RoadBlasters (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Robo-Squash": {
-    "emulation": {},
+  {
+    "name": "Robo-Squash",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
-      "Action / Breakout games",
-      "Action"
+      "Action",
+      "Action / Breakout games"
     ],
     "manuals": [
       {
@@ -1000,12 +981,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Robo-Squash (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Robotron 2084": {
-    "emulation": {},
+  {
+    "name": "Robotron 2084",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Shooter"
     ],
@@ -1016,12 +997,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Robotron 2084 (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Rygar": {
-    "emulation": {},
+  {
+    "name": "Rygar",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Platform"
@@ -1033,15 +1014,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Rygar - Legendary Warrior (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "S.T.U.N. Runner": {
-    "emulation": {},
+  {
+    "name": "S.T.U.N. Runner",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1050,12 +1031,12 @@
         ],
         "url": "https://archive.org/download/S.T.U.N._Runner_1991/S.T.U.N._Runner_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Scrapyard Dog": {
-    "emulation": {},
+  {
+    "name": "Scrapyard Dog",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Adventure"
     ],
@@ -1066,12 +1047,12 @@
         ],
         "url": "https://archive.org/download/Scrapyard_Dog_1991/Scrapyard_Dog_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Shadow of the Beast": {
-    "emulation": {},
+  {
+    "name": "Shadow of the Beast",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -1083,15 +1064,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Shadow of the Beast (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Shanghai": {
-    "emulation": {},
+  {
+    "name": "Shanghai",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Strategy",
-      "Board game"
+      "Board game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -1100,15 +1081,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Shanghai (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Steel Talons": {
-    "emulation": {},
+  {
+    "name": "Steel Talons",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Simulation",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -1117,12 +1098,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Steel Talons (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Super Asteroids, Missile Command": {
-    "emulation": {},
+  {
+    "name": "Super Asteroids, Missile Command",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Compilation"
     ],
@@ -1133,15 +1114,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Super Asteroids, Missile Command (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Super Off-Road": {
-    "emulation": {},
+  {
+    "name": "Super Off-Road",
+    "players": 4,
+    "rating": 0.5,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1150,12 +1131,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Super Off-Road (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.5
+    ]
   },
-  "Super Skweek": {
-    "emulation": {},
+  {
+    "name": "Super Skweek",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Strategy"
     ],
@@ -1166,12 +1147,12 @@
         ],
         "url": "https://archive.org/download/Super_Skweek_1991/Super_Skweek_1991.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Switchblade II": {
-    "emulation": {},
+  {
+    "name": "Switchblade II",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
@@ -1183,12 +1164,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Switchblade II (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Todd's Adventures in Slime World": {
-    "emulation": {},
+  {
+    "name": "Todd's Adventures in Slime World",
+    "players": 8,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -1200,12 +1181,12 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Todd's Adventures in Slime World (USA, Europe).pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.75
+    ]
   },
-  "Toki": {
-    "emulation": {},
+  {
+    "name": "Toki",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -1217,15 +1198,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Toki (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Tournament Cyberball": {
-    "emulation": {},
+  {
+    "name": "Tournament Cyberball",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Football",
       "Sports",
+      "Sports / Football",
       "Strategy"
     ],
     "manuals": [
@@ -1235,12 +1216,12 @@
         ],
         "url": "https://archive.org/download/Tournament_Cyberball_1991/Tournament_Cyberball_1991.cbr"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Turbo Sub": {
-    "emulation": {},
+  {
+    "name": "Turbo Sub",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Shoot'em Up"
     ],
@@ -1251,12 +1232,12 @@
         ],
         "url": "https://archive.org/download/Turbo_Sub_1991/Turbo_Sub_1991.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Viking Child": {
-    "emulation": {},
+  {
+    "name": "Viking Child",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
@@ -1267,12 +1248,12 @@
         ],
         "url": "https://archive.org/download/Viking_Child_1991/Viking_Child_1991.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Warbirds": {
-    "emulation": {},
+  {
+    "name": "Warbirds",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
       "Simulation"
     ],
@@ -1283,15 +1264,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Warbirds (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "World Class Soccer": {
-    "emulation": {},
+  {
+    "name": "World Class Soccer",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -1300,15 +1281,15 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/World Class Soccer (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Xenophobe": {
-    "emulation": {},
+  {
+    "name": "Xenophobe",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -1317,16 +1298,16 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Xenophobe (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "Xybots": {
-    "emulation": {},
+  {
+    "name": "Xybots",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / 3rd person",
-      "Action"
+      "Shooter / 3rd person"
     ],
     "manuals": [
       {
@@ -1335,22 +1316,20 @@
         ],
         "url": "https://archive.org/download/Xybots_1991/Xybots_1991.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Zaku": {
-    "emulation": {},
+  {
+    "name": "Zaku",
+    "players": 1,
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Zarlor Mercenary": {
-    "emulation": {},
+  {
+    "name": "Zarlor Mercenary",
+    "players": 4,
+    "rating": 0.9,
     "genres": [
       "Shoot'em Up"
     ],
@@ -1361,8 +1340,6 @@
         ],
         "url": "https://archive.org/download/AtariLynxManuals_201812/Zarlor Mercenary (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.9
+    ]
   }
-}
+]

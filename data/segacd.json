@@ -1,6 +1,7 @@
-{
-  "3 Ninjas Kick Back": {
-    "emulation": {},
+[
+  {
+    "name": "3 Ninjas Kick Back",
+    "players": 2,
     "genres": [
       "Platform"
     ],
@@ -11,23 +12,29 @@
         ],
         "url": "https://segaretro.org/images/7/7e/3ninjas_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "A-Rank Thunder - Tanjou-hen": {
-    "emulation": {},
+  {
+    "name": "A-Rank Thunder - Tanjou-hen",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "A-X-101": {
-    "emulation": {},
+  {
+    "name": "A-X-101",
+    "players": 1,
     "genres": [
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "A-X-101 (USA) (RE)",
+        "clones": [
+          "AX-101"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -42,23 +49,20 @@
         ],
         "url": "https://segaretro.org/images/a/a4/AX101_MD_jp_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Adventures of Batman and Robin, The",
+    "players": 1,
+    "rating": 1,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "parents": [
       {
-        "clones": [
-          "AX-101"
-        ],
-        "name": "A-X-101 (USA) (RE)"
+        "name": "Adventures of Batman and Robin, The (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Adventures of Batman and Robin, The": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
     ],
     "manuals": [
       {
@@ -73,19 +77,19 @@
         ],
         "url": "https://segaretro.org/images/9/9e/AdventuresOfB&RMCDBRManual.PDF"
       }
+    ]
+  },
+  {
+    "name": "Adventures of Willy Beamish, The",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "Adventures of Batman and Robin, The (Europe)"
+        "name": "Adventures of Willy Beamish, The (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 1
-  },
-  "Adventures of Willy Beamish, The": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -94,29 +98,28 @@
         ],
         "url": "https://segaretro.org/images/1/10/Willybeamish_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "After Armageddon Gaiden - Majuu Toushouden Eclipse",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "After Burner III",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Adventures of Willy Beamish, The (USA)"
+        "name": "After Burner III (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
-  },
-  "After Armageddon Gaiden - Majuu Toushouden Eclipse": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
-  },
-  "After Burner III": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up",
-      "Action"
     ],
     "manuals": [
       {
@@ -131,17 +134,11 @@
         ],
         "url": "https://archive.org/download/After_Burner_III_1992_Sega_JP/After_Burner_III_1992_Sega_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "After Burner III (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Aisle Lord": {
-    "emulation": {},
+  {
+    "name": "Aisle Lord",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -152,24 +149,27 @@
         ],
         "url": "https://segaretro.org/images/e/e3/Aisle_Lord_-_MegaCD_JAP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Alshark": {
-    "emulation": {},
+  {
+    "name": "Alshark",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Amazing Spider-Man vs. The Kingpin, The": {
-    "emulation": {},
+  {
+    "name": "Amazing Spider-Man vs. The Kingpin, The",
+    "players": 1,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Amazing Spider-Man vs. The Kingpin, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -178,19 +178,22 @@
         ],
         "url": "https://segaretro.org/images/6/61/Amazingspiderman_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Android Assault - The Revenge of Bari-Arm",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Amazing Spider-Man vs. The Kingpin, The (Europe)"
+        "name": "Android Assault - The Revenge of Bari-Arm (USA)",
+        "clones": [
+          "Bari-Arm"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Android Assault - The Revenge of Bari-Arm": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -199,22 +202,18 @@
         ],
         "url": "https://segaretro.org/images/8/8c/Androidassault_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Animals!, The",
+    "players": 1,
+    "genres": [
+      "Educational"
     ],
     "parents": [
       {
-        "clones": [
-          "Bari-Arm"
-        ],
-        "name": "Android Assault - The Revenge of Bari-Arm (USA)"
+        "name": "Animals!, The (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Animals!, The": {
-    "emulation": {},
-    "genres": [
-      "Educational"
     ],
     "manuals": [
       {
@@ -223,17 +222,12 @@
         ],
         "url": "https://segaretro.org/images/f/fe/Animals_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Animals!, The (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Annett Futatabi": {
-    "emulation": {},
+  {
+    "name": "Annett Futatabi",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Beat'em Up"
     ],
@@ -244,30 +238,27 @@
         ],
         "url": "https://segaretro.org/images/1/16/Anetto_Futatabi_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Aoki Ookami to Shiroki Mejika - Genchou Hishi": {
-    "emulation": {},
+  {
+    "name": "Aoki Ookami to Shiroki Mejika - Genchou Hishi",
+    "players": 2,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Arcus I, II, III": {
-    "emulation": {},
+  {
+    "name": "Arcus I, II, III",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Arslan Senki": {
-    "emulation": {},
+  {
+    "name": "Arslan Senki",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Role playing games"
     ],
@@ -278,15 +269,20 @@
         ],
         "url": "https://segaretro.org/images/0/07/TheHeroicLegendofArslan_MD_jp_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "BC Racers": {
-    "emulation": {},
+  {
+    "name": "BC Racers",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ],
+    "parents": [
+      {
+        "name": "BC Racers (Europe) (En,Fr,De)"
+      }
     ],
     "manuals": [
       {
@@ -295,32 +291,31 @@
         ],
         "url": "https://segaretro.org/images/d/df/Bcracers_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Bakuden - The Unbalanced Zone",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Batman Returns",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Action / Adventure",
+      "Driving",
+      "Platform",
+      "Race"
     ],
     "parents": [
       {
-        "name": "BC Racers (Europe) (En,Fr,De)"
+        "name": "Batman Returns (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Bakuden - The Unbalanced Zone": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Batman Returns": {
-    "emulation": {},
-    "genres": [
-      "Action",
-      "Platform",
-      "Action / Adventure",
-      "Race",
-      "Driving"
     ],
     "manuals": [
       {
@@ -329,28 +324,26 @@
         ],
         "url": "https://segaretro.org/images/d/de/Batmanreturns_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "BattleTech - Gray Death Legion",
+    "players": 1,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  {
+    "name": "Battlecorps",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Simulation"
     ],
     "parents": [
       {
-        "name": "Batman Returns (Europe)"
+        "name": "Battlecorps (Europe) (En,Fr,De,Es)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "BattleTech - Gray Death Legion": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Battlecorps": {
-    "emulation": {},
-    "genres": [
-      "Simulation"
     ],
     "manuals": [
       {
@@ -359,20 +352,24 @@
         ],
         "url": "https://segaretro.org/images/c/cc/Battlecorps_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Battlecorps (Europe) (En,Fr,De,Es)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Beast II": {
-    "emulation": {},
+  {
+    "name": "Beast II",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Action",
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Beast II (Europe)",
+        "clones": [
+          "Shadow of the Beast II",
+          "Shadow of the Beast II - Juushin no Jubaku"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -381,24 +378,19 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Shadow of the Beast II (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Bill Walsh College Football",
+    "players": 4,
+    "genres": [
+      "Sports",
+      "Sports / Football"
     ],
     "parents": [
       {
-        "clones": [
-          "Shadow of the Beast II",
-          "Shadow of the Beast II - Juushin no Jubaku"
-        ],
-        "name": "Beast II (Europe)"
+        "name": "Bill Walsh College Football (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
-  },
-  "Bill Walsh College Football": {
-    "emulation": {},
-    "genres": [
-      "Sports / Football",
-      "Sports"
     ],
     "manuals": [
       {
@@ -413,20 +405,23 @@
         ],
         "url": "https://segaretro.org/images/a/af/Billwalsh_mcd_br_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Bill Walsh College Football (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Blackhole Assault": {
-    "emulation": {},
+  {
+    "name": "Blackhole Assault",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Blackhole Assault (Europe)",
+        "clones": [
+          "Black Hole Assault"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -447,42 +442,32 @@
         ],
         "url": "https://archive.org/download/Black_Hole_Assault_1992_Micronet_JP/Black_Hole_Assault_1992_Micronet_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Black Hole Assault"
-        ],
-        "name": "Blackhole Assault (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Bloodshot ~ Battle Frenzy": {
-    "emulation": {},
+  {
+    "name": "Bloodshot ~ Battle Frenzy",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Shooter / 1st person",
+      "Action",
       "Shooter",
-      "Action"
+      "Shooter / 1st person"
     ],
-    "manuals": [],
     "parents": [
       {
+        "name": "Bloodshot ~ Battle Frenzy (Europe) (En,Fr,De,Es)",
         "clones": [
           "Battle Frenzy"
-        ],
-        "name": "Bloodshot ~ Battle Frenzy (Europe) (En,Fr,De,Es)"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Bouncers": {
-    "emulation": {},
+  {
+    "name": "Bouncers",
+    "players": 2,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -491,14 +476,19 @@
         ],
         "url": "https://archive.org/download/Bouncers_1994_Sega_US/Bouncers_1994_Sega_US.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Bram Stoker's Dracula": {
-    "emulation": {},
+  {
+    "name": "Bram Stoker's Dracula",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Bram Stoker's Dracula (USA)"
+      }
     ],
     "manuals": [
       {
@@ -507,20 +497,20 @@
         ],
         "url": "https://segaretro.org/images/1/1a/Dracula_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Brutal - Paws of Fury",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Fight"
     ],
     "parents": [
       {
-        "name": "Bram Stoker's Dracula (USA)"
+        "name": "Brutal - Paws of Fury (Europe) (En,Fr,De)"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Brutal - Paws of Fury": {
-    "emulation": {},
-    "genres": [
-      "Fight",
-      "Action"
     ],
     "manuals": [
       {
@@ -529,30 +519,24 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Brutalpawsoffury_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Brutal - Paws of Fury (Europe) (En,Fr,De)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Bug Blasters - The Exterminators": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
+  {
+    "name": "Bug Blasters - The Exterminators",
     "players": 1,
-    "rating": 0.5
-  },
-  "Burai - Yatsudama no Yuushi Densetsu": {
-    "emulation": {},
+    "rating": 0.5,
     "genres": [
-      "Japanese RPG",
-      "Role playing games",
       "Adventure"
+    ]
+  },
+  {
+    "name": "Burai - Yatsudama no Yuushi Densetsu",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Adventure",
+      "Japanese RPG",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -561,21 +545,19 @@
         ],
         "url": "https://archive.org/download/Burai_Hachigyoku_no_Yuushi_Densetsu_1992_Sega_JP/Burai_Hachigyoku_no_Yuushi_Densetsu_1992_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Burning Fists - Force Striker": {
-    "emulation": {},
+  {
+    "name": "Burning Fists - Force Striker",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
       "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "Cadillacs and Dinosaurs - The Second Cataclysm": {
-    "emulation": {},
+  {
+    "name": "Cadillacs and Dinosaurs - The Second Cataclysm",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -586,24 +568,27 @@
         ],
         "url": "https://segaretro.org/images/e/ea/Cadillacsdinosaurs_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Captain Tsubasa": {
-    "emulation": {},
+  {
+    "name": "Captain Tsubasa",
+    "players": 2,
     "genres": [
       "Sports"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Chuck Rock": {
-    "emulation": {},
+  {
+    "name": "Chuck Rock",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Chuck Rock (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -618,20 +603,20 @@
         ],
         "url": "https://segaretro.org/images/d/d5/ChuckRockMegaCDEUManual.PDF"
       }
-    ],
-    "parents": [
-      {
-        "name": "Chuck Rock (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Chuck Rock II - Son of Chuck": {
-    "emulation": {},
+  {
+    "name": "Chuck Rock II - Son of Chuck",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Chuck Rock II - Son of Chuck (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -646,29 +631,23 @@
         ],
         "url": "https://segaretro.org/images/f/f6/Chuck_Rock_II_MCD_BR_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Chuck Rock II - Son of Chuck (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Citizen X": {
-    "emulation": {},
+  {
+    "name": "Citizen X",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Cliffhanger": {
-    "emulation": {},
+  {
+    "name": "Cliffhanger",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -677,15 +656,23 @@
         ],
         "url": "https://segaretro.org/images/e/e6/Cliffhanger_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Cobra Command": {
-    "emulation": {},
+  {
+    "name": "Cobra Command",
+    "players": 1,
+    "rating": 0.15,
     "genres": [
-      "Simulation",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Simulation"
+    ],
+    "parents": [
+      {
+        "name": "Cobra Command (Europe)",
+        "clones": [
+          "Thunder Storm FX"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -711,20 +698,11 @@
         ],
         "url": "https://archive.org/download/Thunder_Storm_FX_1992_Wolf_Team_JP/Thunder_Storm_FX_1992_Wolf_Team_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Thunder Storm FX"
-        ],
-        "name": "Cobra Command (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.15
+    ]
   },
-  "Colors of Modern Rock, The": {
-    "emulation": {},
+  {
+    "name": "Colors of Modern Rock, The",
+    "players": 1,
     "genres": [
       "Music and Dance"
     ],
@@ -735,14 +713,18 @@
         ],
         "url": "https://segaretro.org/images/c/c4/Colorsofmodernrock_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Compton's Interactive Encyclopedia": {
-    "emulation": {},
+  {
+    "name": "Compton's Interactive Encyclopedia",
+    "players": 1,
     "genres": [
       "Various"
+    ],
+    "parents": [
+      {
+        "name": "Compton's Interactive Encyclopedia (USA) (Version 2.00S)"
+      }
     ],
     "manuals": [
       {
@@ -751,20 +733,20 @@
         ],
         "url": "https://segaretro.org/images/d/d2/Comptons_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Compton's Interactive Encyclopedia (USA) (Version 2.00S)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Corpse Killer": {
-    "emulation": {},
+  {
+    "name": "Corpse Killer",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action",
       "Lightgun Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Corpse Killer (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -773,17 +755,12 @@
         ],
         "url": "https://segaretro.org/images/2/25/Corpsekiller_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Corpse Killer (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Cosmic Fantasy Stories": {
-    "emulation": {},
+  {
+    "name": "Cosmic Fantasy Stories",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Role playing games"
     ],
@@ -794,12 +771,12 @@
         ],
         "url": "https://archive.org/download/Cosmic_Fantasy_Stories_1992_Riot_JP/Cosmic_Fantasy_Stories_1992_Riot_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Crime Patrol": {
-    "emulation": {},
+  {
+    "name": "Crime Patrol",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -810,23 +787,20 @@
         ],
         "url": "https://segaretro.org/images/8/8a/Crimepatrol_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Cyborg 009": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Platform / Shooter Scrolling",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Cyborg 009",
     "players": 1,
-    "rating": null
+    "genres": [
+      "Action",
+      "Platform",
+      "Platform / Shooter Scrolling"
+    ]
   },
-  "Daihoushinden": {
-    "emulation": {},
+  {
+    "name": "Daihoushinden",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -837,15 +811,23 @@
         ],
         "url": "https://archive.org/download/Daihoushinden_1995_Victor_JP/Daihoushinden_1995_Victor_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Dark Wizard": {
-    "emulation": {},
+  {
+    "name": "Dark Wizard",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Dark Wizard (USA)",
+        "clones": [
+          "Dark Wizard - Yomigaerishi Yami no Madoushi"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -860,20 +842,12 @@
         ],
         "url": "https://archive.org/download/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Dark Wizard - Yomigaerishi Yami no Madoushi"
-        ],
-        "name": "Dark Wizard (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Death Bringer": {
-    "emulation": {},
+  {
+    "name": "Death Bringer",
+    "players": 1,
+    "rating": 0.25,
     "genres": [
       "Role playing games"
     ],
@@ -884,16 +858,16 @@
         ],
         "url": "https://segaretro.org/images/7/7e/Death_Bringer_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.25
+    ]
   },
-  "Demolition Man": {
-    "emulation": {},
+  {
+    "name": "Demolition Man",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
+      "Action",
       "Platform",
-      "Platform / Shooter Scrolling",
-      "Action"
+      "Platform / Shooter Scrolling"
     ],
     "manuals": [
       {
@@ -902,12 +876,12 @@
         ],
         "url": "https://segaretro.org/images/b/b8/Demolitionman_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Detonator Orgun": {
-    "emulation": {},
+  {
+    "name": "Detonator Orgun",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure"
     ],
@@ -918,23 +892,27 @@
         ],
         "url": "https://segaretro.org/images/e/e4/Detonator_Orgun_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Devastator": {
-    "emulation": {},
+  {
+    "name": "Devastator",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Double Switch": {
-    "emulation": {},
+  {
+    "name": "Double Switch",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Double Switch (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -949,27 +927,14 @@
         ],
         "url": "https://archive.org/download/Double_Switch_1995_Sega_JP/Double_Switch_1995_Sega_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Double Switch (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Dracula Unleashed": {
-    "emulation": {},
+  {
+    "name": "Dracula Unleashed",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/2/20/Draculaunleashed_mcd_us_manual.pdf"
-      }
     ],
     "parents": [
       {
@@ -979,14 +944,27 @@
         "name": "Dracula Unleashed (Europe) (Disc 2) (Made in E.U.)"
       }
     ],
-    "players": 1,
-    "rating": 0.7
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/2/20/Draculaunleashed_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Dragon's Lair": {
-    "emulation": {},
+  {
+    "name": "Dragon's Lair",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Adventure",
-      "Action"
+      "Action",
+      "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Dragon's Lair (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -995,19 +973,19 @@
         ],
         "url": "https://segaretro.org/images/2/2f/Dragonslair_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Dune",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Strategy"
     ],
     "parents": [
       {
-        "name": "Dragon's Lair (Europe)"
+        "name": "Dune (Europe) (En,Fr,De,Es,It,Ar)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Dune": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
     ],
     "manuals": [
       {
@@ -1022,19 +1000,19 @@
         ],
         "url": "https://segaretro.org/images/4/48/DuneMegaCDEUManual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Dungeon Explorer",
+    "players": 4,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Dune (Europe) (En,Fr,De,Es,It,Ar)"
+        "name": "Dungeon Explorer (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Dungeon Explorer": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -1043,19 +1021,18 @@
         ],
         "url": "https://segaretro.org/images/f/f7/Dungeonexplorer_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Dungeon Master II - Skullkeep",
+    "players": 1,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Dungeon Explorer (Europe)"
+        "name": "Dungeon Master II - Skullkeep (Europe)"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
-  },
-  "Dungeon Master II - Skullkeep": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -1079,17 +1056,12 @@
         ],
         "url": "https://segaretro.org/images/b/bc/DungeonMasterII_MCD_JP_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Dungeon Master II - Skullkeep (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Dynamic Country Club": {
-    "emulation": {},
+  {
+    "name": "Dynamic Country Club",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
       "Sports"
     ],
@@ -1100,15 +1072,19 @@
         ],
         "url": "https://segaretro.org/images/8/89/DynamicCountryClub_MD_jp_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "ESPN Baseball Tonight": {
-    "emulation": {},
+  {
+    "name": "ESPN Baseball Tonight",
+    "players": 2,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "parents": [
+      {
+        "name": "ESPN Baseball Tonight (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1117,20 +1093,15 @@
         ],
         "url": "https://segaretro.org/images/2/2f/Espnbaseballtonight_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "ESPN Baseball Tonight (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "ESPN NBA Hangtime '95": {
-    "emulation": {},
+  {
+    "name": "ESPN NBA Hangtime '95",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -1139,15 +1110,14 @@
         ],
         "url": "https://segaretro.org/images/b/b8/Espnhangtime95_mcd_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "ESPN National Hockey Night": {
-    "emulation": {},
+  {
+    "name": "ESPN National Hockey Night",
+    "players": 4,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -1156,15 +1126,15 @@
         ],
         "url": "https://segaretro.org/images/2/2a/Espnnationalhockeynight_mcd_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "ESPN Sunday Night NFL": {
-    "emulation": {},
+  {
+    "name": "ESPN Sunday Night NFL",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -1173,12 +1143,12 @@
         ],
         "url": "https://segaretro.org/images/5/50/Espnsundaynightnfl_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Earnest Evans": {
-    "emulation": {},
+  {
+    "name": "Earnest Evans",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action"
     ],
@@ -1189,14 +1159,19 @@
         ],
         "url": "https://segaretro.org/images/a/a1/Earnest_Evans_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Earthworm Jim - Special Edition": {
-    "emulation": {},
+  {
+    "name": "Earthworm Jim - Special Edition",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Earthworm Jim - Special Edition (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1205,20 +1180,23 @@
         ],
         "url": "https://segaretro.org/images/a/a3/Earthwormjim_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Earthworm Jim - Special Edition (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Ecco - The Tides of Time": {
-    "emulation": {},
+  {
+    "name": "Ecco - The Tides of Time",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Action",
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Ecco - The Tides of Time (Europe) (En,Fr,De,Es)",
+        "clones": [
+          "Ecco the Dolphin CD (Disc 2)"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1227,22 +1205,22 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Ecco2_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Ecco the Dolphin",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
+        "name": "Ecco the Dolphin (Europe)",
         "clones": [
-          "Ecco the Dolphin CD (Disc 2)"
-        ],
-        "name": "Ecco - The Tides of Time (Europe) (En,Fr,De,Es)"
+          "Ecco the Dolphin CD (Disc 1)"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.95
-  },
-  "Ecco the Dolphin": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -1263,20 +1241,11 @@
         ],
         "url": "https://segaretro.org/images/3/38/Ecco_the_Dolphin_MCD_BR_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Ecco the Dolphin CD (Disc 1)"
-        ],
-        "name": "Ecco the Dolphin (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Egawa Suguru no Super League CD": {
-    "emulation": {},
+  {
+    "name": "Egawa Suguru no Super League CD",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1287,14 +1256,19 @@
         ],
         "url": "https://segaretro.org/images/9/97/ESSuperLeagueCD_MD_jp_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Eternal Champions - Challenge from the Dark Side": {
-    "emulation": {},
+  {
+    "name": "Eternal Champions - Challenge from the Dark Side",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Eternal Champions - Challenge from the Dark Side (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1303,19 +1277,19 @@
         ],
         "url": "https://segaretro.org/images/0/05/Eternalchampions_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Eye of the Beholder",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Eternal Champions - Challenge from the Dark Side (Europe)"
+        "name": "Eye of the Beholder (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Eye of the Beholder": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -1324,20 +1298,14 @@
         ],
         "url": "https://segaretro.org/images/a/ad/Eotb_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Eye of the Beholder (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "F1 Circus CD": {
-    "emulation": {},
+  {
+    "name": "F1 Circus CD",
+    "players": 2,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1346,15 +1314,23 @@
         ],
         "url": "https://segaretro.org/images/a/ad/F1CircusCD_MD_jp_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "FIFA International Soccer - Championship Edition": {
-    "emulation": {},
+  {
+    "name": "FIFA International Soccer - Championship Edition",
+    "players": 4,
+    "rating": 0.75,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
+    ],
+    "parents": [
+      {
+        "name": "FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es)",
+        "clones": [
+          "FIFA International Soccer"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1370,22 +1346,22 @@
         ],
         "url": "https://segaretro.org/images/a/a7/FIFA_MCD_EU_Manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Fahrenheit",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
+        "name": "Fahrenheit (Europe)",
         "clones": [
-          "FIFA International Soccer"
-        ],
-        "name": "FIFA International Soccer - Championship Edition (Europe) (En,Fr,De,Es)"
+          "Fahrenheit (Disc 1)"
+        ]
       }
-    ],
-    "players": 4,
-    "rating": 0.75
-  },
-  "Fahrenheit": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -1394,23 +1370,23 @@
         ],
         "url": "https://archive.org/download/Sega_Mega_CD_32X_Fahrenheit_1994_U/Sega_Mega_CD_32X_Fahrenheit_1994_U.cbr"
       }
+    ]
+  },
+  {
+    "name": "Fatal Fury Special",
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Action",
+      "Fight"
     ],
     "parents": [
       {
+        "name": "Fatal Fury Special (Europe)",
         "clones": [
-          "Fahrenheit (Disc 1)"
-        ],
-        "name": "Fahrenheit (Europe)"
+          "Garou Densetsu Special"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Fatal Fury Special": {
-    "emulation": {},
-    "genres": [
-      "Fight",
-      "Action"
     ],
     "manuals": [
       {
@@ -1433,22 +1409,19 @@
         ],
         "url": "https://archive.org/download/Garou_Densetsu_Special_1995_Victor_JP/Garou_Densetsu_Special_1995_Victor_JP.pdf"
       }
+    ]
+  },
+  {
+    "name": "Final Fight CD",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Beat'em Up"
     ],
     "parents": [
       {
-        "clones": [
-          "Garou Densetsu Special"
-        ],
-        "name": "Fatal Fury Special (Europe)"
+        "name": "Final Fight CD (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
-  },
-  "Final Fight CD": {
-    "emulation": {},
-    "genres": [
-      "Beat'em Up"
     ],
     "manuals": [
       {
@@ -1474,22 +1447,25 @@
         ],
         "url": "https://archive.org/download/Final_Fight_CD_1993_Sega_JP/Final_Fight_CD_1993_Sega_JP.pdf"
       }
+    ]
+  },
+  {
+    "name": "Flashback - The Quest for Identity",
+    "players": 1,
+    "rating": 0.95,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Platform",
+      "Platform / Shooter Scrolling"
     ],
     "parents": [
       {
-        "name": "Final Fight CD (Europe)"
+        "name": "Flashback - The Quest for Identity (USA)",
+        "clones": [
+          "Flashback"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": 0.85
-  },
-  "Flashback - The Quest for Identity": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Platform / Shooter Scrolling",
-      "Adventure",
-      "Action"
     ],
     "manuals": [
       {
@@ -1498,23 +1474,20 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Flashback_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Flashback"
-        ],
-        "name": "Flashback - The Quest for Identity (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Flink": {
-    "emulation": {},
+  {
+    "name": "Flink",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Flink (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1523,20 +1496,22 @@
         ],
         "url": "https://segaretro.org/images/8/8a/Flink_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Formula One World Championship - Beyond the Limit",
+    "players": 1,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "parents": [
       {
-        "name": "Flink (Europe)"
+        "name": "Formula One World Championship - Beyond the Limit (Europe)",
+        "clones": [
+          "Heavenly Symphony - Formula One World Championship 1993"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Formula One World Championship - Beyond the Limit": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
     ],
     "manuals": [
       {
@@ -1551,27 +1526,15 @@
         ],
         "url": "https://archive.org/download/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Heavenly Symphony - Formula One World Championship 1993"
-        ],
-        "name": "Formula One World Championship - Beyond the Limit (Europe)"
-      }
-    ],
+    ]
+  },
+  {
+    "name": "Fresh Cleaner"
+  },
+  {
+    "name": "Game no Kandume Vol. 1",
     "players": 1,
-    "rating": null
-  },
-  "Fresh Cleaner": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Game no Kandume Vol. 1": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
       "Compilation"
     ],
@@ -1582,41 +1545,31 @@
         ],
         "url": "https://segaretro.org/images/7/77/Kandumeimegacdmanual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Game no Kandume Vol. 2": {
-    "emulation": {},
+  {
+    "name": "Game no Kandume Vol. 2",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Gen'ei Toshi - Illusion City": {
-    "emulation": {},
+  {
+    "name": "Gen'ei Toshi - Illusion City",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Ground Zero Texas": {
-    "emulation": {},
+  {
+    "name": "Ground Zero Texas",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Lightgun Shooter",
-      "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/a/a7/Groundzerotexas_mcd_us_manual.pdf"
-      }
+      "Action",
+      "Lightgun Shooter"
     ],
     "parents": [
       {
@@ -1626,11 +1579,18 @@
         "name": "Ground Zero Texas (Europe) (Disc 2)"
       }
     ],
-    "players": 1,
-    "rating": 0.75
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/a7/Groundzerotexas_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Gyuwambler Jiko Chuushinha 2 - Gekitou! Tokyo Mahjongland Hen": {
-    "emulation": {},
+  {
+    "name": "Gyuwambler Jiko Chuushinha 2 - Gekitou! Tokyo Mahjongland Hen",
+    "players": 2,
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -1642,15 +1602,15 @@
         ],
         "url": "https://archive.org/download/Gambler_Jiko_Chuushinha_2_Gekitou_Tokyo_Mahjongland_Hen_1992_Game_Arts_JP/Gambler_Jiko_Chuushinha_2_Gekitou_Tokyo_Mahjongland_Hen_1992_Game_Arts_JP.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Heart of the Alien - Out of This World Parts I and II": {
-    "emulation": {},
+  {
+    "name": "Heart of the Alien - Out of This World Parts I and II",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Platform",
-      "Adventure"
+      "Adventure",
+      "Platform"
     ],
     "manuals": [
       {
@@ -1659,12 +1619,12 @@
         ],
         "url": "https://segaretro.org/images/0/0f/Heartofthealien_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Heavy Nova": {
-    "emulation": {},
+  {
+    "name": "Heavy Nova",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Beat'em Up"
     ],
@@ -1675,15 +1635,20 @@
         ],
         "url": "https://archive.org/download/Heavy_Nova_1991_Micronet_JP/Heavy_Nova_1991_Micronet_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Heimdall": {
-    "emulation": {},
+  {
+    "name": "Heimdall",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Role playing games",
-      "Adventure"
+      "Adventure",
+      "Role playing games"
+    ],
+    "parents": [
+      {
+        "name": "Heimdall (USA)"
+      }
     ],
     "manuals": [
       {
@@ -1692,20 +1657,20 @@
         ],
         "url": "https://segaretro.org/images/b/b8/Heimdall_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Hook",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
     ],
     "parents": [
       {
-        "name": "Heimdall (USA)"
+        "name": "Hook (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Hook": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
     ],
     "manuals": [
       {
@@ -1714,17 +1679,12 @@
         ],
         "url": "https://segaretro.org/images/c/c8/Hook_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Hook (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Iron Helix": {
-    "emulation": {},
+  {
+    "name": "Iron Helix",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
     ],
@@ -1735,12 +1695,11 @@
         ],
         "url": "https://segaretro.org/images/e/e6/Ironhelix_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Ishii Hisaichi no Daiseikai": {
-    "emulation": {},
+  {
+    "name": "Ishii Hisaichi no Daiseikai",
+    "players": 1,
     "genres": [
       "Simulation"
     ],
@@ -1751,15 +1710,20 @@
         ],
         "url": "https://segaretro.org/images/f/f4/IshiiHisaichiDaiseikai_MD_jp_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Jaguar XJ220": {
-    "emulation": {},
+  {
+    "name": "Jaguar XJ220",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ],
+    "parents": [
+      {
+        "name": "Jaguar XJ220 (Europe) (En,Ja)"
+      }
     ],
     "manuals": [
       {
@@ -1774,17 +1738,11 @@
         ],
         "url": "https://segaretro.org/images/6/6e/JaguarXJ220_MD_jp_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Jaguar XJ220 (Europe) (En,Ja)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Jangou World Cup": {
-    "emulation": {},
+  {
+    "name": "Jangou World Cup",
+    "players": 1,
     "genres": [
       "Asiatic board game"
     ],
@@ -1795,12 +1753,12 @@
         ],
         "url": "https://segaretro.org/images/5/56/JangoWorldCup_MD_jp_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Jeopardy!": {
-    "emulation": {},
+  {
+    "name": "Jeopardy!",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Quiz"
     ],
@@ -1811,15 +1769,14 @@
         ],
         "url": "https://segaretro.org/images/b/b9/Jeopardy_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Joe Montana's NFL Football": {
-    "emulation": {},
+  {
+    "name": "Joe Montana's NFL Football",
+    "players": 2,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -1834,14 +1791,19 @@
         ],
         "url": "https://segaretro.org/images/5/5d/SCDManualJoeMontana'sNFLFootballTecToy.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Jurassic Park": {
-    "emulation": {},
+  {
+    "name": "Jurassic Park",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Jurassic Park (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1850,20 +1812,23 @@
         ],
         "url": "https://segaretro.org/images/f/fe/Jurassicpark_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Jurassic Park (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Keio Flying Squadron": {
-    "emulation": {},
+  {
+    "name": "Keio Flying Squadron",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Keio Flying Squadron (Europe)",
+        "clones": [
+          "Keiou Yuugekitai"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1872,22 +1837,18 @@
         ],
         "url": "https://segaretro.org/images/5/50/Kfs_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Kids on Site",
+    "players": 1,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "clones": [
-          "Keiou Yuugekitai"
-        ],
-        "name": "Keio Flying Squadron (Europe)"
+        "name": "Kids on Site (Europe) (RE-1)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Kids on Site": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -1896,20 +1857,20 @@
         ],
         "url": "https://segaretro.org/images/0/00/Kidsonsite_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Kids on Site (Europe) (RE-1)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Lawnmower Man, The": {
-    "emulation": {},
+  {
+    "name": "Lawnmower Man, The",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Lawnmower Man, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1918,21 +1879,20 @@
         ],
         "url": "https://segaretro.org/images/0/00/Lawnmowerman_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Lethal Enforcers",
+    "players": 2,
+    "genres": [
+      "Action",
+      "Lightgun Shooter",
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Lawnmower Man, The (Europe)"
+        "name": "Lethal Enforcers (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Lethal Enforcers": {
-    "emulation": {},
-    "genres": [
-      "Lightgun Shooter",
-      "Shoot'em Up",
-      "Action"
     ],
     "manuals": [
       {
@@ -1941,20 +1901,22 @@
         ],
         "url": "https://segaretro.org/images/8/84/Lethalenforcers_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Lethal Enforcers II - Gun Fighters",
+    "players": 2,
+    "genres": [
+      "Lightgun Shooter",
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Lethal Enforcers (Europe)"
+        "name": "Lethal Enforcers II - Gun Fighters (Europe)",
+        "clones": [
+          "Lethal Enforcers II - The Western"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": null
-  },
-  "Lethal Enforcers II - Gun Fighters": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up",
-      "Lightgun Shooter"
     ],
     "manuals": [
       {
@@ -1963,23 +1925,19 @@
         ],
         "url": "https://segaretro.org/images/d/d3/Lethalenforcers2_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Lethal Enforcers II - The Western"
-        ],
-        "name": "Lethal Enforcers II - Gun Fighters (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Links - The Challenge of Golf": {
-    "emulation": {},
+  {
+    "name": "Links - The Challenge of Golf",
+    "players": 1,
     "genres": [
       "Sports",
       "Sports / Golf"
+    ],
+    "parents": [
+      {
+        "name": "Links - The Challenge of Golf (USA)"
+      }
     ],
     "manuals": [
       {
@@ -1988,17 +1946,11 @@
         ],
         "url": "https://segaretro.org/images/4/44/Links_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Links - The Challenge of Golf (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Loadstar - The Legend of Tully Bodine": {
-    "emulation": {},
+  {
+    "name": "Loadstar - The Legend of Tully Bodine",
+    "players": 1,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -2009,15 +1961,20 @@
         ],
         "url": "https://segaretro.org/images/0/0c/Loadstar_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Lords of Thunder": {
-    "emulation": {},
+  {
+    "name": "Lords of Thunder",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Lords of Thunder (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2026,19 +1983,18 @@
         ],
         "url": "https://segaretro.org/images/0/01/Lordsofthunder_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Lunar - Eternal Blue",
+    "players": 1,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Lords of Thunder (Europe)"
+        "name": "Lunar - Eternal Blue (USA) (RE)"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
-  },
-  "Lunar - Eternal Blue": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -2053,19 +2009,19 @@
         ],
         "url": "https://segaretro.org/images/e/e2/LunarEternalBlue_MCD_JP_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Lunar - The Silver Star",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Lunar - Eternal Blue (USA) (RE)"
+        "name": "Lunar - The Silver Star (USA)"
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Lunar - The Silver Star": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -2080,17 +2036,11 @@
         ],
         "url": "https://segaretro.org/images/5/59/LunarTheSilverStar_MCD_JP_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Lunar - The Silver Star (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Mad Dog II - The Lost Gold": {
-    "emulation": {},
+  {
+    "name": "Mad Dog II - The Lost Gold",
+    "players": 2,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -2101,12 +2051,12 @@
         ],
         "url": "https://segaretro.org/images/8/8d/Maddogmccree2_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Mad Dog McCree": {
-    "emulation": {},
+  {
+    "name": "Mad Dog McCree",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -2118,23 +2068,27 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Mad Dog McCree (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "Mahou no Shoujo - Silky Lip": {
-    "emulation": {},
+  {
+    "name": "Mahou no Shoujo - Silky Lip",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Make My Video - INXS": {
-    "emulation": {},
+  {
+    "name": "Make My Video - INXS",
+    "players": 1,
+    "rating": 0.15,
     "genres": [
       "Various"
+    ],
+    "parents": [
+      {
+        "name": "Make My Video - INXS (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2143,19 +2097,19 @@
         ],
         "url": "https://segaretro.org/images/8/86/Inxs_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Make My Video - Kris Kross",
+    "players": 1,
+    "rating": 0.15,
+    "genres": [
+      "Music and Dance"
     ],
     "parents": [
       {
-        "name": "Make My Video - INXS (Europe)"
+        "name": "Make My Video - Kris Kross (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.15
-  },
-  "Make My Video - Kris Kross": {
-    "emulation": {},
-    "genres": [
-      "Music and Dance"
     ],
     "manuals": [
       {
@@ -2164,19 +2118,18 @@
         ],
         "url": "https://segaretro.org/images/0/08/Krisskross_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Make My Video - Marky Mark and the Funky Bunch",
+    "players": 1,
+    "genres": [
+      "N/A"
     ],
     "parents": [
       {
-        "name": "Make My Video - Kris Kross (Europe)"
+        "name": "Make My Video - Marky Mark and the Funky Bunch (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 0.15
-  },
-  "Make My Video - Marky Mark and the Funky Bunch": {
-    "emulation": {},
-    "genres": [
-      "N/A"
     ],
     "manuals": [
       {
@@ -2185,34 +2138,26 @@
         ],
         "url": "https://segaretro.org/images/0/03/Markymark_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Make My Video - Marky Mark and the Funky Bunch (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Marko's Magic Football": {
-    "emulation": {},
+  {
+    "name": "Marko's Magic Football",
+    "players": 1,
     "genres": [
       "Platform"
     ],
-    "manuals": [],
     "parents": [
       {
+        "name": "Marko's Magic Football (Europe) (En,Fr,De,Es)",
         "clones": [
           "Marko"
-        ],
-        "name": "Marko's Magic Football (Europe) (En,Fr,De,Es)"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Mary Shelley's Frankenstein": {
-    "emulation": {},
+  {
+    "name": "Mary Shelley's Frankenstein",
+    "players": 1,
     "genres": [
       "Action",
       "Compilation"
@@ -2224,14 +2169,22 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Mary Shelley's Frankenstein (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Masked Rider, The - Kamen Rider ZO": {
-    "emulation": {},
+  {
+    "name": "Masked Rider, The - Kamen Rider ZO",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Masked Rider, The - Kamen Rider ZO (USA)",
+        "clones": [
+          "Kamen Rider ZO"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2246,33 +2199,23 @@
         ],
         "url": "https://segaretro.org/images/3/3a/TheMaskedRiderZO_MD_jp_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Kamen Rider ZO"
-        ],
-        "name": "Masked Rider, The - Kamen Rider ZO (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Mega Schwarzschild": {
-    "emulation": {},
+  {
+    "name": "Mega Schwarzschild",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure",
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "MegaRace": {
-    "emulation": {},
+  {
+    "name": "MegaRace",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2281,15 +2224,23 @@
         ],
         "url": "https://segaretro.org/images/5/54/Megarace_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Mickey Mania": {
-    "emulation": {},
+  {
+    "name": "Mickey Mania",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Mickey Mania (Europe)",
+        "clones": [
+          "Mickey Mania - The Timeless Adventures of Mickey Mouse"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2298,25 +2249,22 @@
         ],
         "url": "https://segaretro.org/images/8/83/Mickeymania_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Microcosm",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "3rd person",
+      "Action",
+      "Shooter",
+      "Shooter / Plane"
     ],
     "parents": [
       {
-        "clones": [
-          "Mickey Mania - The Timeless Adventures of Mickey Mouse"
-        ],
-        "name": "Mickey Mania (Europe)"
+        "name": "Microcosm (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
-  },
-  "Microcosm": {
-    "emulation": {},
-    "genres": [
-      "Shooter",
-      "Shooter / Plane",
-      "3rd person",
-      "Action"
     ],
     "manuals": [
       {
@@ -2325,20 +2273,20 @@
         ],
         "url": "https://segaretro.org/images/b/bc/Microcosm_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Midnight Raiders",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Action",
+      "Lightgun Shooter"
     ],
     "parents": [
       {
-        "name": "Microcosm (Europe)"
+        "name": "Midnight Raiders (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Midnight Raiders": {
-    "emulation": {},
-    "genres": [
-      "Lightgun Shooter",
-      "Action"
     ],
     "manuals": [
       {
@@ -2347,17 +2295,12 @@
         ],
         "url": "https://segaretro.org/images/b/b2/Midnightraiders_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Midnight Raiders (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Might and Magic III - Isles of Terra": {
-    "emulation": {},
+  {
+    "name": "Might and Magic III - Isles of Terra",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Role playing games"
     ],
@@ -2368,12 +2311,11 @@
         ],
         "url": "https://segaretro.org/images/a/ae/Might_and_Magic_III_Isles_of_Terra_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Mighty Mighty Missile": {
-    "emulation": {},
+  {
+    "name": "Mighty Mighty Missile",
+    "players": 4,
     "genres": [
       "Puzzle-Game"
     ],
@@ -2384,16 +2326,21 @@
         ],
         "url": "https://segaretro.org/images/4/48/MightyMightyMissile_MCD_US_GDG_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Mighty Morphin Power Rangers": {
-    "emulation": {},
+  {
+    "name": "Mighty Morphin Power Rangers",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
-      "Fight",
-      "Beat'em Up"
+      "Beat'em Up",
+      "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Mighty Morphin Power Rangers (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2402,19 +2349,22 @@
         ],
         "url": "https://segaretro.org/images/9/97/Mmpr_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Mortal Kombat",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Fight"
     ],
     "parents": [
       {
-        "name": "Mighty Morphin Power Rangers (Europe)"
+        "name": "Mortal Kombat (Europe)",
+        "clones": [
+          "Mortal Kombat Kanzenban"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Mortal Kombat": {
-    "emulation": {},
-    "genres": [
-      "Fight"
     ],
     "manuals": [
       {
@@ -2435,20 +2385,11 @@
         ],
         "url": "https://segaretro.org/images/7/76/Mortal_Kombat_MCD_BR_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Mortal Kombat Kanzenban"
-        ],
-        "name": "Mortal Kombat (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "My Paint": {
-    "emulation": {},
+  {
+    "name": "My Paint",
+    "players": 1,
     "genres": [
       "Various"
     ],
@@ -2459,15 +2400,20 @@
         ],
         "url": "https://segaretro.org/images/d/d4/Mypaint_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "NBA Jam": {
-    "emulation": {},
+  {
+    "name": "NBA Jam",
+    "players": 4,
+    "rating": 0.35,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "parents": [
+      {
+        "name": "NBA Jam (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2476,17 +2422,12 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Nbajam_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "NBA Jam (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.35
+    ]
   },
-  "NFL Football Trivia Challenge": {
-    "emulation": {},
+  {
+    "name": "NFL Football Trivia Challenge",
+    "players": 4,
+    "rating": 0.45,
     "genres": [
       "Quiz"
     ],
@@ -2497,15 +2438,14 @@
         ],
         "url": "https://segaretro.org/images/0/08/Nflftc_mcd_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.45
+    ]
   },
-  "NFL's Greatest - San Francisco vs. Dallas 1978-1993": {
-    "emulation": {},
+  {
+    "name": "NFL's Greatest - San Francisco vs. Dallas 1978-1993",
+    "players": 2,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -2514,15 +2454,23 @@
         ],
         "url": "https://segaretro.org/images/f/f1/Nflsgreatest_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "NHL Hockey '94": {
-    "emulation": {},
+  {
+    "name": "NHL Hockey '94",
+    "players": 4,
+    "rating": 0.9,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
+    ],
+    "parents": [
+      {
+        "name": "NHL Hockey '94 (Europe)",
+        "clones": [
+          "NHL '94"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2531,40 +2479,22 @@
         ],
         "url": "https://segaretro.org/images/1/18/Nhl94_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "NHL '94"
-        ],
-        "name": "NHL Hockey '94 (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.9
+    ]
   },
-  "Night Striker": {
-    "emulation": {},
+  {
+    "name": "Night Striker",
+    "players": 1,
     "genres": [
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Night Trap": {
-    "emulation": {},
+  {
+    "name": "Night Trap",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Thinking",
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/5/56/Nighttrap_mcd_us_manual.pdf"
-      }
+      "Adventure",
+      "Thinking"
     ],
     "parents": [
       {
@@ -2574,21 +2504,27 @@
         "name": "Night Trap (Europe) (Disc 2)"
       }
     ],
-    "players": 1,
-    "rating": 0.6
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/56/Nighttrap_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Ninja Warriors, The": {
-    "emulation": {},
+  {
+    "name": "Ninja Warriors, The",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Nobunaga no Yabou - Haouden": {
-    "emulation": {},
+  {
+    "name": "Nobunaga no Yabou - Haouden",
+    "players": 1,
     "genres": [
       "Strategy"
     ],
@@ -2599,12 +2535,11 @@
         ],
         "url": "https://segaretro.org/images/2/26/NobunaganoYabouHaoudenCD_MD_jp_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Nostalgia 1907 - In North Atlantic Sea": {
-    "emulation": {},
+  {
+    "name": "Nostalgia 1907 - In North Atlantic Sea",
+    "players": 1,
     "genres": [
       "Adventure"
     ],
@@ -2615,28 +2550,31 @@
         ],
         "url": "https://segaretro.org/images/7/7b/NOSTALGIA_MD_jp_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Note! Color Mechanica": {
-    "emulation": {},
+  {
+    "name": "Note! Color Mechanica",
+    "players": 2,
     "genres": [
       "Music and Dance"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Note! Color Mechanica (USA) (Unl)"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Novastorm": {
-    "emulation": {},
+  {
+    "name": "Novastorm",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Novastorm (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2645,20 +2583,22 @@
         ],
         "url": "https://segaretro.org/images/9/9c/Novastorm_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Panic!",
+    "players": 1,
+    "genres": [
+      "Adventure",
+      "Puzzle-Game"
     ],
     "parents": [
       {
-        "name": "Novastorm (Europe)"
+        "name": "Panic! (USA) (RE)",
+        "clones": [
+          "Switch"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.4
-  },
-  "Panic!": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game",
-      "Adventure"
     ],
     "manuals": [
       {
@@ -2673,41 +2613,32 @@
         ],
         "url": "https://segaretro.org/images/c/cf/SWITCH_MD_jp_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Switch"
-        ],
-        "name": "Panic! (USA) (RE)"
-      }
-    ],
+    ]
+  },
+  {
+    "name": "Pier Solar and the Great Architects - The Definitive Original Soundtrack",
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Pier Solar and the Great Architects Enhanced Soundtrack Disc",
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Pitfall - The Mayan Adventure",
     "players": 1,
-    "rating": null
-  },
-  "Pier Solar and the Great Architects - The Definitive Original Soundtrack": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Pier Solar and the Great Architects Enhanced Soundtrack Disc": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Pitfall - The Mayan Adventure": {
-    "emulation": {},
+    "rating": 0.85,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Pitfall - The Mayan Adventure (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2716,20 +2647,23 @@
         ],
         "url": "https://segaretro.org/images/a/a4/Pitfall_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Pitfall - The Mayan Adventure (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Popful Mail": {
-    "emulation": {},
+  {
+    "name": "Popful Mail",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Role playing games"
+    ],
+    "parents": [
+      {
+        "name": "Popful Mail (USA) (RE)",
+        "clones": [
+          "PopfulMail"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2738,23 +2672,20 @@
         ],
         "url": "https://segaretro.org/images/c/c7/Popfulmail_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "PopfulMail"
-        ],
-        "name": "Popful Mail (USA) (RE)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Power Factory": {
-    "emulation": {},
+  {
+    "name": "Power Factory",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Various"
+    ],
+    "parents": [
+      {
+        "name": "Power Factory (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2763,19 +2694,22 @@
         ],
         "url": "https://segaretro.org/images/6/6d/Powerfactory_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "PowerMonger",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Strategy"
     ],
     "parents": [
       {
-        "name": "Power Factory (Europe)"
+        "name": "PowerMonger (Europe)",
+        "clones": [
+          "Power Monger"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.5
-  },
-  "PowerMonger": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
     ],
     "manuals": [
       {
@@ -2784,23 +2718,20 @@
         ],
         "url": "https://segaretro.org/images/d/d2/Powermonger_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Prince of Persia",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Platform"
     ],
     "parents": [
       {
-        "clones": [
-          "Power Monger"
-        ],
-        "name": "PowerMonger (Europe)"
+        "name": "Prince of Persia (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Prince of Persia": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
     ],
     "manuals": [
       {
@@ -2809,20 +2740,23 @@
         ],
         "url": "https://segaretro.org/images/6/6c/Princeofpersia_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Prize Fighter",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Fight",
+      "Sports"
     ],
     "parents": [
       {
-        "name": "Prince of Persia (Europe)"
+        "name": "Prize Fighter (Europe) (Disc 1)"
+      },
+      {
+        "name": "Prize Fighter (Europe) (Disc 2)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Prize Fighter": {
-    "emulation": {},
-    "genres": [
-      "Sports",
-      "Fight"
     ],
     "manuals": [
       {
@@ -2837,20 +2771,12 @@
         ],
         "url": "https://segaretro.org/images/3/30/PrizeFighter_MD_jp_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Prize Fighter (Europe) (Disc 1)"
-      },
-      {
-        "name": "Prize Fighter (Europe) (Disc 2)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Pro Yakyuu Super League CD": {
-    "emulation": {},
+  {
+    "name": "Pro Yakyuu Super League CD",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Sports"
     ],
@@ -2861,45 +2787,44 @@
         ],
         "url": "https://segaretro.org/images/1/1e/ProYakyuuSuperLeagueCD_MD_jp_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Psychic Detective Series Vol. 3 - Aya": {
-    "emulation": {},
+  {
+    "name": "Psychic Detective Series Vol. 3 - Aya",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Psychic Detective Series Vol. 4 - Orgel": {
-    "emulation": {},
+  {
+    "name": "Psychic Detective Series Vol. 4 - Orgel",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Psygnosis Christmas Sampler": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Psygnosis Christmas Sampler",
     "parents": [
       {
         "name": "Psygnosis Christmas Sampler (Europe)"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Puggsy": {
-    "emulation": {},
+  {
+    "name": "Puggsy",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Puggsy (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2908,17 +2833,11 @@
         ],
         "url": "https://segaretro.org/images/a/a9/Puggsy_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Puggsy (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Quiz Scramble Special": {
-    "emulation": {},
+  {
+    "name": "Quiz Scramble Special",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -2929,12 +2848,12 @@
         ],
         "url": "https://segaretro.org/images/e/e6/QuizScrambleSpecial_MD_jp_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Quiz Tonosama no Yabou": {
-    "emulation": {},
+  {
+    "name": "Quiz Tonosama no Yabou",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Quiz",
       "Quiz / Japanese"
@@ -2946,17 +2865,17 @@
         ],
         "url": "https://archive.org/download/Capcom_no_Quiz_Tono-sama_no_Yabou_1992_SIMS_JP/Capcom_no_Quiz_Tono-sama_no_Yabou_1992_SIMS_JP.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "RDF - Global Conflict": {
-    "emulation": {},
+  {
+    "name": "RDF - Global Conflict",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Shooter",
-      "Shooter / Vehicle",
       "1st person",
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -2965,15 +2884,14 @@
         ],
         "url": "https://segaretro.org/images/9/94/Rdfglobalconflict_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Racing Aces": {
-    "emulation": {},
+  {
+    "name": "Racing Aces",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2982,15 +2900,14 @@
         ],
         "url": "https://segaretro.org/images/7/77/Racingaces_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Radical Rex": {
-    "emulation": {},
+  {
+    "name": "Radical Rex",
+    "players": 2,
     "genres": [
-      "Platform",
       "Action",
+      "Platform",
       "Sports"
     ],
     "manuals": [
@@ -3000,23 +2917,27 @@
         ],
         "url": "https://segaretro.org/images/0/0c/Radicalrex_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Ranma 1-2 - Byakuranaika": {
-    "emulation": {},
+  {
+    "name": "Ranma 1-2 - Byakuranaika",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Record of Lodoss War": {
-    "emulation": {},
+  {
+    "name": "Record of Lodoss War",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Role playing games"
+    ],
+    "parents": [
+      {
+        "name": "Record of Lodoss War (Japan)"
+      }
     ],
     "manuals": [
       {
@@ -3025,17 +2946,12 @@
         ],
         "url": "https://archive.org/download/recordoflodosswarofficialguidemook/Record of Lodoss War Official Guide Mook.cbr"
       }
-    ],
-    "parents": [
-      {
-        "name": "Record of Lodoss War (Japan)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Revenge of the Ninja": {
-    "emulation": {},
+  {
+    "name": "Revenge of the Ninja",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Adventure"
@@ -3047,15 +2963,22 @@
         ],
         "url": "https://segaretro.org/images/b/b6/Revengeninja_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Revengers of Vengeance": {
-    "emulation": {},
+  {
+    "name": "Revengers of Vengeance",
+    "players": 2,
     "genres": [
-      "Fight",
-      "Action"
+      "Action",
+      "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Revengers of Vengeance (USA)",
+        "clones": [
+          "Battle Fantasy"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3064,22 +2987,22 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Revengers of Vengeance (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Rise of the Dragon",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
+        "name": "Rise of the Dragon (USA)",
         "clones": [
-          "Battle Fantasy"
-        ],
-        "name": "Revengers of Vengeance (USA)"
+          "Rise of the Dragon - A Blade Hunter Mystery"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": null
-  },
-  "Rise of the Dragon": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3094,24 +3017,24 @@
         ],
         "url": "https://segaretro.org/images/5/56/RiseoftheDragon_MD_jp_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Road Avenger",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure",
+      "Driving",
+      "Race"
     ],
     "parents": [
       {
+        "name": "Road Avenger (Europe)",
         "clones": [
-          "Rise of the Dragon - A Blade Hunter Mystery"
-        ],
-        "name": "Rise of the Dragon (USA)"
+          "Road Blaster FX"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Road Avenger": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving",
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3131,23 +3054,15 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Road_Avenger_MCD_EU_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Road Blaster FX"
-        ],
-        "name": "Road Avenger (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Road Rash": {
-    "emulation": {},
+  {
+    "name": "Road Rash",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Race",
       "Driving",
+      "Race",
       "Sports"
     ],
     "manuals": [
@@ -3157,15 +3072,23 @@
         ],
         "url": "https://segaretro.org/images/0/01/Roadrash_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Robo Aleste": {
-    "emulation": {},
+  {
+    "name": "Robo Aleste",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Robo Aleste (Europe)",
+        "clones": [
+          "Dennin Aleste - Nobunaga and His Ninja Force"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3185,22 +3108,19 @@
         ],
         "url": "https://segaretro.org/images/b/b2/RoboAleste_mcd_EU_Manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Samurai Shodown",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Fight"
     ],
     "parents": [
       {
-        "clones": [
-          "Dennin Aleste - Nobunaga and His Ninja Force"
-        ],
-        "name": "Robo Aleste (Europe)"
+        "name": "Samurai Shodown (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Samurai Shodown": {
-    "emulation": {},
-    "genres": [
-      "Fight"
     ],
     "manuals": [
       {
@@ -3209,17 +3129,11 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Samurai Shodown (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Samurai Shodown (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Sangokushi III": {
-    "emulation": {},
+  {
+    "name": "Sangokushi III",
+    "players": 8,
     "genres": [
       "Strategy"
     ],
@@ -3230,14 +3144,19 @@
         ],
         "url": "https://segaretro.org/images/2/22/Sangokushiiii_md_jp_manual.pdf"
       }
-    ],
-    "players": 8,
-    "rating": null
+    ]
   },
-  "Secret of Monkey Island, The": {
-    "emulation": {},
+  {
+    "name": "Secret of Monkey Island, The",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Secret of Monkey Island, The (USA) (RE)"
+      }
     ],
     "manuals": [
       {
@@ -3246,26 +3165,25 @@
         ],
         "url": "https://segaretro.org/images/4/48/Secretofmonkeyisland_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Sega CD Demo"
+  },
+  {
+    "name": "Sega Classics Arcade Collection - Limited Edition",
+    "players": 2,
+    "genres": [
+      "Compilation"
     ],
     "parents": [
       {
-        "name": "Secret of Monkey Island, The (USA) (RE)"
+        "name": "Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A)",
+        "clones": [
+          "Sega Classic Arcade Collection - Limited Edition",
+          "Sega Classics Arcade Collection"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Sega CD Demo": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Sega Classics Arcade Collection - Limited Edition": {
-    "emulation": {},
-    "genres": [
-      "Compilation"
     ],
     "manuals": [
       {
@@ -3288,21 +3206,11 @@
         ],
         "url": "https://segaretro.org/images/e/e6/SegaClassic_MCD_JP_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Sega Classic Arcade Collection - Limited Edition",
-          "Sega Classics Arcade Collection"
-        ],
-        "name": "Sega Classics Arcade Collection - Limited Edition (Europe) (Rev A)"
-      }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Seima Densetsu 3x3 Eyes": {
-    "emulation": {},
+  {
+    "name": "Seima Densetsu 3x3 Eyes",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -3313,12 +3221,11 @@
         ],
         "url": "https://archive.org/download/3_X_3_Eyes_Legend_Of_The_Divine_Demon_1993_Sega_JP/3_X_3_Eyes_Legend_Of_The_Divine_Demon_1993_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Seirei Shinseiki - Fhey Area": {
-    "emulation": {},
+  {
+    "name": "Seirei Shinseiki - Fhey Area",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -3329,24 +3236,30 @@
         ],
         "url": "https://segaretro.org/images/a/a0/Seirei_Shinseiki_Fhey_Area_MCD_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sengoku Denshou": {
-    "emulation": {},
+  {
+    "name": "Sengoku Denshou",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Beat'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Sensible Soccer": {
-    "emulation": {},
+  {
+    "name": "Sensible Soccer",
+    "players": 2,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
+    ],
+    "parents": [
+      {
+        "name": "Sensible Soccer (Europe)",
+        "clones": [
+          "Championship Soccer '94"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3355,23 +3268,20 @@
         ],
         "url": "https://segaretro.org/images/2/21/Championshipsoccer94_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Championship Soccer '94"
-        ],
-        "name": "Sensible Soccer (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Sewer Shark": {
-    "emulation": {},
+  {
+    "name": "Sewer Shark",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Lightgun Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Sewer Shark (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3380,29 +3290,27 @@
         ],
         "url": "https://archive.org/download/Sewer_Shark_1992_Sony_Imagesoft_US_a/Sewer_Shark_1992_Sony_Imagesoft_US_a.pdf"
       }
+    ]
+  },
+  {
+    "name": "Shadowrun",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Sherlock Holmes - Consulting Detective",
+    "players": 1,
+    "genres": [
+      "Adventure",
+      "Puzzle-Game"
     ],
     "parents": [
       {
-        "name": "Sewer Shark (Europe)"
+        "name": "Sherlock Holmes - Consulting Detective (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Shadowrun": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
-  },
-  "Sherlock Holmes - Consulting Detective": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game",
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3411,28 +3319,14 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Sherlock Holmes - Consulting Detective (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Sherlock Holmes - Consulting Detective (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sherlock Holmes - Consulting Detective Vol. II": {
-    "emulation": {},
+  {
+    "name": "Sherlock Holmes - Consulting Detective Vol. II",
+    "players": 1,
     "genres": [
-      "Puzzle-Game",
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/5/54/Sherlockholmesii_mcd_us_manual.pdf"
-      }
+      "Adventure",
+      "Puzzle-Game"
     ],
     "parents": [
       {
@@ -3442,23 +3336,35 @@
         "name": "Sherlock Holmes - Consulting Detective Vol. II (Europe) (Disc 2)"
       }
     ],
-    "players": 1,
-    "rating": null
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/5/54/Sherlockholmesii_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Shin Megami Tensei": {
-    "emulation": {},
+  {
+    "name": "Shin Megami Tensei",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Role playing games",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+      "Action",
+      "Role playing games"
+    ]
   },
-  "Shining Force CD": {
-    "emulation": {},
+  {
+    "name": "Shining Force CD",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Role playing games"
+    ],
+    "parents": [
+      {
+        "name": "Shining Force CD (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3473,19 +3379,19 @@
         ],
         "url": "https://segaretro.org/images/6/68/ShiningForceCD_MCD_JP_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Silpheed",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Shining Force CD (Europe)"
+        "name": "Silpheed (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Silpheed": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -3500,26 +3406,17 @@
         ],
         "url": "https://segaretro.org/images/c/cf/Silpheed_MCD_JAP_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Silpheed (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "SimEarth": {
-    "emulation": {},
+  {
+    "name": "SimEarth",
+    "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sing!! Sega Game Music Presented by B. B. Queens": {
-    "emulation": {},
+  {
+    "name": "Sing!! Sega Game Music Presented by B. B. Queens",
     "genres": [
       "Action"
     ],
@@ -3530,22 +3427,14 @@
         ],
         "url": "https://segaretro.org/images/9/95/Sing_Sega_Game_Music_MCD_JAP_manual.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Slam City with Scottie Pippen": {
-    "emulation": {},
+  {
+    "name": "Slam City with Scottie Pippen",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Sports"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/d/db/Slamcity_mcd_us_manual.pdf"
-      }
     ],
     "parents": [
       {
@@ -3561,22 +3450,33 @@
         "name": "Slam City with Scottie Pippen (Europe) (Disc 4) (Smash)"
       }
     ],
-    "players": 1,
-    "rating": 0.2
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/d/db/Slamcity_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Smurfs, The": {
-    "emulation": {},
+  {
+    "name": "Smurfs, The",
+    "players": 1,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Snatcher": {
-    "emulation": {},
+  {
+    "name": "Snatcher",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Snatcher (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3591,20 +3491,20 @@
         ],
         "url": "https://segaretro.org/images/d/db/Snatcher_mcd_EU_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Snatcher (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Software Toolworks' Star Wars Chess, The": {
-    "emulation": {},
+  {
+    "name": "Software Toolworks' Star Wars Chess, The",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Board game",
       "Puzzle-Game"
+    ],
+    "parents": [
+      {
+        "name": "Software Toolworks' Star Wars Chess, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3613,20 +3513,20 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Star Wars Chess (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Sol-Feace",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Software Toolworks' Star Wars Chess, The (Europe)"
+        "name": "Sol-Feace (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Sol-Feace": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up",
-      "Action"
     ],
     "manuals": [
       {
@@ -3652,19 +3552,23 @@
         ],
         "url": "https://segaretro.org/images/b/b9/Sol-Feace_MCD_JAP_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Sonic CD",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Platform"
     ],
     "parents": [
       {
-        "name": "Sol-Feace (Europe)"
+        "name": "Sonic CD (Europe)",
+        "clones": [
+          "CD Sonic The Hedgehog",
+          "Sonic The Hedgehog CD"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Sonic CD": {
-    "emulation": {},
-    "genres": [
-      "Platform"
     ],
     "manuals": [
       {
@@ -3696,32 +3600,26 @@
         ],
         "url": "https://segaretro.org/images/6/6f/SonicCDSegaCDBRManual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Sonic MegaMix",
+    "players": 1,
+    "genres": [
+      "Platform"
+    ]
+  },
+  {
+    "name": "SoulStar",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "clones": [
-          "CD Sonic The Hedgehog",
-          "Sonic The Hedgehog CD"
-        ],
-        "name": "Sonic CD (Europe)"
+        "name": "SoulStar (Europe) (En,Fr,De)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Sonic MegaMix": {
-    "emulation": {},
-    "genres": [
-      "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "SoulStar": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -3730,28 +3628,27 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Soulstar (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "SoulStar & Battlecorps",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  {
+    "name": "Space Ace",
+    "players": 1,
+    "rating": 0.35,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "SoulStar (Europe) (En,Fr,De)"
+        "name": "Space Ace (USA)"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
-  },
-  "SoulStar & Battlecorps": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.85
-  },
-  "Space Ace": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3760,20 +3657,19 @@
         ],
         "url": "https://segaretro.org/images/3/3e/Spaceace_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Space Adventure, The - Cobra - The Legendary Bandit",
+    "players": 1,
+    "genres": [
+      "Action",
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "Space Ace (USA)"
+        "name": "Space Adventure, The - Cobra - The Legendary Bandit (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
-  },
-  "Space Adventure, The - Cobra - The Legendary Bandit": {
-    "emulation": {},
-    "genres": [
-      "Adventure",
-      "Action"
     ],
     "manuals": [
       {
@@ -3782,20 +3678,19 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Space Adventure, The (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Space Adventure, The - Cobra - The Legendary Bandit (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Star Wars - Rebel Assault": {
-    "emulation": {},
+  {
+    "name": "Star Wars - Rebel Assault",
+    "players": 1,
     "genres": [
       "Shoot'em Up",
       "Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Star Wars - Rebel Assault (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3804,20 +3699,20 @@
         ],
         "url": "https://segaretro.org/images/1/15/Swrebelassault_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Star Wars - Rebel Assault (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Starblade": {
-    "emulation": {},
+  {
+    "name": "Starblade",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Lightgun Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Starblade (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3826,22 +3721,17 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Starblade (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Starblade (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Stellar-Fire": {
-    "emulation": {},
+  {
+    "name": "Stellar-Fire",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Shooter",
-      "Shooter / Vehicle",
       "1st person",
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -3850,33 +3740,23 @@
         ],
         "url": "https://segaretro.org/images/6/6e/Stellarfire_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Super Strike Trilogy": {
-    "emulation": {},
+  {
+    "name": "Super Strike Trilogy",
+    "players": 1,
     "genres": [
       "Compilation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Supreme Warrior": {
-    "emulation": {},
+  {
+    "name": "Supreme Warrior",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
-      "Fight",
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://segaretro.org/images/a/af/Supremewarrior_mcd_us_manual.pdf"
-      }
+      "Adventure",
+      "Fight"
     ],
     "parents": [
       {
@@ -3886,15 +3766,28 @@
         "name": "Supreme Warrior (Europe) (Disc 2)"
       }
     ],
-    "players": 1,
-    "rating": 0.8
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://segaretro.org/images/a/af/Supremewarrior_mcd_us_manual.pdf"
+      }
+    ]
   },
-  "Surgical Strike": {
-    "emulation": {},
+  {
+    "name": "Surgical Strike",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / 1st person",
-      "Action"
+      "Shooter / 1st person"
+    ],
+    "parents": [
+      {
+        "name": "Surgical Strike (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3903,26 +3796,18 @@
         ],
         "url": "https://segaretro.org/images/1/15/Surgicalstrike_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Surgical Strike (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Syndicate": {
-    "emulation": {},
+  {
+    "name": "Syndicate",
+    "players": 1,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Tenbu Mega CD Special": {
-    "emulation": {},
+  {
+    "name": "Tenbu Mega CD Special",
+    "players": 1,
     "genres": [
       "Simulation"
     ],
@@ -3933,12 +3818,11 @@
         ],
         "url": "https://segaretro.org/images/d/d8/Tenbu_MCD_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Tenkafubu - Eiyuutachi no Houkou": {
-    "emulation": {},
+  {
+    "name": "Tenkafubu - Eiyuutachi no Houkou",
+    "players": 1,
     "genres": [
       "Strategy"
     ],
@@ -3949,16 +3833,21 @@
         ],
         "url": "https://segaretro.org/images/f/f0/TenkaFubu_MCD_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Terminator, The": {
-    "emulation": {},
+  {
+    "name": "Terminator, The",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
+      "Action",
       "Platform",
-      "Platform / Shooter Scrolling",
-      "Action"
+      "Platform / Shooter Scrolling"
+    ],
+    "parents": [
+      {
+        "name": "Terminator, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3978,17 +3867,12 @@
         ],
         "url": "https://segaretro.org/images/6/64/TerminatorMegaCDEUManual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Terminator, The (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Theme Park": {
-    "emulation": {},
+  {
+    "name": "Theme Park",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
     ],
@@ -4002,14 +3886,21 @@
         ],
         "url": "https://segaretro.org/images/1/11/ThemeParkMegaCDEUManual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Third World War": {
-    "emulation": {},
+  {
+    "name": "Third World War",
+    "players": 1,
     "genres": [
       "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Third World War (USA)",
+        "clones": [
+          "IIIrd World War, The"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -4018,22 +3909,21 @@
         ],
         "url": "https://segaretro.org/images/f/fd/Thirdworldwar_mcd_us_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Thunderhawk",
+    "players": 1,
+    "genres": [
+      "Simulation"
     ],
     "parents": [
       {
+        "name": "Thunderhawk (Europe) (En,Fr,De,Es) (RE)",
         "clones": [
-          "IIIrd World War, The"
-        ],
-        "name": "Third World War (USA)"
+          "AH3 - Thunderstrike"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Thunderhawk": {
-    "emulation": {},
-    "genres": [
-      "Simulation"
     ],
     "manuals": [
       {
@@ -4048,23 +3938,20 @@
         ],
         "url": "https://archive.org/download/Thunderhawk_1993_Victor_JP/Thunderhawk_1993_Victor_JP.pdf"
       }
+    ]
+  },
+  {
+    "name": "Time Gal",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Adventure"
     ],
     "parents": [
       {
-        "clones": [
-          "AH3 - Thunderstrike"
-        ],
-        "name": "Thunderhawk (Europe) (En,Fr,De,Es) (RE)"
+        "name": "Time Gal (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Time Gal": {
-    "emulation": {},
-    "genres": [
-      "Adventure",
-      "Action"
     ],
     "manuals": [
       {
@@ -4090,29 +3977,26 @@
         ],
         "url": "https://segaretro.org/images/8/8e/TimeGal_MCD_JP_manual.pdf"
       }
+    ]
+  },
+  {
+    "name": "TimeCop",
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Tomcat Alley",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Time Gal (Europe)"
+        "name": "Tomcat Alley (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "TimeCop": {
-    "emulation": {},
-    "genres": [
-      "Action"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Tomcat Alley": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up",
-      "Action"
     ],
     "manuals": [
       {
@@ -4132,17 +4016,11 @@
         ],
         "url": "https://segaretro.org/images/2/2d/Tomcat_Alley_MCD_EU_Manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Tomcat Alley (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Trivial Pursuit": {
-    "emulation": {},
+  {
+    "name": "Trivial Pursuit",
+    "players": 6,
     "genres": [
       "Board game",
       "Puzzle-Game"
@@ -4154,15 +4032,14 @@
         ],
         "url": "https://segaretro.org/images/9/91/Ultraverse_mcd_us_manual.pdf"
       }
-    ],
-    "players": 6,
-    "rating": null
+    ]
   },
-  "Ultraverse Prime": {
-    "emulation": {},
+  {
+    "name": "Ultraverse Prime",
+    "players": 1,
     "genres": [
-      "Beat'em Up",
-      "Action"
+      "Action",
+      "Beat'em Up"
     ],
     "manuals": [
       {
@@ -4171,14 +4048,18 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Ultraverse Prime (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Urusei Yatsura - Dear My Friends": {
-    "emulation": {},
+  {
+    "name": "Urusei Yatsura - Dear My Friends",
+    "players": 1,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Urusei Yatsura - Dear My Friends (Japan)"
+      }
     ],
     "manuals": [
       {
@@ -4187,19 +4068,22 @@
         ],
         "url": "https://archive.org/download/Uresei_Yatsura_Dear_My_Friends_1994_Game_Arts_JP/Uresei_Yatsura_Dear_My_Friends_1994_Game_Arts_JP.pdf"
       }
+    ]
+  },
+  {
+    "name": "Vay",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Urusei Yatsura - Dear My Friends (Japan)"
+        "name": "Vay (USA)",
+        "clones": [
+          "Vay - Ryuusei no Yoroi"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": null
-  },
-  "Vay": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -4214,24 +4098,24 @@
         ],
         "url": "https://segaretro.org/images/a/a2/SCDManualTomcatAlleyTecToy.pdf"
       }
+    ]
+  },
+  {
+    "name": "WWF - Rage in the Cage",
+    "players": 4,
+    "rating": 0.15,
+    "genres": [
+      "Fight",
+      "Sports",
+      "Sports / Wrestling"
     ],
     "parents": [
       {
+        "name": "WWF - Rage in the Cage (Europe)",
         "clones": [
-          "Vay - Ryuusei no Yoroi"
-        ],
-        "name": "Vay (USA)"
+          "WWF Mania Tour - WWF - Rage in the Cage"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "WWF - Rage in the Cage": {
-    "emulation": {},
-    "genres": [
-      "Sports / Wrestling",
-      "Sports",
-      "Fight"
     ],
     "manuals": [
       {
@@ -4240,20 +4124,11 @@
         ],
         "url": "https://segaretro.org/images/2/2b/Wwfrageinthecage_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "WWF Mania Tour - WWF - Rage in the Cage"
-        ],
-        "name": "WWF - Rage in the Cage (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.15
+    ]
   },
-  "Wakusei Woodstock - Funky Horror Band": {
-    "emulation": {},
+  {
+    "name": "Wakusei Woodstock - Funky Horror Band",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -4264,33 +4139,26 @@
         ],
         "url": "https://archive.org/download/Wakusei_Woodstock_F.H.B_Funky_Horror_Band_1991_Sega_JP/Wakusei_Woodstock_F.H.B_Funky_Horror_Band_1991_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Warau Salesman": {
-    "emulation": {},
+  {
+    "name": "Warau Salesman",
+    "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "What is X'Eye Multi Entertainment System": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "What is X'Eye Multi Entertainment System"
   },
-  "Wheel of Fortune": {
-    "emulation": {},
+  {
+    "name": "Wheel of Fortune",
+    "players": 3,
     "genres": [
-      "Quiz",
-      "Strategy",
       "Board game",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Quiz",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4299,12 +4167,11 @@
         ],
         "url": "https://segaretro.org/images/8/8c/Wheeloffortune_mcd_us_manual.pdf"
       }
-    ],
-    "players": 3,
-    "rating": null
+    ]
   },
-  "Who Shot Johnny Rock": {
-    "emulation": {},
+  {
+    "name": "Who Shot Johnny Rock",
+    "players": 2,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -4315,15 +4182,15 @@
         ],
         "url": "https://segaretro.org/images/e/e3/Wsjr_mcd_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Wild Woody": {
-    "emulation": {},
+  {
+    "name": "Wild Woody",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -4332,14 +4199,19 @@
         ],
         "url": "https://segaretro.org/images/0/03/Wildwoody_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Wing Commander": {
-    "emulation": {},
+  {
+    "name": "Wing Commander",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Simulation"
+    ],
+    "parents": [
+      {
+        "name": "Wing Commander (USA)"
+      }
     ],
     "manuals": [
       {
@@ -4348,20 +4220,14 @@
         ],
         "url": "https://segaretro.org/images/5/51/Wingcommander_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Wing Commander (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Winning Post": {
-    "emulation": {},
+  {
+    "name": "Winning Post",
+    "players": 1,
     "genres": [
-      "Sports",
-      "Simulation"
+      "Simulation",
+      "Sports"
     ],
     "manuals": [
       {
@@ -4370,15 +4236,15 @@
         ],
         "url": "https://archive.org/download/Winning_Post_1993_KOEI_JP/Winning_Post_1993_KOEI_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "WireHead": {
-    "emulation": {},
+  {
+    "name": "WireHead",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Adventure",
-      "Action"
+      "Action",
+      "Adventure"
     ],
     "manuals": [
       {
@@ -4387,15 +4253,20 @@
         ],
         "url": "https://segaretro.org/images/2/20/Wirehead_mcd_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Wolfchild": {
-    "emulation": {},
+  {
+    "name": "Wolfchild",
+    "players": 1,
+    "rating": 1,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Wolfchild (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -4404,20 +4275,20 @@
         ],
         "url": "https://segaretro.org/images/8/86/Wolfchild_mcd_us_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Wolfchild (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 1
+    ]
   },
-  "Wonder Dog": {
-    "emulation": {},
+  {
+    "name": "Wonder Dog",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Wonder Dog (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -4432,29 +4303,26 @@
         ],
         "url": "https://archive.org/download/Wonder_Dog_1991_Victor_JP/Wonder_Dog_1991_Victor_JP.pdf"
       }
+    ]
+  },
+  {
+    "name": "WonderMega Collection",
+    "genres": [
+      "Compilation"
+    ]
+  },
+  {
+    "name": "World Cup USA '94",
+    "players": 4,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
     ],
     "parents": [
       {
-        "name": "Wonder Dog (Europe)"
+        "name": "World Cup USA '94 (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "WonderMega Collection": {
-    "emulation": {},
-    "genres": [
-      "Compilation"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "World Cup USA '94": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
     ],
     "manuals": [
       {
@@ -4474,19 +4342,23 @@
         ],
         "url": "https://segaretro.org/images/f/fa/WCUSA94MegaCDEUManual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Yumemi Mystery Mansion",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "World Cup USA '94 (Europe)"
+        "name": "Yumemi Mystery Mansion (Europe) (Made in EU)",
+        "clones": [
+          "Mansion of Hidden Souls",
+          "Yumemi Yakata no Monogatari"
+        ]
       }
-    ],
-    "players": 4,
-    "rating": 0.6
-  },
-  "Yumemi Mystery Mansion": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -4501,21 +4373,12 @@
         ],
         "url": "https://segaretro.org/images/7/77/YumemiMysteryMansion_MD_jp_manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Mansion of Hidden Souls",
-          "Yumemi Yakata no Monogatari"
-        ],
-        "name": "Yumemi Mystery Mansion (Europe) (Made in EU)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Yumimi Mix": {
-    "emulation": {},
+  {
+    "name": "Yumimi Mix",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Various"
     ],
@@ -4526,8 +4389,6 @@
         ],
         "url": "https://archive.org/download/Yumimi_Mix_1993_Game_Arts_JP/Yumimi_Mix_1993_Game_Arts_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   }
-}
+]

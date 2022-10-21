@@ -1,7 +1,6 @@
-{
-  "32 in 1": {
-    "emulation": {},
-    "genres": [],
+[
+  {
+    "name": "32 in 1",
     "manuals": [
       {
         "languages": [
@@ -9,19 +8,15 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari7800/32 in 1.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "7800 Monitor Cart": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "7800 Monitor Cart"
   },
-  "Ace of Aces": {
-    "emulation": {},
+  {
+    "name": "Ace of Aces",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action",
       "Simulation"
@@ -33,15 +28,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Ace of Aces (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Alien Brigade": {
-    "emulation": {},
+  {
+    "name": "Alien Brigade",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -50,15 +45,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Alien Brigade (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Asteroids": {
-    "emulation": {},
+  {
+    "name": "Asteroids",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -67,22 +62,18 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Asteroids (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Atari 7800 Development Card"
+  },
+  {
+    "name": "Ballblazer",
     "players": 2,
-    "rating": 0.75
-  },
-  "Atari 7800 Development Card": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Ballblazer": {
-    "emulation": {},
+    "rating": 0.75,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -91,12 +82,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Ballblazer (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Barnyard Blaster": {
-    "emulation": {},
+  {
+    "name": "Barnyard Blaster",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action"
     ],
@@ -107,16 +98,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Barnyard Blaster (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Baseball": {
-    "emulation": {},
+  {
+    "name": "Baseball",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
-      "Sports / Baseball",
+      "Action",
       "Sports",
-      "Action"
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -125,12 +116,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Pete Rose Baseball (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Basketbrawl": {
-    "emulation": {},
+  {
+    "name": "Basketbrawl",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Sports"
     ],
@@ -141,12 +132,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Basketbrawl (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Centipede": {
-    "emulation": {},
+  {
+    "name": "Centipede",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical",
@@ -159,12 +150,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Centipede (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Choplifter!": {
-    "emulation": {},
+  {
+    "name": "Choplifter!",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -175,12 +166,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Choplifter! (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Commando": {
-    "emulation": {},
+  {
+    "name": "Commando",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -191,15 +182,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Commando (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Crack'ed": {
-    "emulation": {},
+  {
+    "name": "Crack'ed",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -208,15 +199,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Crack'ed (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Crossbow": {
-    "emulation": {},
+  {
+    "name": "Crossbow",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -225,12 +216,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Crossbow (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Dark Chambers": {
-    "emulation": {},
+  {
+    "name": "Dark Chambers",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -241,16 +231,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Dark Chambers (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Desert Falcon": {
-    "emulation": {},
+  {
+    "name": "Desert Falcon",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
+      "Action",
       "Shoot'em Up",
-      "Shoot'em up / Diagonal",
-      "Action"
+      "Shoot'em up / Diagonal"
     ],
     "manuals": [
       {
@@ -259,19 +249,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Desert Falcon (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Diagnostic Test Cartrige": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Diagnostic Test Cartrige"
   },
-  "Dig Dug": {
-    "emulation": {},
+  {
+    "name": "Dig Dug",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -282,15 +268,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Dig Dug (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Donkey Kong": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -299,15 +285,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Donkey Kong (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Donkey Kong Junior": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong Junior",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -316,12 +302,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Donkey Kong Junior (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Double Dragon": {
-    "emulation": {},
+  {
+    "name": "Double Dragon",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -332,12 +318,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Double Dragon (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "F-18 Hornet": {
-    "emulation": {},
+  {
+    "name": "F-18 Hornet",
+    "players": 1,
     "genres": [
       "Platform"
     ],
@@ -348,16 +333,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/F-18 Hornet (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Fatal Run": {
-    "emulation": {},
+  {
+    "name": "Fatal Run",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Race",
+      "Action",
       "Driving",
-      "Action"
+      "Race"
     ],
     "manuals": [
       {
@@ -366,15 +351,14 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Fatal Run (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Fight Night": {
-    "emulation": {},
+  {
+    "name": "Fight Night",
+    "players": 2,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -383,12 +367,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Fight Night (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Food Fight": {
-    "emulation": {},
+  {
+    "name": "Food Fight",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -399,27 +383,25 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Food Fight (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "GATO": {
-    "emulation": {},
+  {
+    "name": "GATO",
+    "players": 1,
     "genres": [
       "Action",
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Galaga": {
-    "emulation": {},
+  {
+    "name": "Galaga",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
+      "Action",
       "Shoot'em Up",
       "Shoot'em up / Vertical",
-      "Shooter",
-      "Action"
+      "Shooter"
     ],
     "manuals": [
       {
@@ -428,12 +410,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Galaga (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Hat Trick": {
-    "emulation": {},
+  {
+    "name": "Hat Trick",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -444,22 +425,18 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Hat Trick (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "High Score Cartridge"
+  },
+  {
+    "name": "Ikari Warriors",
     "players": 2,
-    "rating": null
-  },
-  "High Score Cartridge": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Ikari Warriors": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -468,15 +445,14 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Ikari Warriors (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Impossible Mission": {
-    "emulation": {},
+  {
+    "name": "Impossible Mission",
+    "players": 1,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -485,12 +461,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Impossible Mission (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Jinks": {
-    "emulation": {},
+  {
+    "name": "Jinks",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Action"
     ],
@@ -501,12 +477,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Jinks (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Joust": {
-    "emulation": {},
+  {
+    "name": "Joust",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -517,12 +493,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Joust (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Karateka": {
-    "emulation": {},
+  {
+    "name": "Karateka",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -533,15 +509,14 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Karateka (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Klax": {
-    "emulation": {},
+  {
+    "name": "Klax",
+    "players": 1,
     "genres": [
-      "Puzzle-Game",
       "Action",
+      "Puzzle-Game",
       "Strategy"
     ],
     "manuals": [
@@ -551,12 +526,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Klax (1992) (Atari).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Kung-Fu Master": {
-    "emulation": {},
+  {
+    "name": "Kung-Fu Master",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -567,15 +541,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Kung-Fu Master (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Mario Bros.": {
-    "emulation": {},
+  {
+    "name": "Mario Bros.",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -584,15 +558,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Mario Bros. (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Mat Mania Challenge": {
-    "emulation": {},
+  {
+    "name": "Mat Mania Challenge",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -601,16 +575,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Mat Mania Challenge (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "Mean 18 Ultimate Golf": {
-    "emulation": {},
+  {
+    "name": "Mean 18 Ultimate Golf",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
-      "Sports / Golf",
+      "Educational",
       "Sports",
-      "Educational"
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -619,12 +593,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Mean 18 Ultimate Golf (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Meltdown": {
-    "emulation": {},
+  {
+    "name": "Meltdown",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -635,12 +608,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Meltdown (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Midnight Mutants": {
-    "emulation": {},
+  {
+    "name": "Midnight Mutants",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Adventure"
@@ -652,25 +625,22 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Midnight Mutants (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Missing in Action": {
-    "emulation": {},
-    "genres": [
-      "Shooter",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Missing in Action",
     "players": 1,
-    "rating": null
-  },
-  "Motor Psycho": {
-    "emulation": {},
     "genres": [
-      "Race",
-      "Driving"
+      "Action",
+      "Shooter"
+    ]
+  },
+  {
+    "name": "Motor Psycho",
+    "players": 1,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -679,16 +649,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Motor Psycho (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Ms. Pac-Man": {
-    "emulation": {},
+  {
+    "name": "Ms. Pac-Man",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
+      "Action",
       "Action / Labyrinth",
-      "Platform",
-      "Action"
+      "Platform"
     ],
     "manuals": [
       {
@@ -697,16 +667,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Ms. Pac-Man (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Ninja Golf": {
-    "emulation": {},
+  {
+    "name": "Ninja Golf",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Sports / Golf",
+      "Action",
       "Sports",
-      "Action"
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -715,12 +685,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Ninja Golf (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "One-on-One Basketball": {
-    "emulation": {},
+  {
+    "name": "One-on-One Basketball",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Sports"
     ],
@@ -731,24 +701,22 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/One-on-One Basketball (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "Pit Fighter": {
-    "emulation": {},
+  {
+    "name": "Pit Fighter",
+    "players": 2,
     "genres": [
       "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Planet Smashers": {
-    "emulation": {},
+  {
+    "name": "Planet Smashers",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -757,34 +725,32 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Planet Smashers (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Plutos": {
-    "emulation": {},
+  {
+    "name": "Plutos",
+    "players": 2,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pole Position II": {
-    "emulation": {},
+  {
+    "name": "Pole Position II",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
         "languages": [
           "de"
         ],
+        "url": "https://archive.org/download/Pole_Position_II_Atari_Atari7800_Manual_German/01 Manual german 200DPI.cbz",
         "options": {
           "filter": "*jpg"
-        },
-        "url": "https://archive.org/download/Pole_Position_II_Atari_Atari7800_Manual_German/01 Manual german 200DPI.cbz"
+        }
       },
       {
         "languages": [
@@ -796,17 +762,17 @@
         "languages": [
           "fr"
         ],
+        "url": "https://archive.org/download/Pole_Position_II_Atari_Atari7800_Manual_French/200.cbz",
         "options": {
           "filter": "*jpg"
-        },
-        "url": "https://archive.org/download/Pole_Position_II_Atari_Atari7800_Manual_French/200.cbz"
+        }
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Rampage": {
-    "emulation": {},
+  {
+    "name": "Rampage",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -817,23 +783,19 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Rampage (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Rampart"
+  },
+  {
+    "name": "RealSports Baseball",
     "players": 2,
-    "rating": 0.6
-  },
-  "Rampart": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "RealSports Baseball": {
-    "emulation": {},
+    "rating": 0.4,
     "genres": [
-      "Sports / Baseball",
+      "Action",
       "Sports",
-      "Action"
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -842,29 +804,22 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/RealSports Baseball (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Rescue on Fractalus": {
-    "emulation": {},
+  {
+    "name": "Rescue on Fractalus",
     "genres": [
-      "Shooter",
-      "Action"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+      "Action",
+      "Shooter"
+    ]
   },
-  "Rikki & Vikki": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Rikki & Vikki"
   },
-  "Robotron - 2084": {
-    "emulation": {},
+  {
+    "name": "Robotron - 2084",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -875,16 +830,16 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Robotron - 2084 (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Scrapyard Dog": {
-    "emulation": {},
+  {
+    "name": "Scrapyard Dog",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
-      "Platform",
       "Action",
-      "Adventure"
+      "Adventure",
+      "Platform"
     ],
     "manuals": [
       {
@@ -893,12 +848,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Scrapyard Dog (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Sentinel": {
-    "emulation": {},
+  {
+    "name": "Sentinel",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -909,24 +864,21 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Sentinel (Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Sirius": {
-    "emulation": {},
+  {
+    "name": "Sirius",
     "genres": [
       "Shooter"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Summer Games": {
-    "emulation": {},
+  {
+    "name": "Summer Games",
+    "players": 8,
+    "rating": 0.4,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -935,12 +887,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Summer Games (USA).pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.4
+    ]
   },
-  "Super Huey UH-IX": {
-    "emulation": {},
+  {
+    "name": "Super Huey UH-IX",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Action",
       "Simulation"
@@ -952,15 +904,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Super Huey UH-1X (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Super Skateboardin'": {
-    "emulation": {},
+  {
+    "name": "Super Skateboardin'",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -969,12 +921,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Super Skateboardin' (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Tank Command": {
-    "emulation": {},
+  {
+    "name": "Tank Command",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -985,12 +937,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Tank Command (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Title Match Pro Wrestling": {
-    "emulation": {},
+  {
+    "name": "Title Match Pro Wrestling",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
       "Sports"
     ],
@@ -1001,12 +953,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Title Match Pro Wrestling (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "Tomcat - The F-14 Fighter Simulator": {
-    "emulation": {},
+  {
+    "name": "Tomcat - The F-14 Fighter Simulator",
+    "players": 1,
+    "rating": 1,
     "genres": [
       "Action",
       "Simulation"
@@ -1018,12 +970,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Tomcat - The F-14 Fighter Simulator (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 1
+    ]
   },
-  "Touchdown Football": {
-    "emulation": {},
+  {
+    "name": "Touchdown Football",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1034,12 +985,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Touchdown Football (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Tower Toppler": {
-    "emulation": {},
+  {
+    "name": "Tower Toppler",
+    "players": 2,
     "genres": [
       "Platform"
     ],
@@ -1050,15 +1000,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Tower Toppler (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Water Ski": {
-    "emulation": {},
+  {
+    "name": "Water Ski",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -1067,15 +1017,15 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Water Ski (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Winter Games": {
-    "emulation": {},
+  {
+    "name": "Winter Games",
+    "players": 8,
+    "rating": 0.55,
     "genres": [
-      "Sports",
-      "Action"
+      "Action",
+      "Sports"
     ],
     "manuals": [
       {
@@ -1084,12 +1034,12 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Winter Games (USA).pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.55
+    ]
   },
-  "Xenophobe": {
-    "emulation": {},
+  {
+    "name": "Xenophobe",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Action"
     ],
@@ -1100,12 +1050,11 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Xenophobe (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Xevious": {
-    "emulation": {},
+  {
+    "name": "Xevious",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1116,8 +1065,6 @@
         ],
         "url": "https://archive.org/download/ImpossibleMissionUSA/Xevious (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   }
-}
+]

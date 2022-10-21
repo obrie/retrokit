@@ -1,6 +1,8 @@
-{
-  "2010 - The Graphic Action Game": {
-    "emulation": {},
+[
+  {
+    "name": "2010 - The Graphic Action Game",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Strategy"
     ],
@@ -11,21 +13,19 @@
         ],
         "url": "https://cvaddict.com/manuals/2010-the-graphic-action-game.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "A.E.": {
-    "emulation": {},
+  {
+    "name": "A.E.",
+    "players": 2,
     "genres": [
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Activision Decathlon, The": {
-    "emulation": {},
+  {
+    "name": "Activision Decathlon, The",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Sports"
     ],
@@ -36,19 +36,14 @@
         ],
         "url": "https://cvaddict.com/manuals/decathlon-the-activision.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Adam's Musicbox Demo"
+  },
+  {
+    "name": "Alcazar - The Forgotten Fortress",
     "players": 1,
-    "rating": 0.75
-  },
-  "Adam's Musicbox Demo": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Alcazar - The Forgotten Fortress": {
-    "emulation": {},
     "genres": [
       "Adventure"
     ],
@@ -59,12 +54,11 @@
         ],
         "url": "https://archive.org/download/Alcazar_The_Forgotten_Fortress_1985_Telegames/Alcazar_The_Forgotten_Fortress_1985_Telegames.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Alphabet Zoo": {
-    "emulation": {},
+  {
+    "name": "Alphabet Zoo",
+    "players": 2,
     "genres": [
       "Educational",
       "Various"
@@ -76,12 +70,11 @@
         ],
         "url": "https://cvaddict.com/manuals/alphabet-zoo.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Amazing Bumpman": {
-    "emulation": {},
+  {
+    "name": "Amazing Bumpman",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -92,12 +85,12 @@
         ],
         "url": "https://archive.org/download/Amazing_Bumpman_1984_Telegames/Amazing_Bumpman_1984_Telegames.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Antarctic Adventure": {
-    "emulation": {},
+  {
+    "name": "Antarctic Adventure",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -108,12 +101,11 @@
         ],
         "url": "https://archive.org/download/antarctic-adventure-game-manual-coleco-vision-1984/Antarctic Adventure game manual ColecoVision (1984).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Aquattack": {
-    "emulation": {},
+  {
+    "name": "Aquattack",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -125,12 +117,12 @@
         ],
         "url": "https://archive.org/download/Aquattack_1984_Interphase/Aquattack_1984_Interphase.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Artillery Duel": {
-    "emulation": {},
+  {
+    "name": "Artillery Duel",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Strategy"
     ],
@@ -141,12 +133,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Artillery Duel (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "BC's Quest for Tires": {
-    "emulation": {},
+  {
+    "name": "BC's Quest for Tires",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Action"
     ],
@@ -157,16 +149,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/BC's Quest for Tires (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "BC's Quest for Tires II - Grog's Revenge": {
-    "emulation": {},
+  {
+    "name": "BC's Quest for Tires II - Grog's Revenge",
+    "players": 2,
     "genres": [
       "Action",
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -175,12 +166,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/BC's Quest for Tires II - Grog's Revenge (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Beamrider": {
-    "emulation": {},
+  {
+    "name": "Beamrider",
+    "players": 4,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -191,19 +182,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Beamrider (USA).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.75
+    ]
   },
-  "Berenstain Bears, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Berenstain Bears, The"
   },
-  "Blockade Runner": {
-    "emulation": {},
+  {
+    "name": "Blockade Runner",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -215,15 +202,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Blockade Runner (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Boulder Dash": {
-    "emulation": {},
+  {
+    "name": "Boulder Dash",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Puzzle-Game",
-      "Action"
+      "Action",
+      "Puzzle-Game"
     ],
     "manuals": [
       {
@@ -232,12 +219,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Boulder Dash (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Brain Strainers": {
-    "emulation": {},
+  {
+    "name": "Brain Strainers",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Music and Dance"
     ],
@@ -248,12 +235,12 @@
         ],
         "url": "https://archive.org/download/brain-strainers-game-manual-coleco-vision-adam-1984/Brain Strainers game manual ColecoVision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Buck Rogers - Planet of Zoom": {
-    "emulation": {},
+  {
+    "name": "Buck Rogers - Planet of Zoom",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -274,15 +261,14 @@
         ],
         "url": "https://archive.org/download/Buck_Rogers_Planet_of_Zoom_1983_Coleco_M5/Buck_Rogers_Planet_of_Zoom_1983_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Bump 'n' Jump": {
-    "emulation": {},
+  {
+    "name": "Bump 'n' Jump",
+    "players": 2,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -301,12 +287,12 @@
         ],
         "url": "https://archive.org/download/Bump_n_Jump_1984_Coleco_M5/Bump_n_Jump_1984_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "BurgerTime": {
-    "emulation": {},
+  {
+    "name": "BurgerTime",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -327,19 +313,15 @@
         ],
         "url": "https://archive.org/download/Burgertime_1984_Coleco_M5/Burgertime_1984_Coleco_M5.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "CAT S.O.S. Game, The"
+  },
+  {
+    "name": "Cabbage Patch Kids - Adventures in the Park",
     "players": 2,
-    "rating": 0.85
-  },
-  "CAT S.O.S. Game, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Cabbage Patch Kids - Adventures in the Park": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -360,12 +342,11 @@
         ],
         "url": "https://archive.org/download/Cabbage_Patch_Kids_Adventures_in_the_Park_1984_Coleco_M5/Cabbage_Patch_Kids_Adventures_in_the_Park_1984_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Cabbage Patch Kids - Picture Show": {
-    "emulation": {},
+  {
+    "name": "Cabbage Patch Kids - Picture Show",
+    "players": 2,
     "genres": [
       "Various",
       "Various / Print Club"
@@ -377,12 +358,11 @@
         ],
         "url": "https://cvaddict.com/manuals/cabbage-patch-kids-picture-show.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Campaign '84": {
-    "emulation": {},
+  {
+    "name": "Campaign '84",
+    "players": 2,
     "genres": [
       "Simulation"
     ],
@@ -393,12 +373,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Campaign '84 (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Carnival": {
-    "emulation": {},
+  {
+    "name": "Carnival",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -426,23 +406,19 @@
         ],
         "url": "https://archive.org/download/Carnival_1982_Coleco_FR/Carnival_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Castelo": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Castelo"
   },
-  "Centipede": {
-    "emulation": {},
+  {
+    "name": "Centipede",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
+      "1st person",
       "Shooter",
-      "Shooter / Vehicle",
-      "1st person"
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -451,12 +427,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Centipede (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Choplifter!": {
-    "emulation": {},
+  {
+    "name": "Choplifter!",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -467,12 +443,12 @@
         ],
         "url": "https://archive.org/download/choplifter-game-manual-colecovision-adam-1984/Choplifter game manual Colecovision Adam 1984.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Chuck Norris - Superkicks": {
-    "emulation": {},
+  {
+    "name": "Chuck Norris - Superkicks",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -483,19 +459,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Chuck Norris - Super Kicks (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "ColecoVision Monitor Test": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "ColecoVision Monitor Test"
   },
-  "Congo Bongo": {
-    "emulation": {},
+  {
+    "name": "Congo Bongo",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -506,12 +478,12 @@
         ],
         "url": "https://archive.org/download/congo-bongo-game-manual-coleco-vision-adam-1984/Congo Bongo game manual ColecoVision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Cosmic Avenger": {
-    "emulation": {},
+  {
+    "name": "Cosmic Avenger",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -528,12 +500,11 @@
         ],
         "url": "https://archive.org/download/Cosmic_Avenger_1982_Coleco_FR/Cosmic_Avenger_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Cosmic Crisis": {
-    "emulation": {},
+  {
+    "name": "Cosmic Crisis",
+    "players": 2,
     "genres": [
       "Platform"
     ],
@@ -544,15 +515,14 @@
         ],
         "url": "https://archive.org/download/Cosmic_Crisis_1983_Telegames/Cosmic_Crisis_1983_Telegames.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Dam Busters, The": {
-    "emulation": {},
+  {
+    "name": "Dam Busters, The",
+    "players": 1,
     "genres": [
-      "Strategy",
-      "Simulation"
+      "Simulation",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -561,12 +531,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Dam Busters, The (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Dance Fantasy": {
-    "emulation": {},
+  {
+    "name": "Dance Fantasy",
+    "players": 1,
     "genres": [
       "Music and Dance"
     ],
@@ -577,15 +546,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Dance Fantasy (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Defender": {
-    "emulation": {},
+  {
+    "name": "Defender",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shoot'em Up",
-      "Action"
+      "Action",
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -594,15 +563,14 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Defender (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Destructor": {
-    "emulation": {},
+  {
+    "name": "Destructor",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -621,22 +589,20 @@
         ],
         "url": "https://archive.org/download/Destructor_1984_Coleco_M5/Destructor_1984_Coleco_M5.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Dig Dug": {
-    "emulation": {},
+  {
+    "name": "Dig Dug",
+    "players": 2,
     "genres": [
       "Action",
       "Action / Labyrinth"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Donkey Kong": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -653,12 +619,12 @@
         ],
         "url": "https://archive.org/download/donkey-kong-game-manual-coleco-vision-1982_202105/Donkey Kong game manual ColecoVision 1982.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Donkey Kong Junior": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong Junior",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -675,12 +641,12 @@
         ],
         "url": "https://archive.org/download/Donkey_Kong_Junior_1983_Coleco_FR/Donkey_Kong_Junior_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Dr. Seuss - Fix-Up the Mix-Up Puzzler": {
-    "emulation": {},
+  {
+    "name": "Dr. Seuss - Fix-Up the Mix-Up Puzzler",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Puzzle-Game"
     ],
@@ -691,19 +657,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Dr. Seuss's Fix-Up The Mix-Up Puzzler (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Dragon's Lair": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Dragon's Lair"
   },
-  "Dragonfire": {
-    "emulation": {},
+  {
+    "name": "Dragonfire",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -714,15 +676,14 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/DragonFire (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Dukes of Hazzard, The": {
-    "emulation": {},
+  {
+    "name": "Dukes of Hazzard, The",
+    "players": 2,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -731,22 +692,19 @@
         ],
         "url": "https://archive.org/download/dukes-of-hazzard-game-manual-coleco-vision-adam-1984/Dukes of Hazzard game manual ColecoVision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Escape from the Mindmaster": {
-    "emulation": {},
+  {
+    "name": "Escape from the Mindmaster",
+    "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Evolution": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Evolution",
+    "players": 1,
+    "rating": 0.4,
     "manuals": [
       {
         "languages": [
@@ -754,12 +712,11 @@
         ],
         "url": "https://archive.org/download/Evolution_1983_Coleco_a/Evolution_1983_Coleco_a.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Facemaker": {
-    "emulation": {},
+  {
+    "name": "Facemaker",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -770,23 +727,21 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Facemaker (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Fall Guy": {
-    "emulation": {},
+  {
+    "name": "Fall Guy",
+    "players": 1,
     "genres": [
-      "Race",
       "Driving",
-      "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Platform",
+      "Race"
+    ]
   },
-  "Fathom": {
-    "emulation": {},
+  {
+    "name": "Fathom",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -797,26 +752,18 @@
         ],
         "url": "https://archive.org/download/Fathom_1983_Coleco/Fathom_1983_Coleco.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Final Test Cartridge"
+  },
+  {
+    "name": "Fireman"
+  },
+  {
+    "name": "Flipper Slipper",
     "players": 1,
-    "rating": 0.45
-  },
-  "Final Test Cartridge": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Fireman": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Flipper Slipper": {
-    "emulation": {},
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -827,12 +774,11 @@
         ],
         "url": "https://archive.org/download/Flipper_Slipper_1983_Spectravideo/Flipper_Slipper_1983_Spectravideo.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Fortune Builder": {
-    "emulation": {},
+  {
+    "name": "Fortune Builder",
+    "players": 2,
     "genres": [
       "Simulation"
     ],
@@ -843,12 +789,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Fortune Builder (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Fraction Fever": {
-    "emulation": {},
+  {
+    "name": "Fraction Fever",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -859,12 +804,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Fraction Fever (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Frantic Freddy": {
-    "emulation": {},
+  {
+    "name": "Frantic Freddy",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -875,12 +819,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Frantic Freddy (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Frenzy": {
-    "emulation": {},
+  {
+    "name": "Frenzy",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -901,12 +845,12 @@
         ],
         "url": "https://archive.org/download/Frenzy_1983_Coleco_M5/Frenzy_1983_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Frogger": {
-    "emulation": {},
+  {
+    "name": "Frogger",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -917,12 +861,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Frogger (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Frogger II - ThreeeDeep!": {
-    "emulation": {},
+  {
+    "name": "Frogger II - ThreeeDeep!",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -933,12 +877,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Frogger II - ThreeDeep! (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Front Line": {
-    "emulation": {},
+  {
+    "name": "Front Line",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Action"
     ],
@@ -959,15 +903,15 @@
         ],
         "url": "https://archive.org/download/Frontline_1983_Coleco_M5/Frontline_1983_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Galaxian": {
-    "emulation": {},
+  {
+    "name": "Galaxian",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
-      "Shoot'em Up",
-      "Action"
+      "Action",
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -976,12 +920,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Galaxian (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Gateway to Apshai": {
-    "emulation": {},
+  {
+    "name": "Gateway to Apshai",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
@@ -992,12 +936,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Gateway to Apshai (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Gorf": {
-    "emulation": {},
+  {
+    "name": "Gorf",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -1014,12 +958,11 @@
         ],
         "url": "https://archive.org/download/Gorf_1983_Coleco_FR/Gorf_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Gust Buster": {
-    "emulation": {},
+  {
+    "name": "Gust Buster",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1036,12 +979,12 @@
         ],
         "url": "https://archive.org/download/Gust_Buster_1983_Sunrise_Software_FR/Gust_Buster_1983_Sunrise_Software_FR.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Gyruss": {
-    "emulation": {},
+  {
+    "name": "Gyruss",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Shooter",
       "Shooter / Run and Gun"
@@ -1053,12 +996,12 @@
         ],
         "url": "https://cvaddict.com/manuals/gyruss.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "H.E.R.O. - Helicopter Emergency Rescue Operation": {
-    "emulation": {},
+  {
+    "name": "H.E.R.O. - Helicopter Emergency Rescue Operation",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -1069,12 +1012,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/H.E.R.O (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Heist, The": {
-    "emulation": {},
+  {
+    "name": "Heist, The",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -1085,12 +1028,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Heist, The (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Illusions": {
-    "emulation": {},
+  {
+    "name": "Illusions",
+    "players": 2,
     "genres": [
       "Puzzle-Game"
     ],
@@ -1101,12 +1043,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Illusions (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "It's Only Rock 'N' Roll": {
-    "emulation": {},
+  {
+    "name": "It's Only Rock 'N' Roll",
+    "players": 1,
     "genres": [
       "Simulation"
     ],
@@ -1117,12 +1058,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Its Only Rock 'N' Roll (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "James Bond 007": {
-    "emulation": {},
+  {
+    "name": "James Bond 007",
+    "players": 2,
+    "rating": 0.25,
     "genres": [
       "Action"
     ],
@@ -1133,19 +1074,14 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/James Bond (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Joust"
+  },
+  {
+    "name": "Jukebox",
     "players": 2,
-    "rating": 0.25
-  },
-  "Joust": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Jukebox": {
-    "emulation": {},
     "genres": [
       "Strategy"
     ],
@@ -1156,21 +1092,20 @@
         ],
         "url": "https://archive.org/download/Juke_Box_1984_Spinnaker_Software/Juke_Box_1984_Spinnaker_Software.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Julius Erving and Larry Bird Go - One-on-One": {
-    "emulation": {},
+  {
+    "name": "Julius Erving and Larry Bird Go - One-on-One",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Sports"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Jumpman Junior": {
-    "emulation": {},
+  {
+    "name": "Jumpman Junior",
+    "players": 4,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -1191,12 +1126,12 @@
         ],
         "url": "https://archive.org/download/Jumpman_Junior_1984_Epyx_M5/Jumpman_Junior_1984_Epyx_M5.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.85
+    ]
   },
-  "Jungle Hunt": {
-    "emulation": {},
+  {
+    "name": "Jungle Hunt",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -1207,12 +1142,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Jungle Hunt (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Ken Uston Blackjack-Poker": {
-    "emulation": {},
+  {
+    "name": "Ken Uston Blackjack-Poker",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
       "Strategy"
     ],
@@ -1223,12 +1158,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Ken Uston's Blackjack-Poker (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "Keystone Kapers": {
-    "emulation": {},
+  {
+    "name": "Keystone Kapers",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1239,12 +1174,12 @@
         ],
         "url": "https://cvaddict.com/manuals/keystone-kapers.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Lady Bug": {
-    "emulation": {},
+  {
+    "name": "Lady Bug",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1261,12 +1196,11 @@
         ],
         "url": "https://archive.org/download/Lady_Bug_1982_Coleco_FR/Lady_Bug_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Learning with Leeper": {
-    "emulation": {},
+  {
+    "name": "Learning with Leeper",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1277,12 +1211,11 @@
         ],
         "url": "https://cvaddict.com/manuals/learning-with-leeper.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Linking Logic": {
-    "emulation": {},
+  {
+    "name": "Linking Logic",
+    "players": 1,
     "genres": [
       "Puzzle-Game"
     ],
@@ -1293,12 +1226,11 @@
         ],
         "url": "https://archive.org/download/LinkingLogicFisherPrice/Linking_Logic_Fisher_Price.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Logic Levels": {
-    "emulation": {},
+  {
+    "name": "Logic Levels",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -1309,12 +1241,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Logic Levels (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Looping": {
-    "emulation": {},
+  {
+    "name": "Looping",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -1342,13 +1274,10 @@
         ],
         "url": "https://archive.org/download/Looping_1983_Coleco_FR/Looping_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Lord of the Dungeon": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Lord of the Dungeon",
     "manuals": [
       {
         "languages": [
@@ -1356,28 +1285,21 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/colecovision/lotd.txt"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "M.A.S.H": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "M.A.S.H"
   },
-  "Matt Patrol": {
-    "emulation": {},
+  {
+    "name": "Matt Patrol",
+    "players": 1,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Memory Manor": {
-    "emulation": {},
+  {
+    "name": "Memory Manor",
+    "players": 1,
     "genres": [
       "Educational"
     ],
@@ -1388,22 +1310,20 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Memory Manor (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Meteoric Shower": {
-    "emulation": {},
-    "genres": [
-      "Shooter",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+  {
+    "name": "Meteoric Shower",
     "players": 2,
-    "rating": null
+    "genres": [
+      "Shoot'em Up",
+      "Shooter"
+    ]
   },
-  "Miner 2049er Starring Bounty Bob": {
-    "emulation": {},
+  {
+    "name": "Miner 2049er Starring Bounty Bob",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -1425,12 +1345,11 @@
         ],
         "url": "https://archive.org/download/Miner_2049er_1983_Micro_Fun_M6/Miner_2049er_1983_Micro_Fun_M6.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Monkey Academy": {
-    "emulation": {},
+  {
+    "name": "Monkey Academy",
+    "players": 2,
     "genres": [
       "Educational",
       "Various"
@@ -1442,12 +1361,11 @@
         ],
         "url": "https://archive.org/download/monkey-academy-game-manual-coleco-vision-adam-1984/Monkey Academy game manual ColecoVision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Montezuma's Revenge": {
-    "emulation": {},
+  {
+    "name": "Montezuma's Revenge",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1458,12 +1376,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Montezuma's Revenge (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Moonsweeper": {
-    "emulation": {},
+  {
+    "name": "Moonsweeper",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action"
     ],
@@ -1474,15 +1392,15 @@
         ],
         "url": "https://archive.org/download/Moonsweeper_1983_Imagic/Moonsweeper_1983_Imagic.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Motocross Racer": {
-    "emulation": {},
+  {
+    "name": "Motocross Racer",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1491,12 +1409,12 @@
         ],
         "url": "https://archive.org/download/Motorcross_Racer_1983_Xonox/Motorcross_Racer_1983_Xonox.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Mountain King": {
-    "emulation": {},
+  {
+    "name": "Mountain King",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -1507,12 +1425,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Mountain King (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Mouse Trap": {
-    "emulation": {},
+  {
+    "name": "Mouse Trap",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -1529,12 +1447,12 @@
         ],
         "url": "https://archive.org/download/Mousetrap_1982_Coleco_FR/Mousetrap_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Mr. Do!": {
-    "emulation": {},
+  {
+    "name": "Mr. Do!",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1545,12 +1463,12 @@
         ],
         "url": "https://archive.org/download/mr.-do-game-manual-coleco-vision-1983/Mr. Do! game manual ColecoVision (1983).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Mr. Do!'s Castle": {
-    "emulation": {},
+  {
+    "name": "Mr. Do!'s Castle",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Action"
     ],
@@ -1561,12 +1479,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Mr Do!'s Castle (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Nova Blast": {
-    "emulation": {},
+  {
+    "name": "Nova Blast",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1577,12 +1494,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Nova Blast (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Oil's Well": {
-    "emulation": {},
+  {
+    "name": "Oil's Well",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1594,12 +1511,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Oil's Well (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Omega Race": {
-    "emulation": {},
+  {
+    "name": "Omega Race",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -1620,29 +1537,23 @@
         ],
         "url": "https://archive.org/download/Omega_Race_1983_Coleco_M5/Omega_Race_1983_Coleco_M5.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Orbit"
+  },
+  {
+    "name": "Pac-Man",
     "players": 2,
-    "rating": 0.65
-  },
-  "Orbit": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Pac-Man": {
-    "emulation": {},
     "genres": [
       "Action",
       "Action / Labyrinth"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pepper II": {
-    "emulation": {},
+  {
+    "name": "Pepper II",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1653,12 +1564,12 @@
         ],
         "url": "https://archive.org/download/pepper-ii-game-manual-coleco-vision-1983/Pepper II game manual ColecoVision (1983).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Pitfall II - Lost Caverns": {
-    "emulation": {},
+  {
+    "name": "Pitfall II - Lost Caverns",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure"
     ],
@@ -1669,12 +1580,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Pitfall II - Lost Caverns (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Pitfall!": {
-    "emulation": {},
+  {
+    "name": "Pitfall!",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1685,12 +1596,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Pitfall! (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pitstop": {
-    "emulation": {},
+  {
+    "name": "Pitstop",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
       "Simulation"
     ],
@@ -1711,12 +1622,12 @@
         ],
         "url": "https://archive.org/download/Pitstop_1983_Epyx_M5/Pitstop_1983_Epyx_M5.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Popeye": {
-    "emulation": {},
+  {
+    "name": "Popeye",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1727,30 +1638,26 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Popeye (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Porky's",
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Power Lords - Quest for Volcan",
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Q-bert",
     "players": 2,
-    "rating": 0.8
-  },
-  "Porky's": {
-    "emulation": {},
-    "genres": [
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Power Lords - Quest for Volcan": {
-    "emulation": {},
-    "genres": [
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Q-bert": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1761,12 +1668,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Q-bert (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Q-bert's Qubes": {
-    "emulation": {},
+  {
+    "name": "Q-bert's Qubes",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1777,12 +1684,12 @@
         ],
         "url": "https://archive.org/download/QbertsQubesParkerBrothers/Q*berts_Qubes_Parker_Brothers.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Quest for Quintana Roo": {
-    "emulation": {},
+  {
+    "name": "Quest for Quintana Roo",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Adventure"
     ],
@@ -1799,12 +1706,12 @@
         ],
         "url": "https://archive.org/download/Quest_for_Quintana_Roo_1983_Sunrise_Software_FR/Quest_for_Quintana_Roo_1983_Sunrise_Software_FR.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "River Raid": {
-    "emulation": {},
+  {
+    "name": "River Raid",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1815,12 +1722,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/River Raid (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Robin Hood": {
-    "emulation": {},
+  {
+    "name": "Robin Hood",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1831,12 +1737,12 @@
         ],
         "url": "https://cvaddict.com/manuals/robin-hood.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Roc 'N Rope": {
-    "emulation": {},
+  {
+    "name": "Roc 'N Rope",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -1857,12 +1763,11 @@
         ],
         "url": "https://archive.org/download/Roc_n_Rope_1984_Coleco_M5/Roc_n_Rope_1984_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Rock n' Bolt": {
-    "emulation": {},
+  {
+    "name": "Rock n' Bolt",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1873,15 +1778,14 @@
         ],
         "url": "https://archive.org/download/Rock_n_Bolt_1984_Telegames/Rock_n_Bolt_1984_Telegames.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Rocky - Super Action Boxing": {
-    "emulation": {},
+  {
+    "name": "Rocky - Super Action Boxing",
+    "players": 2,
     "genres": [
-      "Sports / Boxing",
-      "Sports"
+      "Sports",
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -1900,12 +1804,11 @@
         ],
         "url": "https://archive.org/download/Rocky_Super_Action_Boxing_1983_Coleco_M5/Rocky_Super_Action_Boxing_1983_Coleco_M5.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Rolloverture": {
-    "emulation": {},
+  {
+    "name": "Rolloverture",
+    "players": 1,
     "genres": [
       "Strategy"
     ],
@@ -1916,12 +1819,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Rolloverture (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Root Beer Tapper": {
-    "emulation": {},
+  {
+    "name": "Root Beer Tapper",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Sports",
       "Sports / Table tennis"
@@ -1933,12 +1836,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Tapper (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Sammy Lightfoot": {
-    "emulation": {},
+  {
+    "name": "Sammy Lightfoot",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1949,12 +1851,11 @@
         ],
         "url": "https://archive.org/download/Sammy_Lightfoot_1983_Sierra_On-Line/Sammy_Lightfoot_1983_Sierra_On-Line.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Sector Alpha": {
-    "emulation": {},
+  {
+    "name": "Sector Alpha",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1965,12 +1866,11 @@
         ],
         "url": "https://archive.org/download/Sector_Alpha_1984_Spectravideo/Sector_Alpha_1984_Spectravideo.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sewer Sam": {
-    "emulation": {},
+  {
+    "name": "Sewer Sam",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1981,12 +1881,12 @@
         ],
         "url": "https://archive.org/download/Sewer_Sam_1984_Interphase/Sewer_Sam_1984_Interphase.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Sir Lancelot": {
-    "emulation": {},
+  {
+    "name": "Sir Lancelot",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Action"
     ],
@@ -1997,12 +1897,11 @@
         ],
         "url": "https://archive.org/download/Sir_Lancelot_1983_Xonox/Sir_Lancelot_1983_Xonox.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "Skiing": {
-    "emulation": {},
+  {
+    "name": "Skiing",
+    "players": 4,
     "genres": [
       "Sports"
     ],
@@ -2013,12 +1912,11 @@
         ],
         "url": "https://archive.org/download/Skiing_1986_Telegames/Skiing_1986_Telegames.pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Slither": {
-    "emulation": {},
+  {
+    "name": "Slither",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2029,12 +1927,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Slither (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Slurpy": {
-    "emulation": {},
+  {
+    "name": "Slurpy",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -2045,12 +1943,12 @@
         ],
         "url": "https://archive.org/download/Slurpy_1984_Xonox/Slurpy_1984_Xonox.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Smurf - Paint 'n' Play WORKSHOP": {
-    "emulation": {},
+  {
+    "name": "Smurf - Paint 'n' Play WORKSHOP",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Educational",
       "Various"
@@ -2062,12 +1960,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Smurf Paint 'n Play Workshop (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Smurf - Rescue in Gargamel's Castle": {
-    "emulation": {},
+  {
+    "name": "Smurf - Rescue in Gargamel's Castle",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -2084,19 +1982,15 @@
         ],
         "url": "https://archive.org/download/Smurf_Rescue_in_Gargamels_Castle_1982_Coleco_FR_Schtroumpfs/Smurf_Rescue_in_Gargamels_Castle_1982_Coleco_FR_Schtroumpfs.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Smurfs Save the Day"
+  },
+  {
+    "name": "Space Fury",
     "players": 2,
-    "rating": 0.75
-  },
-  "Smurfs Save the Day": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Space Fury": {
-    "emulation": {},
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -2113,12 +2007,12 @@
         ],
         "url": "https://archive.org/download/Space_Fury_1983_Coleco_FR/Space_Fury_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Space Panic": {
-    "emulation": {},
+  {
+    "name": "Space Panic",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -2135,12 +2029,11 @@
         ],
         "url": "https://archive.org/download/Space_Panic_1983_Coleco_FR/Space_Panic_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Spectron": {
-    "emulation": {},
+  {
+    "name": "Spectron",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -2151,15 +2044,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Spectron (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Spy Hunter": {
-    "emulation": {},
+  {
+    "name": "Spy Hunter",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2168,12 +2061,11 @@
         ],
         "url": "https://archive.org/download/spy-hunter-game-manual-colecovision-adam-1984/Spy Hunter game manual Colecovision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "Squish'em Featuring Sam": {
-    "emulation": {},
+  {
+    "name": "Squish'em Featuring Sam",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2185,19 +2077,15 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Squish 'Em Sam! (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Star Fire": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+  {
+    "name": "Star Fire",
+    "players": 1
   },
-  "Star Trek - Strategic Operations Simulator": {
-    "emulation": {},
+  {
+    "name": "Star Trek - Strategic Operations Simulator",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -2208,12 +2096,12 @@
         ],
         "url": "https://archive.org/download/star-trek-game-manual-coleco-vision-adam-1984/Star Trek game manual ColecoVision Adam 1984.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Star Wars - The Arcade Game": {
-    "emulation": {},
+  {
+    "name": "Star Wars - The Arcade Game",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -2224,21 +2112,18 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Star Wars (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Steamroller": {
-    "emulation": {},
+  {
+    "name": "Steamroller",
+    "players": 2,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Strike It!": {
-    "emulation": {},
+  {
+    "name": "Strike It!",
+    "players": 1,
     "genres": [
       "Action",
       "Action / Breakout games"
@@ -2250,12 +2135,11 @@
         ],
         "url": "https://cvaddict.com/manuals/strike-it.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Subroc": {
-    "emulation": {},
+  {
+    "name": "Subroc",
+    "players": 1,
     "genres": [
       "Shoot'em Up"
     ],
@@ -2272,15 +2156,15 @@
         ],
         "url": "https://archive.org/download/Subroc_1983_Coleco_FR/Subroc_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Super Action Baseball": {
-    "emulation": {},
+  {
+    "name": "Super Action Baseball",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -2289,15 +2173,14 @@
         ],
         "url": "https://archive.org/download/super-action-baseball-game-manual-colecovision-1983/Super Action Baseball game-manual-Colecovision-1983.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Super Action Football": {
-    "emulation": {},
+  {
+    "name": "Super Action Football",
+    "players": 2,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -2316,12 +2199,12 @@
         ],
         "url": "https://archive.org/download/Super_Action_Football_1984_Coleco_M5_a/Super_Action_Football_1984_Coleco_M5_a.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Super Cobra": {
-    "emulation": {},
+  {
+    "name": "Super Cobra",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -2332,19 +2215,14 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Super Cobra (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Super Controller Tester"
+  },
+  {
+    "name": "Super Cross Force",
     "players": 1,
-    "rating": 0.45
-  },
-  "Super Controller Tester": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Super Cross Force": {
-    "emulation": {},
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
@@ -2356,29 +2234,20 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Super Cross Force (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Super DK!": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Super DK!"
   },
-  "Super DK! Junior": {
-    "emulation": {},
+  {
+    "name": "Super DK! Junior",
+    "players": 2,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Super Sketch - Sketch Master": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Super Sketch - Sketch Master",
     "manuals": [
       {
         "languages": [
@@ -2386,19 +2255,15 @@
         ],
         "url": "https://cvaddict.com/manuals/super-sketch-sketch-master.pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Sword and the Sorcerer, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Sword and the Sorcerer, The"
   },
-  "TOMARC the Barbarian": {
-    "emulation": {},
+  {
+    "name": "TOMARC the Barbarian",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Action"
     ],
@@ -2409,12 +2274,11 @@
         ],
         "url": "https://archive.org/download/Tomarc_the_Barbarian_1984_Xonox/Tomarc_the_Barbarian_1984_Xonox.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Tank Wars": {
-    "emulation": {},
+  {
+    "name": "Tank Wars",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -2425,12 +2289,11 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Tank Wars (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Tarzan": {
-    "emulation": {},
+  {
+    "name": "Tarzan",
+    "players": 1,
     "genres": [
       "Action",
       "Action / Adventure"
@@ -2449,12 +2312,11 @@
         ],
         "url": "https://archive.org/download/Tarzan_1982_Coleco_en-fr/Tarzan_1982_Coleco_en-fr.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Telly Turtle": {
-    "emulation": {},
+  {
+    "name": "Telly Turtle",
+    "players": 1,
     "genres": [
       "Educational",
       "Various"
@@ -2466,12 +2328,11 @@
         ],
         "url": "https://archive.org/download/telly-turtle-manual-colecovision-adam-1984/Telly Turtle manual Colecovision Adam 1984.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Threshold": {
-    "emulation": {},
+  {
+    "name": "Threshold",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2482,12 +2343,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Threshold (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Time Pilot": {
-    "emulation": {},
+  {
+    "name": "Time Pilot",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -2504,15 +2365,14 @@
         ],
         "url": "https://archive.org/download/Time_Pilot_1983_Coleco_FR/Time_Pilot_1983_Coleco_FR.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Tournament Tennis": {
-    "emulation": {},
+  {
+    "name": "Tournament Tennis",
+    "players": 1,
     "genres": [
-      "Sports",
-      "Simulation"
+      "Simulation",
+      "Sports"
     ],
     "manuals": [
       {
@@ -2521,24 +2381,22 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Tournament Tennis (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Tunnels & Trolls": {
-    "emulation": {},
+  {
+    "name": "Tunnels & Trolls",
+    "players": 1,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Turbo": {
-    "emulation": {},
+  {
+    "name": "Turbo",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2547,12 +2405,12 @@
         ],
         "url": "https://archive.org/download/turbo-game-manual-coleco-vision-1982/Turbo game manual ColecoVision 1982.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Tutankham": {
-    "emulation": {},
+  {
+    "name": "Tutankham",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -2574,15 +2432,14 @@
         ],
         "url": "https://archive.org/download/Tutankham_1983_Parker_Brothers_M6/Tutankham_1983_Parker_Brothers_M6.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Up 'n Down": {
-    "emulation": {},
+  {
+    "name": "Up 'n Down",
+    "players": 2,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2591,12 +2448,12 @@
         ],
         "url": "https://archive.org/download/Up_n_Down_1984_Sega/Up_n_Down_1984_Sega.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Venture": {
-    "emulation": {},
+  {
+    "name": "Venture",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -2613,12 +2470,11 @@
         ],
         "url": "https://archive.org/download/Venture_1982_Coleco_FR/Venture_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Victory": {
-    "emulation": {},
+  {
+    "name": "Victory",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2629,23 +2485,20 @@
         ],
         "url": "https://archive.org/download/victorygamemanualcolecovision1983/Victory game manual Coleco Vision (1983).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Video Hustler": {
-    "emulation": {},
+  {
+    "name": "Video Hustler",
+    "players": 1,
     "genres": [
+      "Action",
       "Sports",
-      "Sports / Pool",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Sports / Pool"
+    ]
   },
-  "War Room": {
-    "emulation": {},
+  {
+    "name": "War Room",
+    "players": 1,
     "genres": [
       "Strategy"
     ],
@@ -2656,12 +2509,12 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/War Room (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "WarGames": {
-    "emulation": {},
+  {
+    "name": "WarGames",
+    "players": 1,
+    "rating": 1,
     "genres": [
       "Strategy"
     ],
@@ -2682,12 +2535,11 @@
         ],
         "url": "https://archive.org/download/War_Games_1984_Coleco_M5/War_Games_1984_Coleco_M5.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 1
+    ]
   },
-  "Wing War": {
-    "emulation": {},
+  {
+    "name": "Wing War",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2698,12 +2550,11 @@
         ],
         "url": "https://archive.org/download/Wing_War_1983_Coleco/Wing_War_1983_Coleco.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Wizard of Id's - WizMath": {
-    "emulation": {},
+  {
+    "name": "Wizard of Id's - WizMath",
+    "players": 2,
     "genres": [
       "Educational",
       "Various"
@@ -2715,12 +2566,11 @@
         ],
         "url": "https://archive.org/download/Wizard_of_Ids_Wizmath_1984_Sierra_On-Line/Wizard_of_Ids_Wizmath_1984_Sierra_On-Line.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Word Feud": {
-    "emulation": {},
+  {
+    "name": "Word Feud",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -2731,24 +2581,21 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Word Feud (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Yolk's on you, The",
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Zaxxon",
     "players": 2,
-    "rating": null
-  },
-  "Yolk's on you, The": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
-      "Action"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Zaxxon": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up",
-      "Action"
+      "Action",
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -2774,12 +2621,12 @@
         ],
         "url": "https://archive.org/download/Zaxxon_1982_Coleco_FR/Zaxxon_1982_Coleco_FR.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Zenji": {
-    "emulation": {},
+  {
+    "name": "Zenji",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Strategy"
     ],
@@ -2790,8 +2637,6 @@
         ],
         "url": "https://archive.org/download/ColecoVisionManuals_201812/Zenji (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   }
-}
+]

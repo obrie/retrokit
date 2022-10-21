@@ -1,6 +1,8 @@
-{
-  "3D Crazy Coaster": {
-    "emulation": {},
+[
+  {
+    "name": "3D Crazy Coaster",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Simulation"
     ],
@@ -11,12 +13,12 @@
         ],
         "url": "http://vectrex.de/_static/2014/3D-Crazy_Coaster_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "3D Mine Storm": {
-    "emulation": {},
+  {
+    "name": "3D Mine Storm",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -27,12 +29,12 @@
         ],
         "url": "http://vectrex.de/_static/2014/3D-Mine_Storm_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "3D Narrow Escape": {
-    "emulation": {},
+  {
+    "name": "3D Narrow Escape",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Shooter"
     ],
@@ -43,12 +45,12 @@
         ],
         "url": "http://vectrex.de/_static/2014/3D-Narrow_Escape_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "AnimAction - Advanced Animation": {
-    "emulation": {},
+  {
+    "name": "AnimAction - Advanced Animation",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Educational"
     ],
@@ -59,16 +61,16 @@
         ],
         "url": "http://vectrex.de/_static/2015/AnimAction_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Armor..Attack": {
-    "emulation": {},
+  {
+    "name": "Armor..Attack",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Shooter / Vehicle",
       "3rd person",
-      "Shooter"
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -77,12 +79,12 @@
         ],
         "url": "http://vectrex.de/_static/2016/Armor_Attack_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Art Master": {
-    "emulation": {},
+  {
+    "name": "Art Master",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Educational"
     ],
@@ -93,12 +95,12 @@
         ],
         "url": "http://vectrex.de/_static/2014/Art_Master_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Bedlam": {
-    "emulation": {},
+  {
+    "name": "Bedlam",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Shooter"
     ],
@@ -109,12 +111,12 @@
         ],
         "url": "http://vectrex.de/_static/2018/Bedlam_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Berzerk": {
-    "emulation": {},
+  {
+    "name": "Berzerk",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Action / Labyrinth",
@@ -127,15 +129,15 @@
         ],
         "url": "http://vectrex.de/_static/2017/Berzerk_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Blitz! - Action Football": {
-    "emulation": {},
+  {
+    "name": "Blitz! - Action Football",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -144,14 +146,22 @@
         ],
         "url": "http://vectrex.de/_static/2018/Blitz_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Clean Sweep": {
-    "emulation": {},
+  {
+    "name": "Clean Sweep",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Clean Sweep (World)",
+        "clones": [
+          "Mr. Boston Clean Sweep"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -160,20 +170,12 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/GCE_Vectrex/Manual/formated/Clean_Sweep-_Mr._Boston_Version_-_1982_-_GCE.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Mr. Boston Clean Sweep"
-        ],
-        "name": "Clean Sweep (World)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Cosmic Chasm": {
-    "emulation": {},
+  {
+    "name": "Cosmic Chasm",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -184,12 +186,11 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/vectrex/cosmic_chasm.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Dark Tower": {
-    "emulation": {},
+  {
+    "name": "Dark Tower",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -200,25 +201,23 @@
         ],
         "url": "http://vectrex.de/_static/2014/Dark_Tower_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Engine Analyzer": {
-    "emulation": {},
+  {
+    "name": "Engine Analyzer",
+    "players": 1,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Fortress of Narzod": {
-    "emulation": {},
+  {
+    "name": "Fortress of Narzod",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shooter / Vehicle",
       "Diagonal",
-      "Shooter"
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -227,15 +226,14 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/GCE_Vectrex/Manual/formated/Fortress_of_Narzod_-_1982_-_GCE.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Heads-Up - Action Soccer": {
-    "emulation": {},
+  {
+    "name": "Heads-Up - Action Soccer",
+    "players": 2,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -244,17 +242,17 @@
         ],
         "url": "http://vectrex.de/_static/2020/Heads_Up_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "HyperChase - Auto Race": {
-    "emulation": {},
+  {
+    "name": "HyperChase - Auto Race",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
       "Driving",
+      "Driving / Race",
       "Race",
-      "Driving / Race"
+      "Race"
     ],
     "manuals": [
       {
@@ -263,21 +261,19 @@
         ],
         "url": "http://vectrex.de/_static/2020/Hyper_Chase_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Mail Plane": {
-    "emulation": {},
+  {
+    "name": "Mail Plane",
+    "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Melody Master - Music Composition and Entertainment": {
-    "emulation": {},
+  {
+    "name": "Melody Master - Music Composition and Entertainment",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Educational"
     ],
@@ -288,15 +284,14 @@
         ],
         "url": "http://vectrex.de/_static/2015/Melody_Master_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Mine Storm": {
-    "emulation": {},
+  {
+    "name": "Mine Storm",
+    "players": 2,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -305,12 +300,12 @@
         ],
         "url": "http://vectrex.de/_static/2017/Mine_Storm_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pitcher's Duel": {
-    "emulation": {},
+  {
+    "name": "Pitcher's Duel",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -322,17 +317,17 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/vectrex/pitchers_duel.txt"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Polar Rescue": {
-    "emulation": {},
+  {
+    "name": "Polar Rescue",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Shooter",
-      "Shooter / Vehicle",
       "1st person",
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -341,16 +336,16 @@
         ],
         "url": "http://vectrex.de/_static/2015/Polar_Rescue_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Pole Position": {
-    "emulation": {},
+  {
+    "name": "Pole Position",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Race 3rd Pers. view",
+      "Driving",
       "Race",
-      "Driving"
+      "Race 3rd Pers. view"
     ],
     "manuals": [
       {
@@ -359,21 +354,19 @@
         ],
         "url": "http://vectrex.de/_static/2015/Pole_Position_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "RA+A Spectrum I+ Stress Tester": {
-    "emulation": {},
+  {
+    "name": "RA+A Spectrum I+ Stress Tester",
+    "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Rip Off": {
-    "emulation": {},
+  {
+    "name": "Rip Off",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Shooter"
     ],
@@ -384,16 +377,16 @@
         ],
         "url": "http://vectrex.de/_static/2019/Rip_Off_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Scramble": {
-    "emulation": {},
+  {
+    "name": "Scramble",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shooter / Vehicle",
       "Horizontal",
-      "Shooter"
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -402,21 +395,19 @@
         ],
         "url": "http://vectrex.de/_static/2017/Scramble_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Sledge 3D": {
-    "emulation": {},
+  {
+    "name": "Sledge 3D",
+    "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Solar Quest": {
-    "emulation": {},
+  {
+    "name": "Solar Quest",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -427,12 +418,12 @@
         ],
         "url": "http://vectrex.de/_static/2019/Solar_Quest_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Space Wars": {
-    "emulation": {},
+  {
+    "name": "Space Wars",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -443,15 +434,15 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/GCE_Vectrex/Manual/formated/Space_Wars_-_1982_-_GCE.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Spike": {
-    "emulation": {},
+  {
+    "name": "Spike",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -466,12 +457,11 @@
         ],
         "url": "https://archive.org/download/spike-game-manual-vectrex-french-1983/Spike game manual Vectrex (French) (1983).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Spin ball": {
-    "emulation": {},
+  {
+    "name": "Spin ball",
+    "players": 2,
     "genres": [
       "Pinball"
     ],
@@ -482,12 +472,12 @@
         ],
         "url": "http://vectrex.de/_static/2020/Spinball_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Star Castle": {
-    "emulation": {},
+  {
+    "name": "Star Castle",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shooter"
     ],
@@ -498,16 +488,16 @@
         ],
         "url": "http://vectrex.de/_static/2014/Star_Castle_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Star Ship": {
-    "emulation": {},
+  {
+    "name": "Star Ship",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shooter / Vehicle",
       "1st person",
-      "Shooter"
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -516,17 +506,17 @@
         ],
         "url": "http://vectrex.de/_static/2016/Star_Trek_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "StarHawk": {
-    "emulation": {},
+  {
+    "name": "StarHawk",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Shooter / Vehicle",
       "1st person",
+      "Action",
       "Shooter",
-      "Action"
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -535,37 +525,33 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/GCE_Vectrex/Manual/formated/Starhawk_-_1982_-_GCE.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Test Cartridge": {
-    "emulation": {},
+  {
+    "name": "Test Cartridge",
+    "players": 1,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Tour De France": {
-    "emulation": {},
+  {
+    "name": "Tour De France",
+    "players": 1,
     "genres": [
-      "Sports",
-      "Sports / Cycling",
+      "Driving",
       "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Sports",
+      "Sports / Cycling"
+    ]
   },
-  "WebWarp": {
-    "emulation": {},
+  {
+    "name": "WebWarp",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shooter / Vehicle",
       "Diagonal",
-      "Shooter"
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -574,8 +560,6 @@
         ],
         "url": "http://vectrex.de/_static/2019/Web_Wars_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   }
-}
+]

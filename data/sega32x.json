@@ -1,13 +1,11 @@
-{
-  "32X Sample Program - PWM Sound Demo": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+[
+  {
+    "name": "32X Sample Program - PWM Sound Demo"
   },
-  "After Burner Complete": {
-    "emulation": {},
+  {
+    "name": "After Burner Complete",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -25,16 +23,16 @@
         ],
         "url": "https://archive.org/download/After_Burner_Complete_1994_Sega_JP/After_Burner_Complete_1994_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Amazing Spider-Man, The - Web of Fire": {
-    "emulation": {},
+  {
+    "name": "Amazing Spider-Man, The - Web of Fire",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
+      "Action",
       "Platform",
-      "Platform / Fighter Scrolling",
-      "Action"
+      "Platform / Fighter Scrolling"
     ],
     "manuals": [
       {
@@ -43,15 +41,15 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Amazing Spider-Man, The - Web of Fire (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "BC Racers": {
-    "emulation": {},
+  {
+    "name": "BC Racers",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -60,12 +58,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/BC Racers (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Blackthorne": {
-    "emulation": {},
+  {
+    "name": "Blackthorne",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -77,12 +75,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Blackthorne (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Brutal - Above the Claw": {
-    "emulation": {},
+  {
+    "name": "Brutal - Above the Claw",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Fight"
     ],
@@ -93,22 +91,20 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Brutal Unleashed - Above the Claw (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "ClayFighter 2": {
-    "emulation": {},
+  {
+    "name": "ClayFighter 2",
+    "players": 2,
     "genres": [
       "Fight",
       "Fight / 2D"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Cosmic Carnage": {
-    "emulation": {},
+  {
+    "name": "Cosmic Carnage",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Action",
       "Fight"
@@ -132,28 +128,27 @@
         ],
         "url": "https://archive.org/download/Cosmic_Carnage_1995_Br/Cosmic_Carnage_1995_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Darxide": {
-    "emulation": {},
+  {
+    "name": "Darxide",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Shoot'em Up",
       "Action",
       "Fight",
-      "Lightgun Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+      "Lightgun Shooter",
+      "Shoot'em Up"
+    ]
   },
-  "Doom": {
-    "emulation": {},
+  {
+    "name": "Doom",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Shooter / 1st person",
+      "Action",
       "Shooter",
-      "Action"
+      "Shooter / 1st person"
     ],
     "manuals": [
       {
@@ -168,32 +163,27 @@
         ],
         "url": "https://archive.org/download/Doom_1994_J_color/Doom_1994_J_color.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Ecco the Dolphin": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Ecco the Dolphin"
   },
-  "FIFA Soccer 96": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "FIFA Soccer 96",
     "players": 4,
-    "rating": 0.5
-  },
-  "Golf Magazine Presents - 36 Great Holes Starring Fred Couples": {
-    "emulation": {},
+    "rating": 0.5,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Golf Magazine Presents - 36 Great Holes Starring Fred Couples",
+    "players": 8,
+    "rating": 0.3,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -214,12 +204,12 @@
         ],
         "url": "https://archive.org/download/Golf_Magazine_36_Great_Holes_1994_Br/Golf_Magazine_36_Great_Holes_1994_Br.cbr"
       }
-    ],
-    "players": 8,
-    "rating": 0.3
+    ]
   },
-  "Knuckles' Chaotix": {
-    "emulation": {},
+  {
+    "name": "Knuckles' Chaotix",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -255,16 +245,16 @@
         ],
         "url": "http://info.sonicretro.org/images/1/15/Chaotix_32X_BR_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Kolibri": {
-    "emulation": {},
+  {
+    "name": "Kolibri",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Shoot'em up / Horizontal",
       "Action",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
     ],
     "manuals": [
       {
@@ -279,50 +269,30 @@
         ],
         "url": "https://archive.org/download/Kolibri_1995_Br/Kolibri_1995_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Mars Check Program Version 1.0": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mars Check Program Version 1.0"
   },
-  "Mars Sample Program - Gnu Sierra": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mars Sample Program - Gnu Sierra"
   },
-  "Mars Sample Program - Pharaoh": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mars Sample Program - Pharaoh"
   },
-  "Mars Sample Program - Runlength Mode Test": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mars Sample Program - Runlength Mode Test"
   },
-  "Mars Sample Program - Texture Test": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mars Sample Program - Texture Test"
   },
-  "Metal Head": {
-    "emulation": {},
+  {
+    "name": "Metal Head",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Simulation",
-      "Action"
+      "Action",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -343,12 +313,12 @@
         ],
         "url": "https://archive.org/download/Metal_Head_1995_Br/Metal_Head_1995_Br.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Mortal Kombat II": {
-    "emulation": {},
+  {
+    "name": "Mortal Kombat II",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Fight"
     ],
@@ -371,12 +341,12 @@
         ],
         "url": "https://segaretro.org/images/0/07/Mortal_Kombat_II_32X_BR_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Motherbase": {
-    "emulation": {},
+  {
+    "name": "Motherbase",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -394,18 +364,18 @@
         ],
         "url": "https://archive.org/download/Parasquad_1995_Sega_JP/Parasquad_1995_Sega_JP.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Motocross Championship": {
-    "emulation": {},
+  {
+    "name": "Motocross Championship",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Motorcycle Race",
       "3rd Pers.",
-      "Sports",
+      "Driving",
+      "Motorcycle Race",
       "Race",
-      "Driving"
+      "Sports"
     ],
     "manuals": [
       {
@@ -420,15 +390,15 @@
         ],
         "url": "https://archive.org/download/Motocross_Championship_1994_Br/Motocross_Championship_1994_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "NBA Jam - Tournament Edition": {
-    "emulation": {},
+  {
+    "name": "NBA Jam - Tournament Edition",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -443,16 +413,16 @@
         ],
         "url": "https://segaretro.org/images/7/75/Nbajamte_32x_jp_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "NFL Quarterback Club": {
-    "emulation": {},
+  {
+    "name": "NFL Quarterback Club",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Football",
       "Simulation",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -467,22 +437,21 @@
         ],
         "url": "https://archive.org/download/NFL_Quarterback_Club_1995_Acclaim_JP/NFL_Quarterback_Club_1995_Acclaim_JP.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Pinocchio": {
-    "emulation": {},
+  {
+    "name": "Pinocchio",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pitfall - The Mayan Adventure": {
-    "emulation": {},
+  {
+    "name": "Pitfall - The Mayan Adventure",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
     ],
@@ -493,12 +462,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Pitfall - The Mayan Adventure (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Primal Rage": {
-    "emulation": {},
+  {
+    "name": "Primal Rage",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Fight"
@@ -510,16 +479,16 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Primal Rage (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "RBI Baseball '95": {
-    "emulation": {},
+  {
+    "name": "RBI Baseball '95",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Baseball",
+      "Simulation",
       "Sports",
-      "Simulation"
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -528,16 +497,16 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/RBI Baseball '95 (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Sangokushi IV": {
-    "emulation": {},
+  {
+    "name": "Sangokushi IV",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Action",
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -546,21 +515,19 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Sangokushi IV (Japan).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Soulstar X": {
-    "emulation": {},
+  {
+    "name": "Soulstar X",
+    "players": 1,
     "genres": [
       "Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Space Harrier": {
-    "emulation": {},
+  {
+    "name": "Space Harrier",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Lightgun Shooter",
@@ -579,25 +546,24 @@
         ],
         "url": "https://archive.org/download/Space_Harrier_1994_Sega_JP/Space_Harrier_1994_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Spot Goes to Hollywood": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Spot Goes to Hollywood",
     "players": 1,
-    "rating": 0.8
-  },
-  "Star Trek - Starfleet Academy - Starship Bridge Simulator": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
-      "Simulation",
-      "Lightgun Shooter"
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "Star Trek - Starfleet Academy - Starship Bridge Simulator",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Lightgun Shooter",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -612,17 +578,17 @@
         ],
         "url": "https://archive.org/download/Star_Trek_Starfleet_Academy_1995_Br/Star_Trek_Starfleet_Academy_1995_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Star Wars Arcade": {
-    "emulation": {},
+  {
+    "name": "Star Wars Arcade",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Shooter",
-      "Shooter / Plane",
       "1st person",
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Plane"
     ],
     "manuals": [
       {
@@ -643,12 +609,12 @@
         ],
         "url": "https://archive.org/download/Star_Wars_Arcade_1994_Br/Star_Wars_Arcade_1994_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Stellar Assault": {
-    "emulation": {},
+  {
+    "name": "Stellar Assault",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Shoot'em Up"
     ],
@@ -665,17 +631,17 @@
         ],
         "url": "https://archive.org/download/Stellar_Assault_1995_Sega_JP/Stellar_Assault_1995_Sega_JP.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "T-MEK": {
-    "emulation": {},
+  {
+    "name": "T-MEK",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Shooter",
-      "Shooter / Vehicle",
       "1st person",
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -684,12 +650,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/T-Mek (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Tempo": {
-    "emulation": {},
+  {
+    "name": "Tempo",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -707,23 +673,19 @@
         ],
         "url": "https://archive.org/download/Tempo_1995_Sega_JP/Tempo_1995_Sega_JP.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Time Warner 32X CMD Download Cartridge": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Time Warner 32X CMD Download Cartridge"
   },
-  "Toughman Contest": {
-    "emulation": {},
+  {
+    "name": "Toughman Contest",
+    "players": 8,
+    "rating": 0.5,
     "genres": [
-      "Sports / Boxing",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -732,12 +694,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/Toughman Contest (USA, Europe).pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.5
+    ]
   },
-  "Virtua Fighter": {
-    "emulation": {},
+  {
+    "name": "Virtua Fighter",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Fight"
     ],
@@ -772,25 +734,23 @@
         ],
         "url": "https://archive.org/download/Virtua_Fighter_1995_Br/Virtua_Fighter_1995_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Virtua Hamster": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
+  {
+    "name": "Virtua Hamster",
     "players": 1,
-    "rating": null
-  },
-  "Virtua Racing Deluxe": {
-    "emulation": {},
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "Virtua Racing Deluxe",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -811,17 +771,17 @@
         ],
         "url": "https://archive.org/download/Virtua_Racing_Deluxe_1994_Br/Virtua_Racing_Deluxe_1994_Br.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "WWF Raw": {
-    "emulation": {},
+  {
+    "name": "WWF Raw",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
-      "Sports / Wrestling",
       "Action",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Wrestling"
     ],
     "manuals": [
       {
@@ -836,16 +796,16 @@
         ],
         "url": "https://archive.org/download/WWF_RAW_1995_Acclaim_JP/WWF_RAW_1995_Acclaim_JP.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "WWF WrestleMania - The Arcade Game": {
-    "emulation": {},
+  {
+    "name": "WWF WrestleMania - The Arcade Game",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Wrestling",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Wrestling"
     ],
     "manuals": [
       {
@@ -854,15 +814,15 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/WWF WrestleMania - The Arcade Game (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "World Series Baseball Starring Deion Sanders": {
-    "emulation": {},
+  {
+    "name": "World Series Baseball Starring Deion Sanders",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -871,17 +831,12 @@
         ],
         "url": "https://archive.org/download/SEGA32XManuals_201812/World Series Baseball Starring Deion Sanders (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "X-Men": {
-    "emulation": {},
+  {
+    "name": "X-Men",
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   }
-}
+]

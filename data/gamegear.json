@@ -1,6 +1,8 @@
-{
-  "5 in One FunPak": {
-    "emulation": {},
+[
+  {
+    "name": "5 in One FunPak",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Board game",
       "Compilation"
@@ -12,12 +14,12 @@
         ],
         "url": "https://segaretro.org/images/d/d4/5_in_One_Fun_Pak_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Aa Harimanada": {
-    "emulation": {},
+  {
+    "name": "Aa Harimanada",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Sports",
       "Sports / Sumo"
@@ -29,12 +31,12 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/Aa Harimanada (Japan).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Addams Family, The": {
-    "emulation": {},
+  {
+    "name": "Addams Family, The",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
@@ -46,12 +48,12 @@
         ],
         "url": "https://segaretro.org/images/0/0a/The_Addams_Family_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Adventures of Batman & Robin, The": {
-    "emulation": {},
+  {
+    "name": "Adventures of Batman & Robin, The",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -63,12 +65,12 @@
         ],
         "url": "https://segaretro.org/images/d/de/The_Adventures_of_Batman_&_Robin_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Aerial Assault": {
-    "emulation": {},
+  {
+    "name": "Aerial Assault",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Shoot'em Up"
     ],
@@ -79,12 +81,12 @@
         ],
         "url": "https://segaretro.org/images/d/d7/Aerialassault_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Aladdin": {
-    "emulation": {},
+  {
+    "name": "Aladdin",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -108,12 +110,12 @@
         ],
         "url": "https://segaretro.org/images/b/b7/Disney's_Aladdin_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Alien 3": {
-    "emulation": {},
+  {
+    "name": "Alien 3",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -124,15 +126,15 @@
         ],
         "url": "https://segaretro.org/images/1/14/Alien_3_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Alien Syndrome": {
-    "emulation": {},
+  {
+    "name": "Alien Syndrome",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Shooter",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -148,15 +150,15 @@
         ],
         "url": "https://segaretro.org/images/b/bd/Aliensyndrome_gg_eu_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Andre Agassi Tennis": {
-    "emulation": {},
+  {
+    "name": "Andre Agassi Tennis",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Sports / Tennis",
-      "Sports"
+      "Sports",
+      "Sports / Tennis"
     ],
     "manuals": [
       {
@@ -165,12 +167,12 @@
         ],
         "url": "https://segaretro.org/images/1/1e/Andre_Agassi_Tennis_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Arcade Classics": {
-    "emulation": {},
+  {
+    "name": "Arcade Classics",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Compilation"
     ],
@@ -181,15 +183,15 @@
         ],
         "url": "https://segaretro.org/images/d/d4/Arcadeclassics_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Arch Rivals - The Arcade Game": {
-    "emulation": {},
+  {
+    "name": "Arch Rivals - The Arcade Game",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -198,26 +200,25 @@
         ],
         "url": "https://segaretro.org/images/5/51/Arch_Rivals_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Archer Maclean's Dropzone": {
-    "emulation": {},
+  {
+    "name": "Archer Maclean's Dropzone",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Arena": {
-    "emulation": {},
+  {
+    "name": "Arena",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Shooter",
+      "Action",
       "Action / Labyrinth",
-      "Action"
+      "Shooter"
     ],
     "manuals": [
       {
@@ -226,15 +227,15 @@
         ],
         "url": "https://segaretro.org/images/4/41/Arena_Maze_of_Death_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Ariel - The Little Mermaid": {
-    "emulation": {},
+  {
+    "name": "Ariel - The Little Mermaid",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -243,12 +244,12 @@
         ],
         "url": "https://segaretro.org/images/2/29/Ariel_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Asterix and the Great Rescue": {
-    "emulation": {},
+  {
+    "name": "Asterix and the Great Rescue",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -259,24 +260,23 @@
         ],
         "url": "https://segaretro.org/images/a/a2/Ast\u00e9rix_and_The_Great_Rescue_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Asterix and the Secret Mission": {
-    "emulation": {},
+  {
+    "name": "Asterix and the Secret Mission",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Ax Battler - A Legend of Golden Axe": {
-    "emulation": {},
+  {
+    "name": "Ax Battler - A Legend of Golden Axe",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Role playing games",
-      "Adventure"
+      "Adventure",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -292,15 +292,15 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/Ax Battler - A Legend of Golden Axe (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Ayrton Senna's Super Monaco GP II": {
-    "emulation": {},
+  {
+    "name": "Ayrton Senna's Super Monaco GP II",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -309,12 +309,12 @@
         ],
         "url": "https://segaretro.org/images/c/cb/SuperMonacoGPII_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Baku Baku": {
-    "emulation": {},
+  {
+    "name": "Baku Baku",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Puzzle-Game"
     ],
@@ -325,12 +325,11 @@
         ],
         "url": "https://segaretro.org/images/a/a6/Baku_Baku_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Barbie Super Model": {
-    "emulation": {},
+  {
+    "name": "Barbie Super Model",
+    "players": 1,
     "genres": [
       "Adventure",
       "Casual Game"
@@ -342,12 +341,12 @@
         ],
         "url": "https://segaretro.org/images/c/c1/Batterup_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Batman Forever": {
-    "emulation": {},
+  {
+    "name": "Batman Forever",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Beat'em Up"
     ],
@@ -358,12 +357,12 @@
         ],
         "url": "https://segaretro.org/images/2/20/Batman_Forever_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Batman Returns": {
-    "emulation": {},
+  {
+    "name": "Batman Returns",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Beat'em Up"
     ],
@@ -374,15 +373,15 @@
         ],
         "url": "https://segaretro.org/images/d/d7/Batmanreturns_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Batter Up": {
-    "emulation": {},
+  {
+    "name": "Batter Up",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -397,12 +396,12 @@
         ],
         "url": "https://segaretro.org/images/6/6c/BatterUp_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Battleship - The Classic Naval Combat Game": {
-    "emulation": {},
+  {
+    "name": "Battleship - The Classic Naval Combat Game",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Board game",
       "Strategy"
@@ -414,12 +413,12 @@
         ],
         "url": "https://segaretro.org/images/1/18/Battleship_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Battletoads": {
-    "emulation": {},
+  {
+    "name": "Battletoads",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Beat'em Up"
     ],
@@ -430,15 +429,15 @@
         ],
         "url": "https://segaretro.org/images/1/12/Battletoads_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Beavis and Butt-Head": {
-    "emulation": {},
+  {
+    "name": "Beavis and Butt-Head",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
-      "Platform",
-      "Adventure"
+      "Adventure",
+      "Platform"
     ],
     "manuals": [
       {
@@ -447,12 +446,12 @@
         ],
         "url": "https://segaretro.org/images/0/0c/Beavis_and_Butt-Head_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Berenstain Bears' Camping Adventure, The": {
-    "emulation": {},
+  {
+    "name": "Berenstain Bears' Camping Adventure, The",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Action",
       "Platform"
@@ -464,12 +463,12 @@
         ],
         "url": "https://segaretro.org/images/1/14/The_Berenstain_Bears'_Camping_Adventure_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Berlin no Kabe": {
-    "emulation": {},
+  {
+    "name": "Berlin no Kabe",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -480,12 +479,12 @@
         ],
         "url": "https://segaretro.org/images/1/18/Berlin_No_Kabe_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Bishoujo Senshi Sailor Moon S": {
-    "emulation": {},
+  {
+    "name": "Bishoujo Senshi Sailor Moon S",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -496,12 +495,12 @@
         ],
         "url": "https://segaretro.org/images/1/1c/BSSMS_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Bonkers Wax Up!": {
-    "emulation": {},
+  {
+    "name": "Bonkers Wax Up!",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Platform"
     ],
@@ -512,12 +511,12 @@
         ],
         "url": "https://segaretro.org/images/0/05/Bonkers_Wax_Up!_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Bram Stoker's Dracula": {
-    "emulation": {},
+  {
+    "name": "Bram Stoker's Dracula",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -528,21 +527,18 @@
         ],
         "url": "https://segaretro.org/images/8/8b/Bram_Stoker's_Dracula_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "BreakThru!": {
-    "emulation": {},
+  {
+    "name": "BreakThru!",
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Bubble Bobble": {
-    "emulation": {},
+  {
+    "name": "Bubble Bobble",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Platform"
     ],
@@ -553,12 +549,12 @@
         ],
         "url": "https://segaretro.org/images/d/db/Bubble_Bobble_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Bugs Bunny in Double Trouble": {
-    "emulation": {},
+  {
+    "name": "Bugs Bunny in Double Trouble",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Platform"
     ],
@@ -569,12 +565,12 @@
         ],
         "url": "https://segaretro.org/images/5/5c/BBiDT_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Bust-A-Move": {
-    "emulation": {},
+  {
+    "name": "Bust-A-Move",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Puzzle-Game"
     ],
@@ -585,42 +581,39 @@
         ],
         "url": "https://segaretro.org/images/b/be/Bust-A-Move_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Buster Ball": {
-    "emulation": {},
+  {
+    "name": "Buster Ball",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Sports / Shuffleboard",
+      "Action",
       "Sports",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
+      "Sports / Shuffleboard"
+    ]
   },
-  "Buster Fight": {
-    "emulation": {},
+  {
+    "name": "Buster Fight",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Fight / 2D",
-      "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+      "Fight",
+      "Fight / 2D"
+    ]
   },
-  "CJ Elephant Fugitive": {
-    "emulation": {},
+  {
+    "name": "CJ Elephant Fugitive",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Caesars Palace": {
-    "emulation": {},
+  {
+    "name": "Caesars Palace",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Casino"
     ],
@@ -631,12 +624,12 @@
         ],
         "url": "https://segaretro.org/images/6/6f/Caesars_Palace_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Captain America and the Avengers": {
-    "emulation": {},
+  {
+    "name": "Captain America and the Avengers",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Beat'em Up"
     ],
@@ -647,21 +640,20 @@
         ],
         "url": "https://segaretro.org/images/6/6b/Captain_America_and_The_Avengers_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Car Licence": {
-    "emulation": {},
+  {
+    "name": "Car Licence",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Educational"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Casino FunPak": {
-    "emulation": {},
+  {
+    "name": "Casino FunPak",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Casino"
     ],
@@ -672,15 +664,15 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Casino_Funpak_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Castle of Illusion Starring Mickey Mouse": {
-    "emulation": {},
+  {
+    "name": "Castle of Illusion Starring Mickey Mouse",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Platform / Run Jump Scrolling",
-      "Platform"
+      "Platform",
+      "Platform / Run Jump Scrolling"
     ],
     "manuals": [
       {
@@ -695,21 +687,19 @@
         ],
         "url": "https://segaretro.org/images/4/48/CastleOfIllusion_GG_BR_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Cave Dude": {
-    "emulation": {},
+  {
+    "name": "Cave Dude",
+    "players": 1,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Chakan": {
-    "emulation": {},
+  {
+    "name": "Chakan",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Platform"
     ],
@@ -720,32 +710,30 @@
         ],
         "url": "https://segaretro.org/images/2/29/Chakan_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Championship Hockey": {
-    "emulation": {},
+  {
+    "name": "Championship Hockey",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.2
+      "Sports",
+      "Sports / Hockey"
+    ]
   },
-  "Chase H.Q.": {
-    "emulation": {},
+  {
+    "name": "Chase H.Q.",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+      "Driving",
+      "Race"
+    ]
   },
-  "Cheese Cat-Astrophe Starring Speedy Gonzales": {
-    "emulation": {},
+  {
+    "name": "Cheese Cat-Astrophe Starring Speedy Gonzales",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Platform"
     ],
@@ -756,16 +744,16 @@
         ],
         "url": "https://segaretro.org/images/5/53/CCSSG_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Chessmaster, The": {
-    "emulation": {},
+  {
+    "name": "Chessmaster, The",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Board game",
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -774,12 +762,12 @@
         ],
         "url": "https://segaretro.org/images/1/14/Chessmaster_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Chicago Syndicate": {
-    "emulation": {},
+  {
+    "name": "Chicago Syndicate",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Beat'em Up"
     ],
@@ -796,22 +784,21 @@
         ],
         "url": "https://segaretro.org/images/2/2c/Chicagosyndicate_gg_br_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Choplifter III": {
-    "emulation": {},
-    "genres": [
-      "Shooter",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+  {
+    "name": "Choplifter III",
     "players": 2,
-    "rating": 0.55
+    "rating": 0.55,
+    "genres": [
+      "Shoot'em Up",
+      "Shooter"
+    ]
   },
-  "Chuck Rock": {
-    "emulation": {},
+  {
+    "name": "Chuck Rock",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Platform"
     ],
@@ -828,33 +815,31 @@
         ],
         "url": "https://segaretro.org/images/f/f5/ChuckRock_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Chuck Rock II - Son of Chuck": {
-    "emulation": {},
+  {
+    "name": "Chuck Rock II - Son of Chuck",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Cliffhanger": {
-    "emulation": {},
-    "genres": [
-      "Platform"
-    ],
-    "manuals": [],
+  {
+    "name": "Cliffhanger",
     "players": 2,
-    "rating": 0.2
-  },
-  "Clutch Hitter": {
-    "emulation": {},
+    "rating": 0.2,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Platform"
+    ]
+  },
+  {
+    "name": "Clutch Hitter",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -863,21 +848,20 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/Clutch Hitter (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Coca-Cola Kid": {
-    "emulation": {},
+  {
+    "name": "Coca-Cola Kid",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Columns": {
-    "emulation": {},
+  {
+    "name": "Columns",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ],
@@ -913,12 +897,12 @@
         ],
         "url": "https://segaretro.org/images/9/9d/Columns_gg_br_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Cool Spot": {
-    "emulation": {},
+  {
+    "name": "Cool Spot",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Platform"
     ],
@@ -929,22 +913,21 @@
         ],
         "url": "https://segaretro.org/images/2/29/Cool_Spot_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Cosmic Spacehead": {
-    "emulation": {},
+  {
+    "name": "Cosmic Spacehead",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Platform",
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+      "Adventure",
+      "Platform"
+    ]
   },
-  "Crayon Shin-chan - Taiketsu! Kantam Panic!!": {
-    "emulation": {},
+  {
+    "name": "Crayon Shin-chan - Taiketsu! Kantam Panic!!",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Compilation"
     ],
@@ -955,25 +938,23 @@
         ],
         "url": "https://segaretro.org/images/8/8c/CrayonShinchan_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Crazy Faces": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game / Glide",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
+  {
+    "name": "Crazy Faces",
     "players": 1,
-    "rating": null
-  },
-  "Crystal Warriors": {
-    "emulation": {},
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Puzzle-Game",
+      "Puzzle-Game / Glide"
+    ]
+  },
+  {
+    "name": "Crystal Warriors",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -982,12 +963,12 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Crystal_Warriors_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "CutThroat Island": {
-    "emulation": {},
+  {
+    "name": "CutThroat Island",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Beat'em Up"
     ],
@@ -998,31 +979,29 @@
         ],
         "url": "https://segaretro.org/images/6/62/Cutthroat_Island_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Daffy Duck in Hollywood": {
-    "emulation": {},
+  {
+    "name": "Daffy Duck in Hollywood",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "David Robinson's Supreme Court": {
-    "emulation": {},
-    "genres": [
-      "Sports / Basketball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "David Robinson's Supreme Court",
     "players": 2,
-    "rating": 0.5
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ]
   },
-  "Deep Duck Trouble Starring Donald Duck": {
-    "emulation": {},
+  {
+    "name": "Deep Duck Trouble Starring Donald Duck",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Platform"
@@ -1053,12 +1032,12 @@
         ],
         "url": "https://segaretro.org/images/2/25/DeepDuckTrouble_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Defenders of Oasis": {
-    "emulation": {},
+  {
+    "name": "Defenders of Oasis",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Role playing games"
     ],
@@ -1075,12 +1054,12 @@
         ],
         "url": "https://segaretro.org/images/3/37/Shadam_Crusader_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Desert Speedtrap Starring Road Runner and Wile E. Coyote": {
-    "emulation": {},
+  {
+    "name": "Desert Speedtrap Starring Road Runner and Wile E. Coyote",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -1091,16 +1070,16 @@
         ],
         "url": "https://segaretro.org/images/6/64/Desert_Speedtrap_Starring_Road_Runner_and_Wile_E._Coyote_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Desert Strike": {
-    "emulation": {},
+  {
+    "name": "Desert Strike",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Shooter",
+      "Action",
       "Shoot'em Up",
-      "Action"
+      "Shooter"
     ],
     "manuals": [
       {
@@ -1109,12 +1088,12 @@
         ],
         "url": "https://segaretro.org/images/b/b5/Desertstrike_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Devilish": {
-    "emulation": {},
+  {
+    "name": "Devilish",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Action / Breakout games",
@@ -1140,48 +1119,44 @@
         ],
         "url": "https://segaretro.org/images/1/1e/Devilish_Game_Gear_Euro_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Dinobasher Starring Bignose the Caveman": {
-    "emulation": {},
+  {
+    "name": "Dinobasher Starring Bignose the Caveman",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Donald no Magical World": {
-    "emulation": {},
+  {
+    "name": "Donald no Magical World",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Doraemon - Noranosuke no Yabou": {
-    "emulation": {},
+  {
+    "name": "Doraemon - Noranosuke no Yabou",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Doraemon - Waku Waku Pocket Paradise": {
-    "emulation": {},
-    "genres": [
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Doraemon - Waku Waku Pocket Paradise",
     "players": 2,
-    "rating": 0.85
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ]
   },
-  "Double Dragon": {
-    "emulation": {},
+  {
+    "name": "Double Dragon",
+    "players": 1,
+    "rating": 1,
     "genres": [
       "Beat'em Up"
     ],
@@ -1192,22 +1167,21 @@
         ],
         "url": "https://segaretro.org/images/6/69/Double_Dragon_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 1
+    ]
   },
-  "Dr. Franken": {
-    "emulation": {},
+  {
+    "name": "Dr. Franken",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+      "Action",
+      "Platform"
+    ]
   },
-  "Dr. Robotnik's Mean Bean Machine": {
-    "emulation": {},
+  {
+    "name": "Dr. Robotnik's Mean Bean Machine",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
     ],
@@ -1237,15 +1211,15 @@
         ],
         "url": "http://info.sonicretro.org/images/b/b3/DRMBM_GG_PT_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Dragon - The Bruce Lee Story": {
-    "emulation": {},
+  {
+    "name": "Dragon - The Bruce Lee Story",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
-      "Platform",
-      "Beat'em Up"
+      "Beat'em Up",
+      "Platform"
     ],
     "manuals": [
       {
@@ -1254,12 +1228,12 @@
         ],
         "url": "https://segaretro.org/images/7/71/Dragon_The_Bruce_Lee_Story_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Dragon Crystal": {
-    "emulation": {},
+  {
+    "name": "Dragon Crystal",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
@@ -1276,22 +1250,21 @@
         ],
         "url": "https://segaretro.org/images/b/be/DragonCrystal_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Dunk Kids": {
-    "emulation": {},
-    "genres": [
-      "Sports / Basketball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Dunk Kids",
     "players": 2,
-    "rating": 0.25
+    "rating": 0.25,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ]
   },
-  "Dynamite Headdy": {
-    "emulation": {},
+  {
+    "name": "Dynamite Headdy",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
@@ -1322,12 +1295,12 @@
         ],
         "url": "https://segaretro.org/images/e/e9/DynamiteHeaddy_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Earthworm Jim": {
-    "emulation": {},
+  {
+    "name": "Earthworm Jim",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -1339,12 +1312,12 @@
         ],
         "url": "https://segaretro.org/images/1/14/Earthworm_Jim_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Ecco - The Tides of Time": {
-    "emulation": {},
+  {
+    "name": "Ecco - The Tides of Time",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Adventure"
@@ -1375,15 +1348,15 @@
         ],
         "url": "https://segaretro.org/images/b/b6/EccoII_GG_Asia_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Ecco The Dolphin": {
-    "emulation": {},
+  {
+    "name": "Ecco The Dolphin",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Adventure",
-      "Action"
+      "Action",
+      "Adventure"
     ],
     "manuals": [
       {
@@ -1405,35 +1378,33 @@
         ],
         "url": "https://segaretro.org/images/e/ef/Ecco_the_Dolphin_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Ernie Els Golf": {
-    "emulation": {},
-    "genres": [
-      "Sports / Golf",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Ernie Els Golf",
     "players": 4,
-    "rating": 0.4
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ]
   },
-  "Eternal Legend - Eien no Densetsu": {
-    "emulation": {},
+  {
+    "name": "Eternal Legend - Eien no Densetsu",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Evander Holyfield's 'Real Deal' Boxing": {
-    "emulation": {},
+  {
+    "name": "Evander Holyfield's 'Real Deal' Boxing",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
-      "Sports / Boxing",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -1442,23 +1413,22 @@
         ],
         "url": "https://segaretro.org/images/d/d5/Evander_Holyfield's_Real_Deal_Boxing_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Excellent Dizzy Collection, The": {
-    "emulation": {},
+  {
+    "name": "Excellent Dizzy Collection, The",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Adventure",
       "Action",
+      "Adventure",
       "Compilation"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "F-15 Strike Eagle": {
-    "emulation": {},
+  {
+    "name": "F-15 Strike Eagle",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Simulation"
@@ -1470,15 +1440,15 @@
         ],
         "url": "https://segaretro.org/images/7/7e/F-15_Strike_Eagle_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "F1": {
-    "emulation": {},
+  {
+    "name": "F1",
+    "players": 2,
+    "rating": 0.35,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1487,15 +1457,15 @@
         ],
         "url": "https://segaretro.org/images/1/1d/F1_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.35
+    ]
   },
-  "F1 - World Championship Edition": {
-    "emulation": {},
+  {
+    "name": "F1 - World Championship Edition",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1504,36 +1474,34 @@
         ],
         "url": "https://segaretro.org/images/a/a5/F1_World_Championship_Edition_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "FIFA International Soccer": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "FIFA International Soccer",
     "players": 2,
-    "rating": 0.05
-  },
-  "FIFA Soccer 96": {
-    "emulation": {},
+    "rating": 0.05,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "FIFA Soccer 96",
     "players": 1,
-    "rating": 0.15
-  },
-  "Faceball 2000": {
-    "emulation": {},
+    "rating": 0.15,
     "genres": [
-      "Shooter / 1st person",
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Faceball 2000",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Action",
       "Shooter",
-      "Action"
+      "Shooter / 1st person"
     ],
     "manuals": [
       {
@@ -1542,15 +1510,15 @@
         ],
         "url": "https://segaretro.org/images/f/f2/Faceball_2000_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Factory Panic": {
-    "emulation": {},
+  {
+    "name": "Factory Panic",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Strategy",
-      "Action"
+      "Action",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -1572,21 +1540,20 @@
         ],
         "url": "https://segaretro.org/images/e/e4/Ganbare_Gorby_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Fantastic Dizzy": {
-    "emulation": {},
+  {
+    "name": "Fantastic Dizzy",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Fantasy Zone": {
-    "emulation": {},
+  {
+    "name": "Fantasy Zone",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Shoot'em Up"
     ],
@@ -1616,59 +1583,55 @@
         ],
         "url": "https://segaretro.org/images/7/79/Fantasy_Zone_Gear_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Fatal Fury Special": {
-    "emulation": {},
-    "genres": [
-      "Fight / 2D",
-      "Action",
-      "Fight"
-    ],
-    "manuals": [],
+  {
+    "name": "Fatal Fury Special",
     "players": 2,
-    "rating": 0.9
-  },
-  "Foreman for Real": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
-      "Sports / Boxing",
+      "Action",
+      "Fight",
+      "Fight / 2D"
+    ]
+  },
+  {
+    "name": "Foreman for Real",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Fight",
       "Sports",
-      "Fight"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+      "Sports / Boxing"
+    ]
   },
-  "Frank Thomas Big Hurt Baseball": {
-    "emulation": {},
+  {
+    "name": "Frank Thomas Big Hurt Baseball",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Sports / Baseball",
       "Simulation",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+      "Sports",
+      "Sports / Baseball"
+    ]
   },
-  "Fray - Shugyou Hen": {
-    "emulation": {},
+  {
+    "name": "Fray - Shugyou Hen",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Shoot'em up / Vertical",
       "Shoot'em Up",
+      "Shoot'em up / Vertical",
       "Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Fred Couples Golf": {
-    "emulation": {},
+  {
+    "name": "Fred Couples Golf",
+    "players": 4,
+    "rating": 0.55,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -1677,35 +1640,33 @@
         ],
         "url": "https://segaretro.org/images/1/13/Fred_Couples_Golf_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.55
+    ]
   },
-  "Frogger": {
-    "emulation": {},
+  {
+    "name": "Frogger",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "From TV Animation Slam Dunk - Shouri e no Starting 5": {
-    "emulation": {},
+  {
+    "name": "From TV Animation Slam Dunk - Shouri e no Starting 5",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "G-LOC - Air Battle": {
-    "emulation": {},
+  {
+    "name": "G-LOC - Air Battle",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Simulation",
       "Action",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -1726,56 +1687,52 @@
         ],
         "url": "https://segaretro.org/images/3/39/Gloc_gg_br_manual.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "GG Aleste",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  {
+    "name": "GG Aleste 3",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  {
+    "name": "GG Portrait - Pai Chen",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Various"
+    ]
+  },
+  {
+    "name": "GG Portrait - Yuuki Akira",
+    "players": 1,
+    "rating": 0.3,
+    "genres": [
+      "Various"
+    ]
+  },
+  {
+    "name": "GP Rider",
     "players": 2,
-    "rating": 0.5
-  },
-  "GG Aleste": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
-      "Shoot'em up / Vertical",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.85
-  },
-  "GG Aleste 3": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em up / Vertical",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.85
-  },
-  "GG Portrait - Pai Chen": {
-    "emulation": {},
-    "genres": [
-      "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
-  },
-  "GG Portrait - Yuuki Akira": {
-    "emulation": {},
-    "genres": [
-      "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
-  },
-  "GP Rider": {
-    "emulation": {},
-    "genres": [
-      "Sports",
-      "Race",
+      "Driving",
       "Driving / Motorcycle",
       "Race",
-      "Driving"
+      "Race",
+      "Sports"
     ],
     "manuals": [
       {
@@ -1784,43 +1741,40 @@
         ],
         "url": "https://segaretro.org/images/d/d4/GP_Rider_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Galaga 2": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em up / Vertical",
-      "Action",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+  {
+    "name": "Galaga 2",
     "players": 1,
-    "rating": 0.65
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
   },
-  "Gamble Panic": {
-    "emulation": {},
+  {
+    "name": "Gamble Panic",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Casino",
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Gambler Jiko Chuushinha": {
-    "emulation": {},
-    "genres": [
-      "Mahjong",
-      "Asiatic board game"
-    ],
-    "manuals": [],
+  {
+    "name": "Gambler Jiko Chuushinha",
     "players": 2,
-    "rating": 0.4
+    "rating": 0.4,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong"
+    ]
   },
-  "Garfield - Caught in the Act": {
-    "emulation": {},
+  {
+    "name": "Garfield - Caught in the Act",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -1831,22 +1785,21 @@
         ],
         "url": "https://segaretro.org/images/6/6c/Garfield_Caught_in_the_Act_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Gear Stadium Heiseiban": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Gear Stadium Heiseiban",
     "players": 2,
-    "rating": 0.55
+    "rating": 0.55,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
   },
-  "Gear Works": {
-    "emulation": {},
+  {
+    "name": "Gear Works",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -1858,16 +1811,16 @@
         ],
         "url": "https://segaretro.org/images/0/02/Gear_Works_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "George Foreman's KO Boxing": {
-    "emulation": {},
+  {
+    "name": "George Foreman's KO Boxing",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
-      "Sports / Boxing",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -1876,12 +1829,12 @@
         ],
         "url": "https://segaretro.org/images/d/da/GFKOB_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Global Gladiators": {
-    "emulation": {},
+  {
+    "name": "Global Gladiators",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -1898,47 +1851,44 @@
         ],
         "url": "https://segaretro.org/images/6/68/Mick_&_Mack_as_the_Global_Gladiators_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Gojira - Kaijuu Daishingeki": {
-    "emulation": {},
+  {
+    "name": "Gojira - Kaijuu Daishingeki",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Greendog - The Beached Surfer Dude!": {
-    "emulation": {},
+  {
+    "name": "Greendog - The Beached Surfer Dude!",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Griffin": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em up / Vertical",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+  {
+    "name": "Griffin",
     "players": 1,
-    "rating": 0.75
-  },
-  "Gunstar Heroes": {
-    "emulation": {},
+    "rating": 0.75,
     "genres": [
-      "Shooter",
-      "Shooter / Run and Gun",
-      "Shoot'em up / Horizontal",
       "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  {
+    "name": "Gunstar Heroes",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
       "Action",
-      "Beat'em Up"
+      "Beat'em Up",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal",
+      "Shooter",
+      "Shooter / Run and Gun"
     ],
     "manuals": [
       {
@@ -1947,15 +1897,15 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/Gunstar Heroes (Japan).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Halley Wars": {
-    "emulation": {},
+  {
+    "name": "Halley Wars",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Shoot'em up / Vertical",
-      "Shoot'em Up"
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
     ],
     "manuals": [
       {
@@ -1970,26 +1920,25 @@
         ],
         "url": "https://segaretro.org/images/d/d4/SpaceBattleGameGearBR.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Head Buster": {
-    "emulation": {},
+  {
+    "name": "Head Buster",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Home Alone": {
-    "emulation": {},
+  {
+    "name": "Home Alone",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Platform",
+      "Action",
       "Adventure",
-      "Action"
+      "Platform"
     ],
     "manuals": [
       {
@@ -1998,23 +1947,22 @@
         ],
         "url": "https://segaretro.org/images/2/26/Home_Alone_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Honoo no Toukyuuji - Dodge Danpei": {
-    "emulation": {},
+  {
+    "name": "Honoo no Toukyuuji - Dodge Danpei",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
+      "Sports",
       "Sports / Dodgeball",
-      "Sports / Volleyball",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+      "Sports / Volleyball"
+    ]
   },
-  "Hook": {
-    "emulation": {},
+  {
+    "name": "Hook",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Platform"
@@ -2026,42 +1974,39 @@
         ],
         "url": "https://segaretro.org/images/b/b0/Hook_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Hurricanes": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Hurricanes",
     "players": 1,
-    "rating": 0.35
-  },
-  "Hyokkori Hyoutan-jima - Hyoutan-jima no Daikoukai": {
-    "emulation": {},
+    "rating": 0.35,
     "genres": [
-      "Board game",
-      "Action"
-    ],
-    "manuals": [],
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "Hyokkori Hyoutan-jima - Hyoutan-jima no Daikoukai",
     "players": 1,
-    "rating": 0.35
-  },
-  "Hyper Pro Yakyuu '92": {
-    "emulation": {},
+    "rating": 0.35,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+      "Action",
+      "Board game"
+    ]
+  },
+  {
+    "name": "Hyper Pro Yakyuu '92",
     "players": 2,
-    "rating": 0.25
+    "rating": 0.25,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
   },
-  "Incredible Crash Dummies, The": {
-    "emulation": {},
+  {
+    "name": "Incredible Crash Dummies, The",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Platform"
     ],
@@ -2072,15 +2017,15 @@
         ],
         "url": "https://segaretro.org/images/6/64/The_Incredible_Crash_Dummies_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Incredible Hulk, The": {
-    "emulation": {},
+  {
+    "name": "Incredible Hulk, The",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -2089,12 +2034,12 @@
         ],
         "url": "https://segaretro.org/images/e/ea/The_Incredible_Hulk_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Indiana Jones and the Last Crusade": {
-    "emulation": {},
+  {
+    "name": "Indiana Jones and the Last Crusade",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -2111,12 +2056,12 @@
         ],
         "url": "https://segaretro.org/images/b/be/Indiana_Jones_and_the_Last_Crusade_GG_BR_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Iron Man X-O Manowar in Heavy Metal": {
-    "emulation": {},
+  {
+    "name": "Iron Man X-O Manowar in Heavy Metal",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Beat'em Up"
     ],
@@ -2127,12 +2072,12 @@
         ],
         "url": "https://segaretro.org/images/c/c3/Iron_Man-_X-O_Manowar_in_Heavy_Metal_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Itchy & Scratchy Game, The": {
-    "emulation": {},
+  {
+    "name": "Itchy & Scratchy Game, The",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Platform"
@@ -2144,15 +2089,15 @@
         ],
         "url": "https://segaretro.org/images/e/e2/TIaSG_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "J.League GG Pro-Striker '94": {
-    "emulation": {},
+  {
+    "name": "J.League GG Pro-Striker '94",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -2161,40 +2106,37 @@
         ],
         "url": "https://segaretro.org/images/4/47/JLeague94_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "J.League Soccer - Dream Eleven": {
-    "emulation": {},
+  {
+    "name": "J.League Soccer - Dream Eleven",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.4
+      "Sports",
+      "Sports / Soccer"
+    ]
   },
-  "James Bond 007 - The Duel": {
-    "emulation": {},
+  {
+    "name": "James Bond 007 - The Duel",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "James Pond 3 - Operation Starfi5h": {
-    "emulation": {},
+  {
+    "name": "James Pond 3 - Operation Starfi5h",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "James Pond II - Codename RoboCod": {
-    "emulation": {},
+  {
+    "name": "James Pond II - Codename RoboCod",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Platform"
     ],
@@ -2205,22 +2147,20 @@
         ],
         "url": "https://segaretro.org/images/b/b2/JamesPondII_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Jang Pung II": {
-    "emulation": {},
-    "genres": [
-      "Fight / 2D",
-      "Fight"
-    ],
-    "manuals": [],
+  {
+    "name": "Jang Pung II",
     "players": 2,
-    "rating": null
+    "genres": [
+      "Fight",
+      "Fight / 2D"
+    ]
   },
-  "Jeopardy!": {
-    "emulation": {},
+  {
+    "name": "Jeopardy!",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Quiz"
     ],
@@ -2231,24 +2171,23 @@
         ],
         "url": "https://segaretro.org/images/d/dc/Jeopardy_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Jeopardy! - Sports Edition": {
-    "emulation": {},
+  {
+    "name": "Jeopardy! - Sports Edition",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Quiz"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Joe Montana Football": {
-    "emulation": {},
+  {
+    "name": "Joe Montana Football",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -2257,12 +2196,12 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/Joe Montana's Football (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Journey from Darkness - Strider Returns": {
-    "emulation": {},
+  {
+    "name": "Journey from Darkness - Strider Returns",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Platform"
     ],
@@ -2273,17 +2212,17 @@
         ],
         "url": "https://segaretro.org/images/0/0a/Strider_II_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Judge Dredd": {
-    "emulation": {},
+  {
+    "name": "Judge Dredd",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Platform",
-      "Platform / Shooter Scrolling",
       "Action",
-      "Beat'em Up"
+      "Beat'em Up",
+      "Platform",
+      "Platform / Shooter Scrolling"
     ],
     "manuals": [
       {
@@ -2292,15 +2231,15 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Judge_Dredd_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Junction": {
-    "emulation": {},
+  {
+    "name": "Junction",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -2309,12 +2248,12 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Junction_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Jungle Book, The": {
-    "emulation": {},
+  {
+    "name": "Jungle Book, The",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Platform"
     ],
@@ -2325,23 +2264,22 @@
         ],
         "url": "https://segaretro.org/images/3/3b/Junglebook_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Jungle Strike": {
-    "emulation": {},
+  {
+    "name": "Jungle Strike",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Shooter",
+      "Action",
       "Shoot'em Up",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+      "Shooter"
+    ]
   },
-  "Jurassic Park": {
-    "emulation": {},
+  {
+    "name": "Jurassic Park",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Adventure"
@@ -2353,16 +2291,16 @@
         ],
         "url": "https://segaretro.org/images/0/02/Jurassicpark_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "KLAX": {
-    "emulation": {},
+  {
+    "name": "KLAX",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -2384,27 +2322,26 @@
         ],
         "url": "https://segaretro.org/images/a/a2/Klax_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Kaitou Saint Tail": {
-    "emulation": {},
+  {
+    "name": "Kaitou Saint Tail",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Kawasaki Superbike Challenge": {
-    "emulation": {},
+  {
+    "name": "Kawasaki Superbike Challenge",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Sports",
-      "Race",
+      "Driving",
       "Driving / Motorcycle",
       "Race",
-      "Driving"
+      "Race",
+      "Sports"
     ],
     "manuals": [
       {
@@ -2413,42 +2350,39 @@
         ],
         "url": "https://segaretro.org/images/8/8f/Kawasaki_Superbike_Challenge_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Kenyuu Densetsu Yaiba": {
-    "emulation": {},
+  {
+    "name": "Kenyuu Densetsu Yaiba",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+      "Action",
+      "Platform"
+    ]
   },
-  "Kinetic Connection": {
-    "emulation": {},
+  {
+    "name": "Kinetic Connection",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Kishin Douji Zenki": {
-    "emulation": {},
+  {
+    "name": "Kishin Douji Zenki",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+      "Action",
+      "Platform"
+    ]
   },
-  "Krusty's Fun House": {
-    "emulation": {},
+  {
+    "name": "Krusty's Fun House",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform",
@@ -2461,32 +2395,30 @@
         ],
         "url": "https://segaretro.org/images/a/a4/KFH_gg_us_manual.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Kuni-chan no Game Tengoku",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Compilation",
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Kuni-chan no Game Tengoku Part 2",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Compilation",
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Land of Illusion Starring Mickey Mouse",
     "players": 1,
-    "rating": 0.7
-  },
-  "Kuni-chan no Game Tengoku": {
-    "emulation": {},
-    "genres": [
-      "Compilation",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
-  },
-  "Kuni-chan no Game Tengoku Part 2": {
-    "emulation": {},
-    "genres": [
-      "Compilation",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.4
-  },
-  "Land of Illusion Starring Mickey Mouse": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
@@ -2517,17 +2449,17 @@
         ],
         "url": "https://segaretro.org/images/2/2d/LandofIllusion_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Last Action Hero": {
-    "emulation": {},
+  {
+    "name": "Last Action Hero",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Platform",
-      "Race",
+      "Action",
       "Driving",
-      "Action"
+      "Platform",
+      "Race"
     ],
     "manuals": [
       {
@@ -2536,12 +2468,12 @@
         ],
         "url": "https://segaretro.org/images/1/10/Last_Action_Hero_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Legend of Illusion Starring Mickey Mouse": {
-    "emulation": {},
+  {
+    "name": "Legend of Illusion Starring Mickey Mouse",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -2559,15 +2491,15 @@
         ],
         "url": "https://segaretro.org/images/e/ef/LegendofIllusion_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Lemmings": {
-    "emulation": {},
+  {
+    "name": "Lemmings",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -2589,22 +2521,21 @@
         ],
         "url": "https://segaretro.org/images/9/90/Lemmings_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Lemmings 2 - The Tribes": {
-    "emulation": {},
-    "genres": [
-      "Strategy",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
+  {
+    "name": "Lemmings 2 - The Tribes",
     "players": 1,
-    "rating": 0.6
+    "rating": 0.6,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ]
   },
-  "Lion King, The": {
-    "emulation": {},
+  {
+    "name": "Lion King, The",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Platform"
     ],
@@ -2621,15 +2552,15 @@
         ],
         "url": "https://segaretro.org/images/5/54/The_Lion_King_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Lost World, The - Jurassic Park": {
-    "emulation": {},
+  {
+    "name": "Lost World, The - Jurassic Park",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -2638,12 +2569,12 @@
         ],
         "url": "https://segaretro.org/images/b/b6/The_Lost_World_Jurassic_Park_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Lucky Dime Caper Starring Donald Duck, The": {
-    "emulation": {},
+  {
+    "name": "Lucky Dime Caper Starring Donald Duck, The",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Platform"
@@ -2674,12 +2605,12 @@
         ],
         "url": "https://segaretro.org/images/3/34/TLDC_GG_BR_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Lunar - Sanposuru Gakuen": {
-    "emulation": {},
+  {
+    "name": "Lunar - Sanposuru Gakuen",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Role playing games"
     ],
@@ -2690,15 +2621,15 @@
         ],
         "url": "https://segaretro.org/images/4/44/Lunar_Gakuen_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "MLBPA Baseball": {
-    "emulation": {},
+  {
+    "name": "MLBPA Baseball",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -2707,27 +2638,26 @@
         ],
         "url": "https://segaretro.org/images/5/55/MLBPA_Baseball_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Madden 96": {
-    "emulation": {},
-    "genres": [
-      "Sports / Football",
-      "Strategy",
-      "Action",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Madden 96",
     "players": 1,
-    "rating": 0.35
-  },
-  "Madden NFL 95": {
-    "emulation": {},
+    "rating": 0.35,
     "genres": [
+      "Action",
+      "Sports",
       "Sports / Football",
-      "Sports"
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Madden NFL 95",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -2736,12 +2666,12 @@
         ],
         "url": "https://segaretro.org/images/f/ff/MaddenNFL95_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Madou Monogatari A - Dokidoki Vacation": {
-    "emulation": {},
+  {
+    "name": "Madou Monogatari A - Dokidoki Vacation",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Role playing games"
     ],
@@ -2752,31 +2682,29 @@
         ],
         "url": "https://segaretro.org/images/a/aa/MMADDV_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Madou Monogatari I - 3-Tsu no Madoukyuu": {
-    "emulation": {},
+  {
+    "name": "Madou Monogatari I - 3-Tsu no Madoukyuu",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Role playing games",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+      "Puzzle-Game",
+      "Role playing games"
+    ]
   },
-  "Madou Monogatari II - Arle 16-Sai": {
-    "emulation": {},
+  {
+    "name": "Madou Monogatari II - Arle 16-Sai",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Madou Monogatari III - Kyuukyoku Joou-sama": {
-    "emulation": {},
+  {
+    "name": "Madou Monogatari III - Kyuukyoku Joou-sama",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Role playing games"
     ],
@@ -2787,12 +2715,12 @@
         ],
         "url": "https://segaretro.org/images/1/1b/MadouMonogatariIII_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Magic Knight Rayearth": {
-    "emulation": {},
+  {
+    "name": "Magic Knight Rayearth",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Adventure",
       "Role playing games"
@@ -2804,12 +2732,12 @@
         ],
         "url": "https://segaretro.org/images/1/1a/MKRayearth_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Magic Knight Rayearth 2 - Making of Magic Knight": {
-    "emulation": {},
+  {
+    "name": "Magic Knight Rayearth 2 - Making of Magic Knight",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Role playing games"
     ],
@@ -2820,12 +2748,12 @@
         ],
         "url": "https://segaretro.org/images/5/5f/MKR2_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Magical Puzzle Popils": {
-    "emulation": {},
+  {
+    "name": "Magical Puzzle Popils",
+    "players": 4,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -2856,24 +2784,23 @@
         ],
         "url": "https://segaretro.org/images/e/e0/Magical_Puzzle_Popils_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.75
+    ]
   },
-  "Magical Taruruuto-kun": {
-    "emulation": {},
+  {
+    "name": "Magical Taruruuto-kun",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Majors, The - Pro Baseball": {
-    "emulation": {},
+  {
+    "name": "Majors, The - Pro Baseball",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -2882,35 +2809,33 @@
         ],
         "url": "https://segaretro.org/images/c/c5/MPB_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Man Overboard!": {
-    "emulation": {},
-    "genres": [
-      "Strategy",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
+  {
+    "name": "Man Overboard!",
     "players": 1,
-    "rating": 0.75
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ]
   },
-  "Mappy": {
-    "emulation": {},
+  {
+    "name": "Mappy",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Action",
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Marble Madness": {
-    "emulation": {},
+  {
+    "name": "Marble Madness",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -2919,12 +2844,12 @@
         ],
         "url": "https://segaretro.org/images/7/7b/Marble_Madness_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Marko's Magic Football": {
-    "emulation": {},
+  {
+    "name": "Marko's Magic Football",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Platform"
@@ -2936,15 +2861,15 @@
         ],
         "url": "https://segaretro.org/images/0/0d/Marko's_Magic_Football_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Master of Darkness": {
-    "emulation": {},
+  {
+    "name": "Master of Darkness",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -2953,12 +2878,12 @@
         ],
         "url": "https://segaretro.org/images/f/f3/Master_of_Darkness_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Mega Man": {
-    "emulation": {},
+  {
+    "name": "Mega Man",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -2970,12 +2895,12 @@
         ],
         "url": "https://segaretro.org/images/d/d5/Mega_Man_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Megami Tensei Gaiden - Last Bible": {
-    "emulation": {},
+  {
+    "name": "Megami Tensei Gaiden - Last Bible",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
     ],
@@ -2986,24 +2911,23 @@
         ],
         "url": "https://segaretro.org/images/6/6d/MegamiTenseiGaiden_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Megami Tensei Gaiden - Last Bible Special": {
-    "emulation": {},
+  {
+    "name": "Megami Tensei Gaiden - Last Bible Special",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Mickey's Ultimate Challenge": {
-    "emulation": {},
+  {
+    "name": "Mickey's Ultimate Challenge",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -3012,15 +2936,15 @@
         ],
         "url": "https://segaretro.org/images/8/80/Mickey's_Ultimate_Challenge_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Micro Machines": {
-    "emulation": {},
+  {
+    "name": "Micro Machines",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -3029,22 +2953,21 @@
         ],
         "url": "https://segaretro.org/images/9/9c/Micro_Machines_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Micro Machines 2 - Turbo Tournament": {
-    "emulation": {},
+  {
+    "name": "Micro Machines 2 - Turbo Tournament",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.85
+      "Driving",
+      "Race"
+    ]
   },
-  "Mighty Morphin Power Rangers": {
-    "emulation": {},
+  {
+    "name": "Mighty Morphin Power Rangers",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -3056,12 +2979,12 @@
         ],
         "url": "https://segaretro.org/images/9/9b/MMPR_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Mighty Morphin Power Rangers - The Movie": {
-    "emulation": {},
+  {
+    "name": "Mighty Morphin Power Rangers - The Movie",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Beat'em Up"
     ],
@@ -3072,12 +2995,12 @@
         ],
         "url": "https://segaretro.org/images/5/55/Mighty_Morphin_Power_Rangers_The_Movie_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Moldorian - Hikari to Yami no Sister": {
-    "emulation": {},
+  {
+    "name": "Moldorian - Hikari to Yami no Sister",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Role playing games"
     ],
@@ -3088,15 +3011,15 @@
         ],
         "url": "https://segaretro.org/images/4/43/MHtYnS_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Monster Truck Wars": {
-    "emulation": {},
+  {
+    "name": "Monster Truck Wars",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -3105,16 +3028,16 @@
         ],
         "url": "https://segaretro.org/images/5/52/Monster_Truck_Wars_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Mortal Kombat": {
-    "emulation": {},
+  {
+    "name": "Mortal Kombat",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Fight / 2D",
       "Action",
-      "Fight"
+      "Fight",
+      "Fight / 2D"
     ],
     "manuals": [
       {
@@ -3123,26 +3046,25 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Mortalkombat_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Mortal Kombat 3": {
-    "emulation": {},
+  {
+    "name": "Mortal Kombat 3",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
-      "Fight / 2D",
       "Action",
-      "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.9
+      "Fight",
+      "Fight / 2D"
+    ]
   },
-  "Mortal Kombat II": {
-    "emulation": {},
+  {
+    "name": "Mortal Kombat II",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Fight / 2D",
-      "Fight"
+      "Fight",
+      "Fight / 2D"
     ],
     "manuals": [
       {
@@ -3151,15 +3073,15 @@
         ],
         "url": "https://segaretro.org/images/a/af/Mortal_Kombat_II_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Ms. Pac-Man": {
-    "emulation": {},
+  {
+    "name": "Ms. Pac-Man",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -3168,15 +3090,15 @@
         ],
         "url": "https://segaretro.org/images/4/41/Ms._Pac-Man_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "NBA Action Starring David Robinson": {
-    "emulation": {},
+  {
+    "name": "NBA Action Starring David Robinson",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -3191,15 +3113,15 @@
         ],
         "url": "https://segaretro.org/images/e/eb/Nbaaction_gg_br_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "NBA Jam": {
-    "emulation": {},
+  {
+    "name": "NBA Jam",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -3208,15 +3130,15 @@
         ],
         "url": "https://segaretro.org/images/9/90/Nbajam_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "NBA Jam - Tournament Edition": {
-    "emulation": {},
+  {
+    "name": "NBA Jam - Tournament Edition",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -3225,15 +3147,15 @@
         ],
         "url": "https://segaretro.org/images/1/15/NBA_Jam_Tournament_Edition_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "NFL '95": {
-    "emulation": {},
+  {
+    "name": "NFL '95",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -3242,15 +3164,15 @@
         ],
         "url": "https://archive.org/download/SEGAGameGearManuals/NFL '95 (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "NFL Quarterback Club": {
-    "emulation": {},
+  {
+    "name": "NFL Quarterback Club",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -3259,15 +3181,15 @@
         ],
         "url": "https://segaretro.org/images/f/f0/Nflqbclub_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "NFL Quarterback Club 96": {
-    "emulation": {},
+  {
+    "name": "NFL Quarterback Club 96",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -3276,15 +3198,15 @@
         ],
         "url": "https://segaretro.org/images/7/77/NFL_Quarterback_Club_96_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "NHL All-Star Hockey": {
-    "emulation": {},
+  {
+    "name": "NHL All-Star Hockey",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -3294,15 +3216,15 @@
         ],
         "url": "https://segaretro.org/images/f/ff/NHL_All-Star_Hockey_GG_CA_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "NHL Hockey": {
-    "emulation": {},
+  {
+    "name": "NHL Hockey",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -3311,12 +3233,12 @@
         ],
         "url": "https://segaretro.org/images/f/fe/NHL_Hockey_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Nazo Puyo": {
-    "emulation": {},
+  {
+    "name": "Nazo Puyo",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
     ],
@@ -3327,15 +3249,15 @@
         ],
         "url": "https://segaretro.org/images/4/45/NazoPuyo_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Nazo Puyo - Arle no Roux": {
-    "emulation": {},
+  {
+    "name": "Nazo Puyo - Arle no Roux",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Role playing games",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -3344,12 +3266,12 @@
         ],
         "url": "https://segaretro.org/images/9/9e/NazoPuyoAnR_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Nazo Puyo 2": {
-    "emulation": {},
+  {
+    "name": "Nazo Puyo 2",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Puzzle-Game"
     ],
@@ -3360,21 +3282,20 @@
         ],
         "url": "https://segaretro.org/images/8/8a/Nazo_Puyo_Puyo_2_Game_Gear_Japan_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Neko Daisuki!": {
-    "emulation": {},
+  {
+    "name": "Neko Daisuki!",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Ninja Gaiden": {
-    "emulation": {},
+  {
+    "name": "Ninja Gaiden",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -3386,54 +3307,49 @@
         ],
         "url": "https://segaretro.org/images/3/37/Ninja_Gaiden_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Ninku": {
-    "emulation": {},
+  {
+    "name": "Ninku",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
+      "Action",
       "Fight",
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+      "Platform"
+    ]
   },
-  "Ninku 2 - Tenkuuryuu e no Michi": {
-    "emulation": {},
+  {
+    "name": "Ninku 2 - Tenkuuryuu e no Michi",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
+      "Action",
       "Fight",
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+      "Platform"
+    ]
   },
-  "Ninku Gaiden - Hiroyuki Daikatsugeki": {
-    "emulation": {},
+  {
+    "name": "Ninku Gaiden - Hiroyuki Daikatsugeki",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
+      "Action",
       "Puzzle-Game",
-      "Strategy",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+      "Strategy"
+    ]
   },
-  "Off the Wall": {
-    "emulation": {},
+  {
+    "name": "Off the Wall",
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": 0.6
+    ]
   },
-  "Olympic Gold": {
-    "emulation": {},
+  {
+    "name": "Olympic Gold",
+    "players": 4,
+    "rating": 0.55,
     "genres": [
       "Sports"
     ],
@@ -3450,25 +3366,24 @@
         ],
         "url": "https://segaretro.org/images/6/6f/Olympic_Gold_GG_BR_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.55
+    ]
   },
-  "Ottifants, The": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Ottifants, The",
     "players": 1,
-    "rating": 0.9
-  },
-  "OutRun": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
-      "Race",
-      "Driving"
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "OutRun",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -3484,15 +3399,15 @@
         ],
         "url": "https://segaretro.org/images/2/20/OutRun_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "OutRun Europa": {
-    "emulation": {},
+  {
+    "name": "OutRun Europa",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -3501,15 +3416,15 @@
         ],
         "url": "https://segaretro.org/images/c/c3/OutRun_Europa_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "PGA Tour 96": {
-    "emulation": {},
+  {
+    "name": "PGA Tour 96",
+    "players": 4,
+    "rating": 0.45,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -3518,25 +3433,24 @@
         ],
         "url": "https://segaretro.org/images/4/45/PGA_Tour_96_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.45
+    ]
   },
-  "PGA Tour Golf": {
-    "emulation": {},
-    "genres": [
-      "Sports / Golf",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "PGA Tour Golf",
     "players": 4,
-    "rating": 0.45
-  },
-  "PGA Tour Golf II": {
-    "emulation": {},
+    "rating": 0.45,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  {
+    "name": "PGA Tour Golf II",
+    "players": 4,
+    "rating": 0.35,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -3545,24 +3459,23 @@
         ],
         "url": "https://segaretro.org/images/c/c3/PGATGII_gg_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.35
+    ]
   },
-  "Pac-Attack": {
-    "emulation": {},
+  {
+    "name": "Pac-Attack",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Pac-Man": {
-    "emulation": {},
+  {
+    "name": "Pac-Man",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -3571,35 +3484,33 @@
         ],
         "url": "https://segaretro.org/images/6/62/Pacman_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Pac-in-Time": {
-    "emulation": {},
+  {
+    "name": "Pac-in-Time",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Panzer Dragoon Mini": {
-    "emulation": {},
+  {
+    "name": "Panzer Dragoon Mini",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Paperboy": {
-    "emulation": {},
+  {
+    "name": "Paperboy",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
+      "Action",
       "Sports",
-      "Sports / Cycling",
-      "Action"
+      "Sports / Cycling"
     ],
     "manuals": [
       {
@@ -3608,16 +3519,16 @@
         ],
         "url": "https://segaretro.org/images/0/00/Paperboy_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Paperboy 2": {
-    "emulation": {},
+  {
+    "name": "Paperboy 2",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
+      "Action",
       "Sports",
-      "Sports / Cycling",
-      "Action"
+      "Sports / Cycling"
     ],
     "manuals": [
       {
@@ -3626,15 +3537,15 @@
         ],
         "url": "https://segaretro.org/images/9/9b/Paperboy_2_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Pengo": {
-    "emulation": {},
+  {
+    "name": "Pengo",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Action / Labyrinth",
       "Action",
+      "Action / Labyrinth",
       "Puzzle-Game"
     ],
     "manuals": [
@@ -3644,24 +3555,23 @@
         ],
         "url": "https://segaretro.org/images/5/5d/Pengo_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Pet Club - Inu Daisuki!": {
-    "emulation": {},
+  {
+    "name": "Pet Club - Inu Daisuki!",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Pete Sampras Tennis": {
-    "emulation": {},
+  {
+    "name": "Pete Sampras Tennis",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Tennis",
-      "Sports"
+      "Sports",
+      "Sports / Tennis"
     ],
     "manuals": [
       {
@@ -3670,15 +3580,15 @@
         ],
         "url": "https://segaretro.org/images/6/62/Pete_Sampras_Tennis_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Phantasy Star Adventure": {
-    "emulation": {},
+  {
+    "name": "Phantasy Star Adventure",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
-      "Role playing games",
-      "Adventure"
+      "Adventure",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -3687,12 +3597,12 @@
         ],
         "url": "https://segaretro.org/images/5/5d/Phantasy_Star_Adventure_Game_Gear_JP_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "Phantasy Star Gaiden": {
-    "emulation": {},
+  {
+    "name": "Phantasy Star Gaiden",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
       "Role playing games"
     ],
@@ -3703,12 +3613,12 @@
         ],
         "url": "https://segaretro.org/images/8/83/Phantasy_Star_Gaiden_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "Phantom 2040": {
-    "emulation": {},
+  {
+    "name": "Phantom 2040",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -3719,12 +3629,12 @@
         ],
         "url": "https://segaretro.org/images/f/f8/Phantom_2040_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Pinball Dreams": {
-    "emulation": {},
+  {
+    "name": "Pinball Dreams",
+    "players": 4,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Pinball"
@@ -3736,25 +3646,24 @@
         ],
         "url": "https://segaretro.org/images/2/23/Pinball_Dreams_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.5
+    ]
   },
-  "Pocket Jansou": {
-    "emulation": {},
-    "genres": [
-      "Mahjong",
-      "Asiatic board game"
-    ],
-    "manuals": [],
+  {
+    "name": "Pocket Jansou",
     "players": 2,
-    "rating": 0.7
-  },
-  "Poker Face Paul's Blackjack": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Casino / Cards",
-      "Casino"
+      "Asiatic board game",
+      "Mahjong"
+    ]
+  },
+  {
+    "name": "Poker Face Paul's Blackjack",
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Casino",
+      "Casino / Cards"
     ],
     "manuals": [
       {
@@ -3763,15 +3672,15 @@
         ],
         "url": "https://segaretro.org/images/6/69/PFPBJ_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Poker Face Paul's Gin": {
-    "emulation": {},
+  {
+    "name": "Poker Face Paul's Gin",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Casino / Cards",
-      "Casino"
+      "Casino",
+      "Casino / Cards"
     ],
     "manuals": [
       {
@@ -3780,15 +3689,15 @@
         ],
         "url": "https://segaretro.org/images/4/42/PFPG_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Poker Face Paul's Poker": {
-    "emulation": {},
+  {
+    "name": "Poker Face Paul's Poker",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Casino / Cards",
-      "Casino"
+      "Casino",
+      "Casino / Cards"
     ],
     "manuals": [
       {
@@ -3797,15 +3706,15 @@
         ],
         "url": "https://segaretro.org/images/9/9c/PFPP_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Poker Face Paul's Solitaire": {
-    "emulation": {},
+  {
+    "name": "Poker Face Paul's Solitaire",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Casino / Cards",
-      "Casino"
+      "Casino",
+      "Casino / Cards"
     ],
     "manuals": [
       {
@@ -3814,12 +3723,12 @@
         ],
         "url": "https://segaretro.org/images/7/75/PFPS_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Pop Breaker": {
-    "emulation": {},
+  {
+    "name": "Pop Breaker",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Puzzle-Game",
       "Shoot'em Up"
@@ -3831,46 +3740,43 @@
         ],
         "url": "https://segaretro.org/images/a/af/PopBreaker_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Popeye no Beach Volleyball": {
-    "emulation": {},
-    "genres": [
-      "Sports / Volleyball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Popeye no Beach Volleyball",
     "players": 2,
-    "rating": 0.7
-  },
-  "Power Drive": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Volleyball"
+    ]
+  },
+  {
+    "name": "Power Drive",
     "players": 4,
-    "rating": 0.55
-  },
-  "Power Strike II": {
-    "emulation": {},
+    "rating": 0.55,
     "genres": [
-      "Shoot'em up / Vertical",
-      "Action",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "Power Strike II",
     "players": 1,
-    "rating": 0.75
-  },
-  "Predator 2": {
-    "emulation": {},
+    "rating": 0.75,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  {
+    "name": "Predator 2",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -3879,12 +3785,12 @@
         ],
         "url": "https://segaretro.org/images/2/2f/Predator_2_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Primal Rage": {
-    "emulation": {},
+  {
+    "name": "Primal Rage",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Fight"
@@ -3896,12 +3802,12 @@
         ],
         "url": "https://segaretro.org/images/8/80/Primal_Rage_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Prince of Persia": {
-    "emulation": {},
+  {
+    "name": "Prince of Persia",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
@@ -3926,25 +3832,24 @@
         ],
         "url": "https://segaretro.org/images/5/52/Prince_of_Persia_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pro Yakyuu '91, The": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Pro Yakyuu '91, The",
     "players": 2,
-    "rating": 0.7
-  },
-  "Pro Yakyuu GG League": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Pro Yakyuu GG League",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -3953,25 +3858,24 @@
         ],
         "url": "https://segaretro.org/images/0/07/ProYakyuuGG_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Pro Yakyuu GG League '94": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Pro Yakyuu GG League '94",
     "players": 2,
-    "rating": 0.3
-  },
-  "Psychic World": {
-    "emulation": {},
+    "rating": 0.3,
     "genres": [
-      "Platform",
-      "Action"
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Psychic World",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -3986,16 +3890,16 @@
         ],
         "url": "https://segaretro.org/images/c/cc/PsychicWorld_GG_BR_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Putt & Putter": {
-    "emulation": {},
+  {
+    "name": "Putt & Putter",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
-      "Sports / Golf",
+      "Puzzle-Game",
       "Sports",
-      "Puzzle-Game"
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -4004,15 +3908,15 @@
         ],
         "url": "https://segaretro.org/images/8/86/Puttputter_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Puyo Puyo": {
-    "emulation": {},
+  {
+    "name": "Puyo Puyo",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4021,12 +3925,12 @@
         ],
         "url": "https://segaretro.org/images/6/6c/PuyoPuyo_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Puyo Puyo Tsuu": {
-    "emulation": {},
+  {
+    "name": "Puyo Puyo Tsuu",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
     ],
@@ -4037,30 +3941,28 @@
         ],
         "url": "https://segaretro.org/images/2/2f/PuyoPuyoTsuu_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Puzzle & Action - Ichidanto-R": {
-    "emulation": {},
+  {
+    "name": "Puzzle & Action - Ichidanto-R",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Puzzle & Action - Tanto-R": {
-    "emulation": {},
+  {
+    "name": "Puzzle & Action - Tanto-R",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Quest for the Shaven Yak Starring Ren Hoek & Stimpy": {
-    "emulation": {},
+  {
+    "name": "Quest for the Shaven Yak Starring Ren Hoek & Stimpy",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -4071,34 +3973,32 @@
         ],
         "url": "https://segaretro.org/images/b/b7/QftSY_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Quiz Gear Fight!!, The": {
-    "emulation": {},
+  {
+    "name": "Quiz Gear Fight!!, The",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Quiz"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "R.B.I. Baseball '94": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "R.B.I. Baseball '94",
     "players": 1,
-    "rating": 0.45
-  },
-  "R.C. Grand Prix": {
-    "emulation": {},
+    "rating": 0.45,
     "genres": [
-      "Race",
-      "Driving"
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "R.C. Grand Prix",
+    "players": 4,
+    "rating": 0.7,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -4107,26 +4007,25 @@
         ],
         "url": "https://segaretro.org/images/c/c0/R.C._Grand_Prix_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "Rastan Saga": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Rastan Saga",
     "players": 1,
-    "rating": 0.7
-  },
-  "Riddick Bowe Boxing": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Sports / Boxing",
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "Riddick Bowe Boxing",
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -4135,12 +4034,12 @@
         ],
         "url": "https://segaretro.org/images/3/34/Riddick_Bowe_Boxing_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Rise of the Robots": {
-    "emulation": {},
+  {
+    "name": "Rise of the Robots",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action",
       "Fight"
@@ -4152,12 +4051,12 @@
         ],
         "url": "https://segaretro.org/images/4/43/Rise_of_the_Robots_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Ristar": {
-    "emulation": {},
+  {
+    "name": "Ristar",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -4175,16 +4074,16 @@
         ],
         "url": "https://segaretro.org/images/7/7d/Ristar_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Road Rash": {
-    "emulation": {},
+  {
+    "name": "Road Rash",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action",
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -4193,16 +4092,16 @@
         ],
         "url": "https://segaretro.org/images/d/d1/Roadrash_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "RoboCop 3": {
-    "emulation": {},
+  {
+    "name": "RoboCop 3",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Platform / Shooter Scrolling",
+      "Action",
       "Platform",
-      "Action"
+      "Platform / Shooter Scrolling"
     ],
     "manuals": [
       {
@@ -4211,15 +4110,15 @@
         ],
         "url": "https://segaretro.org/images/0/0a/RoboCop_3_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "RoboCop versus The Terminator": {
-    "emulation": {},
+  {
+    "name": "RoboCop versus The Terminator",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Platform / Shooter Scrolling",
       "Platform",
+      "Platform / Shooter Scrolling",
       "Shooter"
     ],
     "manuals": [
@@ -4229,35 +4128,33 @@
         ],
         "url": "https://segaretro.org/images/c/c3/RoboCop_vs._The_Terminator_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Royal Stone - Hirakareshi Toki no Tobira": {
-    "emulation": {},
+  {
+    "name": "Royal Stone - Hirakareshi Toki no Tobira",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Strategy",
-      "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+      "Role playing games",
+      "Strategy"
+    ]
   },
-  "SD Gundam - Winner's History": {
-    "emulation": {},
+  {
+    "name": "SD Gundam - Winner's History",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Samurai Shodown": {
-    "emulation": {},
+  {
+    "name": "Samurai Shodown",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Fight / 2D",
       "Action",
-      "Fight"
+      "Fight",
+      "Fight / 2D"
     ],
     "manuals": [
       {
@@ -4266,15 +4163,15 @@
         ],
         "url": "https://segaretro.org/images/0/05/Samurai_Shodown_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Scratch Golf": {
-    "emulation": {},
+  {
+    "name": "Scratch Golf",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -4283,17 +4180,17 @@
         ],
         "url": "https://segaretro.org/images/a/a8/Scratch_Golf_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Sega Game Pack 4 in 1": {
-    "emulation": {},
+  {
+    "name": "Sega Game Pack 4 in 1",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Sports",
-      "Race",
+      "Compilation",
       "Driving",
-      "Compilation"
+      "Race",
+      "Sports"
     ],
     "manuals": [
       {
@@ -4302,36 +4199,34 @@
         ],
         "url": "https://segaretro.org/images/b/ba/Sega_Game_Pack_4_in_1_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Sensible Soccer - European Champions": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Sensible Soccer - European Champions",
     "players": 1,
-    "rating": 0.6
-  },
-  "Shanghai II": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
-      "Mahjong",
-      "Asiatic board game",
-      "Puzzle-Game"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Shanghai II",
     "players": 2,
-    "rating": 0.5
-  },
-  "Shaq Fu": {
-    "emulation": {},
+    "rating": 0.5,
     "genres": [
-      "Fight / 2D",
-      "Fight"
+      "Asiatic board game",
+      "Mahjong",
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Shaq Fu",
+    "players": 1,
+    "rating": 0.25,
+    "genres": [
+      "Fight",
+      "Fight / 2D"
     ],
     "manuals": [
       {
@@ -4340,12 +4235,12 @@
         ],
         "url": "https://segaretro.org/images/f/f8/Shaq_Fu_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.25
+    ]
   },
-  "Shikinjou": {
-    "emulation": {},
+  {
+    "name": "Shikinjou",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Asiatic board game",
       "Puzzle-Game"
@@ -4357,15 +4252,15 @@
         ],
         "url": "https://segaretro.org/images/a/ab/Shikinjoh_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Shining Force - The Sword of Hajya": {
-    "emulation": {},
+  {
+    "name": "Shining Force - The Sword of Hajya",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4380,16 +4275,16 @@
         ],
         "url": "https://segaretro.org/images/0/00/SFTSoH_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Shining Force Gaiden - Ensei, Jashin no Kuni e": {
-    "emulation": {},
+  {
+    "name": "Shining Force Gaiden - Ensei, Jashin no Kuni e",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
+      "Adventure",
       "Role playing games",
-      "Adventure"
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4398,15 +4293,15 @@
         ],
         "url": "https://segaretro.org/images/4/4a/SFGaiden1_GG_JP_Manual_Meisaku.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Shining Force Gaiden - Final Conflict": {
-    "emulation": {},
+  {
+    "name": "Shining Force Gaiden - Final Conflict",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4415,12 +4310,12 @@
         ],
         "url": "https://segaretro.org/images/a/a7/SFGFC_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Shinobi": {
-    "emulation": {},
+  {
+    "name": "Shinobi",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action",
       "Platform"
@@ -4438,12 +4333,12 @@
         ],
         "url": "https://segaretro.org/images/0/0a/Shinobi_gg_br_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Shinobi II - The Silent Fury": {
-    "emulation": {},
+  {
+    "name": "Shinobi II - The Silent Fury",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Platform"
     ],
@@ -4454,16 +4349,16 @@
         ],
         "url": "https://segaretro.org/images/e/e4/Shinobi_II_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Side Pocket": {
-    "emulation": {},
+  {
+    "name": "Side Pocket",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Sports / Pool",
+      "Simulation",
       "Sports",
-      "Simulation"
+      "Sports / Pool"
     ],
     "manuals": [
       {
@@ -4472,12 +4367,12 @@
         ],
         "url": "https://segaretro.org/images/8/8e/Side_Pocket_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Simpsons, The - Bart vs. the Space Mutants": {
-    "emulation": {},
+  {
+    "name": "Simpsons, The - Bart vs. the Space Mutants",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Platform"
     ],
@@ -4488,12 +4383,12 @@
         ],
         "url": "https://segaretro.org/images/f/fc/BvtSM_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Simpsons, The - Bart vs. the World": {
-    "emulation": {},
+  {
+    "name": "Simpsons, The - Bart vs. the World",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -4504,12 +4399,12 @@
         ],
         "url": "https://segaretro.org/images/3/35/The_Simpsons_Bart_vs._the_World_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Simpsons, The - Bartman Meets Radioactive Man": {
-    "emulation": {},
+  {
+    "name": "Simpsons, The - Bartman Meets Radioactive Man",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Platform"
     ],
@@ -4520,12 +4415,12 @@
         ],
         "url": "https://segaretro.org/images/4/42/The_Simpsons_Bart_Meets_Radioactive_Man_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Slider": {
-    "emulation": {},
+  {
+    "name": "Slider",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Action",
       "Puzzle-Game"
@@ -4543,37 +4438,35 @@
         ],
         "url": "https://segaretro.org/images/2/2d/Slider_Game_Gear_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Smurfs Travel the World, The": {
-    "emulation": {},
+  {
+    "name": "Smurfs Travel the World, The",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Smurfs, The": {
-    "emulation": {},
+  {
+    "name": "Smurfs, The",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Solitaire FunPak": {
-    "emulation": {},
+  {
+    "name": "Solitaire FunPak",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
+      "Board game",
       "Casino",
       "Casino / Cards",
       "Compilation",
-      "Strategy",
-      "Board game",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -4582,12 +4475,12 @@
         ],
         "url": "https://segaretro.org/images/2/29/Solitaire_FunPak_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Solitaire Poker": {
-    "emulation": {},
+  {
+    "name": "Solitaire Poker",
+    "players": 2,
+    "rating": 0.95,
     "genres": [
       "Casino",
       "Casino / Cards"
@@ -4599,12 +4492,12 @@
         ],
         "url": "https://segaretro.org/images/a/aa/Solitairepoker_gg_us_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.95
+    ]
   },
-  "Sonic Blast": {
-    "emulation": {},
+  {
+    "name": "Sonic Blast",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -4622,12 +4515,12 @@
         ],
         "url": "http://info.sonicretro.org/images/1/19/SonicBlast_GG_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Sonic Chaos": {
-    "emulation": {},
+  {
+    "name": "Sonic Chaos",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Platform"
     ],
@@ -4644,16 +4537,16 @@
         ],
         "url": "http://info.sonicretro.org/images/8/8b/Sonic_Chaos_Game_Gear_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Sonic Drift": {
-    "emulation": {},
+  {
+    "name": "Sonic Drift",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action",
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -4662,16 +4555,16 @@
         ],
         "url": "http://info.sonicretro.org/images/8/84/SonicDrift_GG_JP_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Sonic Drift 2": {
-    "emulation": {},
+  {
+    "name": "Sonic Drift 2",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action",
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -4698,16 +4591,16 @@
         ],
         "url": "http://info.sonicretro.org/images/4/47/SonicDrift2_GG_JP_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Sonic Labyrinth": {
-    "emulation": {},
+  {
+    "name": "Sonic Labyrinth",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
+      "Action",
       "Action / Labyrinth",
-      "Platform",
-      "Action"
+      "Platform"
     ],
     "manuals": [
       {
@@ -4734,12 +4627,12 @@
         ],
         "url": "http://info.sonicretro.org/images/4/44/SonicLabyrinth_GG_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Sonic Spinball": {
-    "emulation": {},
+  {
+    "name": "Sonic Spinball",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Pinball"
     ],
@@ -4763,12 +4656,12 @@
         ],
         "url": "http://info.sonicretro.org/images/d/d6/SonicSpinball_GG_EU_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Sonic The Hedgehog": {
-    "emulation": {},
+  {
+    "name": "Sonic The Hedgehog",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -4800,12 +4693,12 @@
         ],
         "url": "http://info.sonicretro.org/images/7/74/Sonic1_GG_BR_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Sonic The Hedgehog - Triple Trouble": {
-    "emulation": {},
+  {
+    "name": "Sonic The Hedgehog - Triple Trouble",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Platform"
     ],
@@ -4822,12 +4715,12 @@
         ],
         "url": "http://info.sonicretro.org/images/7/71/SonicTripleTrouble_GG_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Sonic The Hedgehog 2": {
-    "emulation": {},
+  {
+    "name": "Sonic The Hedgehog 2",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
@@ -4864,21 +4757,20 @@
         ],
         "url": "http://info.sonicretro.org/images/3/3f/Sonic2_GG_PT_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Soukoban": {
-    "emulation": {},
+  {
+    "name": "Soukoban",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Space Harrier": {
-    "emulation": {},
+  {
+    "name": "Space Harrier",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Lightgun Shooter",
@@ -4897,12 +4789,12 @@
         ],
         "url": "https://segaretro.org/images/4/4a/Spaceharrier_gg_br_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Spider-Man": {
-    "emulation": {},
+  {
+    "name": "Spider-Man",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Platform"
     ],
@@ -4913,12 +4805,12 @@
         ],
         "url": "https://segaretro.org/images/a/a7/Spiderman_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Spider-Man - Return of the Sinister Six": {
-    "emulation": {},
+  {
+    "name": "Spider-Man - Return of the Sinister Six",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Platform"
     ],
@@ -4929,15 +4821,15 @@
         ],
         "url": "https://segaretro.org/images/f/f1/Spider-Man_Return_of_the_Sinister_Six_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Spider-Man - X-Men - Arcade's Revenge": {
-    "emulation": {},
+  {
+    "name": "Spider-Man - X-Men - Arcade's Revenge",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Platform",
-      "Beat'em Up"
+      "Beat'em Up",
+      "Platform"
     ],
     "manuals": [
       {
@@ -4946,25 +4838,24 @@
         ],
         "url": "https://segaretro.org/images/e/e9/SMatXMiAR_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Spirou": {
-    "emulation": {},
+  {
+    "name": "Spirou",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Sports Illustrated - Championship Football & Baseball": {
-    "emulation": {},
+  {
+    "name": "Sports Illustrated - Championship Football & Baseball",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
+      "Sports",
       "Sports / Baseball",
-      "Sports / Football",
-      "Sports"
+      "Sports / Football"
     ],
     "manuals": [
       {
@@ -4973,21 +4864,20 @@
         ],
         "url": "https://segaretro.org/images/0/01/Sports_Illustrated_Championship_Football_&_Baseball_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Sports Trivia": {
-    "emulation": {},
+  {
+    "name": "Sports Trivia",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Quiz"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Sports Trivia - Championship Edition": {
-    "emulation": {},
+  {
+    "name": "Sports Trivia - Championship Edition",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Quiz"
     ],
@@ -4998,12 +4888,12 @@
         ],
         "url": "https://segaretro.org/images/6/6c/Sports_Trivia_Championship_Edition_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Star Trek - The Next Generation - The Advanced Holodeck Tutorial": {
-    "emulation": {},
+  {
+    "name": "Star Trek - The Next Generation - The Advanced Holodeck Tutorial",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Simulation"
     ],
@@ -5014,12 +4904,12 @@
         ],
         "url": "https://segaretro.org/images/5/5b/Star_Trek_The_Next_Generation_The_Advanced_Holodeck_Tutorial_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Star Trek Generations - Beyond the Nexus": {
-    "emulation": {},
+  {
+    "name": "Star Trek Generations - Beyond the Nexus",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Shooter",
       "Strategy"
@@ -5031,12 +4921,12 @@
         ],
         "url": "https://segaretro.org/images/6/6c/Star_Trek_Generations_Beyond_the_Nexus_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Star Wars": {
-    "emulation": {},
+  {
+    "name": "Star Wars",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Platform"
@@ -5048,12 +4938,12 @@
         ],
         "url": "https://segaretro.org/images/3/38/Star_Wars_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Stargate": {
-    "emulation": {},
+  {
+    "name": "Stargate",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -5065,21 +4955,19 @@
         ],
         "url": "https://segaretro.org/images/4/4b/Stargate_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Street Hero": {
-    "emulation": {},
+  {
+    "name": "Street Hero",
+    "players": 1,
     "genres": [
       "Beat'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Streets of Rage": {
-    "emulation": {},
+  {
+    "name": "Streets of Rage",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -5097,12 +4985,12 @@
         ],
         "url": "https://segaretro.org/images/1/1f/Bare_Knuckle_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Streets of Rage 2": {
-    "emulation": {},
+  {
+    "name": "Streets of Rage 2",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Beat'em Up"
@@ -5127,25 +5015,24 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Streets_of_Rage_II_GG_EU_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Striker": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Striker",
     "players": 2,
-    "rating": 0.7
-  },
-  "Super Battletank": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Simulation",
-      "Action"
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Super Battletank",
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
+      "Action",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -5154,15 +5041,15 @@
         ],
         "url": "https://segaretro.org/images/0/01/Super_Battletank_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Super Columns": {
-    "emulation": {},
+  {
+    "name": "Super Columns",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Puzzle-Game / Fall",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Puzzle-Game / Fall"
     ],
     "manuals": [
       {
@@ -5171,15 +5058,15 @@
         ],
         "url": "https://segaretro.org/images/d/d7/Supercolumns_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Super Golf": {
-    "emulation": {},
+  {
+    "name": "Super Golf",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -5188,34 +5075,32 @@
         ],
         "url": "https://segaretro.org/images/3/3a/Super_Golf_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "Super Kick Off": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Super Kick Off",
     "players": 1,
-    "rating": 0.65
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
   },
-  "Super Momotarou Dentetsu III": {
-    "emulation": {},
+  {
+    "name": "Super Momotarou Dentetsu III",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Super Monaco GP": {
-    "emulation": {},
+  {
+    "name": "Super Monaco GP",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -5236,17 +5121,17 @@
         ],
         "url": "https://segaretro.org/images/0/07/Supermonacogp_gg_br_manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Super Off Road": {
-    "emulation": {},
+  {
+    "name": "Super Off Road",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
-      "Race",
+      "Driving",
       "Driving / Motorcycle",
       "Race",
-      "Driving"
+      "Race"
     ],
     "manuals": [
       {
@@ -5255,17 +5140,17 @@
         ],
         "url": "https://segaretro.org/images/1/18/Super_Off_Road_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Super Smash T.V.": {
-    "emulation": {},
+  {
+    "name": "Super Smash T.V.",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Shooter",
-      "Shoot'em up / Vertical",
+      "Action",
       "Shoot'em Up",
-      "Action"
+      "Shoot'em up / Vertical",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -5274,17 +5159,17 @@
         ],
         "url": "https://segaretro.org/images/e/e8/Smash_T.V._GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Super Space Invaders": {
-    "emulation": {},
+  {
+    "name": "Super Space Invaders",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Shooter",
-      "Shooter / Space Invaders Like",
+      "Shoot'em Up",
       "Shoot'em up / Vertical",
-      "Shoot'em Up"
+      "Shooter",
+      "Shooter / Space Invaders Like"
     ],
     "manuals": [
       {
@@ -5293,12 +5178,12 @@
         ],
         "url": "https://segaretro.org/images/d/dd/Super_Space_Invaders_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Super Star Wars - Return of the Jedi": {
-    "emulation": {},
+  {
+    "name": "Super Star Wars - Return of the Jedi",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
     ],
@@ -5309,25 +5194,24 @@
         ],
         "url": "https://segaretro.org/images/b/b4/Super_Star_Wars_Return_of_the_Jedi_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Superman - The Man of Steel": {
-    "emulation": {},
+  {
+    "name": "Superman - The Man of Steel",
+    "players": 1,
+    "rating": 0.25,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.25
+    ]
   },
-  "Surf Ninjas": {
-    "emulation": {},
+  {
+    "name": "Surf Ninjas",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
+      "Action",
       "Platform",
-      "Platform / Fighter Scrolling",
-      "Action"
+      "Platform / Fighter Scrolling"
     ],
     "manuals": [
       {
@@ -5336,25 +5220,24 @@
         ],
         "url": "https://segaretro.org/images/5/57/Surfninjas_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Sylvan Tale": {
-    "emulation": {},
-    "genres": [
-      "Role playing games",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Sylvan Tale",
     "players": 1,
-    "rating": 0.7
-  },
-  "T2 - The Arcade Game": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Shooter",
-      "Lightgun Shooter"
+      "Action",
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "T2 - The Arcade Game",
+    "players": 1,
+    "rating": 0.35,
+    "genres": [
+      "Lightgun Shooter",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -5363,15 +5246,15 @@
         ],
         "url": "https://segaretro.org/images/b/be/T2tAG_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Tails Adventure": {
-    "emulation": {},
+  {
+    "name": "Tails Adventure",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Role playing games",
-      "Platform"
+      "Platform",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -5393,16 +5276,16 @@
         ],
         "url": "http://info.sonicretro.org/images/f/fe/TA_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Tails no Skypatrol": {
-    "emulation": {},
+  {
+    "name": "Tails no Skypatrol",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Shoot'em Up",
       "Action",
-      "Platform"
+      "Platform",
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -5411,42 +5294,39 @@
         ],
         "url": "http://info.sonicretro.org/images/d/d1/TailsSkypatrol_GG_JP_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Taisen Mahjong HaoPai": {
-    "emulation": {},
-    "genres": [
-      "Mahjong",
-      "Asiatic board game"
-    ],
-    "manuals": [],
+  {
+    "name": "Taisen Mahjong HaoPai",
     "players": 2,
-    "rating": 0.8
-  },
-  "Taisen Mahjong HaoPai 2": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
-      "Mahjong",
-      "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
+      "Asiatic board game",
+      "Mahjong"
+    ]
   },
-  "Taisen-gata Daisenryaku G": {
-    "emulation": {},
+  {
+    "name": "Taisen Mahjong HaoPai 2",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong"
+    ]
+  },
+  {
+    "name": "Taisen-gata Daisenryaku G",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "TaleSpin": {
-    "emulation": {},
+  {
+    "name": "TaleSpin",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -5457,22 +5337,21 @@
         ],
         "url": "https://segaretro.org/images/3/3f/TaleSpin_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Tama & Friends - 3 Choume Kouen Tamalympic": {
-    "emulation": {},
+  {
+    "name": "Tama & Friends - 3 Choume Kouen Tamalympic",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Casual Game",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+      "Action",
+      "Casual Game"
+    ]
   },
-  "Tarot no Yakata": {
-    "emulation": {},
+  {
+    "name": "Tarot no Yakata",
+    "players": 1,
+    "rating": 0.15,
     "genres": [
       "Puzzle-Game"
     ],
@@ -5483,45 +5362,42 @@
         ],
         "url": "https://segaretro.org/images/e/ee/HouseofTarot_GG_JP_Manual.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Tarzan - Lord of the Jungle",
     "players": 1,
-    "rating": 0.15
-  },
-  "Tarzan - Lord of the Jungle": {
-    "emulation": {},
-    "genres": [
-      "Platform",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.1
-  },
-  "Tatakae! Pro Yakyuu Twin League": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.15
-  },
-  "Taz in Escape from Mars": {
-    "emulation": {},
+    "rating": 0.1,
     "genres": [
       "Action",
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Taz-Mania": {
-    "emulation": {},
+  {
+    "name": "Tatakae! Pro Yakyuu Twin League",
+    "players": 2,
+    "rating": 0.15,
     "genres": [
-      "Platform",
-      "Action"
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Taz in Escape from Mars",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "Taz-Mania",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -5549,15 +5425,15 @@
         ],
         "url": "https://segaretro.org/images/8/8c/Tazmania_gg_br_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Tempo Jr.": {
-    "emulation": {},
+  {
+    "name": "Tempo Jr.",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -5566,15 +5442,15 @@
         ],
         "url": "https://segaretro.org/images/b/b1/Tempo_Jr._GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Tengen World Cup Soccer": {
-    "emulation": {},
+  {
+    "name": "Tengen World Cup Soccer",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -5583,12 +5459,12 @@
         ],
         "url": "https://segaretro.org/images/9/91/World_Cup_Soccer(Tengen)_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "Terminator 2 - Judgment Day": {
-    "emulation": {},
+  {
+    "name": "Terminator 2 - Judgment Day",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Beat'em Up"
     ],
@@ -5599,16 +5475,16 @@
         ],
         "url": "https://segaretro.org/images/4/4d/Terminator_2_Judgment_Day_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Terminator, The": {
-    "emulation": {},
+  {
+    "name": "Terminator, The",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
+      "Action",
       "Platform",
-      "Platform / Shooter Scrolling",
-      "Action"
+      "Platform / Shooter Scrolling"
     ],
     "manuals": [
       {
@@ -5617,12 +5493,12 @@
         ],
         "url": "https://segaretro.org/images/9/9c/The_Terminator_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Tesserae": {
-    "emulation": {},
+  {
+    "name": "Tesserae",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -5634,21 +5510,20 @@
         ],
         "url": "https://segaretro.org/images/5/51/Tesserae_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Tintin in Tibet": {
-    "emulation": {},
+  {
+    "name": "Tintin in Tibet",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Tom and Jerry - The Movie": {
-    "emulation": {},
+  {
+    "name": "Tom and Jerry - The Movie",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Platform"
     ],
@@ -5659,24 +5534,23 @@
         ],
         "url": "https://segaretro.org/images/2/29/Tomjerry_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Torarete Tamaruka": {
-    "emulation": {},
+  {
+    "name": "Torarete Tamaruka",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "True Lies": {
-    "emulation": {},
+  {
+    "name": "True Lies",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -5685,48 +5559,45 @@
         ],
         "url": "https://segaretro.org/images/8/8d/True_Lies_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Ultimate Soccer": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Ultimate Soccer",
     "players": 2,
-    "rating": 0.65
-  },
-  "Urban Strike": {
-    "emulation": {},
+    "rating": 0.65,
     "genres": [
-      "Shooter",
-      "Action",
-      "Shoot'em Up"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Urban Strike",
     "players": 1,
-    "rating": 0.9
-  },
-  "VR Troopers": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
-      "Fight / 2D",
+      "Action",
+      "Shoot'em Up",
+      "Shooter"
+    ]
+  },
+  {
+    "name": "VR Troopers",
+    "players": 1,
+    "rating": 0.35,
+    "genres": [
+      "Action",
       "Fight",
-      "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.35
+      "Fight / 2D"
+    ]
   },
-  "Virtua Fighter Animation": {
-    "emulation": {},
+  {
+    "name": "Virtua Fighter Animation",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Fight / 2D",
       "Action",
-      "Fight"
+      "Fight",
+      "Fight / 2D"
     ],
     "manuals": [
       {
@@ -5735,18 +5606,18 @@
         ],
         "url": "https://segaretro.org/images/2/21/Virtua_Fighter_Animation_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "WWF Raw": {
-    "emulation": {},
+  {
+    "name": "WWF Raw",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
-      "Sports / Wrestling",
-      "Sports / Fighting",
+      "Action",
       "Fight",
       "Sports",
-      "Action"
+      "Sports / Fighting",
+      "Sports / Wrestling"
     ],
     "manuals": [
       {
@@ -5755,17 +5626,17 @@
         ],
         "url": "https://segaretro.org/images/4/43/WWF_Raw_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "WWF Wrestlemania - Steel Cage Challenge": {
-    "emulation": {},
+  {
+    "name": "WWF Wrestlemania - Steel Cage Challenge",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Sports / Wrestling",
-      "Sports / Fighting",
+      "Fight",
       "Sports",
-      "Fight"
+      "Sports / Fighting",
+      "Sports / Wrestling"
     ],
     "manuals": [
       {
@@ -5774,12 +5645,12 @@
         ],
         "url": "https://segaretro.org/images/6/65/WWFWSCC_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
+    ]
   },
-  "Wagyan Land": {
-    "emulation": {},
+  {
+    "name": "Wagyan Land",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Platform"
     ],
@@ -5790,12 +5661,12 @@
         ],
         "url": "https://segaretro.org/images/b/bf/Wagyan_Land_Game_Gear_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Wheel of Fortune": {
-    "emulation": {},
+  {
+    "name": "Wheel of Fortune",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Quiz"
     ],
@@ -5806,24 +5677,22 @@
         ],
         "url": "https://segaretro.org/images/a/aa/Wheel_of_Fortune_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "WildSnake": {
-    "emulation": {},
+  {
+    "name": "WildSnake",
+    "players": 1,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Wimbledon": {
-    "emulation": {},
+  {
+    "name": "Wimbledon",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Tennis",
-      "Sports"
+      "Sports",
+      "Sports / Tennis"
     ],
     "manuals": [
       {
@@ -5832,12 +5701,12 @@
         ],
         "url": "https://segaretro.org/images/e/e0/Wimbledon_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Winter Olympics": {
-    "emulation": {},
+  {
+    "name": "Winter Olympics",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Sports"
     ],
@@ -5848,31 +5717,29 @@
         ],
         "url": "https://segaretro.org/images/2/25/Winter_Olympics_GG_US_Manual.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Wizard Pinball": {
-    "emulation": {},
+  {
+    "name": "Wizard Pinball",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Pinball"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Wolfchild": {
-    "emulation": {},
+  {
+    "name": "Wolfchild",
+    "players": 2,
+    "rating": 0.95,
     "genres": [
       "Action",
       "Platform"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.95
+    ]
   },
-  "Wonder Boy": {
-    "emulation": {},
+  {
+    "name": "Wonder Boy",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Platform"
@@ -5890,12 +5757,12 @@
         ],
         "url": "https://segaretro.org/images/c/ce/Wonderboy_gg_br_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Wonder Boy - The Dragon's Trap": {
-    "emulation": {},
+  {
+    "name": "Wonder Boy - The Dragon's Trap",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure",
       "Platform"
@@ -5913,15 +5780,15 @@
         ],
         "url": "https://segaretro.org/images/e/e8/Wonderboy_III_Dragon_Trap_Game_Gear_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Woody Pop": {
-    "emulation": {},
+  {
+    "name": "Woody Pop",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Action / Breakout games",
-      "Action"
+      "Action",
+      "Action / Breakout games"
     ],
     "manuals": [
       {
@@ -5949,15 +5816,15 @@
         ],
         "url": "https://segaretro.org/images/4/43/WoodyPop_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "World Class Leaderboard": {
-    "emulation": {},
+  {
+    "name": "World Class Leaderboard",
+    "players": 4,
+    "rating": 0.75,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -5966,15 +5833,15 @@
         ],
         "url": "https://segaretro.org/images/5/55/Wclb_gg_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.75
+    ]
   },
-  "World Cup USA 94": {
-    "emulation": {},
+  {
+    "name": "World Cup USA 94",
+    "players": 4,
+    "rating": 0.65,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -5983,26 +5850,25 @@
         ],
         "url": "https://segaretro.org/images/c/c5/Worldcup94_gg_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.65
+    ]
   },
-  "World Derby": {
-    "emulation": {},
+  {
+    "name": "World Derby",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
+      "Casino",
       "Horses race",
-      "Sports with Animals",
-      "Casino"
-    ],
-    "manuals": [],
-    "players": 4,
-    "rating": 0.6
+      "Sports with Animals"
+    ]
   },
-  "World Series Baseball": {
-    "emulation": {},
+  {
+    "name": "World Series Baseball",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -6011,15 +5877,15 @@
         ],
         "url": "https://segaretro.org/images/d/dd/WSB_gg_us_manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "World Series Baseball '95": {
-    "emulation": {},
+  {
+    "name": "World Series Baseball '95",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -6028,12 +5894,12 @@
         ],
         "url": "https://segaretro.org/images/6/67/World_Series_Baseball_'95_GG_US_Manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "X-Men": {
-    "emulation": {},
+  {
+    "name": "X-Men",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
@@ -6045,21 +5911,20 @@
         ],
         "url": "https://segaretro.org/images/0/02/Xmen_gg_us_manual.pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "X-Men - Gamemaster's Legacy": {
-    "emulation": {},
+  {
+    "name": "X-Men - Gamemaster's Legacy",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "X-Men - Mojo World": {
-    "emulation": {},
+  {
+    "name": "X-Men - Mojo World",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Platform"
@@ -6071,31 +5936,26 @@
         ],
         "url": "https://segaretro.org/images/a/aa/XMMW_gg_us_manual.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "X-Terminator"
+  },
+  {
+    "name": "Yogi Bear in Yogi Bear's Goldrush",
     "players": 1,
-    "rating": 0.65
-  },
-  "X-Terminator": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Yogi Bear in Yogi Bear's Goldrush": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Yu Yu Hakusho - Horobishimono no Gyakushuu": {
-    "emulation": {},
+  {
+    "name": "Yu Yu Hakusho - Horobishimono no Gyakushuu",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Beat'em Up",
-      "Action"
+      "Action",
+      "Beat'em Up"
     ],
     "manuals": [
       {
@@ -6104,31 +5964,29 @@
         ],
         "url": "https://segaretro.org/images/8/82/YYH_GG_JP_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Yu Yu Hakusho II - Gekitou! Nanakyou no Tatakai": {
-    "emulation": {},
-    "genres": [
-      "Fight",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Yu Yu Hakusho II - Gekitou! Nanakyou no Tatakai",
     "players": 2,
-    "rating": 0.55
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
   },
-  "Zan Gear": {
-    "emulation": {},
+  {
+    "name": "Zan Gear",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Zool - Ninja of the 'Nth' Dimension": {
-    "emulation": {},
+  {
+    "name": "Zool - Ninja of the 'Nth' Dimension",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Platform"
@@ -6140,17 +5998,14 @@
         ],
         "url": "https://segaretro.org/images/2/2d/Zool_GG_US_Manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Zoop": {
-    "emulation": {},
+  {
+    "name": "Zoop",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   }
-}
+]

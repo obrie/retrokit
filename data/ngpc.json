@@ -1,9 +1,11 @@
-{
-  "Baseball Stars Color - Pocket Sports Series": {
-    "emulation": {},
+[
+  {
+    "name": "Baseball Stars Color - Pocket Sports Series",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -12,15 +14,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/baseball_stars_color-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Big Bang Pro Wrestling": {
-    "emulation": {},
+  {
+    "name": "Big Bang Pro Wrestling",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Sports / Wrestling",
-      "Sports"
+      "Sports",
+      "Sports / Wrestling"
     ],
     "manuals": [
       {
@@ -29,22 +31,21 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/big_bang_pro_wrestling-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Bikkuriman 2000 - Viva! Pocket Festival!": {
-    "emulation": {},
-    "genres": [
-      "Adventure",
-      "Action"
-    ],
-    "manuals": [],
+  {
+    "name": "Bikkuriman 2000 - Viva! Pocket Festival!",
     "players": 1,
-    "rating": 0.75
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
   },
-  "Biomotor Unitron": {
-    "emulation": {},
+  {
+    "name": "Biomotor Unitron",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
     ],
@@ -55,15 +56,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/biomotor_unitron-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Cool Boarders Pocket": {
-    "emulation": {},
+  {
+    "name": "Cool Boarders Pocket",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Sports / Skiing",
-      "Sports"
+      "Sports",
+      "Sports / Skiing"
     ],
     "manuals": [
       {
@@ -72,25 +73,24 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/cool_boarders-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Cool Cool Jam": {
-    "emulation": {},
+  {
+    "name": "Cool Cool Jam",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Music and Dance",
       "Rhythm"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Crush Roller": {
-    "emulation": {},
+  {
+    "name": "Crush Roller",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -99,15 +99,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/crush_roller-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Dark Arms - Beast Buster 1999": {
-    "emulation": {},
+  {
+    "name": "Dark Arms - Beast Buster 1999",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Role playing games",
-      "Action"
+      "Action",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -122,12 +122,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/dark_arms-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Delta Warp": {
-    "emulation": {},
+  {
+    "name": "Delta Warp",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ],
@@ -138,15 +138,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/delta_warp-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Densetsu no Ogre Battle Gaiden - Zenobia no Ouji": {
-    "emulation": {},
+  {
+    "name": "Densetsu no Ogre Battle Gaiden - Zenobia no Ouji",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -155,12 +155,12 @@
         ],
         "url": "https://archive.org/download/Densetsu_No_Ogre_Battle_Gaiden_Zenobia_No_Ouji_2000_J_color/Densetsu_No_Ogre_Battle_Gaiden_Zenobia_No_Ouji_2000_J_color.cbr"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Densha de Go! 2 on Neo Geo Pocket": {
-    "emulation": {},
+  {
+    "name": "Densha de Go! 2 on Neo Geo Pocket",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Simulation"
     ],
@@ -171,12 +171,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/densha_de_go_2-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Dive Alert - Becky's Version": {
-    "emulation": {},
+  {
+    "name": "Dive Alert - Becky's Version",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Role playing games"
     ],
@@ -187,41 +187,38 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/dive_alert_becky-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Dive Alert - Matt's Version": {
-    "emulation": {},
+  {
+    "name": "Dive Alert - Matt's Version",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Dokodemo Mahjong": {
-    "emulation": {},
+  {
+    "name": "Dokodemo Mahjong",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Dynamite Slugger": {
-    "emulation": {},
-    "genres": [
-      "Sports / Baseball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Dynamite Slugger",
     "players": 2,
-    "rating": 0.45
+    "rating": 0.45,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
   },
-  "Evolution - Eternal Dungeons": {
-    "emulation": {},
+  {
+    "name": "Evolution - Eternal Dungeons",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
     ],
@@ -232,16 +229,16 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/evolution_eternal_dungeons-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Fantastic Night Dreams - Cotton": {
-    "emulation": {},
+  {
+    "name": "Fantastic Night Dreams - Cotton",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
+      "Action",
       "Shoot'em Up",
-      "Shoot'em up / Horizontal",
-      "Action"
+      "Shoot'em up / Horizontal"
     ],
     "manuals": [
       {
@@ -250,12 +247,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/cotton-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Faselei!": {
-    "emulation": {},
+  {
+    "name": "Faselei!",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Strategy"
     ],
@@ -266,12 +263,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/faselei!-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Fatal Fury F-Contact - Pocket Fighting Series": {
-    "emulation": {},
+  {
+    "name": "Fatal Fury F-Contact - Pocket Fighting Series",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Fight"
     ],
@@ -282,15 +279,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/fatal_fury_first_contact-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Ganbare Neo Poke-kun": {
-    "emulation": {},
+  {
+    "name": "Ganbare Neo Poke-kun",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Simulation",
-      "Action"
+      "Action",
+      "Simulation"
     ],
     "manuals": [
       {
@@ -299,33 +296,31 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/ganbare_neo_pokekun-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Infinity Cure": {
-    "emulation": {},
+  {
+    "name": "Infinity Cure",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori.": {
-    "emulation": {},
+  {
+    "name": "Kikou Seiki Unitron - Sono Tsuide. Hikari Umareru Chi Yori.",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "King of Fighters R-2 - Pocket Fighting Series": {
-    "emulation": {},
+  {
+    "name": "King of Fighters R-2 - Pocket Fighting Series",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Fight",
-      "Action"
+      "Action",
+      "Fight"
     ],
     "manuals": [
       {
@@ -334,12 +329,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/kof_r2-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "King of Fighters, The - Battle de Paradise": {
-    "emulation": {},
+  {
+    "name": "King of Fighters, The - Battle de Paradise",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Board game"
     ],
@@ -356,22 +351,20 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/kof_battle_paradise-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Koi Koi Mahjong": {
-    "emulation": {},
+  {
+    "name": "Koi Koi Mahjong",
+    "rating": 0.5,
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": 0.5
+    ]
   },
-  "Last Blade, The - Beyond the Destiny": {
-    "emulation": {},
+  {
+    "name": "Last Blade, The - Beyond the Destiny",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Fight"
@@ -383,12 +376,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/last_blade-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Magical Drop Pocket": {
-    "emulation": {},
+  {
+    "name": "Magical Drop Pocket",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
     ],
@@ -399,12 +392,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/magical_drop_pocket-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Memories Off - Pure": {
-    "emulation": {},
+  {
+    "name": "Memories Off - Pure",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
@@ -415,16 +408,16 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/memories_off_pure-japanese.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Metal Slug - 1st Mission": {
-    "emulation": {},
+  {
+    "name": "Metal Slug - 1st Mission",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / Run and Gun",
-      "Action"
+      "Shooter / Run and Gun"
     ],
     "manuals": [
       {
@@ -439,16 +432,16 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/metal_slug_1st_mission-french.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Metal Slug - 2nd Mission": {
-    "emulation": {},
+  {
+    "name": "Metal Slug - 2nd Mission",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / Run and Gun",
-      "Action"
+      "Shooter / Run and Gun"
     ],
     "manuals": [
       {
@@ -457,21 +450,19 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/metal_slug_2nd_mission-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Mezase! Kanji Ou": {
-    "emulation": {},
+  {
+    "name": "Mezase! Kanji Ou",
+    "players": 1,
     "genres": [
       "Educational"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Mizuki Shigeru no Youkai Shashinkan": {
-    "emulation": {},
+  {
+    "name": "Mizuki Shigeru no Youkai Shashinkan",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
@@ -482,31 +473,28 @@
         ],
         "url": "https://archive.org/download/Mizuki_Shigeru_No_Youkai_Shashinkan_1999_J_color/Mizuki_Shigeru_No_Youkai_Shashinkan_1999_J_color.cbr"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Neo 21 - Pocket Casino Series": {
-    "emulation": {},
+  {
+    "name": "Neo 21 - Pocket Casino Series",
+    "rating": 0.75,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": 0.75
+    ]
   },
-  "Neo Baccarat - Pocket Casino Series": {
-    "emulation": {},
+  {
+    "name": "Neo Baccarat - Pocket Casino Series",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Casino",
       "Casino / Cards"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Neo Cherry Master Color - Pocket Casino Series": {
-    "emulation": {},
+  {
+    "name": "Neo Cherry Master Color - Pocket Casino Series",
+    "players": 2,
+    "rating": 1,
     "genres": [
       "Casino"
     ],
@@ -517,42 +505,37 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/neo_cherry_master-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 1
+    ]
   },
-  "Neo Derby Champ Daiyosou": {
-    "emulation": {},
+  {
+    "name": "Neo Derby Champ Daiyosou",
+    "players": 1,
     "genres": [
-      "Sports with Animals",
-      "Horses race",
       "Casino",
-      "Casino / Race"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Casino / Race",
+      "Horses race",
+      "Sports with Animals"
+    ]
   },
-  "Neo Dragon's Wild - Real Casino Series": {
-    "emulation": {},
+  {
+    "name": "Neo Dragon's Wild - Real Casino Series",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Neo Mystery Bonus - Pocket Casino Series": {
-    "emulation": {},
+  {
+    "name": "Neo Mystery Bonus - Pocket Casino Series",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.95
+    ]
   },
-  "Neo Poke Pro Yakyuu": {
-    "emulation": {},
+  {
+    "name": "Neo Poke Pro Yakyuu",
+    "players": 2,
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -564,16 +547,16 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/neo_poke_pro_yakyu-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Neo Turf Masters": {
-    "emulation": {},
+  {
+    "name": "Neo Turf Masters",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
-      "Sports / Golf",
+      "Action",
       "Sports",
-      "Action"
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -582,12 +565,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/neo_turf_masters-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "NeoGeo Cup '98 Plus Color - Pocket Sports Series": {
-    "emulation": {},
+  {
+    "name": "NeoGeo Cup '98 Plus Color - Pocket Sports Series",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -599,31 +582,26 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/neo_geo_cup_98_plus-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Nige-ron-pa": {
-    "emulation": {},
+  {
+    "name": "Nige-ron-pa",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "PP-AA01 - Pusher - Program - Hontai Controller Gawa"
+  },
+  {
+    "name": "Pac-Man",
     "players": 1,
-    "rating": 0.3
-  },
-  "PP-AA01 - Pusher - Program - Hontai Controller Gawa": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Pac-Man": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -632,135 +610,116 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/pacman-french.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Azteca": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Azteca",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Dekahel 2": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Dekahel 2",
+    "players": 1,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Delsol 2": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Delsol 2",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Hanabi": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Hanabi",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Ohanabi": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Ohanabi",
+    "players": 1,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - Ward of Lights": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - Ward of Lights",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Pachi-Slot Aruze Oukoku Pocket - e-CUP": {
-    "emulation": {},
+  {
+    "name": "Pachi-Slot Aruze Oukoku Pocket - e-CUP",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Pachi-slot Aruze Oukoku - Porcano 2": {
-    "emulation": {},
+  {
+    "name": "Pachi-slot Aruze Oukoku - Porcano 2",
+    "players": 1,
     "genres": [
       "Casino",
       "Casino / Slot machine"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Pachinko Hisshou Guide - Pocket Parlor": {
-    "emulation": {},
+  {
+    "name": "Pachinko Hisshou Guide - Pocket Parlor",
+    "players": 1,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Party Mail": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+  {
+    "name": "Party Mail",
+    "players": 1
   },
-  "Picture Puzzle": {
-    "emulation": {},
+  {
+    "name": "Picture Puzzle",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Pocket Love - if": {
-    "emulation": {},
+  {
+    "name": "Pocket Love - if",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Pocket Reversi": {
-    "emulation": {},
+  {
+    "name": "Pocket Reversi",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Pocket Tennis Color - Pocket Sports Series": {
-    "emulation": {},
+  {
+    "name": "Pocket Tennis Color - Pocket Sports Series",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -772,12 +731,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/pocket_tennis-japanese.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Puyo Pop": {
-    "emulation": {},
+  {
+    "name": "Puyo Pop",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ],
@@ -788,15 +747,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/puyo_pop-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Puzzle Bobble Mini": {
-    "emulation": {},
+  {
+    "name": "Puzzle Bobble Mini",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Strategy",
-      "Action"
+      "Action",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -805,12 +764,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/puzzle_bobble_mini-french.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Puzzle Link": {
-    "emulation": {},
+  {
+    "name": "Puzzle Link",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ],
@@ -821,12 +780,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/puzzle_link-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Puzzle Link 2": {
-    "emulation": {},
+  {
+    "name": "Puzzle Link 2",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ],
@@ -837,12 +796,12 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/puzzle_link_2-english.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Rockman - Battle & Fighters": {
-    "emulation": {},
+  {
+    "name": "Rockman - Battle & Fighters",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Fight"
     ],
@@ -853,15 +812,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/rockman_battle_fighters-japanese.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "SNK Gals' Fighters": {
-    "emulation": {},
+  {
+    "name": "SNK Gals' Fighters",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Fight",
-      "Action"
+      "Action",
+      "Fight"
     ],
     "manuals": [
       {
@@ -876,34 +835,32 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/gals_fighters-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "SNK vs. Capcom - Card Fighters 2 - Expand Edition": {
-    "emulation": {},
+  {
+    "name": "SNK vs. Capcom - Card Fighters 2 - Expand Edition",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Playing cards"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "SNK vs. Capcom - Card Fighters' Clash - Capcom Version": {
-    "emulation": {},
-    "genres": [
-      "Strategy",
-      "Role playing games"
-    ],
-    "manuals": [],
+  {
+    "name": "SNK vs. Capcom - Card Fighters' Clash - Capcom Version",
     "players": 2,
-    "rating": 0.9
-  },
-  "SNK vs. Capcom - Card Fighters' Clash - SNK Version": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
-      "Strategy",
-      "Role playing games"
+      "Role playing games",
+      "Strategy"
+    ]
+  },
+  {
+    "name": "SNK vs. Capcom - Card Fighters' Clash - SNK Version",
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Role playing games",
+      "Strategy"
     ],
     "manuals": [
       {
@@ -912,22 +869,18 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/svc_card_fighters_clash_2-japanese.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "SNK vs. Capcom - Gekitotsu Card Fighters"
+  },
+  {
+    "name": "SNK vs. Capcom - The Match of the Millennium",
     "players": 2,
-    "rating": 0.9
-  },
-  "SNK vs. Capcom - Gekitotsu Card Fighters": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "SNK vs. Capcom - The Match of the Millennium": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
-      "Fight",
-      "Action"
+      "Action",
+      "Fight"
     ],
     "manuals": [
       {
@@ -936,15 +889,15 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/svc_match_of_the_millennium-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Samurai Shodown! 2 - Pocket Fighting Series": {
-    "emulation": {},
+  {
+    "name": "Samurai Shodown! 2 - Pocket Fighting Series",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Fight",
-      "Action"
+      "Action",
+      "Fight"
     ],
     "manuals": [
       {
@@ -953,34 +906,31 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/samurai_shodown_2-english.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Shanghai Mini": {
-    "emulation": {},
+  {
+    "name": "Shanghai Mini",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Shougi no Tatsujin Color": {
-    "emulation": {},
+  {
+    "name": "Shougi no Tatsujin Color",
+    "players": 2,
     "genres": [
       "Asiatic board game",
       "Shougi"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Sonic The Hedgehog - Pocket Adventure": {
-    "emulation": {},
+  {
+    "name": "Sonic The Hedgehog - Pocket Adventure",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
-      "Platform",
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -995,22 +945,21 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/sonic_pocket_adventure-japanese.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Soreike!! Hanafuda Doujou": {
-    "emulation": {},
+  {
+    "name": "Soreike!! Hanafuda Doujou",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Asiatic board game",
       "Hanafuda"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Super Real Mahjong - Premium Collection": {
-    "emulation": {},
+  {
+    "name": "Super Real Mahjong - Premium Collection",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -1022,8 +971,6 @@
         ],
         "url": "https://archive.org/download/neo-geo-pocket-manuals/super_real_mahjong-japanese.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   }
-}
+]

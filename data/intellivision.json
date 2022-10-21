@@ -1,6 +1,8 @@
-{
-  "ABPA Backgammon ~ Backgammon": {
-    "emulation": {},
+[
+  {
+    "name": "ABPA Backgammon ~ Backgammon",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Strategy"
     ],
@@ -11,12 +13,11 @@
         ],
         "url": "https://archive.org/download/intellivision-backgammon/Intellivision Backgammon.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Advanced Dungeons & Dragons": {
-    "emulation": {},
+  {
+    "name": "Advanced Dungeons & Dragons",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -27,12 +28,11 @@
         ],
         "url": "https://archive.org/download/advanced-dungeons-and-dragons-intellivision/Advanced Dungeons and Dragons Intellivision.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Advanced Dungeons & Dragons - Treasure of Tarmin": {
-    "emulation": {},
+  {
+    "name": "Advanced Dungeons & Dragons - Treasure of Tarmin",
+    "players": 1,
     "genres": [
       "Role playing games"
     ],
@@ -43,12 +43,11 @@
         ],
         "url": "https://archive.org/download/Advanced_Dungeons_and_Dragons_Treasure_of_Tarmin_1982_Mattel/Advanced_Dungeons_and_Dragons_Treasure_of_Tarmin_1982_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Air Strike": {
-    "emulation": {},
+  {
+    "name": "Air Strike",
+    "players": 2,
     "genres": [
       "Shooter"
     ],
@@ -59,15 +58,15 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Air_Strike_-_1982_-_Mattel_Electronics.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Armor Battle": {
-    "emulation": {},
+  {
+    "name": "Armor Battle",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -76,12 +75,12 @@
         ],
         "url": "https://archive.org/download/armor-battle-intellivision/Armor Battle (Intellivision).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Astrosmash": {
-    "emulation": {},
+  {
+    "name": "Astrosmash",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -92,12 +91,12 @@
         ],
         "url": "https://archive.org/download/Astrosmash_1981_Mattel/Astrosmash_1981_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Atlantis": {
-    "emulation": {},
+  {
+    "name": "Atlantis",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -108,15 +107,15 @@
         ],
         "url": "https://archive.org/download/atlantis-game-manual-intellivision-1982/Atlantis game manual Intellivision (1982).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Auto Racing": {
-    "emulation": {},
+  {
+    "name": "Auto Racing",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -125,12 +124,12 @@
         ],
         "url": "https://archive.org/download/Auto_Racing_1979_Mattel/Auto_Racing_1979_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "B-17 Bomber": {
-    "emulation": {},
+  {
+    "name": "B-17 Bomber",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Simulation"
     ],
@@ -141,12 +140,12 @@
         ],
         "url": "https://archive.org/download/B-17_Bomber_1981_Mattel/B-17_Bomber_1981_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Beamrider": {
-    "emulation": {},
+  {
+    "name": "Beamrider",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -157,12 +156,12 @@
         ],
         "url": "https://annarchive.com/files2/Beamrider (U).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "Beauty & the Beast": {
-    "emulation": {},
+  {
+    "name": "Beauty & the Beast",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -173,12 +172,11 @@
         ],
         "url": "https://annarchive.com/files2/Beauty and the Beast (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Blockade Runner": {
-    "emulation": {},
+  {
+    "name": "Blockade Runner",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -189,12 +187,11 @@
         ],
         "url": "https://annarchive.com/files2/Blockade Runner (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Body Slam! - Super Pro Wrestling": {
-    "emulation": {},
+  {
+    "name": "Body Slam! - Super Pro Wrestling",
+    "players": 1,
     "genres": [
       "Sports"
     ],
@@ -205,12 +202,12 @@
         ],
         "url": "https://annarchive.com/files2/Body Slam - Super Pro Wrestling (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Bomb Squad": {
-    "emulation": {},
+  {
+    "name": "Bomb Squad",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -221,12 +218,12 @@
         ],
         "url": "https://archive.org/download/Bomb_Squad_1982_Mattel/Bomb_Squad_1982_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Boxing": {
-    "emulation": {},
+  {
+    "name": "Boxing",
+    "players": 2,
+    "rating": 1,
     "genres": [
       "Sports"
     ],
@@ -237,22 +234,20 @@
         ],
         "url": "https://annarchive.com/files2/Boxing (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 1
+    ]
   },
-  "Brickout!": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Brickout!",
     "players": 1,
     "rating": 0.8
   },
-  "Bump 'n' Jump": {
-    "emulation": {},
+  {
+    "name": "Bump 'n' Jump",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -261,12 +256,12 @@
         ],
         "url": "https://archive.org/download/Bump_N_Jump_1983_Mattel/Bump_N_Jump_1983_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "BurgerTime": {
-    "emulation": {},
+  {
+    "name": "BurgerTime",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -277,12 +272,12 @@
         ],
         "url": "https://archive.org/download/BurgerTime_1982_Mattel/BurgerTime_1982_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Buzz Bombers": {
-    "emulation": {},
+  {
+    "name": "Buzz Bombers",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -293,12 +288,11 @@
         ],
         "url": "https://annarchive.com/files2/Buzz Bombers (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Carnival": {
-    "emulation": {},
+  {
+    "name": "Carnival",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -309,12 +303,12 @@
         ],
         "url": "https://annarchive.com/files2/Carnival (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Centipede": {
-    "emulation": {},
+  {
+    "name": "Centipede",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -325,12 +319,11 @@
         ],
         "url": "https://annarchive.com/files2/Centipede (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Championship Tennis": {
-    "emulation": {},
+  {
+    "name": "Championship Tennis",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -341,12 +334,11 @@
         ],
         "url": "https://annarchive.com/files2/Championship Tennis (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Checkers ~ Draughts": {
-    "emulation": {},
+  {
+    "name": "Checkers ~ Draughts",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -357,15 +349,14 @@
         ],
         "url": "https://archive.org/download/intellivision-checkers/Intellivision Checkers.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Chip Shot - Super Pro Golf": {
-    "emulation": {},
+  {
+    "name": "Chip Shot - Super Pro Golf",
+    "players": 2,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -374,12 +365,11 @@
         ],
         "url": "https://annarchive.com/files2/Chip Shot - Super Pro Golf (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Commando": {
-    "emulation": {},
+  {
+    "name": "Commando",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -390,12 +380,12 @@
         ],
         "url": "https://annarchive.com/files2/Commando (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Congo Bongo": {
-    "emulation": {},
+  {
+    "name": "Congo Bongo",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -406,28 +396,23 @@
         ],
         "url": "https://annarchive.com/files2/Congo Bongo (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Crazy Clones": {
-    "emulation": {},
+  {
+    "name": "Crazy Clones",
+    "players": 2,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Deep Pockets - Super Pro Pool & Billiards": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+  {
+    "name": "Deep Pockets - Super Pro Pool & Billiards",
+    "players": 2
   },
-  "Defender": {
-    "emulation": {},
+  {
+    "name": "Defender",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -438,12 +423,12 @@
         ],
         "url": "https://annarchive.com/files2/Defender (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Demon Attack": {
-    "emulation": {},
+  {
+    "name": "Demon Attack",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -454,33 +439,23 @@
         ],
         "url": "https://annarchive.com/files2/Demon Attack (U).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Demonstration Cartridge - Blue"
+  },
+  {
+    "name": "Demonstration Cartridge - Green",
+    "players": 1
+  },
+  {
+    "name": "Demonstration Cartridge - Red",
+    "players": 1
+  },
+  {
+    "name": "Dig Dug",
     "players": 2,
-    "rating": 0.6
-  },
-  "Demonstration Cartridge - Blue": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Demonstration Cartridge - Green": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Demonstration Cartridge - Red": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Dig Dug": {
-    "emulation": {},
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -491,12 +466,12 @@
         ],
         "url": "https://annarchive.com/files2/Dig Dug (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Diner": {
-    "emulation": {},
+  {
+    "name": "Diner",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Action"
     ],
@@ -507,12 +482,11 @@
         ],
         "url": "https://annarchive.com/files2/Diner (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Donkey Kong": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong",
+    "players": 2,
     "genres": [
       "Platform"
     ],
@@ -523,12 +497,12 @@
         ],
         "url": "https://archive.org/download/dkintellivisionmanualcs/dkintellivisionmanualcs.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Donkey Kong Junior": {
-    "emulation": {},
+  {
+    "name": "Donkey Kong Junior",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -539,12 +513,12 @@
         ],
         "url": "https://annarchive.com/files2/Donkey Kong Junior (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Dracula": {
-    "emulation": {},
+  {
+    "name": "Dracula",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -555,12 +529,12 @@
         ],
         "url": "https://annarchive.com/files2/Dracula (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Dragonfire": {
-    "emulation": {},
+  {
+    "name": "Dragonfire",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -571,12 +545,12 @@
         ],
         "url": "https://annarchive.com/files2/Dragonfire (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Dreadnaught Factor, The": {
-    "emulation": {},
+  {
+    "name": "Dreadnaught Factor, The",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -587,12 +561,11 @@
         ],
         "url": "https://annarchive.com/files2/The Dreadnaught Factor (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Electric Company, The - Math Fun": {
-    "emulation": {},
+  {
+    "name": "Electric Company, The - Math Fun",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -603,12 +576,11 @@
         ],
         "url": "https://annarchive.com/files2/The Electric Company - Math Fun (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Electric Company, The - Word Fun": {
-    "emulation": {},
+  {
+    "name": "Electric Company, The - Word Fun",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -619,12 +591,12 @@
         ],
         "url": "https://annarchive.com/files2/The Electric Company - Word Fun (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Fathom": {
-    "emulation": {},
+  {
+    "name": "Fathom",
+    "players": 1,
+    "rating": 0.35,
     "genres": [
       "Action"
     ],
@@ -635,12 +607,12 @@
         ],
         "url": "https://annarchive.com/files2/Fathom (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.35
+    ]
   },
-  "Frog Bog": {
-    "emulation": {},
+  {
+    "name": "Frog Bog",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -651,12 +623,12 @@
         ],
         "url": "https://annarchive.com/files2/Frog Bog (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
+    ]
   },
-  "Frogger": {
-    "emulation": {},
+  {
+    "name": "Frogger",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
       "Action"
     ],
@@ -667,12 +639,11 @@
         ],
         "url": "https://archive.org/download/Frogger_1983_Parker_Bros/Frogger_1983_Parker_Bros.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.55
+    ]
   },
-  "Game Factory": {
-    "emulation": {},
+  {
+    "name": "Game Factory",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -683,46 +654,36 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Game_Factory_-_1983_-_Mattel_Electronics.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Go for the Gold": {
-    "emulation": {},
+  {
+    "name": "Go for the Gold",
+    "players": 2,
     "genres": [
       "Sports"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Grid Shock": {
-    "emulation": {},
+  {
+    "name": "Grid Shock",
+    "players": 1,
     "genres": [
       "Shooter"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "Happy Holidays - Easter Eggcitement"
+  },
+  {
+    "name": "Happy Holidays - Santa's Helper",
     "players": 1,
-    "rating": null
-  },
-  "Happy Holidays - Easter Eggcitement": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Happy Holidays - Santa's Helper": {
-    "emulation": {},
     "genres": [
       "Demo"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Happy Trails": {
-    "emulation": {},
+  {
+    "name": "Happy Trails",
+    "players": 2,
+    "rating": 0.95,
     "genres": [
       "Strategy"
     ],
@@ -733,12 +694,12 @@
         ],
         "url": "https://archive.org/download/Happy_Trails_1983_Activision/Happy_Trails_1983_Activision.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.95
+    ]
   },
-  "Horse Racing": {
-    "emulation": {},
+  {
+    "name": "Horse Racing",
+    "players": 6,
+    "rating": 0.75,
     "genres": [
       "Sports"
     ],
@@ -749,12 +710,12 @@
         ],
         "url": "https://archive.org/download/Horse_Racing_1980_Mattel/Horse_Racing_1980_Mattel.pdf"
       }
-    ],
-    "players": 6,
-    "rating": 0.75
+    ]
   },
-  "Hover Force": {
-    "emulation": {},
+  {
+    "name": "Hover Force",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -765,12 +726,11 @@
         ],
         "url": "https://annarchive.com/files2/Hover Force (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Hypnotic Lights": {
-    "emulation": {},
+  {
+    "name": "Hypnotic Lights",
+    "players": 1,
     "genres": [
       "Puzzle-Game"
     ],
@@ -781,19 +741,14 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Hypnotic_Lights_-_1981_-_Mattel_Electronics.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "IMI Test Cartridge"
+  },
+  {
+    "name": "Ice Trek",
     "players": 1,
-    "rating": null
-  },
-  "IMI Test Cartridge": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Ice Trek": {
-    "emulation": {},
     "genres": [
       "Action"
     ],
@@ -804,26 +759,18 @@
         ],
         "url": "https://annarchive.com/files2/Ice Trek (U).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Illusions"
+  },
+  {
+    "name": "International Demonstration Cartridge",
+    "players": 1
+  },
+  {
+    "name": "Jetsons' Ways with Words, The",
     "players": 1,
-    "rating": null
-  },
-  "Illusions": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "International Demonstration Cartridge": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Jetsons' Ways with Words, The": {
-    "emulation": {},
     "genres": [
       "Educational"
     ],
@@ -834,12 +781,11 @@
         ],
         "url": "https://annarchive.com/files2/The Jetsons Ways With Words (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "King of the Mountain": {
-    "emulation": {},
+  {
+    "name": "King of the Mountain",
+    "players": 1,
     "genres": [
       "Adventure"
     ],
@@ -850,12 +796,11 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/King_of_the_Mountain_-_1982_-_Mattel_Electronics.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Kool-Aid Man": {
-    "emulation": {},
+  {
+    "name": "Kool-Aid Man",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -866,12 +811,11 @@
         ],
         "url": "https://annarchive.com/files2/Kool-Aid Man (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Lady Bug": {
-    "emulation": {},
+  {
+    "name": "Lady Bug",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -882,12 +826,11 @@
         ],
         "url": "https://annarchive.com/files2/Lady Bug (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Land Battle": {
-    "emulation": {},
+  {
+    "name": "Land Battle",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -898,12 +841,11 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Land_Battle_-_1982_-_Mattel_Electronics.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Las Vegas Poker & Blackjack": {
-    "emulation": {},
+  {
+    "name": "Las Vegas Poker & Blackjack",
+    "players": 2,
     "genres": [
       "Simulation"
     ],
@@ -914,12 +856,11 @@
         ],
         "url": "https://archive.org/download/booklet_20201219_0352/booklet.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Las Vegas Roulette": {
-    "emulation": {},
+  {
+    "name": "Las Vegas Roulette",
+    "players": 2,
     "genres": [
       "Simulation"
     ],
@@ -930,21 +871,18 @@
         ],
         "url": "https://annarchive.com/files2/Las Vegas Roulette (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "League of Light": {
-    "emulation": {},
+  {
+    "name": "League of Light",
+    "players": 1,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Learning Fun I - Math Master, Factor Fun": {
-    "emulation": {},
+  {
+    "name": "Learning Fun I - Math Master, Factor Fun",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -955,12 +893,11 @@
         ],
         "url": "https://annarchive.com/files2/Learning Fun I (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Learning Fun II - Word Wizard, Memory Fun": {
-    "emulation": {},
+  {
+    "name": "Learning Fun II - Word Wizard, Memory Fun",
+    "players": 2,
     "genres": [
       "Educational"
     ],
@@ -971,12 +908,12 @@
         ],
         "url": "https://annarchive.com/files2/Learning Fun II (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Lock 'N' Chase": {
-    "emulation": {},
+  {
+    "name": "Lock 'N' Chase",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -987,12 +924,11 @@
         ],
         "url": "https://archive.org/download/Lock_N_Chase_1982_Mattel/Lock_N_Chase_1982_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Loco-Motion": {
-    "emulation": {},
+  {
+    "name": "Loco-Motion",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1003,23 +939,19 @@
         ],
         "url": "https://annarchive.com/files2/Locomotion (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "MTE201 Intellivision Test Cartridge": {
-    "emulation": {},
+  {
+    "name": "MTE201 Intellivision Test Cartridge",
+    "players": 1,
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Magic Carousel": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Magic Carousel",
+    "players": 1,
     "manuals": [
       {
         "languages": [
@@ -1027,15 +959,14 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Magic_Carousel_-_1983_-_INTV.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Major League Baseball ~ Big League Baseball ~ Baseball": {
-    "emulation": {},
+  {
+    "name": "Major League Baseball ~ Big League Baseball ~ Baseball",
+    "players": 2,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -1044,12 +975,12 @@
         ],
         "url": "https://annarchive.com/files2/Major League Baseball (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Masters of the Universe - The Power of He-Man": {
-    "emulation": {},
+  {
+    "name": "Masters of the Universe - The Power of He-Man",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -1060,12 +991,11 @@
         ],
         "url": "https://annarchive.com/files2/Masters of the Universe (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Melody Blaster": {
-    "emulation": {},
+  {
+    "name": "Melody Blaster",
+    "players": 1,
     "genres": [
       "Music and Dance"
     ],
@@ -1076,12 +1006,12 @@
         ],
         "url": "https://annarchive.com/files2/Melody Blaster (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Microsurgeon": {
-    "emulation": {},
+  {
+    "name": "Microsurgeon",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -1092,12 +1022,11 @@
         ],
         "url": "https://annarchive.com/files2/Microsurgeon (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Mind Strike": {
-    "emulation": {},
+  {
+    "name": "Mind Strike",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1108,12 +1037,11 @@
         ],
         "url": "https://archive.org/download/Mind_Strike_1982_Mattel/Mind_Strike_1982_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Mission X": {
-    "emulation": {},
+  {
+    "name": "Mission X",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1124,15 +1052,15 @@
         ],
         "url": "https://archive.org/download/Mission_X_1982_Mattel/Mission_X_1982_Mattel.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Motocross": {
-    "emulation": {},
+  {
+    "name": "Motocross",
+    "players": 2,
+    "rating": 0.95,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1141,12 +1069,11 @@
         ],
         "url": "https://archive.org/download/Motocross_1982_Mattel/Motocross_1982_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.95
+    ]
   },
-  "Mountain Madness - Super Pro Skiing": {
-    "emulation": {},
+  {
+    "name": "Mountain Madness - Super Pro Skiing",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1157,12 +1084,12 @@
         ],
         "url": "https://annarchive.com/files2/Mountain Madness Super Pro Skiing (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Mouse Trap": {
-    "emulation": {},
+  {
+    "name": "Mouse Trap",
+    "players": 2,
+    "rating": 1,
     "genres": [
       "Action"
     ],
@@ -1173,12 +1100,11 @@
         ],
         "url": "https://annarchive.com/files2/Mouse Trap (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 1
+    ]
   },
-  "Mr. BASIC Meets Bits 'N Bytes": {
-    "emulation": {},
+  {
+    "name": "Mr. BASIC Meets Bits 'N Bytes",
+    "players": 2,
     "genres": [
       "Various"
     ],
@@ -1189,12 +1115,12 @@
         ],
         "url": "https://annarchive.com/files2/Mr BASIC Meets Bits N Bytes (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "NASL Soccer ~ Soccer": {
-    "emulation": {},
+  {
+    "name": "NASL Soccer ~ Soccer",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Sports"
     ],
@@ -1205,15 +1131,14 @@
         ],
         "url": "https://annarchive.com/files2/NASL Soccer (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "NBA Basketball ~ Basketball": {
-    "emulation": {},
+  {
+    "name": "NBA Basketball ~ Basketball",
+    "players": 2,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
     ],
     "manuals": [
       {
@@ -1222,12 +1147,12 @@
         ],
         "url": "https://annarchive.com/files2/NBA Basketball (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "NFL Football ~ Football": {
-    "emulation": {},
+  {
+    "name": "NFL Football ~ Football",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Sports"
     ],
@@ -1238,15 +1163,14 @@
         ],
         "url": "https://annarchive.com/files2/NFL Football (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "NHL Hockey ~ Hockey": {
-    "emulation": {},
+  {
+    "name": "NHL Hockey ~ Hockey",
+    "players": 2,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -1255,12 +1179,12 @@
         ],
         "url": "https://annarchive.com/files2/NHL Hockey (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Night Stalker": {
-    "emulation": {},
+  {
+    "name": "Night Stalker",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1271,12 +1195,11 @@
         ],
         "url": "https://archive.org/download/booklet_20201219_0356/booklet.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Nova Blast": {
-    "emulation": {},
+  {
+    "name": "Nova Blast",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1287,12 +1210,11 @@
         ],
         "url": "https://annarchive.com/files2/Nova Blast (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Number Jumble": {
-    "emulation": {},
+  {
+    "name": "Number Jumble",
+    "players": 1,
     "genres": [
       "Various"
     ],
@@ -1303,15 +1225,14 @@
         ],
         "url": "https://www.gamesdatabase.org/Media/SYSTEM/Mattel_Intellivision/Manual/formated/Number_Jumble_-_1983_-_Mattel_Electronics.pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "PBA Bowling ~ Bowling": {
-    "emulation": {},
+  {
+    "name": "PBA Bowling ~ Bowling",
+    "players": 4,
     "genres": [
-      "Sports / Bowling",
-      "Sports"
+      "Sports",
+      "Sports / Bowling"
     ],
     "manuals": [
       {
@@ -1320,15 +1241,15 @@
         ],
         "url": "https://annarchive.com/files2/PBA Bowling (U).pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "PGA Golf ~ Golf": {
-    "emulation": {},
+  {
+    "name": "PGA Golf ~ Golf",
+    "players": 4,
+    "rating": 0.35,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -1337,15 +1258,15 @@
         ],
         "url": "https://annarchive.com/files2/PGA Golf (U).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.35
+    ]
   },
-  "Pac-Man": {
-    "emulation": {},
+  {
+    "name": "Pac-Man",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
-      "Action / Labyrinth",
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -1354,35 +1275,25 @@
         ],
         "url": "https://annarchive.com/files2/Pac-Man (U).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Party Line - Blow Out"
+  },
+  {
+    "name": "Party Line - Hard Hat",
+    "players": 2
+  },
+  {
+    "name": "Party Line - Space Cadet",
     "players": 2,
-    "rating": 0.75
-  },
-  "Party Line - Blow Out": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Party Line - Hard Hat": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 2,
-    "rating": null
-  },
-  "Party Line - Space Cadet": {
-    "emulation": {},
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pinball": {
-    "emulation": {},
+  {
+    "name": "Pinball",
+    "players": 2,
     "genres": [
       "Pinball",
       "Simulation"
@@ -1394,12 +1305,12 @@
         ],
         "url": "https://archive.org/download/Pinball_1981_Mattel/Pinball_1981_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Pitfall!": {
-    "emulation": {},
+  {
+    "name": "Pitfall!",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action"
     ],
@@ -1410,15 +1321,15 @@
         ],
         "url": "https://archive.org/download/intellivisionpitfall/intellivision pitfall.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Pole Position": {
-    "emulation": {},
+  {
+    "name": "Pole Position",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1427,12 +1338,12 @@
         ],
         "url": "https://annarchive.com/files2/Pole Position (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Popeye": {
-    "emulation": {},
+  {
+    "name": "Popeye",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -1443,12 +1354,12 @@
         ],
         "url": "https://annarchive.com/files2/Popeye (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Q-bert": {
-    "emulation": {},
+  {
+    "name": "Q-bert",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1459,12 +1370,11 @@
         ],
         "url": "https://archive.org/download/Q-bert_1983_Parker_Bros/Q-bert_1983_Parker_Bros.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Reversi": {
-    "emulation": {},
+  {
+    "name": "Reversi",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -1475,12 +1385,12 @@
         ],
         "url": "https://annarchive.com/files2/Reversi (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "River Raid": {
-    "emulation": {},
+  {
+    "name": "River Raid",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action"
     ],
@@ -1491,28 +1401,21 @@
         ],
         "url": "https://annarchive.com/files2/River Raid (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Robot Rubble": {
-    "emulation": {},
+  {
+    "name": "Robot Rubble",
+    "players": 1,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "Rocky & Bullwinckle"
+  },
+  {
+    "name": "Royal Dealer",
     "players": 1,
-    "rating": null
-  },
-  "Rocky & Bullwinckle": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Royal Dealer": {
-    "emulation": {},
     "genres": [
       "Casino",
       "Casino / Cards"
@@ -1524,12 +1427,12 @@
         ],
         "url": "https://annarchive.com/files2/Royal Dealer (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "SNAFU": {
-    "emulation": {},
+  {
+    "name": "SNAFU",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
       "Action"
     ],
@@ -1540,12 +1443,11 @@
         ],
         "url": "https://archive.org/download/intellivision-snafu/Intellivision Snafu.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "Safecracker": {
-    "emulation": {},
+  {
+    "name": "Safecracker",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1556,19 +1458,14 @@
         ],
         "url": "https://archive.org/download/Safecracker_1983_Imagic/Safecracker_1983_Imagic.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Scarfinger"
+  },
+  {
+    "name": "Scooby Doo's Maze Chase",
     "players": 2,
-    "rating": null
-  },
-  "Scarfinger": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Scooby Doo's Maze Chase": {
-    "emulation": {},
     "genres": [
       "Action"
     ],
@@ -1579,12 +1476,12 @@
         ],
         "url": "https://annarchive.com/files2/Scooby Doos Maze Chase (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Sea Battle": {
-    "emulation": {},
+  {
+    "name": "Sea Battle",
+    "players": 2,
+    "rating": 1,
     "genres": [
       "Strategy"
     ],
@@ -1595,12 +1492,12 @@
         ],
         "url": "https://archive.org/download/intellivision-sea-battle/Intellivision Sea Battle.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 1
+    ]
   },
-  "Sewer Sam": {
-    "emulation": {},
+  {
+    "name": "Sewer Sam",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -1611,12 +1508,12 @@
         ],
         "url": "https://annarchive.com/files2/Sewer Sam (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "Shark! Shark!": {
-    "emulation": {},
+  {
+    "name": "Shark! Shark!",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1627,12 +1524,11 @@
         ],
         "url": "https://archive.org/download/Shark_Shark_1982_Mattel/Shark_Shark_1982_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Sharp Shot": {
-    "emulation": {},
+  {
+    "name": "Sharp Shot",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1643,12 +1539,11 @@
         ],
         "url": "https://annarchive.com/files2/Sharp Shot (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Slam Dunk - Super Pro Basketball": {
-    "emulation": {},
+  {
+    "name": "Slam Dunk - Super Pro Basketball",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1659,15 +1554,14 @@
         ],
         "url": "https://annarchive.com/files2/Slam Dunk (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Slap Shot - Super Pro Hockey": {
-    "emulation": {},
+  {
+    "name": "Slap Shot - Super Pro Hockey",
+    "players": 2,
     "genres": [
-      "Sports / Hockey",
-      "Sports"
+      "Sports",
+      "Sports / Hockey"
     ],
     "manuals": [
       {
@@ -1676,12 +1570,12 @@
         ],
         "url": "https://annarchive.com/files2/Slap Shot (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Space Armada": {
-    "emulation": {},
+  {
+    "name": "Space Armada",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1692,12 +1586,12 @@
         ],
         "url": "https://archive.org/download/booklet_20201219_0359/booklet.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Space Battle": {
-    "emulation": {},
+  {
+    "name": "Space Battle",
+    "players": 2,
+    "rating": 0.2,
     "genres": [
       "Action"
     ],
@@ -1708,12 +1602,12 @@
         ],
         "url": "https://annarchive.com/files2/Space Battle (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.2
+    ]
   },
-  "Space Hawk": {
-    "emulation": {},
+  {
+    "name": "Space Hawk",
+    "players": 2,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -1724,12 +1618,11 @@
         ],
         "url": "https://archive.org/download/space-hawk-intellivision/Space Hawk (Intellivision).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.45
+    ]
   },
-  "Space Spartans": {
-    "emulation": {},
+  {
+    "name": "Space Spartans",
+    "players": 1,
     "genres": [
       "Strategy"
     ],
@@ -1740,12 +1633,11 @@
         ],
         "url": "https://annarchive.com/files2/Space Spartans (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Spiker - Super Pro Volleyball": {
-    "emulation": {},
+  {
+    "name": "Spiker - Super Pro Volleyball",
+    "players": 1,
     "genres": [
       "Sports",
       "Sports / Volleyball"
@@ -1757,15 +1649,14 @@
         ],
         "url": "https://annarchive.com/files2/Spiker Super Pro Volleyball (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Stadium Mud Buggies": {
-    "emulation": {},
+  {
+    "name": "Stadium Mud Buggies",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -1774,12 +1665,12 @@
         ],
         "url": "https://annarchive.com/files2/Stadium Mud Buggies (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Stampede": {
-    "emulation": {},
+  {
+    "name": "Stampede",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -1790,12 +1681,12 @@
         ],
         "url": "https://archive.org/download/Stampede_1982_Activision/Stampede_1982_Activision.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Star Strike": {
-    "emulation": {},
+  {
+    "name": "Star Strike",
+    "players": 1,
+    "rating": 0.45,
     "genres": [
       "Action"
     ],
@@ -1806,12 +1697,12 @@
         ],
         "url": "https://archive.org/download/booklet_20201219_0407/booklet.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.45
+    ]
   },
-  "Star Wars - The Empire Strikes Back": {
-    "emulation": {},
+  {
+    "name": "Star Wars - The Empire Strikes Back",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -1822,21 +1713,19 @@
         ],
         "url": "https://archive.org/download/Star_Wars_The_Empire_Strikes_Back_1983_Parker_Bros/Star_Wars_The_Empire_Strikes_Back_1983_Parker_Bros.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Street ~ Happy Holidays - Trick or Treat": {
-    "emulation": {},
+  {
+    "name": "Street ~ Happy Holidays - Trick or Treat",
+    "players": 1,
     "genres": [
       "Demo"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sub Hunt": {
-    "emulation": {},
+  {
+    "name": "Sub Hunt",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Strategy"
     ],
@@ -1847,12 +1736,12 @@
         ],
         "url": "https://annarchive.com/files2/Sub Hunt (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Super Cobra": {
-    "emulation": {},
+  {
+    "name": "Super Cobra",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Action"
     ],
@@ -1863,28 +1752,21 @@
         ],
         "url": "https://annarchive.com/files2/Super Cobra (E).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "Super Masters!": {
-    "emulation": {},
+  {
+    "name": "Super Masters!",
+    "players": 1,
     "genres": [
       "Platform"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Super NFL Footbal": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Super NFL Footbal"
   },
-  "Super Pro Decathlon": {
-    "emulation": {},
+  {
+    "name": "Super Pro Decathlon",
+    "players": 4,
     "genres": [
       "Sports"
     ],
@@ -1895,12 +1777,11 @@
         ],
         "url": "https://annarchive.com/files2/Super Pro Decathlon (U).pdf"
       }
-    ],
-    "players": 4,
-    "rating": null
+    ]
   },
-  "Super Pro Football": {
-    "emulation": {},
+  {
+    "name": "Super Pro Football",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -1911,12 +1792,11 @@
         ],
         "url": "https://annarchive.com/files2/Super Pro Football (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Swords & Serpents": {
-    "emulation": {},
+  {
+    "name": "Swords & Serpents",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -1927,19 +1807,15 @@
         ],
         "url": "https://annarchive.com/files2/Swords And Serpents (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "TRON": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "TRON"
   },
-  "TRON Deadly Discs": {
-    "emulation": {},
+  {
+    "name": "TRON Deadly Discs",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
     ],
@@ -1950,12 +1826,12 @@
         ],
         "url": "https://archive.org/download/TRON_Deadly_Discs_1981_Mattel_a/TRON_Deadly_Discs_1981_Mattel_a.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "TRON Maze-A-Tron": {
-    "emulation": {},
+  {
+    "name": "TRON Maze-A-Tron",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
     ],
@@ -1966,12 +1842,11 @@
         ],
         "url": "https://annarchive.com/files2/Tron - Maze-a-Tron (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "TRON Solar Sailer": {
-    "emulation": {},
+  {
+    "name": "TRON Solar Sailer",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -1982,12 +1857,11 @@
         ],
         "url": "https://annarchive.com/files2/Tron - Solar Sailer (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Takeover": {
-    "emulation": {},
+  {
+    "name": "Takeover",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -1998,12 +1872,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/intv/takeover.txt"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Tennis": {
-    "emulation": {},
+  {
+    "name": "Tennis",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Sports"
     ],
@@ -2014,12 +1888,12 @@
         ],
         "url": "https://annarchive.com/files2/Tennis (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Thin Ice": {
-    "emulation": {},
+  {
+    "name": "Thin Ice",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -2030,12 +1904,12 @@
         ],
         "url": "https://annarchive.com/files2/Thin Ice (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Thunder Castle": {
-    "emulation": {},
+  {
+    "name": "Thunder Castle",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Adventure"
     ],
@@ -2046,12 +1920,11 @@
         ],
         "url": "https://annarchive.com/files2/Thunder Castle (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Tower of Doom": {
-    "emulation": {},
+  {
+    "name": "Tower of Doom",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -2062,15 +1935,15 @@
         ],
         "url": "https://annarchive.com/files2/Tower Of Doom (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Triple Action": {
-    "emulation": {},
+  {
+    "name": "Triple Action",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2079,12 +1952,11 @@
         ],
         "url": "https://archive.org/download/Triple_Action_1981_Mattel/Triple_Action_1981_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Triple Challenge - Chess, Checkers, Backgammon": {
-    "emulation": {},
+  {
+    "name": "Triple Challenge - Chess, Checkers, Backgammon",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -2095,12 +1967,11 @@
         ],
         "url": "https://annarchive.com/files2/Triple Challenge (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Tropical Trouble": {
-    "emulation": {},
+  {
+    "name": "Tropical Trouble",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -2111,15 +1982,14 @@
         ],
         "url": "https://annarchive.com/files2/Tropical Trouble (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Truckin'": {
-    "emulation": {},
+  {
+    "name": "Truckin'",
+    "players": 1,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2128,15 +1998,15 @@
         ],
         "url": "https://annarchive.com/files2/Truckin (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Turbo": {
-    "emulation": {},
+  {
+    "name": "Turbo",
+    "players": 1,
+    "rating": 0.25,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -2145,12 +2015,12 @@
         ],
         "url": "https://annarchive.com/files2/Turbo (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.25
+    ]
   },
-  "Tutankham": {
-    "emulation": {},
+  {
+    "name": "Tutankham",
+    "players": 2,
+    "rating": 0.3,
     "genres": [
       "Action"
     ],
@@ -2161,12 +2031,12 @@
         ],
         "url": "https://annarchive.com/files2/Tutankham (E).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.3
+    ]
   },
-  "US Ski Team Skiing ~ Skiing": {
-    "emulation": {},
+  {
+    "name": "US Ski Team Skiing ~ Skiing",
+    "players": 6,
+    "rating": 0.95,
     "genres": [
       "Sports"
     ],
@@ -2177,12 +2047,11 @@
         ],
         "url": "https://archive.org/download/skiing-intellivision-ocr/Skiing (Intellivision)_ocr.pdf"
       }
-    ],
-    "players": 6,
-    "rating": 0.95
+    ]
   },
-  "USCF Chess ~ Chess": {
-    "emulation": {},
+  {
+    "name": "USCF Chess ~ Chess",
+    "players": 2,
     "genres": [
       "Strategy"
     ],
@@ -2193,12 +2062,12 @@
         ],
         "url": "https://archive.org/download/USCF_Chess_1981_Mattel/USCF_Chess_1981_Mattel.pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Utopia": {
-    "emulation": {},
+  {
+    "name": "Utopia",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Strategy"
     ],
@@ -2209,12 +2078,11 @@
         ],
         "url": "https://annarchive.com/files2/Utopia (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Vectron": {
-    "emulation": {},
+  {
+    "name": "Vectron",
+    "players": 2,
     "genres": [
       "Action"
     ],
@@ -2225,12 +2093,12 @@
         ],
         "url": "https://annarchive.com/files2/Vectron (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Venture": {
-    "emulation": {},
+  {
+    "name": "Venture",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Action"
     ],
@@ -2241,12 +2109,11 @@
         ],
         "url": "https://annarchive.com/files2/Venture (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "White Water!": {
-    "emulation": {},
+  {
+    "name": "White Water!",
+    "players": 1,
     "genres": [
       "Action"
     ],
@@ -2257,15 +2124,14 @@
         ],
         "url": "https://annarchive.com/files2/White Water (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "World Championship Baseball": {
-    "emulation": {},
+  {
+    "name": "World Championship Baseball",
+    "players": 2,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -2274,12 +2140,11 @@
         ],
         "url": "https://annarchive.com/files2/World Championship Baseball (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "World Cup Football": {
-    "emulation": {},
+  {
+    "name": "World Cup Football",
+    "players": 2,
     "genres": [
       "Sports"
     ],
@@ -2290,15 +2155,14 @@
         ],
         "url": "https://annarchive.com/files2/World Cup Soccer (U).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "World Series Major League Baseball": {
-    "emulation": {},
+  {
+    "name": "World Series Major League Baseball",
+    "players": 1,
     "genres": [
-      "Sports / Baseball",
-      "Sports"
+      "Sports",
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -2307,15 +2171,15 @@
         ],
         "url": "https://annarchive.com/files2/World Series Major League Baseball (U).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Worm Whomper": {
-    "emulation": {},
+  {
+    "name": "Worm Whomper",
+    "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Shooter",
-      "Action"
+      "Action",
+      "Shooter"
     ],
     "manuals": [
       {
@@ -2324,19 +2188,14 @@
         ],
         "url": "https://archive.org/download/Worm_Whomper_1983_Activision/Worm_Whomper_1983_Activision.pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Yogi's Frustration"
+  },
+  {
+    "name": "Zaxxon",
     "players": 2,
-    "rating": 0.55
-  },
-  "Yogi's Frustration": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Zaxxon": {
-    "emulation": {},
     "genres": [
       "Action"
     ],
@@ -2347,15 +2206,9 @@
         ],
         "url": "https://archive.org/download/zaxxongamemanualintellivision1983/Zaxxon game manual Intellivision (1983).pdf"
       }
-    ],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Zzzz! Spina the Bee": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Zzzz! Spina the Bee"
   }
-}
+]

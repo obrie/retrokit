@@ -1,7 +1,6 @@
-{
-  "20th Century Video Almanac": {
-    "emulation": {},
-    "genres": [],
+[
+  {
+    "name": "20th Century Video Almanac",
     "manuals": [
       {
         "languages": [
@@ -9,13 +8,15 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/20th Century Video Almanac (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3D Atlas": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "3D Atlas",
+    "parents": [
+      {
+        "name": "3D Atlas (Europe)"
+      }
+    ],
     "manuals": [
       {
         "languages": [
@@ -23,18 +24,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/3D Atlas (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "3D Atlas (Europe)"
-      }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3DO Game Guru": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "3DO Game Guru",
     "manuals": [
       {
         "languages": [
@@ -42,13 +35,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Game Guru (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3DO Interactive Sampler CD 2, The": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "3DO Interactive Sampler CD 2, The",
     "manuals": [
       {
         "languages": [
@@ -56,13 +46,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/3DO Interactive Sampler %232, The (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3DO Interactive Sampler CD 3, The": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "3DO Interactive Sampler CD 3, The",
     "manuals": [
       {
         "languages": [
@@ -70,13 +57,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/3DO Interactive Sampler %233, The (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3DO Interactive Sampler CD 4, The": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "3DO Interactive Sampler CD 4, The",
     "manuals": [
       {
         "languages": [
@@ -84,47 +68,37 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/3DO Interactive Sampler %234, The (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "3DO Interactive Sampler CD, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "3DO Interactive Sampler CD, The"
   },
-  "3DO Interactive Sampler, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "3DO Interactive Sampler, The"
   },
-  "3DO Multi Game Sampler Number 3, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "3DO Multi Game Sampler Number 3, The"
   },
-  "AI Shougi": {
-    "emulation": {},
+  {
+    "name": "AI Shougi",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Alone in the Dark": {
-    "emulation": {
-      "rating": 3
-    },
+  {
+    "name": "Alone in the Dark",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
+    ],
+    "parents": [
+      {
+        "name": "Alone in the Dark (Europe) (En,Fr)"
+      }
     ],
     "manuals": [
       {
@@ -134,19 +108,22 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Alone in the Dark (USA).pdf"
       }
     ],
-    "parents": [
-      {
-        "name": "Alone in the Dark (Europe) (En,Fr)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    "emulation": {
+      "rating": 3
+    }
   },
-  "Alone in the Dark 2": {
-    "emulation": {},
+  {
+    "name": "Alone in the Dark 2",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
+    ],
+    "parents": [
+      {
+        "name": "Alone in the Dark 2 (USA)"
+      }
     ],
     "manuals": [
       {
@@ -155,53 +132,43 @@
         ],
         "url": "https://archive.org/download/Alone_in_the_Dark_2_1995_Interplay_US/Alone_in_the_Dark_2_1995_Interplay_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Alone in the Dark 2 (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Anno Mitsumasa Pepperon-mura no Shiki": {
-    "emulation": {},
+  {
+    "name": "Anno Mitsumasa Pepperon-mura no Shiki",
     "genres": [
       "Educational"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Aqua World - Umi Monogatari": {
-    "emulation": {},
+  {
+    "name": "Aqua World - Umi Monogatari",
+    "players": 1,
+    "rating": 0.15,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.15
+    ]
   },
-  "AutoBahn Tokio": {
-    "emulation": {},
+  {
+    "name": "AutoBahn Tokio",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "AutoBahn Tokio (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "BC Racers": {
-    "emulation": {},
+  {
+    "name": "BC Racers",
+    "players": 2,
+    "rating": 0.9,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -210,36 +177,34 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/BC Racers (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.9
+    ]
   },
-  "BFS - Blue Forest Story": {
-    "emulation": {},
+  {
+    "name": "BFS - Blue Forest Story",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "BFS - Blue Forest Story (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Bakushou!! All Yoshimoto Quiz-ou Kettei-sen": {
-    "emulation": {},
+  {
+    "name": "Bakushou!! All Yoshimoto Quiz-ou Kettei-sen",
+    "players": 4,
+    "rating": 0.6,
     "genres": [
       "Quiz",
       "Quiz / Japanese"
-    ],
-    "manuals": [],
-    "players": 4,
-    "rating": 0.6
+    ]
   },
-  "Ballz - The Director's Cut": {
-    "emulation": {},
+  {
+    "name": "Ballz - The Director's Cut",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Fight"
     ],
@@ -250,23 +215,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Ballz - The Director's Cut (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Battle Blues": {
-    "emulation": {},
+  {
+    "name": "Battle Blues",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Battle Chess": {
-    "emulation": {},
+  {
+    "name": "Battle Chess",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Board game"
+    ],
+    "parents": [
+      {
+        "name": "Battle Chess (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -275,28 +244,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Battle Chess (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Battle Pinball",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Pinball"
+    ]
+  },
+  {
+    "name": "BattleSport",
+    "players": 1,
+    "rating": 0.95,
+    "genres": [
+      "Sports"
     ],
     "parents": [
       {
-        "name": "Battle Chess (Europe)"
+        "name": "BattleSport (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Battle Pinball": {
-    "emulation": {},
-    "genres": [
-      "Pinball"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.8
-  },
-  "BattleSport": {
-    "emulation": {},
-    "genres": [
-      "Sports"
     ],
     "manuals": [
       {
@@ -305,28 +273,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/BattleSport (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Belzerion",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Blade Force",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Shooter"
     ],
     "parents": [
       {
-        "name": "BattleSport (Europe)"
+        "name": "Blade Force (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
-  },
-  "Belzerion": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Blade Force": {
-    "emulation": {},
-    "genres": [
-      "Shooter"
     ],
     "manuals": [
       {
@@ -335,37 +302,35 @@
         ],
         "url": "https://archive.org/download/BladeForce_1995_Studio_3DO_US/BladeForce_1995_Studio_3DO_US.pdf"
       }
+    ]
+  },
+  {
+    "name": "Blonde Justice",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Bonogurashi",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "BrainDead 13",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "Blade Force (Europe)"
+        "name": "BrainDead 13 (USA) (Disc 1)"
       }
-    ],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Blonde Justice": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Bonogurashi": {
-    "emulation": {},
-    "genres": [
-      "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
-  },
-  "BrainDead 13": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -374,35 +339,34 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Brain Dead 13 Starring Fritz (USA) (Disc 1).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "BrainDead 13 (USA) (Disc 1)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Burning Soldier": {
-    "emulation": {},
+  {
+    "name": "Burning Soldier",
+    "players": 1,
+    "rating": 0.2,
     "genres": [
+      "1st person",
       "Shooter",
-      "Shooter / Vehicle",
-      "1st person"
+      "Shooter / Vehicle"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Burning Soldier (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.2
+    ]
   },
-  "Cannon Fodder": {
-    "emulation": {},
+  {
+    "name": "Cannon Fodder",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Cannon Fodder (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -411,19 +375,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Cannon Fodder (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Captain Quazar",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up"
     ],
     "parents": [
       {
-        "name": "Cannon Fodder (Europe)"
+        "name": "Captain Quazar (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Captain Quazar": {
-    "emulation": {},
-    "genres": [
-      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -432,26 +396,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Captain Quazar (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Captain Quazar (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Captain Quazar & BattleSport": {
-    "emulation": {},
+  {
+    "name": "Captain Quazar & BattleSport",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Shoot'em Up"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Carrier - Fortress at Sea": {
-    "emulation": {},
+  {
+    "name": "Carrier - Fortress at Sea",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Simulation"
     ],
@@ -462,12 +420,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Carrier - Fortress at Sea (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Casper": {
-    "emulation": {},
+  {
+    "name": "Casper",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
@@ -478,35 +436,33 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Casper (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Chiki Chiki Machine Mou Race - Kenken to Black Maou no Ijiwaru Daisakusen": {
-    "emulation": {},
+  {
+    "name": "Chiki Chiki Machine Mou Race - Kenken to Black Maou no Ijiwaru Daisakusen",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Chiki Chiki Machine Mou Race 2 - In Space",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Chiki Chiki Machine Mou Race 2 - In Space": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
     "parents": [
       {
         "name": "Chiki Chiki Machine Mou Race 2 - In Space (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Club 3DO - Station Invasion": {
-    "emulation": {},
+  {
+    "name": "Club 3DO - Station Invasion",
+    "players": 5,
+    "rating": 0.7,
     "genres": [
       "Compilation"
     ],
@@ -517,14 +473,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Club 3DO - Station Invasion (USA).pdf"
       }
-    ],
-    "players": 5,
-    "rating": 0.7
+    ]
   },
-  "Corpse Killer": {
-    "emulation": {},
+  {
+    "name": "Corpse Killer",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Lightgun Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Corpse Killer (USA)"
+      }
     ],
     "manuals": [
       {
@@ -533,38 +494,36 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Corpse Killer (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Coven, The",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Cowboy Casino",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Playing cards"
+    ]
+  },
+  {
+    "name": "Crash 'n Burn",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Driving",
+      "Race"
     ],
     "parents": [
       {
-        "name": "Corpse Killer (USA)"
+        "name": "Crash 'n Burn (USA) (Not for Resale)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Coven, The": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Cowboy Casino": {
-    "emulation": {},
-    "genres": [
-      "Playing cards"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Crash 'n Burn": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
     ],
     "manuals": [
       {
@@ -573,26 +532,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Crash 'n Burn (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Crash 'n Burn (USA) (Not for Resale)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Crayon Shin-chan - Puzzle Daimaou no Nazo": {
-    "emulation": {},
+  {
+    "name": "Crayon Shin-chan - Puzzle Daimaou no Nazo",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Creature Shock": {
-    "emulation": {},
+  {
+    "name": "Creature Shock",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -603,12 +556,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Creature Shock (USA) (Disc 1).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Crime Patrol": {
-    "emulation": {},
+  {
+    "name": "Crime Patrol",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Shooter"
     ],
@@ -619,13 +572,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Crime Patrol (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Crystal Dynamics Best Selection ~ Sample This!": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Crystal Dynamics Best Selection ~ Sample This!",
     "manuals": [
       {
         "languages": [
@@ -633,24 +583,28 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Sample This - Sampler (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "CyberDillo": {
-    "emulation": {},
+  {
+    "name": "CyberDillo",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Cyberia": {
-    "emulation": {},
+  {
+    "name": "Cyberia",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Cyberia (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -659,20 +613,29 @@
         ],
         "url": "https://archive.org/download/Cyberia_1996_Interplay_US/Cyberia_1996_Interplay_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Cyberia (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "D": {
-    "emulation": {},
+  {
+    "name": "D",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
+    ],
+    "parents": [
+      {
+        "name": "D (USA, Europe) (Disc 1)",
+        "clones": [
+          "D no Shokutaku (Disc 1)"
+        ]
+      },
+      {
+        "name": "D (USA, Europe) (Disc 2)",
+        "clones": [
+          "D no Shokutaku (Disc 2)"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -681,38 +644,49 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/D (USA, Europe) (Disc 1).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "D no Shokutaku (Disc 1)"
-        ],
-        "name": "D (USA, Europe) (Disc 1)"
-      },
-      {
-        "clones": [
-          "D no Shokutaku (Disc 2)"
-        ],
-        "name": "D (USA, Europe) (Disc 2)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "D's Diner - The Director's Cut": {
-    "emulation": {},
+  {
+    "name": "D's Diner - The Director's Cut",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Daedalus Encounter, The": {
-    "emulation": {},
+  {
+    "name": "Daedalus Encounter, The",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Daedalus Encounter, The (USA) (Disc 1)",
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 1)"
+        ]
+      },
+      {
+        "name": "Daedalus Encounter, The (USA) (Disc 2)",
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 2)"
+        ]
+      },
+      {
+        "name": "Daedalus Encounter, The (USA) (Disc 3)",
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 3)"
+        ]
+      },
+      {
+        "name": "Daedalus Encounter, The (USA) (Disc 4)",
+        "clones": [
+          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 4)"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -721,38 +695,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Daedalus Encounter, The (USA) (Disc 1).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 1)"
-        ],
-        "name": "Daedalus Encounter, The (USA) (Disc 1)"
-      },
-      {
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 2)"
-        ],
-        "name": "Daedalus Encounter, The (USA) (Disc 2)"
-      },
-      {
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 3)"
-        ],
-        "name": "Daedalus Encounter, The (USA) (Disc 3)"
-      },
-      {
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 4)"
-        ],
-        "name": "Daedalus Encounter, The (USA) (Disc 4)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "DeathKeep": {
-    "emulation": {},
+  {
+    "name": "DeathKeep",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
@@ -763,37 +711,40 @@
         ],
         "url": "https://archive.org/download/DeathKeep_1995_SSi_US/DeathKeep_1995_SSi_US.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Decathlon": {
-    "emulation": {},
+  {
+    "name": "Decathlon",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Sports"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Defcon 5": {
-    "emulation": {},
+  {
+    "name": "Defcon 5",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Defcon 5 (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Demolition Man": {
-    "emulation": {},
+  {
+    "name": "Demolition Man",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Demolition Man (USA)"
+      }
     ],
     "manuals": [
       {
@@ -802,25 +753,14 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Demolition Man (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Demolition Man (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Dennou Hyouryuu - Multimedia Cruising": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+  {
+    "name": "Dennou Hyouryuu - Multimedia Cruising",
+    "players": 1
   },
-  "Digital Dreamware": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Digital Dreamware",
     "manuals": [
       {
         "languages": [
@@ -828,12 +768,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Digital Dreamware (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "DinoPark Tycoon": {
-    "emulation": {},
+  {
+    "name": "DinoPark Tycoon",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Educational"
     ],
@@ -844,32 +784,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/DinoPark Tycoon (USA).pdf"
       }
-    ],
+    ]
+  },
+  {
+    "name": "Diving Spot Guide - Marine Tour"
+  },
+  {
+    "name": "Doctor Hauzer",
     "players": 1,
-    "rating": 0.7
-  },
-  "Diving Spot Guide - Marine Tour": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Doctor Hauzer": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Doom": {
-    "emulation": {},
+  {
+    "name": "Doom",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
+      "Action",
       "Shooter",
-      "Shooter / 1st person",
-      "Action"
+      "Shooter / 1st person"
     ],
     "manuals": [
       {
@@ -878,15 +813,15 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Doom (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Dragon Lore - The Legend Begins": {
-    "emulation": {},
+  {
+    "name": "Dragon Lore - The Legend Begins",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Role playing games",
-      "Adventure"
+      "Adventure",
+      "Role playing games"
     ],
     "manuals": [
       {
@@ -895,23 +830,27 @@
         ],
         "url": "https://archive.org/download/Dragon_Lore_The_Legend_Begins_1995_Mindscape_US/Dragon_Lore_The_Legend_Begins_1995_Mindscape_US.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Dragon Tycoon Edge": {
-    "emulation": {},
+  {
+    "name": "Dragon Tycoon Edge",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Dragon's Lair": {
-    "emulation": {},
+  {
+    "name": "Dragon's Lair",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Dragon's Lair (USA) (RE1)"
+      }
     ],
     "manuals": [
       {
@@ -920,17 +859,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Dragon's Lair (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Dragon's Lair (USA) (RE1)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Drug Wars": {
-    "emulation": {},
+  {
+    "name": "Drug Wars",
+    "players": 2,
+    "rating": 0.5,
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -942,16 +876,15 @@
         ],
         "url": "https://archive.org/download/Drug_Wars_1995_American_Laser_Games_US/Drug_Wars_1995_American_Laser_Games_US.pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.5
+    ]
   },
-  "ESPN Baseball - Hitting": {
-    "emulation": {},
+  {
+    "name": "ESPN Baseball - Hitting",
+    "players": 1,
     "genres": [
+      "Educational",
       "Sports",
-      "Sports / Baseball",
-      "Educational"
+      "Sports / Baseball"
     ],
     "manuals": [
       {
@@ -960,15 +893,35 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Baseball Interactive Hitting (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "ESPN Golf - Lower Your Score with Tom Kite - Shot Making": {
-    "emulation": {},
+  {
+    "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
+    ],
+    "parents": [
+      {
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 1)",
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 1)"
+        ]
+      },
+      {
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 2)",
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 2)"
+        ]
+      },
+      {
+        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 3)",
+        "clones": [
+          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 3)"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -977,72 +930,55 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Golf  Lower Your Score with Tom Kite (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Emit Vol. 1 - Toki no Maigo",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Emit Vol. 2 - Inochigake no Tabi",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Emit Vol. 3 - Watashi ni Sayonara o",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Endlessly",
+    "players": 1,
+    "rating": 0.1,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Escape from Monster Manor",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Action",
+      "Shooter",
+      "Shooter / 1st person"
     ],
     "parents": [
       {
+        "name": "Escape from Monster Manor (Europe)",
         "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 1)"
-        ],
-        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 1)"
-      },
-      {
-        "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 2)"
-        ],
-        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 2)"
-      },
-      {
-        "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 3)"
-        ],
-        "name": "ESPN Golf - Lower Your Score with Tom Kite - Shot Making (USA) (Disc 3)"
+          "Virtual Horror - Norowareta Yakata"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Emit Vol. 1 - Toki no Maigo": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Emit Vol. 2 - Inochigake no Tabi": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Emit Vol. 3 - Watashi ni Sayonara o": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Endlessly": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.1
-  },
-  "Escape from Monster Manor": {
-    "emulation": {},
-    "genres": [
-      "Shooter",
-      "Shooter / 1st person",
-      "Action"
     ],
     "manuals": [
       {
@@ -1051,33 +987,29 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Escape from Monster Manor - A Terrifying Hunt for the Undead (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "F1GP",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "FIFA International Soccer",
+    "players": 6,
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
     ],
     "parents": [
       {
-        "clones": [
-          "Virtual Horror - Norowareta Yakata"
-        ],
-        "name": "Escape from Monster Manor (Europe)"
+        "name": "FIFA International Soccer (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
-  },
-  "F1GP": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
-  },
-  "FIFA International Soccer": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports"
     ],
     "manuals": [
       {
@@ -1086,21 +1018,16 @@
         ],
         "url": "https://archive.org/download/FIFA_International_Soccer_1994_EA_Sports_US/FIFA_International_Soccer_1994_EA_Sports_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "FIFA International Soccer (Europe)"
-      }
-    ],
-    "players": 6,
-    "rating": 0.5
+    ]
   },
-  "Family Feud": {
-    "emulation": {},
+  {
+    "name": "Family Feud",
+    "players": 8,
+    "rating": 0.5,
     "genres": [
+      "Puzzle-Game",
       "Quiz",
-      "Quiz / English",
-      "Puzzle-Game"
+      "Quiz / English"
     ],
     "manuals": [
       {
@@ -1109,14 +1036,19 @@
         ],
         "url": "https://archive.org/download/Family_Feud_1994_Gametek_US/Family_Feud_1994_Gametek_US.pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.5
+    ]
   },
-  "Fatty Bear's Birthday Surprise": {
-    "emulation": {},
+  {
+    "name": "Fatty Bear's Birthday Surprise",
+    "players": 10,
+    "rating": 0.6,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Fatty Bear's Birthday Surprise (USA)"
+      }
     ],
     "manuals": [
       {
@@ -1125,19 +1057,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Fatty Bear's Birthday Surprise (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Fatty Bear's Funpack",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Various"
     ],
     "parents": [
       {
-        "name": "Fatty Bear's Birthday Surprise (USA)"
+        "name": "Fatty Bear's Funpack (USA)",
+        "clones": [
+          "Fatty Bear's Fun Pack"
+        ]
       }
-    ],
-    "players": 10,
-    "rating": 0.6
-  },
-  "Fatty Bear's Funpack": {
-    "emulation": {},
-    "genres": [
-      "Various"
     ],
     "manuals": [
       {
@@ -1146,48 +1081,45 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Fatty Bear's Funpack (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Fatty Bear's Fun Pack"
-        ],
-        "name": "Fatty Bear's Funpack (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Fire Ball!!": {
-    "emulation": {},
+  {
+    "name": "Fire Ball!!",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Simulation",
-      "Pinball"
+      "Pinball",
+      "Simulation"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Fire Ball!! (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Firewall": {
-    "emulation": {},
+  {
+    "name": "Firewall",
+    "players": 1,
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Flashback": {
-    "emulation": {},
+  {
+    "name": "Flashback",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Platform",
-      "Adventure"
+      "Adventure",
+      "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Flashback (Europe) (En,Fr)",
+        "clones": [
+          "Flashback - The Quest for Identity"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1196,31 +1128,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Flashback - The Quest for Identity (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Flopon World",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Flying Nightmares",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Simulation"
     ],
     "parents": [
       {
-        "clones": [
-          "Flashback - The Quest for Identity"
-        ],
-        "name": "Flashback (Europe) (En,Fr)"
+        "name": "Flying Nightmares (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
-  },
-  "Flopon World": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
-  },
-  "Flying Nightmares": {
-    "emulation": {},
-    "genres": [
-      "Simulation"
     ],
     "manuals": [
       {
@@ -1229,21 +1157,21 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Flying Nightmares (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Foes of Ali",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Fight",
+      "Sports",
+      "Sports / Boxing"
     ],
     "parents": [
       {
-        "name": "Flying Nightmares (Europe)"
+        "name": "Foes of Ali (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Foes of Ali": {
-    "emulation": {},
-    "genres": [
-      "Sports / Boxing",
-      "Sports",
-      "Fight"
     ],
     "manuals": [
       {
@@ -1252,76 +1180,66 @@
         ],
         "url": "https://archive.org/download/Foes_of_Ali_1995_Electronic_Arts_US/Foes_of_Ali_1995_Electronic_Arts_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Foes of Ali (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Footie": {
-    "emulation": {},
+  {
+    "name": "Footie",
+    "players": 2,
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Fun 'n Games": {
-    "emulation": {},
+  {
+    "name": "Fun 'n Games",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Casual Game",
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Fun 'n Games - Soft no Omochabako": {
-    "emulation": {},
+  {
+    "name": "Fun 'n Games - Soft no Omochabako",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Casual Game",
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Gakkou no Kowai Uwasa - Hanako-san ga Kita!!": {
-    "emulation": {},
+  {
+    "name": "Gakkou no Kowai Uwasa - Hanako-san ga Kita!!",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Game no Tatsujin": {
-    "emulation": {},
+  {
+    "name": "Game no Tatsujin",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Playing cards"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Gateway to English - Eigo de Go!": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Gateway to English - Eigo de Go!"
   },
-  "Gex": {
-    "emulation": {},
+  {
+    "name": "Gex",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Adventure",
       "Action",
+      "Adventure",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Gex (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1330,44 +1248,42 @@
         ],
         "url": "https://archive.org/download/Gex_1995_Crystal_Dynamics_US/Gex_1995_Crystal_Dynamics_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Gex (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Ghost Hunter Series - Kuroki Shi no Kamen": {
-    "emulation": {},
+  {
+    "name": "Ghost Hunter Series - Kuroki Shi no Kamen",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Role playing games"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Ghost Hunter Series - Kuroki Shi no Kamen (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Goal FH": {
-    "emulation": {},
+  {
+    "name": "Goal FH",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Gridders": {
-    "emulation": {},
+  {
+    "name": "Gridders",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Gridders (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1376,49 +1292,34 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Gridders (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Gridders (Europe)"
-      }
-    ],
+    ]
+  },
+  {
+    "name": "Grimm Meisaku Gekijou Vol. 1 - Bremen no Ongakutai"
+  },
+  {
+    "name": "Grimm Meisaku Gekijou Vol. 2 - Hansel to Gretel",
     "players": 1,
-    "rating": 0.65
-  },
-  "Grimm Meisaku Gekijou Vol. 1 - Bremen no Ongakutai": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Grimm Meisaku Gekijou Vol. 2 - Hansel to Gretel": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Grimm Meisaku Gekijou Vol. 3 - Akazukin": {
-    "emulation": {},
+  {
+    "name": "Grimm Meisaku Gekijou Vol. 3 - Akazukin",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "Hatsubai 1 Shuunen - 3DO REAL - Tokubetsu Premium CD"
+  },
+  {
+    "name": "Hell - A Cyberpunk Thriller",
     "players": 1,
-    "rating": 0.7
-  },
-  "Hatsubai 1 Shuunen - 3DO REAL - Tokubetsu Premium CD": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hell - A Cyberpunk Thriller": {
-    "emulation": {},
+    "rating": 0.4,
     "genres": [
       "Adventure"
     ],
@@ -1429,77 +1330,61 @@
         ],
         "url": "https://archive.org/download/Hell_A_Cyberpunk_Thriller_1994_Take_2_US/Hell_A_Cyberpunk_Thriller_1994_Take_2_US.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Hello Kitty - Asobi no Omochabako": {
-    "emulation": {},
+  {
+    "name": "Hello Kitty - Asobi no Omochabako",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Hirata Shougo Interactive Ehon - Aesop Monogatari Vol. 1": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Hirata Shougo Interactive Ehon - Aesop Monogatari Vol. 1",
     "players": 1,
     "rating": 0.7
   },
-  "Hirata Shougo Interactive Ehon - Cinderella": {
-    "emulation": {},
+  {
+    "name": "Hirata Shougo Interactive Ehon - Cinderella",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Various"
-    ],
-    "manuals": [],
+    ]
+  },
+  {
+    "name": "Hirata Shougo Interactive Ehon - Ningyo-hime"
+  },
+  {
+    "name": "Hirata Shougo Interactive Ehon - Ookami to Shichihiki no Koyagi"
+  },
+  {
+    "name": "Hirata Shougo Interactive Ehon - Sanbiki no Kobuta"
+  },
+  {
+    "name": "Hirata Shougo Interactive Ehon - Shirayuki-hime"
+  },
+  {
+    "name": "Hitchcock ni Chousen",
     "players": 1,
-    "rating": 0.75
-  },
-  "Hirata Shougo Interactive Ehon - Ningyo-hime": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hirata Shougo Interactive Ehon - Ookami to Shichihiki no Koyagi": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hirata Shougo Interactive Ehon - Sanbiki no Kobuta": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hirata Shougo Interactive Ehon - Shirayuki-hime": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Hitchcock ni Chousen": {
-    "emulation": {},
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Horde, The": {
-    "emulation": {},
+  {
+    "name": "Horde, The",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Horde, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -1508,81 +1393,72 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Horde, The (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Horde, The (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Icebreaker": {
-    "emulation": {},
+  {
+    "name": "Icebreaker",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Icebreaker II": {
-    "emulation": {},
+  {
+    "name": "Icebreaker II",
+    "players": 1,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Ide Yousuke Meijin no Shin Jissen Mahjong": {
-    "emulation": {},
+  {
+    "name": "Ide Yousuke Meijin no Shin Jissen Mahjong",
+    "players": 2,
     "genres": [
       "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Idol Janshi Suchie-Pai Special": {
-    "emulation": {},
+  {
+    "name": "Idol Janshi Suchie-Pai Special",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Playing cards"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Idol Mahjong - Final Romance 2 - Hyper Edition": {
-    "emulation": {},
+  {
+    "name": "Idol Mahjong - Final Romance 2 - Hyper Edition",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game",
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Igo Time Trial - Shikatsu Daihyakka": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Igo Time Trial - Shikatsu Daihyakka"
   },
-  "Igo Time Trial - Tsumego I": {
-    "emulation": {},
+  {
+    "name": "Igo Time Trial - Tsumego I",
+    "players": 2,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": null
+    ]
   },
-  "Immercenary": {
-    "emulation": {},
+  {
+    "name": "Immercenary",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Immercenary (Europe)",
+        "clones": [
+          "Immercenary - Combat in a Digital World",
+          "Perfect World - Combat in a Digital World"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1591,32 +1467,30 @@
         ],
         "url": "https://archive.org/download/Immercenary_1995_Electronic_Arts_US/Immercenary_1995_Electronic_Arts_US.pdf"
       }
+    ]
+  },
+  {
+    "name": "Immortal Desire",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Incredible Machine, The",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
     ],
     "parents": [
       {
+        "name": "Incredible Machine, The (Europe)",
         "clones": [
-          "Immercenary - Combat in a Digital World",
-          "Perfect World - Combat in a Digital World"
-        ],
-        "name": "Immercenary (Europe)"
+          "Incredible Machine, The - Pararancho"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Immortal Desire": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Incredible Machine, The": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game"
     ],
     "manuals": [
       {
@@ -1625,28 +1499,14 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Incredible Machine, The (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Incredible Machine, The - Pararancho"
-        ],
-        "name": "Incredible Machine, The (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Insector War": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
+  {
+    "name": "Insector War",
     "rating": 0.65
   },
-  "Interplay 3DO Buffet, The": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Interplay 3DO Buffet, The",
     "manuals": [
       {
         "languages": [
@@ -1654,14 +1514,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Interplay 3DO Buffet, The (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Iron Angel of the Apocalypse - Tetsujin": {
-    "emulation": {},
+  {
+    "name": "Iron Angel of the Apocalypse - Tetsujin",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Iron Angel of the Apocalypse - Tetsujin (Europe)",
+        "clones": [
+          "Tetsujin"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1670,22 +1538,22 @@
         ],
         "url": "https://archive.org/download/Iron_Angel_of_the_Apocalypse_1994_Synergy_US/Iron_Angel_of_the_Apocalypse_1994_Synergy_US.pdf"
       }
+    ]
+  },
+  {
+    "name": "Iron Angel of the Apocalypse - The Return",
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
+        "name": "Iron Angel of the Apocalypse - The Return (USA)",
         "clones": [
-          "Tetsujin"
-        ],
-        "name": "Iron Angel of the Apocalypse - Tetsujin (Europe)"
+          "Tetsujin Returns"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Iron Angel of the Apocalypse - The Return": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -1694,82 +1562,76 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Iron Angel of the Apocalypse (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Tetsujin Returns"
-        ],
-        "name": "Iron Angel of the Apocalypse - The Return (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Ishida Yoshio Kudan no Igo Seiha": {
-    "emulation": {},
+  {
+    "name": "Ishida Yoshio Kudan no Igo Seiha",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "J. B. Harold - Blue Chicago Blues": {
-    "emulation": {},
+  {
+    "name": "J. B. Harold - Blue Chicago Blues",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "J.League Virtual Stadium": {
-    "emulation": {},
-    "genres": [
-      "Sports / Soccer",
-      "Sports",
-      "Sports / Baseball"
-    ],
-    "manuals": [],
+  {
+    "name": "J.League Virtual Stadium",
     "players": 6,
-    "rating": 0.6
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Baseball",
+      "Sports / Soccer"
+    ]
   },
-  "J.League Virtual Stadium '95": {
-    "emulation": {},
+  {
+    "name": "J.League Virtual Stadium '95",
+    "players": 6,
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "manuals": [],
-    "players": 6,
-    "rating": null
+    ]
   },
-  "Jammit": {
-    "emulation": {},
-    "genres": [
-      "Sports / Basketball",
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Jammit",
     "players": 2,
-    "rating": 0.4
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ]
   },
-  "Jikki Pachi-Slot Simulator Vol. 1": {
-    "emulation": {},
+  {
+    "name": "Jikki Pachi-Slot Simulator Vol. 1",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "John Madden NFL Football": {
-    "emulation": {},
+  {
+    "name": "John Madden NFL Football",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
-      "Sports / Football",
-      "Sports"
+      "Sports",
+      "Sports / Football"
+    ],
+    "parents": [
+      {
+        "name": "John Madden NFL Football (Europe)",
+        "clones": [
+          "John Madden Football",
+          "NFL Madden Football"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -1778,21 +1640,12 @@
         ],
         "url": "https://archive.org/download/John_Madden_Football_1994_EA_Sports_US/John_Madden_Football_1994_EA_Sports_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "John Madden Football",
-          "NFL Madden Football"
-        ],
-        "name": "John Madden NFL Football (Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Johnny Bazookatone": {
-    "emulation": {},
+  {
+    "name": "Johnny Bazookatone",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Platform"
@@ -1804,16 +1657,21 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Johnny Bazookatone (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Jurassic Park Interactive": {
-    "emulation": {},
+  {
+    "name": "Jurassic Park Interactive",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Action",
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ],
+    "parents": [
+      {
+        "name": "Jurassic Park Interactive (USA)"
+      }
     ],
     "manuals": [
       {
@@ -1822,52 +1680,49 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Jurassic Park Interactive (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Kakinoki Shougi",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Playing cards"
+    ]
+  },
+  {
+    "name": "Keiba Saishou no Housoku",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Horses race",
+      "Sports with Animals"
+    ]
+  },
+  {
+    "name": "Kero Kero Keroppi to Origami no Tabibito",
+    "players": 1,
+    "genres": [
+      "Educational"
+    ]
+  },
+  {
+    "name": "Killing Time",
+    "players": 1,
+    "rating": 0.95,
+    "genres": [
+      "Action",
+      "Lightgun Shooter",
+      "Shooter",
+      "Shooter / 1st person"
     ],
     "parents": [
       {
-        "name": "Jurassic Park Interactive (USA)"
+        "name": "Killing Time (Europe)",
+        "clones": [
+          "Tozasareta Yakata"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Kakinoki Shougi": {
-    "emulation": {},
-    "genres": [
-      "Playing cards"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Keiba Saishou no Housoku": {
-    "emulation": {},
-    "genres": [
-      "Sports with Animals",
-      "Horses race"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Kero Kero Keroppi to Origami no Tabibito": {
-    "emulation": {},
-    "genres": [
-      "Educational"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
-  },
-  "Killing Time": {
-    "emulation": {
-      "rating": 3
-    },
-    "genres": [
-      "Shooter",
-      "Shooter / 1st person",
-      "Action",
-      "Lightgun Shooter"
     ],
     "manuals": [
       {
@@ -1877,19 +1732,14 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Killing Time (USA).pdf"
       }
     ],
-    "parents": [
-      {
-        "clones": [
-          "Tozasareta Yakata"
-        ],
-        "name": "Killing Time (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.95
+    "emulation": {
+      "rating": 3
+    }
   },
-  "Kingdom - The Far Reaches": {
-    "emulation": {},
+  {
+    "name": "Kingdom - The Far Reaches",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
@@ -1900,35 +1750,33 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Kingdom - The Far Reaches (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Konpeki no Kantai": {
-    "emulation": {},
+  {
+    "name": "Konpeki no Kantai",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Strategy"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Konpeki no Kantai (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Kyuusei Senjutsu ni Yoru - Heisei Kaiun Koyomi": {
-    "emulation": {},
+  {
+    "name": "Kyuusei Senjutsu ni Yoru - Heisei Kaiun Koyomi",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Last Bounty Hunter, The": {
-    "emulation": {},
+  {
+    "name": "Last Bounty Hunter, The",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -1939,15 +1787,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Last Bounty Hunter, The (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Lemmings": {
-    "emulation": {},
+  {
+    "name": "Lemmings",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Lemmings (USA)"
+      }
     ],
     "manuals": [
       {
@@ -1956,17 +1809,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lemmings (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Lemmings (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Let's Go Skiing": {
-    "emulation": {},
+  {
+    "name": "Let's Go Skiing",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Sports"
     ],
@@ -1977,24 +1825,28 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Let's Go Skiing (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Let's Play Beach Volleyball": {
-    "emulation": {},
+  {
+    "name": "Let's Play Beach Volleyball",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Sports",
       "Sports / Volleyball"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Life Stage, The - Virtual House": {
-    "emulation": {},
+  {
+    "name": "Life Stage, The - Virtual House",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Educational"
+    ],
+    "parents": [
+      {
+        "name": "Life Stage, The - Virtual House (USA)"
+      }
     ],
     "manuals": [
       {
@@ -2003,94 +1855,45 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Life Stage, The - Virtual House (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Life Stage, The - Virtual House (USA)"
-      }
-    ],
+    ]
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 1"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 10"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 11"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 2"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 3"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 4"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 5"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 6"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 7"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 8"
+  },
+  {
+    "name": "Live! 3DO Magazine CD-ROM 9"
+  },
+  {
+    "name": "Lost Eden",
     "players": 1,
-    "rating": 0.6
-  },
-  "Live! 3DO Magazine CD-ROM 1": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 10": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 11": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 2": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 3": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 4": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 5": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 6": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 7": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 8": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Live! 3DO Magazine CD-ROM 9": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Lost Eden": {
-    "emulation": {},
+    "rating": 0.8,
     "genres": [
       "Adventure"
     ],
@@ -2101,14 +1904,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lost Eden (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Lost Files of Sherlock Holmes, The": {
-    "emulation": {},
+  {
+    "name": "Lost Files of Sherlock Holmes, The",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Lost Files of Sherlock Holmes, The (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2117,28 +1925,30 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lost Files of Sherlock Holmes, The (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Love Bites",
+    "players": 1,
+    "rating": 0.3,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Lucienne's Quest",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Lost Files of Sherlock Holmes, The (Europe)"
+        "name": "Lucienne's Quest (USA)",
+        "clones": [
+          "Sword & Sorcery"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Love Bites": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
-  },
-  "Lucienne's Quest": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -2147,20 +1957,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lucienne's Quest (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Sword & Sorcery"
-        ],
-        "name": "Lucienne's Quest (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Mad Dog II - The Lost Gold": {
-    "emulation": {},
+  {
+    "name": "Mad Dog II - The Lost Gold",
+    "players": 2,
+    "rating": 0.95,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -2171,12 +1973,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Mad Dog II - the Lost Gold (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.95
+    ]
   },
-  "Mad Dog McCree": {
-    "emulation": {},
+  {
+    "name": "Mad Dog McCree",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -2188,51 +1990,44 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Mad Dog McCree (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
+    ]
   },
-  "Mahjong Gokuu Tenjiku": {
-    "emulation": {},
+  {
+    "name": "Mahjong Gokuu Tenjiku",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game",
       "Mahjong",
       "Simulation"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Mahjong-kyou Jidai - AV Gal Seifuku-hen": {
-    "emulation": {},
+  {
+    "name": "Mahjong-kyou Jidai - AV Gal Seifuku-hen",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Mahjong-kyou Jidai Cogal Houkago-hen": {
-    "emulation": {},
+  {
+    "name": "Mahjong-kyou Jidai Cogal Houkago-hen",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Asiatic board game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Makaroni Hourensou Interactive": {
-    "emulation": {},
+  {
+    "name": "Makaroni Hourensou Interactive",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Mathemagics - An Interactive Learning Cube": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Mathemagics - An Interactive Learning Cube",
     "manuals": [
       {
         "languages": [
@@ -2240,12 +2035,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Mathemagics - An Interactive Learning Cube (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Mazer": {
-    "emulation": {},
+  {
+    "name": "Mazer",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
@@ -2256,15 +2051,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Mazer (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "MegaRace": {
-    "emulation": {},
+  {
+    "name": "MegaRace",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ],
+    "parents": [
+      {
+        "name": "MegaRace (USA, Europe) (En,Fr,De,Es,It)"
+      }
     ],
     "manuals": [
       {
@@ -2273,19 +2073,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/MegaRace (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Microcosm",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "MegaRace (USA, Europe) (En,Fr,De,Es,It)"
+        "name": "Microcosm (USA)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Microcosm": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -2294,66 +2094,53 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Microcosm (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Microcosm (USA)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Mirai Shounen Conan - Digital Library": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Mirai Shounen Conan - Digital Library"
   },
-  "Monoshiri Jiyuugaku - Ogura Hyakunin Isshu-hen": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Monoshiri Jiyuugaku - Ogura Hyakunin Isshu-hen"
   },
-  "Montana Jones": {
-    "emulation": {},
+  {
+    "name": "Montana Jones",
+    "players": 1,
     "genres": [
       "Action"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Montana Jones (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Moon Cradle - Igyou no Hanayome": {
-    "emulation": {},
+  {
+    "name": "Moon Cradle - Igyou no Hanayome",
+    "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Murphy da yo Zen'in Shuugou!!": {
-    "emulation": {},
+  {
+    "name": "Murphy da yo Zen'in Shuugou!!",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Myst": {
-    "emulation": {},
+  {
+    "name": "Myst",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
-      "Puzzle-Game",
-      "Adventure"
+      "Adventure",
+      "Puzzle-Game"
+    ],
+    "parents": [
+      {
+        "name": "Myst (USA)"
+      }
     ],
     "manuals": [
       {
@@ -2362,54 +2149,30 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Myst (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Myst (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "N.O.B.": {
-    "emulation": {},
+  {
+    "name": "N.O.B.",
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Naoko to Hide-bou - Kanji no Tensai 1 - Bushu-hen, Bushu no Namae ga Tanoshii Chou Kioku-hou": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Naoko to Hide-bou - Kanji no Tensai 1 - Bushu-hen, Bushu no Namae ga Tanoshii Chou Kioku-hou"
   },
-  "Naoko to Hide-bou - Sansuu no Tensai 1 - Wa to Sa no Bunshoudai Tsurukamezan Part I": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Naoko to Hide-bou - Sansuu no Tensai 1 - Wa to Sa no Bunshoudai Tsurukamezan Part I"
   },
-  "Naoko to Hide-bou - Sansuu no Tensai 2 - Hayasa no Bunshoudai Tsuukasan Part I": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Naoko to Hide-bou - Sansuu no Tensai 2 - Hayasa no Bunshoudai Tsuukasan Part I"
   },
-  "Nemurenu Yoru no Chiisana Ohanashi": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Nemurenu Yoru no Chiisana Ohanashi"
   },
-  "NeuroDancer - Journey into the Neuronet!": {
-    "emulation": {},
+  {
+    "name": "NeuroDancer - Journey into the Neuronet!",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Adult"
     ],
@@ -2420,25 +2183,23 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/NeuroDancer - Journey Into The Neuronet (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Nice Body - For Professional Use": {
-    "emulation": {},
+  {
+    "name": "Nice Body - For Professional Use",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Night Trap": {
-    "emulation": {},
+  {
+    "name": "Night Trap",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Night Trap (USA) (Disc 1)"
@@ -2446,48 +2207,51 @@
       {
         "name": "Night Trap (USA) (Disc 2)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Nishimura Kyoutarou Travel Mystery - Akugyaku no Kisetsu - Tokyo Nanki Shirahama Renzoku Satsujin Jiken": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Nishimura Kyoutarou Travel Mystery - Akugyaku no Kisetsu - Tokyo Nanki Shirahama Renzoku Satsujin Jiken",
     "players": 1,
     "rating": 0.8
   },
-  "Nobunaga no Yabou - Haouden": {
-    "emulation": {},
+  {
+    "name": "Nobunaga no Yabou - Haouden",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Nontan to Issho - Hoshi no Okurimono": {
-    "emulation": {},
+  {
+    "name": "Nontan to Issho - Hoshi no Okurimono",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Nontan to Issho - Nohara de Asobo": {
-    "emulation": {},
+  {
+    "name": "Nontan to Issho - Nohara de Asobo",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Novastorm": {
-    "emulation": {},
+  {
+    "name": "Novastorm",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Novastorm (USA)",
+        "clones": [
+          "Nova-Storm"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2496,23 +2260,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Novastorm (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Oceans Below",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Adventure",
+      "Educational"
     ],
     "parents": [
       {
-        "clones": [
-          "Nova-Storm"
-        ],
-        "name": "Novastorm (USA)"
+        "name": "Oceans Below (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
-  },
-  "Oceans Below": {
-    "emulation": {},
-    "genres": [
-      "Educational",
-      "Adventure"
     ],
     "manuals": [
       {
@@ -2521,19 +2282,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Oceans Below (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Off-World Interceptor",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "Oceans Below (USA)"
+        "name": "Off-World Interceptor (USA, Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Off-World Interceptor": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -2542,36 +2303,26 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Off-world Interceptor (USA, Europe).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Off-World Interceptor (USA, Europe)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Ogura Hyakunin Isshu": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Ogura Hyakunin Isshu"
   },
-  "Olympic Games": {
-    "emulation": {},
-    "genres": [
-      "Sports"
-    ],
-    "manuals": [],
+  {
+    "name": "Olympic Games",
     "players": 8,
-    "rating": 0.7
-  },
-  "Olympic Soccer": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Sports / Soccer",
       "Sports"
+    ]
+  },
+  {
+    "name": "Olympic Soccer",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
     ],
     "manuals": [
       {
@@ -2580,12 +2331,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Olympic Soccer (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Olympic Summer Games": {
-    "emulation": {},
+  {
+    "name": "Olympic Summer Games",
+    "players": 8,
+    "rating": 0.7,
     "genres": [
       "Sports"
     ],
@@ -2596,47 +2347,47 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Olympic Summer Games (USA).pdf"
       }
-    ],
-    "players": 8,
-    "rating": 0.7
+    ]
   },
-  "OnSide Soccer": {
-    "emulation": {},
+  {
+    "name": "OnSide Soccer",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "Onee-san to Issho! Janken Paradise": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
+  {
+    "name": "Onee-san to Issho! Janken Paradise",
     "rating": 0.5
   },
-  "Onee-san to Issho! Kisekae Paradise": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
+  {
+    "name": "Onee-san to Issho! Kisekae Paradise",
     "rating": 0.5
   },
-  "Oukoku no Grand Chef": {
-    "emulation": {},
+  {
+    "name": "Oukoku no Grand Chef",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Role playing games"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Out of This World": {
-    "emulation": {},
+  {
+    "name": "Out of This World",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Out of This World (USA)",
+        "clones": [
+          "Outer World"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2645,33 +2396,29 @@
         ],
         "url": "https://archive.org/download/Out_of_this_World_1993_Interplay_US/Out_of_this_World_1993_Interplay_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Outer World"
-        ],
-        "name": "Out of This World (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Oyaji Hunter Mahjong": {
-    "emulation": {},
+  {
+    "name": "Oyaji Hunter Mahjong",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "PGA Tour 96": {
-    "emulation": {},
+  {
+    "name": "PGA Tour 96",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
+    ],
+    "parents": [
+      {
+        "name": "PGA Tour 96 (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2680,17 +2427,12 @@
         ],
         "url": "https://archive.org/download/PGA_Tour_96_1995_EA_Sports_US/PGA_Tour_96_1995_EA_Sports_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "PGA Tour 96 (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "PO'ed": {
-    "emulation": {},
+  {
+    "name": "PO'ed",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -2702,14 +2444,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/PO'ed (USA, Europe).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "PaTaank": {
-    "emulation": {},
+  {
+    "name": "PaTaank",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "PaTaank (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2718,32 +2465,28 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/PaTaank (USA, Europe).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "PaTaank (USA, Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.7
+    ]
   },
-  "Paddock Note '95": {
-    "emulation": {},
+  {
+    "name": "Paddock Note '95",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Paddock Note '95 (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD",
+    "parents": [
+      {
+        "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD (USA) (ZAZ)"
+      }
+    ],
     "manuals": [
       {
         "languages": [
@@ -2751,40 +2494,25 @@
         ],
         "url": "https://archive.org/download/Panasonic_REAL_3DO_Interactive_Multiplayer_Sampler_CD_1994_Panasonic_US/Panasonic_REAL_3DO_Interactive_Multiplayer_Sampler_CD_1994_Panasonic_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD (USA) (ZAZ)"
-      }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD for PAL System": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD for PAL System"
   },
-  "Panasonic Special CD-ROM": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Panasonic Special CD-ROM"
   },
-  "Penthouse Interactive - Virtual Photo Shoot Vol. 1": {
-    "emulation": {},
+  {
+    "name": "Penthouse Interactive - Virtual Photo Shoot Vol. 1",
+    "players": 1,
     "genres": [
       "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Perfect General, The": {
-    "emulation": {},
+  {
+    "name": "Perfect General, The",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Strategy"
     ],
@@ -2795,24 +2523,28 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Perfect General, The (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Peter Frankl - Puzzle no Tou": {
-    "emulation": {},
+  {
+    "name": "Peter Frankl - Puzzle no Tou",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Phoenix 3": {
-    "emulation": {},
+  {
+    "name": "Phoenix 3",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Phoenix 3 (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -2821,17 +2553,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Phoenix 3 (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Phoenix 3 (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Plumbers Don't Wear Ties": {
-    "emulation": {},
+  {
+    "name": "Plumbers Don't Wear Ties",
+    "players": 1,
+    "rating": 0.3,
     "genres": [
       "Simulation"
     ],
@@ -2842,32 +2569,38 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Plumbers Don't Wear Ties (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.3
+    ]
   },
-  "Policenauts": {
-    "emulation": {},
+  {
+    "name": "Policenauts",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Policenauts - Pilot Disk": {
-    "emulation": {},
+  {
+    "name": "Policenauts - Pilot Disk",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Powers Kingdom": {
-    "emulation": {},
+  {
+    "name": "Powers Kingdom",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Role playing games"
+    ],
+    "parents": [
+      {
+        "name": "Powers Kingdom (Europe)",
+        "clones": [
+          "Guardian War"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -2876,32 +2609,28 @@
         ],
         "url": "https://archive.org/download/GuardianWarManual/GuardianWarManual.pdf"
       }
+    ]
+  },
+  {
+    "name": "Powerslide",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "Pretty Soldier SailorMoon S",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Fight"
     ],
     "parents": [
       {
-        "clones": [
-          "Guardian War"
-        ],
-        "name": "Powers Kingdom (Europe)"
+        "name": "Pretty Soldier SailorMoon S (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
-  },
-  "Powerslide": {
-    "emulation": {},
-    "genres": [
-      "Race",
-      "Driving"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Pretty Soldier SailorMoon S": {
-    "emulation": {},
-    "genres": [
-      "Fight"
     ],
     "manuals": [
       {
@@ -2910,17 +2639,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Bishoujo Senshi Sailor Moon S (Japan).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Pretty Soldier SailorMoon S (Japan)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Primal Rage": {
-    "emulation": {},
+  {
+    "name": "Primal Rage",
+    "players": 2,
+    "rating": 1,
     "genres": [
       "Action",
       "Fight"
@@ -2932,47 +2656,44 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Primal Rage (USA, Europe).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 1
+    ]
   },
-  "Princess Maker 2": {
-    "emulation": {},
-    "genres": [
-      "Simulation",
-      "Role playing games"
-    ],
-    "manuals": [],
+  {
+    "name": "Princess Maker 2",
     "players": 1,
-    "rating": 0.65
+    "rating": 0.65,
+    "genres": [
+      "Role playing games",
+      "Simulation"
+    ]
   },
-  "Pro Stadium": {
-    "emulation": {},
+  {
+    "name": "Pro Stadium",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Pro Yakyuu Virtual Stadium - Professional Baseball",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Sports",
       "Sports / Baseball"
     ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.9
-  },
-  "Pro Yakyuu Virtual Stadium - Professional Baseball": {
-    "emulation": {},
-    "genres": [
-      "Sports",
-      "Sports / Baseball"
-    ],
-    "manuals": [],
     "parents": [
       {
         "name": "Pro Yakyuu Virtual Stadium - Professional Baseball (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Psychic Detective": {
-    "emulation": {},
+  {
+    "name": "Psychic Detective",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Adventure"
     ],
@@ -2983,60 +2704,58 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Psychic Detective (USA) (Disc 1).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Puppet Tale": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Puppet Tale"
   },
-  "Putt-Putt Goes to the Moon": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [],
+  {
+    "name": "Putt-Putt Goes to the Moon",
     "players": 1,
-    "rating": 0.7
-  },
-  "Putt-Putt Joins the Parade": {
-    "emulation": {},
+    "rating": 0.7,
     "genres": [
-      "Educational",
       "Adventure"
+    ]
+  },
+  {
+    "name": "Putt-Putt Joins the Parade",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure",
+      "Educational"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Putt-Putt Joins the Parade (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Putt-Putt's Fun Pack": {
-    "emulation": {},
+  {
+    "name": "Putt-Putt's Fun Pack",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Putt-Putt's Fun Pack (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Puzzle Bobble": {
-    "emulation": {},
+  {
+    "name": "Puzzle Bobble",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Strategy",
-      "Puzzle-Game"
+      "Puzzle-Game",
+      "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Puzzle Bobble (Japan)"
+      }
     ],
     "manuals": [
       {
@@ -3045,29 +2764,23 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Bust-A-Move (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Puzzle Bobble (Japan)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Pyramid Intruder": {
-    "emulation": {},
+  {
+    "name": "Pyramid Intruder",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Quarantine": {
-    "emulation": {},
+  {
+    "name": "Quarantine",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -3076,25 +2789,29 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Quarantine (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Quarterback Attack": {
-    "emulation": {},
+  {
+    "name": "Quarterback Attack",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Real Pinball": {
-    "emulation": {},
+  {
+    "name": "Real Pinball",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Simulation",
-      "Pinball"
+      "Pinball",
+      "Simulation"
+    ],
+    "parents": [
+      {
+        "name": "Real Pinball (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3103,20 +2820,20 @@
         ],
         "url": "https://archive.org/download/Real_Pinball_1994_Panasonic_US/Real_Pinball_1994_Panasonic_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Real Pinball (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Return Fire": {
-    "emulation": {},
+  {
+    "name": "Return Fire",
+    "players": 2,
+    "rating": 0.6,
     "genres": [
       "Action",
       "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Return Fire (Japan, Europe) (En,Ja,Fr,De,Es,It,Pt,Ko,Ru,Ar)"
+      }
     ],
     "manuals": [
       {
@@ -3125,49 +2842,50 @@
         ],
         "url": "https://archive.org/download/Return_Fire_1995_Prolific_US/Return_Fire_1995_Prolific_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Return Fire (Japan, Europe) (En,Ja,Fr,De,Es,It,Pt,Ko,Ru,Ar)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.6
+    ]
   },
-  "Return Fire - Maps O' Death": {
-    "emulation": {},
+  {
+    "name": "Return Fire - Maps O' Death",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Simulation"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Return Fire - Maps O' Death (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "Rise of the Robots": {
-    "emulation": {},
+  {
+    "name": "Rise of the Robots",
+    "players": 2,
+    "rating": 0.1,
     "genres": [
       "Action",
       "Fight"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Rise of the Robots (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.1
+    ]
   },
-  "Road & Track Presents - The Need for Speed": {
-    "emulation": {},
+  {
+    "name": "Road & Track Presents - The Need for Speed",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
-      "Race",
-      "Driving"
+      "Driving",
+      "Race"
+    ],
+    "parents": [
+      {
+        "name": "Road & Track Presents - The Need for Speed (USA, Europe)",
+        "clones": [
+          "Road & Track Presents - OverDrivin'"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3176,25 +2894,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Need for Speed, The (USA, Europe).pdf"
       }
+    ]
+  },
+  {
+    "name": "Road Rash",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "3rd Pers.",
+      "Driving",
+      "Motorcycle Race",
+      "Race"
     ],
     "parents": [
       {
-        "clones": [
-          "Road & Track Presents - OverDrivin'"
-        ],
-        "name": "Road & Track Presents - The Need for Speed (USA, Europe)"
+        "name": "Road Rash (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
-  },
-  "Road Rash": {
-    "emulation": {},
-    "genres": [
-      "Motorcycle Race",
-      "3rd Pers.",
-      "Race",
-      "Driving"
     ],
     "manuals": [
       {
@@ -3203,39 +2918,40 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Road Rash (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Road Rash (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Robinson's Requiem": {
-    "emulation": {},
+  {
+    "name": "Robinson's Requiem",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Role playing games",
-      "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+      "Adventure",
+      "Role playing games"
+    ]
   },
-  "Royal Pro Wrestling - Jikkyou Live!!": {
-    "emulation": {},
+  {
+    "name": "Royal Pro Wrestling - Jikkyou Live!!",
+    "players": 2,
+    "rating": 0.8,
     "genres": [
       "Sports",
       "Sports / Wrestling"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.8
+    ]
   },
-  "SHADOW - War of Succession": {
-    "emulation": {},
+  {
+    "name": "SHADOW - War of Succession",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "SHADOW - War of Succession (USA)",
+        "clones": [
+          "SHADOW Warriors"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3244,23 +2960,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Shadow - War of Succession (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "SHADOW Warriors"
-        ],
-        "name": "SHADOW - War of Succession (USA)"
-      }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Samurai Shodown": {
-    "emulation": {},
+  {
+    "name": "Samurai Shodown",
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Samurai Shodown (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3269,28 +2982,25 @@
         ],
         "url": "https://archive.org/download/Samurai_Shodown_1994_Crystal_Dynamics_US/Samurai_Shodown_1994_Crystal_Dynamics_US.pdf"
       }
+    ]
+  },
+  {
+    "name": "Sangokushi IV",
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Scramble Cobra",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "Samurai Shodown (USA, Europe)"
+        "name": "Scramble Cobra (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.75
-  },
-  "Sangokushi IV": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
-    ],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Scramble Cobra": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -3299,19 +3009,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Scramble Cobra (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Seal of the Pharaoh",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Adventure"
     ],
     "parents": [
       {
-        "name": "Scramble Cobra (Europe)"
+        "name": "Seal of the Pharaoh (USA)",
+        "clones": [
+          "Virtual Quest - Pharaoh no Fuuin"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Seal of the Pharaoh": {
-    "emulation": {},
-    "genres": [
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3320,47 +3033,39 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Seal of the Pharaoh (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Virtual Quest - Pharaoh no Fuuin"
-        ],
-        "name": "Seal of the Pharaoh (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Secre Fuumin no Omochabako": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Secre Fuumin no Omochabako",
     "players": 1,
     "rating": 0.55
   },
-  "Seimei Handan": {
-    "emulation": {},
+  {
+    "name": "Seimei Handan",
+    "players": 1,
     "genres": [
       "Playing cards"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Sento Monogatari - Sono I": {
-    "emulation": {},
+  {
+    "name": "Sento Monogatari - Sono I",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Sesame Street - Numbers": {
-    "emulation": {},
+  {
+    "name": "Sesame Street - Numbers",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Educational"
+    ],
+    "parents": [
+      {
+        "name": "Sesame Street - Numbers (USA)"
+      }
     ],
     "manuals": [
       {
@@ -3369,17 +3074,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Sesame Street - Numbers (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Sesame Street - Numbers (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Sewer Shark": {
-    "emulation": {},
+  {
+    "name": "Sewer Shark",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Lightgun Shooter"
     ],
@@ -3390,23 +3090,30 @@
         ],
         "url": "https://archive.org/download/sewer-shark-3do-usa/manual.pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Sex": {
-    "emulation": {},
+  {
+    "name": "Sex",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Shanghai - Triple-Threat": {
-    "emulation": {},
+  {
+    "name": "Shanghai - Triple-Threat",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Board game"
+    ],
+    "parents": [
+      {
+        "name": "Shanghai - Triple-Threat (USA)",
+        "clones": [
+          "Shanghai - Banri no Choujou - The Great Wall"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3415,31 +3122,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Shanghai - Triple-Threat (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Shelley Duvall's It's a Bird's Life",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Educational"
+    ]
+  },
+  {
+    "name": "Shock Wave",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "clones": [
-          "Shanghai - Banri no Choujou - The Great Wall"
-        ],
-        "name": "Shanghai - Triple-Threat (USA)"
+        "name": "Shock Wave (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Shelley Duvall's It's a Bird's Life": {
-    "emulation": {},
-    "genres": [
-      "Educational"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
-  },
-  "Shock Wave": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -3448,31 +3151,38 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Shockwave - Invasion Earth 2019 (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Shock Wave (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Shock Wave - Operation JumpGate": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Shock Wave - Operation JumpGate",
+    "players": 1,
+    "rating": 0.8,
     "parents": [
       {
         "name": "Shock Wave - Operation JumpGate (USA, Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Shockwave 2 - Beyond the Gate": {
-    "emulation": {},
+  {
+    "name": "Shockwave 2 - Beyond the Gate",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 1)",
+        "clones": [
+          "Shockwave 2 - Beyond the Gate (Disc 01)"
+        ]
+      },
+      {
+        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 2)",
+        "clones": [
+          "Shockwave 2 - Beyond the Gate (Disc 02)"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3481,43 +3191,28 @@
         ],
         "url": "https://archive.org/download/Shockwave_2_Beyond_the_Gate_1995_Electronic_Arts_US_operations_guide/Shockwave_2_Beyond_the_Gate_1995_Electronic_Arts_US_operations_guide.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Shockwave 2 - Beyond the Gate (Disc 01)"
-        ],
-        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 1)"
-      },
-      {
-        "clones": [
-          "Shockwave 2 - Beyond the Gate (Disc 02)"
-        ],
-        "name": "Shockwave 2 - Beyond the Gate (Europe) (Disc 2)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Short Warp - Warp's Short Game Collection": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Short Warp - Warp's Short Game Collection",
     "players": 1,
     "rating": 0.65
   },
-  "Sid Meier's C.P.U. Bach": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Sid Meier's C.P.U. Bach"
   },
-  "Slam 'n Jam '95": {
-    "emulation": {},
+  {
+    "name": "Slam 'n Jam '95",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Sports / Basketball",
-      "Sports"
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "parents": [
+      {
+        "name": "Slam 'n Jam '95 (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -3526,19 +3221,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Slam 'N Jam '95 (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Slayer",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
     ],
     "parents": [
       {
-        "name": "Slam 'n Jam '95 (USA, Europe)"
+        "name": "Slayer (Europe)",
+        "clones": [
+          "Lost Dungeon"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Slayer": {
-    "emulation": {},
-    "genres": [
-      "Role playing games"
     ],
     "manuals": [
       {
@@ -3547,27 +3245,15 @@
         ],
         "url": "https://archive.org/download/Slayer_1994_SSi_US/Slayer_1994_SSi_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Lost Dungeon"
-        ],
-        "name": "Slayer (Europe)"
-      }
-    ],
+    ]
+  },
+  {
+    "name": "Slopestyle - An Interactive Learning Cube"
+  },
+  {
+    "name": "SnowJob",
     "players": 1,
-    "rating": 0.75
-  },
-  "Slopestyle - An Interactive Learning Cube": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "SnowJob": {
-    "emulation": {},
+    "rating": 0.4,
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
@@ -3579,15 +3265,23 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Snow Job Starring Tracy Scoggins (USA) (Disc 1).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Soccer Kid": {
-    "emulation": {},
+  {
+    "name": "Soccer Kid",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Platform"
+    ],
+    "parents": [
+      {
+        "name": "Soccer Kid (Europe)",
+        "clones": [
+          "Great! Soccer Kid"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3596,46 +3290,40 @@
         ],
         "url": "https://archive.org/download/soccer-kid-3do/manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Great! Soccer Kid"
-        ],
-        "name": "Soccer Kid (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Sotsugyou - Graduation - Final": {
-    "emulation": {},
+  {
+    "name": "Sotsugyou - Graduation - Final",
+    "players": 1,
+    "rating": 0.5,
     "genres": [
       "Adventure",
       "Various"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Sotsugyou - Graduation - Final (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.5
+    ]
   },
-  "Sotsugyou II Special - Neo Generation": {
-    "emulation": {},
+  {
+    "name": "Sotsugyou II Special - Neo Generation",
+    "players": 1,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Space Ace": {
-    "emulation": {},
+  {
+    "name": "Space Ace",
+    "players": 1,
+    "rating": 0.8,
     "genres": [
       "Adventure"
+    ],
+    "parents": [
+      {
+        "name": "Space Ace (USA)"
+      }
     ],
     "manuals": [
       {
@@ -3644,20 +3332,23 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Ace (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Space Hulk - Vengeance of the Blood Angels",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Strategy"
     ],
     "parents": [
       {
-        "name": "Space Ace (USA)"
+        "name": "Space Hulk - Vengeance of the Blood Angels (Europe)",
+        "clones": [
+          "Blood Angels"
+        ]
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Space Hulk - Vengeance of the Blood Angels": {
-    "emulation": {},
-    "genres": [
-      "Strategy",
-      "Action"
     ],
     "manuals": [
       {
@@ -3666,20 +3357,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Hulk - Vengeance of the Blood Angels (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Blood Angels"
-        ],
-        "name": "Space Hulk - Vengeance of the Blood Angels (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Space Pirates": {
-    "emulation": {},
+  {
+    "name": "Space Pirates",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -3691,12 +3374,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Pirates (USA).pdf"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "Space Shuttle": {
-    "emulation": {},
+  {
+    "name": "Space Shuttle",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Action"
     ],
@@ -3707,14 +3390,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Shuttle (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Star Control II": {
-    "emulation": {},
+  {
+    "name": "Star Control II",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Strategy"
+    ],
+    "parents": [
+      {
+        "name": "Star Control II (USA)",
+        "clones": [
+          "Star Control II - The Ur-Quan Masters"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3723,22 +3414,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Star Control II (USA, Europe).pdf"
       }
+    ]
+  },
+  {
+    "name": "Star Fighter",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "clones": [
-          "Star Control II - The Ur-Quan Masters"
-        ],
-        "name": "Star Control II (USA)"
+        "name": "Star Fighter (USA, Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.7
-  },
-  "Star Fighter": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -3747,19 +3435,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Star Fighter (USA, Europe).pdf"
       }
+    ]
+  },
+  {
+    "name": "Star Wars - Rebel Assault",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "Star Fighter (USA, Europe)"
+        "name": "Star Wars - Rebel Assault (USA, Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Star Wars - Rebel Assault": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -3768,20 +3456,20 @@
         ],
         "url": "https://archive.org/download/Star_Wars_Rebel_Assault_1993_Electronic_Arts_US/Star_Wars_Rebel_Assault_1993_Electronic_Arts_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Star Wars - Rebel Assault (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Starblade": {
-    "emulation": {},
+  {
+    "name": "Starblade",
+    "players": 1,
+    "rating": 0.95,
     "genres": [
       "Action",
       "Lightgun Shooter"
+    ],
+    "parents": [
+      {
+        "name": "Starblade (Europe, Germany)"
+      }
     ],
     "manuals": [
       {
@@ -3790,19 +3478,19 @@
         ],
         "url": "https://archive.org/download/StarBlade_1994_Panasonic_US/StarBlade_1994_Panasonic_US.pdf"
       }
+    ]
+  },
+  {
+    "name": "Stellar 7 - Draxon's Revenge",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "Starblade (Europe, Germany)"
+        "name": "Stellar 7 - Draxon's Revenge (USA)"
       }
-    ],
-    "players": 1,
-    "rating": 0.95
-  },
-  "Stellar 7 - Draxon's Revenge": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -3811,18 +3499,10 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Stellar 7 - Draxon's Revenge (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Stellar 7 - Draxon's Revenge (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.8
+    ]
   },
-  "Step Aerobics": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "Step Aerobics",
     "manuals": [
       {
         "languages": [
@@ -3830,21 +3510,22 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Step Aerobics (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Storage Manager - Memory Kanri": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Storage Manager - Memory Kanri"
   },
-  "Strahl": {
-    "emulation": {},
+  {
+    "name": "Strahl",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "Strahl (USA)"
+      }
     ],
     "manuals": [
       {
@@ -3853,56 +3534,52 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Strahl (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Strahl (USA)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Striker - World Cup Special": {
-    "emulation": {},
+  {
+    "name": "Striker - World Cup Special",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Super Model, The - Gail McKenna"
+  },
+  {
+    "name": "Super Real Mahjong P.V",
     "players": 1,
-    "rating": 0.55
-  },
-  "Super Model, The - Gail McKenna": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Super Real Mahjong P.V": {
-    "emulation": {},
+    "rating": 0.4,
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Super Real Mahjong PIV + Aishou Shindan": {
-    "emulation": {},
+  {
+    "name": "Super Real Mahjong PIV + Aishou Shindan",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Playing cards"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Super Street Fighter II Turbo": {
-    "emulation": {},
+  {
+    "name": "Super Street Fighter II Turbo",
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Super Street Fighter II Turbo (Europe)",
+        "clones": [
+          "Super Street Fighter II X - Grand Master Challenge"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -3911,22 +3588,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Super Street Fighter II Turbo (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Super Wing Commander",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Simulation"
     ],
     "parents": [
       {
-        "clones": [
-          "Super Street Fighter II X - Grand Master Challenge"
-        ],
-        "name": "Super Street Fighter II Turbo (Europe)"
+        "name": "Super Wing Commander (Europe)"
       }
-    ],
-    "players": 2,
-    "rating": 0.85
-  },
-  "Super Wing Commander": {
-    "emulation": {},
-    "genres": [
-      "Simulation"
     ],
     "manuals": [
       {
@@ -3935,30 +3609,29 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Super Wing Commander (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "SuperModels Go Wild",
+    "players": 1,
+    "rating": 0.3,
+    "genres": [
+      "Adult"
+    ]
+  },
+  {
+    "name": "Supreme Warrior",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fight"
     ],
     "parents": [
       {
-        "name": "Super Wing Commander (Europe)"
+        "name": "Supreme Warrior (USA) (Disc 2) (Wind & Fang Tu)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "SuperModels Go Wild": {
-    "emulation": {},
-    "genres": [
-      "Adult"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.3
-  },
-  "Supreme Warrior": {
-    "emulation": {},
-    "genres": [
-      "Action",
-      "Fight",
-      "Adventure"
     ],
     "manuals": [
       {
@@ -3967,19 +3640,19 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Supreme Warrior - Ying Heung (USA) (Disc 1).pdf"
       }
+    ]
+  },
+  {
+    "name": "Syndicate",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Strategy"
     ],
     "parents": [
       {
-        "name": "Supreme Warrior (USA) (Disc 2) (Wind & Fang Tu)"
+        "name": "Syndicate (Europe)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Syndicate": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
     ],
     "manuals": [
       {
@@ -3988,82 +3661,75 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Syndicate (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Syndicate (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "T&E VR Golf - Masters - Harukanaru Augusta 3": {
-    "emulation": {},
+  {
+    "name": "T&E VR Golf - Masters - Harukanaru Augusta 3",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Sports",
       "Sports / Golf"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "T&E VR Golf - Masters - Harukanaru Augusta 3 (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Taiketsu Rumiizu!": {
-    "emulation": {},
+  {
+    "name": "Taiketsu Rumiizu!",
+    "players": 4,
+    "rating": 0.4,
     "genres": [
       "Action"
-    ],
-    "manuals": [],
-    "players": 4,
-    "rating": 0.4
+    ]
   },
-  "Takeru": {
-    "emulation": {},
+  {
+    "name": "Takeru",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Tanjou - Debut - Pure": {
-    "emulation": {},
+  {
+    "name": "Tanjou - Debut - Pure",
+    "players": 1,
     "genres": [
-      "Simulation",
-      "Build And Management"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+      "Build And Management",
+      "Simulation"
+    ]
   },
-  "Tarot Uranai": {
-    "emulation": {},
+  {
+    "name": "Tarot Uranai",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Theatre Wars - Goraku no Dendou": {
-    "emulation": {},
+  {
+    "name": "Theatre Wars - Goraku no Dendou",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Build And Management",
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Theme Park",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Simulation",
-      "Build And Management"
+      "Strategy"
     ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.8
-  },
-  "Theme Park": {
-    "emulation": {},
-    "genres": [
-      "Strategy",
-      "Simulation"
+    "parents": [
+      {
+        "name": "Theme Park (Europe) (En,Fr)"
+      }
     ],
     "manuals": [
       {
@@ -4072,37 +3738,27 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Theme Park (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Theme Park (Europe) (En,Fr)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Toki o Koeta Tegami": {
-    "emulation": {},
+  {
+    "name": "Toki o Koeta Tegami",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "Tokimeki Mahjong Paradise Special - Koi no Tenpai Beat": {
-    "emulation": {},
+  {
+    "name": "Tokimeki Mahjong Paradise Special - Koi no Tenpai Beat",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "ToonTime ...in the Classroom": {
-    "emulation": {},
-    "genres": [],
+  {
+    "name": "ToonTime ...in the Classroom",
     "manuals": [
       {
         "languages": [
@@ -4110,15 +3766,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Toon Time...in the classroom (USA).pdf"
       }
-    ],
-    "players": null,
-    "rating": null
+    ]
   },
-  "Total Eclipse": {
-    "emulation": {},
+  {
+    "name": "Total Eclipse",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Action",
       "Shoot'em Up"
+    ],
+    "parents": [
+      {
+        "name": "Total Eclipse (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -4127,68 +3788,66 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Total Eclipse (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Total Eclipse (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.85
+    ]
   },
-  "Totsugeki Karakuri! Megadas!!": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
+  {
+    "name": "Totsugeki Karakuri! Megadas!!",
+    "rating": 0.75,
     "parents": [
       {
         "name": "Totsugeki Karakuri! Megadas!! (Japan)"
       }
-    ],
-    "players": null,
-    "rating": 0.75
+    ]
   },
-  "Touhaiden Akagi": {
-    "emulation": {},
+  {
+    "name": "Touhaiden Akagi",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
+    ]
   },
-  "Tower, The": {
-    "emulation": {},
+  {
+    "name": "Tower, The",
+    "players": 1,
+    "rating": 0.9,
     "genres": [
-      "Simulation",
-      "Build And Management"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.9
+      "Build And Management",
+      "Simulation"
+    ]
   },
-  "Trip'd": {
-    "emulation": {},
+  {
+    "name": "Trip'd",
+    "players": 2,
+    "rating": 0.7,
     "genres": [
       "Puzzle-Game"
     ],
-    "manuals": [],
     "parents": [
       {
+        "name": "Trip'd (USA, Europe)",
         "clones": [
           "Uchuu Seibutsu Flopon-kun"
-        ],
-        "name": "Trip'd (USA, Europe)"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": 0.7
+    ]
   },
-  "True Golf Classics - Pebble Beach Golf Links": {
-    "emulation": {},
+  {
+    "name": "True Golf Classics - Pebble Beach Golf Links",
+    "players": 4,
+    "rating": 0.7,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
+    ],
+    "parents": [
+      {
+        "name": "True Golf Classics - Pebble Beach Golf Links (Europe)",
+        "clones": [
+          "Pebble Beach Golf Links",
+          "T&E VR Golf - Pebble Beach no Hatou"
+        ]
+      }
     ],
     "manuals": [
       {
@@ -4197,32 +3856,30 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Pebble Beach Golf Links (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Twinkle Knights",
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
+      "Casino"
+    ]
+  },
+  {
+    "name": "Twisted - The Game Show",
+    "players": 4,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
     ],
     "parents": [
       {
+        "name": "Twisted - The Game Show (Europe)",
         "clones": [
-          "Pebble Beach Golf Links",
-          "T&E VR Golf - Pebble Beach no Hatou"
-        ],
-        "name": "True Golf Classics - Pebble Beach Golf Links (Europe)"
+          "Twisted"
+        ]
       }
-    ],
-    "players": 4,
-    "rating": 0.7
-  },
-  "Twinkle Knights": {
-    "emulation": {},
-    "genres": [
-      "Casino"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.4
-  },
-  "Twisted - The Game Show": {
-    "emulation": {},
-    "genres": [
-      "Puzzle-Game"
     ],
     "manuals": [
       {
@@ -4231,46 +3888,41 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Twisted - The Game Show (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "Twisted"
-        ],
-        "name": "Twisted - The Game Show (Europe)"
-      }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "Ultraman Powered": {
-    "emulation": {},
+  {
+    "name": "Ultraman Powered",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Fight"
-    ],
-    "manuals": [],
-    "players": 2,
-    "rating": 0.65
+    ]
   },
-  "V Goal Soccer '96": {
-    "emulation": {},
+  {
+    "name": "V Goal Soccer '96",
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Sports",
       "Sports / Soccer"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "V Goal Soccer '96 (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.65
+    ]
   },
-  "VR Stalker": {
-    "emulation": {},
+  {
+    "name": "VR Stalker",
+    "players": 1,
+    "rating": 0.4,
     "genres": [
       "Action"
+    ],
+    "parents": [
+      {
+        "name": "VR Stalker (Europe) (Improved Version)"
+      }
     ],
     "manuals": [
       {
@@ -4279,51 +3931,41 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/VR Stalker (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "Virtual Cameraman Part 1 - Naomi Sawada & Anna Juri",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Virtual Cameraman Part 2 - Natsumi Kawai & Kimi Tachihara",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Virtual Puppet Reika"
+  },
+  {
+    "name": "Virtual Vivid"
+  },
+  {
+    "name": "Virtuoso",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action"
     ],
     "parents": [
       {
-        "name": "VR Stalker (Europe) (Improved Version)"
+        "name": "Virtuoso (Europe) (En,Fr,De)"
       }
-    ],
-    "players": 1,
-    "rating": 0.4
-  },
-  "Virtual Cameraman Part 1 - Naomi Sawada & Anna Juri": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.65
-  },
-  "Virtual Cameraman Part 2 - Natsumi Kawai & Kimi Tachihara": {
-    "emulation": {},
-    "genres": [
-      "Strategy"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.55
-  },
-  "Virtual Puppet Reika": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Virtual Vivid": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Virtuoso": {
-    "emulation": {},
-    "genres": [
-      "Action"
     ],
     "manuals": [
       {
@@ -4332,46 +3974,41 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Virtuoso (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Virtuoso (Europe) (En,Fr,De)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Waialae Country Club": {
-    "emulation": {},
+  {
+    "name": "Waialae Country Club",
+    "players": 4,
+    "rating": 0.8,
     "genres": [
-      "Sports / Golf",
-      "Sports"
+      "Sports",
+      "Sports / Golf"
     ],
-    "manuals": [],
     "parents": [
       {
+        "name": "Waialae Country Club (USA, Canada)",
         "clones": [
           "T&E VR Golf - Waialae no Kiseki",
           "True Golf Classics - Waialae Country Club"
-        ],
-        "name": "Waialae Country Club (USA, Canada)"
+        ]
       }
-    ],
-    "players": 4,
-    "rating": 0.8
+    ]
   },
-  "Warner Music Group": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
+  {
+    "name": "Warner Music Group"
   },
-  "Way of the Warrior": {
-    "emulation": {},
+  {
+    "name": "Way of the Warrior",
+    "players": 2,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Fight"
+    ],
+    "parents": [
+      {
+        "name": "Way of the Warrior (USA)"
+      }
     ],
     "manuals": [
       {
@@ -4380,35 +4017,32 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Way of the Warrior (USA).pdf"
       }
+    ]
+  },
+  {
+    "name": "We Got It"
+  },
+  {
+    "name": "Who Shot Johnny Rock",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Lightgun Shooter"
+    ]
+  },
+  {
+    "name": "Wicked 18",
+    "rating": 0.65,
+    "genres": [
+      "Sports / Golf"
     ],
     "parents": [
       {
-        "name": "Way of the Warrior (USA)"
+        "name": "Wicked 18 (USA)",
+        "clones": [
+          "T&E VR Golf - Devil's Course"
+        ]
       }
-    ],
-    "players": 2,
-    "rating": 0.65
-  },
-  "We Got It": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Who Shot Johnny Rock": {
-    "emulation": {},
-    "genres": [
-      "Lightgun Shooter"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.75
-  },
-  "Wicked 18": {
-    "emulation": {},
-    "genres": [
-      "Sports / Golf"
     ],
     "manuals": [
       {
@@ -4417,31 +4051,15 @@
         ],
         "url": "https://archive.org/download/wicked18-3do-usa/manual.pdf"
       }
-    ],
-    "parents": [
-      {
-        "clones": [
-          "T&E VR Golf - Devil's Course"
-        ],
-        "name": "Wicked 18 (USA)"
-      }
-    ],
-    "players": null,
-    "rating": 0.65
+    ]
   },
-  "Wing Commander III - Heart of the Tiger": {
-    "emulation": {},
+  {
+    "name": "Wing Commander III - Heart of the Tiger",
+    "players": 1,
+    "rating": 0.85,
     "genres": [
       "Simulation",
       "Simulation / SciFi"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Panasonic3DOManuals/Wing Commander III - Heart of the Tiger (USA) (Disc 1).pdf"
-      }
     ],
     "parents": [
       {
@@ -4457,25 +4075,37 @@
         "name": "Wing Commander III - Heart of the Tiger (USA, Europe) (Disc 4)"
       }
     ],
-    "players": 1,
-    "rating": 0.85
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Panasonic3DOManuals/Wing Commander III - Heart of the Tiger (USA) (Disc 1).pdf"
+      }
+    ]
   },
-  "Winning Post": {
-    "emulation": {},
-    "genres": [
-      "Sports",
-      "Simulation"
-    ],
-    "manuals": [],
+  {
+    "name": "Winning Post",
     "players": 1,
-    "rating": 0.9
-  },
-  "Wolfenstein 3D": {
-    "emulation": {},
+    "rating": 0.9,
     "genres": [
+      "Simulation",
+      "Sports"
+    ]
+  },
+  {
+    "name": "Wolfenstein 3D",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Action",
       "Shooter",
-      "Shooter / 1st person",
-      "Action"
+      "Shooter / 1st person"
+    ],
+    "parents": [
+      {
+        "name": "Wolfenstein 3D (Europe)"
+      }
     ],
     "manuals": [
       {
@@ -4484,17 +4114,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Wolfenstein 3D (USA).pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "Wolfenstein 3D (Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.9
+    ]
   },
-  "Woody Woodpecker and Friends - Volume One": {
-    "emulation": {},
+  {
+    "name": "Woody Woodpecker and Friends - Volume One",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Various"
     ],
@@ -4505,12 +4130,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Woody Woodpecker & Friends Vol. 1 (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Woody Woodpecker and Friends - Volume Three": {
-    "emulation": {},
+  {
+    "name": "Woody Woodpecker and Friends - Volume Three",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Various"
     ],
@@ -4521,12 +4146,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Woody Woodpecker & Friends Vol. 3 (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "Woody Woodpecker and Friends - Volume Two": {
-    "emulation": {},
+  {
+    "name": "Woody Woodpecker and Friends - Volume Two",
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Various"
     ],
@@ -4537,15 +4162,20 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Woody Woodpecker & Friends Vol. 2 (USA).pdf"
       }
-    ],
-    "players": 1,
-    "rating": 0.7
+    ]
   },
-  "World Cup Golf - Hyatt Dorado Beach": {
-    "emulation": {},
+  {
+    "name": "World Cup Golf - Hyatt Dorado Beach",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Sports",
       "Sports / Golf"
+    ],
+    "parents": [
+      {
+        "name": "World Cup Golf - Hyatt Dorado Beach (USA, Europe)"
+      }
     ],
     "manuals": [
       {
@@ -4554,87 +4184,68 @@
         ],
         "url": "https://archive.org/download/World_Cup_Golf_Hyatt_Dorado_Beach_1994_U.S._Gold_US/World_Cup_Golf_Hyatt_Dorado_Beach_1994_U.S._Gold_US.pdf"
       }
-    ],
-    "parents": [
-      {
-        "name": "World Cup Golf - Hyatt Dorado Beach (USA, Europe)"
-      }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "World Cup Special": {
-    "emulation": {},
+  {
+    "name": "World Cup Special",
+    "players": 1,
+    "rating": 0.55,
     "genres": [
-      "Sports / Soccer",
-      "Sports"
-    ],
-    "manuals": [],
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "WorldCup Super Stadium"
+  },
+  {
+    "name": "Yakyuuken Special, The"
+  },
+  {
+    "name": "Yamada Kamachi Bijutsukan - Kamachi's Museum",
     "players": 1,
-    "rating": 0.55
-  },
-  "WorldCup Super Stadium": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Yakyuuken Special, The": {
-    "emulation": {},
-    "genres": [],
-    "manuals": [],
-    "players": null,
-    "rating": null
-  },
-  "Yamada Kamachi Bijutsukan - Kamachi's Museum": {
-    "emulation": {},
     "genres": [
       "Various"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": null
+    ]
   },
-  "Yamamura Misa Suspense - Kyoto Kurama Sansou Satsujin Jiken": {
-    "emulation": {},
+  {
+    "name": "Yamamura Misa Suspense - Kyoto Kurama Sansou Satsujin Jiken",
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "manuals": [],
-    "players": 1,
-    "rating": 0.6
+    ]
   },
-  "Yu Yu Hakusho": {
-    "emulation": {},
+  {
+    "name": "Yu Yu Hakusho",
+    "players": 2,
+    "rating": 0.4,
     "genres": [
       "Fight"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Yu Yu Hakusho (Japan)"
       }
-    ],
-    "players": 2,
-    "rating": 0.4
+    ]
   },
-  "Yuujou Densetsu - The Doraemons": {
-    "emulation": {},
+  {
+    "name": "Yuujou Densetsu - The Doraemons",
+    "players": 1,
+    "rating": 0.75,
     "genres": [
       "Adventure"
     ],
-    "manuals": [],
     "parents": [
       {
         "name": "Yuujou Densetsu - The Doraemons (Japan)"
       }
-    ],
-    "players": 1,
-    "rating": 0.75
+    ]
   },
-  "Zhadnost - The People's Party": {
-    "emulation": {},
+  {
+    "name": "Zhadnost - The People's Party",
+    "players": 4,
+    "rating": 0.5,
     "genres": [
       "Strategy"
     ],
@@ -4645,8 +4256,6 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Zhadnost - The Peoples Party (USA, Europe).pdf"
       }
-    ],
-    "players": 4,
-    "rating": 0.5
+    ]
   }
-}
+]
