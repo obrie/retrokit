@@ -1,2 +1,2 @@
-KERNEL=="ttyACM[0-9]*", SUBSYSTEM=="tty", ACTION=="add", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0f01|0f02", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh backgrounded add_device '%E{DEVPATH}'"
-KERNEL=="ttyACM[0-9]*", SUBSYSTEM=="tty", ACTION=="remove", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0f01|0f02", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh remove_device '%E{DEVPATH}'"
+KERNEL=="ttyACM[0-9]*", SUBSYSTEM=="tty", ACTION=="add", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0f*", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh backgrounded add_device '%E{DEVPATH}'"
+KERNEL=="ttyACM[0-9]*", SUBSYSTEM=="tty", ACTION=="remove", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="0f*", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh remove_device '%E{DEVPATH}'"
