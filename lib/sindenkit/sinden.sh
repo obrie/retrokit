@@ -45,7 +45,7 @@ remove_device() {
 __modify_device() {
   local action=$1
   local tty_devpath=$2
-  local serial_port=$(cat "$tty_devpath" | grep -oE "ttyACM[0-9]+")
+  local serial_port=$(echo "$tty_devpath" | grep -oE "ttyACM[0-9]+")
 
   if [ -z "$serial_port" ]; then
     return
