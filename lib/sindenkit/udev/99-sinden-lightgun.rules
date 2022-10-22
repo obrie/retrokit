@@ -1,4 +1,4 @@
-SUBSYSTEM=="video4linux", ACTION=="add", ATTRS{idVendor}=="32e4|16c0", ATTRS{idProduct}=="9210|0f01", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh backgrounded add_device '%E{DEVPATH}' '%E{DEVNAME}'"
-SUBSYSTEM=="video4linux", ACTION=="remove", ATTRS{idVendor}=="32e4|16c0", ATTRS{idProduct}=="9210|0f01", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh remove_device '%E{DEVPATH}' '%E{DEVNAME}'"
+SUBSYSTEM=="video4linux", ACTION=="add", ATTRS{idVendor}=="32e4|16d0", ATTRS{idProduct}=="9210|1097|1098", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh backgrounded add_device '%E{DEVPATH}' '%E{DEVNAME}'"
+SUBSYSTEM=="video4linux", ACTION=="remove", ATTRS{idVendor}=="32e4|16d0", ATTRS{idProduct}=="9210|1097|1098", RUN+="/bin/bash /opt/retropie/supplementary/sinden/sinden.sh remove_device '%E{DEVPATH}' '%E{DEVNAME}'"
 
 Vendor=16c0 Product=0f01
