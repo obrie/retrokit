@@ -27,16 +27,16 @@ backgrounded() {
   echo "$install_path/sinden.sh" "${@}" | at now
 }
 
-# Adds a Sinden controller with the given video devpath / devname
+# Adds a Sinden controller with the given tty devpath
 add_device() {
-  [ "$#" -eq 2 ] || usage
+  [ "$#" -eq 1 ] || usage
 
   __modify_device start "${@}"
 }
 
-# Removes a Sinden controller with the given video devpath / devname
+# Removes a Sinden controller with the given tty devpath
 remove_device() {
-  [ "$#" -eq 2 ] || usage
+  [ "$#" -eq 1 ] || usage
 
   __modify_device stop "${@}"
 }
@@ -44,13 +44,10 @@ remove_device() {
 # Modifies a Sinden controller state by running the given action
 __modify_device() {
   local action=$1
-  local video_devpath=$2
-  local video_devname=$3
+  local tty_devpath=$2
+  local serial_port=$(cat "$tty_devpath" | grep -oE "ttyACM[0-9]+")
 
-  local video_index=$(__lookup_video_index "$video_devname")
-  local serial_port=$(__lookup_serial_port "$video_devpath")
-
-  if [ "$video_index" != '0' ] || [ -z "$serial_port" ]; then
+  if [ -z "$serial_port" ]; then
     return
   fi
 
@@ -61,29 +58,6 @@ __modify_device() {
   fi
 
   "$action" "$player_id"
-}
-
-# Looks up which video device we're dealing with (index 0 or 1)
-__lookup_video_index() {
-  if udevadm info --query=all --name="$video_devname" | grep -q index0; then
-    echo 0
-  else
-    echo 1
-  fi
-}
-
-# Looks up the Sinden serial port for the given video device
-__lookup_serial_port() {
-  local video_devpath=$1
-
-  # Get the root USB devpath
-  local filesystem_path="/sys$video_devpath"
-  local root_usb_devpath=$(realpath "$filesystem_path/../../../..")
-
-  # Look for a serial port, starting at the root
-  local serial_port=$(find "$root_usb_devpath" -name dev | grep -oE "ttyACM[0-9]+")
-
-  echo "$serial_port"
 }
 
 # Looks up which player number is associated with the given TTY devname
