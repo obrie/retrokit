@@ -1104,7 +1104,10 @@
       {
         "name": "Arthur and the Minimoys (Europe) (En,Fr,Es,Nl,Sv)"
       }
-    ]
+    ],
+    "renames": {
+      "Arthur and the Minimoys (Europe) (En,Fr,Es,Nl,Sv)": "Arthur and the Invisibles (Europe) (En,Fr,Es,Nl,Sv)"
+    }
   },
   {
     "name": "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan",
@@ -3273,7 +3276,10 @@
     ]
   },
   {
-    "name": "Confidential Money - 300-Nichi de 3000-Man Dollar Kasegu Houhou"
+    "name": "Confidential Money - 300-Nichi de 3000-Man Dollar Kasegu Houhou",
+    "renames": {
+      "Confidential Money - 300-Nichi de 3000-Man Dollar Kasegu Houhou (Japan)": "Confidential Money - 300-Nichi de 3000-Man Dol Kasegu Houhou (Japan)"
+    }
   },
   {
     "name": "Core Blaster",
@@ -3539,7 +3545,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Cube 3D Puzzle Mayhem ULES00722.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri! (Japan)": "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube (Japan)"
+    }
   },
   {
     "name": "Cube - 3D Puzzle Mayhem",
@@ -4167,7 +4176,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Disgaea Afternoon of Darkness ULES00999.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "MagusTale Eternity - Sekaiju to Koi suru Mahoutsukai (Japan)": "MagusTale Eternity - Sekaiju to Koisuru Mahou Tsukai (Japan)"
+    }
   },
   {
     "name": "Disgaea 2 - Dark Hero Days",
@@ -4400,7 +4412,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ratatouille ULES00748.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Disney - Pixar Ratatouille (Russia)": "Disney-Pixar Ratatouille (Russia)"
+    }
   },
   {
     "name": "Disney-Pixar Toy Story 3",
@@ -5072,7 +5087,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors ULES00026.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Shin Sangoku Musou (Japan, Asia)": "Shin Sangoku Musou (Japan)"
+    }
   },
   {
     "name": "Dynasty Warriors - Strikeforce",
@@ -6424,7 +6442,10 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Final Fantasy Tactics - The War of the Lions (USA).pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Final Fantasy Tactics - Shishi Sensou (Japan, Korea)": "Final Fantasy Tactics - Shishi Sensou (Korea)"
+    }
   },
   {
     "name": "Final Fantasy VII"
@@ -7538,7 +7559,10 @@
       {
         "name": "Gran Turismo (Europe) (En,Fr,De,Es,It) (v1.01)"
       }
-    ]
+    ],
+    "renames": {
+      "Gran Turismo (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (v2.00)": "Gran Turismo (Europe) (En,Fr,De,Es,It) (v2.00)"
+    }
   },
   {
     "name": "Grand Knight History",
@@ -8246,7 +8270,10 @@
     "rating": 0.9,
     "genres": [
       "Music and Dance"
-    ]
+    ],
+    "renames": {
+      "Hatsune Miku - Project Diva Extend (Japan, Asia)": "Hatsune Miku - Project Diva Extend (Asia)"
+    }
   },
   {
     "name": "Hayarigami 2 Portable - Keishichou Kaii Jiken File"
@@ -8623,19 +8650,28 @@
     "name": "Idolmaster SP, The - Missing Moon",
     "genres": [
       "Music and Dance"
-    ]
+    ],
+    "renames": {
+      "Idolmaster SP, The - Missing Moon (Japan, Asia)": "Idolmaster SP, The - Missing Moon (Asia)"
+    }
   },
   {
     "name": "Idolmaster SP, The - Perfect Sun",
     "genres": [
       "Music and Dance"
-    ]
+    ],
+    "renames": {
+      "Idolmaster SP, The - Perfect Sun (Japan, Asia)": "Idolmaster SP, The - Perfect Sun (Asia)"
+    }
   },
   {
     "name": "Idolmaster SP, The - Wandering Star",
     "genres": [
       "Music and Dance"
-    ]
+    ],
+    "renames": {
+      "Idolmaster SP, The - Wandering Star (Japan, Asia)": "Idolmaster SP, The - Wandering Star (Asia)"
+    }
   },
   {
     "name": "Idolmaster Shiny Festa, The - Funky Note"
@@ -8717,7 +8753,10 @@
       {
         "name": "Impossible Mission (Europe) (En,Fr,De,Es,It)"
       }
-    ]
+    ],
+    "renames": {
+      "Impossible Mission (Europe) (En,Fr,De,Es,It) (Beta)": "Impossible Mission (Europe) (En,Fr,De,Es,It) (Proto)"
+    }
   },
   {
     "name": "Indiana Jones and the Staff of Kings",
@@ -9542,7 +9581,10 @@
   {
     "name": "Kenka Banchou 4 - Ichinen Sensou",
     "players": 1,
-    "rating": 0.85
+    "rating": 0.85,
+    "renames": {
+      "Kenka Banchou 4 - Ichinen Sensou (Japan, Asia)": "Kenka Banchou 4 - Ichinen Sensou (Asia)"
+    }
   },
   {
     "name": "Kenka Banchou Bros. Tokyo Battle Royale",
@@ -9596,7 +9638,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Key of Heaven UCES00178.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Tenchi no Mon (Asia)": "Tenchi no Mon (Asia) (v1.01)"
+    }
   },
   {
     "name": "Kidou Keisatsu Patlabor - Kamubakku MiniPato"
@@ -9656,7 +9701,10 @@
       {
         "name": "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan, Asia)"
       }
-    ]
+    ],
+    "renames": {
+      "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan, Asia)": "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan)"
+    }
   },
   {
     "name": "Killzone - Liberation",
@@ -10361,7 +10409,10 @@
     "players": 1,
     "genres": [
       "Casual Game"
-    ]
+    ],
+    "renames": {
+      "Little Britain - The Video Game (Europe)": "Little Britain (Europe)"
+    }
   },
   {
     "name": "LittleBigPlanet",
@@ -10391,7 +10442,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/LittleBigPlanet UCES01264.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "LittleBigPlanet (Asia) (En,Zh,Ko)": "Little Big Planet (Asia) (En,Zh,Ko)"
+    }
   },
   {
     "name": "LittleBigPlanet - Easter Level Pack"
@@ -11105,7 +11159,10 @@
     ]
   },
   {
-    "name": "MagusTale Eternity - Sekaiju to Koi suru Mahoutsukai"
+    "name": "MagusTale Eternity - Sekaiju to Koi suru Mahoutsukai",
+    "renames": {
+      "MagusTale Eternity - Sekaiju to Koi suru Mahoutsukai (Japan)": "MagusTale Eternity - Sekaiju to Koisuru Mahou Tsukai (Japan)"
+    }
   },
   {
     "name": "Mahjong Artifacts",
@@ -13047,7 +13104,10 @@
           "Naruto Shippuuden - Kizuna Drive"
         ]
       }
-    ]
+    ],
+    "renames": {
+      "Naruto Shippuuden - Kizuna Drive (Japan, Asia)": "Naruto Shippuuden - Kizuna Drive (Asia)"
+    }
   },
   {
     "name": "Naruto Shippuden - Legends - Akatsuki Rising",
@@ -13112,7 +13172,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Naruto Shippuden Ultimate Ninja Impact ULES01537.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Naruto - Narutimate Impact (Japan, Asia)": "Naruto - Narutimate Impact (Asia)"
+    }
   },
   {
     "name": "Navi-Chu"
@@ -13311,7 +13374,10 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ]
+    ],
+    "renames": {
+      "Neopets - Petpet Adventures - The Wand of Wishing (USA)": "NeoPets - Petpet Adventures - The Wand of Wishing (USA)"
+    }
   },
   {
     "name": "Network Utility Disc - Chinese Ver. 1.00C"
@@ -13650,7 +13716,10 @@
     ]
   },
   {
-    "name": "Onore no Shinzuru Michi o Yuke"
+    "name": "Onore no Shinzuru Michi o Yuke",
+    "renames": {
+      "Onore no Shinzuru Michi o Yuke (Japan)": "Onore no Shinzuru Michi wo Yuke (Japan)"
+    }
   },
   {
     "name": "Ooedo Senryoubako"
@@ -15652,7 +15721,10 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ratchet & Clank Size Matters UCES00420.pdf"
       }
-    ]
+    ],
+    "renames": {
+      "Ratchet & Clank - Size Matters (USA) (En,Fr,De,Es,It)": "Ratchet & Clank - Size Matters (USA)"
+    }
   },
   {
     "name": "Ratchet & Clank 5 - Gekitotsu! Dodeka Ginga no MiriMiri Gundan",
@@ -16119,7 +16191,10 @@
           "SBK - Superbike World Championship"
         ]
       }
-    ]
+    ],
+    "renames": {
+      "SBK - Superbike World Championship (USA)": "SBK - Superbike World Championship (USA) (En,Fr,Es)"
+    }
   },
   {
     "name": "SBK 09 - Superbike World Championship",
@@ -16144,7 +16219,10 @@
           "Hannspree Ten Kate Honda - SBK Superbike World Championship"
         ]
       }
-    ]
+    ],
+    "renames": {
+      "Hannspree Ten Kate Honda - SBK Superbike World Championship (USA) (En,Fr,Es)": "Hannspree Ten Kate Honda SBK - Superbike World Championship (USA)"
+    }
   },
   {
     "name": "SCEJ PSP Browser",
@@ -16186,7 +16264,10 @@
       {
         "name": "SNK Arcade Classics Vol. 1 (Europe)"
       }
-    ]
+    ],
+    "renames": {
+      "SNK Arcade Classics Vol. 1 (Korea)": "SNK Arcade Classics Vol. 1 (Asia)"
+    }
   },
   {
     "name": "SOCOM - Fireteam Bravo 3",
@@ -16454,7 +16535,10 @@
     ]
   },
   {
-    "name": "Saru! Get You! Piposaru Racer"
+    "name": "Saru! Get You! Piposaru Racer",
+    "renames": {
+      "Saru! Get You! Piposaru Racer (Japan, Asia)": "Saru! Get You! Piposaru Racer (Asia)"
+    }
   },
   {
     "name": "Saru! Get You! SaruSaru Daisakusen",
@@ -16997,7 +17081,10 @@
     "rating": 0.6,
     "genres": [
       "Platform"
-    ]
+    ],
+    "renames": {
+      "Simpson, Los - El Videojuego (Spain)": "Simpsons, Los - El Videojuego (Spain)"
+    }
   },
   {
     "name": "Simpsons Game, The",
@@ -17041,7 +17128,10 @@
       {
         "name": "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl,Pt)"
       }
-    ]
+    ],
+    "renames": {
+      "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl,Pt)": "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl)"
+    }
   },
   {
     "name": "Sims 2, The - Pets",
@@ -17329,7 +17419,10 @@
       {
         "name": "Space Invaders Extreme (Europe, Australia) (En,Ja,Fr,De,Es,It)"
       }
-    ]
+    ],
+    "renames": {
+      "Space Invaders Extreme (Europe) (En,Ja,Fr,De,Es,It) (Beta)": "Space Invaders Extreme (Europe) (En,Ja,Fr,De,Es,It) (Proto)"
+    }
   },
   {
     "name": "Space Shooter for Two Bucks!, A",
@@ -18095,7 +18188,10 @@
       {
         "name": "Super Collapse! 3 (Europe) (En,Fr,De,Es,It)"
       }
-    ]
+    ],
+    "renames": {
+      "Super Collapse! 3 (USA)": "Super Collapse 3 (USA)"
+    }
   },
   {
     "name": "Super Danganronpa 2 - Sayonara Zetsubou Gakuen"
@@ -18484,7 +18580,10 @@
       {
         "name": "TMNT (Europe) (En,Fr,De,Es,It)"
       }
-    ]
+    ],
+    "renames": {
+      "TMNT (Europe) (En,Fr,De,Es,It)": "TMNT - Teenage Mutant Ninja Turtles (Europe) (En,Fr,De,Es,It)"
+    }
   },
   {
     "name": "TNA Impact! Cross the Line",
@@ -18594,7 +18693,10 @@
       {
         "name": "Taiko no Tatsujin Portable (Japan, Asia) (v2.00)"
       }
-    ]
+    ],
+    "renames": {
+      "Taiko no Tatsujin Portable (Japan, Asia) (v2.00)": "Taiko no Tatsujin Portable (Japan) (v2.00)"
+    }
   },
   {
     "name": "Taiko no Tatsujin Portable - Song Pack"
@@ -18707,7 +18809,10 @@
     "rating": 0.85,
     "genres": [
       "Beat'em Up"
-    ]
+    ],
+    "renames": {
+      "Tales of the Heroes - Twin Brave (Japan, Korea)": "Tales of the Heroes - Twin Brave (Japan)"
+    }
   },
   {
     "name": "Tales of the World - Radiant Mythology",
@@ -20325,7 +20430,10 @@
       {
         "name": "WWE All Stars (Europe) (En,Fr,De,Es,It)"
       }
-    ]
+    ],
+    "renames": {
+      "WWE All Stars (Europe) (En,Fr,De,Es,It)": "WWE All Stars (Europe)"
+    }
   },
   {
     "name": "WWE All-Stars",
