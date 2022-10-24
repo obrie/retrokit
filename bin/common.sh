@@ -95,6 +95,11 @@ has_setupmodule() {
 setup() {
   local action=$1
 
+  if ! check_prereqs "${@}"; then
+    echo 'Prerequisites not met. Skipping.'
+    return
+  fi
+
   # Confirmation dialog
   if [[ "$action" =~ ^uninstall|remove$ ]] && [ "$CONFIRM" != 'false' ]; then
     read -p "Are you sure? (y/n) " -r
@@ -105,6 +110,11 @@ setup() {
   fi
 
   "${@}"
+}
+
+# Checks that the necessary prerequisites are met to run this module
+check_prereqs() {
+  return
 }
 
 # Installs the setupmodule

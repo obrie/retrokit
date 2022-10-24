@@ -24,10 +24,30 @@ system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
 
-if [ "$SKIP_SYSTEM_CHECK" != 'true' ] && [ -z $(setting ".systems | index(\"$system\")") ]; then
-  echo "$system is not a valid system"
-  exit 1
-fi
+##############
+# Setup stubs
+##############
+
+check_prereqs() {
+  local action=$1
+  local requested_system=$2
+
+  local system_index=$(setting ".systems | index(\"$system\")")
+  if [ -z "$requested_system" ] || [ "$system" != "$required_system" ]; then
+    # No system provided on the command-line
+    if [ -z "$system_index" ]; then
+      # System isn't enabled -- fail soft (skip)
+      return 1
+    fi
+  else
+    # System is provided on the command-line
+    if [ "$SKIP_SYSTEM_CHECK" != 'true' ] && [ -z "$system_index" ]; then
+      # System is not enabled -- fail hard
+      echo "$system is not an enabled system"
+      exit 1
+    fi
+  fi
+}
 
 ##############
 # ROM Matching
