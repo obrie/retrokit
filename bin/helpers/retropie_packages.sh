@@ -27,7 +27,7 @@ install_retropie_package() {
   if [ "$build" == 'binary' ]; then
     # If this is one of retrokit's script modules, follow redirects
     local __curl_opts=''
-    if find "$bin_dir/scriptmodules" -name "$name.sh" | grep . >/dev/null; then
+    if find "$ext_dir/scriptmodules" -name "$name.sh" | grep . >/dev/null; then
       __curl_opts='-L'
     fi
 
