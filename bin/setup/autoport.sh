@@ -16,6 +16,7 @@ build() {
 }
 
 configure() {
+  mkdir -p /opt/retropie/configs/all/runcommand.d
   ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/autoport
   ini_merge '{config_dir}/autoport/autoport.cfg' '/opt/retropie/configs/all/autoport.cfg' backup=false overwrite=true
 }

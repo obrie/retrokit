@@ -62,6 +62,7 @@ __configure_emulationstation() {
 
 # Install emulationstation hooks
 __configure_runcommand() {
+  mkdir -p /opt/retropie/configs/all/runcommand.d
   ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
 }
 
