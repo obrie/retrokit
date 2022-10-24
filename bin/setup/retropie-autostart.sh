@@ -8,6 +8,7 @@ setup_module_desc='RetroPie autostart hook extensions'
 
 build() {
   file_cp '{ext_dir}/autostart/autostart.sh' '/opt/retropie/configs/all/autostart.sh' envsubst=false
+  mkdir -p /opt/retropie/configs/all/autostart.d
 }
 
 configure() {

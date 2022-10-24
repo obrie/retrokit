@@ -43,6 +43,7 @@ __configure_manualkit() {
 
 # Install autostart script
 __configure_autostart() {
+  mkdir -p /opt/retropie/configs/all/autostart.d
   ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/manualkit
 }
 
