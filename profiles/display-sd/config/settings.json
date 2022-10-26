@@ -1,0 +1,19 @@
+{
+  "splashscreen": "https://github.com/obrie/retrokit/releases/download/latest/joshua_rancel-retro_history-sd.mp4",
+  "themes": {
+    "library": [
+      {
+        "name": "gbz35",
+        "repo": "rxbrad",
+        "launch_images_base_url": "https://raw.githubusercontent.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/master/4x3-Launching_ComicRip/{platform}/launching.png"
+      }
+    ],
+    "launch_theme": "gbz35"
+  },
+  "setup": {
+    "remove": [
+      "system-overlays",
+      "system-roms-overlays"
+    ]
+  }
+}
