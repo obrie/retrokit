@@ -15,7 +15,8 @@ class GPi(BaseProvider):
     def run(self):
         power = gpiozero.LED(self.POWEREN_PIN)
 
-        # Mark pins as being ON
+        # Mark pins as being ON (safe shutdown doesn't initiate if we don't trigger off first)
+        power.off()
         power.on()
 
         power_button = gpiozero.Button(self.POWER_PIN)

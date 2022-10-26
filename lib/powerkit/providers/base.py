@@ -1,6 +1,10 @@
 import logging
 from typing import Callable
 
+def all_subclasses(cls):
+    return set(cls.__subclasses__()).union(
+        [s for c in cls.__subclasses__() for s in all_subclasses(c)])
+
 class BaseProvider():
     name = 'base'
 
@@ -13,8 +17,9 @@ class BaseProvider():
     def from_config(cls, config: dict) -> None:
         name = config['provider']['id']
 
-        for subcls in cls.__subclasses__():
+        for subcls in all_subclasses(cls):
             if subcls.name == name:
+                logging.info(f'Using {name} provider')
                 return subcls(config)
 
         logging.info('Using default provider')
