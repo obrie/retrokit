@@ -28,7 +28,7 @@ show() {
     # draw to the screen and then exit, leaving the image there.  fbi has
     # a lot else going on with responding to keyboard inputs and changing
     # the virtual terminal when exiting, causing emulators to fail.
-    ffmpeg -i /opt/retropie/configs/$system/launching-extended.png -s $(< /sys/class/graphics/fb0/virtual_size tr , x) -f fbdev -pix_fmt rgb565le -y /dev/fb0
+    ffmpeg -i /opt/retropie/configs/$system/launching-extended.png -s $(fbset -s | grep -E "^mode" | grep -oE "[0-9]+x[0-9]+") -f fbdev -pix_fmt rgb565le -y /dev/fb0
 
     # Monitor launching screen
     __watch_screen &
