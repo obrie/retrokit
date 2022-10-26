@@ -1,3 +1,4 @@
+import logging
 from typing import Callable
 
 class BaseProvider():
@@ -15,6 +16,8 @@ class BaseProvider():
         for subcls in cls.__subclasses__():
             if subcls.name == name:
                 return subcls(config)
+
+        logging.info('Using default provider')
 
         return cls(config)
 
