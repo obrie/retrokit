@@ -21,9 +21,11 @@ configure() {
   restore
 
   # Add theme overrides
-  while read -r theme_path; do
-    file_cp "{config_dir}/themes/$theme_path" "/etc/emulationstation/themes/$theme_path" as_sudo=true envsubst=false
-  done < <(_list_theme_override_paths)
+  while IFS=$'\t' read -r name repo branch; do
+    while read -r theme_path; do
+      file_cp "{config_dir}/themes/$name/$theme_path" "/etc/emulationstation/themes/$name/$theme_path" as_sudo=true envsubst=false
+    done < <(_list_theme_override_paths "$name")
+  done < <(_list_installed_themes)
 }
 
 clean() {
@@ -60,7 +62,8 @@ _list_installed_themes() {
 
 # List the theme paths that are being overridden
 _list_theme_override_paths() {
-  each_path '{config_dir}/themes' find '{}' -type f -printf "%P\n"
+  local name=$1
+  each_path "{config_dir}/themes/$name" find '{}' -type f -printf "%P\n"
 }
 
 setup "${@}"
