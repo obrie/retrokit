@@ -15,9 +15,19 @@ class GPi(BaseProvider):
     def run(self):
         power = gpiozero.LED(self.POWEREN_PIN)
 
-        # Mark pins as being ON (safe shutdown doesn't initiate if we don't trigger off first)
-        power.off()
+        # Disable cleanup.  If we don't do this, then the power pin will be reset
+        # to LOW, causing the system power to be cut before the system has safely
+        # shut down.
+        # 
+        # See: https://github.com/gpiozero/gpiozero/issues/707
+        power.pin.close = self._close_pin
+        power.pin_factory.close = self._close_pin
+
+        # Mark power as on (indicating we are doing a safe shutdown)
         power.on()
 
         power_button = gpiozero.Button(self.POWER_PIN)
         power_button.when_pressed = self.shutdown
+
+    def _close_pin(self, *args, **kwargs):
+        pass

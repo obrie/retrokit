@@ -110,9 +110,11 @@ class PowerKit():
         es_process = self.es_process
         if es_process:
             logging.info(f'Shutting down runcommand process')
-            restart_path = Path('/tmp/es-shutdown')
-            restart_path.touch()
-            shutil.chown(restart_path, user='pi', group='pi')
+
+            # Let emulationstation handle the shutdown
+            shutdown_path = Path('/tmp/es-shutdown')
+            shutdown_path.touch()
+            shutil.chown(shutdown_path, user='pi', group='pi')
 
             try:
                 es_process.kill()

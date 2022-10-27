@@ -39,9 +39,9 @@ class BaseProvider():
         self.handlers[event] = callback
 
     # Triggers any handler registered with the given event
-    def trigger(self, event: str) -> None:
+    def trigger(self, event: str, *args, **kwargs) -> None:
         if event in self.handlers:
-            self.handlers[event]()
+            self.handlers[event](*args, **kwargs)
 
     # Trigger the shutdown event
     def shutdown(self) -> None:
