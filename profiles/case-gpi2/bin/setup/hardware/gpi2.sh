@@ -21,11 +21,14 @@ build() {
 
 configure() {
   # Audio settings
-  echo 'options snd_usb_audio index=0' > "$tmp_ephemeral_dir/alsa-base.conf"
-  file_cp "$tmp_ephemeral_dir/alsa-base.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
+  file_cp "{config_dir}/alsa/modrobe.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
+  file_cp "{config_dir}/alsa/asound-mono.conf" /etc/asound-mono.conf as_sudo=true
+  file_ln /etc/asound-mono.conf /etc/asound.conf as_sudo=true
 }
 
 restore() {
+  restore_file /etc/asound.conf as_sudo=true delete_src=true
+  restore_file /etc/asound-mono.conf as_sudo=true delete_src=true
   restore_file /etc/modprobe.d/alsa-base.conf as_sudo=true delete_src=true
 }
 
