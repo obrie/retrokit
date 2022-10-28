@@ -1,7 +1,6 @@
 #!/bin/bash
 
-dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../../../common.sh"
+. "$bin_dir/common.sh"
 
 setup_module_id='hardware/gpi2'
 setup_module_desc='GPi2 management utilities'
@@ -24,7 +23,7 @@ build() {
 
 configure() {
   # Audio settings
-  file_cp "{config_dir}/alsa/modrobe.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
+  file_cp "{config_dir}/alsa/modprobe.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
   file_cp "{config_dir}/alsa/asound-mono.conf" /etc/asound-mono.conf as_sudo=true
   file_ln /etc/asound-mono.conf /etc/asound.conf as_sudo=true
 }
