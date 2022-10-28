@@ -46,7 +46,7 @@ __configure_es_settings() {
             -i '$config' -t attr -n value -v "$value"
         )
     fi
-  done < <(each_path '{config_dir}/emulationstation/es_settings.cfg' sed -e '$a</settings>' -e 's/<?xml version="1.0"?>/<settings>/g' '{}' | xmlstarlet select -t -m '/*/*' -c '.' -n)
+  done < <(each_path '{config_dir}/emulationstation/es_settings.cfg' cat '{}' | sed -e 's/<?xml version="1.0"?>//g' -e '1i <settings>' -e '$a</settings>' | xmlstarlet select -t -m '/*/*' -c '.' -n)
 
   # Overwrite file with the new settings
   echo "$es_settings" | \
