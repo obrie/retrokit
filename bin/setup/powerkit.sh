@@ -25,7 +25,7 @@ build() {
 }
 
 configure() {
-  CASE_MODEL="$(setting '.hardware.case.model')" ini_merge '{config_dir}/powerkit/powerkit.cfg' '/opt/retropie/configs/all/powerkit.cfg' backup=false overwrite=true
+  ini_merge '{config_dir}/powerkit/powerkit.cfg' '/opt/retropie/configs/all/powerkit.cfg' backup=false overwrite=true
   sudo systemctl enable powerkit.service
 
   # Restart

@@ -3,7 +3,7 @@
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../../common.sh"
 
-setup_module_id='hardware/cases/gpi2'
+setup_module_id='hardware/gpi2'
 setup_module_desc='GPi2 management utilities'
 
 build() {

@@ -1,7 +1,7 @@
 {
-  "hardware": {
-    "case": {
-      "model": "gpi2"
-    }
+  "setup": {
+    "add|case": [
+      "hardware/gpi2"
+    ]
   }
 }

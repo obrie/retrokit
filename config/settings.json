@@ -87,9 +87,6 @@
     ]
   },
   "hardware": {
-    "case": {
-      "model": null
-    },
     "controllers": {
       "inputs": [
         {"name": "Keyboard"}
@@ -155,7 +152,6 @@
       "tools-dev",
       "network-dhcpd",
       "hardware/cpu",
-      "hardware/case",
       "hardware/bluetooth-pair",
       "hardware/ir",
       "powerkit",

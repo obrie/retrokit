@@ -15,11 +15,8 @@ __configure_bios() {
   # Note that we can't use crudini for dtoverlay/dtparam additions because it doesn't
   # support repeating the same key multiple times in the same section
 
-  local case=$(setting '.hardware.case.model')
-
   # Build base config.txt without device tree settings settings (dtoverlay / dtparam)
   ini_merge '{config_dir}/boot/config.txt' "$tmp_ephemeral_dir/boot-staging.txt" space_around_delimiters=false backup=false overwrite=true
-  ini_merge "{config_dir}/boot/config/$case.txt" "$tmp_ephemeral_dir/boot-staging.txt" space_around_delimiters=false backup=false
   sed -i '/^dt\(overlay\|param\)=/d' "$tmp_ephemeral_dir/boot-staging.txt"
 
   # Merge into /boot
@@ -51,7 +48,7 @@ __configure_bios() {
       echo "$dt_content" > "$tmp_ephemeral_dir/dtcontent.txt"
       sudo sed -i "$target_section_start r $tmp_ephemeral_dir/dtcontent.txt" /boot/config.txt
     done < <(crudini --get "$config_path")
-  done < <(cat <(each_path '{config_dir}/boot/config.txt') <(each_path "{config_dir}/boot/config/$case.txt"))
+  done < <(each_path '{config_dir}/boot/config.txt')
 
   # Move [all] section to end of the file in order to comply with recommendations
   # from Raspbian's documentation
