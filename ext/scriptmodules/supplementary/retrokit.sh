@@ -96,7 +96,7 @@ function _gui_setup_retrokit() {
             setupmodules[$setupmodule]=1
             options+=($index "$setupmodule")
             index=$((index+1))
-        done < <(__get_settings_retrokit | jq -r '.setup | (.default + .add - .remove)[]')
+        done < <(__get_settings_retrokit | jq -r '.setup | .default + (to_entries[] | select(.key | startswith("add")) | .value) - (to_entries[] | select(.key | startswith("remove")) | .value) | .[]' | awk '!x[$0]++')
 
         options+=("" "---")
         index=$((index+1))

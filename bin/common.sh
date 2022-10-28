@@ -80,7 +80,7 @@ setting() {
 }
 
 list_setupmodules() {
-  setting '.setup | (.default + .add - .remove)[]' | awk '!x[$0]++'
+  setting '.setup | .default + (to_entries[] | select(.key | startswith("add")) | .value) - (to_entries[] | select(.key | startswith("remove")) | .value) | .[]' | awk '!x[$0]++'
 }
 
 # Is the given setupmodule is enabled?
