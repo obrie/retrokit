@@ -17,6 +17,9 @@ build() {
 
   # Audio overlay
   file_cp "$tmp_ephemeral_dir/$overlay_base_path/pwm-audio-pi-zero.dtbo" /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true
+
+  # Create ports
+  dir_rsync '{lib_dir}/gpikit/shortcuts' "$HOME/RetroPie/roms/ports/+GPi/"
 }
 
 configure() {
@@ -33,6 +36,7 @@ restore() {
 }
 
 remove() {
+  rm -rfv  "$HOME/RetroPie/roms/ports/+GPi"
   restore_file /boot/overlays/dpi24.dtbo as_sudo=true delete_src=true
   restore_file /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true delete_src=true
 }
