@@ -13,7 +13,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 usage() {
   echo "usage:"
-  echo " $0 <all|roms|manuals|media|media_cache|overlays|gamestate> <all|system>"
+  echo " $0 <all|installation|roms|manuals|media|media_cache|overlays|gamestate> <all|system>"
   exit 1
 }
 
