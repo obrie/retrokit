@@ -26,12 +26,17 @@ configure() {
   file_cp "{config_dir}/alsa/modprobe.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
   file_cp "{config_dir}/alsa/asound-mono.conf" /etc/asound-mono.conf as_sudo=true
   file_ln /etc/asound-mono.conf /etc/asound.conf as_sudo=true
+
+  # Fix audio not playing during boot splashscreen
+  backup_file /opt/retropie/supplementary/splashscreen/asplashscreen.sh as_sudo=true
+  sudo sed -i 's/-o both/-o alsa/g' /opt/retropie/supplementary/splashscreen/asplashscreen.sh
 }
 
 restore() {
   restore_file /etc/asound.conf as_sudo=true delete_src=true
   restore_file /etc/asound-mono.conf as_sudo=true delete_src=true
   restore_file /etc/modprobe.d/alsa-base.conf as_sudo=true delete_src=true
+  restore_file /opt/retropie/supplementary/splashscreen/asplashscreen.sh as_sudo=true delete_src=true
 }
 
 remove() {
