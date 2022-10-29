@@ -5,7 +5,7 @@ with RetroPie / Raspberry Pi 4 using currently known best practices as I underst
 
 Specifically, it can set up:
 
-* Cases (e.g. Argon, NESPi), including safe reset/shutdown
+* Cases (e.g. Argon, NESPi, GPi 2), including safe reset/shutdown
 * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
 * IR configuration
 * VNC
@@ -657,6 +657,7 @@ based on case:
 | nespi   | shutdown  | Press the "Power" button                    |
 | argon1  | reset     | Double tap the Power button                 |
 | argon1  | shutdown  | Hold the Power button for 3+ seconds        |
+| gpi2    | shutdown  | Switch power to off                         |
 
 ## Controllers
 
