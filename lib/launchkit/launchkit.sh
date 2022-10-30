@@ -24,11 +24,24 @@ show() {
     # Change tty to graphics mode
     python "$dir/tty.py" /dev/tty graphics
 
+    # Determine the size of the screen we're working with
+    local screen_dimensions=$(fbset -s | grep -E "^mode" | grep -oE "[0-9]+x[0-9]+")
+    IFS=x read -r screen_width screen_height <<< "$screen_dimensions"
+
     # Show launching screen.  We use ffmpeg instead of fbi since it will
     # draw to the screen and then exit, leaving the image there.  fbi has
     # a lot else going on with responding to keyboard inputs and changing
     # the virtual terminal when exiting, causing emulators to fail.
-    ffmpeg -i /opt/retropie/configs/$system/launching-extended.png -s $(fbset -s | grep -E "^mode" | grep -oE "[0-9]+x[0-9]+") -f fbdev -pix_fmt rgb565le -y /dev/fb0
+    #
+    # In order to have the best viewer experience, the launching image
+    # fills the screen without changing the aspect ratio.  Any space not
+    # filled will be padded with black bars.
+    ffmpeg \
+      -i /opt/retropie/configs/$system/launching-extended.png \
+      -vf scale="w=$screen_width:h=$screen_height:force_original_aspect_ratio=decrease,pad=$screen_width:$screen_height:(ow-iw)/2:(oh-ih)/2" \
+      -f fbdev \
+      -pix_fmt rgb565le \
+      -y /dev/fb0
 
     # Monitor launching screen
     __watch_screen &
