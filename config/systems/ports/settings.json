@@ -1,7 +1,7 @@
 {
   "system": "ports",
   "scraper": {
-    "args": ["--excludepattern", "*Freedoom*,*Sinden*"],
+    "args": ["--excludepattern", "*Freedoom*"],
     "gamelist_args": ["--excludepattern", "*Freedoom*", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
     "gamelist_include_base_args": false,
     "import_dat_titles": false

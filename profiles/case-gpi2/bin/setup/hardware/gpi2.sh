@@ -19,6 +19,9 @@ build() {
 
   # Create ports
   dir_rsync '{lib_dir}/gpikit/shortcuts' "$HOME/RetroPie/roms/ports/+GPi/"
+
+  # Don't scrape ports files
+  touch "$HOME/RetroPie/roms/ports/+GPi/.skyscraperignore"
 }
 
 configure() {

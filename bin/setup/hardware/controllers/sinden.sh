@@ -43,6 +43,9 @@ build() {
   # Create ports
   dir_rsync '{lib_dir}/sindenkit/shortcuts' "$HOME/RetroPie/roms/ports/+Sinden/"
 
+  # Don't scrape ports files
+  touch "$HOME/RetroPie/roms/ports/+Sinden/.skyscraperignore"
+
   # Add management script
   file_cp '{lib_dir}/sindenkit/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
 }
