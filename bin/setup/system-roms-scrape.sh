@@ -140,6 +140,17 @@ __build_missing_reports() {
 
   # Generate aggregate list of roms
   cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
+
+  # Remove files explicitly being ignored (but still show up when using --cache)
+  while read ignore_path; do
+    local ignore_dir=$(dirname "$ignore_path")
+
+    if [[ "$ignore_path" == *tree ]]; then
+      echo sed -i "\|$ignore_dir|d" "$aggregate_report_file"
+    else
+      echo sed -i "\|$ignore_dir/[^/]\+|d" "$aggregate_report_file"
+    fi
+  done < <(find "$HOME/RetroPie/roms/$system" -name '.skyscraperignore' -o -name '.skyscraperignoretree')
 }
 
 # Imports titles from DAT files to override what was scraped
