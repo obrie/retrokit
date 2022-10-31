@@ -146,9 +146,9 @@ __build_missing_reports() {
     local ignore_dir=$(dirname "$ignore_path")
 
     if [[ "$ignore_path" == *tree ]]; then
-      echo sed -i "\|$ignore_dir|d" "$aggregate_report_file"
+      sed -i "\|$ignore_dir|d" "$aggregate_report_file"
     else
-      echo sed -i "\|$ignore_dir/[^/]\+|d" "$aggregate_report_file"
+      sed -i "\|$ignore_dir/[^/]\+|d" "$aggregate_report_file"
     fi
   done < <(find "$HOME/RetroPie/roms/$system" -name '.skyscraperignore' -o -name '.skyscraperignoretree')
 }
