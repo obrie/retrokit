@@ -24,6 +24,12 @@ __install_emulators() {
 
     install_retropie_package "$package_type" "$package" "$build"
   done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary"] | @tsv')
+
+  if [ "$system" == 'ports' ]; then
+    # Ensure ports has been added to the default conf since other tools may
+    # add system management menus to it
+    sudo $HOME/RetroPie-Setup/retropie_packages.sh emptyports configure
+  fi
 }
 
 # Install BIOS files required by emulators
