@@ -6,6 +6,11 @@ setup_module_id='hardware/gpi2'
 setup_module_desc='GPi2 management utilities'
 
 build() {
+  __build_overlays
+  __build_port_shortcuts
+}
+
+__build_overlays() {
   local patches_zip="$tmp_dir/gpi_case2_patch.zip"
   local overlay_base_path='GPi_Case2_patch_retropie/patch_files/overlays'
   download 'https://github.com/RetroFlag/GPiCase2-Script/raw/main/GPi_Case2_patch.zip' "$patches_zip"
@@ -16,7 +21,9 @@ build() {
 
   # Audio overlay
   file_cp "$tmp_ephemeral_dir/$overlay_base_path/pwm-audio-pi-zero.dtbo" /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true
+}
 
+__build_port_shortcuts() {
   # Create ports
   dir_rsync '{lib_dir}/gpikit/shortcuts' "$HOME/RetroPie/roms/ports/+GPi/"
 
