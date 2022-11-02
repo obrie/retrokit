@@ -586,6 +586,7 @@ __list_raw_devices() {
   local sysfs
   local name
   local driver_name
+  local event_name
   local bus
   local vendor_id
   local product_id
@@ -609,6 +610,10 @@ __list_raw_devices() {
           driver_name=mouse
         elif [[ "$handlers" == *js* ]]; then
           driver_name=joystick
+        fi
+
+        if [[ "$handlers" =~ event[0-9]+ ]]; then
+          event_name=${BASH_REMATCH[0]}
         fi
         ;;
 
@@ -636,7 +641,11 @@ __list_raw_devices() {
 
       *)
 
-        if [ -n "$driver_name" ]; then
+        # Conditions required for an input to be considered:
+        # * It's a mouse or joystick
+        # * It has a corresponding /dev/input/eventX path
+        # * The eventX path is readable
+        if [ -n "$driver_name" ] && [ -n "$event_name" ] && [ -r "/dev/input/$event_name" ]; then
           echo "$sysfs"$'\t'"$driver_name"$'\t'"$bus"$'\t'"$vendor_id"$'\t'"$product_id"$'\t'"$version"$'\t'"$name"$'\t'"$uniq"
         fi
 
@@ -644,6 +653,7 @@ __list_raw_devices() {
         sysfs=
         name=
         driver_name=
+        event_name=
         bus=
         vendor_id=
         product_id=
