@@ -76,8 +76,7 @@ class PowerKit():
     # Looks up the currently running emulator
     @property
     def runcommand_process(self) -> Optional[psutil.Process]:
-        all_processes = psutil.process_iter(attrs=['pid', 'cmdline'])
-        return next(filter(lambda p: 'runcommand.sh' in ' '.join(p.info['cmdline']), self._all_processes()), None)
+        return next(filter(lambda p: 'bash /opt/retropie/supplementary/runcommand/runcommand.sh' in ' '.join(p.info['cmdline']), self._all_processes()), None)
 
     # Looks up the currently running EmulationStation process
     @property
