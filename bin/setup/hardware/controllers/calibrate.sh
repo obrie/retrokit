@@ -51,10 +51,12 @@ configure() {
   done < <(setting '.hardware.controllers.inputs[] | select(.axis) | [.name, .id, ([.axis | to_entries[] | [.key, .value | tostring] | join("=")] | join(","))] | join("»")')
 
   # Write the udev rule
-  echo "${rules[@]}" | sudo tee /etc/udev/rules.d/99-joystick.rules >/dev/null
+  if [ ${#rules[@]} -gt 0 ]; then
+    echo "${rules[@]}" | sudo tee /etc/udev/rules.d/99-joystick.rules >/dev/null
 
-  # Reload the configuration (reboot still required)
-  sudo udevadm control --reload
+    # Reload the configuration (reboot still required)
+    sudo udevadm control --reload
+  fi
 }
 
 restore() {
