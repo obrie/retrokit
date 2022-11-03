@@ -26,6 +26,9 @@ dpi_mode=87
 dpi_output_format=0x00016
 hdmi_timings=640 0 41 40 41 480 0 18 9 18 0 0 0 60 0 24000000 1
 
+# HDMI disconnected
+hdmi_ignore_hotplug=1
+
 # HDMI connected
 [gpio18=1]
 # Enable HDMI
