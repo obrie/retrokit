@@ -6,10 +6,11 @@ setup_module_id='hardware/controllers/xboxdrv'
 setup_module_desc='Provides a userspace driver for advanced controller configurations'
 
 depends() {
-  install_retropie_package supplementary xboxdrv source
+  sudo apt-get install -y acl
 }
 
 build() {
+  install_retropie_package supplementary xboxdrv source
   __build_services
 }
 
@@ -78,6 +79,7 @@ restore() {
 
 remove() {
   uninstall_retropie_package supplementary xboxdrv
+  sudo apt-get remove -y acl
   sudo rm -rfv /etc/systemd/system/xboxdrv*.service
 }
 

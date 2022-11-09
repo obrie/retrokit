@@ -1,3 +1,3 @@
 # Prevent access to the raw built-in joystick so that emulators only see the xboxdrv-mapped controller
-SUBSYSTEM=="input", KERNEL=="event[0-9]*", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="028e", ATTRS{product}=="GBA Pi Case+", TAG-="uaccess", MODE="0600", GROUP="root"
-SUBSYSTEM=="input", KERNEL=="js[0-9]*", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="028e", ATTRS{product}=="GBA Pi Case+", TAG-="uaccess", MODE="0600", GROUP="root"
+SUBSYSTEM=="input", KERNEL=="event[0-9]*", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="028e", ATTRS{product}=="GBA Pi Case+", RUN+="/bin/setfacl -x u:pi /dev/input/%k"
+SUBSYSTEM=="input", KERNEL=="js[0-9]*", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="028e", ATTRS{product}=="GBA Pi Case+", RUN+="/bin/setfacl -x u:pi /dev/input/%k"
