@@ -1,0 +1,58 @@
+[xboxdrv]
+# Should be consistently the same usb port on all buidls
+evdev = /dev/input/by-path/platform-fe980000.usb-usb-0:1.3:1.0-event-joystick
+detach-kernel-driver = true
+force-feedback = 1
+deadzone-trigger = 15%
+deadzone = 4000
+mimic-xpad = true
+trigger-as-button = true
+extra-events = false
+silent = true
+
+# Define mappings from evdev outputs to xbox buttons/axes
+[evdev-absmap]
+ABS_X = x1
+ABS_Y = y1
+ABS_RX = x2
+ABS_RY = y2
+ABS_Z = lt
+ABS_RZ = rt
+ABS_HAT0X = dpad_x
+ABS_HAT0Y = dpad_y
+
+[evdev-keymap]
+BTN_DPAD_DOWN = dd
+BTN_DPAD_UP = du
+BTN_DPAD_LEFT = dl
+BTN_DPAD_RIGHT = dr
+
+# Swap a/b and x/y to match standard xbox ocntrollers
+BTN_SOUTH = b
+BTN_EAST = a
+BTN_NORTH = y
+BTN_WEST = x
+
+BTN_TL = lb
+BTN_TR = rb
+BTN_THUMBL = tl
+BTN_THUMBR = tr
+BTN_MODE = guide
+BTN_SELECT = back
+BTN_START = start
+
+[ui-axismap]
+# Enable left and right axis hotkeys
+lb+dpad_x^resp:-32768:0:32767 = ABS_X
+lb+dpad_y^resp:-32768:0:32767 = ABS_Y
+rb+dpad_x^resp:-32768:0:32767 = ABS_RX
+rb+dpad_y^resp:-32768:0:32767 = ABS_RY
+
+[ui-buttonmap]
+# Enable trigger hotkeys
+lb+x = BTN_TL2
+lb+y = BTN_TR2
+
+# Enable axis stick hotkeys
+lb+a = BTN_THUMBL
+lb+b = BTN_THUMBR

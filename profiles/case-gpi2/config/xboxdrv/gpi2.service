@@ -1,0 +1,11 @@
+[Unit]
+Description=xboxdrv GPi 2 controller remap
+PartOf=xboxdrv.service
+
+[Service]
+Type=simple
+ExecStart=/opt/retropie/supplementary/xboxdrv/bin/xboxdrv --config /etc/xboxdrv/gpi2.xboxdrv
+TimeoutSec=0
+
+[Install]
+WantedBy=xboxdrv.service

@@ -1,7 +1,8 @@
 {
   "setup": {
     "add|case": [
-      "hardware/gpi2"
+      "hardware/gpi2",
+      "hardware/controllers/xboxdrv"
     ]
   }
 }

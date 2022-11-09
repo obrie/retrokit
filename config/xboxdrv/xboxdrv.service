@@ -1,0 +1,6 @@
+[Unit]
+Description=xboxdrv controller remaps
+After=rc-local.service
+
+[Install]
+WantedBy=multi-user.target
