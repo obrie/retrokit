@@ -2,5 +2,10 @@
 Description=xboxdrv controller remaps
 After=rc-local.service
 
+[Service]
+Type=simple
+ExecStart=/bin/true
+RemainAfterExit=yes
+
 [Install]
 WantedBy=multi-user.target
