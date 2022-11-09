@@ -21,7 +21,7 @@ __build_services() {
   while read service_path; do
     local filename=$(basename "$service_path")
     file_cp "$service_path" "/etc/systemd/system/xboxdrv-$filename" as_sudo=true backup=false envsubst=false
-  done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.service')
+  done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.service' | grep -Ev 'xboxdrv.service')
 }
 
 configure() {
