@@ -51,7 +51,7 @@ __configure_systemd_services() {
 
   while read service_path; do
     local filename=$(basename "$service_path")
-    sudo systemctl enable "$filename"
+    sudo systemctl enable "xboxdrv-$filename"
   done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.service')
 
   # Start the service
@@ -69,7 +69,7 @@ restore() {
   sudo systemctl disable xboxdrv || true
   while read service_path; do
     local filename=$(basename "$service_path")
-    sudo systemctl disable "$filename"
+    sudo systemctl disable "xboxdrv-$filename"
   done < <(find /etc/systemd/system -maxdepth 1 -name 'xboxdrv-*.service')
 
   # Reload udev
