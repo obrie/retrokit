@@ -5,12 +5,15 @@
 setup_module_id='hardware/controllers/xboxdrv'
 setup_module_desc='Provides a userspace driver for advanced controller configurations'
 
-build() {
+depends() {
   install_retropie_package supplementary xboxdrv source
-  __install_services
 }
 
-__install_services() {
+build() {
+  __build_services
+}
+
+__build_services() {
   # Parent service
   file_cp '{config_dir}/xboxdrv/xboxdrv.service' /etc/systemd/system/xboxdrv.service as_sudo=true backup=false envsubst=false
 
@@ -57,7 +60,7 @@ __configure_systemd_services() {
 
 restore() {
   # Remove configurations
-  sudo rm -rf \
+  sudo rm -rfv \
     /etc/xboxdrv \
     /etc/udev/rules.d/99-xboxdrv*
 
@@ -75,7 +78,7 @@ restore() {
 
 remove() {
   uninstall_retropie_package supplementary xboxdrv
-  sudo rm -rf /etc/systemd/system/xboxdrv*.service
+  sudo rm -rfv /etc/systemd/system/xboxdrv*.service
 }
 
 setup "${@}"
