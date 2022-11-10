@@ -16,17 +16,5 @@
     "psp",
     "ngpc",
     "ports"
-  ],
-  "setup": {
-    "add": [
-    ],
-    "remove": [
-      "systems/ports/roms-packages",
-      "hardware/controllers/sinden",
-      "system-overlays",
-      "system-roms-overlays",
-      "systems/pc/config",
-      "systems/ports/roms-gamefiles"
-    ]
-  }
+  ]
 }
