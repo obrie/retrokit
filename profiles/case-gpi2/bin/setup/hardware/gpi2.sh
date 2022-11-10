@@ -5,9 +5,19 @@
 setup_module_id='hardware/gpi2'
 setup_module_desc='GPi2 management utilities'
 
+install_dir='/opt/retropie/supplementary/gpikit'
+
 build() {
+  __build_gpikit
   __build_overlays
   __build_port_shortcuts
+}
+
+__build_gpikit() {
+  # Copy gpikit to the retropie install path so that nothing depends
+  # on retrokit being on the system
+  sudo mkdir -p "$install_dir"
+  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/gpikit/" "$install_dir/"
 }
 
 __build_overlays() {
@@ -32,6 +42,11 @@ __build_port_shortcuts() {
 }
 
 configure() {
+  __configure_audio
+  __configure_autostart
+}
+
+__configure_audio() {
   # Audio settings
   file_cp "{config_dir}/alsa/modprobe.conf" /etc/modprobe.d/alsa-base.conf as_sudo=true
   file_cp "{config_dir}/alsa/asound-mono.conf" /etc/asound-mono.conf as_sudo=true
@@ -42,14 +57,30 @@ configure() {
   sudo sed -i 's/-o both/-o alsa/g' /opt/retropie/supplementary/splashscreen/asplashscreen.sh
 }
 
+# Install autostart script
+__configure_autostart() {
+  mkdir -p /opt/retropie/configs/all/autostart.d
+  ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/gpikit
+}
+
 restore() {
+  __restore_audio
+  __restore_autostart
+}
+
+__restore_audio() {
   restore_file /etc/asound.conf as_sudo=true delete_src=true
   restore_file /etc/asound-mono.conf as_sudo=true delete_src=true
   restore_file /etc/modprobe.d/alsa-base.conf as_sudo=true delete_src=true
   restore_file /opt/retropie/supplementary/splashscreen/asplashscreen.sh as_sudo=true delete_src=true
 }
 
+__restore_autostart() {
+  rm -fv /opt/retropie/configs/all/autostart.d/gpikit/
+}
+
 remove() {
+  sudo rm -rfv "$install_dir"
   rm -rfv  "$HOME/RetroPie/roms/ports/+GPi"
   restore_file /boot/overlays/dpi24.dtbo as_sudo=true delete_src=true
   restore_file /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true delete_src=true
