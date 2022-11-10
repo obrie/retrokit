@@ -410,9 +410,11 @@ dir_rsync() {
     cmd='sudo'
   fi
 
-  rm -rfv "$target"/*
-  mkdir -pv "$target"
-  each_path "$source" rsync -avzR '{}/./' "$target"
+  $cmd rm -rfv "$target"/*
+  $cmd mkdir -pv "$target"
+  while read source_path; do
+    $cmd rsync -avzR "$source_path/./" "$target"
+  done < <(each_path "$source")
 }
 
 # Renders a template with the given variables to substitute.
