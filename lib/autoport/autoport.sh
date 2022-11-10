@@ -41,14 +41,23 @@ setup() {
     return
   fi
 
-  # Determine which is the active profile
-  local profile=$(__setting 'autoport' 'profile')
-  if [ -z "$profile" ]; then
-    echo 'autoport profile selection missing'
-    return
+  local default_profile=$(__setting 'autoport' 'profile')
+
+  # Joystick setup
+  local joystick_profile=$(__setting 'autoport' 'joystick_profile' || echo "$default_profile")
+  if [ -n "$joystick_profile" ]; then
+    __setup_${system_type} "$joystick_profile" joystick
+  else
+    echo 'autoport joystick profile selection missing'
   fi
 
-  __setup_${system_type} "$profile"
+  # Mouse setup
+  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || echo "$default_profile")
+  if [ -n "$mouse_profile" ]; then
+    __setup_${system_type} "$mouse_profile" mouse
+  else
+    echo 'autoport mouse profile selection missing'
+  fi
 }
 
 # Looks up the given INI configuration setting, looking at all relevant paths
@@ -109,21 +118,16 @@ __get_system_type() {
 
 # Libretro:
 #
-# Set up retroarch-compatible port index overrides
+# Set up port index overrides for the provided device type
 __setup_libretro() {
   local profile=$1
-
-  __setup_libretro_input "$profile" mouse mouse
-  __setup_libretro_input "$profile" joystick joypad
-}
-
-# Libretro:
-#
-# Set up port index overrides for the provided device type
-__setup_libretro_input() {
-  local profile=$1
   local driver_name=$2
-  local retroarch_driver_name=$3
+  local retroarch_driver_name
+  if [ "$driver_name" == 'mouse' ]; then
+    retroarch_driver_name=mouse
+  else
+    retroarch_driver_name=joypad
+  fi
   local retroarch_config_path=/dev/shm/retroarch.cfg
 
   # Remove any existing runtime overrides
@@ -150,6 +154,9 @@ __setup_libretro_input() {
 # priority matches.
 __setup_redream() {
   local profile=$1
+  local driver_name=$2
+  [ "$driver_name" == 'mouse' ] && return
+
   local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
   local config_backup_path="$config_path.autoport"
 
@@ -197,6 +204,9 @@ __setup_redream() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_ppsspp() {
   local profile=$1
+  local driver_name=$2
+  [ "$driver_name" == 'mouse' ] && return
+
   local config_path=/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
@@ -221,6 +231,9 @@ __setup_ppsspp() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_drastic() {
   local profile=$1
+  local driver_name=$2
+  [ "$driver_name" == 'mouse' ] && return
+
   local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
@@ -239,6 +252,9 @@ __setup_drastic() {
 # Sets up a *single* joystick based on the highest priority match.
 __setup_hypseus() {
   local profile=$1
+  local driver_name=$2
+  [ "$driver_name" == 'mouse' ] && return
+
   local config_path=/opt/retropie/configs/daphne/hypinput.ini
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
@@ -265,6 +281,9 @@ __setup_hypseus() {
 # highest priority matches.
 __setup_mupen64plus() {
   local profile=$1
+  local driver_name=$2
+  [ "$driver_name" == 'mouse' ] && return
+
   local config_path=/opt/retropie/configs/n64/mupen64plus.cfg
   local config_backup_path="$config_path.autoport"
   local auto_config_path=/opt/retropie/configs/n64/InputAutoCfg.ini
