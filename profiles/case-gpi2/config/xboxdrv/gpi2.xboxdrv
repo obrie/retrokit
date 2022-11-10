@@ -1,6 +1,4 @@
 [xboxdrv]
-# Should be consistently the same usb port on all buidls
-evdev = /dev/input/by-path/platform-fe980000.usb-usb-0:1.3:1.0-event-joystick
 detach-kernel-driver = true
 force-feedback = 1
 deadzone-trigger = 15%

@@ -1,0 +1,8 @@
+[Unit]
+Description=xboxdrv GPi 2 controller remap
+StopWhenUnneeded=true
+
+[Service]
+Type=simple
+ExecStart=/opt/retropie/supplementary/xboxdrv/bin/xboxdrv --evdev /dev/input/%i --config /etc/xboxdrv/gpi2.xboxdrv
+TimeoutSec=0
