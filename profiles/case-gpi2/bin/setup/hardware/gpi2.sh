@@ -44,6 +44,7 @@ __build_port_shortcuts() {
 configure() {
   __configure_audio
   __configure_autostart
+  __configure_runcommand
 }
 
 __configure_audio() {
@@ -63,9 +64,15 @@ __configure_autostart() {
   ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/gpikit
 }
 
+__configure_runcommand() {
+  mkdir -p /opt/retropie/configs/all/runcommand.d
+  ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/gpikit
+}
+
 restore() {
   __restore_audio
   __restore_autostart
+  __restore_runcommand
 }
 
 __restore_audio() {
@@ -77,6 +84,10 @@ __restore_audio() {
 
 __restore_autostart() {
   rm -fv /opt/retropie/configs/all/autostart.d/gpikit/
+}
+
+__restore_runcommand() {
+  rm -fv /opt/retropie/configs/all/runcommand.d/gpikit/
 }
 
 remove() {
