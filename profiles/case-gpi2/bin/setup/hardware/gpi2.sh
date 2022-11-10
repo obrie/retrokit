@@ -17,7 +17,7 @@ __build_gpikit() {
   # Copy gpikit to the retropie install path so that nothing depends
   # on retrokit being on the system
   sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/gpikit/" "$install_dir/"
+  dir_rsync '{lib_dir}/gpikit/' "$install_dir/" as_sudo=true
 }
 
 __build_overlays() {
