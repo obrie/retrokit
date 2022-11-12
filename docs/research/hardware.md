@@ -112,13 +112,15 @@ This represents a portable configuration that you can take anywhere.
 | Power Supply      | CanaKit 3.5A Power Supply           | $10   | https://www.amazon.com/dp/B07TYQRXTK |
 | Hard Drive        | Samsung EVO Plus+ 512GB microSDXC   | $65   | https://www.samsung.com/us/computing/memory-storage/memory-cards/evo-plus---adapter-microsdxc-512gb-mb-mc512ka-am/ |
 | Keyboard + Mouse  | Arteck 2.4ghz Keyboard + Mouse      | $30   | https://www.amazon.com/dp/B07MCTZ3LZ |
+| Heatsink          | Aluminum Heatsink for CM4           | $9    | https://www.amazon.com/dp/B093FSS6XX |
 
-Total cost: $252 ($282 with keyboard)
+Total cost: $261 ($291 with keyboard)
 
 Important notes:
 
 * You must get the CM4 Lite (no eMMC) in order to use an SD card
 * Strongly recommend getting a CM4 with wireless to simplify setup and configuration
+* To install the heatsink, follow [these instructions](https://www.reddit.com/r/retroflag_gpi/comments/xudus6/just_another_heatsinkmod_without_batteryremoval/)
 
 ## Upgrades
 
