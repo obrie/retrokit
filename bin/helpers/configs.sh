@@ -413,7 +413,7 @@ dir_rsync() {
   $cmd rm -rfv "$target"/*
   $cmd mkdir -pv "$target"
   while read source_path; do
-    $cmd rsync -avzR "$source_path/./" "$target"
+    $cmd rsync -avzR --exclude '__pycache__/' "$source_path/./" "$target"
   done < <(each_path "$source")
 }
 

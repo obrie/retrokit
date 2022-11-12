@@ -12,7 +12,7 @@ depends() {
   "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/powerkit/setup.sh" depends
 
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/devicekit/" "/opt/retropie/supplementary/devicekit/"
+  dir_rsync '{lib_dir}/devicekit/' "/opt/retropie/supplementary/devicekit/" as_sudo=true
 }
 
 build() {
@@ -20,8 +20,7 @@ build() {
 
   # Copy powerkit to the retropie install path so that nothing depends
   # on retrokit being on the system
-  sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/powerkit/" "$install_dir/"
+  dir_rsync '{lib_dir}/powerkit/' "$install_dir/" as_sudo=true
 }
 
 configure() {

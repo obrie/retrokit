@@ -11,8 +11,7 @@ install_dir='/opt/retropie/supplementary/launchkit'
 build() {
   # Copy launchkit to the retropie install path so that nothing depends
   # on retrokit being on the system
-  sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/launchkit/" "$install_dir/"
+  dir_rsync '{lib_dir}/launchkit/' "$install_dir/" as_sudo=true
 }
 
 configure() {

@@ -12,14 +12,13 @@ depends() {
   "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/manualkit/setup.sh" depends
 
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/devicekit/" "/opt/retropie/supplementary/devicekit/"
+  dir_rsync '{lib_dir}/devicekit/' "/opt/retropie/supplementary/devicekit/" as_sudo=true
 }
 
 build() {
   # Copy manualkit to the retropie install path so that nothing depends
   # on retrokit being on the system
-  sudo mkdir -p "$install_dir"
-  sudo rsync -av --exclude '__pycache__/' --delete "$lib_dir/manualkit/" "$install_dir/"
+  dir_rsync '{lib_dir}/manualkit/' "$install_dir/" as_sudo=true
 }
 
 configure() {
