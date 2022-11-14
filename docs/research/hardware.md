@@ -205,7 +205,7 @@ I really like the Sabrent enclosure, but it is critical that you update to the m
 firmware in order to avoid hard drive corruption problems (this **WILL** happen very quickly).
 The instructions I followed came from the websites above and are covered here:
 
-1. Download the latest [Sabrent firmware](https://www.sabrent.com/download/ec-snve/), unzip, and keep only the SA8307.cfg config file.
+1. Download the latest [Sabrent firmware](https://downloads.sabrent.com/product/ec-snve-firmware-update/), unzip, and keep only the SA8307.cfg config file.
 2. Download the latest firmware for the [ICY BOX IB-1817MC-C31 or ICY BOX IB-1817MCT-C31](https://raidsonic-static-content.s3.eu-central-1.amazonaws.com/IcyBox/Files/ICY%20BOX%20IB-1817MC-C31%20Firmware%20Update.zip), they are the same.
 3. Unzip the ICY BOX firmware, and replace the `configure/IB-1817MC-C31.cfg` file with the Sabrent `SA8307.cfg`.
 4. Plug in the Sabrent, open `UTHSB_MPtool_Lite.exe` in Windows, and you should see MPtool has picked the `SA8307.cfg` file.
