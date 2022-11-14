@@ -136,6 +136,7 @@ Those controllers are covered below and I've confirmed work with retrokit.
 | - | - | - | - |
 | Arcade Trackball  | Kensington Orbit Wireless Trackball | $53   | https://www.amazon.com/dp/B09DGMYVPP |
 | Lightgun          | Sinden Lightgun                     | $103  | https://www.sindenlightgun.com/ |
+| Lightgun cap      | Sinden lightgun cap                 | $5    | https://www.thingiverse.com/thing:4898072 |
 
 For even more controllers, I strongly suggest any of the wired or bluetooth controllers from
 [8Bitdo](https://www.8bitdo.com/#Products), particularly either of these:
@@ -146,6 +147,7 @@ For even more controllers, I strongly suggest any of the wired or bluetooth cont
 Some notes:
 
 * The Sinden Lightgun can also come with recoil for an additional $60
+* I used [Treatstock](https://www.treatstock.com/) to print the lightgun cap from thingiverse
 
 ### Better Bluetooth
 
