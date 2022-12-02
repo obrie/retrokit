@@ -1,0 +1,36 @@
+{
+  "system": {
+    "name": "channelf",
+    "description": "The Fairchild Channel F, short for 'Channel Fun', is a home video game console released in 1976, the first to use ROM cartridges."
+  },
+  "features": {
+    "saves": false,
+    "states": false,
+    "netplay": false,
+    "cheats": false,
+    "multi controllers": true
+  },
+  "images": {
+    "controller": "controller.png"
+  },
+  "controls": {
+    "retropad": {
+      "dpad_up": "Forward",
+      "dpad_down": "Backward",
+      "left_stick,⬆": "Forward",
+      "left_stick,⬇": "Backward",
+      "y": "Rotate Left",
+      "a": "Rotate Right",
+      "l1": "Rotate Left",
+      "r1": "Rotate Right",
+      "right_stick,⬅": "Rotate Left",
+      "right_stick,➡": "Rotate Right",
+      "x": "Pull Up",
+      "b": "Push Down",
+      "right_stick,⬆": "Pull Up",
+      "right_stick,⬇": "Push Down",
+      "start": "Console Overlay",
+      "select": "Controller Swap"
+    }
+  }
+}

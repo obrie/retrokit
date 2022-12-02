@@ -1,0 +1,78 @@
+{
+  "system": "channelf",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-ChannelF",
+        "path": "retroarch/overlay/GameBezels/ChannelF"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-ChannelF",
+        "path": "retroarch/overlay/GameBezels/ChannelF",
+        "default": "retroarch/overlay/Fairchild-Channel-F.png"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-freechaf": {
+      "default": true,
+      "core_name": "freechaf",
+      "library_name": "FreeChaF"
+    }
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/Fairchild Channel F",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "sl31253.bin": "{url}/sl31253.bin",
+      "sl31254.bin": "{url}/sl31254.bin"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Fairchild - Channel F"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Fairchild - Channel F (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/channelf/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/channelf/.nointro/.xrefs/{machine_id}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/channelf/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/data/channelf.json"
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/channelf", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

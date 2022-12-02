@@ -911,7 +911,9 @@ To generate archives:
 
 ```
 PROFILES=manualkit-original bin/setup.sh install system-roms-manuals
+PROFILES=manualkit-original bin/cache.sh remote_sync_system_manuals <system>
 PROFILES=manualkit-compressed bin/setup.sh install system-roms-manuals
+PROFILES=manualkit-compressed bin/cache.sh remote_sync_system_manuals <system>
 ```
 
 Reference: https://archive.org/details/retrokit-manuals
@@ -1098,6 +1100,7 @@ The approximate capacity required per system is broken down below:
 | atarijaguar   | 125MB    |
 | atarilynx     | 11MB     |
 | c64           | 135MB    |
+| channelf      | 1MB      |
 | coleco        | 3MB      |
 | daphne        | 23GB     |
 | dreamcast     | 113GB    |
