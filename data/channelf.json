@@ -1,2 +1,234 @@
 {
+    "Alien Invasion": {
+        "genres": [
+            "Shooter",
+            "Shooter / Space Invaders Like",
+            "Shoot'em Up",
+            "Shoot'em up / Vertical",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Backgammon, Acey-Deucey": {
+        "genres": [
+            "Board game",
+            "Strategy"
+        ],
+        "players": 2,
+        "rating": 0.3
+    },
+    "Baseball": {
+        "genres": [
+            "Sports / Baseball",
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.35
+    },
+    "Bowling": {
+        "genres": [
+            "Sports / Bowling",
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Casino Poker": {
+        "genres": [
+            "Casino",
+            "Playing cards",
+            "Casino / Cards"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Checkers": {
+        "genres": [
+            "Board game",
+            "Strategy"
+        ],
+        "players": 1,
+        "rating": 0.7
+    },
+    "Demonstration Cartridge": {
+        "genres": [
+            "Demo"
+        ],
+        "players": 1,
+        "rating": 0.5
+    },
+    "Demonstration Cartridge 2": {
+        "genres": [
+            "Demo"
+        ],
+        "players": 1,
+        "rating": 0.5
+    },
+    "Desert Fox, Shooting Gallery": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Dodge It": {
+        "genres": [
+            "Sports",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Drag Race": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Galactic Space Wars, Lunar Lander": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.5
+    },
+    "Hangman": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Magic Numbers - Mind Reader + Nim": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 1,
+        "rating": 0.8
+    },
+    "Math Quiz I - Addition + Subtraction": {
+        "genres": [
+            "Educational"
+        ],
+        "players": 1,
+        "rating": 0.45
+    },
+    "Math Quiz II - Multiplication + Division": {
+        "genres": [
+            "Educational"
+        ],
+        "players": 1,
+        "rating": 0.5
+    },
+    "Maze, Jailbreak, Blind-man's-bluff, Trailblazer": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.3
+    },
+    "Memory Match 1 & 2": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Pinball Challenge": {
+        "genres": [
+            "Action / Breakout games",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Pro Football": {
+        "genres": [
+            "Sports / Football",
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.75
+    },
+    "Robot War, Torpedo Alley": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Schach": {
+        "genres": [
+            "Board game"
+        ],
+        "players": 1,
+        "rating": 0.8
+    },
+    "Slot Machine": {
+        "genres": [
+            "Casino / Slot machine",
+            "Casino",
+            "Simulation"
+        ],
+        "players": 1,
+        "rating": 0.2
+    },
+    "Sonar Search": {
+        "genres": [
+            "Strategy"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Space War": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Spitfire": {
+        "genres": [
+            "Shooter",
+            "Shooter / Plane",
+            "3rd person",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.45
+    },
+    "Tic-Tac-Toe, Shooting Gallery, Doodle, Quadra-Doodle": {
+        "genres": [
+            "Casual Game",
+            "Strategy",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.75
+    },
+    "Video Blackjack": {
+        "genres": [
+            "Casino / Cards",
+            "Casino",
+            "Strategy"
+        ],
+        "players": 2,
+        "rating": 0.5
+    },
+    "Video Whizball": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    }
 }
