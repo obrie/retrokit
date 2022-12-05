@@ -102,7 +102,7 @@ in order to support Playstation 2 / Wii.
 
 ### The Traveler
 
-This represents a portable configuration that you can take anywhere.
+This represents a portable handheld configuration that you can take anywhere.
 
 | Component         | Description                         | Cost  | URL |
 | - | - | - | - |
@@ -121,6 +121,33 @@ Important notes:
 * You must get the CM4 Lite (no eMMC) in order to use an SD card
 * Strongly recommend getting a CM4 with wireless to simplify setup and configuration
 * To install the heatsink, follow [these instructions](https://www.reddit.com/r/retroflag_gpi/comments/xudus6/just_another_heatsinkmod_without_batteryremoval/)
+
+### The Adventurer
+
+This is a build based on the [Adventure Pi](https://howchoo.com/g/y2fkodu2ymj/adventurepi-portable-raspberry-pi-arcade)
+and represents a portable full system configuration that you can take anywhere.
+
+| Component         | Description                         | Cost  | URL |
+| - | - | - | - |
+| Computer          | Raspberry Pi 4 4GB                  | $55   | https://www.canakit.com/raspberry-pi-4-4gb.html |
+| Case              | Argon ONE V2 Case                   | $25   | https://www.amazon.com/dp/B07WP8WC3V |
+| Carrying Case     | Nanuk 910 Case                      | $65   | https://www.amazon.com/dp/B00BP8UTWK |
+| Monitor           | SunFounder 13.3in IPS Display       | $130  | https://www.amazon.com/dp/B07NNXH2SS |
+| TV HDMI Cable     | Slim HDMI FPV Cable (30cm)          | $17   | https://www.amazon.com/dp/B079DQJC9Z |
+| TV Power Cable    | Slim USB-C / USB-A FPV Cable (30cm) | $17   | https://www.amazon.com/dp/B07DJ8HKKG |
+| Power Bank        | PD Pioneer 26800mAh Power Bank      | $70   | https://www.ravpower.com/products/rp-pb058-usb-c-power-bank |
+| Wall Charger      | Anker Nano II 30W                   | $30   | https://www.amazon.com/dp/B091DS2M8X |
+| Hard Drive        | Western Digital 1TB M.2 SSD         | $90   | https://www.westerndigital.com/products/internal-drives/wd-blue-sata-m-2-ssd#WDS100T2B0B |
+| USB Cable         | USB-C to USB-A Cable                | $8    | https://www.amazon.com/dp/B012V56D2A |
+| HD Enclosure      | SSK M.2 Enclsoure                   | $13   | https://www.amazon.com/dp/B07MKCG5ZG |
+| Velcro            | Strenco 2 Inch Velcro               | $13   | https://www.amazon.com/dp/B00H3R9S1K |
+| Controller        | 8Bitdo SN30 Pro USB                 | $28   | https://www.amazon.com/dp/B08Y9RC49N |
+
+Total cost: $561
+
+Important notes:
+
+* The power bank size is kept under 27,000 to remain within FAA limits
 
 ## Upgrades
 
