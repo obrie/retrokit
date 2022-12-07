@@ -56,7 +56,7 @@ class Machine:
         self.alt_name = name
 
         # Internal metadata
-        self.description = description
+        self.description = description or name
         self.comment = comment
         self.orientation = orientation
         self.category = category
