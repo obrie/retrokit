@@ -910,10 +910,10 @@ or new systems supported.
 To generate archives:
 
 ```
-PROFILES=manualkit-original bin/setup.sh install system-roms-manuals
-PROFILES=manualkit-original bin/cache.sh remote_sync_system_manuals <system>
-PROFILES=manualkit-compressed bin/setup.sh install system-roms-manuals
-PROFILES=manualkit-compressed bin/cache.sh remote_sync_system_manuals <system>
+PROFILES=manualkit-original SKIP_SYSTEM_CHECK=true bin/setup.sh install system-roms-manuals <system>
+PROFILES=manualkit-original SKIP_SYSTEM_CHECK=true bin/cache.sh remote_sync_system_manuals <system>
+PROFILES=manualkit-compressed SKIP_SYSTEM_CHECK=true bin/setup.sh install system-roms-manuals <system>
+PROFILES=manualkit-compressed SKIP_SYSTEM_CHECK=true bin/cache.sh remote_sync_system_manuals <system>
 ```
 
 Reference: https://archive.org/details/retrokit-manuals
