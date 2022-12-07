@@ -321,7 +321,7 @@
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
-          "source": "{url}/MAME%200.245%20ROMs%20%28split%29{machine}.zip",
+          "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
           "target": "$HOME/RetroPie/roms/arcade/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         },
