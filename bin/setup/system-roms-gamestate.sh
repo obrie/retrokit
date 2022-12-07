@@ -199,4 +199,4 @@ if [ "$1" == 'remove' ]; then
   CONFIRM=false
 fi
 
-setup "$1" "${@:3}"
+setup "${@}"

@@ -105,4 +105,4 @@ restore() {
   restore_file "$retropie_system_config_dir/retroarch.cfg"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

@@ -142,4 +142,4 @@ restore() {
   __cleanup_unused_collections
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

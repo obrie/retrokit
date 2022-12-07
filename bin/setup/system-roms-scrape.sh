@@ -312,4 +312,4 @@ __vacuum_media() {
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

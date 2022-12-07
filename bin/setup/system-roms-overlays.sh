@@ -273,4 +273,4 @@ remove() {
   rm -rfv "$system_overlay_dir"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

@@ -48,4 +48,4 @@ restore() {
   fi
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

@@ -128,4 +128,4 @@ remove() {
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

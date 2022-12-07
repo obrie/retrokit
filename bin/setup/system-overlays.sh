@@ -64,4 +64,4 @@ remove() {
     "$retroarch_overlay_dir/$system-lightgun.png"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

@@ -64,4 +64,4 @@ __remove_favorites() {
   xmlstarlet ed --inplace -d '/gameList/game/favorite' "$gamelist_file"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

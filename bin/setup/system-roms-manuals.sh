@@ -798,4 +798,4 @@ vacuum() {
   done < <(find "$base_path" -not -type d)
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

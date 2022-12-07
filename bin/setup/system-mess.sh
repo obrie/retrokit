@@ -40,4 +40,4 @@ restore() {
   rm -rfv "$system_mess_dir"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

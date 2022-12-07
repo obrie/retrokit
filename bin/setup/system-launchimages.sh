@@ -41,4 +41,4 @@ remove() {
   rm -fv "$retropie_system_config_dir/"launching-extended-*
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

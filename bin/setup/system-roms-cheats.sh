@@ -172,4 +172,4 @@ restore() {
   done < <(get_core_library_names)
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

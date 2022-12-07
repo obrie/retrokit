@@ -24,4 +24,4 @@ vacuum() {
   romkit_cli vacuum
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

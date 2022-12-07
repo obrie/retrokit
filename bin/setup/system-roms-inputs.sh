@@ -112,4 +112,4 @@ restore() {
   done < <(find "$retropie_system_config_dir/autoport" -name '*.cfg')
 }
 
-setup "$1" "${@:3}"
+setup "${@}"

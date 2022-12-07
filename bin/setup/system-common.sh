@@ -33,7 +33,7 @@ check_prereqs() {
   local requested_system=$2
 
   local system_index=$(setting ".systems | index(\"$system\")")
-  if [ -z "$requested_system" ] || [ "$system" != "$required_system" ]; then
+  if [ -z "$requested_system" ] || [ "$system" != "$requested_system" ]; then
     # No system provided on the command-line
     if [ -z "$system_index" ]; then
       # System isn't enabled -- fail soft (skip)

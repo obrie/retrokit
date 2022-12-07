@@ -56,4 +56,4 @@ restore() {
   sed -i "/^${system}_/d"
 }
 
-setup "$1" "${@:3}"
+setup "${@}"
