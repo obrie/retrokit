@@ -1,0 +1,16 @@
+{
+  "system": {
+    "name": "gameandwatch",
+    "description": "Game & Watch is a line of handheld electronic games produced by Nintendo from 1980 to 1991."
+  },
+  "features": {
+    "saves": false,
+    "states": false,
+    "netplay": false,
+    "cheats": false,
+    "multi controllers": false
+  },
+  "images": {
+    "controller": "controller.png"
+  }
+}

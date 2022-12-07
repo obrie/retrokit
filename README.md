@@ -1104,6 +1104,7 @@ The approximate capacity required per system is broken down below:
 | coleco        | 3MB      |
 | daphne        | 23GB     |
 | dreamcast     | 113GB    |
+| gameandwatch  | 520MB    |
 | gamegear      | 51MB     |
 | gb            | 61MB     |
 | gba           | 3.3GB    |

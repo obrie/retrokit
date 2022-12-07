@@ -1,0 +1,69 @@
+{
+  "system": "gameandwatch",
+  "scraper": {
+    "import_dat_titles": false
+  },
+  "emulators": {
+    "lr-mess": {},
+    "lr-mess-gameandwatch": {
+      "default": true,
+      "name": "lr-mess-mame-autoframeskip",
+      "build": "source",
+      "core_name": "mame",
+      "library_name": "MAME",
+      "gamestate": [
+        "$HOME/RetroPie/roms/gameandwatch/mame/cfg/default.cfg",
+        "$HOME/RetroPie/roms/gameandwatch/mame/cfg/{rom}.cfg",
+        "$HOME/RetroPie/roms/gameandwatch/mame/diff/{rom}.df",
+        "$HOME/RetroPie/roms/gameandwatch/mame/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/gameandwatch/mame/nvram/{rom}"
+      ]
+    }
+  },
+  "romsets": [
+    {
+      "name": "mame",
+      "protocol": "http",
+      "url": "$ROMSET_MAME_0245_URL",
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
+          "target": "$HOME/retrokit/tmp/mame/mame0244.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+        },
+        "machine": {
+          "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/gameandwatch/.mame/{machine}.zip",
+          "install": {"action": "zip_merge"}
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/gameandwatch/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/data/gameandwatch.json"
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+      "clones": [false],
+      "~parent_names": [
+        "gnw_"
+      ]
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/gameandwatch", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
