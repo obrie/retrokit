@@ -125,6 +125,9 @@ class Scraper:
             for machine in romset.iter_machines():
                 # Set external emulator metadata
                 self.system.metadata_set.update(machine)
+                if not self.system.filter_set.allow(machine):
+                    continue
+
                 group_title = machine.parent_title or machine.title
                 self.group_titles[machine.name] = group_title
 
