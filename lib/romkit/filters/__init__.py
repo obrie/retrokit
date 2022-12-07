@@ -7,9 +7,9 @@ from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter,
 from romkit.filters.favorite import FavoriteFilter
 from romkit.filters.language import LanguageFilter
 from romkit.filters.manual import ManualFilter
-from romkit.filters.name import NameFilter, TitleFilter
+from romkit.filters.name import NameFilter, PartialNameFilter, TitleFilter
 from romkit.filters.orientation import OrientationFilter
-from romkit.filters.parent import CloneFilter
+from romkit.filters.parent import CloneFilter, ParentNameFilter, PartialParentNameFilter, ParentTitleFilter
 from romkit.filters.rating import RatingFilter
 from romkit.filters.romset import ROMSetFilter
 from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter
@@ -23,6 +23,7 @@ __all_filters__ = [
     ControlFilter,
     PlayerFilter,
     NameFilter,
+    PartialNameFilter,
     TitleFilter,
     EmulatorFilter,
     EmulatorCompatibilityFilter,
@@ -36,4 +37,7 @@ __all_filters__ = [
     ROMSetFilter,
     OrientationFilter,
     ManualFilter,
+    ParentNameFilter,
+    PartialParentNameFilter,
+    ParentTitleFilter,
 ]
