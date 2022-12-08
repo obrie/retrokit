@@ -8,9 +8,10 @@ mess_system=$4
 bios_dir=$5
 read -a mess_args <<< "$6"
 rom_path=$7
+rom_dir=$(dirname "$rom_path")
 
 # Generate parameters for MESS cmd file
-mess_cmd=("$mess_system" -readconfig -inipath "$retroarch_dir/mess/ini" -rp "$bios_dir" -cfg_directory "$retroarch_dir/mess/cfg")
+mess_cmd=("$mess_system" -readconfig -inipath "$retroarch_dir/mess/ini" -rp "$bios_dir;$rom_dir" -artpath "$retroarch_dir/mess/artwork" -cfg_directory "$retroarch_dir/mess/cfg")
 for arg in "${mess_args[@]}"; do
   mess_cmd+=( \""$arg"\" )
 done
