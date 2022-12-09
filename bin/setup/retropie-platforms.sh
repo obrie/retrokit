@@ -7,7 +7,7 @@ setup_module_id='retropie-platforms'
 setup_module_desc='RetroPie platform metadata'
 
 configure() {
-  ini_merge '{conf_dir}/retropie/platforms.cfg' /opt/retropie/configs/all/platforms.cfg
+  ini_merge '{config_dir}/retropie/platforms.cfg' /opt/retropie/configs/all/platforms.cfg
 }
 
 restore() {
