@@ -1112,6 +1112,7 @@ The approximate capacity required per system is broken down below:
 | intellivision | 2MB      |
 | mastersystem  | 41MB     |
 | megadrive     | 515MB    |
+| mess          | 520MB    |
 | n64           | 3.5GB    |
 | nds           | 36GB     |
 | nes           | 72MB     |

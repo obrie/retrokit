@@ -1,0 +1,93 @@
+{
+  "system": "mess",
+  "themes": {
+    "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
+  },
+  "scraper": {
+    "import_dat_titles": false,
+    "args": [
+      "-p", "mame-libretro",
+      "-i", "$HOME/RetroPie/roms/mess",
+      "-g", "$HOME/.emulationstation/gamelists/mess",
+      "-o", "$HOME/.emulationstation/downloaded_media/mess",
+      "-d", "cache/mess"
+    ]
+  },
+  "emulators": {
+    "lr-mess": {},
+    "lr-mess-common": {
+      "default": true,
+      "name": "lr-mess-mame-autoframeskip",
+      "build": "source",
+      "core_name": "mame",
+      "library_name": "MAME",
+      "gamestate": [
+        "$HOME/RetroPie/roms/mess/mame/diff/{rom}.df",
+        "$HOME/RetroPie/roms/mess/mame/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/mess/mame/nvram/{rom}"
+      ]
+    }
+  },
+  "romsets": [
+    {
+      "name": "mame",
+      "protocol": "http",
+      "url": "$ROMSET_MAME_0245_URL",
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
+          "target": "$HOME/retrokit/tmp/mame/mame0244.dat",
+          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+        },
+        "machine": {
+          "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/mess/.mame/{machine}.zip",
+          "install": {"action": "zip_merge"}
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "collections": {
+      "source": "file://$HOME/retrokit/config/systems/mess/collections.json"
+    },
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/mess/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/data/mess.json"
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+      "clones": [false],
+      "collections": [
+        "Handheld: Tiger Electronics"
+      ],
+      "!names": [
+        "# Missing artwork",
+        "tgaiden3",
+        "tgargnf",
+        "tmegaman3",
+        "tsimquest",
+        "tsuperman"
+      ]
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {
+        "path": "$HOME/RetroPie/roms/mess/Tiger Electronics",
+        "filters": {
+          "collections": ["Handheld: Tiger Electronics"]
+        }
+      }
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
