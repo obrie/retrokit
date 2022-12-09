@@ -36,6 +36,7 @@ function install_lr-mess-common() {
 function configure_lr-mess-common() {
   local system_name=${1:-mess}
   local mess_id=${2:-mame}
+  local mess_args=$3
 
   local mess_lib=$(dirname "$md_inst")/lr-mess/mess_libretro.so
   local retroarch_bin="$rootdir/emulators/retroarch/bin/retroarch"
@@ -46,8 +47,14 @@ function configure_lr-mess-common() {
   mkRomDir "$system_name"
   ensureSystemretroconfig "$system_name"
 
-  addEmulator 1 "lr-mess-$mess_id" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "$3") %ROM%"
-  addEmulator 0 "lr-mess-$mess_id-autoframeskip" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "-autoframeskip $3") %ROM%"
+  addEmulator 1 "lr-mess-$mess_id" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "$mess_args") %ROM%"
+
+  # Add a few more extra emulators to make integration easier
+  local extra_args=''
+  if [ -n "$mess_args" ]; then
+    extra_args=" $mess_args"
+  fi
+  addEmulator 0 "lr-mess-$mess_id-autoframeskip" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "-autoframeskip$extra_args") %ROM%"
 
   addSystem "$system_name"
 }
