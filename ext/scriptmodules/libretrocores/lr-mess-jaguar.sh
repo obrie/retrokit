@@ -28,5 +28,5 @@ alias build_lr-mess-jaguar="build_lr-mess-common"
 alias install_lr-mess-jaguar="install_lr-mess-common"
 
 function configure_lr-mess-jaguar() {
-  configure_lr-mess-common atarijaguar "-cart"
+  configure_lr-mess-common atarijaguar jaguar "-cart"
 }
