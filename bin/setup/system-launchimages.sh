@@ -20,7 +20,7 @@ configure() {
 
   # Get the name of the platform (not guaranteed to be the system's name)
   local default_platform=$(xmlstarlet select -t -m "*/system[name='$system']" -v 'platform' -n /etc/emulationstation/es_systems.cfg)
-  local platform=$(ini_get '{config_dir}/emulationstation/platforms.cfg' '' "${system}_theme")
+  local platform=$(ini_get '{config_dir}/retropie/platforms.cfg' '' "${system}_theme")
   platform=${platform:-$default_platform}
   platform=${platform//\"/}
 
