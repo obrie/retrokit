@@ -208,7 +208,7 @@ get_core_library_names() {
 
 has_emulator() {
   local emulator=$1
-  local result=$(system_setting "select(.emulators) | (.emulators | keys) + ([.emulators | values[] | .aliases | select(.)] | flatten) | any(. == \"$emulator\")")
+  local result=$(system_setting "select(.emulators) | (.emulators | keys) + ([.emulators | values[] | select(.name) | .name]) + ([.emulators | values[] | .aliases | select(.)] | flatten) | any(. == \"$emulator\")")
   if [ "$result" == 'true' ]; then
     return 0
   else
