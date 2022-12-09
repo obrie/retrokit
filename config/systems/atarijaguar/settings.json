@@ -15,8 +15,9 @@
   },
   "emulators": {
     "lr-mess": {},
-    "lr-mess-jaguar": {
+    "lr-mess-atarijaguar": {
       "build": "source",
+      "name": "lr-mess-jaguar",
       "core_name": "mame",
       "library_name": "MAME"
     },

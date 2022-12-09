@@ -9,7 +9,7 @@
 # at https://raw.githubusercontent.com/RetroPie/RetroPie-Setup/master/LICENSE.md
 #
 
-rp_module_id="lr-mess-jaguar"
+rp_module_id="lr-mess-atarijaguar"
 rp_module_name="Atari Jaguar"
 rp_module_ext=".zip"
 rp_module_desc="MESS emulator ($rp_module_name) - MESS Port for libretro"
@@ -22,11 +22,11 @@ rp_module_licence="GPL2 https://raw.githubusercontent.com/libretro/mame/master/L
 rp_module_section="exp"
 rp_module_flags=""
 
-alias depends_lr-mess-jaguar="depends_lr-mess-common"
-alias sources_lr-mess-jaguar="sources_lr-mess-common"
-alias build_lr-mess-jaguar="build_lr-mess-common"
-alias install_lr-mess-jaguar="install_lr-mess-common"
+alias depends_lr-mess-atarijaguar="depends_lr-mess-common"
+alias sources_lr-mess-atarijaguar="sources_lr-mess-common"
+alias build_lr-mess-atarijaguar="build_lr-mess-common"
+alias install_lr-mess-atarijaguar="install_lr-mess-common"
 
-function configure_lr-mess-jaguar() {
+function configure_lr-mess-atarijaguar() {
   configure_lr-mess-common atarijaguar jaguar "-cart"
 }
