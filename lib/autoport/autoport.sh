@@ -25,7 +25,7 @@ setup() {
   # Define config paths
   default_config_path='/opt/retropie/configs/all/autoport.cfg'
   system_override_path="/opt/retropie/configs/$system/autoport.cfg"
-  emulator_override_path="/opt/retropie/configs/$system/autoport/$emulator.cfg"
+  emulator_override_path="/opt/retropie/configs/$system/autoport/emulators/$emulator.cfg"
   rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
 
   # Make sure we're actually setup for autoconfiguration

@@ -10,7 +10,6 @@ configure() {
   __load_override_files
   __load_lightgun_titles
   __load_trackball_titles
-  __load_emulator_overrides
 
   mkdir -p "$retropie_system_config_dir/autoport"
 
@@ -63,8 +62,8 @@ configure() {
 
   # Remove unused files
   while read -r path; do
-    [ "${installed_files["$path"]}" ] || [ "${emulator_overrides["$path"]}" ] || rm -v "$path"
-  done < <(find "$retropie_system_config_dir/autoport" -name '*.cfg')
+    [ "${installed_files["$path"]}" ] || rm -v "$path"
+  done < <(find "$retropie_system_config_dir/autoport" -maxdepth 1 -name '*.cfg')
 }
 
 # Load autoport rom-specific configuration overrides
@@ -95,21 +94,8 @@ __load_trackball_titles() {
   done < <(each_path '{config_dir}/emulationstation/collections/custom-Trackball.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
-__load_emulator_overrides() {
-  declare -Ag emulator_overrides
-
-  while read -r emulator_name; do
-    emulator_overrides["$retropie_system_config_dir/autoport/$emulator_name.cfg"]=1
-  done < <(system_setting 'select(.emulators) | .emulators | keys[]')
-}
-
 restore() {
-  __load_emulator_overrides
-
-  # Remove autoport configs
-  while read path; do
-    [ "${emulator_overrides["$path"]}" ] || rm -v "$path"
-  done < <(find "$retropie_system_config_dir/autoport" -name '*.cfg')
+  rm -fv "$retropie_system_config_dir/autoport/"*.cfg
 }
 
 setup "${@}"

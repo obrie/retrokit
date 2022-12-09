@@ -19,28 +19,22 @@ __configure_system_config() {
 
 # Emulator configuration overrides
 __configure_emulator_configs() {
-  while read -r emulator_name; do
-    local source_path="{system_config_dir}/autoport/$emulator_name.cfg"
-    local target_path="$retropie_system_config_dir/autoport/$emulator_name.cfg"
+  while read -r emulator_filename; do
+    local source_path="{system_config_dir}/autoport/emulators/$emulator_filename"
+    local target_path="$retropie_system_config_dir/autoport/emulators/$emulator_filename"
 
     if any_path_exists "$source_path"; then
       ini_merge "$source_path" "$target_path" backup=false overwrite=true
     else
       rm -fv "$target_path"
     fi
-  done < <(__list_emulator_names)
-}
-
-__list_emulator_names() {
-  system_setting 'select(.emulators) | .emulators | keys[]'
+  done < <(each_path '{system_config_dir}/autoport/emulators' find '{}' -name '*.cfg' -printf '%f\n' | sort | uniq)
 }
 
 restore() {
-  rm -fv "$retropie_system_config_dir/autoport.cfg"
-
-  while read -r emulator_name; do
-    rm -fv "$retropie_system_config_dir/autoport/$emulator_name.cfg"
-  done < <(__list_emulator_names)
+  rm -rfv \
+    "$retropie_system_config_dir/autoport.cfg" \
+    "$retropie_system_config_dir/autoport/emulators"
 
   # Check if the directory is now empty
   if [ -d "$retropie_system_config_dir/autoport" ] && [ -z "$(ls -A "$retropie_system_config_dir/autoport")" ]; then
