@@ -20,7 +20,6 @@ mess_cmd+=( \""$rom_path"\" )
 # Define path based on where the ROM exists.  We put it in the same folder
 # using the same basename so that configurations get persisted correctly
 # between launches
-rom_dir=$(dirname "$rom_path")
 rom_filename=$(basename "$rom_path")
 rom_name=${rom_filename%.*}
 cmd_path="$rom_dir/$rom_name.cmd"
