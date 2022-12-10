@@ -15,9 +15,10 @@ class FilterModifier(Enum):
 
 # Represents a collection of machine filters
 class FilterSet:
-    def __init__(self) -> None:
+    def __init__(self, default_on_empty: bool = True) -> None:
         self.filters = []
         self.overrides = []
+        self.default_on_empty = default_on_empty
 
     # Builds a FilterSet from the given json data
     @classmethod
@@ -73,6 +74,9 @@ class FilterSet:
 
     # Whether the given machine is allowed by the filter set
     def allow(self, machine: Machine) -> Optional[FilterReason]:
+        if not self.overrides and not self.filters:
+            return self.default_on_empty
+
         allowed_by_override = False
         for filter in self.overrides:
             if filter.allow(machine):
