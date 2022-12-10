@@ -19,7 +19,12 @@
       "build": "source",
       "name": "lr-mess-jaguar",
       "core_name": "mame",
-      "library_name": "MAME"
+      "library_name": "MAME",
+      "gamestate": [
+        "$HOME/RetroPie/roms/atarijaguar/mame/diff/{rom}.df",
+        "$HOME/RetroPie/roms/atarijaguar/mame/hi/{rom}.hi",
+        "$HOME/RetroPie/roms/atarijaguar/mame/nvram/{rom}"
+      ]
     },
     "lr-virtualjaguar": {
       "default": true,

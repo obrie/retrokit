@@ -12,8 +12,6 @@
       "core_name": "mame",
       "library_name": "MAME",
       "gamestate": [
-        "$HOME/RetroPie/roms/gameandwatch/mame/cfg/default.cfg",
-        "$HOME/RetroPie/roms/gameandwatch/mame/cfg/{rom}.cfg",
         "$HOME/RetroPie/roms/gameandwatch/mame/diff/{rom}.df",
         "$HOME/RetroPie/roms/gameandwatch/mame/hi/{rom}.hi",
         "$HOME/RetroPie/roms/gameandwatch/mame/nvram/{rom}"
