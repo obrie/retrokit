@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-mess'
 setup_module_desc='System-specific MESS initialization / configurations'
 
-system_mess_dir="$retropie_system_config_dir/mess"
+system_mame_dir="$retropie_system_config_dir/mame"
 
 configure() {
   if has_emulator 'lr-mess'; then
@@ -17,27 +17,23 @@ configure() {
 
 # Global configuration overrides
 __configure_cfg_files() {
-  mkdir -pv "$system_mess_dir/cfg"
+  mkdir -pv "$system_mame_dir/cfg"
 
   # Inputs/configs (global, system-specific)
-  local config_dirname
-  for config_dirname in 'config_dir' 'system_config_dir'; do
-    each_path "{$config_dirname}/mess/cfg" find '{}' -name '*.cfg' -exec cp -v -t "$system_mess_dir/cfg/" '{}' +
-  done
+  each_path "{config_dir}/mess/cfg" find '{}' -name '*.cfg' -exec cp -v -t "$system_mame_dir/cfg/" '{}' +
+  each_path "{system_config_dir}/mame/cfg" find '{}' -name '*.cfg' -exec cp -v -t "$system_mame_dir/cfg/" '{}' +
 }
 
 __configure_ini_files() {
-  mkdir -pv "$system_mess_dir/ini"
+  mkdir -pv "$system_mame_dir/ini"
 
   # MESS init (global, system-specific)
-  local config_dirname
-  for config_dirname in 'config_dir' 'system_config_dir'; do
-    each_path "{$config_dirname}/mess/ini" find '{}' -name '*.ini' -exec cp -v -t "$system_mess_dir/ini/" '{}' +
-  done
+  each_path "{config_dir}/mess/ini" find '{}' -name '*.ini' -exec cp -v -t "$system_mame_dir/ini/" '{}' +
+  each_path "{system_config_dir}/mame/ini" find '{}' -name '*.ini' -exec cp -v -t "$system_mame_dir/ini/" '{}' +
 }
 
 restore() {
-  rm -rfv "$system_mess_dir"
+  rm -rfv "$system_mame_dir"
 }
 
 setup "${@}"

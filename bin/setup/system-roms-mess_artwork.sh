@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-mess_artwork'
 setup_module_desc='Download artwork for MAME-based system'
 
-system_artwork_dir="$retropie_system_config_dir/mess/artwork"
+system_artwork_dir="$retropie_system_config_dir/mame/artwork"
 
 build() {
   if ! has_emulator 'lr-mess' || ! any_path_exists '{system_config_dir}/artwork.tsv'; then
@@ -47,7 +47,7 @@ vacuum() {
 }
 
 remove() {
-  rm -rfv "$retropie_system_config_dir/mess/artwork/"*
+  rm -rfv "$system_artwork_dir/"*
 }
 
 setup "${@}"
