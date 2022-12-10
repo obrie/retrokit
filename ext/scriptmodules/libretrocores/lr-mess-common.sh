@@ -49,12 +49,5 @@ function configure_lr-mess-common() {
 
   addEmulator 1 "lr-mess-$mess_id" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "$mess_args") %ROM%"
 
-  # Add a few more extra emulators to make integration easier
-  local extra_args=''
-  if [ -n "$mess_args" ]; then
-    extra_args=" $mess_args"
-  fi
-  addEmulator 0 "lr-mess-$mess_id-autoframeskip" "$system_name" "$script_runner $retroarch_bin $mess_lib $retroarch_config $mess_id $biosdir $(printf '%q' "-autoframeskip$extra_args") %ROM%"
-
   addSystem "$system_name"
 }
