@@ -121,7 +121,7 @@ __scrape() {
   local IFS=$'\n'
   local extra_args=($(system_setting '.scraper.args[]?'))
 
-  echo "Scaping $system (${*})"
+  echo "Scraping $system (${*})"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@}"
 }
 
