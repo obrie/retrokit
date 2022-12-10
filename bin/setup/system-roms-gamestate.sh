@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-gamestate'
 setup_module_desc='Manage game state'
 
-rom_dirs=($(system_setting 'select(.roms) | .roms.dirs[] | .path'))
+readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
 # Attempts to find game state that we aren't needed anymore
 vacuum() {

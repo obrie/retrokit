@@ -7,7 +7,7 @@ setup_module_id='system-roms-collections'
 setup_module_desc='Creates EmulationStation custom collections'
 
 target_collections_dir="$HOME/.emulationstation/collections"
-rom_dirs=($(system_setting 'select(.roms) | .roms.dirs[] | .path'))
+readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
 declare -A installed_collections
 
