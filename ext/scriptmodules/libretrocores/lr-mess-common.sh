@@ -14,7 +14,7 @@ rp_module_name="MESS Common"
 rp_module_desc="MESS Common"
 
 function depends_lr-mess-common() {
-  local _mess=$(dirname "$md_inst")/lr-mess/mess_libretro.so
+  local _mess=$(dirname "$md_inst")/lr-mess/mamemess_libretro.so
   if [[ ! -f "$_mess" ]]; then
     printMsgs dialog "cannot find '$_mess' !\n\nplease install 'lr-mess' package."
     exit 1
@@ -38,7 +38,7 @@ function configure_lr-mess-common() {
   local mess_id=${2:-mame}
   local mess_args=$3
 
-  local mess_lib=$(dirname "$md_inst")/lr-mess/mess_libretro.so
+  local mess_lib=$(dirname "$md_inst")/lr-mess/mamemess_libretro.so
   local retroarch_bin="$rootdir/emulators/retroarch/bin/retroarch"
   local retroarch_config="$configdir/$system_name/retroarch.cfg"
   local current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
