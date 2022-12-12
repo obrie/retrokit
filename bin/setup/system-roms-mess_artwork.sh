@@ -16,9 +16,11 @@ build() {
   mkdir -p "$system_artwork_dir"
 
   declare -A artwork_urls
-  while IFS=$'\t' read -r name url; do
-    artwork_urls[$name]=$url
-  done < <(each_path '{system_config_dir}/artwork.tsv' cat '{}')
+  for artwork_path in '{config_dir}/mess/artwork.tsv' '{system_config_dir}/artwork.tsv'; do
+    while IFS=$'\t' read -r name url; do
+      artwork_urls[$name]=$url
+    done < <(each_path "$artwork_path" cat '{}')
+  done
 
   while read -r name; do
     local artwork_url=${artwork_urls[$name]}

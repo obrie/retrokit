@@ -39,10 +39,10 @@
   ],
   "metadata": {
     "manual": {
-      "source": "file://$HOME/retrokit/config/systems/gameandwatch/manuals.tsv"
+      "source": "file://$HOME/retrokit/config/systems/mess/manuals.tsv"
     },
     "scraper": {
-      "source": "file://$HOME/retrokit/data/gameandwatch.json"
+      "source": "file://$HOME/retrokit/data/mess.json"
     }
   },
   "roms": {
