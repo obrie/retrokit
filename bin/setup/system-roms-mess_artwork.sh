@@ -9,7 +9,7 @@ setup_module_desc='Download artwork for MAME-based system'
 system_artwork_dir="$retropie_system_config_dir/mame/artwork"
 
 build() {
-  if ! has_emulator 'lr-mess' || ! any_path_exists '{system_config_dir}/artwork.tsv'; then
+  if ! has_emulator 'lr-mess'; then
     return
   fi
 
@@ -33,7 +33,7 @@ build() {
 }
 
 vacuum() {
-  if ! has_emulator 'lr-mess' || ! any_path_exists '{system_config_dir}/artwork.tsv'; then
+  if ! has_emulator 'lr-mess'; then
     return
   fi
 
