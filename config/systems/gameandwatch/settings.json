@@ -1,6 +1,7 @@
 {
   "system": "gameandwatch",
   "scraper": {
+    "sources": ["arcadedb", "screenscraper"],
     "import_dat_titles": false
   },
   "emulators": {

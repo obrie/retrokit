@@ -4,6 +4,7 @@
     "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
   },
   "scraper": {
+    "sources": ["arcadedb", "screenscraper"],
     "import_dat_titles": false,
     "args": [
       "-p", "mame-libretro",
