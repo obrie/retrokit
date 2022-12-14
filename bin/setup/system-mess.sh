@@ -10,6 +10,8 @@ system_mame_dir="$retropie_system_config_dir/mame"
 
 configure() {
   if has_emulator 'lr-mess'; then
+    restore
+  
     __configure_cfg_files
     __configure_ini_files
   fi
@@ -33,7 +35,9 @@ __configure_ini_files() {
 }
 
 restore() {
-  rm -rfv "$system_mame_dir"
+  rm -rfv \
+    "$system_mame_dir/cfg" \
+    "$system_mame_dir/ini"
 }
 
 setup "${@}"
