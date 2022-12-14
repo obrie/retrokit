@@ -19,7 +19,7 @@ build() {
 
   # Track a version number for the splashscreen in case the source changes
   local version_file="$splashscreens_dir/splash.version"
-  local version=$(echo "$media_url" | md5sum)
+  local version=$(echo "$media_url" | md5sum | cut -d' ' -f 1)
 
   mkdir -pv "$splashscreens_dir"
 
