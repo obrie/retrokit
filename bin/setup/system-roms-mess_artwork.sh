@@ -58,17 +58,20 @@ configure() {
     local view_xml=$(__build_background_view "$layout_path")
     if [ -n "$view_xml" ]; then
       local view_name=$(echo "$view_xml" | xmlstarlet sel -t -v '/view/@name')
+      echo "[$name] Prioritizing artwork view: $view_name"
 
       # Get existing children (removing any with the same view name)
-      local existing_xml=$(xmlstarlet ed -d "/*/view[@name='$view_name']" "$layout_path" | xmlstarlet sel -P -t -c '/mamelayout/*')
+      local existing_xml=$(xmlstarlet ed -P -d "/*/view[@name='$view_name']" "$layout_path" | xmlstarlet sel -I -t -c '/mamelayout/*')
 
       # Merge background view with existing children
       local tmp_layout_path="$(mktemp -p "$tmp_ephemeral_dir")"
       cat "$layout_path" |\
         xmlstarlet ed -d '/mamelayout/*' -d '//comment()' |\
-        xmlstarlet ed -s '/mamelayout' -t text -n '' -v "$view_xml" -s '/mamelayout' -t text -n '' -v "$existing_xml" |\
+        xmlstarlet ed -s '/mamelayout' -t text -n '' -v $'\n'"$view_xml"$'\n' -s '/mamelayout' -t text -n '' -v "$existing_xml" |\
         xmlstarlet unescape > "$tmp_layout_path"
       mv "$tmp_layout_path" "$layout_path"
+    else
+      rm -rf "$system_artwork_dir/$name"
     fi
   done < <(romkit_cache_list | jq -r '.name')
 }
@@ -118,7 +121,7 @@ __build_background_view() {
 }
 
 restore() {
-  find "$system_artwork_dir" -mindepth 1 -type d -exec rm -rf '{}' +
+  find "$system_artwork_dir" -mindepth 1 -type d -exec rm -rfv '{}' +
 }
 
 vacuum() {
