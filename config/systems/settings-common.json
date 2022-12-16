@@ -26,6 +26,11 @@
       "{rom_dir}/{rom}.state"
     ]
   },
+  "mess": {
+    "artwork": {
+      "background_only": true
+    }
+  },
   "roms": {
     "filters": {
       "!keywords": [
