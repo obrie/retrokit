@@ -71,6 +71,7 @@ configure() {
         xmlstarlet unescape > "$tmp_layout_path"
       mv "$tmp_layout_path" "$layout_path"
     else
+      echo "[$name] Could not find background artwork view"
       rm -rf "$system_artwork_dir/$name"
     fi
   done < <(romkit_cache_list | jq -r '.name')
@@ -104,20 +105,17 @@ __build_background_view() {
   done
 
   # Try to find the most basic Unit view and remove the Unit data from it
-  if [ -n "$xml" ]; then
-    # Replace the view name so we don't override the reference Unit view
-    for view_name in "${unit_views[@]}"; do
-      xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_path")
-      if [ -n "$xml" ]; then
-        echo "$xml" | xmlstarlet ed \
-          -d '/view/*[@element="Unit"]' \
-          -u '/*/*/bounds/@x' -v 0 \
-          -u '/*/*/bounds/@y' -v 0 \
-          -u '/view/@name' -v 'Background Only'
-        return
-      fi
-    done
-  fi
+  for view_name in "${unit_views[@]}"; do
+    xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_path")
+    if [ -n "$xml" ]; then
+      echo "$xml" | xmlstarlet ed -O \
+        -d '/view/*[@element="Unit"]' \
+        -u '/*/*/bounds/@x' -v 0 \
+        -u '/*/*/bounds/@y' -v 0 \
+        -u '/view/@name' -v 'Background Only'
+      return
+    fi
+  done
 }
 
 restore() {
