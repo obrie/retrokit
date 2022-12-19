@@ -119,6 +119,10 @@ __build_background_view() {
 }
 
 restore() {
+  if [ ! -d "$system_artwork_dir" ]; then
+    return
+  fi
+
   find "$system_artwork_dir" -mindepth 1 -type d -exec rm -rfv '{}' +
 }
 
