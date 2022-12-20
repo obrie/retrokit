@@ -1,2 +1,755 @@
 {
+    "5200 Menu": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "A.E.": {
+        "genres": [
+            "Shooter",
+            "Shooter / Vertical"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Activision Decathlon, The": {
+        "genres": [
+            "Sports"
+        ],
+        "players": 4,
+        "rating": 0.7
+    },
+    "Asteroids": {
+        "genres": [
+            "Shooter"
+        ],
+        "players": 4,
+        "rating": null
+    },
+    "Astro Chase": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.35
+    },
+    "Astrogrover": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Atari PAM - Pete's Test": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Atari PAM Diagnostics": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Atari PAM System Test": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Ballblazer": {
+        "genres": [
+            "Sports",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Barroom Baseball": {
+        "genres": [
+            "Sports / Baseball",
+            "Sports"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Battlezone": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Beamrider": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 4,
+        "rating": 0.8
+    },
+    "BerZerk": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Black Belt": {
+        "genres": [
+            "Fight"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Blaster": {
+        "genres": [
+            "Shooter"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Blue Print": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.85
+    },
+    "Boogie": {
+        "genres": [],
+        "players": 1,
+        "rating": null
+    },
+    "Bounty Bob Strikes Back!": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Buck Rogers - Planet of Zoom": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Carol Shaw's River Raid": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Castle Blast": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Castle Crisis": {
+        "genres": [
+            "Action"
+        ],
+        "players": 4,
+        "rating": null
+    },
+    "Centipede": {
+        "genres": [
+            "Shooter",
+            "Shooter / Vehicle",
+            "1st person"
+        ],
+        "players": 2,
+        "rating": 0.85
+    },
+    "Choplifter!": {
+        "genres": [
+            "Shooter",
+            "Shooter / Plane",
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal",
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.45
+    },
+    "Congo Bongo": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Countermeasure": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.65
+    },
+    "David Crane's Pitfall II - Lost Caverns": {
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "players": 1,
+        "rating": 0.8
+    },
+    "Defender": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Dig Dug": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Dreadnaught Factor, The": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.7
+    },
+    "Final Legacy": {
+        "genres": [
+            "Simulation"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Frisky Tom": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Frogger": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Frogger II - Threeedeep!": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.85
+    },
+    "Galaxian": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Gorf": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Gremlins": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.9
+    },
+    "Gyruss": {
+        "genres": [
+            "Shoot'em Up",
+            "Shooter",
+            "Shooter / Run and Gun"
+        ],
+        "players": 2,
+        "rating": 0.45
+    },
+    "H.E.R.O.": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.8
+    },
+    "James Bond 007": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.3
+    },
+    "Joust": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.85
+    },
+    "Jr. Pac-Man": {
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
+        "players": null,
+        "rating": null
+    },
+    "Jungle Hunt": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "K-Razy Shoot-Out": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.6
+    },
+    "Kaboom!": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.55
+    },
+    "Kangaroo": {
+        "genres": [
+            "Platform",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Keystone Kapers": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.85
+    },
+    "Koffi - Yellow Kopter": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Last Starfighter, The": {
+        "genres": [
+            "Shooter",
+            "Simulation"
+        ],
+        "players": null,
+        "rating": null
+    },
+    "Looney Tunes Hotel": {
+        "genres": [
+            "Platform"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Mario Bros.": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Meebzork": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "MegaMania": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Meteorites": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.5
+    },
+    "Microgammon SB": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Millipede": {
+        "genres": [
+            "Shooter",
+            "Shoot'em Up"
+        ],
+        "players": null,
+        "rating": null
+    },
+    "Miner 2049er Starring Bounty Bob": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 1.0
+    },
+    "Miniature Golf": {
+        "genres": [
+            "Sports",
+            "Sports / Golf"
+        ],
+        "players": null,
+        "rating": null
+    },
+    "Missile Command": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.75
+    },
+    "Montezuma's Revenge - Featuring Panama Joe": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.6
+    },
+    "Moon Patrol": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.9
+    },
+    "Mountain King": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.7
+    },
+    "Mr. Do!'s Castle": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.65
+    },
+    "Ms. Pac-Man": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "Pac-Man": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Pengo": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.85
+    },
+    "Pitfall!": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.75
+    },
+    "Pole Position": {
+        "genres": [
+            "Race",
+            "Driving"
+        ],
+        "players": 1,
+        "rating": 0.75
+    },
+    "Popeye": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Q-bert": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "QIX": {
+        "genres": [
+            "Puzzle-Game"
+        ],
+        "players": 2,
+        "rating": 0.75
+    },
+    "Quest for Quintana Roo": {
+        "genres": [
+            "Action",
+            "Adventure"
+        ],
+        "players": 1,
+        "rating": 0.5
+    },
+    "RealSports Baseball": {
+        "genres": [
+            "Sports",
+            "Sports / Baseball",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.7
+    },
+    "RealSports Basketball": {
+        "genres": [
+            "Sports",
+            "Sports / Basketball"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "RealSports Football": {
+        "genres": [
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.3
+    },
+    "RealSports Soccer": {
+        "genres": [
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.5
+    },
+    "RealSports Tennis": {
+        "genres": [
+            "Sports"
+        ],
+        "players": 2,
+        "rating": 0.4
+    },
+    "Rescue on Fractalus!": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.55
+    },
+    "Road Runner": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Robotron 2084": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Space Dungeon": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.75
+    },
+    "Space Invaders": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Vertical",
+            "Shooter",
+            "Shooter / Space Invaders Like",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.8
+    },
+    "Space Shuttle - A Journey Into Space": {
+        "genres": [
+            "Simulation"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Spitfire": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Sport Goofy": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Star Raiders": {
+        "genres": [
+            "Action",
+            "Strategy"
+        ],
+        "players": 1,
+        "rating": 0.7
+    },
+    "Star Trek - Strategic Operations Simulator": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": null
+    },
+    "Star Wars - Return of the Jedi - Death Star Battle": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.3
+    },
+    "Star Wars - The Arcade Game": {
+        "genres": [
+            "Action"
+        ],
+        "players": 1,
+        "rating": 0.4
+    },
+    "Stargate": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal"
+        ],
+        "players": null,
+        "rating": null
+    },
+    "Super Breakout": {
+        "genres": [
+            "Action / Breakout games",
+            "Action"
+        ],
+        "players": 4,
+        "rating": 0.55
+    },
+    "Super Cobra": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Horizontal",
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.5
+    },
+    "Super Pac-Man": {
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Super Pacman": {
+        "genres": [
+            "Action",
+            "Action / Labyrinth"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Tempest": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Track and Field": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Vanguard": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": 0.85
+    },
+    "Wizard of Wor": {
+        "genres": [
+            "Action / Labyrinth",
+            "Action"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Xari Arena": {
+        "genres": [
+            "Action"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Xevious": {
+        "genres": [
+            "Shooter"
+        ],
+        "players": 2,
+        "rating": null
+    },
+    "Yellow Submarine": {
+        "genres": [],
+        "players": null,
+        "rating": null
+    },
+    "Zaxxon": {
+        "genres": [
+            "Shoot'em Up",
+            "Shoot'em up / Diagonal"
+        ],
+        "players": 2,
+        "rating": 0.6
+    },
+    "Zenji": {
+        "genres": [
+            "Action",
+            "Strategy"
+        ],
+        "players": 2,
+        "rating": 0.9
+    },
+    "Zone Ranger": {
+        "genres": [
+            "Shoot'em Up",
+            "Action"
+        ],
+        "players": 2,
+        "rating": null
+    }
 }
