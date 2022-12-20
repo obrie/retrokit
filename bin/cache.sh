@@ -4,10 +4,6 @@
 # Cache management
 ##############
 
-# Ignore any profiles previously set since this is supposed to be used without
-# for general codebase management.
-export PROFILES=none
-
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/common.sh"
 
