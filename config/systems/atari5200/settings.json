@@ -1,0 +1,77 @@
+{
+  "system": "atari5200",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Atari5200",
+        "path": "retroarch/overlay/GameBezels/Atari5200"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-Atari5200",
+        "path": "retroarch/overlay/GameBezels/Atari5200",
+        "default": "retroarch/overlay/Atari-5200.png"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-atari800": {
+      "default": true,
+      "core_name": "atari800",
+      "library_name": "Atari800"
+    }
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/Atari - 5200",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "5200.rom": "{url}/5200.rom"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Atari - 5200"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Atari - 5200 (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/atari5200/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/atari5200/.nointro/.xrefs/{machine_id}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/atari5200/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/data/atari5200.json"
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/atari5200", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

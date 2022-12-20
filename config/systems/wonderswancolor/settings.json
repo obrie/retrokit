@@ -1,0 +1,73 @@
+{
+  "system": "ngpc",
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-WonderSwanColor",
+        "path": "retroarch/overlay/GameBezels/WonderSwanColor"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-WonderSwanColor",
+        "path": "retroarch/overlay/GameBezels/WonderSwanColor",
+        "default": "retroarch/overlay/Bandai-WonderSwan—Color-Horizontal.png",
+        "vertical": "retroarch/overlay/Bandai-WonderSwan—Color-Vertical.png"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-beetle-wswan": {
+      "default": true,
+      "core_name": "wswan",
+      "library_name": "Beetle WonderSwan",
+      "gamestate": [
+      ]
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/Bandai - WonderSwan Color"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/Bandai - WonderSwan Color (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/wonderswancolor/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/wonderswancolor/.nointro/.xrefs/{machine_id}.zip"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "metadata": {
+    "manual": {
+      "source": "file://$HOME/retrokit/config/systems/wonderswancolor/manuals.tsv"
+    },
+    "scraper": {
+      "source": "file://$HOME/retrokit/data/wonderswancolor.json"
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/wonderswancolor", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

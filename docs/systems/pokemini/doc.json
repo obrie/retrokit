@@ -1,0 +1,23 @@
+{
+  "system": {
+    "name": "pokemini",
+    "description": "The Pokemon Mini is a handheld game console that was released by Nintendo in 2001."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": false,
+    "cheats": false,
+    "multi controllers": false
+  },
+  "images": {
+    "controller": "controller.jpg"
+  },
+  "controls": {
+    "retropad": {
+      "select": "Power",
+      "l1": "Shake",
+      "r1": "C"
+    }
+  }
+}

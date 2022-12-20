@@ -1,0 +1,29 @@
+{
+  "system": {
+    "name": "wonderswan",
+    "description": "WonderSwan is a handheld gaming device that was released by Bandai solely in Japan in 1998."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false,
+    "multi controllers": false
+  },
+  "images": {
+    "controller": "controller.jpg"
+  },
+  "controls": {
+    "retropad": {
+      "select": "Rotate Screen",
+      "dpad_up": "X Cursor Up",
+      "dpad_down": "X Cursor Down",
+      "dpad_left": "X Cursor Left",
+      "dpad_right": "X Cursor Right",
+      "l1": "Y Cursor Left",
+      "r1": "Y Cursor Right",
+      "l2": "Y Cursor Down",
+      "r2": "Y Cursor Up"
+    }
+  }
+}
