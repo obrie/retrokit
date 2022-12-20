@@ -20,6 +20,11 @@
       "library_name": "Atari800"
     }
   },
+  "cheats": {
+    "names": [
+      "Atari - 5200"
+    ]
+  },
   "bios": {
     "url": "$BIOS_URL/libretro/Atari - 5200",
     "dir": "$HOME/RetroPie/BIOS",
