@@ -1096,7 +1096,7 @@ The approximate capacity required per system is broken down below:
 | 3do             | 40GB     |
 | arcade          | 13GB     |
 | atari2600       | 6MB      |
-| atari5200       | ?MB      |
+| atari5200       | 2MB      |
 | atari7800       | 3MB      |
 | atarijaguar     | 125MB    |
 | atarilynx       | 11MB     |
@@ -1117,11 +1117,11 @@ The approximate capacity required per system is broken down below:
 | n64             | 3.5GB    |
 | nds             | 36GB     |
 | nes             | 72MB     |
-| ngp             | ?MB      |
+| ngp             | 3MB      |
 | ngpc            | 17MB     |
 | pc              | 13GB     |
 | pcengine        | 11GB     |
-| pokemini        | ?MB      |
+| pokemini        | 1MB      |
 | ports           | 114MB    |
 | psp             | 230GB    |
 | psx             | 266GB    |
@@ -1132,8 +1132,8 @@ The approximate capacity required per system is broken down below:
 | snes            | 633MB    |
 | vectrex         | 280KB    |
 | videopac        | 748KB    |
-| wonderswan      | ?MB      |
-| wonderswancolor | ?MB      |
+| wonderswan      | 30MB     |
+| wonderswancolor | 25MB     |
 
 Note that this does *not* include other data such as BIOS files / scraped media.
 It also only includes a selection of PC games.
