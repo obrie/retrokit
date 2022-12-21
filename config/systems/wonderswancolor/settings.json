@@ -51,6 +51,9 @@
     "manual": {
       "source": "file://$HOME/retrokit/config/systems/wonderswancolor/manuals.tsv"
     },
+    "collections": {
+      "source": "file://$HOME/retrokit/config/systems/wonderswancolor/collections.json"
+    },
     "scraper": {
       "source": "file://$HOME/retrokit/data/wonderswancolor.json"
     }
