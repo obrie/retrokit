@@ -307,6 +307,7 @@ __convert_to_pdf() {
     elif [[ "$extension" =~ ^(7z|cb7)$ ]]; then
       7z e -y -o"$extract_path/" "$source_path" >/dev/null
     else
+      mkdir "$extract_path"
       unrar -x --extract-no-paths "$source_path" "$extract_path/" >/dev/null
     fi
 
