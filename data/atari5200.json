@@ -1,755 +1,1388 @@
-{
-    "5200 Menu": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "A.E.": {
-        "genres": [
-            "Shooter",
-            "Shooter / Vertical"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Activision Decathlon, The": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 4,
-        "rating": 0.7
-    },
-    "Asteroids": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 4,
-        "rating": null
-    },
-    "Astro Chase": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.35
-    },
-    "Astrogrover": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Atari PAM - Pete's Test": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Atari PAM Diagnostics": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Atari PAM System Test": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Ballblazer": {
-        "genres": [
-            "Sports",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Barroom Baseball": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Battlezone": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Beamrider": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
-        ],
-        "players": 4,
-        "rating": 0.8
-    },
-    "BerZerk": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Black Belt": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Blaster": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Blue Print": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Boogie": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Bounty Bob Strikes Back!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Buck Rogers - Planet of Zoom": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Carol Shaw's River Raid": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Castle Blast": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Castle Crisis": {
-        "genres": [
-            "Action"
-        ],
-        "players": 4,
-        "rating": null
-    },
-    "Centipede": {
-        "genres": [
-            "Shooter",
-            "Shooter / Vehicle",
-            "1st person"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Choplifter!": {
-        "genres": [
-            "Shooter",
-            "Shooter / Plane",
-            "Shoot'em Up",
-            "Shoot'em up / Horizontal",
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Congo Bongo": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Countermeasure": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "David Crane's Pitfall II - Lost Caverns": {
-        "genres": [
-            "Action",
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Defender": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Dig Dug": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Dreadnaught Factor, The": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Final Legacy": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Frisky Tom": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Frogger": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Frogger II - Threeedeep!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Galaxian": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Gorf": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Gremlins": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Gyruss": {
-        "genres": [
-            "Shoot'em Up",
-            "Shooter",
-            "Shooter / Run and Gun"
-        ],
-        "players": 2,
-        "rating": 0.45
-    },
-    "H.E.R.O.": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "James Bond 007": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Horizontal",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "Joust": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Jr. Pac-Man": {
-        "genres": [
-            "Action",
-            "Action / Labyrinth"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Jungle Hunt": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "K-Razy Shoot-Out": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Kaboom!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "Kangaroo": {
-        "genres": [
-            "Platform",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Keystone Kapers": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Koffi - Yellow Kopter": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Last Starfighter, The": {
-        "genres": [
-            "Shooter",
-            "Simulation"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Looney Tunes Hotel": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Mario Bros.": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Meebzork": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "MegaMania": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Meteorites": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Microgammon SB": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Millipede": {
-        "genres": [
-            "Shooter",
-            "Shoot'em Up"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Miner 2049er Starring Bounty Bob": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 1.0
-    },
-    "Miniature Golf": {
-        "genres": [
-            "Sports",
-            "Sports / Golf"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Missile Command": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Montezuma's Revenge - Featuring Panama Joe": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Moon Patrol": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Mountain King": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Mr. Do!'s Castle": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Ms. Pac-Man": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Pac-Man": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Pengo": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Pitfall!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Pole Position": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Popeye": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Q-bert": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "QIX": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Quest for Quintana Roo": {
-        "genres": [
-            "Action",
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "RealSports Baseball": {
-        "genres": [
-            "Sports",
-            "Sports / Baseball",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "RealSports Basketball": {
-        "genres": [
-            "Sports",
-            "Sports / Basketball"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "RealSports Football": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "RealSports Soccer": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "RealSports Tennis": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Rescue on Fractalus!": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Road Runner": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Robotron 2084": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Space Dungeon": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Space Invaders": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Vertical",
-            "Shooter",
-            "Shooter / Space Invaders Like",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Space Shuttle - A Journey Into Space": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Spitfire": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Sport Goofy": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Star Raiders": {
-        "genres": [
-            "Action",
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Star Trek - Strategic Operations Simulator": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Star Wars - Return of the Jedi - Death Star Battle": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "Star Wars - The Arcade Game": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.4
-    },
-    "Stargate": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Horizontal"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Super Breakout": {
-        "genres": [
-            "Action / Breakout games",
-            "Action"
-        ],
-        "players": 4,
-        "rating": 0.55
-    },
-    "Super Cobra": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Horizontal",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Super Pac-Man": {
-        "genres": [
-            "Action",
-            "Action / Labyrinth"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Super Pacman": {
-        "genres": [
-            "Action",
-            "Action / Labyrinth"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tempest": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Track and Field": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Vanguard": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Wizard of Wor": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Xari Arena": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Xevious": {
-        "genres": [
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Yellow Submarine": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Zaxxon": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Diagonal"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Zenji": {
-        "genres": [
-            "Action",
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.9
-    },
-    "Zone Ranger": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    }
-}
+[
+  {
+    "name": "5200 Menu"
+  },
+  {
+    "name": "A.E.",
+    "players": 1,
+    "genres": [
+      "Shooter",
+      "Shooter / Vertical"
+    ]
+  },
+  {
+    "name": "Activision Decathlon, The",
+    "players": 4,
+    "rating": 0.7,
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Activision_Decathlon_The_1983_Activision/Activision_Decathlon_The_1983_Activision.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Asteroids",
+    "players": 4,
+    "genres": [
+      "Shooter"
+    ]
+  },
+  {
+    "name": "Astro Chase",
+    "players": 1,
+    "rating": 0.35,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Astro_Chase_1983_Parker_Brothers/Astro_Chase_1983_Parker_Brothers.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Astrogrover"
+  },
+  {
+    "name": "Atari PAM - Pete's Test"
+  },
+  {
+    "name": "Atari PAM Diagnostics"
+  },
+  {
+    "name": "Atari PAM System Test"
+  },
+  {
+    "name": "Ballblazer",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ballblazer_1986_Atari_Lucasfilm/Ballblazer_1986_Atari_Lucasfilm.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Barroom Baseball",
+    "players": 2,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Battlezone",
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Beamrider",
+    "players": 4,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Beamrider_1984_U/Beamrider_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "BerZerk",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Berzerk_1983_Atari/Berzerk_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Black Belt",
+    "players": 1,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "Blaster",
+    "players": 1,
+    "genres": [
+      "Shooter"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/compress/blaster-page-8/formats=JPEG&file=/blaster-page-8.zip"
+      }
+    ]
+  },
+  {
+    "name": "Blue Print",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Blue_Print_1983_CBS_Electronics/Blue_Print_1983_CBS_Electronics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Boogie",
+    "players": 1
+  },
+  {
+    "name": "Bounty Bob Strikes Back!",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Bounty_Bob_Strikes_Back_1984_Big_Five_Software/Bounty_Bob_Strikes_Back_1984_Big_Five_Software.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Buck Rogers - Planet of Zoom",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Buck_Rogers_Planet_of_Zoom_1983_Sega/Buck_Rogers_Planet_of_Zoom_1983_Sega.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Carol Shaw's River Raid",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/River_Raid_1983_Activision/River_Raid_1983_Activision.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Castle Blast",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Castle_Blast_2002_U/Castle_Blast_2002_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Castle Crisis",
+    "players": 4,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Centipede",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "1st person",
+      "Shooter",
+      "Shooter / Vehicle"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Centipede_1982_U/Centipede_1982_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Choplifter!",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal",
+      "Shooter",
+      "Shooter / Plane"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Choplifter_1984_U/Choplifter_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Congo Bongo",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Congo_Bongo_1983_Sega/Congo_Bongo_1983_Sega.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Countermeasure",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Countermeasure_1982_Atari/Countermeasure_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "David Crane's Pitfall II - Lost Caverns",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Pitfall_II_The_Lost_Caverns_1984_U/Pitfall_II_The_Lost_Caverns_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Defender",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Defender_1982_Atari/Defender_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Dig Dug",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Dig_Dug_1983_U/Dig_Dug_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Dreadnaught Factor, The",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Dreadnaught_Factor_The_1983_U/Dreadnaught_Factor_The_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Final Legacy",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Frisky Tom",
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Frogger",
+    "players": 2,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Frogger_1983_U/Frogger_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Frogger II - Threeedeep!",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Frogger_2_Threedeep_1984_U/Frogger_2_Threedeep_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Galaxian",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Galaxian_1982_Atari/Galaxian_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gorf",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Gorf_1983_CBS_Electronics/Gorf_1983_CBS_Electronics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gremlins",
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Gremlins_1986_Atari/Gremlins_1986_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gyruss",
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Shoot'em Up",
+      "Shooter",
+      "Shooter / Run and Gun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Gyruss_1984_U/Gyruss_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "H.E.R.O.",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/H.E.R.O._1984_U/H.E.R.O._1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "James Bond 007",
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/James_Bond_007_1983_Parker_Brothers/James_Bond_007_1983_Parker_Brothers.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Joust",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Joust_1983_Atari/Joust_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Jr. Pac-Man",
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Jr._Pac-Man_Proto_U/Jr._Pac-Man_Proto_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Jungle Hunt",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Jungle_Hunt_1983_U/Jungle_Hunt_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "K-Razy Shoot-Out",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/K-Razy_Shootout_1983_CBS_Electronics/K-Razy_Shootout_1983_CBS_Electronics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kaboom!",
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Kaboom_1983_U/Kaboom_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Kangaroo",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Kangaroo_1983_U/Kangaroo_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Keystone Kapers",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Keystone_Kapers_1984_Activision/Keystone_Kapers_1984_Activision.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Koffi - Yellow Kopter",
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Last Starfighter, The",
+    "genres": [
+      "Shooter",
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://forums.atariage.com/applications/core/interface/file/attachment.php?id=561147",
+        "options": {
+          "format": "pdf"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Looney Tunes Hotel",
+    "players": 1,
+    "genres": [
+      "Platform"
+    ]
+  },
+  {
+    "name": "Mario Bros.",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Mario_Bros._1983_Atari/Mario_Bros._1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Meebzork",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Meebzork_1983_Atari_proto/Meebzork_1983_Atari_proto.pdf"
+      }
+    ]
+  },
+  {
+    "name": "MegaMania",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Megamania_1983_Activision/Megamania_1983_Activision.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Meteorites",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Meteorites_1983_Electra_Concepts/Meteorites_1983_Electra_Concepts.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Microgammon SB"
+  },
+  {
+    "name": "Millipede",
+    "genres": [
+      "Shoot'em Up",
+      "Shooter"
+    ]
+  },
+  {
+    "name": "Miner 2049er Starring Bounty Bob",
+    "players": 2,
+    "rating": 1.0,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Miner_2049er_1983_Big_Five_Software/Miner_2049er_1983_Big_Five_Software.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Miniature Golf",
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  {
+    "name": "Missile Command",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Missile_Command_1982_Atari/Missile_Command_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Montezuma's Revenge - Featuring Panama Joe",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Montezumas_Revenge_1984_Parker_Brothers/Montezumas_Revenge_1984_Parker_Brothers.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Moon Patrol",
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Moon_Patrol_1986_U/Moon_Patrol_1986_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Mountain King",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Mountain_King_1983_CBS_Electronics/Mountain_King_1983_CBS_Electronics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Mr. Do!'s Castle",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Mr._Dos_Castle_1984_U/Mr._Dos_Castle_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Ms. Pac-Man",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ms._Pac-Man_1983_Atari/Ms._Pac-Man_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pac-Man",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Pac-Man_1982_Atari/Pac-Man_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pengo",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Pengo_1983_Atari/Pengo_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pitfall!",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Pitfall_1984_U/Pitfall_1984_U.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pole Position",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Pole_Position_1983_U/Pole_Position_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Popeye",
+    "players": 2,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Popeye_1984_Parker_Brothers/Popeye_1984_Parker_Brothers.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Q-bert",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Q-bert_1983_U/Q-bert_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "QIX",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/QIX_1982_Atari/QIX_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Quest for Quintana Roo",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Quest_for_Quintana_Roo_1984_Sunrise_Software/Quest_for_Quintana_Roo_1984_Sunrise_Software.pdf"
+      }
+    ]
+  },
+  {
+    "name": "RealSports Baseball",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Realsports_Baseball_1983_Atari/Realsports_Baseball_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "RealSports Basketball",
+    "players": 2,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ]
+  },
+  {
+    "name": "RealSports Football",
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Realsports_Football_1982_Atari/Realsports_Football_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "RealSports Soccer",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Realsports_Soccer_1983_Atari/Realsports_Soccer_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "RealSports Tennis",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Realsports_Tennis_1986_Atari/Realsports_Tennis_1986_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Rescue on Fractalus!",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Rescue_on_Fractalus_1986_Atari_Lucasfilm/Rescue_on_Fractalus_1986_Atari_Lucasfilm.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Road Runner"
+  },
+  {
+    "name": "Robotron 2084",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Robotron_2084_1983_U/Robotron_2084_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Space Dungeon",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Space_Dungeon_1983_Atari/Space_Dungeon_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Space Invaders",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical",
+      "Shooter",
+      "Shooter / Space Invaders Like"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Space_Invaders_1982_Atari/Space_Invaders_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Space Shuttle - A Journey Into Space",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Space_Shuttle_A_Journey_Into_Space_1983_Activision/Space_Shuttle_A_Journey_Into_Space_1983_Activision.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Spitfire"
+  },
+  {
+    "name": "Sport Goofy"
+  },
+  {
+    "name": "Star Raiders",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Star_Raiders_1982_w_pages_1112_U/Star_Raiders_1982_w_pages_1112_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Star Trek - Strategic Operations Simulator",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Star_Trek_Strategic_Operations_Simulator_1983_Sega/Star_Trek_Strategic_Operations_Simulator_1983_Sega.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Star Wars - Return of the Jedi - Death Star Battle",
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Star_Wars_Return_Of_The_Jedi_Death_Star_Battle_1983_Parker_Brothers/Star_Wars_Return_Of_The_Jedi_Death_Star_Battle_1983_Parker_Brothers.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Star Wars - The Arcade Game",
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Star_Wars_The_Arcade_Game_1983_U/Star_Wars_The_Arcade_Game_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Stargate",
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ]
+  },
+  {
+    "name": "Super Breakout",
+    "players": 4,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Action / Breakout games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Super_Breakout_1982_Atari/Super_Breakout_1982_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Cobra",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Super_Cobra_1983_U/Super_Cobra_1983_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Super Pac-Man",
+    "players": 2,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ]
+  },
+  {
+    "name": "Super Pacman",
+    "players": 2,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ]
+  },
+  {
+    "name": "Tempest"
+  },
+  {
+    "name": "Track and Field"
+  },
+  {
+    "name": "Vanguard",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Vanguard_1983_Atari/Vanguard_1983_Atari.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wizard of Wor",
+    "players": 2,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Wizard_of_Wor_1983_CBS_Electronics/Wizard_of_Wor_1983_CBS_Electronics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Xari Arena",
+    "players": 2,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Xari_Arena_Proto_U/Xari_Arena_Proto_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Xevious",
+    "players": 2,
+    "genres": [
+      "Shooter"
+    ]
+  },
+  {
+    "name": "Yellow Submarine"
+  },
+  {
+    "name": "Zaxxon",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Diagonal"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Zaxxon_1984_U/Zaxxon_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Zenji",
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Action",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Zenji_1984_U/Zenji_1984_U.cbr"
+      }
+    ]
+  },
+  {
+    "name": "Zone Ranger",
+    "players": 2,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Zone_Ranger_1984_U/Zone_Ranger_1984_U.cbr"
+      }
+    ]
+  }
+]

@@ -1,76 +1,113 @@
-{
-    "Baseball Stars - Pocket Sports Series": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "King of Fighters R-1 - Pocket Fighting Series": {
-        "genres": [
-            "Fight"
+[
+  {
+    "name": "Baseball Stars - Pocket Sports Series"
+  },
+  {
+    "name": "King of Fighters R-1 - Pocket Fighting Series",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "King of Fighters R-1 - Pocket Kakutou Series & Melon-chan no Seichou Nikki": {
-        "genres": [
-            "Fight"
+        "url": "https://archive.org/download/neo-geo-pocket-manuals/kof_r1-english.pdf"
+      }
+    ]
+  },
+  {
+    "name": "King of Fighters R-1 - Pocket Kakutou Series & Melon-chan no Seichou Nikki",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "Melon-chan no Seichou Nikki",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Simulation",
+      "Simulation / Life"
+    ]
+  },
+  {
+    "name": "Neo Cherry Master - Real Casino Series",
+    "players": 1,
+    "genres": [
+      "Casino",
+      "Casino / Slot machine"
+    ]
+  },
+  {
+    "name": "Neo Geo Cup '98",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Melon-chan no Seichou Nikki": {
-        "genres": [
-            "Simulation / Life",
-            "Simulation"
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/SNK_Neo_Geo_Pocket/Manual/formated/Neo-Geo_Cup_-98_-_The_Road_to_the_Victory_-_1998_-_SNK_Corporation.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pocket Tennis - Pocket Sports Series",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Tennis"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Neo Cherry Master - Real Casino Series": {
-        "genres": [
-            "Casino / Slot machine",
-            "Casino"
+        "url": "https://archive.org/download/neo-geo-pocket-manuals/pocket_tennis-japanese.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Renketsu Puzzle Tsunagete Pon!",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Samurai Shodown! - Pocket Fighting Series",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Fight"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Neo Geo Cup '98": {
-        "genres": [
-            "Sports / Soccer",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Pocket Tennis - Pocket Sports Series": {
-        "genres": [
-            "Sports",
-            "Sports / Tennis"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Renketsu Puzzle Tsunagete Pon!": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Samurai Shodown! - Pocket Fighting Series": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Shougi no Tatsujin": {
-        "genres": [
-            "Asiatic board game",
-            "Shougi",
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    }
-}
+        "url": "https://archive.org/download/neo-geo-pocket-manuals/samurai_shodown-english.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Shougi no Tatsujin",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Shougi",
+      "Strategy"
+    ]
+  }
+]

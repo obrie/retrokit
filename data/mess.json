@@ -1,281 +1,1008 @@
-{
-    "gnw_ball": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_bfight": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_bjack": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_boxing": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_bsweep": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_cgrab": {
-        "genres": [
-            "Casual Game"
+[
+  {
+    "name": "gnw_ball",
+    "players": 1,
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_chef": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_climber": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_dkhockey": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_dkjr": {
-        "genres": [
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/000_ball_ac-01_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_bfight",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_dkjrp": {
-        "genres": [
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/580_balloon-fight_bf-803_eng.zip"
+      },
+      {
+        "name": "gnw_bfightn",
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_dkong": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_dkong2": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_dkong3": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_fire": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_fireatk": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_fires": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_flagman": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_gcliff": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_ghouse": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_helmet": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_judge": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_lboat": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_lion": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_manhole": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_manholeg": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mario": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mariocm": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mariocmt": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mariotj": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_mbaway": {
-        "genres": [
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/490_balloon-fight_bf-107_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_bjack",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_mickdon": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mmouse": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_mmousep": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_octopus": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_opanic": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_pchute": {
-        "genres": [
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/270_black-jack_bj-60_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_boxing",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_pinball": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_popeye": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_popeyep": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_rshower": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_sbuster": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_smb": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_snoopyp": {
-        "genres": [
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/530_boxing_bx-301_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_bsweep",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_squish": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "gnw_ssparky": {
-        "genres": [
-            "Action",
-            "Action / Breakout games"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/290_bomb-sweeper_bd-62_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_cgrab",
+    "players": 1,
+    "genres": [
+      "Casual Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_stennis": {
-        "genres": [
-            "Sports",
-            "Sports / Tennis",
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/520_crabgrab_ud-202_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_chef",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_tbridge": {
-        "genres": [
-            "Puzzle-Game",
-            "Action"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/110_chef_fp-24_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_climber",
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_tfish": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_vermin": {
-        "genres": [
-            "Casual Game"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/570_climber_dr-802_eng.zip"
+      },
+      {
+        "name": "gnw_climbern",
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "gnw_zelda": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    }
-}
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/480_climber_dr-106_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkhockey",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/550_donkey-kong-hockey_hk-303_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkjr",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/330_donkey-kong-jr_cj-71_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkjrp",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/390_donkey-kong-jr_cj-93_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkong",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/190_donkey-kong_dk-52_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkong2",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/220_donkey-kong-II_jr-55_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_dkong3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/540_donkey-kong-3_ak-302_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_fire",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/140_fire_fr-27_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_fireatk",
+    "players": 1,
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/160_fire-attack_id-29_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_fires",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/030_fire_rc-04_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_flagman",
+    "players": 1,
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/010_flagman_fl-02_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_gcliff",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/310_gold-cliff_mv-64_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_ghouse",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/210_green-house_gh-54_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_helmet",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/060_helmet_cn-07_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_judge",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/040_judge_ip-05_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_lboat",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/250_life-boat_tc-58_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_lion",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/070_lion_ln-08_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_manhole",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/450_manhole_nh-103_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_manholeg",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/050_manhole_mh-06_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mario",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/230_mario-bros_mw-56_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mariocm",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/440_marios-cement-factory_ml-102_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mariocmt",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/340_marios-cement-factory_cm-72_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mariotj",
+    "players": 1,
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/500_mario-the-juggler_mb-108_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mbaway",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/400_marios-bombs-away_tb-94_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mickdon",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/200_mickey-and-donald_md-53_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mmouse",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/120_mickey-mouse_mc-25_eng.zip"
+      },
+      {
+        "name": "gnw_egg",
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/130_egg_eg-26_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_mmousep",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/410_mickey-mouse_dc-95_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_octopus",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/090_octopus_oc-22_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_opanic",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/180_oil-panic_op-51_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_pchute",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/080_parachute_pr-21_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_pinball",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/260_pinball_pb-59_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_popeye",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/100_popeye_pp-23_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_popeyep",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/380_popeye_pg-92_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_rshower",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/240_rain-shower_lp-57_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_sbuster",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/300_safe-buster_jb-63_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_smb",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/560_super-mario-bros_ym-801_eng.zip"
+      },
+      {
+        "name": "gnw_smbn",
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/470_super-mario-bros_ym-105_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_snoopyp",
+    "players": 1,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/370_snoopy_sm-91_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_squish",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/280_squish_mg-61_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_ssparky",
+    "players": 1,
+    "genres": [
+      "Action",
+      "Action / Breakout games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/510_spitball-sparky_bu-201_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_stennis",
+    "players": 1,
+    "genres": [
+      "Action",
+      "Sports",
+      "Sports / Tennis"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/170_snoopy-tennis_sp-30_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_tbridge",
+    "players": 1,
+    "genres": [
+      "Action",
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/150_turtle-bridge_tl-28_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_tfish",
+    "players": 1,
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/460_tropical-fish_tf-104_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_vermin",
+    "players": 1,
+    "genres": [
+      "Casual Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/020_vermin_mt-03_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "gnw_zelda",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/320_zelda_zl-65_eng.zip"
+      }
+    ]
+  },
+  {
+    "name": "taddams"
+  },
+  {
+    "name": "taltbeast",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Altered_Beast_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tapollo13"
+  },
+  {
+    "name": "tbatfor",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://files.replacementdocs.com/Batman_-_Double_Dose_of_Doom_-_Manual_-_LCD.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tbatman",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://files.replacementdocs.com/Batman_-_Manual_-_LCD.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tbatmana",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://files.replacementdocs.com/Batman_-_The_Animated_Series_-_Manual_-_LCD.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tbtoads",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/battletoads-tiger-manual/Battletoads_tiger_manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tbttf"
+  },
+  {
+    "name": "tddragon"
+  },
+  {
+    "name": "tddragon3",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://files.replacementdocs.com/Double_Dragon_3_-_Manual_-_LCD.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tdennis",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Dennis_the_Menace_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tdummies",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualsbase-id-160493/160493.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tflash"
+  },
+  {
+    "name": "tgaiden"
+  },
+  {
+    "name": "tgaiden3",
+    "manuals": [
+      {
+        "name": "tgaiden3",
+        "languages": [
+          "en"
+        ],
+        "url": "http://files.replacementdocs.com/Ninja_Gaiden_III_-_Manual_-_LCD.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tgaunt"
+  },
+  {
+    "name": "tgoldeye",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualsbase-id-160939/160939.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tgoldnaxe"
+  },
+  {
+    "name": "thalone"
+  },
+  {
+    "name": "thalone2",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Home_Alone_2_Lost_in_New_York.pdf"
+      }
+    ]
+  },
+  {
+    "name": "thook"
+  },
+  {
+    "name": "tinday"
+  },
+  {
+    "name": "tjdredd",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualsbase-id-160236/160236.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tjpark",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualsbase-id-160861/160861.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tkarnov"
+  },
+  {
+    "name": "tkazaam"
+  },
+  {
+    "name": "tmchammer",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/mc_hammer_u_cant_touch_this_lcd_video_game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tmegaman3",
+    "manuals": [
+      {
+        "name": "tmegaman3",
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/manualsbase-id-160275/160275.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tmkombat",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Mortal_Combat_Midway_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tnmarebc",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Nightmare_Before_Christmas_LCD_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "topaliens",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.transformertoys.co.uk/images/instruction-scans/hasbro/Operation_Aliens_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "trobocop2"
+  },
+  {
+    "name": "trobocop3"
+  },
+  {
+    "name": "tsddragon"
+  },
+  {
+    "name": "tsf2010",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.transformertoys.co.uk/images/instruction-scans/hasbro/Street_Fighter_2010_The_Final_Fight.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tsfight2",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Street_Fighter_II_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tshadow",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/The_Shadow_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tsharr2"
+  },
+  {
+    "name": "tsjam"
+  },
+  {
+    "name": "tskelwarr"
+  },
+  {
+    "name": "tsonic"
+  },
+  {
+    "name": "tsonic2",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Sonic_the_Hedgehog_2_Sega_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tspidman",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Spider-Man_Electronic_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tstrider",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/Strider.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tswampt"
+  },
+  {
+    "name": "ttransf2",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://instructions.hasbro.com/api/download/E9728_en-hk_tiger-electronics-transformers-generation-2-electronic-lcd-video-game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "tvindictr"
+  },
+  {
+    "name": "twworld"
+  },
+  {
+    "name": "txmen",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/X-Men_Electronic_LCD_Video_Game.pdf"
+      }
+    ]
+  },
+  {
+    "name": "txmenpx",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.hasbro.com/common/instruct/X-Men_Project_X_LCD_Video_Game.pdf"
+      }
+    ]
+  }
+]

@@ -1,869 +1,1218 @@
-{
-    "Anchorz Field": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Armored Unit": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "BANDAI Default Splash Screen": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Bakusou Dekotora Densetsu for WonderSwan": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Buffers Evolution": {
-        "genres": [
-            "Platform",
-            "Race",
-            "Driving"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Cardcaptor Sakura - Sakura to Fushigi na Clow Card": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Chaos Gear - Michibikareshi Mono": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Chocobo no Fushigi na Dungeon for WonderSwan": {
-        "genres": [
-            "Role playing games",
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Chou Aniki - Otoko no Tamafuda": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Chou Denki Card Battle - Youfu Makai": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Clock Tower for WonderSwan": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Crazy Climber": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "D's Garage 21 Koubo Game - Tane o Maku Tori": {
-        "genres": [
-            "Strategy",
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Densha de Go!": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Densha de Go! 2": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Digimon Adventure - Anode Tamer": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Digimon Adventure - Cathode Tamer": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Digimon Adventure 02 - D1 Tamers": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Digimon Adventure 02 - Tag Tamers": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Digimon Tamers - Brave Tamer": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Digital Monster - Ver. WonderSwan": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Digital Partner": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Dokodemo Hamster": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Engacho! for WonderSwan": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Fever - Sankyo Koushiki Pachinko Simulation for WonderSwan": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Final Lap 2000": {
-        "genres": [
-            "Race",
-            "Driving",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Fire Pro Wrestling for WonderSwan": {
-        "genres": [
-            "Sports / Wrestling",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Fishing Freaks - Bass Rise for WonderSwan": {
-        "genres": [
-            "Hunting and Fishing",
-            "Fishing",
-            "Sports",
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "From TV Animation One Piece - Mezase Kaizoku Ou!": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Ganso Jajamaru-kun": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Glocal Hexcite": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Gomoku Narabe & Reversi - Touryuumon": {
-        "genres": [
-            "Strategy",
-            "Various"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Goraku Ou Tango!": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "GunPey": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Hanafuda Shiyouyo": {
-        "genres": [
-            "Asiatic board game",
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Harobots": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Hataraku Chocobo": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Hunter X Hunter - Ishi o Tsugu Mono": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Kakutou Ryouri Densetsu Bistro Recipe - Wonder Battle Hen": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Kaze no Klonoa - Moonlight Museum": {
-        "genres": [
-            "Action",
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Keiba Yosou Shien Soft - Yosou Shinkaron": {
-        "genres": [
-            "Sports with Animals",
-            "Horses race",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Kiss Yori... - Seaside Serenade": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Kosodate Quiz - Dokodemo My Angel": {
-        "genres": [
-            "Quiz"
-        ],
-        "players": 4,
-        "rating": null
-    },
-    "Kyousouba Ikusei Simulation - Keiba": {
-        "genres": [
-            "Sports with Animals",
-            "Horses race",
-            "Sports"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Langrisser Millennium WS - The Last Century": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Last Stand": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Lode Runner for WonderSwan": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Macross - True Love Song": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Magical Drop for WonderSwan": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Mahjong Touryuumon": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Makaimura for WonderSwan": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Medarot Perfect Edition - Kabuto Version": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Medarot Perfect Edition - Kuwagata Version": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Meitantei Conan - Majutsushi no Chousenjou!": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Meitantei Conan - Nishi no Meitantei Saidai no Kiki!": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Metakomi Theraphy - Nee Kiite!": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Mingle Magnet": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Mobile Suit Gundam MSVS": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "MobileWonderGate": {
-        "genres": [
-            "Various"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Moero!! Pro Yakyuu Rookies": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Morita Shougi for WonderSwan": {
-        "genres": [
-            "Asiatic board game",
-            "Shougi",
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Nazo Ou Pocket": {
-        "genres": [
-            "Adventure",
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Neon Genesis Evangelion - Shito Ikusei": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Nice On": {
-        "genres": [
-            "Sports / Golf",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Nihon Pro Mahjong Renmei Kounin - Tetsuman": {
-        "genres": [
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Nobunaga no Yabou for WonderSwan": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "Ou-chan no Oekaki Logic": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Pocket Fighter": {
-        "genres": [
-            "Action",
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Pro Mahjong Kiwame for WonderSwan": {
-        "genres": [
-            "Asiatic board game",
-            "Mahjong",
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Puyo Puyo Tsuu": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Puzzle Bobble": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Rainbow Islands - Putty's Party": {
-        "genres": [
-            "Platform",
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Raku Jongg": {
-        "genres": [
-            "Puzzle-Game",
-            "Puzzle-Game / Fall"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Ring Infinity": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Robot Works": {
-        "genres": [
-            "Educational"
-        ],
-        "players": 8,
-        "rating": null
-    },
-    "Rockman & Forte - Mirai Kara no Chousensha": {
-        "genres": [
-            "Platform",
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "SD Gundam - Emotional Jam": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "SD Gundam G Generation - Gather Beat": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "SD Gundam Gashapon Senki - Episode 1": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Sangokushi II for WonderSwan": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Sangokushi for WonderSwan": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Senkaiden - TV Animation Senkaiden Houshin Engi Yori": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Sennou Millennium": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Shanghai Pocket": {
-        "genres": [
-            "Mahjong",
-            "Asiatic board game",
-            "Strategy",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Shin Nihon Pro Wrestling - Toukon Retsuden": {
-        "genres": [
-            "Sports",
-            "Sports / Wrestling",
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Shougi Touryuumon": {
-        "genres": [
-            "Asiatic board game",
-            "Shougi",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Side Pocket for WonderSwan": {
-        "genres": [
-            "Sports / Pool",
-            "Sports",
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Slither Link": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Soccer Yarou! - Challenge the World": {
-        "genres": [
-            "Sports / Soccer",
-            "Sports"
-        ],
-        "players": 1,
-        "rating": 0.3
-    },
-    "Sotsugyou for WonderSwan": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Space Invaders": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Vertical",
-            "Shooter / Space Invaders Like",
-            "Shooter"
-        ],
-        "players": 2,
-        "rating": 1.0
-    },
-    "Super Robot Taisen Compact": {
-        "genres": [
-            "Strategy",
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Super Robot Taisen Compact 2 - Dai-1-bu - Chijou Gekidou Hen": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Super Robot Taisen Compact 2 - Dai-2-bu - Uchuu Gekishin Hen": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Super Robot Taisen Compact 2 - Dai-3-bu - Ginga Kessen Hen": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Taikyoku Igo - Heisei Kiin": {
-        "genres": [
-            "Asiatic board game",
-            "Go",
-            "Various"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tanjou Debut for WonderSwan": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Tare Panda no GunPey": {
-        "genres": [
-            "Puzzle-Game",
-            "Sports",
-            "Sports / Wrestling"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tekken Card Challenge": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Tenori-on": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Terrors": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Tetsujin 28 Gou": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Time Bokan Series - Bokan Densetsu - Buta mo Odaterya Doronboo": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Tokyo Majin Gakuen - Fuju Houroku": {
-        "genres": [
-            "Adventure",
-            "Adventure / Visual Novel",
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Trump Collection - Bottom-Up Teki Trump Seikatsu": {
-        "genres": [
-            "Playing cards"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Trump Collection 2 - Bottom-Up Teki Sekaiisshuu no Tabi": {
-        "genres": [
-            "Playing cards"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Turntablist - DJ Battle": {
-        "genres": [
-            "Music and Dance",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Umizuri ni Ikou!": {
-        "genres": [
-            "Hunting and Fishing",
-            "Fishing",
-            "Sports"
-        ],
-        "players": 1,
-        "rating": 0.4
-    },
-    "Uzumaki - Denshi Kaiki Hen": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "Uzumaki - Noroi Simulation": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Vaitz Blade": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Wasabi Produce - Street Dancer": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Wonder Stadium": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Wonder Stadium '99": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "WonderSwan Handy Sonar": {
-        "genres": [
-            "Hunting and Fishing",
-            "Fishing"
-        ],
-        "players": null,
-        "rating": null
-    },
-    "WonderWitch": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "beat mania for WonderSwan": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": null
-    }
-}
+[
+  {
+    "name": "Anchorz Field",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/anchorzfieldwshiresscans/Anchorz Field - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Armored Unit",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/armoredunitwshiresscans/Armored Unit - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "BANDAI Default Splash Screen"
+  },
+  {
+    "name": "Bakusou Dekotora Densetsu for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Buffers Evolution",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Driving",
+      "Platform",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/buffersevolutionwshiresscans/Buffer's Evolution - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Cardcaptor Sakura - Sakura to Fushigi na Clow Card",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Chaos Gear - Michibikareshi Mono",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/chaosgearmichibikareshimonowshiresscans/Chaos Gear - Michibikareshi Mono - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Chocobo no Fushigi na Dungeon for WonderSwan",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Adventure",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/chocobofushigiwsmanual/Chocobo no fushigi na dungeon manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Chou Aniki - Otoko no Tamafuda",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/chouanikiotokonotamafudawshiresscans/Chou Aniki - Otoko no Tamafuda - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Chou Denki Card Battle - Youfu Makai",
+    "players": 2,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/choudenkicardbattleyoufumakaiwshiresscans/Chou Denki Card Battle - Youfu Makai - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Clock Tower for WonderSwan",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/clocktowerwshiresscans/Clock Tower - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Crazy Climber",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "D's Garage 21 Koubo Game - Tane o Maku Tori",
+    "players": 2,
+    "genres": [
+      "Strategy",
+      "Various"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/dsgarage21koubogametaneomakutoriwshiresscans/D's Garage 21 Koubo Game - Tane o Maku Tori - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Densha de Go!",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Densha de Go! 2",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Digimon Adventure - Anode Tamer",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Digimon Adventure - Cathode Tamer",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digimonadventurecathodetamerwshiresscans/Digimon Adventure - Cathode Tamer - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digimon Adventure 02 - D1 Tamers",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Digimon Adventure 02 - Tag Tamers",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digimonadventure02tagtamerswshiresscans/Digimon Adventure 02 - Tag Tamers - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digimon Tamers - Brave Tamer",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Digital Monster - Ver. WonderSwan",
+    "players": 2,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digitalmonstercardgameverwscolorhiresscans/Digital Monster Card Game - Ver. WonderSwan Color - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digital Partner",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digitalpartnerwshirescans/Digital Partner - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Dokodemo Hamster",
+    "players": 2,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Engacho! for WonderSwan",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/engachowshiresscans/Engacho! - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Fever - Sankyo Koushiki Pachinko Simulation for WonderSwan",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Final Lap 2000",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Driving",
+      "Race",
+      "Sports"
+    ]
+  },
+  {
+    "name": "Fire Pro Wrestling for WonderSwan",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Wrestling"
+    ]
+  },
+  {
+    "name": "Fishing Freaks - Bass Rise for WonderSwan",
+    "players": 1,
+    "genres": [
+      "Fishing",
+      "Hunting and Fishing",
+      "Simulation",
+      "Sports"
+    ]
+  },
+  {
+    "name": "From TV Animation One Piece - Mezase Kaizoku Ou!",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Ganso Jajamaru-kun",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Glocal Hexcite",
+    "players": 2,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Gomoku Narabe & Reversi - Touryuumon",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Strategy",
+      "Various"
+    ]
+  },
+  {
+    "name": "Goraku Ou Tango!",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "GunPey",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/gunpeywshiresscans/GunPey - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Hanafuda Shiyouyo",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Various"
+    ]
+  },
+  {
+    "name": "Harobots",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Hataraku Chocobo",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Hunter X Hunter - Ishi o Tsugu Mono",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hunterxhunterishiotsugumonowshiresscans/Hunter X Hunter - Ishi o Tsugu Mono - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kakutou Ryouri Densetsu Bistro Recipe - Wonder Battle Hen",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Kaze no Klonoa - Moonlight Museum",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action",
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kazenoklonoamoonlightmuseumwshiresscans/Kaze no Klonoa - Moonlight Museum - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Keiba Yosou Shien Soft - Yosou Shinkaron",
+    "players": 2,
+    "genres": [
+      "Horses race",
+      "Sports",
+      "Sports with Animals"
+    ]
+  },
+  {
+    "name": "Kiss Yori... - Seaside Serenade",
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Kosodate Quiz - Dokodemo My Angel",
+    "players": 4,
+    "genres": [
+      "Quiz"
+    ]
+  },
+  {
+    "name": "Kyousouba Ikusei Simulation - Keiba",
+    "players": 1,
+    "genres": [
+      "Horses race",
+      "Sports",
+      "Sports with Animals"
+    ]
+  },
+  {
+    "name": "Langrisser Millennium WS - The Last Century",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Last Stand",
+    "players": 2,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Lode Runner for WonderSwan",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Macross - True Love Song",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Magical Drop for WonderSwan",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Mahjong Touryuumon",
+    "players": 2,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "Makaimura for WonderSwan",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Medarot Perfect Edition - Kabuto Version",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Medarot Perfect Edition - Kuwagata Version",
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Meitantei Conan - Majutsushi no Chousenjou!",
+    "players": 1,
+    "genres": [
+      "Educational"
+    ]
+  },
+  {
+    "name": "Meitantei Conan - Nishi no Meitantei Saidai no Kiki!",
+    "players": 1,
+    "genres": [
+      "Educational"
+    ]
+  },
+  {
+    "name": "Metakomi Theraphy - Nee Kiite!",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/metakomitheraphyneekiitewshiresscans/Metakomi Theraphy - Nee Kiite! - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Mingle Magnet",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/minglemagnetwshiresscans/Mingle Magnet - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Mobile Suit Gundam MSVS",
+    "players": 2,
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mobilesuitgundammsvswshiresscans/Mobile Suit Gundam MSVS - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "MobileWonderGate",
+    "players": 1,
+    "genres": [
+      "Various"
+    ]
+  },
+  {
+    "name": "Moero!! Pro Yakyuu Rookies",
+    "players": 2,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Morita Shougi for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Shougi",
+      "Various"
+    ]
+  },
+  {
+    "name": "Nazo Ou Pocket",
+    "players": 1,
+    "genres": [
+      "Adventure",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/nazooupocketwshiresscans/Nazo Ou Pocket - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Neon Genesis Evangelion - Shito Ikusei",
+    "players": 2,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Nice On",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  {
+    "name": "Nihon Pro Mahjong Renmei Kounin - Tetsuman",
+    "players": 2,
+    "genres": [
+      "Various"
+    ]
+  },
+  {
+    "name": "Nobunaga no Yabou for WonderSwan",
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Ou-chan no Oekaki Logic",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Pocket Fighter",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
+  },
+  {
+    "name": "Pro Mahjong Kiwame for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong",
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Puyo Puyo Tsuu",
+    "players": 2,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Puzzle Bobble",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/puzzlebobblewshiresscans/Puzzle Bobble - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Rainbow Islands - Putty's Party",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  {
+    "name": "Raku Jongg",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game",
+      "Puzzle-Game / Fall"
+    ]
+  },
+  {
+    "name": "Ring Infinity",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ringinfinitywshirresscans/Ring Infinity - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Robot Works",
+    "players": 8,
+    "genres": [
+      "Educational"
+    ]
+  },
+  {
+    "name": "Rockman & Forte - Mirai Kara no Chousensha",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Platform",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/rockmanfortemiraikaranochousenshawshiresscans/Rockman %26 Forte - Mirai Kara no Chousensha - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "SD Gundam - Emotional Jam",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "SD Gundam G Generation - Gather Beat",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "SD Gundam Gashapon Senki - Episode 1",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/sdgundamgashaponsenkiepisode1wshiresscans/SD Gundam Gashapon Senki - Episode 1 - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Sangokushi II for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Sangokushi for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Senkaiden - TV Animation Senkaiden Houshin Engi Yori",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/senkaidensenkaidenhoushinengiyoriwshiresscans/Senkaiden - TV Animation Senkaiden Houshin Engi Yori - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Sennou Millennium",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Shanghai Pocket",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong",
+      "Sports",
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Shin Nihon Pro Wrestling - Toukon Retsuden",
+    "players": 1,
+    "genres": [
+      "Adventure",
+      "Sports",
+      "Sports / Wrestling"
+    ]
+  },
+  {
+    "name": "Shougi Touryuumon",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Shougi",
+      "Sports"
+    ]
+  },
+  {
+    "name": "Side Pocket for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Simulation",
+      "Sports",
+      "Sports / Pool"
+    ]
+  },
+  {
+    "name": "Slither Link",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/slitherlinkwshiresscans/Slither Link - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Soccer Yarou! - Challenge the World",
+    "players": 1,
+    "rating": 0.3,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Sotsugyou for WonderSwan",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/sotsugyouwshiresscans/Sotsugyou - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Space Invaders",
+    "players": 2,
+    "rating": 1.0,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical",
+      "Shooter",
+      "Shooter / Space Invaders Like"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/spaceinvaderswshiresscans/Space Invaders - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact",
+    "players": 2,
+    "genres": [
+      "Role playing games",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompactwshiresscans/Super Robot Taisen Compact - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact 2 - Dai-1-bu - Chijou Gekidou Hen",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompact2dai1buchijougekidouhenwshiresscans/Super Robot Taisen Compact 2 - Dai-1-bu - Chijou Gekidou Hen - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact 2 - Dai-2-bu - Uchuu Gekishin Hen",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompact2dai2buuchuugekishinhenwshiresscans/Super Robot Taisen Compact 2 - Dai-2-bu - Uchuu Gekishin Hen -Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact 2 - Dai-3-bu - Ginga Kessen Hen",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompact2dai3bugingakesuasenhenwshirescans/Super Robot Taisen Compact 2 - Dai-3-bu - Ginga Kessen Hen - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Taikyoku Igo - Heisei Kiin",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Go",
+      "Various"
+    ]
+  },
+  {
+    "name": "Tanjou Debut for WonderSwan",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tanjoudebutforwonderswanwshirescans/Tanjou Debut for WonderSwan - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Tare Panda no GunPey",
+    "players": 2,
+    "genres": [
+      "Puzzle-Game",
+      "Sports",
+      "Sports / Wrestling"
+    ]
+  },
+  {
+    "name": "Tekken Card Challenge",
+    "players": 2,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tekkencardchallengewshiresscans/Tekken Card Challenge - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Tenori-on"
+  },
+  {
+    "name": "Terrors",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/terrorswshiresscans/Terrors - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Tetsujin 28 Gou",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tetsujin28gouwshiresscans/Tetsujin 28 Gou - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Time Bokan Series - Bokan Densetsu - Buta mo Odaterya Doronboo",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Tokyo Majin Gakuen - Fuju Houroku",
+    "players": 2,
+    "genres": [
+      "Adventure",
+      "Adventure / Visual Novel",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/tokyomajingakuenfujuhourokuwshiresscans/Tokyo Majin Gakuen - Fuju Houroku - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Trump Collection - Bottom-Up Teki Trump Seikatsu",
+    "players": 1,
+    "genres": [
+      "Playing cards"
+    ]
+  },
+  {
+    "name": "Trump Collection 2 - Bottom-Up Teki Sekaiisshuu no Tabi",
+    "players": 1,
+    "genres": [
+      "Playing cards"
+    ]
+  },
+  {
+    "name": "Turntablist - DJ Battle",
+    "players": 2,
+    "genres": [
+      "Music and Dance",
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/turntablistdjbattlewshiresscans/Turntablist - DJ Battle - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Umizuri ni Ikou!",
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
+      "Fishing",
+      "Hunting and Fishing",
+      "Sports"
+    ]
+  },
+  {
+    "name": "Uzumaki - Denshi Kaiki Hen",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Uzumaki - Noroi Simulation",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/uzumakinoroisimulationwshiresscans/Uzumaki - Noroi Simulation - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Vaitz Blade",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/vaitzbladewshiresscans/Vaitz Blade - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wasabi Produce - Street Dancer",
+    "players": 2,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Wonder Stadium",
+    "players": 2,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "Wonder Stadium '99",
+    "players": 2,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  {
+    "name": "WonderSwan Handy Sonar",
+    "genres": [
+      "Fishing",
+      "Hunting and Fishing"
+    ]
+  },
+  {
+    "name": "WonderWitch"
+  },
+  {
+    "name": "beat mania for WonderSwan",
+    "players": 2,
+    "genres": [
+      "Action"
+    ]
+  }
+]

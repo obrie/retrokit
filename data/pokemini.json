@@ -1,121 +1,198 @@
-{
-    "Pichu Bros. Mini": {
-        "genres": [
-            "Casual Game"
+[
+  {
+    "name": "Pichu Bros. Mini",
+    "players": 10,
+    "genres": [
+      "Casual Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 10,
-        "rating": null
-    },
-    "Pichu Bros. Mini - Hoppip's Jump Match": {
-        "genres": [],
-        "players": 10,
-        "rating": null
-    },
-    "Pichu Bros. Mini - Netsukikyuu": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Pichu Bros. Mini - Skateboard": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Pokemon Party Mini": {
-        "genres": [
-            "Casual Game"
+        "url": "https://www.pokemon-mini.net/download/manuals/PichuBros_jap.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pichu Bros. Mini - Hoppip's Jump Match",
+    "players": 10
+  },
+  {
+    "name": "Pichu Bros. Mini - Netsukikyuu"
+  },
+  {
+    "name": "Pichu Bros. Mini - Skateboard"
+  },
+  {
+    "name": "Pokemon Party Mini",
+    "players": 6,
+    "genres": [
+      "Casual Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 6,
-        "rating": null
-    },
-    "Pokemon Party Mini - Baseline Judge": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Party Mini - Chansey's Dribble": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Party Mini - Pikachu's Rocket Start": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Party Mini - Ricochet Dribble": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Party Mini - Slowking's Judge": {
-        "genres": [],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Pinball Mini": {
-        "genres": [
-            "Pinball"
+        "url": "https://www.pokemon-mini.net/download/manuals/Pokemon-Party-Mini-Manual-WM.pdf"
+      },
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Puzzle Collection": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://archive.org/compress/pokemon-party-mini-j-cart-and-manual-hi-res-ozidual/formats=JPEG&file=/pokemon-party-mini-j-cart-and-manual-hi-res-ozidual.zip",
+        "options": {
+          "filter": "*Manual*"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Party Mini - Baseline Judge",
+    "players": 1
+  },
+  {
+    "name": "Pokemon Party Mini - Chansey's Dribble",
+    "players": 1
+  },
+  {
+    "name": "Pokemon Party Mini - Pikachu's Rocket Start",
+    "players": 1
+  },
+  {
+    "name": "Pokemon Party Mini - Ricochet Dribble",
+    "players": 1
+  },
+  {
+    "name": "Pokemon Party Mini - Slowking's Judge",
+    "players": 1
+  },
+  {
+    "name": "Pokemon Pinball Mini",
+    "players": 1,
+    "genres": [
+      "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Puzzle Collection Vol. 2": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://archive.org/download/PokemonPinballMiniManual/Pokemon-Pinball-Mini-Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Puzzle Collection",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Race Mini": {
-        "genres": [
-            "Race",
-            "Driving"
+        "url": "https://archive.org/download/PokemonPuzzleCollectionManual/Pokemon-Puzzle-Collection-Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Puzzle Collection Vol. 2",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": null
-    },
-    "Pokemon Sodateyasan Mini": {
-        "genres": [
-            "Simulation"
+        "url": "https://www.pokemon-mini.net/download/faqs/pokemon_mini_jap_games_v2.txt"
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Race Mini",
+    "players": 2,
+    "genres": [
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Tetris": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://www.pokemon-mini.net/download/manuals/Race_jap.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Sodateyasan Mini",
+    "players": 1,
+    "genres": [
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Pokemon Zany Cards": {
-        "genres": [
-            "Casino / Cards",
-            "Casino"
+        "url": "https://www.pokemon-mini.net/download/faqs/pokemon_mini_sodateyan_new.txt"
+      }
+    ]
+  },
+  {
+    "name": "Pokemon Tetris",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Pokemon Zany Cards",
+    "players": 5,
+    "genres": [
+      "Casino",
+      "Casino / Cards"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 5,
-        "rating": null
-    },
-    "Snorlax's Lunch Time": {
-        "genres": [
-            "Casual Game"
+        "url": "https://www.pokemon-mini.net/download/manuals/Pokemon-Zany-Cards-Manual-DE.pdf"
+      },
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 1,
-        "rating": null
-    },
-    "Togepi no Daibouken": {
-        "genres": [
-            "Adventure"
+        "url": "https://www.pokemon-mini.net/download/manuals/zany_j.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Snorlax's Lunch Time",
+    "players": 1,
+    "genres": [
+      "Casual Game"
+    ]
+  },
+  {
+    "name": "Togepi no Daibouken",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
         ],
-        "players": 1,
-        "rating": null
-    }
-}
+        "url": "https://www.pokemon-mini.net/download/manuals/Topegi_jap.pdf"
+      }
+    ]
+  }
+]

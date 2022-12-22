@@ -1,682 +1,1140 @@
-{
-    "Alchemist Marie & Elie - Futari no Atelier": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Another Heaven - Memory of those Days": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Arc the Lad - Kishin Fukkatsu": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Battle Spirit - Digimon Frontier": {
-        "genres": [
-            "Fight",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Blue Wing Blitz": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Dark Eyes - Battle Gate": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Dicing Knight.": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Digimon - Anode Tamer & Cathode Tamer - Veedramon Version": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Digimon Adventure 02 - D1 Tamers": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Digimon Tamers - Battle Spirit": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Digimon Tamers - Battle Spirit Ver. 1.5": {
-        "genres": [
-            "Fight",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Digimon Tamers - Brave Tamer": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Digimon Tamers - Digimon Medley": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Digital Monster - D-Project": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Digital Monster Card Game - Ver. WonderSwan Color": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Dokodemo Hamster 3 - Odekake Saffron": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Dragon Ball": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Final Fantasy": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Final Fantasy II": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Final Fantasy IV": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Final Lap Special - GT & Formula Machine": {
-        "genres": [
-            "Race",
-            "Driving"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Fire Lancer": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Flash Koibito-kun": {
-        "genres": [
-            "Puzzle-Game",
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Flash Masta Firmware": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "From TV Animation One Piece - Chopper no Daibouken": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "From TV Animation One Piece - Grand Battle Swan Colosseum": {
-        "genres": [
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "From TV Animation One Piece - Niji no Shima Densetsu": {
-        "genres": [],
-        "players": 1,
-        "rating": 0.6
-    },
-    "From TV Animation One Piece - Treasure Wars": {
-        "genres": [
-            "Board game"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "From TV Animation One Piece - Treasure Wars 2 - Buggy Land e Youkoso": {
-        "genres": [
-            "Board game"
-        ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Front Mission": {
-        "genres": [
-            "Strategy",
-            "Role playing games",
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Gekitou! Crash Gear Turbo - Gear Champion League": {
-        "genres": [
-            "Action"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Gensou Maden Saiyuuki Retribution - Hi no Ataru Basho de": {
-        "genres": [
-            "Board game"
-        ],
-        "players": 2,
-        "rating": 0.45
-    },
-    "Golden Axe": {
-        "genres": [
-            "Beat'em Up",
-            "Action",
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Gransta Chronicle": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Guilty Gear Petit": {
-        "genres": [
-            "Action",
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.65
-    },
-    "Guilty Gear Petit 2": {
-        "genres": [
-            "Action",
-            "Fight"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "GunPey EX": {
-        "genres": [
-            "Puzzle-Game",
-            "Simulation"
-        ],
-        "players": 2,
-        "rating": 0.55
-    },
-    "Hanjuku Hero - Ah, Sekai yo Hanjuku Nare...!!": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 2,
-        "rating": 0.85
-    },
-    "Hataraku Chocobo": {
-        "genres": [
-            "Simulation"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Hunter X Hunter - Greed Island": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Hunter X Hunter - Michibikareshi Mono": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "Hunter X Hunter - Sorezore no Ketsui": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Inuyasha - Fuuun Emaki": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Inuyasha - Kagome no Sengoku Nikki": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Inuyasha - Kagome no Yume Nikki": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Judgement Silversword - Rebirth Edition": {
-        "genres": [
-            "Shooter",
-            "Action"
-        ],
-        "players": 1,
-        "rating": 1.0
-    },
-    "Kidou Senshi Gundam - Giren no Yabou - Tokubetsu Hen - Aoki Hoshi no Hasha": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Kidou Senshi Gundam Seed": {
-        "genres": [
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Kidou Senshi Gundam Vol. 1 - Side 7": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Kidou Senshi Gundam Vol. 2 - Jaburo": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Kidou Senshi Gundam Vol. 3 - A Baoa Qu": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "Kinnikuman II-Sei - Choujin Seisenshi": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Kinnikuman II-Sei - Dream Tag Match": {
-        "genres": [
-            "Sports"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Kurupara!": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Last Alive": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Makai Toushi Sa-Ga": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 1.0
-    },
-    "Meitantei Conan - Yuugure no Oujo": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Memories Off - Festa": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Mikeneko Holmes - Ghost Panic": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Mr. Driller": {
-        "genres": [
-            "Strategy",
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.9
-    },
-    "NAVI GET 400 Million": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    },
-    "Namco Super Wars": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Naruto - Konoha Ninpouchou": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.85
-    },
-    "Pocket no Naka no Doraemon": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "RUN=DIM - Return to Earth": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Vertical"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Raku Jongg": {
-        "genres": [
-            "Puzzle-Game",
-            "Puzzle-Game / Fall"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Rhyme Rider Kerorican": {
-        "genres": [
-            "Music and Dance",
-            "Action",
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.6
-    },
-    "Riviera - Yakusoku no Chi Riviera": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Rockman EXE - N1 Battle": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.75
-    },
-    "Rockman EXE WS": {
-        "genres": [
-            "Platform"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Romancing Sa-Ga": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "SD Gundam - Operation U.C.": {
-        "genres": [
-            "Shooter",
-            "Shooter / Vertical"
-        ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "SD Gundam Eiyuu Den - Kishi Densetsu": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "SD Gundam Eiyuu Den - Musha Densetsu": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "SD Gundam G Generation - Gather Beat 2": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "SD Gundam G Generation - Mono-Eye Gundams": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Saint Seiya - Ougon Densetsu Hen - Perfect Edition": {
-        "genres": [
-            "Role playing games",
-            "Beat'em Up"
-        ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Senkaiden Ni - TV Animation Senkaiden Houshin Engi Yori": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Shaman King - Asu e no Ishi": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Sorobang": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": null
-    },
-    "Star Hearts - Hoshi to Daichi no Shisha": {
-        "genres": [
-            "Role playing games",
-            "Action"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Super Robot Taisen Compact 3": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Super Robot Taisen Compact for WonderSwan Color": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Terrors 2": {
-        "genres": [
-            "Adventure",
-            "Fight"
-        ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Tetris": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Tonpuusou": {
-        "genres": [
-            "Asiatic board game",
-            "Mahjong"
-        ],
-        "players": 2,
-        "rating": null
-    },
-    "Uchuu Senkan Yamato": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Ultraman - Hikari no Kuni no Shisha": {
-        "genres": [
-            "Fight",
-            "Fight / 2D"
-        ],
-        "players": 1,
-        "rating": 0.55
-    },
-    "Wild Card": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "With You - Mitsumete Itai": {
-        "genres": [
-            "Adventure"
-        ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Wizardry Scenario 1 - Proving Grounds of the Mad Overlord": {
-        "genres": [
-            "Role playing games"
-        ],
-        "players": 1,
-        "rating": 1.0
-    },
-    "Wonder Classic": {
-        "genres": [
-            "Sports",
-            "Sports / Golf",
-            "Puzzle-Game"
-        ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "X - Card of Fate": {
-        "genres": [
-            "Strategy"
-        ],
-        "players": 1,
-        "rating": 0.65
-    },
-    "XI Little": {
-        "genres": [
-            "Puzzle-Game"
-        ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "mama Mitte": {
-        "genres": [],
-        "players": null,
-        "rating": null
-    }
-}
+[
+  {
+    "name": "Alchemist Marie & Elie - Futari no Atelier",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Another Heaven - Memory of those Days",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/anotherheavenmemoryofthosedayswscolorhiresscans/Another Heaven - Memory of those Days - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Arc the Lad - Kishin Fukkatsu",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Battle Spirit - Digimon Frontier",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
+  },
+  {
+    "name": "Blue Wing Blitz",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/bluewingblitzwscolorhiresscans/Blue Wing Blitz - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Dark Eyes - Battle Gate",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Dicing Knight.",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://www.gamingalexandria.com/highquality/wonderswancolor/Dicing Knight/Dicing Knight - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digimon - Anode Tamer & Cathode Tamer - Veedramon Version",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Digimon Adventure 02 - D1 Tamers",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digimonadventure02d1tamerswscolorhiresscans/Digimon Adventure 02 - D1 Tamers - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digimon Tamers - Battle Spirit",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "Digimon Tamers - Battle Spirit Ver. 1.5",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
+  },
+  {
+    "name": "Digimon Tamers - Brave Tamer",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digimontamersbravetamerwscolorhiresscans/Digimon Tamers - Brave Tamer.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digimon Tamers - Digimon Medley",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/digimontamersdigimonmedleywscolorhiresscans/Digimon Tamers - Digimon Medley - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Digital Monster - D-Project",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Digital Monster Card Game - Ver. WonderSwan Color",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://www.gamingalexandria.com/highquality/wonderswancolor/Digital Monster Card Game - Ver. WonderSwan Color/Digital Monster Card Game - Ver. WonderSwan Color - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Dokodemo Hamster 3 - Odekake Saffron",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Dragon Ball",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Final Fantasy",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/finalfantasywscolorhiresscans/Final Fantasy - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Final Fantasy II",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/finalfantasyiiwscolorhiresscans/Final Fantasy II - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Final Fantasy IV",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/finalfantasyivwscolorhiresscans/Final Fantasy IV - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Final Lap Special - GT & Formula Machine",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  {
+    "name": "Fire Lancer"
+  },
+  {
+    "name": "Flash Koibito-kun",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Puzzle-Game",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/flashkoibitokunwscolorhirescans/Flash Koibito-kun - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Flash Masta Firmware"
+  },
+  {
+    "name": "From TV Animation One Piece - Chopper no Daibouken",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "From TV Animation One Piece - Grand Battle Swan Colosseum",
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Fight"
+    ]
+  },
+  {
+    "name": "From TV Animation One Piece - Niji no Shima Densetsu",
+    "players": 1,
+    "rating": 0.6
+  },
+  {
+    "name": "From TV Animation One Piece - Treasure Wars",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Board game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/onepiecetreasurewarswscolorhiresscans/From TV Animation One Piece - Treasure Wars - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "From TV Animation One Piece - Treasure Wars 2 - Buggy Land e Youkoso",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Board game"
+    ]
+  },
+  {
+    "name": "Front Mission",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Role playing games",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/frontmissionwscolorhiresscans/Front Mission - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gekitou! Crash Gear Turbo - Gear Champion League",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Gensou Maden Saiyuuki Retribution - Hi no Ataru Basho de",
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Board game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/gensoumadensaiyuukiretributionwscolorhiresscans/Gensou Maden Saiyuuki Retribution - Hi no Ataru Basho de - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Golden Axe",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Beat'em Up",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/f/fc/Golden_Axe_Wonderswan_JP_Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gransta Chronicle",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Guilty Gear Petit",
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Fight"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/guiltygearpetitwscolorhiresscans/Guilty Gear Petit - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Guilty Gear Petit 2",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
+  },
+  {
+    "name": "GunPey EX",
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Puzzle-Game",
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Hanjuku Hero - Ah, Sekai yo Hanjuku Nare...!!",
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hanjukuherowscolorhiresscans/Hanjuku Hero - Ah, Sekai yo Hanjuku Nare...!! - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Hataraku Chocobo",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  {
+    "name": "Hunter X Hunter - Greed Island",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Hunter X Hunter - Michibikareshi Mono",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Hunter X Hunter - Sorezore no Ketsui",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/hunterxhuntersorezorenoketsuiwscolorhiresscans/Hunter X Hunter - Sorezore no Ketsui - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Inuyasha - Fuuun Emaki",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/inuyashafuuunemakiwscolorhiresscans/Inuyasha - Fuuun Emaki - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Inuyasha - Kagome no Sengoku Nikki",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Inuyasha - Kagome no Yume Nikki",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/inuyashakagomenoyumenikkiwscolorhiresscans/Inuyasha - Kagome no Yume Nikki - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Judgement Silversword - Rebirth Edition",
+    "players": 1,
+    "rating": 1.0,
+    "genres": [
+      "Action",
+      "Shooter"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://www.gamingalexandria.com/highquality/wonderswancolor/Judgement Silversword - Rebirth Edition/Judgement Silversword - Rebirth Edition - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kidou Senshi Gundam - Giren no Yabou - Tokubetsu Hen - Aoki Hoshi no Hasha",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kidousenshigundamgirennoyabouwscolorhiresscans/Kidou Senshi Gundam - Giren no Yabou - Tokubetsu Hen - Aoki Hoshi no Hasha - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kidou Senshi Gundam Seed",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action"
+    ]
+  },
+  {
+    "name": "Kidou Senshi Gundam Vol. 1 - Side 7",
+    "players": 1,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kidousenshigundamvol1side7wscolorhiresscans/Kidou Senshi Gundam Vol. 1 - Side 7 - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kidou Senshi Gundam Vol. 2 - Jaburo",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kidousenshigundamvol2jaburowscolorhiresscans/Kidou Senshi Gundam Vol. 2 - Jaburo - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kidou Senshi Gundam Vol. 3 - A Baoa Qu",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/kidousenshigundamvol.3abaoaqurawmanualscans/Kidou Senshi Gundam Vol. 3 - A Baoa Qu - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Kinnikuman II-Sei - Choujin Seisenshi",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Kinnikuman II-Sei - Dream Tag Match",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Sports"
+    ]
+  },
+  {
+    "name": "Kurupara!",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Last Alive",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/lastalivewscolorhiresscans/Last Alive - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Makai Toushi Sa-Ga",
+    "players": 1,
+    "rating": 1.0,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Meitantei Conan - Yuugure no Oujo",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/meitanteiconanyuugurenooujowscolorhirescans/Meitantei Conan - Yuugure no Oujo - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Memories Off - Festa",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  {
+    "name": "Mikeneko Holmes - Ghost Panic",
+    "players": 1,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mikenekoholmesghostpanicwscolorhiresscans/Mikeneko Holmes - Ghost Panic - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Mr. Driller",
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/mr.drillerwscolorhiresscans/Mr. Driller - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "NAVI GET 400 Million"
+  },
+  {
+    "name": "Namco Super Wars",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/namcosuperwarswscolorhiresscans/Namco Super Wars - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Naruto - Konoha Ninpouchou",
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Pocket no Naka no Doraemon",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "RUN=DIM - Return to Earth",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  {
+    "name": "Raku Jongg",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game",
+      "Puzzle-Game / Fall"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/rakujongwscolorhiresscans/Raku Jongg - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Rhyme Rider Kerorican",
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Music and Dance",
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Riviera - Yakusoku no Chi Riviera",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Rockman EXE - N1 Battle",
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "Rockman EXE WS",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Platform"
+    ]
+  },
+  {
+    "name": "Romancing Sa-Ga",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/romancingsagawscolorhiresscans/Romancing Sa-Ga - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "SD Gundam - Operation U.C.",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Shooter",
+      "Shooter / Vertical"
+    ]
+  },
+  {
+    "name": "SD Gundam Eiyuu Den - Kishi Densetsu",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  {
+    "name": "SD Gundam Eiyuu Den - Musha Densetsu",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/sdgundameiyuudenmushadensetsuwscolorhiresscans/SD Gundam Eiyuu Den - Musha Densetsu - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "SD Gundam G Generation - Gather Beat 2",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "SD Gundam G Generation - Mono-Eye Gundams",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  {
+    "name": "Saint Seiya - Ougon Densetsu Hen - Perfect Edition",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Beat'em Up",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/saintseiyaougondensetsuhenperfecteditionwscolorhirresscans/Saint Seiya - Ougon Densetsu Hen - Perfect Edition - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Senkaiden Ni - TV Animation Senkaiden Houshin Engi Yori",
+    "players": 1,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/senkaidennisenkaidenhoushinengiyoriwscolorhiresscans/Senkaiden Ni - TV Animation Senkaiden Houshin Engi Yori - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Shaman King - Asu e no Ishi",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/shamankingasuenoishiwscolorhiresscans/Shaman King - Asu e no Ishi - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Sorobang",
+    "players": 1,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/sorobanguwscolorhiresscans/Soroban Gu - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Star Hearts - Hoshi to Daichi no Shisha",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/starheartshoshitodaichinoshishawscolorhiresscans/Star Hearts - Hoshi to Daichi no Shisha - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact 3",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompact3wscolorhiresscans/Super Robot Taisen Compact 3 - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Super Robot Taisen Compact for WonderSwan Color",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/superrobottaisencompactwscolorhiresscans/Super Robot Taisen Compact for WonderSwan Color - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Terrors 2",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Adventure",
+      "Fight"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/terrors2wscolorhiresscans/Terrors 2 - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Tetris",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  {
+    "name": "Tonpuusou",
+    "players": 2,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong"
+    ]
+  },
+  {
+    "name": "Uchuu Senkan Yamato",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/uchuusenkanyamatowscolorhiresscans/Uchuu Senkan Yamato - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Ultraman - Hikari no Kuni no Shisha",
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Fight",
+      "Fight / 2D"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/ultramanhikarinokuninoshishawscolorhiresscans/Ultraman - Hikari no Kuni no Shisha - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wild Card",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wildcardwscolorhiresscans/Wild Card - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "With You - Mitsumete Itai",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/withyoumitsumeteitaiwscolorhiresscans/With You - Mitsumete Itai - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wizardry Scenario 1 - Proving Grounds of the Mad Overlord",
+    "players": 1,
+    "rating": 1.0,
+    "genres": [
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/wizardryscenario1wscolorhiresscans/Wizardry Scenario 1 - Proving Grounds of the Mad Overlord - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wonder Classic",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Puzzle-Game",
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  {
+    "name": "X - Card of Fate",
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/xcardoffatewscolorhiresscans/X - Card of Fate - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "XI Little",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/xilittlewscolorhiresscans/XI Little - Manual.pdf"
+      }
+    ]
+  },
+  {
+    "name": "mama Mitte"
+  }
+]

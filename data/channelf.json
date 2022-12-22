@@ -1,234 +1,665 @@
-{
-    "Alien Invasion": {
-        "genres": [
-            "Shooter",
-            "Shooter / Space Invaders Like",
-            "Shoot'em Up",
-            "Shoot'em up / Vertical",
-            "Action"
+[
+  {
+    "name": "Alien Invasion",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical",
+      "Shooter",
+      "Shooter / Space Invaders Like"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Backgammon, Acey-Deucey": {
-        "genres": [
-            "Board game",
-            "Strategy"
+        "url": "https://channelf.se/gallery/txt/videocart26.txt"
+      }
+    ]
+  },
+  {
+    "name": "Backgammon, Acey-Deucey",
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Board game",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "Baseball": {
-        "genres": [
-            "Sports / Baseball",
-            "Sports"
+        "url": "https://channelf.se/gallery/txt/saba09.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.35
-    },
-    "Bowling": {
-        "genres": [
-            "Sports / Bowling",
-            "Sports"
+        "url": "https://channelf.se/gallery/txt/videocart11.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Casino Poker": {
-        "genres": [
-            "Casino",
-            "Playing cards",
-            "Casino / Cards"
+        "url": "https://channelf.se/gallery/txt/luxor10.txt"
+      }
+    ]
+  },
+  {
+    "name": "Baseball",
+    "players": 2,
+    "rating": 0.35,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Checkers": {
-        "genres": [
-            "Board game",
-            "Strategy"
+        "url": "https://channelf.se/gallery/txt/saba10.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": 0.7
-    },
-    "Demonstration Cartridge": {
-        "genres": [
-            "Demo"
+        "url": "https://channelf.se/gallery/txt/videocart12.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Demonstration Cartridge 2": {
-        "genres": [
-            "Demo"
+        "url": "https://channelf.se/gallery/txt/luxor12.txt"
+      }
+    ]
+  },
+  {
+    "name": "Bowling",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Bowling"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Desert Fox, Shooting Gallery": {
-        "genres": [
-            "Action"
+        "url": "https://channelf.se/gallery/txt/saba18.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Dodge It": {
-        "genres": [
-            "Sports",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/videocart21.txt"
+      }
+    ]
+  },
+  {
+    "name": "Casino Poker",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Casino",
+      "Casino / Cards",
+      "Playing cards"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Drag Race": {
-        "genres": [
-            "Race",
-            "Driving"
+        "url": "https://channelf.se/gallery/txt/videocart25.txt"
+      }
+    ]
+  },
+  {
+    "name": "Checkers",
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Board game",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Galactic Space Wars, Lunar Lander": {
-        "genres": [
-            "Action"
+        "url": "https://channelf.se/gallery/txt/videocart19.txt"
+      }
+    ]
+  },
+  {
+    "name": "Demonstration Cartridge",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Demo"
+    ]
+  },
+  {
+    "name": "Demonstration Cartridge 2",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Demo"
+    ]
+  },
+  {
+    "name": "Desert Fox, Shooting Gallery",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Hangman": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://channelf.se/gallery/txt/saba02.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.8
-    },
-    "Magic Numbers - Mind Reader + Nim": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://channelf.se/gallery/txt/videocart02.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Math Quiz I - Addition + Subtraction": {
-        "genres": [
-            "Educational"
+        "url": "https://channelf.se/gallery/txt/luxor02.txt"
+      }
+    ]
+  },
+  {
+    "name": "Dodge It",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 1,
-        "rating": 0.45
-    },
-    "Math Quiz II - Multiplication + Division": {
-        "genres": [
-            "Educational"
+        "url": "https://channelf.se/gallery/txt/saba14.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": 0.5
-    },
-    "Maze, Jailbreak, Blind-man's-bluff, Trailblazer": {
-        "genres": [
-            "Action / Labyrinth",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/videocart16.txt"
+      }
+    ]
+  },
+  {
+    "name": "Drag Race",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.3
-    },
-    "Memory Match 1 & 2": {
-        "genres": [
-            "Puzzle-Game"
+        "url": "https://channelf.se/gallery/txt/saba07.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Pinball Challenge": {
-        "genres": [
-            "Action / Breakout games",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/videocart09.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Pro Football": {
-        "genres": [
-            "Sports / Football",
-            "Sports"
+        "url": "https://channelf.se/gallery/txt/luxor09.txt"
+      }
+    ]
+  },
+  {
+    "name": "Galactic Space Wars, Lunar Lander",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Robot War, Torpedo Alley": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Vertical",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/saba19.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.6
-    },
-    "Schach": {
-        "genres": [
-            "Board game"
+        "url": "https://channelf.se/gallery/txt/videocart23.txt"
+      }
+    ]
+  },
+  {
+    "name": "Hangman",
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 1,
-        "rating": 0.8
-    },
-    "Slot Machine": {
-        "genres": [
-            "Casino / Slot machine",
-            "Casino",
-            "Simulation"
+        "url": "https://channelf.se/gallery/txt/saba16.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 1,
-        "rating": 0.2
-    },
-    "Sonar Search": {
-        "genres": [
-            "Strategy"
+        "url": "https://channelf.se/gallery/txt/videocart18.txt"
+      }
+    ]
+  },
+  {
+    "name": "Magic Numbers - Mind Reader + Nim",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
         ],
-        "players": 2,
-        "rating": 0.7
-    },
-    "Space War": {
-        "genres": [
-            "Shoot'em Up",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/saba06.txt"
+      },
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.4
-    },
-    "Spitfire": {
-        "genres": [
-            "Shooter",
-            "Shooter / Plane",
-            "3rd person",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/videocart08.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 2,
-        "rating": 0.45
-    },
-    "Tic-Tac-Toe, Shooting Gallery, Doodle, Quadra-Doodle": {
-        "genres": [
-            "Casual Game",
-            "Strategy",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/luxor08.txt"
+      }
+    ]
+  },
+  {
+    "name": "Math Quiz I - Addition + Subtraction",
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.75
-    },
-    "Video Blackjack": {
-        "genres": [
-            "Casino / Cards",
-            "Casino",
-            "Strategy"
+        "url": "https://channelf.se/gallery/txt/videocart06.txt"
+      },
+      {
+        "languages": [
+          "sv"
         ],
-        "players": 2,
-        "rating": 0.5
-    },
-    "Video Whizball": {
-        "genres": [
-            "Shoot'em Up",
-            "Shoot'em up / Horizontal",
-            "Action"
+        "url": "https://channelf.se/gallery/txt/luxor06.txt"
+      }
+    ]
+  },
+  {
+    "name": "Math Quiz II - Multiplication + Division",
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Educational"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
         ],
-        "players": 2,
-        "rating": 0.7
-    }
-}
+        "url": "https://channelf.se/gallery/txt/videocart07.txt"
+      }
+    ]
+  },
+  {
+    "name": "Maze, Jailbreak, Blind-man's-bluff, Trailblazer",
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba08.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart10.txt"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor10.txt"
+      }
+    ]
+  },
+  {
+    "name": "Memory Match 1 & 2",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba13.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart15.txt"
+      }
+    ]
+  },
+  {
+    "name": "Pinball Challenge",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Action / Breakout games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba15.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart17.txt"
+      }
+    ]
+  },
+  {
+    "name": "Pro Football",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Sports",
+      "Sports / Football"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart24.txt"
+      }
+    ]
+  },
+  {
+    "name": "Robot War, Torpedo Alley",
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba11.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart13.txt"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor13.html"
+      }
+    ]
+  },
+  {
+    "name": "Schach",
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Board game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba20.txt"
+      }
+    ]
+  },
+  {
+    "name": "Slot Machine",
+    "players": 1,
+    "rating": 0.2,
+    "genres": [
+      "Casino",
+      "Casino / Slot machine",
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart22.txt"
+      }
+    ]
+  },
+  {
+    "name": "Sonar Search",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba12.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart14.txt"
+      }
+    ]
+  },
+  {
+    "name": "Space War",
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba05.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart05.txt"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor05.txt"
+      }
+    ]
+  },
+  {
+    "name": "Spitfire",
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "3rd person",
+      "Action",
+      "Shooter",
+      "Shooter / Plane"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba04.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart04.txt"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor04.txt"
+      }
+    ]
+  },
+  {
+    "name": "Tic-Tac-Toe, Shooting Gallery, Doodle, Quadra-Doodle",
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Casual Game",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba01.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/images/VC01ins.pdf"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor01.txt"
+      }
+    ]
+  },
+  {
+    "name": "Video Blackjack",
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Casino",
+      "Casino / Cards",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba03.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Videocart-3_1976_Fairchild/Videocart-3_1976_Fairchild.pdf"
+      },
+      {
+        "languages": [
+          "sv"
+        ],
+        "url": "https://channelf.se/gallery/txt/luxor03.txt"
+      }
+    ]
+  },
+  {
+    "name": "Video Whizball",
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://channelf.se/gallery/txt/saba17.txt"
+      },
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://channelf.se/gallery/txt/videocart20.txt"
+      }
+    ]
+  }
+]
