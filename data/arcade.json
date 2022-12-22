@@ -227,7 +227,10 @@
     "name": "2mindril"
   },
   {
-    "name": "2spicy"
+    "name": "2spicy",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "30test"
@@ -873,7 +876,10 @@
     "name": "a5120"
   },
   {
-    "name": "a51site4"
+    "name": "a51site4",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "a5200"
@@ -991,7 +997,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "abc1600"
@@ -1768,7 +1777,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "al8800bt"
@@ -1865,7 +1877,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "alienar",
@@ -2226,7 +2241,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "americna"
@@ -2539,7 +2557,10 @@
     }
   },
   {
-    "name": "aplatoon"
+    "name": "aplatoon",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "aplcd150"
@@ -3038,7 +3059,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "arcadian",
@@ -3087,7 +3111,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "area51mx",
@@ -3102,7 +3129,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "arescue",
@@ -3626,7 +3656,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "ataxx",
@@ -3641,7 +3674,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "atehate",
@@ -4294,7 +4330,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bangball",
@@ -4906,7 +4945,10 @@
     "name": "bbcmc"
   },
   {
-    "name": "bbh"
+    "name": "bbh",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bbh2sp",
@@ -4917,6 +4959,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbh2sp.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -4928,6 +4973,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhcotw.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -4939,6 +4987,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhsc.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -4952,7 +5003,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "bbonk",
@@ -4976,7 +5030,10 @@
     "name": "bbtime"
   },
   {
-    "name": "bbust2"
+    "name": "bbust2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bbusters",
@@ -4991,7 +5048,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bcclimbr"
@@ -5139,7 +5199,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "beezerk"
@@ -5154,7 +5217,10 @@
     "name": "bejpoker"
   },
   {
-    "name": "bel"
+    "name": "bel",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "belslots"
@@ -5381,7 +5447,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bigfghtr"
@@ -5724,7 +5793,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bking2",
@@ -5739,7 +5811,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bking3",
@@ -5754,7 +5829,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bkraidu"
@@ -6925,7 +7003,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bosco",
@@ -7028,7 +7109,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bowlrama",
@@ -7157,7 +7241,10 @@
     "name": "brasil93"
   },
   {
-    "name": "braveff"
+    "name": "braveff",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "brazil"
@@ -7349,7 +7436,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bsmt2000"
@@ -7512,7 +7602,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "bubl2000",
@@ -7713,7 +7806,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "bultrman"
@@ -8352,7 +8448,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "captcomm",
@@ -8429,6 +8528,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnevil.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -8455,6 +8557,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnking.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -8796,7 +8901,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "ccclass"
@@ -9347,7 +9455,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "champwr",
@@ -9611,7 +9722,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "chicgum"
@@ -9638,7 +9752,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "chillicc"
@@ -10059,17 +10176,26 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/claybust.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
-    "name": "claychal"
+    "name": "claychal",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "claypign",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "clayshoo",
@@ -10166,7 +10292,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "clowns",
@@ -10499,7 +10628,10 @@
     }
   },
   {
-    "name": "cobrata"
+    "name": "cobrata",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "cocean1a"
@@ -10669,7 +10801,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "combatsc",
@@ -10951,7 +11086,10 @@
     "name": "concstd"
   },
   {
-    "name": "confmiss"
+    "name": "confmiss",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "congo",
@@ -11104,7 +11242,10 @@
     }
   },
   {
-    "name": "cops"
+    "name": "cops",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "copsnrob",
@@ -11278,7 +11419,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "couple"
@@ -11510,7 +11654,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "craft"
@@ -11656,10 +11803,16 @@
     }
   },
   {
-    "name": "crimep2"
+    "name": "crimep2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "crimepat"
+    "name": "crimepat",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "crimfght",
@@ -11691,6 +11844,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/critcrsh.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -11709,13 +11865,22 @@
     }
   },
   {
-    "name": "crmaze"
+    "name": "crmaze",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
-    "name": "crmaze2"
+    "name": "crmaze2",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
-    "name": "crmaze3"
+    "name": "crmaze3",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "croquis",
@@ -11747,7 +11912,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "croupier"
@@ -11796,7 +11964,10 @@
     }
   },
   {
-    "name": "crszone"
+    "name": "crszone",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "crt9028_000"
@@ -11865,7 +12036,10 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "crysking",
@@ -12262,7 +12436,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 2
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "cubybop",
@@ -12540,7 +12717,10 @@
     }
   },
   {
-    "name": "cyclshtg"
+    "name": "cyclshtg",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "cyclwarr",
@@ -12793,7 +12973,10 @@
     "emulation": {
       "emulator": "lr-mame0222",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "dangseed",
@@ -13231,7 +13414,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ddayjlc",
@@ -13268,7 +13454,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "ddealer",
@@ -13526,7 +13715,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "ddungeon",
@@ -13595,7 +13787,10 @@
     "name": "dealracl"
   },
   {
-    "name": "deathcox"
+    "name": "deathcox",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "deathrac"
@@ -13665,7 +13860,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "defender",
@@ -13876,7 +14074,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "desertwr",
@@ -14089,7 +14290,10 @@
     }
   },
   {
-    "name": "dhunting"
+    "name": "dhunting",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "di4ever"
@@ -15155,7 +15359,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "dragntr"
@@ -15722,6 +15929,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/duckhunt.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -15745,7 +15955,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "dunksunk"
@@ -15849,7 +16062,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "dynabomb",
@@ -16021,7 +16237,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "ebaskb2"
@@ -16204,7 +16423,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "egret"
@@ -16717,7 +16939,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "esbattle"
@@ -16891,6 +17116,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/evilngt.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -17478,7 +17706,10 @@
     "name": "fashiong"
   },
   {
-    "name": "fastdraw"
+    "name": "fastdraw",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "fastdrwp"
@@ -17626,7 +17857,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "fbcrazy"
@@ -18124,7 +18358,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "firedan"
@@ -19226,7 +19463,10 @@
     "name": "fzeroaxm"
   },
   {
-    "name": "g13jnc"
+    "name": "g13jnc",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "g13knd",
@@ -19241,7 +19481,10 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 2
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "g4u2"
@@ -19478,7 +19721,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "galgame3",
@@ -19493,14 +19739,20 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "galgame4",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "galhustl"
@@ -19533,7 +19785,10 @@
     "name": "gallag50"
   },
   {
-    "name": "gallgall"
+    "name": "gallgall",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "galmedes",
@@ -19883,7 +20138,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "gauntdl",
@@ -19920,7 +20178,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "gaxeduel",
@@ -20026,7 +20287,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gdigdug"
@@ -20227,7 +20491,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "ggisuka"
@@ -20284,7 +20551,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ghoshunt",
@@ -20299,7 +20569,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ghostb",
@@ -20332,10 +20605,16 @@
     }
   },
   {
-    "name": "ghostsev"
+    "name": "ghostsev",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "ghostsqu"
+    "name": "ghostsqu",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ghouls",
@@ -20442,7 +20721,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "gimeabrk",
@@ -20457,7 +20739,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gimix"
@@ -21138,7 +21423,10 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 2
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gollygho",
@@ -21153,7 +21441,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gomoku",
@@ -21524,7 +21815,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "greenber",
@@ -21555,7 +21849,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gridlee",
@@ -21570,7 +21867,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "grindstm",
@@ -21668,7 +21968,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "grtesoro"
@@ -21823,7 +22126,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gt3d",
@@ -21838,7 +22144,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gt5"
@@ -21871,7 +22180,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gt98",
@@ -21886,7 +22198,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gt99",
@@ -21901,7 +22216,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gtbmcx"
@@ -21919,7 +22237,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gtfore01",
@@ -22005,7 +22326,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "gticlub",
@@ -22252,17 +22576,26 @@
     }
   },
   {
-    "name": "gunblade"
+    "name": "gunblade",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gunbustr",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "gunchamp"
+    "name": "gunchamp",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gundamex",
@@ -22392,7 +22725,10 @@
     "name": "gunman"
   },
   {
-    "name": "gunmania"
+    "name": "gunmania",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gunmast",
@@ -22453,7 +22789,10 @@
     }
   },
   {
-    "name": "gunsur2"
+    "name": "gunsur2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "gunwars"
@@ -22723,7 +23062,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "hanaawas",
@@ -23600,7 +23942,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "hitpoker"
@@ -23712,6 +24057,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/hogalley.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -23788,7 +24136,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "hoops96",
@@ -23866,10 +24217,16 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
-    "name": "hostinv"
+    "name": "hostinv",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "hotbi13p"
@@ -23903,16 +24260,28 @@
     "name": "hotchili"
   },
   {
-    "name": "hotd"
+    "name": "hotd",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "hotd2"
+    "name": "hotd2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "hotd3"
+    "name": "hotd3",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "hotd4"
+    "name": "hotd4",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "hotdebut",
@@ -23922,7 +24291,10 @@
     }
   },
   {
-    "name": "hotdex"
+    "name": "hotdex",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "hotdogst",
@@ -24584,7 +24956,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "hyperv2a"
@@ -25340,7 +25715,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 3
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "invcarht"
@@ -26155,7 +26533,10 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "jdreddp",
@@ -26287,7 +26668,10 @@
     }
   },
   {
-    "name": "jnero"
+    "name": "jnero",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "jngolady",
@@ -26544,10 +26928,16 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "jpark3"
+    "name": "jpark3",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "jparkmb"
@@ -27253,7 +27643,10 @@
     "name": "kd2001"
   },
   {
-    "name": "kdeadeye"
+    "name": "kdeadeye",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "kdribble"
@@ -28670,7 +29063,10 @@
     }
   },
   {
-    "name": "lamachin"
+    "name": "lamachin",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "landbrk",
@@ -28802,7 +29198,10 @@
     "name": "lastbank"
   },
   {
-    "name": "lastbh"
+    "name": "lastbh",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lastblad",
@@ -29091,7 +29490,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "leader"
@@ -29213,7 +29615,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "lemnangl"
@@ -29264,7 +29669,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lethalj",
@@ -29279,7 +29687,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lethalth",
@@ -29297,7 +29708,10 @@
     }
   },
   {
-    "name": "letsgoju"
+    "name": "letsgoju",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "levers",
@@ -29340,7 +29754,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lgp"
@@ -29589,7 +30006,10 @@
     "name": "lnw80"
   },
   {
-    "name": "lockload"
+    "name": "lockload",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lockon",
@@ -29668,7 +30088,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "logger",
@@ -29743,7 +30166,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lordleo"
@@ -29767,7 +30193,10 @@
     }
   },
   {
-    "name": "lostwsga"
+    "name": "lostwsga",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lotlot",
@@ -29890,16 +30319,25 @@
     }
   },
   {
-    "name": "lsrquiz"
+    "name": "lsrquiz",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "lsrquiz2"
   },
   {
-    "name": "lsrquiz2i"
+    "name": "lsrquiz2i",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "lsrquizg"
+    "name": "lsrquizg",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ltcasin2"
@@ -30007,7 +30445,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "luctoday"
@@ -30046,7 +30487,10 @@
     }
   },
   {
-    "name": "lupinsho"
+    "name": "lupinsho",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "luptype"
@@ -30822,7 +31266,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "machdrum"
@@ -30999,13 +31446,22 @@
     }
   },
   {
-    "name": "maddog"
+    "name": "maddog",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "maddog2"
+    "name": "maddog2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "maddog22"
+    "name": "maddog22",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "maddonna",
@@ -31401,7 +31857,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "malzak"
@@ -31454,7 +31913,10 @@
     }
   },
   {
-    "name": "manicpnc"
+    "name": "manicpnc",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "manohman"
@@ -31506,7 +31968,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "marblmd2",
@@ -31536,7 +32001,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "mariner",
@@ -31642,7 +32110,10 @@
     }
   },
   {
-    "name": "marvice"
+    "name": "marvice",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "marvice100hz"
@@ -31767,7 +32238,10 @@
     "name": "mathmarv"
   },
   {
-    "name": "mating"
+    "name": "mating",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "matmania",
@@ -31845,7 +32319,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "maxidbl"
@@ -31983,7 +32460,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "mazinger",
@@ -32055,7 +32535,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "mbs2euro"
@@ -32234,7 +32717,10 @@
     "name": "md2"
   },
   {
-    "name": "md23do"
+    "name": "md23do",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "md6802"
@@ -32285,7 +32771,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "medlanes",
@@ -33269,7 +33758,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "miniscc"
@@ -33362,7 +33854,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "missilex"
@@ -34061,7 +34556,10 @@
     "name": "mohicans"
   },
   {
-    "name": "mok"
+    "name": "mok",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "mole",
@@ -36281,14 +36779,20 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "nbajamex",
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "nbajamte",
@@ -36303,7 +36807,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "nbamht",
@@ -36992,7 +37499,10 @@
     }
   },
   {
-    "name": "ninjaslt"
+    "name": "ninjaslt",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ninjaw",
@@ -37459,7 +37969,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "nsub",
@@ -37584,7 +38097,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "nyjoker"
@@ -37617,7 +38133,10 @@
     "name": "ob68k1a"
   },
   {
-    "name": "oceanhun"
+    "name": "oceanhun",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ochaken"
@@ -37865,7 +38384,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "onetwo",
@@ -37944,6 +38466,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/optiger.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -37959,7 +38484,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "opwolf3",
@@ -37974,7 +38502,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "orangec",
@@ -38194,7 +38725,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "otomedius"
@@ -38385,10 +38919,16 @@
     "name": "p8000"
   },
   {
-    "name": "p911"
+    "name": "p911",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "p9112"
+    "name": "p9112",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "pa7246"
@@ -38861,7 +39401,10 @@
     "name": "patinho"
   },
   {
-    "name": "patocar"
+    "name": "patocar",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "pb1000"
@@ -38900,7 +39443,10 @@
     }
   },
   {
-    "name": "pballpup"
+    "name": "pballpup",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "pbancho",
@@ -39325,6 +39871,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_duckh.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -39402,6 +39951,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_hgaly.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -39616,7 +40168,10 @@
     ]
   },
   {
-    "name": "pc_wgnmn"
+    "name": "pc_wgnmn",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "pc_ynoid",
@@ -41907,14 +42462,20 @@
     "name": "polgar"
   },
   {
-    "name": "policet2"
+    "name": "policet2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "policetr",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "pollux",
@@ -42222,7 +42783,10 @@
     }
   },
   {
-    "name": "popshot"
+    "name": "popshot",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "popspops",
@@ -42296,7 +42860,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "pow",
@@ -42464,7 +43031,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "pr100"
@@ -42543,7 +43113,10 @@
     }
   },
   {
-    "name": "primevah"
+    "name": "primevah",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "primglex",
@@ -42792,7 +43365,10 @@
     "name": "psarc95"
   },
   {
-    "name": "psattack"
+    "name": "psattack",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "psi98"
@@ -42978,7 +43554,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ptblank2",
@@ -42993,10 +43572,16 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "ptblank3"
+    "name": "ptblank3",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ptrain"
@@ -43919,7 +44504,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "quaquiz2"
@@ -44831,7 +45419,10 @@
     }
   },
   {
-    "name": "rambo"
+    "name": "rambo",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rambo3",
@@ -44846,7 +45437,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rampage",
@@ -44876,13 +45470,19 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "ramtek3"
   },
   {
-    "name": "rangrmsn"
+    "name": "rangrmsn",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rapfire5"
@@ -44903,7 +45503,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rapidrvr"
@@ -45118,7 +45721,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rchase2",
@@ -45129,6 +45735,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/rchase2.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -45213,7 +45822,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "reaktor",
@@ -45555,7 +46167,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "rex6000"
@@ -50291,7 +50906,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "sgunner2",
@@ -50306,7 +50924,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "sh4robot"
@@ -50655,7 +51276,10 @@
     }
   },
   {
-    "name": "shootaw2"
+    "name": "shootaw2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "shootbul",
@@ -50670,7 +51294,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "shootgal",
@@ -50685,7 +51312,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "shootopl"
@@ -50716,7 +51346,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "shors2k1"
@@ -50764,7 +51397,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "showhand"
@@ -50801,7 +51437,10 @@
     }
   },
   {
-    "name": "sht3do"
+    "name": "sht3do",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "shtngmst",
@@ -50812,6 +51451,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/shtngmst.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -50840,7 +51482,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "shufshot",
@@ -50855,7 +51500,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "shuriboy"
@@ -50888,7 +51536,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "si5500"
@@ -51084,7 +51735,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "simultano"
@@ -51139,7 +51793,10 @@
     "name": "skattv"
   },
   {
-    "name": "skeetsht"
+    "name": "skeetsht",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "skichamp"
@@ -51253,7 +51910,10 @@
     }
   },
   {
-    "name": "skychal"
+    "name": "skychal",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "skychut",
@@ -51517,7 +52177,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "sliver",
@@ -51754,7 +52417,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "snapjack",
@@ -51820,7 +52486,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "snowbro3",
@@ -51914,7 +52583,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "soccernw"
@@ -52107,7 +52779,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "sonic2mb"
@@ -52423,7 +53098,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "spaceint",
@@ -52471,7 +53149,10 @@
     }
   },
   {
-    "name": "spacepir"
+    "name": "spacepir",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "spaceskr",
@@ -52824,7 +53505,10 @@
     }
   },
   {
-    "name": "specfrce"
+    "name": "specfrce",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "special"
@@ -53166,7 +53850,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "spielbud"
@@ -53190,7 +53877,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "spinlbrk",
@@ -53434,7 +54124,10 @@
     "name": "sprtjam"
   },
   {
-    "name": "sprtshot"
+    "name": "sprtshot",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "spset005"
@@ -53691,16 +54384,28 @@
     "name": "ss2005"
   },
   {
-    "name": "sscope"
+    "name": "sscope",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "sscope2"
+    "name": "sscope2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "sscopefh"
+    "name": "sscopefh",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "sscopex"
+    "name": "sscopex",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ssensor4"
@@ -53774,10 +54479,16 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "sshot"
+    "name": "sshot",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "ssi",
@@ -54015,7 +54726,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "ssrj",
@@ -54241,7 +54955,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "starcas",
@@ -54507,7 +55224,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "starwbc"
@@ -54557,7 +55277,10 @@
     }
   },
   {
-    "name": "ste"
+    "name": "ste",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "stealsee",
@@ -54750,7 +55473,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "stratgyx",
@@ -55403,7 +56129,10 @@
     }
   },
   {
-    "name": "supgoal"
+    "name": "supgoal",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "supjolly"
@@ -55783,7 +56512,10 @@
     }
   },
   {
-    "name": "swclone"
+    "name": "swclone",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "swcourt",
@@ -56005,7 +56737,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "szaxxon",
@@ -56349,7 +57084,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tarzan"
@@ -56711,7 +57449,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "teetert",
@@ -56932,7 +57673,10 @@
     "name": "teot"
   },
   {
-    "name": "terabrst"
+    "name": "terabrst",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "terak"
@@ -56950,7 +57694,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "terracre",
@@ -57374,7 +58121,10 @@
     ]
   },
   {
-    "name": "thunderh"
+    "name": "thunderh",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "thunderj",
@@ -57588,7 +58338,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tictac",
@@ -57606,7 +58359,10 @@
     }
   },
   {
-    "name": "tierras100hz"
+    "name": "tierras100hz",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tigerh",
@@ -57701,16 +58457,28 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/timecris.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
-    "name": "timecrs2"
+    "name": "timecrs2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "timecrs3"
+    "name": "timecrs3",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "timecrs4"
+    "name": "timecrs4",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "timecrsa"
@@ -58118,7 +58886,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "tmnt2",
@@ -58133,13 +58904,19 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "tmntbftc"
   },
   {
-    "name": "tmntmutm"
+    "name": "tmntmutm",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tmntpdc"
@@ -58691,6 +59468,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/totlvice.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -59041,6 +59821,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/triplhnt.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -59074,7 +59857,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "tritreat"
@@ -59294,7 +60080,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "trpdlght"
@@ -59609,7 +60398,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tsjam"
@@ -59864,7 +60656,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "turnover"
@@ -59939,7 +60734,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "tv21"
@@ -60529,7 +61327,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "unclepoo",
@@ -60554,7 +61355,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "uni800"
@@ -60773,7 +61577,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "usg182"
@@ -60904,21 +61711,30 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "v4cmaze2",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "v4cmaze3",
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "v4cshinf"
@@ -60936,7 +61752,10 @@
     "name": "v4eyedwn"
   },
   {
-    "name": "v4frfact"
+    "name": "v4frfact",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "v4gldrsh"
@@ -60945,7 +61764,10 @@
     "name": "v4in1eg"
   },
   {
-    "name": "v4mate"
+    "name": "v4mate",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "v4mazbel"
@@ -61286,16 +62108,28 @@
     "name": "vcircle"
   },
   {
-    "name": "vcombat"
+    "name": "vcombat",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "vcop"
+    "name": "vcop",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "vcop2"
+    "name": "vcop2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "vcop3"
+    "name": "vcop3",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vcs80"
@@ -61346,7 +62180,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "venetian"
@@ -61804,7 +62641,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "viprp1",
@@ -61892,7 +62732,10 @@
     }
   },
   {
-    "name": "vnight"
+    "name": "vnight",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vo5850pm"
@@ -61947,7 +62790,10 @@
     "name": "votrtnt"
   },
   {
-    "name": "voyager"
+    "name": "voyager",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vp122"
@@ -62104,7 +62950,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vsexcitebike",
@@ -62114,14 +62963,20 @@
     }
   },
   {
-    "name": "vsfdf"
+    "name": "vsfdf",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vsfreedomforce",
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vsfrombelow",
@@ -62159,6 +63014,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vsgshoe.pdf"
       }
+    ],
+    "tags": [
+      "Lightgun"
     ]
   },
   {
@@ -62166,14 +63024,20 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vshogansalley",
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "vshoot",
@@ -62910,10 +63774,16 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
-    "name": "wcbowldx"
+    "name": "wcbowldx",
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "wccf116"
@@ -62943,7 +63813,10 @@
     "name": "wcherry"
   },
   {
-    "name": "wcombat"
+    "name": "wcombat",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "wcougar"
@@ -63125,7 +63998,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "whousetc"
@@ -63199,7 +64075,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "wildways"
@@ -63893,7 +64772,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "wseries",
@@ -63926,7 +64808,10 @@
     }
   },
   {
-    "name": "wsjr"
+    "name": "wsjr",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "wstrike"
@@ -64315,7 +65200,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Party"
+    ]
   },
   {
     "name": "xmultipl",
@@ -64381,7 +65269,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Trackball"
+    ]
   },
   {
     "name": "xtide"
@@ -64396,10 +65287,16 @@
     "name": "xtrial"
   },
   {
-    "name": "xtrmhnt2"
+    "name": "xtrmhnt2",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
-    "name": "xtrmhunt"
+    "name": "xtrmhunt",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "xxmissio",
@@ -64759,7 +65656,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "zeropnt2",
@@ -64774,7 +65674,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "zeroteam",
@@ -64947,7 +65850,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "zombrvn"
@@ -65034,7 +65940,10 @@
     "name": "zorrous"
   },
   {
-    "name": "zortonbr"
+    "name": "zortonbr",
+    "tags": [
+      "Lightgun"
+    ]
   },
   {
     "name": "zrt80"
