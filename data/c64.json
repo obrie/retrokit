@@ -245,16 +245,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/1942_Capcom_Disk_Pak_Captain_Commando_Series_Instructions_for_1942.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/1942_(1986_Elite_Systems_Ltd)_[951]/Extras/Instructions.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/1942_Capcom_Disk_Pak_Captain_Commando_Series_Instructions_for_1942.pdf"
       }
     ],
     "tags": [
@@ -654,6 +654,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Ace II (Europe).pdf"
+      },
+      {
+        "languages": [
           "es"
         ],
         "url": "https://archive.org/download/ace-2/ACE 2 es.pdf"
@@ -663,12 +669,6 @@
           "fr"
         ],
         "url": "https://archive.org/download/ace-2/ACE 2 fr.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Ace II (Europe).pdf"
       }
     ]
   },
@@ -1228,6 +1228,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Afterburner (USA).pdf"
+      },
+      {
+        "languages": [
           "es"
         ],
         "url": "https://archive.org/download/AfterBurnerES/After Burner (ES).pdf"
@@ -1239,12 +1245,6 @@
           "fr"
         ],
         "url": "https://archive.org/download/AfterBurnerManual/After Burner (GB).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Afterburner (USA).pdf"
       }
     ]
   },
@@ -1799,6 +1799,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Altered Beast (USA).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
@@ -1809,12 +1815,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Altered Beast (USA).pdf"
       }
     ],
     "tags": [
@@ -2451,20 +2451,20 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr"
-        ],
-        "url": "https://archive.org/download/Arkanoid_2_Revenge_of_Doh_1988_Imagine_Software/Arkanoid_2_Revenge_of_Doh_1988_Imagine_Software.pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Arkanoid - Revenge Of Doh/Arkanoid - Revenge of Doh Manual.cbz",
         "options": {
           "format": "cb7"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Arkanoid_2_Revenge_of_Doh_1988_Imagine_Software/Arkanoid_2_Revenge_of_Doh_1988_Imagine_Software.pdf"
       }
     ],
     "tags": [
@@ -2665,17 +2665,17 @@
       },
       {
         "languages": [
-          "en-gb",
-          "de"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/In80DaysAroundTheWorldeuropedisk1SideA.pdf"
-      },
-      {
-        "languages": [
           "en",
           "de"
         ],
         "url": "https://commodore.bombjack.org/commodore/games/In_80_Days_Around _The_World_(Alternate).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/In80DaysAroundTheWorldeuropedisk1SideA.pdf"
       }
     ],
     "tags": [
@@ -3872,21 +3872,21 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Batman - The Caped Crusader - Manual-DE-ENG-FR-IT.pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Batman - The Caped Crusader - Manual-ENG.pdf",
         "options": {
           "pages": "3-10"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Batman - The Caped Crusader - Manual-DE-ENG-FR-IT.pdf"
       }
     ],
     "tags": [
@@ -3903,12 +3903,13 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr",
-          "it"
+          "en"
         ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Batman - The Movie (Europe).pdf"
+        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Batman/Batman Manual.cbz",
+        "options": {
+          "format": "cb7",
+          "pages": "3-N"
+        }
       },
       {
         "languages": [
@@ -3918,13 +3919,12 @@
       },
       {
         "languages": [
-          "en"
+          "en-gb",
+          "de",
+          "fr",
+          "it"
         ],
-        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Batman/Batman Manual.cbz",
-        "options": {
-          "format": "cb7",
-          "pages": "3-N"
-        }
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Batman - The Movie (Europe).pdf"
       }
     ],
     "tags": [
@@ -3965,17 +3965,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Battle Command (Ocean) (Europe).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Battle_Command_1991_Ocean_a/Battle_Command_1991_Ocean_a.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Battle Command (Ocean) (Europe).pdf"
       }
     ],
     "tags": [
@@ -6109,13 +6109,9 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "es",
-          "fr",
-          "it"
+          "en"
         ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Bullys Sporting Darts - Manual-DE-ENG-FR-SP-IT.pdf"
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Sinclair_ZX_Spectrum/Manual/formated/Bully-s_Sporting_Darts_-_1992_-_Alternative_Software.htm"
       },
       {
         "languages": [
@@ -6125,9 +6121,13 @@
       },
       {
         "languages": [
-          "en"
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it"
         ],
-        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Sinclair_ZX_Spectrum/Manual/formated/Bully-s_Sporting_Darts_-_1992_-_Alternative_Software.htm"
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Bullys Sporting Darts - Manual-DE-ENG-FR-SP-IT.pdf"
       }
     ]
   },
@@ -7144,15 +7144,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Chase H.Q. (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Chase HQ/Chase HQ. Manual.cbz",
@@ -7160,6 +7151,15 @@
           "format": "cb7",
           "pages": "3-N"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Chase H.Q. (Europe).pdf"
       }
     ],
     "tags": [
@@ -7276,6 +7276,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Chiller_1984_Mastertronic/Chiller_1984_Mastertronic.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -7286,12 +7292,6 @@
         "options": {
           "format": "cb7"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Chiller_1984_Mastertronic/Chiller_1984_Mastertronic.pdf"
       }
     ],
     "tags": [
@@ -7922,6 +7922,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Comic Bakery (Europe).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -7931,12 +7937,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Comic Bakery (Europe).pdf"
       }
     ],
     "tags": [
@@ -8277,17 +8277,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "fr"
-        ],
-        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Cosmic Causeway - Trailblazer II/Cosmic Causeway - Trailblazer II Manual.cbz",
-        "options": {
-          "format": "cb7",
-          "pages": "3-N"
-        }
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/cctrail_manual/cctrail_manual.jpg"
@@ -8298,6 +8287,17 @@
           "de"
         ],
         "url": "https://archive.org/download/Commodore64Manuals/Cosmic Causeway II (USA) (Unl).pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Cosmic Causeway - Trailblazer II/Cosmic Causeway - Trailblazer II Manual.cbz",
+        "options": {
+          "format": "cb7",
+          "pages": "3-N"
+        }
       }
     ],
     "tags": [
@@ -10124,20 +10124,20 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Desolator (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Desolator/Desolator Manual.cbz",
         "options": {
           "format": "cb7"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Desolator (Europe).pdf"
       }
     ],
     "tags": [
@@ -10559,18 +10559,18 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Donald Duck's Playground (USA).pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Donald Duck's Playground/Donald Duck's Playground Manual.cbz",
         "options": {
           "format": "cb7"
         }
-      },
-      {
-        "languages": [
-          "de"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Donald Duck's Playground (USA).pdf"
       }
     ],
     "tags": [
@@ -10610,6 +10610,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Donkey Kong (Ocean) (Europe).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -10619,12 +10625,6 @@
           "format": "cb7",
           "pages": "2-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Donkey Kong (Ocean) (Europe).pdf"
       }
     ],
     "tags": [
@@ -10720,17 +10720,17 @@
     "manuals": [
       {
         "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/DoubleDragonIIES/Double Dragon II (ES).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Double_Dragon_II_The_Revenge_1989_Virgin_Mastertronic/Double_Dragon_II_The_Revenge_1989_Virgin_Mastertronic.pdf"
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/DoubleDragonIIES/Double Dragon II (ES).pdf"
       }
     ],
     "tags": [
@@ -11845,18 +11845,18 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Enigma Force (USA).pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Enigma Force/Enigma Force Manual.cbz",
         "options": {
           "format": "cb7"
         }
-      },
-      {
-        "languages": [
-          "de"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Enigma Force (USA).pdf"
       }
     ],
     "tags": [
@@ -12383,18 +12383,18 @@
     "manuals": [
       {
         "languages": [
-          "fr"
-        ],
-        "url": "http://lucasabandonware.free.fr/manuels/F-15 Strike Eagle.pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/F-15 Strike Eagle/F-15 Strike Eagle Manual.cbz",
         "options": {
           "format": "cb7"
         }
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "http://lucasabandonware.free.fr/manuels/F-15 Strike Eagle.pdf"
       }
     ],
     "tags": [
@@ -12961,13 +12961,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de"
-        ],
-        "url": "https://c64games.de/hugo.php?helpfiles=/f/fighting_warrior_anl.zip"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Fighting Warrior/Fighting Warrior Manual.cbz",
@@ -12975,6 +12968,13 @@
           "format": "cb7",
           "pages": "1,4-N,2"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://c64games.de/hugo.php?helpfiles=/f/fighting_warrior_anl.zip"
       }
     ],
     "tags": [
@@ -13225,17 +13225,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/firetrap_manual/firetrap_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/FireTrap (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/firetrap_manual/firetrap_manual.pdf"
       }
     ],
     "tags": [
@@ -14554,15 +14554,6 @@
         "languages": [
           "en-gb",
           "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Game Over (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en-gb",
-          "de",
           "it"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Game Over/Game Over Manual.cbz",
@@ -14570,6 +14561,15 @@
           "format": "cb7",
           "pages": "1,3-N,2"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Game Over (Europe).pdf"
       }
     ],
     "tags": [
@@ -14920,6 +14920,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/GauntletGameManualMindscapeInc.19851987/Gauntlet - Game Manual (Mindscape Inc.1985-1987).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -14929,12 +14935,6 @@
           "format": "cb7",
           "pages": "3-5"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/GauntletGameManualMindscapeInc.19851987/Gauntlet - Game Manual (Mindscape Inc.1985-1987).pdf"
       }
     ],
     "tags": [
@@ -14976,20 +14976,20 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Gauntlet II (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Gauntlet II/Gauntlet II Manual.cbz",
         "options": {
           "format": "cb7"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Gauntlet II (Europe).pdf"
       }
     ],
     "tags": [
@@ -16490,11 +16490,12 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr"
+          "en"
         ],
-        "url": "https://c64games.de/hugo.php?helpfiles=/h/hacker_anl.zip"
+        "url": "https://commodore.bombjack.org/commodore/games/Hacker_Binder.pdf",
+        "options": {
+          "pages": "1-3"
+        }
       },
       {
         "languages": [
@@ -16504,12 +16505,11 @@
       },
       {
         "languages": [
-          "en"
+          "en-gb",
+          "de",
+          "fr"
         ],
-        "url": "https://commodore.bombjack.org/commodore/games/Hacker_Binder.pdf",
-        "options": {
-          "pages": "1-3"
-        }
+        "url": "https://c64games.de/hugo.php?helpfiles=/h/hacker_anl.zip"
       }
     ],
     "tags": [
@@ -16714,16 +16714,16 @@
     "manuals": [
       {
         "languages": [
+          "fr"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Hard Drivin' -  Manual-FR.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "it"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Hard Drivin' (Europe).pdf"
-      },
-      {
-        "languages": [
-          "fr"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Hard Drivin' -  Manual-FR.pdf"
       }
     ]
   },
@@ -16790,15 +16790,15 @@
     "manuals": [
       {
         "languages": [
-          "fr"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Harrier Attack! (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/Harrier_Attack_1984_Durell_Software/Harrier_Attack_1984_Durell_Software.pdf"
+      },
+      {
+        "languages": [
+          "fr"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Harrier Attack! (Europe).pdf"
       }
     ],
     "tags": [
@@ -16994,6 +16994,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Heartland_(1986_Odin_Computer_Graphics)_[2798]/Extras/Inlay_back.jpg"
+      },
+      {
+        "languages": [
           "da",
           "de",
           "es",
@@ -17002,12 +17008,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Heartland (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Heartland_(1986_Odin_Computer_Graphics)_[2798]/Extras/Inlay_back.jpg"
       }
     ]
   },
@@ -18400,6 +18400,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/IkariWarriorsdataEastusa.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -18409,12 +18415,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/IkariWarriorsdataEastusa.pdf"
       }
     ],
     "tags": [
@@ -19224,15 +19224,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Italy 1990 (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Italy 1990/Italy 1990 Manual.cbz",
@@ -19246,6 +19237,15 @@
           "it"
         ],
         "url": "https://archive.org/download/Italy90SoccerC64/Italy '90 Soccer C64.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Italy 1990 (Europe).pdf"
       }
     ],
     "tags": [
@@ -19255,6 +19255,18 @@
   {
     "name": "Ivan 'Ironman' Stewart's Super Off Road",
     "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Ivan 'Ironman' Stewart's Super Off Road - Manual-ENG.pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Ivan 'Ironman' Stewart's Super Off Road - Manual-SP.pdf"
+      },
       {
         "languages": [
           "en-gb",
@@ -19267,18 +19279,6 @@
           "format": "cb7",
           "pages": "6-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Ivan 'Ironman' Stewart's Super Off Road - Manual-ENG.pdf"
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Ivan 'Ironman' Stewart's Super Off Road - Manual-SP.pdf"
       }
     ],
     "tags": [
@@ -20294,6 +20294,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Karnov_1988_Activision/Karnov_1988_Activision.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -20303,12 +20309,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Karnov_1988_Activision/Karnov_1988_Activision.pdf"
       }
     ],
     "tags": [
@@ -20406,18 +20406,18 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Kenny Dalglish Soccer Manager - Manual-DE.pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://c64games.de/hugo.php?helpfiles=/k/kenny_dalglish_soccer_manager_anl.zip",
         "options": {
           "filter": "*.rtf"
         }
-      },
-      {
-        "languages": [
-          "de"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Kenny Dalglish Soccer Manager - Manual-DE.pdf"
       }
     ]
   },
@@ -20526,15 +20526,15 @@
     "manuals": [
       {
         "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Kickman_1982_Commodore_Jp/Kickman_1982_Commodore_Jp.pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://commodore.bombjack.org/commodore/games/Kickman_(Cartridge).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Kickman_1982_Commodore_Jp/Kickman_1982_Commodore_Jp.pdf"
       }
     ]
   },
@@ -21801,16 +21801,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Legend_of_Kage_(1987_Imagine)_[4303]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Legend_of_Kage_(1987_Imagine)_[4303]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Legend_of_Kage_(1987_Imagine)_[4303]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -22996,6 +22996,12 @@
     "manuals": [
       {
         "languages": [
+          "it"
+        ],
+        "url": "https://archive.org/download/mazemania/Maze Mania.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de"
         ],
@@ -23004,12 +23010,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "it"
-        ],
-        "url": "https://archive.org/download/mazemania/Maze Mania.pdf"
       }
     ],
     "tags": [
@@ -23506,6 +23506,12 @@
     "manuals": [
       {
         "languages": [
+          "de"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/MicroProse Soccer - Manual-DE.pdf"
+      },
+      {
+        "languages": [
           "en"
         ],
         "url": "https://c64games.de/hugo.php?helpfiles=/m/microprose_soccer_anl.zip",
@@ -23518,12 +23524,6 @@
           "fr"
         ],
         "url": "https://archive.org/downloads/AtariSTManuals_201812/Microprose Soccer.pdf"
-      },
-      {
-        "languages": [
-          "de"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/MicroProse Soccer - Manual-DE.pdf"
       }
     ],
     "tags": [
@@ -24019,16 +24019,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Monte_Carlo_Casino_(1989_Codemasters)_[8131]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Monte_Carlo_Casino_(1989_Codemasters)_[8131]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Monte_Carlo_Casino_(1989_Codemasters)_[8131]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -24079,13 +24079,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Monty on the Run (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Monty On The Run/Monty On The Run Manual.cbz",
@@ -24093,6 +24086,13 @@
           "format": "cb7",
           "pages": "1,3,2"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Monty on the Run (Europe).pdf"
       }
     ],
     "tags": [
@@ -24623,16 +24623,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "http://www.digitpress.com/library/manuals/c64/muncher.txt"
+      },
+      {
+        "languages": [
           "en-gb",
           "de"
         ],
         "url": "https://c64games.de/hugo.php?helpfiles=/t/the_muncher_anl.zip"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.digitpress.com/library/manuals/c64/muncher.txt"
       }
     ]
   },
@@ -24836,6 +24836,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Myth-HistoryInTheMakingeuropedisk1.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
@@ -24846,12 +24852,6 @@
           "format": "cb7",
           "pages": "4-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Myth-HistoryInTheMakingeuropedisk1.pdf"
       }
     ],
     "tags": [
@@ -24886,16 +24886,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/N.O.M.A.D_(1986_Ocean_Software_Ltd)_[8367]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/N.O.M.A.D_(1986_Ocean_Software_Ltd)_[8367]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/N.O.M.A.D_(1986_Ocean_Software_Ltd)_[8367]/Extras/Inlay.jpg"
       }
     ],
     "tags": [
@@ -25050,15 +25050,15 @@
     "manuals": [
       {
         "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Nebulus_(1987_ERBE_Software)_[6721]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/zx-nebulus-manual/ZX nebulus_manual.pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Nebulus_(1987_ERBE_Software)_[6721]/Extras/Inlay_back.jpg"
       }
     ],
     "tags": [
@@ -28530,16 +28530,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Protium_(1988_Alternative_Software)_[6777]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Protium_(1988_Alternative_Software)_[6777]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Protium_(1988_Alternative_Software)_[6777]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -28593,15 +28593,6 @@
       {
         "languages": [
           "en-gb",
-          "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Psycho Pig U.X.B. (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en-gb",
           "it"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Psycho Pigs UXB/Psycho Pigs UXB Manual.cbz",
@@ -28609,6 +28600,15 @@
           "format": "cb7",
           "pages": "6-N"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Psycho Pig U.X.B. (Europe).pdf"
       }
     ],
     "tags": [
@@ -29431,6 +29431,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Commodore64Manuals/Rampageusa.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -29440,12 +29446,6 @@
           "format": "cb7",
           "pages": "3-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Commodore64Manuals/Rampageusa.pdf"
       }
     ],
     "tags": [
@@ -29462,6 +29462,12 @@
     "manuals": [
       {
         "languages": [
+          "es"
+        ],
+        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Sinclair_ZX_Spectrum/Manual/formated/Ramparts_-_1988_-_GO!.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -29471,12 +29477,6 @@
           "format": "cb7",
           "pages": "1,6-N,2"
         }
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://www.gamesdatabase.org/Media/SYSTEM/Sinclair_ZX_Spectrum/Manual/formated/Ramparts_-_1988_-_GO!.pdf"
       }
     ],
     "tags": [
@@ -30037,18 +30037,18 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/Rescue_on_Fractalus.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Rescue_on_Fractalus!_(1985_Activision)_[548]/Extras/Instructions.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/Rescue_on_Fractalus.pdf"
       }
     ],
     "tags": [
@@ -30280,16 +30280,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Rik_the_Roadie_(1988_Alternative_Software)_[9765]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Rik_the_Roadie_(1988_Alternative_Software)_[9765]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Rik_the_Roadie_(1988_Alternative_Software)_[9765]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -30389,15 +30389,6 @@
         "languages": [
           "en-gb",
           "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Road Blasters (Europe) (Disk 1).pdf"
-      },
-      {
-        "languages": [
-          "en-gb",
-          "de",
           "it"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Roadblasters/Roadblasters Manual.cbz",
@@ -30405,6 +30396,15 @@
           "format": "cb7",
           "pages": "1,3-N,2"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Road Blasters (Europe) (Disk 1).pdf"
       }
     ],
     "tags": [
@@ -30636,16 +30636,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fi",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Robocop (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/RoboCop/RoboCop Manual.cbz",
@@ -30653,6 +30643,16 @@
           "format": "cb7",
           "pages": "4-N"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fi",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Robocop (Europe).pdf"
       }
     ],
     "tags": [
@@ -31193,6 +31193,12 @@
     "manuals": [
       {
         "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/S.W.I.V.ES/S.W.I.V. (ES).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
@@ -31202,12 +31208,6 @@
         "options": {
           "format": "cb7"
         }
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/S.W.I.V.ES/S.W.I.V. (ES).pdf"
       }
     ],
     "tags": [
@@ -32160,18 +32160,18 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/Shackled_Instructions.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Shackled (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/Shackled_Instructions.pdf"
       }
     ]
   },
@@ -32338,16 +32338,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/Shanghai_Players_Guide.pdf"
+      },
+      {
+        "languages": [
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Shanghai_(1986_Activision)_[2699]/Extras/Instructions.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/Shanghai_Players_Guide.pdf"
       }
     ]
   },
@@ -32445,17 +32445,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/Shirley_Muldowney's_Top_Fuel_Challenge_Instruction_Manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Shirley_Muldowney's_Top_Fuel_Challenge_(1988_U.S._Gold)_[5022]/Extras/Instructions.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/Shirley_Muldowney's_Top_Fuel_Challenge_Instruction_Manual.pdf"
       }
     ]
   },
@@ -33650,15 +33650,6 @@
       {
         "languages": [
           "en-gb",
-          "de",
-          "fr",
-          "it"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Sonic Boom (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en-gb",
           "fr"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Sonic Boom/Sonic Boom Manual.cbz",
@@ -33666,6 +33657,15 @@
           "format": "cb7",
           "pages": "4,6-N"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr",
+          "it"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Sonic Boom (Europe).pdf"
       }
     ],
     "tags": [
@@ -33772,6 +33772,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/sh01-converted/sh01-converted.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -33781,12 +33787,6 @@
           "format": "cb7",
           "pages": "3-N"
         }
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/sh01-converted/sh01-converted.pdf"
       }
     ],
     "tags": [
@@ -33920,18 +33920,18 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Space_Walk_(1984_Mastertronic)_[6781]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "es",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Space_Walk_(1984_Mastertronic)_[6781]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Space_Walk_(1984_Mastertronic)_[6781]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -34339,17 +34339,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Spitfire_(1989_Encore)_[6549]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Spitfire_(1989_Encore)_[6549]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Spitfire_(1989_Encore)_[6549]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -35537,18 +35537,18 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Street Fighter - Manual-ENG.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Street Fighter (Europe).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://retro-commodore.eu/files/downloads/amigamanuals-xiik.net/Games/Street Fighter - Manual-ENG.pdf"
       }
     ],
     "tags": [
@@ -35806,14 +35806,6 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "de",
-          "fr"
-        ],
-        "url": "https://archive.org/download/AmstradCPCManuals_201812/Strider II (Europe).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Strider II/Strider II Manual.cbz",
@@ -35821,6 +35813,14 @@
           "format": "cb7",
           "pages": "1,4-N,2"
         }
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "fr"
+        ],
+        "url": "https://archive.org/download/AmstradCPCManuals_201812/Strider II (Europe).pdf"
       }
     ],
     "tags": [
@@ -35858,16 +35858,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Strike_Force_Cobra_(1987_Alternative_Software)_[6190]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Strike_Force_Cobra_(1987_Alternative_Software)_[6190]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Strike_Force_Cobra_(1987_Alternative_Software)_[6190]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -36401,18 +36401,18 @@
     "manuals": [
       {
         "languages": [
+          "de",
+          "it"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Super_Hang_On_(1990_Hit_Squad)_[1641]/Extras/Inlay_back.jpg"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Super Hang-On (Europe).pdf"
-      },
-      {
-        "languages": [
-          "de",
-          "it"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Super_Hang_On_(1990_Hit_Squad)_[1641]/Extras/Inlay_back.jpg"
       }
     ]
   },
@@ -37566,15 +37566,15 @@
       },
       {
         "languages": [
-          "it"
-        ],
-        "url": "https://archive.org/download/teenagemutantheroturtles/Teenage Mutant Hero Turtles.pdf"
-      },
-      {
-        "languages": [
           "fr"
         ],
         "url": "https://archive.org/downloads/AtariSTManuals_201812/Teenage Mutant Hero Turtles.pdf"
+      },
+      {
+        "languages": [
+          "it"
+        ],
+        "url": "https://archive.org/download/teenagemutantheroturtles/Teenage Mutant Hero Turtles.pdf"
       }
     ],
     "tags": [
@@ -37740,6 +37740,12 @@
       },
       {
         "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/Terra_Cresta_1986_Imagine_Software_ES/Terra_Cresta_1986_Imagine_Software_ES.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
@@ -37748,12 +37754,6 @@
         "options": {
           "format": "cb7"
         }
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/Terra_Cresta_1986_Imagine_Software_ES/Terra_Cresta_1986_Imagine_Software_ES.pdf"
       }
     ],
     "tags": [
@@ -37936,6 +37936,12 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/tetrisusac64/tetrisusac64.pdf"
+      },
+      {
+        "languages": [
           "fr"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Tetris (Europe).pdf"
@@ -37948,12 +37954,6 @@
           "it"
         ],
         "url": "https://archive.org/download/Tetris_1988_Mastertronic/Tetris_1988_Mastertronic.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/tetrisusac64/tetrisusac64.pdf"
       }
     ],
     "tags": [
@@ -38842,16 +38842,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://commodore.bombjack.org/commodore/games/Top_Gun.pdf"
+      },
+      {
+        "languages": [
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Top_Gun_(1987_Ocean_Software_Ltd)_[1753]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://commodore.bombjack.org/commodore/games/Top_Gun.pdf"
       }
     ]
   },
@@ -39525,17 +39525,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Turbo_Esprit_(19xx_Encore)_[5874]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Turbo_Esprit_(19xx_Encore)_[5874]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Turbo_Esprit_(19xx_Encore)_[5874]/Extras/Inlay.jpg"
       }
     ]
   },
@@ -40358,18 +40358,18 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Vendetta_1990_System_3/Vendetta_1990_System_3.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr",
           "it"
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/Vendetta (Europe) (Disk 1).pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Vendetta_1990_System_3/Vendetta_1990_System_3.pdf"
       }
     ],
     "tags": [
@@ -40830,15 +40830,15 @@
     "manuals": [
       {
         "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/WarInMiddleEarthES/War in Middle Earth (ES).pdf"
-      },
-      {
-        "languages": [
           "en"
         ],
         "url": "https://commodore.bombjack.org/commodore/games/War_in_Middle_Earth_Instruction_Manual.pdf"
+      },
+      {
+        "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/WarInMiddleEarthES/War in Middle Earth (ES).pdf"
       }
     ]
   },
@@ -40975,17 +40975,17 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/water-polo-1987/Water_Polo_1987.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Water_Polo_(1987_Gremlin_Graphics)_[4811]/Extras/Instructions.pdf"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/water-polo-1987/Water_Polo_1987.pdf"
       }
     ]
   },
@@ -42151,16 +42151,16 @@
     "manuals": [
       {
         "languages": [
+          "es"
+        ],
+        "url": "https://archive.org/download/WorldCupItalia90ES/World Cup Italia '90 (ES).pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "it"
         ],
         "url": "https://archive.org/download/world-cup-soccer-italia-90/World Cup Soccer Italia '90.pdf"
-      },
-      {
-        "languages": [
-          "es"
-        ],
-        "url": "https://archive.org/download/WorldCupItalia90ES/World Cup Italia '90 (ES).pdf"
       }
     ]
   },
@@ -42525,16 +42525,16 @@
     "manuals": [
       {
         "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Yeti_(19xx_Alternative_Software)_[6300]/Extras/Inlay.jpg"
+      },
+      {
+        "languages": [
           "de",
           "it"
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Yeti_(19xx_Alternative_Software)_[6300]/Extras/Inlay_back.jpg"
-      },
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Yeti_(19xx_Alternative_Software)_[6300]/Extras/Inlay.jpg"
       }
     ]
   },

@@ -3107,11 +3107,11 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA (USA).pdf"
       },
       {
+        "title": "Daytona USA - Championship Circuit Edition",
         "languages": [
-          "en-gb",
-          "fr"
+          "en"
         ],
-        "url": "https://archive.org/download/Daytona_USA_1995_E_2L/Daytona_USA_1995_E_2L.cbr"
+        "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA - Championship Circuit Edition (USA).pdf"
       },
       {
         "languages": [
@@ -3122,9 +3122,16 @@
       {
         "title": "Daytona USA - Championship Circuit Edition",
         "languages": [
-          "en"
+          "pt"
         ],
-        "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA - Championship Circuit Edition (USA).pdf"
+        "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_199x_Br/Daytona_USA_Championship_Circuit_Edition_199x_Br.cbr"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/Daytona_USA_1995_E_2L/Daytona_USA_1995_E_2L.cbr"
       },
       {
         "title": "Daytona USA - Championship Circuit Edition",
@@ -3137,13 +3144,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_1996_E_6L/Daytona_USA_Championship_Circuit_Edition_1996_E_6L.cbr"
-      },
-      {
-        "title": "Daytona USA - Championship Circuit Edition",
-        "languages": [
-          "pt"
-        ],
-        "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_199x_Br/Daytona_USA_Championship_Circuit_Edition_199x_Br.cbr"
       }
     ],
     "emulation": {
@@ -3265,6 +3265,12 @@
     "manuals": [
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Deep_Fear_1998_J_color/Deep_Fear_1998_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -3273,12 +3279,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Deep Fear (Europe) (Disc 1).pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Deep_Fear_1998_J_color/Deep_Fear_1998_J_color.cbr"
       }
     ],
     "emulation": {
@@ -4703,6 +4703,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Fighting_Vipers_1996_J_color/Fighting_Vipers_1996_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -4711,12 +4717,6 @@
           "nl"
         ],
         "url": "https://segaretro.org/images/6/61/Fighting_Vipers_Sat_EU_Manual.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Fighting_Vipers_1996_J_color/Fighting_Vipers_1996_J_color.cbr"
       }
     ],
     "emulation": {
@@ -6546,6 +6546,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/House_Of_The_Dead_Taikenban_The_1998_J_color/House_Of_The_Dead_Taikenban_The_1998_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -6554,12 +6560,6 @@
           "nl"
         ],
         "url": "https://segaretro.org/images/6/67/The_House_of_the_Dead_Sat_EU_Manual.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/House_Of_The_Dead_Taikenban_The_1998_J_color/House_Of_The_Dead_Taikenban_The_1998_J_color.cbr"
       }
     ],
     "emulation": {
@@ -7379,17 +7379,17 @@
     "manuals": [
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://segaretro.org/images/7/74/Keio_Flying_Squadron_2_Sat_EU_Manual.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color/Keiou_Yuugekitai_Katsugeki-Hen_1996_J_color.cbr"
       }
     ],
     "emulation": {
@@ -10046,17 +10046,6 @@
       },
       {
         "languages": [
-          "en-gb",
-          "de",
-          "es",
-          "fr",
-          "it",
-          "nl"
-        ],
-        "url": "https://archive.org/download/NiGHTS_Into_Dreams_1996_E_6L/NiGHTS_Into_Dreams_1996_E_6L.cbr"
-      },
-      {
-        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/NiGHTS_Into_Dreams_1996_J_color/NiGHTS_Into_Dreams_1996_J_color.cbr"
@@ -10066,6 +10055,17 @@
           "pt"
         ],
         "url": "https://segaretro.org/images/5/58/NiGHTS_into_Dreams_Sat_BR_Manual.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/NiGHTS_Into_Dreams_1996_E_6L/NiGHTS_Into_Dreams_1996_E_6L.cbr"
       }
     ],
     "emulation": {
@@ -10627,6 +10627,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Panzer_Dragoon_Booklet_1995_J_color/Panzer_Dragoon_Booklet_1995_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -10635,12 +10641,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Panzer_Dragoon_1995_E_6L/Panzer_Dragoon_1995_E_6L.cbr"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Panzer_Dragoon_Booklet_1995_J_color/Panzer_Dragoon_Booklet_1995_J_color.cbr"
       }
     ],
     "emulation": {
@@ -10668,6 +10668,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Panzer_Dragoon_Zwei_1996_J_color/Panzer_Dragoon_Zwei_1996_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -10676,12 +10682,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Panzer_Dragoon_II_Zwei_1996_E_6L/Panzer_Dragoon_II_Zwei_1996_E_6L.cbr"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Panzer_Dragoon_Zwei_1996_J_color/Panzer_Dragoon_Zwei_1996_J_color.cbr"
       }
     ],
     "emulation": {
@@ -10730,6 +10730,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://segaretro.org/images/b/b1/PanzerDragoonSaga_SS_jp_manual.pdf"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -10738,12 +10744,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Panzer_Dragoon_Saga_1998_E_6L/Panzer_Dragoon_Saga_1998_E_6L.cbr"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://segaretro.org/images/b/b1/PanzerDragoonSaga_SS_jp_manual.pdf"
       }
     ],
     "emulation": {
@@ -11822,17 +11822,6 @@
       },
       {
         "languages": [
-          "en-gb",
-          "de",
-          "es",
-          "fr",
-          "it",
-          "nl"
-        ],
-        "url": "https://archive.org/download/Resident_Evil_1997_E_6L/Resident_Evil_1997_E_6L.cbr"
-      },
-      {
-        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/Bio_Hazard_1997_J_color/Bio_Hazard_1997_J_color.cbr"
@@ -11842,6 +11831,17 @@
           "pt"
         ],
         "url": "https://archive.org/download/Resident_Evil_199x_Br/Resident_Evil_199x_Br.cbr"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/Resident_Evil_1997_E_6L/Resident_Evil_1997_E_6L.cbr"
       }
     ],
     "emulation": {
@@ -12538,17 +12538,17 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Saturn_Bomberman_1996_J_color/Saturn_Bomberman_1996_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "fr"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Saturn Bomber Man (Europe).pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Saturn_Bomberman_1996_J_color/Saturn_Bomberman_1996_J_color.cbr"
       }
     ],
     "emulation": {
@@ -12976,6 +12976,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Sega_Rally_Championship_1995_1995_J_color/Sega_Rally_Championship_1995_1995_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -12984,12 +12990,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Sega_Rally_Championship_1995_Sega_EU_M6/Sega_Rally_Championship_1995_Sega_EU_M6.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Sega_Rally_Championship_1995_1995_J_color/Sega_Rally_Championship_1995_1995_J_color.cbr"
       }
     ],
     "emulation": {
@@ -14141,6 +14141,12 @@
       },
       {
         "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Sonic_3D_Flickies_Island_1997_J_color/Sonic_3D_Flickies_Island_1997_J_color.cbr"
+      },
+      {
+        "languages": [
           "en-gb",
           "de",
           "es",
@@ -14149,12 +14155,6 @@
           "nl"
         ],
         "url": "https://archive.org/download/Sonic_3D_Flickies_Island_1997_E/Sonic_3D_Flickies_Island_1997_E.cbr"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Sonic_3D_Flickies_Island_1997_J_color/Sonic_3D_Flickies_Island_1997_J_color.cbr"
       }
     ],
     "emulation": {
@@ -14184,17 +14184,6 @@
       },
       {
         "languages": [
-          "en-gb",
-          "de",
-          "es",
-          "fr",
-          "it",
-          "nl"
-        ],
-        "url": "https://archive.org/download/Sonic_Jam_1997_E_6L/Sonic_Jam_1997_E_6L.cbr"
-      },
-      {
-        "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/Sonic_Jam_1997_J_color/Sonic_Jam_1997_J_color.cbr"
@@ -14204,6 +14193,17 @@
           "pt"
         ],
         "url": "https://archive.org/download/SonicJam-ManualDeInstruesPT/Publica\u00e7\u00e3o1.pdf"
+      },
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/Sonic_Jam_1997_E_6L/Sonic_Jam_1997_E_6L.cbr"
       }
     ],
     "emulation": {
@@ -16583,17 +16583,17 @@
         "url": "https://archive.org/download/Virtua_Fighter_1994_J_color/Virtua_Fighter_1994_J_color.cbr"
       },
       {
-        "languages": [
-          "pt"
-        ],
-        "url": "https://archive.org/download/virtua-fighter-saturn-manual/virtua-fighter-saturn-manual.pdf"
-      },
-      {
         "title": "Virtua Fighter Remix",
         "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/Virtua_Fighter_Remix_1995_J_color/Virtua_Fighter_Remix_1995_J_color.cbr"
+      },
+      {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/virtua-fighter-saturn-manual/virtua-fighter-saturn-manual.pdf"
       },
       {
         "title": "Virtua Fighter Remix",
