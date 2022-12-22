@@ -7,32 +7,32 @@ Specifically, it can set up:
 
 * Cases (e.g. Argon, NESPi, GPi 2), including safe reset/shutdown
 * Controllers (including autoconfig for advmame, drastic, hypseus, mupen64plus, ppsspp, redream, and ir)
-* IR configuration
-* VNC
-* Splash screens (async loading process, reduces load time by 2s)
-* Scraping (via skyscraper) with automated fallback queries
-* Retroarch configuration
-* EmulationStation configuration
-* Overlays / Bezels (with lightgun-compatible auto-generation)
+* Splash screens (using a new async loading process, reducing load time by 2s)
+* Overlays / Bezels (with auto-generated lightgun-compatible overlays)
 * Cheats (pre-selected for RetroArch, MAME, NDS, etc.)
-* HiScores for MAME
-* Multi-Tap devices
-* Port selection based on input (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
-* ROM Playlist (m3u) auto-generation for multi-disc games
-* In-game manuals
+* In-game manuals (using a collection of ~20,000 manuals catalogued by hand)
 * System controller reference guides
-* Printable gamelists
-* Launch images
-* Emulator installation
-* EmulationStation Collections (including lightguns)
+* Printable gamelist reference books
+* Automatic port selection based on active inputs (libretro cores, drastic, ppsspp, redream, mupen64plus, and hypseus)
+* Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard
+* ROM Playlist (m3u) auto-generation for multi-disc games
+* EmulationStation Collections (including auto-generated ones for input type, players, etc.)
 * Sinden lightgun autoconfiguration
+* MAME Hi-scores
+* MAME artwork
+* MESS multi-system support
+* Multi-Tap device configurations
 * Playstation GunCon patches (PPF)
 * Xbox bluetooth support + customizations
 * Game state (import/export)
-* Autoconfig overrides
-* Unified safe reset (quit) hotkeys across all emulators via joystick/keyboard
-* Bluetooth
+* Scraping (via skyscraper) with automated fallback queries
+* Retroarch configuration
+* EmulationStation configuration
+* Launch images
+* Emulator installation
 * SSH + AutoSSH for remote management
+* IR configuration
+* VNC
 * Themes
 * Display settings
 * Wifi
@@ -67,21 +67,27 @@ This is all supported for the following systems:
 
 * Arcade
 * Atari - 2600
+* Atari - 5200
 * Atari - 7800
 * Atari - Jaguar
 * Atari - Lynx
+* Bandai - WonderSwan
+* Bandai - WonderSwan Color
 * Coleco - ColecoVision
 * Commodore - 64
 * Daphne
+* Fairchild - ChannelF
 * GCE - Vectrex
 * Mattel - Intellivision
 * NEC - PC Engine / TurboGrafx-16
 * Nintendo - DS
+* Nintendo - Game & Watch
 * Nintendo - Game Boy
 * Nintendo - Game Boy Advanced
 * Nintendo - Game Boy Color
 * Nintendo - Nintendo 64
 * Nintendo - Nintendo Entertainment System
+* Nintendo - Pokemon Mini
 * Nintendo - Super Nintendo Entertainment System
 * Panasonic - 3DO
 * PC - DOS
@@ -95,8 +101,10 @@ This is all supported for the following systems:
 * Sega - Saturn
 * Sega - SG-1000
 * SNK - Neo Geo Pocket
+* SNK - Neo Geo Pocket Color
 * Sony - PlayStation
 * Sony - PlayStation Portable
+* Tiger Electronics - LCD
 
 There are also system-specific features, including:
 
@@ -509,10 +517,11 @@ profiles/mykit/config/settings.json:
 
 ```json
 {
-   "setup": [
-      "...",
-      "mycustomscript"
-   ]
+   "setup": {
+      "add": [
+         "mycustomscript"
+      ]
+   }
 }
 ```
 
@@ -577,17 +586,7 @@ will always go to its native menu.
 | ------------- | ----------------------------------------------------------------- |
 | c64           | Switch Port 1 / 2 controller with virtual keyboard (Select)       |
 | intellivision | Switch Left / Right controller with Select                        |
-| nds           | Only the last configured joystick will be set up                  |
-| psp           | Only the last configured joystick will be set up                  |
 | videopac      | Requires 2 controllers (Left / Right controller is game-specific) |
-
-Please note that due to limitations in how controllers are set up in NDS (Nintendo DS)
-and PSP (PlayStation Portable), retrokit can only automatically configure one
-controller.  The last configured controller input under `.hardware.controllers.inputs`
-in [config/settings.json](config/settings.json) will be used.
-
-Other controllers can still be used, but you must either manually configure it in the
-emulator's UI or use the same button mappings for all controllers.
 
 ### Menus
 
