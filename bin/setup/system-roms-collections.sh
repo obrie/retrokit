@@ -32,15 +32,6 @@ __create_romkit_collections() {
   while read -r name; do
     __create_collection "custom-$name" <(romkit_cache_list | jq -r "select(.collections | index(\"$name\")) | [\"$system\", .title] | @tsv" | uniq)
   done < <(romkit_cache_list | jq -r '.collections[]' | sort | uniq)
-
-  # Create manuals collection
-  __create_collection 'custom-Manuals' <(romkit_cache_list | jq -r "select(.manual) | [\"$system\", .title] | @tsv" | uniq)
-
-  # Create multiplayer collection
-  __create_collection 'custom-Multiplayer' <(romkit_cache_list | jq -r "select(.players and .players > 1) | [\"$system\", .title] | @tsv" | uniq)
-
-  # Create multiplayer (4+) collection
-  __create_collection 'custom-Multiplayer: 4+' <(romkit_cache_list | jq -r "select(.players and .players > 3) | [\"$system\", .title] | @tsv" | uniq)
 }
 
 # Creates the collection defined by the given file

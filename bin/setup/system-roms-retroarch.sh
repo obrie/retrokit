@@ -13,29 +13,9 @@ retroarch_remapping_dir=${retroarch_remapping_dir%/}
 configure() {
   restore
 
-  __load_multitap_titles
-  __load_lightgun_titles
   __configure_retroarch_configs
   __configure_retroarch_remappings
   __configure_retroarch_core_options
-}
-
-# Get the list of games which support multi-tap devices
-__load_multitap_titles() {
-  declare -Ag multitap_titles
-
-  while read -r rom_title; do
-    multitap_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-Multitap.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
-}
-
-# Get the list of games which support lightgun devices
-__load_lightgun_titles() {
-  declare -Ag lightgun_titles
-
-  while read -r rom_title; do
-    lightgun_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-Lightguns.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
 # Game-specific retroarch configuration overrides
@@ -55,7 +35,7 @@ __configure_retroarch_configs() {
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-lightgun.cfg' && echo 'true')
 
   # Merge in rom-specific overrides
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -63,12 +43,12 @@ __configure_retroarch_configs() {
     local target_path="$emulator_config_dir/$rom_name.cfg"
 
     # Copy over multitap overrides
-    if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
+    if [ "$has_multitap_config" == 'true' ] && [ "$is_multitap" == 'true' ]; then
       ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
     fi
 
     # Copy over lightgun overrides
-    if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+    if [ "$has_lightgun_config" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
       ini_merge '{system_config_dir}/retroarch-lightgun.cfg' "$target_path" backup=false
     fi
 
@@ -80,7 +60,7 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
     if [ -z "$override_file" ]; then
       continue
     fi
@@ -101,8 +81,8 @@ __configure_retroarch_core_options() {
   local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-lightgun.cfg' && echo 'true')
 
-  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name override_file; do
-    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ ! "${multitap_titles["$group_title"]}" ]; } && { [ "$has_lightgun_config" != 'true' ] || [ ! "${lightgun_titles["$group_title"]}" ]; }; then
+  while IFS=$'\t' read -r rom_name rom_filename group_title core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ "$is_multitap" != 'true' ]; } && { [ "$has_lightgun_config" != 'true' ] || [ "$is_lightgun" != 'true' ]; }; then
       # No overrides to define at the rom-level
       continue
     fi
@@ -118,12 +98,12 @@ __configure_retroarch_core_options() {
     cp -v "$system_core_options_path" "$target_path"
 
     # Copy over multitap overrides
-    if [ "$has_multitap_config" == 'true' ] && [ "${multitap_titles["$group_title"]}" ]; then
+    if [ "$has_multitap_config" == 'true' ] && [ "$is_multitap" == 'true' ]; then
       ini_merge '{system_config_dir}/retroarch-core-options-multitap.cfg' "$target_path" backup=false
     fi
 
     # Copy over lightgun overrides
-    if [ "$has_lightgun_config" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+    if [ "$has_lightgun_config" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
       ini_merge '{system_config_dir}/retroarch-core-options-lightgun.cfg' "$target_path" backup=false
     fi
 
@@ -153,7 +133,7 @@ __list_libretro_roms() {
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title rom_path emulator; do
+  while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title rom_path emulator tags; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -165,6 +145,10 @@ __list_libretro_roms() {
     fi
 
     local group_title=${parent_title:-$title}
+
+    # Tag data
+    local is_multitap=$([[ "$tags" == *Multitap* ]] && echo 'true' || echo 'false')
+    local is_lightgun=$([[ "$tags" == *Lightgun* ]] && echo 'true' || echo 'false')
 
     local target_name
     local target_filename
@@ -200,8 +184,8 @@ __list_libretro_roms() {
       fi
     done
 
-    echo "$target_name"$'\t'"$target_filename"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$override_file"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .path, .emulator] | join("»")')
+    echo "$target_name"$'\t'"$target_filename"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .path, .emulator, .tags | join(",")] | join("»")')
 }
 
 restore() {

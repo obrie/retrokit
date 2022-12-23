@@ -8,8 +8,6 @@ setup_module_desc='Configure game-specific automatic port selection using autopo
 
 configure() {
   __load_override_files
-  __load_lightgun_titles
-  __load_trackball_titles
 
   mkdir -p "$retropie_system_config_dir/autoport"
 
@@ -17,7 +15,7 @@ configure() {
   declare -A installed_playlists
   declare -A installed_files
 
-  while IFS=» read -r rom_name title parent_name parent_title playlist_name; do
+  while IFS=» read -r rom_name title parent_name parent_title playlist_name tags; do
     local group_title=${parent_title:-$title}
     local target_path="$retropie_system_config_dir/autoport/${playlist_name:-$rom_name}.cfg"
 
@@ -31,10 +29,10 @@ configure() {
 
     # Create a default file based on the input type used by the game
     # (e.g. lightgun vs. trackball)
-    if [ "${lightgun_titles["$group_title"]}" ]; then
+    if [[ "$tags" == *Lightgun* ]]; then
       echo -e '[autoport]\nprofile = "lightgun"' > "$target_path"
       echo "Setting profile to \"lightgun\" in $target_path"
-    elif [ "${trackball_titles["$group_title"]}" ]; then
+    elif [[ "$tags" == *Trackball* ]]; then
       echo -e '[autoport]\nprofile = "trackball"' > "$target_path"
       echo "Setting profile to \"trackball\" in $target_path"
     fi
@@ -58,7 +56,7 @@ configure() {
     if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .playlist.name] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .playlist.name, .tags | join(",")] | join("»")')
 
   # Remove unused files
   while read -r path; do
@@ -74,24 +72,6 @@ __load_override_files() {
     local override_name=$(basename "$override_file" '.cfg')
     override_files["$override_name"]=$override_file
   done < <(each_path '{system_config_dir}/autoport' find '{}' -name '*.cfg')
-}
-
-# Load titles identified as lightgun games
-__load_lightgun_titles() {
-  declare -Ag lightgun_titles
-
-  while read -r rom_title; do
-    lightgun_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-Lightguns.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
-}
-
-# Load titles identified as trackball games
-__load_trackball_titles() {
-  declare -Ag trackball_titles
-
-  while read -r rom_title; do
-    trackball_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-Trackball.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
 }
 
 restore() {

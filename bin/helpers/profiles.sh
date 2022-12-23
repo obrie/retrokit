@@ -89,6 +89,9 @@ each_path() {
   elif [[ "$path_template" == {docs_dir}* ]]; then
     template_name='docs_dir'
     sub_dir='docs'
+  elif [[ "$path_template" == {data_dir}* ]]; then
+    template_name='data_dir'
+    sub_dir='data'
   fi
 
   if [ -n "$template_name" ]; then

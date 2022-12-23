@@ -35,7 +35,6 @@ configure() {
   # Load the data we're going to need to do the install
   load_emulator_data
   __load_overlay_urls
-  __load_lightgun_titles
 
   declare -Ag installed_files
   declare -A installed_playlists
@@ -43,10 +42,11 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name title playlist_name parent_name parent_title orientation emulator; do
+  while IFS=» read -r rom_name title playlist_name parent_name parent_title orientation emulator tags; do
     emulator=${emulator:-default}
     local group_title=${parent_title:-$title}
     local library_name=${emulators["$emulator/library_name"]}
+    local is_lightgun=$([[ "$tags" == *Lightgun* ]] && echo 'true' || echo 'false')
 
     # Make sure this is a libretro core
     if [ -z "$library_name" ]; then
@@ -68,17 +68,17 @@ configure() {
 
       if [ -z "$playlist_name" ]; then
         # Install overlay for single-disc games
-        __create_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation"
+        __create_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation" "$is_lightgun"
       elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
         # Install overlay for the playlist
-        __create_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation"
+        __create_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation" "$is_lightgun"
       fi
 
       continue
     fi
 
     # We have an image: download it
-    __install_overlay "$url" "$overlay_title" "$group_title"
+    __install_overlay "$url" "$overlay_title" "$group_title" "$is_lightgun"
 
     if [ -z "$playlist_name" ]; then
       # Install overlay for single-disc game
@@ -87,7 +87,7 @@ configure() {
       # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .parent.name, .parent.title, .orientation, .emulator] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .parent.name, .parent.title, .orientation, .emulator, .tags | join(",")] | join("»")')
 
   __remove_unused_configs
 }
@@ -128,26 +128,18 @@ __call_github_api() {
   download "$url" "$path" auth_token="$GITHUB_API_KEY"
 }
 
-# Get the list of lightgun games for when we need to use a different type of overlay
-__load_lightgun_titles() {
-  declare -Ag lightgun_titles
-
-  while read -r rom_title; do
-    lightgun_titles["$rom_title"]=1
-  done < <(each_path '{config_dir}/emulationstation/collections/custom-Lightguns.tsv' cat '{}' | grep -E "^$system"$'\t' | cut -d$'\t' -f 2)
-}
-
 # Download and install an overlay from the given url
 __install_overlay() {
   local url=$1
   local overlay_title=$2
   local group_title=$3
+  local is_lightgun=$4
 
   local image_filename="$overlay_title.png"
   download "$url" "$system_overlay_dir/$image_filename"
 
   # Check if this is a lightgun game that needs special processing
-  if [ "$enable_lightgun_borders" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+  if [ "$enable_lightgun_borders" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
     outline_overlay_image "$system_overlay_dir/$image_filename" "$system_overlay_dir/$overlay_title-lightgun.png"
 
     # Track the old file and update it to the lightgun version
@@ -172,11 +164,12 @@ __create_default_retroarch_config() {
   local emulator=$2
   local group_title=$3
   local orientation=$4
+  local is_lightgun=$5
 
   if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
     # Vertical format
     __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-vertical.cfg"
-  elif [ "$enable_lightgun_borders" == 'true' ] && [ "${lightgun_titles["$group_title"]}" ]; then
+  elif [ "$enable_lightgun_borders" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
     # Lightgun format
     __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-lightgun.cfg"
   fi
