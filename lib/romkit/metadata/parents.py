@@ -13,6 +13,7 @@ class ParentsMetadata(BaseMetadata):
     def load(self) -> None:
         self.custom_groups = {}
         self.group_parents = {}
+        self.autodetect = self.config.get('autodetect')
 
         for key, machine_metadata in self.data.items():
             if 'parents' not in machine_metadata:
@@ -33,9 +34,10 @@ class ParentsMetadata(BaseMetadata):
         group = self.custom_groups.get(machine.disc_title) or machine.disc_title
 
         # If the group isn't already tracked, then we know this is the primary parent
-        if group not in self.group_parents:
+        if self.autodetect and group not in self.group_parents:
             self.group_parents[group] = machine.parent_name or machine.name
 
         # Only attach a parent if it's different from this machine
-        if not machine.parent_name and self.group_parents[group] != machine.name:
-            machine.parent_name = self.group_parents[group]
+        new_parent_name = self.group_parents.get(group)
+        if not machine.parent_name and new_parent_name and new_parent_name != machine.name:
+            machine.parent_name = new_parent_name

@@ -1,7 +1,10 @@
 {
   "system": "3do",
   "metadata": {
-    "path": "$HOME/retrokit/data/3do.json"
+    "path": "$HOME/retrokit/data/3do.json",
+    "parents": {
+      "autodetect": true
+    }
   },
   "overlays": {
     "repos": [

@@ -1,7 +1,10 @@
 {
   "system": "psp",
   "metadata": {
-    "path": "$HOME/retrokit/data/psp.json"
+    "path": "$HOME/retrokit/data/psp.json",
+    "parents": {
+      "autodetect": true
+    }
   },
   "emulators": {
     "ppsspp": {

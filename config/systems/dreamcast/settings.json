@@ -1,7 +1,10 @@
 {
   "system": "dreamcast",
   "metadata": {
-    "path": "$HOME/retrokit/data/dreamcast.json"
+    "path": "$HOME/retrokit/data/dreamcast.json",
+    "parents": {
+      "autodetect": true
+    }
   },
   "overlays": {
     "repos": [
