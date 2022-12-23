@@ -48,6 +48,7 @@ class Machine:
         players: Optional[int] = None,
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
+        media: Optional[dict] = None,
 
         # Additional context to include when rendering resource paths
         custom_context: dict = None,
@@ -81,6 +82,7 @@ class Machine:
         self.players = players
         self.emulator_rating = emulator_rating
         self.manual = manual
+        self.media = media or {}
 
         # Automatic defaults
         self.emulator = romset.emulator
