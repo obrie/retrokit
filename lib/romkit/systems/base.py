@@ -51,7 +51,7 @@ class BaseSystem:
         self.machine_priority = SorterSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
 
         # Favorites (defaults to false if no favorites are provided)
-        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
+        self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters, log=False)
         self.favorites_set.default_on_empty = False
 
         # Collections

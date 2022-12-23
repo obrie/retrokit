@@ -16,7 +16,7 @@ class CollectionSet:
         collection_set = cls()
 
         for collection_config in json:
-            filter_set = FilterSet.from_json(collection_config['filters'], config, supported_filters)
+            filter_set = FilterSet.from_json(collection_config['filters'], config, supported_filters, log=False)
             collection = Collection(collection_config['name'], filter_set)
             collection_set.add(collection)
 
