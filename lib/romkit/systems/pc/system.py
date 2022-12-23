@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from romkit.systems.base import BaseSystem
-from romkit.systems.pc.metadata import ExodosMetadata
 
 import configparser
 import json
@@ -12,10 +11,6 @@ from pathlib import Path
 
 class PCSystem(BaseSystem):
     name = 'pc'
-
-    supported_metadata = BaseSystem.supported_metadata + [
-        ExodosMetadata,
-    ]
 
     APP_ROOT = Path(__file__).parent.resolve().joinpath('../../../..').resolve()
     CONFIG_ARCHIVE = f'{APP_ROOT}/cache/exodos/dosbox-cfg.zip'

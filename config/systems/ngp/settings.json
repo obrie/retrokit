@@ -1,5 +1,8 @@
 {
   "system": "ngp",
+  "metadata": {
+    "path": "$HOME/retrokit/data/ngp.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -47,14 +50,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/ngp/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/ngp.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

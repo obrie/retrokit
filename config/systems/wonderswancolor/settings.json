@@ -1,5 +1,8 @@
 {
   "system": "wonderswancolor",
+  "metadata": {
+    "path": "$HOME/retrokit/data/wonderswancolor.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -47,17 +50,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/wonderswancolor/manuals.tsv"
-    },
-    "collections": {
-      "source": "file://$HOME/retrokit/config/systems/wonderswancolor/collections.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/wonderswancolor.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

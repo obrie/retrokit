@@ -48,7 +48,7 @@
       "length": "ascending"
     },
     "filters": {
-      "collections": [
+      "tags": [
         "C64 Dreams"
       ],
       "manuals": [true],
@@ -60,7 +60,7 @@
       "+titles": [
         "Quedex"
       ],
-      "+collections": [
+      "+tags": [
         "C64 Dreams: Best Of"
       ],
       "!genres|empty": null

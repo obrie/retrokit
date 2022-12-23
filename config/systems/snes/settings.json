@@ -1,5 +1,8 @@
 {
   "system": "snes",
+  "metadata": {
+    "path": "$HOME/retrokit/data/snes.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -52,14 +55,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/snes/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/snes.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

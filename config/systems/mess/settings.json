@@ -1,5 +1,8 @@
 {
   "system": "mess",
+  "metadata": {
+    "path": "$HOME/retrokit/data/mess.json"
+  },
   "themes": {
     "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
   },
@@ -48,25 +51,14 @@
       }
     }
   ],
-  "metadata": {
-    "collections": {
-      "source": "file://$HOME/retrokit/config/systems/mess/collections.json"
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/mess/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/mess.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {
     },
     "filters": {
       "clones": [false],
-      "collections": [
-        "Handheld: Tiger Electronics"
+      "tags": [
+        "Tiger Electronics LCD"
       ],
       "!names": [
         "# Missing artwork",
@@ -83,7 +75,7 @@
       {
         "path": "$HOME/RetroPie/roms/mess/Tiger Electronics",
         "filters": {
-          "collections": ["Handheld: Tiger Electronics"]
+          "tags": ["Tiger Electronics LCD"]
         }
       }
     ],

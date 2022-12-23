@@ -1,5 +1,8 @@
 {
   "system": "mastersystem",
+  "metadata": {
+    "path": "$HOME/retrokit/data/mastersystem.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -57,14 +60,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/mastersystem/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/mastersystem.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

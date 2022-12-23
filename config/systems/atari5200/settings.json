@@ -1,5 +1,8 @@
 {
   "system": "atari5200",
+  "metadata": {
+    "path": "$HOME/retrokit/data/atari5200.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -56,19 +59,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "emulator": {
-      "source": "file://$HOME/retrokit/config/systems/atari5200/emulators.tsv",
-      "column_emulator": null,
-      "column_rating": 1
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/atari5200/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/atari5200.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

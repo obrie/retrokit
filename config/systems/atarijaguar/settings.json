@@ -1,5 +1,8 @@
 {
   "system": "atarijaguar",
+  "metadata": {
+    "path": "$HOME/retrokit/data/atarijaguar.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -61,20 +64,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/atarijaguar/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/atarijaguar/clones.json"
-    },
-    "emulator": {
-      "source": "file://$HOME/retrokit/config/systems/atarijaguar/emulators.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/atarijaguar.json"
-    }
-  },
   "bios": {
     "url": "$ROMSET_MAME_LATEST_URL",
     "dir": "$HOME/RetroPie/BIOS",

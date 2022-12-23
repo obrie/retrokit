@@ -1,5 +1,8 @@
 {
   "system": "ngpc",
+  "metadata": {
+    "path": "$HOME/retrokit/data/ngpc.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -47,14 +50,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/ngpc/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/ngpc.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

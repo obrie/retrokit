@@ -1,5 +1,8 @@
 {
   "system": "nds",
+  "metadata": {
+    "path": "$HOME/retrokit/data/nds.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -64,26 +67,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/nds/manuals.tsv"
-    },
-    "rename": {
-      "source": "file://$HOME/retrokit/config/systems/nds/renames.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/nds.json"
-    },
-    "emulator": {
-      "overrides": {
-        "# Lightgun Games": "",
-        "Dead'n'Furious": "lr-desmume2015",
-        "Moorhuhn DS": "lr-desmume2015",
-        "Point Blank DS": "lr-desmume2015",
-        "Whac-A-Mole": "lr-desmume2015"
-      }
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

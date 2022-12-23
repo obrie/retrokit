@@ -1,5 +1,8 @@
 {
   "system": "atari7800",
+  "metadata": {
+    "path": "$HOME/retrokit/data/atari7800.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -56,14 +59,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/atari7800/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/atari7800.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

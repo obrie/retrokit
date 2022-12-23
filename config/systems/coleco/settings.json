@@ -1,5 +1,8 @@
 {
   "system": "coleco",
+  "metadata": {
+    "path": "$HOME/retrokit/data/coleco.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -59,14 +62,7 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/coleco/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/coleco.json"
-    }
-  },
+
   "roms": {
     "id": "crc",
     "priority": {

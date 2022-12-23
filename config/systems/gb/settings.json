@@ -1,5 +1,8 @@
 {
   "system": "gb",
+  "metadata": {
+    "path": "$HOME/retrokit/data/gb.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -64,17 +67,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "collections": {
-      "source": "file://$HOME/retrokit/config/systems/gb/collections.json"
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/gb/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/gb.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {
@@ -86,15 +78,12 @@
     "dirs": [
       {
         "path": "$HOME/RetroPie/roms/gb",
-        "filters": {},
-        "context": {
-          "suffix": ""
-        }
+        "filters": {}
       },
       {
         "path": "$HOME/RetroPie/roms/gb/-2 Player-",
         "filters": {
-          "collections": ["Game Boy: Multiplayer"]
+          "tags": ["Link Cable"]
         }
       }
     ],

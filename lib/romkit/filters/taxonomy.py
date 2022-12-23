@@ -27,3 +27,10 @@ class CollectionFilter(ExactFilter):
 
     def values(self, machine: Machine) -> Set[str]:
         return machine.collections
+
+# Filter on arbitary tags
+class TagFilter(ExactFilter):
+    name = 'tags'
+
+    def values(self, machine: Machine) -> Set[str]:
+        return machine.tags

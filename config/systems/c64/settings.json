@@ -1,5 +1,8 @@
 {
   "system": "c64",
+  "metadata": {
+    "path": "$HOME/retrokit/data/c64.json"
+  },
   "scraper": {
     "args": ["--includepattern", "*.zip"]
   },
@@ -100,20 +103,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "collections": {
-      "source": "file://$HOME/retrokit/config/systems/c64/collections.json"
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/c64/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/c64/clones.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/c64.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

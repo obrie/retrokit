@@ -1,5 +1,8 @@
 {
   "system": "daphne",
+  "metadata": {
+    "path": "$HOME/retrokit/data/daphne.json"
+  },
   "scraper": {
     "import_dat_titles": false
   },
@@ -48,14 +51,6 @@
       }
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/daphne/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/daphne.json"
-    }
-  },
   "roms": {
     "id": "name",
     "filters": {

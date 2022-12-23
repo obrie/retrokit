@@ -1,5 +1,8 @@
 {
   "system": "videopac",
+  "metadata": {
+    "path": "$HOME/retrokit/data/videopac.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -77,17 +80,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/videopac/clones.json"
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/videopac/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/videopac.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

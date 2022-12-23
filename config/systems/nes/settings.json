@@ -1,5 +1,8 @@
 {
   "system": "nes",
+  "metadata": {
+    "path": "$HOME/retrokit/data/nes.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -53,17 +56,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/nes/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/nes/clones.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/nes.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

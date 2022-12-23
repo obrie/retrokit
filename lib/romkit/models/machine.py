@@ -42,6 +42,7 @@ class Machine:
         # External metadata
         genres: Set[str] = None,
         collections: Set[str] = None,
+        tags: Set[str] = None,
         languages: Set[str] = None,
         rating: Optional[Union[float, str]] = None,
         players: Optional[int] = None,
@@ -74,6 +75,7 @@ class Machine:
         # External attributes
         self.genres = genres or set()
         self.collections = collections or set()
+        self.tags = tags or set()
         self.languages = languages or set()
         self.rating = rating
         self.players = players
@@ -439,7 +441,7 @@ class Machine:
             'description': self.description,
             'comment': self.comment,
             'orientation': self.orientation,
-            'controls': sorted(list(self.controls)),
+            'controls': self.controls,
 
             # Download info
             'url': str(self.resource and self.resource.source_url),
@@ -448,9 +450,9 @@ class Machine:
             'favorite': self.favorite,
 
             # External metadata
-            'genres': sorted(list(self.genres)),
-            'collections': sorted(list(self.collections)),
-            'languages': sorted(list(self.languages)),
+            'genres': self.genres,
+            'collections': self.collections,
+            'languages': self.languages,
             'rating': self.rating,
             'players': self.players,
             'emulator': self.emulator,

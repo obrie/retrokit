@@ -1,5 +1,8 @@
 {
   "system": "ports",
+  "metadata": {
+    "path": "$HOME/retrokit/data/ports.json"
+  },
   "scraper": {
     "args": ["--excludepattern", "*Freedoom*"],
     "gamelist_args": ["--excludepattern", "*Freedoom*", "--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
@@ -18,11 +21,6 @@
       ]
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/ports/manuals.tsv"
-    }
-  },
   "roms": {
     "id": "name",
     "filters": {},

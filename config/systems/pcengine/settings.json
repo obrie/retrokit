@@ -1,5 +1,8 @@
 {
   "system": "pcengine",
+  "metadata": {
+    "path": "$HOME/retrokit/data/pcengine.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -125,17 +128,6 @@
       "emulator": "lr-beetle-pce-fast"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/pcengine/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/pcengine/clones.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/pcengine.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

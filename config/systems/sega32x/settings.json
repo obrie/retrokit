@@ -1,5 +1,8 @@
 {
   "system": "sega32x",
+  "metadata": {
+    "path": "$HOME/retrokit/data/sega32x.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -45,14 +48,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/sega32x/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/sega32x.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

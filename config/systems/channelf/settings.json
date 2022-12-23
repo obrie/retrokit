@@ -1,5 +1,8 @@
 {
   "system": "channelf",
+  "metadata": {
+    "path": "$HOME/retrokit/data/channelf.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -52,14 +55,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/channelf/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/channelf.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

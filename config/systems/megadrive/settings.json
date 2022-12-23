@@ -1,5 +1,8 @@
 {
   "system": "megadrive",
+  "metadata": {
+    "path": "$HOME/retrokit/data/megadrive.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -59,14 +62,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/megadrive/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/megadrive.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

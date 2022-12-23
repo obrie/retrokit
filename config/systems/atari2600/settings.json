@@ -1,5 +1,8 @@
 {
   "system": "atari2600",
+  "metadata": {
+    "path": "$HOME/retrokit/data/atari2600.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -44,17 +47,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/atari2600/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/atari2600/clones.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/atari2600.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

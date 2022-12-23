@@ -7,7 +7,7 @@
     "gamelist_include_base_args": true
   },
   "metadata": {
-    "manual": {
+    "manuals": {
       "languages": {
         "allowlist": [
           "en",
@@ -36,6 +36,50 @@
       "!keywords": [
         "BIOS"
       ]
-    }
+    },
+    "collections": [
+      {
+        "name": "Keyboard",
+        "filters": {
+          "tags": ["keyboard"]
+        }
+      },
+      {
+        "name": "Lightguns",
+        "filters": {
+          "tags": ["lightgun"]
+        }
+      },
+      {
+        "name": "Multitap",
+        "filters": {
+          "tags": ["multitap"]
+        }
+      },
+      {
+        "name": "Trackball",
+        "filters": {
+          "tags": ["trackball"]
+        }
+      },
+      {
+        "name": "Manuals",
+        "filters": {
+          "manuals": [true]
+        }
+      },
+      {
+        "name": "Multiplayer",
+        "filters": {
+          "!players": [null, 1]
+        }
+      },
+      {
+        "name": "Multiplayer: 4+",
+        "filters": {
+          "!players": [null, 1, 2, 3]
+        }
+      }
+    ]
   }
 }

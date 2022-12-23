@@ -7,6 +7,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
 from romkit.systems import BaseSystem
+from romkit.output.set_encoder import SetEncoder
 
 import json
 from argparse import ArgumentParser
@@ -42,7 +43,7 @@ class ROMKit:
     # Lists machines filtered for this system
     def list(self) -> None:
         for machine in self.system.list():
-            print(json.dumps(machine.dump()))
+            print(json.dumps(machine.dump(), cls=SetEncoder))
 
     # Installs the list of filtered machines onto the local filesystem
     def install(self) -> None:

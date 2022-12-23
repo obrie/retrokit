@@ -1,20 +1,28 @@
-from romkit.metadata.external import ExternalMetadata
+from romkit.metadata.base import BaseMetadata
 from romkit.metadata.metadata_set import MetadataSet
 
-from romkit.metadata.collections import CollectionsMetadata
-from romkit.metadata.emulator import EmulatorMetadata
 from romkit.metadata.controls import ControlsMetadata
-from romkit.metadata.manual import ManualMetadata
-from romkit.metadata.parent import ParentMetadata
-from romkit.metadata.rename import RenameMetadata
-from romkit.metadata.scraper import ScraperMetadata
+from romkit.metadata.emulation import EmulationMetadata
+from romkit.metadata.genres import GenresMetadata
+from romkit.metadata.languages import LanguagesMetadata
+from romkit.metadata.manuals import ManualsMetadata
+from romkit.metadata.media import MediaMetadata
+from romkit.metadata.parents import ParentsMetadata
+from romkit.metadata.players import PlayersMetadata
+from romkit.metadata.rating import RatingMetadata
+from romkit.metadata.renames import RenamesMetadata
+from romkit.metadata.tags import TagsMetadata
 
 __all_metadata__ = [
-    ParentMetadata,
-    CollectionsMetadata,
-    EmulatorMetadata,
+    ParentsMetadata,
     ControlsMetadata,
-    ManualMetadata,
-    RenameMetadata,
-    ScraperMetadata,
+    EmulationMetadata,
+    GenresMetadata,
+    LanguagesMetadata,
+    ManualsMetadata,
+    MediaMetadata,
+    PlayersMetadata,
+    RatingMetadata,
+    RenamesMetadata,
+    TagsMetadata,
 ]

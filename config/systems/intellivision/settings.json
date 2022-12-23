@@ -1,5 +1,8 @@
 {
   "system": "intellivision",
+  "metadata": {
+    "path": "$HOME/retrokit/data/intellivision.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -52,14 +55,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/intellivision/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/intellivision.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

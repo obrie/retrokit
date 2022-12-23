@@ -1,5 +1,8 @@
 {
   "system": "3do",
+  "metadata": {
+    "path": "$HOME/retrokit/data/3do.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -53,25 +56,6 @@
       }
     }
   ],
-  "metadata": {
-    "emulator": {
-      "source": "file://$HOME/retrokit/config/systems/3do/emulators.tsv",
-      "column_emulator": null,
-      "column_rating": 1
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/3do/manuals.tsv"
-    },
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/3do/clones.json"
-    },
-    "rename": {
-      "source": "file://$HOME/retrokit/config/systems/3do/renames.json"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/3do.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

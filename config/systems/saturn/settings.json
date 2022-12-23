@@ -1,5 +1,8 @@
 {
   "system": "saturn",
+  "metadata": {
+    "path": "$HOME/retrokit/data/saturn.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -67,22 +70,6 @@
       }
     }
   ],
-  "metadata": {
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/saturn/clones.json"
-    },
-    "emulator": {
-      "source": "file://$HOME/retrokit/config/systems/saturn/emulators.tsv",
-      "column_emulator": null,
-      "column_rating": 1
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/saturn/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/saturn.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

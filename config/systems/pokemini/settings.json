@@ -1,5 +1,8 @@
 {
   "system": "pokemini",
+  "metadata": {
+    "path": "$HOME/retrokit/data/pokemini.json"
+  },
   "themes": {
     "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/nes/launching.png"
   },
@@ -41,14 +44,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/pokemini/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/pokemini.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

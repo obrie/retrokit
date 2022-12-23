@@ -1,5 +1,8 @@
 {
   "system": "vectrex",
+  "metadata": {
+    "path": "$HOME/retrokit/data/vectrex.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -44,17 +47,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "parent": {
-      "source": "file://$HOME/retrokit/config/systems/vectrex/clones.json"
-    },
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/vectrex/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/vectrex.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

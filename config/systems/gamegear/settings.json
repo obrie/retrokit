@@ -1,5 +1,8 @@
 {
   "system": "gamegear",
+  "metadata": {
+    "path": "$HOME/retrokit/data/gamegear.json"
+  },
   "overlays": {
     "repos": [
       {
@@ -56,14 +59,6 @@
       "auth": "internetarchive"
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/gamegear/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/gamegear.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

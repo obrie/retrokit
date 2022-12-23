@@ -1,5 +1,8 @@
 {
   "system": "gameandwatch",
+  "metadata": {
+    "path": "$HOME/retrokit/data/mess.json"
+  },
   "scraper": {
     "sources": ["arcadedb", "screenscraper"],
     "import_dat_titles": false
@@ -38,14 +41,6 @@
       }
     }
   ],
-  "metadata": {
-    "manual": {
-      "source": "file://$HOME/retrokit/config/systems/mess/manuals.tsv"
-    },
-    "scraper": {
-      "source": "file://$HOME/retrokit/data/mess.json"
-    }
-  },
   "roms": {
     "id": "crc",
     "priority": {

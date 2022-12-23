@@ -1,5 +1,6 @@
 from romkit.filters import __all_filters__, BaseFilter, FilterReason, FilterSet, TitleFilter
 from romkit.metadata import __all_metadata__, MetadataSet
+from romkit.models.collection_set import CollectionSet
 from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
 from romkit.sorters import __all_sorters__, SorterSet
@@ -52,6 +53,9 @@ class BaseSystem:
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters)
         self.favorites_set.default_on_empty = False
+
+        # Collections
+        self.collection_set = CollectionSet.from_json(config['roms'].get('collections', []), config, self.supported_filters)
 
         # Attribute type to define the unique machine identifier
         self.rom_id_type = config['roms']['id']
@@ -163,6 +167,10 @@ class BaseSystem:
 
         # Add all the candidates now that we've gone through all the machines
         machines_to_install.update(machine_candidates.values())
+
+        # Update collections
+        for machine in machines_to_install:
+            machine.collections.update(self.collection_set.list(machine))
 
         # Sort by name
         return sorted(machines_to_install, key=lambda machine: machine.name)
