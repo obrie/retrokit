@@ -21,7 +21,7 @@ class MetadataSet:
                 # Add machine-specific overrides that differ from the parent
                 if 'overrides' in metadata:
                     for key, overrides in metadata['overrides'].items():
-                        self.set_data(key, overrides)
+                        self.set_data(key, {**metadata, **overrides})
 
     # Builds a MetadataSet from the given json data
     @classmethod
