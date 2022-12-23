@@ -77,8 +77,14 @@ class ManualsMetadata(BaseMetadata):
                 candidate_languages[language] = True
 
         # Find the first manual that has a candidate language
+        fallback_manual = None
         for language in candidate_languages.keys():
             for manual in manuals:
                 if language in manual['languages']:
-                    machine.manual = manual
-                    return
+                    if not fallback_manual:
+                        fallback_manual = manual
+                    if machine.title == machine.parent_title or machine.title == manual.get('title'):
+                        machine.manual = manual
+                        return
+
+        machine.manual = fallback_manual
