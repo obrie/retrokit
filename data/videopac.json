@@ -238,7 +238,7 @@
     ],
     "parents": [
       {
-        "name": "Bowling + Basketball (USA, Europe)",
+        "parent_flags": "(USA, Europe)",
         "clones": [
           "Jeu de Quilles + Basketball",
           "Tenpin Bowling + Basketball"
@@ -276,7 +276,7 @@
     ],
     "parents": [
       {
-        "name": "Buraco Negro (Brazil)",
+        "parent_flags": "(Brazil)",
         "clones": [
           "Neutron Star"
         ]
@@ -1160,7 +1160,7 @@
     ],
     "parents": [
       {
-        "name": "Mousing Cat, The (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Chat et Souris"
         ]
@@ -1373,7 +1373,7 @@
     ],
     "parents": [
       {
-        "name": "Pick Axe Pete (USA, Europe)",
+        "parent_flags": "(USA, Europe)",
         "clones": [
           "Pickaxe Pete"
         ]
@@ -1434,7 +1434,7 @@
     ],
     "parents": [
       {
-        "name": "Pocket Billiards (USA, Europe)",
+        "parent_flags": "(USA, Europe)",
         "clones": [
           "Billard Americain",
           "Billard Electrique",
@@ -1685,7 +1685,7 @@
     ],
     "parents": [
       {
-        "name": "Speedway + Spin-out + Crypto-logic (USA, Europe)",
+        "parent_flags": "(USA, Europe)",
         "clones": [
           "Race + Spin-out + Cryptogram"
         ]

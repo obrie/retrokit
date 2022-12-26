@@ -120,7 +120,7 @@
     ],
     "parents": [
       {
-        "name": "Battle Sphere (World)",
+        "parent_flags": "(World)",
         "clones": [
           "Battle Sphere Gold"
         ]
@@ -740,7 +740,7 @@
     ],
     "parents": [
       {
-        "name": "Protector (World)",
+        "parent_flags": "(World)",
         "clones": [
           "Protector - Special Edition"
         ]

@@ -20,7 +20,8 @@ class ParentsMetadata(BaseMetadata):
                 continue
 
             for parent_data in machine_metadata['parents']:
-                parent_name = parent_data['name']
+                parent_flags = parent_data['parent_flags']
+                parent_name = f'{key} {parent_flags}'
                 clone_disc_titles = parent_data.get('clones')
 
                 parent_disc_title = Machine.title_from(parent_name, disc=True)

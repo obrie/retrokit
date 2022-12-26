@@ -223,7 +223,7 @@
     ],
     "parents": [
       {
-        "name": "Air-Sea Battle (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Air-Sea Battle ~ Target Fun"
         ]
@@ -1608,7 +1608,7 @@
     "name": "Colours",
     "parents": [
       {
-        "name": "Colours (USA, Europe) (Atari Anthology)",
+        "parent_flags": "(USA, Europe) (Atari Anthology)",
         "clones": [
           "Colors"
         ]
@@ -2068,7 +2068,7 @@
     ],
     "parents": [
       {
-        "name": "Dancing Plate (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Dishaster"
         ]
@@ -2382,7 +2382,7 @@
     ],
     "parents": [
       {
-        "name": "Dolphin (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Vogel Flieh"
         ]
@@ -3837,7 +3837,7 @@
     ],
     "parents": [
       {
-        "name": "I.Q. 180 (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "I.Q. Memory Teaser"
         ]
@@ -4325,7 +4325,7 @@
     ],
     "parents": [
       {
-        "name": "Laser Gates (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Laaser Voley"
         ]
@@ -4387,7 +4387,7 @@
     ],
     "parents": [
       {
-        "name": "Lock 'n' Chase (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Pygmy"
         ]
@@ -4898,7 +4898,7 @@
     ],
     "parents": [
       {
-        "name": "Missile War ~ Astro War (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Astrowar"
         ]
@@ -6076,7 +6076,7 @@
     ],
     "parents": [
       {
-        "name": "Radar (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Exocet"
         ]
@@ -6526,7 +6526,7 @@
     ],
     "parents": [
       {
-        "name": "Rubik's Cube (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Atari Video Cube"
         ]
@@ -6664,7 +6664,7 @@
     ],
     "parents": [
       {
-        "name": "Sea Hawk (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Seahawk"
         ]
@@ -6687,7 +6687,7 @@
     ],
     "parents": [
       {
-        "name": "Sea Hunt ~ Scuba Diver (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Skindiver"
         ]
@@ -6711,7 +6711,7 @@
     ],
     "parents": [
       {
-        "name": "Sea Monster (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "O Monstro Marinho"
         ]
@@ -7289,7 +7289,7 @@
     ],
     "parents": [
       {
-        "name": "Space Tunnel (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Tunnel de L'Espace, Le"
         ]
@@ -7368,7 +7368,7 @@
     ],
     "parents": [
       {
-        "name": "Spider Fighter (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Phantom UFO"
         ]
@@ -7534,7 +7534,7 @@
     ],
     "parents": [
       {
-        "name": "Squirrel ~ O Esquilo (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Snail Against Squirrel"
         ]
@@ -7951,7 +7951,7 @@
     ],
     "parents": [
       {
-        "name": "Stunt Man (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Nightmare"
         ]
@@ -8365,7 +8365,7 @@
     ],
     "parents": [
       {
-        "name": "Tanks But no Tanks (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Phantom Tank"
         ]
@@ -9025,7 +9025,7 @@
     ],
     "parents": [
       {
-        "name": "Wall-Defender (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Wall Break"
         ]

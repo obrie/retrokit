@@ -34,7 +34,7 @@
     ],
     "parents": [
       {
-        "name": "3D Baseball (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "3D Baseball - The Majors"
         ]
@@ -61,7 +61,7 @@
     ],
     "parents": [
       {
-        "name": "3D Lemmings (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -132,7 +132,7 @@
     ],
     "parents": [
       {
-        "name": "Actua Golf (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "VR Golf '97"
         ]
@@ -157,7 +157,7 @@
     ],
     "parents": [
       {
-        "name": "Actua Soccer - Club Edition (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Actua Soccer",
           "VR Soccer"
@@ -198,7 +198,7 @@
     ],
     "parents": [
       {
-        "name": "Advanced World War - Sennen Teikoku no Koubou - Last of the Millennium (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -260,7 +260,7 @@
     ],
     "parents": [
       {
-        "name": "Albert Odyssey - Legend of Eldean (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Albert Odyssey Gaiden - Legend of Eldean"
         ]
@@ -303,7 +303,7 @@
     ],
     "parents": [
       {
-        "name": "Alien Trilogy (Europe) (En,Fr,Es,It) (4S)"
+        "parent_flags": "(Europe) (En,Fr,Es,It) (4S)"
       }
     ],
     "manuals": [
@@ -357,7 +357,7 @@
     ],
     "parents": [
       {
-        "name": "Alone in the Dark - Jack Is Back (Europe) (En,Fr,De,Es,It)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
         "clones": [
           "Alone in the Dark - One-Eyed Jack's Revenge",
           "Alone in the Dark 2"
@@ -403,7 +403,7 @@
     ],
     "parents": [
       {
-        "name": "Amok (Europe) (En,Fr,De,Es,It,Nl)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
       }
     ],
     "manuals": [
@@ -450,7 +450,7 @@
     ],
     "parents": [
       {
-        "name": "Andretti Racing (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -686,7 +686,7 @@
     ],
     "parents": [
       {
-        "name": "Arcade's Greatest Hits - The Atari Collection 1 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -728,7 +728,7 @@
     ],
     "parents": [
       {
-        "name": "Area 51 (Europe) (En,Fr,De,Es)"
+        "parent_flags": "(Europe) (En,Fr,De,Es)"
       }
     ],
     "manuals": [
@@ -792,7 +792,7 @@
     ],
     "parents": [
       {
-        "name": "Astal (USA) (1S)",
+        "parent_flags": "(USA) (1S)",
         "clones": [
           "Kisuishou Densetsu Astal"
         ]
@@ -851,7 +851,7 @@
     ],
     "parents": [
       {
-        "name": "Athlete Kings (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "DecAthlete",
           "DecAthlete for SegaNet"
@@ -885,10 +885,10 @@
     ],
     "parents": [
       {
-        "name": "Atlantis - The Lost Tales (Europe) (En,De,Es) (Disc 1)"
+        "parent_flags": "(Europe) (En,De,Es) (Disc 1)"
       },
       {
-        "name": "Atlantis - The Lost Tales (Europe) (En,De,Es) (Disc 2)"
+        "parent_flags": "(Europe) (En,De,Es) (Disc 2)"
       }
     ],
     "manuals": [
@@ -968,7 +968,7 @@
     ],
     "parents": [
       {
-        "name": "Baku Baku Animal - World Zookeeper Contest (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Baku Baku Animal - Sekai Shiiku Gakari Senshuken"
         ]
@@ -1080,7 +1080,7 @@
     ],
     "parents": [
       {
-        "name": "Bases Loaded '96 - Double Header (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Moero!! Pro Yakyuu '95 - Double Header"
         ]
@@ -1105,7 +1105,7 @@
     ],
     "parents": [
       {
-        "name": "Batman Forever - The Arcade Game (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1150,7 +1150,7 @@
     ],
     "parents": [
       {
-        "name": "Battle Arena Toshinden Remix (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Toushinden S"
         ]
@@ -1178,7 +1178,7 @@
     ],
     "parents": [
       {
-        "name": "Battle Arena Toshinden URA - Ultimate Revenge Attack (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Toushinden URA"
         ]
@@ -1231,7 +1231,7 @@
     ],
     "parents": [
       {
-        "name": "Battle Monsters (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1255,7 +1255,7 @@
     ],
     "parents": [
       {
-        "name": "Battle Stations (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ],
     "manuals": [
@@ -1319,7 +1319,7 @@
     ],
     "parents": [
       {
-        "name": "Big Ichigeki! Pachi-Slot Daikouryaku - Universal Museum (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -1358,7 +1358,7 @@
     ],
     "parents": [
       {
-        "name": "Black Dawn (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1389,7 +1389,7 @@
     ],
     "parents": [
       {
-        "name": "Black-Matrix (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -1406,7 +1406,7 @@
     ],
     "parents": [
       {
-        "name": "BlackFire (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1430,7 +1430,7 @@
     ],
     "parents": [
       {
-        "name": "Blam! Machinehead (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Machine Head"
         ]
@@ -1463,7 +1463,7 @@
     ],
     "parents": [
       {
-        "name": "Blast Chamber (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -1496,7 +1496,7 @@
     ],
     "parents": [
       {
-        "name": "Blazing Dragons (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1520,7 +1520,7 @@
     ],
     "parents": [
       {
-        "name": "Blue Breaker - Ken yori mo Hohoemi o (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -1562,7 +1562,7 @@
     "name": "Bootleg Sampler",
     "parents": [
       {
-        "name": "Bootleg Sampler (Europe) (Made in EU, Made in Japan)"
+        "parent_flags": "(Europe) (Made in EU, Made in Japan)"
       }
     ]
   },
@@ -1591,7 +1591,7 @@
     ],
     "parents": [
       {
-        "name": "Bouken Katsugeki Monomono (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -1615,7 +1615,7 @@
     ],
     "parents": [
       {
-        "name": "BrainDead 13 (USA)"
+        "parent_flags": "(USA)"
       }
     ],
     "manuals": [
@@ -1640,7 +1640,7 @@
     ],
     "parents": [
       {
-        "name": "Break Point (Europe) (En,Fr)",
+        "parent_flags": "(Europe) (En,Fr)",
         "clones": [
           "Break Point Tennis"
         ]
@@ -1676,7 +1676,7 @@
     ],
     "parents": [
       {
-        "name": "Bubble Bobble also featuring Rainbow Islands (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1710,7 +1710,7 @@
     ],
     "parents": [
       {
-        "name": "Bug Too! (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1744,7 +1744,7 @@
     ],
     "parents": [
       {
-        "name": "Bug! (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Bug! Jump Shite, Funzukechatte, Petchanko"
         ]
@@ -1788,7 +1788,7 @@
     ],
     "parents": [
       {
-        "name": "Burning Rangers (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1824,7 +1824,7 @@
     ],
     "parents": [
       {
-        "name": "Bust-A-Move 2 - Arcade Edition (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1851,7 +1851,7 @@
     ],
     "parents": [
       {
-        "name": "Bust-A-Move 3 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -1894,10 +1894,10 @@
     ],
     "parents": [
       {
-        "name": "Can Can Bunny Premiere 2 (Japan) (Disc 1)"
+        "parent_flags": "(Japan) (Disc 1)"
       },
       {
-        "name": "Can Can Bunny Premiere 2 (Japan) (Disc 2) (Can Bani Himekuri Calendar)"
+        "parent_flags": "(Japan) (Disc 2) (Can Bani Himekuri Calendar)"
       }
     ],
     "manuals": [
@@ -1982,7 +1982,7 @@
     ],
     "parents": [
       {
-        "name": "Casper (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ],
     "manuals": [
@@ -2016,7 +2016,7 @@
     ],
     "parents": [
       {
-        "name": "Chaos Control (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ],
     "manuals": [
@@ -2117,7 +2117,7 @@
     ],
     "parents": [
       {
-        "name": "Christmas NiGHTS into Dreams... (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -2172,7 +2172,7 @@
     ],
     "parents": [
       {
-        "name": "Clockwork Knight - Pepperouchau's Adventure (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Clockwork Knight - Pepperouchau no Daibouken Joukan"
         ]
@@ -2206,7 +2206,7 @@
     ],
     "parents": [
       {
-        "name": "Clockwork Knight 2 - Pepperouchau's Adventure (Europe) (2S)",
+        "parent_flags": "(Europe) (2S)",
         "clones": [
           "Clockwork Knight - Pepperouchau no Daibouken Gekan"
         ]
@@ -2242,7 +2242,7 @@
     ],
     "parents": [
       {
-        "name": "Code R (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -2272,13 +2272,13 @@
     ],
     "parents": [
       {
-        "name": "Command & Conquer (Europe) (En,Fr,De) (Disc 1) (GDI)",
+        "parent_flags": "(Europe) (En,Fr,De) (Disc 1) (GDI)",
         "clones": [
           "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 1)"
         ]
       },
       {
-        "name": "Command & Conquer (Europe) (En,Fr,De) (Disc 2) (NOD)",
+        "parent_flags": "(Europe) (En,Fr,De) (Disc 2) (NOD)",
         "clones": [
           "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 2)"
         ]
@@ -2386,7 +2386,7 @@
     ],
     "parents": [
       {
-        "name": "Courier Crisis - The Saga of the Modern Fatalist (Europe) (En,Fr,De,It)"
+        "parent_flags": "(Europe) (En,Fr,De,It)"
       }
     ],
     "manuals": [
@@ -2408,13 +2408,13 @@
     ],
     "parents": [
       {
-        "name": "Creature Shock - Special Edition (USA) (Disc 1)",
+        "parent_flags": "(USA) (Disc 1)",
         "clones": [
           "Creature Shock (Disc 1)"
         ]
       },
       {
-        "name": "Creature Shock - Special Edition (USA) (Disc 2)",
+        "parent_flags": "(USA) (Disc 2)",
         "clones": [
           "Creature Shock (Disc 2)"
         ]
@@ -2446,7 +2446,7 @@
     ],
     "parents": [
       {
-        "name": "Crimewave (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -2471,7 +2471,7 @@
     ],
     "parents": [
       {
-        "name": "Criticom (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Criticom - The Critical Combat"
         ]
@@ -2498,7 +2498,7 @@
     ],
     "parents": [
       {
-        "name": "Croc - Legend of the Gobbos (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Croc! Pau-Pau Island"
         ]
@@ -2531,7 +2531,7 @@
     ],
     "parents": [
       {
-        "name": "Cross Tantei Monogatari (Japan) (Demo 1)"
+        "parent_flags": "(Japan) (Demo 1)"
       }
     ],
     "emulation": {
@@ -2556,7 +2556,7 @@
     ],
     "parents": [
       {
-        "name": "Crow, The - City of Angels (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -2591,7 +2591,7 @@
     ],
     "parents": [
       {
-        "name": "Crusader - No Remorse (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -2614,7 +2614,7 @@
     ],
     "parents": [
       {
-        "name": "Crypt Killer (Europe) (R)",
+        "parent_flags": "(Europe) (R)",
         "clones": [
           "Henry Explorers"
         ]
@@ -2670,7 +2670,7 @@
     ],
     "parents": [
       {
-        "name": "Culdcept (Japan) (Rev A) (10M)"
+        "parent_flags": "(Japan) (Rev A) (10M)"
       }
     ]
   },
@@ -2678,7 +2678,7 @@
     "name": "Custom Web Browser",
     "parents": [
       {
-        "name": "Custom Web Browser (Version 2) (USA)"
+        "parent_flags": "(Version 2) (USA)"
       }
     ]
   },
@@ -2703,7 +2703,7 @@
     ],
     "parents": [
       {
-        "name": "Cyber Speedway (Europe) (RE)",
+        "parent_flags": "(Europe) (RE)",
         "clones": [
           "Gran Chaser"
         ]
@@ -2738,7 +2738,7 @@
     ],
     "parents": [
       {
-        "name": "Cyberbots - Fullmetal Madness (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -2751,7 +2751,7 @@
     ],
     "parents": [
       {
-        "name": "Cyberia (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ],
     "manuals": [
@@ -2772,13 +2772,13 @@
     ],
     "parents": [
       {
-        "name": "D (Europe) (Disc I)",
+        "parent_flags": "(Europe) (Disc I)",
         "clones": [
           "D no Shokutaku (Disc 1)"
         ]
       },
       {
-        "name": "D (Europe) (Disc II)",
+        "parent_flags": "(Europe) (Disc II)",
         "clones": [
           "D no Shokutaku (Disc 2)"
         ]
@@ -2811,7 +2811,7 @@
     ],
     "parents": [
       {
-        "name": "D-Xhird (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -2827,7 +2827,7 @@
     ],
     "parents": [
       {
-        "name": "DJ Wars (Japan) (Rev A) (10M)"
+        "parent_flags": "(Japan) (Rev A) (10M)"
       }
     ]
   },
@@ -2904,7 +2904,7 @@
     ],
     "parents": [
       {
-        "name": "Darius Gaiden (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -2934,7 +2934,7 @@
     ],
     "parents": [
       {
-        "name": "Darius II (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -2975,7 +2975,7 @@
     ],
     "parents": [
       {
-        "name": "Dark Legend (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Suiko Enbu"
         ]
@@ -3002,7 +3002,7 @@
     ],
     "parents": [
       {
-        "name": "Dark Savior (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -3049,7 +3049,7 @@
     ],
     "parents": [
       {
-        "name": "Darklight Conflict (Europe) (En,Fr,De,Es,It,Sv)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "manuals": [
@@ -3091,7 +3091,7 @@
     ],
     "parents": [
       {
-        "name": "Daytona USA (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Daytona USA - Championship Circuit Edition",
           "Daytona USA - Circuit Edition",
@@ -3192,7 +3192,7 @@
     ],
     "parents": [
       {
-        "name": "Dead or Alive (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -3256,10 +3256,10 @@
     ],
     "parents": [
       {
-        "name": "Deep Fear (Europe) (Disc 1)"
+        "parent_flags": "(Europe) (Disc 1)"
       },
       {
-        "name": "Deep Fear (Europe) (Disc 2)"
+        "parent_flags": "(Europe) (Disc 2)"
       }
     ],
     "manuals": [
@@ -3294,7 +3294,7 @@
     ],
     "parents": [
       {
-        "name": "Defcon 5 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Defcon 5 - Peace Has a Price..."
         ]
@@ -3331,7 +3331,7 @@
     ],
     "parents": [
       {
-        "name": "Denpa Shounen-teki Game (Japan) (Rerelease)"
+        "parent_flags": "(Japan) (Rerelease)"
       }
     ]
   },
@@ -3394,7 +3394,7 @@
     ],
     "parents": [
       {
-        "name": "Desire (Japan) (Disc 2) (1M)"
+        "parent_flags": "(Japan) (Disc 2) (1M)"
       }
     ],
     "emulation": {
@@ -3411,7 +3411,7 @@
     ],
     "parents": [
       {
-        "name": "Destruction Derby (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -3482,7 +3482,7 @@
     ],
     "parents": [
       {
-        "name": "Devil Summoner - Soul Hackers + Ronde (Japan) (Demo 1)"
+        "parent_flags": "(Japan) (Demo 1)"
       }
     ]
   },
@@ -3528,7 +3528,7 @@
     ],
     "parents": [
       {
-        "name": "Die Hard Arcade (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Dynamite Deka"
         ]
@@ -3565,7 +3565,7 @@
     ],
     "parents": [
       {
-        "name": "Die Hard Trilogy (Europe) (En,Fr,De,Es,It,Sv)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "manuals": [
@@ -3608,7 +3608,7 @@
     ],
     "parents": [
       {
-        "name": "Digital Dance Mix Vol. 1 - Namie Amuro (Japan) (Rev A) (10M, 12M)"
+        "parent_flags": "(Japan) (Rev A) (10M, 12M)"
       }
     ],
     "emulation": {
@@ -3637,7 +3637,7 @@
     ],
     "parents": [
       {
-        "name": "Digital Pinball (Europe) (4S)",
+        "parent_flags": "(Europe) (4S)",
         "clones": [
           "Digital Pinball - Last Gladiators",
           "Digital Pinball - Last Gladiators Ver.9.7",
@@ -3732,7 +3732,7 @@
     ],
     "parents": [
       {
-        "name": "DoDonPachi (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -3748,7 +3748,7 @@
     ],
     "parents": [
       {
-        "name": "DonPachi (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -3763,7 +3763,7 @@
     ],
     "parents": [
       {
-        "name": "Doom (Europe) (R)"
+        "parent_flags": "(Europe) (R)"
       }
     ],
     "manuals": [
@@ -3824,7 +3824,7 @@
     ],
     "parents": [
       {
-        "name": "Doukoku Soshite... (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -3871,7 +3871,7 @@
     ],
     "parents": [
       {
-        "name": "Dragon Ball Z - Idainaru Dragon Ball Densetsu (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Dragon Ball Z - La Grande Legende des Boules de Cristal"
         ]
@@ -3929,7 +3929,7 @@
     ],
     "parents": [
       {
-        "name": "Dragon Force (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -3960,7 +3960,7 @@
     ],
     "parents": [
       {
-        "name": "Dragon Force II - Kami Sarishi Daichi ni (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -4002,7 +4002,7 @@
     ],
     "parents": [
       {
-        "name": "DragonHeart - Fire & Steel (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ],
     "manuals": [
@@ -4036,7 +4036,7 @@
     ],
     "parents": [
       {
-        "name": "Drift King Shutokou Battle '97 - Tsuchiya Keiichi & Bandou Masaaki (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -4061,7 +4061,7 @@
     ],
     "parents": [
       {
-        "name": "Duke Nukem 3D (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -4119,7 +4119,7 @@
     "name": "EGWord",
     "parents": [
       {
-        "name": "EGWord (Japan) (1M)",
+        "parent_flags": "(Japan) (1M)",
         "clones": [
           "EGWord Ver 2.00"
         ]
@@ -4136,7 +4136,7 @@
     ],
     "parents": [
       {
-        "name": "Earthworm Jim 2 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -4269,16 +4269,16 @@
     ],
     "parents": [
       {
-        "name": "Enemy Zero (Europe) (Disc 0) (Opening Disc)"
+        "parent_flags": "(Europe) (Disc 0) (Opening Disc)"
       },
       {
-        "name": "Enemy Zero (Europe) (Disc 1) (Game Disc)"
+        "parent_flags": "(Europe) (Disc 1) (Game Disc)"
       },
       {
-        "name": "Enemy Zero (Europe) (Disc 2) (Game Disc)"
+        "parent_flags": "(Europe) (Disc 2) (Game Disc)"
       },
       {
-        "name": "Enemy Zero (Europe) (Disc 3) (Game Disc)"
+        "parent_flags": "(Europe) (Disc 3) (Game Disc)"
       }
     ],
     "manuals": [
@@ -4314,7 +4314,7 @@
     ],
     "parents": [
       {
-        "name": "Eternal Melody (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -4357,10 +4357,10 @@
     ],
     "parents": [
       {
-        "name": "Eve - The Lost One (Japan) (Disc 3) (Lost One Disc) (1M)"
+        "parent_flags": "(Japan) (Disc 3) (Lost One Disc) (1M)"
       },
       {
-        "name": "Eve - The Lost One (Japan) (Disc 4) (Extra Disc) (1M)"
+        "parent_flags": "(Japan) (Disc 4) (Extra Disc) (1M)"
       }
     ]
   },
@@ -4375,7 +4375,7 @@
     ],
     "parents": [
       {
-        "name": "Exhumed (Europe) (En,Fr,De,Es)",
+        "parent_flags": "(Europe) (En,Fr,De,Es)",
         "clones": [
           "Powerslave",
           "Seireki 1999 - Pharaoh no Fukkatsu"
@@ -4413,7 +4413,7 @@
     ],
     "parents": [
       {
-        "name": "F-1 Challenge (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "F-1 Live Information",
           "F1 Challenge"
@@ -4453,7 +4453,7 @@
     ],
     "parents": [
       {
-        "name": "FIFA - Road to World Cup 98 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "FIFA - Die WM-Qualifikation 98",
           "FIFA - En Route pour la Coupe du Monde 98",
@@ -4495,7 +4495,7 @@
     ],
     "parents": [
       {
-        "name": "FIFA 97 (Europe) (En,Fr,De,Es,It,Sv)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)",
         "clones": [
           "FIFA Soccer 97"
         ]
@@ -4523,7 +4523,7 @@
     ],
     "parents": [
       {
-        "name": "FIFA Soccer 96 (Europe) (En,Fr,De,Es,It,Sv)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
       }
     ],
     "manuals": [
@@ -4566,7 +4566,7 @@
     ],
     "parents": [
       {
-        "name": "Falcom Classics II (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -4618,7 +4618,7 @@
     ],
     "parents": [
       {
-        "name": "Farland Story - Habou no Mai (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -4660,7 +4660,7 @@
     ],
     "parents": [
       {
-        "name": "Fighters Megamix (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -4691,7 +4691,7 @@
     ],
     "parents": [
       {
-        "name": "Fighting Vipers (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -4769,7 +4769,7 @@
     ],
     "parents": [
       {
-        "name": "Fire Pro Gaiden Blazing Tornado (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -4786,7 +4786,7 @@
     ],
     "parents": [
       {
-        "name": "Fire Prowrestling S - 6Men Scramble (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -4810,7 +4810,7 @@
     ],
     "parents": [
       {
-        "name": "Firestorm - Thunderhawk 2 (Europe) (En,Fr)",
+        "parent_flags": "(Europe) (En,Fr)",
         "clones": [
           "Thunderhawk II",
           "Thunderstrike 2"
@@ -5012,7 +5012,7 @@
     ],
     "parents": [
       {
-        "name": "Frank Thomas Big Hurt Baseball (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -5086,7 +5086,7 @@
     ],
     "parents": [
       {
-        "name": "Fully Cowled Mini Yonku - Super Factory (Japan) (Rev A) (10M)"
+        "parent_flags": "(Japan) (Rev A) (10M)"
       }
     ]
   },
@@ -5108,7 +5108,7 @@
     ],
     "parents": [
       {
-        "name": "Funky Head Boxers (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Funky Head Boxers Plus"
         ]
@@ -5196,7 +5196,7 @@
     ],
     "parents": [
       {
-        "name": "Galactic Attack (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Layer Section"
         ]
@@ -5229,7 +5229,7 @@
     ],
     "parents": [
       {
-        "name": "Galaxy Fight (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Galaxy Fight - Universal Warriors"
         ]
@@ -5318,7 +5318,7 @@
     ],
     "parents": [
       {
-        "name": "Game no Tatsujin (Japan) (4M)"
+        "parent_flags": "(Japan) (4M)"
       }
     ]
   },
@@ -5347,7 +5347,7 @@
     ],
     "parents": [
       {
-        "name": "Game of Life, The - DX Jinsei Game (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -5421,7 +5421,7 @@
     ],
     "parents": [
       {
-        "name": "Gebockers (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -5458,7 +5458,7 @@
     ],
     "parents": [
       {
-        "name": "Gekitotsu Koushien (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -5506,7 +5506,7 @@
     ],
     "parents": [
       {
-        "name": "Gex (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -5531,7 +5531,7 @@
     ],
     "parents": [
       {
-        "name": "Ghen War (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -5553,7 +5553,7 @@
     ],
     "parents": [
       {
-        "name": "Ginga Eiyuu Densetsu (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Ginga Eiyuu Densetsu Plus"
         ]
@@ -5632,7 +5632,7 @@
     ],
     "parents": [
       {
-        "name": "Girls in Motion Puzzle Vol. 2 - Body Special 264 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -5663,7 +5663,7 @@
     ],
     "parents": [
       {
-        "name": "Goiken Muyou - Anarchy in the Nippon (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -5679,7 +5679,7 @@
     ],
     "parents": [
       {
-        "name": "Golden Axe - The Duel (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -5773,10 +5773,10 @@
     ],
     "parents": [
       {
-        "name": "Grandia (Japan) (Disc 1) (1M)"
+        "parent_flags": "(Japan) (Disc 1) (1M)"
       },
       {
-        "name": "Grandia (Japan) (Disc 2) (1M, 2M)"
+        "parent_flags": "(Japan) (Disc 2) (1M, 2M)"
       }
     ],
     "manuals": [
@@ -5800,7 +5800,7 @@
     ],
     "parents": [
       {
-        "name": "Grandia - Digital Museum (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -5826,7 +5826,7 @@
     ],
     "parents": [
       {
-        "name": "Greatest Nine '96 (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -5848,7 +5848,7 @@
     ],
     "parents": [
       {
-        "name": "Grid Run (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Grid Runner"
         ]
@@ -5885,7 +5885,7 @@
     ],
     "parents": [
       {
-        "name": "Guardian Heroes (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -5921,7 +5921,7 @@
     ],
     "parents": [
       {
-        "name": "Gun Griffon (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Gungriffon"
         ]
@@ -5980,7 +5980,7 @@
     ],
     "parents": [
       {
-        "name": "Gungriffon II (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -6029,7 +6029,7 @@
     ],
     "parents": [
       {
-        "name": "Hang On GP '96 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Hang On GP '95",
           "Hang-On GP"
@@ -6058,7 +6058,7 @@
     ],
     "parents": [
       {
-        "name": "Hansha de Spark! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -6072,7 +6072,7 @@
     ],
     "parents": [
       {
-        "name": "Hardcore 4x4 (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "Deka 4-ku - Tough the Truck",
           "TNN Motor Sports HardCore 4X4"
@@ -6161,7 +6161,7 @@
     ],
     "parents": [
       {
-        "name": "Hebereke's Popoitto (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Popoitto Hebereke"
         ]
@@ -6183,7 +6183,7 @@
     ],
     "parents": [
       {
-        "name": "Heir of Zendor - The Legend and The Land (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Gotha II - Tenkuu no Kishi"
         ]
@@ -6243,7 +6243,7 @@
     ],
     "parents": [
       {
-        "name": "Hexen (Europe) (En,Fr,De,Es,It)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
         "clones": [
           "Hexen - Beyond Heretic"
         ]
@@ -6268,7 +6268,7 @@
     ],
     "parents": [
       {
-        "name": "Hi-Octane (Europe) (En,Fr,De,Es)",
+        "parent_flags": "(Europe) (En,Fr,De,Es)",
         "clones": [
           "Hi-Octane - The Track Fights Back!"
         ]
@@ -6296,7 +6296,7 @@
     ],
     "parents": [
       {
-        "name": "High Velocity - Mountain Racing Challenge (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Touge King the Spirits"
         ]
@@ -6332,7 +6332,7 @@
     ],
     "parents": [
       {
-        "name": "Highway 2000 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Wangan Dead Heat"
         ]
@@ -6373,7 +6373,7 @@
     ],
     "parents": [
       {
-        "name": "Hissatsu Pachinko Collection (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -6460,7 +6460,7 @@
     ],
     "parents": [
       {
-        "name": "Horde, The (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -6484,7 +6484,7 @@
     ],
     "parents": [
       {
-        "name": "Horror Tour (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -6534,7 +6534,7 @@
     ],
     "parents": [
       {
-        "name": "House of the Dead, The (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -6704,7 +6704,7 @@
     ],
     "parents": [
       {
-        "name": "Idol Mahjong - Final Romance R (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -6721,7 +6721,7 @@
     ],
     "parents": [
       {
-        "name": "Impact Racing (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -6746,7 +6746,7 @@
     ],
     "parents": [
       {
-        "name": "In the Hunt (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Kaitei Daisensou"
         ]
@@ -6773,7 +6773,7 @@
     ],
     "parents": [
       {
-        "name": "Incredible Hulk, The - The Pantheon Saga (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -6798,7 +6798,7 @@
     ],
     "parents": [
       {
-        "name": "Independence Day - The Game (Europe) (En,Fr,De,Es,It,Sv)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)",
         "clones": [
           "Independence Day"
         ]
@@ -6826,7 +6826,7 @@
     ],
     "parents": [
       {
-        "name": "International Victory Goal (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Sega International Victory Goal",
           "Worldwide Soccer - Sega International Victory Goal Edition"
@@ -6871,7 +6871,7 @@
     ],
     "parents": [
       {
-        "name": "Iron Man & X-O Manowar in Heavy Metal (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -6895,7 +6895,7 @@
     ],
     "parents": [
       {
-        "name": "Iron Storm (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "World Advanced Daisenryaku - Koutetsu no Senpuu"
         ]
@@ -6974,7 +6974,7 @@
     ],
     "parents": [
       {
-        "name": "J.League Jikkyou Honoo no Striker (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -6997,7 +6997,7 @@
     ],
     "parents": [
       {
-        "name": "J.League Pro Soccer Club o Tsukurou! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -7015,7 +7015,7 @@
     ],
     "parents": [
       {
-        "name": "J.League Pro Soccer Club o Tsukurou! 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -7032,7 +7032,7 @@
     ],
     "parents": [
       {
-        "name": "J.League Victory Goal '96 (Japan) (1M, 3M)",
+        "parent_flags": "(Japan) (1M, 3M)",
         "clones": [
           "J.League Victory Goal '97"
         ]
@@ -7086,7 +7086,7 @@
     ],
     "parents": [
       {
-        "name": "Jewels of the Oracle (Europe) (En,Ja,Fr,De)",
+        "parent_flags": "(Europe) (En,Ja,Fr,De)",
         "clones": [
           "Oracle no Houseki - Jewels of the Oracle"
         ]
@@ -7210,7 +7210,7 @@
     ],
     "parents": [
       {
-        "name": "Johnny Bazookatone (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Johnny Bazooka"
         ]
@@ -7235,7 +7235,7 @@
     ],
     "parents": [
       {
-        "name": "Jonah Lomu Rugby (Europe)"
+        "parent_flags": "(Europe)"
       }
     ]
   },
@@ -7341,7 +7341,7 @@
     ],
     "parents": [
       {
-        "name": "Kanazawa Shougi (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -7355,7 +7355,7 @@
     ],
     "parents": [
       {
-        "name": "Kanzen Chuukei Pro Yakyuu Greatest Nine (Japan) (Rev A)"
+        "parent_flags": "(Japan) (Rev A)"
       }
     ]
   },
@@ -7370,7 +7370,7 @@
     ],
     "parents": [
       {
-        "name": "Keio Flying Squadron 2 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Keiou Yuugekitai - Katsugeki-hen"
         ]
@@ -7425,7 +7425,7 @@
     ],
     "parents": [
       {
-        "name": "Keriotosse! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -7565,7 +7565,7 @@
     ],
     "parents": [
       {
-        "name": "King of Fighters '95, The (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "emulation": {
@@ -7582,7 +7582,7 @@
     ],
     "parents": [
       {
-        "name": "King of Fighters '96, The (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -7627,7 +7627,7 @@
     ],
     "parents": [
       {
-        "name": "Kiss yori... (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -7640,7 +7640,7 @@
     ],
     "parents": [
       {
-        "name": "Kochira Katsushikaku Kameari Kouenmae - Hashutsujo - Nakagawa Land Dai-Race! no Maki (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -7735,7 +7735,7 @@
     ],
     "parents": [
       {
-        "name": "Krazy Ivan (Europe)"
+        "parent_flags": "(Europe)"
       }
     ]
   },
@@ -7763,7 +7763,7 @@
     ],
     "parents": [
       {
-        "name": "Kuro no Danshou - The Literary Fragment (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "manuals": [
@@ -7837,7 +7837,7 @@
     ],
     "parents": [
       {
-        "name": "Langrisser - Dramatic Edition (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -7861,7 +7861,7 @@
     ],
     "parents": [
       {
-        "name": "Langrisser III (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -7906,7 +7906,7 @@
     ],
     "parents": [
       {
-        "name": "Langrisser V - The End of Legend (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -7931,7 +7931,7 @@
     ],
     "parents": [
       {
-        "name": "Last Bronx (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -7968,7 +7968,7 @@
     ],
     "parents": [
       {
-        "name": "Layer Section II (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -8061,7 +8061,7 @@
     ],
     "parents": [
       {
-        "name": "Loaded (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "Blood Factory"
         ]
@@ -8113,7 +8113,7 @@
     ],
     "parents": [
       {
-        "name": "Lost Vikings 2 - Norse by Norsewest (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "Norse by Norsewest - The Return of the Lost Vikings"
         ]
@@ -8141,7 +8141,7 @@
     ],
     "parents": [
       {
-        "name": "Lost World, The - Jurassic Park (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8191,7 +8191,7 @@
     ],
     "parents": [
       {
-        "name": "Lunar - Silver Star Story (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Lunar - Silver Star Story Complete"
         ]
@@ -8269,7 +8269,7 @@
     ],
     "parents": [
       {
-        "name": "Machi (Japan) (Demo) (1M)"
+        "parent_flags": "(Japan) (Demo) (1M)"
       }
     ],
     "manuals": [
@@ -8294,7 +8294,7 @@
     ],
     "parents": [
       {
-        "name": "Madden NFL 97 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8316,7 +8316,7 @@
     ],
     "parents": [
       {
-        "name": "Madden NFL 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8351,7 +8351,7 @@
     ],
     "parents": [
       {
-        "name": "Magic Carpet (Europe) (En,Fr,De,Es,Sv)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,Sv)"
       }
     ],
     "manuals": [
@@ -8376,7 +8376,7 @@
     ],
     "parents": [
       {
-        "name": "Magic Knight Rayearth (USA)"
+        "parent_flags": "(USA)"
       }
     ],
     "manuals": [
@@ -8406,7 +8406,7 @@
     ],
     "parents": [
       {
-        "name": "Magical Drop (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -8430,7 +8430,7 @@
     ],
     "parents": [
       {
-        "name": "Magical Drop III - Toretate Zoukan-gou! (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "manuals": [
@@ -8543,7 +8543,7 @@
     ],
     "parents": [
       {
-        "name": "Mahjong Kaigan Monogatari - Mahjong-kyou Jidai Sexy Idol-hen (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -8559,7 +8559,7 @@
     ],
     "parents": [
       {
-        "name": "Mahjong Taikai II Special (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ]
   },
@@ -8605,7 +8605,7 @@
     ],
     "parents": [
       {
-        "name": "Mahou Gakuen Lunar! (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -8696,7 +8696,7 @@
     ],
     "parents": [
       {
-        "name": "Mansion of Hidden Souls, The (Europe) (1S)",
+        "parent_flags": "(Europe) (1S)",
         "clones": [
           "Manoir des Ames Perdues, Le",
           "Mansion de las Almas Ocultas, La",
@@ -8733,7 +8733,7 @@
     ],
     "parents": [
       {
-        "name": "Manx TT SuperBike (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8801,7 +8801,7 @@
     ],
     "parents": [
       {
-        "name": "Marvel Super Heroes (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8843,7 +8843,7 @@
     ],
     "parents": [
       {
-        "name": "Mass Destruction (Europe) (En,Fr,De,Es)",
+        "parent_flags": "(Europe) (En,Fr,De,Es)",
         "clones": [
           "Mass Destruction - Otousan ni mo Dekiru Soft"
         ]
@@ -8906,7 +8906,7 @@
     ],
     "parents": [
       {
-        "name": "Maximum Force (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -8930,7 +8930,7 @@
     ],
     "parents": [
       {
-        "name": "MechWarrior 2 - 31st Century Combat - Arcade Combat Edition (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "MechWarrior 2"
         ]
@@ -8974,7 +8974,7 @@
     ],
     "parents": [
       {
-        "name": "Mega Man 8 (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Rockman 8 - Metal Heroes"
         ]
@@ -9002,7 +9002,7 @@
     ],
     "parents": [
       {
-        "name": "Mega Man X3 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Rockman X3"
         ]
@@ -9023,7 +9023,7 @@
     ],
     "parents": [
       {
-        "name": "Mega Man X4 (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Rockman X4"
         ]
@@ -9065,7 +9065,7 @@
     ],
     "parents": [
       {
-        "name": "Message Navi (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -9085,7 +9085,7 @@
     ],
     "parents": [
       {
-        "name": "Metal Black (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -9116,7 +9116,7 @@
     ],
     "parents": [
       {
-        "name": "Metal Slug - Super Vehicle-001 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -9148,7 +9148,7 @@
     ],
     "parents": [
       {
-        "name": "Mighty Hits (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "emulation": {
@@ -9185,7 +9185,7 @@
     ],
     "parents": [
       {
-        "name": "Minnesota Fats - Pool Legend (USA) (R)",
+        "parent_flags": "(USA) (R)",
         "clones": [
           "Side Pocket 2 - Densetsu no Hustler"
         ]
@@ -9240,7 +9240,7 @@
     ],
     "parents": [
       {
-        "name": "Mobile Suit Gundam (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -9261,7 +9261,7 @@
     ],
     "parents": [
       {
-        "name": "Mobile Suit Gundam Side Story I - Senritsu no Blue (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -9318,7 +9318,7 @@
     ],
     "parents": [
       {
-        "name": "Momotarou Douchuuki (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -9335,7 +9335,7 @@
     ],
     "parents": [
       {
-        "name": "Monster Slider (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -9357,7 +9357,7 @@
     ],
     "parents": [
       {
-        "name": "Mortal Kombat II (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Mortal Kombat II Kanzenban"
         ]
@@ -9386,7 +9386,7 @@
     ],
     "parents": [
       {
-        "name": "Mortal Kombat Trilogy (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9440,10 +9440,10 @@
     ],
     "parents": [
       {
-        "name": "Mr. Bones (Europe) (Disc 1)"
+        "parent_flags": "(Europe) (Disc 1)"
       },
       {
-        "name": "Mr. Bones (Europe) (Disc 2)"
+        "parent_flags": "(Europe) (Disc 2)"
       }
     ],
     "manuals": [
@@ -9513,7 +9513,7 @@
     ],
     "parents": [
       {
-        "name": "Myst (Europe) (En,Fr,De,Es)"
+        "parent_flags": "(Europe) (En,Fr,De,Es)"
       }
     ],
     "manuals": [
@@ -9550,7 +9550,7 @@
     ],
     "parents": [
       {
-        "name": "Mystaria - The Realms of Lore (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Blazing Heroes",
           "Riglordsaga"
@@ -9586,7 +9586,7 @@
     ],
     "parents": [
       {
-        "name": "NASCAR 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9608,7 +9608,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Action (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9630,7 +9630,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Action 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9655,7 +9655,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Jam - Tournament Edition (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9686,7 +9686,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Jam Extreme (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9714,7 +9714,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Live 97 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9736,7 +9736,7 @@
     ],
     "parents": [
       {
-        "name": "NBA Live 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9760,7 +9760,7 @@
     ],
     "parents": [
       {
-        "name": "NFL '97 (USA)"
+        "parent_flags": "(USA)"
       }
     ],
     "manuals": [
@@ -9781,7 +9781,7 @@
     ],
     "parents": [
       {
-        "name": "NFL Quarterback Club 96 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "NFL Quarterback Club '96"
         ]
@@ -9811,7 +9811,7 @@
     ],
     "parents": [
       {
-        "name": "NFL Quarterback Club 97 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "NFL Quarterback Club '97"
         ]
@@ -9842,7 +9842,7 @@
     ],
     "parents": [
       {
-        "name": "NHL 97 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9863,7 +9863,7 @@
     ],
     "parents": [
       {
-        "name": "NHL 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9885,7 +9885,7 @@
     ],
     "parents": [
       {
-        "name": "NHL All-Star Hockey (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9907,7 +9907,7 @@
     ],
     "parents": [
       {
-        "name": "NHL All-Star Hockey 98 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9931,7 +9931,7 @@
     ],
     "parents": [
       {
-        "name": "NHL Powerplay '96 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -9977,10 +9977,10 @@
     ],
     "parents": [
       {
-        "name": "Nanatsu no Hikan (Japan) (Disc 1) (1M)"
+        "parent_flags": "(Japan) (Disc 1) (1M)"
       },
       {
-        "name": "Nanatsu no Hikan (Japan) (Disc 2) (1M)"
+        "parent_flags": "(Japan) (Disc 2) (1M)"
       }
     ]
   },
@@ -10034,7 +10034,7 @@
     ],
     "parents": [
       {
-        "name": "NiGHTS into Dreams... (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -10093,7 +10093,7 @@
     ],
     "parents": [
       {
-        "name": "Night Warriors - Darkstalkers' Revenge (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Vampire Hunter - Darkstalker's Revenge",
           "Vampire Hunter - Darkstalkers' Revenge"
@@ -10221,7 +10221,7 @@
     ],
     "parents": [
       {
-        "name": "Ninja Jajamaru-kun - Onigiri Ninpouchou Gold (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -10344,7 +10344,7 @@
     ],
     "parents": [
       {
-        "name": "Off-World Interceptor Extreme (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -10390,7 +10390,7 @@
     ],
     "parents": [
       {
-        "name": "Ojousama o Nerae!! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -10421,7 +10421,7 @@
     ],
     "parents": [
       {
-        "name": "Olympic Soccer (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -10479,7 +10479,7 @@
     ],
     "parents": [
       {
-        "name": "P.T.O. - Pacific Theater of Operations II (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Teitoku no Ketsudan II"
         ]
@@ -10511,7 +10511,7 @@
     ],
     "parents": [
       {
-        "name": "PGA Tour 97 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -10537,7 +10537,7 @@
     "name": "Pad Nifty",
     "parents": [
       {
-        "name": "Pad Nifty (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Pad Nifty 1.1 & Habitat II"
         ]
@@ -10554,7 +10554,7 @@
     ],
     "parents": [
       {
-        "name": "Pandemonium! (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Magical Hoppers"
         ]
@@ -10593,7 +10593,7 @@
     ],
     "parents": [
       {
-        "name": "Panic-chan (Japan) (Rev A) (10M)"
+        "parent_flags": "(Japan) (Rev A) (10M)"
       }
     ],
     "manuals": [
@@ -10615,7 +10615,7 @@
     ],
     "parents": [
       {
-        "name": "Panzer Dragoon (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -10656,7 +10656,7 @@
     ],
     "parents": [
       {
-        "name": "Panzer Dragoon II Zwei (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -10697,25 +10697,25 @@
     ],
     "parents": [
       {
-        "name": "Panzer Dragoon Saga (Europe) (Disc 1)",
+        "parent_flags": "(Europe) (Disc 1)",
         "clones": [
           "Azel - Panzer Dragoon RPG (Disc 1)"
         ]
       },
       {
-        "name": "Panzer Dragoon Saga (Europe) (Disc 2)",
+        "parent_flags": "(Europe) (Disc 2)",
         "clones": [
           "Azel - Panzer Dragoon RPG (Disc 2)"
         ]
       },
       {
-        "name": "Panzer Dragoon Saga (Europe) (Disc 3)",
+        "parent_flags": "(Europe) (Disc 3)",
         "clones": [
           "Azel - Panzer Dragoon RPG (Disc 3)"
         ]
       },
       {
-        "name": "Panzer Dragoon Saga (Europe) (Disc 4)",
+        "parent_flags": "(Europe) (Disc 4)",
         "clones": [
           "Azel - Panzer Dragoon RPG (Disc 4)"
         ]
@@ -10776,7 +10776,7 @@
     ],
     "parents": [
       {
-        "name": "Parodius (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Gokujou Parodius Da! Deluxe Pack"
         ]
@@ -10803,7 +10803,7 @@
     ],
     "parents": [
       {
-        "name": "Pebble Beach Golf Links (Europe) (3S)",
+        "parent_flags": "(Europe) (3S)",
         "clones": [
           "Pebble Beach Golf Links - Stadler ni Chousen"
         ]
@@ -10837,7 +10837,7 @@
     ],
     "parents": [
       {
-        "name": "PhantasM (Japan) (Disc 6) (4M)"
+        "parent_flags": "(Japan) (Disc 6) (4M)"
       }
     ]
   },
@@ -10845,7 +10845,7 @@
     "name": "Photo CD Operating System",
     "parents": [
       {
-        "name": "Photo CD Operating System (Europe) (En,Ja,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
       }
     ]
   },
@@ -10892,10 +10892,10 @@
     ],
     "parents": [
       {
-        "name": "Pia Carrot e Youkoso!! 2 (Japan) (Disc 1) (Game Disc) (2M)"
+        "parent_flags": "(Japan) (Disc 1) (Game Disc) (2M)"
       },
       {
-        "name": "Pia Carrot e Youkoso!! 2 (Japan) (Disc 2) (Special Disc) (1M)"
+        "parent_flags": "(Japan) (Disc 2) (Special Disc) (1M)"
       }
     ],
     "emulation": {
@@ -10910,7 +10910,7 @@
     ],
     "parents": [
       {
-        "name": "Pia Carrot e Youkoso!! We've Been Waiting for You (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -10942,7 +10942,7 @@
     ],
     "parents": [
       {
-        "name": "Pinball Graffiti (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -11034,7 +11034,7 @@
     ],
     "parents": [
       {
-        "name": "PriKura (Princess Kurara) Daisakusen (Japan)"
+        "parent_flags": "(Princess Kurara) Daisakusen (Japan)"
       }
     ],
     "manuals": [
@@ -11056,7 +11056,7 @@
     ],
     "parents": [
       {
-        "name": "Primal Rage (Europe) (En,Fr,De,Es,It,Pt)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)"
       }
     ],
     "manuals": [
@@ -11093,7 +11093,7 @@
     ],
     "parents": [
       {
-        "name": "Princess Crown (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -11116,7 +11116,7 @@
     ],
     "parents": [
       {
-        "name": "Princess Maker - Yumemiru Yousei (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -11136,7 +11136,7 @@
     ],
     "parents": [
       {
-        "name": "Princess Maker 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -11159,7 +11159,7 @@
     ],
     "parents": [
       {
-        "name": "Princess Quest (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -11240,7 +11240,7 @@
     ],
     "parents": [
       {
-        "name": "Pro Mahjong Kiwame-S (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -11272,7 +11272,7 @@
     ],
     "parents": [
       {
-        "name": "Pro Yakyuu Greatest Nine '97 (Japan) (Rev A)"
+        "parent_flags": "(Japan) (Rev A)"
       }
     ],
     "manuals": [
@@ -11308,7 +11308,7 @@
     ],
     "parents": [
       {
-        "name": "Pro Yakyuu Greatest Nine '98 (Japan) (Rev A)"
+        "parent_flags": "(Japan) (Rev A)"
       }
     ],
     "manuals": [
@@ -11346,7 +11346,7 @@
     ],
     "parents": [
       {
-        "name": "Pro Yakyuu Team mo Tsukurou! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -11370,7 +11370,7 @@
     ],
     "parents": [
       {
-        "name": "Pro-Pinball - The Web (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Pro-Pinball"
         ]
@@ -11410,7 +11410,7 @@
     ],
     "parents": [
       {
-        "name": "Puyo Puyo Sun (Japan) (1M, 3M)",
+        "parent_flags": "(Japan) (1M, 3M)",
         "clones": [
           "Puyo Puyo Sun for SegaNet"
         ]
@@ -11437,7 +11437,7 @@
     ],
     "parents": [
       {
-        "name": "Puyo Puyo Tsuu (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -11461,7 +11461,7 @@
     ],
     "parents": [
       {
-        "name": "Puzzle Bobble 2X (Japan) (2M2)"
+        "parent_flags": "(Japan) (2M2)"
       }
     ]
   },
@@ -11474,7 +11474,7 @@
     ],
     "parents": [
       {
-        "name": "Puzzle Bobble 3 (Japan) (1M)",
+        "parent_flags": "(Japan) (1M)",
         "clones": [
           "Puzzle Bobble 3 for SegaNet"
         ]
@@ -11495,7 +11495,7 @@
     ],
     "parents": [
       {
-        "name": "Quake (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -11556,7 +11556,7 @@
     ],
     "parents": [
       {
-        "name": "Quiz Nanairo Dreams - Nijiirochou no Kiseki (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -11611,7 +11611,7 @@
     ],
     "parents": [
       {
-        "name": "Rabbit (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -11658,7 +11658,7 @@
     ],
     "parents": [
       {
-        "name": "Rampage - World Tour (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -11699,7 +11699,7 @@
     ],
     "parents": [
       {
-        "name": "Rayman (Europe) (En,Fr,De) (1S)"
+        "parent_flags": "(Europe) (En,Fr,De) (1S)"
       }
     ],
     "manuals": [
@@ -11724,7 +11724,7 @@
     ],
     "parents": [
       {
-        "name": "Real Bout Garou Densetsu (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -11741,7 +11741,7 @@
     ],
     "parents": [
       {
-        "name": "Real Bout Garou Densetsu Special (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -11756,7 +11756,7 @@
     ],
     "parents": [
       {
-        "name": "Real Mahjong Adventure Umi e - Summer Waltz (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -11769,16 +11769,16 @@
     ],
     "parents": [
       {
-        "name": "Real Sound - Kaze no Regret (Japan) (Disc 1) (2M, 3M)"
+        "parent_flags": "(Japan) (Disc 1) (2M, 3M)"
       },
       {
-        "name": "Real Sound - Kaze no Regret (Japan) (Disc 2) (1M)"
+        "parent_flags": "(Japan) (Disc 2) (1M)"
       },
       {
-        "name": "Real Sound - Kaze no Regret (Japan) (Disc 3) (1M)"
+        "parent_flags": "(Japan) (Disc 3) (1M)"
       },
       {
-        "name": "Real Sound - Kaze no Regret (Japan) (Disc 4) (2M)"
+        "parent_flags": "(Japan) (Disc 4) (2M)"
       }
     ],
     "manuals": [
@@ -11807,7 +11807,7 @@
     ],
     "parents": [
       {
-        "name": "Resident Evil (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Bio Hazard"
         ]
@@ -11856,7 +11856,7 @@
     ],
     "parents": [
       {
-        "name": "Return to Zork (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -11879,7 +11879,7 @@
     ],
     "parents": [
       {
-        "name": "Revolution X - Music Is the Weapon (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -11908,7 +11908,7 @@
     ],
     "parents": [
       {
-        "name": "Riglordsaga 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -11924,7 +11924,7 @@
     ],
     "parents": [
       {
-        "name": "Rise 2 - Resurrection (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -11949,25 +11949,25 @@
     ],
     "parents": [
       {
-        "name": "Riven - The Sequel to Myst (Europe) (Disc 1)",
+        "parent_flags": "(Europe) (Disc 1)",
         "clones": [
           "Riven - A Sequencia de Myst (Disc 1)"
         ]
       },
       {
-        "name": "Riven - The Sequel to Myst (Europe) (Disc 2)",
+        "parent_flags": "(Europe) (Disc 2)",
         "clones": [
           "Riven - A Sequencia de Myst (Disc 2)"
         ]
       },
       {
-        "name": "Riven - The Sequel to Myst (Europe) (Disc 3)",
+        "parent_flags": "(Europe) (Disc 3)",
         "clones": [
           "Riven - A Sequencia de Myst (Disc 3)"
         ]
       },
       {
-        "name": "Riven - The Sequel to Myst (Europe) (Disc 4)",
+        "parent_flags": "(Europe) (Disc 4)",
         "clones": [
           "Riven - A Sequencia de Myst (Disc 4)"
         ]
@@ -12003,7 +12003,7 @@
     ],
     "parents": [
       {
-        "name": "Road & Track Presents - The Need for Speed (Europe) (En,De)",
+        "parent_flags": "(Europe) (En,De)",
         "clones": [
           "Nissan Presents - Over Drivin' GT-R"
         ]
@@ -12031,7 +12031,7 @@
     ],
     "parents": [
       {
-        "name": "Road Rash (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -12055,7 +12055,7 @@
     ],
     "parents": [
       {
-        "name": "Robo Pit (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -12077,7 +12077,7 @@
     ],
     "parents": [
       {
-        "name": "Robotica - Cybernation Revolt (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Deadalus",
           "Robotica"
@@ -12107,7 +12107,7 @@
     ],
     "parents": [
       {
-        "name": "Romance of the Three Kingdoms IV - Wall of Fire (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Sangokushi IV",
           "Sangokushi IV with Power-Up Kit",
@@ -12147,7 +12147,7 @@
     ],
     "parents": [
       {
-        "name": "Roommate - Inoue Ryouko (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -12166,7 +12166,7 @@
     ],
     "parents": [
       {
-        "name": "Roommate 3 - Ryouko Kaze no Kagayaku Asa ni (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -12242,10 +12242,10 @@
     ],
     "parents": [
       {
-        "name": "Sakura Taisen (Japan) (Disc 1) (6M)"
+        "parent_flags": "(Japan) (Disc 1) (6M)"
       },
       {
-        "name": "Sakura Taisen (Japan) (Disc 2) (6M)"
+        "parent_flags": "(Japan) (Disc 2) (6M)"
       }
     ],
     "manuals": [
@@ -12270,7 +12270,7 @@
     ],
     "parents": [
       {
-        "name": "Sakura Taisen - Hanagumi Taisen Columns (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -12285,7 +12285,7 @@
     ],
     "parents": [
       {
-        "name": "Sakura Taisen - Hanagumi Tsuushin (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -12324,13 +12324,13 @@
     ],
     "parents": [
       {
-        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 1) (Shokai Tokutenban)"
+        "parent_flags": "(Japan) (Disc 1) (Shokai Tokutenban)"
       },
       {
-        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 2) (Shokai Tokutenban)"
+        "parent_flags": "(Japan) (Disc 2) (Shokai Tokutenban)"
       },
       {
-        "name": "Sakura Taisen 2 - Kimi, Shinitamou Koto Nakare (Japan) (Disc 3) (Shokai Tokutenban)"
+        "parent_flags": "(Japan) (Disc 3) (Shokai Tokutenban)"
       }
     ],
     "manuals": [
@@ -12385,7 +12385,7 @@
     ],
     "parents": [
       {
-        "name": "Samurai Spirits - Amakusa Kourin (Japan) (En,Ja,Es,Pt)"
+        "parent_flags": "(Japan) (En,Ja,Es,Pt)"
       }
     ],
     "manuals": [
@@ -12440,7 +12440,7 @@
     ],
     "parents": [
       {
-        "name": "Sangokushi Koumeiden (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Sanguozhi Yingjiezhuan"
         ]
@@ -12471,7 +12471,7 @@
     ],
     "parents": [
       {
-        "name": "Sangokushi V (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Sanguozhi V"
         ]
@@ -12526,7 +12526,7 @@
     ],
     "parents": [
       {
-        "name": "Saturn Bomberman (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -12564,7 +12564,7 @@
     ],
     "parents": [
       {
-        "name": "Saturn Bomberman Fight!! (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -12592,7 +12592,7 @@
     "name": "Saturn Super Henshuubu Hen - Taikenban Saturn Soft Taizen",
     "parents": [
       {
-        "name": "Saturn Super Henshuubu Hen - Taikenban Saturn Soft Taizen (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -12600,7 +12600,7 @@
     "name": "Saturn Super Vol. 1",
     "parents": [
       {
-        "name": "Saturn Super Vol. 1 (Japan) (6M)"
+        "parent_flags": "(Japan) (6M)"
       }
     ]
   },
@@ -12614,7 +12614,7 @@
     "name": "Saturn Super Vol. 2",
     "parents": [
       {
-        "name": "Saturn Super Vol. 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -12631,7 +12631,7 @@
     "name": "Saturn Super Vol. 6",
     "parents": [
       {
-        "name": "Saturn Super Vol. 6 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -12665,7 +12665,7 @@
     ],
     "parents": [
       {
-        "name": "Scorcher (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -12717,7 +12717,7 @@
     ],
     "parents": [
       {
-        "name": "Sea Bass Fishing (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "SeaBass Fishing"
         ]
@@ -12820,7 +12820,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Ages - OutRun (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -12887,7 +12887,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Ages - Space Harrier (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -12913,7 +12913,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Ages Volume 1 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -12938,7 +12938,7 @@
     "name": "Sega Flash Vol. 3",
     "parents": [
       {
-        "name": "Sega Flash Vol. 3 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ]
   },
@@ -12964,7 +12964,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Rally Championship (Europe) (Made in EU)"
+        "parent_flags": "(Europe) (Made in EU)"
       }
     ],
     "manuals": [
@@ -13006,7 +13006,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Rally Championship Plus Netlink Edition (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Sega Rally Championship Plus"
         ]
@@ -13036,7 +13036,7 @@
     "name": "Sega Saturn Choice Cuts",
     "parents": [
       {
-        "name": "Sega Saturn Choice Cuts (USA) (R2)"
+        "parent_flags": "(USA) (R2)"
       }
     ]
   },
@@ -13059,7 +13059,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Touring Car Championship (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13090,7 +13090,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Worldwide Soccer '98 - Club Edition (Europe) (En,Fr,Es)",
+        "parent_flags": "(Europe) (En,Fr,Es)",
         "clones": [
           "Sega Worldwide Soccer '98",
           "Worldwide Soccer '98"
@@ -13125,7 +13125,7 @@
     ],
     "parents": [
       {
-        "name": "Sega Worldwide Soccer 97 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Sega Worldwide Soccer '97",
           "Victory Goal Worldwide Edition"
@@ -13178,7 +13178,7 @@
     "name": "SegaSaturn Photo CD Operator",
     "parents": [
       {
-        "name": "SegaSaturn Photo CD Operator (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -13206,7 +13206,7 @@
     ],
     "parents": [
       {
-        "name": "Seifuku Densetsu - Pretty Fighter X (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -13254,7 +13254,7 @@
     ],
     "parents": [
       {
-        "name": "Senkutsu Katsuryu Taisen - Chaos Seed (Japan) (Disc 1) (Game Disc) (Rev A) (10M)"
+        "parent_flags": "(Japan) (Disc 1) (Game Disc) (Rev A) (10M)"
       }
     ],
     "emulation": {
@@ -13278,10 +13278,10 @@
     ],
     "parents": [
       {
-        "name": "Sentimental Graffiti (Japan) (Disc 1) (Game Disc) (1M)"
+        "parent_flags": "(Japan) (Disc 1) (Game Disc) (1M)"
       },
       {
-        "name": "Sentimental Graffiti (Japan) (Disc 2) (Second Window) (1M, 2M)"
+        "parent_flags": "(Japan) (Disc 2) (Second Window) (1M, 2M)"
       }
     ],
     "manuals": [
@@ -13349,7 +13349,7 @@
     ],
     "parents": [
       {
-        "name": "Shanghai - Great Moments (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -13363,7 +13363,7 @@
     ],
     "parents": [
       {
-        "name": "Shanghai - Triple-Threat (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Shanghai - Banri no Choujou - The Great Wall"
         ]
@@ -13405,7 +13405,7 @@
     ],
     "parents": [
       {
-        "name": "Shellshock (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13491,7 +13491,7 @@
     ],
     "parents": [
       {
-        "name": "Shin Megami Tensei - Devil Summoner (Japan) (Rev A)"
+        "parent_flags": "(Japan) (Rev A)"
       }
     ],
     "manuals": [
@@ -13531,7 +13531,7 @@
     "rating": 0.65,
     "parents": [
       {
-        "name": "Shin Seiki Evangelion - 2nd Impression (Japan) (Made in Japan)"
+        "parent_flags": "(Japan) (Made in Japan)"
       }
     ],
     "manuals": [
@@ -13570,7 +13570,7 @@
     ],
     "parents": [
       {
-        "name": "Shining Force III (Europe) (R)",
+        "parent_flags": "(Europe) (R)",
         "clones": [
           "Shining Force III - Scenario 1 - Outo no Kyoshin"
         ]
@@ -13597,7 +13597,7 @@
     ],
     "parents": [
       {
-        "name": "Shining Force III - Scenario 2 - Nerawareta Miko (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -13633,7 +13633,7 @@
     ],
     "parents": [
       {
-        "name": "Shining Wisdom (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13657,7 +13657,7 @@
     ],
     "parents": [
       {
-        "name": "Shining the Holy Ark (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13688,7 +13688,7 @@
     ],
     "parents": [
       {
-        "name": "Shinobi-X - Shin Shinobi Den (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Shin Shinobiden",
           "Shinobi Legions"
@@ -13776,7 +13776,7 @@
     ],
     "parents": [
       {
-        "name": "Shockwave Assault (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13856,7 +13856,7 @@
     ],
     "parents": [
       {
-        "name": "Side Pocket 3 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -13877,7 +13877,7 @@
     ],
     "parents": [
       {
-        "name": "Silhouette Mirage (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -13902,7 +13902,7 @@
     ],
     "parents": [
       {
-        "name": "SimCity 2000 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -13941,7 +13941,7 @@
     ],
     "parents": [
       {
-        "name": "Skeleton Warriors (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -13976,7 +13976,7 @@
     ],
     "parents": [
       {
-        "name": "Sky Target (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14007,7 +14007,7 @@
     ],
     "parents": [
       {
-        "name": "Slam 'n Jam '96 featuring Magic & Kareem - Signature Edition (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Slam 'n Jam '96 featuring Magic & Kareem"
         ]
@@ -14045,7 +14045,7 @@
     ],
     "parents": [
       {
-        "name": "Slayers Royal 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -14110,7 +14110,7 @@
     ],
     "parents": [
       {
-        "name": "Solo Crisis (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -14126,7 +14126,7 @@
     ],
     "parents": [
       {
-        "name": "Sonic 3D - Flickies' Island (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Sonic 3D Blast"
         ]
@@ -14172,7 +14172,7 @@
     ],
     "parents": [
       {
-        "name": "Sonic Jam (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14220,7 +14220,7 @@
     ],
     "parents": [
       {
-        "name": "Sonic R (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14294,7 +14294,7 @@
     ],
     "parents": [
       {
-        "name": "Sotsugyou II - Neo Generation (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -14333,7 +14333,7 @@
     ],
     "parents": [
       {
-        "name": "Soukyuu Gurentai (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -14370,7 +14370,7 @@
     ],
     "parents": [
       {
-        "name": "Sound Novel Machi (Japan) (Disc 2) (10.13-10.15 Incl.) (1M)"
+        "parent_flags": "(Japan) (Disc 2) (10.13-10.15 Incl.) (1M)"
       }
     ]
   },
@@ -14401,7 +14401,7 @@
     ],
     "parents": [
       {
-        "name": "Soviet Strike (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14432,7 +14432,7 @@
     ],
     "parents": [
       {
-        "name": "Space Hulk - Vengeance of the Blood Angels (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14468,7 +14468,7 @@
     ],
     "parents": [
       {
-        "name": "Space Jam (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14493,7 +14493,7 @@
     ],
     "parents": [
       {
-        "name": "Spot Goes to Hollywood (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14553,7 +14553,7 @@
     ],
     "parents": [
       {
-        "name": "StarFighter 3000 (Europe) (En,Fr,De,Es,It)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
         "clones": [
           "Star Fighter"
         ]
@@ -14596,7 +14596,7 @@
     ],
     "parents": [
       {
-        "name": "Steamgear Mash (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -14609,7 +14609,7 @@
     ],
     "parents": [
       {
-        "name": "Steep Slope Sliders (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -14632,7 +14632,7 @@
     ],
     "parents": [
       {
-        "name": "Stellar Assault SS (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -14649,7 +14649,7 @@
     ],
     "parents": [
       {
-        "name": "Story of Thor 2, The (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Legend of Oasis, The",
           "Thor - Seireioukiden"
@@ -14691,7 +14691,7 @@
     ],
     "parents": [
       {
-        "name": "Street Fighter - The Movie (Europe) (2S)",
+        "parent_flags": "(Europe) (2S)",
         "clones": [
           "Street Fighter - Real Battle on Film"
         ]
@@ -14719,7 +14719,7 @@
     ],
     "parents": [
       {
-        "name": "Street Fighter Alpha - Warriors' Dreams (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Street Fighter Zero"
         ]
@@ -14753,7 +14753,7 @@
     ],
     "parents": [
       {
-        "name": "Street Fighter Alpha 2 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Street Fighter Zero 2",
           "Street Fighter Zero 2'"
@@ -14788,10 +14788,10 @@
     ],
     "parents": [
       {
-        "name": "Street Fighter Collection (Europe) (Disc 1) (R)"
+        "parent_flags": "(Europe) (Disc 1) (R)"
       },
       {
-        "name": "Street Fighter Collection (Europe) (Disc 2) (R)"
+        "parent_flags": "(Europe) (Disc 2) (R)"
       }
     ],
     "manuals": [
@@ -14863,7 +14863,7 @@
     ],
     "parents": [
       {
-        "name": "Street Racer (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Street Racer Extra"
         ]
@@ -14883,7 +14883,7 @@
     ],
     "parents": [
       {
-        "name": "Striker 96 (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -14905,7 +14905,7 @@
     ],
     "parents": [
       {
-        "name": "Strikers 1945 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -14947,7 +14947,7 @@
     ],
     "parents": [
       {
-        "name": "Suiko Enbu - Fuuun Saiki (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -14982,13 +14982,13 @@
     ],
     "parents": [
       {
-        "name": "Super Adventure Rockman (Japan) (Disc 1) (Episode 1 - Tsuki no Shinden)"
+        "parent_flags": "(Japan) (Disc 1) (Episode 1 - Tsuki no Shinden)"
       },
       {
-        "name": "Super Adventure Rockman (Japan) (Disc 2) (Episode 2 - Shitou! Wily Numbers)"
+        "parent_flags": "(Japan) (Disc 2) (Episode 2 - Shitou! Wily Numbers)"
       },
       {
-        "name": "Super Adventure Rockman (Japan) (Disc 3) (Episode 3 - Saigo no Tatakai!!)"
+        "parent_flags": "(Japan) (Disc 3) (Episode 3 - Saigo no Tatakai!!)"
       }
     ]
   },
@@ -15009,7 +15009,7 @@
     ],
     "parents": [
       {
-        "name": "Super Puzzle Fighter II Turbo (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Super Puzzle Fighter II X"
         ]
@@ -15041,7 +15041,7 @@
     ],
     "parents": [
       {
-        "name": "Super Real Mahjong Graffiti (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -15076,7 +15076,7 @@
     ],
     "parents": [
       {
-        "name": "Super Real Mahjong P7 (Japan) (P's Club Special Edition)"
+        "parent_flags": "(Japan) (P's Club Special Edition)"
       }
     ]
   },
@@ -15089,7 +15089,7 @@
     ],
     "parents": [
       {
-        "name": "Super Real Mahjong PVI (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -15107,7 +15107,7 @@
     ],
     "parents": [
       {
-        "name": "Super Robot Taisen F (Japan) (Rev A) (10M, 11M, 12M, 13M)"
+        "parent_flags": "(Japan) (Rev A) (10M, 11M, 12M, 13M)"
       }
     ],
     "manuals": [
@@ -15133,7 +15133,7 @@
     ],
     "parents": [
       {
-        "name": "Super Robot Taisen F - Kanketsu-hen (Japan) (2M, 3M)"
+        "parent_flags": "(Japan) (2M, 3M)"
       }
     ],
     "manuals": [
@@ -15165,7 +15165,7 @@
     ],
     "parents": [
       {
-        "name": "Swagman (Europe) (En,Fr,De)"
+        "parent_flags": "(Europe) (En,Fr,De)"
       }
     ]
   },
@@ -15177,7 +15177,7 @@
     ],
     "parents": [
       {
-        "name": "Sword & Sorcery (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "manuals": [
@@ -15213,7 +15213,7 @@
     ],
     "parents": [
       {
-        "name": "Tactics Formula (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -15270,7 +15270,7 @@
     ],
     "parents": [
       {
-        "name": "Taikou Risshiden II (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ],
     "emulation": {
@@ -15317,7 +15317,7 @@
     ],
     "parents": [
       {
-        "name": "Tanjou - Debut S (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -15414,7 +15414,7 @@
     ],
     "parents": [
       {
-        "name": "Teitoku no Ketsudan III (Japan)",
+        "parent_flags": "(Japan)",
         "clones": [
           "Teitoku no Ketsudan III with Power-Up Kit"
         ]
@@ -15431,7 +15431,7 @@
     ],
     "parents": [
       {
-        "name": "Tempest 2000 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -15470,7 +15470,7 @@
     ],
     "parents": [
       {
-        "name": "Tenant Wars (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -15593,7 +15593,7 @@
     ],
     "parents": [
       {
-        "name": "Terry Pratchett's Discworld (Europe) (En,Fr,De,Es,It)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
         "clones": [
           "Discworld"
         ]
@@ -15612,7 +15612,7 @@
     ],
     "parents": [
       {
-        "name": "Tetris Plus (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -15634,7 +15634,7 @@
     ],
     "parents": [
       {
-        "name": "Tetris S (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -15656,7 +15656,7 @@
     ],
     "parents": [
       {
-        "name": "Theme Park (Europe) (En,Fr,De,Es,Sv)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,Sv)",
         "clones": [
           "Shin Theme Park"
         ]
@@ -15684,7 +15684,7 @@
     ],
     "parents": [
       {
-        "name": "Three Dirty Dwarves (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -15730,7 +15730,7 @@
     ],
     "parents": [
       {
-        "name": "Thunder Force V (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -15761,7 +15761,7 @@
     "rating": 0.75,
     "parents": [
       {
-        "name": "Tilt! (Europe) (En,Fr,De)",
+        "parent_flags": "(Europe) (En,Fr,De)",
         "clones": [
           "Hyper 3-D Pinball",
           "Hyper 3D Pinball"
@@ -15817,7 +15817,7 @@
     ],
     "parents": [
       {
-        "name": "Titan Wars (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Solar Eclipse"
         ]
@@ -15858,7 +15858,7 @@
     ],
     "parents": [
       {
-        "name": "Tokimeki Memorial - Forever with You (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "emulation": {
@@ -15874,7 +15874,7 @@
     ],
     "parents": [
       {
-        "name": "Tokimeki Memorial Drama Series Vol. 1 - Nijiiro no Seishun (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -15913,7 +15913,7 @@
     ],
     "parents": [
       {
-        "name": "Tokimeki Memorial Taisen Puzzledama (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -15959,7 +15959,7 @@
     ],
     "parents": [
       {
-        "name": "Tomb Raider (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Tomb Raiders"
         ]
@@ -16007,14 +16007,14 @@
     ],
     "parents": [
       {
-        "name": "Torico (Europe) (Disc 1)",
+        "parent_flags": "(Europe) (Disc 1)",
         "clones": [
           "Gekka Mugentan Torico (Disc A)",
           "Lunacy (Disc 1)"
         ]
       },
       {
-        "name": "Torico (Europe) (Disc 2)",
+        "parent_flags": "(Europe) (Disc 2)",
         "clones": [
           "Gekka Mugentan Torico (Disc B)",
           "Lunacy (Disc 2)"
@@ -16043,7 +16043,7 @@
     ],
     "parents": [
       {
-        "name": "Touge King the Spirits 2 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "manuals": [
@@ -16109,7 +16109,7 @@
     ],
     "parents": [
       {
-        "name": "True Pinball (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Tekkyuu - True Pinball"
         ]
@@ -16164,7 +16164,7 @@
     ],
     "parents": [
       {
-        "name": "Tunnel B1 (Europe) (En,Fr,De,Es,It)",
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
         "clones": [
           "3D Mission Shooting - Finalist"
         ]
@@ -16248,7 +16248,7 @@
     ],
     "parents": [
       {
-        "name": "Ultimate Mortal Kombat 3 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16344,7 +16344,7 @@
     ],
     "parents": [
       {
-        "name": "Valora Valley Golf (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Hyper Golf, The - Devil's Course"
         ]
@@ -16418,7 +16418,7 @@
     ],
     "parents": [
       {
-        "name": "Vatlva (Japan) (Rev A)"
+        "parent_flags": "(Japan) (Rev A)"
       }
     ]
   },
@@ -16433,7 +16433,7 @@
     ],
     "parents": [
       {
-        "name": "Victory Boxing (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Center Ring Boxing"
         ]
@@ -16458,7 +16458,7 @@
     ],
     "parents": [
       {
-        "name": "Victory Goal (Japan) (1A)"
+        "parent_flags": "(Japan) (1A)"
       }
     ],
     "manuals": [
@@ -16483,7 +16483,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Cop (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16517,7 +16517,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Cop 2 (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16557,7 +16557,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Fighter (Europe) (Made in EU)",
+        "parent_flags": "(Europe) (Made in EU)",
         "clones": [
           "Virtua Fighter Remix"
         ]
@@ -16617,7 +16617,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Fighter 2 (Europe) (Made in EU)"
+        "parent_flags": "(Europe) (Made in EU)"
       }
     ],
     "manuals": [
@@ -16642,7 +16642,7 @@
     "name": "Virtua Fighter CG Portrait Collection",
     "parents": [
       {
-        "name": "Virtua Fighter CG Portrait Collection (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Virtua Fighter CG Portrait Series - The Final - Dural",
           "Virtua Fighter CG Portrait Series Vol. 1 - Sarah Bryant",
@@ -16734,7 +16734,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Fighter Kids (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16779,7 +16779,7 @@
     ],
     "parents": [
       {
-        "name": "Virtua Racing (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16819,7 +16819,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual Casino (USA)"
+        "parent_flags": "(USA)"
       }
     ],
     "manuals": [
@@ -16841,7 +16841,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual Golf (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Tournament Leader"
         ]
@@ -16857,7 +16857,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual Hydlide (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -16925,7 +16925,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual On - Cyber Troopers (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Dennou Senki - Virtual On - Cyber Troopers"
         ]
@@ -16958,7 +16958,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual On - Cyber Troopers Net Link Edition (USA)",
+        "parent_flags": "(USA)",
         "clones": [
           "Dennou Senki - Virtual On - Cyber Troopers for SegaNet"
         ]
@@ -16983,7 +16983,7 @@
     ],
     "parents": [
       {
-        "name": "Virtual Open Tennis (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17048,7 +17048,7 @@
     ],
     "parents": [
       {
-        "name": "WWF In Your House (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17074,7 +17074,7 @@
     ],
     "parents": [
       {
-        "name": "WWF WrestleMania - The Arcade Game (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17125,7 +17125,7 @@
     ],
     "parents": [
       {
-        "name": "Waku Waku 7 (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -17141,7 +17141,7 @@
     ],
     "parents": [
       {
-        "name": "Waku Waku Puyo Puyo Dungeon (Japan) (3M)"
+        "parent_flags": "(Japan) (3M)"
       }
     ],
     "emulation": {
@@ -17211,7 +17211,7 @@
     ],
     "parents": [
       {
-        "name": "WarCraft II - The Dark Saga (Europe) (En,Fr,De,Es,It)"
+        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
       }
     ],
     "manuals": [
@@ -17262,7 +17262,7 @@
     ],
     "parents": [
       {
-        "name": "Whizz (Europe)"
+        "parent_flags": "(Europe)"
       }
     ]
   },
@@ -17295,7 +17295,7 @@
     ],
     "parents": [
       {
-        "name": "Wing Arms (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Wing Arms - Kareinaru Gekitsuiou"
         ]
@@ -17357,7 +17357,7 @@
     ],
     "parents": [
       {
-        "name": "Winning Post 2 (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ]
   },
@@ -17394,7 +17394,7 @@
     ],
     "parents": [
       {
-        "name": "Winning Post 3 (Japan) (2M)"
+        "parent_flags": "(Japan) (2M)"
       }
     ]
   },
@@ -17435,7 +17435,7 @@
     ],
     "parents": [
       {
-        "name": "Winter Heat (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17460,7 +17460,7 @@
     ],
     "parents": [
       {
-        "name": "WipEout (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17485,7 +17485,7 @@
     ],
     "parents": [
       {
-        "name": "WipEout 2097 (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Wipeout XL"
         ]
@@ -17533,7 +17533,7 @@
     ],
     "parents": [
       {
-        "name": "Wizard's Harmony 2 (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ]
   },
@@ -17573,7 +17573,7 @@
     ],
     "parents": [
       {
-        "name": "Wizardry VI & VII Complete (Japan) (3M)"
+        "parent_flags": "(Japan) (3M)"
       }
     ],
     "manuals": [
@@ -17605,7 +17605,7 @@
     ],
     "parents": [
       {
-        "name": "World Advanced Daisenryaku - Sakusen File (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -17639,7 +17639,7 @@
     ],
     "parents": [
       {
-        "name": "World Cup Golf - Professional Edition (Europe) (1S)",
+        "parent_flags": "(Europe) (1S)",
         "clones": [
           "World Cup Golf - In Hyatt Dorado Beach"
         ]
@@ -17695,7 +17695,7 @@
     ],
     "parents": [
       {
-        "name": "World Series Baseball (Europe)",
+        "parent_flags": "(Europe)",
         "clones": [
           "Hideo Nomo World Series Baseball"
         ]
@@ -17743,7 +17743,7 @@
     ],
     "parents": [
       {
-        "name": "World Series Baseball II (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17768,7 +17768,7 @@
     ],
     "parents": [
       {
-        "name": "Worms (Europe)"
+        "parent_flags": "(Europe)"
       }
     ],
     "manuals": [
@@ -17792,7 +17792,7 @@
     ],
     "parents": [
       {
-        "name": "X Japan - Virtual Shock 001 (Japan) (3M)"
+        "parent_flags": "(Japan) (3M)"
       }
     ],
     "emulation": {
@@ -17809,7 +17809,7 @@
     ],
     "parents": [
       {
-        "name": "X-Men - Children of the Atom (Europe) (2S)"
+        "parent_flags": "(Europe) (2S)"
       }
     ],
     "manuals": [
@@ -17839,7 +17839,7 @@
     ],
     "parents": [
       {
-        "name": "X-Men vs. Street Fighter (Japan) (1M)"
+        "parent_flags": "(Japan) (1M)"
       }
     ],
     "manuals": [
@@ -17931,7 +17931,7 @@
     ],
     "parents": [
       {
-        "name": "Yumimi Mix Remix (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
@@ -17947,7 +17947,7 @@
     ],
     "parents": [
       {
-        "name": "Yuukyuu Gensoukyoku (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -17960,7 +17960,7 @@
     ],
     "parents": [
       {
-        "name": "Yuukyuu Gensoukyoku 2nd Album (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -17989,7 +17989,7 @@
     ],
     "parents": [
       {
-        "name": "Yuukyuu no Kobako Official Collection (Japan)"
+        "parent_flags": "(Japan)"
       }
     ]
   },
@@ -18045,7 +18045,7 @@
     ],
     "parents": [
       {
-        "name": "Zen Nihon Pro Wres featuring Virtua (Japan)"
+        "parent_flags": "(Japan)"
       }
     ],
     "emulation": {
