@@ -18,6 +18,13 @@ class MetadataSet:
             for metadata in json.load(file):
                 self.set_data(metadata['name'], metadata)
 
+                # Explicit aliases allow for sharing of metadata when a machine
+                # isn't a clone, has a different title, but is still part of the
+                # parent group
+                if 'aliases' in metadata:
+                    for alias_name in metadata['aliases']:
+                        self.set_data(alias_name, metadata)
+
                 # Add machine-specific overrides that differ from the parent
                 if 'overrides' in metadata:
                     for key, overrides in metadata['overrides'].items():

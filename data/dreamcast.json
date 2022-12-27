@@ -2742,14 +2742,6 @@
     ]
   },
   {
-    "name": "Eternal Arcadia",
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  {
     "name": "Eternal Arcadia - Kuuzokuban",
     "players": 1,
     "rating": 0.75,
@@ -8977,6 +8969,7 @@
   },
   {
     "name": "Skies of Arcadia",
+    "aliases": ["Eternal Arcadia"],
     "players": 1,
     "rating": 0.75,
     "genres": [
