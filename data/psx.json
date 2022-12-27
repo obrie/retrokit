@@ -200,7 +200,7 @@
     "players": 1,
     "rating": 0.45,
     "genres": [
-      "Adventure"
+      "Adventure / Interactive movie"
     ],
     "parents": [
       {
@@ -1056,7 +1056,7 @@
     "players": 1,
     "rating": 0.8,
     "genres": [
-      "Educational"
+      "Adventure / Action"
     ]
   },
   {
@@ -1254,7 +1254,7 @@
     "players": 1,
     "rating": 0.7,
     "genres": [
-      "Strategy"
+      "Strategy / Breeding"
     ]
   },
   {
@@ -7164,8 +7164,7 @@
     "players": 1,
     "rating": 0.6,
     "genres": [
-      "Sports",
-      "Sports / Soccer"
+      "Simulation / Strategy"
     ]
   },
   {
@@ -8134,7 +8133,7 @@
     "players": 1,
     "rating": 0.9,
     "genres": [
-      "Action"
+      "Action / Platformer / Shooting"
     ]
   },
   {
@@ -12077,7 +12076,7 @@
     "players": 1,
     "rating": 0.8,
     "genres": [
-      "Platform"
+      "Action / Platformer"
     ]
   },
   {
@@ -12645,7 +12644,7 @@
     "players": 1,
     "rating": 0.8,
     "genres": [
-      "Platform"
+      "Platformer"
     ]
   },
   {
@@ -12838,8 +12837,7 @@
     "name": "Doko Demo Hamster - Bi! Click Tankentai",
     "players": 1,
     "genres": [
-      "Adventure",
-      "Casual Game"
+      "Adventure / Mini Games"
     ]
   },
   {
@@ -13147,8 +13145,7 @@
     "players": 2,
     "rating": 0.7,
     "genres": [
-      "Fight",
-      "Fight / 3D"
+      "Fighting"
     ]
   },
   {
@@ -17730,7 +17727,6 @@
     "players": 4,
     "rating": 0.6,
     "genres": [
-      "Sports",
       "Sports / Golf"
     ],
     "tags": [
@@ -17745,7 +17741,6 @@
     "players": 4,
     "rating": 0.5,
     "genres": [
-      "Sports",
       "Sports / Soccer"
     ],
     "manuals": [
@@ -20057,7 +20052,7 @@
     "players": 2,
     "rating": 0.7,
     "genres": [
-      "Fight"
+      "Fighting"
     ],
     "parents": [
       {
@@ -20070,7 +20065,7 @@
     "players": 2,
     "rating": 0.7,
     "genres": [
-      "Fight"
+      "Fighting"
     ]
   },
   {
@@ -20225,7 +20220,7 @@
     "name": "Haishin 2",
     "players": 1,
     "genres": [
-      "Asiatic board game"
+      "Mahjong"
     ],
     "parents": [
       {
@@ -21240,7 +21235,10 @@
   },
   {
     "name": "Hissatsu Pachinko Station Now 2 - Yatta ze Ippatsu Tsumo Tsumo Tengoku",
-    "players": 1
+    "players": 1,
+    "genres": [
+      "Gambling"
+    ]
   },
   {
     "name": "Hissatsu Pachinko Station Now 3 - Youkai Engei",
@@ -21253,7 +21251,7 @@
     "name": "Hissatsu Pachinko Station Now 4 - Ore wa Nekketsu Bouken-ou da!!",
     "players": 1,
     "genres": [
-      "Casino"
+      "Gambling"
     ]
   },
   {
@@ -21467,7 +21465,7 @@
     "name": "Honkaku Yonin Uchi Pro Mahjong - Mahjong-ou",
     "players": 1,
     "genres": [
-      "Asiatic board game"
+      "Mahjong"
     ]
   },
   {
@@ -21600,7 +21598,7 @@
     "name": "Houshin Engi",
     "players": 1,
     "genres": [
-      "RPG"
+      "Tactical RPG"
     ],
     "manuals": [
       {
@@ -25655,7 +25653,7 @@
     "name": "Kochira Katsushika-ku Kameari Kouen-mae Hashutsujo - High-Tech Buil Shinkou Soshi Sakusen! no Maki",
     "players": 1,
     "genres": [
-      "Casual Game"
+      "Strategy / Mini games"
     ]
   },
   {
@@ -25871,7 +25869,7 @@
     "name": "Koten Tsumego-shuu - Shijin no Maki",
     "players": 1,
     "genres": [
-      "Board game"
+      "Board / Go"
     ]
   },
   {
@@ -28207,7 +28205,7 @@
     "players": 2,
     "rating": 0.75,
     "genres": [
-      "Beat'em Up"
+      "Action / Beat'em up / Shooter"
     ]
   },
   {
@@ -28556,7 +28554,7 @@
     "name": "Mahjong Ganryuu-jima",
     "players": 1,
     "genres": [
-      "Asiatic board game"
+      "Mahjong"
     ]
   },
   {
@@ -28625,7 +28623,7 @@
     "name": "Mahjong Youchien Tamago-gumi 2 - Taikai e Ikou!",
     "players": 1,
     "genres": [
-      "Asiatic board game"
+      "Mahjong"
     ]
   },
   {
@@ -31840,7 +31838,7 @@
     "name": "Muteki-ou Tri-Zenon",
     "players": 1,
     "genres": [
-      "Casual Game"
+      "Laser Disc / Interactive Movie / Mini Games"
     ]
   },
   {
@@ -34332,9 +34330,7 @@
     "name": "Nibiiro no Koubou - 32-nin no Senshachou",
     "players": 1,
     "genres": [
-      "Action",
-      "Shooter",
-      "Simulation"
+      "Action / Shooter / Simulation"
     ]
   },
   {
@@ -34956,7 +34952,11 @@
     ]
   },
   {
-    "name": "Nobunaga no Yabou - Shouseiroku with Power-Up Kit"
+    "name": "Nobunaga no Yabou - Shouseiroku with Power-Up Kit",
+    "players": 8,
+    "genres": [
+      "Strategy / Tactical RPG"
+    ]
   },
   {
     "name": "Nobunaga no Yabou - Tenshouki",
@@ -39425,7 +39425,7 @@
     "name": "Pro Logic Mahjong Haishin",
     "players": 1,
     "genres": [
-      "Asiatic board game"
+      "Mahjong"
     ]
   },
   {
@@ -41586,9 +41586,7 @@
     "name": "Rhythm 'n' Face",
     "players": 1,
     "genres": [
-      "Action",
-      "Music and Dance",
-      "Puzzle-Game"
+      "Puzzle / Action / Music"
     ]
   },
   {
@@ -42215,7 +42213,7 @@
     "name": "Rock-Climbing - Mitouhou e no Chousen - Alps-hen",
     "players": 1,
     "genres": [
-      "Sports"
+      "Action / Climbing / Simulation"
     ]
   },
   {
@@ -42973,7 +42971,7 @@
     "name": "Sakkyoku surun da mon - Dance Remix-hen",
     "players": 1,
     "genres": [
-      "Music and Dance"
+      "Music"
     ]
   },
   {
@@ -44839,7 +44837,7 @@
     "name": "Simple 1500 Jitsuyou Series Vol. 01 - Norikae Annai - 2000-nenban",
     "players": 1,
     "genres": [
-      "Educational"
+      "Educational / Data"
     ]
   },
   {
@@ -45754,7 +45752,7 @@
     "name": "Simple Character 2000 Series Vol. 05 - High School! Kimengumi - The Table Hockey",
     "players": 2,
     "genres": [
-      "Sports"
+      "Sports / Table Hockey"
     ],
     "tags": [
       "Multitap"
@@ -45779,8 +45777,7 @@
     "players": 1,
     "rating": 0.75,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Shooter"
     ]
   },
   {
@@ -46759,8 +46756,7 @@
     "players": 2,
     "rating": 0.7,
     "genres": [
-      "Action",
-      "Shoot'em Up"
+      "Action / Shooter"
     ]
   },
   {
@@ -50558,8 +50554,7 @@
     "name": "Taiho Shichau zo - You're Under Arrest",
     "players": 1,
     "genres": [
-      "Adventure",
-      "Casual Game"
+      "Adventure / Mini Games"
     ],
     "parents": [
       {
@@ -52621,7 +52616,7 @@
     "name": "Tokyo Mew Mew - Toujou Shin Mew Mew! Minna Issho ni Gohoushi suru nyan",
     "players": 1,
     "genres": [
-      "Role playing games"
+      "RPG"
     ]
   },
   {
@@ -54408,7 +54403,10 @@
   },
   {
     "name": "Ultraman Tiga & Ultraman Dyna - Arata naru Futatsu no Hikari",
-    "players": 1
+    "players": 1,
+    "genres": [
+      "3D Fighting"
+    ]
   },
   {
     "name": "Ultraman Zearth",
@@ -54470,9 +54468,7 @@
     "name": "Umi no Nushi-tsuri - Takarajima ni Mukatte",
     "players": 1,
     "genres": [
-      "Fishing",
-      "Hunting and Fishing",
-      "Role playing games"
+      "Fishing / RPG"
     ]
   },
   {
@@ -54576,7 +54572,11 @@
     ]
   },
   {
-    "name": "Uno"
+    "name": "Uno",
+    "players": 2,
+    "genres": [
+      "Cards / Board"
+    ]
   },
   {
     "name": "Unsolved, The - Hyper Science Adventure",
@@ -58378,7 +58378,7 @@
     "name": "Yuuwaku Office Ren'aika",
     "players": 1,
     "genres": [
-      "Simulation"
+      "Dating / Simulation"
     ]
   },
   {
