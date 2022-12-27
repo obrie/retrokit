@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from romkit.models.machine import Machine
+
 import logging
 from enum import Enum
 from typing import List, Optional
@@ -76,8 +78,8 @@ class SorterSet:
         self.overrides.clear()
 
     # Prioritizes the machine with the given group name
-    def prioritize(self, machine: Machine) -> None:
-        group = machine.group_name
+    def prioritize(self, machine: Machine, group: Optional[str] = None) -> None:
+        group = group or machine.group_name
         existing = self.groups.get(group)
 
         if not existing:
@@ -92,8 +94,8 @@ class SorterSet:
 
     # Ignores all prioritization rules and explicitly assigns a machine to the
     # given group
-    def override(self, machine: Machine) -> None:
-        group = machine.group_name
+    def override(self, machine: Machine, group: Optional[str] = None) -> None:
+        group = group or machine.group_name
         self.groups[group] = machine
         self.overrides.add(group)
 
@@ -102,10 +104,14 @@ class SorterSet:
     # multiple with the same title
     def finalize(self) -> None:
         if self.single_title:
-            machines = self.machines
+            groups = self.groups.copy()
             self.clear()
-            for machine in machines:
-                self.prioritize(machine, machine.title)
+            for group, machine in groups.items():
+                new_group = Machine.normalize(machine.disc_title)
+                if group in self.overrides:
+                    self.override(machine, new_group)
+                else:
+                    self.prioritize(machine, new_group)
 
     # Sorts the list of machines based on the sorters in the order they
     # were defined
