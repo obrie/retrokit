@@ -247,6 +247,11 @@ class Machine:
     def parent_disc_title(self) -> Optional[str]:
         return self.parent_name and self.title_from(self.parent_name, disc=True)
 
+    # The group to assign this machine to
+    @property
+    def group_name(self) -> str:
+        return self.normalize(self.parent_name or self.name)
+
     # Builds a title from the given name
     @classmethod
     def title_from(cls, name: str, disc: bool = False) -> str:

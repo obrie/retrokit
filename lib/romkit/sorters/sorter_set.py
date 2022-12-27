@@ -1,19 +1,36 @@
 from __future__ import annotations
 
+import logging
 from enum import Enum
-from typing import List
+from typing import List, Optional
 
-# Represents a collection of machine sorters
+# Represents a sortable collection of machines
 class SorterSet:
-    def __init__(self) -> None:
+    def __init__(self,
+        # Whether machine sorted has been enabeld
+        enabled: bool = True,
+        # Whether this collection should only allow a single machine to share a title
+        single_title: bool = False,
+    ) -> None:
+        self.enabled = enabled
+        self.single_title = single_title
+
+        # Mapping of group => highest prioritized machine
+        self.groups = {}
+
+        # List of groups that we've explicitly overridden
+        self.overrides = set()
+
+        # List of sort methods currently in use
         self.sorters = []
-        self.enabled = True
 
     # Builds a SorterSet from the given json data
     @classmethod
     def from_json(cls, json: dict, supported_sorters: list) -> SorterSet:
-        sorter_set = cls()
-        sorter_set.enabled = json.get('enabled', True)
+        sorter_set = cls(
+            enabled=json.get('enabled', True),
+            single_title=json.get('single_title', False),
+        )
 
         sorters_by_name = {sorter.name: sorter for sorter in supported_sorters}
 
@@ -49,9 +66,50 @@ class SorterSet:
     def append(self, sorter) -> None:
         self.sorters.append(sorter)
 
+    @property
+    def machines(self) -> Set[Machine]:
+        return set(self.groups.values())
+
+    # Clears the current list of groups being tracked
+    def clear(self) -> None:
+        self.groups.clear()
+        self.overrides.clear()
+
+    # Prioritizes the machine with the given group name
+    def prioritize(self, machine: Machine) -> None:
+        group = machine.group_name
+        existing = self.groups.get(group)
+
+        if not existing:
+            # First time we've seen this group: make the machine the default
+            self.groups[group] = machine
+        elif group not in self.overrides:
+            # Decide which of the two machines to install based on the
+            # predefined priority order
+            prioritized_machines = self.__sort([existing, machine])
+            self.groups[group] = prioritized_machines[0]
+            logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
+
+    # Ignores all prioritization rules and explicitly assigns a machine to the
+    # given group
+    def override(self, machine: Machine) -> None:
+        group = machine.group_name
+        self.groups[group] = machine
+        self.overrides.add(group)
+
+    # Finalizes the prioritized set of machiens by performing any additional
+    # post-processing, such as restricting the list of machines to prevent
+    # multiple with the same title
+    def finalize(self) -> None:
+        if self.single_title:
+            machines = self.machines
+            self.clear()
+            for machine in machines:
+                self.prioritize(machine, machine.title)
+
     # Sorts the list of machines based on the sorters in the order they
     # were defined
-    def sort(self, machines: List[Machine]) -> List[Machine]:
+    def __sort(self, machines: List[Machine]) -> List[Machine]:
         for sorter in reversed(self.sorters):
             machines.sort(key=sorter.sort_key, reverse=sorter.reverse)
 

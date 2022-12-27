@@ -95,23 +95,15 @@ class BaseSystem:
     def list(self) -> List[Machine]:
         # Machines guaranteed to be installed
         machines_to_install = set()
-
-        # Machines that are candidates until we've gone through all of them
-        machine_candidates = {}
-
-        # Normalized title => groupd id
-        machine_groups = {}
+        self.machine_priority.clear()
 
         for romset in self.iter_romsets():
             # Machines that are installable or required by installable machines
             machines_to_track = set()
 
             for machine in romset.iter_machines():
-                # Set external emulator metadata
+                # Update based on metadata database
                 self.metadata_set.update(machine)
-
-                # Set whether the machine is a favorite
-                machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW
 
                 allow_reason = self.filter_set.allow(machine)
                 if allow_reason:
@@ -119,39 +111,17 @@ class BaseSystem:
                     machines_to_track.update(machine.dependent_machine_names)
                     machine.track()
 
-                    # Group the machine based on its parent/self title (w/ disc).
-                    # We don't want to rely on the group name because (a) we don't always
-                    # have a Parent/Clone relationship map and (b) the flags are
-                    # less stable.
-                    normalized_disc_title = Machine.normalize(machine.disc_title)
-                    normalized_parent_disc_title = Machine.normalize(machine.parent_disc_title)
-                    group = (normalized_parent_disc_title and machine_groups.get(normalized_parent_disc_title)) or machine_groups.get(normalized_disc_title) or normalized_parent_disc_title or normalized_disc_title
-                    machine_groups[normalized_disc_title] = group
-                    if normalized_parent_disc_title:
-                        machine_groups[normalized_parent_disc_title] = group
-
                     # Force the machine to be installed if it was allowed by an override
                     if allow_reason == FilterReason.OVERRIDE:
                         machines_to_install.add(machine)
 
                         # Avoid installing anything else in the group that was a candidate
-                        machine_candidates[group] = machine
+                        self.machine_priority.override(machine)
 
-                    # If a priority is defined, the user is asking for a 1G1R setup.
-                    # In that case, we either choose a machine that was explicitly overridden
-                    # for install or we choose the highest priority machine in the group.
                     if self.machine_priority.enabled:
-                        existing = machine_candidates.get(group)
-
-                        if not existing:
-                            # First time we've seen this group: make the machine the default
-                            machine_candidates[group] = machine
-                        elif existing not in machines_to_install:
-                            # Decide which of the two machines to install based on the
-                            # predefined priority order
-                            prioritized_machines = self.machine_priority.sort([existing, machine])
-                            machine_candidates[group] = prioritized_machines[0]
-                            logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
+                        # If a priority is defined, the user is asking for a 1G1R setup.
+                        # In that case, we choose the highest priority machine in the group.
+                        self.machine_priority.prioritize(machine)
                     else:
                         # No priority defined: Add all machines
                         machines_to_install.add(machine)
@@ -165,11 +135,13 @@ class BaseSystem:
                 if name not in machines_to_track:
                     romset.remove(name)
 
-        # Add all the candidates now that we've gone through all the machines
-        machines_to_install.update(machine_candidates.values())
+        self.machine_priority.finalize()
+        machines_to_install.update(self.machine_priority.machines)
 
-        # Update collections
+        # Update favorites / collections
         for machine in machines_to_install:
+            # Set whether the machine is a favorite
+            machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW
             machine.collections.update(self.collection_set.list(machine))
 
         # Sort by name

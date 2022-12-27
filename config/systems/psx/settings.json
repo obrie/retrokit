@@ -1,9 +1,9 @@
 {
   "system": "psx",
   "metadata": {
-    "path": "$HOME/retrokit/data/saturn.json",
+    "path": "$HOME/retrokit/data/psx.json",
     "parents": {
-      "autodetect": true
+      "autofill": true
     }
   },
   "overlays": {
