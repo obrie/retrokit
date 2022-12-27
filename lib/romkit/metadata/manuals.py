@@ -83,7 +83,7 @@ class ManualsMetadata(BaseMetadata):
                 if language in manual['languages']:
                     if not fallback_manual:
                         fallback_manual = manual
-                    if machine.title == machine.parent_title or machine.title == manual.get('title'):
+                    if machine.title == machine.parent_title or machine.title == manual.get('title') or machine.flags_str == manual.get('flags'):
                         machine.manual = manual
                         return
 
