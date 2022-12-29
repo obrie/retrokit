@@ -48,7 +48,7 @@ class BaseSystem:
         ]
 
         # Priority order for choosing a machine (e.g. 1G1R)
-        self.machine_priority = SorterSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
+        self.sorted_machines = SorterSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
 
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters, log=False)
@@ -94,8 +94,7 @@ class BaseSystem:
 
     def list(self) -> List[Machine]:
         # Machines guaranteed to be installed
-        machines_to_install = set()
-        self.machine_priority.clear()
+        self.sorted_machines.clear()
 
         for romset in self.iter_romsets():
             # Machines that are installable or required by installable machines
@@ -113,18 +112,9 @@ class BaseSystem:
 
                     # Force the machine to be installed if it was allowed by an override
                     if allow_reason == FilterReason.OVERRIDE:
-                        machines_to_install.add(machine)
-
-                        # Avoid installing anything else in the group that was a candidate
-                        self.machine_priority.override(machine)
-
-                    if self.machine_priority.enabled:
-                        # If a priority is defined, the user is asking for a 1G1R setup.
-                        # In that case, we choose the highest priority machine in the group.
-                        self.machine_priority.prioritize(machine)
+                        self.sorted_machines.override(machine)
                     else:
-                        # No priority defined: Add all machines
-                        machines_to_install.add(machine)
+                        self.sorted_machines.add(machine)
                 elif not machine.is_clone:
                     # We track all parent/bios machines in case they're needed as a dependency
                     # in future machines.  We'll confirm later on with `machines_to_track`.
@@ -135,8 +125,8 @@ class BaseSystem:
                 if name not in machines_to_track:
                     romset.remove(name)
 
-        self.machine_priority.finalize()
-        machines_to_install.update(self.machine_priority.machines)
+        # Get the final, sorted/prioritized list of machines
+        machines_to_install = self.sorted_machines.prioritize()
 
         # Update favorites / collections
         for machine in machines_to_install:

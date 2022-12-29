@@ -3,6 +3,7 @@ from __future__ import annotations
 from romkit.models.machine import Machine
 
 import logging
+from collections import defaultdict
 from enum import Enum
 from typing import List, Optional
 
@@ -17,10 +18,10 @@ class SorterSet:
         self.enabled = enabled
         self.single_title = single_title
 
-        # Mapping of group => highest prioritized machine
-        self.groups = {}
+        # Tracks machines associated with a specific group name
+        self.groups = defaultdict(list)
 
-        # List of groups that we've explicitly overridden
+        # Groups that have been explicitly overridden by filters
         self.overrides = set()
 
         # List of sort methods currently in use
@@ -55,63 +56,94 @@ class SorterSet:
             # Lookup and create the sorter
             sorter = sorters_by_name[sorter_name]
             config = sorter_configs[sorter_config_name]
-            sorter_set.append(sorter(config, reverse=reverse))
+            sorter_set.add_sorter(sorter(config, reverse=reverse))
 
         return sorter_set
 
-    # Number of sorters defined
-    @property
-    def length(self) -> int:
-        return len(self.sorters)
-
     # Adds a new sorter
-    def append(self, sorter) -> None:
+    def add_sorter(self, sorter) -> None:
         self.sorters.append(sorter)
-
-    @property
-    def machines(self) -> Set[Machine]:
-        return set(self.groups.values())
 
     # Clears the current list of groups being tracked
     def clear(self) -> None:
         self.groups.clear()
         self.overrides.clear()
 
-    # Prioritizes the machine with the given group name
-    def prioritize(self, machine: Machine, group: Optional[str] = None) -> None:
-        group = group or machine.group_name
-        existing = self.groups.get(group)
+    # Associates the machine with the given group name
+    def add(self, machine: Machine) -> None:
+        self.groups[machine.group_name].append(machine)
 
-        if not existing:
-            # First time we've seen this group: make the machine the default
-            self.groups[group] = machine
-        elif group not in self.overrides:
-            # Decide which of the two machines to install based on the
-            # predefined priority order
-            prioritized_machines = self.__sort([existing, machine])
-            self.groups[group] = prioritized_machines[0]
-            logging.debug(f'[{prioritized_machines[1].name}] Skip (PriorityFilter)')
-
-    # Ignores all prioritization rules and explicitly assigns a machine to the
+    # Ignores all prioritization rules and prioritizes a machine within the
     # given group
-    def override(self, machine: Machine, group: Optional[str] = None) -> None:
-        group = group or machine.group_name
-        self.groups[group] = machine
-        self.overrides.add(group)
+    def override(self, machine: Machine) -> None:
+        self.add(machine)
+        self.overrides.add(machine.group_name)
 
     # Finalizes the prioritized set of machiens by performing any additional
     # post-processing, such as restricting the list of machines to prevent
     # multiple with the same title
-    def finalize(self) -> None:
-        if self.single_title:
+    def prioritize(self) -> List[Machine]:
+        if self.enabled:
+            machines = []
             groups = self.groups.copy()
-            self.clear()
-            for group, machine in groups.items():
-                new_group = Machine.normalize(machine.disc_title)
-                if group in self.overrides:
-                    self.override(machine, new_group)
-                else:
-                    self.prioritize(machine, new_group)
+
+            # Add overrides
+            for group_name in self.overrides:
+                machines.extend(groups[group_name])
+                del groups[group_name]
+
+            # Add remaining prioritized groups
+            machines.extend(self.__prioritize_groups(groups))
+
+            if self.single_title:
+                # Reduce the list further by only allowing a single machine/playlist
+                # with a certain title
+                groups_by_title = defaultdict(list)
+                for machine in machines:
+                    group = Machine.normalize(machine.disc_title)
+                    groups_by_title[group].append(machine)
+
+                machines = self.__prioritize_groups(groups_by_title)
+        else:
+            machines = [machine for machines in self.groups.values() for machine in machines]
+
+        return machines
+
+    # Generates a list of prioritized machines for the given machine groupings.
+    # 
+    # If the highest prioritized machine is not part of a playlist, then only a
+    # single machine from the group will be selected.
+    # 
+    # If the highest prioritized machine *is* part of a playlist, then only those
+    # machines from the playlist will be selected.  Additionally, only a single
+    # machine per disc will be selected for that playlist.
+    def __prioritize_groups(self, groups: dict, process_playlists: bool = True) -> List[Machine]:
+        machines = []
+
+        # Sort and add machines
+        for group in groups.values():
+            group = self.__sort(group)
+            top_machine = group[0]
+
+            if process_playlists and top_machine.has_playlist:
+                groups_by_disc_title = defaultdict(list)
+
+                # Filter for machines with the same playlist name
+                for machine in group:
+                    if machine.has_playlist and machine.playlist_name == top_machine.playlist_name:
+                        groups_by_disc_title[machine.disc_title].append(machine)
+                    else:
+                        logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
+
+                # Add only a single machine for each disc within the playlist
+                machines.extend(self.__prioritize_groups(groups_by_disc_title, False))
+            else:
+                # Add just the top machine
+                machines.append(top_machine)
+                for machine in group[1:]:
+                    logging.debug(f'[{machine.name}] Skip (PriorityFilter)')
+
+        return machines
 
     # Sorts the list of machines based on the sorters in the order they
     # were defined

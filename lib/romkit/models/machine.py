@@ -247,10 +247,15 @@ class Machine:
     def parent_disc_title(self) -> Optional[str]:
         return self.parent_name and self.title_from(self.parent_name, disc=True)
 
+    # Name of the playlist this machine belongs to (even if it's a playlist of 1)
+    @property
+    def playlist_name(self) -> str:
+        return Playlist.name_from(self.name)
+
     # The group to assign this machine to
     @property
     def group_name(self) -> str:
-        return self.normalize(self.parent_name or self.name)
+        return self.normalize(Playlist.name_from(self.parent_name or self.name))
 
     # Builds a title from the given name
     @classmethod
@@ -423,10 +428,15 @@ class Machine:
         if self.sample_name:
             return Sample(self, self.sample_name)
 
+    # Whether this machine is part of a group of related machines in a playlist
+    @property
+    def has_playlist(self) -> bool:
+        return self.disc_title != self.title
+
     # Playlist for multi-disc machines
     @property
     def playlist(self) -> Optional[Playlist]:
-        if self.disc_title != self.title and self.romset.has_resource('playlist'):
+        if self.has_playlist and self.romset.has_resource('playlist'):
             return Playlist(self)
 
     # Generates data for use in output actions
