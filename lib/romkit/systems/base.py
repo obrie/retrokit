@@ -3,7 +3,7 @@ from romkit.metadata import __all_metadata__, MetadataSet
 from romkit.models.collection_set import CollectionSet
 from romkit.models.machine import Machine
 from romkit.models.romset import ROMSet
-from romkit.sorters import __all_sorters__, SorterSet
+from romkit.sorters import __all_sorters__, SortableSet
 from romkit.systems.system_dir import SystemDir
 
 import logging
@@ -48,7 +48,7 @@ class BaseSystem:
         ]
 
         # Priority order for choosing a machine (e.g. 1G1R)
-        self.sorted_machines = SorterSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
+        self.sorted_machines = SortableSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
 
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters, log=False)

@@ -1,4 +1,4 @@
-from romkit.sorters.sorter_set import SorterSet
+from romkit.sorters.sortable_set import SortableSet
 
 from romkit.sorters.description import FlagSorter, FlagCountSorter, KeywordSorter
 from romkit.sorters.name import LengthSorter, NameSorter

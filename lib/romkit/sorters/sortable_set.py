@@ -8,7 +8,7 @@ from enum import Enum
 from typing import List, Optional
 
 # Represents a sortable collection of machines
-class SorterSet:
+class SortableSet:
     def __init__(self,
         # Whether machine sorted has been enabeld
         enabled: bool = True,
@@ -27,10 +27,10 @@ class SorterSet:
         # List of sort methods currently in use
         self.sorters = []
 
-    # Builds a SorterSet from the given json data
+    # Builds a SortableSet from the given json data
     @classmethod
-    def from_json(cls, json: dict, supported_sorters: list) -> SorterSet:
-        sorter_set = cls(
+    def from_json(cls, json: dict, supported_sorters: list) -> SortableSet:
+        sortable_set = cls(
             enabled=json.get('enabled', True),
             single_title=json.get('single_title', False),
         )
@@ -56,9 +56,9 @@ class SorterSet:
             # Lookup and create the sorter
             sorter = sorters_by_name[sorter_name]
             config = sorter_configs[sorter_config_name]
-            sorter_set.add_sorter(sorter(config, reverse=reverse))
+            sortable_set.add_sorter(sorter(config, reverse=reverse))
 
-        return sorter_set
+        return sortable_set
 
     # Adds a new sorter
     def add_sorter(self, sorter) -> None:
