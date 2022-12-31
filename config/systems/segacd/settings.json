@@ -1,10 +1,7 @@
 {
   "system": "segacd",
   "metadata": {
-    "path": "$HOME/retrokit/data/segacd.json",
-    "parents": {
-      "autofill": true
-    }
+    "path": "$HOME/retrokit/data/segacd.json"
   },
   "overlays": {
     "repos": [

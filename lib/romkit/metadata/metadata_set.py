@@ -16,19 +16,12 @@ class MetadataSet:
         # Populate metadata based on the provided path
         with path.open() as file:
             for metadata in json.load(file):
-                self.set_data(metadata['name'], metadata)
-
-                # Explicit aliases allow for sharing of metadata when a machine
-                # isn't a clone, has a different title, but is still part of the
-                # parent group
-                if 'aliases' in metadata:
-                    for alias_name in metadata['aliases']:
-                        self.set_data(alias_name, metadata)
+                self.data[metadata['name']] = metadata
 
                 # Add machine-specific overrides that differ from the parent
                 if 'overrides' in metadata:
                     for key, overrides in metadata['overrides'].items():
-                        self.set_data(key, {**metadata, **overrides})
+                        self.data[key] = {**metadata, **overrides}
 
     # Builds a MetadataSet from the given json data
     @classmethod
@@ -39,14 +32,6 @@ class MetadataSet:
             metadata_set.append(metadata_cls)
 
         return metadata_set
-
-    # Associates the key with the given data.
-    # 
-    # This will also associate the normalized key in case there are any differences
-    # between the data we have and what's in the romset.
-    def set_data(self, key: str, key_data) -> None:
-        self.data[key] = key_data
-        self.data[Machine.normalize(key)] = key_data
 
     # Adds a new metadata loader
     def append(self, metadata_cls: Type[BaseMetadata]) -> None:

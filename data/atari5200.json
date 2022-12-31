@@ -1260,20 +1260,17 @@
     ]
   },
   {
-    "name": "Super Pac-Man",
-    "players": 2,
-    "genres": [
-      "Action",
-      "Action / Labyrinth"
-    ]
-  },
-  {
     "name": "Super Pacman",
     "players": 2,
     "genres": [
       "Action",
       "Action / Labyrinth"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Super Pac-Man"
+      ]
+    }
   },
   {
     "name": "Tempest"

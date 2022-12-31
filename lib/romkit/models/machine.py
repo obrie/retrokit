@@ -40,6 +40,7 @@ class Machine:
         disks: Set[Disk] = None,
 
         # External metadata
+        group_name: Optional[str] = None,
         genres: Set[str] = None,
         collections: Set[str] = None,
         tags: Set[str] = None,
@@ -83,6 +84,7 @@ class Machine:
         self.emulator_rating = emulator_rating
         self.manual = manual
         self.media = media or {}
+        self.group_name = group_name or self.parent_title or self.title
 
         # Automatic defaults
         self.emulator = romset.emulator
@@ -252,10 +254,10 @@ class Machine:
     def playlist_name(self) -> str:
         return Playlist.name_from(self.name)
 
-    # The group to assign this machine to
+    # The title of the group this machine is assigned to
     @property
-    def group_name(self) -> str:
-        return self.normalize(Playlist.name_from(self.parent_name or self.name))
+    def group_title(self) -> str:
+        return self.title_from(self.group_name)
 
     # Builds a title from the given name
     @classmethod
@@ -475,6 +477,10 @@ class Machine:
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
             'manual': self.manual,
+            'group': {
+                'name': self.group_name,
+                'title': self.group_title,
+            }
         }
 
         primary_rom = self.primary_rom

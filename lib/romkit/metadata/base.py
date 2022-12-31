@@ -16,26 +16,14 @@ class BaseMetadata:
     # attributes will be used to find a matching key (in order of priority):
     # 
     # * Name
-    # * Normalized name
-    # * Title
-    # * Normalized title
     # * Parent name
-    # * Normalized Parent name
-    # * Parent title
-    # * Normalized Parent title
+    # * Group title
     # 
-    # The first match will be returned
+    # The first match will be returned.
     def get_data(self, machine: Machine):
-        for key in [machine.name, machine.title, machine.parent_name, machine.parent_title]:
-            if not key:
-                continue
-
-            if key in self.data:
+        for key in [machine.name, machine.parent_name, machine.group_title]:
+            if key and key in self.data:
                 return self.data[key]
-            else:
-                normalized_key = Machine.normalize(key)
-                if normalized_key in self.data:
-                    return self.data[normalized_key]
 
     # Loads all of the relevant data needed to machine attributes
     def load(self) -> None:

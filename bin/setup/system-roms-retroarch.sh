@@ -133,7 +133,7 @@ __list_libretro_roms() {
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name disc title playlist_name parent_name parent_disc parent_title rom_path emulator tags; do
+  while IFS=» read -r rom_name disc title playlist_name group_name group_title rom_path emulator tags; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -143,8 +143,6 @@ __list_libretro_roms() {
     if [ -z "$core_name" ] || [ -z "$library_name" ]; then
       continue
     fi
-
-    local group_title=${parent_title:-$title}
 
     # Tag data
     local is_multitap=$([[ "$tags" == *Multitap* ]] && echo 'true' || echo 'false')
@@ -168,14 +166,14 @@ __list_libretro_roms() {
       target_filename=${rom_path##*/}
     fi
 
-    # Find a file for either the rom or its parent.  Priority order:
+    # Find a file for either the rom or its group.  Priority order:
     # * ROM Name
     # * ROM Disc Name
     # * ROM Title
     # * ROM Playlist Name
     local override_file=""
     local filename
-    for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$parent_name" "$parent_disc" "$parent_title"; do
+    for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$group_name" "$group_title"; do
       if [ -n "$filename" ]; then
         override_file=${override_files["$filename"]}
         if [ -n "$override_file" ]; then
@@ -185,7 +183,7 @@ __list_libretro_roms() {
     done
 
     echo "$target_name"$'\t'"$target_filename"$'\t'"$group_title"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .parent.name, .parent.disc, .parent.title, .path, .emulator, .tags | join(",")] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .group.title, .path, .emulator, .tags | join(",")] | join("»")')
 }
 
 restore() {

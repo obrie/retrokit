@@ -2250,7 +2250,12 @@
         ],
         "url": "https://archive.org/download/BlackBassTheNESHiResScans/Black Bass, The - Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "split": [
+        "(USA)"
+      ]
+    }
   },
   {
     "name": "Blackjack",
@@ -3096,15 +3101,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Color Dreams) (Unl)",
-        "clones": [
-          "Black Dragon",
-          "Chinese KungFu"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3112,7 +3108,13 @@
         ],
         "url": "https://archive.org/download/NESManuals/Challenge of the Dragon (USA) (Unl).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Black Dragon",
+        "Chinese KungFu"
+      ]
+    }
   },
   {
     "name": "Challenger",
@@ -3284,14 +3286,6 @@
     "genres": [
       "Board game",
       "Strategy"
-    ]
-  },
-  {
-    "name": "Chinese KungFu",
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Beat'em Up"
     ]
   },
   {
@@ -12371,7 +12365,12 @@
     "players": 1,
     "genres": [
       "Educational"
-    ]
+    ],
+    "group": {
+      "split": [
+        "(Jou) (Japan)"
+      ]
+    }
   },
   {
     "name": "Nagagutsu o Haita Neko - Sekai Isshuu 80 Nichi Daibouken",

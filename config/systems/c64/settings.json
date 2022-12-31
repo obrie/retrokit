@@ -1,10 +1,7 @@
 {
   "system": "c64",
   "metadata": {
-    "path": "$HOME/retrokit/data/c64.json",
-    "parents": {
-      "autofill": true
-    }
+    "path": "$HOME/retrokit/data/c64.json"
   },
   "scraper": {
     "args": ["--includepattern", "*.zip"]

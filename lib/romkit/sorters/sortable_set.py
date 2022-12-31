@@ -11,7 +11,7 @@ from typing import List, Optional
 class SortableSet:
     def __init__(self,
         # Whether machine sorted has been enabeld
-        enabled: bool = True,
+        enabled: bool = False,
         # Whether this collection should only allow a single machine to share a title
         single_title: bool = False,
     ) -> None:
@@ -31,7 +31,7 @@ class SortableSet:
     @classmethod
     def from_json(cls, json: dict, supported_sorters: list) -> SortableSet:
         sortable_set = cls(
-            enabled=json.get('enabled', True),
+            enabled=json.get('enabled', False),
             single_title=json.get('single_title', False),
         )
 

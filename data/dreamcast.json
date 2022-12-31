@@ -7,11 +7,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -42,11 +37,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
     ],
     "manuals": [
       {
@@ -88,14 +78,11 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "J.League Spectacle Soccer"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "J.League Spectacle Soccer"
+      ]
+    }
   },
   {
     "name": "AM2 of CRI 2001 New Lineup Movie Collection"
@@ -148,14 +135,11 @@
       "Simulation",
       "Simulation / Vehicle"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Aero Dancing i - Jikai-saku made Matemasen"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Aero Dancing i - Jikai-saku made Matemasen"
+      ]
+    }
   },
   {
     "name": "Aero to Jet de Dancing!"
@@ -170,14 +154,6 @@
       "Simulation",
       "Simulation / Vehicle"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Aero Dancing featuring Blue Impulse"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -191,7 +167,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Aerowings (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Aero Dancing featuring Blue Impulse"
+      ]
+    }
   },
   {
     "name": "AeroWings 2 - Airstrike",
@@ -203,14 +184,6 @@
       "Simulation",
       "Simulation / Vehicle"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De)",
-        "clones": [
-          "Aero Dancing F"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -218,7 +191,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/AeroWings 2 - Air Strike (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Aero Dancing F"
+      ]
+    }
   },
   {
     "name": "After... Wasureenu Kizuna",
@@ -323,14 +301,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -415,11 +385,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -452,14 +417,11 @@
     "genres": [
       "Asiatic board game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Atsumare! Guru Guru Onsen BB"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Atsumare! Guru Guru Onsen BB"
+      ]
+    }
   },
   {
     "name": "Baldr Force EXE",
@@ -493,14 +455,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Bakuretsu Muteki Bangaioh"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -514,7 +468,12 @@
         ],
         "url": "https://archive.org/download/Bangai-O_1999_J_color/Bangai-O_1999_J_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bakuretsu Muteki Bangaioh"
+      ]
+    }
   },
   {
     "name": "Bass Rush Dream - EcoGear PowerWorm Championship",
@@ -548,15 +507,6 @@
     "rating": 0.55,
     "genres": [
       "Various"
-    ]
-  },
-  {
-    "name": "Biohazard - Code - Veronica",
-    "players": 1,
-    "rating": 0.9,
-    "genres": [
-      "Adventure",
-      "Adventure / Survival Horror"
     ]
   },
   {
@@ -602,11 +552,6 @@
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -751,14 +696,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "TNN Motorsports Hardcore Heat"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -772,7 +709,12 @@
         ],
         "url": "https://segaretro.org/images/d/d4/Buggy_Heat_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "TNN Motorsports Hardcore Heat"
+      ]
+    }
   },
   {
     "name": "Bust-A-Move 4",
@@ -780,14 +722,6 @@
     "rating": 0.75,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Puzzle Bobble 4"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -808,7 +742,12 @@
         ],
         "url": "https://segaretro.org/images/d/d9/Puzzle_Bobble_4_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Puzzle Bobble 4"
+      ]
+    }
   },
   {
     "name": "CR Hissatsu Shigotonin - Pachitte Chonmage @ VP@CHI",
@@ -827,11 +766,6 @@
       "Playing cards",
       "Simulation",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -873,14 +807,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Gunspike"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -900,7 +826,12 @@
         ],
         "url": "https://archive.org/download/Gunspike_2000_J_color/Gunspike_2000_J_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Gunspike"
+      ]
+    }
   },
   {
     "name": "Canvas - Sepia Iro no Motif",
@@ -929,14 +860,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Capcom vs. SNK - Millennium Fight 2000"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -956,7 +879,12 @@
         ],
         "url": "https://segaretro.org/images/e/e5/CapcomVsSNK2000DCJPManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Capcom vs. SNK - Millennium Fight 2000"
+      ]
+    }
   },
   {
     "name": "Capcom vs. SNK - Millennium Fight 2000 Pro",
@@ -1026,11 +954,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1086,11 +1009,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1122,11 +1040,6 @@
     "rating": 0.65,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1164,11 +1077,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1184,11 +1092,6 @@
     "rating": 0.65,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1207,11 +1110,6 @@
       "Simulation",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Message Disc)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1228,14 +1126,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)",
-        "clones": [
-          "Chu-Chu Rocket!"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1259,7 +1149,12 @@
     ],
     "tags": [
       "Party"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Chu-Chu Rocket!"
+      ]
+    }
   },
   {
     "name": "Cleopatra Fortune",
@@ -1285,14 +1180,6 @@
       "Strategy",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Jet Coaster Dream"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1300,7 +1187,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Coaster Works (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jet Coaster Dream"
+      ]
+    }
   },
   {
     "name": "Comic Party",
@@ -1316,11 +1208,6 @@
     "rating": 0.7,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -1351,11 +1238,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1379,11 +1261,6 @@
       "Action",
       "Music and Dance",
       "Rhythm"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1420,11 +1297,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1456,11 +1328,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -1499,14 +1366,6 @@
       "Fight",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Dennou Senki - Virtual-On - Oratorio Tangram"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1514,7 +1373,12 @@
         ],
         "url": "https://segaretro.org/images/f/fe/CyberTroopersDCUSManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dennou Senki - Virtual-On - Oratorio Tangram"
+      ]
+    }
   },
   {
     "name": "D+Vine [Luv]",
@@ -1534,32 +1398,6 @@
       "Action / Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)",
-        "clones": [
-          "D2 - D no Shokutaku 2 (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 2)",
-        "clones": [
-          "D2 - D no Shokutaku 2 (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 3)",
-        "clones": [
-          "D2 - D no Shokutaku 2 (Disc 3)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 4)",
-        "clones": [
-          "D2 - D no Shokutaku 2 (Disc 4)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1570,6 +1408,11 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
+    },
+    "group": {
+      "merge": [
+        "D2 - D no Shokutaku 2"
+      ]
     }
   },
   {
@@ -1593,11 +1436,6 @@
   },
   {
     "name": "Dabi Tsuku - Derby-ba o Tsukurou!",
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1661,11 +1499,6 @@
       "Sports",
       "Sports / Cycling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1689,14 +1522,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Daytona USA"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1716,7 +1541,12 @@
         ],
         "url": "https://archive.org/download/Daytona_USA_200x_Br/Daytona_USA_200x_Br.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Daytona USA"
+      ]
+    }
   },
   {
     "name": "Dead or Alive 2",
@@ -1724,11 +1554,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1753,14 +1578,6 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "AirForce Delta"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1782,7 +1599,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Deadly Skies (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "AirForce Delta"
+      ]
+    }
   },
   {
     "name": "Death Crimson 2",
@@ -1813,11 +1635,6 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1841,14 +1658,6 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,It) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (En,It) (Disc 2)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1871,11 +1680,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1946,11 +1750,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1967,14 +1766,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Fr,De,Es,It)",
-        "clones": [
-          "102 Dalmatians - Puppies to the Rescue"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1982,7 +1773,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's 102 Dalmatians - Puppies to the Rescue (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "102 Dalmatians - Puppies to the Rescue"
+      ]
+    }
   },
   {
     "name": "Disney's Dinosaur",
@@ -1990,11 +1786,6 @@
     "rating": 0.5,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -2019,14 +1810,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Disney's Donald Duck - Goin' Quackers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2040,7 +1823,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Disney's Donald Duck - Quack Attack (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Disney's Donald Duck - Goin' Quackers"
+      ]
+    }
   },
   {
     "name": "Disney-Pixar Buzz Lightyear of Star Command",
@@ -2050,15 +1838,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Disney-Pixar Captain Buzz Lightyear - Star Command",
-          "Disney-Pixar Les Aventures de Buzz L'Eclair"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2066,7 +1845,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Buzz Lightyear of Star Command (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Disney-Pixar Captain Buzz Lightyear - Star Command",
+        "Disney-Pixar Les Aventures de Buzz L'Eclair"
+      ]
+    }
   },
   {
     "name": "Disney-Pixar Toy Story 2 - Buzz Lightyear to the Rescue!",
@@ -2075,15 +1860,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Disney-Pixar Toy Story 2 - Buzz Lightyear eilt zur Hilfe!",
-          "Disney-Pixar Toy Story 2 - Buzz l'Eclair a la Rescousse!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2091,7 +1867,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Story 2 - Buzz Lightyear to the Rescue! (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Disney-Pixar Toy Story 2 - Buzz Lightyear eilt zur Hilfe!",
+        "Disney-Pixar Toy Story 2 - Buzz l'Eclair a la Rescousse!"
+      ]
+    }
   },
   {
     "name": "Doguu Senki - Haou",
@@ -2161,11 +1943,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2182,14 +1959,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Draconus - Cult of the Wyrm"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2203,7 +1972,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Dragon's Blood (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Draconus - Cult of the Wyrm"
+      ]
+    }
   },
   {
     "name": "Dream Passport"
@@ -2277,42 +2051,24 @@
     "name": "Dreamcast VM Data-shuu"
   },
   {
-    "name": "Dreamkey",
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "name": "Dreamkey"
   },
   {
     "name": "Dreamkey 3.0"
   },
   {
-    "name": "Dreamkey 3.1",
-    "parents": [
-      {
-        "parent_flags": "(Spain)"
-      }
-    ]
+    "name": "Dreamkey 3.1"
   },
   {
-    "name": "Dreamkey Version 1.5",
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "name": "Dreamkey Version 1.5"
   },
   {
     "name": "Dreamkey Version 2.0",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Dreamkey Versao 2.0"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Dreamkey Versao 2.0"
+      ]
+    }
   },
   {
     "name": "Dreamon Collection 2"
@@ -2327,12 +2083,7 @@
     "name": "Dreamon Volume 1"
   },
   {
-    "name": "Dreamon Volume 10",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ]
+    "name": "Dreamon Volume 10"
   },
   {
     "name": "Dreamon Volume 11"
@@ -2408,14 +2159,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It)",
-        "clones": [
-          "Ducati World - Racing Challenge"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2423,7 +2166,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ducati World Racing Challenge (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ducati World - Racing Challenge"
+      ]
+    }
   },
   {
     "name": "Dux",
@@ -2435,11 +2183,6 @@
   },
   {
     "name": "Dux Version 1.5",
-    "parents": [
-      {
-        "parent_flags": "(USA, Japan) (Unl) (Rerelease)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2455,15 +2198,6 @@
     "rating": 0.75,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dynamite Cop!",
-          "Dynamite Deka 2"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2484,7 +2218,13 @@
         ],
         "url": "https://segaretro.org/images/2/2b/Dynamite_Deka_2_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dynamite Cop!",
+        "Dynamite Deka 2"
+      ]
+    }
   },
   {
     "name": "ECW Anarchy Rulz",
@@ -2493,11 +2233,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2516,11 +2251,6 @@
       "Fight",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2537,14 +2267,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Ganbare! Nippon! Olympic 2000"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2552,7 +2274,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/ESPN International Track & Field (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ganbare! Nippon! Olympic 2000"
+      ]
+    }
   },
   {
     "name": "ESPN NBA 2Night",
@@ -2579,11 +2306,6 @@
       "Action",
       "Action / Adventure",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -2689,11 +2411,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2781,11 +2498,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2809,11 +2521,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2829,14 +2536,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shinki Sekai Evolution"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2857,7 +2556,12 @@
         ],
         "url": "https://segaretro.org/images/3/35/Evolution_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shinki Sekai Evolution"
+      ]
+    }
   },
   {
     "name": "Evolution 2 - Far Off Promise",
@@ -2866,14 +2570,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shinki Sekai Evolution 2 - Tooi Yakusoku"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2881,7 +2577,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Evolution 2 - Far Off Promise (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shinki Sekai Evolution 2 - Tooi Yakusoku"
+      ]
+    }
   },
   {
     "name": "Exhibition of Speed",
@@ -2918,14 +2619,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "F1 World Grand Prix for Dreamcast"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2933,7 +2626,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/F1 World Grand Prix (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "F1 World Grand Prix for Dreamcast"
+      ]
+    }
   },
   {
     "name": "F1 World Grand Prix II for Dreamcast",
@@ -2943,11 +2641,6 @@
       "Driving",
       "Race",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -2966,14 +2659,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "F355 Challenge"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2994,7 +2679,12 @@
         ],
         "url": "https://segaretro.org/images/f/f6/F355Challenge_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "F355 Challenge"
+      ]
+    }
   },
   {
     "name": "FX Unit Yuki",
@@ -3011,14 +2701,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Garou - Mark of the Wolves"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3032,7 +2714,12 @@
         ],
         "url": "https://segaretro.org/images/4/45/Garou_Mark_Of_The_Wolves_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Garou - Mark of the Wolves"
+      ]
+    }
   },
   {
     "name": "Feet of Fury",
@@ -3058,11 +2745,6 @@
       "Adventure",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3078,11 +2760,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3134,14 +2811,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Super Speed Racing"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3155,7 +2824,12 @@
         ],
         "url": "https://segaretro.org/images/f/fc/Flag2FlagDCBRManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Super Speed Racing"
+      ]
+    }
   },
   {
     "name": "Flashback",
@@ -3182,11 +2856,6 @@
     "genres": [
       "Action",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3245,14 +2914,6 @@
       "Action",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Razor Freestyle Scooter"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3260,7 +2921,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Razor Freestyle Scooter (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Razor Freestyle Scooter"
+      ]
+    }
   },
   {
     "name": "Frogger 2 - Swampy's Revenge",
@@ -3288,11 +2954,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -3345,12 +3006,7 @@
     ]
   },
   {
-    "name": "GameShark CDX",
-    "parents": [
-      {
-        "parent_flags": "(USA) (Unl)"
-      }
-    ]
+    "name": "GameShark CDX"
   },
   {
     "name": "GameShark Lite Version 4.0"
@@ -3366,11 +3022,6 @@
       "Beat'em Up",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3384,12 +3035,7 @@
     ]
   },
   {
-    "name": "Generator Vol. 1",
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ]
+    "name": "Generator Vol. 1"
   },
   {
     "name": "Generator Vol. 2"
@@ -3452,11 +3098,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3478,11 +3119,6 @@
     "rating": 0.9,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3547,11 +3183,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3588,11 +3219,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3608,11 +3234,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3655,11 +3276,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3676,11 +3292,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Taikenban)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3696,11 +3307,6 @@
     "rating": 0.7,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3747,11 +3353,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3887,11 +3488,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3989,11 +3585,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4027,11 +3618,6 @@
     "rating": 0.7,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan, Europe) (Taikenban)"
-      }
     ],
     "manuals": [
       {
@@ -4084,11 +3670,6 @@
     "genres": [
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4098,11 +3679,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4160,11 +3736,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4190,14 +3761,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Incoming - Jinrui Saishuu Kessen"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4205,7 +3768,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Incoming (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Incoming - Jinrui Saishuu Kessen"
+      ]
+    }
   },
   {
     "name": "Industrial Spy - Operation Espionage",
@@ -4216,14 +3784,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Espion-Age-nts"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4231,7 +3791,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Industrial Spy - Operation Espionage (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Espion-Age-nts"
+      ]
+    }
   },
   {
     "name": "Inhabitants",
@@ -4314,14 +3879,6 @@
       "Simulation",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Imperial no Taka - Fighter of Zero"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4329,7 +3886,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Iron Aces (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Imperial no Taka - Fighter of Zero"
+      ]
+    }
   },
   {
     "name": "Izumo",
@@ -4352,16 +3914,13 @@
   },
   {
     "name": "JRA PAT for Dreamcast V40 L10",
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "JRA PAT for Dreamcast V40 L11",
-          "JRA PAT for Dreamcast V40 L12",
-          "JRA PAT for Dreamcast V50 L10"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "JRA PAT for Dreamcast V40 L11",
+        "JRA PAT for Dreamcast V40 L12",
+        "JRA PAT for Dreamcast V50 L10"
+      ]
+    }
   },
   {
     "name": "Jahmong",
@@ -4382,11 +3941,6 @@
       "Race",
       "Race",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -4414,15 +3968,6 @@
       "Action / Adventure",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "De La Jet Set Radio",
-          "Jet Grind Radio"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4449,7 +3994,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Jet Set Radio (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "De La Jet Set Radio",
+        "Jet Grind Radio"
+      ]
+    }
   },
   {
     "name": "Jikkyou Powerful Pro Yakyuu - Dreamcast Edition",
@@ -4510,15 +4061,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Jojo no Kimyou na Bouken - Mirai e no Isan",
-          "Jojo no Kimyou na Bouken - Mirai e no Isan for Matching Service"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4538,7 +4080,13 @@
         ],
         "url": "https://segaretro.org/images/b/bf/Jojo_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jojo no Kimyou na Bouken - Mirai e no Isan",
+        "Jojo no Kimyou na Bouken - Mirai e no Isan for Matching Service"
+      ]
+    }
   },
   {
     "name": "July",
@@ -4547,11 +4095,6 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4561,11 +4104,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4608,11 +4146,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -4684,12 +4217,7 @@
     ]
   },
   {
-    "name": "Kindan no Pet - Seaman - Gasse Hakase no Jikken-tou",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
-    ]
+    "name": "Kindan no Pet - Seaman - Gasse Hakase no Jikken-tou"
   },
   {
     "name": "King of Fighters 2000, The",
@@ -4747,11 +4275,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (En,Ja,Es,Pt)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4780,14 +4303,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (En,Ja,Es,Pt)",
-        "clones": [
-          "King of Fighters '99, The - Evolution"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4801,7 +4316,12 @@
         ],
         "url": "https://segaretro.org/images/8/82/King_Of_Fighters_99_Evolution_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "King of Fighters '99, The - Evolution"
+      ]
+    }
   },
   {
     "name": "Kita e. Photo Memories",
@@ -4874,11 +4394,6 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4930,14 +4445,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Final Edition"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4951,7 +4458,12 @@
         ],
         "url": "https://segaretro.org/images/9/9e/Gekka_No_Kenshi_Final_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bakumatsu Roman Daini Maku - Gekka no Kenshi - Final Edition"
+      ]
+    }
   },
   {
     "name": "Last Hope",
@@ -4979,14 +4491,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)",
-        "clones": [
-          "Test Drive Le Mans"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4994,7 +4498,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Test Drive Le Mans (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Test Drive Le Mans"
+      ]
+    }
   },
   {
     "name": "Legacy of Kain - Soul Reaver",
@@ -5004,11 +4513,6 @@
       "Action",
       "Action / Adventure",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5042,11 +4546,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -5083,11 +4582,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5104,12 +4598,7 @@
     ]
   },
   {
-    "name": "MP3 DC - Use MP3 Audio CD's on Your Dreamcast",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Unl)"
-      }
-    ]
+    "name": "MP3 DC - Use MP3 Audio CD's on Your Dreamcast"
   },
   {
     "name": "MSR - Metropolis Street Racer",
@@ -5118,11 +4607,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -5157,11 +4641,6 @@
       "Sports",
       "Sports / Skateboard"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5184,11 +4663,6 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5197,11 +4671,6 @@
     "rating": 0.7,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -5219,11 +4688,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -5276,11 +4740,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -5336,11 +4795,6 @@
     "genres": [
       "Compilation",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Game Disc)"
-      }
     ]
   },
   {
@@ -5383,11 +4837,6 @@
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5403,11 +4852,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5437,14 +4881,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Marvel vs. Capcom 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5465,7 +4901,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Marvel Vs. Capcom 2 - New Age Of Heroes (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Marvel vs. Capcom 2"
+      ]
+    }
   },
   {
     "name": "Mat Hoffman's Pro BMX",
@@ -5581,12 +5022,7 @@
     ]
   },
   {
-    "name": "Microsoft WebTV Setsuzoku Kit",
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ]
+    "name": "Microsoft WebTV Setsuzoku Kit"
   },
   {
     "name": "Midway's Greatest Arcade Hits - Volume 1",
@@ -5594,11 +5030,6 @@
     "rating": 0.65,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5640,15 +5071,6 @@
     "genres": [
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Expendable",
-          "Seitai Heiki Expendable"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5656,7 +5078,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Expendable (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Expendable",
+        "Seitai Heiki Expendable"
+      ]
+    }
   },
   {
     "name": "Miss Moonlight",
@@ -5724,11 +5152,6 @@
     "genres": [
       "Asiatic board game",
       "Othello"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5746,11 +5169,6 @@
     "rating": 0.75,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5791,11 +5209,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -5864,11 +5277,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5895,11 +5303,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5916,11 +5319,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5939,11 +5337,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5960,11 +5353,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -6000,11 +5388,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6021,11 +5404,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -6044,11 +5422,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6065,11 +5438,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -6122,11 +5490,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6144,11 +5507,6 @@
       "Sports",
       "Sports / Hockey"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6165,11 +5523,6 @@
     "genres": [
       "Sports",
       "Sports / Hockey"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -6399,14 +5752,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Next Tetris, The - On-Line Edition"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6414,7 +5759,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Next Tetris - On-line Edition, The (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Next Tetris, The - On-Line Edition"
+      ]
+    }
   },
   {
     "name": "Nightmare Creatures II",
@@ -6423,11 +5773,6 @@
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -6497,14 +5842,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Omikron - The Nomad Soul"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6518,7 +5855,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Nomad Soul, The (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Omikron - The Nomad Soul"
+      ]
+    }
   },
   {
     "name": "O-to-i-re - Dreamcast Sequencer",
@@ -6637,11 +5979,6 @@
       "Shooter",
       "Shooter / 3rd person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6668,14 +6005,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "POD - Speedzone"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6689,7 +6018,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/POD 2 - Multiplayer Online (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "POD - Speedzone"
+      ]
+    }
   },
   {
     "name": "Pachi-Slot Teiou - Dream Slot - Heiwa SP",
@@ -6752,14 +6086,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)",
-        "clones": [
-          "PenPen TriIcelon"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6773,7 +6099,12 @@
         ],
         "url": "https://segaretro.org/images/6/65/Pen_Pen_Triicelon_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "PenPen TriIcelon"
+      ]
+    }
   },
   {
     "name": "Phantasy Star Online",
@@ -6781,11 +6112,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es) (Rev 1)"
-      }
     ],
     "manuals": [
       {
@@ -6814,11 +6140,6 @@
     "rating": 0.9,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -6905,14 +6226,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Star Gladiator 2 - Nightmare of Bilstein"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6932,7 +6245,12 @@
         ],
         "url": "https://archive.org/download/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color/Star_Gladiator_2_Nightmare_Of_Bilstein_2000_J_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Star Gladiator 2 - Nightmare of Bilstein"
+      ]
+    }
   },
   {
     "name": "Plus Plumb",
@@ -7000,11 +6318,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7036,11 +6349,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -7159,11 +6467,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7209,15 +6512,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Moero! Justice Gakuen",
-          "Project Justice"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7225,7 +6519,13 @@
         ],
         "url": "https://archive.org/download/Project_Justice_2001_U/Project_Justice_2001_U.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Moero! Justice Gakuen",
+        "Project Justice"
+      ]
+    }
   },
   {
     "name": "Psychic Force 2012",
@@ -7233,11 +6533,6 @@
     "rating": 0.6,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -7303,11 +6598,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7341,11 +6631,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -7382,11 +6667,6 @@
       "Quiz",
       "Quiz / Japanese",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -7399,16 +6679,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Monaco Grand Prix",
-          "Monaco Grand Prix Racing Simulation 2",
-          "Racing Simulation 2 - Monaco Grand Prix On-Line"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -7423,7 +6693,14 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Monaco Grand Prix - Racing Simulation 2 (France).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Monaco Grand Prix",
+        "Monaco Grand Prix Racing Simulation 2",
+        "Racing Simulation 2 - Monaco Grand Prix On-Line"
+      ]
+    }
   },
   {
     "name": "Radirgy",
@@ -7450,11 +6727,6 @@
     "genres": [
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -7489,14 +6761,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Rayman - Kaizokusen kara no Dasshutsu!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7510,7 +6774,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Rayman 2 - The Great Escape (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rayman - Kaizokusen kara no Dasshutsu!"
+      ]
+    }
   },
   {
     "name": "Re-Volt",
@@ -7519,11 +6788,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -7551,14 +6815,6 @@
       "Sports",
       "Sports / Boxing"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Ready 2 Rumble Boxing - Uchikome Warai no Megaton Punch!!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7572,7 +6828,12 @@
         ],
         "url": "https://segaretro.org/images/9/9e/Ready2RDCBRManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ready 2 Rumble Boxing - Uchikome Warai no Megaton Punch!!"
+      ]
+    }
   },
   {
     "name": "Ready 2 Rumble Boxing - Round 2",
@@ -7581,11 +6842,6 @@
     "genres": [
       "Sports",
       "Sports / Boxing"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -7608,14 +6864,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Rev A)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2)"
-      }
     ]
   },
   {
@@ -7625,14 +6873,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Record of Lodoss War - The Advent of Cardice"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -7659,7 +6899,12 @@
         ],
         "url": "https://segaretro.org/images/e/e5/Lodoss_War_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Record of Lodoss War - The Advent of Cardice"
+      ]
+    }
   },
   {
     "name": "Red Dog - Superior Firepower",
@@ -7671,11 +6916,6 @@
       "Action / Adventure",
       "Shooter",
       "Shooter / Vehicle"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -7703,14 +6943,6 @@
       "Hunting and Fishing",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Fish Eyes + Wild"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7718,7 +6950,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Reel Fishing - Wild (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Fish Eyes + Wild"
+      ]
+    }
   },
   {
     "name": "Ren'ai Chu! Happy Perfect",
@@ -7752,20 +6989,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)",
-        "clones": [
-          "Biohazard - Code - Veronica (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)",
-        "clones": [
-          "Biohazard - Code - Veronica (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7782,6 +7005,11 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
+    },
+    "group": {
+      "merge": [
+        "Biohazard - Code - Veronica"
+      ]
     }
   },
   {
@@ -7791,20 +7019,6 @@
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr) (Disc 1)",
-        "clones": [
-          "Biohazard 2 - Value Plus (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr) (Disc 2)",
-        "clones": [
-          "Biohazard 2 - Value Plus (Disc 2)"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -7828,6 +7042,11 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
+    },
+    "group": {
+      "merge": [
+        "Biohazard 2 - Value Plus"
+      ]
     }
   },
   {
@@ -7837,14 +7056,6 @@
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Biohazard 3 - Last Escape"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -7866,7 +7077,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Resident Evil 3 - Nemesis (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Biohazard 3 - Last Escape"
+      ]
+    }
   },
   {
     "name": "Revive... - Sosei",
@@ -7883,11 +7099,6 @@
     "rating": 0.8,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -7912,14 +7123,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Ring, The"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7927,7 +7130,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Ring - Terror's Realm, The (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ring, The"
+      ]
+    }
   },
   {
     "name": "Roadsters",
@@ -7936,11 +7144,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -8045,11 +7248,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8105,17 +7303,6 @@
       "Adventure",
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 3)"
-      }
     ],
     "manuals": [
       {
@@ -8226,11 +7413,6 @@
       "Music and Dance",
       "Rhythm"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8266,14 +7448,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)",
-        "clones": [
-          "Rush 2049"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8284,7 +7458,12 @@
     ],
     "tags": [
       "Party"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rush 2049"
+      ]
+    }
   },
   {
     "name": "Sangokushi VI",
@@ -8293,14 +7472,11 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Sangokushi VI with Power-Up Kit"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Sangokushi VI with Power-Up Kit"
+      ]
+    }
   },
   {
     "name": "Satazius Next",
@@ -8339,14 +7515,6 @@
       "Hunting and Fishing",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Get Bass"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8360,7 +7528,12 @@
         ],
         "url": "https://segaretro.org/images/0/0b/GetBassDCJPManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Get Bass"
+      ]
+    }
   },
   {
     "name": "Sega Bass Fishing 2",
@@ -8371,14 +7544,6 @@
       "Hunting and Fishing",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Get Bass 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8386,7 +7551,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Bass Fishing 2 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Get Bass 2"
+      ]
+    }
   },
   {
     "name": "Sega Extreme Sports",
@@ -8394,14 +7564,6 @@
     "rating": 0.85,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Xtreme Sports"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -8416,7 +7578,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Extreme Sports (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Xtreme Sports"
+      ]
+    }
   },
   {
     "name": "Sega GT",
@@ -8425,14 +7592,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Sega GT - Homologation Special"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -8453,7 +7612,12 @@
         ],
         "url": "https://segaretro.org/images/e/e6/SegaGT_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sega GT - Homologation Special"
+      ]
+    }
   },
   {
     "name": "Sega Marine Fishing",
@@ -8463,11 +7627,6 @@
       "Fishing",
       "Hunting and Fishing",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -8485,11 +7644,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -8544,14 +7698,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Sega Worldwide Soccer 2000 - Euro Edition"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8563,7 +7709,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sega Worldwide Soccer 2000 (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sega Worldwide Soccer 2000 - Euro Edition"
+      ]
+    }
   },
   {
     "name": "SegaKara for Dreamcast"
@@ -8575,11 +7726,6 @@
     "genres": [
       "Role playing games",
       "Tactical RPG"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -8641,14 +7787,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Seventh Cross"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8656,7 +7794,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Seventh Cross Evolution (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Seventh Cross"
+      ]
+    }
   },
   {
     "name": "Shadow Man",
@@ -8665,11 +7808,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -8702,36 +7840,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 1)",
-        "clones": [
-          "Shenmue - Ichishou Yokosuka (Disc 1)",
-          "US Shenmue (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 2)",
-        "clones": [
-          "Shenmue - Ichishou Yokosuka (Disc 2)",
-          "US Shenmue (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 3)",
-        "clones": [
-          "Shenmue - Ichishou Yokosuka (Disc 3)",
-          "US Shenmue (Disc 3)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Shenmue Passport)",
-        "clones": [
-          "Shenmue - Ichishou Yokosuka",
-          "US Shenmue"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8754,6 +7862,12 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
+    },
+    "group": {
+      "merge": [
+        "Shenmue - Ichishou Yokosuka",
+        "US Shenmue"
+      ]
     }
   },
   {
@@ -8762,20 +7876,6 @@
     "rating": 0.85,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 2)"
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 3)"
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 4)"
-      }
     ],
     "manuals": [
       {
@@ -8872,11 +7972,6 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8902,11 +7997,6 @@
     "genres": [
       "Adventure",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -8969,25 +8059,10 @@
   },
   {
     "name": "Skies of Arcadia",
-    "aliases": ["Eternal Arcadia"],
     "players": 1,
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 1)",
-        "clones": [
-          "Eternal Arcadia (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (Disc 2)",
-        "clones": [
-          "Eternal Arcadia (Disc 2)"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -9011,6 +8086,11 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
+    },
+    "group": {
+      "merge": [
+        "Eternal Arcadia"
+      ]
     }
   },
   {
@@ -9019,11 +8099,6 @@
     "rating": 0.65,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -9044,11 +8119,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -9081,15 +8151,6 @@
       "Sports",
       "Sports / Skiing"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Cool Boarders Burrrn!",
-          "Rippin' Riders"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9109,7 +8170,13 @@
         ],
         "url": "https://segaretro.org/images/2/27/CoolBoardersDCJPManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Cool Boarders Burrrn!",
+        "Rippin' Riders"
+      ]
+    }
   },
   {
     "name": "Soldier of Fortune",
@@ -9118,11 +8185,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9146,15 +8208,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)",
-        "clones": [
-          "Sonic Adventure - Limited Edition",
-          "Sonic Adventure International"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9177,7 +8230,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sonic Adventure (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sonic Adventure - Limited Edition",
+        "Sonic Adventure International"
+      ]
+    }
   },
   {
     "name": "Sonic Adventure 2",
@@ -9185,11 +8244,6 @@
     "rating": 0.8,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -9219,11 +8273,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Japan) (En,Ja)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9239,11 +8288,6 @@
     "rating": 0.7,
     "genres": [
       "Casual Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -9303,11 +8347,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9323,11 +8362,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -9358,11 +8392,6 @@
       "Board game",
       "Casual Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9380,11 +8409,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9400,11 +8424,6 @@
     "rating": 0.8,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -9447,11 +8466,6 @@
       "Action / Adventure",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9484,11 +8498,6 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9505,11 +8514,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -9528,11 +8532,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9548,11 +8547,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9577,11 +8571,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9597,11 +8586,6 @@
     "rating": 0.7,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -9626,11 +8610,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9646,11 +8625,6 @@
     "rating": 0.5,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9668,11 +8642,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9700,11 +8669,6 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9727,15 +8691,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter Zero 3 - Saikyo-ryu Dojo",
-          "Street Fighter Zero 3 - Saikyo-ryu Dojo for Matching Service"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9755,7 +8710,13 @@
         ],
         "url": "https://archive.org/download/Street_Fighter_Zero_3_1999_J_color/Street_Fighter_Zero_3_1999_J_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Street Fighter Zero 3 - Saikyo-ryu Dojo",
+        "Street Fighter Zero 3 - Saikyo-ryu Dojo for Matching Service"
+      ]
+    }
   },
   {
     "name": "Street Fighter III - 3rd Strike",
@@ -9763,14 +8724,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter III - 3rd Strike - Fight for the Future"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -9791,7 +8744,12 @@
         ],
         "url": "https://segaretro.org/images/b/bc/StreetFighterIII3rd_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Street Fighter III - 3rd Strike - Fight for the Future"
+      ]
+    }
   },
   {
     "name": "Street Fighter III - Double Impact",
@@ -9799,14 +8757,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter III - W Impact"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -9827,7 +8777,12 @@
         ],
         "url": "https://segaretro.org/images/c/c9/SF3DI_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Street Fighter III - W Impact"
+      ]
+    }
   },
   {
     "name": "Stunt GP",
@@ -9845,14 +8800,6 @@
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -9926,14 +8873,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Super Magnetic Niuniu"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9947,7 +8886,12 @@
         ],
         "url": "https://segaretro.org/images/d/d5/SuperMagneticNeo_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Super Magnetic Niuniu"
+      ]
+    }
   },
   {
     "name": "Super Magnetic Niuniu - Promotion Disc",
@@ -9999,14 +8943,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Super Runabout"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10020,7 +8956,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Super Runabout - San Francisco Edition (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Super Runabout"
+      ]
+    }
   },
   {
     "name": "Super Street Fighter II X for Matching Service",
@@ -10047,11 +8988,6 @@
       "Race",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10068,14 +9004,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Redline Racer"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -10096,7 +9024,12 @@
         ],
         "url": "https://segaretro.org/images/2/24/RedlineRacer_DC_JP_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Redline Racer"
+      ]
+    }
   },
   {
     "name": "Sweet Season",
@@ -10115,14 +9048,6 @@
       "Adventure",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Berserk - Millennium Falcon-hen - Wasurebana no Shou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10130,7 +9055,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Sword of the Berserk - Guts' Rage (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Berserk - Millennium Falcon-hen - Wasurebana no Shou"
+      ]
+    }
   },
   {
     "name": "Sydney 2000",
@@ -10139,11 +9069,6 @@
     "genres": [
       "Simulation",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10195,11 +9120,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -10219,15 +9139,6 @@
       "Fight",
       "Fight / 3D"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Choukou Senki Kikaioh",
-          "Choukou Senki Kikaioh for Matching Service"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10241,7 +9152,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tech Romancer (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Choukou Senki Kikaioh",
+        "Choukou Senki Kikaioh for Matching Service"
+      ]
+    }
   },
   {
     "name": "Tee Off",
@@ -10250,11 +9167,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10320,14 +9232,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Climax Landers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10341,7 +9245,12 @@
         ],
         "url": "https://segaretro.org/images/5/50/ClimaxLandersDCJPManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Climax Landers"
+      ]
+    }
   },
   {
     "name": "Tokusatsu Bouken Katsugeki Super Hero Retsuden",
@@ -10366,11 +9275,6 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -10397,15 +9301,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shutokou Battle",
-          "Tokyo Xtreme Racer"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10419,7 +9314,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer (Japan).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shutokou Battle",
+        "Tokyo Xtreme Racer"
+      ]
+    }
   },
   {
     "name": "Tokyo Highway Challenge 2",
@@ -10428,15 +9329,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shutokou Battle 2",
-          "Tokyo Xtreme Racer 2"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -10451,7 +9343,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tokyo Xtreme Racer 2 (Japan).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shutokou Battle 2",
+        "Tokyo Xtreme Racer 2"
+      ]
+    }
   },
   {
     "name": "Tom Clancy's Rainbow Six - Rogue Spear + Mission Pack - Urban Operations",
@@ -10462,11 +9360,6 @@
       "Shooter",
       "Shooter / 1st person",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10493,14 +9386,6 @@
       "Shooter / 1st person",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tom Clancy's Rainbow Six with Eagle Watch Missions"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10508,7 +9393,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tom Clancy's Rainbow Six (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tom Clancy's Rainbow Six with Eagle Watch Missions"
+      ]
+    }
   },
   {
     "name": "Tomb Raider - The Last Revelation",
@@ -10516,15 +9406,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tomb Raider - La Revelation Finale",
-          "Tomb Raider IV - The Last Revelation"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -10551,7 +9432,13 @@
         ],
         "url": "https://segaretro.org/images/0/02/TombRiderLRDCBRManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tomb Raider - La Revelation Finale",
+        "Tomb Raider IV - The Last Revelation"
+      ]
+    }
   },
   {
     "name": "Tomb Raider Chronicles",
@@ -10562,16 +9449,6 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tomb Raider - Die Chronik",
-          "Tomb Raider - Sur les Traces de Lara Croft",
-          "Tomb Raider Chronicles - La Leggenda di Lara Croft"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10579,7 +9456,14 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tomb Raider - Chronicles (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tomb Raider - Die Chronik",
+        "Tomb Raider - Sur les Traces de Lara Croft",
+        "Tomb Raider Chronicles - La Leggenda di Lara Croft"
+      ]
+    }
   },
   {
     "name": "Tony Hawk's Pro Skater 2",
@@ -10588,11 +9472,6 @@
     "genres": [
       "Sports",
       "Sports / Skateboard"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10611,14 +9490,6 @@
       "Sports",
       "Sports / Skateboard"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tony Hawk's Pro Skater"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10626,7 +9497,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Tony Hawk's Pro Skater (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tony Hawk's Pro Skater"
+      ]
+    }
   },
   {
     "name": "Toy Commander",
@@ -10635,14 +9511,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Totsugeki! Teketeke!! Toy Ranger"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -10657,7 +9525,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Toy Commander (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Totsugeki! Teketeke!! Toy Ranger"
+      ]
+    }
   },
   {
     "name": "Toy Racer",
@@ -10692,11 +9565,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10817,11 +9685,6 @@
       "Lightgun Shooter",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10848,11 +9711,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10870,15 +9728,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)",
-        "clones": [
-          "Striker Pro 2000",
-          "Super Euro Soccer 2000"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10892,7 +9741,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/UEFA Striker (France).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Striker Pro 2000",
+        "Super Euro Soccer 2000"
+      ]
+    }
   },
   {
     "name": "Ultimate Fighting Championship",
@@ -10901,11 +9756,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10964,11 +9814,6 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11001,11 +9846,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11032,14 +9872,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Test Drive V-Rally"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11053,7 +9885,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/V-Rally 2 - Expert Edition (France).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Test Drive V-Rally"
+      ]
+    }
   },
   {
     "name": "Vampire Chronicle for Matching Service",
@@ -11078,11 +9915,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11111,14 +9943,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Vigilante 8 - 2nd Battle"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11126,7 +9950,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Vigilante 8 - 2nd Offense (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Vigilante 8 - 2nd Battle"
+      ]
+    }
   },
   {
     "name": "Virtua Athlete 2K",
@@ -11135,14 +9964,6 @@
     "genres": [
       "Simulation",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Virtua Athlete 2000"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -11157,7 +9978,12 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Athlete 2K (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Virtua Athlete 2000"
+      ]
+    }
   },
   {
     "name": "Virtua Cop 2",
@@ -11180,11 +10006,6 @@
     "genres": [
       "Fight",
       "Fight / 3D"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11215,14 +10036,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es)",
-        "clones": [
-          "Virtua Striker 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11236,7 +10049,12 @@
         ],
         "url": "https://segaretro.org/images/a/a2/Virtuastriker2_dc_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Virtua Striker 2"
+      ]
+    }
   },
   {
     "name": "Virtua Tennis - Sega Professional Tennis",
@@ -11246,15 +10064,6 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Power Smash - Sega Professional Tennis",
-          "Virtua Tennis"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11262,7 +10071,13 @@
         ],
         "url": "https://archive.org/download/SEGADreamcastManuals_201812/Virtua Tennis (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Power Smash - Sega Professional Tennis",
+        "Virtua Tennis"
+      ]
+    }
   },
   {
     "name": "Virtua Tennis 2 - Sega Professional Tennis",
@@ -11272,15 +10087,6 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Power Smash 2 - Sega Professional Tennis",
-          "Tennis 2K2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11288,7 +10094,13 @@
         ],
         "url": "https://archive.org/download/Tennis_2K2_2001_U_color/Tennis_2K2_2001_U_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Power Smash 2 - Sega Professional Tennis",
+        "Tennis 2K2"
+      ]
+    }
   },
   {
     "name": "Visual Park"
@@ -11318,11 +10130,6 @@
       "Sports",
       "Sports / Wrestling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11341,11 +10148,6 @@
       "Sports",
       "Sports / Wrestling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11362,11 +10164,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -11385,11 +10182,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11405,20 +10197,10 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Game Disc)"
-      }
     ]
   },
   {
-    "name": "Web Browser",
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ]
+    "name": "Web Browser"
   },
   {
     "name": "Web Browser 2.0"
@@ -11443,11 +10225,6 @@
     "rating": 0.65,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -11502,11 +10279,6 @@
     "rating": 0.45,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)"
-      }
     ],
     "manuals": [
       {
@@ -11594,11 +10366,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11616,11 +10383,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11637,11 +10399,6 @@
     "genres": [
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Nl,Sv,No,Da)"
-      }
     ],
     "manuals": [
       {
@@ -11669,11 +10426,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Sv,Da)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11693,12 +10445,7 @@
     ]
   },
   {
-    "name": "Xploder DC",
-    "parents": [
-      {
-        "parent_flags": "(USA) (Unl)"
-      }
-    ]
+    "name": "Xploder DC"
   },
   {
     "name": "Yoshia no Oka de Nekoronde...",
@@ -11777,11 +10524,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11805,11 +10547,6 @@
       "Action",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (En,Ja)"
-      }
     ]
   },
   {

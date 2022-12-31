@@ -28,29 +28,27 @@
       "Action",
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Licence to Kill"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
           "en-gb",
           "it"
         ],
-        "url": "https://c64games.de/hugo.php?helpfiles=/l/licence_to_kill_anl.zip",
+        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Licence to Kill/Licence to Kill Manual.cbz",
         "options": {
-          "filter": "*.jpg"
+          "format": "cb7",
+          "pages": "1,3-N,2"
         }
       }
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Licence to Kill"
+      ]
+    }
   },
   {
     "name": "007 - Live and Let Die",
@@ -91,14 +89,6 @@
       "Shooter / 3rd person",
       "Shooter / Run and Gun"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "007 - The Living Daylights"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -112,7 +102,12 @@
         ],
         "url": "https://archive.org/download/TheLivingDaylights1987WalkingCirclesSoftwareES/The Living Daylights (1987)(Walking Circles Software)(ES).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "007 - The Living Daylights"
+      ]
+    }
   },
   {
     "name": "007 - Spy Who Loved Me, The",
@@ -573,14 +568,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "ATV - All Terrain Vehicle Simulator"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -599,7 +586,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "ATV - All Terrain Vehicle Simulator"
+      ]
+    }
   },
   {
     "name": "Aaargh!",
@@ -817,14 +809,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Decathlon"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -835,7 +819,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Decathlon"
+      ]
+    }
   },
   {
     "name": "Activision Demo Disk #2"
@@ -1092,14 +1081,6 @@
   },
   {
     "name": "Advanced Tactical Fighter",
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "ATF - Advanced Tactical Fighter"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1107,7 +1088,12 @@
         ],
         "url": "https://c64games.de/hugo.php?helpfiles=/a/advanced_tactical_fighter_anl.zip"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "ATF - Advanced Tactical Fighter"
+      ]
+    }
   },
   {
     "name": "Adventure 1 - The Mutant Spiders"
@@ -1217,14 +1203,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "After Burner"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1246,7 +1224,12 @@
         ],
         "url": "https://archive.org/download/AfterBurnerManual/After Burner (GB).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "After Burner"
+      ]
+    }
   },
   {
     "name": "Aftermath",
@@ -2181,14 +2164,6 @@
       "Action",
       "Action / Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Arc of Yesod"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2203,7 +2178,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Arc of Yesod"
+      ]
+    }
   },
   {
     "name": "Arcade Action"
@@ -2320,14 +2300,6 @@
       "Board game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Archon II - Adept"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2343,7 +2315,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Archon II - Adept"
+      ]
+    }
   },
   {
     "name": "Arctic Fox",
@@ -2351,14 +2328,6 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Arcticfox"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2374,7 +2343,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Arcticfox"
+      ]
+    }
   },
   {
     "name": "Ardok the Barbarian",
@@ -2645,14 +2619,6 @@
   },
   {
     "name": "Around the World in 80 Days",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "In 80 Days Around the World"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2681,7 +2647,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "In 80 Days Around the World"
+      ]
+    }
   },
   {
     "name": "Artillery Duel",
@@ -3518,14 +3489,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Badlands"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3539,7 +3502,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Badlands"
+      ]
+    }
   },
   {
     "name": "Ball Crazy",
@@ -4277,14 +4245,6 @@
     "genres": [
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Beach-Head II - The Dictator Strikes Back!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4302,7 +4262,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Beach-Head II - The Dictator Strikes Back!"
+      ]
+    }
   },
   {
     "name": "Beamrider",
@@ -5121,14 +5086,6 @@
   },
   {
     "name": "Blue Max 2001",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Blue Max - 2001"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5142,7 +5099,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Blue Max - 2001"
+      ]
+    }
   },
   {
     "name": "Blue Moon",
@@ -5971,14 +5933,6 @@
       "Casual Game",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Buffalo Bill's Wild West Show"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5994,7 +5948,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Buffalo Bill's Wild West Show"
+      ]
+    }
   },
   {
     "name": "Bug Blaster",
@@ -8484,14 +8443,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Crackdown"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8509,7 +8460,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Crackdown"
+      ]
+    }
   },
   {
     "name": "Crack-Up",
@@ -8942,14 +8898,6 @@
       "Sports",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Cyberball - Football in the 21st Century"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8969,7 +8917,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Cyberball - Football in the 21st Century"
+      ]
+    }
   },
   {
     "name": "Cyberdyne Warrior",
@@ -9216,14 +9169,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dam Busters, The"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9237,7 +9182,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dam Busters, The"
+      ]
+    }
   },
   {
     "name": "Dan Dare",
@@ -9561,14 +9511,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Days of Thunder"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9579,7 +9521,12 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Days_of_Thunder_(1990_Mindscape_Inc.)_[5933]/Extras/Instructions.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Days of Thunder"
+      ]
+    }
   },
   {
     "name": "Deactivators",
@@ -9703,13 +9650,6 @@
     "name": "Deathscape",
     "tags": [
       "C64 Dreams"
-    ]
-  },
-  {
-    "name": "Decathlon",
-    "rating": 0.8,
-    "genres": [
-      "Sports"
     ]
   },
   {
@@ -11317,14 +11257,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Into the Eagle's Nest"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11340,7 +11272,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Into the Eagle's Nest"
+      ]
+    }
   },
   {
     "name": "Earth Orbit Station",
@@ -11869,14 +11806,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Druid II - Enlightenment"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11888,7 +11817,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Druid II - Enlightenment"
+      ]
+    }
   },
   {
     "name": "Entertainer, The",
@@ -12372,14 +12306,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "F-15 Strike Eagle - Air Combat in the Jet Age"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12399,7 +12325,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "F-15 Strike Eagle - Air Combat in the Jet Age"
+      ]
+    }
   },
   {
     "name": "F-16 Combat Pilot",
@@ -12950,14 +12881,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Fighting Warrior ~ Kung-Fu II - Sticks of Death"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12980,7 +12903,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Fighting Warrior ~ Kung-Fu II - Sticks of Death"
+      ]
+    }
   },
   {
     "name": "Final Assault",
@@ -13214,14 +13142,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FireTrap"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13241,7 +13161,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "FireTrap"
+      ]
+    }
   },
   {
     "name": "First Samurai",
@@ -13622,14 +13547,6 @@
   },
   {
     "name": "Football Manager World Cup Edition",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Football Manager - World Cup Edition"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13640,7 +13557,12 @@
           "filter": "*eng.txt"
         }
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Football Manager - World Cup Edition"
+      ]
+    }
   },
   {
     "name": "Footballer of the Year",
@@ -14144,14 +14066,6 @@
   },
   {
     "name": "Fruit Machine Simulator II",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Fruit Machine Simulator 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14161,7 +14075,12 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Fruit_Machine_Simulator_2_(1989_Codemasters)_[9479]/Extras/Inlay_back.jpg"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Fruit Machine Simulator 2"
+      ]
+    }
   },
   {
     "name": "Fruity",
@@ -14320,14 +14239,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "GBA Championship Basketball - Two-on-Two"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14338,7 +14249,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "GBA Championship Basketball - Two-on-Two"
+      ]
+    }
   },
   {
     "name": "GEOS 1.2",
@@ -14499,14 +14415,6 @@
   },
   {
     "name": "Galdregons Domain",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Galdregon's Domain"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14517,7 +14425,12 @@
           "filter": "*Pandora*"
         }
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Galdregon's Domain"
+      ]
+    }
   },
   {
     "name": "Galvan",
@@ -15235,14 +15148,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Ghostbusters II"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15260,7 +15165,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ghostbusters II"
+      ]
+    }
   },
   {
     "name": "Ghosts'n Goblins",
@@ -16052,14 +15962,6 @@
       "Platform",
       "Platform / Run Jump"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Gremlins 2 - The New Batch"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16077,7 +15979,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Gremlins 2 - The New Batch"
+      ]
+    }
   },
   {
     "name": "Greyfell - The Legend of Norman",
@@ -16105,14 +16012,6 @@
   },
   {
     "name": "Gridrunner",
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Grid Runner"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16127,7 +16026,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Grid Runner"
+      ]
+    }
   },
   {
     "name": "Gridrunner II - Attack of the Mutant Camels",
@@ -16524,14 +16428,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Hacker II - The Doomsday Papers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16546,7 +16442,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hacker II - The Doomsday Papers"
+      ]
+    }
   },
   {
     "name": "Hades Nebula",
@@ -16757,14 +16658,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Hardball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16779,7 +16672,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hardball"
+      ]
+    }
   },
   {
     "name": "Harrier Attack",
@@ -17031,14 +16929,6 @@
   },
   {
     "name": "Heavy Metal",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Heavy Metal - Modern Land Combat Vol. I"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17058,7 +16948,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Heavy Metal - Modern Land Combat Vol. I"
+      ]
+    }
   },
   {
     "name": "Heist, The",
@@ -17494,14 +17389,6 @@
   },
   {
     "name": "Hole in One",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Budget)",
-        "clones": [
-          "Hole in One Golf"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17517,7 +17404,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hole in One Golf"
+      ]
+    }
   },
   {
     "name": "Hollywood Poker",
@@ -17853,14 +17745,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Howard the Duck"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17875,7 +17759,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Howard the Duck"
+      ]
+    }
   },
   {
     "name": "Hudson Hawk",
@@ -21390,14 +21279,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Last Ninja 2 - Back with a Vengeance"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21415,7 +21296,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Last Ninja 2 - Back with a Vengeance"
+      ]
+    }
   },
   {
     "name": "Last Ninja III, The - Real Hatred Is Timeless",
@@ -21604,15 +21490,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Leader Board",
-          "Leaderboard"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21632,7 +21509,13 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Leader Board",
+        "Leaderboard"
+      ]
+    }
   },
   {
     "name": "Leader Board Executive Tournament Disk",
@@ -21889,30 +21772,6 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/c64/Leviathan.txt"
       }
-    ]
-  },
-  {
-    "name": "Licence to Kill",
-    "rating": 0.8,
-    "genres": [
-      "Action",
-      "Shooter"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en-gb",
-          "it"
-        ],
-        "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Licence to Kill/Licence to Kill Manual.cbz",
-        "options": {
-          "format": "cb7",
-          "pages": "1,3-N,2"
-        }
-      }
-    ],
-    "tags": [
-      "C64 Dreams"
     ]
   },
   {
@@ -25258,14 +25117,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "NewZealand Story, The"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -25295,7 +25146,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "NewZealand Story, The"
+      ]
+    }
   },
   {
     "name": "Newsroom Clip Art Vol 1, The",
@@ -25909,14 +25765,6 @@
   },
   {
     "name": "Oil's Well",
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Oils Well"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -25931,7 +25779,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Oils Well"
+      ]
+    }
   },
   {
     "name": "Olli & Lissa - The Ghost of Shilmoore Castle",
@@ -26514,14 +26367,6 @@
   },
   {
     "name": "PSI-5 Trading Company",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Psi 5 Trading Company"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -26533,7 +26378,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Psi 5 Trading Company"
+      ]
+    }
   },
   {
     "name": "Pac-Man",
@@ -26567,14 +26417,6 @@
       "Action",
       "Action / Labyrinth"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Pac-Mania"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -26597,7 +26439,12 @@
           "pages": "1-6"
         }
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pac-Mania"
+      ]
+    }
   },
   {
     "name": "Pacos Pete"
@@ -27317,14 +27164,6 @@
       "Sports",
       "Sports / Table tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Ping-Pong"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -27348,7 +27187,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ping-Pong"
+      ]
+    }
   },
   {
     "name": "Pink Panther",
@@ -27515,14 +27359,6 @@
       "Platform",
       "Platform / Run Jump Scrolling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Pitfall! - Pitfall Harry's Jungle Adventure"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -27538,7 +27374,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pitfall! - Pitfall Harry's Jungle Adventure"
+      ]
+    }
   },
   {
     "name": "Pitstop",
@@ -28269,14 +28110,11 @@
         "url": "https://archive.org/download/PrintmasterPlus1988UserManual/Printmaster Plus - 1988 - User Manual.pdf"
       }
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe) (Program)",
-        "clones": [
-          "Printmaster Plus"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Printmaster Plus"
+      ]
+    }
   },
   {
     "name": "Printer's Patriot"
@@ -28425,14 +28263,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Pro Golf"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -28440,7 +28270,12 @@
         ],
         "url": "https://commodore.bombjack.org/commodore/games/Pro_Golf_Instruction_Booklet_(Mastertronic).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pro Golf"
+      ]
+    }
   },
   {
     "name": "Prohibition",
@@ -29039,19 +28874,16 @@
   },
   {
     "name": "R.I.S.K. - Rapid Intercept Seek and Kill",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "R.I.S.K.",
-          "RISK"
-        ]
-      }
-    ],
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "R.I.S.K.",
+        "RISK"
+      ]
+    }
   },
   {
     "name": "REX-Ramfloppy"
@@ -29391,14 +29223,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rambo III - The Rescue"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -29424,7 +29248,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rambo III - The Rescue"
+      ]
+    }
   },
   {
     "name": "Rampage",
@@ -29611,14 +29440,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rebounder"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -29627,7 +29448,12 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Re-Bounder_(198x_Prism_Leisure)_[11068]/Extras/Inlay_back.jpg"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rebounder"
+      ]
+    }
   },
   {
     "name": "Reach for the Stars v2.0",
@@ -30031,14 +29857,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rescue of Fractalus!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -30059,7 +29877,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rescue of Fractalus!"
+      ]
+    }
   },
   {
     "name": "Retro Ball",
@@ -30496,14 +30319,6 @@
   {
     "name": "Roadwars",
     "players": 2,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Road Wars"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -30518,7 +30333,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Road Wars"
+      ]
+    }
   },
   {
     "name": "Robbers of the Lost Tomb",
@@ -30630,14 +30450,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "RoboCop"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -30662,7 +30474,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "RoboCop"
+      ]
+    }
   },
   {
     "name": "Robotron - 2084",
@@ -30849,14 +30666,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rocky Horror Show"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -30867,7 +30676,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rocky Horror Show"
+      ]
+    }
   },
   {
     "name": "Rod Land",
@@ -30987,14 +30801,6 @@
   {
     "name": "Round the Bend!",
     "players": 1,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Round the Bend! - Doc Croc's Outrageous Adventures"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -31005,7 +30811,12 @@
           "filter": "*eng.wri"
         }
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Round the Bend! - Doc Croc's Outrageous Adventures"
+      ]
+    }
   },
   {
     "name": "Roy of the Rovers"
@@ -31267,14 +31078,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Saboteur II - Avenging Angel"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -31293,7 +31096,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Saboteur II - Avenging Angel"
+      ]
+    }
   },
   {
     "name": "Sacred Armour of Antiriad, The",
@@ -32494,14 +32302,6 @@
       "Various",
       "Various / Utilities"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Program)",
-        "clones": [
-          "SEUCK - Shoot 'Em-Up Construction Kit"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -32509,7 +32309,12 @@
         ],
         "url": "https://commodore.bombjack.org/commodore/games/Shoot'em_up_Construction_Kit_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "SEUCK - Shoot 'Em-Up Construction Kit"
+      ]
+    }
   },
   {
     "name": "Shooting Stars 2"
@@ -32599,14 +32404,6 @@
   {
     "name": "Sigma Seven",
     "players": 1,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Sigma 7"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -32614,7 +32411,12 @@
         ],
         "url": "https://archive.org/download/Commodore64Manuals/Sigma7europe.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sigma 7"
+      ]
+    }
   },
   {
     "name": "Silent Service",
@@ -32622,14 +32424,6 @@
     "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Silent Service - The Submarine Simulation"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -32641,7 +32435,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Silent Service - The Submarine Simulation"
+      ]
+    }
   },
   {
     "name": "Silicon Dreams",
@@ -32945,14 +32744,6 @@
       "Shooter",
       "Shooter / Horizontal"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Anirog)",
-        "clones": [
-          "Skramble!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -32967,7 +32758,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Skramble!"
+      ]
+    }
   },
   {
     "name": "Sky High Stuntman",
@@ -33506,14 +33302,6 @@
   {
     "name": "Soldier Of Fortune",
     "players": 1,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Soldier of Fortune"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -33537,7 +33325,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Soldier of Fortune"
+      ]
+    }
   },
   {
     "name": "Solo Flight",
@@ -36968,14 +36761,6 @@
       "Sports",
       "Sports / Table tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Superstar Ping Pong"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -37000,7 +36785,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Superstar Ping Pong"
+      ]
+    }
   },
   {
     "name": "Supertrux",
@@ -37525,14 +37315,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Technocop"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -37548,7 +37330,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Technocop"
+      ]
+    }
   },
   {
     "name": "Teenage Mutant Hero Turtles",
@@ -37687,14 +37474,6 @@
   {
     "name": "Terminator II - Judgment Day",
     "players": 1,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Terminator 2 - Judgment Day"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -37712,7 +37491,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Terminator 2 - Judgment Day"
+      ]
+    }
   },
   {
     "name": "Terra Cognita",
@@ -38260,14 +38044,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "ThunderBlade"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -38285,7 +38061,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "ThunderBlade"
+      ]
+    }
   },
   {
     "name": "Thundercats",
@@ -38521,14 +38302,6 @@
     "genres": [
       "Educational"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Time Bound"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -38536,7 +38309,12 @@
         ],
         "url": "https://archive.org/download/Commodore64Manuals/Timeboundusa.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Time Bound"
+      ]
+    }
   },
   {
     "name": "Times of Lore",
@@ -39176,14 +38954,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Trantor"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -39200,7 +38970,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Trantor"
+      ]
+    }
   },
   {
     "name": "Trashman",
@@ -39757,14 +39532,6 @@
   },
   {
     "name": "Twinworld",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Twin World"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -39772,7 +39539,12 @@
         ],
         "url": "https://c64games.de/hugo.php?helpfiles=/t/twinworld_anl.zip"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Twin World"
+      ]
+    }
   },
   {
     "name": "Two Player Super League"
@@ -40147,14 +39919,6 @@
     "genres": [
       "Casual Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Up 'n Down"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -40169,7 +39933,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Up 'n Down"
+      ]
+    }
   },
   {
     "name": "Uridium",
@@ -40691,14 +40460,6 @@
   },
   {
     "name": "WWF Wrestlemania Challenge",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "WWF WrestleMania"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -40709,7 +40470,12 @@
         ],
         "url": "https://archive.org/download/AmstradCPCManuals_201812/WWF Wrestlemania (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "WWF WrestleMania"
+      ]
+    }
   },
   {
     "name": "Wacky Darts",
@@ -41725,14 +41491,6 @@
     "genres": [
       "Educational"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Wizard of Id's Wiztype"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -41747,7 +41505,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wizard of Id's Wiztype"
+      ]
+    }
   },
   {
     "name": "Wizard of Oz, The",
@@ -41939,14 +41702,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Wonderboy"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -41961,7 +41716,12 @@
     ],
     "tags": [
       "C64 Dreams"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wonderboy"
+      ]
+    }
   },
   {
     "name": "Wonder Boy in Monster Land",
@@ -42081,14 +41841,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "World Class Leader Board"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -42104,7 +41856,12 @@
     "tags": [
       "C64 Dreams",
       "C64 Dreams: Best Of"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "World Class Leader Board"
+      ]
+    }
   },
   {
     "name": "World Cricket",
@@ -42145,14 +41902,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Italia '90"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -42167,7 +41916,12 @@
         ],
         "url": "https://archive.org/download/world-cup-soccer-italia-90/World Cup Soccer Italia '90.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Italia '90"
+      ]
+    }
   },
   {
     "name": "World Games",

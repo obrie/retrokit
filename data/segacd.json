@@ -28,14 +28,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE)",
-        "clones": [
-          "AX-101"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -49,7 +41,12 @@
         ],
         "url": "https://segaretro.org/images/a/a4/AX101_MD_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "AX-101"
+      ]
+    }
   },
   {
     "name": "Adventures of Batman and Robin, The",
@@ -58,11 +55,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -85,11 +77,6 @@
     "rating": 0.5,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -115,11 +102,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -166,11 +148,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -187,14 +164,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Bari-Arm"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -202,18 +171,18 @@
         ],
         "url": "https://segaretro.org/images/8/8c/Androidassault_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bari-Arm"
+      ]
+    }
   },
   {
     "name": "Animals!, The",
     "players": 1,
     "genres": [
       "Educational"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -279,11 +248,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -312,11 +276,6 @@
       "Platform",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -340,11 +299,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -362,15 +316,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shadow of the Beast II",
-          "Shadow of the Beast II - Juushin no Jubaku"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -378,7 +323,13 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Shadow of the Beast II (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shadow of the Beast II",
+        "Shadow of the Beast II - Juushin no Jubaku"
+      ]
+    }
   },
   {
     "name": "Bill Walsh College Football",
@@ -386,11 +337,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -418,14 +364,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Black Hole Assault"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -445,7 +383,12 @@
         ],
         "url": "https://archive.org/download/Black_Hole_Assault_1992_Micronet_JP/Black_Hole_Assault_1992_Micronet_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Black Hole Assault"
+      ]
+    }
   },
   {
     "name": "Bloodshot ~ Battle Frenzy",
@@ -456,14 +399,11 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Battle Frenzy"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Battle Frenzy"
+      ]
+    }
   },
   {
     "name": "Bouncers",
@@ -491,11 +431,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -512,11 +447,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -591,11 +521,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -618,11 +543,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -672,14 +592,6 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Thunder Storm FX"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -704,7 +616,12 @@
         ],
         "url": "https://segaretro.org/images/9/95/CobraCommandMegaCDEUManual.PDF"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Thunder Storm FX"
+      ]
+    }
   },
   {
     "name": "Colors of Modern Rock, The",
@@ -727,11 +644,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Version 2.00S)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -748,11 +660,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -833,14 +740,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Dark Wizard - Yomigaerishi Yami no Madoushi"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -854,7 +753,12 @@
         ],
         "url": "https://archive.org/download/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP/Dark_Wizard_Yomigaeri_Shiyami_no_Madoushi_1993_Sega_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dark Wizard - Yomigaerishi Yami no Madoushi"
+      ]
+    }
   },
   {
     "name": "Death Bringer",
@@ -921,11 +825,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -948,14 +847,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1) (Made in E.U.)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2) (Made in E.U.)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -973,11 +864,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -993,11 +879,6 @@
     "rating": 0.75,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Ar)"
-      }
     ],
     "manuals": [
       {
@@ -1021,11 +902,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1044,11 +920,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1099,11 +970,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1193,11 +1059,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1215,14 +1076,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Ecco the Dolphin CD (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1230,7 +1083,12 @@
         ],
         "url": "https://segaretro.org/images/3/3c/Ecco2_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ecco the Dolphin CD (Disc 2)"
+      ]
+    }
   },
   {
     "name": "Ecco the Dolphin",
@@ -1238,14 +1096,6 @@
     "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Ecco the Dolphin CD (Disc 1)"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1266,7 +1116,12 @@
         ],
         "url": "https://segaretro.org/images/3/38/Ecco_the_Dolphin_MCD_BR_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ecco the Dolphin CD (Disc 1)"
+      ]
+    }
   },
   {
     "name": "Egawa Suguru no Super League CD",
@@ -1293,11 +1148,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1313,11 +1163,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1352,14 +1197,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "FIFA International Soccer"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1377,7 +1214,12 @@
     ],
     "tags": [
       "Multitap"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "FIFA International Soccer"
+      ]
+    }
   },
   {
     "name": "Fahrenheit",
@@ -1385,14 +1227,6 @@
     "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Fahrenheit (Disc 1)"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1410,14 +1244,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Garou Densetsu Special"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1440,7 +1266,12 @@
         ],
         "url": "https://segaretro.org/images/0/06/FatalFury_Special_MCD_EU_Manual_Multi.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Garou Densetsu Special"
+      ]
+    }
   },
   {
     "name": "Final Fight CD",
@@ -1448,11 +1279,6 @@
     "rating": 0.85,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1490,14 +1316,6 @@
       "Platform",
       "Platform / Shooter Scrolling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Flashback"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1505,7 +1323,12 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Flashback_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Flashback"
+      ]
+    }
   },
   {
     "name": "Flink",
@@ -1514,11 +1337,6 @@
     "genres": [
       "Adventure",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1536,14 +1354,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Heavenly Symphony - Formula One World Championship 1993"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1557,7 +1367,12 @@
         ],
         "url": "https://archive.org/download/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP/Heavenly_Symphony_Formula_One_World_Championship_1993_1994_Sega_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Heavenly Symphony - Formula One World Championship 1993"
+      ]
+    }
   },
   {
     "name": "Fresh Cleaner"
@@ -1601,14 +1416,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -1676,11 +1483,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1697,11 +1499,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1750,11 +1547,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja)"
-      }
     ],
     "manuals": [
       {
@@ -1831,11 +1623,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1853,14 +1640,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Keiou Yuugekitai"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1868,18 +1647,18 @@
         ],
         "url": "https://segaretro.org/images/5/50/Kfs_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Keiou Yuugekitai"
+      ]
+    }
   },
   {
     "name": "Kids on Site",
     "players": 1,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (RE-1)"
-      }
     ],
     "manuals": [
       {
@@ -1898,11 +1677,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1919,11 +1693,6 @@
       "Action",
       "Lightgun Shooter",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1944,14 +1713,6 @@
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Lethal Enforcers II - The Western"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1962,7 +1723,12 @@
     ],
     "tags": [
       "Lightgun"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Lethal Enforcers II - The Western"
+      ]
+    }
   },
   {
     "name": "Links - The Challenge of Golf",
@@ -1970,11 +1736,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2008,11 +1769,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2027,11 +1783,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE)"
-      }
     ],
     "manuals": [
       {
@@ -2054,11 +1805,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2128,11 +1874,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2149,11 +1890,6 @@
     "genres": [
       "Music and Dance"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2168,11 +1904,6 @@
     "players": 1,
     "genres": [
       "N/A"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2189,14 +1920,11 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Marko"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Marko"
+      ]
+    }
   },
   {
     "name": "Mary Shelley's Frankenstein",
@@ -2221,14 +1949,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Kamen Rider ZO"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2242,7 +1962,12 @@
         ],
         "url": "https://segaretro.org/images/3/3a/TheMaskedRiderZO_MD_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Kamen Rider ZO"
+      ]
+    }
   },
   {
     "name": "Mega Schwarzschild",
@@ -2277,14 +2002,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Mickey Mania - The Timeless Adventures of Mickey Mouse"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2292,7 +2009,12 @@
         ],
         "url": "https://segaretro.org/images/8/83/Mickeymania_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Mickey Mania - The Timeless Adventures of Mickey Mouse"
+      ]
+    }
   },
   {
     "name": "Microcosm",
@@ -2303,11 +2025,6 @@
       "Action",
       "Shooter",
       "Shooter / Plane"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2325,11 +2042,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2383,11 +2095,6 @@
       "Beat'em Up",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2403,14 +2110,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Mortal Kombat Kanzenban"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2431,7 +2130,12 @@
         ],
         "url": "https://segaretro.org/images/7/76/Mortal_Kombat_MCD_BR_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Mortal Kombat Kanzenban"
+      ]
+    }
   },
   {
     "name": "My Paint",
@@ -2455,11 +2159,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2514,14 +2213,6 @@
       "Sports",
       "Sports / Hockey"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "NHL '94"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2532,7 +2223,12 @@
     ],
     "tags": [
       "Multitap"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "NHL '94"
+      ]
+    }
   },
   {
     "name": "Night Striker",
@@ -2548,14 +2244,6 @@
     "genres": [
       "Adventure",
       "Thinking"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -2610,11 +2298,6 @@
     "players": 2,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Unl)"
-      }
     ]
   },
   {
@@ -2623,11 +2306,6 @@
     "rating": 0.4,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2645,14 +2323,6 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE)",
-        "clones": [
-          "Switch"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2666,7 +2336,12 @@
         ],
         "url": "https://segaretro.org/images/c/cf/SWITCH_MD_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Switch"
+      ]
+    }
   },
   {
     "name": "Pier Solar and the Great Architects - The Definitive Original Soundtrack",
@@ -2688,11 +2363,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2710,14 +2380,6 @@
       "Action",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE)",
-        "clones": [
-          "PopfulMail"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2725,7 +2387,12 @@
         ],
         "url": "https://segaretro.org/images/c/c7/Popfulmail_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "PopfulMail"
+      ]
+    }
   },
   {
     "name": "Power Factory",
@@ -2734,11 +2401,6 @@
     "genres": [
       "Action",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2756,14 +2418,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Power Monger"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2771,7 +2425,12 @@
         ],
         "url": "https://segaretro.org/images/d/d2/Powermonger_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Power Monger"
+      ]
+    }
   },
   {
     "name": "Prince of Persia",
@@ -2780,11 +2439,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2802,14 +2456,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -2859,12 +2505,7 @@
     ]
   },
   {
-    "name": "Psygnosis Christmas Sampler",
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "name": "Psygnosis Christmas Sampler"
   },
   {
     "name": "Puggsy",
@@ -2873,11 +2514,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2987,11 +2623,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3025,14 +2656,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Battle Fantasy"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3040,7 +2663,12 @@
         ],
         "url": "https://archive.org/download/SEGACDManuals/Revengers of Vengeance (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Battle Fantasy"
+      ]
+    }
   },
   {
     "name": "Rise of the Dragon",
@@ -3048,14 +2676,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Rise of the Dragon - A Blade Hunter Mystery"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3070,7 +2690,12 @@
         ],
         "url": "https://segaretro.org/images/5/56/RiseoftheDragon_MD_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Rise of the Dragon - A Blade Hunter Mystery"
+      ]
+    }
   },
   {
     "name": "Road Avenger",
@@ -3080,14 +2705,6 @@
       "Adventure",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Road Blaster FX"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3107,7 +2724,12 @@
         ],
         "url": "https://segaretro.org/images/a/a5/Road_Avenger_MCD_EU_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Road Blaster FX"
+      ]
+    }
   },
   {
     "name": "Road Rash",
@@ -3135,14 +2757,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dennin Aleste - Nobunaga and His Ninja Force"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3161,7 +2775,12 @@
         ],
         "url": "https://segaretro.org/images/b/b2/RoboAleste_mcd_EU_Manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dennin Aleste - Nobunaga and His Ninja Force"
+      ]
+    }
   },
   {
     "name": "Samurai Shodown",
@@ -3169,11 +2788,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3206,11 +2820,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3228,15 +2837,6 @@
     "players": 2,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Rev A)",
-        "clones": [
-          "Sega Classic Arcade Collection - Limited Edition",
-          "Sega Classics Arcade Collection"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3259,7 +2859,13 @@
         ],
         "url": "https://segaretro.org/images/e/e8/SegaClassicMegaCDEUManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sega Classic Arcade Collection - Limited Edition",
+        "Sega Classics Arcade Collection"
+      ]
+    }
   },
   {
     "name": "Seima Densetsu 3x3 Eyes",
@@ -3306,14 +2912,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Championship Soccer '94"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3321,7 +2919,12 @@
         ],
         "url": "https://segaretro.org/images/2/21/Championshipsoccer94_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Championship Soccer '94"
+      ]
+    }
   },
   {
     "name": "Sewer Shark",
@@ -3330,11 +2933,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3360,11 +2958,6 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3380,14 +2973,6 @@
     "genres": [
       "Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -3414,11 +2999,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3440,11 +3020,6 @@
     "rating": 0.7,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3489,20 +3064,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1) (Fingers)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2) (Juice)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 3) (Mad Dog)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 4) (Smash)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3525,11 +3086,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3557,11 +3113,6 @@
       "Board game",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3578,11 +3129,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3617,15 +3163,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "CD Sonic The Hedgehog",
-          "Sonic The Hedgehog CD"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3656,7 +3193,13 @@
         ],
         "url": "http://info.sonicretro.org/images/3/34/SonicCD_MCD_EU_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "CD Sonic The Hedgehog",
+        "Sonic The Hedgehog CD"
+      ]
+    }
   },
   {
     "name": "Sonic MegaMix",
@@ -3671,11 +3214,6 @@
     "rating": 0.85,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -3701,11 +3239,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3721,11 +3254,6 @@
     "genres": [
       "Action",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3743,11 +3271,6 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3764,11 +3287,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3814,14 +3332,6 @@
       "Adventure",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3839,11 +3349,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3900,11 +3405,6 @@
       "Platform",
       "Platform / Shooter Scrolling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3950,14 +3450,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "IIIrd World War, The"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3965,21 +3457,18 @@
         ],
         "url": "https://segaretro.org/images/f/fd/Thirdworldwar_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "IIIrd World War, The"
+      ]
+    }
   },
   {
     "name": "Thunderhawk",
     "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es) (RE)",
-        "clones": [
-          "AH3 - Thunderstrike"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3994,7 +3483,12 @@
         ],
         "url": "https://archive.org/download/Thunderhawk_1993_Victor_JP/Thunderhawk_1993_Victor_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "AH3 - Thunderstrike"
+      ]
+    }
   },
   {
     "name": "Time Gal",
@@ -4003,11 +3497,6 @@
     "genres": [
       "Action",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4048,11 +3537,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4112,11 +3596,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4133,14 +3612,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Vay - Ryuusei no Yoroi"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4154,7 +3625,12 @@
         ],
         "url": "https://segaretro.org/images/a/a2/SCDManualTomcatAlleyTecToy.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Vay - Ryuusei no Yoroi"
+      ]
+    }
   },
   {
     "name": "WWF - Rage in the Cage",
@@ -4165,14 +3641,6 @@
       "Sports",
       "Sports / Wrestling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "WWF Mania Tour - WWF - Rage in the Cage"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4180,7 +3648,12 @@
         ],
         "url": "https://segaretro.org/images/2/2b/Wwfrageinthecage_mcd_us_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "WWF Mania Tour - WWF - Rage in the Cage"
+      ]
+    }
   },
   {
     "name": "Wakusei Woodstock - Funky Horror Band",
@@ -4267,11 +3740,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4322,11 +3790,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4343,11 +3806,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4377,11 +3835,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4413,15 +3866,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Made in EU)",
-        "clones": [
-          "Mansion of Hidden Souls",
-          "Yumemi Yakata no Monogatari"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4435,7 +3879,13 @@
         ],
         "url": "https://segaretro.org/images/7/77/YumemiMysteryMansion_MD_jp_manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Mansion of Hidden Souls",
+        "Yumemi Yakata no Monogatari"
+      ]
+    }
   },
   {
     "name": "Yumimi Mix",

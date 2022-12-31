@@ -192,13 +192,6 @@
     ]
   },
   {
-    "name": "Billard Electrique",
-    "players": 4,
-    "genres": [
-      "Various"
-    ]
-  },
-  {
     "name": "Blobbers, The",
     "players": 1,
     "rating": 0.4,
@@ -236,15 +229,6 @@
       "Sports",
       "Sports / Bowling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Jeu de Quilles + Basketball",
-          "Tenpin Bowling + Basketball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -266,21 +250,19 @@
         ],
         "url": "https://archive.org/download/tenpin-bowling-basketball-eur-philips-videopac-1980/Tenpin Bowling - Basketball (EUR)(Philips Videopac)(1980).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jeu de Quilles + Basketball",
+        "Tenpin Bowling + Basketball"
+      ]
+    }
   },
   {
     "name": "Buraco Negro",
     "players": 1,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Brazil)",
-        "clones": [
-          "Neutron Star"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -305,7 +287,12 @@
         ],
         "url": "https://archive.org/download/neutron-star-eur-philips-videopac-1983/Neutron Star (EUR)(Philips Videopac+)(1983).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Neutron Star"
+      ]
+    }
   },
   {
     "name": "Casino Slot Machine",
@@ -800,14 +787,6 @@
     ]
   },
   {
-    "name": "Jeu de Quilles + Basketball",
-    "players": 1,
-    "genres": [
-      "Sports",
-      "Sports / Bowling"
-    ]
-  },
-  {
     "name": "Jumping Acrobats",
     "players": 1,
     "genres": [
@@ -1158,14 +1137,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Chat et Souris"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1174,7 +1145,12 @@
         ],
         "url": "https://archive.org/download/Mousing_Cat_The_1982_Philips_en-de/Mousing_Cat_The_1982_Philips_en-de.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Chat et Souris"
+      ]
+    }
   },
   {
     "name": "Munchkin",
@@ -1371,14 +1347,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Pickaxe Pete"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1402,7 +1370,12 @@
         ],
         "url": "https://archive.org/download/pickaxe-pete-eur-philips-videopac-1982/Pickaxe Pete (EUR)(Philips Videopac)(1982).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pickaxe Pete"
+      ]
+    }
   },
   {
     "name": "Pinball",
@@ -1431,17 +1404,6 @@
     "players": 2,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Billard Americain",
-          "Billard Electrique",
-          "Billiard Americain",
-          "Electronic Billiards"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1472,7 +1434,15 @@
         ],
         "url": "https://archive.org/download/electronic-billiards-eur-philips-videopac-1981/Electronic Billiards (EUR)(Philips Videopac)(1981).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Billard Americain",
+        "Billard Electrique",
+        "Billiard Americain",
+        "Electronic Billiards"
+      ]
+    }
   },
   {
     "name": "Popeye",
@@ -1547,13 +1517,6 @@
         ],
         "url": "https://archive.org/download/em-busca-dos-aneis-perdidos-br-philips-odyssey-1981/Em Busca dos Aneis Perdidos (BR)(Philips Odyssey)(1981).pdf"
       }
-    ]
-  },
-  {
-    "name": "Race + Spin-out + Cryptogram",
-    "players": 1,
-    "genres": [
-      "Various"
     ]
   },
   {
@@ -1683,14 +1646,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Race + Spin-out + Cryptogram"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1712,7 +1667,12 @@
         ],
         "url": "https://archive.org/download/race-spin-out-cryptogram-us-philips-videopac-1978/Race  Spin-out  Cryptogram (US)(Philips Videopac)(1978).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Race + Spin-out + Cryptogram"
+      ]
+    }
   },
   {
     "name": "Spider-Man",

@@ -12,11 +12,6 @@
   },
   {
     "name": "3D Atlas",
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -95,11 +90,6 @@
       "Adventure",
       "Adventure / Survival Horror"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -119,11 +109,6 @@
     "genres": [
       "Adventure",
       "Adventure / Survival Horror"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -155,11 +140,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -185,11 +165,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -232,11 +207,6 @@
     "genres": [
       "Board game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -261,11 +231,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -289,11 +254,6 @@
     "rating": 0.55,
     "genres": [
       "Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -327,11 +287,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -349,11 +304,6 @@
       "1st person",
       "Shooter",
       "Shooter / Vehicle"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -362,11 +312,6 @@
     "rating": 0.65,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -383,11 +328,6 @@
     "rating": 0.8,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -452,11 +392,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -481,11 +416,6 @@
     "rating": 0.75,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -522,11 +452,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Not for Resale)"
-      }
     ],
     "manuals": [
       {
@@ -607,11 +532,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -629,20 +549,6 @@
       "Adventure",
       "Adventure / Point and Click"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe) (Disc 1)",
-        "clones": [
-          "D no Shokutaku (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(USA, Europe) (Disc 2)",
-        "clones": [
-          "D no Shokutaku (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -650,7 +556,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/D (USA, Europe) (Disc 1).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "D no Shokutaku"
+      ]
+    }
   },
   {
     "name": "D's Diner - The Director's Cut",
@@ -668,32 +579,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)",
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 2)",
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 3)",
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 3)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 4)",
-        "clones": [
-          "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien (Disc 4)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -701,7 +586,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Daedalus Encounter, The (USA) (Disc 1).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Daedalus Encounter, The - Episode 1 - Nanpasen no Alien"
+      ]
+    }
   },
   {
     "name": "DeathKeep",
@@ -733,11 +623,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -746,11 +631,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -856,11 +736,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (RE1)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -915,26 +790,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)",
-        "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 2)",
-        "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 3)",
-        "clones": [
-          "ESPN Golf - Tom Kite no Kore ga Golf da! (Disc 3)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -942,7 +797,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Golf  Lower Your Score with Tom Kite (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "ESPN Golf - Tom Kite no Kore ga Golf da!"
+      ]
+    }
   },
   {
     "name": "Emit Vol. 1 - Toki no Maigo",
@@ -984,14 +844,6 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Virtual Horror - Norowareta Yakata"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -999,7 +851,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Escape from Monster Manor - A Terrifying Hunt for the Undead (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Virtual Horror - Norowareta Yakata"
+      ]
+    }
   },
   {
     "name": "F1GP",
@@ -1017,11 +874,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1060,11 +912,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1081,14 +928,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Fatty Bear's Fun Pack"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1096,7 +935,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Fatty Bear's Funpack (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Fatty Bear's Fun Pack"
+      ]
+    }
   },
   {
     "name": "Fire Ball!!",
@@ -1105,11 +949,6 @@
     "genres": [
       "Pinball",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1128,14 +967,6 @@
       "Adventure",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Flashback - The Quest for Identity"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1143,7 +974,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Flashback - The Quest for Identity (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Flashback - The Quest for Identity"
+      ]
+    }
   },
   {
     "name": "Flopon World",
@@ -1159,11 +995,6 @@
     "rating": 0.6,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1182,11 +1013,6 @@
       "Fight",
       "Sports",
       "Sports / Boxing"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1251,11 +1077,6 @@
       "Adventure",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1271,11 +1092,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1294,11 +1110,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1396,11 +1207,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1466,15 +1272,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Immercenary - Combat in a Digital World",
-          "Perfect World - Combat in a Digital World"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1482,7 +1279,13 @@
         ],
         "url": "https://archive.org/download/Immercenary_1995_Electronic_Arts_US/Immercenary_1995_Electronic_Arts_US.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Immercenary - Combat in a Digital World",
+        "Perfect World - Combat in a Digital World"
+      ]
+    }
   },
   {
     "name": "Immortal Desire",
@@ -1499,14 +1302,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Incredible Machine, The - Pararancho"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1514,7 +1309,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Incredible Machine, The (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Incredible Machine, The - Pararancho"
+      ]
+    }
   },
   {
     "name": "Insector War",
@@ -1538,14 +1338,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tetsujin"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1553,7 +1345,12 @@
         ],
         "url": "https://archive.org/download/Iron_Angel_of_the_Apocalypse_1994_Synergy_US/Iron_Angel_of_the_Apocalypse_1994_Synergy_US.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tetsujin"
+      ]
+    }
   },
   {
     "name": "Iron Angel of the Apocalypse - The Return",
@@ -1562,14 +1359,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Tetsujin Returns"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1577,7 +1366,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Iron Angel of the Apocalypse (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tetsujin Returns"
+      ]
+    }
   },
   {
     "name": "Ishida Yoshio Kudan no Igo Seiha",
@@ -1639,15 +1433,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "John Madden Football",
-          "NFL Madden Football"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1655,7 +1440,13 @@
         ],
         "url": "https://archive.org/download/John_Madden_Football_1994_EA_Sports_US/John_Madden_Football_1994_EA_Sports_US.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "John Madden Football",
+        "NFL Madden Football"
+      ]
+    }
   },
   {
     "name": "Johnny Bazookatone",
@@ -1682,11 +1473,6 @@
       "Action",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1731,14 +1517,6 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tozasareta Yakata"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1749,6 +1527,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Tozasareta Yakata"
+      ]
     }
   },
   {
@@ -1773,11 +1556,6 @@
     "rating": 0.65,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1814,11 +1592,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1860,11 +1633,6 @@
     "rating": 0.6,
     "genres": [
       "Educational"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1934,11 +1702,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1963,14 +1726,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Sword & Sorcery"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1978,7 +1733,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lucienne's Quest (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sword & Sorcery"
+      ]
+    }
   },
   {
     "name": "Mad Dog II - The Lost Gold",
@@ -2088,11 +1848,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2108,11 +1863,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2134,11 +1884,6 @@
     "players": 1,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2163,11 +1908,6 @@
     "genres": [
       "Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2226,14 +1966,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)"
-      },
-      {
-        "parent_flags": "(USA) (Disc 2)"
-      }
     ]
   },
   {
@@ -2272,14 +2004,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Nova-Storm"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2287,7 +2011,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Novastorm (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Nova-Storm"
+      ]
+    }
   },
   {
     "name": "Oceans Below",
@@ -2296,11 +2025,6 @@
     "genres": [
       "Adventure",
       "Educational"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -2317,11 +2041,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2408,14 +2127,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Outer World"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2426,6 +2137,11 @@
     ],
     "renames": {
       "Out of This World (USA) (3DO Maniac Pack) (RE)": "Out of this World (USA) (3DO Maniac Pack) (RE)"
+    },
+    "group": {
+      "merge": [
+        "Outer World"
+      ]
     }
   },
   {
@@ -2444,11 +2160,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2483,11 +2194,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2503,20 +2209,10 @@
     "rating": 0.9,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
     "name": "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD",
-    "parents": [
-      {
-        "parent_flags": "(USA) (ZAZ)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2571,11 +2267,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2624,14 +2315,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Guardian War"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2639,7 +2322,12 @@
         ],
         "url": "https://archive.org/download/GuardianWarManual/GuardianWarManual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Guardian War"
+      ]
+    }
   },
   {
     "name": "Powerslide",
@@ -2656,11 +2344,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -2713,11 +2396,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2754,11 +2432,6 @@
     "genres": [
       "Adventure",
       "Educational"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2767,11 +2440,6 @@
     "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2781,11 +2449,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -2841,11 +2504,6 @@
       "Pinball",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2863,11 +2521,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan, Europe) (En,Ja,Fr,De,Es,It,Pt,Ko,Ru,Ar)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2883,11 +2536,6 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -2897,11 +2545,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -2912,14 +2555,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Road & Track Presents - OverDrivin'"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2927,7 +2562,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Need for Speed, The (USA, Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Road & Track Presents - OverDrivin'"
+      ]
+    }
   },
   {
     "name": "Road Rash",
@@ -2938,11 +2578,6 @@
       "Driving",
       "Motorcycle Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2978,14 +2613,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "SHADOW Warriors"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2993,7 +2620,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Shadow - War of Succession (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "SHADOW Warriors"
+      ]
+    }
   },
   {
     "name": "Samurai Shodown",
@@ -3002,11 +2634,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3030,11 +2657,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3051,14 +2673,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Virtual Quest - Pharaoh no Fuuin"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3066,7 +2680,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Seal of the Pharaoh (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Virtual Quest - Pharaoh no Fuuin"
+      ]
+    }
   },
   {
     "name": "Secre Fuumin no Omochabako",
@@ -3094,11 +2713,6 @@
     "rating": 0.65,
     "genres": [
       "Educational"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3140,14 +2754,6 @@
     "genres": [
       "Board game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Shanghai - Banri no Choujou - The Great Wall"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3155,7 +2761,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Shanghai - Triple-Threat (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shanghai - Banri no Choujou - The Great Wall"
+      ]
+    }
   },
   {
     "name": "Shelley Duvall's It's a Bird's Life",
@@ -3172,11 +2783,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3189,12 +2795,7 @@
   {
     "name": "Shock Wave - Operation JumpGate",
     "players": 1,
-    "rating": 0.8,
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ]
+    "rating": 0.8
   },
   {
     "name": "Shockwave 2 - Beyond the Gate",
@@ -3202,20 +2803,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)",
-        "clones": [
-          "Shockwave 2 - Beyond the Gate (Disc 01)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)",
-        "clones": [
-          "Shockwave 2 - Beyond the Gate (Disc 02)"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3242,11 +2829,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3263,14 +2845,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Lost Dungeon"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3278,7 +2852,12 @@
         ],
         "url": "https://archive.org/download/Slayer_1994_SSi_US/Slayer_1994_SSi_US.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Lost Dungeon"
+      ]
+    }
   },
   {
     "name": "Slopestyle - An Interactive Learning Cube"
@@ -3308,14 +2887,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Great! Soccer Kid"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3323,7 +2894,12 @@
         ],
         "url": "https://archive.org/download/soccer-kid-3do/manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Great! Soccer Kid"
+      ]
+    }
   },
   {
     "name": "Sotsugyou - Graduation - Final",
@@ -3332,11 +2908,6 @@
     "genres": [
       "Adventure",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3352,11 +2923,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3375,14 +2941,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Blood Angels"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3390,7 +2948,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Space Hulk - Vengeance of the Blood Angels (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Blood Angels"
+      ]
+    }
   },
   {
     "name": "Space Pirates",
@@ -3435,14 +2998,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Star Control II - The Ur-Quan Masters"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3450,7 +3005,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Star Control II (USA, Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Star Control II - The Ur-Quan Masters"
+      ]
+    }
   },
   {
     "name": "Star Fighter",
@@ -3458,11 +3018,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3479,11 +3034,6 @@
     "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3502,11 +3052,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Germany)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3522,11 +3067,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3557,11 +3097,6 @@
     "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -3609,14 +3144,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Super Street Fighter II X - Grand Master Challenge"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3624,7 +3151,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Super Street Fighter II Turbo (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Super Street Fighter II X - Grand Master Challenge"
+      ]
+    }
   },
   {
     "name": "Super Wing Commander",
@@ -3632,11 +3164,6 @@
     "rating": 0.75,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3664,11 +3191,6 @@
       "Adventure",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 2) (Wind & Fang Tu)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3684,11 +3206,6 @@
     "rating": 0.6,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3706,11 +3223,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3762,11 +3274,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3812,11 +3319,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3828,12 +3330,7 @@
   },
   {
     "name": "Totsugeki Karakuri! Megadas!!",
-    "rating": 0.75,
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ]
+    "rating": 0.75
   },
   {
     "name": "Touhaiden Akagi",
@@ -3859,14 +3356,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)",
-        "clones": [
-          "Uchuu Seibutsu Flopon-kun"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Uchuu Seibutsu Flopon-kun"
+      ]
+    }
   },
   {
     "name": "True Golf Classics - Pebble Beach Golf Links",
@@ -3876,15 +3370,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Pebble Beach Golf Links",
-          "T&E VR Golf - Pebble Beach no Hatou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3892,7 +3377,13 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Pebble Beach Golf Links (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pebble Beach Golf Links",
+        "T&E VR Golf - Pebble Beach no Hatou"
+      ]
+    }
   },
   {
     "name": "Twinkle Knights",
@@ -3909,14 +3400,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Twisted"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3924,7 +3407,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Twisted - The Game Show (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Twisted"
+      ]
+    }
   },
   {
     "name": "Ultraman Powered",
@@ -3941,11 +3429,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3954,11 +3437,6 @@
     "rating": 0.4,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Improved Version)"
-      }
     ],
     "manuals": [
       {
@@ -3998,11 +3476,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4020,15 +3493,12 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Canada)",
-        "clones": [
-          "T&E VR Golf - Waialae no Kiseki",
-          "True Golf Classics - Waialae Country Club"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "T&E VR Golf - Waialae no Kiseki",
+        "True Golf Classics - Waialae Country Club"
+      ]
+    }
   },
   {
     "name": "Warner Music Group"
@@ -4040,11 +3510,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -4075,14 +3540,6 @@
     "genres": [
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "T&E VR Golf - Devil's Course"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4090,7 +3547,12 @@
         ],
         "url": "https://archive.org/download/wicked18-3do-usa/manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "T&E VR Golf - Devil's Course"
+      ]
+    }
   },
   {
     "name": "Wing Commander III - Heart of the Tiger",
@@ -4099,20 +3561,6 @@
     "genres": [
       "Simulation",
       "Simulation / SciFi"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(USA, Europe) (Disc 2)"
-      },
-      {
-        "parent_flags": "(USA, Europe) (Disc 3)"
-      },
-      {
-        "parent_flags": "(USA, Europe) (Disc 4)"
-      }
     ],
     "manuals": [
       {
@@ -4140,11 +3588,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4211,11 +3654,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4261,11 +3699,6 @@
     "rating": 0.4,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4274,11 +3707,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {

@@ -1,10 +1,7 @@
 {
   "system": "psx",
   "metadata": {
-    "path": "$HOME/retrokit/data/psx.json",
-    "parents": {
-      "autofill": true
-    }
+    "path": "$HOME/retrokit/data/psx.json"
   },
   "overlays": {
     "repos": [

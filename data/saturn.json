@@ -32,14 +32,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "3D Baseball - The Majors"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -50,6 +42,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "3D Baseball - The Majors"
+      ]
     }
   },
   {
@@ -58,11 +55,6 @@
     "rating": 0.65,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -130,14 +122,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "VR Golf '97"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -145,7 +129,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/VR Golf '97 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "VR Golf '97"
+      ]
+    }
   },
   {
     "name": "Actua Soccer - Club Edition",
@@ -154,15 +143,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Actua Soccer",
-          "VR Soccer"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -174,6 +154,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Actua Soccer",
+        "VR Soccer"
+      ]
     }
   },
   {
@@ -195,11 +181,6 @@
     "rating": 0.85,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ],
     "emulation": {
       "rating": 2
@@ -258,14 +239,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Albert Odyssey Gaiden - Legend of Eldean"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -282,6 +255,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Albert Odyssey Gaiden - Legend of Eldean"
+      ]
     }
   },
   {
@@ -300,11 +278,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It) (4S)"
-      }
     ],
     "manuals": [
       {
@@ -355,15 +328,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Alone in the Dark - One-Eyed Jack's Revenge",
-          "Alone in the Dark 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -374,6 +338,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Alone in the Dark - One-Eyed Jack's Revenge",
+        "Alone in the Dark 2"
+      ]
     }
   },
   {
@@ -400,11 +370,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -447,11 +412,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -684,11 +644,6 @@
     "genres": [
       "Compilation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -725,11 +680,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ],
     "manuals": [
       {
@@ -790,14 +740,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (1S)",
-        "clones": [
-          "Kisuishou Densetsu Astal"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -808,6 +750,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Kisuishou Densetsu Astal"
+      ]
     }
   },
   {
@@ -849,15 +796,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "DecAthlete",
-          "DecAthlete for SegaNet"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -874,6 +812,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "DecAthlete",
+        "DecAthlete for SegaNet"
+      ]
     }
   },
   {
@@ -882,14 +826,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,Es) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (En,De,Es) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -916,25 +852,6 @@
   },
   {
     "name": "Ayrton Senna Personal Talk - Message for the Future"
-  },
-  {
-    "name": "Azel - Panzer Dragoon RPG",
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Azel_Panzer_Dragoon_RPG_1998_J_color/Azel_Panzer_Dragoon_RPG_1998_J_color.cbr"
-      }
-    ],
-    "emulation": {
-      "rating": 3
-    }
   },
   {
     "name": "BackGuiner - Yomigaeru Yuusha-tachi - Hishou-hen - Uragiri no Senjou",
@@ -966,14 +883,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Baku Baku Animal - Sekai Shiiku Gakari Senshuken"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -990,6 +899,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Baku Baku Animal - Sekai Shiiku Gakari Senshuken"
+      ]
     }
   },
   {
@@ -1078,14 +992,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Moero!! Pro Yakyuu '95 - Double Header"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1093,7 +999,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Bases Loaded '96 - Double Header (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Moero!! Pro Yakyuu '95 - Double Header"
+      ]
+    }
   },
   {
     "name": "Batman Forever - The Arcade Game",
@@ -1102,11 +1013,6 @@
     "genres": [
       "Beat'em Up",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1148,14 +1054,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Toushinden S"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1166,6 +1064,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Toushinden S"
+      ]
     }
   },
   {
@@ -1175,14 +1078,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Toushinden URA"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -1200,6 +1095,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Toushinden URA"
+      ]
     }
   },
   {
@@ -1229,11 +1129,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1252,11 +1147,6 @@
     "rating": 0.35,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -1316,11 +1206,6 @@
     "genres": [
       "Casino",
       "Casino / Roulette"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -1356,11 +1241,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1387,11 +1267,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -1403,11 +1278,6 @@
     "genres": [
       "Action",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1428,14 +1298,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Machine Head"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1452,6 +1314,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Machine Head"
+      ]
     }
   },
   {
@@ -1460,11 +1327,6 @@
     "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -1494,11 +1356,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1517,11 +1374,6 @@
     "rating": 0.65,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1559,12 +1411,7 @@
     }
   },
   {
-    "name": "Bootleg Sampler",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Made in EU, Made in Japan)"
-      }
-    ]
+    "name": "Bootleg Sampler"
   },
   {
     "name": "Bottom of the 9th",
@@ -1589,11 +1436,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -1612,11 +1454,6 @@
     "rating": 0.55,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1638,14 +1475,6 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Break Point Tennis"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1656,6 +1485,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Break Point Tennis"
+      ]
     }
   },
   {
@@ -1673,11 +1507,6 @@
     "genres": [
       "Action",
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1708,11 +1537,6 @@
       "Adventure",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1742,14 +1566,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Bug! Jump Shite, Funzukechatte, Petchanko"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1766,6 +1582,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Bug! Jump Shite, Funzukechatte, Petchanko"
+      ]
     }
   },
   {
@@ -1785,11 +1606,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1822,11 +1638,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1848,11 +1659,6 @@
     "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -1891,14 +1697,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (Can Bani Himekuri Calendar)"
-      }
     ],
     "manuals": [
       {
@@ -1980,11 +1778,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2013,11 +1806,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -2115,11 +1903,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2170,14 +1953,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Clockwork Knight - Pepperouchau no Daibouken Joukan"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2194,6 +1969,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Clockwork Knight - Pepperouchau no Daibouken Joukan"
+      ]
     }
   },
   {
@@ -2203,14 +1983,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (2S)",
-        "clones": [
-          "Clockwork Knight - Pepperouchau no Daibouken Gekan"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -2228,6 +2000,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Clockwork Knight - Pepperouchau no Daibouken Gekan"
+      ]
     }
   },
   {
@@ -2239,11 +2016,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2270,20 +2042,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De) (Disc 1) (GDI)",
-        "clones": [
-          "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (En,Fr,De) (Disc 2) (NOD)",
-        "clones": [
-          "Command & Conquer - Teil 1 - Der Tiberiumkonflikt (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2300,6 +2058,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Command & Conquer - Teil 1 - Der Tiberiumkonflikt"
+      ]
     }
   },
   {
@@ -2384,11 +2147,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2406,20 +2164,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Disc 1)",
-        "clones": [
-          "Creature Shock (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(USA) (Disc 2)",
-        "clones": [
-          "Creature Shock (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2427,7 +2171,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Creature Shock (USA) (Disc 1).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Creature Shock"
+      ]
+    }
   },
   {
     "name": "Crime Patrol",
@@ -2443,11 +2192,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -2469,14 +2213,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Criticom - The Critical Combat"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2487,6 +2223,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Criticom - The Critical Combat"
+      ]
     }
   },
   {
@@ -2496,14 +2237,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Croc! Pau-Pau Island"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2511,7 +2244,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Croc - Legend of the Gobbos (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Croc! Pau-Pau Island"
+      ]
+    }
   },
   {
     "name": "Cross Romance - Koi to Mahjong to Hanafuda to",
@@ -2528,11 +2266,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Demo 1)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -2553,11 +2286,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2589,11 +2317,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2612,14 +2335,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (R)",
-        "clones": [
-          "Henry Explorers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2633,7 +2348,12 @@
     },
     "tags": [
       "Lightgun"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Henry Explorers"
+      ]
+    }
   },
   {
     "name": "Cube Battler - Story of Anna",
@@ -2667,20 +2387,10 @@
     "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M)"
-      }
     ]
   },
   {
-    "name": "Custom Web Browser",
-    "parents": [
-      {
-        "parent_flags": "(Version 2) (USA)"
-      }
-    ]
+    "name": "Custom Web Browser"
   },
   {
     "name": "Cyber Doll",
@@ -2701,14 +2411,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (RE)",
-        "clones": [
-          "Gran Chaser"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2719,6 +2421,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Gran Chaser"
+      ]
     }
   },
   {
@@ -2735,11 +2442,6 @@
       "Motorcycle Race",
       "Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -2748,11 +2450,6 @@
     "rating": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -2770,20 +2467,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc I)",
-        "clones": [
-          "D no Shokutaku (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc II)",
-        "clones": [
-          "D no Shokutaku (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2800,6 +2483,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "D no Shokutaku"
+      ]
     }
   },
   {
@@ -2808,11 +2496,6 @@
     "rating": 0.55,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "emulation": {
       "rating": 5
@@ -2824,11 +2507,6 @@
     "rating": 0.65,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M)"
-      }
     ]
   },
   {
@@ -2902,11 +2580,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2931,11 +2604,6 @@
     "rating": 0.55,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2973,14 +2641,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Suiko Enbu"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2991,6 +2651,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Suiko Enbu"
+      ]
     }
   },
   {
@@ -2999,11 +2664,6 @@
     "rating": 0.95,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3047,11 +2707,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3088,16 +2743,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Daytona USA - Championship Circuit Edition",
-          "Daytona USA - Circuit Edition",
-          "Daytona USA C.C.E. Net Link Edition"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -3148,6 +2793,13 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Daytona USA - Championship Circuit Edition",
+        "Daytona USA - Circuit Edition",
+        "Daytona USA C.C.E. Net Link Edition"
+      ]
     }
   },
   {
@@ -3189,11 +2841,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -3254,14 +2901,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3292,14 +2931,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Defcon 5 - Peace Has a Price..."
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3310,6 +2941,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Defcon 5 - Peace Has a Price..."
+      ]
     }
   },
   {
@@ -3328,11 +2964,6 @@
     "rating": 0.45,
     "genres": [
       "Casual Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rerelease)"
-      }
     ]
   },
   {
@@ -3392,11 +3023,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 2) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -3408,11 +3034,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -3479,11 +3100,6 @@
     "players": 1,
     "genres": [
       "Demo"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Demo 1)"
-      }
     ]
   },
   {
@@ -3526,14 +3142,6 @@
       "Action",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dynamite Deka"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3552,6 +3160,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Dynamite Deka"
+      ]
     }
   },
   {
@@ -3562,11 +3175,6 @@
       "Beat'em Up",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
-      }
     ],
     "manuals": [
       {
@@ -3606,11 +3214,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M, 12M)"
-      }
-    ],
     "emulation": {
       "rating": 4
     }
@@ -3635,16 +3238,6 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (4S)",
-        "clones": [
-          "Digital Pinball - Last Gladiators",
-          "Digital Pinball - Last Gladiators Ver.9.7",
-          "Last Gladiators - Digital Pinball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3661,6 +3254,13 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Digital Pinball - Last Gladiators",
+        "Digital Pinball - Last Gladiators Ver.9.7",
+        "Last Gladiators - Digital Pinball"
+      ]
     }
   },
   {
@@ -3730,11 +3330,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -3745,11 +3340,6 @@
     "rating": 0.65,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3760,11 +3350,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (R)"
-      }
     ],
     "manuals": [
       {
@@ -3822,11 +3407,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3869,14 +3449,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Dragon Ball Z - La Grande Legende des Boules de Cristal"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3899,6 +3471,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Dragon Ball Z - La Grande Legende des Boules de Cristal"
+      ]
     }
   },
   {
@@ -3927,11 +3504,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3957,11 +3529,6 @@
     "genres": [
       "Strategy",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -4000,11 +3567,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4033,11 +3595,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4058,11 +3615,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4117,14 +3669,11 @@
   },
   {
     "name": "EGWord",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)",
-        "clones": [
-          "EGWord Ver 2.00"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "EGWord Ver 2.00"
+      ]
+    }
   },
   {
     "name": "Earthworm Jim 2",
@@ -4133,11 +3682,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4267,20 +3811,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 0) (Opening Disc)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 1) (Game Disc)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2) (Game Disc)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 3) (Game Disc)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4311,11 +3841,6 @@
     "rating": 0.65,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -4354,14 +3879,6 @@
     "rating": 0.65,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 3) (Lost One Disc) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 4) (Extra Disc) (1M)"
-      }
     ]
   },
   {
@@ -4372,15 +3889,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Powerslave",
-          "Seireki 1999 - Pharaoh no Fukkatsu"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4398,6 +3906,12 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Powerslave",
+        "Seireki 1999 - Pharaoh no Fukkatsu"
+      ]
     }
   },
   {
@@ -4411,15 +3925,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "F-1 Live Information",
-          "F1 Challenge"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4430,6 +3935,12 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "F-1 Live Information",
+        "F1 Challenge"
+      ]
     }
   },
   {
@@ -4450,16 +3961,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA - Die WM-Qualifikation 98",
-          "FIFA - En Route pour la Coupe du Monde 98",
-          "FIFA - Rumbo al Mundial 98"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4483,6 +3984,13 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "FIFA - Die WM-Qualifikation 98",
+        "FIFA - En Route pour la Coupe du Monde 98",
+        "FIFA - Rumbo al Mundial 98"
+      ]
     }
   },
   {
@@ -4492,14 +4000,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)",
-        "clones": [
-          "FIFA Soccer 97"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4511,6 +4011,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "FIFA Soccer 97"
+      ]
     }
   },
   {
@@ -4520,11 +4025,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)"
-      }
     ],
     "manuals": [
       {
@@ -4563,11 +4063,6 @@
     "rating": 0.75,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -4615,11 +4110,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4658,11 +4148,6 @@
       "Fight",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4688,11 +4173,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4767,11 +4247,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -4783,11 +4258,6 @@
     "genres": [
       "Sports",
       "Sports / Wrestling"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -4808,15 +4278,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Thunderhawk II",
-          "Thunderstrike 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4833,7 +4294,13 @@
         ],
         "url": "https://archive.org/download/Firestorm_Thunderhawk_2_1995_Core_EU/Firestorm_Thunderhawk_2_1995_Core_EU.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Thunderhawk II",
+        "Thunderstrike 2"
+      ]
+    }
   },
   {
     "name": "Fishing Koushien",
@@ -5010,11 +4477,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5083,11 +4545,6 @@
     "rating": 0.65,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M)"
-      }
     ]
   },
   {
@@ -5106,14 +4563,11 @@
       "Sports",
       "Sports / Boxing"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Funky Head Boxers Plus"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Funky Head Boxers Plus"
+      ]
+    }
   },
   {
     "name": "Fushigi no Kuni no Angelique",
@@ -5194,14 +4648,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Layer Section"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5218,6 +4664,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Layer Section"
+      ]
     }
   },
   {
@@ -5226,14 +4677,6 @@
     "rating": 0.75,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Galaxy Fight - Universal Warriors"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5245,6 +4688,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Galaxy Fight - Universal Warriors"
+      ]
     }
   },
   {
@@ -5315,11 +4763,6 @@
     "rating": 0.65,
     "genres": [
       "Board game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (4M)"
-      }
     ]
   },
   {
@@ -5344,11 +4787,6 @@
     "rating": 0.7,
     "genres": [
       "Board game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5418,11 +4856,6 @@
     "rating": 0.7,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5455,11 +4888,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5504,11 +4932,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5529,11 +4952,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5551,14 +4969,11 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Ginga Eiyuu Densetsu Plus"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Ginga Eiyuu Densetsu Plus"
+      ]
+    }
   },
   {
     "name": "Ginga Ojousama Densetsu Yuna - Mika Akitaka Illust Works",
@@ -5630,11 +5045,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 5
     }
@@ -5661,11 +5071,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -5676,11 +5081,6 @@
     "rating": 0.55,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5771,14 +5171,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (1M, 2M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5797,11 +5189,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 2
@@ -5824,11 +5211,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
-    ],
     "emulation": {
       "rating": 4
     }
@@ -5846,14 +5228,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Grid Runner"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5861,7 +5235,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Grid Runner (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Grid Runner"
+      ]
+    }
   },
   {
     "name": "Guardian Force",
@@ -5882,11 +5261,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -5919,14 +5293,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Gungriffon"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5934,7 +5300,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Gungriffon (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Gungriffon"
+      ]
+    }
   },
   {
     "name": "GunBlaze-S",
@@ -5977,11 +5348,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -6027,15 +5393,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Hang On GP '95",
-          "Hang-On GP"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6046,6 +5403,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Hang On GP '95",
+        "Hang-On GP"
+      ]
     }
   },
   {
@@ -6055,11 +5418,6 @@
     "genres": [
       "Action",
       "Action / Labyrinth"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -6069,15 +5427,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Deka 4-ku - Tough the Truck",
-          "TNN Motor Sports HardCore 4X4"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6089,6 +5438,12 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Deka 4-ku - Tough the Truck",
+        "TNN Motor Sports HardCore 4X4"
+      ]
     }
   },
   {
@@ -6159,16 +5514,13 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Popoitto Hebereke"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Popoitto Hebereke"
+      ]
     }
   },
   {
@@ -6181,14 +5533,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Gotha II - Tenkuu no Kishi"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6196,7 +5540,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Heir of Zendor - The Legend and The Land (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Gotha II - Tenkuu no Kishi"
+      ]
+    }
   },
   {
     "name": "Heisei Tensai Bakabon - Susume! Bakabons",
@@ -6241,14 +5590,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hexen - Beyond Heretic"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6256,7 +5597,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Hexen - Beyond Heretic (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hexen - Beyond Heretic"
+      ]
+    }
   },
   {
     "name": "Hi-Octane",
@@ -6265,14 +5611,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Hi-Octane - The Track Fights Back!"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6284,6 +5622,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Hi-Octane - The Track Fights Back!"
+      ]
     }
   },
   {
@@ -6293,14 +5636,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Touge King the Spirits"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6312,6 +5647,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Touge King the Spirits"
+      ]
     }
   },
   {
@@ -6330,14 +5670,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Wangan Dead Heat"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6354,6 +5686,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Wangan Dead Heat"
+      ]
     }
   },
   {
@@ -6370,11 +5707,6 @@
     "rating": 0.6,
     "genres": [
       "Casino"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -6458,11 +5790,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6481,11 +5808,6 @@
     "rating": 0.55,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -6531,11 +5853,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -6702,11 +6019,6 @@
       "Asiatic board game",
       "Mahjong"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 5
     }
@@ -6718,11 +6030,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -6744,14 +6051,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Kaitei Daisensou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6762,6 +6061,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Kaitei Daisensou"
+      ]
     }
   },
   {
@@ -6770,11 +6074,6 @@
     "rating": 0.15,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -6796,14 +6095,6 @@
       "Action",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv)",
-        "clones": [
-          "Independence Day"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6814,6 +6105,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Independence Day"
+      ]
     }
   },
   {
@@ -6823,15 +6119,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Sega International Victory Goal",
-          "Worldwide Soccer - Sega International Victory Goal Edition"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6843,6 +6130,12 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Sega International Victory Goal",
+        "Worldwide Soccer - Sega International Victory Goal Edition"
+      ]
     }
   },
   {
@@ -6869,11 +6162,6 @@
       "Action",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6893,14 +6181,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "World Advanced Daisenryaku - Koutetsu no Senpuu"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6917,6 +6197,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "World Advanced Daisenryaku - Koutetsu no Senpuu"
+      ]
     }
   },
   {
@@ -6972,11 +6257,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6995,11 +6275,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -7013,11 +6288,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -7030,14 +6300,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M, 3M)",
-        "clones": [
-          "J.League Victory Goal '97"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7048,6 +6310,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "J.League Victory Goal '97"
+      ]
     }
   },
   {
@@ -7084,14 +6351,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De)",
-        "clones": [
-          "Oracle no Houseki - Jewels of the Oracle"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Oracle no Houseki - Jewels of the Oracle"
+      ]
+    }
   },
   {
     "name": "Jikkyou Oshaberi Parodius - Forever with Me",
@@ -7208,14 +6472,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Johnny Bazooka"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7223,7 +6479,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Johnny Bazookatone (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Johnny Bazooka"
+      ]
+    }
   },
   {
     "name": "Jonah Lomu Rugby",
@@ -7232,11 +6493,6 @@
     "genres": [
       "Sports",
       "Sports / Rugby"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -7338,11 +6594,6 @@
     "genres": [
       "Asiatic board game",
       "Shougi"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -7352,11 +6603,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
     ]
   },
   {
@@ -7367,14 +6613,6 @@
       "Action",
       "Adventure",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Keiou Yuugekitai - Katsugeki-hen"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -7394,6 +6632,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Keiou Yuugekitai - Katsugeki-hen"
+      ]
     }
   },
   {
@@ -7422,11 +6665,6 @@
     "rating": 0.5,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 4
@@ -7563,11 +6801,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -7579,11 +6812,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -7624,11 +6852,6 @@
     "genres": [
       "Adventure",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -7637,11 +6860,6 @@
     "rating": 0.55,
     "genres": [
       "Board game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -7732,11 +6950,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -7760,11 +6973,6 @@
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ],
     "manuals": [
       {
@@ -7835,11 +7043,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7858,11 +7061,6 @@
     "rating": 0.8,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -7904,11 +7102,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7928,11 +7121,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -7965,11 +7153,6 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -8059,14 +7242,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Blood Factory"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8077,6 +7252,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Blood Factory"
+      ]
     }
   },
   {
@@ -8111,14 +7291,6 @@
       "Platform",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Norse by Norsewest - The Return of the Lost Vikings"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8129,6 +7301,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Norse by Norsewest - The Return of the Lost Vikings"
+      ]
     }
   },
   {
@@ -8138,11 +7315,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -8189,14 +7361,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Lunar - Silver Star Story Complete"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8207,6 +7371,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Lunar - Silver Star Story Complete"
+      ]
     }
   },
   {
@@ -8267,11 +7436,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Demo) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8292,11 +7456,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8313,11 +7472,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -8349,11 +7503,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,Sv)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8373,11 +7522,6 @@
     "genres": [
       "Adventure",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -8404,11 +7548,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 5
     }
@@ -8427,11 +7566,6 @@
     "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ],
     "manuals": [
       {
@@ -8541,11 +7675,6 @@
       "Asiatic board game",
       "Mahjong"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -8556,11 +7685,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ]
   },
   {
@@ -8602,11 +7726,6 @@
     "rating": 0.65,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -8694,17 +7813,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (1S)",
-        "clones": [
-          "Manoir des Ames Perdues, Le",
-          "Mansion de las Almas Ocultas, La",
-          "Mystery Mansion - Das Haus der verlorenen Seelen",
-          "Shinsetsu Yumemi Yakata - Tobira no Oku ni Dareka ga..."
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8721,6 +7829,14 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Manoir des Ames Perdues, Le",
+        "Mansion de las Almas Ocultas, La",
+        "Mystery Mansion - Das Haus der verlorenen Seelen",
+        "Shinsetsu Yumemi Yakata - Tobira no Oku ni Dareka ga..."
+      ]
     }
   },
   {
@@ -8730,11 +7846,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -8799,11 +7910,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8841,14 +7947,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Mass Destruction - Otousan ni mo Dekiru Soft"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8859,6 +7957,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Mass Destruction - Otousan ni mo Dekiru Soft"
+      ]
     }
   },
   {
@@ -8904,11 +8007,6 @@
       "Action",
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8928,14 +8026,6 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "MechWarrior 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8946,6 +8036,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "MechWarrior 2"
+      ]
     }
   },
   {
@@ -8972,14 +8067,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Rockman 8 - Metal Heroes"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8990,6 +8077,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Rockman 8 - Metal Heroes"
+      ]
     }
   },
   {
@@ -9000,16 +8092,13 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rockman X3"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Rockman X3"
+      ]
     }
   },
   {
@@ -9021,14 +8110,6 @@
       "Platform",
       "Platform / Run Jump"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Rockman X4"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9039,6 +8120,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Rockman X4"
+      ]
     }
   },
   {
@@ -9062,11 +8148,6 @@
     "players": 1,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -9082,11 +8163,6 @@
     "rating": 0.65,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -9114,11 +8190,6 @@
       "Shooter",
       "Shooter / Run and Gun"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9145,11 +8216,6 @@
     "rating": 0.5,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -9183,14 +8249,6 @@
       "Sports",
       "Sports / Pool"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (R)",
-        "clones": [
-          "Side Pocket 2 - Densetsu no Hustler"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9204,7 +8262,12 @@
         ],
         "url": "https://archive.org/download/Side_Pocket_2_Legend_Of_Hustler_1995_J_color/Side_Pocket_2_Legend_Of_Hustler_1995_J_color.cbr"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Side Pocket 2 - Densetsu no Hustler"
+      ]
+    }
   },
   {
     "name": "Minton Keibu no Sousa File - Doukeshi Satsujin Jiken",
@@ -9237,11 +8300,6 @@
     "rating": 0.8,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -9258,11 +8316,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -9316,11 +8369,6 @@
     "genres": [
       "Board game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -9332,11 +8380,6 @@
     "genres": [
       "Puzzle-Game",
       "Puzzle-Game / Fall"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -9355,14 +8398,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Mortal Kombat II Kanzenban"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9373,6 +8408,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Mortal Kombat II Kanzenban"
+      ]
     }
   },
   {
@@ -9383,11 +8423,6 @@
       "Action",
       "Compilation",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9437,14 +8472,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)"
-      }
     ],
     "manuals": [
       {
@@ -9511,11 +8538,6 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9548,15 +8570,6 @@
       "Adventure",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Blazing Heroes",
-          "Riglordsaga"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9574,6 +8587,12 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Blazing Heroes",
+        "Riglordsaga"
+      ]
     }
   },
   {
@@ -9583,11 +8602,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9606,11 +8620,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9627,11 +8636,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9652,11 +8656,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9684,11 +8683,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9712,11 +8706,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9733,11 +8722,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9758,11 +8742,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9779,14 +8758,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "NFL Quarterback Club '96"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9800,7 +8771,12 @@
         ],
         "url": "https://archive.org/download/NFL_Quarterback_Club_96_1996_J/NFL_Quarterback_Club_96_1996_J.cbr"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "NFL Quarterback Club '96"
+      ]
+    }
   },
   {
     "name": "NFL Quarterback Club 97",
@@ -9808,14 +8784,6 @@
     "rating": 0.6,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "NFL Quarterback Club '97"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -9830,7 +8798,12 @@
         ],
         "url": "https://archive.org/download/NFL_Quarterback_Club_97_1997_Acclaim_JP/NFL_Quarterback_Club_97_1997_Acclaim_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "NFL Quarterback Club '97"
+      ]
+    }
   },
   {
     "name": "NHL 97",
@@ -9839,11 +8812,6 @@
     "genres": [
       "Sports",
       "Sports / Hockey"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9860,11 +8828,6 @@
     "rating": 0.65,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9883,11 +8846,6 @@
       "Sports",
       "Sports / Hockey"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9904,11 +8862,6 @@
     "genres": [
       "Sports",
       "Sports / Hockey"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9928,11 +8881,6 @@
     "rating": 0.8,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -9974,14 +8922,6 @@
     "rating": 0.4,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (1M)"
-      }
     ]
   },
   {
@@ -10031,11 +8971,6 @@
       "Action",
       "Action / Adventure",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10091,25 +9026,28 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Vampire Hunter - Darkstalker's Revenge",
-          "Vampire Hunter - Darkstalkers' Revenge"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Night Warriors - Darkstalkers' Revenge (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/Vampire_Hunter_Darkstalkers_Revenge_1996_J_color/Vampire_Hunter_Darkstalkers_Revenge_1996_J_color.cbr"
       }
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Vampire Hunter - Darkstalker's Revenge",
+        "Vampire Hunter - Darkstalkers' Revenge"
+      ]
     }
   },
   {
@@ -10218,11 +9156,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -10342,11 +9275,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10388,11 +9316,6 @@
       "Adult",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10418,11 +9341,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10477,14 +9395,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Teitoku no Ketsudan II"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10492,7 +9402,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/P.T.O. II - Pacific Theater of Operations (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Teitoku no Ketsudan II"
+      ]
+    }
   },
   {
     "name": "PD Ultraman Link",
@@ -10508,11 +9423,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -10535,14 +9445,11 @@
   },
   {
     "name": "Pad Nifty",
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Pad Nifty 1.1 & Habitat II"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Pad Nifty 1.1 & Habitat II"
+      ]
+    }
   },
   {
     "name": "Pandemonium!",
@@ -10551,14 +9458,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Magical Hoppers"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -10576,6 +9475,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Magical Hoppers"
+      ]
     }
   },
   {
@@ -10590,11 +9494,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M)"
-      }
     ],
     "manuals": [
       {
@@ -10612,11 +9511,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10654,11 +9548,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10695,32 +9584,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)",
-        "clones": [
-          "Azel - Panzer Dragoon RPG (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)",
-        "clones": [
-          "Azel - Panzer Dragoon RPG (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 3)",
-        "clones": [
-          "Azel - Panzer Dragoon RPG (Disc 3)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 4)",
-        "clones": [
-          "Azel - Panzer Dragoon RPG (Disc 4)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10732,7 +9595,7 @@
         "languages": [
           "ja"
         ],
-        "url": "https://segaretro.org/images/b/b1/PanzerDragoonSaga_SS_jp_manual.pdf"
+        "url": "https://archive.org/download/Azel_Panzer_Dragoon_RPG_1998_J_color/Azel_Panzer_Dragoon_RPG_1998_J_color.cbr"
       },
       {
         "languages": [
@@ -10748,6 +9611,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Azel - Panzer Dragoon RPG"
+      ]
     }
   },
   {
@@ -10774,16 +9642,13 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Gokujou Parodius Da! Deluxe Pack"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Gokujou Parodius Da! Deluxe Pack"
+      ]
     }
   },
   {
@@ -10801,14 +9666,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (3S)",
-        "clones": [
-          "Pebble Beach Golf Links - Stadler ni Chousen"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10825,6 +9682,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Pebble Beach Golf Links - Stadler ni Chousen"
+      ]
     }
   },
   {
@@ -10834,20 +9696,10 @@
     "genres": [
       "Adventure",
       "Adventure / Point and Click"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 6) (4M)"
-      }
     ]
   },
   {
-    "name": "Photo CD Operating System",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
-      }
-    ]
+    "name": "Photo CD Operating System"
   },
   {
     "name": "Photo Genic",
@@ -10890,14 +9742,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Game Disc) (2M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (Special Disc) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -10907,11 +9751,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -10939,11 +9778,6 @@
     "rating": 0.6,
     "genres": [
       "Pinball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11032,11 +9866,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Princess Kurara) Daisakusen (Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11053,11 +9882,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)"
-      }
     ],
     "manuals": [
       {
@@ -11091,11 +9915,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11114,11 +9933,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11133,11 +9947,6 @@
     "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -11156,11 +9965,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 4
@@ -11238,11 +10042,6 @@
       "Asiatic board game",
       "Mahjong"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11269,11 +10068,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
     ],
     "manuals": [
       {
@@ -11305,11 +10099,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
     ],
     "manuals": [
       {
@@ -11344,11 +10133,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11368,14 +10152,6 @@
     "genres": [
       "Pinball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Pro-Pinball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11383,7 +10159,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Pro Pinball (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pro-Pinball"
+      ]
+    }
   },
   {
     "name": "Psychotron, The",
@@ -11408,14 +10189,6 @@
       "Compilation",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M, 3M)",
-        "clones": [
-          "Puyo Puyo Sun for SegaNet"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11426,6 +10199,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Puyo Puyo Sun for SegaNet"
+      ]
     }
   },
   {
@@ -11434,11 +10212,6 @@
     "genres": [
       "Puzzle-Game",
       "Puzzle-Game / Fall"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -11458,11 +10231,6 @@
     "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M2)"
-      }
     ]
   },
   {
@@ -11472,14 +10240,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)",
-        "clones": [
-          "Puzzle Bobble 3 for SegaNet"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Puzzle Bobble 3 for SegaNet"
+      ]
+    }
   },
   {
     "name": "Pyon Pyon Kyaruru no Mahjong Biyori"
@@ -11492,11 +10257,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11554,11 +10314,6 @@
     "genres": [
       "Quiz"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -11609,11 +10364,6 @@
       "Fight",
       "Fight / 2D"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -11656,11 +10406,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11697,11 +10442,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De) (1S)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11722,11 +10462,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -11739,11 +10474,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 4
     }
@@ -11753,11 +10483,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -11766,20 +10491,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (2M, 3M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 3) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 4) (2M)"
-      }
     ],
     "manuals": [
       {
@@ -11804,14 +10515,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Bio Hazard"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -11846,6 +10549,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Bio Hazard"
+      ]
     }
   },
   {
@@ -11853,11 +10561,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -11876,11 +10579,6 @@
       "Action",
       "Lightgun Shooter",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11906,11 +10604,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -11921,11 +10614,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11947,32 +10635,6 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)",
-        "clones": [
-          "Riven - A Sequencia de Myst (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)",
-        "clones": [
-          "Riven - A Sequencia de Myst (Disc 2)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 3)",
-        "clones": [
-          "Riven - A Sequencia de Myst (Disc 3)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 4)",
-        "clones": [
-          "Riven - A Sequencia de Myst (Disc 4)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11983,6 +10645,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Riven - A Sequencia de Myst"
+      ]
     }
   },
   {
@@ -12001,14 +10668,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De)",
-        "clones": [
-          "Nissan Presents - Over Drivin' GT-R"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12019,6 +10678,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Nissan Presents - Over Drivin' GT-R"
+      ]
     }
   },
   {
@@ -12028,11 +10692,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -12053,11 +10712,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12075,15 +10729,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Deadalus",
-          "Robotica"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12094,6 +10739,12 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Deadalus",
+        "Robotica"
+      ]
     }
   },
   {
@@ -12105,16 +10756,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Sangokushi IV",
-          "Sangokushi IV with Power-Up Kit",
-          "Sanguozhi IV"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12125,6 +10766,13 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Sangokushi IV",
+        "Sangokushi IV with Power-Up Kit",
+        "Sanguozhi IV"
+      ]
     }
   },
   {
@@ -12144,11 +10792,6 @@
     "genres": [
       "Simulation",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -12163,11 +10806,6 @@
     "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -12240,14 +10878,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (6M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (6M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12267,11 +10897,6 @@
     "genres": [
       "Puzzle-Game",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -12282,11 +10907,6 @@
       "Adventure",
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -12321,17 +10941,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Shokai Tokutenban)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (Shokai Tokutenban)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 3) (Shokai Tokutenban)"
-      }
     ],
     "manuals": [
       {
@@ -12383,11 +10992,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (En,Ja,Es,Pt)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12438,14 +11042,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Sanguozhi Yingjiezhuan"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12453,7 +11049,12 @@
         ],
         "url": "https://segaretro.org/images/a/a0/Sangokushi_Koumeiden_1997_J_color.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sanguozhi Yingjiezhuan"
+      ]
+    }
   },
   {
     "name": "Sangokushi Returns",
@@ -12469,16 +11070,13 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Sanguozhi V"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Sanguozhi V"
+      ]
     }
   },
   {
@@ -12524,11 +11122,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12562,11 +11155,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12589,20 +11177,10 @@
     "name": "Saturn Music School 2"
   },
   {
-    "name": "Saturn Super Henshuubu Hen - Taikenban Saturn Soft Taizen",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ]
+    "name": "Saturn Super Henshuubu Hen - Taikenban Saturn Soft Taizen"
   },
   {
-    "name": "Saturn Super Vol. 1",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (6M)"
-      }
-    ]
+    "name": "Saturn Super Vol. 1"
   },
   {
     "name": "Saturn Super Vol. 10 Furoku CD-ROM"
@@ -12611,12 +11189,7 @@
     "name": "Saturn Super Vol. 11 Furoku CD-ROM"
   },
   {
-    "name": "Saturn Super Vol. 2",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ]
+    "name": "Saturn Super Vol. 2"
   },
   {
     "name": "Saturn Super Vol. 3"
@@ -12628,12 +11201,7 @@
     "name": "Saturn Super Vol. 5"
   },
   {
-    "name": "Saturn Super Vol. 6",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ]
+    "name": "Saturn Super Vol. 6"
   },
   {
     "name": "Saturn Super Vol. 7"
@@ -12662,11 +11230,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -12715,14 +11278,11 @@
       "Simulation",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "SeaBass Fishing"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "SeaBass Fishing"
+      ]
+    }
   },
   {
     "name": "SeaBass Fishing 2",
@@ -12818,11 +11378,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12885,11 +11440,6 @@
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12911,11 +11461,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12935,12 +11480,7 @@
     "name": "Sega Flash Vol. 2"
   },
   {
-    "name": "Sega Flash Vol. 3",
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "name": "Sega Flash Vol. 3"
   },
   {
     "name": "Sega Flash Vol. 4"
@@ -12961,11 +11501,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Made in EU)"
-      }
     ],
     "manuals": [
       {
@@ -13004,14 +11539,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Sega Rally Championship Plus"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13022,6 +11549,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Sega Rally Championship Plus"
+      ]
     }
   },
   {
@@ -13033,12 +11565,7 @@
     ]
   },
   {
-    "name": "Sega Saturn Choice Cuts",
-    "parents": [
-      {
-        "parent_flags": "(USA) (R2)"
-      }
-    ]
+    "name": "Sega Saturn Choice Cuts"
   },
   {
     "name": "Sega Saturn de Hakken!! Tamagotchi Park",
@@ -13056,11 +11583,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -13088,15 +11610,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)",
-        "clones": [
-          "Sega Worldwide Soccer '98",
-          "Worldwide Soccer '98"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13113,6 +11626,12 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Sega Worldwide Soccer '98",
+        "Worldwide Soccer '98"
+      ]
     }
   },
   {
@@ -13122,15 +11641,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Sega Worldwide Soccer '97",
-          "Victory Goal Worldwide Edition"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -13148,6 +11658,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Sega Worldwide Soccer '97",
+        "Victory Goal Worldwide Edition"
+      ]
     }
   },
   {
@@ -13175,12 +11691,7 @@
     "name": "SegaSaturn Internet Vol. 1"
   },
   {
-    "name": "SegaSaturn Photo CD Operator",
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ]
+    "name": "SegaSaturn Photo CD Operator"
   },
   {
     "name": "Segata Sanshirou - Shinken Yuugi",
@@ -13203,11 +11714,6 @@
     "players": 2,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -13252,11 +11758,6 @@
       "Role playing games",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Game Disc) (Rev A) (10M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -13275,14 +11776,6 @@
     "rating": 0.75,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Game Disc) (1M)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (Second Window) (1M, 2M)"
-      }
     ],
     "manuals": [
       {
@@ -13346,11 +11839,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -13361,14 +11849,6 @@
       "Asiatic board game",
       "Board game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Shanghai - Banri no Choujou - The Great Wall"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13376,7 +11856,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Shanghai - Triple Threat (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shanghai - Banri no Choujou - The Great Wall"
+      ]
+    }
   },
   {
     "name": "She'sn",
@@ -13402,11 +11887,6 @@
       "Lightgun Shooter",
       "Race",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -13489,11 +11969,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13529,11 +12004,6 @@
     "name": "Shin Seiki Evangelion - 2nd Impression",
     "players": 1,
     "rating": 0.65,
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Made in Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13568,14 +12038,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (R)",
-        "clones": [
-          "Shining Force III - Scenario 1 - Outo no Kyoshin"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13586,6 +12048,11 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Shining Force III - Scenario 1 - Outo no Kyoshin"
+      ]
     }
   },
   {
@@ -13594,11 +12061,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -13631,11 +12093,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13654,11 +12111,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -13686,15 +12138,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Shin Shinobiden",
-          "Shinobi Legions"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13711,6 +12154,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Shin Shinobiden",
+        "Shinobi Legions"
+      ]
     }
   },
   {
@@ -13773,11 +12222,6 @@
     "rating": 0.75,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -13854,11 +12298,6 @@
       "Sports",
       "Sports / Pool"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13874,11 +12313,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -13899,11 +12333,6 @@
     "genres": [
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -13939,11 +12368,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13974,11 +12398,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14005,14 +12424,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Slam 'n Jam '96 featuring Magic & Kareem"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14023,6 +12434,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Slam 'n Jam '96 featuring Magic & Kareem"
+      ]
     }
   },
   {
@@ -14042,11 +12458,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -14108,11 +12519,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -14123,14 +12529,6 @@
     "rating": 0.65,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Sonic 3D Blast"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -14159,6 +12557,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Sonic 3D Blast"
+      ]
     }
   },
   {
@@ -14169,11 +12572,6 @@
       "Action",
       "Compilation",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -14217,11 +12615,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -14292,11 +12685,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14331,11 +12719,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14367,11 +12750,6 @@
     "genres": [
       "Adventure",
       "Adventure / Visual Novel"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 2) (10.13-10.15 Incl.) (1M)"
-      }
     ]
   },
   {
@@ -14399,11 +12777,6 @@
       "Shoot'em Up",
       "Shooter"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14429,11 +12802,6 @@
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -14466,11 +12834,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14490,11 +12853,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -14551,14 +12909,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Star Fighter"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14566,7 +12916,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Star Fighter (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Star Fighter"
+      ]
+    }
   },
   {
     "name": "Steam-Heart's",
@@ -14593,11 +12948,6 @@
     "players": 1,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -14606,11 +12956,6 @@
     "rating": 0.85,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -14630,11 +12975,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -14646,15 +12986,6 @@
     "genres": [
       "Adventure",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Legend of Oasis, The",
-          "Thor - Seireioukiden"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -14672,6 +13003,12 @@
     ],
     "emulation": {
       "rating": 5
+    },
+    "group": {
+      "merge": [
+        "Legend of Oasis, The",
+        "Thor - Seireioukiden"
+      ]
     }
   },
   {
@@ -14689,14 +13026,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (2S)",
-        "clones": [
-          "Street Fighter - Real Battle on Film"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14707,6 +13036,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Street Fighter - Real Battle on Film"
+      ]
     }
   },
   {
@@ -14716,14 +13050,6 @@
     "genres": [
       "Fight",
       "Fight / 2D"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter Zero"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -14741,6 +13067,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Street Fighter Zero"
+      ]
     }
   },
   {
@@ -14750,15 +13081,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter Zero 2",
-          "Street Fighter Zero 2'"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -14776,6 +13098,12 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Street Fighter Zero 2",
+        "Street Fighter Zero 2'"
+      ]
     }
   },
   {
@@ -14785,14 +13113,6 @@
     "genres": [
       "Compilation",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1) (R)"
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2) (R)"
-      }
     ],
     "manuals": [
       {
@@ -14829,18 +13149,6 @@
     ]
   },
   {
-    "name": "Street Fighter Zero 2'",
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Fight"
-    ],
-    "emulation": {
-      "rating": 3,
-      "title": "Street Fighter Zero 2'"
-    }
-  },
-  {
     "name": "Street Fighter Zero 3",
     "players": 2,
     "rating": 0.75,
@@ -14861,16 +13169,13 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Racer Extra"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Street Racer Extra"
+      ]
     }
   },
   {
@@ -14880,11 +13185,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -14902,11 +13202,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -14945,11 +13240,6 @@
       "Fight",
       "Fight / 2D"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -14979,17 +13269,6 @@
     "rating": 0.65,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Disc 1) (Episode 1 - Tsuki no Shinden)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 2) (Episode 2 - Shitou! Wily Numbers)"
-      },
-      {
-        "parent_flags": "(Japan) (Disc 3) (Episode 3 - Saigo no Tatakai!!)"
-      }
     ]
   },
   {
@@ -15007,14 +13286,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Super Puzzle Fighter II X"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15031,6 +13302,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Super Puzzle Fighter II X"
+      ]
     }
   },
   {
@@ -15038,11 +13314,6 @@
     "players": 1,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -15073,11 +13344,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (P's Club Special Edition)"
-      }
     ]
   },
   {
@@ -15086,11 +13352,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -15104,11 +13365,6 @@
       "Role playing games",
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A) (10M, 11M, 12M, 13M)"
-      }
     ],
     "manuals": [
       {
@@ -15130,11 +13386,6 @@
       "Role playing games",
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M, 3M)"
-      }
     ],
     "manuals": [
       {
@@ -15162,11 +13413,6 @@
     "rating": 0.9,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -15174,11 +13420,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ],
     "manuals": [
       {
@@ -15210,11 +13451,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -15268,11 +13504,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -15314,11 +13545,6 @@
     "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -15412,14 +13638,11 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Teitoku no Ketsudan III with Power-Up Kit"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Teitoku no Ketsudan III with Power-Up Kit"
+      ]
+    }
   },
   {
     "name": "Tempest 2000",
@@ -15428,11 +13651,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -15467,11 +13685,6 @@
     "players": 4,
     "genres": [
       "Board game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -15591,16 +13804,13 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Discworld"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Discworld"
+      ]
     }
   },
   {
@@ -15609,11 +13819,6 @@
     "rating": 0.9,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -15631,11 +13836,6 @@
     "genres": [
       "Puzzle-Game",
       "Puzzle-Game / Fall"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -15654,14 +13854,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,Sv)",
-        "clones": [
-          "Shin Theme Park"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15672,6 +13864,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Shin Theme Park"
+      ]
     }
   },
   {
@@ -15681,11 +13878,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -15728,11 +13920,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 4
     }
@@ -15759,15 +13946,6 @@
     "name": "Tilt!",
     "players": 4,
     "rating": 0.75,
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Hyper 3-D Pinball",
-          "Hyper 3D Pinball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15778,6 +13956,12 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Hyper 3-D Pinball",
+        "Hyper 3D Pinball"
+      ]
     }
   },
   {
@@ -15815,14 +13999,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Solar Eclipse"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15833,6 +14009,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Solar Eclipse"
+      ]
     }
   },
   {
@@ -15856,11 +14037,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -15871,11 +14047,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 2
@@ -15910,11 +14081,6 @@
     "players": 2,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -15957,14 +14123,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tomb Raiders"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15987,6 +14145,11 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Tomb Raiders"
+      ]
     }
   },
   {
@@ -16005,22 +14168,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Disc 1)",
-        "clones": [
-          "Gekka Mugentan Torico (Disc A)",
-          "Lunacy (Disc 1)"
-        ]
-      },
-      {
-        "parent_flags": "(Europe) (Disc 2)",
-        "clones": [
-          "Gekka Mugentan Torico (Disc B)",
-          "Lunacy (Disc 2)"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16031,6 +14178,12 @@
     ],
     "emulation": {
       "rating": 4
+    },
+    "group": {
+      "merge": [
+        "Gekka Mugentan Torico",
+        "Lunacy"
+      ]
     }
   },
   {
@@ -16040,11 +14193,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -16107,14 +14255,6 @@
       "Pinball",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tekkyuu - True Pinball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16131,6 +14271,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Tekkyuu - True Pinball"
+      ]
     }
   },
   {
@@ -16162,14 +14307,6 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "3D Mission Shooting - Finalist"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16177,7 +14314,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Tunnel B1 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "3D Mission Shooting - Finalist"
+      ]
+    }
   },
   {
     "name": "TurfWind '96 - Take Yutaka Kyousouba Ikusei Game",
@@ -16245,11 +14387,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -16342,14 +14479,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Hyper Golf, The - Devil's Course"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16357,25 +14486,11 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Valora Valley Golf (USA).pdf"
       }
-    ]
-  },
-  {
-    "name": "Vampire Hunter - Darkstalker's Revenge",
-    "rating": 0.9,
-    "genres": [
-      "Action",
-      "Fight"
     ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Vampire_Hunter_Darkstalkers_Revenge_1996_J_color/Vampire_Hunter_Darkstalkers_Revenge_1996_J_color.cbr"
-      }
-    ],
-    "emulation": {
-      "rating": 4
+    "group": {
+      "merge": [
+        "Hyper Golf, The - Devil's Course"
+      ]
     }
   },
   {
@@ -16415,11 +14530,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev A)"
-      }
     ]
   },
   {
@@ -16431,14 +14541,6 @@
       "Sports / Boxing",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Center Ring Boxing"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16446,7 +14548,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Center Ring Boxing (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Center Ring Boxing"
+      ]
+    }
   },
   {
     "name": "Victory Goal",
@@ -16455,11 +14562,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1A)"
-      }
     ],
     "manuals": [
       {
@@ -16480,11 +14582,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -16514,11 +14611,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -16554,14 +14646,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Made in EU)",
-        "clones": [
-          "Virtua Fighter Remix"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -16605,6 +14689,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Virtua Fighter Remix"
+      ]
     }
   },
   {
@@ -16614,11 +14703,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (Made in EU)"
-      }
     ],
     "manuals": [
       {
@@ -16640,24 +14724,6 @@
   },
   {
     "name": "Virtua Fighter CG Portrait Collection",
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Virtua Fighter CG Portrait Series - The Final - Dural",
-          "Virtua Fighter CG Portrait Series Vol. 1 - Sarah Bryant",
-          "Virtua Fighter CG Portrait Series Vol. 10 - Jeffry McWild",
-          "Virtua Fighter CG Portrait Series Vol. 2 - Jacky Bryant",
-          "Virtua Fighter CG Portrait Series Vol. 3 - Akira Yuki",
-          "Virtua Fighter CG Portrait Series Vol. 4 - Pai Chan",
-          "Virtua Fighter CG Portrait Series Vol. 5 - Wolf Hawkfield",
-          "Virtua Fighter CG Portrait Series Vol. 6 - Lau Chan",
-          "Virtua Fighter CG Portrait Series Vol. 7 - Shun Di",
-          "Virtua Fighter CG Portrait Series Vol. 8 - Lion Rafale",
-          "Virtua Fighter CG Portrait Series Vol. 9 - Kage Maru"
-        ]
-      }
-    ],
     "manuals": [
       {
         "title": "Virtua Fighter CG Portrait Series Vol. 1 - Sarah Bryant",
@@ -16722,7 +14788,22 @@
         ],
         "url": "https://archive.org/download/Virtua_Fighter_CG_Portrait_Series_Vol.9_Kage_Maru_1996_Sega_JP/Virtua_Fighter_CG_Portrait_Series_Vol.9_Kage_Maru_1996_Sega_JP.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Virtua Fighter CG Portrait Series - The Final - Dural",
+        "Virtua Fighter CG Portrait Series Vol. 1 - Sarah Bryant",
+        "Virtua Fighter CG Portrait Series Vol. 10 - Jeffry McWild",
+        "Virtua Fighter CG Portrait Series Vol. 2 - Jacky Bryant",
+        "Virtua Fighter CG Portrait Series Vol. 3 - Akira Yuki",
+        "Virtua Fighter CG Portrait Series Vol. 4 - Pai Chan",
+        "Virtua Fighter CG Portrait Series Vol. 5 - Wolf Hawkfield",
+        "Virtua Fighter CG Portrait Series Vol. 6 - Lau Chan",
+        "Virtua Fighter CG Portrait Series Vol. 7 - Shun Di",
+        "Virtua Fighter CG Portrait Series Vol. 8 - Lion Rafale",
+        "Virtua Fighter CG Portrait Series Vol. 9 - Kage Maru"
+      ]
+    }
   },
   {
     "name": "Virtua Fighter Kids",
@@ -16731,11 +14812,6 @@
     "genres": [
       "Action",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -16777,11 +14853,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16817,11 +14888,6 @@
     "genres": [
       "Casino"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16839,14 +14905,11 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tournament Leader"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Tournament Leader"
+      ]
+    }
   },
   {
     "name": "Virtual Hydlide",
@@ -16854,11 +14917,6 @@
     "rating": 0.35,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -16923,14 +14981,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dennou Senki - Virtual On - Cyber Troopers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16947,6 +14997,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Dennou Senki - Virtual On - Cyber Troopers"
+      ]
     }
   },
   {
@@ -16956,14 +15011,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Dennou Senki - Virtual On - Cyber Troopers for SegaNet"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16971,7 +15018,12 @@
         ],
         "url": "https://archive.org/download/Virtual-On_Cyber_Troopers_NetLink_Edition_1997_U/Virtual-On_Cyber_Troopers_NetLink_Edition_1997_U.cbr"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dennou Senki - Virtual On - Cyber Troopers for SegaNet"
+      ]
+    }
   },
   {
     "name": "Virtual Open Tennis",
@@ -16980,11 +15032,6 @@
     "genres": [
       "Sports",
       "Sports / Tennis"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -17046,11 +15093,6 @@
       "Sports",
       "Sports / Wrestling"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17071,11 +15113,6 @@
       "Fight",
       "Sports",
       "Sports / Wrestling"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -17123,11 +15160,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -17138,11 +15170,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (3M)"
-      }
     ],
     "emulation": {
       "rating": 3
@@ -17209,11 +15236,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17259,11 +15281,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -17293,14 +15310,6 @@
       "Shoot'em Up",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Wing Arms - Kareinaru Gekitsuiou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17323,6 +15332,11 @@
     ],
     "emulation": {
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Wing Arms - Kareinaru Gekitsuiou"
+      ]
     }
   },
   {
@@ -17354,11 +15368,6 @@
       "Horses race",
       "Simulation",
       "Sports with Animals"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ]
   },
   {
@@ -17391,11 +15400,6 @@
       "Horses race",
       "Simulation",
       "Sports with Animals"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (2M)"
-      }
     ]
   },
   {
@@ -17433,11 +15437,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17457,11 +15456,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -17483,14 +15477,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Wipeout XL"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17498,7 +15484,12 @@
         ],
         "url": "https://archive.org/download/Wipeout_XL_1998_J_color/Wipeout_XL_1998_J_color.cbr"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wipeout XL"
+      ]
+    }
   },
   {
     "name": "With You - Mitsumeteitai",
@@ -17530,11 +15521,6 @@
     "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ]
   },
   {
@@ -17571,11 +15557,6 @@
       "Compilation",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (3M)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17602,11 +15583,6 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -17637,14 +15613,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (1S)",
-        "clones": [
-          "World Cup Golf - In Hyatt Dorado Beach"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17652,7 +15620,12 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/World Cup Golf - Professional Edition (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "World Cup Golf - In Hyatt Dorado Beach"
+      ]
+    }
   },
   {
     "name": "World Evolution Soccer",
@@ -17693,14 +15666,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Hideo Nomo World Series Baseball"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17711,6 +15676,11 @@
     ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Hideo Nomo World Series Baseball"
+      ]
     }
   },
   {
@@ -17741,11 +15711,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17766,11 +15731,6 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17790,11 +15750,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (3M)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -17806,11 +15761,6 @@
     "genres": [
       "Fight",
       "Fight / 2D"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (2S)"
-      }
     ],
     "manuals": [
       {
@@ -17836,11 +15786,6 @@
     "rating": 0.9,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (1M)"
-      }
     ],
     "manuals": [
       {
@@ -17929,11 +15874,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -17944,11 +15884,6 @@
     "rating": 0.8,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -17957,11 +15892,6 @@
     "rating": 0.75,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -17986,11 +15916,6 @@
     "rating": 0.75,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -18042,11 +15967,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "emulation": {
       "rating": 1

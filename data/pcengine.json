@@ -36,11 +36,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -63,11 +58,6 @@
     "players": 1,
     "genres": [
       "Adult"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Unl)"
-      }
     ]
   },
   {
@@ -211,11 +201,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FAAT)"
-      }
     ],
     "manuals": [
       {
@@ -547,11 +532,6 @@
       "Action",
       "Adventure",
       "Adventure / Point and Click"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -677,11 +657,6 @@
     "rating": 0.85,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FAAT)"
-      }
     ]
   },
   {
@@ -708,15 +683,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Bonk III - Bonk's Big Adventure",
-          "PC Genjin 3 - Pithecanthropus Computerurus"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -724,14 +690,13 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Bonk_3/Bonk_3_HuCARD.pdf"
       }
-    ]
-  },
-  {
-    "name": "Bonk III - Bonk's Big Adventure",
-    "rating": 0.75,
-    "genres": [
-      "Platform"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bonk III - Bonk's Big Adventure",
+        "PC Genjin 3 - Pithecanthropus Computerurus"
+      ]
+    }
   },
   {
     "name": "Bonk's Adventure",
@@ -918,14 +883,6 @@
       "Action",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Pomping World"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -933,18 +890,18 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Buster_Bros/Buster_Bros.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pomping World"
+      ]
+    }
   },
   {
     "name": "CAL II",
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1206,11 +1163,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1227,14 +1179,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Cosmic Fantasy 2 - Bouken Shounen Ban"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1242,7 +1186,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Cosmic_Fantasy_2/Cosmic_Fantasy_2.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Cosmic Fantasy 2 - Bouken Shounen Ban"
+      ]
+    }
   },
   {
     "name": "Cosmic Fantasy 3 - Bouken Shounen Rei",
@@ -1593,11 +1542,6 @@
     "genres": [
       "Adventure",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 3)"
-      }
     ]
   },
   {
@@ -1693,11 +1637,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1789,11 +1728,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1812,11 +1746,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -1854,14 +1783,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Chou Eiyuu Densetsu - Dynastic Hero"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Chou Eiyuu Densetsu - Dynastic Hero"
+      ]
+    }
   },
   {
     "name": "Efera & Jiliora - The Emblem from Darkness",
@@ -1900,11 +1826,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1939,14 +1860,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Exile - Toki no Hasama e"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1954,7 +1867,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/arjak/Exile/Exile.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Exile - Toki no Hasama e"
+      ]
+    }
   },
   {
     "name": "Exile - Wicked Phenomenon",
@@ -1964,14 +1882,11 @@
       "Action",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Exile II - Janen no Jishou"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Exile II - Janen no Jishou"
+      ]
+    }
   },
   {
     "name": "F-1 Dream",
@@ -2023,11 +1938,6 @@
     "genres": [
       "Sports",
       "Sports / Running trails"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FABT)"
-      }
     ]
   },
   {
@@ -2062,11 +1972,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2099,11 +2004,6 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2128,11 +2028,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2147,11 +2042,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Hibaihin)"
-      }
     ],
     "manuals": [
       {
@@ -2182,11 +2072,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -2228,11 +2113,6 @@
     "rating": 0.45,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2295,11 +2175,6 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2346,11 +2221,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (En,Ja)"
-      }
     ],
     "manuals": [
       {
@@ -2476,11 +2346,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FABT, FAET, FAFT)"
-      }
     ]
   },
   {
@@ -2490,11 +2355,6 @@
     "genres": [
       "Fight",
       "Fight / 2D"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FABT)"
-      }
     ]
   },
   {
@@ -2586,11 +2446,6 @@
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2598,11 +2453,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FAFT)"
-      }
     ],
     "manuals": [
       {
@@ -2618,11 +2468,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FAAT)"
-      }
     ],
     "manuals": [
       {
@@ -2666,14 +2511,11 @@
       "Fight",
       "Fight / 2D"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Godzilla Bakutou Retsuden"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Godzilla Bakutou Retsuden"
+      ]
+    }
   },
   {
     "name": "Goetzendiener",
@@ -2699,11 +2541,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2762,11 +2599,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2822,11 +2654,6 @@
     "players": 1,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 1)"
-      }
     ],
     "manuals": [
       {
@@ -2966,11 +2793,6 @@
     "rating": 0.6,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -2979,11 +2801,6 @@
     "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (SAAS)"
-      }
     ]
   },
   {
@@ -3094,14 +2911,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (En,Ja)",
-        "clones": [
-          "J. B. Harold Series 1 - Murder Club"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3115,7 +2924,12 @@
         ],
         "url": "https://mocagh.org/miscgame/murderclubpce-manual.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "J. B. Harold Series 1 - Murder Club"
+      ]
+    }
   },
   {
     "name": "J.J. & Jeff",
@@ -3159,23 +2973,6 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Jack Nicklaus' World Tour Golf - 162 Holes"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Jack Nicklaus' Turbo Golf",
-    "players": 4,
-    "rating": 0.55,
-    "genres": [
-      "Sports",
-      "Sports / Golf"
-    ],
     "manuals": [
       {
         "languages": [
@@ -3183,7 +2980,12 @@
         ],
         "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Jack Nicklaus' Turbo Golf (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jack Nicklaus' World Tour Golf - 162 Holes"
+      ]
+    }
   },
   {
     "name": "Jackie Chan's Action Kung Fu",
@@ -3284,11 +3086,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 4)"
-      }
     ]
   },
   {
@@ -3304,11 +3101,6 @@
     "genres": [
       "Action",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FAAT)"
-      }
     ]
   },
   {
@@ -3457,11 +3249,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (FABT)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3596,11 +3383,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3621,14 +3403,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Red Alert"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3636,18 +3410,18 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Last_Alert/Last_Alert.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Red Alert"
+      ]
+    }
   },
   {
     "name": "Last Armageddon",
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 5)"
-      }
     ]
   },
   {
@@ -3732,11 +3506,6 @@
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3751,11 +3520,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 1)"
-      }
     ]
   },
   {
@@ -3776,11 +3540,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -3798,14 +3557,6 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Winds of Thunder"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3813,7 +3564,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Lords_of_Thunder/Lords_of_Thunder.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Winds of Thunder"
+      ]
+    }
   },
   {
     "name": "Lords of the Rising Sun",
@@ -3822,14 +3578,11 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Rising Sun"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Rising Sun"
+      ]
+    }
   },
   {
     "name": "Mad Stalker - Full Metal Force",
@@ -3837,11 +3590,6 @@
     "rating": 0.75,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -3885,14 +3633,11 @@
     "genres": [
       "Educational"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Magical Saurus Tour"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Magical Saurus Tour"
+      ]
+    }
   },
   {
     "name": "Magicoal",
@@ -3975,11 +3720,6 @@
     "genres": [
       "Asiatic board game",
       "Mahjong"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4131,11 +3871,6 @@
     "players": 1,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (Unl)"
-      }
     ]
   },
   {
@@ -4151,11 +3886,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -4250,14 +3980,6 @@
       "Platform",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Wonder Boy III - Monster Lair"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4265,18 +3987,18 @@
         ],
         "url": "http://www.tg-16.com/contributors/bernie/Monster_Lair/Monster_Lair.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wonder Boy III - Monster Lair"
+      ]
+    }
   },
   {
     "name": "Monster Maker - Yami no Ryuukishi",
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4374,11 +4096,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA) (En,Fr,Es) (Unl)"
-      }
     ]
   },
   {
@@ -4765,11 +4482,6 @@
       "Casino",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 7)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4866,11 +4578,6 @@
     "genres": [
       "Action",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -4989,11 +4696,6 @@
     "rating": 0.65,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -5082,11 +4784,6 @@
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ],
     "manuals": [
       {
@@ -5223,11 +4920,6 @@
       "Quiz",
       "Quiz / Japanese",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 7)"
-      }
     ]
   },
   {
@@ -5338,12 +5030,7 @@
     "name": "ROM^2 Karaoke Vol. 5 - Karaoke Maku no Uchi"
   },
   {
-    "name": "ROM^2 Karaoke Volume 1",
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ]
+    "name": "ROM^2 Karaoke Volume 1"
   },
   {
     "name": "ROM^2 Karaoke Volume 2"
@@ -5480,11 +5167,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5517,14 +5199,11 @@
       "Action",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Ookami-teki Monshou - Crest of Wolf"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Ookami-teki Monshou - Crest of Wolf"
+      ]
+    }
   },
   {
     "name": "Road Spirits",
@@ -5559,11 +5238,6 @@
     "genres": [
       "Fight",
       "Fight / 2D"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (En,Ja,Es) (FAAT)"
-      }
     ]
   },
   {
@@ -5646,11 +5320,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 1)"
-      }
     ]
   },
   {
@@ -5666,11 +5335,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -5728,14 +5392,11 @@
       "Action",
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Shadow of the Beast - Mashou no Okite"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Shadow of the Beast - Mashou no Okite"
+      ]
+    }
   },
   {
     "name": "Shanghai",
@@ -5764,14 +5425,6 @@
       "Action",
       "Action / Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Makai Eiyuuden - Shape Shifter"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5779,7 +5432,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/arjak/Shape_Shifter/Shape_Shifter.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Makai Eiyuuden - Shape Shifter"
+      ]
+    }
   },
   {
     "name": "Sherlock Holmes - Consulting Detective",
@@ -5788,11 +5446,6 @@
     "genres": [
       "Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -5817,14 +5470,6 @@
       "Adventure",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Sherlock Holmes - Consulting Detective Vol. II"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5838,7 +5483,12 @@
         ],
         "url": "https://archive.org/download/SherlockHolmesNoTanteiKouza2ManualJPPCEngine/Sherlock Holmes no Tantei Kouza 2 (Manual)(JP)(PC Engine).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sherlock Holmes - Consulting Detective Vol. II"
+      ]
+    }
   },
   {
     "name": "Shiawase Usagi - Nureta Bishoujo - Hajimete Nanoni...",
@@ -5995,11 +5645,6 @@
       "Educational",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6148,11 +5793,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6243,14 +5883,6 @@
       "Action",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Splash Lake - Ostrich Daibouken"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6258,7 +5890,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/arjak/Splash_Lake/Splash_Lake.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Splash Lake - Ostrich Daibouken"
+      ]
+    }
   },
   {
     "name": "Splatterhouse",
@@ -6323,11 +5960,6 @@
     "players": 1,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -6408,14 +6040,11 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "CD Denjin - Rockabilly Tengoku"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "CD Denjin - Rockabilly Tengoku"
+      ]
+    }
   },
   {
     "name": "Super Albatross",
@@ -6453,11 +6082,6 @@
       "Shoot'em up / Horizontal",
       "Shooter",
       "Shooter / Horizontal"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -6622,14 +6246,11 @@
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "TerraForming"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "TerraForming"
+      ]
+    }
   },
   {
     "name": "Sylphia",
@@ -6902,11 +6523,6 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7045,11 +6661,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -7059,11 +6670,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -7091,11 +6697,6 @@
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -7309,11 +6910,6 @@
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -7447,14 +7043,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Ys I & II"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7462,7 +7050,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/arjak/Ys_Book_I_II/Ys_Book_I_II.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ys I & II"
+      ]
+    }
   },
   {
     "name": "Ys III - Wanderers from Ys",
@@ -7471,14 +7064,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Ys III"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7486,7 +7071,12 @@
         ],
         "url": "http://www.tg-16.com/contributors/arjak/Ys_III/Ys_III.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ys III"
+      ]
+    }
   },
   {
     "name": "Ys IV - The Dawn of Ys",
@@ -7494,11 +7084,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Rev 3)"
-      }
     ],
     "manuals": [
       {

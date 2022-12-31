@@ -118,14 +118,11 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(World)",
-        "clones": [
-          "Battle Sphere Gold"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Battle Sphere Gold"
+      ]
+    }
   },
   {
     "name": "Breakout 2000",
@@ -738,14 +735,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(World)",
-        "clones": [
-          "Protector - Special Edition"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -764,6 +753,11 @@
     "emulation": {
       "emulator": "lr-virtualjaguar",
       "rating": 3
+    },
+    "group": {
+      "merge": [
+        "Protector - Special Edition"
+      ]
     }
   },
   {

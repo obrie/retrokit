@@ -1,6 +1,7 @@
 {
   "roms": {
     "priority": {
+      "enabled": true,
       "single_title": true,
       "order": ["flags", "flags_count", "parent_title", "length"],
       "flags": [

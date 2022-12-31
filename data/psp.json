@@ -15,11 +15,6 @@
     "genres": [
       "Shooter",
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -89,26 +84,12 @@
     ]
   },
   {
-    "name": "2010 FIFA World Cup - South Africa",
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Sports",
-      "Sports / Soccer"
-    ]
-  },
-  {
     "name": "2010 FIFA World Cup South Africa",
     "players": 2,
     "rating": 0.7,
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -117,7 +98,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/2010 FIFA World Cup - South Africa (EUR).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "2010 FIFA World Cup - South Africa"
+      ]
+    }
   },
   {
     "name": "20Q",
@@ -148,11 +134,6 @@
     "rating": 0.7,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -167,11 +148,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -220,11 +196,6 @@
     "rating": 0.4,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -237,11 +208,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -292,21 +258,11 @@
       "Adventure / Visual Novel",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan) (Game Disc)"
-      }
-    ]
-  },
-  {
-    "name": "AKB1-149 Renai Sousenkyo",
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Adventure",
-      "Adventure / Visual Novel",
-      "Various"
-    ]
+    "group": {
+      "merge": [
+        "AKB1-149 Renai Sousenkyo"
+      ]
+    }
   },
   {
     "name": "AKB1-48 - Idol to Koishitara...",
@@ -343,11 +299,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -364,11 +315,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt,Pl,Ru,El)"
-      }
     ]
   },
   {
@@ -398,11 +344,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -425,11 +366,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It,Ko)"
-      }
     ],
     "manuals": [
       {
@@ -463,11 +399,6 @@
     "genres": [
       "Compilation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -492,11 +423,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -536,11 +462,6 @@
     "genres": [
       "Lightgun Shooter",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -610,11 +531,6 @@
       "Action",
       "Shoot'em Up",
       "Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -631,11 +547,6 @@
     "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -750,16 +661,6 @@
       "Platform",
       "Platform / Run Jump"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ape Escape Academy",
-          "Piposaru Academia - Dossari! Saruge Daizenshuu",
-          "Piposaru Academia - Sagomungchi Neungryeokpyeongga Wanjeonjeongbog"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -771,7 +672,14 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Academy UCES00010.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ape Escape Academy",
+        "Piposaru Academia - Dossari! Saruge Daizenshuu",
+        "Piposaru Academia - Sagomungchi Neungryeokpyeongga Wanjeonjeongbog"
+      ]
+    }
   },
   {
     "name": "Ape Academy 2",
@@ -781,14 +689,6 @@
       "Casual Game",
       "Platform",
       "Platform / Run Jump"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Ru)",
-        "clones": [
-          "Piposaru Academia 2 - Aiai Saruge Janken Battle"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -800,7 +700,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Academy 2 UCES00302.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Piposaru Academia 2 - Aiai Saruge Janken Battle"
+      ]
+    }
   },
   {
     "name": "Ape Escape",
@@ -808,16 +713,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ape Escape - On the Loose",
-          "Piposarugetchu P",
-          "Saru! Get You! P!"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -829,7 +724,14 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Ape Escape P UCES00045.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ape Escape - On the Loose",
+        "Piposarugetchu P",
+        "Saru! Get You! P!"
+      ]
+    }
   },
   {
     "name": "Ape Escape P",
@@ -973,14 +875,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hg Hydrium"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -998,7 +892,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Archer Maclean's Mercury ULES00011.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hg Hydrium"
+      ]
+    }
   },
   {
     "name": "Archibald's Adventures",
@@ -1027,15 +926,12 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Armored Core - Formula Front",
-          "Armored Core - Formula Front International"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Armored Core - Formula Front",
+        "Armored Core - Formula Front International"
+      ]
+    }
   },
   {
     "name": "Armored Core - Last Raven Portable",
@@ -1072,11 +968,6 @@
     "rating": 0.55,
     "genres": [
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1100,25 +991,17 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,Nl,Sv)"
-      }
-    ],
     "renames": {
       "Arthur and the Minimoys (Europe) (En,Fr,Es,Nl,Sv)": "Arthur and the Invisibles (Europe) (En,Fr,Es,Nl,Sv)"
     }
   },
   {
     "name": "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan",
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan - McDonald's Ver."
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Artlist Collection - The Dog Happy Life - Shiawase Wanko Seikatsu Dai-1-dan - McDonald's Ver."
+      ]
+    }
   },
   {
     "name": "Asaki, Yumemishi"
@@ -1141,11 +1024,6 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Ru)"
-      }
-    ],
     "emulation": {
       "rating": 3
     }
@@ -1166,11 +1044,6 @@
       "Japanese RPG",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1185,11 +1058,6 @@
     "rating": 0.75,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1249,11 +1117,6 @@
       "Music and Dance",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1280,11 +1143,6 @@
     "rating": 0.85,
     "genres": [
       "Playing cards"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Sv)"
-      }
     ]
   },
   {
@@ -1400,11 +1258,6 @@
     "genres": [
       "Action",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1432,11 +1285,6 @@
     "genres": [
       "Music and Dance",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -1485,11 +1333,6 @@
     "rating": 0.45,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1498,11 +1341,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1512,11 +1350,6 @@
     "genres": [
       "Beat'em Up",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1525,11 +1358,6 @@
     "rating": 0.65,
     "genres": [
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1541,11 +1369,6 @@
     "rating": 0.4,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -1651,11 +1474,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1686,11 +1504,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,Zh,Ko)"
-      }
     ]
   },
   {
@@ -1707,24 +1520,10 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Zh,Ko)"
-      }
     ]
   },
   {
     "name": "Blazing Lazers"
-  },
-  {
-    "name": "Blazing Souls - Accelate",
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Role playing games",
-      "Strategy"
-    ]
   },
   {
     "name": "Blazing Souls Accelate",
@@ -1734,11 +1533,11 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "group": {
+      "merge": [
+        "Blazing Souls - Accelate"
+      ]
+    }
   },
   {
     "name": "Bleach - Heat the Soul",
@@ -1783,11 +1582,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1796,11 +1590,6 @@
     "rating": 0.65,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -1866,11 +1655,6 @@
     "genres": [
       "Board game",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -1880,11 +1664,6 @@
     "genres": [
       "Sports",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -1951,11 +1730,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -1995,14 +1769,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Bomberman Land Portable"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2031,7 +1797,12 @@
           "filter": "Image*"
         }
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bomberman Land Portable"
+      ]
+    }
   },
   {
     "name": "Bonk's Adventure"
@@ -2059,11 +1830,6 @@
     "rating": 0.75,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -2166,11 +1932,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2189,14 +1950,11 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Ricky Ponting 2007 - Pressure Play"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Ricky Ponting 2007 - Pressure Play"
+      ]
+    }
   },
   {
     "name": "Brick Breaker",
@@ -2247,11 +2005,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -2263,11 +2016,6 @@
     "genres": [
       "Sports",
       "Sports / Bowling"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -2277,11 +2025,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -2334,11 +2077,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2359,11 +2097,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It,Nl) (v1.01)"
-      }
     ],
     "manuals": [
       {
@@ -2394,14 +2127,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Bust-A-Move - Deluxe"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Bust-A-Move - Deluxe"
+      ]
+    }
   },
   {
     "name": "Busy Sweets Factory",
@@ -2455,24 +2185,6 @@
       "Casual Game",
       "Quiz"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (No,Da)",
-        "clones": [
-          "Buzz! Brain of Oz",
-          "Buzz! Brain of the UK",
-          "Buzz! Das grosse Laenderquiz",
-          "Buzz! De Slimste van Nederland",
-          "Buzz! De Strafste van Belgie",
-          "Buzz! Deutschlands Superquiz",
-          "Buzz! Il Quizzone Nazionale",
-          "Buzz! Polskie Lamiglowki ~ Buzz! Mozak Hrvatske",
-          "Buzz! Que Sabes de tu Pais",
-          "Buzz! Quem e o Genio Portugues ~ Buzz! Sokrovishha nacii",
-          "Buzz! Svenska Genier ~ Buzz! Suomen Neropatti"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2480,7 +2192,22 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Buzz! Brain of... UCES01201.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Buzz! Brain of Oz",
+        "Buzz! Brain of the UK",
+        "Buzz! Das grosse Laenderquiz",
+        "Buzz! De Slimste van Nederland",
+        "Buzz! De Strafste van Belgie",
+        "Buzz! Deutschlands Superquiz",
+        "Buzz! Il Quizzone Nazionale",
+        "Buzz! Polskie Lamiglowki ~ Buzz! Mozak Hrvatske",
+        "Buzz! Que Sabes de tu Pais",
+        "Buzz! Quem e o Genio Portugues ~ Buzz! Sokrovishha nacii",
+        "Buzz! Svenska Genier ~ Buzz! Suomen Neropatti"
+      ]
+    }
   },
   {
     "name": "Buzz! Master Quiz",
@@ -2489,11 +2216,6 @@
     "genres": [
       "Casual Game",
       "Quiz"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Pl)"
-      }
     ]
   },
   {
@@ -2504,14 +2226,6 @@
       "Puzzle-Game",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Pl)",
-        "clones": [
-          "Buzz! Concurso Universal"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2519,7 +2233,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Buzz! Quiz World UCES01296.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Buzz! Concurso Universal"
+      ]
+    }
   },
   {
     "name": "Buzz! Quiz World - Comedy Movies Quiz"
@@ -2537,11 +2256,6 @@
     "genres": [
       "Casual Game",
       "Quiz"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2570,11 +2284,6 @@
     "rating": 0.9,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -2594,11 +2303,6 @@
     "rating": 0.5,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -2632,11 +2336,6 @@
       "Lightgun Shooter",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ]
   },
   {
@@ -2663,14 +2362,6 @@
       "Action",
       "Compilation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Capcom Classics Collection"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2681,7 +2372,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Capcom Classics Collection Reloaded ULES00377.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Capcom Classics Collection"
+      ]
+    }
   },
   {
     "name": "Capcom Classics Collection Remixed",
@@ -2690,11 +2386,6 @@
     "genres": [
       "Action",
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2722,11 +2413,6 @@
     "genres": [
       "Compilation",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -2857,14 +2543,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Akumajou Dracula X - Chronicle"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2872,7 +2550,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Castlevania - The Dracula X Chronicles (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Akumajou Dracula X - Chronicle"
+      ]
+    }
   },
   {
     "name": "Caterpillar",
@@ -2905,14 +2588,6 @@
       "Simulation",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Scudetto 2006 - Championship Manager"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2920,7 +2595,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Championship Manager 2006 ULES00330.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Scudetto 2006 - Championship Manager"
+      ]
+    }
   },
   {
     "name": "Championship Manager 2007"
@@ -2971,11 +2651,6 @@
       "Board game",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3003,11 +2678,6 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -3081,14 +2751,11 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Clank & Ratchet - Maru Hi Mission - Ignition!"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Clank & Ratchet - Maru Hi Mission - Ignition!"
+      ]
+    }
   },
   {
     "name": "Class of Heroes",
@@ -3123,11 +2790,6 @@
     "rating": 0.65,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia)"
-      }
     ]
   },
   {
@@ -3147,11 +2809,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ]
   },
   {
@@ -3160,11 +2817,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3181,11 +2833,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3218,14 +2865,11 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "DiRT 2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "DiRT 2"
+      ]
+    }
   },
   {
     "name": "Colin McRae Rally 2005 Plus",
@@ -3234,11 +2878,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3262,11 +2901,6 @@
     "rating": 0.5,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3316,24 +2950,11 @@
     ]
   },
   {
-    "name": "Crash - Mind Over Mutant",
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  {
     "name": "Crash - Mind over Mutant",
     "players": 1,
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3344,11 +2965,6 @@
       "Driving",
       "Platform",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3358,11 +2974,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3381,11 +2992,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3424,14 +3030,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Astonishia Story 2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Astonishia Story 2"
+      ]
+    }
   },
   {
     "name": "Crimson Room Reverse",
@@ -3449,11 +3052,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3470,11 +3068,6 @@
     "genres": [
       "Action",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3526,14 +3119,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3548,6 +3133,11 @@
     ],
     "renames": {
       "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri! (Japan)": "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube (Japan)"
+    },
+    "group": {
+      "merge": [
+        "Simple 2500 Series Portable!! Vol. 10 - The IQ Cube - Moyatto Atama o Puzzle de Sukkiri!"
+      ]
     }
   },
   {
@@ -3623,14 +3213,11 @@
     "genres": [
       "Music and Dance"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "DJ Max Emotional Sense P - Black Square"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "DJ Max Emotional Sense P - Black Square"
+      ]
+    }
   },
   {
     "name": "DJ Max Portable - Hot Tunes",
@@ -3665,15 +3252,12 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "TOCA Race Driver 2",
-          "V8 Supercars Australia 2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "TOCA Race Driver 2",
+        "V8 Supercars Australia 2"
+      ]
+    }
   },
   {
     "name": "Dai Makai-Mura"
@@ -3682,13 +3266,7 @@
     "name": "Dai-2-Ji Super Robot Taisen Z Hakai-Hen"
   },
   {
-    "name": "Dai-2-Ji Super Robot Taisen Z Hakai-hen"
-  },
-  {
     "name": "Dai-2-Ji Super Robot Taisen Z Saisei-Hen"
-  },
-  {
-    "name": "Dai-2-Ji Super Robot Taisen Z Saisei-hen"
   },
   {
     "name": "Daito Giken Koushiki Pachi-Slot Simulator - Ossu! Banchou Portable"
@@ -3736,11 +3314,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3768,14 +3341,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Vampire Chronicle - The Chaos Tower"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3783,7 +3348,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Darkstalkers Chronicle - The Chaos Tower (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Vampire Chronicle - The Chaos Tower"
+      ]
+    }
   },
   {
     "name": "Dave Mirra BMX Challenge",
@@ -3792,11 +3362,6 @@
     "genres": [
       "Sports",
       "Sports / Cycling"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3814,11 +3379,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3857,11 +3417,6 @@
       "Action",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3881,11 +3436,6 @@
     "rating": 0.6,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De) (ULES-01416)"
-      }
     ]
   },
   {
@@ -3894,11 +3444,6 @@
     "rating": 0.65,
     "genres": [
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -3908,11 +3453,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -3930,11 +3470,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -3950,11 +3485,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -3974,18 +3504,10 @@
     ]
   },
   {
-    "name": "Demo Disc for PSP Vol. 1",
-    "parents": [
-      {
-        "parent_flags": "(Europe) (UCJB-98302)"
-      }
-    ]
+    "name": "Demo Disc for PSP Vol. 1"
   },
   {
     "name": "Demo Koushin"
-  },
-  {
-    "name": "Dengeki Ciel Nosurge Zoukangou Vol.1 - Ongaku to Kioku no Kenkyuujo"
   },
   {
     "name": "Dengeki Ciel nosurge Dai-1-Gou"
@@ -4065,14 +3587,11 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Sv,No,Da,Fi)",
-        "clones": [
-          "Despicable Me - The Game"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Despicable Me - The Game"
+      ]
+    }
   },
   {
     "name": "Detana!! TwinBee"
@@ -4114,20 +3633,17 @@
     ]
   },
   {
-    "name": "Digimon World - Re-Digitize",
-    "players": 1,
-    "rating": 0.85,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  {
     "name": "Digimon World Re-Digitize",
     "players": 1,
     "rating": 0.85,
     "genres": [
       "Role playing games"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Digimon World - Re-Digitize"
+      ]
+    }
   },
   {
     "name": "Digivice Ver Portable"
@@ -4139,14 +3655,11 @@
     "genres": [
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Diner Dash - Sizzle & Serve"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Diner Dash - Sizzle & Serve"
+      ]
+    }
   },
   {
     "name": "Disgaea - Afternoon of Darkness",
@@ -4155,15 +3668,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Disgaea Portable",
-          "Makai Senki Disgaea Portable - Tsuushin Taisen Hajimemashita."
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4179,6 +3683,12 @@
     ],
     "renames": {
       "MagusTale Eternity - Sekaiju to Koi suru Mahoutsukai (Japan)": "MagusTale Eternity - Sekaiju to Koisuru Mahou Tsukai (Japan)"
+    },
+    "group": {
+      "merge": [
+        "Disgaea Portable",
+        "Makai Senki Disgaea Portable - Tsuushin Taisen Hajimemashita."
+      ]
     }
   },
   {
@@ -4188,11 +3698,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -4220,11 +3725,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)"
-      }
     ],
     "manuals": [
       {
@@ -4267,11 +3767,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4297,11 +3792,6 @@
     "rating": 0.4,
     "genres": [
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -4330,11 +3820,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4359,11 +3844,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -4375,11 +3855,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Pl,Ru)"
-      }
     ]
   },
   {
@@ -4388,15 +3863,6 @@
     "rating": 0.7,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Disney - Pixar Ratatouille",
-          "Disney-Pixar Ratatui"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4415,6 +3881,12 @@
     ],
     "renames": {
       "Disney - Pixar Ratatouille (Russia)": "Disney-Pixar Ratatouille (Russia)"
+    },
+    "group": {
+      "merge": [
+        "Disney - Pixar Ratatouille",
+        "Disney-Pixar Ratatui"
+      ]
     }
   },
   {
@@ -4425,11 +3897,6 @@
       "Action",
       "Action / Adventure",
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Es) (v1.01)"
-      }
     ],
     "manuals": [
       {
@@ -4451,15 +3918,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Disney-Pixar Oben",
-          "Disney-Pixar Up - Altamente!"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4474,7 +3932,13 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Up ULES01255.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Disney-Pixar Oben",
+        "Disney-Pixar Up - Altamente!"
+      ]
+    }
   },
   {
     "name": "Disney-Pixar WALL-E",
@@ -4482,14 +3946,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Disney-Pixar WALL-E - Der Letzte raeumt die Erde auf"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -4505,23 +3961,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/WALL-E ULES01082.pdf"
       }
-    ]
-  },
-  {
-    "name": "Dissidia - Final Fantasy",
-    "players": 2,
-    "rating": 0.9,
-    "genres": [
-      "Fight"
-    ]
-  },
-  {
-    "name": "Dissidia - Final Fantasy - Universal Tuning",
-    "players": 2,
-    "rating": 0.9,
-    "genres": [
-      "Fight"
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Disney-Pixar WALL-E - Der Letzte raeumt die Erde auf"
+      ]
+    }
   },
   {
     "name": "Dissidia 012 - Duodecim Final Fantasy",
@@ -4529,11 +3974,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -4650,14 +4090,11 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Dissidia Final Fantasy - Universal Tuning"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Dissidia Final Fantasy - Universal Tuning"
+      ]
+    }
   },
   {
     "name": "Doko Demo Issho"
@@ -4781,11 +4218,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -4795,14 +4227,11 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Dragon Ball Z - Shin Budokai - Another Road"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Dragon Ball Z - Shin Budokai - Another Road"
+      ]
+    }
   },
   {
     "name": "Dragon Ball Z - Tenkaichi Tag Team",
@@ -4810,11 +4239,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -4839,11 +4263,6 @@
     "rating": 0.2,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -4853,14 +4272,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Dragoneer's Aria - Ryu ga Nemuru Made"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Dragoneer's Aria - Ryu ga Nemuru Made"
+      ]
+    }
   },
   {
     "name": "DreamWorks Megamind - The Blue Defender",
@@ -4868,11 +4284,6 @@
     "rating": 0.4,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -4880,14 +4291,11 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It,Nl)",
-        "clones": [
-          "DreamWorks Vecinos Invasores - Hammy Enloquece"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "DreamWorks Vecinos Invasores - Hammy Enloquece"
+      ]
+    }
   },
   {
     "name": "DreamWorks Shrek - Smash n' Crash Racing",
@@ -4895,11 +4303,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "emulation": {
       "rating": 1
@@ -4911,11 +4314,6 @@
     "rating": 0.5,
     "genres": [
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -4933,11 +4331,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -4987,15 +4380,12 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Dungeon Explorer - Meiyaku no Tobira",
-          "Dungeon Explorer - Warriors of Ancient Arts"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Dungeon Explorer - Meiyaku no Tobira",
+        "Dungeon Explorer - Warriors of Ancient Arts"
+      ]
+    }
   },
   {
     "name": "Dungeon Explorer II"
@@ -5006,14 +4396,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Chronicle of Dungeon Maker"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Chronicle of Dungeon Maker"
+      ]
+    }
   },
   {
     "name": "Dungeon Maker II - The Hidden War",
@@ -5030,11 +4417,6 @@
     "genres": [
       "Action RPG",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5044,11 +4426,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5060,15 +4437,6 @@
     "genres": [
       "Beat'em Up",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Jin Samguk Mussang",
-          "Shin Sangoku Musou"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5090,6 +4458,12 @@
     ],
     "renames": {
       "Shin Sangoku Musou (Japan, Asia)": "Shin Sangoku Musou (Japan)"
+    },
+    "group": {
+      "merge": [
+        "Jin Samguk Mussang",
+        "Shin Sangoku Musou"
+      ]
     }
   },
   {
@@ -5098,14 +4472,6 @@
     "rating": 0.8,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)",
-        "clones": [
-          "Shin Sangoku Musou - Multi Raid"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5118,7 +4484,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors Strikeforce ULES01221.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shin Sangoku Musou - Multi Raid"
+      ]
+    }
   },
   {
     "name": "Dynasty Warriors Vol. 2",
@@ -5127,14 +4498,6 @@
     "genres": [
       "Beat'em Up",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Jin Samguk Mussang 2nd Evolution"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5147,7 +4510,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Dynasty Warriors Vol. 2 NPEH00014.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jin Samguk Mussang 2nd Evolution"
+      ]
+    }
   },
   {
     "name": "Dynogems",
@@ -5163,11 +4531,6 @@
     "rating": 0.45,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -5198,14 +4561,6 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It,Nl,Pt,Ru)",
-        "clones": [
-          "Mugen Kairou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5220,7 +4575,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/echochrome UCES01011.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Mugen Kairou"
+      ]
+    }
   },
   {
     "name": "Echochrome - Expansion Pack",
@@ -5262,14 +4622,6 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (v1.00)",
-        "clones": [
-          "Jigen Kairou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5282,7 +4634,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/echoshift UCES01313.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Jigen Kairou"
+      ]
+    }
   },
   {
     "name": "Edge",
@@ -5416,11 +4773,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5450,11 +4802,6 @@
     "genres": [
       "Action",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5464,15 +4811,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hot Shots Golf - Open Tee",
-          "Minna no Golf Portable"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5488,7 +4826,13 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Golf UCES00012.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hot Shots Golf - Open Tee",
+        "Minna no Golf Portable"
+      ]
+    }
   },
   {
     "name": "Everybody's Golf 2",
@@ -5497,15 +4841,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hot Shots Golf - Open Tee 2",
-          "Minna no Golf Portable 2"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5521,7 +4856,13 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Golf 2 UCES00767.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hot Shots Golf - Open Tee 2",
+        "Minna no Golf Portable 2"
+      ]
+    }
   },
   {
     "name": "Everybody's Stress Buster",
@@ -5530,14 +4871,6 @@
     "genres": [
       "Compilation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Asia) (En,Zh)",
-        "clones": [
-          "Minna no Sukkiri"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5545,7 +4878,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Stress Buster (Blue Pack) NPEG00047.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Minna no Sukkiri"
+      ]
+    }
   },
   {
     "name": "Everybody's Stress Buster - Blue",
@@ -5619,14 +4957,6 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hot Shots Tennis - Get a Grip"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5638,7 +4968,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Everybody's Tennis UCES01420.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hot Shots Tennis - Get a Grip"
+      ]
+    }
   },
   {
     "name": "Everyday Shooter",
@@ -5657,11 +4992,6 @@
       "Action",
       "Platform",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5708,11 +5038,6 @@
       "Playing cards",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5754,11 +5079,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -5781,11 +5101,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -5795,11 +5110,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.00)"
-      }
     ]
   },
   {
@@ -5813,14 +5123,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 06"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Soccer 06"
+      ]
+    }
   },
   {
     "name": "FIFA 07",
@@ -5830,14 +5137,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 07"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Soccer 07"
+      ]
+    }
   },
   {
     "name": "FIFA 08",
@@ -5847,14 +5151,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 08"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Soccer 08"
+      ]
+    }
   },
   {
     "name": "FIFA 09",
@@ -5863,14 +5164,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 09"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -5889,7 +5182,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/FIFA 09 ULES01135.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "FIFA Soccer 09"
+      ]
+    }
   },
   {
     "name": "FIFA 10",
@@ -5899,14 +5197,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 10"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5914,7 +5204,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/FIFA Soccer 10 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "FIFA Soccer 10"
+      ]
+    }
   },
   {
     "name": "FIFA 11",
@@ -5924,14 +5219,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 11"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -5939,7 +5226,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/FIFA 11 (EUR).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "FIFA Soccer 11"
+      ]
+    }
   },
   {
     "name": "FIFA 12",
@@ -5949,14 +5241,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 12"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Soccer 12"
+      ]
+    }
   },
   {
     "name": "FIFA 13",
@@ -5966,14 +5255,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Soccer 13"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Soccer 13"
+      ]
+    }
   },
   {
     "name": "FIFA 14",
@@ -5983,15 +5269,12 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA 14 - Edicion Legado",
-          "FIFA 14 - Legacy Edition"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA 14 - Edicion Legado",
+        "FIFA 14 - Legacy Edition"
+      ]
+    }
   },
   {
     "name": "FIFA Soccer",
@@ -6000,11 +5283,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -6014,11 +5292,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -6037,16 +5310,13 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "FIFA Fussball-Weltmeisterschaft Deutschland 2006",
-          "FIFA World Cup Deutsch Taikai 2006",
-          "Mondiali FIFA 2006"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "FIFA Fussball-Weltmeisterschaft Deutschland 2006",
+        "FIFA World Cup Deutsch Taikai 2006",
+        "Mondiali FIFA 2006"
+      ]
+    }
   },
   {
     "name": "Fading Shadows",
@@ -6056,11 +5326,6 @@
       "Action",
       "Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -6102,11 +5367,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia)"
-      }
     ],
     "manuals": [
       {
@@ -6154,11 +5414,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -6167,11 +5422,6 @@
     "rating": 0.85,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It,Nl,Pt,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -6209,11 +5459,6 @@
     "rating": 0.85,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -6281,11 +5526,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6309,11 +5549,6 @@
     "rating": 0.85,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
     ],
     "manuals": [
       {
@@ -6360,14 +5595,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja)",
-        "clones": [
-          "Final Fantasy"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Final Fantasy"
+      ]
+    }
   },
   {
     "name": "Final Fantasy II - 20th Anniversary Edition",
@@ -6376,14 +5608,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja)",
-        "clones": [
-          "Final Fantasy II"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Final Fantasy II"
+      ]
+    }
   },
   {
     "name": "Final Fantasy III",
@@ -6400,14 +5629,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr)",
-        "clones": [
-          "Final Fantasy IV Complete Collection - Final Fantasy IV & The After Years"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Final Fantasy IV Complete Collection - Final Fantasy IV & The After Years"
+      ]
+    }
   },
   {
     "name": "Final Fantasy IX"
@@ -6427,14 +5653,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Final Fantasy Tactics - Shishi Sensou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6445,6 +5663,11 @@
     ],
     "renames": {
       "Final Fantasy Tactics - Shishi Sensou (Japan, Korea)": "Final Fantasy Tactics - Shishi Sensou (Korea)"
+    },
+    "group": {
+      "merge": [
+        "Final Fantasy Tactics - Shishi Sensou"
+      ]
     }
   },
   {
@@ -6550,11 +5773,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -6671,14 +5889,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ford Bold Moves Street Racing"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6686,7 +5896,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ford Bold Moves Street Racing (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ford Bold Moves Street Racing"
+      ]
+    }
   },
   {
     "name": "Forest Puzzle",
@@ -6703,14 +5918,11 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt,Fi)",
-        "clones": [
-          "F1 06 Portable"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "F1 06 Portable"
+      ]
+    }
   },
   {
     "name": "Fort Commander - King's Gambit",
@@ -6742,11 +5954,6 @@
     "genres": [
       "Action",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -6795,11 +6002,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -6812,11 +6014,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -6892,11 +6089,6 @@
     "rating": 0.3,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -6913,14 +6105,6 @@
     "genres": [
       "Driving",
       "Race"
-    ]
-  },
-  {
-    "name": "GUN Showdown",
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action"
     ]
   },
   {
@@ -6964,11 +6148,6 @@
       "Driving",
       "Race",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)"
-      }
     ]
   },
   {
@@ -6995,14 +6174,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Sincheon Magye - GOC IV - Another Side"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7020,7 +6191,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Generation of Chaos ULES00820.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sincheon Magye - GOC IV - Another Side"
+      ]
+    }
   },
   {
     "name": "Generation of Chaos - Pandora's Reflection",
@@ -7044,14 +6220,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hammerin' Hero"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7060,7 +6228,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gensan NPEH00119.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Hammerin' Hero"
+      ]
+    }
   },
   {
     "name": "Genso Chronicle",
@@ -7143,11 +6316,6 @@
       "Action",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -7157,11 +6325,6 @@
     "genres": [
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -7170,11 +6333,6 @@
     "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,Nl)"
-      }
     ]
   },
   {
@@ -7189,11 +6347,6 @@
     "rating": 0.8,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -7202,11 +6355,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -7232,14 +6380,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Kazuo"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7251,18 +6391,18 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Go! Sudoku UCES00152.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Kazuo"
+      ]
+    }
   },
   {
     "name": "Go!Explore",
     "genres": [
       "Various",
       "Various / Utilities"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(UK) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi)"
-      }
     ]
   },
   {
@@ -7272,14 +6412,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "God Eater Burst"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "God Eater Burst"
+      ]
+    }
   },
   {
     "name": "God Eater 2",
@@ -7306,14 +6443,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "God of War - Rakujitsu no Hisoukyoku"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7334,7 +6463,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/God of War Chains of Olympus NPEG00023.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "God of War - Rakujitsu no Hisoukyoku"
+      ]
+    }
   },
   {
     "name": "God of War - Chains of Olympus - Battle of Attica",
@@ -7359,14 +6493,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "God of War - Koutan no Kokuin"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7381,7 +6507,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/God of War Ghost of Sparta NPEG00044.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "God of War - Koutan no Kokuin"
+      ]
+    }
   },
   {
     "name": "Godfather, The",
@@ -7390,17 +6521,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Pl)",
-        "clones": [
-          "Godfather, The - Mob Wars",
-          "Padrino, El",
-          "Padrino, Il",
-          "Pate, Der"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7408,7 +6528,15 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Godfather, The - Mob Wars (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Godfather, The - Mob Wars",
+        "Padrino, El",
+        "Padrino, Il",
+        "Pate, Der"
+      ]
+    }
   },
   {
     "name": "Gods Eater Burst",
@@ -7416,11 +6544,6 @@
     "rating": 0.85,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -7463,17 +6586,14 @@
       "Action / Adventure",
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,No,Da)",
-        "clones": [
-          "A la croisee des mondes - La Boussole d'or",
-          "Brujula Dorada, La",
-          "Bussola d'Oro, La",
-          "Goldene Kompass, Der"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "A la croisee des mondes - La Boussole d'or",
+        "Brujula Dorada, La",
+        "Bussola d'Oro, La",
+        "Goldene Kompass, Der"
+      ]
+    }
   },
   {
     "name": "Golf Mania",
@@ -7490,14 +6610,6 @@
     "genres": [
       "Pinball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Pinball Hall of Fame - The Gottlieb Collection"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7509,7 +6621,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Gottlieb Pinball Classics ULES00213.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pinball Hall of Fame - The Gottlieb Collection"
+      ]
+    }
   },
   {
     "name": "Gradius",
@@ -7527,14 +6644,6 @@
       "Compilation",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Gradius Portable"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7542,7 +6651,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Gradius Collection (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Gradius Portable"
+      ]
+    }
   },
   {
     "name": "Gradius II - Gofer no Yabou"
@@ -7554,11 +6668,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.01)"
-      }
     ],
     "renames": {
       "Gran Turismo (Europe) (En,Fr,De,Es,It,Nl,Pt,Ru) (v2.00)": "Gran Turismo (Europe) (En,Fr,De,Es,It) (v2.00)"
@@ -7582,11 +6691,6 @@
       "Driving",
       "Race",
       "Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -7612,11 +6716,6 @@
       "Race",
       "Shooter",
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.05)"
-      }
     ],
     "manuals": [
       {
@@ -7646,11 +6745,6 @@
       "Race",
       "Shooter",
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -7793,11 +6887,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7850,11 +6939,6 @@
       "Beat'em Up",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7870,11 +6954,6 @@
     "rating": 0.9,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -7891,11 +6970,6 @@
     "rating": 0.75,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ]
   },
   {
@@ -7954,11 +7028,6 @@
     "rating": 0.75,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -7968,15 +7037,12 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Gurumin",
-          "Gurumin - Une Aventure Monstrueuse"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Gurumin",
+        "Gurumin - Une Aventure Monstrueuse"
+      ]
+    }
   },
   {
     "name": "HAL 21",
@@ -8052,14 +7118,6 @@
       "Role playing games",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Yuusha 30"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8067,7 +7125,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Half-Minute Hero ULES01359.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Yuusha 30"
+      ]
+    }
   },
   {
     "name": "Hamster Channel",
@@ -8097,11 +7160,6 @@
       "Adventure",
       "Music and Dance"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8122,11 +7180,6 @@
     "genres": [
       "Simulation",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -8136,14 +7189,11 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Harry Potter et la Coupe de Feu"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Harry Potter et la Coupe de Feu"
+      ]
+    }
   },
   {
     "name": "Harry Potter and the Half-Blood Prince",
@@ -8151,11 +7201,6 @@
     "rating": 0.35,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -8164,11 +7209,6 @@
     "rating": 0.55,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -8185,14 +7225,6 @@
       "Simulation",
       "Simulation / Life"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Bokujou Monogatari - Harvest Moon - Boy & Girl"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8200,7 +7232,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Harvest Moon - Boy & Girl (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Bokujou Monogatari - Harvest Moon - Boy & Girl"
+      ]
+    }
   },
   {
     "name": "Harvest Moon - Hero of Leaf Valley",
@@ -8209,11 +7246,6 @@
     "genres": [
       "Role playing games",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -8254,11 +7286,6 @@
     "rating": 0.95,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -8296,11 +7323,6 @@
     "rating": 0.4,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -8309,11 +7331,6 @@
     "rating": 0.5,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -8379,11 +7396,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -8470,11 +7482,6 @@
       "Puzzle-Game",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "emulation": {
       "rating": 2
     }
@@ -8484,11 +7491,6 @@
     "rating": 0.6,
     "genres": [
       "Casual Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -8533,11 +7535,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -8569,11 +7566,6 @@
     "rating": 0.6,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -8620,11 +7612,6 @@
     "rating": 0.55,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -8749,11 +7736,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "renames": {
       "Impossible Mission (Europe) (En,Fr,De,Es,It) (Beta)": "Impossible Mission (Europe) (En,Fr,De,Es,It) (Proto)"
     }
@@ -8764,11 +7746,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -8789,11 +7766,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)"
-      }
     ]
   },
   {
@@ -8812,11 +7784,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -8826,14 +7793,6 @@
     "genres": [
       "Adventure",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Innocent Life - Shin Bokujou Monogatari"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -8845,7 +7804,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Innocent Life A Futuristic Harvest Moon ULES00658.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Innocent Life - Shin Bokujou Monogatari"
+      ]
+    }
   },
   {
     "name": "International Athletics",
@@ -8877,11 +7841,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8912,11 +7871,6 @@
     "rating": 0.8,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
-      }
     ],
     "manuals": [
       {
@@ -8983,11 +7937,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9004,14 +7953,11 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Iron Man 2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Iron Man 2"
+      ]
+    }
   },
   {
     "name": "Itsumono Daifugou"
@@ -9052,11 +7998,6 @@
     "genres": [
       "Casual Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9077,11 +8018,6 @@
       "Action",
       "Action / Adventure",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
-      }
     ],
     "manuals": [
       {
@@ -9112,11 +8048,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9144,11 +8075,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -9282,11 +8208,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -9324,11 +8245,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -9338,11 +8254,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -9370,11 +8281,6 @@
     "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -9438,17 +8344,14 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Chameleon",
-          "Kuru Kuru Chameleon"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "Chameleon",
+        "Kuru Kuru Chameleon"
+      ]
     }
   },
   {
@@ -9488,11 +8391,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.00)"
-      }
     ],
     "manuals": [
       {
@@ -9547,14 +8445,11 @@
     "genres": [
       "Casual Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It)",
-        "clones": [
-          "X-treme Party"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "X-treme Party"
+      ]
+    }
   },
   {
     "name": "Ken to Mahou to Gakuen Mono."
@@ -9569,14 +8464,11 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Kenka Banchou 3 - Zenkoku Seiha"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Kenka Banchou 3 - Zenkoku Seiha"
+      ]
+    }
   },
   {
     "name": "Kenka Banchou 4 - Ichinen Sensou",
@@ -9609,15 +8501,6 @@
       "Action",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Kingdom of Paradise",
-          "Tenchi no Mon"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9641,6 +8524,12 @@
     ],
     "renames": {
       "Tenchi no Mon (Asia)": "Tenchi no Mon (Asia) (v1.01)"
+    },
+    "group": {
+      "merge": [
+        "Kingdom of Paradise",
+        "Tenchi no Mon"
+      ]
     }
   },
   {
@@ -9674,11 +8563,6 @@
     "players": 8,
     "genres": [
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan, Asia)"
-      }
     ]
   },
   {
@@ -9697,11 +8581,6 @@
   {
     "name": "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable",
     "players": 2,
-    "parents": [
-      {
-        "parent_flags": "(Japan, Asia)"
-      }
-    ],
     "renames": {
       "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan, Asia)": "Kidou Senshi Gundam Seed - Rengou vs. Z.A.F.T. Portable (Japan)"
     }
@@ -9712,11 +8591,6 @@
     "rating": 0.85,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -9788,11 +8662,6 @@
     "genres": [
       "Compilation",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -9832,17 +8701,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Kingdom Hearts - Birth by Sleep - Final Mix"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Kiniro no Corda"
+    "group": {
+      "merge": [
+        "Kingdom Hearts - Birth by Sleep - Final Mix"
+      ]
+    }
   },
   {
     "name": "Kinoko or Die 2"
@@ -9892,15 +8755,12 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Kollon",
-          "Ultimate Block Party"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Kollon",
+        "Ultimate Block Party"
+      ]
+    }
   },
   {
     "name": "Koori no Haka - Ichiyanagi Nagomu, 3-dome no Junan"
@@ -9977,24 +8837,11 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Rush"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "LEGO Batman - The Video Game",
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Action / Adventure",
-      "Platform"
-    ]
+    "group": {
+      "merge": [
+        "Rush"
+      ]
+    }
   },
   {
     "name": "LEGO Batman - The Videogame",
@@ -10004,11 +8851,6 @@
       "Action",
       "Action / Adventure",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Da)"
-      }
     ],
     "manuals": [
       {
@@ -10029,11 +8871,6 @@
     "rating": 0.65,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Da) (v2.01)"
-      }
     ]
   },
   {
@@ -10042,11 +8879,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Pl,Ru)"
-      }
     ]
   },
   {
@@ -10055,11 +8887,6 @@
     "rating": 0.8,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Da)"
-      }
     ],
     "manuals": [
       {
@@ -10086,11 +8913,6 @@
     "rating": 0.5,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)"
-      }
     ]
   },
   {
@@ -10099,11 +8921,6 @@
     "rating": 0.75,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da,Fi)"
-      }
     ],
     "manuals": [
       {
@@ -10131,11 +8948,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Da)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10150,11 +8962,6 @@
     "rating": 0.7,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Da)"
-      }
     ]
   },
   {
@@ -10189,11 +8996,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10213,11 +9015,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10301,14 +9098,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Eiyuu Densetsu - Sora no Kiseki FC"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10326,7 +9115,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/The Legend of Heroes Trails in the Sky ULES01556.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Eiyuu Densetsu - Sora no Kiseki FC"
+      ]
+    }
   },
   {
     "name": "Legend of Kunoichi",
@@ -10342,11 +9136,6 @@
     "rating": 0.4,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -10359,11 +9148,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10422,11 +9206,6 @@
       "Action",
       "Platform",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -10548,11 +9327,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Ru)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10610,11 +9384,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Ru)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10641,11 +9410,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)"
-      }
     ]
   },
   {
@@ -10657,11 +9421,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -10672,16 +9431,6 @@
       "Role playing games",
       "Tactical RPG"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Herr der Ringe, Der - Taktiken",
-          "Senor de los Anillos, El - Tacticas",
-          "Signore degli Anelli, Il - Tactics"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10689,7 +9438,14 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Lord of the Rings, The - Tactics (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Herr der Ringe, Der - Taktiken",
+        "Senor de los Anillos, El - Tacticas",
+        "Signore degli Anelli, Il - Tactics"
+      ]
+    }
   },
   {
     "name": "Love Cupid",
@@ -10715,14 +9471,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Lumines"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -10730,7 +9478,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Lumines (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Lumines"
+      ]
+    }
   },
   {
     "name": "Lumines II",
@@ -10738,11 +9491,6 @@
     "rating": 0.9,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -10775,11 +9523,6 @@
     "rating": 0.75,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -10798,11 +9541,6 @@
       "Driving",
       "Lightgun Shooter",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -10842,11 +9580,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -10855,11 +9588,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -10875,11 +9603,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -10904,11 +9627,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -10918,11 +9636,6 @@
       "Driving",
       "Race",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -10931,11 +9644,6 @@
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -10947,11 +9655,6 @@
       "Driving",
       "Motorcycle Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -10963,11 +9666,6 @@
       "Driving",
       "Motorcycle Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -10979,11 +9677,6 @@
       "Driving",
       "Motorcycle Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia)"
-      }
     ]
   },
   {
@@ -11037,11 +9730,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11076,11 +9764,6 @@
       "Sports",
       "Sports / Football"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11097,11 +9780,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11297,11 +9975,6 @@
       "Sports",
       "Sports / Baseball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11359,11 +10032,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11383,11 +10051,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11428,11 +10091,6 @@
     "rating": 0.6,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -11441,11 +10099,6 @@
     "rating": 0.5,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -11454,11 +10107,6 @@
     "rating": 0.75,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It)"
-      }
     ]
   },
   {
@@ -11467,11 +10115,6 @@
     "rating": 0.8,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -11481,11 +10124,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11508,14 +10146,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)",
-        "clones": [
-          "Puzzle Guzzle"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Puzzle Guzzle"
+      ]
+    }
   },
   {
     "name": "Me & My Katamari",
@@ -11525,14 +10160,11 @@
       "Action",
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Boku no Watashi no Katamari Damacy"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Boku no Watashi no Katamari Damacy"
+      ]
+    }
   },
   {
     "name": "Me Monstar - Hear Me Roar!",
@@ -11555,11 +10187,6 @@
       "Shooter",
       "Shooter / 1st person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11577,11 +10204,6 @@
       "Action",
       "Shooter",
       "Shooter / 1st person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -11608,11 +10230,6 @@
     "rating": 0.85,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11641,14 +10258,6 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Irregular Hunter X"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11660,7 +10269,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Mega Man Maverick Hunter X ULES00251.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Irregular Hunter X"
+      ]
+    }
   },
   {
     "name": "Mega Man - Powered Up",
@@ -11670,14 +10284,11 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Rockman Rockman"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Rockman Rockman"
+      ]
+    }
   },
   {
     "name": "Mega Minis Volume 1",
@@ -11710,12 +10321,6 @@
     ]
   },
   {
-    "name": "Meitantei Conan - Kakokara no Prelude",
-    "genres": [
-      "Adventure"
-    ]
-  },
-  {
     "name": "Memories Off 5 Encore"
   },
   {
@@ -11726,11 +10331,6 @@
       "Action",
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11763,11 +10363,6 @@
       "Action",
       "Playing cards"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11785,11 +10380,6 @@
       "Action",
       "Playing cards"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11806,11 +10396,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11826,11 +10411,6 @@
     "rating": 0.9,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11849,11 +10429,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11879,11 +10454,6 @@
     "rating": 0.7,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11931,14 +10501,6 @@
       "Shooter",
       "Shooter / Run and Gun"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Metal Slug Complete"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -11946,7 +10508,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Metal Slug Anthology (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Metal Slug Complete"
+      ]
+    }
   },
   {
     "name": "Metal Slug XX",
@@ -11957,11 +10524,6 @@
       "Beat'em Up",
       "Shooter",
       "Shooter / Run and Gun"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -11995,11 +10557,6 @@
     "genres": [
       "Shooter / 3rd person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12016,11 +10573,6 @@
     "genres": [
       "Music and Dance",
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pl,Ru)"
-      }
     ]
   },
   {
@@ -12039,11 +10591,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -12065,11 +10612,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -12096,11 +10638,6 @@
     "rating": 0.05,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -12134,24 +10671,11 @@
     ]
   },
   {
-    "name": "Mimana - Iyar Chronicle",
-    "players": 1,
-    "rating": 0.85,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  {
     "name": "Mind Quiz - Exercise Your Brain",
     "players": 1,
     "rating": 0.85,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -12240,11 +10764,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12313,14 +10832,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "Monster Hunter Portable"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12328,7 +10839,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Monster Hunter Freedom (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Monster Hunter Portable"
+      ]
+    }
   },
   {
     "name": "Monster Hunter Freedom 2",
@@ -12337,14 +10853,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Monster Hunter Portable 2nd"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12352,7 +10860,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Monster Hunter Freedom 2 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Monster Hunter Portable 2nd"
+      ]
+    }
   },
   {
     "name": "Monster Hunter Freedom Unite",
@@ -12360,14 +10873,6 @@
     "rating": 0.9,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Monster Hunter Portable 2nd G"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -12380,7 +10885,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Monster Hunter Freedom Unite ULES01213.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Monster Hunter Portable 2nd G"
+      ]
+    }
   },
   {
     "name": "Monster Hunter Portable 3rd",
@@ -12411,11 +10921,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -12424,11 +10929,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -12445,11 +10945,6 @@
     "rating": 0.9,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -12478,11 +10973,6 @@
       "Driving / Motorcycle",
       "Race",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,It,Nl)"
-      }
     ]
   },
   {
@@ -12492,11 +10982,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru,El)"
-      }
     ],
     "manuals": [
       {
@@ -12574,11 +11059,6 @@
     "genres": [
       "Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -12626,11 +11106,6 @@
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -12640,11 +11115,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -12654,11 +11124,6 @@
       "Driving",
       "Race",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -12683,11 +11148,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -12698,11 +11158,6 @@
       "Casual Game",
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -12745,11 +11200,6 @@
       "Sports",
       "Sports / Basketball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -12766,11 +11216,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -12780,11 +11225,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -12794,11 +11234,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -12823,11 +11258,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It)"
-      }
     ]
   },
   {
@@ -12836,11 +11266,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It)"
-      }
     ]
   },
   {
@@ -12850,11 +11275,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -12875,11 +11295,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It)"
-      }
     ]
   },
   {
@@ -12889,11 +11304,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It)"
-      }
     ]
   },
   {
@@ -12903,11 +11313,6 @@
     "genres": [
       "Sports",
       "Sports / Basketball"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -12916,11 +11321,6 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ],
     "manuals": [
       {
@@ -12958,11 +11358,6 @@
     "rating": 0.8,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -12970,11 +11365,6 @@
     "rating": 0.9,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -12983,11 +11373,6 @@
     "rating": 0.55,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -13007,11 +11392,6 @@
     "rating": 0.7,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan, Asia)"
-      }
     ]
   },
   {
@@ -13022,11 +11402,6 @@
       "Compilation",
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -13050,11 +11425,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13072,14 +11442,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Naruto - Narutimate Portable - Mugenjou no Maki"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13087,7 +11449,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManualsv1.2/Naruto - Ultimate Ninja Heroes 2 - The Phantom Fortress (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Naruto - Narutimate Portable - Mugenjou no Maki"
+      ]
+    }
   },
   {
     "name": "Naruto Shippuden - Kizuna Drive",
@@ -13097,16 +11464,13 @@
       "Beat'em Up",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Naruto Shippuuden - Kizuna Drive"
-        ]
-      }
-    ],
     "renames": {
       "Naruto Shippuuden - Kizuna Drive (Japan, Asia)": "Naruto Shippuuden - Kizuna Drive (Asia)"
+    },
+    "group": {
+      "merge": [
+        "Naruto Shippuuden - Kizuna Drive"
+      ]
     }
   },
   {
@@ -13116,11 +11480,6 @@
     "genres": [
       "Beat'em Up",
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -13131,14 +11490,11 @@
       "Beat'em Up",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Naruto Shippuuden - Narutimate Accel 3"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Naruto Shippuuden - Narutimate Accel 3"
+      ]
+    }
   },
   {
     "name": "Naruto Shippuden - Ultimate Ninja Impact",
@@ -13146,14 +11502,6 @@
     "rating": 0.85,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Naruto - Narutimate Impact"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -13175,6 +11523,11 @@
     ],
     "renames": {
       "Naruto - Narutimate Impact (Japan, Asia)": "Naruto - Narutimate Impact (Asia)"
+    },
+    "group": {
+      "merge": [
+        "Naruto - Narutimate Impact"
+      ]
     }
   },
   {
@@ -13196,11 +11549,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -13210,11 +11558,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -13242,26 +11585,12 @@
     ]
   },
   {
-    "name": "Need for Speed - Most Wanted 5-1-0",
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Driving",
-      "Race"
-    ]
-  },
-  {
     "name": "Need for Speed - ProStreet",
     "players": 4,
     "rating": 0.55,
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ],
     "manuals": [
       {
@@ -13283,11 +11612,6 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13304,11 +11628,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pl,Ru,Cs,Hu)"
-      }
     ]
   },
   {
@@ -13319,11 +11638,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13331,15 +11645,6 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Need for Speed - Underground Rivals (USA).pdf"
       }
-    ]
-  },
-  {
-    "name": "Need for Speed Carbon - Own the City",
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Driving",
-      "Race"
     ]
   },
   {
@@ -13434,14 +11739,11 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Nl)",
-        "clones": [
-          "Nickelodeon Avatar - The Last Airbender"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Nickelodeon Avatar - The Last Airbender"
+      ]
+    }
   },
   {
     "name": "Nickelodeon SpongeBob SquarePants - SpongeBob's Truth or Square",
@@ -13450,15 +11752,12 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,De,It,Nl)",
-        "clones": [
-          "Nickelodeon Bob Esponja - Atrapados en el Congelador",
-          "Nickelodeon SpongeBob's Truth or Square"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Nickelodeon Bob Esponja - Atrapados en el Congelador",
+        "Nickelodeon SpongeBob's Truth or Square"
+      ]
+    }
   },
   {
     "name": "Nickelodeon SpongeBob SquarePants - The Yellow Avenger",
@@ -13467,11 +11766,6 @@
     "genres": [
       "Adventure",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -13495,17 +11789,7 @@
     "genres": [
       "Shoot'em Up"
     ]
-  },
-  {
-    "name": "No Heroes Allowed",
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Simulation",
-      "Strategy"
-    ]
-  },
-  {
+  },  {
     "name": "No Heroes Allowed!",
     "players": 1,
     "rating": 0.75,
@@ -13626,11 +11910,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13641,14 +11920,6 @@
     ]
   },
   {
-    "name": "Obscure - The Aftermath",
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Action"
-    ]
-  },
-  {
     "name": "Off Road",
     "players": 6,
     "rating": 0.5,
@@ -13656,14 +11927,11 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ford Racing - Off Road"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Ford Racing - Off Road"
+      ]
+    }
   },
   {
     "name": "One Epic Game",
@@ -13708,11 +11976,6 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -13738,11 +12001,6 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,Da)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -13763,9 +12021,6 @@
   },
   {
     "name": "Ore no Imouto Maker EX - Imouto to Koishiyo Portable"
-  },
-  {
-    "name": "Ore no Imouto ga Konna ni Kawaii Wake ga Nai - Portable ga Tsuzuku Wake ga Nai"
   },
   {
     "name": "Ore no Imouto ga Konna ni Kawaii Wake ga Nai Portable ga Tsuzuku Wake ga Nai"
@@ -13789,11 +12044,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -13834,11 +12084,6 @@
     "name": "PDC World Championship Darts",
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -13849,14 +12094,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)",
-        "clones": [
-          "World Soccer Winning Eleven - Ubiquitous Evolution 2008"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -13864,7 +12101,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Pro Evolution Soccer 2008 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven - Ubiquitous Evolution 2008"
+      ]
+    }
   },
   {
     "name": "PES 2009 - Pro Evolution Soccer",
@@ -13874,14 +12116,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pt)",
-        "clones": [
-          "World Soccer Winning Eleven 2009"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven 2009"
+      ]
+    }
   },
   {
     "name": "PES 2010 - Pro Evolution Soccer",
@@ -13891,14 +12130,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,Ru)",
-        "clones": [
-          "World Soccer Winning Eleven 2010"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven 2010"
+      ]
+    }
   },
   {
     "name": "PES 2011 - Pro Evolution Soccer",
@@ -13908,14 +12144,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,Ru)",
-        "clones": [
-          "World Soccer Winning Eleven 2011"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven 2011"
+      ]
+    }
   },
   {
     "name": "PES 2012 - Pro Evolution Soccer",
@@ -13925,14 +12158,11 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,Ru,Tr)",
-        "clones": [
-          "World Soccer Winning Eleven 2012"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven 2012"
+      ]
+    }
   },
   {
     "name": "PES 2013 - Pro Evolution Soccer",
@@ -13941,11 +12171,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,Ru,Tr)"
-      }
     ]
   },
   {
@@ -13955,11 +12180,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Nl,Sv,Ru,Tr)"
-      }
     ]
   },
   {
@@ -13968,11 +12188,6 @@
     "rating": 0.7,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -14006,11 +12221,6 @@
     "genres": [
       "Action",
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -14048,11 +12258,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -14104,16 +12309,13 @@
       "Sports",
       "Sports / Golf"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Fantasy Golf Pangya Portable"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Fantasy Golf Pangya Portable"
+      ]
     }
   },
   {
@@ -14170,11 +12372,6 @@
     "name": "Passport to... Rome",
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -14184,11 +12381,6 @@
     "genres": [
       "Music and Dance",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -14219,14 +12411,6 @@
     "genres": [
       "Music and Dance"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Patapon 2 - Don-Chaka"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14241,7 +12425,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Patapon 2 UCES01177.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Patapon 2 - Don-Chaka"
+      ]
+    }
   },
   {
     "name": "Patapon 3",
@@ -14249,11 +12438,6 @@
     "rating": 0.85,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Pl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -14362,11 +12546,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Sv,No,Da,Fi)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14395,14 +12574,11 @@
       "Simulation",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Petz - Hamsterz Bunch"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Petz - Hamsterz Bunch"
+      ]
+    }
   },
   {
     "name": "Petz - My Puppy Family",
@@ -14412,14 +12588,11 @@
       "Simulation",
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Petz - Dogz Family"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Petz - Dogz Family"
+      ]
+    }
   },
   {
     "name": "Petz - Saddle Club",
@@ -14445,11 +12618,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -14458,14 +12626,6 @@
     "rating": 0.8,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Phantasy Star Portable 2 Infinity"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -14478,7 +12638,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Phantasy Star Portable 2 ULES01439.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Phantasy Star Portable 2 Infinity"
+      ]
+    }
   },
   {
     "name": "Phantasy Star Portable 2 - DLC Pack"
@@ -14633,11 +12798,6 @@
     "rating": 0.7,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -14677,11 +12837,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14706,22 +12861,11 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "PixelJunk Monsters UMD Limited Edition"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "PixelJunk Monsters Deluxe",
-    "players": 2,
-    "rating": 0.95,
-    "genres": [
-      "Strategy"
-    ]
+    "group": {
+      "merge": [
+        "PixelJunk Monsters UMD Limited Edition"
+      ]
+    }
   },
   {
     "name": "Piyotama",
@@ -14749,11 +12893,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -14764,12 +12903,7 @@
     ]
   },
   {
-    "name": "PlayEnglish",
-    "parents": [
-      {
-        "parent_flags": "(Spain)"
-      }
-    ]
+    "name": "PlayEnglish"
   },
   {
     "name": "PlayEnglish - Capitulos Extra"
@@ -14829,11 +12963,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14866,11 +12995,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -14912,11 +13036,6 @@
       "Compilation",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -14936,14 +13055,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "PQ2 - Practical Intelligence Quotient 2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "PQ2 - Practical Intelligence Quotient 2"
+      ]
+    }
   },
   {
     "name": "Prehistoric Isle",
@@ -14960,11 +13076,6 @@
       "Action",
       "Action / Adventure",
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -14992,11 +13103,6 @@
     "rating": 0.75,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -15026,14 +13132,11 @@
       "Action / Adventure",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Prince of Persia - Boukyaku no Suna"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Prince of Persia - Boukyaku no Suna"
+      ]
+    }
   },
   {
     "name": "Princess Crown",
@@ -15062,11 +13165,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15084,17 +13182,6 @@
     "name": "Prinny - Ore ga Shujinkou de Iinsuka",
     "players": 1,
     "rating": 0.75,
-    "genres": [
-      "Platform"
-    ]
-  },
-  {
-    "name": "Prinny 2 - Dawn of Operation Panties Dood"
-  },
-  {
-    "name": "Prinny 2 - Dawn of Operation Panties, Dood",
-    "players": 1,
-    "rating": 0.8,
     "genres": [
       "Platform"
     ]
@@ -15203,15 +13290,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "World Soccer Winning Eleven 9 - Ubiquitous Evolution",
-          "World Tour Soccer - Winning Eleven 9"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15219,7 +13297,13 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/World Soccer Winning Eleven 9 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "World Soccer Winning Eleven 9 - Ubiquitous Evolution",
+        "World Tour Soccer - Winning Eleven 9"
+      ]
+    }
   },
   {
     "name": "Pro Evolution Soccer 6",
@@ -15229,15 +13313,6 @@
       "Sports",
       "Sports / Soccer"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Winning Eleven - Pro Evolution Soccer 2007",
-          "World Soccer Winning Eleven 10 - Ubiquitous Evolution"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15245,7 +13320,13 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Winning Eleven - Pro Evolution Soccer 2007 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Winning Eleven - Pro Evolution Soccer 2007",
+        "World Soccer Winning Eleven 10 - Ubiquitous Evolution"
+      ]
+    }
   },
   {
     "name": "Pro Yakyuu Spirits 2010",
@@ -15286,11 +13367,6 @@
     "genres": [
       "Sports",
       "Sports / Golf"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -15300,15 +13376,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Es,It)",
-        "clones": [
-          "Carol Vorderman's Sudoku",
-          "Sudoku Coach"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15316,7 +13383,13 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Carol Vorderman's Sudoku (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Carol Vorderman's Sudoku",
+        "Sudoku Coach"
+      ]
+    }
   },
   {
     "name": "Promethus"
@@ -15351,14 +13424,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Chase Cop - Pursuit Force"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15376,7 +13441,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Pursuit Force UCES00019.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Chase Cop - Pursuit Force"
+      ]
+    }
   },
   {
     "name": "Pursuit Force - Extreme Justice",
@@ -15385,11 +13455,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -15413,14 +13478,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Puyo Puyo Fever"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Puyo Puyo Fever"
+      ]
+    }
   },
   {
     "name": "Puyo Puyo 7",
@@ -15459,11 +13521,6 @@
     "genres": [
       "Puzzle-Game",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -15473,14 +13530,6 @@
     "genres": [
       "Puzzle-Game",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Simple 2500 Series Portable!! Vol. 11 - The Puzzle Quest - Agaria no Kishi"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -15493,7 +13542,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Puzzle Quest Challenge of the Warlords ULES00909.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Simple 2500 Series Portable!! Vol. 11 - The Puzzle Quest - Agaria no Kishi"
+      ]
+    }
   },
   {
     "name": "Puzzle Scape",
@@ -15511,12 +13565,7 @@
   },
   {
     "name": "Puzzler Collection",
-    "rating": 0.75,
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ]
+    "rating": 0.75
   },
   {
     "name": "Qruton",
@@ -15562,14 +13611,11 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "R-Type Command"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "R-Type Command"
+      ]
+    }
   },
   {
     "name": "RPG - End of Aspiration",
@@ -15600,14 +13646,11 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Ragnarok - Hikari to Yami no Koujo"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Ragnarok - Hikari to Yami no Koujo"
+      ]
+    }
   },
   {
     "name": "Rainbow Islands Evolution",
@@ -15615,11 +13658,6 @@
     "rating": 0.4,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -15702,11 +13740,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15732,11 +13765,6 @@
     "rating": 0.85,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -15788,11 +13816,6 @@
     "genres": [
       "Simulation",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -15811,11 +13834,6 @@
     "genres": [
       "Action / Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15831,11 +13849,6 @@
     "rating": 0.65,
     "genres": [
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -15860,11 +13873,6 @@
     "rating": 0.85,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -15919,11 +13927,6 @@
     "name": "Rezel Cross",
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -15934,14 +13937,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ridge Racers"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -15949,7 +13944,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ridge Racer (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ridge Racers"
+      ]
+    }
   },
   {
     "name": "Ridge Racer 2",
@@ -15958,11 +13958,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -15986,14 +13981,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,It)",
-        "clones": [
-          "Riviera - Yakusoku no Chi"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16011,7 +13998,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Riviera The Promised Land ULES00818.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Riviera - Yakusoku no Chi"
+      ]
+    }
   },
   {
     "name": "Ro-Kyu-Bu!",
@@ -16040,19 +14032,11 @@
     ]
   },
   {
-    "name": "Rock Band - Unplugged"
-  },
-  {
     "name": "Rock Band Unplugged",
     "players": 1,
     "rating": 0.8,
     "genres": [
       "Music and Dance"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -16101,11 +14085,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -16184,16 +14163,13 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "SBK - Superbike World Championship"
-        ]
-      }
-    ],
     "renames": {
       "SBK - Superbike World Championship (USA)": "SBK - Superbike World Championship (USA) (En,Fr,Es)"
+    },
+    "group": {
+      "merge": [
+        "SBK - Superbike World Championship"
+      ]
     }
   },
   {
@@ -16212,25 +14188,17 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Hannspree Ten Kate Honda - SBK Superbike World Championship"
-        ]
-      }
-    ],
     "renames": {
       "Hannspree Ten Kate Honda - SBK Superbike World Championship (USA) (En,Fr,Es)": "Hannspree Ten Kate Honda SBK - Superbike World Championship (USA)"
+    },
+    "group": {
+      "merge": [
+        "Hannspree Ten Kate Honda - SBK Superbike World Championship"
+      ]
     }
   },
   {
-    "name": "SCEJ PSP Browser",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (UTST-99261)"
-      }
-    ]
+    "name": "SCEJ PSP Browser"
   },
   {
     "name": "SD Gundam - GGeneration Portable",
@@ -16260,11 +14228,6 @@
     "genres": [
       "Compilation"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "renames": {
       "SNK Arcade Classics Vol. 1 (Korea)": "SNK Arcade Classics Vol. 1 (Asia)"
     }
@@ -16283,11 +14246,6 @@
     "rating": 0.8,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -16317,11 +14275,6 @@
     "rating": 0.85,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -16330,11 +14283,6 @@
     "rating": 0.85,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -16359,11 +14307,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Ko)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16380,11 +14323,6 @@
     "genres": [
       "Sports",
       "Sports / Skiing"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ]
   },
   {
@@ -16393,11 +14331,6 @@
     "rating": 0.5,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -16481,14 +14414,6 @@
     "genres": [
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Geki Sengoku Musou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16496,10 +14421,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Samurai Warriors - State of War (USA).pdf"
       }
-    ]
-  },
-  {
-    "name": "Samuraidou 2 Portable"
+    ],
+    "group": {
+      "merge": [
+        "Geki Sengoku Musou"
+      ]
+    }
   },
   {
     "name": "Sangoku-hime - Sangoku Ransei - Haten no Saihai"
@@ -16525,13 +14452,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ]
-  },
-  {
-    "name": "Saru Get You - SaruSaru Daisakusen",
-    "players": 1,
-    "genres": [
-      "Platform"
     ]
   },
   {
@@ -16570,11 +14490,6 @@
     "rating": 0.3,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es,It)"
-      }
     ]
   },
   {
@@ -16586,11 +14501,6 @@
     "rating": 0.8,
     "genres": [
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -16617,11 +14527,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt,Sv,No,Da,Fi,Pl)"
-      }
     ]
   },
   {
@@ -16630,11 +14535,6 @@
     "rating": 0.8,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -16643,14 +14543,6 @@
     "rating": 0.8,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Sega Genesis Collection"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -16665,7 +14557,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Sega Mega Drive Collection ULES00556.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Sega Genesis Collection"
+      ]
+    }
   },
   {
     "name": "Sega Rally",
@@ -16675,14 +14572,11 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.00)",
-        "clones": [
-          "Sega Rally Revo"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Sega Rally Revo"
+      ]
+    }
   },
   {
     "name": "Sengoku Basara - Battle Heroes",
@@ -16745,14 +14639,11 @@
     "genres": [
       "Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Shadow of Memories"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Shadow of Memories"
+      ]
+    }
   },
   {
     "name": "Shapo",
@@ -16775,11 +14666,6 @@
     "rating": 0.65,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -16852,11 +14738,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16877,14 +14758,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "P3P - Yeosin Jeonsaeng - Persona 3 Portable"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -16892,7 +14765,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Shin Megami Tensei Persona 3 Portable ULES01523.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "P3P - Yeosin Jeonsaeng - Persona 3 Portable"
+      ]
+    }
   },
   {
     "name": "Shin Sangoku Musou - Multi Raid 2"
@@ -16985,11 +14863,6 @@
       "Adventure",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17010,11 +14883,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "emulation": {
       "rating": 1
     }
@@ -17025,14 +14893,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Silent Hill Zero"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -17050,6 +14910,11 @@
     ],
     "emulation": {
       "rating": 1
+    },
+    "group": {
+      "merge": [
+        "Silent Hill Zero"
+      ]
     }
   },
   {
@@ -17093,16 +14958,13 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Simpson, I - Il Videogioco",
-          "Simpson, Les - Le Jeu",
-          "Simpsons, Die - Das Spiel"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Simpson, I - Il Videogioco",
+        "Simpson, Les - Le Jeu",
+        "Simpsons, Die - Das Spiel"
+      ]
+    }
   },
   {
     "name": "Sims 2, The",
@@ -17110,11 +14972,6 @@
     "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17123,11 +14980,6 @@
     "rating": 0.7,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl,Pt)"
-      }
     ],
     "renames": {
       "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl,Pt)": "Sims 2, The - Castaway (Europe) (En,Fr,De,Es,It,Nl)"
@@ -17139,11 +14991,6 @@
     "rating": 0.6,
     "genres": [
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Nl)"
-      }
     ]
   },
   {
@@ -17181,14 +15028,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Baku-No"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17196,7 +15035,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Smart Bomb (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Baku-No"
+      ]
+    }
   },
   {
     "name": "Smash Court Tennis 3",
@@ -17204,11 +15048,6 @@
     "rating": 0.8,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17296,11 +15135,6 @@
       "Platform",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17329,11 +15163,6 @@
       "Driving",
       "Platform",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -17377,11 +15206,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It,Ru)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17414,11 +15238,6 @@
     "genres": [
       "Action",
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Ja,Fr,De,Es,It)"
-      }
     ],
     "renames": {
       "Space Invaders Extreme (Europe) (En,Ja,Fr,De,Es,It) (Beta)": "Space Invaders Extreme (Europe) (En,Ja,Fr,De,Es,It) (Proto)"
@@ -17466,15 +15285,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Shinki Gensou - SSII Unlimited Side",
-          "Singi Hwansang - SSII Unlimited Side"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17492,18 +15302,19 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Spectral Souls Resurrection of the Ethereal Empire NPEH00105.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shinki Gensou - SSII Unlimited Side",
+        "Singi Hwansang - SSII Unlimited Side"
+      ]
+    }
   },
   {
     "name": "Spectral vs. Generation",
     "rating": 0.7,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -17527,14 +15338,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,It)",
-        "clones": [
-          "Spider-Man - Freund oder Feind"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17542,7 +15345,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Spider-Man - Friend or Foe (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Spider-Man - Freund oder Feind"
+      ]
+    }
   },
   {
     "name": "Spider-Man - Web of Shadows - Amazing Allies Edition",
@@ -17550,11 +15358,6 @@
     "rating": 0.25,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17564,11 +15367,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17577,11 +15375,6 @@
     "rating": 0.65,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17618,14 +15411,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Ru)",
-        "clones": [
-          "Split-Second"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17643,7 +15428,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Split_Second Velocity ULES01402.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Split-Second"
+      ]
+    }
   },
   {
     "name": "Spot the Differences!",
@@ -17699,11 +15489,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17719,11 +15504,6 @@
     "rating": 0.7,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -17752,11 +15532,6 @@
     "rating": 0.6,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -17765,11 +15540,6 @@
     "rating": 0.7,
     "genres": [
       "Lightgun Shooter"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -17790,11 +15560,6 @@
     "rating": 0.6,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -17804,11 +15569,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)"
-      }
     ],
     "manuals": [
       {
@@ -17827,11 +15587,6 @@
     "rating": 0.85,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -17861,11 +15616,6 @@
       "Shooter",
       "Shooter / 3rd person"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -17886,11 +15636,6 @@
     "genres": [
       "Shooter",
       "Shooter / 3rd person"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -17927,15 +15672,6 @@
     ]
   },
   {
-    "name": "State Shift",
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Driving",
-      "Race"
-    ]
-  },
-  {
     "name": "StateShift",
     "players": 1,
     "rating": 0.5,
@@ -17963,11 +15699,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Es,It)"
-      }
     ]
   },
   {
@@ -18001,11 +15732,6 @@
     "rating": 0.45,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -18049,11 +15775,6 @@
     "name": "Storm Lover",
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)"
-      }
     ]
   },
   {
@@ -18071,14 +15792,6 @@
       "Action",
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Street Fighter Zero 3 Double Upper"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18095,7 +15808,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Street Fighter Alpha 3 MAX ULES00235.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Street Fighter Zero 3 Double Upper"
+      ]
+    }
   },
   {
     "name": "Street Riders",
@@ -18121,11 +15839,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -18162,11 +15875,6 @@
     "genres": [
       "Role playing games",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -18183,11 +15891,6 @@
     "rating": 0.75,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "renames": {
       "Super Collapse! 3 (USA)": "Super Collapse 3 (USA)"
@@ -18246,11 +15949,6 @@
       "Platform",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18276,14 +15974,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Simple 2500 Series Portable!! Vol. 2 - The Tennis"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18295,7 +15985,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Super Pocket Tennis ULES00619.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Simple 2500 Series Portable!! Vol. 2 - The Tennis"
+      ]
+    }
   },
   {
     "name": "Super Robot Taisen - Operation Extend",
@@ -18334,14 +16029,6 @@
   {
     "name": "Super Robot Taisen OG Saga - Masou Kishin - The Lord of Elemental",
     "rating": 0.95,
-    "genres": [
-      "Role playing games",
-      "Strategy"
-    ]
-  },
-  {
-    "name": "Super Robot Taisen OG Saga - Masou Kishin II - Revelation of Evil God",
-    "rating": 0.8,
     "genres": [
       "Role playing games",
       "Strategy"
@@ -18400,11 +16087,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,Es)"
-      }
     ],
     "manuals": [
       {
@@ -18497,11 +16179,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18530,11 +16207,6 @@
     "rating": 0.85,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It,Pl,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -18576,11 +16248,6 @@
     "genres": [
       "Beat'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "renames": {
       "TMNT (Europe) (En,Fr,De,Es,It)": "TMNT - Teenage Mutant Ninja Turtles (Europe) (En,Fr,De,Es,It)"
     }
@@ -18592,11 +16259,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -18621,17 +16283,14 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "DTM Race Driver 3 - Challenge",
-          "V8 Supercars Australia 3 - Shootout"
-        ]
-      }
-    ],
     "emulation": {
       "rating": 2
+    },
+    "group": {
+      "merge": [
+        "DTM Race Driver 3 - Challenge",
+        "V8 Supercars Australia 3 - Shootout"
+      ]
     }
   },
   {
@@ -18666,14 +16325,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Tactics Ogre - Unmei no Wa"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18681,18 +16332,18 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tactics Ogre Let Us Cling Together ULES01500.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tactics Ogre - Unmei no Wa"
+      ]
+    }
   },
   {
     "name": "Taiko no Tatsujin Portable",
     "genres": [
       "Music and Dance",
       "Rhythm"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Japan, Asia) (v2.00)"
-      }
     ],
     "renames": {
       "Taiko no Tatsujin Portable (Japan, Asia) (v2.00)": "Taiko no Tatsujin Portable (Japan) (v2.00)"
@@ -18756,11 +16407,6 @@
     "rating": 0.6,
     "genres": [
       "Compilation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -18820,11 +16466,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -18847,42 +16488,24 @@
     "rating": 0.8,
     "genres": [
       "Various"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Ja,Fr,De,Es,It)"
-      }
     ]
   },
   {
-    "name": "TalkMan Euro! TalkMan Europa Gengo-ban",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (En,Ja,Fr,De,Es,It)"
-      }
-    ]
+    "name": "TalkMan Euro! TalkMan Europa Gengo-ban"
   },
   {
     "name": "TalkMan-shiki Shabelingual Eikaiwa",
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Japan)",
-        "clones": [
-          "Talkman Yeongeohoehwa Sudajaeng English"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Talkman Yeongeohoehwa Sudajaeng English"
+      ]
+    }
   },
   {
-    "name": "TalkMan-shiki Shabelingual Eikaiwa for Kids!",
-    "parents": [
-      {
-        "parent_flags": "(Japan) (En,Ja) (Microphone Doukonban)"
-      }
-    ]
+    "name": "TalkMan-shiki Shabelingual Eikaiwa for Kids!"
   },
   {
     "name": "Talkman Travel - Paris"
@@ -18935,11 +16558,6 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It) (v1.00)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -18958,11 +16576,6 @@
     "rating": 0.8,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Ja,Fr,De,Es,It,Ko,Ru)"
-      }
     ],
     "manuals": [
       {
@@ -18999,9 +16612,6 @@
     "name": "Tenchi no Mon 2 - Busouden"
   },
   {
-    "name": "Tenchi no Mon 2 Busouden"
-  },
-  {
     "name": "Tenchu - Shadow Assassins",
     "players": 1,
     "rating": 0.7,
@@ -19009,14 +16619,11 @@
       "Action",
       "Action / Adventure"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Tenchu 4"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Tenchu 4"
+      ]
+    }
   },
   {
     "name": "Tenchu - Time of the Assassins",
@@ -19025,14 +16632,11 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Tenchu - Shinobi Taizen"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Tenchu - Shinobi Taizen"
+      ]
+    }
   },
   {
     "name": "Tengai Makyou - Ziria",
@@ -19058,11 +16662,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -19107,11 +16706,6 @@
     "genres": [
       "Simulation",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -19121,11 +16715,6 @@
     "genres": [
       "Casual Game",
       "Simulation"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -19155,11 +16744,6 @@
     "genres": [
       "Simulation",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -19168,11 +16752,6 @@
     "genres": [
       "Simulation",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -19190,11 +16769,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "emulation": {
       "rating": 2
     }
@@ -19205,11 +16779,6 @@
     "rating": 0.65,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -19226,11 +16795,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -19246,11 +16810,6 @@
     "rating": 0.9,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -19335,14 +16894,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Karakuri"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -19354,7 +16905,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Tokobot ULES00312.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Karakuri"
+      ]
+    }
   },
   {
     "name": "Tokutenou"
@@ -19365,11 +16921,6 @@
     "rating": 0.6,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -19387,11 +16938,6 @@
     "genres": [
       "Action",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -19412,11 +16958,6 @@
     "rating": 0.65,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -19440,11 +16981,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -19466,11 +17002,6 @@
     "genres": [
       "Action",
       "Action / Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It) (v1.02)"
-      }
     ],
     "manuals": [
       {
@@ -19533,11 +17064,6 @@
     "genres": [
       "Sports",
       "Sports / Skateboard"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -19547,11 +17073,6 @@
     "genres": [
       "Sports",
       "Sports / Skateboard"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -19680,11 +17201,6 @@
     "rating": 0.15,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)"
-      }
     ]
   },
   {
@@ -19693,11 +17209,6 @@
     "rating": 0.3,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -19770,17 +17281,6 @@
     ]
   },
   {
-    "name": "Twisted Metal - Head On",
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "3rd person",
-      "Action",
-      "Shooter",
-      "Shooter / Vehicle"
-    ]
-  },
-  {
     "name": "Twisted Metal - Head-On",
     "players": 1,
     "rating": 0.7,
@@ -19789,11 +17289,6 @@
       "Action",
       "Shooter",
       "Shooter / Vehicle"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -19810,11 +17305,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -19824,11 +17314,6 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
     ],
     "manuals": [
       {
@@ -19846,11 +17331,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -19869,11 +17349,6 @@
       "Strategy",
       "Thinking"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -19884,15 +17359,6 @@
     ]
   },
   {
-    "name": "Ultimate Ghosts 'n Goblins",
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Action",
-      "Platform"
-    ]
-  },
-  {
     "name": "Ultimate Ghosts'n Goblins",
     "players": 1,
     "rating": 0.8,
@@ -19900,15 +17366,12 @@
       "Action",
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Goku Makaimura",
-          "Goku Makaimura Kai"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Goku Makaimura",
+        "Goku Makaimura Kai"
+      ]
+    }
   },
   {
     "name": "Umihara Kawase Portable"
@@ -19944,11 +17407,6 @@
     "rating": 0.7,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -19957,11 +17415,6 @@
     "rating": 0.75,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -19978,11 +17431,6 @@
     "rating": 0.85,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -20097,11 +17545,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20121,11 +17564,6 @@
     "rating": 0.55,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -20164,14 +17602,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Senjou no Valkyria 2 - Gallia Ouritsu Shikan Gakkou"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20183,7 +17613,12 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Valkyria Chronicles II ULES01417.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Senjou no Valkyria 2 - Gallia Ouritsu Shikan Gakkou"
+      ]
+    }
   },
   {
     "name": "Valkyrie Profile - Lenneth",
@@ -20191,11 +17626,6 @@
     "rating": 0.9,
     "genres": [
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -20278,14 +17708,11 @@
     "genres": [
       "Fight"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Viewtiful Joe - Battle Carnival"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Viewtiful Joe - Battle Carnival"
+      ]
+    }
   },
   {
     "name": "Viorate no Atelier - Gramnad no Renkinjutsushi 2 - Gunjou no Omoide",
@@ -20301,14 +17728,6 @@
       "Sports",
       "Sports / Tennis"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Power Smash - New Generation"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20322,7 +17741,12 @@
         ],
         "url": "https://archive.org/download/psp-virtua-tennis-world-tour-manuale-ita/PSP - Virtua Tennis World Tour - Manuale (ITA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Power Smash - New Generation"
+      ]
+    }
   },
   {
     "name": "Virtua Tennis 3",
@@ -20331,11 +17755,6 @@
     "genres": [
       "Sports",
       "Sports / Tennis"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -20389,11 +17808,6 @@
       "Driving",
       "Race"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20410,14 +17824,11 @@
     "genres": [
       "Various"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Beit Hell 2000"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Beit Hell 2000"
+      ]
+    }
   },
   {
     "name": "WWE All Stars",
@@ -20426,22 +17837,9 @@
       "Fight",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "renames": {
       "WWE All Stars (Europe) (En,Fr,De,Es,It)": "WWE All Stars (Europe)"
     }
-  },
-  {
-    "name": "WWE All-Stars",
-    "rating": 0.7,
-    "genres": [
-      "Fight",
-      "Sports"
-    ]
   },
   {
     "name": "WWE SmackDown vs. Raw 2006",
@@ -20450,11 +17848,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -20463,11 +17856,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -20485,11 +17873,6 @@
       "Fight",
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20506,11 +17889,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -20533,11 +17911,6 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -20547,16 +17920,7 @@
     "genres": [
       "Fight",
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
-  },
-  {
-    "name": "WWII - Battle Over the Pacific",
-    "rating": 0.55
   },
   {
     "name": "WWII - Battle over the Pacific",
@@ -20621,11 +17985,6 @@
     "rating": 0.8,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -20642,14 +18001,6 @@
       "Beat'em Up",
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Musou Orochi"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20661,23 +18012,18 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Warriors Orochi ULES01054.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Musou Orochi"
+      ]
+    }
   },
   {
     "name": "Warriors Orochi 2",
     "rating": 0.9,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Musou Orochi - Maou Sairin",
-          "Musou Orochi - Maou Sairin Enhanced Version",
-          "Mussang Orochi - Mawang Jaerim Plus"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -20690,7 +18036,14 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/Warriors Orochi 2 ULES01261.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Musou Orochi - Maou Sairin",
+        "Musou Orochi - Maou Sairin Enhanced Version",
+        "Mussang Orochi - Mawang Jaerim Plus"
+      ]
+    }
   },
   {
     "name": "Warriors of the Lost Empire",
@@ -20699,11 +18052,6 @@
     "genres": [
       "Action RPG",
       "Role playing games"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -20713,11 +18061,6 @@
     "genres": [
       "Action",
       "Beat'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ],
     "manuals": [
       {
@@ -20770,14 +18113,11 @@
       "Simulation",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr)",
-        "clones": [
-          "Yuusha no Kuse ni Namaikida or2"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Yuusha no Kuse ni Namaikida or2"
+      ]
+    }
   },
   {
     "name": "What Did I Do to Deserve This, My Lord! 2 - A Day Without a Badman"
@@ -20800,14 +18140,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Shirokishi Monogatari Episode Portable - Dogma Wars"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20822,19 +18154,21 @@
         ],
         "url": "https://archive.org/download/PSP-instruction-manuals-and-document-dat/White Knight Chronicles Origins UCES01511.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Shirokishi Monogatari Episode Portable - Dogma Wars"
+      ]
+    }
   },
   {
     "name": "Who Wants to Be a Millionaire - Party Edition",
     "rating": 0.45,
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Chi Vuol Essere Milionario - Party Edition"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Chi Vuol Essere Milionario - Party Edition"
+      ]
+    }
   },
   {
     "name": "Who's That Flying",
@@ -20877,14 +18211,6 @@
       "Role playing games",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Wild Arms - Crossfire"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20892,7 +18218,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Wild Arms XF (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wild Arms - Crossfire"
+      ]
+    }
   },
   {
     "name": "Williams Pinball Classics",
@@ -20901,14 +18232,11 @@
     "genres": [
       "Pinball"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es)",
-        "clones": [
-          "Pinball Hall of Fame - The Williams Collection"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Pinball Hall of Fame - The Williams Collection"
+      ]
+    }
   },
   {
     "name": "Win-JPT - Ilboneo Chogeub"
@@ -20932,11 +18260,6 @@
       "Action",
       "Casual Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -20953,11 +18276,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe, Australia) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -20994,11 +18312,6 @@
     "genres": [
       "Driving",
       "Race"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -21076,11 +18389,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21095,11 +18403,6 @@
     "rating": 0.4,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -21136,11 +18439,6 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21156,11 +18454,6 @@
     "genres": [
       "Playing cards"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21175,11 +18468,6 @@
     "rating": 0.8,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -21188,11 +18476,6 @@
     "rating": 0.7,
     "genres": [
       "Puzzle-Game"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)"
-      }
     ]
   },
   {
@@ -21228,11 +18511,6 @@
     "rating": 0.65,
     "genres": [
       "Sports"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -21241,14 +18519,6 @@
     "genres": [
       "Sports"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "World Tour Soccer 06"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21256,7 +18526,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/World Tour Soccer 06 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "World Tour Soccer 06"
+      ]
+    }
   },
   {
     "name": "World of Pool",
@@ -21306,11 +18581,6 @@
     "rating": 0.75,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -21319,11 +18589,6 @@
     "rating": 0.85,
     "genres": [
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -21333,14 +18598,11 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,It)",
-        "clones": [
-          "X-Men Legends II - El Ascenso de Apocalipsis"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "X-Men Legends II - El Ascenso de Apocalipsis"
+      ]
+    }
   },
   {
     "name": "X-Men Origins - Wolverine",
@@ -21348,11 +18610,6 @@
     "rating": 0.55,
     "genres": [
       "Fight"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -21362,11 +18619,6 @@
     "genres": [
       "Action",
       "Platform"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -21383,11 +18635,6 @@
     "rating": 0.75,
     "genres": [
       "Shoot'em Up"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ],
     "manuals": [
       {
@@ -21426,11 +18673,6 @@
     "genres": [
       "Playing cards",
       "Strategy"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
     ]
   },
   {
@@ -21457,14 +18699,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Ys VI - Napishtim no Hako"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21472,7 +18706,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Ys - The Ark of Napishtim (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Ys VI - Napishtim no Hako"
+      ]
+    }
   },
   {
     "name": "Ys - The Oath in Felghana",
@@ -21517,11 +18756,6 @@
     "genres": [
       "Role playing games"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21545,11 +18779,6 @@
     "rating": 0.8,
     "genres": [
       "Playing cards"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
     ]
   },
   {
@@ -21560,14 +18789,11 @@
       "Playing cards",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Yu-Gi-Oh! 5D's Tag Force 5"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Yu-Gi-Oh! 5D's Tag Force 5"
+      ]
+    }
   },
   {
     "name": "Yu-Gi-Oh! 5D's - Tag Force 6",
@@ -21589,11 +18815,6 @@
     "genres": [
       "Playing cards"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)"
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21610,14 +18831,6 @@
     "genres": [
       "Playing cards"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe) (En,Fr,De,Es,It)",
-        "clones": [
-          "Yu-Gi-Oh! Duel Monsters GX - Tag Force 2"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -21625,7 +18838,12 @@
         ],
         "url": "https://archive.org/download/SonyPSPManuals/Yu-Gi-Oh! GX - Tag Force 2 (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Yu-Gi-Oh! Duel Monsters GX - Tag Force 2"
+      ]
+    }
   },
   {
     "name": "Yu-Gi-Oh! GX - Tag Force 3",
@@ -21778,31 +18996,7 @@
     ]
   },
   {
-    "name": "inviZimals",
-    "players": 2,
-    "rating": 0.85,
-    "genres": [
-      "Various"
-    ]
-  },
-  {
     "name": "inviZimals - Collectible Card Game - Hidden Challenges"
-  },
-  {
-    "name": "inviZimals - Shadow Zone",
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Various"
-    ]
-  },
-  {
-    "name": "inviZimals - The Lost Tribes",
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Simulation"
-    ]
   },
   {
     "name": "unENDing Bloody Call"

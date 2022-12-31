@@ -58,8 +58,8 @@ __create_collection() {
   # Track which playlists we've installed
   declare -A installed_playlists
 
-  while IFS=» read -r name title parent_title playlist_name install_path; do
-    if [ -z "${collection_titles["$title"]}" ] && { [ -z "$parent_title" ] || [ -z "${collection_titles["$parent_title"]}" ]; }; then
+  while IFS=» read -r name title group_title playlist_name install_path; do
+    if [ -z "${collection_titles["$title"]}" ] && { [ -z "$group_title" ] || [ -z "${collection_titles["$group_title"]}" ]; }; then
       # Not in the collection -- skip
       continue
     fi
@@ -86,7 +86,7 @@ __create_collection() {
       echo "Adding $rom_path to $target_collection_path"
       echo "$rom_path" >> "$target_collection_path"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent .title, .playlist .name, .path] | join("»")' | sort)
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group .title, .playlist .name, .path] | join("»")' | sort)
 
   # Sort the collection at the end
   sort -o "$target_collection_path" "$target_collection_path"

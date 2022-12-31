@@ -40,7 +40,7 @@ configure() {
     # Find an override file for either the rom or its parent
     local override_file=""
     local filename
-    for filename in "$rom_name" "$title" "$parent_name" "$parent_title"; do
+    for filename in "$rom_name" "$title" "$group_name" "$group_title"; do
       if [ -z "$filename" ]; then
         continue
       fi
@@ -56,7 +56,7 @@ configure() {
     if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .parent.name, .parent.title, .playlist.name, .tags | join(",")] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group.name, .group.title, .playlist.name, .tags | join(",")] | join("»")')
 
   # Remove unused files
   while read -r path; do

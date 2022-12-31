@@ -221,14 +221,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Air-Sea Battle ~ Target Fun"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -246,7 +238,12 @@
         ],
         "url": "https://archive.org/download/air-sea-battle-atari-2600-eur-m-5/Air-Sea Battle (Atari 2600)(EUR)[M5]_images.zip"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Air-Sea Battle ~ Target Fun"
+      ]
+    }
   },
   {
     "name": "Airlock",
@@ -1606,14 +1603,11 @@
   },
   {
     "name": "Colours",
-    "parents": [
-      {
-        "parent_flags": "(USA, Europe) (Atari Anthology)",
-        "clones": [
-          "Colors"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Colors"
+      ]
+    }
   },
   {
     "name": "Combat",
@@ -2066,14 +2060,6 @@
       "Action",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Dishaster"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2088,7 +2074,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Dancing Plate (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Dishaster"
+      ]
+    }
   },
   {
     "name": "Dark Cavern",
@@ -2340,13 +2331,6 @@
     ]
   },
   {
-    "name": "Dishaster",
-    "genres": [
-      "Action",
-      "Strategy"
-    ]
-  },
-  {
     "name": "Dodge 'Em ~ Dodger Cars",
     "players": 2,
     "rating": 0.7,
@@ -2380,14 +2364,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Vogel Flieh"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -2395,7 +2371,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/dolphin.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Vogel Flieh"
+      ]
+    }
   },
   {
     "name": "Donald Duck's Speedboat",
@@ -3835,14 +3816,11 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "I.Q. Memory Teaser"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "I.Q. Memory Teaser"
+      ]
+    }
   },
   {
     "name": "INV+",
@@ -4323,14 +4301,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Laaser Voley"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4338,7 +4308,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Laser Gates (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Laaser Voley"
+      ]
+    }
   },
   {
     "name": "Lasercade",
@@ -4385,14 +4360,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Pygmy"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -4400,7 +4367,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/lockn_chase.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Pygmy"
+      ]
+    }
   },
   {
     "name": "London Blitz",
@@ -4896,14 +4868,11 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(Europe)",
-        "clones": [
-          "Astrowar"
-        ]
-      }
-    ]
+    "group": {
+      "merge": [
+        "Astrowar"
+      ]
+    }
   },
   {
     "name": "Mission 3,000 A.D.",
@@ -5533,13 +5502,6 @@
     ]
   },
   {
-    "name": "Phantom UFO",
-    "rating": 0.7,
-    "genres": [
-      "Action"
-    ]
-  },
-  {
     "name": "Pharaoh's Curse",
     "players": 1,
     "genres": [
@@ -5932,13 +5894,6 @@
     ]
   },
   {
-    "name": "Pygmy",
-    "rating": 0.6,
-    "genres": [
-      "Action"
-    ]
-  },
-  {
     "name": "Q-bert",
     "players": 1,
     "genres": [
@@ -6074,14 +6029,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Exocet"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6089,7 +6036,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Exocet (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Exocet"
+      ]
+    }
   },
   {
     "name": "Radar Lock",
@@ -6524,14 +6476,6 @@
       "Puzzle-Game",
       "Strategy"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Atari Video Cube"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6539,7 +6483,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Atari Video Cube (USA).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Atari Video Cube"
+      ]
+    }
   },
   {
     "name": "Rubik's Cube 3-D",
@@ -6662,14 +6611,6 @@
       "Action",
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Seahawk"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -6677,21 +6618,18 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Seahawk (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Seahawk"
+      ]
+    }
   },
   {
     "name": "Sea Hunt ~ Scuba Diver",
     "players": 1,
     "genres": [
       "Adventure"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Skindiver"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6700,7 +6638,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/sea_hunt.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Skindiver"
+      ]
+    }
   },
   {
     "name": "Sea Monster",
@@ -6708,14 +6651,6 @@
     "rating": 0.2,
     "genres": [
       "Action"
-    ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "O Monstro Marinho"
-        ]
-      }
     ],
     "manuals": [
       {
@@ -6725,7 +6660,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Sea Monster (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "O Monstro Marinho"
+      ]
+    }
   },
   {
     "name": "Seaquest",
@@ -7287,14 +7227,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Tunnel de L'Espace, Le"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7309,7 +7241,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/space_tunnel.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Tunnel de L'Espace, Le"
+      ]
+    }
   },
   {
     "name": "Space War ~ Space Combat",
@@ -7366,14 +7303,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Phantom UFO"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7381,7 +7310,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/spider_fighter.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Phantom UFO"
+      ]
+    }
   },
   {
     "name": "Spider Maze",
@@ -7532,14 +7466,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Snail Against Squirrel"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7548,7 +7474,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Snail Against Squirrel (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Snail Against Squirrel"
+      ]
+    }
   },
   {
     "name": "Squoosh"
@@ -7949,14 +7880,6 @@
     "genres": [
       "Platform"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Nightmare"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -7971,7 +7894,12 @@
         ],
         "url": "https://archive.org/download/Atari2600Manuals_201812/Nightmare (Europe).pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Nightmare"
+      ]
+    }
   },
   {
     "name": "Sub-Scan",
@@ -8363,14 +8291,6 @@
     "genres": [
       "Action"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Phantom Tank"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -8378,7 +8298,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/tanks_but_no_tanks.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Phantom Tank"
+      ]
+    }
   },
   {
     "name": "Tapeworm",
@@ -8974,13 +8899,6 @@
     ]
   },
   {
-    "name": "Vogel Flieh",
-    "rating": 0.75,
-    "genres": [
-      "Action"
-    ]
-  },
-  {
     "name": "Wabbit",
     "players": 2,
     "rating": 0.35,
@@ -9023,14 +8941,6 @@
     "genres": [
       "Shoot'em Up"
     ],
-    "parents": [
-      {
-        "parent_flags": "(USA)",
-        "clones": [
-          "Wall Break"
-        ]
-      }
-    ],
     "manuals": [
       {
         "languages": [
@@ -9038,7 +8948,12 @@
         ],
         "url": "http://www.digitpress.com/library/manuals/atari2600/wall_break.pdf"
       }
-    ]
+    ],
+    "group": {
+      "merge": [
+        "Wall Break"
+      ]
+    }
   },
   {
     "name": "Warlords",
