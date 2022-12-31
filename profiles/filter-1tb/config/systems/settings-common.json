@@ -3,7 +3,7 @@
     "priority": {
       "enabled": true,
       "single_title": true,
-      "order": ["flags", "flags_count", "parent_title", "length"],
+      "order": ["flags", "flags_count", "group_title", "length"],
       "flags": [
         "USA",
         "World",
@@ -13,7 +13,7 @@
         "Australia"
       ],
       "flags_count": "ascending",
-      "parent_title": ["True"],
+      "group_title": ["True"],
       "length": "ascending"
     },
     "filters": {
