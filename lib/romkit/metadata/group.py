@@ -44,7 +44,7 @@ class GroupMetadata(BaseMetadata):
         # Priority:
         # * Machine-specific overrides (e.g. from a split), starting with machine's name
         # * Default grouping (title), starting with parent
-        for key in [machine.name, machine.parent_name, machine.disc_title, machine.parent_disc_title, machine.parent_title, machine.title]:
+        for key in [machine.name, machine.parent_name, machine.parent_disc_title, machine.parent_title, machine.disc_title, machine.title]:
             if not key:
                 continue
 
