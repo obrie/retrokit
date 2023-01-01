@@ -1,7 +1,7 @@
 {
   "roms": {
     "priority": {
-      "order": ["!flags", "romsets", "flags|@countries", "flags_count", "flags", "length"],
+      "order": ["!flags", "romsets", "flags|@countries", "flag_groups_total", "flags", "name_length"],
       "!flags": [
         "(Proto)"
       ],
@@ -13,7 +13,7 @@
         "USA",
         "World"
       ],
-      "flags_count": "ascending",
+      "flag_groups_total": "ascending",
       "flags": [
         "# Publishers",
         "Lucasfilm",
@@ -45,7 +45,7 @@
         "# Game flavors",
         "Winners Edition"
       ],
-      "length": "ascending"
+      "name_length": "ascending"
     },
     "filters": {
       "tags": [

@@ -1,16 +1,20 @@
 from romkit.sorters.sortable_set import SortableSet
 
-from romkit.sorters.description import FlagSorter, FlagCountSorter, KeywordSorter
-from romkit.sorters.name import LengthSorter, NameSorter
+from romkit.sorters.description import FlagSorter, FlagsCountSorter, FlagGroupsTotalSorter, KeywordSorter, VersionSorter
+from romkit.sorters.name import NameSorter, NameLengthSorter, TitleSorter, TitleLengthSorter
 from romkit.sorters.group import GroupTitleSorter
 from romkit.sorters.romset import RomsetSorter
 
 __all_sorters__ = [
     FlagSorter,
-    FlagCountSorter,
+    FlagsCountSorter,
+    FlagGroupsTotalSorter,
     KeywordSorter,
-    LengthSorter,
+    VersionSorter,
     NameSorter,
+    NameLengthSorter,
+    TitleSorter,
+    TitleLengthSorter,
     GroupTitleSorter,
     RomsetSorter,
 ]

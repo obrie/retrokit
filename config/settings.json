@@ -23,15 +23,15 @@
     "archive": {
       "id": "retrokit-manuals",
       "version": "compressed",
-      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-compressed.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-compressed.zip/{group_title} ({languages}).pdf",
       "processed": true,
       "fallback_to_source": false
     },
     "paths": {
       "base": "$HOME/.emulationstation/downloaded_media/{system}/manuals",
-      "archive": "{base}/.download/{parent_title} ({languages}) (archive).pdf",
-      "download": "{base}/.download/{parent_title} ({languages}).{extension}",
-      "postprocess": "{base}/.files/{parent_title} ({languages}).pdf",
+      "archive": "{base}/.download/{group_title} ({languages}) (archive).pdf",
+      "download": "{base}/.download/{group_title} ({languages}).{extension}",
+      "postprocess": "{base}/.files/{group_title} ({languages}).pdf",
       "install": "{base}/{rom_name}.pdf"
     },
     "keep_downloads": false,

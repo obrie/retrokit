@@ -47,8 +47,8 @@
   "roms": {
     "id": "name",
     "priority": {
-      "order": ["name"],
-      "name": "descending"
+      "order": ["flags"],
+      "flags": "descending"
     },
     "filters": {
     },

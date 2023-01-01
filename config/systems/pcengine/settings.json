@@ -131,7 +131,7 @@
   "roms": {
     "id": "crc",
     "priority": {
-      "order": ["flags", "romsets", "length"],
+      "order": ["flags", "romsets", "name_length"],
       "flags": [
         "USA"
       ],
@@ -140,7 +140,7 @@
         "nointro-supergrafx",
         "redump"
       ],
-      "length": "ascending"
+      "name_length": "ascending"
     },
     "filters": {
     },
