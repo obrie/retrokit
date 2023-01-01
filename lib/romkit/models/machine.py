@@ -477,6 +477,7 @@ class Machine:
             'emulator': self.emulator,
             'emulator_rating': self.emulator_rating,
             'manual': self.manual,
+            'media': self.media,
             'group': {
                 'name': self.group_name,
                 'title': self.group_title,
