@@ -2238,6 +2238,14 @@
   {
     "name": "Black Bass, The",
     "players": 1,
+    "genres": [
+      "Fishing",
+      "Hunting and Fishing"
+    ]
+  },
+  {
+    "name": "Black Bass, The (USA)",
+    "players": 1,
     "rating": 0.7,
     "genres": [
       "Hunting and Fishing",
@@ -2250,12 +2258,7 @@
         ],
         "url": "https://archive.org/download/BlackBassTheNESHiResScans/Black Bass, The - Manual.pdf"
       }
-    ],
-    "group": {
-      "split": [
-        "(USA)"
-      ]
-    }
+    ]
   },
   {
     "name": "Blackjack",

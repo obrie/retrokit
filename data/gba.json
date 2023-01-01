@@ -3635,17 +3635,21 @@
   },
   {
     "name": "Disney Sports - Football",
+    "players": 4,
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  {
+    "name": "Disney Sports - Football (USA)",
     "players": 1,
     "rating": 0.75,
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "group": {
-      "split": [
-        "(USA)"
-      ]
-    }
+    ]
   },
   {
     "name": "Disney Sports - Motocross",

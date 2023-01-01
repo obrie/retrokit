@@ -3941,7 +3941,21 @@
     "genres": [
       "Puzzle-Game",
       "Strategy"
-    ]
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Crosswords_DS.pdf"
+      }
+    ],
+    "group": {
+      "merge": [
+        "Nintendo Presents - Crossword Collection"
+      ]
+    }
   },
   {
     "name": "Crossword DS + Sekai 1-shuu Cross"
@@ -14417,18 +14431,6 @@
   },
   {
     "name": "Nintendo DS Browser"
-  },
-  {
-    "name": "Nintendo Presents - Crossword Collection",
-    "manuals": [
-      {
-        "languages": [
-          "en-gb",
-          "fr"
-        ],
-        "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Crosswords_DS.pdf"
-      }
-    ]
   },
   {
     "name": "Nintendo Presents - Style Boutique",
