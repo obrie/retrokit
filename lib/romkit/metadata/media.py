@@ -7,4 +7,4 @@ class MediaMetadata(BaseMetadata):
     name = 'media'
 
     def update(self, machine: Machine, media: Dict[str, str]) -> None:
-            machine.media.update(media)
+        machine.media.update(media)

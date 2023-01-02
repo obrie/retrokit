@@ -1,6 +1,5 @@
-[
-  {
-    "name": "gnw_ball",
+{
+  "gnw_ball": {
     "players": 1,
     "manuals": [
       {
@@ -17,8 +16,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_bfight",
+  "gnw_bfight": {
     "manuals": [
       {
         "languages": [
@@ -41,8 +39,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_bjack",
+  "gnw_bjack": {
     "manuals": [
       {
         "languages": [
@@ -58,8 +55,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_boxing",
+  "gnw_boxing": {
     "manuals": [
       {
         "languages": [
@@ -75,8 +71,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_bsweep",
+  "gnw_bsweep": {
     "manuals": [
       {
         "languages": [
@@ -92,8 +87,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_cgrab",
+  "gnw_cgrab": {
     "players": 1,
     "genres": [
       "Casual Game"
@@ -110,8 +104,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_chef",
+  "gnw_chef": {
     "manuals": [
       {
         "languages": [
@@ -127,8 +120,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_climber",
+  "gnw_climber": {
     "manuals": [
       {
         "languages": [
@@ -151,8 +143,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkhockey",
+  "gnw_dkhockey": {
     "manuals": [
       {
         "languages": [
@@ -165,8 +156,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkjr",
+  "gnw_dkjr": {
     "players": 1,
     "genres": [
       "Action"
@@ -186,8 +176,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkjrp",
+  "gnw_dkjrp": {
     "players": 1,
     "genres": [
       "Action"
@@ -207,8 +196,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkong",
+  "gnw_dkong": {
     "manuals": [
       {
         "languages": [
@@ -224,8 +212,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkong2",
+  "gnw_dkong2": {
     "manuals": [
       {
         "languages": [
@@ -241,8 +228,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_dkong3",
+  "gnw_dkong3": {
     "manuals": [
       {
         "languages": [
@@ -255,8 +241,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_fire",
+  "gnw_fire": {
     "manuals": [
       {
         "languages": [
@@ -272,8 +257,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_fireatk",
+  "gnw_fireatk": {
     "players": 1,
     "manuals": [
       {
@@ -290,8 +274,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_fires",
+  "gnw_fires": {
     "manuals": [
       {
         "languages": [
@@ -307,8 +290,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_flagman",
+  "gnw_flagman": {
     "players": 1,
     "manuals": [
       {
@@ -325,8 +307,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_gcliff",
+  "gnw_gcliff": {
     "manuals": [
       {
         "languages": [
@@ -342,8 +323,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_ghouse",
+  "gnw_ghouse": {
     "manuals": [
       {
         "languages": [
@@ -359,8 +339,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_helmet",
+  "gnw_helmet": {
     "manuals": [
       {
         "languages": [
@@ -376,8 +355,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_judge",
+  "gnw_judge": {
     "manuals": [
       {
         "languages": [
@@ -393,8 +371,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_lboat",
+  "gnw_lboat": {
     "manuals": [
       {
         "languages": [
@@ -410,8 +387,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_lion",
+  "gnw_lion": {
     "manuals": [
       {
         "languages": [
@@ -427,8 +403,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_manhole",
+  "gnw_manhole": {
     "manuals": [
       {
         "languages": [
@@ -444,8 +419,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_manholeg",
+  "gnw_manholeg": {
     "manuals": [
       {
         "languages": [
@@ -461,8 +435,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mario",
+  "gnw_mario": {
     "manuals": [
       {
         "languages": [
@@ -478,8 +451,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mariocm",
+  "gnw_mariocm": {
     "manuals": [
       {
         "languages": [
@@ -495,8 +467,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mariocmt",
+  "gnw_mariocmt": {
     "manuals": [
       {
         "languages": [
@@ -509,8 +480,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mariotj",
+  "gnw_mariotj": {
     "players": 1,
     "manuals": [
       {
@@ -527,8 +497,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mbaway",
+  "gnw_mbaway": {
     "players": 1,
     "genres": [
       "Action"
@@ -548,8 +517,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mickdon",
+  "gnw_mickdon": {
     "manuals": [
       {
         "languages": [
@@ -565,8 +533,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mmouse",
+  "gnw_mmouse": {
     "manuals": [
       {
         "languages": [
@@ -589,8 +556,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_mmousep",
+  "gnw_mmousep": {
     "manuals": [
       {
         "languages": [
@@ -606,8 +572,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_octopus",
+  "gnw_octopus": {
     "manuals": [
       {
         "languages": [
@@ -623,8 +588,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_opanic",
+  "gnw_opanic": {
     "manuals": [
       {
         "languages": [
@@ -640,8 +604,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_pchute",
+  "gnw_pchute": {
     "players": 1,
     "genres": [
       "Action"
@@ -661,8 +624,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_pinball",
+  "gnw_pinball": {
     "manuals": [
       {
         "languages": [
@@ -675,8 +637,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_popeye",
+  "gnw_popeye": {
     "manuals": [
       {
         "languages": [
@@ -692,8 +653,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_popeyep",
+  "gnw_popeyep": {
     "manuals": [
       {
         "languages": [
@@ -706,8 +666,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_rshower",
+  "gnw_rshower": {
     "manuals": [
       {
         "languages": [
@@ -723,8 +682,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_sbuster",
+  "gnw_sbuster": {
     "manuals": [
       {
         "languages": [
@@ -740,8 +698,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_smb",
+  "gnw_smb": {
     "manuals": [
       {
         "languages": [
@@ -764,8 +721,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_snoopyp",
+  "gnw_snoopyp": {
     "players": 1,
     "genres": [
       "Action"
@@ -782,8 +738,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_squish",
+  "gnw_squish": {
     "manuals": [
       {
         "languages": [
@@ -799,8 +754,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_ssparky",
+  "gnw_ssparky": {
     "players": 1,
     "genres": [
       "Action",
@@ -821,8 +775,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_stennis",
+  "gnw_stennis": {
     "players": 1,
     "genres": [
       "Action",
@@ -844,8 +797,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_tbridge",
+  "gnw_tbridge": {
     "players": 1,
     "genres": [
       "Action",
@@ -866,8 +818,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_tfish",
+  "gnw_tfish": {
     "players": 1,
     "manuals": [
       {
@@ -884,8 +835,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_vermin",
+  "gnw_vermin": {
     "players": 1,
     "genres": [
       "Casual Game"
@@ -905,8 +855,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "gnw_zelda",
+  "gnw_zelda": {
     "manuals": [
       {
         "languages": [
@@ -922,8 +871,7 @@
       "Game & Watch"
     ]
   },
-  {
-    "name": "taddams",
+  "taddams": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/taddams.zip"
     },
@@ -931,8 +879,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "taltbeast",
+  "taltbeast": {
     "manuals": [
       {
         "languages": [
@@ -948,8 +895,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tapollo13",
+  "tapollo13": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tapollo13.zip"
     },
@@ -957,8 +903,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tbatfor",
+  "tbatfor": {
     "manuals": [
       {
         "languages": [
@@ -974,8 +919,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tbatman",
+  "tbatman": {
     "manuals": [
       {
         "languages": [
@@ -991,8 +935,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tbatmana",
+  "tbatmana": {
     "manuals": [
       {
         "languages": [
@@ -1008,8 +951,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tbtoads",
+  "tbtoads": {
     "manuals": [
       {
         "languages": [
@@ -1025,8 +967,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tbttf",
+  "tbttf": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tbttf.zip"
     },
@@ -1034,8 +975,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tddragon",
+  "tddragon": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tddragon.zip"
     },
@@ -1043,8 +983,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tddragon3",
+  "tddragon3": {
     "manuals": [
       {
         "languages": [
@@ -1060,8 +999,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tdennis",
+  "tdennis": {
     "manuals": [
       {
         "languages": [
@@ -1077,8 +1015,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tdummies",
+  "tdummies": {
     "manuals": [
       {
         "languages": [
@@ -1094,8 +1031,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tflash",
+  "tflash": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tflash.zip"
     },
@@ -1103,8 +1039,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tgaiden",
+  "tgaiden": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tgaiden.zip"
     },
@@ -1112,8 +1047,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tgaiden3",
+  "tgaiden3": {
     "manuals": [
       {
         "languages": [
@@ -1126,8 +1060,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tgaunt",
+  "tgaunt": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tgaunt.zip"
     },
@@ -1135,8 +1068,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tgoldeye",
+  "tgoldeye": {
     "manuals": [
       {
         "languages": [
@@ -1152,8 +1084,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tgoldnaxe",
+  "tgoldnaxe": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tgoldnaxe.zip"
     },
@@ -1161,8 +1092,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "thalone",
+  "thalone": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/thalone.zip"
     },
@@ -1170,8 +1100,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "thalone2",
+  "thalone2": {
     "manuals": [
       {
         "languages": [
@@ -1187,8 +1116,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "thook",
+  "thook": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/thook.zip"
     },
@@ -1196,8 +1124,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tinday",
+  "tinday": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tinday.zip"
     },
@@ -1205,8 +1132,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tjdredd",
+  "tjdredd": {
     "manuals": [
       {
         "languages": [
@@ -1222,8 +1148,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tjpark",
+  "tjpark": {
     "manuals": [
       {
         "languages": [
@@ -1239,8 +1164,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tkarnov",
+  "tkarnov": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tkarnov.zip"
     },
@@ -1248,8 +1172,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tkazaam",
+  "tkazaam": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tkazaam.zip"
     },
@@ -1257,8 +1180,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tmchammer",
+  "tmchammer": {
     "manuals": [
       {
         "languages": [
@@ -1274,8 +1196,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tmegaman3",
+  "tmegaman3": {
     "manuals": [
       {
         "languages": [
@@ -1288,8 +1209,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tmkombat",
+  "tmkombat": {
     "manuals": [
       {
         "languages": [
@@ -1305,8 +1225,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tnmarebc",
+  "tnmarebc": {
     "manuals": [
       {
         "languages": [
@@ -1322,8 +1241,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "topaliens",
+  "topaliens": {
     "manuals": [
       {
         "languages": [
@@ -1339,8 +1257,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "trobocop2",
+  "trobocop2": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/trobocop2.zip"
     },
@@ -1348,8 +1265,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "trobocop3",
+  "trobocop3": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/trobocop3.zip"
     },
@@ -1357,8 +1273,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsddragon",
+  "tsddragon": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tsddragon.zip"
     },
@@ -1366,8 +1281,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsf2010",
+  "tsf2010": {
     "manuals": [
       {
         "languages": [
@@ -1383,8 +1297,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsfight2",
+  "tsfight2": {
     "manuals": [
       {
         "languages": [
@@ -1400,8 +1313,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tshadow",
+  "tshadow": {
     "manuals": [
       {
         "languages": [
@@ -1417,8 +1329,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsharr2",
+  "tsharr2": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tsharr2.zip"
     },
@@ -1426,8 +1337,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsjam",
+  "tsjam": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tsjam.zip"
     },
@@ -1435,8 +1345,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tskelwarr",
+  "tskelwarr": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/tskelwarr.zip"
     },
@@ -1444,8 +1353,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsonic",
+  "tsonic": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tsonic.zip"
     },
@@ -1453,8 +1361,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tsonic2",
+  "tsonic2": {
     "manuals": [
       {
         "languages": [
@@ -1470,8 +1377,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tspidman",
+  "tspidman": {
     "manuals": [
       {
         "languages": [
@@ -1487,8 +1393,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tstrider",
+  "tstrider": {
     "manuals": [
       {
         "languages": [
@@ -1504,8 +1409,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tswampt",
+  "tswampt": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tswampt.zip"
     },
@@ -1513,8 +1417,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "ttransf2",
+  "ttransf2": {
     "manuals": [
       {
         "languages": [
@@ -1530,8 +1433,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "tvindictr",
+  "tvindictr": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/tvindictr.zip"
     },
@@ -1539,8 +1441,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "twworld",
+  "twworld": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/twworld.zip"
     },
@@ -1548,8 +1449,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "txmen",
+  "txmen": {
     "manuals": [
       {
         "languages": [
@@ -1565,8 +1465,7 @@
       "Tiger Electronics LCD"
     ]
   },
-  {
-    "name": "txmenpx",
+  "txmenpx": {
     "manuals": [
       {
         "languages": [
@@ -1582,4 +1481,4 @@
       "Tiger Electronics LCD"
     ]
   }
-]
+}

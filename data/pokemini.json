@@ -1,6 +1,5 @@
-[
-  {
-    "name": "Pichu Bros. Mini",
+{
+  "Pichu Bros. Mini": {
     "players": 10,
     "genres": [
       "Casual Game"
@@ -14,18 +13,12 @@
       }
     ]
   },
-  {
-    "name": "Pichu Bros. Mini - Hoppip's Jump Match",
+  "Pichu Bros. Mini - Hoppip's Jump Match": {
     "players": 10
   },
-  {
-    "name": "Pichu Bros. Mini - Netsukikyuu"
-  },
-  {
-    "name": "Pichu Bros. Mini - Skateboard"
-  },
-  {
-    "name": "Pokemon Party Mini",
+  "Pichu Bros. Mini - Netsukikyuu": {},
+  "Pichu Bros. Mini - Skateboard": {},
+  "Pokemon Party Mini": {
     "players": 6,
     "genres": [
       "Casual Game"
@@ -48,28 +41,22 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Party Mini - Baseline Judge",
+  "Pokemon Party Mini - Baseline Judge": {
     "players": 1
   },
-  {
-    "name": "Pokemon Party Mini - Chansey's Dribble",
+  "Pokemon Party Mini - Chansey's Dribble": {
     "players": 1
   },
-  {
-    "name": "Pokemon Party Mini - Pikachu's Rocket Start",
+  "Pokemon Party Mini - Pikachu's Rocket Start": {
     "players": 1
   },
-  {
-    "name": "Pokemon Party Mini - Ricochet Dribble",
+  "Pokemon Party Mini - Ricochet Dribble": {
     "players": 1
   },
-  {
-    "name": "Pokemon Party Mini - Slowking's Judge",
+  "Pokemon Party Mini - Slowking's Judge": {
     "players": 1
   },
-  {
-    "name": "Pokemon Pinball Mini",
+  "Pokemon Pinball Mini": {
     "players": 1,
     "genres": [
       "Pinball"
@@ -83,8 +70,7 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Puzzle Collection",
+  "Pokemon Puzzle Collection": {
     "players": 1,
     "genres": [
       "Puzzle-Game"
@@ -98,8 +84,7 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Puzzle Collection Vol. 2",
+  "Pokemon Puzzle Collection Vol. 2": {
     "players": 1,
     "genres": [
       "Puzzle-Game"
@@ -113,8 +98,7 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Race Mini",
+  "Pokemon Race Mini": {
     "players": 2,
     "genres": [
       "Driving",
@@ -129,8 +113,7 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Sodateyasan Mini",
+  "Pokemon Sodateyasan Mini": {
     "players": 1,
     "genres": [
       "Simulation"
@@ -144,15 +127,13 @@
       }
     ]
   },
-  {
-    "name": "Pokemon Tetris",
+  "Pokemon Tetris": {
     "players": 1,
     "genres": [
       "Puzzle-Game"
     ]
   },
-  {
-    "name": "Pokemon Zany Cards",
+  "Pokemon Zany Cards": {
     "players": 5,
     "genres": [
       "Casino",
@@ -173,15 +154,13 @@
       }
     ]
   },
-  {
-    "name": "Snorlax's Lunch Time",
+  "Snorlax's Lunch Time": {
     "players": 1,
     "genres": [
       "Casual Game"
     ]
   },
-  {
-    "name": "Togepi no Daibouken",
+  "Togepi no Daibouken": {
     "players": 1,
     "genres": [
       "Adventure"
@@ -195,4 +174,4 @@
       }
     ]
   }
-]
+}

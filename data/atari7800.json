@@ -1,6 +1,5 @@
-[
-  {
-    "name": "32 in 1",
+{
+  "32 in 1": {
     "manuals": [
       {
         "languages": [
@@ -10,11 +9,8 @@
       }
     ]
   },
-  {
-    "name": "7800 Monitor Cart"
-  },
-  {
-    "name": "Ace of Aces",
+  "7800 Monitor Cart": {},
+  "Ace of Aces": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -30,8 +26,7 @@
       }
     ]
   },
-  {
-    "name": "Alien Brigade",
+  "Alien Brigade": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -47,8 +42,7 @@
       }
     ]
   },
-  {
-    "name": "Asteroids",
+  "Asteroids": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -64,11 +58,8 @@
       }
     ]
   },
-  {
-    "name": "Atari 7800 Development Card"
-  },
-  {
-    "name": "Ballblazer",
+  "Atari 7800 Development Card": {},
+  "Ballblazer": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -84,8 +75,7 @@
       }
     ]
   },
-  {
-    "name": "Barnyard Blaster",
+  "Barnyard Blaster": {
     "players": 2,
     "rating": 0.55,
     "genres": [
@@ -100,8 +90,7 @@
       }
     ]
   },
-  {
-    "name": "Baseball",
+  "Baseball": {
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -118,8 +107,7 @@
       }
     ]
   },
-  {
-    "name": "Basketbrawl",
+  "Basketbrawl": {
     "players": 2,
     "rating": 0.45,
     "genres": [
@@ -134,8 +122,7 @@
       }
     ]
   },
-  {
-    "name": "Centipede",
+  "Centipede": {
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -152,8 +139,7 @@
       }
     ]
   },
-  {
-    "name": "Choplifter!",
+  "Choplifter!": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -168,8 +154,7 @@
       }
     ]
   },
-  {
-    "name": "Commando",
+  "Commando": {
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -184,8 +169,7 @@
       }
     ]
   },
-  {
-    "name": "Crack'ed",
+  "Crack'ed": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -201,8 +185,7 @@
       }
     ]
   },
-  {
-    "name": "Crossbow",
+  "Crossbow": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -218,8 +201,7 @@
       }
     ]
   },
-  {
-    "name": "Dark Chambers",
+  "Dark Chambers": {
     "players": 2,
     "genres": [
       "Action"
@@ -233,8 +215,7 @@
       }
     ]
   },
-  {
-    "name": "Desert Falcon",
+  "Desert Falcon": {
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -251,11 +232,8 @@
       }
     ]
   },
-  {
-    "name": "Diagnostic Test Cartrige"
-  },
-  {
-    "name": "Dig Dug",
+  "Diagnostic Test Cartrige": {},
+  "Dig Dug": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -270,8 +248,7 @@
       }
     ]
   },
-  {
-    "name": "Donkey Kong",
+  "Donkey Kong": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -287,8 +264,7 @@
       }
     ]
   },
-  {
-    "name": "Donkey Kong Junior",
+  "Donkey Kong Junior": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -304,8 +280,7 @@
       }
     ]
   },
-  {
-    "name": "Double Dragon",
+  "Double Dragon": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -320,8 +295,7 @@
       }
     ]
   },
-  {
-    "name": "F-18 Hornet",
+  "F-18 Hornet": {
     "players": 1,
     "genres": [
       "Platform"
@@ -335,8 +309,7 @@
       }
     ]
   },
-  {
-    "name": "Fatal Run",
+  "Fatal Run": {
     "players": 1,
     "rating": 0.45,
     "genres": [
@@ -353,8 +326,7 @@
       }
     ]
   },
-  {
-    "name": "Fight Night",
+  "Fight Night": {
     "players": 2,
     "genres": [
       "Action",
@@ -369,8 +341,7 @@
       }
     ]
   },
-  {
-    "name": "Food Fight",
+  "Food Fight": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -385,16 +356,14 @@
       }
     ]
   },
-  {
-    "name": "GATO",
+  "GATO": {
     "players": 1,
     "genres": [
       "Action",
       "Simulation"
     ]
   },
-  {
-    "name": "Galaga",
+  "Galaga": {
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -412,8 +381,7 @@
       }
     ]
   },
-  {
-    "name": "Hat Trick",
+  "Hat Trick": {
     "players": 2,
     "genres": [
       "Sports"
@@ -427,11 +395,8 @@
       }
     ]
   },
-  {
-    "name": "High Score Cartridge"
-  },
-  {
-    "name": "Ikari Warriors",
+  "High Score Cartridge": {},
+  "Ikari Warriors": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -447,8 +412,7 @@
       }
     ]
   },
-  {
-    "name": "Impossible Mission",
+  "Impossible Mission": {
     "players": 1,
     "genres": [
       "Action",
@@ -463,8 +427,7 @@
       }
     ]
   },
-  {
-    "name": "Jinks",
+  "Jinks": {
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -479,8 +442,7 @@
       }
     ]
   },
-  {
-    "name": "Joust",
+  "Joust": {
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -495,8 +457,7 @@
       }
     ]
   },
-  {
-    "name": "Karateka",
+  "Karateka": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -511,8 +472,7 @@
       }
     ]
   },
-  {
-    "name": "Klax",
+  "Klax": {
     "players": 1,
     "genres": [
       "Action",
@@ -528,8 +488,7 @@
       }
     ]
   },
-  {
-    "name": "Kung-Fu Master",
+  "Kung-Fu Master": {
     "players": 2,
     "genres": [
       "Action"
@@ -543,8 +502,7 @@
       }
     ]
   },
-  {
-    "name": "Mario Bros.",
+  "Mario Bros.": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -560,8 +518,7 @@
       }
     ]
   },
-  {
-    "name": "Mat Mania Challenge",
+  "Mat Mania Challenge": {
     "players": 2,
     "rating": 0.35,
     "genres": [
@@ -577,8 +534,7 @@
       }
     ]
   },
-  {
-    "name": "Mean 18 Ultimate Golf",
+  "Mean 18 Ultimate Golf": {
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -595,8 +551,7 @@
       }
     ]
   },
-  {
-    "name": "Meltdown",
+  "Meltdown": {
     "players": 1,
     "genres": [
       "Action"
@@ -610,8 +565,7 @@
       }
     ]
   },
-  {
-    "name": "Midnight Mutants",
+  "Midnight Mutants": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -627,16 +581,14 @@
       }
     ]
   },
-  {
-    "name": "Missing in Action",
+  "Missing in Action": {
     "players": 1,
     "genres": [
       "Action",
       "Shooter"
     ]
   },
-  {
-    "name": "Motor Psycho",
+  "Motor Psycho": {
     "players": 1,
     "genres": [
       "Driving",
@@ -651,8 +603,7 @@
       }
     ]
   },
-  {
-    "name": "Ms. Pac-Man",
+  "Ms. Pac-Man": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -669,8 +620,7 @@
       }
     ]
   },
-  {
-    "name": "Ninja Golf",
+  "Ninja Golf": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -687,8 +637,7 @@
       }
     ]
   },
-  {
-    "name": "One-on-One Basketball",
+  "One-on-One Basketball": {
     "players": 2,
     "rating": 0.2,
     "genres": [
@@ -703,15 +652,13 @@
       }
     ]
   },
-  {
-    "name": "Pit Fighter",
+  "Pit Fighter": {
     "players": 2,
     "genres": [
       "Fight"
     ]
   },
-  {
-    "name": "Planet Smashers",
+  "Planet Smashers": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -727,15 +674,13 @@
       }
     ]
   },
-  {
-    "name": "Plutos",
+  "Plutos": {
     "players": 2,
     "genres": [
       "Action"
     ]
   },
-  {
-    "name": "Pole Position II",
+  "Pole Position II": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -769,8 +714,7 @@
       }
     ]
   },
-  {
-    "name": "Rampage",
+  "Rampage": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -785,11 +729,8 @@
       }
     ]
   },
-  {
-    "name": "Rampart"
-  },
-  {
-    "name": "RealSports Baseball",
+  "Rampart": {},
+  "RealSports Baseball": {
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -806,18 +747,14 @@
       }
     ]
   },
-  {
-    "name": "Rescue on Fractalus",
+  "Rescue on Fractalus": {
     "genres": [
       "Action",
       "Shooter"
     ]
   },
-  {
-    "name": "Rikki & Vikki"
-  },
-  {
-    "name": "Robotron - 2084",
+  "Rikki & Vikki": {},
+  "Robotron - 2084": {
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -832,8 +769,7 @@
       }
     ]
   },
-  {
-    "name": "Scrapyard Dog",
+  "Scrapyard Dog": {
     "players": 1,
     "rating": 0.35,
     "genres": [
@@ -850,8 +786,7 @@
       }
     ]
   },
-  {
-    "name": "Sentinel",
+  "Sentinel": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -866,14 +801,12 @@
       }
     ]
   },
-  {
-    "name": "Sirius",
+  "Sirius": {
     "genres": [
       "Shooter"
     ]
   },
-  {
-    "name": "Summer Games",
+  "Summer Games": {
     "players": 8,
     "rating": 0.4,
     "genres": [
@@ -889,8 +822,7 @@
       }
     ]
   },
-  {
-    "name": "Super Huey UH-IX",
+  "Super Huey UH-IX": {
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -906,8 +838,7 @@
       }
     ]
   },
-  {
-    "name": "Super Skateboardin'",
+  "Super Skateboardin'": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -923,8 +854,7 @@
       }
     ]
   },
-  {
-    "name": "Tank Command",
+  "Tank Command": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -939,8 +869,7 @@
       }
     ]
   },
-  {
-    "name": "Title Match Pro Wrestling",
+  "Title Match Pro Wrestling": {
     "players": 2,
     "rating": 0.35,
     "genres": [
@@ -955,8 +884,7 @@
       }
     ]
   },
-  {
-    "name": "Tomcat - The F-14 Fighter Simulator",
+  "Tomcat - The F-14 Fighter Simulator": {
     "players": 1,
     "rating": 1,
     "genres": [
@@ -972,8 +900,7 @@
       }
     ]
   },
-  {
-    "name": "Touchdown Football",
+  "Touchdown Football": {
     "players": 2,
     "genres": [
       "Sports"
@@ -987,8 +914,7 @@
       }
     ]
   },
-  {
-    "name": "Tower Toppler",
+  "Tower Toppler": {
     "players": 2,
     "genres": [
       "Platform"
@@ -1002,8 +928,7 @@
       }
     ]
   },
-  {
-    "name": "Water Ski",
+  "Water Ski": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -1019,8 +944,7 @@
       }
     ]
   },
-  {
-    "name": "Winter Games",
+  "Winter Games": {
     "players": 8,
     "rating": 0.55,
     "genres": [
@@ -1036,8 +960,7 @@
       }
     ]
   },
-  {
-    "name": "Xenophobe",
+  "Xenophobe": {
     "players": 2,
     "rating": 0.3,
     "genres": [
@@ -1052,8 +975,7 @@
       }
     ]
   },
-  {
-    "name": "Xevious",
+  "Xevious": {
     "players": 2,
     "genres": [
       "Action"
@@ -1067,4 +989,4 @@
       }
     ]
   }
-]
+}

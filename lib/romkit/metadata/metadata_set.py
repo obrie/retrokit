@@ -15,10 +15,10 @@ class MetadataSet:
 
         # Populate metadata based on the provided path
         with path.open() as file:
-            for metadata in json.load(file):
-                self.data[metadata['name']] = metadata
+            self.data = json.load(file)
 
-                # Add machine-specific overrides that differ from the parent
+            # Add machine-specific overrides that differ from the parent
+            for group, metadata in self.data.items():
                 if 'overrides' in metadata:
                     for key, overrides in metadata['overrides'].items():
                         self.data[key] = {**metadata, **overrides}

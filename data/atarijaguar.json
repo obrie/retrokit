@@ -1,6 +1,5 @@
-[
-  {
-    "name": "Aircars",
+{
+  "Aircars": {
     "players": 8,
     "rating": 0.3,
     "genres": [
@@ -20,8 +19,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Alien vs Predator",
+  "Alien vs Predator": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -41,16 +39,14 @@
       "rating": 5
     }
   },
-  {
-    "name": "Arena Football '95",
+  "Arena Football '95": {
     "players": 8,
     "genres": [
       "Sports",
       "Sports / Football"
     ]
   },
-  {
-    "name": "Atari Karts",
+  "Atari Karts": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -70,8 +66,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Attack of the Mutant Penguins",
+  "Attack of the Mutant Penguins": {
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -90,8 +85,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Barkley Shut Up and Jam",
+  "Barkley Shut Up and Jam": {
     "players": 4,
     "rating": 0.65,
     "genres": [
@@ -111,8 +105,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Battle Sphere",
+  "Battle Sphere": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -124,8 +117,7 @@
       ]
     }
   },
-  {
-    "name": "Breakout 2000",
+  "Breakout 2000": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -145,8 +137,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Brett Hull Hockey",
+  "Brett Hull Hockey": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -154,8 +145,7 @@
       "Sports / Hockey"
     ]
   },
-  {
-    "name": "Brutal Sports Football",
+  "Brutal Sports Football": {
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -175,8 +165,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Bubsy in Fractured Furry Tales",
+  "Bubsy in Fractured Furry Tales": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -195,8 +184,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Cannon Fodder",
+  "Cannon Fodder": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -215,8 +203,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Checkered Flag",
+  "Checkered Flag": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -236,8 +223,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Club Drive",
+  "Club Drive": {
     "players": 2,
     "rating": 0.25,
     "genres": [
@@ -253,8 +239,7 @@
       }
     ]
   },
-  {
-    "name": "Cybermorph",
+  "Cybermorph": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -273,8 +258,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Defender 2000",
+  "Defender 2000": {
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -293,8 +277,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Doom",
+  "Doom": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -314,8 +297,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Double Dragon V - The Shadow Falls",
+  "Double Dragon V - The Shadow Falls": {
     "players": 2,
     "rating": 0.1,
     "genres": [
@@ -334,8 +316,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Dragon - The Bruce Lee Story",
+  "Dragon - The Bruce Lee Story": {
     "players": 1,
     "rating": 0.35,
     "genres": [
@@ -354,8 +335,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Evolution - Dino Dudes",
+  "Evolution - Dino Dudes": {
     "players": 1,
     "rating": 0.35,
     "genres": [
@@ -374,8 +354,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Fever Pitch Soccer",
+  "Fever Pitch Soccer": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -395,8 +374,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Fight for Life",
+  "Fight for Life": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -415,8 +393,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Flashback - The Quest for Identity",
+  "Flashback - The Quest for Identity": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -435,8 +412,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Flip Out!",
+  "Flip Out!": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -451,8 +427,7 @@
       }
     ]
   },
-  {
-    "name": "Frog Feast",
+  "Frog Feast": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -460,11 +435,8 @@
       "Casual Game"
     ]
   },
-  {
-    "name": "High Voltage C Maze"
-  },
-  {
-    "name": "Hover Strike",
+  "High Voltage C Maze": {},
+  "Hover Strike": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -483,8 +455,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Hyper Force",
+  "Hyper Force": {
     "players": 1,
     "rating": 0.45,
     "genres": [
@@ -503,8 +474,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "I-War",
+  "I-War": {
     "players": 2,
     "rating": 0.55,
     "genres": [
@@ -523,8 +493,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "International Sensible Soccer",
+  "International Sensible Soccer": {
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -544,8 +513,7 @@
       "rating": 1
     }
   },
-  {
-    "name": "Iron Soldier",
+  "Iron Soldier": {
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -560,8 +528,7 @@
       }
     ]
   },
-  {
-    "name": "Iron Soldier 2",
+  "Iron Soldier 2": {
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -576,16 +543,14 @@
       }
     ]
   },
-  {
-    "name": "Jack Nicklaus Cyber Golf",
+  "Jack Nicklaus Cyber Golf": {
     "players": 1,
     "genres": [
       "Sports",
       "Sports / Golf"
     ]
   },
-  {
-    "name": "Kasumi Ninja",
+  "Kasumi Ninja": {
     "players": 2,
     "rating": 0.45,
     "genres": [
@@ -604,8 +569,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Missile Command 3D",
+  "Missile Command 3D": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -624,8 +588,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "NBA Jam - Tournament Edition",
+  "NBA Jam - Tournament Edition": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -645,8 +608,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Native",
+  "Native": {
     "players": 1,
     "genres": [
       "Demo",
@@ -654,8 +616,7 @@
       "Shoot'em up / Horizontal"
     ]
   },
-  {
-    "name": "Phase Zero",
+  "Phase Zero": {
     "players": 1,
     "genres": [
       "1st person",
@@ -667,8 +628,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Pinball Fantasies",
+  "Pinball Fantasies": {
     "players": 8,
     "rating": 0.4,
     "genres": [
@@ -687,8 +647,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Pitfall - The Mayan Adventure",
+  "Pitfall - The Mayan Adventure": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -707,12 +666,10 @@
       "rating": 3
     }
   },
-  {
-    "name": "Plucky Duck in Hollywood Hijinks",
+  "Plucky Duck in Hollywood Hijinks": {
     "players": 1
   },
-  {
-    "name": "Power Drive Rally",
+  "Power Drive Rally": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -728,8 +685,7 @@
       }
     ]
   },
-  {
-    "name": "Protector",
+  "Protector": {
     "players": 2,
     "rating": 0.2,
     "genres": [
@@ -760,8 +716,7 @@
       ]
     }
   },
-  {
-    "name": "Raiden",
+  "Raiden": {
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -780,8 +735,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Rayman",
+  "Rayman": {
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -802,8 +756,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Ruiner Pinball",
+  "Ruiner Pinball": {
     "players": 4,
     "rating": 0.6,
     "genres": [
@@ -818,8 +771,7 @@
       }
     ]
   },
-  {
-    "name": "Skyhammer",
+  "Skyhammer": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -834,16 +786,14 @@
       }
     ]
   },
-  {
-    "name": "Slam Racer",
+  "Slam Racer": {
     "players": 1,
     "genres": [
       "Driving",
       "Race"
     ]
   },
-  {
-    "name": "Soccer Kid",
+  "Soccer Kid": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -862,8 +812,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Space War 2000",
+  "Space War 2000": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -882,11 +831,8 @@
       "rating": 4
     }
   },
-  {
-    "name": "Speedster II"
-  },
-  {
-    "name": "Super Burnout",
+  "Speedster II": {},
+  "Super Burnout": {
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -902,8 +848,7 @@
       }
     ]
   },
-  {
-    "name": "Supercross 3D",
+  "Supercross 3D": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -923,8 +868,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Syndicate",
+  "Syndicate": {
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -943,8 +887,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Tempest 2000",
+  "Tempest 2000": {
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -963,15 +906,13 @@
       "rating": 3
     }
   },
-  {
-    "name": "Thea Realm Fighters",
+  "Thea Realm Fighters": {
     "players": 2,
     "genres": [
       "Fight"
     ]
   },
-  {
-    "name": "Theme Park",
+  "Theme Park": {
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -990,8 +931,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Tiny Toon Adventures",
+  "Tiny Toon Adventures": {
     "players": 1,
     "genres": [
       "Platform"
@@ -1001,8 +941,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Total Carnage",
+  "Total Carnage": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -1013,8 +952,7 @@
       "rating": 3
     }
   },
-  {
-    "name": "Towers II - Plight of the Stargazer",
+  "Towers II - Plight of the Stargazer": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -1029,8 +967,7 @@
       }
     ]
   },
-  {
-    "name": "Trevor McFur in the Crescent Galaxy",
+  "Trevor McFur in the Crescent Galaxy": {
     "players": 1,
     "rating": 0.45,
     "genres": [
@@ -1049,8 +986,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Troy Aikman NFL Football",
+  "Troy Aikman NFL Football": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -1070,8 +1006,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Ultra Vortek",
+  "Ultra Vortek": {
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -1090,8 +1025,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Val d'Isere Skiing and Snowboarding",
+  "Val d'Isere Skiing and Snowboarding": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -1111,15 +1045,13 @@
       "rating": 3
     }
   },
-  {
-    "name": "Virtual VCS",
+  "Virtual VCS": {
     "players": 2,
     "genres": [
       "Compilation"
     ]
   },
-  {
-    "name": "White Men Can't Jump",
+  "White Men Can't Jump": {
     "players": 4,
     "rating": 0.2,
     "genres": [
@@ -1135,8 +1067,7 @@
       }
     ]
   },
-  {
-    "name": "Wolfenstein 3D",
+  "Wolfenstein 3D": {
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1155,8 +1086,7 @@
       "rating": 2
     }
   },
-  {
-    "name": "Worms",
+  "Worms": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -1175,8 +1105,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Zero 5",
+  "Zero 5": {
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -1195,8 +1124,7 @@
       "rating": 5
     }
   },
-  {
-    "name": "Zool 2",
+  "Zool 2": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -1215,8 +1143,7 @@
       "rating": 4
     }
   },
-  {
-    "name": "Zoop",
+  "Zoop": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1231,7 +1158,5 @@
       }
     ]
   },
-  {
-    "name": "Zzyorxx II"
-  }
-]
+  "Zzyorxx II": {}
+}

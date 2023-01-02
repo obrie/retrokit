@@ -11,8 +11,8 @@ class GroupMetadata(BaseMetadata):
     def load(self) -> None:
         self.groups = {}
 
-        for title, machine_metadata in self.data.items():
-            self._map_group(title, title)
+        for group, machine_metadata in self.data.items():
+            self._map_group(group, group)
 
             group_metadata = machine_metadata.get('group')
             if not group_metadata:
@@ -20,15 +20,15 @@ class GroupMetadata(BaseMetadata):
 
             # Add keys to merge into this group
             if 'merge' in group_metadata:
-                for grouped_key in group_metadata['merge']:
-                    self._map_group(grouped_key, title)
+                for key in group_metadata['merge']:
+                    self._map_group(key, group)
 
             # Add new groups to split off from the base title
             if 'split' in group_metadata:
                 for name in group_metadata['split']:
                     # Prepend the machine title if only flags were specified
                     if name[0] == '(':
-                        name = f"{title} {name}"
+                        name = f"{group} {name}"
 
                     self._map_group(name, name)
 

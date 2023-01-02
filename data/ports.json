@@ -1,6 +1,5 @@
-[
-  {
-    "name": "doom",
+{
+  "doom": {
     "manuals": [
       {
         "languages": [
@@ -10,8 +9,7 @@
       }
     ]
   },
-  {
-    "name": "duke3d",
+  "duke3d": {
     "manuals": [
       {
         "languages": [
@@ -21,8 +19,7 @@
       }
     ]
   },
-  {
-    "name": "quake",
+  "quake": {
     "manuals": [
       {
         "languages": [
@@ -32,4 +29,4 @@
       }
     ]
   }
-]
+}

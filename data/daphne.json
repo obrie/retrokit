@@ -1,6 +1,5 @@
-[
-  {
-    "name": "ace",
+{
+  "ace": {
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -17,8 +16,7 @@
       }
     ]
   },
-  {
-    "name": "astron",
+  "astron": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -36,8 +34,7 @@
       }
     ]
   },
-  {
-    "name": "badlands",
+  "badlands": {
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -55,8 +52,7 @@
       }
     ]
   },
-  {
-    "name": "bega",
+  "bega": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -64,8 +60,7 @@
       "Platform / Run Jump"
     ]
   },
-  {
-    "name": "cliff",
+  "cliff": {
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -81,8 +76,7 @@
       }
     ]
   },
-  {
-    "name": "cobra",
+  "cobra": {
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -97,8 +91,7 @@
       }
     ]
   },
-  {
-    "name": "dle21",
+  "dle21": {
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -116,8 +109,7 @@
       }
     ]
   },
-  {
-    "name": "esh",
+  "esh": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -133,8 +125,7 @@
       }
     ]
   },
-  {
-    "name": "galaxy",
+  "galaxy": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -151,8 +142,7 @@
       }
     ]
   },
-  {
-    "name": "gpworld",
+  "gpworld": {
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -161,8 +151,7 @@
       "Race 1st Pers. view"
     ]
   },
-  {
-    "name": "interstellar",
+  "interstellar": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -180,8 +169,7 @@
       }
     ]
   },
-  {
-    "name": "lair",
+  "lair": {
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -199,8 +187,7 @@
       }
     ]
   },
-  {
-    "name": "lair2",
+  "lair2": {
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -218,8 +205,7 @@
       }
     ]
   },
-  {
-    "name": "mach3",
+  "mach3": {
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -237,8 +223,7 @@
       }
     ]
   },
-  {
-    "name": "roadblaster",
+  "roadblaster": {
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -246,8 +231,7 @@
       "Race"
     ]
   },
-  {
-    "name": "sdq",
+  "sdq": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -265,8 +249,7 @@
       }
     ]
   },
-  {
-    "name": "tq",
+  "tq": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -285,8 +268,7 @@
       }
     ]
   },
-  {
-    "name": "uvt",
+  "uvt": {
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -301,4 +283,4 @@
       }
     ]
   }
-]
+}

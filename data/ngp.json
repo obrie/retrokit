@@ -1,9 +1,6 @@
-[
-  {
-    "name": "Baseball Stars - Pocket Sports Series"
-  },
-  {
-    "name": "King of Fighters R-1 - Pocket Fighting Series",
+{
+  "Baseball Stars - Pocket Sports Series": {},
+  "King of Fighters R-1 - Pocket Fighting Series": {
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -18,16 +15,14 @@
       }
     ]
   },
-  {
-    "name": "King of Fighters R-1 - Pocket Kakutou Series & Melon-chan no Seichou Nikki",
+  "King of Fighters R-1 - Pocket Kakutou Series & Melon-chan no Seichou Nikki": {
     "players": 2,
     "rating": 0.85,
     "genres": [
       "Fight"
     ]
   },
-  {
-    "name": "Melon-chan no Seichou Nikki",
+  "Melon-chan no Seichou Nikki": {
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -35,16 +30,14 @@
       "Simulation / Life"
     ]
   },
-  {
-    "name": "Neo Cherry Master - Real Casino Series",
+  "Neo Cherry Master - Real Casino Series": {
     "players": 1,
     "genres": [
       "Casino",
       "Casino / Slot machine"
     ]
   },
-  {
-    "name": "Neo Geo Cup '98",
+  "Neo Geo Cup '98": {
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -60,8 +53,7 @@
       }
     ]
   },
-  {
-    "name": "Pocket Tennis - Pocket Sports Series",
+  "Pocket Tennis - Pocket Sports Series": {
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -77,16 +69,14 @@
       }
     ]
   },
-  {
-    "name": "Renketsu Puzzle Tsunagete Pon!",
+  "Renketsu Puzzle Tsunagete Pon!": {
     "players": 2,
     "rating": 0.75,
     "genres": [
       "Puzzle-Game"
     ]
   },
-  {
-    "name": "Samurai Shodown! - Pocket Fighting Series",
+  "Samurai Shodown! - Pocket Fighting Series": {
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -101,8 +91,7 @@
       }
     ]
   },
-  {
-    "name": "Shougi no Tatsujin",
+  "Shougi no Tatsujin": {
     "players": 2,
     "genres": [
       "Asiatic board game",
@@ -110,4 +99,4 @@
       "Strategy"
     ]
   }
-]
+}
