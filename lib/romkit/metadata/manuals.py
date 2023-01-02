@@ -81,10 +81,21 @@ class ManualsMetadata(BaseMetadata):
         for language in candidate_languages.keys():
             for manual in manuals:
                 if language in manual['languages']:
+                    if 'name' in manual:
+                        if machine.name == manual['name']:
+                            machine.manual = manual
+                            return
+                        else:
+                            continue
+
+                    if 'title' in manual:
+                        if machine.title == manual['title']:
+                            machine.manual = manual
+                            return
+                        else:
+                            continue
+
                     if not fallback_manual:
                         fallback_manual = manual
-                    if machine.title == machine.parent_title or machine.title == manual.get('title') or machine.flags_str == manual.get('flags'):
-                        machine.manual = manual
-                        return
 
         machine.manual = fallback_manual
