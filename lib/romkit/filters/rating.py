@@ -9,7 +9,7 @@ class RatingFilter(ExactFilter):
     name = 'ratings'
     normalize_values = False
 
-    def values(self, machine: Machine) -> Set[int]:
+    def values(self, machine: Machine) -> Set[float]:
         if machine.rating is not None:
           return {machine.rating}
         else:

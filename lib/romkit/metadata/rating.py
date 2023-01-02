@@ -6,5 +6,5 @@ from romkit.metadata.base import BaseMetadata
 class RatingMetadata(BaseMetadata):
     name = 'rating'
 
-    def update(self, machine: Machine, rating: int) -> None:
+    def update(self, machine: Machine, rating: float) -> None:
         machine.rating = rating
