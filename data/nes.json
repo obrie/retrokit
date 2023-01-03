@@ -2858,12 +2858,10 @@
         "url": "https://archive.org/download/NESManuals/Challenge of the Dragon (USA) (Unl).pdf"
       }
     ],
-    "group": {
-      "merge": [
+"merge": [
         "Black Dragon",
         "Chinese KungFu"
       ]
-    }
   },
   "Challenger": {
     "players": 1,
@@ -11273,12 +11271,13 @@
     "players": 1,
     "genres": [
       "Educational"
-    ],
-    "group": {
-      "split": [
-        "(Jou) (Japan)"
-      ]
-    }
+    ]
+  },
+  "NHK Gakuen - Space School - Sansu 6 Nen (Jou) (Japan)": {
+    "players": 1,
+    "genres": [
+      "Educational"
+    ]
   },
   "Nagagutsu o Haita Neko - Sekai Isshuu 80 Nichi Daibouken": {
     "players": 2,
