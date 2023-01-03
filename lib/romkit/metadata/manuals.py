@@ -46,12 +46,6 @@ class ManualsMetadata(BaseMetadata):
         self.prioritize_region_languages = self.config['languages']['prioritize_region_languages']
         self.only_region_languages = self.config['languages']['only_region_languages']
 
-        # Typecast lists to sets
-        for key, machine_metadata in self.data.items():
-            if 'manuals' in machine_metadata:
-                for manual in machine_metadata['manuals']:
-                    manual['languages'] = set(manual['languages'])
-
     def update(self, machine: Machine, manuals: List[dict]) -> None:
         # Use a dict, so we get fast lookups and ordered insertions
         candidate_languages = {}
