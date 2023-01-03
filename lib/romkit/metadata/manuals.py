@@ -82,14 +82,7 @@ class ManualsMetadata(BaseMetadata):
             for manual in manuals:
                 if language in manual['languages']:
                     if 'name' in manual:
-                        if machine.name == manual['name']:
-                            machine.manual = manual
-                            return
-                        else:
-                            continue
-
-                    if 'title' in manual:
-                        if machine.title == manual['title']:
+                        if machine.name == manual['name'] or machine.title == manual['name']:
                             machine.manual = manual
                             return
                         else:
