@@ -11,26 +11,14 @@ class GroupMetadata(BaseMetadata):
     def load(self) -> None:
         self.groups = {}
 
-        for group, machine_metadata in self.data.items():
-            self._map_group(group, group)
-
-            group_metadata = machine_metadata.get('group')
-            if not group_metadata:
-                continue
+        for key, machine_metadata in self.data.items():
+            group = machine_metadata.get('group', key)
+            self._map_group(key, group)
 
             # Add keys to merge into this group
-            if 'merge' in group_metadata:
-                for key in group_metadata['merge']:
+            if 'merge' in machine_metadata:
+                for key in machine_metadata['merge']:
                     self._map_group(key, group)
-
-            # Add new groups to split off from the base title
-            if 'split' in group_metadata:
-                for name in group_metadata['split']:
-                    # Prepend the machine title if only flags were specified
-                    if name[0] == '(':
-                        name = f"{group} {name}"
-
-                    self._map_group(name, name)
 
     # Maps the given key (a name or title) to a specific group
     # 

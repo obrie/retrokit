@@ -157,18 +157,18 @@
       "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_climbern.zip"
     }
   },
-  "gnw_egg": {
-    "group": "gnw_mmouse",
+  "gnw_dkcirc": {
+    "group": "gnw_mmousep",
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/130_egg_eg-26_eng.zip"
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/420_donkey-kong-circus_mk-96_eng.zip"
       }
     ],
     "media": {
-      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_egg.zip"
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_dkcirc.zip"
     }
   },
   "gnw_dkhockey": {
@@ -268,6 +268,20 @@
     "tags": [
       "Game & Watch"
     ]
+  },
+  "gnw_egg": {
+    "group": "gnw_mmouse",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/130_egg_eg-26_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_egg.zip"
+    }
   },
   "gnw_fire": {
     "manuals": [
@@ -592,20 +606,6 @@
     "tags": [
       "Game & Watch"
     ]
-  },
-  "gnw_dkcirc": {
-    "group": "gnw_mmousep",
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/420_donkey-kong-circus_mk-96_eng.zip"
-      }
-    ],
-    "media": {
-      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_dkcirc.zip"
-    }
   },
   "gnw_octopus": {
     "manuals": [

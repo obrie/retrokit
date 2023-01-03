@@ -18,10 +18,9 @@ class MetadataSet:
             self.data = json.load(file)
 
             # Add machine-specific overrides that differ from the parent
-            for group, metadata in self.data.items():
-                if 'overrides' in metadata:
-                    for key, overrides in metadata['overrides'].items():
-                        self.data[key] = {**metadata, **overrides}
+            for key, metadata in self.data.items():
+                if 'group' in metadata:
+                    self.data[key] = {**self.data[metadata['group']], **metadata}
 
     # Builds a MetadataSet from the given json data
     @classmethod

@@ -240,12 +240,10 @@
         "url": "https://archive.org/download/tenpin-bowling-basketball-eur-philips-videopac-1980/Tenpin Bowling - Basketball (EUR)(Philips Videopac)(1980).pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Jeu de Quilles + Basketball",
-        "Tenpin Bowling + Basketball"
-      ]
-    }
+    "merge": [
+      "Jeu de Quilles + Basketball",
+      "Tenpin Bowling + Basketball"
+    ]
   },
   "Buraco Negro": {
     "players": 1,
@@ -276,11 +274,9 @@
         "url": "https://archive.org/download/neutron-star-eur-philips-videopac-1983/Neutron Star (EUR)(Philips Videopac+)(1983).pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Neutron Star"
-      ]
-    }
+    "merge": [
+      "Neutron Star"
+    ]
   },
   "Casino Slot Machine": {
     "players": 2,
@@ -1094,11 +1090,9 @@
         "url": "https://archive.org/download/Mousing_Cat_The_1982_Philips_en-de/Mousing_Cat_The_1982_Philips_en-de.pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Chat et Souris"
-      ]
-    }
+    "merge": [
+      "Chat et Souris"
+    ]
   },
   "Munchkin": {
     "players": 1,
@@ -1309,11 +1303,9 @@
         "url": "https://archive.org/download/pickaxe-pete-eur-philips-videopac-1982/Pickaxe Pete (EUR)(Philips Videopac)(1982).pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Pickaxe Pete"
-      ]
-    }
+    "merge": [
+      "Pickaxe Pete"
+    ]
   },
   "Pinball": {
     "genres": [
@@ -1370,14 +1362,12 @@
         "url": "https://archive.org/download/electronic-billiards-eur-philips-videopac-1981/Electronic Billiards (EUR)(Philips Videopac)(1981).pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Billard Americain",
-        "Billard Electrique",
-        "Billiard Americain",
-        "Electronic Billiards"
-      ]
-    }
+    "merge": [
+      "Billard Americain",
+      "Billard Electrique",
+      "Billiard Americain",
+      "Electronic Billiards"
+    ]
   },
   "Popeye": {
     "players": 1,
@@ -1591,11 +1581,9 @@
         "url": "https://archive.org/download/race-spin-out-cryptogram-us-philips-videopac-1978/Race  Spin-out  Cryptogram (US)(Philips Videopac)(1978).pdf"
       }
     ],
-    "group": {
-      "merge": [
-        "Race + Spin-out + Cryptogram"
-      ]
-    }
+    "merge": [
+      "Race + Spin-out + Cryptogram"
+    ]
   },
   "Spider-Man": {
     "players": 1,
