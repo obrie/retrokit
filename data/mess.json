@@ -23,13 +23,6 @@
           "en"
         ],
         "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/580_balloon-fight_bf-803_eng.zip"
-      },
-      {
-        "name": "gnw_bfightn",
-        "languages": [
-          "en"
-        ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/490_balloon-fight_bf-107_eng.zip"
       }
     ],
     "media": {
@@ -38,6 +31,20 @@
     "tags": [
       "Game & Watch"
     ]
+  },
+  "gnw_bfightn": {
+    "group": "gnw_bfight",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/490_balloon-fight_bf-107_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_bfightn.zip"
+    }
   },
   "gnw_bjack": {
     "manuals": [
@@ -127,13 +134,6 @@
           "en"
         ],
         "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/570_climber_dr-802_eng.zip"
-      },
-      {
-        "name": "gnw_climbern",
-        "languages": [
-          "en"
-        ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/480_climber_dr-106_eng.zip"
       }
     ],
     "media": {
@@ -142,6 +142,34 @@
     "tags": [
       "Game & Watch"
     ]
+  },
+  "gnw_climbern": {
+    "group": "gnw_climber",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/480_climber_dr-106_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_climbern.zip"
+    }
+  },
+  "gnw_egg": {
+    "group": "gnw_mmouse",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/130_egg_eg-26_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_egg.zip"
+    }
   },
   "gnw_dkhockey": {
     "manuals": [
@@ -540,13 +568,6 @@
           "en"
         ],
         "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/120_mickey-mouse_mc-25_eng.zip"
-      },
-      {
-        "name": "gnw_egg",
-        "languages": [
-          "en"
-        ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/130_egg_eg-26_eng.zip"
       }
     ],
     "media": {
@@ -571,6 +592,20 @@
     "tags": [
       "Game & Watch"
     ]
+  },
+  "gnw_dkcirc": {
+    "group": "gnw_mmousep",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/420_donkey-kong-circus_mk-96_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_dkcirc.zip"
+    }
   },
   "gnw_octopus": {
     "manuals": [
@@ -705,13 +740,6 @@
           "en"
         ],
         "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/560_super-mario-bros_ym-801_eng.zip"
-      },
-      {
-        "name": "gnw_smbn",
-        "languages": [
-          "en"
-        ],
-        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/470_super-mario-bros_ym-105_eng.zip"
       }
     ],
     "media": {
@@ -720,6 +748,20 @@
     "tags": [
       "Game & Watch"
     ]
+  },
+  "gnw_smbn": {
+    "group": "gnw_smb",
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://www.gameandwatch.ch/gwdata/manuals/eng/470_super-mario-bros_ym-105_eng.zip"
+      }
+    ],
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/ArtworksAlt/ArtworksAlt.zip/gnw_smbn.zip"
+    }
   },
   "gnw_snoopyp": {
     "players": 1,
@@ -1257,6 +1299,12 @@
       "Tiger Electronics LCD"
     ]
   },
+  "trobhood": {
+    "group": "tgaunt",
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/trobhood.zip"
+    }
+  },
   "trobocop2": {
     "media": {
       "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/trobocop2.zip"
@@ -1272,6 +1320,12 @@
     "tags": [
       "Tiger Electronics LCD"
     ]
+  },
+  "trockteer": {
+    "group": "trobocop2",
+    "media": {
+      "artwork": "https://archive.org/download/mame-support/Support/Artworks/Artworks.zip/trockteer.zip"
+    }
   },
   "tsddragon": {
     "media": {
