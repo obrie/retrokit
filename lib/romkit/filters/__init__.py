@@ -13,7 +13,7 @@ from romkit.filters.orientation import OrientationFilter
 from romkit.filters.parent import CloneFilter, ParentNameFilter, PartialParentNameFilter, ParentTitleFilter
 from romkit.filters.rating import RatingFilter
 from romkit.filters.romset import ROMSetFilter
-from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter, TagFilter
+from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter, TagFilter, SeriesFilter
 
 # The order here helps in terms of performance, so we should order it based
 # on which filters are most likely to reject a game
@@ -32,6 +32,7 @@ __all_filters__ = [
     CategoryFilter,
     CollectionFilter,
     TagFilter,
+    SeriesFilter,
     RatingFilter,
     EmulatorRatingFilter,
     LanguageFilter,

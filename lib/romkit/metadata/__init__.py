@@ -11,6 +11,7 @@ from romkit.metadata.media import MediaMetadata
 from romkit.metadata.players import PlayersMetadata
 from romkit.metadata.rating import RatingMetadata
 from romkit.metadata.renames import RenamesMetadata
+from romkit.metadata.series import SeriesMetadata
 from romkit.metadata.tags import TagsMetadata
 
 __all_metadata__ = [
@@ -24,5 +25,6 @@ __all_metadata__ = [
     PlayersMetadata,
     RatingMetadata,
     RenamesMetadata,
+    SeriesMetadata,
     TagsMetadata,
 ]

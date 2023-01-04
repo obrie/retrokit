@@ -21,6 +21,13 @@ class GenreFilter(SubstringFilter):
     def values(self, machine: Machine) -> Set[str]:
         return machine.genres
 
+# Filter on series
+class SeriesFilter(SubstringFilter):
+    name = 'series'
+
+    def values(self, machine: Machine) -> Set[str]:
+        return {machine.series}
+
 # Filter on custom collections
 class CollectionFilter(ExactFilter):
     name = 'collections'

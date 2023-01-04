@@ -50,6 +50,7 @@ class Machine:
         emulator_rating: Optional[int] = None,
         manual: Optional[dict] = None,
         media: Optional[dict] = None,
+        series: Optional[str] = None,
 
         # Additional context to include when rendering resource paths
         custom_context: dict = None,
@@ -84,6 +85,7 @@ class Machine:
         self.emulator_rating = emulator_rating
         self.manual = manual
         self.media = media or {}
+        self.series = series
         self.group_name = group_name or self.parent_title or self.title
 
         # Automatic defaults
@@ -103,7 +105,7 @@ class Machine:
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
 
-        # Orientation
+        # Orientation (TODO: This is fbneo only)
         video_tags = xml.findall('video')
         if video_tags:
             orientation = video_tags[0].get('orientation')
@@ -478,6 +480,7 @@ class Machine:
             'emulator_rating': self.emulator_rating,
             'manual': self.manual,
             'media': self.media,
+            'series': self.series,
             'group': {
                 'name': self.group_name,
                 'title': self.group_title,
