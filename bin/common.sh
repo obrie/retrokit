@@ -42,7 +42,7 @@ __setup_env() {
     export data_dir="$app_dir/data"
     export docs_dir="$app_dir/docs"
     export profiles_dir="$app_dir/profiles"
-    export tmp_dir="$app_dir/tmp"
+    export tmp_dir=${TMPDIR:-$app_dir/tmp}
     export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
     trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
