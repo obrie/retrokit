@@ -27,12 +27,6 @@ download() {
     cmd='sudo'
   fi
 
-  # Authorization
-  local curl_opts=()
-  if [ -n "$auth_token" ]; then
-    curl_opts+=(-H "Authorization: token $auth_token")
-  fi
-
   # Encode spaces for maximum compatibility
   url=${url// /%20}
 
@@ -41,7 +35,7 @@ download() {
   for attempt in $(seq 1 $max_attempts); do
     if [ -z "$target" ]; then
       # No target provided -- print url contents to stdout
-      curl -fgL# "${curl_opts[@]}" "$url"
+      __download_exec "$cmd" "$url" '-' auth_token="$auth_token"
       exit_code=$?
     elif [ ! -s "$target" ] || [ "$force" == "true" ]; then
       echo "Downloading $url"
@@ -49,9 +43,9 @@ download() {
       # Ensure target directory exists
       mkdir -pv "$(dirname "$target")"
 
-      # Download via curl and check that the target isn't empty
+      # Download and check that the target isn't empty
       local tmp_target="$(mktemp -p "$tmp_ephemeral_dir")"
-      if $cmd curl -fgL# "${curl_opts[@]}" -o "$tmp_target" "$url" && [ -s "$tmp_target" ]; then
+      if __download_exec "$cmd" "$url" "$tmp_target" auth_token="$auth_token" && [ -s "$tmp_target" ]; then
         $cmd mv "$tmp_target" "$target"
         exit_code=0
       else
@@ -71,6 +65,26 @@ download() {
   done
 
   return $exit_code
+}
+
+__download_exec() {
+  local cmd_prefix=$1
+  local url=$2
+  local target=$3
+  local auth_token=''
+  if [ $# -gt 3 ]; then local "${@:4}"; fi
+
+  if [[ "$url" == *drive.google.com* ]]; then
+    gdown --fuzzy "$url" -O "$target"
+  else
+    # Authorization
+    local curl_opts=()
+    if [ -n "$auth_token" ]; then
+      curl_opts+=(-H "Authorization: token $auth_token")
+    fi
+
+    curl -fgL# "${curl_opts[@]}" -o "$target" "$url"
+  fi
 }
 
 # Check whether there's a newer commit in a git repo given a particular SHA

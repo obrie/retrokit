@@ -24,9 +24,10 @@ source "$bin_dir/helpers/versions.sh"
 # These are required for execution of setup before any setupmodule
 # has been installed.
 __check_core_depends() {
-  if [ ! `command -v jq` ]; then
+  if [ ! `command -v jq` ] || [ ! `command -v gdown` ]; then
     print_heading 'Installing retrokit common dependencies'
     sudo apt-get install -y jq
+    sudo pip3 install gdown
   fi
 }
 
