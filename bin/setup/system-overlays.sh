@@ -47,7 +47,7 @@ __enable_lightgun_borders() {
 
 # Does this system have lightgun games to play?
 __has_lightgun_titles() {
-  each_path "{data_dir}/$system.json" jq -r '.[] | select(.tags) | .tags | .[]' | grep -Eq '^Lightgun$'
+  each_path "{data_dir}/$system.json" jq -r '.[] | select(.tags) | .tags | .[]' '{}' | grep -Eq '^Lightgun$'
 }
 
 restore() {
