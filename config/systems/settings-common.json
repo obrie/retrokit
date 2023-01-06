@@ -39,6 +39,12 @@
     },
     "collections": [
       {
+        "name": "C64 Dreams: Best Of",
+        "filters": {
+          "tags": ["C64 Dreams: Best Of"]
+        }
+      },
+      {
         "name": "Keyboard",
         "filters": {
           "tags": ["keyboard"]
@@ -94,7 +100,6 @@
           "tags": ["party"]
         }
       }
-
     ]
   }
 }
