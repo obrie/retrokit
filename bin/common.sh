@@ -60,7 +60,6 @@ __setup_env() {
 
     # Define settings file
     export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-    echo '{}' > "$settings_file"
     json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
 
     # Mark exports as being complete so that subsequent setup module executions
@@ -87,6 +86,27 @@ list_setupmodules() {
 # Is the given setupmodule is enabled?
 has_setupmodule() {
   list_setupmodules | grep -q "^$1\$"
+}
+
+# Generates a settings file based on current configuration settings:
+# * Merges common settings with system overrides
+# * Merges data paths from profiles
+generate_system_settings_file() {
+  local system=$1
+
+  # Build settings file
+  local system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null
+  json_merge "{config_dir}/systems/$system/settings.json" "$system_settings_file" backup=false >/dev/null
+
+  # Merge data file
+  system_data_merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
+  system_data_path=$(jq -r '.metadata .path' "$system_settings_file")
+  system_data_name=$(basename "$system_data_path")
+  json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false >/dev/null
+  json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_path"
+
+  echo "$system_settings_file"
 }
 
 ##############

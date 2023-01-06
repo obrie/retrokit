@@ -25,12 +25,7 @@ main() {
 run() {
   local command=$1
   local system=$2
-
-  # Build settings file
-  local system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
-  echo '{}' > "$system_settings_file"
-  json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null
-  json_merge "{config_dir}/systems/$system/settings.json" "$system_settings_file" backup=false >/dev/null
+  local system_settings_file=$(generate_system_settings_file "$system")
 
   local args=("${@:3}")
   if [ -z "$args" ]; then
