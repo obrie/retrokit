@@ -557,9 +557,6 @@
     ],
     "orientation": "vertical"
   },
-  "3bagflnz": {
-    "series": "Aristocrat MK Hardware"
-  },
   "3bagflvt": {
     "players": 1,
     "genres": [
@@ -7541,9 +7538,6 @@
     "languages": [
       "English"
     ]
-  },
-  "baraduke": {
-    "series": "Baraduke"
   },
   "barata": {
     "players": 2,
@@ -22859,9 +22853,6 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
-  "csdce": {
-    "series": "Aristocrat MK Hardware"
-  },
   "csdtenis": {
     "players": 2,
     "rating": 60,
@@ -24813,9 +24804,6 @@
     ],
     "orientation": "horizontal"
   },
-  "darkhors": {
-    "series": "Jockey Club"
-  },
   "darkmist": {
     "players": 2,
     "rating": 70,
@@ -25807,9 +25795,6 @@
     "series": "DonPachi",
     "orientation": "vertical"
   },
-  "ddpdoj": {
-    "series": "DonPachi"
-  },
   "ddpdojt": {
     "players": 2,
     "rating": 80,
@@ -26232,7 +26217,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "Dance Dance Revolution"
   },
   "ddrsn2j": {
     "languages": [
@@ -26244,7 +26230,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "Dance Dance Revolution"
   },
   "ddrusa": {
     "players": 2,
@@ -26389,9 +26376,6 @@
     ],
     "series": "Dynamite Dux",
     "orientation": "horizontal"
-  },
-  "dduxbl": {
-    "series": "Dynamite Dux"
   },
   "dduxj": {
     "group": "ddux",
@@ -30375,33 +30359,6 @@
     ],
     "orientation": "horizontal"
   },
-  "drmn": {
-    "series": "DrumMania"
-  },
-  "drmn10m": {
-    "series": "DrumMania"
-  },
-  "drmn2m": {
-    "series": "DrumMania"
-  },
-  "drmn4m": {
-    "series": "DrumMania"
-  },
-  "drmn5m": {
-    "series": "DrumMania"
-  },
-  "drmn6m": {
-    "series": "DrumMania"
-  },
-  "drmn7m": {
-    "series": "DrumMania"
-  },
-  "drmn8m": {
-    "series": "DrumMania"
-  },
-  "drmn9m": {
-    "series": "DrumMania"
-  },
   "drmnv2a": {
     "languages": [
       "English"
@@ -30412,7 +30369,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "DrumMania"
   },
   "drmnv2j": {
     "languages": [
@@ -30424,7 +30382,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "DrumMania"
   },
   "drmnv3a": {
     "languages": [
@@ -30436,7 +30395,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "DrumMania"
   },
   "drmnv3j": {
     "languages": [
@@ -30448,7 +30408,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "DrumMania"
   },
   "drmred": {
     "genres": [
@@ -30765,7 +30726,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "Dancing Stage"
   },
   "dstbloom": {
     "players": 1,
@@ -31701,9 +31663,6 @@
     ],
     "series": "Enchanted Forest",
     "orientation": "horizontal"
-  },
-  "eforestb": {
-    "series": "Enchanted Forest"
   },
   "eforsta5": {
     "players": 1,
@@ -34660,9 +34619,6 @@
     "languages": [
       "Russian"
     ]
-  },
-  "fcockt_6": {
-    "series": "Fruit Cocktail * Slot"
   },
   "fcockt_6c": {
     "group": "fcockt_8",
@@ -39422,9 +39378,6 @@
       "Russian"
     ]
   },
-  "garage_4": {
-    "series": "Garage * Slot"
-  },
   "garage_4c": {
     "group": "garage_5",
     "languages": [
@@ -39899,8 +39852,7 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 5
-    },
-    "series": "Darius"
+    }
   },
   "gdarius2": {
     "players": 2,
@@ -40868,9 +40820,6 @@
     "series": "Gigas",
     "orientation": "vertical"
   },
-  "gigasb": {
-    "series": "Gigas"
-  },
   "gigasm2": {
     "players": 2,
     "rating": 70,
@@ -40889,9 +40838,6 @@
     ],
     "series": "Gigas",
     "orientation": "vertical"
-  },
-  "gigasm2b": {
-    "series": "Gigas"
   },
   "gigawing": {
     "players": 2,
@@ -41793,9 +41739,6 @@
     ],
     "orientation": "horizontal"
   },
-  "gokuparo": {
-    "series": "Parodius"
-  },
   "goldarch": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -41999,9 +41942,6 @@
     ],
     "series": "Dolphin Treasure * Slot",
     "orientation": "horizontal"
-  },
-  "goldpyra": {
-    "series": "Dolphin Treasure * Slot"
   },
   "goldsam": {
     "genres": [
@@ -44180,7 +44120,8 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "series": "Guitar Freaks"
   },
   "gtrfrkv2j": {
     "languages": [
@@ -44192,7 +44133,8 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "series": "Guitar Freaks"
   },
   "gtrfrkv3a": {
     "languages": [
@@ -44204,7 +44146,8 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "series": "Guitar Freaks"
   },
   "gtrfrkv3j": {
     "languages": [
@@ -44216,7 +44159,8 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "series": "Guitar Freaks"
   },
   "gtroppo": {
     "players": 1,
@@ -44620,7 +44564,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "Mobile Suit Gundam"
   },
   "gundcb83": {
     "languages": [
@@ -44633,7 +44578,8 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "series": "Mobile Suit Gundam"
   },
   "gundealr": {
     "players": 2,
@@ -47385,9 +47331,6 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
-  "hmcompm2": {
-    "series": "beatmania"
-  },
   "hmgeo": {
     "players": 2,
     "genres": [
@@ -48473,9 +48416,6 @@
     ],
     "series": "Street Fighter",
     "orientation": "horizontal"
-  },
-  "hsf2a": {
-    "series": "Street Fighter"
   },
   "hsf2j": {
     "group": "hsf2",
@@ -54195,9 +54135,6 @@
     ],
     "orientation": "horizontal"
   },
-  "keks": {
-    "series": "Keks * Slot"
-  },
   "keks_13": {
     "group": "keks_6",
     "languages": [
@@ -54239,9 +54176,6 @@
     "languages": [
       "Russian"
     ]
-  },
-  "keks_2": {
-    "series": "Keks * Slot"
   },
   "keks_2c": {
     "group": "keks_6",
@@ -56602,7 +56536,8 @@
       "Arcade: Fighter / 2.5D"
     ],
     "players": 2,
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "series": "Knights of Valour"
   },
   "kov7sprt": {
     "players": 2,
@@ -56845,9 +56780,6 @@
       "joy"
     ],
     "orientation": "horizontal"
-  },
-  "ktiger2": {
-    "series": "Twin Cobra"
   },
   "kuhga": {
     "group": "vaportra",
@@ -58704,9 +58636,6 @@
       "Russian"
     ]
   },
-  "lhaunt_4": {
-    "series": "Lucky Haunter * Slot"
-  },
   "lhaunt_6": {
     "players": 1,
     "genres": [
@@ -60376,7 +60305,8 @@
     "players": 1,
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "series": "Adders & Ladders * Slot"
   },
   "m4conn4": {
     "players": 1,
@@ -61299,7 +61229,8 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
-    ]
+    ],
+    "series": "Magic Card"
   },
   "magicrdj": {
     "languages": [
@@ -61311,7 +61242,8 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
-    ]
+    ],
+    "series": "Magic Card"
   },
   "magicstk": {
     "players": 1,
@@ -64684,9 +64616,6 @@
     "series": "Multi Fish * Slot",
     "orientation": "horizontal"
   },
-  "mfish_3": {
-    "series": "Multi Fish * Slot"
-  },
   "mfjump": {
     "players": 2,
     "rating": 80,
@@ -65881,9 +65810,6 @@
     ],
     "orientation": "horizontal"
   },
-  "mjanbari": {
-    "series": "Medal Mahjong"
-  },
   "mjangels": {
     "players": 1,
     "genres": [
@@ -66421,9 +66347,6 @@
     ],
     "series": "Mahjong The Mysterious World",
     "orientation": "horizontal"
-  },
-  "mjmyornt": {
-    "series": "Mahjong The Mysterious World"
   },
   "mjmyorntr": {
     "players": 1,
@@ -73973,9 +73896,6 @@
     "series": "Lucky 8 Lines",
     "orientation": "horizontal"
   },
-  "ns8linew": {
-    "series": "Lucky 8 Lines"
-  },
   "nslasher": {
     "players": 3,
     "rating": 70,
@@ -79756,9 +79676,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "peke0017": {
-    "series": "Player's Edge"
-  },
   "peke1001": {
     "players": 1,
     "genres": [
@@ -79772,9 +79689,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "peke1012": {
-    "series": "Player's Edge"
   },
   "pekoc766": {
     "players": 1,
@@ -80280,12 +80194,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "pepp0002": {
-    "series": "Player's Edge"
-  },
-  "pepp0043": {
-    "series": "Player's Edge"
-  },
   "pepp0048": {
     "players": 1,
     "genres": [
@@ -80300,9 +80208,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "pepp0053": {
-    "series": "Player's Edge"
-  },
   "pepp0054": {
     "players": 1,
     "genres": [
@@ -80316,12 +80221,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "pepp0055": {
-    "series": "Player's Edge"
-  },
-  "pepp0065": {
-    "series": "Player's Edge"
   },
   "pepp0120": {
     "players": 1,
@@ -80378,9 +80277,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "pepp0188": {
-    "series": "Player's Edge"
   },
   "pepp0232": {
     "players": 1,
@@ -80464,9 +80360,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "pepp0447": {
-    "series": "Player's Edge"
-  },
   "pepp0449a": {
     "group": "pepp0001",
     "languages": [
@@ -80501,9 +80394,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "pepp0508": {
-    "series": "Player's Edge"
-  },
   "pepp0514": {
     "players": 1,
     "genres": [
@@ -80517,9 +80407,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "pepp0516": {
-    "series": "Player's Edge"
   },
   "pepp0542": {
     "players": 1,
@@ -80659,9 +80546,6 @@
     "series": "Player's Edge",
     "orientation": "horizontal"
   },
-  "peps0022": {
-    "series": "Player's Edge"
-  },
   "peps0040": {
     "players": 1,
     "genres": [
@@ -80689,12 +80573,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "peps0043": {
-    "series": "Player's Edge"
-  },
-  "peps0045": {
-    "series": "Player's Edge"
   },
   "peps0047": {
     "players": 1,
@@ -80807,9 +80685,6 @@
       "only_buttons"
     ]
   },
-  "peps0280": {
-    "series": "Player's Edge"
-  },
   "peps0291": {
     "players": 1,
     "genres": [
@@ -80823,9 +80698,6 @@
     "controls": [
       "only_buttons"
     ]
-  },
-  "peps0296": {
-    "series": "Player's Edge"
   },
   "peps0308": {
     "players": 1,
@@ -80882,9 +80754,6 @@
     ],
     "series": "Player's Edge",
     "orientation": "horizontal"
-  },
-  "peps0426": {
-    "series": "Player's Edge"
   },
   "peps0470": {
     "players": 1,
@@ -81134,9 +81003,6 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
-  },
-  "petshopa": {
-    "series": "Aristocrat MK Hardware"
   },
   "pettanp": {
     "group": "banbam",
@@ -88539,9 +88405,6 @@
     "series": "Puyo Puyo",
     "orientation": "horizontal"
   },
-  "puyofevp": {
-    "series": "Puyo Puyo"
-  },
   "puyoj": {
     "group": "puyo",
     "languages": [
@@ -88642,9 +88505,6 @@
       "joy"
     ],
     "orientation": "vertical"
-  },
-  "puzldama": {
-    "series": "Puzzle-Dama"
   },
   "puzlstar": {
     "players": 2,
@@ -93340,9 +93200,6 @@
       "Russian"
     ]
   },
-  "resdnt_2": {
-    "series": "Resident * Slot"
-  },
   "resdnt_2b": {
     "group": "resdnt_6",
     "languages": [
@@ -95048,9 +94905,6 @@
     "controls": [
       "stick"
     ]
-  },
-  "rollfr_2": {
-    "series": "Roll Fruit * Slot"
   },
   "rollfr_4": {
     "players": 1,
@@ -107122,9 +106976,6 @@
       "Japanese"
     ]
   },
-  "shisen2": {
-    "series": "Match It"
-  },
   "shngmtkb": {
     "players": 2,
     "rating": 70,
@@ -107893,9 +107744,6 @@
     ],
     "series": "Space Invaders",
     "orientation": "vertical"
-  },
-  "sichuan2": {
-    "series": "Match It"
   },
   "sidampkr": {
     "players": 1,
@@ -117848,9 +117696,6 @@
     "series": "SNK vs. Capcom",
     "orientation": "horizontal"
   },
-  "svcboot": {
-    "series": "SNK vs. Capcom"
-  },
   "svcpcb": {
     "players": 2,
     "rating": 90,
@@ -127027,9 +126872,6 @@
     ],
     "orientation": "vertical"
   },
-  "unkch1": {
-    "series": "Cherry Master"
-  },
   "unkct": {
     "genres": [
       "Arcade: Misc. / Unknown"
@@ -131788,8 +131630,7 @@
   "wcbowldx": {
     "tags": [
       "Trackball"
-    ],
-    "series": "World Class Bowling"
+    ]
   },
   "wccf116": {
     "genres": [
