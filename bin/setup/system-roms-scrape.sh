@@ -230,12 +230,6 @@ __import_user_overrides() {
   # Remove existing overrides we may have previously added
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
 
-  # Look up any overrides we want to add to the skyscraper database
-  local overrides_path=$(first_path '{system_config_dir}/scrape-overrides.tsv')
-  if [ -z "$overrides_path" ]; then
-    return
-  fi
-
   while IFS=$'\t' read rom_name resource_type resource_value; do
     local rom_path=${rom_data["$rom_name/path"]}
     if [ -z "$rom_path" ]; then
@@ -246,7 +240,7 @@ __import_user_overrides() {
     local rom_filename=$(basename "$rom_path")
     echo "Updating \"$rom_filename\" $resource_type to \"$resource_value\""
     echo "$resource_value" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
-  done < <(cat "$overrides_path")
+  done < <(each_path '{system_config_dir}/scrape-overrides.json' jq -r 'to_entries[] | .key as $name | .value | to_entries[] | [$name, .key, .value] | @tsv' '{}')
 }
 
 # Builds the gamelist.xml that will be used by emulationstation
