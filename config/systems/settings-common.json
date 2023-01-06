@@ -59,7 +59,15 @@
       {
         "name": "Trackball",
         "filters": {
-          "tags": ["trackball"]
+          "controls": ["trackball"],
+          "!controls": [
+            "gambling",
+            "joy",
+            "lightgun",
+            "only_buttons",
+            "pedal",
+            "stick"
+          ]
         }
       },
       {
@@ -79,7 +87,14 @@
         "filters": {
           "!players": [null, 1, 2, 3]
         }
+      },
+      {
+        "name": "Party: 4+",
+        "filters": {
+          "tags": ["party"]
+        }
       }
+
     ]
   }
 }
