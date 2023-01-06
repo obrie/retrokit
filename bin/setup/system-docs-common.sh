@@ -207,7 +207,6 @@ retropad_buttons_map=(
 
 # Path to which documenation data will be tracked
 doc_data_file="$tmp_ephemeral_dir/doc.json"
-echo '{}' > "$doc_data_file"
 json_merge '{system_docs_dir}/doc.json' "$doc_data_file" backup=false >/dev/null
 
 __add_hrefs() {

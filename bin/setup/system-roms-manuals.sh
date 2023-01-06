@@ -142,7 +142,6 @@ __list_manuals() {
 
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
     local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
-    echo '{}' > "$data_file"
     json_merge "{data_dir}/$system.json" "$data_file" backup=false
 
     # We're generating the manualkit archive -- list all manuals for all languages

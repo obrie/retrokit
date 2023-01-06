@@ -248,7 +248,7 @@ json_merge() {
 
   echo "Merging json $source to $target"
   local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
-  if [ -f "$target" ]; then
+  if [ -s "$target" ]; then
     cp "$target" "$staging_path"
   else
     echo '{}' > "$staging_path"

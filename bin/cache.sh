@@ -97,7 +97,6 @@ remote_sync_system_manuals() {
 
   # Build the sources reference
   local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
-  echo '{}' > "$data_file"
   json_merge "{data_dir}/$system.json" "$data_file" backup=false
   jq -r 'to_entries[] | select(.value.manuals) | .key as $group | .value.manuals[] | [.name // $group, (.languages | join(",")), .url] | @tsv' "$data_file" > "$data_file.sources"
 
