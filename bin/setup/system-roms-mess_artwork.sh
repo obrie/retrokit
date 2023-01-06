@@ -15,21 +15,9 @@ build() {
 
   mkdir -p "$system_artwork_dir"
 
-  declare -A artwork_urls
-  for artwork_path in '{config_dir}/systems/mess/artwork.tsv' '{system_config_dir}/artwork.tsv'; do
-    while IFS=$'\t' read -r name url; do
-      artwork_urls[$name]=$url
-    done < <(each_path "$artwork_path" cat '{}')
-  done
-
-  while read -r name; do
-    local artwork_url=${artwork_urls[$name]}
-    if [ -z "$artwork_url" ]; then
-      continue
-    fi
-
+  while IFS=$'\t' read -r name artwork_url; do
     download "$artwork_url" "$system_artwork_dir/$name.zip"
-  done < <(romkit_cache_list | jq -r '.name')
+  done < <(romkit_cache_list | jq -r 'select(.media .artwork) | [.name, .media .artwork] | @tsv')
 }
 
 configure() {
