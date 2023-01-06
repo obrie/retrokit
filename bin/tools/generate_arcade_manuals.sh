@@ -1,31 +1,47 @@
 #!/bin/bash
 
-system='arcade'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-. "$dir/../setup/system-common.sh"
+. "$dir/../common.sh"
 
 # Path to MAME dats (like gameinit.dat)
 dat_path="$HOME/RetroPie/BIOS/mame0244/history"
 
 # Path to MAME media (like flyers and artwork from https://www.progettosnaps.net/)
 mame_media_path="$HOME/.emulationstation/downloaded_media/arcade/mame"
-manuals_path="$HOME/.emulationstation/downloaded_media/arcade/manuals/.download"
+manuals_path="$HOME/.emulationstation/downloaded_media/arcade/manuals/.download-test"
+
+gameinit_dat_home='https://www.progettosnaps.net/gameinit/'
+gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={filename}'
+gameinit_path="$tmp_dir/arcade/gameinit.dat"
 
 generate_manuals() {
   mkdir -pv "$manuals_path"
 
   # Format the gameinit dat to simplify regex patterns
-  sed 's/\r$//' "$dat_path/gameinit.dat" > "$tmp_ephemeral_dir/gameinit.dat"
+  if [ ! -f "$gameinit_path" ]; then
+    download_gameinit
+  fi
+  sed 's/\r$//' "$gameinit_path" > "$tmp_ephemeral_dir/gameinit.dat"
 
   # Truncate the manuals
-  truncate -s0 "$system_config_dir/manuals.tsv"
+  jq -c 'del(.manual)' "$data_dir/arcade.json" > "$tmp_ephemeral_dir/arcade.json"
+  mv "$tmp_ephemeral_dir/arcade.json" "$data_dir/arcade.json"
 
   while read name; do
     generate_manual "$name" "${@}"
-  done < <(romkit_cache_list | jq -r '.name')
+  done < <(jq -r 'keys[]' "$data_dir/arcade.json")
+}
 
-  # Sort manuals
-  sort -o "$system_config_dir/manuals.tsv" "$system_config_dir/manuals.tsv"
+download_gameinit() {
+  local filename=$(download "$gameinit_dat_home" | grep -oE 'pS_gameinit_[0-9]+.zip')
+  if [ -z "$filename" ]; then
+    echo '[ERROR] Unable to scrape gameinit.dat filename'
+    exit 1
+  fi
+
+  local url=$(render_template "$gameinit_dat_url" filename="$filename")
+  download "$url" "$tmp_ephemeral_dir/mame-gameinit.zip"
+  unzip -ojq "$tmp_ephemeral_dir/mame-gameinit.zip" 'dats/gameinit.dat' -d "$tmp_dir/arcade/"
 }
 
 generate_manual() {
@@ -97,7 +113,12 @@ generate_manual() {
 }
 
 track_manual() {
-  echo "$name"$'\t'"en"$'\t'"https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/$name.pdf" >> "$system_config_dir/manuals.tsv"
+  local name=$1
+  local manuals_file="$tmp_ephemeral_dir/manual.json"
+  cat <<EOF > "$manuals_file"
+    {"name": "$name", "manuals": [{"languages": ["en"], "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/$name.pdf"}]}
+EOF
+  json_merge "$manuals_file" "$data_dir/arcade.json" backup=false
 }
 
 generate_manuals "${@}"

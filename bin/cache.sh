@@ -88,15 +88,21 @@ remote_sync_system_manuals() {
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   # Make sure this system has manuals defined for it
-  if ! any_path_exists "{config_dir}/systems/$system/manuals.tsv"; then
+  if ! each_path "{data_dir}/$system.json" jq -r '.[] | select(.manuals)' '{}' | grep -q manuals; then
     return
   fi
 
   local archive_id=$(setting '.manuals.archive.id')
   local version=$(setting '.manuals.archive.version')
 
-  # Update the sources reference
-  ia upload "$archive_id" "$config_dir/systems/$system/manuals.tsv" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
+  # Build the sources reference
+  local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  echo '{}' > "$data_file"
+  json_merge "{data_dir}/$system.json" "$data_file" backup=false
+  jq -r 'to_entries[] | select(.value.manuals) | .key as $group | .value.manuals[] | [.name // $group, (.languages | join(",")), .url] | @tsv' "$data_file" > "$data_file.sources"
+
+  # Upload sources reference
+  ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
   if [ "$sources_only" == 'true' ]; then
     return
   fi

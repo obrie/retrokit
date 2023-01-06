@@ -2,12 +2,12 @@
   "manuals": {
     "archive": {
       "version": "compressed",
-      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-original.zip/{parent_title} ({languages}).pdf",
+      "url": "https://archive.org/download/retrokit-manuals/{system}/{system}-original.zip/{name} ({languages}).pdf",
       "processed": false
     },
     "paths": {
-      "download": "{base}/.files/{parent_title} ({languages}).pdf",
-      "postprocess": "{base}/.files-compressed/{parent_title} ({languages}).pdf"
+      "download": "{base}/.files/{name} ({languages}).pdf",
+      "postprocess": "{base}/.files-compressed/{name} ({languages}).pdf"
     },
     "keep_downloads": true,
     "postprocess": {

@@ -138,12 +138,39 @@ configure() {
 
 # Lists the manuals to install
 __list_manuals() {
+  local romkit_output
+
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
+    local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
+    echo '{}' > "$data_file"
+    json_merge "{data_dir}/$system.json" "$data_file" backup=false
+
     # We're generating the manualkit archive -- list all manuals for all languages
-    each_path '{system_config_dir}/manuals.tsv' cat '{}' | sed -r 's/^([^\t]+)\t([^\t]+)(.+)$/\1\t\1\t\t\1\t\2\3/' | tr $'\t' '»'
+    romkit_output=$(cat "$data_file"  | jq -rc '
+      to_entries[] |
+      select(.value .manuals) |
+      .key as $group |
+      .value .manuals[] |
+      {
+        name: (.name // $group),
+        manual: .
+      }
+    ')
   else
-    romkit_cache_list | jq -r 'select(.manual) | [.name, .parent .title // .title, .playlist .name, .manual .name, .manual .languages, .manual .url, .manual .options] | join("»")'
+    romkit_output=$(romkit_cache_list)
   fi
+
+  echo "$romkit_output" | jq -r '
+    select(.manual) |
+    [
+      .name,
+      .playlist .name,
+      .manual .name // .group .name,
+      (.manual .languages | join(",")),
+      .manual .url,
+      ((select(.manual .options) | .manual .options | @json) // "")
+    ] | join("»")
+  '
 }
 
 # Builds an associative array representing the manual
@@ -153,17 +180,15 @@ __build_manual() {
 
   # Romkit info
   local rom_name=$2
-  local parent_title=$3
-  local playlist_name=$4
-  local manual_name=$5
-  local manual_languages=$6
-  local manual_url=$7
-  local postprocess_options=$8
+  local playlist_name=$3
+  local manual_name=$4
+  local manual_languages=$5
+  local manual_url=$6
+  local postprocess_options=$7
 
   # Defaults
   manual_ref=(
     [rom_name]="$rom_name"
-    [parent_title]="$parent_title"
     [playlist_name]="$playlist_name"
     [name]="$manual_name"
     [languages]="$manual_languages"
@@ -177,9 +202,9 @@ __build_manual() {
 
   # Define the CSV post-processing options
   if [ -n "$postprocess_options" ]; then
-    while IFS='=' read -r option value; do
+    while IFS=$'\t' read -r option value; do
       manual_ref["$option"]=$value
-    done < <(echo "$postprocess_options" | tr ';' '\n')
+    done < <(echo "$postprocess_options" | jq -r 'to_entries[] | [.key, .value] | @tsv')
   fi
 
   # Add URL only if we're allowed to fall back to downloading from the original
