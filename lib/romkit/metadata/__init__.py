@@ -8,6 +8,7 @@ from romkit.metadata.group import GroupMetadata
 from romkit.metadata.languages import LanguagesMetadata
 from romkit.metadata.manuals import ManualsMetadata
 from romkit.metadata.media import MediaMetadata
+from romkit.metadata.orientation import OrientationMetadata
 from romkit.metadata.players import PlayersMetadata
 from romkit.metadata.rating import RatingMetadata
 from romkit.metadata.renames import RenamesMetadata
@@ -22,6 +23,7 @@ __all_metadata__ = [
     LanguagesMetadata,
     ManualsMetadata,
     MediaMetadata,
+    OrientationMetadata,
     PlayersMetadata,
     RatingMetadata,
     RenamesMetadata,
