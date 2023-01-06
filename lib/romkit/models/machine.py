@@ -30,6 +30,7 @@ class Machine:
         category: Optional[str] = None,
         sourcefile: Optional[str] = None,
         controls: Set[str] = None,
+        buttons: List[str] = None,
 
         # File data
         parent_name: Optional[str] = None,
@@ -66,6 +67,7 @@ class Machine:
         self.category = category
         self.sourcefile = sourcefile
         self.controls = controls or set()
+        self.buttons = buttons or []
 
         # File data
         self.parent_name = parent_name
@@ -453,8 +455,6 @@ class Machine:
             'filesize': self.filesize,
             'description': self.description,
             'comment': self.comment,
-            'orientation': self.orientation,
-            'controls': self.controls,
 
             # Download info
             'url': str(self.resource and self.resource.source_url),
@@ -473,6 +473,9 @@ class Machine:
             'manual': self.manual,
             'media': self.media,
             'series': self.series,
+            'orientation': self.orientation,
+            'controls': self.controls,
+            'buttons': self.buttons,
             'tags': self.tags,
             'group': {
                 'name': self.group_name,

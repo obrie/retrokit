@@ -24,13 +24,13 @@ build() {
   # Redefine the controls file for ROMs
   doc_data_file="$tmp_ephemeral_dir/doc-rom.json"
 
-  while IFS='»' read name parent_name emulator; do
+  while IFS='»' read name group_name emulator; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local core_options_file="$retroarch_config_dir/$library_name/$name.opt"
 
     # Check if the ROM actually has overrides before we build documentation for it
-    if ! __has_rom_overrides "$core_options_file" "$name" "$parent_name"; then
+    if ! __has_rom_overrides "$core_options_file" "$name" "$group_name"; then
       continue
     fi
 
@@ -45,13 +45,13 @@ build() {
 
     # Build the PDF
     cp "$base_doc_data_file" "$doc_data_file"
-    __add_system_extensions "$core_options_file" "$name" "$parent_name" "$emulator"
+    __add_system_extensions "$core_options_file" "$name" "$group_name" "$emulator"
     __build_pdf "$staging_path"
 
     # Move PDF to final location
     mkdir -p "$(dirname "$output_path")"
     mv "$staging_path" "$output_path"
-  done < <(romkit_cache_list | jq -r '[.name, .parent.name, .emulator] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .group.name, .emulator] | join("»")')
 }
 
 remove() {

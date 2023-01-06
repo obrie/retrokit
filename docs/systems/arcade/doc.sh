@@ -1,33 +1,33 @@
 #!/bin/bash
 
 declare -Ag arcade_controls
-while IFS=, read rom_name buttons; do
-  if [ -z "${arcade_controls[$rom_name]}" ]; then
-    arcade_controls["$rom_name"]="$buttons"
+while IFS=$'\t' read group_name buttons; do
+  if [ -z "${arcade_controls[$group_name]}" ]; then
+    arcade_controls["$group_name"]="$buttons"
   fi
-done < <(each_path '{system_docs_dir}/controls.csv' cat '{}' | tac)
+done < <(each_path '{data_dir}/arcade.json' jq -r 'to_entries[] | select(.value.buttons) | [.key, (.value.buttons | join(","))] | @tsv' '{}' | tac)
 
 # Determines whether the given ROM has any doc overrides
 __has_rom_overrides() {
   local core_options_path=$1
   local name=$2
-  local parent_name=$3
+  local group_name=$3
 
-  [ -n "${arcade_controls[$name]}" ] || { [ -n "$parent_name" ] && [ -n "${arcade_controls[$parent_name]}" ]; }
+  [ -n "${arcade_controls[$name]}" ] || { [ -n "$group_name" ] && [ -n "${arcade_controls[$group_name]}" ]; }
 }
 
 # Add arcade-specific controls
 __add_system_extensions() {
   local core_options_path=$1
   local name=$2
-  local parent_name=$3
+  local group_name=$3
   local emulator=$4
 
   # Read the button names for this game or use system defaults
   local button_actions=()
   local button_class
   if [ -n "$name" ]; then
-    local buttons_csv=${arcade_controls[$name]:-${arcade_controls[$parent_name]}}
+    local buttons_csv=${arcade_controls[$name]:-${arcade_controls[$group_name]}}
     IFS=, read -r -a button_actions <<< "$buttons_csv"
   else
     button_class='button-enabled'
@@ -38,7 +38,7 @@ __add_system_extensions() {
   local control_panel_labels=($(jq -r '.controls .layout .labels[]' "$doc_data_file"))
 
   # Look up the button mapping layout
-  local button_mappings=$(jq -r "(.controls .layout .roms | to_entries[] | select(.value | index(\"${parent_name:-$name}\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"$emulator\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"default\")) | .key)" "$doc_data_file")
+  local button_mappings=$(jq -r "(.controls .layout .roms | to_entries[] | select(.value | index(\"$group_name\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"$emulator\")) | .key) // (.controls .layout .emulators | to_entries[] | select(.value | index(\"default\")) | .key)" "$doc_data_file")
 
   # Map button names to the corresponding actions based on their mapping index
   # (i.e. the index of each button within $button_mappings)
