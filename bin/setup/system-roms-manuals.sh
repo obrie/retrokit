@@ -228,7 +228,6 @@ __build_manual() {
   local template_variables=(
     "${base_template_variables[@]}"
     base="${manual_ref['base_path']}"
-    parent_title="$parent_title"
     name="$manual_name"
     languages="$manual_languages"
     rom_name="$rom_name"
