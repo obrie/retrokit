@@ -105,13 +105,6 @@ class Machine:
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
 
-        # Orientation
-        video_tags = xml.findall('video')
-        if video_tags:
-            orientation = video_tags[0].get('orientation')
-        else:
-            orientation = 'horizontal'
-
         # Parent / BIOS
         parent_name = xml.get('cloneof')
         bios_name = xml.get('romof')
@@ -140,7 +133,6 @@ class Machine:
             description=xml.find('description').text,
             comment=comment,
             category=category,
-            orientation=orientation,
             parent_name=parent_name,
             bios_name=bios_name,
             sample_name=sample_name,
