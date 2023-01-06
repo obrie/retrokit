@@ -473,6 +473,7 @@ class Machine:
             'manual': self.manual,
             'media': self.media,
             'series': self.series,
+            'tags': self.tags,
             'group': {
                 'name': self.group_name,
                 'title': self.group_title,
