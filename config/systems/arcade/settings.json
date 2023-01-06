@@ -239,7 +239,7 @@
         "dat": {
           "source": "file://$HOME/retrokit/cache/mame/MAME 0.160.7z",
           "target": "$HOME/retrokit/tmp/arcade/mame2015.dat",
-          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+          "install": {"action": "7z_extract", "file": ".*\\.dat"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -266,7 +266,7 @@
         "dat": {
           "source": "file://$HOME/retrokit/cache/mame/MAME 0.174.7z",
           "target": "$HOME/retrokit/tmp/arcade/mame2016.dat",
-          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+          "install": {"action": "7z_extract", "file": ".*(Arcade)\\.dat"}
         },
         "machine": {
           "source": "{url}/roms.zip/roms%2F{machine}.zip",
@@ -293,7 +293,7 @@
         "dat": {
           "source": "file://$HOME/retrokit/cache/mame/MAME 0.222.7z",
           "target": "$HOME/retrokit/tmp/arcade/mame0222.dat",
-          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+          "install": {"action": "7z_extract", "file": ".*(Arcade)\\.dat"}
         },
         "machine": {
           "source": "{url}/{parent}.zip",
@@ -321,7 +321,7 @@
         "dat": {
           "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
           "target": "$HOME/retrokit/tmp/arcade/mame0244.dat",
-          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+          "install": {"action": "7z_extract", "file": ".*(Arcade)\\.dat"}
         },
         "machine": {
           "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
@@ -385,7 +385,6 @@
       ]
     },
     "filters": {
-      "clones": [false]
     },
     "favorites": {
     },

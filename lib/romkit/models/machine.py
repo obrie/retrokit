@@ -105,7 +105,7 @@ class Machine:
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
 
-        # Orientation (TODO: This is fbneo only)
+        # Orientation
         video_tags = xml.findall('video')
         if video_tags:
             orientation = video_tags[0].get('orientation')

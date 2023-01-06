@@ -1,6 +1,7 @@
 {
   "roms": {
     "filters": {
+      "clones": [false],
       "emulator_compatibility": [true],
       "emulator_ratings": [4, 5],
       "!genres": [
