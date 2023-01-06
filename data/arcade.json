@@ -1193,6 +1193,14 @@
     ],
     "orientation": "horizontal"
   },
+  "8ballact2": {
+    "group": "8ballact",
+    "orientation": "vertical"
+  },
+  "8bpm": {
+    "group": "8ballact",
+    "orientation": "vertical"
+  },
   "98best44": {
     "players": 1,
     "genres": [
@@ -1298,6 +1306,10 @@
     "series": "Quarterback",
     "orientation": "vertical"
   },
+  "aafbd2p": {
+    "group": "aafb",
+    "players": 2
+  },
   "abacus": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -1330,9 +1342,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -2100,6 +2109,12 @@
     "series": "Dolphin Treasure * Slot",
     "orientation": "horizontal"
   },
+  "adonisu": {
+    "group": "adonis",
+    "controls": [
+      "gambling"
+    ]
+  },
   "adpoker": {
     "players": 1,
     "genres": [
@@ -2208,6 +2223,34 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "afighterb": {
+    "group": "afighter",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "afighterd": {
+    "group": "afighter",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "afightere": {
+    "group": "afighter",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "afighterf": {
+    "group": "afighter",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
   },
   "afterhrs": {
     "genres": [
@@ -2666,9 +2709,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -3156,6 +3196,20 @@
     "series": "Alpha Mission",
     "orientation": "horizontal"
   },
+  "alphaone": {
+    "group": "mhavoc",
+    "players": 1,
+    "controls": [
+      "dial"
+    ]
+  },
+  "alphaonea": {
+    "group": "mhavoc",
+    "players": 1,
+    "controls": [
+      "dial"
+    ]
+  },
   "alphaxz": {
     "group": "m660",
     "languages": [
@@ -3555,9 +3609,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -4899,9 +4950,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "arcadian": {
@@ -4947,6 +4995,12 @@
       "stick"
     ],
     "orientation": "horizontal"
+  },
+  "archrivlb": {
+    "group": "archrivl",
+    "controls": [
+      "joy"
+    ]
   },
   "arctthnd": {
     "players": 1,
@@ -5554,6 +5608,10 @@
     ],
     "orientation": "horizontal"
   },
+  "asndynmto": {
+    "group": "asndynmt",
+    "players": 2
+  },
   "asnprinc": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -5749,11 +5807,35 @@
     ],
     "orientation": "horizontal"
   },
+  "astorm3": {
+    "group": "astorm",
+    "players": 3
+  },
+  "astorm3d": {
+    "group": "astorm",
+    "players": 3
+  },
+  "astormb2": {
+    "group": "astorm",
+    "players": 3
+  },
+  "astormbl": {
+    "group": "astorm",
+    "players": 3
+  },
   "astormj": {
     "group": "astorm",
     "languages": [
       "Japanese"
     ]
+  },
+  "astormu": {
+    "group": "astorm",
+    "players": 3
+  },
+  "astormud": {
+    "group": "astorm",
+    "players": 3
   },
   "astrass": {
     "players": 2,
@@ -6060,10 +6142,11 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
+  },
+  "atarifb4": {
+    "group": "atarifb",
+    "players": 4
   },
   "ataxx": {
     "players": 2,
@@ -6088,9 +6171,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -6144,6 +6224,14 @@
     ],
     "series": "Tetris",
     "orientation": "horizontal"
+  },
+  "atetrisc": {
+    "group": "atetris",
+    "orientation": "vertical"
+  },
+  "atetrisc2": {
+    "group": "atetris",
+    "orientation": "vertical"
   },
   "athena": {
     "players": 2,
@@ -6216,6 +6304,12 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "atlantol": {
+    "group": "trackfld",
+    "controls": [
+      "joy"
+    ]
   },
   "atomicp": {
     "players": 2,
@@ -7140,6 +7234,18 @@
     "series": "Sprint",
     "orientation": "horizontal"
   },
+  "badlandsb": {
+    "group": "badlands",
+    "controls": [
+      "joy"
+    ]
+  },
+  "badlandsb2": {
+    "group": "badlands",
+    "controls": [
+      "joy"
+    ]
+  },
   "bagman": {
     "players": 2,
     "rating": 60,
@@ -7280,6 +7386,10 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "ballboy3p": {
+    "group": "snowbro3",
+    "players": 3
   },
   "ballbros": {
     "players": 2,
@@ -7533,6 +7643,10 @@
     ],
     "orientation": "horizontal"
   },
+  "bankrobb": {
+    "group": "bankrob",
+    "players": 1
+  },
   "baracuda": {
     "group": "puckman",
     "languages": [
@@ -7733,6 +7847,12 @@
     ],
     "series": "World Series",
     "orientation": "horizontal"
+  },
+  "basketbal": {
+    "group": "archrivl",
+    "controls": [
+      "joy"
+    ]
   },
   "basschal": {
     "players": 4,
@@ -8876,9 +8996,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "beezerk": {
@@ -9386,9 +9503,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -10157,9 +10271,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Birdie King",
     "orientation": "vertical"
   },
@@ -10187,9 +10298,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Birdie King",
     "orientation": "vertical"
   },
@@ -10216,9 +10324,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Birdie King",
     "orientation": "vertical"
@@ -10351,6 +10456,20 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "bladestle": {
+    "group": "bladestl",
+    "controls": [
+      "joy",
+      "trackball"
+    ]
+  },
+  "bladestll": {
+    "group": "bladestl",
+    "controls": [
+      "joy",
+      "trackball"
+    ]
   },
   "blandia": {
     "players": 2,
@@ -10986,6 +11105,12 @@
     "series": "Blockade",
     "orientation": "horizontal"
   },
+  "blockbl": {
+    "group": "block",
+    "controls": [
+      "dial"
+    ]
+  },
   "blockcar": {
     "players": 2,
     "rating": 50,
@@ -11075,6 +11200,9 @@
     "group": "block",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "dial"
     ]
   },
   "blockout": {
@@ -11107,6 +11235,12 @@
     "group": "blockout",
     "languages": [
       "Japanese"
+    ]
+  },
+  "blockr2": {
+    "group": "block",
+    "controls": [
+      "dial"
     ]
   },
   "blocktax": {
@@ -12170,6 +12304,10 @@
     ],
     "orientation": "vertical"
   },
+  "bnstars": {
+    "group": "bnstars1",
+    "players": 1
+  },
   "bnstars1": {
     "players": 2,
     "genres": [
@@ -12628,6 +12766,18 @@
     ],
     "orientation": "vertical"
   },
+  "bootcamp": {
+    "group": "combatsc",
+    "controls": [
+      "trackball"
+    ]
+  },
+  "bootcampa": {
+    "group": "combatsc",
+    "controls": [
+      "trackball"
+    ]
+  },
   "boothill": {
     "players": 2,
     "rating": 30,
@@ -12669,6 +12819,26 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "bootsctnu": {
+    "group": "bootsctn",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "bootsctnua": {
+    "group": "bootsctn",
+    "players": 1,
+    "controls": [
+      "gambling"
+    ]
+  },
+  "bootsctnub": {
+    "group": "bootsctn",
+    "players": 1,
+    "controls": [
+      "gambling"
+    ]
   },
   "borench": {
     "players": 2,
@@ -12803,6 +12973,12 @@
       "stick"
     ],
     "orientation": "horizontal"
+  },
+  "botss11": {
+    "group": "botss",
+    "controls": [
+      "joy"
+    ]
   },
   "bottle10": {
     "players": 1,
@@ -12943,9 +13119,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -13610,6 +13783,9 @@
     "group": "bshark",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "joy"
     ]
   },
   "bsktball": {
@@ -13635,9 +13811,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -13805,6 +13978,12 @@
     "group": "timesold",
     "languages": [
       "Japanese"
+    ]
+  },
+  "btlfieldb": {
+    "group": "timesold",
+    "controls": [
+      "joy"
     ]
   },
   "btlfront": {
@@ -14366,10 +14545,13 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
+  },
+  "bullsdrtg": {
+    "group": "bullsdrt",
+    "controls": [
+      "joy"
+    ]
   },
   "bumblbug": {
     "genres": [
@@ -14384,6 +14566,19 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "bumblbugu": {
+    "group": "bumblbug",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "bumblbugua": {
+    "group": "bumblbug",
+    "players": 1,
+    "controls": [
+      "gambling"
+    ]
   },
   "bungeem": {
     "genres": [
@@ -14628,6 +14823,10 @@
     ],
     "orientation": "horizontal"
   },
+  "bwidowp": {
+    "group": "bwidow",
+    "players": 1
+  },
   "bwings": {
     "players": 2,
     "rating": 40,
@@ -14766,6 +14965,24 @@
     ],
     "series": "Cabal",
     "orientation": "horizontal"
+  },
+  "cabaluk": {
+    "group": "cabal",
+    "controls": [
+      "trackball"
+    ]
+  },
+  "cabalus": {
+    "group": "cabal",
+    "controls": [
+      "trackball"
+    ]
+  },
+  "cabalus2": {
+    "group": "cabal",
+    "controls": [
+      "trackball"
+    ]
   },
   "cabaret": {
     "genres": [
@@ -15229,6 +15446,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "cannballv": {
+    "group": "cannball",
+    "orientation": "vertical"
   },
   "cannonbp": {
     "players": 6,
@@ -15768,6 +15989,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "cashchamu": {
+    "group": "cashcham",
+    "controls": [
+      "gambling"
+    ]
+  },
   "cashcra5": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -15940,6 +16167,10 @@
       "paddle"
     ],
     "orientation": "horizontal"
+  },
+  "caterplr": {
+    "group": "centiped",
+    "players": 2
   },
   "catnmous": {
     "players": 2,
@@ -16320,15 +16551,19 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "ccastlesg": {
     "group": "ccastles",
     "languages": [
       "German"
+    ]
+  },
+  "ccastlesj": {
+    "group": "ccastles",
+    "controls": [
+      "joy",
+      "only_buttons"
     ]
   },
   "ccastlesp": {
@@ -16572,6 +16807,22 @@
     ],
     "orientation": "horizontal"
   },
+  "cencourt": {
+    "group": "passsht",
+    "players": 4
+  },
+  "centipdb": {
+    "group": "centiped",
+    "players": 2
+  },
+  "centipdb2": {
+    "group": "centiped",
+    "players": 2
+  },
+  "centipdd": {
+    "group": "centiped",
+    "players": 2
+  },
   "centiped": {
     "players": 1,
     "rating": 70,
@@ -16600,12 +16851,27 @@
     "series": "Centipede",
     "orientation": "vertical"
   },
+  "centiped1": {
+    "group": "centiped",
+    "players": 2
+  },
+  "centiped2": {
+    "group": "centiped",
+    "players": 2
+  },
+  "centiped3": {
+    "group": "centiped",
+    "players": 2
+  },
   "centipedj": {
     "group": "centiped",
     "languages": [
       "Japanese"
     ],
-    "players": 2
+    "players": 2,
+    "controls": [
+      "joy"
+    ]
   },
   "cerberus": {
     "players": 2,
@@ -17228,9 +17494,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "champwr": {
@@ -17776,6 +18039,18 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "chickna5u": {
+    "group": "chickna5",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "chickna5ua": {
+    "group": "chickna5",
+    "controls": [
+      "gambling"
+    ]
   },
   "chikij": {
     "group": "mtwins",
@@ -18953,9 +19228,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "clowns": {
@@ -19189,6 +19461,10 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "clubpacma": {
+    "group": "clubpacm",
+    "players": 2
   },
   "cluckypo": {
     "players": 1,
@@ -19921,6 +20197,15 @@
     "group": "combatsc",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "trackball"
+    ]
+  },
+  "combatsct": {
+    "group": "combatsc",
+    "controls": [
+      "trackball"
     ]
   },
   "combh": {
@@ -21313,9 +21598,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "couple": {
@@ -21331,6 +21613,12 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "cowrace": {
+    "group": "kingdrby",
+    "controls": [
+      "gambling"
+    ]
   },
   "cowtipp": {
     "players": 1,
@@ -21898,6 +22186,10 @@
     "series": "Crime Patrol",
     "orientation": "horizontal"
   },
+  "crimepat_14": {
+    "group": "crimepat",
+    "players": 2
+  },
   "crimfght": {
     "players": 2,
     "rating": 50,
@@ -21930,6 +22222,10 @@
     "languages": [
       "Japanese"
     ]
+  },
+  "crimfghtu": {
+    "group": "crimfght",
+    "players": 4
   },
   "crisscrs": {
     "genres": [
@@ -22110,6 +22406,12 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "croupierb": {
+    "group": "croupier",
+    "controls": [
+      "gambling"
+    ]
   },
   "crsbingo": {
     "players": 1,
@@ -23376,9 +23678,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "cubybop": {
@@ -23412,6 +23711,12 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "cuckoou": {
+    "group": "cuckoo",
+    "controls": [
+      "gambling"
+    ]
   },
   "cuebrick": {
     "players": 2,
@@ -23750,6 +24055,22 @@
     ],
     "series": "Cyberball",
     "orientation": "horizontal"
+  },
+  "cyberbal2p": {
+    "group": "cyberbal",
+    "players": 2
+  },
+  "cyberbal2p1": {
+    "group": "cyberbal",
+    "players": 2
+  },
+  "cyberbal2p2": {
+    "group": "cyberbal",
+    "players": 2
+  },
+  "cyberbal2p3": {
+    "group": "cyberbal",
+    "players": 2
   },
   "cyberlip": {
     "players": 2,
@@ -24553,9 +24874,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Danger Zone",
     "orientation": "horizontal"
   },
@@ -24749,6 +25067,10 @@
     "languages": [
       "Japanese"
     ]
+  },
+  "darkadv": {
+    "group": "devilw",
+    "players": 3
   },
   "darkedge": {
     "players": 2,
@@ -24978,6 +25300,10 @@
       "gambling"
     ],
     "orientation": "horizontal"
+  },
+  "dassault4": {
+    "group": "thndzone",
+    "players": 4
   },
   "dayto2pe": {
     "players": 1,
@@ -25348,6 +25674,10 @@
     "group": "dcclub",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "dial",
+      "pedal"
     ]
   },
   "dcheese": {
@@ -25396,6 +25726,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "dcrowna": {
+    "group": "dcrown",
+    "players": 1
   },
   "dday": {
     "players": 2,
@@ -25503,6 +25837,18 @@
       "Party"
     ],
     "orientation": "horizontal"
+  },
+  "ddcrew2": {
+    "group": "ddcrew",
+    "players": 2
+  },
+  "ddcrew2d": {
+    "group": "ddcrew",
+    "players": 2
+  },
+  "ddcrewd": {
+    "group": "ddcrew",
+    "players": 3
   },
   "ddcrewj": {
     "group": "ddcrew",
@@ -25617,6 +25963,10 @@
     ],
     "series": "DonPachi",
     "orientation": "vertical"
+  },
+  "ddonpacha": {
+    "group": "ddonpach",
+    "players": 1
   },
   "ddonpachj": {
     "group": "ddonpach",
@@ -26273,6 +26623,14 @@
     ],
     "series": "Dungeons & Dragons",
     "orientation": "horizontal"
+  },
+  "ddsomb": {
+    "group": "ddsom",
+    "players": 2
+  },
+  "ddsomh": {
+    "group": "ddsom",
+    "players": 2
   },
   "ddsomj": {
     "group": "ddsom",
@@ -28772,6 +29130,12 @@
     ],
     "orientation": "vertical"
   },
+  "dogosokb": {
+    "group": "victroad",
+    "controls": [
+      "joy"
+    ]
+  },
   "dogpatch": {
     "players": 2,
     "rating": 10,
@@ -28987,6 +29351,30 @@
     "series": "Dolphin Treasure * Slot",
     "orientation": "horizontal"
   },
+  "dolphntrce": {
+    "group": "dolphntr",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "dolphntrcea": {
+    "group": "dolphntr",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "dolphntrceb": {
+    "group": "dolphntr",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "dolphntru": {
+    "group": "dolphntr",
+    "controls": [
+      "gambling"
+    ]
+  },
   "domino": {
     "players": 2,
     "rating": 70,
@@ -29056,6 +29444,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "dominos4": {
+    "group": "dominos",
+    "players": 4
   },
   "dommy": {
     "players": 2,
@@ -30920,9 +31312,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Dunk Shot",
     "orientation": "horizontal"
   },
@@ -31227,6 +31616,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "dynajacku": {
+    "group": "dynajack",
+    "controls": [
+      "gambling"
+    ]
+  },
   "dynamcop": {
     "genres": [
       "Arcade: Fighter / 3D"
@@ -31239,6 +31634,14 @@
     ],
     "series": "Dynamite Deka",
     "orientation": "horizontal"
+  },
+  "dynamcopb": {
+    "group": "dynamcop",
+    "players": 2
+  },
+  "dynamcopc": {
+    "group": "dynamcop",
+    "players": 2
   },
   "dynamski": {
     "players": 2,
@@ -31477,9 +31880,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Tornado Baseball",
     "orientation": "horizontal"
   },
@@ -31678,6 +32078,30 @@
     ],
     "series": "Enchanted Forest",
     "orientation": "horizontal"
+  },
+  "eforsta5ce": {
+    "group": "eforsta5",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "eforsta5cea": {
+    "group": "eforsta5",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "eforsta5u": {
+    "group": "eforsta5",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "eforsta5ua": {
+    "group": "eforsta5",
+    "controls": [
+      "gambling"
+    ]
   },
   "egghunt": {
     "players": 2,
@@ -32091,6 +32515,14 @@
     ],
     "orientation": "horizontal"
   },
+  "elim4": {
+    "group": "elim2",
+    "players": 4
+  },
+  "elim4p": {
+    "group": "elim2",
+    "players": 4
+  },
   "elsygame": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -32402,6 +32834,9 @@
     "group": "enforce",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "stick"
     ]
   },
   "enigma2": {
@@ -34027,6 +34462,10 @@
     "series": "Fantasy Zone",
     "orientation": "horizontal"
   },
+  "fantzoneta": {
+    "group": "fantzone",
+    "players": 1
+  },
   "fanzonem": {
     "genres": [
       "Arcade: Redemption Game / Crane Machine"
@@ -34073,6 +34512,10 @@
       "Lightgun"
     ],
     "orientation": "vertical"
+  },
+  "fastdraw_130": {
+    "group": "fastdraw",
+    "players": 2
   },
   "fastdrwp": {
     "genres": [
@@ -35602,9 +36045,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "firednc": {
@@ -35640,6 +36080,10 @@
     "orientation": "horizontal"
   },
   "firehawk": {
+    "orientation": "horizontal"
+  },
+  "firehawkv": {
+    "group": "spec2k",
     "orientation": "horizontal"
   },
   "fireone": {
@@ -37187,6 +37631,19 @@
     ],
     "orientation": "horizontal"
   },
+  "fsoccerb": {
+    "group": "fsoccer",
+    "controls": [
+      "joy"
+    ]
+  },
+  "fsoccerba": {
+    "group": "fsoccer",
+    "players": 2,
+    "controls": [
+      "joy"
+    ]
+  },
   "fsoccerj": {
     "group": "fsoccer",
     "languages": [
@@ -37784,6 +38241,14 @@
     ],
     "series": "Fighting Vipers",
     "orientation": "horizontal"
+  },
+  "fvipers2o": {
+    "group": "fvipers2",
+    "players": 2
+  },
+  "fvipersb": {
+    "group": "fvipers",
+    "players": 2
   },
   "fvrpitch": {
     "players": 1,
@@ -38456,9 +38921,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Galaxy Games",
     "orientation": "horizontal"
   },
@@ -38486,9 +38948,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Galaxy Games",
     "orientation": "horizontal"
   },
@@ -38507,9 +38966,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Galaxy Games",
     "orientation": "horizontal"
@@ -39547,6 +40003,14 @@
     "series": "Gauntlet",
     "orientation": "horizontal"
   },
+  "gaunt22p": {
+    "group": "gaunt2",
+    "players": 2
+  },
+  "gaunt22p1": {
+    "group": "gaunt2",
+    "players": 2
+  },
   "gaunt22pg": {
     "group": "gaunt2",
     "languages": [
@@ -39638,6 +40102,10 @@
     "series": "Gauntlet",
     "orientation": "horizontal"
   },
+  "gauntlet2p": {
+    "group": "gauntlet",
+    "players": 2
+  },
   "gauntlet2pg": {
     "group": "gauntlet",
     "languages": [
@@ -39664,6 +40132,10 @@
     "languages": [
       "Japanese"
     ],
+    "players": 2
+  },
+  "gauntlet2pr3": {
+    "group": "gauntlet",
     "players": 2
   },
   "gauntletg": {
@@ -40273,6 +40745,10 @@
       "pedal"
     ]
   },
+  "getbass": {
+    "group": "bassdx",
+    "players": 1
+  },
   "getbassdx": {
     "group": "bassdx",
     "languages": [
@@ -40401,9 +40877,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "ggisuka": {
@@ -40433,6 +40906,13 @@
     ],
     "series": "All Japan Pro Wrestling",
     "orientation": "horizontal"
+  },
+  "ggreats2": {
+    "group": "opengolf",
+    "players": 2,
+    "controls": [
+      "pedal"
+    ]
   },
   "gground": {
     "players": 3,
@@ -40635,6 +41115,14 @@
     ],
     "orientation": "horizontal"
   },
+  "ghostb3": {
+    "group": "ghostb",
+    "players": 3
+  },
+  "ghostb3a": {
+    "group": "ghostb",
+    "players": 3
+  },
   "ghostlop": {
     "players": 2,
     "rating": 80,
@@ -40751,10 +41239,21 @@
     ],
     "orientation": "vertical"
   },
+  "ghunter": {
+    "group": "deadang",
+    "controls": [
+      "joy",
+      "trackball"
+    ]
+  },
   "ghunters": {
     "group": "deadang",
     "languages": [
       "Spanish"
+    ],
+    "controls": [
+      "joy",
+      "trackball"
     ]
   },
   "giclasex": {
@@ -40936,9 +41435,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -41194,6 +41690,9 @@
     "group": "glfgreat",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "pedal"
     ]
   },
   "glizrdce": {
@@ -41942,6 +42441,13 @@
     ],
     "series": "Dolphin Treasure * Slot",
     "orientation": "horizontal"
+  },
+  "goldpyrb": {
+    "group": "goldpyr",
+    "controls": [
+      "gambling",
+      "keypad"
+    ]
   },
   "goldsam": {
     "genres": [
@@ -42812,6 +43318,14 @@
     ],
     "orientation": "vertical"
   },
+  "grdnstrmk": {
+    "group": "grdnstrm",
+    "orientation": "vertical"
+  },
+  "grdnstrmv": {
+    "group": "grdnstrm",
+    "orientation": "vertical"
+  },
   "greatgun": {
     "players": 2,
     "rating": 40,
@@ -42889,9 +43403,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "gridlee": {
@@ -42917,9 +43428,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -43363,9 +43871,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Golden Tee",
     "orientation": "horizontal"
   },
@@ -43392,9 +43897,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Golden Tee",
     "orientation": "horizontal"
@@ -43450,9 +43952,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Golden Tee",
     "orientation": "horizontal"
   },
@@ -43479,9 +43978,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Golden Tee",
     "orientation": "horizontal"
@@ -43510,9 +44006,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Golden Tee",
     "orientation": "horizontal"
   },
@@ -43539,9 +44032,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Golden Tee",
     "orientation": "horizontal"
@@ -43752,11 +44242,32 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Golden Tee",
     "orientation": "horizontal"
+  },
+  "gtg2j": {
+    "group": "gtg2",
+    "controls": [
+      "joy"
+    ]
+  },
+  "gtgt10": {
+    "group": "gtg",
+    "controls": [
+      "trackball"
+    ]
+  },
+  "gtgt20": {
+    "group": "gtg",
+    "controls": [
+      "trackball"
+    ]
+  },
+  "gtgt21": {
+    "group": "gtg",
+    "controls": [
+      "trackball"
+    ]
   },
   "gticlub": {
     "players": 1,
@@ -44202,6 +44713,22 @@
     ],
     "series": "Trivia",
     "orientation": "horizontal"
+  },
+  "gtsers12a": {
+    "group": "gtsers8",
+    "players": 4
+  },
+  "gtsers14": {
+    "group": "gtsers8",
+    "players": 4
+  },
+  "gtsers14a": {
+    "group": "gtsers8",
+    "players": 4
+  },
+  "gtsers15": {
+    "group": "gtsers8",
+    "players": 4
   },
   "gtsers8": {
     "players": 2,
@@ -45596,6 +46123,13 @@
     ],
     "orientation": "horizontal"
   },
+  "hanamai": {
+    "group": "hnkochou",
+    "controls": [
+      "hanafuda",
+      "mahjong"
+    ]
+  },
   "hanamomo": {
     "players": 1,
     "genres": [
@@ -45908,10 +46442,42 @@
     "series": "Hard Drivin'",
     "orientation": "horizontal"
   },
+  "harddrivc": {
+    "group": "harddriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "harddrivc1": {
+    "group": "harddriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "harddrivcb": {
+    "group": "harddriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "harddrivcbl": {
+    "group": "harddriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
   "harddrivcg": {
     "group": "harddriv",
     "languages": [
       "German"
+    ],
+    "controls": [
+      "paddle",
+      "pedal"
     ]
   },
   "harddrivg": {
@@ -46426,6 +46992,10 @@
     "series": "Head On",
     "orientation": "horizontal"
   },
+  "headon1": {
+    "group": "headon",
+    "players": 1
+  },
   "headon2": {
     "players": 2,
     "rating": 30,
@@ -46452,6 +47022,10 @@
     ],
     "series": "Head On",
     "orientation": "horizontal"
+  },
+  "headon2s": {
+    "group": "headon2",
+    "players": 1
   },
   "headonch": {
     "players": 2,
@@ -46484,6 +47058,22 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "headonmz": {
+    "group": "headon",
+    "players": 1
+  },
+  "headonn": {
+    "group": "headon",
+    "orientation": "vertical"
+  },
+  "headons": {
+    "group": "headon",
+    "players": 1
+  },
+  "headonsa": {
+    "group": "headon",
+    "players": 1
   },
   "heartatk": {
     "players": 2,
@@ -46692,6 +47282,10 @@
     ],
     "orientation": "horizontal"
   },
+  "herbiedk": {
+    "group": "huncholy",
+    "orientation": "vertical"
+  },
   "hermit": {
     "genres": [
       "Arcade: Casino / Cards"
@@ -46722,6 +47316,14 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "herodk": {
+    "group": "hero",
+    "orientation": "vertical"
+  },
+  "herodku": {
+    "group": "hero",
+    "orientation": "vertical"
   },
   "heuksun": {
     "players": 2,
@@ -46790,6 +47392,14 @@
     "languages": [
       "English"
     ]
+  },
+  "hexpool": {
+    "group": "racknrol",
+    "orientation": "vertical"
+  },
+  "hexpoola": {
+    "group": "racknrol",
+    "orientation": "vertical"
   },
   "hginga": {
     "players": 1,
@@ -47377,6 +47987,10 @@
     ],
     "orientation": "horizontal"
   },
+  "hncholms": {
+    "group": "huncholy",
+    "orientation": "vertical"
+  },
   "hndlchmpj": {
     "group": "strgchmp",
     "languages": [
@@ -47434,6 +48048,13 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "hnoridur": {
+    "group": "hjingi",
+    "controls": [
+      "hanafuda",
+      "mahjong"
+    ]
+  },
   "hnxmasev": {
     "genres": [
       "Arcade: Tabletop / Hanafuda"
@@ -47482,6 +48103,10 @@
       "English"
     ],
     "orientation": "horizontal"
+  },
+  "hocrash": {
+    "group": "headon",
+    "players": 1
   },
   "hogalley": {
     "players": 2,
@@ -47804,9 +48429,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -48527,6 +49149,14 @@
       "Japanese"
     ]
   },
+  "hthero93": {
+    "group": "cupfinal",
+    "players": 4
+  },
+  "hthero93u": {
+    "group": "cupfinal",
+    "players": 4
+  },
   "humlan": {
     "group": "queenbee",
     "languages": [
@@ -48567,6 +49197,30 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "hunchbaka": {
+    "group": "hunchbak",
+    "orientation": "vertical"
+  },
+  "hunchbgb": {
+    "group": "hunchbak",
+    "orientation": "vertical"
+  },
+  "hunchbkd": {
+    "group": "hunchbak",
+    "orientation": "vertical"
+  },
+  "hunchbkg": {
+    "group": "hunchbak",
+    "orientation": "vertical"
+  },
+  "hunchbks": {
+    "group": "hunchbak",
+    "orientation": "vertical"
+  },
+  "hunchbks2": {
+    "group": "hunchbak",
+    "orientation": "vertical"
   },
   "huncholy": {
     "players": 2,
@@ -49442,6 +50096,20 @@
     ],
     "orientation": "horizontal"
   },
+  "igstet341": {
+    "group": "pktet346",
+    "controls": [
+      "gambling",
+      "joy"
+    ]
+  },
+  "igstet342": {
+    "group": "pktet346",
+    "controls": [
+      "gambling",
+      "joy"
+    ]
+  },
   "igtsc": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -49523,6 +50191,18 @@
     "group": "ikari",
     "languages": [
       "Japanese"
+    ]
+  },
+  "ikarijpb": {
+    "group": "ikari",
+    "controls": [
+      "joy"
+    ]
+  },
+  "ikariram": {
+    "group": "ikari",
+    "controls": [
+      "joy"
     ]
   },
   "ikaruga": {
@@ -49786,6 +50466,18 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "incasunu": {
+    "group": "incasun",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "incasunua": {
+    "group": "incasun",
+    "controls": [
+      "gambling"
+    ]
   },
   "indgldcm": {
     "genres": [
@@ -50210,6 +50902,10 @@
     ],
     "orientation": "horizontal"
   },
+  "intlaser": {
+    "group": "blasted",
+    "players": 4
+  },
   "intrepid": {
     "players": 2,
     "rating": 50,
@@ -50236,6 +50932,14 @@
     ],
     "series": "Intrepid",
     "orientation": "vertical"
+  },
+  "intrepidb2": {
+    "group": "intrepid",
+    "players": 1
+  },
+  "intrepidb3": {
+    "group": "intrepid",
+    "players": 1
   },
   "intrgirl": {
     "players": 2,
@@ -50725,6 +51429,24 @@
     ],
     "orientation": "horizontal"
   },
+  "iqblocka": {
+    "group": "iqblock",
+    "players": 1,
+    "controls": [
+      "gambling",
+      "joy",
+      "only_buttons"
+    ]
+  },
+  "iqblockf": {
+    "group": "iqblock",
+    "players": 1,
+    "controls": [
+      "gambling",
+      "joy",
+      "only_buttons"
+    ]
+  },
   "iqpipe": {
     "genres": [
       "Arcade: Puzzle / Sliding"
@@ -51103,10 +51825,24 @@
     ],
     "orientation": "vertical"
   },
+  "jackalbl": {
+    "group": "jackal",
+    "controls": [
+      "joy",
+      "positional"
+    ]
+  },
   "jackalj": {
     "group": "jackal",
     "languages": [
       "Japanese"
+    ]
+  },
+  "jackalr": {
+    "group": "jackal",
+    "controls": [
+      "joy",
+      "positional"
     ]
   },
   "jackie": {
@@ -54298,6 +55034,22 @@
     "series": "Ketsui: Kizuna Jigoku Tachi",
     "orientation": "vertical"
   },
+  "ketarr": {
+    "group": "ket",
+    "players": 1
+  },
+  "ketarr10": {
+    "group": "ket",
+    "players": 1
+  },
+  "ketarr15": {
+    "group": "ket",
+    "players": 1
+  },
+  "ketarr151": {
+    "group": "ket",
+    "players": 1
+  },
   "keyboard": {
     "players": 2,
     "genres": [
@@ -54347,6 +55099,17 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "kgalaha": {
+    "group": "kgalah",
+    "players": 1
+  },
+  "kgalahce": {
+    "group": "kgalah",
+    "players": 1,
+    "controls": [
+      "gambling"
+    ]
   },
   "kgbird": {
     "players": 1,
@@ -54875,6 +55638,12 @@
     "series": "Sorcer Striker",
     "orientation": "vertical"
   },
+  "kingdrbb": {
+    "group": "kingdrby",
+    "controls": [
+      "gambling"
+    ]
+  },
   "kingdrby": {
     "players": 1,
     "genres": [
@@ -55240,6 +56009,10 @@
     ],
     "series": "Savage Reign",
     "orientation": "horizontal"
+  },
+  "kizuna4p": {
+    "group": "kizuna",
+    "players": 4
   },
   "kkotnoli": {
     "players": 1,
@@ -56317,6 +57090,10 @@
     "group": "hanakanz",
     "languages": [
       "Korean"
+    ],
+    "controls": [
+      "hanafuda",
+      "joy"
     ]
   },
   "kothello": {
@@ -57520,6 +58297,10 @@
     ],
     "orientation": "horizontal"
   },
+  "lastbh_006": {
+    "group": "lastbh",
+    "players": 1
+  },
   "lastblad": {
     "players": 2,
     "rating": 90,
@@ -58312,9 +59093,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "lemnangl": {
@@ -58718,6 +59496,10 @@
     ],
     "series": "Long Hu Bang",
     "orientation": "horizontal"
+  },
+  "lhzb2a": {
+    "group": "lhzb2",
+    "players": 1
   },
   "lhzb3": {
     "genres": [
@@ -59164,6 +59946,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "locolootu": {
+    "group": "locoloot",
+    "controls": [
+      "gambling"
+    ]
+  },
   "locomotn": {
     "players": 2,
     "rating": 70,
@@ -59491,6 +60279,10 @@
     ],
     "series": "Jurassic Park",
     "orientation": "horizontal"
+  },
+  "lostwsgp": {
+    "group": "lostwsga",
+    "players": 2
   },
   "lotlot": {
     "players": 2,
@@ -59969,6 +60761,22 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "lucky8g": {
+    "group": "lucky8",
+    "players": 2
+  },
+  "lucky8h": {
+    "group": "lucky8",
+    "players": 2
+  },
+  "lucky8i": {
+    "group": "lucky8",
+    "players": 2
+  },
+  "lucky8k": {
+    "group": "lucky8",
+    "players": 2
   },
   "luckybal": {
     "players": 6,
@@ -61053,6 +61861,10 @@
     ],
     "orientation": "horizontal"
   },
+  "magibombf": {
+    "group": "magibomb",
+    "players": 1
+  },
   "magic10": {
     "players": 1,
     "genres": [
@@ -61544,6 +62356,19 @@
     ],
     "orientation": "horizontal"
   },
+  "magworm": {
+    "group": "centiped",
+    "players": 2,
+    "controls": [
+      "trackball"
+    ]
+  },
+  "magworma": {
+    "group": "centiped",
+    "controls": [
+      "trackball"
+    ]
+  },
   "magzun": {
     "players": 3,
     "genres": [
@@ -61666,6 +62491,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "mainevt2p": {
+    "group": "mainevt",
+    "players": 2
   },
   "mainline": {
     "players": 1,
@@ -62027,7 +62856,10 @@
     "controls": [
       "joy"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "maniacsp"
+    ]
   },
   "manicpnc": {
     "players": 2,
@@ -62154,9 +62986,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Marble Madness",
     "orientation": "horizontal"
   },
@@ -62211,9 +63040,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -62341,6 +63167,18 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "marmagicu": {
+    "group": "marmagic",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "marmagicua": {
+    "group": "marmagic",
+    "controls": [
+      "gambling"
+    ]
   },
   "mars": {
     "players": 2,
@@ -63588,6 +64426,10 @@
       "Japanese"
     ]
   },
+  "mechattu1": {
+    "group": "mechatt",
+    "players": 1
+  },
   "medlanes": {
     "players": 2,
     "rating": 30,
@@ -64342,6 +65184,10 @@
       "Italian"
     ]
   },
+  "meteors": {
+    "group": "spcforce",
+    "orientation": "horizontal"
+  },
   "metestrm": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -64999,6 +65845,10 @@
     ],
     "orientation": "horizontal"
   },
+  "mhavocp": {
+    "group": "mhavoc",
+    "players": 1
+  },
   "mhgaiden": {
     "players": 1,
     "genres": [
@@ -65281,6 +66131,10 @@
     ],
     "orientation": "vertical"
   },
+  "millpac": {
+    "group": "centiped",
+    "players": 2
+  },
   "millsun": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -65374,6 +66228,18 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "minemineu": {
+    "group": "minemine",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "minemineua": {
+    "group": "minemine",
+    "controls": [
+      "gambling"
+    ]
+  },
   "mineswpr": {
     "players": 2,
     "rating": 10,
@@ -65399,6 +66265,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "mineswpr4": {
+    "group": "mineswpr",
+    "players": 4
   },
   "minferno": {
     "players": 2,
@@ -65454,9 +66324,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -65646,9 +66513,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -67448,6 +68312,10 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "monmousea": {
+    "group": "monmouse",
+    "players": 1
+  },
   "monopldx": {
     "players": 1,
     "rating": 50,
@@ -68142,6 +69010,24 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "mountmonce": {
+    "group": "mountmon",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "mountmonu": {
+    "group": "mountmon",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "mountmonua": {
+    "group": "mountmon",
+    "controls": [
+      "gambling"
+    ]
+  },
   "mouseatk": {
     "players": 1,
     "rating": 50,
@@ -68454,6 +69340,14 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "mpchoice": {
+    "group": "pitboss",
+    "players": 1
+  },
+  "mpchoicea": {
+    "group": "pitboss",
+    "players": 1
   },
   "mplanets": {
     "players": 2,
@@ -71616,7 +72510,10 @@
       "joy"
     ],
     "series": "NBA Jam",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "nbamht"
+    ]
   },
   "nbajam": {
     "players": 4,
@@ -72099,7 +72996,10 @@
       "joy"
     ],
     "series": "Gradius",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "gradiusb"
+    ]
   },
   "nemo": {
     "players": 2,
@@ -73212,6 +74112,14 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "nitrobala": {
+    "group": "nitrobal",
+    "players": 3
+  },
+  "nitrobalb": {
+    "group": "nitrobal",
+    "players": 3
   },
   "niyanpai": {
     "players": 1,
@@ -74470,6 +75378,14 @@
     ],
     "orientation": "vertical"
   },
+  "nzeroteam": {
+    "group": "zeroteam",
+    "players": 2
+  },
+  "nzeroteama": {
+    "group": "zeroteam",
+    "players": 2
+  },
   "oceanhun": {
     "genres": [
       "Arcade: Shooter / 1st Person"
@@ -74646,6 +75562,10 @@
     ],
     "orientation": "horizontal"
   },
+  "offroadt2p": {
+    "group": "offroadt",
+    "players": 2
+  },
   "offrthnd": {
     "players": 1,
     "genres": [
@@ -74686,6 +75606,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "offtwallc": {
+    "group": "offtwall",
+    "players": 2
   },
   "ogonsiro": {
     "group": "gladiatr",
@@ -74918,7 +75842,10 @@
     "controls": [
       "joy"
     ],
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "merge": [
+      "punchkid"
+    ]
   },
   "olibug": {
     "group": "jumpbug",
@@ -75196,6 +76123,10 @@
     ],
     "series": "Golfing Greats",
     "orientation": "horizontal"
+  },
+  "opengolf2": {
+    "group": "opengolf",
+    "players": 2
   },
   "openice": {
     "players": 4,
@@ -75475,6 +76406,14 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "orchidmsa": {
+    "group": "orchidms",
+    "players": 1
+  },
+  "orchidmsnz": {
+    "group": "orchidms",
+    "players": 1
+  },
   "ordyne": {
     "players": 2,
     "rating": 60,
@@ -75638,6 +76577,10 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "oscara5a": {
+    "group": "oscara5",
+    "players": 1
   },
   "oscarj1": {
     "group": "oscar",
@@ -75927,6 +76870,18 @@
     ],
     "orientation": "horizontal"
   },
+  "ougonhaib1": {
+    "group": "ougonhai",
+    "players": 1
+  },
+  "ougonhaib2": {
+    "group": "ougonhai",
+    "players": 1
+  },
+  "ougonhaib3": {
+    "group": "ougonhai",
+    "players": 1
+  },
   "outbackj": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -76120,6 +77075,14 @@
       "pedal"
     ],
     "orientation": "horizontal"
+  },
+  "overrevb": {
+    "group": "overrev",
+    "players": 1
+  },
+  "overrevba": {
+    "group": "overrev",
+    "players": 1
   },
   "overtop": {
     "players": 1,
@@ -77146,6 +78109,10 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "pantmaga": {
+    "group": "pantmag",
+    "players": 1
+  },
   "paperboy": {
     "players": 2,
     "rating": 90,
@@ -77396,6 +78363,10 @@
     ],
     "orientation": "horizontal"
   },
+  "passht4b": {
+    "group": "passsht",
+    "players": 4
+  },
   "passsht": {
     "players": 2,
     "rating": 70,
@@ -77427,6 +78398,14 @@
     "languages": [
       "Japanese"
     ],
+    "players": 4
+  },
+  "passshta": {
+    "group": "passsht",
+    "players": 4
+  },
+  "passshtad": {
+    "group": "passsht",
     "players": 4
   },
   "passshtj": {
@@ -77519,9 +78498,6 @@
     ],
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -77631,6 +78607,12 @@
     ],
     "orientation": "horizontal"
   },
+  "pbillianb": {
+    "group": "pbillian",
+    "controls": [
+      "joy"
+    ]
+  },
   "pbillrd": {
     "players": 2,
     "rating": 50,
@@ -77711,7 +78693,10 @@
       "joy"
     ],
     "series": "Puzzle Bobble",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bublbust"
+    ]
   },
   "pbobble2": {
     "players": 2,
@@ -79548,6 +80533,10 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "peafluta": {
+    "group": "peaflut",
+    "players": 1
+  },
   "pebe0014": {
     "players": 1,
     "genres": [
@@ -79619,6 +80608,12 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "pegglet": {
+    "group": "peggle",
+    "controls": [
+      "dial"
+    ]
   },
   "peip0028": {
     "players": 1,
@@ -80008,6 +81003,36 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "pengpayce": {
+    "group": "pengpay",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "pengpayu": {
+    "group": "pengpay",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "pengpayua": {
+    "group": "pengpay",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "pengpayub": {
+    "group": "pengpay",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "pengpuck": {
+    "group": "pengpay",
+    "controls": [
+      "gambling"
+    ]
   },
   "pengpyce": {
     "genres": [
@@ -83345,6 +84370,10 @@
     ],
     "orientation": "horizontal"
   },
+  "pgalvipa": {
+    "group": "pgalvip",
+    "players": 2
+  },
   "pgear": {
     "group": "armwar",
     "languages": [
@@ -83829,6 +84858,10 @@
       "only_buttons"
     ],
     "orientation": "horizontal"
+  },
+  "phrcrazev": {
+    "group": "phrcraze",
+    "orientation": "vertical"
   },
   "phtetris": {
     "players": 1,
@@ -84561,6 +85594,10 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "pitfight1p2": {
+    "group": "pitfight",
+    "players": 2
   },
   "pitfightj": {
     "group": "pitfight",
@@ -86519,9 +87556,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "poundforj": {
@@ -88286,6 +89320,14 @@
     ],
     "orientation": "horizontal"
   },
+  "punkshot2": {
+    "group": "punkshot",
+    "players": 2
+  },
+  "punkshot2e": {
+    "group": "punkshot",
+    "players": 2
+  },
   "punkshotj": {
     "group": "punkshot",
     "languages": [
@@ -89146,6 +90188,10 @@
     "series": "Q*Bert",
     "orientation": "vertical"
   },
+  "qbtrktst": {
+    "group": "qbert",
+    "players": 1
+  },
   "qc": {
     "players": 2,
     "genres": [
@@ -89458,6 +90504,32 @@
       "Portuguese"
     ]
   },
+  "qnilece": {
+    "group": "qnile",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "qnilecea": {
+    "group": "qnile",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "qnileceb": {
+    "group": "qnile",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "qnilemax": {
+    "group": "qnile",
+    "controls": [
+      "gambling",
+      "keypad",
+      "lightgun"
+    ]
+  },
   "qnilese": {
     "players": 1,
     "genres": [
@@ -89468,6 +90540,18 @@
     ],
     "series": "Dolphin Treasure * Slot",
     "orientation": "horizontal"
+  },
+  "qnileu": {
+    "group": "qnile",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "qnileua": {
+    "group": "qnile",
+    "controls": [
+      "gambling"
+    ]
   },
   "qnilev": {
     "group": "qnile",
@@ -89763,9 +90847,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "quaquiz2": {
@@ -89847,6 +90928,14 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "quartet2": {
+    "group": "quartet",
+    "players": 2
+  },
+  "quartet2a": {
+    "group": "quartet",
+    "players": 2
   },
   "quarth": {
     "group": "blockhl",
@@ -90839,16 +91928,74 @@
     "series": "Hard Drivin'",
     "orientation": "horizontal"
   },
+  "racedrivc": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivc1": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivc2": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivc4": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivcb": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivcb4": {
+    "group": "racedriv",
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
   "racedrivcg": {
     "group": "racedriv",
     "languages": [
       "German"
+    ],
+    "controls": [
+      "paddle",
+      "pedal"
     ]
   },
   "racedrivcg4": {
     "group": "racedriv",
     "languages": [
       "German"
+    ],
+    "controls": [
+      "paddle",
+      "pedal"
+    ]
+  },
+  "racedrivcp": {
+    "group": "racedriv",
+    "players": 1,
+    "controls": [
+      "paddle",
+      "pedal"
     ]
   },
   "racedrivg": {
@@ -90868,6 +92015,10 @@
     "languages": [
       "German"
     ]
+  },
+  "racedrivpan": {
+    "group": "racedriv",
+    "players": 1
   },
   "raceon": {
     "genres": [
@@ -90971,6 +92122,14 @@
       "stick"
     ],
     "orientation": "horizontal"
+  },
+  "racingj2": {
+    "group": "racingj",
+    "players": 1
+  },
+  "racingj2j": {
+    "group": "racingj",
+    "players": 1
   },
   "racjamdx": {
     "players": 1,
@@ -91657,6 +92816,12 @@
     ],
     "orientation": "horizontal"
   },
+  "rambo3p": {
+    "group": "rambo3",
+    "controls": [
+      "joy"
+    ]
+  },
   "rampage": {
     "players": 3,
     "rating": 90,
@@ -91708,17 +92873,29 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
+  },
+  "rampart2p": {
+    "group": "rampart",
+    "controls": [
+      "joy"
+    ]
+  },
+  "rampart2pa": {
+    "group": "rampart",
+    "controls": [
+      "joy"
+    ]
   },
   "rampartj": {
     "group": "rampart",
     "languages": [
       "Japanese"
     ],
-    "players": 2
+    "players": 2,
+    "controls": [
+      "joy"
+    ]
   },
   "rangrmsn": {
     "players": 2,
@@ -91790,6 +92967,10 @@
       "stick"
     ],
     "orientation": "horizontal"
+  },
+  "rapidrvrp": {
+    "group": "rapidrvr",
+    "players": 1
   },
   "raprichs": {
     "genres": [
@@ -92497,9 +93678,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -97427,6 +98605,13 @@
     "series": "Breakout",
     "orientation": "vertical"
   },
+  "sbrkoutct": {
+    "group": "sbrkout",
+    "controls": [
+      "only_buttons",
+      "paddle"
+    ]
+  },
   "sbubsm": {
     "players": 2,
     "genres": [
@@ -97485,6 +98670,10 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "sbuk3a": {
+    "group": "sbuk3",
+    "players": 1
   },
   "sbuk5": {
     "genres": [
@@ -105092,7 +106281,11 @@
       "joy"
     ],
     "series": "Street Fighter",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "sf2re",
+      "sf2mkot"
+    ]
   },
   "sf2049": {
     "players": 1,
@@ -105351,6 +106544,13 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "sfan": {
+    "group": "sf",
+    "controls": [
+      "joy",
+      "pedal"
+    ]
   },
   "sfbonus": {
     "players": 1,
@@ -105677,6 +106877,10 @@
     "group": "sf",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "joy",
+      "pedal"
     ]
   },
   "sfkick": {
@@ -105760,6 +106964,14 @@
     "group": "tail2nos",
     "languages": [
       "Japanese"
+    ]
+  },
+  "sfp": {
+    "group": "sf",
+    "players": 1,
+    "controls": [
+      "joy",
+      "pedal"
     ]
   },
   "sfposeid": {
@@ -106131,6 +107343,10 @@
     "group": "sgmast",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "dial",
+      "pedal"
     ]
   },
   "sgmt1": {
@@ -107147,9 +108363,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "shootgal": {
@@ -107358,6 +108571,14 @@
     "series": "Star Horse",
     "orientation": "vertical"
   },
+  "shorsel": {
+    "group": "shorse",
+    "orientation": "horizontal"
+  },
+  "shorsem": {
+    "group": "shorse",
+    "orientation": "horizontal"
+  },
   "shorsep": {
     "genres": [
       "Arcade: Medal Game / Horse Racing"
@@ -107371,6 +108592,18 @@
     "series": "Star Horse",
     "orientation": "vertical"
   },
+  "shorsepb": {
+    "group": "shorsep",
+    "orientation": "horizontal"
+  },
+  "shorsepl": {
+    "group": "shorsep",
+    "orientation": "horizontal"
+  },
+  "shorsepm": {
+    "group": "shorsep",
+    "orientation": "horizontal"
+  },
   "shorsepr": {
     "genres": [
       "Arcade: Medal Game / Horse Racing"
@@ -107383,6 +108616,26 @@
     ],
     "series": "Star Horse",
     "orientation": "vertical"
+  },
+  "shorseprl": {
+    "group": "shorsepr",
+    "orientation": "horizontal"
+  },
+  "shorseprs": {
+    "group": "shorsepr",
+    "orientation": "horizontal"
+  },
+  "shorseprvl": {
+    "group": "shorsepr",
+    "orientation": "horizontal"
+  },
+  "shorseprvr": {
+    "group": "shorsepr",
+    "orientation": "horizontal"
+  },
+  "shorseps": {
+    "group": "shorsep",
+    "orientation": "horizontal"
   },
   "shorthng": {
     "genres": [
@@ -107628,9 +108881,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "shufshot": {
@@ -107656,9 +108906,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -107726,10 +108973,14 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
+  },
+  "shuuz2": {
+    "group": "shuuz",
+    "controls": [
+      "joy",
+      "trackball"
+    ]
   },
   "sianniv": {
     "players": 2,
@@ -108160,6 +109411,22 @@
     ],
     "orientation": "horizontal"
   },
+  "simpsons2p": {
+    "group": "simpsons",
+    "players": 2
+  },
+  "simpsons2p2": {
+    "group": "simpsons",
+    "players": 2
+  },
+  "simpsons2p3": {
+    "group": "simpsons",
+    "players": 2
+  },
+  "simpsons2pa": {
+    "group": "simpsons",
+    "players": 2
+  },
   "simpsons2pj": {
     "group": "simpsons",
     "languages": [
@@ -108519,9 +109786,6 @@
     ],
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -109066,9 +110330,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -109647,9 +110908,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "snapjack": {
@@ -109895,9 +111153,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -110229,9 +111484,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -111455,6 +112707,13 @@
     "series": "Space Invaders",
     "orientation": "vertical"
   },
+  "spcinvdj": {
+    "group": "spacedx",
+    "controls": [
+      "dial",
+      "joy"
+    ]
+  },
   "spcking2": {
     "players": 2,
     "rating": 50,
@@ -111727,6 +112986,10 @@
       "joy"
     ],
     "orientation": "vertical"
+  },
+  "spec2kh": {
+    "group": "spec2k",
+    "orientation": "horizontal"
   },
   "speccies": {
     "emulation": {
@@ -112286,9 +113549,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "spikes91": {
@@ -112388,7 +113648,23 @@
     "series": "Pit Boss",
     "orientation": "horizontal"
   },
+  "spk100": {
+    "group": "spk306us",
+    "players": 1
+  },
+  "spk114it": {
+    "group": "spk306us",
+    "players": 1
+  },
+  "spk115it": {
+    "group": "spk306us",
+    "players": 1
+  },
   "spk116it": {
+    "players": 1
+  },
+  "spk116itmx": {
+    "group": "spk306us",
     "players": 1
   },
   "spk306us": {
@@ -112417,6 +113693,14 @@
     ],
     "orientation": "horizontal"
   },
+  "spkrform": {
+    "group": "spk306us",
+    "players": 1,
+    "controls": [
+      "gambling",
+      "joy"
+    ]
+  },
   "splash": {
     "players": 2,
     "rating": 50,
@@ -112443,6 +113727,13 @@
     ],
     "series": "Splash!",
     "orientation": "horizontal"
+  },
+  "splashms": {
+    "group": "splash",
+    "controls": [
+      "joy",
+      "only_buttons"
+    ]
   },
   "splat": {
     "players": 2,
@@ -112726,6 +114017,14 @@
     ],
     "series": "Sprint",
     "orientation": "horizontal"
+  },
+  "sprint2": {
+    "group": "sprint1",
+    "players": 2
+  },
+  "sprint2a": {
+    "group": "sprint1",
+    "players": 2
   },
   "sprint2h": {
     "group": "sprint1",
@@ -114234,11 +115533,31 @@
     "series": "Sunset Riders",
     "orientation": "horizontal"
   },
+  "ssridersabd": {
+    "group": "ssriders",
+    "players": 2
+  },
+  "ssridersebc": {
+    "group": "ssriders",
+    "players": 2
+  },
+  "ssridersebd": {
+    "group": "ssriders",
+    "players": 2
+  },
   "ssridersjac": {
     "group": "ssriders",
     "languages": [
       "Japanese"
     ]
+  },
+  "ssridersjbd": {
+    "group": "ssriders",
+    "players": 2
+  },
+  "ssridersubc": {
+    "group": "ssriders",
+    "players": 2
   },
   "ssrj": {
     "players": 1,
@@ -115165,6 +116484,10 @@
     "series": "Triv Quiz",
     "orientation": "horizontal"
   },
+  "statriv2v": {
+    "group": "statriv2",
+    "orientation": "vertical"
+  },
   "statriv4": {
     "players": 2,
     "rating": 50,
@@ -115626,6 +116949,14 @@
     ],
     "orientation": "horizontal"
   },
+  "stonebal2": {
+    "group": "stonebal",
+    "players": 2
+  },
+  "stonebal2o": {
+    "group": "stonebal",
+    "players": 2
+  },
   "stop": {
     "genres": [
       "Arcade: Misc. / Response Time"
@@ -115706,9 +117037,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -117060,9 +118388,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "supinvsion": {
@@ -118013,6 +119338,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "swhr2u": {
+    "group": "swhr2",
+    "controls": [
+      "gambling"
+    ]
+  },
   "swhr2v": {
     "group": "swhr2",
     "languages": [
@@ -118356,9 +119687,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -118794,6 +120122,10 @@
     ],
     "series": "Tank Battalion",
     "orientation": "horizontal"
+  },
+  "tankfrce4": {
+    "group": "tankfrce",
+    "players": 4
   },
   "tankfrcej": {
     "group": "tankfrce",
@@ -119569,9 +120901,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "vertical"
   },
@@ -120721,6 +122050,10 @@
     ],
     "orientation": "horizontal"
   },
+  "thegridb": {
+    "group": "thegrid",
+    "players": 1
+  },
   "thehand": {
     "players": 2,
     "rating": 30,
@@ -120973,6 +122306,14 @@
     ],
     "orientation": "horizontal"
   },
+  "thndzone4": {
+    "group": "thndzone",
+    "players": 4
+  },
+  "thndzonea": {
+    "group": "thndzone",
+    "players": 4
+  },
   "thndzonej": {
     "group": "thndzone",
     "languages": [
@@ -121100,6 +122441,70 @@
     ],
     "series": "Thrill Drive",
     "orientation": "horizontal"
+  },
+  "thrilldgej": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgeu": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgke": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgkee": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgkk": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgmj": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgnj": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
+  },
+  "thrilldgpj": {
+    "group": "thrilld",
+    "controls": [
+      "joy",
+      "paddle",
+      "pedal"
+    ]
   },
   "thunderh": {
     "players": 2,
@@ -121282,6 +122687,10 @@
       "only_buttons"
     ],
     "orientation": "horizontal"
+  },
+  "tictacv": {
+    "group": "tictac",
+    "orientation": "vertical"
   },
   "tierras100hz": {
     "players": 2,
@@ -122182,6 +123591,18 @@
     ],
     "orientation": "horizontal"
   },
+  "tmht22pe": {
+    "group": "tmnt2",
+    "players": 2
+  },
+  "tmht2p": {
+    "group": "tmnt",
+    "players": 2
+  },
+  "tmht2pa": {
+    "group": "tmnt",
+    "players": 2
+  },
   "tmmjprd": {
     "players": 2,
     "genres": [
@@ -122255,11 +123676,19 @@
     "series": "Teenage Mutant Ninja Turtles",
     "orientation": "horizontal"
   },
+  "tmnt22pu": {
+    "group": "tmnt2",
+    "players": 2
+  },
   "tmnt2pj": {
     "group": "tmnt",
     "languages": [
       "Japanese"
     ],
+    "players": 2
+  },
+  "tmnt2po": {
+    "group": "tmnt",
     "players": 2
   },
   "tmnti": {
@@ -122307,6 +123736,14 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "tmoshspa": {
+    "group": "tmoshsp",
+    "players": 1
+  },
+  "tmpdoki": {
+    "group": "tmmjprd",
+    "players": 1
   },
   "tmspoker": {
     "genres": [
@@ -122399,6 +123836,12 @@
       "positional"
     ],
     "orientation": "vertical"
+  },
+  "tnk3b": {
+    "group": "tnk3",
+    "controls": [
+      "joy"
+    ]
   },
   "tnk3j": {
     "group": "tnk3",
@@ -122940,6 +124383,13 @@
     ],
     "orientation": "horizontal"
   },
+  "topgunbl": {
+    "group": "jackal",
+    "controls": [
+      "joy",
+      "positional"
+    ]
+  },
   "topgunnr": {
     "players": 1,
     "rating": 50,
@@ -123155,6 +124605,14 @@
     "languages": [
       "Japanese"
     ],
+    "players": 1
+  },
+  "topskatru": {
+    "group": "topskatr",
+    "players": 1
+  },
+  "topskatruo": {
+    "group": "topskatr",
     "players": 1
   },
   "topspeed": {
@@ -124268,9 +125726,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "tritreat": {
@@ -124734,6 +126189,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "trpdlghtu": {
+    "group": "trpdlght",
+    "controls": [
+      "gambling"
+    ]
+  },
   "trsking": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -125042,6 +126503,10 @@
     "series": "Trivia ? Whiz",
     "orientation": "horizontal"
   },
+  "trvwz3v": {
+    "group": "trvwz3h",
+    "orientation": "vertical"
+  },
   "trvwz4": {
     "players": 4,
     "rating": 50,
@@ -125097,6 +126562,10 @@
     ],
     "series": "Trivia ? Whiz",
     "orientation": "horizontal"
+  },
+  "trvwzv": {
+    "group": "trvwzh",
+    "orientation": "vertical"
   },
   "tryout": {
     "players": 2,
@@ -125240,6 +126709,15 @@
     "tags": [
       "Lightgun"
     ],
+    "orientation": "horizontal"
+  },
+  "tst_galx": {
+    "group": "galaxian",
+    "players": 1
+  },
+  "tst_invd": {
+    "group": "invaders",
+    "players": 1,
     "orientation": "horizontal"
   },
   "tstrike": {
@@ -125416,6 +126894,10 @@
     ],
     "orientation": "horizontal"
   },
+  "tubepb": {
+    "group": "tubep",
+    "players": 1
+  },
   "tugboat": {
     "players": 2,
     "rating": 30,
@@ -125585,6 +127067,10 @@
       "stick"
     ],
     "orientation": "horizontal"
+  },
+  "turbosub7": {
+    "group": "turbosub",
+    "players": 2
   },
   "turbotag": {
     "players": 2,
@@ -126325,6 +127811,12 @@
     ],
     "orientation": "horizontal"
   },
+  "twotigerc": {
+    "group": "twotiger",
+    "controls": [
+      "dial"
+    ]
+  },
   "twrshaft": {
     "players": 1,
     "rating": 80,
@@ -126846,6 +128338,12 @@
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
   },
+  "unicorndu": {
+    "group": "unicornd",
+    "controls": [
+      "gambling"
+    ]
+  },
   "uniwars": {
     "players": 2,
     "rating": 50,
@@ -127265,9 +128763,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "vertical"
   },
   "usg32": {
@@ -127478,9 +128973,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Crystal Maze",
     "orientation": "horizontal"
   },
@@ -127499,9 +128991,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Crystal Maze",
     "orientation": "horizontal"
   },
@@ -127519,9 +129008,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "series": "Crystal Maze",
     "orientation": "horizontal"
@@ -127597,9 +129083,6 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "orientation": "horizontal"
   },
   "v4gldrsh": {
@@ -127614,6 +129097,10 @@
     ],
     "orientation": "horizontal"
   },
+  "v4gldrsh3": {
+    "group": "v4gldrsh",
+    "players": 1
+  },
   "v4mate": {
     "players": 1,
     "genres": [
@@ -127624,9 +129111,6 @@
     ],
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
@@ -127653,6 +129137,10 @@
       "only_buttons"
     ],
     "orientation": "horizontal"
+  },
+  "v4mdice6": {
+    "group": "v4mdice",
+    "players": 1
   },
   "v4megbuk": {
     "genres": [
@@ -127690,6 +129178,34 @@
     ],
     "orientation": "horizontal"
   },
+  "v4monte5": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4monte5a": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4monte5b": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4monteb": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4monteba": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4montebb": {
+    "group": "v4monte",
+    "players": 1
+  },
+  "v4monteger": {
+    "group": "v4monte",
+    "players": 1
+  },
   "v4opt3": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -127726,6 +129242,14 @@
     ],
     "orientation": "horizontal"
   },
+  "v4picdila": {
+    "group": "v4picdil",
+    "players": 1
+  },
+  "v4picdilz": {
+    "group": "v4picdil",
+    "players": 1
+  },
   "v4psi": {
     "genres": [
       "Arcade: Casino / Misc."
@@ -127737,6 +129261,14 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "v4psibc": {
+    "group": "v4psi",
+    "players": 1
+  },
+  "v4psibcd": {
+    "group": "v4psi",
+    "players": 1
   },
   "v4pztet": {
     "players": 1,
@@ -128422,6 +129954,12 @@
     ],
     "orientation": "horizontal"
   },
+  "vbowlhk": {
+    "group": "vbowl",
+    "controls": [
+      "joy"
+    ]
+  },
   "vbowlj": {
     "group": "vbowl",
     "languages": [
@@ -128577,11 +130115,31 @@
     "series": "Crime Fighters",
     "orientation": "horizontal"
   },
+  "vendetta2pd": {
+    "group": "vendetta",
+    "players": 2
+  },
+  "vendetta2peba": {
+    "group": "vendetta",
+    "players": 2
+  },
   "vendetta2pp": {
     "group": "vendetta",
     "languages": [
       "Japanese"
     ],
+    "players": 2
+  },
+  "vendetta2pu": {
+    "group": "vendetta",
+    "players": 2
+  },
+  "vendetta2pun": {
+    "group": "vendetta",
+    "players": 2
+  },
+  "vendetta2pw": {
+    "group": "vendetta",
     "players": 2
   },
   "vendettan": {
@@ -129464,9 +131022,6 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "Danger Zone",
     "orientation": "horizontal"
   },
@@ -130128,6 +131683,10 @@
       "rating": 5
     },
     "orientation": "horizontal"
+  },
+  "vscompmj": {
+    "group": "jongpute",
+    "players": 2
   },
   "vsdrmario": {
     "group": "drmario",
@@ -131615,21 +133174,16 @@
     "controls": [
       "trackball"
     ],
-    "tags": [
-      "Trackball"
-    ],
     "series": "World Class Bowling",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wcbowldx"
+    ]
   },
   "wcbowl13j": {
     "group": "wcbowl",
     "languages": [
       "Japanese"
-    ]
-  },
-  "wcbowldx": {
-    "tags": [
-      "Trackball"
     ]
   },
   "wccf116": {
@@ -131772,6 +133326,30 @@
     ],
     "series": "Aristocrat MK Hardware",
     "orientation": "horizontal"
+  },
+  "wcougaru": {
+    "group": "wcougar",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "wcougarua": {
+    "group": "wcougar",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "wcougarub": {
+    "group": "wcougar",
+    "controls": [
+      "gambling"
+    ]
+  },
+  "wcougaruc": {
+    "group": "wcougar",
+    "controls": [
+      "gambling"
+    ]
   },
   "wcoyote": {
     "genres": [
@@ -132015,12 +133593,18 @@
     "group": "wgp",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "joy"
     ]
   },
   "wgpjoya": {
     "group": "wgp",
     "languages": [
       "Japanese"
+    ],
+    "controls": [
+      "joy"
     ]
   },
   "wh1": {
@@ -133032,6 +134616,12 @@
       "joy"
     ],
     "orientation": "horizontal"
+  },
+  "wlcc": {
+    "group": "xymg",
+    "controls": [
+      "joy"
+    ]
   },
   "wldafr": {
     "genres": [
@@ -134133,6 +135723,10 @@
     ],
     "orientation": "horizontal"
   },
+  "wwallyja3p": {
+    "group": "wwallyj",
+    "players": 3
+  },
   "wwaratah": {
     "genres": [
       "Arcade: Slot Machine / Video Slot"
@@ -134635,6 +136229,30 @@
     "series": "X-Men",
     "orientation": "horizontal"
   },
+  "xmen2pa": {
+    "group": "xmen",
+    "players": 2
+  },
+  "xmen2pe": {
+    "group": "xmen",
+    "players": 2
+  },
+  "xmen2pj": {
+    "group": "xmen",
+    "players": 2
+  },
+  "xmen2pu": {
+    "group": "xmen",
+    "players": 2
+  },
+  "xmen6p": {
+    "group": "xmen",
+    "players": 6
+  },
+  "xmen6pu": {
+    "group": "xmen",
+    "players": 6
+  },
   "xmultipl": {
     "players": 2,
     "rating": 70,
@@ -134809,9 +136427,6 @@
     },
     "controls": [
       "trackball"
-    ],
-    "tags": [
-      "Trackball"
     ],
     "orientation": "horizontal"
   },
