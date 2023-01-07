@@ -1,252 +1,311 @@
 {
-  "1552 Tenka Tairan": {
-    "players": 1,
+  "1943 Kai": {
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Strategy"
+      "Action",
+      "Shoot'em Up"
     ]
   },
-  "3x3 Eyes - Sanjiyan Henjou": {
-    "players": 1,
+  "21 Emon - Mezase Hotel Ou!!": {
+    "players": 4,
+    "rating": 0.85,
     "genres": [
-      "Adventure"
+      "Board game"
     ]
   },
-  "A.III. - A Ressha de Ikou III": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "AV Tanjou": {
-    "players": 1,
-    "genres": [
-      "Adult"
-    ]
-  },
-  "Addams Family, The": {
-    "players": 1,
+  "AV Poker - World Gambler": {
+    "players": 4,
     "rating": 0.3,
     "genres": [
-      "Action"
+      "Casino"
+    ]
+  },
+  "Aero Blasters": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Addams_Family/Addams_Family.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Aero Blasters (USA).pdf"
       }
     ]
   },
-  "Advanced V.G.": {
+  "After Burner II": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shooter"
+    ]
+  },
+  "Air Zonk": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Air Zonk (USA).pdf"
+      },
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/download/NECPCEngineManuals/PC Denjin - Punkic Cyborgs (Japan).pdf"
+      }
+    ]
+  },
+  "Alien Crush": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Alien Crush (USA).pdf"
+      }
+    ]
+  },
+  "All Star Power League": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Andre Panza Kick Boxing": {
+    "players": 2,
+    "rating": 0.25,
+    "genres": [
+      "Action",
+      "Fight",
+      "Sports"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Panza Kick Boxing (USA).pdf"
+      }
+    ]
+  },
+  "Aoi Blink": {
     "players": 2,
     "rating": 0.6,
     "genres": [
       "Action",
-      "Fight",
-      "Fight / 2D",
-      "Fight / Versus"
-    ]
-  },
-  "Adventure Quiz - Capcom World + Hatena no Daibouken": {
-    "players": 2,
-    "genres": [
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Ai Chou Aniki": {
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Akumajou Dracula X - Chi no Rondo": {
-    "players": 1,
-    "rating": 0.9,
-    "genres": [
       "Platform"
     ]
   },
-  "Alnam no Kiba - Juuzoku Juuni Shinto Densetsu": {
+  "Appare! Gateball": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Sports"
+    ]
+  },
+  "Armed F": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Artist Tool": {
     "players": 1,
     "genres": [
-      "Role playing games"
+      "N/A"
+    ]
+  },
+  "Atomic Robo-Kid Special": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Shooter"
+    ]
+  },
+  "Ballistix": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Sports"
+    ]
+  },
+  "Bari Bari Densetsu": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  "Barunba": {
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Batman": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Battle Lode Runner": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Puzzle-Game"
     ],
     "manuals": [
       {
         "languages": [
           "ja"
         ],
-        "url": "https://archive.org/download/AlnamNoKibaManualJPPCEngine/Alnam no Kiba (Manual)(JP)(PC Engine).pdf"
+        "url": "https://archive.org/compress/manual-01/formats=JPEG&file=/manual-01.zip",
+        "options": {
+          "filter": "manual*"
+        }
       }
     ]
   },
-  "Alshark": {
-    "players": 1,
+  "Battle Royale": {
+    "players": 4,
+    "rating": 0.5,
     "genres": [
-      "Role playing games"
-    ]
-  },
-  "Ane-san": {
-    "players": 2,
-    "rating": 0.65,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ]
-  },
-  "Aoki Ookami to Shiroki Mejika - Genchou Hishi": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Asuka 120% Maxima - Burning Fest. Maxima": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Beat'em Up"
-    ]
-  },
-  "Atlas, The - Renaissance Voyager": {
-    "players": 1,
-    "genres": [
-      "Simulation",
-      "Strategy"
-    ]
-  },
-  "Aurora Quest - Otaku no Seiza in Another World": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Avenger": {
-    "players": 1,
-    "rating": 0.65,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical",
-      "Shooter",
-      "Shooter / Vehicle",
-      "Vertical"
-    ]
-  },
-  "Babel": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Baby Jo - The Super Hero": {
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Bakuden - Unbalance Zone": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Bakushou Yoshimoto Shinkigeki": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Platform"
-    ]
-  },
-  "Basted": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Battle Shanghai - Dragon's Eye ~ Shanghai III - Dragon's Eye": {
-    "players": 5,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong",
-      "Puzzle-Game"
-    ]
-  },
-  "Bazar de Gozarre no Game de Gozarre": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Puzzle-Game",
-      "Thinking"
-    ]
-  },
-  "Beyond Shadowgate": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Adventure"
+      "Fight",
+      "Sports"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Beyond_Shadowgate/Beyond_Shadowgate.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Battle Royale (USA).pdf"
       }
     ]
   },
-  "Bikkuriman Daijikai": {
+  "Benkei Gaiden": {
     "players": 1,
-    "rating": 0.4,
+    "rating": 0.75,
     "genres": [
-      "Quiz",
-      "Quiz / Japanese",
-      "Simulation"
+      "Role playing games"
     ]
   },
-  "Bishoujo Janshi Idol Pai": {
+  "Bikkuriman World": {
     "players": 1,
-    "genres": [
-      "Adult",
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Bishoujo Senshi Sailor Moon": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Bishoujo Senshi Sailor Moon Collection": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Adventure",
-      "Adventure / Point and Click"
-    ]
-  },
-  "Black Hole Assault": {
-    "players": 1,
-    "rating": 0.3,
-    "genres": [
-      "Action",
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Blood Gear": {
-    "players": 1,
-    "rating": 0.7,
+    "rating": 0.75,
     "genres": [
       "Action",
       "Action / Adventure",
+      "Platform"
+    ]
+  },
+  "Blazing Lazers": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Blazing Lazers (USA).pdf"
+      }
+    ]
+  },
+  "Bloody Wolf": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Adventure",
+      "Shooter",
+      "Shooter / Run and Gun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bloody_Wolf/Bloody_Wolf.pdf"
+      }
+    ]
+  },
+  "Bodycon Quest II": {
+    "players": 1,
+    "rating": 0.4,
+    "genres": [
       "Role playing games"
+    ]
+  },
+  "Bomberman": {
+    "players": 5,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bomberman (USA).pdf"
+      }
+    ],
+    "tags": [
+      "Party"
+    ]
+  },
+  "Bomberman '93": {
+    "players": 5,
+    "rating": 0.9,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bomberman_93/Bomberman_93.pdf"
+      }
+    ],
+    "tags": [
+      "Party"
+    ]
+  },
+  "Bomberman '93 - Special Version": {
+    "genres": [
+      "Puzzle-Game"
     ]
   },
   "Bomberman '94": {
@@ -257,79 +316,73 @@
       "Action / Labyrinth"
     ]
   },
-  "Bomberman - Panic Bomber": {
-    "players": 2,
-    "rating": 0.85,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Bonanza Bros.": {
-    "players": 2,
+  "Bomberman - Users Battle": {
+    "players": 5,
     "rating": 0.7,
     "genres": [
-      "Action",
-      "Platform"
+      "Action"
     ]
   },
-  "Brandish": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Browning": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "BuilderLand - The Story of Melba": {
-    "players": 1,
-    "rating": 0.45,
-    "genres": [
-      "Thinking"
-    ]
-  },
-  "Burai - Yatsudama no Yuushi Densetsu": {
-    "players": 1,
-    "genres": [
-      "Japanese RPG",
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/BuraiManualJPPCEngine/Burai (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Burai II - Yami Koutei no Gyakushuu": {
-    "players": 1,
-    "genres": [
-      "Japanese RPG",
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/Burai2ManualJPPCEngine/Burai 2 (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Buster Bros.": {
-    "players": 2,
+  "Bonk 3 - Bonk's Big Adventure": {
+    "players": 5,
     "rating": 0.75,
     "genres": [
-      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Bonk_3/Bonk_3_HuCARD.pdf"
+      }
+    ],
+    "merge": [
+      "Bonk III - Bonk's Big Adventure",
+      "PC Genjin 3 - Pithecanthropus Computerurus"
+    ]
+  },
+  "Bonk's Adventure": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bonk's Adventure (USA).pdf"
+      }
+    ]
+  },
+  "Bonk's Revenge": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bonk's Revenge (USA).pdf"
+      }
+    ]
+  },
+  "Bouken Danshaku Don - The Lost Sunheart": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Boxyboy": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
       "Puzzle-Game"
     ],
     "manuals": [
@@ -337,223 +390,385 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Buster_Bros/Buster_Bros.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Boxyboy (USA).pdf"
       }
+    ]
+  },
+  "Bravoman": {
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Beat'em Up"
     ],
-    "merge": [
-      "Pomping World"
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Bravoman (USA).pdf"
+      }
     ]
   },
-  "CAL II": {
+  "Break In": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Sports",
+      "Sports / Pool"
+    ]
+  },
+  "Bubblegum Crash! - Knight Sabers 2034": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  "Bull Fight - Ring no Hasha": {
+    "players": 8,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Sports",
+      "Sports / Boxing"
+    ]
+  },
+  "Burning Angels": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  "Busou Keiji - Cyber Cross": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Platform",
+      "Platform / Fighter Scrolling"
+    ]
+  },
+  "Cadash": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cadash/Cadash.pdf"
+      }
+    ]
+  },
+  "Champion Wrestler": {
+    "players": 4,
+    "rating": 0.65,
+    "genres": [
+      "Fight",
+      "Sports"
+    ]
+  },
+  "Champions Forever Boxing": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Sports",
+      "Sports / Boxing"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Champions_Forever_Boxing/Champions_Forever_Boxing.pdf"
+      }
+    ]
+  },
+  "Chase H.Q.": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Taito Chase H.Q. (USA).pdf"
+      }
+    ]
+  },
+  "Chew-Man-Fu": {
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Chew_Man_Fu/Chew_Man_Fu.pdf"
+      }
+    ]
+  },
+  "Chibi Maruko-chan - Quiz de Piihyara": {
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Quiz",
+      "Quiz / Japanese"
+    ]
+  },
+  "Chikudenya Toubei - Kubikiri Yakata Yori": {
     "players": 1,
     "genres": [
       "Adventure"
     ]
   },
-  "CAL III - Kanketsu-hen": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "CD Battle - Hikari no Yuusha-tachi": {
-    "players": 2,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "CD Bishoujo Pachinko - Kyuuma Yon Shimai": {
-    "players": 1,
-    "genres": [
-      "Casino",
-      "Simulation"
-    ]
-  },
-  "CD Hanafuda - Bishoujo Fan Club": {
-    "players": 1,
-    "genres": [
-      "Playing cards"
-    ]
-  },
-  "CD Mahjong - Bishoujo Chuushinha": {
-    "players": 1,
-    "genres": [
-      "Adult",
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "CD Pachi-Slot - Bishoujo Gambler": {
-    "players": 1,
-    "genres": [
-      "Casino",
-      "Simulation"
-    ]
-  },
-  "Camp California": {
-    "players": 1,
-    "rating": 0.4,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Campaign Version - Daisenryaku II": {
-    "players": 2,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Cardangels": {
-    "players": 1,
-    "rating": 0.2,
-    "genres": [
-      "Playing cards"
-    ]
-  },
-  "Chiki Chiki Boys": {
+  "China Warrior": {
     "players": 2,
     "rating": 0.75,
     "genres": [
       "Action",
-      "Platform"
+      "Beat'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/China Warrior (USA).pdf"
+      }
     ]
   },
-  "Chou Aniki": {
+  "Circus Lido": {
     "players": 1,
     "rating": 0.7,
     "genres": [
-      "Shoot'em Up"
+      "Puzzle-Game"
     ]
   },
-  "Chou Jikuu Yousai Macross - Eien no Love Song": {
-    "players": 1,
+  "City Hunter": {
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Strategy"
+      "Action"
     ]
   },
-  "Chou Jikuu Yousai Macross 2036": {
+  "Columns": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Puzzle-Game"
+    ]
+  },
+  "Coryoon - Child of Dragon": {
     "players": 1,
-    "rating": 0.85,
+    "rating": 0.7,
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ]
   },
-  "Color Wars": {
-    "players": 4,
-    "rating": 0.5,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Cosmic Fantasy - Bouken Shounen Yuu": {
+  "Cratermaze": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/CosmicFantasyManualJPPCEngine/Cosmic Fantasy (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Cosmic Fantasy 2": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Role playing games"
+      "Action",
+      "Strategy"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Cosmic_Fantasy_2/Cosmic_Fantasy_2.pdf"
+        "url": "http://www.tg-16.com/contributors/bernie/Cratermaze/Cratermaze.pdf"
       }
-    ],
-    "merge": [
-      "Cosmic Fantasy 2 - Bouken Shounen Ban"
     ]
   },
-  "Cosmic Fantasy 3 - Bouken Shounen Rei": {
+  "Cross Wiber - Cyber Combat Police": {
     "players": 1,
     "rating": 0.7,
     "genres": [
+      "Action",
+      "Platform",
+      "Platform / Fighter Scrolling"
+    ]
+  },
+  "Cyber Core": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Cyber_Core/Cyber_Core.pdf"
+      }
+    ]
+  },
+  "Cyber Dodge": {
+    "players": 2,
+    "rating": 0.35,
+    "genres": [
+      "Sports",
+      "Sports / Dodgeball"
+    ]
+  },
+  "Cyber Knight": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure",
       "Role playing games"
     ]
   },
-  "Cosmic Fantasy 4 - Ginga Shounen Densetsu - Gekitou-hen": {
+  "Daichi-kun Crisis - Do Natural": {
     "players": 1,
+    "rating": 0.4,
     "genres": [
-      "Role playing games"
+      "Strategy"
     ]
   },
-  "Cosmic Fantasy 4 - Ginga Shounen Densetsu - Totsunyuu-hen": {
-    "players": 1,
+  "Daisenpuu": {
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Role playing games"
+      "Shoot'em Up"
     ]
   },
-  "Cyber City Oedo 808 - Kemono no Alignment": {
+  "Darius Alpha": {
     "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Daisenpuu Custom": {
-    "players": 1,
-    "rating": 0.45,
+    "rating": 0.75,
     "genres": [
       "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Shoot'em Up"
     ]
   },
-  "Davis Cup Tennis, The": {
+  "Darius Plus": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Darkwing Duck": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Darkwing Duck (USA).pdf"
+      }
+    ]
+  },
+  "Davis Cup Tennis": {
     "players": 4,
-    "rating": 0.3,
+    "rating": 0.45,
     "genres": [
       "Sports",
       "Sports / Tennis"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Davis Cup Tennis (USA).pdf"
+      }
     ]
   },
-  "De-Ja": {
+  "Dead Moon": {
     "players": 1,
+    "rating": 0.6,
     "genres": [
-      "Adventure"
+      "Action",
+      "Shoot'em Up"
     ]
   },
-  "Dead of the Brain 1&2": {
+  "Deep Blue": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Adventure"
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Double_Dungeons/Double_Dungeons.pdf"
+      }
     ]
   },
-  "Death Bringer - The Knight of Darkness": {
+  "Detana!! TwinBee": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Role playing games"
+      "Action",
+      "Shoot'em Up"
     ]
   },
-  "Dekoboko Densetsu - Hashiru Wagamanmaa": {
-    "players": 5,
-    "rating": 0.4,
+  "Devil's Crush": {
+    "players": 2,
+    "rating": 0.65,
     "genres": [
-      "Action"
+      "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Devil's Crush - Naxat Pinball (USA).pdf"
+      }
     ]
   },
-  "Dennou Tenshi - Digital Ange": {
+  "Die Hard": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Adventure"
+      "Action",
+      "Shooter",
+      "Shooter / Run and Gun"
     ]
   },
-  "Develo - Starter Kit - Assembler-hen": {},
-  "Develo - Starter Kit - BASIC-hen": {},
-  "Develo Magazine Vol. 1": {},
+  "Digital Champ": {
+    "rating": 0.35,
+    "genres": [
+      "Sports",
+      "Sports / Boxing"
+    ]
+  },
+  "Don Doko Don!": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
   "Doraemon - Nobita no Dorabian Night": {
     "players": 1,
     "rating": 0.7,
@@ -562,97 +777,84 @@
       "Platform"
     ]
   },
-  "Double Dragon II - The Revenge": {
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Beat'em Up"
-    ]
-  },
-  "Doukyuusei": {
+  "Double Dungeons": {
     "players": 1,
+    "rating": 0.45,
     "genres": [
-      "Adventure",
-      "Simulation"
+      "Role playing games"
     ]
   },
-  "Down Load 2": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Downtown Nekketsu Koushinkyoku - Soreyuke Daiundoukai": {
-    "players": 4,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ]
-  },
-  "Downtown Nekketsu Monogatari": {
-    "players": 2,
-    "genres": [
-      "Beat'em Up"
-    ]
-  },
-  "Dragon Ball Z - Idainaru Son Gokuu Densetsu": {
+  "Download": {
     "players": 1,
     "rating": 0.7,
     "genres": [
-      "Adventure",
-      "Fight"
+      "Shoot'em Up"
     ]
   },
-  "Dragon Half": {
-    "players": 4,
-    "genres": [
-      "Board game"
-    ]
-  },
-  "Dragon Knight & Graffiti": {
+  "Dragon Egg!": {
     "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Role playing games"
+      "Action",
+      "Platform"
     ]
   },
-  "Dragon Knight II": {
-    "players": 1,
+  "Dragon Saber": {
+    "players": 2,
+    "rating": 0.7,
     "genres": [
-      "Role playing games"
+      "Shoot'em Up"
     ]
   },
-  "Dragon Knight III": {
+  "Dragon Spirit": {
     "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Role playing games"
-    ]
-  },
-  "Dragon Slayer - The Legend of Heroes": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Role playing games"
+      "Shoot'em Up"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Dragon_Slayer/Dragon_Slayer.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dragon Spirit (USA).pdf"
       }
     ]
   },
-  "Dragon Slayer - The Legend of Heroes II": {
-    "players": 1,
+  "Dragon's Curse": {
+    "players": 2,
+    "rating": 0.9,
     "genres": [
-      "Role playing games"
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dragon's Curse (USA).pdf"
+      }
     ]
   },
-  "Dungeon Explorer II": {
+  "Drop Off": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Action / Breakout games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Drop_Off/Drop_Off.pdf"
+      }
+    ]
+  },
+  "Dungeon Explorer": {
     "players": 5,
-    "rating": 0.9,
+    "rating": 0.65,
     "genres": [
       "Role playing games"
     ],
@@ -661,17 +863,18 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Explorer_II/Dungeon_Explorer_II.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Dungeon Explorer (USA).pdf"
       }
     ],
     "tags": [
       "Party"
     ]
   },
-  "Dungeon Master - Theron's Quest": {
+  "Dungeons & Dragons - Order of the Griffon": {
     "players": 1,
     "rating": 0.6,
     "genres": [
+      "Adventure",
       "Role playing games"
     ],
     "manuals": [
@@ -679,236 +882,91 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Dungeon_Master/Dungeon_Master.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Order of the Griffon (USA).pdf"
       }
     ]
   },
-  "Duo Comic - Bakuretsu Hunter": {},
-  "Dynastic Hero, The": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Role playing games"
-    ],
-    "merge": [
-      "Chou Eiyuu Densetsu - Dynastic Hero"
-    ]
-  },
-  "Efera & Jiliora - The Emblem from Darkness": {
-    "players": 1,
+  "Energy": {
+    "players": 5,
+    "rating": 0.6,
     "genres": [
       "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/EferaJilioraManualJPPCEngine/Efera and Jiliora (Manual)(JP)(PC Engine).pdf"
-      }
     ]
   },
-  "Eikan wa Kimi ni - Koukou Yakyuu Zenkoku Taikai": {
-    "players": 1,
-    "genres": [
-      "Simulation",
-      "Sports",
-      "Sports / Baseball"
-    ]
-  },
-  "Eiyuu Sangokushi": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Emerald Dragon": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/emeralddragonguidebook/Emerald Dragon Guide Book.pdf"
-      }
-    ]
-  },
-  "Exile": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/arjak/Exile/Exile.pdf"
-      }
-    ],
-    "merge": [
-      "Exile - Toki no Hasama e"
-    ]
-  },
-  "Exile - Wicked Phenomenon": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ],
-    "merge": [
-      "Exile II - Janen no Jishou"
-    ]
-  },
-  "F1 Circus Special - Pole to Win": {
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Sports",
-      "Sports / Running trails"
-    ]
-  },
-  "F1 Team Simulation - Project F": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "FX Unit Yuki - The Henshin Engine": {
+  "Eternal City - Toshi Tensou Keikaku": {
     "players": 1,
     "rating": 0.75,
     "genres": [
+      "Action",
       "Platform",
       "Platform / Shooter Scrolling"
     ]
   },
-  "Faceball": {
-    "players": 4,
-    "rating": 0.5,
-    "genres": [
-      "Shooter",
-      "Shooter / 1st person"
-    ]
-  },
-  "Faerie Dust Story - Meikyuu no Elfeene": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Fantastic Night Dreams - Cotton": {
-    "players": 1,
+  "F-1 Dream": {
     "rating": 0.7,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Driving",
+      "Race"
     ]
   },
-  "Far East of Eden - Tengai Makyou - Fuun Kabuki-den": {
-    "players": 1,
+  "F-1 Pilot - You're King of Kings": {
+    "rating": 0.75,
     "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/TengaiMakyouFuunKabukiDenManualJPPCEngine/Tengai Makyou Fuun Kabuki Den (Manual)(JP)(PC Engine).pdf"
-      }
+      "Driving",
+      "Race"
     ]
   },
-  "Far East of Eden - Tengai Makyou - Ziria": {
-    "players": 1,
+  "F1 Circus": {
+    "players": 5,
+    "rating": 0.7,
     "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/TengaiMakyouZiriaManualJPPCEngine/Tengai Makyou (Manual)(JP)(PC Engine).pdf"
-      }
+      "Driving",
+      "Race"
     ]
   },
-  "Far East of Eden - Tengai Makyou II - Manji Maru": {
+  "F1 Circus '91": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/TengaiMakyou2ManualJPPCEngine/Tengai Makyou 2 (Manual)(JP)(PC Engine).pdf"
-      }
+      "Driving",
+      "Race"
     ]
   },
-  "Farjius no Jakoutei - Neo Metal Fantasy": {
+  "F1 Circus '92 - The Speed of Sound": {
     "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/FarjiusNoJakouteiManualJPPCEngine/Farjius no Jakoutei (Manual)(JP)(PC Engine).pdf"
-      }
+      "Driving",
+      "Race"
     ]
   },
-  "Faussete Amour": {
-    "players": 1,
-    "rating": 0.6,
+  "F1 Triple Battle": {
+    "players": 3,
+    "rating": 0.65,
     "genres": [
-      "Platform"
+      "Driving",
+      "Race"
     ]
   },
-  "Fiend Hunter": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Fighting Street": {
-    "players": 1,
+  "Falcon": {
+    "players": 2,
     "rating": 0.45,
     "genres": [
-      "Fight"
+      "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Falcon (USA).pdf"
+      }
     ]
   },
-  "Final Zone II": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Flash Hiders": {
+  "Fantasy Zone": {
     "players": 2,
-    "rating": 0.7,
+    "rating": 0.65,
     "genres": [
-      "Action",
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Forgotten Worlds": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action",
       "Shoot'em Up"
     ],
     "manuals": [
@@ -916,264 +974,373 @@
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Forgotten_Worlds/Forgotten_Worlds.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Fantasy Zone (USA).pdf"
       }
     ]
   },
-  "Formation Soccer 95 della Serie A": {
+  "Fighting Run": {
     "players": 2,
+    "rating": 0.55,
     "genres": [
-      "Sports",
-      "Sports",
-      "Sports / Soccer"
+      "Action"
     ]
   },
-  "Fushigi no Umi no Nadia - The Secret of Blue Water": {
+  "Final Blaster": {
     "players": 1,
+    "rating": 0.65,
     "genres": [
-      "Adventure"
+      "Shoot'em Up"
     ]
   },
-  "GS": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Gain Ground SX": {
+  "Final Lap Twin": {
     "players": 2,
-    "rating": 0.9,
+    "rating": 0.95,
     "genres": [
-      "Action",
-      "Strategy"
-    ]
-  },
-  "Galaxy Deka Gayvan": {
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ]
-  },
-  "Garou Densetsu 2 - Aratanaru Tatakai": {
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Fight"
-    ]
-  },
-  "Garou Densetsu Special": {
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Gate of Thunder": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Gate of Thunder + Bonk's Adventure + Bonk's Revenge": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Driving",
+      "Race",
+      "Role playing games"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Gate_of_Thunder/Gate_of_Thunder.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Final Lap Twin (USA).pdf"
       }
     ]
   },
-  "Genocide": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Gensou Tairiku Auleria": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Ginga Fukei Densetsu Sapphire": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Ginga Ojousama Densetsu Yuna": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/GingaOjousamaDensetsuYunaManualJPPCEngine/Ginga Ojousama Densetsu Yuna (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Ginga Ojousama Densetsu Yuna 2 - Eien no Princess": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/GingaOjousamaDensetsuYuna2ManualJPPCEngine/Ginga Ojousama Densetsu Yuna 2 (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Ginga Ojousama Densetsu Yuna HuVIDEO CD": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Go! Go! Birdie Chance": {
-    "players": 3,
+  "Final Match Tennis": {
+    "players": 2,
+    "rating": 0.85,
     "genres": [
       "Sports",
-      "Sports / Golf"
+      "Sports / Tennis"
     ]
   },
-  "God Panic - Shijou Saikyou no Gundan": {
+  "Final Soldier": {
     "players": 1,
-    "rating": 0.55,
+    "rating": 0.8,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Action",
+      "Shoot'em Up"
     ]
   },
-  "Godzilla": {
-    "players": 2,
+  "Final Soldier - Special Version": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Fire Pro Wrestling - Combination Tag": {
+    "players": 4,
     "rating": 0.7,
     "genres": [
-      "Action",
       "Fight",
-      "Fight / 2D"
-    ],
-    "merge": [
-      "Godzilla Bakutou Retsuden"
+      "Sports"
     ]
   },
-  "Goetzendiener": {
-    "players": 1,
-    "rating": 0.65,
-    "genres": [
-      "Action",
-      "Action / Adventure"
-    ]
-  },
-  "Golden Axe": {
-    "players": 1,
-    "rating": 0.45,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ]
-  },
-  "Gradius II - Gofer no Yabou": {
-    "players": 1,
+  "Fire Pro Wrestling 2 - 2nd Bout": {
+    "players": 4,
     "rating": 0.75,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Fight",
+      "Sports"
     ]
   },
-  "Gulclight TDF 2": {
+  "Fire Pro Wrestling 3 - Legend Bout": {
+    "players": 4,
+    "rating": 0.65,
+    "genres": [
+      "Fight",
+      "Sports"
+    ]
+  },
+  "Formation Soccer - Human Cup '90": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  "Formation Soccer - On J League": {
+    "players": 2,
+    "rating": 0.95,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  "Fushigi no Yume no Alice": {
     "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Gai Flame": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  "Gaia no Monshou": {
+    "players": 2,
     "rating": 0.7,
     "genres": [
       "Strategy"
     ]
   },
-  "Gyuwambler Jiko Chuushinha - Gekitou 36 Janshi": {
+  "Galaga '90": {
     "players": 1,
+    "rating": 0.8,
     "genres": [
-      "Asiatic board game",
-      "Mahjong"
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Galaga '90 (USA).pdf"
+      }
     ]
   },
-  "Gyuwambler Jiko Chuushinha - Mahjong Puzzle Collection": {
+  "Ganbare! Golf Boys": {
+    "players": 4,
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  "Gekisha Boy": {
     "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action"
+    ]
+  },
+  "Genji Tsuushin Agedama": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Genpei Toumaden": {
+    "genres": [
+      "Action"
+    ]
+  },
+  "Ghost Manor": {
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Ghost_Manor/Ghost_Manor.pdf"
+      }
+    ]
+  },
+  "Gokuraku! Chuuka Taisen": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Gomola Speed": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Action / Labyrinth"
+    ]
+  },
+  "Gradius": {
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Gunboat": {
+    "players": 1,
+    "rating": 0.1,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  "Gunhed - Special Version": {
+    "players": 1,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Hana Taaka Daka!": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Hanii in the Sky": {
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Hanii on the Road": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Hatris": {
+    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Puzzle-Game"
     ]
   },
-  "Hataraku Shoujo - Tekipaki Working Love": {
+  "Heavy Unit": {
     "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Hatsukoi Monogatari": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/hatsukoi-monogatari-manual-scan-jp-pcengine/Hatsukoi Monogatari (Manual)(Scan)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Hawiian Island Girls": {},
-  "Hawk F-123": {
-    "players": 1,
-    "rating": 0.65,
+    "rating": 0.5,
     "genres": [
       "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Shoot'em Up"
     ]
   },
-  "Hellfire S - The Another Story": {
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Henshin Engine": {},
-  "Hi-Leg Fantasy": {
+  "Hisou Kihei X-Serd": {
     "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "High Grenadier": {
-    "players": 1,
+    "rating": 0.6,
     "genres": [
       "Strategy"
     ]
   },
-  "Hihou Densetsu - Chris no Bouken": {
+  "Hit the Ice - VHL - The Official Video Hockey League": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Sports",
+      "Sports / Hockey"
+    ]
+  },
+  "Honoo no Toukyuuji - Dodge Danpei": {
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Dodgeball"
+    ]
+  },
+  "Idol Hanafuda Fan Club": {
+    "players": 1,
+    "rating": 0.2,
+    "genres": [
+      "Asiatic board game"
+    ]
+  },
+  "Image Fight": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Impossamole": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "J.J. & Jeff": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/J.J. & Jeff (USA).pdf"
+      }
+    ]
+  },
+  "J.League Greatest Eleven": {
+    "players": 4,
+    "rating": 0.85,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  "Jack Nicklaus' Turbo Golf": {
+    "players": 4,
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Jack Nicklaus' Turbo Golf (USA).pdf"
+      }
+    ],
+    "merge": [
+      "Jack Nicklaus' World Tour Golf - 162 Holes"
+    ]
+  },
+  "Jackie Chan's Action Kung Fu": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Jackie_Chan/Jackie_Chan.pdf"
+      }
+    ]
+  },
+  "Jaseiken Necromancer": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  "Jigoku Meguri": {
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1181,193 +1348,11 @@
       "Platform"
     ]
   },
-  "Himitsu no Hanazono": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Horror Story": {
-    "players": 2,
-    "rating": 0.6,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Hu PGA Tour - PowerGolf 2 - Golfer": {
-    "players": 4,
-    "genres": [
-      "Simulation",
-      "Sports",
-      "Sports / Golf"
-    ]
-  },
-  "Human Sports Festival": {
-    "players": 4,
-    "rating": 0.6,
-    "genres": [
-      "Compilation",
-      "Sports"
-    ]
-  },
-  "Hyaku Monogatari - Honto ni Atta Kowai Hanashi": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Hyper Dyne - SideArms Special": {
+  "Jinmu Denshou": {
     "players": 1,
     "rating": 0.6,
     "genres": [
       "Shoot'em Up"
-    ]
-  },
-  "Hyper Wars": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Hypernova Blast": {
-    "players": 5,
-    "genres": [
-      "Action"
-    ]
-  },
-  "IQ Panic": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Simulation"
-    ]
-  },
-  "Iga Ninden Gaiou": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action"
-    ]
-  },
-  "ImageFight II - Operation Deepstriker": {
-    "players": 1,
-    "rating": 0.85,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical",
-      "Shooter",
-      "Shooter / Vertical"
-    ]
-  },
-  "Implode": {
-    "players": 1,
-    "genres": [
-      "Action"
-    ]
-  },
-  "In Magical Adventure - Fray CD - Xak Gaiden": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Inoue Mami - Kono Hoshi ni Tatta Hitori no Kimi": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Insanity": {
-    "players": 1
-  },
-  "It Came from the Desert": {
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Action"
-    ]
-  },
-  "J-Thunder - Tsumetai Hada wa Shoujo o Nurasu": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "J. B. Harold Murder Club": {
-    "players": 1,
-    "rating": 0.35,
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/J.B._Harold_Murder_Club_1991_NEC_US/J.B._Harold_Murder_Club_1991_NEC_US.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://mocagh.org/miscgame/murderclubpce-manual.pdf"
-      }
-    ],
-    "merge": [
-      "J. B. Harold Series 1 - Murder Club"
-    ]
-  },
-  "J.League Tremendous Soccer '94": {
-    "players": 4,
-    "genres": [
-      "Sports",
-      "Sports / Soccer"
-    ]
-  },
-  "Jantei Monogatari": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Jantei Monogatari 2 - Uchuu Tantei Diban - Kanketsu-hen": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Jantei Monogatari 2 - Uchuu Tantei Diban - Shutsudou-hen": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Jantei Monogatari 3 - Saver Angels": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Jim Power in Mutant Planet": {
-    "players": 1,
-    "rating": 0.4,
-    "genres": [
-      "Action"
-    ]
-  },
-  "John Madden Duo CD Football": {
-    "players": 2,
-    "rating": 0.3,
-    "genres": [
-      "Sports",
-      "Sports / Football"
     ]
   },
   "Juuouki": {
@@ -1378,1947 +1363,1613 @@
       "Beat'em Up"
     ]
   },
-  "KO Seiki Beast Sanjuushi - Gaia Fukkatsu - Kanketsu-hen": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Kabuki Ittouryoudan": {
+  "Kaizou Choujin Shubibinman": {
     "players": 2,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Kagami no Kuni no Legend": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Kaizou Choujin Shubibinman 3 - Ikai no Princess": {
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Platform"
-    ]
-  },
-  "Kakutou Haou Densetsu - Algunos": {
-    "players": 2,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Kawa no Nushitsuri - Shizen-ha": {
-    "players": 1,
-    "genres": [
-      "Role playing games",
-      "Simulation"
-    ]
-  },
-  "Kaze Kiri - Ninja Action": {
-    "players": 1,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Kaze no Densetsu Xanadu": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/KazeNoDensetsuXanaduPCEngineJPManuals/KazeNoDensetsuXanadumanualjppcEngine.pdf"
-      }
-    ]
-  },
-  "Kiaidan 00": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Kick Boxing, The": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports / Boxing"
-    ]
-  },
-  "Kisou Louga": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/KisouLougaManualJPPCEngine/Kisou Louga (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Kisou Louga II - The Ends of Shangrila": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Kuusou Kagaku Sekai Gulliver Boy": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "L-Dis": {
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Lady Phantom": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Langrisser - Hikari no Matsuei": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/LangrisserManualScanJPPCEngine/Langrisser (Manual)(Scan)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Laplace no Ma": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Laser Soft Visual Collection Vol. 1 - Cosmic Fantasy Visual-shuu": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Laser Soft Visual Collection Vol. 2 - Valis Visual-shuu": {
-    "players": 1
-  },
-  "Last Alert": {
-    "players": 1,
     "rating": 0.7,
-    "genres": [
-      "Action"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Last_Alert/Last_Alert.pdf"
-      }
-    ],
-    "merge": [
-      "Red Alert"
-    ]
-  },
-  "Last Armageddon": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Legend of Xanadu - Kaze no Densetsu Xanadu": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/legendofxanaduthepcenginehiresscans/Legend of Xanadu, The - Manual.pdf"
-      }
-    ]
-  },
-  "Legend of Xanadu - Kaze no Densetsu Xanadu II": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/KazeNoDensetsuXanadu2PCEngineJPManuals/KazenoDensetsuXanadu2ManualJPPcEngine.pdf"
-      }
-    ]
-  },
-  "Legion": {
-    "players": 2,
-    "rating": 0.5,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Lemmings": {
-    "players": 2,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Linda^3": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Local Girls of Hawaii, The": {},
-  "Loom": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Lord of Wars": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Lords of Thunder": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Lords_of_Thunder/Lords_of_Thunder.pdf"
-      }
-    ],
-    "merge": [
-      "Winds of Thunder"
-    ]
-  },
-  "Lords of the Rising Sun": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action"
-    ],
-    "merge": [
-      "Rising Sun"
-    ]
-  },
-  "Mad Stalker - Full Metal Force": {
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Beat'em Up"
-    ]
-  },
-  "Madou Monogatari I - Honoo no Sotsuenji": {
-    "players": 1,
-    "genres": [
-      "Puzzle-Game",
-      "Role playing games"
-    ]
-  },
-  "Magical Dinosaur Tour": {
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Educational"
-    ],
-    "merge": [
-      "Magical Saurus Tour"
-    ]
-  },
-  "Magicoal": {
-    "players": 2,
-    "genres": [
-      "Action",
-      "Action / Adventure"
-    ]
-  },
-  "Mahjong Clinic Special": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Mahjong Lemon Angel": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Asiatic board game",
-      "Asiatic board game",
-      "Asiatic board game",
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Mahjong Sword - Princess Quest Gaiden": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Mahjong Vanilla Syndrome": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Mahjong on the Beach": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Mamono Hunter Youko - Makai kara no Tenkousei": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Mamono Hunter Youko - Tooki Yobigoe": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Manhole, The": {
-    "players": 1,
-    "rating": 0.4,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Martial Champion": {
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Action",
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Mashou Denki - La Valeur": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Master of Monsters": {
-    "players": 2,
-    "genres": [
-      "Role playing games",
-      "Strategy"
-    ]
-  },
-  "Mateki Densetsu Astralius": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Megami Paradise": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/MegamiParadiseManualJPPCEngine/Megami Paradise (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Metal Angel": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Metal Angel 2": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Metamor Jupiter": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Meteor Blaster DX": {
-    "players": 1,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Might and Magic": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Might and Magic III - Isles of Terra": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Might_and_Magic_III/Might_and_Magic_III.pdf"
-      }
-    ]
-  },
-  "Minesweeper": {
-    "players": 1,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Mirai Shounen Conan": {
-    "players": 1,
-    "rating": 0.6,
     "genres": [
       "Action",
       "Platform"
     ]
   },
-  "Mitsubachi Gakuen": {
+  "Kattobi! Takuhai-kun": {
     "players": 1,
+    "rating": 0.5,
     "genres": [
-      "Adventure"
+      "Action"
     ]
   },
-  "Monster Lair": {
+  "Keith Courage in Alpha Zones": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Keith Courage in Alpha Zones (USA).pdf"
+      }
+    ]
+  },
+  "KickBall": {
     "players": 2,
     "rating": 0.65,
     "genres": [
-      "Platform",
-      "Shoot'em Up"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Monster_Lair/Monster_Lair.pdf"
-      }
-    ],
-    "merge": [
-      "Wonder Boy III - Monster Lair"
+      "Sports",
+      "Sports / Baseball"
     ]
   },
-  "Monster Maker - Yami no Ryuukishi": {
+  "Kiki Kaikai": {
     "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Moonlight Lady": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Action / Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/MoonlightLadyPCEngineJPManuals/Moonlight Lady (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Motoroader MC": {
-    "players": 4,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Motteke Tamago": {
-    "players": 2,
-    "rating": 0.4,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Mugen Senshi Valis - The Legend of a Fantasm Soldier": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Mysterious Song": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Mystic Formula": {
-    "players": 2,
     "rating": 0.7,
-    "genres": [
-      "Action"
-    ]
-  },
-  "NEXZR": {
-    "players": 1,
-    "rating": 0.75,
     "genres": [
       "Shoot'em Up"
     ]
   },
-  "Nekketsu Koukou Dodgeball-bu CD - Soccer-hen": {
-    "players": 4,
-    "genres": [
-      "Sports",
-      "Sports / Soccer"
-    ]
-  },
-  "Nekketsu Legend - Baseballer": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Nemurenu Yoru no Chiisana Ohanashi": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Adventure / Point and Click"
-    ]
-  },
-  "Neo Nectaris": {
-    "players": 4,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Nishimura Kyoutarou Mystery - Hokutosei no Onna": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "No-Ri-Ko": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Simulation"
-    ]
-  },
-  "Nobunaga no Yabou - Bushou Fuuunroku": {
-    "players": 8,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Nobunaga no Yabou - Zenkokuban": {
-    "players": 8,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "PC Engine Fan - Special CD-ROM^2 Vol. 1": {},
-  "PC Engine Hyper Catalog CD-ROM": {},
-  "PC Engine Hyper Catalog CD-ROM - 1994 Summer": {},
-  "PC Engine Hyper Catalog CD-ROM 2 - 1993 Spring": {},
-  "PC Engine Hyper Catalog CD-ROM 3 - 1993 Summer": {},
-  "PC Engine Hyper Catalog CD-ROM 4 - 1993 Winter": {},
-  "PC Engine Hyper Catalog CD-ROM 5 - 1994 Spring": {},
-  "PC Engine Hyper Catalog CD-ROM 6 - 1994 Summer": {},
-  "Pachio-kun - Maboroshi no Densetsu": {
-    "players": 1,
-    "genres": [
-      "Casino",
-      "Simulation"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/PachiokunMaboroshinoDensetsuPCEngineCJCD1001NTSCJ/000_Pachio-kun_Maboroshi_no_Densetsu_PC_Engine_CJCD1001_NTSC-J_manual_01_preview.jpg",
-        "options": {
-          "filter": "*manual*"
-        }
-      }
-    ]
-  },
-  "Pachio-kun - Warau Uchuu": {
-    "players": 1,
-    "genres": [
-      "Casino",
-      "Simulation"
-    ]
-  },
-  "Pachio-kun 3 - Pachi-Slot & Pachinko": {
-    "players": 1,
-    "genres": [
-      "Casino",
-      "Simulation"
-    ]
-  },
-  "Palladion - Auto Crusher Palladium": {
+  "King of Casino": {
     "players": 5,
-    "genres": [
-      "Fight",
-      "Simulation"
-    ]
-  },
-  "Pastel Lime": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Patlabor - Chapter of Griffon": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Police Connection": {
-    "players": 4,
-    "genres": [
-      "Board game"
-    ]
-  },
-  "Pop'n Magic": {
-    "players": 2,
-    "rating": 0.65,
-    "genres": [
-      "Platform"
-    ]
-  },
-  "PopfulMail": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Populous - The Promised Lands": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Prince of Persia": {
-    "players": 1,
-    "rating": 0.65,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Princess Maker 1": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Princess Maker 2": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Princess Minerva": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Private Eye dol": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/PrivateEyedolManualJPPCEngine/Private Eyedol (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Pro Yakyuu Super '94, The": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports / Baseball"
-    ]
-  },
-  "Pro Yakyuu Super, The": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports",
-      "Sports / Baseball"
-    ]
-  },
-  "Pro Yakyuu, The": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports",
-      "Sports / Baseball"
-    ]
-  },
-  "Psychic Detective Series Vol. 3 - Aya": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/AYAPsychicDetectiveSeriesVol.3ManualJPPCEngine/AYA Psychic Detective Series Vol.3 (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Psychic Detective Series Vol. 4 - Orgel": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Psychic Storm": {
-    "players": 2,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Puyo Puyo CD": {
-    "players": 2,
-    "rating": 0.75,
-    "genres": [
-      "Puzzle-Game",
-      "Puzzle-Game / Fall"
-    ]
-  },
-  "Puyo Puyo CD Tsuu": {
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Pyramid Plunder": {
-    "players": 1,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Quest of Jongmaster - Janshin Densetsu": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Quiz Avenue": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz Avenue II": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz Avenue III": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz Caravan Cult Q": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz Marugoto the World": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz / Japanese",
-      "Simulation"
-    ]
-  },
-  "Quiz Marugoto the World 2 - Time Machine ni Onegai!": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz Tonosama no Yabou": {
-    "players": 2,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese",
-      "Strategy"
-    ]
-  },
-  "Quiz de Gakuensai": {
-    "players": 1,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "Quiz no Hoshi - Star of Quiz": {
-    "players": 5,
-    "genres": [
-      "Quiz",
-      "Quiz",
-      "Quiz / Japanese"
-    ]
-  },
-  "R-Type Complete CD": {
-    "players": 1,
     "rating": 0.8,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Casino"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/King of Casino (USA).pdf"
+      }
     ]
   },
-  "ROM ROM Stadium": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports / Baseball"
-    ]
-  },
-  "ROM^2 Karaoke Vol. 1 - Suteki ni Standard": {},
-  "ROM^2 Karaoke Vol. 2 - Nattoku Idol": {},
-  "ROM^2 Karaoke Vol. 3 - Yappashi Band": {},
-  "ROM^2 Karaoke Vol. 4 - Choito Otona!": {},
-  "ROM^2 Karaoke Vol. 5 - Karaoke Maku no Uchi": {},
-  "ROM^2 Karaoke Volume 1": {},
-  "ROM^2 Karaoke Volume 2": {},
-  "ROM^2 Karaoke Volume 3": {},
-  "ROM^2 Karaoke Volume 4": {},
-  "ROM^2 Karaoke Volume 5": {},
-  "Rainbow Islands - The Story of Bubble Bobble 2": {},
-  "Rally Championship": {
+  "Klax": {
     "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Klax (USA).pdf"
+      }
+    ]
+  },
+  "Knight Rider Special": {
+    "players": 1,
+    "rating": 0.7,
     "genres": [
       "Driving",
       "Race"
     ]
   },
-  "Ranma 1-2": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Action",
-      "Fight",
-      "Platform",
-      "Platform / Fighter Scrolling"
-    ]
-  },
-  "Ranma 1-2 - Datou, Ganso Musabetsu Kakutou-ryuu!": {
+  "Kore ga Pro Yakyuu '89": {
     "players": 2,
-    "rating": 0.9,
-    "genres": [
-      "Action",
-      "Adventure",
-      "Fight"
-    ]
-  },
-  "Ranma 1-2 - Toraware no Hanayome": {
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Adventure",
-      "Various"
-    ]
-  },
-  "Rayxanber II": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Rayxanber III": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Record of Lodoss War": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/LodossTouSenkiManualJPPCEngine/Lodoss Tou Senki (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Record of Lodoss War II": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/LodossTouSenki2ManualJPPCEngine/Lodoss Tou Senki 2 (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Renny Blaster": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Revival Chase": {
-    "players": 5,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Riot Zone": {
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ],
-    "merge": [
-      "Ookami-teki Monshou - Crest of Wolf"
-    ]
-  },
-  "Road Spirits": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Driving",
-      "Race",
-      "Race 3rd Pers. view"
-    ]
-  },
-  "Ruin - Kami no Isan": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "Ryuuko no Ken": {
-    "players": 2,
-    "rating": 0.45,
-    "genres": [
-      "Fight",
-      "Fight / 2D"
-    ]
-  },
-  "Sangokushi - Eiketsu Tenka ni Nozomu": {
-    "players": 3,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Sangokushi III": {
-    "players": 8,
-    "genres": [
-      "Simulation",
-      "Strategy"
-    ]
-  },
-  "Seirei Senshi Spriggan": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Seiryuu Densetsu - Monbit": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Seisenshi Denshou - Jantaku no Kishi": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Seiya Monogatari - Anearth Fantasy Stories": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Sengoku Kantou Sangokushi": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Sexy Idol Mahjong": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Sexy Idol Mahjong - Fashion Monogatari": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Sexy Idol Mahjong - Yakyuuken no Uta": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Shadow of the Beast": {
-    "players": 1,
-    "rating": 0.55,
-    "genres": [
-      "Action",
-      "Beat'em Up"
-    ],
-    "merge": [
-      "Shadow of the Beast - Mashou no Okite"
-    ]
-  },
-  "Shanghai II": {
-    "players": 1,
-    "rating": 0.65,
-    "genres": [
-      "Puzzle-Game"
-    ]
-  },
-  "Shape Shifter": {
-    "players": 1,
-    "rating": 0.5,
-    "genres": [
-      "Action",
-      "Action / Adventure"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/arjak/Shape_Shifter/Shape_Shifter.pdf"
-      }
-    ],
-    "merge": [
-      "Makai Eiyuuden - Shape Shifter"
-    ]
-  },
-  "Sherlock Holmes - Consulting Detective": {
-    "players": 1,
-    "rating": 0.4,
-    "genres": [
-      "Adventure",
-      "Puzzle-Game"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Sherlock_Holmes/Sherlock_Holmes.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/SherlockHolmesNoTanteiKouzaManualJPPCEngine/Sherlock Holmes no Tantei Kouza (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Sherlock Holmes - Consulting Detective - Volume 2": {
-    "players": 1,
     "rating": 0.7,
     "genres": [
-      "Adventure",
-      "Puzzle-Game"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Sherlock_Holmes_2/Sherlock_Holmes_2.pdf"
-      },
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/SherlockHolmesNoTanteiKouza2ManualJPPCEngine/Sherlock Holmes no Tantei Kouza 2 (Manual)(JP)(PC Engine).pdf"
-      }
-    ],
-    "merge": [
-      "Sherlock Holmes - Consulting Detective Vol. II"
+      "Sports",
+      "Sports / Baseball"
     ]
   },
-  "Shiawase Usagi - Nureta Bishoujo - Hajimete Nanoni...": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Shiawase Usagi II - Toraware Usagi Sailor Z": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Shin Megami Tensei": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Shin Nihon Pro Wrestling - '94 Battlefield in Tokyo Dome": {
-    "players": 4,
-    "rating": 0.6,
-    "genres": [
-      "Fight",
-      "Fight / Versus"
-    ]
-  },
-  "Shin Onryou Senki": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Shinsetsu Shiawase Usagi": {
-    "genres": [
-      "Adventure",
-      "Simulation"
-    ]
-  },
-  "Shinsetsu Shiawase Usagi 2 - Kairaku e no Invitation": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Simulation"
-    ]
-  },
-  "Shougi Database Kiyuu": {
+  "Kore ga Pro Yakyuu '90": {
     "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Kyuukyoku Mahjong - Idol Graphics": {
+    "players": 1,
     "genres": [
       "Asiatic board game"
     ]
   },
-  "SimEarth - The Living Planet": {
-    "players": 1,
-    "rating": 0.6,
-    "genres": [
-      "Educational",
-      "Simulation"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/bernie/Sim_Earth/Sim_Earth.pdf"
-      }
-    ]
-  },
-  "Slot Gambler": {
+  "Kyuukyoku Mahjong II": {
     "players": 1,
     "genres": [
-      "Casino",
-      "Simulation"
+      "Asiatic board game"
     ]
   },
-  "Snatcher CD-ROMantic": {
+  "Kyuukyoku Tiger": {
     "players": 1,
+    "rating": 0.7,
     "genres": [
-      "Adventure"
+      "Shoot'em Up"
     ]
   },
-  "Snatcher CD-ROMantic - Pilot Disk": {},
-  "Sol Bianca": {
+  "Lady Sword - Ryakudatsu Sareta 10-nin no Otome": {
     "players": 1,
+    "rating": 0.45,
     "genres": [
       "Role playing games"
     ]
   },
-  "Sol Moonarge": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Solid Force": {
-    "players": 1,
-    "genres": [
-      "Simulation",
-      "Strategy"
-    ]
-  },
-  "Sorcerian": {
-    "players": 1,
+  "Legend of Hero Tonma": {
+    "players": 2,
+    "rating": 0.75,
     "genres": [
       "Action",
-      "Role playing games"
-    ]
-  },
-  "Sotsugyou - Graduation": {
-    "players": 1,
-    "genres": [
-      "Simulation"
+      "Platform"
     ],
     "manuals": [
       {
         "languages": [
           "ja"
         ],
-        "url": "https://archive.org/download/SotsugyouGraduationManualJPPCEngine/Sotsugyou Graduation (Manual)(JP)(PC Engine).pdf"
+        "url": "https://archive.org/download/NECPCEngineManuals/Legend of Hero Tonma (Japan).pdf"
       }
     ]
   },
-  "Sotsugyou II - Neo Generation": {
+  "Legendary Axe II": {
     "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Sotsugyou Shashin - Miki": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Space Adventure Cobra - Kokuryuuou no Densetsu": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Space Adventure Cobra II - Densetsu no Otoko": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Space Invaders - The Original Game": {
-    "players": 2,
-    "rating": 0.5,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
-    ]
-  },
-  "Splash Lake": {
-    "players": 2,
-    "rating": 0.7,
+    "rating": 0.85,
     "genres": [
       "Action",
-      "Puzzle-Game"
+      "Platform"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/arjak/Splash_Lake/Splash_Lake.pdf"
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Legendary Axe II, The (USA).pdf"
       }
-    ],
-    "merge": [
-      "Splash Lake - Ostrich Daibouken"
     ]
   },
-  "Spriggan Mark 2 - Re Terraform Project": {
+  "Legendary Axe, The": {
     "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ]
-  },
-  "Star Breaker": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Star Mobile": {
-    "players": 2,
-    "rating": 0.5,
+    "rating": 0.6,
     "genres": [
       "Action",
-      "Puzzle-Game"
+      "Platform"
     ]
   },
-  "Star Parodier": {
+  "Lode Runner - Lost Labyrinth": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Maerchen Maze": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shooter"
+    ]
+  },
+  "Magical Chase": {
     "players": 1,
     "rating": 0.75,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Shoot'em Up"
     ]
   },
-  "Startling Odyssey": {
+  "Mahjong Gakuen - Touma Soushirou Toujou": {
     "players": 1,
     "genres": [
-      "Role playing games"
+      "Asiatic board game",
+      "Mahjong"
     ]
   },
-  "Startling Odyssey II - Maryuu Sensou": {
+  "Mahjong Gakuen Mild - Touma Soushirou Toujou": {
     "players": 1,
     "genres": [
-      "Role playing games"
+      "Asiatic board game",
+      "Mahjong"
     ]
   },
-  "Steam-Heart's": {
+  "Mahjong Gokuu Special": {
     "players": 1,
-    "rating": 0.7,
     "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Asiatic board game"
     ]
   },
-  "Strider Hiryuu": {
+  "Mahjong Haouden - Kaiser's Quest": {
     "players": 1,
-    "rating": 0.9,
+    "rating": 0.8,
     "genres": [
-      "Action",
-      "Adventure",
-      "Platform",
-      "Platform / Fighter Scrolling"
+      "Asiatic board game"
     ]
   },
-  "Sugoroku, The '92 - Nari Tore - Nariagari Trendy": {
-    "players": 4,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Summer Carnival '92 - Alzadick": {
+  "Mahjong Shikaku Retsuden - Mahjong Wars": {
     "players": 1,
     "rating": 0.7,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Asiatic board game"
     ]
   },
-  "Summer Carnival '93 - NEXZR Special": {
+  "Maison Ikkoku": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  "Makai Hakkenden Shada": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Role playing games"
+    ]
+  },
+  "Makai Prince Dorabocchan": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Maniac Pro Wres - Asu e no Tatakai": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Fight",
+      "Sports"
+    ]
+  },
+  "Metal Stoker": {
     "players": 1,
     "rating": 0.65,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Vertical"
+      "Shoot'em Up"
     ]
   },
-  "Super Air Zonk - Rockabilly-Paradise": {
+  "Military Madness": {
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  "Mizubaku Daibouken": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Momotarou Densetsu Gaiden - Dai-1-shuu": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Adventure",
+      "Role playing games"
+    ]
+  },
+  "Momotarou Densetsu II": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Adventure",
+      "Role playing games"
+    ]
+  },
+  "Momotarou Densetsu Turbo": {
     "players": 1,
     "rating": 0.7,
     "genres": [
-      "Shoot'em Up"
-    ],
-    "merge": [
-      "CD Denjin - Rockabilly Tengoku"
+      "Adventure",
+      "Role playing games"
     ]
   },
-  "Super Albatross": {
-    "players": 4,
-    "rating": 0.4,
+  "Momotarou Katsugeki": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Monster Pro Wres": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Fight"
+    ]
+  },
+  "Morita Shougi PC": {
+    "rating": 0.7,
+    "genres": [
+      "Board game"
+    ]
+  },
+  "Moto Roader": {
+    "players": 5,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Moto Roader (USA).pdf"
+      }
+    ]
+  },
+  "Moto Roader II": {
+    "players": 5,
+    "rating": 0.75,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  "Mr. Heli no Daibouken": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "NHK Taiga Drama - Taiheiki": {
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  "Naxat Open": {
+    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Sports",
       "Sports / Golf"
     ]
   },
-  "Super CD-ROM^2 Taiken Soft Shuu": {},
-  "Super Daisenryaku": {
+  "Naxat Stadium": {
+    "players": 2,
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Nazo no Mascarade": {
     "players": 1,
     "genres": [
-      "Strategy"
+      "Adventure"
+    ]
+  },
+  "Necros no Yousai": {
+    "players": 1,
+    "rating": 0.5,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  "Nekketsu Koukou Dodgeball-bu - PC Bangai Hen": {
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Sports",
+      "Sports / Dodgeball"
+    ]
+  },
+  "Nekketsu Koukou Dodgeball-bu - PC Soccer Hen": {
+    "players": 2,
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  "Neutopia": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Neutopia (USA).pdf"
+      }
+    ]
+  },
+  "Neutopia II": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Neutopia_II/Neutopia_II.pdf"
+      }
+    ]
+  },
+  "New Adventure Island": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/New Adventure Island (USA).pdf"
+      }
+    ]
+  },
+  "NewZealand Story, The": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Night Creatures": {
+    "players": 1,
+    "rating": 0.25,
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Night_Creatures/Night_Creatures.pdf"
+      }
+    ]
+  },
+  "Niko Niko Pun": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Platform"
+    ]
+  },
+  "Ninja Ryuukenden": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Ninja Spirit": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Ninja Warriors, The": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Beat'em Up"
     ],
     "manuals": [
       {
         "languages": [
           "ja"
         ],
-        "url": "https://archive.org/download/SuperDaisenryakuHandBook/Super Daisenryaku Hand Book.pdf"
+        "url": "https://archive.org/download/NECPCEngineManuals/Ninja Warriors, The (Japan).pdf"
       }
     ]
   },
-  "Super Darius": {
+  "Obocchama-kun": {
     "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Off the Wall": {
+    "genres": [
+      "Action",
+      "Action / Breakout games"
+    ]
+  },
+  "Operation Wolf": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Lightgun Shooter",
+      "Shooter"
+    ]
+  },
+  "Ordyne": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Ordyne/Ordyne.pdf"
+      }
+    ]
+  },
+  "Out Live": {
+    "players": 2,
     "rating": 0.75,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal",
-      "Shooter",
-      "Shooter / Horizontal"
+      "Role playing games"
     ]
   },
-  "Super Darius II": {
+  "Out Run": {
     "players": 1,
-    "rating": 0.8,
+    "rating": 0.65,
     "genres": [
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal",
-      "Shooter",
-      "Shooter / Horizontal"
+      "Driving",
+      "Race"
     ]
   },
-  "Super Mahjong Taikai": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Super Raiden": {
+  "Override": {
     "players": 1,
     "rating": 0.75,
     "genres": [
       "Shoot'em Up"
     ]
   },
-  "Super Real Mahjong P.V Custom": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Super Real Mahjong PII-III Custom": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Super Real Mahjong PIV Custom": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Super Real Mahjong Special - Miki Kasumi Shouko no Omoide yori": {
-    "players": 1,
-    "genres": [
-      "Asiatic board game",
-      "Mahjong"
-    ]
-  },
-  "Super Schwarzschild": {
-    "players": 1,
-    "genres": [
-      "Simulation",
-      "Simulation / SciFi",
-      "Strategy"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/SchwarzschildWorldTechnicalFile/Schwarzschild World & Technical File.pdf"
-      }
-    ]
-  },
-  "Super Schwarzschild 2": {
-    "players": 1,
-    "genres": [
-      "Simulation",
-      "Simulation / SciFi",
-      "Strategy"
-    ]
-  },
-  "Super-CD-Demo^2": {},
-  "Sword Master": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "SydMead's TerraForming": {
+  "P-47 - The Freedom Fighter": {
     "players": 1,
     "rating": 0.6,
     "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Horizontal"
-    ],
-    "merge": [
-      "TerraForming"
+      "Shoot'em Up"
     ]
   },
-  "Sylphia": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action",
-      "Shoot'em Up",
-      "Shoot'em up / Diagonal"
-    ]
-  },
-  "TV Show, The": {
-    "players": 4,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Tadaima Yuusha Boshuu-chuu": {
-    "players": 4,
-    "genres": [
-      "Platform",
-      "Role playing games"
-    ]
-  },
-  "Taiheiki": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Tanjou - Debut": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Tecmo World Cup Super Soccer": {
-    "players": 2,
-    "genres": [
-      "Sports",
-      "Sports / Soccer"
-    ]
-  },
-  "Tenchi Muyou! Ryououki": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Tenchi o Kurau": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Beat'em Up"
-    ]
-  },
-  "Tengai Makyou - Deden no Kabuki-den": {
-    "players": 1,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Tenshi no Uta": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Tenshi no Uta II - Datenshi no Sentaku": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Todd's Adventures in Slime World": {
+  "PC Pachi-Slot - Idol Gambler": {
     "players": 1,
     "rating": 0.3,
     "genres": [
-      "Action",
-      "Platform"
+      "Casino"
     ]
   },
-  "Tokimeki Memorial": {
-    "players": 1,
-    "genres": [
-      "Simulation"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/TokimekiMemorialManualJPPCEngine/Tokimeki Memorial (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Top o Nerae! GunBuster Vol. 1": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Top o Nerae! GunBuster Vol. 2": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Travel Eple": {
-    "players": 2,
-    "rating": 0.6,
-    "genres": [
-      "Action"
-    ]
-  },
-  "Travellers! Densetsu o Buttobase": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Uchuu Senkan Yamato": {
-    "players": 1,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Ultra Box 2-gou": {},
-  "Ultra Box 3-gou": {},
-  "Ultra Box 4-gou": {},
-  "Ultra Box 5-gou": {},
-  "Ultra Box 6-gou": {},
-  "Ultra Box Soukan-gou": {},
-  "Urusei Yatsura - Stay with You": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Valis II": {
-    "players": 1,
-    "rating": 0.7,
-    "genres": [
-      "Action",
-      "Platform"
-    ]
-  },
-  "Valis III": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Platform"
-    ]
-  },
-  "Valis IV": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Action",
-      "Platform"
-    ]
-  },
-  "Vasteel": {
+  "Pac-Land": {
     "players": 2,
     "rating": 0.75,
     "genres": [
       "Action",
-      "Strategy"
+      "Platform"
+    ]
+  },
+  "Pachio-kun - Juuban Shoubu": {
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Casino"
+    ]
+  },
+  "Parasol Stars - The Story of Bubble Bobble III": {
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
         "languages": [
           "en"
         ],
-        "url": "http://www.tg-16.com/contributors/bernie/Vasteel/Vasteel.pdf"
+        "url": "http://www.tg-16.com/contributors/bernie/Parasol_Stars/Parasol_Stars.pdf"
       }
     ]
   },
-  "Vasteel 2": {
+  "Parodius Da! - Shinwa kara Owarai e": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Populous": {
     "players": 1,
+    "rating": 0.85,
     "genres": [
       "Strategy"
     ]
   },
-  "Virgin Dream": {
+  "Power Drift": {
     "players": 1,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Where in the World Is Carmen Sandiego": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Thinking"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/CarmenSandiegoWoOeSekaiHenManualJPPCEngine/Carmen Sandiego wo Oe Sekai Hen (Manual)(JP)(PC Engine).pdf"
-      }
-    ]
-  },
-  "Wizardry I, II": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Wizardry III, IV": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "Wizardry V - Heart of the Maelstrom": {
-    "players": 1,
-    "genres": [
-      "Role playing games"
-    ]
-  },
-  "World Heroes 2": {
-    "players": 2,
-    "rating": 0.7,
-    "genres": [
-      "Fight"
-    ]
-  },
-  "Wrestle Angels - Double Impact": {
-    "players": 1,
-    "genres": [
-      "Playing cards",
-      "Simulation",
-      "Sports",
-      "Sports / Wrestling"
-    ]
-  },
-  "Wrestling Universe - Fire Pro Joshi - Dome Choujo Taisen - Zenjo vs. JWP": {
-    "players": 4,
-    "genres": [
-      "Sports",
-      "Sports / Wrestling"
-    ]
-  },
-  "Xak": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Japanese RPG",
-      "Role playing games"
-    ]
-  },
-  "Xak III - The Eternal Recurrence": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Action",
-      "Role playing games"
-    ]
-  },
-  "YaWaRa! 2 - A Fashionable Judo Girl!": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Adventure"
-    ]
-  },
-  "YaWaRa! A Fashionable Judo Girl!": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Yamamura Misa Suspense - Kinsenka Kyouezara Satsujin Jiken": {
-    "players": 1,
-    "genres": [
-      "Adventure",
-      "Adventure / Point and Click"
-    ]
-  },
-  "Yami no Ketsuzoku - Harukanaru Kioku": {
-    "players": 1,
-    "genres": [
-      "Adventure"
-    ]
-  },
-  "Yokoyama Mitsuteru Shin Sangokushi - Tenka wa Ware ni": {
-    "players": 2,
-    "genres": [
-      "Simulation"
-    ]
-  },
-  "Ys Book I & II": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/arjak/Ys_Book_I_II/Ys_Book_I_II.pdf"
-      }
-    ],
-    "merge": [
-      "Ys I & II"
-    ]
-  },
-  "Ys III - Wanderers from Ys": {
-    "players": 1,
-    "rating": 0.75,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.tg-16.com/contributors/arjak/Ys_III/Ys_III.pdf"
-      }
-    ],
-    "merge": [
-      "Ys III"
-    ]
-  },
-  "Ys IV - The Dawn of Ys": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Role playing games"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "ja"
-        ],
-        "url": "https://archive.org/download/ysivthedawnofyspcenginehirescans/Ys IV - The Dawn of Ys.pdf"
-      }
-    ]
-  },
-  "Yuu Yuu Hakusho - Yami Shoubu!! Ankoku Bujutsu-kai": {
-    "players": 1,
-    "genres": [
-      "Action",
-      "Fight"
-    ]
-  },
-  "Zan - Kagerou no Toki": {
-    "players": 5,
-    "genres": [
-      "Strategy"
-    ]
-  },
-  "Zero 4 Champ II": {
-    "players": 1,
+    "rating": 0.55,
     "genres": [
       "Driving",
       "Race"
     ]
   },
-  "Zero Wing": {
+  "Power Eleven": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Soccer"
+    ]
+  },
+  "Power Gate": {
     "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Power Golf": {
+    "players": 3,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Power Golf (USA).pdf"
+      }
+    ]
+  },
+  "Power League '93": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Power League 4": {
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Power League 5": {
+    "players": 4,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Power League II": {
+    "players": 2,
+    "rating": 0.9,
+    "genres": [
+      "Sports"
+    ]
+  },
+  "Power League III": {
+    "players": 4,
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Power Tennis": {
+    "players": 4,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Tennis"
+    ]
+  },
+  "Pro Yakyuu World Stadium": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Pro Yakyuu World Stadium '91": {
+    "players": 4,
+    "rating": 0.2,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ]
+  },
+  "Psycho Chaser": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Psychosis": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Puzzle Boy": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  "Puzznic": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ]
+  },
+  "Quiz Toukou Shashin": {
+    "players": 1,
+    "genres": [
+      "Quiz"
+    ]
+  },
+  "R-Type": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/R_Type/R_Type.pdf"
+      }
+    ]
+  },
+  "R-Type I": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "R-Type II": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Rabio Lepus Special": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Racing Damashii": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Driving",
+      "Race"
+    ]
+  },
+  "Raiden": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Raiden/Raiden.pdf"
+      }
+    ]
+  },
+  "Rastan Saga II": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Rock-On": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Ryuukyuu": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  "S.C.I. - Special Criminal Investigation": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Driving",
+      "Race"
+    ]
+  },
+  "Sadakichi Seven - Hideyoshi no Ougon": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Adventure"
+    ]
+  },
+  "Salamander": {
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Samurai-Ghost": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Samurai_Ghost/Samurai_Ghost.pdf"
+      }
+    ]
+  },
+  "Sekigahara": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  "Sengoku Mahjong": {
+    "players": 1,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong"
+    ]
+  },
+  "Shanghai": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong",
+      "Puzzle-Game",
+      "Strategy"
+    ]
+  },
+  "Shinobi": {
+    "players": 1,
+    "rating": 0.95,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Shiryou Sensen - War of the Dead": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Action",
+      "Role playing games"
+    ]
+  },
+  "Shockman": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Shockman (USA).pdf"
+      }
+    ]
+  },
+  "Shougi Shodan Icchokusen": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Asiatic board game",
+      "Shougi"
+    ]
+  },
+  "Shougi Shoshinsha Muyou": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Asiatic board game",
+      "Shougi"
+    ]
+  },
+  "SideArms": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/SideArms - Hyper Dyne (USA).pdf"
+      }
+    ]
+  },
+  "Silent Debuggers": {
+    "players": 1,
+    "rating": 0.8,
+    "genres": [
+      "Action",
+      "Shooter",
+      "Shooter / 1st person"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Silent Debuggers (USA).pdf"
+      }
+    ]
+  },
+  "Sindibad - Chitei no Daimakyuu": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  "Sinistron": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Skweek": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Puzzle-Game",
+      "Strategy"
+    ]
+  },
+  "Soldier Blade": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Soldier_Blade/Soldier_Blade.pdf"
+      }
+    ]
+  },
+  "Soldier Blade - Special Version": {
+    "players": 1,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
+    ]
+  },
+  "Somer Assault": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Shooter"
+    ]
+  },
+  "Son Son II": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Adventure",
+      "Platform"
+    ]
+  },
+  "Sonic Spike - World Championship Beach Volleyball": {
+    "players": 2,
     "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Volleyball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Sonic Spike - World Championship Beach Volleyball (USA).pdf"
+      }
+    ]
+  },
+  "Space Harrier": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Space Invaders - Fukkatsu no Hi": {
+    "players": 1,
+    "rating": 0.65,
     "genres": [
       "Action",
       "Shoot'em Up",
-      "Shoot'em up / Horizontal"
+      "Shooter",
+      "Shooter / Space Invaders Like"
+    ]
+  },
+  "Spin Pair": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  "Spiral Wave": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shooter"
+    ]
+  },
+  "Splatterhouse": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Beat'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Splatterhouse (USA).pdf"
+      }
+    ]
+  },
+  "Stratego": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Board game"
+    ]
+  },
+  "Street Fighter II' - Champion Edition": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Fight"
+    ]
+  },
+  "Strip Fighter II": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Fight"
+    ]
+  },
+  "Super Metal Crusher": {
+    "players": 2,
+    "rating": 0.85,
+    "genres": [
+      "Strategy"
+    ]
+  },
+  "Super Momotarou Dentetsu": {
+    "players": 4,
+    "rating": 0.85,
+    "genres": [
+      "Board game"
+    ]
+  },
+  "Super Momotarou Dentetsu II": {
+    "players": 5,
+    "rating": 0.8,
+    "genres": [
+      "Board game"
+    ]
+  },
+  "Super Star Soldier": {
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.tg-16.com/contributors/bernie/Super_Star_Soldier/Super_Star_Soldier.pdf"
+      }
+    ]
+  },
+  "Super Volleyball": {
+    "players": 2,
+    "rating": 0.8,
+    "genres": [
+      "Sports",
+      "Sports / Volleyball"
+    ]
+  },
+  "Susanoou Densetsu": {
+    "players": 2,
+    "rating": 0.7,
+    "genres": [
+      "Role playing games"
+    ]
+  },
+  "TV Sports Baseball": {},
+  "TV Sports Basketball": {
+    "players": 5,
+    "rating": 0.35,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ]
+  },
+  "TV Sports Football": {
+    "players": 5,
+    "rating": 0.5,
+    "genres": [
+      "Sports",
+      "Sports / Football"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/TV Sports Football (USA).pdf"
+      }
+    ]
+  },
+  "TV Sports Hockey": {
+    "players": 5,
+    "rating": 0.55,
+    "genres": [
+      "Sports",
+      "Sports / Hockey"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/TV Sports Hockey (USA).pdf"
+      }
+    ]
+  },
+  "Takeda Shingen": {
+    "players": 1,
+    "genres": [
+      "Action"
+    ]
+  },
+  "Takin' It to the Hoop": {
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Sports",
+      "Sports / Basketball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Takin' It to the Hoop (USA).pdf"
+      }
+    ]
+  },
+  "TaleSpin": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Platform"
+    ]
+  },
+  "Tatsujin": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Tatsunoko Fighter": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Ten no Koe Bank": {},
+  "Tenseiryuu - Saint Dragon": {
+    "players": 1,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Terra Cresta II - Mandoler no Gyakushuu": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Thunder Blade": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Tiger Road": {
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Time Cruise": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Pinball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/time_cruise_manual/time cruise manual.pdf"
+      }
+    ]
+  },
+  "Timeball": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  "Titan": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Action / Breakout games",
+      "Strategy"
+    ]
+  },
+  "Toilet Kids": {
+    "players": 2,
+    "rating": 0.45,
+    "genres": [
+      "Action",
+      "Shoot'em Up"
+    ]
+  },
+  "Tower of Druaga, The": {
+    "players": 1,
+    "rating": 0.55,
+    "genres": [
+      "Action",
+      "Role playing games"
+    ]
+  },
+  "Toy Shop Boys": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Tricky Kick": {
+    "players": 1,
+    "rating": 0.45,
+    "genres": [
+      "Puzzle-Game",
+      "Strategy"
+    ]
+  },
+  "Tsuppari Oozumou - Heisei Ban": {
+    "players": 2,
+    "rating": 0.55,
+    "genres": [
+      "Sports",
+      "Sports / Sumo"
+    ]
+  },
+  "Tsuru Teruhito no Jissen Kabushiki Bai Bai Game": {
+    "players": 1,
+    "rating": 0.75,
+    "genres": [
+      "Simulation"
+    ]
+  },
+  "Turrican": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Action",
+      "Platform",
+      "Platform / Shooter Scrolling"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Turrican (USA).pdf"
+      }
+    ]
+  },
+  "Valkyrie no Densetsu": {
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action",
+      "Adventure"
+    ]
+  },
+  "Veigues - Tactical Gladiator": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Veigues - Tactical Gladiator (USA).pdf"
+      }
+    ]
+  },
+  "Victory Run": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Driving",
+      "Race"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Victory Run (USA).pdf"
+      }
+    ]
+  },
+  "Vigilante": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Beat'em Up"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/Vigilante (USA).pdf"
+      }
+    ]
+  },
+  "Volfied": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Puzzle-Game"
+    ]
+  },
+  "W-Ring - The Double Rings": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Wai Wai Mahjong - Yukai na Janyuu-tachi": {
+    "players": 1,
+    "rating": 0.9,
+    "genres": [
+      "Asiatic board game",
+      "Mahjong"
+    ]
+  },
+  "Wallaby!! - Usagi no Kuni no Kangaroo Race": {
+    "players": 1,
+    "rating": 0.6,
+    "genres": [
+      "Horses race",
+      "Sports with Animals"
+    ]
+  },
+  "Winning Shot": {
+    "players": 4,
+    "rating": 0.7,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ]
+  },
+  "Wonder Momo": {
+    "players": 1,
+    "rating": 0.35,
+    "genres": [
+      "Beat'em Up"
+    ]
+  },
+  "World Circuit": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Driving",
+      "Driving / Race",
+      "Race",
+      "Race"
+    ]
+  },
+  "World Class Baseball": {
+    "players": 2,
+    "rating": 0.6,
+    "genres": [
+      "Sports",
+      "Sports / Baseball"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/World Class Baseball (USA).pdf"
+      }
+    ]
+  },
+  "World Court Tennis": {
+    "players": 4,
+    "rating": 0.65,
+    "genres": [
+      "Sports",
+      "Sports / Tennis"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/NECTurboGrafx-16Manuals/World Court Tennis (USA).pdf"
+      }
+    ]
+  },
+  "World Jockey": {
+    "players": 4,
+    "rating": 0.65,
+    "genres": [
+      "Horses race",
+      "Sports with Animals"
+    ]
+  },
+  "World Sports Competition": {
+    "players": 5,
+    "rating": 0.45,
+    "genres": [
+      "Sports"
+    ]
+  },
+  "Xevious - Fardraut Saga": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Yo, Bro": {
+    "players": 2,
+    "rating": 0.3,
+    "genres": [
+      "Action",
+      "Shooter"
+    ]
+  },
+  "You-You Jinsei": {
+    "players": 5,
+    "rating": 0.7,
+    "genres": [
+      "Board game"
+    ]
+  },
+  "Youkai Douchuuki": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  },
+  "Zero4 Champ": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Driving",
+      "Driving / Race",
+      "Race",
+      "Race"
+    ]
+  },
+  "Zipang": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Puzzle-Game"
     ]
   }
 }
