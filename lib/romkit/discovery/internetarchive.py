@@ -1,5 +1,6 @@
 from romkit.discovery import BaseDiscovery
 
+import logging
 import lxml.etree
 import re
 import tempfile
@@ -16,6 +17,9 @@ class InternetArchiveDiscovery(BaseDiscovery):
 
         for url in self.urls:
             parsed_url = urlparse(url)
+            if not parsed_url.scheme:
+                logging.warn(f'Unable to run discovery for {parsed_url}')
+                continue
 
             # Download the file
             filename = Path(parsed_url.path).name
