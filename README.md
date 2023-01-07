@@ -820,7 +820,7 @@ and where it comes from is described below.
 | pc          | DAT                      | Yes     | exodos                                        |
 | pc          | DOSBox Config            | Yes     | exodos                                        |
 | pc          | Emulator compatibility   | Yes     | https://docs.google.com/spreadsheets/d/1Tx5k3F0_AO6w00WrXULMBSUTRhtLyIhHI8Wz8GuqLfQ/edit#gid=2000917190 |
-| pcengine    | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
+| pce-cd      | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psp         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
 | psx         | Genres                   | Yes     | https://github.com/stenzek/duckstation/raw/master/data/resources/database/gamedb.json |
 | psx         | Parent/Clone info        | Yes     | https://github.com/unexpectedpanda/retool     |
@@ -1044,6 +1044,7 @@ and additional system-specific configurations for:
 * nes
 * pc
 * pcengine
+* pce-cd
 
 Additionally, there are ROM-specific guides available with special features, including:
 
@@ -1119,7 +1120,8 @@ The approximate capacity required per system is broken down below:
 | ngp             | 3MB      |
 | ngpc            | 17MB     |
 | pc              | 13GB     |
-| pcengine        | 11GB     |
+| pce-cd          | 11GB     |
+| pcengine        | ??MB     |
 | pokemini        | 1MB      |
 | ports           | 114MB    |
 | psp             | 230GB    |
@@ -1129,6 +1131,7 @@ The approximate capacity required per system is broken down below:
 | segacd          | 35GB     |
 | sg-1000         | 2MB      |
 | snes            | 633MB    |
+| supergrafx      | ??MB     |
 | vectrex         | 280KB    |
 | videopac        | 748KB    |
 | wonderswan      | 30MB     |

@@ -1,0 +1,79 @@
+{
+  "system": "pce-cd",
+  "metadata": {
+    "path": "$HOME/retrokit/data/pce-cd.json"
+  },
+  "scraper": {
+    "args": ["-p", "pcengine-cd"]
+  },
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-PCE-CD",
+        "path": "retroarch/overlay/GameBezels/PCE-CD"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-PCE-CD",
+        "path": "retroarch/overlay/GameBezels/PCE-CD",
+        "default": "retroarch/overlay/NEC-PC-Engine-CD.png"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-beetle-pce-fast": {
+      "default": true,
+      "core_name": "pce",
+      "library_name": "Beetle PCE Fast"
+    }
+  },
+  "cheats": {
+    "names": [
+      "NEC - PC Engine CD - TurboGrafx-CD"
+    ]
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/NEC - PC Engine - TurboGrafx 16 - SuperGrafx",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "syscard3.pce": "{url}/syscard3.pce"
+    }
+  },
+  "romsets": [
+    {
+      "name": "redump",
+      "protocol": "http",
+      "url": "$ROMSET_PCENGINE_REDUMP_URL",
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/pce/",
+          "download": "$HOME/retrokit/tmp/pce-cd/roms.zip",
+          "target": "$HOME/retrokit/cache/redump/NEC - PC Engine CD & TurboGrafx CD.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{url}/{machine}.zip",
+          "download": "$HOME/RetroPie/roms/pce-cd/.redump/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/pce-cd/.redump/{machine}.chd",
+          "xref": "$HOME/RetroPie/roms/pce-cd/.redump/.xrefs/{machine_id}.chd",
+          "install": {"action": "zip_to_chd"}
+        }
+      },
+      "emulator": "lr-beetle-pce-fast"
+    }
+  ],
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/pce-cd", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

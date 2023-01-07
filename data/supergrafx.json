@@ -1,0 +1,51 @@
+{
+  "1941 - Counter Attack": {
+    "players": 2,
+    "rating": 0.75,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Aldynes - The Misson Code for Rage Crisis": {
+    "players": 2,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
+    ]
+  },
+  "Battle Ace": {
+    "players": 1,
+    "rating": 0.65,
+    "genres": [
+      "Shoot'em Up"
+    ]
+  },
+  "Daimakaimura": {
+    "players": 1,
+    "rating": 0.7,
+    "genres": [
+      "Action",
+      "Platform"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://archive.org/compress/DaimakaimuraSuperGrafxHiResScans/formats=JPEG&file=/DaimakaimuraSuperGrafxHiResScans.zip",
+        "options": {
+          "filter": "*Manual*"
+        }
+      }
+    ]
+  },
+  "Madou King Granzort": {
+    "players": 1,
+    "rating": 0.85,
+    "genres": [
+      "Action",
+      "Platform"
+    ]
+  }
+}

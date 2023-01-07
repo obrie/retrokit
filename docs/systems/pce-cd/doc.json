@@ -1,0 +1,22 @@
+{
+  "system": {
+    "name": "pce-cd",
+    "description": "This console, known as the PC Engine CD in Japan and as the TurboGrafx-CD in the USA, is an add-on attachment released in 1988."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false,
+    "multi controllers": true
+  },
+  "images": {
+    "controller": "../pcengine/controller.png",
+    "retropad": "../pcengine/retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "l2": "Mode Switch"
+    }
+  }
+}

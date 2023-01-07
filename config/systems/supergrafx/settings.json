@@ -1,0 +1,81 @@
+{
+  "system": "supergrafx",
+  "metadata": {
+    "path": "$HOME/retrokit/data/supergrafx.json"
+  },
+  "scraper": {
+    "args": ["-p", "pcengine"]
+  },
+  "overlays": {
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-SuperGrafx",
+        "path": "retroarch/overlay/GameBezels/SuperGrafx"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectsa-SuperGrafx",
+        "path": "retroarch/overlay/GameBezels/SuperGrafx",
+        "default": "retroarch/overlay/NEC-SuperGrafx.png"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-beetle-supergrafx": {
+      "default": true,
+      "core_name": "sgx",
+      "library_name": "Beetle SuperGrafx"
+    }
+  },
+  "cheats": {
+    "names": [
+      "NEC - PC Engine SuperGrafx"
+    ]
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/NEC - PC Engine - TurboGrafx 16 - SuperGrafx",
+    "dir": "$HOME/RetroPie/BIOS",
+    "files": {
+      "syscard3.pce": "{url}/syscard3.pce"
+    }
+  },
+  "romsets": [
+    {
+      "name": "nointro",
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+        ],
+        "match": "no-intro romsets/NEC - PC Engine SuperGrafx"
+      },
+      "resources": {
+        "dat": {
+          "source": "file://$HOME/retrokit/cache/nointro/NEC - PC Engine SuperGrafx (Parent-Clone).dat"
+        },
+        "machine": {
+          "source": "{discovery_url}/{machine}.zip",
+          "target": "$HOME/RetroPie/roms/supergrafx/.nointro/{machine}.zip",
+          "xref": "$HOME/RetroPie/roms/supergrafx/.nointro/.xrefs/{machine_id}.zip",
+          "file_identifier": "name"
+        }
+      },
+      "auth": "internetarchive"
+    }
+  ],
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/supergrafx", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}

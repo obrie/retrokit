@@ -13,22 +13,6 @@
         "repo": "thebezelproject/bezelprojectsa-PCEngine",
         "path": "retroarch/overlay/GameBezels/PCEngine",
         "default": "retroarch/overlay/NEC-PC-Engine.png"
-      },
-      {
-        "repo": "thebezelproject/bezelproject-SuperGrafx",
-        "path": "retroarch/overlay/GameBezels/SuperGrafx"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-SuperGrafx",
-        "path": "retroarch/overlay/GameBezels/SuperGrafx"
-      },
-      {
-        "repo": "thebezelproject/bezelproject-PCE-CD",
-        "path": "retroarch/overlay/GameBezels/PCE-CD"
-      },
-      {
-        "repo": "thebezelproject/bezelprojectsa-PCE-CD",
-        "path": "retroarch/overlay/GameBezels/PCE-CD"
       }
     ]
   },
@@ -37,29 +21,16 @@
       "default": true,
       "core_name": "pce",
       "library_name": "Beetle PCE Fast"
-    },
-    "lr-beetle-supergrafx": {
-      "core_name": "sgx",
-      "library_name": "Beetle SuperGrafx"
     }
   },
   "cheats": {
     "names": [
-      "NEC - PC Engine - TurboGrafx 16",
-      "NEC - PC Engine SuperGrafx",
-      "NEC - PC Engine CD - TurboGrafx-CD"
+      "NEC - PC Engine - TurboGrafx 16"
     ]
-  },
-  "bios": {
-    "url": "$BIOS_URL/libretro/NEC - PC Engine - TurboGrafx 16 - SuperGrafx",
-    "dir": "$HOME/RetroPie/BIOS",
-    "files": {
-      "syscard3.pce": "{url}/syscard3.pce"
-    }
   },
   "romsets": [
     {
-      "name": "nointro-turbografx",
+      "name": "nointro",
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -79,68 +50,12 @@
           "file_identifier": "name"
         }
       },
-      "auth": "internetarchive",
-      "emulator": "lr-beetle-pce-fast"
-    },
-    {
-      "name": "nointro-supergrafx",
-      "protocol": "http",
-      "discovery": {
-        "type": "internetarchive",
-        "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
-        ],
-        "match": "no-intro romsets/NEC - PC Engine SuperGrafx"
-      },
-      "resources": {
-        "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/NEC - PC Engine SuperGrafx (Parent-Clone).dat"
-        },
-        "machine": {
-          "source": "{discovery_url}/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/pcengine/.nointro/{machine}.zip",
-          "xref": "$HOME/RetroPie/roms/pcengine/.nointro/.xrefs/{machine_id}.zip",
-          "file_identifier": "name"
-        }
-      },
-      "auth": "internetarchive",
-      "emulator": "lr-beetle-supergrafx"
-    },
-    {
-      "name": "redump",
-      "protocol": "http",
-      "url": "$ROMSET_PCENGINE_REDUMP_URL",
-      "resources": {
-        "dat": {
-          "source": "http://redump.org/datfile/pce/",
-          "download": "$HOME/retrokit/tmp/pcengine/roms.zip",
-          "target": "$HOME/retrokit/cache/redump/NEC - PC Engine CD & TurboGrafx CD.dat",
-          "install": {"action": "zip_extract", "file": ".*\\.dat"}
-        },
-        "machine": {
-          "source": "{url}/{machine}.zip",
-          "download": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.zip",
-          "target": "$HOME/RetroPie/roms/pcengine/.redump/{machine}.chd",
-          "xref": "$HOME/RetroPie/roms/pcengine/.redump/.xrefs/{machine_id}.chd",
-          "install": {"action": "zip_to_chd"}
-        }
-      },
-      "emulator": "lr-beetle-pce-fast"
+      "auth": "internetarchive"
     }
   ],
   "roms": {
     "id": "crc",
     "priority": {
-      "order": ["flags", "romsets", "name_length"],
-      "flags": [
-        "USA"
-      ],
-      "romsets": [
-        "nointro-turbografx",
-        "nointro-supergrafx",
-        "redump"
-      ],
-      "name_length": "ascending"
     },
     "filters": {
     },
