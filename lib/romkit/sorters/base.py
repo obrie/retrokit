@@ -11,7 +11,7 @@ class BaseSorter:
             self.reverse = setting == 'descending'
             self.ordered = True
         else:
-            self.setting = list(map(str.lower, setting))
+            self.setting = list(map(lambda value: str(value).lower(), setting))
             self.reverse = reverse
             self.ordered = False
 
