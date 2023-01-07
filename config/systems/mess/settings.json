@@ -40,8 +40,8 @@
       "resources": {
         "dat": {
           "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
-          "target": "$HOME/retrokit/tmp/mame/mame0244.dat",
-          "install": {"action": "7z_extract", "file": ".*\\.xml"}
+          "target": "$HOME/retrokit/tmp/mame/mame0244-home.dat",
+          "install": {"action": "7z_extract", "file": ".*\\(Home\\)\\.dat"}
         },
         "machine": {
           "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
