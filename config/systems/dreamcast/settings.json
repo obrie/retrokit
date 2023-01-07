@@ -56,7 +56,7 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/dc/",
-          "download": "$HOME/retrokit/tmp/dreamcast/roms.zip",
+          "download": "$HOME/retrokit/tmp/dreamcast/datfile.zip",
           "target": "$HOME/retrokit/cache/redump/Sega - Dreamcast.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },

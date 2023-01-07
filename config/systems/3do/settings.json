@@ -42,7 +42,7 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/3do/",
-          "download": "$HOME/retrokit/tmp/3do/roms.zip",
+          "download": "$HOME/retrokit/tmp/3do/datfile.zip",
           "target": "$HOME/retrokit/cache/redump/Panasonic - 3DO Interactive Multiplayer.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
