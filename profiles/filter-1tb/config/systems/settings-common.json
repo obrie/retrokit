@@ -1,21 +1,5 @@
 {
   "roms": {
-    "priority": {
-      "enabled": true,
-      "single_title": true,
-      "order": ["flags", "flag_groups_total", "group_title", "name_length"],
-      "flags": [
-        "USA",
-        "World",
-        "English",
-        "Europe",
-        "Canada",
-        "Australia"
-      ],
-      "flag_groups_total": "ascending",
-      "group_title": ["True"],
-      "name_length": "ascending"
-    },
     "filters": {
       "categories": [
         null,

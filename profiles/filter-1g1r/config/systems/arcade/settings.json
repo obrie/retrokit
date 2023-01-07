@@ -1,0 +1,18 @@
+{
+  "roms": {
+    "priority": {
+      "order": ["romsets"],
+      "romsets": [
+        "fbneo",
+        "mame-0244",
+        "mame-0222",
+        "mame2016",
+        "mame2015",
+        "mame2003-plus",
+        "mame2003",
+        "mame2010",
+        "advmame"
+      ]
+    }
+  }
+}

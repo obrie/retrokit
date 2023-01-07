@@ -1,0 +1,51 @@
+{
+  "roms": {
+    "priority": {
+      "order": ["!flags", "romsets", "flags|@countries", "flag_groups_total", "flags", "name_length"],
+      "!flags": [
+        "(Proto)"
+      ],
+      "romsets": [
+        "nointro-carts",
+        "nointro-tapes"
+      ],
+      "flags|@countries": [
+        "USA",
+        "World"
+      ],
+      "flag_groups_total": "ascending",
+      "flags": [
+        "# Publishers",
+        "Lucasfilm",
+        "(Activision)",
+        "Anirog",
+        "Cosmi",
+        "Electric Dreams",
+        "Hewson",
+        "Imagine",
+        "Melbourne House",
+        "Ocean",
+        "Palace",
+        "Psygnosis",
+        "Trillium",
+
+        "# Re-releases",
+        "Budget",
+
+        "# Loaders",
+        "Cyberload",
+        "Burner",
+        "Rasterload",
+        "Virgin",
+        "CHR",
+        "Freeload",
+        "Novaload",
+        "Wildsave",
+
+        "# Game flavors",
+        "Winners Edition"
+      ],
+      "name_length": "ascending"
+    }
+  }
+}
