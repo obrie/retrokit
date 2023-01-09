@@ -272,6 +272,13 @@
       "Platform"
     ]
   },
+  "Bonk III - Bonk's Big Adventure": {
+    "players": 5,
+    "rating": 0.75,
+    "genres": [
+      "Platform"
+    ]
+  },
   "Brandish": {
     "players": 1,
     "genres": [
@@ -1324,6 +1331,17 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
+    ]
+  },
+  "Jack Nicklaus Turbo Golf": {
+    "players": 4,
+    "rating": 0.4,
+    "genres": [
+      "Sports",
+      "Sports / Golf"
+    ],
+    "merge": [
+      "Jack Nicklaus' World Tour Golf - 162 Holes"
     ]
   },
   "Jantei Monogatari": {
