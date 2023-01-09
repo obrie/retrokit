@@ -79,12 +79,7 @@
     "integration": "emulationstation"
   },
   "retropie": {
-    "show_menu": true,
-    "menus": [
-      "Bluetooth",
-      "RetroArch Net Play",
-      "WiFi"
-    ]
+    "show_menu": true
   },
   "hardware": {
     "controllers": {
