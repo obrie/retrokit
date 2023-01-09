@@ -75,6 +75,10 @@ __download_exec() {
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
   if [[ "$url" == *drive.google.com* ]]; then
+    if [ ! `command -v gdown` ]; then
+      sudo pip3 install gdown
+    fi
+
     gdown --fuzzy "$url" -O "$target"
   else
     # Authorization
