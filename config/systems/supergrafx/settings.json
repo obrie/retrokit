@@ -23,7 +23,8 @@
     "lr-beetle-supergrafx": {
       "default": true,
       "core_name": "sgx",
-      "library_name": "Beetle SuperGrafx"
+      "library_name": "Beetle SuperGrafx",
+      "cmd": "mednafen_supergrafx_libretro.so"
     }
   },
   "cheats": {

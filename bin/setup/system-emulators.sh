@@ -16,14 +16,20 @@ build() {
 
 # Install emulator packages
 __install_emulators() {
-  while IFS=$'\t' read -r package emulator build; do
+  while IFS=$'\t' read -r package emulator build cmd; do
     local package_type='emulators'
     if [[ "$package" == lr-* ]]; then
       package_type='libretrocores'
     fi
 
     install_retropie_package "$package_type" "$package" "$build"
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary"] | @tsv')
+
+    # A custom command is provided for the emulator.  This is typically used when
+    # the system name isn't automatically mapped by the emulator.
+    if [ -n "$cmd" ]; then
+      sudo "$HOME/RetroPie-Setup/retropie_packages.sh" retrokit-system configure "$package" "$system" "$cmd"
+    fi
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.cmd] | @tsv')
 
   if [ "$system" == 'ports' ]; then
     # Ensure ports has been added to the default conf since other tools may

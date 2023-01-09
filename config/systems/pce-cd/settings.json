@@ -23,7 +23,8 @@
     "lr-beetle-pce-fast": {
       "default": true,
       "core_name": "pce",
-      "library_name": "Beetle PCE Fast"
+      "library_name": "Beetle PCE Fast",
+      "cmd": "mednafen_pce_fast_libretro.so"
     }
   },
   "cheats": {
