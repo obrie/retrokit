@@ -1,0 +1,7 @@
+# Disable mode switch for controller type.  Hardly any games use it and
+# pressing it can create confusion for the player.
+input_player1_btn_l2 = "-1"
+input_player2_btn_l2 = "-1"
+input_player3_btn_l2 = "-1"
+input_player4_btn_l2 = "-1"
+input_player5_btn_l2 = "-1"
