@@ -149,6 +149,7 @@ __list_manuals() {
       .value .manuals[] |
       {
         name: (.name // $group),
+        group: {name: $group},
         manual: .
       }
     ' "$system_data_file")
