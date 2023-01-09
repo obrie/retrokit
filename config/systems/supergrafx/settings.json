@@ -4,7 +4,13 @@
     "path": "$HOME/retrokit/data/supergrafx.json"
   },
   "scraper": {
-    "args": ["-p", "pcengine"]
+    "args": [
+      "-p", "pcengine",
+      "-i", "$HOME/RetroPie/roms/supergrafx",
+      "-g", "$HOME/.emulationstation/gamelists/supergrafx",
+      "-o", "$HOME/.emulationstation/downloaded_media/supergrafx",
+      "-d", "cache/supergrafx"
+    ]
   },
   "overlays": {
     "repos": [

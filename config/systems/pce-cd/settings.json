@@ -4,7 +4,10 @@
     "path": "$HOME/retrokit/data/pce-cd.json"
   },
   "scraper": {
-    "args": ["-p", "pcengine-cd"]
+    "args": [
+      "-p", "pcenginecd",
+      "-i", "$HOME/RetroPie/roms/pce-cd"
+    ]
   },
   "overlays": {
     "repos": [
