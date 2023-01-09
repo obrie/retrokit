@@ -51,7 +51,7 @@ __scrape_source() {
   stop_emulationstation
 
   # Scrape for new roms we've never attempted before
-  __scrape -s "$source" --flags onlymissing
+  __scraper -s "$source" --flags onlymissing
 
   # Only re-scrape roms a second time if the user has explicitly asked us to update
   # the scraped data
@@ -75,7 +75,7 @@ __scrape_source() {
     # Scrape with custom query (if one has been provided for this specific rom)
     local custom_query=$(system_setting ".scraper .$source .\"$rom_name\"" || true)
     if [ -n "$custom_query" ]; then
-      __scrape -s "$source" --query "$custom_query" "$rom_path"
+      __scraper -s "$source" --query "$custom_query" "$rom_path"
       if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
@@ -92,7 +92,7 @@ __scrape_source() {
       fi
 
       # Scrape with the CRC
-      __scrape -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
+      __scraper -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
       if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
@@ -111,18 +111,23 @@ __scrape_source() {
   if [ "$run_final_check" == 'true' ]; then
     __build_missing_reports
     if [ -s "$aggregate_report_file" ]; then
-      __scrape -s "$source" --fromfile "$aggregate_report_file"
+      __scraper -s "$source" --fromfile "$aggregate_report_file"
     fi
   fi
 }
 
 # Runs Skyscraper with the given arguments
-__scrape() {
+__scraper() {
   local IFS=$'\n'
   local extra_args=($(system_setting '.scraper.args[]?'))
+  local cmd=(/opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@}")
 
-  echo "Scraping $system (${*})"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@}"
+  echo "Running Skyscraper: $system (${*})"
+  if [ -t 0 ]; then
+    "${cmd[@]}"
+  else
+    cat - | "${cmd[@]}"
+  fi
 }
 
 # Generates a report to be used by Skyscraper as input into which roms to scrape
@@ -136,7 +141,7 @@ __build_missing_reports() {
   # indicators of a prior issue:
   # * Missing title means we likely missed all the textual content
   # * Missing screenshot means we likely missed the media content
-  __scrape --cache report:missing=title,screenshot
+  __scraper --cache report:missing=title,screenshot
 
   # Generate aggregate list of roms
   cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
@@ -158,7 +163,7 @@ __import_titles() {
   local import_dat_titles=$(system_setting '.scraper .import_dat_titles')
   if [ "$import_dat_titles" != 'true' ]; then
     # Don't import titles from romkit (purge anything we've previously imported for this system)
-    __scrape --cache purge:m=import
+    __scraper --cache purge:m=import
     return
   fi
 
@@ -219,7 +224,7 @@ __import_titles() {
 
   # Import the data
   if [ -n "$(ls -A "$import_dir/textual")" ]; then
-    __scrape -s import
+    __scraper -s import
   fi
 
   # Clean up unused files
@@ -228,7 +233,7 @@ __import_titles() {
 
 __import_user_overrides() {
   # Remove existing overrides we may have previously added
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache purge:m=user
+  __scraper --cache purge:m=user
 
   while IFS=$'\t' read rom_name resource_type resource_value; do
     local rom_path=${rom_data["$rom_name/path"]}
@@ -239,7 +244,7 @@ __import_user_overrides() {
 
     local rom_filename=$(basename "$rom_path")
     echo "Updating \"$rom_filename\" $resource_type to \"$resource_value\""
-    echo "$resource_value" | /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
+    echo "$resource_value" | __scraper --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
   done < <(each_path '{system_config_dir}/scrape-overrides.json' jq -r 'to_entries[] | .key as $name | .value | to_entries[] | [$name, .key, .value] | @tsv' '{}')
 }
 
@@ -268,7 +273,7 @@ vacuum() {
 # Removes files from the skyscraper database that it determines are no longer
 # in use.
 __vacuum_cache() {
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" --cache vacuum
+  __scraper --cache vacuum
 }
 
 # Remove videos / images from emulationstation that are no longer used.
