@@ -103,7 +103,7 @@ generate_system_settings_file() {
   system_data_merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
   system_data_path=$(jq -r '.metadata .path' "$system_settings_file")
   system_data_name=$(basename "$system_data_path")
-  json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false >/dev/null
+  json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false envsubst=false >/dev/null
   json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_path"
 
   echo "$system_settings_file"
