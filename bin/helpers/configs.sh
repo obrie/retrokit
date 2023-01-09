@@ -9,6 +9,7 @@ export ENABLE_RPDIST_BACKUPS=${ENABLE_RPDIST_BACKUPS:-false}
 conf_prepare() {
   local source=$1
   local as_sudo='false'
+  local envsubst='false'
   if [ $# -gt 1 ]; then local "${@:2}"; fi
 
   local cmd=
@@ -16,10 +17,14 @@ conf_prepare() {
     cmd='sudo'
   fi
 
-  local target="$(mktemp -p "$tmp_ephemeral_dir")"
-  $cmd envsubst < "$source" > "$target"
-  $cmd chmod --reference="$source" "$target"
-  echo "$target"
+  if [ "$envsubst" == 'true' ]; then
+    local target="$(mktemp -p "$tmp_ephemeral_dir")"
+    $cmd envsubst < "$source" > "$target"
+    $cmd chmod --reference="$source" "$target"
+    echo "$target"
+  else
+    echo "$source"
+  fi
 }
 
 # Enables retrokit to use .rp-dist as the primary backup file during file
@@ -129,6 +134,7 @@ env_merge() {
   local overwrite='false'
   local backup='true'
   local restore='true'
+  local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if ! any_path_exists "$source"; then
@@ -155,7 +161,7 @@ env_merge() {
   while read source_path; do
     while read -r env_line; do
       $cmd dotenv -f "$target" set "$env_line"
-    done < <(cat "$(conf_prepare "$source_path")" | grep -Ev "^#" | grep .)
+    done < <(cat "$(conf_prepare "$source_path" envsubst="$envsubst")" | grep -Ev "^#" | grep .)
   done < <(each_path "$source")
 }
 
@@ -169,6 +175,7 @@ ini_merge() {
   local overwrite='false'
   local backup='true'
   local restore='true'
+  local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if ! any_path_exists "$source"; then
@@ -193,7 +200,7 @@ ini_merge() {
 
   echo "Merging ini $source to $target"
   while read source_path; do
-    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_path")"
+    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_path" envsubst="$envsubst")"
   done < <(each_path "$source")
 
   if [ "$space_around_delimiters" == "false" ]; then
@@ -224,6 +231,7 @@ json_merge() {
   local overwrite='false'
   local backup='true'
   local restore='true'
+  local envsubst='true'
   if [ $# -gt 2 ]; then local "${@:3}"; fi
   
   if ! any_path_exists "$source"; then
@@ -258,7 +266,7 @@ json_merge() {
 
   while read source_path; do
     if [ -s "$source_path" ]; then
-      $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path")" > "$merged_path"
+      $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path" envsubst="$envsubst")" > "$merged_path"
       mv "$merged_path" "$staging_path"
     fi
   done < <(each_path "$source")
@@ -341,11 +349,7 @@ file_cp() {
   # Remove any existing file
   $cmd rm -f "$target"
 
-  if [ "$envsubst" == 'true' ]; then
-    $cmd cp "$(conf_prepare "$prioritized_source")" "$target"
-  else
-    $cmd cp "$prioritized_source" "$target"
-  fi
+  $cmd cp "$(conf_prepare "$prioritized_source" envsubst="$envsubst")" "$target"
 }
 
 # Copies a file, backing up the target
