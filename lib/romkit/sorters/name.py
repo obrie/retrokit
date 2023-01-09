@@ -4,7 +4,8 @@ from romkit.sorters.base import BaseSorter
 
 # Sort on name
 class NameSorter(BaseSorter):
-    name = 'name'
+    name = 'names'
+    exact = True
 
     def value(self, machine: Machine) -> str:
         return machine.name
@@ -20,7 +21,8 @@ class NameLengthSorter(BaseSorter):
 
 # Sort on title
 class TitleSorter(BaseSorter):
-    name = 'title'
+    name = 'titles'
+    exact = True
 
     def value(self, machine: Machine) -> str:
         return machine.title

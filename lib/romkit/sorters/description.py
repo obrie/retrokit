@@ -38,12 +38,17 @@ class FlagGroupsTotalSorter(BaseSorter):
 # This just looks for the first numeric value in the title and considers
 # that to be the "version".
 class VersionSorter(BaseSorter):
-    name = 'version'
-    NUMBER_REGEX = re.compile(r'[0-9]+')
+    name = 'versions'
 
-    def value(self, machine: Machine) -> int:
-        number_match = self.NUMBER_REGEX.search(machine.title)
+    # Semantic versioning, e.g. v1.2
+    SEMANTIC_VERSION_REGEX = re.compile(r'[Vv ]([0-9]+\.[0-9]*)')
+
+    # Number that's not a part of a word, e.g. '99 or 1999
+    NUMBER_REGEX = re.compile(r"[ ']([0-9]+)($|[^A-Za-z])")
+
+    def value(self, machine: Machine) -> float:
+        number_match = self.SEMANTIC_VERSION_REGEX.search(machine.title) or self.NUMBER_REGEX.search(machine.title)
         if number_match:
-            return int(number_match.group())
+            return float(number_match.group(1))
         else:
-            return 0
+            return 0.0

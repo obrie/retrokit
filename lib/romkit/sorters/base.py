@@ -5,6 +5,7 @@ from typing import List, Union
 # Provides a base class for prioritizing machines that have been grouped together
 class BaseSorter:
     name = None
+    exact = False
 
     def __init__(self, setting: Union[str, List[str]], reverse: bool = False) -> None:
         if setting == 'ascending' or setting == 'descending':
@@ -31,7 +32,7 @@ class BaseSorter:
             machine_value = machine_value.lower()
 
             for index, search_string in enumerate(self.setting):
-                if search_string in machine_value:
+                if (self.exact and search_string == machine_value) or (not self.exact and search_string in machine_value):
                     # Found a matching priority string: track the index
                     priority_index = index
                     break
