@@ -183,7 +183,7 @@ __list_libretro_roms() {
     done
 
     echo "$target_name"$'\t'"$target_filename"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .path, .emulator, .tags | join(",")] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .path, .emulator, (.tags | join(","))] | join("»")')
 }
 
 restore() {
