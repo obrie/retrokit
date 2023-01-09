@@ -20,6 +20,7 @@ system_settings_file=$(generate_system_settings_file "$system")
 system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
+system_data_file=$(system_setting '.metadata .path')
 
 ##############
 # Setup stubs

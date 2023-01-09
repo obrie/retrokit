@@ -141,11 +141,8 @@ __list_manuals() {
   local romkit_output
 
   if [ "$MANUALKIT_ARCHIVE" == 'true' ]; then
-    local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
-    json_merge "{data_dir}/$system.json" "$data_file" backup=false
-
     # We're generating the manualkit archive -- list all manuals for all languages
-    romkit_output=$(cat "$data_file"  | jq -rc '
+    romkit_output=$(jq -rc '
       to_entries[] |
       select(.value .manuals) |
       .key as $group |
@@ -154,7 +151,7 @@ __list_manuals() {
         name: (.name // $group),
         manual: .
       }
-    ')
+    ' "$system_data_file")
   else
     romkit_output=$(romkit_cache_list)
   fi

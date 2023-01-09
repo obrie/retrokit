@@ -2,10 +2,8 @@
 
 declare -Ag arcade_controls
 while IFS=$'\t' read group_name buttons; do
-  if [ -z "${arcade_controls[$group_name]}" ]; then
-    arcade_controls["$group_name"]="$buttons"
-  fi
-done < <(each_path '{data_dir}/arcade.json' jq -r 'to_entries[] | select(.value.buttons) | [.key, (.value.buttons | join(","))] | @tsv' '{}' | tac)
+  arcade_controls["$group_name"]="$buttons"
+done < <(jq -r 'to_entries[] | select(.value.buttons) | [.key, (.value.buttons | join(","))] | @tsv' "$system_data_file")
 
 # Determines whether the given ROM has any doc overrides
 __has_rom_overrides() {
