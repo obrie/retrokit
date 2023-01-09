@@ -42,7 +42,7 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name title playlist_name group_name group_title orientation emulator tags; do
+  while IFS=» read -r rom_name title playlist_name group_name orientation emulator tags; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local is_lightgun=$([[ "$tags" == *Lightgun* ]] && echo 'true' || echo 'false')
@@ -56,10 +56,10 @@ configure() {
     local url=${overlay_urls[$(normalize_rom_name "$rom_name")]}
     local overlay_title=$title
     if [ -z "$url" ]; then
-      # Note we use a different overlay title when referring to the parent because sometimes
-      # the overlays are different between child and parent
+      # Note we use a different overlay title when referring to the group because sometimes
+      # the overlays are different for alternative titles within the group
       url=${overlay_urls[$(normalize_rom_name "$group_name")]}
-      overlay_title=$group_title
+      overlay_title=$group_name
     fi
 
     if [ -z "$url" ]; then
@@ -67,17 +67,17 @@ configure() {
 
       if [ -z "$playlist_name" ]; then
         # Install overlay for single-disc games
-        __create_default_retroarch_config "$rom_name" "$emulator" "$group_title" "$orientation" "$is_lightgun"
+        __create_default_retroarch_config "$rom_name" "$emulator" "$orientation" "$is_lightgun"
       elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
         # Install overlay for the playlist
-        __create_default_retroarch_config "$playlist_name" "$emulator" "$group_title" "$orientation" "$is_lightgun"
+        __create_default_retroarch_config "$playlist_name" "$emulator" "$orientation" "$is_lightgun"
       fi
 
       continue
     fi
 
     # We have an image: download it
-    __install_overlay "$url" "$overlay_title" "$group_title" "$is_lightgun"
+    __install_overlay "$url" "$overlay_title" "$is_lightgun"
 
     if [ -z "$playlist_name" ]; then
       # Install overlay for single-disc game
@@ -86,7 +86,7 @@ configure() {
       # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, .group.title, .orientation, .emulator, .tags | join(",")] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, .orientation, .emulator, .tags | join(",")] | join("»")')
 
   __remove_unused_configs
 }
@@ -131,8 +131,7 @@ __call_github_api() {
 __install_overlay() {
   local url=$1
   local overlay_title=$2
-  local group_title=$3
-  local is_lightgun=$4
+  local is_lightgun=$3
 
   local image_filename="$overlay_title.png"
   download "$url" "$system_overlay_dir/$image_filename"
@@ -161,9 +160,8 @@ __install_overlay() {
 __create_default_retroarch_config() {
   local rom_name=$1
   local emulator=$2
-  local group_title=$3
-  local orientation=$4
-  local is_lightgun=$5
+  local orientation=$3
+  local is_lightgun=$4
 
   if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
     # Vertical format
@@ -244,15 +242,15 @@ vacuum() {
 
   # Identify valid overlay images
   declare -A installed_images
-  while IFS=$'\t' read -r title group_title; do
+  while IFS=$'\t' read -r title group_name; do
     if [ -f "$system_overlay_dir/$title.png" ]; then
       installed_images["$system_overlay_dir/$title.png"]=1
       installed_images["$system_overlay_dir/$title-lightgun.png"]=1
     else
-      installed_images["$system_overlay_dir/$group_title.png"]=1
-      installed_images["$system_overlay_dir/$group_title-lightgun.png"]=1
+      installed_images["$system_overlay_dir/$group_name.png"]=1
+      installed_images["$system_overlay_dir/$group_name-lightgun.png"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.title, .group.title] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.title, .group.name] | @tsv')
 
   # Generate rm commands for unused images
   while read -r path; do
