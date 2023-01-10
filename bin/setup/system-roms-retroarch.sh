@@ -133,7 +133,7 @@ __list_libretro_roms() {
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name disc title playlist_name group_name rom_path emulator tags; do
+  while IFS=» read -r rom_name disc title playlist_name group_name rom_path emulator controls peripherals; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -145,8 +145,8 @@ __list_libretro_roms() {
     fi
 
     # Tag data
-    local is_multitap=$([[ "$tags" == *Multitap* ]] && echo 'true' || echo 'false')
-    local is_lightgun=$([[ "$tags" == *Lightgun* ]] && echo 'true' || echo 'false')
+    local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
+    local is_multitap=$([[ "$peripherals" == *multitap* ]] && echo 'true' || echo 'false')
 
     local target_name
     local target_filename
@@ -183,7 +183,7 @@ __list_libretro_roms() {
     done
 
     echo "$target_name"$'\t'"$target_filename"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .path, .emulator, (.tags | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 
 restore() {

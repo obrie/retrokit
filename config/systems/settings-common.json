@@ -37,69 +37,53 @@
         "BIOS"
       ]
     },
-    "collections": [
-      {
-        "name": "C64 Dreams: Best Of",
+    "collections": {
+      "C64 Dreams: Best Of": {
         "filters": {
           "tags": ["C64 Dreams: Best Of"]
         }
       },
-      {
-        "name": "Keyboard",
+      "Keyboard": {
         "filters": {
-          "tags": ["keyboard"]
+          "controls": ["keyboard"]
         }
       },
-      {
-        "name": "Lightguns",
+      "Lightguns": {
         "filters": {
-          "tags": ["lightgun"]
+          "controls": ["lightgun"]
         }
       },
-      {
-        "name": "Multitap",
+      "Multitap": {
         "filters": {
-          "tags": ["multitap"]
+          "peripherals": ["multitap"]
         }
       },
-      {
-        "name": "Trackball",
+      "Trackball": {
         "filters": {
           "controls": ["trackball"],
-          "!controls": [
-            "gambling",
-            "joy",
-            "lightgun",
-            "only_buttons",
-            "pedal",
-            "stick"
-          ]
+          "!controls": ["lightgun"]
         }
       },
-      {
-        "name": "Manuals",
+      "Manuals": {
         "filters": {
           "manuals": [true]
         }
       },
-      {
-        "name": "Multiplayer",
+      "Multiplayer": {
         "filters": {
           "!players": [null, 1]
         }
       },
-      {
-        "name": "Multiplayer: 4+",
+      "Multiplayer: 4+": {
         "filters": {
           "!players": [null, 1, 2, 3]
         }
       },
-      {
-        "name": "Party: 4+",
+      "Party: 4+": {
         "filters": {
           "tags": ["party"]
         }
       }
-    ]
+    }
   }
 }

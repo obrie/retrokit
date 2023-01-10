@@ -30,6 +30,7 @@ class Machine:
         category: Optional[str] = None,
         sourcefile: Optional[str] = None,
         controls: Set[str] = None,
+        peripherals: Set[str] = None,
         buttons: List[str] = None,
 
         # File data
@@ -67,6 +68,7 @@ class Machine:
         self.category = category
         self.sourcefile = sourcefile
         self.controls = controls or set()
+        self.peripherals = peripherals or set()
         self.buttons = buttons or []
 
         # File data
@@ -475,6 +477,7 @@ class Machine:
             'series': self.series,
             'orientation': self.orientation,
             'controls': self.controls,
+            'peripherals': self.peripherals,
             'buttons': self.buttons,
             'tags': self.tags,
             'group': {

@@ -545,8 +545,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "30test": {
@@ -1321,8 +1321,8 @@
     "buttons": [
       "Fire"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "aa": {
@@ -3009,8 +3009,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "alien3j": {
@@ -4465,10 +4465,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "apocof": {
@@ -5276,7 +5276,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -5293,8 +5293,8 @@
       "emulator": "lr-mame2016",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "area51mx": {
@@ -5309,7 +5309,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -5326,8 +5326,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "area88": {
@@ -7516,7 +7516,7 @@
     ],
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "badapple": {
@@ -7910,7 +7910,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -7927,8 +7927,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bangball": {
@@ -8879,11 +8879,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbh2sp": {
@@ -8898,7 +8898,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -8909,8 +8909,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbh2sp (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbhcotw": {
@@ -8925,7 +8925,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -8936,8 +8936,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhcotw (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbhsc": {
@@ -8952,7 +8952,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -8963,8 +8963,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhsc (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbmanw": {
@@ -9057,8 +9057,8 @@
     "controls": [
       "stick"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbusters": {
@@ -9073,7 +9073,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -9091,8 +9091,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bbustersj": {
@@ -9466,8 +9466,8 @@
     "controls": [
       "stick"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "belslots": {
@@ -13184,7 +13184,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "bongo": {
@@ -13514,15 +13514,15 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bosco": {
@@ -13907,7 +13907,7 @@
     "orientation": "horizontal",
     "controls": [
       "gambling",
-      "lightgun"
+      "pointer"
     ]
   },
   "bradley": {
@@ -14061,8 +14061,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "brazil": {
@@ -14830,7 +14830,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -14844,8 +14844,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "bubbletrj": {
@@ -15503,7 +15503,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "bwcasino": {
@@ -16528,7 +16528,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Trigger",
@@ -16542,8 +16542,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnevil (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "carnival": {
@@ -16586,7 +16586,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -16597,8 +16597,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnking (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "carpolo": {
@@ -16721,7 +16721,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "cashcat": {
@@ -18815,7 +18815,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -18829,8 +18829,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "chicgum": {
@@ -18899,7 +18899,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -18913,8 +18913,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "chillicc": {
@@ -19838,7 +19838,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -19848,8 +19848,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/claybust (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "claychal": {
@@ -19864,8 +19864,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "claypign": {
@@ -19879,14 +19879,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "clayshoo": {
@@ -20397,7 +20397,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -20683,7 +20683,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "cnightst": {
@@ -20828,8 +20828,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "cocean1a": {
@@ -21056,7 +21056,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -21073,8 +21073,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "combatsc": {
@@ -21827,10 +21827,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "congo": {
@@ -22173,8 +22173,8 @@
     "controls": [
       "paddle"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "copsnrob": {
@@ -22820,7 +22820,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -22834,8 +22834,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crakndj2": {
@@ -23138,10 +23138,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crimepat": {
@@ -23154,10 +23154,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crimepat_14": {
@@ -23228,7 +23228,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -23238,8 +23238,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/critcrsh (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crkdown": {
@@ -23359,7 +23359,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -23373,8 +23373,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "croupier": {
@@ -23496,8 +23496,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crtaxihr": {
@@ -23630,7 +23630,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -23644,8 +23644,8 @@
       "emulator": "lr-mame2010",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "crysking": {
@@ -25303,10 +25303,10 @@
     ],
     "orientation": "vertical",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "cyclwarr": {
@@ -26845,8 +26845,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ddaydoo": {
@@ -28020,10 +28020,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "deathcoxo": {
@@ -28145,7 +28145,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -28159,8 +28159,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "defender": {
@@ -28663,7 +28663,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -28680,8 +28680,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "desertwr": {
@@ -29044,8 +29044,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "di4ever": {
@@ -29366,7 +29366,7 @@
     "controls": [
       "gambling",
       "keypad",
-      "lightgun"
+      "pointer"
     ]
   },
   "dindice": {
@@ -31320,7 +31320,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -31338,8 +31338,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "dragngunj": {
@@ -31558,7 +31558,7 @@
     "controls": [
       "gambling",
       "keypad",
-      "lightgun"
+      "pointer"
     ]
   },
   "dremshpr": {
@@ -32567,7 +32567,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -32577,8 +32577,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/duckhunt (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "dumpmtmt": {
@@ -33556,7 +33556,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -33573,8 +33573,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ehrgeiz": {
@@ -33772,7 +33772,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "eldorda5": {
@@ -34424,8 +34424,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "esckids": {
@@ -34773,7 +34773,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
     "manuals": [
@@ -34784,8 +34784,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/evilngt (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "evilston": {
@@ -35727,7 +35727,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "fantasia": {
@@ -36009,7 +36009,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "fastdraw": {
@@ -36021,10 +36021,10 @@
     ],
     "orientation": "vertical",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "fastdraw_130": {
@@ -39377,7 +39377,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "ftimpcta": {
@@ -39475,7 +39475,7 @@
     "controls": [
       "gambling",
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "funcube2": {
@@ -39492,7 +39492,7 @@
     "controls": [
       "gambling",
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "funcube3": {
@@ -39509,7 +39509,7 @@
     "controls": [
       "gambling",
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -39534,7 +39534,7 @@
     "controls": [
       "gambling",
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "funcube5": {
@@ -39551,7 +39551,7 @@
     "controls": [
       "gambling",
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "funkball": {
@@ -39646,7 +39646,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "funnyfm": {
@@ -40018,8 +40018,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "g13knd": {
@@ -40035,7 +40035,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -40049,8 +40049,8 @@
       "emulator": "advmame",
       "rating": 2
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "g4u2": {
@@ -40764,10 +40764,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "galmedes": {
@@ -42111,14 +42111,14 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gdvsgd": {
@@ -42446,7 +42446,7 @@
     "controls": [
       "gambling",
       "keypad",
-      "lightgun"
+      "pointer"
     ]
   },
   "genpeitd": {
@@ -42814,7 +42814,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -42828,8 +42828,8 @@
       "emulator": "lr-mame2016",
       "rating": 3
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ghoshunt": {
@@ -42843,7 +42843,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -42857,8 +42857,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ghostb": {
@@ -42940,8 +42940,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ghostsqu": {
@@ -42957,8 +42957,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ghouls": {
@@ -44323,7 +44323,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -44337,8 +44337,8 @@
       "emulator": "advmame",
       "rating": 2
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gollygho": {
@@ -44353,7 +44353,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -44367,8 +44367,8 @@
       "emulator": "lr-mame2016",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gomoku": {
@@ -45211,7 +45211,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -45225,8 +45225,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "greatgur": {
@@ -45975,7 +45975,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -45999,7 +45999,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ]
   },
@@ -46015,7 +46015,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -46039,7 +46039,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -46063,7 +46063,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -46086,7 +46086,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ],
     "manuals": [
@@ -46957,8 +46957,8 @@
     "controls": [
       "stick"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gunbuletj": {
@@ -46979,7 +46979,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Trigger",
@@ -46989,8 +46989,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gunbustrj": {
@@ -47010,10 +47010,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gundamex": {
@@ -47399,11 +47399,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gunmast": {
@@ -47543,8 +47543,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "gunsur2j": {
@@ -48074,7 +48074,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -48088,8 +48088,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hanaawas": {
@@ -48710,7 +48710,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "harley": {
@@ -49613,7 +49613,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-fbneo",
@@ -49951,7 +49951,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -49965,8 +49965,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hitpoker": {
@@ -50235,7 +50235,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -50245,8 +50245,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/hogalley (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hogwild": {
@@ -50579,8 +50579,8 @@
     "controls": [
       "keyboard"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotblock": {
@@ -50667,10 +50667,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotd2": {
@@ -50684,10 +50684,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotd3": {
@@ -50703,8 +50703,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotd4": {
@@ -50716,8 +50716,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotdebut": {
@@ -50747,8 +50747,8 @@
     "languages": [
       "Japanese"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "hotdogst": {
@@ -53393,7 +53393,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -53407,8 +53407,8 @@
       "emulator": "lr-mame",
       "rating": 3
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "invcarht": {
@@ -54584,7 +54584,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -54598,8 +54598,8 @@
       "emulator": "lr-mame2010",
       "rating": 4
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "jdreddp": {
@@ -54970,11 +54970,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "jngolady": {
@@ -55706,8 +55706,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "jpark3": {
@@ -55723,8 +55723,8 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "jparkj": {
@@ -57121,10 +57121,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "kdynastg": {
@@ -60240,7 +60240,7 @@
     "orientation": "horizontal",
     "controls": [
       "gambling",
-      "lightgun"
+      "pointer"
     ]
   },
   "kyros": {
@@ -60555,8 +60555,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "landbrk": {
@@ -60752,7 +60752,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "lastapos": {
@@ -60796,10 +60796,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lastbh_006": {
@@ -61376,7 +61376,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -61390,8 +61390,8 @@
       "emulator": "lr-mame2016",
       "rating": 3
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "leadang": {
@@ -61758,7 +61758,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -61775,8 +61775,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lethalj": {
@@ -61790,7 +61790,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -61804,8 +61804,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lethalth": {
@@ -61846,8 +61846,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "levers": {
@@ -61889,7 +61889,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Laser Gun",
@@ -61907,8 +61907,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lghostj": {
@@ -62476,10 +62476,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lockon": {
@@ -62625,7 +62625,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -62639,8 +62639,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "loffirej": {
@@ -62829,14 +62829,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lordleo": {
@@ -62906,10 +62906,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lostwsgp": {
@@ -63175,11 +63175,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lsrquiz2i": {
@@ -63193,11 +63193,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "lsrquizg": {
@@ -63210,11 +63210,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ltcasin2": {
@@ -63507,7 +63507,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "paddle",
       "pedal"
     ],
@@ -63523,8 +63523,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "luckywldj": {
@@ -63642,10 +63642,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "luptype": {
@@ -64189,10 +64189,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "maddog2": {
@@ -64206,10 +64206,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "maddonna": {
@@ -64786,7 +64786,7 @@
     "orientation": "horizontal",
     "controls": [
       "gambling",
-      "lightgun"
+      "pointer"
     ]
   },
   "magipur": {
@@ -65018,7 +65018,7 @@
     "controls": [
       "gambling",
       "keypad",
-      "lightgun"
+      "pointer"
     ]
   },
   "magtouch": {
@@ -65032,7 +65032,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "magtruck": {
@@ -65415,7 +65415,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -65429,8 +65429,8 @@
       "emulator": "lr-mame",
       "rating": 4
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "malzak": {
@@ -65590,8 +65590,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "manohman": {
@@ -66041,10 +66041,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "marvice100hz": {
@@ -66057,7 +66057,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "marvins": {
@@ -66479,7 +66479,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -66496,8 +66496,8 @@
       "emulator": "lr-mame2016",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "maxidbl": {
@@ -66812,8 +66812,8 @@
       "emulator": "lr-mame",
       "rating": 4
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "mazinger": {
@@ -67098,8 +67098,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "mdhorse": {
@@ -67156,7 +67156,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -67174,8 +67174,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "mechattj": {
@@ -67428,7 +67428,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -67447,7 +67447,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -67466,7 +67466,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -67491,7 +67491,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -67518,7 +67518,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -67543,7 +67543,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -67569,7 +67569,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -68584,7 +68584,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "mgolf": {
@@ -68616,7 +68616,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "mhavoc": {
@@ -71061,10 +71061,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "mole": {
@@ -71222,7 +71222,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -71241,7 +71241,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -71277,7 +71277,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "monsterb": {
@@ -73982,7 +73982,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "mtchxl6k": {
@@ -73997,7 +73997,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "mtchxlgld": {
@@ -74011,7 +74011,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "mtchxlti": {
@@ -74025,7 +74025,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "mtetrisc": {
@@ -74052,7 +74052,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "mtlchamp": {
@@ -74098,7 +74098,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "mtrain": {
@@ -76457,7 +76457,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ]
   },
@@ -77107,8 +77107,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ninjasltj": {
@@ -78222,7 +78222,7 @@
     "orientation": "horizontal",
     "controls": [
       "dial",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -78236,8 +78236,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "nsub": {
@@ -78500,7 +78500,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -78514,8 +78514,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "nyjoker": {
@@ -78579,8 +78579,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ochaken": {
@@ -78606,7 +78606,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "odeontw2": {
@@ -78620,7 +78620,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "odyssey": {
@@ -79213,14 +79213,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "onetwo": {
@@ -79385,7 +79385,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -79395,8 +79395,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/optiger (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "opwolf": {
@@ -79411,7 +79411,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -79429,8 +79429,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "opwolf3": {
@@ -79445,7 +79445,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Shoot",
@@ -79463,8 +79463,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "opwolf3j": {
@@ -80012,8 +80012,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "othunderj": {
@@ -80498,8 +80498,8 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "p9112": {
@@ -80515,8 +80515,8 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "pac90": {
@@ -81621,7 +81621,7 @@
     "orientation": "horizontal",
     "controls": [
       "gambling",
-      "lightgun"
+      "pointer"
     ]
   },
   "pasha2": {
@@ -82161,7 +82161,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -82406,7 +82406,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -82416,8 +82416,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_duckh (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "pc_ebike": {
@@ -82566,7 +82566,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -82576,8 +82576,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_hgaly (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "pc_kngfu": {
@@ -83174,10 +83174,10 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "pc_ynoid": {
@@ -83996,7 +83996,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "peke1001": {
@@ -84010,7 +84010,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "pekoc766": {
@@ -85402,7 +85402,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "pex0006p": {
@@ -89573,7 +89573,7 @@
     ],
     "orientation": "vertical",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "pnyaa": {
@@ -90027,8 +90027,8 @@
     "controls": [
       "keyboard"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "policetr": {
@@ -90043,7 +90043,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -90052,8 +90052,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "pollux": {
@@ -90822,8 +90822,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "popspops": {
@@ -91396,14 +91396,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ppspeed": {
@@ -91609,8 +91609,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "primglex": {
@@ -92041,8 +92041,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "psmash3": {
@@ -92397,7 +92397,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -92414,8 +92414,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ptblank2": {
@@ -92430,7 +92430,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -92444,8 +92444,8 @@
       "emulator": "lr-mame2010",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ptblank3": {
@@ -92461,8 +92461,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ptrain": {
@@ -94085,7 +94085,7 @@
     "controls": [
       "gambling",
       "keypad",
-      "lightgun"
+      "pointer"
     ]
   },
   "qnilese": {
@@ -94632,7 +94632,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ]
   },
@@ -96378,8 +96378,8 @@
     "languages": [
       "English"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rambo3": {
@@ -96412,8 +96412,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rambo3p": {
@@ -96518,8 +96518,8 @@
       "paddle",
       "pedal"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rapfire5": {
@@ -96552,7 +96552,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -96566,8 +96566,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rapidrvr": {
@@ -97046,7 +97046,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -97063,8 +97063,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rchase2": {
@@ -97089,8 +97089,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/rchase2 (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rchasej": {
@@ -97382,7 +97382,7 @@
     "orientation": "horizontal",
     "controls": [
       "gambling",
-      "lightgun"
+      "pointer"
     ]
   },
   "rebus": {
@@ -98247,8 +98247,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "rezon": {
@@ -108870,7 +108870,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -111557,7 +111557,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -111575,8 +111575,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sgunner2": {
@@ -111591,7 +111591,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -111609,8 +111609,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sgunner2j": {
@@ -112546,8 +112546,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "shootbul": {
@@ -112587,7 +112587,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -112601,8 +112601,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "shootopl": {
@@ -112698,14 +112698,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "shors2k1": {
@@ -112908,14 +112908,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "showhanc": {
@@ -113013,8 +113013,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "shtngmst": {
@@ -113028,7 +113028,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -113038,8 +113038,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/shtngmst (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "shtrider": {
@@ -113765,7 +113765,7 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ]
   },
   "skeetsht": {
@@ -113776,8 +113776,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "skichamp": {
@@ -115294,7 +115294,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ]
   },
   "snookr10": {
@@ -116555,8 +116555,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "spacegunj": {
@@ -116664,10 +116664,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "spaceskr": {
@@ -117443,10 +117443,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "spectar": {
@@ -118614,8 +118614,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "spss4240": {
@@ -119250,8 +119250,8 @@
       "joy",
       "stick"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sscope2": {
@@ -119268,8 +119268,8 @@
       "joy",
       "stick"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sscopefh": {
@@ -119285,8 +119285,8 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sscopeja": {
@@ -119314,8 +119314,8 @@
     "controls": [
       "only_buttons"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ssf2": {
@@ -119516,7 +119516,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -119533,8 +119533,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "sshot": {
@@ -119548,10 +119548,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "ssi": {
@@ -120478,8 +120478,8 @@
       "emulator": "lr-mame2016",
       "rating": 3
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "starbladj": {
@@ -121021,8 +121021,8 @@
       "emulator": "lr-fbneo",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "starzan": {
@@ -121727,7 +121727,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "streetg2": {
@@ -121743,7 +121743,7 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard",
-      "lightgun"
+      "pointer"
     ]
   },
   "streetsm": {
@@ -125022,7 +125022,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -125036,8 +125036,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tarzan": {
@@ -126205,10 +126205,10 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "terabrstj": {
@@ -126252,8 +126252,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "term2lg1": {
@@ -127398,8 +127398,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "thunderj": {
@@ -127536,7 +127536,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -127550,8 +127550,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tictac": {
@@ -127595,10 +127595,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tigerh": {
@@ -127770,7 +127770,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -127784,8 +127784,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/timecris (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "timecrs2": {
@@ -127800,10 +127800,10 @@
     "orientation": "horizontal",
     "controls": [
       "joy",
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "timecrs2v1b": {
@@ -127822,8 +127822,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "timecrs4": {
@@ -127836,8 +127836,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "timecrs4j": {
@@ -128291,7 +128291,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128318,7 +128318,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128357,7 +128357,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128384,7 +128384,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128417,7 +128417,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128450,7 +128450,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -128483,7 +128483,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -129867,7 +129867,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ],
     "manuals": [
@@ -129878,8 +129878,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/totlvice (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "totmejan": {
@@ -130698,8 +130698,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/triplhnt (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tripool": {
@@ -130922,7 +130922,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -131025,7 +131025,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "only_buttons"
     ]
   },
@@ -131200,7 +131200,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -131214,8 +131214,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "trpdlght": {
@@ -131774,8 +131774,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tst_galx": {
@@ -132220,7 +132220,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -132234,8 +132234,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "turrett": {
@@ -132390,14 +132390,14 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "tv21": {
@@ -133443,7 +133443,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -133461,8 +133461,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "undrfirej": {
@@ -135191,8 +135191,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vcop": {
@@ -135206,10 +135206,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vcop2": {
@@ -135223,10 +135223,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vcop3": {
@@ -135242,8 +135242,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vega": {
@@ -136357,7 +136357,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun",
+      "pointer",
       "trackball"
     ]
   },
@@ -136465,8 +136465,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "volfied": {
@@ -136602,8 +136602,8 @@
     "controls": [
       "keyboard"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vpoker": {
@@ -136976,10 +136976,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vsfreedomforce": {
@@ -137053,7 +137053,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -137063,8 +137063,8 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vsgshoe (en).pdf"
       }
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "vsgumshoe": {
@@ -138625,8 +138625,8 @@
       "English"
     ],
     "orientation": "horizontal",
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "wcougar": {
@@ -139104,7 +139104,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -139113,8 +139113,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "whp": {
@@ -139282,8 +139282,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "willow": {
@@ -140831,7 +140831,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -140845,8 +140845,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "wseries": {
@@ -140921,10 +140921,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "wstrike": {
@@ -141932,8 +141932,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "xtrmhunt": {
@@ -141949,8 +141949,8 @@
     "controls": [
       "joy"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "xxmissio": {
@@ -142357,7 +142357,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "emulation": {
       "emulator": "lr-mame",
@@ -142708,7 +142708,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire"
@@ -142725,8 +142725,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "zeropnt2": {
@@ -142741,7 +142741,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "manuals": [
       {
@@ -142755,8 +142755,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "zeropntj": {
@@ -143122,7 +143122,7 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
     "buttons": [
       "Fire",
@@ -143140,8 +143140,8 @@
       "emulator": "lr-mame",
       "rating": 5
     },
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "zombraidpj": {
@@ -143266,10 +143266,10 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "lightgun"
+      "pointer"
     ],
-    "tags": [
-      "Lightgun"
+    "+controls": [
+      "lightgun"
     ]
   },
   "zortonbr_100": {

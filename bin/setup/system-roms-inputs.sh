@@ -15,7 +15,7 @@ configure() {
   declare -A installed_playlists
   declare -A installed_files
 
-  while IFS=» read -r rom_name title playlist_name group_name tags; do
+  while IFS=» read -r rom_name title playlist_name group_name controls; do
     local target_path="$retropie_system_config_dir/autoport/${playlist_name:-$rom_name}.cfg"
 
     if [ "${installed_files["$target_path"]}" ]; then
@@ -28,10 +28,10 @@ configure() {
 
     # Create a default file based on the input type used by the game
     # (e.g. lightgun vs. trackball)
-    if [[ "$tags" == *Lightgun* ]]; then
+    if [[ "$controls" == *lightgun* ]]; then
       echo -e '[autoport]\nprofile = "lightgun"' > "$target_path"
       echo "Setting profile to \"lightgun\" in $target_path"
-    elif [[ "$tags" == *Trackball* ]]; then
+    elif [[ "$controls" == *trackball* ]]; then
       echo -e '[autoport]\nprofile = "trackball"' > "$target_path"
       echo "Setting profile to \"trackball\" in $target_path"
     fi

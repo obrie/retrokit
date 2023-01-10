@@ -15,9 +15,9 @@ class CollectionSet:
     def from_json(cls, json: dict, config: dict, supported_filters: list) -> CollectionSet:
         collection_set = cls()
 
-        for collection_config in json:
+        for name, collection_config in json.items():
             filter_set = FilterSet.from_json(collection_config['filters'], config, supported_filters, log=False)
-            collection = Collection(collection_config['name'], filter_set)
+            collection = Collection(name, filter_set)
             collection_set.add(collection)
 
         return collection_set

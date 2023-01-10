@@ -55,7 +55,7 @@ class BaseSystem:
         self.favorites_set.default_on_empty = False
 
         # Collections
-        self.collection_set = CollectionSet.from_json(config['roms'].get('collections', []), config, self.supported_filters)
+        self.collection_set = CollectionSet.from_json(config['roms'].get('collections', {}), config, self.supported_filters)
 
         # Attribute type to define the unique machine identifier
         self.rom_id_type = config['roms']['id']

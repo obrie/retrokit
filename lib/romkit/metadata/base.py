@@ -35,7 +35,16 @@ class BaseMetadata:
         data = self.get_data(machine)
         if data:
             value = data.get(self.name)
-            if value is not None:
+            extended_value = data.get(f'+{self.name}')
+
+            if value is not None or extended_value is not None:
+                # Add to the original value (manual override)
+                if extended_value:
+                    if value:
+                        value = value + extended_value
+                    else:
+                        value = extended_value
+
                 self.update(machine, value)
 
     # Updates the machine with the given value for this type of metadata

@@ -42,10 +42,10 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name title playlist_name group_name orientation emulator tags; do
+  while IFS=» read -r rom_name title playlist_name group_name orientation emulator controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
-    local is_lightgun=$([[ "$tags" == *Lightgun* ]] && echo 'true' || echo 'false')
+    local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
 
     # Make sure this is a libretro core
     if [ -z "$library_name" ]; then

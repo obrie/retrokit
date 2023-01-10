@@ -47,7 +47,7 @@ __enable_lightgun_borders() {
 
 # Does this system have lightgun games to play?
 __has_lightgun_titles() {
-  jq -r '.[] | select(.tags) | .tags | .[]' "$system_data_file" | grep -Eq '^Lightgun$'
+  jq -r '.[] | select(.controls) | .controls | .[]' "$system_data_file" | grep -Eq '^lightgun$'
 }
 
 restore() {
