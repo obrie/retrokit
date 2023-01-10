@@ -86,7 +86,9 @@ romkit_cli() {
 romkit_cache_list() {
   # Generate a unique name based on a hash of the settings file.
   # When the settings file changes, the cache file is invalidated.
-  local cache_id=$(md5sum "$system_settings_file" | cut -d' ' -f 1)
+  local settings_cache_id=$(jq -c 'del(.metadata .path)' "$system_settings_file" | md5sum | cut -d' ' -f 1)
+  local data_cache_id=$(md5sum "$system_data_file" | cut -d' ' -f 1)
+  local cache_id=$(echo "$settings_cache_id$data_cache_id" | md5sum | cut -d' ' -f 1)
   local cache_file="$system_tmp_dir/romkit-list.cache.$cache_id"
 
   if [ ! -s "$cache_file" ]; then
