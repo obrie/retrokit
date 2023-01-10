@@ -86,7 +86,7 @@ configure() {
       # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, .orientation, .emulator, (.tags | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, .orientation, .emulator, (.controls | join(","))] | join("»")')
 
   __remove_unused_configs
 }

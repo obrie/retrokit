@@ -55,7 +55,7 @@ configure() {
     if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, (.tags | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, (.controls | join(","))] | join("»")')
 
   # Remove unused files
   while read -r path; do
