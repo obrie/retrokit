@@ -42,7 +42,7 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name title playlist_name group_name orientation emulator controls; do
+  while IFS=» read -r rom_name playlist_name title group_name orientation emulator controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
@@ -86,7 +86,7 @@ configure() {
       # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, .orientation, .emulator, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, (.controls | join(","))] | join("»")')
 
   __remove_unused_configs
 }

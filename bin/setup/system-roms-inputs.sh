@@ -15,7 +15,7 @@ configure() {
   declare -A installed_playlists
   declare -A installed_files
 
-  while IFS=» read -r rom_name title playlist_name group_name controls; do
+  while IFS=» read -r rom_name playlist_name title parent_name group_name controls; do
     local target_path="$retropie_system_config_dir/autoport/${playlist_name:-$rom_name}.cfg"
 
     if [ "${installed_files["$target_path"]}" ]; then
@@ -39,7 +39,7 @@ configure() {
     # Find an override file for either the rom, playlist, or group
     local override_file=""
     local filename
-    for filename in "$rom_name" "$title" "$playlist_name" "$group_name"; do
+    for filename in "$rom_name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
       if [ -z "$filename" ]; then
         continue
       fi
@@ -55,7 +55,7 @@ configure() {
     if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .playlist.name, .group.name, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, (.controls | join(","))] | join("»")')
 
   # Remove unused files
   while read -r path; do

@@ -35,7 +35,7 @@ __configure_retroarch_configs() {
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-lightgun.cfg' && echo 'true')
 
   # Merge in rom-specific overrides
-  while IFS=$'\t' read -r rom_name rom_filename core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     mkdir -p "$emulator_config_dir"
@@ -60,7 +60,7 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$'\t' read -r rom_name rom_filename core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
     if [ -z "$override_file" ]; then
       continue
     fi
@@ -81,7 +81,7 @@ __configure_retroarch_core_options() {
   local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
   local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-lightgun.cfg' && echo 'true')
 
-  while IFS=$'\t' read -r rom_name rom_filename core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
     if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ "$is_multitap" != 'true' ]; } && { [ "$has_lightgun_config" != 'true' ] || [ "$is_lightgun" != 'true' ]; }; then
       # No overrides to define at the rom-level
       continue
@@ -133,7 +133,7 @@ __list_libretro_roms() {
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name disc title playlist_name group_name rom_path emulator controls peripherals; do
+  while IFS=» read -r rom_name playlist_name title parent_name group_name rom_path emulator controls peripherals; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -149,7 +149,6 @@ __list_libretro_roms() {
     local is_multitap=$([[ "$peripherals" == *multitap* ]] && echo 'true' || echo 'false')
 
     local target_name
-    local target_filename
     if [ -n "$playlist_name" ]; then
       if [ "${installed_playlists["$playlist_name"]}" ]; then
         # We've already processed this playlist -- don't do it again
@@ -159,11 +158,9 @@ __list_libretro_roms() {
       # Generate a config for the playlist
       installed_playlists["$playlist_name"]=1
       target_name=$playlist_name
-      target_filename="$playlist_name.m3u"
     else
       # Generate a config for single-disc games
       target_name=$rom_name
-      target_filename=${rom_path##*/}
     fi
 
     # Find a file for either the rom or its group.  Priority order:
@@ -173,7 +170,7 @@ __list_libretro_roms() {
     # * ROM Playlist Name
     local override_file=""
     local filename
-    for filename in "$rom_name" "$disc" "$title" "$playlist_name" "$group_name"; do
+    for filename in "$rom_name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
       if [ -n "$filename" ]; then
         override_file=${override_files["$filename"]}
         if [ -n "$override_file" ]; then
@@ -182,8 +179,8 @@ __list_libretro_roms() {
       fi
     done
 
-    echo "$target_name"$'\t'"$target_filename"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
-  done < <(romkit_cache_list | jq -r '[.name, .disc, .title, .playlist.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
+    echo "$target_name"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
+  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 
 restore() {
