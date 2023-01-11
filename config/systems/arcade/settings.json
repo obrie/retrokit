@@ -135,8 +135,8 @@
       "url": "$ROMSET_MAME_FBNEO_URL",
       "resources": {
         "dat": {
-          "source": "https://github.com/libretro/FBNeo/raw/master/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
-          "target": "/opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
+          "source": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
+          "cached_source": "file:///$HOME/retrokit/cache/fbneo/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
         },
         "machine": {
           "source": "{url}/roms/arcade.zip/arcade%2F{machine}.zip",

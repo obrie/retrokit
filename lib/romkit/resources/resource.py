@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 class Resource:
     def __init__(self,
         source_url: str,
+        cached_source_url: Optional[str],
         target_path: Optional[Path],
         xref_path: Optional[Path],
         download_path: Optional[Path],
@@ -21,6 +22,10 @@ class Resource:
         downloader: Downloader,
     ) -> None:
         self.source_url = source_url
+
+        # Used the cached source if the primary source doesn't exist
+        if self.is_locally_sourced and not self.source_url_path.exists():
+            self.source_url = cached_source_url
 
         # If locally sourced and we're not defining an explicit target, use the source
         # as the target path.  Note a target must be defined if not locally sourced.
@@ -123,6 +128,7 @@ class Resource:
 class ResourceTemplate:
     def __init__(self,
         source_url_template: str,
+        cached_source_url_template: Optional[str],
         target_path_template: Optional[str],
         xref_path_template: Optional[str] = None,
         download_path_template: Optional[str] = None,
@@ -133,6 +139,7 @@ class ResourceTemplate:
         default_context: dict = {},
     ):
         self.source_url_template = source_url_template
+        self.cached_source_url_template = cached_source_url_template
         self.target_path_template = target_path_template
         self.xref_path_template = xref_path_template
         self.download_path_template = download_path_template
@@ -148,6 +155,7 @@ class ResourceTemplate:
 
         return cls(
             json['source'],
+            cached_source_url_template=json.get('cached_source'),
             target_path_template=json.get('target'),
             xref_path_template=json.get('xref'),
             download_path_template=json.get('download'),
@@ -169,7 +177,8 @@ class ResourceTemplate:
             url_context[key] = quote(value)
 
         return Resource(
-            source_url=self.source_url_template.format(**url_context),
+            source_url=self._render_template(self.source_url_template, url_context),
+            cached_source_url=self._render_template(self.cached_source_url_template, url_context),
             target_path=self._render_path(self.target_path_template, context),
             xref_path=self._render_path(self.xref_path_template, context),
             download_path=self._render_path(self.download_path_template, context),
@@ -180,5 +189,11 @@ class ResourceTemplate:
 
     # Renders a Path based on the given template
     def _render_path(self, path_template: Optional[str], context: dict) -> Optional[Path]:
+        rendered_template = self._render_template(path_template, context)
+        if rendered_template:
+            return Path(rendered_template)
+
+    # Renders a string based on the given template
+    def _render_template(self, path_template: Optional[str], context: dict) -> Optional[str]:
         if path_template:
-            return Path(path_template.format(**context))
+            return path_template.format(**context)
