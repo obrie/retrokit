@@ -100,8 +100,12 @@ remote_sync_system_manuals() {
   json_merge "{data_dir}/$system.json" "$data_file" backup=false
   jq -r 'to_entries[] | select(.value.manuals) | .key as $group | .value.manuals[] | [.name // $group, (.languages | join(",")), .url] | @tsv' "$data_file" > "$data_file.sources"
 
+  # Build the missing reference
+  jq -r 'to_entries[] | select(.value.manuals == null and .value.group == null) | .key' "$data_file" > "$data_file.missing"
+
   # Upload sources reference
   ia upload "$archive_id" "$data_file.sources" --remote-name="$system/$system-sources.tsv" --no-derive -H x-archive-keep-old-version:0
+  ia upload "$archive_id" "$data_file.missing" --remote-name="$system/$system-missing.tsv" --no-derive -H x-archive-keep-old-version:0
   if [ "$sources_only" == 'true' ]; then
     return
   fi
