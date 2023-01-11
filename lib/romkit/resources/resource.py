@@ -24,7 +24,7 @@ class Resource:
         self.source_url = source_url
 
         # Used the cached source if the primary source doesn't exist
-        if self.is_locally_sourced and not self.source_url_path.exists():
+        if cached_source_url and self.is_locally_sourced and not self.source_url_path.exists():
             self.source_url = cached_source_url
 
         # If locally sourced and we're not defining an explicit target, use the source
