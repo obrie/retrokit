@@ -5,6 +5,7 @@ from romkit.filters.control import ControlFilter, PlayerFilter
 from romkit.filters.description import FlagFilter, KeywordFilter
 from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter, EmulatorRatingFilter
 from romkit.filters.favorite import FavoriteFilter
+from romkit.filters.filesystem import FilesystemFilter
 from romkit.filters.language import LanguageFilter
 from romkit.filters.manual import ManualFilter
 from romkit.filters.media import MediaFilter
@@ -46,4 +47,5 @@ __all_filters__ = [
     ParentNameFilter,
     PartialParentNameFilter,
     ParentTitleFilter,
+    FilesystemFilter,
 ]

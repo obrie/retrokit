@@ -22,7 +22,6 @@ class BaseFilter:
         self.log = log
         self.config = config
 
-        self.download()
         self.load()
         self.filter_values = set(self.normalize(self.filter_values))
 
@@ -37,10 +36,6 @@ class BaseFilter:
             logging.debug(f'[{machine.name}] Skip ({type(self).__name__})')
 
         return allowed
-
-    # Downloads any relevant data needed to run the filter
-    def download(self) -> None:
-        pass
 
     # Loads all of the relevant data needed to run the filter
     def load(self) -> None:
