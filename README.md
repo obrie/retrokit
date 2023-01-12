@@ -1275,7 +1275,6 @@ retrokit what it is.  That includes:
 
 There are too many improvements to count here, but some ideas are:
 
-* Unify system metadata into a single file per system
 * Move manualkit to sdl2
 * Support for more systems (Amiga, Apple II, etc.)
 * Support for non-Raspbian platforms
