@@ -28,6 +28,9 @@ setup() {
   emulator_override_path="/opt/retropie/configs/$system/autoport/emulators/$emulator.cfg"
   rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
 
+  # Always make sure we restore first in case there's something left behind
+  __restore_${system_type}
+
   # Make sure we're actually setup for autoconfiguration
   if [ "$(__setting 'autoport' 'enabled')" != 'true' ]; then
     echo 'autoport disabled'
@@ -125,8 +128,10 @@ __setup_libretro() {
   local retroarch_driver_name
   if [ "$driver_name" == 'mouse' ]; then
     retroarch_driver_name=mouse
-  else
+  elif [ "$driver_name" == 'joystick' ]
     retroarch_driver_name=joypad
+  else
+    return
   fi
   local retroarch_config_path=/dev/shm/retroarch.cfg
 
@@ -288,11 +293,6 @@ __setup_mupen64plus() {
   local config_backup_path="$config_path.autoport"
   local auto_config_path=/opt/retropie/configs/n64/InputAutoCfg.ini
 
-  # Restore config backup
-  if [ -f "$config_backup_path" ]; then
-    __restore_mupen64plus
-  fi
-
   __match_players "$profile" joystick
   if [ ${#player_indexes[@]} -eq 0 ]; then
     # No matches found, use defaults
@@ -359,8 +359,7 @@ _EOF_
 # For example, if the input config path is /opt/retropie/configs/{system}/inputs.ini,
 # then this will:
 #
-# * Restore a backup if it already exists at /opt/retropie/configs/{system}/inputs.ini.autoport
-# * Create a backup to /opt/retropie/configs/{system}/inputs.ini.autoport
+# * Create a backup to /opt/retropie/configs/{system}/inputs.ini.autoport (if one doesn't already exist)
 # * Print the expected device-specific configuration path
 __prepare_config_overwrite() {
   local profile=$1
@@ -374,11 +373,6 @@ __prepare_config_overwrite() {
   local device_name=${devices["$device_index/name"]}
   local device_config_path="${config_path%.*}-$device_name.${config_path##*.}"
 
-  # Always restore the original configuration file if one was found
-  if [ -f "$config_backup_path" ]; then
-    mv "$config_backup_path" "$config_path"
-  fi
-
   if [ -z "$device_name" ]; then
     >&2 echo "No control overrides found for profile \"$profile\""
     return 1
@@ -389,7 +383,9 @@ __prepare_config_overwrite() {
     return 1
   fi
 
-  cp "$config_path" "$config_backup_path"
+  if [ ! -f "$config_backup_path" ]; then
+    cp "$config_path" "$config_backup_path"
+  fi
 
   echo "$device_config_path"
 }
@@ -711,8 +707,8 @@ __restore_libretro() {
 
 __restore_redream() {
   local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
-  local backup_path="$config_path.autoport"
-  if [ ! -f "$backup_path" ]; then
+  local config_backup_path="$config_path.autoport"
+  if [ ! -f "$config_backup_path" ]; then
     return
   fi
 
@@ -721,9 +717,9 @@ __restore_redream() {
 
   # Add original settings
   sed -i -e '$a\' "$config_path"
-  grep '^port[0-9]+=' "$backup_path" >> "$config_path"
+  grep '^port[0-9]+=' "$config_backup_path" >> "$config_path"
 
-  rm "$backup_path"
+  rm "$config_backup_path"
 }
 
 __restore_ppsspp() {
@@ -732,8 +728,8 @@ __restore_ppsspp() {
 
 __restore_drastic() {
   local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
-  local backup_path="$config_path.autoport"
-  if [ ! -f "$backup_path" ]; then
+  local config_backup_path="$config_path.autoport"
+  if [ ! -f "$config_backup_path" ]; then
     return
   fi
 
@@ -742,9 +738,9 @@ __restore_drastic() {
 
   # Add original settings
   sed -i -e '$a\' "$config_path"
-  grep 'controls_b' "$backup_path" >> "$config_path"
+  grep 'controls_b' "$config_backup_path" >> "$config_path"
 
-  rm "$backup_path"
+  rm "$config_backup_path"
 }
 
 __restore_hypseus() {
