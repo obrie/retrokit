@@ -44,7 +44,7 @@ setup() {
   local default_profile=$(__setting 'autoport' 'profile')
 
   # Joystick setup
-  local joystick_profile=$(__setting 'autoport' 'joystick_profile' || echo "$default_profile")
+  local joystick_profile=$(__setting 'autoport' 'joystick_profile' || __setting "$default_profile" 'joystick_profile' || echo "$default_profile")
   if [ -n "$joystick_profile" ]; then
     __setup_${system_type} "$joystick_profile" joystick
   else
@@ -52,7 +52,7 @@ setup() {
   fi
 
   # Mouse setup
-  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || echo "$default_profile")
+  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || || __setting "$default_profile" 'mouse_profile' || echo "$default_profile")
   if [ -n "$mouse_profile" ]; then
     __setup_${system_type} "$mouse_profile" mouse
   else
