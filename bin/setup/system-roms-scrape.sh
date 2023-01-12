@@ -116,17 +116,28 @@ __scrape_source() {
   fi
 }
 
-# Runs Skyscraper with the given arguments
+# Runs the scraper command without anything from stdin
 __scraper() {
+  __scraper_exec '' "${@}"
+}
+
+# Pipes the first value in the arguments to the scraper command
+__scraper_pipe() {
+  __scraper_exec "${@}"
+}
+
+# Runs Skyscraper with the given arguments
+__scraper_exec() {
   local IFS=$'\n'
+  local stdin_value=$1
   local extra_args=($(system_setting '.scraper.args[]?'))
-  local cmd=(/opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@}")
+  local cmd=(/opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@:2}")
 
   echo "Running Skyscraper: $system (${*})"
-  if [ -t 0 ]; then
+  if [ -z "$stdin_value" ]; then
     "${cmd[@]}"
   else
-    cat - | "${cmd[@]}"
+    echo "$stdin_value" | "${cmd[@]}"
   fi
 }
 
@@ -244,7 +255,7 @@ __import_user_overrides() {
 
     local rom_filename=$(basename "$rom_path")
     echo "Updating \"$rom_filename\" $resource_type to \"$resource_value\""
-    echo "$resource_value" | __scraper --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
+    __scraper_pipe "$resource_value" --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
   done < <(each_path '{system_config_dir}/scrape-overrides.json' jq -r 'to_entries[] | .key as $name | .value | to_entries[] | [$name, .key, .value] | @tsv' '{}')
 }
 
