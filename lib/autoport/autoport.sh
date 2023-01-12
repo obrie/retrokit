@@ -176,8 +176,8 @@ __setup_redream() {
     return
   fi
 
-  # Create config backup
-  cp -v "$config_path" "$config_backup_path"
+  # Create config backup (only if one doesn't already exist)
+  cp -vn "$config_path" "$config_backup_path"
 
   for player_index in "${player_indexes[@]}"; do
     local device_index=${players["$player_index/device_index"]}
@@ -299,8 +299,8 @@ __setup_mupen64plus() {
     return
   fi
 
-  # Create config backup
-  cp -v "$config_path" "$config_backup_path"
+  # Create config backup (only if one doesn't already exist)
+  cp -vn "$config_path" "$config_backup_path"
 
   local auto_config_keys=(
     'A Button'
@@ -383,9 +383,8 @@ __prepare_config_overwrite() {
     return 1
   fi
 
-  if [ ! -f "$config_backup_path" ]; then
-    cp "$config_path" "$config_backup_path"
-  fi
+  # Create config backup (only if one doesn't already exist)
+  cp -vn "$config_path" "$config_backup_path"
 
   echo "$device_config_path"
 }
