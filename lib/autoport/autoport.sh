@@ -28,19 +28,19 @@ setup() {
   emulator_override_path="/opt/retropie/configs/$system/autoport/emulators/$emulator.cfg"
   rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
 
+  # Determine what type of input configuration system we're dealing with
+  local system_type=$(__get_system_type "$emulator")
+  if [ -z "$system_type" ]; then
+    echo "autoport implementation unavailable for $emulator"
+    return
+  fi
+
   # Always make sure we restore first in case there's something left behind
   __restore_${system_type}
 
   # Make sure we're actually setup for autoconfiguration
   if [ "$(__setting 'autoport' 'enabled')" != 'true' ]; then
     echo 'autoport disabled'
-    return
-  fi
-
-  # Determine what type of input configuration system we're dealing with
-  local system_type=$(__get_system_type "$emulator")
-  if [ -z "$system_type" ]; then
-    echo "autoport implementation unavailable for $emulator"
     return
   fi
 
@@ -55,7 +55,7 @@ setup() {
   fi
 
   # Mouse setup
-  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || || __setting "$default_profile" 'mouse_profile' || echo "$default_profile")
+  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || __setting "$default_profile" 'mouse_profile' || echo "$default_profile")
   if [ -n "$mouse_profile" ]; then
     __setup_${system_type} "$mouse_profile" mouse
   else
@@ -63,7 +63,7 @@ setup() {
   fi
 
   # Keyboard setup
-  local keyboard_profile=$(__setting 'autoport' 'keyboard_profile' || || __setting "$default_profile" 'keyboard_profile' || echo "$default_profile")
+  local keyboard_profile=$(__setting 'autoport' 'keyboard_profile' || __setting "$default_profile" 'keyboard_profile' || echo "$default_profile")
   if [ -n "$keyboard_profile" ]; then
     __setup_${system_type} "$keyboard_profile" keyboard
   else
@@ -136,7 +136,7 @@ __setup_libretro() {
   local retroarch_driver_name
   if [ "$driver_name" == 'mouse' ]; then
     retroarch_driver_name=mouse
-  elif [ "$driver_name" == 'joystick' ]
+  elif [ "$driver_name" == 'joystick' ]; then
     retroarch_driver_name=joypad
   else
     return
