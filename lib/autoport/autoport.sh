@@ -1,6 +1,8 @@
 #!/bin/bash
 
-declare -g default_config_path system_override_path emulator_override_path rom_override_path
+declare -g \
+  default_config_path system_override_path emulator_override_path rom_override_path \
+  joystick_profile mouse_profile keyboard_profile
 
 usage() {
   echo "usage: $0 <setup|restore> <system_name> <emulator_name> /path/to/rom"
@@ -45,9 +47,11 @@ setup() {
   fi
 
   local default_profile=$(__setting 'autoport' 'profile')
+  joystick_profile=$(__setting 'autoport' 'joystick_profile' || __setting "$default_profile" 'joystick_profile' || echo "$default_profile")
+  mouse_profile=$(__setting 'autoport' 'mouse_profile' || __setting "$default_profile" 'mouse_profile' || echo "$default_profile")
+  keyboard_profile=$(__setting 'autoport' 'keyboard_profile' || __setting "$default_profile" 'keyboard_profile' || echo "$default_profile")
 
   # Joystick setup
-  local joystick_profile=$(__setting 'autoport' 'joystick_profile' || __setting "$default_profile" 'joystick_profile' || echo "$default_profile")
   if [ -n "$joystick_profile" ]; then
     __setup_${system_type} "$joystick_profile" joystick
   else
@@ -55,7 +59,6 @@ setup() {
   fi
 
   # Mouse setup
-  local mouse_profile=$(__setting 'autoport' 'mouse_profile' || __setting "$default_profile" 'mouse_profile' || echo "$default_profile")
   if [ -n "$mouse_profile" ]; then
     __setup_${system_type} "$mouse_profile" mouse
   else
@@ -63,7 +66,6 @@ setup() {
   fi
 
   # Keyboard setup
-  local keyboard_profile=$(__setting 'autoport' 'keyboard_profile' || __setting "$default_profile" 'keyboard_profile' || echo "$default_profile")
   if [ -n "$keyboard_profile" ]; then
     __setup_${system_type} "$keyboard_profile" keyboard
   else
@@ -174,7 +176,7 @@ __setup_redream() {
   local config_backup_path="$config_path.autoport"
 
   # Determine if a keyboard is being configured
-  local keyboard_limit=$(__setting "$profile" 'keyboard_limit')
+  local keyboard_limit=$(__setting "$keyboard_profile" 'keyboard_limit')
   keyboard_limit=${keyboard_limit:-0}
 
   __match_players "$profile" joystick
