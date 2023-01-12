@@ -27,14 +27,12 @@ configure() {
     rm -fv "$target_path"
 
     # Create a default file based on the input type used by the game
-    # (e.g. lightgun vs. trackball)
-    if [[ "$controls" == *lightgun* ]]; then
-      echo -e '[autoport]\nprofile = "lightgun"' > "$target_path"
-      echo "Setting profile to \"lightgun\" in $target_path"
-    elif [[ "$controls" == *trackball* ]]; then
-      echo -e '[autoport]\nprofile = "trackball"' > "$target_path"
-      echo "Setting profile to \"trackball\" in $target_path"
-    fi
+    for control_name in lightgun trackball pedal dial paddle keyboard; do
+      if [[ "$controls" == *$control_name* ]]; then
+        echo -e "[autoport]\nprofile = \"$control_name\"" > "$target_path"
+        echo "Setting profile to \"$control_name\" in $target_path"
+      fi
+    done
 
     # Find an override file for either the rom, playlist, or group
     local override_file=""
