@@ -162,7 +162,7 @@ __setup_redream() {
 
   # Restore config backup
   if [ -f "$config_backup_path" ]; then
-    mv -v "$config_backup_path" "$config_path"
+    __restore_redream
   fi
 
   __match_players "$profile" joystick
@@ -290,7 +290,7 @@ __setup_mupen64plus() {
 
   # Restore config backup
   if [ -f "$config_backup_path" ]; then
-    mv -v "$config_backup_path" "$config_path"
+    __restore_mupen64plus
   fi
 
   __match_players "$profile" joystick
@@ -710,7 +710,20 @@ __restore_libretro() {
 }
 
 __restore_redream() {
-  __restore_joystick_config /opt/retropie/configs/dreamcast/redream/redream.cfg
+  local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
+  local backup_path="$config_path.autoport"
+  if [ ! -f "$backup_path" ]; then
+    return
+  fi
+
+  # Remove override settings
+  sed -i '/^port[0-9]\+=/d' "$config_path"
+
+  # Add original settings
+  sed -i -e '$a\' "$config_path"
+  grep '^port[0-9]+=' "$backup_path" >> "$config_path"
+
+  rm "$backup_path"
 }
 
 __restore_ppsspp() {
@@ -718,7 +731,20 @@ __restore_ppsspp() {
 }
 
 __restore_drastic() {
-  __restore_joystick_config /opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local backup_path="$config_path.autoport"
+  if [ ! -f "$backup_path" ]; then
+    return
+  fi
+
+  # Remove override settings
+  sed -i '/controls_b/d' "$config_path"
+
+  # Add original settings
+  sed -i -e '$a\' "$config_path"
+  grep 'controls_b' "$backup_path" >> "$config_path"
+
+  rm "$backup_path"
 }
 
 __restore_hypseus() {
