@@ -4,7 +4,7 @@ system='psx'
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
-setup_module_id='systems/psx/guncon_conversions'
+setup_module_id='systems/psx/roms-ppf_patches'
 setup_module_desc='PSX patch files to convert konami lightgun code to guncon code'
 
 guncon_patch_base_url='https://archive.org/download/ps1-guncon-patches'
