@@ -190,7 +190,7 @@ __setup_redream() {
 
   # Add keyboard entries
   for (( player_index=0; player_index<$keyboard_limit; player_index++ )); do
-    echo "port${player_index}=dev:2,desc:auto,type:keyboard" >> "$config_path"
+    echo "port${player_index}=dev:0,desc:auto,type:keyboard" >> "$config_path"
   done
 
   # Add joystick entries
