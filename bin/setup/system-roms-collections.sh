@@ -62,7 +62,7 @@ __create_collection() {
     local found=false
     local filter_name
     for filter_name in "$name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
-      if [ -n "$filter_name" ] && [ "${collection_titles["$name"]}" ]; then
+      if [ -n "$filter_name" ] && [ "${collection_titles["$filter_name"]}" ]; then
         found=true
         break
       fi
