@@ -18,7 +18,6 @@ configure() {
   # Note this will *not* remove existing favorites.  If you want to
   # completely replace your favorites list, you should run a reinstall
   # of this setup module.
-  echo 'Setting favorites...'
   while IFS=$'\t' read -r rom_name playlist_name; do
     # Always search for the specific ROM
     __add_favorite "$rom_name"
@@ -56,6 +55,7 @@ __should_set_favorites() {
 # Adds the rom with the given name as a favorite
 __add_favorite() {
   local name=$1
+  echo "Adding $name to favorites"
   xmlstarlet ed --inplace -s "/gameList/game[contains(path, \"/$name.\")][1][not(favorite)]" -t elem -n 'favorite' -v 'true' "$gamelist_file"
 }
 
