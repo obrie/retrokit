@@ -1078,6 +1078,14 @@
     "rating": 0.95,
     "genres": [
       "Platformer / Action"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Akumajou Dracula X - Gekka No Yasoukyoku (J).pdf"
+      }
     ]
   },
   "Albaria no Otome - Uruwashi no Seikishitachi": {
@@ -6278,6 +6286,14 @@
     ],
     "merge": [
       "Clock Tower 2"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "de"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Clock Tower (E) (Ger).pdf"
+      }
     ]
   },
   "Clock Tower - The First Fear": {
@@ -9627,6 +9643,14 @@
     "rating": 0.85,
     "genres": [
       "RPG"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Dragon Quest IV - Michibikareshi Monotachi (J).pdf"
+      }
     ]
   },
   "Dragon Quest Monsters 1 & 2 - Hoshifuri no Yuusha to Bokujou no Nakama-tachi": {
@@ -12464,7 +12488,15 @@
     ],
     "renames": {
       "Fox Sports Golf '99 (USA)": "FOX Sports Golf '99 (USA)"
-    }
+    },
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Fox Sports Golf '99 (U).pdf"
+      }
+    ]
   },
   "Fox Sports Soccer '99": {
     "players": 4,
@@ -15747,6 +15779,14 @@
       "A Sangue Freddo",
       "Cold Blood",
       "De Sang Froid"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ru"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/In Cold Blood (Ru).pdf"
+      }
     ]
   },
   "In the Hunt": {
@@ -25277,6 +25317,14 @@
     "merge": [
       "Abe '99",
       "Oddworld - L'Exode d'Abe"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Oddworld - Abe's Exoddus (E).pdf"
+      }
     ]
   },
   "Oddworld - Abe's Exoddus + Duke Nukem - Time To Kill + B-Movie": {
@@ -26014,6 +26062,14 @@
     ],
     "merge": [
       "Pac-Man World - 20th Anniversary"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Pac-Man World 20th Anniversary (U).pdf"
+      }
     ]
   },
   "Paca Paca Passion": {
@@ -31440,6 +31496,14 @@
     "players": 1,
     "genres": [
       "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ja"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/Shadow and Shadow (J).pdf"
+      }
     ]
   },
   "Shake Kids": {
@@ -37410,6 +37474,14 @@
       "Fussball Live 2",
       "Monde des Bleus 2, Le",
       "This Is Soccer 2"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "ru"
+        ],
+        "url": "https://dl3.emu-land.net/manuals/psx/This is Football 2 (Ru).pdf"
+      }
     ]
   },
   "Thoroughbred Breeder - Sekai Seiha-hen": {
@@ -38193,13 +38265,9 @@
         ],
         "url": "https://archive.org/download/tomb_raider_iii_english/tomb_raider_iii_english.pdf"
       }
-    ]
-  },
-  "Tomb Raider III - Les Aventures de Lara Croft": {
-    "players": 1,
-    "rating": 0.8,
-    "genres": [
-      "Action / Adventure / Platformer"
+    ],
+    "merge": [
+      "Tomb Raider III - Les Aventures de Lara Croft"
     ]
   },
   "Tomb Raider Trilogy - Demo Disc": {},

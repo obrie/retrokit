@@ -258,11 +258,6 @@ __download_pdf() {
 
   mkdir -p "$(dirname "$download_path")"
 
-  if [[ "$source_url" == *the-eye* ]]; then
-    # Ignore for now until the-eye is back online
-    return 1
-  fi
-
   if [[ "$source_url" != *archive.org* ]]; then
     # For non-archive.org manuals, we reduce retries in order to keep site
     # owners happy and not overwhelm their servers
