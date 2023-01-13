@@ -3022,8 +3022,7 @@
     "manuals": [
       {
         "languages": [
-          "en-gb",
-          "fr"
+          "en"
         ],
         "url": "https://www.nintendo.com/consumer/gameslist/manuals/DS_Crosswords_DS.pdf"
       }
@@ -5434,7 +5433,7 @@
           "en-gb",
           "fr"
         ],
-        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/GoldenEye Rogue Agent (U).pdf"
+        "url": "https://archive.org/download/NintendoDSManuals/Goldeneye-RogueAgentusa.pdf"
       }
     ]
   },
@@ -5755,6 +5754,15 @@
     "genres": [
       "Action",
       "Adventure"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "fr"
+        ],
+        "url": "https://archive.org/download/retrokit-manuals/nds/nds-original.zip/Harry Potter and the Order of the Phoenix (en-gb,fr).pdf"
+      }
     ]
   },
   "Harvest Fishing": {
@@ -7338,6 +7346,14 @@
     "rating": 0.85,
     "genres": [
       "Role playing games"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/retrokit-manuals/nds/nds-original.zip/Pokemon Link! (en).pdf"
+      }
     ]
   },
   "Kingdom Hearts - Re-coded": {
@@ -10680,7 +10696,7 @@
         "languages": [
           "en"
         ],
-        "url": "https://the-eye.eu/public/Books/retrowith.in/Manuals/Manuals - Nintendo DS/The New York Times Crosswords (U).pdf"
+        "url": "https://archive.org/download/NintendoDSManuals/NewYorkTimesCrosswordsTheusa.pdf"
       }
     ]
   },
@@ -10831,6 +10847,14 @@
   "Nintendogs - Chihuahua & Friends": {
     "genres": [
       "Simulation"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/retrokit-manuals/nds/nds-original.zip/Nintendogs - Chihuahua & Friends (en).pdf"
+      }
     ]
   },
   "Nintendogs - Dachshund & Friends": {},
@@ -11817,6 +11841,14 @@
     "rating": 0.5,
     "genres": [
       "Puzzle-Game"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/retrokit-manuals/nds/nds-original.zip/Pokemon Link! (en).pdf"
+      }
     ]
   },
   "Pokemon Mystery Dungeon - Blue Rescue Team": {
@@ -14303,6 +14335,19 @@
     "rating": 0.65,
     "genres": [
       "Shooter"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en-gb",
+          "de",
+          "es",
+          "fr",
+          "it",
+          "nl"
+        ],
+        "url": "https://archive.org/download/retrokit-manuals/nds/nds-original.zip/Spyro - Shadow Legacy (en-gb,de,es,fr,it,nl).pdf"
+      }
     ]
   },
   "Squeeballs Party": {
