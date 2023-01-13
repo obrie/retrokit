@@ -237,6 +237,7 @@ __build_manual() {
   manual_ref['install_path']=$(render_template "$install_path_template" "${template_variables[@]}")
   manual_ref['archive_url']=$(render_template "$archive_url_template" "${template_variables[@]}")
   manual_ref['archive_url']=${manual_ref['archive_url']//&/%26}
+  manual_ref['archive_url']=${manual_ref['archive_url']//+/%2B}
 
   # Define playlist info
   if [ -n "$playlist_name" ]; then
