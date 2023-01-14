@@ -120,6 +120,11 @@ __configure_retroarch_core_options() {
     # Allowlist options specific to this core
     if [ -f "$target_path" ]; then
       sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
+
+      # If the file is empty after this, remove it
+      if [ ! -s "$target_path" ]; then
+        rm -fv "$target_path"
+      fi
     fi
   done < <(__list_libretro_roms 'opt')
 }
