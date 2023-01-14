@@ -118,7 +118,9 @@ __configure_retroarch_core_options() {
     done
 
     # Allowlist options specific to this core
-    sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
+    if [ -f "$target_path" ]; then
+      sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
+    fi
   done < <(__list_libretro_roms 'opt')
 }
 
