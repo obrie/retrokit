@@ -39,16 +39,16 @@ any_path_exists() {
 # If the path has been previously looked up, then the cache will be used.
 any_path_exists_cached() {
   local path=$1
-  local exists=${cached_path_exists[$override_path]}
+  local exists=${cached_path_exists[$path]}
 
   if [ -z "$exists" ]; then
-    if any_path_exists "$override_path"; then
+    if any_path_exists "$path"; then
       exists=true
     else
       exists=false
     fi
 
-    cached_path_exists[$override_path]=$exists
+    cached_path_exists[$path]=$exists
   fi
 
   if [ "$exists" == 'true' ]; then
