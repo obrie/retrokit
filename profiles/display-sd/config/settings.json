@@ -11,7 +11,7 @@
     "launch_theme": "gbz35"
   },
   "setup": {
-    "remove": [
+    "remove|overlays": [
       "system-overlays",
       "system-roms-overlays"
     ]
