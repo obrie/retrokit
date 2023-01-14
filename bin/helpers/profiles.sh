@@ -6,6 +6,8 @@
 declare -a __profiles=()
 declare -a __profile_dirs=()
 
+declare -A cached_path_exists
+
 # Loads and caches the current profiles being used
 init_profiles() {
   # Read list of profiles
@@ -30,6 +32,30 @@ init_profiles() {
 # See each_path for more information.
 any_path_exists() {
   each_path "$1" | grep . > /dev/null
+}
+
+# Determines whether any path exists from the given template and caches the result.
+# 
+# If the path has been previously looked up, then the cache will be used.
+any_path_exists_cached() {
+  local path=$1
+  local exists=${cached_path_exists[$override_path]}
+
+  if [ -z "$exists" ]; then
+    if any_path_exists "$override_path"; then
+      exists=true
+    else
+      exists=false
+    fi
+
+    cached_path_exists[$override_path]=$exists
+  fi
+
+  if [ "$exists" == 'true' ]; then
+    return 0
+  else
+    return 1
+  fi
 }
 
 # Finds the first path that matches the given template.

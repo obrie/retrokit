@@ -31,45 +31,42 @@ __configure_retroarch_configs() {
     return
   fi
 
-  local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-multitap.cfg' && echo 'true')
-  local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-lightgun.cfg' && echo 'true')
-
   # Merge in rom-specific overrides
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     # Retroarch emulator-specific config
-    local emulator_config_dir="$retroarch_config_dir/$library_name"
-    mkdir -p "$emulator_config_dir"
+    local target_path="$retroarch_config_dir/$library_name/$rom_name.cfg"
+    local paths_to_merge=()
 
-    local target_path="$emulator_config_dir/$rom_name.cfg"
+    # Peripheral overrides
+    for peripheral in ${peripherals//,/ }; do
+      paths_to_merge+=("{system_config_dir}/retroarch-$peripheral.cfg")
+    done
 
-    # Copy over multitap overrides
-    if [ "$has_multitap_config" == 'true' ] && [ "$is_multitap" == 'true' ]; then
-      ini_merge '{system_config_dir}/retroarch-multitap.cfg' "$target_path" backup=false
-    fi
-
-    # Copy over lightgun overrides
-    if [ "$has_lightgun_config" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
-      ini_merge '{system_config_dir}/retroarch-lightgun.cfg' "$target_path" backup=false
-    fi
+    # Control type overrides
+    paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
 
     if [ -n "$override_file" ]; then
-      ini_merge "$override_file" "$target_path" backup=false
+      paths_to_merge+=("$override_file")
     fi
+
+    # Merge in any valid paths
+    for path in "${paths_to_merge[@]}"; do
+      if any_path_exists_cached "$path"; then
+        ini_merge "$path" "$target_path" backup=false
+      fi
+    done
   done < <(__list_libretro_roms 'cfg')
 }
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     if [ -z "$override_file" ]; then
       continue
     fi
 
-    # Emulator-specific remapping directory
-    local emulator_remapping_dir="$retroarch_remapping_dir/$library_name"
-    mkdir -p "$emulator_remapping_dir"
-
-    ini_merge "$override_file" "$emulator_remapping_dir/$rom_name.rmp" backup=false overwrite=true
+    # Emulator-specific remapping file
+    ini_merge "$override_file" "$retroarch_remapping_dir/$library_name/$rom_name.rmp" backup=false overwrite=true
   done < <(__list_libretro_roms 'rmp')
 }
 
@@ -78,42 +75,46 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
-  local has_multitap_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-multitap.cfg' && echo 'true')
-  local has_lightgun_config=$(any_path_exists '{system_config_dir}/retroarch-core-options-lightgun.cfg' && echo 'true')
-
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name is_multitap is_lightgun override_file; do
-    if [ -z "$override_file" ] && { [ "$has_multitap_config" != 'true' ] || [ "$is_multitap" != 'true' ]; } && { [ "$has_lightgun_config" != 'true' ] || [ "$is_lightgun" != 'true' ]; }; then
-      # No overrides to define at the rom-level
-      continue
-    fi
-
+  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
-    mkdir -p "$emulator_config_dir"
-
-    # Copy over existing core overrides so we don't just get the
-    # core defaults
     local target_path="$emulator_config_dir/$rom_name.opt"
-    echo "Merging $core_option_prefix system overrides to $target_path"
-    cp -v "$system_core_options_path" "$target_path"
 
-    # Copy over multitap overrides
-    if [ "$has_multitap_config" == 'true' ] && [ "$is_multitap" == 'true' ]; then
-      ini_merge '{system_config_dir}/retroarch-core-options-multitap.cfg' "$target_path" backup=false
-    fi
+    local paths_to_merge=()
 
-    # Copy over lightgun overrides
-    if [ "$has_lightgun_config" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
-      ini_merge '{system_config_dir}/retroarch-core-options-lightgun.cfg' "$target_path" backup=false
-    fi
+    # Peripheral overrides
+    for peripheral in ${peripherals//,/ }; do
+      paths_to_merge+=("{system_config_dir}/retroarch-core-options-$peripheral.cfg")
+    done
 
-    # Select options specific to this core
-    sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
+    # Control type overrides
+    paths_to_merge+=("{system_config_dir}/retroarch-core-options-$control_type.cfg")
 
-    # Merge in game-specific overrides
     if [ -n "$override_file" ]; then
-      ini_merge "$override_file" "$target_path" backup=false
+      paths_to_merge+=("$override_file")
     fi
+
+    # Merge in any valid paths
+    local initialized_file=false
+    for path in "${paths_to_merge[@]}"; do
+      if any_path_exists_cached "$path"; then
+        if [ "$initialized_file" == 'false' ]; then
+          mkdir -p "$emulator_config_dir"
+
+          # Copy over existing core overrides so we don't just get the
+          # core defaults
+          echo "Merging $core_option_prefix system overrides to $target_path"
+          cp -v "$system_core_options_path" "$target_path"
+
+          initialized_file=true
+        fi
+
+        ini_merge "$path" "$target_path" backup=false
+      fi
+    done
+
+    # Allowlist options specific to this core
+    sed -i -n "/^$core_option_prefix[\-_]/p" "$target_path"
   done < <(__list_libretro_roms 'opt')
 }
 
@@ -144,9 +145,8 @@ __list_libretro_roms() {
       continue
     fi
 
-    # Tag data
-    local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
-    local is_multitap=$([[ "$peripherals" == *multitap* ]] && echo 'true' || echo 'false')
+    # Controls / Peripherals
+    local control_type=$(get_primary_control "$controls")
 
     local target_name
     if [ -n "$playlist_name" ]; then
@@ -179,7 +179,7 @@ __list_libretro_roms() {
       fi
     done
 
-    echo "$target_name"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$is_multitap"$'\t'"$is_lightgun"$'\t'"$override_file"
+    echo "$target_name"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$control_type"$'\t'"$peripherals"$'\t'"$override_file"
   done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 

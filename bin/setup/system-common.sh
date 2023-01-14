@@ -215,3 +215,23 @@ has_emulator() {
     return 1
   fi
 }
+
+##############
+# Controls
+##############
+
+# Gets the primary control used from a list of controls.
+# 
+# If no controls are specified, this will return "joy".
+get_primary_control() {
+  local controls=$1
+
+  for name in lightgun trackball pedal dial paddle keyboard; do
+    if [[ "$controls" == *$name* ]]; then
+      echo $name
+      return
+    fi
+  done
+
+  echo joy
+}
