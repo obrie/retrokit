@@ -1,6 +1,6 @@
 {
   "setup": {
-    "remove": [
+    "remove|local": [
       "system-roms-download"
     ]
   }
