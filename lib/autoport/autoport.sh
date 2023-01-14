@@ -93,7 +93,6 @@ __find_setting() {
   local path=$1
   local section=$2
   local key=$3
-  local ignore_section=false
   if [ $# -gt 3 ]; then local "${@:4}"; fi
 
   if [ ! -f "$path" ]; then
@@ -101,12 +100,7 @@ __find_setting() {
   fi
 
   # Find the relevant section
-  local section_content
-  if [ "$ignore_section" == 'true' ]; then
-    section_content=$(cat "$path")
-  else
-    section_content=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
-  fi
+  local section_content=$(sed -n "/^\[$section\]/,/^\[/p" "$path")
 
   # Find the associated key within that section
   if echo "$section_content" | grep -Eq "^[ \t]*$key[ \t]*="; then
