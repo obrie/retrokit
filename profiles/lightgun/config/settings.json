@@ -1,0 +1,12 @@
+{
+  "overlays": {
+    "lightgun_border": {
+      "enabled": true
+    }
+  },
+  "setup": {
+    "add|lightgun": [
+      "hardware/controllers/sinden"
+    ]
+  }
+}
