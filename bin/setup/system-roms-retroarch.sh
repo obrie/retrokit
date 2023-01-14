@@ -43,7 +43,9 @@ __configure_retroarch_configs() {
     done
 
     # Control type overrides
-    paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
+    if [ -n "$control_type" ]; then
+      paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
+    fi
 
     if [ -n "$override_file" ]; then
       paths_to_merge+=("$override_file")
@@ -88,7 +90,9 @@ __configure_retroarch_core_options() {
     done
 
     # Control type overrides
-    paths_to_merge+=("{system_config_dir}/retroarch-core-options-$control_type.cfg")
+    if [ -n "$control_type" ]; then
+      paths_to_merge+=("{system_config_dir}/retroarch-core-options-$control_type.cfg")
+    fi
 
     if [ -n "$override_file" ]; then
       paths_to_merge+=("$override_file")

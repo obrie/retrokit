@@ -221,8 +221,6 @@ has_emulator() {
 ##############
 
 # Gets the primary control used from a list of controls.
-# 
-# If no controls are specified, this will return "joy".
 get_primary_control() {
   local controls=$1
 
@@ -232,6 +230,4 @@ get_primary_control() {
       return
     fi
   done
-
-  echo joy
 }
