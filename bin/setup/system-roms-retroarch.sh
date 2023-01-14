@@ -32,7 +32,7 @@ __configure_retroarch_configs() {
   fi
 
   # Merge in rom-specific overrides
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     # Retroarch emulator-specific config
     local target_path="$retroarch_config_dir/$library_name/$rom_name.cfg"
     local paths_to_merge=()
@@ -62,7 +62,7 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     if [ -z "$override_file" ]; then
       continue
     fi
@@ -77,7 +77,7 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
-  while IFS=$'\t' read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     local target_path="$emulator_config_dir/$rom_name.opt"
@@ -190,7 +190,7 @@ __list_libretro_roms() {
       fi
     done
 
-    echo "$target_name"$'\t'"$core_name"$'\t'"$core_option_prefix"$'\t'"$library_name"$'\t'"$control_type"$'\t'"$peripherals"$'\t'"$override_file"
+    echo "${target_name}»${core_name}»${core_option_prefix}»${library_name}»${control_type}»${peripherals}»${override_file}"
   done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 
