@@ -7,7 +7,12 @@ setup_module_id='system-roms-inputs'
 setup_module_desc='Configure game-specific automatic port selection using autoport'
 
 configure() {
-  __load_override_files
+  # Load which overrides are available to merge
+  declare -A override_names
+  while read override_file; do
+    local override_name=$(basename "$override_file" '.cfg')
+    override_names["$override_name"]=true
+  done < <(each_path '{system_config_dir}/autoport' find '{}' -name '*.cfg')
 
   mkdir -p "$retropie_system_config_dir/autoport"
 
@@ -15,9 +20,8 @@ configure() {
   declare -A installed_playlists
   declare -A installed_files
 
-  while IFS=» read -r rom_name playlist_name title parent_name group_name controls; do
+  while IFS=» read -r rom_name disc_name playlist_name title parent_name group_name controls; do
     local target_path="$retropie_system_config_dir/autoport/${playlist_name:-$rom_name}.cfg"
-
     if [ "${installed_files["$target_path"]}" ]; then
       # We've already processed this file (it's a playlist) -- don't process it again
       continue
@@ -33,18 +37,13 @@ configure() {
       echo "Setting profile to \"$control_type\" in $target_path"
     fi
 
-    # Find an override file for either the rom, playlist, or group
-    local override_file=""
-    local filename
-    for filename in "$rom_name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
-      if [ -z "$filename" ]; then
-        continue
-      fi
-
-      override_file=${override_files["$filename"]}
-      if [ -n "$override_file" ]; then
-        ini_merge "$override_file" "$target_path" backup=false
-        break
+    # Merge in overrides (lowest to highest priority)
+    local override_name
+    declare -A merged_names
+    for override_name in "$group_name" "$title" "$disc_name" "$parent_name" "$playlist_name" "$rom_name"; do
+      if [ -n "$override_name" ] && [ "${override_names[$override_name]}" ] && [ ! "${merged_names[$override_name]}" ]; then
+        ini_merge "{system_config_dir}/autoport/$override_name.cfg" "$target_path" backup=false
+        merged_names[$override_name]=true
       fi
     done
 
@@ -52,22 +51,12 @@ configure() {
     if [ -f "$target_path" ]; then
       installed_files["$target_path"]=1
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc.name, .playlist.name, .title, .parent.name, .group.name, (.controls | join(","))] | join("»")')
 
   # Remove unused files
   while read -r path; do
     [ "${installed_files["$path"]}" ] || rm -v "$path"
   done < <(find "$retropie_system_config_dir/autoport" -maxdepth 1 -name '*.cfg')
-}
-
-# Load autoport rom-specific configuration overrides
-__load_override_files() {
-  declare -Ag override_files
-
-  while read override_file; do
-    local override_name=$(basename "$override_file" '.cfg')
-    override_files["$override_name"]=$override_file
-  done < <(each_path '{system_config_dir}/autoport' find '{}' -name '*.cfg')
 }
 
 restore() {

@@ -32,7 +32,7 @@ __configure_retroarch_configs() {
   fi
 
   # Merge in rom-specific overrides
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_str; do
     # Retroarch emulator-specific config
     local target_path="$retroarch_config_dir/$library_name/$rom_name.cfg"
     local paths_to_merge=()
@@ -47,9 +47,9 @@ __configure_retroarch_configs() {
       paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
     fi
 
-    if [ -n "$override_file" ]; then
-      paths_to_merge+=("$override_file")
-    fi
+    local override_paths
+    IFS=» read -r -a override_paths <<< "$override_paths_str"
+    paths_to_merge+=("${override_paths[@]}")
 
     # Merge in any valid paths
     for path in "${paths_to_merge[@]}"; do
@@ -62,13 +62,16 @@ __configure_retroarch_configs() {
 
 # Games-specific controller mapping overrides
 __configure_retroarch_remappings() {
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
-    if [ -z "$override_file" ]; then
-      continue
-    fi
-
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_str; do
     # Emulator-specific remapping file
-    ini_merge "$override_file" "$retroarch_remapping_dir/$library_name/$rom_name.rmp" backup=false overwrite=true
+    local target_path="$retroarch_remapping_dir/$library_name/$rom_name.rmp"
+
+    local paths_to_merge
+    IFS=» read -r -a paths_to_merge <<< "$override_paths_str"
+
+    for path in "${paths_to_merge[@]}"; do
+      ini_merge "$path" "$target_path" backup=false
+    done
   done < <(__list_libretro_roms 'rmp')
 }
 
@@ -77,7 +80,7 @@ __configure_retroarch_remappings() {
 __configure_retroarch_core_options() {
   local system_core_options_path=$(get_retroarch_path 'core_options_path')
 
-  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_file; do
+  while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_str; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
     local target_path="$emulator_config_dir/$rom_name.opt"
@@ -94,9 +97,9 @@ __configure_retroarch_core_options() {
       paths_to_merge+=("{system_config_dir}/retroarch-core-options-$control_type.cfg")
     fi
 
-    if [ -n "$override_file" ]; then
-      paths_to_merge+=("$override_file")
-    fi
+    local override_paths
+    IFS=» read -r -a override_paths <<< "$override_paths_str"
+    paths_to_merge+=("${override_paths[@]}")
 
     # Merge in any valid paths
     local initialized_file=false
@@ -136,16 +139,16 @@ __list_libretro_roms() {
   load_emulator_data
 
   # Load which overrides are available
-  declare -Ag override_files
+  declare -Ag override_names
   while read override_file; do
     local override_name=$(basename "$override_file" ".$extension")
-    override_files["$override_name"]=$override_file
+    override_names["$override_name"]=true
   done < <(each_path '{system_config_dir}/retroarch' find '{}' -name "*.$extension")
 
   # Track which playlists we've installed so we don't do it twice
   declare -A installed_playlists
 
-  while IFS=» read -r rom_name playlist_name title parent_name group_name rom_path emulator controls peripherals; do
+  while IFS=» read -r rom_name disc_name playlist_name title parent_name group_name rom_path emulator controls peripherals; do
     # Look up emulator attributes as those are the important ones
     # for configuration purposes
     emulator=${emulator:-default}
@@ -174,24 +177,29 @@ __list_libretro_roms() {
       target_name=$rom_name
     fi
 
-    # Find a file for either the rom or its group.  Priority order:
-    # * ROM Name
-    # * ROM Disc Name
-    # * ROM Title
-    # * ROM Playlist Name
-    local override_file=""
-    local filename
-    for filename in "$rom_name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
-      if [ -n "$filename" ]; then
-        override_file=${override_files["$filename"]}
-        if [ -n "$override_file" ]; then
-          break
+    # Find override files (lowest priority to highest priority)
+    declare -A checked_overrides
+    local override_paths=()
+    for override_name in "$group_name" "$title" "$disc_name" "$parent_name" "$playlist_name" "$rom_name"; do
+      if [ -n "$override_name" ] && [ "${override_names[$override_name]}" ] && [ ! "${checked_overrides[$override_name]}" ]; then
+        local system_override_path="{system_config_dir}/retroarch/$override_name.$extension"
+        local emulator_override_path="{system_config_dir}/retroarch/$library_name/$override_name.$extension"
+
+        if any_path_exists "$system_override_path"; then
+          override_paths+=("${system_override_path}")
         fi
+
+        if any_path_exists "$emulator_override_path"; then
+          override_paths+=("${emulator_override_path}")
+        fi
+
+        checked_overrides[$override_name]=true
       fi
     done
+    local override_paths_delimited=$(IFS=» ; echo "${override_paths[*]}")
 
-    echo "${target_name}»${core_name}»${core_option_prefix}»${library_name}»${control_type}»${peripherals}»${override_file}"
-  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
+    echo "${target_name}»${core_name}»${core_option_prefix}»${library_name}»${control_type}»${peripherals}»${override_paths_delimited}"
+  done < <(romkit_cache_list | jq -r '[.name, .disc.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 
 restore() {
