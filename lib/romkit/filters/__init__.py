@@ -15,6 +15,7 @@ from romkit.filters.parent import CloneFilter, ParentNameFilter, PartialParentNa
 from romkit.filters.peripheral import PeripheralFilter
 from romkit.filters.rating import RatingFilter
 from romkit.filters.romset import ROMSetFilter
+from romkit.filters.system import SystemFilter
 from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter, TagFilter, SeriesFilter
 
 # The order here helps in terms of performance, so we should order it based
@@ -48,4 +49,5 @@ __all_filters__ = [
     PartialParentNameFilter,
     ParentTitleFilter,
     FilesystemFilter,
+    SystemFilter,
 ]
