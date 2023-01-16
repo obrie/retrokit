@@ -199,7 +199,7 @@ __list_libretro_roms() {
     local override_paths_delimited=$(IFS=» ; echo "${override_paths[*]}")
 
     echo "${target_name}»${core_name}»${core_option_prefix}»${library_name}»${control_type}»${peripherals}»${override_paths_delimited}"
-  done < <(romkit_cache_list | jq -r '[.name, .disc.name, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .disc, .playlist.name, .title, .parent.name, .group.name, .path, .emulator, (.controls | join(",")), (.peripherals | join(","))] | join("»")')
 }
 
 restore() {
