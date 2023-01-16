@@ -6,76 +6,22 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-collections'
 setup_module_desc='Creates EmulationStation custom collections'
 
-target_collections_dir="$HOME/.emulationstation/collections"
+es_collections_dir="$HOME/.emulationstation/collections"
 readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
-declare -A installed_collections
-
 configure() {
-  mkdir -pv "$target_collections_dir"
+  restore
 
-  __create_custom_collections
-  __create_romkit_collections
-  __cleanup_unused_collections
-}
+  mkdir -pv "$es_collections_dir"
 
-# Creates collections defined by custom, pre-defined emulationstation file
-__create_custom_collections() {
-  while read -r collection_path; do
-    local name=$(basename "$collection_path" '.tsv')
-    __create_collection "$name" "$collection_path"
-  done < <(each_path '{config_dir}/emulationstation/collections' find '{}' -name '*.tsv')
-}
-
-# Creates collections defined by metadata in romkit selections
-__create_romkit_collections() {
-  while read -r name; do
-    __create_collection "custom-$name" <(romkit_cache_list | jq -r "select(.collections | index(\"$name\")) | [\"$system\", .title] | @tsv" | uniq)
-  done < <(romkit_cache_list | jq -r '.collections[]' | sort | uniq)
-}
-
-# Creates the collection defined by the given file
-__create_collection() {
-  local collection_name=$1
-  local source_collection_path=$2
-
-  # Remove any existing entries for this system from the collection
-  local target_collection_path="$target_collections_dir/$collection_name.cfg"
-  if [ -f "$target_collection_path" ]; then
-    sed -i "/\/$system\//d" "$target_collection_path"
-  fi
-
-  # Mark this collection as being managed by retrokit
-  installed_collections["$collection_name"]=1
-  touch "$target_collection_path" "$target_collection_path.rk-src"
-
-  # Track which titles are in this collection
-  declare -A collection_titles
-  while IFS=$'\t' read -r rom_title; do
-    collection_titles["$rom_title"]=1
-  done < <(grep -E "^$system"$'\t' "$source_collection_path" | cut -d$'\t' -f 2)
-
-  # Track which playlists we've installed
+  # Track which collections / playlists we've installed
+  declare -A installed_collections
   declare -A installed_playlists
 
-  while IFS=» read -r name playlist_name title parent_name group_name install_path; do
-    local found=false
-    local filter_name
-    for filter_name in "$name" "$playlist_name" "$title" "$parent_name" "$group_name"; do
-      if [ -n "$filter_name" ] && [ "${collection_titles["$filter_name"]}" ]; then
-        found=true
-        break
-      fi
-    done
-    if [ "$found" == 'false' ]; then
-      # Not in the collection -- skip
-      continue
-    fi
+  while IFS=» read -r name playlist_name install_path collections_dsv; do
+    local collections
+    IFS=» read -r -a collections <<< "$collections_dsv"
 
-    # ROMs in collection files contain just the title in order to work
-    # for different regions, so we find the first installed ROM that matches
-    # (the ROM could be present in multiple directories and we only want one in
-    # the collection)
     local rom_path
     if [ -z "$playlist_name" ]; then
       local rom_filename=$(basename "$install_path")
@@ -91,13 +37,21 @@ __create_collection() {
     fi
 
     if [ -f "$rom_path" ]; then
-      echo "Adding $rom_path to $target_collection_path"
-      echo "$rom_path" >> "$target_collection_path"
-    fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, .title, .parent .name, .group .name, .path] | join("»")' | sort)
+      for collection_name in "${collections[@]}"; do
+        local collection_path="$es_collections_dir/$collection_name.cfg"
+        echo "Adding $rom_path to $collection_path"
+        echo "$rom_path" >> "$collection_path"
 
-  # Sort the collection at the end
-  sort -o "$target_collection_path" "$target_collection_path"
+        installed_collections[$collection_name]=1
+      done
+    fi
+  done < <(romkit_cache_list | jq -r '[.name, .playlist .name, .path, (.collections | join ("»"))] | join("»")' | sort)
+
+  # Sort the modified collections
+  for collection_name in "${!installed_collections[@]}"; do
+    local collection_path="$es_collections_dir/$collection_name.cfg"
+    sort -o "$collection_path" "$collection_path"
+  done
 }
 
 # Finds file in the system's configured rom directories
@@ -112,33 +66,20 @@ __find_in_directories() {
   done
 }
 
-# Clean collections we didn't install to
-__cleanup_unused_collections() {
-  if [ ! -d "$target_collections_dir" ]; then
+restore() {
+  if [ ! -d "$es_collections_dir" ]; then
     return
   fi
 
-  while read collection_ref_path; do
-    local collection_name=$(basename "$collection_ref_path" .cfg.rk-src)
-    if [ "${installed_collections["$collection_name"]}" ]; then
-      continue
-    fi
-
+  while read collection_path; do
     # Remove this system from the given collection
-    local collection_path="$target_collections_dir/$collection_name.cfg"
-    if [ -f "$collection_path" ]; then
-      sed -i "/\/$system\//d" "$collection_path"
-    fi
+    sed -i "/\/$system\//d" "$collection_path"
 
     # Delete the collection if it's now empty
     if [ ! -s "$collection_path" ]; then
-      rm -fv "$collection_path" "$collection_path.rk-src"
+      rm -fv "$collection_path"
     fi
-  done < <(find "$target_collections_dir" -name '*.cfg.rk-src')
-}
-
-restore() {
-  __cleanup_unused_collections
+  done < <(find "$es_collections_dir" -name '*.cfg')
 }
 
 setup "${@}"
