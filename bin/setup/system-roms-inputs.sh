@@ -11,7 +11,7 @@ configure() {
   declare -A override_names
   while read override_file; do
     local override_name=$(basename "$override_file" '.cfg')
-    override_names["$override_name"]=true
+    override_names["$override_name"]=1
   done < <(each_path '{system_config_dir}/autoport' find '{}' -name '*.cfg')
 
   mkdir -p "$retropie_system_config_dir/autoport"
@@ -43,7 +43,7 @@ configure() {
     for override_name in "$group_name" "$title" "$disc_name" "$parent_name" "$playlist_name" "$rom_name"; do
       if [ -n "$override_name" ] && [ "${override_names[$override_name]}" ] && [ ! "${merged_names[$override_name]}" ]; then
         ini_merge "{system_config_dir}/autoport/$override_name.cfg" "$target_path" backup=false
-        merged_names[$override_name]=true
+        merged_names[$override_name]=1
       fi
     done
 
