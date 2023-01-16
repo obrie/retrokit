@@ -38,7 +38,7 @@ configure() {
 
     if [ -f "$rom_path" ]; then
       for collection_name in "${collections[@]}"; do
-        local collection_path="$es_collections_dir/$collection_name.cfg"
+        local collection_path="$es_collections_dir/custom-$collection_name.cfg"
         echo "Adding $rom_path to $collection_path"
         echo "$rom_path" >> "$collection_path"
 
@@ -49,7 +49,7 @@ configure() {
 
   # Sort the modified collections
   for collection_name in "${!installed_collections[@]}"; do
-    local collection_path="$es_collections_dir/$collection_name.cfg"
+    local collection_path="$es_collections_dir/custom-$collection_name.cfg"
     sort -o "$collection_path" "$collection_path"
   done
 }
