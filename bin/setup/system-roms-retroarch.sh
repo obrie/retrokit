@@ -104,20 +104,23 @@ __configure_retroarch_core_options() {
     # Merge in any valid paths
     local initialized_file=false
     for path in "${paths_to_merge[@]}"; do
-      if any_path_exists_cached "$path"; then
-        if [ "$initialized_file" == 'false' ]; then
-          mkdir -p "$emulator_config_dir"
-
-          # Copy over existing core overrides so we don't just get the
-          # core defaults
-          echo "Merging $core_option_prefix system overrides to $target_path"
-          cp -v "$system_core_options_path" "$target_path"
-
-          initialized_file=true
-        fi
-
-        ini_merge "$path" "$target_path" backup=false
+      # Ensure the path contains overrides for this core -- otherwise no need to merge
+      if ! any_path_exists_cached "$path" || ! each_path "$path" cat '{}' | grep -Eq "^$core_option_prefix[-_]"; then
+        continue
       fi
+
+      if [ "$initialized_file" == 'false' ]; then
+        mkdir -p "$emulator_config_dir"
+
+        # Copy over existing core overrides so we don't just get the
+        # core defaults
+        echo "Merging $core_option_prefix system overrides to $target_path"
+        cp -v "$system_core_options_path" "$target_path"
+
+        initialized_file=true
+      fi
+
+      ini_merge "$path" "$target_path" backup=false
     done
 
     # Allowlist options specific to this core
