@@ -6,7 +6,10 @@
   "scraper": {
     "args": [
       "-p", "pcenginecd",
-      "-i", "$HOME/RetroPie/roms/pce-cd"
+      "-i", "$HOME/RetroPie/roms/pce-cd",
+      "-g", "$HOME/.emulationstation/gamelists/pce-cd",
+      "-o", "$HOME/.emulationstation/downloaded_media/pce-cd",
+      "-d", "cache/pce-cd"
     ]
   },
   "overlays": {

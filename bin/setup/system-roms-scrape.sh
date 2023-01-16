@@ -146,7 +146,7 @@ __build_missing_reports() {
   mkdir -p '/opt/retropie/configs/all/skyscraper/reports/'
 
   # Remove existing Skyscraper reports
-  find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-$system-*" -exec rm -f '{}' +
+  find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-*" -exec rm -f '{}' +
 
   # Generate new reports of missing resources.  We look at only 2 resources as
   # indicators of a prior issue:
@@ -155,7 +155,7 @@ __build_missing_reports() {
   __scraper --cache report:missing=title,screenshot
 
   # Generate aggregate list of roms
-  cat /opt/retropie/configs/all/skyscraper/reports/report-$system-* | sort | uniq > "$aggregate_report_file"
+  cat /opt/retropie/configs/all/skyscraper/reports/report-* | sort | uniq > "$aggregate_report_file"
 
   # Remove files explicitly being ignored (but still show up when using --cache)
   while read ignore_path; do
