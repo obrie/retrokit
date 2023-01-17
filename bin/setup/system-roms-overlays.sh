@@ -53,12 +53,12 @@ configure() {
     fi
 
     # Look up either by the current rom or the parent rom
-    local url=${overlay_urls[$(normalize_rom_name "$rom_name")]}
+    local url=${overlay_urls[$rom_name]:-${overlay_urls[$(normalize_rom_name "$rom_name")]}}
     local overlay_title=$title
     if [ -z "$url" ]; then
       # Note we use a different overlay title when referring to the group because sometimes
       # the overlays are different for alternative titles within the group
-      url=${overlay_urls[$(normalize_rom_name "$group_name")]}
+      url=${overlay_urls[$group_name]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
       overlay_title=$group_name
     fi
 
@@ -110,11 +110,13 @@ __load_overlay_urls() {
     fi
 
     while IFS=$'\t' read -r rom_name encoded_rom_name ; do
+      local source_url="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
+      overlay_urls["$rom_name"]="$source_url"
+
       # Generate a unique identifier for this rom
       local rom_id=$(normalize_rom_name "$rom_name")
-
       if [ -z "${overlay_urls["$rom_id"]}" ]; then
-        overlay_urls["$rom_id"]="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
+        overlay_urls["$rom_id"]="$source_url"
       fi
     done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
   done < <(system_setting '.overlays.repos[] | [.repo, .branch // "master", .path] | @tsv')
