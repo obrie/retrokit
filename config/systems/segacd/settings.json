@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/segacd.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-SegaCD/raw/master/retroarch/overlay/Sega-CD.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SegaCD",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-SegaCD",
-        "path": "retroarch/overlay/GameBezels/SegaCD",
-        "default": "retroarch/overlay/Sega-CD.png"
+        "path": "retroarch/overlay/GameBezels/SegaCD"
       }
     ],
     "lightgun_border": {

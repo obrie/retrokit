@@ -4,11 +4,11 @@
     "path": "$HOME/retrokit/data/sg-1000.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelproject-SG-1000/raw/master/retroarch/overlay/Sega-SG-1000.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SG-1000",
-        "path": "retroarch/overlay/GameBezels/SG-1000",
-        "default": "retroarch/overlay/Sega-SG-1000.png"
+        "path": "retroarch/overlay/GameBezels/SG-1000"
       }
     ]
   },

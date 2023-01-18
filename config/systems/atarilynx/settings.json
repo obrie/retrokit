@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/atarilynx.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-AtariLynx/raw/master/retroarch/overlay/Atari-Lynx-Horizontal.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-AtariLynx",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-AtariLynx",
-        "path": "retroarch/overlay/GameBezels/AtariLynx",
-        "default": "retroarch/overlay/Atari-Lynx-Horizontal.png"
+        "path": "retroarch/overlay/GameBezels/AtariLynx"
       }
     ]
   },

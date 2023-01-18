@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/nes.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-NES/raw/master/retroarch/overlay/Nintendo-Entertainment-System.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-NES",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-NES",
-        "path": "retroarch/overlay/GameBezels/NES",
-        "default": "retroarch/overlay/Nintendo-Entertainment-System.png"
+        "path": "retroarch/overlay/GameBezels/NES"
       }
     ],
     "lightgun_border": {

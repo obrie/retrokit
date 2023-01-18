@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/snes.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-SNES/raw/master/retroarch/overlay/Super-Nintendo-Entertainment-System.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SNES",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-SNES",
-        "path": "retroarch/overlay/GameBezels/SNES",
-        "default": "retroarch/overlay/Super-Nintendo-Entertainment-System.png"
+        "path": "retroarch/overlay/GameBezels/SNES"
       }
     ],
     "lightgun_border": {

@@ -4,6 +4,8 @@
     "path": "$HOME/retrokit/data/wonderswancolor.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Horizontal.png",
+    "vertical": "https://github.com/thebezelproject/bezelprojectsa-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Vertical.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-WonderSwanColor",
@@ -11,9 +13,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-WonderSwanColor",
-        "path": "retroarch/overlay/GameBezels/WonderSwanColor",
-        "default": "retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Horizontal.png",
-        "vertical": "retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Vertical.png"
+        "path": "retroarch/overlay/GameBezels/WonderSwanColor"
       }
     ]
   },

@@ -4,6 +4,8 @@
     "path": "$HOME/retrokit/data/arcade.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",
+    "vertical": "https://github.com/thebezelproject/bezelprojectsa-MAME/raw/master/retroarch/overlay/MAME-Vertical.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MAME",
@@ -11,9 +13,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-MAME",
-        "path": "retroarch/overlay/ArcadeBezels",
-        "default": "retroarch/overlay/MAME-Horizontal.png",
-        "vertical": "retroarch/overlay/MAME-Vertical.png"
+        "path": "retroarch/overlay/ArcadeBezels"
       }
     ],
     "lightgun_border": {

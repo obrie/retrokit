@@ -13,6 +13,7 @@
     ]
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-SuperGrafx/raw/master/retroarch/overlay/NEC-SuperGrafx.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SuperGrafx",
@@ -20,8 +21,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-SuperGrafx",
-        "path": "retroarch/overlay/GameBezels/SuperGrafx",
-        "default": "retroarch/overlay/NEC-SuperGrafx.png"
+        "path": "retroarch/overlay/GameBezels/SuperGrafx"
       }
     ]
   },

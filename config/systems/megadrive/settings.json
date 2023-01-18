@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/megadrive.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-MegaDrive/raw/master/retroarch/overlay/Sega-Mega-Drive.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MegaDrive",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-MegaDrive",
-        "path": "retroarch/overlay/GameBezels/Megadrive",
-        "default": "retroarch/overlay/Sega-Mega-Drive.png"
+        "path": "retroarch/overlay/GameBezels/Megadrive"
       }
     ],
     "lightgun_border": {

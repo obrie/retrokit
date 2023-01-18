@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/saturn.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-Saturn/raw/master/retroarch/overlay/Sega-Saturn.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Saturn",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Saturn",
-        "path": "retroarch/overlay/GameBezels/Saturn",
-        "default": "retroarch/overlay/Sega-Saturn.png"
+        "path": "retroarch/overlay/GameBezels/Saturn"
       }
     ],
     "lightgun_border": {

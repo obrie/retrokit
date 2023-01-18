@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/coleco.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-ColecoVision/raw/master/retroarch/overlay/Colecovision.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-ColecoVision",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-ColecoVision",
-        "path": "retroarch/overlay/GameBezels/ColecoVision",
-        "default": "retroarch/overlay/Colecovision.png"
+        "path": "retroarch/overlay/GameBezels/ColecoVision"
       }
     ]
   },

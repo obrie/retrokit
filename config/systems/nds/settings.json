@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/nds.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectSA-NDS/raw/master/retroarch/overlay/Nintendo-DS.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-NDS",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectSA-NDS",
-        "path": "retroarch/overlay/GameBezels/NDS",
-        "default": "retroarch/overlay/Nintendo-DS.png"
+        "path": "retroarch/overlay/GameBezels/NDS"
       }
     ],
     "lightgun_border": {

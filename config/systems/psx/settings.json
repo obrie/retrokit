@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/psx.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-PSX/raw/master/retroarch/overlay/Sony-PlayStation.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PSX",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-PSX",
-        "path": "retroarch/overlay/GameBezels/PSX",
-        "default": "retroarch/overlay/Sony-PlayStation.png"
+        "path": "retroarch/overlay/GameBezels/PSX"
       }
     ],
     "lightgun_border": {

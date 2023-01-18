@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/videopac.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-Videopac/raw/master/retroarch/overlay/Magnavox-Odyssey-2.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Videopac",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Videopac",
-        "path": "retroarch/overlay/GameBezels/Videopac",
-        "default": "retroarch/overlay/Magnavox-Odyssey-2.png"
+        "path": "retroarch/overlay/GameBezels/Videopac"
       }
     ]
   },

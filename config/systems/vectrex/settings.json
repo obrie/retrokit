@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/vectrex.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-GCEVectrex/raw/master/retroarch/overlay/GCE-Vectrex.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GCEVectrex",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-GCEVectrex",
-        "path": "retroarch/overlay/GameBezels/GCEVectrex",
-        "default": "retroarch/overlay/GCE-Vectrex.png"
+        "path": "retroarch/overlay/GameBezels/GCEVectrex"
       }
     ]
   },

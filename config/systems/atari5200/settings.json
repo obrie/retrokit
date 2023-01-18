@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/atari5200.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-Atari5200/raw/master/retroarch/overlay/Atari-5200.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Atari5200",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Atari5200",
-        "path": "retroarch/overlay/GameBezels/Atari5200",
-        "default": "retroarch/overlay/Atari-5200.png"
+        "path": "retroarch/overlay/GameBezels/Atari5200"
       }
     ]
   },

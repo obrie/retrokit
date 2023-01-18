@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/gbc.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-GBC/raw/master/retroarch/overlay/Nintendo-Game-Boy-Color.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GBC",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-GBC",
-        "path": "retroarch/overlay/GameBezels/GBC",
-        "default": "retroarch/overlay/Nintendo-Game-Boy-Color.png"
+        "path": "retroarch/overlay/GameBezels/GBC"
       }
     ]
   },

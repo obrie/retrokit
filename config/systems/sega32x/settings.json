@@ -4,11 +4,11 @@
     "path": "$HOME/retrokit/data/sega32x.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelproject-Sega32X/raw/master/retroarch/overlay/Sega-32X.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Sega32X",
-        "path": "retroarch/overlay/GameBezels/Sega32X",
-        "default": "retroarch/overlay/Sega-32X.png"
+        "path": "retroarch/overlay/GameBezels/Sega32X"
       }
     ]
   },

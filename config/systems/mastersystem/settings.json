@@ -4,11 +4,11 @@
     "path": "$HOME/retrokit/data/mastersystem.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-MasterSystem/raw/master/retroarch/overlay/Sega-Master-System.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelprojectsa-MasterSystem",
-        "path": "retroarch/overlay/GameBezels/MasterSystem",
-        "default": "retroarch/overlay/Sega-Master-System.png"
+        "path": "retroarch/overlay/GameBezels/MasterSystem"
       }
     ],
     "lightgun_border": {

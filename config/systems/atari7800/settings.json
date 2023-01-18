@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/atari7800.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-Atari7800/raw/master/retroarch/overlay/Atari-7800.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Atari7800",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-Atari7800",
-        "path": "retroarch/overlay/GameBezels/Atari7800",
-        "default": "retroarch/overlay/Atari-7800.png"
+        "path": "retroarch/overlay/GameBezels/Atari7800"
       }
     ]
   },

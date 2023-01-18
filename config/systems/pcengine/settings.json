@@ -4,6 +4,7 @@
     "path": "$HOME/retrokit/data/pcengine.json"
   },
   "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectsa-PCEngine/raw/master/retroarch/overlay/NEC-PC-Engine.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PCEngine",
@@ -11,8 +12,7 @@
       },
       {
         "repo": "thebezelproject/bezelprojectsa-PCEngine",
-        "path": "retroarch/overlay/GameBezels/PCEngine",
-        "default": "retroarch/overlay/NEC-PC-Engine.png"
+        "path": "retroarch/overlay/GameBezels/PCEngine"
       }
     ]
   },

@@ -42,27 +42,29 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name playlist_name title group_name orientation emulator controls; do
+  while IFS=» read -r rom_name playlist_name title group_name orientation emulator overlay_url controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
+    local overlay_title=$group_name
 
     # Make sure this is a libretro core
     if [ -z "$library_name" ]; then
       continue
     fi
 
-    # Look up either by the current rom or the parent rom
-    local url=${overlay_urls[$rom_name]:-${overlay_urls[$(normalize_rom_name "$rom_name")]}}
-    local overlay_title=$title
-    if [ -z "$url" ]; then
-      # Note we use a different overlay title when referring to the group because sometimes
-      # the overlays are different for alternative titles within the group
-      url=${overlay_urls[$group_name]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
-      overlay_title=$group_name
+    if [ -z "$overlay_url" ]; then
+      # Look up either by the current rom or the parent rom
+      overlay_url=${overlay_urls[$rom_name]:-${overlay_urls[$(normalize_rom_name "$rom_name")]}}
+
+      if [ -n "$overlay_url" ]; then
+        overlay_title=$title
+      else
+        overlay_url=${overlay_urls[$group_name]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
+      fi
     fi
 
-    if [ -z "$url" ]; then
+    if [ -z "$overlay_url" ]; then
       echo "[$rom_name] No overlay available"
 
       if [ -z "$playlist_name" ]; then
@@ -77,7 +79,7 @@ configure() {
     fi
 
     # We have an image: download it
-    __install_overlay "$url" "$overlay_title" "$is_lightgun"
+    __install_overlay "$overlay_url" "$overlay_title" "$is_lightgun"
 
     if [ -z "$playlist_name" ]; then
       # Install overlay for single-disc game
@@ -86,7 +88,7 @@ configure() {
       # Install overlay for the playlist
       __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, (.controls | join(","))] | join("»")')
+  done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, .media.overlay, (.controls | join(","))] | join("»")')
 
   __remove_unused_configs
 }
