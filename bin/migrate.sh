@@ -29,7 +29,7 @@ __migrate_system() {
   local system=$1
   . "$dir/setup/system-common.sh"
 
-  while IFS=» read path name title playlist_name xref_path; do
+  while IFS=» read path name playlist_name group_name manual_filename xref_path; do
     # Skip if:
     # * No xref path configured
     # * xref path doesn't exist
@@ -47,7 +47,6 @@ __migrate_system() {
     # Determine the old rom name
     local old_filename=$(basename "$old_path")
     local old_name=${old_filename%.*}
-    local old_title=${old_name%% \(*}
     local old_playlist_name=${old_name// (Disc [0-9A-Z]*)/}
 
     echo "# \"$old_name\" => \"$name\""
@@ -55,29 +54,32 @@ __migrate_system() {
 
     # Migrate each of:
     # * Name
-    # * Title
     # * Playlist Name
     # 
     # All of these are migrated since different files for different parts
     # of the system may make use of any of these.
     if [ "$old_name" != "$name" ]; then
       migrated_names["$old_name"]=1
-      __migrate_rom "$system" "$old_name" "$name" "$title"
-    fi
-
-    if [ "$old_title" != "$title" ] && [ -z "${migrated_names["$old_title"]}" ]; then
-      migrated_names["$old_title"]=1
-      __migrate_rom "$system" "$old_title" "$title" "$title"
+      __migrate_rom "$system" "$old_name" "$name" "$group_name" "$manual_filename"
     fi
 
     if [ -n "$playlist_name" ] && [ "$old_playlist_name" != "$playlist_name" ] && [ -z "${migrated_names["$old_playlist_name"]}" ]; then
       migrated_names["$old_playlist_name"]=1
-      __migrate_rom "$system" "$old_playlist_name" "$playlist_name" "$title"
+      __migrate_rom "$system" "$old_playlist_name" "$playlist_name" "$group_name" "$manual_filename"
     fi
 
     # Update symlink
     echo ln -fs $(__bash_esc "$path") $(__bash_esc "$xref_path")
-  done < <(romkit_cache_list | jq -r '[.path, .name, .title, .playlist .name, .xref .path] | join("»")')
+  done < <(romkit_cache_list | jq -r '
+    [
+      .path,
+      .name,
+      .playlist .name,
+      .group .name,
+      (select(.manual) | (.manual.name // .group.name) + " (" + (.manual.languages | join(",")) + ")"),
+      .xref .path
+    ] | join("»")
+  ')
 }
 
 __migrate_rom() {
@@ -90,15 +92,38 @@ __migrate_rom() {
 }
 
 # Migrates media in ~/.emulationstation/downloaded_media/
+# 
+# All files are identified by rom name (or playlist name) except:
+# * Manual files / downloads (by manual name)
 __migrate_es_downloaded_media() {
   local system=$1
   local old_name=$2
   local new_name=$3
+  local group_name=$4
+  local manual_filename=$5
 
-  __migrate_files_in_dir "$HOME/.emulationstation/downloaded_media/$system" "$old_name" "$new_name"
+  local media_path="$HOME/.emulationstation/downloaded_media/$system"
+  __migrate_files_in_dir "$media_path" "$old_name" "$new_name"
+
+  # Migrate source manuals (use a different name than the rom)
+  local manuals_path="$media_path/manuals"
+  local manual_path="$manuals_path/$old_name.pdf"
+  if [ -f "$manual_path" ]; then
+    local source_manual_path=$(realpath "$manual_path")
+    local source_manual_filename=$(basename "$source_manual_path" .pdf)
+
+    if [ "$manual_filename" != "$source_manual_filename" ]; then
+      for manuals_dirname in .files .download; do
+        __migrate_files_in_dir "$manuals_path/$manuals_dirname" "$source_manual_filename" "$manual_filename"
+        __migrate_files_in_dir "$manuals_path/$manuals_dirname" "$source_manual_filename (archive)" "$manual_filename (archive)"
+      done
+    fi
+  fi
 }
 
 # Migrates EmulationStation collections
+# 
+# All references are by rom name (or playlist name) only.
 __migrate_es_collections() {
   local system=$1
   local old_name=$2
@@ -119,6 +144,8 @@ __migrate_es_collections() {
 }
 
 # Migrates EmulationStation gamelists
+# 
+# All references are by rom name (or playlist name) only.
 __migrate_es_gamelist() {
   local system=$1
   local old_name=$2
@@ -138,6 +165,8 @@ __migrate_es_gamelist() {
 }
 
 # Migrates the Skyscraper quickid database
+# 
+# All references are by rom name (or playlist name) only.
 __migrate_scraper_db() {
   local system=$1
   local old_name=$2
@@ -150,17 +179,23 @@ __migrate_scraper_db() {
 }
 
 # Migrates Retroarch configurations in /opt/retropie/
+# 
+# All references are by rom name (or playlist name) except:
+# * Overlay configurations (based on title or group name)
 __migrate_retroarch_config_files() {
   local system=$1
   local old_name=$2
   local new_name=$3
-  local new_title=$4
+  local new_group=$4
 
   local old_title=${old_name%% \(*}
+  local new_title=${new_name%% \(*}
 
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   local retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
   local retroarch_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
+
+  declare -A image_paths_to_migrate
 
   while read -r library_name; do
     # Core options / Overlays
@@ -169,10 +204,23 @@ __migrate_retroarch_config_files() {
       # Overlay references
       # 
       # These files, although they may use the ROM's full name, will always
-      # reference overlays named by title -- so when replacing strings in the
-      # file, we need to pay attention to the old / new title.
+      # reference overlays named by title or group -- so when replacing strings
+      # in the file, we need to pay attention that.
       while read old_filename; do
-        __migrate_string_in_file "$old_filename" "$old_title" "$new_title"
+        local old_image_filename=$(grep input_overlay "$old_filename" | grep -oE "[^/]+\.cfg")
+        local old_image_name=$(basename "$old_image_filename" .cfg)
+
+        local new_image_name
+        if [ "$old_image_name" == "$old_title" ]; then
+          new_image_name=$new_title
+        else
+          new_image_name=$new_group
+        fi
+
+        if [ "$old_image_name" != "$new_image_name" ]; then
+          __migrate_string_in_file "$old_filename" "$old_image_name" "$new_image_name"
+          image_paths_to_migrate[$old_image_name]=$new_image_name
+        fi
       done < <(find "$emulator_config_dir" -name "$old_name.cfg")
 
       # Rename files
@@ -196,10 +244,15 @@ __migrate_retroarch_config_files() {
   done < <(find "$retroarch_overlay_dir/$system" -name "$old_name.cfg")
 
   # Rename Overlay files
-  __migrate_files_in_dir "$retroarch_overlay_dir/$system" "$old_name" "$new_name"
+  for old_image_name in "${!image_paths_to_migrate[@]}"; do
+    local new_image_name=${image_paths_to_migrate[$old_image_name]}
+    __migrate_files_in_dir "$retroarch_overlay_dir/$system" "$old_image_name" "$new_image_name"
+  done
 }
 
 # Migrates files in ~/RetroPie/roms/
+# 
+# All references are by rom name (or playlist name) only.
 __migrate_rom_files() {
   local system=$1
   local old_name=$2
