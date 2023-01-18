@@ -69,16 +69,6 @@ sync_system_nointro_dats() {
   done < <(jq -r 'select(.romsets) | .romsets[] | select(.name | test("nointro")) | .resources.dat.source' "$app_dir/config/systems/$system/settings.json")
 }
 
-sync_system_metadata() {
-  local system=$1
-  if [ "$system" == 'ports' ]; then
-    return
-  fi
-
-  . "$dir/setup/system-common.sh"
-  TMPDIR="$tmp_dir" python3 "$bin_dir/tools/scrape-metadata.py" "$system_settings_file" "${@:2}"
-}
-
 # Sync manuals to internetarchive
 remote_sync_system_manuals() {
   local system=$1
@@ -128,21 +118,6 @@ remote_sync_system_manuals() {
       rm "$zip_path"
     fi
   fi
-}
-
-reclone_system_redump_dats() {
-  local system=$1
-
-  . "$dir/setup/system-common.sh"
-
-  # Look to see whether a redump dat exists
-  local redump_dat_path=$(system_setting '.romsets[] | select(.name == "redump") | .resources.dat.target')
-  if [ -z "$redump_dat_path" ]; then
-    return
-  fi
-
-  # Re-generate clones
-  "$bin_dir/tools/reclone.py" "$system_config_dir/clones.json" "$redump_dat_path"
 }
 
 if [[ $# -lt 1 ]]; then
