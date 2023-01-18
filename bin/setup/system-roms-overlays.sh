@@ -35,10 +35,7 @@ configure() {
 
   # Load the data we're going to need to do the install
   load_emulator_data
-
-  if [ "$enable_game_overrides" == 'true' ]; then
-    __load_overlay_urls
-  fi
+  __load_overlay_urls
 
   declare -Ag installed_files
   declare -A installed_playlists
@@ -102,9 +99,14 @@ configure() {
 
 # Get the list of overlay images available in each repo
 __load_overlay_urls() {
-  echo "Loading list of available overlays..."
   declare -Ag overlay_urls
 
+  if [ "$enable_game_overrides" != 'true' ]; then
+    # Game-specific overrides disabled -- skip
+    return
+  fi
+
+  echo "Loading list of available overlays..."
   while IFS=$'\t' read -r repo branch rom_images_path; do
     local github_tree_path="$system_tmp_dir/$repo.list"
 
