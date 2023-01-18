@@ -3289,7 +3289,10 @@
     "genres": [
       "Sports",
       "Sports / Soccer"
-    ]
+    ],
+    "media": {
+      "overlay": "https://github.com/thebezelproject/bezelproject-GBA/raw/master/retroarch/overlay/GameBezels/GBA/Disney Sports - Soccer (USA).png"
+    }
   },
   "Disney Sports - Football (USA)": {
     "players": 1,
@@ -3297,10 +3300,7 @@
     "genres": [
       "Sports",
       "Sports / Football"
-    ],
-    "media": {
-      "overlay": "https://github.com/thebezelproject/bezelproject-GBA/raw/master/retroarch/overlay/GameBezels/GBA/Disney Sports - Soccer (USA).png"
-    }
+    ]
   },
   "Disney Sports - Motocross": {
     "players": 1,
