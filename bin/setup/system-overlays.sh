@@ -9,7 +9,7 @@ setup_module_desc='System-specific default overlays to display for libretro emul
 retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
 
 configure() {
-  if [ $(system_setting '.overlays | has("repos")') == 'false' ]; then
+  if [ $(system_setting '.overlays | has("default")') == 'false' ]; then
     echo 'No overlays configured'
     restore
     return
