@@ -11,6 +11,7 @@
     "launch_theme": "pixel-metadata"
   },
   "overlays": {
+    "enable_game_overrides": true,
     "lightgun_border": {
       "enabled": false,
       "width": 30,
