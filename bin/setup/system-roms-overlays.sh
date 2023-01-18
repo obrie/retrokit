@@ -12,7 +12,7 @@ retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 system_overlay_dir="$retroarch_overlay_dir/$system"
 
 # Overlay support
-supports_vertical_overlays=$(system_setting 'select(.overlays) | .overlays.repos[] | select(.vertical) | [0] | true')
+supports_vertical_overlays=$(system_setting 'select(.overlays .vertical) | true')
 enable_lightgun_borders=$(setting '.overlays.lightgun_border.enabled')
 
 # This installs individual overlays from The Bezel Project.  We use this instead of
@@ -27,7 +27,7 @@ enable_lightgun_borders=$(setting '.overlays.lightgun_border.enabled')
 # ROM added.
 configure() {
   # Check if we're actually installing overlays
-  if [ -z "$(system_setting '.overlays.repos')" ]; then
+  if [ -z "$(system_setting '.overlays.default')" ]; then
     echo 'No overlays configured'
     return
   fi
