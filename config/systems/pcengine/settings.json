@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/pcengine.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-PCEngine/raw/master/retroarch/overlay/NEC-PC-Engine.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-PCEngine/raw/master/retroarch/overlay/NEC-PC-Engine.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PCEngine",
         "path": "retroarch/overlay/GameBezels/PCEngine"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-PCEngine",
+        "repo": "thebezelproject/bezelprojectSA-PCEngine",
         "path": "retroarch/overlay/GameBezels/PCEngine"
       }
     ]

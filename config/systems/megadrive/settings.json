@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/megadrive.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-MegaDrive/raw/master/retroarch/overlay/Sega-Mega-Drive.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-MegaDrive/raw/master/retroarch/overlay/Sega-Mega-Drive.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MegaDrive",
         "path": "retroarch/overlay/GameBezels/Megadrive"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-MegaDrive",
+        "repo": "thebezelproject/bezelprojectSA-MegaDrive",
         "path": "retroarch/overlay/GameBezels/Megadrive"
       }
     ],

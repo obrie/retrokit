@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/ngp.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-NGP/raw/master/retroarch/overlay/SNK-Neo-Geo-Pocket.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-NGP/raw/master/retroarch/overlay/SNK-Neo-Geo-Pocket.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-NGP",
         "path": "retroarch/overlay/GameBezels/NGP"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-NGP",
+        "repo": "thebezelproject/bezelprojectSA-NGP",
         "path": "retroarch/overlay/GameBezels/NGP"
       }
     ]

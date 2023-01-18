@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/vectrex.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-GCEVectrex/raw/master/retroarch/overlay/GCE-Vectrex.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-GCEVectrex/raw/master/retroarch/overlay/GCE-Vectrex.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GCEVectrex",
         "path": "retroarch/overlay/GameBezels/GCEVectrex"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-GCEVectrex",
+        "repo": "thebezelproject/bezelprojectSA-GCEVectrex",
         "path": "retroarch/overlay/GameBezels/GCEVectrex"
       }
     ]

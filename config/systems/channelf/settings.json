@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/channelf.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-ChannelF/raw/master/retroarch/overlay/Fairchild-Channel-F.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-ChannelF/raw/master/retroarch/overlay/Fairchild-Channel-F.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-ChannelF",
         "path": "retroarch/overlay/GameBezels/ChannelF"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-ChannelF",
+        "repo": "thebezelproject/bezelprojectSA-ChannelF",
         "path": "retroarch/overlay/GameBezels/ChannelF"
       }
     ]

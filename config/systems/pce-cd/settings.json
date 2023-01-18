@@ -13,14 +13,14 @@
     ]
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-PCE-CD/raw/master/retroarch/overlay/NEC-PC-Engine-CD.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-PCE-CD/raw/master/retroarch/overlay/NEC-PC-Engine-CD.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-PCE-CD",
         "path": "retroarch/overlay/GameBezels/PCE-CD"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-PCE-CD",
+        "repo": "thebezelproject/bezelprojectSA-PCE-CD",
         "path": "retroarch/overlay/GameBezels/PCE-CD"
       }
     ]

@@ -4,15 +4,15 @@
     "path": "$HOME/retrokit/data/wonderswancolor.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Horizontal.png",
-    "vertical": "https://github.com/thebezelproject/bezelprojectsa-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Vertical.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Horizontal.png",
+    "vertical": "https://github.com/thebezelproject/bezelprojectSA-WonderSwanColor/raw/master/retroarch/overlay/Bandai-WonderSwan%E2%80%94Color-Vertical.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-WonderSwanColor",
         "path": "retroarch/overlay/GameBezels/WonderSwanColor"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-WonderSwanColor",
+        "repo": "thebezelproject/bezelprojectSA-WonderSwanColor",
         "path": "retroarch/overlay/GameBezels/WonderSwanColor"
       }
     ]

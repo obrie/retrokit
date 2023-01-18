@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/atari2600.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-Atari2600/raw/master/retroarch/overlay/Atari-2600.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Atari2600/raw/master/retroarch/overlay/Atari-2600.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Atari2600",
         "path": "retroarch/overlay/GameBezels/Atari2600"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-Atari2600",
+        "repo": "thebezelproject/bezelprojectSA-Atari2600",
         "path": "retroarch/overlay/GameBezels/Atari2600"
       }
     ]

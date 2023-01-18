@@ -7,14 +7,14 @@
     "args": ["--includepattern", "*.zip"]
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-C64/raw/master/retroarch/overlay/Commodore-64.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-C64/raw/master/retroarch/overlay/Commodore-64.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-C64",
         "path": "retroarch/overlay/GameBezels/C64"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-C64",
+        "repo": "thebezelproject/bezelprojectSA-C64",
         "path": "retroarch/overlay/GameBezels/C64"
       }
     ],

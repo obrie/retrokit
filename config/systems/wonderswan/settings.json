@@ -4,15 +4,15 @@
     "path": "$HOME/retrokit/data/wonderswan.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-WonderSwan/raw/master/retroarch/overlay/Bandai-WonderSwan-Horizontal.png",
-    "vertical": "https://github.com/thebezelproject/bezelprojectsa-WonderSwan/raw/master/retroarch/overlay/Bandai-WonderSwan-Vertical.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-WonderSwan/raw/master/retroarch/overlay/Bandai-WonderSwan-Horizontal.png",
+    "vertical": "https://github.com/thebezelproject/bezelprojectSA-WonderSwan/raw/master/retroarch/overlay/Bandai-WonderSwan-Vertical.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-WonderSwan",
         "path": "retroarch/overlay/GameBezels/WonderSwan"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-WonderSwan",
+        "repo": "thebezelproject/bezelprojectSA-WonderSwan",
         "path": "retroarch/overlay/GameBezels/WonderSwan"
       }
     ]

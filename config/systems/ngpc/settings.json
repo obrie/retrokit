@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/ngpc.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-NGPC/raw/master/retroarch/overlay/SNK-Neo-Geo-Pocket-Color.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-NGPC/raw/master/retroarch/overlay/SNK-Neo-Geo-Pocket-Color.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-NGPC",
         "path": "retroarch/overlay/GameBezels/NGP"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-NGPC",
+        "repo": "thebezelproject/bezelprojectSA-NGPC",
         "path": "retroarch/overlay/GameBezels/NGP"
       }
     ]

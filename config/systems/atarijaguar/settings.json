@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/atarijaguar.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-AtariJaguar/raw/master/retroarch/overlay/Atari-Jaguar.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-AtariJaguar/raw/master/retroarch/overlay/Atari-Jaguar.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-AtariJaguar",
         "path": "retroarch/overlay/GameBezels/AtariJaguar"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-AtariJaguar",
+        "repo": "thebezelproject/bezelprojectSA-AtariJaguar",
         "path": "retroarch/overlay/GameBezels/AtariJaguar"
       }
     ]

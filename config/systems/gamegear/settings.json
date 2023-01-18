@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/gamegear.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-GameGear/raw/master/retroarch/overlay/Sega-Game-Gear.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-GameGear/raw/master/retroarch/overlay/Sega-Game-Gear.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GameGear",
         "path": "retroarch/overlay/GameBezels/GameGear"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-GameGear",
+        "repo": "thebezelproject/bezelprojectSA-GameGear",
         "path": "retroarch/overlay/GameBezels/GameGear"
       }
     ]

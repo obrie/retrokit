@@ -13,14 +13,14 @@
     ]
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-SuperGrafx/raw/master/retroarch/overlay/NEC-SuperGrafx.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-SuperGrafx/raw/master/retroarch/overlay/NEC-SuperGrafx.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-SuperGrafx",
         "path": "retroarch/overlay/GameBezels/SuperGrafx"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-SuperGrafx",
+        "repo": "thebezelproject/bezelprojectSA-SuperGrafx",
         "path": "retroarch/overlay/GameBezels/SuperGrafx"
       }
     ]

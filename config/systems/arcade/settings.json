@@ -4,15 +4,15 @@
     "path": "$HOME/retrokit/data/arcade.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",
-    "vertical": "https://github.com/thebezelproject/bezelprojectsa-MAME/raw/master/retroarch/overlay/MAME-Vertical.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",
+    "vertical": "https://github.com/thebezelproject/bezelprojectSA-MAME/raw/master/retroarch/overlay/MAME-Vertical.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-MAME",
         "path": "retroarch/overlay/ArcadeBezels"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-MAME",
+        "repo": "thebezelproject/bezelprojectSA-MAME",
         "path": "retroarch/overlay/ArcadeBezels"
       }
     ],

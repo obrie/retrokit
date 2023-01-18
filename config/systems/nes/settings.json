@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/nes.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-NES/raw/master/retroarch/overlay/Nintendo-Entertainment-System.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-NES/raw/master/retroarch/overlay/Nintendo-Entertainment-System.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-NES",
         "path": "retroarch/overlay/GameBezels/NES"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-NES",
+        "repo": "thebezelproject/bezelprojectSA-NES",
         "path": "retroarch/overlay/GameBezels/NES"
       }
     ],

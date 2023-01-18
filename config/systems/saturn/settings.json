@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/saturn.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-Saturn/raw/master/retroarch/overlay/Sega-Saturn.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Saturn/raw/master/retroarch/overlay/Sega-Saturn.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Saturn",
         "path": "retroarch/overlay/GameBezels/Saturn"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-Saturn",
+        "repo": "thebezelproject/bezelprojectSA-Saturn",
         "path": "retroarch/overlay/GameBezels/Saturn"
       }
     ],

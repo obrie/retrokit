@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/intellivision.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-Intellivision/raw/master/retroarch/overlay/Mattel-Intellivision.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Intellivision/raw/master/retroarch/overlay/Mattel-Intellivision.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Intellivision",
         "path": "retroarch/overlay/GameBezels/Intellivision"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-Intellivision",
+        "repo": "thebezelproject/bezelprojectSA-Intellivision",
         "path": "retroarch/overlay/GameBezels/Intellivision"
       }
     ]

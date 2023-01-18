@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/gba.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-GBA/raw/master/retroarch/overlay/Nintendo-Game-Boy-Advance.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-GBA/raw/master/retroarch/overlay/Nintendo-Game-Boy-Advance.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GBA",
         "path": "retroarch/overlay/GameBezels/GBA"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-GBA",
+        "repo": "thebezelproject/bezelprojectSA-GBA",
         "path": "retroarch/overlay/GameBezels/GBA"
       }
     ]

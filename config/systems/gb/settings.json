@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/gb.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-GB/raw/master/retroarch/overlay/Nintendo-Game-Boy.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-GB/raw/master/retroarch/overlay/Nintendo-Game-Boy.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-GB",
         "path": "retroarch/overlay/GameBezels/GB"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-GB",
+        "repo": "thebezelproject/bezelprojectSA-GB",
         "path": "retroarch/overlay/GameBezels/GB"
       }
     ]

@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/dreamcast.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-Dreamcast/raw/master/retroarch/overlay/Dreamcast.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Dreamcast/raw/master/retroarch/overlay/Dreamcast.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Dreamcast",
         "path": "retroarch/overlay/GameBezels/Dreamcast"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-Dreamcast",
+        "repo": "thebezelproject/bezelprojectSA-Dreamcast",
         "path": "retroarch/overlay/GameBezels/Dreamcast"
       }
     ],

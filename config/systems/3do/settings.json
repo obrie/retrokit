@@ -4,14 +4,14 @@
     "path": "$HOME/retrokit/data/3do.json"
   },
   "overlays": {
-    "default": "https://github.com/thebezelproject/bezelprojectsa-3DO/raw/master/retroarch/overlay/Panasonic-3DO.png",
+    "default": "https://github.com/thebezelproject/bezelprojectSA-3DO/raw/master/retroarch/overlay/Panasonic-3DO.png",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-3DO",
         "path": "retroarch/overlay/GameBezels/3DO"
       },
       {
-        "repo": "thebezelproject/bezelprojectsa-3DO",
+        "repo": "thebezelproject/bezelprojectSA-3DO",
         "path": "retroarch/overlay/GameBezels/3DO"
       }
     ],
