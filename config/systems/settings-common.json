@@ -6,6 +6,9 @@
     "gamelist_args": ["--flags", "skipexistingcovers,skipexistingmarquees,skipexistingscreenshots,skipexistingvideos,skipexistingwheels"],
     "gamelist_include_base_args": true
   },
+  "overlays": {
+    "enable_game_overrides": true
+  },
   "metadata": {
     "manuals": {
       "languages": {

@@ -14,6 +14,7 @@ system_overlay_dir="$retroarch_overlay_dir/$system"
 # Overlay support
 supports_vertical_overlays=$(system_setting 'select(.overlays .vertical) | true')
 enable_lightgun_borders=$(setting '.overlays.lightgun_border.enabled')
+enable_game_overrides=$(setting '.overlays.enable_game_overrides')
 
 # This installs individual overlays from The Bezel Project.  We use this instead of
 # The Bezel Project's installer for two primary reasons:
@@ -34,7 +35,10 @@ configure() {
 
   # Load the data we're going to need to do the install
   load_emulator_data
-  __load_overlay_urls
+
+  if [ "$enable_game_overrides" == 'true' ]; then
+    __load_overlay_urls
+  fi
 
   declare -Ag installed_files
   declare -A installed_playlists
@@ -42,7 +46,7 @@ configure() {
 
   # Download overlays for installed roms and their associated emulator according
   # to romkit
-  while IFS=» read -r rom_name playlist_name title group_name orientation emulator overlay_url controls; do
+  while IFS=» read -r rom_name playlist_name title group_name orientation emulator overlay_override_url controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
     local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
@@ -53,19 +57,22 @@ configure() {
       continue
     fi
 
-    if [ -z "$overlay_url" ]; then
+    local url
+    if [ -n "$overlay_override_url" ] && [ "$enable_game_overrides" == 'true' ]; then
+      url=$overlay_override_url
+    else
       # Look up either by the current rom or the parent rom
-      overlay_url=${overlay_urls[$rom_name]:-${overlay_urls[$(normalize_rom_name "$rom_name")]}}
+      url=${overlay_urls[$rom_name]:-${overlay_urls[$(normalize_rom_name "$rom_name")]}}
 
-      if [ -n "$overlay_url" ]; then
+      if [ -n "$url" ]; then
         overlay_title=$title
       else
-        overlay_url=${overlay_urls[$group_name]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
+        url=${overlay_urls[$group_name]:-${overlay_urls[$(normalize_rom_name "$group_name")]}}
       fi
     fi
 
-    if [ -z "$overlay_url" ]; then
-      echo "[$rom_name] No overlay available"
+    if [ -z "$url" ]; then
+      echo "[$rom_name] No game-specific overlay available"
 
       if [ -z "$playlist_name" ]; then
         # Install overlay for single-disc games
@@ -79,7 +86,7 @@ configure() {
     fi
 
     # We have an image: download it
-    __install_overlay "$overlay_url" "$overlay_title" "$is_lightgun"
+    __install_overlay "$url" "$overlay_title" "$is_lightgun"
 
     if [ -z "$playlist_name" ]; then
       # Install overlay for single-disc game
