@@ -122,7 +122,9 @@ __load_overlay_urls() {
 
     while IFS=$'\t' read -r rom_name encoded_rom_name ; do
       local source_url="https://github.com/$repo/raw/$branch/$rom_images_path/$encoded_rom_name.png"
-      overlay_urls["$rom_name"]="$source_url"
+      if [ -z "${overlay_urls["$rom_name"]}" ]; then
+        overlay_urls["$rom_name"]="$source_url"
+      fi
 
       # Generate a unique identifier for this rom
       local rom_id=$(normalize_rom_name "$rom_name")
