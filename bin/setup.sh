@@ -34,6 +34,8 @@ setup_all() {
     modules=$(list_setupmodules)
   fi
 
+  __confirm "$action"
+
   while read setupmodule; do
     setup "$action" "$setupmodule"
   done < <(echo "$modules" | sed -n "\|${from_setupmodule:-.*}|, \|${to_setupmodule}|p")
@@ -48,6 +50,8 @@ setup() {
   . /etc/default/locale
 
   if { [ -z "$3" ] || [ "$3" == 'all' ]; } && { [ "$setupmodule" == 'system' ] || [[ "$setupmodule" == system-* ]]; }; then
+    __confirm "$action"
+
     # Setting up an individual system module for all systems
     while read system; do
       run "$setupmodule" "$action" "$system" "${@:4}"
@@ -60,6 +64,25 @@ setup() {
   else
     # Setting up an individual module
     run "$setupmodule" "$action" "${@:3}"
+  fi
+}
+
+__confirm() {
+  local action=$1
+
+  if [ "$CONFIRM" == 'false' ]; then
+    return
+  fi
+
+  if [[ "$action" =~ ^(uninstall|remove) ]]; then
+    # Confirm on remove/uninstall instead of asking for each individual setupmodule
+    read -p "Are you sure? (y/n) " -r
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+      echo 'Aborted.'
+      exit 1
+    fi
+
+    export CONFIRM=false
   fi
 }
 
