@@ -17,6 +17,14 @@ rp_module_repo="git https://github.com/libretro/yabause.git yabasanshiro 73c6766
 rp_module_section="exp"
 rp_module_flags="!all rpi4"
 
+function __binary_url_lr-yabasanshiro() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/lr-yabasanshiro-rpi4-buster.tar.gz"
+}
+
+function install_bin_lr-yabasanshiro() {
+    downloadAndExtract "$(__binary_url_lr-yabasanshiro)" "$md_inst" --strip-components 1
+}
+
 function sources_lr-yabasanshiro() {
     gitPullOrClone
     isPlatform "rpi4" && applyPatch "$md_data/01_shader_hack_rpi4.diff"
