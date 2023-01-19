@@ -101,13 +101,7 @@ sync_media() {
 
   # This should be the full list of media paths
   local paths=(
-    /home/pi/RetroPie/BIOS/fbneo/samples/
-    /home/pi/RetroPie/BIOS/mame0222/mame/samples/
-    /home/pi/RetroPie/BIOS/mame0244/mame/samples/
-    /home/pi/RetroPie/BIOS/mame2003-plus/samples/
-    /home/pi/RetroPie/BIOS/mame2003/samples/
-    /home/pi/RetroPie/BIOS/mame2010/samples/
-    /home/pi/RetroPie/BIOS/mame2016/samples/
+    /home/pi/RetroPie/BIOS/
     /home/pi/RetroPie/roms/
     /opt/retropie/configs/all/emulationstation/downloaded_media/
     /opt/retropie/configs/all/emulationstation/gamelists/
@@ -202,6 +196,8 @@ create() {
     sleep 5
   done
   rmdir -v "$mount_path"
+
+  echo "Done!"
 }
 
 if [[ $# -lt 1 ]]; then
