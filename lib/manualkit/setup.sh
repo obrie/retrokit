@@ -39,6 +39,7 @@ depends_mupdf() {
 
     # Compile and install
     export CFLAGS='-fPIC'
+    export MAKEFLAGS='-j4'
     make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local
     sudo make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local install
 
