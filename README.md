@@ -182,6 +182,9 @@ all of your personal preferences.
    bin/sd.sh create /path/to/device # e.g. /dev/mmcblk0
    ```
 1. Insert sd card into Pi
+
+### Install via base image
+
 1. Start up Pi
 1. Quit EmulationStation (F4)
 1. Update Raspbian
@@ -196,9 +199,6 @@ all of your personal preferences.
    ```
    retrokit/bin/update.sh retropie
    ```
-
-### Install via base image
-
 1. Run retrokit
    ```
    retrokit/bin/setup.sh install
