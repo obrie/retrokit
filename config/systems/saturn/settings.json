@@ -22,7 +22,6 @@
   "emulators": {
     "lr-yabasanshiro": {
       "default": true,
-      "build": "source",
       "core_name": "yabasanshiro",
       "library_name": "YabaSanshiro",
       "gamestate": [
