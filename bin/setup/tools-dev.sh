@@ -7,9 +7,6 @@ setup_module_id='tools-dev'
 setup_module_desc='Common tools useful for testing and development'
 
 depends() {
-  # Benchmarking
-  sudo apt-get install -y sysbench
-
   # Screen
   sudo apt-get install -y screen
   
@@ -40,7 +37,7 @@ depends() {
 
 remove() {
   sudo rm -fv /usr/bin/raspi2png /etc/raspi2png.version
-  sudo apt-get remove -y mesa-utils screen sysbench
+  sudo apt-get remove -y mesa-utils screen
 }
 
 setup "${@}"
