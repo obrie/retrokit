@@ -7,6 +7,7 @@ setup_module_id='system-roms-scrape'
 setup_module_desc='Scrapes media / images / text via skyscraper, rebuilds the gamelist, and adjusts for multi-disc games'
 
 aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
+gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
   __load_rom_data
@@ -274,6 +275,24 @@ __build_gamelist() {
 
   echo "Building gamelist for $system"
   /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${args[@]}"
+
+  # Fix gamelist being generated incorrectly with games marked as folders
+  #
+  # See: https://github.com/muldjord/skyscraper/blob/19832c4cc13d396a3089d09da773e79d5488217a/src/emulationstation.cpp#L155-L158
+  #
+  # Without this fix, we'll see errors like this in EmulationStation:
+  #   Error finding/creating FileData...
+  while read rom_dir; do
+    local rom_files=$(find "$rom_dir" -maxdepth 1 -mindepth 1 -type f -o -type l)
+    local rom_count=$(echo "$rom_files" | wc -l)
+
+    if [ $rom_count -eq 1 ]; then
+      xmlstarlet edit --inplace \
+        --rename "//gameList/folder[path=\"$rom_dir\"]" -v 'game' \
+        --update "//gameList/game[path=\"$rom_dir\"]/path" -v "$rom_files" \
+        "$gamelist_file"
+    fi
+  done < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 }
 
 vacuum() {
@@ -303,12 +322,12 @@ __vacuum_media() {
 
   # Look up additional files in the gamelist that may have been installed outside
   # of romkit
-  if [ -f "$HOME/.emulationstation/gamelists/$system/gamelist.xml" ]; then
+  if [ -f "$gamelist_file" ]; then
     while IFS=$'\t' read -r rom_path; do
       local rom_filename=${rom_path##*/}
       local rom_name=${rom_filename%.*}
       installed_names["$rom_name"]=1
-    done < <(xmlstarlet select -t -m '/*/*' -v 'path' -n "$HOME/.emulationstation/gamelists/$system/gamelist.xml" | xmlstarlet unesc)
+    done < <(xmlstarlet select -t -m '/*/*' -v 'path' -n "$gamelist_file" | xmlstarlet unesc)
   fi
 
   # Find media with no corresponding installed name
