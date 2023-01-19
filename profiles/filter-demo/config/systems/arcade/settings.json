@@ -1,7 +1,8 @@
 {
   "roms": {
     "filters": {
-      "enabled": ["names"],
+      "enabled": ["emulator_compatibility", "names"],
+      "emulator_compatibility": [true],
       "names": [
         "area51",
         "asteroid",

@@ -1,5 +1,17 @@
 {
   "roms": {
+    "priority": {
+      "enabled": true,
+      "order": ["flags|countries"],
+      "flags|countries": [
+        "USA",
+        "World",
+        "English",
+        "Europe",
+        "Canada",
+        "Australia"
+      ]
+    },
     "filters": {
       "enabled": ["titles"]
     }
