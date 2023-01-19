@@ -63,15 +63,6 @@ class BaseSystem:
         # Filters
         self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
 
-        # Filters: forced name filters
-        auxiliary_filter_sets = list(map(lambda system_dir: system_dir.filter_set, self.dirs)) + [self.favorites_set]
-        for filter_set in auxiliary_filter_sets:
-            for filter in filter_set.filters:
-                if filter.name == 'names':
-                    new_filter = copy(filter)
-                    new_filter.override = True
-                    self.filter_set.append(new_filter)
-
     # Looks up the system from the given name
     @classmethod
     def from_json(cls, json: dict) -> None:
