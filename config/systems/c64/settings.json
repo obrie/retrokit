@@ -44,7 +44,7 @@
         "urls": [
           "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
         ],
-        "match": "no-intro romsets/Commodore - 64 \\([0-9-]+\\)"
+        "match": "no-intro romsets/Commodore - Commodore 64 \\([0-9-]+\\)"
       },
       "resources": {
         "dat": {
