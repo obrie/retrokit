@@ -2,7 +2,7 @@
   "roms": {
     "priority": {
       "enabled": true,
-      "order": ["flags|countries"],
+      "order": ["flags|countries", "flag_groups_total", "name_length"],
       "flags|countries": [
         "USA",
         "World",
@@ -10,7 +10,9 @@
         "Europe",
         "Canada",
         "Australia"
-      ]
+      ],
+      "flag_groups_total": "ascending",
+      "name_length": "ascending"
     },
     "filters": {
       "enabled": ["titles"]
