@@ -1,7 +1,8 @@
 {
   "roms": {
     "filters": {
-      "titles": [
+      "enabled": ["names"],
+      "names": [
         "quake"
       ]
     }
