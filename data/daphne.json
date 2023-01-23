@@ -16,6 +16,10 @@
       }
     ]
   },
+  "asterix": {
+  },
+  "astroboy": {
+  },
   "astron": {
     "players": 1,
     "rating": 0.6,
@@ -60,6 +64,8 @@
       "Platform / Run Jump"
     ]
   },
+  "carbon": {
+  },
   "cliff": {
     "players": 2,
     "rating": 0.9,
@@ -76,6 +82,8 @@
       }
     ]
   },
+  "cliffhanger": {
+  },
   "cobra": {
     "players": 1,
     "rating": 0.75,
@@ -89,7 +97,21 @@
         ],
         "url": "http://www.dragons-lair-project.com/tech/manuals/Cobra_Command_Conversion_for_Begas_Battle_Installation_Instructions.pdf"
       }
+    ],
+    "media": {
+      "overlay": "https://github.com/thebezelproject/bezelproject-Daphne/raw/master/retroarch/overlay/GameBezels/Daphne/cobraab.png"
+    }
+  },
+  "conan": {
+  },
+  "cracke": {
+  },
+  "crimepatrol": {
+    "controls": [
+      "lightgun"
     ]
+  },
+  "daitarn": {
   },
   "dle21": {
     "players": 2,
@@ -107,7 +129,14 @@
         ],
         "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_II_Owners_Manual.pdf"
       }
+    ],
+    "merge": [
+      "dl2e"
     ]
+  },
+  "dltv": {
+  },
+  "drugwars": {
   },
   "esh": {
     "players": 1,
@@ -123,6 +152,18 @@
         ],
         "url": "https://archive.org/download/Eshs_Aurunmilla_1985_J/Eshs_Aurunmilla_1985_J.pdf"
       }
+    ],
+    "merge": [
+      "aurunmilla"
+    ]
+  },
+  "fireandice": {
+  },
+  "friday13": {
+  },
+  "freedomfighter": {
+    "controls": [
+      "lightgun"
     ]
   },
   "galaxy": {
@@ -169,6 +210,11 @@
       }
     ]
   },
+  "johnnyrock": {
+    "controls": [
+      "lightgun"
+    ]
+  },
   "lair": {
     "players": 2,
     "rating": 0.8,
@@ -205,6 +251,11 @@
       }
     ]
   },
+  "lbh": {
+    "controls": [
+      "lightgun"
+    ]
+  },
   "mach3": {
     "players": 1,
     "rating": 0.9,
@@ -223,6 +274,16 @@
       }
     ]
   },
+  "maddog": {
+    "controls": [
+      "lightgun"
+    ]
+  },
+  "maddog2": {
+    "controls": [
+      "lightgun"
+    ]
+  },
   "roadblaster": {
     "players": 1,
     "rating": 0.85,
@@ -230,6 +291,19 @@
       "Driving",
       "Race"
     ]
+  },
+  "mononoke": {
+  },
+  "oeil": {
+  },
+  "platoon": {
+    "controls": [
+      "lightgun"
+    ]
+  },
+  "pussinboots": {
+  },
+  "scrat": {
   },
   "sdq": {
     "players": 1,
@@ -249,6 +323,19 @@
       }
     ]
   },
+  "spacepirates": {
+    "controls": [
+      "lightgun"
+    ]
+  },
+  "starblazers": {
+  },
+  "suckerpunch": {
+  },
+  "timetraveler": {
+  },
+  "titanae": {
+  },
   "tq": {
     "players": 1,
     "rating": 0.7,
@@ -267,6 +354,10 @@
         }
       }
     ]
+  },
+  "triad": {
+  },
+  "tron": {
   },
   "uvt": {
     "players": 1,
