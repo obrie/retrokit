@@ -9,7 +9,7 @@ setup_module_desc='Game-specific overlays to display for supported emulators (li
 
 # The directory to which we'll install the configurations and images
 base_overlay_dir=$(system_setting '.overlays.target')
-if [ -n "$path" ]; then
+if [ -n "$base_overlay_dir" ]; then
   system_overlay_dir="$base_overlay_dir"
 else
   base_overlay_dir=$(get_retroarch_path 'overlay_directory')

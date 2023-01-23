@@ -7,7 +7,7 @@ setup_module_id='system-overlays'
 setup_module_desc='System-specific default overlays to display in supported emulators (lightgun compatible)'
 
 base_overlay_dir=$(system_setting '.overlays.target')
-if [ -z "$path" ]; then
+if [ -z "$base_overlay_dir" ]; then
   base_overlay_dir=$(get_retroarch_path 'overlay_directory')
 fi
 
