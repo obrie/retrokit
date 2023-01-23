@@ -6,9 +6,24 @@
   "scraper": {
     "import_dat_titles": false
   },
+  "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectSA-Daphne/raw/master/retroarch/overlay/Daphne.png",
+    "target": "/opt/retropie/emulators/hypseus/bezels",
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-Daphne",
+        "path": "retroarch/overlay/GameBezels/Daphne"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectSA-Daphne",
+        "path": "retroarch/overlay/GameBezels/Daphne"
+      }
+    ]
+  },
   "emulators": {
     "hypseus": {
-      "default": true
+      "default": true,
+      "supports_overlays": true
     }
   },
   "romsets": [

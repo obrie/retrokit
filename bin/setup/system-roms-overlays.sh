@@ -4,12 +4,18 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
 setup_module_id='system-roms-overlays'
-setup_module_desc='Game-specific overlays to display for libretro emulators (lightgun compatible)'
+setup_module_desc='Game-specific overlays to display for supported emulators (lightgun compatible)'
+
 
 # The directory to which we'll install the configurations and images
-retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
+base_overlay_dir=$(system_setting '.overlays.target')
+if [ -n "$path" ]; then
+  system_overlay_dir="$base_overlay_dir"
+else
+  base_overlay_dir=$(get_retroarch_path 'overlay_directory')
+  system_overlay_dir="$base_overlay_dir/$system"
+fi
 retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
-system_overlay_dir="$retroarch_overlay_dir/$system"
 
 # Overlay support
 supports_vertical_overlays=$(system_setting 'select(.overlays .vertical) | true')
@@ -46,11 +52,13 @@ configure() {
   while IFS=» read -r rom_name playlist_name title group_name orientation emulator overlay_override_url controls; do
     emulator=${emulator:-default}
     local library_name=${emulators["$emulator/library_name"]}
+    local supports_overlays=${emulators["$emulator/library_name"]}
     local is_lightgun=$([[ "$controls" == *lightgun* ]] && echo 'true' || echo 'false')
     local overlay_title=$group_name
 
-    # Make sure this is a libretro core
-    if [ -z "$library_name" ]; then
+    # Make sure this is a libretro core unless an explicit overlay is
+    # provided
+    if [ -z "$library_name" ] && [ "$supports_overlays" == 'false' ]; then
       continue
     fi
 
@@ -73,24 +81,27 @@ configure() {
 
       if [ -z "$playlist_name" ]; then
         # Install overlay for single-disc games
-        __create_default_retroarch_config "$rom_name" "$emulator" "$orientation" "$is_lightgun"
+        __install_default_overlay "$rom_name" "$emulator" "$orientation" "$is_lightgun"
       elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
         # Install overlay for the playlist
-        __create_default_retroarch_config "$playlist_name" "$emulator" "$orientation" "$is_lightgun"
+        __install_default_overlay "$playlist_name" "$emulator" "$orientation" "$is_lightgun"
       fi
 
       continue
     fi
 
     # We have an image: download it
-    __install_overlay "$url" "$overlay_title" "$is_lightgun"
+    __install_overlay "$url" "$overlay_title" "$emulator" "$is_lightgun"
 
-    if [ -z "$playlist_name" ]; then
-      # Install overlay for single-disc game
-      __create_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
-    elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
-      # Install overlay for the playlist
-      __create_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
+    # Create retroarch overlay config
+    if [ -n "$library_name" ]; then
+      if [ -z "$playlist_name" ]; then
+        # Install overlay for single-disc game
+        __update_retroarch_config "$rom_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
+      elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
+        # Install overlay for the playlist
+        __update_retroarch_config "$playlist_name" "$emulator" "$system_overlay_dir/$overlay_title.cfg"
+      fi
     fi
   done < <(romkit_cache_list | jq -r '[.name, .playlist.name, .title, .group.name, .orientation, .emulator, .media.overlay, (.controls | join(","))] | join("»")')
 
@@ -146,7 +157,8 @@ __call_github_api() {
 __install_overlay() {
   local url=$1
   local overlay_title=$2
-  local is_lightgun=$3
+  local emulator=$3
+  local is_lightgun=$4
 
   local image_filename="$overlay_title.png"
   download "$url" "$system_overlay_dir/$image_filename"
@@ -160,11 +172,14 @@ __install_overlay() {
     image_filename="$overlay_title-lightgun.png"
   fi
 
-  # Create overlay config
-  local overlay_config_path="$system_overlay_dir/$overlay_title.cfg"
-  create_overlay_config "$overlay_config_path" "$image_filename"
-  installed_files["$system_overlay_dir/$overlay_title.cfg"]=1
-  installed_files["$system_overlay_dir/$image_filename"]=1
+  # Create retroarch overlay config
+  local library_name=${emulators["$emulator/library_name"]}
+  if [ -n "$library_name" ]; then
+    local overlay_config_path="$system_overlay_dir/$overlay_title.cfg"
+    create_overlay_config "$overlay_config_path" "$image_filename"
+    installed_files["$system_overlay_dir/$overlay_title.cfg"]=1
+    installed_files["$system_overlay_dir/$image_filename"]=1
+  fi
 }
 
 # Install a retroarch configuration for the given rom to one of the default
@@ -172,23 +187,28 @@ __install_overlay() {
 # 
 # A configuration will only be created if the overlay is vertical or lightgun.
 # Otherwise, the default for the system will be automatically used by retroarch.
-__create_default_retroarch_config() {
+__install_default_overlay() {
   local rom_name=$1
   local emulator=$2
   local orientation=$3
   local is_lightgun=$4
 
-  if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
-    # Vertical format
-    __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-vertical.cfg"
-  elif [ "$enable_lightgun_borders" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
-    # Lightgun format
-    __create_retroarch_config "$rom_name" "$emulator" "$retroarch_overlay_dir/$system-lightgun.cfg"
+  local library_name=${emulators["$emulator/library_name"]}
+
+  # Create retroarch overlay config
+  if [ -n "$library_name" ]; then
+    if [ "$supports_vertical_overlays" == 'true' ] && [ "$orientation" == 'vertical' ]; then
+      # Vertical format
+      __update_retroarch_config "$rom_name" "$emulator" "$base_overlay_dir/$system-vertical.cfg"
+    elif [ "$enable_lightgun_borders" == 'true' ] && [ "$is_lightgun" == 'true' ]; then
+      # Lightgun format
+      __update_retroarch_config "$rom_name" "$emulator" "$base_overlay_dir/$system-lightgun.cfg"
+    fi
   fi
 }
 
-# Installs a retroarch configuration for the given rom to a specific overlay configuration
-__create_retroarch_config() {
+# Updates the retroarch configuration for the given rom to point to a specific overlay configuration
+__update_retroarch_config() {
   local rom_name=$1
   local emulator=$2
   local overlay_config_path=$3
@@ -274,8 +294,8 @@ vacuum() {
 }
 
 remove() {
-  # Remove all overlay images
-  rm -rfv "$system_overlay_dir"
+  # Remove all but system overlay images
+  find "$system_overlay_dir" -mindepth 1 -type f -not -name "$system.*" -not -name "$system-lightgun.*"  -not -name "$system-vertical.*" -exec rm -rfv '{}' +
 }
 
 setup "${@}"

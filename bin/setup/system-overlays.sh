@@ -4,9 +4,12 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/system-common.sh"
 
 setup_module_id='system-overlays'
-setup_module_desc='System-specific default overlays to display for libretro emulators (lightgun compatible)'
+setup_module_desc='System-specific default overlays to display in supported emulators (lightgun compatible)'
 
-retroarch_overlay_dir=$(get_retroarch_path 'overlay_directory')
+base_overlay_dir=$(system_setting '.overlays.target')
+if [ -z "$path" ]; then
+  base_overlay_dir=$(get_retroarch_path 'overlay_directory')
+fi
 
 configure() {
   if [ $(system_setting '.overlays | has("default")') == 'false' ]; then
@@ -18,13 +21,17 @@ configure() {
   # Install default (horizontal) overlay configuration
   local default_image_url=$(system_setting '.overlays.default')
   if [ -n "$default_image_url" ]; then
-    download "$default_image_url" "$retroarch_overlay_dir/$system.png"
-    create_overlay_config "$retroarch_overlay_dir/$system.cfg" "$system.png"
+    download "$default_image_url" "$base_overlay_dir/$system.png"
+    if has_libretro_cores; then
+      create_overlay_config "$base_overlay_dir/$system.cfg" "$system.png"
+    fi
 
     # For systems that have lightgun games, create a lightgun-specific version
     if __enable_lightgun_borders && __has_lightgun_titles; then
-      outline_overlay_image "$retroarch_overlay_dir/$system.png" "$retroarch_overlay_dir/$system-lightgun.png"
-      create_overlay_config "$retroarch_overlay_dir/$system-lightgun.cfg" "$system-lightgun.png"
+      outline_overlay_image "$base_overlay_dir/$system.png" "$base_overlay_dir/$system-lightgun.png"
+      if has_libretro_cores; then
+        create_overlay_config "$base_overlay_dir/$system-lightgun.cfg" "$system-lightgun.png"
+      fi
     fi
   fi
 
@@ -32,8 +39,10 @@ configure() {
   # vertical configuration
   local vertical_image_url=$(system_setting '.overlays.vertical')
   if [ -n "$vertical_image_url" ]; then
-    download "$vertical_image_url" "$retroarch_overlay_dir/$system-vertical.png"
-    create_overlay_config "$retroarch_overlay_dir/$system-vertical.cfg" "$system-vertical.png"
+    download "$vertical_image_url" "$base_overlay_dir/$system-vertical.png"
+    if has_libretro_cores; then
+      create_overlay_config "$base_overlay_dir/$system-vertical.cfg" "$system-vertical.png"
+    fi
   fi
 }
 
@@ -49,16 +58,16 @@ __has_lightgun_titles() {
 
 restore() {
   rm -fv \
-    "$retroarch_overlay_dir/$system.cfg" \
-    "$retroarch_overlay_dir/$system-vertical.cfg" \
-    "$retroarch_overlay_dir/$system-lightgun.cfg"
+    "$base_overlay_dir/$system.cfg" \
+    "$base_overlay_dir/$system-vertical.cfg" \
+    "$base_overlay_dir/$system-lightgun.cfg"
 }
 
 remove() {
   rm -fv \
-    "$retroarch_overlay_dir/$system.png"\
-    "$retroarch_overlay_dir/$system-vertical.png" \
-    "$retroarch_overlay_dir/$system-lightgun.png"
+    "$base_overlay_dir/$system.png"\
+    "$base_overlay_dir/$system-vertical.png" \
+    "$base_overlay_dir/$system-lightgun.png"
 }
 
 setup "${@}"
