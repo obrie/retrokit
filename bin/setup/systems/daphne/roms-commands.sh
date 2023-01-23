@@ -37,7 +37,9 @@ configure() {
     if [ "${#commands}" -gt 0 ]; then
       for rom_dir in "${rom_dirs[@]}"; do
         if [ -e "$rom_dir/$rom_name.daphne" ]; then
-          echo "${commands[@]}" > "$rom_dir/$rom_name.commands"
+          local target_path="$rom_dir/$rom_name.daphne/$rom_name.commands"
+          echo "Merging commands to $target_path"
+          echo "${commands[@]}" > "$target_path"
         fi
       done
     fi
@@ -45,12 +47,14 @@ configure() {
 }
 
 __get_commands() {
+  local path_template=$1
+
   while read path; do
     local commands=$(head -n 1 "$path")
     if [ -n "$commands" ]; then
       echo "$commands"
     fi
-  done < <(each_path "$path")
+  done < <(each_path "$path_template")
 }
 
 restore() {
