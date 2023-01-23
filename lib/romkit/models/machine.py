@@ -588,16 +588,13 @@ class Machine:
 
     # Enables this machine to be visible to the emulator
     def enable(self, target_dir: SystemDir):
-        if not self.resource:
-            return
-
         logging.info(f'[{self.name}] Enabling in: {target_dir.path}')
 
         if self.playlist:
             # When there's a playlist, it's the only thing from the machine that
             # needs to get enabled
             self.playlist.enable(target_dir)
-        else:
+        elif self.resource:
             # Disks get handled separately -- everything else gets symlink'd
             # through the machine's resource
             for resource_name in (target_dir.file_templates.keys() - set(['disk', 'playlist'])):
