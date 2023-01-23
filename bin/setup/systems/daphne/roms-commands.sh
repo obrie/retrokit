@@ -35,7 +35,7 @@ configure() {
       bezel_name=$system
     fi
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
-      commands+=(-bezel "\"$bezel_name.png\"")
+      commands+=(-bezel $bezel_name.png)
     fi
 
     # Combine commands
