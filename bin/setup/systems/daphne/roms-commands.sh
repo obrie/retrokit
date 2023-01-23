@@ -28,9 +28,14 @@ configure() {
     local commands+=($(__get_commands "{system_config_dir}/commands/$rom_name.commands"))
 
     # Bezel
-    local bezel_commands
+    local bezel_name
     if [ -f "$target_overlay_dir/$rom_name.png" ]; then
-      commands+=(-bezel "\"$rom_name.png\"")
+      bezel_name=$rom_name
+    else
+      bezel_name=$system
+    fi
+    if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
+      commands+=(-bezel "\"$bezel_name.png\"")
     fi
 
     # Combine commands
