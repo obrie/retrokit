@@ -12,7 +12,7 @@ readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 configure() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
-  while IFS=$'\t' read -r rom_name controls; do
+  while IFS=$'\t' read -r rom_name title group_name controls; do
     # Find the target path.  We just need to find the first match since the
     # directory is just symlinked.
     local target_path
@@ -54,15 +54,17 @@ configure() {
 
     # Bezel
     local bezel_name
-    if [ -f "$target_overlay_dir/$rom_name.png" ]; then
-      bezel_name=$rom_name
+    if [ -f "$target_overlay_dir/$title.png" ]; then
+      bezel_name=$title
+    elif [ -f "$target_overlay_dir/$group_name.png" ]; then
+      bezel_name=$group_name
     else
       bezel_name=$system
     fi
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
       echo -n "-bezel $bezel_name.png" >> "$target_path"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, (.controls | join(","))] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, (.controls | join(","))] | @tsv')
 }
 
 restore() {
