@@ -113,27 +113,6 @@
   },
   "daitarn": {
   },
-  "dle21": {
-    "players": 2,
-    "rating": 0.8,
-    "genres": [
-      "Action",
-      "Action / Adventure",
-      "Platform",
-      "Platform / Run Jump"
-    ],
-    "manuals": [
-      {
-        "languages": [
-          "en"
-        ],
-        "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_II_Owners_Manual.pdf"
-      }
-    ],
-    "merge": [
-      "dl2e"
-    ]
-  },
   "dltv": {
   },
   "drugwars": {
@@ -231,6 +210,9 @@
         ],
         "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_Operation_Manual.pdf"
       }
+    ],
+    "merge": [
+      "dle21"
     ]
   },
   "lair2": {
@@ -249,6 +231,9 @@
         ],
         "url": "http://www.dragons-lair-project.com/tech/manuals/Dragons_Lair_II_Owners_Manual.pdf"
       }
+    ],
+    "merge": [
+      "dl2e"
     ]
   },
   "lbh": {
