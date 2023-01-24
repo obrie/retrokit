@@ -63,12 +63,14 @@
       "Platform",
       "Platform / Run Jump"
     ],
-    "manuals": {
-      "languages": [
-        "en"
-      ],
-      "url": "http://www.dragons-lair-project.com/tech/manuals/Begas_Battle_Manual.pdf"
-    }
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "http://www.dragons-lair-project.com/tech/manuals/Begas_Battle_Manual.pdf"
+      }
+    ]
   },
   "carbon": {
   },
