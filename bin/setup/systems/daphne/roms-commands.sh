@@ -61,6 +61,9 @@ configure() {
     else
       bezel_name=$system
     fi
+    if [[ "$controls" == *lightgun* ]]; then
+      bezel_name="$bezel_name-lightgun"
+    fi
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
       echo -n "-bezel $bezel_name.png" >> "$target_path"
     fi
