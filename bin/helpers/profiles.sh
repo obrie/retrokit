@@ -11,10 +11,26 @@ declare -A cached_path_exists
 # Loads and caches the current profiles being used
 init_profiles() {
   # Read list of profiles
-  IFS=',' read -r -a __profiles <<< "$PROFILES"
+  declare -a profiles=()
+  IFS=',' read -r -a profiles <<< "$PROFILES"
 
   local profile
-  for profile in '..' "${__profiles[@]}"; do
+  for profile in '..' "${profiles[@]}"; do
+    # Ensure any remote profiles have been pulled down
+    if [[ "$profile" =~ ^(https|git).* ]]; then
+      local profile_name=${profile##*/}
+      profile_name=${profile_name%%.*}
+
+      if [ ! -d "$profiles_dir/$profile_name" ]; then
+        git clone "$profile" "$profiles_dir/$profile_name"
+      fi
+      profile=$profile_name
+    fi
+
+    if [ "$profile" != '..' ]; then
+      __profiles+=("$profile")
+    fi
+
     local profile_dir="$profiles_dir/$profile"
 
     # Make sure we're dealing with a valid profile
