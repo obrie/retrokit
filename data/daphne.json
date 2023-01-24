@@ -62,7 +62,13 @@
     "genres": [
       "Platform",
       "Platform / Run Jump"
-    ]
+    ],
+    "manuals": {
+      "languages": [
+        "en"
+      ],
+      "url": "http://www.dragons-lair-project.com/tech/manuals/Begas_Battle_Manual.pdf"
+    }
   },
   "carbon": {
   },
@@ -109,6 +115,14 @@
   "crimepatrol": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/CrimePatrol/Crime Patrol.pdf"
+      }
     ]
   },
   "daitarn": {
@@ -116,6 +130,14 @@
   "dltv": {
   },
   "drugwars": {
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/CrimePatrol2DrugWars/Crime Patrol 2 - Drug Wars.pdf"
+      }
+    ]
   },
   "esh": {
     "players": 1,
@@ -192,6 +214,14 @@
   "johnnyrock": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/WhoShotJohnnyRock/Who Shot Johnny Rock.pdf"
+      }
     ]
   },
   "lair": {
@@ -239,6 +269,14 @@
   "lbh": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/TheLastBountyHunter/The Last Bounty Hunter.pdf"
+      }
     ]
   },
   "mach3": {
@@ -262,11 +300,27 @@
   "maddog": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/MadDogMcCreeManual/Mad Dog McCree - Manual.pdf"
+      }
     ]
   },
   "maddog2": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/MadDogIITheLostGold/Mad Dog II - The Lost Gold.pdf"
+      }
     ]
   },
   "roadblaster": {
@@ -311,6 +365,14 @@
   "spacepirates": {
     "controls": [
       "lightgun"
+    ],
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SpacePiratesDVD/Space Pirates.pdf"
+      }
     ]
   },
   "starblazers": {
@@ -318,6 +380,14 @@
   "suckerpunch": {
   },
   "timetraveler": {
+    "manuals": [
+      {
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/vgmuseum_miscgame_timetraveler-manual/timetraveler-manual.pdf"
+      }
+    ]
   },
   "titanae": {
   },
