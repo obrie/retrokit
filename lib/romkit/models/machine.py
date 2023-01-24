@@ -516,7 +516,7 @@ class Machine:
     # Determines whether the locally installed set of ROMs is equal to the full set of
     # non_merged roms
     def is_valid_nonmerged(self) -> bool:
-        return not self.resource or self.resource.contains(self.non_merged_roms)
+        return not self.resource or not self.non_merged_roms or self.resource.contains(self.non_merged_roms)
 
     # Runs any actions required before the machine is installed
     def before_install(self) -> None:
