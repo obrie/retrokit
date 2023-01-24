@@ -126,6 +126,10 @@
         "$HOME/RetroPie/roms/arcade/mame/hi/{rom}.hi",
         "$HOME/RetroPie/roms/arcade/mame/nvram/{rom}"
       ]
+    },
+    "lr-flycast": {
+      "core_name": "flycast",
+      "library_name": "Flycast"
     }
   },
   "romsets": [

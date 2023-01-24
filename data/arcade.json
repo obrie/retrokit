@@ -109,25 +109,41 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "18wheelro": {
     "group": "18wheelr",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "18wheelrt": {
     "group": "18wheelr",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "18wheelu": {
     "group": "18wheelr",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "1941": {
     "players": 2,
@@ -3101,7 +3117,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "alienres": {
     "orientation": "vertical",
@@ -3387,7 +3407,11 @@
     "controls": [
       "positional",
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "alpilotj": {
     "players": 1,
@@ -3401,7 +3425,11 @@
     "controls": [
       "positional",
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "alpine": {
     "players": 2,
@@ -4156,7 +4184,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "anpanman2": {
     "players": 1,
@@ -5879,11 +5911,19 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "asndynmto": {
     "group": "asndynmt",
-    "players": 2
+    "players": 2,
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "asnprinc": {
     "genres": [
@@ -6831,7 +6871,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "autmoon": {
     "players": 1,
@@ -7217,7 +7261,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "azurian": {
     "players": 2,
@@ -8243,7 +8291,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "bassdx": {
     "genres": [
@@ -9224,7 +9276,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "bdream97": {
     "genres": [
@@ -11796,7 +11852,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "bloodbro": {
     "players": 2,
@@ -16332,7 +16392,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "captaven": {
     "players": 4,
@@ -17891,7 +17955,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cflyball": {
     "players": 2,
@@ -19153,7 +19221,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "chocovdr": {
     "genres": [
@@ -19866,7 +19938,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "claypign": {
     "players": 2,
@@ -19937,7 +20013,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cleopatr": {
     "players": 2,
@@ -21831,7 +21911,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "congo": {
     "players": 2,
@@ -22807,7 +22891,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "cracksht": {
     "players": 2,
@@ -22849,7 +22937,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "crash": {
     "players": 2,
@@ -23861,7 +23953,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cs10_sps": {
     "genres": [
@@ -24280,7 +24376,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cspe_qps": {
     "genres": [
@@ -24306,7 +24406,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "csplayh1": {
     "players": 1,
@@ -24920,7 +25024,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cvsgd": {
     "players": 2,
@@ -24943,7 +25051,11 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/cvsgd (en).pdf"
       }
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "cwheel": {
     "genres": [
@@ -28024,13 +28136,21 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "deathcoxo": {
     "group": "deathcox",
     "languages": [
       "ko"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "deathrac": {
     "genres": [
@@ -28301,7 +28421,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "demon": {
     "players": 2,
@@ -28519,7 +28643,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "derbyoc": {
     "genres": [
@@ -28532,7 +28660,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "derbyoc2": {
     "genres": [
@@ -28545,7 +28677,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "derbyocw": {
     "genres": [
@@ -28558,7 +28694,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "deroon": {
     "players": 2,
@@ -29652,7 +29792,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "disco": {
     "players": 2,
@@ -30137,7 +30281,11 @@
     "group": "doa2m",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "doa2m": {
     "players": 2,
@@ -30151,7 +30299,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "doapp": {
     "players": 2,
@@ -30582,7 +30734,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "dolphinp": {
     "genres": [
@@ -31359,7 +31515,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "dragntr2": {
     "genres": [
@@ -31372,7 +31532,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "dragntr3": {
     "genres": [
@@ -31385,7 +31549,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "dragonsh": {
     "players": 2,
@@ -31506,7 +31674,11 @@
     "group": "derbyocw",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "drbyocwt": {
     "group": "derbyocw",
@@ -32768,7 +32940,11 @@
     "controls": [
       "pedal",
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "dybbnao": {
     "players": 2,
@@ -32783,7 +32959,11 @@
     "controls": [
       "pedal",
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "dyger": {
     "players": 1,
@@ -32827,7 +33007,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "dynabb": {
     "players": 2,
@@ -35622,7 +35806,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "f355twin": {
     "players": 1,
@@ -35636,7 +35824,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "f355twn2": {
     "players": 1,
@@ -35650,7 +35842,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "fa": {
     "group": "fghtatck",
@@ -38676,7 +38872,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "fourplay": {
     "players": 2,
@@ -39431,7 +39631,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "fullthrl": {
     "group": "topspeed",
@@ -42659,7 +42863,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggram2": {
     "players": 2,
@@ -42673,7 +42881,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggreats2": {
     "group": "opengolf",
@@ -42731,7 +42943,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggx15": {
     "players": 2,
@@ -42745,7 +42961,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggxx": {
     "players": 2,
@@ -42759,7 +42979,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggxxac": {
     "players": 2,
@@ -42773,7 +42997,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggxxrl": {
     "players": 2,
@@ -42787,7 +43015,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ggxxsla": {
     "players": 2,
@@ -42801,7 +43033,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ghlpanic": {
     "players": 2,
@@ -44919,7 +45155,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "grancan": {
     "genres": [
@@ -47177,7 +47417,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gundmgd": {
     "players": 1,
@@ -47191,7 +47435,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gundmxgd": {
     "players": 1,
@@ -47205,7 +47453,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gundzaft": {
     "players": 1,
@@ -47545,14 +47797,22 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gunsur2j": {
     "group": "gunsur2",
     "players": 1,
     "languages": [
       "ja"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gunwars": {
     "genres": [
@@ -47768,7 +48028,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "gwinggen": {
     "players": 2,
@@ -50065,7 +50329,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "hnageman": {
     "genres": [
@@ -50688,7 +50956,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "hotd3": {
     "players": 2,
@@ -52411,7 +52683,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ikki": {
     "players": 2,
@@ -52452,7 +52728,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ilpag": {
     "genres": [
@@ -53263,7 +53543,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "invad2ct": {
     "players": 2,
@@ -54235,7 +54519,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "janbari": {
     "players": 1,
@@ -54778,7 +55066,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "jitsupro": {
     "players": 2,
@@ -56880,7 +57172,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kartduel": {
     "players": 1,
@@ -57399,7 +57695,11 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kf2k3pcb": {
     "players": 2,
@@ -57518,7 +57818,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "kickball": {
     "players": 2,
@@ -59061,13 +59365,21 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kofnwj": {
     "group": "kofnw",
     "languages": [
       "ja"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kofskyst": {
     "players": 2,
@@ -59100,7 +59412,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kofxii": {
     "players": 2,
@@ -59797,7 +60113,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kovplus": {
     "players": 4,
@@ -60188,7 +60508,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "kurufev": {
     "players": 2,
@@ -63646,7 +63970,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "luptype": {
     "players": 2,
@@ -63660,7 +63988,11 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "lvcards": {
     "players": 1,
@@ -65485,7 +65817,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mangchi": {
     "players": 2,
@@ -65592,7 +65928,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "manohman": {
     "genres": [
@@ -65943,7 +66283,11 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "martmast": {
     "players": 2,
@@ -66574,7 +66918,11 @@
     "controls": [
       "paddle",
       "pedal"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "maya": {
     "players": 2,
@@ -66727,7 +67075,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "mazanj": {
     "group": "mazan",
@@ -66865,7 +67217,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mbomberj": {
     "group": "slammast",
@@ -67702,7 +68058,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "meltybld": {
     "players": 2,
@@ -67716,7 +68076,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "menghong": {
     "players": 1,
@@ -70962,7 +71326,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mofflott": {
     "players": 2,
@@ -71065,7 +71433,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mole": {
     "players": 2,
@@ -71190,7 +71562,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "monmouse": {
     "genres": [
@@ -73154,7 +73530,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mslugx": {
     "players": 2,
@@ -74378,7 +74758,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "mushi2k5": {
     "players": 2,
@@ -74392,7 +74776,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "mushi2k61": {
     "players": 2,
@@ -74432,7 +74820,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "mushik2k": {
     "group": "mushik2e",
@@ -74452,7 +74844,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "mushikc": {
     "group": "mushike",
@@ -74472,7 +74868,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "mushikk": {
     "group": "mushike",
@@ -74871,13 +75271,21 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mvsc2u": {
     "group": "mvsc2",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "mvscj": {
     "group": "mvsc",
@@ -76724,13 +77132,21 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ngbcj": {
     "group": "ngbc",
     "languages": [
       "ja"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ngem2k": {
     "orientation": "horizontal",
@@ -77109,13 +77525,21 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ninjasltj": {
     "group": "ninjaslt",
     "languages": [
       "ja"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ninjaw": {
     "players": 2,
@@ -78861,7 +79285,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "oisipuzl": {
     "players": 2,
@@ -80063,7 +80491,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "otwalls": {
     "players": 2,
@@ -89034,7 +89466,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "pjustica": {
     "group": "pjustic",
@@ -92199,7 +92635,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "pstone2": {
     "players": 4,
@@ -92213,13 +92653,21 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "pstone2b": {
     "group": "pstone2",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "psurge": {
     "players": 2,
@@ -92337,7 +92785,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "psyvaria": {
     "players": 2,
@@ -92953,7 +93405,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "puyofev": {
     "players": 2,
@@ -92967,7 +93423,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "puyoj": {
     "group": "puyo",
@@ -93989,7 +94449,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "qmhayaku": {
     "players": 1,
@@ -95116,7 +95580,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "quizshow": {
     "genres": [
@@ -95852,7 +96320,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "radirgyn": {
     "players": 2,
@@ -95866,7 +96338,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "radm": {
     "players": 1,
@@ -96520,7 +96996,11 @@
     ],
     "+controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "rapfire5": {
     "genres": [
@@ -98344,7 +98824,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ribbit": {
     "players": 2,
@@ -98616,7 +99100,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ringrage": {
     "players": 4,
@@ -100759,7 +101247,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "rumblef2": {
     "players": 2,
@@ -100773,7 +101265,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "rumbreel": {
     "genres": [
@@ -101607,7 +102103,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "salmndr2": {
     "players": 2,
@@ -101665,7 +102165,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "samba2k": {
     "players": 2,
@@ -101679,19 +102183,31 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sambaa": {
     "group": "samba",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sambap": {
     "group": "samba",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sams64": {
     "players": 2,
@@ -101919,7 +102435,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "samurai": {
     "players": 2,
@@ -110085,7 +110605,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "senkosp": {
     "players": 2,
@@ -110099,7 +110623,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "senkyu": {
     "players": 2,
@@ -111322,7 +111850,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sfzch": {
     "players": 2,
@@ -111543,7 +112075,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sgunner": {
     "players": 2,
@@ -111780,7 +112316,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "shaktamb": {
     "players": 2,
@@ -111794,7 +112334,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "shaktmsp": {
     "players": 2,
@@ -111808,7 +112352,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "shamnmg": {
     "genres": [
@@ -112002,7 +112550,11 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "shangtou": {
     "players": 2,
@@ -112242,7 +112794,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "shikiga3": {
     "players": 2,
@@ -112784,7 +113340,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 1
+    }
   },
   "shorsel": {
     "group": "shorse",
@@ -114424,7 +114984,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "slammast": {
     "players": 4,
@@ -116984,7 +117548,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "spbactn": {
     "players": 1,
@@ -118594,7 +119162,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "sprtmtch": {
     "group": "drgpunch",
@@ -119222,7 +119794,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "ssanchan": {
     "group": "spatter",
@@ -124667,7 +125243,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "talbot": {
     "players": 2,
@@ -130533,14 +131113,22 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "trghearto": {
     "group": "trgheart",
     "players": 1,
     "languages": [
       "ja"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "tricktrp": {
     "players": 2,
@@ -131040,7 +131628,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "troangel": {
     "players": 2,
@@ -133424,7 +134016,11 @@
     "orientation": "vertical",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "undoukai": {
     "group": "fieldday",
@@ -135065,7 +135661,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "vball": {
     "players": 4,
@@ -136332,7 +136932,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "virnbap": {
     "group": "virnba",
@@ -136733,13 +137337,21 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "vs2_2ko": {
     "group": "vs2_2k",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "vs2v991": {
     "players": 2,
@@ -140778,7 +141390,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 3
+    }
   },
   "ws": {
     "players": 2,
@@ -140817,7 +141433,11 @@
     "controls": [
       "pedal",
       "stick"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast",
+      "rating": 5
+    }
   },
   "wschamp": {
     "players": 2,
