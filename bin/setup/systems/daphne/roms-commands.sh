@@ -13,19 +13,44 @@ configure() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
   while IFS=$'\t' read -r rom_name controls; do
-    local commands=()
+    # Find the target path.  We just need to find the first match since the
+    # directory is just symlinked.
+    local target_path
+    for rom_dir in "${rom_dirs[@]}"; do
+      if [ -e "$rom_dir/$rom_name.daphne" ]; then
+        target_path="$rom_dir/$rom_name.daphne/$rom_name.commands"
+        break
+      fi
+    done
 
-    # Common
-    commands+=($(__get_commands '{system_config_dir}/daphne.commands'))
+    if [ -z "$target_path" ]; then
+      continue
+    fi
+    rm -fv "$target_path"
+
+    local source_paths=('{system_config_dir}/daphne.commands')
 
     # Lightgun
-    local lightgun_commands
     if [[ "$controls" == *lightgun* ]]; then
-      commands+=($(__get_commands '{system_config_dir}/daphne-lightgun.commands'))
+      source_paths+=('{system_config_dir}/daphne-lightgun.commands')
     fi
 
     # Game-specific commands
-    local commands+=($(__get_commands "{system_config_dir}/commands/$rom_name.commands"))
+    source_paths+=("{system_config_dir}/commands/$rom_name.commands")
+
+    # Merge command sources
+    for source_path_template in "${source_paths[@]}"; do
+      if any_path_exists "$source_path_template"; then
+        echo "Merging commands $source_path_template to $target_path"
+
+        while read source_path; do
+          local source_commands=$(head -n 1 "$source_path")
+          if [ -n "$source_commands" ]; then
+            echo -n "$source_commands " >> "$target_path"
+          fi
+        done < <(each_path "$source_path_template")
+      fi
+    done
 
     # Bezel
     local bezel_name
@@ -35,31 +60,9 @@ configure() {
       bezel_name=$system
     fi
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
-      commands+=(-bezel $bezel_name.png)
-    fi
-
-    # Combine commands
-    if [ "${#commands}" -gt 0 ]; then
-      for rom_dir in "${rom_dirs[@]}"; do
-        if [ -e "$rom_dir/$rom_name.daphne" ]; then
-          local target_path="$rom_dir/$rom_name.daphne/$rom_name.commands"
-          echo "Merging commands to $target_path"
-          echo "${commands[@]}" > "$target_path"
-        fi
-      done
+      echo -n "-bezel $bezel_name.png" >> "$target_path"
     fi
   done < <(romkit_cache_list | jq -r '[.name, (.controls | join(","))] | @tsv')
-}
-
-__get_commands() {
-  local path_template=$1
-
-  while read path; do
-    local commands=$(head -n 1 "$path")
-    if [ -n "$commands" ]; then
-      echo "$commands"
-    fi
-  done < <(each_path "$path_template")
 }
 
 restore() {
