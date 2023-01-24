@@ -24,6 +24,8 @@
     "hypseus": {
       "default": true,
       "supports_overlays": true
+    },
+    "actionmax": {
     }
   },
   "romsets": [
@@ -140,6 +142,34 @@
         "triad": {"description": "Triad Stone", "disks": [{"name": "triad"}]},
         "tron": {"description": "Tron", "disks": [{"name": "tron"}]}
       }
+    },
+    {
+      "name": "laserdisc_singe_v1_actionmax",
+      "protocol": "http",
+      "url": "$ROMSET_LASERDISC_SINGE_V1_URL",
+      "resources": {
+        "machine": {
+          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "target": "$HOME/RetroPie/roms/daphne/.singe_v1-roms/{machine}.zip"
+        },
+        "disk": {
+          "source": "{url}-{machine_sourcefile}/{disk}_hypseus_remux.zip",
+          "download": "$HOME/RetroPie/roms/daphne/.actionmax/{disk}.zip",
+          "target": "$HOME/RetroPie/roms/daphne/actionmax",
+          "install": {"action": "zip_extract", "include_parent": false},
+          "file_identifier": "name"
+        }
+      },
+      "datlist": {
+        "38ambushalley": {"description": ".38 Ambush Alley", "sourcefile": "actionmax", "disks": [{"name": "actionmax"}]},
+        "bluethunder": {"description": "Blue Thunder", "sourcefile": "actionmax", "disks": [{"name": "actionmax"}]},
+        "hydrosub2021": {"description": "Hydrosub: 2021", "sourcefile": "actionmax", "disks": [{"name": "actionmax"}]},
+        "popsghostly": {"description": "The Rescue of Pops Ghostly", "sourcefile": "actionmax", "disks": [{"name": "actionmax"}]},
+        "sonicfury": {"description": "Sonic Fury", "sourcefile": "actionmax", "disks": [{"name": "actionmax"}]}
+      },
+      "emulators": [
+        "actionmax"
+      ]
     }
   ],
   "roms": {
@@ -153,7 +183,7 @@
     ],
     "files": {
       "disk": {"target": "{dir}/{machine}.daphne"},
-      "machine": {"target": "{dir}/roms/{machine_filename}"}
+      "machine": {"target": "$HOME/RetroPie/roms/daphne/roms/{machine_filename}"}
     }
   }
 }

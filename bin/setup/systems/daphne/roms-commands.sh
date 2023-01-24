@@ -12,7 +12,7 @@ readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 configure() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
-  while IFS=$'\t' read -r rom_name title group_name controls; do
+  while IFS=» read -r rom_name title group_name emulator controls; do
     # Find the target path.  We just need to find the first match since the
     # directory is just symlinked.
     local target_path
@@ -28,11 +28,12 @@ configure() {
     fi
     rm -fv "$target_path"
 
-    local source_paths=('{system_config_dir}/daphne.commands')
+    local config_prefix=${emulator:-daphne}
+    local source_paths=("{system_config_dir}/$config_prefix.commands")
 
     # Lightgun
     if [[ "$controls" == *lightgun* ]]; then
-      source_paths+=('{system_config_dir}/daphne-lightgun.commands')
+      source_paths+=("{system_config_dir}/$config_prefix-lightgun.commands")
     fi
 
     # Game-specific commands
@@ -67,7 +68,7 @@ configure() {
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
       echo -n "-bezel $bezel_name.png" >> "$target_path"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, (.controls | join(","))] | @tsv')
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")'
 }
 
 restore() {

@@ -1,4 +1,9 @@
 {
+  "38ambushalley": {
+    "controls": [
+      "lightgun"
+    ]
+  },
   "ace": {
     "players": 1,
     "rating": 0.9,
@@ -70,6 +75,11 @@
         ],
         "url": "http://www.dragons-lair-project.com/tech/manuals/Begas_Battle_Manual.pdf"
       }
+    ]
+  },
+  "bluethunder": {
+    "controls": [
+      "lightgun"
     ]
   },
   "carbon": {
@@ -193,6 +203,11 @@
       "Driving",
       "Race",
       "Race 1st Pers. view"
+    ]
+  },
+  "hyrdrosub2021": {
+    "controls": [
+      "lightgun"
     ]
   },
   "interstellar": {
@@ -342,6 +357,11 @@
       "lightgun"
     ]
   },
+  "popsghostly": {
+    "controls": [
+      "lightgun"
+    ]
+  },
   "pussinboots": {
   },
   "scrat": {
@@ -362,6 +382,11 @@
           "filter": "*.pdf"
         }
       }
+    ]
+  },
+  "sonicfury": {
+    "controls": [
+      "lightgun"
     ]
   },
   "spacepirates": {
