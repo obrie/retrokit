@@ -70,6 +70,10 @@
       "protocol": "http",
       "url": "$ROMSET_LASERDISC_SINGE_V1_URL",
       "resources": {
+        "machine": {
+          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "target": "$HOME/RetroPie/roms/daphne/.singe_v1-roms/{machine}.daphne"
+        },
         "disk": {
           "source": "{url}-{machine_sourcefile}/hypseus_singe_{disk}.zip",
           "download": "$HOME/RetroPie/roms/daphne/.singe_v1/{machine}.zip",
@@ -90,6 +94,10 @@
       "protocol": "http",
       "url": "$ROMSET_LASERDISC_SINGE_V2_URL",
       "resources": {
+        "machine": {
+          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "target": "$HOME/RetroPie/roms/daphne/.singe_v2-roms/{machine}.daphne"
+        },
         "disk": {
           "source": "{url}_{machine}/hypseus_singe_{disk}.zip",
           "download": "$HOME/RetroPie/roms/daphne/.singe_v2/{machine}.zip",
