@@ -93,7 +93,7 @@ class Machine:
         self.group_name = group_name or self.parent_title or self.title
 
         # Automatic defaults
-        self.emulator = romset.emulator
+        self.emulator = romset.emulators[0] if romset.emulators else None
         self.favorite = False
         self.custom_context = custom_context or {}
 

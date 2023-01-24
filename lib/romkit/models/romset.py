@@ -19,8 +19,8 @@ class ROMSet:
         name: str,
         protocol: str,
         url: Optional[str],
-        emulator: Optional[str],
         resource_templates: Dict[str, dict],
+        emulators: Optional[List[str]] = None,
         auth: Optional[str] = None,
         discovery: Optional[dict] = None,
         datlist: Optional[List[str]] = None,
@@ -32,7 +32,7 @@ class ROMSet:
         self.name = name
         self.protocol = protocol
         self.url = url
-        self.emulator = emulator
+        self.emulators = emulators or []
         self.downloader = Downloader(auth=auth, **downloads)
         self.filter_set = FilterSet.from_json(filters or {}, system.config, system.supported_filters)
 
@@ -67,8 +67,8 @@ class ROMSet:
             name=json['name'],
             protocol=json['protocol'],
             url=json.get('url'),
-            emulator=json.get('emulator'),
             resource_templates=json['resources'],
+            emulators=json.get('emulators'),
             auth=json.get('auth'),
             discovery=json.get('discovery'),
             datlist=json.get('datlist'),

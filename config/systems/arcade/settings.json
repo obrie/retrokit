@@ -148,7 +148,9 @@
           "target": "$HOME/RetroPie/BIOS/fbneo/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-fbneo"
+      "emulators": [
+        "lr-fbneo"
+      ]
     },
     {
       "name": "mame2003",
@@ -175,7 +177,9 @@
           "target": "$HOME/RetroPie/BIOS/mame2003/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame2003"
+      "emulators": [
+        "lr-mame2003"
+      ]
     },
     {
       "name": "mame2003-plus",
@@ -202,7 +206,9 @@
           "target": "$HOME/RetroPie/BIOS/mame2003-plus/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame2003-plus"
+      "emulators": [
+        "lr-mame2003-plus"
+      ]
     },
     {
       "name": "mame2010",
@@ -229,7 +235,9 @@
           "target": "$HOME/RetroPie/BIOS/mame2010/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame2010"
+      "emulators": [
+        "lr-mame2010"
+      ]
     },
     {
       "name": "mame2015",
@@ -256,7 +264,9 @@
           "target": "$HOME/RetroPie/BIOS/mame2015/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame2015"
+      "emulators": [
+        "lr-mame2015"
+      ]
     },
     {
       "name": "mame2016",
@@ -283,7 +293,9 @@
           "target": "$HOME/RetroPie/BIOS/mame2016/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame2016"
+      "emulators": [
+        "lr-mame2016"
+      ]
     },
     {
       "name": "mame-0222",
@@ -311,7 +323,9 @@
           "target": "$HOME/RetroPie/BIOS/mame0222/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame0222"
+      "emulators": [
+        "lr-mame0222"
+      ]
     },
     {
       "name": "mame-0244",
@@ -338,7 +352,9 @@
           "target": "$HOME/RetroPie/BIOS/mame0244/samples/{sample}.zip"
         }
       },
-      "emulator": "lr-mame"
+      "emulators": [
+        "lr-mame"
+      ]
     },
     {
       "name": "advmame",
@@ -365,7 +381,9 @@
           "target": "$HOME/RetroPie/BIOS/mame-advmame/samples/{sample}.zip"
         }
       },
-      "emulator": "advmame"
+      "emulators": [
+        "advmame"
+      ]
     }
   ],
   "roms": {

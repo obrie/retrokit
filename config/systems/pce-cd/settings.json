@@ -65,7 +65,9 @@
           "install": {"action": "zip_to_chd"}
         }
       },
-      "emulator": "lr-beetle-pce-fast"
+      "emulators": [
+        "lr-beetle-pce-fast"
+      ]
     }
   ],
   "roms": {
