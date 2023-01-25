@@ -68,7 +68,7 @@ configure() {
     if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
       echo -n "-bezel $bezel_name.png" >> "$target_path"
     fi
-  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")'
+  done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")')
 }
 
 restore() {
