@@ -63,6 +63,7 @@ function configure_actionmax() {
     mkUserDir "$md_conf_root/daphne"
 
     ln -snf "$romdir/daphne/roms" "$md_inst/singe"
+    ln -snf "$romdir/daphne/actionmax.daphne" "$romdir/daphne/actionmax"
 
     copyDefaultConfig "$md_inst/singeinput.default" "$md_conf_root/daphne/singeinput.ini"
     ln -sf "$md_conf_root/daphne/singeinput.ini" "$md_inst/singeinput.ini"
