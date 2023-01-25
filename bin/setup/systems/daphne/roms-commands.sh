@@ -13,6 +13,8 @@ configure() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
   while IFS=» read -r rom_name title group_name emulator controls; do
+    emulator=${emulator:-default}
+
     # Find the target path.  We just need to find the first match since the
     # directory is just symlinked.
     local target_path
