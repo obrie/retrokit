@@ -23,6 +23,7 @@ configure() {
       fi
     done
 
+    # Set up the path that we're writing to
     if [ -z "$target_path" ]; then
       continue
     fi
@@ -54,19 +55,24 @@ configure() {
     done
 
     # Bezel
-    local bezel_name
-    if [ -f "$target_overlay_dir/$title.png" ]; then
-      bezel_name=$title
-    elif [ -f "$target_overlay_dir/$group_name.png" ]; then
-      bezel_name=$group_name
-    else
-      bezel_name=$system
-    fi
-    if [[ "$controls" == *lightgun* ]]; then
-      bezel_name="$bezel_name-lightgun"
-    fi
-    if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
-      echo -n "-bezel $bezel_name.png" >> "$target_path"
+    local supports_overlays=${emulators["$emulator/library_name"]}
+    if [ "$supports_overlays" == 'true' ]; then
+      local bezel_name
+      if [ -f "$target_overlay_dir/$title.png" ]; then
+        bezel_name=$title
+      elif [ -f "$target_overlay_dir/$group_name.png" ]; then
+        bezel_name=$group_name
+      else
+        bezel_name=$system
+      fi
+
+      if [[ "$controls" == *lightgun* ]]; then
+        bezel_name="$bezel_name-lightgun"
+      fi
+
+      if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
+        echo -n "-bezel $bezel_name.png" >> "$target_path"
+      fi
     fi
   done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")')
 }
