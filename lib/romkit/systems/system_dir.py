@@ -23,13 +23,28 @@ class SystemDir:
 
     # Clears all existing symlinks in the directory
     def reset(self) -> None:
+        # Define a context that will match all potential candidates
+        context = {
+            'machine': '*',
+            'machine_filename': '*',
+            'playlist_filename': '*',
+        }
+
         if self.path.is_dir():
-            # Remove all symbolic links within the directory; there could be other
-            # things in the directory, so we want to avoid removing those.  We know
-            # that symbolic links are what's managed by romkit.
-            for filepath in self.path.iterdir():
-                if filepath.is_symlink():
-                    filepath.unlink()
+            for resource_name, file_template in self.file_templates.items():
+                path_glob = Path(file_template['target'].format(
+                    dir=self.path,
+                    **context,
+                    **self.context,
+                ))
+
+                # Remove all symbolic links within the directory; there could be other
+                # things in the directory, so we want to avoid removing those.  We know
+                # that symbolic links are what's managed by romkit when it matches the
+                # file template target pattern.
+                for filepath in Path('/').glob(str(path_glob)[1:]):
+                    if filepath.is_symlink():
+                        filepath.unlink()
 
     # Symlinks a resource with the given source path to this directory
     def symlink(self, resource_name: str, resource: Resource, **context) -> None:
