@@ -256,7 +256,7 @@ __import_user_overrides() {
 
     local rom_filename=$(basename "$rom_path")
     echo "Updating \"$rom_filename\" $resource_type to \"$resource_value\""
-    __scraper_pipe "$resource_value" --cache edit:new=$resource_type --startat "$rom_filename" --endat "$rom_filename"
+    __scraper_pipe "$resource_value" --cache edit:new=$resource_type "$rom_path"
   done < <(each_path '{system_config_dir}/scrape-overrides.json' jq -r 'to_entries[] | .key as $name | .value | to_entries[] | [$name, .key, .value] | @tsv' '{}')
 }
 
