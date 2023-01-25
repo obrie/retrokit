@@ -10,10 +10,12 @@ setup_module_desc='Daphne game commands to run on startup'
 readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
 configure() {
+  load_emulator_data
+
   local target_overlay_dir=$(system_setting '.overlays .target')
 
   while IFS=» read -r rom_name title group_name emulator controls; do
-    emulator=${emulator:-default}
+    emulator=${emulators["${emulator:-default}/emulator"]}
 
     # Find the target path.  We just need to find the first match since the
     # directory is just symlinked.
@@ -31,12 +33,11 @@ configure() {
     fi
     rm -fv "$target_path"
 
-    local config_prefix=${emulator:-daphne}
-    local source_paths=("{system_config_dir}/$config_prefix.commands")
+    local source_paths=("{system_config_dir}/$emulator.commands")
 
     # Lightgun
     if [[ "$controls" == *lightgun* ]]; then
-      source_paths+=("{system_config_dir}/$config_prefix-lightgun.commands")
+      source_paths+=("{system_config_dir}/$emulator-lightgun.commands")
     fi
 
     # Game-specific commands
@@ -57,7 +58,7 @@ configure() {
     done
 
     # Bezel
-    local supports_overlays=${emulators["$emulator/library_name"]}
+    local supports_overlays=${emulators["$emulator/supports_overlays"]}
     if [ "$supports_overlays" == 'true' ]; then
       local bezel_name
       if [ -f "$target_overlay_dir/$title.png" ]; then
