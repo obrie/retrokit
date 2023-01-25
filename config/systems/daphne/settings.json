@@ -18,7 +18,10 @@
         "repo": "thebezelproject/bezelprojectSA-Daphne",
         "path": "retroarch/overlay/GameBezels/Daphne"
       }
-    ]
+    ],
+    "lightgun_border": {
+      "offset_x": 226
+    }
   },
   "emulators": {
     "hypseus": {
