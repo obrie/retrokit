@@ -158,7 +158,7 @@
         },
         "disk": {
           "source": "{url}-{machine_sourcefile}/{disk}_hypseus_remux.zip",
-          "download": "$HOME/RetroPie/roms/daphne/.actionmax/{disk}.zip",
+          "download": "$HOME/RetroPie/roms/daphne/.singe_v1/{disk}.zip",
           "target": "$HOME/RetroPie/roms/daphne/actionmax.daphne",
           "install": {"action": "zip_extract", "include_parent": false},
           "file_identifier": "name"
