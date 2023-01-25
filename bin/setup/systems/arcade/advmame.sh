@@ -5,7 +5,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../../system-common.sh"
 
 setup_module_id='systems/arcade/advmame'
-setup_module_desc='MAME 0.230 tools, like chdman, not available through system packages'
+setup_module_desc='AdvMAME configuration settings'
 
 config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
 
