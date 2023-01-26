@@ -310,7 +310,7 @@ __setup_mupen64plus() {
   fi
 
   # Create config backup (only if one doesn't already exist)
-  cp -n "$config_path" "$config_backup_path"
+  cp -vn "$config_path" "$config_backup_path"
 
   local auto_config_keys=(
     'A Button'
@@ -394,7 +394,7 @@ __prepare_config_overwrite() {
   fi
 
   # Create config backup (only if one doesn't already exist)
-  cp -vn "$config_path" "$config_backup_path"
+  cp -n "$config_path" "$config_backup_path"
 
   echo "$device_config_path"
 }
