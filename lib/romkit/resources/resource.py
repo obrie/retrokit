@@ -116,7 +116,7 @@ class Resource:
 
     # Runs any post-processing on the target file
     def clean(self, expected_files: Optional[Set[File]] = None) -> None:
-        if self.download_path != self.target_path:
+        if self.download_path != self.target_path and (not self.is_locally_sourced or self.download_path.path != self.source_url_path):
             self.download_path.delete()
 
         self.target_path.clean(expected_files)
