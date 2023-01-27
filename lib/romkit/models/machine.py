@@ -15,7 +15,7 @@ from typing import Dict, List, Optional, Set
 # Represents a Game/Device/BIOS
 class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
-    FLAG_REGEX = re.compile(r'\(([^\)]+)\)')
+    FLAG_REGEX = re.compile(r'[\(\[]([^\)\])]+)[\)\]]')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
     NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
 
@@ -40,6 +40,8 @@ class Machine:
         device_names: Set[str] = None,
         roms: Set[File] = None,
         disks: Set[Disk] = None,
+        is_bios: bool = False,
+        runnable: bool = True,
 
         # External metadata
         group_name: Optional[str] = None,
@@ -78,6 +80,8 @@ class Machine:
         self.device_names = device_names or set()
         self.roms = roms or set()
         self.disks = disks or set()
+        self.is_bios = is_bios
+        self.runnable = runnable
 
         # External attributes
         self.genres = genres or set()
@@ -106,6 +110,8 @@ class Machine:
 
     @classmethod
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
+        name = xml.get('name')
+
         # Devices
         device_names = {device.get('name') for device in xml.findall('device_ref')}
 
@@ -114,6 +120,9 @@ class Machine:
         bios_name = xml.get('romof')
         if bios_name == parent_name:
             bios_name = None
+
+        is_bios = xml.get('isbios') == 'yes' or '[BIOS]' in name
+        runnable = xml.get('runnable') != 'no'
 
         # Sample
         sample_name = xml.get('sampleof')
@@ -133,10 +142,12 @@ class Machine:
 
         machine = cls(
             romset,
-            xml.get('name'),
+            name,
             description=xml.find('description').text,
             comment=comment,
             category=category,
+            is_bios=is_bios,
+            runnable=runnable,
             parent_name=parent_name,
             bios_name=bios_name,
             sample_name=sample_name,
@@ -457,6 +468,8 @@ class Machine:
             'filesize': self.filesize,
             'description': self.description,
             'comment': self.comment,
+            'is_bios': self.is_bios,
+            'runnable': self.runnable,
 
             # Download info
             'url': str(self.resource and self.resource.source_url),

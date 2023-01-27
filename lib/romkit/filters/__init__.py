@@ -1,6 +1,7 @@
 from romkit.filters.base import BaseFilter, ExactFilter, SubstringFilter
 from romkit.filters.filter_set import FilterReason, FilterSet
 
+from romkit.filters.bios import BIOSFilter, RunnableFilter
 from romkit.filters.control import ControlFilter, PlayerFilter
 from romkit.filters.description import FlagFilter, KeywordFilter
 from romkit.filters.emulator import EmulatorFilter, EmulatorCompatibilityFilter, EmulatorRatingFilter
@@ -22,6 +23,8 @@ from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilte
 # on which filters are most likely to reject a game
 __all_filters__ = [
     CloneFilter,
+    BIOSFilter,
+    RunnableFilter,
     FlagFilter,
     KeywordFilter,
     ControlFilter,

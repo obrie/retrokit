@@ -33,9 +33,7 @@
   },
   "roms": {
     "filters": {
-      "!keywords": [
-        "BIOS"
-      ]
+      "runnable": [true]
     },
     "collections": {
       "C64 Dreams: Best Of": {
