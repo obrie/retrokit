@@ -1,7 +1,7 @@
 {
   "roms": {
     "filters": {
-      "!genres|extra": [
+      "!*genres|extra": [
         "Puzzle-Game"
       ],
       "!titles": [

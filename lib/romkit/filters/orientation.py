@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on the orientation
-class OrientationFilter(ExactFilter):
+class OrientationFilter(BaseFilter):
     name = 'orientations'
 
     def values(self, machine: Machine) -> Set[str]:

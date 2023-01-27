@@ -2,7 +2,7 @@
   "roms": {
     "filters": {
       "!genres|empty": null,
-      "flags": null,
+      "*flags": null,
       "names": [
         "# Daphne",
         "ace",

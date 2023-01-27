@@ -1,7 +1,7 @@
 {
   "roms": {
     "filters": {
-      "!flags|extra": [
+      "!*flags|extra": [
         "Competition Cart",
         "Namco Museum",
         "e-Reader"

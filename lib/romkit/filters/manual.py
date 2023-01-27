@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on whether the machine has a manual
-class ManualFilter(ExactFilter):
+class ManualFilter(BaseFilter):
     name = 'manuals'
     normalize_values = False
 

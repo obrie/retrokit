@@ -1,7 +1,7 @@
 {
   "roms": {
     "filters": {
-      "!keywords|extra": [
+      "!*titles|extra": [
         "3D",
         "Stress Tester"
       ]

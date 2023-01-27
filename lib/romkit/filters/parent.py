@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter, SubstringFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on whether the machine is a clone of another
-class CloneFilter(ExactFilter):
+class CloneFilter(BaseFilter):
     name = 'clones'
     normalize_values = False
 
@@ -13,23 +13,15 @@ class CloneFilter(ExactFilter):
         return {machine.parent_name is not None}
 
 # Filter on the parent machine name
-class ParentNameFilter(ExactFilter):
+class ParentNameFilter(BaseFilter):
     name = 'parent_names'
 
     def values(self, machine: Machine) -> Set[str]:
         return {machine.parent_name or machine.name}
 
 
-# Filter on the parts of the parent machine name
-class PartialParentNameFilter(SubstringFilter):
-    name = '~parent_names'
-
-    def values(self, machine: Machine) -> Set[str]:
-        return {machine.parent_name or machine.name}
-
-
 # Filter on the parent machine title
-class ParentTitleFilter(ExactFilter):
+class ParentTitleFilter(BaseFilter):
     name = 'parent_titles'
 
     def values(self, machine: Machine) -> Set[str]:

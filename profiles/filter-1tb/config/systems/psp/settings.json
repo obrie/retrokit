@@ -1,10 +1,10 @@
 {
   "roms": {
     "filters": {
-      "flags": [
+      "*flags": [
         "USA"
       ],
-      "!flags": [
+      "!*flags": [
         "# PSN",
         "NG",
         "PCE",
@@ -17,7 +17,7 @@
         "psn"
       ],
       "!emulator_ratings": [1, 2, 3],
-      "!genres|extra": [
+      "!*genres|extra": [
         "Adventure / Text",
         "Fight",
         "Music and Dance",

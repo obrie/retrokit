@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on the emulators to allow
-class EmulatorFilter(ExactFilter):
+class EmulatorFilter(BaseFilter):
     name = 'emulators'
     apply_to_overrides = True
 
@@ -13,7 +13,7 @@ class EmulatorFilter(ExactFilter):
         return {machine.emulator}
 
 # Filter on the emulator known to be compatible with the machine
-class EmulatorCompatibilityFilter(ExactFilter):
+class EmulatorCompatibilityFilter(BaseFilter):
     name = 'emulator_compatibility'
     apply_to_overrides = True
     normalize_values = False
@@ -22,7 +22,7 @@ class EmulatorCompatibilityFilter(ExactFilter):
         return {machine.emulator is not None and machine.emulator in machine.romset.emulators}
 
 # Filter on rating of the compatibility of the game with the emulator
-class EmulatorRatingFilter(ExactFilter):
+class EmulatorRatingFilter(BaseFilter):
     name = 'emulator_ratings'
     normalize_values = False
 

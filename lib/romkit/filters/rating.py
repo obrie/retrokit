@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on user ratings
-class RatingFilter(ExactFilter):
+class RatingFilter(BaseFilter):
     name = 'ratings'
     normalize_values = False
 

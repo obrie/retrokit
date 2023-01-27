@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on whether the machine is a BIOS
-class BIOSFilter(ExactFilter):
+class BIOSFilter(BaseFilter):
     name = 'bios'
     normalize_values = False
 
@@ -13,7 +13,7 @@ class BIOSFilter(ExactFilter):
         return {machine.is_bios}
 
 # Filter on whether the machine is runnable
-class RunnableFilter(ExactFilter):
+class RunnableFilter(BaseFilter):
     name = 'runnable'
     normalize_values = False
 

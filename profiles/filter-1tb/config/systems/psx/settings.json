@@ -2,11 +2,11 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1],
-      "!flags|extra": [
-        "(Australia)",
+      "!*flags|extra": [
+        "\"Australia\"",
         "The Making of"
       ],
-      "!keywords": [
+      "!*titles": [
         "Quiz",
         "Trivia",
         "# Specials / Collections",
@@ -57,7 +57,7 @@
         "Triple Play",
         "VR Baseball"
       ],
-      "!genres": [
+      "!*genres": [
         null,
         "Adventure / Educational",
         "\"Board\"",

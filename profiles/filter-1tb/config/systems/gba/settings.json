@@ -1,10 +1,10 @@
 {
   "roms": {
     "filters": {
-      "!flags|extra": [
+      "!*flags|extra": [
         "Phantasy Star Online"
       ],
-      "!keywords|extra": [
+      "!*titles|extra": [
         "Battle Network",
         "Classic NES Series",
         "Game Boy Advance Video"

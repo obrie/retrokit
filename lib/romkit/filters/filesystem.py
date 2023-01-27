@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from pathlib import Path
 from typing import Set
 
 # Filter on the presence of the machine on the filesystem
-class FilesystemFilter(ExactFilter):
+class FilesystemFilter(BaseFilter):
     name = 'filesystem'
     normalize_values = False
 

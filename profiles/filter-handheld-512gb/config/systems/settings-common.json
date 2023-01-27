@@ -1,11 +1,11 @@
 {
   "roms": {
     "filters": {
-      "flags": [
+      "*flags": [
         "USA",
         "World"
       ],
-      "!genres|512gb": [
+      "!*genres|512gb": [
         "1st person",
         "Breakout",
         "Cycling",

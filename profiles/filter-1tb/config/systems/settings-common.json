@@ -9,7 +9,7 @@
         null,
         "en"
       ],
-      "!genres": [
+      "!*genres": [
         "Adult",
         "Board game",
         "Casino",
@@ -23,14 +23,14 @@
         "Visual Novel"
       ],
       "!genres|empty": [null],
-      "flags": [
+      "*flags": [
         "Australia",
         "Canada",
         "Europe",
         "USA",
         "World"
       ],
-      "!flags": [
+      "!*flags": [
         "Aftermarket",
         "Alt",
         "Auto Demo",
@@ -59,9 +59,9 @@
         "Test Program",
         "Unl",
         "Virtual Console",
-        "[b]"
+        "\"b\""
       ],
-      "!keywords": [
+      "!*titles": [
         "-in-1",
         "Anniversary Edition",
         "Arcade Classic",

@@ -4,7 +4,7 @@
       "clones": [false],
       "emulator_compatibility": [true],
       "emulator_ratings": [4, 5],
-      "!genres": [
+      "!*genres": [
         "Board Game",
         "Casino",
         "Golf",
@@ -38,12 +38,12 @@
         20,
         30
       ],
-      "flags": null,
-      "!flags": [
+      "*flags": null,
+      "!*flags": [
         "Hack",
         "Demo"
       ],
-      "!keywords": [
+      "!*descriptions": [
         "Anniversary",
         "Bootleg",
         "DECO Cassette",

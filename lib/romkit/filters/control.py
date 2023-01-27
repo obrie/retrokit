@@ -1,17 +1,17 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on the input controls
-class ControlFilter(ExactFilter):
+class ControlFilter(BaseFilter):
     name = 'controls'
 
     def values(self, machine: Machine) -> Set[str]:
         return machine.controls
 
-class PlayerFilter(ExactFilter):
+class PlayerFilter(BaseFilter):
     name = 'players'
     normalize_values = False
 

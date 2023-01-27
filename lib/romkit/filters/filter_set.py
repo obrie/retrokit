@@ -3,6 +3,8 @@ from __future__ import annotations
 from enum import Enum
 from typing import Optional
 
+from romkit.filters.base import FilterMatchType
+
 class FilterReason(Enum):
     ALLOW = 1
     OVERRIDE = 2
@@ -10,6 +12,8 @@ class FilterReason(Enum):
 class FilterModifier(Enum):
     ALLOW = ''
     BLOCK = '!'
+    PATTERN = '~'
+    SUBSTRING = '*'
     OVERRIDE = '+'
     UNION = '|'
 
@@ -47,20 +51,29 @@ class FilterSet:
 
         # Add each filter to the set
         for filter_name, filter_values in combined_filter_configs.items():
-            # Determine the filter to create.  The class name will be the name
-            # without modifiers. For example, the filter class name for "!names" is "names".
-            filter_modifier = filter_name[0]
+            # Determine the filter to create.  The filter name should be the name
+            # without modifiers. For example, the filter name for "!names" is "names".
+            primary_modifier = filter_name[0]
             filter_options = {}
-            if filter_modifier == FilterModifier.BLOCK.value:
-                filter_cls_name = filter_name[1:]
+            if primary_modifier == FilterModifier.BLOCK.value:
+                filter_name = filter_name[1:]
                 filter_options['invert'] = True
-            elif filter_modifier == FilterModifier.OVERRIDE.value:
-                filter_cls_name = filter_name[1:]
+            elif primary_modifier == FilterModifier.OVERRIDE.value:
+                filter_name = filter_name[1:]
                 filter_options['override'] = True
-            else:
-                filter_cls_name = filter_name
 
-            filter_cls = supported_filter_lookup[filter_cls_name]
+            # A secondary modifier is combined with the primary modifier.  For example:
+            # * !~ is the inverse of a pattern match
+            # * +~ is an override with a pattern match
+            secondary_modifier = filter_name[0]
+            if secondary_modifier == FilterModifier.PATTERN.value:
+                filter_options['match_type'] = FilterMatchType.PATTERN
+                filter_name = filter_name[1:]
+            elif secondary_modifier == FilterModifier.SUBSTRING.value:
+                filter_options['match_type'] = FilterMatchType.SUBSTRING
+                filter_name = filter_name[1:]
+
+            filter_cls = supported_filter_lookup[filter_name]
             filter_set.append(filter_cls(set(filter_values), config=config, log=log, **filter_options))
 
         return filter_set

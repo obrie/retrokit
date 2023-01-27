@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from romkit.filters.base import ExactFilter, SubstringFilter
+from romkit.filters.base import BaseFilter
 
 from typing import Set
 
 # Filter on categories (the type of the machine)
-class CategoryFilter(SubstringFilter):
+class CategoryFilter(BaseFilter):
     name = 'categories'
 
     def values(self, machine: Machine) -> Set[str]:
@@ -15,28 +15,28 @@ class CategoryFilter(SubstringFilter):
             return self.empty
 
 # Filter on genres
-class GenreFilter(SubstringFilter):
+class GenreFilter(BaseFilter):
     name = 'genres'
 
     def values(self, machine: Machine) -> Set[str]:
         return machine.genres
 
 # Filter on series
-class SeriesFilter(SubstringFilter):
+class SeriesFilter(BaseFilter):
     name = 'series'
 
     def values(self, machine: Machine) -> Set[str]:
         return {machine.series}
 
 # Filter on custom collections
-class CollectionFilter(ExactFilter):
+class CollectionFilter(BaseFilter):
     name = 'collections'
 
     def values(self, machine: Machine) -> Set[str]:
         return machine.collections
 
 # Filter on arbitary tags
-class TagFilter(ExactFilter):
+class TagFilter(BaseFilter):
     name = 'tags'
 
     def values(self, machine: Machine) -> Set[str]:
