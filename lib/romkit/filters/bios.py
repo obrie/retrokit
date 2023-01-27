@@ -9,7 +9,7 @@ class BIOSFilter(BaseFilter):
     name = 'bios'
     normalize_values = False
 
-    def values(self, machine: Machine) -> Set[str]:
+    def values(self, machine: Machine) -> Set[bool]:
         return {machine.is_bios}
 
 # Filter on whether the machine is runnable
@@ -17,5 +17,5 @@ class RunnableFilter(BaseFilter):
     name = 'runnable'
     normalize_values = False
 
-    def values(self, machine: Machine) -> Set[str]:
+    def values(self, machine: Machine) -> Set[bool]:
         return {machine.runnable and not machine.is_bios}
