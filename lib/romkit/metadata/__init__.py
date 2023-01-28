@@ -2,6 +2,7 @@ from romkit.metadata.base import BaseMetadata
 from romkit.metadata.metadata_set import MetadataSet
 
 from romkit.metadata.buttons import ButtonsMetadata
+from romkit.metadata.category import CategoryMetadata
 from romkit.metadata.controls import ControlsMetadata
 from romkit.metadata.emulation import EmulationMetadata
 from romkit.metadata.genres import GenresMetadata
@@ -20,6 +21,7 @@ from romkit.metadata.tags import TagsMetadata
 __all_metadata__ = [
     GroupMetadata,
     ButtonsMetadata,
+    CategoryMetadata,
     ControlsMetadata,
     EmulationMetadata,
     GenresMetadata,
