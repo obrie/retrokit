@@ -1,6 +1,7 @@
 {
   "roms": {
     "filters": {
+      "!emulator_ratings": [0, 1, 2, 3],
       "categories": [
         null,
         "Games"
