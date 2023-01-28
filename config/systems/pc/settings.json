@@ -54,12 +54,7 @@
     "favorites": {
     },
     "dirs": [
-      {
-        "path": "$HOME/RetroPie/roms/pc",
-        "filters": {
-          "!emulator_ratings": [0, 1, 2]
-        }
-      }
+      {"path": "$HOME/RetroPie/roms/pc", "filters": {}}
     ],
     "files": {
       "conf": {
