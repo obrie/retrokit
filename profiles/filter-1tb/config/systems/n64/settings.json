@@ -1,12 +1,10 @@
 {
   "roms": {
     "filters": {
-      "emulator_compatibility": [true],
       "emulator_ratings": [5],
       "+titles": [
-        "Mario Party",
-        "Mario Party 2",
-        "Mario Party 3"
+        "# Genre exceptions",
+        "/^Mario Party/"
       ]
     }
   }

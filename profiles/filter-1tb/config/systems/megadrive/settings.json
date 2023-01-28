@@ -1,12 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!titles|extra": [
-        "# Collections",
-        "Fun 'n Games",
-        "/^Sonic & Knuckles \\+/"
-      ],
       "+titles": [
+        "# Genre exceptions",
         "Jeopardy!",
         "Wheel of Fortune"
       ]

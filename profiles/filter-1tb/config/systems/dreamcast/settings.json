@@ -3,21 +3,15 @@
     "filters": {
       "!titles|extra": [
         "Phantasy Star Online",
-        "# Sports Franchises",
-        "/^NBA 2K/",
-        "/^NFL 2K/",
-        "/^NFL Blitz/",
-        "/^NHL 2K/",
-        "/^World Series Baseball 2K/"
+        "# Sports Franchises (filter all but latest)",
+        "/^NFL Blitz(?! 2001)/",
+        "/^World Series Baseball(?! 2K2)/",
+        "/^NBA 2K(?!2)/",
+        "/^NFL 2K(?!2)/",
+        "/^NHL 2K(?!2)/"
       ],
       "+titles": [
-        "# Latest Sports Franchises (one day make this automatic)",
-        "NBA 2K2",
-        "NFL 2K2",
-        "NFL Blitz 2001",
-        "NHL 2K2",
-        "World Series Baseball 2K2",
-        "# Exceptions",
+        "# Genre exceptions",
         "South Park - Chef's Luv Shack",
         "Typing of the Dead, The"
       ]

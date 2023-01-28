@@ -1,17 +1,15 @@
 {
   "roms": {
     "filters": {
-      "!flags|extra": [
-        "Competition Cart",
-        "e-Reader Edition",
-        "/Namco Museum/"
+      "!titles|extra": [
+        "# Prefer the Mike Tyson branded version",
+        "Punch-Out!!"
       ],
       "+titles": [
+        "# Genre exceptions",
         "Jeopardy!",
+        "# International exceptions",
         "Karateka"
-      ],
-      "!titles|extra": [
-        "Punch-Out!!"
       ]
     }
   }

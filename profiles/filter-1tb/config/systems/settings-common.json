@@ -33,6 +33,7 @@
       ],
       "!flags": [
         "Aftermarket",
+        "Competition Cart",
         "Compilation",
         "Developer Cart",
         "Enhancement Chip",
@@ -46,6 +47,7 @@
         "Switch Online",
         "Unl",
         "b",
+        "e-Reader Edition",
         "/^Alt/",
         "/^Beta/",
         "/^GameCube/",
@@ -53,6 +55,7 @@
         "/Collection/",
         "/Demo/",
         "/Kiosk/",
+        "/Namco Museum/",
         "/Preview/",
         "/Program/",
         "/Proto/",
@@ -75,10 +78,14 @@
         "/Quiz/",
         "/Solitaire/",
         "/Test Cartridge/",
+        "/Trivia/",
         "/ in 1/",
         "/ Card /",
         "/ Demo /"
-     ]
+      ],
+      "!tags": [
+        "Compilation"
+      ]
     }
   }
 }
