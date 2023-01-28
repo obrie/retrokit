@@ -4,20 +4,11 @@
       "clones": [false],
       "emulator_compatibility": [true],
       "emulator_ratings": [4, 5],
-      "!*genres": [
-        "Board Game",
-        "Casino",
-        "Golf",
-        "Mature",
-        "Medal Game",
-        "Multiplay",
-        "MultiGame / Compilation",
-        "Music Game",
+      "!genres": [
         "Puzzle / Match",
-        "Quiz",
-        "Slot Machine",
         "Sports / Baseball",
         "Sports / Bowling",
+        "Sports / Golf",
         "Sports / Handball",
         "Sports / Hang Gliding",
         "Sports / Hockey",
@@ -29,7 +20,15 @@
         "Sports / Swimming",
         "Sports / Tennis",
         "Sports / Volleyball",
-        "Tabletop"
+        "/^Medal Game/",
+        "/^MultiGame / Compilation/",
+        "/^Music Game/",
+        "/^Slot Machine/",
+        "/^Tabletop/",
+        "/Casino/",
+        "/Mature/",
+        "/Multiplay/",
+        "/Quiz/"
       ],
       "!ratings": [
         null,
@@ -38,19 +37,19 @@
         20,
         30
       ],
-      "*flags": null,
-      "!*flags": [
+      "flags": null,
+      "!flags": [
         "Hack",
         "Demo"
       ],
-      "!*descriptions": [
-        "Anniversary",
-        "Bootleg",
-        "DECO Cassette",
-        "(Hack)",
-        "HB,",
-        "Homebrew",
-        "Prototype"
+      "!descriptions": [
+        "/Anniversary/",
+        "/Bootleg/",
+        "/DECO Cassette/",
+        "/\\([^\\)]*Hack/",
+        "/HB,/",
+        "/Homebrew/",
+        "/Prototype/"
       ],
       "!controls": [
         "gambling",

@@ -1,13 +1,10 @@
 {
   "roms": {
     "filters": {
-      "!*titles|extra": [
-        "InfoGenius"
-      ],
-      "!titles": [
+      "!titles|extra": [
         "Game Boy Aging Cartridge",
-        "Game Boy Camera",
-        "Game Boy Camera Gold"
+        "/^Game Boy Camera/",
+        "/^InfoGenius/"
       ]
     }
   }

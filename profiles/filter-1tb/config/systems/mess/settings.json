@@ -3,7 +3,7 @@
     "filters": {
       "clones": [false],
       "!genres|empty": null,
-      "*flags": null,
+      "flags": null,
       "media": [
         "artwork"
       ]

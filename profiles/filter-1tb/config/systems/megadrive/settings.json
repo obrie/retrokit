@@ -1,12 +1,10 @@
 {
   "roms": {
     "filters": {
-      "!titles": [
+      "!titles|extra": [
         "# Collections",
         "Fun 'n Games",
-        "Sonic & Knuckles + Sonic The Hedgehog",
-        "Sonic & Knuckles + Sonic The Hedgehog 2",
-        "Sonic & Knuckles + Sonic The Hedgehog 3"
+        "/^Sonic & Knuckles \\+/"
       ],
       "+titles": [
         "Jeopardy!",

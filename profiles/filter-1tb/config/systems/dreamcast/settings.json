@@ -1,16 +1,14 @@
 {
   "roms": {
     "filters": {
-      "!*titles": [
+      "!titles|extra": [
+        "Phantasy Star Online",
         "# Sports Franchises",
-        "NBA 2K",
-        "NFL 2K",
-        "NFL Blitz",
-        "NHL 2K",
-        "World Series Baseball 2K"
-      ],
-      "!titles": [
-        "Phantasy Star Online"
+        "/^NBA 2K/",
+        "/^NFL 2K/",
+        "/^NFL Blitz/",
+        "/^NHL 2K/",
+        "/^World Series Baseball 2K/"
       ],
       "+titles": [
         "# Latest Sports Franchises (one day make this automatic)",

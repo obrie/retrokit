@@ -5,12 +5,6 @@ import re
 
 from enum import Enum
 
-class FilterMatchType(Enum):
-    EXACT = 'exact'
-    SUBSTRING = 'substring'
-    PATTERN = 'pattern'
-
-
 # Provides a base class for reducing the set of machines to install
 class BaseFilter:
     name = None
@@ -22,24 +16,28 @@ class BaseFilter:
         filter_values: set = set(),
         invert: bool = False,
         override: bool = False,
-        match_type: FilterMatchType = FilterMatchType.EXACT,
         log: bool = True,
         config: dict = {},
     ) -> None:
-        self.filter_values = filter_values
         self.invert = invert
         self.override = override
-        self.match_type = match_type
         self.log = log
         self.config = config
 
         self.load()
-        if self.match_type == FilterMatchType.PATTERN:
-            # Compile to regular expressions
-            self.filter_values = set([value and re.compile(value) for value in self.normalize(self.filter_values)])
-        else:
-            # Normalize the values (lowercase)
-            self.filter_values = set(self.normalize(self.filter_values))
+
+        self.exact_filter_values = set()
+        self.pattern_filter_values = set()
+
+        # Normalize the values:
+        # * Lowercase all
+        # * Compile regular expressions when shape is /.../
+        for filter_value in self.normalize(filter_values):
+            if isinstance(filter_value, str) and len(filter_value) > 2 and filter_value[0] == '/' and filter_value[-1] == '/':
+                # Compile to regular expression
+                self.pattern_filter_values.add(re.compile(filter_value[1:-1]))
+            else:
+                self.exact_filter_values.add(filter_value)
 
     # Does this filter allow the given machine?
     def allow(self, machine: Machine) -> bool:
@@ -64,26 +62,20 @@ class BaseFilter:
     # Do the filter values match the given machine?
     def match(self, machine: Machine) -> bool:
         machine_values = set(self.normalize(self.values(machine)))
-        if not machine_values and None in self.filter_values:
+
+        if not machine_values and None in self.exact_filter_values:
+            # Empty allowed
             return True
-
-        if self.match_type == FilterMatchType.EXACT:
-            # Match the exact value as it was normalized
-            return len(self.filter_values & machine_values) > 0
-        elif self.match_type == FilterMatchType.SUBSTRING:
-            # Match substring
+        elif len(self.exact_filter_values & machine_values) > 0:
+            # Exact value matched
+            return True
+        elif self.pattern_filter_values:
+            # Look for pattern
             for machine_value in machine_values:
-                # Add quotes to allow for exact matching
-                if machine_value:
-                    machine_value = f'"{machine_value}"'
+                if any(machine_value and pattern.search(machine_value) for pattern in self.pattern_filter_values):
+                    return True
 
-                if any(filter_value and machine_value and filter_value in machine_value for filter_value in self.filter_values):
-                    return True
-        else:
-            # Match regular expression
-            for machine_value in machine_values:
-                if any(filter_value and machine_value and filter_value.match(machine_value) for filter_value in self.filter_values):
-                    return True
+        return False
 
     # Normalizes values so that lowercase/uppercase differences are
     # ignored during the matching process

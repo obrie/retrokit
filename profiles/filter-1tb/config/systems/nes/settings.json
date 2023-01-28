@@ -1,16 +1,16 @@
 {
   "roms": {
     "filters": {
-      "!*flags|extra": [
+      "!flags|extra": [
         "Competition Cart",
-        "Namco Museum",
-        "e-Reader"
+        "e-Reader Edition",
+        "/Namco Museum/"
       ],
       "+titles": [
         "Jeopardy!",
         "Karateka"
       ],
-      "!titles": [
+      "!titles|extra": [
         "Punch-Out!!"
       ]
     }

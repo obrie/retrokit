@@ -1,19 +1,17 @@
 {
   "roms": {
     "filters": {
-      "!*flags|extra": [
-        "Phantasy Star Online"
+      "!flags|extra": [
+        "/^Phantasy Star Online/"
       ],
-      "!*titles|extra": [
-        "Battle Network",
-        "Classic NES Series",
-        "Game Boy Advance Video"
-      ],
-      "!titles": [
+      "!titles|extra": [
         "Ultimate Arcade Games",
         "Ultimate Brain Games",
         "Ultimate Card Games",
-        "Ultimate Puzzle Games"
+        "Ultimate Puzzle Games",
+        "/^Mega Man Battle Network/",
+        "/^Classic NES Series/",
+        "/^Game Boy Advance Video/"
       ]
     }
   }

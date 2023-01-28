@@ -46,8 +46,8 @@
     "priority": {
     },
     "filters": {
-      "~parent_names": [
-        "^gnw_"
+      "parent_names": [
+        "/^gnw_/"
       ]
     },
     "favorites": {

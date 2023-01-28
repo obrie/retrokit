@@ -1,9 +1,7 @@
 {
   "roms": {
     "filters": {
-      "!*genres|512gb-extra": [
-        "Pinball",
-        "Puzzle",
+      "!genres|512gb-extra": [
         "Sports / Baseball",
         "Sports / Basketball",
         "Sports / Beach Volleyball",
@@ -14,7 +12,9 @@
         "Sports / Squash",
         "Sports / Softball",
         "Sports / Tennis",
-        "Sports / Wrestling"
+        "Sports / Wrestling",
+        "/Pinball/",
+        "/Puzzle/"
       ],
       "+titles": [
         "Carmageddon",

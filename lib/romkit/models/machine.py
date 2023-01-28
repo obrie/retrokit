@@ -16,6 +16,7 @@ from typing import Dict, List, Optional, Set
 class Machine:
     TITLE_REGEX = re.compile(r'^[^\(]+')
     FLAG_REGEX = re.compile(r'[\(\[]([^\)\])]+)[\)\]]')
+    FLAG_DELIMITER_REGEX = re.compile(r', *')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
     NORMALIZED_TITLE_REGEX = re.compile(r'[^a-z0-9\+&\.]+')
 
@@ -290,7 +291,10 @@ class Machine:
     # Flags from description
     @property
     def flags(self) -> Set[str]:
-        return set(self.FLAG_REGEX.findall(self.description))
+        values = set()
+        for group in self.FLAG_REGEX.findall(self.description):
+            values.update(self.FLAG_DELIMITER_REGEX.split(group))
+        return values
 
     # Flags, isolated
     @property

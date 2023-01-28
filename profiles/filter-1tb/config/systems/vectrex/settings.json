@@ -1,9 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!*titles|extra": [
-        "3D",
-        "Stress Tester"
+      "!titles|extra": [
+        "/3D/"
       ]
     }
   }

@@ -2,8 +2,8 @@
   "roms": {
     "filters": {
       "!emulator_ratings": [1, 2, 3],
-      "!*genres|extra": [
-        "Simulation"
+      "!genres|extra": [
+        "/^Simulation/"
       ],
       "!names": [
         "# Unavailable",

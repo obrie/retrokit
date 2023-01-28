@@ -1,8 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!*titles|extra": [
-        "Hang On &"
+      "!titles|extra": [
+        "/^Hang On &/"
       ]
     }
   }

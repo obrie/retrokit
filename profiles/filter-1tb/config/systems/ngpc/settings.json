@@ -1,10 +1,10 @@
 {
   "roms": {
     "filters": {
-      "!*genres|extra": [
+      "!genres|extra": [
         "Puzzle-Game"
       ],
-      "!titles": [
+      "!titles|extra": [
         "# Board Games",
         "Shanghai Mini"
       ]

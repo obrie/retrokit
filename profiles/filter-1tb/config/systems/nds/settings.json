@@ -1,8 +1,8 @@
 {
   "roms": {
     "filters": {
-      "!*genres|extra": [
-        "Simulation"
+      "!genres|extra": [
+        "/^Simulation/"
       ],
       "+titles": [
         "Mario Party DS"
