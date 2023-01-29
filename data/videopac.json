@@ -969,7 +969,7 @@
         "url": "https://archive.org/download/matchmaker-buzzword-logix-us-odyssey-2-1978/Matchmaker!  Buzzword!  Logix! (US)(Odyssey 2)(1978).pdf"
       }
     ],
-    "tags": [
+    "+genres": [
       "Compilation"
     ]
   },
@@ -977,6 +977,9 @@
     "players": 1,
     "genres": [
       "Various"
+    ],
+    "+genres": [
+      "Compilation"
     ],
     "manuals": [
       {
@@ -999,9 +1002,6 @@
         ],
         "url": "https://archive.org/download/mathematician-echo-eur-philips-videopac-1978/Mathematician - Echo (EUR)(Philips Videopac)(1978).pdf"
       }
-    ],
-    "tags": [
-      "Compilation"
     ]
   },
   "Mission Impossible": {
