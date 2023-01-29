@@ -8,7 +8,7 @@
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Daphne/raw/master/retroarch/overlay/Daphne.png",
-    "target": "/opt/retropie/emulators/hypseus/bezels",
+    "target": "/opt/retropie/configs/daphne/bezels",
     "repos": [
       {
         "repo": "thebezelproject/bezelproject-Daphne",
