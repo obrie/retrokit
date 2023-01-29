@@ -1287,7 +1287,7 @@
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Alice in Wonderland/Alice in Wonderland Manual.cbz",
         "options": {
           "pages": "4-5,7,9-10,12,15",
-          "rewrite_exif": "true"
+          "rewrite_exif": true
         }
       }
     ],
@@ -2898,7 +2898,7 @@
         "url": "https://archive.org/download/BMX_Trials_1985_Mastertronic/BMX_Trials_1985_Mastertronic.pdf",
         "options": {
           "pages": "2-2",
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -3483,7 +3483,7 @@
         ],
         "url": "https://archive.org/download/Commodore64Manuals/Battlefield (Europe).pdf",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ],
@@ -8265,7 +8265,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Dark_Star_(1984_Mastertronic)_[2474]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "270"
+          "rotate": 270
         }
       }
     ],
@@ -15744,7 +15744,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Hungry_Horace_(1983_Melbourne_House)_[279]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "270"
+          "rotate": 270
         }
       }
     ]
@@ -15789,7 +15789,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Hustler_(1983_Bubble_Bus_Software)_[3240]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -18164,7 +18164,7 @@
         "url": "https://archive.org/download/Commodore64Manuals/KnightGames2-SpaceTrilogy1987englishSoftware.pdf",
         "options": {
           "pages": "2-2",
-          "rotate": "270"
+          "rotate": 270
         }
       }
     ],
@@ -18345,7 +18345,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Kongo_Kong_(1983_Mogul)_[136]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -21503,7 +21503,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Munch_Mania_(1984_Mastertronic)_[6720]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -21633,7 +21633,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Mushroom_Alley_(1983_Mogul)_[132]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -25156,7 +25156,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Punchy_(1983_Mr._Micro)_[92]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ]
@@ -25683,7 +25683,7 @@
         "url": "https://c64games.de/hugo.php?helpfiles=/r/rally_speedway_anl.zip",
         "options": {
           "filter": "*Inlay*",
-          "rotate": "90"
+          "rotate": 90
         }
       }
     ],
@@ -29007,7 +29007,7 @@
         "url": "https://archive.org/download/c64-dreams-v0.45/C64 Dreams v0.45.7z/C64 Dreams/C64 Dreams/Games/Starflight/Starflight Manual.cbz",
         "options": {
           "pages": "8-57,59-N",
-          "rewrite_exif": "true"
+          "rewrite_exif": true
         }
       }
     ],
@@ -35347,7 +35347,7 @@
         ],
         "url": "https://archive.org/download/Ultimate_Tape_Archive_V2.0/Ultimate_Tape_Archive_V2.0.zip/Ultimate_Tape_Archive_V2.0/Vegas_Jackpot_(1984_Mastertronic)_[8378]/Extras/Inlay_back.jpg",
         "options": {
-          "rotate": "270"
+          "rotate": 270
         }
       }
     ]
