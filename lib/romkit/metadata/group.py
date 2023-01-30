@@ -30,13 +30,18 @@ class GroupMetadata(BaseMetadata):
 
     def find_and_update(self, machine: Machine) -> None:
         # Priority:
+        # * Non-normalized values
         # * Machine-specific overrides (e.g. from a split), starting with machine's name
         # * Default grouping (title), starting with parent
-        for key in [machine.name, machine.parent_name, machine.parent_disc_title, machine.parent_title, machine.disc_title, machine.title]:
-            if not key:
-                continue
+        for normalize in [False, True]:
+            for key in [machine.name, machine.parent_name, machine.parent_disc_title, machine.parent_title, machine.disc_title, machine.title]:
+                if not key:
+                    continue
 
-            group_name = self.groups.get(key) or self.groups.get(Machine.normalize(key))
-            if group_name:
-                machine.group_name = group_name
-                break
+                if normalize:
+                    key = Machine.normalize(key)
+
+                group_name = self.groups.get(key)
+                if group_name:
+                    machine.group_name = group_name
+                    return
