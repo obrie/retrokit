@@ -161,11 +161,12 @@ class Machine:
         machine.disks = {Disk(machine, disk.get('name'), disk.get('sha1')) for disk in dumped_disks}
 
         # ROMs
-        dumped_roms = filter(File.is_installable, xml.findall('rom'))
-        machine.roms = {
-            File.from_xml(rom_xml, file_identifier=romset.resource_templates['machine'].file_identifier)
-            for rom_xml in dumped_roms
-        }
+        if 'machine' in romset.resource_templates:
+            dumped_roms = filter(File.is_installable, xml.findall('rom'))
+            machine.roms = {
+                File.from_xml(rom_xml, file_identifier=romset.resource_templates['machine'].file_identifier)
+                for rom_xml in dumped_roms
+            }
 
         return machine
 
