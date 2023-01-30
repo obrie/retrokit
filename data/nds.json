@@ -3265,6 +3265,9 @@
       "Action",
       "Strategy"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -3275,10 +3278,7 @@
     ],
     "emulation": {
       "emulator": "lr-desmume2015"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Deal or No Deal": {
     "players": 1,
@@ -9822,12 +9822,12 @@
     "genres": [
       "Action"
     ],
-    "emulation": {
-      "emulator": "lr-desmume2015"
-    },
     "controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-desmume2015"
+    }
   },
   "Moorhuhn Jump'n Run - Atlantis": {},
   "More Brain Training from Dr Kawashima - How Old Is Your Brain": {
@@ -11645,6 +11645,9 @@
     "genres": [
       "Action"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -11655,10 +11658,7 @@
     ],
     "emulation": {
       "emulator": "lr-desmume2015"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Pokemon - Black Version": {
     "players": 1,
@@ -16348,12 +16348,12 @@
       "Action",
       "Educational"
     ],
-    "emulation": {
-      "emulator": "lr-desmume2015"
-    },
     "controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-desmume2015"
+    }
   },
   "What's Cooking - Jamie Oliver": {},
   "Wheel of Fortune": {

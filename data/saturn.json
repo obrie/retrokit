@@ -621,6 +621,9 @@
       "Action",
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -631,10 +634,7 @@
     ],
     "emulation": {
       "rating": 3
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Arthur to Astaroth no Nazo Makaimura - Incredible Toons": {
     "players": 1,
@@ -2131,6 +2131,9 @@
     "genres": [
       "Shoot'em Up"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -2142,9 +2145,6 @@
     "emulation": {
       "rating": 4
     },
-    "controls": [
-      "lightgun"
-    ],
     "merge": [
       "Henry Explorers"
     ]
@@ -2509,24 +2509,10 @@
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA (USA).pdf"
       },
       {
-        "name": "Daytona USA - Championship Circuit Edition",
-        "languages": [
-          "en"
-        ],
-        "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA - Championship Circuit Edition (USA).pdf"
-      },
-      {
         "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/Daytona_USA_1995_J_color/Daytona_USA_1995_J_color.cbr"
-      },
-      {
-        "name": "Daytona USA - Championship Circuit Edition",
-        "languages": [
-          "pt"
-        ],
-        "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_199x_Br/Daytona_USA_Championship_Circuit_Edition_199x_Br.cbr"
       },
       {
         "languages": [
@@ -2534,6 +2520,20 @@
           "fr"
         ],
         "url": "https://archive.org/download/Daytona_USA_1995_E_2L/Daytona_USA_1995_E_2L.cbr"
+      },
+      {
+        "name": "Daytona USA - Championship Circuit Edition",
+        "languages": [
+          "en"
+        ],
+        "url": "https://archive.org/download/SEGASaturnManuals_201812/Daytona USA - Championship Circuit Edition (USA).pdf"
+      },
+      {
+        "name": "Daytona USA - Championship Circuit Edition",
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/Daytona_USA_Championship_Circuit_Edition_199x_Br/Daytona_USA_Championship_Circuit_Edition_199x_Br.cbr"
       },
       {
         "name": "Daytona USA - Championship Circuit Edition",
@@ -2897,6 +2897,9 @@
       "Driving",
       "Race"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -2907,10 +2910,7 @@
     ],
     "emulation": {
       "rating": 3
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Digital Ange - Dennou Tenshi SS": {
     "players": 1,
@@ -5262,6 +5262,9 @@
       "Action",
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -5289,10 +5292,7 @@
     ],
     "emulation": {
       "rating": 3
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Hudson Soft - New Soft Line Up for Sega Saturn": {},
   "Hyper Duel": {
@@ -7228,6 +7228,9 @@
       "Action",
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -7235,9 +7238,6 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Maximum Force (USA).pdf"
       }
-    ],
-    "controls": [
-      "lightgun"
     ]
   },
   "MechWarrior 2 - 31st Century Combat - Arcade Combat Edition": {
@@ -7415,12 +7415,12 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "emulation": {
-      "rating": 3
-    },
     "controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "rating": 3
+    }
   },
   "Minakata Hakudou Toujou": {
     "players": 1,
@@ -8891,6 +8891,9 @@
     "genres": [
       "Adventure"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -8901,10 +8904,7 @@
     ],
     "emulation": {
       "rating": 3
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Preview Sega Saturn Vol. 1": {},
   "PriKura": {
@@ -10131,6 +10131,9 @@
     "genres": [
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -10138,9 +10141,6 @@
         ],
         "url": "https://archive.org/download/SEGASaturnManuals_201812/Scud - The Disposable Assassin (USA).pdf"
       }
-    ],
-    "controls": [
-      "lightgun"
     ]
   },
   "Sea Bass Fishing": {
@@ -13088,6 +13088,9 @@
       "Action",
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -13104,10 +13107,7 @@
     ],
     "emulation": {
       "rating": 2
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Virtua Cop 2": {
     "players": 2,
@@ -13115,6 +13115,9 @@
     "genres": [
       "Action",
       "Lightgun Shooter"
+    ],
+    "controls": [
+      "lightgun"
     ],
     "manuals": [
       {
@@ -13138,10 +13141,7 @@
     ],
     "emulation": {
       "rating": 3
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Virtua Fighter": {
     "players": 2,
@@ -13170,17 +13170,17 @@
         "url": "https://archive.org/download/Virtua_Fighter_1994_J_color/Virtua_Fighter_1994_J_color.cbr"
       },
       {
+        "languages": [
+          "pt"
+        ],
+        "url": "https://archive.org/download/virtua-fighter-saturn-manual/virtua-fighter-saturn-manual.pdf"
+      },
+      {
         "name": "Virtua Fighter Remix",
         "languages": [
           "ja"
         ],
         "url": "https://archive.org/download/Virtua_Fighter_Remix_1995_J_color/Virtua_Fighter_Remix_1995_J_color.cbr"
-      },
-      {
-        "languages": [
-          "pt"
-        ],
-        "url": "https://archive.org/download/virtua-fighter-saturn-manual/virtua-fighter-saturn-manual.pdf"
       },
       {
         "name": "Virtua Fighter Remix",

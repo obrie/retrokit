@@ -932,6 +932,7 @@
       "rating": 5
     }
   },
+  "4play": {},
   "4psimasy": {
     "players": 1,
     "genres": [
@@ -1334,11 +1335,11 @@
       "joy",
       "keyboard"
     ],
-    "buttons": [
-      "Fire"
-    ],
     "+controls": [
       "lightgun"
+    ],
+    "buttons": [
+      "Fire"
     ]
   },
   "aa": {
@@ -3009,6 +3010,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Secondary Weapon"
@@ -3024,10 +3028,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "alien3j": {
     "group": "alien3",
@@ -5310,6 +5311,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -5324,10 +5328,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "area51mx": {
     "players": 2,
@@ -5343,6 +5344,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -5357,10 +5361,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "area88": {
     "group": "unsquad",
@@ -7960,6 +7961,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -7974,10 +7978,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "bangball": {
     "players": 2,
@@ -8953,6 +8954,9 @@
       "pointer",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -8960,9 +8964,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbh2sp (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "bbhcotw": {
@@ -8980,6 +8981,9 @@
       "pointer",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -8987,9 +8991,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhcotw (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "bbhsc": {
@@ -9007,6 +9008,9 @@
       "pointer",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -9014,9 +9018,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbhsc (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "bbmanw": {
@@ -9127,6 +9128,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Grenade"
@@ -9142,10 +9146,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "bbustersj": {
     "group": "bbusters",
@@ -9347,6 +9348,7 @@
     ],
     "orientation": "horizontal"
   },
+  "beast": {},
   "beastrzr": {
     "players": 2,
     "rating": 70,
@@ -13577,13 +13579,13 @@
       "pointer",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "bosco": {
     "players": 2,
@@ -14892,6 +14894,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -14903,10 +14908,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "bubbletrj": {
     "group": "bubbletr",
@@ -15755,6 +15757,7 @@
       "rating": 5
     }
   },
+  "cabalng": {},
   "cabaluk": {
     "group": "cabal",
     "controls": [
@@ -16594,6 +16597,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Trigger",
       "Reload"
@@ -16605,9 +16611,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnevil (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "carnival": {
@@ -16653,6 +16656,9 @@
       "pointer",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -16660,9 +16666,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/carnking (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "carpolo": {
@@ -18882,6 +18885,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -18893,10 +18899,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "chicgum": {
     "players": 1,
@@ -18966,6 +18969,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -18977,10 +18983,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "chillicc": {
     "genres": [
@@ -19908,6 +19911,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -19915,9 +19921,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/claybust (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "claychal": {
@@ -19953,13 +19956,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "clayshoo": {
     "players": 2,
@@ -20746,6 +20749,7 @@
       "rating": 5
     }
   },
+  "cndi": {},
   "cndypuzl": {
     "players": 2,
     "rating": 60,
@@ -21133,6 +21137,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -21147,10 +21154,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "combatsc": {
     "players": 2,
@@ -22793,6 +22797,8 @@
       "ja"
     ]
   },
+  "cps1demo": {},
+  "cps1frog": {},
   "cps3boot": {
     "players": 2,
     "rating": 80,
@@ -22904,6 +22910,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -22915,10 +22924,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "crakndj2": {
     "genres": [
@@ -23313,6 +23319,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -23320,9 +23329,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/critcrsh (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "crkdown": {
@@ -23444,6 +23450,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -23455,10 +23464,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "croupier": {
     "genres": [
@@ -23715,6 +23721,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -23726,10 +23735,7 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "crysking": {
     "players": 2,
@@ -26936,6 +26942,9 @@
     "controls": [
       "paddle"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -26947,10 +26956,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ddaydoo": {
     "group": "lastday",
@@ -28258,6 +28264,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -28269,10 +28278,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "defender": {
     "players": 2,
@@ -28796,6 +28802,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -28810,10 +28819,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "desertwr": {
     "players": 2,
@@ -31469,6 +31475,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Dragon Bomb"
@@ -31484,10 +31493,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "dragngunj": {
     "group": "dragngun",
@@ -32731,6 +32737,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -32738,11 +32747,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/duckhunt (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
+  "ducki": {},
   "dumpmtmt": {
     "group": "bodyslam",
     "languages": [
@@ -33732,6 +33739,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -33746,10 +33756,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ehrgeiz": {
     "players": 2,
@@ -34586,6 +34593,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -34597,10 +34607,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "esckids": {
     "players": 4,
@@ -34947,8 +34954,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
+    ],
+    "+controls": [
+      "lightgun"
     ],
     "manuals": [
       {
@@ -34957,9 +34967,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/evilngt (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "evilston": {
@@ -37009,6 +37016,7 @@
       "joy"
     ]
   },
+  "ffightaec2": {},
   "ffightj": {
     "group": "ffight",
     "languages": [
@@ -40231,6 +40239,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -40242,10 +40253,7 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 2
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "g4u2": {
     "genres": [
@@ -42307,13 +42315,13 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "gdvsgd": {
     "players": 1,
@@ -43042,6 +43050,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -43053,10 +43064,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ghoshunt": {
     "players": 2,
@@ -43071,6 +43079,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -43082,10 +43093,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ghostb": {
     "players": 2,
@@ -43125,6 +43133,7 @@
     "group": "ghostb",
     "players": 3
   },
+  "ghostbi": {},
   "ghostlop": {
     "players": 2,
     "rating": 80,
@@ -44551,6 +44560,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -44562,10 +44574,7 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 2
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "gollygho": {
     "players": 2,
@@ -44581,6 +44590,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -44592,10 +44604,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "gomoku": {
     "players": 2,
@@ -45431,6 +45440,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -45442,10 +45454,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "greatgur": {
     "group": "gladiatr",
@@ -47199,6 +47208,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Trigger",
       "Bomb"
@@ -47206,10 +47218,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "gunbustrj": {
     "group": "gunbustr",
@@ -47629,8 +47638,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ],
     "+controls": [
       "lightgun"
@@ -48318,6 +48327,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -48329,10 +48341,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "hanaawas": {
     "players": 1,
@@ -50195,6 +50204,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -50206,10 +50218,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "hitpoker": {
     "genres": [
@@ -50483,6 +50492,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -50490,9 +50502,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/hogalley (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "hogwild": {
@@ -53656,6 +53665,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -53667,10 +53679,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 3
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "invcarht": {
     "players": 2,
@@ -54851,6 +54860,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -54862,10 +54874,7 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 4
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "jdreddp": {
     "players": 3,
@@ -55239,8 +55248,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ],
     "+controls": [
       "lightgun"
@@ -55960,6 +55969,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -55974,10 +55986,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "jpark3": {
     "players": 2,
@@ -61679,6 +61688,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -61690,10 +61702,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "leadang": {
     "group": "deadang",
@@ -62061,6 +62070,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -62075,10 +62087,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "lethalj": {
     "players": 2,
@@ -62093,6 +62102,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -62104,10 +62116,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "lethalth": {
     "players": 2,
@@ -62192,6 +62201,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Laser Gun",
       "Special Weapon"
@@ -62207,10 +62219,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "lghostj": {
     "group": "lghost",
@@ -62338,6 +62347,7 @@
       "mahjong"
     ]
   },
+  "lhcdb": {},
   "lhtb": {
     "genres": [
       "Tabletop / Mahjong"
@@ -62927,6 +62937,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -62938,10 +62951,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "loffirej": {
     "group": "loffire",
@@ -63131,13 +63141,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "lordleo": {
     "genres": [
@@ -63475,8 +63485,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ],
     "+controls": [
       "lightgun"
@@ -63493,8 +63503,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ],
     "+controls": [
       "lightgun"
@@ -63510,8 +63520,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ],
     "+controls": [
       "lightgun"
@@ -63807,9 +63817,12 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
       "paddle",
-      "pedal"
+      "pedal",
+      "pointer"
+    ],
+    "+controls": [
+      "lightgun"
     ],
     "manuals": [
       {
@@ -63822,10 +63835,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "luckywldj": {
     "group": "luckywld",
@@ -65725,6 +65735,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -65736,10 +65749,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "malzak": {
     "players": 2,
@@ -66788,6 +66798,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -66802,10 +66815,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "maxidbl": {
     "genres": [
@@ -67115,6 +67125,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -67126,10 +67139,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "mazinger": {
     "players": 2,
@@ -67477,6 +67487,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Grenade"
@@ -67492,10 +67505,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "mechattj": {
     "group": "mechatt",
@@ -73427,6 +73437,7 @@
       "rating": 5
     }
   },
+  "mslug3x": {},
   "mslug4": {
     "players": 2,
     "rating": 90,
@@ -76172,6 +76183,7 @@
       "rating": 5
     }
   },
+  "nblktiger": {},
   "nc96": {
     "players": 1,
     "genres": [
@@ -76516,6 +76528,8 @@
       "ja"
     ]
   },
+  "neo2500": {},
+  "neo3ddmo": {},
   "neobattl": {
     "players": 2,
     "rating": 50,
@@ -76571,6 +76585,7 @@
       "joy"
     ]
   },
+  "neocstlv": {},
   "neocup98": {
     "players": 2,
     "rating": 70,
@@ -76598,6 +76613,7 @@
       "rating": 5
     }
   },
+  "neodemo": {},
   "neodrift": {
     "players": 1,
     "rating": 90,
@@ -76685,6 +76701,7 @@
       "rating": 5
     }
   },
+  "neoprimo": {},
   "neoprint": {
     "players": 1,
     "genres": [
@@ -76713,6 +76730,8 @@
       "rating": 5
     }
   },
+  "neotris": {},
+  "neoww2": {},
   "neptunp2": {
     "genres": [
       "Slot Machine / Video Slot"
@@ -76828,8 +76847,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ]
   },
   "nevadafw": {
@@ -77125,6 +77144,8 @@
       "rating": 5
     }
   },
+  "ngftdemo": {},
+  "ngmontst": {},
   "ngpgal": {
     "players": 1,
     "genres": [
@@ -78385,6 +78406,7 @@
       "ja"
     ]
   },
+  "nsmb": {},
   "nsmpoker": {
     "genres": [
       "Casino / Cards"
@@ -78611,6 +78633,9 @@
       "dial",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -78622,10 +78647,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "nsub": {
     "players": 2,
@@ -78889,6 +78911,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -78900,10 +78925,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "nyjoker": {
     "players": 1,
@@ -79606,13 +79628,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "onetwo": {
     "players": 2,
@@ -79778,6 +79800,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -79785,9 +79810,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/optiger (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "opwolf": {
@@ -79804,6 +79826,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Rocket Gun"
@@ -79819,10 +79844,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "opwolf3": {
     "players": 2,
@@ -79837,6 +79859,9 @@
     "orientation": "horizontal",
     "controls": [
       "pointer"
+    ],
+    "+controls": [
+      "lightgun"
     ],
     "buttons": [
       "Shoot",
@@ -79853,10 +79878,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "opwolf3j": {
     "group": "opwolf3",
@@ -80395,6 +80417,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Grenade"
@@ -80402,10 +80427,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "othunderj": {
     "group": "othunder",
@@ -82803,6 +82825,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -82810,9 +82835,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_duckh (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "pc_ebike": {
@@ -82963,6 +82985,9 @@
       "joy",
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -82970,9 +82995,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/pc_hgaly (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "pc_kngfu": {
@@ -88143,6 +88165,8 @@
       "joy"
     ]
   },
+  "pgmdemo": {},
+  "pgmfrog": {},
   "pgoal": {
     "players": 2,
     "rating": 70,
@@ -90444,16 +90468,16 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "pollux": {
     "players": 2,
@@ -91797,13 +91821,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ppspeed": {
     "group": "polepos",
@@ -92814,6 +92838,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -92828,10 +92855,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ptblank2": {
     "players": 2,
@@ -92847,6 +92871,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -92858,10 +92885,7 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "ptblank3": {
     "players": 2,
@@ -95059,8 +95083,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ]
   },
   "quickp5": {
@@ -96835,6 +96859,9 @@
       "joy",
       "trackball"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Grenade"
@@ -96850,10 +96877,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "rambo3p": {
     "group": "rambo3",
@@ -96997,6 +97021,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -97008,10 +97035,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "rapidrvr": {
     "genres": [
@@ -97491,6 +97515,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -97505,10 +97532,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "rchase2": {
     "players": 2,
@@ -97524,6 +97548,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -97531,9 +97558,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/rchase2 (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "rchasej": {
@@ -98674,6 +98698,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Bomb"
@@ -98689,10 +98716,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "rezon": {
     "players": 2,
@@ -99755,6 +99779,7 @@
       "Direction Left / Right"
     ]
   },
+  "robocopi": {},
   "robocopj": {
     "group": "robocop",
     "languages": [
@@ -102514,6 +102539,7 @@
     ],
     "orientation": "horizontal"
   },
+  "santaball": {},
   "santam": {
     "genres": [
       "Slot Machine / Video Slot"
@@ -112057,6 +112083,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Missile"
@@ -112072,10 +112101,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "sgunner2": {
     "players": 2,
@@ -112090,6 +112116,9 @@
     "orientation": "horizontal",
     "controls": [
       "pointer"
+    ],
+    "+controls": [
+      "lightgun"
     ],
     "buttons": [
       "Fire",
@@ -112106,10 +112135,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "sgunner2j": {
     "group": "sgunner2",
@@ -113107,6 +113133,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -113118,10 +113147,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "shootopl": {
     "players": 2,
@@ -113218,13 +113244,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "shors2k1": {
     "genres": [
@@ -113432,13 +113458,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "showhanc": {
     "group": "showhand",
@@ -113552,6 +113578,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -113559,9 +113588,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/shtngmst (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "shtrider": {
@@ -117064,6 +117090,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Trigger",
       "Bomb Select",
@@ -117080,10 +117109,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "spacegunj": {
     "group": "spacegun",
@@ -118389,6 +118415,7 @@
       "rating": 5
     }
   },
+  "spidermi": {},
   "spiders": {
     "players": 2,
     "rating": 40,
@@ -120056,6 +120083,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -120070,10 +120100,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "sshot": {
     "players": 1,
@@ -121006,6 +121033,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "1",
       "2",
@@ -121015,10 +121045,7 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "starbladj": {
     "group": "starblad",
@@ -121541,6 +121568,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Fire",
@@ -121558,10 +121588,7 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "starzan": {
     "players": 1,
@@ -124914,6 +124941,7 @@
       "rating": 5
     }
   },
+  "syscheck": {},
   "syvalion": {
     "players": 2,
     "rating": 70,
@@ -125566,6 +125594,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -125577,10 +125608,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "tarzan": {
     "group": "tarzanc",
@@ -126736,6 +126764,7 @@
       "rating": 5
     }
   },
+  "teot": {},
   "terabrst": {
     "players": 2,
     "genres": [
@@ -126778,6 +126807,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Trigger",
       "Bomb"
@@ -126793,10 +126825,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "term2lg1": {
     "group": "term2",
@@ -128080,6 +128109,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -128091,10 +128123,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "tictac": {
     "players": 2,
@@ -128314,6 +128343,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Step on It!"
@@ -128325,9 +128357,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/timecris (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "timecrs2": {
@@ -128546,6 +128575,7 @@
       "rating": 5
     }
   },
+  "timesup": {},
   "timesupd": {
     "orientation": "horizontal",
     "emulation": {
@@ -130409,8 +130439,11 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
+    ],
+    "+controls": [
+      "lightgun"
     ],
     "manuals": [
       {
@@ -130419,9 +130452,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/totlvice (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "totmejan": {
@@ -131240,6 +131270,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -131247,9 +131280,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/triplhnt (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "tripool": {
@@ -131575,8 +131605,8 @@
     ],
     "orientation": "horizontal",
     "controls": [
-      "pointer",
-      "only_buttons"
+      "only_buttons",
+      "pointer"
     ]
   },
   "trizeal": {
@@ -131756,6 +131786,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -131767,10 +131800,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "trpdlght": {
     "players": 1,
@@ -132316,6 +132346,9 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -132327,10 +132360,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "tst_galx": {
     "group": "galaxian",
@@ -132776,6 +132806,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -132787,10 +132820,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "turrett": {
     "players": 1,
@@ -132946,13 +132976,13 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "tv21": {
     "players": 1,
@@ -134003,6 +134033,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Bomb"
@@ -134018,10 +134051,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "undrfirej": {
     "group": "undrfire",
@@ -137601,6 +137631,7 @@
       "rating": 5
     }
   },
+  "vsgradius": {},
   "vsgradus": {
     "players": 2,
     "rating": 70,
@@ -137629,6 +137660,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -137636,9 +137670,6 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vsgshoe (en).pdf"
       }
-    ],
-    "+controls": [
-      "lightgun"
     ]
   },
   "vsgumshoe": {
@@ -139680,16 +139711,16 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "whp": {
     "players": 2,
@@ -139852,13 +139883,13 @@
     "controls": [
       "stick"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "willow": {
     "players": 2,
@@ -141415,6 +141446,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -141426,10 +141460,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "wseries": {
     "players": 2,
@@ -143292,6 +143323,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire"
     ],
@@ -143306,10 +143340,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "zeropnt2": {
     "players": 2,
@@ -143325,6 +143356,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -143336,10 +143370,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "zeropntj": {
     "group": "zeropnt",
@@ -143706,6 +143737,9 @@
     "controls": [
       "pointer"
     ],
+    "+controls": [
+      "lightgun"
+    ],
     "buttons": [
       "Fire",
       "Reload"
@@ -143721,10 +143755,7 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    },
-    "+controls": [
-      "lightgun"
-    ]
+    }
   },
   "zombraidpj": {
     "group": "zombraid",
@@ -143986,36 +144017,5 @@
     "languages": [
       "it"
     ]
-  },
-  "4play": {},
-  "beast": {},
-  "cabalng": {},
-  "cndi": {},
-  "cps1demo": {},
-  "cps1frog": {},
-  "ducki": {},
-  "ffightaec2": {},
-  "ghostbi": {},
-  "lhcdb": {},
-  "mslug3x": {},
-  "nblktiger": {},
-  "neo2500": {},
-  "neo3ddmo": {},
-  "neocstlv": {},
-  "neodemo": {},
-  "neoprimo": {},
-  "neotris": {},
-  "neoww2": {},
-  "ngftdemo": {},
-  "ngmontst": {},
-  "nsmb": {},
-  "pgmdemo": {},
-  "pgmfrog": {},
-  "robocopi": {},
-  "santaball": {},
-  "spidermi": {},
-  "syscheck": {},
-  "teot": {},
-  "timesup": {},
-  "vsgradius": {}
+  }
 }

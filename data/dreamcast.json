@@ -1088,6 +1088,9 @@
     "genres": [
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -1104,10 +1107,7 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Conflict Zone": {
     "players": 1,
@@ -1455,6 +1455,9 @@
     "genres": [
       "Shoot'em Up"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -1465,16 +1468,16 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Death Crimson OX": {
     "players": 2,
     "rating": 0.55,
     "genres": [
       "Lightgun Shooter"
+    ],
+    "controls": [
+      "lightgun"
     ],
     "manuals": [
       {
@@ -1486,10 +1489,7 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Deep Fighter": {
     "players": 1,
@@ -3144,6 +3144,9 @@
     "genres": [
       "Lightgun Shooter"
     ],
+    "controls": [
+      "lightgun"
+    ],
     "manuals": [
       {
         "languages": [
@@ -3166,10 +3169,7 @@
     ],
     "emulation": {
       "emulator": "lr-flycast"
-    },
-    "controls": [
-      "lightgun"
-    ]
+    }
   },
   "Hoyle Casino": {
     "players": 4,
@@ -5875,6 +5875,9 @@
       "Shooter",
       "Shooter / 1st person"
     ],
+    "controls": [
+      "keyboard"
+    ],
     "manuals": [
       {
         "languages": [
@@ -5894,9 +5897,6 @@
         ],
         "url": "https://segaretro.org/images/b/bd/Q3DCBRManual.pdf"
       }
-    ],
-    "controls": [
-      "keyboard"
     ]
   },
   "Qui Veut Gagner des Millions": {},
@@ -8662,6 +8662,9 @@
       "Lightgun Shooter",
       "Various"
     ],
+    "controls": [
+      "keyboard"
+    ],
     "manuals": [
       {
         "languages": [
@@ -8675,9 +8678,6 @@
         ],
         "url": "https://segaretro.org/images/8/87/Typing_Of_The_Dead_DC_JP_Manual.pdf"
       }
-    ],
-    "controls": [
-      "keyboard"
     ]
   },
   "UEFA Dream Soccer": {
@@ -8783,6 +8783,9 @@
       "Shooter",
       "Shooter / 1st person"
     ],
+    "controls": [
+      "keyboard"
+    ],
     "manuals": [
       {
         "languages": [
@@ -8802,9 +8805,6 @@
         ],
         "url": "https://segaretro.org/images/2/23/UnrealTDCBRManual.pdf"
       }
-    ],
-    "controls": [
-      "keyboard"
     ]
   },
   "Urban Chaos": {
@@ -8946,12 +8946,12 @@
     "genres": [
       "Lightgun Shooter"
     ],
-    "emulation": {
-      "emulator": "lr-flycast"
-    },
     "controls": [
       "lightgun"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-flycast"
+    }
   },
   "Virtua Fighter 3tb": {
     "players": 2,

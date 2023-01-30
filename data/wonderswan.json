@@ -140,10 +140,10 @@
     "genres": [
       "Action"
     ],
+    "orientation": "vertical",
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "D's Garage 21 Koubo Game - Tane o Maku Tori": {
     "players": 2,
@@ -151,6 +151,7 @@
       "Strategy",
       "Various"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -161,8 +162,7 @@
     ],
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Densha de Go!": {
     "players": 1,
@@ -367,6 +367,7 @@
     "genres": [
       "Puzzle-Game"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -377,8 +378,7 @@
     ],
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Hanafuda Shiyouyo": {
     "players": 2,
@@ -501,10 +501,10 @@
     "genres": [
       "Strategy"
     ],
+    "orientation": "vertical",
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Mahjong Touryuumon": {
     "players": 2,
@@ -564,6 +564,7 @@
     "genres": [
       "Puzzle-Game"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -574,14 +575,14 @@
     ],
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Mobile Suit Gundam MSVS": {
     "players": 2,
     "genres": [
       "Simulation"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -589,8 +590,7 @@
         ],
         "url": "https://archive.org/download/mobilesuitgundammsvswshiresscans/Mobile Suit Gundam MSVS - Manual.pdf"
       }
-    ],
-    "orientation": "vertical"
+    ]
   },
   "MobileWonderGate": {
     "players": 1,
@@ -702,6 +702,7 @@
     "genres": [
       "Puzzle-Game"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -712,8 +713,7 @@
     ],
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Rainbow Islands - Putty's Party": {
     "players": 1,
@@ -722,10 +722,10 @@
       "Action",
       "Platform"
     ],
+    "orientation": "vertical",
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Raku Jongg": {
     "players": 2,
@@ -740,6 +740,7 @@
     "genres": [
       "Adventure"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -747,8 +748,7 @@
         ],
         "url": "https://archive.org/download/ringinfinitywshirresscans/Ring Infinity - Manual.pdf"
       }
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Robot Works": {
     "players": 8,
@@ -832,10 +832,10 @@
     "genres": [
       "Puzzle-Game"
     ],
+    "orientation": "vertical",
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Shanghai Pocket": {
     "players": 2,
@@ -882,6 +882,7 @@
     "genres": [
       "Puzzle-Game"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -889,8 +890,7 @@
         ],
         "url": "https://archive.org/download/slitherlinkwshiresscans/Slither Link - Manual.pdf"
       }
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Soccer Yarou! - Challenge the World": {
     "players": 1,
@@ -1046,6 +1046,7 @@
     "genres": [
       "Adventure"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -1053,8 +1054,7 @@
         ],
         "url": "https://archive.org/download/terrorswshiresscans/Terrors - Manual.pdf"
       }
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Tetsujin 28 Gou": {
     "players": 1,
@@ -1083,6 +1083,7 @@
       "Adventure / Visual Novel",
       "Role playing games"
     ],
+    "orientation": "vertical",
     "manuals": [
       {
         "languages": [
@@ -1090,8 +1091,7 @@
         ],
         "url": "https://archive.org/download/tokyomajingakuenfujuhourokuwshiresscans/Tokyo Majin Gakuen - Fuju Houroku - Manual.pdf"
       }
-    ],
-    "orientation": "vertical"
+    ]
   },
   "Trump Collection - Bottom-Up Teki Trump Seikatsu": {
     "players": 1,
@@ -1210,9 +1210,9 @@
     "genres": [
       "Action"
     ],
+    "orientation": "vertical",
     "tags": [
       "English-Friendly"
-    ],
-    "orientation": "vertical"
+    ]
   }
 }
