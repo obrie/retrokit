@@ -35,9 +35,8 @@
       "7800 BIOS (U).rom": "{url}/7800 BIOS (U).rom"
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -58,7 +57,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

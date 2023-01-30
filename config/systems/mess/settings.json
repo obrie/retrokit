@@ -32,25 +32,22 @@
       ]
     }
   },
-  "romsets": [
-    {
-      "name": "mame",
+  "romsets": {
+    "mame": {
       "protocol": "http",
-      "url": "$ROMSET_MAME_0245_URL",
+      "url": "$ROMSET_MAME_LATEST_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
-          "target": "$HOME/retrokit/tmp/mame/mame0244-home.dat",
-          "install": {"action": "7z_extract", "file": ".*\\(Home\\)\\.dat"}
+          "source": "file://$HOME/retrokit/cache/mame/MAME Latest (Home).dat"
         },
         "machine": {
-          "source": "{url}/MAME%200.245%20ROMs%20%28split%29/{machine}.zip",
+          "source": "{url}/{machine}.zip",
           "target": "$HOME/RetroPie/roms/mess/.mame/{machine}.zip",
           "install": {"action": "zip_merge"}
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

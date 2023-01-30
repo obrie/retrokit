@@ -12,9 +12,8 @@
       ]
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -40,8 +39,7 @@
         }
       }
     },
-    {
-      "name": "psn",
+    "psn": {
       "protocol": "http",
       "url": "$ROMSET_PSP_PSN_URL",
       "resources": {
@@ -62,8 +60,7 @@
         ]
       }
     },
-    {
-      "name": "dlc",
+    "dlc": {
       "protocol": "http",
       "url": "$ROMSET_PSP_DLC_URL",
       "resources": {
@@ -83,7 +80,7 @@
         ]
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

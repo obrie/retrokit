@@ -35,9 +35,8 @@
       "gba_bios.bin": "{url}/gba_bios.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -58,7 +57,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

@@ -132,9 +132,8 @@
       "library_name": "Flycast"
     }
   },
-  "romsets": [
-    {
-      "name": "fbneo",
+  "romsets": {
+    "fbneo": {
       "protocol": "http",
       "url": "$ROMSET_MAME_FBNEO_URL",
       "resources": {
@@ -156,8 +155,7 @@
         "lr-fbneo"
       ]
     },
-    {
-      "name": "mame2003",
+    "mame2003": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2003_URL",
       "resources": {
@@ -185,8 +183,7 @@
         "lr-mame2003"
       ]
     },
-    {
-      "name": "mame2003-plus",
+    "mame2003-plus": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2003_PLUS_URL",
       "resources": {
@@ -214,8 +211,7 @@
         "lr-mame2003-plus"
       ]
     },
-    {
-      "name": "mame2010",
+    "mame2010": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
@@ -243,8 +239,7 @@
         "lr-mame2010"
       ]
     },
-    {
-      "name": "mame2015",
+    "mame2015": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2015_URL",
       "resources": {
@@ -272,8 +267,7 @@
         "lr-mame2015"
       ]
     },
-    {
-      "name": "mame2016",
+    "mame2016": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2016_URL",
       "resources": {
@@ -301,8 +295,7 @@
         "lr-mame2016"
       ]
     },
-    {
-      "name": "mame-0222",
+    "mame-0222": {
       "protocol": "http",
       "url": "$ROMSET_MAME_0222_URL",
       "resources": {
@@ -332,8 +325,7 @@
         "lr-flycast"
       ]
     },
-    {
-      "name": "mame-0244",
+    "mame-0244": {
       "protocol": "http",
       "url": "$ROMSET_MAME_0245_URL",
       "resources": {
@@ -361,8 +353,7 @@
         "lr-mame"
       ]
     },
-    {
-      "name": "advmame",
+    "advmame": {
       "protocol": "http",
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
@@ -390,7 +381,7 @@
         "advmame"
       ]
     }
-  ],
+  },
   "roms": {
     "id": "name",
     "priority": {

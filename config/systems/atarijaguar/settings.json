@@ -40,9 +40,8 @@
       ]
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -63,7 +62,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "bios": {
     "url": "$ROMSET_MAME_LATEST_URL",
     "dir": "$HOME/RetroPie/BIOS",

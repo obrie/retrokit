@@ -45,9 +45,8 @@
       "syscard3.pce": "{url}/syscard3.pce"
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "url": "$ROMSET_PCENGINE_REDUMP_URL",
       "resources": {
@@ -69,7 +68,7 @@
         "lr-beetle-pce-fast"
       ]
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

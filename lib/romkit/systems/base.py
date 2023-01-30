@@ -80,7 +80,8 @@ class BaseSystem:
 
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         # Load romsets
-        for romset_config in self.config['romsets']:
+        for romset_name, romset_config in self.config['romsets'].items():
+            romset_config['name'] = romset_name
             yield ROMSet.from_json(romset_config, system=self, downloads=self.download_config)
 
     def list(self) -> List[Machine]:

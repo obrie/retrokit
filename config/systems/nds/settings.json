@@ -49,9 +49,8 @@
       "firmware.bin": "{url}/firmware.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "url": "$ROMSET_NDS_NOINTRO_URL",
       "resources": {
@@ -66,7 +65,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

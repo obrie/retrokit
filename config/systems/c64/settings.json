@@ -35,9 +35,8 @@
       ]
     }
   },
-  "romsets": [
-    {
-      "name": "nointro-carts",
+  "romsets": {
+    "nointro-carts": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -58,8 +57,7 @@
       },
       "auth": "internetarchive"
     },
-    {
-      "name": "nointro-tapes",
+    "nointro-tapes": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -80,8 +78,7 @@
       },
       "auth": "internetarchive"
     },
-    {
-      "name": "nointro-pp",
+    "nointro-pp": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -102,7 +99,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

@@ -50,9 +50,8 @@
       "bios_CD_U.bin": "{url}/bios_CD_U.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -80,7 +79,7 @@
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

@@ -38,9 +38,8 @@
       "bios_MD.bin": "{url}/bios_MD.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -61,7 +60,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

@@ -23,9 +23,8 @@
       "r15449121.ic37.bin": "{url}/mt32.zip/r15449121.ic37.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "the_eye",
+  "romsets": {
+    "the_eye": {
       "protocol": "http",
       "url": "$ROMSET_PC_EXODOS_URL",
       "resources": {
@@ -44,7 +43,7 @@
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "name",
     "priority": {

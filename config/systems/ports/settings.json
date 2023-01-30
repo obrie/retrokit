@@ -9,9 +9,8 @@
     "gamelist_include_base_args": false,
     "import_dat_titles": false
   },
-  "romsets": [
-    {
-      "name": "retropie",
+  "romsets": {
+    "retropie": {
       "protocol": "bash",
       "resources": {},
       "datlist": [
@@ -20,7 +19,7 @@
         "quake"
       ]
     }
-  ],
+  },
   "roms": {
     "id": "name",
     "filters": {},

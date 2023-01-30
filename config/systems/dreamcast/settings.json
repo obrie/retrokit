@@ -48,9 +48,8 @@
       "naomi_boot.bin": "{url}/naomi_boot.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "url": "$ROMSET_DREAMCAST_REDUMP_URL",
       "resources": {
@@ -74,7 +73,7 @@
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

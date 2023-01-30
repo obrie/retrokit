@@ -34,9 +34,8 @@
       "panafz10.bin": "{url}/panafz10.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "url": "$ROMSET_3DO_REDUMP_URL",
       "resources": {
@@ -55,7 +54,7 @@
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

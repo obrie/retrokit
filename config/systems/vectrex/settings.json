@@ -23,9 +23,8 @@
       "library_name": "VecX"
     }
   },
-  "romsets": [
-    {
-      "name": "nointro",
+  "romsets": {
+    "nointro": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -46,7 +45,7 @@
       },
       "auth": "internetarchive"
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {

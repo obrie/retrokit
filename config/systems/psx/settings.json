@@ -52,9 +52,8 @@
       "scph1001.bin": "{url}/libretro/Sony - PlayStation/scph1001.bin"
     }
   },
-  "romsets": [
-    {
-      "name": "redump",
+  "romsets": {
+    "redump": {
       "protocol": "http",
       "discovery": {
         "type": "internetarchive",
@@ -87,7 +86,7 @@
         }
       }
     }
-  ],
+  },
   "roms": {
     "id": "crc",
     "priority": {
