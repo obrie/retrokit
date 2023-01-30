@@ -31,15 +31,15 @@ class BaseFilter:
 
         # Normalize the values:
         # * Lowercase all
-        # * Compile regular expressions when shape is /.../
+        # * Compile regular expressions when shape is /...
         for filter_value in self.normalize(filter_values):
             # Skip values being used as comments
             if isinstance(filter_value, str) and filter_value[0] == '#':
                 continue
 
-            if isinstance(filter_value, str) and len(filter_value) > 2 and filter_value[0] == '/' and filter_value[-1] == '/':
+            if isinstance(filter_value, str) and filter_value and filter_value[0] == '/':
                 # Compile to regular expression
-                self.pattern_filter_values.add(re.compile(filter_value[1:-1]))
+                self.pattern_filter_values.add(re.compile(filter_value[1:]))
             else:
                 self.exact_filter_values.add(filter_value)
 

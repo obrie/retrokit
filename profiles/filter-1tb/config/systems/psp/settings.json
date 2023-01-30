@@ -19,10 +19,10 @@
       "!genres|extra": [
         "Adventure / Text",
         "Music and Dance",
-        "/^Fight/",
-        "/^Puzzle-Game/",
-        "/^Simulation/",
-        "/^Sports/"
+        "/^Fight",
+        "/^Puzzle-Game",
+        "/^Simulation",
+        "/^Sports"
       ],
       "!titles|extra": [
         "# Education",
@@ -39,7 +39,7 @@
       ],
       "+titles": [
         "# Sports titles we allow",
-        "/Tony Hawk/"
+        "/Tony Hawk"
       ]
     }
   }

@@ -4,11 +4,11 @@
       "!titles|extra": [
         "Phantasy Star Online",
         "# Sports Franchises (filter all but latest)",
-        "/^NFL Blitz(?! 2001)/",
-        "/^World Series Baseball(?! 2K2)/",
-        "/^NBA 2K(?!2)/",
-        "/^NFL 2K(?!2)/",
-        "/^NHL 2K(?!2)/"
+        "/^NFL Blitz(?! 2001)",
+        "/^World Series Baseball(?! 2K2)",
+        "/^NBA 2K(?!2)",
+        "/^NFL 2K(?!2)",
+        "/^NHL 2K(?!2)"
       ],
       "+titles": [
         "# Genre exceptions",

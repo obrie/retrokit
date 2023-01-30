@@ -20,15 +20,15 @@
         "Sports / Swimming",
         "Sports / Tennis",
         "Sports / Volleyball",
-        "/^Medal Game/",
-        "/^MultiGame / Compilation/",
-        "/^Music Game/",
-        "/^Slot Machine/",
-        "/^Tabletop/",
-        "/Casino/",
-        "/Mature/",
-        "/Multiplay/",
-        "/Quiz/"
+        "/^Medal Game",
+        "/^MultiGame / Compilation",
+        "/^Music Game",
+        "/^Slot Machine",
+        "/^Tabletop",
+        "/Casino",
+        "/Mature",
+        "/Multiplay",
+        "/Quiz"
       ],
       "!ratings": [
         null,
@@ -43,13 +43,13 @@
         "Demo"
       ],
       "!descriptions": [
-        "/Anniversary/",
-        "/Bootleg/",
-        "/DECO Cassette/",
-        "/\\([^\\)]*Hack/",
-        "/HB,/",
-        "/Homebrew/",
-        "/Prototype/"
+        "/Anniversary",
+        "/Bootleg",
+        "/DECO Cassette",
+        "/\\([^\\)]*Hack",
+        "/HB,",
+        "/Homebrew",
+        "/Prototype"
       ],
       "!controls": [
         "gambling",
