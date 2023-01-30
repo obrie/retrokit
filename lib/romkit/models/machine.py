@@ -107,7 +107,7 @@ class Machine:
     # Whether this machine is installable
     @staticmethod
     def is_installable(xml: lxml.etree.ElementBase) -> bool:
-        return xml.get('ismechanical') != 'yes' and xml.find('rom') is not None
+        return xml.get('ismechanical') != 'yes'
 
     @classmethod
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
