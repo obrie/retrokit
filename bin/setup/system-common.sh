@@ -214,8 +214,8 @@ load_emulator_data() {
       .value.core_name,
       .value.core_option_prefix // .value.core_name,
       .value.library_name,
-      .value.default // false,
-      .value.supports_overlays // false,
+      (.value.default // false | tostring),
+      (.value.supports_overlays // false | tostring),
       (.value.names // [.key] | join(",")),
       (select(.value.aliases) | .value.aliases | join(","))
     ] | join("»")
