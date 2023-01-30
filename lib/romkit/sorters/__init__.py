@@ -4,7 +4,7 @@ from romkit.sorters.description import FlagSorter, FlagsCountSorter, FlagGroupsT
 from romkit.sorters.name import NameSorter, NameLengthSorter, TitleSorter, TitleLengthSorter
 from romkit.sorters.group import IsGroupTitleSorter
 from romkit.sorters.parent import IsParentSorter
-from romkit.sorters.romset import RomsetSorter
+from romkit.sorters.romset import ROMSetSorter
 
 __all_sorters__ = [
     FlagSorter,
@@ -18,5 +18,5 @@ __all_sorters__ = [
     TitleLengthSorter,
     IsGroupTitleSorter,
     IsParentSorter,
-    RomsetSorter,
+    ROMSetSorter,
 ]
