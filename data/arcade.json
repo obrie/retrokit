@@ -45079,19 +45079,8 @@
     ]
   },
   "gradiusb": {
-    "players": 2,
+    "group": "nemesis",
     "rating": 60,
-    "genres": [
-      "Shooter / Flying Horizontal"
-    ],
-    "series": "Gradius",
-    "languages": [
-      "en"
-    ],
-    "orientation": "horizontal",
-    "controls": [
-      "joy"
-    ],
     "manuals": [
       {
         "languages": [
@@ -65863,19 +65852,6 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
-  },
-  "maniacsp": {
-    "players": 2,
-    "genres": [
-      "Puzzle / Drop"
-    ],
-    "languages": [
-      "en"
-    ],
-    "orientation": "horizontal",
-    "controls": [
-      "joy"
-    ]
   },
   "maniacsq": {
     "players": 2,
