@@ -92,6 +92,7 @@ has_setupmodule() {
 # * Merges data paths from profiles
 generate_system_settings_file() {
   local system=$1
+  local merge_metadata=${2:-true}
 
   # Build settings file
   local system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
@@ -99,12 +100,15 @@ generate_system_settings_file() {
   json_merge "{config_dir}/systems/$system/settings.json" "$system_settings_file" backup=false >/dev/null
 
   # Merge data file
-  system_data_merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
-  system_data_path=$(jq -r '.metadata .path // empty' "$system_settings_file")
-  if [ -n "$system_data_path" ]; then
-    system_data_name=$(basename "$system_data_path")
-    json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false envsubst=false >/dev/null
-    json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_path"
+  if [ "$merge_metadata" == 'true' ]; then
+    system_data_merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
+    system_data_path=$(jq -r '.metadata .path // empty' "$system_settings_file")
+
+    if [ -n "$system_data_path" ]; then
+      system_data_name=$(basename "$system_data_path")
+      json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false envsubst=false >/dev/null
+      json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_path"
+    fi
   fi
 
   echo "$system_settings_file"
