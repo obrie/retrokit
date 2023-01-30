@@ -21,7 +21,7 @@
     "lr-mess": {},
     "lr-mess-common": {
       "default": true,
-      "name": "lr-mess-mame",
+      "names": ["lr-mess-mame"],
       "build": "source",
       "core_name": "mame",
       "library_name": "MAME",

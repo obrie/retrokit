@@ -18,6 +18,12 @@
   },
   "emulators": {
     "mupen64plus": {
+      "names": [
+        "mupen64plus-gles2n64",
+        "mupen64plus-gles2rice",
+        "mupen64plus-GLideN64",
+        "mupen64plus-GLideN64-highres"
+      ],
       "gamestate": [
         "/opt/retropie/configs/n64/mupen64plus/save/*"
       ]

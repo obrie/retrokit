@@ -20,7 +20,7 @@
     "lr-mess": {},
     "lr-mess-atarijaguar": {
       "build": "source",
-      "name": "lr-mess-jaguar",
+      "names": ["lr-mess-jaguar"],
       "core_name": "mame",
       "library_name": "MAME",
       "gamestate": [

@@ -180,29 +180,46 @@ outline_overlay_image() {
 load_emulator_data() {
   declare -A -g emulators
 
-  while IFS=, read -r package emulator core_name core_option_prefix library_name is_default supports_overlays; do
-    emulators["$emulator/emulator"]=$emulator
-    emulators["$emulator/core_name"]=$core_name
-    emulators["$emulator/core_option_prefix"]=$core_option_prefix
-    emulators["$emulator/library_name"]=$library_name
-    emulators["$emulator/supports_overlays"]=$supports_overlays
+  while IFS=» read -r package core_name core_option_prefix library_name is_default supports_overlays emulator_names alias_names; do
+    IFS=',' read -r -a emulator_names <<< "$emulator_names"
+    IFS=',' read -r -a alias_names <<< "$alias_names"
+    local default_emulator=${emulator_names[0]}
 
-    while read -r alias_emulator; do
-      emulators["$alias_emulator/emulator"]=$emulator
+    for emulator in "${emulator_names[@]}"; do
+      emulators["$emulator/emulator"]=$emulator
+      emulators["$emulator/core_name"]=$core_name
+      emulators["$emulator/core_option_prefix"]=$core_option_prefix
+      emulators["$emulator/library_name"]=$library_name
+      emulators["$emulator/supports_overlays"]=$supports_overlays
+    done
+
+    for alias_emulator in "${alias_names[@]}"; do
+      emulators["$alias_emulator/emulator"]=$default_emulator
       emulators["$alias_emulator/core_name"]=$core_name
       emulators["$alias_emulator/core_option_prefix"]=$core_option_prefix
       emulators["$alias_emulator/library_name"]=$library_name
       emulators["$alias_emulator/supports_overlays"]=$supports_overlays
-    done < <(system_setting ".emulators.\"$package\" | select(.aliases) | .aliases[]")
+    done
 
     if [ "$is_default" == "true" ]; then
-      emulators['default/emulator']=$emulator
+      emulators['default/emulator']=$default_emulator
       emulators['default/core_name']=$core_name
       emulators['default/core_option_prefix']=$core_option_prefix
       emulators['default/library_name']=$library_name
       emulators["default/supports_overlays"]=$supports_overlays
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.core_name // "", .value.core_option_prefix // .value.core_name // "", .value.library_name // "", .value.default // false, .value.supports_overlays // false | tostring] | join(",")')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] |
+    [
+      .key,
+      .value.core_name,
+      .value.core_option_prefix // .value.core_name,
+      .value.library_name,
+      .value.default // false,
+      .value.supports_overlays // false,
+      (.value.names // [.key] | join(",")),
+      (select(.value.aliases) | .value.aliases | join(","))
+    ] | join("»")
+  ')
 }
 
 get_core_library_names() {

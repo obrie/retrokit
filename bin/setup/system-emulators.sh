@@ -16,7 +16,7 @@ build() {
 
 # Install emulator packages
 __install_emulators() {
-  while IFS=$'\t' read -r package emulator build cmd; do
+  while IFS=$'\t' read -r package build cmd; do
     local package_type='emulators'
     if [[ "$package" == lr-* ]]; then
       package_type='libretrocores'
@@ -29,7 +29,7 @@ __install_emulators() {
     if [ -n "$cmd" ]; then
       sudo "$HOME/RetroPie-Setup/retropie_packages.sh" retrokit-system configure "$package" "$system" "$cmd"
     fi
-  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.name // .key, .value.build // "binary", .value.cmd] | @tsv')
+  done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.build // "binary", .value.cmd] | @tsv')
 
   if [ "$system" == 'ports' ]; then
     # Ensure ports has been added to the default conf since other tools may
@@ -89,7 +89,7 @@ configure() {
   done < <(each_path '{system_config_dir}/emulators.cfg' ini_get '{}' '')
 
   # Set default emulator
-  local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | .value.name // .key')
+  local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | (.value.names // [.key]) | first')
   crudini --set "$retropie_emulators_path" '' 'default' "\"$default_emulator\""
 
   # Additional emulator settings
