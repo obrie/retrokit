@@ -1,5 +1,6 @@
 {
   "32 in 1": {
+    "id": "321e76acbbec9ee45808a3755bf56c70643c56c4",
     "manuals": [
       {
         "languages": [
@@ -9,8 +10,11 @@
       }
     ]
   },
-  "7800 Monitor Cart": {},
+  "7800 Monitor Cart": {
+    "id": "cfee9320729384c2948fe01e553872ea871b9c74"
+  },
   "Ace of Aces": {
+    "id": "03eea9d0d2d3c8673bbef0906c063a5977c8153e",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -27,6 +31,7 @@
     ]
   },
   "Alien Brigade": {
+    "id": "79ce30f02616c071519e053ebd933a744b0ebdfd",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -43,6 +48,7 @@
     ]
   },
   "Asteroids": {
+    "id": "db522b3612c604a0fa071e8a8f83be5077609fdc",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -58,8 +64,11 @@
       }
     ]
   },
-  "Atari 7800 Development Card": {},
+  "Atari 7800 Development Card": {
+    "id": "59f7ce2c3c3586c7279bd99d5c7c1588495f9548"
+  },
   "Ballblazer": {
+    "id": "7a12b92746b13ddfd6c81dcbf01b3065f58371a9",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -76,6 +85,7 @@
     ]
   },
   "Barnyard Blaster": {
+    "id": "fc9500abf70777a3c2d9ab275077c75e8d681273",
     "players": 2,
     "rating": 0.55,
     "genres": [
@@ -91,6 +101,7 @@
     ]
   },
   "Baseball": {
+    "id": "03b86118ef652bc8d7696245a5ebce61792c810b",
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -108,6 +119,7 @@
     ]
   },
   "Basketbrawl": {
+    "id": "5c48891247d52f094a8977f068e61459ee4bcd51",
     "players": 2,
     "rating": 0.45,
     "genres": [
@@ -123,6 +135,7 @@
     ]
   },
   "Centipede": {
+    "id": "64a14088ae06fe61e973e23c53c0867728a6e296",
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -140,6 +153,7 @@
     ]
   },
   "Choplifter!": {
+    "id": "9089de7965c4414e63d4c61b6ce40aced341ba1f",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -155,6 +169,7 @@
     ]
   },
   "Commando": {
+    "id": "0e06aa0434546ff06eba3e38984f7d93d9d63894",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -170,6 +185,7 @@
     ]
   },
   "Crack'ed": {
+    "id": "df83a4a9c7b79a6037b00f4fc6688dd76daca19b",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -186,6 +202,7 @@
     ]
   },
   "Crossbow": {
+    "id": "83a620e1a2103095142753c16debc941bbddae65",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -202,6 +219,7 @@
     ]
   },
   "Dark Chambers": {
+    "id": "9b16514f98f65409943999b0427091ff8cb99c41",
     "players": 2,
     "genres": [
       "Action"
@@ -216,6 +234,7 @@
     ]
   },
   "Desert Falcon": {
+    "id": "13ede7cc54dc07368f563e0e55722bf012bb7161",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -232,8 +251,11 @@
       }
     ]
   },
-  "Diagnostic Test Cartrige": {},
+  "Diagnostic Test Cartrige": {
+    "id": "7747cc28de1fb9c7197c11e834ea1feff592f4cb"
+  },
   "Dig Dug": {
+    "id": "83cb44245866202058dd687de853a59b7cbc8122",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -249,6 +271,7 @@
     ]
   },
   "Donkey Kong": {
+    "id": "c3ff2cb110cd841645e29e13bd50cd79292e9c43",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -265,6 +288,7 @@
     ]
   },
   "Donkey Kong Junior": {
+    "id": "9a450c5aee1b5190c080a12f3973a567f1971165",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -281,6 +305,7 @@
     ]
   },
   "Double Dragon": {
+    "id": "410c7e3a2c06514b0817aeb05ac0140731ecffd8",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -296,6 +321,7 @@
     ]
   },
   "F-18 Hornet": {
+    "id": "d2854ccb0bec237dbc453a90f1bfd454b7be5cfb",
     "players": 1,
     "genres": [
       "Platform"
@@ -310,6 +336,7 @@
     ]
   },
   "Fatal Run": {
+    "id": "6514d9115d1d6f80a7b3ed9a9829f616d4d4bc1b",
     "players": 1,
     "rating": 0.45,
     "genres": [
@@ -327,6 +354,7 @@
     ]
   },
   "Fight Night": {
+    "id": "75fe31197ceeff8c2078dff2e056f5af95a16350",
     "players": 2,
     "genres": [
       "Action",
@@ -342,6 +370,7 @@
     ]
   },
   "Food Fight": {
+    "id": "750ed5482e41ff4ebdb61bf49793f21b9ec4221a",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -357,6 +386,7 @@
     ]
   },
   "GATO": {
+    "id": "45c0642bcf905b79d3e615cf1ea79523d7575ce8",
     "players": 1,
     "genres": [
       "Action",
@@ -364,6 +394,7 @@
     ]
   },
   "Galaga": {
+    "id": "143a5091097721cf593bd065111537b6b2135d5d",
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -382,6 +413,7 @@
     ]
   },
   "Hat Trick": {
+    "id": "a30d20c4853200ab48615e392d141157c709ff67",
     "players": 2,
     "genres": [
       "Sports"
@@ -395,8 +427,11 @@
       }
     ]
   },
-  "High Score Cartridge": {},
+  "High Score Cartridge": {
+    "id": "82f8ba9defc6a80823009a57f153d8408e0280fa"
+  },
   "Ikari Warriors": {
+    "id": "2d307ffecb381de0794df627491918b9471e3052",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -413,6 +448,7 @@
     ]
   },
   "Impossible Mission": {
+    "id": "174da875ccebf3fabb39b4105cab4928baaad1de",
     "players": 1,
     "genres": [
       "Action",
@@ -428,6 +464,7 @@
     ]
   },
   "Jinks": {
+    "id": "432880839b8a610786d3053725e7fba4d805aae5",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -443,6 +480,7 @@
     ]
   },
   "Joust": {
+    "id": "aa51d7479cacb371e5a76b95cf125037bba14c58",
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -458,6 +496,7 @@
     ]
   },
   "Karateka": {
+    "id": "565ca6f50fe04bddeec9294c61c1b5c137f322b2",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -473,6 +512,7 @@
     ]
   },
   "Klax": {
+    "id": "1d77c072153fe1ea793407654d8459cbc490103a",
     "players": 1,
     "genres": [
       "Action",
@@ -489,6 +529,7 @@
     ]
   },
   "Kung-Fu Master": {
+    "id": "9b0cf26a33529c00fde176935689c3dfa6646523",
     "players": 2,
     "genres": [
       "Action"
@@ -503,6 +544,7 @@
     ]
   },
   "Mario Bros.": {
+    "id": "181d9bfca129b494d305e8d319f3e703225639ab",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -519,6 +561,7 @@
     ]
   },
   "Mat Mania Challenge": {
+    "id": "90fa05cb7b15f70c76b82cd55e589187bf9e13c4",
     "players": 2,
     "rating": 0.35,
     "genres": [
@@ -535,6 +578,7 @@
     ]
   },
   "Mean 18 Ultimate Golf": {
+    "id": "d26fe2348ce982581f4f04325f2ec4fd2a3a972f",
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -552,6 +596,7 @@
     ]
   },
   "Meltdown": {
+    "id": "c1e9f098315a5db4ea0a547aaaab6e3d5b8cb130",
     "players": 1,
     "genres": [
       "Action"
@@ -566,6 +611,7 @@
     ]
   },
   "Midnight Mutants": {
+    "id": "92c8f27550ddc85e8ca616a9e9a0a36dee6ab5ea",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -582,6 +628,7 @@
     ]
   },
   "Missing in Action": {
+    "id": "1879a60cceafeaf78ff8db8e5b156d42ab719dd8",
     "players": 1,
     "genres": [
       "Action",
@@ -589,6 +636,7 @@
     ]
   },
   "Motor Psycho": {
+    "id": "45ca9c6e0701cca969134b618975d6a06037b702",
     "players": 1,
     "genres": [
       "Driving",
@@ -604,6 +652,7 @@
     ]
   },
   "Ms. Pac-Man": {
+    "id": "63c7b75695dd5758f99f8789794b97ea61dbabac",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -621,6 +670,7 @@
     ]
   },
   "Ninja Golf": {
+    "id": "36028d7e336cd391a44fc5c69534f71608f208e7",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -638,6 +688,7 @@
     ]
   },
   "One-on-One Basketball": {
+    "id": "c080cd6d0d710c7b4a900dd26c061e9c295739d4",
     "players": 2,
     "rating": 0.2,
     "genres": [
@@ -653,12 +704,14 @@
     ]
   },
   "Pit Fighter": {
+    "id": "0adbefe239baa85b3df7d8e03b232306adffe950",
     "players": 2,
     "genres": [
       "Fight"
     ]
   },
   "Planet Smashers": {
+    "id": "1de11cd8ed6e8b96c7ba6f4f6044b1bd25ec11dd",
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -675,12 +728,14 @@
     ]
   },
   "Plutos": {
+    "id": "efcd78f4ef8aaac2b5336109f7641b9fac4cd5b2",
     "players": 2,
     "genres": [
       "Action"
     ]
   },
   "Pole Position II": {
+    "id": "16205690a0426a374a036b5dce25655d98c75b0c",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -715,6 +770,7 @@
     ]
   },
   "Rampage": {
+    "id": "2da27272e68986afdf73a49f799fa7fab7306654",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -729,8 +785,11 @@
       }
     ]
   },
-  "Rampart": {},
+  "Rampart": {
+    "id": "15b257ed2b5a958c5e7ad6d0722490bfb14ab0ff"
+  },
   "RealSports Baseball": {
+    "id": "5ab18786f57f47a1ddef81bbcc1edd598184316b",
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -748,13 +807,17 @@
     ]
   },
   "Rescue on Fractalus": {
+    "id": "e0ab2a1cdb5a9274b25116c276f16a5c36d05c32",
     "genres": [
       "Action",
       "Shooter"
     ]
   },
-  "Rikki & Vikki": {},
+  "Rikki & Vikki": {
+    "id": "ee7b53ef0ff3d6c339235d77c16e458853921104"
+  },
   "Robotron - 2084": {
+    "id": "a2ffed4fea4059218f398781bdf07c7bfaa03c9f",
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -770,6 +833,7 @@
     ]
   },
   "Scrapyard Dog": {
+    "id": "0e2aff63c643508f4770c05754fd8c40c354cd7a",
     "players": 1,
     "rating": 0.35,
     "genres": [
@@ -787,6 +851,7 @@
     ]
   },
   "Sentinel": {
+    "id": "c70acbfbd9d6420833fa91e853416cdcfc8dd419",
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -802,11 +867,13 @@
     ]
   },
   "Sirius": {
+    "id": "22f255dfa8cacab3de8d49befb03298ce9f26028",
     "genres": [
       "Shooter"
     ]
   },
   "Summer Games": {
+    "id": "687a9b9af138263aff4266a7916b610c14b0bc98",
     "players": 8,
     "rating": 0.4,
     "genres": [
@@ -823,6 +890,7 @@
     ]
   },
   "Super Huey UH-IX": {
+    "id": "d93340c584abe50dd738b87baf61340c2b2229cd",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -839,6 +907,7 @@
     ]
   },
   "Super Skateboardin'": {
+    "id": "848496ce80cf33c446ca41ac9ec2824971a93db8",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -855,6 +924,7 @@
     ]
   },
   "Tank Command": {
+    "id": "13da602708f36c613016ca15861f21f7bc76bf7f",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -870,6 +940,7 @@
     ]
   },
   "Title Match Pro Wrestling": {
+    "id": "aafc6b2fe4049704a0d66a6fd5d6cd98bd04a63a",
     "players": 2,
     "rating": 0.35,
     "genres": [
@@ -885,6 +956,7 @@
     ]
   },
   "Tomcat - The F-14 Fighter Simulator": {
+    "id": "25c85f6705e08bcc5b4381fb76130e128d5798ed",
     "players": 1,
     "rating": 1,
     "genres": [
@@ -901,6 +973,7 @@
     ]
   },
   "Touchdown Football": {
+    "id": "fe84d9cb8b2b2875753769f5827b1aa53302c0fc",
     "players": 2,
     "genres": [
       "Sports"
@@ -915,6 +988,7 @@
     ]
   },
   "Tower Toppler": {
+    "id": "2036364cdbc357fb7a56e6d0d1abaee401c2fa33",
     "players": 2,
     "genres": [
       "Platform"
@@ -929,6 +1003,7 @@
     ]
   },
   "Water Ski": {
+    "id": "5153691d82a7c2be590711fc2448d275d9008260",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -945,6 +1020,7 @@
     ]
   },
   "Winter Games": {
+    "id": "e756c2cd2ed1917a521a50dcdb4e00e85bfba205",
     "players": 8,
     "rating": 0.55,
     "genres": [
@@ -961,6 +1037,7 @@
     ]
   },
   "Xenophobe": {
+    "id": "4fc04336b723d89d3c19e55b684cf8e39d2bb3bb",
     "players": 2,
     "rating": 0.3,
     "genres": [
@@ -976,6 +1053,7 @@
     ]
   },
   "Xevious": {
+    "id": "f5e2684c02bf76dac54170c0c117c92ed8859647",
     "players": 2,
     "genres": [
       "Action"

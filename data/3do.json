@@ -1,5 +1,6 @@
 {
   "20th Century Video Almanac": {
+    "id": "d6b29f5b652fe3c9115a7ac8082b976f96aad080",
     "manuals": [
       {
         "languages": [
@@ -10,6 +11,7 @@
     ]
   },
   "3D Atlas": {
+    "id": "14d7c992d0928fe6b4ac90f847d3d322b5457586",
     "manuals": [
       {
         "languages": [
@@ -20,6 +22,7 @@
     ]
   },
   "3DO Game Guru": {
+    "id": "7d76d362241a8413ac0d76e368bf156a1059c37d",
     "manuals": [
       {
         "languages": [
@@ -30,6 +33,7 @@
     ]
   },
   "3DO Interactive Sampler CD 2, The": {
+    "id": "d5bc66fff63514b29564f401b6c7d95979d2a91d",
     "manuals": [
       {
         "languages": [
@@ -40,6 +44,7 @@
     ]
   },
   "3DO Interactive Sampler CD 3, The": {
+    "id": "d936202dbf9fd677b704041f2e8c4751c678c986",
     "manuals": [
       {
         "languages": [
@@ -50,6 +55,7 @@
     ]
   },
   "3DO Interactive Sampler CD 4, The": {
+    "id": "e94404c307fe91e013d220cd469015fbe805d34c",
     "manuals": [
       {
         "languages": [
@@ -59,10 +65,17 @@
       }
     ]
   },
-  "3DO Interactive Sampler CD, The": {},
-  "3DO Interactive Sampler, The": {},
-  "3DO Multi Game Sampler Number 3, The": {},
+  "3DO Interactive Sampler CD, The": {
+    "id": "1343deff67269bc995909df16325419360d4e870"
+  },
+  "3DO Interactive Sampler, The": {
+    "id": "796d87d88cd102451ef96e5930938680c164bbb1"
+  },
+  "3DO Multi Game Sampler Number 3, The": {
+    "id": "55a8fe7cdce1996de14628329bef3feba4f6782a"
+  },
   "AI Shougi": {
+    "id": "cfad2e08a7f21244d0b11d5d9ada9ff42703ea36",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -70,6 +83,7 @@
     ]
   },
   "Alone in the Dark": {
+    "id": "424ab3bdbfd59cc2573d45dce7b66c269a8f33c3",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -89,6 +103,7 @@
     }
   },
   "Alone in the Dark 2": {
+    "id": "52df1fadb12f28a587eac8223cb87d0713e12dff",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -105,11 +120,13 @@
     ]
   },
   "Anno Mitsumasa Pepperon-mura no Shiki": {
+    "id": "b894d7204887afa42c9b159df5965069613c262b",
     "genres": [
       "Educational"
     ]
   },
   "Aqua World - Umi Monogatari": {
+    "id": "df009365f57d0c51099417d7f615496bf36e8269",
     "players": 1,
     "rating": 0.15,
     "genres": [
@@ -117,6 +134,7 @@
     ]
   },
   "AutoBahn Tokio": {
+    "id": "725dd6212e3c3dd7ace2b47b4ee6c4e51f1f0488",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -125,6 +143,7 @@
     ]
   },
   "BC Racers": {
+    "id": "a056e9f6760b5d90e1ee7f9afd0f0cd9ff71cbc4",
     "players": 2,
     "rating": 0.9,
     "genres": [
@@ -141,6 +160,7 @@
     ]
   },
   "BFS - Blue Forest Story": {
+    "id": "eede65b494f02fa76fc523fa83fa69b4f1496d50",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -148,6 +168,7 @@
     ]
   },
   "Bakushou!! All Yoshimoto Quiz-ou Kettei-sen": {
+    "id": "3c14982e4f9184f2f46174b1f52b1ce4943bd85d",
     "players": 4,
     "rating": 0.6,
     "genres": [
@@ -156,6 +177,7 @@
     ]
   },
   "Ballz - The Director's Cut": {
+    "id": "05bc558e9a06fac4245ffafd305a29cc0b7d03bc",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -171,6 +193,7 @@
     ]
   },
   "Battle Blues": {
+    "id": "82873f46afec3b6095ad510b7c11e73e9458058f",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -178,6 +201,7 @@
     ]
   },
   "Battle Chess": {
+    "id": "fb35b9deb7e85cbc5f9ff007f5eb85e3c1cfe8a3",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -193,6 +217,7 @@
     ]
   },
   "Battle Pinball": {
+    "id": "322148c2905c41264c9e4722971fa24d89ccdf90",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -200,6 +225,7 @@
     ]
   },
   "BattleSport": {
+    "id": "4f0101fa715a4679e74a9c68fc1af4735be5b32e",
     "players": 1,
     "rating": 0.95,
     "genres": [
@@ -215,6 +241,7 @@
     ]
   },
   "Belzerion": {
+    "id": "5abcf6d440d9ab2582bb27c0ec5d6faf7a981ac2",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -222,6 +249,7 @@
     ]
   },
   "Blade Force": {
+    "id": "a058708cf346a16bbace85ec04f4226789866473",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -237,6 +265,7 @@
     ]
   },
   "Blonde Justice": {
+    "id": "72fbcbb71225553444705ce298591f3f76a1cb3a",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -244,6 +273,7 @@
     ]
   },
   "Bonogurashi": {
+    "id": "0c0e813b7947c938d0384c95473ed51683c2f4c1",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -251,6 +281,7 @@
     ]
   },
   "BrainDead 13": {
+    "id": "cf79b32ef424d104df3be6fa9a9356596c1c8c46",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -266,6 +297,7 @@
     ]
   },
   "Burning Soldier": {
+    "id": "0f12be3832252bb199239671505534004f9da4eb",
     "players": 1,
     "rating": 0.2,
     "genres": [
@@ -275,6 +307,7 @@
     ]
   },
   "Cannon Fodder": {
+    "id": "472910b38818d10b8890754fe8b56a987ff58405",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -290,6 +323,7 @@
     ]
   },
   "Captain Quazar": {
+    "id": "8f9e7a617963f06f845cd2be2a0619719505218c",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -305,6 +339,7 @@
     ]
   },
   "Captain Quazar & BattleSport": {
+    "id": "6ada90d84d414b28abb9b905f0560ddbbb29230e",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -312,6 +347,7 @@
     ]
   },
   "Carrier - Fortress at Sea": {
+    "id": "f7a81a7997d13436e0bdecb068d6928dda5fbb59",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -327,6 +363,7 @@
     ]
   },
   "Casper": {
+    "id": "ae6ceb11e3c76d556018574fe3d6a11fe91fd6ac",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -342,6 +379,7 @@
     ]
   },
   "Chiki Chiki Machine Mou Race - Kenken to Black Maou no Ijiwaru Daisakusen": {
+    "id": "278cf396267b9befed73d87e6864ac41700df8a8",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -349,6 +387,7 @@
     ]
   },
   "Chiki Chiki Machine Mou Race 2 - In Space": {
+    "id": "e92ab10984518380674bea5e75613b74ad39a92e",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -356,6 +395,7 @@
     ]
   },
   "Club 3DO - Station Invasion": {
+    "id": "9ccafdaae46e5c16e34218e9958cfd49969fdc69",
     "players": 5,
     "rating": 0.7,
     "genres": [
@@ -371,6 +411,7 @@
     ]
   },
   "Corpse Killer": {
+    "id": "b399e96dbb05acaccf32bb135d71d1c0910b4132",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -389,6 +430,7 @@
     ]
   },
   "Coven, The": {
+    "id": "42cc7917de453ccd8cd256cdd5ae9934d85ef357",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -396,6 +438,7 @@
     ]
   },
   "Cowboy Casino": {
+    "id": "dbe085ca2274ddeac77bd55271f2a940e4711c6d",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -403,6 +446,7 @@
     ]
   },
   "Crash 'n Burn": {
+    "id": "0e61d9bde751e95aa9f4cdd2d7498ca4ec5dcbef",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -419,6 +463,7 @@
     ]
   },
   "Crayon Shin-chan - Puzzle Daimaou no Nazo": {
+    "id": "a2a4f711f9bcaa1c03264275a423e0fae6b4b330",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -426,6 +471,7 @@
     ]
   },
   "Creature Shock": {
+    "id": "cde4febdd257aa9dbd812416c94d11151a780c7e",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -441,6 +487,7 @@
     ]
   },
   "Crime Patrol": {
+    "id": "d61957ef334aa432289fa2917774612c5217deb9",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -459,6 +506,7 @@
     ]
   },
   "Crystal Dynamics Best Selection ~ Sample This!": {
+    "id": "aefac700ffe9c8fe6a2bca0e6de4c550f4f7a565",
     "manuals": [
       {
         "languages": [
@@ -469,6 +517,7 @@
     ]
   },
   "CyberDillo": {
+    "id": "3d36015d5d8bce74fe6b82cde18cd5d5ede526b8",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -477,6 +526,7 @@
     ]
   },
   "Cyberia": {
+    "id": "c19595c98682d50f54c4d6c9cf3e19f412d3e4ca",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -492,6 +542,7 @@
     ]
   },
   "D": {
+    "id": "e6c67e9e7770fff623f9f995139e3984107d1e30",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -511,6 +562,7 @@
     ]
   },
   "D's Diner - The Director's Cut": {
+    "id": "ee01ad7ac5be06b1d6d95894c9d5acf7d3d1ccfa",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -519,6 +571,7 @@
     ]
   },
   "Daedalus Encounter, The": {
+    "id": "79cbb782ba91c3ef0fba99ded990d76407355d95",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -537,6 +590,7 @@
     ]
   },
   "DeathKeep": {
+    "id": "f93daac82bbe982e2b9ea12ecbcc4e49ddb721ce",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -552,6 +606,7 @@
     ]
   },
   "Decathlon": {
+    "id": "5b419b7fd1e853c756eb4e53b248b99e2d3aa768",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -559,6 +614,7 @@
     ]
   },
   "Defcon 5": {
+    "id": "daf8aea5bea8a4fffa31dd7f5d110287f5be4d53",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -566,6 +622,7 @@
     ]
   },
   "Demolition Man": {
+    "id": "ebd2d204dae5723190e1795f17d78d6edb04edf5",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -584,9 +641,11 @@
     ]
   },
   "Dennou Hyouryuu - Multimedia Cruising": {
+    "id": "b9a44bf0ba8b40ab08688f45b5a9195efb805784",
     "players": 1
   },
   "Digital Dreamware": {
+    "id": "98e763c7b399b8d18aa4aa241019e78644de34f3",
     "manuals": [
       {
         "languages": [
@@ -597,6 +656,7 @@
     ]
   },
   "DinoPark Tycoon": {
+    "id": "834e2f9001cb5166b08d1209cfdf351d74672606",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -611,8 +671,11 @@
       }
     ]
   },
-  "Diving Spot Guide - Marine Tour": {},
+  "Diving Spot Guide - Marine Tour": {
+    "id": "3dbad903bd5ad085e670ab84c9f790f7f2aa188c"
+  },
   "Doctor Hauzer": {
+    "id": "8c20ec4f3b43e1852be03680d32c9772ff8f7667",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -620,6 +683,7 @@
     ]
   },
   "Doom": {
+    "id": "cefb5f3abfc45c4e4c06dd5f9eb952cf7afef215",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -637,6 +701,7 @@
     ]
   },
   "Dragon Lore - The Legend Begins": {
+    "id": "fe643dfcb12aa8c9502b9849fe1bbfb6a3b42f1f",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -653,6 +718,7 @@
     ]
   },
   "Dragon Tycoon Edge": {
+    "id": "d722e4f5eade83c9fab0c5a60ca220067a438693",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -660,6 +726,7 @@
     ]
   },
   "Dragon's Lair": {
+    "id": "b66a57c6d162e1362b5b1a61a54fcd31d0eabe02",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -675,6 +742,7 @@
     ]
   },
   "Drug Wars": {
+    "id": "10d226a06bad68b0604d9af2e450ba09b0eab577",
     "players": 2,
     "rating": 0.5,
     "genres": [
@@ -694,6 +762,7 @@
     ]
   },
   "ESPN Baseball - Hitting": {
+    "id": "54a37f5adc63fd216703acef865da432c39b4152",
     "players": 1,
     "genres": [
       "Educational",
@@ -710,6 +779,7 @@
     ]
   },
   "ESPN Golf - Lower Your Score with Tom Kite - Shot Making": {
+    "id": "e1ac0158e9712773a584cd3cac9bc4e3cdc84e93",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -729,6 +799,7 @@
     ]
   },
   "Emit Vol. 1 - Toki no Maigo": {
+    "id": "8e29688d60b57aee906735c96c6d48d1509dc43d",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -736,12 +807,14 @@
     ]
   },
   "Emit Vol. 2 - Inochigake no Tabi": {
+    "id": "d2ddf202ada6a71843d537595c67422c6a2eb822",
     "players": 1,
     "genres": [
       "Adventure"
     ]
   },
   "Emit Vol. 3 - Watashi ni Sayonara o": {
+    "id": "486af417cf7956209c7490b2d9a4c1d000653ea5",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -749,6 +822,7 @@
     ]
   },
   "Endlessly": {
+    "id": "afb7450e84c575e6de667818cdf6aacc1d03570c",
     "players": 1,
     "rating": 0.1,
     "genres": [
@@ -756,6 +830,7 @@
     ]
   },
   "Escape from Monster Manor": {
+    "id": "ddd2899aa982be8dcf2fc67e00ba97ae93f0068c",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -776,6 +851,7 @@
     ]
   },
   "F1GP": {
+    "id": "2ecb20ddcde09ff65a22483b216549f63a48f031",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -784,6 +860,7 @@
     ]
   },
   "FIFA International Soccer": {
+    "id": "a495cf7647f4c1dceba5c26eaa75ba90429cc602",
     "players": 6,
     "rating": 0.5,
     "genres": [
@@ -803,6 +880,7 @@
     }
   },
   "Family Feud": {
+    "id": "74713a0b0e72be9a4736b4ddd1c263b1695e4b8e",
     "players": 8,
     "rating": 0.5,
     "genres": [
@@ -820,6 +898,7 @@
     ]
   },
   "Fatty Bear's Birthday Surprise": {
+    "id": "4af5b2419e411fa015467bcd2704e94c3573987a",
     "players": 10,
     "rating": 0.6,
     "genres": [
@@ -835,6 +914,7 @@
     ]
   },
   "Fatty Bear's Funpack": {
+    "id": "66a80985b7af457dc876d7d6633627615d0ef798",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -853,6 +933,7 @@
     ]
   },
   "Fire Ball!!": {
+    "id": "6f1d329b6652795cde8775f8dc31cb8fd6b35187",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -861,6 +942,7 @@
     ]
   },
   "Firewall": {
+    "id": "19fbf1e3c11216b6b52e70d71636526e6c58e3b5",
     "players": 1,
     "genres": [
       "Action",
@@ -868,6 +950,7 @@
     ]
   },
   "Flashback": {
+    "id": "cd9211d3359b78c8aa58a0ad8341cdf6538a7b08",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -887,6 +970,7 @@
     ]
   },
   "Flopon World": {
+    "id": "4036ceed7be3d886f8b5af12fa4291e9ec0cb621",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -894,6 +978,7 @@
     ]
   },
   "Flying Nightmares": {
+    "id": "36492d5b981cd0c97954158002e7899d79ab1049",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -909,6 +994,7 @@
     ]
   },
   "Foes of Ali": {
+    "id": "e4fbcd52dd7d5db45581356602cf5b8c30cde8ee",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -926,6 +1012,7 @@
     ]
   },
   "Footie": {
+    "id": "8e7aa29250b46f0451c277ca7ff3eb1529dac684",
     "players": 2,
     "genres": [
       "Sports",
@@ -933,6 +1020,7 @@
     ]
   },
   "Fun 'n Games": {
+    "id": "900a52c3c8ae6d6aa35542483c1614751b540324",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -941,6 +1029,7 @@
     ]
   },
   "Fun 'n Games - Soft no Omochabako": {
+    "id": "3a3dc401456b28f242cc2c850d9043c681ef7955",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -949,6 +1038,7 @@
     ]
   },
   "Gakkou no Kowai Uwasa - Hanako-san ga Kita!!": {
+    "id": "213d865e5f11426e748a4a2f8fa740834ad0647f",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -956,14 +1046,18 @@
     ]
   },
   "Game no Tatsujin": {
+    "id": "9e34d8c4236d65e6508fe897e0e6ec41cf50519f",
     "players": 2,
     "rating": 0.75,
     "genres": [
       "Playing cards"
     ]
   },
-  "Gateway to English - Eigo de Go!": {},
+  "Gateway to English - Eigo de Go!": {
+    "id": "d23035f5f95d5026cc6c1b663e07387930eb986d"
+  },
   "Gex": {
+    "id": "3f2541208ef16ac6d6a17aeb80efa84861c618be",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -981,6 +1075,7 @@
     ]
   },
   "Ghost Hunter Series - Kuroki Shi no Kamen": {
+    "id": "d01ddf7993aeff0ed138032fdc35a48fd89fcea1",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -988,6 +1083,7 @@
     ]
   },
   "Goal FH": {
+    "id": "4399a87609f3facf6a85b12b5be6b69b3abf4ce0",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -996,6 +1092,7 @@
     ]
   },
   "Gridders": {
+    "id": "f6ffe5bdf3f0e9e9cab12ebfc17ddf0b289f63f6",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -1011,8 +1108,11 @@
       }
     ]
   },
-  "Grimm Meisaku Gekijou Vol. 1 - Bremen no Ongakutai": {},
+  "Grimm Meisaku Gekijou Vol. 1 - Bremen no Ongakutai": {
+    "id": "84acf4fb1ab19178b905a991ec7ebd4b854bee49"
+  },
   "Grimm Meisaku Gekijou Vol. 2 - Hansel to Gretel": {
+    "id": "78eb839b96523df876081a8d853089577e6fbd70",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1020,14 +1120,18 @@
     ]
   },
   "Grimm Meisaku Gekijou Vol. 3 - Akazukin": {
+    "id": "e5c31b5bf647fc9b11a6d47a7feeac0f12749eb2",
     "players": 1,
     "rating": 0.7,
     "genres": [
       "Various"
     ]
   },
-  "Hatsubai 1 Shuunen - 3DO REAL - Tokubetsu Premium CD": {},
+  "Hatsubai 1 Shuunen - 3DO REAL - Tokubetsu Premium CD": {
+    "id": "729cd884a755ea600a4c59f750e8b1fe0cd8de48"
+  },
   "Hell - A Cyberpunk Thriller": {
+    "id": "3a3d610b48a2f3e8f048fdafdae0e2f666a95e01",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -1043,6 +1147,7 @@
     ]
   },
   "Hello Kitty - Asobi no Omochabako": {
+    "id": "20250445e73206919edbebb8e2877e37ed12f85f",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1050,10 +1155,12 @@
     ]
   },
   "Hirata Shougo Interactive Ehon - Aesop Monogatari Vol. 1": {
+    "id": "315d12a63083424531ee8eb99511d97bc089aca0",
     "players": 1,
     "rating": 0.7
   },
   "Hirata Shougo Interactive Ehon - Cinderella": {
+    "id": "516110b1503cdb56c6a3f96702d53f08d97e3333",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1061,11 +1168,20 @@
       "Various"
     ]
   },
-  "Hirata Shougo Interactive Ehon - Ningyo-hime": {},
-  "Hirata Shougo Interactive Ehon - Ookami to Shichihiki no Koyagi": {},
-  "Hirata Shougo Interactive Ehon - Sanbiki no Kobuta": {},
-  "Hirata Shougo Interactive Ehon - Shirayuki-hime": {},
+  "Hirata Shougo Interactive Ehon - Ningyo-hime": {
+    "id": "008af366b233101c2c62437f263e752e23938da4"
+  },
+  "Hirata Shougo Interactive Ehon - Ookami to Shichihiki no Koyagi": {
+    "id": "83b43a880eebdbce6e03283986a2d6566d0d3861"
+  },
+  "Hirata Shougo Interactive Ehon - Sanbiki no Kobuta": {
+    "id": "65fd9ec559dcb3a6e9e31630d47817dabd1398c8"
+  },
+  "Hirata Shougo Interactive Ehon - Shirayuki-hime": {
+    "id": "53f4fefcf34ff5b4ba44169a56ee15db48d07e08"
+  },
   "Hitchcock ni Chousen": {
+    "id": "97579a2140be4a3ddf1488cb84b9b051e0c80f79",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1073,6 +1189,7 @@
     ]
   },
   "Horde, The": {
+    "id": "b481d2e768221e528793cf26ee2bd32ca318fbf0",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -1088,6 +1205,7 @@
     ]
   },
   "Icebreaker": {
+    "id": "f32a44fad92fcc1ee05391bb293940cce592ff7c",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1095,18 +1213,21 @@
     ]
   },
   "Icebreaker II": {
+    "id": "98290c54429338dfccfbbd33e0c09ab33deee0e2",
     "players": 1,
     "genres": [
       "Puzzle-Game"
     ]
   },
   "Ide Yousuke Meijin no Shin Jissen Mahjong": {
+    "id": "8b8a9c812900cbbb0998a0dccf2efb312efad98c",
     "players": 2,
     "genres": [
       "Asiatic board game"
     ]
   },
   "Idol Janshi Suchie-Pai Special": {
+    "id": "fcfd9877b37aef3a51a7369c3686c1bf1be0c62e",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1114,6 +1235,7 @@
     ]
   },
   "Idol Mahjong - Final Romance 2 - Hyper Edition": {
+    "id": "2a2c249c2f5f99415d10ffced80e53da2d244d52",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1121,14 +1243,18 @@
       "Puzzle-Game"
     ]
   },
-  "Igo Time Trial - Shikatsu Daihyakka": {},
+  "Igo Time Trial - Shikatsu Daihyakka": {
+    "id": "5350ae3fe513a95d6dbea2472ba9ce9c0f368dea"
+  },
   "Igo Time Trial - Tsumego I": {
+    "id": "cf1d8d92d88153102af1056618c9a1fc1727708e",
     "players": 2,
     "genres": [
       "Puzzle-Game"
     ]
   },
   "Immercenary": {
+    "id": "9ec6052b64031520dbf0b0dc15c2ab3cf6a1a4b7",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1148,6 +1274,7 @@
     ]
   },
   "Immortal Desire": {
+    "id": "59a438c30146de480c17c6334e1781978c5c721b",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1155,6 +1282,7 @@
     ]
   },
   "Incredible Machine, The": {
+    "id": "eb18eba4432d1c0a16888c1c7206ab1221c8376d",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1173,9 +1301,11 @@
     ]
   },
   "Insector War": {
+    "id": "8f582ae1d2c134bf10051562b20a9f98f8a938e2",
     "rating": 0.65
   },
   "Interplay 3DO Buffet, The": {
+    "id": "1c9faaa0f2425490d0dad312af9f2a22897df78b",
     "manuals": [
       {
         "languages": [
@@ -1186,6 +1316,7 @@
     ]
   },
   "Iron Angel of the Apocalypse - Tetsujin": {
+    "id": "f36a0402cd3834606a6cedc41ef09605e2c4c21c",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -1204,6 +1335,7 @@
     ]
   },
   "Iron Angel of the Apocalypse - The Return": {
+    "id": "f0516c8cb551b0a7c747fa661df57cd7626d2728",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -1222,6 +1354,7 @@
     ]
   },
   "Ishida Yoshio Kudan no Igo Seiha": {
+    "id": "f5794db3162a945c952210a0f71fed0757574314",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1229,6 +1362,7 @@
     ]
   },
   "J. B. Harold - Blue Chicago Blues": {
+    "id": "d79341030230b3f44ee737f45f3fd938de1d4c4c",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -1237,6 +1371,7 @@
     ]
   },
   "J.League Virtual Stadium": {
+    "id": "ec0b69e7ae42c340eb9b2b9efd79102897ed83d1",
     "players": 6,
     "rating": 0.6,
     "genres": [
@@ -1246,6 +1381,7 @@
     ]
   },
   "J.League Virtual Stadium '95": {
+    "id": "54d15259ddaef44571d3cbb9b65b127fac22368a",
     "players": 6,
     "genres": [
       "Sports",
@@ -1253,6 +1389,7 @@
     ]
   },
   "Jammit": {
+    "id": "23732056b58c423d7da147a7185bc3821acb0131",
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -1261,6 +1398,7 @@
     ]
   },
   "Jikki Pachi-Slot Simulator Vol. 1": {
+    "id": "ed358b5a6cc964a5417bda4358a2d701dc82090e",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -1268,6 +1406,7 @@
     ]
   },
   "John Madden NFL Football": {
+    "id": "b6cdf222b28f562418d3404a12987e3ed93bb369",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -1288,6 +1427,7 @@
     ]
   },
   "Johnny Bazookatone": {
+    "id": "e700e6e5099310cbf9c2cc1b119570a6c09e5fca",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -1304,6 +1444,7 @@
     ]
   },
   "Jurassic Park Interactive": {
+    "id": "d528f58696f4c22457d34bed36923fae49c8df1a",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -1321,6 +1462,7 @@
     ]
   },
   "Kakinoki Shougi": {
+    "id": "8010873de077e3d143dbaa2dd3d73189062ff510",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1328,6 +1470,7 @@
     ]
   },
   "Keiba Saishou no Housoku": {
+    "id": "4766c1b9edffffb688534954de7643c5986e3b01",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1336,12 +1479,14 @@
     ]
   },
   "Kero Kero Keroppi to Origami no Tabibito": {
+    "id": "b9c713e178f5d88a0ace756a2412a03302f652f7",
     "players": 1,
     "genres": [
       "Educational"
     ]
   },
   "Killing Time": {
+    "id": "a801c5dc72a7cbf8a2be7915d837bb88f46e1269",
     "players": 1,
     "rating": 0.95,
     "genres": [
@@ -1366,6 +1511,7 @@
     ]
   },
   "Kingdom - The Far Reaches": {
+    "id": "0141f8701cb7bf3cab413d1cc320a27ab1cd0de3",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1381,6 +1527,7 @@
     ]
   },
   "Konpeki no Kantai": {
+    "id": "fa9c24aaeed4fb5e00607dfd9e366ee2a400e288",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -1388,6 +1535,7 @@
     ]
   },
   "Kyuusei Senjutsu ni Yoru - Heisei Kaiun Koyomi": {
+    "id": "a7073261844e2026a1dd5071d8aa0513d87d1a90",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -1395,6 +1543,7 @@
     ]
   },
   "Last Bounty Hunter, The": {
+    "id": "a976516fb8bf864bcdf0caf8632c34deab6d1274",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -1413,6 +1562,7 @@
     ]
   },
   "Lemmings": {
+    "id": "76009ad39b62b9cd8dee858d09ed7f41b59a1480",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1429,6 +1579,7 @@
     ]
   },
   "Let's Go Skiing": {
+    "id": "9216c805dcca9d0f2ecd51fc27f15ed3e4caa514",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1444,6 +1595,7 @@
     ]
   },
   "Let's Play Beach Volleyball": {
+    "id": "ebddd4e5ea3cae66c303b3afa6cd24f2985c84e4",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1452,6 +1604,7 @@
     ]
   },
   "Life Stage, The - Virtual House": {
+    "id": "6ddf40876c733ba98898537fd1d95bc7cf8b7b9b",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1466,18 +1619,41 @@
       }
     ]
   },
-  "Live! 3DO Magazine CD-ROM 1": {},
-  "Live! 3DO Magazine CD-ROM 10": {},
-  "Live! 3DO Magazine CD-ROM 11": {},
-  "Live! 3DO Magazine CD-ROM 2": {},
-  "Live! 3DO Magazine CD-ROM 3": {},
-  "Live! 3DO Magazine CD-ROM 4": {},
-  "Live! 3DO Magazine CD-ROM 5": {},
-  "Live! 3DO Magazine CD-ROM 6": {},
-  "Live! 3DO Magazine CD-ROM 7": {},
-  "Live! 3DO Magazine CD-ROM 8": {},
-  "Live! 3DO Magazine CD-ROM 9": {},
+  "Live! 3DO Magazine CD-ROM 1": {
+    "id": "4be2b5a5eb70c8cefeb2e07995f658f4ea92714c"
+  },
+  "Live! 3DO Magazine CD-ROM 10": {
+    "id": "7f32e4be2c8fd2e763657399a613347cdb3da007"
+  },
+  "Live! 3DO Magazine CD-ROM 11": {
+    "id": "b09142cf354bcc40c793bd378314b4748043c4e0"
+  },
+  "Live! 3DO Magazine CD-ROM 2": {
+    "id": "a013834eed037ad400b7706c752fe1888988b8f7"
+  },
+  "Live! 3DO Magazine CD-ROM 3": {
+    "id": "dd42fc2843a091cccb3aa84c46f17085ea8913fc"
+  },
+  "Live! 3DO Magazine CD-ROM 4": {
+    "id": "fb13be41447008d5f9f0b9c14667477aae466ce8"
+  },
+  "Live! 3DO Magazine CD-ROM 5": {
+    "id": "ae5f5413ced259a82f5d8cd138e8f55de235f127"
+  },
+  "Live! 3DO Magazine CD-ROM 6": {
+    "id": "54a641d9e156bf10ae59aeb1cbbd563555e91569"
+  },
+  "Live! 3DO Magazine CD-ROM 7": {
+    "id": "30913b3c103adfe48d25ac96da317d7fb43df82c"
+  },
+  "Live! 3DO Magazine CD-ROM 8": {
+    "id": "d17ea43b8e2d1177d5138f26837faf9df2f783f4"
+  },
+  "Live! 3DO Magazine CD-ROM 9": {
+    "id": "77014aa2ca6db72f4905f934bff11af61fa44cde"
+  },
   "Lost Eden": {
+    "id": "7bc886d3b0a03cd1a8062f5e657a80e62a9d7898",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1496,6 +1672,7 @@
     }
   },
   "Lost Files of Sherlock Holmes, The": {
+    "id": "0bea9d274a0a4719b6ac5b3dea18486aeb216d79",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1511,6 +1688,7 @@
     ]
   },
   "Love Bites": {
+    "id": "f90de397c6f58a1bcb94ae5d5741b0559b565143",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -1518,6 +1696,7 @@
     ]
   },
   "Lucienne's Quest": {
+    "id": "ecae3aa4b7ebc90261a224c4ad3ffa1cd6ff2e0c",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1536,6 +1715,7 @@
     ]
   },
   "Mad Dog II - The Lost Gold": {
+    "id": "a709422640aebd2ea83230f134397e7332a7568e",
     "players": 2,
     "rating": 0.95,
     "genres": [
@@ -1554,6 +1734,7 @@
     ]
   },
   "Mad Dog McCree": {
+    "id": "cda7e50ee7b3bf4022005ef84e8d8596913bccd9",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -1573,6 +1754,7 @@
     ]
   },
   "Mahjong Gokuu Tenjiku": {
+    "id": "0dce81c9fac4d02685e07b77a35fb727b809aedf",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1582,6 +1764,7 @@
     ]
   },
   "Mahjong-kyou Jidai - AV Gal Seifuku-hen": {
+    "id": "7bb0067ad599aa7f54219dfc09a9d95f23348418",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1589,6 +1772,7 @@
     ]
   },
   "Mahjong-kyou Jidai Cogal Houkago-hen": {
+    "id": "c11823beedb145168a782ceb48c598bd00730ea9",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -1596,6 +1780,7 @@
     ]
   },
   "Makaroni Hourensou Interactive": {
+    "id": "70f6467f486408fd267fe9779ef1fcce230d3248",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -1603,6 +1788,7 @@
     ]
   },
   "Mathemagics - An Interactive Learning Cube": {
+    "id": "6c0add1b1181fe0d51f05dbf9079e28e7b581879",
     "manuals": [
       {
         "languages": [
@@ -1613,6 +1799,7 @@
     ]
   },
   "Mazer": {
+    "id": "66058f9735a05161dc7848b3d401f9440b1f98ab",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -1628,6 +1815,7 @@
     ]
   },
   "MegaRace": {
+    "id": "596f747b1baec0a25ffbbc823c955a4a0bf9be73",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -1644,6 +1832,7 @@
     ]
   },
   "Microcosm": {
+    "id": "f9b207518a32a201187b0fe220ac6534ecf7ba5b",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -1658,21 +1847,28 @@
       }
     ]
   },
-  "Mirai Shounen Conan - Digital Library": {},
-  "Monoshiri Jiyuugaku - Ogura Hyakunin Isshu-hen": {},
+  "Mirai Shounen Conan - Digital Library": {
+    "id": "cc34b3cfd1608b1241745c9e10707f3734d0be71"
+  },
+  "Monoshiri Jiyuugaku - Ogura Hyakunin Isshu-hen": {
+    "id": "7f3bf52a726669d1b85bf90a30ebf71842906031"
+  },
   "Montana Jones": {
+    "id": "c2a1e364df1965eaad8e28d3ba8cd4ef3d87c520",
     "players": 1,
     "genres": [
       "Action"
     ]
   },
   "Moon Cradle - Igyou no Hanayome": {
+    "id": "075a94ff4c9f0768c21165d98bf276dc41e27123",
     "players": 1,
     "genres": [
       "Adventure"
     ]
   },
   "Murphy da yo Zen'in Shuugou!!": {
+    "id": "660992992746cc752b924f4f3eea836cc36508e5",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1680,6 +1876,7 @@
     ]
   },
   "Myst": {
+    "id": "1255bb6d4c499cfab6d0fa9c696efe68602265df",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1696,15 +1893,25 @@
     ]
   },
   "N.O.B.": {
+    "id": "5a5c528a3a45e7c5257ff7f810b9298971993c79",
     "genres": [
       "Role playing games"
     ]
   },
-  "Naoko to Hide-bou - Kanji no Tensai 1 - Bushu-hen, Bushu no Namae ga Tanoshii Chou Kioku-hou": {},
-  "Naoko to Hide-bou - Sansuu no Tensai 1 - Wa to Sa no Bunshoudai Tsurukamezan Part I": {},
-  "Naoko to Hide-bou - Sansuu no Tensai 2 - Hayasa no Bunshoudai Tsuukasan Part I": {},
-  "Nemurenu Yoru no Chiisana Ohanashi": {},
+  "Naoko to Hide-bou - Kanji no Tensai 1 - Bushu-hen, Bushu no Namae ga Tanoshii Chou Kioku-hou": {
+    "id": "37a7fe9fac64a1082470ea2c87a6acd2818ee7d0"
+  },
+  "Naoko to Hide-bou - Sansuu no Tensai 1 - Wa to Sa no Bunshoudai Tsurukamezan Part I": {
+    "id": "43bbbbdffd64a81f95d695d6e61709bee56617c2"
+  },
+  "Naoko to Hide-bou - Sansuu no Tensai 2 - Hayasa no Bunshoudai Tsuukasan Part I": {
+    "id": "c7df39a71aaafc3add9039d0c0f1c6fa00b47d7e"
+  },
+  "Nemurenu Yoru no Chiisana Ohanashi": {
+    "id": "61f936b8e5d3a97bd28e15a601d3beb2360b8258"
+  },
   "NeuroDancer - Journey into the Neuronet!": {
+    "id": "b5fa825a6b8444e273d29d226581a283510f7365",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -1720,6 +1927,7 @@
     ]
   },
   "Nice Body - For Professional Use": {
+    "id": "74847bb4c147030987995807214a74a8229de7da",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -1727,6 +1935,7 @@
     ]
   },
   "Night Trap": {
+    "id": "3a2387493a89dea112d38ea90312798043eeb4f5",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1734,10 +1943,12 @@
     ]
   },
   "Nishimura Kyoutarou Travel Mystery - Akugyaku no Kisetsu - Tokyo Nanki Shirahama Renzoku Satsujin Jiken": {
+    "id": "b526f65cefbdcd0f29757750e80c3771c9398e82",
     "players": 1,
     "rating": 0.8
   },
   "Nobunaga no Yabou - Haouden": {
+    "id": "967ba42427d5c4bdeb985ab0d0da97e58fa924fa",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1745,6 +1956,7 @@
     ]
   },
   "Nontan to Issho - Hoshi no Okurimono": {
+    "id": "f3a5a9bfa805d7a232ce088df9152a6363f40008",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -1752,6 +1964,7 @@
     ]
   },
   "Nontan to Issho - Nohara de Asobo": {
+    "id": "bfac5d5255774edd91a005f5a2e09a45aef5f755",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1759,6 +1972,7 @@
     ]
   },
   "Novastorm": {
+    "id": "5e97b40921fcaff29271a21ceb9cba5efc211111",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -1777,6 +1991,7 @@
     ]
   },
   "Oceans Below": {
+    "id": "1b4cc4c143f95c0d6c3ec99151ba67883e6eefa5",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1793,6 +2008,7 @@
     ]
   },
   "Off-World Interceptor": {
+    "id": "7c9de60fb7d36a4950ea1aaba1d374ddccfc8e18",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -1807,8 +2023,11 @@
       }
     ]
   },
-  "Ogura Hyakunin Isshu": {},
+  "Ogura Hyakunin Isshu": {
+    "id": "bf64efc04902b6855e99b216ed48137420f0f9cf"
+  },
   "Olympic Games": {
+    "id": "15bce5ff6259b412799eb1c3f6c7d53308b6ab37",
     "players": 8,
     "rating": 0.7,
     "genres": [
@@ -1816,6 +2035,7 @@
     ]
   },
   "Olympic Soccer": {
+    "id": "b6fb8e951b2c0902a98bfd044ab3505d21150b7c",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1832,6 +2052,7 @@
     ]
   },
   "Olympic Summer Games": {
+    "id": "c689f4effea983cdbeb01021834b6089a6e12e0c",
     "players": 8,
     "rating": 0.7,
     "genres": [
@@ -1847,6 +2068,7 @@
     ]
   },
   "OnSide Soccer": {
+    "id": "3a98a4d6c8c771f426d737037baa7abf73084b9d",
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -1855,12 +2077,15 @@
     ]
   },
   "Onee-san to Issho! Janken Paradise": {
+    "id": "8690014adfc67453ff71a561d35a551dad5addab",
     "rating": 0.5
   },
   "Onee-san to Issho! Kisekae Paradise": {
+    "id": "b03e9329b2dc63381ff2bf62403ace60212cbe95",
     "rating": 0.5
   },
   "Oukoku no Grand Chef": {
+    "id": "42e40df1667d007a443380b579c784c38d5a7b1a",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -1868,6 +2093,7 @@
     ]
   },
   "Out of This World": {
+    "id": "8d909573d968b9399c8ea5c9cccc7e71adf1e435",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -1889,6 +2115,7 @@
     ]
   },
   "Oyaji Hunter Mahjong": {
+    "id": "c1c3e794b1039fc35dafd2145d4ce6797b9e7d05",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1897,6 +2124,7 @@
     ]
   },
   "PGA Tour 96": {
+    "id": "b81bdf1b0862e2fd1b778658bbaa8923a443d192",
     "players": 4,
     "rating": 0.8,
     "genres": [
@@ -1913,6 +2141,7 @@
     ]
   },
   "PO'ed": {
+    "id": "6a65201c2da924eb6820f1a69903ef434aec12fa",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -1929,6 +2158,7 @@
     ]
   },
   "PaTaank": {
+    "id": "1eb89cd61fe91844059012f0b2ba7a25029c8832",
     "players": 4,
     "rating": 0.7,
     "genres": [
@@ -1944,6 +2174,7 @@
     ]
   },
   "Paddock Note '95": {
+    "id": "8b15239cf23b8c0d8749e884f0055d7ad083eb02",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -1951,6 +2182,7 @@
     ]
   },
   "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD": {
+    "id": "31cc0849cbe49096659e0e8bf071092b22882552",
     "manuals": [
       {
         "languages": [
@@ -1960,15 +2192,21 @@
       }
     ]
   },
-  "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD for PAL System": {},
-  "Panasonic Special CD-ROM": {},
+  "Panasonic REAL 3DO Interactive Multiplayer - Sampler CD for PAL System": {
+    "id": "44cfe9d1de5fa7e648071f30a7e4072d74489518"
+  },
+  "Panasonic Special CD-ROM": {
+    "id": "699eab44e55e19306c84ba06a47ed3b9458a7242"
+  },
   "Penthouse Interactive - Virtual Photo Shoot Vol. 1": {
+    "id": "0ea7eb7333896f893c587b7e65d5c784b491cb6e",
     "players": 1,
     "genres": [
       "Adult"
     ]
   },
   "Perfect General, The": {
+    "id": "a6caf4a31f969e49e7f45cb7fb00bcbc82601faf",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -1984,6 +2222,7 @@
     ]
   },
   "Peter Frankl - Puzzle no Tou": {
+    "id": "42b2b8725e975363856301d1e3f7f7b544390efd",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -1991,6 +2230,7 @@
     ]
   },
   "Phoenix 3": {
+    "id": "f215611c818b220f7255b5cdcfcd2f60a6fe832b",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2007,6 +2247,7 @@
     ]
   },
   "Plumbers Don't Wear Ties": {
+    "id": "998abf40165a76dd4589a097f52a0b1a62b9ac10",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -2022,6 +2263,7 @@
     ]
   },
   "Policenauts": {
+    "id": "d2c4b1d8418ce1f4cfc9b3375c2584c3bbbdcd5b",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2029,6 +2271,7 @@
     ]
   },
   "Policenauts - Pilot Disk": {
+    "id": "150471029d6ae9e583a02a5e8975f43d0a6547d9",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2036,6 +2279,7 @@
     ]
   },
   "Powers Kingdom": {
+    "id": "b018b4972b3b8a90e0cd2714066f544d5607c8c1",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2054,6 +2298,7 @@
     ]
   },
   "Powerslide": {
+    "id": "d86e0917d7e1a1ce4153e6d804b91822ee060702",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -2062,6 +2307,7 @@
     ]
   },
   "Pretty Soldier SailorMoon S": {
+    "id": "7679bdad9f4dec24cc6e3feec89b7c0de40da137",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -2077,6 +2323,7 @@
     ]
   },
   "Primal Rage": {
+    "id": "8a79e018cdd85ba8fa17584e82688c7d6a32d555",
     "players": 2,
     "rating": 1,
     "genres": [
@@ -2093,6 +2340,7 @@
     ]
   },
   "Princess Maker 2": {
+    "id": "9355cb9e3b5b3994d0b07a86424f0fa4e4624208",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2101,6 +2349,7 @@
     ]
   },
   "Pro Stadium": {
+    "id": "e66f1550f8512f87f368674685c28b4fe22f6c22",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -2109,6 +2358,7 @@
     ]
   },
   "Pro Yakyuu Virtual Stadium - Professional Baseball": {
+    "id": "700c2a742f62ce187c9e86e002e72544813cd4f7",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2117,6 +2367,7 @@
     ]
   },
   "Psychic Detective": {
+    "id": "1d69124c95f7b9c18147140ac81e1ac1593a279e",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -2131,8 +2382,11 @@
       }
     ]
   },
-  "Puppet Tale": {},
+  "Puppet Tale": {
+    "id": "87cba060d1136cc9441bffcc4bcb3c35b7f5495f"
+  },
   "Putt-Putt Goes to the Moon": {
+    "id": "49c3eab058d2b0c4c303e413a61242258de3dfbc",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2140,6 +2394,7 @@
     ]
   },
   "Putt-Putt Joins the Parade": {
+    "id": "bf4e025f327d5a72ef9dfbf1164b5e2d5ea7fb39",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2148,6 +2403,7 @@
     ]
   },
   "Putt-Putt's Fun Pack": {
+    "id": "0a24fbca704132c4bb56958dbaf9799e4f8eb8a4",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2155,6 +2411,7 @@
     ]
   },
   "Puzzle Bobble": {
+    "id": "aad2974c7f86c5d27838ff1ac27fa9cd5e6079e9",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2171,6 +2428,7 @@
     ]
   },
   "Pyramid Intruder": {
+    "id": "15e1f766742db18ce41f5aac4a92d361f6d6d28d",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2178,6 +2436,7 @@
     ]
   },
   "Quarantine": {
+    "id": "4625443b3c877c8c6b4e222a29d0483ed39982c0",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -2197,6 +2456,7 @@
     }
   },
   "Quarterback Attack": {
+    "id": "51c9b6d41c4ea8324cc2044f1a7736a3deddd0a9",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2213,6 +2473,7 @@
     ]
   },
   "Real Pinball": {
+    "id": "b85f18d529ed4b035997111843f05b988c64d341",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2229,6 +2490,7 @@
     ]
   },
   "Return Fire": {
+    "id": "4f9833e956c3e7bf43b906dbf2aafb815aa2bc44",
     "players": 2,
     "rating": 0.6,
     "genres": [
@@ -2245,6 +2507,7 @@
     ]
   },
   "Return Fire - Maps O' Death": {
+    "id": "db288ec98f6b9401a72397846c00058efee27eab",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -2252,6 +2515,7 @@
     ]
   },
   "Rise of the Robots": {
+    "id": "062f2c37f0b95b1f613a0388a84ebf936ec9333d",
     "players": 2,
     "rating": 0.1,
     "genres": [
@@ -2260,6 +2524,7 @@
     ]
   },
   "Road & Track Presents - The Need for Speed": {
+    "id": "20d46eebdf2fbe8166c93282cb736767f150c78c",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -2279,6 +2544,7 @@
     ]
   },
   "Road Rash": {
+    "id": "0cea63e338ccbfd2c6c248403d30bfe63894a75d",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -2297,6 +2563,7 @@
     ]
   },
   "Robinson's Requiem": {
+    "id": "2e7bde49b75eb312050e72ca6bf519246298e7d5",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2305,6 +2572,7 @@
     ]
   },
   "Royal Pro Wrestling - Jikkyou Live!!": {
+    "id": "d10b26a48effe914f5b04aed32f408ef8de876f0",
     "players": 2,
     "rating": 0.8,
     "genres": [
@@ -2313,6 +2581,7 @@
     ]
   },
   "SHADOW - War of Succession": {
+    "id": "c04b302263c6b84efb7921b9eb81a58c475f15c3",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2331,6 +2600,7 @@
     ]
   },
   "Samurai Shodown": {
+    "id": "38784bce6d1b9cbaf3359e12f665fac684d54778",
     "players": 2,
     "rating": 0.75,
     "genres": [
@@ -2347,11 +2617,13 @@
     ]
   },
   "Sangokushi IV": {
+    "id": "da5adfc5b6de3fefbeae2d7f2f5c8c52bec0c112",
     "genres": [
       "Strategy"
     ]
   },
   "Scramble Cobra": {
+    "id": "9b41e9c3bf58cdaa1bf1079e05d53ca0a951f62d",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2367,6 +2639,7 @@
     ]
   },
   "Seal of the Pharaoh": {
+    "id": "89043a9fe2ce5fbd2a9d34ec2d1e6da8012c431a",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -2385,16 +2658,19 @@
     ]
   },
   "Secre Fuumin no Omochabako": {
+    "id": "962461a06552cd8f80736897365a13ba508ab84e",
     "players": 1,
     "rating": 0.55
   },
   "Seimei Handan": {
+    "id": "ae3d376da0c6bca6aec3361fca4aa1c6f87db8c8",
     "players": 1,
     "genres": [
       "Playing cards"
     ]
   },
   "Sento Monogatari - Sono I": {
+    "id": "c6a2c1390502ea6206c3feee8d266ceb496b8601",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2402,6 +2678,7 @@
     ]
   },
   "Sesame Street - Numbers": {
+    "id": "47d001b29cc1135d228027ad9ed29359a2fb7fda",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2417,6 +2694,7 @@
     ]
   },
   "Sewer Shark": {
+    "id": "d44ac2fa6b8412535edf83c415e963c3ed937e1c",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -2432,6 +2710,7 @@
     ]
   },
   "Sex": {
+    "id": "d58a8f55b48b33a5bbde187edb911749a41ce906",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2439,6 +2718,7 @@
     ]
   },
   "Shanghai - Triple-Threat": {
+    "id": "ea27f75987b9361138966b76e805eba8a3d07f16",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2457,6 +2737,7 @@
     ]
   },
   "Shelley Duvall's It's a Bird's Life": {
+    "id": "e42aebc788e7f91311d47b75e9f828d38b41be40",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2464,6 +2745,7 @@
     ]
   },
   "Shock Wave": {
+    "id": "614cef51f9b84ec70a1b2e188f08d15fd3935980",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -2479,10 +2761,12 @@
     ]
   },
   "Shock Wave - Operation JumpGate": {
+    "id": "337724e4e55271e41d3adacdeba576d90018b6a8",
     "players": 1,
     "rating": 0.8
   },
   "Shockwave 2 - Beyond the Gate": {
+    "id": "7639f3118c2a026eda1525ba5d93d4fa1aaa0c03",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2498,11 +2782,15 @@
     ]
   },
   "Short Warp - Warp's Short Game Collection": {
+    "id": "ee1f5b7b77703c2f30954ec2def12a0ba4812ed2",
     "players": 1,
     "rating": 0.65
   },
-  "Sid Meier's C.P.U. Bach": {},
+  "Sid Meier's C.P.U. Bach": {
+    "id": "2dcebce7472cfeb439be8650528606eba78104de"
+  },
   "Slam 'n Jam '95": {
+    "id": "fd8a0e04f3f94f2c412c0ddd496086e3f36d5bf5",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2519,6 +2807,7 @@
     ]
   },
   "Slayer": {
+    "id": "8073c57e18e2d5f273ee6f3684d2b2fae2ceb395",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -2536,8 +2825,11 @@
       "Lost Dungeon"
     ]
   },
-  "Slopestyle - An Interactive Learning Cube": {},
+  "Slopestyle - An Interactive Learning Cube": {
+    "id": "6bf69b37cf5efa12bdb47ae2f42a0c7868b9a42f"
+  },
   "SnowJob": {
+    "id": "1ae97cc5c8b9147a2752e0c445d53c0424112184",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -2554,6 +2846,7 @@
     ]
   },
   "Soccer Kid": {
+    "id": "3e5606746431a1fbd0180d14bb6d01c1dd1b2e39",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2573,6 +2866,7 @@
     ]
   },
   "Sotsugyou - Graduation - Final": {
+    "id": "0e5795140eb1fc1214ee8f81d7928ef25996bcae",
     "players": 1,
     "rating": 0.5,
     "genres": [
@@ -2581,12 +2875,14 @@
     ]
   },
   "Sotsugyou II Special - Neo Generation": {
+    "id": "5873df8bbb4023df424c540480b70bd1d4cd2ad4",
     "players": 1,
     "genres": [
       "Various"
     ]
   },
   "Space Ace": {
+    "id": "79ac85427391ae9bf78ee00527826fca8edb52cf",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2602,6 +2898,7 @@
     ]
   },
   "Space Hulk - Vengeance of the Blood Angels": {
+    "id": "b9d2482cc084b25c7a809b2b64d3a42c632832fe",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2621,6 +2918,7 @@
     ]
   },
   "Space Pirates": {
+    "id": "308188350e3b48332a6efb70bb80b0c59879d25e",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2640,6 +2938,7 @@
     ]
   },
   "Space Shuttle": {
+    "id": "d9a5054345dd6fa455028465608e8056b3474c3e",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2655,6 +2954,7 @@
     ]
   },
   "Star Control II": {
+    "id": "1b61fb1b624140981abca15421955197531ed116",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2673,6 +2973,7 @@
     ]
   },
   "Star Fighter": {
+    "id": "1bc2c3cd724882474b9f3e03a4ecb648e3a88b82",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2688,6 +2989,7 @@
     ]
   },
   "Star Wars - Rebel Assault": {
+    "id": "33aa02b7e26e8a55fdcdc926e9db4cc88c311c9a",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -2703,6 +3005,7 @@
     ]
   },
   "Starblade": {
+    "id": "807c6997f4656c707bdd0b33200a5415279fb7c2",
     "players": 1,
     "rating": 0.95,
     "genres": [
@@ -2719,6 +3022,7 @@
     ]
   },
   "Stellar 7 - Draxon's Revenge": {
+    "id": "a6e3a4207b3ced84008dec369577485c62e09a0f",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2734,6 +3038,7 @@
     ]
   },
   "Step Aerobics": {
+    "id": "2fa42495136e3e3482e578f618a7f9b754e9dcb6",
     "manuals": [
       {
         "languages": [
@@ -2743,8 +3048,11 @@
       }
     ]
   },
-  "Storage Manager - Memory Kanri": {},
+  "Storage Manager - Memory Kanri": {
+    "id": "127641890a5d5dfa771908ab6827bb6810a5c995"
+  },
   "Strahl": {
+    "id": "36e10feac8e7db32579fadce9bf4a6d810bcc10e",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2760,6 +3068,7 @@
     ]
   },
   "Striker - World Cup Special": {
+    "id": "bbe0293abf83960f91fe96cfd8fd58c24615d32b",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -2767,8 +3076,11 @@
       "Sports / Soccer"
     ]
   },
-  "Super Model, The - Gail McKenna": {},
+  "Super Model, The - Gail McKenna": {
+    "id": "aeff4feb6c97427785879a46a9351653876de60f"
+  },
   "Super Real Mahjong P.V": {
+    "id": "07cfebf9617572985a655305acb4941837232f9c",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -2777,6 +3089,7 @@
     ]
   },
   "Super Real Mahjong PIV + Aishou Shindan": {
+    "id": "ed3bb72d6ccd7420efd6d344e0ec2c8ca863dc0b",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2784,6 +3097,7 @@
     ]
   },
   "Super Street Fighter II Turbo": {
+    "id": "3fad9544d6d7c723195b578b84744c093dbbe12e",
     "players": 2,
     "rating": 0.85,
     "genres": [
@@ -2803,6 +3117,7 @@
     ]
   },
   "Super Wing Commander": {
+    "id": "f884764801963891983d24279917963797e47707",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -2818,6 +3133,7 @@
     ]
   },
   "SuperModels Go Wild": {
+    "id": "25190cd33357f8d76615373288c9e0edf0246b72",
     "players": 1,
     "rating": 0.3,
     "genres": [
@@ -2825,6 +3141,7 @@
     ]
   },
   "Supreme Warrior": {
+    "id": "c65ccc829b7f41bf3b3b03c88e17e47e2ac01409",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -2842,6 +3159,7 @@
     ]
   },
   "Syndicate": {
+    "id": "50213bd0784d1920742b89bcfb81a888be7a6ef2",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2857,6 +3175,7 @@
     ]
   },
   "T&E VR Golf - Masters - Harukanaru Augusta 3": {
+    "id": "770faed69ef9da4d39fe6ce596fc51159993e536",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2865,6 +3184,7 @@
     ]
   },
   "Taiketsu Rumiizu!": {
+    "id": "99b39dfccc84645a43a2d6cf0a9e163c868aac87",
     "players": 4,
     "rating": 0.4,
     "genres": [
@@ -2872,6 +3192,7 @@
     ]
   },
   "Takeru": {
+    "id": "d39e2b191bbbb6d3c53433ef1695fc1a0ae5441a",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -2879,6 +3200,7 @@
     ]
   },
   "Tanjou - Debut - Pure": {
+    "id": "83a52e2b603a651781b442357d774db82aece659",
     "players": 1,
     "genres": [
       "Build And Management",
@@ -2886,6 +3208,7 @@
     ]
   },
   "Tarot Uranai": {
+    "id": "98362fc2d1a08385bb4cadf768e0eda691417686",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -2893,6 +3216,7 @@
     ]
   },
   "Theatre Wars - Goraku no Dendou": {
+    "id": "f81d0992504d62250b2ef3639701c448b88d4880",
     "players": 1,
     "rating": 0.8,
     "genres": [
@@ -2901,6 +3225,7 @@
     ]
   },
   "Theme Park": {
+    "id": "b5a498a448a3fc2e2f747a0a4f98063c706ca8cd",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2917,6 +3242,7 @@
     ]
   },
   "Toki o Koeta Tegami": {
+    "id": "e7e8e80e2b413a83053bc8b0f90d56a301d8a997",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -2924,6 +3250,7 @@
     ]
   },
   "Tokimeki Mahjong Paradise Special - Koi no Tenpai Beat": {
+    "id": "b73de16896d3d7c9b38d04af685d4f3dbaed7a28",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -2932,6 +3259,7 @@
     ]
   },
   "ToonTime ...in the Classroom": {
+    "id": "1b15c4c42051faa21bb295e1ec1f5043c0779939",
     "manuals": [
       {
         "languages": [
@@ -2942,6 +3270,7 @@
     ]
   },
   "Total Eclipse": {
+    "id": "c787ae18c4beb48ca589cab4a55f41f9afeae549",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -2958,9 +3287,11 @@
     ]
   },
   "Totsugeki Karakuri! Megadas!!": {
+    "id": "e58055d539980a70502cf7553018474f0d96237e",
     "rating": 0.75
   },
   "Touhaiden Akagi": {
+    "id": "ef6e60d2f3554edb36e5bc8cfe5d198eac6d955c",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -2968,6 +3299,7 @@
     ]
   },
   "Tower, The": {
+    "id": "e5266855b4316684aa0d09a94d8b06f2b2d358cd",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -2976,6 +3308,7 @@
     ]
   },
   "Trip'd": {
+    "id": "5704a0d8bdda562f78be898aa2b11538f5bd50e1",
     "players": 2,
     "rating": 0.7,
     "genres": [
@@ -2986,6 +3319,7 @@
     ]
   },
   "True Golf Classics - Pebble Beach Golf Links": {
+    "id": "b4d6670dba4fa57ce053ae28c8476a7c10be2ee4",
     "players": 4,
     "rating": 0.7,
     "genres": [
@@ -3006,6 +3340,7 @@
     ]
   },
   "Twinkle Knights": {
+    "id": "4b9d7187de402236330e4ffd9bc44ebd547d239c",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -3013,6 +3348,7 @@
     ]
   },
   "Twisted - The Game Show": {
+    "id": "73230a399006bb0d61705180178a0025c43fb9d4",
     "players": 4,
     "rating": 0.8,
     "genres": [
@@ -3031,6 +3367,7 @@
     ]
   },
   "Ultraman Powered": {
+    "id": "745763fae1127b05a6092b3e914054bfdde66c13",
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -3038,6 +3375,7 @@
     ]
   },
   "V Goal Soccer '96": {
+    "id": "71a8b8521e1792c1e6c1e170ced59964b6589325",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -3046,6 +3384,7 @@
     ]
   },
   "VR Stalker": {
+    "id": "81075dae29474c26c8796df7f38e6facb1af4d15",
     "players": 1,
     "rating": 0.4,
     "genres": [
@@ -3061,6 +3400,7 @@
     ]
   },
   "Virtual Cameraman Part 1 - Naomi Sawada & Anna Juri": {
+    "id": "293d2437bf9cfd89d4c101a74ce4995a380e05e0",
     "players": 1,
     "rating": 0.65,
     "genres": [
@@ -3068,15 +3408,21 @@
     ]
   },
   "Virtual Cameraman Part 2 - Natsumi Kawai & Kimi Tachihara": {
+    "id": "00b5a23ff9b3f0efa289648aaabcdd46482c7479",
     "players": 1,
     "rating": 0.55,
     "genres": [
       "Strategy"
     ]
   },
-  "Virtual Puppet Reika": {},
-  "Virtual Vivid": {},
+  "Virtual Puppet Reika": {
+    "id": "d9f5cd0e6e6f2b5461dfeb0cd3427390e82eb58a"
+  },
+  "Virtual Vivid": {
+    "id": "e9de86bc650a9a46c8a48c4ceaf416d9ec245985"
+  },
   "Virtuoso": {
+    "id": "d590c099a5894c44bd299d521be33ebb5094a280",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -3092,6 +3438,7 @@
     ]
   },
   "Waialae Country Club": {
+    "id": "bf4551d2037a2d533d77ba20c511aa9def8d5ffe",
     "players": 4,
     "rating": 0.8,
     "genres": [
@@ -3103,8 +3450,11 @@
       "True Golf Classics - Waialae Country Club"
     ]
   },
-  "Warner Music Group": {},
+  "Warner Music Group": {
+    "id": "3cb92e0d637433080865954249df276f58085745"
+  },
   "Way of the Warrior": {
+    "id": "ba7d9ad600eca486a051e24e125c23d52c31b939",
     "players": 2,
     "rating": 0.65,
     "genres": [
@@ -3120,8 +3470,11 @@
       }
     ]
   },
-  "We Got It": {},
+  "We Got It": {
+    "id": "d69e8ae4d162e02736b98c3f9f61cbc32c0b5e7c"
+  },
   "Who Shot Johnny Rock": {
+    "id": "0b36cad2e195fa423121b573c01464e321b2c92d",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -3132,6 +3485,7 @@
     ]
   },
   "Wicked 18": {
+    "id": "2e60b27eb82f10f6114fb5de54d6f0f5a9281b77",
     "rating": 0.65,
     "genres": [
       "Sports / Golf"
@@ -3149,6 +3503,7 @@
     ]
   },
   "Wing Commander III - Heart of the Tiger": {
+    "id": "27e554750c250c423b8a2dc8d0d7cb7dc960db75",
     "players": 1,
     "rating": 0.85,
     "genres": [
@@ -3165,6 +3520,7 @@
     ]
   },
   "Winning Post": {
+    "id": "09cb8883c183f9140f0cd61cc28efef648776950",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -3173,6 +3529,7 @@
     ]
   },
   "Wolfenstein 3D": {
+    "id": "364a1779ba23e2b3a428ca8f713be17a3f250bb7",
     "players": 1,
     "rating": 0.9,
     "genres": [
@@ -3190,6 +3547,7 @@
     ]
   },
   "Woody Woodpecker and Friends - Volume One": {
+    "id": "cff13fb90c78204205c9da388d702a7d7dc54410",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -3205,6 +3563,7 @@
     ]
   },
   "Woody Woodpecker and Friends - Volume Three": {
+    "id": "4c2f2c72ad9807d10e5147766d7116d8f96ca5b7",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -3220,6 +3579,7 @@
     ]
   },
   "Woody Woodpecker and Friends - Volume Two": {
+    "id": "56fa0af700f83f2c43fcaa168ea5d21d7e745993",
     "players": 1,
     "rating": 0.7,
     "genres": [
@@ -3235,6 +3595,7 @@
     ]
   },
   "World Cup Golf - Hyatt Dorado Beach": {
+    "id": "7c32ae4d4c2b70a2892e734026e13d924c862f00",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -3251,6 +3612,7 @@
     ]
   },
   "World Cup Special": {
+    "id": "842e3a15041c4a6dcd343401d8337ca2a0863b7a",
     "players": 1,
     "rating": 0.55,
     "genres": [
@@ -3258,15 +3620,21 @@
       "Sports / Soccer"
     ]
   },
-  "WorldCup Super Stadium": {},
-  "Yakyuuken Special, The": {},
+  "WorldCup Super Stadium": {
+    "id": "e722162624a79953ac2d79312e6a1ca9ca100d6f"
+  },
+  "Yakyuuken Special, The": {
+    "id": "f753917b580611358a8a231085fb7a7f6686e113"
+  },
   "Yamada Kamachi Bijutsukan - Kamachi's Museum": {
+    "id": "062be7443e244c1801b5fc0d6d9426ce0ae5aea3",
     "players": 1,
     "genres": [
       "Various"
     ]
   },
   "Yamamura Misa Suspense - Kyoto Kurama Sansou Satsujin Jiken": {
+    "id": "29f52be180ab8efb5c23b42f62985c84dd22ff08",
     "players": 1,
     "rating": 0.6,
     "genres": [
@@ -3274,6 +3642,7 @@
     ]
   },
   "Yu Yu Hakusho": {
+    "id": "7033ea0b937e4b7c6797b14a4b463ddfe38c7568",
     "players": 2,
     "rating": 0.4,
     "genres": [
@@ -3281,6 +3650,7 @@
     ]
   },
   "Yuujou Densetsu - The Doraemons": {
+    "id": "ef412ee1d99ad95a2168c5f6881f4f05540f2683",
     "players": 1,
     "rating": 0.75,
     "genres": [
@@ -3288,6 +3658,7 @@
     ]
   },
   "Zhadnost - The People's Party": {
+    "id": "f4b77dcd969b0be67a89ca496e9b24fb0451c87c",
     "players": 4,
     "rating": 0.5,
     "genres": [
