@@ -10,8 +10,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 delete"
-  echo " $0 sync_system_nointro_dats <system|all> <love_pack_pc_zip_file>"
-  echo " $0 sync_system_metadata <system|all>"
+  echo " $0 remote_sync_system_metadata <system|all>"
   exit 1
 }
 
@@ -48,25 +47,6 @@ delete() {
 
   # Remove cached data
   rm -rfv "$delete_path"/*
-}
-
-sync_system_nointro_dats() {
-  [[ $# -ne 2 ]] && usage
-  local system=$1
-  local nointro_pack_path=$2
-
-  while read -r dat_path; do
-    local nointro_name=$(basename "$dat_path" .dat)
-    local zip_filename=$(zipinfo -1 "$nointro_pack_path" | grep "$nointro_name" | head -n 1)
-
-    if [ -n "$zip_filename" ]; then
-      unzip -j "$nointro_pack_path" "$zip_filename" -d "$tmp_dir/"
-      cat "$tmp_dir/$zip_filename" | tr -d '\r' > "$cache_dir/nointro/$nointro_name.dat"
-      rm "$tmp_dir/$zip_filename"
-    else
-      echo "[WARN] No dat file found for $system"
-    fi
-  done < <(jq -r 'select(.romsets) | .romsets | to_entries[] | select(.key | test("nointro")) | .value.resources.dat.source' "$app_dir/config/systems/$system/settings.json")
 }
 
 # Sync manuals to internetarchive

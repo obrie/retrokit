@@ -87,7 +87,7 @@ class Resource:
         # * Target doesn't exist
         # * Source is from the local filesystem, target isn't the same, and install action allows overwrites
         # * Explicitly forcing a download
-        if not self.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path and self.install_action.ovewrite_target) or force:
+        if not self.exists() or (self.is_locally_sourced and self.target_path.path != self.source_url_path and self.source_url_path.exists() and self.install_action.overwrite_target) or force:
             source.download()
 
             # Ensure target directory exists
