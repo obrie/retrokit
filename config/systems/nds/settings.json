@@ -55,7 +55,9 @@
       "url": "$ROMSET_NDS_NOINTRO_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS (Decrypted) (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Nintendo - Nintendo DS (Decrypted) (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Nintendo - Nintendo DS \\(Decrypted\\).*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{url}/{machine_alt_name}.zip",

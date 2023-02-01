@@ -50,7 +50,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Sega - Mega Drive - Genesis (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Sega - Mega Drive - Genesis (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Sega - Mega Drive - Genesis.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

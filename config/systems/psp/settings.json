@@ -44,7 +44,9 @@
       "url": "$ROMSET_PSP_PSN_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{url}/{machine}.iso",
@@ -65,7 +67,9 @@
       "url": "$ROMSET_PSP_DLC_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{url}/{machine}.zip",

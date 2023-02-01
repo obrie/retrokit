@@ -43,7 +43,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Mattel - Intellivision (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Mattel - Intellivision (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Mattel - Intellivision.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

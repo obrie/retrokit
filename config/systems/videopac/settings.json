@@ -42,7 +42,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Magnavox - Odyssey2 (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Magnavox - Odyssey2 (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Magnavox - Odyssey 2.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -65,7 +67,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Philips - Videopac+ (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Philips - Videopac+ (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Philips - Videopac\\+.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

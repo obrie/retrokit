@@ -47,7 +47,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(Parent.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -68,7 +70,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(Tapes.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
@@ -89,7 +93,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(PP.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

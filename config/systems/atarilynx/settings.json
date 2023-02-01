@@ -47,7 +47,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/Atari - Lynx (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/Atari - Lynx (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*/Atari - Lynx.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

@@ -57,7 +57,9 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/nointro/NEC - PC Engine SuperGrafx (Parent-Clone).dat"
+          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$HOME/retrokit/cache/nointro/NEC - PC Engine SuperGrafx (Parent-Clone).dat",
+          "install": {"action": "zip_extract", "file": ".*NEC - PC Engine SuperGrafx.*\\.dat", "overwrite_target": true}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
