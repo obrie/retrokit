@@ -8,7 +8,7 @@ def all_subclasses(cls):
 
 class BaseAction:
     name = None
-    ovewrite_target = False
+    overwrite_target = False
 
     def __init__(self, config: dict = {}) -> None:
       self.config = config

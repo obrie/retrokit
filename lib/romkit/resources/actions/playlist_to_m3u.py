@@ -6,7 +6,7 @@ from urllib.parse import unquote
 
 class PlaylistToM3U(BaseAction):
     name = 'playlist_to_m3u'
-    ovewrite_target = True
+    overwrite_target = True
 
     def install(self, source: ResourcePath, target: ResourcePath, **kwargs) -> None:
         if self.config.get('relative_to'):
