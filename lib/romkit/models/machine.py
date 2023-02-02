@@ -199,7 +199,9 @@ class Machine:
     def id(self) -> str:
         rom_id_type = self.romset.system.rom_id_type
         if rom_id_type == 'crc':
-            rom_crcs = list(map(lambda file: file.crc, self.roms))
+            # Exclude cue files since they will always change when the name changes
+            roms = filter(lambda file: Path(file.name).suffix != '.cue', self.roms)
+            rom_crcs = list(map(lambda file: file.crc, roms))
 
             # Sort to ensure any change in rom order has no effect
             rom_crcs.sort()
