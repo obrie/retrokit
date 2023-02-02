@@ -25,7 +25,7 @@
       },
       "resources": {
         "dat": {
-          "source": "http://redump.org/datfile/datfile/",
+          "source": "http://redump.org/datfile/psp/",
           "download": "$RETROKIT_HOME/tmp/psp/roms.zip",
           "target": "$RETROKIT_HOME/cache/redump/Sony - PlayStation Portable.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
