@@ -19,6 +19,9 @@ source "$bin_dir/helpers/profiles.sh"
 source "$bin_dir/helpers/retropie_packages.sh"
 source "$bin_dir/helpers/versions.sh"
 
+# Variables to be consumed externally
+export RETROKIT_HOME=$app_dir
+
 # Ensures that any core, required dependencies have been installed
 # 
 # These are required for execution of setup before any setupmodule

@@ -1,7 +1,7 @@
 {
   "system": "c64",
   "metadata": {
-    "path": "$HOME/retrokit/data/c64.json"
+    "path": "$RETROKIT_HOME/data/c64.json"
   },
   "scraper": {
     "args": ["--includepattern", "*.zip"]
@@ -47,8 +47,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Commodore - Commodore 64 (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(Parent.*\\.dat", "overwrite_target": true}
         },
         "machine": {
@@ -70,8 +70,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Commodore - Commodore 64 (Tapes) (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(Tapes.*\\.dat", "overwrite_target": true}
         },
         "machine": {
@@ -93,8 +93,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Commodore - Commodore 64 (PP) (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Commodore - Commodore 64 \\(PP.*\\.dat", "overwrite_target": true}
         },
         "machine": {

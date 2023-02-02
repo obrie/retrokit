@@ -1,7 +1,7 @@
 {
   "system": "saturn",
   "metadata": {
-    "path": "$HOME/retrokit/data/saturn.json"
+    "path": "$RETROKIT_HOME/data/saturn.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Saturn/raw/master/retroarch/overlay/Sega-Saturn.png",
@@ -56,8 +56,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/ss/",
-          "download": "$HOME/retrokit/tmp/saturn/datfile.zip",
-          "target": "$HOME/retrokit/cache/redump/Sega - Saturn.dat",
+          "download": "$RETROKIT_HOME/tmp/saturn/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Sega - Saturn.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

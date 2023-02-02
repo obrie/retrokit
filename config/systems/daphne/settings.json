@@ -1,7 +1,7 @@
 {
   "system": "daphne",
   "metadata": {
-    "path": "$HOME/retrokit/data/daphne.json"
+    "path": "$RETROKIT_HOME/data/daphne.json"
   },
   "scraper": {
     "import_dat_titles": false
@@ -75,7 +75,7 @@
       "url": "$ROMSET_LASERDISC_SINGE_V1_URL",
       "resources": {
         "machine": {
-          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "source": "file://$RETROKIT_HOME/cache/daphne/empty.zip",
           "target": "$HOME/RetroPie/roms/daphne/.singe_v1-roms/{machine}.zip"
         },
         "disk": {
@@ -98,7 +98,7 @@
       "url": "$ROMSET_LASERDISC_SINGE_V2_URL",
       "resources": {
         "machine": {
-          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "source": "file://$RETROKIT_HOME/cache/daphne/empty.zip",
           "target": "$HOME/RetroPie/roms/daphne/.singe_v2-roms/{machine}.zip"
         },
         "disk": {
@@ -149,7 +149,7 @@
       "url": "$ROMSET_LASERDISC_SINGE_V1_URL",
       "resources": {
         "machine": {
-          "source": "file://$HOME/retrokit/cache/daphne/empty.zip",
+          "source": "file://$RETROKIT_HOME/cache/daphne/empty.zip",
           "target": "$HOME/RetroPie/roms/daphne/.singe_v1-roms/{machine}.zip"
         },
         "disk": {

@@ -1,7 +1,7 @@
 {
   "system": "dreamcast",
   "metadata": {
-    "path": "$HOME/retrokit/data/dreamcast.json"
+    "path": "$RETROKIT_HOME/data/dreamcast.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Dreamcast/raw/master/retroarch/overlay/Dreamcast.png",
@@ -55,8 +55,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/dc/",
-          "download": "$HOME/retrokit/tmp/dreamcast/datfile.zip",
-          "target": "$HOME/retrokit/cache/redump/Sega - Dreamcast.dat",
+          "download": "$RETROKIT_HOME/tmp/dreamcast/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Sega - Dreamcast.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

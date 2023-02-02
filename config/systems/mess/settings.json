@@ -1,7 +1,7 @@
 {
   "system": "mess",
   "metadata": {
-    "path": "$HOME/retrokit/data/mess.json"
+    "path": "$RETROKIT_HOME/data/mess.json"
   },
   "themes": {
     "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/mame/launching.png"
@@ -38,7 +38,7 @@
       "url": "$ROMSET_MAME_LATEST_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME Latest (Home).dat"
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME Latest (Home).dat"
         },
         "machine": {
           "source": "{url}/{machine}.zip",

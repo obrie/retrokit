@@ -1,7 +1,7 @@
 {
   "system": "arcade",
   "metadata": {
-    "path": "$HOME/retrokit/data/arcade.json"
+    "path": "$RETROKIT_HOME/data/arcade.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-MAME/raw/master/retroarch/overlay/MAME-Horizontal.png",
@@ -139,7 +139,7 @@
       "resources": {
         "dat": {
           "source": "file:///opt/retropie/libretrocores/lr-fbneo/dats/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat",
-          "cached_source": "file:///$HOME/retrokit/cache/fbneo/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
+          "cached_source": "file:///$RETROKIT_HOME/cache/fbneo/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
         },
         "machine": {
           "source": "{url}/roms/arcade.zip/arcade%2F{machine}.zip",
@@ -160,8 +160,8 @@
       "url": "$ROMSET_MAME_2003_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.78.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame2003.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.78.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame2003.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
@@ -188,8 +188,8 @@
       "url": "$ROMSET_MAME_2003_PLUS_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.78-Plus.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame2003-plus.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.78-Plus.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame2003-plus.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
@@ -216,8 +216,8 @@
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.139.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame2010.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.139.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame2010.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {
@@ -244,8 +244,8 @@
       "url": "$ROMSET_MAME_2015_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.160.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame2015.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.160.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame2015.dat",
           "install": {"action": "7z_extract", "file": ".*\\.dat"}
         },
         "machine": {
@@ -272,8 +272,8 @@
       "url": "$ROMSET_MAME_2016_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.174.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame2016-arcade.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.174.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame2016-arcade.dat",
           "install": {"action": "7z_extract", "file": ".*\\(Arcade\\)\\.dat"}
         },
         "machine": {
@@ -300,8 +300,8 @@
       "url": "$ROMSET_MAME_0222_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.222.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame0222-arcade.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.222.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame0222-arcade.dat",
           "install": {"action": "7z_extract", "file": ".*\\(Arcade\\)\\.dat"}
         },
         "machine": {
@@ -330,8 +330,8 @@
       "url": "$ROMSET_MAME_0245_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.244.7z",
-          "target": "$HOME/retrokit/tmp/arcade/mame0244-arcade.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.244.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/mame0244-arcade.dat",
           "install": {"action": "7z_extract", "file": ".*\\(Arcade\\)\\.dat"}
         },
         "machine": {
@@ -358,8 +358,8 @@
       "url": "$ROMSET_MAME_2010_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME 0.106.7z",
-          "target": "$HOME/retrokit/tmp/arcade/advmame.dat",
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME 0.106.7z",
+          "target": "$RETROKIT_HOME/tmp/arcade/advmame.dat",
           "install": {"action": "7z_extract", "file": ".*\\.xml"}
         },
         "machine": {

@@ -1,7 +1,7 @@
 {
   "system": "atari7800",
   "metadata": {
-    "path": "$HOME/retrokit/data/atari7800.json"
+    "path": "$RETROKIT_HOME/data/atari7800.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Atari7800/raw/master/retroarch/overlay/Atari-7800.png",
@@ -47,8 +47,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Atari - 7800 (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Atari - 7800 (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Atari - 7800.*\\.dat", "overwrite_target": true}
         },
         "machine": {

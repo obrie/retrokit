@@ -1,7 +1,7 @@
 {
   "system": "pc",
   "metadata": {
-    "path": "$HOME/retrokit/data/pc.json"
+    "path": "$RETROKIT_HOME/data/pc.json"
   },
   "scraper": {
     "args": ["--excludepattern", "*DOSBox*"]
@@ -37,8 +37,8 @@
         },
         "dat": {
           "source": "{url}/Content/XODOSMetadata.zip/xml%2FMS-DOS.xml",
-          "download": "$HOME/retrokit/cache/exodos/MS-DOS.xml",
-          "target": "$HOME/retrokit/tmp/pc/roms.dat",
+          "download": "$RETROKIT_HOME/cache/exodos/MS-DOS.xml",
+          "target": "$RETROKIT_HOME/tmp/pc/roms.dat",
           "install": {"action": "exodos_to_dat"}
         }
       }
@@ -59,8 +59,8 @@
       "conf": {
         "source": "{target_path}/dosbox.conf",
         "target": "{dir}/{machine}.conf",
-        "migration": "$HOME/retrokit/config/systems/pc/dosbox-staging-migration.json",
-        "overrides": "$HOME/retrokit/config/systems/pc/conf/{machine}.conf"
+        "migration": "$RETROKIT_HOME/config/systems/pc/dosbox-staging-migration.json",
+        "overrides": "$RETROKIT_HOME/config/systems/pc/conf/{machine}.conf"
       }
     }
   }

@@ -1,7 +1,7 @@
 {
   "system": "pokemini",
   "metadata": {
-    "path": "$HOME/retrokit/data/pokemini.json"
+    "path": "$RETROKIT_HOME/data/pokemini.json"
   },
   "themes": {
     "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/nes/launching.png"
@@ -32,8 +32,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Nintendo - Pokemon Mini (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Nintendo - Pokemon Mini (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Nintendo - Pokemon Mini.*\\.dat", "overwrite_target": true}
         },
         "machine": {

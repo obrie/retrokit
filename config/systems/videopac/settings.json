@@ -1,7 +1,7 @@
 {
   "system": "videopac",
   "metadata": {
-    "path": "$HOME/retrokit/data/videopac.json"
+    "path": "$RETROKIT_HOME/data/videopac.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Videopac/raw/master/retroarch/overlay/Magnavox-Odyssey-2.png",
@@ -42,8 +42,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Magnavox - Odyssey2 (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Magnavox - Odyssey2 (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Magnavox - Odyssey 2.*\\.dat", "overwrite_target": true}
         },
         "machine": {
@@ -67,8 +67,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Philips - Videopac+ (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Philips - Videopac+ (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Philips - Videopac\\+.*\\.dat", "overwrite_target": true}
         },
         "machine": {

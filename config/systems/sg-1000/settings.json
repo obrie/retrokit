@@ -1,7 +1,7 @@
 {
   "system": "sg-1000",
   "metadata": {
-    "path": "$HOME/retrokit/data/sg-1000.json"
+    "path": "$RETROKIT_HOME/data/sg-1000.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelproject-SG-1000/raw/master/retroarch/overlay/Sega-SG-1000.png",
@@ -31,8 +31,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Sega - SG-1000 (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Sega - SG-1000 (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Sega - SG-1000.*\\.dat", "overwrite_target": true}
         },
         "machine": {

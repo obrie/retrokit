@@ -1,7 +1,7 @@
 {
   "system": "gameandwatch",
   "metadata": {
-    "path": "$HOME/retrokit/data/mess.json"
+    "path": "$RETROKIT_HOME/data/mess.json"
   },
   "scraper": {
     "sources": ["arcadedb", "screenscraper"],
@@ -28,7 +28,7 @@
       "url": "$ROMSET_MAME_LATEST_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/cache/mame/MAME Latest (Home).dat"
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME Latest (Home).dat"
         },
         "machine": {
           "source": "{url}/{machine}.zip",

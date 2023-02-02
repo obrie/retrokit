@@ -1,7 +1,7 @@
 {
   "system": "psp",
   "metadata": {
-    "path": "$HOME/retrokit/data/psp.json"
+    "path": "$RETROKIT_HOME/data/psp.json"
   },
   "emulators": {
     "ppsspp": {
@@ -26,8 +26,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/datfile/",
-          "download": "$HOME/retrokit/tmp/psp/roms.zip",
-          "target": "$HOME/retrokit/cache/redump/Sony - PlayStation Portable.dat",
+          "download": "$RETROKIT_HOME/tmp/psp/roms.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Sony - PlayStation Portable.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
@@ -44,8 +44,8 @@
       "url": "$ROMSET_PSP_PSN_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat", "overwrite_target": true}
         },
         "machine": {
@@ -67,8 +67,8 @@
       "url": "$ROMSET_PSP_DLC_URL",
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Sony - PlayStation Portable (PSN) (Decrypted) (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat", "overwrite_target": true}
         },
         "machine": {

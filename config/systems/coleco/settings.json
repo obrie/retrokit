@@ -1,7 +1,7 @@
 {
   "system": "coleco",
   "metadata": {
-    "path": "$HOME/retrokit/data/coleco.json"
+    "path": "$RETROKIT_HOME/data/coleco.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-ColecoVision/raw/master/retroarch/overlay/Colecovision.png",
@@ -50,8 +50,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Coleco - ColecoVision (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Coleco - ColecoVision (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Coleco - ColecoVision.*\\.dat", "overwrite_target": true}
         },
         "machine": {

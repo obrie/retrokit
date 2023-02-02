@@ -1,7 +1,7 @@
 {
   "system": "ports",
   "metadata": {
-    "path": "$HOME/retrokit/data/ports.json"
+    "path": "$RETROKIT_HOME/data/ports.json"
   },
   "scraper": {
     "args": ["--excludepattern", "*Freedoom*"],

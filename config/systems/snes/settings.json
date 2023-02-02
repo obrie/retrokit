@@ -1,7 +1,7 @@
 {
   "system": "snes",
   "metadata": {
-    "path": "$HOME/retrokit/data/snes.json"
+    "path": "$RETROKIT_HOME/data/snes.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-SNES/raw/master/retroarch/overlay/Super-Nintendo-Entertainment-System.png",
@@ -43,8 +43,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Nintendo - Super Nintendo Entertainment System (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Nintendo - Super Nintendo Entertainment System (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Nintendo - Super Nintendo Entertainment System.*\\.dat", "overwrite_target": true}
         },
         "machine": {

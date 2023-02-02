@@ -1,7 +1,7 @@
 {
   "system": "ngp",
   "metadata": {
-    "path": "$HOME/retrokit/data/ngp.json"
+    "path": "$RETROKIT_HOME/data/ngp.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-NGP/raw/master/retroarch/overlay/SNK-Neo-Geo-Pocket.png",
@@ -38,8 +38,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/SNK - Neo Geo Pocket (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/SNK - Neo Geo Pocket (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/SNK - Neo Geo Pocket \\(.*\\.dat", "overwrite_target": true}
         },
         "machine": {

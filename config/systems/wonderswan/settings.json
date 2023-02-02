@@ -1,7 +1,7 @@
 {
   "system": "wonderswan",
   "metadata": {
-    "path": "$HOME/retrokit/data/wonderswan.json"
+    "path": "$RETROKIT_HOME/data/wonderswan.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-WonderSwan/raw/master/retroarch/overlay/Bandai-WonderSwan-Horizontal.png",
@@ -38,8 +38,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Bandai - WonderSwan (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Bandai - WonderSwan (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Bandai - WonderSwan \\(.*\\.dat", "overwrite_target": true}
         },
         "machine": {

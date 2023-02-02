@@ -1,7 +1,7 @@
 {
   "system": "atari5200",
   "metadata": {
-    "path": "$HOME/retrokit/data/atari5200.json"
+    "path": "$RETROKIT_HOME/data/atari5200.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-Atari5200/raw/master/retroarch/overlay/Atari-5200.png",
@@ -47,8 +47,8 @@
       },
       "resources": {
         "dat": {
-          "source": "file://$HOME/retrokit/tmp/No-Intro Love Pack (PC XML).zip",
-          "target": "$HOME/retrokit/cache/nointro/Atari - 5200 (Parent-Clone).dat",
+          "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
+          "target": "$RETROKIT_HOME/cache/nointro/Atari - 5200 (Parent-Clone).dat",
           "install": {"action": "zip_extract", "file": ".*/Atari - 5200.*\\.dat", "overwrite_target": true}
         },
         "machine": {

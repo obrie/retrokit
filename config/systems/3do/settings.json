@@ -1,7 +1,7 @@
 {
   "system": "3do",
   "metadata": {
-    "path": "$HOME/retrokit/data/3do.json"
+    "path": "$RETROKIT_HOME/data/3do.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-3DO/raw/master/retroarch/overlay/Panasonic-3DO.png",
@@ -41,8 +41,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/3do/",
-          "download": "$HOME/retrokit/tmp/3do/datfile.zip",
-          "target": "$HOME/retrokit/cache/redump/Panasonic - 3DO Interactive Multiplayer.dat",
+          "download": "$RETROKIT_HOME/tmp/3do/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Panasonic - 3DO Interactive Multiplayer.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

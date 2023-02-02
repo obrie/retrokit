@@ -1,7 +1,7 @@
 {
   "system": "segacd",
   "metadata": {
-    "path": "$HOME/retrokit/data/segacd.json"
+    "path": "$RETROKIT_HOME/data/segacd.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-SegaCD/raw/master/retroarch/overlay/Sega-CD.png",
@@ -63,8 +63,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/mcd/",
-          "download": "$HOME/retrokit/tmp/segacd/datfile.zip",
-          "target": "$HOME/retrokit/cache/redump/Sega - Mega CD & Sega CD.dat",
+          "download": "$RETROKIT_HOME/tmp/segacd/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Sega - Mega CD & Sega CD.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {

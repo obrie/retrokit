@@ -1,7 +1,7 @@
 {
   "system": "psx",
   "metadata": {
-    "path": "$HOME/retrokit/data/psx.json"
+    "path": "$RETROKIT_HOME/data/psx.json"
   },
   "overlays": {
     "default": "https://github.com/thebezelproject/bezelprojectSA-PSX/raw/master/retroarch/overlay/Sony-PlayStation.png",
@@ -70,8 +70,8 @@
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/psx/",
-          "download": "$HOME/retrokit/tmp/psx/datfile.zip",
-          "target": "$HOME/retrokit/cache/redump/Sony - PlayStation.dat",
+          "download": "$RETROKIT_HOME/tmp/psx/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/Sony - PlayStation.dat",
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
