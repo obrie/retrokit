@@ -37,7 +37,7 @@
         "dat": {
           "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
           "target": "$RETROKIT_HOME/cache/nointro/Atari - 2600 (Parent-Clone).dat",
-          "install": {"action": "zip_extract", "file": ".*/Atari - 2600.*\\.dat", "overwrite_target": true}
+          "install": {"action": "zip_extract", "file": ".*/Atari - 2600.*\\.dat"}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",

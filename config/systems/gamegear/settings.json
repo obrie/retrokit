@@ -49,7 +49,7 @@
         "dat": {
           "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
           "target": "$RETROKIT_HOME/cache/nointro/Sega - Game Gear (Parent-Clone).dat",
-          "install": {"action": "zip_extract", "file": ".*/Sega - Game Gear.*\\.dat", "overwrite_target": true}
+          "install": {"action": "zip_extract", "file": ".*/Sega - Game Gear.*\\.dat"}
         },
         "machine": {
           "source": "{discovery_url}/{machine}.zip",
