@@ -18,7 +18,7 @@ class InternetArchiveDiscovery(BaseDiscovery):
         for url in self.urls:
             parsed_url = urlparse(url)
             if not parsed_url.scheme:
-                logging.warn(f'Unable to run discovery for {parsed_url}')
+                logging.debug(f'Unable to run discovery for {parsed_url}')
                 continue
 
             # Download the file
