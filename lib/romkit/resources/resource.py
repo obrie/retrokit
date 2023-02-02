@@ -128,8 +128,8 @@ class Resource:
 class ResourceTemplate:
     def __init__(self,
         source_url_template: str,
-        cached_source_url_template: Optional[str],
-        target_path_template: Optional[str],
+        cached_source_url_template: Optional[str] = None,
+        target_path_template: Optional[str] = None,
         xref_path_template: Optional[str] = None,
         download_path_template: Optional[str] = None,
         downloader: Downloader = Downloader.instance(),
