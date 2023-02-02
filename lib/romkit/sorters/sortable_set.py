@@ -79,6 +79,10 @@ class SortableSet:
         self.add(machine)
         self.overrides.add(machine.group_name)
 
+    # Returns the list of all machines
+    def all(self) -> List[Machine]:
+        return [machine for machines in self.groups.values() for machine in machines]
+
     # Finalizes the prioritized set of machiens by performing any additional
     # post-processing, such as restricting the list of machines to prevent
     # multiple with the same title
