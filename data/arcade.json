@@ -64,7 +64,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "yard"
+    ]
   },
   "10yardj": {
     "group": "10yard",
@@ -614,6 +617,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "3bagflnz"
     ]
   },
   "3cdpoker": {
@@ -967,6 +973,9 @@
       "joy",
       "pedal",
       "stick"
+    ],
+    "merge": [
+      "gp500"
     ]
   },
   "50lionrr": {
@@ -977,7 +986,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "50lionr"
+    ]
   },
   "50lions": {
     "genres": [
@@ -1026,7 +1038,12 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "5draga",
+      "5dragons",
+      "davedrag"
+    ]
   },
   "5koipp": {
     "genres": [
@@ -1678,6 +1695,9 @@
       "joy",
       "paddle",
       "pedal"
+    ],
+    "merge": [
+      "acedrvrw"
     ]
   },
   "acefruit": {
@@ -2212,6 +2232,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "adonise",
+      "adonishl"
     ]
   },
   "adonisa6": {
@@ -2222,7 +2246,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "adonis6"
+    ]
   },
   "adonisu": {
     "group": "adonis",
@@ -2259,7 +2286,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "adustcm"
+    ]
   },
   "aerofgt": {
     "players": 2,
@@ -2384,7 +2414,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "aftrhrs"
+    ]
   },
   "agallet": {
     "players": 2,
@@ -2883,6 +2916,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "aladbl"
     ]
   },
   "alchemst": {
@@ -2908,7 +2944,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "alchemya"
+    ]
   },
   "alcon": {
     "players": 2,
@@ -3060,7 +3099,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "alienaru"
+    ]
   },
   "aliencha": {
     "players": 2,
@@ -3086,7 +3128,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "hfh"
+    ]
   },
   "alienchac": {
     "group": "aliencha",
@@ -3189,7 +3234,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "baraduke"
+    ]
   },
   "aliensj": {
     "group": "aliens",
@@ -3308,7 +3356,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "upyoural"
+    ]
   },
   "alpha1v": {
     "players": 2,
@@ -3412,7 +3463,10 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 5
-    }
+    },
+    "merge": [
+      "alpiltdx"
+    ]
   },
   "alpilotj": {
     "players": 1,
@@ -3430,7 +3484,10 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 5
-    }
+    },
+    "merge": [
+      "alpilota"
+    ]
   },
   "alpine": {
     "players": 2,
@@ -3975,7 +4032,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "amzqnar"
+    ]
   },
   "amztempl": {
     "genres": [
@@ -3985,7 +4045,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "amzteml"
+    ]
   },
   "ancienta": {
     "genres": [
@@ -4711,7 +4774,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "ar_airh2"
+    ]
   },
   "ar_argh": {
     "players": 2,
@@ -5173,7 +5239,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "arbngts",
+      "arbnigar"
+    ]
   },
   "arbalest": {
     "players": 2,
@@ -6931,7 +7001,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "avalon13"
+    ]
   },
   "avalnc25": {
     "genres": [
@@ -7305,7 +7378,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "bbbuster"
+    ]
   },
   "b3rinsya": {
     "players": 1,
@@ -7485,6 +7561,9 @@
     ],
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "m_supcrd"
     ]
   },
   "b85sngam": {
@@ -7591,6 +7670,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "badbog"
     ]
   },
   "baddudes": {
@@ -8314,6 +8396,9 @@
       "paddle",
       "pedal",
       "stick"
+    ],
+    "merge": [
+      "bass"
     ]
   },
   "batcir": {
@@ -8496,7 +8581,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "batrid"
+    ]
   },
   "batriderc": {
     "group": "batrider",
@@ -8816,7 +8904,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "bkraidu"
+    ]
   },
   "bbakraidc": {
     "group": "bbakraid",
@@ -9378,7 +9469,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    }
+    },
+    "merge": [
+      "beastrzb"
+    ]
   },
   "beathead": {
     "players": 2,
@@ -9821,7 +9915,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "battleg"
+    ]
   },
   "bgareggabl": {
     "group": "bgaregga",
@@ -9916,7 +10013,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bigbenpj"
+    ]
   },
   "bigblue": {
     "genres": [
@@ -10143,7 +10243,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "birredar"
+    ]
   },
   "bigred2": {
     "genres": [
@@ -10153,7 +10256,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bigredjp"
+    ]
   },
   "bigrun": {
     "players": 1,
@@ -10219,6 +10325,12 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "bigtown": {
+    "merge": [
+      "lastlap",
+      "party"
+    ]
   },
   "bigtwin": {
     "players": 2,
@@ -12518,7 +12630,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bmbgs"
+    ]
   },
   "bmcbowl": {
     "players": 1,
@@ -12589,6 +12704,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bmcompm2 (en).pdf"
       }
+    ],
+    "merge": [
+      "hmcompm2"
     ]
   },
   "bmcompmx": {
@@ -13059,7 +13177,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bobdolu1"
+    ]
   },
   "bodyslam": {
     "players": 2,
@@ -13517,6 +13638,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "bootscot"
     ]
   },
   "bootsctnu": {
@@ -14146,7 +14270,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "brazilar"
+    ]
   },
   "brdrline": {
     "players": 2,
@@ -14172,7 +14299,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "brdrlinb"
+    ]
   },
   "breakers": {
     "players": 2,
@@ -14793,6 +14923,11 @@
       "joy"
     ]
   },
+  "btmn_106": {
+    "merge": [
+      "btmn_103"
+    ]
+  },
   "btoads": {
     "players": 3,
     "rating": 70,
@@ -14827,6 +14962,11 @@
       "en"
     ],
     "orientation": "horizontal"
+  },
+  "bttf_a28": {
+    "merge": [
+      "bttf_a27"
+    ]
   },
   "bub8749": {
     "group": "bublbobl",
@@ -15023,7 +15163,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bucanar"
+    ]
   },
   "bucaner": {
     "group": "puckman",
@@ -15136,7 +15279,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "buffalar",
+      "buffaloa"
+    ]
   },
   "bugfever": {
     "players": 1,
@@ -15176,7 +15323,11 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "buggyb1",
+      "spdbuggy"
+    ]
   },
   "buggychl": {
     "players": 1,
@@ -15352,6 +15503,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "bumbugs"
     ]
   },
   "bumblbugu": {
@@ -15553,6 +15707,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "butdeli"
     ]
   },
   "buttobi": {
@@ -15647,7 +15804,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "bwing"
+    ]
   },
   "bwingsa": {
     "group": "bwings",
@@ -16093,7 +16253,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "callwlar"
+    ]
   },
   "calorie": {
     "players": 2,
@@ -16200,7 +16363,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "canary2"
+    ]
   },
   "candance": {
     "group": "osman",
@@ -16285,7 +16451,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "cannonb"
+    ]
   },
   "canrose": {
     "genres": [
@@ -16525,7 +16694,11 @@
     ],
     "orientation": "horizontal"
   },
-  "carboule": {},
+  "carboule": {
+    "merge": [
+      "unkm1"
+    ]
+  },
   "cardline": {
     "players": 1,
     "genres": [
@@ -16790,6 +16963,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "unkmeyco"
     ]
   },
   "cashcade": {
@@ -16817,6 +16993,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "cshcat"
     ]
   },
   "cashcham": {
@@ -16832,6 +17011,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "cashchm"
     ]
   },
   "cashchamu": {
@@ -16852,6 +17034,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "cashcroa"
     ]
   },
   "cashcrop": {
@@ -18700,6 +18885,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "chkmatar"
     ]
   },
   "checkman": {
@@ -18951,6 +19139,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "chickena",
+      "chkrun"
     ]
   },
   "chickna5u": {
@@ -19318,7 +19510,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "chplft"
+    ]
   },
   "chopper": {
     "players": 2,
@@ -19826,7 +20021,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "vstars"
+    ]
   },
   "ckongdks": {
     "group": "ckong",
@@ -20423,6 +20621,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "clubkrte"
     ]
   },
   "clubpacm": {
@@ -20603,6 +20804,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "cm2v841"
     ]
   },
   "cmehyou": {
@@ -20717,6 +20921,10 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "cmtetrsa",
+      "cmtetrsb"
     ]
   },
   "cmtonig": {
@@ -21196,7 +21404,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "combasc"
+    ]
   },
   "combatscj": {
     "group": "combatsc",
@@ -21681,6 +21892,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "vp906iii"
     ]
   },
   "comg240": {
@@ -22330,6 +22544,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "coralr2v"
     ]
   },
   "coronatn": {
@@ -22858,7 +23075,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "cprosocc"
+    ]
   },
   "cpsoccerj": {
     "group": "cpsoccer",
@@ -23499,6 +23719,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "pmroulet"
     ]
   },
   "croupierb": {
@@ -23786,7 +24009,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "crspru",
+      "crystals"
+    ]
   },
   "crystal": {
     "players": 1,
@@ -24003,6 +24230,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "cstripxi"
     ]
   },
   "cs11_ssp": {
@@ -24260,7 +24490,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "choysun",
+      "csdce"
+    ]
   },
   "csdtenis": {
     "players": 2,
@@ -24822,6 +25056,11 @@
       "rating": 5
     }
   },
+  "cucaracha": {
+    "merge": [
+      "gokidetor"
+    ]
+  },
   "cuckoo": {
     "genres": [
       "Slot Machine / Video Slot"
@@ -24834,6 +25073,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "cuckooa"
     ]
   },
   "cuckoou": {
@@ -25049,7 +25291,10 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 5
-    }
+    },
+    "merge": [
+      "cvs2gd"
+    ]
   },
   "cvsgd": {
     "players": 2,
@@ -25523,6 +25768,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "crzmon_7"
     ]
   },
   "czmon_16": {
@@ -26604,7 +26852,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "dblagus"
+    ]
   },
   "dblaxle": {
     "players": 1,
@@ -26664,7 +26915,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "doubdolp"
+    ]
   },
   "dbldynj": {
     "players": 2,
@@ -26891,7 +27145,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "dcclubfd"
+    ]
   },
   "dcclubj": {
     "group": "dcclub",
@@ -27347,7 +27604,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "ddpdoj"
+    ]
   },
   "ddpdfk": {
     "players": 2,
@@ -27389,6 +27649,9 @@
     "orientation": "vertical",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "ddpdojh"
     ]
   },
   "ddpsdoj": {
@@ -28011,7 +28274,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "dduxbl"
+    ]
   },
   "dduxj": {
     "group": "ddux",
@@ -28279,7 +28545,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "drfz6us"
+    ]
   },
   "deerhunt": {
     "players": 1,
@@ -28359,7 +28628,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "dltbel"
+    ]
   },
   "deltaqn": {
     "genres": [
@@ -28369,7 +28641,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "deltqn"
+    ]
   },
   "deluxe5": {
     "players": 2,
@@ -28551,6 +28826,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/dendego (en).pdf"
       }
+    ],
+    "merge": [
+      "dendeg"
     ]
   },
   "dendego2": {
@@ -28575,6 +28853,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/dendego2 (en).pdf"
       }
+    ],
+    "merge": [
+      "dendeg2"
     ]
   },
   "dendego3": {
@@ -28895,7 +29176,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "deshoros"
+    ]
   },
   "destroyr": {
     "players": 1,
@@ -29251,6 +29535,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "dmddove"
     ]
   },
   "diamhrts": {
@@ -29279,6 +29566,12 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "dibifuca": {
+    "merge": [
+      "microdar",
+      "prospdp"
+    ]
   },
   "dicegame": {
     "players": 2,
@@ -29519,7 +29812,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "dmneye2",
+      "dmneyeus"
+    ]
   },
   "dimtouch": {
     "players": 1,
@@ -29535,6 +29832,9 @@
       "gambling",
       "keypad",
       "pointer"
+    ],
+    "merge": [
+      "dmdtouch"
     ]
   },
   "dindice": {
@@ -29569,7 +29869,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "dingoe"
+    ]
   },
   "dino": {
     "players": 3,
@@ -29736,7 +30039,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "dinoaris"
+    ]
   },
   "dirtdash": {
     "players": 1,
@@ -30433,6 +30739,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "dodge"
     ]
   },
   "dodgem": {
@@ -30791,6 +31100,11 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "dolphtra",
+      "dolphtre",
+      "dolptra"
     ]
   },
   "dolphntrce": {
@@ -31625,7 +31939,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 3
-    }
+    },
+    "merge": [
+      "dragoonj"
+    ]
   },
   "dragrace": {
     "players": 2,
@@ -31863,7 +32180,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "drgnlrd"
+    ]
   },
   "drgnmgic": {
     "genres": [
@@ -31950,7 +32270,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "chindrag"
+    ]
   },
   "drgnwrldv20j": {
     "group": "drgnwrld",
@@ -32005,7 +32328,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "dragwld2"
+    ]
   },
   "drgw2100j": {
     "group": "drgw2",
@@ -32048,6 +32374,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "drhla"
     ]
   },
   "dribling": {
@@ -32217,7 +32546,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "indsrp"
+    ]
   },
   "drmicro": {
     "players": 2,
@@ -32656,6 +32988,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "dstblom"
     ]
   },
   "dstlk": {
@@ -33184,6 +33519,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "dyjack"
     ]
   },
   "dynajacku": {
@@ -33343,7 +33681,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "dw"
+    ]
   },
   "dynwarj": {
     "group": "dynwar",
@@ -33619,7 +33960,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "efcashex"
+    ]
   },
   "efdt": {
     "players": 2,
@@ -33659,6 +34003,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "eforestb"
     ]
   },
   "eforsta5": {
@@ -33674,6 +34021,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "enchfore",
+      "enchfrst"
     ]
   },
   "eforsta5ce": {
@@ -33758,7 +34109,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "eggsrich"
+    ]
   },
   "eggventr": {
     "players": 2,
@@ -33881,7 +34235,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "einnings"
+    ]
   },
   "ejanhs": {
     "players": 1,
@@ -34003,6 +34360,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "eldora"
     ]
   },
   "elecyoyo": {
@@ -34191,6 +34551,14 @@
     ],
     "orientation": "horizontal"
   },
+  "elvisp": {
+    "merge": [
+      "elvisf",
+      "elvisg",
+      "elvisi",
+      "elvisl"
+    ]
+  },
   "embargo": {
     "players": 4,
     "rating": 0,
@@ -34342,7 +34710,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "ent6r"
+    ]
   },
   "enchlamp": {
     "genres": [
@@ -34364,7 +34735,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "encspela"
+    ]
   },
   "endless": {
     "players": 2,
@@ -34831,7 +35205,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "eaglst1",
+      "eaglst2"
+    ]
   },
   "eswat": {
     "players": 2,
@@ -35315,7 +35693,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "bakubrkr"
+    ]
   },
   "explbrkrk": {
     "group": "explbrkr",
@@ -36877,6 +37258,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "fcockt_6"
     ]
   },
   "fcockt_8a": {
@@ -37233,6 +37617,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "fmania"
     ]
   },
   "fgoal": {
@@ -37799,6 +38186,9 @@
     "controls": [
       "joy",
       "stick"
+    ],
+    "merge": [
+      "finlflng"
     ]
   },
   "finfurl2": {
@@ -37882,7 +38272,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "firedan"
+    ]
   },
   "firefox": {
     "players": 1,
@@ -38287,7 +38680,12 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "flamolus",
+      "flamoly",
+      "flamoly2"
+    ]
   },
   "flashgal": {
     "players": 2,
@@ -38860,6 +39258,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "fortecar"
     ]
   },
   "fortecrde": {
@@ -38880,6 +39281,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "fortela"
     ]
   },
   "fortfvr": {
@@ -39001,6 +39405,11 @@
     "group": "fpoint",
     "languages": [
       "en"
+    ]
+  },
+  "fpwr2_l2": {
+    "merge": [
+      "wldtexas"
     ]
   },
   "franticf": {
@@ -39527,7 +39936,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "ftsoccer"
+    ]
   },
   "fsoccerb": {
     "group": "fsoccer",
@@ -39640,7 +40052,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 2
-    }
+    },
+    "merge": [
+      "ftimpact"
+    ]
   },
   "fts2in1": {
     "players": 1,
@@ -40078,7 +40493,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "laserbas"
+    ]
   },
   "futspy": {
     "players": 2,
@@ -41053,7 +41471,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gpan2qiz"
+    ]
   },
   "galpani2g": {
     "group": "galpani2",
@@ -41357,6 +41778,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "thgamblr"
     ]
   },
   "gamecstl": {
@@ -41819,6 +42243,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "garage_4"
     ]
   },
   "garage_5b": {
@@ -42481,6 +42908,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "geishanz"
     ]
   },
   "geishaa6": {
@@ -42491,7 +42921,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "geishaar"
+    ]
   },
   "gekiretu": {
     "players": 2,
@@ -42525,7 +42958,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gekirido"
+    ]
   },
   "gekisha": {
     "players": 1,
@@ -42733,6 +43169,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "gepoker1"
     ]
   },
   "getaway": {
@@ -43377,7 +43816,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gigasb"
+    ]
   },
   "gigasm2": {
     "players": 2,
@@ -43396,7 +43838,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gigasm2b"
+    ]
   },
   "gigawing": {
     "players": 2,
@@ -44099,6 +44544,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "gnomatw"
     ]
   },
   "gnomee": {
@@ -44173,7 +44621,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "goapear"
+    ]
   },
   "gobyrc": {
     "players": 1,
@@ -44350,7 +44801,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "goldarjp"
+    ]
   },
   "goldart": {
     "genres": [
@@ -44423,6 +44877,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "goldra"
     ]
   },
   "goldglen": {
@@ -44442,7 +44899,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "gldincas"
+    ]
   },
   "goldmedl": {
     "players": 4,
@@ -44554,6 +45014,10 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "goldprmd",
+      "goldpyra"
     ]
   },
   "goldpyrb": {
@@ -45025,6 +45489,14 @@
       "ja"
     ]
   },
+  "gprix": {
+    "merge": [
+      "gprixf",
+      "gprixg",
+      "gprixi",
+      "gprixl"
+    ]
+  },
   "gpworld": {
     "genres": [
       "Driving / Race 1st Person"
@@ -45157,7 +45629,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "sdgndmrb"
+    ]
   },
   "grainbowk": {
     "group": "grainbow",
@@ -45398,7 +45873,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "getstar"
+    ]
   },
   "grdians": {
     "players": 2,
@@ -45814,6 +46292,11 @@
       "en"
     ],
     "orientation": "horizontal"
+  },
+  "gs_lu4": {
+    "merge": [
+      "gs_l4"
+    ]
   },
   "gseeker": {
     "players": 2,
@@ -46923,7 +47406,11 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gt102b",
+      "gt102c"
+    ]
   },
   "gtsers12a": {
     "group": "gtsers8",
@@ -46965,7 +47452,12 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gt103",
+      "gt103a",
+      "gt5"
+    ]
   },
   "guab": {
     "players": 1,
@@ -47284,6 +47776,9 @@
     ],
     "+controls": [
       "lightgun"
+    ],
+    "merge": [
+      "modelr"
     ]
   },
   "gundamex": {
@@ -48303,7 +48798,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "halleys"
+    ]
   },
   "halleyscj": {
     "group": "halleysc",
@@ -49470,7 +49968,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "heartgar"
+    ]
   },
   "heartveg": {
     "genres": [
@@ -49744,6 +50245,12 @@
       "rating": 5
     }
   },
+  "hexaprs": {
+    "merge": [
+      "goldhexa",
+      "hexapres"
+    ]
+  },
   "hexion": {
     "players": 2,
     "rating": 70,
@@ -50005,7 +50512,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "highnoar"
+    ]
   },
   "highroll": {
     "players": 1,
@@ -50350,7 +50860,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "hlntry"
+    ]
   },
   "hmgeo": {
     "players": 2,
@@ -51368,7 +51881,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "houhear"
+    ]
   },
   "housemn2": {
     "players": 2,
@@ -51486,7 +52002,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "hsf2a"
+    ]
   },
   "hsf2j": {
     "group": "hsf2",
@@ -52386,6 +52905,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "iceclmrj"
     ]
   },
   "ichiban": {
@@ -52417,7 +52939,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "ichidant"
+    ]
   },
   "ichirj": {
     "group": "ichir",
@@ -52991,6 +53516,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "incanz",
+      "incsun"
     ]
   },
   "incasunu": {
@@ -53013,7 +53542,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "indgcm"
+    ]
   },
   "indianbt": {
     "players": 2,
@@ -53068,7 +53600,12 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "indce",
+      "inddrma",
+      "indianmm"
+    ]
   },
   "indrem2c": {
     "genres": [
@@ -53078,7 +53615,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "indsc"
+    ]
   },
   "indrema5": {
     "players": 1,
@@ -53093,6 +53633,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "indiandr"
     ]
   },
   "indremll": {
@@ -53103,7 +53646,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "indll"
+    ]
   },
   "indy4": {
     "genres": [
@@ -53731,7 +54277,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 3
-    }
+    },
+    "merge": [
+      "invasn"
+    ]
   },
   "invcarht": {
     "players": 2,
@@ -54341,6 +54890,73 @@
       "rating": 5
     }
   },
+  "j6bigbnk": {
+    "merge": [
+      "j6bbankr"
+    ]
+  },
+  "j6casclb": {
+    "merge": [
+      "j6ccc"
+    ]
+  },
+  "j6crack": {
+    "merge": [
+      "j6crakr"
+    ]
+  },
+  "j6ewn": {
+    "merge": [
+      "j6ewndg"
+    ]
+  },
+  "j6framft": {
+    "merge": [
+      "j6ffc"
+    ]
+  },
+  "j6pog": {
+    "merge": [
+      "j6potg"
+    ]
+  },
+  "j6ra": {
+    "merge": [
+      "j6redal"
+    ]
+  },
+  "j6tbirds": {
+    "merge": [
+      "m_tbirds"
+    ]
+  },
+  "j_dud": {
+    "merge": [
+      "j_nuddup"
+    ]
+  },
+  "j_ewn": {
+    "merge": [
+      "j_ewnud",
+      "j_unk"
+    ]
+  },
+  "j_la": {
+    "merge": [
+      "j_luckac"
+    ]
+  },
+  "j_lan": {
+    "merge": [
+      "j_super2"
+    ]
+  },
+  "j_lt": {
+    "merge": [
+      "j_luck2",
+      "j_plus2"
+    ]
+  },
   "jack": {
     "players": 2,
     "rating": 60,
@@ -54521,7 +55137,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "jailbrar"
+    ]
   },
   "jajamaru": {
     "players": 2,
@@ -54576,6 +55195,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "mjanbari"
     ]
   },
   "jangou": {
@@ -54868,7 +55490,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "darkhors",
+      "jclub2"
+    ]
   },
   "jcross": {
     "players": 2,
@@ -54982,7 +55608,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "foxred"
+    ]
   },
   "jestmagi": {
     "genres": [
@@ -55027,6 +55656,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/jetwave (en).pdf"
       }
+    ],
+    "merge": [
+      "waveshrk"
     ]
   },
   "jetwavej": {
@@ -55043,7 +55675,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "jewelunc"
+    ]
   },
   "jgakuen": {
     "group": "rvschool",
@@ -57610,6 +58245,10 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "keks",
+      "keks_2"
     ]
   },
   "kengo": {
@@ -58765,6 +59404,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "kkojnoli"
     ]
   },
   "klax": {
@@ -58980,7 +59622,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "koalmnt"
+    ]
   },
   "koalamnt": {
     "genres": [
@@ -59162,7 +59807,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "kof2003d"
+    ]
   },
   "kof94": {
     "players": 2,
@@ -59772,6 +60420,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "kookabk"
     ]
   },
   "korinai": {
@@ -60253,7 +60904,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "kodure"
+    ]
   },
   "kpontoon": {
     "genres": [
@@ -62355,6 +63009,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "lhaunt_4"
     ]
   },
   "lhaunt_6b": {
@@ -62401,6 +63058,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "chmplst2"
     ]
   },
   "lhcdb": {},
@@ -62912,6 +63572,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "loconz"
     ]
   },
   "locolootu": {
@@ -63144,6 +63807,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "lonwolf"
     ]
   },
   "looping": {
@@ -63308,6 +63974,14 @@
       "rating": 5
     }
   },
+  "lotr": {
+    "merge": [
+      "lotr_fr",
+      "lotr_gr",
+      "lotr_it",
+      "lotr_sp"
+    ]
+  },
   "lottof2": {
     "players": 1,
     "genres": [
@@ -63404,7 +64078,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "lovestrk"
+    ]
   },
   "lovewin": {
     "genres": [
@@ -63564,6 +64241,9 @@
     ],
     "+controls": [
       "lightgun"
+    ],
+    "merge": [
+      "lsrquiz2"
     ]
   },
   "lsrquizg": {
@@ -63594,6 +64274,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "ltcasinn"
     ]
   },
   "ltcasino": {
@@ -63769,7 +64452,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "luck88"
+    ]
   },
   "lucky8g": {
     "group": "lucky8",
@@ -63910,6 +64596,9 @@
     "orientation": "vertical",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "chewing"
     ]
   },
   "lufykzku": {
@@ -63933,7 +64622,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "luigball"
+    ]
   },
   "lunapark": {
     "players": 1,
@@ -64109,7 +64801,22 @@
       "ja"
     ]
   },
+  "m1nudunl": {
+    "merge": [
+      "m3nudge"
+    ]
+  },
+  "m1sptlgt": {
+    "merge": [
+      "m_sptlgt"
+    ]
+  },
   "m3001": {},
+  "m3xchngu": {
+    "merge": [
+      "m3sexcu"
+    ]
+  },
   "m4": {
     "players": 2,
     "rating": 10,
@@ -64148,6 +64855,29 @@
     ],
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "m4addrc"
+    ]
+  },
+  "m4atlan": {
+    "merge": [
+      "m4tridic"
+    ]
+  },
+  "m4cashzn": {
+    "merge": [
+      "m4czne"
+    ]
+  },
+  "m4celclb": {
+    "merge": [
+      "m_ccelbr"
+    ]
+  },
+  "m4clr": {
+    "merge": [
+      "mpu4met0"
     ]
   },
   "m4conn4": {
@@ -64161,6 +64891,103 @@
     ],
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "connect4"
+    ]
+  },
+  "m4crjwl2": {
+    "merge": [
+      "m4crjwl"
+    ]
+  },
+  "m4frtfl": {
+    "merge": [
+      "m4frtflc"
+    ]
+  },
+  "m4gambal": {
+    "merge": [
+      "m_gmball"
+    ]
+  },
+  "m4jok300": {
+    "merge": [
+      "m4jokmil"
+    ]
+  },
+  "m4joljok": {
+    "merge": [
+      "m4unkjok"
+    ]
+  },
+  "m4nnww": {
+    "merge": [
+      "m4ch30",
+      "m4nnwwc"
+    ]
+  },
+  "m4oldtmr": {
+    "merge": [
+      "m_oldtmr"
+    ]
+  },
+  "m4potblk": {
+    "merge": [
+      "m4ptblkc"
+    ]
+  },
+  "m4rhr": {
+    "merge": [
+      "m4cld02",
+      "m4rhrc"
+    ]
+  },
+  "m4shv": {
+    "merge": [
+      "m4hypvip",
+      "m4suphv"
+    ]
+  },
+  "m4supst": {
+    "merge": [
+      "m4stc"
+    ]
+  },
+  "m4take2": {
+    "merge": [
+      "m4t266"
+    ]
+  },
+  "m4tbplay": {
+    "merge": [
+      "m4remag",
+      "m4rmg"
+    ]
+  },
+  "m4topten": {
+    "merge": [
+      "m4take5"
+    ]
+  },
+  "m4tst": {
+    "merge": [
+      "mpu4utst"
+    ]
+  },
+  "m4tst2": {
+    "merge": [
+      "mpu4tst2"
+    ]
+  },
+  "m4tutfrt": {
+    "merge": [
+      "m4tutcl"
+    ]
+  },
+  "m5honmon": {
+    "merge": [
+      "m_honmon"
     ]
   },
   "m660": {
@@ -64586,6 +65413,9 @@
     ],
     "+controls": [
       "lightgun"
+    ],
+    "merge": [
+      "maddog22"
     ]
   },
   "maddonna": {
@@ -64911,7 +65741,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "mgforst"
+    ]
   },
   "magibomb": {
     "genres": [
@@ -65077,6 +65910,10 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "unkpkr_w",
+      "unkte06"
     ]
   },
   "magicrd1c": {
@@ -65097,6 +65934,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "magiccrd"
     ]
   },
   "magicrde": {
@@ -65123,6 +65963,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "magicardj"
     ]
   },
   "magicstk": {
@@ -65165,6 +66008,9 @@
     "controls": [
       "gambling",
       "pointer"
+    ],
+    "merge": [
+      "magicmsk"
     ]
   },
   "magipur": {
@@ -65279,7 +66125,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "mgmerm"
+    ]
   },
   "magodds": {
     "players": 1,
@@ -65292,6 +66141,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "magical"
     ]
   },
   "magreel": {
@@ -65397,6 +66249,9 @@
       "gambling",
       "keypad",
       "pointer"
+    ],
+    "merge": [
+      "mgctouc"
     ]
   },
   "magtouch": {
@@ -65999,6 +66854,9 @@
     "controls": [
       "paddle",
       "pedal"
+    ],
+    "merge": [
+      "manxttc"
     ]
   },
   "manybloc": {
@@ -66265,6 +67123,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "margmgc"
     ]
   },
   "marmagicu": {
@@ -66710,7 +67571,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "sichuan2"
+    ]
   },
   "matchit2": {
     "players": 2,
@@ -66737,7 +67601,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "shisen2"
+    ]
   },
   "matmania": {
     "players": 2,
@@ -66897,6 +67764,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "kingpinm"
     ]
   },
   "maxidpkr": {
@@ -67630,7 +68500,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "megab"
+    ]
   },
   "megablstj": {
     "group": "megablst",
@@ -67743,7 +68616,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "rckmanj"
+    ]
   },
   "megaman2": {
     "players": 2,
@@ -68654,6 +69530,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "mfish_3"
     ]
   },
   "mfjump": {
@@ -68815,6 +69694,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "mpoker"
     ]
   },
   "mgarden": {
@@ -68854,7 +69736,10 @@
     "emulation": {
       "emulator": "lr-mame2016",
       "rating": 5
-    }
+    },
+    "merge": [
+      "mgcldate"
+    ]
   },
   "mgcrystl": {
     "players": 2,
@@ -69490,7 +70375,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "minesw4p"
+    ]
   },
   "mineswpr4": {
     "group": "mineswpr",
@@ -70448,6 +71336,9 @@
     "controls": [
       "gambling",
       "mahjong"
+    ],
+    "merge": [
+      "mjmyornt"
     ]
   },
   "mjmyorntr": {
@@ -70878,6 +71769,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/mk3mdb (en).pdf"
       }
+    ],
+    "merge": [
+      "mk3ghw"
     ]
   },
   "mk3snes": {
@@ -71263,6 +72157,11 @@
       "en"
     ]
   },
+  "mnfb_c29": {
+    "merge": [
+      "mnfb_c27"
+    ]
+  },
   "mnight": {
     "players": 2,
     "rating": 50,
@@ -71615,6 +72514,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "monmous"
     ]
   },
   "monmousea": {
@@ -71773,6 +72675,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "mtreenz"
     ]
   },
   "monymony": {
@@ -71844,7 +72749,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "moo"
+    ]
   },
   "moonal2": {
     "players": 2,
@@ -72178,7 +73086,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "mosyougi"
+    ]
   },
   "motofren": {
     "players": 1,
@@ -72334,6 +73245,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "moutmon"
     ]
   },
   "mountmonce": {
@@ -72614,7 +73528,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 3
-    }
+    },
+    "merge": [
+      "mp_twc"
+    ]
   },
   "mpang": {
     "players": 2,
@@ -74654,6 +75571,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "drawpka"
     ]
   },
   "multigam": {
@@ -74910,7 +75830,10 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 1
-    }
+    },
+    "merge": [
+      "mtkob2"
+    ]
   },
   "mushikk": {
     "group": "mushike",
@@ -75372,7 +76295,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "moonwalk"
+    ]
   },
   "mwalkj": {
     "group": "mwalk",
@@ -75581,7 +76507,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "mysteyec"
+    ]
   },
   "mystgard": {
     "players": 1,
@@ -75596,6 +76525,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "mystgrd"
     ]
   },
   "mysticm": {
@@ -75885,6 +76817,11 @@
       "rating": 5
     }
   },
+  "nascar": {
+    "merge": [
+      "nascarl"
+    ]
+  },
   "nastar": {
     "players": 2,
     "rating": 50,
@@ -75990,7 +76927,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "navalone"
+    ]
   },
   "nbagold": {
     "players": 4,
@@ -76851,7 +77791,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "netchu02"
+    ]
   },
   "netmerc": {
     "genres": [
@@ -76969,7 +77912,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "fantsy95"
+    ]
   },
   "newhilop": {
     "genres": [
@@ -77893,7 +78839,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "noboranb"
+    ]
   },
   "nomnlnd": {
     "players": 2,
@@ -78440,6 +79389,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "ns8linew"
     ]
   },
   "nslasher": {
@@ -78893,6 +79845,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/nvs_machrider (en).pdf"
       }
+    ],
+    "merge": [
+      "machridr"
     ]
   },
   "nvs_machridera": {
@@ -78922,6 +79877,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/nvs_mightybj (en).pdf"
       }
+    ],
+    "merge": [
+      "mightybj"
     ]
   },
   "nvs_platoon": {
@@ -78936,6 +79894,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "platoon"
     ]
   },
   "nwarr": {
@@ -80293,6 +81254,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "oscarar"
     ]
   },
   "oscara5a": {
@@ -80593,6 +81557,9 @@
     "controls": [
       "gambling",
       "mahjong"
+    ],
+    "merge": [
+      "ougonpai"
     ]
   },
   "ougonhaib1": {
@@ -81525,7 +82492,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "pairsten"
+    ]
   },
   "pairsred": {
     "players": 1,
@@ -82055,7 +83025,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pariligh",
+      "parilius"
+    ]
   },
   "parodius": {
     "players": 2,
@@ -82112,6 +83086,9 @@
     "controls": [
       "gambling",
       "pointer"
+    ],
+    "merge": [
+      "prtygras"
     ]
   },
   "pasha2": {
@@ -82225,7 +83202,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "pastelgl"
+    ]
   },
   "pastelis": {
     "players": 2,
@@ -83710,7 +84690,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pcfav",
+      "pcfava"
+    ]
   },
   "pcgold": {
     "genres": [
@@ -83720,7 +84704,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pcnewz"
+    ]
   },
   "pckobe99": {
     "genres": [
@@ -84095,6 +85082,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn"
     ]
   },
   "pcnfrk10m": {
@@ -84109,6 +85099,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn10m"
     ]
   },
   "pcnfrk2m": {
@@ -84123,6 +85116,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn2m"
     ]
   },
   "pcnfrk3m": {
@@ -84151,6 +85147,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn4m"
     ]
   },
   "pcnfrk5m": {
@@ -84165,6 +85164,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn5m"
     ]
   },
   "pcnfrk6m": {
@@ -84179,6 +85181,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn6m"
     ]
   },
   "pcnfrk7m": {
@@ -84194,6 +85199,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn7m"
     ]
   },
   "pcnfrk8m": {
@@ -84209,6 +85217,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn8m"
     ]
   },
   "pcnfrk9m": {
@@ -84223,6 +85234,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "drmn9m"
     ]
   },
   "pcockmag": {
@@ -84489,6 +85503,9 @@
     "orientation": "horizontal",
     "controls": [
       "pointer"
+    ],
+    "merge": [
+      "peke0017"
     ]
   },
   "peke1001": {
@@ -84503,6 +85520,9 @@
     "orientation": "horizontal",
     "controls": [
       "pointer"
+    ],
+    "merge": [
+      "peke1012"
     ]
   },
   "pekoc766": {
@@ -84653,7 +85673,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pelpetus"
+    ]
   },
   "pemg0025": {
     "genres": [
@@ -84829,6 +85852,11 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "pengpays",
+      "penpay20",
+      "penpaya"
     ]
   },
   "pengpayce": {
@@ -84869,7 +85897,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "penpayus"
+    ]
   },
   "penky": {
     "players": 2,
@@ -85044,6 +86075,12 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pepp0002",
+      "pepp0043",
+      "pepp0188",
+      "pepp0447"
     ]
   },
   "pepp0048": {
@@ -85058,6 +86095,10 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pepp0053",
+      "pepp0065"
     ]
   },
   "pepp0054": {
@@ -85072,6 +86113,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pepp0055"
     ]
   },
   "pepp0120": {
@@ -85230,6 +86274,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pepp0508"
     ]
   },
   "pepp0452": {
@@ -85258,6 +86305,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pepp0516"
     ]
   },
   "pepp0542": {
@@ -85396,6 +86446,10 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "peps0022",
+      "peps0045"
     ]
   },
   "peps0040": {
@@ -85424,6 +86478,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "peps0043"
     ]
   },
   "peps0047": {
@@ -85535,6 +86592,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "peps0280"
     ]
   },
   "peps0291": {
@@ -85549,6 +86609,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "peps0296"
     ]
   },
   "peps0308": {
@@ -85605,6 +86668,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "peps0426"
     ]
   },
   "peps0470": {
@@ -85867,6 +86933,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "petshopa"
     ]
   },
   "pettanp": {
@@ -86747,6 +87816,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "pexs0006"
     ]
   },
   "pex1087s": {
@@ -86873,6 +87945,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pexp0019"
     ]
   },
   "pex2026p": {
@@ -86985,6 +88060,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pexp0112"
     ]
   },
   "pex2036p": {
@@ -87994,6 +89072,11 @@
       "gambling"
     ]
   },
+  "pexm003p": {
+    "merge": [
+      "pexmp024"
+    ]
+  },
   "pexm004p": {
     "players": 1,
     "genres": [
@@ -88020,6 +89103,11 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ]
+  },
+  "pexm006p": {
+    "merge": [
+      "pexmp006"
     ]
   },
   "pexm007p": {
@@ -88354,7 +89442,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pharpor"
+    ]
   },
   "pharrier": {
     "players": 1,
@@ -88486,6 +89577,9 @@
     "orientation": "horizontal",
     "controls": [
       "keyboard"
+    ],
+    "merge": [
+      "photoply"
     ]
   },
   "photoply2k1it": {
@@ -88712,7 +89806,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "phrcrazs"
+    ]
   },
   "phrcrazev": {
     "group": "phrcraze",
@@ -89100,7 +90197,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "piratar"
+    ]
   },
   "pirate2": {
     "players": 1,
@@ -89721,6 +90821,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "grtesoro"
     ]
   },
   "playball": {
@@ -89748,6 +90851,14 @@
       "emulator": "lr-fbneo",
       "rating": 5
     }
+  },
+  "playboys": {
+    "merge": [
+      "playboyf",
+      "playboyg",
+      "playboyi",
+      "playboyl"
+    ]
   },
   "plegends": {
     "players": 2,
@@ -89909,7 +91020,10 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 3
-    }
+    },
+    "merge": [
+      "sg2j"
+    ]
   },
   "plsonic4": {
     "genres": [
@@ -90681,7 +91795,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pompeiar",
+      "pompus2"
+    ]
   },
   "pompingw": {
     "group": "pang",
@@ -90726,7 +91844,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 3
-    }
+    },
+    "merge": [
+      "pongf"
+    ]
   },
   "pongboo2": {
     "genres": [
@@ -91704,6 +92825,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "pbball96"
     ]
   },
   "powyakex": {
@@ -91719,6 +92843,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "pbballex"
     ]
   },
   "ppcar": {
@@ -92403,7 +93530,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "prophar"
+    ]
   },
   "prosoccr": {
     "players": 2,
@@ -92468,7 +93598,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "protennb"
+    ]
   },
   "prtytime": {
     "players": 1,
@@ -92502,6 +93635,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "przfigha"
     ]
   },
   "psailor1": {
@@ -93463,7 +94599,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "puyopuyo"
+    ]
   },
   "puyoda": {
     "players": 2,
@@ -93499,7 +94638,10 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 5
-    }
+    },
+    "merge": [
+      "puyofevp"
+    ]
   },
   "puyoj": {
     "group": "puyo",
@@ -93969,7 +95111,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "pwsp1"
+    ]
   },
   "py2k2": {
     "players": 2,
@@ -94305,6 +95450,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "qncsh"
     ]
   },
   "qcrayon": {
@@ -94580,6 +95728,13 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "goldphm",
+      "qonilea",
+      "qonileb",
+      "qotn",
+      "qotna"
     ]
   },
   "qnilea6": {
@@ -94634,7 +95789,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "qnilecj"
+    ]
   },
   "qnileu": {
     "group": "qnile",
@@ -94764,7 +95922,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "qsheeba"
+    ]
   },
   "qsww": {
     "players": 2,
@@ -94878,7 +96039,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "qtono2"
+    ]
   },
   "qtorimon": {
     "players": 2,
@@ -95290,6 +96454,12 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "quizrd12",
+      "quizrd17",
+      "quizrd18",
+      "quizrd32"
     ]
   },
   "quizard2": {
@@ -95305,6 +96475,10 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "quizrd22",
+      "quizrd23"
     ]
   },
   "quizard3": {
@@ -95319,6 +96493,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "quizrd34"
     ]
   },
   "quizard3a": {
@@ -95339,6 +96516,11 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "quizrr40",
+      "quizrr41",
+      "quizrr42"
     ]
   },
   "quizard4cz": {
@@ -96011,7 +97193,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 3
-    }
+    },
+    "merge": [
+      "racoon"
+    ]
   },
   "racedriv": {
     "players": 2,
@@ -96708,7 +97893,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "raidndx"
+    ]
   },
   "raidendxch": {
     "group": "raidendx",
@@ -96848,6 +98036,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "rainwrce",
+      "rwarhl"
     ]
   },
   "raizpin": {
@@ -97261,7 +98453,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 2
-    }
+    },
+    "merge": [
+      "raveracw"
+    ]
   },
   "raveracej": {
     "group": "raverace",
@@ -97488,7 +98683,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "rainbow"
+    ]
   },
   "rbislande": {
     "players": 2,
@@ -97726,6 +98924,14 @@
       "en"
     ],
     "orientation": "vertical"
+  },
+  "rctycn": {
+    "merge": [
+      "rctycnf",
+      "rctycng",
+      "rctycni",
+      "rctycnl"
+    ]
   },
   "rdft": {
     "players": 2,
@@ -98043,7 +99249,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "merge": [
+      "ww3"
+    ]
   },
   "redbara6": {
     "genres": [
@@ -98053,7 +99262,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "redbarar"
+    ]
   },
   "redbaron": {
     "players": 1,
@@ -98679,6 +99891,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "resdnt_2"
     ]
   },
   "resdnt_9": {
@@ -98730,6 +99945,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "retsam20",
+      "retsam5"
     ]
   },
   "retsama6": {
@@ -98770,7 +99989,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "revenger"
+    ]
   },
   "revx": {
     "players": 3,
@@ -98963,7 +100185,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 2
-    }
+    },
+    "merge": [
+      "ridger2j"
+    ]
   },
   "ridgera2j": {
     "group": "ridgera2",
@@ -99004,7 +100229,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 2
-    }
+    },
+    "merge": [
+      "ridgeraj"
+    ]
   },
   "ridgeracj": {
     "group": "ridgerac",
@@ -99272,6 +100500,14 @@
       "emulator": "lr-mame",
       "rating": 5
     }
+  },
+  "ripleys": {
+    "merge": [
+      "ripleysf",
+      "ripleysg",
+      "ripleysi",
+      "ripleysl"
+    ]
   },
   "ripoff": {
     "players": 2,
@@ -99705,7 +100941,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "rdtripus"
+    ]
   },
   "robadv": {
     "players": 1,
@@ -100452,6 +101691,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "rollfr_2"
     ]
   },
   "rollingc": {
@@ -100584,6 +101826,9 @@
     "controls": [
       "gambling",
       "mahjong"
+    ],
+    "merge": [
+      "ronjan"
     ]
   },
   "rotaryf": {
@@ -100949,7 +102194,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "rpatrolb"
+    ]
   },
   "rpunch": {
     "group": "rabiolep",
@@ -101281,7 +102529,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "rubmgc"
+    ]
   },
   "rugby": {
     "genres": [
@@ -101354,7 +102605,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "rumbrel"
+    ]
   },
   "runark": {
     "group": "growl",
@@ -102770,7 +104024,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "saturn"
+    ]
   },
   "sauro": {
     "players": 2,
@@ -103081,7 +104338,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "sbomberb"
+    ]
   },
   "sbowling": {
     "players": 2,
@@ -103206,6 +104466,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "supbuk2"
     ]
   },
   "sbuk3": {
@@ -103220,6 +104483,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "sbucks3"
     ]
   },
   "sbuk3a": {
@@ -103277,6 +104543,11 @@
       "only_buttons"
     ]
   },
+  "sc1clatt": {
+    "merge": [
+      "m_clattr"
+    ]
+  },
   "sc1crocr": {
     "genres": [
       "Electromechanical / Reels"
@@ -103286,6 +104557,16 @@
     ],
     "controls": [
       "only_buttons"
+    ]
+  },
+  "sc1lotus": {
+    "merge": [
+      "m_lotsse"
+    ]
+  },
+  "sc1roul": {
+    "merge": [
+      "m_roulet"
     ]
   },
   "sc1smoke": {
@@ -103299,6 +104580,31 @@
       "only_buttons"
     ]
   },
+  "sc2brkfs": {
+    "merge": [
+      "m_brkfst"
+    ]
+  },
+  "sc2cpe": {
+    "merge": [
+      "m_cpeno1"
+    ]
+  },
+  "sc2drwho": {
+    "merge": [
+      "m_bdrwho"
+    ]
+  },
+  "sc2focus": {
+    "merge": [
+      "m_bfocus"
+    ]
+  },
+  "sc2gslam": {
+    "merge": [
+      "m_bcgslm"
+    ]
+  },
   "sc2in1": {
     "genres": [
       "Slot Machine / Video Slot"
@@ -103309,6 +104615,11 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ]
+  },
+  "sc2luvv": {
+    "merge": [
+      "m_luvjub"
     ]
   },
   "sc4a40": {
@@ -109048,7 +110359,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "scatmg2"
+    ]
   },
   "scatmag3": {
     "genres": [
@@ -109313,6 +110627,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "unkch1"
     ]
   },
   "scobra": {
@@ -109425,7 +110742,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "scorpnmc"
+    ]
   },
   "scotrsht": {
     "players": 2,
@@ -110903,7 +112223,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "sf1"
+    ]
   },
   "sf2": {
     "players": 2,
@@ -111423,6 +112746,11 @@
     "group": "schamp",
     "languages": [
       "ja"
+    ]
+  },
+  "sfightii": {
+    "merge": [
+      "sfight2"
     ]
   },
   "sfiii": {
@@ -112445,7 +113773,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "sharmnm"
+    ]
   },
   "shangha2": {
     "players": 2,
@@ -113424,7 +114755,12 @@
     "emulation": {
       "emulator": "lr-flycast",
       "rating": 1
-    }
+    },
+    "merge": [
+      "starhrcl",
+      "starhrct",
+      "starhrse"
+    ]
   },
   "shorsel": {
     "group": "shorse",
@@ -113445,6 +114781,9 @@
     "orientation": "vertical",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "starhrsp"
     ]
   },
   "shorsepb": {
@@ -113470,6 +114809,9 @@
     "orientation": "vertical",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "starhrpr"
     ]
   },
   "shorseprl": {
@@ -114137,7 +115479,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "silgolar"
+    ]
   },
   "silkrda6": {
     "genres": [
@@ -114147,7 +115492,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "silkrdus"
+    ]
   },
   "silkroad": {
     "players": 2,
@@ -114270,6 +115618,14 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/simpbowl (en).pdf"
       }
+    ]
+  },
+  "simpprty": {
+    "merge": [
+      "simpprtf",
+      "simpprtg",
+      "simpprti",
+      "simpprtl"
     ]
   },
   "simpsons": {
@@ -114769,7 +116125,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "skydncra"
+    ]
   },
   "skyfox": {
     "players": 2,
@@ -115565,6 +116924,11 @@
       "ja"
     ]
   },
+  "smbp": {
+    "merge": [
+      "smb"
+    ]
+  },
   "smf": {
     "genres": [
       "Medal Game / Action"
@@ -115601,6 +116965,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/smgolf (en).pdf"
       }
+    ],
+    "merge": [
+      "ladygolf"
     ]
   },
   "smgolfj": {
@@ -115695,6 +117062,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "sleague"
     ]
   },
   "smlg99": {
@@ -115813,7 +117183,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "smtmar"
+    ]
   },
   "snakepit": {
     "players": 2,
@@ -116180,7 +117553,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "ramtek3"
+    ]
   },
   "sokoban": {
     "orientation": "horizontal",
@@ -116705,6 +118081,14 @@
       "ja"
     ]
   },
+  "sopranos": {
+    "merge": [
+      "sopranof",
+      "sopranog",
+      "sopranoi",
+      "sopranol"
+    ]
+  },
   "sos": {
     "players": 2,
     "rating": 10,
@@ -116991,6 +118375,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "spacea91"
     ]
   },
   "spacecr": {
@@ -118573,6 +119960,9 @@
     },
     "tags": [
       "Party"
+    ],
+    "merge": [
+      "spidey"
     ]
   },
   "spidmanj": {
@@ -119449,7 +120839,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "superqix"
+    ]
   },
   "sqixr0": {
     "group": "sqix",
@@ -119537,6 +120930,10 @@
     "controls": [
       "paddle",
       "pedal"
+    ],
+    "merge": [
+      "srally2x",
+      "sraly2dx"
     ]
   },
   "srallyc": {
@@ -119653,6 +121050,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "ssgbl"
     ]
   },
   "srmp1": {
@@ -120049,6 +121449,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "ssf2ghw"
     ]
   },
   "ssf2t": {
@@ -120882,7 +122285,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "sstrngr2"
+    ]
   },
   "sstriker": {
     "players": 2,
@@ -120923,6 +122329,11 @@
     "orientation": "horizontal",
     "controls": [
       "stick"
+    ]
+  },
+  "st_sam": {
+    "merge": [
+      "st_game"
     ]
   },
   "stactics": {
@@ -121217,7 +122628,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "stardrfu"
+    ]
   },
   "starfigh": {
     "players": 2,
@@ -122478,7 +123892,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "hndlchmp"
+    ]
   },
   "strhoop": {
     "players": 2,
@@ -122859,6 +124276,11 @@
     ],
     "orientation": "horizontal"
   },
+  "stwr_106": {
+    "merge": [
+      "stwr_104"
+    ]
+  },
   "styphp": {
     "players": 1,
     "genres": [
@@ -122985,7 +124407,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "47pie2"
+    ]
   },
   "suchie3": {
     "players": 1,
@@ -123013,6 +124438,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "suchipi"
     ]
   },
   "suhosong": {
@@ -123142,7 +124570,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "hlsunmon",
+      "sunmon2"
+    ]
   },
   "sunqndol": {
     "genres": [
@@ -123591,7 +125023,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "usg83"
+    ]
   },
   "supertnk": {
     "players": 2,
@@ -124040,6 +125475,9 @@
     "orientation": "vertical",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "am_uslot"
     ]
   },
   "suprtrio": {
@@ -124107,7 +125545,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "surpratk"
+    ]
   },
   "suratkj": {
     "group": "suratk",
@@ -124375,7 +125816,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "svcboot"
+    ]
   },
   "svcpcb": {
     "players": 2,
@@ -124695,6 +126139,11 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "hrttrhb",
+      "swheart2",
+      "swthrt2v"
     ]
   },
   "swhr2a6": {
@@ -124706,7 +126155,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "swhr2us"
+    ]
   },
   "swhr2u": {
     "group": "swhr2",
@@ -124789,7 +126241,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "podrace"
+    ]
   },
   "sws": {
     "players": 2,
@@ -125438,6 +126893,9 @@
     "orientation": "horizontal",
     "controls": [
       "doublejoy"
+    ],
+    "merge": [
+      "stankatk"
     ]
   },
   "tankbatt": {
@@ -125806,7 +127264,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "taxidrvr"
+    ]
   },
   "tazmania": {
     "players": 2,
@@ -126641,7 +128102,10 @@
     "emulation": {
       "emulator": "lr-mame2010",
       "rating": 3
-    }
+    },
+    "merge": [
+      "tekkentt"
+    ]
   },
   "tektagtja": {
     "group": "tektagt",
@@ -127349,7 +128813,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "tgtball"
+    ]
   },
   "tgtpanic": {
     "players": 1,
@@ -127381,7 +128848,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "thaiprar",
+      "thaiprin"
+    ]
   },
   "tharrier": {
     "players": 2,
@@ -127954,6 +129425,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "3ds"
     ]
   },
   "thrild2": {
@@ -128375,7 +129849,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "tigresar"
+    ]
   },
   "tikitalk": {
     "genres": [
@@ -128395,7 +129872,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "tiktoru"
+    ]
   },
   "timber": {
     "players": 2,
@@ -128431,7 +129911,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "timwolfu"
+    ]
   },
   "timecris": {
     "players": 1,
@@ -128461,6 +129944,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/timecris (en).pdf"
       }
+    ],
+    "merge": [
+      "timecrsa"
     ]
   },
   "timecrs2": {
@@ -128646,7 +130132,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "timscanr"
+    ]
   },
   "timesold": {
     "players": 2,
@@ -128791,7 +130280,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "merge": [
+      "sia2650"
+    ]
   },
   "tisland": {
     "players": 2,
@@ -129344,6 +130836,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "tokimosh"
     ]
   },
   "tmoshsp": {
@@ -129356,6 +130851,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "tokimosp"
     ]
   },
   "tmoshspa": {
@@ -129374,6 +130872,11 @@
       "en"
     ],
     "orientation": "horizontal"
+  },
+  "tmwrp_l3": {
+    "merge": [
+      "tmwrp_l2"
+    ]
   },
   "tndrcade": {
     "players": 2,
@@ -129427,7 +130930,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "tnexspce"
+    ]
   },
   "tnextspcj": {
     "group": "tnextspc",
@@ -130155,7 +131661,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "torpdice"
+    ]
   },
   "toprollr": {
     "players": 2,
@@ -130247,7 +131756,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "topshtar"
+    ]
   },
   "topskatr": {
     "genres": [
@@ -131454,6 +132966,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "triptrea"
     ]
   },
   "trivia": {
@@ -131570,7 +133085,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "trivia12"
+    ]
   },
   "triviag2": {
     "players": 4,
@@ -131841,6 +133359,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "trjhrs"
     ]
   },
   "tron": {
@@ -131939,7 +133460,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "trkinus"
+    ]
   },
   "trstar": {
     "players": 2,
@@ -131994,6 +133518,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "tretrva"
     ]
   },
   "truckk": {
@@ -132223,7 +133750,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "trvwhzii"
+    ]
   },
   "trvwz3h": {
     "players": 4,
@@ -132283,7 +133813,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "trvwhziv"
+    ]
   },
   "trvwzh": {
     "players": 2,
@@ -132311,7 +133844,11 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "trvwhzho",
+      "trvwhzve"
+    ]
   },
   "trvwzv": {
     "group": "trvwzh",
@@ -132989,7 +134526,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "turtrea"
+    ]
   },
   "turtship": {
     "players": 2,
@@ -133165,7 +134705,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "wc90"
+    ]
   },
   "twcup90ba": {
     "group": "twcup90",
@@ -133194,6 +134737,10 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/twcup94 (en).pdf"
       }
+    ],
+    "merge": [
+      "twrldc94",
+      "worldc94"
     ]
   },
   "twcup98": {
@@ -133239,7 +134786,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "tecmowcm"
+    ]
   },
   "twinactn": {
     "players": 2,
@@ -133436,7 +134986,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "whizz"
+    ]
   },
   "twinhawk": {
     "players": 2,
@@ -133665,7 +135218,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "tws96"
+    ]
   },
   "tx1": {
     "players": 1,
@@ -133693,7 +135249,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "tx1a"
+    ]
   },
   "tx1jb": {
     "group": "tx1",
@@ -134593,6 +136152,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "usagui"
     ]
   },
   "usclssic": {
@@ -134663,7 +136225,12 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "usg182",
+      "usg185",
+      "usg252"
+    ]
   },
   "usvsthem": {
     "players": 1,
@@ -134726,6 +136293,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "adders"
     ]
   },
   "v4barqs2": {
@@ -134788,6 +136358,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "blox"
     ]
   },
   "v4bubbnk": {
@@ -134830,7 +136403,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "crmaze"
+    ]
   },
   "v4cmaze2": {
     "players": 4,
@@ -134848,7 +136424,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 4
-    }
+    },
+    "merge": [
+      "crmaze2"
+    ]
   },
   "v4cmaze3": {
     "players": 4,
@@ -134866,7 +136445,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "crmaze3"
+    ]
   },
   "v4cshinf": {
     "genres": [
@@ -134915,6 +136497,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "dealem"
     ]
   },
   "v4eyedwn": {
@@ -134927,6 +136512,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "eyesdown"
     ]
   },
   "v4frfact": {
@@ -134968,6 +136556,9 @@
     "orientation": "horizontal",
     "controls": [
       "trackball"
+    ],
+    "merge": [
+      "mating"
     ]
   },
   "v4mazbel": {
@@ -134980,6 +136571,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "v4mazbla"
     ]
   },
   "v4mdice": {
@@ -134992,6 +136586,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "v4miami"
     ]
   },
   "v4mdice6": {
@@ -135116,6 +136713,14 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "prizeinv",
+      "v4psi14d",
+      "v4psi20d",
+      "v4psi214",
+      "v4psia",
+      "v4psib"
     ]
   },
   "v4psibc": {
@@ -135149,6 +136754,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "quidgrid"
     ]
   },
   "v4redhtp": {
@@ -135245,6 +136853,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "skiltrek"
     ]
   },
   "v4strike": {
@@ -135258,6 +136869,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "strikeit"
     ]
   },
   "v4sunbst": {
@@ -135283,6 +136897,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "v4tetrs1"
     ]
   },
   "v4timebn": {
@@ -135307,6 +136924,10 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "timemchn",
+      "v4time"
     ]
   },
   "v4turnov": {
@@ -135319,6 +136940,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "turnover"
     ]
   },
   "v4vgpok": {
@@ -135332,6 +136956,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "vgpoker"
     ]
   },
   "v4wize": {
@@ -135344,6 +136971,9 @@
     "orientation": "horizontal",
     "controls": [
       "only_buttons"
+    ],
+    "merge": [
+      "v4wizea"
     ]
   },
   "valkyrie": {
@@ -136059,7 +137689,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "venicus"
+    ]
   },
   "venicea5": {
     "players": 1,
@@ -136434,6 +138067,9 @@
       "joy",
       "paddle",
       "pedal"
+    ],
+    "merge": [
+      "victlapw"
     ]
   },
   "victlapj": {
@@ -137105,6 +138741,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ]
+  },
+  "vlcno_1c": {
+    "merge": [
+      "vlcno_1b"
     ]
   },
   "vlcunk": {
@@ -138479,6 +140120,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "wldamz1",
+      "wldamz3"
     ]
   },
   "wanganmd": {
@@ -138529,6 +140174,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "wangmd2b"
     ]
   },
   "wangmid2j": {
@@ -139357,6 +141005,10 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "wldcoug",
+      "wldcougr"
     ]
   },
   "wcougaru": {
@@ -139747,7 +141399,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "whlcshus"
+    ]
   },
   "wheelfir": {
     "players": 1,
@@ -139795,7 +141450,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "witgold"
+    ]
   },
   "whiterus": {
     "genres": [
@@ -139868,7 +141526,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "whtwtr"
+    ]
   },
   "wiggie": {
     "players": 2,
@@ -140157,7 +141818,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wingolus"
+    ]
   },
   "wingwar": {
     "players": 1,
@@ -140431,6 +142095,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "pokerduc"
     ]
   },
   "witchcrda": {
@@ -140544,7 +142211,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "wyvernwg"
+    ]
   },
   "wiz": {
     "players": 2,
@@ -140666,7 +142336,10 @@
     "emulation": {
       "emulator": "lr-mame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "whizquiz"
+    ]
   },
   "wjammers": {
     "players": 2,
@@ -140708,7 +142381,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wldafus"
+    ]
   },
   "wldangel": {
     "players": 1,
@@ -140746,7 +142422,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wldcatsa"
+    ]
   },
   "wldcourt": {
     "players": 2,
@@ -140822,7 +142501,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wldpan2"
+    ]
   },
   "wldpanth": {
     "genres": [
@@ -140832,7 +142514,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wldpntus"
+    ]
   },
   "wldrider": {
     "players": 1,
@@ -140855,7 +142540,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wldstal2"
+    ]
   },
   "wldstrek": {
     "genres": [
@@ -141192,7 +142880,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "woodpek"
+    ]
   },
   "worldadv": {
     "players": 2,
@@ -141746,6 +143437,9 @@
     "controls": [
       "gambling",
       "keypad"
+    ],
+    "merge": [
+      "wldthg"
     ]
   },
   "wtiger": {
@@ -141859,7 +143553,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wildways",
+      "wwaysar"
+    ]
   },
   "wwestern": {
     "players": 2,
@@ -142086,7 +143784,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "wwaysll"
+    ]
   },
   "x2222": {
     "players": 2,
@@ -142752,6 +144453,9 @@
     "orientation": "horizontal",
     "controls": [
       "mahjong"
+    ],
+    "merge": [
+      "grtwall"
     ]
   },
   "xyonix": {
@@ -143626,7 +145330,10 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "bigd2"
+    ]
   },
   "zigzagb": {
     "players": 2,
@@ -143652,7 +145359,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "zigzag"
+    ]
   },
   "zingzip": {
     "players": 2,
@@ -143904,6 +145614,9 @@
     "orientation": "horizontal",
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "zulu"
     ]
   },
   "zoofari": {
@@ -143979,7 +145692,11 @@
     "languages": [
       "en"
     ],
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "merge": [
+      "zorrojp",
+      "zorrous"
+    ]
   },
   "zortonbr": {
     "players": 1,
