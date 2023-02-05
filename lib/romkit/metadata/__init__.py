@@ -9,6 +9,7 @@ from romkit.metadata.genres import GenresMetadata
 from romkit.metadata.group import GroupMetadata
 from romkit.metadata.languages import LanguagesMetadata
 from romkit.metadata.manuals import ManualsMetadata
+from romkit.metadata.mechanical import MechanicalMetadata
 from romkit.metadata.media import MediaMetadata
 from romkit.metadata.orientation import OrientationMetadata
 from romkit.metadata.peripherals import PeripheralsMetadata
@@ -27,6 +28,7 @@ __all_metadata__ = [
     GenresMetadata,
     LanguagesMetadata,
     ManualsMetadata,
+    MechanicalMetadata,
     MediaMetadata,
     OrientationMetadata,
     PeripheralsMetadata,

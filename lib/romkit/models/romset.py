@@ -126,12 +126,9 @@ class ROMSet:
             # Read from an external dat file
             doc = lxml.etree.iterparse(str(self.dat.target_path.path), tag=('game', 'machine'))
             for event, element in doc:
-                if Machine.is_installable(element):
-                    machine = Machine.from_xml(self, element)
-                    machine.custom_context.update(self.system.context_for(machine))
-                    if self.filter_set.allow(machine):
-                        yield machine
-                else:
-                    logging.debug(f"[{element.get('name')}] Ignored (not installable)")
+                machine = Machine.from_xml(self, element)
+                machine.custom_context.update(self.system.context_for(machine))
+                if self.filter_set.allow(machine):
+                    yield machine
                 
                 element.clear()

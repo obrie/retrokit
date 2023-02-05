@@ -42,6 +42,7 @@ class Machine:
         roms: Set[File] = None,
         disks: Set[Disk] = None,
         is_bios: bool = False,
+        is_mechanical: bool = False,
         runnable: bool = True,
 
         # External metadata
@@ -82,6 +83,7 @@ class Machine:
         self.roms = roms or set()
         self.disks = disks or set()
         self.is_bios = is_bios
+        self.is_mechanical = is_mechanical
         self.runnable = runnable
 
         # External attributes
@@ -104,11 +106,6 @@ class Machine:
 
         self._resource = None
 
-    # Whether this machine is installable
-    @staticmethod
-    def is_installable(xml: lxml.etree.ElementBase) -> bool:
-        return xml.get('ismechanical') != 'yes'
-
     @classmethod
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
         name = xml.get('name')
@@ -123,6 +120,7 @@ class Machine:
             bios_name = None
 
         is_bios = xml.get('isbios') == 'yes' or '[BIOS]' in name
+        is_mechanical = xml.get('ismechanical') == 'yes'
         runnable = xml.get('runnable') != 'no'
 
         # Sample
@@ -148,6 +146,7 @@ class Machine:
             comment=comment,
             category=category,
             is_bios=is_bios,
+            is_mechanical=is_mechanical,
             runnable=runnable,
             parent_name=parent_name,
             bios_name=bios_name,
@@ -477,6 +476,7 @@ class Machine:
             'comment': self.comment,
             'is_bios': self.is_bios,
             'runnable': self.runnable,
+            'is_mechanical': self.is_mechanical,
 
             # Download info
             'url': str(self.resource and self.resource.source_url),

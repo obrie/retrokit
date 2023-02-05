@@ -9,6 +9,7 @@ from romkit.filters.favorite import FavoriteFilter
 from romkit.filters.filesystem import FilesystemFilter
 from romkit.filters.language import LanguageFilter
 from romkit.filters.manual import ManualFilter
+from romkit.filters.mechanical import MechanicalFilter
 from romkit.filters.media import MediaFilter
 from romkit.filters.name import NameFilter, TitleFilter
 from romkit.filters.orientation import OrientationFilter
@@ -25,6 +26,7 @@ __all_filters__ = [
     CloneFilter,
     BIOSFilter,
     RunnableFilter,
+    MechanicalFilter,
     FlagFilter,
     DescriptionFilter,
     ControlFilter,
