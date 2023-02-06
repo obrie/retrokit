@@ -15236,6 +15236,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bnglngby (en).pdf"
       }
+    ],
+    "merge": [
+      "vsraidbbay"
     ]
   },
   "bngotime": {
@@ -17217,6 +17220,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "vsbattlecity"
     ]
   },
   "btlfield": {
@@ -23555,6 +23561,9 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "vsclucluland"
     ]
   },
   "cluedo": {
@@ -28104,6 +28113,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/cstlevna (en).pdf"
       }
+    ],
+    "merge": [
+      "vscastlevania"
     ]
   },
   "csuperas": {
@@ -36417,6 +36429,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/drmario (en).pdf"
       }
+    ],
+    "merge": [
+      "vsdrmario"
     ]
   },
   "drmcatch": {
@@ -37021,6 +37036,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/duckhunt (en).pdf"
       }
+    ],
+    "merge": [
+      "vsduckhunt"
     ]
   },
   "ducki": {
@@ -42000,6 +42018,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/excitebk (en).pdf"
       }
+    ],
+    "merge": [
+      "vsexcitebike"
     ]
   },
   "excitebkj": {
@@ -52873,6 +52894,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/goonies (en).pdf"
       }
+    ],
+    "merge": [
+      "vsgoonies"
     ]
   },
   "goori": {
@@ -59613,6 +59637,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/hogalley (en).pdf"
       }
+    ],
+    "merge": [
+      "vshogansalley"
     ]
   },
   "hogwild": {
@@ -61761,6 +61788,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/iceclimb (en).pdf"
       }
+    ],
+    "merge": [
+      "vsiceclimber"
     ]
   },
   "iceclimba": {
@@ -69051,6 +69081,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/jajamaru (en).pdf"
       }
+    ],
+    "merge": [
+      "vsninjajkun"
     ]
   },
   "jambo": {
@@ -108532,7 +108565,8 @@
       }
     ],
     "merge": [
-      "machridr"
+      "machridr",
+      "vsmachrider"
     ]
   },
   "nvs_machridera": {
@@ -108564,7 +108598,8 @@
       }
     ],
     "merge": [
-      "mightybj"
+      "mightybj",
+      "vsmightybomjack"
     ]
   },
   "nvs_platoon": {
@@ -108581,7 +108616,8 @@
       "joy"
     ],
     "merge": [
-      "platoon"
+      "platoon",
+      "vsplatoon"
     ]
   },
   "nwarr": {
@@ -129407,6 +129443,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/rbibb (en).pdf"
       }
+    ],
+    "merge": [
+      "vsrbibbal"
     ]
   },
   "rbisland": {
@@ -154140,7 +154179,9 @@
       }
     ],
     "merge": [
-      "ladygolf"
+      "ladygolf",
+      "vssmgolf",
+      "vssmgolfla"
     ]
   },
   "smgolfj": {
@@ -161489,6 +161530,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/starlstr (en).pdf"
       }
+    ],
+    "merge": [
+      "vsstarluster"
     ]
   },
   "starqst": {
@@ -164354,6 +164398,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/suprmrio (en).pdf"
       }
+    ],
+    "group": [
+      "vssmb"
     ]
   },
   "suprnova": {
@@ -164513,6 +164560,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/supxevs (en).pdf"
       }
+    ],
+    "merge": [
+      "vssuperxevious"
     ]
   },
   "suratk": {
@@ -170061,6 +170111,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/tkoboxng (en).pdf"
       }
+    ],
+    "merge": [
+      "vstkoboxing"
     ]
   },
   "tm": {
@@ -171329,6 +171382,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/topgun (en).pdf"
       }
+    ],
+    "merge": [
+      "vstopgun"
     ]
   },
   "topgunbl": {
@@ -179852,6 +179908,9 @@
     ],
     "+controls": [
       "lightgun"
+    ],
+    "merge": [
+      "vsfreedomforce"
     ]
   },
   "vsfreedomforce": {
@@ -179938,6 +179997,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vsgshoe (en).pdf"
       }
+    ],
+    "merge": [
+      "vsgumshoe"
     ]
   },
   "vsgumshoe": {
@@ -180080,6 +180142,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vspinbal (en).pdf"
       }
+    ],
+    "merge": [
+      "vspinball"
     ]
   },
   "vspinbalj": {
@@ -180136,6 +180201,9 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/vsskykid (en).pdf"
       }
+    ],
+    "merge": [
+      "vssuperskykid"
     ]
   },
   "vsslalom": {
