@@ -10628,7 +10628,11 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/bbbxing (en).pdf"
       }
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "bbchall": {
     "genres": [
@@ -18909,6 +18913,13 @@
     "group": "cannball",
     "orientation": "vertical"
   },
+  "cannonb": {
+    "group": "cannonbp",
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
+  },
   "cannonbp": {
     "players": 6,
     "rating": 10,
@@ -18923,7 +18934,7 @@
       "joy"
     ],
     "emulation": {
-      "emulator": "lr-mame",
+      "emulator": "lr-fbneo",
       "rating": 5
     },
     "merge": [
@@ -28840,6 +28851,13 @@
     "group": "cyberbal",
     "players": 2
   },
+  "cyberbalt": {
+    "group": "cyberbal",
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
+  },
   "cyberlip": {
     "players": 2,
     "rating": 50,
@@ -35243,6 +35261,13 @@
       "rating": 4
     }
   },
+  "dotriman": {
+    "group": "dotrikun",
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    }
+  },
   "dotron": {
     "players": 2,
     "rating": 70,
@@ -37660,7 +37685,11 @@
     "controls": [
       "trackball"
     ],
-    "mechanical": true
+    "mechanical": true,
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "dynwar": {
     "players": 2,
@@ -37703,6 +37732,13 @@
     "languages": [
       "ja"
     ]
+  },
+  "eagle": {
+    "group": "mooncrst",
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "eaglrock": {
     "genres": [
@@ -41413,7 +41449,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -48565,7 +48601,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    }
   },
   "galivan": {
     "players": 2,
@@ -50029,7 +50069,11 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
-    ]
+    ],
+    "emulation": {
+      "emulator": "advmame",
+      "rating": 5
+    }
   },
   "gdfs": {
     "players": 2,
@@ -58512,7 +58556,11 @@
   },
   "herbiedk": {
     "group": "huncholy",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    }
   },
   "hercules": {
     "genres": [
@@ -60991,7 +61039,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -63231,6 +63279,13 @@
       "rating": 4
     }
   },
+  "invaddlx": {
+    "group": "invadpt2",
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 4
+    }
+  },
   "invaders": {
     "players": 2,
     "rating": 90,
@@ -63294,7 +63349,7 @@
     ],
     "emulation": {
       "emulator": "lr-mame",
-      "rating": 4
+      "rating": 5
     }
   },
   "invadpt2br": {
@@ -70662,7 +70717,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -79261,7 +79316,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame",
+      "emulator": "lr-fbneo",
       "rating": 5
     }
   },
@@ -93897,7 +93952,11 @@
     "players": 2,
     "controls": [
       "trackball"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 4
+    }
   },
   "magworma": {
     "group": "centiped",
@@ -112340,6 +112399,10 @@
     "buttons": [
       "Shoot"
     ],
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    },
     "merge": [
       "bublbust"
     ]
@@ -135699,7 +135762,11 @@
       "Sensor 3",
       "Sensor 4"
     ],
-    "mechanical": true
+    "mechanical": true,
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "sbmj": {
     "group": "sbm",
@@ -151868,6 +151935,13 @@
       "joy"
     ]
   },
+  "sicv": {
+    "group": "invaders",
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
+  },
   "sidampkr": {
     "players": 1,
     "genres": [
@@ -153465,7 +153539,11 @@
     "controls": [
       "trackball"
     ],
-    "mechanical": true
+    "mechanical": true,
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "slimekun": {
     "players": 1,
@@ -160768,7 +160846,11 @@
     "controls": [
       "trackball"
     ],
-    "mechanical": true
+    "mechanical": true,
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "sstriker": {
     "players": 2,
@@ -161756,7 +161838,7 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-fbneo",
+      "emulator": "lr-mame",
       "rating": 5
     }
   },
@@ -161959,7 +162041,7 @@
     ],
     "emulation": {
       "emulator": "lr-mame2010",
-      "rating": 2
+      "rating": 1
     }
   },
   "steeltalg": {
@@ -172865,7 +172947,11 @@
         ],
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/triplhnt (en).pdf"
       }
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    }
   },
   "tripool": {
     "players": 2,
@@ -174176,7 +174262,11 @@
     "group": "jongpute",
     "languages": [
       "en"
-    ]
+    ],
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    }
   },
   "tts_l2": {
     "genres": [
@@ -179888,9 +179978,6 @@
       "rating": 5
     }
   },
-  "vsgradius": {
-    "orientation": "horizontal"
-  },
   "vsgradus": {
     "players": 2,
     "rating": 70,
@@ -179904,6 +179991,13 @@
     "orientation": "horizontal",
     "controls": [
       "joy"
+    ],
+    "emulation": {
+      "emulator": "lr-fbneo",
+      "rating": 5
+    },
+    "merge": [
+      "vsgradius"
     ]
   },
   "vsgshoe": {
