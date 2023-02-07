@@ -3474,7 +3474,7 @@
     "screen": {
       "orientation": "horizontal"
     },
-    "controls": [
+    "controls|override": [
       "joy"
     ],
     "emulation": {
@@ -9823,10 +9823,6 @@
     ],
     "languages": [
       "en"
-    ],
-    "controls": [
-      "joy",
-      "pointer"
     ]
   },
   "badapple": {
@@ -137794,10 +137790,7 @@
     ],
     "screen": {
       "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ]
+    }
   },
   "rackempp": {
     "genres": [
@@ -160765,10 +160758,7 @@
     ],
     "screen": {
       "orientation": "horizontal"
-    },
-    "controls": [
-      "mahjong"
-    ]
+    }
   },
   "shackled": {
     "players": 2,
@@ -189725,9 +189715,6 @@
     "screen": {
       "orientation": "horizontal"
     },
-    "controls": [
-      "only_buttons"
-    ],
     "merge": [
       "eyesdown"
     ]
@@ -189899,10 +189886,7 @@
     ],
     "screen": {
       "orientation": "horizontal"
-    },
-    "controls": [
-      "only_buttons"
-    ]
+    }
   },
   "v4ovrmn3": {
     "genres": [
@@ -189995,9 +189979,6 @@
     "screen": {
       "orientation": "horizontal"
     },
-    "controls": [
-      "only_buttons"
-    ],
     "merge": [
       "quidgrid"
     ]
@@ -190244,9 +190225,6 @@
     "screen": {
       "orientation": "horizontal"
     },
-    "controls": [
-      "only_buttons"
-    ],
     "merge": [
       "v4wizea"
     ]
