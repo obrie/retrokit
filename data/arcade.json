@@ -6578,7 +6578,7 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/area51 (en).pdf"
       }
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-mame2016",
       "rating": 5
     }
@@ -21319,8 +21319,11 @@
       "paddle"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "caterplr": {
@@ -29505,7 +29508,7 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/cryptklr (en).pdf"
       }
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-mame2010",
       "rating": 5
     }
@@ -32273,8 +32276,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "dangseed": {
@@ -45301,8 +45307,11 @@
       "joy"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "ewf": {
@@ -74835,7 +74844,7 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/jdredd (en).pdf"
       }
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-mame2010",
       "rating": 4
     }
@@ -99512,8 +99521,11 @@
       "joy"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "mag_xain": {
@@ -101947,7 +101959,7 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/maxforce (en).pdf"
       }
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-mame2016",
       "rating": 5
     }
@@ -102122,8 +102134,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "mayjin3": {
@@ -168018,8 +168033,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "spacfurybl": {
@@ -172618,8 +172636,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "starcrus": {
@@ -173354,8 +173375,11 @@
       "D"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "statriv2v": {
@@ -173381,8 +173405,11 @@
       "only_buttons"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "statsymb": {
@@ -183647,8 +183674,11 @@
       "joy"
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "topgame": {
@@ -183869,8 +183899,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "topsecex": {
@@ -185729,8 +185762,11 @@
       }
     ],
     "emulation": {
-      "emulator": "lr-mame0222",
+      "emulator": "lr-mame",
       "rating": 5
+    },
+    "emulation|override": {
+      "emulator": "lr-mame0222"
     }
   },
   "trivrus": {
