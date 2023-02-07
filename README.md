@@ -1265,7 +1265,8 @@ retrokit what it is.  That includes:
 * [louiehummv](https://retropie.org.uk/forum/topic/28693/a-workaround-for-the-northwest-drift-issue) for axis calibration fixes
 * [crcerror](https://github.com/crcerror/ES-generic-shutdown) for alternate NesPi safe shutdown design
 * [meleu](https://github.com/meleu/RetroPie-joystick-selection) for joystick selection reference implementation
-* [lightgun.tech](https://lightgun.tech/game-compatibility-list/) for lightgun configuration overrides
+* [Sinden Wiki / Widge-5](https://www.sindenwiki.org/wiki/Barebones_Compatibility) for lightgun configuration overrides
+* [barbudreamon](https://github.com/libretro/flycast/issues/136) for Naomi compatibility list
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
