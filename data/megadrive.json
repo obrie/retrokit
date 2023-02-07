@@ -1906,7 +1906,6 @@
     "genres": [
       "Driving",
       "Driving / Boat",
-      "Race",
       "Race"
     ],
     "manuals": [
@@ -3265,7 +3264,6 @@
     "genres": [
       "Driving",
       "Driving / Plane",
-      "Race",
       "Race"
     ]
   },
@@ -12729,7 +12727,6 @@
       "Fight",
       "Fight / 2.5D",
       "Motorcycle Race",
-      "Race",
       "Race"
     ],
     "manuals": [
@@ -13968,7 +13965,7 @@
     "genres": [
       "Platform"
     ],
-    "+genres": [
+    "genres|extra": [
       "Compilation"
     ]
   },
@@ -13979,7 +13976,7 @@
     "genres": [
       "Platform"
     ],
-    "+genres": [
+    "genres|extra": [
       "Compilation"
     ]
   },
@@ -13991,7 +13988,7 @@
       "Platform",
       "Platform / Run Jump Scrolling"
     ],
-    "+genres": [
+    "genres|extra": [
       "Compilation"
     ]
   },

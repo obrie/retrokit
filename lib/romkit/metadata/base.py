@@ -35,16 +35,21 @@ class BaseMetadata:
         data = self.get_data(machine)
         if data:
             value = data.get(self.name)
-            extended_value = data.get(f'+{self.name}')
 
-            if value is not None or extended_value is not None:
-                # Add to the original value (manual override)
-                if extended_value:
-                    if value:
+            # Look up other keys to merge in
+            merge_prefix = f"{self.name}|"
+            for key, extended_value in data.items():
+                if key.startswith(merge_prefix):
+                    if value is None:
+                        value = extended_value
+                    elif isinstance(value, list):
                         value = value + extended_value
+                    elif isinstance(value, dict):
+                        value = {**value, **extended_value}
                     else:
                         value = extended_value
 
+            if value is not None:
                 self.update(machine, value)
 
     # Updates the machine with the given value for this type of metadata

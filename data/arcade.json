@@ -127,7 +127,7 @@
       "paddle",
       "pedal"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -588,7 +588,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -1391,7 +1391,7 @@
       "joy",
       "keyboard"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -3502,7 +3502,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -3617,7 +3617,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -3925,7 +3925,7 @@
       "positional",
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     },
@@ -3946,7 +3946,7 @@
       "positional",
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     },
@@ -4861,7 +4861,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -5201,7 +5201,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -6072,7 +6072,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -6105,7 +6105,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -7262,7 +7262,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -8314,7 +8314,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -8759,7 +8759,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -9569,7 +9569,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -9935,7 +9935,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -10691,7 +10691,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -10710,7 +10710,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -10747,7 +10747,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -10774,7 +10774,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -10888,7 +10888,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -10906,7 +10906,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -11077,7 +11077,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -11340,7 +11340,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -14060,7 +14060,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -15929,7 +15929,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -16526,7 +16526,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -17449,7 +17449,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -19071,7 +19071,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -19296,7 +19296,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -19355,7 +19355,7 @@
       "pointer",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -20835,7 +20835,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -21848,7 +21848,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -21936,7 +21936,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -22189,7 +22189,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -22957,7 +22957,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -22981,10 +22981,10 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -23002,7 +23002,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -23059,7 +23059,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -24089,7 +24089,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -24331,7 +24331,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -25164,10 +25164,10 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -25537,7 +25537,7 @@
     "controls": [
       "paddle"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -26360,7 +26360,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -26378,7 +26378,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -26406,7 +26406,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -26719,7 +26719,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -26735,7 +26735,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -26809,7 +26809,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -26940,7 +26940,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -27088,7 +27088,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -27224,7 +27224,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -27458,7 +27458,7 @@
       "paddle",
       "pedal"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -27907,7 +27907,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -27949,7 +27949,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -28682,7 +28682,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     },
@@ -28712,7 +28712,7 @@
         "url": "https://archive.org/download/retrokit-manuals/arcade/arcade-original.zip/cvsgd (en).pdf"
       }
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -29121,7 +29121,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -30732,7 +30732,7 @@
     "controls": [
       "paddle"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -32019,10 +32019,10 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -32151,7 +32151,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -32312,7 +32312,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -32540,7 +32540,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -32557,7 +32557,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -32574,7 +32574,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -32591,7 +32591,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -32701,7 +32701,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -33120,7 +33120,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -33839,7 +33839,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -34400,7 +34400,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -34859,7 +34859,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -35672,7 +35672,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -35710,7 +35710,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -35727,7 +35727,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -35744,7 +35744,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -37023,7 +37023,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -37315,7 +37315,7 @@
       "pedal",
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -37334,7 +37334,7 @@
       "pedal",
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -37382,7 +37382,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -38616,7 +38616,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -41437,7 +41437,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -41877,7 +41877,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -42796,7 +42796,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -42814,7 +42814,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -42832,7 +42832,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -43260,7 +43260,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -46352,7 +46352,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -47282,7 +47282,7 @@
       "paddle",
       "pedal"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -47920,7 +47920,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -47939,7 +47939,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -48694,7 +48694,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -50090,7 +50090,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -50707,7 +50707,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50738,7 +50738,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50800,7 +50800,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50818,7 +50818,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50836,7 +50836,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50854,7 +50854,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50872,7 +50872,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50890,7 +50890,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -50908,7 +50908,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -50937,7 +50937,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -51035,7 +51035,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -51052,7 +51052,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -52754,7 +52754,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -52784,7 +52784,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -53482,7 +53482,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -53820,7 +53820,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -55653,7 +55653,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -55677,7 +55677,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -55708,7 +55708,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "merge": [
@@ -55877,7 +55877,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -55895,7 +55895,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -55913,7 +55913,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -56113,7 +56113,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -56266,10 +56266,10 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -56538,7 +56538,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -56886,7 +56886,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -59295,7 +59295,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -59444,7 +59444,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -59643,7 +59643,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -60060,7 +60060,7 @@
     "controls": [
       "keyboard"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -60150,7 +60150,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -60167,10 +60167,10 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -60188,7 +60188,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -60201,7 +60201,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -60232,7 +60232,7 @@
     "languages": [
       "ja"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -62249,7 +62249,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -62294,7 +62294,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -63247,7 +63247,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -63389,7 +63389,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -69122,7 +69122,7 @@
       "paddle",
       "pedal"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -69522,7 +69522,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -69724,7 +69724,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -69935,7 +69935,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -70702,7 +70702,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -70734,7 +70734,7 @@
     "controls": [
       "only_buttons"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -71982,7 +71982,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -72228,7 +72228,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -72509,7 +72509,7 @@
     "controls": [
       "keyboard"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -72632,7 +72632,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -74248,7 +74248,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -74291,7 +74291,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -75033,7 +75033,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -75461,7 +75461,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -75911,7 +75911,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -76190,7 +76190,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -76828,7 +76828,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -77234,7 +77234,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -77266,7 +77266,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -77320,7 +77320,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -77365,7 +77365,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -77985,7 +77985,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -78148,7 +78148,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -78355,7 +78355,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -78481,7 +78481,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -78941,7 +78941,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -78959,7 +78959,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "merge": [
@@ -78979,7 +78979,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -79304,7 +79304,7 @@
       "pedal",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -79455,10 +79455,10 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -79476,7 +79476,7 @@
     "controls": [
       "keyboard"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -93008,7 +93008,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -93025,7 +93025,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "merge": [
@@ -94318,7 +94318,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -94387,7 +94387,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -94482,10 +94482,10 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -94876,7 +94876,7 @@
     "controls": [
       "only_buttons"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -94979,7 +94979,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -95457,7 +95457,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -95554,7 +95554,7 @@
       "paddle",
       "pedal"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -95711,7 +95711,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -95787,7 +95787,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -95866,7 +95866,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -96132,7 +96132,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -96204,7 +96204,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -96779,7 +96779,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -96797,7 +96797,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -100340,7 +100340,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -100444,10 +100444,10 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -100576,7 +100576,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -102721,7 +102721,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -103995,7 +103995,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -104013,7 +104013,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -104057,7 +104057,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -104081,7 +104081,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -104105,7 +104105,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     },
@@ -104511,7 +104511,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -106709,7 +106709,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -107189,10 +107189,10 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -108345,7 +108345,7 @@
       "dial",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -108677,7 +108677,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -108766,7 +108766,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -109085,7 +109085,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -109490,7 +109490,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -109674,7 +109674,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -109700,7 +109700,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -109734,7 +109734,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -110318,7 +110318,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -110378,7 +110378,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -110819,7 +110819,7 @@
     "controls": [
       "only_buttons"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -110836,7 +110836,7 @@
     "controls": [
       "only_buttons"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -112804,7 +112804,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -112964,7 +112964,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -113572,7 +113572,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -119975,7 +119975,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -121204,7 +121204,7 @@
     "controls": [
       "keyboard"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -121222,7 +121222,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -122070,7 +122070,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -122781,7 +122781,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -123590,7 +123590,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -124061,7 +124061,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -124242,7 +124242,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -124260,7 +124260,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -124388,7 +124388,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -124453,7 +124453,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -124486,7 +124486,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -124515,7 +124515,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -125062,7 +125062,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -125080,7 +125080,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     },
@@ -126164,7 +126164,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -127341,7 +127341,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -128295,7 +128295,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -128313,7 +128313,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -128875,7 +128875,7 @@
     "languages": [
       "en"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -128893,7 +128893,7 @@
       "joy",
       "trackball"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -129015,10 +129015,10 @@
       "paddle",
       "pedal"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -129067,7 +129067,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -129600,7 +129600,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -129633,7 +129633,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -130965,7 +130965,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -131124,7 +131124,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -131427,7 +131427,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -133978,7 +133978,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -133996,7 +133996,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -134886,7 +134886,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -134948,7 +134948,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -134966,7 +134966,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -135210,7 +135210,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -148579,7 +148579,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -148597,7 +148597,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -149871,7 +149871,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -150096,7 +150096,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -150115,7 +150115,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -150149,7 +150149,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -150346,7 +150346,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -150364,7 +150364,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -150382,7 +150382,7 @@
     "controls": [
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -150583,7 +150583,7 @@
     "controls": [
       "mahjong"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     }
@@ -150888,7 +150888,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -151207,7 +151207,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -151250,7 +151250,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -151361,7 +151361,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -151446,7 +151446,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 1
     },
@@ -151586,7 +151586,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -151726,7 +151726,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -151743,7 +151743,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -152658,7 +152658,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -153346,7 +153346,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -156613,7 +156613,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -156778,7 +156778,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -157109,7 +157109,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -157702,7 +157702,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -159022,7 +159022,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -159045,7 +159045,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -159730,7 +159730,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -159775,7 +159775,7 @@
       "joy",
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -159793,7 +159793,7 @@
       "joy",
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -159810,7 +159810,7 @@
     "controls": [
       "only_buttons"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -159839,7 +159839,7 @@
     "controls": [
       "only_buttons"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -160059,7 +160059,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -160104,7 +160104,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -161146,7 +161146,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -161820,7 +161820,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -166052,7 +166052,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -166415,7 +166415,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -167721,7 +167721,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -167750,7 +167750,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -169174,7 +169174,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -169314,7 +169314,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -169373,7 +169373,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -169569,7 +169569,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -169602,7 +169602,7 @@
       "joy",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -169622,7 +169622,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -169636,7 +169636,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -171996,7 +171996,7 @@
       "only_buttons",
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -172732,7 +172732,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -172937,7 +172937,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -173298,7 +173298,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -173487,7 +173487,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -174088,7 +174088,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -174613,7 +174613,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -174786,7 +174786,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -175977,7 +175977,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -176001,7 +176001,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -177807,7 +177807,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -177936,7 +177936,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -177953,7 +177953,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -177970,7 +177970,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -177987,7 +177987,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -179193,7 +179193,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -179356,7 +179356,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -179529,7 +179529,7 @@
     "controls": [
       "keyboard"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -179686,7 +179686,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -179928,7 +179928,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "merge": [
@@ -180013,7 +180013,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -181628,7 +181628,7 @@
       "en"
     ],
     "orientation": "horizontal",
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -182219,7 +182219,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -182418,7 +182418,7 @@
     "controls": [
       "stick"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "emulation": {
@@ -184347,7 +184347,7 @@
     "controls": [
       "joy"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 3
     }
@@ -184390,7 +184390,7 @@
       "pedal",
       "stick"
     ],
-    "emulation": {
+    "emulation|override": {
       "emulator": "lr-flycast",
       "rating": 5
     }
@@ -184409,7 +184409,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -184499,7 +184499,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -185626,7 +185626,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -185643,7 +185643,7 @@
     "controls": [
       "joy"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
@@ -186443,7 +186443,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -186476,7 +186476,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "manuals": [
@@ -186875,7 +186875,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ],
     "buttons": [
@@ -187026,7 +187026,7 @@
     "controls": [
       "pointer"
     ],
-    "+controls": [
+    "controls|extra": [
       "lightgun"
     ]
   },
