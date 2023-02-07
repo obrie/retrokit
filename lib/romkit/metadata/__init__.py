@@ -11,7 +11,7 @@ from romkit.metadata.languages import LanguagesMetadata
 from romkit.metadata.manuals import ManualsMetadata
 from romkit.metadata.mechanical import MechanicalMetadata
 from romkit.metadata.media import MediaMetadata
-from romkit.metadata.orientation import OrientationMetadata
+from romkit.metadata.screen import ScreenMetadata
 from romkit.metadata.peripherals import PeripheralsMetadata
 from romkit.metadata.players import PlayersMetadata
 from romkit.metadata.rating import RatingMetadata
@@ -30,11 +30,11 @@ __all_metadata__ = [
     ManualsMetadata,
     MechanicalMetadata,
     MediaMetadata,
-    OrientationMetadata,
     PeripheralsMetadata,
     PlayersMetadata,
     RatingMetadata,
     RenamesMetadata,
+    ScreenMetadata,
     SeriesMetadata,
     TagsMetadata,
 ]

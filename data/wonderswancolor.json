@@ -13,7 +13,9 @@
     "genres": [
       "Adventure"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -180,7 +182,9 @@
     "genres": [
       "Strategy"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -448,7 +452,9 @@
       "Puzzle-Game",
       "Simulation"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "tags": [
       "English-Friendly"
     ]
@@ -557,7 +563,9 @@
       "Action",
       "Shooter"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -669,7 +677,9 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "tags": [
       "English-Friendly"
     ]
@@ -680,7 +690,9 @@
     "genres": [
       "Adventure"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -728,7 +740,9 @@
     "genres": [
       "Adventure"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -984,7 +998,9 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "manuals": [
       {
         "languages": [
@@ -1067,7 +1083,9 @@
     "genres": [
       "Puzzle-Game"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "tags": [
       "English-Friendly"
     ]
@@ -1173,7 +1191,9 @@
       "Sports",
       "Sports / Golf"
     ],
-    "orientation": "vertical",
+    "screen": {
+      "orientation": "vertical"
+    },
     "tags": [
       "English-Friendly"
     ]
