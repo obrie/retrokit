@@ -1,26 +1,22 @@
 {
   "esb": {
     "emulation": {
-      "emulator": "lr-fbneo",
-      "rating": 5
+      "emulator": "lr-fbneo"
     }
   },
   "jpark": {
-    "emulation": {
-      "emulator": "lr-fbneo",
-      "rating": 5
+    "emulation|lightgun": {
+      "emulator": "lr-fbneo"
     }
   },
   "luckywld": {
-    "emulation": {
-      "emulator": "lr-mame",
-      "rating": 5
+    "emulation|lightgun": {
+      "emulator": "lr-mame"
     }
   },
   "starwars": {
-    "emulation": {
-      "emulator": "lr-fbneo",
-      "rating": 5
+    "emulation|lightgun": {
+      "emulator": "lr-fbneo"
     }
   }
 }
