@@ -47,6 +47,9 @@ class Machine:
 
         # External metadata
         group_name: Optional[str] = None,
+        year: Optional[int] = None,
+        developer: Optional[str] = None,
+        publisher: Optional[str] = None,
         genres: Set[str] = None,
         collections: Set[str] = None,
         tags: Set[str] = None,
@@ -87,6 +90,9 @@ class Machine:
         self.runnable = runnable
 
         # External attributes
+        self.year = year
+        self.developer = developer
+        self.publisher = publisher
         self.genres = genres or set()
         self.collections = collections or set()
         self.tags = tags or set()
@@ -485,6 +491,9 @@ class Machine:
             'favorite': self.favorite,
 
             # External metadata
+            'year': self.year,
+            'developer': self.developer,
+            'publisher': self.publisher,
             'genres': self.genres,
             'collections': self.collections,
             'languages': self.languages,

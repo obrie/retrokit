@@ -16,6 +16,7 @@ from romkit.filters.orientation import OrientationFilter
 from romkit.filters.parent import CloneFilter, ParentNameFilter, ParentTitleFilter
 from romkit.filters.peripheral import PeripheralFilter
 from romkit.filters.rating import RatingFilter
+from romkit.filters.release import DeveloperFilter, PublisherFilter, YearFilter
 from romkit.filters.romset import ROMSetFilter
 from romkit.filters.system import SystemFilter
 from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilter, TagFilter, SeriesFilter
@@ -49,6 +50,9 @@ __all_filters__ = [
     ManualFilter,
     MediaFilter,
     PeripheralFilter,
+    YearFilter,
+    DeveloperFilter,
+    PublisherFilter,
     ParentNameFilter,
     ParentTitleFilter,
     FilesystemFilter,
