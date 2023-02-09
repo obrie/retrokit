@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from romkit.resources.actions.base import BaseAction
 
+import dateutil.parser
 import lxml.etree
 import tempfile
 from pathlib import Path, PureWindowsPath
@@ -40,6 +41,20 @@ class ExodosToDat(BaseAction):
 
                             # Add ROM
                             element.append(lxml.etree.Element('rom', name=f'{name}.zip'))
+
+                            # Add Year
+                            release_date_tag = game.find('ReleaseDate')
+                            if release_date_tag is not None:
+                                year = lxml.etree.Element('year')
+                                year.text = str(dateutil.parser.parse(release_date_tag.text).year)
+                                element.append(year)
+
+                            # Add Manufacturer
+                            developer_tag = game.find('Developer')
+                            if developer_tag is not None:
+                                manufacturer = lxml.etree.Element('manufacturer')
+                                manufacturer.text = developer_tag.text
+                                element.append(manufacturer)
 
                             file.write(element, pretty_print=True)
                             element = None

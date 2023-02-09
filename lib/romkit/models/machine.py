@@ -145,6 +145,16 @@ class Machine:
         if comment is not None:
             comment = comment.text
 
+        # Additional metadata
+        year = None
+        year_tag = xml.find('year')
+        if year_tag is not None and year_tag.text.isnumeric():
+            year = int(year_tag.text)
+
+        manufacturer = xml.find('manufacturer')
+        if manufacturer is not None:
+            manufacturer = manufacturer.text
+
         machine = cls(
             romset,
             name,
@@ -159,6 +169,8 @@ class Machine:
             sample_name=sample_name,
             device_names=device_names,
             sourcefile=xml.get('sourcefile'),
+            year=year,
+            developer=manufacturer,
         )
 
         # Disks
