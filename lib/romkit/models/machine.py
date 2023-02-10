@@ -69,6 +69,14 @@ class Machine:
         self.name = name
         self.alt_name = name
 
+        # Keeps track of any other machines that are needed to run this one, such as:
+        # * Parent
+        # * BIOS
+        # * Device
+        # 
+        # Maps name -> Machine
+        self.dependent_machines = {}
+
         # Internal metadata
         self.description = description or name
         self.comment = comment
@@ -359,14 +367,14 @@ class Machine:
     @property
     def parent_machine(self) -> Optional[Machine]:
         if self.parent_name:
-            return self.romset.machine(self.parent_name)
+            return self.dependent_machines[self.parent_name]
 
     # BIOS machine, if applicable, as defined either in this machine or in the
     # parent machine
     @property
     def bios_machine(self) -> Optional[Machine]:
         if self.bios_name:
-            return self.romset.machine(self.bios_name)
+            return self.dependent_machines[self.bios_name]
         elif self.parent_machine and self.parent_machine.bios_machine:
             return self.parent_machine.bios_machine
 
@@ -375,7 +383,7 @@ class Machine:
     def device_machines(self) -> List[Machine]:
         machines = []
         for device_name in self.device_names:
-            machine = self.romset.machine(device_name)
+            machine = self.dependent_machines.get(device_name)
             if machine:
                 machines.append(machine)
 
@@ -584,7 +592,7 @@ class Machine:
             self.install_from(self.parent_machine, self.roms_from_parent)
 
         # ROMs: BIOS
-        if self.bios_machine:
+        if self.bios_machine and self.bios_machine.roms:
             self.install_from(self.bios_machine, self.bios_machine.roms)
 
         if self.resource:
@@ -592,7 +600,8 @@ class Machine:
 
         # Devices
         for device_machine in self.device_machines:
-            self.install_from(device_machine, device_machine.roms)
+            if device_machine.roms:
+                self.install_from(device_machine, device_machine.roms)
 
         # Disks
         for disk in (self.disks_from_self | self.disks_from_parent):

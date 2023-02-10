@@ -12,8 +12,9 @@ import shlex
 import time
 import traceback
 from copy import copy
+from multiprocessing import Pool
 from pathlib import Path
-from typing import Generator, List, Optional, Tuple
+from typing import Dict, Generator, List, Optional, Tuple
 
 # Maximum number of times we'll attempt to install a machine
 INSTALL_MAX_ATTEMPTS = os.getenv('INSTALL_MAX_ATTEMPTS', 3)
@@ -47,9 +48,6 @@ class BaseSystem:
             for dir_config in config['roms']['dirs']
         ]
 
-        # Priority order for choosing a machine (e.g. 1G1R)
-        self.sorted_machines = SortableSet.from_json(config['roms'].get('priority', {}), self.supported_sorters)
-
         # Favorites (defaults to false if no favorites are provided)
         self.favorites_set = FilterSet.from_json(config['roms'].get('favorites', {}), config, self.supported_filters, log=False)
         self.favorites_set.default_on_empty = False
@@ -62,6 +60,11 @@ class BaseSystem:
 
         # Filters
         self.filter_set = FilterSet.from_json(config['roms'].get('filters', {}), config, self.supported_filters)
+
+        # Track machines that have been filtered / prioritized
+        self._loaded = False
+        self.machines = SortableSet.from_json(self.config['roms'].get('priority', {}), self.supported_sorters)
+        self.prioritized_machines = []
 
     # Looks up the system from the given name
     @classmethod
@@ -78,56 +81,45 @@ class BaseSystem:
     def context_for(self, machine: Machine) -> dict:
         return {}
 
+    # Iterates over the romsets available to this system
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
-        # Load romsets
         for romset_name, romset_config in self.config['romsets'].items():
             romset_config['name'] = romset_name
             yield ROMSet.from_json(romset_config, system=self, downloads=self.download_config)
 
-    def list(self) -> List[Machine]:
-        # Machines guaranteed to be installed
-        self.sorted_machines.clear()
+    # Sorts the machines available in each romset
+    def load(self, force: bool = False) -> bool:
+        if self._loaded and not force:
+            return False
+
+        self.machines.clear()
+        self.prioritized_machines.clear()
 
         for romset in self.iter_romsets():
-            # Machines that are installable or required by installable machines
-            machines_to_track = set()
+            for machine, allow_reason in self._filter_romset(romset).items():
+                if allow_reason == FilterReason.OVERRIDE:
+                    self.machines.override(machine)
+                else:
+                    self.machines.add(machine)
 
-            for machine in romset.iter_machines():
-                # Update based on metadata database
-                self.metadata_set.update(machine)
-
-                allow_reason = self.filter_set.allow(machine)
-                if allow_reason:
-                    # Track this machine and all machines it depends on
-                    machines_to_track.update(machine.dependent_machine_names)
-                    machine.track()
-
-                    # Force the machine to be installed if it was allowed by an override
-                    if allow_reason == FilterReason.OVERRIDE:
-                        self.sorted_machines.override(machine)
-                    else:
-                        self.sorted_machines.add(machine)
-                elif not machine.is_clone:
-                    # We track all parent/bios machines in case they're needed as a dependency
-                    # in future machines.  We'll confirm later on with `machines_to_track`.
-                    machine.track()
-
-            # Free memory by removing machines we didn't need to keep
-            for name in romset.machine_names:
-                if name not in machines_to_track:
-                    romset.remove(name)
-
-        # Get the final, sorted/prioritized list of machines
-        machines_to_install = self.sorted_machines.prioritize()
+        self.prioritized_machines = self.machines.prioritize()
 
         # Update favorites / collections
-        for machine in machines_to_install:
-            # Set whether the machine is a favorite
+        for machine in self.prioritized_machines:
             machine.favorite = self.favorites_set.allow(machine) == FilterReason.ALLOW
             machine.collections.update(self.collection_set.list(machine))
 
-        # Sort by name
-        return sorted(machines_to_install, key=lambda machine: machine.name)
+        self._loaded = True
+        return True
+
+    # Filters the machines in the given romset
+    def _filter_romset(self, romset: ROMSet) -> Dict[Machine, FilterReason]:
+        return romset.filter_machines(self.filter_set, self.metadata_set)
+
+    # Generates the list of machines to target, based are predefined priorities
+    def list(self) -> List[Machine]:
+        self.load()
+        return sorted(self.prioritized_machines, key=lambda machine: machine.name)
 
     # Installs all of the filtered machines
     def install(self) -> None:
@@ -139,7 +131,7 @@ class BaseSystem:
         for machine in machines:
             self.install_machine(machine)
 
-        self.organize(machines)
+        self.organize()
 
     # Installs the given machine and returns true/false depending on whether the
     # install was successful
@@ -157,35 +149,25 @@ class BaseSystem:
 
     # Organizes the directory structure based on the current list of valid
     # installed machines
-    def organize(self, machines: Optional[List[Machine]] = None) -> None:
-        if not machines:
-            machines = self.list()
-        
-        valid_machines = []
-        for machine in machines:
-            if machine.is_valid_nonmerged():
-                valid_machines.append(machine)
-            else:
+    def organize(self) -> None:
+        self.load()
+        self.reset_directories()
+
+        for machine in self.prioritized_machines:
+            if not machine.is_valid_nonmerged():
                 logging.warn(f'[{machine.name}] is not a valid non-merged ROM')
+                continue
 
-        self.reset()
-        self.enable(valid_machines)
-
-    # Reset the visible set of machines
-    def reset(self) -> None:
-        for system_dir in self.dirs:
-            system_dir.reset()
-
-    # Enables the given list of machines so they're visible
-    def enable(self, machines: List[Machine]) -> None:
-        for machine in machines:
-            # Machine is valid: Enable
+            # Enable machine in directories that are filtering for it
             machine.clean()
-
             for system_dir in self.dirs:
-                # Enable machine in directories that are filtering for it
                 if system_dir.allow(machine):
                     self.enable_machine(machine, system_dir)
+
+    # Reset the visible set of machines
+    def reset_directories(self) -> None:
+        for system_dir in self.dirs:
+            system_dir.reset()
 
     # Enables the given machine in the given directory
     def enable_machine(self, machine: Machine, system_dir: SystemDir) -> None:

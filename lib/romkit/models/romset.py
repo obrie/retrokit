@@ -57,7 +57,6 @@ class ROMSet:
         else:
             self.datlist = None
 
-        self.machines = {}
         self.load()
 
     # Builds a ROMSet from the given JSON data
@@ -75,15 +74,6 @@ class ROMSet:
             filters=json.get('filters'),
             **kwargs,
         )
-
-    # Names of machines in this rom set
-    @property
-    def machine_names(self) -> List(str):
-        return list(self.machines)
-
-    # Looks up the machine with the given name
-    def machine(self, name: str) -> Optional[Machine]:
-        return self.machines.get(name)
 
     # Whether this romset has defined the given resource
     def has_resource(self, name: str) -> bool:
@@ -105,15 +95,6 @@ class ROMSet:
         if self.dat:
             self.dat.install()
 
-    # Tracks the machine so that it can be referenced at a later point
-    def track(self, machine: Machine) -> None:
-        self.machines[machine.name] = machine
-
-    # Removes the machine with the given name
-    def remove(self, machine_name: str) -> None:
-        if machine_name in self.machines:
-            del self.machines[machine_name]
-
     # Looks up the machines in the dat file
     def iter_machines(self) -> Generator[None, Machine, None]:
         if self.datlist:
@@ -132,3 +113,33 @@ class ROMSet:
                     yield machine
                 
                 element.clear()
+
+    # Applies the given set of filters against this romset's list of machines.
+    # 
+    # This returns the machines that passed the filters and the reason why
+    # the filter applied.
+    def filter_machines(self, filter_set: FilterSet, metadata_set: MetadataSet) -> Dict[Machine, FilterReason]:
+        results = {}
+        dependent_machines = {}
+
+        for machine in self.iter_machines():
+            # Update based on metadata database
+            metadata_set.update(machine)
+
+            allow_reason = filter_set.allow(machine)
+            if allow_reason:
+                dependent_machines[machine.name] = machine
+                results[machine] = allow_reason
+            elif not machine.is_clone:
+                # We track all parent/bios/device machines in case they're needed as a dependency
+                # in future machines.
+                dependent_machines[machine.name] = machine
+
+        # Update the filtered machines with the dependent machines they need
+        # in order to run
+        for machine in results.keys():
+            for dependency_name in machine.dependent_machine_names:
+                if dependency_name in dependent_machines:
+                    machine.dependent_machines[dependency_name] = dependent_machines[dependency_name]
+
+        return results
