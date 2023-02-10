@@ -122,6 +122,11 @@ class Machine:
 
         self._resource = None
 
+    # Whether this machine is installable
+    @staticmethod
+    def is_installable(xml: lxml.etree.ElementBase) -> bool:
+        return (xml.get('isbios') != 'true' and xml.get('isdevice') != 'true') or xml.find('rom') is not None
+
     @classmethod
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
         name = xml.get('name')
@@ -374,7 +379,7 @@ class Machine:
     @property
     def bios_machine(self) -> Optional[Machine]:
         if self.bios_name:
-            return self.dependent_machines[self.bios_name]
+            return self.dependent_machines.get(self.bios_name)
         elif self.parent_machine and self.parent_machine.bios_machine:
             return self.parent_machine.bios_machine
 
