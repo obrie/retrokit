@@ -21,8 +21,8 @@ class SortableSet:
         # Tracks machines associated with a specific group name
         self.groups = defaultdict(list)
 
-        # Groups that have been explicitly overridden by filters
-        self.overrides = set()
+        # Tracks overridden groups
+        self.overrides = defaultdict(list)
 
         # List of sort methods currently in use
         self.sorters = []
@@ -77,7 +77,7 @@ class SortableSet:
     # given group
     def override(self, machine: Machine) -> None:
         self.add(machine)
-        self.overrides.add(machine.group_name)
+        self.overrides[machine.group_name].append(machine)
 
     # Returns the list of all machines
     def all(self) -> List[Machine]:
@@ -91,9 +91,10 @@ class SortableSet:
             machines = []
             groups = self.groups.copy()
 
-            # Add overrides
-            for group_name in self.overrides:
-                machines.extend(groups[group_name])
+            # Add overrides, ignoring anything else that was in the same
+            # override group
+            for group_name, override_machines in self.overrides.items():
+                machines.extend(override_machines)
                 del groups[group_name]
 
             # Add remaining prioritized groups
@@ -109,7 +110,7 @@ class SortableSet:
 
                 machines = self.__prioritize_groups(groups_by_title)
         else:
-            machines = [machine for machines in self.groups.values() for machine in machines]
+            machines = self.all()
 
         return machines
 

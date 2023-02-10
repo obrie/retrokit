@@ -76,16 +76,19 @@ class FilterSet:
             return self.default_on_empty
 
         allowed_by_override = False
+        allowed_by_override_filters = set()
         for filter in self.overrides:
             if filter.allow(machine):
                 allowed_by_override = True
-                allowed_by_override_filter = filter.name
-                break
+                allowed_by_override_filters.add(filter.name)
+
+                if filter.name == 'names':
+                    break
         
         allowed = all((allowed_by_override and not filter.apply_to_overrides) or filter.allow(machine) for filter in self.filters)
 
         if allowed:
-            if allowed_by_override and allowed_by_override_filter == 'name':
+            if allowed_by_override and 'names' in allowed_by_override_filters:
                 # Only explicit names will override everything else, including 1G1R
                 return FilterReason.OVERRIDE
             else:
