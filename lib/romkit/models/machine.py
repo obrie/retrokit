@@ -50,6 +50,7 @@ class Machine:
         year: Optional[int] = None,
         developer: Optional[str] = None,
         publisher: Optional[str] = None,
+        age_rating: Optional[str] = None,
         genres: Set[str] = None,
         collections: Set[str] = None,
         tags: Set[str] = None,
@@ -93,6 +94,7 @@ class Machine:
         self.year = year
         self.developer = developer
         self.publisher = publisher
+        self.age_rating = age_rating
         self.genres = genres or set()
         self.collections = collections or set()
         self.tags = tags or set()
@@ -506,6 +508,7 @@ class Machine:
             'year': self.year,
             'developer': self.developer,
             'publisher': self.publisher,
+            'age_rating': self.age_rating,
             'genres': self.genres,
             'collections': self.collections,
             'languages': self.languages,

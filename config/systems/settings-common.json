@@ -81,6 +81,21 @@
         "filters": {
           "tags": ["party"]
         }
+      },
+      "Kid-Friendly": {
+        "filters": {
+          "age_ratings": [
+            "1",
+            "3",
+            "6",
+            "7",
+            "8",
+            "9",
+            "E",
+            "EC",
+            "KA"
+          ]
+        }
       }
     }
   }

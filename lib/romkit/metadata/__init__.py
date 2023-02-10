@@ -1,6 +1,7 @@
 from romkit.metadata.base import BaseMetadata
 from romkit.metadata.metadata_set import MetadataSet
 
+from romkit.metadata.age_rating import AgeRatingMetadata
 from romkit.metadata.buttons import ButtonsMetadata
 from romkit.metadata.category import CategoryMetadata
 from romkit.metadata.controls import ControlsMetadata
@@ -24,6 +25,7 @@ from romkit.metadata.year import YearMetadata
 
 __all_metadata__ = [
     GroupMetadata,
+    AgeRatingMetadata,
     ButtonsMetadata,
     CategoryMetadata,
     ControlsMetadata,

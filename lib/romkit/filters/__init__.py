@@ -1,6 +1,7 @@
 from romkit.filters.base import BaseFilter
 from romkit.filters.filter_set import FilterReason, FilterSet
 
+from romkit.filters.age_rating import AgeRatingFilter
 from romkit.filters.bios import BIOSFilter, RunnableFilter
 from romkit.filters.control import ControlFilter, PlayerFilter
 from romkit.filters.description import FlagFilter, DescriptionFilter
@@ -53,6 +54,7 @@ __all_filters__ = [
     YearFilter,
     DeveloperFilter,
     PublisherFilter,
+    AgeRatingFilter,
     ParentNameFilter,
     ParentTitleFilter,
     FilesystemFilter,
