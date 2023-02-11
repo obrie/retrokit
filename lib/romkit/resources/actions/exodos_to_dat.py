@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from romkit.resources.actions.base import BaseAction
 
-import dateutil.parser
 import lxml.etree
 import tempfile
 from pathlib import Path, PureWindowsPath
@@ -46,7 +45,7 @@ class ExodosToDat(BaseAction):
                             release_date_tag = game.find('ReleaseDate')
                             if release_date_tag is not None:
                                 year = lxml.etree.Element('year')
-                                year.text = str(dateutil.parser.parse(release_date_tag.text).year)
+                                year.text = release_date_tag.text[0:4]
                                 element.append(year)
 
                             # Add Manufacturer
