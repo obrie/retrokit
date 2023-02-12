@@ -2,7 +2,10 @@
   "1943 Kai": {
     "id": "1dfd11c58a004bacf9a8b636534e43795d2b9c65",
     "players": 2,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1991,
+    "developer": "Capcom",
+    "publisher": "Naxat Soft",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -12,6 +15,9 @@
     "id": "5b8b9acabfef7fc9b12dde502549d6af9a606608",
     "players": 4,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "NEC",
+    "publisher": "NEC",
     "genres": [
       "Board game"
     ]
@@ -20,6 +26,9 @@
     "id": "2eb78ebdcd466f8e4e7fde937aa8734dede2b779",
     "players": 4,
     "rating": 0.3,
+    "year": 1992,
+    "developer": "Hacker International",
+    "publisher": "Games Express",
     "genres": [
       "Casino"
     ]
@@ -27,7 +36,10 @@
   "Aero Blasters": {
     "id": "dc91321bf5947b0ae62217e8c60a1796249c095d",
     "players": 2,
-    "rating": 0.7,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -44,7 +56,10 @@
   "After Burner II": {
     "id": "8196bdf03d623f78dda1bdd23aef0e266c7972bc",
     "players": 1,
-    "rating": 0.8,
+    "rating": 0.75,
+    "year": 1990,
+    "developer": "SEGA",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shooter"
@@ -54,10 +69,14 @@
     "id": "bf31d4569e628cf1cbc17b6ef8e083fffef5af47",
     "players": 1,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -77,10 +96,14 @@
     "id": "fa4abae8878818c09f0a59189a04aef94ecf7db5",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Compile",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Pinball"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -102,12 +125,16 @@
   "Andre Panza Kick Boxing": {
     "id": "180a3af4b4a908a64b48d2931aa5284dd5de4472",
     "players": 2,
-    "rating": 0.25,
+    "rating": 0.6,
+    "year": 1991,
+    "developer": "Futura",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Fight",
       "Sports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -121,23 +148,33 @@
     "id": "7b142b59aefe4216aaa08b1b5397b943a9760b42",
     "players": 2,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "West One",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Appare! Gateball": {
     "id": "95e150182cbb43eef1f0f29e5c6223c6b593a678",
     "players": 2,
     "rating": 0.8,
+    "year": 1988,
+    "developer": "West One",
+    "publisher": "Hudson",
     "genres": [
       "Sports"
     ]
   },
   "Armed F": {
     "id": "bd1175c3cb724c4c29b2cf11e95a8901049b32c3",
-    "players": 2,
+    "players": 1,
     "rating": 0.55,
+    "year": 1990,
+    "developer": "Manjyudo",
+    "publisher": "Pack In Video",
     "genres": [
       "Shoot'em Up"
     ]
@@ -145,31 +182,45 @@
   "Artist Tool": {
     "id": "d5031f13dfa6bb08f848155f851807aa5d1ea4ec",
     "players": 1,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "N/A"
     ]
   },
   "Atomic Robo-Kid Special": {
     "id": "a26f0fe6f3e561c52c7affd773b965bfb7e448fc",
-    "players": 2,
-    "rating": 0.65,
+    "players": 1,
+    "rating": 0.7,
+    "year": 1990,
+    "developer": "UPL",
+    "publisher": "UPL",
     "genres": [
       "Shooter"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Ballistix": {
     "id": "555150befcc9c6df1aee314e307bb7a8e03d26a7",
     "players": 2,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Reflections Interactive",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Sports"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Bari Bari Densetsu": {
     "id": "52dff4cd9d7120e46868619e51e65c14939b93ec",
     "players": 2,
     "rating": 0.8,
+    "year": 1989,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Driving",
       "Race"
@@ -179,6 +230,9 @@
     "id": "1ed196717304a3e17695e8800b17ab4a3ede4feb",
     "players": 1,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "ZAP",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -187,7 +241,10 @@
   "Batman": {
     "id": "42e4e9fde5b6898cb665b198858ae0de24c20a0c",
     "players": 1,
-    "rating": 0.6,
+    "rating": 0.7,
+    "year": 1990,
+    "developer": "Sunsoft",
+    "publisher": "Sunsoft",
     "genres": [
       "Action",
       "Platform"
@@ -195,8 +252,11 @@
   },
   "Battle Lode Runner": {
     "id": "01c20760bfc6d502391285cbff77da9e39e3ad3a",
-    "players": 1,
+    "players": 5,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Br\u00f8derbund Software",
+    "publisher": "Br\u00f8derbund Software",
     "genres": [
       "Action",
       "Puzzle-Game"
@@ -215,12 +275,16 @@
   },
   "Battle Royale": {
     "id": "e5a93c507348686dde4d4e59a77251fba75eb54c",
-    "players": 4,
+    "players": 5,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "Enerdyne Technologies",
+    "publisher": "NEC",
     "genres": [
       "Fight",
       "Sports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -234,6 +298,9 @@
     "id": "89816d64c54f85cdb032a1a285a2b94a87753aa7",
     "players": 1,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Sunsoft",
+    "publisher": "Sunsoft",
     "genres": [
       "Role playing games"
     ]
@@ -241,20 +308,28 @@
   "Bikkuriman World": {
     "id": "d3aa4568d4452ef963a0951bd5dfab8bb9cd286f",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.7,
+    "year": 1987,
+    "developer": "Westone",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Action / Adventure",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Blazing Lazers": {
     "id": "e19f111373eb88608e1c5274ec27d9e04c0e5e51",
     "players": 1,
     "rating": 0.8,
+    "year": 1989,
+    "developer": "Compile",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -268,11 +343,15 @@
     "id": "ee9a4a2cb666b601fd9276c4507eb0df2a72e8b1",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Adventure",
       "Shooter",
       "Shooter / Run and Gun"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -285,7 +364,10 @@
   "Bodycon Quest II": {
     "id": "85df4f4f674836d9bd6262e3fe5974518c8421bd",
     "players": 1,
-    "rating": 0.4,
+    "rating": 0.35,
+    "year": 1993,
+    "developer": "Hacker International",
+    "publisher": "Games Express",
     "genres": [
       "Role playing games"
     ]
@@ -294,10 +376,14 @@
     "id": "d3212fa08b3d4c7e1b569e8df7b3bd5ade00d7bf",
     "players": 5,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Turbo Technologies, Inc.",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -312,12 +398,16 @@
   },
   "Bomberman '93": {
     "id": "9d432cf911062026413ac2dfa326683c62c011a6",
-    "players": 5,
-    "rating": 0.9,
+    "players": 2,
+    "rating": 0.85,
+    "year": 1993,
+    "developer": "NEC",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -340,6 +430,9 @@
     "id": "8c46cf682c99defaf44d701f5868b98a22de5fb8",
     "players": 5,
     "rating": 0.8,
+    "year": 1993,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -349,17 +442,24 @@
     "id": "ec65db242f5f67437393fd29d014bfead53c55e3",
     "players": 5,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action"
     ]
   },
   "Bonk 3 - Bonk's Big Adventure": {
     "id": "9801f843d7be97fc82bc4841a5aa68d64c768c1c",
-    "players": 5,
+    "players": 2,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -373,9 +473,13 @@
     "id": "c31de6a78759d40ad440facef14f9b33feab269b",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Atlus",
+    "publisher": "Hudson",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -389,9 +493,13 @@
     "id": "d3942d225ebc3db8c62f3286b9854ed651a2cf70",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Red Company",
+    "publisher": "NEC",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -405,17 +513,24 @@
     "id": "2747a63d1e34d8fc7d98c8867a27a9e95d973475",
     "players": 2,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Manjyudo",
+    "publisher": "I'Max",
     "genres": [
       "Shoot'em Up"
     ]
   },
   "Boxyboy": {
     "id": "6bbc1fca47f27ede94e85df3d0d03f00041b9206",
-    "players": 2,
+    "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "NEC",
+    "publisher": "Media Rings",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -429,6 +544,9 @@
     "id": "ec25e5d9e55eadb36288e7fce348aece35ddee64",
     "players": 1,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "Now Production",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Beat'em Up"
@@ -444,8 +562,11 @@
   },
   "Break In": {
     "id": "24b8bde0e4bb4beb32c0bd5e467deb5929ce0faa",
-    "players": 1,
+    "players": 4,
     "rating": 0.55,
+    "year": 1989,
+    "developer": "Algorithm Institute",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Pool"
@@ -455,6 +576,9 @@
     "id": "246b26c7344a6de7368874d31d4675528a2ee605",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Spiel",
+    "publisher": "Naxat Soft",
     "genres": [
       "Adventure"
     ]
@@ -463,6 +587,9 @@
     "id": "11a4ed3936d9e8a5fc6a0cac66f96b35a06fdb02",
     "players": 8,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Cream",
+    "publisher": "Cream",
     "genres": [
       "Action",
       "Sports",
@@ -473,6 +600,9 @@
     "id": "4a18c2ce161eaf010362ca1d0ce849beb8b89c60",
     "players": 2,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "ZAP",
+    "publisher": "Naxat Soft",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
@@ -482,6 +612,9 @@
     "id": "c428ba29c082b7157c943fc7109f58db797a6619",
     "players": 1,
     "rating": 0.55,
+    "year": 1989,
+    "developer": "FACE",
+    "publisher": "FACE",
     "genres": [
       "Action",
       "Platform",
@@ -492,10 +625,14 @@
     "id": "1dde60668277ce15c1b92bd3d2eb6891ec4d2bd3",
     "players": 2,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Taito",
+    "publisher": "Working Designs",
     "genres": [
       "Action",
       "Role playing games"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -509,6 +646,9 @@
     "id": "56a55c34129ab5f0c20622cf0f0aaacf027959a9",
     "players": 4,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Fight",
       "Sports"
@@ -518,10 +658,14 @@
     "id": "0e297e7a976c570e84c4d1562ebe6d84f2262ae5",
     "players": 2,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "Distinctive Software, Inc",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Boxing"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -534,11 +678,15 @@
   "Chase H.Q.": {
     "id": "c94801ba161490801a6676bca7df22f4aeb7d1b9",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.7,
+    "year": 1992,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -552,9 +700,13 @@
     "id": "7c5f22a98ebbc2dd2dec444e5bf35475178f5e66",
     "players": 2,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "Now Production",
+    "publisher": "NEC",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -568,6 +720,9 @@
     "id": "6edcbd45952fea275e027ec7dd16f462bc5142d0",
     "players": 2,
     "rating": 0.85,
+    "year": 1992,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Quiz",
       "Quiz / Japanese"
@@ -576,18 +731,25 @@
   "Chikudenya Toubei - Kubikiri Yakata Yori": {
     "id": "c35460b60df56322e40e0a81ca7272354b8c360a",
     "players": 1,
+    "year": 1990,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Adventure"
     ]
   },
   "China Warrior": {
     "id": "393f0ecd49bd2cbc553deda3130e1b4813059a5e",
-    "players": 2,
+    "players": 1,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Beat'em Up"
     ],
+    "age_rating": "E10+",
     "manuals": [
       {
         "languages": [
@@ -601,6 +763,9 @@
     "id": "c29501ee1dda96c80f60e50530ad6a1f331f8b7e",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Uni Post Company",
+    "publisher": "Uni Post Company",
     "genres": [
       "Puzzle-Game"
     ]
@@ -608,7 +773,10 @@
   "City Hunter": {
     "id": "e57524cfa497c36df1336f67fbc80c08f53c4962",
     "players": 2,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Sunsoft",
+    "publisher": "Sunsoft",
     "genres": [
       "Action"
     ]
@@ -617,28 +785,40 @@
     "id": "84efb6cd95767b05416f4b4237bec9aaa5ae22cc",
     "players": 2,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Laser Soft",
+    "publisher": "Telenet",
     "genres": [
       "Action",
       "Puzzle-Game"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Coryoon - Child of Dragon": {
     "id": "7710cc39badf0925f5dcbcd029b2ee86385b689d",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.8,
+    "year": 1991,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Cratermaze": {
     "id": "ea7aea9b58f2d712d336ac4623089354b9100501",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -652,6 +832,9 @@
     "id": "3405574939f75b8c3458dab48ca28a4bf39e1b28",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Sankindo",
+    "publisher": "FACE",
     "genres": [
       "Action",
       "Platform",
@@ -662,9 +845,13 @@
     "id": "c24894e40e5db7eabd42d0314a517be970788aee",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Alfa System",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -678,6 +865,9 @@
     "id": "14d5c86389f0482801be9147f9fa988573cebaf2",
     "players": 2,
     "rating": 0.35,
+    "year": 1992,
+    "developer": "Tonkin House",
+    "publisher": "Tonkin House",
     "genres": [
       "Sports",
       "Sports / Dodgeball"
@@ -686,7 +876,10 @@
   "Cyber Knight": {
     "id": "b674a464bf887a38fa934677ac5250fc8495a813",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1990,
+    "developer": "Compile",
+    "publisher": "Tonkin House",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -696,14 +889,20 @@
     "id": "0b2a708557a34273f1f2302475005b894bd7aaa5",
     "players": 1,
     "rating": 0.4,
+    "year": 1989,
+    "developer": "Salio",
+    "publisher": "Salio",
     "genres": [
       "Strategy"
     ]
   },
   "Daisenpuu": {
     "id": "a8010b82858ca98095abf5153ef12d9a8c05a88a",
-    "players": 2,
-    "rating": 0.7,
+    "players": 1,
+    "rating": 0.5,
+    "year": 1990,
+    "developer": "Toaplan",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -712,6 +911,9 @@
     "id": "0a99bdd0da1bec9695dc69ac5e3c8e0d8345b5ce",
     "players": 1,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Bits Laboratory",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -721,6 +923,9 @@
     "id": "aa66f7d229fcbc47b52fb85caa6881c2f6bbbd99",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Bits Laboratory",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -728,7 +933,10 @@
   "Darkwing Duck": {
     "id": "d3bf41a2d2453df250aff8d4e25b2aa5a8721a12",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.5,
+    "year": 1992,
+    "developer": "Turbo Technologies, Inc.",
+    "publisher": "Radiance Software",
     "genres": [
       "Action",
       "Platform"
@@ -746,10 +954,14 @@
     "id": "b20952249fecdcfef02370ec10dff4dc7d48d19c",
     "players": 4,
     "rating": 0.45,
+    "year": 1991,
+    "developer": "Loriciels",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Tennis"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -763,15 +975,22 @@
     "id": "7126a8d4931586ca35ec0f47868a0ff8810c8a23",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Studio Ducks",
+    "publisher": "Natsume",
     "genres": [
       "Action",
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Deep Blue": {
     "id": "7ebf56ca7254ff3a965f968df9ad4fbc7d9d4540",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Pack In Video",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
@@ -787,7 +1006,10 @@
   "Detana!! TwinBee": {
     "id": "679aa4c333689c8ad9ce4f8e486400c8d6ae269e",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1992,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -797,9 +1019,13 @@
     "id": "69cc5bf4880b6f870df643ba2d39633dde33180e",
     "players": 2,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Compile",
+    "publisher": "NEC",
     "genres": [
       "Pinball"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -813,6 +1039,9 @@
     "id": "44f2d97a4617a23d853ad8838f2f2892ee73ab4c",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Pack In Video",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shooter",
@@ -822,41 +1051,60 @@
   "Digital Champ": {
     "id": "f1242d24d49db635bf0558c20db454f846057e82",
     "rating": 0.35,
+    "year": 1989,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Boxing"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Don Doko Don!": {
     "id": "0cc5cee4effc06917b59bf9ad39fdc800181a303",
     "players": 2,
-    "rating": 0.6,
+    "rating": 0.8,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Doraemon - Nobita no Dorabian Night": {
     "id": "30c509c14073665d810d7dfc07dbdb5a482ed442",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1991,
+    "developer": "Now Production",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Double Dungeons": {
     "id": "14a29aba0fe99931ddaeba0e15f024bf2102f093",
-    "players": 1,
-    "rating": 0.45,
+    "players": 2,
+    "rating": 0.4,
+    "year": 1990,
+    "developer": "NCS Corporation",
+    "publisher": "Masaya Games",
     "genres": [
       "Role playing games"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Download": {
     "id": "c5346487a006ac12e9181275b855e6d30bcb28c9",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.75,
+    "year": 1990,
+    "developer": "Alfa System",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -865,6 +1113,9 @@
     "id": "93f74ceb25b6712e3457c22e156872fe9cc1945f",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Masaya Games",
+    "publisher": "NCS Corporation",
     "genres": [
       "Action",
       "Platform"
@@ -881,10 +1132,14 @@
   "Dragon Spirit": {
     "id": "2879509ddf830cc24dd341ea596aa22dddb4eb61",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.6,
+    "year": 1989,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -896,11 +1151,15 @@
   },
   "Dragon's Curse": {
     "id": "a18f5035071a2138f9e173c603f632bd4efcfccf",
-    "players": 2,
+    "players": 1,
     "rating": 0.9,
+    "year": 1990,
+    "developer": "Westone",
+    "publisher": "NEC",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E10+",
     "manuals": [
       {
         "languages": [
@@ -912,12 +1171,16 @@
   },
   "Drop Off": {
     "id": "d98a627054bdffa935d8dd3a683b54c997747e81",
-    "players": 2,
+    "players": 1,
     "rating": 0.55,
+    "year": 1990,
+    "developer": "Data East",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Action / Breakout games"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -930,10 +1193,14 @@
   "Dungeon Explorer": {
     "id": "09e8569f3ffcaaee95a37653b578e6a3af965e18",
     "players": 5,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1989,
+    "developer": "Atlus",
+    "publisher": "NEC",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -950,6 +1217,9 @@
     "id": "5fe0129008b06f6dd84231874943788daf4605a7",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Westwood Associates",
+    "publisher": "Turbo Technologies, Inc.",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -967,6 +1237,9 @@
     "id": "8200d0bbf80c2f8e64b260dc1370dda8ac8a9df3",
     "players": 5,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Quasar Soft",
+    "publisher": "NCS Corporation",
     "genres": [
       "Action"
     ]
@@ -975,6 +1248,9 @@
     "id": "d870e9a4d1f09ad1fc03ecc6c1606255bdb08421",
     "players": 1,
     "rating": 0.75,
+    "year": 1991,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Action",
       "Platform",
@@ -984,6 +1260,9 @@
   "F-1 Dream": {
     "id": "5a553b2e0bef0f38fac31eed3af2a626568e5868",
     "rating": 0.7,
+    "year": 1989,
+    "developer": "NEC",
+    "publisher": "NEC",
     "genres": [
       "Driving",
       "Race"
@@ -992,6 +1271,9 @@
   "F-1 Pilot - You're King of Kings": {
     "id": "de6379f3715e3e405abadd1bba860d017e60702a",
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Pack In Video",
+    "publisher": "Pack In Video",
     "genres": [
       "Driving",
       "Race"
@@ -1001,6 +1283,9 @@
     "id": "0a351baaca5ba84363229a4ba143fcff1e785241",
     "players": 5,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Nichibutsu",
+    "publisher": "Nichibutsu",
     "genres": [
       "Driving",
       "Race"
@@ -1019,6 +1304,9 @@
     "id": "44431e8d8b90613ea6ac5a0ec237f1abd5df657d",
     "players": 1,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Nichibutsu",
+    "publisher": "Nichibutsu",
     "genres": [
       "Driving",
       "Race"
@@ -1028,6 +1316,9 @@
     "id": "ba3e7ee0fd5eeae4ee6456e0a1ea926dce39cf59",
     "players": 3,
     "rating": 0.65,
+    "year": 1989,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Driving",
       "Race"
@@ -1037,9 +1328,13 @@
     "id": "d12347aba9f559b70a773fa656046c248442c557",
     "players": 2,
     "rating": 0.45,
+    "year": 1992,
+    "developer": "Spectrum Holobyte",
+    "publisher": "Spectrum Holobyte",
     "genres": [
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1051,8 +1346,11 @@
   },
   "Fantasy Zone": {
     "id": "ae425ef06db39fde7a743b2783e99cf1343cd885",
-    "players": 2,
+    "players": 1,
     "rating": 0.65,
+    "year": 1989,
+    "developer": "Bits Laboratory",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
@@ -1069,6 +1367,9 @@
     "id": "3af7feba31a06b79e3b4f5c1298ebb3fec0c380c",
     "players": 2,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "Nichibutsu",
+    "publisher": "Nichibutsu",
     "genres": [
       "Action"
     ]
@@ -1077,6 +1378,9 @@
     "id": "21195e1223f07b7f162476bc80d2ae7b7079f413",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Aisystem Tokyo",
+    "publisher": "Namco",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1084,7 +1388,10 @@
   "Final Lap Twin": {
     "id": "8d28889437ae16d8e343043ae68080774478d753",
     "players": 2,
-    "rating": 0.95,
+    "rating": 0.9,
+    "year": 1989,
+    "developer": "NEC",
+    "publisher": "Namco",
     "genres": [
       "Driving",
       "Race",
@@ -1101,8 +1408,11 @@
   },
   "Final Match Tennis": {
     "id": "240ce26066b0d12c77072e1734073b3db49a4cb5",
-    "players": 2,
-    "rating": 0.85,
+    "players": 4,
+    "rating": 0.8,
+    "year": 1991,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -1112,6 +1422,9 @@
     "id": "bc380ddc20b141b83b0ac497f542113b632bff6a",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1121,6 +1434,9 @@
     "id": "8caf770b00b3eef4afa6e945912a01066d0598cb",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1130,6 +1446,9 @@
     "id": "6d51eb001f836da21e8ea538dab0d5f65cd79ff8",
     "players": 4,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Fight",
       "Sports"
@@ -1139,6 +1458,8 @@
     "id": "fafe1ba089419adcbdc05e277e1766ddebaafeeb",
     "players": 4,
     "rating": 0.75,
+    "year": 1991,
+    "publisher": "Human",
     "genres": [
       "Fight",
       "Sports"
@@ -1148,6 +1469,8 @@
     "id": "20dab3a2cd2609b9cce554fdcc693cd33690a524",
     "players": 4,
     "rating": 0.65,
+    "year": 1992,
+    "publisher": "Human",
     "genres": [
       "Fight",
       "Sports"
@@ -1157,6 +1480,9 @@
     "id": "76a00023144f36749a583ac95941cebcf4ee802b",
     "players": 2,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1166,6 +1492,9 @@
     "id": "e85034a17faf657594f76e3381afd7ba1970cb48",
     "players": 2,
     "rating": 0.95,
+    "year": 1994,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1175,6 +1504,9 @@
     "id": "c66dae21d11a37e8096829020f77fc864c2905e9",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "FACE",
+    "publisher": "FACE",
     "genres": [
       "Action",
       "Platform"
@@ -1184,6 +1516,9 @@
     "id": "0d3935a12100b3ad0cbf4ead5231500e97d403b9",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Masaya Games",
+    "publisher": "NCS Corporation",
     "genres": [
       "Strategy"
     ]
@@ -1192,6 +1527,9 @@
     "id": "12b796c850c550aac4697f7891c083a1a5ca5465",
     "players": 2,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "NCS Corporation",
+    "publisher": "NCS Corporation",
     "genres": [
       "Strategy"
     ]
@@ -1200,9 +1538,13 @@
     "id": "b2ee021cb1b31e4014015c0c69cf54e7e0fbc174",
     "players": 1,
     "rating": 0.8,
+    "year": 1989,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1216,6 +1558,9 @@
     "id": "400ebaa618cbd8010be165966682a6ab73c0982c",
     "players": 4,
     "rating": 0.8,
+    "year": 1989,
+    "developer": "NCS Corporation",
+    "publisher": "NCS Corporation",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -1225,6 +1570,9 @@
     "id": "d9a16d89e7622a6d3eb0d79a560fb46feb02efae",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "Tomcat System",
+    "publisher": "Irem",
     "genres": [
       "Action"
     ]
@@ -1233,6 +1581,9 @@
     "id": "0328dfa17499586a23810902ec184b841fbab643",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "NEC",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
@@ -1240,6 +1591,9 @@
   },
   "Genpei Toumaden": {
     "id": "0c309b9d588880f347868e2d2ee0651f5b818160",
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action"
     ]
@@ -1248,6 +1602,9 @@
     "id": "65419b58b877dba027fcd0bb929976e4af897fae",
     "players": 1,
     "rating": 0.5,
+    "year": 1992,
+    "developer": "ICOM Simulations",
+    "publisher": "Turbo Technologies, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -1265,6 +1622,9 @@
     "id": "ce743392e9538da9438b44bba3ec497cb4da7ee8",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "Daiei Seisakusho",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1273,6 +1633,9 @@
     "id": "55dcf9b5ff8f01ea5d9fe5e238b7c61b2d0dfffc",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "UPL",
+    "publisher": "UPL",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1281,7 +1644,10 @@
   "Gradius": {
     "id": "aa49c2493655e572d74a3de1aaefbcb35419350c",
     "players": 2,
-    "rating": 0.75,
+    "rating": 0.7,
+    "year": 1991,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1291,6 +1657,9 @@
     "id": "7ee87d989d9237ff7c1bf13caa6752932f4a28be",
     "players": 1,
     "rating": 0.1,
+    "year": 1992,
+    "developer": "Accolade",
+    "publisher": "Accolade",
     "genres": [
       "Simulation"
     ]
@@ -1298,6 +1667,9 @@
   "Gunhed - Special Version": {
     "id": "f22d671be7d0b169a01ed659c3064740b0ebd82e",
     "players": 1,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1306,6 +1678,9 @@
     "id": "159ae332b2962c56cf407d3353831a08894e7eb1",
     "players": 1,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1314,6 +1689,9 @@
     "id": "ffbc302bbc4ec4e686e384cb777536e39cc9b151",
     "players": 1,
     "rating": 0.5,
+    "year": 1989,
+    "developer": "FACE",
+    "publisher": "FACE",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1323,6 +1701,9 @@
     "id": "789fe20e5722e0138de4126dfbaf15f2188fbeda",
     "players": 2,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "FACE",
+    "publisher": "FACE",
     "genres": [
       "Action",
       "Platform"
@@ -1332,6 +1713,9 @@
     "id": "b1db596ce34c04614b13d73cb53c5dd31ece8195",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Micro Cabin",
+    "publisher": "Micro Cabin",
     "genres": [
       "Puzzle-Game"
     ]
@@ -1340,23 +1724,33 @@
     "id": "10af4b8e0c7550c38b611314fbc9ce0685d87e19",
     "players": 1,
     "rating": 0.5,
+    "year": 1989,
+    "developer": "Inter State",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Hisou Kihei X-Serd": {
     "id": "78e3a3cb9c8ea7555d8db80ff3973e632ba91e64",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "NCS Corporation",
+    "publisher": "NCS Corporation",
     "genres": [
       "Strategy"
     ]
   },
   "Hit the Ice - VHL - The Official Video Hockey League": {
     "id": "ea0b2cbb3064c4845e37542443aebdbe154dbc4e",
-    "players": 2,
+    "players": 4,
     "rating": 0.65,
+    "year": 1992,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Sports",
@@ -1366,6 +1760,9 @@
   "Honoo no Toukyuuji - Dodge Danpei": {
     "id": "a87c78171a4cdbef056ea557be3a5d2c616bc34b",
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Aim Software",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Dodgeball"
@@ -1375,6 +1772,9 @@
     "id": "9bf9f1121c87d8a14bf72f073e454750cab4b3eb",
     "players": 1,
     "rating": 0.2,
+    "year": 1991,
+    "developer": "Games Express",
+    "publisher": "Hacker International",
     "genres": [
       "Asiatic board game"
     ]
@@ -1383,6 +1783,9 @@
     "id": "6a1c10b43a54a7edcef520fab0525f33a039195b",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Irem",
+    "publisher": "Irem",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1391,7 +1794,10 @@
   "Impossamole": {
     "id": "ff03c69525d4d7386704d57baafdeee2fa59b1ed",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1991,
+    "developer": "NEC",
+    "publisher": "Core Design",
     "genres": [
       "Action",
       "Platform"
@@ -1401,6 +1807,9 @@
     "id": "290a48b1dfe6a4f45674c17a96ed35f7a413a9be",
     "players": 1,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
@@ -1418,6 +1827,9 @@
     "id": "c89261b45ddb4ff2cbff0cd42bd94b1095f664b6",
     "players": 4,
     "rating": 0.85,
+    "year": 1993,
+    "developer": "Cream",
+    "publisher": "Nichibutsu",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1425,8 +1837,11 @@
   },
   "Jack Nicklaus' Turbo Golf": {
     "id": "92025abf07bfb58fb4c3b0e0540154b10127a5f5",
-    "players": 4,
-    "rating": 0.4,
+    "players": 1,
+    "rating": 0.55,
+    "year": 1990,
+    "developer": "Sculptured Software",
+    "publisher": "Accolade",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -1444,6 +1859,9 @@
     "id": "010c1bdef05d869b65f8112e7534689e95f88b0b",
     "players": 1,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
@@ -1461,14 +1879,21 @@
     "id": "899e08e472a177cb238829a790eef93df11abbe9",
     "players": 1,
     "rating": 0.6,
+    "year": 1988,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Role playing games"
-    ]
+    ],
+    "age_rating": "12"
   },
   "Jigoku Meguri": {
     "id": "61ba77bb847c6954490e888049b217ece7c90d86",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
@@ -1478,6 +1903,9 @@
     "id": "ea876e40992ef158910632f7f72876f4240c3e9d",
     "players": 1,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Big Club",
+    "publisher": "Wolf Team",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1486,24 +1914,35 @@
     "id": "ded897d14f96824ddcc65d839141aef5e67f6ef5",
     "players": 1,
     "rating": 0.85,
+    "year": 1989,
+    "developer": "SEGA",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Beat'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Kaizou Choujin Shubibinman": {
     "id": "08262fb4351aaf267c5c3b2a23d7d511d83416e3",
-    "players": 2,
-    "rating": 0.7,
+    "players": 1,
+    "rating": 0.5,
+    "year": 1989,
+    "developer": "NCS Corporation",
+    "publisher": "Masaya Games",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Kattobi! Takuhai-kun": {
     "id": "14c3731450292588a67eacb4a3b3ff0671cc489c",
     "players": 1,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "Advance Communication Company",
+    "publisher": "Tonkin House",
     "genres": [
       "Action"
     ]
@@ -1512,6 +1951,9 @@
     "id": "2c38b847fd689d75a78adfd30bf13a7880b9cd4c",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Platform"
     ],
@@ -1528,6 +1970,9 @@
     "id": "e49f5b58a24ff5e11caeb214b2f30a377222c37a",
     "players": 2,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Dual",
+    "publisher": "NCS Corporation",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -1536,7 +1981,10 @@
   "Kiki Kaikai": {
     "id": "87a2ef0218c40226454119c16c26fa5166a47d4b",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1545,6 +1993,9 @@
     "id": "fea5482b2d1c98478a445866cb6ce92535be0cea",
     "players": 5,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "NEC",
+    "publisher": "NEC",
     "genres": [
       "Casino"
     ],
@@ -1561,6 +2012,9 @@
     "id": "72a41e956b74260a20bc8632f9ed5469888e2681",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Tengen",
+    "publisher": "Tengen",
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -1578,6 +2032,9 @@
     "id": "5624d87911a6a325d7225e4f32acfc5d7d066c2b",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Pack In Video",
+    "publisher": "Pack In Video",
     "genres": [
       "Driving",
       "Race"
@@ -1587,6 +2044,9 @@
     "id": "44203af8fd45576be2ae3bfa4b8fec68e53939c3",
     "players": 2,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "TOSE",
+    "publisher": "Intec Inc.",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -1596,6 +2056,9 @@
     "id": "977d9e6d3dba683c63b36c5d941a294dff54bd54",
     "players": 2,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "TOSE",
+    "publisher": "Intec Inc.",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -1604,6 +2067,9 @@
   "Kyuukyoku Mahjong - Idol Graphics": {
     "id": "d8b3414b1c91c86a2e73b87bb7ed81e8b26a8780",
     "players": 1,
+    "year": 1992,
+    "developer": "Games Express",
+    "publisher": "Hacker International",
     "genres": [
       "Asiatic board game"
     ]
@@ -1611,6 +2077,9 @@
   "Kyuukyoku Mahjong II": {
     "id": "fd665d026f72ce1c840eee7006aca388738d0427",
     "players": 1,
+    "year": 1993,
+    "developer": "Games Express",
+    "publisher": "Hacker International",
     "genres": [
       "Asiatic board game"
     ]
@@ -1618,7 +2087,10 @@
   "Kyuukyoku Tiger": {
     "id": "680f0224013abab69156611feb3e4ee95062ab2a",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.8,
+    "year": 1989,
+    "developer": "Toaplan",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1635,10 +2107,14 @@
     "id": "e1206304cd9d3a944a330ef47205c70068d616b1",
     "players": 2,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Irem",
+    "publisher": "Irem",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "7",
     "manuals": [
       {
         "languages": [
@@ -1651,7 +2127,10 @@
   "Legendary Axe II": {
     "id": "28e9383ef620d335a826842f79335499474e31e5",
     "players": 1,
-    "rating": 0.85,
+    "rating": 0.8,
+    "year": 1990,
+    "developer": "Atlus",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
@@ -1669,6 +2148,9 @@
     "id": "87b8fe470e4dc5da5a7536daf064b0d235d9f3bf",
     "players": 1,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Marvelous Interactive",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
@@ -1678,6 +2160,9 @@
     "id": "b2180576a39cd19688a63d06180c8c8bd77d7f9b",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Br\u00f8derbund Software",
+    "publisher": "Pack In Video",
     "genres": [
       "Action",
       "Platform"
@@ -1687,15 +2172,22 @@
     "id": "e4478c44e5c90bb7e6ddc7b45cdad23ab4731441",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Shooter"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Magical Chase": {
     "id": "4ed233fb4c9aa3501de875d3c780c74b8d81fe69",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Quest",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1703,6 +2195,9 @@
   "Mahjong Gakuen - Touma Soushirou Toujou": {
     "id": "b0bcef70502fc9a20121be8d00a550283d4e3bb6",
     "players": 1,
+    "year": 1989,
+    "developer": "Sankindo",
+    "publisher": "FACE",
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -1711,6 +2206,9 @@
   "Mahjong Gakuen Mild - Touma Soushirou Toujou": {
     "id": "e8a30862d75ac177a7c10a5c3e7a379598998bde",
     "players": 1,
+    "year": 1990,
+    "developer": "Sankindo",
+    "publisher": "FACE",
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -1719,6 +2217,9 @@
   "Mahjong Gokuu Special": {
     "id": "ce234ae9ad93461d19ff79506a8f8b7a08d09998",
     "players": 1,
+    "year": 1990,
+    "developer": "Sunsoft",
+    "publisher": "Sunsoft",
     "genres": [
       "Asiatic board game"
     ]
@@ -1727,6 +2228,9 @@
     "id": "3ba456cebc82ca454cffd7c4c1c34dcb32d6be62",
     "players": 1,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "UPL",
+    "publisher": "UPL",
     "genres": [
       "Asiatic board game"
     ]
@@ -1735,6 +2239,9 @@
     "id": "8fc4551825f2c899d46ae68ff1122bbfa8f75630",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Nichibutsu",
+    "publisher": "Nichibutsu",
     "genres": [
       "Asiatic board game"
     ]
@@ -1743,6 +2250,9 @@
     "id": "fe8c906f1ea7c387d1f3d4c33c3099012353bdb9",
     "players": 1,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Micro Cabin",
+    "publisher": "Micro Cabin",
     "genres": [
       "Adventure"
     ]
@@ -1751,6 +2261,9 @@
     "id": "ae6820f4c5fb66b7c7506d12d78b1f806560bf91",
     "players": 1,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Action",
       "Role playing games"
@@ -1760,6 +2273,9 @@
     "id": "1337ae2bd231e6c7815806add8f836022d2670c8",
     "players": 1,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Red Company",
+    "publisher": "Naxat Soft",
     "genres": [
       "Action",
       "Platform"
@@ -1769,6 +2285,9 @@
     "id": "3eaae1021f6eb936a3386aab7ccb3818f9369c0c",
     "players": 2,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Fight",
       "Sports"
@@ -1778,6 +2297,9 @@
     "id": "cfc6698a49dd9868a0440ac3e615c4fae17468da",
     "players": 1,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Sankindo",
+    "publisher": "FACE",
     "genres": [
       "Shoot'em Up"
     ]
@@ -1786,6 +2308,9 @@
     "id": "830960da170ac04350ba4da1cc06a71ac7bcc738",
     "players": 2,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Strategy"
     ]
@@ -1794,15 +2319,22 @@
     "id": "c836b978cb593b848887ce2f5a7fd68c799b0b7c",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Momotarou Densetsu Gaiden - Dai-1-shuu": {
     "id": "764d8a8a4c0753d036022554e87ecedabacff8e8",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.7,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -1811,7 +2343,10 @@
   "Momotarou Densetsu II": {
     "id": "0c8a103524209a8a9495992c61227f0d098ca9aa",
     "players": 1,
-    "rating": 0.8,
+    "rating": 0.7,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -1821,6 +2356,9 @@
     "id": "91cf783011cbac91c598ac4cc97f8b7422392497",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -1830,6 +2368,9 @@
     "id": "94ce490f0c4218d4534d78b07ce60d662bcb36f0",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
@@ -1839,6 +2380,9 @@
     "id": "4f2874b486e6f5fa2ad1c04b5094648c7b64e8b1",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Lenar",
+    "publisher": "ASK Kodansha",
     "genres": [
       "Fight"
     ]
@@ -1846,6 +2390,9 @@
   "Morita Shougi PC": {
     "id": "8bc43779e8b7a6ea85451c2232aa0c50e73bc603",
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Random House",
+    "publisher": "NEC",
     "genres": [
       "Board game"
     ]
@@ -1853,7 +2400,10 @@
   "Moto Roader": {
     "id": "0f7a759753d5f8061bec94743c25471985dc143b",
     "players": 5,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1989,
+    "developer": "NCS Corporation",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Driving",
@@ -1872,6 +2422,9 @@
     "id": "d7ba92290c832b5b0a10890c6271423c6f989da3",
     "players": 5,
     "rating": 0.75,
+    "year": 1991,
+    "developer": "NCS Corporation",
+    "publisher": "NCS Corporation",
     "genres": [
       "Driving",
       "Race"
@@ -1880,16 +2433,23 @@
   "Mr. Heli no Daibouken": {
     "id": "338315e8f74d4c47764104d6a285bc6665d3c295",
     "players": 1,
-    "rating": 0.8,
+    "rating": 0.75,
+    "year": 1989,
+    "developer": "Irem",
+    "publisher": "Irem",
     "genres": [
       "Action",
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "6"
   },
   "NHK Taiga Drama - Taiheiki": {
     "id": "c77aa9fd0b97b24dbbb9dfc4e4ea42ec5e4b9867",
     "players": 1,
     "rating": 0.9,
+    "year": 1992,
+    "developer": "NHK",
+    "publisher": "NHK",
     "genres": [
       "Strategy"
     ]
@@ -1898,6 +2458,9 @@
     "id": "52199daabc3bd4d118fdcae5c033ebc7e4e3d7eb",
     "players": 1,
     "rating": 0.55,
+    "year": 1989,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -1907,6 +2470,9 @@
     "id": "2d44d6bf0d4cfa1eb07008235d2c7ef22e24d6ec",
     "players": 2,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "Sting Entertainment",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -1915,6 +2481,9 @@
   "Nazo no Mascarade": {
     "id": "803efc049eeb96be8b24f4450e3550a9016fa430",
     "players": 1,
+    "year": 1990,
+    "developer": "Riverhillsoft",
+    "publisher": "NCS Corporation",
     "genres": [
       "Adventure"
     ]
@@ -1922,7 +2491,10 @@
   "Necros no Yousai": {
     "id": "ed60a309115257f9d869e3ac8f4f6a9f13c84660",
     "players": 1,
-    "rating": 0.5,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Adventure Planning Service",
+    "publisher": "ASK Kodansha",
     "genres": [
       "Role playing games"
     ]
@@ -1931,6 +2503,9 @@
     "id": "e134a9a7c5e70df6e99f77f1c1f640f694daea41",
     "players": 2,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Kindle Imagine Develop",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Dodgeball"
@@ -1948,6 +2523,9 @@
     "id": "6a4aa5e1fc0de29f1343800c3f0835f8e2233b68",
     "players": 2,
     "rating": 0.4,
+    "year": 1992,
+    "developer": "Kindle Imagine Develop",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -1957,10 +2535,14 @@
     "id": "18f8b45bbf04d505e8bed5ed0a8aedb7345a57e4",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1973,11 +2555,15 @@
   "Neutopia II": {
     "id": "32d68806208eeb79a75382a85192dd81a0b3fd1c",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.7,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1991,9 +2577,13 @@
     "id": "fbc8f306e3628654d698e6d07db90eb578a7c1ac",
     "players": 1,
     "rating": 0.65,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2007,6 +2597,9 @@
     "id": "0b11dcb180b38d014b386777f14bc98571f1af5e",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Aisystem Tokyo",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
@@ -2016,6 +2609,9 @@
     "id": "512f65bd13094761d1b80db9caf9a7c244a2b110",
     "players": 1,
     "rating": 0.25,
+    "year": 1991,
+    "developer": "Manley and Associates Inc.",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Adventure"
@@ -2033,6 +2629,9 @@
     "id": "a6fad6ccdb1fce9031d787f64b129c3a0375f5dd",
     "players": 1,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "ISCO",
+    "publisher": "NHK",
     "genres": [
       "Platform"
     ]
@@ -2041,6 +2640,9 @@
     "id": "2a13b20e9d929b86c5e4252a2cf9e6331cd23c10",
     "players": 1,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Tecmo",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
@@ -2050,15 +2652,22 @@
     "id": "254a77dc93cd6cff1e04208a4476f0a78c2d7144",
     "players": 2,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Irem",
+    "publisher": "Irem",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E10+"
   },
   "Ninja Warriors, The": {
     "id": "e7aca7eee3c079fe8e1eec76c474f792f4b849eb",
     "players": 1,
     "rating": 0.55,
+    "year": 1989,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Beat'em Up"
     ],
@@ -2075,6 +2684,9 @@
     "id": "f68e5ea2a975c8dd8fce8626dfb3656e86365803",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Pack In Video",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Platform"
@@ -2082,6 +2694,8 @@
   },
   "Off the Wall": {
     "id": "1ae8ffec35e884c54c1fc53f0f1a233221f071e1",
+    "developer": "Tengen",
+    "publisher": "Tengen",
     "genres": [
       "Action",
       "Action / Breakout games"
@@ -2091,16 +2705,23 @@
     "id": "0815b3ab2021b88eab415c6127c80a27309d7293",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Lightgun Shooter",
       "Shooter"
-    ]
+    ],
+    "age_rating": "12"
   },
   "Ordyne": {
     "id": "1c5c0f32e4149d89d90cc6f61a1c3b1aa8766436",
     "players": 2,
     "rating": 0.55,
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2118,6 +2739,9 @@
     "id": "58d08c496b43a6648e93bcd853f61dfd6c0f96c4",
     "players": 2,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "Sunsoft",
+    "publisher": "Sunsoft",
     "genres": [
       "Role playing games"
     ]
@@ -2126,6 +2750,9 @@
     "id": "70e77c7eb199823e861b957e425f4d224ef413ad",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "NEC",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
@@ -2135,6 +2762,9 @@
     "id": "258a0f4362f7b3131f4615cc0836be7d68d3bdac",
     "players": 1,
     "rating": 0.75,
+    "year": 1991,
+    "developer": "Sting Entertainment",
+    "publisher": "Data East",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2142,7 +2772,10 @@
   "P-47 - The Freedom Fighter": {
     "id": "35d26edb53cff4a4edc71905ca867f4d15c52051",
     "players": 1,
-    "rating": 0.6,
+    "rating": 0.8,
+    "year": 1989,
+    "developer": "NMK",
+    "publisher": "Aicom",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2151,6 +2784,9 @@
     "id": "4fde10ebcec443acb15f48b3a303a2402ebd5db7",
     "players": 1,
     "rating": 0.3,
+    "year": 1992,
+    "developer": "Games Express",
+    "publisher": "Games Express",
     "genres": [
       "Casino"
     ]
@@ -2159,6 +2795,9 @@
     "id": "bd54a398f8b2652882d7f9f9bdf648de9f954aeb",
     "players": 2,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
@@ -2168,6 +2807,9 @@
     "id": "0853ee1ebe04b4cf6a576df4568d2501f8241171",
     "players": 1,
     "rating": 0.85,
+    "year": 1992,
+    "developer": "Coconuts Japan",
+    "publisher": "Coconuts Japan",
     "genres": [
       "Casino"
     ]
@@ -2175,7 +2817,10 @@
   "Parasol Stars - The Story of Bubble Bobble III": {
     "id": "69e8854869f40ee24a6c0292936ad1d287c47e04",
     "players": 2,
-    "rating": 0.75,
+    "rating": 0.8,
+    "year": 1991,
+    "developer": "Taito",
+    "publisher": "Working Designs",
     "genres": [
       "Action",
       "Platform"
@@ -2192,7 +2837,10 @@
   "Parodius Da! - Shinwa kara Owarai e": {
     "id": "e7dfb2c3412058fd288aa7790d8307a290a6fcfb",
     "players": 2,
-    "rating": 0.8,
+    "rating": 0.5,
+    "year": 1992,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2200,7 +2848,10 @@
   "Populous": {
     "id": "c96f29f0c3fc726053291e9a21392752e3623c67",
     "players": 1,
-    "rating": 0.85,
+    "rating": 0.8,
+    "year": 1991,
+    "developer": "Bullfrog",
+    "publisher": "Hudson",
     "genres": [
       "Strategy"
     ]
@@ -2209,6 +2860,9 @@
     "id": "0ff2f0821916d992e0fd439f2241cc57fd87cd89",
     "players": 1,
     "rating": 0.55,
+    "year": 1990,
+    "developer": "Asmik",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
@@ -2218,6 +2872,9 @@
     "id": "513b8a94f5695778b5ccbaf2435aa9acdcedf9a8",
     "players": 2,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "West One",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -2227,6 +2884,9 @@
     "id": "bec838a0ce07ae1c729c9e8dd051529a992b49ad",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Make",
+    "publisher": "Pack In Video",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2235,6 +2895,9 @@
     "id": "5e4c9416d3d2649763c44184acca346c5346820b",
     "players": 3,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -2252,6 +2915,9 @@
     "id": "ec81ee5b0dad0048bac47b3b0ea731d7855c5c26",
     "players": 2,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2261,6 +2927,9 @@
     "id": "13d394ee5926f7b03d4442c9dfb3a296597a0206",
     "players": 2,
     "rating": 0.85,
+    "year": 1991,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2269,6 +2938,9 @@
   "Power League 5": {
     "id": "ce412de8001390122e78813f85d68ddac06cd28f",
     "players": 4,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2278,6 +2950,9 @@
     "id": "93e35e4d7917fdf77c89d04b5d0589fbee781281",
     "players": 2,
     "rating": 0.9,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports"
     ]
@@ -2286,6 +2961,9 @@
     "id": "76fa0acc995352daa8c88fb08dd0443e3283ea0f",
     "players": 4,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2295,6 +2973,9 @@
     "id": "08e95257d1345ac041ddc3e4177003657219403b",
     "players": 4,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Now Production",
+    "publisher": "Hudson",
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -2304,6 +2985,9 @@
     "id": "18e5317d21cda9a0b2ec042989e36f63d5499bb6",
     "players": 2,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2321,6 +3005,9 @@
     "id": "bbd02b89b0b43f937c7e9b52cef5f04e6863669c",
     "players": 4,
     "rating": 0.2,
+    "year": 1991,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2329,7 +3016,10 @@
   "Psycho Chaser": {
     "id": "004115d5a5c85cc8456c3a2137570afde79bf486",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1990,
+    "developer": "Sting Entertainment",
+    "publisher": "Naxat Soft",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2339,6 +3029,9 @@
     "id": "cff17f86cdd217c79dc868d1a582194b033f8411",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Naxat Soft",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2347,6 +3040,9 @@
     "id": "088e4ac2d99ee23f12d06e3801dd7e6fb2d4cbe4",
     "players": 2,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Atlus",
+    "publisher": "Telenet",
     "genres": [
       "Puzzle-Game"
     ]
@@ -2355,6 +3051,9 @@
     "id": "fdd3d0e090adfa3d1a997bfcae74a9d415264464",
     "players": 1,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -2363,6 +3062,9 @@
   "Quiz Toukou Shashin": {
     "id": "115729c9a323788ed6a064cd0e6d7ea4a8357e7a",
     "players": 1,
+    "year": 1994,
+    "developer": "Games Express",
+    "publisher": "Games Express",
     "genres": [
       "Quiz"
     ]
@@ -2371,9 +3073,13 @@
     "id": "80535f6ba4e6c60a344d6b5940d70505e6c75a28",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Irem",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2387,22 +3093,33 @@
     "id": "03821c98fd035de6b75de42226f9fb88f4bd369a",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Irem",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "R-Type II": {
     "id": "c2c182582e330666c89689025256d0f2ed8f1111",
     "players": 1,
     "rating": 0.75,
+    "year": 1988,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Rabio Lepus Special": {
     "id": "7360eae9d5586e7ab4ab59de28ff79cc91f9e282",
     "players": 1,
     "rating": 0.75,
+    "year": 1990,
+    "developer": "Video System",
+    "publisher": "Video System",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2411,6 +3128,9 @@
     "id": "02d6e9115d4e98b6c16f7de748c8831a7d306bd0",
     "players": 2,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Irem",
+    "publisher": "Irem",
     "genres": [
       "Driving",
       "Race"
@@ -2419,7 +3139,10 @@
   "Raiden": {
     "id": "008ec33c860206080009a37afef6f28f35caa9a2",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1991,
+    "developer": "Seibu Kaihatsu",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2436,16 +3159,23 @@
   "Rastan Saga II": {
     "id": "c63a65f62b712df7193742a6900c3b57465c107e",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.65,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Rock-On": {
     "id": "87950733ec9bf599730abce68978e2945ec93836",
     "players": 1,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Manjyudo",
+    "publisher": "Big Club",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2454,6 +3184,9 @@
     "id": "51844dafff7175355f1fa0d0f904e8798bb83c6c",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "FACE",
+    "publisher": "ASCII",
     "genres": [
       "Puzzle-Game"
     ]
@@ -2462,6 +3195,9 @@
     "id": "b3909811de1eea19af329e42d6d2a6dad4c64a25",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Driving",
@@ -2472,6 +3208,9 @@
     "id": "96378de6bfa6b4ef27eb195ad2ca1a7a71801400",
     "players": 1,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Adventure"
     ]
@@ -2480,6 +3219,9 @@
     "id": "0073ff2e04ab406cb6c1c8b8924f8eeecd81aa44",
     "players": 2,
     "rating": 0.85,
+    "year": 1991,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2488,6 +3230,9 @@
     "id": "a69aa5cbeb143beae2edb866bceff67a6ebb153f",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Platform"
     ],
@@ -2504,6 +3249,9 @@
     "id": "447ca21cef1638391161c76a37557ddb2c696af9",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Tonkin House",
+    "publisher": "Tonkin House",
     "genres": [
       "Strategy"
     ]
@@ -2511,6 +3259,9 @@
   "Sengoku Mahjong": {
     "id": "0593c0a2ebab0c82d9b623d864f459d6a8c7c5a4",
     "players": 1,
+    "year": 1988,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -2520,6 +3271,9 @@
     "id": "f5888c9cbdad7acd0f4c81d3c3f2a690f66cb80c",
     "players": 1,
     "rating": 0.8,
+    "year": 1987,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Asiatic board game",
       "Mahjong",
@@ -2531,6 +3285,9 @@
     "id": "2e64b828849752dfaf6a638458aad3bf245526f6",
     "players": 1,
     "rating": 0.95,
+    "year": 1989,
+    "developer": "Asmik",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
@@ -2539,7 +3296,10 @@
   "Shiryou Sensen - War of the Dead": {
     "id": "0051be7cd2acaa577c7262c84f47151bb66b8add",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.5,
+    "year": 1989,
+    "developer": "Fun Project",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Action",
       "Role playing games"
@@ -2549,6 +3309,9 @@
     "id": "91be2919312b459ef2c63ce61c516fa334822ae0",
     "players": 2,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Winds Co., Ltd.",
+    "publisher": "NCS Corporation",
     "genres": [
       "Action",
       "Platform"
@@ -2566,6 +3329,9 @@
     "id": "ebc3b599f8e215d76568593e254d6ceefed04bb0",
     "players": 2,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Home Data",
+    "publisher": "Home Data",
     "genres": [
       "Asiatic board game",
       "Shougi"
@@ -2575,6 +3341,9 @@
     "id": "a5a836802ef54422effac7ea27fbc0fb7ab89d99",
     "players": 2,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "Home Data",
+    "publisher": "Home Data",
     "genres": [
       "Asiatic board game",
       "Shougi"
@@ -2584,6 +3353,9 @@
     "id": "6adfa75b6adbf2659a69f8aa59af5b81f20a6c51",
     "players": 1,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Capcom",
+    "publisher": "Radiance Software",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2601,6 +3373,9 @@
     "id": "690048a575149b54994f159797212b5c74fa863d",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Data East",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shooter",
@@ -2618,7 +3393,10 @@
   "Sindibad - Chitei no Daimakyuu": {
     "id": "cef67506504aa3678e3594c6b7862318e971ab05",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.5,
+    "year": 1990,
+    "developer": "Game Princess",
+    "publisher": "IGS",
     "genres": [
       "Role playing games"
     ]
@@ -2627,6 +3405,9 @@
     "id": "1397ce1b3739055e1f86590859f7fe6203f5cb7a",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "IGS",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2635,6 +3416,9 @@
     "id": "e2ab6f317c029fef395c7e1e37a70b7afe399a5a",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Loriciel",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Action",
       "Puzzle-Game",
@@ -2645,6 +3429,9 @@
     "id": "ab739a5d2f51aea2572e415fbd1ff413c43fb9a1",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up"
     ],
@@ -2660,6 +3447,9 @@
   "Soldier Blade - Special Version": {
     "id": "7bf729a2b209f43b1bffe753496314cea67317ba",
     "players": 1,
+    "year": 1992,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
@@ -2668,7 +3458,10 @@
   "Somer Assault": {
     "id": "79fe402bc68a9d47ae661c5a2c20f3ccbc2d4a2f",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.6,
+    "year": 1992,
+    "developer": "Atlus",
+    "publisher": "Atlus",
     "genres": [
       "Action",
       "Shooter"
@@ -2677,16 +3470,23 @@
   "Son Son II": {
     "id": "a6870edea4193da23150512902c5d677a302bb95",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.8,
+    "year": 1989,
+    "developer": "NEC",
+    "publisher": "Capcom",
     "genres": [
       "Adventure",
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Sonic Spike - World Championship Beach Volleyball": {
     "id": "e9f1dd7f9c2a89dff9df757ba0f6835bea112dcc",
     "players": 2,
     "rating": 0.5,
+    "year": 1990,
+    "developer": "IGS",
+    "publisher": "IGS",
     "genres": [
       "Sports",
       "Sports / Volleyball"
@@ -2704,6 +3504,9 @@
     "id": "f632213cd50d7646f3fc54ec94f68644a1522095",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "AM R&D Dept. #2",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2712,18 +3515,25 @@
   "Space Invaders - Fukkatsu no Hi": {
     "id": "78b585f5919968cf618d986aba7206a2a936ff9b",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.7,
+    "year": 1990,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shooter",
       "Shooter / Space Invaders Like"
-    ]
+    ],
+    "age_rating": "3"
   },
   "Spin Pair": {
     "id": "26b8638708cb3e4cb8d6896f53c00fd65a05a88d",
     "players": 2,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Media Rings",
+    "publisher": "Media Rings",
     "genres": [
       "Puzzle-Game"
     ]
@@ -2732,6 +3542,9 @@
     "id": "6453602a783853472e326c64d1d4319a594cdf1a",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Media Rings",
+    "publisher": "Media Rings",
     "genres": [
       "Shooter"
     ]
@@ -2740,6 +3553,9 @@
     "id": "2451038e22ff45761d723afa3e9cc7c6d3695ec7",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Beat'em Up"
@@ -2757,6 +3573,9 @@
     "id": "208ae1992059a3a6414aa1c90d6b71fb209eec85",
     "players": 1,
     "rating": 0.65,
+    "year": 1992,
+    "developer": "Accolade",
+    "publisher": "Victor Interactive",
     "genres": [
       "Board game"
     ]
@@ -2764,7 +3583,10 @@
   "Street Fighter II' - Champion Edition": {
     "id": "c16c18db3f2488432d340d700f155e5dcd07184b",
     "players": 2,
-    "rating": 0.8,
+    "rating": 0.9,
+    "year": 1993,
+    "developer": "Capcom",
+    "publisher": "NEC",
     "genres": [
       "Fight"
     ]
@@ -2772,7 +3594,10 @@
   "Strip Fighter II": {
     "id": "ac9664aaae145c7d30b78e6d2758104abf430f19",
     "players": 2,
-    "rating": 0.55,
+    "rating": 0.5,
+    "year": 1993,
+    "developer": "Games Express",
+    "publisher": "Games Express",
     "genres": [
       "Action",
       "Fight"
@@ -2782,6 +3607,9 @@
     "id": "c04f2fd7a6b4f42279a9995d27d3a909397ee8b7",
     "players": 2,
     "rating": 0.85,
+    "year": 1991,
+    "developer": "Make",
+    "publisher": "Pack In Video",
     "genres": [
       "Strategy"
     ]
@@ -2790,6 +3618,9 @@
     "id": "e691f69d78c68cf196cb446f0c405af788bb96a8",
     "players": 4,
     "rating": 0.85,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Board game"
     ]
@@ -2798,6 +3629,9 @@
     "id": "951f4ce9a7a9b2819ccad57092e51da2c9304aa8",
     "players": 5,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Board game"
     ]
@@ -2806,6 +3640,9 @@
     "id": "8f12a00cad8eb93ad2a90a9e404aabb40ae45a73",
     "players": 1,
     "rating": 0.85,
+    "year": 1991,
+    "developer": "Inter State",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -2823,6 +3660,9 @@
     "id": "a40afa1e9a7ec1a11fb2a009a3437a15bc0fe4ad",
     "players": 2,
     "rating": 0.8,
+    "year": 1990,
+    "developer": "Video System",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Volleyball"
@@ -2831,7 +3671,10 @@
   "Susanoou Densetsu": {
     "id": "38d24a47210bf9a1f46823960ac672594e37ea95",
     "players": 2,
-    "rating": 0.7,
+    "rating": 0.85,
+    "year": 1989,
+    "developer": "Alfa System",
+    "publisher": "Hudson",
     "genres": [
       "Role playing games"
     ]
@@ -2843,6 +3686,9 @@
     "id": "9928fe3d0049117563501e91975e4504902b1278",
     "players": 5,
     "rating": 0.35,
+    "year": 1991,
+    "developer": "Cinemaware",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -2851,7 +3697,10 @@
   "TV Sports Football": {
     "id": "cec752301eaaaafc436a35bb2df00aecbdeb3cd6",
     "players": 5,
-    "rating": 0.5,
+    "rating": 0.6,
+    "year": 1990,
+    "developer": "Cinemaware",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Football"
@@ -2869,6 +3718,9 @@
     "id": "2a7c7371db5e8178e7f4df89764a81c60bc17cc2",
     "players": 5,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "Cinemaware",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Hockey"
@@ -2885,6 +3737,9 @@
   "Takeda Shingen": {
     "id": "aa13ed1d5489c3e372ac73d36f105f41e0062241",
     "players": 1,
+    "year": 1989,
+    "developer": "Aicom",
+    "publisher": "Aicom",
     "genres": [
       "Action"
     ]
@@ -2893,10 +3748,14 @@
     "id": "55795a4cb2b6198d310137f2bd55fe2d1c4fd74d",
     "players": 2,
     "rating": 0.45,
+    "year": 1990,
+    "developer": "Aicom",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2909,7 +3768,10 @@
   "TaleSpin": {
     "id": "89f6c873da4dd518cb18cf2659b09f5575bbd837",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.4,
+    "year": 1991,
+    "developer": "Interactive Designs",
+    "publisher": "NEC",
     "genres": [
       "Platform"
     ]
@@ -2918,6 +3780,9 @@
     "id": "92e0eaed8bd14bf64f484197794219e6f686a792",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Sting Entertainment",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2926,6 +3791,9 @@
     "id": "4262115c7b36f908cdc7a0fae494eeab35b13a06",
     "players": 1,
     "rating": 0.55,
+    "year": 1989,
+    "developer": "Advance Communication Company",
+    "publisher": "Tonkin House",
     "genres": [
       "Action",
       "Platform"
@@ -2937,6 +3805,8 @@
   "Tenseiryuu - Saint Dragon": {
     "id": "84f7e518932bd52485f279168916c01e2c67df92",
     "players": 1,
+    "year": 1990,
+    "publisher": "Aicom",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2952,7 +3822,10 @@
   "Thunder Blade": {
     "id": "b4962893c5f2d5426f1caf3c216170c4049b8bb6",
     "players": 1,
-    "rating": 0.7,
+    "rating": 0.75,
+    "year": 1990,
+    "developer": "NEC",
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2960,7 +3833,10 @@
   "Tiger Road": {
     "id": "b056f76fe0758e52896e0ab3acee4f2b3115834d",
     "players": 1,
-    "rating": 0.9,
+    "rating": 0.85,
+    "year": 1990,
+    "developer": "Go!",
+    "publisher": "Capcom",
     "genres": [
       "Action",
       "Platform"
@@ -2970,6 +3846,9 @@
     "id": "9098f02882350258b322e9bb093a037c34c8a3a0",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "FACE",
+    "publisher": "NEC",
     "genres": [
       "Pinball"
     ],
@@ -2984,8 +3863,11 @@
   },
   "Timeball": {
     "id": "66a8253cc7b603251f1be9a89a7988d87b6ef798",
-    "players": 2,
+    "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Puzzle-Game"
     ]
@@ -2994,6 +3876,9 @@
     "id": "400a90b029da43ebca11e8fbab659df6b0c6aee7",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Naxat Soft",
+    "publisher": "Titus",
     "genres": [
       "Action",
       "Action / Breakout games",
@@ -3004,6 +3889,9 @@
     "id": "7756b2302a6c7e042306682abbc15172f36ed06b",
     "players": 2,
     "rating": 0.45,
+    "year": 1992,
+    "developer": "Bits Laboratory",
+    "publisher": "Media Rings",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -3013,6 +3901,9 @@
     "id": "22bea70c167bd24f334d8d61ac2e2dc292e98f70",
     "players": 1,
     "rating": 0.55,
+    "year": 1992,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Role playing games"
@@ -3022,14 +3913,21 @@
     "id": "93503ee010e1d61f2952ca075fe847d361217466",
     "players": 2,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Victor Entertainment",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Tricky Kick": {
     "id": "21258669122da7a43e06d8f26a37f96e278de3b1",
     "players": 1,
     "rating": 0.45,
+    "year": 1990,
+    "developer": "IGS",
+    "publisher": "IGS",
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -3039,6 +3937,9 @@
     "id": "d3edf81294195ca266e27518d8775aa33c03065f",
     "players": 2,
     "rating": 0.55,
+    "year": 1993,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Sports",
       "Sports / Sumo"
@@ -3048,6 +3949,9 @@
     "id": "4ddba93c38faf074f55fd09d82055bd2d21ab63a",
     "players": 1,
     "rating": 0.75,
+    "year": 1989,
+    "developer": "TOSE",
+    "publisher": "Intec Inc.",
     "genres": [
       "Simulation"
     ]
@@ -3056,6 +3960,9 @@
     "id": "c3a25cc4908a2d8af6a7d86bf17aa9709361b21b",
     "players": 1,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "Rainbow Arts",
+    "publisher": "Accolade",
     "genres": [
       "Action",
       "Platform",
@@ -3073,7 +3980,10 @@
   "Valkyrie no Densetsu": {
     "id": "39ccb65712ca0c3a7f2d8917b486cc5b0ec135d5",
     "players": 1,
-    "rating": 0.85,
+    "rating": 0.8,
+    "year": 1990,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Adventure"
@@ -3083,6 +3993,9 @@
     "id": "9d4eb5aa937869a23a9cf5d948acf020bbcb13f3",
     "players": 1,
     "rating": 0.65,
+    "year": 1990,
+    "developer": "Game Arts",
+    "publisher": "NEC",
     "genres": [
       "Shoot'em Up"
     ],
@@ -3099,10 +4012,14 @@
     "id": "d9e888ef69c25366088a23c9ab27d5fa74295441",
     "players": 1,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3116,10 +4033,14 @@
     "id": "b057cbdb3adf71653ee8e60c168ab4a44919e56a",
     "players": 1,
     "rating": 0.65,
+    "year": 1989,
+    "developer": "NEC",
+    "publisher": "Irem",
     "genres": [
       "Action",
       "Beat'em Up"
     ],
+    "age_rating": "16",
     "manuals": [
       {
         "languages": [
@@ -3132,7 +4053,10 @@
   "Volfied": {
     "id": "45a4af98797db4ad3ecf83b738d71671a6d63fae",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.75,
+    "year": 1989,
+    "developer": "Taito",
+    "publisher": "Empire Interactive",
     "genres": [
       "Puzzle-Game"
     ]
@@ -3141,6 +4065,9 @@
     "id": "27d71a2606535ba6d51dc263b5f926a6abed4aa2",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Naxat Soft",
+    "publisher": "Naxat Soft",
     "genres": [
       "Shoot'em Up"
     ]
@@ -3149,6 +4076,9 @@
     "id": "87062f9fb87865e5eadd4f12d6cc5235b55ec8db",
     "players": 1,
     "rating": 0.9,
+    "year": 1989,
+    "developer": "Video System",
+    "publisher": "Video System",
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -3158,6 +4088,9 @@
     "id": "e31fc0f945eefc3ded2ee031b807aad4456ae865",
     "players": 1,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Tenky",
+    "publisher": "NCS Corporation",
     "genres": [
       "Horses race",
       "Sports with Animals"
@@ -3167,6 +4100,9 @@
     "id": "311ab24f30742da88d09b9a80138328bb4c269eb",
     "players": 4,
     "rating": 0.7,
+    "year": 1989,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -3175,7 +4111,10 @@
   "Wonder Momo": {
     "id": "092c052a12eefd7f0456489158950fc186088586",
     "players": 1,
-    "rating": 0.35,
+    "rating": 0.3,
+    "year": 1989,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Beat'em Up"
     ]
@@ -3184,6 +4123,9 @@
     "id": "cd80a76cc25c4bff1d4c0c534d732b18b79cb2b5",
     "players": 2,
     "rating": 0.6,
+    "year": 1991,
+    "developer": "GAME STUDIO Inc.",
+    "publisher": "Namco",
     "genres": [
       "Driving",
       "Driving / Race",
@@ -3194,6 +4136,9 @@
     "id": "61b79233af8e8f6b08337f9df763ce7d6febe070",
     "players": 2,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -3211,6 +4156,9 @@
     "id": "aaa75bcbb39b3ee7efc48f0294a7b00930079d74",
     "players": 4,
     "rating": 0.65,
+    "year": 1989,
+    "developer": "Namco",
+    "publisher": "NEC",
     "genres": [
       "Sports",
       "Sports / Tennis"
@@ -3228,6 +4176,9 @@
     "id": "281674be49cf7ef8226066fdd6ea7b6da7242e13",
     "players": 4,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Horses race",
       "Sports with Animals"
@@ -3237,22 +4188,33 @@
     "id": "14e1fe263880e2a5c8966235651073f9c965da7a",
     "players": 5,
     "rating": 0.45,
+    "year": 1993,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Sports"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Xevious - Fardraut Saga": {
     "id": "371d653370e39d077e199178d15645bb2ae5907f",
     "players": 1,
-    "rating": 0.65,
+    "rating": 0.8,
+    "year": 1990,
+    "developer": "Compile",
+    "publisher": "Namco",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Yo, Bro": {
     "id": "d63da4da74f28782c1b7d663a01b91b331eccfc4",
-    "players": 2,
-    "rating": 0.3,
+    "players": 1,
+    "rating": 0.15,
+    "year": 1991,
+    "developer": "ICOM Simulations",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Shooter"
@@ -3268,8 +4230,11 @@
   },
   "Youkai Douchuuki": {
     "id": "3cafc858a39c351640ed5a2821b2dba082b8056b",
-    "players": 1,
-    "rating": 0.65,
+    "players": 2,
+    "rating": 0.7,
+    "year": 1988,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Platform"
@@ -3279,6 +4244,9 @@
     "id": "fec76d76caaad374dc09f8169d2c4f9af64453d6",
     "players": 1,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Media Rings",
+    "publisher": "Media Rings",
     "genres": [
       "Driving",
       "Driving / Race",
@@ -3289,6 +4257,9 @@
     "id": "6efac1b8257708a1135055dc5caeda87e3d2b8de",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Arc System Works",
+    "publisher": "Pack In Video",
     "genres": [
       "Action",
       "Puzzle-Game"

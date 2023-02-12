@@ -1,27 +1,38 @@
 {
   "3-D Genesis": {
     "id": "b07cf9916a5c1fec06e681b4f8dbc8b45a905388",
+    "year": 1983,
+    "developer": "Dan  McElroy",
+    "publisher": "Amiga",
     "genres": [
       "Action"
     ]
   },
   "3-D Ghost Attack": {
     "id": "4f55e22033cb4f9109c5b764be8051acce2f7009",
+    "year": 1983,
+    "publisher": "Amiga",
     "genres": [
       "Shooter"
     ]
   },
   "3-D Havoc": {
-    "id": "d53aa34c686a3cf8426de30d11756316048bebd1"
+    "id": "d53aa34c686a3cf8426de30d11756316048bebd1",
+    "year": 1983,
+    "publisher": "Amiga"
   },
   "3-D Tic-Tac-Toe": {
     "id": "ae59cbcdf6010c620e4f8a03cfaa5f84254f6e5d",
     "players": 2,
     "rating": 0.5,
+    "year": 1980,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Simulation",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -44,6 +55,9 @@
   "3-D Zapper": {
     "id": "9767d9ae62be7238804deb195313a693f80e8150",
     "players": 1,
+    "year": 1982,
+    "developer": "Todd Marshall",
+    "publisher": "U.S. Games Corporation / Vidtec",
     "genres": [
       "Shooter",
       "Shooter / 1st person"
@@ -53,9 +67,13 @@
     "id": "321e76acbbec9ee45808a3755bf56c70643c56c4",
     "players": 3,
     "rating": 0.4,
+    "year": 1988,
+    "developer": "Activision",
+    "publisher": "Atari",
     "genres": [
       "Various"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -69,10 +87,14 @@
     "id": "87af569e0e91612da79fab9ed2dde7c1c3d036c7",
     "players": 1,
     "rating": 0.5,
+    "year": 1992,
+    "developer": "Salu Ltd.",
+    "publisher": "Salu Ltd.",
     "genres": [
       "Puzzle-Game",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -113,6 +135,9 @@
   "Actionauts": {
     "id": "5e7853546a6ad120c42c3ffa0bf3a5957bd8790f",
     "players": 1,
+    "year": 1984,
+    "developer": "Rob Fulop",
+    "publisher": "Imagic",
     "genres": [
       "Simulation"
     ],
@@ -129,9 +154,13 @@
     "id": "00cdf49a88f0411d66229739b553b8add2457d9c",
     "players": 4,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -145,9 +174,13 @@
     "id": "0c76c05df831e21a0a151aa8b305fe6dac7a3bda",
     "players": 1,
     "rating": 0.75,
+    "year": 1980,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -171,9 +204,13 @@
     "id": "92cbdfb7fd0db89d374498ae47628e432b1aacd5",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "APh Technological Consulting",
+    "publisher": "Telegames",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -187,16 +224,23 @@
     "id": "4b7da9b11d4e5fab707ce8a6ffbefad7b97099b1",
     "players": 1,
     "rating": 0.4,
+    "year": 1984,
+    "developer": "Men-A-Vision",
+    "publisher": "Men-A-Vision",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Vertical"
-    ]
+    ],
+    "age_rating": "3"
   },
   "Air Raiders": {
     "id": "2b088d15b15dea33405d7d91b35855b05bf4a2f7",
     "players": 1,
     "rating": 0.7,
+    "year": 2003,
+    "developer": "Telegames",
+    "publisher": "Telegames",
     "genres": [
       "1st person",
       "Action",
@@ -204,6 +248,7 @@
       "Shooter / Vehicle",
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -217,10 +262,14 @@
     "id": "871763091c45bcfbf58b1f903c1f13a629bcd533",
     "players": 2,
     "rating": 0.5,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Sears",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -247,10 +296,14 @@
     "id": "bf4fe6d4bbe73f84c8fadf18d0bea3d1ceb48323",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -264,10 +317,14 @@
     "id": "a1c217d563239ce207d236658baf5ec70d160f5e",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -280,6 +337,9 @@
   "Alien's Return": {
     "id": "f19eb2ea78ef852e8877d821ca5628d33002ae77",
     "players": 1,
+    "year": 1983,
+    "developer": "Gem International Corp.",
+    "publisher": "Dimax",
     "genres": [
       "Action"
     ],
@@ -300,6 +360,9 @@
   "Alligator People": {
     "id": "93e8a17554eed86d1aeb86b19db011ba531d350e",
     "players": 1,
+    "year": 1983,
+    "developer": "Sunmark",
+    "publisher": "Fox Interactive",
     "genres": [
       "Action"
     ]
@@ -307,9 +370,13 @@
   "Alpha Beam with Ernie": {
     "id": "157fdb5d68400194bb0b75e035869aa825038336",
     "players": 2,
+    "year": 1983,
+    "developer": "Children's Computer Workshop, Inc.",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -323,9 +390,14 @@
     "id": "2d613b97c0b80baa8ebef20b45231b031c0fa521",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
-      "Action"
+      "Action",
+      "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -349,16 +421,23 @@
   "AndroMan on the Moon": {
     "id": "53da0c26595f875d3f29b77fbbbe8ea1c9342750",
     "players": 1,
+    "year": 1984,
+    "developer": "Western Technologies",
+    "publisher": "Western Technologies",
     "genres": [
       "Action",
       "Action / Labyrinth",
       "Shooter",
       "Shooter / 1st person"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Aquaventure": {
     "id": "cc9af25dac301be92501b797efa3d26cec73acf9",
     "players": 1,
+    "year": 1983,
+    "developer": "Gary Shannon, Tod Frye",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -366,11 +445,15 @@
   "Armor Ambush": {
     "id": "98944ec2343a99c73e1734ab3f0f740d8a8c15d4",
     "players": 2,
+    "year": 1982,
+    "developer": "M Network",
+    "publisher": "M Network",
     "genres": [
       "3rd person",
       "Shooter",
       "Shooter / Vehicle"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -383,9 +466,13 @@
   "Artillery Duel": {
     "id": "45d8a972825d46d914c4ef79227ee016170da29f",
     "players": 2,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -410,10 +497,14 @@
     "id": "debc2bde1dd69551e3be16c8538d41dfa56d208a",
     "players": 2,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -436,6 +527,9 @@
   "Astroblast": {
     "id": "9f1fc23c044f8286572f6cb6b354bd85a627b7d1",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "M Network",
     "genres": [
       "Shooter"
     ],
@@ -452,10 +546,14 @@
     "id": "e988ca0558debd42f9f8af2b3fe5c99c29d334f9",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -468,6 +566,9 @@
   "Atlantis II": {
     "id": "119425eab29af5f88e78ffb0aa0d30e3de0573fd",
     "players": 2,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -482,6 +583,8 @@
   },
   "Atom Smasher": {
     "id": "5c28dfcc88dbe17c55f87eb0c5df2b204887e2f2",
+    "year": 1983,
+    "publisher": "Video Soft",
     "genres": [
       "Shoot'em Up"
     ]
@@ -489,6 +592,9 @@
   "BASIC Programming": {
     "id": "29493783825426e5b00da16a4a39b5d2833bf360",
     "players": 1,
+    "year": 1986,
+    "developer": "Atari",
+    "publisher": "Atari",
     "category": "Applications",
     "genres": [
       "Various"
@@ -518,6 +624,9 @@
   "BMX Air Master": {
     "id": "23d471cac4a6e381bf268bc944123507831fd9e0",
     "players": 2,
+    "year": 1989,
+    "developer": "Sculptured Software",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Cycling"
@@ -535,9 +644,13 @@
     "id": "a7368d53f4e7035c15a6dbc802fbbd16dc961df2",
     "players": 2,
     "rating": 0.25,
+    "year": 1983,
+    "developer": "Mystique",
+    "publisher": "Mystique",
     "genres": [
       "Action"
     ],
+    "age_rating": "AO",
     "manuals": [
       {
         "languages": [
@@ -551,6 +664,9 @@
     "id": "f206ecbcf4064952d7556d89b5a356776c3c37a9",
     "players": 2,
     "rating": 0.2,
+    "year": 1982,
+    "developer": "Mystique",
+    "publisher": "Mystique",
     "genres": [
       "Action",
       "Educational"
@@ -568,10 +684,14 @@
     "id": "22ba80c07372557451fdca7419ece8fa949bbd28",
     "players": 2,
     "rating": 0.35,
+    "year": 1979,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Board game",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -598,12 +718,16 @@
     "id": "1f3fb95fda6a6776c03513daa484af9f00730972",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Action / Labyrinth",
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -617,6 +741,9 @@
     "id": "6d4bb8aba02768fb6217879394bbee1a93e42272",
     "players": 1,
     "rating": 0.65,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -643,6 +770,9 @@
     "id": "acad0d4fb6990bac62104bf498e0f9baa6c3a964",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "QuelleSoft",
+    "publisher": "Home Vision",
     "genres": [
       "Shoot'em Up"
     ],
@@ -659,9 +789,13 @@
     "id": "ae7a03ca1f4d02abb6fc3f5d34c5af491ece7d72",
     "players": 1,
     "rating": 0.4,
+    "year": 1977,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -675,10 +809,14 @@
     "id": "c49786cebcc9420de3d2a27549d989b2ed3e9ed9",
     "players": 2,
     "rating": 0.5,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -702,6 +840,9 @@
     "id": "cb770b4a73933617ad9025e4db20f774fd4d5561",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "1st person",
       "Action",
@@ -709,6 +850,7 @@
       "Shooter / Vehicle",
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -732,10 +874,14 @@
     "id": "3618d9b52dc7092364f81b4cf325d833d8fb88ea",
     "players": 1,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -760,6 +906,9 @@
     "id": "c8fdd2eead8cfd7ff4fe82e8a63949537d4f4029",
     "players": 1,
     "rating": 0.9,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -776,6 +925,9 @@
     "id": "16f7d86d6ca1202f9ed11c64ed7b678984903167",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Mystique",
+    "publisher": "Mystique",
     "genres": [
       "Action"
     ],
@@ -791,6 +943,9 @@
   "Berenstain Bears": {
     "id": "d7b1c00b8e259a3944754c370aca3fd0d4c915ea",
     "players": 1,
+    "year": 1983,
+    "developer": "Coleco Industries, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Educational"
     ],
@@ -807,9 +962,13 @@
     "id": "a4289dff4e238a62a183df2359a1a1d5b76ec7ac",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -823,6 +982,9 @@
     "id": "f5d46e436d4676e8fc0801d1e7aa2c337b22f067",
     "players": 2,
     "rating": 0.9,
+    "year": 1982,
+    "developer": "Stern Electronics, Inc.",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter"
@@ -849,9 +1011,13 @@
   "Big Bird's Egg Catch": {
     "id": "5a93d03633eb9c2cf64cadfc683662f19b8e9a4c",
     "players": 2,
+    "year": 1983,
+    "developer": "Children's Computer Workshop, Inc.",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -863,23 +1029,31 @@
   },
   "Bionic Breakthrough": {
     "id": "bbc67d9a291e180f1012d3750ab85880d0b268c0",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
   },
   "Birthday Mania": {
     "id": "2cb24a4d5f8d32aae4a4f1a6d03bd946d15e563b",
-    "players": 1
+    "players": 1,
+    "developer": "Anthony Tokar",
+    "publisher": "Anthony Tokar"
   },
   "Black Jack": {
     "id": "e83b0dcaafb74d331c1cad2c3aaee53332a09665",
     "players": 3,
     "rating": 0.35,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Sears",
     "genres": [
       "Casino",
       "Casino / Cards",
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -892,7 +1066,10 @@
   "Blueprint": {
     "id": "b81edac0c32ebd18615b836743a131561c0761a1",
     "players": 2,
-    "rating": 0.6,
+    "rating": 0.5,
+    "year": 1983,
+    "developer": "Zilec Electronics",
+    "publisher": "CBS Software",
     "genres": [
       "Action"
     ],
@@ -909,6 +1086,8 @@
     "id": "523152a63541fade21feaad1a694672d582af237",
     "players": 1,
     "rating": 0.5,
+    "developer": "Bit Corp.",
+    "publisher": "Bit Corp.",
     "genres": [
       "Action"
     ],
@@ -924,6 +1103,8 @@
   "Boggle": {
     "id": "91deaa8e962abd00099762c65c0af54f002c0258",
     "players": 2,
+    "year": 1978,
+    "publisher": "Atari",
     "genres": [
       "Board game"
     ]
@@ -931,6 +1112,9 @@
   "Boing!": {
     "id": "604a52a5ba14d28d953bb5655e3b98d76f30762f",
     "players": 1,
+    "year": 1983,
+    "developer": "First Star Software",
+    "publisher": "First Star Software",
     "genres": [
       "Action"
     ],
@@ -945,16 +1129,23 @@
   },
   "Bouncin' Baby Bunnies": {
     "id": "d57d725c170e053d92b4ae02447de62b3f26b960",
-    "players": 1
+    "players": 1,
+    "year": 1983,
+    "developer": "Alex Leavens",
+    "publisher": "Telesys"
   },
   "Bowling": {
     "id": "c8549da12aee88b0583aff1d681047d2a37ae841",
     "players": 2,
     "rating": 0.5,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Bowling"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -978,9 +1169,14 @@
     "id": "5468e845abfc09dc78ecdde9b819d5b2171f4d75",
     "players": 2,
     "rating": 0.55,
+    "year": 1980,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Boxing"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -997,9 +1193,13 @@
     "id": "19a7ea4420fe23e60b306987d8386aed4ccb6ae1",
     "players": 2,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ],
+    "age_rating": "3",
     "controls": [
       "keyboard"
     ],
@@ -1029,10 +1229,14 @@
     "id": "49b9595460cdbefe4c2dc2d79bc49316f4306ffa",
     "players": 4,
     "rating": 0.6,
+    "year": 1978,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Breakout games"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1059,10 +1263,14 @@
     "id": "18f7d10bc0d7f84d74bdb992703f2dc5fc5dfa4b",
     "players": 1,
     "rating": 0.5,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Playing cards",
       "Various"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1075,6 +1283,9 @@
   "Buck Rogers - Planet of Zoom": {
     "id": "9c2cce876bca3de5789400be8462dd9e2c202b1f",
     "players": 1,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1101,6 +1312,9 @@
   "Bugs": {
     "id": "774f2eff7ab98466f81921d102baf05d804c40e9",
     "players": 2,
+    "year": 1983,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action"
     ],
@@ -1127,9 +1341,13 @@
   "Bugs Bunny": {
     "id": "73c8a9b25504bab0d8efffd6e6ff13afa7465d3d",
     "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari2600.com",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1143,11 +1361,15 @@
     "id": "6e24f9920d41e337a70293e198b8b7c0160b4b22",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action",
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1160,10 +1382,13 @@
   "Bumper Bash": {
     "id": "54e2859675b66886608df31b215461ada7045e40",
     "players": 1,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
-      "Action",
       "Pinball"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1177,6 +1402,9 @@
     "id": "c70c96d6ffab84f780bfede6b51e6c834f0d9a0d",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action",
       "Platform"
@@ -1193,9 +1421,13 @@
   "Burning Desire": {
     "id": "3c2602e58c86de24793678cf1cfbb63505455f2a",
     "players": 1,
+    "year": 1982,
+    "developer": "Playground",
+    "publisher": "Mystique",
     "genres": [
       "Various"
     ],
+    "age_rating": "18",
     "manuals": [
       {
         "languages": [
@@ -1207,6 +1439,8 @@
   },
   "Cabbage Patch Kids - Adventures in the Park": {
     "id": "fabd99a96ba248b8d9e21cbec725ccd87a9db1e6",
+    "year": 1984,
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Platform"
     ],
@@ -1223,9 +1457,13 @@
     "id": "6fbba46fb98084d901eda7c3ccb72b0be27abba6",
     "players": 1,
     "rating": 0.95,
+    "year": 1983,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1239,10 +1477,15 @@
     "id": "e779f3d8495f3154691acdeba5fcc36524ecd2a5",
     "players": 8,
     "rating": 0.6,
+    "year": 1988,
+    "developer": "Epyx",
+    "publisher": "Epyx",
     "genres": [
       "Action",
-      "Sports"
+      "Sports",
+      "Sports / Multisports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1256,9 +1499,13 @@
     "id": "3249e575257f08b3b3f78c352e6d7d7c57580b09",
     "players": 2,
     "rating": 0.35,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1273,6 +1520,8 @@
   },
   "Care Bears": {
     "id": "bd85376d2872fa251654eb316dba8e6314c6b99e",
+    "year": 1983,
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ]
@@ -1281,6 +1530,9 @@
     "id": "2eea2bbddf6a369304c60d84f9372cdda7db54e1",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -1308,11 +1560,15 @@
     "id": "f4adc3eff77a95db6bd82c96cb6a8c747e3ba375",
     "players": 4,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Casino",
       "Casino / Cards",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1328,6 +1584,9 @@
   "Cat Trax": {
     "id": "2115ff6d9e816a1bda9cdc55017a722407e72c62",
     "players": 1,
+    "year": 1983,
+    "developer": "UA Limited",
+    "publisher": "AtariAge",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1344,9 +1603,13 @@
   "Cathouse Blues": {
     "id": "e387b25ca82f6c545f9418d822a27c2d4555393a",
     "players": 1,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Mystique",
     "genres": [
       "Action"
     ],
+    "age_rating": "18",
     "manuals": [
       {
         "languages": [
@@ -1360,6 +1623,9 @@
     "id": "936cd56d3bc1cfc758cc86afaf1ce74080f04c49",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1386,6 +1652,9 @@
     "id": "483bb39157d89b2b0b150fbb65bb1d7546e4ded5",
     "players": 1,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Spectravision",
     "genres": [
       "Action",
       "Simulation"
@@ -1403,10 +1672,14 @@
     "id": "f4e86b821722dd00a3c7651976689ad367e3dbff",
     "players": 2,
     "rating": 0.65,
+    "year": 1980,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1420,6 +1693,9 @@
     "id": "b2d236ab9bb441f73460d7e4459220f3f6d40173",
     "players": 1,
     "rating": 0.45,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
@@ -1436,10 +1712,14 @@
     "id": "55a498e6e865ea5ec117eaa88cbc771354dcad7c",
     "players": 2,
     "rating": 0.7,
+    "year": 1980,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Strategy",
       "Various"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1453,9 +1733,13 @@
     "id": "e5bae3bf0333e1925a6723724c72098192dc05a3",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1479,10 +1763,14 @@
     "id": "5efb8be8db61570b6ea1ffae08fa30f362a08dfc",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1506,6 +1794,9 @@
     "id": "b95c5809d7db08d16688c458e89e418eee41df0b",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Action"
     ],
@@ -1521,9 +1812,13 @@
   "Circus Atari": {
     "id": "0d06ddde7d11bd927c337d3866a29a118223758f",
     "players": 2,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1547,6 +1842,9 @@
     "id": "0f9555e0b9a9c68775f4e3abe7245cce9e6c04b8",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action"
     ],
@@ -1563,10 +1861,13 @@
     "id": "5e490eaffc37af0e729800510403d06c26de5e18",
     "players": 2,
     "rating": 0.4,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Puzzle-Game",
       "Strategy"
     ],
+    "age_rating": "3",
     "controls": [
       "keyboard"
     ],
@@ -1610,9 +1911,13 @@
     "id": "9262107284115d0fa5c3476ba1e25706fedca5c9",
     "players": 2,
     "rating": 0.6,
+    "year": 1977,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1636,9 +1941,13 @@
     "id": "83f0176e4e256e71c8743a8f685eb74a28e2367c",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1652,8 +1961,13 @@
     "id": "69fb1ef2ab57ba465e69d0b4882109fa5bcf8512",
     "players": 2,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "Capcom",
+    "publisher": "Activision",
     "genres": [
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Run and Gun"
     ],
     "manuals": [
       {
@@ -1668,6 +1982,9 @@
     "id": "1eb967e8860e73ef69cd6d92ca3cd128fa6974da",
     "players": 1,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action",
       "Shooter"
@@ -1684,9 +2001,14 @@
   "Communist Mutants from Space": {
     "id": "690c9614d78fc79fd716170abd7fd87f87197f3f",
     "players": 4,
+    "rating": 0.55,
+    "year": 1982,
+    "developer": "Arcadia Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
-      "Shooter"
+      "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1700,16 +2022,23 @@
     "id": "65be1dad99263024b3fc484047e45ac3009df9c3",
     "players": 1,
     "rating": 0.7,
+    "year": 1979,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Board game",
       "Strategy"
-    ]
+    ],
+    "age_rating": "3"
   },
   "Condor Attack": {
     "id": "b4ffb00f87602ebb0af286d011c1bd3e0417120c",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Ultravision",
+    "publisher": "Ultravision",
     "genres": [
       "Shoot'em Up"
     ],
@@ -1724,6 +2053,8 @@
   },
   "Confrontation": {
     "id": "966c58c7a12dae1c2933162e83983b0f0c1fd039",
+    "year": 1983,
+    "publisher": "Answer Software",
     "genres": [
       "Strategy"
     ],
@@ -1740,10 +2071,14 @@
     "id": "d3e7e2fabffe1dc18daae487bf612b5b2efce75f",
     "players": 2,
     "rating": 0.35,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1766,9 +2101,13 @@
   "Cookie Monster Munch": {
     "id": "b915d67dc978c0c6075d31f8c3a669e00e3d68c3",
     "players": 2,
+    "year": 1983,
+    "developer": "Children's Computer Workshop",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1792,10 +2131,14 @@
     "id": "18faae0939188e9676204e6101ad197e98d70eb2",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1809,9 +2152,13 @@
     "id": "555cb23a08af95fbb15db74863bca1891ec94bab",
     "players": 1,
     "rating": 0.5,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1825,9 +2172,13 @@
     "id": "c41a4d3da9f95b6d8b50d90bab3b271216c8a06a",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1841,6 +2192,9 @@
     "id": "4a94a0dfa9b998a89ef787061ed1a458eb07c822",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -1858,6 +2212,9 @@
     "id": "498ac6e7a676deef5ae2675bfddc96d369a3e644",
     "players": 1,
     "rating": 0.5,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -1875,10 +2232,14 @@
     "id": "287c0433bf5d0b080706790117b63954ebe9b5d1",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1892,6 +2253,9 @@
     "id": "1db36973090e89136a9140b62fdc08bf7d8b0fed",
     "players": 1,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -1918,9 +2282,13 @@
     "id": "0349b02fb6804ee722fc0b5169aa6cd93097cacc",
     "players": 1,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Nichibutsu",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1934,6 +2302,9 @@
     "id": "22e7924d2ec93b89ee71bd6c68405657a6aec781",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
@@ -1960,6 +2331,9 @@
     "id": "32f77c3454ce58d8b43f128678870d8cc4a8b0a3",
     "players": 2,
     "rating": 0.7,
+    "year": 1987,
+    "developer": "Exidy, Inc.",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1976,6 +2350,9 @@
     "id": "ee4b3c4a298a5b2f630f7220bc6a240dae645c7a",
     "players": 1,
     "rating": 0.3,
+    "year": 1982,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Action / Adventure"
@@ -1993,9 +2370,13 @@
     "id": "6fcdc2fbf388e27a9a0139389ef4dd694df2ee60",
     "players": 1,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2020,6 +2401,9 @@
     "id": "f7affab977b8064b5eeaf8266f124f2406af1586",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Rob Fulop",
+    "publisher": "Imagic",
     "genres": [
       "Strategy"
     ],
@@ -2036,10 +2420,14 @@
     "id": "3b89fcd1d6cbe5dac096793c29a6906d2078da8f",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Mystique",
+    "publisher": "Mystique",
     "genres": [
       "Action",
       "Simulation"
     ],
+    "age_rating": "AO",
     "manuals": [
       {
         "languages": [
@@ -2053,10 +2441,14 @@
     "id": "3873beb3e9bb25d133adfede5c9844b2d01e7b46",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "QuelleSoft",
+    "publisher": "Bit Corp.",
     "genres": [
       "Action",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2080,6 +2472,9 @@
     "id": "0860f60ac773b25e390a974e42e7d5ec8b8d71c5",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "M Network",
+    "publisher": "M Network",
     "genres": [
       "Action"
     ],
@@ -2096,10 +2491,14 @@
     "id": "750407c90a95ffc96c9c5de2d4b4f36de9f1a1f1",
     "players": 2,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2113,6 +2512,9 @@
     "id": "a5870290ae056e2520cdf0945d6981cffca36406",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Shooter",
@@ -2130,6 +2532,9 @@
   "Death Trap": {
     "id": "9aee42b979ba67f5e3002c172b6e46dcc750881c",
     "players": 1,
+    "year": 1983,
+    "developer": "Avalon Hill",
+    "publisher": "Avalon Hill",
     "genres": [
       "Strategy"
     ],
@@ -2146,11 +2551,15 @@
     "id": "b1fc287f642102ebdd060d802a7e78b3ead2b3ad",
     "players": 2,
     "rating": 0.75,
+    "year": 1981,
+    "developer": "Williams Electronics",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2186,6 +2595,9 @@
     "id": "c00eb9a303a136d82bc867f3901a9e2ebcbe578a",
     "players": 2,
     "rating": 0.9,
+    "year": 1982,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action"
     ],
@@ -2202,11 +2614,15 @@
     "id": "fe534949fca15d9c5502edc9844e4b8e0219f3b6",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / Vertical"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2220,6 +2636,9 @@
     "id": "821d696fb7e893c764151325ffdfd1d91c5a61b8",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Driving",
@@ -2254,6 +2673,8 @@
   },
   "Depth Charge": {
     "id": "3a219a467963e94d5f0101f4f582fcdc1b3682ef",
+    "year": 1983,
+    "publisher": "Amiga",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Vertical"
@@ -2271,8 +2692,13 @@
     "id": "f237b0eae09d78cc8eb8f93ace23fdf2c02d7915",
     "players": 2,
     "rating": 0.6,
+    "year": 1987,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Action"
+      "Diagonal",
+      "Shooter",
+      "Shooter / Vehicle"
     ],
     "manuals": [
       {
@@ -2287,6 +2713,9 @@
     "id": "586353f7cb63d1fe436946c05939771aab364128",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Panda, Inc.",
+    "publisher": "Sancho",
     "genres": [
       "Puzzle-Game"
     ],
@@ -2303,6 +2732,9 @@
     "id": "756963f3d994b7c2b6d7ebdabb721ae2fdfe0523",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -2329,10 +2761,14 @@
     "id": "bf808347e7d25af9743ca5a884bf3fa33116429a",
     "players": 2,
     "rating": 0.7,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2356,9 +2792,13 @@
     "id": "590b0a69a807b74920a3faa26e3f78c7507f9abd",
     "players": 2,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2374,6 +2814,9 @@
   "Donald Duck's Speedboat": {
     "id": "42dfd084b8eeda56a9d71888eaafc9c127a5499d",
     "players": 1,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -2382,6 +2825,9 @@
     "id": "5e90498fcc185e39af0de060058b025f9ac894b5",
     "players": 1,
     "rating": 0.6,
+    "year": 1981,
+    "developer": "Ikegami Tsushinki ",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2410,6 +2856,9 @@
     "id": "3b4bdbca0dd4e59f4da667eebd76ed16c35078fb",
     "players": 2,
     "rating": 0.35,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2427,6 +2876,9 @@
     "id": "430a2f2ceea8cb7e60f68ac6d025b2bc720c9f36",
     "players": 2,
     "rating": 0.5,
+    "year": 1988,
+    "developer": "Technos Japan Corp.",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Beat'em Up"
@@ -2443,6 +2895,9 @@
   "Double Dunk": {
     "id": "004dc157a45416fce483b8fff811a65c1c6fab96",
     "players": 2,
+    "year": 1989,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -2459,6 +2914,9 @@
   "Dragon Defender": {
     "id": "972c08569ac636b10c78812232a4282508fd4fad",
     "players": 1,
+    "year": 1983,
+    "developer": "Ariola",
+    "publisher": "Rainbow Vision",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2467,6 +2925,9 @@
     "id": "82baad00e589b3effd5fd21ab211e504f1d8b47b",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -2482,7 +2943,10 @@
   "Dragonstomper": {
     "id": "54279b9cea200a2fb1da5079600ec99a47bd5a0d",
     "players": 1,
-    "rating": 0.6,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Role playing games"
     ],
@@ -2499,10 +2963,14 @@
     "id": "d62f0c6e569eab62c2309c6006a547b8810513c5",
     "players": 2,
     "rating": 0.45,
+    "year": 1980,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2525,6 +2993,9 @@
   "Dukes of Hazzard": {
     "id": "a2bb11ef15bc95fcbcc0e65e800c7ac188d8cf60",
     "players": 1,
+    "year": 1983,
+    "developer": "Mark R. Hahn",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -2533,12 +3004,17 @@
   "Dumbo's Flying Circus": {
     "id": "276c8709c008687047b02c37ceabc6b712fd25f9",
     "players": 1,
+    "year": 1983,
+    "developer": "Prototype",
+    "publisher": "Prototype",
     "genres": [
       "Adventure"
     ]
   },
   "Dune": {
     "id": "c7af584c15b7abe01e3b7f23758d1e9c60aa8a71",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Strategy"
     ]
@@ -2547,6 +3023,9 @@
     "id": "5ec1b0647036581af8cade99914badb93cd76b43",
     "players": 1,
     "rating": 0.2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Adventure"
@@ -2579,6 +3058,9 @@
   "Earth Dies Screaming, The": {
     "id": "12be936c47d44e8b8bf6fb1c8031c28866ff348d",
     "players": 1,
+    "year": 1983,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -2597,6 +3079,9 @@
     "id": "140d60543b7b29de2ca837e9c24897977f57e99a",
     "players": 4,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -2613,8 +3098,13 @@
     "id": "82ff41ff5770d19388e9abe7dd84c0c712f3be84",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Taito",
+    "publisher": "CGE Services Corporation",
     "genres": [
-      "Action"
+      "Action",
+      "Platform",
+      "Platform / Shooter Scrolling"
     ],
     "manuals": [
       {
@@ -2631,6 +3121,9 @@
   "Eli's Ladder": {
     "id": "d455eb022aa7456984f98b50d5c2844a53ffb39d",
     "players": 2,
+    "year": 1982,
+    "developer": "Simage",
+    "publisher": "Simage",
     "genres": [
       "Educational"
     ],
@@ -2645,6 +3138,8 @@
   },
   "Elk Attack": {
     "id": "b434928d82859a081360a8107431b6e2bf1af257",
+    "year": 1987,
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -2660,6 +3155,9 @@
   "Encounter at L-5": {
     "id": "b2ab84d004e3923addfcaae44ba9a6af16becb9a",
     "players": 2,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action",
       "Shooter",
@@ -2678,6 +3176,9 @@
     "id": "212b7c7f91311e6b9d2027aa93db66ebe5172efa",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Driving",
       "Race"
@@ -2693,6 +3194,9 @@
   },
   "Entity, The": {
     "id": "bf56270ded0c68f32644a17d53770b7e90733033",
+    "year": 1983,
+    "developer": "Mark Klein",
+    "publisher": "Fox Video Games",
     "genres": [
       "Role playing games"
     ],
@@ -2709,10 +3213,14 @@
     "id": "d250d046f1ccdad289d76193226d0bbbce576f90",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Western Technologies",
+    "publisher": "U.S. Games",
     "genres": [
       "Adventure",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2726,8 +3234,11 @@
     "id": "31e1a9a7792defd651b1bac7bab3e70636d755be",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
-      "Action"
+      "Adventure"
     ],
     "manuals": [
       {
@@ -2742,11 +3253,15 @@
     "id": "01954efa3ec03f8b2a97c887920ea553f2991ddf",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Orca Corporation",
+    "publisher": "Tigervision",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / Vertical"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2759,6 +3274,9 @@
   "Extra Terrestrials": {
     "id": "744d7fea395e7b002014475c9c74db8367e12d47",
     "players": 2,
+    "year": 1983,
+    "developer": "Skill Screen Games",
+    "publisher": "Skill Screen Games",
     "genres": [
       "Strategy"
     ]
@@ -2767,6 +3285,9 @@
     "id": "4af4d14486f43977d26805bd5f2f9d6c207132ee",
     "players": 1,
     "rating": 0.65,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -2783,6 +3304,9 @@
     "id": "c75740285d1edccf753a6cd2d6a2103ba34ca346",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Suntek",
+    "publisher": "Home Vision",
     "genres": [
       "Action"
     ]
@@ -2791,10 +3315,14 @@
     "id": "571bc87b1006171cffeb61810cd671effaea0c5e",
     "players": 1,
     "rating": 0.65,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2808,6 +3336,9 @@
     "id": "ef978bbe9dbb26b69333aef9f3fa349b8bc68aee",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action"
     ],
@@ -2824,10 +3355,14 @@
     "id": "3b9e686b0102773c9ef702b03144424bea923b0f",
     "players": 1,
     "rating": 0.45,
+    "year": 1990,
+    "developer": "Sculptured Software",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2841,6 +3376,9 @@
     "id": "a04cb08ddaa13b5d2d9ec589d9302b51b1b24851",
     "players": 1,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -2868,6 +3406,9 @@
     "id": "a149e2dbe71c65cf6ac6bff85be37eba2d06b8a5",
     "players": 2,
     "rating": 0.2,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Strategy"
     ],
@@ -2884,9 +3425,13 @@
     "id": "1aa88c21f7719e66a121212415521feef6c4cf87",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2910,9 +3455,13 @@
     "id": "66bb4ab1c1786234604670d52f1f426eedb79a14",
     "players": 2,
     "rating": 0.2,
+    "year": 1983,
+    "developer": "Mythicon, Inc.",
+    "publisher": "Mythicon, Inc.",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2924,6 +3473,9 @@
   },
   "Fire Spinner": {
     "id": "39bca466d972062fc06e313e24a341d0e069c01f",
+    "year": 1983,
+    "developer": "Vidco",
+    "publisher": "Suntek",
     "genres": [
       "Action"
     ]
@@ -2932,8 +3484,12 @@
     "id": "c8fef0d0227cd91d234c745940d745c081d93366",
     "players": 4,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Arcadia Corporation",
+    "publisher": "Arcadia Corporation",
     "genres": [
-      "Action"
+      "Action",
+      "Action / Breakout games"
     ],
     "manuals": [
       {
@@ -2948,9 +3504,15 @@
     "id": "4bc639e345363bd2d9ecbfc0bcb2573f6dc7107a",
     "players": 2,
     "rating": 0.75,
+    "year": 1980,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
+      "Fishing",
+      "Hunting and Fishing",
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2964,9 +3526,13 @@
     "id": "075dac1fd31c8feb4135c13572237108cb1b256a",
     "players": 2,
     "rating": 0.4,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2980,6 +3546,9 @@
     "id": "078a161195ccb79a7c3e93c16c8c3468d4e26e21",
     "players": 1,
     "rating": 0.45,
+    "year": 1983,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Shooter",
@@ -2998,10 +3567,14 @@
     "id": "603f33ae01103eeaf29dbeb0a1013c86f95998b2",
     "players": 2,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Football"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3021,6 +3594,9 @@
     "id": "bd39fae89eee74024ce6ad009495742532040ab3",
     "players": 1,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Sancho",
+    "publisher": "Sancho",
     "genres": [
       "Action"
     ],
@@ -3038,6 +3614,9 @@
     "id": "c758c67a94e51b84c35b564f1377124f77545c4c",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action",
       "Platform"
@@ -3066,6 +3645,9 @@
     "id": "52914bf34c2f25c2fdf1feec5bfb5e8e8610abaa",
     "players": 2,
     "rating": 0.65,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -3080,6 +3662,8 @@
   },
   "Frisco": {
     "id": "ae6002dbee4e4d9602e80e0630f46bce2fe4c56f",
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Action"
     ]
@@ -3089,6 +3673,8 @@
   },
   "Frog Pond": {
     "id": "87c3e9e5fbe9ca1de3c6c2f03dc53af88a7ac2eb",
+    "year": 1982,
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -3105,6 +3691,9 @@
     "id": "8a5f0595d6d035683afb3c21d9bf6bb5abe6ec32",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -3132,6 +3721,9 @@
     "id": "a1ff1a1cc4e4ca5a54ce9407029e0af127bfabfd",
     "players": 1,
     "rating": 0.85,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -3155,6 +3747,9 @@
     "id": "d20df4a782fc694df605f58da727127c40fe7dd1",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "QuelleSoft",
     "genres": [
       "Action"
     ],
@@ -3171,9 +3766,13 @@
     "id": "494999329fd6a9ac16f765d259d015ff097b25c1",
     "players": 2,
     "rating": 0.45,
+    "year": 1984,
+    "developer": "Taito",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3187,9 +3786,13 @@
     "id": "07bd6ad5ba03a3dfe5a03f77d6923a31dcfbf28b",
     "players": 2,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3202,6 +3805,9 @@
   "Funky Fish": {
     "id": "a347405c5fd28e4eb9dfa0fb4d25fa5a2824f735",
     "players": 1,
+    "year": 1983,
+    "developer": "Sunsoft",
+    "publisher": "AtariAge",
     "genres": [
       "Action"
     ],
@@ -3218,10 +3824,14 @@
     "id": "08f66be5b3f332798563065d5dfb411e92db2fb4",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3240,6 +3850,9 @@
   "Gamma-Attack": {
     "id": "8e55376bf14d1e0ae81236d1ef72e493f2c13c3b",
     "players": 2,
+    "year": 1983,
+    "developer": "Gammation",
+    "publisher": "Gammation",
     "genres": [
       "Action"
     ],
@@ -3256,9 +3869,13 @@
     "id": "7a768abb5e75540160c1707e2597e27c21c52eeb",
     "players": 2,
     "rating": 0.35,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3280,6 +3897,8 @@
   },
   "Garfield": {
     "id": "62e18c713b51ec9c847c9b8a0c6a82b1439cd552",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Platform"
     ]
@@ -3287,11 +3906,15 @@
   "Gas Hog": {
     "id": "7bbf25f545abe6b6652c585ebac8c343a7529eec",
     "players": 1,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / Horizontal"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3305,6 +3928,9 @@
     "id": "78374f6c40f423927fee48a987a60441f7af4834",
     "players": 1,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Answer Software",
+    "publisher": "Answer Software",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -3322,6 +3948,9 @@
     "id": "a38c2124969593fe102c089d0cfd942126d24ccb",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Action"
     ],
@@ -3349,9 +3978,13 @@
     "id": "68322aec111c267ef7e2937a10d35b5507110614",
     "players": 1,
     "rating": 0.7,
+    "year": 1985,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3365,6 +3998,9 @@
     "id": "58e83cb84d30dc1211ed9f14b52abb8788ae6b3d",
     "players": 1,
     "rating": 0.2,
+    "year": 1992,
+    "developer": "Activision",
+    "publisher": "Salu Ltd.",
     "genres": [
       "Action"
     ],
@@ -3381,9 +4017,12 @@
   },
   "Gigolo": {
     "id": "8f9922920b27c9097a9aa7d452b264659b788139",
+    "year": 1982,
+    "publisher": "Mystique",
     "genres": [
       "Action"
     ],
+    "age_rating": "18",
     "manuals": [
       {
         "languages": [
@@ -3396,9 +4035,13 @@
   "Glacier Patrol": {
     "id": "e80bc400acfd000dddf1915cac6ffad30c94a115",
     "players": 2,
+    "year": 1983,
+    "developer": "VSS, Inc.",
+    "publisher": "Telegames",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3411,6 +4054,9 @@
   "Glib - Video Word Game": {
     "id": "3d2127580ff9d8a34f59c6d5644a6076da80ef41",
     "players": 2,
+    "year": 1983,
+    "developer": "Qualtronic Devices, Inc.",
+    "publisher": "Selchow & Righter Company",
     "genres": [
       "Action",
       "Strategy"
@@ -3431,10 +4077,14 @@
     "id": "ca7525758704f64fa3fb067d441783f1fc6366cc",
     "players": 2,
     "rating": 0.5,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Golf"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3462,6 +4112,7 @@
   },
   "Good Luck, Charlie Brown": {
     "id": "439a67677877a8a687356f7f84abc9517278589e",
+    "publisher": "Atari",
     "manuals": [
       {
         "languages": [
@@ -3475,9 +4126,13 @@
     "id": "31d8fe8b889cf59f9c8d30fbaf0c4f48128bec0c",
     "players": 2,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3490,10 +4145,14 @@
   "Gorf": {
     "id": "c8d2911ba114b3fb6df61aea09b415496183d078",
     "players": 1,
-    "rating": 0.6,
+    "rating": 0.5,
+    "year": 1982,
+    "developer": "Bally Midway",
+    "publisher": "CBS Software",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3518,6 +4177,9 @@
     "id": "3cfb0bce61c730236fdfa7df18a256f5fb43b8c4",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Driving",
       "Race"
@@ -3535,6 +4197,9 @@
     "id": "a5a0820e11608622589120565e9670f7e0f71606",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter"
@@ -3552,11 +4217,15 @@
     "id": "bcdc993e54be84192516c3309c99f0bab23fbe81",
     "players": 1,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Bomb",
+    "publisher": "Bomb",
     "genres": [
       "Action",
       "Platform",
       "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3570,9 +4239,13 @@
     "id": "bfcda0f62efdf40565a4749ef72c55692842fb45",
     "players": 2,
     "rating": 0.45,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3584,6 +4257,8 @@
   },
   "Grover's Music Maker": {
     "id": "68514382dcce2b5fc5f77b1f9e1bafc73c7870c3",
+    "year": 1983,
+    "publisher": "Atari",
     "genres": [
       "Various"
     ]
@@ -3592,6 +4267,9 @@
     "id": "782bbdb76ee124ad1b6bae9caa2e2a338279c816",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -3608,10 +4286,14 @@
     "id": "4a55047b970b01c7c3201d9bd2d60e89e8f0c9af",
     "players": 1,
     "rating": 0.6,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3624,10 +4306,14 @@
   "H.E.R.O.": {
     "id": "12ddc455f80212b572f879d42173800e087bc616",
     "players": 1,
-    "rating": 0.8,
+    "rating": 1.0,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3651,6 +4337,9 @@
     "id": "88779ca3dc809b2f318ff1ef184637a95f16f15b",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "VSS, Inc.",
+    "publisher": "Wizard Video Games",
     "genres": [
       "Action"
     ],
@@ -3667,9 +4356,13 @@
     "id": "f60def82ac4dd9e35f45829dfacae663c66aa289",
     "players": 2,
     "rating": 0.4,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3680,18 +4373,27 @@
     ]
   },
   "Hard-Head": {
-    "id": "da8cd9f87643f9032db60d61bd1ca4aa71cd0078"
+    "id": "da8cd9f87643f9032db60d61bd1ca4aa71cd0078",
+    "year": 1998,
+    "developer": "Activision",
+    "publisher": "Activision"
   },
   "Harem": {
     "id": "22017528822c264973cc0f9d1f4b605af1156299",
+    "year": 1982,
+    "publisher": "Multivision",
     "genres": [
       "Various"
-    ]
+    ],
+    "age_rating": "18"
   },
   "Haunted House": {
     "id": "5b99eff7e7c525d00ba69049445fc95891abd23a",
     "players": 1,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Adventure"
     ],
@@ -3712,6 +4414,9 @@
   },
   "Hole Hunter": {
     "id": "54170342df36e47c83acc3b44032f6291d6e35d9",
+    "players": 1,
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Action"
     ]
@@ -3719,6 +4424,9 @@
   "Holey Moley": {
     "id": "da114132d4bfe36975e6a033fc0cc55b86877566",
     "players": 1,
+    "year": 2002,
+    "developer": "Atari",
+    "publisher": "Atari2600.com",
     "genres": [
       "Action"
     ],
@@ -3735,10 +4443,14 @@
     "id": "c6b7ff2ccb9771b54b05fd59c118aa9e5b9a3e40",
     "players": 2,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Baseball"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3752,9 +4464,13 @@
     "id": "c76bc1a1f214e6c7d41e75e3ea3de3fbd2e3965d",
     "players": 2,
     "rating": 0.4,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3768,9 +4484,13 @@
     "id": "5d46b61ecc689c4b9171dd196d5a80c81cbc8bd0",
     "players": 2,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Action"
+      "Puzzle-Game"
     ],
+    "age_rating": "3",
     "controls": [
       "keyboard"
     ],
@@ -3787,6 +4507,9 @@
     "id": "e451c7aa37b614c8f829d28ce65e426edc0f4f52",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Zimag",
+    "publisher": "Zimag",
     "genres": [
       "Action",
       "Driving",
@@ -3804,6 +4527,8 @@
   },
   "I.Q. 180": {
     "id": "656d57f97796609079f81a0b22d6c2c7948af3ba",
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Puzzle-Game"
     ],
@@ -3814,6 +4539,8 @@
   "INV+": {
     "id": "39850bfb9c7a8bbe0e05f65323c1d4c12761a4a3",
     "players": 2,
+    "year": 1998,
+    "publisher": "Hozer Video Games",
     "genres": [
       "Action"
     ],
@@ -3828,6 +4555,8 @@
   },
   "IQ 180": {
     "id": "bff62966cb56257ac75d7ff7f693315eb93101aa",
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Puzzle-Game"
     ],
@@ -3844,6 +4573,9 @@
     "id": "627e657f34eb89484799c5c26ef704910e816377",
     "players": 2,
     "rating": 0.65,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Sports",
       "Sports / Hockey"
@@ -3861,8 +4593,13 @@
     "id": "e78bd1c41fe4b534641d5fcb850fb2eb89ab224f",
     "players": 2,
     "rating": 0.6,
+    "year": 1989,
+    "developer": "SNK",
+    "publisher": "Atari",
     "genres": [
-      "Action"
+      "Action",
+      "Shooter",
+      "Shooter / Run and Gun"
     ],
     "manuals": [
       {
@@ -3876,6 +4613,9 @@
   "Immies & Aggies": {
     "id": "88f3d2e6b3a1499d747e2388f416b82f7ebae0a1",
     "players": 1,
+    "year": 1983,
+    "developer": "Hozer Video Games",
+    "publisher": "Zimag",
     "genres": [
       "Shoot'em Up"
     ]
@@ -3884,10 +4624,14 @@
     "id": "67d6bc6716077483865c5b2e75cbc675a8f5c534",
     "players": 2,
     "rating": 0.5,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3900,6 +4644,9 @@
   "Infiltrate": {
     "id": "b33fc65ae400f28fd271b321b45abcc6aebec3ba",
     "players": 2,
+    "year": 1981,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Platform",
       "Strategy"
@@ -3916,6 +4663,9 @@
   "International Soccer": {
     "id": "9539837ed97195bd4853ad7726087cdb2037a89f",
     "players": 2,
+    "year": 1982,
+    "developer": "M Network",
+    "publisher": "M Network",
     "genres": [
       "Action",
       "Sports",
@@ -3933,6 +4683,8 @@
   "Ixion": {
     "id": "2ba3f0416405f10647845374ae312622ea2db2cd",
     "players": 2,
+    "year": 1984,
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up"
     ]
@@ -3941,6 +4693,9 @@
     "id": "18eb5b34e78635163ebdb4b48ed8c9b029bc0045",
     "players": 1,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "On Time Software",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -3957,6 +4712,9 @@
     "id": "c4e25db6e67c239d587a5fb909eb47d48d56f69f",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "On-Line Systems",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
@@ -3973,6 +4731,9 @@
     "id": "abff0d46e66f2a0b7ec12e9f03cea5776e4f3859",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action"
     ],
@@ -3989,9 +4750,14 @@
     "id": "205f91fdf1bca6ffc96f6409524523a5328879c9",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Williams",
+    "publisher": "Atari",
     "genres": [
-      "Action"
+      "Platform",
+      "Platform / Run Jump"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4009,12 +4775,16 @@
   },
   "Jr. Pac-Man": {
     "id": "0fc48b609de1ae43858874f440917322e0e20ccc",
-    "players": 1,
+    "players": 2,
     "rating": 0.8,
+    "year": 1987,
+    "developer": "Bally Midway",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "15",
     "manuals": [
       {
         "languages": [
@@ -4028,6 +4798,9 @@
     "id": "f40444d63b243bf172667cd95239284eec520632",
     "players": 1,
     "rating": 0.35,
+    "year": 1982,
+    "developer": "Mystique",
+    "publisher": "Mystique",
     "genres": [
       "Action"
     ],
@@ -4042,12 +4815,16 @@
   },
   "Jungle Hunt": {
     "id": "d5f9bd8b14051f22936803c910a4d47acd2f9338",
-    "players": 1,
+    "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Taito",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4066,6 +4843,9 @@
   "Kabobber": {
     "id": "23f31ee9739ff44ef0d3d89138e025de8218a122",
     "players": 1,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -4082,6 +4862,9 @@
     "id": "5717514b0bcc5aefc98e2782f2d59ee775fba071",
     "players": 2,
     "rating": 0.75,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -4097,6 +4880,8 @@
   "Kamikaze Saucers": {
     "id": "636ff90187d34af4d9d1fd9eba96cedcfedaa86b",
     "players": 1,
+    "year": 1983,
+    "publisher": "Syncro",
     "genres": [
       "Shoot'em Up"
     ]
@@ -4105,9 +4890,13 @@
     "id": "1f7685cecdab734347776d1ce8b1634165907653",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Sunsoft",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4121,6 +4910,9 @@
     "id": "7f2d7e7f1a7deac8624938bd3b31715122aed071",
     "players": 2,
     "rating": 0.4,
+    "year": 1987,
+    "developer": "Froggo Games Corporation",
+    "publisher": "Froggo Games Corporation",
     "genres": [
       "Action",
       "Sports"
@@ -4138,6 +4930,9 @@
     "id": "b278ebc1ba51572b13ffb6b1a10f43fa143b2b7f",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -4155,6 +4950,10 @@
   },
   "Killer Satellites": {
     "id": "beda8d1ce66515636ff6b5b62063e6a734ddc921",
+    "players": 1,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Action"
     ],
@@ -4171,6 +4970,9 @@
     "id": "c3cb17fd212a2fd5c5eac5c2b0640e2add9705ae",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Tigervision",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
@@ -4187,10 +4989,14 @@
     "id": "411541f16dac05dc4220c591289c768d283497ed",
     "players": 1,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Puzzle-Game",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4202,17 +5008,25 @@
   },
   "Knight on the Town": {
     "id": "49a99f8bff96f4d5ed93039b83dfbef93f4372b7",
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mystique",
     "genres": [
       "Action"
-    ]
+    ],
+    "age_rating": "18"
   },
   "Kool-Aid Man": {
     "id": "8685fd8e88899834153ef5402683506ce30daba4",
     "players": 1,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4226,6 +5040,9 @@
     "id": "8fa84ea38d1da0fb36e1427b38cdc06d8d61869d",
     "players": 1,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -4242,9 +5059,14 @@
     "id": "547a6e8361f7b519a1719681db067dbeb6d7046b",
     "players": 2,
     "rating": 0.75,
+    "year": 1987,
+    "developer": "Irem",
+    "publisher": "Activision",
     "genres": [
-      "Action"
+      "Fight",
+      "Fight / 2D"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4257,15 +5079,20 @@
   "Kyphus": {
     "id": "429e1df75fd828f1268d4cffe0af820dd000f47f",
     "players": 1,
+    "year": 1982,
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ]
   },
   "Lady in Wading": {
     "id": "02dfe009d434969de00de081649cf4fef5fd5303",
+    "year": 1982,
+    "publisher": "Mystique",
     "genres": [
       "Various"
     ],
+    "age_rating": "18",
     "manuals": [
       {
         "languages": [
@@ -4279,6 +5106,9 @@
     "id": "27095852a3dd2c0256fff3e4f1ca13cd29d390b1",
     "players": 1,
     "rating": 0.5,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -4295,9 +5125,13 @@
     "id": "aa3d288dcc5edded54b950b5f0391e1015652dce",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4312,6 +5146,8 @@
   },
   "Lasercade": {
     "id": "3157f576369ffb071447a8867771e9b78e167ca1",
+    "year": 1983,
+    "publisher": "20th Century Fox",
     "genres": [
       "Shoot'em Up"
     ],
@@ -4327,6 +5163,8 @@
   "Lilly Adventure": {
     "id": "6e9747ca9f5ca5774e50275a007932b559183cf3",
     "players": 1,
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Action",
       "Platform"
@@ -4336,6 +5174,9 @@
     "id": "2601546ebf7b464a3c1565bfff18ed0274a88e34",
     "players": 2,
     "rating": 0.15,
+    "year": 1981,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -4352,6 +5193,9 @@
     "id": "3dd9eeeca2162c3ab5f6ec79d33a72b2afd1f734",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -4370,6 +5214,9 @@
   "London Blitz": {
     "id": "bf611ae6d5d6afd68406b2240f4ab1c3d3df29fb",
     "players": 1,
+    "year": 1983,
+    "developer": "Avalon Hill",
+    "publisher": "Avalon Hill",
     "genres": [
       "Strategy"
     ],
@@ -4385,6 +5232,9 @@
   "Looping": {
     "id": "1b951b9c3badc2ef357d9e980d0b78fd12a13fcd",
     "players": 1,
+    "year": 1983,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -4400,6 +5250,9 @@
   "Lord of the Rings, The - Journey to Rivendell": {
     "id": "4956933ebe621aeede8b4ab968bc4b9bb6391c9a",
     "players": 1,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Platform"
     ],
@@ -4416,6 +5269,9 @@
     "id": "e0d668f65d126fa1f95108bca814ea0d24bb5853",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -4431,6 +5287,9 @@
   "M.A.D.": {
     "id": "63f9070c85af8f917303e62883438eccbab0161b",
     "players": 2,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "QuelleSoft",
     "genres": [
       "Action"
     ],
@@ -4447,6 +5306,9 @@
     "id": "3b16e6bbc84dc26c53a8e1b38750994bd4e08149",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -4477,6 +5339,9 @@
   "Malagai": {
     "id": "6c541c969a8d5114f8203f652b500a5ae02aa34e",
     "players": 2,
+    "year": 1983,
+    "developer": "Answer Software",
+    "publisher": "Answer Software",
     "genres": [
       "Action"
     ],
@@ -4492,6 +5357,9 @@
   "Mangia'": {
     "id": "e25cd5b6f0a7876abd6f94025638b8862b9802c3",
     "players": 2,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
@@ -4507,6 +5375,9 @@
   "Marauder": {
     "id": "a60c1e0c566fec2b568a18deba22995b6aa24fae",
     "players": 1,
+    "year": 1982,
+    "developer": "On-Line Systems",
+    "publisher": "Tigervision",
     "genres": [
       "Action",
       "Strategy"
@@ -4523,9 +5394,13 @@
   "Marine Wars": {
     "id": "f93f4289e7dca0f8f491271412c5dbce3a23dbea",
     "players": 2,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4539,6 +5414,9 @@
     "id": "4a0b6af7d3c4db45e4f5beaec040b53c60e1174f",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Platform"
@@ -4555,9 +5433,13 @@
   "Master Builder": {
     "id": "044438285e6c433cbfc85a54c401681432f3aa2f",
     "players": 1,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4570,9 +5452,13 @@
   "Masters of the Universe - The Power of He-Man": {
     "id": "84f0c853dedf1c6f810c9aedebb40106a4cdf563",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "M Network",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4586,6 +5472,9 @@
     "id": "7831161f4ca6ce6e267f16362a19d0fa4a37a83e",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -4609,9 +5498,13 @@
     "id": "b94224a25a273057e6c62d80145ad2da29d1754f",
     "players": 2,
     "rating": 0.7,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4623,11 +5516,16 @@
   },
   "Mazy Match": {
     "id": "5cbec0543810d44be0ab12a38e04cd7a0cd214e1",
-    "players": 2
+    "players": 2,
+    "year": 1983,
+    "publisher": "Datatech"
   },
   "McDonald's - Golden Arches Adventure": {
     "id": "e15310cc708562abafdf27f4637381645b7c2240",
     "players": 1,
+    "year": 1982,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -4643,6 +5541,9 @@
   "Mega Force": {
     "id": "18c5dce29ae2b221938b3f6b1d7b6254f6f4a58f",
     "players": 1,
+    "year": 1982,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -4657,6 +5558,7 @@
   },
   "MegaBoy": {
     "id": "90cbf6b8c189eb838f90c871125e7c1ee581daf4",
+    "publisher": "Dynacom",
     "genres": [
       "Educational"
     ]
@@ -4665,6 +5567,9 @@
     "id": "781712a5e81d751d8684349ced4b4944f5b4da2a",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -4680,6 +5585,9 @@
   "Mein Weg": {
     "id": "97246faeb220087c983c79b99423accc30b9e849",
     "players": 1,
+    "year": 1980,
+    "developer": "Zellers",
+    "publisher": "Home Entertainment Suppliers",
     "genres": [
       "Action"
     ],
@@ -4695,6 +5603,9 @@
   },
   "Meltdown": {
     "id": "77d95fd800d80da4a03cfe4349b98ed4c29e9a13",
+    "year": 1983,
+    "developer": "Videa",
+    "publisher": "20th Century Fox",
     "genres": [
       "Puzzle-Game"
     ],
@@ -4710,9 +5621,13 @@
   "Midnight Magic": {
     "id": "4b03d06ee760e0c5f7f78cedc75b686d0d37623b",
     "players": 2,
+    "year": 1986,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Various"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4726,6 +5641,9 @@
     "id": "24f6e948d2ec1483a75f9735dd1c8810d550ca70",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter"
@@ -4742,6 +5660,9 @@
   "Mind Maze": {
     "id": "c806ca512777bdf8c796e81e50e713aa290ed4ce",
     "players": 1,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Educational"
     ]
@@ -4749,9 +5670,13 @@
   "Miner 2049er - Starring Bounty Bob": {
     "id": "5eca1b6e1ac13f6ce25741b1547727a94023636a",
     "players": 1,
+    "year": 1982,
+    "developer": "Big Five Software",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4764,9 +5689,13 @@
   "Miner 2049er Volume II": {
     "id": "3e78122cba5d425932c2609363c5a9505b1c770f",
     "players": 1,
+    "year": 1983,
+    "developer": "Big Five Software",
+    "publisher": "Big Five Software",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4780,6 +5709,9 @@
     "id": "b45f73ab3b834a32720c0c20f131bed96dda6ded",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -4796,10 +5728,14 @@
     "id": "99634157b89b7b2ce285250283f67b966b4a6d53",
     "players": 2,
     "rating": 0.4,
+    "year": 1979,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Golf"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4811,6 +5747,8 @@
   },
   "Miss Piggy's Wedding": {
     "id": "c01ee4f9c4ada49d3d98d5047e57688b4405f087",
+    "year": 1983,
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -4819,9 +5757,13 @@
     "id": "bcd13a4a090c0debe2df2246ab5cff18ea786e23",
     "players": 2,
     "rating": 0.75,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -4843,6 +5785,8 @@
   "Missile Control": {
     "id": "37111b6ceeb91b83a817ccddf21910568ef79210",
     "players": 1,
+    "year": 1983,
+    "publisher": "Video Gems",
     "genres": [
       "Action"
     ],
@@ -4858,6 +5802,8 @@
   "Missile War ~ Astro War": {
     "id": "4092492089d33f08689dfded6f150020ac3f9bd1",
     "players": 1,
+    "year": 1983,
+    "publisher": "Goliath",
     "genres": [
       "Shoot'em Up"
     ],
@@ -4869,6 +5815,9 @@
     "id": "77378836b9796432b2e9aac7c48ab070c5428910",
     "players": 1,
     "rating": 0.2,
+    "year": 1983,
+    "developer": "Bit Corp.",
+    "publisher": "Bit Corp.",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -4885,6 +5834,9 @@
   "Mission Survive": {
     "id": "7ae77f3682a1ec4e4acbd4d9ff71c21061476dab",
     "players": 1,
+    "year": 1983,
+    "developer": "Video Gems",
+    "publisher": "Video Gems",
     "genres": [
       "Shoot'em Up"
     ]
@@ -4893,6 +5845,9 @@
     "id": "8658f41977f2fb51afc27ee288a8bbf34dc88928",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Amiga",
+    "publisher": "Amiga",
     "genres": [
       "Sports"
     ],
@@ -4912,9 +5867,13 @@
     "id": "397a13080b67bf27947e9013210042b1fa854a6d",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -4928,6 +5887,9 @@
     "id": "7e0608892408bd70970d070d33e5fa8113fc7898",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Irem",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -4944,6 +5906,9 @@
     "id": "33ea13b8d283426ac9fca23bec3326119c643e11",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Sports"
@@ -4963,6 +5928,9 @@
   "MotoRodeo": {
     "id": "602463d9939405a58faa7aff6e2e3bf903cb748a",
     "players": 2,
+    "year": 1990,
+    "developer": "Axlon",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Driving / Motorcycle",
@@ -4981,6 +5949,8 @@
   "Motocross": {
     "id": "927c6f06bbd22e7017a449f5b2e97f6578f0bfc9",
     "players": 2,
+    "year": 1983,
+    "publisher": "QuelleSoft",
     "genres": [
       "Driving",
       "Race"
@@ -4990,10 +5960,15 @@
     "id": "78b1ec6424a332792bf4c0e3d25dbea22fcdab2b",
     "players": 1,
     "rating": 0.6,
+    "year": 1984,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Driving",
+      "Driving / Motorcycle",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5007,9 +5982,15 @@
     "id": "381493ce53277cd14e4bc7795a977de5dfcdb1d8",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "E.F. Dreyer",
+    "publisher": "CBS Software",
     "genres": [
-      "Action"
+      "Action",
+      "Platform",
+      "Platform / Run Jump Scrolling"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -5023,6 +6004,9 @@
     "id": "399b238c5120be5ec4ae2edfe01fe08b3f34d5df",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Exidy, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -5039,6 +6023,8 @@
     "id": "f67359b1acf1fc1abd334cef6ef8cf89c565f463",
     "players": 1,
     "rating": 0.65,
+    "year": 1983,
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -5055,9 +6041,13 @@
     "id": "5ae3876ba87bf69b9800d252b02c70872607cc8c",
     "players": 1,
     "rating": 0.75,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5070,6 +6060,8 @@
   "Mr. Postman": {
     "id": "0deb4392da5ec8d2951a6ac59a146295c2ebd830",
     "players": 1,
+    "year": 1983,
+    "publisher": "Bit Corp.",
     "genres": [
       "Action",
       "Platform"
@@ -5088,10 +6080,14 @@
     "id": "d04baec10a4daccfe82f73dc025cffa4b9b90074",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "General Computer Corporation",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -5107,6 +6103,9 @@
   "Music Machine, The": {
     "id": "18f629fea9141e06a241005118d3eb075cd3072f",
     "players": 2,
+    "year": 1983,
+    "developer": "Christian Software Development",
+    "publisher": "HomeComputer Software",
     "genres": [
       "Educational"
     ],
@@ -5122,6 +6121,9 @@
   "My Golf": {
     "id": "ddad2c8844f8effb772951e9e44a4cdb58e9ea20",
     "players": 2,
+    "year": 1990,
+    "developer": "Absolute Entertainment",
+    "publisher": "Home Entertainment Suppliers",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -5138,6 +6140,9 @@
   "Mysterious Thief, A": {
     "id": "8cae17b1c6cbb55903242d4a374f2079b6e0d2f4",
     "players": 2,
+    "year": 1983,
+    "developer": "U.S. Games",
+    "publisher": "StarSoft Development Laboratories",
     "genres": [
       "Action",
       "Platform"
@@ -5147,6 +6152,9 @@
     "id": "6d8bad15e0981799d4e0b29f41384b402b94dda8",
     "players": 2,
     "rating": 0.45,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action",
       "Sports"
@@ -5164,11 +6172,15 @@
     "id": "96e0807d2ccf1b155b7f647faf753098d019f11f",
     "players": 1,
     "rating": 0.6,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5191,6 +6203,9 @@
     "id": "b35b3cf4760084a08d980bb8e86d70cb56ed7ed3",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -5206,6 +6221,9 @@
   "Nuts": {
     "id": "1538fe5132d3fa25972b5b94e0bf29a159abe128",
     "players": 1,
+    "year": 1983,
+    "developer": "TechnoVision",
+    "publisher": "TechnoVision",
     "genres": [
       "Shoot'em Up"
     ],
@@ -5222,9 +6240,13 @@
     "id": "1c951334804fa85cebd2b9a2c45d5901893af4b7",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5237,6 +6259,9 @@
   "Off Your Rocker": {
     "id": "a947211b344e7e97691c2fd5df543b6cbb461308",
     "players": 4,
+    "year": 1983,
+    "developer": "Amiga",
+    "publisher": "Amiga",
     "genres": [
       "Action"
     ],
@@ -5252,6 +6277,9 @@
   "Off the Wall": {
     "id": "48f1e36f05d24c6ca91830bc8ee26eccb4e7f091",
     "players": 2,
+    "year": 1989,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -5268,6 +6296,9 @@
     "id": "71f17bdf2067b2c3039e3eca4f276271292f69ab",
     "players": 2,
     "rating": 0.95,
+    "year": 1983,
+    "developer": "Stephen Landrum",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Action"
     ],
@@ -5284,6 +6315,9 @@
     "id": "684662d3f5ff7d17afaa6285070ba6c48258f581",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -5299,9 +6333,13 @@
   "Omega Race": {
     "id": "7c71057c96054d0b0608c4a58f01f979998a718b",
     "players": 2,
+    "year": 1983,
+    "developer": "Bally Midway",
+    "publisher": "CBS Software",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5315,6 +6353,9 @@
     "id": "ac6fe80fffa7f61a82f7b301681cd47f5ddb0b9d",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Zimag",
+    "publisher": "Zimag",
     "genres": [
       "Action",
       "Driving",
@@ -5333,6 +6374,9 @@
   "Oscar's Trash Race": {
     "id": "8eda56f83431dc949f282418c1dc2a30ab234b67",
     "players": 2,
+    "year": 1983,
+    "developer": "Children's Computer Workshop",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -5350,10 +6394,14 @@
     "id": "91233157c073901330eb8ba6cfcae75b71851f48",
     "players": 2,
     "rating": 0.75,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Board game",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5366,6 +6414,9 @@
   "Out of Control": {
     "id": "7913a3511d2ccba0511ea56c5bedb8ecfe43cca3",
     "players": 1,
+    "year": 1983,
+    "developer": "Avalon Hill",
+    "publisher": "Avalon Hill",
     "genres": [
       "Driving",
       "Race"
@@ -5383,9 +6434,13 @@
     "id": "c9fd7222116f5d8864763315c6659e831290be51",
     "players": 2,
     "rating": 0.4,
+    "year": 1978,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5402,10 +6457,14 @@
     "id": "214a3005d00a317dbac763dd0f1e9919e5a3b4b3",
     "players": 2,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "Namco",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -5425,6 +6484,9 @@
     "id": "e54b0324f8b4138fcf855e44e884bf54f3bb85de",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Home Vision",
+    "publisher": "Home Vision",
     "genres": [
       "Action"
     ]
@@ -5432,6 +6494,9 @@
   "Parachute": {
     "id": "27621b9411b4d073fca6a7c15151818367be0101",
     "players": 1,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Home Vision",
     "genres": [
       "Driving",
       "Race"
@@ -5441,8 +6506,12 @@
     "id": "3db468db8ee55e5ee6f5e48ad362bcf2159c73fa",
     "players": 4,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
-      "Action"
+      "Driving",
+      "Race"
     ],
     "manuals": [
       {
@@ -5455,14 +6524,20 @@
   },
   "Peek-A-Boo": {
     "id": "6717bdd18c24662db53b3ac9b2f2f6b297862de5",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Educational"
-    ]
+    ],
+    "age_rating": "EC"
   },
   "Pengo": {
     "id": "e322f45596d8191ccf4277009bc61e7d6d972cb7",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -5478,6 +6553,9 @@
   "Pete Rose Baseball": {
     "id": "c6a51b6cdee7f787535fb6c4d790af146896f519",
     "players": 2,
+    "year": 1988,
+    "developer": "Absolute Entertainment",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -5494,6 +6572,9 @@
   "Pharaoh's Curse": {
     "id": "0806e2d6463e4a4922a8b5f681cee341be3b3f36",
     "players": 1,
+    "year": 1983,
+    "developer": "TechnoVision",
+    "publisher": "TechnoVision",
     "genres": [
       "Action"
     ],
@@ -5509,9 +6590,12 @@
   "Phaser Patrol": {
     "id": "a2c8e5b1a28ea0a234d4d75448bd013c9de07757",
     "players": 1,
-    "rating": 0.85,
+    "rating": 1.0,
+    "year": 1982,
+    "developer": "Arcadia Corporation",
+    "publisher": "Arcadia Corporation",
     "genres": [
-      "Shooter"
+      "Action"
     ],
     "manuals": [
       {
@@ -5526,6 +6610,9 @@
     "id": "784dc2cf3aa1e8df82197b80c6a34647b92931c3",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Amstar Electronics",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -5557,6 +6644,9 @@
   "Pick 'n' Pile": {
     "id": "9a5856b10b43484958adda203bf0237192091871",
     "players": 2,
+    "year": 1990,
+    "developer": "Ubisoft",
+    "publisher": "Ubisoft",
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -5573,6 +6663,9 @@
   "Pick Up": {
     "id": "3b47c5d665f990e4e3283c539b460d3951c10a79",
     "players": 1,
+    "year": 1983,
+    "developer": "Fox Video Games",
+    "publisher": "CGE Services Corporation",
     "genres": [
       "Action"
     ],
@@ -5589,6 +6682,9 @@
     "id": "b8520ebfc17ec262e71b1327aa1f4c4cc8a77eaa",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Western Technologies",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -5604,6 +6700,9 @@
   "Piece o' Cake": {
     "id": "68bdad0a3df89df4700d771748db6f9a08266322",
     "players": 1,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -5619,9 +6718,13 @@
   "Pigs in Space - Starring Miss Piggy": {
     "id": "deb189a41fec0924207fae33621bd1aa8394823a",
     "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5635,11 +6738,15 @@
     "id": "c533aa18b4662580c725427975c11ed689b06cbc",
     "players": 1,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Adventure",
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5653,10 +6760,14 @@
     "id": "3ded20b5647bd8e6e5e8db960fdca771c5783c81",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -5668,6 +6779,8 @@
   },
   "Pizza Chef": {
     "id": "d7b062e778bd30a3f9e5b6be2d88df87b1016959",
+    "year": 1983,
+    "publisher": "Zimag",
     "genres": [
       "Action"
     ],
@@ -5684,6 +6797,9 @@
     "id": "b01b31b9daecb51a4169bb1e794de00aba4c3dbb",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
@@ -5699,6 +6815,9 @@
   "Planet of the Apes": {
     "id": "7f059565413a9f2305aa312b56a6e70885f0423e",
     "players": 1,
+    "year": 1983,
+    "developer": "Spectravision",
+    "publisher": "20th Century Fox",
     "genres": [
       "Action"
     ]
@@ -5707,6 +6826,9 @@
     "id": "ef60165e22ec41e36099fd80db5d7a9e422461fd",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Educational"
     ],
@@ -5722,6 +6844,9 @@
   "Pleiades": {
     "id": "985bff7b086a929ae3059fe3d661dbffe5e2b76d",
     "players": 1,
+    "year": 2003,
+    "developer": "Tehkan Ltd.",
+    "publisher": "AtariAge",
     "genres": [
       "Action",
       "Strategy"
@@ -5738,9 +6863,13 @@
   "Polaris": {
     "id": "38f9abae4cff94dc27e115acebf0b26995ba151f",
     "players": 2,
+    "year": 1983,
+    "developer": "Taito",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5754,6 +6883,9 @@
     "id": "f0e84796b5d78e99742b87aa697e8d6c5d094bbe",
     "players": 1,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -5770,6 +6902,9 @@
   "Polo": {
     "id": "3be209da87a5938e25e576a8ea171498e0b28c31",
     "players": 2,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -5783,12 +6918,18 @@
     ]
   },
   "Pompeii": {
-    "id": "6f05f57a5b13f2186beb342a90e9308f02a8494b"
+    "id": "6f05f57a5b13f2186beb342a90e9308f02a8494b",
+    "year": 1983,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo, Inc."
   },
   "Pooyan": {
     "id": "5b3a835740ee72fff7c91063e0b119f7b254b4eb",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action",
       "Shooter"
@@ -5806,6 +6947,9 @@
     "id": "1586a8db4eb08b2159a57f3a120eebc6896ca5e2",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -5822,10 +6966,14 @@
     "id": "fe3a9dc0fc376d588c1581d46b6d585c19cfa0c6",
     "players": 1,
     "rating": 0.15,
+    "year": 1983,
+    "developer": "Dunhill Electronic Media Corp.|Lazer Microsystems Inc.",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -5837,12 +6985,18 @@
   },
   "Power Lords": {
     "id": "d2da93b6e7feb55dd5ad30c4a4f169d17999bb2e",
-    "players": 1
+    "players": 1,
+    "year": 1983,
+    "developer": "Probe 2000",
+    "publisher": "Philips Interactive Media"
   },
   "Pressure Cooker": {
     "id": "0f80e6c7ebe3b3c3b095a1999262e0e292f83353",
     "players": 2,
     "rating": 0.9,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -5859,9 +7013,13 @@
     "id": "264ff758f46820b4271c30e65f54464c21a810c9",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5874,6 +7032,8 @@
   "Pursuit of the Pink Panther": {
     "id": "28065c4b8baaa7cda27c0a38d706bde04dc0e815",
     "players": 1,
+    "year": 1983,
+    "publisher": "Probe 2000",
     "manuals": [
       {
         "languages": [
@@ -5886,8 +7046,11 @@
   "Q-bert": {
     "id": "5efa0bb7f1f70dfe11fe2b1f256ebbc33ed1c9dc",
     "players": 1,
+    "year": 1983,
+    "developer": "Western Technologies",
+    "publisher": "Parker Brothers",
     "genres": [
-      "Action"
+      "Puzzle-Game"
     ],
     "manuals": [
       {
@@ -5902,10 +7065,14 @@
     "id": "beb099f106f0326f51d27e0034d9f144cf8f41e5",
     "players": 1,
     "rating": 0.4,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5919,6 +7086,9 @@
     "id": "7691c9fa7b55772d4f875237beae3a9d8905ff3c",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -5934,9 +7104,13 @@
   "Quest for Quintana Roo": {
     "id": "8103f90cbeca9c6af8edb33021c0a25c63f97a7d",
     "players": 1,
+    "year": 1984,
+    "developer": "VSS, Inc.",
+    "publisher": "Sunrise Software",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -5949,6 +7123,9 @@
   "Quick Step!": {
     "id": "c9c916b77429cb92c40966a7c5005b57fe00ff66",
     "players": 2,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -5964,6 +7141,9 @@
   "Rabbit Transit": {
     "id": "ae7af73ae7105a320817eb35271e0c31a55e8cdf",
     "players": 2,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Action"
     ],
@@ -5979,6 +7159,9 @@
   "Racer": {
     "id": "693752358d9903456723b9995373e7914008f23c",
     "players": 2,
+    "year": 1977,
+    "developer": "Roklan",
+    "publisher": "Sears",
     "manuals": [
       {
         "languages": [
@@ -5991,6 +7174,8 @@
   "Racing Car": {
     "id": "605184645584336a3e6d2d0d3a10a4d0a2c0c660",
     "players": 1,
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Driving",
       "Race"
@@ -6000,6 +7185,9 @@
     "id": "30cae2e4ce4f0c42a126b0dd67320781bfb7cfd1",
     "players": 2,
     "rating": 0.5,
+    "year": 1981,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Sports"
     ],
@@ -6016,8 +7204,11 @@
     "id": "46865fd4a7f95f4cd4c39889184c3bfc5fde0826",
     "players": 1,
     "rating": 0.15,
+    "year": 1987,
+    "developer": "Froggo Games Corporation",
+    "publisher": "Froggo Games Corporation",
     "genres": [
-      "Action"
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -6035,6 +7226,9 @@
     "id": "1378b96646ed5ab47a00612a6df3a0ee8e27bc33",
     "players": 1,
     "rating": 0.4,
+    "year": 1989,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -6050,6 +7244,9 @@
   "Raft Rider": {
     "id": "b47d0fd0a537e2448afa3c34d51b3c62ae81fc5c",
     "players": 1,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -6066,6 +7263,9 @@
     "id": "b08ca347b3a2528ddfb360a1227ca2a5e2e68a21",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Adventure"
     ],
@@ -6082,6 +7282,9 @@
     "id": "89b32d72dbaa784c62b0ef4f8f2f214e7f9b88e3",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action"
     ],
@@ -6098,6 +7301,9 @@
     "id": "dd5dbdd3d377d7931b8b4092a4c46a8d0a957329",
     "players": 2,
     "rating": 0.4,
+    "year": 1989,
+    "developer": "Bally Midway",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -6113,6 +7319,8 @@
   "Raumpatrouille": {
     "id": "21ed91335608f5155ddbc9828546c6ac93fe3e08",
     "players": 1,
+    "year": 1984,
+    "publisher": "Home Vision",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
@@ -6122,6 +7330,9 @@
     "id": "ee5ef2c20c25e3480ef6922dd5aa1f3461b93076",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "D. Gottlieb & Co.",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -6138,10 +7349,14 @@
     "id": "236419031d603c5dfa2b013199dedfe8ed93f0e7",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Baseball"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6160,6 +7375,9 @@
   "RealSports Basketball": {
     "id": "70511c0c9edb9220e4790979099ef87a20bbcaa9",
     "players": 2,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "CGE Services Corporation",
     "genres": [
       "Sports"
     ],
@@ -6176,8 +7394,12 @@
     "id": "3214aa1f2bd8e22f51d996a3b26116ac1b5d3b1e",
     "players": 2,
     "rating": 0.7,
+    "year": 1987,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Boxing"
     ],
     "manuals": [
       {
@@ -6192,6 +7414,9 @@
     "id": "72e6e391ef5aa513d00dc4467e1db26cb6ce3753",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -6208,9 +7433,14 @@
     "id": "96e0c4e28aa33f6784a3d8caeca207f84821fb48",
     "players": 2,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Soccer"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -6224,6 +7454,9 @@
     "id": "41a137edb109a3aa0961e9e6b364c375de16d470",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -6239,8 +7472,12 @@
   "RealSports Volleyball": {
     "id": "6f94460f5f7e93302d350a4d06e0b4a2280f504d",
     "players": 2,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Volleyball"
     ],
     "manuals": [
       {
@@ -6260,6 +7497,9 @@
   "Red Sea Crossing": {
     "id": "51f182aa9b32152cf01b9daec937c936dd77ee15",
     "players": 1,
+    "year": 1983,
+    "developer": "Steve Stack, Inc.",
+    "publisher": "Steve Stack, Inc.",
     "genres": [
       "Action"
     ],
@@ -6275,6 +7515,9 @@
   "Rescue Terra I": {
     "id": "bd33ea56b672866b07c651e6c7da6912a209e21b",
     "players": 2,
+    "year": 1982,
+    "developer": "VentureVision",
+    "publisher": "VentureVision",
     "genres": [
       "Action"
     ],
@@ -6291,6 +7534,9 @@
     "id": "0ae775f408fed49842b20c3e8ad677c2d41d316a",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -6307,10 +7553,14 @@
     "id": "229e9f493b56615239f6b17d6ad9c8bd4fbb78f8",
     "players": 1,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6324,6 +7574,9 @@
     "id": "dc6f859579d27824812bb7a5ad507e3ce6b003b4",
     "players": 1,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Orca Corporation",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
@@ -6340,8 +7593,13 @@
     "id": "00b8aa8d6ddee13b9fe20c23f5857667b474c014",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
-      "Action"
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Vertical"
     ],
     "manuals": [
       {
@@ -6356,6 +7614,9 @@
     "id": "5328d36c3479241be8773d0dfc3c24bea6063e45",
     "players": 2,
     "rating": 0.45,
+    "year": 1988,
+    "developer": "Imagineer",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -6372,6 +7633,9 @@
     "id": "f9ae32ef24a117cfed3a84c14059e38173315e29",
     "players": 2,
     "rating": 0.85,
+    "year": 1989,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -6389,6 +7653,9 @@
     "id": "17ea64da096fce6b74a701a03d692b3e59b1a711",
     "players": 2,
     "rating": 0.45,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Action"
     ],
@@ -6405,6 +7672,9 @@
     "id": "2115e23260d935661229f219cc33fbec41df6c44",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -6421,6 +7691,9 @@
     "id": "46b26fddb738afce70a5c2961f87346765377be8",
     "players": 2,
     "rating": 0.4,
+    "year": 1984,
+    "developer": "Konami",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -6436,6 +7709,9 @@
   "Rocky & Bullwinkle": {
     "id": "65b7a33739d574dbf1c3f8687be6370d29bc7b62",
     "players": 1,
+    "year": 1983,
+    "developer": "Steve Crandall",
+    "publisher": "M Network",
     "genres": [
       "Action"
     ]
@@ -6444,6 +7720,9 @@
     "id": "a35df1be7448af3cd9b69148581a5c23333082b7",
     "players": 1,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Action"
     ],
@@ -6460,9 +7739,11 @@
     "id": "26fdc5d368bb2f54079ef32a1b763cd754b53707",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
-      "Puzzle-Game",
-      "Strategy"
+      "Puzzle-Game"
     ],
     "manuals": [
       {
@@ -6478,6 +7759,9 @@
   },
   "Rubik's Cube 3-D": {
     "id": "e8a9b1005f007016f2b37b2ea3906b9fd659a42f",
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Puzzle-Game"
     ],
@@ -6493,6 +7777,9 @@
   "Rush Hour": {
     "id": "75a7f836467eb94de7b58c680acadba6de34ff4a",
     "players": 1,
+    "year": 1983,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Driving",
       "Race"
@@ -6508,6 +7795,9 @@
   },
   "S.A.C. Alert": {
     "id": "03ff4dd1047ba0934c7b8e0d2fd1c627b9c7dd00",
+    "year": 1983,
+    "developer": "Amiga",
+    "publisher": "Amiga",
     "genres": [
       "Action"
     ],
@@ -6521,11 +7811,17 @@
     ]
   },
   "SCRMNN": {
-    "id": "47c2932f40ecb5ab6472a81aaf4bc51f6f28753b"
+    "id": "47c2932f40ecb5ab6472a81aaf4bc51f6f28753b",
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision"
   },
   "Saboteur": {
     "id": "2adb7c801bccf82891581cdb4acdaa3d39ceb527",
     "players": 1,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "AtariAge",
     "genres": [
       "Action"
     ],
@@ -6541,6 +7837,9 @@
   "Save Mary!": {
     "id": "03770d40530afacbb1ec8f0bf0b992839107d8a2",
     "players": 1,
+    "year": 1989,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -6548,6 +7847,9 @@
   "Save our Ship": {
     "id": "13dc98217effd1c4f7e1299b953c6cc0b06198cf",
     "players": 1,
+    "year": 1983,
+    "developer": "TechnoVision",
+    "publisher": "TechnoVision",
     "genres": [
       "Action"
     ],
@@ -6563,6 +7865,9 @@
   "Save the Whales": {
     "id": "dafce6a8b5be2d140cc13904829b1a618a096f96",
     "players": 2,
+    "year": 1984,
+    "developer": "Fox Video Games",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -6578,6 +7883,9 @@
   "Sea Battle": {
     "id": "4b4a02d51fcf8b39e8aa75a2abe771d174a118b4",
     "players": 2,
+    "year": 1983,
+    "developer": "APh Technological Consulting",
+    "publisher": "M Network",
     "genres": [
       "Strategy"
     ],
@@ -6593,10 +7901,14 @@
   "Sea Hawk": {
     "id": "6766b616c2efbf215ad236df6465794c935bf508",
     "players": 1,
+    "year": 1983,
+    "developer": "Sancho",
+    "publisher": "Sancho",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6612,9 +7924,12 @@
   "Sea Hunt ~ Scuba Diver": {
     "id": "12ab8bbd10344c0a4c7e024523c11183b1ddbaf7",
     "players": 1,
+    "developer": "Froggo Games Corporation",
+    "publisher": "Froggo Games Corporation",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6631,6 +7946,9 @@
     "id": "447980db512172aaf92b9534106e70386d32e140",
     "players": 2,
     "rating": 0.2,
+    "year": 1983,
+    "developer": "Bit Corp.",
+    "publisher": "Bit Corp.",
     "genres": [
       "Action"
     ],
@@ -6651,6 +7969,9 @@
     "id": "1a6c902cff6d2a78d53686bb237399b43b3a8bb8",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -6666,6 +7987,9 @@
   "Secret Agent": {
     "id": "1b2287b2bed93a269fc2725629bdc83d037c21d2",
     "players": 2,
+    "year": 1983,
+    "developer": "Data Age",
+    "publisher": "Atari2600.com",
     "genres": [
       "Action"
     ],
@@ -6682,6 +8006,9 @@
     "id": "6c2ea19fe3de3343b1042b5e4ef4d87b7dee2c82",
     "players": 1,
     "rating": 0.8,
+    "year": 1989,
+    "developer": "Axlon",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -6701,9 +8028,13 @@
   "Sentinel": {
     "id": "6ec27488d43c2292a0597474990f755741c72549",
     "players": 1,
+    "year": 1990,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "controls": [
       "lightgun"
     ],
@@ -6720,6 +8051,9 @@
     "id": "67460857ec333269eff29d74c55131e36ce49d3a",
     "players": 1,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -6735,6 +8069,9 @@
   },
   "Shooting Arcade": {
     "id": "e02cf348a297802b8766c2b2dbc404a0a16dafdb",
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Lightgun Shooter"
     ],
@@ -6746,6 +8083,9 @@
     "id": "3e6c4bdc11305a2a9399d78d0712006622f124af",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Avalon Hill",
+    "publisher": "Avalon Hill",
     "genres": [
       "Simulation"
     ],
@@ -6761,6 +8101,9 @@
   "Sinistar": {
     "id": "5bbb0cb2759a53a9ffd5cae9a188ac2967812320",
     "players": 1,
+    "year": 1984,
+    "developer": "Williams",
+    "publisher": "Atari",
     "genres": [
       "Shoot'em Up"
     ]
@@ -6769,9 +8112,14 @@
     "id": "c662dd228c839cf0cc822a2cce3c6d44f65e7ea9",
     "players": 1,
     "rating": 0.15,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
-      "Action"
+      "Platform",
+      "Platform / Run Jump"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6789,9 +8137,14 @@
     "id": "5ea172b4b43b978b592514fbb617301ef6c8cf4e",
     "players": 1,
     "rating": 0.4,
+    "year": 1987,
+    "developer": "Absolute Entertainment",
+    "publisher": "Absolute Entertainment",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Skateboard"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -6805,6 +8158,9 @@
     "id": "52f7abf92dbe7af66f3d146483cdd629ad3560ea",
     "players": 2,
     "rating": 0.15,
+    "year": 1981,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -6821,6 +8177,9 @@
     "id": "75c0195b9356945eecef0f64cd0679440b67fdd2",
     "players": 1,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Home Vision",
+    "publisher": "Home Vision",
     "genres": [
       "Sports"
     ]
@@ -6828,6 +8187,8 @@
   "Ski Run": {
     "id": "92a95f1e67b3f6a131a067ea3b116ad9dd1808d9",
     "rating": 0.4,
+    "year": 1983,
+    "publisher": "Suntek",
     "genres": [
       "Sports",
       "Sports / Skydiving"
@@ -6837,9 +8198,13 @@
     "id": "670775c6178fd7d42ca290cfe0fe88c38c1b3266",
     "players": 1,
     "rating": 0.6,
+    "year": 1980,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -6869,9 +8234,13 @@
     "id": "509e7182d79be925d9c536520e1dbe1954e19799",
     "players": 2,
     "rating": 0.6,
+    "year": 1978,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -6885,6 +8254,9 @@
     "id": "4816c9c3ec0a85f716529041a166152fc9afe059",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Driving",
@@ -6901,6 +8273,9 @@
   },
   "Sky Patrol": {
     "id": "1a6c8b63db1c97494d218bf9139c7a40ff0657c7",
+    "year": 1982,
+    "developer": "Brad Stewart",
+    "publisher": "Imagic",
     "genres": [
       "Simulation"
     ]
@@ -6908,6 +8283,9 @@
   "Sky Skipper": {
     "id": "2b6bcc0e8b6ac12a7bdf9a0185443cb59ed22938",
     "players": 1,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -6924,11 +8302,15 @@
     "id": "3812f56fd8b6dc9f06a3633561ab794ac1fad8c5",
     "players": 2,
     "rating": 0.3,
+    "year": 1979,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Casino",
       "Casino / Slot machine",
       "Simulation"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -6942,9 +8324,13 @@
     "id": "22d57acc15cb46b808d28cc28b2e250e235fe6c6",
     "players": 2,
     "rating": 0.5,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -6957,6 +8343,9 @@
   "Smurf - Rescue in Gargamel's Castle": {
     "id": "c48f107db71a7553d2761b9de8b2b966dd3e650c",
     "players": 2,
+    "year": 1982,
+    "developer": "Coleco Industries, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Platform"
     ],
@@ -6972,6 +8361,9 @@
   "Smurfs Save the Day": {
     "id": "8b550b58ef06fa4391ee2cbf418930fef0716a02",
     "players": 1,
+    "year": 1983,
+    "developer": "Coleco Industries, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Educational"
     ],
@@ -6988,6 +8380,9 @@
     "id": "ead020dc7fbd825fed68bd6a4a1ece2308e76c98",
     "players": 2,
     "rating": 0.3,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Puzzle-Game",
       "Simulation"
@@ -7005,9 +8400,13 @@
     "id": "63b1aabb3341aa90e5a241d67d667eb318fc5057",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7020,6 +8419,9 @@
   "Snow White and the Seven Dwarfs": {
     "id": "21f389684b20f68352bee55d95383dd799c1d73d",
     "players": 1,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "CGE Services Corporation",
     "genres": [
       "Action",
       "Adventure"
@@ -7036,7 +8438,10 @@
   "Solar Fox": {
     "id": "1cf2282981ac3e125ff1cd04d2edda301f3766a2",
     "players": 2,
-    "rating": 0.6,
+    "rating": 1.0,
+    "year": 1983,
+    "developer": "Bally Midway",
+    "publisher": "CBS Software",
     "genres": [
       "Action"
     ],
@@ -7053,9 +8458,13 @@
     "id": "e0837a6e7194ffc574358e0692a6be2b6e331acf",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7069,6 +8478,9 @@
     "id": "9641f3168ac8f6bbc1007a4b762869eeee3b4893",
     "players": 1,
     "rating": 0.8,
+    "year": 1986,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -7085,6 +8497,9 @@
     "id": "fe864b196a354c307b90a1461880f2b495652f1f",
     "players": 2,
     "rating": 0.2,
+    "year": 1983,
+    "developer": "Mythicon, Inc.",
+    "publisher": "Mythicon, Inc.",
     "genres": [
       "Action"
     ],
@@ -7101,9 +8516,13 @@
     "id": "4aae54feec2a353080835c8aea64416f7d734a5c",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -7119,6 +8538,10 @@
   "Space Attack": {
     "id": "0745a1dd24fb851c28fba976d6533db0ab7205d3",
     "players": 1,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "M Network",
+    "publisher": "M Network",
     "genres": [
       "Simulation"
     ],
@@ -7135,6 +8558,9 @@
     "id": "c4e339aef04b1d06502f2c37d78dd9bbccccee56",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -7151,6 +8577,9 @@
     "id": "4b495a02ce3e6ead93436d72a8e89c68e07522aa",
     "players": 2,
     "rating": 0.7,
+    "year": 1980,
+    "developer": "Taito",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -7159,6 +8588,7 @@
       "Shooter / Space Invaders Like",
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -7172,6 +8602,9 @@
     "id": "3a82a07604b3713c37c3a785dda05111eb175007",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -7188,6 +8621,9 @@
     "id": "c9d5dd0d4730734e1129e559877ae5125b20ad19",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Simulation"
@@ -7204,6 +8640,9 @@
   "Space Tunnel": {
     "id": "b6546cfaa460bfd9b6d726069735df08eaeda13f",
     "players": 1,
+    "year": 1982,
+    "developer": "Puzzy",
+    "publisher": "Bit Corp.",
     "genres": [
       "Shoot'em Up"
     ],
@@ -7230,10 +8669,14 @@
     "id": "bc4d6f7f2f7d7e9430880a1164ba71dd409a8643",
     "players": 2,
     "rating": 0.3,
+    "year": 1978,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Simulation"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7246,6 +8689,10 @@
   "SpaceMaster X-7": {
     "id": "2b637738254e7e1fd1d30613faa5130b94a7b80a",
     "players": 1,
+    "rating": 0.5,
+    "year": 1983,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Strategy"
     ],
@@ -7262,6 +8709,9 @@
     "id": "3747a5609264925dffcedabfbfa78bc65fe64cec",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -7278,6 +8728,9 @@
     "id": "6f1ab83a82afd39f6e86199fa30519afc02d7693",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -7295,6 +8748,11 @@
   },
   "Spider Maze": {
     "id": "16a7839e226961d2e1be45e766332e52c2356eb6",
+    "players": 2,
+    "rating": 0.4,
+    "year": 1982,
+    "developer": "K-Tel Vision",
+    "publisher": "Quelle",
     "genres": [
       "Platform"
     ]
@@ -7303,6 +8761,9 @@
     "id": "d2422858e937e861979f00edf1ccf3f1bafb32eb",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -7319,9 +8780,13 @@
     "id": "a0499322431233f0dcd9e9d3cc21b5dbdba523b8",
     "players": 1,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7344,6 +8809,9 @@
   },
   "Spinning Fireball": {
     "id": "132cc9ee65f260573d2f61dbb9f009d529d18b39",
+    "year": 1983,
+    "developer": "Vidco",
+    "publisher": "Suntek",
     "genres": [
       "Action"
     ],
@@ -7359,6 +8827,10 @@
   "Spitfire Attack": {
     "id": "a25fa1f97623810f7d16bccf1f5bf2771f8dad6d",
     "players": 1,
+    "rating": 0.65,
+    "year": 1983,
+    "developer": "Milton Bradley Co.",
+    "publisher": "Milton Bradley Co.",
     "genres": [
       "Action"
     ],
@@ -7374,8 +8846,13 @@
   "Springer": {
     "id": "49850d93a551876d3dcbc1374b6ed7e87cee892e",
     "players": 1,
+    "rating": 0.4,
+    "year": 1982,
+    "developer": "Orca Corporation",
+    "publisher": "Tigervision",
     "genres": [
-      "Action"
+      "Action",
+      "Platform"
     ],
     "manuals": [
       {
@@ -7389,6 +8866,10 @@
   "Sprint Master": {
     "id": "ce5f1f4e852023245cfabd1ad2c9550c9fb76098",
     "players": 2,
+    "rating": 0.75,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -7406,6 +8887,9 @@
     "id": "768c2e25e353412671958e1b88325ca98e71c510",
     "players": 1,
     "rating": 0.3,
+    "year": 1984,
+    "developer": "Bally Midway",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Driving",
@@ -7424,6 +8908,9 @@
     "id": "abd2d29054c58ff608398cd98679a83f608d7f62",
     "players": 1,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -7439,6 +8926,9 @@
   "Squirrel ~ O Esquilo": {
     "id": "ca943789130369207fb8d55854a3e9d67ede737d",
     "players": 1,
+    "year": 1983,
+    "developer": "Bit Corp.",
+    "publisher": "Bit Corp.",
     "genres": [
       "Platform"
     ],
@@ -7456,11 +8946,17 @@
     ]
   },
   "Squoosh": {
-    "id": "e122333f521d18251b808aba022f562c7c0cf2df"
+    "id": "e122333f521d18251b808aba022f562c7c0cf2df",
+    "year": 1983,
+    "publisher": "Apollo"
   },
   "Sssnake": {
     "id": "c14ffa0cfac86b8d62dea09acf5624af169612e2",
     "players": 2,
+    "rating": 0.05,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action"
     ],
@@ -7477,6 +8973,9 @@
     "id": "f447c63afa36a0aa300d68f55b8f7574afbe1aff",
     "players": 1,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -7493,6 +8992,9 @@
     "id": "cb48d4ce29d77d1f2fe0656d970cb528c1515de0",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Mythicon, Inc.",
+    "publisher": "Mythicon, Inc.",
     "genres": [
       "Action"
     ],
@@ -7509,10 +9011,14 @@
     "id": "caa8e18f4b7105499dc213a2812a8bd2df84d186",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Shooter",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -7532,9 +9038,13 @@
     "id": "3fae7257110574b787ec867d1ba4a8e5adf52490",
     "players": 2,
     "rating": 0.45,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Sears",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7547,6 +9057,10 @@
   "Star Strike": {
     "id": "534abcbfc2ec9b9a795c02e0e87a2e59fb936a03",
     "players": 1,
+    "rating": 0.7,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -7563,6 +9077,9 @@
     "id": "b713bdd9eb11ff511b959b8505c6a8d1eb60ead9",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -7579,6 +9096,9 @@
     "id": "496c2e656dd698c5d3b35bbecd680049bb830d0c",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -7595,9 +9115,13 @@
     "id": "6f587cd351e5a63096910478aeaeaf7a4f729961",
     "players": 2,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7611,10 +9135,14 @@
     "id": "2af2e4d5d8451dd168afe2a296e250d1a7e6c4a1",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shooter"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7626,6 +9154,10 @@
   },
   "Star Wars - Return of the Jedi - Ewok Adventure": {
     "id": "0fa4d8c9ad292f9bfa24e3cd26e32da02cf454a7",
+    "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Parker Brothers",
     "genres": [
       "Shoot'em Up"
     ],
@@ -7642,10 +9174,14 @@
     "id": "68e641f884726897fdebfef1212859cb4ae6e89a",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7659,6 +9195,9 @@
     "id": "1f13d8b82ca290de7186955d721b3357c199a8be",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -7675,9 +9214,13 @@
     "id": "f453eeb93f5d190818e865ffa1c5e5b3ee9e1eb1",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -7691,11 +9234,15 @@
     "id": "3b8aeef8c17c3a05f68f99cec7a38ff90f603aa8",
     "players": 1,
     "rating": 0.7,
+    "year": 1984,
+    "developer": "Vid Kidz",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / Horizontal"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7708,11 +9255,15 @@
   "Stargunner": {
     "id": "334b911f1f9f534540eecd100e900c5b88c2c670",
     "players": 2,
+    "year": 1982,
+    "developer": "Telesys",
+    "publisher": "Telesys",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -7724,11 +9275,15 @@
   },
   "Steeplechase": {
     "id": "9964cafc203f59383c2be8be80c6bcb75d127702",
-    "players": 4,
+    "players": 1,
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Video Gems",
     "genres": [
       "Sports",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7741,6 +9296,10 @@
   "Stellar Track": {
     "id": "0b61ca19f99c11a84600ded9950146c1d5fae4d6",
     "players": 1,
+    "rating": 0.45,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Sears",
     "genres": [
       "Strategy"
     ],
@@ -7755,6 +9314,10 @@
   },
   "Stone Age": {
     "id": "719fa447ee794242a49df59f8302c1036c08ed09",
+    "players": 2,
+    "year": 1983,
+    "developer": "CCE",
+    "publisher": "CCE",
     "genres": [
       "Action"
     ],
@@ -7771,6 +9334,9 @@
     "id": "cf26a99bf89e9e72a31138c92db84afa1b78511a",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action"
     ],
@@ -7786,6 +9352,10 @@
   "Strawberry Shortcake - Musical Match-Ups": {
     "id": "f367a442423932c1a35eaafc877308f9446f2789",
     "players": 1,
+    "rating": 0.45,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Educational",
       "Strategy"
@@ -7818,6 +9388,9 @@
     "id": "b1340fc00b9f7ec1197c8195e346c060ad8f9fa8",
     "players": 1,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -7834,6 +9407,9 @@
   },
   "Stunt Cycle": {
     "id": "53622107cf0787ce0e78473b78ca6d01a47bd49c",
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -7851,6 +9427,9 @@
     "id": "c403f92eefec479b42ce0575ffe1ceebacb42af4",
     "players": 1,
     "rating": 0.15,
+    "year": 1983,
+    "developer": "Tang's Electronic Co.",
+    "publisher": "Panda",
     "genres": [
       "Platform"
     ],
@@ -7876,6 +9455,8 @@
   "Sub-Scan": {
     "id": "b1be92b2e97e557c5a5d0f3caaed7d9da526a10f",
     "players": 1,
+    "year": 1983,
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up"
     ],
@@ -7891,6 +9472,10 @@
   "Submarine Commander": {
     "id": "abbd818d1d0d0886d52a1f21dfa5f3d13c61970f",
     "players": 2,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Sears",
     "genres": [
       "Simulation"
     ],
@@ -7907,10 +9492,14 @@
     "id": "819a2001bb984c567e018ee370a95677197b847b",
     "players": 2,
     "rating": 0.45,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -7922,6 +9511,11 @@
   },
   "Suicide Mission": {
     "id": "9061087263946c793645e85d44150f7667cc9b67",
+    "players": 2,
+    "rating": 0.7,
+    "year": 1982,
+    "developer": "Arcadia Systems",
+    "publisher": "Arcadia Systems",
     "genres": [
       "Action"
     ],
@@ -7938,8 +9532,12 @@
     "id": "5af4bf5019e989cd164ce7b892d5876d71644bab",
     "players": 8,
     "rating": 0.3,
+    "year": 1987,
+    "developer": "Epyx",
+    "publisher": "Epyx",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Multisports"
     ],
     "manuals": [
       {
@@ -7953,6 +9551,10 @@
   "Super Baseball": {
     "id": "f9296ec6eb1dbdcaefd0cd172f251419b2abd339",
     "players": 2,
+    "rating": 0.05,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -7970,6 +9572,9 @@
     "id": "4dfefca286a7a6d0645469dcb57383fea129caaf",
     "players": 2,
     "rating": 0.65,
+    "year": 1978,
+    "developer": "Turner, Nick / Shaw, Carol",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Breakout games",
@@ -7993,6 +9598,9 @@
   "Super Challenge Baseball": {
     "id": "3969cdf421d331bd4370275e99d1035dd46f8469",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -8009,6 +9617,9 @@
   "Super Challenge Football": {
     "id": "d5fa2244b4386a092ee3dcfce289c01ad9b4ae00",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports",
       "Sports / Football"
@@ -8026,8 +9637,13 @@
     "id": "51891ff3bebc7cc73a9d6b934e1e86423906bf65",
     "players": 1,
     "rating": 0.25,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
-      "Action"
+      "Action",
+      "Shoot'em Up",
+      "Shoot'em up / Horizontal"
     ],
     "manuals": [
       {
@@ -8042,6 +9658,9 @@
     "id": "9743c193619ccff2d25366acc8328305138c6b47",
     "players": 2,
     "rating": 0.75,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -8058,10 +9677,14 @@
     "id": "d7c4d0ba5590faea45a6b8a85ab13de3590f7e5b",
     "players": 1,
     "rating": 0.6,
+    "year": 1978,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8073,6 +9696,8 @@
   },
   "Surf's Up": {
     "id": "2733807e1e0125aacd14cff843a32fd1cbd935ea",
+    "year": 1983,
+    "publisher": "Amiga",
     "genres": [
       "Sports"
     ]
@@ -8080,9 +9705,14 @@
   "Surfer's Paradise - But Danger Below!": {
     "id": "305c732012f4c39ddb86f0e28c15df1d1f42cb4a",
     "players": 1,
+    "rating": 0.6,
+    "year": 1983,
+    "developer": "Video Gems",
+    "publisher": "Video Gems",
     "genres": [
       "Sports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8096,9 +9726,13 @@
     "id": "aaba103219b58eafe9bba31483c62e2698e4e215",
     "players": 2,
     "rating": 0.4,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Sears",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8111,6 +9745,9 @@
   "Survival Island": {
     "id": "17c424f58598702dd842d9fcade8b8548b0b8135",
     "players": 1,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Adventure"
     ],
@@ -8126,6 +9763,10 @@
   "Survival Run": {
     "id": "dbafabfa798333bbf23cc50465d0f3a6b071efc8",
     "players": 1,
+    "rating": 0.45,
+    "year": 1983,
+    "developer": "Milton Bradley Co.",
+    "publisher": "Milton Bradley Co.",
     "genres": [
       "Action"
     ],
@@ -8140,6 +9781,8 @@
   },
   "Sweat! The Decathalon Game": {
     "id": "734f88c2ba13032d9198af0c78f117bceb798d0c",
+    "year": 1983,
+    "publisher": "Starpath Corporation",
     "genres": [
       "Sports"
     ]
@@ -8147,6 +9790,9 @@
   "Sword of Saros": {
     "id": "bd4ef8d9ea75bc1625434f9897de0a13348e6454",
     "players": 1,
+    "year": 1983,
+    "developer": "Starpath Corporation",
+    "publisher": "Starpath Corporation",
     "genres": [
       "Adventure"
     ],
@@ -8162,6 +9808,10 @@
   "SwordQuest - EarthWorld": {
     "id": "99012236c3c2ba0711f46d2c120b7d6f7781195b",
     "players": 1,
+    "rating": 0.35,
+    "year": 1987,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Adventure"
@@ -8178,6 +9828,9 @@
   "SwordQuest - FireWorld": {
     "id": "4d1651ec9d5014b73cb4adc536a31062debeb3ea",
     "players": 1,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Adventure"
@@ -8194,6 +9847,10 @@
   "SwordQuest - WaterWorld": {
     "id": "7c24f70d8625fefb816e8d751937f60fab31e421",
     "players": 1,
+    "rating": 0.15,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Adventure"
@@ -8210,6 +9867,10 @@
   "Swordfight": {
     "id": "6608f1b4b0b55a00ab93799e7b5af43e327bb84d",
     "players": 2,
+    "rating": 0.55,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "M Network",
     "genres": [
       "Action"
     ],
@@ -8226,9 +9887,13 @@
     "id": "bca91059ea289afd0865579ed4f5a3f496263cbd",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8242,6 +9907,9 @@
     "id": "97a1552ce9dd30e0d81c177d68babde2cb689393",
     "players": 1,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -8260,9 +9928,15 @@
   "Tanks But no Tanks": {
     "id": "d08bc66b5667582c25b9a61bc48d344d1e88bbbf",
     "players": 2,
+    "rating": 0.7,
+    "year": 1982,
+    "developer": "Bit Corp.",
+    "publisher": "Bit Corp.",
     "genres": [
-      "Action"
+      "Action",
+      "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8278,9 +9952,14 @@
   "Tapeworm": {
     "id": "2cb9bbd14e03add9f1f7712d8e3e5177991b1de0",
     "players": 2,
+    "rating": 0.55,
+    "year": 1982,
+    "developer": "Spectravision",
+    "publisher": "Spectravision",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8294,6 +9973,9 @@
     "id": "5700deaf0166ab01779341ce1502f81b9c27d762",
     "players": 2,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Bally Midway",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -8309,9 +9991,14 @@
   "Tax Avoiders": {
     "id": "7bd28509cfa83bf4c94eb2a4af422f54e6d715c3",
     "players": 1,
+    "rating": 0.1,
+    "year": 1982,
+    "developer": "Dunhill Electronics",
+    "publisher": "American Videogame",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8325,9 +10012,13 @@
     "id": "d08a01adac4adca4e309e01807cb1ea3c1ff70b2",
     "players": 2,
     "rating": 0.7,
+    "year": 1988,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8339,12 +10030,18 @@
   },
   "Telepathy": {
     "id": "de1c6528c19731ef6b58b7b204eb10918ef1b5e6",
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
   },
   "Tempest": {
     "id": "1828bf681b94e75734022bda41f5883affeed401",
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Shoot'em Up"
     ]
@@ -8353,6 +10050,9 @@
     "id": "e530d48293704364e69eedd3216d8ab2d685995f",
     "players": 2,
     "rating": 0.45,
+    "year": 1981,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Sports"
     ],
@@ -8369,6 +10069,9 @@
     "id": "2fdc0db0cce393ce379dfb1d6fac74a27c2f3fbe",
     "players": 1,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "VSS, Inc.",
+    "publisher": "Wizard Video Games",
     "genres": [
       "Action"
     ],
@@ -8384,6 +10087,10 @@
   "Threshold": {
     "id": "75d133d8acf9f04fef207798dbd47b08ee585a31",
     "players": 2,
+    "rating": 0.5,
+    "year": 1982,
+    "developer": "On-Line Systems",
+    "publisher": "Tigervision",
     "genres": [
       "Action"
     ],
@@ -8400,9 +10107,13 @@
     "id": "806dda591dad08283c56d9fc06bf69447918001c",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8414,6 +10125,8 @@
   },
   "Thwocker": {
     "id": "207b44e1e58e0223f6ab3cc146f13e1e910f79dd",
+    "year": 1984,
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -8430,6 +10143,9 @@
     "id": "b8edc8fc52593e58a5c84bda88d9978c9c4d4fcf",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -8445,11 +10161,15 @@
   "Time Warp": {
     "id": "eac2657c97cefe9a5c94624d03e75266e8f0c27e",
     "players": 1,
+    "year": 1983,
+    "developer": "Fun Vision",
+    "publisher": "Funvision",
     "genres": [
       "Shoot'em Up",
       "Shooter",
       "Shooter / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8464,6 +10184,9 @@
     "id": "d07b71348c6e081596d84e4c5b143ef0d58557c6",
     "players": 2,
     "rating": 0.35,
+    "year": 1987,
+    "developer": "Absolute Entertainment",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "Sports"
     ],
@@ -8480,9 +10203,13 @@
     "id": "ce63b7aa73b22a56e900872ed1d515b481e457dd",
     "players": 1,
     "rating": 0.2,
+    "year": 1984,
+    "developer": "Xonox",
+    "publisher": "Xonox",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8495,6 +10222,10 @@
   "Tomcat - The F-14 Fighter Simulator": {
     "id": "0db34617e3b744466776ca6929bbf7bf9e629f61",
     "players": 1,
+    "rating": 0.8,
+    "year": 1988,
+    "developer": "Absolute Entertainment",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "Simulation"
     ],
@@ -8510,6 +10241,10 @@
   "Tooth Protectors": {
     "id": "720b46c7435159966fc52dd082d34865a6dcd42d",
     "players": 1,
+    "rating": 0.7,
+    "year": 1983,
+    "developer": "Camelot,\u00a0Inc.",
+    "publisher": "Johnson & Johnson",
     "genres": [
       "Action"
     ],
@@ -8526,9 +10261,13 @@
     "id": "0b46b5a8b5a3d215b029aa54fe869a15f812b591",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Western Technologies",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8542,9 +10281,14 @@
     "id": "94be3f146353c48f9edac72b4b8d40bd5e531732",
     "players": 2,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Konami",
+    "publisher": "Atari",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Multisports"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8557,6 +10301,9 @@
   "Treasure Below": {
     "id": "e3f816ebd5d0815a4030fd4cad421d94322473b7",
     "players": 1,
+    "year": 1983,
+    "developer": "Video Gems",
+    "publisher": "Video Gems",
     "genres": [
       "Action",
       "Action / Adventure"
@@ -8572,6 +10319,8 @@
   },
   "Treasure Island": {
     "id": "b70bd624cd4fce249f8cc79a449509d92d590110",
+    "year": 1983,
+    "publisher": "StarSoft Development Laboratories",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
@@ -8589,10 +10338,14 @@
     "id": "2c5249b1c9d1b2225ee15e93813848fb051181c3",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Sports",
       "Sports / Pool"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8605,9 +10358,13 @@
   "Tunnel Runner": {
     "id": "48cb0bd7d212f0167d1e8fad09647bd39c2ddf23",
     "players": 1,
-    "rating": 0.75,
+    "rating": 1.0,
+    "year": 1983,
+    "developer": "CBS Software",
+    "publisher": "CBS Software",
     "genres": [
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -8633,6 +10390,9 @@
     "id": "27c04f306d468a6b7d7ecce53bf190973a15a87b",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -8649,9 +10409,13 @@
     "id": "598ba2f4eb379d38433b27fa3d71a79fdb3c09a7",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8664,6 +10428,10 @@
   "Universal Chaos": {
     "id": "f7b81ebf1de6cf0127392d31529fc67e40440d9c",
     "players": 2,
+    "rating": 0.6,
+    "year": 1988,
+    "developer": "Exidy, Inc.",
+    "publisher": "Telegames",
     "genres": [
       "Action"
     ],
@@ -8679,10 +10447,15 @@
   "Up 'n Down": {
     "id": "012cc253b985b12ad5399f492bb3ff82ac4a6867",
     "players": 2,
+    "rating": 0.75,
+    "year": 1984,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8696,6 +10469,9 @@
     "id": "e9a7fbb30c66d9802401ed7f54900931b31d0f98",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "SNK",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -8711,6 +10487,10 @@
   "Vault Assault": {
     "id": "d8a3111b165716bcf6a82c2bd91be44b7356e73c",
     "players": 1,
+    "rating": 0.7,
+    "year": 2001,
+    "developer": "Brian Prescott",
+    "publisher": "Self-published",
     "genres": [
       "Action"
     ],
@@ -8725,6 +10505,8 @@
   },
   "Venetian Blinds Demo": {
     "id": "e7980a2e001268a47b9d9d03285fc1f391de73ba",
+    "year": 1981,
+    "publisher": "Activision",
     "genres": [
       "Demo"
     ],
@@ -8741,6 +10523,9 @@
     "id": "61207637559642efa9e21410235512af1dfe6b25",
     "players": 1,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Exidy, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action",
       "Adventure"
@@ -8758,10 +10543,14 @@
     "id": "92dacf3064e4c8a4b129c504bd13609233f2b43b",
     "players": 2,
     "rating": 0.45,
+    "year": 1980,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Board game",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8775,11 +10564,15 @@
     "id": "070d13e72dab1151b03eea5551b5c5d8d4dab645",
     "players": 1,
     "rating": 0.7,
+    "year": 1979,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Board game",
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8792,6 +10585,9 @@
   "Video Jogger": {
     "id": "7266a744a170db516af520697e72a28af7909295",
     "players": 1,
+    "year": 1983,
+    "developer": "Exus Corporation",
+    "publisher": "Exus Corporation",
     "genres": [
       "Action"
     ],
@@ -8807,6 +10603,9 @@
   "Video Life": {
     "id": "42b30772b39fea25e97525a204301f65af0ab38c",
     "players": 1,
+    "year": 1981,
+    "developer": "CommaVid, Inc.",
+    "publisher": "CommaVid, Inc.",
     "genres": [
       "Simulation"
     ],
@@ -8823,9 +10622,13 @@
     "id": "5f570adcda899339478948a1266997dc949bce31",
     "players": 4,
     "rating": 0.55,
+    "year": 1977,
+    "developer": "Sears",
+    "publisher": "Sears",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8839,11 +10642,15 @@
     "id": "2d27984951e2aa55ad3c2c9bf472b6265ed69757",
     "players": 2,
     "rating": 0.6,
+    "year": 1980,
+    "developer": "Sears",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Pinball",
       "Simulation"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8856,6 +10663,9 @@
   "Video Reflex": {
     "id": "ae104e4b4ffe1a47337a3806fba4bbe0148db54c",
     "players": 1,
+    "year": 1983,
+    "developer": "Exus Corporation",
+    "publisher": "Exus Corporation",
     "genres": [
       "Action"
     ],
@@ -8872,6 +10682,9 @@
     "id": "1aab4fb22a7f871bd2f67e22e1a2fb03bcbb8874",
     "players": 2,
     "rating": 0.35,
+    "year": 1982,
+    "developer": "Apollo,\u00a0Inc.",
+    "publisher": "Apollo,\u00a0Inc.",
     "genres": [
       "Action"
     ],
@@ -8886,6 +10699,9 @@
   },
   "Walker ~ Schussel, der Polizistenschreck": {
     "id": "59c4ced7d9d47e4aaf3434f6b9ed90aa9dd591db",
+    "year": 1983,
+    "developer": "Suntek",
+    "publisher": "Suntek",
     "genres": [
       "Platform"
     ]
@@ -8893,6 +10709,10 @@
   "Wall Ball": {
     "id": "7845af893aeadd012090f902a0f69668a91abeca",
     "players": 1,
+    "rating": 0.6,
+    "year": 1983,
+    "developer": "Avalon Hill",
+    "publisher": "Avalon Hill",
     "genres": [
       "Action"
     ],
@@ -8907,10 +10727,15 @@
   },
   "Wall-Defender": {
     "id": "c4547dd8cc05de79774ab655c2cc1acf30a69e4f",
+    "players": 1,
     "rating": 0.6,
+    "year": 1984,
+    "developer": "Bomb",
+    "publisher": "Bomb",
     "genres": [
-      "Shoot'em Up"
+      "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -8927,6 +10752,9 @@
     "id": "36435ccbd1f3d41e90fcf82fbf878d07e3575828",
     "players": 4,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Sears",
     "genres": [
       "Action"
     ],
@@ -8948,6 +10776,10 @@
   "Warplock": {
     "id": "78857d4a74b4cb18aa8b43a7e9190fceaa5df0b8",
     "players": 2,
+    "rating": 0.25,
+    "year": 1982,
+    "developer": "Data Age",
+    "publisher": "Data Age",
     "genres": [
       "Action"
     ],
@@ -8963,6 +10795,10 @@
   "Wing War": {
     "id": "838bedbab47f837c18fa3efefa4af78c78c6a96d",
     "players": 1,
+    "rating": 0.75,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -8976,15 +10812,23 @@
     ]
   },
   "Wings": {
-    "id": "b8ceb2605d63d1988ad9886d09ce4d1daae0c7dd"
+    "id": "b8ceb2605d63d1988ad9886d09ce4d1daae0c7dd",
+    "year": 1983,
+    "developer": "CBS Software",
+    "publisher": "CBS Software"
   },
   "Winter Games": {
     "id": "89b96c80caddaf0f577007ffdd55ea173f5fa897",
     "players": 8,
     "rating": 0.6,
+    "year": 1987,
+    "developer": "Action Graphics",
+    "publisher": "Epyx",
     "genres": [
-      "Sports"
+      "Sports",
+      "Sports / Multisports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -8996,6 +10840,9 @@
   },
   "Wizard": {
     "id": "4860d4e8dd6288700b8f724b1ea1b0801c36258e",
+    "year": 1980,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -9004,8 +10851,12 @@
     "id": "0027a509f5ae55a57d5fc740a2096814e91dd971",
     "players": 2,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "Dave Nutting Associates",
+    "publisher": "CBS Software",
     "genres": [
-      "Action"
+      "Action",
+      "Action / Labyrinth"
     ],
     "manuals": [
       {
@@ -9020,6 +10871,9 @@
     "id": "52b44bb257c849dd5e15a21f03da84f1c30442f8",
     "players": 2,
     "rating": 0.4,
+    "year": 1982,
+    "developer": "U.S. Games",
+    "publisher": "U.S. Games",
     "genres": [
       "Action"
     ],
@@ -9034,12 +10888,20 @@
   },
   "Words-Attack": {
     "id": "421e8d1db4e783cdf44ab42e3f4c33a789d285ea",
+    "players": 2,
+    "year": 1983,
+    "developer": "Sirius",
+    "publisher": "Sancho",
     "genres": [
-      "Action"
+      "Action",
+      "Shooter"
     ]
   },
   "World End": {
     "id": "04abd9ec7794143f3f2e0ebfd73e2204d1e03d9d",
+    "players": 2,
+    "developer": "Gem International Corp",
+    "publisher": "Home Vision",
     "genres": [
       "Shoot'em Up"
     ]
@@ -9047,6 +10909,10 @@
   "Worm War I": {
     "id": "857a93c5802e0298f6a635345bbe3a1218d57ef1",
     "players": 2,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "Sirius",
+    "publisher": "Fox Video Games",
     "genres": [
       "Action"
     ],
@@ -9063,6 +10929,8 @@
     "id": "250c0b690af63d68fb6e29b0914754007196dfde",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "publisher": "Universal Gamex Corporation",
     "genres": [
       "Action"
     ],
@@ -9079,9 +10947,13 @@
     "id": "4b71e0cc2fa9ccd372cf11f0d325c49a597961bc",
     "players": 2,
     "rating": 0.6,
+    "year": 1990,
+    "developer": "Bally Midway",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -9092,12 +10964,23 @@
     ]
   },
   "Xevious": {
-    "id": "cc29d0d566d9a9589fcefd259d773f3eabd9d9ba"
+    "id": "cc29d0d566d9a9589fcefd259d773f3eabd9d9ba",
+    "players": 1,
+    "rating": 0.6,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
+    "genres": [
+      "Shooter"
+    ]
   },
   "Yars' Revenge": {
     "id": "0ac4e291b5c25b69ec5673a3b5f3e13317d9e6d2",
     "players": 2,
     "rating": 0.75,
+    "year": 1981,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -9120,6 +11003,10 @@
   "Z-Tack": {
     "id": "2785b5ef8a48c741f94f524a0283f2fa3ddb3bf7",
     "players": 2,
+    "rating": 0.5,
+    "year": 1983,
+    "developer": "Bomb",
+    "publisher": "Bomb",
     "genres": [
       "Action"
     ],
@@ -9136,8 +11023,11 @@
     "id": "94e5b2d626d78ac36ca477d850560f13f31f6ea8",
     "players": 2,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "SEGA",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
-      "Action"
+      "Shoot'em Up"
     ],
     "manuals": [
       {
@@ -9151,6 +11041,8 @@
   "Zoo Fun": {
     "id": "8f93833b9aeed5dd34b8b44bfd0fd60435dd2550",
     "players": 1,
+    "year": 1983,
+    "publisher": "Home Vision",
     "genres": [
       "Platform"
     ]

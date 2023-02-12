@@ -6,10 +6,14 @@
     "id": "6c3bb2e824ba9d10d52ef86bd041b1bdd29e6620",
     "players": 1,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Rutubo Games",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -29,11 +33,15 @@
     "id": "db9925a6d438308219d98d84f1c837f05ff7a05c",
     "players": 1,
     "rating": 0.8,
+    "year": 1996,
+    "developer": "BlueSky Software",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform",
       "Platform / Fighter Scrolling"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -47,10 +55,14 @@
     "id": "4f5b7e92710fc46233357d476e64b37c4b7d7eb6",
     "players": 2,
     "rating": 0.55,
+    "year": 1995,
+    "developer": "Core Design",
+    "publisher": "Front Street Publishing",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -64,10 +76,14 @@
     "id": "a1ab4037ff0eb968d30bc76f1f7d4666d9d324d7",
     "players": 1,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Interplay",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -96,19 +112,27 @@
   "ClayFighter 2": {
     "id": "cb1dbb3cc4050348eb36b7d5609c1d37166863b2",
     "players": 2,
+    "year": 1995,
+    "developer": "Interplay",
+    "publisher": "Interplay",
     "genres": [
       "Fight",
       "Fight / 2D"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Cosmic Carnage": {
     "id": "fad4d5c82ee95a799852940b2874b0ed5b490a99",
     "players": 2,
     "rating": 0.45,
+    "year": 1994,
+    "developer": "Givro",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -134,22 +158,30 @@
     "id": "afe22e7a98e1380284fe472cda2aa1f05bfee5ec",
     "players": 1,
     "rating": 0.45,
+    "year": 1996,
+    "developer": "Frontier Developments",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Fight",
       "Lightgun Shooter",
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "3"
   },
   "Doom": {
     "id": "d1918eef4a691a9843ed83fa027bec1ad7902abf",
     "players": 1,
     "rating": 0.55,
+    "year": 1994,
+    "developer": "id Software",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / 1st person"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -166,16 +198,26 @@
     ]
   },
   "Ecco the Dolphin": {
-    "id": "a34034d7c952be6934c226b074a11d5677898c6b"
+    "id": "a34034d7c952be6934c226b074a11d5677898c6b",
+    "players": 1,
+    "rating": 0.75,
+    "year": 1992,
+    "developer": "Novotrade",
+    "publisher": "SEGA",
+    "age_rating": "E"
   },
   "FIFA Soccer 96": {
     "id": "6e4fa103af5e586e25acbf81e92c8f81b322d866",
     "players": 4,
     "rating": 0.5,
+    "year": 1995,
+    "developer": "Extended Play Productions",
+    "publisher": "Electronic Arts",
     "genres": [
       "Sports",
       "Sports / Soccer"
     ],
+    "age_rating": "KA",
     "peripherals": [
       "multitap"
     ]
@@ -184,10 +226,14 @@
     "id": "63b6b7912af290c5fc6a04686c786f7353a7f4be",
     "players": 8,
     "rating": 0.3,
+    "year": 1995,
+    "developer": "Flashpoint Productions",
+    "publisher": "SEGA",
     "genres": [
       "Sports",
       "Sports / Golf"
     ],
+    "age_rating": "E",
     "peripherals": [
       "multitap"
     ],
@@ -216,10 +262,14 @@
     "id": "3ada9516d5c2b427844089e0b1d5aeb704cd30b8",
     "players": 2,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "Sonic Team",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -257,11 +307,15 @@
     "id": "d3f3a5bad84ce78a6aa2af5ef4bb2250e3d785c1",
     "players": 2,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Novotrade",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -296,10 +350,14 @@
     "id": "98edb0c728647d485374d2145ed5a2d3a8296fbf",
     "players": 1,
     "rating": 0.6,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -325,9 +383,13 @@
     "id": "974583054249379f049c25e5bc2875a69b3ba9a9",
     "players": 2,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Probe Software",
+    "publisher": "Acclaim",
     "genres": [
       "Fight"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -353,10 +415,14 @@
     "id": "6bfa7fea95cff4f0bfced20ede4e054de21f2841",
     "players": 2,
     "rating": 0.65,
+    "year": 1995,
+    "developer": "CSK Research Institute Corp.",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -376,6 +442,9 @@
     "id": "5f17824ea542d85659d3477244835d24b0455a4f",
     "players": 2,
     "rating": 0.6,
+    "year": 1995,
+    "developer": "Artech Studios",
+    "publisher": "SEGA",
     "genres": [
       "3rd Pers.",
       "Driving",
@@ -383,6 +452,7 @@
       "Race",
       "Sports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -402,10 +472,14 @@
     "id": "1841cb605ebdd50236823b7245466f6ca8c3a217",
     "players": 4,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Iguana Entertainment",
+    "publisher": "Acclaim",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "KA",
     "peripherals": [
       "multitap"
     ],
@@ -429,13 +503,17 @@
   },
   "NFL Quarterback Club": {
     "id": "66b3a4b7d60d72668f5a8c2475f36c8f5c330a66",
-    "players": 4,
+    "players": 5,
     "rating": 0.6,
+    "year": 1995,
+    "developer": "Iguana Entertainment",
+    "publisher": "Acclaim",
     "genres": [
       "Simulation",
       "Sports",
       "Sports / Football"
     ],
+    "age_rating": "E",
     "peripherals": [
       "multitap"
     ],
@@ -458,18 +536,26 @@
     "id": "f3f9bd538c30b44cdc55648a2651b40ecfc25244",
     "players": 1,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Virgin",
+    "publisher": "Virgin",
     "genres": [
       "Action",
       "Action / Adventure"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Pitfall - The Mayan Adventure": {
     "id": "cd33873ea56c88790b8b99027be10da7cc5123c0",
     "players": 1,
     "rating": 0.6,
+    "year": 1995,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Platform"
     ],
+    "age_rating": "12",
     "manuals": [
       {
         "languages": [
@@ -483,10 +569,14 @@
     "id": "d45c0d653542063d2dd9d94bc2cbf62b694c5f1e",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Time Warner Interactive",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -500,11 +590,15 @@
     "id": "aa06292fb53c69cb79bfcef40793a8b84d88eea4",
     "players": 2,
     "rating": 0.5,
+    "year": 1995,
+    "developer": "Atari",
+    "publisher": "Time Warner Interactive",
     "genres": [
       "Simulation",
       "Sports",
       "Sports / Baseball"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -516,13 +610,17 @@
   },
   "Sangokushi IV": {
     "id": "49c8e2e5ef993d276d3eee7748d0af19a2f9565e",
-    "players": 1,
+    "players": 8,
     "rating": 0.35,
+    "year": 1995,
+    "developer": "Koei",
+    "publisher": "Koei",
     "genres": [
       "Action",
       "Role playing games",
       "Strategy"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -535,19 +633,27 @@
   "Soulstar X": {
     "id": "339f9282f755b9e84d38f166dfafd65cb3f61da3",
     "players": 1,
+    "year": 1995,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Shooter"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Space Harrier": {
     "id": "53e2805da2f959d3f67e1a095fd7863b8b404890",
     "players": 1,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
+    "age_rating": "E10+",
     "manuals": [
       {
         "languages": [
@@ -567,19 +673,27 @@
     "id": "0e0f4af6a9cad72a15b71e2ee8b747484ff97654",
     "players": 1,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Eurocom",
+    "publisher": "Virgin",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Star Trek - Starfleet Academy - Starship Bridge Simulator": {
     "id": "7ce9c8f8efd7ec6d951a552e40f45205416f5321",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "High Voltage",
+    "publisher": "SEGA",
     "genres": [
       "Lightgun Shooter",
       "Simulation"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -598,13 +712,17 @@
   "Star Wars Arcade": {
     "id": "01f86219649924e5827e2f777a987f72722ceea2",
     "players": 2,
-    "rating": 0.7,
+    "rating": 0.95,
+    "year": 1994,
+    "developer": "LucasArts",
+    "publisher": "SEGA",
     "genres": [
       "1st person",
       "Action",
       "Shooter",
       "Shooter / Plane"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -630,9 +748,13 @@
     "id": "0e823012fc9eecc1e4f69d2ed2bfaece38ed8e49",
     "players": 2,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -652,12 +774,16 @@
     "id": "54cf8edb263a11f8f8b58727de162da5bb5ec79a",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Time Warner Interactive",
+    "publisher": "SEGA",
     "genres": [
       "1st person",
       "Action",
       "Shooter",
       "Shooter / Vehicle"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -671,10 +797,14 @@
     "id": "74524b0004a19ad94445d9388117450c6a8ea02a",
     "players": 1,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -695,13 +825,17 @@
   },
   "Toughman Contest": {
     "id": "9e5fb73f4f47cf12d57c73ebb8e3ffbaa7727dc7",
-    "players": 8,
+    "players": 2,
     "rating": 0.5,
+    "year": 1995,
+    "developer": "Visual Concepts",
+    "publisher": "Electronic Arts",
     "genres": [
       "Fight",
       "Sports",
       "Sports / Boxing"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -715,9 +849,13 @@
     "id": "4a54d4179e928cd63acbd84f5e084a97c674511f",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Fight"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -754,19 +892,27 @@
   "Virtua Hamster": {
     "id": "53123a3230ea23b9b0733fef03937f42f1eefaf8",
     "players": 1,
+    "year": 2009,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Virtua Racing Deluxe": {
     "id": "d057e96cb39f24b75dd525bd9792dc4bb8af2dc9",
     "players": 2,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -792,12 +938,16 @@
     "id": "109f86936747ff241db614c409d5ebc36eebd0f9",
     "players": 4,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Sculptured Software",
+    "publisher": "Acclaim",
     "genres": [
       "Action",
       "Fight",
       "Sports",
       "Sports / Wrestling"
     ],
+    "age_rating": "KA",
     "peripherals": [
       "multitap"
     ],
@@ -820,11 +970,15 @@
     "id": "744d4579192492ae67cb945c3d0f44a2d987fdb8",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Sculptured Software",
+    "publisher": "Acclaim",
     "genres": [
       "Fight",
       "Sports",
       "Sports / Wrestling"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -838,10 +992,14 @@
     "id": "1944b69cd127f2ccddca0c89a9fce1f867396327",
     "players": 2,
     "rating": 0.6,
+    "year": 1995,
+    "developer": "Blue Sky Software",
+    "publisher": "SEGA",
     "genres": [
       "Sports",
       "Sports / Baseball"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -853,6 +1011,8 @@
   },
   "X-Men": {
     "id": "5033334bd4d9285f88114af81d81d93465caef8e",
+    "developer": "Western Technologies",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ]

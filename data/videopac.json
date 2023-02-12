@@ -2,6 +2,9 @@
   "4 in 1 Row": {
     "id": "e19c27149fc12586d7d96543c854e5789fd5d390",
     "players": 2,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -18,6 +21,8 @@
     "id": "a08697acb27c6e3fbb49ec21bc60acf43c1a5297",
     "players": 1,
     "rating": 0.5,
+    "year": 1985,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Simulation"
     ],
@@ -42,6 +47,10 @@
   "Alien Invaders - Plus": {
     "id": "d24bb2c3555eb5a4d0da0980525c27cf37f0e284",
     "players": 1,
+    "rating": 0.45,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -57,6 +66,8 @@
   "Alpine Skiing": {
     "id": "39b884daae00bd1a1e51c2e3c750cbe01ac13d00",
     "players": 2,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Sports"
     ],
@@ -87,6 +98,9 @@
   "Armored Encounter + Sub Chase": {
     "id": "1703f19bf420ffd9dd373645878bafad77f4bb08",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "3rd person",
       "Shooter",
@@ -120,6 +134,9 @@
     "id": "1af83cbe37876346f33cf82f594a1dcaffb8e760",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Shooter"
@@ -136,6 +153,9 @@
   "Attack of the Timelord": {
     "id": "0e0c99d230b55d098040bc601b0d584a2e9bd8d5",
     "players": 1,
+    "year": 1983,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ],
@@ -151,6 +171,9 @@
   "Baseball": {
     "id": "f5144b4404ff3e89d04a2fe0a5138538bee295eb",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -195,6 +218,9 @@
     "id": "2058937d28bb93f47ee363544b9310bb395d4892",
     "players": 1,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "GST\u00a0Video",
+    "publisher": "N.V.\u00a0Philips\u00a0Gloeilampenfabrieken",
     "genres": [
       "Action"
     ],
@@ -210,6 +236,9 @@
   "Blockout + Breakdown": {
     "id": "35a415636270e2789f4d659c0d5841f8e815c6cd",
     "players": 2,
+    "rating": 0.4,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -225,6 +254,9 @@
   "Bowling + Basketball": {
     "id": "e1ab74df329096f4def8c355e70ad7a2d335ace6",
     "players": 1,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports",
       "Sports / Bowling"
@@ -259,6 +291,9 @@
   "Buraco Negro": {
     "id": "5dccad4327e1f7f7ec2b181e273a1f88dee727b0",
     "players": 1,
+    "year": 2019,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -292,7 +327,10 @@
   },
   "Casino Slot Machine": {
     "id": "b2e0de8db9944a716dfd18f35b44e1bcdbe93f47",
-    "players": 2,
+    "players": 4,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Playing cards"
     ],
@@ -308,6 +346,9 @@
   "Catch the Ball + Noughts and Crosses": {
     "id": "5d8f1cd4e32f9c75d38647daf7bbd74cfc28fbb4",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Various"
     ],
@@ -337,6 +378,9 @@
   },
   "Chess": {
     "id": "7d87e8733b146aa8560ecf8ef72259c1447d4909",
+    "year": 1983,
+    "developer": "Microtrend International B.V.",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Board game",
       "Strategy"
@@ -344,6 +388,7 @@
   },
   "Chez Maxime": {
     "id": "5c90fb96af9bda8957e6e1556bbbfc4f360b5f10",
+    "publisher": "TO TEK International",
     "genres": [
       "Action"
     ],
@@ -360,6 +405,9 @@
     "id": "3043e528386cd05a5a3a80f480e9e9257af87b27",
     "players": 1,
     "rating": 0.5,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Strategy"
     ],
@@ -390,6 +438,9 @@
   "Clay Pigeon": {
     "id": "9556c47b5b2d646f55df4ae70a1ab025f50b8a09",
     "players": 1,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ],
@@ -405,6 +456,8 @@
   "Comando Noturno": {
     "id": "17bc16fb0c290737b2c4ce2cefb86905653db3c1",
     "players": 1,
+    "developer": "GST\u00a0Video",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Simulation"
     ]
@@ -412,9 +465,13 @@
   "Computer Programmer": {
     "id": "5fd64be842a683800fd3284355a06662c90d4c96",
     "players": 1,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Educational"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -427,6 +484,9 @@
   "Conquest of the World": {
     "id": "e0bfea4ff1fcb517cb69db68d43e527af50fd75d",
     "players": 6,
+    "year": 1981,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Strategy"
     ],
@@ -448,6 +508,9 @@
   "Cosmic Conflict": {
     "id": "28bb57dff570dae70cb79ef50a12261b667885d1",
     "players": 1,
+    "rating": 0.45,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -486,6 +549,9 @@
     "id": "39e84cbaf36870aab549a378235b817778d88957",
     "players": 2,
     "rating": 0.45,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action",
       "Strategy"
@@ -503,6 +569,9 @@
     "id": "f802e7905064069c08553bb34cab81ea97b32557",
     "players": 1,
     "rating": 0.25,
+    "year": 1979,
+    "developer": "Philips Interactive Media",
+    "publisher": "N.V.\u00a0Philips\u00a0Gloeilampenfabrieken",
     "genres": [
       "Strategy"
     ],
@@ -526,6 +595,10 @@
   "Electronic Table Soccer": {
     "id": "353b2596507d1ca49ef549b1b47c81bddf63d9ed",
     "players": 2,
+    "rating": 0.25,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports"
     ],
@@ -541,6 +614,7 @@
   },
   "Exojet": {
     "id": "0cb300230aecd1027a1e3217d9922a05223ba444",
+    "publisher": "TO TEK International",
     "genres": [
       "Action"
     ],
@@ -556,6 +630,8 @@
   "Flipper Game": {
     "id": "e1f808e6d675a6fc1a180c1f8e7fa73c2391f40b",
     "players": 4,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -579,6 +655,9 @@
   "Football": {
     "id": "6c77b0af0a8a7e494b9d4c537a1c8011d89161ad",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports"
     ],
@@ -600,6 +679,9 @@
   "Freedom Fighters": {
     "id": "a800b538e0d47419e7117b14fcea292167182198",
     "players": 1,
+    "year": 1982,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -631,6 +713,9 @@
     "id": "47505624d07913e2f2a07c2f81b241b9b52821a9",
     "players": 1,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -646,6 +731,9 @@
   "Golf": {
     "id": "2dda3456a4e6db2b738a3d1400b6892acb400679",
     "players": 4,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -675,7 +763,10 @@
   },
   "Great Wall Street Fortune Hunt, The": {
     "id": "69169b4544dc74510d7a59083a837d73eeb0a869",
-    "players": 2,
+    "players": 1,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Simulation",
       "Strategy"
@@ -692,6 +783,10 @@
   "Gunfighter": {
     "id": "07cee3f75d6c870024a19ac1c95f8b128532ae12",
     "players": 2,
+    "rating": 0.25,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -737,6 +832,8 @@
   "Hockey + Soccer": {
     "id": "63210e3467b46d1e9d922c2db274459dfdcc0000",
     "players": 2,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Sports"
     ],
@@ -759,6 +856,9 @@
   "I've Got Your Number": {
     "id": "0ad6bf911d141ffb2b9de4113a9f0089a141af87",
     "players": 2,
+    "year": 1979,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Educational"
     ],
@@ -773,6 +873,8 @@
   },
   "Interpol": {
     "id": "6418c7fca794b29ca5f45ad56e66acc44d8945e9",
+    "year": 2000,
+    "publisher": "Philips Interactive Media",
     "manuals": [
       {
         "languages": [
@@ -784,7 +886,11 @@
   },
   "Jumping Acrobats": {
     "id": "4c15e9a180cefa8904408211620a6e92efa75d83",
-    "players": 1,
+    "players": 2,
+    "rating": 0.15,
+    "year": 1981,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -822,6 +928,9 @@
   "K.C.'s Krazy Chase": {
     "id": "2359755a902517c1803b75da7d192e44d9c4111b",
     "players": 1,
+    "year": 1982,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -837,6 +946,10 @@
   "Killer Bees": {
     "id": "103d10470f0e841bc30b2aa382463b0555e70f94",
     "players": 1,
+    "rating": 0.8,
+    "year": 1983,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -868,6 +981,10 @@
   "Labyrinth Game, A + Supermind": {
     "id": "5cb3e1bc49f7ad7dc9bedbbe595879f89ec551d7",
     "players": 1,
+    "rating": 0.6,
+    "year": 1981,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -897,6 +1014,8 @@
   },
   "Las Vegas Blackjack": {
     "id": "afd612db90866e848689eb62b3e8beb25a72084b",
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Playing cards"
     ],
@@ -933,6 +1052,8 @@
   "Laser War": {
     "id": "5ec653a021728981d6b4c74d98a8c05baf30c899",
     "players": 2,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ],
@@ -970,6 +1091,9 @@
   "Loony Balloon": {
     "id": "4bed43a17da8d69a45d8b8ec9a11ea7bec55ffc8",
     "players": 1,
+    "year": 1984,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -996,6 +1120,9 @@
     "id": "de0dc534f8aa17fcab40d3ab5dc0acba4f4f91cd",
     "players": 1,
     "rating": 0.4,
+    "year": 2008,
+    "developer": "GST\u00a0Video",
+    "publisher": "Classic Consoles Center",
     "genres": [
       "Action",
       "Shooter"
@@ -1004,6 +1131,9 @@
   "Matchmaker + Logix + Buzzword": {
     "id": "a0c971f29bb13078c42f8d105e8af9cd7ade90f3",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Various"
     ],
@@ -1022,6 +1152,9 @@
   "Math-A-Magic + Echo": {
     "id": "630891a851bdc41731d7df827a697241499bd290",
     "players": 1,
+    "year": 1978,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Various"
     ],
@@ -1053,6 +1186,9 @@
   },
   "Mission Impossible": {
     "id": "5483b37648344953d11bb1619bda0e7c7703591e",
+    "year": 2016,
+    "developer": "Ectron Eletr\u00f4nica Ltda.",
+    "publisher": "Humanoid Games",
     "genres": [
       "Strategy"
     ],
@@ -1068,6 +1204,10 @@
   "Monkeyshines": {
     "id": "50e02b556f67a47a0cd9c9435431c349dc827612",
     "players": 1,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -1099,6 +1239,9 @@
     "id": "079fd79d5c7bc3eb659788bf4742e0dfa4661dfa",
     "players": 1,
     "rating": 0.55,
+    "year": 1984,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Educational"
     ],
@@ -1136,6 +1279,9 @@
     "id": "b794f7155d38535ca356da86fd35691b34afa536",
     "players": 2,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1155,6 +1301,10 @@
   "Munchkin": {
     "id": "0ba905a2c85395654a81f25589a8e8d05422b9d4",
     "players": 1,
+    "rating": 0.75,
+    "year": 1982,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -1184,6 +1334,8 @@
   },
   "Musician": {
     "id": "829b6a1e3ed3fc9a3e759601b6be08480242fa52",
+    "year": 1981,
+    "publisher": "Philips Interactive Media",
     "manuals": [
       {
         "languages": [
@@ -1195,6 +1347,8 @@
   },
   "Newscaster": {
     "id": "8cd0667832afb7b8c60bd0f54f3a334a2df70be9",
+    "year": 1981,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Educational"
     ],
@@ -1217,6 +1371,9 @@
     "id": "712106ac971e9d53f0804e5d5aa66bf9eda1dfcd",
     "players": 2,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1250,6 +1407,9 @@
     "id": "a6cc4b809df602c4605b037e0f3d33c955fa47f3",
     "players": 1,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Educational"
     ],
@@ -1289,6 +1449,9 @@
   "Out of This World + Helicopter Rescue": {
     "id": "7a9d84827238065f7c454a86af536332360613a2",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Various"
     ],
@@ -1304,6 +1467,10 @@
   "Pachinko": {
     "id": "053838d52b2ce15cad89e8b173edfff66ac96f88",
     "players": 2,
+    "rating": 0.4,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Strategy"
     ],
@@ -1320,6 +1487,9 @@
     "id": "b04585883c7caa5039737e2efa810b5d1db3ea5a",
     "players": 2,
     "rating": 0.5,
+    "year": 1978,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Strategy",
       "Various"
@@ -1344,6 +1514,10 @@
   "Pick Axe Pete": {
     "id": "7c783a31dfbfa97cf894ad6b4dd62cebd56e59d5",
     "players": 1,
+    "rating": 0.75,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1377,6 +1551,9 @@
   },
   "Pinball": {
     "id": "fa6959086bfdbef9814f9a620e598fe3f8bcbe2f",
+    "year": 2000,
+    "developer": "Sanders Associates",
+    "publisher": "CGE Services Corporation",
     "genres": [
       "Action",
       "Pinball"
@@ -1385,6 +1562,8 @@
   "Playtag": {
     "id": "72b3db963d04f2293da797500e62b21665343558",
     "players": 2,
+    "year": 2009,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -1400,6 +1579,8 @@
   "Pocket Billiards": {
     "id": "be18444800e4b6d7e74c25c8f2d9f08b63760be9",
     "players": 2,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -1444,6 +1625,9 @@
     "id": "ce7e53abb89594229d8cab73cbe336e43d45c2e4",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1460,6 +1644,9 @@
     "id": "2f6e7b5cd2c9b72b5d643e10c1100b1f4cc0106e",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action",
       "Shooter"
@@ -1476,6 +1663,10 @@
   "Q-Bert": {
     "id": "3f3d3f2ef3d77f583e909fc439eed4aa55a21f98",
     "players": 1,
+    "rating": 0.95,
+    "year": 1983,
+    "developer": "D. Gottlieb & Co.",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1491,6 +1682,9 @@
   "Quest for the Rings": {
     "id": "abec7cd938e808d4f9d5641cea71af77213ea042",
     "players": 5,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Various"
     ],
@@ -1519,12 +1713,18 @@
     "id": "23ff7f17f6dfc88b31f33d3630eb7a5d00ef2933",
     "players": 1,
     "rating": 0.5,
+    "year": 1985,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Simulation"
     ]
   },
   "Robot City": {
     "id": "b9200fad3b16b7b7f3499e5257de502788e826d9",
+    "players": 1,
+    "rating": 0.9,
+    "year": 1983,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ]
@@ -1532,6 +1732,10 @@
   "Samurai": {
     "id": "beab62720416dd547bf8907a645b9769e948b956",
     "players": 2,
+    "rating": 0.25,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Strategy"
     ],
@@ -1555,6 +1759,10 @@
   "Satellite Attack": {
     "id": "a3bb5771e1ad9f7ee7463f121d46b659e650146b",
     "players": 1,
+    "rating": 0.7,
+    "year": 1981,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ],
@@ -1585,6 +1793,9 @@
   "Secret of the Pharaohs": {
     "id": "7b3a6b258cccbad57676bb694ff0bd344c249988",
     "players": 2,
+    "year": 1981,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Puzzle-Game",
       "Strategy"
@@ -1617,6 +1828,9 @@
     "id": "fb45876392dacc737cbee54e5d4176d00354002c",
     "players": 1,
     "rating": 0.7,
+    "year": 2006,
+    "developer": "GST\u00a0Video",
+    "publisher": "Classic Consoles Center",
     "genres": [
       "Action"
     ]
@@ -1624,6 +1838,9 @@
   "Sid the Spellbinder": {
     "id": "48fd17eabd4431c60b8d2baaf8adcdbe7c0d2b77",
     "players": 1,
+    "year": 1982,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Educational"
     ],
@@ -1639,6 +1856,9 @@
   "Speedway + Spin-out + Crypto-logic": {
     "id": "0297984061130880ca01786508ee868ba84c2673",
     "players": 1,
+    "year": 1978,
+    "developer": "Magnavox",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -1672,6 +1892,9 @@
     "id": "42d482fb2be905db2cb23faaaaf84c66e0b6340e",
     "players": 1,
     "rating": 0.7,
+    "year": 2016,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1687,6 +1910,9 @@
   "Stone Sling": {
     "id": "4066834118166e053f046f52e5f9c13202649e13",
     "players": 2,
+    "year": 1980,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Strategy"
     ],
@@ -1724,6 +1950,9 @@
     "id": "9e634fb5e4519048ebffda66268e4efb9461fdda",
     "players": 1,
     "rating": 0.7,
+    "year": 1984,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1750,6 +1979,9 @@
     "id": "b68d39c79363957bb869c796657921bfa226c3bd",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shooter"
@@ -1757,6 +1989,7 @@
   },
   "Syracuse": {
     "id": "1c734ec9cf1c7ac14398860b5ca4006f56ec2d36",
+    "publisher": "TO TEK International",
     "genres": [
       "Action"
     ],
@@ -1777,6 +2010,9 @@
   "Take the Money and Run": {
     "id": "d0fa362d56328b42eb024dd3126a79af6d581e71",
     "players": 2,
+    "year": 1980,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Action"
     ],
@@ -1792,6 +2028,9 @@
   "Terrahawks": {
     "id": "e8305c8b4a49698c8aba4a864404b672456fa62d",
     "players": 1,
+    "year": 1983,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Shooter"
     ],
@@ -1808,6 +2047,8 @@
   "Thunderball": {
     "id": "c03a122077372833a29ca0f492cfd5b14671ca96",
     "players": 4,
+    "developer": "Philips Interactive Media",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Various"
     ],
@@ -1845,6 +2086,7 @@
   },
   "Tresor Englouti, Le": {
     "id": "571a7c2c653c10acc112ac26f1742a5b9cdd63cb",
+    "publisher": "TO TEK International",
     "genres": [
       "Action"
     ],
@@ -1861,6 +2103,9 @@
     "id": "cfa9ff3dd7c4a4bdd0f76c793d8469c2f506681c",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1887,6 +2132,9 @@
     "id": "a90471e267e7ff00a834b1d11efb51f254ae3960",
     "players": 2,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Konami",
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Action"
     ],
@@ -1901,6 +2149,8 @@
   },
   "Type & Tell": {
     "id": "38496075636d50dbdf619ce036cb59aca1eb0c2a",
+    "year": 1982,
+    "publisher": "Philips Interactive Media",
     "genres": [
       "Educational"
     ],
@@ -1914,7 +2164,9 @@
     ]
   },
   "Verkehrsspiele 1": {
-    "id": "bc6d0c4acad8bc5ae1eea11da4c1a8abece2f757"
+    "id": "bc6d0c4acad8bc5ae1eea11da4c1a8abece2f757",
+    "year": 1982,
+    "publisher": "Philips Interactive Media"
   },
   "Verkehrsspiele 2": {
     "id": "aebe065e0e43f2a0a2ab9cf503b55136ec51ba96",
@@ -1925,6 +2177,9 @@
   "Volleyball": {
     "id": "5b06122e3794ca81f56d8414f2f337e7fce69051",
     "players": 2,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Sports"
     ],
@@ -1949,6 +2204,9 @@
   "War of Nerves": {
     "id": "15fe827c9c5f197d5f1dafb8dc1454dd6e249d77",
     "players": 2,
+    "year": 1981,
+    "developer": "Magnavox",
+    "publisher": "Magnavox",
     "genres": [
       "Strategy"
     ],

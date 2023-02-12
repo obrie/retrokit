@@ -2,9 +2,13 @@
   "3 Ninjas Kick Back": {
     "id": "23b5b536c040e389783decd79a0f24816be34b51",
     "players": 2,
+    "year": 1994,
+    "developer": "Psygnosis",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -18,6 +22,9 @@
     "id": "8ac8910f6065b69a5a2f2a79566858d679d51001",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Nihon Telenet",
+    "publisher": "Riot",
     "genres": [
       "Role playing games"
     ]
@@ -25,6 +32,9 @@
   "A-X-101": {
     "id": "8ed2926ff0695430c7478303f2083d8392da1b86",
     "players": 1,
+    "year": 1994,
+    "developer": "Micronet",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "Shoot'em Up"
     ],
@@ -49,11 +59,15 @@
   "Adventures of Batman and Robin, The": {
     "id": "97011db1dad3b6af4c8263d3ab32e1a7081df4cd",
     "players": 1,
-    "rating": 1,
+    "rating": 1.0,
+    "year": 1995,
+    "developer": "Clockwork Tortoise",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -73,6 +87,9 @@
     "id": "fbc8ef18f5565bfcd6a3482cc5d63a9e7a434d88",
     "players": 1,
     "rating": 0.5,
+    "year": 1993,
+    "developer": "Dynamix",
+    "publisher": "Sierra",
     "genres": [
       "Adventure"
     ],
@@ -89,6 +106,9 @@
     "id": "bcae22e33ee58afe9a6bc1f7e7e0320f5c10e735",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Pandora Box",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ]
@@ -97,10 +117,14 @@
     "id": "ff437988f1d68065a3d061ee11956903a3b8ab17",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -119,6 +143,9 @@
   "Aisle Lord": {
     "id": "2e12aa62e67c67852741a850352f470554cddcdf",
     "players": 1,
+    "year": 1992,
+    "developer": "Wolf Team",
+    "publisher": "Telenet",
     "genres": [
       "Role playing games"
     ],
@@ -135,6 +162,9 @@
     "id": "c40ddb480ed05fb29422df41d00dee7fae610beb",
     "players": 1,
     "rating": 0.55,
+    "year": 1993,
+    "developer": "Polydor",
+    "publisher": "Polydor",
     "genres": [
       "Role playing games"
     ]
@@ -142,6 +172,9 @@
   "Amazing Spider-Man vs. The Kingpin, The": {
     "id": "ddba241f78be510a61cb83f312c0681365893e15",
     "players": 1,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
@@ -159,9 +192,13 @@
     "id": "779b0228eb7f2bd2ff89cf81cb76193451db5bc4",
     "players": 1,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "Human",
+    "publisher": "Human",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -177,6 +214,9 @@
   "Animals!, The": {
     "id": "2160dd6f13b7ee4c0d6acec9dea76e421a18a9d5",
     "players": 1,
+    "year": 1994,
+    "developer": "Arnowitz Studios",
+    "publisher": "Mindscape",
     "genres": [
       "Educational"
     ],
@@ -193,6 +233,9 @@
     "id": "d9329e2a98b5903884ba6155cbd162db7c43d41c",
     "players": 1,
     "rating": 0.65,
+    "year": 1993,
+    "developer": "Wolf Team",
+    "publisher": "Wolf Team",
     "genres": [
       "Beat'em Up"
     ],
@@ -208,6 +251,9 @@
   "Aoki Ookami to Shiroki Mejika - Genchou Hishi": {
     "id": "3d92407a0abe2f32dc9edee1bf835fe5b5e8e8a0",
     "players": 2,
+    "year": 1993,
+    "developer": "Koei",
+    "publisher": "Koei",
     "genres": [
       "Strategy"
     ]
@@ -216,6 +262,9 @@
     "id": "b4a664b515b59a00eb11ebbc672c748f22ad2290",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Wolf Team",
+    "publisher": "Wolf Team",
     "genres": [
       "Role playing games"
     ]
@@ -224,6 +273,9 @@
     "id": "078c2796d1fe7112277e2f375e632503e814ffeb",
     "players": 1,
     "rating": 0.55,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
@@ -240,10 +292,14 @@
     "id": "3204828efc57ab4ce819a65a7cb3353a2d198a63",
     "players": 2,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "Core Design",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -257,14 +313,21 @@
     "id": "6cdfe66d94716e3e6093578265818a7b45bf2a38",
     "players": 1,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "Sony Music Entertainment",
+    "publisher": "Sony Music Entertainment",
     "genres": [
       "Adventure"
-    ]
+    ],
+    "age_rating": "3"
   },
   "Batman Returns": {
     "id": "928bc9411e943cc178c1ea9887cfe9db53f368e2",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Action / Adventure",
@@ -284,6 +347,9 @@
   "BattleTech - Gray Death Legion": {
     "id": "1ffb29d1b4381d2422f4c8a2389bc1ad27ef3912",
     "players": 1,
+    "year": 2007,
+    "developer": "Imagineer",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "Shoot'em Up"
     ]
@@ -292,9 +358,13 @@
     "id": "625c2002a723ba871fd48b6b7083aa5145852d1f",
     "players": 1,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -308,10 +378,14 @@
     "id": "a4b5e39e718382fa2bf18dac00e0a3dca3dcd4b3",
     "players": 1,
     "rating": 0.45,
+    "year": 1994,
+    "developer": "Reflections Interactive Limited",
+    "publisher": "Psygnosis",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -328,6 +402,9 @@
   "Bill Walsh College Football": {
     "id": "3545e40517592e9b1845b7c0eb157bb169520940",
     "players": 4,
+    "year": 1993,
+    "developer": "Visual Concepts",
+    "publisher": "Electronic Arts",
     "genres": [
       "Sports",
       "Sports / Football"
@@ -354,10 +431,14 @@
     "id": "eef9a34e1fce6ba0a8ac9f4f54045336e4d36ac8",
     "players": 2,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Micronet",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -386,6 +467,9 @@
     "id": "ac71c88dcc701844ec7fbf58f1c15992c549ebb3",
     "players": 2,
     "rating": 0.55,
+    "year": 1994,
+    "developer": "Domark",
+    "publisher": "Domark",
     "genres": [
       "Action",
       "Shooter",
@@ -398,10 +482,14 @@
   "Bouncers": {
     "id": "e3d150e1625306d76b31a0187bcd66d2bfc6c7a6",
     "players": 2,
+    "year": 1994,
+    "developer": "Dynamix",
+    "publisher": "SEGA",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "E",
     "peripherals": [
       "multitap"
     ],
@@ -418,9 +506,13 @@
     "id": "fa5f88afac5b57c1a37b091edcae287f5aa303c7",
     "players": 1,
     "rating": 0.55,
+    "year": 1993,
+    "developer": "Sony",
+    "publisher": "Psygnosis",
     "genres": [
       "Action"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -434,10 +526,14 @@
     "id": "a902c5cc7f171b48d8315e495fc4aceed9ee3368",
     "players": 2,
     "rating": 0.65,
+    "year": 1995,
+    "developer": "GameTek",
+    "publisher": "GameTek",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -451,14 +547,21 @@
     "id": "97bf4ad3483014b371669b5bd85f90d71c04f7a0",
     "players": 1,
     "rating": 0.5,
+    "year": 2001,
+    "developer": "Digital Pictures",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Adventure"
-    ]
+    ],
+    "age_rating": "T"
   },
   "Burai - Yatsudama no Yuushi Densetsu": {
     "id": "20902bd49d991a8474ea2df584b5b711cc9fd8cd",
     "players": 1,
     "rating": 0.65,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Japanese RPG",
@@ -477,6 +580,9 @@
     "id": "5f0a6ccfbbc2a87f3a6eed99e9f69c7287bd88bf",
     "players": 2,
     "rating": 0.35,
+    "year": 2006,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Fight"
     ]
@@ -484,9 +590,13 @@
   "Cadillacs and Dinosaurs - The Second Cataclysm": {
     "id": "06fa47975a6424a3c3c475506b3191fd69c94696",
     "players": 2,
+    "year": 1994,
+    "developer": "Rocket Science Games",
+    "publisher": "Rocket Science Games",
     "genres": [
       "Shooter"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -499,6 +609,9 @@
   "Captain Tsubasa": {
     "id": "79be9cc9caa8e21a53808acc6c9999f3315b41b4",
     "players": 2,
+    "year": 1994,
+    "developer": "Tecmo",
+    "publisher": "Tecmo",
     "genres": [
       "Sports"
     ]
@@ -506,11 +619,15 @@
   "Chuck Rock": {
     "id": "d42383956c17a1539040cd9ed506aa45e1a5db7b",
     "players": 1,
-    "rating": 0.5,
+    "rating": 0.9,
+    "year": 1992,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -530,6 +647,9 @@
     "id": "28b74706b0c5476edc03aca0807bbfb77ce8f63d",
     "players": 1,
     "rating": 0.8,
+    "year": 1993,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Action",
       "Platform"
@@ -553,6 +673,9 @@
     "id": "062b5e80e78e81613a5e4e51609b711cd5c2e87e",
     "players": 1,
     "rating": 0.2,
+    "year": 2002,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Strategy"
     ]
@@ -561,10 +684,14 @@
     "id": "b79ce3234d0cd8f3bb69fdc3bc6c077ec857abb6",
     "players": 1,
     "rating": 0.45,
+    "year": 1993,
+    "developer": "Malibu Games",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -578,6 +705,9 @@
     "id": "b5e46a602d312d089d598313d791aa2fa690e28c",
     "players": 1,
     "rating": 0.15,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up",
       "Simulation"
@@ -614,6 +744,9 @@
   "Colors of Modern Rock, The": {
     "id": "a343fea4d50a346e848c6eeb1cbe3b7d70f3b234",
     "players": 1,
+    "year": 1993,
+    "developer": "Digital Pictures",
+    "publisher": "SEGA",
     "genres": [
       "Music and Dance"
     ],
@@ -629,6 +762,9 @@
   "Compton's Interactive Encyclopedia": {
     "id": "23891286c64f9ee1cca29af35d6935479100c865",
     "players": 1,
+    "year": 1994,
+    "developer": "The Learning Company",
+    "publisher": "SEGA",
     "genres": [
       "Various"
     ],
@@ -645,10 +781,14 @@
     "id": "1415c2603f546c907665cc3591a0e293d1b81f9f",
     "players": 1,
     "rating": 0.55,
+    "year": 1994,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Action",
       "Lightgun Shooter"
     ],
+    "age_rating": "M",
     "controls": [
       "lightgun"
     ],
@@ -665,9 +805,13 @@
     "id": "909579378cda78403192eb5b9dd329421da3515c",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "Shin-Nihon Laser Soft",
+    "publisher": "Working Designs",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "7",
     "manuals": [
       {
         "languages": [
@@ -681,9 +825,13 @@
     "id": "681643807f8ca93cb3b6ae5f9bc798bad813f79e",
     "players": 2,
     "rating": 0.4,
+    "year": 1994,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "genres": [
       "Action"
     ],
+    "age_rating": "M",
     "controls": [
       "lightgun"
     ],
@@ -699,6 +847,9 @@
   "Cyborg 009": {
     "id": "743da5c54aae0965f4fd53409b45adea3a8933bc",
     "players": 1,
+    "year": 1993,
+    "developer": "Nihon Telenet",
+    "publisher": "Riot",
     "genres": [
       "Action",
       "Platform",
@@ -708,6 +859,9 @@
   "Daihoushinden": {
     "id": "287f6c177a0e4dbb1a9fb1acd40c4c6085fe5d43",
     "players": 1,
+    "year": 1995,
+    "developer": "Flashback",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Role playing games"
     ],
@@ -724,10 +878,14 @@
     "id": "94135bb2dd9cd3166e7c3d0b46fb28b215d014a4",
     "players": 1,
     "rating": 0.9,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games",
       "Strategy"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -750,6 +908,9 @@
     "id": "dc4eecfe7b9ac13dacc8e83a8807589a7b0c0c2c",
     "players": 1,
     "rating": 0.25,
+    "year": 1992,
+    "developer": "Telenet",
+    "publisher": "Telenet",
     "genres": [
       "Role playing games"
     ],
@@ -766,11 +927,15 @@
     "id": "549d371cabf388fb0d7005149d9876a190b56c45",
     "players": 1,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Alexandria, Inc.",
+    "publisher": "Acclaim",
     "genres": [
       "Action",
       "Platform",
       "Platform / Shooter Scrolling"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -784,6 +949,9 @@
     "id": "86d4dee43778569d0f4117820e385511c79fbd7d",
     "players": 1,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Hot-B",
+    "publisher": "Hot-B",
     "genres": [
       "Adventure"
     ],
@@ -800,6 +968,9 @@
     "id": "5960a1e480c011e1841beeaf277ba7b04dd5430b",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Wolf Team",
+    "publisher": "Wolf Team",
     "genres": [
       "Action"
     ]
@@ -808,9 +979,13 @@
     "id": "a07ebf8af692413073e93b4410c7f15cc986a5cb",
     "players": 1,
     "rating": 0.5,
+    "year": 1993,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -830,9 +1005,13 @@
     "id": "c1be7a69ef5e24278fbd7816852d21d59ce9a1fc",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "ICOM Simulations",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -846,10 +1025,14 @@
     "id": "0ea6fcaa95af40bff0cffd032065082eb45d5a31",
     "players": 1,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "ReadySoft",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -863,6 +1046,9 @@
     "id": "17739abc558716fec4ebe0d9656674648e346616",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Cryo Interactive",
+    "publisher": "Virgin Interactive",
     "genres": [
       "Strategy"
     ],
@@ -885,9 +1071,13 @@
     "id": "df019e881555028c69e085690697c03d5ffc8939",
     "players": 4,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "Hudson",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "E",
     "peripherals": [
       "multitap"
     ],
@@ -906,9 +1096,13 @@
   "Dungeon Master II - Skullkeep": {
     "id": "a2a4824b5289cf57503fb4f6058767de5809c0bc",
     "players": 1,
+    "year": 1994,
+    "developer": "Interplay",
+    "publisher": "Interplay",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -935,11 +1129,15 @@
   },
   "Dynamic Country Club": {
     "id": "f49cd98938afd703b0a0c8dbf5c072166d4126b7",
-    "players": 2,
+    "players": 4,
     "rating": 0.35,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Sports"
     ],
+    "age_rating": "3",
     "peripherals": [
       "multitap"
     ],
@@ -955,6 +1153,9 @@
   "ESPN Baseball Tonight": {
     "id": "c9169967275fcfbe6da5391cc20036fc4690b2d4",
     "players": 2,
+    "year": 1994,
+    "developer": "Park Place Productions",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -972,10 +1173,14 @@
     "id": "939737032d0075296bcfa7a2531558230022fb13",
     "players": 4,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "Sony Imagesoft",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "KA",
     "peripherals": [
       "multitap"
     ],
@@ -991,6 +1196,9 @@
   "ESPN National Hockey Night": {
     "id": "881ae3765fff616627dbf866aeda37359246fdcf",
     "players": 4,
+    "year": 1994,
+    "developer": "Park Place Productions",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Sports",
       "Sports / Hockey"
@@ -1011,10 +1219,14 @@
     "id": "b7ff55c00c7a4928a008f1ade8a246a4243ff71a",
     "players": 2,
     "rating": 0.45,
+    "year": 1993,
+    "developer": "Sony Imagesoft",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Sports",
       "Sports / Football"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1028,6 +1240,9 @@
     "id": "487b3c57e673c51e7bcfe4f201c06397f25d3d33",
     "players": 1,
     "rating": 0.55,
+    "year": 1991,
+    "developer": "Renovation Products",
+    "publisher": "Wolf Team",
     "genres": [
       "Action"
     ],
@@ -1044,9 +1259,13 @@
     "id": "e6f40c53f3e09757f1f1a031dc0ecfa9e48a8854",
     "players": 1,
     "rating": 0.9,
+    "year": 1995,
+    "developer": "Shiny Entertainment",
+    "publisher": "Interplay",
     "genres": [
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1060,10 +1279,14 @@
     "id": "a79998fee6f920a17080e6013b58448a6e220266",
     "players": 1,
     "rating": 0.95,
+    "year": 1994,
+    "developer": "Novotrade",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1080,9 +1303,13 @@
     "id": "892bee098a335f02f6dda9afe077cc3e0321d650",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Novotrade",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1109,7 +1336,10 @@
   },
   "Egawa Suguru no Super League CD": {
     "id": "d0cd3d1fe0b47d1d7811f6883052b1650fc904c4",
-    "players": 2,
+    "players": 8,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Sports"
     ],
@@ -1129,9 +1359,13 @@
     "id": "2cbca13002487cd2d6e0677587aff8bf93afb5ea",
     "players": 2,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Deep Water",
+    "publisher": "SEGA",
     "genres": [
       "Fight"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -1145,6 +1379,9 @@
     "id": "4e1d3f836d5a83b5fa70fcfe73b1a1f531b47a8a",
     "players": 1,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "Opera House",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
@@ -1160,10 +1397,14 @@
   "F1 Circus CD": {
     "id": "375fe54e4382dfdb718f409672faa1dc9835bf30",
     "players": 2,
+    "year": 1994,
+    "developer": "Nichibutsu",
+    "publisher": "Nichibutsu",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1177,10 +1418,14 @@
     "id": "af73423bffba1b9259952c00433c48731c72861f",
     "players": 4,
     "rating": 0.75,
+    "year": 1994,
+    "developer": "Extended Play Productions",
+    "publisher": "EA Sports",
     "genres": [
       "Sports",
       "Sports / Soccer"
     ],
+    "age_rating": "E",
     "peripherals": [
       "multitap"
     ],
@@ -1207,9 +1452,13 @@
     "id": "91787faaa9f83431eeebfaa68f161ca3c3fa8c2b",
     "players": 1,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1223,10 +1472,14 @@
     "id": "d821608bc08b66b10f4f968da86c425f381bd1c8",
     "players": 2,
     "rating": 0.9,
+    "year": 1995,
+    "developer": "JVC",
+    "publisher": "JVC",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1257,6 +1510,9 @@
     "id": "d24bf8dd0ee2085bba5da1eddc0f817473fab33f",
     "players": 2,
     "rating": 0.85,
+    "year": 1992,
+    "developer": "Capcom",
+    "publisher": "SEGA",
     "genres": [
       "Beat'em Up"
     ],
@@ -1290,12 +1546,16 @@
     "id": "d58268eda89683a77d9e9bf9b22c9ede84139462",
     "players": 1,
     "rating": 0.95,
+    "year": 1993,
+    "developer": "Delphine Software International",
+    "publisher": "U.S. Gold",
     "genres": [
       "Action",
       "Adventure",
       "Platform",
       "Platform / Shooter Scrolling"
     ],
+    "age_rating": "12",
     "manuals": [
       {
         "languages": [
@@ -1312,10 +1572,14 @@
     "id": "57e744192d491fb250f938672b14ea92aa210a4f",
     "players": 1,
     "rating": 0.7,
+    "year": 1995,
+    "developer": "Sony",
+    "publisher": "Psygnosis",
     "genres": [
       "Adventure",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1328,6 +1592,9 @@
   "Formula One World Championship - Beyond the Limit": {
     "id": "28888a3604da38ad7eb1a8323c66f7dd62b53db3",
     "players": 1,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
@@ -1357,6 +1624,9 @@
     "id": "5476b251828d9fae71ce8b18e1c70e37e5e48162",
     "players": 1,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Compilation"
     ],
@@ -1373,6 +1643,9 @@
     "id": "3faf7036a64e0ee3bf1a59d3f3676c615e9fd4bc",
     "players": 2,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ]
@@ -1381,6 +1654,9 @@
     "id": "7bd60f44ca6aa9686f998cf6c9bc5b5ebd93d1ef",
     "players": 1,
     "rating": 0.8,
+    "year": 1993,
+    "developer": "Aisystem Tokyo",
+    "publisher": "Microcabin",
     "genres": [
       "Role playing games"
     ]
@@ -1389,10 +1665,14 @@
     "id": "d6307d5bc83749df0e8693dfd5bf50b4de5ca56d",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "SCE Santa Monica Studio",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Lightgun Shooter"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -1405,6 +1685,9 @@
   "Gyuwambler Jiko Chuushinha 2 - Gekitou! Tokyo Mahjongland Hen": {
     "id": "b1be0dc2d7db1c349a3070bb2abfafe2d1e73d6e",
     "players": 2,
+    "year": 1992,
+    "developer": "Game Arts",
+    "publisher": "Game Arts",
     "genres": [
       "Asiatic board game",
       "Mahjong"
@@ -1422,10 +1705,14 @@
     "id": "534be32add72cf305173fed967b463cc5d23b915",
     "players": 1,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "Virgin Interactive",
+    "publisher": "Delphine Software International",
     "genres": [
       "Adventure",
       "Platform"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -1439,9 +1726,13 @@
     "id": "531c445ad22306bba45bf9616791232cf3ca838d",
     "players": 1,
     "rating": 0.8,
+    "year": 1991,
+    "developer": "Holocronet",
+    "publisher": "Micronet",
     "genres": [
       "Beat'em Up"
     ],
+    "age_rating": "12",
     "manuals": [
       {
         "languages": [
@@ -1455,6 +1746,9 @@
     "id": "0bdacbb8297f53d203d10eaec6477c584be35433",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Core",
+    "publisher": "JVC",
     "genres": [
       "Adventure",
       "Role playing games"
@@ -1472,10 +1766,14 @@
     "id": "33c7f9fe681ff3ec73353fb5342b76110930ce6a",
     "players": 1,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Core Design",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1489,9 +1787,13 @@
     "id": "f273e7e22c38f82fc6398c6a94ed052fe4230248",
     "players": 1,
     "rating": 0.65,
+    "year": 1994,
+    "developer": "Drew Pictures",
+    "publisher": "Spectrum Holobyte",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -1504,6 +1806,9 @@
   "Ishii Hisaichi no Daiseikai": {
     "id": "fb74142f905d3e49129c57db2b8395e195a30e40",
     "players": 1,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Simulation"
     ],
@@ -1520,10 +1825,14 @@
     "id": "02c12105304637446b98bdb608408a1daa47fe0b",
     "players": 2,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Core",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1542,6 +1851,9 @@
   "Jangou World Cup": {
     "id": "8db82e6e2b62a631d1bd2d53b952e3a855b630dd",
     "players": 1,
+    "year": 1993,
+    "developer": "Victor Entertainment",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Asiatic board game"
     ],
@@ -1558,9 +1870,13 @@
     "id": "0c6382a499f1c99590323a077e5271764a59c259",
     "players": 2,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Absolute Entertainment",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Quiz"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1573,6 +1889,9 @@
   "Joe Montana's NFL Football": {
     "id": "61ce71b5f45dc256e776ba9bb8e767e881d9abf9",
     "players": 2,
+    "year": 1993,
+    "developer": "Malibu Interactive",
+    "publisher": "SEGA",
     "genres": [
       "Sports",
       "Sports / Football"
@@ -1596,6 +1915,9 @@
     "id": "cd57041150e07719858b2e4f7ef903f14bb8871c",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Adventure"
     ],
@@ -1612,10 +1934,14 @@
     "id": "4cc3e1591480ab142719f505a3f6d18da2726f24",
     "players": 1,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "JVC",
+    "publisher": "JVC",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1631,9 +1957,13 @@
   "Kids on Site": {
     "id": "3b3ad057ce4e7a7d538da8af789a4ef0ae1d11f1",
     "players": 1,
+    "year": 1994,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Action"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1647,10 +1977,14 @@
     "id": "1c94d105133e8013fac0b7edb7e0a0ddbe95cbdd",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Sales Curve Interactive",
+    "publisher": "Time Warner Interactive",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1663,11 +1997,15 @@
   "Lethal Enforcers": {
     "id": "19cd7a15bc6a5583524fa8bd78fc9194141677ef",
     "players": 2,
+    "year": 1993,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Action",
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
+    "age_rating": "M",
     "controls": [
       "lightgun"
     ],
@@ -1683,10 +2021,14 @@
   "Lethal Enforcers II - Gun Fighters": {
     "id": "02345654811debf6beb17391cb9433db354d2c73",
     "players": 2,
+    "year": 1994,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Lightgun Shooter",
       "Shoot'em Up"
     ],
+    "age_rating": "13",
     "controls": [
       "lightgun"
     ],
@@ -1705,6 +2047,9 @@
   "Links - The Challenge of Golf": {
     "id": "a071cbed6230b53daab9258b3e3b3e8448b7dcaf",
     "players": 1,
+    "year": 1994,
+    "developer": "Papyrus",
+    "publisher": "Virgin",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -1721,9 +2066,13 @@
   "Loadstar - The Legend of Tully Bodine": {
     "id": "6e9a31672de132d4576dcac9a40c629f1ff0a9ba",
     "players": 1,
+    "year": 1994,
+    "developer": "Rocket Science Games",
+    "publisher": "Rocket Science Games",
     "genres": [
       "Lightgun Shooter"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -1737,10 +2086,14 @@
     "id": "043a45e00576612d5272d699b1c0609d2e0b4282",
     "players": 2,
     "rating": 0.85,
+    "year": 1995,
+    "developer": "Red Company",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1753,9 +2106,14 @@
   "Lunar - Eternal Blue": {
     "id": "3c074e311e89689b4e18353010d8fc151adab387",
     "players": 1,
+    "rating": 0.9,
+    "year": 1995,
+    "developer": "Game Arts",
+    "publisher": "Working Designs",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -1775,9 +2133,13 @@
     "id": "1904d507d5ae1e27acd3c8d9f0f039a5e2cb6943",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Working Designs",
+    "publisher": "Working Designs",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -1796,9 +2158,13 @@
   "Mad Dog II - The Lost Gold": {
     "id": "adcd5ba2634d18f3ca9440a8fd1dff95c0042e9e",
     "players": 2,
+    "year": 1994,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "genres": [
       "Lightgun Shooter"
     ],
+    "age_rating": "T",
     "controls": [
       "lightgun"
     ],
@@ -1815,10 +2181,14 @@
     "id": "6738b561b9563c2fc436fb52459e5d337c1c211d",
     "players": 2,
     "rating": 0.2,
+    "year": 1993,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "genres": [
       "Action",
       "Lightgun Shooter"
     ],
+    "age_rating": "T",
     "controls": [
       "lightgun"
     ],
@@ -1835,6 +2205,9 @@
     "id": "9cda1020ada36febe8de840ec3f7b321e2b995b7",
     "players": 1,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Nihon Telenet",
+    "publisher": "Riot",
     "genres": [
       "Adventure"
     ]
@@ -1843,6 +2216,9 @@
     "id": "a1ada2c1bcf8506dca1a7856d100323d23f824e2",
     "players": 1,
     "rating": 0.15,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "SEGA",
     "genres": [
       "Various"
     ],
@@ -1859,6 +2235,9 @@
     "id": "a749784edc5b7cb1dc651cf377bcd9e5bf4ef42a",
     "players": 1,
     "rating": 0.15,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Music and Dance"
     ],
@@ -1874,6 +2253,9 @@
   "Make My Video - Marky Mark and the Funky Bunch": {
     "id": "42ca0a87789227b6a12ebdc2e5454a7cf79b8d45",
     "players": 1,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "SEGA",
     "genres": [
       "N/A"
     ],
@@ -1889,6 +2271,9 @@
   "Marko's Magic Football": {
     "id": "208cce242ebf3c5edcf29ffe2c97fd7b13c090b2",
     "players": 1,
+    "year": 1995,
+    "developer": "Domark",
+    "publisher": "Domark",
     "genres": [
       "Platform"
     ],
@@ -1899,10 +2284,14 @@
   "Mary Shelley's Frankenstein": {
     "id": "f686faa1a63cd6187da37195b12979a25ef89514",
     "players": 1,
+    "year": 1994,
+    "developer": "Psygnosis",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Compilation"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1916,9 +2305,13 @@
     "id": "d2f9c47d4444e83ea97eb4fb17919a918aacd980",
     "players": 1,
     "rating": 0.5,
+    "year": 1994,
+    "developer": "Toei Video Co.",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1941,6 +2334,9 @@
     "id": "d22113eda7c52959af06db3de4b5a9817118517e",
     "players": 1,
     "rating": 0.8,
+    "year": 1993,
+    "developer": "Kogado Software Products",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Simulation"
@@ -1949,10 +2345,14 @@
   "MegaRace": {
     "id": "b8db6b29b158dfc255ed5eff873a2da0a3e85a0b",
     "players": 1,
+    "year": 1993,
+    "developer": "Cryo Interactive",
+    "publisher": "The Software Toolworks",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -1966,10 +2366,14 @@
     "id": "32d7c76bba3ab6326a276e4751fc33f315848dc7",
     "players": 1,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Travellers\u00a0Tales",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1986,12 +2390,16 @@
     "id": "f3cabbc36920a0d6779ce6095ae90a7656fb9ff6",
     "players": 1,
     "rating": 0.65,
+    "year": 1993,
+    "developer": "Psygnosis",
+    "publisher": "Psygnosis",
     "genres": [
       "3rd person",
       "Action",
       "Shooter",
       "Shooter / Plane"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2005,10 +2413,14 @@
     "id": "13c764d0dcbe49fd5113c8d3f80c501471b26ede",
     "players": 1,
     "rating": 0.45,
+    "year": 1994,
+    "developer": "Stargate Films",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Lightgun Shooter"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -2022,6 +2434,9 @@
     "id": "b6a5add7e4707d3239d5b7476855fe83d2688163",
     "players": 1,
     "rating": 0.65,
+    "year": 1993,
+    "developer": "New World Computing's",
+    "publisher": "New World Computing's",
     "genres": [
       "Role playing games"
     ],
@@ -2037,6 +2452,9 @@
   "Mighty Mighty Missile": {
     "id": "4f12dd19263f03095438b8432f65d6b726098d7e",
     "players": 4,
+    "year": 2005,
+    "developer": "FVRING",
+    "publisher": "Good Deal Games",
     "genres": [
       "Puzzle-Game"
     ],
@@ -2056,11 +2474,15 @@
     "id": "b0d3df17ec93632c0dc2326161e69cd1e1ef629c",
     "players": 1,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "Banpresto",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Beat'em Up",
       "Fight"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2074,9 +2496,13 @@
     "id": "2d08db936156ab053e1074aff4b1a4b7e0022af0",
     "players": 2,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Probe Software",
+    "publisher": "Acclaim",
     "genres": [
       "Fight"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -2104,6 +2530,9 @@
   "My Paint": {
     "id": "871cee088c9f74392684c4e91ce3c42f46e66678",
     "players": 1,
+    "year": 1993,
+    "developer": "Wayforward",
+    "publisher": "Saddleback Graphics",
     "genres": [
       "Various"
     ],
@@ -2120,10 +2549,14 @@
     "id": "c680b3edc14d40d4099d33f7f329182997d72ae4",
     "players": 4,
     "rating": 0.35,
+    "year": 1994,
+    "developer": "Midway",
+    "publisher": "Arena Entertainment",
     "genres": [
       "Sports",
       "Sports / Basketball"
     ],
+    "age_rating": "KA",
     "peripherals": [
       "multitap"
     ],
@@ -2143,9 +2576,13 @@
     "id": "63eaec227f045758c990af0ee50cd739e3f09ebd",
     "players": 4,
     "rating": 0.45,
+    "year": 1993,
+    "developer": "Capitol Disc Interactive Corporation",
+    "publisher": "Capitol Disc Interactive Corporation",
     "genres": [
       "Quiz"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2158,6 +2595,9 @@
   "NFL's Greatest - San Francisco vs. Dallas 1978-1993": {
     "id": "7669c75369170a801def9ca315e40909c867365f",
     "players": 2,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Sports",
       "Sports / Football"
@@ -2175,6 +2615,9 @@
     "id": "3a89b1d82530a6d400c5785a463a0339e5b03897",
     "players": 4,
     "rating": 0.9,
+    "year": 1993,
+    "developer": "High Score Productions",
+    "publisher": "Electronic Arts",
     "genres": [
       "Sports",
       "Sports / Hockey"
@@ -2197,6 +2640,9 @@
   "Night Striker": {
     "id": "b90fa8fda9dc87e7a7e0c5f3360d93ed55a2adda",
     "players": 1,
+    "year": 1993,
+    "developer": "Aisystem Tokyo",
+    "publisher": "Taito",
     "genres": [
       "Shoot'em Up"
     ]
@@ -2205,10 +2651,14 @@
     "id": "c9eca49bc7f0b7b4c44b7686fc4cc0e4c8a31ac2",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Thinking"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -2222,6 +2672,9 @@
     "id": "edb31eeeff3e3a9957ec99b352c94020b2509edc",
     "players": 1,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Aisystem Tokyo",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Beat'em Up"
@@ -2230,6 +2683,9 @@
   "Nobunaga no Yabou - Haouden": {
     "id": "290593f30497ae290b5b77ea2960c8cf8525fbbf",
     "players": 1,
+    "year": 1994,
+    "developer": "Koei",
+    "publisher": "Koei",
     "genres": [
       "Strategy"
     ],
@@ -2245,6 +2701,9 @@
   "Nostalgia 1907 - In North Atlantic Sea": {
     "id": "53dbfe0f8193b05600513eb8cd4d5297ebc1e4e3",
     "players": 1,
+    "year": 1991,
+    "developer": "TAKERU",
+    "publisher": "Sur de Wave",
     "genres": [
       "Adventure"
     ],
@@ -2260,17 +2719,25 @@
   "Note! Color Mechanica": {
     "id": "51d4bdb43fa23694844a157b39066a631ce43f27",
     "players": 2,
+    "year": 2013,
+    "developer": "Andrew Reitano",
+    "publisher": "Note!",
     "genres": [
       "Music and Dance"
-    ]
+    ],
+    "age_rating": "13"
   },
   "Novastorm": {
     "id": "921565dfe23db30376c868fca5b766232c2685a8",
     "players": 1,
     "rating": 0.4,
+    "year": 1994,
+    "developer": "Psygnosis",
+    "publisher": "Psygnosis",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -2283,10 +2750,14 @@
   "Panic!": {
     "id": "d17a6ea1655836180f06395ce1fed802c12f98b4",
     "players": 1,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "Data East",
     "genres": [
       "Adventure",
       "Puzzle-Game"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -2307,12 +2778,16 @@
   },
   "Pier Solar and the Great Architects - The Definitive Original Soundtrack": {
     "id": "4e2c910c3bd27c51224a53ebd51bee519644a117",
+    "developer": "Watermelon",
+    "publisher": "Watermelon",
     "genres": [
       "Role playing games"
     ]
   },
   "Pier Solar and the Great Architects Enhanced Soundtrack Disc": {
     "id": "17b20999b9ad56a2484b2aa82dcd8d58e314a2dd",
+    "developer": "Watermelon",
+    "publisher": "Watermelon",
     "genres": [
       "Role playing games"
     ]
@@ -2321,10 +2796,14 @@
     "id": "eb9f348580c88d0a0ff64aeb7c6103a8d63bb6e4",
     "players": 1,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -2338,10 +2817,14 @@
     "id": "78a6e08351d551e7e64c1d2532d476cf36f92b02",
     "players": 1,
     "rating": 0.75,
+    "year": 1995,
+    "developer": "Working Designs",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Role playing games"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2358,6 +2841,9 @@
     "id": "30b9d6218f7ee8c7bbf76cbc84925ae0a5f1328d",
     "players": 1,
     "rating": 0.5,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Various"
@@ -2375,9 +2861,13 @@
     "id": "90f35d3f0459765b3098d8f4571a6ed260463f1b",
     "players": 1,
     "rating": 0.55,
+    "year": 1994,
+    "developer": "Bullfrog",
+    "publisher": "Electronic Arts",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2394,10 +2884,14 @@
     "id": "4cfed2b332a49fea042c7eb7fb40a97371a3ef29",
     "players": 1,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Bits Laboratory",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "18",
     "manuals": [
       {
         "languages": [
@@ -2411,10 +2905,14 @@
     "id": "3ff61f412e0a63467e274d03966e36a1b2fd810c",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Digital Pictures",
+    "publisher": "SEGA",
     "genres": [
       "Fight",
       "Sports"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2434,6 +2932,9 @@
     "id": "f398f6693ab17cfc4537a2b025b473d8e0fbb67a",
     "players": 2,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Sports"
     ],
@@ -2450,6 +2951,9 @@
     "id": "ab811a12dee895a55537066d6615668bc767be90",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Data West",
+    "publisher": "Data West",
     "genres": [
       "Adventure"
     ]
@@ -2457,7 +2961,10 @@
   "Psychic Detective Series Vol. 4 - Orgel": {
     "id": "78b612b7f9d8f09fb2c2f1e9f18e6d222fb8e02e",
     "players": 1,
-    "rating": 0.75,
+    "rating": 0.8,
+    "year": 1993,
+    "developer": "Data West",
+    "publisher": "Data West",
     "genres": [
       "Adventure"
     ]
@@ -2469,10 +2976,14 @@
     "id": "20bdd01fadc9aefc20a886e3c207099096ec179b",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Travellers\u00a0Tales",
+    "publisher": "Psygnosis",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2485,6 +2996,9 @@
   "Quiz Scramble Special": {
     "id": "1a7263c0c98e80f21d0d94c35067d26e4baa3303",
     "players": 2,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Educational"
     ],
@@ -2501,6 +3015,9 @@
     "id": "2ece3d3ae3520b4cec74c14a6af8b834f2eb3fac",
     "players": 2,
     "rating": 0.7,
+    "year": 1992,
+    "developer": "Sims",
+    "publisher": "Capcom",
     "genres": [
       "Quiz",
       "Quiz / Japanese"
@@ -2518,12 +3035,16 @@
     "id": "9897f91679285d761803ec6cb2e783ffa45de497",
     "players": 1,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "Imagineer",
+    "publisher": "Absolute Entertainment",
     "genres": [
       "1st person",
       "Action",
       "Shooter",
       "Shooter / Vehicle"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2536,10 +3057,14 @@
   "Racing Aces": {
     "id": "e20448ff9645fdcde1dda6134e9fc0a4bf3032d5",
     "players": 1,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2552,6 +3077,9 @@
   "Radical Rex": {
     "id": "e8583c6733ba2bc591e886e20f1e3553d1f0cce7",
     "players": 2,
+    "year": 1994,
+    "developer": "Beam Software",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Platform",
@@ -2570,6 +3098,9 @@
     "id": "460bcaa9b5958fd4c0114fa26e92295c886edfc0",
     "players": 1,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "NCS Corporation",
+    "publisher": "Masaya Games",
     "genres": [
       "Adventure"
     ]
@@ -2578,6 +3109,9 @@
     "id": "54dcdb6f5ed62bfa29bde306dab8c95ad4ffbe86",
     "players": 1,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Kogado Software Products",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
@@ -2594,10 +3128,14 @@
     "id": "781269249ea56bda2def16511f72ef97d3d82f22",
     "players": 1,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Wolf Team",
+    "publisher": "Renovation Products",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2610,10 +3148,14 @@
   "Revengers of Vengeance": {
     "id": "4ab8e4f66af1827b7d27cfb8c5864744b9beb16e",
     "players": 2,
+    "year": 1994,
+    "developer": "Micronet",
+    "publisher": "Extreme Entertainment",
     "genres": [
       "Action",
       "Fight"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2630,9 +3172,13 @@
     "id": "52ab44cb077b22b35fdaa3961ed67e02b4705555",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "SEGA",
+    "publisher": "Dynamix",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -2655,6 +3201,9 @@
     "id": "8b7c7cc0fd340d766e2e1f6c74a8a7e955980feb",
     "players": 1,
     "rating": 0.75,
+    "year": 1992,
+    "developer": "Wolf Team",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Driving",
@@ -2687,11 +3236,15 @@
     "id": "019837e5d461db91728b2c1bae9676d2d9065633",
     "players": 2,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Electronic Arts",
+    "publisher": "Electronic Arts",
     "genres": [
       "Driving",
       "Race",
       "Sports"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2705,10 +3258,14 @@
     "id": "d2b92d8d1eb57cdf92eaa585f52ee67b4395650c",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Compile",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2736,9 +3293,13 @@
     "id": "c392bb88b22684eb0989a0b30de44121ff0eec5c",
     "players": 2,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "SNK",
+    "publisher": "JVC",
     "genres": [
       "Fight"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -2751,6 +3312,9 @@
   "Sangokushi III": {
     "id": "74e4a083dc6d4a2aaa403326ac7e5e0e3c328958",
     "players": 8,
+    "year": 1993,
+    "developer": "Koei",
+    "publisher": "Koei",
     "genres": [
       "Strategy"
     ],
@@ -2767,9 +3331,13 @@
     "id": "df9da6aa6bfa46de86ebaea037abf009327a7384",
     "players": 1,
     "rating": 0.65,
+    "year": 1993,
+    "developer": "LucasArts",
+    "publisher": "LucasArts",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "12",
     "manuals": [
       {
         "languages": [
@@ -2785,9 +3353,13 @@
   "Sega Classics Arcade Collection - Limited Edition": {
     "id": "5a8074587d9176f0b43efe1c3c2feecfffedd587",
     "players": 2,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Compilation"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -2818,6 +3390,9 @@
   "Seima Densetsu 3x3 Eyes": {
     "id": "afd9fb88c3ed7147bb10a27ce6d186ea1ea0bdaa",
     "players": 1,
+    "year": 1993,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
@@ -2833,6 +3408,9 @@
   "Seirei Shinseiki - Fhey Area": {
     "id": "685908aa0d1c5fe5aedac50b4863e10a14fc31c4",
     "players": 1,
+    "year": 1992,
+    "developer": "Wolf Team",
+    "publisher": "Wolf Team",
     "genres": [
       "Role playing games"
     ],
@@ -2849,6 +3427,9 @@
     "id": "3a470e9606f521545d9b8163ed30fcb278dcbbbe",
     "players": 1,
     "rating": 0.65,
+    "year": 1993,
+    "developer": "SNK",
+    "publisher": "Sammy",
     "genres": [
       "Beat'em Up"
     ]
@@ -2856,6 +3437,9 @@
   "Sensible Soccer": {
     "id": "60cd4cb9c9b4cb0169111cb297bd6653fe8aab8e",
     "players": 2,
+    "year": 1994,
+    "developer": "Psygnosis",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -2876,10 +3460,14 @@
     "id": "74b151f5d7ec4115b7348e75ebe758a2feedf03b",
     "players": 1,
     "rating": 0.6,
+    "year": 1992,
+    "developer": "Digital Pictures",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Lightgun Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2893,13 +3481,21 @@
     "id": "1eae04d0463c0ea6145595e35e907550727e9558",
     "players": 1,
     "rating": 0.45,
+    "year": 1993,
+    "developer": "Group SNE",
+    "publisher": "Compile",
     "genres": [
       "Role playing games"
-    ]
+    ],
+    "age_rating": "13"
   },
   "Sherlock Holmes - Consulting Detective": {
     "id": "6cdede3310295948e1f9084e0ebee127ce8006fc",
     "players": 1,
+    "rating": 0.5,
+    "year": 1992,
+    "developer": "ICOM Simulations",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Puzzle-Game"
@@ -2916,6 +3512,10 @@
   "Sherlock Holmes - Consulting Detective Vol. II": {
     "id": "1f11b6c5671c34b365897767982873dc3b20dc63",
     "players": 1,
+    "rating": 0.5,
+    "year": 1993,
+    "developer": "ICOM Simulations",
+    "publisher": "SEGA",
     "genres": [
       "Adventure",
       "Puzzle-Game"
@@ -2933,6 +3533,9 @@
     "id": "0a51dfd4417e80dd4e414538f367ec6610a9037e",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Sims",
+    "publisher": "Sims",
     "genres": [
       "Action",
       "Role playing games"
@@ -2942,9 +3545,13 @@
     "id": "967558249515de5571f5c844f990ca7224b6f22b",
     "players": 1,
     "rating": 0.8,
+    "year": 1995,
+    "developer": "Sonic! Software Planning",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -2964,9 +3571,13 @@
     "id": "f2cbc475f78ccf2cd70d309552eef2edbcf41f31",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Game Arts",
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -2985,12 +3596,18 @@
   "SimEarth": {
     "id": "7dcc2105abe410e3e1974b0df74e7c47de2e9d74",
     "players": 1,
+    "year": 1993,
+    "developer": "Game Arts",
+    "publisher": "SEGA",
     "genres": [
       "Simulation"
     ]
   },
   "Sing!! Sega Game Music Presented by B. B. Queens": {
     "id": "16542b79880e7a7def416eb3da9feb8818df865f",
+    "year": 1992,
+    "developer": "B.B.Queens",
+    "publisher": "BMG Interactive",
     "genres": [
       "Action"
     ],
@@ -3007,9 +3624,13 @@
     "id": "5dc57aa8ac856a0e3582b09c7d7cc6b43d787a6e",
     "players": 1,
     "rating": 0.2,
+    "year": 1995,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Sports"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3022,6 +3643,9 @@
   "Smurfs, The": {
     "id": "faae5136a83a3d791fba002b1cc111a7712c132b",
     "players": 1,
+    "year": 1995,
+    "developer": "Virtual Studio",
+    "publisher": "Infogrames",
     "genres": [
       "Platform"
     ]
@@ -3030,9 +3654,13 @@
     "id": "bc58137388332186ce207c8d7c9d4ea9140f1f34",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "18",
     "controls": [
       "lightgun"
     ],
@@ -3055,10 +3683,14 @@
     "id": "48a03bde1a2aa71db58b7e3b68fba878dfd3c096",
     "players": 2,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "The Software Toolworks",
+    "publisher": "Mindscape",
     "genres": [
       "Board game",
       "Puzzle-Game"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3072,6 +3704,9 @@
     "id": "15e6f932faac30d5ac27f1e7174b6d00dff3b73e",
     "players": 1,
     "rating": 0.7,
+    "year": 1991,
+    "developer": "Wolf Team",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -3106,9 +3741,13 @@
     "id": "af33c0cd1abbd76bc43eace649eefdb2a40ed17c",
     "players": 1,
     "rating": 0.8,
+    "year": 1993,
+    "developer": "Sonic Team",
+    "publisher": "SEGA",
     "genres": [
       "Platform"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3148,6 +3787,8 @@
   "Sonic MegaMix": {
     "id": "8ea0214b900029129b7f8d7915b9134e5b436b15",
     "players": 1,
+    "developer": "Team Megamix",
+    "publisher": "Sonic Retro",
     "genres": [
       "Platform"
     ]
@@ -3156,9 +3797,13 @@
     "id": "628265323cfdac5b074c7e8b223a7719244ec791",
     "players": 2,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Shoot'em Up"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -3172,17 +3817,25 @@
     "id": "110881f38f78569fd1419b23f6c2ee3ba68a1c3f",
     "players": 2,
     "rating": 0.85,
+    "year": 1994,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "KA"
   },
   "Space Ace": {
     "id": "310fe9e1d7d0ce93883c3522534f1c66fa7eebc3",
     "players": 1,
     "rating": 0.35,
+    "year": 1994,
+    "developer": "ReadySoft",
+    "publisher": "ReadySoft",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -3195,10 +3848,15 @@
   "Space Adventure, The - Cobra - The Legendary Bandit": {
     "id": "06363b8b125633eee6b37293c9f6d80120534c2d",
     "players": 1,
+    "rating": 0.7,
+    "year": 1995,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -3211,6 +3869,10 @@
   "Star Wars - Rebel Assault": {
     "id": "e690cd61f36db3ddbb13cea37e13bb56edac536b",
     "players": 1,
+    "rating": 0.6,
+    "year": 1994,
+    "developer": "LucasArts",
+    "publisher": "JVC",
     "genres": [
       "Shoot'em Up",
       "Shooter"
@@ -3228,6 +3890,9 @@
     "id": "a82d570808541e7781c413da7a643206776fe880",
     "players": 1,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "Tecno Soft",
+    "publisher": "Namco",
     "genres": [
       "Action",
       "Lightgun Shooter"
@@ -3245,6 +3910,9 @@
     "id": "25e02f02df68fb83bf4a1ba7dfc6588ec83f944c",
     "players": 1,
     "rating": 0.5,
+    "year": 1993,
+    "developer": "Infinite Laser Dog",
+    "publisher": "Dynamix",
     "genres": [
       "1st person",
       "Action",
@@ -3263,6 +3931,9 @@
   "Super Strike Trilogy": {
     "id": "6d93bec6c682ae73664a515599e921b7f2d2c835",
     "players": 1,
+    "year": 1995,
+    "developer": "Electronic Arts",
+    "publisher": "Electronic Arts",
     "genres": [
       "Compilation"
     ]
@@ -3271,11 +3942,15 @@
     "id": "38460d8a829edd80b53c4960ed75ac6db251f880",
     "players": 1,
     "rating": 0.8,
+    "year": 1994,
+    "developer": "Digital Pictures",
+    "publisher": "Digital Pictures",
     "genres": [
       "Action",
       "Adventure",
       "Fight"
     ],
+    "age_rating": "M",
     "manuals": [
       {
         "languages": [
@@ -3289,11 +3964,15 @@
     "id": "793f7e0112d860822e4e380121611b976e00d842",
     "players": 1,
     "rating": 0.35,
+    "year": 1995,
+    "developer": "The Code Monkeys",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shooter",
       "Shooter / 1st person"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3306,13 +3985,20 @@
   "Syndicate": {
     "id": "aaec7e6694061839a5d52efa5049dac0cd5b7b94",
     "players": 1,
+    "year": 1994,
+    "developer": "Bullfrog",
+    "publisher": "Domark",
     "genres": [
       "Strategy"
-    ]
+    ],
+    "age_rating": "13"
   },
   "Tenbu Mega CD Special": {
     "id": "ab278cabb0881b7ef59c843ae1ce4bae3e44914f",
     "players": 1,
+    "year": 1992,
+    "developer": "Wolf Team",
+    "publisher": "Wolf Team",
     "genres": [
       "Simulation"
     ],
@@ -3328,6 +4014,9 @@
   "Tenkafubu - Eiyuutachi no Houkou": {
     "id": "028cfdec17bb1dce1362f8392204e4b4e60597b7",
     "players": 1,
+    "year": 1991,
+    "developer": "Game Arts",
+    "publisher": "Game Arts",
     "genres": [
       "Strategy"
     ],
@@ -3344,11 +4033,15 @@
     "id": "48582e6b8135f0100577e1d9e145acf00906edf7",
     "players": 1,
     "rating": 0.85,
+    "year": 1993,
+    "developer": "Probe Software",
+    "publisher": "Virgin",
     "genres": [
       "Action",
       "Platform",
       "Platform / Shooter Scrolling"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3373,9 +4066,13 @@
     "id": "91ea053447b3d59192be15161092518d3b45ca00",
     "players": 1,
     "rating": 0.65,
+    "year": 1995,
+    "developer": "Domark",
+    "publisher": "Bullfrog",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3391,9 +4088,13 @@
   "Third World War": {
     "id": "b7a0bbddac6188bee2c0070cb1bb47b3d0ca47c3",
     "players": 1,
+    "year": 1994,
+    "developer": "Micronet",
+    "publisher": "Extreme Entertainment",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -3409,6 +4110,9 @@
   "Thunderhawk": {
     "id": "20fd4b52ae865e9f81accdeb9631a550394301b9",
     "players": 1,
+    "year": 1993,
+    "developer": "Core Design",
+    "publisher": "Core Design",
     "genres": [
       "Simulation"
     ],
@@ -3434,6 +4138,9 @@
     "id": "5d58e3478af97b078ea6253affa1711552c3b6fd",
     "players": 1,
     "rating": 0.7,
+    "year": 1993,
+    "developer": "Wolf Team",
+    "publisher": "Taito",
     "genres": [
       "Action",
       "Adventure"
@@ -3466,6 +4173,8 @@
   },
   "TimeCop": {
     "id": "a25c716af8f512d2c451973b168ba024ed2f10bc",
+    "developer": "Cryo Interactive",
+    "publisher": "JVC",
     "genres": [
       "Action"
     ]
@@ -3474,10 +4183,14 @@
     "id": "a7227b611924f9f598c84eb779f9ab80d8cb1665",
     "players": 1,
     "rating": 0.6,
+    "year": 1994,
+    "developer": "The Code Monkeys",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3501,10 +4214,14 @@
   "Trivial Pursuit": {
     "id": "15c5f09e877a61c6d03cb8358705c9ad008cc22b",
     "players": 6,
+    "year": 1994,
+    "developer": "Western Technologies",
+    "publisher": "Parker Brothers",
     "genres": [
       "Board game",
       "Puzzle-Game"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -3517,10 +4234,14 @@
   "Ultraverse Prime": {
     "id": "c6da6cbe3fdde39f6392614f7d4a9c59fed8c02f",
     "players": 1,
+    "year": 1994,
+    "developer": "Malibu Games",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Action",
       "Beat'em Up"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3533,9 +4254,13 @@
   "Urusei Yatsura - Dear My Friends": {
     "id": "5a78e7e69893c54a3dd8c3cf98fac4386eb52716",
     "players": 1,
+    "year": 1993,
+    "developer": "Game Arts",
+    "publisher": "Game Arts",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -3549,9 +4274,13 @@
     "id": "1468357af68741ebf5eb9f9b3fbb763418dd3370",
     "players": 1,
     "rating": 0.7,
+    "year": 1994,
+    "developer": "Hertz",
+    "publisher": "Working Designs",
     "genres": [
       "Role playing games"
     ],
+    "age_rating": "13",
     "manuals": [
       {
         "languages": [
@@ -3574,6 +4303,9 @@
     "id": "3e2f76577b7207959e94816ed3666151500e07a6",
     "players": 4,
     "rating": 0.15,
+    "year": 1994,
+    "developer": "Sculptured Software",
+    "publisher": "Arena Entertainment",
     "genres": [
       "Fight",
       "Sports",
@@ -3594,6 +4326,9 @@
   "Wakusei Woodstock - Funky Horror Band": {
     "id": "6c46506952915d76dc3b1a107972393c0cf07f23",
     "players": 1,
+    "year": 1991,
+    "developer": "Advance Communication Company",
+    "publisher": "SEGA",
     "genres": [
       "Role playing games"
     ],
@@ -3609,9 +4344,13 @@
   "Warau Salesman": {
     "id": "27cc65207be90c62278d4ed7fb68d1e5be31e195",
     "players": 1,
+    "year": 1993,
+    "developer": "Compile",
+    "publisher": "SEGA",
     "genres": [
       "Adventure"
-    ]
+    ],
+    "age_rating": "T"
   },
   "What is X'Eye Multi Entertainment System": {
     "id": "537dc7aef7c7f73d5848535f8ae4a149bdbdd3d2"
@@ -3619,12 +4358,16 @@
   "Wheel of Fortune": {
     "id": "b768917d8e4398ec3f0268dc91176f0d5dac5c26",
     "players": 3,
+    "year": 1994,
+    "developer": "Absolute Entertainment",
+    "publisher": "Sony Imagesoft",
     "genres": [
       "Board game",
       "Puzzle-Game",
       "Quiz",
       "Strategy"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -3637,9 +4380,13 @@
   "Who Shot Johnny Rock": {
     "id": "a912c4bd05947da9008031063ce0a54bd3e8da0c",
     "players": 2,
+    "year": 1994,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "genres": [
       "Lightgun Shooter"
     ],
+    "age_rating": "17",
     "controls": [
       "lightgun"
     ],
@@ -3656,10 +4403,14 @@
     "id": "6114a9b2a192bcd391916e0c7c885fb4d5be1a50",
     "players": 1,
     "rating": 0.55,
+    "year": 1995,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "KA",
     "manuals": [
       {
         "languages": [
@@ -3673,9 +4424,13 @@
     "id": "1ef9e2ffcc8a0853fd17d2bb87f471c1c229424b",
     "players": 1,
     "rating": 0.55,
+    "year": 1994,
+    "developer": "Game Arts",
+    "publisher": "Electronic Arts",
     "genres": [
       "Simulation"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3688,6 +4443,9 @@
   "Winning Post": {
     "id": "faf7d9a2fc33cfe783a65bfe844fb8e584dc17df",
     "players": 1,
+    "year": 1993,
+    "developer": "Koei",
+    "publisher": "Koei",
     "genres": [
       "Simulation",
       "Sports"
@@ -3705,10 +4463,14 @@
     "id": "304c0b0c361d14368e407dcdd708f57e5e7e661b",
     "players": 1,
     "rating": 0.45,
+    "year": 1995,
+    "developer": "The Code Monkeys",
+    "publisher": "SEGA",
     "genres": [
       "Action",
       "Adventure"
     ],
+    "age_rating": "T",
     "manuals": [
       {
         "languages": [
@@ -3721,7 +4483,10 @@
   "Wolfchild": {
     "id": "4dccb006624d309e2b0866514cf84a620b62b42a",
     "players": 1,
-    "rating": 1,
+    "rating": 1.0,
+    "year": 1992,
+    "developer": "SEGA",
+    "publisher": "Core Design",
     "genres": [
       "Action",
       "Platform"
@@ -3739,6 +4504,9 @@
     "id": "123f6107f4af507b125d23e49f3fd9f907147f66",
     "players": 1,
     "rating": 0.8,
+    "year": 1992,
+    "developer": "Core Design",
+    "publisher": "Victor Entertainment",
     "genres": [
       "Action",
       "Platform"
@@ -3760,6 +4528,9 @@
   },
   "WonderMega Collection": {
     "id": "4042e6d6a377214df52eb25587ab4d5f36353e43",
+    "year": 1992,
+    "developer": "JVC",
+    "publisher": "Victor Interactive",
     "genres": [
       "Compilation"
     ]
@@ -3768,6 +4539,9 @@
     "id": "662ca7f2c53805f926d135c2dbc3af5b1a111062",
     "players": 4,
     "rating": 0.6,
+    "year": 1993,
+    "developer": "Tiertex",
+    "publisher": "U.S. Gold",
     "genres": [
       "Sports",
       "Sports / Soccer"
@@ -3799,6 +4573,9 @@
     "id": "c3b232b786388f8677bc64737eb490693f72133d",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "System Sacom",
+    "publisher": "SEGA",
     "genres": [
       "Adventure"
     ],
@@ -3825,6 +4602,9 @@
     "id": "99a303368c2f149344a841961042bac886b6e816",
     "players": 1,
     "rating": 0.75,
+    "year": 1993,
+    "developer": "Game Arts",
+    "publisher": "Game Arts",
     "genres": [
       "Various"
     ],

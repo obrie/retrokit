@@ -3,6 +3,9 @@
     "id": "403610c0dffadfab4b9321ee147c00746ee8f3ee",
     "players": 2,
     "rating": 0.6,
+    "year": 1981,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -10,6 +13,7 @@
       "Shooter",
       "Shooter / Space Invaders Like"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -23,10 +27,14 @@
     "id": "7bcdec390bfb1f9d6d04904045e7d0ef75585024",
     "players": 2,
     "rating": 0.3,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Board game",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -52,10 +60,14 @@
     "id": "e18b31604c7640c6761c151ce4c491098710714b",
     "players": 2,
     "rating": 0.35,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Sports",
       "Sports / Baseball"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -81,10 +93,14 @@
     "id": "22a1a89cc6755d80a09a6bd223810623dc6877a1",
     "players": 2,
     "rating": 0.7,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Sports",
       "Sports / Bowling"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -104,11 +120,15 @@
     "id": "c8262c397067674e8596c33a831c5b42e5369801",
     "players": 2,
     "rating": 0.8,
+    "year": 1981,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Casino",
       "Casino / Cards",
       "Playing cards"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -122,10 +142,14 @@
     "id": "efb040d42375410746b8a220bd230ae2e00d0510",
     "players": 1,
     "rating": 0.7,
+    "year": 1980,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Board game",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -139,25 +163,37 @@
     "id": "e68635a16e36bb07f5e61880b7283ae527266290",
     "players": 1,
     "rating": 0.5,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Demo"
-    ]
+    ],
+    "age_rating": "EC"
   },
   "Demonstration Cartridge 2": {
     "id": "abb30a2856300cdb4925d201ccead3b434d0b12e",
     "players": 1,
     "rating": 0.5,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Demo"
-    ]
+    ],
+    "age_rating": "EC"
   },
   "Desert Fox, Shooting Gallery": {
     "id": "85c66f676f79c2b201fd7e3eca3f5427abeac05b",
     "players": 2,
     "rating": 0.4,
+    "year": 1976,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -183,10 +219,14 @@
     "id": "babdcc600c4dc164f862209aeba8a150f11f62eb",
     "players": 2,
     "rating": 0.7,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Sports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -206,10 +246,14 @@
     "id": "ba8e443da952b413536150c2ec93fd7471746c04",
     "players": 2,
     "rating": 0.4,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Driving",
       "Race"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -235,9 +279,13 @@
     "id": "0c783a36a1d2d4ad1588a91d851c1cb85e582a6c",
     "players": 2,
     "rating": 0.5,
+    "year": 1980,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -257,9 +305,13 @@
     "id": "fcf0421b698d5bc7917da4c7682eeeb94347ffbe",
     "players": 2,
     "rating": 0.8,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -279,9 +331,13 @@
     "id": "3023eb43fa0b5b802784b50b2f85209385d3b774",
     "players": 1,
     "rating": 0.8,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -307,9 +363,13 @@
     "id": "8142439d083f501d36c512ffe74fa386b93cf017",
     "players": 1,
     "rating": 0.45,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Educational"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -329,9 +389,13 @@
     "id": "ee7864f4ef2e15cbbc8114f40d580f5ae10df912",
     "players": 1,
     "rating": 0.5,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Educational"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -345,10 +409,14 @@
     "id": "1a956e790601fa7a7694c0923fe27ef81c8b5d47",
     "players": 2,
     "rating": 0.3,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -374,9 +442,13 @@
     "id": "c86918b0130e57d06f23219cfe0836e73d176ec0",
     "players": 2,
     "rating": 0.4,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -396,10 +468,14 @@
     "id": "84fa98b205a4261e6d4767455fd8023dde93b2e4",
     "players": 2,
     "rating": 0.6,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Action / Breakout games"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -419,10 +495,14 @@
     "id": "14b5457bc08551dbdce4e7c0253de57c13f7a3a7",
     "players": 2,
     "rating": 0.75,
+    "year": 1980,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Sports",
       "Sports / Football"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -436,11 +516,15 @@
     "id": "3b00f7e77a792a2e69f4d106d13defd78a20899c",
     "players": 2,
     "rating": 0.6,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Vertical"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -466,9 +550,12 @@
     "id": "bd3628a84b416ffe468170587e0bb0287ae4973f",
     "players": 1,
     "rating": 0.8,
+    "developer": "SABA",
+    "publisher": "SABA",
     "genres": [
       "Board game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -482,11 +569,15 @@
     "id": "420df9e333778ecb2a0516b1c884304896a3cde6",
     "players": 1,
     "rating": 0.2,
+    "year": 1980,
+    "developer": "Fairlight",
+    "publisher": "Zircon Software",
     "genres": [
       "Casino",
       "Casino / Slot machine",
       "Simulation"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -500,9 +591,13 @@
     "id": "3ab476b919083bd8b4f335720325c4e818a808c5",
     "players": 2,
     "rating": 0.7,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -522,10 +617,14 @@
     "id": "e6aa47057217e60dc95b4886ca94075a783d8a7d",
     "players": 2,
     "rating": 0.4,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -551,12 +650,16 @@
     "id": "cce7ad0dbd48e4a1c02eaf8c1548c45365fc7daf",
     "players": 2,
     "rating": 0.45,
+    "year": 1977,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "3rd person",
       "Action",
       "Shooter",
       "Shooter / Plane"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -582,11 +685,15 @@
     "id": "3308ad6273c1f9969ff1f2c5cc9122a0743363ef",
     "players": 2,
     "rating": 0.75,
+    "year": 1976,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Casual Game",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -612,11 +719,15 @@
     "id": "7f10c63b87a961004aef29cd7a778066eeae3758",
     "players": 2,
     "rating": 0.5,
+    "year": 1976,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Casino",
       "Casino / Cards",
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -642,11 +753,15 @@
     "id": "3480c92df2e4d2fcc4812a9f5ecfc7ba15004da7",
     "players": 2,
     "rating": 0.7,
+    "year": 1978,
+    "developer": "Fairlight",
+    "publisher": "Fairlight",
     "genres": [
       "Action",
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [

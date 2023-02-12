@@ -3,35 +3,51 @@
     "id": "7a2020e215e1f321d7d94c29e07ff168de2993ea",
     "players": 2,
     "rating": 0.75,
+    "year": 1991,
+    "developer": "Capcom",
+    "publisher": "Capcom",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "12"
   },
   "Aldynes - The Misson Code for Rage Crisis": {
     "id": "d494e9e25bdf423cffb989fbf0382747993d80e9",
-    "players": 2,
+    "players": 1,
     "rating": 0.65,
+    "year": 1991,
+    "developer": "Produce Co., Ltd.",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
-    ]
+    ],
+    "age_rating": "9"
   },
   "Battle Ace": {
     "id": "e05071755ccfbb6eb924451f3f687ccb806a4250",
     "players": 1,
     "rating": 0.65,
+    "year": 1989,
+    "developer": "Hudson",
+    "publisher": "Hudson",
     "genres": [
       "Shoot'em Up"
-    ]
+    ],
+    "age_rating": "12"
   },
   "Daimakaimura": {
     "id": "6b0733d07fff09e8db354ca9e1632c47307135f2",
-    "players": 1,
+    "players": 2,
     "rating": 0.7,
+    "year": 1990,
+    "developer": "Capcom",
+    "publisher": "NEC",
     "genres": [
       "Action",
       "Platform"
     ],
+    "age_rating": "9",
     "manuals": [
       {
         "languages": [
@@ -48,9 +64,13 @@
     "id": "5819fd64da9b1fd37607d608a90e36689d165d83",
     "players": 1,
     "rating": 0.85,
+    "year": 1990,
+    "developer": "Sunrise Software",
+    "publisher": "Hudson",
     "genres": [
       "Action",
       "Platform"
-    ]
+    ],
+    "age_rating": "7"
   }
 }

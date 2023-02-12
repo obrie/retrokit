@@ -5,6 +5,9 @@
   "A.E.": {
     "id": "8f9bd31cebe07f1f2494d111d3da354dcfb795a3",
     "players": 1,
+    "year": 1984,
+    "developer": "Programmers-3",
+    "publisher": "Br\u00f8derbund Software",
     "genres": [
       "Shooter",
       "Shooter / Vertical"
@@ -14,6 +17,9 @@
     "id": "c497733b333858b8c5751675307025b6a63d9ba5",
     "players": 4,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Sports"
     ],
@@ -29,6 +35,9 @@
   "Asteroids": {
     "id": "c3e59b2321da796e1e973c5b404070ff2b309d9f",
     "players": 4,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Shooter"
     ]
@@ -37,6 +46,9 @@
     "id": "8916311b612521b5096831b1f7a39bbc2fc997eb",
     "players": 1,
     "rating": 0.35,
+    "year": 1983,
+    "developer": "First Star Software",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -65,6 +77,9 @@
     "id": "f1db4db2b8dbd56321acbe83cea04b2cc4095f73",
     "players": 2,
     "rating": 0.7,
+    "year": 1986,
+    "developer": "Lucasfilm Games",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Sports"
@@ -81,14 +96,21 @@
   "Barroom Baseball": {
     "id": "f68c825ffd4a7a8136ce197a39ac859ee11d4ec1",
     "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Baseball"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Battlezone": {
     "id": "b3d2bf4f873d5eae0a048b9f519f65d25e188063",
     "players": 1,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -97,6 +119,9 @@
     "id": "358f696f5b7ad73847aaff725eb0915c16df4d61",
     "players": 4,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -114,6 +139,9 @@
     "id": "a796f328b4bfd47e14372c123840fa66b976f415",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Stern Electronics, Inc.",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -129,6 +157,9 @@
   "Black Belt": {
     "id": "0c85b815fab2b6c06f7ae602144efa2d8184ac57",
     "players": 1,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Fight"
     ]
@@ -136,6 +167,9 @@
   "Blaster": {
     "id": "9333f44261aa0aa4e72db56f9b1f14cf9046618e",
     "players": 1,
+    "year": 1984,
+    "developer": "Vid Kidz",
+    "publisher": "Williams",
     "genres": [
       "Shooter"
     ],
@@ -152,6 +186,9 @@
     "id": "cf0d696e5b34e46873759f9cd4e188c2cc85a176",
     "players": 2,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "Zilec Electronics",
+    "publisher": "CBS Software",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -167,12 +204,18 @@
   },
   "Boogie": {
     "id": "9b91d970188e0c56e98b1fd4ba4661aeb329ccb8",
-    "players": 1
+    "players": 1,
+    "developer": "Atari",
+    "publisher": "Atari",
+    "age_rating": "E"
   },
   "Bounty Bob Strikes Back!": {
     "id": "c37548b8f5439cec326075bbdfbeca9070f7a8d3",
     "players": 2,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Big Five Software",
+    "publisher": "Big Five Software",
     "genres": [
       "Action"
     ],
@@ -191,6 +234,9 @@
   "Buck Rogers - Planet of Zoom": {
     "id": "58128139cce061d71e2e1d1165f5d6b53106ff59",
     "players": 1,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -207,6 +253,9 @@
     "id": "7a55bf702080f7e18e5076e0da38c9898a4769f6",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -222,9 +271,13 @@
   "Castle Blast": {
     "id": "bc17beac5288817fda7a07ac5da69233ad15fa6e",
     "players": 1,
+    "year": 2002,
+    "developer": "Ronen Habot",
+    "publisher": "Self Published",
     "genres": [
       "Action"
     ],
+    "age_rating": "EC",
     "manuals": [
       {
         "languages": [
@@ -237,6 +290,7 @@
   "Castle Crisis": {
     "id": "30d1971922f1fddc04974b26ed77c53744182fd2",
     "players": 4,
+    "publisher": "AtariAge",
     "genres": [
       "Action"
     ]
@@ -245,6 +299,9 @@
     "id": "bd68fadf745388ece148712a523b95a221ecfa7f",
     "players": 2,
     "rating": 0.85,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "1st person",
       "Shooter",
@@ -263,6 +320,9 @@
     "id": "634befb9637beb4caa71be7876808e36bc9804b4",
     "players": 1,
     "rating": 0.45,
+    "year": 1984,
+    "developer": "Br\u00f8derbund Software",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -283,6 +343,9 @@
     "id": "1a04db53f835e740f124802b0c464282ab453499",
     "players": 2,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -299,6 +362,9 @@
     "id": "9f06fda3df44636cc96c0853de9ae7377a0017a7",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -315,6 +381,9 @@
     "id": "814fb66e69c406b6e039d9914d014b7fe874bb02",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Adventure"
@@ -332,6 +401,9 @@
     "id": "6f85ae851ed07a80585f8b7a1ac4389728802846",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Williams",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -348,6 +420,9 @@
     "id": "0e4b83c5369e083d475104ea662acdb975700797",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -364,6 +439,9 @@
     "id": "12974c251e130607af9f4734500461a0c7ca8497",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Cheshire Engineering",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -379,6 +457,9 @@
   "Final Legacy": {
     "id": "dd7475825ac809324e60f0cb8e2054c5574d0156",
     "players": 1,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Simulation"
     ]
@@ -386,6 +467,9 @@
   "Frisky Tom": {
     "id": "5cf73faaecb11adb2e11643183c94e72676301b9",
     "players": 1,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ]
@@ -393,6 +477,9 @@
   "Frogger": {
     "id": "abe966b8743bbb33372571732bf078415b1c7103",
     "players": 2,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -409,6 +496,9 @@
     "id": "96ccb899289fff18643883daf50ffd5d55e56d26",
     "players": 1,
     "rating": 0.85,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -425,10 +515,14 @@
     "id": "82e5688c889eb86569f177fad5bc7249a4aaaa3d",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -442,6 +536,9 @@
     "id": "bbad2e97333f865e63eb3b3e0878b1f318c78844",
     "players": 2,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "Bally Midway",
+    "publisher": "CBS Software",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -459,6 +556,9 @@
     "id": "6dc3ea3c4d1c47cf14c434ccf33c52fea24609eb",
     "players": 2,
     "rating": 0.9,
+    "year": 1986,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -475,6 +575,9 @@
     "id": "5ab3e612e39818ca2d688376e9dd5ee6b9a6f54f",
     "players": 2,
     "rating": 0.45,
+    "year": 1984,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Shoot'em Up",
       "Shooter",
@@ -493,6 +596,9 @@
     "id": "b32c590f2baf225e948521cc1f080c862e273f5a",
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -509,6 +615,9 @@
     "id": "e3b6396196a18db1b237abf250c9a8acf03d74b5",
     "players": 2,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -527,6 +636,9 @@
     "id": "c53d0c6a36d47595c4588c61c40852fcf6d4a0da",
     "players": 2,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "Williams",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -541,6 +653,9 @@
   },
   "Jr. Pac-Man": {
     "id": "b7877241cc329d9fd2709547e870a40ab87080cf",
+    "year": 1984,
+    "developer": "General Computer Corporation",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -558,6 +673,9 @@
     "id": "e564b7f3f2c99840ebd0605566d619c571a5e181",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Taito",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -574,6 +692,9 @@
     "id": "8c6f02d79b8b141bb8b4516292e71dd36c483b2a",
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "K-Byte",
+    "publisher": "CBS Software",
     "genres": [
       "Action",
       "Shoot'em Up"
@@ -591,6 +712,9 @@
     "id": "b264e62c4da15b2847ad63490b4a998af021396b",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -607,6 +731,9 @@
     "id": "7a72e69373b0a15eaa7be5dd61ff3b25e6899efd",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Sunsoft",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Platform"
@@ -624,6 +751,9 @@
     "id": "3cf3c2acbf9eab0fe1d1052b44b51b7d2db395de",
     "players": 1,
     "rating": 0.85,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -639,12 +769,17 @@
   "Koffi - Yellow Kopter": {
     "id": "62fa36017b42b5a1af845af27fdb7d8d3d6c3c79",
     "players": 1,
+    "year": 2003,
+    "publisher": "Self Published",
     "genres": [
       "Action"
     ]
   },
   "Last Starfighter, The": {
     "id": "e0086af66c59a0a038a6de9c07dc40872698f580",
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Shooter",
       "Simulation"
@@ -664,6 +799,8 @@
   "Looney Tunes Hotel": {
     "id": "8e1c7f5fa024512f3ee5c1cf9e7254936f371a9e",
     "players": 1,
+    "year": 1983,
+    "publisher": "Atari",
     "genres": [
       "Platform"
     ]
@@ -672,6 +809,9 @@
     "id": "16282acf303e413470b082537ba43819a61e1e7b",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -686,6 +826,8 @@
   },
   "Meebzork": {
     "id": "79750b365e7b8a494303122ad00c3a4a781ad30c",
+    "year": 1983,
+    "publisher": "Atari",
     "manuals": [
       {
         "languages": [
@@ -699,6 +841,9 @@
     "id": "ee17be3d63650c276b45dcc77c699e476c2eb63c",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -715,6 +860,9 @@
     "id": "f1e9452c1f5f3464cf323f85fcf9f30f8976353c",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Electra Concepts International Corp.",
+    "publisher": "Electra Concepts",
     "genres": [
       "Action"
     ],
@@ -728,10 +876,14 @@
     ]
   },
   "Microgammon SB": {
-    "id": "c31e001608a923b216aacf7ac4abcd46d3dfc23f"
+    "id": "c31e001608a923b216aacf7ac4abcd46d3dfc23f",
+    "year": 1983,
+    "publisher": "Atari"
   },
   "Millipede": {
     "id": "f39112f9f898f544b30ad9588e92a383a5894a69",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Shoot'em Up",
       "Shooter"
@@ -741,6 +893,9 @@
     "id": "7de4b576d92ecc501a86d16d6ad1503f2f77b859",
     "players": 2,
     "rating": 1.0,
+    "year": 1983,
+    "developer": "Big Five Software",
+    "publisher": "Big Five Software",
     "genres": [
       "Action"
     ],
@@ -755,6 +910,8 @@
   },
   "Miniature Golf": {
     "id": "9360a30462361cbc23291b0a46452e06477c78e6",
+    "year": 1983,
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -764,6 +921,9 @@
     "id": "2f0d9b10fd9a17ae78b1e24c66c54f70686346c6",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -780,6 +940,9 @@
     "id": "1e0109f3211343fc0f4fdf12de9c8d2c7ed8956b",
     "players": 1,
     "rating": 0.6,
+    "year": 1984,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -796,9 +959,13 @@
     "id": "f7142cf8d797f8b86080ffda6f757ada7075d774",
     "players": 2,
     "rating": 0.9,
+    "year": 1983,
+    "developer": "Irem",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -812,6 +979,9 @@
     "id": "a73b0b1b9e687396677eb3cccc2a7cdefb87ac9b",
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "E.F. Dreyer",
+    "publisher": "CBS Software",
     "genres": [
       "Action"
     ],
@@ -828,6 +998,9 @@
     "id": "62c63599a0f97ada07723306296e973b68ba94b1",
     "players": 1,
     "rating": 0.65,
+    "year": 1984,
+    "developer": "Universal ",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -844,10 +1017,14 @@
     "id": "84e79bc127dafbcd0ba8beb3007b6277ad437bfb",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "General Computer Corporation",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -861,10 +1038,14 @@
     "id": "2209f889c81b971933df16c6573957f25f178603",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -878,6 +1059,9 @@
     "id": "c237b8017dba7cd272430291af00172735930e9d",
     "players": 2,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -894,6 +1078,9 @@
     "id": "c8d79d98274686a9ca8f9112b6067b4d8f284d9c",
     "players": 1,
     "rating": 0.75,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -910,6 +1097,9 @@
     "id": "2d85ff92e238006500c0a12faeea3a563f85ae8a",
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Driving",
       "Race"
@@ -926,6 +1116,9 @@
   "Popeye": {
     "id": "d02502412aaf8fe39895269afccb56f04489288a",
     "players": 2,
+    "year": 1984,
+    "developer": "Nintendo",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -942,6 +1135,9 @@
     "id": "c91ecbeaaeff32c632b3916631cd376e6545136b",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "D. Gottlieb & Co.",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -958,6 +1154,9 @@
     "id": "f4f598d0bb38d09c530e54d578f67f12d31102f1",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Taito",
+    "publisher": "Atari",
     "genres": [
       "Puzzle-Game"
     ],
@@ -974,6 +1173,9 @@
     "id": "870b5a31c00235406ffa484cdb8526ada3b84245",
     "players": 1,
     "rating": 0.5,
+    "year": 1984,
+    "developer": "VSS, Inc.",
+    "publisher": "Sunrise Software",
     "genres": [
       "Action",
       "Adventure"
@@ -991,6 +1193,9 @@
     "id": "f65cb13486a786243e2443f26d6d97c6c4924f21",
     "players": 2,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Sports",
@@ -1008,6 +1213,9 @@
   "RealSports Basketball": {
     "id": "537dadb960deb37358ebdee4cdfd5d72ba214fa5",
     "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -1017,6 +1225,9 @@
     "id": "fa00543f493104c1c41579247ae1cc680a91adfe",
     "players": 2,
     "rating": 0.3,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -1033,6 +1244,9 @@
     "id": "65f51dfb94a533ae42de890e3d09f4199eb30905",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -1049,6 +1263,9 @@
     "id": "879cd10902f962f3b3e0a03aabeb183cc0dad9c4",
     "players": 2,
     "rating": 0.4,
+    "year": 1986,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Sports"
     ],
@@ -1065,6 +1282,9 @@
     "id": "dcbb0f11d70e141ec8322cefc5175eb047356cf0",
     "players": 1,
     "rating": 0.55,
+    "year": 1986,
+    "developer": "Lucasfilm Games",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1078,12 +1298,17 @@
     ]
   },
   "Road Runner": {
-    "id": "30186b097f604f2c71a01759eb55c52b6e81f56b"
+    "id": "30186b097f604f2c71a01759eb55c52b6e81f56b",
+    "year": 1982,
+    "publisher": "Atari"
   },
   "Robotron 2084": {
     "id": "ec7b5bb13a2f8cddb6d0c04fdda754a95c897609",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Williams",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1100,6 +1325,9 @@
     "id": "9e51e88e7e8d55d6a300c016fd02dafcfd8fcb07",
     "players": 2,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Taito",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1116,6 +1344,9 @@
     "id": "7dcc9b518fc2da72118965f649117b5a6fd25c2e",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Taito",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -1123,6 +1354,7 @@
       "Shooter",
       "Shooter / Space Invaders Like"
     ],
+    "age_rating": "3",
     "manuals": [
       {
         "languages": [
@@ -1135,6 +1367,9 @@
   "Space Shuttle - A Journey Into Space": {
     "id": "d0f64a579a2dc5ace7ff39e0966ba0740bf0cc98",
     "players": 1,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Simulation"
     ],
@@ -1148,15 +1383,22 @@
     ]
   },
   "Spitfire": {
-    "id": "f0ca5dbd3f25d943e11b6143087a68dd4b81c2fb"
+    "id": "f0ca5dbd3f25d943e11b6143087a68dd4b81c2fb",
+    "year": 1984,
+    "publisher": "Atari"
   },
   "Sport Goofy": {
-    "id": "d80301aafabb0f7128a594e76c92a92639e35f28"
+    "id": "d80301aafabb0f7128a594e76c92a92639e35f28",
+    "year": 1983,
+    "publisher": "Atari"
   },
   "Star Raiders": {
     "id": "65d4b39d43ea81fb2b85b8a7d4c9963f919df521",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Strategy"
@@ -1173,6 +1415,9 @@
   "Star Trek - Strategic Operations Simulator": {
     "id": "4b33b73abe50ce212601e2ada417725dc2df4d25",
     "players": 1,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -1189,6 +1434,9 @@
     "id": "7a9975e51c8bc6ff8fc3d9e95e3eac6802a0a312",
     "players": 2,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1205,6 +1453,9 @@
     "id": "606cc804916c690a0317a46a33114c07c77f0158",
     "players": 1,
     "rating": 0.4,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1219,6 +1470,8 @@
   },
   "Stargate": {
     "id": "b21e8d8a103a8504bc8e2715ccf1a5b593299888",
+    "year": 1984,
+    "publisher": "Atari",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Horizontal"
@@ -1228,6 +1481,9 @@
     "id": "89d4e06e57b7aba64c310dc1e6dd67b878ddfaa3",
     "players": 4,
     "rating": 0.55,
+    "year": 1982,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Breakout games"
@@ -1245,6 +1501,9 @@
     "id": "ca1638316a3e464a16b2a4f5c9d745876fe84006",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action",
       "Shoot'em Up",
@@ -1262,6 +1521,9 @@
   "Super Pac-Man": {
     "id": "b0cce088afeb0d6fe2e8e7a39f43489d35b6fd15",
     "players": 2,
+    "year": 1982,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1271,18 +1533,26 @@
     ]
   },
   "Tempest": {
-    "id": "5a8984f67a1ef1a6bbf82add0fcd440e63643c14"
+    "id": "5a8984f67a1ef1a6bbf82add0fcd440e63643c14",
+    "year": 1983,
+    "publisher": "Atari"
   },
   "Track and Field": {
-    "id": "48cf5b36705d9e9aa0250200f34c5d4b4fab4702"
+    "id": "48cf5b36705d9e9aa0250200f34c5d4b4fab4702",
+    "year": 1984,
+    "publisher": "Atari"
   },
   "Vanguard": {
     "id": "3549d4ede5b7c6e0d96f0964056668050b3d8859",
     "players": 2,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "SNK",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1295,6 +1565,9 @@
   "Wizard of Wor": {
     "id": "02fbf42a2a00d8c4b734b2237bccbcfb60236779",
     "players": 2,
+    "year": 1983,
+    "developer": "Dave Nutting Associates",
+    "publisher": "CBS Software",
     "genres": [
       "Action",
       "Action / Labyrinth"
@@ -1311,6 +1584,9 @@
   "Xari Arena": {
     "id": "0faf9a4f183f317d48c60046a12204eb09cd5215",
     "players": 2,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -1326,6 +1602,9 @@
   "Xevious": {
     "id": "b7ae6097950180a397b96341da0543bc0efb6ede",
     "players": 2,
+    "year": 1984,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Shooter"
     ]
@@ -1337,6 +1616,9 @@
     "id": "38c2d5a07791602fb4f03a61de067cc6a5cc54fa",
     "players": 2,
     "rating": 0.6,
+    "year": 1984,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Shoot'em Up",
       "Shoot'em up / Diagonal"
@@ -1354,6 +1636,9 @@
     "id": "7bdf315ec867bfbebad2bc9555883af491b9b8da",
     "players": 2,
     "rating": 0.9,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Strategy"
@@ -1370,6 +1655,9 @@
   "Zone Ranger": {
     "id": "c08418bd94fcab052c1c721d5e7778b4e762c95e",
     "players": 2,
+    "year": 1984,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shoot'em Up"

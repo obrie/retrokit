@@ -2,6 +2,7 @@
   "$100,000 Pyramid": {
     "players": 2,
     "rating": 3.5,
+    "publisher": "Box Office, Inc.",
     "genres": [
       "Game Show",
       "Strategy"
@@ -9,6 +10,7 @@
   },
   "'Nam 1965-1975": {
     "players": 1,
+    "publisher": "Domark Software Ltd.",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -26,6 +28,7 @@
   "+K": {
     "players": 1,
     "rating": 2.7,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -41,6 +44,7 @@
   },
   "007 - Licence to Kill": {
     "rating": 3.2,
+    "publisher": "Domark Software Ltd.",
     "genres": [
       "Action",
       "Racing / Driving",
@@ -58,6 +62,7 @@
   "1 Ton": {
     "players": 1,
     "rating": 2.6,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -73,6 +78,7 @@
   "1000 Miglia": {
     "players": 1,
     "rating": 2.9,
+    "publisher": "Simulmondo",
     "genres": [
       "Racing / Driving",
       "Simulation",
@@ -90,6 +96,7 @@
   "1000 Miler": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -106,6 +113,7 @@
   "10Rogue": {
     "players": 1,
     "rating": 2.6,
+    "publisher": "Codebusters",
     "genres": [
       "Role-Playing"
     ]
@@ -113,6 +121,7 @@
   "10th Frame": {
     "players": 2,
     "rating": 2.6,
+    "publisher": "U.S. Gold Ltd.",
     "genres": [
       "Sports"
     ],
@@ -128,6 +137,7 @@
   "11th Hour, The": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Virgin Interactive Entertainment, Inc.",
     "genres": [
       "Adventure",
       "Puzzle"
@@ -143,6 +153,7 @@
   },
   "120 Degrees Below Zero": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
@@ -150,6 +161,7 @@
   "123-Talk": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Education"
     ],
@@ -164,30 +176,35 @@
   },
   "15 Move Hole Puzzle": {
     "rating": 4.0,
+    "publisher": "DEMONsoft",
     "genres": [
       "Puzzle"
     ]
   },
   "15 Puzzle, The": {
     "rating": 4.2,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
   },
   "15x15": {
     "rating": 2.2,
+    "publisher": "IFTECH Software AB",
     "genres": [
       "Puzzle"
     ]
   },
   "16": {
     "rating": 1.5,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
   },
   "1830 Railroads and Robber Barons": {
     "rating": 3.2,
+    "publisher": "The Avalon Hill Game Company",
     "genres": [
       "Board / Party Game",
       "Construction and Management Simulation",
@@ -205,6 +222,7 @@
   "1869": {
     "players": 2,
     "rating": 3.7,
+    "publisher": "Max Design GesMBH",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -221,6 +239,7 @@
   "1942 The Pacific Air War": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -235,6 +254,7 @@
   },
   "1992tris": {
     "rating": 3.2,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
@@ -242,24 +262,28 @@
   "1993": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "IFTECH Software AB",
     "genres": [
       "Action"
     ]
   },
   "1994Pool+": {
     "rating": 2.2,
+    "publisher": "Ninano Software Co.",
     "genres": [
       "Sports"
     ]
   },
   "1995Card+": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Casino"
     ]
   },
   "1998 Amerika": {
     "rating": 1.8,
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -267,12 +291,14 @@
   },
   "1st Person Pinball": {
     "rating": 3.4,
+    "publisher": "Tynesoft Computer Software",
     "genres": [
       "Action",
       "Pinball"
     ]
   },
   "2 Fast 4 You": {
+    "publisher": "Art Department",
     "genres": [
       "Racing / Driving"
     ]
@@ -280,6 +306,7 @@
   "20,000 Leagues Under the Sea": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "Coktel Vision",
     "genres": [
       "Adventure"
     ],
@@ -294,6 +321,7 @@
   },
   "2048x2048": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
@@ -301,6 +329,7 @@
   "21": {
     "players": 1,
     "rating": 1.0,
+    "publisher": "PCC, Inc.",
     "genres": [
       "Casino"
     ]
@@ -308,6 +337,7 @@
   "221B Baker Street": {
     "players": 2,
     "rating": 3.2,
+    "publisher": "Datasoft, Inc.",
     "genres": [
       "Adventure",
       "Strategy"
@@ -324,6 +354,7 @@
   "2400 AD": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "ORIGIN Systems, Inc.",
     "genres": [
       "Role-Playing"
     ],
@@ -337,6 +368,7 @@
     ]
   },
   "25": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -345,6 +377,7 @@
   "2x2": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "AT&M",
     "genres": [
       "Education"
     ],
@@ -360,12 +393,14 @@
   "3 Card High Low Poker": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "Freeware",
     "genres": [
       "Casino"
     ]
   },
   "3 Point Basketball": {
     "rating": 4.0,
+    "publisher": "MVP Software",
     "genres": [
       "Sports"
     ],
@@ -381,6 +416,7 @@
   "3 Skulls of the Toltecs": {
     "players": 1,
     "rating": 3.4,
+    "publisher": "Time Warner Interactive, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -396,6 +432,7 @@
   "3-D Body Adventure": {
     "players": 1,
     "rating": 4.4,
+    "publisher": "Knowledge Adventure, Inc.",
     "genres": [
       "Education"
     ]
@@ -403,6 +440,7 @@
   "3-D TableSports": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Time Warner Interactive, Inc.",
     "genres": [
       "Action",
       "Sports"
@@ -419,6 +457,7 @@
   "3-D Tic-Tac-Toe": {
     "players": 1,
     "rating": 0.8,
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -427,6 +466,7 @@
   "3-Demon": {
     "players": 1,
     "rating": 2.9,
+    "publisher": "PC Research Inc.",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -443,6 +483,7 @@
   "3-K Trivia": {
     "players": 2,
     "rating": 2.0,
+    "publisher": "IBM",
     "genres": [
       "Quiz"
     ]
@@ -450,6 +491,7 @@
   "386 Spys": {
     "players": 1,
     "rating": 3.9,
+    "publisher": "Genki Software",
     "genres": [
       "Action",
       "Racing / Driving"
@@ -457,18 +499,21 @@
   },
   "3D Ball": {
     "rating": 1.5,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
   },
   "3D Ball Blaster": {
     "rating": 1.5,
+    "publisher": "Homebrew Software",
     "genres": [
       "Sports"
     ]
   },
   "3D Baller": {
     "players": 1,
+    "publisher": "Digital Nightmares",
     "genres": [
       "Action",
       "Shooter"
@@ -476,6 +521,7 @@
   },
   "3D Bomber": {
     "rating": 2.0,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -491,6 +537,7 @@
   "3D CyberPuck": {
     "players": 2,
     "rating": 1.5,
+    "publisher": "Webfoot Technologies",
     "genres": [
       "Action"
     ]
@@ -498,6 +545,7 @@
   "3D Dinosaur Adventure": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Knowledge Adventure, Inc.",
     "genres": [
       "Adventure",
       "Education"
@@ -506,6 +554,7 @@
   "3D Hamster's Adventure": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Laser Point Publishing",
     "genres": [
       "Action"
     ],
@@ -520,6 +569,7 @@
   },
   "3D Lemmings Winterland": {
     "rating": 3.0,
+    "publisher": "Psygnosis Limited",
     "genres": [
       "Puzzle"
     ]
@@ -527,6 +577,7 @@
   "3D Pinball": {
     "players": 2,
     "rating": 3.5,
+    "publisher": "Villa Crespo Software, Inc.",
     "genres": [
       "Action",
       "Pinball"
@@ -542,11 +593,13 @@
   },
   "3D Pitfall": {
     "rating": 2.8,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
   },
   "3D Space Fighter": {
+    "publisher": "Cheegrah Interactive",
     "genres": [
       "Action",
       "Shooter"
@@ -555,6 +608,7 @@
   "3D Trek": {
     "players": 1,
     "rating": 2.7,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ],
@@ -569,11 +623,13 @@
   },
   "3D World Boxing": {
     "rating": 2.2,
+    "publisher": "Simulmondo",
     "genres": [
       "Sports"
     ]
   },
   "3D Xmas Adventure - Santa's Rescue": {
+    "publisher": "Pie in the Sky Software",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -581,6 +637,7 @@
   },
   "3DCube": {
     "rating": 2.1,
+    "publisher": "Warren Ward",
     "genres": [
       "Puzzle"
     ],
@@ -594,6 +651,7 @@
     ]
   },
   "3DHero": {
+    "publisher": "Soft-World International",
     "genres": [
       "Action",
       "First Person Shooter",
@@ -602,6 +660,7 @@
   },
   "3DWorld": {
     "rating": 4.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Sports"
@@ -618,6 +677,7 @@
   "3Detris": {
     "players": 1,
     "rating": 1.9,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -631,6 +691,7 @@
     ]
   },
   "4 Balls Billiards": {
+    "publisher": "Freeware",
     "genres": [
       "Sports"
     ]
@@ -638,6 +699,7 @@
   "4 Queens Computer Casino": {
     "players": 2,
     "rating": 2.8,
+    "publisher": "Applications Plus, Inc.",
     "genres": [
       "Casino"
     ]
@@ -645,6 +707,7 @@
   "4 Soccer Simulators": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Codemasters",
     "genres": [
       "Sports"
     ],
@@ -664,6 +727,7 @@
   "4-D Boxing": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Fighting",
       "Sports"
@@ -681,12 +745,14 @@
     ]
   },
   "4-Get-It": {
+    "publisher": "Ttr",
     "genres": [
       "Puzzle",
       "Strategy"
     ]
   },
   "4-mok": {
+    "publisher": "KBS",
     "genres": [
       "Puzzle",
       "Strategy"
@@ -695,6 +761,7 @@
   "40080": {
     "players": 1,
     "rating": 4.5,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -711,6 +778,7 @@
   "4D Prince of Persia": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -719,6 +787,7 @@
   "4D Sports Tennis": {
     "players": 2,
     "rating": 2.3,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Sports"
     ]
@@ -726,6 +795,7 @@
   "4K Adventure": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -742,6 +812,7 @@
   "4th and Inches": {
     "players": 2,
     "rating": 1.8,
+    "publisher": "Accolade, Inc.",
     "genres": [
       "Sports"
     ],
@@ -756,6 +827,7 @@
   },
   "4x4 Off-Road Racing": {
     "rating": 2.1,
+    "publisher": "Epyx, Inc.",
     "genres": [
       "Arcade",
       "Racing / Driving"
@@ -771,6 +843,7 @@
   },
   "4x4 Team": {
     "players": 1,
+    "publisher": "Infodisc",
     "genres": [
       "Arcade",
       "Racing / Driving"
@@ -779,6 +852,7 @@
   "50 Mission Crush": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "Strategic Simulations, Inc.",
     "genres": [
       "Simulation",
       "Strategy"
@@ -793,6 +867,7 @@
     ]
   },
   "5X": {
+    "publisher": "SpeedStrip Interactive",
     "genres": [
       "Strategy"
     ],
@@ -808,6 +883,7 @@
   "5th Fleet, The": {
     "players": 2,
     "rating": 2.4,
+    "publisher": "The Avalon Hill Game Company",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -824,6 +900,7 @@
   "688 Attack Sub": {
     "players": 2,
     "rating": 3.5,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Strategy",
       "Vehicle Simulation"
@@ -839,6 +916,7 @@
   },
   "7 Colors": {
     "rating": 3.8,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Puzzle"
     ],
@@ -852,6 +930,7 @@
     ]
   },
   "747-400 Precision Simulator": {
+    "publisher": "Aerowinx",
     "genres": [
       "Flight Simulator"
     ],
@@ -867,6 +946,7 @@
   "7th Guest, The": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "Virgin Interactive Entertainment, Inc.",
     "genres": [
       "Adventure",
       "Puzzle"
@@ -883,12 +963,14 @@
   "8088 Othello": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game",
       "Strategy"
     ]
   },
   "9-Hole Miniature Golf": {
+    "publisher": "SoftSide Magazine",
     "genres": [
       "Simulation",
       "Sports"
@@ -897,12 +979,14 @@
   "905": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
     ]
   },
   "A Clue's Solution": {
+    "publisher": "Freeware",
     "genres": [
       "Quiz",
       "Strategy"
@@ -918,12 +1002,14 @@
   },
   "A La Carrera": {
     "players": 1,
+    "publisher": "Ediciones Manali, S.A.",
     "genres": [
       "Simulation",
       "Sports"
     ]
   },
   "A Question of Sport": {
+    "publisher": "Encore, Inc.",
     "genres": [
       "Quiz"
     ],
@@ -939,6 +1025,7 @@
   "A-10 Tank Killer": {
     "players": 1,
     "rating": 3.4,
+    "publisher": "Dynamix, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -953,6 +1040,7 @@
   },
   "A-MIS Adventure": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -960,6 +1048,7 @@
   },
   "A-Team, The": {
     "players": 1,
+    "publisher": "Zafiro",
     "genres": [
       "Action",
       "Shooter"
@@ -968,6 +1057,7 @@
   "A-Train": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Maxis Software Inc.",
     "genres": [
       "Construction and Management Simulation"
     ],
@@ -991,6 +1081,7 @@
   },
   "A.D Cop": {
     "players": 1,
+    "publisher": "Japan Software Engineering Shop",
     "genres": [
       "Action",
       "Shooter"
@@ -999,6 +1090,7 @@
   "A.G.E.": {
     "players": 1,
     "rating": 3.3,
+    "publisher": "Coktel Vision",
     "genres": [
       "Action",
       "Vehicle Simulation"
@@ -1016,6 +1108,7 @@
   },
   "A.J.'s World of Discovery": {
     "rating": 2.5,
+    "publisher": "Coktel Vision",
     "genres": [
       "Education"
     ]
@@ -1023,6 +1116,7 @@
   "A2 - The Ultimate Sequel To AUTS - The Ultimate Stress Relief Game": {
     "players": 2,
     "rating": 5.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -1039,6 +1133,7 @@
   "A320 Airbus (Edition Europa) (1992)": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Thalion Software GmbH",
     "genres": [
       "Flight Simulator"
     ],
@@ -1054,6 +1149,7 @@
   },
   "A320 Airbus (Edition USA) (1993)": {
     "players": 1,
+    "publisher": "Thalion Software GmbH",
     "genres": [
       "Flight Simulator"
     ],
@@ -1069,6 +1165,7 @@
   "AAARGH!": {
     "players": 1,
     "rating": 1.8,
+    "publisher": "Arcadia Systems, Inc.",
     "genres": [
       "Action"
     ],
@@ -1082,12 +1179,14 @@
     ]
   },
   "ABC Fun Keys": {
+    "publisher": "Freeware",
     "genres": [
       "Education"
     ]
   },
   "ABC Monday Night Football": {
     "rating": 2.8,
+    "publisher": "Data East Corporation",
     "genres": [
       "Sports"
     ]
@@ -1095,6 +1194,7 @@
   "ABC Wide World of Sports Boxing": {
     "players": 2,
     "rating": 3.9,
+    "publisher": "Data East Corporation",
     "genres": [
       "Sports"
     ],
@@ -1108,6 +1208,7 @@
     ]
   },
   "ABC-Talk": {
+    "publisher": "DareWare Inc.",
     "genres": [
       "Education"
     ],
@@ -1123,6 +1224,7 @@
   "ACE 2": {
     "players": 2,
     "rating": 1.5,
+    "publisher": "Artronic Limited",
     "genres": [
       "Flight Simulator"
     ],
@@ -1138,12 +1240,14 @@
   "ACE Air Combat Emulator": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "UXB",
     "genres": [
       "Flight Simulator"
     ]
   },
   "AEGIS Guardian of the Fleet": {
     "players": 1,
+    "publisher": "Time Warner Interactive, Inc.",
     "genres": [
       "Strategy",
       "Vehicle Simulation"
@@ -1151,17 +1255,20 @@
   },
   "AGI Tetris": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
   },
   "AH-3 - ThunderStrike": {
+    "publisher": "JVC Musical Industries, Inc.",
     "genres": [
       "Action",
       "Flight Simulator"
     ]
   },
   "AJ's Quest": {
+    "publisher": "A-J Games",
     "genres": [
       "Action",
       "Platform"
@@ -1176,22 +1283,26 @@
     ]
   },
   "ALF - The First Adventure": {
+    "publisher": "The Box Office, Inc",
     "genres": [
       "Action"
     ]
   },
   "ALF's Thinking Skills": {
+    "publisher": "Vision Software, Inc.",
     "genres": [
       "Education"
     ]
   },
   "ALF's U.S. Geography": {
+    "publisher": "Vision Software, Inc.",
     "genres": [
       "Education"
     ]
   },
   "AM's Mini Golf 3D": {
     "players": 2,
+    "publisher": "Freeware",
     "genres": [
       "Sports"
     ],
@@ -1206,6 +1317,7 @@
   },
   "ANAL - The Rectum Adventure": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -1220,6 +1332,7 @@
     ]
   },
   "ANIMAC": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -1227,6 +1340,7 @@
   },
   "APB": {
     "rating": 2.5,
+    "publisher": "Domark Software Ltd.",
     "genres": [
       "Action",
       "Arcade",
@@ -1244,6 +1358,7 @@
   },
   "APBA Pro Football": {
     "players": 1,
+    "publisher": "APBA Game Company",
     "genres": [
       "Simulation",
       "Sports"
@@ -1259,6 +1374,7 @@
   },
   "APBA Pro Hockey": {
     "players": 2,
+    "publisher": "APBA Game Company",
     "genres": [
       "Simulation",
       "Sports"
@@ -1275,6 +1391,7 @@
   "ARK": {
     "players": 1,
     "rating": 3.9,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -1290,6 +1407,7 @@
   "ARL 96": {
     "players": 2,
     "rating": 5.0,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Sports"
     ],
@@ -1303,11 +1421,13 @@
     ]
   },
   "ARSENAL Taste the Power": {
+    "publisher": "TACTICAL Soft Inc.",
     "genres": [
       "Strategy"
     ]
   },
   "ASCII DOOM": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -1316,6 +1436,7 @@
   "ATAC - The Secret War Against Drugs": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Flight Simulator",
       "Strategy"
@@ -1332,6 +1453,7 @@
   "AUTS - The Ultimate Stress Relief Game": {
     "players": 2,
     "rating": 1.5,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -1346,6 +1468,7 @@
     ]
   },
   "AV8B Harrier Assault": {
+    "publisher": "Domark Software Ltd.",
     "genres": [
       "Flight Simulator",
       "Strategy",
@@ -1363,6 +1486,7 @@
   "Abadia del Crimen, La (1987)": {
     "players": 1,
     "rating": 4.5,
+    "publisher": "Opera Soft S.A.",
     "genres": [
       "Adventure"
     ],
@@ -1377,12 +1501,14 @@
   },
   "Abadia del Crimen, La (2000)": {
     "players": 1,
+    "publisher": "Opera Soft S.A.",
     "genres": [
       "Adventure"
     ]
   },
   "Abandoned Places - A Time for Heroes": {
     "rating": 3.4,
+    "publisher": "International Computer Entertainment Ltd.",
     "genres": [
       "Role-Playing"
     ],
@@ -1396,6 +1522,7 @@
     ]
   },
   "Abaron": {
+    "publisher": "Procom Datentechnik GmbH",
     "genres": [
       "Action",
       "Shooter"
@@ -1404,6 +1531,7 @@
   "Abbey, The": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -1418,6 +1546,7 @@
     ]
   },
   "Abductor": {
+    "publisher": "PLBM Games",
     "genres": [
       "Action",
       "Shooter"
@@ -1432,6 +1561,7 @@
     ]
   },
   "Abmis the Lion": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -1447,6 +1577,7 @@
   },
   "Abrams Battle Tank": {
     "rating": 3.3,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -1461,6 +1592,7 @@
   },
   "Absolute Pinball": {
     "rating": 3.5,
+    "publisher": "21st Century Entertainment Ltd.",
     "genres": [
       "Action",
       "Pinball"
@@ -1469,6 +1601,7 @@
   "Absolute Zero": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "Domark Software Ltd.",
     "genres": [
       "Flight Simulator",
       "Shooter"
@@ -1484,6 +1617,7 @@
   },
   "Abuse": {
     "rating": 3.5,
+    "publisher": "Crack dot Com",
     "genres": [
       "Action",
       "Platform",
@@ -1503,6 +1637,7 @@
   },
   "Abyss of Pandemonium": {
     "rating": 3.0,
+    "publisher": "Perfect Publishing",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -1519,6 +1654,7 @@
   "Accordion": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Casino"
     ],
@@ -1533,6 +1669,7 @@
   },
   "Ace": {
     "rating": 3.4,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -1550,6 +1687,7 @@
   "Ace of Aces": {
     "players": 1,
     "rating": 3.1,
+    "publisher": "Accolade, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -1563,6 +1701,7 @@
     ]
   },
   "Aces High - The True Air Duel Simulator": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -1580,6 +1719,7 @@
   "Aces Over Europe": {
     "players": 1,
     "rating": 3.3,
+    "publisher": "Sierra On-Line, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -1598,6 +1738,7 @@
   "Aces of the Deep": {
     "players": 1,
     "rating": 4.1,
+    "publisher": "Dynamix, Inc.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -1615,6 +1756,7 @@
   },
   "Aces of the Pacific": {
     "rating": 4.2,
+    "publisher": "Sierra On-Line, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -1632,6 +1774,7 @@
   },
   "Acheton": {
     "players": 1,
+    "publisher": "Topologika Software, Ltd.",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -1646,6 +1789,7 @@
     ]
   },
   "Achtung, die Kurve!": {
+    "publisher": "Hero Music Company",
     "genres": [
       "Action"
     ]
@@ -1653,6 +1797,7 @@
   "Acid Tetris": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -1667,6 +1812,7 @@
   },
   "Ack! Man": {
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -1682,12 +1828,14 @@
   "Ack-Ack Attack!": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
     ]
   },
   "Acquire": {
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -1703,6 +1851,7 @@
   },
   "Across the Rhine": {
     "rating": 4.8,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Strategy",
       "Vehicle Simulation"
@@ -1718,11 +1867,13 @@
   },
   "Across the USA": {
     "players": 1,
+    "publisher": "Nighthawk Computing",
     "genres": [
       "Education"
     ]
   },
   "Acrostix": {
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -1737,6 +1888,7 @@
   },
   "Action Euro Soccer 96": {
     "players": 2,
+    "publisher": "Ubi Soft Entertainment Software",
     "genres": [
       "Sports"
     ],
@@ -1752,6 +1904,7 @@
   "Action Fighter (1989)": {
     "players": 1,
     "rating": 2.4,
+    "publisher": "Firebird Software",
     "genres": [
       "Action",
       "Racing / Driving"
@@ -1768,6 +1921,7 @@
   "Action Fighter (1994)": {
     "players": 1,
     "rating": 2.4,
+    "publisher": "Softstar Entertainment, Inc.",
     "genres": [
       "Action",
       "Fighting"
@@ -1776,6 +1930,7 @@
   "Action Soccer": {
     "players": 2,
     "rating": 2.2,
+    "publisher": "Ubi Soft Entertainment Software",
     "genres": [
       "Sports"
     ],
@@ -1790,6 +1945,7 @@
   },
   "Action Stations!": {
     "players": 1,
+    "publisher": "RAW Entertainment, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -1803,6 +1959,7 @@
     ]
   },
   "Action SuperCross": {
+    "publisher": "Freeware",
     "genres": [
       "Racing / Driving"
     ],
@@ -1816,12 +1973,14 @@
     ]
   },
   "Action Worm": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
   },
   "Action in the North Atlantic": {
     "players": 2,
+    "publisher": "General Quarters Software",
     "genres": [
       "Strategy",
       "Vehicle Simulation"
@@ -1830,6 +1989,7 @@
   "Actua Soccer": {
     "players": 2,
     "rating": 3.5,
+    "publisher": "Gremlin Interactive Ltd.",
     "genres": [
       "Sports"
     ],
@@ -1845,18 +2005,21 @@
   "Actua Soccer Club Edition": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Gremlin Interactive Ltd.",
     "genres": [
       "Sports"
     ]
   },
   "Ad Verbum": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
     ]
   },
   "Adam the New Age Warrior in Time After Time": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -1864,6 +2027,7 @@
   },
   "Add It!": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Education"
     ],
@@ -1878,6 +2042,7 @@
   },
   "Adentrator": {
     "players": 1,
+    "publisher": "Ediciones Manali, S.A.",
     "genres": [
       "Action",
       "Shooter"
@@ -1885,6 +2050,7 @@
   },
   "Adskok": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -1893,12 +2059,14 @@
   "Adult Film Cameraman": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Interactive Girls Club",
     "genres": [
       "Simulation"
     ]
   },
   "Advance to Boardwalk": {
     "players": 2,
+    "publisher": "GameTek, Inc.",
     "genres": [
       "Board / Party Game"
     ],
@@ -1914,6 +2082,7 @@
   "Advanced Civilization": {
     "players": 2,
     "rating": 3.6,
+    "publisher": "The Avalon Hill Game Company",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -1929,6 +2098,7 @@
   },
   "Advanced DOS Quiz": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Education",
       "Quiz"
@@ -1945,6 +2115,7 @@
   "Advanced Destroyer Simulator": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Futura",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -1965,6 +2136,7 @@
   },
   "Advanced NetWars": {
     "players": 2,
+    "publisher": "Caldera",
     "genres": [
       "Shooter"
     ],
@@ -1979,12 +2151,14 @@
   },
   "Advanced Strategic Command": {
     "rating": 2.0,
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ]
   },
   "Advanced Thinking Skills": {
     "players": 1,
+    "publisher": "Compedia Software & Hardware Ltd.",
     "genres": [
       "Education"
     ]
@@ -1992,6 +2166,7 @@
   "Advanced Xoru": {
     "players": 1,
     "rating": 0.5,
+    "publisher": "Castle Technologies",
     "genres": [
       "Adventure",
       "Text-Based"
@@ -2000,6 +2175,7 @@
   "Advantage Tennis": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Sports"
     ],
@@ -2017,6 +2193,7 @@
   },
   "Adventure": {
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2032,6 +2209,7 @@
   },
   "Adventure Book": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2048,6 +2226,7 @@
   "Adventure Construction Set": {
     "players": 1,
     "rating": 4.4,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Role-Playing"
     ],
@@ -2063,6 +2242,7 @@
   "Adventure Game Toolkit": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2077,6 +2257,7 @@
     ]
   },
   "Adventure Math": {
+    "publisher": "Epic MegaGames, Inc.",
     "genres": [
       "Education"
     ],
@@ -2100,6 +2281,7 @@
   },
   "Adventure in Humongous Cave": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2107,6 +2289,7 @@
   },
   "Adventure in Serenia": {
     "players": 1,
+    "publisher": "IBM",
     "genres": [
       "Adventure"
     ],
@@ -2122,6 +2305,7 @@
   "Adventure in the Magic Land": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2138,6 +2322,7 @@
   "Adventure of Tipi, The": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Funsoft",
     "genres": [
       "Action",
       "Platform"
@@ -2145,22 +2330,26 @@
   },
   "Adventure, The": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
   },
   "AdventureWriter": {
+    "publisher": "Gilsoft",
     "genres": [
       "Adventure"
     ]
   },
   "Adventureland": {
+    "publisher": "Adventure International",
     "genres": [
       "Adventure",
       "Interactive Fiction"
     ]
   },
   "Adventures Of Dianalee, The - In The Lost temple Of The Aztecs": {
+    "publisher": "Menlor Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2177,6 +2366,7 @@
   "Adventures in Math": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "IBM",
     "genres": [
       "Adventure",
       "Education",
@@ -2186,6 +2376,7 @@
   "Adventures of Alice who Went Through the Looking-Glass and Came Back Though Not Much Changed, The": {
     "players": 1,
     "rating": 2.2,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
@@ -2193,6 +2384,7 @@
   "Adventures of Buckaroo Banzai Across the Eighth Dimension, The": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Adventure International",
     "genres": [
       "Adventure",
       "Interactive Fiction",
@@ -2210,6 +2402,7 @@
   "Adventures of Captain Comic, The": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Color Dreams, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2225,6 +2418,7 @@
   },
   "Adventures of Down Under Dan, The": {
     "players": 1,
+    "publisher": "Guildsoft",
     "genres": [
       "Adventure"
     ],
@@ -2239,6 +2433,7 @@
   },
   "Adventures of Lance, The": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
@@ -2246,6 +2441,7 @@
   "Adventures of Maddog Williams, The": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Game Crafters",
     "genres": [
       "Adventure",
       "Role-Playing"
@@ -2261,6 +2457,7 @@
   },
   "Adventures of Melvin Freebush, The": {
     "players": 1,
+    "publisher": "Sherwood Forest Software",
     "genres": [
       "Adventure"
     ],
@@ -2275,6 +2472,7 @@
   },
   "Adventures of Nikko, The": {
     "players": 1,
+    "publisher": "Software Toolworks, Inc., The",
     "genres": [
       "Education"
     ]
@@ -2282,6 +2480,7 @@
   "Adventures of Robin Hood, The": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Millennium Interactive Ltd.",
     "genres": [
       "Adventure"
     ],
@@ -2300,6 +2499,7 @@
   },
   "Adventures of Sherlock Holmes, The": {
     "players": 1,
+    "publisher": "Mycroft Systems",
     "genres": [
       "Adventure"
     ],
@@ -2313,6 +2513,7 @@
     ]
   },
   "Adventures of Tintin, The - Prisoners of the Sun": {
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2329,6 +2530,7 @@
   "Adventures of Willy Beamish, The": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "Sierra On-Line, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -2343,6 +2545,7 @@
   },
   "Aeromathics": {
     "rating": 1.0,
+    "publisher": "IBM",
     "genres": [
       "Education"
     ],
@@ -2357,6 +2560,7 @@
   },
   "Aeronautics Quiz MK 2, The": {
     "rating": 2.0,
+    "publisher": "Freeware",
     "genres": [
       "Education",
       "Quiz"
@@ -2365,6 +2569,7 @@
   "Aethra Chronicles, The - Volume One - Celystra's Bane": {
     "players": 1,
     "rating": 2.8,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -2380,6 +2585,7 @@
   "Affaire Morlov, L'": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Titus Software Corporation",
     "genres": [
       "Adventure"
     ],
@@ -2395,6 +2601,7 @@
   },
   "Affaire, L'": {
     "players": 1,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -2414,6 +2621,7 @@
   },
   "Afghanistan": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -2427,6 +2635,7 @@
     ]
   },
   "African Adventure Or In Search of Dr. Livingston": {
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ],
@@ -2440,6 +2649,7 @@
     ]
   },
   "African Desert Campaign": {
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -2455,6 +2665,7 @@
   "African Raiders-01": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Tomahawk",
     "genres": [
       "Racing / Driving"
     ],
@@ -2469,6 +2680,7 @@
   },
   "African Trail Simulator": {
     "players": 1,
+    "publisher": "Positive",
     "genres": [
       "Racing / Driving"
     ],
@@ -2484,6 +2696,7 @@
   "After Burner": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Sega Enterprises, Inc.",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -2501,6 +2714,7 @@
   "After the War": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Dinamic Software",
     "genres": [
       "Action"
     ],
@@ -2518,6 +2732,7 @@
   "Afterlife": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "LucasArts Entertainment Company, LLC",
     "genres": [
       "Construction and Management Simulation"
     ],
@@ -2532,6 +2747,7 @@
   },
   "Aftermath of the Asimovian Disaster": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2540,6 +2756,7 @@
   "Aftershock for Quake": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Head Games Publishing, Inc.",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -2554,6 +2771,7 @@
     ]
   },
   "Age of Dragon": {
+    "publisher": "Jin Young Technology",
     "genres": [
       "Action",
       "Shooter"
@@ -2561,6 +2779,7 @@
   },
   "Agent USA": {
     "players": 1,
+    "publisher": "Scholastic, Inc.",
     "genres": [
       "Adventure",
       "Education",
@@ -2577,17 +2796,20 @@
   },
   "Aggravation": {
     "players": 2,
+    "publisher": "Cutlass Software",
     "genres": [
       "Board / Party Game"
     ]
   },
   "Aggression": {
     "players": 2,
+    "publisher": "Expert Source Code, Inc.",
     "genres": [
       "Board / Party Game"
     ]
   },
   "Agravation": {
+    "publisher": "SLC Unlimited",
     "genres": [
       "Board / Party Game"
     ]
@@ -2595,11 +2817,13 @@
   "Aimpoint": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Intergame",
     "genres": [
       "Strategy"
     ]
   },
   "Air Attack!": {
+    "publisher": "RufusPro Software",
     "genres": [
       "Action",
       "Shooter"
@@ -2608,6 +2832,7 @@
   "Air Bucks": {
     "players": 2,
     "rating": 1.5,
+    "publisher": "Impressions Games",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -2623,6 +2848,7 @@
   },
   "Air Duel 80 Years of Dogfighting": {
     "players": 2,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -2637,6 +2863,7 @@
   },
   "Air Force Commander": {
     "rating": 2.5,
+    "publisher": "Impressions Games",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -2645,6 +2872,7 @@
   "Air Power Battle in the Skies": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -2659,6 +2887,7 @@
   },
   "Air Puck": {
     "players": 1,
+    "publisher": "The Software Labs",
     "genres": [
       "Action",
       "Paddle / Pong"
@@ -2667,6 +2896,7 @@
   "Air Traffic Control": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Construction and Management Simulation"
     ]
@@ -2674,6 +2904,7 @@
   "Air Traffic Controller": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Cascoly Software",
     "genres": [
       "Construction and Management Simulation"
     ],
@@ -2688,12 +2919,14 @@
   },
   "Air Trax": {
     "players": 1,
+    "publisher": "Presearch Incorporated",
     "genres": [
       "Construction and Management Simulation"
     ]
   },
   "Air Troubles": {
     "players": 2,
+    "publisher": "Fern Productions",
     "genres": [
       "Action",
       "Shooter"
@@ -2713,6 +2946,7 @@
   "Air Warrior": {
     "players": 2,
     "rating": 2.9,
+    "publisher": "Konami, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -2728,6 +2962,7 @@
   "Air-Strike": {
     "players": 1,
     "rating": 1.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -2744,6 +2979,7 @@
   "Airball": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "MicroDeal Ltd.",
     "genres": [
       "Action",
       "Strategy"
@@ -2760,6 +2996,7 @@
   "Airborne Ranger": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Action"
     ],
@@ -2775,6 +3012,7 @@
   "Airlift Rescue": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -2789,18 +3027,21 @@
   },
   "Airline": {
     "players": 1,
+    "publisher": "Falken-Verlag GmbH",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
     ]
   },
   "Airline Simulator": {
+    "publisher": "Lago S.r.l.",
     "genres": [
       "Flight Simulator"
     ]
   },
   "Airlines": {
     "players": 1,
+    "publisher": "Interactivision A/S",
     "genres": [
       "Construction and Management Simulation"
     ],
@@ -2816,6 +3057,7 @@
   "Airstrike": {
     "players": 1,
     "rating": 1.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -2832,6 +3074,7 @@
   "Airstrike USA": {
     "players": 1,
     "rating": 1.0,
+    "publisher": "Spotlight Software",
     "genres": [
       "Action",
       "Flight Simulator"
@@ -2850,6 +3093,7 @@
   },
   "Aisle": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -2857,6 +3101,7 @@
   },
   "Ajax": {
     "rating": 2.5,
+    "publisher": "Konami, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -2864,6 +3109,7 @@
   },
   "Aktie-bal": {
     "players": 1,
+    "publisher": "Idee Software",
     "genres": [
       "Platform",
       "Puzzle",
@@ -2881,17 +3127,20 @@
   "Al Pond 1 - Al Lives Forever": {
     "players": 1,
     "rating": 4.5,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
   },
   "Al Pond 2 - Island Quest": {
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
   },
   "Al Pond on Holiday": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
@@ -2899,6 +3148,7 @@
   "Al-Qadim - the Genie's Curse": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "Strategic Simulations, Inc.",
     "genres": [
       "Role-Playing"
     ],
@@ -2912,6 +3162,7 @@
     ]
   },
   "Aladino": {
+    "publisher": "Ediciones Mago",
     "genres": [
       "Action"
     ]
@@ -2919,6 +3170,7 @@
   "Albion": {
     "players": 1,
     "rating": 4.2,
+    "publisher": "Blue Byte",
     "genres": [
       "Action",
       "Role-Playing"
@@ -2938,6 +3190,7 @@
   "Alcatraz": {
     "players": 2,
     "rating": 2.2,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -2953,6 +3206,7 @@
   },
   "Alchemy Game, The": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -2966,12 +3220,14 @@
     ]
   },
   "Alchemyst": {
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ]
   },
   "Alcor Trivia Pro Classic Star Trek, The": {
     "players": 2,
+    "publisher": "Alcor Group, Inc., The",
     "genres": [
       "Quiz"
     ],
@@ -2986,6 +3242,7 @@
   },
   "Aldo Again": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -2994,6 +3251,7 @@
   "Aldo's Adventure": {
     "players": 1,
     "rating": 1.5,
+    "publisher": "Dave and Ben Ibach",
     "genres": [
       "Action",
       "Platform"
@@ -3009,6 +3267,7 @@
   },
   "Aldo's Assault": {
     "rating": 4.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Platform"
@@ -3016,6 +3275,7 @@
   },
   "Aleshar - The World of Ice": {
     "players": 1,
+    "publisher": "Hypothermia",
     "genres": [
       "Role-Playing"
     ],
@@ -3031,12 +3291,14 @@
   "Alex Higgins' World Snooker": {
     "players": 2,
     "rating": 4.0,
+    "publisher": "Amstrad PLC",
     "genres": [
       "Sports"
     ]
   },
   "Alex the Allegator": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Platform"
     ],
@@ -3051,6 +3313,7 @@
   },
   "Alex the Alligator 2": {
     "players": 2,
+    "publisher": "Free Lunch Design",
     "genres": [
       "Board / Party Game"
     ],
@@ -3064,12 +3327,14 @@
     ]
   },
   "Alge-Blaster Plus!": {
+    "publisher": "Davidson & Associates",
     "genres": [
       "Education"
     ]
   },
   "Aliants - The Desperate Battle for Earth": {
     "rating": 3.0,
+    "publisher": "Keypunch Software, Inc.",
     "genres": [
       "Action",
       "Strategy"
@@ -3100,6 +3365,7 @@
   },
   "Alien": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -3115,6 +3381,7 @@
   },
   "Alien Alley": {
     "players": 1,
+    "publisher": "Coriolis Group Books",
     "genres": [
       "Action",
       "Shooter"
@@ -3130,6 +3397,7 @@
   },
   "Alien Assault (1995)": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -3145,6 +3413,7 @@
   },
   "Alien Assault (1997)": {
     "players": 1,
+    "publisher": "Crowfoot Software",
     "genres": [
       "Action",
       "Shooter"
@@ -3159,6 +3428,7 @@
     ]
   },
   "Alien Attack": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
@@ -3166,6 +3436,7 @@
   "Alien Breed": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "MicroLeague Multimedia, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -3185,6 +3456,7 @@
   "Alien Breed - Tower Assault": {
     "players": 2,
     "rating": 4.1,
+    "publisher": "Team17 Software Limited",
     "genres": [
       "Action",
       "Shooter"
@@ -3203,6 +3475,7 @@
   },
   "Alien Cabal": {
     "rating": 2.5,
+    "publisher": "QASoft",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -3219,6 +3492,7 @@
   "Alien Carnage": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "Apogee Software, Ltd.",
     "genres": [
       "Action",
       "Platform",
@@ -3239,6 +3513,7 @@
   "Alien Fires 2199 AD": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Jagware Inc.",
     "genres": [
       "Role-Playing"
     ],
@@ -3254,6 +3529,7 @@
   "Alien Incident": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "GameTek, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -3271,6 +3547,7 @@
   "Alien Legacy": {
     "players": 1,
     "rating": 4.3,
+    "publisher": "Sierra On-Line, Inc.",
     "genres": [
       "Adventure",
       "Construction and Management Simulation",
@@ -3288,6 +3565,7 @@
   "Alien Logic": {
     "players": 1,
     "rating": 4.1,
+    "publisher": "Strategic Simulations, Inc.",
     "genres": [
       "Action",
       "Role-Playing"
@@ -3304,6 +3582,7 @@
   "Alien Odyssey": {
     "players": 1,
     "rating": 2.4,
+    "publisher": "Philips Interactive Media, Inc.",
     "genres": [
       "Action",
       "Adventure",
@@ -3322,6 +3601,7 @@
   "Alien Olympics": {
     "players": 2,
     "rating": 2.8,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Action",
       "Sports"
@@ -3338,6 +3618,7 @@
     ]
   },
   "Alien Phobia": {
+    "publisher": "Wah-Software",
     "genres": [
       "Action",
       "Shooter"
@@ -3345,12 +3626,14 @@
   },
   "Alien Rampage": {
     "rating": 4.6,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Action",
       "Platform"
     ]
   },
   "Alien River": {
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Strategy"
@@ -3359,6 +3642,7 @@
   "Alien Syndrome": {
     "players": 2,
     "rating": 3.8,
+    "publisher": "Sega Enterprises, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -3373,6 +3657,7 @@
     ]
   },
   "Alien Terminator": {
+    "publisher": "Golden Zone",
     "genres": [
       "Action",
       "Platform",
@@ -3382,6 +3667,7 @@
   "Alien Trilogy": {
     "players": 1,
     "rating": 3.4,
+    "publisher": "Acclaim Entertainment, Inc.",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -3402,6 +3688,7 @@
   "Alien Virus": {
     "players": 1,
     "rating": 2.8,
+    "publisher": "Nova Spring",
     "genres": [
       "Adventure"
     ],
@@ -3417,6 +3704,7 @@
   "Alien Worlds": {
     "players": 1,
     "rating": 0.5,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -3433,6 +3721,7 @@
   "Aliens (1989)": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Speter Software",
     "genres": [
       "Action"
     ],
@@ -3448,6 +3737,7 @@
   "Aliens (1996)": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Error Free Productions",
     "genres": [
       "Action",
       "Shooter"
@@ -3456,6 +3746,7 @@
   "Aliens - A Comic Book Adventure": {
     "players": 1,
     "rating": 3.4,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -3473,6 +3764,7 @@
   "Alive Sharks": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Alive Software",
     "genres": [
       "Action"
     ],
@@ -3487,11 +3779,13 @@
   },
   "All Dogs Go to Heaven": {
     "rating": 2.5,
+    "publisher": "Merit Studios, Inc.",
     "genres": [
       "Action"
     ]
   },
   "All New Family Feud": {
+    "publisher": "ShareData, Inc.",
     "genres": [
       "Game Show",
       "Quiz"
@@ -3500,6 +3794,7 @@
   "All-American College Football": {
     "players": 2,
     "rating": 4.8,
+    "publisher": "Micro Sports Inc",
     "genres": [
       "Sports"
     ],
@@ -3513,6 +3808,7 @@
     ]
   },
   "Allan Border's Cricket": {
+    "publisher": "Audiogenic Software Ltd.",
     "genres": [
       "Sports"
     ],
@@ -3526,6 +3822,7 @@
     ]
   },
   "AllegroHack": {
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -3541,6 +3838,7 @@
   "Alley Cat": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "IBM",
     "genres": [
       "Action",
       "Platform"
@@ -3557,6 +3855,7 @@
   "Alone in the Dark": {
     "players": 1,
     "rating": 4.2,
+    "publisher": "Interplay Productions, Inc.",
     "genres": [
       "Action",
       "Adventure"
@@ -3580,6 +3879,7 @@
   "Alone in the Dark 2": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "I\u2022Motion, Inc.",
     "genres": [
       "Action",
       "Adventure"
@@ -3599,6 +3899,7 @@
   "Alone in the Dark 3": {
     "players": 1,
     "rating": 3.6,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Action",
       "Adventure"
@@ -3623,6 +3924,7 @@
   },
   "Alpha Build": {
     "players": 1,
+    "publisher": "Fisher-Price Learning Software",
     "genres": [
       "Education"
     ],
@@ -3638,6 +3940,7 @@
   "Alpha Storm": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Psygnosis Limited",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -3654,6 +3957,7 @@
   },
   "AlphaMan": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -3668,6 +3972,7 @@
   },
   "Alphaman": {
     "players": 1,
+    "publisher": "Soleau Software, Inc.",
     "genres": [
       "Puzzle"
     ],
@@ -3682,6 +3987,7 @@
   },
   "Alpine Encounter, The": {
     "players": 1,
+    "publisher": "Random House",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -3697,6 +4003,7 @@
   },
   "Alpine Tram Ride": {
     "rating": 3.2,
+    "publisher": "Merit Studios, Inc.",
     "genres": [
       "Education"
     ]
@@ -3704,6 +4011,7 @@
   "Alter Ego": {
     "players": 1,
     "rating": 4.2,
+    "publisher": "Activision, Inc.",
     "genres": [
       "Simulation"
     ],
@@ -3722,6 +4030,7 @@
   "Altered Beast": {
     "players": 2,
     "rating": 3.6,
+    "publisher": "Sega Enterprises, Inc.",
     "genres": [
       "Action",
       "Fighting"
@@ -3737,6 +4046,7 @@
   },
   "Altered Destiny": {
     "players": 1,
+    "publisher": "Accolade, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -3751,6 +4061,7 @@
   },
   "Alternate Reality - The City": {
     "rating": 3.2,
+    "publisher": "U.S. Gold Ltd.",
     "genres": [
       "Role-Playing"
     ],
@@ -3765,6 +4076,7 @@
   },
   "Amado": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle",
       "Strategy"
@@ -3779,6 +4091,7 @@
     ]
   },
   "Amarillo Slim Dealer's Choice": {
+    "publisher": "Villa Crespo Software, Inc.",
     "genres": [
       "Casino"
     ],
@@ -3792,6 +4105,7 @@
     ]
   },
   "Amarillo Slim's 7 Card Stud": {
+    "publisher": "Villa Crespo Software, Inc.",
     "genres": [
       "Casino"
     ],
@@ -3805,6 +4119,7 @@
     ]
   },
   "Amarillo Slim's Real Poker - 5 Card Stud": {
+    "publisher": "Villa Crespo Software, Inc.",
     "genres": [
       "Casino"
     ],
@@ -3819,6 +4134,7 @@
   },
   "Amaze": {
     "rating": 4.5,
+    "publisher": "Wizard Games of Scotland, Ltd.",
     "genres": [
       "Action",
       "Puzzle"
@@ -3826,6 +4142,7 @@
   },
   "Amazing": {
     "rating": 5.0,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -3840,6 +4157,7 @@
   },
   "Amazing Adventures of ANSI Dude, The": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Puzzle"
@@ -3855,6 +4173,7 @@
   },
   "Amazing Learning Games with Rayman": {
     "rating": 5.0,
+    "publisher": "Ubi Soft Entertainment Software",
     "genres": [
       "Education",
       "Platform"
@@ -3862,6 +4181,7 @@
   },
   "Amazing Maze": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Puzzle"
@@ -3870,6 +4190,7 @@
   "Amazing Spider-Man and Captain America in Dr. Doom's Revenge!, The": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "Medalist International",
     "genres": [
       "Action",
       "Fighting"
@@ -3888,6 +4209,7 @@
   },
   "Amazing Spider-Man, The": {
     "rating": 4.0,
+    "publisher": "Paragon Software Corporation",
     "genres": [
       "Action",
       "Platform"
@@ -3903,6 +4225,7 @@
   },
   "Amazon": {
     "players": 1,
+    "publisher": "Audiogenic Software Ltd.",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -3919,6 +4242,7 @@
   "Amazon - Guardians of Eden": {
     "players": 1,
     "rating": 2.8,
+    "publisher": "Access Software, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -3933,6 +4257,7 @@
   },
   "Amazon Snake": {
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -3948,6 +4273,7 @@
   "Amazon Trail": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "MECC",
     "genres": [
       "Adventure",
       "Education",
@@ -3957,6 +4283,7 @@
   "Amberstar": {
     "players": 1,
     "rating": 2.9,
+    "publisher": "Thalion Software GmbH",
     "genres": [
       "Role-Playing"
     ],
@@ -3972,6 +4299,7 @@
   "Ambush at Sorinor": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Mindcraft Software, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -3985,12 +4313,14 @@
     ]
   },
   "America Adventure": {
+    "publisher": "Knowledge Adventure, Inc.",
     "genres": [
       "Education"
     ]
   },
   "America's Cup Yacht Racing Simulator": {
     "players": 2,
+    "publisher": "Geoff Brayford & Associates",
     "genres": [
       "Racing / Driving",
       "Simulation"
@@ -3998,6 +4328,7 @@
   },
   "American Challenge A Sailing Simulation, The": {
     "players": 2,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Racing / Driving",
       "Sports",
@@ -4015,6 +4346,7 @@
   "American Gladiators": {
     "players": 2,
     "rating": 2.5,
+    "publisher": "GameTek, Inc.",
     "genres": [
       "Action",
       "Game Show",
@@ -4032,6 +4364,7 @@
   "American Sign Language Tutor": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Education"
     ],
@@ -4047,6 +4380,7 @@
   "Amnesia": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -4062,6 +4396,7 @@
   },
   "Amo del Mundo, El": {
     "players": 1,
+    "publisher": "Positive",
     "genres": [
       "Action"
     ],
@@ -4075,6 +4410,7 @@
     ]
   },
   "Amoba": {
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game",
       "Puzzle"
@@ -4082,6 +4418,7 @@
   },
   "Amok": {
     "rating": 2.5,
+    "publisher": "Scavenger, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -4098,6 +4435,7 @@
   "Amulet of Yendor": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -4113,6 +4451,7 @@
   "Amulet, The": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Numenor Microsystems",
     "genres": [
       "Role-Playing"
     ],
@@ -4127,6 +4466,7 @@
   },
   "Amulets and Armor": {
     "rating": 4.0,
+    "publisher": "United Software Artists",
     "genres": [
       "Action",
       "Role-Playing"
@@ -4134,6 +4474,7 @@
   },
   "Amy's First Primer": {
     "players": 1,
+    "publisher": "Computing Specialties",
     "genres": [
       "Education"
     ],
@@ -4149,6 +4490,7 @@
   "An American Tail - Fievel Goes West": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Capstone Software",
     "genres": [
       "Adventure"
     ],
@@ -4163,6 +4505,7 @@
   },
   "Anacreon - Reconstruction 4021": {
     "rating": 2.0,
+    "publisher": "Thinking Machine Associates",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -4185,6 +4528,7 @@
   },
   "Ancient Art of War": {
     "rating": 2.3,
+    "publisher": "Br\u00f8derbund Software, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -4199,6 +4543,7 @@
   },
   "Ancient Art of War at Sea": {
     "rating": 2.2,
+    "publisher": "Br\u00f8derbund Software, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -4213,6 +4558,7 @@
   },
   "Ancient Art of War in the Skies": {
     "rating": 2.0,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -4229,6 +4575,7 @@
   "Ancient Domains of Mystery": {
     "players": 1,
     "rating": 4.1,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -4243,6 +4590,7 @@
   },
   "Ancient Sceptre, The": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -4250,6 +4598,7 @@
   },
   "Ancients 1 - Deathwatch": {
     "players": 1,
+    "publisher": "Epic MegaGames, Inc.",
     "genres": [
       "Role-Playing"
     ],
@@ -4264,12 +4613,14 @@
   },
   "Ancients 2 - Approaching Evil": {
     "players": 1,
+    "publisher": "Epic MegaGames, Inc.",
     "genres": [
       "Role-Playing"
     ]
   },
   "Andromeda Conquest": {
     "players": 1,
+    "publisher": "The Avalon Hill Game Company",
     "genres": [
       "Board / Party Game",
       "Strategy"
@@ -4285,6 +4636,7 @@
   },
   "Angband": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -4300,6 +4652,7 @@
   "Angel Devoid": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Adventure"
     ],
@@ -4315,6 +4668,7 @@
   "Angel Nieto Pole 500": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "Opera Soft S.A.",
     "genres": [
       "Racing / Driving",
       "Sports"
@@ -4329,6 +4683,7 @@
     ]
   },
   "Angst - A Game of Urban Survival!": {
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ],
@@ -4343,6 +4698,7 @@
   },
   "Angst - Rahz's Revenge": {
     "rating": 3.0,
+    "publisher": "SoftKey Multimedia Inc.",
     "genres": [
       "Action",
       "First Person Shooter"
@@ -4350,6 +4706,7 @@
   },
   "Animal": {
     "players": 1,
+    "publisher": "Microtime",
     "genres": [
       "Action",
       "Adventure"
@@ -4367,12 +4724,14 @@
   },
   "Animal Math": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Education"
     ]
   },
   "Animal Quest": {
     "rating": 2.2,
+    "publisher": "Alive Software",
     "genres": [
       "Education",
       "Puzzle"
@@ -4380,11 +4739,13 @@
   },
   "Animated Memory Game, The": {
     "players": 1,
+    "publisher": "FLIX Productions",
     "genres": [
       "Puzzle"
     ]
   },
   "Animated Money": {
+    "publisher": "FLIX Productions",
     "genres": [
       "Education"
     ],
@@ -4398,16 +4759,19 @@
     ]
   },
   "Animated Multiplication and Division": {
+    "publisher": "FLIX Productions",
     "genres": [
       "Education"
     ]
   },
   "Animated SVGA Memory Game, The": {
+    "publisher": "FLIX Productions",
     "genres": [
       "Puzzle"
     ]
   },
   "Anna's Gram": {
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Board / Party Game",
       "Puzzle"
@@ -4424,6 +4788,7 @@
   "Annals of Rome": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Personal Software Services",
     "genres": [
       "Strategy"
     ],
@@ -4438,6 +4803,7 @@
   },
   "Annihilator Tank": {
     "rating": 0.5,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -4453,6 +4819,7 @@
   },
   "Another DG Game - I want my C64 back": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ],
@@ -4482,6 +4849,7 @@
     ]
   },
   "Another Pool": {
+    "publisher": "Freeware",
     "genres": [
       "Sports"
     ],
@@ -4497,11 +4865,13 @@
   "Ant Attack": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Dataware",
     "genres": [
       "Action"
     ]
   },
   "Ant Attack PC": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -4515,6 +4885,7 @@
     ]
   },
   "Ant Man": {
+    "publisher": "SKC Soft Land",
     "genres": [
       "Action",
       "Platform"
@@ -4523,6 +4894,7 @@
   "Ant Run": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Soleau Software, Inc.",
     "genres": [
       "Puzzle"
     ],
@@ -4537,6 +4909,7 @@
   },
   "Antagony": {
     "players": 2,
+    "publisher": "Triniti Software",
     "genres": [
       "Action",
       "Fighting"
@@ -4552,6 +4925,7 @@
   },
   "Antarctic Adventure": {
     "players": 1,
+    "publisher": "Friends Software",
     "genres": [
       "Action"
     ]
@@ -4559,12 +4933,14 @@
   "Ante-Up at The Friday Night Poker Club": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "ComputerEasy",
     "genres": [
       "Casino"
     ]
   },
   "Anthill Volume 2": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -4578,12 +4954,14 @@
     ]
   },
   "Anti-Ballistic-Missile": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
   },
   "AntiC": {
     "players": 2,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -4599,6 +4977,7 @@
   "AntiXonix": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Dmitry Pavlovsky & Vadim Gerasimov",
     "genres": [
       "Action",
       "Puzzle"
@@ -4606,6 +4985,7 @@
   },
   "Antkill": {
     "players": 1,
+    "publisher": "Neurosport",
     "genres": [
       "Action",
       "Role-Playing"
@@ -4622,6 +5002,7 @@
   "Anvil of Dawn": {
     "players": 1,
     "rating": 3.7,
+    "publisher": "New World Computing, Inc.",
     "genres": [
       "Action",
       "Role-Playing"
@@ -4636,6 +5017,7 @@
     ]
   },
   "Apachacha": {
+    "publisher": "Soft Town",
     "genres": [
       "Action",
       "Platform"
@@ -4643,6 +5025,7 @@
   },
   "Apache": {
     "rating": 3.8,
+    "publisher": "Digital Integration Ltd.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -4656,6 +5039,7 @@
     ]
   },
   "Apache Strike": {
+    "publisher": "Activision, Inc.",
     "genres": [
       "Action",
       "Shooter"
@@ -4671,6 +5055,7 @@
   },
   "Apocalypse Abyss": {
     "players": 1,
+    "publisher": "Software Visions",
     "genres": [
       "Strategy"
     ],
@@ -4685,6 +5070,7 @@
   },
   "Apocalypse Cow": {
     "players": 2,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -4700,12 +5086,14 @@
   "Apocalyptic Quest": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Adventure"
     ]
   },
   "Apollo 18 Mission to the Moon": {
     "players": 1,
+    "publisher": "Accolade, Inc.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -4720,6 +5108,7 @@
   },
   "Apple Panic": {
     "players": 1,
+    "publisher": "Br\u00f8derbund Software, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -4736,6 +5125,7 @@
   "Apples and Oranges": {
     "players": 2,
     "rating": 1.0,
+    "publisher": "Expert Source Code, Inc.",
     "genres": [
       "Board / Party Game"
     ],
@@ -4750,6 +5140,7 @@
   },
   "Aqua Man": {
     "players": 1,
+    "publisher": "Soleau Software, Inc.",
     "genres": [
       "Puzzle",
       "Strategy"
@@ -4769,6 +5160,7 @@
   "Aquanoid": {
     "players": 1,
     "rating": 1.5,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
@@ -4776,6 +5168,7 @@
   "Aquaphobia": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Action"
     ],
@@ -4790,6 +5183,7 @@
   },
   "Aquarius - An Aquatic Experience": {
     "players": 1,
+    "publisher": "The SCI Programming Community",
     "genres": [
       "Action"
     ],
@@ -4805,6 +5199,7 @@
   "Ar'Kritz the Intruder": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Microfolie's",
     "genres": [
       "Action",
       "Platform"
@@ -4820,6 +5215,7 @@
   },
   "Arachnophobia": {
     "rating": 5.0,
+    "publisher": "Walt Disney Computer Software, Inc.",
     "genres": [
       "Action"
     ],
@@ -4834,6 +5230,7 @@
   },
   "Arcade 2": {
     "players": 2,
+    "publisher": "Prism Leisure Corporation Plc",
     "genres": [
       "Action",
       "Sports"
@@ -4841,11 +5238,13 @@
   },
   "Arcade Bonanza": {
     "rating": 1.0,
+    "publisher": "Keypunch Software, Inc.",
     "genres": [
       "Action"
     ]
   },
   "Arcade Fruit Machine": {
+    "publisher": "Celery Software",
     "genres": [
       "Casino"
     ],
@@ -4860,6 +5259,7 @@
   },
   "Arcade Pool": {
     "rating": 2.0,
+    "publisher": "Team17 Software Limited",
     "genres": [
       "Sports"
     ],
@@ -4875,6 +5275,7 @@
   "Arcade Trivia Quiz": {
     "players": 2,
     "rating": 1.0,
+    "publisher": "Zeppelin Games Limited",
     "genres": [
       "Board / Party Game",
       "Quiz"
@@ -4883,6 +5284,7 @@
   "Arcade Volleyball": {
     "players": 2,
     "rating": 1.3,
+    "publisher": "Freeware",
     "genres": [
       "Arcade",
       "Sports"
@@ -4890,6 +5292,7 @@
   },
   "Arcanoid": {
     "players": 1,
+    "publisher": "Badisoft",
     "genres": [
       "Action"
     ]
@@ -4897,12 +5300,14 @@
   "Archeodroid": {
     "players": 1,
     "rating": 3.5,
+    "publisher": "Emerald Valley Publishing Co.",
     "genres": [
       "Strategy"
     ]
   },
   "Archer Maclean's Pool": {
     "rating": 3.3,
+    "publisher": "Virgin Interactive Entertainment, Inc.",
     "genres": [
       "Sports"
     ],
@@ -4918,6 +5323,7 @@
   "Archery": {
     "players": 2,
     "rating": 1.0,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Sports"
@@ -4925,6 +5331,7 @@
   },
   "Archibald Applebrook's Abenteuer": {
     "players": 1,
+    "publisher": "Software 2000",
     "genres": [
       "Adventure"
     ]
@@ -4932,6 +5339,7 @@
   "Archimedean Dynasty": {
     "players": 1,
     "rating": 4.2,
+    "publisher": "Blue Byte",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -4948,6 +5356,7 @@
   },
   "Archipelagos": {
     "rating": 2.5,
+    "publisher": "FanFare",
     "genres": [
       "Puzzle",
       "Strategy"
@@ -4964,6 +5373,7 @@
   "Archon": {
     "players": 2,
     "rating": 3.8,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Action",
       "Board / Party Game",
@@ -4981,6 +5391,7 @@
   "Archon Ultra": {
     "players": 2,
     "rating": 2.8,
+    "publisher": "Strategic Simulations, Inc.",
     "genres": [
       "Action",
       "Board / Party Game",
@@ -4998,6 +5409,7 @@
   "Arctic Adventure": {
     "players": 1,
     "rating": 2.0,
+    "publisher": "Apogee Software, Ltd.",
     "genres": [
       "Action",
       "Platform"
@@ -5013,6 +5425,7 @@
   },
   "Arctic Moves": {
     "players": 1,
+    "publisher": "Dinamic Software",
     "genres": [
       "Action",
       "Fighting"
@@ -5029,6 +5442,7 @@
   "Arcticfox": {
     "players": 1,
     "rating": 3.2,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Action",
       "Vehicle Simulation"
@@ -5044,6 +5458,7 @@
   },
   "Arcy 2": {
     "players": 1,
+    "publisher": "CAPS Softwaredesign ULM",
     "genres": [
       "Puzzle"
     ]
@@ -5051,6 +5466,7 @@
   "Are We There Yet": {
     "players": 1,
     "rating": 2.2,
+    "publisher": "Electronic Arts, Inc.",
     "genres": [
       "Puzzle"
     ]
@@ -5058,6 +5474,7 @@
   "Are You Afraid of the Dark - The Tale of Orpheo's Curse": {
     "players": 1,
     "rating": 4.3,
+    "publisher": "Viacom New Media",
     "genres": [
       "Adventure"
     ],
@@ -5072,6 +5489,7 @@
   },
   "Argh": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Puzzle"
     ],
@@ -5087,6 +5505,7 @@
   "Argo Checkers": {
     "players": 2,
     "rating": 4.5,
+    "publisher": "Software Creations",
     "genres": [
       "Board / Party Game"
     ],
@@ -5100,6 +5519,7 @@
     ]
   },
   "Argonaut": {
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -5114,6 +5534,7 @@
   },
   "Ario Bros": {
     "rating": 4.0,
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -5128,11 +5549,13 @@
   },
   "Arithmetic Games Set 1": {
     "players": 2,
+    "publisher": "IBM",
     "genres": [
       "Education"
     ]
   },
   "Arithmetic Games Set 2": {
+    "publisher": "IBM",
     "genres": [
       "Education"
     ],
@@ -5148,6 +5571,7 @@
   "Ariva": {
     "players": 2,
     "rating": 2.5,
+    "publisher": "Wizard Systems Software",
     "genres": [
       "Action",
       "Puzzle"
@@ -5156,18 +5580,21 @@
   "Ark of Time": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "KOEI Co., Ltd.",
     "genres": [
       "Adventure"
     ]
   },
   "Arka": {
     "rating": 3.4,
+    "publisher": "Eclipse",
     "genres": [
       "Action"
     ]
   },
   "Arkanoid": {
     "rating": 3.4,
+    "publisher": "Taito Corporation",
     "genres": [
       "Action",
       "Paddle / Pong"
@@ -5183,6 +5610,7 @@
   },
   "Arkanoid II - Revenge of Doh": {
     "rating": 3.7,
+    "publisher": "Taito Corporation",
     "genres": [
       "Action",
       "Paddle / Pong"
@@ -5198,6 +5626,7 @@
   },
   "Armada (1989)": {
     "players": 1,
+    "publisher": "Atari, Inc.",
     "genres": [
       "Strategy"
     ],
@@ -5212,6 +5641,7 @@
   },
   "Armada (1992)": {
     "players": 2,
+    "publisher": "Villa Crespo Software, Inc.",
     "genres": [
       "Board / Party Game"
     ]
@@ -5219,6 +5649,7 @@
   "Armada 2525": {
     "players": 1,
     "rating": 5.0,
+    "publisher": "Interstel Corporation",
     "genres": [
       "Strategy"
     ],
@@ -5234,12 +5665,14 @@
   "Armaeth - The Lost Kingdom": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Grandslam Entertainments Ltd",
     "genres": [
       "Adventure"
     ]
   },
   "Armageddon - Hondon Sog-Euro": {
     "players": 1,
+    "publisher": "Pantech Corporation",
     "genres": [
       "Action",
       "Shooter"
@@ -5248,6 +5681,7 @@
   "Armor Alley": {
     "players": 2,
     "rating": 2.5,
+    "publisher": "Three-Sixty Pacific, Inc.",
     "genres": [
       "Action",
       "Strategy"
@@ -5264,6 +5698,7 @@
   "Armored Fist": {
     "players": 1,
     "rating": 3.1,
+    "publisher": "NovaLogic, Inc.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -5279,6 +5714,7 @@
   "Armored Fist 2": {
     "players": 1,
     "rating": 3.8,
+    "publisher": "NovaLogic, Inc.",
     "genres": [
       "Vehicle Simulation"
     ],
@@ -5294,6 +5730,7 @@
   "Armored Moon - The Next Eden": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Microforum International",
     "genres": [
       "Strategy"
     ]
@@ -5301,12 +5738,14 @@
   "Armorik the Viking - The Eight Conquests": {
     "players": 1,
     "rating": 1.0,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Action"
     ]
   },
   "Armour-Geddon": {
     "rating": 2.5,
+    "publisher": "Psygnosis Limited",
     "genres": [
       "Action",
       "Strategy",
@@ -5323,6 +5762,7 @@
   },
   "Army": {
     "players": 2,
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -5338,6 +5778,7 @@
   "Army Moves": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Dinamic Software",
     "genres": [
       "Action",
       "Shooter"
@@ -5345,6 +5786,7 @@
   },
   "Arnhem - The 'Market Garden' Operation": {
     "players": 2,
+    "publisher": "Cases Computer Simulations Ltd.",
     "genres": [
       "Strategy"
     ]
@@ -5352,6 +5794,7 @@
   "Arnie 2": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Celery Software",
     "genres": [
       "Action",
       "Shooter"
@@ -5372,6 +5815,7 @@
     ]
   },
   "Arnold Palmer Tournament Golf": {
+    "publisher": "Elite Systems Ltd.",
     "genres": [
       "Sports"
     ],
@@ -5389,6 +5833,7 @@
   },
   "Aro": {
     "players": 1,
+    "publisher": "D'India Software",
     "genres": [
       "Action",
       "Platform"
@@ -5396,6 +5841,7 @@
   },
   "Aro II": {
     "players": 2,
+    "publisher": "D'India Software",
     "genres": [
       "Action",
       "Platform"
@@ -5411,12 +5857,14 @@
   },
   "Aro and Elmi Fighting the Bacteria Gang": {
     "players": 1,
+    "publisher": "Wybert",
     "genres": [
       "Action",
       "Platform"
     ]
   },
   "Around the World Trivia": {
+    "publisher": "Software Creations",
     "genres": [
       "Quiz"
     ],
@@ -5432,6 +5880,7 @@
   "Around the World in 80 Days": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "EA*Kids",
     "genres": [
       "Adventure",
       "Education"
@@ -5447,6 +5896,7 @@
   },
   "Arrakis": {
     "rating": 2.5,
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -5468,6 +5918,7 @@
   },
   "Arthur - The Quest for Excalibur": {
     "players": 1,
+    "publisher": "Infocom, Inc.",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -5490,12 +5941,14 @@
   },
   "Artillery": {
     "rating": 2.5,
+    "publisher": "The Portland IBM Personal Computer Club",
     "genres": [
       "Action",
       "Shooter"
     ]
   },
   "Artman's Goplanes!": {
+    "publisher": "World Domination Productions",
     "genres": [
       "Action",
       "Shooter"
@@ -5510,6 +5963,7 @@
     ]
   },
   "Artura": {
+    "publisher": "Arcadia Systems, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -5525,6 +5979,7 @@
   },
   "Arya Vaiv": {
     "players": 1,
+    "publisher": "Dongleware Verlags GmbH",
     "genres": [
       "Action",
       "Shooter"
@@ -5532,6 +5987,7 @@
   },
   "Ascendancy": {
     "rating": 3.1,
+    "publisher": "Logic Factory, Inc.",
     "genres": [
       "Construction and Management Simulation",
       "Strategy"
@@ -5548,6 +6004,7 @@
   "Ascii Sector": {
     "players": 1,
     "rating": 4.5,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing",
       "Vehicle Simulation"
@@ -5562,6 +6019,7 @@
     ]
   },
   "Ashes of Empire": {
+    "publisher": "GameTek, Inc.",
     "genres": [
       "Strategy",
       "Vehicle Simulation"
@@ -5577,6 +6035,7 @@
   },
   "Asian Challenge, The": {
     "players": 1,
+    "publisher": "Conrad Button's Software",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -5593,6 +6052,7 @@
   "Aspetra": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Zonarware",
     "genres": [
       "Role-Playing"
     ],
@@ -5606,6 +6066,7 @@
     ]
   },
   "Assault Rigs": {
+    "publisher": "Psygnosis Limited",
     "genres": [
       "Action",
       "Shooter"
@@ -5621,6 +6082,7 @@
   },
   "Assault Trooper": {
     "players": 1,
+    "publisher": "Webfoot Technologies",
     "genres": [
       "Action"
     ],
@@ -5636,6 +6098,7 @@
   "Assault Wing": {
     "players": 2,
     "rating": 3.2,
+    "publisher": "Studfarm Studios",
     "genres": [
       "Action",
       "Shooter"
@@ -5651,6 +6114,7 @@
   },
   "Astatin": {
     "players": 1,
+    "publisher": "Tale Software",
     "genres": [
       "Puzzle",
       "Strategy"
@@ -5659,6 +6123,7 @@
   "Asterix - Caesar's Challenge": {
     "players": 2,
     "rating": 3.5,
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Board / Party Game"
     ],
@@ -5673,6 +6138,7 @@
   },
   "Asterix - Operation Getafix": {
     "rating": 2.0,
+    "publisher": "Coktel Vision",
     "genres": [
       "Action",
       "Adventure"
@@ -5687,6 +6153,7 @@
     ]
   },
   "Asterix and Obelix": {
+    "publisher": "Infogrames, Inc.",
     "genres": [
       "Action"
     ],
@@ -5696,6 +6163,7 @@
   },
   "Asteroid Impact": {
     "players": 1,
+    "publisher": "Gamescape",
     "genres": [
       "Action",
       "Shooter"
@@ -5710,12 +6178,14 @@
     ]
   },
   "Asteroid Pilot": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
   },
   "Astro Blaster": {
     "players": 2,
+    "publisher": "Freeware",
     "genres": [
       "Action",
       "Shooter"
@@ -5734,6 +6204,7 @@
   },
   "Astro Fire": {
     "rating": 5.0,
+    "publisher": "ORT Software",
     "genres": [
       "Action",
       "Shooter"
@@ -5753,6 +6224,7 @@
   "Astro-Dodge": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Digital Marketing Corporation",
     "genres": [
       "Action",
       "Shooter"
@@ -5761,6 +6233,7 @@
   "Astro-Grover": {
     "players": 1,
     "rating": 4.5,
+    "publisher": "Hi-Tech Expressions, Inc.",
     "genres": [
       "Education"
     ],
@@ -5774,6 +6247,7 @@
     ]
   },
   "Astro3D": {
+    "publisher": "Jarrod Davis Software Company",
     "genres": [
       "Action",
       "Flight Simulator",
@@ -5790,6 +6264,7 @@
   },
   "Astrocounter of Crescents": {
     "players": 1,
+    "publisher": "S&T On-Line",
     "genres": [
       "Action",
       "Platform"
@@ -5797,12 +6272,14 @@
   },
   "Astronomy Quiz, The": {
     "players": 1,
+    "publisher": "Softdisk Publishing",
     "genres": [
       "Quiz"
     ]
   },
   "Astrorock": {
     "players": 1,
+    "publisher": "Atlantean Interactive Games",
     "genres": [
       "Action",
       "Shooter"
@@ -5811,6 +6288,7 @@
   "Astrotit": {
     "players": 1,
     "rating": 0.5,
+    "publisher": "Rudeware",
     "genres": [
       "Action",
       "Shooter"
@@ -5826,6 +6304,7 @@
   },
   "Asylum (1985)": {
     "players": 1,
+    "publisher": "Screenplay",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -5833,6 +6312,7 @@
   },
   "Asylum (1991)": {
     "players": 1,
+    "publisher": "Med Systems Software",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -5848,6 +6328,7 @@
   },
   "At the Carnival": {
     "players": 1,
+    "publisher": "Miles Computing",
     "genres": [
       "Puzzle"
     ],
@@ -5863,6 +6344,7 @@
   "Atlantis - The lost Tales": {
     "players": 1,
     "rating": 4.1,
+    "publisher": "Cryo Interactive Entertainment",
     "genres": [
       "Adventure"
     ],
@@ -5899,6 +6381,7 @@
   },
   "Atomic Tetris": {
     "players": 1,
+    "publisher": "Freeware",
     "genres": [
       "Strategy"
     ],
@@ -5914,6 +6397,7 @@
   "Atomino": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "Psygnosis Limited",
     "genres": [
       "Puzzle"
     ],
@@ -5931,6 +6415,7 @@
   "Atomix": {
     "players": 2,
     "rating": 1.0,
+    "publisher": "Thalion Software GmbH",
     "genres": [
       "Puzzle"
     ],
@@ -5946,6 +6431,7 @@
   },
   "Attack": {
     "players": 1,
+    "publisher": "IBM",
     "genres": [
       "Action"
     ]
@@ -5953,12 +6439,14 @@
   "Attack On Altair": {
     "players": 1,
     "rating": 2.2,
+    "publisher": "Windmill Software",
     "genres": [
       "Action"
     ]
   },
   "Austerlitz": {
     "players": 2,
+    "publisher": "Mirrorsoft Ltd.",
     "genres": [
       "Strategy"
     ],
@@ -5975,6 +6463,7 @@
   },
   "Austerlitz 1805": {
     "rating": 2.5,
+    "publisher": "General Quarters Software",
     "genres": [
       "Strategy"
     ],
@@ -5988,6 +6477,7 @@
     ]
   },
   "Authentic Taiwan Sixteen Mahjong": {
+    "publisher": "Softstar Entertainment, Inc.",
     "genres": [
       "Puzzle"
     ]
@@ -5995,11 +6485,13 @@
   "Autka": {
     "players": 2,
     "rating": 3.0,
+    "publisher": "L.K. Avalon",
     "genres": [
       "Racing / Driving"
     ]
   },
   "Autobots": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -6014,6 +6506,7 @@
   },
   "Autocrash": {
     "players": 2,
+    "publisher": "Zigurat Software S.L.",
     "genres": [
       "Action",
       "Racing / Driving"
@@ -6022,6 +6515,7 @@
   "Autoduel": {
     "players": 1,
     "rating": 4.0,
+    "publisher": "ORIGIN Systems, Inc.",
     "genres": [
       "Action",
       "Racing / Driving",
@@ -6037,6 +6531,7 @@
     ]
   },
   "Automon": {
+    "publisher": "Freeware",
     "genres": [
       "Board / Party Game"
     ],
@@ -6052,6 +6547,7 @@
   "Avalon": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Freeware",
     "genres": [
       "Role-Playing"
     ],
@@ -6067,6 +6563,7 @@
   "Avenger": {
     "players": 2,
     "rating": 2.5,
+    "publisher": "Deadline",
     "genres": [
       "Action",
       "Shooter"
@@ -6081,6 +6578,7 @@
     ]
   },
   "Avenger of Rubicon": {
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -6088,6 +6586,7 @@
   },
   "Averno": {
     "players": 1,
+    "publisher": "Proein Softline",
     "genres": [
       "Platform",
       "Puzzle"
@@ -6095,6 +6594,7 @@
   },
   "Avish!": {
     "players": 1,
+    "publisher": "BUG Multisystem Ltd.",
     "genres": [
       "Action",
       "Platform",
@@ -6110,12 +6610,14 @@
     ]
   },
   "Avoid the Awful Thing that Vaguely Resembles a Banana!!": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ]
   },
   "Avoid the Noid": {
     "rating": 1.8,
+    "publisher": "ShareData, Inc.",
     "genres": [
       "Action",
       "Platform"
@@ -6123,6 +6625,7 @@
   },
   "Avon": {
     "players": 1,
+    "publisher": "Topologika Software, Ltd.",
     "genres": [
       "Adventure"
     ],
@@ -6136,6 +6639,7 @@
     ]
   },
   "Awe-Chasm, The": {
+    "publisher": "Freeware",
     "genres": [
       "Adventure",
       "Interactive Fiction"
@@ -6150,6 +6654,7 @@
     ]
   },
   "Awesome Earl in SkateRock": {
+    "publisher": "ShareData, Inc.",
     "genres": [
       "Action",
       "Sports"
@@ -6164,6 +6669,7 @@
     ]
   },
   "AxTrons": {
+    "publisher": "Freeware",
     "genres": [
       "Action"
     ],
@@ -6178,6 +6684,7 @@
   },
   "Axe of Rage": {
     "rating": 3.8,
+    "publisher": "Epyx, Inc.",
     "genres": [
       "Action",
       "Fighting"
@@ -6194,6 +6701,7 @@
   "Axia": {
     "players": 1,
     "rating": 2.5,
+    "publisher": "Dungeon Dwellers Design",
     "genres": [
       "Action",
       "Shooter"
@@ -6202,6 +6710,7 @@
   "Azrael's Tear": {
     "players": 1,
     "rating": 1.5,
+    "publisher": "Mindscape, Inc.",
     "genres": [
       "Adventure",
       "Role-Playing"
@@ -6217,6 +6726,7 @@
   },
   "B-1 Nuclear Bomber": {
     "players": 1,
+    "publisher": "The Avalon Hill Game Company",
     "genres": [
       "Flight Simulator"
     ],
@@ -6232,6 +6742,7 @@
   "B-17 Flying Fortress": {
     "players": 1,
     "rating": 3.9,
+    "publisher": "MicroProse Software, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -6249,6 +6760,7 @@
   },
   "B-24": {
     "players": 1,
+    "publisher": "Strategic Simulations, Inc.",
     "genres": [
       "Flight Simulator"
     ],
@@ -6262,6 +6774,7 @@
     ]
   },
   "B-Clopd": {
+    "publisher": "John Trapolka Memorial Krew",
     "genres": [
       "Action",
       "Platform"
@@ -6269,6 +6782,7 @@
   },
   "B.I.G.": {
     "players": 1,
+    "publisher": "Hurtownia Oprogramowania USER",
     "genres": [
       "Action",
       "Platform"
@@ -6283,6 +6797,7 @@
     ]
   },
   "BAD - Blasting, Annihilation and Destruction": {
+    "publisher": "Pseudos Software",
     "genres": [
       "Action",
       "Shooter"
@@ -6290,6 +6805,7 @@
   },
   "BARQ - The Rise of Freedom": {
     "players": 1,
+    "publisher": "International Games",
     "genres": [
       "Action",
       "Shooter"
@@ -6298,6 +6814,7 @@
   "BAT": {
     "players": 1,
     "rating": 4.2,
+    "publisher": "Ubi Soft Entertainment Software",
     "genres": [
       "Adventure",
       "Role-Playing"
@@ -6320,6 +6837,7 @@
   "BAT 2 - The Koshan Conspiracy": {
     "players": 1,
     "rating": 3.0,
+    "publisher": "Ubi Soft Entertainment Software",
     "genres": [
       "Adventure",
       "Strategy"

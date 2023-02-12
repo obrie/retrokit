@@ -7,11 +7,15 @@
   "ace": {
     "players": 1,
     "rating": 0.9,
+    "year": 1984,
+    "developer": "Advanced Microcomputer Systems",
+    "publisher": "Cinematronics",
     "genres": [
       "Action",
       "Platform",
       "Platform / Run Jump"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -21,11 +25,20 @@
       }
     ]
   },
-  "asterix": {},
+  "asterix": {
+    "players": 2,
+    "rating": 0.7,
+    "year": 1992,
+    "developer": "Konami",
+    "publisher": "Konami"
+  },
   "astroboy": {},
   "astron": {
     "players": 1,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "1st person",
       "Shoot'em Up",
@@ -42,8 +55,11 @@
     ]
   },
   "badlands": {
-    "players": 2,
-    "rating": 0.5,
+    "players": 1,
+    "rating": 0.8,
+    "year": 1984,
+    "developer": "Konami",
+    "publisher": "Konami",
     "genres": [
       "Driving",
       "Driving / Race",
@@ -61,6 +77,9 @@
   "bega": {
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -83,10 +102,14 @@
   "cliff": {
     "players": 2,
     "rating": 0.9,
+    "year": 1983,
+    "developer": "Stern Electronics, Inc.",
+    "publisher": "Stern Electronics",
     "genres": [
       "Platform",
       "Platform / Run Jump"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -100,6 +123,9 @@
   "cobra": {
     "players": 1,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Shooter"
     ],
@@ -146,10 +172,14 @@
   "esh": {
     "players": 1,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Funai",
+    "publisher": "Gakken",
     "genres": [
       "Platform",
       "Platform / Run Jump"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -164,6 +194,11 @@
   },
   "fireandice": {},
   "freedomfighter": {
+    "players": 1,
+    "rating": 0.9,
+    "year": 1987,
+    "developer": "Millennium Game",
+    "publisher": "Millennium Game",
     "controls": [
       "lightgun"
     ]
@@ -172,11 +207,15 @@
   "galaxy": {
     "players": 1,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "1st person",
       "Shooter",
       "Shooter / Plane"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -189,13 +228,23 @@
   "gpworld": {
     "players": 1,
     "rating": 0.4,
+    "year": 1984,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Driving",
       "Race",
       "Race 1st Pers. view"
-    ]
+    ],
+    "age_rating": "E"
   },
-  "hayate": {},
+  "hayate": {
+    "players": 1,
+    "rating": 0.7,
+    "year": 1984,
+    "developer": "Taito",
+    "publisher": "Taito"
+  },
   "hydrosub2021": {
     "controls": [
       "lightgun"
@@ -204,6 +253,9 @@
   "interstellar": {
     "players": 1,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Funai",
+    "publisher": "Gakken",
     "genres": [
       "Driving",
       "Race",
@@ -219,7 +271,13 @@
       }
     ]
   },
-  "jack": {},
+  "jack": {
+    "players": 2,
+    "rating": 0.6,
+    "year": 1982,
+    "developer": "Cinematronics",
+    "publisher": "Hara Industries (Cinematronics license)"
+  },
   "johnnyrock": {
     "controls": [
       "lightgun"
@@ -236,6 +294,9 @@
   "lair": {
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Sullivan Bluth Interactive",
+    "publisher": "Cinematronics",
     "genres": [
       "Action",
       "Action / Adventure",
@@ -257,6 +318,9 @@
   "lair2": {
     "players": 1,
     "rating": 0.9,
+    "year": 1991,
+    "developer": "Sullivan Bluth Interactive",
+    "publisher": "Leland Corp",
     "genres": [
       "Action",
       "Action / Adventure",
@@ -291,6 +355,9 @@
   "mach3": {
     "players": 1,
     "rating": 0.9,
+    "year": 1983,
+    "developer": "Mylstar",
+    "publisher": "Mylstar",
     "genres": [
       "Shoot'em Up"
     ],
@@ -307,6 +374,10 @@
     ]
   },
   "maddog": {
+    "players": 1,
+    "year": 1990,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "controls": [
       "lightgun"
     ],
@@ -320,6 +391,9 @@
     ]
   },
   "maddog2": {
+    "year": 1992,
+    "developer": "American Laser Games",
+    "publisher": "American Laser Games",
     "controls": [
       "lightgun"
     ],
@@ -335,6 +409,11 @@
   "mononoke": {},
   "oeil": {},
   "platoon": {
+    "players": 2,
+    "rating": 0.6,
+    "year": 1987,
+    "developer": "Sunsoft",
+    "publisher": "Nintendo",
     "controls": [
       "lightgun"
     ]
@@ -348,6 +427,9 @@
   "roadblaster": {
     "players": 1,
     "rating": 0.85,
+    "year": 1985,
+    "developer": "Data East",
+    "publisher": "Data East",
     "genres": [
       "Driving",
       "Race"
@@ -357,9 +439,11 @@
   "sdq": {
     "players": 1,
     "rating": 0.8,
+    "year": 1984,
     "genres": [
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -392,8 +476,17 @@
   },
   "starblazers": {},
   "suckerpunch": {},
-  "timegal": {},
+  "timegal": {
+    "players": 1,
+    "rating": 0.8,
+    "developer": "Taito",
+    "publisher": "Taito"
+  },
   "timetraveler": {
+    "players": 1,
+    "rating": 0.7,
+    "developer": "Virtual Image Productions",
+    "publisher": "SEGA",
     "manuals": [
       {
         "languages": [
@@ -407,6 +500,9 @@
   "tq": {
     "players": 1,
     "rating": 0.7,
+    "year": 1984,
+    "developer": "RDI Video Systems",
+    "publisher": "RDI Video Systems",
     "genres": [
       "Platform",
       "Platform / Run Jump"
@@ -424,10 +520,19 @@
     ]
   },
   "triad": {},
-  "tron": {},
+  "tron": {
+    "players": 2,
+    "rating": 0.9,
+    "year": 1982,
+    "developer": "Bally Midway",
+    "publisher": "Bally Midway"
+  },
   "uvt": {
     "players": 1,
     "rating": 0.7,
+    "year": 1984,
+    "developer": "Mylstar",
+    "publisher": "Mylstar",
     "genres": [
       "Shoot'em Up"
     ],

@@ -17,7 +17,10 @@
   },
   "Advanced Dungeons & Dragons": {
     "id": "179c08febec9260483dece869f46475cf88e8a2b",
-    "players": 2,
+    "players": 1,
+    "year": 1983,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -32,7 +35,10 @@
   },
   "Advanced Dungeons & Dragons - Treasure of Tarmin": {
     "id": "b89d708d5aa806e6345dd9ca8f70f956c608c50b",
-    "players": 1,
+    "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Role playing games"
     ],
@@ -48,9 +54,13 @@
   "Air Strike": {
     "id": "4c46120fd4b38ccf15ba2de596ea6ed6b93a7bed",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Shooter"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -64,6 +74,9 @@
     "id": "51c9943b808186c2d2485f6d812c24cfdf075c92",
     "players": 2,
     "rating": 0.6,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Driving",
       "Race"
@@ -81,6 +94,9 @@
     "id": "4b7bb85b5275da37b95d36c2caaff99774a6ee34",
     "players": 1,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -97,6 +113,9 @@
     "id": "7cdccb1926a4c1fbfaa2783971f97f17d1dbd6e1",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -113,6 +132,9 @@
     "id": "830fa01a05210d2411d074202aeba57e9242c531",
     "players": 2,
     "rating": 0.6,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Driving",
       "Race"
@@ -130,6 +152,9 @@
     "id": "574d7ff1963cfb2815622d88b80ebf3acc5be745",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Simulation"
     ],
@@ -146,6 +171,9 @@
     "id": "5edb891e056edd02007e0dc6abce8bc6ceffa985",
     "players": 4,
     "rating": 0.7,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -162,6 +190,9 @@
     "id": "f8eaabaad7e34ad32fcbdc7fd48cb6f80f0ac569",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -177,6 +208,9 @@
   "Blockade Runner": {
     "id": "428f680e56452aac58d630a71840aa35be4078a3",
     "players": 1,
+    "year": 1983,
+    "developer": "Interphase Technologies Inc.",
+    "publisher": "Interphase Technologies Inc.",
     "genres": [
       "Action"
     ],
@@ -192,6 +226,9 @@
   "Body Slam! - Super Pro Wrestling": {
     "id": "b97a9b3370df783474bee8b61c22ddac65900581",
     "players": 1,
+    "year": 1988,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -208,6 +245,9 @@
     "id": "13b159acd015d1f61b8ad6d209eee70c76bd3aaa",
     "players": 1,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -223,7 +263,10 @@
   "Boxing": {
     "id": "d0a9b1af1d0905901ad75307df93052d1112a5b8",
     "players": 2,
-    "rating": 1,
+    "rating": 1.0,
+    "year": 1981,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports"
     ],
@@ -239,12 +282,19 @@
   "Brickout!": {
     "id": "317ff62cf8822eb0ae9ec45a0e096bc107c17d56",
     "players": 1,
-    "rating": 0.8
+    "rating": 0.8,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
+    "age_rating": "E"
   },
   "Bump 'n' Jump": {
     "id": "7f7f75fb188fec9769894d5421902c1a65f17feb",
     "players": 2,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Driving",
       "Race"
@@ -262,6 +312,9 @@
     "id": "969c2fbcaf4f3cc820dcabe5a23c8ddbdebea0b2",
     "players": 2,
     "rating": 0.85,
+    "year": 1982,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -278,6 +331,9 @@
     "id": "a8f65a6538db7802179d16c1f00b4a6ca57cf990",
     "players": 1,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -293,6 +349,9 @@
   "Carnival": {
     "id": "2881e78522c13c4d84684b9a7bfd72cf582a9c34",
     "players": 2,
+    "year": 1982,
+    "developer": "SEGA",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -309,6 +368,9 @@
     "id": "1cf8e1a6685f596107ea3968b61abac797092e0e",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -324,6 +386,9 @@
   "Championship Tennis": {
     "id": "f0d8714cab4258eeb06a33c33ef0f21c1dabd19f",
     "players": 2,
+    "year": 1986,
+    "developer": "Nice  Ideas",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -339,6 +404,9 @@
   "Checkers ~ Draughts": {
     "id": "a7fb0d57ec31417cd141e1ef82ac063354e9cf8a",
     "players": 2,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -354,6 +422,9 @@
   "Chip Shot - Super Pro Golf": {
     "id": "08c5d6f8ea399ba8cba62e6ef307361b8cd2d0d1",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports",
       "Sports / Golf"
@@ -370,6 +441,9 @@
   "Commando": {
     "id": "84f128a8ffbb55a2bc5f92d1f79f0777c8b5aede",
     "players": 2,
+    "year": 1987,
+    "developer": "Capcom",
+    "publisher": "Intv Corp",
     "genres": [
       "Action"
     ],
@@ -386,6 +460,9 @@
     "id": "3455b64ec986742151f52bcc924237d1af668f17",
     "players": 2,
     "rating": 0.4,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "SEGA",
     "genres": [
       "Action"
     ],
@@ -401,18 +478,25 @@
   "Crazy Clones": {
     "id": "d17ea8037e0f076b592e82cee6c1eb6b277ec360",
     "players": 2,
+    "year": 1981,
     "genres": [
       "Action"
     ]
   },
   "Deep Pockets - Super Pro Pool & Billiards": {
     "id": "daddc4b8619aa4677086fb49320471c646a78d74",
-    "players": 2
+    "players": 2,
+    "year": 1990,
+    "developer": "Realtime Associates",
+    "publisher": "Realtime Associates"
   },
   "Defender": {
     "id": "9e1d00803aa3751d77b64f7b8bd39099909783c7",
     "players": 1,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "Atari",
+    "publisher": "Atari",
     "genres": [
       "Action"
     ],
@@ -429,6 +513,9 @@
     "id": "fcc2fe30315bde65cc217e7ed99dec3ef5e4cb05",
     "players": 2,
     "rating": 0.6,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -446,7 +533,9 @@
   },
   "Demonstration Cartridge - Green": {
     "id": "5219581ee4ea272643156adf20a4baebd227077d",
-    "players": 1
+    "players": 1,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics"
   },
   "Demonstration Cartridge - Red": {
     "id": "cc70a465a86690789bace45b5648dc48903a42d6",
@@ -456,6 +545,9 @@
     "id": "87104668163aed100f65ebdeef1d26d26068a99f",
     "players": 2,
     "rating": 0.65,
+    "year": 1987,
+    "developer": "Namco",
+    "publisher": "Intv Corp",
     "genres": [
       "Action"
     ],
@@ -472,6 +564,9 @@
     "id": "dc55e495a378e123e24d23dd7db7a1278fc10013",
     "players": 2,
     "rating": 0.4,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Action"
     ],
@@ -487,6 +582,10 @@
   "Donkey Kong": {
     "id": "e4600174062c7892932483fdfa9e80c5cdd096f7",
     "players": 2,
+    "rating": 0.65,
+    "year": 1982,
+    "developer": "Nintendo",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Platform"
     ],
@@ -503,6 +602,9 @@
     "id": "4b2549d2082b973dca7d6031e161938460b33e87",
     "players": 2,
     "rating": 0.65,
+    "year": 2018,
+    "developer": "Nintendo",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -519,6 +621,9 @@
     "id": "ac84c6d91c08c97c7cc930bcf047bd4324a51c99",
     "players": 2,
     "rating": 0.85,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -535,6 +640,9 @@
     "id": "b0c76757272dead91fcb91a86b1e8c833d5d25f7",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -551,6 +659,9 @@
     "id": "b6ae959995a3f5b526c3fe37e6b17a9e71b23dc4",
     "players": 1,
     "rating": 0.85,
+    "year": 1983,
+    "developer": "Cheshire Engineering",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -566,6 +677,9 @@
   "Electric Company, The - Math Fun": {
     "id": "61aae31e9146de4ad1fd27681453515834386aa0",
     "players": 2,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Educational"
     ],
@@ -581,6 +695,9 @@
   "Electric Company, The - Word Fun": {
     "id": "bf52c32f236072234c7aeb7ae47e645c005dee24",
     "players": 2,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Educational"
     ],
@@ -597,6 +714,9 @@
     "id": "68cc8e235cda55354853a273b1e93dc207103d69",
     "players": 1,
     "rating": 0.35,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -613,6 +733,9 @@
     "id": "c1607042b9e933d0ce4d37f40cfbb6f0786851a1",
     "players": 2,
     "rating": 0.85,
+    "year": 1982,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -629,6 +752,9 @@
     "id": "f9399c752817dfacc3a0467014f7254191310271",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -644,9 +770,12 @@
   "Game Factory": {
     "id": "7dfd38b48477ab5d59e09351e8ac27e9eaf2bd64",
     "players": 2,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Various"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -659,6 +788,8 @@
   "Go for the Gold": {
     "id": "66419c903897f2a67508b2de1d8cd3780be80b19",
     "players": 2,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports"
     ]
@@ -666,9 +797,13 @@
   "Grid Shock": {
     "id": "c7669c85e4b574d4e98de4ce169cce32736ba34b",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Shooter"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Happy Holidays - Easter Eggcitement": {
     "id": "e7ae2c20e9f620af40ffe42fea63ae6a1f6fe61b"
@@ -676,6 +811,9 @@
   "Happy Holidays - Santa's Helper": {
     "id": "694f0b66429a0c740c8aa6057b940858ed198b7e",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Demo"
     ]
@@ -684,6 +822,9 @@
     "id": "5df78bc688741583693a1cdb71e2d50d358f4914",
     "players": 2,
     "rating": 0.95,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Strategy"
     ],
@@ -700,6 +841,9 @@
     "id": "4c8b4631ca63c18753eb55ed14683b559a4440da",
     "players": 6,
     "rating": 0.75,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports"
     ],
@@ -716,6 +860,9 @@
     "id": "d651a1bc501456f3606406884afa03b1bd34e527",
     "players": 1,
     "rating": 0.75,
+    "year": 1986,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Action"
     ],
@@ -731,9 +878,12 @@
   "Hypnotic Lights": {
     "id": "8dfe731e1d3c7e884ca4c9b23f56730e1b200b5e",
     "players": 1,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Puzzle-Game"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -749,6 +899,9 @@
   "Ice Trek": {
     "id": "788e6c4a33841973493907c1d8989b7904d94fcd",
     "players": 1,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -771,6 +924,9 @@
   "Jetsons' Ways with Words, The": {
     "id": "5085569079c24699980ee5c8791bef1d37d2883c",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Educational"
     ],
@@ -786,9 +942,13 @@
   "King of the Mountain": {
     "id": "d8299a17c63a9924c8b93d6814c22714cb400bb1",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Adventure"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -801,6 +961,9 @@
   "Kool-Aid Man": {
     "id": "0b251893f0a963762d77ca591ecbb1cc132a9ccd",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -816,9 +979,13 @@
   "Lady Bug": {
     "id": "734f15712bafa42e0613d049d1f0044142bd99c3",
     "players": 2,
+    "year": 1983,
+    "developer": "Universal ",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -831,9 +998,13 @@
   "Land Battle": {
     "id": "011b33e24c5ef8fa1a36a95ef729669ffe5318c3",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -861,6 +1032,9 @@
   "Las Vegas Roulette": {
     "id": "cbf25466107216dac94e4fbffa6e096e1d66035c",
     "players": 2,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Simulation"
     ],
@@ -876,13 +1050,20 @@
   "League of Light": {
     "id": "9fde5f7b998690399ba64e93da7b831d10414130",
     "players": 1,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Learning Fun I - Math Master, Factor Fun": {
     "id": "0146afcc4bcaab734638ddf630f1ade14e2cd12b",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Educational"
     ],
@@ -898,6 +1079,9 @@
   "Learning Fun II - Word Wizard, Memory Fun": {
     "id": "fcb4662d44972e492ea058772bf0a38dcbc674eb",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Educational"
     ],
@@ -914,6 +1098,9 @@
     "id": "2b7c3aa35e913bd07ebd47fb8b029b7622064ce8",
     "players": 2,
     "rating": 0.7,
+    "year": 1982,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -929,6 +1116,9 @@
   "Loco-Motion": {
     "id": "0751c3f27955da84fef61135e5288d24cba3fceb",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -952,6 +1142,10 @@
   "Magic Carousel": {
     "id": "3864ee96cbd7233fe4f6d8f1d0d8fa7ae7fe428a",
     "players": 1,
+    "year": 1983,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -981,6 +1175,9 @@
     "id": "ea6649b69141e08f5a20beed18aa89b95b3b2fb6",
     "players": 1,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -996,9 +1193,13 @@
   "Melody Blaster": {
     "id": "3dc1e0d97ec268eb4395864a610263c18f63a124",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Music and Dance"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1012,6 +1213,9 @@
     "id": "58b9517d99277db81a8ad875da109839d2bdd72f",
     "players": 2,
     "rating": 0.9,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -1027,6 +1231,9 @@
   "Mind Strike": {
     "id": "dc104c7234d2e08621c956c80f2d23564a48b5ee",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1042,6 +1249,8 @@
   "Mission X": {
     "id": "92fd22a9be9532a76dcedc3b6c52f5c48259d54c",
     "players": 1,
+    "developer": "Data East",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1058,6 +1267,9 @@
     "id": "82914fc2fa7177d9a068865add24351841209590",
     "players": 2,
     "rating": 0.95,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Driving",
       "Race"
@@ -1074,6 +1286,9 @@
   "Mountain Madness - Super Pro Skiing": {
     "id": "4f1706d740ced5f6950c55e85885b819997df290",
     "players": 2,
+    "year": 1988,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -1089,7 +1304,10 @@
   "Mouse Trap": {
     "id": "f5cb04451db711a23cc8a2715e75d02c0aa9999b",
     "players": 2,
-    "rating": 1,
+    "rating": 1.0,
+    "year": 1982,
+    "developer": "Exidy, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -1105,9 +1323,13 @@
   "Mr. BASIC Meets Bits 'N Bytes": {
     "id": "4a914346e4ff68e3a336db038ff54685761762df",
     "players": 2,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Various"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1136,6 +1358,9 @@
   "NBA Basketball ~ Basketball": {
     "id": "039bee8354ef8c81d197edce47ad350704dc4a79",
     "players": 2,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports",
       "Sports / Basketball"
@@ -1185,6 +1410,9 @@
     "id": "9676e37307dbafef7edb87c8ad68e0d4fdd73a9f",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1200,6 +1428,9 @@
   "Nova Blast": {
     "id": "68843405898336cdb18505c1faba3fd91bcd9466",
     "players": 1,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -1215,9 +1446,13 @@
   "Number Jumble": {
     "id": "8d6a8c13ab12bd0ef8f65688631414da99ae2853",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Various"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1264,10 +1499,14 @@
     "id": "f0ec248b1a600de04800594df78ed666b5f6986e",
     "players": 2,
     "rating": 0.75,
+    "year": 1983,
+    "developer": "Namco",
+    "publisher": "Atari",
     "genres": [
       "Action",
       "Action / Labyrinth"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -1294,6 +1533,9 @@
   "Pinball": {
     "id": "4c3cc8188ef1ccebf3a3022f506125e4c8cc187e",
     "players": 2,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Pinball",
       "Simulation"
@@ -1311,6 +1553,9 @@
     "id": "277dbe83110ed138723d07e7701d95ae2afc6055",
     "players": 1,
     "rating": 0.85,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -1327,6 +1572,9 @@
     "id": "2778d55e096e36f81eb2425fd92f0ecab648d931",
     "players": 1,
     "rating": 0.45,
+    "year": 1987,
+    "developer": "Namco",
+    "publisher": "Intv Corp",
     "genres": [
       "Driving",
       "Race"
@@ -1344,6 +1592,9 @@
     "id": "6fb16abee068c3b2b8173501c7449a92abef9b53",
     "players": 2,
     "rating": 0.6,
+    "year": 1983,
+    "developer": "Nintendo",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1360,6 +1611,9 @@
     "id": "b9d27c83d37d16c1b84648d14f28d9fd02969177",
     "players": 2,
     "rating": 0.8,
+    "year": 1983,
+    "developer": "D. Gottlieb & Co.",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1375,6 +1629,9 @@
   "Reversi": {
     "id": "ac885d343fccbf68a8cad39e6628f94ae902c91f",
     "players": 2,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -1391,6 +1648,9 @@
     "id": "8ec0ad0ddd34816c872fe039e1f46c34981419fc",
     "players": 2,
     "rating": 0.65,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -1406,6 +1666,9 @@
   "Robot Rubble": {
     "id": "b9a8beebafa41718866af863e52fe7987e60278f",
     "players": 1,
+    "year": 1983,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ]
@@ -1416,6 +1679,9 @@
   "Royal Dealer": {
     "id": "73c8f10633a92ca5cefd5d4f3a63f7ce52184219",
     "players": 1,
+    "year": 1982,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Casino",
       "Casino / Cards"
@@ -1433,6 +1699,9 @@
     "id": "2e7531593c9ee1e5d4119e7bb19b3dfaaddd5af6",
     "players": 2,
     "rating": 0.9,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1447,7 +1716,10 @@
   },
   "Safecracker": {
     "id": "d1138352b290ce2403b096aed8e0912e94eb599d",
-    "players": 2,
+    "players": 1,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -1466,6 +1738,9 @@
   "Scooby Doo's Maze Chase": {
     "id": "e2e3dd942d562de94f280602e3a34a0cdb2d0925",
     "players": 2,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1481,7 +1756,10 @@
   "Sea Battle": {
     "id": "12128f7fcd220c69ce5e44b94e46ed377edd9f35",
     "players": 2,
-    "rating": 1,
+    "rating": 1.0,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -1498,6 +1776,9 @@
     "id": "0ccd6b0c6eb2dc4b2167ca283ae64ce2fe7b167a",
     "players": 2,
     "rating": 0.5,
+    "year": 1983,
+    "developer": "Interphase Technologies Inc.",
+    "publisher": "Interphase Technologies Inc.",
     "genres": [
       "Action"
     ],
@@ -1514,6 +1795,9 @@
     "id": "eb0525e6fd7435ffac52dbd71091430676c0ce9c",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1529,6 +1813,9 @@
   "Sharp Shot": {
     "id": "f08140e12049c5c200f91e799001ae80efb67a9e",
     "players": 2,
+    "year": 1982,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports"
     ],
@@ -1544,6 +1831,9 @@
   "Slam Dunk - Super Pro Basketball": {
     "id": "2a28d10758fd14b3d7e96f4c124ff566af1b4b24",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -1559,6 +1849,9 @@
   "Slap Shot - Super Pro Hockey": {
     "id": "73b5e655b408c69c8e98c30724e94a0f759519ae",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports",
       "Sports / Hockey"
@@ -1576,6 +1869,9 @@
     "id": "c7e80df775f808ddd587b05580eea043ac2ee44d",
     "players": 2,
     "rating": 0.8,
+    "year": 1981,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1590,8 +1886,11 @@
   },
   "Space Battle": {
     "id": "14b3ae5c10036260dfdad6871f9630c6fca5f6a0",
-    "players": 2,
+    "players": 1,
     "rating": 0.2,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1608,6 +1907,9 @@
     "id": "ceb58599834acb15854b9729649943e7640274ac",
     "players": 2,
     "rating": 0.45,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1623,6 +1925,9 @@
   "Space Spartans": {
     "id": "827eb49ff470aa351d0ec59b79fd6bb47ae5dcea",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -1638,6 +1943,9 @@
   "Spiker - Super Pro Volleyball": {
     "id": "6db73acaff29d29e2861dc983fb2161b5b30c7c3",
     "players": 1,
+    "year": 1989,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports",
       "Sports / Volleyball"
@@ -1654,6 +1962,9 @@
   "Stadium Mud Buggies": {
     "id": "1cd3e5975a6a5cdbe68ac3be4362d4536f9e45d7",
     "players": 1,
+    "year": 1988,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Driving",
       "Race"
@@ -1671,6 +1982,9 @@
     "id": "c7862e035009c91ed2df55105a77dd5f6c01874f",
     "players": 1,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Activision",
+    "publisher": "Activision",
     "genres": [
       "Action"
     ],
@@ -1687,6 +2001,9 @@
     "id": "25cf0028d5703d758bacee46638b76a183ef1248",
     "players": 1,
     "rating": 0.45,
+    "year": 1981,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1703,6 +2020,9 @@
     "id": "d74231405b02dd92887e2757c92105a022707d06",
     "players": 2,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Parker Brothers",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1726,6 +2046,9 @@
     "id": "305332d4e3c6ddee8523c0991513759baa02c33c",
     "players": 1,
     "rating": 0.8,
+    "year": 1981,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -1742,6 +2065,9 @@
     "id": "74b8a225f4270e99011b604cf1b0a8d288ede126",
     "players": 2,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -1757,9 +2083,13 @@
   "Super Masters!": {
     "id": "7486da35694ec4d1e30ca1423b40118c417a4747",
     "players": 1,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Platform"
-    ]
+    ],
+    "age_rating": "E"
   },
   "Super NFL Footbal": {
     "id": "988a286035295d8a3fc9c8e6fb9bf9e7de15b569"
@@ -1767,6 +2097,9 @@
   "Super Pro Decathlon": {
     "id": "4d05350569230a6de67bede9962e59dfa2ff245f",
     "players": 4,
+    "year": 1988,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -1782,6 +2115,9 @@
   "Super Pro Football": {
     "id": "d63d47e0cc8fa8628b56f1e15718fc06c6343a7d",
     "players": 2,
+    "year": 1986,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
@@ -1797,6 +2133,9 @@
   "Swords & Serpents": {
     "id": "9a8a445714560a90d5c9b240fc85adb4a8682d71",
     "players": 2,
+    "year": 1982,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -1816,6 +2155,9 @@
     "id": "fff5d5975da743232095a21f96e1e023025f75de",
     "players": 1,
     "rating": 0.75,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1832,6 +2174,9 @@
     "id": "aa417f943b3f8d1814db7af37a6e918c9a7ed84d",
     "players": 1,
     "rating": 0.5,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1847,6 +2192,9 @@
   "TRON Solar Sailer": {
     "id": "7dceed4eee83f951f4312ce4bdb8147d287eb69d",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1862,6 +2210,9 @@
   "Takeover": {
     "id": "9c2c0ea4474b1939a9089256918d0a91dc34e46f",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -1878,6 +2229,9 @@
     "id": "07ba7f3ffe67833c5077f45c53831a0ce7033060",
     "players": 2,
     "rating": 0.8,
+    "year": 1980,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports"
     ],
@@ -1894,6 +2248,9 @@
     "id": "58130412dd1d534b86afcdc7a3f1bad106633e6d",
     "players": 2,
     "rating": 0.8,
+    "year": 1986,
+    "developer": "Quicksilva",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -1910,6 +2267,9 @@
     "id": "bffa855c04faaeb8a02401543de7696bc492107f",
     "players": 2,
     "rating": 0.8,
+    "year": 1986,
+    "developer": "Quicksilva",
+    "publisher": "Intv Corp",
     "genres": [
       "Adventure"
     ],
@@ -1925,6 +2285,9 @@
   "Tower of Doom": {
     "id": "fa454cc6f17092760b7563b4acb4dba623f8cd72",
     "players": 2,
+    "year": 1987,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Action"
     ],
@@ -1941,6 +2304,9 @@
     "id": "ca7fab04238def7c7e3c76cfa8bcc018a7c94c76",
     "players": 2,
     "rating": 0.8,
+    "year": 1981,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Driving",
       "Race"
@@ -1957,6 +2323,9 @@
   "Triple Challenge - Chess, Checkers, Backgammon": {
     "id": "7df6b8bf06b0ebdd89b4a187f16cc26413afb663",
     "players": 2,
+    "year": 1982,
+    "developer": "Realtime Associates",
+    "publisher": "Intv Corp",
     "genres": [
       "Strategy"
     ],
@@ -1972,6 +2341,9 @@
   "Tropical Trouble": {
     "id": "eeb62d71e2c646b0f5b59a8093867152ff032482",
     "players": 2,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -1987,6 +2359,9 @@
   "Truckin'": {
     "id": "e5baa577dcc245d3649276ccc023a95efb285041",
     "players": 1,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Driving",
       "Race"
@@ -2004,6 +2379,9 @@
     "id": "e461009d1164119a43829c39d78ec57bd4b1ca88",
     "players": 1,
     "rating": 0.25,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Driving",
       "Race"
@@ -2021,6 +2399,9 @@
     "id": "2b4043fd12218f0bbd5aa1193c28c203816bf9a1",
     "players": 2,
     "rating": 0.3,
+    "year": 1983,
+    "developer": "Konami",
+    "publisher": "Parker Brothers",
     "genres": [
       "Action"
     ],
@@ -2052,6 +2433,9 @@
   "USCF Chess ~ Chess": {
     "id": "3aa3a8df1b2023a8a50c18545dd4de1d90ecf957",
     "players": 2,
+    "year": 1983,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -2068,6 +2452,9 @@
     "id": "9c7b188edc4799ba73ad11b8ef5ca80124407bed",
     "players": 2,
     "rating": 0.7,
+    "year": 1981,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Strategy"
     ],
@@ -2083,6 +2470,9 @@
   "Vectron": {
     "id": "369849bd93607484eceb84f3698ca3055047b7d0",
     "players": 2,
+    "year": 1982,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Action"
     ],
@@ -2099,6 +2489,9 @@
     "id": "5dece753dfb80eb4af6ca9b4353c941bd3e5d6d6",
     "players": 2,
     "rating": 0.8,
+    "year": 1982,
+    "developer": "Exidy, Inc.",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
@@ -2114,6 +2507,9 @@
   "White Water!": {
     "id": "11f1c8f58c7345ab40c3fc39ac82041b93920777",
     "players": 1,
+    "year": 1983,
+    "developer": "Imagic",
+    "publisher": "Imagic",
     "genres": [
       "Action"
     ],
@@ -2129,6 +2525,9 @@
   "World Championship Baseball": {
     "id": "71f0f429b1a4c6b3d197c2f90035456bfe17c11a",
     "players": 2,
+    "year": 1979,
+    "developer": "APh Technological Consulting",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2145,9 +2544,13 @@
   "World Cup Football": {
     "id": "d364282617615cd68a4f864eccc579fb23673947",
     "players": 2,
+    "year": 1985,
+    "developer": "Nice  Ideas",
+    "publisher": "Intv Corp",
     "genres": [
       "Sports"
     ],
+    "age_rating": "E",
     "manuals": [
       {
         "languages": [
@@ -2160,6 +2563,9 @@
   "World Series Major League Baseball": {
     "id": "4a6f8c3e4111848b0dc497da5264c663daed1d06",
     "players": 1,
+    "year": 1983,
+    "developer": "Mattel Electronics",
+    "publisher": "Mattel Electronics",
     "genres": [
       "Sports",
       "Sports / Baseball"
@@ -2177,6 +2583,9 @@
     "id": "8b271f4f627a3f5aa0594b16c985c2914d842e75",
     "players": 2,
     "rating": 0.55,
+    "year": 1983,
+    "developer": "Cheshire Engineering",
+    "publisher": "Activision",
     "genres": [
       "Action",
       "Shooter"
@@ -2191,11 +2600,17 @@
     ]
   },
   "Yogi's Frustration": {
-    "id": "65b12623913668fbdd2a4d925f41d7bf7b3a6e6d"
+    "id": "65b12623913668fbdd2a4d925f41d7bf7b3a6e6d",
+    "players": 2,
+    "year": 1983,
+    "publisher": "Mattel Electronics"
   },
   "Zaxxon": {
     "id": "85d4cbdf6ba965b1783dca841696ef726cec8e2a",
     "players": 2,
+    "year": 1983,
+    "developer": "SEGA",
+    "publisher": "Coleco Industries, Inc.",
     "genres": [
       "Action"
     ],
