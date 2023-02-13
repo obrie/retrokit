@@ -3344,6 +3344,9 @@
     },
     "controls": [
       "joy"
+    ],
+    "merge": [
+      "cshooter"
     ]
   },
   "airtrix": {
@@ -4331,7 +4334,7 @@
       "stick"
     ]
   },
-  "alpinesa": {
+  "alpines": {
     "players": 1,
     "genres": [
       "Sports / Skiing"
@@ -4345,6 +4348,9 @@
     "controls": [
       "joy",
       "stick"
+    ],
+    "merge": [
+      "alpinesa"
     ]
   },
   "alpinr2b": {
@@ -30159,21 +30165,6 @@
       "rating": 5
     }
   },
-  "cshooter": {
-    "players": 2,
-    "genres": [
-      "Shooter / Flying Vertical"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "vertical"
-    },
-    "controls": [
-      "joy"
-    ]
-  },
   "csi_240": {
     "genres": [
       "Electromechanical / Pinball"
@@ -48822,21 +48813,6 @@
       }
     ]
   },
-  "firehawk": {
-    "players": 2,
-    "genres": [
-      "Shooter / Flying Vertical"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ]
-  },
   "firehawkv": {
     "group": "spec2k",
     "screen": {
@@ -52549,25 +52525,6 @@
       "rating": 5
     }
   },
-  "galhustl": {
-    "players": 2,
-    "genres": [
-      "Sports / Pool * Mature *"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ],
-    "emulation": {
-      "emulator": "lr-fbneo",
-      "rating": 5
-    }
-  },
   "galivan": {
     "players": 2,
     "rating": 50,
@@ -54133,26 +54090,6 @@
       "rating": 5
     }
   },
-  "gdarius": {
-    "players": 2,
-    "genres": [
-      "Shooter / Flying Horizontal"
-    ],
-    "series": "Darius",
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ],
-    "emulation": {
-      "emulator": "advmame",
-      "rating": 5
-    }
-  },
   "gdarius2": {
     "players": 2,
     "rating": 70,
@@ -54172,7 +54109,10 @@
     "emulation": {
       "emulator": "advmame",
       "rating": 5
-    }
+    },
+    "merge": [
+      "gdarius"
+    ]
   },
   "gdfs": {
     "players": 2,
@@ -113016,25 +112956,6 @@
     ],
     "mechanical": true
   },
-  "nbamht": {
-    "players": 4,
-    "genres": [
-      "Sports / Basketball"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ],
-    "emulation": {
-      "emulator": "lr-fbneo",
-      "rating": 5
-    }
-  },
   "nbanfl": {
     "players": 4,
     "rating": 70,
@@ -115487,6 +115408,13 @@
     },
     "controls": [
       "joy"
+    ],
+    "emulation": {
+      "emulator": "lr-mame",
+      "rating": 5
+    },
+    "merge": [
+      "startrks"
     ]
   },
   "notechan": {
@@ -127121,24 +127049,11 @@
     },
     "controls": [
       "gambling"
-    ]
-  },
-  "pexm003p": {
-    "players": 1,
-    "genres": [
-      "Casino / Cards"
-    ],
-    "series": "Player's Edge",
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "gambling"
     ],
     "merge": [
+      "pexm003p",
+      "pexm006p",
+      "pexmp006",
       "pexmp024"
     ]
   },
@@ -127172,25 +127087,6 @@
     },
     "controls": [
       "gambling"
-    ]
-  },
-  "pexm006p": {
-    "players": 1,
-    "genres": [
-      "Casino / Cards"
-    ],
-    "series": "Player's Edge",
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "gambling"
-    ],
-    "merge": [
-      "pexmp006"
     ]
   },
   "pexm007p": {
@@ -127420,7 +127316,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "galhustl"
+    ]
   },
   "pgalvipa": {
     "group": "pgalvip",
@@ -168881,7 +168780,10 @@
     "emulation": {
       "emulator": "lr-fbneo",
       "rating": 5
-    }
+    },
+    "merge": [
+      "firehawk"
+    ]
   },
   "spec2kh": {
     "group": "spec2k",
@@ -169737,21 +169639,6 @@
     "group": "spk306us",
     "players": 1
   },
-  "spk116it": {
-    "players": 1,
-    "genres": [
-      "Casino / Cards"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "gambling"
-    ]
-  },
   "spk116itmx": {
     "group": "spk306us",
     "players": 1
@@ -169769,6 +169656,9 @@
     },
     "controls": [
       "gambling"
+    ],
+    "merge": [
+      "spk116it"
     ]
   },
   "spkrbtl": {
@@ -173332,25 +173222,6 @@
       "keypad"
     ],
     "mechanical": true
-  },
-  "startrks": {
-    "players": 1,
-    "genres": [
-      "Maze / Shooter Small"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy"
-    ],
-    "emulation": {
-      "emulator": "lr-mame",
-      "rating": 5
-    }
   },
   "startrp": {
     "genres": [
