@@ -4320,21 +4320,6 @@
     ]
   },
   "alpines": {
-    "genres": [
-      "Sports / Skiing"
-    ],
-    "languages": [
-      "en"
-    ],
-    "screen": {
-      "orientation": "horizontal"
-    },
-    "controls": [
-      "joy",
-      "stick"
-    ]
-  },
-  "alpines": {
     "players": 1,
     "genres": [
       "Sports / Skiing"
@@ -30165,6 +30150,10 @@
       "rating": 5
     }
   },
+  "cshooter": {
+    "group": "airraid",
+    "players": 2
+  },
   "csi_240": {
     "genres": [
       "Electromechanical / Pinball"
@@ -48813,6 +48802,12 @@
       }
     ]
   },
+  "firehawk": {
+    "group": "spec2k",
+    "screen": {
+      "orientation": "horizontal"
+    }
+  },
   "firehawkv": {
     "group": "spec2k",
     "screen": {
@@ -52524,6 +52519,10 @@
       "emulator": "lr-mame",
       "rating": 5
     }
+  },
+  "galhustl": {
+    "group": "pgalvip",
+    "players": 2
   },
   "galivan": {
     "players": 2,
@@ -169636,6 +169635,10 @@
     "players": 1
   },
   "spk115it": {
+    "group": "spk306us",
+    "players": 1
+  },
+  "spk116it": {
     "group": "spk306us",
     "players": 1
   },
