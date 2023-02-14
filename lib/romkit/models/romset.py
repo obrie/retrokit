@@ -101,7 +101,6 @@ class ROMSet:
             # Read from an internal dat list
             for machine_attrs in self.datlist:
                 machine = Machine.from_dict(self, machine_attrs)
-                machine.custom_context.update(self.system.context_for(machine))
                 yield machine
         else:
             # Read from an external dat file
@@ -109,7 +108,6 @@ class ROMSet:
             for event, element in doc:
                 if Machine.is_installable(element):
                     machine = Machine.from_xml(self, element)
-                    machine.custom_context.update(self.system.context_for(machine))
                     if self.filter_set.allow(machine):
                         yield machine
                 else:

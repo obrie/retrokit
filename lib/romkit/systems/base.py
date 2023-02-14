@@ -76,10 +76,6 @@ class BaseSystem:
 
         return cls(json)
 
-    # Additional context for rendering Machine URLs
-    def context_for(self, machine: Machine) -> dict:
-        return {}
-
     # Iterates over the romsets available to this system
     def iter_romsets(self) -> Generator[None, ROMSet, None]:
         for romset_name, romset_config in self.config['romsets'].items():
