@@ -17,10 +17,9 @@ class MetadataSet:
         with path.open() as file:
             self.data = json.load(file)
 
-            # Add machine-specific overrides that differ from the parent
-            for key, metadata in self.data.items():
-                if 'group' in metadata:
-                    self.data[key] = {**self.data[metadata['group']], **metadata}
+            # Resolve dynamically generated metadata
+            for key in list(self.data.keys()):
+                self._resolve_metadata(key)
 
     # Builds a MetadataSet from the given json data
     @classmethod
@@ -41,3 +40,32 @@ class MetadataSet:
     def update(self, machine: Machine) -> None:
         for metadata in self.metadatas:
             metadata.find_and_update(machine)
+
+    # Compact metadata attributes by flattening merge values down to
+    # their base attribute name
+    def _resolve_metadata(self, key: str) -> None:
+        metadata = self.data[key]
+
+        # Merge in parent meadata
+        if 'group' in metadata:
+            metadata = {**self.data[metadata['group']], **metadata}
+
+        # Merge individual attributes
+        for attr_name in list(metadata.keys()):
+            value_to_merge = metadata[attr_name]
+            merge_char_index = attr_name.find('|')
+
+            if merge_char_index != -1:
+                reference_attr_name = attr_name[0:merge_char_index]
+                reference_value = metadata.get(reference_attr_name)
+
+                if reference_value is None:
+                    metadata[reference_attr_name] = value_to_merge
+                elif isinstance(reference_value, list):
+                    reference_value.extend(value_to_merge)
+                elif isinstance(reference_value, dict):
+                    reference_value.update(value_to_merge)
+                else:
+                    metadata[reference_attr_name] = value_to_merge
+
+        self.data[key] = metadata
