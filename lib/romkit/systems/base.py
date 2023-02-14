@@ -12,7 +12,6 @@ import shlex
 import time
 import traceback
 from copy import copy
-from multiprocessing import Pool
 from pathlib import Path
 from typing import Dict, Generator, List, Optional, Tuple
 
