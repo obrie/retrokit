@@ -137,9 +137,9 @@ When I started creating my own RetroPie system, I wanted to build it in such a w
 that I could re-create the exact same setup steps each time.  As it turns out, there's
 a lot involved in building out the perfect Raspberry Pi 4 system.
 
-retrokit, romkit, manualkit, powerkit, launchkit, sindenkit, and all of the supporting
-tools represent the work I did to build a configuration management system for my
-personal setup.
+retrokit, romkit, metakit, manualkit, powerkit, launchkit, sindenkit, and all of
+the supporting tools represent the work I did to build a configuration management
+system for my personal setup.
 
 ## Demo
 

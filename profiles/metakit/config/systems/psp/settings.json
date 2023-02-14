@@ -1,0 +1,17 @@
+{
+  "roms": {
+    "priority": {
+      "!flags|addons": [
+        "(PSN)"
+      ],
+      "flags|system_names": [
+        "(PSP)"
+      ]
+    },
+    "filters": {
+      "!flags": [
+        "DLC"
+      ]
+    }
+  }
+}

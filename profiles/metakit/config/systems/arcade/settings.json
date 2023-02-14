@@ -1,0 +1,53 @@
+{
+  "romsets": {
+    "mame": {
+      "resources": {
+        "dat": {
+          "source": "file://$RETROKIT_HOME/cache/mame/MAME Latest (Arcade).dat"
+        }
+      }
+    },
+    "fbneo": {
+      "resources": {
+        "dat": {
+          "source": "https://github.com/libretro/FBNeo/raw/master/dats/FinalBurn%20Neo%20(ClrMame%20Pro%20XML%2C%20Arcade%20only).dat",
+          "target": "$RETROKIT_HOME/cache/fbneo/FinalBurn Neo (ClrMame Pro XML, Arcade only).dat"
+        }
+      }
+    }
+  },
+  "roms": {
+    "priority": {
+      "romsets": [
+        "mame",
+        "fbneo"
+      ]
+    },
+    "filters": {
+      "!names": [
+        "# Machines that have no equivalent in latest MAME release",
+        "krokha",
+        "m4reeltm",
+        "taitogn",
+        "tvablast",
+        "tvcolumn",
+        "tvdunexp",
+        "tvflaptw",
+        "tvfsoc90",
+        "tvgomola",
+        "tvjchan",
+        "tvlegaxe",
+        "tvpcgen2",
+        "tvpow11",
+        "tvpwlg4",
+        "tvrs2",
+        "tvsci",
+        "tvsssold",
+        "tvsvball",
+        "tvthbld",
+        "tvusapb",
+        "tvvolfd"
+      ]
+    }
+  }
+}

@@ -9,6 +9,7 @@ It includes:
 * devicekit - A Python library for working with keyboards / joystick using RetroArch configurations
 * launchkit - An alternative for displaying launch images
 * manualkit - An application for displaying game manuals
+* metakit - An application for managing game system metadata
 * powerkit - A service for integrating physical power/reset button behaviors
 * romkit - A tool for filtering, downloading, converting, and installing ROMs
 * sindenkit - An application for managing Sinden lightgun controllers

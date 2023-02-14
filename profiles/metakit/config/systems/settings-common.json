@@ -1,0 +1,95 @@
+{
+  "roms": {
+    "priority": {
+      "enabled": true,
+      "single_title": false,
+      "order": [
+        "names",
+        "titles",
+        "romsets",
+        "is_parent",
+        "!flags|prototypes",
+        "!flags|addons",
+        "!keywords|addons",
+        "flags|system_names",
+        "flags|world",
+        "!flags_count|primary_countries",
+        "flags|primary_countries",
+        "flags|primary_languages",
+        "!keywords|versions",
+        "flags|country_of_origin",
+        "versions",
+        "flag_groups_total",
+        "title_length",
+        "name_length",
+        "names|alphabetical"
+      ],
+      "names": [
+        "# Prioritize specific names"
+      ],
+      "titles": [
+        "# Prioritize specific titles"
+      ],
+      "romsets": [
+        "# Prioritize specific ROM sets"
+      ],
+      "is_parent": [
+        true
+      ],
+      "!flags|prototypes": [
+        "Proto",
+        "Beta",
+        "Alpha",
+        "Demo",
+        "Unl",
+        "Alt",
+        "Pirate"
+      ],
+      "!flags|addons": [
+        "# System-specific add-ons to deprioritize (e.g. streaming service editions)"
+      ],
+      "!keywords|addons": [
+        "# System-specific add-ons to deprioritize (e.g. streaming service editions)"
+      ],
+      "flags|system_names": [
+        "# Flags that specifically call out they are for this system"
+      ],
+      "flags|world": [
+        "# Prioritize world releases over country-based releases",
+        "World"
+      ],
+      "!flags_count|primary_countries": [
+        "# Descending order (total count of number of primary countries in the flags)",
+        "Europe",
+        "USA",
+        "Japan"
+      ],
+      "flags|primary_countries": [
+        "Europe",
+        "USA",
+        "Japan"
+      ],
+      "flags|primary_languages": [
+        "# Prioritize English-based language titles",
+        "En",
+        "English"
+      ],
+      "!keywords|versions": [
+        "# Prioritize original releases over versioned releases",
+        "(Version",
+        "(Rev",
+        "(v",
+        "(Ver."
+      ],
+      "flags|country_of_origin": [
+        "Made in EU",
+        "Made in Japan"
+      ],
+      "flag_groups_total": "ascending",
+      "title_length": "ascending",
+      "versions": "ascending",
+      "name_length": "ascending",
+      "names|alphabetical": "ascending"
+    }
+  }
+}
