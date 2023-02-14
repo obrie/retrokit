@@ -25,38 +25,47 @@ from romkit.filters.taxonomy import CategoryFilter, CollectionFilter, GenreFilte
 # The order here helps in terms of performance, so we should order it based
 # on which filters are most likely to reject a game
 __all_filters__ = [
+    # Each group is:
+    # * Categorized by speed of the lookup
+    # * Ordered by most likely to filter out a machine
+
+    # Non-string exact filters
     CloneFilter,
     BIOSFilter,
     RunnableFilter,
     MechanicalFilter,
-    FlagFilter,
-    DescriptionFilter,
-    ControlFilter,
-    PlayerFilter,
-    NameFilter,
-    TitleFilter,
-    EmulatorFilter,
     EmulatorCompatibilityFilter,
-    GenreFilter,
-    CategoryFilter,
-    CollectionFilter,
-    TagFilter,
-    SeriesFilter,
-    RatingFilter,
     EmulatorRatingFilter,
-    LanguageFilter,
-    FavoriteFilter,
-    ROMSetFilter,
-    OrientationFilter,
-    ManualFilter,
-    MediaFilter,
-    PeripheralFilter,
+    RatingFilter,
+    PlayerFilter,
     YearFilter,
-    DeveloperFilter,
-    PublisherFilter,
     AgeRatingFilter,
-    ParentNameFilter,
-    ParentTitleFilter,
+    FavoriteFilter,
+    ManualFilter,
     FilesystemFilter,
     SystemFilter,
+
+    # Typically exact string filters
+    NameFilter,
+    LanguageFilter,
+    ControlFilter,
+    EmulatorFilter,
+    ROMSetFilter,
+    PeripheralFilter,
+    DeveloperFilter,
+    PublisherFilter,
+    TagFilter,
+    CategoryFilter,
+    OrientationFilter,
+    MediaFilter,
+    CollectionFilter,
+    SeriesFilter,
+
+    # Typically complex filters
+    FlagFilter,
+    DescriptionFilter,
+    TitleFilter,
+    GenreFilter,
+    ParentNameFilter,
+    ParentTitleFilter,
 ]
