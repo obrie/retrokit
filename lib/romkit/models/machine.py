@@ -131,49 +131,64 @@ class Machine:
     def from_xml(cls, romset: ROMSet, xml: lxml.etree.ElementBase) -> Machine:
         name = xml.get('name')
 
-        # Devices
-        device_names = {device.get('name') for device in xml.findall('device_ref')}
-
         # Parent / BIOS
         parent_name = xml.get('cloneof')
         bios_name = xml.get('romof')
         if bios_name == parent_name:
             bios_name = None
 
-        is_bios = xml.get('isbios') == 'yes' or '[BIOS]' in name
+        sourcefile = xml.get('sourcefile')
+        is_bios = xml.get('isbios') == 'yes' or name.startswith('[BIOS]')
         is_mechanical = xml.get('ismechanical') == 'yes'
         runnable = xml.get('runnable') != 'no'
-
-        # Sample
         sample_name = xml.get('sampleof')
-        if not sample_name and xml.findall('sample'):
-            # In older dat files, sampleof wasn't included in the parent.
-            # We fall back to checking if there are any <sample /> children
-            # and assume the sample archive is the same name as this machine.
-            sample_name = xml.get('name')
 
-        category = xml.find('category')
-        if category is not None:
-            category = category.text
-
-        comment = xml.find('comment')
-        if comment is not None:
-            comment = comment.text
-
-        # Additional metadata
+        # Defaults for data based on child elements
+        description = None
+        category = None
+        comment = None
         year = None
-        year_tag = xml.find('year')
-        if year_tag is not None and year_tag.text.isnumeric():
-            year = int(year_tag.text)
+        manufacturer = None
+        device_names = set()
+        dumped_disks = []
+        dumped_roms = []
 
-        manufacturer = xml.find('manufacturer')
-        if manufacturer is not None:
-            manufacturer = manufacturer.text
+        has_machine_template = 'machine' in romset.resource_templates
+
+        for child in xml:
+            tag = child.tag
+
+            if tag == 'device_ref':
+                # Devices
+                device_names.add(child.get('name'))
+            elif tag == 'sample':
+                # In older dat files, sampleof wasn't included in the parent.
+                # We fall back to checking if there are any <sample /> children
+                # and assume the sample archive is the same name as this machine.
+                if not sample_name:
+                    sample_name = child.get('name')
+            elif tag == 'category':
+                category = child.text
+            elif tag == 'comment':
+                comment = child.text
+            elif tag == 'year':
+                if child.text.isnumeric():
+                    year = int(child.text)
+            elif tag == 'manufacturer':
+                manufacturer = child.text
+            elif tag == 'description':
+                description = child.text
+            elif tag == 'disk':
+                if Disk.is_installable(child):
+                    dumped_disks.append(child)
+            elif tag == 'rom':
+                if has_machine_template and File.is_installable(child):
+                    dumped_roms.append(child)
 
         machine = cls(
             romset,
             name,
-            description=xml.find('description').text,
+            description=description,
             comment=comment,
             category=category,
             is_bios=is_bios,
@@ -183,22 +198,18 @@ class Machine:
             bios_name=bios_name,
             sample_name=sample_name,
             device_names=device_names,
-            sourcefile=xml.get('sourcefile'),
+            sourcefile=sourcefile,
             year=year,
             developer=manufacturer,
         )
 
         # Disks
-        dumped_disks = filter(Disk.is_installable, xml.findall('disk'))
-        machine.disks = {Disk(machine, disk.get('name'), disk.get('sha1')) for disk in dumped_disks}
+        machine.disks = {Disk(machine, disk_xml.get('name'), disk_xml.get('sha1')) for disk_xml in dumped_disks}
 
         # ROMs
-        if 'machine' in romset.resource_templates:
-            dumped_roms = filter(File.is_installable, xml.findall('rom'))
-            machine.roms = {
-                File.from_xml(rom_xml, file_identifier=romset.resource_templates['machine'].file_identifier)
-                for rom_xml in dumped_roms
-            }
+        if has_machine_template:
+            file_identifier = romset.resource_templates['machine'].file_identifier
+            machine.roms = {File.from_xml(rom_xml, file_identifier=file_identifier) for rom_xml in dumped_roms}
 
         return machine
 
