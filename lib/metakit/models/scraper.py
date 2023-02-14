@@ -185,7 +185,7 @@ class Scraper:
             return
 
         # Create a fake file so we can actually invoke skyscraper
-        rom_path = self.scraper_roms_path.joinpath(f'{group}.zip')
+        rom_path = self.scraper_roms_path.joinpath(self._scraper_filename(group))
         rom_path.touch()
 
         # Run skyscraper against all of the configured scraping modules.

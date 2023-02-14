@@ -160,9 +160,7 @@ class Database:
                     original_key = key
                     break
 
-            print(f'original_key: {original_key}')
             if original_key and self.exists(original_key) and original_key not in migration_plan:
-                print(f'migrating to {group}')
                 migration_plan[original_key] = group
             else:
                 migration_plan[group] = group
