@@ -270,8 +270,25 @@ fake cards.
 If you're using the Argon ONE case, you can save some money by not using the M.2 variant:
 https://www.amazon.com/dp/B07WP8WC3V
 
+## Controllers
+
+### Connections
+
+* Wired > 2.4ghz > Bluetooth
+
+### Input Lag
+
+Keys to reducing input lag:
+
+* TV Game Mode
+* Wired controllers
+* Use NTCS version of games
+* Enable runahead
+
 ## References
 
 * [Input latency spreadsheet](https://docs.google.com/spreadsheets/d/1KlRObr3Be4zLch7Zyqg6qCJzGuhyGmXaOIUrpfncXIM/edit)
 * [Tom's Hardware: Raspberry Pi MicroSD Cards](https://www.tomshardware.com/best-picks/raspberry-pi-microsd-cards)
 * [Android Central: Raspbery Pi MicroSD Cards](https://www.androidcentral.com/best-sd-cards-raspberry-pi-4)
+* [Running ROMs from a USB drive](https://retropie.org.uk/docs/Running-ROMs-from-a-USB-drive/)
+* [Input lag tips](https://retropie.org.uk/docs/Input-Lag/)
