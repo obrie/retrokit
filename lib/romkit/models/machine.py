@@ -165,7 +165,7 @@ class Machine:
                 # We fall back to checking if there are any <sample /> children
                 # and assume the sample archive is the same name as this machine.
                 if not sample_name:
-                    sample_name = child.get('name')
+                    sample_name = name
             elif tag == 'category':
                 category = child.text
             elif tag == 'comment':
