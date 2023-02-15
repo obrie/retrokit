@@ -26,6 +26,7 @@ class ROMSet:
         datlist: Optional[List[str]] = None,
         downloads: Optional[dict] = None,
         filters: Optional[dict]  = None,
+        enabled: bool = True,
         context: dict = {},
     ):
         self.system = system
@@ -35,6 +36,7 @@ class ROMSet:
         self.emulators = emulators or []
         self.downloader = Downloader(auth=auth, **downloads)
         self.filter_set = FilterSet.from_json(filters or {}, system.config, system.supported_filters)
+        self.enabled = enabled
 
         # Configure resources
         discovery = discovery and BaseDiscovery.from_json(discovery, downloader=self.downloader)
@@ -72,6 +74,7 @@ class ROMSet:
             discovery=json.get('discovery'),
             datlist=json.get('datlist'),
             filters=json.get('filters'),
+            enabled=json.get('enabled', True),
             **kwargs,
         )
 
@@ -92,11 +95,14 @@ class ROMSet:
 
     # Loads downloaded data into this romset
     def load(self) -> None:
-        if self.dat:
+        if self.dat and self.enabled:
             self.dat.install()
 
     # Looks up the machines in the dat file
     def iter_machines(self) -> Generator[None, Machine, None]:
+        if not self.enabled:
+            return
+
         if self.datlist:
             # Read from an internal dat list
             for machine_attrs in self.datlist:
