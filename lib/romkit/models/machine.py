@@ -14,7 +14,6 @@ from typing import Dict, List, Optional, Set
 
 # Represents a Game/Device/BIOS
 class Machine:
-    TITLE_REGEX = re.compile(r'^[^\(]+')
     FLAG_REGEX = re.compile(r'[\(\[]([^\)\])]+)[\)\]]')
     FLAG_DELIMITER_REGEX = re.compile(r', *')
     ROOT_REGEX = re.compile(r'^([^\\/]+)')
@@ -318,7 +317,11 @@ class Machine:
     # Builds a title from the given name
     @classmethod
     def title_from(cls, name: str, disc: bool = False) -> str:
-        title = cls.TITLE_REGEX.search(name).group().strip()
+        flag_start_index = name.find('(')
+        if flag_start_index != -1:
+            title = name[0:flag_start_index].strip()
+        else:
+            title = name
 
         if disc:
             disc_match = Playlist.DISC_REGEX.search(name)
