@@ -70,13 +70,13 @@ class BaseFilter:
         if not machine_values and None in self.exact_filter_values:
             # Empty allowed
             return True
-        elif len(self.exact_filter_values & machine_values) > 0:
+        elif not self.exact_filter_values.isdisjoint(machine_values) > 0:
             # Exact value matched
             return True
         elif self.pattern_filter_values:
             # Look for pattern
             for machine_value in machine_values:
-                if any(machine_value and pattern.search(machine_value) for pattern in self.pattern_filter_values):
+                if machine_value and any(pattern.search(machine_value) for pattern in self.pattern_filter_values):
                     return True
 
         return False
