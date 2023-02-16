@@ -1267,6 +1267,7 @@ retrokit what it is.  That includes:
 * [meleu](https://github.com/meleu/RetroPie-joystick-selection) for joystick selection reference implementation
 * [Sinden Wiki / Widge-5](https://www.sindenwiki.org/wiki/Barebones_Compatibility) for lightgun configuration overrides
 * [barbudreamon](https://github.com/libretro/flycast/issues/136) for Naomi compatibility list
+* [dosbox-staging](https://github.com/dosbox-staging/dosbox-staging) for their code of conduct
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
