@@ -29,13 +29,13 @@ This project and everyone participating in it is governed by the [Code of Conduc
 
 > If you want to ask a question, we assume that you have read the available [documentation](manual/).
 
-Before you ask a question, it's best to search for existing [issues](/issues) that might help you.
+Before you ask a question, it's best to search for existing issues that might help you.
 In case you've found a suitable issue and still need clarification, you can write your question
 in that issue.
 
 If you still feel the need to ask a question and need clarification, it's recommended to:
 
-- Open an [issue](/issues/new).
+- Open an issue.
 - Provide as much context as you can about what you're running into
 - Provide project and hardware versions (RetroPie, Raspberry Pi 4b, etc), depending on what seems relevant
 
