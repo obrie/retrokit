@@ -1,18 +1,15 @@
-### Subject of the issue
-
 Describe your issue here.
 
-### Your environment
+### Environment
 
-* Version of retrokit
-* Version of RetroPie
-* Version of Raspbian
-* Raspberry Pi hardware
+* retrokit vX.X
+* RetroPie vX.X
+* Raspbian vX
+* Raspberry Pi 4b
 
 ### Steps to reproduce
 
-Tell us how to reproduce this issue.  Please provide the set of commands you ran
-and the output of those commands.
+Please provide the set of commands you ran and the output of those commands.
 
 If the issue is with RetroPie, you should check in on the [forums](https://retropie.org.uk/forum/).
 
