@@ -8,7 +8,7 @@ mkdir -p "$system_tmp_dir"
 # Platform configurations
 retropie_system_config_dir="/opt/retropie/configs/$system"
 
-# Retrokit configurations
+# retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
 system_docs_dir="$docs_dir/systems/$system"
 system_settings_file=$(generate_system_settings_file "$system")

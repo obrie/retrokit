@@ -4,7 +4,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 setup_module_id='docs'
-setup_module_desc='Documentation builder for Retrokit'
+setup_module_desc='Documentation builder for retrokit'
 
 depends() {
   sudo apt-get install -y chromium fonts-roboto fonts-noto-color-emoji

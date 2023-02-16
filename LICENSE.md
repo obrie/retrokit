@@ -1,4 +1,4 @@
-# RetroKit Legal Information
+# retrokit Legal Information
 
 ## License
 
