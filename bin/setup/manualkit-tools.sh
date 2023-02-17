@@ -46,18 +46,17 @@ __depends_qpdf() {
 
 # Tools for converting from different formats to PDF
 __depends_conversion_tools() {
-  sudo apt-get install -y \
-    # Convert txt/html to pdf
-    chromium \
+  # Convert txt/html to pdf
+  sudo apt-get install -y chromium
 
-    # Convert cbr archives to pdf
-    unrar-free \
+  # Convert cbr archives to pdf
+  sudo apt-get install -y unrar-free
 
-    # Convert doc to pdf
-    unoconv \
+  # Convert doc to pdf
+  sudo apt-get install -y unoconv
 
-    # Resolution calculations
-    bc
+  # Resolution calculations
+  sudo apt-get install -y bc
 
   # Convert images to pdf
   sudo pip3 install img2pdf==0.4.4
