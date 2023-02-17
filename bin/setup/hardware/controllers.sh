@@ -43,9 +43,9 @@ __configure_autoconf() {
   __restore_autoconf
 
   # Staging the changes we're going to merge in
-  local autoconf_path=$(mktemp -p "$tmp_ephemeral_dir")
-  ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_path" backup=false
-  cp "$autoconf_path" "$autoconf_backup_file"
+  local autoconf_staging_file=$(mktemp -p "$tmp_ephemeral_dir")
+  ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_staging_file" backup=false
+  cp "$autoconf_staging_file" "$autoconf_backup_file"
 
   # Track which keys we've overridden and which we've added (so we can later restore with confidence)
   while read autoconf_key; do
@@ -56,7 +56,7 @@ __configure_autoconf() {
   done < <(crudini --get "$autoconf_backup_file" '')
 
   # Merge in the changes
-  ini_merge "$autoconf_path" "$autoconf_file" backup=false
+  ini_merge "$autoconf_staging_file" "$autoconf_file" backup=false
 }
 
 __configure_controllers() {
