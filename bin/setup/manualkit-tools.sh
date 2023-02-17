@@ -46,7 +46,7 @@ __depends_qpdf() {
 
 # Tools for converting from different formats to PDF
 __depends_conversion_tools() {
-  sudo apt-get install -y
+  sudo apt-get install -y \
     # Convert txt/html to pdf
     chromium \
 
