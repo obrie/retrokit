@@ -66,7 +66,7 @@ remote_sync_system_manuals() {
   local version=$(setting '.manuals.archive.version')
 
   # Build the sources reference
-  local data_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  local data_file=$(mktemp -p "$tmp_ephemeral_dir")
   json_merge "{data_dir}/$system.json" "$data_file" backup=false
   jq -r 'to_entries[] | select(.value.manuals) | .key as $group | .value.manuals[] | [.name // $group, (.languages | join(",")), .url] | @tsv' "$data_file" > "$data_file.sources"
 
@@ -92,7 +92,7 @@ remote_sync_system_manuals() {
     # Ensure the path actually exists and has files in it
     if [ -d "$postprocess_dir" ] && [ -n "$(ls -A "$postprocess_dir")" ]; then
       # Zip up the files and upload to internetarchive
-      local zip_path="$tmp_ephemeral_dir/$system.zip"
+      local zip_path=$(mktemp -u -p "$tmp_ephemeral_dir")
       zip -j -db -r "$zip_path" "$postprocess_dir"/*.pdf
       ia upload "$archive_id" "$zip_path" --remote-name="$system/$system-$version.zip" --no-derive -H x-archive-keep-old-version:0
       rm "$zip_path"

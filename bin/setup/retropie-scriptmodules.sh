@@ -11,11 +11,11 @@ build() {
   mkdir -pv "$target_path"
 
   # Merge script modules from retrokit and profiles into a single directory
-  mkdir -p "$tmp_ephemeral_dir/scriptmodules"
-  each_path '{ext_dir}/scriptmodules' rsync -a '{}/' "$tmp_ephemeral_dir/scriptmodules/"
+  local scriptmodules_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+  each_path '{ext_dir}/scriptmodules' rsync -a '{}/' "$scriptmodules_path/"
 
   # Take the merged directory and rsync that as the source of truth
-  rsync -av "$tmp_ephemeral_dir/scriptmodules/" "$target_path/" --delete
+  rsync -av "$scriptmodules_path/" "$target_path/" --delete
 }
 
 remove() {

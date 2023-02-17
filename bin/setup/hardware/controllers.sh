@@ -43,8 +43,9 @@ __configure_autoconf() {
   __restore_autoconf
 
   # Staging the changes we're going to merge in
-  ini_merge '{config_dir}/controllers/autoconf.cfg' "$tmp_ephemeral_dir/autoconf.cfg" backup=false
-  cp "$tmp_ephemeral_dir/autoconf.cfg" "$autoconf_backup_file"
+  local autoconf_path=$(mktemp -p "$tmp_ephemeral_dir")
+  ini_merge '{config_dir}/controllers/autoconf.cfg' "$autoconf_path" backup=false
+  cp "$autoconf_path" "$autoconf_backup_file"
 
   # Track which keys we've overridden and which we've added (so we can later restore with confidence)
   while read autoconf_key; do
@@ -55,12 +56,12 @@ __configure_autoconf() {
   done < <(crudini --get "$autoconf_backup_file" '')
 
   # Merge in the changes
-  ini_merge "$tmp_ephemeral_dir/autoconf.cfg" "$autoconf_file" backup=false
+  ini_merge "$autoconf_path" "$autoconf_file" backup=false
 }
 
 __configure_controllers() {
   # Combine gamecontrollerdb.txt files
-  local sdldb_combined_path="$tmp_ephemeral_dir/gamecontrollerdb.txt"
+  local sdldb_combined_path=$(mktemp -p "$tmp_ephemeral_dir")
   cp "$sdldb_path" "$sdldb_combined_path"
   each_path "{config_dir}/controllers/gamecontrollerdb.local.txt" cat '{}' | tee -a "$sdldb_combined_path" >/dev/null
 

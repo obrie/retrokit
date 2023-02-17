@@ -27,17 +27,14 @@ build() {
     sudo rm -rf "$retropie_module_install_dir"
 
     # Download
-    download "https://www.sindenlightgun.com/software/$archive_name.zip" "$tmp_ephemeral_dir/sinden.zip"
-    unzip "$tmp_ephemeral_dir/sinden.zip" "$archive_name/$archive_rpi_dir/*" -d "$tmp_ephemeral_dir/"
+    local sinden_tmp_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+    download "https://www.sindenlightgun.com/software/$archive_name.zip" "$sinden_tmp_dir/sinden.zip"
+    unzip "$sinden_tmp_dir/sinden.zip" "$archive_name/$archive_rpi_dir/*" -d "$sinden_tmp_dir/"
 
     # Copy drivers
     sudo mkdir -pv "$retropie_module_install_dir"
-    sudo cp -Rv "$tmp_ephemeral_dir/$archive_name/$archive_rpi_dir/Player"* "$retropie_module_install_dir"
+    sudo cp -Rv "$sinden_tmp_dir/$archive_name/$archive_rpi_dir/Player"* "$retropie_module_install_dir"
     echo "$version" | sudo tee /opt/retropie/supplementary/sinden/version
-
-    # Clean up
-    rm -rf "$tmp_ephemeral_dir/$archive_name"
-    rm -f "$tmp_ephemeral_dir/sinden.zip"
   fi
 
   # Create ports

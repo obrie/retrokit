@@ -44,7 +44,7 @@ download() {
       mkdir -pv "$(dirname "$target")"
 
       # Download and check that the target isn't empty
-      local tmp_target="$(mktemp -p "$tmp_ephemeral_dir")"
+      local tmp_target=$(mktemp -p "$tmp_ephemeral_dir")
       if __download_exec "$cmd" "$url" "$tmp_target" auth_token="$auth_token" && [ -s "$tmp_target" ]; then
         $cmd mv "$tmp_target" "$target"
         exit_code=0

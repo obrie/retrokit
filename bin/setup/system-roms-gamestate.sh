@@ -71,9 +71,9 @@ vacuum() {
 
 # Exports the system's ROM gamestate (saves, etc.) to the given file
 export() {
-  local target_path=${1:-"$tmp_dir/$system/gamestate.zip"}
+  local target_path=${2:-"$tmp_dir/$system/gamestate.zip"}
   local merge=false
-  if [ $# -gt 1 ]; then local "${@:2}"; fi
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   local staging_path
   if [ "$merge" == 'true' ]; then
@@ -81,7 +81,7 @@ export() {
     staging_path=$target_path
   else
     # Stage export to an empty zip file
-    staging_path="$tmp_ephemeral_dir/gamestate.zip"
+    staging_path=$(mktemp -p "$tmp_ephemeral_dir")
     echo UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA== | base64 -d > "$staging_path"
   fi
 
@@ -98,9 +98,9 @@ export() {
 
 # Imports ROM gamestates from the given file
 import() {
-  local source_path=${1:-"$tmp_dir/$system/gamestate.zip"}
+  local source_path=${2:-"$tmp_dir/$system/gamestate.zip"}
   local overwrite=false
-  if [ $# -gt 1 ]; then local "${@:2}"; fi
+  if [ $# -gt 2 ]; then local "${@:3}"; fi
 
   if [ "$CONFIRM" != 'false' ] && [ "$overwrite" == 'true' ]; then
     read -p "This will ovewrite any current game state for this system.  Are you sure? (y/n) " -r

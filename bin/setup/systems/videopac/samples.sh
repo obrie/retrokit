@@ -19,8 +19,9 @@ __build_common_samples() {
   local url='http://o2em.sourceforge.net/files/o2mainsamp.zip'
 
   if [ ! -f "$HOME/RetroPie/BIOS/voice/E4BB.WAV" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-    download "$url" "$tmp_ephemeral_dir/o2mainsamp.zip"
-    unzip -jo "$tmp_ephemeral_dir/o2mainsamp.zip" -d "$HOME/RetroPie/BIOS/voice/"
+    local sample_archive_path=$(mktemp -p "$tmp_ephemeral_dir")
+    download "$url" "$sample_archive_path"
+    unzip -jo "$sample_archive_path" -d "$HOME/RetroPie/BIOS/voice/"
   else
     echo "Already downloaded $url"
   fi
@@ -33,8 +34,9 @@ __build_sid_the_spellbinder_samples() {
 
   if [ -n "$machine" ]; then
     if [ ! -f "$HOME/RetroPie/BIOS/voice/EE80.WAV" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      download "$url" "$tmp_ephemeral_dir/sidsamp.zip"
-      unzip -jo "$tmp_ephemeral_dir/sidsamp.zip" -d "$HOME/RetroPie/BIOS/voice/"
+      local sample_archive_path=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$sample_archive_path"
+      unzip -jo "$sample_archive_path" -d "$HOME/RetroPie/BIOS/voice/"
     else
       echo "Already downloaded $url"
     fi

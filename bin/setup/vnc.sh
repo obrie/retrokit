@@ -15,9 +15,9 @@ build() {
   local version="$(cat /etc/dispmanx_vncserver.version 2>/dev/null || true)"
   if [ ! `command -v dispmanx_vncserver` ] || has_newer_commit https://github.com/patrikolausson/dispmanx_vnc "$version"; then
     # Check out
-    rm -rf "$tmp_ephemeral_dir/dispmanx_vnc"
-    git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$tmp_ephemeral_dir/dispmanx_vnc"
-    pushd "$tmp_ephemeral_dir/dispmanx_vnc"
+    local dispmanx_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    git clone --depth 1 https://github.com/patrikolausson/dispmanx_vnc "$dispmanx_path"
+    pushd "$dispmanx_path"
     version=$(git rev-parse HEAD)
 
     # Apply patches
@@ -34,7 +34,6 @@ build() {
 
     # Clean up
     popd
-    rm -rf "$tmp_ephemeral_dir/dispmanx_vnc"
   else
     echo "dispmanx_vnc already the newest version ($version)"
   fi

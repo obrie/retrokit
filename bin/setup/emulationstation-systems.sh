@@ -16,7 +16,7 @@ configure() {
 
 __configure_systems() {
   local systems_default_config="/etc/emulationstation/es_systems.cfg"
-  local systems_staging_config="$tmp_ephemeral_dir/es_systems.cfg"
+  local systems_staging_config=$(mktemp -p "$tmp_ephemeral_dir")
   backup_file "$systems_override_config"
 
   printf '<?xml version="1.0"?>\n<systemList>\n' > "$systems_staging_config"

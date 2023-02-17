@@ -26,12 +26,12 @@ __depends_qpdf() {
     sudo apt-get install -y libjpeg-dev
 
     # Download
-    mkdir "$tmp_ephemeral_dir/qpdf"
-    wget "https://github.com/qpdf/qpdf/releases/download/release-qpdf-$qpdf_min_version/qpdf-$qpdf_min_version.tar.gz" -O "$tmp_ephemeral_dir/qpdf/qpdf.tar.gz"
-    tar -zxvf "$tmp_ephemeral_dir/qpdf/qpdf.tar.gz" -C "$tmp_ephemeral_dir/qpdf"
+    local extract_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    wget "https://github.com/qpdf/qpdf/releases/download/release-qpdf-$qpdf_min_version/qpdf-$qpdf_min_version.tar.gz" -O "$extract_path/qpdf.tar.gz"
+    tar -zxvf "$extract_path/qpdf.tar.gz" -C "$extract_path"
 
     # Compile
-    pushd "$tmp_ephemeral_dir/qpdf/qpdf-$qpdf_min_version"
+    pushd "$extract_path/qpdf-$qpdf_min_version"
     ./configure
     make
     sudo make install
@@ -95,12 +95,12 @@ __depends_ocr() {
 __depends_ghostscript() {
   if version_lt "$(gs --version)" "$ghostscript_min_version"; then
     # Download
-    mkdir "$tmp_ephemeral_dir/ghostscript"
-    wget "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${ghostscript_min_version//.}/ghostscript-$ghostscript_min_version.tar.gz" -O "$tmp_ephemeral_dir/ghostscript/ghostscript.tar.gz"
-    tar -zxvf "$tmp_ephemeral_dir/ghostscript/ghostscript.tar.gz" -C "$tmp_ephemeral_dir/ghostscript"
+    local extract_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    wget "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs${ghostscript_min_version//.}/ghostscript-$ghostscript_min_version.tar.gz" -O "$extract_path/ghostscript.tar.gz"
+    tar -zxvf "$extract_path/ghostscript.tar.gz" -C "$extract_path"
 
     # Compile
-    pushd "$tmp_ephemeral_dir/ghostscript/ghostscript-$ghostscript_min_version"
+    pushd "$extract_path/ghostscript-$ghostscript_min_version"
     ./configure
     make
     sudo make install

@@ -30,7 +30,8 @@ configure() {
 
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
-  __load_cheat_mappings | sort | uniq > "$tmp_ephemeral_dir/cheats.tsv"
+  local cheats_list_path=$(mktemp -p "$tmp_ephemeral_dir")
+  __load_cheat_mappings | sort | uniq > "$cheats_list_path"
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
@@ -50,7 +51,7 @@ configure() {
     # We can't just symlink to the source directory because the cheat filenames
     # don't always match the ROM names.  As a result, we need to try to do some
     # smart matching to find the corresponding cheat file.
-    local source_cheat_path=$(__find_matching_cheat "$rom_name")
+    local source_cheat_path=$(__find_matching_cheat "$rom_name" "$cheats_list_path")
 
     if [ -n "$source_cheat_path" ]; then
       if [ -z "$playlist_name" ]; then
@@ -111,6 +112,7 @@ __load_cheat_mappings() {
 # * Cheat name length
 __find_matching_cheat() {
   local rom_name=$1
+  local cheats_list_path=$2
   local normalized_rom_name=$(normalize_rom_name "$rom_name")
 
   # Look up this ROM's associated flags as cheats can be region-specific
@@ -160,7 +162,7 @@ __find_matching_cheat() {
     done
 
     cheat_matches+=("$version_matches_count"$'\t'"$country_matches_count"$'\t'"$total_matches_count"$'\t'"$cheat_system_index"$'\t'"$cheat_name_length"$'\t'"$cheat_filename")
-  done < <(grep -E "^$normalized_rom_name"$'\t' "$tmp_ephemeral_dir/cheats.tsv" | cut -d$'\t' -f 2,3)
+  done < <(grep -E "^$normalized_rom_name"$'\t' "$cheats_list_path" | cut -d$'\t' -f 2,3)
 
   printf "%s\n" "${cheat_matches[@]}" | sort -t$'\t' -k1,1n -k2,2n -k3,3n -k4,4rn -k5,5rn -k6,6r | tail -n 1 | cut -d$'\t' -f 6
 }

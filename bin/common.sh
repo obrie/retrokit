@@ -62,7 +62,7 @@ __setup_env() {
     done < <(each_path '{app_dir}/.env')
 
     # Define settings file
-    export settings_file="$(mktemp -p "$common_ephemeral_dir")"
+    export settings_file=$(mktemp -p "$common_ephemeral_dir")
     json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
 
     # Mark exports as being complete so that subsequent setup module executions
@@ -103,13 +103,13 @@ generate_system_settings_file() {
   local merge_metadata=${2:-true}
 
   # Build settings file
-  local system_settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+  local system_settings_file=$(mktemp -p "$tmp_ephemeral_dir")
   json_merge '{config_dir}/systems/settings-common.json' "$system_settings_file" backup=false >/dev/null
   json_merge "{config_dir}/systems/$system/settings.json" "$system_settings_file" backup=false >/dev/null
 
   # Merge data file
   if [ "$merge_metadata" == 'true' ]; then
-    system_data_merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
+    system_data_merged_path=$(mktemp -p "$tmp_ephemeral_dir")
     system_data_path=$(jq -r '.metadata .path // empty' "$system_settings_file")
 
     if [ -n "$system_data_path" ]; then

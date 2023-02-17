@@ -27,12 +27,11 @@ depends_mupdf() {
     sudo ln -fs /usr/include/freetype2/freetype/ /usr/include/freetype
 
     # Download mupdf source
-    rm -rf "$tmp_ephemeral_dir/mupdf"
-    mkdir "$tmp_ephemeral_dir/mupdf"
-    wget "https://mupdf.com/downloads/archive/mupdf-$target_mupdf_version-source.tar.gz" -O "$tmp_ephemeral_dir/mupdf/mupdf.tar.gz"
-    tar -zxvf "$tmp_ephemeral_dir/mupdf/mupdf.tar.gz" -C "$tmp_ephemeral_dir/mupdf"
+    local mupdf_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+    wget "https://mupdf.com/downloads/archive/mupdf-$target_mupdf_version-source.tar.gz" -O "$mupdf_dir/mupdf.tar.gz"
+    tar -zxvf "$mupdf_dir/mupdf.tar.gz" -C "$mupdf_dir"
 
-    pushd "$tmp_ephemeral_dir/mupdf/mupdf-$target_mupdf_version-source"
+    pushd "$mupdf_dir/mupdf-$target_mupdf_version-source"
 
     # Replace files in mupdf source
     wget "https://raw.githubusercontent.com/pymupdf/PyMuPDF/$target_mupdf_version/fitz/_config.h" -O include/mupdf/fitz/config.h
@@ -47,7 +46,6 @@ depends_mupdf() {
     _set_mupdf_version
 
     popd
-    rm -rf "$tmp_ephemeral_dir/mupdf"
   fi
 }
 

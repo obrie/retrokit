@@ -206,7 +206,7 @@ retropad_buttons_map=(
 )
 
 # Path to which documenation data will be tracked
-doc_data_file="$tmp_ephemeral_dir/doc.json"
+doc_data_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
 json_merge '{system_docs_dir}/doc.json' "$doc_data_file" backup=false >/dev/null
 
 __add_hrefs() {
@@ -368,10 +368,11 @@ __build_pdf() {
 
   # Render Jinja => Markdown
   local reference_template=$(first_path '{docs_dir}/reference.html.jinja')
-  jinja2 "$reference_template" "$doc_data_file" > "$tmp_ephemeral_dir/reference.html"
+  local reference_html_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.html)
+  jinja2 "$reference_template" "$doc_data_file" > "$reference_html_path"
 
   # Render HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$tmp_ephemeral_dir/reference.html" 2>/dev/null
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$reference_html_path" 2>/dev/null
 }
 
 # List all Retroarch configuration files which might contain controller info

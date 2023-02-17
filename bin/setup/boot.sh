@@ -16,11 +16,12 @@ __configure_bios() {
   # support repeating the same key multiple times in the same section
 
   # Build base config.txt without device tree settings settings (dtoverlay / dtparam)
-  ini_merge '{config_dir}/boot/config.txt' "$tmp_ephemeral_dir/boot-staging.txt" space_around_delimiters=false backup=false overwrite=true
-  sed -i '/^dt\(overlay\|param\)=/d' "$tmp_ephemeral_dir/boot-staging.txt"
+  local boot_config_path=$(mktemp -p "$tmp_ephemeral_dir")
+  ini_merge '{config_dir}/boot/config.txt' "$boot_config_path" space_around_delimiters=false backup=false overwrite=true
+  sed -i '/^dt\(overlay\|param\)=/d' "$boot_config_path"
 
   # Merge into /boot
-  ini_merge "$tmp_ephemeral_dir/boot-staging.txt" '/boot/config.txt' space_around_delimiters=false as_sudo=true
+  ini_merge "$boot_config_path" '/boot/config.txt' space_around_delimiters=false as_sudo=true
 
   # Add repeating dtoverlay/dtparam configurations since crudini will just merge
   while read config_path; do
@@ -45,8 +46,9 @@ __configure_bios() {
       fi
 
       # Write configurations to the section
-      echo "$dt_content" > "$tmp_ephemeral_dir/dtcontent.txt"
-      sudo sed -i "$target_section_start r $tmp_ephemeral_dir/dtcontent.txt" /boot/config.txt
+      local dtcontent_path=$(mktemp -p "$tmp_ephemeral_dir")
+      echo "$dt_content" > "$dtcontent_path"
+      sudo sed -i "$target_section_start r $dtcontent_path" /boot/config.txt
     done < <(crudini --get "$config_path")
   done < <(each_path '{config_dir}/boot/config.txt')
 

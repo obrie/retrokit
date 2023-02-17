@@ -32,8 +32,9 @@ patches=(
 
 deps() {
   if [ ! `command -v applyppf` ]; then
-    git clone --depth 1 https://github.com/meunierd/ppf.git "$tmp_ephemeral_dir/ppf"
-    pushd "$tmp_ephemeral_dir/ppf/ppfdev/applyppf_src"
+    local ppf_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    git clone --depth 1 https://github.com/meunierd/ppf.git "$ppf_path"
+    pushd "$ppf_path/ppfdev/applyppf_src"
 
     gcc -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE  -o applyppf applyppf3_linux.c
     sudo cp applyppf /usr/local/bin
@@ -77,9 +78,9 @@ __apply_patch() {
   local rom_name=${rom_filename%.chd}
 
   local ppf_path="$rom_dir/$rom_name.ppf"
-  local cue_path="$tmp_ephemeral_dir/$rom_name.cue"
-  local bin_path="$tmp_ephemeral_dir/$rom_name.bin"
-  local patched_chd_path="$tmp_ephemeral_dir/$rom_name.chd"
+  local cue_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local bin_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local patched_chd_path=$(mktemp -p "$tmp_ephemeral_dir")
 
   # Download the ppf
   download "$guncon_patch_base_url/$rom_name.ppf" "$ppf_path"

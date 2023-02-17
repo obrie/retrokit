@@ -22,7 +22,7 @@ build_intro() {
   local target_path=${1:-"$docs_dir/build/intro.pdf"}
   local template=$(first_path '{docs_dir}/intro.html.jinja')
 
-  local doc_data_path="$tmp_ephemeral_dir/doc-intro.json"
+  local doc_data_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
   echo '{}' > "$doc_data_path"
 
   local stylesheet_href=$(first_path '{docs_dir}/stylesheets/manual.css')
@@ -33,11 +33,11 @@ build_gamelist() {
   local table_headers=$1
   local target_path=$2
 
-  local doc_data_path="$tmp_ephemeral_dir/doc-extra.json"
+  local doc_data_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
   echo '{}' > "$doc_data_path"
 
   # Add list of games that are installed on all the systems
-  local gamelist_data_path="$tmp_ephemeral_dir/doc-gamelist.json"
+  local gamelist_data_path=$(mktemp -p "$tmp_ephemeral_dir")
   local gamelist=''
 
   while read system; do
@@ -87,10 +87,11 @@ __build_file() {
     ".hrefs.base" "file://$base_href/"
 
   # Jinja => Markdown
-  jinja2 "$source_path" "$json_metadata_path" > "$tmp_ephemeral_dir/doc.html"
+  local html_output_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix .html)
+  jinja2 "$source_path" "$json_metadata_path" > "$html_output_path"
 
   # HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$tmp_ephemeral_dir/doc.html" 2>/dev/null
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$html_output_path" 2>/dev/null
 }
 
 if [[ $# -lt 1 ]]; then

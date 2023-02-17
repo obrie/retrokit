@@ -14,10 +14,11 @@ depends() {
     sudo apt-get install -y libusb-dev libncurses5-dev tcpser cc65
 
     local version_path=${opencbm_version//./_}
-    wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$tmp_ephemeral_dir/opencbm/opencbm.zip"
-    unzip "$tmp_ephemeral_dir/opencbm/opencbm.zip"
+    local opencbm_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+    wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$opencbm_dir/opencbm.zip"
+    unzip "$opencbm_dir/opencbm.zip"
 
-    pushd "$tmp_ephemeral_dir/opencbm/OpenCBM-$version_path"
+    pushd "$opencbm_dir/OpenCBM-$version_path"
     make -f LINUX/Makefile opencbm plugin-xum1541
     sudo make -f LINUX/Makefile install install-plugin-xum1541
     popd
@@ -26,8 +27,9 @@ depends() {
 
 build() {
   if [ ! `command -v nibconv` ]; then
-    git clone --depth 1 https://github.com/OpenCBM/nibtools.git "$tmp_ephemeral_dir/nibtools"
-    pushd "$tmp_ephemeral_dir/nibtools"
+    local nibtools_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    git clone --depth 1 https://github.com/OpenCBM/nibtools.git "$nibtools_path"
+    pushd "$nibtools_path"
 
     make -f GNU/Makefile linux
     sudo cp \
@@ -55,10 +57,11 @@ remove() {
 
   if [ `command -v cbmcopy` ]; then
     # It's easiest for us to just use the uninstall from opencbm's Makefile
-    wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$tmp_ephemeral_dir/opencbm/opencbm.zip"
-    unzip "$tmp_ephemeral_dir/opencbm/opencbm.zip"
+    local opencbm_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+    wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$opencbm_dir/opencbm.zip"
+    unzip "$opencbm_dir/opencbm.zip"
 
-    pushd "$tmp_ephemeral_dir/opencbm/OpenCBM-$version_path"
+    pushd "$opencbm_dir/OpenCBM-$version_path"
     sudo make -f LINUX/Makefile uninstall
     popd
   fi

@@ -16,7 +16,7 @@ build() {
     return
   fi
 
-  local staging_path="$tmp_ephemeral_dir/doc.pdf"
+  local staging_path=$(mktemp -p "$tmp_dir")
   local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
   if [ -f "$output_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
     echo "Documentation already built for $system"

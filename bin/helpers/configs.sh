@@ -18,7 +18,7 @@ conf_prepare() {
   fi
 
   if [ "$envsubst" == 'true' ]; then
-    local target="$(mktemp -p "$tmp_ephemeral_dir")"
+    local target=$(mktemp -p "$tmp_ephemeral_dir")
     $cmd envsubst < "$source" > "$target"
     $cmd chmod --reference="$source" "$target"
     echo "$target"
@@ -255,14 +255,14 @@ json_merge() {
   fi
 
   echo "Merging json $source to $target"
-  local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
+  local staging_path=$(mktemp -p "$tmp_ephemeral_dir")
   if [ -s "$target" ]; then
     cp "$target" "$staging_path"
   else
     echo '{}' > "$staging_path"
   fi
 
-  local merged_path="$(mktemp -p "$tmp_ephemeral_dir")"
+  local merged_path=$(mktemp -p "$tmp_ephemeral_dir")
 
   while read source_path; do
     if [ -s "$source_path" ]; then
@@ -310,7 +310,7 @@ json_edit() {
 
   # jq doesn't support in-place writes, so first write to a staging file before
   # we overwrite
-  local staging_path="$(mktemp -p "$tmp_ephemeral_dir")"
+  local staging_path=$(mktemp -p "$tmp_ephemeral_dir")
   jq "${jq_args[@]}" "$jq_commands" "$target" > "$staging_path"
   mv "$staging_path" "$target"
 }

@@ -52,7 +52,7 @@ configure() {
       local existing_xml=$(xmlstarlet ed -P -d "/*/view[@name='$view_name']" "$layout_path" | xmlstarlet sel -I -t -c '/mamelayout/*')
 
       # Merge background view with existing children
-      local tmp_layout_path="$(mktemp -p "$tmp_ephemeral_dir")"
+      local tmp_layout_path=$(mktemp -p "$tmp_ephemeral_dir")
       cat "$layout_path" |\
         xmlstarlet ed -d '/mamelayout/*' -d '//comment()' |\
         xmlstarlet ed -s '/mamelayout' -t text -n '' -v $'\n'"$view_xml"$'\n' -s '/mamelayout' -t text -n '' -v "$existing_xml" |\

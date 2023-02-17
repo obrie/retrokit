@@ -15,9 +15,9 @@ build() {
   local maxcso_version="$(cat /usr/local/etc/maxcso.version 2>/dev/null || true)"
   if [ ! `command -v maxcso` ] || has_newer_commit https://github.com/unknownbrackets/maxcso "$maxcso_version"; then
     # Check out
-    rm -rf "$tmp_ephemeral_dir/maxcso"
-    git clone --depth 1 https://github.com/unknownbrackets/maxcso "$tmp_ephemeral_dir/maxcso"
-    pushd "$tmp_ephemeral_dir/maxcso"
+    local maxcso_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+    git clone --depth 1 https://github.com/unknownbrackets/maxcso "$maxcso_path"
+    pushd "$maxcso_path"
     maxcso_version=$(git rev-parse HEAD)
 
     # Compile
@@ -27,7 +27,6 @@ build() {
 
     # Clean up
     popd
-    rm -rf "$tmp_ephemeral_dir/maxcso"
   else
     echo "maxcso is already the newest version ($maxcso_version)"
   fi
