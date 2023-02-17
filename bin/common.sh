@@ -46,8 +46,9 @@ __setup_env() {
     export docs_dir="$app_dir/docs"
     export profiles_dir="$app_dir/profiles"
     export tmp_dir=${TMPDIR:-$app_dir/tmp}
-    export tmp_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
-    trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
+    export common_ephemeral_dir=$(mktemp -d -p "$tmp_dir")
+    export tmp_ephemeral_dir=$(mktemp -d -p "$common_ephemeral_dir")
+    trap 'rm -rf -- "$common_ephemeral_dir"' EXIT
 
     # Read environment variable overrides.
     # 
@@ -61,13 +62,17 @@ __setup_env() {
     done < <(each_path '{app_dir}/.env')
 
     # Define settings file
-    export settings_file="$(mktemp -p "$tmp_ephemeral_dir")"
+    export settings_file="$(mktemp -p "$common_ephemeral_dir")"
     json_merge '{config_dir}/settings.json' "$settings_file" backup=false >/dev/null
 
     # Mark exports as being complete so that subsequent setup module executions
     # don't need to re-evaluate all of this
     export RETROKIT_HAS_EXPORTS=true
   else
+    # Remove any existing files in the ephemeral directory since this can get reused
+    # across multiple scripts
+    rm -rf "$tmp_ephemeral_dir/"*
+
     init_profiles
   fi
 }
