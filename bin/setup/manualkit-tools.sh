@@ -70,7 +70,7 @@ __depends_exif() {
 
 # Tools to make PDFs searchable
 __depends_ocr() {
-  sudo pip3 install ocrmypdf==13.3.0
+  sudo pip3 install ocrmypdf~=13.3.0
   sudo apt-get install -y \
     tesseract-ocr-ara \
     tesseract-ocr-ces \
