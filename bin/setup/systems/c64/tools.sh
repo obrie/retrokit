@@ -16,7 +16,7 @@ depends() {
     local version_path=${opencbm_version//./_}
     local opencbm_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
     wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$opencbm_dir/opencbm.zip"
-    unzip "$opencbm_dir/opencbm.zip"
+    unzip "$opencbm_dir/opencbm.zip" -d "$opencbm_dir"
 
     pushd "$opencbm_dir/OpenCBM-$version_path"
     make -f LINUX/Makefile opencbm plugin-xum1541
@@ -59,7 +59,7 @@ remove() {
     # It's easiest for us to just use the uninstall from opencbm's Makefile
     local opencbm_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
     wget "https://github.com/OpenCBM/OpenCBM/archive/refs/tags/v$version_path.zip" -O "$opencbm_dir/opencbm.zip"
-    unzip "$opencbm_dir/opencbm.zip"
+    unzip "$opencbm_dir/opencbm.zip" -d "$opencbm_dir"
 
     pushd "$opencbm_dir/OpenCBM-$version_path"
     sudo make -f LINUX/Makefile uninstall
