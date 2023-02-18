@@ -419,7 +419,6 @@ function map_hypseus_joystick() {
     done < "$force_joy_file"
 
     # Write new button config
-    sed "/^$key =/d" "$device_mapping_file"
     if [[ -n "$axis" ]]; then
         sed -i "s/^$key = .* .* .*\$/$key = $key1 $key2 $button $axis/g" "$mapping_file"
         echo "$key = $button $axis" >> "$device_mapping_file"
