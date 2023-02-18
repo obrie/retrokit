@@ -16,7 +16,7 @@ device.write(ecodes.EV_SYN, 0, 0)
 device.close()"
 
 depends() {
-  sudo pip3 install evdev
+  sudo pip3 install evdev~=1.6
 }
 
 configure() {

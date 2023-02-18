@@ -59,7 +59,8 @@ __depends_conversion_tools() {
   sudo apt-get install -y bc
 
   # Convert images to pdf
-  sudo pip3 install img2pdf==0.4.4
+  # * Note that pikepdf 6.2.9 is the last version to support Python 3.7
+  sudo pip3 install img2pdf==0.4.4 pikepdf==5.6.1
 }
 
 # Tools for fixing exif data

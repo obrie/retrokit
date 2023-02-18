@@ -8,10 +8,10 @@ depends() {
   sudo apt-get install -y mame-tools
 
   # XML processing
-  sudo pip3 install lxml
+  sudo pip3 install lxml~=4.9
 
   # High-Performance HTTP
-  sudo pip3 install pycurl
+  sudo pip3 install pycurl~=7.45
 
   # Torrentzip
   __depends_trrntzip

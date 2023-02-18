@@ -58,7 +58,7 @@ depends() {
 
   # Python libs
   sudo pip3 install \
-    psutil==5.8.0 \
+    psutil~=5.8 \
     PyMuPDF==1.18.15
 }
 

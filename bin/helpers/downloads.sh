@@ -76,7 +76,7 @@ __download_exec() {
 
   if [[ "$url" == *drive.google.com* ]]; then
     if [ ! `command -v gdown` ]; then
-      sudo pip3 install gdown
+      sudo pip3 install gdown~=4.6.0
     fi
 
     gdown --fuzzy "$url" -O "$target"

@@ -11,7 +11,7 @@ depends() {
   sudo apt-get install -y python3-pip
 
   # Ini editor
-  sudo pip3 install crudini==0.9.3
+  sudo pip3 install crudini~=0.9.3
 
   # Env editor
   dotenv_version=d71c9d786fe193f43f1cb57c6b4a152ebb01ba60
@@ -29,7 +29,7 @@ depends() {
   sudo apt-get install -y ffmpeg
 
   # Image editor
-  sudo pip3 install pillow==8.3.1
+  sudo pip3 install pillow~=9.0
 }
 
 remove() {

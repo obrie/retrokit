@@ -10,7 +10,7 @@ depends() {
   # Romkit requirements (explicitly not installing everything
   # like chdman)
   sudo apt-get install -y zip
-  sudo pip3 install lxml pycurl
+  sudo pip3 install lxml~=4.9 pycurl~=7.45
   "$lib_dir/romkit/setup.sh" __depends_trrntzip
 }
 

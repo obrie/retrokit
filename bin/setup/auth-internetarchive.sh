@@ -10,7 +10,7 @@ ia_bin="/usr/local/bin/ia"
 
 depends() {
   # Install CLI
-  sudo pip3 install internetarchive==2.0.3
+  sudo pip3 install internetarchive~=3.3
 }
 
 configure() {
