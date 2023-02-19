@@ -42,7 +42,7 @@
     <div id="usage-keyboard">
       {% set keyboard_controls = controls.keyboard or {} %}
       {% set _dummy = keyboard_controls.update(controls.keyboard_extra or {}) %}
-      {%- for keyboard_items in keyboard_controls.items()|batch(((keyboard_controls|length) / 2)|round(0, 'ceil')|int) -%}
+      {%- for keyboard_items in keyboard_controls.items()|batch(24)|first|batch([((keyboard_controls|length) / 2)|round(0, 'ceil')|int, 12]|min) -%}
       <table>
         <thead>
           <tr class="header">
@@ -81,7 +81,7 @@
           </tr>
         </thead>
         <tbody>
-          {% for buttons, hotkey_action in hotkey_controls.items() %}
+          {% for buttons, hotkey_action in hotkey_controls.items()|batch(12)|first %}
           <tr>
             <td>
               {%- for button in buttons.split(',') -%}

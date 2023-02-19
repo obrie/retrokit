@@ -17,12 +17,12 @@ body {
 }
 
 table th {
-  padding: 0 12px;
+  padding: 0 6px;
   text-align: center;
 }
 
 table td {
-  padding: 0 8px;
+  padding: 0 4px;
   text-align: center;
 }
 
@@ -101,7 +101,7 @@ table td {
 }
 
 #usage-hotkeys {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 #controllers {
