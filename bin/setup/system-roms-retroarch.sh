@@ -39,11 +39,13 @@ __configure_retroarch_configs() {
 
     # Peripheral overrides
     for peripheral in ${peripherals//,/ }; do
+      paths_to_merge+=("{config_dir}/retroarch/retroarch-$peripheral.cfg")
       paths_to_merge+=("{system_config_dir}/retroarch-$peripheral.cfg")
     done
 
     # Control type overrides
     if [ -n "$control_type" ]; then
+      paths_to_merge+=("{config_dir}/retroarch/retroarch-$control_type.cfg")
       paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
     fi
 
@@ -89,11 +91,13 @@ __configure_retroarch_core_options() {
 
     # Peripheral overrides
     for peripheral in ${peripherals//,/ }; do
+      paths_to_merge+=("{config_dir}/retroarch/retroarch-core-options-$peripheral.cfg")
       paths_to_merge+=("{system_config_dir}/retroarch-core-options-$peripheral.cfg")
     done
 
     # Control type overrides
     if [ -n "$control_type" ]; then
+      paths_to_merge+=("{config_dir}/retroarch/retroarch-core-options-$control_type.cfg")
       paths_to_merge+=("{system_config_dir}/retroarch-core-options-$control_type.cfg")
     fi
 
