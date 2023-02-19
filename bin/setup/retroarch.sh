@@ -7,7 +7,8 @@ setup_module_id='retroarch'
 setup_module_desc='Retroarch configuration options'
 
 retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
-retroarch_default_overlay_path='/opt/retropie/configs/all/retroarch/overlay/base.cfg'
+retroarch_default_overlay_config_path='/opt/retropie/configs/all/retroarch/overlay/base.cfg'
+retroarch_default_overlay_image_path='/opt/retropie/configs/all/retroarch/overlay/base.png'
 
 # Re-runs the `configure` action for retroarch
 reconfigure_packages() {
@@ -21,11 +22,12 @@ configure() {
   ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_path" restore=false
 
   # This is our own custom file, so no need to back up
-  ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_path" backup=false
+  ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_config_path" backup=false
+  file_cp '{config_dir}/retroarch/overlay.png' "$retroarch_default_overlay_image_path" backup=false
 }
 
 restore() {
-  rm -fv "$retroarch_default_overlay_path"
+  rm -fv "$retroarch_default_overlay_config_path" "$retroarch_default_overlay_image_path"
   __restore_config delete_src=true
 }
 
