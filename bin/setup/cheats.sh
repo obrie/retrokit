@@ -9,7 +9,7 @@ setup_module_desc='Retroarch cheats for use from the frontend'
 build() {
   local cheats_zip="$tmp_dir/cheats.zip"
   download 'http://buildbot.libretro.com/assets/frontend/cheats.zip' "$cheats_zip"
-  unzip -o "$cheats_zip" -d "$retropie_configs_dir/all/retroarch/cheats/"
+  unzip -u "$cheats_zip" -d "$retropie_configs_dir/all/retroarch/cheats/"
 }
 
 remove() {

@@ -31,7 +31,7 @@ __build_fbneo() {
     if [ -z "$(ls -A "$bios_dir/fbneo/cheats/")" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
       download "$url" "$cheats_path"
-      unzip -jo "$cheats_path" 'FBNeo-cheats-master/cheats/*' -d "$bios_dir/fbneo/cheats/"
+      unzip -ju "$cheats_path" 'FBNeo-cheats-master/cheats/*' -d "$bios_dir/fbneo/cheats/"
     else
       echo "Already downloaded $url"
     fi
@@ -58,7 +58,7 @@ __build_mame0222() {
     if [ ! -f "$bios_dir/mame0222/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
       download "$url" "$cheats_path"
-      unzip -jo "$cheats_path" "cheat.7z" -d "$bios_dir/mame0222/"
+      unzip -ju "$cheats_path" "cheat.7z" -d "$bios_dir/mame0222/"
     else
       echo "Already downloaded $url"
     fi
@@ -73,7 +73,7 @@ __build_mame0244() {
     if [ ! -f "$bios_dir/mame0244/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
       local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
       download "$url" "$cheats_path"
-      unzip -jo "$cheats_path" "cheat.7z" -d "$bios_dir/mame0244/"
+      unzip -ju "$cheats_path" "cheat.7z" -d "$bios_dir/mame0244/"
     else
       echo "Already downloaded $url"
     fi
