@@ -1,17 +1,17 @@
 setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$setup_dir/../common.sh"
 
-system="${system:-$2}"
-system_tmp_dir="$tmp_dir/$system"
+export system="${system:-$2}"
+export system_tmp_dir="$tmp_dir/$system"
 mkdir -p "$system_tmp_dir"
 
 # Platform configurations
-retropie_system_config_dir="$retropie_configs_dir/$system"
+export retropie_system_config_dir="$retropie_configs_dir/$system"
 
 # retrokit configurations
-system_config_dir="$app_dir/config/systems/$system"
-system_docs_dir="$docs_dir/systems/$system"
-system_settings_file=$(generate_system_settings_file "$system")
+export system_config_dir="$app_dir/config/systems/$system"
+export system_docs_dir="$docs_dir/systems/$system"
+export system_settings_file=$(generate_system_settings_file "$system")
 
 ##############
 # Settings
@@ -20,7 +20,7 @@ system_settings_file=$(generate_system_settings_file "$system")
 system_setting() {
   jq -r "$1 | values" "$system_settings_file"
 }
-system_data_file=$(system_setting '.metadata .path')
+export system_data_file=$(system_setting '.metadata .path')
 
 ##############
 # Setup stubs
