@@ -3,7 +3,7 @@
 set -e
 
 depends() {
-  sudo pip3 install evdev==1.4.0 pyudev==0.22.0
+  sudo pip3 install evdev~=1.6 pyudev~=0.24.0
 }
 
 remove() {
