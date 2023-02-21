@@ -18,7 +18,7 @@ function onstart_hypseus_keyboard() {
     onstart_hypseus
 
     # Overwrite existing p1/p2 keyboard controls
-    sed -i 's/^\(KEY_[^ ]*\) = [^ ]* [^ ]*\(.*\)$/\1 = 0 0\2/g' /opt/retropie/configs/daphne/hypinput.ini
+    sed -i 's/^\(KEY_[^ ]*\) = [^ ]* [^ ]*\(.*\)$/\1 = 0 0\2/g' "$configdir/daphne/hypinput.ini"
 
     declare -Ag hypseuskeymap
     # SDL codes from https://wiki.libsdl.org/SDLKeycodeLookup
@@ -254,7 +254,7 @@ function onstart_hypseus_joystick() {
     onstart_hypseus
 
     # Overwrite existing p1/p2 joystick controls
-    sed -i 's/^\(KEY_[^ ]* = [^ ]* [^ ]*\).*$/\1 0/g' /opt/retropie/configs/daphne/hypinput.ini
+    sed -i 's/^\(KEY_[^ ]* = [^ ]* [^ ]*\).*$/\1 0/g' "$configdir/daphne/hypinput.ini"
 }
 
 function onstart_hypseus() {

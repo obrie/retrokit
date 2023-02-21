@@ -56,7 +56,7 @@ function configure_actionmax() {
     addEmulator 0 "$md_id" "daphne" "$md_inst/actionmax.sh %ROM%"
     addSystem "daphne"
 
-    local allemu="/opt/retropie/configs/all/emulators.cfg"
+    local allemu="$configdir/all/emulators.cfg"
 
     [[ "$md_mode" == "remove" ]] && return
 
