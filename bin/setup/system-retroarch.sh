@@ -109,6 +109,9 @@ restore() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   while read -r library_name; do
     local library_dir="$retroarch_config_dir/$library_name"
+    if [ ! -d "$library_dir" ]; then
+      continue
+    fi
 
     restore_file "$library_dir/$library_name.cfg" delete_src=true
     find "$library_dir" -mindepth 1 -maxdepth 1 -name "$library_name-*.cfg" -exec rm -fv '{}' +
