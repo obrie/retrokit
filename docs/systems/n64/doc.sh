@@ -208,7 +208,7 @@ __add_system_extensions() {
 }
 
 __add_mupen64plus_keyboard_controls() {
-  local config_file=/opt/retropie/configs/n64/mupen64plus.cfg
+  local config_file="$retropie_system_config_dir/mupen64plus.cfg"
   local edit_args=()
 
   for keyboard_action in "${keyboard_actions_list[@]}"; do

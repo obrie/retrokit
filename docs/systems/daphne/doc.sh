@@ -139,7 +139,7 @@ daphne_keys=(
   [RALT]='Right Alt'
 )
 
-hypseus_mapping_file='/opt/retropie/configs/daphne/hypinput.ini'
+hypseus_mapping_file="$retropie_system_config_dir/hypinput.ini"
 
 # Add daphne-specific controls
 __add_system_extensions() {

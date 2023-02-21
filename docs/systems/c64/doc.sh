@@ -202,7 +202,7 @@ vice_mapper_defaults=(
 __has_rom_overrides() {
   local core_options_file=$1
   if [ -f "$core_options_file" ]; then
-    comm -13 <(sort /opt/retropie/configs/c64/retroarch-core-options.cfg) <(sort "$core_options_file") | grep -q "vice_mapper"
+    comm -13 <(sort "$retropie_system_config_dir/retroarch-core-options.cfg") <(sort "$core_options_file") | grep -q "vice_mapper"
   else
     return 1
   fi

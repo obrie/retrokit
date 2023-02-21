@@ -165,13 +165,13 @@ key_name_map=(
 # Add pc-specific mupen64plus controls
 __add_system_extensions() {
   # Look up the default mapperfile
-  local mapperfile_path=$(crudini --get /opt/retropie/configs/pc/dosbox-staging.conf 'sdl' 'mapperfile')
+  local mapperfile_path=$(crudini --get "$retropie_system_config_dir/dosbox-staging.conf" 'sdl' 'mapperfile')
   if [ -z "$mapperfile_path" ]; then
     return
   fi
 
 
-  local config_file="/opt/retropie/configs/pc/$mapperfile_path"
+  local config_file="$retropie_system_config_dir/$mapperfile_path"
   local edit_args=()
 
   if [ -f "$config_file" ]; then
