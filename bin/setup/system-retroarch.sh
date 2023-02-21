@@ -8,6 +8,8 @@ setup_module_desc='System-specific Retroarch configurations and core options ove
 setup_module_reconfigure_after_update=true
 
 configure() {
+  restore
+
   __configure_system_config
   __configure_emulator_configs
   __configure_emulator_remappings
@@ -16,7 +18,13 @@ configure() {
 
 # System configuration overrides
 __configure_system_config() {
+  # System configs
   ini_merge '{system_config_dir}/retroarch.cfg' "$retropie_system_config_dir/retroarch.cfg"
+
+  # Shared system configs
+  while read shared_config_name; do
+    ini_merge "{system_config_dir}/$shared_config_name.cfg" "$retropie_system_config_dir/$shared_config_name.cfg" backup=false
+  done < <(each_path '{system_config_dir}' find '{}' -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 
 # Emulator configuration overrides
@@ -24,14 +32,17 @@ __configure_emulator_configs() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
 
   while read -r library_name; do
-    local source_path="{system_config_dir}/retroarch/$library_name/$library_name.cfg"
-    local target_path="$retroarch_config_dir/$library_name/$library_name.cfg"
+    local source_dir="{system_config_dir}/retroarch/$library_name"
+    local source_path="$source_dir/$library_name.cfg"
+    local target_dir="$retroarch_config_dir/$library_name"
+    local target_path="$target_dir/$library_name.cfg"
 
-    if any_path_exists "$source_path"; then
-      ini_merge "$source_path" "$target_path"
-    else
-      rm -fv "$target_path"
-    fi
+    ini_merge "$source_path" "$target_path"
+
+    # Shared emulator configs
+    while read shared_config_name; do
+      ini_merge "$source_dir/$shared_config_name.cfg" "$target_dir/$shared_config_name.cfg" backup=false
+    done < <(each_path "$source_dir" find '{}' -mindepth 1 -maxdepth 1 -name "$library_name-*.cfg" -exec basename {} .cfg \; | sort | uniq)
   done < <(get_core_library_names)
 }
 
@@ -44,11 +55,7 @@ __configure_emulator_remappings() {
     local source_path="{system_config_dir}/retroarch/$library_name/$library_name.rmp"
     local target_path="$retroarch_remapping_dir/$library_name/$library_name.rmp"
 
-    if any_path_exists "$source_path"; then
-      ini_merge "$source_path" "$target_path"
-    else
-      rm -fv "$target_path"
-    fi
+    ini_merge "$source_path" "$target_path"
   done < <(get_core_library_names)
 }
 
@@ -98,11 +105,15 @@ restore() {
   # Restore emulator retroarch configs
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   while read -r library_name; do
-    restore_file "$retroarch_config_dir/$library_name/$library_name.cfg" delete_src=true
+    local library_dir="$retroarch_config_dir/$library_name"
+
+    restore_file "$library_dir/$library_name.cfg" delete_src=true
+    find "$library_dir" -mindepth 1 -maxdepth 1 -name "$library_name-*.cfg" -exec rm -fv '{}' +
   done < <(get_core_library_names)
 
   # Restore system retroarch config
   restore_file "$retropie_system_config_dir/retroarch.cfg"
+  find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
 }
 
 setup "${@}"

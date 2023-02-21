@@ -35,19 +35,23 @@ __configure_retroarch_configs() {
   while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local target_path="$retroarch_config_dir/$library_name/$rom_name.cfg"
+    local paths_to_include=()
     local paths_to_merge=()
 
-    # Peripheral overrides
-    for peripheral in ${peripherals//,/ }; do
-      paths_to_merge+=("{config_dir}/retroarch/retroarch-$peripheral.cfg")
-      paths_to_merge+=("{system_config_dir}/retroarch-$peripheral.cfg")
-    done
+    # Peripheral / control type overrides
+    for config_extension_type in ${peripherals//,/ } "$control_type"; do
+      if any_path_exists_cached "{config_dir}/retroarch/retroarch-$config_extension_type.cfg"; then
+        paths_to_include+=("/opt/retropie/configs/all/retroarch-$config_extension_type.cfg")
+      fi
 
-    # Control type overrides
-    if [ -n "$control_type" ]; then
-      paths_to_merge+=("{config_dir}/retroarch/retroarch-$control_type.cfg")
-      paths_to_merge+=("{system_config_dir}/retroarch-$control_type.cfg")
-    fi
+      if any_path_exists_cached "{system_config_dir}/retroarch-$config_extension_type.cfg"; then
+        paths_to_include+=("$retropie_system_config_dir/retroarch-$config_extension_type.cfg")
+      fi
+
+      if any_path_exists_cached "{system_config_dir}/retroarch/$library_name/$library_name-$config_extension_type.cfg"; then
+        paths_to_include+=("$retroarch_config_dir/$library_name/retroarch-$config_extension_type.cfg")
+      fi
+    done
 
     local override_paths
     IFS=» read -r -a override_paths <<< "$override_paths_dsv"
@@ -59,6 +63,16 @@ __configure_retroarch_configs() {
         ini_merge "$path" "$target_path" backup=false
       fi
     done
+
+    # Include in any valid paths
+    if [ ${#paths_to_include[@]} -gt 0 ]; then
+      echo '' >> "$target_path"
+
+      for path in "${paths_to_include[@]}"; do
+        echo "Including ini $path in $target_path"
+        echo "#include \"$path\"" >> "$target_path"
+      done
+    fi
   done < <(__list_libretro_roms 'cfg')
 }
 
@@ -227,7 +241,7 @@ restore() {
             rm -fv "$rom_config_path"
           fi
         fi
-      done < <(find "$emulator_config_dir" -name '*.cfg' -not -name "$library_name.cfg")
+      done < <(find "$emulator_config_dir" -name '*.cfg' -not -name "$library_name*.cfg")
     fi
 
     # Remove retroarch mappings

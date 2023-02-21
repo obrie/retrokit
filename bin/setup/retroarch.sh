@@ -21,12 +21,28 @@ reconfigure_packages() {
 
 configure() {
   __restore_config
-  ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_path" restore=false
 
+  __configure_global_overrides
+  __configure_shared_overrides
+  __configure_overlays
+}
+
+__configure_global_overrides() {
+  ini_merge '{config_dir}/retroarch/retroarch.cfg' "$retroarch_config_path" restore=false
+}
+
+__configure_shared_overrides() {
+  while read shared_config_name; do
+    ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "/opt/retropie/configs/all/$shared_config_name.cfg" backup=false
+  done < <(each_path '{config_dir}/retroarch' find '{}'  -name 'retroarch-*.cfg' -not -name 'retroarch-core-options.cfg' -exec basename {} .cfg \; | sort | uniq)
+}
+
+__configure_overlays() {
   # These are our own custom file, so no need to back up
   ini_merge '{config_dir}/retroarch/overlay.cfg' "$retroarch_default_overlay_config_path" backup=false
-  ini_merge '{config_dir}/retroarch/overlay-lightgun.cfg' "$retroarch_default_overlay_lightgun_config_path" backup=false
   file_cp '{config_dir}/retroarch/overlay.png' "$retroarch_default_overlay_image_path" backup=false
+
+  ini_merge '{config_dir}/retroarch/overlay-lightgun.cfg' "$retroarch_default_overlay_lightgun_config_path" backup=false
   file_cp '{config_dir}/retroarch/overlay-lightgun.png' "$retroarch_default_overlay_lightgun_image_path" backup=false
 }
 
@@ -36,6 +52,8 @@ restore() {
     "$retroarch_default_overlay_lightgun_config_path" \
     "$retroarch_default_overlay_image_path" \
     "$retroarch_default_overlay_lightgun_image_path"
+
+  find /opt/retropie/configs/all -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
 
   __restore_config delete_src=true
 }
