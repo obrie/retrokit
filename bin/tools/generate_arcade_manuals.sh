@@ -82,7 +82,7 @@ generate_manual() {
   if [ -f "$artwork_path" ]; then
     local artwork_extract_path=$(mktemp -d -p "$tmp_ephemeral_dir")
     while read filename; do
-      unzip -joq "$artwork_path" "$filename" -d "$artwork_extract_path/"
+      unzip -ojq "$artwork_path" "$filename" -d "$artwork_extract_path/"
       pages+=("$artwork_extract_path/$filename")
     done < <(unzip -Z1 "$artwork_path" | sort | grep -E "((inst_cocktail|_inst_|instructions|instcard).*|inst)\.png")
   fi
