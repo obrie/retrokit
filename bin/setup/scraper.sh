@@ -6,13 +6,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='scraper'
 setup_module_desc='Skyscraper setup and configuration'
 
-skyscraper_dir=/opt/retropie/configs/all/skyscraper
+skyscraper_dir="$retropie_configs_dir/all/skyscraper"
 
 # Scraper
 # 
 # Instructions: https://retropie.org.uk/docs/Scraper/#lars-muldjords-skyscraper
-# Configs:
-# * /opt/retropie/configs/all/skyscraper/config.ini
 build() {
   install_retropie_package 'supplementary' 'skyscraper'
 

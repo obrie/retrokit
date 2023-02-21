@@ -6,13 +6,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='manualkit'
 setup_module_desc='manualkit install and configuration for viewing game manuals'
 
-install_dir='/opt/retropie/supplementary/manualkit'
+install_dir="$retropie_dir/supplementary/manualkit"
 
 depends() {
   "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/manualkit/setup.sh" depends
 
-  dir_rsync '{lib_dir}/devicekit/' "/opt/retropie/supplementary/devicekit/" as_sudo=true
+  dir_rsync '{lib_dir}/devicekit/' "$retropie_dir/supplementary/devicekit/" as_sudo=true
 }
 
 build() {
@@ -37,13 +37,13 @@ configure() {
 }
 
 __configure_manualkit() {
-  ini_merge '{config_dir}/manualkit/manualkit.cfg' '/opt/retropie/configs/all/manualkit.cfg' backup=false overwrite=true
+  ini_merge '{config_dir}/manualkit/manualkit.cfg' "$retropie_configs_dir/all/manualkit.cfg" backup=false overwrite=true
 }
 
 # Install autostart script
 __configure_autostart() {
-  mkdir -p /opt/retropie/configs/all/autostart.d
-  ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/manualkit
+  mkdir -p "$retropie_configs_dir/all/autostart.d"
+  ln -fsnv "$install_dir/autostart" "$retropie_configs_dir/all/autostart.d/manualkit"
 }
 
 # Install emulationstation hooks
@@ -62,12 +62,12 @@ __configure_emulationstation() {
 
 # Install emulationstation hooks
 __configure_runcommand() {
-  mkdir -p /opt/retropie/configs/all/runcommand.d
-  ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/manualkit
+  mkdir -p "$retropie_configs_dir/all/runcommand.d"
+  ln -fsnv "$install_dir/runcommand" "$retropie_configs_dir/all/runcommand.d/manualkit"
 }
 
 restore() {
-  rm -fv /opt/retropie/configs/all/manualkit.cfg
+  rm -fv "$retropie_configs_dir/all/manualkit.cfg"
   
   __restore_emulationstation
   __restore_autostart
@@ -80,11 +80,11 @@ __restore_emulationstation() {
 }
 
 __restore_autostart() {
-  rm -fv /opt/retropie/configs/all/autostart.d/manualkit/
+  rm -fv "$retropie_configs_dir/all/autostart.d/manualkit/"
 }
 
 __restore_runcommand() {
-  rm -fv /opt/retropie/configs/all/runcommand.d/manualkit/
+  rm -fv "$retropie_configs_dir/all/runcommand.d/manualkit/"
 }
 
 remove() {

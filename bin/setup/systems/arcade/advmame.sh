@@ -7,7 +7,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='systems/arcade/advmame'
 setup_module_desc='AdvMAME configuration settings'
 
-config_path='/opt/retropie/configs/mame-advmame/advmame.rc'
+config_path="$retropie_configs_dir/mame-advmame/advmame.rc"
 
 configure() {
   __configure_dirs
@@ -18,9 +18,9 @@ __configure_dirs() {
   # Move advmame config directory in arcade system in order to avoid artwork zip
   # files from being scraped since there's no way to tell Skyscraper to ignore certain
   # directories
-  if [ -d "$HOME/RetroPie/roms/arcade/advmame" ]; then
-    rm -rfv "$HOME/RetroPie/roms/arcade/.advmame-config"
-    mv -v "$HOME/RetroPie/roms/arcade/advmame" "$HOME/RetroPie/roms/arcade/.advmame-config"
+  if [ -d "$roms_dir/arcade/advmame" ]; then
+    rm -rfv "$roms_dir/arcade/.advmame-config"
+    mv -v "$roms_dir/arcade/advmame" "$roms_dir/arcade/.advmame-config"
   fi
 }
 
@@ -66,9 +66,9 @@ restore() {
   __restore_config delete_src=true
 
   # Restore the advmame config directory
-  if [ -d "$HOME/RetroPie/roms/arcade/.advmame-config" ]; then
-    rm -rfv "$HOME/RetroPie/roms/arcade/advmame"
-    mv -v "$HOME/RetroPie/roms/arcade/.advmame-config" "$HOME/RetroPie/roms/arcade/advmame"
+  if [ -d "$roms_dir/arcade/.advmame-config" ]; then
+    rm -rfv "$roms_dir/arcade/advmame"
+    mv -v "$roms_dir/arcade/.advmame-config" "$roms_dir/arcade/advmame"
   fi
 }
 

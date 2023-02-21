@@ -8,18 +8,20 @@ setup_module_id='systems/psp/controllers'
 setup_module_desc='PSP controller overrides'
 setup_module_reconfigure_after_update=true
 
+ppsspp_dir="$retropie_emulators_dir/ppsspp"
+
 after_retropie_reconfigure() {
-  rm -fv '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt.rk-src'
+  rm -fv "$ppsspp_dir/assets/gamecontrollerdb.txt.rk-src"
   configure
 }
 
 configure() {
-  backup_and_restore '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt' as_sudo=true
-  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a /opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt >/dev/null
+  backup_and_restore "$ppsspp_dir/assets/gamecontrollerdb.txt" as_sudo=true
+  each_path '{config_dir}/controllers/gamecontrollerdb.local.txt' cat '{}' | uniq | sudo tee -a "$ppsspp_dir/assets/gamecontrollerdb.txt" >/dev/null
 }
 
 restore() {
-  restore_file '/opt/retropie/emulators/ppsspp/assets/gamecontrollerdb.txt' delete_src=true
+  restore_file "$ppsspp_dir/assets/gamecontrollerdb.txt" delete_src=true
 }
 
 setup "${@}"

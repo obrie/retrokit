@@ -66,7 +66,7 @@ restore() {
 
     echo "Removing GunCon patch from $chd_path"
     __apply_patch "$chd_path" u
-  done < <(find "$HOME/RetroPie/roms/$system" -name '*.chd.patched')
+  done < <(find "$roms_dir/$system" -name '*.chd.patched')
 }
 
 __apply_patch() {

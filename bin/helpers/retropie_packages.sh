@@ -7,14 +7,14 @@ install_retropie_package() {
   local name=$2
   local build=${3:-binary}
 
-  local install_dir="/opt/retropie/$package_type/$name"
+  local install_dir="$retropie_dir/$package_type/$name"
 
   # Determine whether we're updating an existing package or installing
   # a new one
   local mode
   local pkg_origin
   if [ -d "$install_dir" ]; then
-    pkg_origin=$(crudini --get "/opt/retropie/$package_type/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
+    pkg_origin=$(crudini --get "$retropie_dir/$package_type/$name/retropie.pkg" '' 'pkg_origin' | tr -d '"')
 
     # If the package is already installed and the build source has remained the same,
     # then don't do anything.  Updates must be done explicitly by the user.
@@ -31,19 +31,19 @@ install_retropie_package() {
       __curl_opts='-L'
     fi
 
-    sudo __curl_opts=$__curl_opts "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_binary_}
+    sudo __curl_opts=$__curl_opts "$retropie_setup_dir/retropie_packages.sh" "$name" ${mode:-_binary_}
   else
-    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" ${mode:-_source_}
+    sudo "$retropie_setup_dir/retropie_packages.sh" "$name" ${mode:-_source_}
   fi
 }
 
 configure_retropie_package() {
   local name=$1
-  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" configure
+  sudo "$retropie_setup_dir/retropie_packages.sh" "$name" configure
   enable_rpdist_backups
 }
 
 uninstall_retropie_package() {
   local name=$1
-  sudo "$HOME/RetroPie-Setup/retropie_packages.sh" "$name" remove
+  sudo "$retropie_setup_dir/retropie_packages.sh" "$name" remove
 }

@@ -6,13 +6,13 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='powerkit'
 setup_module_desc='Hardware safe shutdown scripts'
 
-install_dir='/opt/retropie/supplementary/powerkit'
+install_dir="$retropie_dir/supplementary/powerkit"
 
 depends() {
   "$lib_dir/devicekit/setup.sh" depends
   "$lib_dir/powerkit/setup.sh" depends
 
-  dir_rsync '{lib_dir}/devicekit/' "/opt/retropie/supplementary/devicekit/" as_sudo=true
+  dir_rsync '{lib_dir}/devicekit/' "$retropie_dir/supplementary/devicekit/" as_sudo=true
 }
 
 build() {
@@ -24,7 +24,7 @@ build() {
 }
 
 configure() {
-  ini_merge '{config_dir}/powerkit/powerkit.cfg' '/opt/retropie/configs/all/powerkit.cfg' backup=false overwrite=true
+  ini_merge '{config_dir}/powerkit/powerkit.cfg' "$retropie_configs_dir/all/powerkit.cfg" backup=false overwrite=true
   sudo systemctl enable powerkit.service
 
   # Restart
@@ -39,7 +39,7 @@ restore() {
 remove() {
   sudo rm -rfv \
     "$install_dir" \
-    /opt/retropie/configs/all/powerkit.cfg \
+    "$retropie_configs_dir/all/powerkit.cfg" \
     /etc/systemd/system/powerkit.service
 
   sudo pip3 uninstall -y gpiozero

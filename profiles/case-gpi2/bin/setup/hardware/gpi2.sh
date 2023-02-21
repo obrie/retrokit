@@ -5,7 +5,7 @@
 setup_module_id='hardware/gpi2'
 setup_module_desc='GPi2 management utilities'
 
-install_dir='/opt/retropie/supplementary/gpikit'
+install_dir="$retropie_dir/supplementary/gpikit"
 
 build() {
   __build_gpikit
@@ -36,10 +36,10 @@ __build_overlays() {
 
 __build_port_shortcuts() {
   # Create ports
-  dir_rsync '{lib_dir}/gpikit/shortcuts' "$HOME/RetroPie/roms/ports/+GPi/"
+  dir_rsync '{lib_dir}/gpikit/shortcuts' "$roms_dir/ports/+GPi/"
 
   # Don't scrape ports files
-  touch "$HOME/RetroPie/roms/ports/+GPi/.skyscraperignore"
+  touch "$roms_dir/ports/+GPi/.skyscraperignore"
 }
 
 configure() {
@@ -55,19 +55,19 @@ __configure_audio() {
   file_ln /etc/asound-mono.conf /etc/asound.conf as_sudo=true
 
   # Fix audio not playing during boot splashscreen
-  backup_file /opt/retropie/supplementary/splashscreen/asplashscreen.sh as_sudo=true
-  sudo sed -i 's/-o both/-o alsa/g' /opt/retropie/supplementary/splashscreen/asplashscreen.sh
+  backup_file "$retropie_dir/supplementary/splashscreen/asplashscreen.sh" as_sudo=true
+  sudo sed -i 's/-o both/-o alsa/g' "$retropie_dir/supplementary/splashscreen/asplashscreen.sh"
 }
 
 # Install autostart script
 __configure_autostart() {
-  mkdir -p /opt/retropie/configs/all/autostart.d
-  ln -fsnv "$install_dir/autostart" /opt/retropie/configs/all/autostart.d/gpikit
+  mkdir -p "$retropie_configs_dir/all/autostart.d"
+  ln -fsnv "$install_dir/autostart" "$retropie_configs_dir/all/autostart.d/gpikit"
 }
 
 __configure_runcommand() {
-  mkdir -p /opt/retropie/configs/all/runcommand.d
-  ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/gpikit
+  mkdir -p "$retropie_configs_dir/all/runcommand.d"
+  ln -fsnv "$install_dir/runcommand" "$retropie_configs_dir/all/runcommand.d/gpikit"
 }
 
 restore() {
@@ -80,20 +80,20 @@ __restore_audio() {
   restore_file /etc/asound.conf as_sudo=true delete_src=true
   restore_file /etc/asound-mono.conf as_sudo=true delete_src=true
   restore_file /etc/modprobe.d/alsa-base.conf as_sudo=true delete_src=true
-  restore_file /opt/retropie/supplementary/splashscreen/asplashscreen.sh as_sudo=true delete_src=true
+  restore_file "$retropie_dir/supplementary/splashscreen/asplashscreen.sh" as_sudo=true delete_src=true
 }
 
 __restore_autostart() {
-  rm -fv /opt/retropie/configs/all/autostart.d/gpikit/
+  rm -fv "$retropie_configs_dir/all/autostart.d/gpikit/"
 }
 
 __restore_runcommand() {
-  rm -fv /opt/retropie/configs/all/runcommand.d/gpikit/
+  rm -fv "$retropie_configs_dir/all/runcommand.d/gpikit/"
 }
 
 remove() {
   sudo rm -rfv "$install_dir"
-  rm -rfv  "$HOME/RetroPie/roms/ports/+GPi"
+  rm -rfv  "$roms_dir/ports/+GPi"
   restore_file /boot/overlays/dpi24.dtbo as_sudo=true delete_src=true
   restore_file /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true delete_src=true
 }

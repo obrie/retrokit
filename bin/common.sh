@@ -9,6 +9,17 @@ export bin_dir="$app_dir/bin"
 export ext_dir="$app_dir/ext"
 export lib_dir="$app_dir/lib"
 
+# RetroPie paths
+export retropie_dir="/opt/retropie"
+export retropie_configs_dir="$retropie_dir/configs"
+export retropie_emulators_dir="$retropie_dir/emulators"
+
+export retropie_data_dir="$HOME/RetroPie"
+export bios_dir="$retropie_data_dir/BIOS"
+export roms_dir="$retropie_data_dir/roms"
+
+export retropie_setup_dir="$HOME/RetroPie-Setup"
+
 # Import helper functions
 source "$bin_dir/helpers/configs.sh"
 source "$bin_dir/helpers/downloads.sh"

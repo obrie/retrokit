@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-scrape'
 setup_module_desc='Scrapes media / images / text via skyscraper, rebuilds the gamelist, and adjusts for multi-disc games'
 
-aggregate_report_file="/opt/retropie/configs/all/skyscraper/reports/report-$system-all.txt"
+aggregate_report_file="$retropie_configs_dir/all/skyscraper/reports/report-$system-all.txt"
 gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
@@ -132,7 +132,7 @@ __scraper_exec() {
   local IFS=$'\n'
   local stdin_value=$1
   local extra_args=($(system_setting '.scraper.args[]?'))
-  local cmd=(/opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${extra_args[@]}" "${@:2}")
+  local cmd=("$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${extra_args[@]}" "${@:2}")
 
   echo "Running Skyscraper: $system (${*})"
   if [ -z "$stdin_value" ]; then
@@ -144,10 +144,10 @@ __scraper_exec() {
 
 # Generates a report to be used by Skyscraper as input into which roms to scrape
 __build_missing_reports() {
-  mkdir -p '/opt/retropie/configs/all/skyscraper/reports/'
+  mkdir -p "$retropie_configs_dir/all/skyscraper/reports/"
 
   # Remove existing Skyscraper reports
-  find '/opt/retropie/configs/all/skyscraper/reports/' -name "report-*" -exec rm -f '{}' +
+  find "$retropie_configs_dir/all/skyscraper/reports/" -name "report-*" -exec rm -f '{}' +
 
   # Generate new reports of missing resources.  We look at only 2 resources as
   # indicators of a prior issue:
@@ -156,7 +156,7 @@ __build_missing_reports() {
   __scraper --cache report:missing=title,screenshot
 
   # Generate aggregate list of roms
-  cat /opt/retropie/configs/all/skyscraper/reports/report-* | sort | uniq > "$aggregate_report_file"
+  cat "$retropie_configs_dir/all/skyscraper/reports/report-"* | sort | uniq > "$aggregate_report_file"
 
   # Remove files explicitly being ignored (but still show up when using --cache)
   while read ignore_path; do
@@ -167,7 +167,7 @@ __build_missing_reports() {
     else
       sed -i "\|$ignore_dir/[^/]\+|d" "$aggregate_report_file"
     fi
-  done < <(find "$HOME/RetroPie/roms/$system" -name '.skyscraperignore' -o -name '.skyscraperignoretree')
+  done < <(find "$roms_dir/$system" -name '.skyscraperignore' -o -name '.skyscraperignoretree')
 }
 
 # Imports titles from DAT files to override what was scraped
@@ -194,13 +194,13 @@ __import_titles() {
     local filename=$(basename "$filepath")
     local name=${filename%.*}
     quickid_names[$name]=$quickid
-  done < <(xmlstarlet select -t -m '/*/*' -v '@id' -o $'\t' -v '@filepath' -n "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" | xmlstarlet unesc)
+  done < <(xmlstarlet select -t -m '/*/*' -v '@id' -o $'\t' -v '@filepath' -n "$retropie_configs_dir/all/skyscraper/cache/$system/quickid.xml" | xmlstarlet unesc)
 
   # Identify which titles we've already imported so we don't do it again
   declare -A imported_titles
   while IFS=$'\t' read quickid title; do
     imported_titles[$quickid]=$title
-  done < <(xmlstarlet select -t -m '/*/*[@type="title" and @source="import"]' -v '@id' -o $'\t' -v '.' -n "/opt/retropie/configs/all/skyscraper/cache/$system/db.xml" | xmlstarlet unesc)
+  done < <(xmlstarlet select -t -m '/*/*[@type="title" and @source="import"]' -v '@id' -o $'\t' -v '.' -n "$retropie_configs_dir/all/skyscraper/cache/$system/db.xml" | xmlstarlet unesc)
 
   # Find new titles to import
   while IFS=$'\t' read -r name disc_title title playlist_name; do
@@ -274,7 +274,7 @@ __build_gamelist() {
   args+=($(system_setting '.scraper | .gamelist_args? | .[]'))
 
   echo "Building gamelist for $system"
-  /opt/retropie/supplementary/skyscraper/Skyscraper -p "$system" "${args[@]}"
+  "$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${args[@]}"
 
   # Fix gamelist being generated incorrectly with games marked as folders
   #

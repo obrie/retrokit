@@ -21,7 +21,7 @@ restore() {
 
 __restore_mupen64plus_gliden64() {
   # This file comes directly from the install, so we always use it as the base
-  cp -v /opt/retropie/emulators/mupen64plus/share/mupen64plus/GLideN64.custom.ini "$retropie_system_config_dir/GLideN64.custom.ini"
+  cp -v "$retropie_emulators_dir/mupen64plus/share/mupen64plus/GLideN64.custom.ini" "$retropie_system_config_dir/GLideN64.custom.ini"
 }
 
 setup "${@}"

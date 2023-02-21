@@ -8,7 +8,7 @@ setup_module_desc='Manages emulator selections for individual ROMs'
 
 # Define emulators for games that don't use the default
 configure() {
-  local emulators_config_file='/opt/retropie/configs/all/emulators.cfg'
+  local emulators_config_file="$retropie_configs_dir/all/emulators.cfg"
   backup_file "$emulators_config_file"
 
   # Load emulator data

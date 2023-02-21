@@ -41,7 +41,7 @@ __configure_retroarch_configs() {
     # Peripheral / control type overrides
     for config_extension_type in ${peripherals//,/ } "$control_type"; do
       if any_path_exists_cached "{config_dir}/retroarch/retroarch-$config_extension_type.cfg"; then
-        paths_to_include+=("/opt/retropie/configs/all/retroarch-$config_extension_type.cfg")
+        paths_to_include+=("$retropie_configs_dir/all/retroarch-$config_extension_type.cfg")
       fi
 
       if any_path_exists_cached "{system_config_dir}/retroarch-$config_extension_type.cfg"; then

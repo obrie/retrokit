@@ -33,7 +33,7 @@ configure() {
   done < <(find "$redream_dir/cache" -name '*.cfg')
 
   # Check for the redream premium key
-  file_cp '{system_config_dir}/redream.key' '/opt/retropie/emulators/redream/redream.key'
+  file_cp '{system_config_dir}/redream.key' "$retropie_emulators_dir/redream/redream.key"
 }
 
 restore() {

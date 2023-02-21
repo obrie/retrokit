@@ -6,7 +6,7 @@ system_tmp_dir="$tmp_dir/$system"
 mkdir -p "$system_tmp_dir"
 
 # Platform configurations
-retropie_system_config_dir="/opt/retropie/configs/$system"
+retropie_system_config_dir="$retropie_configs_dir/$system"
 
 # retrokit configurations
 system_config_dir="$app_dir/config/systems/$system"
@@ -109,14 +109,14 @@ romkit_cache_list() {
 # Retroarch
 ##############
 
-retroarch_base_path='/opt/retropie/configs/all/retroarch'
+retroarch_base_dir="$retropie_configs_dir/all/retroarch"
 
 declare -Ag retroarch_path_defaults
-retroarch_path_defaults['core_options_path']='/opt/retropie/configs/all/retroarch-core-options.cfg'
-retroarch_path_defaults['cheat_database_path']="$retroarch_base_path/cheats"
-retroarch_path_defaults['overlay_directory']="$retroarch_base_path/overlay"
-retroarch_path_defaults['rgui_config_directory']="$retroarch_base_path/config"
-retroarch_path_defaults['input_remapping_directory']="$retroarch_base_path/remaps"
+retroarch_path_defaults['core_options_path']="$retropie_configs_dir/all/retroarch-core-options.cfg"
+retroarch_path_defaults['cheat_database_path']="$retroarch_base_dir/cheats"
+retroarch_path_defaults['overlay_directory']="$retroarch_base_dir/overlay"
+retroarch_path_defaults['rgui_config_directory']="$retroarch_base_dir/config"
+retroarch_path_defaults['input_remapping_directory']="$retroarch_base_dir/remaps"
 
 get_retroarch_path() {
   local config_name=$1
@@ -141,7 +141,7 @@ create_overlay_config() {
 
   echo "Overlaying $path with $overlay_filename"
   cat > "$path" <<EOF
-#include "/opt/retropie/configs/all/retroarch/overlay/base.cfg"
+#include "$retroarch_base_dir/overlay/base.cfg"
 overlay0_overlay = "$overlay_filename"
 EOF
 }

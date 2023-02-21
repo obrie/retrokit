@@ -11,7 +11,7 @@ build() {
   while IFS=$'\t' read -r name repo branch; do
     # Only install if not already installed -- updates are done externally
     if [ ! -d "/etc/emulationstation/themes/$name" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes install_theme "$name" "$repo" "$branch"
+      sudo "$retropie_setup_dir/retropie_packages.sh" esthemes install_theme "$name" "$repo" "$branch"
     fi
   done < <(_list_installed_themes)
 }
@@ -37,7 +37,7 @@ clean() {
   # Remove unused themes
   while read -r name; do
     if [ ! "${installed_themes["$name"]}" ]; then
-      sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes uninstall_theme "$name"
+      sudo "$retropie_setup_dir/retropie_packages.sh" esthemes uninstall_theme "$name"
     fi
   done < <(ls /etc/emulationstation/themes/)
 }
@@ -51,7 +51,7 @@ restore() {
 
 remove() {
   while IFS=$'\t' read -r name repo branch; do
-    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" esthemes uninstall_theme "$name"
+    sudo "$retropie_setup_dir/retropie_packages.sh" esthemes uninstall_theme "$name"
   done < <(_list_installed_themes)
 }
 

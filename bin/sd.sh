@@ -103,10 +103,10 @@ sync_media() {
   local paths=(
     /home/pi/RetroPie/BIOS/
     /home/pi/RetroPie/roms/
-    /opt/retropie/configs/all/emulationstation/downloaded_media/
-    /opt/retropie/configs/all/emulationstation/gamelists/
-    /opt/retropie/configs/all/retroarch/overlay/
-    /opt/retropie/configs/all/skyscraper/cache/
+    "$retropie_configs_dir/all/emulationstation/downloaded_media/"
+    "$retropie_configs_dir/all/emulationstation/gamelists/"
+    "$retropie_configs_dir/all/retroarch/overlay/"
+    "$retropie_configs_dir/all/skyscraper/cache/"
   )
 
   for path in "${paths[@]}"; do

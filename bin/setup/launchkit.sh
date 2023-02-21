@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='launchkit'
 setup_module_desc='launchkit install for optimizing game startup time when using launch images'
 
-install_dir='/opt/retropie/supplementary/launchkit'
+install_dir="$retropie_dir/supplementary/launchkit"
 
 build() {
   # Copy launchkit to the retropie install path so that nothing depends
@@ -15,12 +15,12 @@ build() {
 }
 
 configure() {
-  mkdir -p /opt/retropie/configs/all/runcommand.d
-  ln -fsnv "$install_dir/runcommand" /opt/retropie/configs/all/runcommand.d/launchkit
+  mkdir -p "$retropie_configs_dir/all/runcommand.d"
+  ln -fsnv "$install_dir/runcommand" "$retropie_configs_dir/all/runcommand.d/launchkit"
 }
 
 restore() {
-  rm -fv /opt/retropie/configs/all/runcommand.d/launchkit
+  rm -fv "$retropie_configs_dir/all/runcommand.d/launchkit"
 }
 
 remove() {

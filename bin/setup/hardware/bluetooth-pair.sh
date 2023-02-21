@@ -8,7 +8,7 @@ setup_module_desc='Bluetooth pairing configuration'
 
 configure() {
   if [ "$NONINTERACTIVE" != 'true' ]; then
-    sudo $HOME/RetroPie-Setup/retropie_packages.sh bluetooth gui
+    sudo "$retropie_setup_dir/retropie_packages.sh" bluetooth gui
   fi
 }
 

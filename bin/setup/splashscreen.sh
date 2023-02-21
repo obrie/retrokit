@@ -6,9 +6,9 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='splashscreen'
 setup_module_desc='Splashscreen configuration'
 
-splashscreen_config='/opt/retropie/configs/all/splashscreen.cfg'
+splashscreen_config="$retropie_configs_dir/all/splashscreen.cfg"
 splashscreen_list='/etc/splashscreen.list'
-splashscreens_dir="$HOME/RetroPie/splashscreens"
+splashscreens_dir="$retropie_data_dir/splashscreens"
 splashscreen_media_file="$splashscreens_dir/splash.mp4"
 
 build() {

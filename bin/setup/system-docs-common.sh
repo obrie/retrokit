@@ -378,9 +378,9 @@ __build_pdf() {
 # List all Retroarch configuration files which might contain controller info
 __list_joypad_files() {
   find \
-    /opt/retropie/configs/$system/retroarch.cfg \
-    /opt/retropie/configs/all/retroarch.cfg \
-    /opt/retropie/configs/all/retroarch-joypads/ \
+    "$retropie_system_config_dir/retroarch.cfg" \
+    "$retropie_configs_dir/all/retroarch.cfg" \
+    "$retropie_configs_dir/all/retroarch-joypads/" \
     -name '*.cfg' 2>/dev/null
 }
 

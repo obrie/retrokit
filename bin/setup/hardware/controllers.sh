@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='hardware/controllers'
 setup_module_desc='Controller autoconfiguration'
 
-autoconf_file='/opt/retropie/configs/all/autoconf.cfg'
+autoconf_file="$retropie_configs_dir/all/autoconf.cfg"
 autoconf_backup_file="$autoconf_file.rk-src"
 sdldb_path="$tmp_dir/gamecontrollerdb.txt"
 sdldb_repo='https://github.com/gabomdq/SDL_GameControllerDB'
@@ -83,7 +83,7 @@ __configure_controllers() {
     fi
 
     echo "Generating configurations for $name"
-    /opt/retropie/supplementary/emulationstation/scripts/inputconfiguration.sh || true
+    "$retropie_dir/supplementary/emulationstation/scripts/inputconfiguration.sh" || true
   done < <(setting '.hardware.controllers.inputs[] | [.name, .id, .swap_buttons // false | tostring] | join(",")')
 }
 
@@ -240,7 +240,7 @@ restore() {
 __restore_inputs() {
   local has_configured_inputs=$(setting '.hardware.controllers.inputs | length > 0')
   if [ "$has_configured_inputs" == 'true' ]; then
-    sudo "$HOME/RetroPie-Setup/retropie_packages.sh" emulationstation clear_input
+    sudo "$retropie_setup_dir/retropie_packages.sh" emulationstation clear_input
   fi
 }
 

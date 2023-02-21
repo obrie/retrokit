@@ -7,20 +7,20 @@ setup_module_id='retropie-autostart'
 setup_module_desc='RetroPie autostart hook extensions'
 
 build() {
-  file_cp '{ext_dir}/autostart/autostart.sh' '/opt/retropie/configs/all/autostart.sh' envsubst=false
-  mkdir -p /opt/retropie/configs/all/autostart.d
+  file_cp '{ext_dir}/autostart/autostart.sh' "$retropie_configs_dir/all/autostart.sh" envsubst=false
+  mkdir -p "$retropie_configs_dir/all/autostart.d"
 }
 
 configure() {
-  file_cp '{config_dir}/autostart/autostart-launch.sh' '/opt/retropie/configs/all/autostart-launch.sh' envsubst=false backup=false
+  file_cp '{config_dir}/autostart/autostart-launch.sh' "$retropie_configs_dir/all/autostart-launch.sh" envsubst=false backup=false
 }
 
 restore() {
-  rm -fv /opt/retropie/configs/all/autostart-launch.sh
+  rm -fv "$retropie_configs_dir/all/autostart-launch.sh"
 }
 
 remove() {
-  restore_file '/opt/retropie/configs/all/autostart.sh' delete_src=true
+  restore_file "$retropie_configs_dir/all/autostart.sh" delete_src=true
 }
 
 setup "${@}"

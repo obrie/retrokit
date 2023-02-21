@@ -9,7 +9,8 @@ setup_module_desc='Sinden lightgun setup and configuration'
 version='1.08'
 archive_name="SindenLightgunSoftwareReleaseV$version"
 archive_rpi_dir="SindenLightgunLinuxSoftwareV$version/Pi-Arm/Lightgun"
-retropie_module_install_dir='/opt/retropie/supplementary/sinden'
+
+install_dir="$retropie_dir/supplementary/sinden"
 
 depends() {
   sudo apt-get install -y \
@@ -22,9 +23,9 @@ depends() {
 }
 
 build() {
-  local current_sinden_version="$(cat /opt/retropie/supplementary/sinden/version 2>/dev/null || true)"
+  local current_sinden_version="$(cat "$install_dir/version" 2>/dev/null || true)"
   if [ "$current_sinden_version" != "$version" ]; then
-    sudo rm -rf "$retropie_module_install_dir"
+    sudo rm -rf "$install_dir"
 
     # Download
     local sinden_tmp_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
@@ -32,19 +33,19 @@ build() {
     unzip "$sinden_tmp_dir/sinden.zip" "$archive_name/$archive_rpi_dir/*" -d "$sinden_tmp_dir/"
 
     # Copy drivers
-    sudo mkdir -pv "$retropie_module_install_dir"
-    sudo cp -Rv "$sinden_tmp_dir/$archive_name/$archive_rpi_dir/Player"* "$retropie_module_install_dir"
-    echo "$version" | sudo tee /opt/retropie/supplementary/sinden/version
+    sudo mkdir -pv "$install_dir"
+    sudo cp -Rv "$sinden_tmp_dir/$archive_name/$archive_rpi_dir/Player"* "$install_dir"
+    echo "$version" | sudo tee "$install_dir/version"
   fi
 
   # Create ports
-  dir_rsync '{lib_dir}/sindenkit/shortcuts' "$HOME/RetroPie/roms/ports/+Sinden/"
+  dir_rsync '{lib_dir}/sindenkit/shortcuts' "$roms_dir/ports/+Sinden/"
 
   # Don't scrape ports files
-  touch "$HOME/RetroPie/roms/ports/+Sinden/.skyscraperignore"
+  touch "$roms_dir/ports/+Sinden/.skyscraperignore"
 
   # Add management script
-  file_cp '{lib_dir}/sindenkit/sinden.sh' /opt/retropie/supplementary/sinden/sinden.sh as_sudo=true backup=false envsubst=false
+  file_cp '{lib_dir}/sindenkit/sinden.sh' "$install_dir/sinden.sh" as_sudo=true backup=false envsubst=false
 }
 
 configure() {
@@ -121,15 +122,15 @@ __retropie_config_path_for_player() {
   local player_id=$1
 
   if [ "$player_id" == '1' ]; then
-    echo "$retropie_module_install_dir/Player$player_id/LightgunMono.exe.config"
+    echo "$install_dir/Player$player_id/LightgunMono.exe.config"
   else
-    echo "$retropie_module_install_dir/Player$player_id/LightgunMono$player_id.exe.config"
+    echo "$install_dir/Player$player_id/LightgunMono$player_id.exe.config"
   fi
 }
 
 remove() {
-  rm -rfv  "$HOME/RetroPie/roms/ports/+Sinden"
-  sudo rm -rfv /opt/retropie/supplementary/sinden
+  rm -rfv  "$roms_dir/ports/+Sinden"
+  sudo rm -rfv "$install_dir"
 
   # We only remove mono as other dependencies are used by other parts of the system
   sudo apt-get remove -y mono-complete

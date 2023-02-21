@@ -8,12 +8,12 @@ setup_module_id='system/psp/cheats'
 setup_module_desc='Cheats database for PSP'
 
 build() {
-  mkdir -pv /opt/retropie/configs/psp/PSP/Cheats
-  download 'https://github.com/Saramagrean/CWCheat-Database-Plus-/raw/master/cheat.db' '/opt/retropie/configs/psp/PSP/Cheats/cheat.db'
+  mkdir -pv "$retropie_system_config_dir/PSP/Cheats"
+  download 'https://github.com/Saramagrean/CWCheat-Database-Plus-/raw/master/cheat.db' "$retropie_system_config_dir/PSP/Cheats/cheat.db"
 }
 
 remove() {
-  rm -fv /opt/retropie/configs/psp/PSP/Cheats/cheat.db
+  rm -fv "$retropie_system_config_dir/PSP/Cheats/cheat.db"
 }
 
 setup "${@}"

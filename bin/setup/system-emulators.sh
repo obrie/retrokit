@@ -27,14 +27,14 @@ __install_emulators() {
     # A custom command is provided for the emulator.  This is typically used when
     # the system name isn't automatically mapped by the emulator.
     if [ -n "$cmd" ]; then
-      sudo "$HOME/RetroPie-Setup/retropie_packages.sh" retrokit-system configure "$package" "$system" "$cmd"
+      sudo "$retropie_setup_dir/retropie_packages.sh" retrokit-system configure "$package" "$system" "$cmd"
     fi
   done < <(system_setting 'select(.emulators) | .emulators | to_entries[] | [.key, .value.build // "binary", .value.cmd] | @tsv')
 
   if [ "$system" == 'ports' ]; then
     # Ensure ports has been added to the default conf since other tools may
     # add system management menus to it
-    sudo $HOME/RetroPie-Setup/retropie_packages.sh emptyports configure
+    sudo "$retropie_setup_dir/retropie_packages.sh" emptyports configure
   fi
 }
 

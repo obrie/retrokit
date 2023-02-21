@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='emulationstation-configscripts'
 setup_module_desc='EmulationStation scripts for automatic input configuration'
 
-configscripts_dir='/opt/retropie/supplementary/emulationstation/scripts/configscripts'
+configscripts_dir="$retropie_dir/supplementary/emulationstation/scripts/configscripts"
 
 build() {
   while read -r autoconfig_name; do

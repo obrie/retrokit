@@ -26,10 +26,10 @@ update_retropie() {
 
 # Update RetroPie-Setup
 update_retropie_setup() {
-  pushd "$HOME/RetroPie-Setup"
+  pushd "$retropie_setup_dir"
   git pull --ff-only
   popd
-  sudo __nodialog=1 $HOME/RetroPie-Setup/retropie_packages.sh setup post_update
+  sudo __nodialog=1 "$retropie_setup_dir/retropie_packages.sh" setup post_update
   clear
 }
 
@@ -38,10 +38,10 @@ update_retropie_setup() {
 # explicitly decide to accept those by running `update_emulator_configs`.
 update_retropie_packages() {
   if [ $# -eq 0 ]; then
-    sudo $HOME/RetroPie-Setup/retropie_packages.sh setup update_packages
+    sudo "$retropie_setup_dir/retropie_packages.sh" setup update_packages
   else
     for package in "$@"; do
-      sudo $HOME/RetroPie-Setup/retropie_packages.sh "$package" _update_
+      sudo "$retropie_setup_dir/retropie_packages.sh" "$package" _update_
     done
   fi
 }

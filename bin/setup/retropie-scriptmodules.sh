@@ -7,7 +7,7 @@ setup_module_id='retropie-scriptmodules'
 setup_module_desc='Custom RetroPie scriptmodules'
 
 build() {
-  local target_path="$HOME/RetroPie-Setup/ext/retrokit/scriptmodules"
+  local target_path="$retropie_setup_dir/ext/retrokit/scriptmodules"
   mkdir -pv "$target_path"
 
   # Merge script modules from retrokit and profiles into a single directory
@@ -19,7 +19,7 @@ build() {
 }
 
 remove() {
-  rm -rfv "$HOME/RetroPie-Setup/ext/retrokit/"
+  rm -rfv "$retropie_setup_dir/ext/retrokit/"
 }
 
 setup "${@}"

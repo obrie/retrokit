@@ -6,11 +6,11 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='retroarch'
 setup_module_desc='Retroarch configuration options'
 
-retroarch_config_path='/opt/retropie/configs/all/retroarch.cfg'
-retroarch_default_overlay_config_path='/opt/retropie/configs/all/retroarch/overlay/base.cfg'
-retroarch_default_overlay_lightgun_config_path='/opt/retropie/configs/all/retroarch/overlay/base-lightgun.cfg'
-retroarch_default_overlay_image_path='/opt/retropie/configs/all/retroarch/overlay/base.png'
-retroarch_default_overlay_lightgun_image_path='/opt/retropie/configs/all/retroarch/overlay/base-lightgun.png'
+retroarch_config_path="$retropie_configs_dir/all/retroarch.cfg"
+retroarch_default_overlay_config_path="$retropie_configs_dir/all/retroarch/overlay/base.cfg"
+retroarch_default_overlay_lightgun_config_path="$retropie_configs_dir/all/retroarch/overlay/base-lightgun.cfg"
+retroarch_default_overlay_image_path="$retropie_configs_dir/all/retroarch/overlay/base.png"
+retroarch_default_overlay_lightgun_image_path="$retropie_configs_dir/all/retroarch/overlay/base-lightgun.png"
 
 # Re-runs the `configure` action for retroarch
 reconfigure_packages() {
@@ -33,7 +33,7 @@ __configure_global_overrides() {
 
 __configure_shared_overrides() {
   while read shared_config_name; do
-    ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "/opt/retropie/configs/all/$shared_config_name.cfg" backup=false
+    ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "$retropie_configs_dir/all/$shared_config_name.cfg" backup=false
   done < <(each_path '{config_dir}/retroarch' find '{}'  -name 'retroarch-*.cfg' -not -name 'retroarch-core-options.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 
@@ -53,7 +53,7 @@ restore() {
     "$retroarch_default_overlay_image_path" \
     "$retroarch_default_overlay_lightgun_image_path"
 
-  find /opt/retropie/configs/all -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
+  find "$retropie_configs_dir/all" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
 
   __restore_config delete_src=true
 }

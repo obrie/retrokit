@@ -137,7 +137,7 @@ __migrate_es_collections() {
 
   while read collection_path; do
     while read rom_dir; do
-      rom_dir=${rom_dir//"$HOME/RetroPie/roms/"/}
+      rom_dir=${rom_dir//"$roms_dir/"/}
       __migrate_string_in_file "$collection_path" "$rom_dir/$old_name." "$rom_dir/$new_name."
     done < <(echo "$rom_dirs")
   done < <(find "$HOME/.emulationstation/collections/" -name 'custom-*.cfg')
@@ -175,7 +175,7 @@ __migrate_scraper_db() {
   local escaped_old_name=$(echo "$old_name" | xmlstarlet esc)
   local escaped_new_name=$(echo "$new_name" | xmlstarlet esc)
 
-  __migrate_string_in_file "/opt/retropie/configs/all/skyscraper/cache/$system/quickid.xml" "/$old_name." "/$new_name."
+  __migrate_string_in_file "$retropie_configs_dir/all/skyscraper/cache/$system/quickid.xml" "/$old_name." "/$new_name."
 }
 
 # Migrates Retroarch configurations in /opt/retropie/
@@ -258,7 +258,7 @@ __migrate_rom_files() {
   local old_name=$2
   local new_name=$3
 
-  __migrate_files_in_dir "$HOME/RetroPie/roms/$system" "$old_name" "$new_name"
+  __migrate_files_in_dir "$roms_dir/$system" "$old_name" "$new_name"
 }
 
 # Migrates files in the given directory from one name to another
