@@ -76,15 +76,14 @@ __restore_config() {
   if has_backup_file "$config_path"; then
     if [ -f "$config_path" ]; then
       # Keep track of the input_maps since we don't want to lose those
-      grep -E '^input_map' "$config_path" > "$system_tmp_dir/inputs.rc"
+      grep -E '^input_map' "$config_path" > "$tmp_ephemeral_dir/inputs.rc"
 
       # Restore and remove any input_maps from the original file
       restore_file "$config_path" "${@}"
       sed -i '/^input_map/d' "$config_path"
 
       # Merge the input_maps back in
-      crudini --inplace --merge "$config_path" < "$system_tmp_dir/inputs.rc"
-      rm "$system_tmp_dir/inputs.rc"
+      crudini --inplace --merge "$config_path" < "$tmp_ephemeral_dir/inputs.rc"
     else
       restore_file "$config_path" "${@}"
     fi
