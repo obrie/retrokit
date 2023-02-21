@@ -37,7 +37,7 @@ show() {
     # fills the screen without changing the aspect ratio.  Any space not
     # filled will be padded with black bars.
     ffmpeg \
-      -i /opt/retropie/configs/$system/launching-extended.png \
+      -i "$launch_image" \
       -vf scale="w=$screen_width:h=$screen_height:force_original_aspect_ratio=decrease,pad=$screen_width:$screen_height:(ow-iw)/2:(oh-ih)/2" \
       -f fbdev \
       -pix_fmt rgb565le \

@@ -4,6 +4,8 @@ declare -g \
   default_config_path system_override_path emulator_override_path rom_override_path \
   joystick_profile mouse_profile keyboard_profile
 
+retropie_configs_path=/opt/retropie/configs
+
 usage() {
   echo "usage: $0 <setup|restore> <system_name> <emulator_name> /path/to/rom"
   exit 1
@@ -25,10 +27,10 @@ setup() {
   local rom_name=${rom_filename%.*}
 
   # Define config paths
-  default_config_path='/opt/retropie/configs/all/autoport.cfg'
-  system_override_path="/opt/retropie/configs/$system/autoport.cfg"
-  emulator_override_path="/opt/retropie/configs/$system/autoport/emulators/$emulator.cfg"
-  rom_override_path="/opt/retropie/configs/$system/autoport/$rom_name.cfg"
+  default_config_path="$retropie_configs_path/all/autoport.cfg"
+  system_override_path="$retropie_configs_path/$system/autoport.cfg"
+  emulator_override_path="$retropie_configs_path/$system/autoport/emulators/$emulator.cfg"
+  rom_override_path="$retropie_configs_path/$system/autoport/$rom_name.cfg"
 
   # Determine what type of input configuration system we're dealing with
   local system_type=$(__get_system_type "$emulator")
@@ -166,7 +168,7 @@ __setup_redream() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
+  local config_path="$retropie_configs_path/dreamcast/redream/redream.cfg"
   local config_backup_path="$config_path.autoport"
 
   # Determine if a keyboard is being configured
@@ -222,7 +224,7 @@ __setup_ppsspp() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path=/opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  local config_path="$retropie_configs_path/psp/PSP/SYSTEM/controls.ini"
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
     return
@@ -249,7 +251,7 @@ __setup_drastic() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local config_path="$retropie_configs_path/nds/drastic/config/drastic.cfg"
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
     return
@@ -270,7 +272,7 @@ __setup_hypseus() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path=/opt/retropie/configs/daphne/hypinput.ini
+  local config_path="$retropie_configs_path/daphne/hypinput.ini"
   local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
   if [ -z "$device_config_path" ]; then
     return
@@ -299,9 +301,9 @@ __setup_mupen64plus() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path=/opt/retropie/configs/n64/mupen64plus.cfg
+  local config_path="$retropie_configs_path/n64/mupen64plus.cfg"
   local config_backup_path="$config_path.autoport"
-  local auto_config_path=/opt/retropie/configs/n64/InputAutoCfg.ini
+  local auto_config_path="$retropie_configs_path/n64/InputAutoCfg.ini"
 
   __match_players "$profile" joystick
   if [ ${#player_indexes[@]} -eq 0 ]; then
@@ -715,7 +717,7 @@ __restore_libretro() {
 }
 
 __restore_redream() {
-  local config_path=/opt/retropie/configs/dreamcast/redream/redream.cfg
+  local config_path="$retropie_configs_path/dreamcast/redream/redream.cfg"
   local config_backup_path="$config_path.autoport"
   if [ ! -f "$config_backup_path" ]; then
     return
@@ -732,11 +734,11 @@ __restore_redream() {
 }
 
 __restore_ppsspp() {
-  __restore_joystick_config /opt/retropie/configs/psp/PSP/SYSTEM/controls.ini
+  __restore_joystick_config "$retropie_configs_path/psp/PSP/SYSTEM/controls.ini"
 }
 
 __restore_drastic() {
-  local config_path=/opt/retropie/configs/nds/drastic/config/drastic.cfg
+  local config_path="$retropie_configs_path/nds/drastic/config/drastic.cfg"
   local config_backup_path="$config_path.autoport"
   if [ ! -f "$config_backup_path" ]; then
     return
@@ -753,11 +755,11 @@ __restore_drastic() {
 }
 
 __restore_hypseus() {
-  __restore_joystick_config /opt/retropie/configs/daphne/hypinput.ini
+  __restore_joystick_config "$retropie_configs_path/daphne/hypinput.ini"
 }
 
 __restore_mupen64plus() {
-  __restore_joystick_config /opt/retropie/configs/n64/mupen64plus.cfg
+  __restore_joystick_config "$retropie_configs_path/n64/mupen64plus.cfg"
 }
 
 __restore_joystick_config() {
