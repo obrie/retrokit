@@ -399,9 +399,7 @@ ln_if_different() {
   fi
 }
 
-# Rsyncs a directory to the given target.  This will *remove* the existing
-# target and the run an rsync with all matching paths from both retrokit
-# and profiles.
+# Rsyncs a directory to the given target.
 dir_rsync() {
   local source=$1
   local target=$2
@@ -414,11 +412,15 @@ dir_rsync() {
     cmd='sudo'
   fi
 
-  $cmd rm -rfv "$target"/*
-  $cmd mkdir -pv "$target"
+  # First sync all the profiles together to a single directory
+  local reference_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
   while read source_path; do
-    $cmd rsync -avzR --exclude '__pycache__/' "$source_path/./" "$target"
+    rsync -qavzR --exclude '__pycache__/' "$source_path/./" "$reference_dir"
   done < <(each_path "$source")
+
+  # Run a final single rsync to the destination
+  $cmd mkdir -pv "$target"
+  $cmd rsync -avzR --delete "$reference_dir/./" "$target"
 }
 
 # Renders a template with the given variables to substitute.
