@@ -158,10 +158,10 @@ env_merge() {
   fi
 
   echo "Merging env $source to $target"
-  while read source_path; do
+  while read source_file; do
     while read -r env_line; do
       $cmd dotenv -f "$target" set "$env_line"
-    done < <(cat "$(conf_prepare "$source_path" envsubst="$envsubst")" | grep -Ev "^#" | grep .)
+    done < <(cat "$(conf_prepare "$source_file" envsubst="$envsubst")" | grep -Ev "^#" | grep .)
   done < <(each_path "$source")
 }
 
@@ -199,8 +199,8 @@ ini_merge() {
   fi
 
   echo "Merging ini $source to $target"
-  while read source_path; do
-    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_path" envsubst="$envsubst")"
+  while read source_file; do
+    $cmd crudini --merge --inplace "$target" < "$(conf_prepare "$source_file" envsubst="$envsubst")"
   done < <(each_path "$source")
 
   if [ "$space_around_delimiters" == "false" ]; then
@@ -214,8 +214,8 @@ ini_get() {
 
   # Read highest priority -> lowest priority, finding the first file
   # that has the ini configuration
-  while read source_path; do
-    if crudini --get "$source_path" "${@:2}" 2>/dev/null; then
+  while read source_file; do
+    if crudini --get "$source_file" "${@:2}" 2>/dev/null; then
       # Found a match -- stop
       return
     fi
@@ -255,23 +255,23 @@ json_merge() {
   fi
 
   echo "Merging json $source to $target"
-  local staging_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
   if [ -s "$target" ]; then
-    cp "$target" "$staging_path"
+    cp "$target" "$staging_file"
   else
-    echo '{}' > "$staging_path"
+    echo '{}' > "$staging_file"
   fi
 
-  local merged_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local merged_file=$(mktemp -p "$tmp_ephemeral_dir")
 
-  while read source_path; do
-    if [ -s "$source_path" ]; then
-      $cmd jq -s '.[0] * .[1]' "$staging_path" "$(conf_prepare "$source_path" envsubst="$envsubst")" > "$merged_path"
-      mv "$merged_path" "$staging_path"
+  while read source_file; do
+    if [ -s "$source_file" ]; then
+      $cmd jq -s '.[0] * .[1]' "$staging_file" "$(conf_prepare "$source_file" envsubst="$envsubst")" > "$merged_file"
+      mv "$merged_file" "$staging_file"
     fi
   done < <(each_path "$source")
 
-  $cmd mv "$staging_path" "$target"
+  $cmd mv "$staging_file" "$target"
 }
 
 # Edits in-place one or more keys on the given JSON file
@@ -310,9 +310,9 @@ json_edit() {
 
   # jq doesn't support in-place writes, so first write to a staging file before
   # we overwrite
-  local staging_path=$(mktemp -p "$tmp_ephemeral_dir")
-  jq "${jq_args[@]}" "$jq_commands" "$target" > "$staging_path"
-  mv "$staging_path" "$target"
+  local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
+  jq "${jq_args[@]}" "$jq_commands" "$target" > "$staging_file"
+  mv "$staging_file" "$target"
 }
 
 # Copies a file, backing up the target and substituting environment variables
@@ -414,8 +414,8 @@ dir_rsync() {
 
   # First sync all the profiles together to a single directory
   local reference_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
-  while read source_path; do
-    rsync -qavzR --exclude '__pycache__/' "$source_path/./" "$reference_dir"
+  while read source_dir; do
+    rsync -qavzR --exclude '__pycache__/' "$source_dir/./" "$reference_dir"
   done < <(each_path "$source")
 
   # Run a final single rsync to the destination

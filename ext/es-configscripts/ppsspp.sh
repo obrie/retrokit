@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Path to the advmame configuration where controls are defined
-ppsspp_config_path="$configdir/psp/PSP/SYSTEM/controls.ini"
-sdldb_path="$rootdir/emulators/ppsspp/assets/gamecontrollerdb.txt"
+ppsspp_config_file="$configdir/psp/PSP/SYSTEM/controls.ini"
+sdldb_file="$rootdir/emulators/ppsspp/assets/gamecontrollerdb.txt"
 
 function check_ppsspp() {
     [[ ! -d "$rootdir/emulators/ppsspp" ]] && return 1
@@ -12,8 +12,8 @@ function check_ppsspp() {
 function onstart_ppsspp() {
     local controller=$1
 
-    if [ -f "$ppsspp_config_path" ]; then
-        cp "$ppsspp_config_path" '/tmp/ppsspp-controls.ini'
+    if [ -f "$ppsspp_config_file" ]; then
+        cp "$ppsspp_config_file" '/tmp/ppsspp-controls.ini'
     else
         echo '[ControlMapping]' > '/tmp/ppsspp-controls.ini'
     fi
@@ -274,7 +274,7 @@ function map_ppsspp_joystick() {
     case "$input_type" in
         hat)
             # Get the SDL button name that's associated with this HAT direction
-            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:h$input_id.$input_value," | cut -d ':' -f 1 | tail -n 1)
+            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_file" | grep -oE "[^,]+:h$input_id.$input_value," | cut -d ':' -f 1 | tail -n 1)
             if [ -z "$sdl_button_name" ]; then
                 return
             fi
@@ -294,7 +294,7 @@ function map_ppsspp_joystick() {
             ;;
         *)
             # Get the SDL button name that's associated with this button id
-            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_path" | grep -oE "[^,]+:b$input_id," | cut -d ':' -f 1 | tail -n 1)
+            local sdl_button_name=$(grep -E "^$DEVICE_GUID," "$sdldb_file" | grep -oE "[^,]+:b$input_id," | cut -d ':' -f 1 | tail -n 1)
             if [ -z "$sdl_button_name" ]; then
                 return
             fi
@@ -334,16 +334,16 @@ function map_ppsspp_keyboard() {
 }
 
 function _onend_ppsspp() {
-    mkdir -p "$(dirname "$ppsspp_config_path")"
-    mv '/tmp/ppsspp-controls.ini' "$ppsspp_config_path"
+    mkdir -p "$(dirname "$ppsspp_config_file")"
+    mv '/tmp/ppsspp-controls.ini' "$ppsspp_config_file"
 }
 
 function onend_ppsspp_joystick() {
     _onend_ppsspp
 
     # Define a device-specific file in order to support multiple joysticks
-    local ppsspp_device_config_path="$configdir/psp/PSP/SYSTEM/controls-$DEVICE_NAME.ini"
-    cp '/tmp/ppsspp-device-controls.ini' "$ppsspp_device_config_path"
+    local ppsspp_device_config_file="$configdir/psp/PSP/SYSTEM/controls-$DEVICE_NAME.ini"
+    cp '/tmp/ppsspp-device-controls.ini' "$ppsspp_device_config_file"
 }
 
 function onend_ppsspp_keyboard() {

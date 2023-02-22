@@ -152,8 +152,8 @@ EOF
 # This allows us to continue to use consistent overlay sources between all
 # games by just dynamically generated compatible lightgun overlays.
 outline_overlay_image() {
-  local source_path="$1"
-  local target_path="$2"
+  local source_file="$1"
+  local target_file="$2"
 
   # Formatting
   local width=$(setting '.overlays.lightgun_border.width')
@@ -167,7 +167,7 @@ outline_overlay_image() {
   local top=$(system_setting '.overlays.lightgun_border.offset_y // 0')
   local bottom="-$top"
 
-  python3 "$bin_dir/tools/outline-overlay.py" "$source_path" "$target_path" \
+  python3 "$bin_dir/tools/outline-overlay.py" "$source_file" "$target_file" \
     --left "$left" --right "$right" --top "$top" --bottom "$bottom" --width "$width" \
     --color "$color" --fill "${fill:-true}" --brightness "$brightness"
 }

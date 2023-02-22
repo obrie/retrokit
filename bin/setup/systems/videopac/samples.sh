@@ -19,9 +19,9 @@ __build_common_samples() {
   local url='http://o2em.sourceforge.net/files/o2mainsamp.zip'
 
   if [ ! -f "$bios_dir/voice/E4BB.WAV" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-    local sample_archive_path=$(mktemp -p "$tmp_ephemeral_dir")
-    download "$url" "$sample_archive_path"
-    unzip -jo "$sample_archive_path" -d "$bios_dir/voice/"
+    local sample_archive_file=$(mktemp -p "$tmp_ephemeral_dir")
+    download "$url" "$sample_archive_file"
+    unzip -jo "$sample_archive_file" -d "$bios_dir/voice/"
   else
     echo "Already downloaded $url"
   fi
@@ -34,9 +34,9 @@ __build_sid_the_spellbinder_samples() {
 
   if [ -n "$machine" ]; then
     if [ ! -f "$bios_dir/voice/EE80.WAV" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local sample_archive_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$url" "$sample_archive_path"
-      unzip -jo "$sample_archive_path" -d "$bios_dir/voice/"
+      local sample_archive_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$sample_archive_file"
+      unzip -jo "$sample_archive_file" -d "$bios_dir/voice/"
     else
       echo "Already downloaded $url"
     fi

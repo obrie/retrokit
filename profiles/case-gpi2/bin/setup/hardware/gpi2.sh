@@ -23,15 +23,15 @@ __build_gpikit() {
 __build_overlays() {
   local patches_zip="$tmp_dir/gpi_case2_patch.zip"
   local overlay_base_path='GPi_Case2_patch_retropie/patch_files/overlays'
-  local extract_path=$(mktemp -d -p "$tmp_ephemeral_dir")
+  local extract_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
   download 'https://github.com/RetroFlag/GPiCase2-Script/raw/main/GPi_Case2_patch.zip' "$patches_zip"
-  unzip -o "$patches_zip" "$overlay_base_path/*" -d "$extract_path/"
+  unzip -o "$patches_zip" "$overlay_base_path/*" -d "$extract_dir/"
 
   # Screen overlay
-  file_cp "$extract_path/$overlay_base_path/dpi24.dtbo" /boot/overlays/dpi24.dtbo as_sudo=true
+  file_cp "$extract_dir/$overlay_base_path/dpi24.dtbo" /boot/overlays/dpi24.dtbo as_sudo=true
 
   # Audio overlay
-  file_cp "$extract_path/$overlay_base_path/pwm-audio-pi-zero.dtbo" /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true
+  file_cp "$extract_dir/$overlay_base_path/pwm-audio-pi-zero.dtbo" /boot/overlays/pwm-audio-pi-zero.dtbo as_sudo=true
 }
 
 __build_port_shortcuts() {

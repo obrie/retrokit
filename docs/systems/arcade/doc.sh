@@ -7,7 +7,7 @@ done < <(jq -r 'to_entries[] | select(.value.buttons) | [.key, (.value.buttons |
 
 # Determines whether the given ROM has any doc overrides
 __has_rom_overrides() {
-  local core_options_path=$1
+  local core_options_file=$1
   local name=$2
   local group_name=$3
 
@@ -16,7 +16,7 @@ __has_rom_overrides() {
 
 # Add arcade-specific controls
 __add_system_extensions() {
-  local core_options_path=$1
+  local core_options_file=$1
   local name=$2
   local group_name=$3
   local emulator=$4

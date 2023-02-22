@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the drastic configuration where controllers are defined
-drastic_config_path="$configdir/nds/drastic/config/drastic.cfg"
+drastic_config_file="$configdir/nds/drastic/config/drastic.cfg"
 
 function check_drastic() {
     [[ ! -d "$rootdir/emulators/drastic" ]] && return 1
@@ -11,8 +11,8 @@ function check_drastic() {
 function _onstart_drastic() {
     local controller=$1
 
-    if [ -f "$drastic_config_path" ]; then
-        cp "$drastic_config_path" '/tmp/drastic.cfg'
+    if [ -f "$drastic_config_file" ]; then
+        cp "$drastic_config_file" '/tmp/drastic.cfg'
     else
         touch '/tmp/drastic.cfg'
     fi
@@ -211,15 +211,15 @@ function map_drastic_keyboard() {
 }
 
 function _onend_drastic() {
-    mkdir -pv "$(dirname "$drastic_config_path")"
-    cp '/tmp/drastic.cfg' "$drastic_config_path"
+    mkdir -pv "$(dirname "$drastic_config_file")"
+    cp '/tmp/drastic.cfg' "$drastic_config_file"
 }
 
 function onend_drastic_joystick() {
     _onend_drastic
 
-    local drastic_device_config_path="$configdir/nds/drastic/config/drastic-$DEVICE_NAME.cfg"
-    cp '/tmp/drastic-device.cfg' "$drastic_device_config_path"
+    local drastic_device_config_file="$configdir/nds/drastic/config/drastic-$DEVICE_NAME.cfg"
+    cp '/tmp/drastic-device.cfg' "$drastic_device_config_file"
 }
 
 function onend_drastic_keyboard() {

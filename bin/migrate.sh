@@ -102,20 +102,20 @@ __migrate_es_downloaded_media() {
   local group_name=$4
   local manual_filename=$5
 
-  local media_path="$HOME/.emulationstation/downloaded_media/$system"
-  __migrate_files_in_dir "$media_path" "$old_name" "$new_name"
+  local media_dir="$HOME/.emulationstation/downloaded_media/$system"
+  __migrate_files_in_dir "$media_dir" "$old_name" "$new_name"
 
   # Migrate source manuals (use a different name than the rom)
-  local manuals_path="$media_path/manuals"
-  local manual_path="$manuals_path/$old_name.pdf"
-  if [ -f "$manual_path" ]; then
-    local source_manual_path=$(realpath "$manual_path")
-    local source_manual_filename=$(basename "$source_manual_path" .pdf)
+  local manuals_dir="$media_dir/manuals"
+  local manual_file="$manuals_dir/$old_name.pdf"
+  if [ -f "$manual_file" ]; then
+    local source_manual_file=$(realpath "$manual_file")
+    local source_manual_filename=$(basename "$source_manual_file" .pdf)
 
     if [ "$manual_filename" != "$source_manual_filename" ]; then
       for manuals_dirname in .files .download; do
-        __migrate_files_in_dir "$manuals_path/$manuals_dirname" "$source_manual_filename" "$manual_filename"
-        __migrate_files_in_dir "$manuals_path/$manuals_dirname" "$source_manual_filename (archive)" "$manual_filename (archive)"
+        __migrate_files_in_dir "$manuals_dir/$manuals_dirname" "$source_manual_filename" "$manual_filename"
+        __migrate_files_in_dir "$manuals_dir/$manuals_dirname" "$source_manual_filename (archive)" "$manual_filename (archive)"
       done
     fi
   fi
@@ -135,10 +135,10 @@ __migrate_es_collections() {
 
   local rom_dirs=$(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
-  while read collection_path; do
+  while read collection_file; do
     while read rom_dir; do
       rom_dir=${rom_dir//"$roms_dir/"/}
-      __migrate_string_in_file "$collection_path" "$rom_dir/$old_name." "$rom_dir/$new_name."
+      __migrate_string_in_file "$collection_file" "$rom_dir/$old_name." "$rom_dir/$new_name."
     done < <(echo "$rom_dirs")
   done < <(find "$HOME/.emulationstation/collections/" -name 'custom-*.cfg')
 }
@@ -193,9 +193,9 @@ __migrate_retroarch_config_files() {
 
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   local retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
-  local retroarch_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
+  local retroarch_cheat_database_dir=$(get_retroarch_path 'cheat_database_path')
 
-  declare -A image_paths_to_migrate
+  declare -A image_names_to_migrate
 
   while read -r library_name; do
     # Core options / Overlays
@@ -219,7 +219,7 @@ __migrate_retroarch_config_files() {
 
         if [ "$old_image_name" != "$new_image_name" ]; then
           __migrate_string_in_file "$old_filename" "$old_image_name" "$new_image_name"
-          image_paths_to_migrate[$old_image_name]=$new_image_name
+          image_names_to_migrate[$old_image_name]=$new_image_name
         fi
       done < <(find "$emulator_config_dir" -name "$old_name.cfg")
 
@@ -234,7 +234,7 @@ __migrate_retroarch_config_files() {
     fi
 
     # Cheats
-    __migrate_files_in_dir "$retroarch_cheat_database_path/$library_name" "$old_name" "$new_name"
+    __migrate_files_in_dir "$retroarch_cheat_database_dir/$library_name" "$old_name" "$new_name"
   done < <(get_core_library_names)
 
   # Overlays - Image references
@@ -244,8 +244,8 @@ __migrate_retroarch_config_files() {
   done < <(find "$retroarch_overlay_dir/$system" -name "$old_name.cfg")
 
   # Rename Overlay files
-  for old_image_name in "${!image_paths_to_migrate[@]}"; do
-    local new_image_name=${image_paths_to_migrate[$old_image_name]}
+  for old_image_name in "${!image_names_to_migrate[@]}"; do
+    local new_image_name=${image_names_to_migrate[$old_image_name]}
     __migrate_files_in_dir "$retroarch_overlay_dir/$system" "$old_image_name" "$new_image_name"
   done
 }

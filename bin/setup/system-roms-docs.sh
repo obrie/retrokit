@@ -34,9 +34,9 @@ build() {
       continue
     fi
 
-    local staging_path=$(mktemp -p "$tmp_ephemeral_dir")
-    local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/$name.pdf"
-    if [ -f "$output_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+    local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
+    local output_file="$HOME/.emulationstation/downloaded_media/$system/docs/$name.pdf"
+    if [ -f "$output_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
       echo "[$name] Already built documentation"
       continue
     fi
@@ -46,11 +46,11 @@ build() {
     # Build the PDF
     cp "$base_doc_data_file" "$doc_data_file"
     __add_system_extensions "$core_options_file" "$name" "$group_name" "$emulator"
-    __build_pdf "$staging_path"
+    __build_pdf "$staging_file"
 
     # Move PDF to final location
-    mkdir -p "$(dirname "$output_path")"
-    mv "$staging_path" "$output_path"
+    mkdir -p "$(dirname "$output_file")"
+    mv "$staging_file" "$output_file"
   done < <(romkit_cache_list | jq -r '[.name, .group.name, .emulator] | join("»")')
 }
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 # Path to the ir configuration where controls are defined
-ir_config_path="$configdir/all/rc_keymap.cfg"
+ir_config_file="$configdir/all/rc_keymap.cfg"
 
 function check_ir() {
-    [[ ! -f "$ir_config_path" ]] && return 1
+    [[ ! -f "$ir_config_file" ]] && return 1
     return 0
 }
 
 function onstart_ir_keyboard() {
-    iniConfig '=' '' "$ir_config_path"
+    iniConfig '=' '' "$ir_config_file"
 
     # Get the location of the source keymap file used for defining mappings
     iniGet 'source_keymap_path'

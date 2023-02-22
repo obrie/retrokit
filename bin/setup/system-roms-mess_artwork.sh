@@ -30,34 +30,34 @@ configure() {
   fi
 
   while read -r name; do
-    local artwork_path="$system_artwork_dir/$name.zip"
-    if [ ! -f "$artwork_path" ]; then
+    local artwork_file="$system_artwork_dir/$name.zip"
+    if [ ! -f "$artwork_file" ]; then
       # No artwork: abort
       continue
     fi
 
-    local layout_path="$system_artwork_dir/$name/$name.lay"
+    local layout_file="$system_artwork_dir/$name/$name.lay"
 
     # Extract the layout file so we can store it in an override location
     mkdir -p "$system_artwork_dir/$name"
-    unzip -p "$artwork_path" default.lay > "$layout_path"
+    unzip -p "$artwork_file" default.lay > "$layout_file"
 
     # Build the background view
-    local view_xml=$(__build_background_view "$layout_path")
+    local view_xml=$(__build_background_view "$layout_file")
     if [ -n "$view_xml" ]; then
       local view_name=$(echo "$view_xml" | xmlstarlet sel -t -v '/view/@name')
       echo "[$name] Prioritizing artwork view: $view_name"
 
       # Get existing children (removing any with the same view name)
-      local existing_xml=$(xmlstarlet ed -P -d "/*/view[@name='$view_name']" "$layout_path" | xmlstarlet sel -I -t -c '/mamelayout/*')
+      local existing_xml=$(xmlstarlet ed -P -d "/*/view[@name='$view_name']" "$layout_file" | xmlstarlet sel -I -t -c '/mamelayout/*')
 
       # Merge background view with existing children
-      local tmp_layout_path=$(mktemp -p "$tmp_ephemeral_dir")
-      cat "$layout_path" |\
+      local tmp_layout_file=$(mktemp -p "$tmp_ephemeral_dir")
+      cat "$layout_file" |\
         xmlstarlet ed -d '/mamelayout/*' -d '//comment()' |\
         xmlstarlet ed -s '/mamelayout' -t text -n '' -v $'\n'"$view_xml"$'\n' -s '/mamelayout' -t text -n '' -v "$existing_xml" |\
-        xmlstarlet unescape > "$tmp_layout_path"
-      mv "$tmp_layout_path" "$layout_path"
+        xmlstarlet unescape > "$tmp_layout_file"
+      mv "$tmp_layout_file" "$layout_file"
     else
       echo "[$name] Could not find background artwork view"
       rm -rf "$system_artwork_dir/$name"
@@ -66,7 +66,7 @@ configure() {
 }
 
 __build_background_view() {
-  local layout_path=$1
+  local layout_file=$1
 
   local external_only_views=(
     "Backdrop_Only"
@@ -85,7 +85,7 @@ __build_background_view() {
   # Try to find a view that we know only contains the background (i.e. no unit)
   local view_name
   for view_name in "${external_only_views[@]}"; do
-    xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_path")
+    xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_file")
     if [ -n "$xml" ]; then
       echo "$xml"
       return
@@ -94,7 +94,7 @@ __build_background_view() {
 
   # Try to find the most basic Unit view and remove the Unit data from it
   for view_name in "${unit_views[@]}"; do
-    xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_path")
+    xml=$(xmlstarlet select -t -c "/*/view[@name=\"$view_name\"]" "$layout_file")
     if [ -n "$xml" ]; then
       echo "$xml" | xmlstarlet ed -O \
         -d '/view/*[@element="Unit"]' \

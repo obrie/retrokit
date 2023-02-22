@@ -6,8 +6,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-emulators'
 setup_module_desc='Emulator installation and configuration (including BIOS, defaults, and custom commands)'
 
-emulators_config_path="$retropie_system_config_dir/emulators.cfg"
-emulators_config_backup_path="$emulators_config_path.rk-src"
+emulators_config_file="$retropie_system_config_dir/emulators.cfg"
+emulators_config_backup_file="$emulators_config_file.rk-src"
 
 build() {
   __install_emulators
@@ -90,34 +90,34 @@ configure() {
 
   # Set default emulator
   local default_emulator=$(system_setting 'select(.emulators) | .emulators | to_entries[] | select(.value.default == true) | (.value.names // [.key]) | first')
-  crudini --set "$emulators_config_path" '' 'default' "\"$default_emulator\""
+  crudini --set "$emulators_config_file" '' 'default' "\"$default_emulator\""
 
   # Additional emulator settings
-  ini_merge '{system_config_dir}/emulators.cfg' "$emulators_config_path" backup=false
+  ini_merge '{system_config_dir}/emulators.cfg' "$emulators_config_file" backup=false
 }
 
 # Backs up the given emulator configuration
 __backup_emulator() {
   local emulator=$1
-  local cmd=$(crudini --get "$emulators_config_path" '' "$emulator" 2>/dev/null)
+  local cmd=$(crudini --get "$emulators_config_file" '' "$emulator" 2>/dev/null)
 
-  crudini --set "$emulators_config_backup_path" '' "$emulator" "$cmd"
+  crudini --set "$emulators_config_backup_file" '' "$emulator" "$cmd"
 }
 
 restore() {
-  if [ -f "$emulators_config_backup_path" ]; then
+  if [ -f "$emulators_config_backup_file" ]; then
     # Reset (or delete) the emulator commands that were backed up
     while read -r emulator; do
-      local cmd=$(crudini --get "$emulators_config_backup_path" '' "$emulator")
+      local cmd=$(crudini --get "$emulators_config_backup_file" '' "$emulator")
       if [ -z "$cmd" ]; then
-        crudini --del "$emulators_config_path" '' "$emulator"
+        crudini --del "$emulators_config_file" '' "$emulator"
       else
-        crudini --set "$emulators_config_path" '' "$emulator" "$cmd"
+        crudini --set "$emulators_config_file" '' "$emulator" "$cmd"
       fi
-    done < <(crudini --get "$emulators_config_backup_path" '')
+    done < <(crudini --get "$emulators_config_backup_file" '')
 
     # Remove the backup since we're now fully restored
-    rm -v "$emulators_config_backup_path"
+    rm -v "$emulators_config_backup_file"
   fi
 }
 

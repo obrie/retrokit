@@ -33,14 +33,14 @@ __configure_emulator_configs() {
 
   while read -r library_name; do
     local source_dir="{system_config_dir}/retroarch/$library_name"
-    local source_path="$source_dir/$library_name.cfg"
+    local source_file="$source_dir/$library_name.cfg"
     local target_dir="$retroarch_config_dir/$library_name"
-    local target_path="$target_dir/$library_name.cfg"
+    local target_file="$target_dir/$library_name.cfg"
     if [ ! -d "$source_dir" ]; then
       continue
     fi
 
-    ini_merge "$source_path" "$target_path"
+    ini_merge "$source_file" "$target_file"
 
     # Shared emulator configs
     while read shared_config_name; do
@@ -55,54 +55,54 @@ __configure_emulator_remappings() {
   local retroarch_remapping_dir=${retroarch_remapping_dir%/}
 
   while read -r library_name; do
-    local source_path="{system_config_dir}/retroarch/$library_name/$library_name.rmp"
-    local target_path="$retroarch_remapping_dir/$library_name/$library_name.rmp"
+    local source_file="{system_config_dir}/retroarch/$library_name/$library_name.rmp"
+    local target_file="$retroarch_remapping_dir/$library_name/$library_name.rmp"
 
-    ini_merge "$source_path" "$target_path"
+    ini_merge "$source_file" "$target_file"
   done < <(get_core_library_names)
 }
 
 # System core options
 __configure_core_options() {
-  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
-  local core_options_path=$(get_retroarch_path 'core_options_path')
+  local global_core_options_file=${retroarch_path_defaults['core_options_file']}
+  local core_options_file=$(get_retroarch_path 'core_options_file')
 
-  if [ "$global_core_options_path" == "$core_options_path" ]; then
-    echo 'Skipping core options overrides (core_options_path is missing)'
+  if [ "$global_core_options_file" == "$core_options_file" ]; then
+    echo 'Skipping core options overrides (core_options_file is missing)'
     return
   fi
 
   # Start with an empty core options -- we'll build it up based on other files
-  truncate -s0 "$core_options_path"
+  truncate -s0 "$core_options_file"
 
-  local tmp_core_options_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local tmp_core_options_file=$(mktemp -p "$tmp_ephemeral_dir")
   while read core_option_prefix; do
     # Global defaults from RetroPie
-    echo "Merging $core_option_prefix core options from $global_core_options_path to $core_options_path"
-    grep -E "^$core_option_prefix[\-_]" "$global_core_options_path" > "$tmp_core_options_path" || true
-    if [ -s "$tmp_core_options_path" ]; then
-      ini_merge "$tmp_core_options_path" "$core_options_path" backup=false >/dev/null
+    echo "Merging $core_option_prefix core options from $global_core_options_file to $core_options_file"
+    grep -E "^$core_option_prefix[\-_]" "$global_core_options_file" > "$tmp_core_options_file" || true
+    if [ -s "$tmp_core_options_file" ]; then
+      ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
     fi
 
     # retrokit global overrides
-    echo "Merging $core_option_prefix global overrides to $core_options_path"
-    each_path '{config_dir}/retroarch/retroarch-core-options.cfg' cat '{}' | grep -E "^$core_option_prefix[\-_]" > "$tmp_core_options_path" || true
-    if [ -s "$tmp_core_options_path" ]; then
-      ini_merge "$tmp_core_options_path" "$core_options_path" backup=false >/dev/null
+    echo "Merging $core_option_prefix global overrides to $core_options_file"
+    each_path '{config_dir}/retroarch/retroarch-core-options.cfg' cat '{}' | grep -E "^$core_option_prefix[\-_]" > "$tmp_core_options_file" || true
+    if [ -s "$tmp_core_options_file" ]; then
+      ini_merge "$tmp_core_options_file" "$core_options_file" backup=false >/dev/null
     fi
   done < <(system_setting 'select(.emulators) | .emulators[] | select(.core_name) | .core_option_prefix // .core_name' | uniq)
 
   # Merge in system-specific overrides
-  ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_path" backup=false
-  sort -o "$core_options_path" "$core_options_path"
+  ini_merge '{system_config_dir}/retroarch-core-options.cfg' "$core_options_file" backup=false
+  sort -o "$core_options_file" "$core_options_file"
 }
 
 restore() {
   # Remove system retroarch core options files
-  local global_core_options_path=${retroarch_path_defaults['core_options_path']}
-  local core_options_path=$(get_retroarch_path 'core_options_path')
-  if [ "$global_core_options_path" != "$core_options_path" ]; then
-    rm -fv "$core_options_path"
+  local global_core_options_file=${retroarch_path_defaults['core_options_file']}
+  local core_options_file=$(get_retroarch_path 'core_options_file')
+  if [ "$global_core_options_file" != "$core_options_file" ]; then
+    rm -fv "$core_options_file"
   fi
 
   # Restore emulator retroarch configs

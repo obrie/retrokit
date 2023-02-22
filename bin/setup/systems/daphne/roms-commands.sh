@@ -19,41 +19,41 @@ configure() {
 
     # Find the target path.  We just need to find the first match since the
     # directory is just symlinked.
-    local target_path
+    local target_file
     for rom_dir in "${rom_dirs[@]}"; do
       if [ -e "$rom_dir/$rom_name.daphne" ]; then
-        target_path="$rom_dir/$rom_name.daphne/$rom_name.commands"
+        target_file="$rom_dir/$rom_name.daphne/$rom_name.commands"
         break
       fi
     done
 
     # Set up the path that we're writing to
-    if [ -z "$target_path" ]; then
+    if [ -z "$target_file" ]; then
       continue
     fi
-    rm -fv "$target_path"
+    rm -fv "$target_file"
 
-    local source_paths=("{system_config_dir}/$emulator.commands")
+    local source_files=("{system_config_dir}/$emulator.commands")
 
     # Lightgun
     if [[ "$controls" == *lightgun* ]]; then
-      source_paths+=("{system_config_dir}/$emulator-lightgun.commands")
+      source_files+=("{system_config_dir}/$emulator-lightgun.commands")
     fi
 
     # Game-specific commands
-    source_paths+=("{system_config_dir}/commands/$rom_name.commands")
+    source_files+=("{system_config_dir}/commands/$rom_name.commands")
 
     # Merge command sources
-    for source_path_template in "${source_paths[@]}"; do
-      if any_path_exists "$source_path_template"; then
-        echo "Merging commands $source_path_template to $target_path"
+    for source_file_template in "${source_files[@]}"; do
+      if any_path_exists "$source_file_template"; then
+        echo "Merging commands $source_file_template to $target_file"
 
-        while read source_path; do
-          local source_commands=$(head -n 1 "$source_path")
+        while read source_file; do
+          local source_commands=$(head -n 1 "$source_file")
           if [ -n "$source_commands" ]; then
-            echo -n "$source_commands " >> "$target_path"
+            echo -n "$source_commands " >> "$target_file"
           fi
-        done < <(each_path "$source_path_template")
+        done < <(each_path "$source_file_template")
       fi
     done
 
@@ -74,7 +74,7 @@ configure() {
       fi
 
       if [ -f "$target_overlay_dir/$bezel_name.png" ]; then
-        echo -n "-bezel $bezel_name.png" >> "$target_path"
+        echo -n "-bezel $bezel_name.png" >> "$target_file"
       fi
     fi
   done < <(romkit_cache_list | jq -r '[.name, .title, .group .name, .emulator, (.controls | join(","))] | join("»")')

@@ -11,23 +11,23 @@ system_relative_dir=${rom_path/"$HOME/RetroPie/roms/"/}
 system=${system_relative_dir%%/*}
 
 media_dir="$HOME/.emulationstation/downloaded_media/$system"
-rom_manual_path="$media_dir/manuals/$rom_name.pdf"
+rom_manual_file="$media_dir/manuals/$rom_name.pdf"
 
 # Determine which reference guide to try to show
 if [ -f "$media_dir/docs/$rom_name.pdf" ]; then
-  rom_reference_path="$media_dir/docs/$rom_name.pdf"
+  rom_reference_file="$media_dir/docs/$rom_name.pdf"
 else
-  rom_reference_path="$media_dir/docs/default.pdf"
+  rom_reference_file="$media_dir/docs/default.pdf"
 fi
 
 # Swap the manual with the reference for arcade games since the manual tends to have less information
 if [ "$system" == 'arcade' ]; then
-  orig_rom_manual_path=$rom_manual_path
-  rom_manual_path=$rom_reference_path
-  rom_reference_path=$orig_rom_manual_path
+  orig_rom_manual_file=$rom_manual_file
+  rom_manual_file=$rom_reference_file
+  rom_reference_file=$orig_rom_manual_file
 fi
 
 exec 4<>/opt/retropie/configs/all/manualkit.fifo
 >&4 echo \
-  'load'$'\t'"$rom_manual_path"$'\t'"$rom_reference_path"$'\n' \
+  'load'$'\t'"$rom_manual_file"$'\t'"$rom_reference_file"$'\n' \
   'set_profile'$'\t''frontend'

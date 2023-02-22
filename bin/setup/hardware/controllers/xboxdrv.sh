@@ -15,9 +15,9 @@ build() {
 }
 
 __build_services() {
-  while read service_path; do
-    local filename=$(basename "$service_path")
-    file_cp "$service_path" "/etc/systemd/system/xboxdrv-$filename" as_sudo=true backup=false envsubst=false
+  while read service_file; do
+    local filename=$(basename "$service_file")
+    file_cp "$service_file" "/etc/systemd/system/xboxdrv-$filename" as_sudo=true backup=false envsubst=false
   done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.service')
 }
 
@@ -27,16 +27,16 @@ configure() {
 }
 
 __configure_xboxdrv() {
-  while read config_path; do
-    local filename=$(basename "$config_path")
-    file_cp "$config_path" "/etc/xboxdrv/$filename" as_sudo=true backup=false
+  while read config_file; do
+    local filename=$(basename "$config_file")
+    file_cp "$config_file" "/etc/xboxdrv/$filename" as_sudo=true backup=false
   done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.xboxdrv')
 }
 
 __configure_udev_rules() {
-  while read rules_path; do
-    local filename=$(basename "$rules_path")
-    file_cp "$rules_path" "/etc/udev/rules.d/99-xboxdrv-$filename" as_sudo=true backup=false envsubst=false
+  while read rules_file; do
+    local filename=$(basename "$rules_file")
+    file_cp "$rules_file" "/etc/udev/rules.d/99-xboxdrv-$filename" as_sudo=true backup=false envsubst=false
   done < <(each_path '{config_dir}/xboxdrv' find '{}' -name '*.rules')
 
   sudo udevadm control --reload-rules && sudo udevadm trigger

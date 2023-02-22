@@ -8,23 +8,23 @@ setup_module_id='system/dreamcast/config'
 setup_module_desc='Dreamcast emulator configuration'
 
 redream_dir="$retropie_system_config_dir/redream"
-redream_config_path="$redream_dir/redream.cfg"
+redream_config_file="$redream_dir/redream.cfg"
 
 configure() {
   __restore_config
-  ini_merge '{system_config_dir}/redream.cfg' "$redream_config_path" restore=false
+  ini_merge '{system_config_dir}/redream.cfg' "$redream_config_file" restore=false
 
   declare -A installed_files
 
   # Game overrides
-  while read -r rom_config_path; do
-    local filename=$(basename "$rom_config_path")
-    local target_path="$redream_dir/cache/$filename"
+  while read -r rom_config_file; do
+    local filename=$(basename "$rom_config_file")
+    local target_file="$redream_dir/cache/$filename"
 
-    rm -fv "$target_path"
-    ini_merge "$rom_config_path" "$target_path" backup=false
+    rm -fv "$target_file"
+    ini_merge "$rom_config_file" "$target_file" backup=false
 
-    installed_files["$target_path"]=1
+    installed_files["$target_file"]=1
   done < <(each_path '{system_config_dir}/redream' find '{}' -name '*.cfg')
 
   # Remove overrides no longer needed
@@ -44,17 +44,17 @@ restore() {
 }
 
 __restore_config() {
-  if has_backup_file "$redream_config_path"; then
-    if [ -f "$redream_config_path" ]; then
+  if has_backup_file "$redream_config_file"; then
+    if [ -f "$redream_config_file" ]; then
       # Keep track of the profiles since we don't want to lose those
-      grep -E '^profile[0-9]+' "$redream_config_path" > "$tmp_ephemeral_dir/profiles.cfg"
+      grep -E '^profile[0-9]+' "$redream_config_file" > "$tmp_ephemeral_dir/profiles.cfg"
 
-      restore_file "$redream_config_path" "${@}"
+      restore_file "$redream_config_file" "${@}"
 
       # Merge the profiles back in
-      crudini --merge --inplace "$redream_config_path" < "$tmp_ephemeral_dir/profiles.cfg"
+      crudini --merge --inplace "$redream_config_file" < "$tmp_ephemeral_dir/profiles.cfg"
     else
-      restore_file "$redream_config_path" "${@}"
+      restore_file "$redream_config_file" "${@}"
     fi
   fi
 }

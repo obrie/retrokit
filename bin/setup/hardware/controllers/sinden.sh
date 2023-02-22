@@ -64,31 +64,31 @@ __configure_autostart() {
 __configure_players() {
   local player_id
   for player_id in $(seq 1 2); do
-    local target=$(__retropie_config_path_for_player $player_id)
-    backup_and_restore "$target" as_sudo=true
+    local target_file=$(__retropie_config_file_for_player $player_id)
+    backup_and_restore "$target_file" as_sudo=true
 
     # Add common settings
-    each_path '{config_dir}/controllers/sinden/Player.config' __configure_player '{}' "$target"
+    each_path '{config_dir}/controllers/sinden/Player.config' __configure_player '{}' "$target_file"
 
     # Add player-specific settings
-    each_path "{config_dir}/controllers/sinden/Player$player_id.config" __configure_player '{}' "$target"
+    each_path "{config_dir}/controllers/sinden/Player$player_id.config" __configure_player '{}' "$target_file"
   done
 }
 
 __configure_player() {
-  local source=$1
-  local target=$2
-  if [ ! -f "$source" ]; then
+  local source_file=$1
+  local target_file=$2
+  if [ ! -f "$source_file" ]; then
     return
   fi
 
-  echo "Merging config $source to $target"
+  echo "Merging config $source_file to $target_file"
   while IFS=$'\t' read -r key value; do
     local xpath="/configuration/appSettings/add[@key=\"$key\"]"
 
-    if xmlstarlet select -Q -t -m "$xpath" -c . "$target"; then
+    if xmlstarlet select -Q -t -m "$xpath" -c . "$target_file"; then
       # Configuration already exists -- update the existing key
-      sudo xmlstarlet edit --inplace --update "$xpath/@value" -v "$value" "$target"
+      sudo xmlstarlet edit --inplace --update "$xpath/@value" -v "$value" "$target_file"
     else
       # Configuration doesn't exist -- add a new one
       sudo xmlstarlet edit --subnode '/configuration/appSettings' \
@@ -96,9 +96,9 @@ __configure_player() {
         --var config '$prev' \
         -i '$config' -t attr -n key -v "$key" \
         -i '$config' -t attr -n value -v "$value" \
-        "$target"
+        "$target_file"
     fi
-  done < <(xmlstarlet select -t -m '/configuration/appSettings/add' -v '@key' -o $'\t' -v '@value' -n "$source")
+  done < <(xmlstarlet select -t -m '/configuration/appSettings/add' -v '@key' -o $'\t' -v '@value' -n "$source_file")
 }
 
 restore() {
@@ -114,11 +114,11 @@ __restore_autostart() {
 __restore_players() {
   local player_id
   for player_id in $(seq 1 2); do
-    restore_file "$(__retropie_config_path_for_player $player_id)" as_sudo=true
+    restore_file "$(__retropie_config_file_for_player $player_id)" as_sudo=true
   done
 }
 
-__retropie_config_path_for_player() {
+__retropie_config_file_for_player() {
   local player_id=$1
 
   if [ "$player_id" == '1' ]; then

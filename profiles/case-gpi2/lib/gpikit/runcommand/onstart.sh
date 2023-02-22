@@ -1,16 +1,16 @@
 #!/bin/bash
 
-retroarch_config_path=/opt/retropie/configs/all/retroarch.cfg
+retroarch_config_file=/opt/retropie/configs/all/retroarch.cfg
 
 function update_retroarch_setting() {
   local key=$1
   local value=$2
-  if grep -q "^$key *=.*\$" "$retroarch_config_path"; then
+  if grep -q "^$key *=.*\$" "$retroarch_config_file"; then
     # Replace value
-    sed -i "s/^$key *=.*\$/$key = $value/g" "$retroarch_config_path"
+    sed -i "s/^$key *=.*\$/$key = $value/g" "$retroarch_config_file"
   else
     # Add value
-    echo "$key = $value" >> "$retroarch_config_path"
+    echo "$key = $value" >> "$retroarch_config_file"
   fi
 }
 

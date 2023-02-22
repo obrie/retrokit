@@ -159,10 +159,10 @@ __build_missing_reports() {
   cat "$retropie_configs_dir/all/skyscraper/reports/report-"* | sort | uniq > "$aggregate_report_file"
 
   # Remove files explicitly being ignored (but still show up when using --cache)
-  while read ignore_path; do
-    local ignore_dir=$(dirname "$ignore_path")
+  while read ignore_file; do
+    local ignore_dir=$(dirname "$ignore_file")
 
-    if [[ "$ignore_path" == *tree ]]; then
+    if [[ "$ignore_file" == *tree ]]; then
       sed -i "\|$ignore_dir|d" "$aggregate_report_file"
     else
       sed -i "\|$ignore_dir/[^/]\+|d" "$aggregate_report_file"
@@ -274,7 +274,7 @@ __build_gamelist() {
   args+=($(system_setting '.scraper | .gamelist_args? | .[]'))
 
   echo "Building gamelist for $system"
-  "$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${args[@]}"
+  "$retropie_dir/supplementary/skyscraper/Skyscraper" -p "$system" "${args[@]}" >/dev/null
 
   # Fix gamelist being generated incorrectly with games marked as folders
   #
@@ -331,12 +331,12 @@ __vacuum_media() {
   fi
 
   # Find media with no corresponding installed name
-  while read -r media_path; do
-    local filename=$(basename "$media_path")
+  while read -r media_file; do
+    local filename=$(basename "$media_file")
     local rom_name=${filename%.*}
 
     if [ -z "${installed_names["$rom_name"]}" ]; then
-      echo "rm -fv $(printf '%q' "$media_path")"
+      echo "rm -fv $(printf '%q' "$media_file")"
     fi
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }

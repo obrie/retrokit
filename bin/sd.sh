@@ -10,10 +10,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 create <device> (run from laptop)"
-  echo " $0 backup <device> <backup_path.tar.gz> (run from laptop)"
-  echo " $0 restore <device> <backup_path.tar.gz> (run from laptop)"
-  echo " $0 sync_full <from_path> <to_path> (run from laptop/retropie)"
-  echo " $0 sync_media <from_path> <to_path> (run from laptop/retropie)"
+  echo " $0 backup <device> <backup_file.tar.gz> (run from laptop)"
+  echo " $0 restore <device> <backup_file.tar.gz> (run from laptop)"
+  echo " $0 sync_full <from_dir> <to_dir> (run from laptop/retropie)"
+  echo " $0 sync_media <from_dir> <to_dir> (run from laptop/retropie)"
   exit 1
 }
 
@@ -27,17 +27,17 @@ main() {
 restore() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local restore_from_path=${2%/}
-  gunzip --stdout "$restore_from_path" | sudo dd bs=4M of=$device status=progress
+  local restore_from_dir=${2%/}
+  gunzip --stdout "$restore_from_dir" | sudo dd bs=4M of=$device status=progress
 }
 
 backup() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local backup_to_path=${2%/}
-  mkdir -p "$(dirname "$backup_to_path")"
+  local backup_to_dir=${2%/}
+  mkdir -p "$(dirname "$backup_to_dir")"
 
-  sudo dd bs=4M if=$device status=progress | gzip > "$backup_to_path"
+  sudo dd bs=4M if=$device status=progress | gzip > "$backup_to_dir"
 }
 
 clone() {
@@ -54,8 +54,8 @@ clone() {
 
 sync_full() {
   [[ $# -lt 2 ]] && usage
-  local sync_from_path=${1%/}
-  local sync_to_path=${2%/}
+  local sync_from_dir=${1%/}
+  local sync_to_dir=${2%/}
   local dry_run=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
@@ -73,13 +73,13 @@ sync_full() {
   # -X (Preserve extended attributes)
   # -S (Handle sparse files efficiently)
   # --numeric-ids (Avoid mapping uid/guid values by user/group name)
-  sudo rsync -avxHAWXS --numeric-ids --delete $rsync_opts "$sync_from_path/" "$sync_to_path/"
+  sudo rsync -avxHAWXS --numeric-ids --delete $rsync_opts "$sync_from_dir/" "$sync_to_dir/"
 }
 
 sync_media() {
   [[ $# -lt 2 ]] && usage
-  local sync_from_path=${1%/}
-  local sync_to_path=${2%/}
+  local sync_from_dir=${1%/}
+  local sync_to_dir=${2%/}
   local dry_run=false
   local delete=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
@@ -110,23 +110,23 @@ sync_media() {
   )
 
   for path in "${paths[@]}"; do
-    if [ -d "$sync_from_path$path" ]; then
+    if [ -d "$sync_from_dir$path" ]; then
       # Get the top-level new directory we're creating
-      local sync_to_base_path="$sync_to_path$path"
+      local sync_to_base_path="$sync_to_dir$path"
       while [ ! -d "$(dirname "$sync_to_base_path")" ]; do
         sync_to_base_path=$(dirname "$sync_to_base_path")
       done
 
       # Make sure permissions are set properly
       if [ ! -d "$sync_to_base_path" ]; then
-        local remote_user=$(stat -c '%U' "$sync_from_path$path")
-        local remote_group=$(stat -c '%G' "$sync_from_path$path")
-        mkdir -pv "$sync_to_path$path"
+        local remote_user=$(stat -c '%U' "$sync_from_dir$path")
+        local remote_group=$(stat -c '%G' "$sync_from_dir$path")
+        mkdir -pv "$sync_to_dir$path"
         chown -Rv "$remote_user:$remote_group" "$sync_to_base_path"
       fi
 
       # Copy over files
-      sudo rsync -av $rsync_opts "$sync_from_path$path" "$sync_to_path$path"
+      sudo rsync -av $rsync_opts "$sync_from_dir$path" "$sync_to_dir$path"
     fi
   done
 }
@@ -175,27 +175,27 @@ create() {
   sudo tune2fs -m 2 "$retropie_device"
 
   # Mount the device
-  local mount_path="$HOME/retrokit-sdcard"
-  mkdir -p "$mount_path"
-  sudo mount -v "$retropie_device" "$mount_path"
+  local mount_dir="$HOME/retrokit-sdcard"
+  mkdir -p "$mount_dir"
+  sudo mount -v "$retropie_device" "$mount_dir"
 
   # Modify partition timeout to account for fsck runtime
-  sudo sed -i '2,$s/defaults/defaults,x-systemd.device-timeout=3600s/g' "$mount_path/etc/fstab"
+  sudo sed -i '2,$s/defaults/defaults,x-systemd.device-timeout=3600s/g' "$mount_dir/etc/fstab"
 
   # Copy retrokit
   echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
-  local remote_user=$(stat -c '%U' "$mount_path/home/pi")
-  local remote_group=$(stat -c '%G' "$sync_to_path/home/pi")
-  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' --exclude '__pycache__/' "$app_dir/" "$mount_path/home/pi/retrokit/"
-  mkdir -v "$mount_path/home/pi/retrokit/tmp"
-  touch "$mount_path/home/pi/retrokit/tmp/.gitkeep"
-  chown -Rv "$remote_user:$remote_group" "$mount_path/home/pi/retrokit/tmp"
+  local remote_user=$(stat -c '%U' "$mount_dir/home/pi")
+  local remote_group=$(stat -c '%G' "$sync_to_dir/home/pi")
+  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' --exclude '__pycache__/' "$app_dir/" "$mount_dir/home/pi/retrokit/"
+  mkdir -v "$mount_dir/home/pi/retrokit/tmp"
+  touch "$mount_dir/home/pi/retrokit/tmp/.gitkeep"
+  chown -Rv "$remote_user:$remote_group" "$mount_dir/home/pi/retrokit/tmp"
 
   # Unmount the device
   while ! sudo umount -v "$retropie_device"; do
     sleep 5
   done
-  rmdir -v "$mount_path"
+  rmdir -v "$mount_dir"
 
   echo "Done!"
 }

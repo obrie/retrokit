@@ -71,34 +71,34 @@ vacuum() {
 
 # Exports the system's ROM gamestate (saves, etc.) to the given file
 export() {
-  local target_path=${2:-"$tmp_dir/$system/gamestate.zip"}
+  local target_file=${2:-"$tmp_dir/$system/gamestate.zip"}
   local merge=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
-  local staging_path
+  local staging_file
   if [ "$merge" == 'true' ]; then
-    # Merge new files with the target path
-    staging_path=$target_path
+    # Merge new files with the target file
+    staging_file=$target_file
   else
     # Stage export to an empty zip file
-    staging_path=$(mktemp -p "$tmp_ephemeral_dir")
-    echo UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA== | base64 -d > "$staging_path"
+    staging_file=$(mktemp -p "$tmp_ephemeral_dir")
+    echo UEsFBgAAAAAAAAAAAAAAAAAAAAAAAA== | base64 -d > "$staging_file"
   fi
 
   while read path; do
     if [ ! -f "$path.rk-src" ]; then
-      zip "$staging_path" "$path"
+      zip "$staging_file" "$path"
     fi
   done < <(__glob_all_paths)
 
-  if [ "$staging_path" != "$target_path" ]; then
-    mv -v "$staging_path" "$target_path"
+  if [ "$staging_file" != "$target_file" ]; then
+    mv -v "$staging_file" "$target_file"
   fi
 }
 
 # Imports ROM gamestates from the given file
 import() {
-  local source_path=${2:-"$tmp_dir/$system/gamestate.zip"}
+  local source_file=${2:-"$tmp_dir/$system/gamestate.zip"}
   local overwrite=false
   if [ $# -gt 2 ]; then local "${@:3}"; fi
 
@@ -120,7 +120,7 @@ import() {
       options='-n'
     fi
 
-    unzip $options "$source_path" "${path:1}" -d / 2>&1 | grep -Ev 'caution|Archive' || true
+    unzip $options "$source_file" "${path:1}" -d / 2>&1 | grep -Ev 'caution|Archive' || true
   done < <(__list_path_expressions)
 }
 

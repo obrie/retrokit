@@ -10,13 +10,13 @@ setup_module_desc='Port file installation, using files from the system-roms-down
 
 configure() {
   # Link over any optional game files
-  while IFS=$'\t' read -r port_name target_name source_path; do
-    file_ln "$source_path" "$roms_dir/ports/$port_name/$target_name"
+  while IFS=$'\t' read -r port_name target_name source_file; do
+    file_ln "$source_file" "$roms_dir/ports/$port_name/$target_name"
   done < <(__list_gamefiles)
 }
 
 restore() {
-  while IFS=$'\t' read -r port_name target_name source_path; do
+  while IFS=$'\t' read -r port_name target_name source_file; do
     restore "$roms_dir/ports/$port_name/$target_name"
   done < <(__list_gamefiles)
 }

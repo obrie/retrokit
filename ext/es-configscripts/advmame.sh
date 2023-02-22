@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
 # Path to the advmame configuration where controls are defined
-advmame_config_path="$configdir/mame-advmame/advmame.rc"
+advmame_config_file="$configdir/mame-advmame/advmame.rc"
 
 # Maximum number of players to configure for each controller
 max_players=4
 
 function check_advmame() {
-    [[ ! -f "$advmame_config_path" ]] && return 1
+    [[ ! -f "$advmame_config_file" ]] && return 1
     return 0
 }
 
 function _onstart_advmame() {
     local controller=$1
 
-    cp "$advmame_config_path" '/tmp/advmame.rc'
+    cp "$advmame_config_file" '/tmp/advmame.rc'
     iniConfig ' ' '' '/tmp/advmame.rc'
 
     # Reset inputs for this controller
@@ -423,7 +423,7 @@ function _onend_advmame() {
         done
     fi
 
-    mv '/tmp/advmame.rc' "$advmame_config_path"
+    mv '/tmp/advmame.rc' "$advmame_config_file"
 }
 
 function onend_advmame_joystick() {

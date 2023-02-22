@@ -2,7 +2,7 @@
 
 set -ex
 
-install_path=/opt/retropie/supplementary/sinden
+install_dir=/opt/retropie/supplementary/sinden
 
 usage() {
   set +x
@@ -24,7 +24,7 @@ usage() {
 
 # Runs an action in the background via a job in order to avoid blocking udev
 backgrounded() {
-  echo "$install_path/sinden.sh" "${@}" | at now
+  echo "$install_dir/sinden.sh" "${@}" | at now
 }
 
 # Adds a Sinden controller with the given tty devpath
@@ -64,9 +64,9 @@ __modify_device() {
 __lookup_player_id() {
   local serial_port=$1
 
-  if grep -q "$serial_port" "$install_path/Player1/LightgunMono.exe.config"; then
+  if grep -q "$serial_port" "$install_dir/Player1/LightgunMono.exe.config"; then
     echo 1
-  elif grep -q "$serial_port" "$install_path/Player2/LightgunMono2.exe.config"; then
+  elif grep -q "$serial_port" "$install_dir/Player2/LightgunMono2.exe.config"; then
     echo 2
   fi
 }
@@ -158,7 +158,7 @@ __run() {
   local player_id=$1
   local background=$2
 
-  cd "$install_path/Player$player_id"
+  cd "$install_dir/Player$player_id"
 
   local mono_bin=mono
   if [ "$background" == 'true' ]; then
@@ -190,11 +190,11 @@ edit() {
 
   local player_id=$1
 
-  local config_path="$install_path/Player$player_id/$(__player_bin_name "$player_id").config"
+  local config_file="$install_dir/Player$player_id/$(__player_bin_name "$player_id").config"
 
   for setting_config in "${@:2}"; do
     IFS='=' read setting_name setting_value <<< $setting_config
-    sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$setting_name\"]/@value" --value "$setting_value" "$config_path"
+    sudo xmlstarlet edit --inplace --update "/*/*/*[@key=\"$setting_name\"]/@value" --value "$setting_value" "$config_file"
   done
 
   if __is_running "$player_id"; then

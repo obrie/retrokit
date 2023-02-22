@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Path to the redream configuration where controllers are defined
-redream_config_path="$configdir/dreamcast/redream/redream.cfg"
+redream_config_file="$configdir/dreamcast/redream/redream.cfg"
 
 function check_redream() {
     [[ ! -d "$rootdir/emulators/redream" ]] && return 1
@@ -11,14 +11,14 @@ function check_redream() {
 function _onstart_redream() {
     local name=$1
 
-    touch "$redream_config_path"
-    iniConfig '=' '' "$redream_config_path"
+    touch "$redream_config_file"
+    iniConfig '=' '' "$redream_config_file"
 
     declare -g redream_profile_key=''
 
     # Look for an existing profile for this controller
-    if [ -f "$redream_config_path" ]; then
-        redream_profile_key=$(grep "name:$name" "$redream_config_path" | head -n 1 | grep -oE '^[^=]+')
+    if [ -f "$redream_config_file" ]; then
+        redream_profile_key=$(grep "name:$name" "$redream_config_file" | head -n 1 | grep -oE '^[^=]+')
     fi
 
     if [ -z "$redream_profile_key" ]; then

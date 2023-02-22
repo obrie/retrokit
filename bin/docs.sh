@@ -19,25 +19,25 @@ build() {
 }
 
 build_intro() {
-  local target_path=${1:-"$docs_dir/build/intro.pdf"}
-  local template=$(first_path '{docs_dir}/intro.html.jinja')
+  local target_file=${1:-"$docs_dir/build/intro.pdf"}
+  local template_file=$(first_path '{docs_dir}/intro.html.jinja')
 
-  local doc_data_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
-  echo '{}' > "$doc_data_path"
+  local doc_data_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
+  echo '{}' > "$doc_data_file"
 
-  local stylesheet_href=$(first_path '{docs_dir}/stylesheets/manual.css')
-  __build_file "$template" "$target_path" "$doc_data_path" "$stylesheet_href"
+  local stylesheet_file=$(first_path '{docs_dir}/stylesheets/manual.css')
+  __build_file "$template_file" "$target_file" "$doc_data_file" "$stylesheet_file"
 }
 
 build_gamelist() {
   local table_headers=$1
-  local target_path=$2
+  local target_file=$2
 
-  local doc_data_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
-  echo '{}' > "$doc_data_path"
+  local doc_data_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
+  echo '{}' > "$doc_data_file"
 
   # Add list of games that are installed on all the systems
-  local gamelist_data_path=$(mktemp -p "$tmp_ephemeral_dir")
+  local gamelist_data_file=$(mktemp -p "$tmp_ephemeral_dir")
   local gamelist=''
 
   while read system; do
@@ -61,37 +61,36 @@ build_gamelist() {
   if [ -n "$gamelist" ]; then
     gamelist=${gamelist::-1}
   fi
-  echo -e "{\"gamelist\": [$gamelist], \"table\": {\"headers\": $table_headers}}" > "$gamelist_data_path"
-  json_merge "$gamelist_data_path" "$doc_data_path" backup=false
-  json_merge '{docs_dir}/gamelist.json' "$doc_data_path" backup=false
+  echo -e "{\"gamelist\": [$gamelist], \"table\": {\"headers\": $table_headers}}" > "$gamelist_data_file"
+  json_merge "$gamelist_data_file" "$doc_data_file" backup=false
+  json_merge '{docs_dir}/gamelist.json' "$doc_data_file" backup=false
 
   # Render the documentation
-  local template=$(first_path '{docs_dir}/gamelist.html.jinja')
-  local stylesheet_href=$(first_path '{docs_dir}/stylesheets/gamelist.css')
-  __build_file "$template" "$target_path" "$doc_data_path" "$stylesheet_href"
+  local template_file=$(first_path '{docs_dir}/gamelist.html.jinja')
+  local stylesheet_file=$(first_path '{docs_dir}/stylesheets/gamelist.css')
+  __build_file "$template_file" "$target_file" "$doc_data_file" "$stylesheet_file"
 }
 
 # Builds the given file
 __build_file() {
-  local source_path=$1
-  local target_path=$2
-  local json_metadata_path=$3
-  local page_stylesheet_href=$4
-  local common_stylesheet_href=$(first_path '{docs_dir}/stylesheets/common.css')
+  local template_file=$1
+  local target_file=$2
+  local json_metadata_file=$3
+  local page_stylesheet_file=$4
+  local common_stylesheet_file=$(first_path '{docs_dir}/stylesheets/common.css')
 
   # Add hrefs
-  local base_href=$docs_dir
-  json_edit "$json_metadata_path" \
-    ".hrefs.common_stylesheet" "file://$common_stylesheet_href" \
-    ".hrefs.page_stylesheet" "file://$page_stylesheet_href" \
-    ".hrefs.base" "file://$base_href/"
+  json_edit "$json_metadata_file" \
+    ".hrefs.common_stylesheet" "file://$common_stylesheet_file" \
+    ".hrefs.page_stylesheet" "file://$page_stylesheet_file" \
+    ".hrefs.base" "file://$docs_dir/"
 
   # Jinja => Markdown
-  local html_output_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix .html)
-  jinja2 "$source_path" "$json_metadata_path" > "$html_output_path"
+  local html_output_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix .html)
+  jinja2 "$template_file" "$json_metadata_file" > "$html_output_file"
 
   # HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_path" "$html_output_path" 2>/dev/null
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$target_file" "$html_output_file" 2>/dev/null
 }
 
 if [[ $# -lt 1 ]]; then

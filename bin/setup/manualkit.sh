@@ -50,11 +50,11 @@ __configure_autostart() {
 __configure_emulationstation() {
   __restore_emulationstation
 
-  while read hook_path; do
-    local hook=$(basename "$hook_path" .sh)
+  while read hook_file; do
+    local hook=$(basename "$hook_file" .sh)
     local target_dir="$HOME/.emulationstation/scripts/$hook"
     mkdir -pv "$target_dir"
-    ln -fsv "$hook_path" "$target_dir/manualkit.sh"
+    ln -fsv "$hook_file" "$target_dir/manualkit.sh"
   done < <(ls "$install_dir/emulationstation-scripts/"*.sh)
 
   xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$HOME/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$HOME/.emulationstation/es_input.cfg"

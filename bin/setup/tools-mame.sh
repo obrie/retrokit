@@ -33,9 +33,9 @@ __build_chdman_source() {
   export MAKEFLAGS='-j4'
 
   # Build from source
-  local mame_repo_path=$(mktemp -d -p "$tmp_ephemeral_dir")
-  git clone --depth 1 -b mame0230 https://github.com/mamedev/mame "$mame_repo_path"
-  pushd "$mame_repo_path"
+  local mame_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+  git clone --depth 1 -b mame0230 https://github.com/mamedev/mame "$mame_dir"
+  pushd "$mame_dir"
   make NOWERROR=1 ARCHOPTS=-U_FORTIFY_SOURCE PYTHON_EXECUTABLE=python3 TOOLS=1 REGENIE=1
 
   # Install chdman

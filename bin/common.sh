@@ -68,8 +68,8 @@ __setup_env() {
       source "$app_dir/.env"
     fi
     init_profiles
-    while read env_path; do
-      source "$env_path"
+    while read env_file; do
+      source "$env_file"
     done < <(each_path '{app_dir}/.env')
 
     # Define settings file
@@ -120,13 +120,13 @@ generate_system_settings_file() {
 
   # Merge data file
   if [ "$merge_metadata" == 'true' ]; then
-    system_data_merged_path=$(mktemp -p "$tmp_ephemeral_dir")
-    system_data_path=$(jq -r '.metadata .path // empty' "$system_settings_file")
+    system_data_merged_file=$(mktemp -p "$tmp_ephemeral_dir")
+    system_data_file=$(jq -r '.metadata .path // empty' "$system_settings_file")
 
-    if [ -n "$system_data_path" ]; then
-      system_data_name=$(basename "$system_data_path")
-      json_merge "{data_dir}/$system_data_name" "$system_data_merged_path" backup=false envsubst=false >/dev/null
-      json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_path"
+    if [ -n "$system_data_file" ]; then
+      system_data_name=$(basename "$system_data_file")
+      json_merge "{data_dir}/$system_data_name" "$system_data_merged_file" backup=false envsubst=false >/dev/null
+      json_edit "$system_settings_file" '.metadata .path' "$system_data_merged_file"
     fi
   fi
 

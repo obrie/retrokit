@@ -16,26 +16,26 @@ __configure_bios() {
   # support repeating the same key multiple times in the same section
 
   # Build base config.txt without device tree settings settings (dtoverlay / dtparam)
-  local boot_config_path=$(mktemp -p "$tmp_ephemeral_dir")
-  ini_merge '{config_dir}/boot/config.txt' "$boot_config_path" space_around_delimiters=false backup=false overwrite=true
-  sed -i '/^dt\(overlay\|param\)=/d' "$boot_config_path"
+  local boot_config_file=$(mktemp -p "$tmp_ephemeral_dir")
+  ini_merge '{config_dir}/boot/config.txt' "$boot_config_file" space_around_delimiters=false backup=false overwrite=true
+  sed -i '/^dt\(overlay\|param\)=/d' "$boot_config_file"
 
   # Merge into /boot
-  ini_merge "$boot_config_path" '/boot/config.txt' space_around_delimiters=false as_sudo=true
+  ini_merge "$boot_config_file" '/boot/config.txt' space_around_delimiters=false as_sudo=true
 
   # Add repeating dtoverlay/dtparam configurations since crudini will just merge
-  while read config_path; do
+  while read config_file; do
     while read section_name; do
       # Extract the specific source section that we're going to grep and where
       # matches should get inserted into the target
       local source_section_content
       local target_section_start
       if [ "$section_name" == 'DEFAULT' ]; then
-        source_section_content=$(sed -n "1,/^\[/p" "$config_path")
+        source_section_content=$(sed -n "1,/^\[/p" "$config_file")
         target_section_start=$(grep -En "^\[" /boot/config.txt | head -n 1 | cut -d':' -f1)
         target_section_start=$((target_section_start-1))
       else
-        source_section_content=$(sed -n "/^\[$section_name\]/,/^\[/p" "$config_path")
+        source_section_content=$(sed -n "/^\[$section_name\]/,/^\[/p" "$config_file")
         target_section_start=$(grep -En "^\[$section_name\]" /boot/config.txt | head -n 1 | cut -d':' -f1)
       fi
 
@@ -46,10 +46,10 @@ __configure_bios() {
       fi
 
       # Write configurations to the section
-      local dtcontent_path=$(mktemp -p "$tmp_ephemeral_dir")
-      echo "$dt_content" > "$dtcontent_path"
-      sudo sed -i "$target_section_start r $dtcontent_path" /boot/config.txt
-    done < <(crudini --get "$config_path")
+      local dtcontent_file=$(mktemp -p "$tmp_ephemeral_dir")
+      echo "$dt_content" > "$dtcontent_file"
+      sudo sed -i "$target_section_start r $dtcontent_file" /boot/config.txt
+    done < <(crudini --get "$config_file")
   done < <(each_path '{config_dir}/boot/config.txt')
 
   # Move [all] section to end of the file in order to comply with recommendations
@@ -65,10 +65,10 @@ __configure_bios() {
 # IR configuration
 __configure_bios_ir() {
   local ir_gpio_pin=$(setting '.hardware.ir.gpio_pin')
-  local ir_keymap_path=$(setting '.hardware.ir.keymap')
-  if [ -n "$ir_gpio_pin" ] && [ -n "$ir_keymap_path" ]; then
+  local ir_keymap_file=$(setting '.hardware.ir.keymap')
+  if [ -n "$ir_gpio_pin" ] && [ -n "$ir_keymap_file" ]; then
     sudo apt-get install -y ir-keytable
-    local ir_keymap_filename=$(basename "$ir_keymap_path")
+    local ir_keymap_filename=$(basename "$ir_keymap_file")
     local rc_map_name=$(grep "$ir_keymap_filename" '/etc/rc_maps.cfg' | tr $'\t' ' ' | cut -d' ' -f 2)
 
     # We are guaranteed that [all] is the last section

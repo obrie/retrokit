@@ -33,11 +33,11 @@ __build_mame2003_plus() {
 __build_mame2016() {
   if has_emulator 'lr-mame2016'; then
     if [ ! -f "$bios_dir/mame2016/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local historydat_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$history_dat_url" "$historydat_path"
+      local historydat_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$history_dat_url" "$historydat_file"
 
       mkdir -p "$bios_dir/mame2016/history"
-      unzip -oj "$historydat_path" -d "$bios_dir/mame2016/history/"
+      unzip -oj "$historydat_file" -d "$bios_dir/mame2016/history/"
     else
       echo "Already installed history.dat (lr-mame2016)"
     fi
@@ -47,11 +47,11 @@ __build_mame2016() {
 __build_mame0222() {
   if has_emulator 'lr-mame0222'; then
     if [ ! -f "$bios_dir/mame0222/history/history.dat" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local historydat_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$history_dat_url" "$historydat_path"
+      local historydat_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$history_dat_url" "$historydat_file"
 
       mkdir -p "$bios_dir/mame0222/history"
-      unzip -oj "$historydat_path" -d "$bios_dir/mame0222/history/"
+      unzip -oj "$historydat_file" -d "$bios_dir/mame0222/history/"
     else
       echo "Already installed history.dat (lr-mame0222)"
     fi
@@ -61,11 +61,11 @@ __build_mame0222() {
 __build_mame0244() {
   if has_emulator 'lr-mame0244'; then
     if [ ! -f "$bios_dir/mame0244/history/history.xml" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local historydat_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download 'https://www.arcade-history.com/dats/historyxml244.zip' "$historydat_path"
+      local historydat_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download 'https://www.arcade-history.com/dats/historyxml244.zip' "$historydat_file"
 
       mkdir -p "$bios_dir/mame0244/history"
-      unzip -oj "$historydat_path" -d "$bios_dir/mame0244/history/"
+      unzip -oj "$historydat_file" -d "$bios_dir/mame0244/history/"
     else
       echo "Already installed history.dat (lr-mame0244)"
     fi

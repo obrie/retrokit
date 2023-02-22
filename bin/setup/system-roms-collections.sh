@@ -38,9 +38,9 @@ configure() {
 
     if [ -f "$rom_path" ]; then
       for collection_name in "${collections[@]}"; do
-        local collection_path="$es_collections_dir/custom-$collection_name.cfg"
-        echo "Adding $rom_path to $collection_path"
-        echo "$rom_path" >> "$collection_path"
+        local collection_file="$es_collections_dir/custom-$collection_name.cfg"
+        echo "Adding $rom_path to $collection_file"
+        echo "$rom_path" >> "$collection_file"
 
         installed_collections[$collection_name]=1
       done
@@ -49,8 +49,8 @@ configure() {
 
   # Sort the modified collections
   for collection_name in "${!installed_collections[@]}"; do
-    local collection_path="$es_collections_dir/custom-$collection_name.cfg"
-    sort -o "$collection_path" "$collection_path"
+    local collection_file="$es_collections_dir/custom-$collection_name.cfg"
+    sort -o "$collection_file" "$collection_file"
   done
 }
 
@@ -71,13 +71,13 @@ restore() {
     return
   fi
 
-  while read collection_path; do
+  while read collection_file; do
     # Remove this system from the given collection
-    sed -i "/\/$system\//d" "$collection_path"
+    sed -i "/\/$system\//d" "$collection_file"
 
     # Delete the collection if it's now empty
-    if [ ! -s "$collection_path" ]; then
-      rm -fv "$collection_path"
+    if [ ! -s "$collection_file" ]; then
+      rm -fv "$collection_file"
     fi
   done < <(find "$es_collections_dir" -name '*.cfg')
 }

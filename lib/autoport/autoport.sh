@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -g \
-  default_config_path system_override_path emulator_override_path rom_override_path \
+  default_config_file system_override_file emulator_override_file rom_override_file \
   joystick_profile mouse_profile keyboard_profile
 
 retropie_configs_dir=/opt/retropie/configs
@@ -27,10 +27,10 @@ setup() {
   local rom_name=${rom_filename%.*}
 
   # Define config paths
-  default_config_path="$retropie_configs_dir/all/autoport.cfg"
-  system_override_path="$retropie_configs_dir/$system/autoport.cfg"
-  emulator_override_path="$retropie_configs_dir/$system/autoport/emulators/$emulator.cfg"
-  rom_override_path="$retropie_configs_dir/$system/autoport/$rom_name.cfg"
+  default_config_file="$retropie_configs_dir/all/autoport.cfg"
+  system_override_file="$retropie_configs_dir/$system/autoport.cfg"
+  emulator_override_file="$retropie_configs_dir/$system/autoport/emulators/$emulator.cfg"
+  rom_override_file="$retropie_configs_dir/$system/autoport/$rom_name.cfg"
 
   # Determine what type of input configuration system we're dealing with
   local system_type=$(__get_system_type "$emulator")
@@ -84,10 +84,10 @@ __setting() {
   local section=$1
   local key=$2
 
-  __find_setting "$rom_override_path" "$section" "$key" || \
-  __find_setting "$emulator_override_path" "$section" "$key" || \
-  __find_setting "$system_override_path" "$section" "$key" || \
-  __find_setting "$default_config_path" "$section" "$key"
+  __find_setting "$rom_override_file" "$section" "$key" || \
+  __find_setting "$emulator_override_file" "$section" "$key" || \
+  __find_setting "$system_override_file" "$section" "$key" || \
+  __find_setting "$default_config_file" "$section" "$key"
 }
 
 # Finds an INI configuration setting within the given path
@@ -139,10 +139,10 @@ __setup_libretro() {
   else
     return
   fi
-  local retroarch_config_path=/dev/shm/retroarch.cfg
+  local retroarch_config_file=/dev/shm/retroarch.cfg
 
   # Remove any existing runtime overrides
-  sed -i "/^input_player.*$retroarch_driver_name/d" "$retroarch_config_path"
+  sed -i "/^input_player.*$retroarch_driver_name/d" "$retroarch_config_file"
 
   __match_players "$profile" "$driver_name"
 
@@ -151,10 +151,10 @@ __setup_libretro() {
     local device_type=${players["$player_index/device_type"]}
 
     echo "Player $player_index: index $device_index"
-    echo "input_player${player_index}_${retroarch_driver_name}_index = \"$device_index\"" >> "$retroarch_config_path"
+    echo "input_player${player_index}_${retroarch_driver_name}_index = \"$device_index\"" >> "$retroarch_config_file"
 
     if [ -n "$device_type" ]; then
-      echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$retroarch_config_path"
+      echo "input_libretro_device_p${player_index} = \"$device_type\"" >> "$retroarch_config_file"
     fi
   done
 }
@@ -168,8 +168,8 @@ __setup_redream() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path="$retropie_configs_dir/dreamcast/redream/redream.cfg"
-  local config_backup_path="$config_path.autoport"
+  local config_file="$retropie_configs_dir/dreamcast/redream/redream.cfg"
+  local config_backup_file="$config_file.autoport"
 
   # Determine if a keyboard is being configured
   local keyboard_limit=$(__setting "$keyboard_profile" 'keyboard_limit')
@@ -182,11 +182,11 @@ __setup_redream() {
   fi
 
   # Create config backup (only if one doesn't already exist)
-  cp -vn "$config_path" "$config_backup_path"
+  cp -vn "$config_file" "$config_backup_file"
 
   # Add keyboard entries
   for (( player_index=0; player_index<$keyboard_limit; player_index++ )); do
-    echo "port${player_index}=dev:0,desc:auto,type:keyboard" >> "$config_path"
+    echo "port${player_index}=dev:0,desc:auto,type:keyboard" >> "$config_file"
   done
 
   # Add joystick entries
@@ -209,10 +209,10 @@ __setup_redream() {
     echo "Player $player_index: index $device_index"
 
     # Remove existing setting
-    sed -i "/^port${player_index}=/d" "$config_path"
+    sed -i "/^port${player_index}=/d" "$config_file"
 
     # Add new setting
-    echo "port${player_index}=dev:${device_index},desc:${device_guid},type:${device_type}" >> "$config_path"
+    echo "port${player_index}=dev:${device_index},desc:${device_guid},type:${device_type}" >> "$config_file"
   done
 }
 
@@ -224,23 +224,23 @@ __setup_ppsspp() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path="$retropie_configs_dir/psp/PSP/SYSTEM/controls.ini"
-  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
-  if [ -z "$device_config_path" ]; then
+  local config_file="$retropie_configs_dir/psp/PSP/SYSTEM/controls.ini"
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
     return
   fi
 
   # Remove joystick configurations
-  sed -i 's/10-[0-9]*\|,//g' "$config_path"
+  sed -i 's/10-[0-9]*\|,//g' "$config_file"
 
   # Merge in those from the device
   while read key separator value; do
     # Merge with existing value
-    sed -i "/^$key *= *1/ s/\$/,$value/" "$config_path"
+    sed -i "/^$key *= *1/ s/\$/,$value/" "$config_file"
 
     # ...or set on its own
-    sed -i "/^$key *= *\$/ s/\$/$value/" "$config_path"
-  done < <(cat "$device_config_path" | grep -Ev '^ *#')
+    sed -i "/^$key *= *\$/ s/\$/$value/" "$config_file"
+  done < <(cat "$device_config_file" | grep -Ev '^ *#')
 }
 
 # Drastic:
@@ -251,17 +251,17 @@ __setup_drastic() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path="$retropie_configs_dir/nds/drastic/config/drastic.cfg"
-  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
-  if [ -z "$device_config_path" ]; then
+  local config_file="$retropie_configs_dir/nds/drastic/config/drastic.cfg"
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
     return
   fi
 
   # Remove joystick configurations
-  sed -i '/controls_b/d' "$config_path"
+  sed -i '/controls_b/d' "$config_file"
 
   # Merge in those from the device
-  cat "$device_config_path" | tee -a "$config_path" >/dev/null
+  cat "$device_config_file" | tee -a "$config_file" >/dev/null
 }
 
 # Hypseus-Singe:
@@ -272,14 +272,14 @@ __setup_hypseus() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path="$retropie_configs_dir/daphne/hypinput.ini"
-  local device_config_path=$(__prepare_config_overwrite "$profile" joystick "$config_path")
-  if [ -z "$device_config_path" ]; then
+  local config_file="$retropie_configs_dir/daphne/hypinput.ini"
+  local device_config_file=$(__prepare_config_overwrite "$profile" joystick "$config_file")
+  if [ -z "$device_config_file" ]; then
     return
   fi
 
   # Remove joystick configurations (and default to 0)
-  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\).*$/\1 = \2 \3 0/g' "$config_path"
+  sed -i 's/^\([^ ]\+\) = \([^ ]\+\) \([^ ]\+\).*$/\1 = \2 \3 0/g' "$config_file"
 
   # Merge in those from the device
   while read key separator button axis; do
@@ -288,8 +288,8 @@ __setup_hypseus() {
       joystick_value="$joystick_value $axis"
     fi
 
-    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_path"
-  done < <(cat "$device_config_path" | grep -Ev '^ *#')
+    sed -i "s/^$key = \([^ ]\+\) \([^ ]\+\).*\$/$key = \1 \2 $joystick_value/g" "$config_file"
+  done < <(cat "$device_config_file" | grep -Ev '^ *#')
 }
 
 # Mupen64plus:
@@ -301,9 +301,9 @@ __setup_mupen64plus() {
   local driver_name=$2
   [[ "$driver_name" =~ mouse|keyboard ]] && return
 
-  local config_path="$retropie_configs_dir/n64/mupen64plus.cfg"
-  local config_backup_path="$config_path.autoport"
-  local auto_config_path="$retropie_configs_dir/n64/InputAutoCfg.ini"
+  local config_file="$retropie_configs_dir/n64/mupen64plus.cfg"
+  local config_backup_file="$config_file.autoport"
+  local auto_config_file="$retropie_configs_dir/n64/InputAutoCfg.ini"
 
   __match_players "$profile" joystick
   if [ ${#player_indexes[@]} -eq 0 ]; then
@@ -312,7 +312,7 @@ __setup_mupen64plus() {
   fi
 
   # Create config backup (only if one doesn't already exist)
-  cp -vn "$config_path" "$config_backup_path"
+  cp -vn "$config_file" "$config_backup_file"
 
   local auto_config_keys=(
     'A Button'
@@ -346,10 +346,10 @@ __setup_mupen64plus() {
     local player_section="Input-SDL-Control$player_index"
 
     # Remove the existing section for this player
-    sed -i "/^\[$player_section\]/, /\[/ { //"'!'"d }; /^\[$player_section\]/d" "$config_path"
+    sed -i "/^\[$player_section\]/, /\[/ { //"'!'"d }; /^\[$player_section\]/d" "$config_file"
 
     # Start the new section
-    cat >> "$config_path" << _EOF_
+    cat >> "$config_file" << _EOF_
 [$player_section]
 version = 2.000000
 mode = 0
@@ -359,8 +359,8 @@ _EOF_
 
     # Add auto-configuration values
     for auto_config_key in "${auto_config_keys[@]}"; do
-      local value=$(__find_setting "$auto_config_path" "$device_name" "$auto_config_key")
-      echo "$auto_config_key = \"$value\"" >> "$config_path"
+      local value=$(__find_setting "$auto_config_file" "$device_name" "$auto_config_key")
+      echo "$auto_config_key = \"$value\"" >> "$config_file"
     done
   done
 }
@@ -376,29 +376,29 @@ _EOF_
 __prepare_config_overwrite() {
   local profile=$1
   local driver_name=$2
-  local config_path=$3
-  local config_backup_path="$config_path.autoport"
+  local config_file=$3
+  local config_backup_file="$config_file.autoport"
 
   __match_players "$profile" "$driver_name"
 
   local device_index=${players["1/device_index"]}
   local device_name=${devices["$device_index/name"]}
-  local device_config_path="${config_path%.*}-$device_name.${config_path##*.}"
+  local device_config_file="${config_file%.*}-$device_name.${config_file##*.}"
 
   if [ -z "$device_name" ]; then
     >&2 echo "No control overrides found for profile \"$profile\""
     return 1
   fi
 
-  if [ ! -f "$device_config_path" ]; then
-    >&2 echo "No control overrides found at path: $device_config_path"
+  if [ ! -f "$device_config_file" ]; then
+    >&2 echo "No control overrides found at path: $device_config_file"
     return 1
   fi
 
   # Create config backup (only if one doesn't already exist)
-  cp -n "$config_path" "$config_backup_path"
+  cp -n "$config_file" "$config_backup_file"
 
-  echo "$device_config_path"
+  echo "$device_config_file"
 }
 
 # Matches player ids with device input indexes (i.e. ports)
@@ -717,20 +717,20 @@ __restore_libretro() {
 }
 
 __restore_redream() {
-  local config_path="$retropie_configs_dir/dreamcast/redream/redream.cfg"
-  local config_backup_path="$config_path.autoport"
-  if [ ! -f "$config_backup_path" ]; then
+  local config_file="$retropie_configs_dir/dreamcast/redream/redream.cfg"
+  local config_backup_file="$config_file.autoport"
+  if [ ! -f "$config_backup_file" ]; then
     return
   fi
 
   # Remove override settings
-  sed -i '/^port[0-9]\+=/d' "$config_path"
+  sed -i '/^port[0-9]\+=/d' "$config_file"
 
   # Add original settings
-  sed -i -e '$a\' "$config_path"
-  grep '^port[0-9]+=' "$config_backup_path" >> "$config_path"
+  sed -i -e '$a\' "$config_file"
+  grep '^port[0-9]+=' "$config_backup_file" >> "$config_file"
 
-  rm "$config_backup_path"
+  rm "$config_backup_file"
 }
 
 __restore_ppsspp() {
@@ -738,20 +738,20 @@ __restore_ppsspp() {
 }
 
 __restore_drastic() {
-  local config_path="$retropie_configs_dir/nds/drastic/config/drastic.cfg"
-  local config_backup_path="$config_path.autoport"
-  if [ ! -f "$config_backup_path" ]; then
+  local config_file="$retropie_configs_dir/nds/drastic/config/drastic.cfg"
+  local config_backup_file="$config_file.autoport"
+  if [ ! -f "$config_backup_file" ]; then
     return
   fi
 
   # Remove override settings
-  sed -i '/controls_b/d' "$config_path"
+  sed -i '/controls_b/d' "$config_file"
 
   # Add original settings
-  sed -i -e '$a\' "$config_path"
-  grep 'controls_b' "$config_backup_path" >> "$config_path"
+  sed -i -e '$a\' "$config_file"
+  grep 'controls_b' "$config_backup_file" >> "$config_file"
 
-  rm "$config_backup_path"
+  rm "$config_backup_file"
 }
 
 __restore_hypseus() {
@@ -763,11 +763,11 @@ __restore_mupen64plus() {
 }
 
 __restore_joystick_config() {
-  local config_path=$1
-  local config_backup_path="$config_path.autoport"
+  local config_file=$1
+  local config_backup_file="$config_file.autoport"
 
-  if [ -f "$config_backup_path" ]; then
-    mv -v "$config_backup_path" "$config_path"
+  if [ -f "$config_backup_file" ]; then
+    mv -v "$config_backup_file" "$config_file"
   fi
 }
 

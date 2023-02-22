@@ -24,9 +24,9 @@ build_kernel_module() {
   fi
 
   # Check out
-  local repo_path=$(mktemp -d -p "$tmp_ephemeral_dir")
-  git clone --depth 1 https://github.com/nicman23/dkms-hid-nintendo "$repo_path"
-  pushd "$repo_path"
+  local repo_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+  git clone --depth 1 https://github.com/nicman23/dkms-hid-nintendo "$repo_dir"
+  pushd "$repo_dir"
 
   sudo dkms add .
   sudo dkms build nintendo -v $module_version
@@ -40,9 +40,9 @@ build_joycond() {
   fi
 
   # Check out
-  local repo_path=$(mktemp -d -p "$tmp_ephemeral_dir")
-  git clone --depth 1 https://github.com/DanielOgorchock/joycond "$repo_path"
-  pushd "$repo_path"
+  local repo_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+  git clone --depth 1 https://github.com/DanielOgorchock/joycond "$repo_dir"
+  pushd "$repo_dir"
 
   cmake .
   sudo make install

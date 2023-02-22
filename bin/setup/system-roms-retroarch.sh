@@ -34,22 +34,22 @@ __configure_retroarch_configs() {
   # Merge in rom-specific overrides
   while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
-    local target_path="$retroarch_config_dir/$library_name/$rom_name.cfg"
-    local paths_to_include=()
+    local target_file="$retroarch_config_dir/$library_name/$rom_name.cfg"
+    local files_to_include=()
     local paths_to_merge=()
 
     # Peripheral / control type overrides
     for config_extension_type in ${peripherals//,/ } "$control_type"; do
       if any_path_exists_cached "{config_dir}/retroarch/retroarch-$config_extension_type.cfg"; then
-        paths_to_include+=("$retropie_configs_dir/all/retroarch-$config_extension_type.cfg")
+        files_to_include+=("$retropie_configs_dir/all/retroarch-$config_extension_type.cfg")
       fi
 
       if any_path_exists_cached "{system_config_dir}/retroarch-$config_extension_type.cfg"; then
-        paths_to_include+=("$retropie_system_config_dir/retroarch-$config_extension_type.cfg")
+        files_to_include+=("$retropie_system_config_dir/retroarch-$config_extension_type.cfg")
       fi
 
       if any_path_exists_cached "{system_config_dir}/retroarch/$library_name/$library_name-$config_extension_type.cfg"; then
-        paths_to_include+=("$retroarch_config_dir/$library_name/retroarch-$config_extension_type.cfg")
+        files_to_include+=("$retroarch_config_dir/$library_name/retroarch-$config_extension_type.cfg")
       fi
     done
 
@@ -60,17 +60,17 @@ __configure_retroarch_configs() {
     # Merge in any valid paths
     for path in "${paths_to_merge[@]}"; do
       if any_path_exists_cached "$path"; then
-        ini_merge "$path" "$target_path" backup=false
+        ini_merge "$path" "$target_file" backup=false
       fi
     done
 
     # Include in any valid paths
-    if [ ${#paths_to_include[@]} -gt 0 ]; then
-      echo '' >> "$target_path"
+    if [ ${#files_to_include[@]} -gt 0 ]; then
+      echo '' >> "$target_file"
 
-      for path in "${paths_to_include[@]}"; do
-        echo "Including ini $path in $target_path"
-        echo "#include \"$path\"" >> "$target_path"
+      for include_file in "${files_to_include[@]}"; do
+        echo "Including ini $include_file in $target_file"
+        echo "#include \"$include_file\"" >> "$target_file"
       done
     fi
   done < <(__list_libretro_roms 'cfg')
@@ -80,13 +80,13 @@ __configure_retroarch_configs() {
 __configure_retroarch_remappings() {
   while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Emulator-specific remapping file
-    local target_path="$retroarch_remapping_dir/$library_name/$rom_name.rmp"
+    local target_file="$retroarch_remapping_dir/$library_name/$rom_name.rmp"
 
     local paths_to_merge
     IFS=» read -r -a paths_to_merge <<< "$override_paths_dsv"
 
     for path in "${paths_to_merge[@]}"; do
-      ini_merge "$path" "$target_path" backup=false
+      ini_merge "$path" "$target_file" backup=false
     done
   done < <(__list_libretro_roms 'rmp')
 }
@@ -94,12 +94,12 @@ __configure_retroarch_remappings() {
 # Game-specific libretro core overrides
 # (https://retropie.org.uk/docs/RetroArch-Core-Options/)
 __configure_retroarch_core_options() {
-  local system_core_options_path=$(get_retroarch_path 'core_options_path')
+  local system_core_options_file=$(get_retroarch_path 'core_options_path')
 
   while IFS=» read -r rom_name core_name core_option_prefix library_name control_type peripherals override_paths_dsv; do
     # Retroarch emulator-specific config
     local emulator_config_dir="$retroarch_config_dir/$library_name"
-    local target_path="$emulator_config_dir/$rom_name.opt"
+    local target_file="$emulator_config_dir/$rom_name.opt"
 
     local paths_to_merge=()
 
@@ -132,22 +132,22 @@ __configure_retroarch_core_options() {
 
         # Copy over existing core overrides so we don't just get the
         # core defaults
-        echo "Merging $core_option_prefix system overrides to $target_path"
-        cp -v "$system_core_options_path" "$target_path"
+        echo "Merging $core_option_prefix system overrides to $target_file"
+        cp -v "$system_core_options_file" "$target_file"
 
         initialized_file=true
       fi
 
-      ini_merge "$path" "$target_path" backup=false
+      ini_merge "$path" "$target_file" backup=false
     done
 
     # Allowlist options specific to this core
-    if [ -f "$target_path" ]; then
-      sed -i -n "/^$core_option_prefix[-_]/p" "$target_path"
+    if [ -f "$target_file" ]; then
+      sed -i -n "/^$core_option_prefix[-_]/p" "$target_file"
 
       # If the file is empty after this, remove it
-      if [ ! -s "$target_path" ]; then
-        rm -fv "$target_path"
+      if [ ! -s "$target_file" ]; then
+        rm -fv "$target_file"
       fi
     fi
   done < <(__list_libretro_roms 'opt')
@@ -231,14 +231,14 @@ restore() {
       find "$emulator_config_dir" -name '*.opt' -exec rm -fv '{}' +
 
       # Remove retroarch config overrides
-      while read rom_config_path; do
-        if grep -qvF input_overlay "$rom_config_path"; then
+      while read rom_config_file; do
+        if grep -qvF input_overlay "$rom_config_file"; then
           # Keep input_overlay as that's managed by system-roms-overlays
-          echo "Removing overrides from $rom_config_path"
-          sed -i '/^input_overlay[ =]/!d' "$rom_config_path"
+          echo "Removing overrides from $rom_config_file"
+          sed -i '/^input_overlay[ =]/!d' "$rom_config_file"
 
-          if [ ! -s "$rom_config_path" ]; then
-            rm -fv "$rom_config_path"
+          if [ ! -s "$rom_config_file" ]; then
+            rm -fv "$rom_config_file"
           fi
         fi
       done < <(find "$emulator_config_dir" -name '*.cfg' -not -name "$library_name*.cfg")

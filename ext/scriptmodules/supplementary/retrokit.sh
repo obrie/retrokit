@@ -379,18 +379,19 @@ function _gui_edit_file_retrokit() {
             local path_choice=${options[$((choice*2+1))]}
 
             # Determine which path we should use as a starting point to edit
-            local reference_path="$home/retrokit/$path_choice"
+            local reference_file="$home/retrokit/$path_choice"
+            local save_file
             if [ "$profile" == 'default' ]; then
-                save_path=$reference_path
+                save_file=$reference_file
             else
-                save_path="$home/retrokit/profiles/$profile/$path_choice"
+                save_file="$home/retrokit/profiles/$profile/$path_choice"
 
                 while read active_profile; do
                     # If this profile has an override for the selected path, then we use that as the
                     # reference
-                    local active_profile_path="$home/retrokit/profiles/$active_profile/$path_choice"
-                    if [[ -f "$active_profile_path" ]]; then
-                        reference_path=$active_profile_path
+                    local active_profile_file="$home/retrokit/profiles/$active_profile/$path_choice"
+                    if [[ -f "$active_profile_file" ]]; then
+                        reference_file=$active_profile_file
                     fi
 
                     # Stop when we've reached the currently selected profile as we don't want to use
@@ -402,19 +403,19 @@ function _gui_edit_file_retrokit() {
             fi
 
             # Create staging file
-            local staging_path=$(mktemp)
-            cp "$reference_path" "$staging_path"
+            local staging_file=$(mktemp)
+            cp "$reference_file" "$staging_file"
 
             # Edit file
-            if editFile "$staging_path" && ! diff "$staging_path" "$reference_path" >/dev/null; then
-                sudo -u $user mkdir -p "$(dirname "$save_path")"
-                mv "$staging_path" "$save_path"
+            if editFile "$staging_file" && ! diff "$staging_file" "$reference_file" >/dev/null; then
+                sudo -u $user mkdir -p "$(dirname "$save_file")"
+                mv "$staging_file" "$save_file"
 
                 # Make sure permissions are set correctly since we're running as root
-                chown -R $user:$user "$save_path"
-                chmod 664 "$save_path"
+                chown -R $user:$user "$save_file"
+                chmod 664 "$save_file"
 
-                _show_msg_retrokit "Saved to $save_path"
+                _show_msg_retrokit "Saved to $save_file"
             fi
         else
             break

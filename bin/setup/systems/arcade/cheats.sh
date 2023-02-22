@@ -29,9 +29,9 @@ __build_fbneo() {
     local url='https://github.com/finalburnneo/FBNeo-cheats/archive/master.zip'
 
     if [ -z "$(ls -A "$bios_dir/fbneo/cheats/")" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$url" "$cheats_path"
-      unzip -ju "$cheats_path" 'FBNeo-cheats-master/cheats/*' -d "$bios_dir/fbneo/cheats/"
+      local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$cheats_file"
+      unzip -ju "$cheats_file" 'FBNeo-cheats-master/cheats/*' -d "$bios_dir/fbneo/cheats/"
     else
       echo "Already downloaded $url"
     fi
@@ -56,9 +56,9 @@ __build_mame0222() {
     local url='http://cheat.retrogames.com/download/cheat0221.zip'
 
     if [ ! -f "$bios_dir/mame0222/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$url" "$cheats_path"
-      unzip -ju "$cheats_path" "cheat.7z" -d "$bios_dir/mame0222/"
+      local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$cheats_file"
+      unzip -ju "$cheats_file" "cheat.7z" -d "$bios_dir/mame0222/"
     else
       echo "Already downloaded $url"
     fi
@@ -71,9 +71,9 @@ __build_mame0244() {
     local url='http://cheat.retrogames.com/download/cheat0245.zip'
 
     if [ ! -f "$bios_dir/mame0244/cheat.7z" ] || [ "$FORCE_UPDATE" == 'true' ]; then
-      local cheats_path=$(mktemp -p "$tmp_ephemeral_dir")
-      download "$url" "$cheats_path"
-      unzip -ju "$cheats_path" "cheat.7z" -d "$bios_dir/mame0244/"
+      local cheats_file=$(mktemp -p "$tmp_ephemeral_dir")
+      download "$url" "$cheats_file"
+      unzip -ju "$cheats_file" "cheat.7z" -d "$bios_dir/mame0244/"
     else
       echo "Already downloaded $url"
     fi

@@ -210,14 +210,13 @@ doc_data_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.json)
 json_merge '{system_docs_dir}/doc.json' "$doc_data_file" backup=false >/dev/null
 
 __add_hrefs() {
-  local common_stylesheet_href=$(first_path "{docs_dir}/stylesheets/common.css")
-  local stylesheet_href=$(first_path "{docs_dir}/stylesheets/reference.css")
-  local base_href=$docs_dir
+  local common_stylesheet_file=$(first_path "{docs_dir}/stylesheets/common.css")
+  local stylesheet_file=$(first_path "{docs_dir}/stylesheets/reference.css")
 
   json_edit "$doc_data_file" \
-    ".hrefs.common_stylesheet" "file://$common_stylesheet_href" \
-    ".hrefs.page_stylesheet" "file://$stylesheet_href" \
-    ".hrefs.base" "file://$base_href/"
+    ".hrefs.common_stylesheet" "file://$common_stylesheet_file" \
+    ".hrefs.page_stylesheet" "file://$stylesheet_file" \
+    ".hrefs.base" "file://$docs_dir/"
 }
 
 # Add theme overrides for adjusting logos
@@ -306,8 +305,8 @@ __add_hotkey_controls() {
 
   # Add system-specific dynamic extensions
 __source_system_extensions() {
-  local extension_path=$(first_path '{system_docs_dir}/doc.sh')
-  [ -n "$extension_path" ] && . "$extension_path"
+  local extension_file=$(first_path '{system_docs_dir}/doc.sh')
+  [ -n "$extension_file" ] && . "$extension_file"
 }
 
 # Adds system-specific extensions to the controls file (no-op)
@@ -364,15 +363,15 @@ __find_retroarch_hotkey_button() {
 
 # Builds a reference PDF using the given controls file overrides
 __build_pdf() {
-  local output_path=$1
+  local output_file=$1
 
   # Render Jinja => Markdown
   local reference_template=$(first_path '{docs_dir}/reference.html.jinja')
-  local reference_html_path=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.html)
-  jinja2 "$reference_template" "$doc_data_file" > "$reference_html_path"
+  local reference_html_file=$(mktemp -p "$tmp_ephemeral_dir" --suffix=.html)
+  jinja2 "$reference_template" "$doc_data_file" > "$reference_html_file"
 
   # Render HTML => PDF
-  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_path" "$reference_html_path" 2>/dev/null
+  chromium --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf-no-header --print-to-pdf="$output_file" "$reference_html_file" 2>/dev/null
 }
 
 # List all Retroarch configuration files which might contain controller info

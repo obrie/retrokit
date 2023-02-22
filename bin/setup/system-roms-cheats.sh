@@ -6,8 +6,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-cheats'
 setup_module_desc='Link roms to game cheat files for libretro'
 
-cheat_database_path=${retroarch_path_defaults['cheat_database_path']}
-system_cheat_database_path=$(get_retroarch_path 'cheat_database_path')
+cheat_database_dir=${retroarch_path_defaults['cheat_database_path']}
+system_cheat_database_dir=$(get_retroarch_path 'cheat_database_path')
 
 # If matched, we must find the corresonding country in the ROM name
 countries_regex='asia|australia|brazil|china|europe|france|germany|italy|japan|korea|russia|spain|sweden|usa'
@@ -30,8 +30,8 @@ configure() {
 
   # Define mappings to make lookups easier and more reliable
   echo 'Loading list of available cheats...'
-  local cheats_list_path=$(mktemp -p "$tmp_ephemeral_dir")
-  __load_cheat_mappings | sort | uniq > "$cheats_list_path"
+  local cheats_list_file=$(mktemp -p "$tmp_ephemeral_dir")
+  __load_cheat_mappings | sort | uniq > "$cheats_list_file"
 
   # Link the named Retroarch cheats to the emulator in the system cheats namespace
   declare -A installed_files
@@ -45,22 +45,22 @@ configure() {
     fi
 
     # Ensure the target exists
-    local target_cheats_dir="$system_cheat_database_path/$library_name"
+    local target_cheats_dir="$system_cheat_database_dir/$library_name"
     mkdir -pv "$target_cheats_dir"
 
     # We can't just symlink to the source directory because the cheat filenames
     # don't always match the ROM names.  As a result, we need to try to do some
     # smart matching to find the corresponding cheat file.
-    local source_cheat_path=$(__find_matching_cheat "$rom_name" "$cheats_list_path")
+    local source_cheat_file=$(__find_matching_cheat "$rom_name" "$cheats_list_file")
 
-    if [ -n "$source_cheat_path" ]; then
+    if [ -n "$source_cheat_file" ]; then
       if [ -z "$playlist_name" ]; then
         # Link the cheat for single-disc games
-        ln_if_different "$source_cheat_path" "$target_cheats_dir/$rom_name.cht"
+        ln_if_different "$source_cheat_file" "$target_cheats_dir/$rom_name.cht"
         installed_files["$target_cheats_dir/$rom_name.cht"]=1
       elif [ ! "${installed_playlists["$playlist_name"]}" ]; then
         # Link the cheat for the playlist
-        ln_if_different "$source_cheat_path" "$target_cheats_dir/$playlist_name.cht"
+        ln_if_different "$source_cheat_file" "$target_cheats_dir/$playlist_name.cht"
         installed_playlists["$playlist_name"]=1
         installed_files["$target_cheats_dir/$playlist_name.cht"]=1
       fi
@@ -69,11 +69,11 @@ configure() {
 
   # Remove old, unmapped cheats
   while read -r library_name; do
-    [ ! -d "$system_cheat_database_path/$library_name" ] && continue
+    [ ! -d "$system_cheat_database_dir/$library_name" ] && continue
 
     while read -r path; do
       [ "${installed_files["$path"]}" ] || rm -v "$path"
-    done < <(find "$system_cheat_database_path/$library_name" -name '*.cht')
+    done < <(find "$system_cheat_database_dir/$library_name" -name '*.cht')
   done < <(get_core_library_names)
 }
 
@@ -82,7 +82,7 @@ __load_cheat_mappings() {
   declare -Ag cheat_mappings
   while read -r cheats_name; do
     # Location of the cheats on the filesystem
-    local source_cheats_dir="$cheat_database_path/$cheats_name"
+    local source_cheats_dir="$cheat_database_dir/$cheats_name"
 
     while read -r cheat_filename; do
       # Build a unique key to represent the rom name that we can
@@ -112,7 +112,7 @@ __load_cheat_mappings() {
 # * Cheat name length
 __find_matching_cheat() {
   local rom_name=$1
-  local cheats_list_path=$2
+  local cheats_list_file=$2
   local normalized_rom_name=$(normalize_rom_name "$rom_name")
 
   # Look up this ROM's associated flags as cheats can be region-specific
@@ -162,7 +162,7 @@ __find_matching_cheat() {
     done
 
     cheat_matches+=("$version_matches_count"$'\t'"$country_matches_count"$'\t'"$total_matches_count"$'\t'"$cheat_system_index"$'\t'"$cheat_name_length"$'\t'"$cheat_filename")
-  done < <(grep -E "^$normalized_rom_name"$'\t' "$cheats_list_path" | cut -d$'\t' -f 2,3)
+  done < <(grep -E "^$normalized_rom_name"$'\t' "$cheats_list_file" | cut -d$'\t' -f 2,3)
 
   printf "%s\n" "${cheat_matches[@]}" | sort -t$'\t' -k1,1n -k2,2n -k3,3n -k4,4rn -k5,5rn -k6,6r | tail -n 1 | cut -d$'\t' -f 6
 }
@@ -170,7 +170,7 @@ __find_matching_cheat() {
 restore() {
   # Remove cheats for each libretro core
   while read -r library_name; do
-    rm -rfv "$system_cheat_database_path/$library_name"
+    rm -rfv "$system_cheat_database_dir/$library_name"
   done < <(get_core_library_names)
 }
 

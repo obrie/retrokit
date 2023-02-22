@@ -30,12 +30,12 @@ __configure_authorized_keys() {
 }
 
 __configure_private_keys() {
-  while read source_key_path; do
-    local keyname=$(basename "$source_key_path")
-    local target_key_path="$HOME/.ssh/$keyname"
+  while read source_key_file; do
+    local keyname=$(basename "$source_key_file")
+    local target_key_file="$HOME/.ssh/$keyname"
 
-    file_cp "$source_key_path" "$target_key_path"
-    chmod 600 "$target_key_path"
+    file_cp "$source_key_file" "$target_key_file"
+    chmod 600 "$target_key_file"
   done < <(each_path '{config_dir}/ssh' find '{}' -name 'id_rsa*')
 
   file_cp '{config_dir}/ssh/config' "$HOME/.ssh/config"
@@ -51,8 +51,8 @@ restore() {
   restore_file "$HOME/.ssh/authorized_keys" delete_src=true
   restore_file "$HOME/.ssh/config" delete_src=true
 
-  while read key_path; do
-    restore_file "$key_path" delete_src=true
+  while read key_file; do
+    restore_file "$key_file" delete_src=true
   done < <(ls "$HOME/.ssh/id_rsa-"* | grep -Ev 'rk-src')
 
   sudo systemctl stop ssh

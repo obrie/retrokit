@@ -17,9 +17,9 @@ depends() {
   local raspi2png_version="$(cat /etc/raspi2png.version 2>/dev/null || true)"
   if [ ! `command -v raspi2png` ] || has_newer_commit https://github.com/AndrewFromMelbourne/raspi2png "$raspi2png_version"; then
     # Check out
-    local raspi2png_repo_path=$(mktemp -d -p "$tmp_ephemeral_dir")
-    git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git "$raspi2png_repo_path"
-    pushd "$raspi2png_repo_path"
+    local raspi2png_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
+    git clone --depth 1 https://github.com/AndrewFromMelbourne/raspi2png.git "$raspi2png_dir"
+    pushd "$raspi2png_dir"
     raspi2png_version=$(git rev-parse HEAD)
 
     # Compile

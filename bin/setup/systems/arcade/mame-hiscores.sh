@@ -47,8 +47,8 @@ configure() {
 __configure_mame() {
   local version=$1
 
-  local hiscore_path=$(first_path "{system_config_dir}/mame$version/hiscore.ini" || first_path '{system_config_dir}/mame/hiscore.ini')
-  file_cp "$hiscore_path" "$bios_dir/mame$version/ini/hiscore.ini" backup=false
+  local hiscore_file=$(first_path "{system_config_dir}/mame$version/hiscore.ini" || first_path '{system_config_dir}/mame/hiscore.ini')
+  file_cp "$hiscore_file" "$bios_dir/mame$version/ini/hiscore.ini" backup=false
 }
 
 restore() {

@@ -45,9 +45,9 @@ __build_mame0244() {
 
 # Looks for the latest version of command.dat and downloads it
 __download_command_dat() {
-  local target_path=$1
-  if [ -f "$target_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
-    echo "Already installed command.dat ($target_path)"
+  local target_file=$1
+  if [ -f "$target_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+    echo "Already installed command.dat ($target_file)"
     return
   fi
 
@@ -58,19 +58,19 @@ __download_command_dat() {
   fi
 
   local url=$(render_template "$command_dat_url" filename="$filename")
-  local archive_path=$(mktemp -p "$tmp_ephemeral_dir")
-  download "$url" "$archive_path"
+  local archive_file=$(mktemp -p "$tmp_ephemeral_dir")
+  download "$url" "$archive_file"
 
   local extract_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
-  unzip -ojq "$archive_path" 'dats/command.dat' -d "$extract_dir/"
-  file_cp "$extract_dir/command.dat" "$target_path" backup=false envsubst=false
+  unzip -ojq "$archive_file" 'dats/command.dat' -d "$extract_dir/"
+  file_cp "$extract_dir/command.dat" "$target_file" backup=false envsubst=false
 }
 
 # Looks for the latest version of gameinit.dat and downloads it
 __download_gameinit_dat() {
-  local target_path=$1
-  if [ -f "$target_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
-    echo "Already installed gameinit.dat ($target_path)"
+  local target_file=$1
+  if [ -f "$target_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+    echo "Already installed gameinit.dat ($target_file)"
     return
   fi
 
@@ -81,12 +81,12 @@ __download_gameinit_dat() {
   fi
 
   local url=$(render_template "$gameinit_dat_url" filename="$filename")
-  local archive_path=$(mktemp -p "$tmp_ephemeral_dir")
-  download "$url" "$archive_path"
+  local archive_file=$(mktemp -p "$tmp_ephemeral_dir")
+  download "$url" "$archive_file"
 
   local extract_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
-  unzip -ojq "$archive_path" 'dats/gameinit.dat' -d "$extract_dir/"
-  file_cp "$extract_dir/gameinit.dat" "$target_path" backup=false envsubst=false
+  unzip -ojq "$archive_file" 'dats/gameinit.dat' -d "$extract_dir/"
+  file_cp "$extract_dir/gameinit.dat" "$target_file" backup=false envsubst=false
 }
 
 remove() {

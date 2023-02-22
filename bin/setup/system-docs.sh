@@ -16,9 +16,9 @@ build() {
     return
   fi
 
-  local staging_path=$(mktemp -p "$tmp_dir")
-  local output_path="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
-  if [ -f "$output_path" ] && [ "$FORCE_UPDATE" != 'true' ]; then
+  local staging_file=$(mktemp -p "$tmp_dir")
+  local output_file="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
+  if [ -f "$output_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
     echo "Documentation already built for $system"
     return
   fi
@@ -29,11 +29,11 @@ build() {
   __add_keyboard_controls
   __add_hotkey_controls
   __add_system_extensions "$(get_retroarch_path 'core_options_path')"
-  __build_pdf "$staging_path"
+  __build_pdf "$staging_file"
 
   # Move PDF to final location
-  mkdir -p "$(dirname "$output_path")"
-  mv -v "$staging_path" "$output_path"
+  mkdir -p "$(dirname "$output_file")"
+  mv -v "$staging_file" "$output_file"
 }
 
 remove() {

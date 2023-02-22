@@ -119,16 +119,16 @@ __load_overlay_urls() {
 
   echo "Loading list of available overlays..."
   while IFS=$'\t' read -r repo branch rom_images_path; do
-    local github_tree_path="$system_tmp_dir/$repo.list"
+    local github_tree_file="$system_tmp_dir/$repo.list"
 
-    if [ ! -f "$github_tree_path" ]; then
+    if [ ! -f "$github_tree_file" ]; then
       # Get the Tree SHA for the directory storing the images
       local parent_tree_path=$(dirname "$rom_images_path")
       local sub_tree_name=$(basename "$rom_images_path")
       local tree_sha=$(__call_github_api "https://api.github.com/repos/$repo/contents/$parent_tree_path?ref=$branch" | jq -r ".[] | select(.name == \"$sub_tree_name\") | .sha")
 
       # Get the list of files at that sub-tree
-      __call_github_api "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_path"
+      __call_github_api "https://api.github.com/repos/$repo/git/trees/$tree_sha" "$github_tree_file"
     fi
 
     while IFS=$'\t' read -r rom_name encoded_rom_name ; do
@@ -142,7 +142,7 @@ __load_overlay_urls() {
       if [ -z "${overlay_urls["$rom_id"]}" ]; then
         overlay_urls["$rom_id"]="$source_url"
       fi
-    done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_path" | sort | uniq)
+    done < <(jq -r '.tree[].path | select(. | contains(".png")) | split("/")[-1] | sub("\\.png$"; "") | [(. | @text), (. | @uri)] | @tsv' "$github_tree_file" | sort | uniq)
   done < <(system_setting '.overlays.repos[] | [.repo, .branch // "master", .path] | @tsv')
 }
 
@@ -175,8 +175,8 @@ __install_overlay() {
   # Create retroarch overlay config
   local library_name=${emulators["$emulator/library_name"]}
   if [ -n "$library_name" ]; then
-    local overlay_config_path="$system_overlay_dir/$overlay_title.cfg"
-    create_overlay_config "$overlay_config_path" "$image_filename"
+    local overlay_config_file="$system_overlay_dir/$overlay_title.cfg"
+    create_overlay_config "$overlay_config_file" "$image_filename"
     installed_files["$system_overlay_dir/$overlay_title.cfg"]=1
     installed_files["$system_overlay_dir/$image_filename"]=1
   fi
@@ -211,16 +211,16 @@ __install_default_overlay() {
 __update_retroarch_config() {
   local rom_name=$1
   local emulator=$2
-  local overlay_config_path=$3
+  local overlay_config_file=$3
   local library_name=${emulators["$emulator/library_name"]}
   local emulator_config_dir="$retroarch_config_dir/$library_name"
 
   mkdir -pv "$emulator_config_dir"
 
   # Link emulator/rom retroarch config to overlay config
-  echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $overlay_config_path"
+  echo "Linking $emulator_config_dir/$rom_name.cfg to overlay $overlay_config_file"
   touch "$emulator_config_dir/$rom_name.cfg"
-  crudini --set "$emulator_config_dir/$rom_name.cfg" '' 'input_overlay' "\"$overlay_config_path\""
+  crudini --set "$emulator_config_dir/$rom_name.cfg" '' 'input_overlay' "\"$overlay_config_file\""
 
   installed_files["$emulator_config_dir/$rom_name.cfg"]=1
 }
@@ -255,14 +255,14 @@ restore() {
     # Check if any overrides exist
     [ ! -d "$retroarch_config_dir/$library_name" ] && continue
 
-    while read rom_config_path; do
-      if grep -q input_overlay "$rom_config_path"; then
+    while read rom_config_file; do
+      if grep -q input_overlay "$rom_config_file"; then
         # Remove the input_overlay override
-        crudini --del "$rom_config_path" '' input_overlay
+        crudini --del "$rom_config_file" '' input_overlay
 
         # Delete the file if it's now empty
-        if [ ! -s "$rom_config_path" ]; then
-          rm -fv "$rom_config_path"
+        if [ ! -s "$rom_config_file" ]; then
+          rm -fv "$rom_config_file"
         fi
       fi
     done < <(find "$retroarch_config_dir/$library_name" -name '*.cfg' -not -name "$library_name.cfg")

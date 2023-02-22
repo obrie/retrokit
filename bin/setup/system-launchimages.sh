@@ -30,11 +30,11 @@ configure() {
   fi
 
   # Download the image (identified by theme in case the theme changes)
-  local download_path="$retropie_system_config_dir/launching-extended-$launch_theme.png"
-  download "$launch_image_url" "$download_path"
+  local download_file="$retropie_system_config_dir/launching-extended-$launch_theme.png"
+  download "$launch_image_url" "$download_file"
 
   # Promote it to the primary launch screen for the system
-  ln_if_different "$download_path" "$retropie_system_config_dir/launching-extended.png"
+  ln_if_different "$download_file" "$retropie_system_config_dir/launching-extended.png"
 }
 
 restore() {
