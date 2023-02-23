@@ -64,8 +64,8 @@ __configure_emulator_remappings() {
 
 # System core options
 __configure_core_options() {
-  local global_core_options_file=${retroarch_path_defaults['core_options_file']}
-  local core_options_file=$(get_retroarch_path 'core_options_file')
+  local global_core_options_file=${retroarch_path_defaults['core_options_path']}
+  local core_options_file=$(get_retroarch_path 'core_options_path')
 
   if [ "$global_core_options_file" == "$core_options_file" ]; then
     echo 'Skipping core options overrides (core_options_file is missing)'
@@ -99,8 +99,8 @@ __configure_core_options() {
 
 restore() {
   # Remove system retroarch core options files
-  local global_core_options_file=${retroarch_path_defaults['core_options_file']}
-  local core_options_file=$(get_retroarch_path 'core_options_file')
+  local global_core_options_file=${retroarch_path_defaults['core_options_path']}
+  local core_options_file=$(get_retroarch_path 'core_options_path')
   if [ "$global_core_options_file" != "$core_options_file" ]; then
     rm -fv "$core_options_file"
   fi
