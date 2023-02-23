@@ -27,17 +27,17 @@ main() {
 restore() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local restore_from_dir=${2%/}
-  gunzip --stdout "$restore_from_dir" | sudo dd bs=4M of=$device status=progress
+  local backup_file=$2
+  gunzip --stdout "$backup_file" | sudo dd bs=4M of=$device status=progress
 }
 
 backup() {
   [[ $# -ne 2 ]] && usage
   local device=$1
-  local backup_to_dir=${2%/}
-  mkdir -p "$(dirname "$backup_to_dir")"
+  local backup_file=$2
+  mkdir -p "$(dirname "$backup_file")"
 
-  sudo dd bs=4M if=$device status=progress | gzip > "$backup_to_dir"
+  sudo dd bs=4M if=$device status=progress | gzip > "$backup_file"
 }
 
 clone() {
