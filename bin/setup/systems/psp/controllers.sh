@@ -21,7 +21,7 @@ configure() {
 }
 
 restore() {
-  restore_file "$ppsspp_dir/assets/gamecontrollerdb.txt" delete_src=true
+  restore_file "$ppsspp_dir/assets/gamecontrollerdb.txt" as_sudo=true delete_src=true
 }
 
 setup "${@}"
