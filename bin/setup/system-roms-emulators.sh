@@ -6,9 +6,10 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-emulators'
 setup_module_desc='Manages emulator selections for individual ROMs'
 
+emulators_config_file="$retropie_configs_dir/all/emulators.cfg"
+
 # Define emulators for games that don't use the default
 configure() {
-  local emulators_config_file="$retropie_configs_dir/all/emulators.cfg"
   backup_file "$emulators_config_file"
 
   # Load emulator data
