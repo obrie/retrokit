@@ -80,11 +80,11 @@ __restore_emulationstation() {
 }
 
 __restore_autostart() {
-  rm -fv "$retropie_configs_dir/all/autostart.d/manualkit/"
+  rm -rfv "$retropie_configs_dir/all/autostart.d/manualkit/"
 }
 
 __restore_runcommand() {
-  rm -fv "$retropie_configs_dir/all/runcommand.d/manualkit/"
+  rm -rfv "$retropie_configs_dir/all/runcommand.d/manualkit/"
 }
 
 remove() {
