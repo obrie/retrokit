@@ -93,9 +93,6 @@ cache:
 ```
 # Delete everything in the tmp/ folder
 bin/cache.sh delete
-
-# Update no-intro DATs based on Love Pack P/C zip
-bin/cache.sh sync_nointro_dats /path/to/love_pack_pc.zip
 ```
 
 sd:
