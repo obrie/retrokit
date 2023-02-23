@@ -150,7 +150,7 @@
     "ports"
   ],
   "setup": {
-    "default": [
+    "modules": [
       "network-wifi",
       "deps",
       "ssh",
@@ -232,10 +232,6 @@
       "systems/psp/cheats",
       "systems/psx/roms-ppf_patches",
       "systems/videopac/samples"
-    ],
-    "add": [
-    ],
-    "remove": [
     ]
   }
 }

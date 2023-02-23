@@ -1,8 +1,16 @@
 {
   "setup": {
-    "add|case": [
-      "hardware/gpi2",
-      "hardware/controllers/xboxdrv"
-    ]
+    "modules|case": {
+      "add": [
+        "hardware/gpi2"
+      ],
+      "before": "powerkit"
+    },
+    "modules|controller": {
+      "add": [
+        "hardware/controllers/xboxdrv"
+      ],
+      "after": "hardware/controllers"
+    }
   }
 }

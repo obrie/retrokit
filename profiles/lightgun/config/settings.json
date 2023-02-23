@@ -5,8 +5,11 @@
     }
   },
   "setup": {
-    "add|lightgun": [
-      "hardware/controllers/sinden"
-    ]
+    "modules|lightgun": {
+      "add": [
+        "hardware/controllers/sinden"
+      ],
+      "after": "hardware/controllers"
+    }
   }
 }

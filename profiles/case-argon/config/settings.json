@@ -6,8 +6,11 @@
     }
   },
   "setup": {
-    "add|case": [
-      "hardware/argon1"
-    ]
+    "modules|case": {
+      "add": [
+        "hardware/argon1"
+      ],
+      "before": "powerkit"
+    }
   }
 }

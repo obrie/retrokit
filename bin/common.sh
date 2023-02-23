@@ -98,7 +98,59 @@ setting() {
 }
 
 list_setupmodules() {
-  setting '.setup | .default + (to_entries[] | select(.key | startswith("add")) | .value) - (to_entries[] | select(.key | startswith("remove")) | .value) | .[]' | awk '!x[$0]++'
+  # Start with the default set
+  local modules=($(setting '.setup .modules[]'))
+
+  # Insert in additional modules that are not a part of the default set
+  while IFS=, read extension_name before_module after_module new_modules_csv; do
+    declare -a new_modules=()
+    IFS=',' read -r -a new_modules <<< "$new_modules_csv"
+
+    local search_module=${before_module:-$after_module}
+    if [ -n "$search_module" ]; then
+      # Find out where to insert the new set of modules
+      local insert_index=
+      local index=
+      for index in "${!modules[@]}"; do
+        if [ "${modules[$index]}" == "$search_module" ]; then
+          insert_index=$index
+          break
+        fi
+      done
+
+      if [ -z "$insert_index" ]; then
+        echo "Failed to find $search_module"
+        exit
+      fi
+
+      if [ -n "$after_module" ]; then
+        ((insert_index+=1))
+      fi
+    else
+      # Append to the end
+      insert_index=${#modules[@]}
+    fi
+
+    # Insert the new set of modules
+    modules=("${modules[@]:0:insert_index}" "${new_modules[@]}" "${modules[@]:insert_index}")
+  done < <(setting '.setup | to_entries[] | select(.key | startswith("modules|")) | [.key, .value.before, .value.after, (.value.add | join(","))] | join(",")' | sort)
+
+  # Identify which modules we're removing
+  declare -A modules_to_remove
+  while read module; do
+    modules_to_remove[$module]=1
+  done < <(setting '.setup | to_entries[] | select(.key | startswith("remove")) | .value[]')
+
+  # Print the resolved set of modules, being sure to:
+  # * Not print removed modules
+  # * Not print a module more than once
+  declare -A modules_listed
+  for module in "${modules[@]}"; do
+    if [ -z "${modules_to_remove[$module]}" ] && [ -z "${modules_listed[$module]}" ]; then
+      modules_listed[$module]=1
+      echo "$module"
+    fi
+  done
 }
 
 # Is the given setupmodule is enabled?
