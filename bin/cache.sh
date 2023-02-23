@@ -10,7 +10,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 usage() {
   echo "usage:"
   echo " $0 delete"
-  echo " $0 remote_sync_system_metadata <system|all>"
+  echo " $0 remote_sync_system_manuals <system|all>"
   exit 1
 }
 
