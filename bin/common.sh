@@ -79,6 +79,9 @@ __setup_env() {
     # Mark exports as being complete so that subsequent setup module executions
     # don't need to re-evaluate all of this
     export RETROKIT_HAS_EXPORTS=true
+
+    # Define build variables
+    export MAKEFLAGS='-j4'
   else
     # Remove any existing files in the ephemeral directory since this can get reused
     # across multiple scripts

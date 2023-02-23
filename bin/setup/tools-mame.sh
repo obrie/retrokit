@@ -30,7 +30,6 @@ build() {
 __build_chdman_source() {
   # Set build flags
   export CFLAGS='-mcpu=cortex-a72 -mfpu=neon-fp-armv8 -O2'
-  export MAKEFLAGS='-j4'
 
   # Build from source
   local mame_dir=$(mktemp -d -p "$tmp_ephemeral_dir")
