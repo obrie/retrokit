@@ -34,7 +34,7 @@ __configure_global_overrides() {
 __configure_shared_overrides() {
   while read shared_config_name; do
     ini_merge "{config_dir}/retroarch/$shared_config_name.cfg" "$retropie_configs_dir/all/$shared_config_name.cfg" backup=false
-  done < <(each_path '{config_dir}/retroarch' find '{}'  -name 'retroarch-*.cfg' -not -name 'retroarch-core-options.cfg' -exec basename {} .cfg \; | sort | uniq)
+  done < <(each_path '{config_dir}/retroarch' find '{}'  -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 
 __configure_overlays() {
@@ -53,7 +53,7 @@ restore() {
     "$retroarch_default_overlay_image_file" \
     "$retroarch_default_overlay_lightgun_image_file"
 
-  find "$retropie_configs_dir/all" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
+  find "$retropie_configs_dir/all" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec rm -fv '{}' +
 
   __restore_config delete_src=true
 }

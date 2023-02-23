@@ -24,7 +24,7 @@ __configure_system_config() {
   # Shared system configs
   while read shared_config_name; do
     ini_merge "{system_config_dir}/$shared_config_name.cfg" "$retropie_system_config_dir/$shared_config_name.cfg" backup=false
-  done < <(each_path '{system_config_dir}' find '{}' -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options.cfg' -exec basename {} .cfg \; | sort | uniq)
+  done < <(each_path '{system_config_dir}' find '{}' -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec basename {} .cfg \; | sort | uniq)
 }
 
 # Emulator configuration overrides
@@ -119,7 +119,7 @@ restore() {
 
   # Restore system retroarch config
   restore_file "$retropie_system_config_dir/retroarch.cfg"
-  find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name retroarch-core-options.cfg -exec rm -fv '{}' +
+  find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec rm -fv '{}' +
 }
 
 setup "${@}"
