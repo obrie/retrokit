@@ -66,6 +66,7 @@ __configure_retroarch_configs() {
 
     # Include in any valid paths
     if [ ${#files_to_include[@]} -gt 0 ]; then
+      mkdir -p "$(dirname "$target_file")"
       echo '' >> "$target_file"
 
       for include_file in "${files_to_include[@]}"; do
