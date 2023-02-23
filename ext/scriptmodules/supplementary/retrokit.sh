@@ -254,10 +254,12 @@ function _gui_vacuum_retrokit() {
     while true; do
         local cmd=(dialog --colors --backtitle "$__backtitle" --cancel-label "Back" --menu "retrokit media management" 22 85 16)
         local options=(
-            "all" "-> \Zbmanuals\Zn, \Zbmedia_cache\Zn, \Zbmedia\Zn, \Zbroms\Zn"
+            "all" "-> \Zbinstallation\Zn, \Zbgamestate\Zn"
+            "installation" "-> \Zbmanuals\Zn, \Zbmedia_cache\Zn, \Zbmedia\Zn, \Zbmess_artwork\Zn, \Zboverlays\Zn, \Zbroms\Zn"
             "manuals" "Deletes manuals for games no longer installed."
             "media_cache" "Deletes cached scraper media for games no longer installed."
             "media" "Deletes non-cached media for games no longer installed."
+            "mess_artwork" "Deletes mess artwork for games no longer installed."
             "roms" "Deletes rom files for games no longer installed."
             "overlays" "Deletes retroarch overlays for games no longer installed."
             "gamestate" "Deletes rom game state (e.g. saves) for games no longer installed."
