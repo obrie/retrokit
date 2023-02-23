@@ -56,8 +56,6 @@ function configure_actionmax() {
     addEmulator 0 "$md_id" "daphne" "$md_inst/actionmax.sh %ROM%"
     addSystem "daphne"
 
-    local allemu="$configdir/all/emulators.cfg"
-
     [[ "$md_mode" == "remove" ]] && return
 
     mkUserDir "$md_conf_root/daphne"
@@ -67,13 +65,6 @@ function configure_actionmax() {
 
     copyDefaultConfig "$md_inst/singeinput.default" "$md_conf_root/daphne/singeinput.ini"
     ln -sf "$md_conf_root/daphne/singeinput.ini" "$md_inst/singeinput.ini"
-
-    local rom
-    for rom in 38ambushalley bluethunder hydrosub2021 popsghostly sonicfury; do
-      if ! grep -q "daphne_$rom" "$allemu"; then
-        addLineToFile "daphne_$rom = \"$md_id\"" $allemu
-      fi
-    done
 
     local common_args="-framefile \"\$dir/\$name.txt\" -homedir \"$md_inst\" -fullscreen_window \$params"
 
