@@ -53,7 +53,7 @@ __clean_emulator_config_key() {
 
 restore() {
   echo 'Removing emulator selections...'
-  sed -i "/^${system}_/d"
+  sed -i "/^${system}_/d" "$emulators_config_file"
 }
 
 setup "${@}"
