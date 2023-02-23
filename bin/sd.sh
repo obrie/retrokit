@@ -161,7 +161,7 @@ create() {
 
   # Expand main partition to consume the entire disk
   # *NOTE* For reasons I don't yet understand, resizing to 100% of the
-  # available disk space causes the image to go into an failure
+  # available disk space causes the image to go into a failure
   # boot loop.  This is why we expand to *almost* 100% :/
   # 
   # I tried changing the disk id, but this didn't make a difference.
@@ -186,12 +186,13 @@ create() {
   echo "Copying retrokit to /home/pi/retrokit on $retropie_device"
   local remote_user=$(stat -c '%U' "$mount_dir/home/pi")
   local remote_group=$(stat -c '%G' "$sync_to_dir/home/pi")
-  sudo rsync -av --chown "$remote_user:$remote_group" --exclude 'tmp/' --exclude '__pycache__/' "$app_dir/" "$mount_dir/home/pi/retrokit/"
+  sudo rsync -a --chown "$remote_user:$remote_group" --exclude 'tmp/' --exclude '__pycache__/' "$app_dir/" "$mount_dir/home/pi/retrokit/"
   mkdir -v "$mount_dir/home/pi/retrokit/tmp"
   touch "$mount_dir/home/pi/retrokit/tmp/.gitkeep"
   chown -Rv "$remote_user:$remote_group" "$mount_dir/home/pi/retrokit/tmp"
 
   # Unmount the device
+  echo "Unmounting $retropie_device..."
   while ! sudo umount -v "$retropie_device"; do
     sleep 5
   done
