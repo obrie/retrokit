@@ -70,9 +70,9 @@ function configure_actionmax() {
 
     local rom
     for rom in 38ambushalley bluethunder hydrosub2021 popsghostly sonicfury; do
-    if ! grep -q "daphne_$rom" "$allemu"; then
-    addLineToFile "daphne_$rom = \"$md_id\"" $allemu
-    fi
+      if ! grep -q "daphne_$rom" "$allemu"; then
+        addLineToFile "daphne_$rom = \"$md_id\"" $allemu
+      fi
     done
 
     local common_args="-framefile \"\$dir/\$name.txt\" -homedir \"$md_inst\" -fullscreen_window \$params"
