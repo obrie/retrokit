@@ -96,7 +96,7 @@ function _gui_setup_retrokit() {
             setupmodules[$setupmodule]=1
             options+=($index "$setupmodule")
             index=$((index+1))
-        done < <(__get_settings_retrokit | jq -r '.setup | .default + (to_entries[] | select(.key | startswith("add")) | .value) - (to_entries[] | select(.key | startswith("remove")) | .value) | .[]' | awk '!x[$0]++')
+        done < <(__get_setupmodules_retrokit)
 
         options+=("" "---")
         index=$((index+1))
@@ -343,7 +343,7 @@ function _gui_edit_retrokit() {
         while read profile; do
             options+=($index "$profile")
             index=$((index+1))
-        done < <(_run_retrokit "$home/retrokit/bin/setup.sh" list_profiles about 2>/dev/null)
+        done < <(__get_profiles_retrokit)
 
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
         if [[ -n "$choice" ]]; then
@@ -399,7 +399,7 @@ function _gui_edit_file_retrokit() {
                     if [[ "$active_profile" == "$profile" ]]; then
                         break
                     fi
-                done < <(_run_retrokit "$home/retrokit/bin/setup.sh" list_profiles about 2>/dev/null)
+                done < <(__get_profiles_retrokit)
             fi
 
             # Create staging file
@@ -415,6 +415,7 @@ function _gui_edit_file_retrokit() {
                 chown -R $user:$user "$save_file"
                 chmod 664 "$save_file"
 
+                __reset_settings_cache_retrokit
                 _show_msg_retrokit "Saved to $save_file"
             fi
         else
@@ -442,4 +443,26 @@ function __get_settings_retrokit() {
     fi
 
     echo "$__settings_retrokit"
+}
+
+function __get_setupmodules_retrokit() {
+    if [ -z "$__setupmodules_retrokit" ]; then
+        __setupmodules_retrokit=$(_run_retrokit "$home/retrokit/bin/setup.sh" list_setupmodules about 2>/dev/null)
+    fi
+
+    echo "$__setupmodules_retrokit"
+}
+
+function __get_profiles_retrokit() {
+    if [ -z "$__profiles_retrokit" ]; then
+        __profiles_retrokit=$(_run_retrokit "$home/retrokit/bin/setup.sh" list_profiles about 2>/dev/null)
+    fi
+
+    echo "$__profiles_retrokit"
+}
+
+function __reset_settings_cache_retrokit() {
+    __profiles_retrokit=
+    __settings_retrokit=
+    __setupmodules_retrokit=
 }
