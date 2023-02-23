@@ -42,7 +42,7 @@ build() {
   dir_rsync '{lib_dir}/sindenkit/shortcuts' "$roms_dir/ports/+Sinden/"
 
   # Don't scrape ports files
-  touch "$roms_dir/ports/+Sinden/.skyscraperignore"
+  touch "$roms_dir/ports/+Sinden/.skyscraperignoretree"
 
   # Add management script
   file_cp '{lib_dir}/sindenkit/sinden.sh' "$install_dir/sinden.sh" as_sudo=true backup=false envsubst=false

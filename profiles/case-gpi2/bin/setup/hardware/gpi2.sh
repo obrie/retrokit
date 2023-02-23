@@ -39,7 +39,7 @@ __build_port_shortcuts() {
   dir_rsync '{lib_dir}/gpikit/shortcuts' "$roms_dir/ports/+GPi/"
 
   # Don't scrape ports files
-  touch "$roms_dir/ports/+GPi/.skyscraperignore"
+  touch "$roms_dir/ports/+GPi/.skyscraperignoretree"
 }
 
 configure() {
