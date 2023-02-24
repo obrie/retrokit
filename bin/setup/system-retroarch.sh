@@ -98,14 +98,35 @@ __configure_core_options() {
 }
 
 restore() {
-  # Remove system retroarch core options files
+  __restore_core_options
+  __restore_emulator_remappings
+  __restore_emulator_configs
+  __restore_system_config
+}
+
+__restore_core_options() {
   local global_core_options_file=${retroarch_path_defaults['core_options_path']}
   local core_options_file=$(get_retroarch_path 'core_options_path')
   if [ "$global_core_options_file" != "$core_options_file" ]; then
     rm -fv "$core_options_file"
   fi
+}
 
-  # Restore emulator retroarch configs
+__restore_emulator_remappings() {
+  local retroarch_remapping_dir=$(get_retroarch_path 'input_remapping_directory')
+  local retroarch_remapping_dir=${retroarch_remapping_dir%/}
+
+  while read -r library_name; do
+    local library_dir="$retroarch_remapping_dir/$library_name"
+    if [ ! -d "$library_dir" ]; then
+      continue
+    fi
+
+    restore_file "$library_dir/$library_name.rmp" delete_src=true
+  done < <(get_core_library_names)
+}
+
+__restore_emulator_configs() {
   local retroarch_config_dir=$(get_retroarch_path 'rgui_config_directory')
   while read -r library_name; do
     local library_dir="$retroarch_config_dir/$library_name"
@@ -116,8 +137,9 @@ restore() {
     restore_file "$library_dir/$library_name.cfg" delete_src=true
     find "$library_dir" -mindepth 1 -maxdepth 1 -name "$library_name-*.cfg" -exec rm -fv '{}' +
   done < <(get_core_library_names)
+}
 
-  # Restore system retroarch config
+__restore_system_config() {
   restore_file "$retropie_system_config_dir/retroarch.cfg" delete_src=true
   find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec rm -fv '{}' +
 }
