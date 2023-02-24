@@ -118,7 +118,7 @@ restore() {
   done < <(get_core_library_names)
 
   # Restore system retroarch config
-  restore_file "$retropie_system_config_dir/retroarch.cfg"
+  restore_file "$retropie_system_config_dir/retroarch.cfg" delete_src=true
   find "$retropie_system_config_dir" -mindepth 1 -maxdepth 1 -name 'retroarch-*.cfg' -not -name 'retroarch-core-options*.cfg' -exec rm -fv '{}' +
 }
 

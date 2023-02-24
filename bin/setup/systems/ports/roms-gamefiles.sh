@@ -25,7 +25,7 @@ configure() {
 
 restore() {
   while IFS=$'\t' read -r port_name target_name source_file; do
-    restore_file "$roms_dir/ports/$port_name/$target_name"
+    restore_file "$roms_dir/ports/$port_name/$target_name" delete_src=true
   done < <(__list_gamefiles)
 }
 

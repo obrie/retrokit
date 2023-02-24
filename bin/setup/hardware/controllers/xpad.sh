@@ -14,7 +14,7 @@ configure() {
 }
 
 restore() {
-  restore_file "$xpad_conf_file" as_sudo=true
+  restore_file "$xpad_conf_file" as_sudo=true delete_src=true
 }
 
 setup "${@}"

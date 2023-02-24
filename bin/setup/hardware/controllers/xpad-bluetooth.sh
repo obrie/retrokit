@@ -18,7 +18,7 @@ configure() {
 }
 
 restore() {
-  restore_file "$xpadneo_conf_file" as_sudo=true
+  restore_file "$xpadneo_conf_file" as_sudo=true delete_src=true
 }
 
 remove() {

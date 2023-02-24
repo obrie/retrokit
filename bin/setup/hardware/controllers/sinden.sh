@@ -114,7 +114,7 @@ __restore_autostart() {
 __restore_players() {
   local player_id
   for player_id in $(seq 1 2); do
-    restore_file "$(__retropie_config_file_for_player $player_id)" as_sudo=true
+    restore_file "$(__retropie_config_file_for_player $player_id)" as_sudo=true delete_src=true
   done
 }
 
