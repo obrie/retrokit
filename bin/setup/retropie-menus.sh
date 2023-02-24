@@ -48,8 +48,11 @@ __hide_menus() {
 }
 
 restore() {
-  # Revert "hide" flag
+  # Revert "hidden" flag
   xmlstarlet ed --inplace -d '/gameList/game/hidden' "$gamelist_file"
+
+  # Remove backup since there's no value in it anymore
+  rm -fv "$gamelist_file.rk-src"*
 }
 
 remove() {
