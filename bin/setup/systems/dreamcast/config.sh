@@ -37,10 +37,14 @@ configure() {
 }
 
 restore() {
-  __restore_config delete_src=true
+  # Restore redream key
+  restore_file "$retropie_emulators_dir/redream/redream.key" delete_src=true
 
   # Remove game-specific overrides
   find "$redream_dir/cache" -name '*.cfg' -exec rm -fv '{}' +
+
+  # Restore original redream config (sans input changes)
+  __restore_config delete_src=true
 }
 
 __restore_config() {
