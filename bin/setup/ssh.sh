@@ -43,17 +43,20 @@ __configure_private_keys() {
 }
 
 __configure_known_hosts() {
-  file_cp '{config_dir}/ssh/known_hosts' "$HOME/.ssh/known_hosts-retrokit"
+  file_cp '{config_dir}/ssh/known_hosts' "$HOME/.ssh/known_hosts-retrokit" backup=false
 }
 
 restore() {
-  restore_file "$HOME/.ssh/known_hosts" delete_src=true
+  rm -fv "$HOME/.ssh/known_hosts-retrokit"
+
   restore_file "$HOME/.ssh/authorized_keys" delete_src=true
   restore_file "$HOME/.ssh/config" delete_src=true
 
-  while read key_file; do
-    restore_file "$key_file" delete_src=true
-  done < <(ls "$HOME/.ssh/id_rsa-"* | grep -Ev 'rk-src')
+  if [ -d "$HOME/.ssh" ]; then
+    while read key_file; do
+      restore_file "$key_file" delete_src=true
+    done < <(find "$HOME/.ssh" -name 'id_rsa-*' -not -name '*rk-src*')
+  fi
 
   sudo systemctl stop ssh
   sudo systemctl disable ssh
