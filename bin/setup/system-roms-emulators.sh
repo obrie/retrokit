@@ -55,6 +55,11 @@ __clean_emulator_config_key() {
 restore() {
   echo 'Removing emulator selections...'
   sed -i "/^${system}_/d" "$emulators_config_file"
+
+  if [ ! -s "$emulators_config_file" ] && [ -f "$emulators_config_file.rk-src.missing" ]; then
+    # Restore the file to its original, missing state since the file is now empty
+    restore_file "$emulators_config_file" delete_src=true
+  fi
 }
 
 setup "${@}"
