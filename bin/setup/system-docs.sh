@@ -10,6 +10,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-docs'
 setup_module_desc='System reference sheet builder'
 
+es_system_docs_dir="$HOME/.emulationstation/downloaded_media/$system/docs"
+
 build() {
   if ! any_path_exists '{system_docs_dir}/doc.json'; then
     echo 'No documentation configured'
@@ -17,7 +19,7 @@ build() {
   fi
 
   local staging_file=$(mktemp -p "$tmp_dir")
-  local output_file="$HOME/.emulationstation/downloaded_media/$system/docs/default.pdf"
+  local output_file="$es_system_docs_dir/default.pdf"
   if [ -f "$output_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
     echo "Documentation already built for $system"
     return
@@ -37,7 +39,7 @@ build() {
 }
 
 remove() {
-  rm -rfv "$HOME/.emulationstation/downloaded_media/$system/docs"
+  rm -rfv "$es_system_docs_dir"
 }
 
 setup "${@}"

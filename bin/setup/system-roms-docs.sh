@@ -6,6 +6,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-docs'
 setup_module_desc='ROM reference sheet builder'
 
+es_system_docs_dir="$HOME/.emulationstation/downloaded_media/$system/docs"
+
 build() {
   load_emulator_data
   if ! __source_system_extensions; then
@@ -35,7 +37,7 @@ build() {
     fi
 
     local staging_file=$(mktemp -p "$tmp_ephemeral_dir")
-    local output_file="$HOME/.emulationstation/downloaded_media/$system/docs/$name.pdf"
+    local output_file="$es_system_docs_dir/$name.pdf"
     if [ -f "$output_file" ] && [ "$FORCE_UPDATE" != 'true' ]; then
       echo "[$name] Already built documentation"
       continue
@@ -55,7 +57,9 @@ build() {
 }
 
 remove() {
-  find "$HOME/.emulationstation/downloaded_media/$system/docs" -name '*.pdf' -not -name 'default.pdf' -exec rm -fv '{}' +
+  if [ -d "$es_system_docs_dir" ]; then
+    find "$es_system_docs_dir" -name '*.pdf' -not -name 'default.pdf' -exec rm -fv '{}' +
+  fi
 }
 
 setup "${@}"
