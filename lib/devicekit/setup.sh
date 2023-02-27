@@ -7,7 +7,7 @@ depends() {
 }
 
 remove() {
-  sudo pip3 uninstall -y evdev pyudev
+  command -v pip3 >/dev/null && sudo pip3 uninstall -y evdev pyudev
 }
 
 "${@}"

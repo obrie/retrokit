@@ -17,7 +17,7 @@ depends() {
 remove() {
   sudo apt-get remove -y zip
   sudo apt-get autoremove --purge -y
-  sudo pip3 uninstall -y lxml pycurl
+  command -v pip3 >/dev/null && sudo pip3 uninstall -y lxml pycurl
   sudo rm -fv /usr/local/bin/trrntzip /usr/local/etc/trrntzip.version
 }
 
