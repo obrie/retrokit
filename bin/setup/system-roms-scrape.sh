@@ -341,4 +341,12 @@ __vacuum_media() {
   done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }
 
+remove() {
+  if [ ! -f "$retropie_dir/supplementary/skyscraper/Skyscraper" ]; then
+    return
+  fi
+
+  __scraper --cache purge:all
+}
+
 setup "${@}"
