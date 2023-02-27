@@ -13,7 +13,7 @@ depends() {
 }
 
 remove() {
-  sudo pip3 uninstall -y jinja2-cli
+  command -v pip3 >/dev/null && sudo pip3 uninstall -y jinja2-cli
 }
 
 setup "${@}"

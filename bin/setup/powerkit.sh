@@ -42,7 +42,7 @@ remove() {
     "$retropie_configs_dir/all/powerkit.cfg" \
     /etc/systemd/system/powerkit.service
 
-  sudo pip3 uninstall -y gpiozero
+  command -v pip3 >/dev/null && sudo pip3 uninstall -y gpiozero
 }
 
 setup "${@}"
