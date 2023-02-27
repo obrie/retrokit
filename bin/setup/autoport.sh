@@ -27,7 +27,7 @@ restore() {
 }
 
 remove() {
-  rm -rfv "$install_dir"
+  sudo rm -rfv "$install_dir"
 }
 
 setup "${@}"
