@@ -34,7 +34,7 @@ depends() {
 
 remove() {
   sudo rm -fv /usr/local/bin/dotenv /usr/local/etc/dotenv.version
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y crudini pillow
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y crudini pillow
   sudo apt-get remove -y ffmpeg jq python3-pip
   sudo apt-get autoremove --purge -y
 }

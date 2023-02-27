@@ -23,7 +23,7 @@ restore() {
 }
 
 remove() {
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y internetarchive
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y internetarchive
 }
 
 setup "${@}"

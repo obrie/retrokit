@@ -91,9 +91,7 @@ remove() {
   sudo rm -rfv "$install_dir"
 
   # Only remove python modules uniquely used by manualkit
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y \
-    psutil \
-    PyMuPDF
+  [ -z $(command -v pip3) ] || sudo pip3 uninstall -y psutil PyMuPDF
 }
 
 setup "${@}"

@@ -113,7 +113,7 @@ __depends_ghostscript() {
 }
 
 remove() {
-  command -v pip3 >/dev/null && sudo pip3 uninstall -y ocrmypdf
+  [ -z $(command -v pip3) ] ||  sudo pip3 uninstall -y ocrmypdf
 
   sudo apt-get remove -y \
     bc \
