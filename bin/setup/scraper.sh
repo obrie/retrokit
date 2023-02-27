@@ -28,7 +28,10 @@ restore() {
 
 remove() {
   rm -fv "$skyscraper_dir/video_convert.sh"
-  uninstall_retropie_package skyscraper || true
+
+  if [ -f "$retropie_dir/supplementary/skyscraper" ]; then
+    uninstall_retropie_package skyscraper || true
+  fi
 }
 
 setup "${@}"
