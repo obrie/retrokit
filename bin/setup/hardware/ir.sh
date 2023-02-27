@@ -7,7 +7,7 @@ setup_module_id='hardware/ir'
 setup_module_desc='IR autoconfig based on keyboard setup'
 
 source_keymap_file=$(setting '.hardware.ir.keymap')
-source_keymap_name=$(basename "$source_keymap_path")
+source_keymap_name=$(basename "$source_keymap_file")
 target_keymap_file="/etc/rc_keymaps/$source_keymap_name"
 keymap_config_file="$retropie_configs_dir/all/rc_keymap.cfg"
 
@@ -23,8 +23,11 @@ configure() {
   crudini --set "$keymap_config_file" '' 'target_keymap_path' "$target_keymap_file"
 }
 
-remove() {
+restore() {
   sudo rm -fv "$target_keymap_file" "$keymap_config_file"
+}
+
+remove() {
   sudo apt-get remove -y ir-keytable
   sudo apt-get autoremove --purge -y
 }
