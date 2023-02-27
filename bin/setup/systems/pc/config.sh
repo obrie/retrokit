@@ -30,6 +30,7 @@ restore() {
 
 remove() {
   sudo apt-get remove -y fluid-soundfont-gm
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

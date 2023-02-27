@@ -67,6 +67,7 @@ remove() {
   fi
 
   sudo apt-get remove -y libncurses5-dev libusb-dev tcpser cc65
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

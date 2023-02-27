@@ -26,6 +26,7 @@ configure() {
 remove() {
   sudo rm -fv "$target_keymap_file" "$keymap_config_file"
   sudo apt-get remove -y ir-keytable
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

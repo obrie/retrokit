@@ -35,6 +35,7 @@ build() {
 remove() {
   sudo rm -fv /usr/local/bin/maxcso /usr/local/share/man/man1/maxcso.1 /usr/local/etc/maxcso.version
   sudo apt-get remove -y liblz4-dev libdeflate-dev libuv1-dev
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

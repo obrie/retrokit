@@ -15,6 +15,7 @@ configure() {
 restore() {
   restore_file '/etc/default/cpufrequtils' as_sudo=true delete_src=true
   sudo apt-get remove -y cpufrequtils
+  sudo apt-get autoremove --purge -y
   sudo systemctl enable raspi-config
 }
 

@@ -70,6 +70,7 @@ remove() {
   sudo dkms remove nintendo/$module_version --all
 
   sudo apt-get remove -y libevdev-dev
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

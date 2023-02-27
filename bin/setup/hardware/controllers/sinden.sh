@@ -134,6 +134,7 @@ remove() {
 
   # We only remove mono as other dependencies are used by other parts of the system
   sudo apt-get remove -y mono-complete
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

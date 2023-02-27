@@ -139,6 +139,7 @@ remove() {
     tesseract-ocr-rus \
     tesseract-ocr-spa \
     tesseract-ocr-swe
+  sudo apt-get autoremove --purge -y
 
   sudo rm -rfv /usr/local/share/ghostscript
 }

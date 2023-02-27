@@ -37,6 +37,7 @@ depends() {
 remove() {
   sudo rm -fv /usr/bin/raspi2png /etc/raspi2png.version
   sudo apt-get remove -y mesa-utils screen
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"

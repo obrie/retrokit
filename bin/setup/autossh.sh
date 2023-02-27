@@ -38,6 +38,7 @@ remove() {
     /var/run/autossh
 
   sudo apt-get remove -y autossh
+  sudo apt-get autoremove --purge -y
 }
 
 setup "${@}"
