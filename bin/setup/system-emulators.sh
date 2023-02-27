@@ -128,9 +128,17 @@ remove() {
     rm -fv "$bios_dir/$bios_name"
   done < <(system_setting 'select(.bios) | .bios.files | keys[]')
 
+  declare -A default_packages
+  while read -r package; do
+    default_packages[$package]=1
+  done < <(list_default_retropie_packages)
+
   # Uninstall emulators (this will automatically change the default if applicable)
   while read -r package; do
-    uninstall_retropie_package "$package" || true
+    # Only uninstall non-default packages
+    if [ -z "${default_packages[$package]}" ]; then
+      uninstall_retropie_package "$package" || true
+    fi
   done < <(system_setting 'select(.emulators) | .emulators | keys[]')
 }
 

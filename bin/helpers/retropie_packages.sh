@@ -47,3 +47,9 @@ uninstall_retropie_package() {
   local name=$1
   sudo "$retropie_setup_dir/retropie_packages.sh" "$name" remove
 }
+
+list_default_retropie_packages() {
+  while read scriptmodule_file; do
+    grep 'rp_module_id=' "$scriptmodule_file" | cut -d'"' -f 2
+  done < <(grep -lR 'rp_module_section="main"' "$retropie_setup_dir/scriptmodules")
+}
