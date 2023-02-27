@@ -294,8 +294,12 @@ vacuum() {
 }
 
 remove() {
+  if [ ! -d "$system_overlay_dir" ]; then
+    return
+  fi
+
   # Remove all but system overlay images
-  find "$system_overlay_dir" -mindepth 1 -type f -not -name "$system.*" -not -name "$system-lightgun.*"  -not -name "$system-vertical.*" -exec rm -rfv '{}' +
+  find "$system_overlay_dir" -mindepth 1 -type f -not -name "$system.*" -not -name "$system-lightgun.*" -not -name "$system-vertical.*" -exec rm -rfv '{}' +
 }
 
 setup "${@}"
