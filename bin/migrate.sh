@@ -102,7 +102,7 @@ __migrate_es_downloaded_media() {
   local group_name=$4
   local manual_filename=$5
 
-  local media_dir="$HOME/.emulationstation/downloaded_media/$system"
+  local media_dir="$home/.emulationstation/downloaded_media/$system"
   __migrate_files_in_dir "$media_dir" "$old_name" "$new_name"
 
   # Migrate source manuals (use a different name than the rom)
@@ -129,7 +129,7 @@ __migrate_es_collections() {
   local old_name=$2
   local new_name=$3
 
-  if [ ! -d "$HOME/.emulationstation/collections/" ]; then
+  if [ ! -d "$home/.emulationstation/collections/" ]; then
     return
   fi
 
@@ -140,7 +140,7 @@ __migrate_es_collections() {
       rom_dir=${rom_dir//"$roms_dir/"/}
       __migrate_string_in_file "$collection_file" "$rom_dir/$old_name." "$rom_dir/$new_name."
     done < <(echo "$rom_dirs")
-  done < <(find "$HOME/.emulationstation/collections/" -name 'custom-*.cfg')
+  done < <(find "$home/.emulationstation/collections/" -name 'custom-*.cfg')
 }
 
 # Migrates EmulationStation gamelists
@@ -161,7 +161,7 @@ __migrate_es_gamelist() {
   escaped_new_name=${escaped_new_name//"'"/&apos;}
   escaped_new_name=${escaped_new_name//'"'/&quot;}
 
-  __migrate_string_in_file "$HOME/.emulationstation/gamelists/$system/gamelist.xml" "/$escaped_old_name." "/$escaped_new_name."
+  __migrate_string_in_file "$home/.emulationstation/gamelists/$system/gamelist.xml" "/$escaped_old_name." "/$escaped_new_name."
 }
 
 # Migrates the Skyscraper quickid database

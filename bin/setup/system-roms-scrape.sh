@@ -7,7 +7,7 @@ setup_module_id='system-roms-scrape'
 setup_module_desc='Scrapes media / images / text via skyscraper, rebuilds the gamelist, and adjusts for multi-disc games'
 
 aggregate_report_file="$retropie_configs_dir/all/skyscraper/reports/report-$system-all.txt"
-gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
+gamelist_file="$home/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
   __load_rom_data
@@ -77,7 +77,7 @@ __scrape_source() {
     local custom_query=$(system_setting ".scraper .$source .\"$rom_name\"" || true)
     if [ -n "$custom_query" ]; then
       __scraper -s "$source" --query "$custom_query" "$rom_path"
-      if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
+      if ! grep -E "'.+', No returned matches" "$home/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
     fi
@@ -94,7 +94,7 @@ __scrape_source() {
 
       # Scrape with the CRC
       __scraper -s "$source" --query "romnom=$query_name&crc=$crc" "$rom_path"
-      if ! grep -E "'.+', No returned matches" "$HOME/.skyscraper/skipped-$system-$source.txt"; then
+      if ! grep -E "'.+', No returned matches" "$home/.skyscraper/skipped-$system-$source.txt"; then
         continue
       fi
     else
@@ -179,7 +179,7 @@ __import_titles() {
     return
   fi
 
-  local import_dir="$HOME/.skyscraper/import/$system"
+  local import_dir="$home/.skyscraper/import/$system"
   mkdir -p "$import_dir/textual"
 
   # Define the structure of the import
@@ -338,7 +338,7 @@ __vacuum_media() {
     if [ -z "${installed_names["$rom_name"]}" ]; then
       echo "rm -fv $(printf '%q' "$media_file")"
     fi
-  done < <(find "$HOME/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
+  done < <(find "$home/.emulationstation/downloaded_media/$system" -type f -name '*.png' -o -name '*.mp4')
 }
 
 remove() {

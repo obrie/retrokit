@@ -4,6 +4,8 @@ set -e
 [ "$DEBUG" == 'true' ] && set -x
 
 setup_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+export user=${SUDO_USER:-$(id -un)}
+export home=$(eval echo ~$user)
 export app_dir=$(cd "$setup_dir/.." && pwd)
 export bin_dir="$app_dir/bin"
 export ext_dir="$app_dir/ext"
@@ -14,11 +16,11 @@ export retropie_dir="/opt/retropie"
 export retropie_configs_dir="$retropie_dir/configs"
 export retropie_emulators_dir="$retropie_dir/emulators"
 
-export retropie_data_dir="$HOME/RetroPie"
+export retropie_data_dir="$home/RetroPie"
 export bios_dir="$retropie_data_dir/BIOS"
 export roms_dir="$retropie_data_dir/roms"
 
-export retropie_setup_dir="$HOME/RetroPie-Setup"
+export retropie_setup_dir="$home/RetroPie-Setup"
 
 # Import helper functions
 source "$bin_dir/helpers/configs.sh"

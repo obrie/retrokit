@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='retropie-menus'
 setup_module_desc='RetroPie menu visibility configuration'
 
-gamelist_file="$HOME/.emulationstation/gamelists/retropie/gamelist.xml"
+gamelist_file="$home/.emulationstation/gamelists/retropie/gamelist.xml"
 
 build() {
   install_retropie_package 'supplementary' 'retrokit' 'source'

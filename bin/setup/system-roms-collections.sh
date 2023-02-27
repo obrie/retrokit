@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-collections'
 setup_module_desc='Creates EmulationStation custom collections'
 
-es_collections_dir="$HOME/.emulationstation/collections"
+es_collections_dir="$home/.emulationstation/collections"
 readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
 
 configure() {

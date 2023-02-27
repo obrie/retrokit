@@ -820,7 +820,7 @@ remove() {
   local keep_downloads=$(setting '.manuals.keep_downloads')
   local base_dir=$(render_template "$base_dir_template" system="$system")
   if [ ! -d "$base_dir" ]; then
-    # No manuals configured
+    # No manuals    configured
     return
   fi
 

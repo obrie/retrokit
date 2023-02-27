@@ -12,7 +12,7 @@ configure() {
 }
 
 __configure_es_settings() {
-  local es_settings_file="$HOME/.emulationstation/es_settings.cfg"
+  local es_settings_file="$home/.emulationstation/es_settings.cfg"
   backup_and_restore "$es_settings_file"
 
   # Add initial configuration file
@@ -56,7 +56,7 @@ __configure_es_settings() {
 }
 
 restore() {
-  restore_file "$HOME/.emulationstation/es_settings.cfg" delete_src=true
+  restore_file "$home/.emulationstation/es_settings.cfg" delete_src=true
 }
 
 setup "${@}"

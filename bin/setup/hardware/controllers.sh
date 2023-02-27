@@ -70,7 +70,7 @@ __configure_controllers() {
 
     if [ -f "$config_file" ]; then
       # Explicit ES configuration is provided
-      cp "$config_file" "$HOME/.emulationstation/es_temporaryinput.cfg"
+      cp "$config_file" "$home/.emulationstation/es_temporaryinput.cfg"
     elif [ -n "$id" ] && grep -qE "^$id," "$sdldb_combined_file"; then
       # Auto-generate ES input configuration from id
       __configure_controller_input "$name" "$(grep -E "^$id," "$sdldb_combined_file" | tail -n 1)" "$swap_buttons"
@@ -99,7 +99,7 @@ __configure_controller_input() {
   local hotkey=$(setting '.hardware.controllers.hotkey')
 
   # File header
-  local file="$HOME/.emulationstation/es_temporaryinput.cfg"
+  local file="$home/.emulationstation/es_temporaryinput.cfg"
   cat > "$file" << _EOF_
 <?xml version="1.0"?>
 <inputList>

@@ -10,7 +10,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-docs'
 setup_module_desc='System reference sheet builder'
 
-es_system_docs_dir="$HOME/.emulationstation/downloaded_media/$system/docs"
+es_system_docs_dir="$home/.emulationstation/downloaded_media/$system/docs"
 
 build() {
   if ! any_path_exists '{system_docs_dir}/doc.json'; then

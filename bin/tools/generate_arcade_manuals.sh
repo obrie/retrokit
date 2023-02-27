@@ -4,8 +4,8 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 . "$dir/../common.sh"
 
 # Path to MAME media (like flyers and artwork from https://www.progettosnaps.net/)
-mame_media_dir="$HOME/.emulationstation/downloaded_media/arcade/mame"
-manuals_dir="$HOME/.emulationstation/downloaded_media/arcade/manuals/.download"
+mame_media_dir="$home/.emulationstation/downloaded_media/arcade/mame"
+manuals_dir="$home/.emulationstation/downloaded_media/arcade/manuals/.download"
 
 gameinit_dat_list_url='https://www.progettosnaps.net/gameinit/'
 gameinit_dat_url='https://www.progettosnaps.net/download/?tipo=gameinit&file={filename}'

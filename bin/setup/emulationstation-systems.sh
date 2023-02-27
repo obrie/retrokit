@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='emulationstation-systems'
 setup_module_desc='EmulationStation system sort order and platform/theme overrides'
 
-systems_override_config="$HOME/.emulationstation/es_systems.cfg"
+systems_override_config="$home/.emulationstation/es_systems.cfg"
 
 configure() {
   stop_emulationstation

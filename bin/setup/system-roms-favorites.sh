@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-favorites'
 setup_module_desc='Manages favorites in the system gamelist'
 
-gamelist_file="$HOME/.emulationstation/gamelists/$system/gamelist.xml"
+gamelist_file="$home/.emulationstation/gamelists/$system/gamelist.xml"
 
 configure() {
   if ! __should_set_favorites; then

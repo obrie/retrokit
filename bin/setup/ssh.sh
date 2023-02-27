@@ -26,36 +26,36 @@ __configure_authentication() {
 }
 
 __configure_authorized_keys() {
-  file_cp '{config_dir}/ssh/authorized_keys' "$HOME/.ssh/authorized_keys"
+  file_cp '{config_dir}/ssh/authorized_keys' "$home/.ssh/authorized_keys"
 }
 
 __configure_private_keys() {
   while read source_key_file; do
     local keyname=$(basename "$source_key_file")
-    local target_key_file="$HOME/.ssh/$keyname"
+    local target_key_file="$home/.ssh/$keyname"
 
     file_cp "$source_key_file" "$target_key_file"
     chmod 600 "$target_key_file"
   done < <(each_path '{config_dir}/ssh' find '{}' -name 'id_rsa*')
 
-  file_cp '{config_dir}/ssh/config' "$HOME/.ssh/config"
-  chmod 600 "$HOME/.ssh/config"
+  file_cp '{config_dir}/ssh/config' "$home/.ssh/config"
+  chmod 600 "$home/.ssh/config"
 }
 
 __configure_known_hosts() {
-  file_cp '{config_dir}/ssh/known_hosts' "$HOME/.ssh/known_hosts-retrokit" backup=false
+  file_cp '{config_dir}/ssh/known_hosts' "$home/.ssh/known_hosts-retrokit" backup=false
 }
 
 restore() {
-  rm -fv "$HOME/.ssh/known_hosts-retrokit"
+  rm -fv "$home/.ssh/known_hosts-retrokit"
 
-  restore_file "$HOME/.ssh/authorized_keys" delete_src=true
-  restore_file "$HOME/.ssh/config" delete_src=true
+  restore_file "$home/.ssh/authorized_keys" delete_src=true
+  restore_file "$home/.ssh/config" delete_src=true
 
-  if [ -d "$HOME/.ssh" ]; then
+  if [ -d "$home/.ssh" ]; then
     while read key_file; do
       restore_file "$key_file" delete_src=true
-    done < <(find "$HOME/.ssh" -name 'id_rsa-*' -not -name '*rk-src*')
+    done < <(find "$home/.ssh" -name 'id_rsa-*' -not -name '*rk-src*')
   fi
 
   sudo systemctl stop ssh

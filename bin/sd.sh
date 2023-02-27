@@ -175,7 +175,7 @@ create() {
   sudo tune2fs -m 2 "$retropie_device"
 
   # Mount the device
-  local mount_dir="$HOME/retrokit-sdcard"
+  local mount_dir="$home/retrokit-sdcard"
   mkdir -p "$mount_dir"
   sudo mount -v "$retropie_device" "$mount_dir"
 

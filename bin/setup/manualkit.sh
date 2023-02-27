@@ -52,12 +52,12 @@ __configure_emulationstation() {
 
   while read hook_file; do
     local hook=$(basename "$hook_file" .sh)
-    local target_dir="$HOME/.emulationstation/scripts/$hook"
+    local target_dir="$home/.emulationstation/scripts/$hook"
     mkdir -pv "$target_dir"
     ln -fsv "$hook_file" "$target_dir/manualkit.sh"
   done < <(ls "$install_dir/emulationstation-scripts/"*.sh)
 
-  xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$HOME/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$HOME/.emulationstation/es_input.cfg"
+  xmlstarlet ed --inplace -s "/inputList/inputAction" -t elem -n 'command' -v "$home/.emulationstation/scripts/controls-onfinish/manualkit.sh" "$home/.emulationstation/es_input.cfg"
 }
 
 # Install emulationstation hooks
@@ -75,8 +75,8 @@ restore() {
 }
 
 __restore_emulationstation() {
-  rm -fv "$HOME/.emulationstation/scripts"/*/manualkit.sh
-  xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$HOME/.emulationstation/es_input.cfg"
+  rm -fv "$home/.emulationstation/scripts"/*/manualkit.sh
+  xmlstarlet ed --inplace -d "/inputList/inputAction/command[contains(., \"manualkit\")]" "$home/.emulationstation/es_input.cfg"
 }
 
 __restore_autostart() {

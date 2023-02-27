@@ -6,7 +6,7 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system-roms-docs'
 setup_module_desc='ROM reference sheet builder'
 
-es_system_docs_dir="$HOME/.emulationstation/downloaded_media/$system/docs"
+es_system_docs_dir="$home/.emulationstation/downloaded_media/$system/docs"
 
 build() {
   load_emulator_data

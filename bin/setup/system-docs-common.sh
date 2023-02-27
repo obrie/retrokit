@@ -221,7 +221,7 @@ __add_hrefs() {
 
 # Add theme overrides for adjusting logos
 __add_system_theme() {
-  local theme=$(xmlstarlet sel -t -v "/systemList/system[name='$system']/theme" "$HOME/.emulationstation/es_systems.cfg")
+  local theme=$(xmlstarlet sel -t -v "/systemList/system[name='$system']/theme" "$home/.emulationstation/es_systems.cfg")
   local suffix
   if [ -n "$theme" ] && any_path_exists "{system_docs_dir}/logo-$theme.png"; then
     suffix="-$theme"
