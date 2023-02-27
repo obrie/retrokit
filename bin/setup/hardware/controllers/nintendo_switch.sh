@@ -18,7 +18,7 @@ build() {
 }
 
 build_kernel_module() {
-  if [ -d /var/lib/dkms/nintendo/$module_version ]; then
+  if dkms status nintendo/$module_version | grep -q installed; then
     echo 'hid-nintendo is already installed'
     return
   fi
@@ -66,8 +66,13 @@ remove() {
     /etc/modules-load.d/joycond.conf \
 
   # Remove the nintendo kernel module
-  sudo dkms uninstall nintendo -v $module_version
-  sudo dkms remove nintendo/$module_version --all
+  if dkms status nintendo/$module_version | grep -q installed; then
+    sudo dkms remove nintendo/$module_version --all
+  fi
+
+  if lsmod | grep -q nintendo; then
+    rmmod nintendo
+  fi
 
   sudo apt-get remove -y libevdev-dev
   sudo apt-get autoremove --purge -y
