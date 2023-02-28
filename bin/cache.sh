@@ -51,6 +51,9 @@ delete() {
 default_binary_packages=(lr-mame0222 lr-mame0244 lr-mame2016-lightgun lr-swanstation lr-yabasanshiro actionmax)
 
 # Build binaries for emulators that are added by retrokit
+# 
+# This must be run on a Raspberry Pi 4 device.  Compilation fails
+# pretty hard for a number of the above packages when run on Ubuntu.
 build_emulator_binaries() {
   local package=$1
   local dist=buster
@@ -75,10 +78,19 @@ build_emulator_binaries() {
     mkdir -p "$retropie_setup_dir/tmp/archives"
   fi
 
+  config_vars=(__nameserver=8.8.8.8 __builder_dists=$dist __builder_platforms=$platform)
+
   # Create initial image
-  local chroot_retropie_setup_dir="$retropie_setup_dir/tmp/build/builder/buster/home/pi/RetroPie-Setup"
+  local chroot_dir="$retropie_setup_dir/tmp/build/builder/$dist"
+  local chroot_retropie_setup_dir="$chroot_dir/home/pi/RetroPie-Setup"
   if [ ! -d "$chroot_retropie_setup_dir" ]; then
-    sudo __gpg_signing_key= __builder_dists=$dist __builder_platforms=$platform "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
+    # Generate a signing key
+    export GNUPGHOME="$tmp_ephemeral_dir"
+    local gpg_signing_key=retropieproject@gmail.com
+    gpg --quick-gen-key --batch --passphrase "" "$gpg_signing_key" 2>/dev/null
+
+    # Build the image
+    sudo "${config_vars[@]}" GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
   fi
 
   # Copy modules over to the mounted RetroPie-Setup
@@ -87,7 +99,7 @@ build_emulator_binaries() {
   cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
 
   # Build packages
-  sudo __gpg_signing_key= __builder_dists=$dist __builder_platforms=$platform "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
+  sudo "${config_vars[@]}" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
 }
 
 # Upload emulator binaries to github
