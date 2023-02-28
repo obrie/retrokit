@@ -84,7 +84,7 @@ build_emulator_binaries() {
   # Copy modules over to the mounted RetroPie-Setup
   local chroot_scriptmodules_dir="$chroot_retropie_setup_dir/ext/retrokit/scriptmodules"
   mkdir -p "$chroot_scriptmodules_dir"
-  # cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
+  cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
 
   # Build packages
   sudo __gpg_signing_key= __builder_dists=$dist __builder_platforms=$platform "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
