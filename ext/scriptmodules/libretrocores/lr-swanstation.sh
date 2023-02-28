@@ -17,24 +17,21 @@ function sources_lr-swanstation() {
 }
 
 function build_lr-swanstation() {
-    rm -rf retropie
-    mkdir -p retropie
-    cd retropie
-    cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_LIBRETRO_CORE=ON
-    make clean
-    make
-    md_ret_require="$md_build/retropie/swanstation_libretro.so"
+    mkdir build
+    cmake -DCMAKE_BUILD_TYPE=Release -Bbuild
+    cmake --build build --target swanstation_libretro --config Release
+    md_ret_require="$md_build/build/swanstation_libretro.so"
 }
 
 function install_lr-swanstation() {
     md_ret_files=(
-        'retropie/swanstation_libretro.so'
+        'build/swanstation_libretro.so'
     )
 }
 
 function configure_lr-swanstation() {
     mkRomDir "psx"
-    ensureSystemretroconfig "psx"
+    defaultRAConfig "psx"
 
     if isPlatform "gles" && ! isPlatform "gles3"; then
         # Hardware renderer not supported on GLES2 devices
