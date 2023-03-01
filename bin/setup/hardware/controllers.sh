@@ -262,7 +262,7 @@ __restore_autoconf() {
 }
 
 remove() {
-  rm -fv "$sdldb_file"
+  rm -fv "$sdldb_file" "$tmp_dir/gamecontrollerdb.version"
 }
 
 setup "${@}"
