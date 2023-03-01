@@ -9,11 +9,9 @@ tmp_ephemeral_dir=$(mktemp -d)
 trap 'rm -rf -- "$tmp_ephemeral_dir"' EXIT
 
 _get_mupdf_version() {
-  cat /usr/local/etc/mupdf.version 2>/dev/null || true
-}
-
-_set_mupdf_version() {
-  echo "$target_mupdf_version" | sudo tee /usr/local/etc/mupdf.version
+  if [ -f /usr/local/include/mupdf/fitz/version.h ]; then
+    grep 'FZ_VERSION "' /usr/local/include/mupdf/fitz/version.h | cut -d'"' -f 2 || true
+  fi
 }
 
 depends_mupdf() {
@@ -41,9 +39,6 @@ depends_mupdf() {
     export MAKEFLAGS='-j4'
     make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local
     sudo make HAVE_X11=no HAVE_GLFW=no HAVE_GLUT=no prefix=/usr/local install
-
-    # Track mupdf version
-    _set_mupdf_version
 
     popd
   fi

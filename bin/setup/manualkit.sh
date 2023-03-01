@@ -88,7 +88,7 @@ __restore_runcommand() {
 }
 
 remove() {
-  sudo rm -rfv "$install_dir" /usr/local/etc/mupdf.version
+  sudo rm -rfv "$install_dir"
 
   # Only remove python modules uniquely used by manualkit
   [ -z $(command -v pip3) ] || sudo pip3 uninstall -y psutil PyMuPDF
