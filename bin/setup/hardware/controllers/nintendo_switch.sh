@@ -69,6 +69,7 @@ remove() {
   if dkms status nintendo/$module_version | grep -q installed; then
     sudo dkms remove nintendo/$module_version --all
   fi
+  sudo rm -rfv "/usr/src/nintendo-$module_version"
 
   if lsmod | grep -q nintendo; then
     rmmod nintendo
