@@ -78,7 +78,9 @@ build_emulator_binaries() {
     mkdir -p "$retropie_setup_dir/tmp/archives"
   fi
 
-  config_vars=(__nameserver=8.8.8.8 __builder_dists=$dist __builder_platforms=$platform)
+  export __nameserver=8.8.8.8
+  export __builder_dists=$dist
+  export __builder_platforms=$platform
 
   # Create initial image
   local chroot_dir="$retropie_setup_dir/tmp/build/builder/$dist"
@@ -90,7 +92,7 @@ build_emulator_binaries() {
     gpg --quick-gen-key --batch --passphrase "" "$gpg_signing_key" 2>/dev/null
 
     # Build the image
-    "${config_vars[@]}" GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
+    GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
   fi
 
   # Copy modules over to the mounted RetroPie-Setup
@@ -99,7 +101,7 @@ build_emulator_binaries() {
   cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
 
   # Build packages
-  "${config_vars[@]}" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
+  "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
 }
 
 # Upload emulator binaries to github
