@@ -25,6 +25,7 @@ configure() {
 
 restore() {
   restore_file '/usr/bin/argononed.py' as_sudo=true delete_src=true
+  sudo rm -fv /etc/argononed.conf /usr/bin/argonone-*
 }
 
 remove() {
