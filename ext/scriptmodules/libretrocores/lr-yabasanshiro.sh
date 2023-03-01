@@ -21,6 +21,13 @@ function __binary_url_lr-yabasanshiro() {
     echo "https://github.com/obrie/retrokit/releases/download/latest/lr-yabasanshiro-rpi4-buster.tar.gz"
 }
 
+function depends_lr-yabasanshiro() {
+    local depends=()
+    isPlatform "videocore" && depends+=(libraspberrypi-dev)
+    isPlatform "mesa" && depends+=(libgles2-mesa-dev)
+    getDepends "${depends[@]}"
+}
+
 function install_bin_lr-yabasanshiro() {
     downloadAndExtract "$(__binary_url_lr-yabasanshiro)" "$md_inst" --strip-components 1
 }
