@@ -81,6 +81,7 @@ build_emulator_binaries() {
   export __nameserver=8.8.8.8
   export __builder_dists=$dist
   export __builder_platforms=$platform
+  export __builder_makeflags='-j2'
 
   # Create initial image
   local chroot_dir="$retropie_setup_dir/tmp/build/builder/$dist"
