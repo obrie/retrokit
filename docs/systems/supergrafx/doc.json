@@ -7,11 +7,16 @@
     "saves": true,
     "states": true,
     "netplay": true,
-    "cheats": true,
+    "cheats": false,
     "multi controllers": true
   },
   "images": {
     "controller": "../pcengine/controller.png",
     "retropad": "../pcengine/retropad.png"
+  },
+  "controls": {
+    "retropad": {
+      "l2": "Mode Switch"
+    }
   }
 }

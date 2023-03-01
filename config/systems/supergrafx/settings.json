@@ -26,11 +26,11 @@
     ]
   },
   "emulators": {
-    "lr-beetle-supergrafx": {
+    "lr-beetle-pce": {
       "default": true,
-      "core_name": "sgx",
-      "library_name": "Beetle SuperGrafx",
-      "cmd": "mednafen_supergrafx_libretro.so"
+      "core_name": "pce",
+      "library_name": "Beetle PCE",
+      "cmd": "mednafen_pce_libretro.so"
     }
   },
   "cheats": {

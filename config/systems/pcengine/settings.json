@@ -17,10 +17,10 @@
     ]
   },
   "emulators": {
-    "lr-beetle-pce-fast": {
+    "lr-beetle-pce": {
       "default": true,
       "core_name": "pce",
-      "library_name": "Beetle PCE Fast"
+      "library_name": "Beetle PCE"
     }
   },
   "cheats": {
