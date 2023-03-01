@@ -90,7 +90,7 @@ build_emulator_binaries() {
     gpg --quick-gen-key --batch --passphrase "" "$gpg_signing_key" 2>/dev/null
 
     # Build the image
-    sudo "${config_vars[@]}" GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
+    "${config_vars[@]}" GNUPGHOME="$tmp_ephemeral_dir" __gpg_signing_key="$gpg_signing_key" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module
   fi
 
   # Copy modules over to the mounted RetroPie-Setup
@@ -99,7 +99,7 @@ build_emulator_binaries() {
   cp -Rv "$ext_dir/scriptmodules/"* "$chroot_scriptmodules_dir/"
 
   # Build packages
-  sudo "${config_vars[@]}" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
+  "${config_vars[@]}" "$retropie_setup_dir/retropie_packages.sh" builder chroot_build module "${packages[@]}"
 }
 
 # Upload emulator binaries to github
