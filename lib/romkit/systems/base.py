@@ -179,6 +179,8 @@ class BaseSystem:
                 resource = resource_model.resource
                 if resource:
                     installable_paths.add(resource.target_path.path)
+                    if resource.is_locally_sourced:
+                        installable_paths.add(resource.source_url_path)
                     if resource.xref_path:
                         installable_paths.add(resource.xref_path.path)
 
