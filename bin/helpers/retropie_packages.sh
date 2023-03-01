@@ -45,7 +45,7 @@ configure_retropie_package() {
 
 uninstall_retropie_package() {
   local name=$1
-  sudo "$retropie_setup_dir/retropie_packages.sh" "$name" remove
+  sudo "$retropie_setup_dir/retropie_packages.sh" "$name" remove || true
 }
 
 list_default_retropie_packages() {
