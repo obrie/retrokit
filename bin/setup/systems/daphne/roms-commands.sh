@@ -82,7 +82,7 @@ configure() {
 
 restore() {
   for rom_dir in "${rom_dirs[@]}"; do
-    find "$rom_dir" -maxdepth 1 -mindepth 1 -name '*.commands' -exec rm -f '{}' +
+    find -L "$rom_dir" -maxdepth 2 -mindepth 2 -name '*.commands' -exec rm -fv '{}' +
   done
 }
 
