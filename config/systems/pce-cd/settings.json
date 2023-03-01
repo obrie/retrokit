@@ -63,10 +63,7 @@
           "xref": "$HOME/RetroPie/roms/pce-cd/.redump/.xrefs/{machine_id}.chd",
           "install": {"action": "zip_to_chd"}
         }
-      },
-      "emulators": [
-        "lr-beetle-pce-fast"
-      ]
+      }
     }
   },
   "roms": {
