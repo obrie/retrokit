@@ -25,13 +25,14 @@ configure() {
 
 restore() {
   restore_file '/usr/bin/argononed.py' as_sudo=true delete_src=true
-  sudo rm -fv /etc/argononed.conf /usr/bin/argonone-*
 }
 
 remove() {
   if [ `command -v argonone-uninstall` ]; then
     echo 'Y' | argonone-uninstall
   fi
+
+  sudo rm -fv /etc/argononed.conf /usr/bin/argonone-*
 }
 
 setup "${@}"
