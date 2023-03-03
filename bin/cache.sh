@@ -119,6 +119,8 @@ sync_emulator_binaries() {
     packages=("$package")
   fi
 
+  local upload_url=$(curl -sH "Authorization: token $GITHUB_API_KEY" "https://api.github.com/repos/obrie/retrokit/releases/tags/latest" | jq -r '.upload_url' | cut -d'{' -f1)
+
   for package in "${packages[@]}"; do
     # Stage the archive file
     local archive_dir="$retropie_setup_dir/tmp/archives/$dist/$platform/kms"
@@ -132,9 +134,14 @@ sync_emulator_binaries() {
     # Upload to github
     if [ -f "$archive_file" ]; then
       echo "Uploading $package-$platform-$dist.tar.gz"
-      local upload_file="$tmp_ephemeral_dir/$package-$platform-$dist.tar.gz"
-      cp "$archive_file" "$upload_file"
-      gh release upload latest "$upload_file" --clobber --repo obrie/retrokit
+
+      curl -X POST \
+        -H "Authorization: token $GITHUB_API_KEY" \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Content-Type: application/gzip" \
+        -H "Content-Length: $(wc -c <$archive_file | xargs)" \
+        -T "$archive_file" \
+        "$upload_url?name=$package-$platform-$dist.tar.gz"
     fi
   done
 }
