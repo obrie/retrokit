@@ -17,6 +17,14 @@ rp_module_repo="git https://github.com/DirtBagXon/actionmax-pi.git main"
 rp_module_section="exp"
 rp_module_flags="sdl1"
 
+function __binary_url_actionmax() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$rp_module_id-$__platform-$__os_codename.tar.gz"
+}
+
+function install_bin_actionmax() {
+    downloadAndExtract "$(__binary_url_actionmax)" "$md_inst" --strip-components 1
+}
+
 function depends_actionmax() {
     getDepends libsdl1.2-dev libvorbis-dev libogg-dev libglew-dev zlib1g-dev libsdl-image1.2-dev libsdl-ttf2.0-dev
 }

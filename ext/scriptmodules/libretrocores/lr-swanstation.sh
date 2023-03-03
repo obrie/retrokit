@@ -8,6 +8,14 @@ rp_module_repo="git https://github.com/libretro/swanstation.git main"
 rp_module_section="exp"
 rp_module_flags="!all arm !armv6 aarch64 64bit"
 
+function __binary_url_lr-swanstation() {
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$rp_module_id-$__platform-$__os_codename.tar.gz"
+}
+
+function install_bin_lr-swanstation() {
+    downloadAndExtract "$(__binary_url_lr-swanstation)" "$md_inst" --strip-components 1
+}
+
 function depends_lr-swanstation() {
     getDepends cmake
 }

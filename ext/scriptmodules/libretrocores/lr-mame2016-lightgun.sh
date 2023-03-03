@@ -9,7 +9,7 @@ rp_module_section="exp"
 rp_module_flags=""
 
 function __binary_url_lr-mame2016-lightgun() {
-    echo "https://github.com/obrie/retrokit/releases/download/latest/lr-mame2016-lightgun-rpi4-buster.tar.gz"
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$rp_module_id-$__platform-$__os_codename.tar.gz"
 }
 
 function install_bin_lr-mame2016-lightgun() {
