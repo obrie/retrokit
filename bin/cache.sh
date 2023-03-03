@@ -48,7 +48,7 @@ delete() {
   rm -rfv "$delete_dir"/*
 }
 
-default_binary_packages=(lr-mame0222 lr-mame0244 lr-mame2016-lightgun lr-swanstation lr-yabasanshiro actionmax)
+default_binary_packages=(actionmax advmame-joy lr-mame0222 lr-mame0244 lr-mame2016-lightgun lr-swanstation lr-yabasanshiro)
 
 # Build binaries for emulators that are added by retrokit
 # 
@@ -119,7 +119,8 @@ sync_emulator_binaries() {
     packages=("$package")
   fi
 
-  local upload_url=$(curl -sH "Authorization: token $GITHUB_API_KEY" "https://api.github.com/repos/obrie/retrokit/releases/tags/latest" | jq -r '.upload_url' | cut -d'{' -f1)
+  local release_json=$(curl -sH "Authorization: token $GITHUB_API_KEY" "https://api.github.com/repos/obrie/retrokit/releases/tags/latest")
+  local upload_url=$(echo "$release_json" | jq -r '.upload_url' | cut -d'{' -f1)
 
   for package in "${packages[@]}"; do
     # Stage the archive file
@@ -133,15 +134,25 @@ sync_emulator_binaries() {
 
     # Upload to github
     if [ -f "$archive_file" ]; then
-      echo "Uploading $package-$platform-$dist.tar.gz"
+      local asset_name="$package-$platform-$dist.tar.gz"
 
+      # Get ID of the asset based on given filename.
+      local asset_id=$(echo "$release_json" | jq -r ".assets[] | select(.name == \"$asset_name\").id")
+      if [ -n "$asset_id" ]; then
+        echo "Deleting $asset_name ($asset_id) from release"
+        curl -X DELETE -H "Authorization: token $GITHUB_API_KEY" "https://api.github.com/repos/obrie/retrokit/releases/assets/$asset_id"
+      fi
+
+      echo "Uploading $asset_name"
       curl -X POST \
         -H "Authorization: token $GITHUB_API_KEY" \
         -H "Accept: application/vnd.github.v3+json" \
         -H "Content-Type: application/gzip" \
         -H "Content-Length: $(wc -c <$archive_file | xargs)" \
         -T "$archive_file" \
-        "$upload_url?name=$package-$platform-$dist.tar.gz"
+        "$upload_url?name=$asset_name"
+
+      echo
     fi
   done
 }
