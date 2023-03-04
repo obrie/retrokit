@@ -383,7 +383,8 @@ __prepare_config_overwrite() {
 
   local device_index=${players["1/device_index"]}
   local device_name=${devices["$device_index/name"]}
-  local device_config_file="${config_file%.*}-$device_name.${config_file##*.}"
+
+  local device_config_file="${config_file%.*}-${device_name//[\?\<\>\\\/:\*\|]/}.${config_file##*.}"
 
   if [ -z "$device_name" ]; then
     >&2 echo "No control overrides found for profile \"$profile\""
