@@ -342,7 +342,7 @@ function onend_ppsspp_joystick() {
     _onend_ppsspp
 
     # Define a device-specific file in order to support multiple joysticks
-    local ppsspp_device_config_file="$configdir/psp/PSP/SYSTEM/controls-${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.ini"
+    local ppsspp_device_config_file="$configdir/psp/PSP/SYSTEM/controls-${DEVICE_NAME//[:><?\"\/\\|*]/}.ini"
     cp '/tmp/ppsspp-device-controls.ini' "$ppsspp_device_config_file"
 }
 

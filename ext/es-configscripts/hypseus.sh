@@ -258,7 +258,7 @@ function onstart_hypseus_joystick() {
 }
 
 function onstart_hypseus() {
-    local -r device_mapping_file="$configdir/daphne/hypinput-${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.ini"
+    local -r device_mapping_file="$configdir/daphne/hypinput-${DEVICE_NAME//[:><?\"\/\\|*]/}.ini"
     local -r force_joy_file="$configdir/daphne/hypinput-forcejoy.ini"
     local -r force_key_file="$configdir/daphne/hypinput-forcekey.ini"
 
@@ -370,7 +370,7 @@ function map_hypseus_joystick() {
     local input_value="$4"
 
     local mapping_file="$configdir/daphne/hypinput.ini"
-    local device_mapping_file="$configdir/daphne/hypinput-${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.ini"
+    local device_mapping_file="$configdir/daphne/hypinput-${DEVICE_NAME//[:><?\"\/\\|*]/}.ini"
     local force_joy_file="$configdir/daphne/hypinput-forcejoy.ini"
 
     local key=$(_get_hypseus_key "$input_name" "$input_type")

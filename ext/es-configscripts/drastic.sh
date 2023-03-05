@@ -218,7 +218,7 @@ function _onend_drastic() {
 function onend_drastic_joystick() {
     _onend_drastic
 
-    local drastic_device_config_file="$configdir/nds/drastic/config/drastic-${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.cfg"
+    local drastic_device_config_file="$configdir/nds/drastic/config/drastic-${DEVICE_NAME//[:><?\"\/\\|*]/}.cfg"
     cp '/tmp/drastic-device.cfg' "$drastic_device_config_file"
 }
 

@@ -9,7 +9,7 @@ function onend_retrokit-overrides_keyboard() {
 }
 
 function onend_retrokit-overrides_joystick() {
-    iniConfig " = " '"' "$configdir/all/retroarch-joypads/${DEVICE_NAME//[\?\<\>\\\/:\*\|]/}.cfg"
+    iniConfig " = " '"' "$configdir/all/retroarch-joypads/${DEVICE_NAME//[:><?\"\/\\|*]/}.cfg"
     __override_retroarch_settings_retrokit 'joystick'
 }
 
