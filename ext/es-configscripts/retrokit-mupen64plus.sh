@@ -162,9 +162,10 @@ function onend_retrokit-mupen64plus_keyboard() {
 
 function onend_retrokit-mupen64plus_joystick() {
     local file="$configdir/n64/InputAutoCfg.ini"
+    local escaped_device_name=$(echo "$DEVICE_NAME" | sed 's|[]\[^$.*/]|\\&|g')
 
     # Copy existing config to a temp file for us to modify
-    sed -e "/; ${DEVICE_NAME}_START/,/; ${DEVICE_NAME}_END/"'!d' "$file" > /tmp/mp64tempconfig.cfg
+    sed -e "/; ${escaped_device_name}_START/,/; ${escaped_device_name}_END/"'!d' "$file" > /tmp/mp64tempconfig.cfg
 
     if [ -s /tmp/mp64tempconfig.cfg ] && getAutoConf 'mupen64plus_combine_axis_and_dpad'; then
         iniConfig " = " "" "/tmp/mp64tempconfig.cfg"
@@ -173,8 +174,8 @@ function onend_retrokit-mupen64plus_joystick() {
         __check_axis_retrokit-mupen64plus 'Y Axis' 'DPad U' 'DPad D'
 
         # Abort if old device config cannot be deleted
-        sed -i /"${DEVICE_NAME}_START"/,/"${DEVICE_NAME}_END"/d "$file"
-        if grep -q "$DEVICE_NAME" "$file" ; then
+        sed -i /"${escaped_device_name}_START"/,/"${escaped_device_name}_END"/d "$file"
+        if grep -Fq "$DEVICE_NAME" "$file" ; then
             rm /tmp/mp64tempconfig.cfg
             return
         fi
