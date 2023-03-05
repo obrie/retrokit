@@ -38,7 +38,8 @@ class Config:
     @classmethod
     def find_for_device(cls, device_name: str) -> Path:
         # Prioritize a matching named configuration
-        device_path = cls.AUTOCONFIG_DIR.joinpath(f'{device_name}.cfg')
+        sanitized_device_name = re.sub('[:><?"/\\\|*]', '', device_name)
+        device_path = cls.AUTOCONFIG_DIR.joinpath(f'{sanitized_device_name}.cfg')
         if device_path.exists():
             # Treat it like a joystick
             return cls(device_path, InputType.JOYSTICK)
