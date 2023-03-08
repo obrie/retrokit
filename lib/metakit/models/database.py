@@ -80,6 +80,17 @@ class Database:
 
         self.update(to_key, metadata)
 
+    # Updates the group identifiers used to help with migrations during date updates
+    def update_ids(self) -> None:
+        self.romkit.load()
+
+        id_attribute = self.attribute('id')
+        if not id_attribute.required:
+            return
+
+        for group, machine in self.romkit.resolved_group_to_machine.items():
+            self.dataset[group]['id'] = machine.id
+
     # Validates that this database is properly implemented by checking all values
     # and grous defined in it
     def validate(self, target_groups: set = None) -> Dict[str, List[str]]:

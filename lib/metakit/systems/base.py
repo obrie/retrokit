@@ -62,7 +62,7 @@ class BaseSystem:
                 f.write(content)
 
     # Update groups based on the current romsets defined for the system
-    def update_groups(self, groups: List[str] = None) -> None:
+    def update_groups(self) -> None:
         migration = self.database.build_migration_plan(target_groups=self.target_groups)
         for from_key in sorted(migration.keys()):
             to_key = migration[from_key]
@@ -94,3 +94,4 @@ class BaseSystem:
     # Updates the metadata for games associated with this system
     def update_metadata(self) -> None:
         self.scraper.update_metadata()
+        self.database.update_ids()
