@@ -26,6 +26,7 @@ project what it's become.  That includes:
 * [valerino](https://github.com/valerino/RetroPie-Setup) for lr-mess integration
 * [Wikimedia](https://commons.wikimedia.org/) for controller images
 * [zerojay](https://github.com/zerojay/RetroPie-Extras) for lr-mess-jaguar scriptmodule
+* [Black Falcon Games](https://blackfalcongames.net/?p=155) for PC Engine multitap lists
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums
