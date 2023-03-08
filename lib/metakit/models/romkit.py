@@ -71,7 +71,10 @@ class ROMKit:
                 # machine instead of the original one
                 group = machine.title
 
-            self.resolved_group_to_machine[group] = machine
+            # We need to make sure to only choose the first machine from a playlist
+            # by sorting alphabetically.
+            if group not in self.resolved_group_to_machine or machine.name < self.resolved_group_to_machine[group].name:
+                self.resolved_group_to_machine[group] = machine
 
     # Finds all machines associated with a specific group name
     def find_machines_by_group(self, resolved_group: str) -> List[Machine]:
