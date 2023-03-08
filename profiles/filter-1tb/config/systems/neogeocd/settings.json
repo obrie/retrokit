@@ -1,0 +1,15 @@
+{
+  "roms": {
+    "filters": {
+      "!genres|empty": null,
+      "!titles": [
+        "# Fighting Franchises (filter all but latest)",
+        "/^Garou Densetsu(?! 3)",
+        "/^King of Fighters '(?! 99)",
+        "/^Real Bout Garou Densetsu Special",
+        "/^Ryuuko no Ken (?! 2)",
+        "/Samurai Shodown (?! III)"
+      ]
+    }
+  }
+}

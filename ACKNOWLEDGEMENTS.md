@@ -28,6 +28,7 @@ project what it's become.  That includes:
 * [zerojay](https://github.com/zerojay/RetroPie-Extras) for lr-mess-jaguar scriptmodule
 * [Black Falcon Games](https://blackfalcongames.net/?p=155) for PC Engine multitap lists
 * [hackerb9](https://github.com/hackerb9/mktrans) for image transparency tools
+* [PatchesSmith](https://imgur.com/a/C03ixep) for Neo Geo CD EmulationStation theme assets
 * eXo for Dosbox game configuration settings
 * RetroPie forums
 * Reddit forums

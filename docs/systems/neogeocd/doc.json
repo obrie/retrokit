@@ -1,0 +1,31 @@
+{
+  "system": {
+    "name": "neogeocd",
+    "description": "This is the 2nd Neo Geo console released by SNK in 1994, replacing cartridges with cheaper cds."
+  },
+  "features": {
+    "saves": true,
+    "states": true,
+    "netplay": true,
+    "cheats": false,
+    "multi controllers": true
+  },
+  "images": {
+    "controller": "controller.png"
+  },
+  "controls": {
+    "retropad": {
+      "dpad": "8-way Movement",
+      "a": "B",
+      "b": "A",
+      "y": "C",
+      "x": "D",
+      "start": "Start",
+      "select": "Select",
+      "l1": "B+C",
+      "l2": "A+B",
+      "r2": "A+B+C",
+      "r3": "B+C+D"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "system": "neogeocd",
+  "metadata": {
+    "path": "$RETROKIT_HOME/data/neogeocd.json"
+  },
+  "themes": {
+    "launch_image": "https://github.com/TMNTturtleguy/ComicBook-Theme-Launch-Images-for-Retropie/raw/master/16x9-Launching_ComicRip/neogeo/launching.png"
+  },
+  "scraper": {
+    "args": [
+      "-p", "neogeocd",
+      "-i", "$HOME/RetroPie/roms/neogeocd",
+      "-g", "$HOME/.emulationstation/gamelists/neogeocd",
+      "-o", "$HOME/.emulationstation/downloaded_media/neogeocd",
+      "-d", "cache/neogeocd"
+    ]
+  },
+  "overlays": {
+    "default": "https://github.com/thebezelproject/bezelprojectSA-NG-CD/raw/master/retroarch/overlay/SNK-Neo-Geo-CD.png",
+    "repos": [
+      {
+        "repo": "thebezelproject/bezelproject-NG-CD",
+        "path": "retroarch/overlay/GameBezels/NG-CD"
+      },
+      {
+        "repo": "thebezelproject/bezelprojectSA-NG-CD",
+        "path": "retroarch/overlay/GameBezels/NG-CD"
+      }
+    ]
+  },
+  "emulators": {
+    "lr-neocd": {
+      "default": true,
+      "core_name": "neocd",
+      "library_name": "NeoCD",
+      "cmd": "neocd_libretro.so"
+    }
+  },
+  "bios": {
+    "url": "$BIOS_URL/libretro/SNK - NeoGeo CD",
+    "dir": "$HOME/RetroPie/BIOS/neocd",
+    "files": {
+      "neocd_z.rom": "{url}/neocd_z.rom"
+    }
+  },
+  "romsets": {
+    "redump": {
+      "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NEOGEOCD_REDUMP_URL"
+        ],
+        "match": "(?P<machine>[^/]+).chd"
+      },
+      "resources": {
+        "dat": {
+          "source": "http://redump.org/datfile/ngcd/",
+          "download": "$RETROKIT_HOME/tmp/neogeocd/datfile.zip",
+          "target": "$RETROKIT_HOME/cache/redump/SNK - Neo Geo CD.dat",
+          "install": {"action": "zip_extract", "file": ".*\\.dat"}
+        },
+        "machine": {
+          "source": "{discovery_url}",
+          "target": "$HOME/RetroPie/roms/neogeocd/.redump/{machine}.chd",
+          "xref": "$HOME/RetroPie/roms/neogeocd/.redump/.xrefs/{machine_id}.chd"
+        }
+      }
+    }
+  },
+  "roms": {
+    "id": "crc",
+    "priority": {
+    },
+    "filters": {
+    },
+    "favorites": {
+    },
+    "dirs": [
+      {"path": "$HOME/RetroPie/roms/neogeocd", "filters": {}}
+    ],
+    "files": {
+      "machine": {"target": "{dir}/{machine_filename}"}
+    }
+  }
+}
