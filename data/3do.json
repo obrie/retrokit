@@ -1089,12 +1089,7 @@
         ],
         "url": "https://archive.org/download/FIFA_International_Soccer_1994_EA_Sports_US/FIFA_International_Soccer_1994_EA_Sports_US.pdf"
       }
-    ],
-    "alternates": {
-      "FIFA International Soccer (USA, Korea)": [
-        "FIFA International Soccer (USA)"
-      ]
-    }
+    ]
   },
   "Family Feud": {
     "id": "a5c4a288c84173cb1e5143ad4775ad25290a45a4",
@@ -2084,12 +2079,7 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Lost Eden (USA).pdf"
       }
-    ],
-    "alternates": {
-      "Lost Eden (USA, Korea)": [
-        "Lost Eden (USA)"
-      ]
-    }
+    ]
   },
   "Lost Files of Sherlock Holmes, The": {
     "id": "489a81c66616c612949512ddfc4e2cfca4e9c411",
@@ -2284,7 +2274,7 @@
     ],
     "alternates": {
       "MegaRace (USA) (En,Fr,De,Es,It)": [
-        "MegaRace (USA, Europe) (En,Fr,De,Es,It)"
+        "MegaRace (USA, Korea) (En,Fr,De,Es,It)"
       ]
     }
   },
@@ -2633,11 +2623,6 @@
         "url": "https://archive.org/download/Out_of_this_World_1993_Interplay_US/Out_of_this_World_1993_Interplay_US.pdf"
       }
     ],
-    "alternates": {
-      "Out of This World (USA) (3DO Maniac Pack) (RE)": [
-        "Out of this World (USA) (3DO Maniac Pack) (RE)"
-      ]
-    },
     "merge": [
       "Outer World"
     ]
@@ -3070,7 +3055,7 @@
     ],
     "alternates": {
       "Quarantine (USA, Japan) (En,Ja,Fr,De,Es) (RE3)": [
-        "Quarantine (Japan, USA) (En,Ja,Fr,De,Es) (RE3)"
+        "Quarantine (USA, Japan) (En,Ja,Fr,De,Es)"
       ]
     }
   },
@@ -3765,7 +3750,12 @@
         ],
         "url": "https://archive.org/download/StarBlade_1994_Panasonic_US/StarBlade_1994_Panasonic_US.pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Starblade (USA)": [
+        "Starblade (USA, Korea)"
+      ]
+    }
   },
   "Stellar 7 - Draxon's Revenge": {
     "id": "cdea58c50e5a8aca315b1157c171665f5f57d23d",
