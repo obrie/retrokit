@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from romkit.discovery import BaseDiscovery
 
 import logging
@@ -27,11 +29,6 @@ class InternetArchiveDiscovery(BaseDiscovery):
             download_path = self.download_dir.joinpath(filename)
             self.download(f'{url}/{filename}', download_path)
 
-            # Define the base url
-            # base_url_parts = list(parsed_url)
-            # base_url_parts[2] = str(Path(parsed_url.path).parent)
-            # base_url = urlunparse(base_url_parts)
-
             doc = lxml.etree.iterparse(str(download_path), tag=('file'))
             for event, element in doc:
                 filepath = element.get('name')
@@ -45,6 +42,9 @@ class InternetArchiveDiscovery(BaseDiscovery):
                         self._mappings[result['machine']] = discovered_url
                     else:
                         self._mappings[None] = discovered_url
+
+    def keys(self) -> Set[str]:
+        return set(self._mappings.keys())
 
     def discover(self, context: dict) -> Dict[str, str]:
         values = [None]

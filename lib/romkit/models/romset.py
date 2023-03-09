@@ -39,12 +39,12 @@ class ROMSet:
         self.enabled = enabled
 
         # Configure resources
-        discovery = discovery and BaseDiscovery.from_json(discovery, downloader=self.downloader)
+        self.discovery = discovery and BaseDiscovery.from_json(discovery, downloader=self.downloader)
         self.resource_templates = {
             name: ResourceTemplate.from_json(
                 config,
                 downloader=self.downloader,
-                discovery=discovery,
+                discovery=self.discovery,
                 default_context={'url': url},
             )
             for name, config in resource_templates.items()
