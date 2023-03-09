@@ -41,7 +41,13 @@
     },
     "psn": {
       "protocol": "http",
-      "url": "$ROMSET_PSP_PSN_URL",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_PSP_PSN_URL"
+        ],
+        "match": "(?P<machine>[^/]+)\\.iso"
+      },
       "resources": {
         "dat": {
           "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
@@ -49,7 +55,7 @@
           "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.iso",
+          "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/psp/.psn/{machine}.iso",
           "target": "$HOME/RetroPie/roms/psp/.psn/{machine}.cso",
           "xref": "$HOME/RetroPie/roms/psp/.psn/.xrefs/{machine_id}.cso",
@@ -64,7 +70,13 @@
     },
     "dlc": {
       "protocol": "http",
-      "url": "$ROMSET_PSP_DLC_URL",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_PSP_DLC_URL"
+        ],
+        "match": "(?P<machine>[^/]+)\\.zip"
+      },
       "resources": {
         "dat": {
           "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",
@@ -72,7 +84,7 @@
           "install": {"action": "zip_extract", "file": ".*/Sony - PlayStation Portable \\(PSN\\).*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
+          "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/psp/.dlc/{machine}.zip",
           "target": "$HOME/RetroPie/roms/psp/.dlc/{rom_root}",
           "install": {"action": "zip_extract", "include_parent": false}
