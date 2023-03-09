@@ -55,7 +55,6 @@
         ],
         "match": "(?P<machine>[^/]+).chd"
       },
-      "url": "$ROMSET_PCENGINE_REDUMP_URL",
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/pce/",

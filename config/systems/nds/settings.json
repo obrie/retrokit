@@ -59,7 +59,6 @@
         ],
         "match": "(?P<machine>[^/]+).zip"
       },
-      "url": "$ROMSET_NDS_NOINTRO_URL",
       "resources": {
         "dat": {
           "source": "file://$RETROKIT_HOME/tmp/No-Intro Love Pack (PC XML).zip",

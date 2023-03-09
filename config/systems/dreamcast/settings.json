@@ -58,7 +58,6 @@
         ],
         "match": "(?P<machine>[^/]+).zip"
       },
-      "url": "$ROMSET_DREAMCAST_REDUMP_URL",
       "resources": {
         "dat": {
           "source": "http://redump.org/datfile/dc/",
