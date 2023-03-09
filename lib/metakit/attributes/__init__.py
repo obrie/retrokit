@@ -1,5 +1,6 @@
 from metakit.attributes.base import BaseAttribute
 from metakit.attributes.age_rating import AgeRatingAttribute
+from metakit.attributes.alternates import AlternatesAttribute
 from metakit.attributes.buttons import ButtonsAttribute
 from metakit.attributes.category import CategoryAttribute
 from metakit.attributes.controls import ControlsAttribute
@@ -18,7 +19,6 @@ from metakit.attributes.peripherals import PeripheralsAttribute
 from metakit.attributes.players import PlayersAttribute
 from metakit.attributes.publisher import PublisherAttribute
 from metakit.attributes.rating import RatingAttribute
-from metakit.attributes.renames import RenamesAttribute
 from metakit.attributes.screen import ScreenAttribute
 from metakit.attributes.series import SeriesAttribute
 from metakit.attributes.tags import TagsAttribute
@@ -47,6 +47,6 @@ __all_attributes__ = [
     MediaAttribute,
     EmulationAttribute,
     TagsAttribute,
-    RenamesAttribute,
+    AlternatesAttribute,
     MergeAttribute,
 ]

@@ -66,7 +66,7 @@ class Machine:
     ) -> None:
         self.romset = romset
         self.name = name
-        self.alt_name = name
+        self.alt_names = []
 
         # Keeps track of any other machines that are needed to run this one, such as:
         # * Parent
@@ -272,7 +272,7 @@ class Machine:
         return {
             'machine': self.name,
             'machine_id': self.id,
-            'machine_alt_name': self.alt_name,
+            'machine_alt_names': self.alt_names,
             'machine_description': self.description,
             'machine_sourcefile': self.sourcefile or self.name,
             'rom_root': self.rom_root,

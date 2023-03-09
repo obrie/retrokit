@@ -22,14 +22,15 @@ class InternetArchiveDiscovery(BaseDiscovery):
                 continue
 
             # Download the file
-            filename = Path(parsed_url.path).name
+            archive_name = Path(parsed_url.path).name
+            filename = f'{archive_name}_files.xml'
             download_path = self.download_dir.joinpath(filename)
-            self.download(url, download_path)
+            self.download(f'{url}/{filename}', download_path)
 
             # Define the base url
-            base_url_parts = list(parsed_url)
-            base_url_parts[2] = str(Path(parsed_url.path).parent)
-            base_url = urlunparse(base_url_parts)
+            # base_url_parts = list(parsed_url)
+            # base_url_parts[2] = str(Path(parsed_url.path).parent)
+            # base_url = urlunparse(base_url_parts)
 
             doc = lxml.etree.iterparse(str(download_path), tag=('file'))
             for event, element in doc:
@@ -37,7 +38,7 @@ class InternetArchiveDiscovery(BaseDiscovery):
                 result = pattern.search(filepath)
                 if result:
                     # Build the url
-                    discovered_url = urljoin(f'{base_url}/', quote(filepath))
+                    discovered_url = urljoin(f'{url}/', quote(filepath))
 
                     # Track either a machine-specific url or a general url
                     if 'machine' in result.groupdict():
@@ -46,4 +47,13 @@ class InternetArchiveDiscovery(BaseDiscovery):
                         self._mappings[None] = discovered_url
 
     def discover(self, context: dict) -> Dict[str, str]:
-        return self._mappings.get(None) or ('machine' in context and self._mappings.get(context['machine'])) or ('machine_alt_name' in context and self._mappings.get(context['machine_alt_name']))
+        values = [None]
+        if 'machine' in context:
+            values.append(context['machine'])
+
+        if 'machine_alt_names' in context:
+            values.extend(context['machine_alt_names'])
+
+        for value in values:
+            if value in self._mappings:
+                return self._mappings[value]

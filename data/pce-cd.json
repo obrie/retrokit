@@ -1647,7 +1647,12 @@
         ],
         "url": "https://archive.org/download/GingaOjousamaDensetsuYunaManualJPPCEngine/Ginga Ojousama Densetsu Yuna (Manual)(JP)(PC Engine).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Ginga Ojousama Densetsu Yuna (Japan) (FAAT, FABT, FACT)": [
+        "Ginga Ojousama Densetsu Yuna (Japan) (FABT, FACT)"
+      ]
+    }
   },
   "Ginga Ojousama Densetsu Yuna 2 - Eien no Princess": {
     "id": "5718138075131a982db2a3d61446c8a7dceed06a",
@@ -2243,7 +2248,15 @@
     ],
     "peripherals": [
       "multitap"
-    ]
+    ],
+    "alternates": {
+      "Kabuki Ittouryoudan (Japan) (FAAT)": [
+        "Kabuki Ittouryoudan (Japan)"
+      ],
+      "Kabuki Ittouryoudan (Japan) (FABT)": [
+        "Kabuki Ittouryoudan (Japan)"
+      ]
+    }
   },
   "Kagami no Kuni no Legend": {
     "id": "b1dcee856e30b881611eebd63d0e5aaad14650d5",

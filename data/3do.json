@@ -180,7 +180,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/BC Racers (USA, Europe).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "BC Racers (USA)": [
+        "BC Racers (USA, Europe)"
+      ]
+    }
   },
   "BFS - Blue Forest Story": {
     "id": "64bed771d3769520fbd0fbbe2eb794be51ac1ac6",
@@ -565,7 +570,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Crash 'n Burn (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Crash 'n Burn (Korea)": [
+        "Crash 'n Burn (USA, Korea)"
+      ]
+    }
   },
   "Crayon Shin-chan - Puzzle Daimaou no Nazo": {
     "id": "cda61fec4dc82675262d2b6b408edde0d9a7ea2c",
@@ -909,7 +919,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Dragon's Lair (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Dragon's Lair (Korea)": [
+        "Dragon's Lair (USA, Korea)"
+      ]
+    }
   },
   "Drug Wars": {
     "id": "bc2f41deb10f62966ae503c262c5563342ed4874",
@@ -1075,8 +1090,10 @@
         "url": "https://archive.org/download/FIFA_International_Soccer_1994_EA_Sports_US/FIFA_International_Soccer_1994_EA_Sports_US.pdf"
       }
     ],
-    "renames": {
-      "FIFA International Soccer (USA, Korea)": "FIFA International Soccer (USA)"
+    "alternates": {
+      "FIFA International Soccer (USA, Korea)": [
+        "FIFA International Soccer (USA)"
+      ]
     }
   },
   "Family Feud": {
@@ -1315,7 +1332,12 @@
         ],
         "url": "https://archive.org/download/Gex_1995_Crystal_Dynamics_US/Gex_1995_Crystal_Dynamics_US.pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Gex (Japan)": [
+        "Gex (Japan, Korea)"
+      ]
+    }
   },
   "Ghost Hunter Series - Kuroki Shi no Kamen": {
     "id": "7176fc35834ebe015713c8f1783841cdb615f450",
@@ -1964,7 +1986,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Let's Go Skiing (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Let's Go Skiing (USA)": [
+        "ESPN Let's Go Skiing with Picabo Street, A. J. Kitt & Holly Flanders (USA)"
+      ]
+    }
   },
   "Let's Play Beach Volleyball": {
     "id": "c6fccf6afc39d945eb49a18f6021855f7e23cf72",
@@ -1975,7 +2002,12 @@
     "genres": [
       "Sports",
       "Sports / Volleyball"
-    ]
+    ],
+    "alternates": {
+      "Let's Play Beach Volleyball (USA)": [
+        "ESPN Let's Play Beach Volleyball with Karch Kiraly and Karolyn Kirby (USA)"
+      ]
+    }
   },
   "Life Stage, The - Virtual House": {
     "id": "b6bdee0e2b7321ac99f12eabdd15ba15111a9012",
@@ -1994,7 +2026,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Life Stage, The - Virtual House (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Life Stage, The - Virtual House (USA)": [
+        "Life Stage, The - Virtual House (USA, Korea)"
+      ]
+    }
   },
   "Live! 3DO Magazine CD-ROM 1": {
     "id": "3d1ec25ae9fddf9a2306d5a771ec191c0551660c"
@@ -2048,8 +2085,10 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Lost Eden (USA).pdf"
       }
     ],
-    "renames": {
-      "Lost Eden (USA, Korea)": "Lost Eden (USA)"
+    "alternates": {
+      "Lost Eden (USA, Korea)": [
+        "Lost Eden (USA)"
+      ]
     }
   },
   "Lost Files of Sherlock Holmes, The": {
@@ -2242,7 +2281,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/MegaRace (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "MegaRace (USA) (En,Fr,De,Es,It)": [
+        "MegaRace (USA, Europe) (En,Fr,De,Es,It)"
+      ]
+    }
   },
   "Microcosm": {
     "id": "9aeb5f10bc2fcf3127e1d92c7e00d88552e765ae",
@@ -2514,7 +2558,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Olympic Soccer (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Olympic Soccer (USA)": [
+        "Olympic Soccer (USA) (En,Fr,De,Es,It)"
+      ]
+    }
   },
   "Olympic Summer Games": {
     "id": "a40e1e7c1c82bcfe8c8c3c3525b02eada25624e4",
@@ -2584,8 +2633,10 @@
         "url": "https://archive.org/download/Out_of_this_World_1993_Interplay_US/Out_of_this_World_1993_Interplay_US.pdf"
       }
     ],
-    "renames": {
-      "Out of This World (USA) (3DO Maniac Pack) (RE)": "Out of this World (USA) (3DO Maniac Pack) (RE)"
+    "alternates": {
+      "Out of This World (USA) (3DO Maniac Pack) (RE)": [
+        "Out of this World (USA) (3DO Maniac Pack) (RE)"
+      ]
     },
     "merge": [
       "Outer World"
@@ -2622,7 +2673,12 @@
         ],
         "url": "https://archive.org/download/PGA_Tour_96_1995_EA_Sports_US/PGA_Tour_96_1995_EA_Sports_US.pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "PGA Tour 96 (USA)": [
+        "PGA Tour 96 (USA) (RE-1)"
+      ]
+    }
   },
   "PO'ed": {
     "id": "651ce9bef754b6872932d421c5e88a9f228b5fa1",
@@ -2954,7 +3010,12 @@
     "publisher": "Humongous Entertainment",
     "genres": [
       "Action"
-    ]
+    ],
+    "alternates": {
+      "Putt-Putt's Fun Pack (USA)": [
+        "Putt-Putt's Fun Pack (USA, Korea)"
+      ]
+    }
   },
   "Puzzle Bobble": {
     "id": "4e6df89b85466901ee00bce3267913e6d51a8721",
@@ -3007,8 +3068,10 @@
         "url": "https://archive.org/download/Panasonic3DOManuals/Quarantine (USA).pdf"
       }
     ],
-    "renames": {
-      "Quarantine (USA, Japan) (En,Ja,Fr,De,Es) (RE3)": "Quarantine (Japan, USA) (En,Ja,Fr,De,Es) (RE3)"
+    "alternates": {
+      "Quarantine (USA, Japan) (En,Ja,Fr,De,Es) (RE3)": [
+        "Quarantine (Japan, USA) (En,Ja,Fr,De,Es) (RE3)"
+      ]
     }
   },
   "Quarterback Attack": {
@@ -3486,7 +3549,15 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Snow Job Starring Tracy Scoggins (USA) (Disc 1).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "SnowJob (Europe) (Disc 1)": [
+        "SnowJob Starring Tracy Scoggins (Europe) (Disc 1)"
+      ],
+      "SnowJob (Europe) (Disc 2)": [
+        "SnowJob Starring Tracy Scoggins (Europe) (Disc 2)"
+      ]
+    }
   },
   "Soccer Kid": {
     "id": "e42cd74e8f7f5e105b0c580da5e19faf64e46542",
@@ -3724,7 +3795,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/ESPN - Step Aerobics (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Step Aerobics (USA)": [
+        "ESPN Fitness Pros - Step Aerobics (USA)"
+      ]
+    }
   },
   "Storage Manager - Memory Kanri": {
     "id": "38e1cddf88ab2a2833b0ca2246916d1926588e65"
@@ -4161,7 +4237,12 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/VR Stalker (USA).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "VR Stalker (USA)": [
+        "VR Stalker (USA, Korea)"
+      ]
+    }
   },
   "Virtual Cameraman Part 1 - Naomi Sawada & Anna Juri": {
     "id": "bad4966076845e1607d25ce167731d382fd5e832",
@@ -4497,6 +4578,11 @@
         ],
         "url": "https://archive.org/download/Panasonic3DOManuals/Zhadnost - The Peoples Party (USA, Europe).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Zhadnost - The People's Party (USA)": [
+        "Zhadnost - The People's Party (USA, Europe)"
+      ]
+    }
   }
 }
