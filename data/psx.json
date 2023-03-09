@@ -2246,7 +2246,12 @@
     "genres": [
       "Adventure / Simulation / RPG"
     ],
-    "age_rating": "12"
+    "age_rating": "12",
+    "alternates": {
+      "Angelique - Tenkuu no Requiem (Japan) (Angelique History)": [
+        "Angelique - Tenkuu no Requiem (Japan) (Premium Box)"
+      ]
+    }
   },
   "Angelique Duet": {
     "id": "0b6d2e7691c066291777e33d4558770e39fe5731",
@@ -13657,6 +13662,11 @@
       "Educational"
     ],
     "age_rating": "3",
+    "alternates": {
+      "Disney-Pixar Bichos Una Aventura en Miniatura (Spain)": [
+        "Disney-Pixar Bichos - Una Aventura en Miniatura (Spain)"
+      ]
+    },
     "merge": [
       "Disney-Pixar A Bug's Life - Atelier de Jeux",
       "Disney-Pixar A Bug's Life - Disneys Malen und Spielen",
@@ -17052,7 +17062,12 @@
     "age_rating": "3",
     "peripherals": [
       "multitap"
-    ]
+    ],
+    "alternates": {
+      "FIFA 2001 (USA)": [
+        "FIFA 2001 (USA) (En,De,Es,Nl,Sv)"
+      ]
+    }
   },
   "FIFA 97": {
     "id": "773668eafed6057b943e0cca67c24b315e299a43",
@@ -18953,12 +18968,7 @@
         ],
         "url": "https://dl3.emu-land.net/manuals/psx/Fox Sports Golf '99 (U).pdf"
       }
-    ],
-    "alternates": {
-      "Fox Sports Golf '99 (USA)": [
-        "FOX Sports Golf '99 (USA)"
-      ]
-    }
+    ]
   },
   "Fox Sports Soccer '99": {
     "id": "538cfbdc32259b2596aeab445d98365e42c19879",
@@ -18981,12 +18991,7 @@
         ],
         "url": "https://archive.org/download/SonyPlaystationManuals/FOX Sports Golf '99 (USA).pdf"
       }
-    ],
-    "alternates": {
-      "Fox Sports Soccer '99 (USA) (En,Es)": [
-        "FOX Sports Soccer '99 (USA) (En,Es)"
-      ]
-    }
+    ]
   },
   "Frank Thomas Big Hurt Baseball": {
     "id": "970ea8a54a88bb760e5e37aab0b0cf4c5abe1bb2",
@@ -19222,12 +19227,7 @@
     ]
   },
   "Fun + Learning": {
-    "id": "86d49373a506131f978eaf586c87c63b3e9d5f5a",
-    "alternates": {
-      "Fun + Learning (USA) (En,De,Es,It) (Unl)": [
-        "Fun + Learning (USA) (En,De,Es,It)"
-      ]
-    }
+    "id": "86d49373a506131f978eaf586c87c63b3e9d5f5a"
   },
   "Fun + Learning 2": {
     "id": "5319a3a2fdce3fefa5c1d9fa6597f684a149bc88"
@@ -29586,7 +29586,21 @@
         ],
         "url": "https://archive.org/download/LegendOfDragoonManualJPPlayStationPSX/Legend of Dragoon (Manual)(JP)(PlayStation)(PSX).pdf"
       }
-    ]
+    ],
+    "alternates": {
+      "Legend of Dragoon, The (Japan) (Disc 1)": [
+        "Legend of Dragoon, The (Japan, Asia) (Disc 1)"
+      ],
+      "Legend of Dragoon, The (Japan) (Disc 2)": [
+        "Legend of Dragoon, The (Japan, Asia) (Disc 2)"
+      ],
+      "Legend of Dragoon, The (Japan) (Disc 3)": [
+        "Legend of Dragoon, The (Japan, Asia) (Disc 3)"
+      ],
+      "Legend of Dragoon, The (Japan) (Disc 4)": [
+        "Legend of Dragoon, The (Japan, Asia) (Disc 4)"
+      ]
+    }
   },
   "Legend of Heroes I & II, The - Eiyuu Densetsu": {
     "id": "8979f63925fedb6079f73f61b3dcf2a431aeb7d9",
@@ -63271,6 +63285,11 @@
       "Quiz"
     ],
     "age_rating": "E",
+    "alternates": {
+      "Chi Vuol Essere Milionario - Seconda Edizione (Italy)": [
+        "Chi Vuol Essere Milionario Seconda Edizione (Italy)"
+      ]
+    },
     "merge": [
       "Chi Vuol Essere Milionario - Seconda Edizione",
       "Qui Veut Gagner des Millions - Seconde Edition",
