@@ -40,6 +40,19 @@ class BaseSystem:
     def validate(self) -> List[str]:
         return self.database.validate(target_groups=self.target_groups)
 
+    # Run several validation checks on the content of the database
+    def validate_discovery(self) -> List[str]:
+        attribute = self.database.attribute('alternates')
+        if not attribute.valid_discovered_names:
+            return
+
+        self.romkit.load()
+        for group in self.romkit.resolved_groups:
+            for machine in self.romkit.find_machines_by_group(group):
+                name_candidates = set(machine.alt_names + [machine.name])
+                if not name_candidates.intersection(attribute.valid_discovered_names):
+                    print(f'[{machine.name}] Failed to discover')
+
     # Format and re-save the database (helps create a consistent structure)
     def save(self) -> None:
         self.database.save()
@@ -81,6 +94,10 @@ class BaseSystem:
                 self.database.migrate(from_key, to_key)
                 self.scraper.migrate(from_key, to_key)
 
+    # Removes any outdated data we can determine is no longer needed
+    def vacuum(self) -> None:
+        self.romkit.load()
+        self.database.clean()
         self.scraper.clean()
 
     # Caches any external data used by the system

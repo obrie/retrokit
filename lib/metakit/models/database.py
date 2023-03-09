@@ -91,6 +91,14 @@ class Database:
         for group, machine in self.romkit.resolved_group_to_machine.items():
             self.dataset[group]['id'] = machine.id
 
+    # Cleans up attribute values in the database based on the current DAT.
+    # 
+    # This is typically run after a merge.
+    def clean(self) -> None:
+        for key, metadata in self.dataset.items():
+            for attribute in self.attributes:
+                attribute.clean_metadata(key, metadata)
+
     # Validates that this database is properly implemented by checking all values
     # and grous defined in it
     def validate(self, target_groups: set = None) -> Dict[str, List[str]]:

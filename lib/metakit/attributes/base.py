@@ -66,6 +66,16 @@ class BaseAttribute:
     def migrate(self, from_group: str, to_group: str, value) -> None:
         pass
 
+    # Migrates the given metadata when moving from one group name to another
+    def clean_metadata(self, group: str, metadata: dict) -> None:
+        value = self.value_from(group, metadata)
+        if value:
+            self.clean(group, value)
+
+    # Cleans the given attribute value when moving from one group name to another
+    def clean(self, group: str, value) -> None:
+        pass
+
     # Sorts the keys within the given dictionary based on a predefined order
     def _sort_dict(self, value: dict, key_order: Optional[list] = None) -> dict:
         if key_order:

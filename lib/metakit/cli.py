@@ -48,6 +48,16 @@ class MetaKit:
                 logging.warning(f'[{key}] Error: {", ".join(errors[key])}')
             sys.exit(1)
 
+    # Validates that machines are mapped properly to names in each romset's discovery
+    # data.
+    def validate_discovery(self):
+        self.system.validate_discovery()
+
+    # Vacuums unneded data from the system's database
+    def vacuum(self) -> None:
+        self.system.vacuum()
+        self.system.save()
+
     # Format the system's database
     def format(self) -> None:
         self.system.save()
@@ -61,6 +71,7 @@ class MetaKit:
     def update(self) -> None:
         self.update_dats()
         self.update_groups()
+        self.vacuum()
         self.system.reload()
         self.recache_external_data()
         self.scrape()
@@ -108,6 +119,8 @@ def main() -> None:
     parser = ArgumentParser()
     parser.add_argument(dest='action', help='Action to perform', choices=[
         'validate',
+        'validate_discovery',
+        'vacuum',
         'format',
         'update',
         'update_dats',
