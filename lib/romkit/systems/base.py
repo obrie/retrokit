@@ -8,6 +8,7 @@ from romkit.systems.system_dir import SystemDir
 
 import logging
 import os
+import requests
 import shlex
 import time
 import traceback
@@ -135,6 +136,9 @@ class BaseSystem:
             try:
                 machine.install()
                 return True
+            except requests.exceptions.URLRequired as e:
+                logging.error(f'[{machine.name}] Failed to download (no url found)')
+                break
             except Exception as e:
                 logging.error(f'[{machine.name}] Install failed')
                 traceback.print_exc()

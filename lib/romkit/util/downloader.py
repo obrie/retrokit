@@ -52,6 +52,9 @@ class Downloader:
     # * It already exists in the destination
     # * The file is being force-refreshed
     def get(self, source: str, destination: Path, force: bool = False) -> None:
+        if not source:
+            raise requests.exceptions.URLRequired()
+
         source_uri = urlparse(source)
 
         # Ensure directory exists
