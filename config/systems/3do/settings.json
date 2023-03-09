@@ -37,6 +37,13 @@
   "romsets": {
     "redump": {
       "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_3DO_REDUMP_URL"
+        ],
+        "match": "(?P<machine>[^/]+).zip"
+      },
       "url": "$ROMSET_3DO_REDUMP_URL",
       "resources": {
         "dat": {
@@ -46,7 +53,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine_alt_name}.zip",
+          "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/3do/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/3do/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/3do/.redump/.xrefs/{machine_id}.chd",

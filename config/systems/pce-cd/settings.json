@@ -48,6 +48,13 @@
   "romsets": {
     "redump": {
       "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_PCENGINE_REDUMP_URL"
+        ],
+        "match": "(?P<machine>[^/]+).zip"
+      },
       "url": "$ROMSET_PCENGINE_REDUMP_URL",
       "resources": {
         "dat": {
@@ -57,7 +64,7 @@
           "install": {"action": "zip_extract", "file": ".*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine}.zip",
+          "source": "{discovery_url}",
           "download": "$HOME/RetroPie/roms/pce-cd/.redump/{machine}.zip",
           "target": "$HOME/RetroPie/roms/pce-cd/.redump/{machine}.chd",
           "xref": "$HOME/RetroPie/roms/pce-cd/.redump/.xrefs/{machine_id}.chd",

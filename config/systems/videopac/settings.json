@@ -36,9 +36,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/Magnavox - Odyssey2"
+        "match": "Magnavox - Odyssey2"
       },
       "resources": {
         "dat": {
@@ -61,9 +61,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/Philips - Videopac+"
+        "match": "Philips - Videopac+"
       },
       "resources": {
         "dat": {

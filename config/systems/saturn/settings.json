@@ -49,7 +49,7 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_SATURN_REDUMP_URL/chd_saturn_files.xml"
+          "$ROMSET_SATURN_REDUMP_URL"
         ],
         "match": "(?P<machine>[^/]+).chd"
       },

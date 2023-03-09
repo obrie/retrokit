@@ -58,11 +58,11 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_PSX_USA_REDUMP_URL/chd_psx_files.xml",
-          "$ROMSET_PSX_EUR_REDUMP_URL/chd_psx_eur_files.xml",
-          "$ROMSET_PSX_JAP_REDUMP_URL/chd_psx_jap_files.xml",
-          "${ROMSET_PSX_JAP_REDUMP_URL}_p2/chd_psx_jap_p2_files.xml",
-          "$ROMSET_PSX_MISC_REDUMP_URL/chd_psx_misc_files.xml"
+          "$ROMSET_PSX_USA_REDUMP_URL",
+          "$ROMSET_PSX_EUR_REDUMP_URL",
+          "$ROMSET_PSX_JAP_REDUMP_URL",
+          "${ROMSET_PSX_JAP_REDUMP_URL}_p2",
+          "$ROMSET_PSX_MISC_REDUMP_URL"
         ],
         "match": "(?P<machine>[^/]+).chd"
       },

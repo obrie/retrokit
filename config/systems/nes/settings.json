@@ -37,9 +37,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/Nintendo - Nintendo Entertainment System.*\\[headered]"
+        "match": "Nintendo - Nintendo Entertainment System.*\\[headered]"
       },
       "resources": {
         "dat": {

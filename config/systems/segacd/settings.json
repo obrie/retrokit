@@ -56,7 +56,7 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_SEGACD_REDUMP_URL/chd_segacd_files.xml"
+          "$ROMSET_SEGACD_REDUMP_URL"
         ],
         "match": "(?P<machine>[^/]+).chd"
       },

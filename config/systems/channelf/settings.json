@@ -37,9 +37,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/Fairchild - Channel F"
+        "match": "Fairchild - Channel F"
       },
       "resources": {
         "dat": {

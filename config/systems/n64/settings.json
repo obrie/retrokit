@@ -53,9 +53,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/Nintendo - Nintendo 64 \\(BigEndian\\)"
+        "match": "Nintendo - Nintendo 64 \\(BigEndian\\)"
       },
       "resources": {
         "dat": {

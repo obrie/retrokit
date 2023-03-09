@@ -18,8 +18,8 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_PSP_REDUMP_URL/redump.psp_files.xml",
-          "$ROMSET_PSP_REDUMP_URL.p2/redump.psp.p2_files.xml"
+          "$ROMSET_PSP_REDUMP_URL",
+          "$ROMSET_PSP_REDUMP_URL.p2"
         ],
         "match": "(?P<machine>[^/]+)\\.zip"
       },

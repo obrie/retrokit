@@ -51,9 +51,9 @@
       "discovery": {
         "type": "internetarchive",
         "urls": [
-          "$ROMSET_NOINTRO_URL/no-intro_romsets_files.xml"
+          "$ROMSET_NOINTRO_URL"
         ],
-        "match": "no-intro romsets/NEC - PC Engine SuperGrafx"
+        "match": "NEC - PC Engine SuperGrafx"
       },
       "resources": {
         "dat": {

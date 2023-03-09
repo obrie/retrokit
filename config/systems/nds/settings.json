@@ -52,6 +52,13 @@
   "romsets": {
     "nointro": {
       "protocol": "http",
+      "discovery": {
+        "type": "internetarchive",
+        "urls": [
+          "$ROMSET_NDS_NOINTRO_URL"
+        ],
+        "match": "(?P<machine>[^/]+).zip"
+      },
       "url": "$ROMSET_NDS_NOINTRO_URL",
       "resources": {
         "dat": {
@@ -60,7 +67,7 @@
           "install": {"action": "zip_extract", "file": ".*/Nintendo - Nintendo DS \\(Decrypted\\).*\\.dat"}
         },
         "machine": {
-          "source": "{url}/{machine_alt_name}.zip",
+          "source": "{discovery_url}",
           "target": "$HOME/RetroPie/roms/nds/.nointro/{machine}.zip",
           "xref": "$HOME/RetroPie/roms/nds/.nointro/.xrefs/{machine_id}.zip"
         }
