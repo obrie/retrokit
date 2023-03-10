@@ -7,30 +7,34 @@ dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 setup_module_id='system/daphne/roms-commands'
 setup_module_desc='Daphne game commands to run on startup'
 
-readarray -t rom_dirs < <(system_setting 'select(.roms) | .roms.dirs[] | .path')
+hypseus_launch_file="$retropie_dir/emulators/hypseus/hypseus.sh"
+hypseus_commands_dir="$retropie_system_config_dir/commands"
 
 configure() {
   load_emulator_data
+  __configure_params
+  __configure_commands
+}
 
+# Sets up the hypseus launch file to look for commands files in a shared
+# configuration directory rather than within the rom's directory
+__configure_params() {
+  backup_and_restore "$hypseus_launch_file" as_sudo=true
+
+  local insert_line=$(grep -nE '^if' "$hypseus_launch_file" | head -n 1 | cut -d: -f 1)
+  local append_to_script="if [[ -f \"$hypseus_commands_dir/\$name.commands\" ]]; then params=\$(<\"$hypseus_commands_dir/\$name.commands\"); fi"
+  sed "i $insert_line $append_to_script" "$hypseus_launch_file"
+}
+
+__configure_commands() {
   local target_overlay_dir=$(system_setting '.overlays .target')
 
   while IFS=» read -r rom_name title group_name emulator controls; do
     emulator=${emulators["${emulator:-default}/emulator"]}
 
-    # Find the target path.  We just need to find the first match since the
-    # directory is just symlinked.
-    local target_file
-    for rom_dir in "${rom_dirs[@]}"; do
-      if [ -e "$rom_dir/$rom_name.daphne" ]; then
-        target_file="$rom_dir/$rom_name.daphne/$rom_name.commands"
-        break
-      fi
-    done
-
     # Set up the path that we're writing to
-    if [ -z "$target_file" ]; then
-      continue
-    fi
+    local target_file="$hypseus_commands_dir/commands/$rom_name.commands"
+    mkdir -p "$hypseus_commands_dir/commands"
     rm -fv "$target_file"
 
     local source_files=("{system_config_dir}/$emulator.commands")
@@ -81,9 +85,8 @@ configure() {
 }
 
 restore() {
-  for rom_dir in "${rom_dirs[@]}"; do
-    find -L "$rom_dir" -maxdepth 2 -mindepth 2 -name '*.commands' -exec rm -fv '{}' +
-  done
+  restore_file "$hypseus_launch_file" as_sudo=true delete_src=true
+  rm -rfv "$hypseus_commands_dir"
 }
 
 setup "${@}"
