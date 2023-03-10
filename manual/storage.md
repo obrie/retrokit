@@ -34,7 +34,7 @@ The approximate capacity required per system is broken down below:
 | mess            | 300MB    |
 | n64             | 3.5GB    |
 | nds             | 36GB     |
-| neogeocd        | ?GB      |
+| neogeocd        | 5GB      |
 | nes             | 72MB     |
 | ngp             | 3MB      |
 | ngpc            | 17MB     |
