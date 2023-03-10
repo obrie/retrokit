@@ -139,10 +139,14 @@ create() {
   local retropie_version=4.8
   local raspbian_version=buster
   local rpi_version=rpi4_400
-  local image_file="$tmp_dir/retropie-$retropie_version-$raspbian_version-$rpi_version.img.gz"
+
+  local images_dir="$tmp_dir/images"
+  mkdir -p "$images_dir"
+  local image_name="retropie-$raspbian_version-$retropie_version-$rpi_version"
+  local image_file="$images_dir/$image_name.img.gz"
 
   # Download Retropie
-  download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/retropie-$raspbian_version-$retropie_version-$rpi_version.img.gz" "$image_file"
+  download "https://github.com/RetroPie/RetroPie-Setup/releases/download/$retropie_version/$image_name.img.gz" "$image_file"
 
   # Make sure the device is unmounted
   if df | grep -q "$device"; then
