@@ -14,7 +14,10 @@ depends() {
 }
 
 configure() {
-  # Login
+  if [ -z "$IA_USERNAME" ] || [ -z "$IA_PASSWORD" ]; then
+    return
+  fi
+
   ia configure -u "$IA_USERNAME" -p "$IA_PASSWORD"
 }
 
