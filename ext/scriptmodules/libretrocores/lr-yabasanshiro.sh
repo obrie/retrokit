@@ -18,7 +18,7 @@ rp_module_section="exp"
 rp_module_flags="!all rpi4"
 
 function __binary_url_lr-yabasanshiro() {
-    echo "https://github.com/obrie/retrokit/releases/download/latest/$rp_module_id-$__platform-$__os_codename.tar.gz"
+    echo "https://github.com/obrie/retrokit/releases/download/latest/$md_id-$__platform-$__os_codename.tar.gz"
 }
 
 function install_bin_lr-yabasanshiro() {
